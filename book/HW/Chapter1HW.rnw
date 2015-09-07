@@ -1,0 +1,99 @@
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\input{c:/aaaWork/zGnrlLatex/justRPreamble}
+\hypersetup{pdftitle = MTH107 HW - Chapter 1}
+\renewcommand{\theenumi}{\alph{enumi}}    % changes enumerates from numbers to letters
+
+\begin{document}
+
+<<setup,echo=FALSE,include=FALSE>>=
+## knitr custom hooks
+# set a default plot options
+knit_hooks$set(par1 = function(before, options, envir) {
+    if (before) par(mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+knit_hooks$set(par1a = function(before, options, envir) {  # use with distrib()
+    if (before) par(mar=c(3.5,3.5,3,3),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+knit_hooks$set(par2 = function(before, options, envir) {
+    if (before) par(mfrow=c(1,2),mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+## knitr options -- output look
+opts_chunk$set(prompt=TRUE,comment='',tidy=FALSE)
+## knitr options -- figure handling
+opts_chunk$set(fig.path='Figs/', fig.width=3.5, fig.height=3.5, out.width='.4\\linewidth', fig.show='hold', fig.align='center', par1=TRUE)
+## r options
+options(width=85,show.signif.stars=FALSE,continue=" ",contrasts=c("contr.sum","contr.poly"))
+## Make sure that the required packages are loaded
+rqrd <- c("NCStats")
+for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
+@
+
+\section*{Question 1.27}
+  \begin{Enumerate}
+    \item \textbf{[1 pt]} An individual is a lake in northern Wisconsin (north of Highway 8) in 2010.
+    \item \textbf{[1 pt]} The number of frogs on a lake is a discrete quantitative variable.
+    \item \textbf{[1 pt]} No, it is not reasonable to count frogs on every lake in northern Wisconsin because there is no reasonable way to get to every lake in the state at roughly the same time.
+    \item \textbf{[1 pt]} You should have a list of results from 10 lakes here.
+    \item \textbf{[1 pt]} The number of frogs differs between the first two lakes.  This is an example of natural variability.
+    \item \textbf{[1 pt]} You should have the average of your 10 lakes here.  The exact average depends on the sample.
+    \item \textbf{[1 pt]} You should have a list of results from 10 lakes here.
+    \item \textbf{[1 pt]} The average number of frogs per lake differs between the two samples.  This is an example of sampling variability.
+    \item \textbf{[1 pt]} You average likely does not equal the population average.  You should not be surprised because a sample is representative but not perfectly representative of the population.
+  \end{Enumerate}
+
+\section*{Question 1.28}
+\textbf{[4 pts]} Natural variability is the differences among individuals.  Sampling variability is the differences among summaries of samples.  Narrative examples will vary among students.
+
+\section*{Question 1.29}
+\textbf{[2 pts]} The two realities that make the field of statistics a necessity are the facts that we generally can not ``see'' the entire population and that variability is everywhere (beginning with natural variability and extending to sampling variability).
+
+\section*{Question 1.30}
+  \begin{Enumerate}
+    \item \textbf{[6 pts]} The IVPPSS is ...
+      \begin{Itemize}
+        \item Individual -- a Rusty Crayfish in the lake with Smallmouth Bass in 2012
+        \item Variable -- length of Rusty Crayfish
+        \item Population -- \textbf{all} Rusty Crayfish in the lake with Smallmouth Bass in 2012
+        \item Parameter -- mean carapace length of \textbf{all} Rusty Crayfish in the lake with Smallmouth Bass
+        \item Sample -- 235 Rusty Crayfish in the lake with Smallmouth Bass in 2012 that were actually examined
+        \item Statistic -- mean carapace length of 235 Rusty Crayfish in the lake with Smallmouth Bass in 2012
+      \end{Itemize}
+    \item \textbf{[1 pt]} Carapace length is a continuous quantitative variable.
+  \end{Enumerate}
+  
+\section*{Question 1.31}
+  \begin{Enumerate}
+    \item \textbf{[6 pts]} IVPPSS is ...
+      \begin{Itemize}
+        \item Individual -- a ballast tank on an ocean-going vessel in 2001.
+        \item Variable -- whether or not the tank contain any living organisms.
+        \item Population -- \textbf{all} ballast tanks on ocean-going vessels in 2001.
+        \item Parameter -- proportion of \textbf{all} ballast tanks that contained living organisms.
+        \item Sample -- 43 ballast tanks in 2001.
+        \item Statistic -- proportion of 43 ballast tanks that contained living organisms.
+      \end{Itemize}
+    \item \textbf{[1 pt]} Whether or not the tank contains any living organisms is a nominal categorical variable.
+  \end{Enumerate}
+
+\section*{Question 1.32}
+\textbf{[1 pt]} The concentration of lead is a continuous quantitative variable.
+  
+\section*{Question 1.33}
+\textbf{[1 pt]} The risk rating is an ordinal categorical variable.
+
+\section*{Question 1.34}
+\textbf{[1 pt]} The information type is a nominal categorical variable.
+
+\section*{Question 1.35}
+\textbf{[1 pt]} The Koppen scheme is a nominal categorical variable (unless you ``see'' an order (e.g., decreasing temperature?) among the categories, in which case it would be an ordinal categorical variable).
+
+\section*{Notes from the Professor}
+\begin{Itemize}
+  \item Make sure you follow the directions for formatting your homework found in Section 1.4 of the book -- including (1) making sure to include and sign the ``Honor Statement'' from the syllabus, using complete sentences, not double-spacing results in tables (see \href{http://www.ncfaculty.net/dogle/R/FAQ/MSWord_SingleSpace.html}{this FAQ}), and making sure that tables and figures are labeled and referred to as described in Section 1.4 of the book.  Failure to do so will result in missed points on the next homework.
+  \item Many of you got the variable in question 1.27 correct (i.e., number of frogs) but not the individual (mistakingly saying that an individual was a frog).  An individual cannot be a frog if the variable is the number of frogs.  Always ask yourself if it makes sense to record your variable about your individual -- does it make sense to record the number of frogs on a single frog.
+  \item Note that question 1.27E and H ask for type of VARIABILITY (natural or sampling), whereas 1.27B asks for type of VARIABLE (continuous, discrete, nominal, ordinal).
+  \item Question 1.27I is trying to get you to realize that samples are generally not perfect representations of populations.
+  \item Make sure to fully explain yourself.  It is not good enough to say ``That is not reasonable because it would take a lot of work.''  Rather you want to say ``That is not reasonable because it would be physically impossible for a researcher to see every lake in northern Wisconsin in a week.''
+\end{Itemize}
+\end{document}

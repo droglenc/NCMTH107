@@ -1,0 +1,71 @@
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\input{c:/aaaWork/zGnrlLatex/justRPreamble}
+\hypersetup{pdftitle = MTH107 HO - Bivariate EDA}
+
+\begin{document}
+  \titleRHO{Bivariate EDA}{MTH107 Statistics}{Fall}
+
+<<setup,echo=FALSE,include=FALSE>>=
+source("c:/aaaWork/zGnrlLatex/knitr_setup.R")
+@
+
+
+\section*{Background}
+\vspace{-12pt}
+Measurements of the levels of arsenic in the drinking water, cooking water, and toenail samples, as well as related covariates, were measured on 21 individuals with private wells in a New Hampshire community.  The variables below were recorded in the \href{https://sites.google.com/site/ncstats/data/Arsenic.txt}{Arsenic.txt} file located on the R Resources web page.
+
+\vspace{-6pt}
+\begin{Itemize}
+  \item \var{age}: Age (yrs) of person
+  \item \var{sex}: Sex of person
+  \item \var{usedrink}: Household well used for drinking (A=``$<$1/4'', B=``$\approx$1/4'',  C=``$\approx$1/2'',  D=``$\approx$3/4'',  E=``$>$3/4'')
+  \item \var{usecook}: Household well used for cooking (A=``$<$1/4'', B=``$\approx$1/4'',  C=``$\approx$1/2'',  D=``$\approx$3/4'',  E=``$>$3/4'')
+  \item \var{arswater}: Arsenic in water (ppm)
+  \item \var{arsnails}: Arsenic in toenails (ppm)
+\end{Itemize}
+
+\vspace{-6pt}
+In this handout, we will consider the questions below.
+\vspace{-6pt}
+\begin{Enumerate}
+  \item What type of variable is each variable in the data set?
+  \item Describe the relationship between the level of arsenic in the toenails and the age of the person.
+  \item Describe the relationship between the ``amount'' that the well is used for drinking and the sex of the person.
+  \item What percentage of females used the well for drinking water more than three-quarters of the time?
+  \item What percentage of all persons in the study were female and used the well for drinking water about one-half of the time?
+  \item What percentage of the sample was female?
+\end{Enumerate}
+
+\vspace{-12pt}
+\section*{Getting The Data}
+<<message=FALSE, warning=FALSE>>=
+library(NCStats)
+setwd("C:/aaaWork/Class Materials/MTH107/Lecture/HOs")
+Ars <- read.table("Arsenic.txt",header=TRUE)
+str(Ars)
+view(Ars)
+@
+
+\newpage
+\section*{Bivariate EDA -- Quantitative}
+\vspace{-18pt}
+<<scatter1, fig.show='asis'>>=
+plot(arsnails~age,data=Ars,pch=19)
+cor(Ars$arsnails,Ars$age)
+@
+
+\section*{Bivariate EDA -- Categorical}
+\vspace{-18pt}
+<<>>=
+( freq.tbl <- xtabs(~sex+usedrink,data=Ars) )
+percTable(freq.tbl,margin=1,digits=1)
+percTable(freq.tbl,margin=2,digits=1)
+percTable(freq.tbl,digits=1)
+@
+
+<<eval=FALSE, echo=FALSE, results='hide',message=FALSE>>=
+swvCode("05_BivEDA_HO.rnw",moreItems="source")
+@
+
+\end{document}

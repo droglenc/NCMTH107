@@ -1,0 +1,86 @@
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\input{c:/aaaWork/zGnrlLatex/justRPreamble}
+\hypersetup{pdftitle = MTH107 HW - Chapter 1}
+\renewcommand{\theenumi}{\alph{enumi}}    % changes enumerates from numbers to letters
+
+\begin{document}
+
+<<setup,echo=FALSE,include=FALSE>>=
+## knitr custom hooks
+# set a default plot options
+knit_hooks$set(par1 = function(before, options, envir) {
+    if (before) par(mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+knit_hooks$set(par1a = function(before, options, envir) {  # use with distrib()
+    if (before) par(mar=c(3.5,3.5,3,3),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+knit_hooks$set(par2 = function(before, options, envir) {
+    if (before) par(mfrow=c(1,2),mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+## knitr options -- output look
+opts_chunk$set(prompt=TRUE,comment='',tidy=FALSE)
+## knitr options -- figure handling
+opts_chunk$set(fig.path='Figs/', fig.width=3.5, fig.height=3.5, out.width='.4\\linewidth', fig.show='hold', fig.align='center', par1=TRUE)
+## r options
+options(width=85,show.signif.stars=FALSE,continue=" ",contrasts=c("contr.sum","contr.poly"))
+## Make sure that the required packages are loaded
+rqrd <- c("NCStats","xtable")
+for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
+@
+
+\section*{Question 6.19}
+<<echo=FALSE, results='hide'>>=
+d <- read.table("data/AlcovaRes.txt",header=TRUE)
+wd <- Subset(d,day.type=="wday")
+lm1 <- lm(pressure~index,data=wd)
+@
+  \begin{Enumerate}
+    \item \textbf{[1 pt]} The response variable is fishing pressure.
+    \item \textbf{[1 pt]} The explanatory variable is index count.
+    \item \textbf{[2 pts]} The best-fit line is $pressure=$\Sexpr{formatC(coef(lm1)[2],format="f",digits=1)}$*index+$\Sexpr{formatC(coef(lm1)[1],format="f",digits=1)} \tabrefp{tab:CoefTbl}.
+\vspace{6pt}
+<<results='asis', echo=FALSE>>=
+cf <- matrix(coef(lm1),ncol=2)
+colnames(cf) <- c("(Intercept)","index")
+print(xtable(cf,digits=1,caption="Coefficients from the linear model fit of fishing pressure on the count of cars.",label="tab:CoefTbl"),caption.placement="top",table.placement="!h",include.rownames=FALSE)
+@    
+    \item \textbf{[2 pts]} The slope indicates that for every increase of one vehicle in the index count the pressure will increase by \Sexpr{formatC(coef(lm1)[2],format="f",digits=1)} angler-hours, on average.
+    \item \textbf{[2 pts]} The intercept indicates that if the index count were zero, then the pressure would be \Sexpr{formatC(coef(lm1)[1],format="f",digits=1)} angler-hours, on average.
+    \item \textbf{[1 pt]} This prediction should not be made as an index count of 20 is outside the observed results for this variable and is, thus, an extrapolation.
+    \item \textbf{[2 pts]} The predicted amount of fishing pressure for an index count of five vehicles is \Sexpr{formatC(predict(lm1,data.frame(index=5)),format="f",digits=1)} angler-hours.
+    \item \textbf{[2 pts]} The residual for an individual with a fishing pressure of 5100 and an index count of eight vehicles is \Sexpr{formatC(5100-predict(lm1,data.frame(index=8)),format="f",digits=1)} angler-hours.
+    \item \textbf{[1 pt]} The correlation between fishing pressure and index count is \Sexpr{formatC(cor(wd$pressure,wd$index),format="f",digits=2)}.
+    \item \textbf{[1 pt]} The proportion of variability in fishing pressure that is explained by knowing index count is \Sexpr{formatC(rSquared(lm1),format="f",digits=2)}.
+    \item \textbf{[2 pts]} If the index count is under-estimated by two vehicles, then the pressure value will be under-predicted by two slopes or \Sexpr{formatC(2*coef(lm1)[2],format="f",digits=1)} angler-hours. 
+    \item \textbf{[2 pts]} The data appears to be roughly linear but this is difficult to tell based on the wide scatter of points.  My concern, though, is that the data appear to be somewhat heteroscedastic \figrefp{fig:FitPlot}.
+  \end{Enumerate}    
+
+<<FitPlot, echo=FALSE, fig.cap="Fitted line plot for the relationship between fishing pressure and number of counted cars on Wyoming resrvoirs.", fig.pos='htbp'>>=
+fitPlot(lm1,ylab="Fishing Pressure",xlab="Index Count",main="")  
+@
+
+\clearpage
+\section*{Appendix -- R Commands}
+<<eval=FALSE, prompt=FALSE>>=
+d <- read.table("data/AlcovaRes.txt",header=TRUE)
+wd <- Subset(d,day.type=="wday")
+( lm1 <- lm(pressure~index,data=wd) )
+rSquared(lm1)
+cor(wd$pressure,wd$index)
+predict(lm1,data.frame(index=5))
+p8 <- predict(lm1,data.frame(index=8))
+5100-p8
+fitPlot(lm1,ylab="Fishing Pressure",xlab="Index Count",main="")  
+@
+
+
+\section*{Notes From Professor}
+\begin{itemize}
+  \item Note the use of ``on average'' in the ``interpret slope'' and ``interpret intercept'' questions.
+  \item The ``extrapolation'' question was realized by looking at the scale on the fitted line plot in \figrefp{fig:FitPlot}.
+  \item The correlation coefficient is positive in this case because the association is positive.  You may have to remember to put a negative sign on the square root of the $r^{2}$ value if the association was negative.
+  \item When calculating the correlation coefficient, make sure that you compute it with JUST the weekday data and not the combined weekday and weekend (i.e,. the original) data.  If you mistakenly computed it on the original data, then you would have found a $r=$\Sexpr{formatC(cor(d$pressure,d$index),format="f",digits=2)}
+\end{itemize}
+
+\end{document}

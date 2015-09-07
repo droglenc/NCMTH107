@@ -1,0 +1,97 @@
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\input{c:/aaaWork/zGnrlLatex/justRPreamble}
+\hypersetup{pdftitle = MTH107 HO - R Foundations}
+
+\begin{document}
+  \titleRHO{R Foundations}{MTH107 Statistics}{Fall}
+
+<<setup,echo=FALSE,include=FALSE>>=
+source("c:/aaaWork/zGnrlLatex/knitr_setup.R")
+@
+
+\section*{Always First Command}
+\vspace{-12pt}
+<<results='hide', message=FALSE, warning=FALSE>>=
+library(NCStats)
+@
+
+%\section*{Basic Mathematics}
+<<eval=FALSE, echo=FALSE>>=
+3-pi
+junk <- 3-pi
+junk
+b <- 3.8
+h <- 4.2
+(1/2)*b*h
+( result <- log(17) )
+ls()
+@
+
+\section*{Basic Vectors}
+\vspace{-12pt}
+<<>>=
+( profs <- c("Derek","Young","Sharad") )
+( nums <- c(4,2,6,4,3) )
+( heads <- c(TRUE, TRUE, FALSE, FALSE) )
+ls()
+nums[3]
+profs[2]
+heads[1]
+@
+
+\section*{Basic Data Frames}
+\vspace{-12pt}
+You must change the working directory in R with \R{setwd()} (as below, but for your directory) or with the Session..Working Directory menu items before using \R{read.table()}.
+<<>>=
+setwd("C:/aaaWork/Class Materials/MTH107/Lecture/HOs/")
+perch <- read.table("PerchGL.txt",header=TRUE)
+str(perch)
+view(perch)     # random 6 rows, NOT the entire data.frame
+ls()
+@
+
+\section*{Working With Data Frames}
+\vspace{-18pt}
+<<>>= 
+perch[2,]
+perch$w
+perch$w[3]
+perch[3,2]
+perch[c(1,3,5),]
+@
+
+
+\vspace{-10pt}
+\section*{Subsetting Data Frames}
+\vspace{-16pt}
+The \R{iris.txt} file must be downloaded from the webpage first.
+<<>>=
+iris <- read.table("Iris.txt",header=TRUE)
+str(iris)
+view(iris)
+@
+<<>>=
+set <- Subset(iris,species=="setosa")
+str(set)
+@
+<<>>=
+gt5 <- Subset(iris,seplen>5)
+view(gt5)
+@
+<<>>=
+setver <- Subset(iris,species=="setosa" | species=="versicolor")
+str(setver)
+setver1 <- Subset(iris,species!="virginica")
+str(setver1)
+@
+<<>>=
+vergt5 <- Subset(iris,species=="versicolor" & seplen>5)
+view(vergt5)
+ls()
+@
+
+<<eval=FALSE, echo=FALSE, results='hide',message=FALSE>>=
+swvCode("02_FoundationsR_HO.rnw",moreItems="source")
+@
+\end{document}

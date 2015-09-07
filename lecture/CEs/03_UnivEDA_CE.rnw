@@ -1,0 +1,32 @@
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\input{c:/aaaWork/zGnrlLatex/justRPreamble}
+\hypersetup{pdftitle = MTH107 Class Exercise - Univariate EDA}
+
+\begin{document}
+  \titleRCE{Univariate EDA}{MTH107 Statistics}{Fall}
+\vspace{18pt}
+
+Coarse woody debris (CWD) in lakes is important for aquatic systems as it provides refuge for young fish and invertebrates as well as providing areas for periphyton to grow.  Coarse woody debris was studied in the north basin of Allequash Lake in northern Wisconsin.  Among other things, the researchers recorded the diameter (cm) of CWD found in the lake littoral zone and a qualitative measure of the degree to which the location where the CWD was found was exposed to winds (low or medium).  The data (sampled from information on the \href{http://lter.limnology.wisc.edu/spatial/source/data_cat_new.htm}{North Temperate Lakes Long Term Ecological Research website}) they observed are shown below.
+
+\begin{verbatim}
+diameter  21  15  18  23  18  17  19  17  15  22  16  20  16  17  18  15  16  24  24  23
+exposure med med med low med low med med med med med med low med med med med low med med
+
+diameter  18  17  19  17  17  15  17  18  19  31  25  15  17  34  16  18  19  15  16  15
+exposure med med med med med med med med low med med med med low low med med med low med
+
+diameter  20  23  34  20  17  20  15  34  18  24
+exposure med med low med med med med med med med
+\end{verbatim}
+
+Use this information to answer the following questions.
+
+\begin{enumerate}
+  \item Enter the data into Excel, save as a tab-delimited text file, and read the data into R.  [HINT: these are the same data that you entered in a previous class exercise.  You should re-use that file and re-cycle the code that you used in that exercise to read the data.]
+  \item Perform a univariate EDA for the diameter of CWD.
+  \item Perform separate univariate EDAs for the diameter of CWD for the low- and medium-exposed sites.
+  \item Perform a univariate EDA for the exposure variable.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,75 @@
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\input{c:/aaaWork/zGnrlLatex/justRPreamble}
+\hypersetup{pdftitle = MTH107 HW - Chapter 1}
+\renewcommand{\theenumi}{\alph{enumi}}    % changes enumerates from numbers to letters
+
+\begin{document}
+
+<<setup,echo=FALSE,include=FALSE>>=
+## knitr custom hooks
+# set a default plot options
+knit_hooks$set(par1 = function(before, options, envir) {
+    if (before) par(mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+knit_hooks$set(par1a = function(before, options, envir) {  # use with distrib()
+    if (before) par(mar=c(3.5,3.5,3,3),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+knit_hooks$set(par2 = function(before, options, envir) {
+    if (before) par(mfrow=c(1,2),mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+## knitr options -- output look
+opts_chunk$set(prompt=TRUE,comment='',tidy=FALSE)
+## knitr options -- figure handling
+opts_chunk$set(fig.path='Figs/', fig.width=3.5, fig.height=3.5, out.width='.4\\linewidth', fig.show='hold', fig.align='center', par1=TRUE)
+## r options
+options(width=85,show.signif.stars=FALSE,continue=" ",contrasts=c("contr.sum","contr.poly"))
+## Make sure that the required packages are loaded
+rqrd <- c("NCStats")
+for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
+@
+\section*{Question 7.10}
+  \begin{Enumerate}
+    \item \textbf{[1 pt]} This was an experiment because the researchers were in control of the levels of all variables.
+    \item \textbf{[2 pts]} The two factor are the salt percentage and temperature.
+    \item \textbf{[2 pts]} There were two levels of salt percentage and three levels of temperature.
+    \item \textbf{[1 pt]} There were a total of $2*3=6$ treatments in the experiment
+    \item \textbf{[1 pt]} The response variable was the melting rate of the ice.
+    \item \textbf{[1 pt]} Melting rate is a continuous quantitative variable.
+    \item \textbf{[1 pt]} A replicate or individual in this experiment is a chamber with a small piece of highway in it.
+    \item \textbf{[2 pts]} A table of the experiment is shown in \tabref{tab:ExperTable}.
+\begin{table}[!h]
+  \begin{center}
+    \caption{Depiction of ice melting on highway roads experiment.}  \label{tab:ExperTable}
+\begin{tabular}{cc|c|c}
+ & \multicolumn{3}{c}{Temperature (F)} \\
+\cline{2-4}
+\%Salt & 10 & 15 & 20  \\
+\cline{2-4}
+\multicolumn{1}{c|}{10} & 30,25,21,31,7,35 & 36,5,20,32,26,2 & \multicolumn{1}{c|}{33,16,10,29,11,3} \\
+\hline
+\multicolumn{1}{c|}{20} & 9,8,18,22,13,17 & 23,19,15,28,34,14 & \multicolumn{1}{c|}{1,4,6,12,24,27} \\
+\cline{2-4}
+\end{tabular}
+  \end{center}
+\end{table}
+
+      \item \textbf{[1 pt]} I used the following command in R -- \R{sample(1:36,36)} (results not shown) to generate random numbers for placing the chambers in each treatment.  The first six random numbers were placed in the first treatment, the next six in the second and so on until the fifth treatment.  All numbers not used were then placed in the last treatment.
+    \end{Enumerate}
+
+\section*{Question 7.11}
+\begin{Enumerate}
+  \item \textbf{[2 pts]} This is a voluntary response observational study because no treatment is imposed on the subjects in the study and the subjects choose to participate in the study or not.
+\end{Enumerate}
+
+\section*{Appendix -- R Commands}
+<<eval=FALSE, prompt=FALSE>>=
+sample(1:36,36)  
+@
+
+\section*{Notes From Professor}
+\begin{itemize}
+  \item You must list the number of levels separately for each factor.  Do NOT combine the levels to get just a single number when in a multi-factor experiment.
+\end{itemize}
+
+\end{document}

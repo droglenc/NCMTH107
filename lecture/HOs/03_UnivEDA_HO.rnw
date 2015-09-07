@@ -1,0 +1,60 @@
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\input{c:/aaaWork/zGnrlLatex/justRPreamble}
+\hypersetup{pdftitle = MTH107 HO - Univariate EDA}
+
+\begin{document}
+  \titleRHO{Univariate EDA}{MTH107 Statistics}{Fall}
+
+<<setup,echo=FALSE,include=FALSE>>=
+source("c:/aaaWork/zGnrlLatex/knitr_setup.R")
+@
+
+\section*{Background}
+Measurements of the levels of arsenic in the drinking water, cooking water, and toenail samples, as well as related covariates, were measured on 21 individuals with private wells in a New Hampshire community.  The variables below were recorded in the \href{https://sites.google.com/site/ncstats/data/Arsenic.txt}{Arsenic.txt} file located on the R Resources web page.
+
+\begin{Itemize}
+  \item \var{age}: Age (yrs) of person
+  \item \var{sex}: Sex of person
+  \item \var{usedrink}: Household well used for drinking (A=``$<$1/4'', B=``$\approx$1/4'',  C=``$\approx$1/2'',  D=``$\approx$3/4'',  E=``$>$3/4'')
+  \item \var{usecook}: Household well used for cooking (A=``$<$1/4'', B=``$\approx$1/4'',  C=``$\approx$1/2'',  D=``$\approx$3/4'',  E=``$>$3/4'')
+  \item \var{arswater}: Arsenic in water (ppm)
+  \item \var{arsnails}: Arsenic in toenails (ppm)
+\end{Itemize}
+
+\section*{Initialization}
+<<message=FALSE, warning=FALSE>>=
+library(NCStats)
+setwd("C:/aaaWork/Class Materials/MTH107/Lecture/HOs/")
+Ars <- read.table("Arsenic.txt",header=TRUE)
+str(Ars)
+view(Ars)
+@
+
+\newpage
+\section{Univariate EDA -- Quantitative}
+<<hist>>=
+Summarize(~age,data=Ars,digits=2)
+hist(~age,data=Ars,main="",xlab="Age (yrs)")
+@
+
+\vspace{18pt}
+\section{Univariate EDA -- Quantitative (Separated by Groups)}
+<<mhist, fig.width=7, fig.height=3.5, out.width='.8\\linewidth', par2=TRUE>>=
+Summarize(age~sex,data=Ars,digits=2)
+hist(age~sex,data=Ars,xlab="Age (yrs)",col="gray90")
+@
+
+\newpage
+\section{Univariate EDA -- Categorical}
+<<barchart>>=
+( tbl.drink <- xtabs(~usedrink,data=Ars) )
+percTable(tbl.drink,digits=1)
+barplot(tbl.drink,xlab="Rating of Use for Drinking",ylab="Frequency",col="gray90")
+@
+
+<<eval=FALSE, echo=FALSE, results='hide',message=FALSE>>=
+swvCode("03_UnivEDA_HO.rnw",moreItems="source")
+@
+
+\end{document}

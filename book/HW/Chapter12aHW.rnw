@@ -1,0 +1,199 @@
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\input{c:/aaaWork/zGnrlLatex/justRPreamble}
+\hypersetup{pdftitle = MTH107 HW - Chapter 12a}
+\renewcommand{\theenumi}{\alph{enumi}}    % changes enumerates from numbers to letters
+
+\begin{document}
+
+<<setup,echo=FALSE,include=FALSE>>=
+## knitr custom hooks
+# set a default plot options
+knit_hooks$set(par1 = function(before, options, envir) {
+    if (before) par(mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+knit_hooks$set(par1a = function(before, options, envir) {  # use with distrib()
+    if (before) par(mar=c(3.5,3.5,3,3),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+knit_hooks$set(par2 = function(before, options, envir) {
+    if (before) par(mfrow=c(1,2),mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+## knitr options -- output look
+opts_chunk$set(prompt=TRUE,comment='',tidy=FALSE)
+## knitr options -- figure handling
+opts_chunk$set(fig.path='Figs/', fig.width=3.5, fig.height=3.5, out.width='.4\\linewidth', fig.show='hold', fig.align='center', par1=TRUE)
+## r options
+options(width=85,show.signif.stars=FALSE,continue=" ",contrasts=c("contr.sum","contr.poly"))
+## Make sure that the required packages are loaded
+rqrd <- c("NCStats")
+for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
+@
+
+\section*{Question 12.35}
+  \begin{Enumerate}
+    \item $\alpha=0.10$.
+    \item $H_{O}$:``The proportion of habitats used by the bear is the same as the proportions of available habitat'' versus $H_{A}$:``The proportion of habitats used by the bear is the same as the proportions of available habitat.''
+    \item A goodness-of-fit test is required because a single categorical variable (habitat use) from a single population (this bear) was measured and the proportions are being compared to a theoretical distribution in the null hypothesis.
+    \item This is an observational study with randomly selected times for observation.
+    \item The expected number of observations in each habitat is in proportion to the GIS analysis of habitat availability.  Thus, the expected number in each habitat is shown in \tabref{tab:bear} (along with the observed frequencies).  Note that these percentages did not need to be adjusted to the number of observations because 100 observations were made.  The test statistic computed below should reasonably follow a $\chi^{2}$-distribution because all of the expected values are greater than five.
+  \begin{table}[!h]
+    \begin{center}
+      \caption{Observed and expected frequencies for habitat use by a bear.}  \label{tab:bear}
+        \begin{tabular}{ccc}
+          \hline\hline
+          & Obs & Exp \\
+          Habitat & Freq & Freq \\
+          \hline
+          Lowland Conifer  & 47 & 34 \\
+          Aspen            & 12 & 17 \\
+          Open Areas       & 10 & 12 \\
+          Upland Hardwoods & 21 & 25 \\
+          Mixed Upland     & 10 & 12 \\
+          \hline
+          Total & 100 & 100 \\
+          \hline\hline
+        \end{tabular}
+      \end{center}
+    \end{table}
+    \item The table of observed frequencies is shown in \tabref{tab:bear}.
+    \item The $\chi^{2}$ test statistic is thus,
+      \begin{center}
+        \[  \begin{split}
+          \chi^{2} &= \frac{(47-34)^{2}}{34} + \frac{(12-17)^{2}}{17} + \frac{(10-12)^{2}}{12} + \frac{(21-25)^{2}}{25}  + \frac{(10-12)^{2}}{12} \\
+          &= 4.971 + 1.471 + 0.333 + 0.640 + 0.333 \\
+          &= 7.7478 \\
+        \end{split}  \]
+      \end{center}
+      with $5-1=4$ df.
+    \item The p-value is \Sexpr{kPvalue(distrib(7.7478,distrib="chisq",df=4,lower.tail=FALSE,plot=FALSE))}.
+    \item The $H_{O}$ is not rejected because the $p-value>\alpha$.
+    \item The bear appears to use the habitats in proportion to the availability of the habitat.
+  \end{Enumerate}
+
+\newpage
+\section*{Question 12.36}
+<<echo=FALSE, results='hide'>>=
+obs <- c(consumed=33,not.consumed=40)
+exp <- c(consumed=0.33,not.consumed=1-0.33)
+gin.chi <- chisq.test(obs,p=exp,correct=FALSE)
+gin.p <- gofCI(gin.chi)
+@
+
+  \begin{Enumerate}
+    \item $\alpha=0.05$.
+    \item $H_{0}$:``The proportion of ginseng plants consumed by deer is 0.33'' versus $H_{A}$:``The proportion of ginseng plants consumed by deer is NOT 0.33''.
+    \item A goodness-of-fit test is required because a categorical variable (consumed or not) from a single population was recorded and the frequency of responses is being compared to a theoretical distribution in the null hypothesis.
+    \item An observational study with randomly selected plants was used.
+    \item The expected number of consumed plants is $73*0.33$=\Sexpr{formatC(gin.chi$expected[1],format="f",digits=2)}.  The expected number of plants not consumed by deer is $73*(1-0.33)$=\Sexpr{formatC(gin.chi$expected[2],format="f",digits=2)}.  the test statistic computed below should reasonably follow a $\chi^{2}$-distribution because both of these expected values is greater than five.
+    \item The table of observed frequencies is in \tabref{tab:ginseng} (along with the expected frequencies from the previous step).
+  \begin{table}[!h]
+    \begin{center}
+      \caption{Observed and expected frequencies for browsing by deer on ginseng plants.}  \label{tab:ginseng}
+        \begin{tabular}{ccc}
+          \hline\hline
+          & Obs & Exp \\
+          Consumed & Freq & Freq \\
+          \hline
+          Yes & 33 & \Sexpr{formatC(gin.chi$expected[1],format="f",digits=2)} \\
+          No  & 40 & \Sexpr{formatC(gin.chi$expected[2],format="f",digits=2)} \\
+          \hline
+          Total & 73 & 73 \\
+          \hline\hline
+        \end{tabular}
+      \end{center}
+    \end{table}
+    \item The $\chi^{2}$ test statistic is \Sexpr{formatC(gin.chi$statistic,format="f",digits=3)} with \Sexpr{formatC(gin.chi$parameter,format="f",digits=0)} df \tabrefp{tab:ginseng2}.
+\begin{table}[!h]
+  \begin{center}
+    \caption{Results from the goodness-of-fit test for testing that more than one-third of ginseng plants were browsed by deer.}  \label{tab:ginseng2}
+<<echo=FALSE>>=
+kHtest(gin.chi)
+@
+  \end{center}
+\end{table}      
+    \item The p-value is \Sexpr{kPvalue(gin.chi$p.value)} \tabrefp{tab:ginseng2}.
+    \item The $H_{O}$ is rejected because the $p-value<\alpha$.
+    \item It appears that more than 33\% of the ginseng plants at this site and year were consumed by deer.
+    \item One is 95\% confident that the proportion of ginseng plants consumed by deer is between \Sexpr{formatC(gin.p["consumed","p.LCI"],format="f",digits=3)} and \Sexpr{formatC(gin.p["consumed","p.UCI"],format="f",digits=3)}
+  \end{Enumerate}
+
+\newpage
+\section*{Question 12.37}
+<<echo=FALSE, results='hide'>>=
+rr <- read.table("data/RoadRage.txt",header=TRUE)
+rr$Day1 <- factor(rr$Day,levels=c("M","Tu","W","Th","F","Sa","Su"))
+obs <- table(rr$Day1)
+exp <- rep(69/7,7)
+rr.chi <- chisq.test(obs,p=exp,correct=FALSE,rescale=TRUE)
+rr.ci <- gofCI(rr.chi)
+@
+
+  \begin{Enumerate}
+    \item $\alpha=0.05$.
+    \item $H_{O}$:``The proportion of road rage incidents is the same on each day of the week'' versus $H_{A}$:``The proportion of road rage incidents is NOT the same on each day of the week''.
+    \item A goodness-of-fit test is required because a categorical response variable with seven levels (days of the week) from a single population was recorded and the frequency of responses is being compared to a theoretical distribution in the null hypothesis.
+    \item This is an observational study without obvious randomization.
+    \item  The expected number of road rage incidents on each day is $\frac{69}{7}$ = \Sexpr{formatC(69/7,format="f",digits=1)} which are all greater than five.  Thus, the test statistic computed below should reasonably follow a $\chi^{2}$-distribution.
+    \item The table of observed frequencies is shown in \tabref{tab:roadrage}
+\begin{table}[!h]
+  \begin{center}
+    \caption{Observed frequencies of road rage by day of the week.}  \label{tab:roadrage}
+<<echo=FALSE>>=
+obs
+@
+  \end{center}
+\end{table}      
+    \item The $\chi^{2}$ test statistic is \Sexpr{formatC(rr.chi$statistic,format="f",digits=3)} with \Sexpr{formatC(rr.chi$parameter,format="f",digits=0)} df \tabrefp{tab:roadrage2}.
+\begin{table}[!h]
+  \begin{center}
+    \caption{Results from the goodness-of-fit test for testing that the frequencies of road rage differed among days of the week.}  \label{tab:roadrage2}
+<<echo=FALSE>>=
+kHtest(rr.chi)
+@
+  \end{center}
+\end{table}      
+    \item The p-value is \Sexpr{kPvalue(rr.chi$p.value)} \tabrefp{tab:roadrage2}.
+    \item The $H_{O}$ is rejected because the $p-value<\alpha$.
+    \item It appears that the proportion of incidences of road rage differs among the days of the week.
+    \item An examination of the confidence interval results \tabrefp{tab:roadrage3} suggests that there are more incidences of road rage on Fridays and possibly fewer on Mondays than would be expected.
+\begin{table}[!h]
+  \begin{center}
+    \caption{Confidence intervals (95\%) for the proportion of observations of road rage by day of the week.}  \label{tab:roadrage3}
+<<echo=FALSE>>=
+round(rr.ci,2)
+@
+  \end{center}
+\end{table}      
+  \end{Enumerate}
+
+\newpage
+\section*{Appendix -- R Commands}
+<<eval=FALSE, prompt=FALSE>>=
+( distrib(7.7478,distrib="chisq",df=4,lower.tail=FALSE) )
+@
+
+<<eval=FALSE, prompt=FALSE>>=
+obs <- c(consumed=33,not.consumed=40)
+exp <- c(consumed=0.33,not.consumed=1-0.33)
+( gin.chi <- chisq.test(obs,p=exp,correct=FALSE) )
+gin.chi$expected
+gofCI(gin.chi)
+@      
+
+<<eval=FALSE, prompt=FALSE>>=
+rr <- read.table("data/RoadRage.txt",header=TRUE)
+rr$Day1 <- factor(rr$Day,levels=c("M","Tu","W","Th","F","Sa","Su"))
+( obs <- table(rr$Day1) )
+exp <- c(69/7,69/7,69/7,69/7,69/7,69/7,69/7)
+( rr.chi <- chisq.test(obs,p=exp,correct=FALSE,rescale=TRUE) )
+rr.chi$expected
+rr.chi$residuals
+gofCI(rr.chi)
+@
+
+\section*{Notes From Professor}
+\begin{itemize}
+  \item 
+\end{itemize}
+
+\end{document}

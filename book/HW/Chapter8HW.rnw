@@ -1,0 +1,64 @@
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\input{c:/aaaWork/zGnrlLatex/justRPreamble}
+\hypersetup{pdftitle = MTH107 HW - Chapter 1}
+\renewcommand{\theenumi}{\alph{enumi}}    % changes enumerates from numbers to letters
+
+\begin{document}
+
+<<setup,echo=FALSE,include=FALSE>>=
+## knitr custom hooks
+# set a default plot options
+knit_hooks$set(par1 = function(before, options, envir) {
+    if (before) par(mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+knit_hooks$set(par1a = function(before, options, envir) {  # use with distrib()
+    if (before) par(mar=c(3.5,3.5,3,3),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+knit_hooks$set(par2 = function(before, options, envir) {
+    if (before) par(mfrow=c(1,2),mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+## knitr options -- output look
+opts_chunk$set(prompt=TRUE,comment='',tidy=FALSE)
+## knitr options -- figure handling
+opts_chunk$set(fig.path='Figs/', fig.width=3.5, fig.height=3.5, out.width='.4\\linewidth', fig.show='hold', fig.align='center', par1=TRUE)
+## r options
+options(width=85,show.signif.stars=FALSE,continue=" ",contrasts=c("contr.sum","contr.poly"))
+## Make sure that the required packages are loaded
+rqrd <- c("NCStats")
+for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
+@
+
+\section*{Question 8.4}
+  \begin{Enumerate}
+    \item \textbf{[2 pts]} The probability that a chipmunk eats an acorn is $0.47$ ($=\frac{8}{17}$).
+    \item \textbf{[2 pts]} The probability that a chipmunk eats a kernel of corns is $0.53$. ($=\frac{9}{17}$)
+    \item \textbf{[2 pts]} The probability that a chipmunk eats a kernel of corn assuming that it has already eaten six kernels of corn and no acorns is $0.27$ ($=\frac{3}{11}$).
+  \end{Enumerate}
+  
+\section*{Question 8.5}
+  \begin{Enumerate}
+    \item \textbf{[2 pts]} The probability that less than 60 gallons is used in this household on a random day is \Sexpr{formatC(distrib(60,mean=90,sd=20,plot=FALSE),format="f",digits=2)}.
+    \item \textbf{[2 pts]} The probability that between 75 and 150 gallons is used in this household on a random day is \Sexpr{formatC(distrib(150,mean=90,sd=20,plot=FALSE)-distrib(75,mean=90,sd=20,plot=FALSE),format="f",digits=2)}.
+    \item \textbf{[2 pts]} The probability that less than 100 gallons is used in this household on a random day is \Sexpr{formatC(distrib(100,mean=90,sd=20,lower.tail=FALSE,plot=FALSE),format="f",digits=2)}.
+  \end{Enumerate}
+
+
+\section*{Appendix -- R Commands}
+\vspace{-20pt}
+<<eval=FALSE, prompt=FALSE>>=
+distrib(60,mean=90,sd=20)
+ab <- distrib(150,mean=90,sd=20)
+a <- distrib(75,mean=90,sd=20)
+ab-a
+distrib(100,mean=90,sd=20,lower.tail=FALSE)
+@
+
+\vspace{-12pt}
+\section*{Notes From Professor}
+\begin{itemize}
+  \item Probabilities are never expressed as percentages; they are always expressed as proportions.
+  \item I did not show graphics for the probability calculations just to save space.
+\end{itemize}
+
+\end{document}

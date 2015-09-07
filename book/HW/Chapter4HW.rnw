@@ -1,0 +1,80 @@
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\input{c:/aaaWork/zGnrlLatex/justRPreamble}
+\hypersetup{pdftitle = MTH107 HW - Chapter 4}
+\renewcommand{\theenumi}{\alph{enumi}}    % changes enumerates from numbers to letters
+
+\begin{document}
+
+<<setup,echo=FALSE,include=FALSE>>=
+## knitr custom hooks
+# set a default plot options
+knit_hooks$set(par1 = function(before, options, envir) {
+    if (before) par(mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+knit_hooks$set(par1a = function(before, options, envir) {  # use with distrib()
+    if (before) par(mar=c(3.5,3.5,3,3),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+knit_hooks$set(par2 = function(before, options, envir) {
+    if (before) par(mfrow=c(1,2),mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+## knitr options -- output look
+opts_chunk$set(prompt=TRUE,comment='',tidy=FALSE)
+## knitr options -- figure handling
+opts_chunk$set(fig.path='Figs/', fig.width=3.5, fig.height=3.5, out.width='.4\\linewidth', fig.show='hold', fig.align='center', par1=TRUE)
+## r options
+options(width=85,show.signif.stars=FALSE,continue=" ",contrasts=c("contr.sum","contr.poly"))
+## Make sure that the required packages are loaded
+rqrd <- c("NCStats")
+for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
+@
+
+\section*{Question 4.24}
+  \begin{enumerate}
+    \item \textbf{[1 pt]} SAT score is a discrete quantitative variable.
+    \item \textbf{[2 pts]} The proportion of students not accepted by School A is \Sexpr{formatC(distrib(500,mean=550,sd=65,plot=FALSE),format="f",digits=4)}.
+    \item \textbf{[2 pts]} The percentage of students accepted by School B is \Sexpr{formatC(distrib(650,mean=550,sd=65,lower.tail=FALSE,plot=FALSE)*100,format="f",digits=1)}\%.
+    \item \textbf{[2 pts]} The percentage of students accepted by School A but not School B is \Sexpr{formatC((distrib(650,mean=550,sd=65,plot=FALSE)-distrib(500,mean=550,sd=65,plot=FALSE))*100,format="f",digits=1)}\%.
+    \item \textbf{[2 pts]} School C should set the acceptance criterion at \Sexpr{formatC(distrib(0.25,type="q",mean=550,sd=65,plot=FALSE,lower.tail=FALSE),format="f",digits=0)}.
+  \end{enumerate} 
+   
+\section*{Question 4.25}
+  \begin{enumerate}
+      \item \textbf{[2 pts]} The proportion of deer with home ranges between 0.2 and 0.4 km$^2$ is \Sexpr{formatC(distrib(0.4,mean=0.3,sd=0.095,plot=FALSE)-distrib(0.2,mean=0.3,sd=0.095,plot=FALSE),format="f",digits=4)}.
+      \item \textbf{[2 pts]} The proportion of deer with a home range greater than 0.32 km$^2$ is \Sexpr{formatC(distrib(0.32,mean=0.3,sd=0.095,lower.tail=FALSE,plot=FALSE),format="f",digits=4)}.
+      \item \textbf{[2 pts]} The home range such that 17\% of the deer have a larger home range is \Sexpr{formatC(distrib(0.17,type="q",mean=0.3,sd=0.095,lower.tail=FALSE,plot=FALSE),format="f",digits=2)} km$^2$.
+      \item \textbf{[2 pts]} The home range such that 32\% of the deer have a smaller home range is \Sexpr{formatC(distrib(0.32,type="q",mean=0.3,sd=0.095,plot=FALSE),format="f",digits=2)} km$^2$.
+      \item \textbf{[2 pts]} The proportion of deer with a home range less than 0.4 km$^2$ is \Sexpr{formatC(distrib(0.4,mean=0.3,sd=0.095,plot=FALSE),format="f",digits=4)}.
+      \item \textbf{[2 pts]} The most common 48\% of home ranges are between \Sexpr{formatC(distrib(0.26,type="q",mean=0.3,sd=0.095,plot=FALSE),format="f",digits=2)} and \Sexpr{formatC(distrib(0.26,type="q",mean=0.3,sd=0.095,lower.tail=FALSE,plot=FALSE),format="f",digits=2)} km$^2$.
+  \end{enumerate}
+
+\section*{Appendix -- R Commands}
+\vspace{-20pt}
+<<eval=FALSE, prompt=FALSE>>=
+distrib(500,mean=550,sd=65)
+distrib(650,mean=550,sd=65,lower.tail=FALSE)
+ab <- distrib(650,mean=550,sd=65)
+a <- distrib(500,mean=550,sd=65)
+ab-a
+distrib(0.25,type="q",mean=550,sd=65,lower.tail=FALSE)
+@
+<<eval=FALSE, prompt=FALSE>>=
+ab <- distrib(0.4,mean=0.3,sd=0.095)
+a <- distrib(0.2,mean=0.3,sd=0.095)
+ab-a
+distrib(0.32,mean=0.3,sd=0.095,lower.tail=FALSE)
+distrib(0.17,type="q",mean=0.3,sd=0.095,lower.tail=FALSE)
+distrib(0.32,type="q",mean=0.3,sd=0.095)
+distrib(0.4,mean=0.3,sd=0.095)
+distrib(0.26,type="q",mean=0.3,sd=0.095)
+distrib(0.26,type="q",mean=0.3,sd=0.095,lower.tail=FALSE)
+@
+\vspace{-12pt}
+\section*{Notes From Professor}
+\begin{itemize}
+  \item I suppressed the printing of plots just to save space.  It is a good idea when you are first learning normal distribution calculations to both draw the plots by hand and with R so as to catch mistakes.
+  \item No sentence should start with a number.  In other words, don't do this -- ``17\% of home ranges ...''  Notice the wordings of my answers above.
+  \item On 4.25f, note that to find the two values that contain the most common 48\% you must find the two values that have 26\% (i.e., $\frac{100-48}{2})$ in the upper- and lower-tails.
+\end{itemize}
+
+\end{document}

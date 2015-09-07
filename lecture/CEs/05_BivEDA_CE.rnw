@@ -1,0 +1,37 @@
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\input{c:/aaaWork/zGnrlLatex/justRPreamble}
+\hypersetup{pdftitle = MTH107 Class Exercise - Bivariate EDA}
+
+\begin{document}
+\titleRCE{Bivariate EDA}{MTH107 Statistics}{Fall}
+
+\section*{Runoff Example}
+Urbanization poses a major threat to stream and watershed ecosystems.  One aspect of urbanization is the conversion of natural areas to land with impervious surfaces, thus increasing runoff of rain and, likely, pollutants.  A University of Washington researcher recorded the percent of impervious land and the benthic index of biotic integrity (IBI) for 14 areas in the state of Washington.  The IBI has been described as a measure of ``the capability of supporting and maintaining a balanced, integrated, adaptive community of organisms having a species composition and functional organization comparable to that of natural habitat in the region.''  In this example, the researchers were attempting to identify how the percentage of impervious surfaces in the area effects the IBI.  The data for this study are below\footnote{Much more information can be obtained at the \href{http://seattlecentral.edu/qelp/sets/077/077.html\#About}{QELP site}.}.  Enter the data into Excel, save as a tab-delimited text file, and read the data into R.
+
+\begin{verbatim}
+% imperv 60 43 43 34 27 25 21 18 11  8  8  8  7  7  5  4  2
+IBI       9 11 13 23 31 31 21 23 27 37 39 29 31 43 33 35 37
+\end{verbatim}
+
+\begin{Enumerate}
+\item What is the response variable?
+\item What is the explanatory variable?
+\item Describe the relationship between IBI and the percent of impervious area (i.e., perform a bivariate EDA).
+\end{Enumerate}
+
+\section*{Tree Stand Example}
+Hely \emph{et al.} (2000; Journal of Vegetation Science 11:813-824) examined the effects of stand composition on fire hazard in mixed-wood Canadian boreal forests.  Two variables that they recorded for each stand were stand type (\var{sttype} where \var{d}=deciduous, \var{c}=coniferous, \var{mc}=mixed-coniferous, and \var{md}=mixed-deciduous) and the time since the last fire (\var{tslf}) which was treated as a categorical variable with the categories corresponding to 100 year blocks of time (i.e., 0-100, 100-200, etc.).  These data are in a tab-delimited text filed located in \R{Fire.txt} on the class data repository.  Load these data into R, \textbf{re-factor} the \var{sttype} so that the \var{c} and \var{d} levels are ordered at the ends (i.e., so the categories are arranged from mostly coniferous to mostly deciduous), and create appropriate tables to answer the following questions.
+
+\begin{enumerate}
+\item How many stands last had a fire between 200 and 300 years ago?
+\item Of deciduous tree stands, what percentage last had a fire within the last 100 years?
+\item Of mixed-coniferous tree stands, what percentage last had a fire between 200 and 300 years ago?
+\item What percentage of all stands were coniferous with a fire between 200 and 300 years ago?
+\item What percentage of stands with a fire between 200 and 300 years ago were coniferous?
+\item What percentage of all stands were deciduous with a fire between 100 and 200 years ago?
+\item What percentage of mixed deciduous trees had a fire within the last 100 years?
+\item Comment on the distribution of times since last fire among the four levels of stand type.
+\end{enumerate}
+
+\end{document}

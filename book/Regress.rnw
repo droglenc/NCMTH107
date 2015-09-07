@@ -1,0 +1,772 @@
+<<echo=FALSE, cache=FALSE, results='hide'>>=
+set_parent('IntroStats.Rnw')
+@
+
+\chapter{Linear Regression}  \label{chap:Regress}
+\begin{ChapObj}{\boxwidth}
+  \textbf{Chapter Objectives:}
+  \begin{Enumerate}
+    \item Describe the purposes of regression.
+    \item Describe the criteria used to determine the best-fit line to a set of bivariate data.
+    \item Describe the assumptions surrounding the best-fit criteria.
+    \item Identify the response and explanatory variables.
+    \item Describe the equation of a line and what the slope and intercept ``mean.''
+    \item Make appropriate predictions using the best-fit line.
+    \item Describe the meaning of the coefficient of determination.
+  \end{Enumerate}
+\end{ChapObj}
+
+\minitoc
+\newpage
+
+\lettrine{L}{inear regression analysis is used to model the relationship} between two quantitative variables for two related purposes -- (i) explaining variability in the response variable and (ii) predicting future values of the response variable.\index{Regression!Purposes}  Examples include predicting ...
+\begin{Itemize}
+  \item ... the future sales of a product from its price.
+  \item ... family expenditures on recreation from family income.
+  \item ... an animal's food consumption in relation to ambient temperature.
+  \item ... a person's score on a German assessment test based on how many years the person studied German.
+\end{Itemize}
+
+\warn{Explaining variability of and predicting future values of response variables are the two goals of regression.}
+
+Exact predictions cannot be made because of natural variability.  For example, two people with the same intake of mercury (from consumption of fish) will not have the same level of mercury in their blood stream (e.g., observe the two individuals in \figref{fig:HGscat} that had intakes of 580 ug HG/day).  Thus, the best that can be accomplished is to predict the average or expected value for a person with a particular intake value.  This will be accomplished by finding the line that best ``fits'' the points on a scatterplot of the data.  Finding and using that ``best-fit'' line is the topic of this chapter.
+
+<<HGscat, echo=FALSE, fig.cap="Scatterplot between the intake of mercury in fish and the mercury in the blood stream of individuals.">>=
+intake <- c(180,200,230,410,600,550,275,580,580,105,250, 60,650)
+blood  <- c( 90,120,125,290,310,290,170,275,350, 70,105, 75,480)
+merc <- data.frame(intake,blood)
+plot(blood~intake,data=merc,pch=16,xlab="Intake (ug Hg/day)",ylab="Blood (ng/g)")
+@
+
+\section{Response and Explanatory Variables}
+The variable to be predicted and the variable used to make the prediction must be identified before conducting a regression analysis.  The variable to be predicted is the \textbf{response variable}\footnote{A synonym is dependent variable.}.\index{Response Variable!Regression}  The variable used to make the prediction is called the \textbf{explanatory variable}\footnote{A synonym is independent variable.}.\index{Explanatory Variable!Regression}  In the examples mentioned above, future sales, family expenditures on recreation, the animal's food consumption, and score on the assessment test are the response variables and product price, family income, temperature, and years studying German are the explanatory variables, respectively.  When a scatterplot is made in a regression analysis, the response variable must be placed on the y-axis (and, thus, the explanatory variable on the x-axis)\footnote(This is the same as what was done in \chapref{chap:BivEDA}.}.
+
+\defn{Response Variable}{The variable that will be explained or predicted.}
+
+\vspace{-12pt}
+\defn{Explanatory Variable}{The variable that may explain or be used to predict the response variable.}
+
+\begin{exsection}
+  \item \label{revex:RegRivers1} \cite{Dudgeon2000}, while describing the features of major tropical Asian rivers, examined the relationship between the length (km) and drainage area (km$^{2}$) of 11 waterways.  In particular he wanted to determine if a model could be produced that would allow the drainage area of the river to be predicted from the length of the river.  Identify the response and explanatory variables.  Explain your choices. \ansref{ans:RegRivers1}
+  \item \label{revex:RegBirth1} Researchers collected data on 56 normal births at a Wellington, New Zealand hospital.  They were interested in determining if the weight of the newborn child (labeled as \var{BirthWt}) could be predicted by knowing the mothers age (labeled as \var{Age}).  Identify the response and explanatory variables.  Explain your choices. \ansref{ans:RegBirth1}
+\end{exsection}
+
+
+\section{Slope \& Intercept}\index{Line!General Equation}
+The equation of a line is commonly known as,
+  \[ y = mx + b  \]
+where both $x$ and $y$ are variables, $m$ represents the slope of the line, and $b$ represents the y-intercept\footnote{Hereafter, simply called the ``intercept.''}.  It is important that you can look at the equation of a line and identify the response variable, explanatory variable, slope, and intercept.  The response variable will always appear on one side of the equation (usually the left) by itself.   The value or symbol that is multiplied by the explanatory variable (e.g., $x$) is the slope and the value or symbol by itself is the intercept.  For example, without any further explanation, consider the following equation of a line,
+\[ blood = 3.501 + 0.579*intake \]
+From this it is seen that \var{blood} is the response variable, \var{intake} is the explanatory variable, $0.579$ is the slope (it is multiplied by the explanatory variable), and $3.501$ is the intercept (it is not multiplied by anything in the equation).  The same conclusions are reached even if the equation is written as
+  \[ blood = 0.579*intake+3.501 \]
+
+\warn{In the equation of a line, the slope is always multiplied by the explanatory variable and the intercept is always by itself.}
+
+In addition to being able to identify the slope and intercept of a line you also need to be able to interpret these values.  Most students define the slope as ``rise over run'' and the intercept as ``where the line crosses the y-axis.''  These ``definitions'' are very loose geometric representations.  For our purposes, the slope and intercept must be more strictly defined.
+
+To define the slope, first think of ``plugging'' two values of intake into the equation discussed above.  For example, if $intake=100$, then $blood=3.501+0.579*100$=\Sexpr{formatC(3.501+0.579*100,format="f",digits=2)} and if $intake$ is one unit larger (i.e., $intake=101$), then $blood=3.501+0.579*101$=\Sexpr{formatC(3.501+0.579*101,format="f",digits=2)}.  The difference between these two values is \Sexpr{formatC(3.501+0.579*101,format="f",digits=2)}-\Sexpr{formatC(3.501+0.579*100,format="f",digits=2)}=$0.579$.  Thus, it is seen that the slope is the change in value of the response variable for a single unit change in the value of the explanatory variable \figrefp{fig:SlopeInt}.\index{Slope!Definition}  That is, mercury in the blood changes 0.579 units for a single unit change in mercury intake.  So, if an individual increases mercury intake by one unit, then mercury in the blood will increase by 0.579 units, on average.  Alternatively, if one individual has one more unit of mercury intake than another individual, then the first individual will have, on average, 0.579 more mercury units in the blood.
+
+<<SlopeInt, echo=FALSE, fig.cap="Schematic representation of the meaning of the intercept and slope in a linear equation.">>=
+par(mar=c(4.5,4.5,0,0),mgp=c(2,0.75,0))
+int <- 1.5
+slope <- 0.9
+plot(-10,-10,xlim=c(0,10),ylim=c(0,10),xaxt="n",yaxt="n",xaxs="i",yaxs="i",xlab="Explanatory Variable",ylab="Response Variable")
+axis(1,at=0,col="red")
+axis(2,at=int,"",las=1,col="red")
+text(0,int,"intercept",col="red",pos=2,xpd=NA)
+abline(a=int,b=slope,lwd=3,col="black")
+lines(c(2,3,3),int+slope*c(2,2,3),lwd=2,col="red")
+text(2.5,int+slope*2,"1",pos=1,col="red")
+text(3,int+slope*2.5,"slope",pos=4,col="red")
+lines(c(6,7,7),int+slope*c(6,6,7),lwd=2,col="red")
+text(6.5,int+slope*6,"1",pos=1,col="red")
+text(7,int+slope*6.5,"slope",pos=4,col="red")
+@
+
+To define the intercept, first ``plug'' $intake=0$ into the equation discussed above.  Thus, if $intake=0$, then $blood=3.501+0.579*0$=$3.501$.  Thus, it is seen that the intercept is the value of the response variable when the explanatory variable is equal to zero \figrefp{fig:SlopeInt}.\index{Intercept!Definition}  In this example, the average mercury in the blood for an individual with no mercury intake is 3.501 units.  Many times, as is true with this example, the interpretation of the intercept will be nonsensical.  This is because $x=0$ will likely be outside the range of the data collected and, perhaps, outside the range of possible data that could be collected.
+
+The equation of the line is a model for the relationship depicted in a scatterplot.  Thus, the interpretations for the slope and intercept represent the \textit{average} change or the \textit{average} response variable.  Thus, whenever a slope or intercept is being interpreted it must be noted that the result is an \textit{average} or \textit{on average}.
+
+\defn{Slope}{The change in value of the response variable for a unit change in the value of the explanatory variable.}
+
+\vspace{-12pt}
+\defn{Intercept}{The value of the response variable when the explanatory variable is equal to zero.}
+
+\begin{exsection}
+  \item \label{revex:RegRivers2} The research described in Review Exercise \ref{revex:RegRivers1} identified the best-fit line equation as $Area=-159131+314.229Length$. \ansref{ans:RegRivers2}
+    \begin{Enumerate}
+      \item What is the response variable?
+      \item Interpret the value of the slope in terms of the variables of this problem.
+      \item Interpret the value of the intercept in terms of the variables of this problem.
+      \item If one river was 10 km longer than another river, then how much more area would you expect it to drain?
+    \end{Enumerate}
+
+  \item \label{revex:RegBirth2} The research described in Review Exercise \ref{revex:RegBirth1} computed the following regression results: $BirthWt=2054+51.7Age$. \ansref{ans:RegBirth2}
+    \begin{Enumerate}
+      \item What is the explanatory variable?
+      \item Interpret the value of the slope in terms of the variables of this problem.
+      \item Interpret the value of the intercept in terms of the variables of this problem.
+      \item Assume that a mother had a child when she was 20 and when she was 25.  On average, how much more or less would you expect, based on these findings, the second child to weigh compared to the first child?
+    \end{Enumerate}
+\end{exsection}
+
+
+\section{Predictions and Residuals}\index{Regression!Predictions}\index{Predictions!Regression}
+Once a best-fit line has been identified (criteria for doing so is discussed in \sectref{sect:BestFitLine}), the equation of the line can be used to predict the average value of the response variable for individuals with a particular value of the explanatory variable.  For example, the best-fit line for the mercury data shown in \figref{fig:HGscat} is
+  \[ blood = 3.501 + 0.579*intake \]
+Thus, the predicated average level of mercury in the blood for an individual that consumed 240 ug HG/day is found with
+  \[ blood = 3.501 + 0.579*240 = 142.461 \]
+Similarly, the predicted average level of mercury in the blood for an individual that consumed 575 ug HG/day is found with
+  \[ blood = 3.501 + 0.579*575 = 336.426 \]
+Graphically, a prediction can be visualized by finding the value of the explanatory variable on the x-axis, drawing a vertical line until the best-fit line is intercepted, and then drawing a horizontal line over to the y-axis and reading off the value of the response variable \figrefp{fig:HGpredict}.
+
+<<HGpredict, echo=FALSE, fig.cap="Scatterplot between the intake of mercury in fish and the mercury in the blood stream of individuals with superimposed best-fit regression line illustrating predictions for two values of mercury intake.">>=
+par(mar=c(4,4,0.5,0.5),mgp=c(2.5,0.75,0))
+plot(blood~intake,data=merc,pch=16,xlab="Intake (ug Hg/day)",ylab="Blood (ng/g)")
+abline(a=-3.501,b=0.579,col="red",lwd=2)
+df1 <- c(240,575)
+p1 <- 3.501+0.579*df1
+text(df1[1],30,df1[1],xpd=TRUE,col="Red")
+text(df1[2],30,df1[2],xpd=TRUE,col="Red")
+lines(c(df1[1],df1[1],0),c(0,p1[1],p1[1]),col="red",lwd=2,lty=3)
+lines(c(df1[2],df1[2],0),c(0,p1[2],p1[2]),col="red",lwd=2,lty=3)
+text(-20,p1,formatC(p1,format="f",digits=1),col="Red",xpd=TRUE)
+@
+
+\defn{Predicted Value}{The value of $y$ on the best-fit line at the observed value of $x$; abbreviated as $\hat{y}_{i}$ for the $i$th individual.}
+
+\vspace{-12pt}
+\warn{The predicted value of the response variable at a given value of the explanatory variable is found by ``plugging'' the value of the explanatory variable into the equation of the line.}
+
+When predicting values of the response variable, it is important to not extrapolate beyond the range of the data.  In particular, you should try not to make predictions with values of the explanatory variable that are outside the range of values of the explanatory variable that were used to find the best-fit line.  An excellent example would be to consider the height ``data'' collected during the early parts of a human's life (say the first ten years).  During these early years there is likely a good fit between height (the response variable) and age.  Using this relationship to predict an individual's height at age 40 would likely result in a ridiculous answer (i.e., probably over ten feet).  The problem is that the best-fit line only ``works'' for the first ten years of our life; i.e., it is not known if the same linear relationship exists outside that range of years.  In fact, with human heights, it is generally known that growth first slows, eventually quits, and may, at very old ages, actually decline.  Thus, the linear relationship found early in life does not hold for later years.  Critical mistakes can be made when using a linear relationship to extrapolate outside the range of the data.
+
+\warn{When making predictions of the response variable, do not extrapolate beyond the range of the data.}
+
+The predicted value is a ``best-guess'' for an individual based on the best-fit line.  The actual value for any individual is likely to be different from this predicted value.  The \textbf{residual} is a measure of how ``far off'' the prediction is from what is actually observed for an individual.\index{Residual!Definition}\index{Residual!Computation}  Specifically, the residual for an individual is computed by subtracting the predicted value (given the individual's observed value of the explanatory variable) from the individual's observed value of the response variable, or
+  \[ \text{residual}=\text{observed response}-\text{predicted response} \]
+For example, consider an individual that has an observed intake of 650 and an observed level of mercury in the blood of 480.  The predicted level of mercury in the blood for this individual is
+  \[ blood = 3.501 + 0.579*650 = 379.851 \]
+The residual for this individual is then $480-379.851$ = $100.149$.  This positive residual indicates that the observed value is approximately 100 units greater than would be expected based on the best-fit line\footnote{In other words, the observed value is ``above'' the line.}.  As a second example, consider a second individual with an observed intake of 250 and an observed level of mercury in the blood of 105.  The predicted value for this individual is
+  \[ blood = 3.501 + 0.579*250 = 148.251 \]
+The residual for this individual is then $105-148.251$ = $-43.251$.  This negative residual indicates that the observed value is approximately 43 units less than would be expected based on the best-fit.  Both of these residuals are visualized as the vertical distances between an individual's point and the corresponding point on the best-fit line in \figref{fig:HGresidual}.
+
+\defn{Residual}{The vertical difference between the observed and predicted values of the response variable for an individual; computed as the difference between the observed and predicted values of the response.}
+
+<<HGresidual, echo=FALSE, fig.cap="Scatterplot between the intake of mercury in fish and the mercury in the blood stream of individuals with superimposed best-fit regression line illustrating the residuals for two individuals.">>=
+plot(blood~intake,data=merc,pch=16,xlab="Intake (ug Hg/day)",ylab="Blood (ng/g)")
+lm1 <- lm(blood~intake,data=merc)
+abline(lm1,col="red",lwd=2)
+df2 <- data.frame(intake=c(250,650))
+p2 <- predict(lm1,df2)
+lines(c(df2[1,1],df2[1,1]),c(105,p2[1]),lwd=2,lty=2,col="blue")
+lines(c(df2[2,1],df2[2,1]),c(480,p2[2]),lwd=2,lty=2,col="red")
+@
+
+\begin{exsection}
+  \item \label{revex:RegRivers3} Use the results described in Review Exercise \ref{revex:RegRivers2} to answer the questions below. \ansref{ans:RegRivers3}
+    \begin{Enumerate}
+      \item Predict the drainage area for a river 3500 km long.
+      \item Calculate the residual if the river above (3500 km length) had a drainage area of 1,000,150 km$^{2}$.
+      \item Predict the drainage area for a river 7500 km long.
+    \end{Enumerate}
+
+  \item \label{revex:RegBirth3} Use the results described in Review Exercise \ref{revex:RegBirth2} to answer the questions below. \ansref{ans:RegBirth3}
+    \begin{Enumerate}
+      \item Predict the weight of a child born to a 30-year-old mother.
+      \item A 30-year-old mother had a child that weighed 3550 g.  Find the residual for that mother.
+      \item Predict the weight of a child born to an 18-year-old mother.
+    \end{Enumerate}
+
+  \item \label{revex:RegLumina} Researchers at Chevrolet attempted to determine the relationship between gas mileage (MPG) of Luminas in the city (CITY) and on the highway (HIGHWAY).  Results of their analysis is shown below.  \ansref{ans:RegLumina}
+<<LuminaFLP, echo=FALSE, results='hide', include=FALSE, fig.width=3.5, fig.height=3.5, par1a=TRUE>>=
+lum <- read.table("data/Lumina.txt",header=TRUE)
+lm.lum <- lm(CMPG~HMPG,data=lum)
+fitPlot(lm.lum,pch=16,xlab="Highway MPG",ylab="City MPG",main="")
+r2 <- rSquared(lm.lum,digits=3)
+mtext(bquote(paste(Y==.(round(coef(lm.lum)[1],3))+.(round(coef(lm.lum)[2],3))*X,"    ",r^2==.(r2))),line=0.2,cex=0.8)
+@
+\begin{center}
+  \includegraphics[width=3in]{Figs/LuminaFLP-1}
+\end{center}
+    \begin{Enumerate}
+      \item Predict the city mpg for a Lumina that gets 25 mpg on the highway.
+      \item Predict the highway mpg for a Lumina that gets 25 mpg in the city.
+      \item Predict the city mpg for a Lumina that gets 40 mpg on the highway.
+      \item What is the residual for a Lumina that gets 25 mpg on the highway and 20 in the city?
+    \end{Enumerate}
+\end{exsection}
+
+\vspace{-24pt}
+\section{Best-fit Criteria}\label{sect:BestFitLine}\index{Regression!Finding best-fit line}
+An infinite number of lines can be placed on a graph.  Obviously, many of those lines do not adequately describe the data.  In contrast, many of the lines will appear, to our eye, to adequately describe the data.  So as not to rely on the subjectivity of our eye, a specific procedure will be employed to derive a quantifiable and objective measure of which line best ``fits'' the data.  This procedure is called \textbf{least-squares regression} and is discussed in this section.
+
+Residuals are a measure of how far away an individual is from a candidate best-fit line.  All residuals computed from all individuals in a data set is a measure of how far away all of the individuals are from the candidate best-fit line.  Thus, the residuals for all individuals can be used to identify the best-fit line.  The residual sum-of-squares (RSS) is defined as the sum of all squared residuals.\index{RSS}  The least-squares criterion says that the ``best-fit'' line is the line out of all possible lines that has the minimum RSS.  Only one candidate line will have the minimum RSS and the least-squares method defines this as the ``best-fit'' line to the data \figref{fig:RSSanim}.
+
+<<RSSanim, echo=FALSE, cache=TRUE, fig.width=7, fig.height=3.5, fig.show='animate',fig.cap="An animation illustrating how the residual sum-of-squares (RSS) for a series of candidate lines (red lines) is minimized at the best-fit line (green line).", aniopts='controls,palindrome,autoplay',out.width='.8\\linewidth'>>=
+################################################################################
+# Function to calculate the RSS given a dataframe that must have the explanatory
+#   variable in the first column and the response variable in the second column
+#   and a dataframe that contains the paired parameter estimates with the slopes
+#   in the first column and the intercepts in the second column.  Returns a data
+#   frame with the slopes as the first, the intercepts as the second, and the
+#   RSS as the third column.
+################################################################################
+RSS2 <- function(d,ests) {
+  RSS <- NULL                               # Initiate the vector
+  for (i in 1:nrow(ests)) {                 # Cycle throught the possible parameter estimates
+    pred <- ests[i,1]*d[,1]+ests[i,2]       # Predicted values for current parameter estimates
+    RSS <- c(RSS,sum((d[,2]-pred)^2))       # Put the RSS for the current parameter estimates onto the end of the vector
+  }
+  data.frame(ests,RSS)
+}
+
+################################################################################
+# A function that receives a dataframe that has the sequence of parameter
+#   estimates in the first two columns and the corresponding RSS in the third
+#   column.  In addition, the index position of the current potential parameters
+#   must be sent.  This function then plots the RSS (e.g., RSS vs. an index)
+#   and a red vertical line and dot at the current estimate.
+################################################################################
+plotRSS<-function(r,icurr) {
+  i <- seq(1,nrow(r))                                                        # Creates an index
+  plot(i,r[,3],type="l",lwd=2,main="",xlab="",ylab="RSS",xaxt="n",yaxt="n")  # Plot the function
+  mtext(paste("slope","intercept",sep=","),1,1)                              # Labels x-axis
+  lines(c(icurr,icurr),c(min(r[,3]),max(r[,3])),lwd=2,col="red")             # Put line at current guess
+  points(icurr,r[icurr,3],col="red",pch=19,cex=1.2)                          # Put point at current guess
+}
+
+################################################################################
+# Plots the raw data with residuals to the current estimate
+################################################################################
+plotEst<-function(d,e,icurr,...) {
+  plot(d[,1],d[,2],xlab=names(d)[1],ylab=names(d)[2],pch=19,...)             # Plot the data
+  l1<-lm(d[,2]~d[,1])                                                        # Fit the linear model
+  abline(coef(l1),lwd=1,col="green")                                         # Plot the best-fit line in green
+  abline(c(e[icurr,2],e[icurr,1]),lwd=2,col="red")                           # Plot current candidate line in red
+  for (i in 1:nrow(d)) {                                                     # Put on the residuals to the current estimate
+    pred <- e[icurr,1]*d[i,1]+e[icurr,2]
+    clr <- ifelse((d[i,2]-pred)<0,"blue","red")
+    lines(c(d[i,1],d[i,1]),c(d[i,2],pred),lty=2,lwd=2,col=clr)
+  }
+}
+
+# create intercepts
+ints <- seq(-180,190,5)
+# create slopes from the intercepts given the mean of x and mean of y
+xbar <- mean(merc$intake)
+ybar <- mean(merc$blood)
+slps <- sapply(ints,FUN=function(int,xbar,ybar) (ybar-int)/xbar, xbar=xbar,ybar=ybar)
+params <- data.frame(slps,ints)
+
+
+par(mar=c(3.5,3.5,1,1),mgp=c(2,0.75,0),mfrow=c(1,2))
+RSSs <- RSS2(merc,params)                                                    # Compute RSS values for all parameter choices
+for(i in 1:nrow(params)) {                                                   # Cycle through the estimates
+  plotEst(merc,params,i,ylim=c(-100,600),xlim=c(0,700))                      # Make the fitted plot
+  plotRSS(RSSs,i)                                                            # Make the RSS plot
+}
+@
+
+\defn{Residual sum-of-squares}{The sum of all squared residuals; abbreviated as RSS.}
+
+\vspace{-12pt}
+\warn{The least-squares criterion is that the ``best-fit'' line is the line of all possible lines with the minimum RSS.}
+
+The presentation so far implies that all possible lines must be ``fit'' to the data and the one with the minimum RSS is chosen as the ``best-fit'' line.  As there are an infinite number of possible lines, this would be impossible to do.  Theoretical statisticians have shown that the application of the least-squares criterion always produces a best-fit line with a slope given by\index{Slope!Calculation}\index{Intercept!Calculation}
+  \[ slope = r\frac{s_{y}}{s_{x}}  \]
+and an intercept given by
+  \[ intercept = \bar{y}-slope*\bar{x}   \]
+So, one can apply these formulas to the bivariate data to find the best-fit line but these formulas effectively find the best-fit line by minimizing the RSS from all possible lines.
+
+
+\section{Assumptions}\label{sect:RegAssumptions}\index{Regression!Assumptions}
+The least-squares method to find a best-fit line only works appropriately if each of several assumptions about the data has been met.  The five assumptions of least-squares regression are,
+
+\begin{Enumerate}
+  \item A line describes the data.
+  \item Homoscedasticity.
+  \item Normally distributed residuals at a given x.
+  \item Independent residuals at a given x.
+  \item The explanatory variable is measured without error.
+\end{Enumerate}
+
+While all five assumptions of linear regression are important, only the first two are vital when the best-fit line is being used primarily as a descriptive model for data\footnote{In contrast to using the model to make inferences about a population model.}.  Description is the primary goal of linear regression used in this book and, thus, we will focus on the first two assumptions, which are required for adequate description.
+
+The first assumption appears to be obvious -- if a line does not represent the data, then don't try to fit a line to it!  Violations of this assumption are evident by a non-linear or curving form in the scatterplot.  The second assumption, homoscedasticity, states that the variability about the line is the same at all values of the explanatory variable.\index{Homoscedasticity} In other words, the dispersion of the data about the line must be the same everywhere along the entire line.  Violations of this assumption are generally evident by a ``funnel-shaped'' dispersion of points from left-to-right on a scatterplot.  Violations of these assumptions are often evident on so-called ``fitted-line plots'' -- i.e., scatterplots with the best-fit line superimposed \figrefp{fig:ResidPlotEx}\footnote{Residual plots, not discussed in this text, are another plot that often times is used to better assess assumption violations.}.  If the points look more-or-less like random scatter around the best-fit line, then neither the linearity nor the homoscedasticity assumption has been violated.
+
+<<ResidPlotEx, echo=FALSE, fig.width=6, fig.height=6, out.width='.8\\linewidth', fig.cap="Fitted-line plots illustrating when the regression assumptions are met (upper-left) and three common assumption violations.">>=
+par(mar=c(2,3,3,2),mgp=c(0.5,0,0),mfrow=c(2,2))
+set.seed(101)
+n <- 100
+mu <- 0
+sigma <- 10
+slp <- 1
+int <- 0
+x <- rnorm(n,mu,sigma)
+e1 <- rnorm(n,mu,sigma)
+y1 <- slp*x+int+e1
+lm1 <- lm(y1~x)
+fitPlot(lm1,xlab="Explanatory",ylab="Response",xaxt="n",yaxt="n",main="")
+mtext("Assumptions Met",line=0.25,col="blue")
+
+e2 <- ((x-mean(x))/5)^2 + rnorm(n,0,sigma/4)
+y2 <- slp*x+int+e2
+lm2 <- lm(y2~x)
+fitPlot(lm2,xlab="Explanatory",ylab="Response",xaxt="n",yaxt="n",main="")
+mtext("Non-Linear",line=0.25,col="red")
+
+x1 <- runif(n,min=0,max=10)
+e3 <- rep(0,n)
+for (i in 1:n) e3[i] <- rnorm(1,0,x1[i]/2)
+y3 <- slp*x1+int+e3
+lm3 <- lm(y3~x1)
+fitPlot(lm3,xlab="Explanatory",ylab="Response",xaxt="n",yaxt="n",main="")
+mtext("Heteroscedastic",line=0.25,col="red")
+
+y4 <- 2*log(x1) + rnorm(n,0,0.4)
+y4 <- exp(y4)
+lm4 <- lm(y4~x1)
+fitPlot(lm4,xlab="Explanatory",ylab="Response",xaxt="n",yaxt="n",main="")
+mtext("Non-linear & Heteroscedastic",line=0.25,col="red")
+@
+
+In this text, if an assumption has been violated, then one should not continue to interpret the linear regression.  However, in many instances, an assumption violation can be ``corrected'' by transforming one or both variables to a different scale.  Transformations are not discussed in this book.
+
+\warn{If the regression assumptions are not met, then the regression results should not be interpreted.}
+
+\section{Coefficient of Determination}\index{r-squared@{$r^{2}$}}
+The coefficient of determination, abbreviated as $r^{2}$, is the proportion of the total variability in the response variable that is explained away by knowing the explanatory variable and the best-fit model.  The $r^{2}$ can take values between 0 and 1\footnote{It is common for $r^{2}$ to be presented as a percentage.}.  In simple linear regression\footnote{Simple linear regression is the fitting of a model with a single explanatory variable and is the only model considered in this chapter and this book.} $r^{2}$ is literally the square of $r$, the correlation coefficient\footnote{See \sectref{sect:corr} for a review of the correlation coefficient.}.
+
+\defn{Coefficient of Determination}{The proportion of the total variability in the response variable that is explained away by knowing the explanatory variable and the best-fit model; abbreviated as $r^{2}$.}
+
+\vspace{-12pt}
+\warn{$r^{2}$ can take values between 0 and 1.}
+
+The meaning of $r^{2}$ can be examined by considering predictions of the response variable with and without knowledge of the value of the explanatory variable.  First, consider predicting the value of a particular response variable without any information about the explanatory variable.  In this case, the best prediction for the value of the response variable is to use the sample mean of the response variable (represented by the dashed blue horizontal line in \figref{fig:CoeffDeterm}).  However, because of natural variability, not all individuals will have this value.  Thus, the prediction might be ``bracketed'' by saying that the individual will be between the observed minimum and maximum values (solid blue horizontal lines).  Loosely speaking, this range can be thought of as the ``total variability in the response variable'' (blue box).
+
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=5in]{Figs/rsq3.png}
+  \caption{Fitted line plot with visual representations of variabilities explained and unexplained.  A full explanation is in the text.}
+  \label{fig:CoeffDeterm}
+\end{figure}
+
+Suppose now that interest is in predicting the value of the response variable for an individual with a known value of the explanatory variable (at the dashed vertical red line in \figref{fig:CoeffDeterm}).  The predicted value for this individual is the value of the response variable at the corresponding point on the best-fit line (dashed horizontal red line).  Again, because of natural variability, not all individuals with this value of the explanatory variable will have this exact value of the response variable.  However, the prediction is now ``bracketed'' by the minimum and maximum value of the response variable \textbf{ONLY} for those individuals with the particular value of the explanatory variable (solid red horizontal lines).  Loosely speaking, this range can be thought of as the ``variability in the response variable remaining after knowing the value of the explanatory variable'' (red box).  This is the variability in the response variable that remains even after knowing the value of the explanatory variable or the variability in the response variable that cannot be explained away (by the explanatory variable).
+
+The portion of the total variability in the response variable that was explained away consists of all the values of the response variable that would no longer be entertained as possible predictions once the value of the explanatory variable is known (green box in \figref{fig:CoeffDeterm}).  Now, by the definition of $r^{2}$, the computation of $r^{2}$ can be visualized as the area of the green box divided by the area of the blue box.  This calculation does not depend on which value of the explanatory variable is chosen as long as the data are evenly distributed around the line (i.e., homoscedastic -- see \sectref{sect:RegAssumptions}).
+
+If the variability explained away (the green box in \figref{fig:CoeffDeterm}) approaches the total variability in the response variable (the blue box), then $r^{2}$ approaches 1.  This will happen only if the variability about the line approaches zero.  In contrast, the variability explained (the green box) will approach zero if the slope is zero (i.e., there is no relationship between the response and explanatory variables).  Thus, values of $r^{2}$ also indicate the strength of the relationship; values near 1 are stronger than values near 0.  Values near 1 also mean that predictions will be fairly accurate -- i.e., there is little variability remaining after knowing the explanatory variable.
+
+\warn{A value of $r^{2}$ near 1 represents a strong relationship between the response and explanatory variables that will lead to accurate predictions.}
+
+
+\section{Examples I}
+There are twelve questions that are commonly asked relative to linear regression results.  These twelve questions are listed below with some hints about things to remember when answering some of the questions.  An example of these questions in context is then provided.
+
+\begin{Enumerate}
+  \item What is the response variable?  \textit{Identify which variable is to be predicted or explained, which variable is dependent on another variable, which would be hardest to measure, or which is on the y-axis.}
+  \item What is the explanatory variable?  \textit{The remaining variable after identifying the response variable.}
+  \item Comment on linearity and homoscedasticity.  \textit{Examine fitted-line plot for curvature (i.e., non-linearity) or a funnel-shape (i.e., heteroscedasticity).}
+  \item What is the equation of the best-fit line?  \textit{In the generic equation of the line ($y=mx+b$) replace $y$ with the name of the response variable, $x$ with the name of the explanatory variable, $m$ with the value of the slope, and $b$ with the value of the intercept.}
+  \item Interpret the value of the slope.  \textit{Comment on how the response variable changes by slope amount for each one unit change of the explanatory variable, on average.}
+  \item Interpret the value of the intercept.  \textit{Comment on how the response variable equals the slope, on average, if the explanatory variable is zero.}
+  \item Make a prediction given a value of the explanatory variable.  \textit{Plug the given value of the explanatory variable into the equation of the best-fit line.}
+  \item Compute a residual given values of both the explanatory and response variables.  \textit{Make a prediction (see previous question) and then subtract this value from the observed value of the response.}
+  \item Identify an extrapolation in the context of a prediction problem.  \textit{Examine the x-axis scale on the fitted-line plot and do not make predictions outside of the plotted range.}
+  \item What is the proportion of variability in the response variable explained by knowing the value of the explanatory variable?  \textit{This is $r^{2}$.}
+  \item What is the correlation coefficient?  \textit{This is the square root of $r^{2}$.  Make sure to put a negative sign on the result if the slope is negative.}
+  \item How much does the response variable change if the explanatory variable changes by X units?  \textit{This is an alternative to asking for an interpretation of the slope.  If the explanatory variable changes by X units, then the response variable will change by X*slope units, on average.}
+\end{Enumerate}
+
+All answers should refer to the variables of the problem -- thus, ``y'', ``x'', ``response'', or ``explanatory'' should not be in any part of any answer.  The questions about the slope, intercept, and predictions need to explicitly identify that the answer is an ``average'' or ``on average.''
+
+\subsection*{Chimp Hunting Parties}
+\begin{quote}
+\textit{\cite{Stanford1996} gathered data to determine if the size of the hunting party (number of individuals hunting together) affected the hunting success of the party (number of hunts that resulted in a kill) for wild chimpanzees (Pan troglodytes) at Gombe.  The results of their analysis for 17 hunting parties is shown in the figure below\footnote{These data came from \href{https://sites.google.com/site/ncstats/data/Chimp.txt}{Chimp.txt}.}.  Use these results to answer the questions below.}
+\end{quote}
+
+<<ChimpFLP, echo=FALSE>>=
+chimp <- read.table("data/Chimp.txt",header=TRUE)
+lm.chimp <- lm(percsucc~huntparty,data=chimp)
+fitPlot(lm.chimp,pch=16,xlab="Number of Hunting Party Members",ylab="% Successful Hunts",main="")
+r2 <- formatC(rSquared(lm.chimp),format="f",digits=3)
+mtext(bquote(paste(Y==.(formatC(coef(lm.chimp)[1],format="f",digits=3))+.(formatC(coef(lm.chimp)[2],format="f",digits=3))*X,"    ",r^2==.(r2))),line=0.2,cex=0.8)
+@
+
+\begin{QAlist}
+  \item What is the response variable?
+  \begin{QAlist}
+    \item The response variable is the percent of successful hunts because the authors are attempting to see if success depends on hunting party size.  In addition, the percent of successful hunts is shown on the y-axis.
+  \end{QAlist}
+  \item What is the explanatory variable?
+  \begin{QAlist}
+    \item The explanatory variable is the size of the hunting party.
+  \end{QAlist}
+  \item In terms of the variables of the problem, what is the equation of the best-fit line?
+  \begin{QAlist}
+    \item The equation of the best-fit line for this problem is \% Success of Hunt = \Sexpr{formatC(coef(lm.chimp)[1],format="f",digits=3)} + \Sexpr{formatC(coef(lm.chimp)[2],format="f",digits=3)}*Number of Hunting Party Members.
+  \end{QAlist}
+  \item Interpret the value of the slope in terms of the variables of the problem.
+  \begin{QAlist}
+    \item The slope indicates that for every increase of one member to the hunting party the percent of successful hunts increases by \Sexpr{formatC(coef(lm.chimp)[2],format="f",digits=3)}, on average.
+  \end{QAlist}
+  \item Interpret the value of the intercept in terms of the variables of the problem.
+  \begin{QAlist}
+    \item The intercept indicates that a hunting party with no members will have a percent of successful hunts of \Sexpr{formatC(coef(lm.chimp)[1],format="f",digits=3)}, on average.
+  \end{QAlist}
+  \item What is the predicted hunt success if the hunting party consists of 20 chimpanzees?
+  \begin{QAlist}
+    \item The predicted hunt success for parties with 20 individuals is an extrapolation, because 20 is outside the range of the number of members observed on the fitted-line plot.
+  \end{QAlist}
+  \item What is the predicted hunt success if the hunting party consists of 12 chimpanzees?
+  \begin{QAlist}
+    \item The predicted hunt success for parties with 12 individuals is \Sexpr{formatC(coef(lm.chimp)[1],format="f",digits=3)} + \Sexpr{formatC(coef(lm.chimp)[2],format="f",digits=3)}*12 = \Sexpr{formatC(coef(lm.chimp)[1]+coef(lm.chimp)[2]*12,format="f",digits=1)}\%.
+  \end{QAlist}
+  \item What is the residual if the hunt success for 10 individuals is 50\%?
+  \begin{QAlist}
+    \item The residual in this case is $50$-(\Sexpr{formatC(coef(lm.chimp)[1],format="f",digits=3)} + \Sexpr{formatC(coef(lm.chimp)[2],format="f",digits=3)}*10) = $50$-\Sexpr{formatC(coef(lm.chimp)[1]+coef(lm.chimp)[2]*10,format="f",digits=1)} = \Sexpr{formatC(50-(coef(lm.chimp)[1]+coef(lm.chimp)[2]*10),format="f",digits=1)}.  Therefore, it appears that the success of this hunting party is \Sexpr{formatC(-1*(50-(coef(lm.chimp)[1]+coef(lm.chimp)[2]*10)),format="f",digits=1)}\% lower than average for this size of hunting party.
+  \end{QAlist}
+  \item What proportion of the variability in hunting success is explained by knowing the size of the hunting party?
+  \begin{QAlist}
+    \item The proportion of the variability in hunting success that is explained by knowing the size of the hunting party is $r^{2}$=\Sexpr{formatC(rSquared(lm.chimp),format="f",digits=2)}.
+  \end{QAlist}
+  \item What is the correlation between hunting success and size of hunting party?
+  \begin{QAlist}
+    \item The correlation between hunting success and size of hunting party is $r=$\Sexpr{formatC(sqrt(rSquared(lm.chimp)),format="f",digits=2)}.
+  \end{QAlist}
+  \item How much does hunt success decrease, on average, if there are two fewer individuals in the party?
+  \begin{QAlist}
+    \item If the hunting party has two fewer members, then the hunting success would decrease by \Sexpr{formatC(2*coef(lm.chimp)[2],format="f",digits=1)}\% (i.e., $-2$*\Sexpr{formatC(coef(lm.chimp)[2],format="f",digits=3)}), on average.
+  \end{QAlist}
+  \item Does any aspect of this regression concern you (i.e., consider the regression assumptions)?
+  \begin{QAlist}
+    \item The data appear to be very slightly curved but there is no evidence of a funnel-shape.  Thus, the data may be slightly non-linear but they appear homoscedastic.
+  \end{QAlist}
+\end{QAlist}
+
+\warn{All interpretations should be ``in terms of the variables of the problem'' rather than the generic terms of x, y, response variable, and explanatory variable.}
+
+\begin{exsection}
+  \item \label{revex:RegBP} The age (in years) and systolic blood pressure were measured for 32 white males over the age of 40.  The researchers wanted to determine if systolic blood pressure increased with increasing age.  Thus, they computed the regression depicted in the fitted-line plot below.  Use these results to answer the questions below.  \ansref{ans:RegBP}
+<<SBPFLP, echo=FALSE, results='hide', include=FALSE, fig.width=3.5, fig.height=3.5, par1a=TRUE>>=
+sbp1 <- read.table("data/sbp.txt",header=TRUE)
+lm.sbp <- lm(sbp~age,data=sbp1)
+fitPlot(lm.sbp,pch=16,xlab="Age (yrs)",ylab="Systolic Blood Pressure",main="")
+r2 <- rSquared(lm.sbp)
+mtext(bquote(paste(Y==.(formatC(coef(lm.sbp)[1],format="f",digits=3))+.(formatC(coef(lm.sbp)[2],format="f",digits=3))*X,"    ",r^2==.(formatC(r2,format="f",digits=3)))),line=0.2,cex=0.8)
+@
+\begin{center}
+  \includegraphics[width=2.8in]{Figs/SBPFLP-1}
+\end{center}
+    \begin{Enumerate}
+      \item Which is the explanatory variable?
+      \item Which is the response variable?
+      \item In terms of the variables of this problem, what is the equation of the best-fit line?
+      \item In terms of the variables of this problems, interpret the value of the intercept.
+      \item In terms of the variables of this problems, interpret the value of the slope.
+      \item If male A is 3 years younger than male B, how much difference do you expect to see in their systolic blood pressures?
+      \item What is the predicted systolic blood pressure for a 70-year-old male?
+      \item What is the residual for a a 50-year-old male with a SBP of 131?
+      \item What is the correlation coefficient between Age and SBP?
+      \item What proportion of the variability in SBP is explained by knowing the person's AGE?
+      \item What is the predicted systolic blood pressure for a 55-year-old male?
+    \end{Enumerate}
+
+  \item \label{revex:RegTVRate} There are at least two ways that special TV programs could be rated, and both are of interest to advertisers -- the estimated size of the audience and the percentage of TV-owning households that tuned into the program.  Use the results below for the 20 all-time top-rated programs to determine if the estimated size of the audience can be predicted from the percentage of TV-owning households tuned into the program.  \ansref{ans:RegTVRate}
+<<TVFLP, echo=FALSE, results='hide', include=FALSE, fig.width=3.5, fig.height=3.5, par1a=TRUE>>=
+tv <- read.table("data/tv.txt",header=TRUE)
+lm.tv <- lm(audience~rating,data=tv)
+fitPlot(lm.tv,pch=16,xlab="Rating (%)",ylab="Audience (1000s)",main="")
+r2 <- formatC(rSquared(lm.tv),format="f",digits=3)
+mtext(bquote(paste(Y==.(formatC(coef(lm.tv)[1],format="f",digits=3))+.(formatC(coef(lm.tv)[2],format="f",digits=3))*X,"    ",r^2==.(r2))),line=0.2,cex=0.8)
+@
+\begin{center}
+  \includegraphics[width=2.8in]{Figs/TVFLP-1}
+\end{center}
+    \begin{Enumerate}
+      \item What did the researchers consider the response variable to be?
+      \item What is the equation of the best-fit line in terms of the variables of the problem?
+      \item Interpret the value of the slope in terms of the variables of the problem.
+      \item What is the predicted audience size for a show with a rating of 40.1\%?
+      \item What is the residual for a show with a rating of 55 and an audience size (1000s) of 40000?
+      \item What proportion of the variability in audience size is explained by known the rating percentage?
+      \item What is the correlation between audience size and rating percentage?
+      \item What are two things that bother you about this analysis as it is presented here? Be specific!
+    \end{Enumerate}
+
+  \item \label{revex:RegThrush} \cite{VegaRivera1998} examined the relationship between the duration of molt and the date of molt start (measured in days since July 1) for wood thrush (\textit{Hylocichla mustelina}).  A recreation of their results is shown below (note that the outlier marked by a ``+'' in the scatterplot was ignored in the calculation of the best-fit line).  Use these results to answer the questions below.  \ansref{ans:RegThrush}
+<<MoltFLP, echo=FALSE, results='hide', include=FALSE, fig.width=3.5, fig.height=3.5, par1a=TRUE>>=
+molt <- read.table("data/molt.txt",header=TRUE)
+out <- molt[33,]
+molt1 <- molt[-33,]
+lm.molt <- lm(duration~date,data=molt1)
+fitPlot(lm.molt,pch=16,xlab="Start Date (d since July 1)",ylab="Duration (d))",main="")
+points(out$date,out$duration,pch=3)
+r2 <- formatC(rSquared(lm.molt),format="f",digits=3)
+mtext(bquote(paste(Y==.(formatC(coef(lm.molt)[1],format="f",digits=3))-.(formatC(-1*coef(lm.molt)[2],format="f",digits=3))*X,"    ",r^2==.(r2))),line=0.2,cex=0.8)
+@
+\begin{center}
+  \includegraphics[width=2.8in]{Figs/MoltFLP-1}
+\end{center}
+    \begin{Enumerate}
+      \item What is the explanatory variable?
+      \item What is the response variable?
+      \item In terms of the variables of this problem, what is the equation of the best-fit line?
+      \item In terms of the variables of this problem, interpret the value of the slope.
+      \item In terms of the variables of this problem, interpret the value of the intercept.
+      \item What is the predicted molt duration if the molt starts on September 10 (71 d since July 1)?
+      \item What is the residual if molt duration is 48 d and the start date is Aug. 12 (43 d since July 1)?
+      \item What is the correlation between molt duration and molt start date?
+      \item What proportion of the variability in molt duration is explained when molt start date is 37?
+      \item What proportion of the variability in molt duration is explained when molt start date is 57?
+      \item What would happen to the value of the slope if the outlier was NOT ignored?
+    \end{Enumerate}
+
+  \item \label{revex:RegFawns2} Wildlife ecologists in Texas wanted to determine if the number of fawns born to each doe could be explained by the doe's body mass \citep{GinnettYoung2000}.  As part of their study, the researchers recorded the mean number of fawns born to a doe (over a period of time) and the body mass of the doe (kg).  Use the results in the following graph to explain the relationship to answer the questions below. \ansref{ans:RegFawns2}
+<<Deer2FLP, echo=FALSE, results='hide', include=FALSE, fig.width=3.5, fig.height=3.5, par1a=TRUE>>=
+d2 <- read.table("data/deer2.txt",header=TRUE)
+lm.d2 <- lm(fawns~bodymass,data=d2)
+fitPlot(lm.d2,pch=16,xlab="Doe Body Mass (kg)",ylab="Mean Fawns per Doe",main="",ylim=c(1,4))
+r2 <- formatC(rSquared(lm.d2),format="f",digits=3)
+mtext(bquote(paste(Y==.(formatC(coef(lm.d2)[1],format="f",digits=3))+.(formatC(coef(lm.d2)[2],format="f",digits=4))*X,"    ",r^2==.(r2))),line=0.2,cex=0.8)
+@
+\begin{center}
+  \includegraphics[width=2.8in]{Figs/Deer2FLP-1}
+\end{center}
+    \begin{Enumerate}
+      \item Which is the explanatory variable?
+      \item Which is the response variable?
+      \item Express the equation of the best-fit line in terms of the variables of the problem.
+      \item Interpret the slope of the best-fit line in terms of the variables of the problem.
+      \item If a doe weighed 45 kg, how many fawns on average would you expect her to have?
+      \item If a doe weighing 32 kg gave birth to an average of 1.9 fawns, what is the residual for this doe?
+      \item What is the correlation coefficient between mean number of fawns born and doe body mass?
+      \item How much of the variability in the mean number of fawns born is explained by knowing the body mass of does?
+      \item If body mass increases by 5 kg, how many more fawns can you expect that doe have?
+      \item Do you have any concerns about the strength of this relationship?
+    \end{Enumerate}
+
+\end{exsection}
+
+
+\section{Regression in R}
+The linear regression model is fit to two quantitative variables with \R{lm()}.  The first argument to \R{lm()} is a model formula of the form \R{response\TILDE explanatory} where \R{response} is a vector containing the response variable and \R{explanatory} is a vector containing the explanatory variable.  These two vectors must be found in the data frame that is sent to the \R{data=} argument.  The results of \R{lm()} should be assigned to an object so that that object can be submitted to other functions to extract specific results.
+
+\warn{The model formula used in the scatterplot and the linear model should be the same.}
+
+The regression is fit to the mercury in the blood and the intake of mercury data by first loading and viewing the structure of the data with
+<<eval=FALSE>>=
+setwd('c:/data/')
+merc <- read.table("Mercury.txt",header=TRUE)
+@
+\vspace{-12pt}
+<<>>=
+str(merc)
+@
+The appropriate formula and \R{data=} arguments are then submitted to \R{lm()}, with the result assigned to an object and the results printed\footnote{Alternatively, the coefficients are obtained by submitting the \R{lm} object to \R{coef()} as such \R{coef(lm1)}.}, with
+<<>>=
+( lm1 <- lm(blood~intake,data=merc) )
+@
+From this it is seen that the intercept is \Sexpr{formatC(coef(lm1)[1],format="f",digits=3)} and the slope is \Sexpr{formatC(coef(lm1)[2],format="f",digits=3)}.  A fitted-line plot (i.e., a scatterplot with the best-fit line superimposed) is constructed by submitting the \R{lm} object to \R{fitPlot()}.  For example, the fitted-line plot shown in \figref{fig:HGFLP} was constructed with\index{Regression!Finding best-fit line}
+
+<<HGFLP, fig.cap="Fitted-line plots for the regression of mercury in the blood on mercury intake.">>=
+fitPlot(lm1,main="")
+@
+
+Predicted values from the linear regression is obtained with \R{predict()}.\index{Predictions!Regression}  The \R{predict()} function requires the saved  \R{lm} object as its first argument.  The second argument is a data frame constructed with \R{data.frame()} that contains the \textbf{EXACT} name of the explanatory variable as it appeared in \R{lm()} set equal to the value of the explanatory at which the prediction should be made.  For example, the predicted amount of mercury in the blood for an intake of 240 $\mu$g per day is obtained with
+<<>>=
+predict(lm1,data.frame(intake=240))
+@
+Thus, a fish with an intake of 240 $\mu$g of mercury per day will have \Sexpr{formatC(predict(lm1,data.frame(intake=240)),format="f",digits=1)} mg per g of mercury in the blood, on average.
+
+\warn{The name of the explanatory variable used in the \R{predict()} function must be exactly the same as it appears in the original data frame.}
+
+The coefficient of determination is computed by submitting the objected saved from \R{lm()} to \R{rSquared()}.  In addition, the value can be rounded to a certain level of digits by using the \R{digits=} argument.  For example, the $r^{2}$ value for this exampled is computed with
+<<>>=
+rSquared(lm1,digits=3)
+@
+Thus, \Sexpr{formatC(rSquared(lm1,percent=TRUE),format="f",digits=1)}\% of the variability in mercury in the blood is explained by knowing the amount of mercury at intake.
+
+
+\section{Examples II}
+\subsection*{Car Weight and MPG}
+In \chapref{chap:BivEDA}, an EDA for the relationship between \var{HMPG} (the highway miles per gallon) and \var{Weight} (lbs) of 93 cars from the 1993 model year was performed.  This relationship will be explored further here as an example of a complete regression analysis.  In this analysis, the regression output will be examined within the context of answering the ten typical questions.  These data are read into R with
+<<>>=
+cars93 <- read.table("data/93cars.txt",header=TRUE)
+@
+The linear regression model is fit, coefficients extracted, fitted-line plot constructed, and coefficient of determination extracted with
+
+<<CarFit, fig.cap="Fitted line plot of the regression of highway MPG on weight of 93 cars from 1993.">>=
+( lm2 <- lm(HMPG~Weight,data=cars93) )
+fitPlot(lm2,ylab="Highway MPG",main="")
+rSquared(lm2,digits=3)
+@
+
+The simple linear regression model appears to fit the data moderately well as the fitted-line plot \figrefp{fig:CarFit} shows only a very slight curvature and only very slight heteroscedasticity\footnote{In advanced statistics books, objective measures for determining whether there is significant curvature or heteroscedasticity in the data are used.  In this book, we will only be concerned with whether there is strong evidence of curvature or heteroscedasticity.  There does not seem to be either here.}.  The sample slope is \Sexpr{formatC(coef(lm2)[2],format="f",digits=5)}, the sample intercept is \Sexpr{formatC(coef(lm2)[1],format="f",digits=5)}, and the coefficient of determination is \Sexpr{formatC(rSquared(lm2),format="f",digits=3)}.
+
+\begin{QAlist}
+  \item What is the response variable?
+  \begin{QAlist}
+    \item The response variable in this analysis is the highway MPG, because that is the variable that we are trying to learn about or explain the variability of.
+  \end{QAlist}
+  \item What is the explanatory variable?
+  \begin{QAlist}
+    \item The explanatory variable in this analysis is the weight of the car (by process of elimination).
+  \end{QAlist}
+  \item In terms of the variables of the problem, what is the equation of the best-fit line?
+  \begin{QAlist}
+    \item The equation of the best-fit line for this problem is HMPG = \Sexpr{formatC(coef(lm2)[1],format="f",digits=5)} - \Sexpr{formatC(-1*coef(lm2)[2],format="f",digits=5)}Weight\footnote{The phrase ``in terms of the variables of the problem'' means to substitute the actual response variable for $y$ and the actual explanatory variable for $x$.  Your answer should not contain references to ``y'', ``x'', ``response variable'', or ``explanatory variable'' but to the actual variable names.}.
+  \end{QAlist}
+  \item Interpret the value of the slope in terms of the variables of the problem.
+  \begin{QAlist}
+    \item The slope indicates that for every increase of one pound of car weight the highway MPG decreases by \Sexpr{formatC(coef(lm2)[2],format="f",digits=3)}, on average\footnote{The words ``on average'' are important in this and other answers as the best-fit line predicts the average response for a given value of the explanatory variable not the actual value for an individual which will vary due to natural variability.}.
+  \end{QAlist}
+  \item Interpret the value of the intercept in terms of the variables of the problem.
+  \begin{QAlist}
+    \item The intercept indicates that a car with 0 weight will have a highway MPG value of \Sexpr{formatC(coef(lm2)[1],format="f",digits=1)}, on average\footnote{This is the correct interpretation of the intercept.  However, the interpretation of the intercept will often be nonsensical because it is likely an extrapolation (i.e., note that no value of car weight is near 0).}.
+  \end{QAlist}
+  \item What is the predicted highway MPG for a car that weighs 3100 lbs?
+  \begin{QAlist}
+    \item The predicted highway MPG for a car that weighs 3100 lbs is \Sexpr{formatC(coef(lm2)[1],format="f",digits=5)} - \Sexpr{formatC(-1*coef(lm2)[2],format="f",digits=5)}(3100) = \Sexpr{formatC(predict(lm2,data.frame(Weight=3100)),format="f",digits=1)} MPG\footnote{The given weight is plugged into the best-fit line equation for the weight variable, because the weight of the car is within the domain of the data.}.  Alternatively, this value is computed in R with
+<<>>=
+predict(lm2,data.frame(Weight=3100))
+@
+  \end{QAlist}
+  \item What is the predicted highway MPG for a car that weighs 5100 lbs?
+  \begin{QAlist}
+    \item The predicted highway MPG for a car that weighs 5100 lbs should not be computed with the results of this regression, because 5100 lbs is outside the domain of the data \figrefp{fig:CarFit}.
+  \end{QAlist}
+  \item What is the residual for a car that weights 3500 lbs and has a highway MPG of 24?
+  \begin{QAlist}
+    \item The predicted highway MPG for a car that weighs 3500 lbs is \Sexpr{formatC(coef(lm2)[1],format="f",digits=5)} - \Sexpr{formatC(-1*coef(lm2)[2],format="f",digits=5)}(3500) = \Sexpr{formatC(predict(lm2,data.frame(Weight=3500)),format="f",digits=1)}.  Thus, the residual for this car is 24 - \Sexpr{formatC(predict(lm2,data.frame(Weight=3500)),format="f",digits=1)} = \Sexpr{formatC(24-predict(lm2,data.frame(Weight=3500)),format="f",digits=1)}.  Alternatively, this is computed in R with
+<<>>=
+24-predict(lm2,data.frame(Weight=3500))
+@
+Therefore, it appears that this car gets \Sexpr{formatC(-1*(24-predict(lm2,data.frame(Weight=3500))),format="f",digits=1)} MPG less than an average car with the same weight.
+  \end{QAlist}
+  \item What proportion of the variability in highway MPG is explained by knowing the weight of the car?
+  \begin{QAlist}
+    \item The proportion of the variability in highway MPG that is explained by knowing the weight of the car is $r^{2}$=\Sexpr{formatC(rSquared(lm2),format="f",digits=2)}.
+  \end{QAlist}
+  \item What is the correlation between highway MPG and car weight?
+  \begin{QAlist}
+    \item The correlation between highway MPG and car weight is $r=$\Sexpr{formatC(-1*sqrt(rSquared(lm2)),format="f",digits=2)}\footnote{Remember to put a negative sign in front of your result from taking the square root of $r^2$, because the relationship between highway MPG and weight is negative.}.
+  \end{QAlist}
+\end{QAlist}
+
+\vspace{-12pt}
+\begin{exsection}
+  \item \label{revex:RegFlyC} \rhw{} \cite{WangFinch1997} hypothesized that larger willow flycatchers (\emph{Empidonax traillii}) migrated up the Middle Rio Grande River earlier than small willow flycatchers.  To test this hypothesis they captured flycatchers on several days during their migration and measured the wing length (mm; an index of overall body size) of each bird.  They recorded the date that the bird was captured as a Julian date (days since Jan. 1).   The results of their study are found in \href{https://sites.google.com/site/ncstats/data/Flycatcher.txt}{Flycatcher.txt}.  Load these data into R and produce results that can be used to answer the questions below.  \ansref{ans:RegFlyC}
+    \begin{Enumerate}
+      \item What is the explanatory variable?
+      \item What is the response variable?
+      \item In terms of the variables of this problem, what is the equation of the best-fit line?
+      \item In terms of the variables of this problem, interpret the value of the intercept.
+      \item In terms of the variables of this problem, interpret the value of the slope.
+      \item How much different do you expect the wing length to be ten days later?
+      \item What is the predicted wing length on day 180?
+      \item What is the residual for a bird with wing length 66.5 on day 151?
+      \item What proportion of the variability in wing length is explained by knowing the date?
+      \item What is the correlation coefficient between wing length and date?
+      \item Comment on the assumptions of the linear regression.
+    \end{Enumerate}
+
+  \item \label{revex:RegFat} \rhw{} \cite{Carroll1975} examined the relationship between per capita consumption of animal fat (g/day; AnimFatI) and age-adjusted death rate from breast cancer (AgeAdjDe) for 39 countries.  Her goal was to determine if variability in the breast cancer death rate could be explained by the amount of fat consumed.  The data for their study are found in \href{https://sites.google.com/site/ncstats/data/CancerFat.txt}{CancerFat.txt}.  Load these data into R and produce results that can be used to answer the questions below. \ansref{ans:RegFat}
+    \begin{Enumerate}
+      \item Which variable is the response variable?
+      \item What is an individual in this study?
+      \item In terms of the variables of this problem, what is the equation of the best-fit line?
+      \item In terms of the variables of this problems, interpret the value of the slope.
+      \item If country A consumes 4 g/day less animal fat than country B, how much different will the predicted age adjusted death rate due to breast cancer be for country A?
+      \item What is the predicted age adjusted death rate due to breast cancer for a country that consumes 170 g/day of animal fat?
+      \item What is the residual for a country that consumes 90 g/d of animal fat and has an age adjusted death rate due to breast cancer of 14.5?
+      \item What is the correlation coefficient between the age adjusted death rate and the intake of animal fat?
+      \item How much of the variability in a country's age adjusted death rate due to breast cancer is explained by knowing the value of its animal fat intake?
+      \item Can it be said that an increase in intake of animal fat is the cause for an increase in the age adjusted death rate due to breast cancer? Why or why not?
+    \end{Enumerate}
+
+  \item \label{revex:RegRIFA} \rhw{} \cite{Allenetal1997} investigated the impact of the density of red-imported fire ants (\emph{Solenopsis invicta}; RIFA) on the recruitment of white-tailed deer (\emph{Odocoileus virginianus}) fawns (an index of does to fawns).  A modified version of their results are found in \href{https://sites.google.com/site/ncstats/data/rifa.txt}{rifa.txt}.  Load these data into R and produce results that can be used to answer the questions below. \ansref{ans:RegRIFA}
+    \begin{Enumerate}
+      \item What is the response variable?
+      \item What is the explanatory variable?
+      \item In terms of the variables of this problem, what is the equation of the best-fit line?
+      \item In terms of the variables of this problem, interpret the value of the slope.
+      \item If the RIFA index increases by 500, how much different do you expect fawn recruitment to be?
+      \item What is the predicted fawn recruitment when the RIFA index is 1700?
+      \item What is the residual when the RIFA index is 2700 and fawn recruitment is 0.3?
+      \item What is the correlation coefficient between RIFA and fawn recruitment?
+      \item What proportion of the variability in fawn recruitment is explained by knowing the RIFA index?
+      \item Comment on the assumptions in this regression.
+    \end{Enumerate}
+
+  \item \label{revex:RegMathAss} \rhw{} All incoming freshmen are required to take a math assessment test to determine which math classes they should take. Sometimes pre-registering students will register before taking the assessment.  To make the best possible course choices for these students, the adviser would like to predict their assessment score (ASSESS) based on their math ACT scores (ACT). The ACT score and assessment score from 72 freshmen from 2003 are stored in \href{https://sites.google.com/site/ncstats/data/NCAssess.txt}{NCAssess.txt}.  Load these data into R and produce results that can be used to answer the questions below. \ansref{ans:RegMathAss}
+    \begin{Enumerate}
+      \item What is the explanatory variable?
+      \item In terms of ACT and Assessment test scores, what does the value of the slope mean?
+      \item Mary Lamb had an ACT score of 40.  Predict her assessment score.
+      \item John Tukey had an ACT score of 19.  Predict his assessment score.
+      \item John Tukey actually scored a 15 on his assessment test.  Calculate his residual?
+      \item What proportion of the variability in assessment score is explained by knowing the ACT score?
+      \item What are the two most important assumptions in a regression analysis.  Are these violated for this data set?  Why or why not?
+      \item Do you think that these results provide a useful predictor of math assessment scores in cases where those scores are not available but ACT scores are? Explain.
+    \end{Enumerate}
+
+  \item \label{revex:RegDNA} \rhw{} \cite{SuitBauer1990} examined DNA indices obtained from fresh and frozen tissue samples with the goal of determining if fresh values could be predicted from frozen values.  The data for their study are found in \href{https://sites.google.com/site/ncstats/data/dna.txt}{dna.txt}.  Load these data into R and produce results that can be used to answer the questions below.  Note that one outlier should be excluded from the analysis. \ansref{ans:RegDNA}
+    \begin{Enumerate}
+      \item What did the researchers consider as the response variable?
+      \item What is the equation of the best-fit line in terms of the variables of the problem?
+      \item Interpret the value of the slope in terms of the variables of the problem.
+      \item What is the predicted fresh index if the frozen index is 4.05?
+      \item What is the residual for a fresh index of 2.1 and a frozen index of 2.2?
+      \item What proportion of the variability in the fresh index is explained by knowing the frozen index?
+      \item What is the correlation between the fresh and frozen indices?
+      \item What are the two major assumptions of regression and do they look like they've been met with these data (be specific!)?
+    \end{Enumerate}
+
+  \item \label{revex:RegFawns} \rhw{} Wildlife ecologist in Texas wanted to determine if the amount of precipitation could explain some of the variability observed in the number of fawns born to each doe \citep{GinnettYoung2000}.  Because Texas has many different climatic regions, the state was broken down into eight precipitation zones, and the mean precipitation for each zone over a period of five years was calculated.  Furthermore, the researchers measured the mean number of fawns born per 100 does for each of these five years.  The data for their study are found in \href{https://sites.google.com/site/ncstats/data/deer1.txt}{deer1.txt}.  Load these data into R and produce results that can be used to answer the questions below.  \ansref{ans:RegFawns}
+    \begin{Enumerate}
+      \item Express the equation of the best-fit line in terms of the variables of the problem.
+      \item Interpret the slope of the best-fit line in terms of the variables.
+      \item If the mean precipitation in an area were 1500 mm, how many fawns per 100 does would you expect?
+      \item If a precipitation zone has a mean precipitation of 1050 mm and an average of 37 fawns per 100 does, what is the residual of this zone?
+      \item What is the correlation coefficient between mean no. of fawns per 100 does and mean precipitation?
+      \item What proportion of the variability in the mean number of fawns per 100 does is explained by knowing the mean precipitation?
+      \item If the average amount of precipitation increases by 100 mm, how many more fawns per 100 does would you expect to be born?
+    \end{Enumerate}
+
+  \item \label{revex:RegChirps} \rhw{} It has been said that temperature can be estimated from the number of cricket chirps heard.  To determine if this relationship existed, an entomologist recorded the number of chirps in a 15-second interval by crickets held at different temperatures.  The data for their study are found in \href{https://sites.google.com/site/ncstats/data/chirps.txt}{chirps.txt}.  Load these data into R and produce results that can be used to answer the questions below. \ansref{ans:RegChirps}
+    \begin{Enumerate}
+      \item What is the response variable?
+      \item What is the explanatory variable?
+      \item In terms of the variables of this problem, what is the equation of the best-fit line?
+      \item In terms of the variables of this problem, interpret the value of the slope.
+      \item If the number of chirps increases by 5, then how much different do you expect temperature to be?
+      \item If you hear 18 chirps during the day and 15 chirps at night, then how much different is the temperature, on average?
+      \item What is the residual when you hear 12 chirps and the temperature is 65 F?
+      \item What is the correlation coefficient between temperature and the number of chirps?
+      \item What proportion of the variability in temperature is explained by knowing the number of chirps?
+      \item Construct a residual plot and use it to interpret the validity of regression assumptions.
+    \end{Enumerate}
+
+\end{exsection}
+
+\vspace{36pt}
+\begin{hwsection}{All questions below should be typed and answered following the expectations identified in \sectref{sect:ReportWriting}.  All work must be shown.  Questions marked with the R logo must include R output with your R commands in an attached appendix.}
+
+  \item \label{hwprob:RegIndex} \rhw{} Wyoming Fish and Game researchers would like to be able to predict monthly fishing pressure (total number of angler-hours) with an index count of the number of vehicles in lake access parking lots because the latter is much cheaper to measure than the former. Towards this end they examined the relationship between pressure and index count on weekdays of Alcova Reservoir.  Use the data in \href{https://sites.google.com/site/ncstats/data/AlcovaRes.txt}{AlcovaRes.txt}, properly subsetted to include only the data from the weekdays (\textbf{YOU MUST DO THIS SUBSETTING}\footnote{See \sectref{sect:RSubsetdf} for a review of subsetting.}), to construct results that can be used to answer the questions below.
+    \begin{Enumerate}
+      \item What is the response variable?
+      \item What is the explanatory variable?
+      \item In terms of the variables of this problem, what is the equation of the best-fit line?
+      \item In terms of the variables of this problem, interpret the value of the slope.
+      \item In terms of the variables of this problem, interpret the value of the intercept.
+      \item What is the predicted pressure for an index count of 20 vehicles?
+      \item What is the predicted pressure for an index count of 5 vehicles?
+      \item What is the residual if the pressure is 5100 and the index count is 8 vehicles?
+      \item What is the correlation coefficient between pressure and index count?
+      \item What proportion of the variability in pressure is explained by knowing the index count?
+      \item How much will the pressure estimate be under-predicted, on average, if the number of vehicles is accidentally under-counted by two vehicles?
+      \item What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?
+    \end{Enumerate}
+
+\end{hwsection}

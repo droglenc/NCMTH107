@@ -1,0 +1,71 @@
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\input{c:/aaaWork/zGnrlLatex/justRPreamble}
+\hypersetup{pdftitle = MTH107 HO - Foundations}
+
+\begin{document}
+  \titleRHO{Foundations}{MTH107 Statistics}{Fall}
+
+<<echo=FALSE,include=FALSE>>=
+source("c:/aaaWork/zGnrlLatex/knitr_setup.R")
+@
+
+%\section*{Once Ever Command}
+%\vspace{-12pt}
+%You should only need to do the following command once on each computer.  If you want to set up R on your own computer, then you will also need to run this command on that computer.
+<<eval=FALSE, echo=FALSE>>=
+source("http://www.rforge.net/NCStats/InstallNCStats.R")
+@
+
+\section{Always First Command}
+\vspace{-18pt}
+<<echo=-2, results='hide', message=FALSE, warning=FALSE>>=
+library(NCStats)
+data(ABCens90)
+@
+
+\vspace{36pt}
+\section{Sample Ashland-Bayfield County Residents}
+<<eval=FALSE>>=
+data(ABCens90)
+( smp1 <- srsdf(ABCens90,50) )
+@
+
+
+\vspace{24pt}
+\section{Summarize the Sample}
+<<eval=FALSE>>=
+Summarize(~age,data=smp1,digits=1)
+Summarize(~sex,data=smp1)
+@
+
+
+\vspace{48pt}
+\section{Take and Summarize A Second Sample}
+<<eval=FALSE>>=
+( smp2 <- srsdf(ABCens90,50) )
+Summarize(~age,data=smp2,digits=1)
+Summarize(~sex,data=smp2)
+@
+
+\newpage
+\section{The Truth}
+<<>>=
+Summarize(~age,data=ABCens90,digits=1)
+Summarize(~sex,data=ABCens90)
+@
+
+\section*{Lots of Samples from Ashland-Bayfield County Residents}
+<<hist, echo=FALSE, results='hide', par1=TRUE>>=
+set.seed(14787834)
+hist(replicate(1000,mean(srsdf(ABCens90,50)$age)),xlab="Mean Age",main="",col="gray90",breaks=15)
+abline(v=mean(ABCens90$age),lwd=2,lty=2)
+hist(replicate(1000,Summarize(srsdf(ABCens90,50)$sex)["male","perc"]),xlab="Percent Male",main="",col="gray90",breaks=15)
+abline(v=Summarize(ABCens90$sex)["male","perc"],lwd=2,lty=2)
+@
+
+<<eval=FALSE, echo=FALSE, results='hide',message=FALSE>>=
+swvCode("01_Foundations_HO.rnw",moreItems="source")
+@
+
+\end{document}

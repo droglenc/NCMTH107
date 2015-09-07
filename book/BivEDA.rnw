@@ -1,0 +1,767 @@
+<<echo=FALSE, cache=FALSE, results='hide'>>=
+set_parent('IntroStats.Rnw')
+@
+
+\chapter{Bivariate EDA} \label{chap:BivEDA}
+\begin{ChapObj}{\boxwidth}
+  \textbf{Chapter Objectives:}
+  \begin{Enumerate}
+    \item Describe what bivariate data is.
+    \item Distinguish between response and explanatory variables.
+    \item Construct scatterplots of bivariate quantitative data.
+    \item Describe bivariate relationships with interpretations from scatterplots.
+    \item Describe how the correlation coefficient is calculated.
+    \item Use the correlation coefficient to describe the strength (and association) of the relationship between two quantitative variables.
+    \item Construct two-way contingency tables from raw data.
+    \item Identify marginal distributions.
+    \item Construct row-, column-, and table-percentage tables from two-way tables.
+    \item Interpret two-way contingency tables.
+  \end{Enumerate}
+\end{ChapObj}
+
+\minitoc
+\newpage
+
+\lettrine{B}{ivariate data occurs when two} variables have been measured on the same individuals.\index{EDA!Bivariate!Quantitative}  For example, you may measure (i) the height and weight of students in class, (ii) depth and area of a lake, (iii) gender and age of welfare recipients, or (iv) number of mice in a field and the biomass of legumes in the field.  The meaning of bivariate is easy to remember if you split the word into its roots -- bi, or ``two'', and variate, or ``variables.''
+
+\defn{Bivariate}{Data where two variables have been measured on the same individuals.}
+
+\section{Quantitative Bivariate EDA} \label{sect:QbivEDA}
+Data on the \var{weight} (lbs) and highway miles per gallon (stored as \var{HMPG}) for 93 cars from the 1993 model year will be used as an example throughout this section (data from \cite{Lock1993}).  Ultimately, the relationship between highway MPG and the weight of a car will be examined.  These are bivariate data because measurements of both variables (\var{HMPG} and \var{Weight}) are recorded for each individual (i.e., a car).  The data are stored in \href{https://sites.google.com/site/ncstats/data/93cars.txt}{93cars.txt}.  The following commands read the data into R and lists the \var{HMPG} and \var{weight} values for six randomly selected cars\footnote{The vector in the second argument to \R{view()} is used to show only the two variables of interest.}.
+<<>>=
+cars93 <- read.table("data/93cars.txt",header=TRUE)
+view(cars93,which=c("HMPG","Weight"))
+@
+
+\subsection{Scatterplots} \index{Scatterplot!Construction}
+Scatterplots are used to display and identify the relationship between \textbf{TWO quantitative} variables.  Scatterplots are what most people think of when they hear ``plot the data.''  The correct construction of a scatterplot usually requires that one of the variables be identified as a response variable and the other as an explanatory variable.  The \textbf{response variable} is the variable that one is interested in explaining something about (i.e., variability) or in making future predictions about.\index{Response Variable!Bivariate EDA}  Synonyms for response variable are dependent variable or predicted variable.  The \textbf{explanatory variable} is the variable that may help explain or allow one to predict the response variable.\index{Explanatory Variable!Bivariate EDA}  Synonyms for explanatory variable are independent variable or predictor variable.
+
+\warn{Both variables must be quantitative to construct a scatterplot.}
+
+\vspace{-12pt}
+\defn{Response Variable}{The variable that we are interested in explaining or predicting.  Synonyms are ``dependent'' or ``predicted'' variable.}
+
+\vspace{-12pt}
+\defn{Explanatory Variable}{The variable that we think may explain or allow us to predict the response variable. Synonyms are ``independent'' or ``predictor'' variable.}
+
+In the car data, the weight of the car may help explain the number of highway MPG of the car (e.g., a hypothesis might be that the heavier the car, the lower the MPG will be).  Thus, the number of highway MPG is the response variable because it is the variable of primary interest and the variable we are trying to explain.  The explanatory variable is the weight of the car as it will be used to explain the number of highway MPG.
+
+Deciding which variable is the response variable often depends on the context of the situation.  In the first example of bivariate data given above, the response variable may be weight if we are interested in predicting weight from height or it may be height if we are interested in predicting height from weight\footnote{The latter is usually not the case, though.}.  The researcher (you) will identify the context of the problem.  In the four previous examples, the response and explanatory variables are as follows (followed by context notes):
+\begin{Itemize}
+  \item R = weight, E = height [want to predict weight (hard to measure) from height (easy to measure)].
+  \item R = area, E = depth [area is hard to measure, depth is easy].
+  \item CAN'T DO, both variables are categorical.
+  \item R = number of mice in a field, E = biomass of legumes in the field [hypothesized that higher biomass leads to more mice].
+\end{Itemize}
+
+\warn{Which variable is the response variable depends on the context of the problem or the researcher's needs (i.e., which variable is being explained or predicted).}
+
+A scatterplot is a graph of points where each point simultaneously represents the values of both the response and explanatory variable.  The value of the explanatory variable gives the x-coordinate and the value of the response variable gives the y-coordinate of the point plotted for an individual.  For the first individual of the \dfile{cars93} data, a point would be placed at x (\var{Weight}) = \Sexpr{cars93$Weight[1]} and y (\var{HMPG}) = \Sexpr{cars93$HMPG[1]}.  For the second individual, a point would be placed at x=\Sexpr{cars93$Weight[2]} and y=\Sexpr{cars93$HMPG[2]}.  The scatterplot for all individuals in the data file is shown in \figref{fig:carscat1}.
+<<carscat1, echo=FALSE, fig.cap="Scatterplot between the highway MPG and weight of cars manufactured in 1993.">>=
+plot(HMPG~Weight,data=cars93,pch=16,xlab="Weight (lbs)",ylab="Highway MPG")
+@
+
+\warn{Response variables are plotted on the y-axis and explanatory variables are plotted on the x-axis.}
+
+\subsection{Scatterplots in R}
+Scatterplots are constructed in R with \R{plot()}.  This function requires a model formula as the first argument\footnote{This function can also take the vector of x-axis data as its first argument followed by a vector of y-axis data as its second argument.  The formula notation is preferred for ease of transferability to other functions.} followed by the dataframe name in \R{data=}.  This model formula is of the form \R{Y\TILDE X} where \R{Y} and \R{X} are vectors of quantitative data to be plotted on the y- and x-axes, respectively.  As with histograms, the x- and y-axis labels are modified with the \R{xlab=} and \R{ylab=} arguments.  The scatterplot of highway MPG versus car weight \figrefp{fig:Scatplot1} was created with
+
+<<Scatplot1, fig.cap="Scatterplot between the highway MPG and weight of cars manufactured in 1993 (using R default values)">>=
+plot(HMPG~Weight,data=cars93,ylab="Highway MPG",xlab="Weight (lbs)")
+@
+
+The character plotted at each point can be changed with the \R{pch=} argument\footnote{This argument is short for ``plotting character''.}.  This argument defaults to a value of 1 which is an open-circle.  Numerical values used to represent other plotting characters are shown in \figref{fig:Rpch}.  For example, the scatterplot shown in \figrefp{fig:carscat1} was created with
+<<eval=FALSE>>=
+plot(HMPG~Weight,data=cars93,ylab="Highway MPG",xlab="Weight (lbs)",pch=16)
+@
+
+<<Rpch, echo=FALSE, fig.cap="Plotting characters available in R and their numerical codes.">>=
+par(mar=c(0,0,0,0))
+plot(1,xlim=c(0.5,5.5),ylim=c(0.5,5.5),type="n",ann=FALSE,xaxt="n",yaxt="n",bty="n",yaxs="i",xaxs="i")
+points(1:5,rep(5,5),pch=0:4,cex=1.5)
+text((1:5)+0.3,rep(5,5),0:4,cex=1.25)
+points(1:5,rep(4,5),pch=5:9,cex=1.5)
+text((1:5)+0.3,rep(4,5),5:9,cex=1.25)
+points(1:5,rep(3,5),pch=10:14,cex=1.5)
+text((1:5)+0.3,rep(3,5),10:14,cex=1.25)
+points(1:5,rep(2,5),pch=15:19,cex=1.5)
+text((1:5)+0.3,rep(2,5),15:19,cex=1.25)
+points((1:6)*0.8+0.2,rep(1,6),pch=20:25,cex=1.5)
+text((1:6)*0.8+0.5,rep(1,6),20:25,cex=1.25)
+@
+
+A scatterplot with different plotting characters for individuals from different groups is obtained with the \R{col=} argument or \R{pch=} coupled with the \R{as.numeric()} argument and a factor variable.  The \R{as.numeric()} argument converts a factor variable to a numeric variable where the first factor is listed with a ``1'', the second with a ``2'', and so on.  If the result from  \R{as.numeric()} is assigned to the \R{pch=} argument, then these numbers will serve to identify different plotting characters for the different levels of the factor variable.  Of course, this plot should have a legend to this plot, which is added with \R{legend()}.  This function requires a position for the legend as the first argument, names for the levels in the \R{legend=} argument, and the same \R{pch=} argument as used in \R{plot()} except that the data frame from which the factor comes from must be explicitly stated.  For example, the plot of highway MPG versus weight separated by the type of the vehicle \figrefp{fig:Scatplot3} is constructed with
+
+<<Scatplot3, fig.cap="Scatterplot of highway MPG versus weight separated by the six types of vehicle.">>=
+plot(HMPG~Weight,data=cars93,ylab="Highway MPG",xlab="Weight (lbs)",pch=as.numeric(Type))
+legend("topright",legend=levels(cars93$Type),pch=1:length(levels(cars93$Type)),cex=0.75)
+@
+
+\begin{minipage}{\textwidth}
+\subsection{Meaning and Interpretation I}
+Four characteristics should be described when exploring bivariate data with a scatterplot,\index{Scatterplot!Interpretation}
+\begin{Enumerate}
+  \item \textbf{Direction} of the relationship, or the association between the variables.
+  \item \textbf{Form} of the relationship.
+  \item \textbf{Strength} of the relationship.
+  \item Presence or absence of \textbf{outliers}.
+\end{Enumerate}
+All four of these items can be described from the examination of a scatterplot.  It should be noted, though, that the strength of the relationship is best described with the correlation coefficient (see \sectref{sect:corr}).
+\end{minipage}
+
+Association is a general statement about the direction of the relationship.\index{Association!Definitions}\index{Direction!Definitions}  Three general statements of association are used -- positive, negative, and none.  A positive association is when the scatterplot resembles an increasing function -- i.e., increases from lower-left to upper-right (\figref{fig:corrassn}-Right).  For a positive association, most of the individuals are simultaneously above average or below average for both of the variables.  A negative association is when the scatterplot looks like a decreasing function -- i.e., decreases from upper-left to lower-right (\figref{fig:corrassn}-Left).  For a negative association, most of the individuals are simultaneously above average for one variable and below average for the other variable.  No association is when the scatterplot looks like a flat horizontal line or a ``shotgun blast'' of points (\figref{fig:corrassn}-Middle).  For no association, there are no tendencies for individuals to be above or below average for one variable and above or below average for the other.
+
+<<corrassn, echo=FALSE, out.width='.3\\linewidth', fig.cap="Depiction of three types of association present in scatterplots.">>=
+par(mar=c(1,1,2,2),mgp=c(2.1,0.4,0))
+set.seed(1054)
+r <- c(-.7,0,0.7)
+covmat <- matrix(c(1,r[1],r[1],1),ncol=2)
+x <- rmvnorm(n=100,mean=c(0,0),sigma=covmat)
+plot(x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16)
+mtext("Negative",cex=1.5,line=0.5)
+covmat <- matrix(c(1,r[2],r[2],1),ncol=2)
+x <- rmvnorm(n=100,mean=c(0,0),sigma=covmat)
+plot(x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16)
+mtext("None",cex=1.5,line=0.5)
+covmat <- matrix(c(1,r[3],r[3],1),ncol=2)
+x <- rmvnorm(n=100,mean=c(0,0),sigma=covmat)
+plot(x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16)
+mtext("Positive",cex=1.5,line=0.5)
+@
+
+\defn{Positive Association}{Most of the individuals are either above average or below average for both of the variables.}
+
+\vspace{-12pt}
+\defn{Negative Association}{Most of the individuals are above average for one variable and below average for the other variable.}
+
+\vspace{-12pt}
+\defn{No Association}{There are no tendencies for individuals to be above or below average for one variable and above or below average for the other.}
+
+For the purposes of this introductory text, form will be defined very generally with only two types considered -- straight line and curved.\index{Form!Definition}  The positive and negative association scatterplots in \figref{fig:corrassn} are two examples of a straight line shape.  In general, the form should be obviously curved before describing it as curved.
+
+Strength is a summary of how closely the points cluster about the general form of the relationship.\index{Strength!Definition}  For example, in a straight-line form it would be how closely the points cluster around the line.  Strength is difficult to define from a scatterplot because it is a relative term.  The general idea of strength is depicted in \figref{fig:corrstrength1}.  However, an objective numerical measure -- the correlation coefficient -- will be defined in \sectref{sect:corr}.
+
+<<corrstrength1, echo=FALSE, fig.width=7, fig.height=7, out.width='.8\\linewidth', fig.cap="Scatterplots depicting four relatives types of strength.">>=
+par(mar=c(1,1,2,2),mgp=c(2.1,0.4,0),mfcol=c(2,2))
+set.seed(2648)
+r <- c(0,-0.4,-0.8,-1)
+covmat <- matrix(c(1,r[1],r[1],1),ncol=2)
+x <- rmvnorm(n=100,mean=c(0,0),sigma=covmat)
+plot(x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16)
+mtext("None",cex=1.5,line=0.5)
+covmat <- matrix(c(1,r[2],r[2],1),ncol=2)
+x <- rmvnorm(n=100,mean=c(0,0),sigma=covmat)
+plot(x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16)
+mtext("Weak",cex=1.5,line=0.5)
+covmat <- matrix(c(1,r[3],r[3],1),ncol=2)
+x <- rmvnorm(n=100,mean=c(0,0),sigma=covmat)
+plot(x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16)
+mtext("Moderate",cex=1.5,line=0.5)
+covmat <- matrix(c(1,r[4],r[4],1),ncol=2)
+x <- rmvnorm(n=30,mean=c(0,0),sigma=covmat)
+plot(x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16)
+mtext("Perfect",cex=1.5,line=0.5)
+@
+
+\defn{Strength}{How closely the points cluster about the general form of the relationship.}
+
+\vspace{-12pt}
+\warn{Strength can only be subjectively described from a scatterplot; use the correlation coefficient to be more objective.}
+
+Outliers are points that are far removed from the main cluster of points.\index{Outlier}  Keep in mind (as always) that just because a point is an outlier doesn't mean it is wrong.
+
+The relationship between highway MPG and the weight of cars \figrefp{fig:carscat1} appears to be negative, primarily linear (although I see a very slight concavity), and moderately strong.  The three points at (2400,46), (2500,27), and (1800,33) might be considered SLIGHT outliers (these are not far enough removed for me to consider them outliers, but some people may).
+
+A general conclusion that could be made from these results is that as the weight of the cars increases, the highway MPG attained by the car decreases in a linear fashion.  While this conclusion is correct, it is also very carefully worded.  We must be very careful to not state that increasing the weight of the car CAUSES a decrease in MPG.  We cannot attribute cause because these data come from an observational study and because several other important variables were not considered in the analysis.  For example, the scatterplot in \figref{fig:carscat2}, coded for different numbers of cylinders in the car's engine, indicates that the number of cylinders may be inversely related to the highway MPG and positively related to the weight of the car.  So, does the weight of the car, the number of cylinders, or both, significantly explain the decrease in highway MPG?
+
+<<carscat2, echo=FALSE, fig.cap="Scatterplot between the highway MPG and weight of cars manufactured in 1993 separated by number of cylinders.">>=
+plot(HMPG~Weight,data=cars93,pch=Cyls-2,xlab="Weight (lbs)",ylab="Highway MPG")
+legend("topright",pch=1:5,legend=c("3-cyl","4-cyl","5-cyl","6-cyl","8-cyl"))
+@
+
+%\newpage
+\begin{exsection}
+  \item \label{revex:qbEDAScat} \rhw{}Researchers in Northern Wisconsin wanted to explain the role of the whitetail deer as a keystone herbivore \citep{WallerAlverson1997}.  As a part of their analysis, they examined the relationship between the mean number of hemlock saplings on 14 x 21 m sections of a woodlot and a browsing index (a complicated measurement that gives the amount of food a deer has been eating in a given area).  Use the data in the table below to make a scatterplot of the mean number of hemlock saplings versus the browsing index and describe the bivariate relationship from it. \ansref{ans:qbEDAScat}
+  \begin{Verbatim}
+mean no. hemlock saplings  0.95 2.89 2.97 3.94 4.74 5.10 6.64 7.13
+browse index               0.31 0.35 0.49 0.50 0.61 0.63 0.86 0.90
+  \end{Verbatim}
+\end{exsection}
+
+
+\vspace{-18pt}
+\subsection{Correlation}\label{sect:corr}\index{Correlation!Computation}\index{Strength!Measure}
+The sample correlation coefficient, abbreviated as $r$, is calculated with
+\begin{equation}
+  r = \frac{\Sum_{i=1}^{n}\left[\left(\frac{x_{i}-\bar{x}}{s_{x}}\right)\left(\frac{y_{i}-\bar{y}}{s_{y}}\right)\right]}{n-1}
+\end{equation}
+where $s_{x}$ and $s_{y}$ are the sample standard deviations\footnote{See \sectref{sect:StdDev} for a review of standard deviations.} for the explanatory and response variable, respectively.  The formulas in the two sets of parentheses in the numerator are standardized values\footnote{See \sectref{sect:Standardizing} for a review of standardized values.}; thus, the value in each parenthesis is called the standardized x or standardized y, respectively.  Using this terminology, the formula for the correlation coefficient reduces to these steps:
+\begin{Enumerate}
+  \item For each individual, standardize x and standardize y.
+  \item For each individual, find the product of the standardized x and standardized y.
+  \item Sum all of the products from step 2.
+  \item Divide the sum from step 3 by n-1.
+\end{Enumerate}
+
+\warn{The sample correlation coefficient is abbreviated with $r$.  The population correlation coefficient is abbreviated with $\rho$.}
+
+The table below illustrates these calculations for the first five individuals in the \dfile{cars93} data set (the five individuals are treated as if they are the entire sample).  In the table note that the ``i'' column is an index for each individual, the $x_{i}$ and $y_{i}$ columns are the observed values of the two variables for individual $i$, $\bar{x}$ was computed by dividing the sum of the $x_{i}$ column by $n$, $s_{x}$ was computed by dividing the sum of the $(x_{i}-\bar{x})^{2}$ column by $n-1$ and taking the square root, and the ``std x'' column is the standardized x values found by dividing the value in the $x_{i}-\bar{x}$ column by $s_{x}$.  Similar calculations were made for the y variable.  The final correlation coefficient is the sum of the last column divided by $n-1$.  Thus, the correlation between car weight and highway mpg for these five cars is -0.54.
+
+\begin{center}
+  \begin{tabular}{cccccccccc}
+\hline\hline
+ & HMPG & Weight & & & & & & & \\
+i & $y_{i}$ & $x_{i}$ & $y_{i}-\bar{y}$ & $x_{i}-\bar{x}$ & $(y_{i}-\bar{y})^{2}$ & $(x_{i}-\bar{x})^{2}$ & std. y & std. x & (std. y)(std. x) \\
+\hline
+1 & 31 & 2705 &  3.4 & -632 & 11.56 & 399424 &  1.26 & -1.71 & -2.15 \\
+2 & 25 & 3560 & -2.6 &  223 &  6.76 &  49729 & -0.96 &  0.6  & -0.58 \\
+3 & 26 & 3375 & -1.6 &   38 &  2.56 &   1444 & -0.59 &  0.1  & -0.06 \\
+4 & 26 & 3405 & -1.6 &   68 &  2.56 &   4624 & -0.59 &  0.18 & -0.11 \\
+5 & 30 & 3640 &  2.4 &  303 &  5.76 &  91809 &  0.89 &  0.82 &  0.73 \\
+\hline
+sum & 138 & 16685 & 0 & 0 & 29.2 & 547030 & 0 & 0 &  -2.17 \\
+\hline\hline
+  \end{tabular}
+\end{center}
+
+You should note that there are easier formulas for calculating the correlation coefficient than that illustrated above.  However, the formula and method above illustrates some intuitive concepts to be discussed next.
+
+The correlation coefficient is a measure of both association and strength.\index{Association!Measure}\index{Correlation!Interpretation}  The sign of $r$ indicates the direction or association between the two variables.  A positive $r$ means a positive association and a negative $r$ means a negative association.  The absolute value of $r$ (i.e., the value ignoring the sign) is an indicator of the strength of relationship.  Absolute values nearer 1 are stronger relationships.  Each of these concepts is discussed further in the following paragraphs.
+
+A positive association occurs when both variables measured on an individual tend to be above or below average together.  To illustrate this concept, examine the scatterplot in \figref{fig:corrdefn1}-Left that has superimposed lines at the means of both the x and y variables.  The sign of a standardized value for a measurement larger than the mean is positive, because the difference between the larger observed value and the mean is positive.  With similar reasoning, the sign of the standardized value for a measurement smaller than the mean is negative.
+
+<<corrdefn1, echo=FALSE, fig.width=7, out.width='.8\\linewidth', fig.cap="Scatterplot with mean lines superimposed and the signs of standardized values for both x and y shown for a positive (\\textbf{Left}) and negative (\\textbf{Right}) association.">>=
+par(mar=c(2,2,1,1),mgp=c(2,0.5,0),mfcol=c(1,2))
+set.seed(16502)
+r <- c(0.8,-0.8)
+for (i in 1:length(r)) {
+  covmat <- matrix(c(1,r[i],r[i],1),ncol=2)
+  x <- rmvnorm(n=100,mean=c(0,0),sigma=covmat)
+  y <- x[,2]; x <- x[,1]
+  plot(y~x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16,xlim=c(-3,3),ylim=c(-3,3))
+  xbar <- mean(x); ybar <- mean(y)
+  abline(v=xbar,lty=3,lwd=2); abline(h=ybar,lty=3,lwd=2)
+  axis(1,at=xbar,c(expression(bar(x))),cex=1.5)
+  axis(1,at=c(xbar-1.3*sd(x),xbar+1.3*sd(x)),c("Below (-)","Above (+)"),cex=2.5,tick=FALSE)
+  axis(2,at=c(ybar),c(expression(bar(y))),cex=1.5)
+  axis(2,at=c(ybar-1.3*sd(y),ybar+1.3*sd(y)),c("Below (-)","Above (+)"),cex=2.5,tick=FALSE)
+  points(x[(x>xbar & y<ybar)|(x<xbar & y>ybar)],y[(x>xbar & y<ybar)|(x<xbar & y>ybar)],pch=16,col="red")
+}
+@
+
+Now consider the product of standardized x's and y's in each quadrant of \figref{fig:corrdefn1}-Left.  In the quadrant that corresponds to above average for both standardized values (i.e., both positive signs) the product is positive (denoted by black dots).  In the quadrant that corresponds to below average for both standardized values the product is also positive.  In the other two quadrants the product is negative (denoted by red dots).  From \figref{fig:corrdefn1}-Left it is seen that, for a positive association, the numerator of the correlation coefficient is the sum of many positive products of standardized x's and y's (black dots) and few negative products (red dots).  Thus, the numerator is positive.  The denominator (recall it is n-1) is always positive.  Thus, the correlation for a positive association is positive.
+
+A negative association is examined in the same manner (\figref{fig:corrdefn1}-Right).  The signs of the products in the quadrants are the same as described above.  With the negative association, the numerator is the sum of many negative numbers (red dots) and a few positive numbers (black dots).  Thus, the numerator is negative.  Therefore, the correlation for a negative association is negative.
+
+\warn{The correlation coefficient is positive for positive associations and negative for negative associations.}
+
+Correlations range from -1 to 1.  Absolute values of $r$ equal to 1 indicate a perfect correlation; i.e., all points fall exactly on a line.  A correlation of 0 indicates no association.  Thus, absolute values of $r$ near 1 indicate strong relationships and those near 0 are weak.  The range of correlation values and a few scatterplots illustrating how the strength and direction of the relationship between two variables changes along this scale is illustrated in \figref{fig:corrstrength2}.  The categorizations in \tabref{tab:StrengthCriteria} can be used as a rough guideline for categorizing the strength of a relationship between two variables.
+
+<<corrstrength2, echo=FALSE, fig.width=8, fig.height=1.5, out.width='.95\\linewidth', fig.cap="Scatterplots along the continuum of $r$ values.">>=
+par(mar=c(1.5,0.2,1.5,0.2),mgp=c(2,0.5,0),mfcol=c(1,7))
+set.seed(1909)
+r <- c(-1,-0.8,-0.4,0,0.4,0.8,1)
+for (i in 1:length(r)) {
+  covmat <- matrix(c(1,r[i],r[i],1),ncol=2)
+  x <- rmvnorm(n=100,mean=c(0,0),sigma=covmat)
+  y <- x[,2]; x <- x[,1]
+  plot(y~x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16,xlim=c(-3,3),ylim=c(-3,3),cex=0.8)
+  xbar <- mean(x); ybar <- mean(y)
+  abline(v=xbar,lty=3,lwd=2); abline(h=ybar,lty=3,lwd=2)
+  points(x[(x>xbar & y<ybar)|(x<xbar & y>ybar)],y[(x>xbar & y<ybar)|(x<xbar & y>ybar)],pch=16,col="red",cex=0.8)
+  if (r[i]==-1 | r[i]==1) {
+    mtext("Strongest",line=0.4)
+    mtext(paste("r=",r[i]),1,line=0.4)
+  } else if (r[i]==0) {
+    mtext("Weakest",line=0.4)
+    mtext(paste("r=",r[i]),1,line=0.4)
+  }
+}
+@
+
+\begin{table}[htbp]
+  \caption{Classifications of strength of relationship for absolute values of $r$ by type of study.}
+  \label{tab:StrengthCriteria}
+  \centering
+  \begin{tabular}{c|ccc}
+\hline\hline
+\widen{0}{5}{Strength of} & Uncontrolled/ & Controlled/ \\
+\widen{-2}{0}{Relationship} & Observational & Experimental \\
+\hline
+\widen{0}{4}{Strong} & $>0.8$ & $>0.95$ \\
+\widen{0}{4}{Moderate} & $>0.6$ & $>0.9$ \\
+\widen{-1}{5}{Weak} & $>0.4$ & $>0.8$ \\
+\hline\hline
+  \end{tabular}
+\end{table}
+
+\warn{Absolute values of correlation coefficients nearer one are stronger.}
+
+\begin{minipage}{\textwidth}
+You should practice estimating the strength and direction of a relationship by simply looking at scatterplots.  \cite{JohnsonKuby2000} provide a five step graphical procedure for estimating the correlation coefficient from a scatterplot:\index{Correlation!Estimation}
+\begin{Enumerate}
+  \item Place two lines on the scatterplot that are parallel to the direction of the relationship and as close together as possible while still containing all of the points.
+  \item Visualize a rectangular region that is bounded by the two lines from step 1 and has ends just beyond the points on the scatterplot.
+  \item Estimate how many times longer the rectangle is than it is wide; call this value $k$.  An easy way to do this is to mentally mark off and then count squares in the rectangle.
+  \item Estimate $|r|=1-\frac{1}{k}$.
+  \item Assign a sign to r based on the direction of the association.
+\end{Enumerate}
+\end{minipage}
+
+The \cite{JohnsonKuby2000} procedure for estimating $r$ is illustrated in \figref{fig:corrjk}.  In the right-most figure it appears that the length of the rectangle is about 3 times as long as the width.  This corresponds to an estimated correlation coefficient\footnote{$r$ is positive because the relationship has a positive association.} of $1-\frac{1}{3}$ = $0.67$.  Note that the actual correlations is 0.708.
+
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=4.5in]{Figs/CorrJK.png}
+  \caption{Depiction of the steps for estimating $r$ from \cite{JohnsonKuby2000}.}
+  \label{fig:corrjk}
+\end{figure}
+
+\begin{minipage}{\textwidth}
+The following are important characteristics of correlation coefficients:\index{Correlation!Characteristics}
+\begin{Itemize}
+  \item The variables must be quantitative (i.e., if you should not make a scatterplot, then don't calculate $r$).
+  \item Correlation only measures the strength of relationships that are linear (i.e., if the form of the relationship is not linear, then the correlation calculation is meaningless -- MORAL, graph your data).
+  \item The units that the variables are measured in do not matter (i.e., if you are looking at height and weight you will calculate the same $r$ if the data were measured in inches and lbs, inches and kg, m and kg, cm and kg, cm and inches, etc.).  This is because of the standardization of the two variables in the calculations.
+  \item The distinction between response and explanatory variables is not needed.  That is, the correlation of GPA and ACT scores is the same as the correlation of ACT scores and GPA.
+  \item Correlations are between -1 and 1.
+  \item Correlations are strongly affected by outliers (simply, because both the mean and standard deviation, used in the calculation of $r$, are strongly affected by outliers).
+  \item Correlation is not causation -- just because a strong correlation is observed it doesn't mean that the explanatory variable caused the response variable (an exception may be in carefully designed experimental studies).
+\end{Itemize}
+\end{minipage}
+
+\warn{The word ``correlation'' is often mis-used in everyday language.  This word is used only when discussing the actual correlation coefficient (i.e., $r$).  When discussing the association between two variables, one should use the word ``relationship'' rather than ``correlation'' (e.g., ``What is the relationship between age and rate of cancer?'').}
+
+
+\subsection{Correlations in R}
+ \label{sect:Correlation}\index{Correlation!Computation}\index{Correlation!Matrix}
+The correlation coefficient ($r$) between two quantitative variables is computed with \R{cor()}.  When only two variables are considered, \R{cor()} requires only two arguments -- vectors containing the two quantitative variables.  Note that these two vectors must be of the same length.  For example, the correlation between highway MPG and weight of the car is found with
+<<>>=
+cor(cars93$HMPG,cars93$Weight)
+@
+
+The correlation coefficient can be simultaneously computed among many pairs of quantitative variables found in a data frame if that data frame is the only argument sent to the \R{cor()} function.  As noted above $r$ is calculated only with quantitative data.  Thus, all variables in the data frame must be quantitative.  For example, if one wants to find the correlations between each pair of highway MPG, size of the fuel tank, length, and weight of cars in the \dfile{cars93} data frame, then these variables must be isolated and assigned to a new data frame as follows,
+<<>>=
+cars93a <- cars93[,c("HMPG","FuelTank","Length","Weight")]
+str(cars93a)
+@
+In some instances, the data frame may contain some missing values (i.e., data that was not recorded).  The individuals with missing pieces of data are efficiently removed when computing the correlation coefficient by including the \R{use="pairwise.complete.obs"} argument to \R{cor()}.  Thus, the correlations between these four variables is obtained with
+<<>>=
+cor(cars93a,use="pairwise.complete.obs")
+@
+These results are a so-called correlation matrix where each cell in the matrix represents the $r$ between the variables that label the corresponding row and column.  Thus, the correlation between highway MPG and size of the fuel tank is \Sexpr{formatC(cor(cars93a)["HMPG","FuelTank"],format="f",digits=2)}.  The correlation matrix has all \verb"1"s on the main diagonal because the correlation between a variable and itself is always 1 (i.e., a perfect relationship).  In addition, the matrix is symmetric about the main diagonal because the correlation between $X$ and $Y$ is the same as the correlation between $Y$ and $X$.
+
+\warn{If the vector submitted to \R{cor()} has missing data, then the individuals with missing data should be excluded by including the \R{use="pairwise.complete.obs"} argument in \R{cor()}.}
+
+A visual that corresponds with the correlation matrix is the scatterplot matrix.  A scatterplot matrix is a graphic that contains scatterplots of all possible pairs of variables in one plot \figrefp{fig:Scatplot4}.  Each subplot in the scatterplot matrix is a scatterplot with the variable listed in the same column on the x-axis and the variable listed in the same row on the y-axis.  For example, the scatterplot in the upper-right corner of \figref{fig:Scatplot4} has highway MPG on the y-axis and car weight on the x-axis.  A scatterplot matrix is constructed in R by submitting the ``reduced'' data frame to \R{pairs()}.  For example, the scatterplot matrix in \figref{fig:Scatplot4} was constructed with
+<<Scatplot4, fig.width=6, fig.height=6, out.width='.7\\linewidth', fig.cap="Scatterplot matrix of the highway MPG, fuel tank size, length, and weight of cars.">>=
+pairs(cars93a)
+@
+
+
+\subsection{Meaning and Interpretation II}
+\subsubsection{Highway MPG and Weight}
+The following overall bivariate summary for the relationship between highway MPG and weight is made from the analyses in the previous sections.  The relationship between highway MPG and the weight of cars \figrefp{fig:carscat1} appears to be negative, primarily linear (although I see a very slight concavity), and moderately strong with a correlation of \Sexpr{formatC(cor(cars93a)["HMPG","FuelTank"],format="f",digits=2)}.  The three points at (2400,46), (2500,27), and (1800,33) might be considered SLIGHT outliers (these are not far enough removed for me to consider them outliers, but some people may).
+
+\subsubsection{State Energy Usage}
+\begin{quote}
+\textit{A 2001 report from the \href{http://www.eia.doe.gov/}{Energy Information Administration} of the Department of Energy details the total consumption of a variety of energy sources by state in 2001.  Construct a proper EDA for the relationship between total petroleum and coal consumption (in trillions of BTU).}
+\end{quote}
+<<scatNRG1, echo=FALSE, fig.cap="Scatterplot of the total consumption of petroleum versus the consumption of coal (in trillions of BTU) by all 50 states and the District of Columbia.  The points shown in the left with total petroleum values greater than 3000 trillion BTU are deleted in the right plot.">>=
+NRG <- read.table("data/NRG_Consump_2001.txt",header=TRUE)
+plot(TotalPet~Coal,data=NRG,pch=16,xlab="Coal",ylab="Total Petroleum (trillion BTU)")
+NRG1 <- NRG[-c(5,44),]
+plot(TotalPet~Coal,data=NRG1,pch=16,xlab="Coal",ylab="Total Petroleum (trillion BTU)")
+@
+The relationship between total petroleum and coal consumption is generally positive, linear, weak, with two outliers at total petroleum levels greater than 3000 trillions of BTU (\figref{fig:scatNRG1}-Left).  I did not compute a correlation coefficient because of the outliers.  The two outliers were Texas and California.  After removing them from the data set the relationship is clearly positive, linear, weak ($r=$\Sexpr{formatC(cor(NRG1$Coal,NRG1$TotalPet),format="f",digits=2)}), with no additional outliers (\figref{fig:scatNRG1}-Right).
+
+The relationship between the consumption of petroleum and coal exhibits two outliers -- Texas and Oklahoma.  The relationship not considering these two data points appears to be positive, linear, and weak (r=\Sexpr{round(cor(NRG1$Coal,NRG1$TotalPet),2)}).
+
+This example illustrates a few key points in the description of a bivariate EDA.  First, the descriptions of association, strength, and form should not be influenced by the presence of outliers.  In other words, describe association, strength, and form ignoring any outliers present in the data.  If you don't have the ability to compute $r$ without the outliers (e.g., you are just given $r$ for the entire data set), then \textbf{DO NOT} report $r$ because it is too strongly influenced by the outliers.  Second, the form of weak relationships is difficult to describe because, by definition in a weak relationship, there is very little clustering to a form.  As a rule-of-thumb, if the scatterplot does not have an obvious curvature to it, then it is described as linear by default.
+
+\warn{Outliers should not influence the descriptions of association, strength, and form.}
+
+\begin{exsection}
+  \item \label{revex:qbEDAcorr} \rhw{} Calculate the correlation coefficient between the mean number of hemlock saplings and deer browse index given in Review Exercise \ref{revex:qbEDAScat}. \ansref{ans:qbEDAcorr}
+
+  \item \label{revex:qbEDASoil} The concentration of cadmium and copper in the topsoil of 115 15mX15m plots along the river Meuse in the village Stein in New Zealand was recorded by van Rijn and Rikken\footnote{These data are available in \R{data(meuse)} of the \R{sp} package.}.  Use the scatterplot below to describe the bivariate relationship between these two variables. \ansref{ans:qbEDASoil}
+<<ScatSoil, echo=FALSE, results='hide', include=FALSE, fig.width=3.5, fig.height=3.5, par1=TRUE>>=
+data(meuse,package="sp")
+plot(copper~cadmium,data=meuse,xlab="Cadmium (ppm)",ylab="Copper (ppm)",pch=16)
+legend("topleft",legend=paste("r=",round(cor(meuse$copper,meuse$cadmium),3),sep=""),bty="n",cex=1.25)
+@
+  \begin{center}
+    \includegraphics[width=2.5in]{Figs/ScatSoil-1}
+  \end{center}
+
+  \item \label{revex:qbEDAVital} Ten variables were measured on 57 countries and reported in the International Vital Statistics (1996).  A scatterplot of the birth and death rates is shown below.  Write a brief description of this bivariate relationship.  \ansref{ans:qbEDAVital}
+  \begin{center}
+    \includegraphics[width=3in]{Figs/ScatVital1.png}
+  \end{center}
+
+  \item \label{revex:qbEDAAllen} \rhw{} \cite{Allenetal1997} investigated the impact of the density of red-imported fire ants (RIFA) on the recruitment of white-tailed deer fawns (an index of does to fawns).  A modified version of their data is recorded in \href{https://sites.google.com/site/ncstats/data/rifa.txt}{rifa.txt}.  Use this information to write a brief description of this bivariate relationship. \ansref{ans:qbEDAAllen}
+
+  \item \label{revex:qbEDAMPG} Researchers at Chevrolet attempted to determine the relationship between gas mileage (MPG) of Luminas in the city (CITY) and on the highway (HIGHWAY).  Their results are shown below.  Use this information to write a brief description of this bivariate relationship.\ansref{ans:qbEDAMPG}
+<<ScatLumina, echo=FALSE, results='hide', include=FALSE, fig.width=3.5, fig.height=3.5, par1=TRUE>>=
+lum <- read.table("data/Lumina.txt",header=TRUE)
+plot(CMPG~HMPG,data=lum,pch=16,xlab="Highway MPG",ylab="City MPG")
+legend("topleft",legend=paste("r=",round(cor(lum$CMPG,lum$HMPG),3),sep=""),bty="n")
+@
+\begin{center}
+  \includegraphics[width=3in]{Figs/ScatLumina-1}
+\end{center}
+
+  \item \label{revex:qbEDAMlad} \rhw{} \cite{Mladenoffetal1997} estimated the territory size (km$^{2}$) of wolf (\textit{Canis lupus}) packs and the density of whitetail deer (number/km$^{2}$; \textit{Odocoileus virginianus}) in the same areas in northern Wisconsin.  Their data is recorded in \href{https://sites.google.com/site/ncstats/data/Wolves2.txt}{Wolves2.txt}.  Load these data into R and generate results to write a brief description of this bivariate relationship. \ansref{ans:qbEDAMlad}
+
+  \item \label{revex:qbEDAPerch} \rhw{} The Park Management team of Kejimkujik National Park, Nova Scotia examined the relationship between the length and weight of yellow perch (\emph{Perca flavescens}) captured form Grafton Lake in the park in 2000 following the removal of a dam \citep{Brylinsky2001}.  Their data is stored in \href{https://sites.google.com/site/ncstats/data/PerchGL.txt}{PerchGL.txt}.  Load these data into R, isolate just the results from 2000 (i.e., use \R{Subset()}), and generate results to describe this bivariate relationship.  \ansref{ans:qbEDAPerch}
+
+  \item \label{revex:qbEDACrckt} \rhw{} It has been said that you can roughly estimate the temperature from the number of cricket chirps heard.  To determine if this relationship existed, an entomologist recorded the number of chirps in a 15-second interval by crickets held at different temperatures.  The researcher's data is recorded in \href{https://sites.google.com/site/ncstats/data/Chirps.txt}{Chirps.txt}.  Load these data into R and generate results to write a brief description of this bivariate relationship. \ansref{ans:qbEDACrckt}
+
+  \item \label{revex:qbEDArChos1} Five of the scatterplots below correspond to the following correlation coefficients --- 0.89, -0.48, -0.92, 0.56, 0.00. Identify the scatterplot that each correlation corresponds to. Some scatterplots will not be used. \ansref{ans:qbEDArChos1}
+\begin{center}
+  \includegraphics[width=3in]{Figs/r_chos1.png}
+\end{center}
+
+  \item \label{revex:qbEDArChos2} Order the following graphs from (i) lowest to highest value of r and (ii) weakest to strongest.  \ansref{ans:qbEDArChos2}
+<<RChoose1, echo=FALSE, results='hide', include=FALSE, fig.width=6, fig.height=1.5>>=
+par(mar=c(0.2,0.2,2,0.2),mgp=c(2,0.5,0),mfcol=c(1,4))
+set.seed(349)
+r <- c(-.7,-.9,-0.3,0.5)
+for (i in 1:length(r)) {
+  covmat <- matrix(c(1,r[i],r[i],1),ncol=2)
+  x <- rmvnorm(n=100,mean=c(0,0),sigma=covmat)
+  y <- x[,2]; x <- x[,1]
+  plot(y~x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16,xlim=c(-3,3),ylim=c(-3,3))
+  mtext(LETTERS[i],line=0.4)
+}
+@
+\begin{center}
+  \includegraphics[width=4in]{Figs/RChoose1-1}
+\end{center}
+
+  \item \label{revex:qbEDArChos3} Order the following graphs from (i) lowest to highest value of r and (ii) weakest to strongest. \ansref{ans:qbEDArChos3}
+<<RChoose2, echo=FALSE, results='hide', include=FALSE, fig.width=6, fig.height=1.5>>=
+par(mar=c(0.2,0.2,2,0.2),mgp=c(2,0.5,0),mfcol=c(1,4))
+set.seed(349)
+r <- c(0.6,-0.9,-0.5,0.9)
+for (i in 1:length(r)) {
+  covmat <- matrix(c(1,r[i],r[i],1),ncol=2)
+  x <- rmvnorm(n=100,mean=c(0,0),sigma=covmat)
+  y <- x[,2]; x <- x[,1]
+  plot(y~x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16,xlim=c(-3,3),ylim=c(-3,3))
+  mtext(LETTERS[i],line=0.4)
+}
+@
+\begin{center}
+  \includegraphics[width=4in]{Figs/RChoose2-1}
+\end{center}
+\end{exsection}
+
+
+\section{Categorical Bivariate EDA}   \label{sect:BEDACategorical}
+Two-way frequency tables summarize two categorical variables recorded simultaneously on the same individual by displaying the categories of the first variable as rows and the categories of the second variable as columns.\index{Table!Frequency}\index{EDA!Bivariate!Categorical}  Each cell in this table contains a count of the number of individuals that were in the corresponding categories of each variable.  Frequency tables are often converted to percentage tables for ease of summarization and comparison between populations.  This section explores the construction and interpretation of these types of tables.
+
+Throughout this section we will consider the following data from the General Sociological Survey (GSS).  Two questions asked to 3955 respondents for the GSS were,
+\begin{Itemize}
+  \item What is your highest degree earned? [choices -- ``less than high school diploma'', ``high school diploma'', ``junior college'', ``bachelors'', or ``graduate''; labeled as \var{degree}]
+  \item How willing would you be to accept cuts in your standard of living in order to protect the environment? [choices -- ``very willing'', ``fairly willing'', ``neither willing nor unwilling'', ``not very willing'', or ``not at all willing''; labeled as \var{grnsol}]
+\end{Itemize}
+These data, stored in \href{https://sites.google.com/site/ncstats/data/GSSWill2Pay.txt}{GSSWill2Pay.txt}, are loaded into R, with the structure and a random six individuals were observed with
+<<>>=
+gss <- read.table("data/GSSWill2Pay.txt",header=TRUE)
+str(gss)
+view(gss)
+@
+The \var{degree} and \var{grnsol} variables are both \emph{ordinal} categorical variables.  By default R orders the levels for a factor variable alphabetically.  Alphabetically is not typically the ``natural order'' of the levels.  Thus, it is important to identify the order of levels for each ordinal variable by submitting the variable name to \R{levels()}.  For example, the levels for the \var{degree} and \var{grnsol} variable are seen with
+<<>>=
+levels(gss$degree)
+levels(gss$grnsol)
+@
+It is seen that these ordinal variables do not have the levels in their proper order.  The correct order is obtained by using \R{factor()} where the first argument is the name of the factor variable and a vector of correctly ordered levels is included in the \R{levels=} argument.  The result of \R{factor()} should be set to a new variable in the data frame.  For example, two new factor variables -- \var{fdegree} and \var{fgrnsol} -- with the correct order of levels are created with
+<<>>=
+gss$fdegree <- factor(gss$degree,levels=c("ltHS","HS","JC","BS","grad"))
+gss$fgrnsol <- factor(gss$grnsol,levels=c("vwill","will","neither","un","vun"))
+@
+Now the levels of these two new variables are in the correct order as seen with
+<<>>=
+levels(gss$fdegree)
+levels(gss$fgrnsol)
+@
+If the variables had been nominal or if the natural order of levels were the same as the alphabetical order, then the use of \R{factor()} illustrated above would not have been needed.
+
+\warn{Levels for a factor variable are ordered alphabetically by default in R.  You may need to use \R{factor()} with \R{levels=} to control the order of levels if the factor variable is ordinal.}
+
+\subsection{Frequency Tables}\index{Table!Frequency}
+<<echo=FALSE, results='hide'>>=
+tbl1 <- xtabs(~fdegree+fgrnsol,data=gss)
+tbl2 <- addMargins(tbl1)
+@
+A common method of summarizing bivariate categorical data is to count the number of individuals that have each combination of the first and second categorical variables.  For example, how many respondents had less than a HS degree and were very willing, how many had a high school degree and were very willing, and so on.  The count of the number of individuals of each combination is called a frequency.  A two-way frequency table offers an efficient way to display these frequencies \tabrefp{tab:EnvFreq}.  Thus, for example, \Sexpr{tbl2["ltHS","vwill"]} of the respondents had less than a high school degree and were very willing to take a cut in their standard of living to protect the environment.  Similarly, \Sexpr{tbl2["HS","will"]} respondents had a high school degree and were willing to cut their standard of living.
+
+<<echo=FALSE, results='asis'>>=
+xtbl <- xtable(tbl2,digits=0,caption="Frequency table of respondent's highest completed degree and willingness to cut their standard of living to protect the environment.","tab:EnvFreq")
+print(xtbl,caption.placement="top")
+@
+
+A two-way frequency table is usually augmented with a column of row totals and a row of column totals (as in \tabref{tab:EnvFreq}).  This row and column is called the marginal row and the marginal column, respectively.  Each marginal total represents the distribution of one of the categorical variables while ignoring the other categorical variable.  The total column represents the distribution of the row variable; in this case, the highest degree completed.  Thus, in this case the total column represents the number of respondents according to their highest degree completed.  Similarly, the total row represents the distribution of the column variable.  In this case, the total row represents the number of respondents according to their willingness to cut their standard of living to protect the environment.  Thus, for example there were \Sexpr{tbl2["JC","Sum"]} respondents whose highest complete degree was junior college and there were \Sexpr{tbl2["Sum","vun"]} respondents who were very unwilling to cut their standard of living to protect the environment.
+
+\begin{exsection}
+  \item \label{revex:cbEDASeal1} A group of marine biologists from California wanted to study the foraging ecology of northern elephant seals off the California coast \citep{LeBoeufetal2000}.  Part of their analysis required that they record, for each observed seal, the month that it was observed and the sex of the seal.  Their results from 47 seals are listed below.  Construct a two-way frequency table, including the marginal totals, of these data with month as the column variable. \ansref{ans:cbEDASeal1}
+\begin{Verbatim}
+indiv  1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16
+Mon   Jun Jun Jun Jun Jun Jun Jun Jun Jul Jul Jul Jul Jul Jul Jul Aug
+Sex    M   M   M   M   M   M   M   M   M   M   M   M   M   M   M   M
+
+indiv  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32
+Mon   Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug Jun Jun Jun Jun Jun
+Sex    M   M   M   M   M   M   M   M   M   M   M   F   F   F   F   F
+
+indiv  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47
+Mon   Jul Jul Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug
+Sex    F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
+\end{Verbatim}
+\end{exsection}
+
+
+\subsection{Percentage Tables}\index{Table!Percentage}\index{Table!Proportion}
+Two-way frequency tables are often converted to two-way percentage tables to allow for ease of comparison between levels of the variables and also between samples.  For example, it is difficult to determine from \tabref{tab:EnvFreq} if respondents with a high school degree are more likely to be very willing to cut their standard of living than respondents with a graduate degree, because there are approximately seven times as many respondents with a high school degree in the sample.  This comparison is easily made, however, if the frequencies are converted to percentages.  Three types of percentage tables are constructed from a raw frequency table.  These are discussed in the next sections.
+
+\subsubsection{Row-Percentage Table}
+A \textbf{row-percentage table} is computed by dividing the value in the SAME cell on the original frequency table by the TOTAL value in the same row on the original frequency table and multiplying by 100.  For example, the value in the ``vwill'' column and ``ltHS'' row on the row-percentage table \tabrefp{tab:EnvRowP} is computed by dividing the value in the ``vwill'' column and ``ltHS'' row on the original frequency table (i.e., \Sexpr{tbl2["ltHS","vwill"]}; \tabref{tab:EnvFreq}) by the value in the ``Sum'' column and the ``ltHS'' row on the original frequency table (i.e., \Sexpr{tbl2["ltHS","Sum"]}) and multiplying by 100.
+
+<<echo=FALSE, results='asis'>>=
+tbl1.r <- percTable(tbl1,margin=1)
+xtbl.r <- xtable(tbl1.r,digits=1,caption="Row-percentage table of respondent's highest completed degree and willingness to cut their standard of living to protect the environment.","tab:EnvRowP")
+print(xtbl.r,caption.placement="top")
+@
+
+The value in each cell of a row-percentage table is the percentage OF ALL individuals with the characteristic of that row that also have the characteristic of that column.  For example, \Sexpr{formatC(tbl1.r["ltHS","vwill"],format="f",digits=1)}\% of the respondents with less than a high school degree are very willing to cut their standard of living to protect the environment.  This needs to be read very closely and literally.  OF THE RESPONDENTS WITH LESS THAN A HIGH SCHOOL DEGREE, not of all respondents, \Sexpr{formatC(tbl1.r["ltHS","vwill"],format="f",digits=1)}\% were very willing to cut their standard of living.
+
+\warn{Each value in a row-percentage table is computed by dividing the value in the SAME cell on the original frequency table by the TOTAL value in the same row on the original frequency table and multiplying by 100.}
+
+\vspace{-12pt}
+\warn{The value in each cell of a row-percentage table is the percentage OF ALL individuals with the characteristic of that row that also have the characteristic of that column.}
+
+\subsubsection{Column-Percentage Table}
+A \textbf{column-percentage table} is computed by dividing the value in the SAME cell on the original frequency table by the TOTAL value in the same column on the original frequency table and multiplying by 100.  For example, the value in the ``vwill'' column and ``ltHS'' row on the column-percentage table \tabrefp{tab:EnvColP} is computed by dividing the value in the ``vwill'' column and ``ltHS'' row on the original frequency table (i.e., \Sexpr{tbl2["ltHS","vwill"]}; \tabref{tab:EnvFreq}) by the value in the ``Sum'' row and the ``vwill'' column on the original frequency table (i.e., \Sexpr{tbl2["Sum","vwill"]}) and multiplying by 100.
+
+<<echo=FALSE, results='asis'>>=
+tbl1.c <- percTable(tbl1,margin=2)
+xtbl.c <- xtable(tbl1.c,digits=1,caption="Column-percentage table of respondent's highest completed degree and willingness to cut their standard of living to protect the environment.","tab:EnvColP")
+print(xtbl.c,caption.placement="top")
+@
+
+The value in each cell of a column-percentage table is the percentage OF ALL individuals with the characteristic of that column that also have the characteristic of that row.  For example, \Sexpr{formatC(tbl1.c["ltHS","vwill"],format="f",digits=1)}\% of respondents who were very willing to cut their standard of living had less than a high school degree.  Again, this is a very literal statement.  OF THE RESPONDENTS WHO WERE VERY WILLING TO CUT THEIR STANDARD OF LIVING, not of all respondents, \Sexpr{formatC(tbl1.c["ltHS","vwill"],format="f",digits=1)}\% had less than a high school degree.
+
+\warn{Each value in a column-percentage table is computed by dividing the value in the SAME cell on the original frequency table by the TOTAL value in the same column on the original frequency table and multiplying by 100.}
+
+\vspace{-12pt}
+\warn{The value in each cell of a column-percentage table is the percentage OF ALL individuals with the characteristic of that column that also have the characteristic of that row.}
+
+\subsubsection{Table-Percentage Table}
+Each value in a \textbf{table-percentage table} is computed by dividing the value in the SAME cell on the original frequency table by the TOTAL number of ALL individuals in the original frequency table and multiplying by 100.  For example, the value in the ``vwill'' column and ``ltHS'' row on the table-percentage table \tabrefp{tab:EnvTblP} is computed by dividing the value in the ``vwill'' column and ``ltHS'' row on the original frequency table (i.e., \Sexpr{tbl2["ltHS","vwill"]}; \tabref{tab:EnvFreq}) by the value in the ``Sum'' row and the ``Sum'' column on the original frequency table (i.e., \Sexpr{tbl2["Sum","Sum"]}) and multiplying by 100.
+
+<<echo=FALSE, results='asis'>>=
+tbl1.t <- percTable(tbl1)
+xtbl.t <- xtable(tbl1.t,digits=1,caption="Table-percentage table of respondent's highest completed degree and willingness to cut their standard of living to protect the environment.","tab:EnvTblP")
+print(xtbl.t,caption.placement="top")
+@
+
+The value in each cell of a table-percentage table is the percentage OF ALL individuals that have the characteristic of that column AND that row.  For example, \Sexpr{formatC(tbl1.t["ltHS","vwill"],format="f",digits=1)}\% of ALL respondents had less than a high school degree AND were very willing to cut their standard of living to protect the environment.  Compare this interpretation to the interpretations from the row and column-percentage tables above.  This interpretation does refer to all respondents.
+
+\warn{Each value in a table-percentage table is computed by dividing the value in the SAME cell on the original frequency table by the TOTAL number of ALL individuals in the original frequency table and multiplying by 100.}
+
+\vspace{-12pt}
+\warn{The value in each cell of a table-percentage table is the percentage OF ALL individuals that have the characteristic of that column AND that row.}
+
+\begin{exsection}
+  \item \label{revex:cbEDASeal2} Construct a row-, column-, and table-percentage table from the frequency table for the seal data in Review Exercise \ref{revex:cbEDASeal1}. \ansref{ans:cbEDASeal2}
+\end{exsection}
+
+
+\subsection{Which Table?}\index{Table!Proportion}\index{Table!Percentage}
+Determining which table to use comes from applying one simple rule and practicing with several tables.  The rule stems from determining if the question restricts the frame of reference to a particular level or category of one of the variables.  If the question does restrict to a particular level, then either the row or column-percentage table that similarly restricts the frame of reference must be used.  If a restriction to a particular level does not appear to be made, then the table-percentage table is used.
+
+For example, consider the question -- ``What percentage of respondents with a bachelors degree were very unwilling to cut their standard of living to protect the environment?''  This question restricts the frame of reference to respondents with bachelors degrees (i.e., ``... of respondents with a bachelors degree ...'').  Thus, the answer is restricted to the ``BS'' row of the frequency table.  The ROW-percentage table restricts the original table to the row levels and is, thus, used to answer this question.  Therefore, \Sexpr{formatC(tbl1.r["BS","vun"],format="f",digits=1)}\% of respondents with bachelors degrees were very unwilling to cut their standard of living to protect the environment \tabrefp{tab:EnvRowP}.
+
+Now consider the question -- ``What percentage of all respondents had a high school degree and were very willing to cut their standard of living?''  This question does not restrict the frame of reference because it refers to ``... of all respondents ...''.  Therefore, from the table-percentage table \tabrefp{tab:EnvTblP}, \Sexpr{formatC(tbl1.t["HS","vwill"],format="f",digits=1)}\% of respondents had a high school degree and were very willing to cut their standard of living.
+
+Also consider this question -- ``What percentage of respondents who were neither willing nor unwilling to cut their standard of living had graduate degrees?''  This question restricts the frame of reference to respondents who were neither willing nor unwilling to cut their standard of living and, thus, restricts the question to the ``neither'' column of the original frequency table.  Thus, the answer will come from the COLUMN-percentage table.  Therefore, \Sexpr{formatC(tbl1.c["grad","neither"],format="f",digits=1)}\% of respondents who were neither willing nor unwilling to cut their standard of living had graduate degrees \tabrefp{tab:EnvColP}.
+
+Finally, consider this question -- ``What percentage of all respondents were very willing to cut their standard of living to help the environment?''  This question has no restrictions on the frame of reference so the table-percentage table should be used.  In addition, this question is only concerned with only one of the two variables in the two-way table; thus, the answer will come from one of the marginal distributions.  Therefore, \Sexpr{tbl2["Sum","vwill"]} out of all \Sexpr{tbl2["Sum","Sum"]} respondents, or \Sexpr{formatC(100*tbl2["Sum","vwill"]/tbl2["Sum","Sum"],format="f",digits=1)}\%, were very willing to cut their standard of living to help the environment.
+
+\warn{To determine which percentage table to use determine what type of restriction, if any, has been placed on the frame of reference for the question.}
+
+\vspace{-12pt}
+\warn{If a question does not refer to one of the two variables, then the answer will generally come from the marginal distribution of the other variable.}
+
+It should be noted that if one of the two categorical variables is determined to be a response variable, then this variable is usually used to define the columns and the row-percentage table becomes the main table of interest.  In this example, the ``willingness to cut'' would be considered the response variable and it was then, appropriately, placed as the column variable in the two-way table.  Thus, the questions answered from the row-percentage table (i.e., ``Of respondents with a certain degree ...'') make ``more sense'' than the questions answered from the column-percentage table (i.e., ``Of respondents with a certain willingness ...'').
+
+\warn{The response variable is typically used to define the columns of the two-way table.}
+
+\begin{exsection}
+  \item \label{revex:cbEDASeal3} Use the frequency and percentage tables for the seal data constructed in Review Exercises \ref{revex:cbEDASeal1} and \ref{revex:cbEDASeal2} to answer the questions below. \ansref{ans:cbEDASeal3}
+  \begin{Enumerate}
+    \item What percentage of elephant seals were male?
+    \item What percentage of male elephant seals were observed in July?
+    \item What percentage of elephant seals were observed in August?
+    \item What percentage of elephant seals were females observed in July?
+  \end{Enumerate}
+
+  \item \label{revex:cbEDAWeitz} \cite{Weitz1979} conducted a survey of general and family practitioners, pediatricians, and obstetrician-gynecologists in the cities of Phoenix and Tucson, Arizona.  In one part of the study, each physician was classified according to religion and whether they supported genetic counseling for parents or not.  A summary of their responses for Jewish, Protestant, and Catholic physicians is shown in the table below.  Use these results to answer the questions below.  \ansref{ans:cbEDAWeitz}
+  \begin{Enumerate}
+    \item What percentage of Jewish physicians support genetic counseling?
+    \item What percentage of Catholic physicians don't support genetic counseling?
+    \item What percentage of all physicians surveyed were Protestant?
+    \item What percentage of those physicians not supporting genetic counseling were Catholic?
+    \item What percentage of all physicians supported genetic counseling?
+  \end{Enumerate}
+  \begin{center}
+    \begin{tabular}{c|ccc|}
+      \hline\hline
+      \multicolumn{1}{c}{} & Jewish & Protestant & \multicolumn{1}{c}{Catholic} \\
+      \cline{2-4}
+      Support & 21 & 36 & 10 \\
+      Don't Support & 26 & 142 & 52 \\
+      \hline\hline
+    \end{tabular}
+  \end{center}
+
+  \item \label{revex:cbEDAGulls} The two-way table below depicts the results of an observational study concerned with the timing (i.e., month) of death for young herring gulls (after fledging) in three locations.  Each cell in the table is the number of dead herring gulls in each month-location combination.  Use the table to answer the questions below. \ansref{ans:cbEDAGulls}
+  \begin{Enumerate}
+    \item What percentage of the gulls that died in New Jersey died in July?
+    \item What percentage of all gulls died in July?
+    \item What percentage of all gulls died in September and in The Netherlands?
+  \end{Enumerate}
+
+  \begin{center}
+    \begin{tabular}{c|ccc|c}
+      \hline\hline
+      \multicolumn{1}{c}{} & \multicolumn{3}{c}{Location} &  \\
+      \cline{2-4}
+      \multicolumn{1}{c}{Month} & New Jersey & Netherlands & \multicolumn{1}{c}{England} & Total \\
+      \hline
+      Jul & 4 & 4 & 10 & 18 \\
+      Aug & 7 & 28 & 60 & 95 \\
+      Sep & 19 & 130 & 89 & 238 \\
+      Oct & 9 & 150 & 39 & 198 \\
+      Nov & 2 & 61 & 31 & 94 \\
+      Dec & 1 & 32 & 12 & 45 \\
+      \hline
+      Total & 42 & 405 & 241 & 688 \\
+      \hline\hline
+    \end{tabular}
+  \end{center}
+
+  \item \label{revex:cbEDAElNino} In an attempt to study rainfall patterns in West Africa caused by El Nino weather events, \cite{NicholsonKim1997} constructed a two-way table that relates the number of days rainfall that occurred each month to the amount of rain in inches that fell on those days (categorized as less than 1 inch and more than 1 inch).  Use the modified version of their table below to answer the questions further below.  \ansref{ans:cbEDAElNino}
+    \begin{center}
+    \begin{tabular}{c|ccc|}
+      \hline\hline
+      \multicolumn{1}{c}{} & Jun & Jul & \multicolumn{1}{c}{Aug} \\
+      \cline{2-4}
+      $<$1 in & 7 & 11 & 20 \\
+      $>$1 in & 5 & 9 & 10 \\
+      \hline\hline
+    \end{tabular}
+  \end{center}
+
+  \begin{Enumerate}
+    \item How many days did it rain in July?
+    \item In the months of June and August, how many days did it rain more than 1 inch?
+    \item What percentage of rainy days in August had less than 1 inch of precipitation?
+    \item If there are 31 days in July, on what percentage of those days did it rain?
+    \item What percentage of rainy days did more than 1 inch of rain fall?
+    \item What percentage of rainy days were in June?
+  \end{Enumerate}
+\end{exsection}
+
+\subsection{Tables in R}  \label{sect:Tables2}\index{Table!Frequency}
+Two-way frequency tables are constructed in R with \R{xtabs()}.  The first argument is a formula of the form \R{\TILDE rowvar+colvar} and the corresponding data.frame must be included in \R{data=}.  The result of \R{xtabs()} should be assigned to an object.  For example, using the GSS data,
+<<>>=
+( tbl1 <- xtabs(~fdegree+fgrnsol,data=gss) )
+@
+Totals are added to the margins of the table with \R{addMargins()}.  The first argument to \R{addMargins()} must be an object previously constructed with \R{xtabs()}.  For example,
+<<>>=
+addMargins(tbl1)
+@
+
+Percentage tables are constructed by submitting the previously saved \R{xtabs()} object to \R{percTable()}.  If only a previously saved table is given to \R{percTable()} then a table-percentage table is constructed.  The number of digits of the output is controlled with \R{digits=}.  For example, the table-percentage table is constructed with
+<<>>=
+percTable(tbl1,digits=1)
+@
+Row- and column-percentage tables are constructed by including the \R{margin=} argument to \R{percTable()}.  If \R{margin=1} is used, then a row-percentage table is constructed.  For example, the row-percentage table is constructed with
+<<>>=
+percTable(tbl1,margin=1,digits=1)
+@
+If \R{margin=2} is used, then a column-percentage table is constructed.  For example, the column-percentage table is constructed with
+<<>>=
+percTable(tbl1,margin=2,digits=1)
+@
+
+\warn{The table submitted as the first argument to \R{percTable()} must be a raw frequency table \textbf{WITHOUT} margin totals added to it.}
+
+\begin{exsection}
+  \item \label{revex:cbEDASeal1r} \rhw{} Using the data provided in Review Exercise \ref{revex:cbEDASeal1}.  Construct a two-way frequency table, including the marginal totals, of these data with month as the column variable. \ansref{ans:cbEDASeal1r}
+
+  \item \label{revex:cbEDASeal2r} Construct a row-, column-, and table-percentage table from the frequency table for the seal data in Review Exercise \ref{revex:cbEDASeal1r}. \ansref{ans:cbEDASeal2r}
+
+  \item \label{revex:cbEDAArsenic4} Use the \href{https://sites.google.com/site/ncstats/data/Arsenic.txt}{Arsenic.txt} data introduced in Review Exercise \ref{revex:EDAArsenic1} to construct a bivariate EDA for the drinking and usage variables. \ansref{ans:cbEDAArsenic4}
+
+\begin{minipage}{\textwidth}
+  \item \label{revex:cbEDAGSS2}  In the General Social Survey (GSS), two questions were asked -- ``How often do you make a special effort to sort glass or cans or plastic or papers and so on for recycling?'' and ``In general, do you think that a rise in the world's temperature caused by the greenhouse effect, is extremely likely, very likely, somewhat likely, not very likely, or not at all likely?''.  Both of these variables are recorded in the \href{https://sites.google.com/site/ncstats/data/GSSEnviroQues.txt}{GSSEnviroQues} file.  Use these data to answer the questions below. \ansref{ans:cbEDAGSS2}
+  \begin{Enumerate}
+    \item What percentage of all respondents recycle often and feel that it is very likely that the greenhouse effect has caused the rise in world's temperature?
+    \item What percentage of those respondents that recycle often feel that it is very likely that the greenhouse effect has caused the rise in world's temperature?
+    \item What percentage of those respondents that think it is very likely that the greenhouse effect has caused the rise in world's temperature also recycle often?
+    \item What percentage of all respondents recycle often?
+    \item What percentage of all respondents think it is very likely that the greenhouse effect has caused the rise in world's temperature?
+  \end{Enumerate}
+\end{minipage}
+
+  \item \label{revex:cbEDAZoo1} \rhw{} The data in \href{}{Zoo1.csv} contains a list of animals found in several different zoos\footnote{These data are stored in a ``comma separated values'' (CSV) file rather than a ``tab delimited text'' file.  Thus, these data must be loaded into R with \R{read.csv()} rather than \R{read.table()}.  The arguments to \R{read.csv()} are the same as \R{read.table()}.}.  In addition, each animal was classified into broad ``type'' categories (``mammal'', ``bird'', and ``amph/rep'').  The researchers that collected these data wanted to examine if the distribution of broad animal types differed among zoos.  Use these data to answer the questions below.\ansref{ans:cbEDAZoo1}
+  \begin{Enumerate}
+    \item What is the ``response'' variable in this analysis?
+    \item What percentage of all animals were birds?
+    \item What percentage of animals in the Minnesota zoo were birds?
+    \item What percentage of animals in the Chicago zoo were amphibians/reptiles?
+    \item What percentage of animals were in the Chicago zoo?
+    \item What percentage of birds were in the Minnesota zoo?
+  \end{Enumerate}
+\end{exsection}
+
+\newpage
+\begin{hwsection}{All questions below should be typed and answered following the expectations identified in \sectref{sect:ReportWriting}.  All work must be shown.  Questions marked with the R logo must include R output with your R commands in an attached appendix.}
+
+  \item \label{hwprob:qbEDACarr} \cite{Carroll1975} examined the relationship between per capita consumption of animal fat (g/day; AnimFatI) and age-adjusted death rate from breast cancer (AgeAdjDe) for 39 countries.  Use the following results from her data to describe the bivariate relationship between these two variables.
+<<ScatCancerFat, echo=FALSE, results='hide', include=FALSE, fig.width=3.5, fig.height=3.5, par1=TRUE>>=
+cf <- read.table("data/CancerFat.txt",header=TRUE)
+plot(adjdeath~fatintake,data=cf,pch=16,xlab="Fat Intake (g/day)",ylab="Age-Adjusted Death Rate")
+r <- round(cor(cf$adjdeath,cf$fatintake),3)
+legend("topleft",legend=paste("r=",round(cor(cf$adjdeath,cf$fatintake),3),sep=""),bty="n")
+@
+\begin{center}
+  \includegraphics[width=2in]{Figs/ScatCancerFat-1}
+\end{center}
+
+  \item \label{hwprob:qbEDAFishCr} \rhw{} The instantaneous discharge (cubic feet per second) and total suspended sediments (in milligrams per liter) were recorded on 28 dates for North Fish Creek near Ashland, WI\footnote{The original data are available from \href{http://nwis.waterdata.usgs.gov/wi/nwis/qwdata/?site_no=040263491}{here}.}.  These data are found in \href{https://sites.google.com/site/ncstats/data/FIshCrNWaterQuality.txt}{FishCrNWaterQuality.txt}.  Load these data into R and produce results to describe the bivariate relationship between these two variables.
+
+  \item \label{hwprob:cbEDABlight} \rhw{} Researchers conducted an experiment on 24 trees subject to a fire blight disease.  Each tree was treated with one of several treatments (A=no action (control), B=removal of the affected branches, C=spraying of foliage with an antibiotic and removal of the affected branches).  Each tree was then recorded according to one of three outcomes (1=tree died in the same year that the disease was noticed, 2=tree died after 2-4 years, 3=tree died after 4 years).  The data below are the treatment and outcomes for each of the 24 trees.  Load these data into R and compute results that can be used to answer the questions below.
+
+  \begin{Verbatim}
+  Treat  A A A A A B B B C C A A B B B C C C C B B C C C
+  Out    1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 3 3 3 3 3
+  \end{Verbatim}
+
+  \begin{Enumerate}
+    \item Construct a two-way frequency table of these data treating the outcome as the response variable (i.e., outcome should form the columns).
+    \item Construct a row-percentage table for these data.
+    \item Construct a column-percentage table for these data.
+    \item Construct a table-percentage table for these data.
+    \item What percentage of the trees in Treatment A were dead within the first year?
+    \item What percentage of ALL trees were in Treatment A AND were dead within the first year?
+    \item What percentage of the trees in the control Treatment were dead after four years (but not before 4 years)?
+    \item What percentage of the trees that died after 2-4 years were in the control treatment?
+    \item What percentage of all trees were dead within the first year?
+  \end{Enumerate}
+
+\end{hwsection}

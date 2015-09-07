@@ -1,0 +1,93 @@
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\input{c:/aaaWork/zGnrlLatex/justRPreamble}
+\hypersetup{pdftitle = MTH107 HW - Chapter 11a}
+\renewcommand{\theenumi}{\alph{enumi}}    % changes enumerates from numbers to letters
+
+\begin{document}
+
+<<setup,echo=FALSE,include=FALSE>>=
+## knitr custom hooks
+# set a default plot options
+knit_hooks$set(par1 = function(before, options, envir) {
+    if (before) par(mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+knit_hooks$set(par1a = function(before, options, envir) {  # use with distrib()
+    if (before) par(mar=c(3.5,3.5,3,3),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+knit_hooks$set(par2 = function(before, options, envir) {
+    if (before) par(mfrow=c(1,2),mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+## knitr options -- output look
+opts_chunk$set(prompt=TRUE,comment='',tidy=FALSE)
+## knitr options -- figure handling
+opts_chunk$set(fig.path='Figs/', fig.width=3.5, fig.height=3.5, out.width='.4\\linewidth', fig.show='hold', fig.align='center', par1=TRUE)
+## r options
+options(width=85,show.signif.stars=FALSE,continue=" ",contrasts=c("contr.sum","contr.poly"))
+## Make sure that the required packages are loaded
+rqrd <- c("NCStats")
+for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
+@
+
+\section*{Question 11.22}
+  \begin{Enumerate}
+    \item $\alpha=0.01$.
+    \item $H_{O}:\mu=0$, $H_{A}:\mu>0$.  [Note a mean of 0 means no change.]
+    \item A one-sample t-test is required because a quantitative variable (sea level rise rate) was measured on individuals from one population (ecosystems), $\sigma$ is UNknown, and the population mean is being compared to a specific value in the null hypothsis.
+    \item An observational study without obvious randomization was used.
+    \item The assumptions are met because $\sigma$ is unknown, the sample size is greater than 15 and the background suggests that the distribution is not strongly skewed.  Thus, the sampling distribution of the test statistic should follow a t-distribution.
+    \item The statistic is $\bar{x}=0.059$.
+    \item The test statistic is  $t=\frac{0.059-0}{\frac{0.135}{\sqrt{23}}}$ = $2.107$ with $23-1=22$ df.
+    \item The p-value is \Sexpr{kPvalue(distrib(2.107,distrib="t",df=22,lower.tail=FALSE,plot=FALSE))}.
+    \item The $H_{O}$ is not rejected because the $p-value>\alpha$.
+    \item The mean sea level rise rate does not appear to be greater than 0, indicating that the sea level has not increased significantly over the period of study.
+  \end{Enumerate}
+
+\section*{Question 11.23}
+<<echo=FALSE, results='hide'>>=
+ph <- read.table("data/pHlevels.txt",header=TRUE)
+ph.t <- t.test(ph$pH,mu=5.6,alt="less",conf.level=0.99)
+@
+  \begin{Enumerate}
+    \item $\alpha=0.01$.
+    \item $H_{O}:\mu=5.6$, $H_{A}:\mu<5.6$.
+    \item A one-sample t-test is required because quantitative variable (pH) was measured on individuals from one population, $\sigma$ is UNknown, and the population mean is being compared to a specific value in the hull hypothesis.
+    \item An observational study without obvious randomization was used.
+    \item The assumptions are met because $\sigma$ is unknown and the sample size (\Sexpr{formatC(ph.t$parameter+1,format="f",digits=0)}) is greater than 40.  Thus, the sampling distribution of the test statistic should follow a t-distribution.
+    \item The statistic is $\bar{x}=$\Sexpr{formatC(ph.t$estimate,format="f",digits=3)} \tabrefp{tab:pH}.
+\begin{table}[!h]
+  \begin{center}
+    \caption{Results from the one-sample t-test for testing that the pH is less than 5.6.}  \label{tab:pH}
+<<echo=FALSE>>=
+kHtest(ph.t)
+@
+  \end{center}
+\end{table}
+    \item The test statistic is $t=$\Sexpr{formatC(ph.t$statistic,format="f",digits=3)} with \Sexpr{formatC(ph.t$parameter,format="f",digits=0)} df \tabrefp{tab:pH}.
+    \item The p-value is \Sexpr{kPvalue(ph.t$p.value)} \tabrefp{tab:pH}.
+    \item The $H_{O}$ is rejected because the $p-value<\alpha$.
+    \item The mean pH appears to be significantly lower than 5.6 and, thus, indicates acid rain at this site.
+    \item A 99\% upper confidence bound is required.  Thus, one is 99\% confident that the mean pH level is less than \Sexpr{formatC(ph.t$conf.int[2],format="f",digits=2)} \tabrefp{tab:pH}.
+  \end{Enumerate}
+    
+\clearpage
+\section*{Appendix -- R Commands}
+<<eval=FALSE, prompt=FALSE>>=
+( distrib(2.107,distrib="t",df=22,lower.tail=FALSE) )
+@
+
+<<eval=FALSE>>=
+ph <- read.table("data/pHlevels.txt",header=TRUE)
+( ph.t <- t.test(ph$pH,mu=5.6,alt="less",conf.level=0.99) )
+@      
+
+\section*{Notes From Professor}
+\begin{itemize}
+  \item Make sure that you provide some statement of evidence for the fact that a quantitative variable was measured and that only one population was sampled in step 3.
+  \item Make sure to include, and refer to, a table of results from \R{t.test()}.
+  \item Make sure to answer the overall question of the study in step 10.  For example, in 11.23, make sure to say that there was evidence for acid rain, not just saying that the mean pH was less than 5.6.
+  \item Make sure to show your work in hand calculation problems.
+  \item It is not possible for the p-value to be zero.  If the p-value is very small (i.e., less than a rounded 0.0001) then we write ``p$<$0.00005.''
+\end{itemize}
+
+\end{document}

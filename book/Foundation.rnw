@@ -1,0 +1,433 @@
+<<echo=FALSE, cache=FALSE, results='hide'>>=
+set_parent('IntroStats.Rnw')
+@
+
+\chapter{Foundation} \label{chap:Foundations}
+\begin{ChapObj}{\boxwidth}
+  \textbf{Chapter Objectives:}
+  \begin{Enumerate}
+    \item Describe the two major reasons why statistics is important for understanding populations.
+    \item Define natural and sampling variability.
+    \item Describe ``difficulties'' in making conclusions about population caused by sampling variability.
+    \item Define ``statistics'' (as a field of study).
+    \item Appreciate the importance of statistics in scientific inquiry.
+    \item Describe what an individual is.
+    \item Describe what a population and a sample are and how they differ.
+    \item Describe what a parameter and a statistic are and how they differ.
+    \item Describe how a population, parameter, sample, and statistic are related.
+    \item Identify the individual, variable(s), population, parameter(s), sample, and statistic(s) (IVPPSS) in a given situation.
+    \item Identify variable types in context.
+  \end{Enumerate}
+\end{ChapObj}
+
+\minitoc
+\newpage
+
+\section{Why Statistics Is Important}\label{sect:WhyStats}
+\lettrine{T}{he city of Ashland} performed an investigation in the area of Kreher Park \figrefp{fig:KreherParkMap} when considering the possible expansion of an existing wastewater treatment facility in 1989.  The discovery of contamination from what was believed to be creosote waste in the subsoils and ground water at Kreher Park prompted the city to abandon the project. A subsequent assessment by the Wisconsin Department of Natural Resources (WDNR) indicated elevated levels of hazardous substances in soil borings and ground water samples and in the sediments of Chequamegon Bay directly offshore of Kreher Park.  In 1995 and 1999, the Northern States Power Company conducted investigations that further defined the area of contamination and confirmed the presence of specific contaminants associated with coal tar wastes.  This site is now listed as a superfund site and is being given considerably more attention.\footnote{More information at the \href{http://www.epa.gov/region5/sites/ashland/}{EPA} and the \href{http://dnr.wi.gov/org/aw/rr/cleanup/ashland.htm}{WDNR} websites.}
+
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=6in]{Figs/Kreher_Park_Map.png}
+  \caption{Location of the Ashland superfund site (left) with the location of 119 historical sediment sampling sites (right).}
+  \label{fig:KreherParkMap}
+\end{figure}
+
+The WDNR wants to study elements in the sediment (among other things) in the entire area shaded in \figref{fig:KreherParkMap}.  This area covers approximately 3000 m$^2$.  Is it physically possible to examine every square meter of that area?  Is it prudent, ecologically and economically, to examine every square meter of this area?  The answer, of course, is ``no.''  How then will the WDNR be able to make conclusions about this entire area if they cannot reasonably examine the whole area?  The most reasonable solution is to sample a subset of all of this area and use the results from this sample to make inferences about the entire area.
+
+Methods for properly selecting a sample that fairly represents a larger collection of individuals is an important area of study in the field of statistics.  For example, the WDNR would not want to sample areas that are only conveniently near shore because this will likely not be an accurate representation of the entire area to be studied.  In this example, it appears that the WDNR employed a grid to assure a relatively even dispersal of samples throughout the study area \figrefp{fig:KreherParkMap}.  Methods for choosing the number of individuals to select and how to select these individuals will be discussed in \chapref{chap:DataProd}.
+
+<<echo=FALSE >>=
+set.seed(1)
+Pb <- round(rnorm(119,1,0.15),2)
+@
+Suppose that the WDNR measured the concentration of lead at each of the 119 locations shown in \figref{fig:KreherParkMap} and that they were to present the results from these data at a public meeting.  Further suppose that the WDNR scientist came to the meeting and showed a slide that simply had the list of lead concentration measurements on it \tabrefp{tab:KreherParkPbconc}\footnote{These are hypothetical data for this site.}.  Is it easy to come to any conclusion about what these data mean from this type of presentation?  Instead, suppose that the scientist came to the meeting with a simple plot of the frequency of concentrations present in the data and brief numerical summaries \figrefp{fig:KreherParkPbhist}.  With this presentation one can fairly easily see that the measurements were fairly symmetric with no obviously ``weird'' measurements and ranged from as low as \Sexpr{formatC(min(Pb),format="f",digits=2)} to as high as \Sexpr{formatC(max(Pb),format="f",digits=2)} with the measurements centered on approximately 1.0 $\mu g \bullet m^{-3}$.  These summaries will be discussed in detail in \chapref{chap:UnivEDA}.  However, at this point note that statistical methods are important for distilling or summarizing large quantities of data into graphs or numerical summaries from which it is much easier to identify characteristics of the data.
+
+\begin{table}[htbp]   \label{tab:KreherParkPbconc}
+  \caption{List of Pb concentration measurements at each of 119 sites in Kreher Park superfund site.}
+  \begin{center}
+<<echo=FALSE, background='white'>>=
+Pb
+@
+  \end{center}
+\end{table}
+
+<<KreherParkPbhist, echo=FALSE, fig.cap="Histogram and summary statistics of Pb concentration measurements at each of 119 sites in Kreher Park superfund site.">>=
+hist(Pb,right=TRUE,main="",xlab="Pb Concentration",ylab="Frequency of Sites",col="gray90")
+Pb.sum <- as.matrix(summary(Pb))
+colnames(Pb.sum)[1] <- "Pb"
+textplot(Pb.sum)
+@
+
+A critical question at this point is whether or not the results from the one sample of 119 sites perfectly represents what the results would be for the entire area.  One way to consider this question is to examine the results obtained from another sample of 119 sites.  The results from this second sample \figrefp{fig:KreherParkPbhist1} are clearly, though not radically, different from the results of the first sample.  Thus, it is seen that any one sample from a large area will not perfectly represent the area.  Furthermore, it is observed that two different samples give two different results which will likely lead to two different, albeit generally only slightly different, conclusions.
+
+<<KreherParkPbhist1, echo=FALSE, fig.scap="Kreher Park 1", fig.cap="Histogram and summary statistics of Pb concentration measurements at each of 119 sites (different from the sites shown in \\figref{fig:KreherParkPbhist}) in Kreher Park superfund site.">>=
+set.seed(6)
+Pb1 <- round(rnorm(119,1,0.15),2)
+hist(Pb1,right=TRUE,main="",xlab="Pb Concentration",ylab="Frequency of Sites",col="gray90")
+Pb1.sum <- as.matrix(summary(Pb1))
+colnames(Pb1.sum)[1] <- "Pb"
+textplot(Pb1.sum)
+@
+
+Why don't the results of two different samples perfectly agree?  Because each sample contains different individuals and no two individuals are exactly alike in every regard.  The phenomenon that no two individuals are exactly alike is called \textbf{natural variability}\index{Natural Variability!Definition}, because of the ``natural'' differences that occur among individuals.  The phenomenon of differences between the results of samples is called \textbf{sampling variability}\index{Sampling Variability!Definition}.  If there was no natural variability, then there would be no sampling variability.  If there was no sampling variability, then the field of statistics would not be needed because a sample (even of 1) would perfectly represent the larger group of individuals.  Thus, understanding variability is at the core of statistical practice.  These concepts of natural and sampling variability will be revisited continuously throughout this book.
+
+\defn{Natural Variability}{The realization that no two individuals are exactly alike.}
+
+\vspace{-12pt}
+\defn{Sampling Variability}{The realization that no two samples are exactly alike. Thus, statistics computed from different samples will likely vary.}
+
+This may all be a bit unsettling!  First, it was shown that an entire area or all of the individuals of interest cannot be examined.  It was then shown that a sample drawn to represent the population does not perfectly represent it.  Furthermore, each sample is unique and will likely lead to a different conclusion.  These are all real and difficult issues faced by the practicing scientist and considered by the informed consumer.  However, the field of statistics is designed to ``deal with'' these issues such that the results from a relatively small subset of measurements can be used to make conclusions about the entire collection of measurements.
+
+\warn{Statistics provides methods for overcoming the difficulties caused by the requirement of sampling and the presence of sampling variability.}
+
+
+\subsection{Purpose of Statistics}
+The field of statistics has two primary purposes as illustrated in the Kreher Park example.  First, statistics provides methods to summarize large quantities of data into concise and informative numerical or graphical summaries.  For example, it is easier to discern the general underlying structure of the lead measurements from the statistics and histograms presented in \figref{fig:KreherParkPbhist} and \figref{fig:KreherParkPbhist1} than it is from the full list of lead measurements in \tabref{tab:KreherParkPbconc}.  Second, statistical methods allow inferences to be made about populations from samples.  These words will be defined more specifically in \sectref{sect:IVPPSS}, but this purpose is the process of making conclusions about the entire area or group of interest from a sample or subset of the individuals.
+
+\warn{Statistics, as a field of study, is used to (1) summarize large quantities of data and (2) make inferences about populations from samples.}
+
+
+\subsection{Definition of Statistics}
+With the Kreher Park example in mind, let's consider a definition of statistics.  Statistics is the science of collecting, organizing, and interpreting numerical information or data \citep{MooreMcCabe1998}\index{Statistics, Field of!Definition}.  People (students and professionals) study statistics for a variety of reasons, including \citep{Bluman2000}:
+\begin{Enumerate}
+  \item They must be able to read and understand the statistical studies performed in their field. To have this understanding they must be knowledgeable about the vocabulary, symbols, concepts, and statistical procedures used in these studies.
+  \item They may need to conduct research in their field. To accomplish this they must be able to design experiments and samples; collect, organize, analyze, and summarize data; and possibly make reliable predictions or forecasts for future use. They must also be able to communicate the results of the study.
+  \item They also need to be better consumers of statistical information.
+\end{Enumerate}
+
+\defn{Statistics}{The science of collecting, organizing, and interpreting numerical information or data.}
+
+The science of statistics permeates a wide variety of disciplines. \cite{MooreMcCabe1998} state:
+\begin{quote}
+The study and collection of data are important in the work of many professions, so that training in the science of statistics is valuable preparation for a variety of careers.  Each month, for example, government statistical offices release the latest numerical information on unemployment and inflation.  Economists and financial advisers, as well as policy makers in government and business study these data in order to make informed decisions.  Doctors must understand the origin and trustworthiness of the data that appear in medical journals if they are to offer their patients the most effective treatments. Politicians rely on data from polls of public opinion.  Business decisions are based on market research data that reveal customer tastes.  Farmers study data from field trials of new crop varieties.  Engineers gather data on the quality and reliability of manufactured products.  Most areas of academic study make use of numbers, and therefore also make use of the methods of statistics.
+\end{quote}
+
+\begin{exsection}
+<<echo=FALSE>>=
+data(ABDLakes)
+named <- Subset(ABDLakes,named)
+@
+
+  \item \label{revex:WhyStatsLakes} There are \Sexpr{formatC(nrow(ABDLakes),format="f",digits=0)} lakes in Ashland, Bayfield, and Douglas counties of Wisconsin.  However, only \Sexpr{formatC(nrow(named),format="f",digits=0)} of these are named.  A random sample of named lakes from this population is extracted with the following R code:
+\vspace{-12pt}
+<<eval=FALSE>>=
+library(NCStats)
+data(ABDLakes)
+named <- Subset(ABDLakes,named)
+srsdf(named,n=50,vars=c("county","area"))
+@  
+Use this code and some hand (or calculator) calculations to answer the questions below. \ansref{ans:WhyStatsLakes}
+    \begin{Enumerate}
+      \item Extract a sample of 50 lakes with the code above.  Compare the size (area in acres) of the first two lakes.  What do you observe?  This is an example of what type of variability?
+      \item Compute the proportion of lakes in your sample that are from Bayfield county.
+      \item Extract another sample of 50 lakes.  Compare the proportion of lakes that are from Bayfield county in this sample to the proportion from your first sample.  What do you observe?  This is an example of what type of variability?
+      \item Of the named lakes in the three counties, \Sexpr{formatC(table(named$county)[2],format="f",digits=0)} are from Bayfield county.  Was the proportion of lakes from Bayfield County in either of your samples equal to the proportion of all named lakes that were from Bayfield County?  Were you surprised?  Why or why not?
+    \end{Enumerate}
+\end{exsection}
+
+
+\section{IVPPSS}  \label{sect:IVPPSS}
+\textbf{Statistical inference} is the process of forming conclusions about the unknown parameters of a population by computing statistics from the individuals in a sample.\index{Inference!Definition}  As you can imagine from this definition, it is important that you understand the difference between a population and a sample and a parameter and a statistic before you can understand and appreciate the process of making statistical inferences.  Before identifying these items you must also identify the individual and variable(s) of interest.  These six items must be explicitly identified at the beginning of any statistical analysis for that analysis to be conducted properly.  Understanding and identifying these items is the focus of this section.  Formal methods of inference will be discussed beginning with \chapref{chap:ProbIntro}.
+
+\defn{Inference}{The process of forming conclusions about the unknown parameters of a population by computing statistics from the individuals in a sample.  As you can imagine from this definition, it is important that you understand the difference between a population and a sample.}
+
+Throughout this section we will identify the individual, variable, population, parameter, sample, and statistic (referred to as the \textbf{IVPPSS}) for the following hypothetical example.  Assume that interest is in determining the average (or mean) length of the 1015 fish in Square Lake \figrefp{fig:SquareLakePopn}.  Note that in ``real life'' we would not know how many fish are in this lake.  However, for the purpose of illustrating the concepts of this chapter we will suppose that specific values of several variables for all 1015 fish in this lake are known.
+
+<<SquareLakePopn, echo=FALSE, fig.cap="Schematic representation (\\textbf{Left}) of the 1015 fish (i.e., dots) in Square Lake and histogram (\\textbf{Right}) of the total length of all 1015 fish in the Square Lake Population.">>=
+data(SquareLakePopn)
+SL <- SquareLakePopn
+SL$i<-seq(1:1015)
+SL$x<-runif(1015)
+SL$y<-runif(1015)
+plot(SL$x,SL$y,pch=16,main="",xlab="",ylab="",xaxt="n",yaxt="n")
+hist(SL$tl,right=TRUE,main="",xlab="Total Length",ylab="Frequency of Fish",col="gray90")
+@
+
+\subsection{Definitions}
+The \textbf{individual} in a statistical analysis is one of the ``items'' that will be examined by the researcher.\index{Individual, Definition}  Sometimes the individual is a person, but it may be an animal, a piece of wood, a site or location, a particular time, or an event.  It is extremely important that you don't always visualize a person when you use the word individual in a statistical context.  Synonyms for individual are unit, experimental unit (usually used in experiments), sampling unit (usually used in observational studies), case, and subject (usually used in studies involving humans).  The individual of interest in the Square Lake example is an individual fish, because the researcher will collect a set of fish and examine each one individually.
+
+\defn{Individual}{One of the items examined by the researcher.}
+
+\vspace{-12pt}
+\warn{An individual is not necessarily a person.}
+
+The \textbf{variable} is the characteristic of interest about each individual.\index{Variable!Definition}  The variable is the information that the researcher records about each individual. The variable of interest in the Square Lake example is the length of each fish. Note that in most ``real life'' studies the researcher will be interested in more than one variable.  For example, in this example, the researcher may also record the fish's weight, sex, and age.  Studies with one variable are called univariate studies, studies with two variables are bivariate studies, and studies with more than two variables are called multivariate studies.
+
+\defn{Variable}{The characteristic of interest about each individual.}
+
+A \textbf{population} is the collection of ALL individuals of interest.\index{Population}  Simply put, the population is all of the individuals.  In the Square Lake example, the population is all 1015 fish in the lake.  You should define the population as thoroughly as possible including all qualifiers as necessary.  This example is simple because Square Lake is so well defined; however, as you will see in the chapter review exercises the population is often only well-defined by your choice of descriptors.
+
+\defn{Population}{The collection of ALL individuals of interest.}
+
+A \textbf{parameter} is a summary computed from ALL individuals in a population.\index{Parameter!Definition}  The term for the particular summary is usually preceded by the word ``population.''  Parameters are ultimately what is of interest because interest is in all individuals in the population.  However, in practice, parameters cannot be computed because the entire population cannot be ``seen.''  In this hypothetical example, all 1015 fish are accessible and the parameters are computed \tabrefp{tab:SquareLakePopn}\footnote{We will discuss how to compute and interpret each of these values in later chapters.}.  As stated above, in this example, interest is in the population mean (or average) length of all fish in Square Lake, which is \Sexpr{round(mean(SL$tl),2)} mm.
+
+<<SquareLakePopnTbl, results="asis", echo=FALSE >>=
+slstat <- Summarize(SL$tl,digits=2)
+slstat1 <- matrix(slstat,nrow=1)
+colnames(slstat1) <- names(slstat)
+sl.x <- xtable(slstat1,align=rep("c",ncol(slstat1)+1),digits=c(0,0,0,2,2,0,0,0,0,0,1),caption="Summary parameters for the total length of all 1015 fish in the Square Lake population.","tab:SquareLakePopn")
+print(sl.x,caption.placement="top",hline.after=c(0,nrow(sl.x)),include.rownames=FALSE)
+@
+
+\defn{Parameter}{A summary of all individuals in a population.}
+
+\vspace{-12pt}
+\warn{Populations and parameters can generally not be ``seen.''}
+
+The entire population cannot be ``seen'' in real life.  Thus, the only alternative for learning something about the population is to examine a subset of the population.  This subset is called a \textbf{sample}.\index{Sample!Definition}  The red dots in \figref{fig:SquareLakeSample1} represent a random sample of 50 fish from Square Lake (note that the sample size is usually denoted by a lower-case n; i.e., n=50).
+
+<<SquareLakeSample1, echo=FALSE, fig.cap="Schematic representation (\\textbf{Left}) of a sample of 50 fish (i.e., red dots) from Square Lake and histogram (\\textbf{Right}) of the total length of the 50 fish in this sample.">>=
+set.seed(1)
+SL1 <- srsdf(SL,n=50)
+plot(y~x,data=SL,pch=19,main="",xlab="",ylab="",xaxt="n",yaxt="n")
+points(y~x,data=SL1,pch=19,col="red",cex=1.25)
+hist(SL1$tl,right=TRUE,main="",xlab="Total Length",ylab="Frequency of Fish",col="gray90")
+@
+
+\defn{Sample}{A subset of the population examined by a researcher.}
+
+Summaries computed from individuals in a sample are called \textbf{statistics}.\index{Statistic!Definition}  Specific names of statistics should be preceded by the word ``sample.''  The statistic of interest is always the same as the parameter of interest; i.e., the statistic describes the sample the same way that the parameter describes the population.  For example, if interest is in the population mean, then the sample mean would be computed.  Some statistics computed from this sample are shown in \tabref{tab:SquareLakeSample1} and \figref{fig:SquareLakeSample1}.  The sample mean of \Sexpr{round(mean(SL1$tl),2)} mm is the best ``guess'' at the population mean.  Not surprisingly from the discussion in \sectref{sect:WhyStats}, the sample mean does not perfectly equal the population mean.
+
+<<SquareLakeSample1s, results="asis", echo=FALSE >>=
+slstat <- Summarize(SL1$tl,digits=2)
+slstat1 <- matrix(slstat,nrow=1)
+colnames(slstat1) <- names(slstat)
+sl1.x <- xtable(slstat1,align=rep("c",ncol(slstat1)+1),digits=c(0,0,0,2,2,0,0,0,0,0,1),caption="Summary statistics for the total length of a sample of 50 fish from the Square Lake population.","tab:SquareLakeSample1")
+print(sl1.x,caption.placement="top",hline.after=c(0,nrow(sl1.x)),include.rownames=FALSE)
+@
+
+
+\subsection{Performing an IVPPSS}
+In each statistical analysis it is important that you determine the Individuals, Variable, Population, Parameter, Sample, and Statistics (IVPPSS).  It is simplest to do this in this order -- IVPPSS.  First, determine what items you are actually going to look at; those are your individuals.  Second, what are you going to record when you look at an individual; that is the variable.  Third, the population is simply ALL of the individuals.  Fourth, the parameter is a summary (e.g., mean or proportion) of the variable recorded from all of the individuals in the population\footnote{Again, parameters generally cannot be computed because all of the individuals in the population can generally not be seen.  Thus, the parameter is largely conceptual.}.  Fifth, we realize that we cannot see all of the individuals in the population so we examined only a few -- those few were the sample.  Finally, the summary of the individuals in the sample is the statistic.  The statistic has to be the same summary of the sample as the parameter was of the population.
+
+When performing an IVPPSS, keep in mind that parameters describe populations (note that they both start with ``p'') and statistics describe samples (note that they both start with ``s'').  This can also be looked at from another perspective.  A sample is an estimate of the population and a statistic is an estimate of a parameter.
+
+This process can be illustrated by performing an IVPPSS for the following situation:
+\begin{quote}
+\textit{A University of New Hampshire graduate student (and Northland College alum) investigated habitat utilization by New England (Sylvilagus transitionalis) and Eastern (Sylvilagus floridanus) cottontail rabbits in Maine.  In a preliminary portion of his research he wants to determine the proportion of ``rabbit patches'' that are inhabited by New England cottontails.  In the winter of 1999 he examined 70 ``patches'' and found that 53 showed evidence of inhabitance by New England cottontails.}
+\end{quote}
+
+\begin{Itemize}
+  \item The individuals are the rabbit patches (i.e., a rabbit patch is the ``item'' being sampled and examined).
+  \item The variable is ``evidence for New England cottontails or not (yes or no)'' (i.e., the characteristic of each rabbit patch that was recorded).
+  \item The population is ALL rabbit patches in Maine.
+  \item The parameter is the proportion of ALL rabbit patches in Maine that showed evidence for New England cottontails\footnote{Note that this population and parameter cannot actually be calculated but it is what the researcher wants to know.}.
+  \item The sample is the 70 rabbit patches in Maine that were actually examined by the researcher.
+  \item The statistic is the proportion of the 70 rabbit patches in Maine actually examined that showed evidence for New England cottontails\footnote{Note that this statistic is the same as the parameter; it is just computed on a different collection of individuals.}.
+\end{Itemize}
+
+In some situations it may be easier to start by identifying the sample.  From this, and through the realization that a sample is always ``of the individuals'', it may be easier to identify the individual.  This process is illustrated in the following example, with the items listed in the order identified rather than in the traditional IVPPSS order.
+
+\begin{quote}
+\textit{The Duluth, MN touristry board is interested in the average number of raptors seen per year at Hawk Ridge\footnote{Information about Hawk Ridge is found \href{http://www.hawkridge.org/}{here}.}.  To determine this value they collected the total number of raptors seen in a sample of years from 1971-2003.}
+\end{quote}
+
+\begin{Itemize}
+  \item The sample is the 32 years between 1971-2003 at Hawk Ridge.
+  \item An individual is a year (because a ``sample of \emph{years}'' was taken) at Hawk Ridge.
+  \item The variable recorded was the number of raptors seen in one year.
+  \item The population is ALL years (this is a bit ambiguous but may be thought of as all years that Hawk Ridge has existed).
+  \item The parameter is the average number of raptors seen per year in ALL years.
+  \item The statistic is the average number of raptors seen in the 1971-2003 sample of years.
+\end{Itemize}
+
+
+\begin{exsection}
+  \item \label{revex:IVPPSSDad}My Dad owns 60 acres of timber (mostly Oak, Walnut, and Poplar) in Iowa.  He wants to measure the mean diameter-at-breast-height (DBH) of the oak trees on his property.  He measures the DBH of 75 randomly selected oak trees.  Use this information to perform an IVPPSS. \ansref{ans:IVPPSSDad}
+  \item \label{revex:IVPPSSFishStore}I have a friend who wants to start a (fishing) bait store on the West end of Ashland.  He wants to determine what proportion of Ashland residents who currently use the East end bait store would use a store in the West end if one existed.  He sends out 5000 questionnaires and receives 2378 back from patrons of the East end store.   Use this information to perform an IVPPSS.  \ansref{ans:IVPPSSFishStore}
+  \item \label{revex:IVPPSSNBA}I'm interested in developing a model to predict how many points an NBA starting basketball player scores. Therefore, I want to determine the relationship between points scored and height, speed (in the 40-yard dash), position, and minutes played. To identify this relationship I gather these data from 100 NBA starting basketball players.  Use this information to perform an IVPPSS. \ansref{ans:IVPPSSNBA}
+  \item \label{revex:IVPPSSClinton}Pollsters wanted to determine the proportion of registered voters who approved of President Clinton's performance.  They called 5000 randomly selected registered voters and ask 4123 of those (the rest weren't home, didn't answer, or hung up) ``Do you approve of Pres. Clinton's performance?''  Use this information to perform an IVPPSS. \ansref{ans:IVPPSSClinton}
+  \item \label{revex:IVPPSSGoslings}You Might Be Interested To Know (YMBITK), the average level of mercury in newly-hatched goslings in the upper Midwest (MI, MN, ND, SD, WI). You obtained 20 goslings from resource agencies in each state.  Use this information to perform an IVPPSS. \ansref{ans:IVPPSSGoslings}
+  \item \label{revex:IVPPSSNClead}YMBITK, the proportion of NC students that think NC can become ``the nation's leading environmental liberal arts college'' in the next decade. You polled 124 students.  Use this information to perform an IVPPSS. \ansref{ans:IVPPSSNClead}
+  \item \label{revex:IVPPSSStudy}YMBITK, the relationship between hours studied and GPA of students in the UW system (excluding UW-Madison). You interviewed 250 students from throughout the system.  Use this information to perform an IVPPSS. \ansref{ans:IVPPSSStudy}
+  \item \label{revex:IVPPSSCoach}YMBITK, the average difference in salaries between the head coaches of men's and head coaches of women's basketball teams at Division I schools. You interviewed 73 head-coach pairs.  Use this information to perform an IVPPSS. \ansref{ans:IVPPSSCoach}
+  \item \label{revex:IVPPSSBioGrads}YMBITK, the proportion of graduates from small private schools, who majored in Biology and who have been out of school for at least 5 years, that feel that statistics is an ``important'' course. You interviewed 1023 people.  Use this information to perform an IVPPSS. \ansref{ans:IVPPSSBioGrads}
+  \item \label{revex:IVPPSSBaikal}Scientist in Chivyrkui Bay on Lake Baikal \citep{OwensPronin2000} were interested, among other things, in determining the mean age of pike (\textit{Esox lucius}) in the bay. They collected scales from 30 fish using gill nets and angling methods. Use this information to perform an IVPPSS. \ansref{ans:IVPPSSBaikal}
+  \item \label{revex:IVPPSSRuffe}The Eurasian ruffe is an exotic species of fish that is causing some alarm in fisheries biologists in the Great Lakes area \citep{Maniaketal2000}. A few of these biologists tested to see if a certain pheromone released by injured ruffe would repel other ruffe.  If so, natural, or possibly synthetic, versions of this pheromone could be used to distract ruffe from areas in which they are causing damage. In their experiment, they observed ruffe held in aquaria divided into four sections.  They recorded what proportion of 24 randomly-selected ruffe caught in the St. Louis River Harbor, and then held in the aquaria, left a section when the chemical was added to that section.  Use this information to perform an IVPPSS. \ansref{ans:IVPPSSRuffe}
+\end{exsection}
+
+
+\subsection{Sampling Variability, Again}
+It is instructive to once again consider how the statistics might change when different samples are taken.  \tabref{tab:SquareLakeSample234} and \figref{fig:SquareLakeSample234} show the results from three more samples of 50 fish from the Square Lake population.  All four samples (including the sample shown in \tabref{tab:SquareLakeSample1} and \figref{fig:SquareLakeSample1}) had means that were quite different from the known population mean of 98.06.  All four histograms were similar in appearance but were slightly different in actual values.  Similar conclusions could be made for the other parameters and statistics (e.g., compare the population and sample standard deviations, min, max, etc.).  The concept illustrated here is that a sample will likely represent the population of interest, but there will be variability among samples.  This variability between samples is called \textbf{sampling variability}, which is one of the most important concepts in statistics and will be discussed in great detail throughout this class.\index{Sampling Variability!Definition}
+
+<<SquareLakeSample234, echo=FALSE, fig.width=5, fig.height=7.5, out.width='.7\\linewidth', fig.cap="Schematic representation (\\textbf{Left}) of three samples of 50 fish (i.e., red dots) from Square Lake and histograms (\\textbf{Right}) of the total length of the 50 fish in each sample.">>=
+set.seed(2); SL2 <- SL[sample(SL$i,50),]
+set.seed(3); SL3 <- SL[sample(SL$i,50),]
+set.seed(4); SL4 <- SL[sample(SL$i,50),]
+par(mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),mfcol=c(3,2))
+plot(SL$x,SL$y,pch=16,main="",xlab="",ylab="",xaxt="n",yaxt="n")
+points(SL2$x,SL2$y,pch=16,col="red",cex=1.25)
+plot(SL$x,SL$y,pch=16,main="",xlab="",ylab="",xaxt="n",yaxt="n")
+points(SL3$x,SL3$y,pch=16,col="red",cex=1.25)
+plot(SL$x,SL$y,pch=16,main="",xlab="",ylab="",xaxt="n",yaxt="n")
+points(SL4$x,SL4$y,pch=16,col="red",cex=1.25)
+hist(SL2$tl,right=TRUE,main="",xlab="Total Length",ylab="Frequency of Fish",col="gray90")
+hist(SL3$tl,right=TRUE,main="",xlab="Total Length",ylab="Frequency of Fish",col="gray90")
+hist(SL4$tl,right=TRUE,main="",xlab="Total Length",ylab="Frequency of Fish",col="gray90")
+@
+
+<<SquareLakeSample234s, results="asis", echo=FALSE >>=
+SL2.sum <- Summarize(SL2$tl,digits=2)
+SL3.sum <- Summarize(SL3$tl,digits=2)
+SL4.sum <- Summarize(SL4$tl,digits=2)
+SL234.sum <- rbind(SL2.sum,SL3.sum,SL4.sum)
+rownames(SL234.sum) <- 2:4
+SL234.x <- xtable(SL234.sum,align=rep("c",ncol(slstat1)+1),digits=c(0,0,0,2,2,0,0,0,0,0,1),caption="Summary statistics for the total length in three samples of 50 fish from the Square Lake population.","tab:SquareLakeSample234")
+print(SL234.x,caption.placement="top",hline.after=c(0,nrow(SL234.x)),include.rownames=FALSE,table.placement="htbp")
+@
+
+\defn{Sampling Variability}{The realization that no two samples are exactly alike. Thus, statistics computed from different samples will likely vary.}
+
+This example also illustrates another important statistical concept.  Parameters are fixed values because populations don't change.  If a population does change, then it is considered to be a different population.  In the Square Lake example, if a fish is removed from the lake, then the lake would then be considered a different population of fish.  Statistics, on the other hand, vary in value depending on the sample because each sample consists of different individuals and individuals vary (i.e., sampling variability exists because natural variability exists).
+
+\warn{Parameters are fixed in value, while statistics vary in value.}
+
+
+\section{Variable Types}\label{sect:VarTypes}
+The type of statistic that can be calculated is dictated by the type of variable to be analyzed.  For example, a sample mean (or average) can only be calculated for a quantitative variable (defined below).  Thus, immediately after identifying the variable in the IVPPSS procedure you should identify the type of that variable.
+
+
+\subsection{Variable Definitions}
+There are two main groups of variable types -- quantitative and categorical \figrefp{fig:VarTypes}.  \textbf{Quantitative} variables are variables with numerical values for which it makes sense to do arithmetic operations (like adding or averaging).\index{Quantitative Variable}  Synonyms for quantitative are measurement or numerical.  \textbf{Categorical} variables are variables that record to which group or category an individual belongs.\index{Categorical Variable}  Synonyms for categorical are qualitative or attribute.  Within each main type of variable are two subgroups \figrefp{fig:VarTypes}.
+
+<<VarTypes, echo=FALSE, fig.width=6.5, fig.height=3.5, out.width='.7\\linewidth', fig.cap="Schematic representation of the four types of variables.">>=
+par(mar=c(0,0,0,0),cex=1.5)
+plot(-10,-10,xlim=c(0,6),ylim=c(-2,2),xaxt="n",yaxt="n",xlab="",ylab="",bty="n")
+text(-0.25,0,"Variable",pos=4)
+arrows(0.95,0,1.65,-0.9,lwd=3,length=0.1,col="blue")
+text(1.55,-1,"Quantitative",pos=4,col="blue")
+arrows(3.2,-1,4.1,-1.45,lwd=3,length=0.1,col="blue")
+text(4,-1.5,"Discrete",pos=4,col="blue")
+arrows(3.2,-1,4.1,-0.55,lwd=3,length=0.1,col="blue")
+text(4,-0.5,"Continuous",pos=4,col="blue")
+
+arrows(0.95,0,1.65,0.9,lwd=3,length=0.1,col="red")
+text(1.55,1,"Categorical",pos=4,col="red")
+arrows(3.1,1,4.1,1.45,lwd=3,length=0.1,col="red")
+text(4,0.5,"Ordinal",pos=4,col="red")
+text(4,1.5,"Nominal",pos=4,col="red")
+arrows(3.1,1,4.1,0.55,lwd=3,length=0.1,col="red")
+@
+\vspace{9pt} % added because of paragraph compressions following R code
+
+The two types of quantitative variables are continuous and discrete variables.  \textbf{Continuous} variables are quantitative variables that have an uncountable number of values.\index{Continuous Variable}  In other words, a potential value \textsc{does} exist between every pair of values of a continuous variable.  \textbf{Discrete} variables are quantitative variables that have a countable number of values.\index{Discrete Variable}  Stated differently, a potential value \textsc{does not} exist between every pair of values of a discrete variable.  Typically, but not always, discrete variables are counts of items.  
+
+Continuous and discrete variables are easily distinguished by determining if it is possible for a value to exist between every two values of the variable.  For example, can there be between 2 and 3 ducks on a pond?  No!  Thus, the number of ducks is a discrete variable.  Alternatively, can a duck weigh between 2 and 3 kg?  Yes!  Can it weigh between 2 and 2.1 kg?  Yes!  Can it weigh between 2 and 2.01 kg?  Yes!  You can see that this could continue forever.  Thus, duck weight is a continuous variable.
+
+\defn{Discrete Variable}{A quantitative variable that can assume a countable number of values.}
+
+\vspace{-12pt}
+\defn{Continuous Variable}{A quantitative variable that can assume an uncountable number of values.}
+
+\vspace{-12pt}
+\warn{A quantitative variable is continuous if a possible value exists between every two values of the variable; otherwise, it is discrete.}
+
+The two types of categorical variables are ordinal and nominal.  \textbf{Ordinal} variables are categorical variables where a natural order or ranking exists among the categories.\index{Ordinal Variable}  \textbf{Nominal} variables are categorical variables where no order or ranking exists among the categories.\index{Nominal Variable}
+
+Ordinal and nominal variables are easily distinguished by determining if the order of the categories matters.  For example, suppose that a researcher recorded a subjective measure of condition (i.e., poor, average, excellent) and the species of each duck.  Order matters with the condition variable -- i.e., condition improves from the first (poor) to the last category (excellent) -- and some reorderings of the categories would not make sense -- i.e., average, poor, excellent does not make sense.  Thus, condition is an ordinal variable.  In contrast, species (e.g., mallard, redhead, canvasback, and wood duck) is a nominal variable because there is no inherent order among the categories (i.e., any reordering of the categories also ``makes sense'').
+
+\defn{Ordinal Variable}{A categorical variable for which a natural order exists among the categories.}
+
+\vspace{-12pt}
+\defn{Nominal Variable}{A categorical variable for which a natural order DOES NOT exist among the categories.}
+
+\vspace{-12pt}
+\warn{Remember that \textbf{ord}inal means that an \textbf{ord}er among the categories exists (note ``ord'' in both ordinal and order).}
+
+The following are some issues to consider when identifying the type of a variable:
+\begin{Enumerate}
+  \item The categories of a categorical variable are sometimes labeled with numbers.  Don't let this fool you into calling the variable quantitative.
+  \item Rankings, ratings, and preferences are ordinal (categorical) variables.
+  \item Counts of numbers are discrete (quantitative) variables.
+  \item Measurements are typically continuous (quantitative) variables.
+  \item Categorical variables that consist of only two levels or categories will be labeled as a nominal variable (because any order of the groups makes sense).  This type of variable is also often called a ``binomial'' variable.
+  \item Do not confuse ``what type of variable'' (answer is one of ``continuous'', ``discrete'', ``nominal'', or ``ordinal'')  with ``what type of variability'' (answer is ``natural'' or ``sampling'') questions.
+\end{Enumerate}
+
+\warn{``What type of variable is ...?'' is a different question than ``what type of variability is ...?''  Be careful to note the word difference (i.e., ``variable'' versus ``variabiltiy'' when answering these questions.}
+
+\begin{exsection}
+  \item \label{revex:VarTypeDucks} What type of variable is the number of ducks found at the ``Hot Pond'' every morning? \ansref{ans:VarTypeDucks}
+  \item \label{revex:VarTypeGenetics} What type of variable is the genotype (AA, Aa, aa) of a particular species of sunflower? \ansref{ans:VarTypeGenetics}
+  \item \label{revex:VarTypeGenetics2} What type of variable is the length of petals on individual flowers? \ansref{ans:VarTypeGenetics2}
+  \item \label{revex:VarTypeGenetics3} What type of variable is the number of seeds produced by an individual sunflower? \ansref{ans:VarTypeGenetics3}
+  \item \label{revex:VarTypeGenetics4} What type of variable is the ``quality'' of the seeds produced by an individual plant (``quality'' is recorded as 1=poor, 2=low, 3=good, and 4=excellent)? \ansref{ans:VarTypeGenetics4}
+  \item \label{revex:VarTypeSOS} What type of variable is student rankings (``Excellent'', ``Very Good'', ``Good'', ``Fair'', ``Poor'') of a professor's abilities? \ansref{ans:VarTypeSOS}
+  \item \label{revex:VarTypeAudit} What type of variable is whether an account is valid or invalid? \ansref{ans:VarTypeAudit}
+  \item \label{revex:VarTypeDefects} What type of variable is the number of defects produced by a machine? \ansref{ans:VarTypeDefects}
+  \item \label{revex:VarTypeBottles} What type of variable is the ounces of cola in a sample of 100 bottles? \ansref{ans:VarTypeBottles}
+  \item \label{revex:VarTypeFish} What type of variable is the sex of fish collected from a lake? \ansref{ans:VarTypeFish}
+  \item \label{revex:VarTypeFrogs} What type of variable is the number of legs on frogs collected in Bayfield County? \ansref{ans:VarTypeFrogs}
+  \item \label{revex:VarTypeCroak} What type of variable is the frequency (mhz) of a bullfrog's ``croak''? \ansref{ans:VarTypeCroak}
+  \item \label{revex:VarTypeTowns} What type of variable is the number of incorporated towns in a county? \ansref{ans:VarTypeTowns}
+  \item \label{revex:VarTypeWeasels} What type of variable is the qualitative size of least weasels (small, medium, large)? \ansref{ans:VarTypeWeasels}
+\end{exsection}
+
+
+\newpage
+\section{Writing Homework Reports} \label{sect:ReportWriting}
+I have very specific expectations for your homework assignment reports.  These expectations and requirements are described below.
+
+\begin{Itemize}
+  \item Each document should be labeled with your name and homework title (e.g., ``Chapter 10 Homework'').  It is not that important to me that you include the name of the class or my name (I already know both of these).
+  \item Each document should include the following statement along with your signature -- ``\emph{I have neither given nor received unauthorized aid in completing this work, nor have I presented someone else's work as my own.}''
+  \item Each document should be typed and printed to hand in as a hard-copy.
+  \item Your document should ``look nice.''  This means that you should include spaces that increase readability (e.g., between a paragraph and a table) but remove spaces that waste paper (e.g., there is no need to have five empty lines between a paragraph and a graphic).  In addition, you should not use ``non-standard'' fonts -- the most common of which is ``comic sans.''  Scientific presentations require a ``serious'' font which is likely one of ``Times New Roman'', ``Arial'', ``Calibri'', or ``Helvetica''.  The one exception to this is the use of ``\texttt{Courier}'' for tabular results (see below).
+  \item You should use complete sentences whenever possible.  This may result in very simple sentences -- e.g., ``The sample mean is 3.26 (Table 1).'' -- but should become your default.
+  \item Generally, the document should be single-spaced (see \sectref{sect:RFAQSingleSpace} for making MSWord ``single space'' your document).
+  \item You should provide evidence for each factual statement that you make.  Most of the time this means that you will be referring to a particular figure or table.  It is inappropriate to say ``in the table below'', for example.  Instead you should say ``as seen in Table 1'' or put ``(Table 1)'' at the end of a sentence.  Tables and figures should then be properly labeled (see below).
+  \item Tables and figures should be properly labeled.  There are a wide variety of proper styles for labeling figures and tables.  The most common styles label tables ON TOP of the table and figures BELOW the figure.  The labels should include the words ``Table'' or ``Figure'' (note that ``Graph'' and ``Chart'' are unacceptable), should include a sequential number (the first of each table or figure is numbered ``1'' and each subsequent table or figure has an increased number), and a descriptive label.  Descriptive labels are \textbf{descriptive} -- i.e., ``Table 1.  Summary statistics of data.'' is inadequate, ``Table 1.  Summary statistics of the length of ant antennae separated by sex.'' is much better.  Examples of labeling standards are shown in \sectref{sect:RFAQLabels}.
+  \item R output (usually as a table) should be converted to ``Courier'' or ``Courier (New)'' font.  This is the font used by R and, thus, will force the items in the table to ``line up.'' This will save you from having to include spaces or tabs to make items line up.  See \sectref{sect:RFAQCourier} on how to change the font.  ONLY R output should be in the ``Courier'' font.  All other text should be in the fonts mentioned previously.
+  \item Where appropriate, Greek letters should be changed to their symbol equivalent.  In other words, it is better to use $\alpha$ than ``alpha.''  See \sectref{sect:RFAQGreek} for how to include these symbols in your analysis.
+  \item Every assignment that uses R should include an appendix that lists the script of R commands used to produce the analyses (i.e., the code from your RStudio script window).  This script should contain only ``good'' commands and should not include any commands that produce errors or were not used in your analysis.
+\end{Itemize}
+
+
+\newpage
+\begin{hwsection}{All questions below should be typed and answered following the expectations identified in \sectref{sect:ReportWriting}.  All work must be shown.  Questions marked with the R logo must include R output with your R commands in an attached appendix.}
+  \item \label{hwprob:WhyStatsFrogs} Sigurd Olson Environmental Institute (SOEI) biologists were interested in estimating the total number of frogs on all lakes in northern Wisconsin (defined as north of Highway 8) in 2010.  They identified a sample of lakes in northern Wisconsin, and on each lake they used two methods to determine the number of frogs on the lake.  First, they counted the number of frogs seen as they walked the shoreline of the lake (called the \var{visual} count).  Second, they counted individual mating calls heard (called the \var{call} count).  Use this information to answer the questions below.
+    \begin{Enumerate}
+      \item What is an individual in this scenario?
+      \item What type of variable is the number of frogs on a lake?
+      \item Do you think it is reasonable to count the number of frogs on every lake in northern Wisconsin at the same time (say, in the same week)?  Why or why not?
+      \item \rhw{} Extract a sample of 10 lakes using the \R{srsdf()} function and the \R{data(Frogs)} data frame in the \R{NCStats} package. [HINT: You can use these three lines of R code below.]  Copy the numbers for your sample and paste them in your report document.
+<<eval=FALSE>>=
+library(NCStats)
+data(Frogs)
+( smpl1 <- srsdf(Frogs,n=10) )
+@
+\vspace{9pt}
+      \item Compare the visual number of frogs recorded on the first two lakes.  What do you observe?  This is an example of what type of variability?
+      \item Compute the average visual number of frogs in all lakes in your sample.  Show your work (you may leave space in your document and hand write your work before handing it in)!
+      \item \rhw{} Extract another sample of 10 lakes.  Again, copy and paste the data into your document.
+      \item Compare the average visual number of frogs in this sample (Show your work!) to the average from the first sample.  What do you observe?  This is an example of what type of variability?
+      \item I happen to know that the average visual number of frogs on all lakes in northern Wisconsin (the population) is 225.  Was the average visual counts from both of your samples equal to this population value?  Were you surprised?  Why or why not?
+    \end{Enumerate}
+
+  \item \label{hwprob:WhyStatsVAR}Define natural and sampling variability.  Construct the narrative background for an example ``real-life'' situation and illustrate natural and sampling variability within the context of this example.
+
+  \item \label{hwprob:WhyStatsReality}Identify and describe two ``realities'' that, if they did not exist, would eliminate the need for the field of statistics.
+
+  \item \label{hwprob:IVPPSSCrayfish}A NC student, for their Biology capstone, wants to determine the mean carapace length of Rusty Crayfish (\textit{Orconectes rusticus}) in a lake with Smallmouth Bass (\textit{Micropterus dolomieu}). In 2012, the student gathered and examined 235 crayfish in a manner that was as random as possible.
+    \begin{Enumerate}
+      \item Use this information to identify the individual, variable, population, parameter, sample, and statistic.
+      \item What type of variable is the carapace length of crayfish?
+    \end{Enumerate}
+
+\turnpage{24}
+
+  \item \label{hwprob:IVPPSSWater} Many exotic aquatic organisms have been transferred to the Great Lakes in the ballast water of trans-oceanic ships.  To attempt to halt this invasion ships are required to release their ballast water before entering the St. Lawrence seaway.  Ships with cargo theoretically do not contain ballast.  However, their ballast tanks contain some residual amount of water and, thus, may harbor exotic organisms.  Researchers with Michigan Sea Grant (more information on page 9 \href{http://www.miseagrant.umich.edu/downloads/upwellings/sum02.pdf}{here}) examined the water found in 43 ballast tanks from 22 cargo-laden boats entering the Seaway in 2001.  They were interested in determining the proportion of ballast tanks that contained living organisms.
+    \begin{Enumerate}
+      \item Use this information to identify the individual, variable, population, parameter, sample, and statistic.
+      \item What type of variable is the variable you identified?
+    \end{Enumerate}
+
+  \item \label{hwprob:VarTypeLead} In the beginning of this chapter, the concentration ($\mu g \bullet m^{-3}$) of lead at 119 sites in Chequamegon Bay was discussed.  What type of variable is the concentration of lead?
+
+  \item \label{hwprob:VarTypeRisk} An actuary rates potential insurees as ``low risk'', ``moderate risk'', or ``high risk''.  What type of variable is this risk rating?
+
+  \item \label{hwprob:VarTypeInfoType} A sociologist asked respondents from which medium they receive most of their information about wolves: ``TV'', ``Newspaper'', ``Outdoor Magazines'', ``Public Policy Meetings'', ``Friends or Family'', or ``Other''.  What type of variable is information type?
+
+  \item \label{hwprob:VarTypeKoppen} The Koppen scheme of classifying ``climates'' contains five principal groups: ``tropical rainy'', ``dry'', ``temperate rainy'', ``cold snowy forest'', and ``polar''.  What type of variable is the Koppen scheme of classification?  Write a short sentence defending your choice.
+\end{hwsection}

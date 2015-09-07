@@ -1,0 +1,115 @@
+%MAKE MINI TABLE OF CONTENTS for each chapter ----------------------------------
+\dominitoc
+\setcounter{minitocdepth}{1} %sets the depth to show in chapter TOC -- 0 is chapters, 1 would be sections, etc.
+
+\VerbatimFootnotes  % allows verbatim in footnotes
+
+%TITLE PAGE --------------------------------------------------------------------
+\begin{titlepage}
+\begin{center}
+
+% Upper part of the page
+\textsc{\LARGE Northland College}\\[0.5cm]
+\textsc{\Large MTH107 -- Statistical Analysis and Interpretation}\\[1.5cm]
+
+\HRuleW \\
+\HRule \\[1cm]
+{ \huge \bfseries Introduction to Statistical Analysis and Interpretation}\\[1cm]
+\HRule \\
+\HRuleW \\[1.5cm]
+
+% Author and supervisor
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft}
+%  \Large \emph{Author:}\\ Dr. Derek H. Ogle
+  \Large \emph{Instructors:}\\Dr. Derek H. Ogle \\ Jodi Supanich
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} 
+  \Large \emph{Department:} \\ Mathematical Sciences
+%  \Large \emph{Department:} \\ Mathematical Sciences \\ Mathematical Sciences
+\end{flushright}
+\end{minipage}
+
+\vfill
+
+% Bottom of the page
+%\includegraphics[width=4in]{Title.JPG} \\[2.5cm]
+{\Large \today}
+
+\end{center}
+
+\end{titlepage}
+
+%PREFACE -----------------------------------------------------------------------
+\cleardoublepage                          %not sure why but is needed so that TOC entry will point to right start page
+\phantomsection                           %not sure why but is needed so that TOC entry will point to right start page
+\setlength{\cftbeforepartskip}{0.4em}     %set space before parts in TOC to smaller number for Preface
+\addcontentsline{toc}{part}{Preface}      %put a preface item as a part into TOC
+\vspace{-120pt}
+\chapter*{Preface}                        %star means that the preface won't be numbered in TOC
+\vspace{-80pt}
+\section*{The ``Book''}
+This document serves as the ``text'' for the MTH107 course taught by Derek Ogle at Northland College.  The use of this ``book'' as the class ``text'' stems from three primary concerns I had about teaching from a third-party textbook.  First, it seems that every textbook available covered more chapters of material than I could cover in a one semester course.  I was uncomfortable asking you (the student) to buy a textbook that was not used completely.  Second, it seemed to me that textbook authors often write for professors rather than students.  This leads to an extreme amount of detail in texts that does not fall within the learner outcomes or objectives that I have identified for this class.  In other words, you were left with the ``trick'' of having to identify exactly what I thought was important in each chapter.  This exercise, in my opinion, detracts from time and effort that should be spent learning the material that is important.  Third, it seems that my teaching style and some of my language differed from each and every textbook.  This created the situation of having to explain when and where to substitute my language into the textbook, which created a level of confusion that was not necessary.  In addition, this created the uncomfortable situation, for both you and me, of feeling that assessments that were written by me differed in orientation from the problems or exercises written by the third-party author.  With these concerns in mind, this ``book'' provides a ``text'' for students in MTH107 that (1) contains only the chapters of material that I will cover during the course of the semester, (2) contains only material that matches the intended learning outcomes for the course, and (3) is written in my style with my language and emphases.
+
+One note to bear in mind as you interact with this ``book'' is that it has been distilled to the barest amount of material that I feel is required to meet the learning outcomes for this course.  Thus, none of the material should be skipped.  In addition, all exercises and problems have been written by me (though some data are from other texts) and, thus, reflect the type of questions that I am likely to ask and the activities that I feel will lead to learning.  Thus, you should carefully study the examples and work all of the review exercises and homework problems provided.
+
+This ``book'' is distributed in electronic PDF format and can be viewed with the free Adobe Acrobat Reader software\footnote{Available for free download at \href{http://www.adobe.com/products/acrobat/readermain.html}{www.adobe.com/products/acrobat/readermain.html}.}.  The electronic version of this ``book'' has the following characteristics.
+
+\begin{Itemize}
+  \item Internal links exist to figures, tables, equations, chapters, sections, footnotes, and appendices.  All internal links appear as red text in the document.  You can return to where you were by right-clicking on the page and selecting ``previous view`` or simultaneously pressing the ``ALT'' key and the left arrow key.  Example links are as follows: to \figref{fig:VarTypes}, to \tabrefp{tab:KreherParkPbconc}, to \chapref{chap:Foundations}, and to equation \eqref{eqn:SampleMean}.
+  \item External links exist to data files and third-party web pages with additional information and will appear as fuchsia text (e.g., to the \href{https://sites.google.com/site/ncstats/data/LakeSuperiorIce.txt}{LakeSuperiorIce.txt} data file).  These items can only be accessed if you are connected to the internet.
+  \item Chapters of the text can be accessed by the table of contents that appears on the left-side of the PDF document.  In addition, a table of contents for items within a chapter is found on the first page of each chapter.
+\end{Itemize}
+
+Finally, please report all questions, problems, corrections, or concerns about these notes directly to me at \href{mailto:dogle@northland.edu}{dogle@northland.edu}.
+
+
+\section*{R Statistical Software}
+The R statistical programming language R is used throughout this text to construct graphics, perform statistical calculations, and test hypotheses.  R is a command-line driven ``language'' where calculations and graph construction is performed by typing commands rather than selecting menu items and options in dialog boxes.  While this form of interaction with a computer may initially seem like a drawback to using R, I have chosen to use R in this class for several strong reasons.  It is my experience that this very powerful language is becoming increasingly popular among applied researchers in a wide variety of fields.  R has several advantages that contribute to this surge in popularity:
+
+\begin{Itemize}
+  \item R is free, open source, and runs on Windows, Macintosh, and Unix/Linux platforms;
+  \item The programming language in R is very powerful, flexible, and has many built-in statistical functions;
+  \item The programming language is easy to learn for basic analyses;
+  \item R has excellent graphing capabilities that are extensible;
+  \item The programming language is easily extended with user-written functions;
+  \item Further developments of the programming language are continuous and made available by a large group of international researchers; and
+  \item The next step to programming other languages will be made easier by a student's experience with the R programming language.
+\end{Itemize}
+
+I know of no other free computer package that can be used in the variety of ways that R can be used in applied research.  Thus, even though R has a rather steep learning curve, I feel that the benefits of this program make it useful as the primary analytic tool for the methods learned in this course (and beyond).
+
+Specific aspects of R are introduced and integrated throughout this ``book.''  It should be noted that the complete capabilities of R will not be addressed in this ``book.''  Rather the specific commands required to complete the analyses of this course will be described.  A thorough introduction to R is available as a PDF file with the downloaded program.  In addition, very good introductions to R for basic statistics are found in widely available resources \footnote{The interested reader is referred to \textsc{Introductory Statistics with R} (Dalgaard, P. 2002.) and \textsc{Using R for Introductory Statistics} (Verzani, J. 2004).  Previous versions of the latter are available on the web by searching for \verb+"SimpleR"+.  The Dalgaard volume is available in our library.}.
+
+Directions for installing R, RStudio, and packages for R are described in \sectref{sect:RSetup}.
+
+\section*{Acknowledgments}
+I have used various incarnations of this ``book'' since Fall 2001.  Watching students interact with the material presented here has helped form my ideas for how best to present this information.  I thank all of these students for their patience with me in this endeavor with a very special thanks to those students that took the time to nicely tell me where there were mistakes, points of confusion, or areas that lacked clarity.  I hope that you, as you use this book, will do the same \footnote{You can contact me at \href{mailto:dogle@northland.edu}{dogle@northland.edu}.} as this is incredibly helpful to any author.
+
+I also am deeply thankful to my colleague at Northland College, Dr. Susan (Annette) Nelson, as she identified many grammatical and editorial problems with the ``book'' in Summer 2011 that motivated me to make considerable improvements in the tone, language, and look of the ``book.''  She noticed things that my eyes just would not see and I am very thankful to her for that.
+
+Of course, I don't have the luxury of just giving ideas and having someone else write for me so any errors, inconsistencies, lack of clarity, or conceptual failings are mine and mine alone.
+
+
+%TABLE OF CONTENTS ---------------------------------------------------------------------------------------------------
+\setcounter{tocdepth}{0} %sets the depth to show in TOC -- 0 is chapters, 1 would be sections, etc.
+
+%modify what the parts look like
+\renewcommand{\cftpartfont}{\scshape}                          %changes to small caps
+
+%modify what the chapters look like
+\setlength{\cftchapindent}{1.5em}                              %indent the chapters
+\setlength{\cftbeforechapskip}{0.4em}                          %set the space between chapters -- reduce to 0.2 if depth is set to 0
+
+%modify what the sections look like
+\setlength{\cftsecindent}{3.8em}                               %indent the sections --- doesn't seem to work
+\setlength{\cftbeforesecskip}{0.2em}                           %set the space between sections
+
+\newpage                                                       %need this so that the TOC will start on its own page
+\tableofcontents                                               %build the table of contents
+
+%SETTING FOR LEAVING FRONT MATTER AND GOING TO MAIN DOCUMENT ---------------------------------------------------------
+\addtocontents{toc}{\setlength{\cftbeforepartskip}{1.5em}}     %increase distance before parts in the main TOC
+\addtocontents{toc}{\cftpagenumbersoff{part}}                  %so page numbers won't appear for parts in the main TOC 

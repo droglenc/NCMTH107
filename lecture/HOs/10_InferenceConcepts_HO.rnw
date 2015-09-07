@@ -1,0 +1,42 @@
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\input{c:/aaaWork/zGnrlLatex/justRPreamble}
+\hypersetup{pdftitle = MTH107 HO - Inference}
+
+\begin{document}
+  \titleRHO{Inference}{MTH107 Statistics}{Fall}
+
+<<setup,echo=FALSE,include=FALSE>>=
+source("c:/aaaWork/zGnrlLatex/knitr_setup.R")
+@
+
+
+\section*{Background}
+Barrels designed to hold 200-gallons of gasoline were recently found in an abandoned warehouse.  The contents of a random sample of 38 barrels were carefully measured to determine if the barrels had leaked a significant amount of gasoline.   Assume that it is known that the actual content of the barrels has a standard deviation of 10 gallons.  The results for the sample are found in \href{https://sites.google.com/site/ncstats/data/Barrels.txt}{barrels.txt} on the class webpage.  Use results computed from the sample to determine, at the 10\% level, if there is evidence that the barrels had leaked.
+
+\section*{Data}
+<<message=FALSE, warning=FALSE>>=
+library(NCStats)
+setwd("C:/aaaWork/Class Materials/MTH107/Lecture/HOs")
+brls <- read.table("Barrels.txt",header=TRUE)
+str(brls)
+@
+
+\section*{Quick EDA}
+<<hist1>>=
+Summarize(~gasoline,data=brls,digits=1)
+hist(~gasoline,data=brls,xlab="Gallons of Gasoline")
+@
+
+\clearpage
+\section*{1-Sample Z-test}
+<<zpvalue1, par1a=TRUE>>=
+( gas.z <- z.test(brls$gasoline,sd=10,mu=200,alt="less",conf.level=0.90) )
+plot(gas.z)
+@
+
+<<eval=FALSE, echo=FALSE, results='hide',message=FALSE>>=
+swvCode("10_InferenceConcepts_HO.rnw",moreItems="source")
+@
+
+\end{document}

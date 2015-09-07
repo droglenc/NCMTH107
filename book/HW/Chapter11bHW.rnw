@@ -1,0 +1,112 @@
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\input{c:/aaaWork/zGnrlLatex/justRPreamble}
+\hypersetup{pdftitle = MTH107 HW - Chapter 11b}
+\renewcommand{\theenumi}{\alph{enumi}}    % changes enumerates from numbers to letters
+
+\begin{document}
+
+<<setup,echo=FALSE,include=FALSE>>=
+## knitr custom hooks
+# set a default plot options
+knit_hooks$set(par1 = function(before, options, envir) {
+    if (before) par(mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+knit_hooks$set(par1a = function(before, options, envir) {  # use with distrib()
+    if (before) par(mar=c(3.5,3.5,3,3),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+knit_hooks$set(par2 = function(before, options, envir) {
+    if (before) par(mfrow=c(1,2),mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+})
+## knitr options -- output look
+opts_chunk$set(prompt=TRUE,comment='',tidy=FALSE)
+## knitr options -- figure handling
+opts_chunk$set(fig.path='Figs/', fig.width=3.5, fig.height=3.5, out.width='.4\\linewidth', fig.show='hold', fig.align='center', par1=TRUE)
+## r options
+options(width=85,show.signif.stars=FALSE,continue=" ",contrasts=c("contr.sum","contr.poly"))
+## Make sure that the required packages are loaded
+rqrd <- c("NCStats")
+for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
+@
+
+\section*{Question 11.24}
+  \begin{Enumerate}
+    \item $\alpha=0.01$.
+    \item $H_{0}:\mu_{did}=\mu_{didnot}$ (or $\mu_{did}-\mu_{didnot}=0$) where $did$ corresponds to the ``did evacuate'' and $didnot$ corresponds to the ``did not evacuate'' groups.  The $H_{A}$ is $\mu_{did}>\mu_{didnot}$ (or $\mu_{did}-\mu_{didnot}>0$).
+    \item A two-sample t-test is required because a quantitative variable (commitment level score) was measured on two populations (``did evacuate'' and ``did not evacuate'') that were \textbf{IN}dependent (no connection between individuals that did and those that did not evacuate their pets) and two population means are being compared in the null hypothesis.
+    \item The data appear to be part of a voluntary response observational study without clear randomization.
+    \item The assumptions are met because the two groups appear to be independent, the sample size ($n_{did}+n_{didnot}$=$241$) is $>40$ and we were told that the p-value for Levene's test of the homogeneity of variance test is ``large'' (i.e., $>0.01$) so that it appears that the variances between groups are equal.  Therefore, the test statistic computed below should reasonably follow a t-distribution with $n_{did}+n_{didnot}-2=239$ df.
+    \item The statistic is $\bar{x}_{did}-\bar{x}_{didnot}$ $=7.694-6.640$ $=1.054$.  The pooled sample variance is,
+        \[s_{p}^{2}=\frac{(116-1)3.410^{2}+(125-1)3.102^{2}}{116+125-2} = 10.58749 \]
+        The standard error of the statistic is,
+        \[ SE_{\bar{x}_{did}-\bar{x}_{didnot}}=\sqrt{10.58749\left(\frac{1}{116}+\frac{1}{125} \right)} = 0.4194894  \]
+    \item The t test statistic is $\frac{1.054-0}{0.4194894}$ = $2.513$ with $116+125-2$ = $239$ df.
+    \item The p-value is \Sexpr{kPvalue(distrib(2.512578,distrib="t",df=239,lower.tail=FALSE,plot=FALSE))}.
+    \item The $H_{0}$ is rejected because the $p-value < \alpha = 0.01$.
+    \item The average commitment to animals was significantly greater for those people that did evacuate their pets as compared to those people that did not evacuate their pets.
+    \item The 99\% lower bound is $1.054-2.342051*0.419$ = $0.073$.  One is 99\% confident that the mean level of commitment for those that evacuated their pets is at least 0.073 greater than those that did not evacuate their pets.
+  \end{Enumerate}
+
+\section*{Question 11.25}
+<<echo=FALSE, results='hide'>>=
+impacted <- c(0.011,0.054,0.056,0.095,0.051,0.077)
+reference <- c(0.031,0.040,0.029,0.066,0.018,0.042,0.044)
+df <- data.frame(mhg=c(impacted,reference),grp=factor(rep(c("impacted","reference"),c(length(impacted),length(reference)))))
+m.lt <- leveneTest(mhg~grp,data=df)
+m.t <- t.test(mhg~grp,data=df,var.equal=TRUE)
+@
+  \begin{Enumerate}
+    \item $\alpha=0.05$.
+    \item $H_{0}:\mu_{i}=\mu_{r}$ (or $\mu_{i}-\mu_{r}=0$) where $i$ corresponds to the ``impacted'' and $r$ corresponds to the ``reference'' groups.  The $H_{A}$ is $\mu_{i}\neq\mu_{r}$ (or $\mu_{i}-\mu_{r}\neq 0$).
+    \item A two-sample t-test is required because quantitative variable (methyl mercury level) was measured on two populations (``impacted'' and ``reference'' sites) that were \textbf{IN}dependent (no connection between sites at the two locations) and two population means are being compared in the null hypothsis.
+    \item The data appear to be part of an observational study without clear randomization.
+    \item The assumptions are not quite met but we will continue anyway.  The two groups appear to be independent.  The variances appear to be equal because the p-value from the Levene's test is ``large'' (i.e., \Sexpr{kPvalue(m.lt[1,3])}$>0.05$; \tabref{tab:mussels}).  The sample size ($n_{i}+n_{r}$=\Sexpr{formatC(m.t$parameter+2,format="f",digits=0)}) is not $>15$ and there is not enough data to make useful histograms.  Therefore, the test statistic computed below may not follow a t-distribution with $n_{c}+n_{d}-2$=\Sexpr{formatC(m.t$parameter,format="f",digits=0)}) df.
+\begin{table}[!h]
+  \begin{center}
+    \caption{Results from the Levene's test for testing equal variances among impacted and reference groups.}  \label{tab:mussels}
+<<echo=FALSE>>=
+attr(m.lt,"heading") <- NULL
+m.lt
+@
+  \end{center}
+\end{table}
+    \item The statistic is $\bar{x}_{c}-\bar{x}_{d}$ = \Sexpr{formatC(m.t$estimate[1],format="f",digits=4)} - \Sexpr{formatC(m.t$estimate[2],format="f",digits=4)} = \Sexpr{formatC(m.t$estimate[1]-m.t$estimate[2],format="f",digits=4)} \tabrefp{tab:mussels2}.
+\begin{table}[!h]
+  \begin{center}
+    \caption{Results from the two-sample t-test for testing that the mean mercury levels in mussels differed between the impacted and reference sites.}  \label{tab:mussels2}
+<<echo=FALSE>>=
+kHtest(m.t)
+@
+  \end{center}
+\end{table}
+    \item The t test statistic is \Sexpr{formatC(m.t$statistic,format="f",digits=4)} with \Sexpr{formatC(m.t$parameter,format="f",digits=0)} df \tabrefp{tab:mussels2}.
+    \item The p-value is \Sexpr{kPvalue(m.t$p.value)} \tabrefp{tab:mussels2}.
+    \item The $H_{0}$ is not rejected because the $p-value > \alpha$.
+    \item The methyl mercury levels do not appear to be different in mussels from the impacted and reference sites.
+  \end{Enumerate}
+
+\section*{Appendix -- R Commands}
+<<eval=FALSE, prompt=FALSE>>=
+( distrib(2.512578,distrib="t",df=239,lower.tail=FALSE) )
+( distrib(0.99,distrib="t",df=239,type="q",lower.tail=FALSE) )
+@
+
+<<eval=FALSE, prompt=FALSE>>=
+impacted <- c(0.011,0.054,0.056,0.095,0.051,0.077)
+reference <- c(0.031,0.040,0.029,0.066,0.018,0.042,0.044)
+df <- data.frame(mhg=c(impacted,reference),
+grp=factor(rep(c("impacted","reference"),c(length(impacted),length(reference)))))
+( m.lt <- leveneTest(mhg~grp,data=df) )
+( m.t <- t.test(mhg~grp,data=df,var.equal=TRUE) )
+@      
+
+\section*{Notes From Professor}
+\begin{itemize}
+  \item If you do not use informative subscripts, then make sure that you explicitly define what the ``1'' and ``2'' subscripts mean.
+  \item Make sure that you provide evidence for the fact that the two groups are independent.
+  \item Note in 11.25 that the sample size is so small that the assumption is that the sample distributions must be normal; ``not strongly skewed'' is not adequate with this small sample size.
+  \item Note that in 11.25, it is easier to create a tab-delimited text file to load the data.
+  \item Note that in 11.25, if you decide to use \R{Summarize()} to get the sample means then do NOT set \R{digits=1} because this rounds the means to too few significant digits.  In other words, make sure to take note of the scale that the measurements were made on when rounding.  Note that \R{digits=3} would be more appropriate. 
+\end{itemize}
+
+\end{document}

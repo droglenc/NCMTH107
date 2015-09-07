@@ -1,0 +1,317 @@
+\documentclass{article}
+
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\usepackage{booktabs}
+% Puts sections in TOC but does not number them
+\setcounter{secnumdepth}{0}
+
+\begin{document}
+  \title{Course Level Assessment Report \\ MTH107 Statistical Concepts and Analysis}
+  \author{\vspace{-12pt}Derek H. Ogle}
+  \date{\vspace{-12pt}\today}
+  \maketitle
+
+<<setup, echo=FALSE, include=FALSE, results='hide', warning=FALSE, message=FALSE>>=
+st <- proc.time()
+rqrd <- c("FSA","car","xtable","magrittr","dplyr","knitr","plotrix","readxl")
+for (i in rqrd) library(i,character.only=TRUE)
+source("c:/aaaWork/zGnrlLatex/knitr_setup.R")
+@
+
+
+\section{Course Information}
+\subsubsection{Background}
+\emph{Statistical Concepts and Analysis (MTH107)} is the entry-level statistics course at Northland College.  Taught by instructors in the Mathematical Sciences program, the course is required by several majors in the Natural Resources, Environmental Sciences, and Social Responsibility departments and can also fulfill the ``quantitative reasoning'' requirement for the College's Natural Connections program.
+
+<<prep_grade_data, echo=FALSE, results='hide'>>=
+## Some orders for ordered variables
+grade.lvls1 <- c("A","A-","B+","B","B-","C+","C","C-","D+","D","F","W","S","U","I","AU")
+grade.lvls2 <- c("A","B","C","D","F")
+section.lvls <- c("F10.1","W11.1","W11.2","F11.1","W12.1","F12.1","F12.2",
+                  "W13.1","F13.1","F13.2","W14.1","F14.1","F14.2")
+
+gd <- read_excel("Ogle_Grade_Distribution.xlsx") %>%
+  mutate(course=paste0(CRS_AREA,CRS_NUM),
+         Sem1=recode(TRM_CDE,"10='F';20='W';30='Sp';40='Su'",as.factor.result=TRUE),
+         CYr=YR_CDE-2000,
+         GRADE_CDE=factor(GRADE_CDE,levels=grade.lvls1),
+         letgrade=recode(GRADE_CDE,"c('A','A-')='A';c('B+','B','B-')='B';
+                         c('C+','C','C-')='C';c('D+','D')='D';'F'='F';else=NA"))
+
+gd$CYr[gd$Sem1!="F"] <- gd$CYr[gd$Sem1!="F"]+1
+
+gd %<>% mutate(section=paste0(Sem1,CYr,".",CRS_SEC),
+               gpa=recode(GRADE_CDE,"'A'=4.0;'A-'=3.67;'B+'=3.33;'B'=3.0;'B-'=2.67;
+                          'C+'=2.33;'C'=2.0;'C-'=1.67;'D'=1.00;'F'=0;else=NA",
+                          as.numeric.result=TRUE,as.factor.result=FALSE)) %>%
+  filter(course=="MTH107",
+         section!="Sp11.A1",
+         !GRADE_CDE %in% c("S","U","I","AU")) %>%
+  mutate(GRADE_CDE=droplevels(GRADE_CDE),
+         section=factor(section,levels=section.lvls)) %>%
+  select(GRADE_CDE,letgrade,section,gpa)
+@
+
+<<sum_grade_data, echo=FALSE, results='hide'>>=
+gfreq <- xtabs(~section+GRADE_CDE,data=gd)
+gperc <- prop.table(gfreq,margin=1)*100
+gfreq2 <- xtabs(~section+letgrade,data=gd)
+gperc2 <- prop.table(gfreq2,margin=1)*100
+
+sumgpa <- Summarize(gpa~section,data=gd) %>%
+  mutate(se=sd/sqrt(n),
+         lci=mean-qnorm(0.975)*se,
+         uci=mean+qnorm(0.975)*se)
+@
+
+<<tests_grade_data, echo=FALSE, results='hide'>>=
+xtmp <- 1:nrow(sumgpa)
+
+## mean course GPA
+lm.gpa <- lm(mean~xtmp,data=sumgpa)
+aov.gpa <- anova(lm.gpa)
+## percent withdrew
+lm.W <- lm(gperc[,"W"]~xtmp)
+aov.W <- anova(lm.W)
+## percent A
+lm.A <- lm(gperc2[,"A"]~xtmp)
+aov.A <- anova(lm.A)
+## percent D/F
+lm.DF <- lm(rowSums(gperc2[,c("D","F")])~xtmp)
+aov.DF <- anova(lm.DF)
+@
+
+I have taught MTH107 since 1996, including \Sexpr{kCounts(length(section.lvls))} sections of MTH107 since 2010, the period for which this assessment document covers.  On average, the mean (standard deviation) enrollment was \Sexpr{formatC(mean(sumgpa$n),format="f",digits=1)} (\Sexpr{formatC(sd(sumgpa$n),format="f",digits=2)}) students, \Sexpr{formatC(mean(gperc[,"W"]),format="f",digits=1)}\% (\Sexpr{formatC(sd(gperc[,"W"]),format="f",digits=2)}) of the students dropped the course (after the initial add-drop period), and the mean course gpa was \Sexpr{formatC(mean(sumgpa$mean),format="f",digits=2)} (\Sexpr{formatC(sd(sumgpa$mean),format="f",digits=2)}).  Over this time, there was no detectable linear trend in mean course GPA (\Sexpr{kPvalue(aov.gpa[1,"Pr(>F)"])}), percentage of students dropping the course (\Sexpr{kPvalue(aov.W[1,"Pr(>F)"])}), percentage of students that earned an A (\Sexpr{kPvalue(aov.A[1,"Pr(>F)"])}), or percentage of students that earned a D or F (\Sexpr{kPvalue(aov.DF[1,"Pr(>F)"])};  \figref{fig:GradeSummary}).
+
+<<GradeSummary, echo=FALSE, fig.cap="Mean course GPA (with 95\\% confidence intervals; Left) and the percentage of students (Right) that earned better than an A (labeled as an ``A''), worse than a D+ (``D/F''), or withdrew (``W'') from the course by section (abbreviated with semester (F=Fall, W=Winter), last two digits of the calendar year, and, following the period, the section number (1 or 2)).">>=
+par(mar=c(5,3,0.5,0.5))
+with(sumgpa,plot(xtmp,mean,type="l",lwd=2,col="gray50",xlab="",ylab="Mean GPA",ylim=c(0,4),xaxt="n",panel.first=grid(col="gray95",lty=1)))
+with(sumgpa,plotCI(xtmp,mean,li=lci,ui=uci,pch=16,add=TRUE))
+axis(1,xtmp,section.lvls,las=3)
+mtext("Section",side=1,line=3.5)
+
+plot(xtmp,gperc[,"W"],type="l",lwd=2,xlab="",ylab="Percentage",ylim=c(0,60),xaxt="n",panel.first=grid(col="gray95",lty=1))
+lines(xtmp,gperc2[,"A"],lwd=2,col="blue")
+lines(xtmp,rowSums(gperc2[,c("D","F")]),lwd=2,col="red")
+axis(1,xtmp,section.lvls,las=3)
+mtext("Section",side=1,line=3.5)
+legend("topleft",c("A","D/F","W"),lwd=2,col=c("blue","red","black"),bty="n")
+@
+
+\subsubsection{Intended Learning Outcomes}
+I modified the intended learning outcomes (ILO) for MTH107 in preparation for teaching the course in the Fall of 2012.  This list of ILOs has stayed the same (except for minor wording differences) since then.  The ILOs as they have appeared on the course syllabi are:
+
+\begin{Enumerate}
+  \item describe why statistics is central to scientific inquiry (\& your field of interest);
+  \item define basic statistical words and symbols;
+  \item perform appropriate exploratory data analyses (univariate and bivariate);
+  \item identify the purposes of and conduct and interpret the results of a linear regression;
+  \item design simple experiments and sampling strategies;
+  \item construct and interpret confidence intervals for one and two-sample mean and proportion problems;
+  \item identify the appropriate hypothesis test to perform in one- and two-sample quantitative and categorical data situations;
+  \item construct and interpret the results from a hypothesis test for one- and two-sample quantitative and categorical data situations; and
+  \item communicate statistical results and ideas in a succinct and informative manner. 
+\end{Enumerate}
+
+Some of these ILOs are ``double-barreled'' (i.e., represent more than one outcome) to save space on the syllabi.  For example, ILO \#8 represents at least four specific methods in statistics (1-sample t-test, 2-sample t-test, goodness-of-fit test, and chi-square test) for which I will assess student achievement.  For assessment purposes, the ``double-barreled'' ILOs are unpacked to single outcomes for analysis.
+
+\section{Assessment Methodology}
+<<prep_section_data, echo=FALSE, results='hide'>>=
+df <- read.csv("MTH107_Assessment_FinalExam.csv") %>%
+  filter(!is.na(Vars)) %>%                       ## remove those that did not take the exam
+  select(Sem:First,pVars:pWhy) %>%
+  mutate(section1=paste(Sem,Sect,sep="."),
+         section1=factor(section1,levels=section.lvls),
+         section2=factor(section1,levels=rev(section.lvls)),
+         section1=droplevels(section1),
+         section2=droplevels(section2))
+headtail(df)
+
+## set digits and alignments for tables below
+digs <- c(0,0,0,0,2,2,2,2,2,2,2,1)
+algn <- "llrrrrrrrrrr"
+@
+
+Beginning in Fall, 2012, the final exam for the course consisted of questions that were specific assessments of most of the course ILOs.  Scores for individual questions were recorded separately for each student.  Scores were summed across individual questions for each student to provide an overall grade on the exam for that student.  However, scores on individual questions were summarized across all students to provide a measure of student achievement for each ILO.  These summaries are used in this assessment report.
+
+Raw scores for individual questions were converted to the proportion of the total points available for the question.  These proportions were summarized for all students within a specific section of the course.  For a specific ILO, the distribution (i.e., boxplot) and summary statistics of the proportions were computed.  Results were compared to \emph{a priori} goals for student achievement for that ILO.
+
+
+\section{Assessment of ILO \#1}
+One question on the final exam asked the students to explain the importance of statistics to understanding science with explicity directions to highlight specific concepts from the course that would illustrate the student's argument.  This question was meant to assess ILO \#1.
+
+I have two goals for student achievement of this ILO.  First, given that this course is required for several majors and serves as a Natural Connections course, I hoped that most students would answer this question with some broad knowledge.  Second, I also hoped that the ``highest achieving'' students in the course would provide a ``very good'' answer to this foundational question.  I translated these hopes into the following two goals:
+
+\begin{Enumerate}
+  \item The first quartile (the lowest 25\% of values; Q1) of proportional scores on this question would be 0.50 or better (i.e., at least half of the available points).
+  \item The third quartile (the top 25\% of values; Q3) of the proportional scores on this question would be 0.90 or better.
+\end{Enumerate}
+
+\subsubsection{Results}
+Student achievement on this question varied substantially among sections \figrefp{fig:WhyBar}.  The first goal was met in five of eight sections, including the last three sections.  The second goal was not met for any section, though the ``F12.2'' and ``W13.1'' sections were close to having met the objective value.
+
+<<WhyBar, echo=FALSE, fig.cap="Boxplot (ends of the boxes are first and third quartiles, the solid line inside of the box is the median) of proportional scores on the `Why Statistics is Important' question (ILO \\#1) by section (same abbreviations as in Figure 1). The red and blue vertical dashed lines are the goals for the Q1 and Q3 results, respectively.", fig.pos="h", fig.align='center', fig.width=5, fig.height=3, out.width='.6\\linewidth'>>=
+par(mar=c(3,5,0.5,0.5),mgp=c(1.75,0.5,0),tcl=-0.2,las=1)
+boxplot(pWhy~section2,data=df,horizontal=TRUE,xlab="Proportion of Total Points",col="gray90",ylim=c(0,1))
+abline(v=c(0.5,0.9),col=c("red","blue"),lty=2,lwd=3)
+@
+
+<<echo=FALSE,results='asis'>>=
+WhySum <- Summarize(pWhy~section1,data=df,digits=2)
+names(WhySum)[c(1,6,8,10)] <- c("Section","\\textbf{Q1}","\\textbf{Q3}","\\% zero")
+WhyTbl <- xtable(WhySum,label="tab:sumWhy",caption="Summary statistics of proportional scores on the `Why Statistics is Important' question (ILO \\#1) by section (same abbreviations as in \\figref{fig:GradeSummary}).",digits=digs,align=algn)
+print(WhyTbl,NA.string="-",table.placement="h",caption.placement="top",include.rownames=FALSE,hline.after=c(-1,0,nrow(WhyTbl)),sanitize.colnames.function=function(x){x})
+@
+
+\subsubsection{Actions}
+The course material related to this ILO was presented throughout each section, but was only explicitly discussed in the first chapter during the first week of each semester.  To address this short-coming, I will develop a short mid-term assignment where students will re-visit the core principles related to this ILO by finding, summarizing, and reflecting on a ``piece'' (newspaper article, journal paper, etc.) that demonstrates the importance of statistics in the student's chosen field or to developing knowledge from data.
+
+
+\section{Assessment of ILO \#8 (Two-Sample t-Test)}
+One question on the final exam required students to conduct a thorough analysis of data with a ``Two-Sample t-Test''.  The question was graded with a rubric that listed the eleven steps of any hypothesis test (this rubric was supplied to the students before and during the exam).  This question was intended to assess the ``two-sample quantitative'' portion of ILO \#8.
+
+I have two goals for student achievement of this ILO.  First, I hoped that most students would have gained enough knowledge to at least provide a reasonable start to an answer for this question.  Second, I hoped that the majority of students would provide a ``very good'' answer to this technical question.  I translated these hopes into the following two goals:
+
+\begin{Enumerate}
+  \item The Q1 of proportional scores on this question would be 0.50 or better.
+  \item The median (the top 50\% of values) of proportional scores on this question would be 0.80 or better.
+\end{Enumerate}
+
+\subsection{Results}
+Student achievement on this question varied substantially among sections \figrefp{fig:T2Bar}.  The first goal was met by each section with the exception of ``F13.1.''  The second goal was met by only two sections, though it was nearly met by three other sections.
+
+<<T2Bar, echo=FALSE, fig.cap="Boxplot of proportional scores on the `Two-Sample t-Test' question (part of ILO \\#8) by section (same abbreviations as in Figure 1). The red and blue vertical dashed lines are the goals for the Q1 and median results, respectively.", fig.pos="h", fig.align='center', fig.width=5, fig.height=3, out.width='.6\\linewidth'>>=
+par(mar=c(3,5,0.5,0.5),mgp=c(1.75,0.5,0),tcl=-0.2,las=1)
+boxplot(pT2~section2,data=df,horizontal=TRUE,xlab="Proportion of Total Points",col="gray90",ylim=c(0,1))
+abline(v=c(0.5,0.8),col=c("red","blue"),lty=2,lwd=3)
+@
+
+<<echo=FALSE,results='asis'>>=
+T2Sum <- Summarize(pT2~section1,data=df,digits=2)
+names(T2Sum)[c(1,6,7,10)] <- c("Section","\\textbf{Q1}","\\textbf{median}","\\% zero")
+T2Tbl <- xtable(T2Sum,label="tab:sumWhy",caption="Summary statistics of proportional scores on the `Two-Sample t-Test' question (ILO \\#1) by section (same abbreviations as in \\figref{fig:GradeSummary}).",digits=digs,align=algn)
+print(T2Tbl,NA.string="-",table.placement="h",caption.placement="top",include.rownames=FALSE,hline.after=c(-1,0,nrow(T2Tbl)),sanitize.colnames.function=function(x){x})
+@
+
+\subsection{Actions}
+This ILO was largely met.  I will not make any drastic changes to the curriculum regarding this ILO.
+
+
+\section{Assessment of ILO \#8 (Chi-Square Test)}
+One question on the final exam required students to conduct a thorough analysis of data with a ``Chi-Square Test.''  The question was graded with a rubric that identified the eleven steps of any hypothesis test (this rubric was supplied to the students before and during the exam).  This question was meant to assess the ``two-sample categorical'' portion of ILO \#8.
+
+My two goals for student achievement of this ILO are the same as those described above for the two-sample t-test.  Specifically,
+
+\begin{Enumerate}
+  \item The Q1 of proportional scores on this question will be 0.50 or better.
+  \item The median of proportional scores on this question will be 0.80 or better.
+\end{Enumerate}
+
+\subsection{Results}
+Student achievement on this question varied substantially among sections \figrefp{fig:ChiBar}.  The first goal was met by all sections except for the two sections in Fall, 2013 (``F13.1'' and ``F13.2'').  The second goal was met in five of eight sections.
+
+<<ChiBar, echo=FALSE, fig.cap="Boxplot of proportional scores on the `Chi-Square Test' question (part of ILO \\#8) by section (same abbreviations as in Figure 1. The red and blue vertical dashed lines are the goals for the Q1 and median, respectively.", fig.pos="h", fig.align='center', fig.width=5, fig.height=3, out.width='.6\\linewidth'>>=
+par(mar=c(3,5,0.5,0.5),mgp=c(1.75,0.5,0),tcl=-0.2,las=1)
+boxplot(pChi~section2,data=df,horizontal=TRUE,xlab="Proportion of Total Points",col="gray90",ylim=c(0,1))
+abline(v=c(0.5,0.8),col=c("red","blue"),lty=2,lwd=3)
+@
+
+<<echo=FALSE,results='asis'>>=
+ChiSum <- Summarize(pT2~section1,data=df,digits=2)
+names(ChiSum)[c(1,6,7,10)] <- c("Section","\\textbf{Q1}","\\textbf{median}","\\% zero")
+ChiTbl <- xtable(ChiSum,label="tab:sumWhy",caption="Summary statistics of proportional scores on the `Chi-Square Test' question (ILO \\#1) by section (same abbreviations as in \\figref{fig:GradeSummary}).",digits=digs,align=algn)
+print(ChiTbl,NA.string="-",table.placement="h",caption.placement="top",include.rownames=FALSE,hline.after=c(-1,0,nrow(ChiTbl)),sanitize.colnames.function=function(x){x})
+@
+
+\subsection{Actions}
+The objectives for this ILO were largely met.  However, the large variability in proportional scores within a section suggests a wide range of achievement with regards to this ILO.  This variability may be due to the lecture material related to this ILO being the last material covered in each semester and often rushed.  Furthermore, I did not collect homework related to this ILO; thus, students did not receive any feedback on their performance with this material (though, several worked examples with an answer key were provided).  In the Fall, 2014 sections I created more room in the lecture schedule for work on this topic and pushed the final exam back to the last possible date to allow students more time with this material.  This may have narrowed the distribution of proportional scores.  In future sections, I will consider methods to ``force'' students to do practice exercises on this topic.
+
+
+
+
+\section{Assessment of ILO \#3 (Exploratory Data Analysis)}
+Three questions on the final exam required students to conduct exploratory data analyses (EDA).  The analyses below assess their univariate and bivariate EDAs for quantitative data.
+
+As this is fairly easy material that is foundational to all statistical analyses, I hoped that most student would perform well on these questions.  I also expected most ``high achieving'' students to provide very strong answers to these questions.  I translated these hopes into the following two goals (for each of the univariate and bivariate questions):
+
+\begin{Enumerate}
+  \item The Q1 of proportional scores on this question will be 0.7 or better.
+  \item The median of proportional scores on this question will be 0.9 or better.
+\end{Enumerate}
+
+\subsection{Results}
+The first goal was met in only three sections, with less success recently \figrefp{fig:UEDAQBar}.  The second goal was met by four of eight sections.  There is considerable variability within sections, especially recently, which suggests that a large number of students performed very poorly on this question.
+
+<<UEDAQBar, echo=FALSE, fig.cap="Boxplot of proportional scores on the `univariate EDA' question (part of ILO \\#3) by section (same abbreviations as in Figure 1). The red and blue vertical dashed lines are the goals for the Q1 and median, respectively.", fig.pos="h", fig.align='center', fig.width=5, fig.height=3, out.width='.6\\linewidth'>>=
+par(mar=c(3,5,0.5,0.5),mgp=c(1.75,0.5,0),tcl=-0.2,las=1)
+boxplot(pUEDAQ~section2,data=df,horizontal=TRUE,xlab="Proportion of Total Points",col="gray90",ylim=c(0,1))
+abline(v=c(0.7,0.9),col=c("red","blue"),lty=2,lwd=3)
+@
+
+<<echo=FALSE,results='asis'>>=
+UEDAQSum <- Summarize(pUEDAQ~section1,data=df,digits=2)
+names(UEDAQSum)[c(1,6,7,10)] <- c("Section","\\textbf{Q1}","\\textbf{median}","\\% zero")
+UEDAQTbl <- xtable(UEDAQSum,label="tab:sumUEDAQ",caption="Summary statistics of proportional scores on the `univariate EDA' question (ILO \\#3) by section (same abbreviations as in \\figref{fig:GradeSummary}).",digits=digs,align=algn)
+print(UEDAQTbl,NA.string="-",table.placement="h",caption.placement="top",include.rownames=FALSE,hline.after=c(-1,0,nrow(UEDAQTbl)),sanitize.colnames.function=function(x){x})
+@
+
+The first goal was met in only three sections, with less success recently \figrefp{fig:BEDAQBar}.  The second goal was met by only one section.  There is considerable variability within sections, especially in recent sections, which suggests that a large number of students performed very poorly on this questions.
+
+<<BEDAQBar, echo=FALSE, fig.cap="Boxplot of proportional scores on the `bivariate EDA' question (part of ILO \\#3) by section (same abbreviations as in Figure 1). The red and blue vertical dashed lines are the goals for the Q1 and median, respectively.", fig.pos="h", fig.align='center', fig.width=5, fig.height=3, out.width='.6\\linewidth'>>=
+par(mar=c(3,5,0.5,0.5),mgp=c(1.75,0.5,0),tcl=-0.2,las=1)
+boxplot(pBEDAQ~section2,data=df,horizontal=TRUE,xlab="Proportion of Total Points",col="gray90",ylim=c(0,1))
+abline(v=c(0.7,0.9),col=c("red","blue"),lty=2,lwd=3)
+@
+
+<<echo=FALSE,results='asis'>>=
+BEDAQSum <- Summarize(pBEDAQ~section1,data=df,digits=2)
+names(BEDAQSum)[c(1,6,7,10)] <- c("Section","\\textbf{Q1}","\\textbf{median}","\\% zero")
+BEDAQTbl <- xtable(BEDAQSum,label="tab:sumBEDAQ",caption="Summary statistics of proportional scores on the `bivariate EDA' question (ILO \\#3) by section (same abbreviations as in \\figref{fig:GradeSummary}).",digits=digs,align=algn)
+print(BEDAQTbl,NA.string="-",table.placement="h",caption.placement="top",include.rownames=FALSE,hline.after=c(-1,0,nrow(BEDAQTbl)),sanitize.colnames.function=function(x){x})
+@
+
+\subsection{Actions}
+The objectives for these two portions of this ILO were largely not met.  The univariate EDA is one of the earliest topics in the course and students may be rusty with it by the end of the semester.  Additionally, it is one of the easiest concepts in the course so students may not prepare for it as thoroughly, thinking that they will be able to perform it adequately on the final exam.  Students generally perform worse on the bivariate EDA questions, so my objectives may be too high.  However, it is clear that students need more practice late in the semester with both of these topics.
+
+
+\section{Assessment of ILO \#4 (Linear Regression)}
+Three questions on the final exam required students to answer questions from linear regression results.  Scores on these three questions were summed to provide an overall assessment of the student's ability to apply linear regression results.
+
+Linear regression is a foundational statistical method in nearly all fields of study.  Therefore, I hoped that most student would perform well on these questions.  I also would like to see most ``high achieving'' students provide very strong answers to these questions.  I translated these hopes into the following two goals:
+
+\begin{Enumerate}
+  \item The Q1 of proportional scores on this question will be 0.5 or better.
+  \item The median of proportional scores on this question will be 0.9 or better.
+\end{Enumerate}
+
+\subsection{Results}
+Student achievement on the univariate EDA question varied substantially \figrefp{fig:RegBar}.  Neither goal was met by any section.
+
+<<RegBar, echo=FALSE, fig.cap="Boxplot of proportional scores on the `linear regression' question (part of ILO \\#4) by section (same abbreviations as in Figure 1). The red and blue vertical dashed lines are the goals for the Q1 and median, respectively.", fig.pos="h", fig.align='center', fig.width=5, fig.height=3, out.width='.6\\linewidth'>>=
+par(mar=c(3,5,0.5,0.5),mgp=c(1.75,0.5,0),tcl=-0.2,las=1)
+boxplot(pReg~section2,data=df,horizontal=TRUE,xlab="Proportion of Total Points",col="gray90",ylim=c(0,1))
+abline(v=c(0.7,0.9),col=c("red","blue"),lty=2,lwd=3)
+@
+
+<<echo=FALSE,results='asis'>>=
+RegSum <- Summarize(pReg~section1,data=df,digits=2)
+names(RegSum)[c(1,6,7,10)] <- c("Section","\\textbf{Q1}","\\textbf{median}","\\% zero")
+RegTbl <- xtable(RegSum,label="tab:sumReg",caption="Summary statistics of proportional scores on the `linear regression' question (ILO \\#4) by section (same abbreviations as in \\figref{fig:GradeSummary}).",digits=digs,align=algn)
+print(RegTbl,NA.string="-",table.placement="h",caption.placement="top",include.rownames=FALSE,hline.after=c(-1,0,nrow(RegTbl)),sanitize.colnames.function=function(x){x})
+@
+
+\subsection{Actions}
+The assessment questions may not adequately address the objectives.  Thus, I will reconsider the questions in future final exams.  Regardless, it is apparent that students need more practice with linear regression methods and applications.  I will explore methods to incorporate more practice into the class.
+
+
+
+\section{Future Assessments}
+Future assessments will continue to monitor student achievement on these five ILOs.  In addition, I will develop analyses to assess student achievement on other ILOs.
+
+<<echo=FALSE, results='markup'>>=
+et <- proc.time()-st
+reproInfo(rqrdPkgs=rqrd,elapsed=et["user.self"]+et["sys.self"],newpage=FALSE)
+@
+
+
+\end{document}
