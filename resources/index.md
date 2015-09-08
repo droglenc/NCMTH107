@@ -9,6 +9,8 @@ title: Resources
     * [NCStats](https://rforge.net/NCStats/Installation.html)
 
 1. **Data Files**
+    * [GitHub](https://github.com/droglenc/NCData)
+    * [Google Sites](https://sites.google.com/site/ncstats/data) [*deprecated, will be removed*]
 
 1. **General Statistics Videos (YouTube)s**
     * Histogram Explanation ([Ex 1](http://youtu.be/sC7gjg9g3JU), [Ex 2](http://youtu.be/H9ITfdaX2ZQ))
