@@ -6,7 +6,7 @@ title: Resources
 1. **Software Installation Links**
     * [R](https://cran.rstudio.com/)
     * [RStudio](https://www.rstudio.com/products/rstudio/download/)
-    * [NCStats](https://rforge.net/NCStats/Installation.html)
+    * [NCStats](https://github.com/droglenc/NCStats) (then scroll down)
 
 1. **Data Files**
     * [GitHub](https://github.com/droglenc/NCData)
