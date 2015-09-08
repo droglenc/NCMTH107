@@ -49,8 +49,8 @@
 
 \usepackage{alltt}
 
-%\input{c:/aaaWork/zGnrlLatex/BookPreamble_HC}   % use when developing the hard-copy version (also see below)
-\input{c:/aaaWork/zGnrlLatex/BookPreamble}
+\input{c:/aaaWork/zGnrlLatex/BookPreamble_HC}   % use when developing the hard-copy version
+%\input{c:/aaaWork/zGnrlLatex/BookPreamble}
 \hypersetup{pdftitle = MTH107 Notes}
 \input{c:/aaaWork/zGnrlLatex/JustRPreamble}
 \usepackage{animate}
@@ -252,7 +252,7 @@ A \textbf{population} is the collection of ALL individuals of interest.\index{Po
 A \textbf{parameter} is a summary computed from ALL individuals in a population.\index{Parameter!Definition}  The term for the particular summary is usually preceded by the word ``population.''  Parameters are ultimately what is of interest because interest is in all individuals in the population.  However, in practice, parameters cannot be computed because the entire population cannot be ``seen.''  In this hypothetical example, all 1015 fish are accessible and the parameters are computed \tabrefp{tab:SquareLakePopn}\footnote{We will discuss how to compute and interpret each of these values in later chapters.}.  As stated above, in this example, interest is in the population mean (or average) length of all fish in Square Lake, which is 98.06 mm.
 
 % latex table generated in R 3.2.2 by xtable 1.7-4 package
-% Tue Sep 08 16:12:04 2015
+% Tue Sep 08 16:55:40 2015
 \begin{table}[ht]
 \centering
 \caption{Summary parameters for the total length of all 1015 fish in the Square Lake population.} 
@@ -292,7 +292,7 @@ The entire population cannot be ``seen'' in real life.  Thus, the only alternati
 Summaries computed from individuals in a sample are called \textbf{statistics}.\index{Statistic!Definition}  Specific names of statistics should be preceded by the word ``sample.''  The statistic of interest is always the same as the parameter of interest; i.e., the statistic describes the sample the same way that the parameter describes the population.  For example, if interest is in the population mean, then the sample mean would be computed.  Some statistics computed from this sample are shown in \tabref{tab:SquareLakeSample1} and \figref{fig:SquareLakeSample1}.  The sample mean of 100.04 mm is the best ``guess'' at the population mean.  Not surprisingly from the discussion in \sectref{sect:WhyStats}, the sample mean does not perfectly equal the population mean.
 
 % latex table generated in R 3.2.2 by xtable 1.7-4 package
-% Tue Sep 08 16:12:04 2015
+% Tue Sep 08 16:55:41 2015
 \begin{table}[ht]
 \centering
 \caption{Summary statistics for the total length of a sample of 50 fish from the Square Lake population.} 
@@ -374,7 +374,7 @@ It is instructive to once again consider how the statistics might change when di
 \end{knitrout}
 
 % latex table generated in R 3.2.2 by xtable 1.7-4 package
-% Tue Sep 08 16:12:05 2015
+% Tue Sep 08 16:55:41 2015
 \begin{table}[htbp]
 \centering
 \caption{Summary statistics for the total length in three samples of 50 fish from the Square Lake population.} 
@@ -1318,7 +1318,7 @@ Graphs are best for identifying shape and the presence of outliers and for getti
 Three primary data sets will be explored throughout this chapter.  The first data set consists of measurements of water consumption in one hour by mice \tabrefp{tab:MouseData}\footnote{See \sectref{sect:REnterData} for how to enter these data into R.}.  The second data set is the Richter scale recordings for 15 major earthquakes \tabrefp{tab:EQData}.
 
 % latex table generated in R 3.2.2 by xtable 1.7-4 package
-% Tue Sep 08 16:12:05 2015
+% Tue Sep 08 16:55:41 2015
 \begin{table}[ht]
 \centering
 \caption{Amount of water consumed (in ml) in one hour by a sample of mice.} 
@@ -1333,7 +1333,7 @@ Three primary data sets will be explored throughout this chapter.  The first dat
 
 
 % latex table generated in R 3.2.2 by xtable 1.7-4 package
-% Tue Sep 08 16:12:05 2015
+% Tue Sep 08 16:55:41 2015
 \begin{table}[ht]
 \centering
 \caption{Richter scale recordings for 15 major earthquakes.} 
@@ -1683,7 +1683,7 @@ The process for finding the median consists of three steps\footnote{Most compute
 As an example, examine the mouse water consumption data from \tabref{tab:MouseData}.  The ordered data are,
 
 % latex table generated in R 3.2.2 by xtable 1.7-4 package
-% Tue Sep 08 16:12:06 2015
+% Tue Sep 08 16:55:42 2015
 \begin{tabular}{rrrrrrrrrrrrrrr}
   9.4 & 10.0 & 10.6 & 11.1 & 11.4 & 11.5 & 12.0 & 12.5 & 12.6 & 12.9 & 13.0 & 13.5 & 13.6 & 13.7 & 13.7 \\ 
   14.0 & 14.1 & 14.3 & 14.7 & 15.2 & 15.4 & 15.8 & 15.8 & 16.5 & 16.6 & 16.6 & 17.0 & 17.4 & 18.2 & 18.4 \\ 
@@ -2338,7 +2338,7 @@ While most of the previous sections focused on how to construct various graphs a
 Mouse water consumption appears to be approximately symmetric without any outliers present \figrefp{fig:MouseHist2}.  The center of the distribution is best measured by the mean, which is 14.05 ml \tabrefp{tab:MouseStats}.  The range of water consumption by the mice in the sample is from 9.4 to 18.4 ml while the dispersion as measured by the standard deviation is 2.41 ml \tabrefp{tab:MouseStats}.  I chose to use the mean and standard deviation because the data were symmetric with no outliers.  [\textit{NOTE: 1) the use of units, 2) the reference to the figure and table, 3) the labeling of the figure and table, 4) I did not present or discuss the median and IQR because I chose to use the mean and standard deviation, 5) I did not use the range alone as a measure of dispersion, 6) I explained why I used the mean and standard deviation rather than the median and IQR, and 7) I provided the R code used.}]
 
 % latex table generated in R 3.2.2 by xtable 1.7-4 package
-% Tue Sep 08 16:12:07 2015
+% Tue Sep 08 16:55:43 2015
 \begin{table}[ht]
 \centering
 \caption{Descriptive statistics of mouse water consumption.} 
@@ -2374,7 +2374,7 @@ R commands:
 \end{quote}
 
 % latex table generated in R 3.2.2 by xtable 1.7-4 package
-% Tue Sep 08 16:12:07 2015
+% Tue Sep 08 16:55:43 2015
 \begin{tabular}{rrrrrrrrrrrrrrrr}
   30 & 26 & 26 & 26 & 25 & 25 & 25 & 25 & 25 & 24 & 24 & 24 & 24 & 24 & 24 & 23 \\ 
   23 & 23 & 23 & 22 & 22 & 22 & 22 & 21 & 21 & 21 & 20 & 20 & 19 & 19 & 18 & 16 \\ 
@@ -2397,7 +2397,7 @@ The shape of the data is slightly left-skewed \figrefp{fig:CrayfishTempHist} wit
 \end{knitrout}
 
 % latex table generated in R 3.2.2 by xtable 1.7-4 package
-% Tue Sep 08 16:12:07 2015
+% Tue Sep 08 16:55:43 2015
 \begin{table}[ht]
 \centering
 \caption{Descriptive statistics of crayfish temperature preferences.} 
@@ -2452,7 +2452,7 @@ The majority of seeds were either sedge or grass with sedge being more than twic
 \end{knitrout}
 
 % latex table generated in R 3.2.2 by xtable 1.7-4 package
-% Tue Sep 08 16:12:07 2015
+% Tue Sep 08 16:55:43 2015
 \begin{table}[ht]
 \centering
 \caption{Percentage distribution of wetland seeds by type.} 
@@ -3508,7 +3508,7 @@ If the variables had been nominal or if the natural order of levels were the sam
 A common method of summarizing bivariate categorical data is to count the number of individuals that have each combination of the first and second categorical variables.  For example, how many respondents had less than a HS degree and were very willing, how many had a high school degree and were very willing, and so on.  The count of the number of individuals of each combination is called a frequency.  A two-way frequency table offers an efficient way to display these frequencies \tabrefp{tab:EnvFreq}.  Thus, for example, 40 of the respondents had less than a high school degree and were very willing to take a cut in their standard of living to protect the environment.  Similarly, 542 respondents had a high school degree and were willing to cut their standard of living.
 
 % latex table generated in R 3.2.2 by xtable 1.7-4 package
-% Tue Sep 08 16:12:10 2015
+% Tue Sep 08 16:55:46 2015
 \begin{table}[ht]
 \centering
 \caption{Frequency table of respondent's highest completed degree and willingness to cut their standard of living to protect the environment.} 
@@ -3555,7 +3555,7 @@ Two-way frequency tables are often converted to two-way percentage tables to all
 A \textbf{row-percentage table} is computed by dividing the value in the SAME cell on the original frequency table by the TOTAL value in the same row on the original frequency table and multiplying by 100.  For example, the value in the ``vwill'' column and ``ltHS'' row on the row-percentage table \tabrefp{tab:EnvRowP} is computed by dividing the value in the ``vwill'' column and ``ltHS'' row on the original frequency table (i.e., 40; \tabref{tab:EnvFreq}) by the value in the ``Sum'' column and the ``ltHS'' row on the original frequency table (i.e., 646) and multiplying by 100.
 
 % latex table generated in R 3.2.2 by xtable 1.7-4 package
-% Tue Sep 08 16:12:10 2015
+% Tue Sep 08 16:55:46 2015
 \begin{table}[ht]
 \centering
 \caption{Row-percentage table of respondent's highest completed degree and willingness to cut their standard of living to protect the environment.} 
@@ -3585,7 +3585,7 @@ The value in each cell of a row-percentage table is the percentage OF ALL indivi
 A \textbf{column-percentage table} is computed by dividing the value in the SAME cell on the original frequency table by the TOTAL value in the same column on the original frequency table and multiplying by 100.  For example, the value in the ``vwill'' column and ``ltHS'' row on the column-percentage table \tabrefp{tab:EnvColP} is computed by dividing the value in the ``vwill'' column and ``ltHS'' row on the original frequency table (i.e., 40; \tabref{tab:EnvFreq}) by the value in the ``Sum'' row and the ``vwill'' column on the original frequency table (i.e., 208) and multiplying by 100.
 
 % latex table generated in R 3.2.2 by xtable 1.7-4 package
-% Tue Sep 08 16:12:10 2015
+% Tue Sep 08 16:55:46 2015
 \begin{table}[ht]
 \centering
 \caption{Column-percentage table of respondent's highest completed degree and willingness to cut their standard of living to protect the environment.} 
@@ -3616,7 +3616,7 @@ The value in each cell of a column-percentage table is the percentage OF ALL ind
 Each value in a \textbf{table-percentage table} is computed by dividing the value in the SAME cell on the original frequency table by the TOTAL number of ALL individuals in the original frequency table and multiplying by 100.  For example, the value in the ``vwill'' column and ``ltHS'' row on the table-percentage table \tabrefp{tab:EnvTblP} is computed by dividing the value in the ``vwill'' column and ``ltHS'' row on the original frequency table (i.e., 40; \tabref{tab:EnvFreq}) by the value in the ``Sum'' row and the ``Sum'' column on the original frequency table (i.e., 3955) and multiplying by 100.
 
 % latex table generated in R 3.2.2 by xtable 1.7-4 package
-% Tue Sep 08 16:12:10 2015
+% Tue Sep 08 16:55:46 2015
 \begin{table}[ht]
 \centering
 \caption{Table-percentage table of respondent's highest completed degree and willingness to cut their standard of living to protect the environment.} 
@@ -8825,7 +8825,7 @@ A thorough description of how you should prepare your homework is described in \
 
 The distribution of number of approaches by Tanner Crabs to the traps is bimodal with no obvious outliers \figrefp{fig:RFAQfig}.  The center as measured by the mean is 56.70 with a standard deviation of 22.05 \tabrefp{tab:tmpSum}.
 % latex table generated in R 3.2.2 by xtable 1.7-4 package
-% Tue Sep 08 16:12:24 2015
+% Tue Sep 08 16:55:52 2015
 \begin{table}[ht]
 \centering
 \caption{Descriptive statistics of the number of approaches by Tanner Crabs to the traps.} 
