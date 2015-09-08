@@ -3,9 +3,6 @@ layout: page
 title: Resources
 ---
 
-[ ] Derek
-[X] Kim
-
 1. **Software Installation Links**
     * [R](https://cran.rstudio.com/)
     * [RStudio](https://www.rstudio.com/products/rstudio/download/)
@@ -15,7 +12,7 @@ title: Resources
     * [GitHub](https://github.com/droglenc/NCData)
     * [Google Sites](https://sites.google.com/site/ncstats/data) [*deprecated, will be removed*]
 
-1. **General Statistics Videos (YouTube)**
+1. **General Statistics Videos (YouTube)s**
     * Histogram Explanation ([Ex 1](http://youtu.be/sC7gjg9g3JU), [Ex 2](http://youtu.be/H9ITfdaX2ZQ))
     * Calculate median ([Ex 1](http://youtu.be/0SYsi38XucI), [Ex 2](http://youtu.be/hTYTaOaQUcw?list=UUAjbU4EB30lTsJ2NSE5a7DQ), [Ex 3](http://youtu.be/9a8M_KfclBE))
     * Calculate Standard Deviation ([Ex 1](http://youtu.be/qqOyy_NjflU), [Ex 2](http://youtu.be/atS4wX8I9H0))
