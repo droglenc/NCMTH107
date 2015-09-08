@@ -35,16 +35,16 @@ set_parent('IntroStats.Rnw')
 
 The WDNR wants to study elements in the sediment (among other things) in the entire area shaded in \figref{fig:KreherParkMap}.  This area covers approximately 3000 m$^2$.  Is it physically possible to examine every square meter of that area?  Is it prudent, ecologically and economically, to examine every square meter of this area?  The answer, of course, is ``no.''  How then will the WDNR be able to make conclusions about this entire area if they cannot reasonably examine the whole area?  The most reasonable solution is to sample a subset of all of this area and use the results from this sample to make inferences about the entire area.
 
-Methods for properly selecting a sample that fairly represents a larger collection of individuals is an important area of study in the field of statistics.  For example, the WDNR would not want to sample areas that are only conveniently near shore because this will likely not be an accurate representation of the entire area to be studied.  In this example, it appears that the WDNR employed a grid to assure a relatively even dispersal of samples throughout the study area \figrefp{fig:KreherParkMap}.  Methods for choosing the number of individuals to select and how to select these individuals will be discussed in \chapref{chap:DataProd}.
+Methods for properly selecting a sample that fairly represents a larger collection of individuals are an important area of study in the field of statistics.  For example, the WDNR would not want to sample areas that are only conveniently near shore because this will likely not be an accurate representation of the entire area to be studied.  In this example, it appears that the WDNR employed a grid to assure a relatively even dispersal of samples throughout the study area \figrefp{fig:KreherParkMap}.  Methods for choosing the number of individuals to select and how to select these individuals will be discussed in \chapref{chap:DataProd}.
 
 <<echo=FALSE >>=
 set.seed(1)
 Pb <- round(rnorm(119,1,0.15),2)
 @
-Suppose that the WDNR measured the concentration of lead at each of the 119 locations shown in \figref{fig:KreherParkMap} and that they were to present the results from these data at a public meeting.  Further suppose that the WDNR scientist came to the meeting and showed a slide that simply had the list of lead concentration measurements on it \tabrefp{tab:KreherParkPbconc}\footnote{These are hypothetical data for this site.}.  Is it easy to come to any conclusion about what these data mean from this type of presentation?  Instead, suppose that the scientist came to the meeting with a simple plot of the frequency of concentrations present in the data and brief numerical summaries \figrefp{fig:KreherParkPbhist}.  With this presentation one can fairly easily see that the measurements were fairly symmetric with no obviously ``weird'' measurements and ranged from as low as \Sexpr{formatC(min(Pb),format="f",digits=2)} to as high as \Sexpr{formatC(max(Pb),format="f",digits=2)} with the measurements centered on approximately 1.0 $\mu g \bullet m^{-3}$.  These summaries will be discussed in detail in \chapref{chap:UnivEDA}.  However, at this point note that statistical methods are important for distilling or summarizing large quantities of data into graphs or numerical summaries from which it is much easier to identify characteristics of the data.
+Suppose that the WDNR measured the concentration of lead at each of the 119 locations shown in \figref{fig:KreherParkMap} and that they were to present the results from these data at a public meeting.  Further suppose that the WDNR scientist came to the meeting and showed a slide that simply had the list of lead concentration measurements on it \tabrefp{tab:KreherParkPbconc}\footnote{These are hypothetical data for this site.}.  Is it easy to come to any conclusion about what these data mean from this type of presentation?  Instead, suppose that the scientist came to the meeting with a simple plot of the frequency of concentrations present in the data and brief numerical summaries \figrefp{fig:KreherParkPbhist}.  With this presentation one can fairly easily see that the measurements were fairly symmetric with no obviously ``weird'' measurements and ranged from as low as \Sexpr{formatC(min(Pb),format="f",digits=2)} $\mu g \bullet m^{-3}$ to as high as \Sexpr{formatC(max(Pb),format="f",digits=2)} $\mu g \bullet m^{-3}$ with the measurements centered on approximately 1.0 $\mu g \bullet m^{-3}$.  These summaries will be discussed in detail in \chapref{chap:UnivEDA}.  However, at this point note that statistical methods are important for distilling or summarizing large quantities of data into graphs or numerical summaries from which it is much easier to identify characteristics of the data.
 
 \begin{table}[htbp]   \label{tab:KreherParkPbconc}
-  \caption{List of Pb concentration measurements at each of 119 sites in Kreher Park superfund site.}
+  \caption{List of Pb concentration ($\mu g \bullet m^{-3}$) measurements at each of 119 sites in Kreher Park superfund site.}
   \begin{center}
 <<echo=FALSE, background='white'>>=
 Pb
@@ -52,7 +52,7 @@ Pb
   \end{center}
 \end{table}
 
-<<KreherParkPbhist, echo=FALSE, fig.cap="Histogram and summary statistics of Pb concentration measurements at each of 119 sites in Kreher Park superfund site.">>=
+<<KreherParkPbhist, echo=FALSE, fig.cap="Histogram and summary statistics of Pb concentration ($\\mu g \\bullet m^{-3}$) measurements at each of 119 sites in Kreher Park superfund site.">>=
 hist(Pb,right=TRUE,main="",xlab="Pb Concentration",ylab="Frequency of Sites",col="gray90")
 Pb.sum <- as.matrix(summary(Pb))
 colnames(Pb.sum)[1] <- "Pb"
@@ -61,7 +61,7 @@ textplot(Pb.sum)
 
 A critical question at this point is whether or not the results from the one sample of 119 sites perfectly represents what the results would be for the entire area.  One way to consider this question is to examine the results obtained from another sample of 119 sites.  The results from this second sample \figrefp{fig:KreherParkPbhist1} are clearly, though not radically, different from the results of the first sample.  Thus, it is seen that any one sample from a large area will not perfectly represent the area.  Furthermore, it is observed that two different samples give two different results which will likely lead to two different, albeit generally only slightly different, conclusions.
 
-<<KreherParkPbhist1, echo=FALSE, fig.scap="Kreher Park 1", fig.cap="Histogram and summary statistics of Pb concentration measurements at each of 119 sites (different from the sites shown in \\figref{fig:KreherParkPbhist}) in Kreher Park superfund site.">>=
+<<KreherParkPbhist1, echo=FALSE, fig.scap="Kreher Park 1", fig.cap="Histogram and summary statistics of Pb concentration ($\\mu g \\bullet m^{-3}$) measurements at each of 119 sites (different from the sites shown in \\figref{fig:KreherParkPbhist}) in Kreher Park superfund site.">>=
 set.seed(6)
 Pb1 <- round(rnorm(119,1,0.15),2)
 hist(Pb1,right=TRUE,main="",xlab="Pb Concentration",ylab="Frequency of Sites",col="gray90")
@@ -70,12 +70,12 @@ colnames(Pb1.sum)[1] <- "Pb"
 textplot(Pb1.sum)
 @
 
-Why don't the results of two different samples perfectly agree?  Because each sample contains different individuals and no two individuals are exactly alike in every regard.  The phenomenon that no two individuals are exactly alike is called \textbf{natural variability}\index{Natural Variability!Definition}, because of the ``natural'' differences that occur among individuals.  The phenomenon of differences between the results of samples is called \textbf{sampling variability}\index{Sampling Variability!Definition}.  If there was no natural variability, then there would be no sampling variability.  If there was no sampling variability, then the field of statistics would not be needed because a sample (even of 1) would perfectly represent the larger group of individuals.  Thus, understanding variability is at the core of statistical practice.  These concepts of natural and sampling variability will be revisited continuously throughout this book.
+The results of two different samples do not perfectly agree because each sample contains different individuals, and no two individuals are exactly alike in every regard.  The fact that no two individuals are exactly alike is \textbf{natural variability}\index{Natural Variability!Definition}, because of the ``natural'' differences that occur among individuals.  The fact that the results from different samples are different is called \textbf{sampling variability}\index{Sampling Variability!Definition}.  If there was no natural variability, then there would be no sampling variability.  If there was no sampling variability, then the field of statistics would not be needed because a sample (even of 1) would perfectly represent the larger group of individuals.  Thus, understanding variability is at the core of statistical practice.  These concepts of natural and sampling variability will be revisited continuously throughout this book.
 
-\defn{Natural Variability}{The realization that no two individuals are exactly alike.}
+\defn{Natural Variability}{The fact that no two individuals are exactly alike.}
 
 \vspace{-12pt}
-\defn{Sampling Variability}{The realization that no two samples are exactly alike. Thus, statistics computed from different samples will likely vary.}
+\defn{Sampling Variability}{The fact that the results (i.e., statistics) from different samples are different.}
 
 This may all be a bit unsettling!  First, it was shown that an entire area or all of the individuals of interest cannot be examined.  It was then shown that a sample drawn to represent the population does not perfectly represent it.  Furthermore, each sample is unique and will likely lead to a different conclusion.  These are all real and difficult issues faced by the practicing scientist and considered by the informed consumer.  However, the field of statistics is designed to ``deal with'' these issues such that the results from a relatively small subset of measurements can be used to make conclusions about the entire collection of measurements.
 
@@ -116,7 +116,7 @@ library(NCStats)
 data(ABDLakes)
 named <- Subset(ABDLakes,named)
 srsdf(named,n=50,vars=c("county","area"))
-@  
+@
 Use this code and some hand (or calculator) calculations to answer the questions below. \ansref{ans:WhyStatsLakes}
     \begin{Enumerate}
       \item Extract a sample of 50 lakes with the code above.  Compare the size (area in acres) of the first two lakes.  What do you observe?  This is an example of what type of variability?
@@ -311,7 +311,7 @@ arrows(3.1,1,4.1,0.55,lwd=3,length=0.1,col="red")
 @
 \vspace{9pt} % added because of paragraph compressions following R code
 
-The two types of quantitative variables are continuous and discrete variables.  \textbf{Continuous} variables are quantitative variables that have an uncountable number of values.\index{Continuous Variable}  In other words, a potential value \textsc{does} exist between every pair of values of a continuous variable.  \textbf{Discrete} variables are quantitative variables that have a countable number of values.\index{Discrete Variable}  Stated differently, a potential value \textsc{does not} exist between every pair of values of a discrete variable.  Typically, but not always, discrete variables are counts of items.  
+The two types of quantitative variables are continuous and discrete variables.  \textbf{Continuous} variables are quantitative variables that have an uncountable number of values.\index{Continuous Variable}  In other words, a potential value \textsc{does} exist between every pair of values of a continuous variable.  \textbf{Discrete} variables are quantitative variables that have a countable number of values.\index{Discrete Variable}  Stated differently, a potential value \textsc{does not} exist between every pair of values of a discrete variable.  Typically, but not always, discrete variables are counts of items.
 
 Continuous and discrete variables are easily distinguished by determining if it is possible for a value to exist between every two values of the variable.  For example, can there be between 2 and 3 ducks on a pond?  No!  Thus, the number of ducks is a discrete variable.  Alternatively, can a duck weigh between 2 and 3 kg?  Yes!  Can it weigh between 2 and 2.1 kg?  Yes!  Can it weigh between 2 and 2.01 kg?  Yes!  You can see that this could continue forever.  Thus, duck weight is a continuous variable.
 
