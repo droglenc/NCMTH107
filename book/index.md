@@ -3,7 +3,9 @@ layout: page
 title: Textbook
 ---
 
-<div style="text-align:center">[![textbook](../img/book.jpg)](IntroStats_noPrint.pdf)</div>
+<div style="text-align:center">
+<a href="IntroStats_noPrint.pdf"><img src="../img/book.jpg" alt="textbook"></a>
+</div>
 
 The textbook can be accessed by clicking the image above.  However, I suggest that you "right-click" on the image and save the document to your computer so that you do not download it every time that you need it.
 
