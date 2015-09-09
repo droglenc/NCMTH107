@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Textbook
 ---
 
 <div style="text-align:center">
