@@ -36,19 +36,19 @@ We will focus on the understanding of statistical concepts and proper interpreta
 
 An overall percentage score will be computed from the items and associated weights below:
 
-* Daily Reading Quizzes ...  7%
-* Homework ................ 15%
-* Midterm Exams (3) ....... 54% (equally weighted)
-* Final Exam .............. 24%
+* 7% -- Daily Reading Quizzes
+* 15% -- Homework
+* 54% -- Midterm Exams (3 equally weighted)
+* 24% -- Final Exam
 
 Lowest possible final letter grades will be assigned by comparing your overall percentage score (rounded to a whole number) to the values shown below:
 
---------- | --------- | ----------
-          | A	92-100  | A- 90-91
-B+ 87-89  | B	82-86   | B- 80-81
-C+ 77-79  | C	70-76   |
-D+ 67-69  | D	60-66   |	F   0-59
---------- | --------- | ----------
+|:----------:|:----------:|:----------:|
+|            |  A 92-100  |  A- 90-91  |
+|  B+ 87-89  |  B  82-86  |  B- 80-81  |
+|  C+ 77-79  |  C  70-76  |            |
+|  D+ 67-69  |  D  60-66  |  F   0-59  |
+
 
 ### Quizzes
 
