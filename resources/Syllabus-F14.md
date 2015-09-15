@@ -23,9 +23,32 @@ We will focus on the understanding of statistical concepts and proper interpreta
 
 ## Instructor
 
+* Dr. Derek H. Ogle, Professor of Mathematical Sciences & Natural Resources
+* CSE239; 682-1300; [dogle@northland.edu](mailto:dogle@northland.edu)
+* Office Hours: XXX
+
 ## Tutors
 
+* XXX XXX -- Tu 7-9p; Th 1230-230p
+* XXX XXX -- W 7-9p; Th 7-9p
+
 ## Grading
+
+An overall percentage score will be computed from the items and associated weights below:
+
+* Daily Reading Quizzes ...  7%
+* Homework ................ 15%
+* Midterm Exams (3) ....... 54% (equally weighted)
+* Final Exam .............. 24%
+
+Lowest possible final letter grades will be assigned by comparing your overall percentage score (rounded to a whole number) to the values shown below:
+
+--------- | --------- | ----------
+          | A	92-100  | A- 90-91
+B+ 87-89  | B	82-86   | B- 80-81
+C+ 77-79  | C	70-76   |
+D+ 67-69  | D	60-66   |	F   0-59
+--------- | --------- | ----------
 
 ### Quizzes
 
@@ -52,6 +75,19 @@ I will take attendance each day but will not factor attendance into your final g
 Under Northland College policy, an incomplete grade will be given ONLY under extreme circumstances beyond your control, such as a major illness.  An incomplete grade will be given ONLY if you have successfully completed the entire course except for the final exam.
 
 ### Extra Credit
+
+There are three options to earn as much as 5% extra credit on your final grade.
+
+1. **Exam Reflections. –** A two-part (described below)typed reflection on each midterm exam.  Each exam reflection is worth the lesser of either 1.5% or the percentage required for your exam score to equal 100% times 0.15.  For example, if Jonny and Jenny each write perfect exam reflections but Jonny had a 70% on his exam and Jenny had a 92% on her exam, then Jonny will earn 1.5% extra credit and Jenny will earn 8%*0.15=1.2% extra credit.
+
+    * The "correction" portion of the reflection should include correct answers for each question you missed along with **an explanation of why the answer you originally provided was not correct and why the correct answer is correct.**  You will receive no credit for simply correcting your answer, for providing another incorrect answer, or saying "*I have no idea why I put that answer*," "*I simply wrote the wrong answer*," "*I don't know what I was thinking,*" or any other nonsensical reason.  You must address every question you missed to receive full credit for this portion.  Your answers must be typed and easy to find (i.e., neatly organized by question number) and you **must include the original exam**.  This portion is worth 2/3rd of the overall value.
+
+    * The "reflection" portion should include your **thoughtful** reflections about the exam, including what you did well on the exam (and why), what you did not do so well on the exam (and why), what strategy you used in preparing for the exam, how you will change your strategy to prepare for the next exam, and whether you considered the exam to be fair or not.  This portion should be at least one page but not more than two pages and is worth 1/3rd of the overall value.
+
+2. **News Item Report. –** A one or two page typed paper about a news item that illustrates the use of statistics in everyday life.  Your report should discuss the background of the information in the report, the use of statistics, how the statistics relate to what you’ve learned in class, how the statistics were presented, how you feel about that presentation, and any questions that you may have.  Note that the FOCUS of your report should be on the statistics used in the news item.  Two of these reports may be completed, each is worth as much as 0.5%, and both are **due before Friday, 5-Dec.**
+
+3. **Report on the Use of Statistics in Other Classes. –** A one or two page typed paper about your use of statistics in another class at Northland.  Note that the simple reporting of someone else's statistics in a report does not qualify here; this extra credit item should pertain to your collection and analysis of data.  Your report should discuss the background of the project where you used statistics, what the statistics were used for (i.e., purpose), a presentation of your statistical work in the report (i.e., findings), how the statistics relate to what you've learned in class, and any questions that you may have.  Note that the FOCUS of your report should be on the statistics that you used.  Reports that show little focus on the statistics will receive 0 credit.  Two of these reports may be completed, each is worth as much as 0.5%, and both are **due before Friday, 5-Dec.**
+
 
 ## Conduct
 
