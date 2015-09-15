@@ -46,21 +46,20 @@ Lowest possible final letter grades will be assigned by comparing your overall p
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg .tg-s6z2{text-align:center}
+.tg .ctrcell{text-align:center}
 </style>
 <table class="tg">
   <tr>
-    <th class="tg-s6z2"></th><th class="tg-s6z2">A 92-100</th><th class="tg-s6z2">A- 90-91</th>
+    <td class="ctrcell"></td><td class="ctrcell">A 92-100</td><td class="ctrcell">A- 90-91</td>
   </tr>
   <tr>
-    <th class="tg-s6z2">B+ 87-89</th><th class="tg-s6z2">B  82-86</th><th class="tg-s6z2">B- 80-81</th>
+    <td class="ctrcell">B+ 87-89</td><td class="ctrcell">B  82-86</td><td class="ctrcell">B- 80-81</td>
   </tr>
   <tr>
-    <th class="tg-s6z2">C+ 77-79</th><th class="tg-s6z2">C  70-76</th><th class="tg-s6z2"></th>
+    <td class="ctrcell">C+ 77-79</td><td class="ctrcell">C  70-76</td><td class="ctrcell"></td>
   </tr>
   <tr>
-    <th class="tg-s6z2">D+ 67-69</th><th class="tg-s6z2">D  60-66</th><th class="tg-s6z2">F   0-59</th>
+    <td class="ctrcell">D+ 67-69</td><td class="ctrcell">D  60-66</td><td class="ctrcell">F   0-59</td>
   </tr>
 </table>
 
