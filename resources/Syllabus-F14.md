@@ -43,12 +43,26 @@ An overall percentage score will be computed from the items and associated weigh
 
 Lowest possible final letter grades will be assigned by comparing your overall percentage score (rounded to a whole number) to the values shown below:
 
-|:----------:|:----------:|:----------:|
-|            |  A 92-100  |  A- 90-91  |
-|  B+ 87-89  |  B  82-86  |  B- 80-81  |
-|  C+ 77-79  |  C  70-76  |            |
-|  D+ 67-69  |  D  60-66  |  F   0-59  |
-
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-s6z2{text-align:center}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-s6z2"></th><th class="tg-s6z2">A 92-100</th><th class="tg-s6z2">A- 90-91</th>
+  </tr>
+  <tr>
+    <th class="tg-s6z2">B+ 87-89</th><th class="tg-s6z2">B  82-86</th><th class="tg-s6z2">B- 80-81</th>
+  </tr>
+  <tr>
+    <th class="tg-s6z2">C+ 77-79</th><th class="tg-s6z2">C  70-76</th><th class="tg-s6z2"></th>
+  </tr>
+  <tr>
+    <th class="tg-s6z2">D+ 67-69</th><th class="tg-s6z2">D  60-66</th><th class="tg-s6z2">F   0-59</th>
+  </tr>
+</table>
 
 ### Quizzes
 
