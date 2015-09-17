@@ -6,8 +6,6 @@ layout: page
 
 Introduction to the concepts and interpretation of statistics.  Summary graphs and statistics; data production (sampling and experiments); random variables and sampling distributions; inference - introduction, for distributions, for proportions; correlation and regression.  Prerequisite: MTH103, ACT math > 17, or SAT math > 830.  4 Credits.
 
-## [Tentative Schedule](ScheduleOfTopics.html)
-
 ## Learning Outcomes
 
 At the end of this class you will be able to ...
