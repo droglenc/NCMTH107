@@ -118,3 +118,6 @@ Your conduct in class should revolve around the idea of being respectful of me a
 ## Accomodations
 Students in need of academic accommodation should contact [Kathleen Skoraczewski](mailto:kskoraczewski@northland.edu), Campus Counselor	and Disabilities Service Coordinator, ext. 1369, Ponzio Center Rm. 232.
 
+## Tentative Schedule
+<iframe src="ScheduleOfTopics.html">
+</iframe>
