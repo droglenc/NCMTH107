@@ -1,7 +1,7 @@
 ---
 layout: page
-title: MTH107
-subtitle: Statistical Concepts and Analysis
+title: Statistical Concepts and Analysis
+subtitle: MTH107
 ---
 
 * [Description](#description)
