@@ -10,8 +10,7 @@ title: Resources
 1. **Homework Answer Keys**
 
 1. **Software Installation Links**
-    * [R](https://cran.rstudio.com/)
-    * [RStudio](https://www.rstudio.com/products/rstudio/download/)
+    * R -- [Windows](http://derekogle.com/IFAR/supplements/installations/InstallRWin.html) / [Mac OS](http://derekogle.com/IFAR/supplements/installations/InstallRMac.html)
+    * RStudio -- [Windows](http://derekogle.com/IFAR/supplements/installations/InstallRStudioWin.html) / [Mac OS](http://derekogle.com/IFAR/supplements/installations/InstallPackagesRMac.html)
     * [NCStats](https://github.com/droglenc/NCStats) (then scroll down)
-
-1. [**Past Projects**](past-projects)
+    * [Installing Other Packages](http://derekogle.com/IFAR/supplements/installations/InstallPackagesRStudio.html)
