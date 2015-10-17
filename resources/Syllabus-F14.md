@@ -1,8 +1,20 @@
 ---
 layout: page
+title: MTH107
+subtitle: Statistical Concepts and Analysis
 ---
 
-# Statistical Concepts and Analysis (MTH107)
+* [Description](#description)
+* [Learning Outcomes](#learning-outcomes)
+* [Tutors](#tutors)
+* [Grading](#grading) -- [Quizzes](#quizzes), [Homework](#homework), [Exams](#exams), [Participation](#participation), [Extra Credit](#extra-credit)
+* [Conduct](#conduct)
+* [Accomodations](#accomodations)
+* [Tentative Schedule](#tentative-schedule)
+
+----
+
+## Description
 
 Introduction to the concepts and interpretation of statistics.  Summary graphs and statistics; data production (sampling and experiments); random variables and sampling distributions; inference - introduction, for distributions, for proportions; correlation and regression.  Prerequisite: MTH103, ACT math > 17, or SAT math > 830.  4 Credits.
 
@@ -23,7 +35,7 @@ We will focus on the understanding of statistical concepts and proper interpreta
 
 ## Instructor
 
-* Dr. Derek H. Ogle, Professor of Mathematical Sciences & Natural Resources
+* [Dr. Derek H. Ogle](http://derekogle.com), Professor of Mathematical Sciences & Natural Resources
 * CSE239; 682-1300; [dogle@northland.edu](mailto:dogle@northland.edu)
 * Office Hours: XXX
 
