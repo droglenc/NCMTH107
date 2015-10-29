@@ -8,7 +8,7 @@ title: Lecture Materials
     * [Slides II](Slides/02_Foundations_II.pptx)
 1. **Getting Started with R**
     * [Handouts](HOs/02_FoundationsR_HO.pdf) / [Class Exercises](CEs/02_FoundationsR_CE.pdf)
-    * R Screencasts (Ogle) -- [Read data from webpage](https://youtu.be/y5Zm0dUI65g) / [Read own data using Excel](http://www.screenr.com/AlPH) / [Read own data without Excel)](http://www.screenr.com/y27N) / [Subsetting a data frame](http://www.screenr.com/z27N)
+    * R Video Tutorial (Ogle) -- [Retrieve data from webpage](https://vimeo.com/user45324800/ncstats-preparedatawebpage) / Enter own data [with Excel](https://vimeo.com/user45324800/ncstats-preparedataexcel) or [without Excel](https://vimeo.com/user45324800/ncstats-preparedatatextfile) / [Load data into RStudio](https://vimeo.com/user45324800/ncstats-loadcsvrstudio) / [Filter/Subset a data.frame](http://www.screenr.com/z27N)
 1. **Univariate EDA**
     * [Slides](Slides/03_UnivEDA.pptx) / [Handouts](HOs/03_UnivEDA_HO.pdf) / [Class Exercises](CEs/03_UnivEDA_CE.pdf)
     * Videos -- Histogram Explanation ([Ex 1](http://youtu.be/sC7gjg9g3JU), [Ex 2](http://youtu.be/H9ITfdaX2ZQ)) / Calculate median ([Ex 1](http://youtu.be/0SYsi38XucI), [Ex 2](http://youtu.be/hTYTaOaQUcw?list=UUAjbU4EB30lTsJ2NSE5a7DQ), [Ex 3](http://youtu.be/9a8M_KfclBE)) / Calculate Standard Deviation ([Ex 1](http://youtu.be/qqOyy_NjflU), [Ex 2](http://youtu.be/atS4wX8I9H0)) /  Calculate IQR ([Ex 1](http://youtu.be/R6VDj7pEG30), [Ex 2](http://youtu.be/F3WcEAW-M80?t=6m6s))
