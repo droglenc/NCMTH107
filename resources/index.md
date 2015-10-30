@@ -3,6 +3,7 @@ layout: page
 title: Resources
 ---
 
+1. [**Video Tutorials**](Videos.html)
 1. **Data Files**
     * [GitHub](https://github.com/droglenc/NCData){:target="_blank"}
     * [Google Sites](https://sites.google.com/site/ncstats/data){:target="_blank"} [*deprecated, will be removed by 31-Dec-15*]
