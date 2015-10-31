@@ -1,8 +1,8 @@
 ---
 layout: page
+title: Class Materials
 ---
 
-# Class Materials
 1. [Introduction](#introduction)
 1. [Foundations](#foundations)
 1. [Getting Started with R](#getting-started-with-r)
