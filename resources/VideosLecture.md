@@ -3,9 +3,7 @@ layout: page
 title: Lecture Support Videos
 ---
 
-----
-
-Click an icon below to see the video -- ![Ogle Video](../img/dhovid.jpg) = Prof. Ogle and ![Other video](../img/videolink.jpg) = Other.
+Click an icon below to see the video -- ![Ogle Video](../img/dhovid.jpg) = by Prof. Ogle and ![Other video](../img/videolink.jpg) = by someone else.
 
 ----
 
