@@ -1,0 +1,39 @@
+---
+layout: page
+title: Class Exercise
+subtitle: Normal Distributions
+---
+
+----
+
+## Exercise #1 -- Pollen Counts
+Suppose that it is known that the distribution of the total weed pollen count (spores per cubic meter of air) for LaCrosse, WI on a day in early September is approximately normal with a mean of 40 and a standard deviation of 8.  [Note that pollen count information is available from [this site](http://www.aaaai.org/nab/index.cfm?p=allergenreport&stationid=28).]
+
+For each questions below (a) identify the type of question (e.g., "forward-left", "reverse-between") and then (b) answer the question.
+
+1. What is the number of pores/m$^3$ such that 10% of the days have higher pore counts?
+1. What proportion of days in LaCrosse have a weed pollen count less than 50 pores/m$^3$?
+1. What proportion of days in LaCrosse have a weed pollen count between 32 and 55 pores/m$^3$?
+1. What is the number of pores/m$^3$ such that 30% of the days have lower pore counts?
+1. What is the most common 70% of number of pores/m$^3$?
+1. What proportion of days in LaCrosse have a weed pollen count greater than 35 pores/m$^3$?
+
+----
+
+## Exercise #2 -- Driving Speed Example
+A police officer in Kansas has recorded the amount of time it takes cars to travel between two points.  In a large sample of cars he found the mean time to be 2.5 s with a standard deviation of 0.75 s.  Treat these results as if they represent a population and are normally distributed.
+
+For each questions below (a) identify the type of question (e.g., "forward-left", "reverse-between") and then (b) answer the question.
+
+1. What is the time that identifies the slowest 15% of drivers?
+1. What proportion of drivers pass through the two points in less than 1 s?
+1. What proportion of drivers pass through the two points in between 1.5 and 4.5 s?
+1. What is the IQR for time to pass between the two points?
+1. What proportion of drivers pass through the two points in more than 7 s?
+1. What is the median time to pass between the two points?
+
+----
+
+## Exercise #3 -- Carpenter Ant Example
+
+For each questions below (a) identify the type of question (e.g., "forward-left", "reverse-between") and then (b) answer the question.

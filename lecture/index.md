@@ -14,28 +14,28 @@ title: Lecture Materials
 1. **Univariate EDA**
     * Lecture -- [Videos](../resources/VideosLecture.html#univariate-eda) / [Slides](Slides/03_UnivEDA.pptx)
     * R -- [Videos](../resources/VideosR.html#univariate-eda) / [Handout](HOs/03_UnivEDA_HO.pdf)
-    * [Class Exercises](CEs/03_UnivEDA_CE.pdf)
+    * [Class Exercises](CEs/UnivariateEDA.html)
 1. **Normal Distribution**
     * Lecture -- [Videos](../resources/VideosLecture.html#normal-distribution) / [Slides](Slides/04_NormalDistribution.pptx)
     * R -- [Videos](../resources/VideosR.html#normal-distribution) / [Handouts](HOs/04_NormalDistribution_HO.pdf)
-    * [Class Exercises](CEs/04_NormalDistribution_CE.pdf)
+    * [Class Exercises](CEs/NormalDistribution.html)
 1. **Bivariate EDA**
     * Lecture -- [Videos](../resources/VideosLecture.html#bivariate-eda) / [Slides](Slides/05_BivEDA.pptx)
     * R -- [Videos](../resources/VideosR.html#bivariate-eda) / [Handouts](HOs/05_BivEDA_HO.pdf)
-    * [Class Exercises](CEs/05_BivEDA_CE.pdf)
+    * [Class Exercises](CEs/BivariateEDA.html)
 1. **Linear Regression**
     * Lecture -- [Videos](../resources/VideosLecture.html#linear-regression) / [Slides](Slides/06_SimpleLinearRegression.pptx)
     * R -- [Videos](../resources/VideosR.html#linear-regression) / [Handouts](HOs/06_SimpleLinearRegression_HO.pdf)
-    * [Class Exercises](CEs/06_SimpleLinearRegression_CE.pdf)
+    * [Class Exercises](CEs/SimpleLinearRegression.html)
 1. **Data Production**
     * Lecture -- [Slides](Slides/07_DataProduction.pptx) / [Handouts](HOs/_HO.pdf)
-    * [Class Exercises](CEs/_CE.pdf)
+    * [Class Exercises](CEs/DataProduction.html)
 1. **Probability Introduction**
     * Lecture -- [Slides](Slides/08_ProbabilityIntro.pptx)
-    * [Class Exercises](CEs/08_ProbabilityIntro_CE.pdf)
+    * [Class Exercises](CEs/ProbabilityIntro.html)
 1. **Sampling Distributions**
     * Lecture -- [Slides](Slides/09_SamplingDistributions.pptx)
-    * [Class Exercises](CEs/09_SamplingDistributions_CE.pdf)
+    * [Class Exercises](CEs/SamplingDistributions.html)
 1. **Inference Concepts**
     * Lecture -- Slides [I](Slides/10_Inference_1_HypothesisTesting.pptx), [II](Slides/10_Inference_2_ConfidenceRegions.pptx), [III](Slides/10_Inference_3_ZTest.pptx)
     * R -- [Handouts](HOs/10_InferenceConcepts_HO.pdf)

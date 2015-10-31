@@ -8,7 +8,7 @@ Click an icon below to see the video -- ![Ogle Video](../img/dhovid.jpg) = by Pr
 ----
 
 ## Foundations
-* IVPPSS -- [![Ogle video](../img/dhovid.jpg)]()
+* IVPPSS -- [![Ogle video](../img/dhovid.jpg)](https://vimeo.com/user45324800/ncstats-ivppss)
 * Variable Types -- [![Ogle video](../img/dhovid.jpg)]()
 
 ## Getting Started with R

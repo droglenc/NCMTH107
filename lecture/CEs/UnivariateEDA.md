@@ -1,6 +1,7 @@
 ---
 layout: page
-title: R Foundations
+title: Class Exercise
+subtitle: Univariate EDA
 ---
 
 ----
@@ -20,16 +21,10 @@ diameter  20  23  34  20  17  20  15  34  18  24
 exposure med med low med med med med med med med
 </pre>
 
-Use this information to answer the following questions.  Use R to answer all questions even though most questions can be answered by observing these simple data from the table above.  You should have an R script saved in RStudio and a MSWord document formatted as directed in section 1.4 of the textbook when you are finished.
+Enter the data into Excel, save as a CSV, and load the data into R.  [**HINT:** *these are the same data that you entered in [a previous class exercise](FoundationsR.html).  Use that file and recycle the portion of that R script that you used to load the data.*]  Use this information to answer the following questions.
 
-1. Enter the data into Excel, save as a CSV file, and load the data into RStudio.  [HINT: [see these videos](../../resources/VideosR.html#getting-started-with-r).]
-1. What is (just) the diameter measurement for the seventh individual?
-1. What data was recorded for the seventeenth individual?
-1. What data was recorded for the seventh, seventeenth, and twenty-seventh individuals?
-1. Isolate the following subsets of data (show the structure or a view of the resultant data frame to verify your results).
-    * Only CWD at low-exposure sites.
-    * Only CWD where the diameter was greater than 20 cm.
-    * Only CWD where the diameter was greater than 20 cm and was observed in low-exposure sites.
-    * Only CWD where the diameter was between 20 and 30 cm.
+1. Perform a univariate EDA for `diameter`.
+1. Perform a univariate EDA for `exposure`.
+1. Perform a univariate EDA for `diameter` separately for the low- and medium-`exposure` sites.
 
 ----
