@@ -24,7 +24,7 @@ Materials to prepare for class and materials used in class are provided below.  
 
 ## Introduction
 * [Slides](Slides/01_Foundations_I.pptx)
-* [R Handout](HOs/01_Foundations_HO.pdf)
+* R Handout -- [Web](HOs/Foundations.html), [Word](HOs/Foundations.docx)
 
 ## Foundations
 * Preparation videos
@@ -50,7 +50,8 @@ Materials to prepare for class and materials used in class are provided below.  
     * Calculate median -- [#1 ![YouTube](../img/videolink.jpg)](http://youtu.be/0SYsi38XucI), [#2 ![YouTube](../img/videolink.jpg)](http://youtu.be/hTYTaOaQUcw?list=UUAjbU4EB30lTsJ2NSE5a7DQ), [#3 ![YouTube](../img/videolink.jpg)](http://youtu.be/9a8M_KfclBE)
     * Calculate standard deviation -- [#1 ![YouTube](../img/videolink.jpg)](http://youtu.be/qqOyy_NjflU), [#2 ![YouTube](../img/videolink.jpg)](http://youtu.be/atS4wX8I9H0)
     * Calculate IQR -- [#1 ![YouTube](../img/videolink.jpg)](http://youtu.be/R6VDj7pEG30), [#2 ![YouTube](../img/videolink.jpg)](http://youtu.be/F3WcEAW-M80?t=6m6s)
-    * [Univariate EDA ![R logo](../img/Rlogo.png)](http://www.screenr.com/IGPH)
+    * [Univariate EDA - Quantitative ![R logo](../img/Rlogo.png)](https://vimeo.com/user45324800/ncstats-ueda1)
+    * [Univariate EDA - Categorical ![R logo](../img/Rlogo.png)](https://vimeo.com/user45324800/ncstats-uedac)
 * [R Handout](HOs/03_UnivEDA_HO.pdf)
 * [Class Exercises](CEs/UnivariateEDA.html)
 

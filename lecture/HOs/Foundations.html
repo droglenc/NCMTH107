@@ -1,0 +1,70 @@
+---
+title: "Introduction"
+author: "Derek H. Ogle"
+output:
+  word_document: 
+---
+
+
+<div id="always-first-command" class="section level2">
+<h2>Always First Command</h2>
+<pre class="r"><code>&gt; library(NCStats)</code></pre>
+</div>
+<div id="sample-ashland-bayfield-county-residents" class="section level2">
+<h2>Sample Ashland-Bayfield County Residents</h2>
+<pre class="r"><code>&gt; data(ABCens90)
+&gt; ( smp1 &lt;- srsdf(ABCens90,50) )</code></pre>
+</div>
+<div id="summarize-the-sample" class="section level2">
+<h2>Summarize the Sample</h2>
+<pre class="r"><code>&gt; Summarize(~age,data=smp1,digits=1)
+&gt; Summarize(~sex,data=smp1)</code></pre>
+</div>
+<div id="take-and-summarize-a-second-sample" class="section level2">
+<h2>Take and Summarize A Second Sample</h2>
+<pre class="r"><code>&gt; ( smp2 &lt;- srsdf(ABCens90,50) )
+&gt; Summarize(~age,data=smp2,digits=1)
+&gt; Summarize(~sex,data=smp2)</code></pre>
+</div>
+<div id="the-truth" class="section level2">
+<h2>The Truth</h2>
+<pre class="r"><code>&gt; Summarize(~age,data=ABCens90,digits=1)</code></pre>
+<pre><code>       n   nvalid     mean       sd      min       Q1   median       Q3 
+ 30335.0  30335.0     37.3     24.3      0.0     16.0     35.0     57.0 
+     max percZero 
+    96.0      1.2 </code></pre>
+<pre class="r"><code>&gt; Summarize(~sex,data=ABCens90)</code></pre>
+<pre><code>        freq   perc
+female 15261  50.31
+male   15074  49.69
+Total  30335 100.00</code></pre>
+</div>
+<div id="lots-of-samples-from-ashland-bayfield-county-residents" class="section level2">
+<h2>Lots of Samples from Ashland-Bayfield County Residents</h2>
+<p><img src="Foundations_files/figure-html/unnamed-chunk-8-1.png" title="" alt="" width="336" /><img src="Foundations_files/figure-html/unnamed-chunk-8-2.png" title="" alt="" width="336" /></p>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
