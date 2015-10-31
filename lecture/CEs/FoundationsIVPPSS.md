@@ -15,6 +15,7 @@ The Sustainability Coordinator surveyed 147 randomly selected Northland students
 1. Fully describe the type of variable.
 
 ----
+
 ## Snow in Duluth
 <img src="imgs/duluthsnow.jpg" alt="Duluth snow" class="img-right">
 A climatologist wanted to determine the average amount of snow for December in Duluth, MN.  She selected a random sample of 35 Decembers (from recorded history) and recorded the total snowfall for each.
