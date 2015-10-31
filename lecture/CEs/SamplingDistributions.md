@@ -7,7 +7,7 @@ subtitle: Sampling Distributions
 ----
 
 ## Exercise #1 -- Sleep Example
-<img src="imgs/melatonin.png" alt="melatonin" align="right" width="150">
+<img src="imgs/melatonin.png" alt="melatonin" align="right" width="200" style="margin: 0px 20px">
 MIT researchers examined the effect of [melatonin](http://www.webmd.com/sleep-disorders/tc/melatonin-overview) on sleep.  Suppose that we know that men given a placebo fell asleep according to a N(15,5) distribution.  For each question below identify (a) the distribution that would be used to answer the question, (b) whether the question can be answered or not, (c) specific characteristics of the required distribution, and (d) if appropriate, the answer to the question.
 
 1. What is the probability, with 4 randomly selected men, of observing a mean of more than 12 mins?
