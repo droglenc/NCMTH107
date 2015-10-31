@@ -20,7 +20,7 @@ Associated Bank is reviewing its service charges and interest paying policies on
 
 ## Exercise #2 -- Acorn Example
 <img src="imgs/acorns.jpg" alt="Acorns" class="img-right">
-Supposed that the number of acorns that fall from a mature white oak tree in Bayfield County is normaly distributed with a mean 875 and a standard deviation of 220.
+Suppose that the number of acorns that fall from a mature white oak tree in Bayfield County is normaly distributed with a mean 875 and a standard deviation of 220.
 
 1. What is the probability that an oak tree produces more than 1000 acorns?
 1. What is the probability that an oak tree will produce between 700 and 1000 acorns?

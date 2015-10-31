@@ -29,7 +29,6 @@ title: Lecture Materials
     * [Class Exercises](CEs/SimpleLinearRegression.html)
 1. **Data Production**
     * Lecture -- [Slides](Slides/07_DataProduction.pptx) / [Handouts](HOs/_HO.pdf)
-    * [Class Exercises](CEs/DataProduction.html)
 1. **Probability Introduction**
     * Lecture -- [Slides](Slides/08_ProbabilityIntro.pptx)
     * [Class Exercises](CEs/ProbabilityIntro.html)

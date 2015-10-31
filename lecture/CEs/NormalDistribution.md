@@ -22,7 +22,7 @@ For each questions below (a) identify the type of question (e.g., "forward-left"
 
 ----
 
-## Exercise #2 -- Driving Speed Example
+## Exercise #2 -- Driving Speed
 <img src="imgs/speedlimit.jpg" alt="Speed Limit" class="img-right">
 A police officer in Kansas has recorded the amount of time it takes cars to travel between two points.  In a large sample of cars he found the mean time to be 2.5 s with a standard deviation of 0.75 s.  Treat these results as if they represent a population and are normally distributed.
 
@@ -37,6 +37,6 @@ For each questions below (a) identify the type of question (e.g., "forward-left"
 
 ----
 
-## Exercise #3 -- Carpenter Ant Example
+## Exercise #3 -- Carpenter Ants
 <img src="imgs/carpenterant.jpg" alt="Carpenter Ant" class="img-right">
 For each questions below (a) identify the type of question (e.g., "forward-left", "reverse-between") and then (b) answer the question.

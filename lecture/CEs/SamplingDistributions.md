@@ -7,7 +7,7 @@ css: "/css/lecture.css"
 
 ----
 
-## Exercise #1 -- Sleep Example
+## Exercise #1 -- Melatonin and Sleep
 <img src="imgs/melatonin.png" alt="melatonin" class="img-right">
 MIT researchers examined the effect of [melatonin](http://www.webmd.com/sleep-disorders/tc/melatonin-overview) on sleep.  Suppose that we know that men given a placebo fell asleep according to a N(15,5) distribution.  For each question below identify (a) the distribution that would be used to answer the question, (b) whether the question can be answered or not, (c) specific characteristics of the required distribution, and (d) if appropriate, the answer to the question.
 
@@ -17,7 +17,7 @@ MIT researchers examined the effect of [melatonin](http://www.webmd.com/sleep-di
 
 ----
 
-## Exercise #2 -- Pollutants in Auto Exhaust Example
+## Exercise #2 -- Pollutants in Auto Exhaust
 <img src="imgs/exhaust.jpg" alt="Exhaust" class="img-right">
 The level of nitrogen oxides (NOX) in the exhaust of a particular car model is right-skewed with a mean of 0.9 grams per mile (g/mi) and a standard deviation of 0.15 g/mi.  For each question below identify (a) the distribution that would be used to answer the question, (b) whether the question can be answered or not, (c) specific characteristics of the required distribution, and (d) if appropriate, the answer to the question.
 
@@ -29,7 +29,7 @@ The level of nitrogen oxides (NOX) in the exhaust of a particular car model is r
 
 ----
 
-## Exercise #3 -- Acorn Example
+## Exercise #3 -- Acorn Length
 <img src="imgs/acorns2.jpg" alt="Acorns" class="img-right">
 Suppose that it is known that the distribution of lengths of acorns is slightly right-skewed with a mean of 21 mm and a standard deviation of 6 mm.  For each question below identify (a) the distribution that would be used to answer the question, (b) whether the question can be answered or not, (c) specific characteristics of the required distribution, and (d) if appropriate, the answer to the question.
 
@@ -41,7 +41,7 @@ Suppose that it is known that the distribution of lengths of acorns is slightly 
 
 ----
 
-## Exercise #4 -- People in Car Example
+## Exercise #4 -- People in Car
 <img src="imgs/carpooling.jpg" alt="car pooling" class="img-right">
 A study of rush-hour traffic in San Francisco counted the number of people in a car entering a freeway at a suburban interchange.  Suppose that, in the population, this count has a mean of 1.5 people with a standard deviation of 0.75.
 
@@ -53,7 +53,7 @@ A study of rush-hour traffic in San Francisco counted the number of people in a 
 
 ----
 
-## Exercise #5 -- Plowing Snow Example
+## Exercise #5 -- Plowing Snow
 <img src="imgs/snowplow.jpg" alt="Snow plowing" class="img-right">
 Supposed that it is know that the distribution of times spent plowing a city block on snow days is right-skewed with a mean of 45 seconds and a standard deviation of 28 seconds.
 

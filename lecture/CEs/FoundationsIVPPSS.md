@@ -7,7 +7,7 @@ css: "/css/lecture.css"
 
 ----
 
-## Exercise #1
+## Exercise #1 -- Sustainability Survey
 <img src="imgs/ncmellc.jpg" alt="NC MELLC" class="img-right">
 The Sustainability Coordinator surveyed 147 randomly selected Northland students in Fall, 2013 to determine (among other things) the average number of miles that Northland students drove per week.
 
@@ -15,9 +15,8 @@ The Sustainability Coordinator surveyed 147 randomly selected Northland students
 1. Fully describe the type of variable.
 
 ----
+## Exercise #2 -- Snow in Duluth
 <img src="imgs/duluthsnow.jpg" alt="Duluth snow" class="img-right">
-## Exercise #2
-
 A climatologist wanted to determine the average amount of snow for December in Duluth, MN.  She selected a random sample of 35 Decembers (from recorded history) and recorded the total snowfall for each.
 
 1. Identify the IVPPSS.
@@ -25,7 +24,7 @@ A climatologist wanted to determine the average amount of snow for December in D
 
 ----
 
-## Exercise #3
+## Exercise #3 -- Types of Variables
 
 1. Fully describe the type of variable for each variable below.
     * miles driven per week
