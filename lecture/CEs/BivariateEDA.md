@@ -7,7 +7,7 @@ css: "/css/lecture.css"
 
 ----
 
-## Exercise #1 -- Urban Runoff
+## Urban Runoff
 <img src="imgs/no-dumping-drains-to-ocean.jpg" alt="No Dumping" class="img-right">
 Urbanization poses a major threat to stream and watershed ecosystems.  One aspect of urbanization is the conversion of natural areas to land with impervious surfaces, thus increasing runoff of rain and, likely, pollutants.  A University of Washington researcher recorded the percent of impervious land and the benthic index of biotic integrity (IBI) for 14 areas in the state of Washington.  The IBI has been described as a measure of ``the capability of supporting and maintaining a balanced, integrated, adaptive community of organisms having a species composition and functional organization comparable to that of natural habitat in the region.''  In this example, the researchers were attempting to identify how the percentage of impervious surfaces in the area effects the IBI.  The data for this study are below (note that much more information can be obtained at the [QELP site](http://seattlecentral.edu/qelp/sets/077/077.html\#About)).
 
@@ -24,7 +24,7 @@ Load these data into R to answer the questions below.
 
 ----
 
-## Exercise #2 -- Forest Composition
+## Forest Composition
 <img src="imgs/forestcomp.jpg" alt="Forest Composition" class="img-right">
 Hely *et al.* (2000; Journal of Vegetation Science 11:813-824) examined the effects of stand composition on fire hazard in mixed-wood Canadian boreal forests.  Two variables that they recorded for each stand were stand type (`sttype`, where `d`=deciduous, `c`=coniferous, `mc`=mixed coniferous, and `md`=mixed deciduous) and the time since the last fire (`tslf`) which was treated as a categorical variable with the categories corresponding to 100 year blocks of time (i.e., `0-100`, `100-200`, etc.).  These data may be found in [Fire.csv](https://github.com/droglenc/NCData/blob/master/Fire.csv) on the class data repository.  Load these data into R ([see videos here](../../resources/VideosR.html#getting-started-with-r)), **refactor** `sttype` so that the `c` and `d` levels are ordered at the ends (i.e., so that the categories are arranged from mostly coniferous to mostly deciduous), and create appropriate tables to answer the following questions.
 

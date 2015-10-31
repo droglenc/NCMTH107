@@ -7,7 +7,7 @@ css: "/css/lecture.css"
 
 ----
 
-## Exercise #1 -- Coarse Woody Debris
+## Coarse Woody Debris
 <img src="imgs/cwd1-bony-lake.jpg" alt="CWD Bony Lake" class="img-right">
 Coarse woody debris (CWD) in lakes is important for aquatic systems as it provides refuge for young fish and invertebrates as well as providing areas for periphyton to grow.  Coarse woody debris was studied in the north basin of Allequash Lake in northern Wisconsin.  Among other things, the researchers recorded the diameter (cm) of CWD found in the lake littoral zone and a qualitative measure of the degree to which the location where the CWD was found was exposed to winds (low or medium).  The data (sampled from information on the [North Temperate Lakes Long Term Ecological Research website](http://lter.limnology.wisc.edu/spatial/source/data_cat_new.htm) they observed are shown below.
 
