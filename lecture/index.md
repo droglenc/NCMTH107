@@ -3,11 +3,26 @@ layout: page
 title: Lecture Materials
 ---
 
-Materials to prepare for class and materials used in class are provided below.  Concept-related preparation videos are either by Prof. Ogle ![Ogle Video](../img/dhovid.jpg) or not ![Other video](../img/videolink.jpg).  R-related preparation videos ![R logo](../img/Rlogo.png)] are all by Prof. Ogle.
+----
+
+Materials to prepare for class and materials used in class are provided below.  Concept-related preparation videos are either by Prof. Ogle ![Ogle Video](../img/dhovid.jpg) or not ![Other video](../img/videolink.jpg).  R-related preparation videos ![R logo](../img/Rlogo.png) are all by Prof. Ogle.
 
 ----
 
-
+# Table of Contents
+1. [Introduction](#introduction)
+1. [Foundations](#foundations)
+1. [Getting Started with R](#getting-started-with-r)
+1. [Univariate EDA](#univariate-eda)
+1. [Normal Distributions](#normal-distributions)
+1. [Bivariate EDA](#bivariate-eda)
+1. [Linear Regression](#linear-regression)
+1. [Data Production](#data-production)
+1. [Probability Introduction](#probability-introduction)
+1. [Sampling Distributions](#sampling-distributions)
+1. [Inference Concepts](#inference-concepts)
+1. [t-Tests](#t-tests)
+1. [Chi-Square Tests](#chi-square-tests)
 
 ----
 
@@ -15,7 +30,7 @@ Materials to prepare for class and materials used in class are provided below.  
 * [Slides](Slides/01_Foundations_I.pptx)
 * [R Handout](HOs/01_Foundations_HO.pdf)
 
-## Foundations II
+## Foundations
 * Preparation videos
     * [IVPPSS ![Ogle video](../img/dhovid.jpg)](https://vimeo.com/user45324800/ncstats-ivppss)
     * [Variable Types ![Ogle video](../img/dhovid.jpg) ](https://vimeo.com/user45324800/ncstats-vartypes)
@@ -88,7 +103,7 @@ Materials to prepare for class and materials used in class are provided below.  
 * Slides [#I](Slides/10_Inference_1_HypothesisTesting.pptx), [#2](Slides/10_Inference_2_ConfidenceRegions.pptx), [#3](Slides/10_Inference_3_ZTest.pptx)
 * [R Handouts](HOs/10_InferenceConcepts_HO.pdf)
 
-## t-Tests for Quantiative Data
+## t-Tests
 * Preparation videos
     * [1-sample t-test ![R logo](../img/Rlogo.png)](http://www.screenr.com/GXPH)
     * [2-sample t-test ![R logo](../img/Rlogo.png)](http://www.screenr.com/cCPH)
