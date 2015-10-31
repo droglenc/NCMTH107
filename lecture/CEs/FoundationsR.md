@@ -1,6 +1,7 @@
 ---
 layout: page
-title: R Foundations
+title: Class Exercise
+subtitle: R Foundations
 ---
 
 ----

@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Statistical Foundations
+title: Class Exercise
+subtitle: Statistical Foundations
 ---
 
 ----
