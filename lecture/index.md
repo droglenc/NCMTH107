@@ -1,15 +1,8 @@
 ---
 layout: page
-title: Lecture Materials
 ---
 
-----
-
-Materials to prepare for class and materials used in class are provided below.  Concept-related preparation videos are either by Prof. Ogle ![Ogle Video](../img/dhovid.jpg) or not ![Other video](../img/videolink.jpg).  R-related preparation videos ![R logo](../img/Rlogo.png) are all by Prof. Ogle.
-
-----
-
-# Table of Contents
+# Class Materials
 1. [Introduction](#introduction)
 1. [Foundations](#foundations)
 1. [Getting Started with R](#getting-started-with-r)
@@ -23,6 +16,9 @@ Materials to prepare for class and materials used in class are provided below.  
 1. [Inference Concepts](#inference-concepts)
 1. [t-Tests](#t-tests)
 1. [Chi-Square Tests](#chi-square-tests)
+
+----
+Materials to prepare for class and materials used in class are provided below.  Concept-related preparation videos are either by Prof. Ogle ![Ogle Video](../img/dhovid.jpg) or not ![Other video](../img/videolink.jpg).  R-related preparation videos ![R logo](../img/Rlogo.png) are all by Prof. Ogle.
 
 ----
 
