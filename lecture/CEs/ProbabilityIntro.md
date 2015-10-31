@@ -2,11 +2,13 @@
 layout: page
 title: Class Exercise
 subtitle: Probability Introduction
+css: "/css/lecture.css"
 ---
 
 ----
 
 ## Exercise #1 -- Banking Example
+<img src="imgs/associated-bank.jpg" alt="Associated Bank" class="img-right">
 Associated Bank is reviewing its service charges and interest paying policies on checking accounts. The bank has found that the daily balance on personal checking accounts is normally distributed with an average of $550.00 and a standard deviation of $150.00.   In the questions below, suppose that a customer is randomly selected.
 
 1. What is the probability that a personal checking account customer has a daily balance in excess of $800.00?
@@ -16,7 +18,8 @@ Associated Bank is reviewing its service charges and interest paying policies on
 
 ----
 
-## Exercise #1 -- Acorn Example
+## Exercise #2 -- Acorn Example
+<img src="imgs/acorns.jpg" alt="Acorns" class="img-right">
 Supposed that the number of acorns that fall from a mature white oak tree in Bayfield County is normaly distributed with a mean 875 and a standard deviation of 220.
 
 1. What is the probability that an oak tree produces more than 1000 acorns?

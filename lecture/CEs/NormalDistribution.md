@@ -2,11 +2,13 @@
 layout: page
 title: Class Exercise
 subtitle: Normal Distributions
+css: "/css/lecture.css"
 ---
 
 ----
 
 ## Exercise #1 -- Pollen Counts
+<img src="imgs/pollen.jpg" alt="Pollen" class="img-right">
 Suppose that it is known that the distribution of the total weed pollen count (spores per cubic meter of air) for LaCrosse, WI on a day in early September is approximately normal with a mean of 40 and a standard deviation of 8.  [Note that pollen count information is available from [this site](http://www.aaaai.org/nab/index.cfm?p=allergenreport&stationid=28).]
 
 For each questions below (a) identify the type of question (e.g., "forward-left", "reverse-between") and then (b) answer the question.
@@ -21,6 +23,7 @@ For each questions below (a) identify the type of question (e.g., "forward-left"
 ----
 
 ## Exercise #2 -- Driving Speed Example
+<img src="imgs/speedlimit.jpg" alt="Speed Limit" class="img-right">
 A police officer in Kansas has recorded the amount of time it takes cars to travel between two points.  In a large sample of cars he found the mean time to be 2.5 s with a standard deviation of 0.75 s.  Treat these results as if they represent a population and are normally distributed.
 
 For each questions below (a) identify the type of question (e.g., "forward-left", "reverse-between") and then (b) answer the question.
@@ -35,5 +38,5 @@ For each questions below (a) identify the type of question (e.g., "forward-left"
 ----
 
 ## Exercise #3 -- Carpenter Ant Example
-
+<img src="imgs/carpenterant.jpg" alt="Carpenter Ant" class="img-right">
 For each questions below (a) identify the type of question (e.g., "forward-left", "reverse-between") and then (b) answer the question.

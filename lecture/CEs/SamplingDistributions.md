@@ -30,7 +30,7 @@ The level of nitrogen oxides (NOX) in the exhaust of a particular car model is r
 ----
 
 ## Exercise #3 -- Acorn Example
-<img src="imgs/acorns.jpg" alt="Acorns" class="img-right">
+<img src="imgs/acorns2.jpg" alt="Acorns" class="img-right">
 Suppose that it is known that the distribution of lengths of acorns is slightly right-skewed with a mean of 21 mm and a standard deviation of 6 mm.  For each question below identify (a) the distribution that would be used to answer the question, (b) whether the question can be answered or not, (c) specific characteristics of the required distribution, and (d) if appropriate, the answer to the question.
 
 1. What is the probability that an acorn will have a length greater than 25 mm?
