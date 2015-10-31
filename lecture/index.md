@@ -38,7 +38,7 @@ title: Lecture Materials
     * [Slides III](Slides/10_Inference_3_ZTest.pptx)/ [Handouts](HOs/10_InferenceConcepts_HO.pdf)
 1. **t-Tests for Quantiative Data**
     * [Slides](Slides/11_tTests.pptx) / [Handouts](HOs/11_tTests_HO.pdf)
-    * [R Tutorial Videos](../resources/VideosR.html#t--tests-for-quantitative-data)
+    * [R Tutorial Videos](../resources/VideosR.html#t-tests-for-quantitative-data)
 1. **Chi-Square Tests**
     * [Slides](Slides/12_ChiSquareTests_alt.pptx) / [Handouts](HOs/12_ChiSquareTests_HO.pdf)
-    * [R Tutorial Videos](../resources/VideosR.html#chi--square-tests)
+    * [R Tutorial Videos](../resources/VideosR.html#chi-square-tests)
