@@ -3,6 +3,14 @@ layout: page
 title: Lecture Materials
 ---
 
+Materials to prepare for class and materials used in class are provided below.  Concept-related preparation videos are either by Prof. Ogle ![Ogle Video](../img/dhovid.jpg) or not ![Other video](../img/videolink.jpg).  R-related preparation videos ![R logo](../img/Rlogo.png)] are all by Prof. Ogle.
+
+----
+
+
+
+----
+
 ## Introduction
 * [Slides](Slides/01_Foundations_I.pptx)
 * [R Handout](HOs/01_Foundations_HO.pdf)
@@ -27,59 +35,70 @@ title: Lecture Materials
 
 ## Univariate EDA
 * Preparation videos
-    * Histogram Explanation ![YouTube](../img/videolink.jpg) -- [#1](http://youtu.be/sC7gjg9g3JU), [#2](http://youtu.be/H9ITfdaX2ZQ)
-    * Calculate median ![YouTube](../img/videolink.jpg) -- [#1](http://youtu.be/0SYsi38XucI), [#2](http://youtu.be/hTYTaOaQUcw?list=UUAjbU4EB30lTsJ2NSE5a7DQ), [#3](http://youtu.be/9a8M_KfclBE)
-    * Calculate standard deviation ![YouTube](../img/videolink.jpg) -- [#1](http://youtu.be/qqOyy_NjflU), [#2](http://youtu.be/atS4wX8I9H0)
-    * Calculate IQR ![YouTube](../img/videolink.jpg) -- [#1](http://youtu.be/R6VDj7pEG30), [#2](http://youtu.be/F3WcEAW-M80?t=6m6s)
+    * Histogram Explanation -- [#1 ![YouTube](../img/videolink.jpg)](http://youtu.be/sC7gjg9g3JU), [#2 ![YouTube](../img/videolink.jpg)](http://youtu.be/H9ITfdaX2ZQ)
+    * Calculate median -- [#1 ![YouTube](../img/videolink.jpg)](http://youtu.be/0SYsi38XucI), [#2 ![YouTube](../img/videolink.jpg)](http://youtu.be/hTYTaOaQUcw?list=UUAjbU4EB30lTsJ2NSE5a7DQ), [#3 ![YouTube](../img/videolink.jpg)](http://youtu.be/9a8M_KfclBE)
+    * Calculate standard deviation -- [#1 ![YouTube](../img/videolink.jpg)](http://youtu.be/qqOyy_NjflU), [#2 ![YouTube](../img/videolink.jpg)](http://youtu.be/atS4wX8I9H0)
+    * Calculate IQR -- [#1 ![YouTube](../img/videolink.jpg)](http://youtu.be/R6VDj7pEG30), [#2 ![YouTube](../img/videolink.jpg)](http://youtu.be/F3WcEAW-M80?t=6m6s)
     * [Univariate EDA ![R logo](../img/Rlogo.png)](http://www.screenr.com/IGPH)
 * [R Handout](HOs/03_UnivEDA_HO.pdf)
 * [Class Exercises](CEs/UnivariateEDA.html)
 
 ## Normal Distribution
 * Preparation videos
-    * 68-95-99.7 Rule -- [#1](https://www.youtube.com/watch?v=cgxPcdPbujI), [#2](https://www.youtube.com/watch?v=PJPXFOK8F8E)
-
+    * 68-95-99.7 Rule -- [#1 ![YouTube](../img/videolink.jpg)](https://www.youtube.com/watch?v=cgxPcdPbujI), [#2 ![YouTube](../img/videolink.jpg)](https://www.youtube.com/watch?v=PJPXFOK8F8E)
+    * [Forward calculation ![R logo](../img/Rlogo.png)](http://www.screenr.com/e27N)
+    * [Reverse calculation ![R logo](../img/Rlogo.png)](http://www.screenr.com/a27N)
 * [Slides](Slides/04_NormalDistribution.pptx)
 * [R Handouts](HOs/04_NormalDistribution_HO.pdf)
 * [Class Exercises](CEs/NormalDistribution.html)
 
 ## Bivariate EDA
 * Preparation videos
-    * Lecture -- [Videos](../resources/VideosLecture.html#bivariate-eda) / [Slides](Slides/05_BivEDA.pptx)
-    * R -- [Videos](../resources/VideosR.html#bivariate-eda) / [Handouts](HOs/05_BivEDA_HO.pdf)
-    * [Class Exercises](CEs/BivariateEDA.html)
+    * [Scatterplot ![YouTube](../img/videolink.jpg)](https://www.youtube.com/watch?v=yXmz922K9Ks)
+    * [Correlation -- ![YouTube](../img/videolink.jpg)](http://youtu.be/PtYVrF_WT3A?t=32s)
+    * [Bivariate EDA ![R logo](../img/Rlogo.png)](http://www.screenr.com/n4PH)
+* [Slides](Slides/05_BivEDA.pptx)
+* [RHandouts](HOs/05_BivEDA_HO.pdf)
+* [Class Exercises](CEs/BivariateEDA.html)
 
 ## Linear Regression
 * Preparation videos
-    * Lecture -- [Videos](../resources/VideosLecture.html#linear-regression) / [Slides](Slides/06_SimpleLinearRegression.pptx)
-    * R -- [Videos](../resources/VideosR.html#linear-regression) / [Handouts](HOs/06_SimpleLinearRegression_HO.pdf)
-    * [Class Exercises](CEs/SimpleLinearRegression.html)
+    * [Linear Regression ![R logo](../img/Rlogo.png)](http://www.screenr.com/JGPH)
+* [Slides](Slides/06_SimpleLinearRegression.pptx)
+* [RHandouts](HOs/06_SimpleLinearRegression_HO.pdf)
+* [Class Exercises](CEs/SimpleLinearRegression.html)
 
 ## Data Production
 * Preparation videos
-    * Lecture -- [Slides](Slides/07_DataProduction.pptx) / [Handouts](HOs/_HO.pdf)
+* [Slides](Slides/07_DataProduction.pptx)
+* [R Handouts](HOs/_HO.pdf)
 
 ## Probability Introduction
 * Preparation videos
-    * Lecture -- [Slides](Slides/08_ProbabilityIntro.pptx)
-    * [Class Exercises](CEs/ProbabilityIntro.html)
+* [Slides](Slides/08_ProbabilityIntro.pptx)
+* [Class Exercises](CEs/ProbabilityIntro.html)
 
 ## Sampling Distributions
 * Preparation videos
-    * Lecture -- [Slides](Slides/09_SamplingDistributions.pptx)
-    * [Class Exercises](CEs/SamplingDistributions.html)
+* [Slides](Slides/09_SamplingDistributions.pptx)
+* [Class Exercises](CEs/SamplingDistributions.html)
 
 ## Inference Concepts
 * Preparation videos
-    * Lecture -- Slides [I](Slides/10_Inference_1_HypothesisTesting.pptx), [II](Slides/10_Inference_2_ConfidenceRegions.pptx), [III](Slides/10_Inference_3_ZTest.pptx)
-    * R -- [Handouts](HOs/10_InferenceConcepts_HO.pdf)
+* Slides [#I](Slides/10_Inference_1_HypothesisTesting.pptx), [#2](Slides/10_Inference_2_ConfidenceRegions.pptx), [#3](Slides/10_Inference_3_ZTest.pptx)
+* [R Handouts](HOs/10_InferenceConcepts_HO.pdf)
 
 ## t-Tests for Quantiative Data
 * Preparation videos
-    * Lecture -- [Slides](Slides/11_tTests.pptx)
-    * R -- [Videos](../resources/VideosR.html#t-tests-for-quantitative-data) / [Handouts](HOs/11_tTests_HO.pdf)
+    * [1-sample t-test ![R logo](../img/Rlogo.png)](http://www.screenr.com/GXPH)
+    * [2-sample t-test ![R logo](../img/Rlogo.png)](http://www.screenr.com/cCPH)
+* [Slides](Slides/11_tTests.pptx)
+* [R Handouts](HOs/11_tTests_HO.pdf)
 
 ## Chi-Square Tests
 * Preparation videos
-    * Lecture -- [Slides](Slides/12_ChiSquareTests_alt.pptx)
-    * R -- [Videos](../resources/VideosR.html#chi-square-tests) / [Handouts](HOs/12_ChiSquareTests_HO.pdf)
+    * [Goodness-of-fit ![R logo](../img/Rlogo.png)](http://www.screenr.com/JXPH)
+    * Chi-square w/ raw data ([Part 1 ![R logo](../img/Rlogo.png)](http://www.screenr.com/pOPH), [Part 2 ![R logo](../img/Rlogo.png)](http://www.screenr.com/6OPH))
+    * [Chi-square w/ summarized data ![R logo](../img/Rlogo.png)](http://www.screenr.com/Q0PH)
+* [Slides](Slides/12_ChiSquareTests_alt.pptx)
+* [RHandouts](HOs/12_ChiSquareTests_HO.pdf)
