@@ -10,28 +10,28 @@ title: Lecture Materials
 ## Foundations II
 * Preparation videos
     * [IVPPSS ![Ogle video](../img/dhovid.jpg)](https://vimeo.com/user45324800/ncstats-ivppss)
-    * [![Ogle video](../img/dhovid.jpg) Variable Types](https://vimeo.com/user45324800/ncstats-vartypes)
+    * [Variable Types ![Ogle video](../img/dhovid.jpg) ](https://vimeo.com/user45324800/ncstats-vartypes)
     * [Related Slides](Slides/02_Foundations_II.pptx)
 * [Class Exercises](CEs/FoundationsIVPPSS.html)
 
 ## Getting Started with R
 * Preparation videos
-    * [![R logo](../img/rlogo.png) Retrieve data from webpage](https://vimeo.com/user45324800/ncstats-preparedatawebpage)
-    * [![R logo](../img/rlogo.png) Enter own data with Excel](https://vimeo.com/user45324800/ncstats-preparedataexcel)
-    * [![R logo](../img/rlogo.png) Enter own data without Excel](https://vimeo.com/user45324800/ncstats-preparedatatextfile)
-    * [![R logo](../img/rlogo.png) Load data into RStudio](https://vimeo.com/user45324800/ncstats-loadcsvrstudio)
-    * [![R logo](../img/rlogo.png) Subset a data.frame with filterD()](https://vimeo.com/user45324800/filterd)
-    * [![R logo](../img/rlogo.png) Subset a data.frame with Subset()](http://www.screenr.com/z27N)
+    * [Retrieve data from webpage ![R logo](../img/Rlogo.png)](https://vimeo.com/user45324800/ncstats-preparedatawebpage)
+    * [Enter own data with Excel ![R logo](../img/Rlogo.png)](https://vimeo.com/user45324800/ncstats-preparedataexcel)
+    * [Enter own data without Excel ![R logo](../img/Rlogo.png)](https://vimeo.com/user45324800/ncstats-preparedatatextfile)
+    * [Load data into RStudio ![R logo](../img/Rlogo.png)](https://vimeo.com/user45324800/ncstats-loadcsvrstudio)
+    * [Subset a data.frame with filterD() ![R logo](../img/Rlogo.png)](https://vimeo.com/user45324800/filterd)
+    * [Subset a data.frame with Subset() ![R logo](../img/Rlogo.png)](http://www.screenr.com/z27N)
 * [R Handout](HOs/02_FoundationsR_HO.pdf)
 * [Class Exercises](CEs/FoundationsR.html)
 
 ## Univariate EDA
 * Preparation videos
-    * ![youtube](../img/videolink.jpg) Histogram Explanation -- [#1](http://youtu.be/sC7gjg9g3JU), [#2](http://youtu.be/H9ITfdaX2ZQ)
-    * ![youtube](../img/videolink.jpg) Calculate median -- [#1](http://youtu.be/0SYsi38XucI), [#2](http://youtu.be/hTYTaOaQUcw?list=UUAjbU4EB30lTsJ2NSE5a7DQ), [#3](http://youtu.be/9a8M_KfclBE)
-    * ![youtube](../img/videolink.jpg) Calculate Standard Deviation -- [#1](http://youtu.be/qqOyy_NjflU), [#2](http://youtu.be/atS4wX8I9H0)
-    * ![youtube](../img/videolink.jpg) Calculate IQR -- [#1](http://youtu.be/R6VDj7pEG30), [#2](http://youtu.be/F3WcEAW-M80?t=6m6s)
-    * [![R logo](../img/rlogo.png) Univariate EDA](http://www.screenr.com/IGPH)
+    * Histogram Explanation ![YouTube](../img/videolink.jpg) -- [#1](http://youtu.be/sC7gjg9g3JU), [#2](http://youtu.be/H9ITfdaX2ZQ)
+    * Calculate median ![YouTube](../img/videolink.jpg) -- [#1](http://youtu.be/0SYsi38XucI), [#2](http://youtu.be/hTYTaOaQUcw?list=UUAjbU4EB30lTsJ2NSE5a7DQ), [#3](http://youtu.be/9a8M_KfclBE)
+    * Calculate standard deviation ![YouTube](../img/videolink.jpg) -- [#1](http://youtu.be/qqOyy_NjflU), [#2](http://youtu.be/atS4wX8I9H0)
+    * Calculate IQR ![YouTube](../img/videolink.jpg) -- [#1](http://youtu.be/R6VDj7pEG30), [#2](http://youtu.be/F3WcEAW-M80?t=6m6s)
+    * [Univariate EDA ![R logo](../img/Rlogo.png)](http://www.screenr.com/IGPH)
 * [R Handout](HOs/03_UnivEDA_HO.pdf)
 * [Class Exercises](CEs/UnivariateEDA.html)
 
