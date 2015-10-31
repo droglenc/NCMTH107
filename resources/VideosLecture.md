@@ -4,7 +4,10 @@ title: Lecture Support Videos
 ---
 
 ----
-Videos by Professor Ogle (![dhovid](../img/dhovid.jpg)) or available on YouTube (![youtube](../img/youtube.jpg)) to support class lectures.  Click the icon to see the video.
+
+Videos by Professor Ogle or available on YouTube to support class lectures.  Click the icon to see the video.
+
+<div class="text-align: center;"><img src="../img/dhovid.jpg" alt="Ogle Video"> = Prof. Ogle video, <img src="../img/youtube.jpg" alt="Ogle Video"> = YouTube video</div>
 
 ----
 
@@ -18,7 +21,7 @@ Videos by Professor Ogle (![dhovid](../img/dhovid.jpg)) or available on YouTube 
 ## Univariate EDA
 * Histogram Explanation -- [![youtube](../img/youtube.jpg)](http://youtu.be/sC7gjg9g3JU), [![youtube](../img/youtube.jpg)](http://youtu.be/H9ITfdaX2ZQ)
 * Calculate median -- [![youtube](../img/youtube.jpg)](http://youtu.be/0SYsi38XucI), [![youtube](../img/youtube.jpg)](http://youtu.be/hTYTaOaQUcw?list=UUAjbU4EB30lTsJ2NSE5a7DQ), [![youtube](../img/youtube.jpg)](http://youtu.be/9a8M_KfclBE)
-* Calculate Standard Deviation -- [![youtube](../img/youtube.jpg)]([Ex 1](http://youtu.be/qqOyy_NjflU), [![youtube](../img/youtube.jpg)](http://youtu.be/atS4wX8I9H0)
+* Calculate Standard Deviation -- [![youtube](../img/youtube.jpg)](http://youtu.be/qqOyy_NjflU), [![youtube](../img/youtube.jpg)](http://youtu.be/atS4wX8I9H0)
 * Calculate IQR -- [![youtube](../img/youtube.jpg)](http://youtu.be/R6VDj7pEG30), [![youtube](../img/youtube.jpg)](http://youtu.be/F3WcEAW-M80?t=6m6s))
 
 ## Normal Distribution
