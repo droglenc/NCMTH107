@@ -11,19 +11,19 @@ title: Lecture Materials
     * R - [Video](../resources/VideosR.html#getting-started-with-r) / [Handout](HOs/02_FoundationsR_HO.pdf)
     * [Class Exercises](CEs/02_FoundationsR_CE.pdf)
 1. **Univariate EDA**
-    * Lecture -- [Videos](../resources/VideosR.html#univariate-eda) / [Slides](Slides/03_UnivEDA.pptx)
+    * Lecture -- [Videos](../resources/VideosLecture.html#univariate-eda) / [Slides](Slides/03_UnivEDA.pptx)
     * R -- [Videos](../resources/VideosR.html#univariate-eda) / [Handout](HOs/03_UnivEDA_HO.pdf)
     * [Class Exercises](CEs/03_UnivEDA_CE.pdf)
 1. **Normal Distribution**
-    * Lecture -- [Videos](../resources/VideosR.html#normal-distribution) / [Slides](Slides/04_NormalDistribution.pptx)
+    * Lecture -- [Videos](../resources/VideosLecture.html#normal-distribution) / [Slides](Slides/04_NormalDistribution.pptx)
     * R -- [Videos](../resources/VideosR.html#normal-distribution) / [Handouts](HOs/04_NormalDistribution_HO.pdf)
     * [Class Exercises](CEs/04_NormalDistribution_CE.pdf)
 1. **Bivariate EDA**
-    * Lecture -- [Videos](../resources/VideosR.html#bivariate-eda) / [Slides](Slides/05_BivEDA.pptx)
+    * Lecture -- [Videos](../resources/VideosLecture.html#bivariate-eda) / [Slides](Slides/05_BivEDA.pptx)
     * R -- [Videos](../resources/VideosR.html#bivariate-eda) / [Handouts](HOs/05_BivEDA_HO.pdf)
     * [Class Exercises](CEs/05_BivEDA_CE.pdf)
 1. **Linear Regression**
-    * Lecture -- [Videos](../resources/VideosR.html#linear-regression) / [Slides](Slides/06_SimpleLinearRegression.pptx)
+    * Lecture -- [Videos](../resources/VideosLecture.html#linear-regression) / [Slides](Slides/06_SimpleLinearRegression.pptx)
     * R -- [Videos](../resources/VideosR.html#linear-regression) / [Handouts](HOs/06_SimpleLinearRegression_HO.pdf)
     * [Class Exercises](CEs/06_SimpleLinearRegression_CE.pdf)
 1. **Data Production**
