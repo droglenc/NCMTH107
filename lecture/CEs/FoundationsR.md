@@ -27,9 +27,9 @@ Use this information to answer the following questions.  Use R to answer all que
 1. What data was recorded for the seventeenth individual?
 1. What data was recorded for the seventh, seventeenth, and twenty-seventh individuals?
 1. Isolate the following subsets of data (show the structure or a view of the resultant data frame to verify your results).
-    a. Only CWD at low-exposure sites.
-    b. Only CWD where the diameter was greater than 20 cm.
-    c. Only CWD where the diameter was greater than 20 cm and was observed in low-exposure sites.
-    d.Only CWD where the diameter was between 20 and 30 cm.
+    * Only CWD at low-exposure sites.
+    * Only CWD where the diameter was greater than 20 cm.
+    * Only CWD where the diameter was greater than 20 cm and was observed in low-exposure sites.
+    * Only CWD where the diameter was between 20 and 30 cm.
 
 ----
