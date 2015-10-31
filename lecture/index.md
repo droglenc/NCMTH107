@@ -7,10 +7,10 @@ title: Lecture Materials
     * Lecture I -- [Slides](Slides/01_Foundations_I.pptx)
     * R I -- [Handout](HOs/01_Foundations_HO.pdf)
     * Lecture II -- [Videos](../resources/VideosR.html#foundations) / [Slides](Slides/02_Foundations_II.pptx)
-    * [Class Exercises](FoundationIVPPSS.html)
+    * [Class Exercises](CEs/FoundationsIVPPSS.html)
 1. **Getting Started with R**
     * R - [Video](../resources/VideosR.html#getting-started-with-r) / [Handout](HOs/02_FoundationsR_HO.pdf)
-    * [Class Exercises](CEs/02_FoundationsR_CE.pdf)
+    * [Class Exercises](CEs/FoundationsR.html)
 1. **Univariate EDA**
     * Lecture -- [Videos](../resources/VideosLecture.html#univariate-eda) / [Slides](Slides/03_UnivEDA.pptx)
     * R -- [Videos](../resources/VideosR.html#univariate-eda) / [Handout](HOs/03_UnivEDA_HO.pdf)
