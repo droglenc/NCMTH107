@@ -5,9 +5,9 @@ title: Lecture Support Videos
 
 ----
 
-Videos by Professor Ogle or available on YouTube to support class lectures.  Click the icon to see the video.
+Click an icon below to see the video.
 
-<div class="text-align: center;"><img src="../img/dhovid.jpg" alt="Ogle Video"> = Prof. Ogle video, <img src="../img/youtube.jpg" alt="Ogle Video"> = YouTube video</div>
+<p class="text-align: center;"><img src="../img/dhovid.jpg" alt="Ogle Video"> = Prof. Ogle video, <img src="../img/youtube.jpg" alt="Ogle Video"> = YouTube video</p>
 
 ----
 
