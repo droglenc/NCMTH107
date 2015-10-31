@@ -27,13 +27,13 @@ A climatologist wanted to determine the average amount of snow for December in D
 ## Types of Variables
 
 1. Fully describe the type of variable for each variable below.
-    * miles driven per week
-    * type of vehicle (e.g., SUV, …)
-    * signs of disease or not (Y/N)
-    * number of fleas found per rabbit
-    * relative health of a rabbit (poor, good, excellent)
-    * species of rabbit
-    * number of correct answers
+    1. miles driven per week
+    1. type of vehicle (e.g., SUV, …)
+    1. signs of disease or not (Y/N)
+    1. number of fleas found per rabbit
+    1. relative health of a rabbit (poor, good, excellent)
+    1. species of rabbit
+    1. number of correct answers
 2. Describe a variable that is of interest to you for each type of variable (i.e., make up your own variable for each type of variable).
 
 ----
