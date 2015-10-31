@@ -2,20 +2,13 @@
 layout: page
 title: Class Exercise
 subtitle: Sampling Distributions
+css: "../../css/lecture.css"
 ---
-<style>
-img {
-   display: inline-block;
-   margin: 0px 0px  40px 20px;
-   float: right;
-   width: 200px;
-}
-</style>
 
 ----
 
 ## Exercise #1 -- Sleep Example
-<img src="imgs/melatonin.png" alt="melatonin">
+<img src="imgs/melatonin.png" alt="melatonin" class="img-right">
 MIT researchers examined the effect of [melatonin](http://www.webmd.com/sleep-disorders/tc/melatonin-overview) on sleep.  Suppose that we know that men given a placebo fell asleep according to a N(15,5) distribution.  For each question below identify (a) the distribution that would be used to answer the question, (b) whether the question can be answered or not, (c) specific characteristics of the required distribution, and (d) if appropriate, the answer to the question.
 
 1. What is the probability, with 4 randomly selected men, of observing a mean of more than 12 mins?
@@ -25,7 +18,7 @@ MIT researchers examined the effect of [melatonin](http://www.webmd.com/sleep-di
 ----
 
 ## Exercise #2 -- Pollutants in Auto Exhaust Example
-<img src="imgs/exhaust.jpg" alt="Exhaust">
+<img src="imgs/exhaust.jpg" alt="Exhaust" class="img-right">
 The level of nitrogen oxides (NOX) in the exhaust of a particular car model is right-skewed with a mean of 0.9 grams per mile (g/mi) and a standard deviation of 0.15 g/mi.  For each question below identify (a) the distribution that would be used to answer the question, (b) whether the question can be answered or not, (c) specific characteristics of the required distribution, and (d) if appropriate, the answer to the question.
 
 1. What is the probability that a car will have a NOX greater than 1 g/mi?
@@ -37,7 +30,7 @@ The level of nitrogen oxides (NOX) in the exhaust of a particular car model is r
 ----
 
 ## Exercise #3 -- Acorn Example
-<img src="imgs/acorns.jpg" alt="Exhaust">
+<img src="imgs/acorns.jpg" alt="Acorns" class="img-right">
 Suppose that it is known that the distribution of lengths of acorns is slightly right-skewed with a mean of 21 mm and a standard deviation of 6 mm.  For each question below identify (a) the distribution that would be used to answer the question, (b) whether the question can be answered or not, (c) specific characteristics of the required distribution, and (d) if appropriate, the answer to the question.
 
 1. What is the probability that an acorn will have a length greater than 25 mm?
@@ -49,7 +42,7 @@ Suppose that it is known that the distribution of lengths of acorns is slightly 
 ----
 
 ## Exercise #4 -- People in Car Example
-<img src="imgs/carpooling.jpg" alt="Exhaust">
+<img src="imgs/carpooling.jpg" alt="car pooling" class="img-right">
 A study of rush-hour traffic in San Francisco counted the number of people in a car entering a freeway at a suburban interchange.  Suppose that, in the population, this count has a mean of 1.5 people with a standard deviation of 0.75.
 
 1. Do you expect this count to follow a normal distribution?  What are two pieces of evidence to support your answer?
@@ -61,7 +54,7 @@ A study of rush-hour traffic in San Francisco counted the number of people in a 
 ----
 
 ## Exercise #5 -- Plowing Snow Example
-<img src="imgs/snowplow.jpg" alt="Exhaust">
+<img src="imgs/snowplow.jpg" alt="Snow plowing" class="img-right">
 Supposed that it is know that the distribution of times spent plowing a city block on snow days is right-skewed with a mean of 45 seconds and a standard deviation of 28 seconds.
 
 1. What is the probability that in a sample of 5 blocks that the mean is greater than 60 seconds?
