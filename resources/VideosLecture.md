@@ -5,9 +5,7 @@ title: Lecture Support Videos
 
 ----
 
-Click an icon below to see the video.
-
-<p class="text-align: center;"><img src="../img/dhovid.jpg" alt="Ogle Video"> = Prof. Ogle video, <img src="../img/youtube.jpg" alt="Ogle Video"> = YouTube video</p>
+Click an icon below to see the video -- ![Ogle Video](../img/dhovid.jpg) = Prof. Ogle and ![YouYube video](../img/youtube.jpg) = YouTube.</p>
 
 ----
 
