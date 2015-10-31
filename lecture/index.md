@@ -7,6 +7,7 @@ title: Lecture Materials
     * Lecture I -- [Slides](Slides/01_Foundations_I.pptx)
     * R I -- [Handout](HOs/01_Foundations_HO.pdf)
     * Lecture II -- [Videos](../resources/VideosR.html#foundations) / [Slides](Slides/02_Foundations_II.pptx)
+    * [Class Exercises](FoundationIVPPSS.html)
 1. **Getting Started with R**
     * R - [Video](../resources/VideosR.html#getting-started-with-r) / [Handout](HOs/02_FoundationsR_HO.pdf)
     * [Class Exercises](CEs/02_FoundationsR_CE.pdf)
