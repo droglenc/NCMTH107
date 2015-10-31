@@ -19,8 +19,8 @@ Load these data into R to answer the questions below.  [Note that these are the 
 1. In terms of the variables of this problem, what is the equation of the best-fit line?
 1. In terms of the variables of this problem, INTERPRET the value of the slope?
 1. In terms of the variables of this problem, INTERPRET the value of the y-intercept?
-1. What is the predicted IBI for an impervious surface percentage of 80\%?
-1. What is the predicted IBI for an impervious surface percentage of 20\%?
+1. What is the predicted IBI for an impervious surface percentage of 80%?
+1. What is the predicted IBI for an impervious surface percentage of 20%?
 1. What is the residual if the impervious surface percentage is 30 and the IBI is 20?
 1. What is the correlation coefficient between IBI and the percentage of impervious surface?
 1. What proportion of the variability in IBI is explained by knowing the percentage of impervious surface?

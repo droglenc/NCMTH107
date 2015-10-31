@@ -22,7 +22,7 @@ Load these data into R to answer the questions below.
 
 ----
 
-## Exercise #1 -- Tree Stand Example
+## Exercise #2 -- Tree Stand Example
 Hely *et al.* (2000; Journal of Vegetation Science 11:813-824) examined the effects of stand composition on fire hazard in mixed-wood Canadian boreal forests.  Two variables that they recorded for each stand were stand type (`sttype`, where `d`=deciduous, `c`=coniferous, `mc`=mixed coniferous, and `md`=mixed deciduous) and the time since the last fire (`tslf`) which was treated as a categorical variable with the categories corresponding to 100 year blocks of time (i.e., `0-100`, `100-200`, etc.).  These data may be found in [Fire.csv](https://github.com/droglenc/NCData/blob/master/Fire.csv) on the class data repository.  Load these data into R ([see videos here](../../resources/VideosR.html#getting-started-with-r)), **refactor** `sttype` so that the `c` and `d` levels are ordered at the ends (i.e., so that the categories are arranged from mostly coniferous to mostly deciduous), and create appropriate tables to answer the following questions.
 
 1. How many stands last had a fire between 200 and 300 years ago?
