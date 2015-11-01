@@ -24,7 +24,7 @@ Materials to prepare for class and materials used in class are provided below.  
 
 ## Introduction
 * [Slides](Slides/01_Foundations_I.pptx)
-* R Handout -- [Web](HOs/Foundations.html), [Word](HOs/Foundations.docx)
+* R Handout -- [Web](HOs/Foundations.html), [Word](HOs/Foundations.docx), [Script](HOs/Foundations.R)
 
 ## Foundations
 * Preparation videos

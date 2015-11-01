@@ -1,70 +1,31 @@
----
-title: "Introduction"
-author: "Derek H. Ogle"
-output:
-  html_document:
-    fig_width: 3.5
-    highlight: tango
-    self_contained: no
-  word_document:
-    fig_width: 3.5
-    highlight: pygments
----
-
-```{r echo=FALSE, results='hide', message='FALSE'}
 source("../../rhelpers/knitr_setup.R")
-```
 
-
-```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs"); source("../../rhelpers/rhelpers.R")
 fnm <-"Foundations"
 modHTML(fnm)
-```
 
-## Always First Command
-```{r echo=-2, results='hide', message=FALSE, warning=FALSE}
 library(NCStats)
 data(ABCens90)
-```
 
-## Sample Ashland-Bayfield County Residents
-```{r results='hide'}
 data(ABCens90)
 ( smp1 <- srsdf(ABCens90,50) )
-```
 
-## Summarize the Sample
-```{r results='hide'}
 Summarize(~age,data=smp1,digits=1)
 Summarize(~sex,data=smp1)
-```
 
-
-## Take and Summarize A Second Sample
-```{r results='hide'}
 ( smp2 <- srsdf(ABCens90,50) )
 Summarize(~age,data=smp2,digits=1)
 Summarize(~sex,data=smp2)
-```
 
-## The Truth
-```{r}
 Summarize(~age,data=ABCens90,digits=1)
 Summarize(~sex,data=ABCens90)
-```
 
-## Lots of Samples from Ashland-Bayfield County Residents
-```{r echo=FALSE, results='hide', par1=TRUE}
 set.seed(14787834)
 hist(~replicate(1000,mean(srsdf(ABCens90,50)$age)),xlab="Mean Age",main="",col="gray90",breaks=15)
 abline(v=mean(ABCens90$age),lwd=2,lty=2)
 hist(~replicate(1000,Summarize(srsdf(ABCens90,50)$sex)["male","perc"]),xlab="Percent Male",main="",col="gray90",breaks=15)
 abline(v=Summarize(ABCens90$sex)["male","perc"],lwd=2,lty=2)
-```
 
-```{r echo=FALSE, results="hide"}
-purl2(paste0(fnm,".Rmd"))
-```
 
+# Script created at 2015-10-31 19:10:39
