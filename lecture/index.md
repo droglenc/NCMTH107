@@ -41,7 +41,7 @@ Materials to prepare for class and materials used in class are provided below.  
     * [Load data into RStudio ![R logo](../img/Rlogo.png)](https://vimeo.com/user45324800/ncstats-loadcsvrstudio)
     * [Subset a data.frame with filterD() ![R logo](../img/Rlogo.png)](https://vimeo.com/user45324800/filterd)
     * [Subset a data.frame with Subset() ![R logo](../img/Rlogo.png)](http://www.screenr.com/z27N)
-* [R Handout](HOs/02_FoundationsR_HO.pdf)
+* R Handout -- [Web](HOs/FoundationsR.html), [Word](HOs/FoundationsR.docx), [Script](HOs/FoundationsR.R)
 * [Class Exercises](CEs/FoundationsR.html)
 
 ## Univariate EDA
