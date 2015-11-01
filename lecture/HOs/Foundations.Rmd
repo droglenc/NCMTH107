@@ -2,13 +2,14 @@
 title: "Introduction"
 author: "Derek H. Ogle"
 output:
-  word_document: 
+  html_document:
+    fig_width: 3.5
+    highlight: tango
+    self_contained: no
+  word_document:
     fig_height: 3
     fig_width: 4.5
     highlight: pygments
-  html_document:
-    fig_width: 3.5
-    self_contained: no
 ---
 
 ```{r echo=FALSE, results='hide', message='FALSE'}
