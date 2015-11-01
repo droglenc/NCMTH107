@@ -13,7 +13,7 @@ title: Class Materials
   font-size:14px;
   padding:10px 5px;
   border-style:solid;
-  border-width:0px;
+  border-width:2px;
   overflow:hidden;
   word-break:normal;
 }
@@ -23,42 +23,38 @@ title: Class Materials
   font-weight:normal;
   padding:10px 5px;
   border-style:solid;
-  border-width:0px;
+  border-width:2px;
   overflow:hidden;
   word-break:normal;
 }
-.tg .tg-u1yq{
+.tg .tg-hdrrow{
   font-weight:bold;
   background-color:#c0c0c0;
   text-align:center;
   vertical-align:top
 }
-.tg .tg-baqh{
-  text-align:center;
+.tg .tg-leftcol{
+  background-color:#c0c0c0;
+  text-align:left;
   vertical-align:top
 }
-.tg .tg-i81m{
-  background-color:#ffffff;
+.tg .tg-cell{
   text-align:center;
-  vertical-align:top
-}
-.tg .tg-3we0{
-  background-color:#ffffff;
-  vertical-align:top
+  vertical-align:center
 }
 </style>
 
 <table class="tg">
   <tr>
-    <th class="tg-u1yq">Module<br></th>
-    <th class="tg-u1yq">Slides<br></th>
-    <th class="tg-u1yq">Handouts<br></th>
-    <th class="tg-u1yq">Exercises<br></th>
+    <th class="tg-hdrrow">Module<br></th>
+    <th class="tg-hdrrow">Slides<br></th>
+    <th class="tg-hdrrow">Handouts<br></th>
+    <th class="tg-hdrrow">Exercises<br></th>
   </tr>
   <tr>
-    <td class="tg-baqh">Introduction<br></td>
-    <td class="tg-i81m"><a href="Slides/01_Foundations_I.pptx"><img src="../img/ppt.png" alt="MSPowerPoint"></a></td>
-    <td class="tg-i81m"><a href="HOs/Foundations.html"><img src="../img/web.png" alt="Webpage"></a> <a href="HOs/Foundations.pdf"><img src="../img/pdf.png" alt="PDF"></a> <a href="HOs/Foundations.docx"><img src="../img/word.png" alt="MSWord"></a> <a href="HOs/Foundations.R"><img src="../img/script.png" alt="R Script"></a></td>
-    <td class="tg-3we0"> -- </td>
+    <td class="tg-leftcol">Introduction<br></td>
+    <td class="tg-cell"><a href="Slides/01_Foundations_I.pptx"><img src="../img/ppt.png" alt="MSPowerPoint"></a></td>
+    <td class="tg-cell"><a href="HOs/Foundations.html"><img src="../img/web.png" alt="Webpage"></a> <a href="HOs/Foundations.pdf"><img src="../img/pdf.png" alt="PDF"></a> <a href="HOs/Foundations.docx"><img src="../img/word.png" alt="MSWord"></a> <a href="HOs/Foundations.R"><img src="../img/script.png" alt="R Script"></a></td>
+    <td class="tg-cell"> -- </td>
   </tr>
 </table>
