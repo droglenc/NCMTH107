@@ -46,10 +46,10 @@ title: Class Materials
 <table class="tg">
   <tr>
     <th class="tg-hdrrow">Module<br></th>
-    <th class="tg-hdrrow" style="width:150px;">Prep Videos<br></th>
-    <th class="tg-hdrrow" style="width:150px;">Slides<br></th>
-    <th class="tg-hdrrow" style="width:150px;">Handouts<br></th>
-    <th class="tg-hdrrow" style="width:150px;">Exercises<br></th>
+    <th class="tg-hdrrow" style="width:140px;">Prep Videos<br></th>
+    <th class="tg-hdrrow" style="width:140px;">Slides<br></th>
+    <th class="tg-hdrrow" style="width:140px;">Handouts<br></th>
+    <th class="tg-hdrrow" style="width:140px;">Exercises<br></th>
   </tr>
   
   <tr>
@@ -82,6 +82,30 @@ title: Class Materials
     <td class="tg-cell"><a href="Slides/03_UnivEDA.pptx"><img src="../img/ppt.png" alt="MSPowerPoint"></a></td>
     <td class="tg-cell"><a href="HOs/UnivEDA.html"><img src="../img/web.png" alt="Webpage"></a> <a href="HOs/UnivEDA.pdf"><img src="../img/pdf.png" alt="PDF"></a> <a href="HOs/UnivEDA.docx"><img src="../img/word.png" alt="MSWord"></a> <a href="HOs/UnivEDA.R"><img src="../img/script.png" alt="R Script"></a></td>
     <td class="tg-cell"> <a href="CEs/UnivariateEDA.html"><img src="../img/web.png" alt="Webpage"></a> </td>
+  </tr>
+  
+  <tr>
+    <td class="tg-leftcol">Normal Distributions<br></td>
+    <td class="tg-cell"><a href="#normal-distributions"><img src="../img/downarrow.png" alt="Jump to Prep Videos"></a></td>
+    <td class="tg-cell"><a href="Slides/04_NormalDistribution.pptx"><img src="../img/ppt.png" alt="MSPowerPoint"></a></td>
+    <td class="tg-cell"><a href="HOs/NormalDistribution.html"><img src="../img/web.png" alt="Webpage"></a> <a href="HOs/NormalDistribution.pdf"><img src="../img/pdf.png" alt="PDF"></a> <a href="HOs/NormalDistribution.docx"><img src="../img/word.png" alt="MSWord"></a> <a href="HOs/NormalDistribution.R"><img src="../img/script.png" alt="R Script"></a></td>
+    <td class="tg-cell"> <a href="CEs/NormalDistribution.html"><img src="../img/web.png" alt="Webpage"></a> </td>
+  </tr>
+  
+  <tr>
+    <td class="tg-leftcol">Bivariate EDA<br></td>
+    <td class="tg-cell"><a href="#bivariate-eda"><img src="../img/downarrow.png" alt="Jump to Prep Videos"></a></td>
+    <td class="tg-cell"><a href="Slides/05_BivEDA.pptx"><img src="../img/ppt.png" alt="MSPowerPoint"></a></td>
+    <td class="tg-cell"><a href="HOs/BivEDA.html"><img src="../img/web.png" alt="Webpage"></a> <a href="HOs/BivEDA.pdf"><img src="../img/pdf.png" alt="PDF"></a> <a href="HOs/BivEDA.docx"><img src="../img/word.png" alt="MSWord"></a> <a href="HOs/BivEDA.R"><img src="../img/script.png" alt="R Script"></a></td>
+    <td class="tg-cell"> <a href="CEs/BivariateEDA.html"><img src="../img/web.png" alt="Webpage"></a> </td>
+  </tr>
+  
+  <tr>
+    <td class="tg-leftcol">Linear Regression<br></td>
+    <td class="tg-cell"><a href="http://www.screenr.com/JGPH"><img src="../img/Rlogo.png" alt="R Tutorial Video"></a></td>
+    <td class="tg-cell"><a href="Slides/06_SimpleLinearRegression.pptx"><img src="../img/ppt.png" alt="MSPowerPoint"></a></td>
+    <td class="tg-cell"><a href="HOs/SimpleLinearRegression.html"><img src="../img/web.png" alt="Webpage"></a> <a href="HOs/SimpleLinearRegression.pdf"><img src="../img/pdf.png" alt="PDF"></a> <a href="HOs/SimpleLinearRegression.docx"><img src="../img/word.png" alt="MSWord"></a> <a href="HOs/SimpleLinearRegression.R"><img src="../img/script.png" alt="R Script"></a></td>
+    <td class="tg-cell"> <a href="CEs/SimpleLinearRegression.html"><img src="../img/web.png" alt="Webpage"></a> </td>
   </tr>
   
 </table>
