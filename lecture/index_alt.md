@@ -134,6 +134,33 @@ See [class preparation videos below](#preparation-videos).
     <td class="tg-cell">--</td>
     <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-uedac"><img src="../img/Rlogo.png" alt="R Tutorial"></a></td>
   </tr>
+
+  <tr>
+    <td class="tg-leftcol" rowspan="2">Normal Distribution</td>
+    <td class="tg-leftcol">68-95-99.7 Rule</td>
+    <td class="tg-cell"><a href="https://www.youtube.com/watch?v=cgxPcdPbujI"><img src="../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/watch?v=PJPXFOK8F8E"><img src="../img/videolink.png" alt="YouTube"></a></td>
+    <td class="tg-cell"> -- </td>
+  </tr><tr>
+    <td class="tg-leftcol">Forward Calculations</td>
+    <td class="tg-cell"> -- </td>
+    <td class="tg-cell"><a href="http://www.screenr.com/e27N"><img src="../img/Rlogo.png" alt="R Tutorial"></a></td>
+  </tr><tr>
+    <td class="tg-leftcol">Reverse Calculations</td>
+    <td class="tg-cell"> -- </td>
+    <td class="tg-cell"><a href="http://www.screenr.com/a27N"><img src="../img/Rlogo.png" alt="R Tutorial"></a></td>
+  </tr>
+
+  <tr>
+    <td class="tg-leftcol" rowspan="2">Bivariate EDA</td>
+    <td class="tg-leftcol">Scatterplots</td>
+    <td class="tg-cell"><a href="https://www.youtube.com/watch?v=yXmz922K9Ks"><img src="../img/videolink.png" alt="YouTube"></a></td>
+    <td class="tg-cell" rowspan="2"><a href="http://www.screenr.com/n4PH"><img src="../img/Rlogo.png" alt="R Tutorial"></a></td>
+  </tr><tr>
+    <td class="tg-leftcol">Correlation</td>
+    <td class="tg-cell"><a href="http://youtu.be/PtYVrF_WT3A?t=32s"><img src="../img/videolink.png" alt="YouTube"></a></td>
+  </tr>
+
+
 </table>
 
 
