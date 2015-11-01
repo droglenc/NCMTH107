@@ -80,6 +80,7 @@ See [class preparation videso below](#preparation-videos).
     <td class="tg-leftcol" rowspan="2">Foundations</td>
     <td class="tg-cell">IVPPSS</td>
     <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-ivppss"><img src="../img/dhovid.png" alt="Ogle Lecture"></a></td>
+  </tr><tr>
     <td class="tg-cell">Variable Types</td>
     <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-vartypes"><img src="../img/dhovid.png" alt="Ogle Lecture"></a></td>
   </tr>
