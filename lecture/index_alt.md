@@ -79,58 +79,58 @@ See [class preparation videos below](#preparation-videos).
   
   <tr>
     <td class="tg-leftcol" rowspan="2">Foundations</td>
-    <td class="tg-cell">IVPPSS</td>
+    <td class="tg-leftcol">IVPPSS</td>
     <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-ivppss"><img src="../img/dhovid.png" alt="Ogle Lecture"></a></td>
     <td class="tg-cell"> -- </td>
   </tr><tr>
-    <td class="tg-cell">Variable Types</td>
+    <td class="tg-leftcol">Variable Types</td>
     <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-vartypes"><img src="../img/dhovid.png" alt="Ogle Lecture"></a></td>
     <td class="tg-cell"> -- </td>
   </tr>
 
   <tr>
     <td class="tg-leftcol" rowspan="6">Getting Started with R</td>
-    <td class="tg-cell">Retrieve data from webpage</td>
+    <td class="tg-leftcol">Retrieve data from webpage</td>
     <td class="tg-cell"> -- </td>
     <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-preparedatawebpage"><img src="../img/Rlogo.png" alt="R Tutorial"></a></td>
   </tr><tr>
-    <td class="tg-cell">Enter own data (using Excel)</td>
+    <td class="tg-leftcol">Enter own data (using Excel)</td>
     <td class="tg-cell"> -- </td>
     <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-preparedataexcel"><img src="../img/Rlogo.png" alt="R Tutorial"></a></td>
   </tr><tr>
-    <td class="tg-cell">Enter own data (not using Excel)</td>
+    <td class="tg-leftcol">Enter own data (not using Excel)</td>
     <td class="tg-cell"> -- </td>
     <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-preparedatatextfile"><img src="../img/Rlogo.png" alt="R Tutorial"></a></td>
   </tr><tr>
-    <td class="tg-cell">Load data into RStudio</td>
+    <td class="tg-leftcol">Load data into RStudio</td>
     <td class="tg-cell"> -- </td>
     <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-loadcsvrstudio"><img src="../img/Rlogo.png" alt="R Tutorial"></a></td>
   </tr><tr>
-    <td class="tg-cell">Subset data.frame with filterD</td>
+    <td class="tg-leftcol">Subset data.frame with filterD</td>
     <td class="tg-cell"> -- </td>
     <td class="tg-cell"><a href="https://vimeo.com/user45324800/filterd"><img src="../img/Rlogo.png" alt="R Tutorial"></a></td>
   </tr><tr>
-    <td class="tg-cell">Subset data.frame with Subset</td>
+    <td class="tg-leftcol">Subset data.frame with Subset</td>
     <td class="tg-cell"> -- </td>
     <td class="tg-cell"><a href="http://www.screenr.com/z27N"><img src="../img/Rlogo.png" alt="R Tutorial"></a></td>
   </tr>
   
   <tr>
     <td class="tg-leftcol" rowspan="5">Univarite EDA</td>
-    <td class="tg-cell">Construct Histograms</td>
+    <td class="tg-leftcol">Construct Histograms</td>
     <td class="tg-cell"><a href="http://youtu.be/sC7gjg9g3JU"><img src="../img/videolink.png" alt="YouTube"></a> <a href="http://youtu.be/H9ITfdaX2ZQ"><img src="../img/videolink.png" alt="YouTube"></a></td>
     <td class="tg-cell" rowspan="4"><a href=""><img src="../img/Rlogo.png" alt="R Tutorial"></a></td>
   </tr><tr>
-    <td class="tg-cell">Calculate Median</td>
+    <td class="tg-leftcol">Calculate Median</td>
     <td class="tg-cell"><a href="http://youtu.be/0SYsi38XucI"><img src="../img/videolink.png" alt="YouTube"></a> <a href="http://youtu.be/hTYTaOaQUcw?list=UUAjbU4EB30lTsJ2NSE5a7DQ"><img src="../img/videolink.png" alt="YouTube"></a> <a href="http://youtu.be/9a8M_KfclBE"><img src="../img/videolink.png" alt="YouTube"></a></td>
   </tr><tr>
-    <td class="tg-cell">Calculate Standard Deviation</td>
+    <td class="tg-leftcol">Calculate Standard Deviation</td>
     <td class="tg-cell"><a href="http://youtu.be/qqOyy_NjflU"><img src="../img/videolink.png" alt="YouTube"></a> <a href="http://youtu.be/atS4wX8I9H0"><img src="../img/videolink.png" alt="YouTube"></a></td>
   </tr><tr>
-    <td class="tg-cell">Calculate IQR</td>
+    <td class="tg-leftcol">Calculate IQR</td>
     <td class="tg-cell"><a href="http://youtu.be/R6VDj7pEG30"><img src="../img/videolink.png" alt="YouTube"></a> <a href="http://youtu.be/F3WcEAW-M80?t=6m6s"><img src="../img/videolink.png" alt="YouTube"></a></td>
   </tr><tr>
-    <td class="tg-cell">Construct Tables & Barplots</td>
+    <td class="tg-leftcol">Construct Tables & Barplots</td>
     <td class="tg-cell">--</td>
     <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-uedac"><img src="../img/Rlogo.png" alt="R Tutorial"></a></td>
   </tr>
