@@ -1,7 +1,10 @@
 ---
 layout: page
-title: Class Materials
 ---
+
+# Class Materials
+
+See [class preparation videso below](#preparation-videos).
 
 <table class="tg">
   <tr>
@@ -66,6 +69,22 @@ title: Class Materials
 
 # Preparation Videos
 
+<table class="tg">
+  <tr>
+    <th class="tg-hdrrow">Module</th>
+    <th class="tg-hdrrow">Topic</th>
+    <th class="tg-hdrrow">Prep Videos</th>
+  </tr>
+  
+  <tr>
+    <td class="tg-leftcol" rowspan="2">Foundations</td>
+    <td class="tg-cell">IVPPSS</td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-ivppss"><img src="../img/dhovid.png" alt="Ogle Lecture"></a></td>
+    <td class="tg-cell">Variable Types</td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-vartypes"><img src="../img/dhovid.png" alt="Ogle Lecture"></a></td>
+  </tr>
+  
+</table>
 
 
 <style type="text/css">
