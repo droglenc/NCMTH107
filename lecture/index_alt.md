@@ -9,19 +9,17 @@ title: Class Materials
   border-spacing:0;
 }
 .tg td{
-  font-family:Arial, sans-serif;
   font-size:14px;
-  padding:10px 5px;
+  padding:10px 10px;
   border-style:solid;
   border-width:2px;
   overflow:hidden;
   word-break:normal;
 }
 .tg th{
-  font-family:Arial, sans-serif;
-  font-size:14px;
+  font-size:18px;
   font-weight:normal;
-  padding:10px 5px;
+  padding:10px 10px;
   border-style:solid;
   border-width:2px;
   overflow:hidden;
@@ -51,10 +49,19 @@ title: Class Materials
     <th class="tg-hdrrow">Handouts<br></th>
     <th class="tg-hdrrow">Exercises<br></th>
   </tr>
+  
   <tr>
     <td class="tg-leftcol">Introduction<br></td>
     <td class="tg-cell"><a href="Slides/01_Foundations_I.pptx"><img src="../img/ppt.png" alt="MSPowerPoint"></a></td>
     <td class="tg-cell"><a href="HOs/Foundations.html"><img src="../img/web.png" alt="Webpage"></a> <a href="HOs/Foundations.pdf"><img src="../img/pdf.png" alt="PDF"></a> <a href="HOs/Foundations.docx"><img src="../img/word.png" alt="MSWord"></a> <a href="HOs/Foundations.R"><img src="../img/script.png" alt="R Script"></a></td>
     <td class="tg-cell"> -- </td>
   </tr>
+  
+  <tr>
+    <td class="tg-leftcol">Foundations<br></td>
+    <td class="tg-cell"><a href="Slides/Foundations.pptx"><img src="../img/ppt.png" alt="MSPowerPoint"></a></td>
+    <td class="tg-cell"> -- </td>
+    <td class="tg-cell"> <a href="CEs/FoundationsIVPPSS.html"><img src="../img/web.png" alt="Webpage"></a> </td>
+  </tr>
+  
 </table>
