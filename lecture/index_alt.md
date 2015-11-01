@@ -46,6 +46,7 @@ title: Class Materials
 <table class="tg">
   <tr>
     <th class="tg-hdrrow">Module<br></th>
+    <th class="tg-hdrrow" style="width:150px;">Prep Videos<br></th>
     <th class="tg-hdrrow" style="width:150px;">Slides<br></th>
     <th class="tg-hdrrow" style="width:150px;">Handouts<br></th>
     <th class="tg-hdrrow" style="width:150px;">Exercises<br></th>
@@ -53,6 +54,7 @@ title: Class Materials
   
   <tr>
     <td class="tg-leftcol">Introduction<br></td>
+    <td class="tg-cell"> -- </td>
     <td class="tg-cell"><a href="Slides/01_Foundations_I.pptx"><img src="../img/ppt.png" alt="MSPowerPoint"></a></td>
     <td class="tg-cell"><a href="HOs/Foundations.html"><img src="../img/web.png" alt="Webpage"></a> <a href="HOs/Foundations.pdf"><img src="../img/pdf.png" alt="PDF"></a> <a href="HOs/Foundations.docx"><img src="../img/word.png" alt="MSWord"></a> <a href="HOs/Foundations.R"><img src="../img/script.png" alt="R Script"></a></td>
     <td class="tg-cell"> -- </td>
@@ -60,13 +62,15 @@ title: Class Materials
   
   <tr>
     <td class="tg-leftcol">Foundations<br></td>
+    <td class="tg-cell"><a href="#foundations"><img src="../img/downarrow.png" alt="Jump to Prep Videos"></a></td>
     <td class="tg-cell"><a href="Slides/Foundations.pptx"><img src="../img/ppt.png" alt="MSPowerPoint"></a></td>
     <td class="tg-cell"> -- </td>
     <td class="tg-cell"> <a href="CEs/FoundationsIVPPSS.html"><img src="../img/web.png" alt="Webpage"></a> </td>
   </tr>
 
   <tr>
-    <td class="tg-leftcol">Get Started with R<br></td>
+    <td class="tg-leftcol">Getting Started with R<br></td>
+    <td class="tg-cell"><a href="#getting-started-with-r"><img src="../img/downarrow.png" alt="Jump to Prep Videos"></a></td>
     <td class="tg-cell"> -- </td>
     <td class="tg-cell"><a href="HOs/FoundationsR.html"><img src="../img/web.png" alt="Webpage"></a> <a href="HOs/FoundationsR.pdf"><img src="../img/pdf.png" alt="PDF"></a> <a href="HOs/FoundationsR.docx"><img src="../img/word.png" alt="MSWord"></a> <a href="HOs/FoundationsR.R"><img src="../img/script.png" alt="R Script"></a></td>
     <td class="tg-cell"> <a href="CEs/FoundationsR.html"><img src="../img/web.png" alt="Webpage"></a> </td>
@@ -74,6 +78,7 @@ title: Class Materials
   
   <tr>
     <td class="tg-leftcol">Univariate EDA<br></td>
+    <td class="tg-cell"><a href="#univariate-eda"><img src="../img/downarrow.png" alt="Jump to Prep Videos"></a></td>
     <td class="tg-cell"><a href="Slides/03_UnivEDA.pptx"><img src="../img/ppt.png" alt="MSPowerPoint"></a></td>
     <td class="tg-cell"><a href="HOs/UnivEDA.html"><img src="../img/web.png" alt="Webpage"></a> <a href="HOs/UnivEDA.pdf"><img src="../img/pdf.png" alt="PDF"></a> <a href="HOs/UnivEDA.docx"><img src="../img/word.png" alt="MSWord"></a> <a href="HOs/UnivEDA.R"><img src="../img/script.png" alt="R Script"></a></td>
     <td class="tg-cell"> <a href="CEs/UnivariateEDA.html"><img src="../img/web.png" alt="Webpage"></a> </td>
