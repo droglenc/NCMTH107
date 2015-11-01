@@ -18,12 +18,12 @@ title: Class Materials
 1. [Chi-Square Tests](#chi-square-tests)
 
 ----
-Materials to prepare for class and materials used in class are provided below.  Concept-related preparation videos are either by Prof. Ogle ![Ogle Video](../img/dhovid.jpg) or not ![Other video](../img/videolink.jpg).  R-related preparation videos ![R logo](../img/Rlogo.png) are all by Prof. Ogle.
+Materials to prepare for class and materials used in class are provided below.  Concept-related preparation videos are either by Prof. Ogle ![Ogle Video](../img/dhovid.jpg) or not ![Other video](../img/videolink.jpg).  R-related preparation videos ![R logo](../img/Rlogo.png) are all by Prof. Ogle.  Other items can be accessed as a webpage ![Webpage](../img/web.png); PDF ![PDF](../img/pdf.png), Word ![MSWord](../img/word.png), or PowerPoint ![MSPowerPoint](../img/ppt.png) file; or R Script ![RScript](../img/script.png).
 
 ----
 
 ## Introduction
-* [Slides](Slides/01_Foundations_I.pptx)
+* [Slides ![MSPowerPoint](../img/ppt.png)](Slides/01_Foundations_I.pptx)
 * R Handout -- [![Webpage](../img/web.png)](HOs/Foundations.html), [![PDF](../img/pdf.png)](HOs/Foundations.pdf), [![MSWord](../img/word.png)](HOs/Foundations.docx), [![RScript](../img/script.png)](HOs/Foundations.R)
 * [Class Exercises](CEs/Foundations.html)
 
