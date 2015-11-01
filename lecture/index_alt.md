@@ -136,7 +136,7 @@ See [class preparation videos below](#preparation-videos).
   </tr>
 
   <tr>
-    <td class="tg-leftcol" rowspan="2">Normal Distribution</td>
+    <td class="tg-leftcol" rowspan="3">Normal Distribution</td>
     <td class="tg-leftcol">68-95-99.7 Rule</td>
     <td class="tg-cell"><a href="https://www.youtube.com/watch?v=cgxPcdPbujI"><img src="../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/watch?v=PJPXFOK8F8E"><img src="../img/videolink.png" alt="YouTube"></a></td>
     <td class="tg-cell"> -- </td>
@@ -194,7 +194,7 @@ See [class preparation videos below](#preparation-videos).
 }
 .tg .tg-leftcol{
   font-size:16px;
-  background-color:#DCDCDC;
+  background-color:#EDEDED;
   text-align:left;
   vertical-align:center
 }
