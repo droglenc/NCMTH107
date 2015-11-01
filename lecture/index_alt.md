@@ -159,7 +159,38 @@ See [class preparation videos below](#preparation-videos).
     <td class="tg-leftcol">Correlation</td>
     <td class="tg-cell"><a href="http://youtu.be/PtYVrF_WT3A?t=32s"><img src="../img/videolink.png" alt="YouTube"></a></td>
   </tr>
-
+  
+  <tr>
+    <td class="tg-leftcol">Linear Regression</td>
+    <td class="tg-leftcol">Linear Regression</td>
+    <td class="tg-cell"> -- </td>
+    <td class="tg-cell"><a href="http://www.screenr.com/JGPH"><img src="../img/Rlogo.png" alt="R Tutorial"></a></td>
+  </tr>
+  
+  <tr>
+    <td class="tg-leftcol" rowspan="2">t-tests</td>
+    <td class="tg-leftcol">1-sample t-tests</td>
+    <td class="tg-cell"> -- </td>
+    <td class="tg-cell"><a href="http://www.screenr.com/GXPH"><img src="../img/Rlogo.png" alt="R Tutorial"></a></td>
+  </tr><tr>
+    <td class="tg-leftcol">2-sample t-tests</td>
+    <td class="tg-cell"> -- </td>
+    <td class="tg-cell"><a href="http://www.screenr.com/cCPH"><img src="../img/Rlogo.png" alt="R Tutorial"></a></td>
+  </tr>  
+  <tr>
+    <td class="tg-leftcol" rowspan="3">Chi-Square Tests</td>
+    <td class="tg-leftcol">Goodness-of-Fit</td>
+    <td class="tg-cell"> -- </td>
+    <td class="tg-cell"><a href="http://www.screenr.com/JXPH"><img src="../img/Rlogo.png" alt="R Tutorial"></a></td>
+  </tr><tr>
+    <td class="tg-leftcol">Chi-square with Raw Data</td>
+    <td class="tg-cell"> -- </td>
+    <td class="tg-cell"><a href="http://www.screenr.com/pOPH"><img src="../img/Rlogo.png" alt="R Tutorial"></a> <a href="http://www.screenr.com/6OPH"><img src="../img/Rlogo.png" alt="R Tutorial"></a></td>
+  </tr><tr>
+    <td class="tg-leftcol">Chi-square with Summarized Data</td>
+    <td class="tg-cell"> -- </td>
+    <td class="tg-cell"><a href="http://www.screenr.com/Q0PH"><img src="../img/Rlogo.png" alt="R Tutorial"></a></td>
+  </tr>
 
 </table>
 
@@ -194,7 +225,7 @@ See [class preparation videos below](#preparation-videos).
 }
 .tg .tg-leftcol{
   font-size:16px;
-  background-color:#EDEDED;
+  background-color:#F3F3F3;
   text-align:left;
   vertical-align:center
 }
