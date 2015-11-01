@@ -46,9 +46,9 @@ title: Class Materials
 <table class="tg">
   <tr>
     <th class="tg-hdrrow">Module<br></th>
-    <th class="tg-hdrrow">Slides<br></th>
-    <th class="tg-hdrrow">Handouts<br></th>
-    <th class="tg-hdrrow">Exercises<br></th>
+    <th class="tg-hdrrow" style="width:150px;">Slides<br></th>
+    <th class="tg-hdrrow" style="width:150px;">Handouts<br></th>
+    <th class="tg-hdrrow" style="width:150px;">Exercises<br></th>
   </tr>
   
   <tr>
