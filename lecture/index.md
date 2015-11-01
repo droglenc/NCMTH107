@@ -25,14 +25,13 @@ Materials to prepare for class and materials used in class are provided below.  
 ## Introduction
 * [Slides ![MSPowerPoint](../img/ppt.png)](Slides/01_Foundations_I.pptx)
 * R Handout -- [![Webpage](../img/web.png)](HOs/Foundations.html), [![PDF](../img/pdf.png)](HOs/Foundations.pdf), [![MSWord](../img/word.png)](HOs/Foundations.docx), [![RScript](../img/script.png)](HOs/Foundations.R)
-* [Class Exercises ![Webpage](../img/web.png)](CEs/Foundations.html)
 
 ## Foundations
 * Preparation videos
     * [IVPPSS ![Ogle video](../img/dhovid.jpg)](https://vimeo.com/user45324800/ncstats-ivppss)
     * [Variable Types ![Ogle video](../img/dhovid.jpg) ](https://vimeo.com/user45324800/ncstats-vartypes)
     * [Related Slides](Slides/02_Foundations_II.pptx)
-* [Class Exercises](CEs/FoundationsIVPPSS.html)
+* [Class Exercises ![Webpage](../img/web.png)](CEs/FoundationsIVPPSS.html)
 
 ## Getting Started with R
 * Preparation videos
@@ -43,7 +42,7 @@ Materials to prepare for class and materials used in class are provided below.  
     * [Subset a data.frame with filterD() ![R logo](../img/Rlogo.png)](https://vimeo.com/user45324800/filterd)
     * [Subset a data.frame with Subset() ![R logo](../img/Rlogo.png)](http://www.screenr.com/z27N)
 * R Handout -- [![Webpage](../img/web.png)](HOs/FoundationsR.html), [![PDF](../img/pdf.png)](HOs/FoundationsR.pdf), [![MSWord](../img/word.png)](HOs/FoundationsR.docx), [![RScript](../img/script.png)](HOs/FoundationsR.R)
-* [Class Exercises](CEs/FoundationsR.html)
+* [Class Exercises ![Webpage](../img/web.png)](CEs/FoundationsR.html)
 
 ## Univariate EDA
 * Preparation videos
@@ -54,7 +53,7 @@ Materials to prepare for class and materials used in class are provided below.  
     * [Univariate EDA - Quantitative ![R logo](../img/Rlogo.png)](https://vimeo.com/user45324800/ncstats-ueda1)
     * [Univariate EDA - Categorical ![R logo](../img/Rlogo.png)](https://vimeo.com/user45324800/ncstats-uedac)
 * [R Handout](HOs/03_UnivEDA_HO.pdf)
-* [Class Exercises](CEs/UnivariateEDA.html)
+* [Class Exercises ![Webpage](../img/web.png)](CEs/UnivariateEDA.html)
 
 ## Normal Distribution
 * Preparation videos
@@ -63,7 +62,7 @@ Materials to prepare for class and materials used in class are provided below.  
     * [Reverse calculation ![R logo](../img/Rlogo.png)](http://www.screenr.com/a27N)
 * [Slides](Slides/04_NormalDistribution.pptx)
 * [R Handouts](HOs/04_NormalDistribution_HO.pdf)
-* [Class Exercises](CEs/NormalDistribution.html)
+* [Class Exercises ![Webpage](../img/web.png)](CEs/NormalDistribution.html)
 
 ## Bivariate EDA
 * Preparation videos
@@ -72,14 +71,14 @@ Materials to prepare for class and materials used in class are provided below.  
     * [Bivariate EDA ![R logo](../img/Rlogo.png)](http://www.screenr.com/n4PH)
 * [Slides](Slides/05_BivEDA.pptx)
 * [RHandouts](HOs/05_BivEDA_HO.pdf)
-* [Class Exercises](CEs/BivariateEDA.html)
+* [Class Exercises ![Webpage](../img/web.png)](CEs/BivariateEDA.html)
 
 ## Linear Regression
 * Preparation videos
     * [Linear Regression ![R logo](../img/Rlogo.png)](http://www.screenr.com/JGPH)
 * [Slides](Slides/06_SimpleLinearRegression.pptx)
 * [RHandouts](HOs/06_SimpleLinearRegression_HO.pdf)
-* [Class Exercises](CEs/SimpleLinearRegression.html)
+* [Class Exercises ![Webpage](../img/web.png)](CEs/SimpleLinearRegression.html)
 
 ## Data Production
 * Preparation videos
@@ -89,12 +88,12 @@ Materials to prepare for class and materials used in class are provided below.  
 ## Probability Introduction
 * Preparation videos
 * [Slides](Slides/08_ProbabilityIntro.pptx)
-* [Class Exercises](CEs/ProbabilityIntro.html)
+* [Class Exercises ![Webpage](../img/web.png)](CEs/ProbabilityIntro.html)
 
 ## Sampling Distributions
 * Preparation videos
 * [Slides](Slides/09_SamplingDistributions.pptx)
-* [Class Exercises](CEs/SamplingDistributions.html)
+* [Class Exercises ![Webpage](../img/web.png)](CEs/SamplingDistributions.html)
 
 ## Inference Concepts
 * Preparation videos
