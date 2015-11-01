@@ -32,7 +32,8 @@ title: Class Materials
   vertical-align:top
 }
 .tg .tg-leftcol{
-  background-color:#c0c0c0;
+  font-size:16px;
+  background-color:#DCDCDC;
   text-align:left;
   vertical-align:top
 }
@@ -62,6 +63,14 @@ title: Class Materials
     <td class="tg-cell"><a href="Slides/Foundations.pptx"><img src="../img/ppt.png" alt="MSPowerPoint"></a></td>
     <td class="tg-cell"> -- </td>
     <td class="tg-cell"> <a href="CEs/FoundationsIVPPSS.html"><img src="../img/web.png" alt="Webpage"></a> </td>
+  </tr>
+
+  
+  <tr>
+    <td class="tg-leftcol">Get Started with R<br></td>
+    <td class="tg-cell"> -- </td>
+    <td class="tg-cell"><a href="HOs/FoundationsR.html"><img src="../img/web.png" alt="Webpage"></a> <a href="HOs/FoundationsR.pdf"><img src="../img/pdf.png" alt="PDF"></a> <a href="HOs/FoundationsR.docx"><img src="../img/word.png" alt="MSWord"></a> <a href="HOs/FoundationsR.R"><img src="../img/script.png" alt="R Script"></a></td>
+    <td class="tg-cell"> <a href="CEs/FoundationsR.html"><img src="../img/web.png" alt="Webpage"></a> </td>
   </tr>
   
 </table>
