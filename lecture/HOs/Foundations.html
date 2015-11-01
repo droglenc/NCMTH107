@@ -29,10 +29,8 @@ output:
 <div id="the-truth" class="section level2">
 <h2>The Truth</h2>
 <pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="kw">Summarize</span>(~age,<span class="dt">data=</span>ABCens90,<span class="dt">digits=</span><span class="dv">1</span>)</code></pre>
-<pre><code>       n   nvalid     mean       sd      min       Q1   median       Q3 
- 30335.0  30335.0     37.3     24.3      0.0     16.0     35.0     57.0 
-     max percZero 
-    96.0      1.2 </code></pre>
+<pre><code>       n   nvalid     mean       sd      min       Q1   median       Q3      max percZero 
+ 30335.0  30335.0     37.3     24.3      0.0     16.0     35.0     57.0     96.0      1.2 </code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="kw">Summarize</span>(~sex,<span class="dt">data=</span>ABCens90)</code></pre>
 <pre><code>        freq   perc
 female 15261  50.31

@@ -44,7 +44,7 @@ opts_chunk$set(prompt=TRUE,
 ################################################################################
 ## r options
 ################################################################################
-options(width=80,
+options(width=90,
         show.signif.stars=FALSE,
         continue="  ",
         str=strOptions(strict.width="cut"))

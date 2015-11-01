@@ -17,7 +17,7 @@ h <- 4.2
 ( result <- log(17) )
 ls()
 
-( profs <- c("Derek","Young","Sharad") )
+( profs <- c("Derek","Young","Jodi") )
 ( nums <- c(4,2,6,4,3) )
 ( heads <- c(TRUE, TRUE, FALSE, FALSE) )
 ls()
@@ -58,4 +58,4 @@ headtail(ver_or_gt5)
 ls()
 
 
-# Script created at 2015-10-31 20:02:45
+# Script created at 2015-10-31 20:05:50

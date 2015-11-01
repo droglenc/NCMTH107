@@ -27,8 +27,10 @@ source("../../rhelpers/knitr_setup.R")
 ```{r echo=-2, results='hide', message=FALSE, warning=FALSE}
 library(NCStats)
 ```
-## Basic Mathematics
+
+
 ```{r eval=FALSE, echo=FALSE}
+## Basic Mathematics
 3-pi
 junk <- 3-pi
 junk
@@ -41,7 +43,7 @@ ls()
 
 ## Basic Vectors
 ```{r}
-( profs <- c("Derek","Young","Sharad") )
+( profs <- c("Derek","Young","Jodi") )
 ( nums <- c(4,2,6,4,3) )
 ( heads <- c(TRUE, TRUE, FALSE, FALSE) )
 ls()

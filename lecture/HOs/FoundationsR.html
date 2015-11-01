@@ -10,20 +10,16 @@ output:
 <h2>Always First Command</h2>
 <pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="kw">library</span>(NCStats)</code></pre>
 </div>
-<div id="basic-mathematics" class="section level2">
-<h2>Basic Mathematics</h2>
-</div>
 <div id="basic-vectors" class="section level2">
 <h2>Basic Vectors</h2>
-<pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span>( profs &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Derek&quot;</span>,<span class="st">&quot;Young&quot;</span>,<span class="st">&quot;Sharad&quot;</span>) )</code></pre>
-<pre><code>[1] &quot;Derek&quot;  &quot;Young&quot;  &quot;Sharad&quot;</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span>( profs &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Derek&quot;</span>,<span class="st">&quot;Young&quot;</span>,<span class="st">&quot;Jodi&quot;</span>) )</code></pre>
+<pre><code>[1] &quot;Derek&quot; &quot;Young&quot; &quot;Jodi&quot; </code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span>( nums &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">6</span>,<span class="dv">4</span>,<span class="dv">3</span>) )</code></pre>
 <pre><code>[1] 4 2 6 4 3</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span>( heads &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>, <span class="ot">FALSE</span>) )</code></pre>
 <pre><code>[1]  TRUE  TRUE FALSE FALSE</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="kw">ls</span>()</code></pre>
-<pre><code>[1] &quot;f&quot;           &quot;fnm&quot;         &quot;heads&quot;       &quot;need2render&quot; &quot;nums&quot;       
-[6] &quot;profs&quot;      </code></pre>
+<pre><code>[1] &quot;f&quot;           &quot;fnm&quot;         &quot;heads&quot;       &quot;need2render&quot; &quot;nums&quot;        &quot;profs&quot;      </code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span>nums[<span class="dv">3</span>]</code></pre>
 <pre><code>[1] 6</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span>profs[<span class="dv">2</span>]</code></pre>
@@ -51,8 +47,8 @@ output:
 149     58     28     51     24 virginica
 150     63     33     60     25 virginica</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="kw">ls</span>()</code></pre>
-<pre><code>[1] &quot;f&quot;           &quot;fnm&quot;         &quot;heads&quot;       &quot;iris&quot;        &quot;need2render&quot;
-[6] &quot;nums&quot;        &quot;profs&quot;      </code></pre>
+<pre><code>[1] &quot;f&quot;           &quot;fnm&quot;         &quot;heads&quot;       &quot;iris&quot;        &quot;need2render&quot; &quot;nums&quot;       
+[7] &quot;profs&quot;      </code></pre>
 </div>
 <div id="working-with-data-frames" class="section level2">
 <h2>Working With Data Frames</h2>
@@ -60,12 +56,12 @@ output:
 <pre><code>  seplen sepwid petlen petwid species
 2     46     34     14      3  setosa</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span>iris$seplen</code></pre>
-<pre><code>  [1] 50 46 46 51 55 48 52 49 44 50 44 47 48 51 48 50 50 43 58 51 49 51 50 46 57
- [26] 50 54 52 55 49 54 50 44 47 46 51 50 49 54 54 51 48 48 45 57 51 54 51 52 53
- [51] 65 62 59 61 60 56 57 63 70 64 61 55 54 58 55 50 67 56 58 60 57 57 49 56 57
- [76] 66 52 60 50 55 58 62 59 60 67 63 56 63 61 64 51 57 61 56 69 55 55 66 68 67
-[101] 64 67 63 69 65 65 58 68 62 77 67 76 49 67 59 63 64 79 67 77 63 72 61 61 64
-[126] 62 77 63 58 72 71 64 60 63 77 60 69 74 56 73 67 65 69 72 65 64 68 57 58 63</code></pre>
+<pre><code>  [1] 50 46 46 51 55 48 52 49 44 50 44 47 48 51 48 50 50 43 58 51 49 51 50 46 57 50 54 52
+ [29] 55 49 54 50 44 47 46 51 50 49 54 54 51 48 48 45 57 51 54 51 52 53 65 62 59 61 60 56
+ [57] 57 63 70 64 61 55 54 58 55 50 67 56 58 60 57 57 49 56 57 66 52 60 50 55 58 62 59 60
+ [85] 67 63 56 63 61 64 51 57 61 56 69 55 55 66 68 67 64 67 63 69 65 65 58 68 62 77 67 76
+[113] 49 67 59 63 64 79 67 77 63 72 61 61 64 62 77 63 58 72 71 64 60 63 77 60 69 74 56 73
+[141] 67 65 69 72 65 64 68 57 58 63</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span>iris$seplen[<span class="dv">3</span>]</code></pre>
 <pre><code>[1] 46</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span>iris[<span class="dv">3</span>,<span class="dv">2</span>]</code></pre>
@@ -130,9 +126,9 @@ output:
 149     58     28     51     24 virginica
 150     63     33     60     25 virginica</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="kw">ls</span>()</code></pre>
-<pre><code> [1] &quot;f&quot;           &quot;fnm&quot;         &quot;gt5&quot;         &quot;heads&quot;       &quot;iris&quot;       
- [6] &quot;need2render&quot; &quot;nums&quot;        &quot;profs&quot;       &quot;set&quot;         &quot;setver&quot;     
-[11] &quot;setver1&quot;     &quot;ver_and_gt5&quot; &quot;ver_or_gt5&quot; </code></pre>
+<pre><code> [1] &quot;f&quot;           &quot;fnm&quot;         &quot;gt5&quot;         &quot;heads&quot;       &quot;iris&quot;        &quot;need2render&quot;
+ [7] &quot;nums&quot;        &quot;profs&quot;       &quot;set&quot;         &quot;setver&quot;      &quot;setver1&quot;     &quot;ver_and_gt5&quot;
+[13] &quot;ver_or_gt5&quot; </code></pre>
 </div>
 
 
