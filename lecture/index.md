@@ -24,7 +24,8 @@ Materials to prepare for class and materials used in class are provided below.  
 
 ## Introduction
 * [Slides](Slides/01_Foundations_I.pptx)
-* R Handout -- [Web](HOs/Foundations.html), [Word](HOs/Foundations.docx), [Script](HOs/Foundations.R)
+* R Handout -- [![Webpage](../img/web.png)](HOs/Foundations.html), [![PDF](../img/pdf.png)](HOs/Foundations.pdf), [![MSWord](../img/word.png)](HOs/Foundations.docx), [![RScript](../img/script.png)](HOs/Foundations.R)
+* [Class Exercises](CEs/Foundations.html)
 
 ## Foundations
 * Preparation videos
@@ -41,7 +42,7 @@ Materials to prepare for class and materials used in class are provided below.  
     * [Load data into RStudio ![R logo](../img/Rlogo.png)](https://vimeo.com/user45324800/ncstats-loadcsvrstudio)
     * [Subset a data.frame with filterD() ![R logo](../img/Rlogo.png)](https://vimeo.com/user45324800/filterd)
     * [Subset a data.frame with Subset() ![R logo](../img/Rlogo.png)](http://www.screenr.com/z27N)
-* R Handout -- [Web](HOs/FoundationsR.html), [Word](HOs/FoundationsR.docx), [Script](HOs/FoundationsR.R)
+* R Handout -- [![Webpage](../img/web.png)](HOs/FoundationsR.html), [![PDF](../img/pdf.png)](HOs/FoundationsR.pdf), [![MSWord](../img/word.png)](HOs/FoundationsR.docx), [![RScript](../img/script.png)](HOs/FoundationsR.R)
 * [Class Exercises](CEs/FoundationsR.html)
 
 ## Univariate EDA
