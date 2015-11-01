@@ -8,30 +8,30 @@ output:
 
 <div id="always-first-command" class="section level2">
 <h2>Always First Command</h2>
-<pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="kw">library</span>(NCStats)</code></pre>
+<pre class="r"><code>&gt; library(NCStats)</code></pre>
 </div>
 <div id="sample-ashland-bayfield-county-residents" class="section level2">
 <h2>Sample Ashland-Bayfield County Residents</h2>
-<pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="kw">data</span>(ABCens90)
-&gt;<span class="st"> </span>( smp1 &lt;-<span class="st"> </span><span class="kw">srsdf</span>(ABCens90,<span class="dv">50</span>) )</code></pre>
+<pre class="r"><code>&gt; data(ABCens90)
+&gt; ( smp1 &lt;- srsdf(ABCens90,50) )</code></pre>
 </div>
 <div id="summarize-the-sample" class="section level2">
 <h2>Summarize the Sample</h2>
-<pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="kw">Summarize</span>(~age,<span class="dt">data=</span>smp1,<span class="dt">digits=</span><span class="dv">1</span>)
-&gt;<span class="st"> </span><span class="kw">Summarize</span>(~sex,<span class="dt">data=</span>smp1)</code></pre>
+<pre class="r"><code>&gt; Summarize(~age,data=smp1,digits=1)
+&gt; Summarize(~sex,data=smp1)</code></pre>
 </div>
 <div id="take-and-summarize-a-second-sample" class="section level2">
 <h2>Take and Summarize A Second Sample</h2>
-<pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span>( smp2 &lt;-<span class="st"> </span><span class="kw">srsdf</span>(ABCens90,<span class="dv">50</span>) )
-&gt;<span class="st"> </span><span class="kw">Summarize</span>(~age,<span class="dt">data=</span>smp2,<span class="dt">digits=</span><span class="dv">1</span>)
-&gt;<span class="st"> </span><span class="kw">Summarize</span>(~sex,<span class="dt">data=</span>smp2)</code></pre>
+<pre class="r"><code>&gt; ( smp2 &lt;- srsdf(ABCens90,50) )
+&gt; Summarize(~age,data=smp2,digits=1)
+&gt; Summarize(~sex,data=smp2)</code></pre>
 </div>
 <div id="the-truth" class="section level2">
 <h2>The Truth</h2>
-<pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="kw">Summarize</span>(~age,<span class="dt">data=</span>ABCens90,<span class="dt">digits=</span><span class="dv">1</span>)</code></pre>
+<pre class="r"><code>&gt; Summarize(~age,data=ABCens90,digits=1)</code></pre>
 <pre><code>       n   nvalid     mean       sd      min       Q1   median       Q3      max percZero 
  30335.0  30335.0     37.3     24.3      0.0     16.0     35.0     57.0     96.0      1.2 </code></pre>
-<pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="kw">Summarize</span>(~sex,<span class="dt">data=</span>ABCens90)</code></pre>
+<pre class="r"><code>&gt; Summarize(~sex,data=ABCens90)</code></pre>
 <pre><code>        freq   perc
 female 15261  50.31
 male   15074  49.69

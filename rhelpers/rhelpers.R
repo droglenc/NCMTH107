@@ -24,6 +24,7 @@ modHTML <- function(f,need2render=TRUE) {
   # Delete files in directories in f_files that are not needed on the webpage
   unlink(paste0(getwd(),"/",f,"_files","/bootstrap-3.3.1"),recursive=TRUE)
   unlink(paste0(getwd(),"/",f,"_files","/jquery-1.11.0"),recursive=TRUE)
+  unlink(paste0(getwd(),"/",f,"_files","/highlight"),recursive=TRUE)
   # Read in HTML and RMarkdown files
   h <- readLines(paste0(f,".html"))
   r <- readLines(paste0(f,".Rmd"))
