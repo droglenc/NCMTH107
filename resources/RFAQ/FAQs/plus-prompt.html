@@ -1,0 +1,40 @@
+---
+layout: page
+author: Derek H. Ogle
+title: MTH107 FAQ
+subtitle: Why is the R prompt a "+" rather than a ">"?
+---
+
+
+<hr />
+<p>The “arrow” prompt (“&gt;”) is the standard prompt that R uses to signify that it is ready for input. The plus (“+”) is used when R expects the user to finish what they started on the previous line. Thus, the plus prompt implies that you did not finish your code on the previous line. Most of the time this means that you did not close a parentheses or a set of quotes. For example,</p>
+<pre class="r"><code>&gt; 2*(3+5)+4*(1+2
++)</code></pre>
+<pre><code>[1] 28</code></pre>
+<p>It is possible to complete the code, as demonstrated above. However, completion is not always simple or may lead to errors if the missing portion is earlier in the code.</p>
+<p>Thus, the best thing to do when you see the plus prompt is to click in the R Console, press the “ESC”ape key, return to your script, complete the incomplete command, and run the command again.</p>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

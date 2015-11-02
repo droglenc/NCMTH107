@@ -10,11 +10,11 @@ The following are links to answers for frequently asked questions by Northland C
 * [How do I install `NCStats`?](FAQs/install-NCStats.html)
 * [When I load `NCStats`, R cannot find some other packages.](FAQs/install-other-packages.html)
 * [R cannot find `NCStats`.](FAQs/cant-find-NCStats.html)
-* Why is the R prompt a "+" rather than a ">"?
-* I can't remember the names of objects that I have created.
+* [Why is the R prompt a "+" rather than a ">"?](FAQs/plus-prompt.html)
+* [I can't remember the names of objects that I have created.](FAQs/object-names.html)
 * R says that "a previously saved workspace has been restored".
-* I accidentally saved the workspace image.  How do I remove it?
-* R can't find the function I want to use.</a>
+* [I accidentally saved the workspace image.  How do I remove it?](FAQs/removing-saved-workspace.html)
+* [R can't find the function I want to use.](FAQs/cant-find-function.html)
 
 ## Reading Data Files
 * Where are the data files that Prof. Ogle provides for us?

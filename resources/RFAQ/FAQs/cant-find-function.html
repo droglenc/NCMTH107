@@ -1,0 +1,51 @@
+---
+layout: page
+author: Derek H. Ogle
+title: MTH107 FAQ
+subtitle: R can't find the function I want to use.
+---
+
+
+<hr />
+<p>This error usually occurs for one of three reasons described in the sections below.</p>
+<div id="typo" class="section level2">
+<h2>Typo</h2>
+<p>Most of the time this error occurs because you typed the name of the function incorrectly (notice mispelling of <code>library()</code>).</p>
+<pre class="r"><code>&gt; libary(NCStats)</code></pre>
+<pre><code>Error in eval(expr, envir, enclos): could not find function &quot;libary&quot;</code></pre>
+</div>
+<div id="ncstats-is-not-loaded" class="section level2">
+<h2>NCStats is not Loaded</h2>
+<p>If the problem is not a typo, then this error typically occurs because you do not have a required package loaded. More often than not in this class that means that you did not load <code>NCStats</code> with …</p>
+<pre class="r"><code>&gt; library(NCStats)</code></pre>
+<p>If <code>NCStats</code> is not installed on your computer then see <a href="install-NCStats.html">this FAQ.</a></p>
+</div>
+<div id="other-package-is-not-loaded" class="section level2">
+<h2>Other Package is not Loaded</h2>
+<p>Some functions used in this course are contained in other packages, most of which are loaded when <code>NCStats</code> is loaded. However, some of these functions will required that the other package be installed and loaded. Installation of these packages <a href="install-other-packages.html">in this FAQ</a>. Packages are loaded with <code>library()</code> as demonstrated above for <code>NCStats</code>.</p>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

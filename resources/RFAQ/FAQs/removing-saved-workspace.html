@@ -1,0 +1,40 @@
+---
+layout: page
+author: Derek H. Ogle
+title: MTH107 FAQ
+subtitle: I accidentally saved the workspace image.  How do I remove it?
+---
+
+
+<hr />
+<p>When closing RStudio you may be asked to save the workspace image. The downside of saving the workspace is that the objects in R that existed when you saved the workspace will be restored in the future. For exapmle if you accidentally saved the workspace image then you will see this message when opening RStudio in the future.</p>
+<pre><code>[previously saved workspace restored]</code></pre>
+<p>Objects in a restored workspace may cause confusion with your current work. Thus, <em>it is best to never save the workspace</em> when exiting RStudio.</p>
+<p>If you accidentally saved the workspace image then your should remove it. The easiest way to remove the saved workspace image is to issue the following command immediate after opening RStudio where a workspace has been restored.</p>
+<pre class="r"><code>&gt; unlink(&quot;.RData&quot;)</code></pre>
+<p>Then close and reopen RStudio. The workspace should not be restored (nor will it be in the future).</p>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
