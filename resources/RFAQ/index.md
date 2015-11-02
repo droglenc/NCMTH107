@@ -32,11 +32,5 @@ The following are links to answers for frequently asked questions by Northland C
 * My frequency table contains unwanted levels.
 * My bar chart contains unwanted levels.
 * What does the `chisq.test()` warning mean?
-* R says the alternative hypothesis is true, even though the p-value $$> \alpha$$.
+* R says the alternative hypothesis is true, even though the p-value>alpha.
 * The df for my two-sample t-test contains decimals.
-
-## Formatting Written Documents (and some MS Word hints)
-* How should I label and refer to tables and figures?
-* How do I make R output look nice without having to physically type in spaces or tabs?
-* How do I make the my document single-spaced?
-* How do I make $\alpha$, $\mu$, or $\sigma$ or other Greek Letters?

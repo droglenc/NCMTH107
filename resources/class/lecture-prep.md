@@ -55,7 +55,7 @@ css: "/css/lecture-tables.css"
     <td class="tg-leftcol" rowspan="5">Univarite EDA</td>
     <td class="tg-leftcol2">Construct Histograms</td>
     <td class="tg-cell"><a href="http://youtu.be/sC7gjg9g3JU"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="http://youtu.be/H9ITfdaX2ZQ"><img src="../../img/videolink.png" alt="YouTube"></a></td>
-    <td class="tg-cell" rowspan="4"><a href=""><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell" rowspan="4"><a href="https://vimeo.com/user45324800/ncstats-uedaq"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Calculate Median</td>
     <td class="tg-cell"><a href="http://youtu.be/0SYsi38XucI"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="http://youtu.be/hTYTaOaQUcw?list=UUAjbU4EB30lTsJ2NSE5a7DQ"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="http://youtu.be/9a8M_KfclBE"><img src="../../img/videolink.png" alt="YouTube"></a></td>
