@@ -1,0 +1,25 @@
+%======================================================================================================================== % setwd("c://aaaWork//web/R/FAQ/Spaces_in_Data//")
+% Sweave("Spaces_in_Header.Rnw") %========================================================================================================================
+\documentclass[a4paper]{article}
+\title{Fall 2007 Final Exam Key}
+\author{}
+\date{}
+\include{../preamble}
+
+\begin{document}
+\maketitle
+\vspace{-72pt}
+
+% Overall Sweave and R options %------------------------------------------------------------------------------------------------------------------------
+\SweaveOpts{prefix.string=Figs/}   % sets prefix for figures -- folder and prefix name
+\SweaveOpts{eps=FALSE}               % don't make EPS figures as we will only use PDF
+\SweaveOpts{width=3.5,height=3.5}    % sets size of graphic in R
+
+<<echo=false,results=hide>>= options(width=70)                    # these are R options
+options(SweaveHooks = list(fig = function() par(mar=c(3.5,3.5,1,1),mgp=c(2,0.75,0))))
+@ %========================================================================================================================
+
+
+
+
+\end{document} 

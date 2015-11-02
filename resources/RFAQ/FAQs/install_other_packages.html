@@ -1,0 +1,41 @@
+<html>
+<head><title>Northland College R FAQ</title></head>
+<META http-equiv="Page-Enter" CONTENT="RevealTrans(Duration=1,Transition=3)">
+<SCRIPT SRC="../../GNRL/scripts/GNRL.JS"></SCRIPT>
+<body bgcolor="#FFFFB9">
+
+<h1>When I load the NCStats package R says that it cannot find some other packages.</h1>
+<p>The NCStats package is a package of routines that I have written to make some aspects of using R for statistics classes at Northland easier.  This package requires these packages to work properly ...</p>
+
+<ul>
+	<li> car
+	<li> gdata
+	<li> gplots
+	<li> Hmisc
+	<li> nortest
+	<li> plotrix
+	<li> sciplot
+	<li> TeachingDemos
+</ul>
+
+<p>If these packages are not properly installed then <font face="Courier New" color="#FF0000">library(NCStats)</font> will produce an error where R says it cannot find one of these packages.</p>
+
+<p>Installing these other packages requires an internet connection.  If you are using a Windows machine you can follow these steps to install these other packages.</p>
+
+<ol>
+	<li> Open R
+	<li> Select the "Packages" menu and the "Install Packages" submenu.
+	<li> Select a mirror site in the U.S. from the ensuing dialog box.
+	<li> Select the packages listed above in the ensuing dialog box.  Multiple packages can be selected at once by holding down the CTRL key while selecting from the list.
+	<li> Press the OK button.
+</ol>
+
+<p>If you are using a Macintosh you will need to install these packages through the Package Manager.</p>
+
+<p>R will then take several minutes to download the required packages and install them.</p>
+
+<hr size="5" color="#800000">
+<div align="center"><a href="FAQ_R_NC.html"><font size="+1">Return to FAQ List</font></a></div>
+
+</body>
+</html>

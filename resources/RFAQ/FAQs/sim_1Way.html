@@ -1,0 +1,79 @@
+<html>
+<head><title>Northland College R FAQ</title></head>
+<META http-equiv="Page-Enter" CONTENT="RevealTrans(Duration=1,Transition=3)">
+<SCRIPT SRC="../../GNRL/scripts/GNRL.JS"></SCRIPT>
+<body bgcolor="#FFFFB9">
+
+<h1>How do I simulate data for a one-way ANOVA using <font face="Courier New" color="#FF0000">mrnorm()</font>?</h1>
+<p>The <font face="Courier New" color="#FF0000">mrnorm()</font> function can be used to simultaneously simulate random data from multiple normal distributions given different values of the sample size (n), mean (<font face="Symbol">m</font>), and standard deviation (<font face="Symbol">s</font>).  Thus, this function is useful for simulating data for a one-way ANOVA given observed values of the sample size, mean, and standard deviation.  This is illustrated below.</p>
+
+<p>For instance, suppose that you have three groups of data with the following characteristics</p>
+
+<pre>
+Group   n   mean    SD
+weasel  4   13.1   4.2
+fox     5   17.2   3.6
+hare    3    8.9   3.4
+</pre>
+
+<p>The simulated data can begin by entering these data into four vectors as follows:
+
+<pre>
+<font color="#FF0000">> group <- c("Weasel","Fox","Hare")
+> n <- c(4,5,3)
+> mn <- c(13.1,17.2,8.9)
+> s <- c(4.2,3.6,3.4)</font>
+</pre>
+
+<p>The new data can then be created with <font face="Courier New" color="#FF0000">mrnorm()</font> as follows </p>
+
+<pre>
+<font color="#FF0000">> newdf <- mrnorm(n=n,mean=mn,sd=s,grp.labels=group,var.label=c("Response","Group"))</font>
+</pre>
+
+where the vector in the <font face="Courier New" color="#FF0000">var.label=</font> argument contains labels for the two newly created variables in "response" then "factor" order (these names can be changed to whatever names you would like to call the variables).</p>
+
+<p>The new data can be seen with
+
+<pre>
+<font color="#FF0000">> newdf</font>
+<font color="#0000FF">    Response  Group
+1  11.192664 Weasel
+2   8.115557 Weasel
+3  15.958910 Weasel
+4  17.132869 Weasel
+5  13.459796    Fox
+6  15.248768    Fox
+7  15.162966    Fox
+8  20.942888    Fox
+9  21.185580    Fox
+10  6.516257   Hare
+11  7.390330   Hare
+12 12.793413   Hare</font>
+</pre>
+
+and the correspondence between the new data and the original summary statistics can be seen with (note that if you had variable names different than "Response" and "Group" then you will have to change the names in the function below accordingly).
+
+<pre><font color="#FF0000">> Summarize(Response~Group,data=newdf)</font>
+<font color="#0000FF">
+
+Group       n      NAs  Valid n     Mean St. Dev.     Min.  1st Qu.   Median  3rd Qu.     Max. 
+Fox      5.00     0.00     5.00    17.20     3.60    13.46    15.16    15.25    20.94    21.19 
+Hare    3.000    0.000    3.000    8.900    3.400    6.516    6.953    7.390   10.090   12.790 
+Weasel  4.000    0.000    4.000   13.100    4.200    8.116   10.420   13.580   16.250   17.130 
+</font></pre></p>
+
+I would then suggest that you export this data to an Excel data file to create a static copy of these data because if you complete the commands above again then you will get different values due to the randomness.  The easiest way to export the data to Excel is to use <font face="Courier New" color="#FF0000">write.XLS()</font> from the <b>xlsReadWrite</b> package (you may have to download and install this package -- see <a href="install_other_packages.html">this FAQ</a>).  The data created above are written to an Excel file called "Example" in the working directory (see bullet #2 of <a href="cant_find_file.html">this FAQ</a> for how to change the working directory) with,
+
+<pre>
+<font color="#FF0000">> library(xlsReadWrite)
+> write.xls(newdf,file="Example.XLS",sheet=1)</font>
+</pre>
+
+You can then save the Excel file as a tab-delimited file for reading back into R as described in the second section of <a href="enter_data.html">this FAQ</a>.
+			
+<hr size="5" color="#800000">
+<div align="center"><a href="FAQ_R_NC.html"><font size="+1">Return to FAQ List</font></a></div>
+
+</body>
+</html>

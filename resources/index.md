@@ -6,7 +6,9 @@ title: Resources
 1. **Class Materials**
     * [Class Preparation Videos](class/lecture-prep.html)
     * [In-Class Materials](class/lecture-in-class.html)
-    
+
+1. [**FAQ (mostly related to R)**](RFAQ/)
+
 1. [**Data Files** (on GitHub)](https://github.com/droglenc/NCData){:target="_blank"}
 
 1. **Homework Answer Keys**

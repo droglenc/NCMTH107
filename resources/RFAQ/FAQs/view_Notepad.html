@@ -1,0 +1,36 @@
+<html>
+<head><title>Northland College R FAQ</title></head>
+<META http-equiv="Page-Enter" CONTENT="RevealTrans(Duration=1,Transition=3)">
+<SCRIPT SRC="../../GNRL/scripts/GNRL.JS"></SCRIPT>
+<body bgcolor="#FFFFB9">
+
+<h1>When I view my text file in Notepad it looks like data is missing.</h1>
+<p>Many .txt data files, when viewed in Notepad will look like they either have more or less data than is actually needed or should be in the data file.  For example, the data file below has two columns of data, but the columns do not line up neatly so it looks like some data is missing.</p>
+
+<pre>
+First.Name      Last.Name
+Derek   Ogle
+Young   Kim
+Jefry   Johnson
+</pre>
+
+<p>The "problem" is that the header for the first column is longer than any of the data in the first column so the tab that follows it causes the header for the second column to start on a different tab stop than the data for the second column.  This is not a problem because R reads in data by separating columns by finding "white space".  Thus, the two column headers are separated by one white space and each of the data rows is separated by just one white space.  Thus, these data will be reading into R correctly.</p>
+
+<pre>
+<font color="#FF0000">> d1 <- read.table("Ex1_spaces1.txt",header=T)
+> str(d1)</font>
+<font color="#0000FF">'data.frame':   3 obs. of  2 variables:
+ $ First.Name: Factor w/ 3 levels "Derek","Jefry",..: 1 3 2
+ $ Last.Name : Factor w/ 3 levels "Johnson","Kim",..: 3 2 1</font>
+<font color="#FF0000">> d1</font>
+<font color="#0000FF">  First.Name Last.Name
+1      Derek      Ogle
+2      Young       Kim
+3      Jefry   Johnson</font>
+</pre>
+
+<hr size="5" color="#800000">
+<div align="center"><a href="FAQ_R_NC.html"><font size="+1">Return to FAQ List</font></a></div>
+
+</body>
+</html>

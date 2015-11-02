@@ -1,0 +1,24 @@
+<html>
+<head><title>Northland College R FAQ</title></head>
+<META http-equiv="Page-Enter" CONTENT="RevealTrans(Duration=1,Transition=3)">
+<SCRIPT SRC="../../GNRL/scripts/GNRL.JS"></SCRIPT>
+<body bgcolor="#FFFFB9">
+
+<h1>How do I make R output look nice without having to physically type in spaces or tabs?</h1>
+<p>R uses Courier New as its output font.  Courier New is a constant spacing (rather than a proportional spacing) font which means that each character uses the same amount of horizontal space regarless of whether it is a "skinny" letter like "i" or a "fat" letter like "o".  When pasting output from R into MS Word the output will use the font being used in MS Word -- usually NOT Courier New.  In other words, your R output may look like the following; which is largely unreadable.</p>
+
+<p>       n      NAs  Valid n     Mean St. Dev.     Min.  1st Qu.   Median  3rd Qu.     Max. </p>
+<p>  150.00     0.00   150.00     5.84     0.83     4.30     5.10     5.80     6.40     7.90</p>
+  
+<p>This output can be made much more readable by pasting it into MS Word, highlighting the output in MS Word, and then changing the font to Courier New.  The font can be changed with the drop-down box in the "Font" tab of the MS Word tool bar or by right-clicking on the highlighted text and selecting the "font" option.  The pasted output in Courier New font is shown below in a much more readable format.</p>
+
+<pre>
+       n      NAs  Valid n     Mean St. Dev.     Min.  1st Qu.   Median  3rd Qu.     Max. 
+  150.00     0.00   150.00     5.84     0.83     4.30     5.10     5.80     6.40     7.90
+</pre>
+
+<hr size="5" color="#800000">
+<div align="center"><a href="FAQ_R_NC.html"><font size="+1">Return to FAQ List</font></a></div>
+
+</body>
+</html>

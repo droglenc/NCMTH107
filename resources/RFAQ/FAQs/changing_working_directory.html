@@ -1,0 +1,33 @@
+<html>
+<head><title>Northland College R FAQ</title></head>
+<META http-equiv="Page-Enter" CONTENT="RevealTrans(Duration=1,Transition=3)">
+<SCRIPT SRC="../../GNRL/scripts/GNRL.JS"></SCRIPT>
+<body bgcolor="#FFFFB9">
+
+<h1>How do I change the working directory?</h1>
+<p>External data files are read into R with <font color="#FF0000">> read.table()</font> or <font color="#FF0000">> read.xls()</font> (see this <a href="enter_data.html">FAQ</a>).  The first arguments in these functions is the name of the data file AND the path (i.e., directory structure) to this file.  Typing the path can be both cumbersome (i.e., it may be long!) and troublesome (i.e., very likely that you will mistype it!).  Thus, R allows you to change the so-called working directory to where your file is so that when you use <font color="#FF0000">> read.table()</font> or <font color="#FF0000">> read.xls()</font> you can simply type the name of the file and not include the path.</p>
+
+<p>The working directory is most easily set by selecting the "File...Change Dir" menu item, which will produce the dialog box below.</p>
+
+<div align="center"><img src="Figs/setwd1.jpg" width="288" height="156" alt="" border="0"></div>
+
+<p>In this dialog box you should press the "Browse Button" which will produce the following dialog box,</p>
+
+<div align="center"><img src="Figs/setwd2.jpg" width="324" height="338" alt="" border="0"></div>
+
+<p>in which you should browse to the folder that contains your file and press "OK" which will update the original dialog box with the selected directory,</p>
+
+<div align="center"><img src="Figs/setwd3.jpg" width="288" height="156" alt="" border="0"></div>
+
+<p>where you can then press "OK".</p>
+
+
+<a name="seefile"><h1>When I change the working directory I cannot see my data file?</h1></a>
+<p>You should note that in the middle dialog box above when you select the directory that contains your file that you will NOT be able to see your file.  This dialog box only shows the directories not what is contained in the directories.  Thus, you must know where your data file is saved so that you can point to the correct directory.</p>
+
+<hr size="5" color="#800000">
+<div align="center"><a href="FAQ_R_NC.html"><font size="+1">Return to FAQ List</font></a></div>
+
+</body>
+</html>
+

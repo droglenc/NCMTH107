@@ -1,0 +1,50 @@
+<html>
+<head><title>Northland College R FAQ</title></head>
+<META http-equiv="Page-Enter" CONTENT="RevealTrans(Duration=1,Transition=3)">
+<SCRIPT SRC="../../GNRL/scripts/GNRL.JS"></SCRIPT>
+<body bgcolor="#FFFFB9">
+
+<h1>Is there an easy way to enter data into R?</h1>
+<p>There are a variety of ways to enter data into R.  There are two easy ways to enter data into R for the size of the data files used in most classes at Northland.  In both case the data is first entered into a spreadsheet such as Excel.  The data in this sreadsheet can then be imported into R by saving the spreadsheet as tab-delimited text file and using <font face="Courier New" color="#FF0000">read.table()</font> or using <font face="Courier New" color="#FF0000">read.xls()</font> (from the <font face="Courier New" color="#FF0000">xlsReadWrite</font> package) to read the actual Excel file.  Entering the data and then importing with these two methods is described below.</p>
+
+<h2>Entering Data Into Excel</h2>
+<p>The Excel file should be organized with variable names in the first row and the recorded data in rows below that.  In this example the variable name "len" is entered in the first cell of the first row and the seven length measurements are listed in the first cells of the next seven rows as illustrated below.</p>
+
+<div align="center"><img src="Figs/Data_File_1.jpg" width="179" height="276" alt="" border="0"></div>
+
+<p>The variable names must NOT contain any spaces (see this <a href="space_in_header.html">FAQ</a>).  If you feel a need to have longer variable names then separate the parts with a period -- e.g., "total.length.  In addition, in the data portion of the file, the numerical measurements should NOT include units -- e.g., don't use "7 mm".  Finally, when using categorical data to denote group memberships make sure that all category labels are consistent.  For example, don't have a column with both "male" and "Male".</p>
+
+<p>The Excel file should be saved in its native Excel format.</p>
+
+<h2>Making &amp; Reading Tab-Delimited Text Files</h2>
+<p>The Excel file can be saved to a tab-delimited text file by selecting the "File..Save As" menu item which produces the following dialog box.</p>
+
+<div align="center"><img src="Figs/Data_File_2.jpg" width="599" height="384" alt="" border="0"></div>
+
+<p>In this dialog box change "Save as type" to "Text (Tab delimited) (*.txt)" (you may have to scroll down), provide a file name, select a location to save the file (and then don't forget this location!!), and press "OK".  Two "warning" dialog boxes will then appear -- select "OK" on the first and "YES" on the second.  A text file should have been created with the name and in the folder you provided.  You can now close the Excel file (you will likely be asked to save changes -- you should say "No").</p>
+
+<p>The tab-delimited file is now ready to be opened in R (described in the next paragraph).  Tab-delimited text files are read into R with <font face="Courier New" color="#FF0000">read.table()</font>.  This function requires the filename, including the path to the folder containing the file, in quotes as the first argument.  In addition, the <font face="Courier New" color="#FF0000">header=T</font> argument should be included to indicate that the data file contains a header row of variable names.  Thus, the tab-delimited data file created above is read into R and stored in a data frame called "LB" with (note that I stored my data file in the "C:/data" directory)</p>
+
+<pre><font color="#FF0000">> LB <- read.table("C:/data/ladybug.txt", header=T)</font></pre>
+
+<p>Note, you should read this <a href="cant_find_file.html">FAQ</a> to avoid having to type the pathname.</p>
+
+<h2>Importing the Excel File Directly</h2>
+<p>The <font face="Courier New" color="#FF0000">xlsReadWrite</font> package contains <font face="Courier New" color="#FF0000">read.xls()</font> which can be used to read an Excel file directly.  If the Excel spreadsheet is simple -- only one page (i.e., no tabs), no columns to be ignored, the header is in row 1, and the data begins in row 2 -- then <font face="Courier New" color="#FF0000">read.xls()</font> only requires the name of the XLS data file.  For example, the Excel version of the ladybug data file is read with.</p>
+
+<pre><font color="#FF0000">> LB <- read.xls("C:/data/ladybug.xls")</font></pre>
+
+<p>Also note that the <font face="Courier New" color="#FF0000">xlsReadWrite</font> package must have been loaded with</p>
+
+<pre><font color="#FF0000">> library(xlsReadWrite)</font></pre>
+
+<p>before <font face="Courier New" color="#FF0000">read.xls()</font> can be used.</p>
+
+
+
+<hr size="5" color="#800000">
+<div align="center"><a href="FAQ_R_NC.html"><font size="+1">Return to FAQ List</font></a></div>
+
+</body>
+</html>
+

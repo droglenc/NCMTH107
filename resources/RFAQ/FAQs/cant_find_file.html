@@ -1,0 +1,29 @@
+<html>
+<head><title>Northland College R FAQ</title></head>
+<META http-equiv="Page-Enter" CONTENT="RevealTrans(Duration=1,Transition=3)">
+<SCRIPT SRC="../../GNRL/scripts/GNRL.JS"></SCRIPT>
+<body bgcolor="#FFFFB9">
+
+<h1>The <font face="Courier New" color="#FF0000">read.table()</font> does not find my data file.</h1>
+<p>This error typically looks like this ...</p>
+
+<pre>
+<font color="#FF0000">> d1 <- read.table("Ex1_spaces2.txt",header=T)</font>
+<font color="#0000FF">Error in file(file, "r") : unable to open connection
+In addition: Warning message:
+cannot open file 'Ex1_spaces2.txt', reason 'No such file or directory' in: file(file, "r") 
+</font></pre>
+
+<p>The most common reasons for this error are (prioritized by frequency of occurrence) ...</p>
+
+<ol>
+	<li> You have misspelled the actual name of the file.<br><br>
+	<li> You have not changed the R working directory to where the data file is actually saved.  The working directory can be set by choosing the "File" menu, "Change Dir ..." submenu, and the using the "Browse" button to browse to the directory or folder where you saved the file.  Note that you won't actually see your file when you perform this operation, you just have to select the folder in which the file resides (i.e., you have to know where this folder is).  This is described in Section 21.3.7 of the class text.<br><br>
+	<li> You have not saved the file as a text file.  Most commonly you saved it as an Excel file and should use <font face="Courier New" color="#FF0000">read.xls()</font> as described in this <a href="enter_data.html">FAQ</a>.  Converting an Excel file to a tab-delimited text file is also described in this <a href="enter_data.html">FAQ</a>.  Alternatively, you may have saved the file as a "comma-separated values" file and should be using <font face="Courier New" color="#FF0000">read.csv()</font>.
+</ol>
+
+<hr size="5" color="#800000">
+<div align="center"><a href="FAQ_R_NC.html"><font size="+1">Return to FAQ List</font></a></div>
+
+</body>
+</html>

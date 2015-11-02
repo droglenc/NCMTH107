@@ -1,0 +1,42 @@
+<html>
+<head><title>Northland College R FAQ</title></head>
+<META http-equiv="Page-Enter" CONTENT="RevealTrans(Duration=1,Transition=3)">
+<SCRIPT SRC="../../GNRL/scripts/GNRL.JS"></SCRIPT>
+<body bgcolor="#FFFFB9">
+
+<h1>How do I select two groups of a factor variable?</h1>
+<p>In many instances you may want to create a smaller data frame that contains only those individuals that belong in two groups represented in a larger data frame.  The smaller data frame can be constructed using <font face="Courier New" color="#FF0000">Subset()</font>.</p>
+
+<p>For example the following data frame contains tanner crabs captured in four types of traps.</p>
+
+<pre><font color="#FF0000">> library(gdata)
+> tan <- read.table("Tanner.txt",head=T)
+> str(tan)</font>
+<font color="#0000FF">'data.frame':   30 obs. of  5 variables:
+ $ trial   : int  1 2 3 4 5 6 7 8 9 1 ...
+ $ type    : Factor w/ 4 levels "cod.sock","slick.board",..: 3 3 3 3 3 3 3 3 3 2 ...
+ $ approach: int  69 52 86 56 44 30 71 57 72 17 ...
+ $ reached : int  48 40 59 43 31 27 51 35 49 1 ...
+ $ entered : int  0 3 4 0 3 4 7 3 2 0 ...</font>
+<font color="#FF0000">> levels(tan$type)</font>
+<font color="#0000FF">[1] "cod.sock"    "slick.board" "standard"    "ZK.excluder"</font>
+<font color="#FF0000">
+> table(tan$type)</font>
+<font color="#0000FF">   cod.sock slick.board    standard ZK.excluder 
+          3           9           9           9 </font></pre>
+
+<p>Now suppose that you want to select only tanner crabs captured in the "slick.board" or "standard" trap types.  The <font face="Courier New" color="#FF0000">Subset()</font> function is used with two conditions (type=="slick.board" and type=="standard") connected with an "or" operator.  The "or" operation in R is the vertical line (shift-\ key).  Thus, the following command creates a new data frame (called "tan1") that contains all rows where the type is equal to "slick.board" or "standard" (<i>note that a common mistake here is to use the "and" operator.  This will create a subset with no information in it because it is impossible for a trap to simultaneoulsy be both a "slick.board" and a "standard" type</i>).</p>
+
+<pre><font color="#FF0000">> tan1 <- Subset(tan,type=="slick.board" | type=="standard")
+> levels(tan1$type)</font>
+<font color="#0000FF">[1] "slick.board" "standard"</font>
+<font color="#FF0000">> table(tan1$type)</font>
+<font color="#0000FF">slick.board    standard
+          9           9</font></pre>
+
+
+<hr size="5" color="#800000">
+<div align="center"><a href="FAQ_R_NC.html"><font size="+1">Return to FAQ List</font></a></div>
+
+</body>
+</html>

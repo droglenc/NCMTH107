@@ -1,0 +1,44 @@
+---
+layout: page
+author: Derek H. Ogle
+title: MTH107 FAQ
+subtitle: How do I install the NCStats package?
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/RFAQ/FAQs")
+source("../../../rhelpers/rhelpers.R")
+fnm <- "install_NCStats"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message='FALSE'}
+source("../../../rhelpers/knitr_setup.R")
+```
+
+## The NCStats Package
+
+The NCStats package is a package of routines that I have written to make some aspects of using R for statistics classes at Northland easier.  This package is maintained on GItHub and the RForge.net repository.  Descriptions for installing the NCStats package are below.  The NCStats package is likely loaded on all Northland College computers, though it may not be the most recent version at all times.
+
+## Installing NCStats
+
+As long as your computer is connected to the internet you can install NCStats directly from RForge.net by issuing the following command in R.
+
+```{r eval=FALSE}
+source("http://www.rforge.net/NCStats/InstallNCStats.R")
+```
+
+## Checking the Installation
+
+After installing the NCStats package with one of the methods above it can then be loaded for use with ...
+```{r}
+library(NCStats)
+```
+
+If this command produces errors where R says that it cannot find another package then see [this FAQ](install_other_packages.html).
+
+The following command should open the help file and would also mean that the download and installation was successful.
+```{r eval=FALSE}
+?NCStats
+```

@@ -1,0 +1,25 @@
+<html>
+<head><title>Northland College R FAQ</title></head>
+<META http-equiv="Page-Enter" CONTENT="RevealTrans(Duration=1,Transition=3)">
+<SCRIPT SRC="../../GNRL/scripts/GNRL.JS"></SCRIPT>
+<body bgcolor="#FFFFB9">
+
+<h1>Is it possible to detach all data frames at once?</h1>
+<p>You may want to detach all data frames if you have accidentally attached many data frames or if you just want to make sure that you have all data frames detached after finishing an analysis or before starting an new analysis.  All currently attached data frames can be detached by typing <font face="Courier New" color="#FF0000">detachAll()</font> in R (note that the parentheses are needed and that the NCStats package must be loaded).  For example, the following command shows that the d2 and d1 data frames are attached</p>
+
+<pre><font color="#FF0000">> attached()</font>
+<font color="#0000FF">[1] "d2" "d1"</font></pre>
+
+and the following detaches these two data frames
+<pre><font color="#FF0000">> detachAll()</font>
+<font color="#FF0000">> attached()</font>
+<font color="#0000FF">No data frames are currently attached.</font></pre>
+
+<p>If you cannot remember if you have any data frames attached then see <a href="which_attached.html">this FAQ</a>.  If you want to detach just one data frame then see <a href="detaching.html">this FAQ</a>.</p>
+
+<hr size="5" color="#800000">
+<div align="center"><a href="FAQ_R_NC.html"><font size="+1">Return to FAQ List</font></a></div>
+
+</body>
+</html>
+

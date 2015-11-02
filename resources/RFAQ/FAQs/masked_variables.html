@@ -1,0 +1,38 @@
+<html>
+<head><title>Northland College R FAQ</title></head>
+<META http-equiv="Page-Enter" CONTENT="RevealTrans(Duration=1,Transition=3)">
+<SCRIPT SRC="../../GNRL/scripts/GNRL.JS"></SCRIPT>
+<body bgcolor="#FFFFB9">
+
+<h1>When I attach a data frame R says that some variables are "masked."</h1>
+<p>R uses the word "mask" to represent something that is multiply defined.  For example, when you load the NCStats package R will tell you that the function "Summary" is masked.  This occurs because the NCStats package contains a function called "Summary" AND the function "Summary" appears in the base R.  In this instance, the masking is not a problem because in statistics classes at Northland you will only need the "Summary" function in the NCStats package.</p>
+
+<p>Masking can become a problem when a variable (rather than a function) is masked.  This is a problem because R may become confused about which variable to use (actually, it is more likely that you will get confused).  This issue usually occurs when you have two data frames with the same variable names attached at the same time.  For example, consider this simple example ...</p>
+
+<pre>
+<font color="#FF0000">> str(d1)</font>
+<font color="#0000FF">'data.frame':   3 obs. of  4 variables:
+ $ classes : int  3 4 1
+ $ name    : Factor w/ 3 levels "Derek Ogle","Jefry Johnson",..: 1 3 2
+ $ years   : int  11 19 3
+ $ hometown: Factor w/ 3 levels "Ashland","Duluth",..: 3 2 1</font>
+<font color="#FF0000">> attach(d1) 
+> str(d2)</font>
+<font color="#0000FF">'data.frame':   3 obs. of  3 variables:
+ $ classes: int  3 4 1
+ $ name   : Factor w/ 3 levels "Derek Ogle","Jefry Johnson",..: 1 3 2
+ $ years  : int  11 19 3</font>
+<font color="#FF0000">> attach(d2)</font>
+<font color="#0000FF">
+        The following object(s) are masked from d1 :
+
+         classes name years </font>
+</pre>
+
+<p>If this type of masking occurs it is best to detach the data frame that you do not want to use (see <a href="detaching.html">this FAQ</a>).  If you cannot remember which data frames you have attached then see <a href="which_attached.html">this FAQ</a>.</p>
+
+<hr size="5" color="#800000">
+<div align="center"><a href="FAQ_R_NC.html"><font size="+1">Return to FAQ List</font></a></div>
+
+</body>
+</html>
