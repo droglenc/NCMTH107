@@ -1,0 +1,90 @@
+---
+layout: page
+title: "Simple Linear Regresssion"
+author: "Derek H. Ogle"
+output:
+---
+
+
+<div id="background" class="section level2">
+<h2>Background</h2>
+<p>Rainbow trout, mountain whitefish and large-scale suckers taken from four different localities along the Spokane River (eastern Washington) during summer 1999 were analyzed for three heavy metals (lead, zinc and cadmium). Metal contents are reported in milligrams of metal per kilogram of fish (mg/kg), which is equivalent to parts per million (ppm). The source of the heavy metals is upstream from Spokane in the Coeur d’Alene mining district of northern Idaho, one of the richest, and most heavily contaminated, mining districts in the U.S. Acid mine drainage directly from shafts and adits, and from leaching of metal rich mine tailings (waste rock), as well as metal-rich discharges from smelters, have contaminated many streams, rivers and lakes in the Spokane/Coeur d’Alene watershed. Metals are both dissolved in the river water and found as minute particles that can enter the food web at various stages. The lead and zinc data are found in a tab-delimited text file at <a href="https://github.com/droglenc/NCData/blob/master/MetalsFish.csv">MetalsFish.csv</a>. Note that the authors are interested in determining if zinc concentrations can be explained by knowing lead concentrations. Use this information to answer the questions below.</p>
+<ul>
+<li>What is the response variable?</li>
+<li>What is the explanatory variable?</li>
+<li>In terms of the variables of this problem, what is the equation of the best-fit line?</li>
+<li>In terms of the variables of this problem, interpret the value of the slope.</li>
+<li>In terms of the variables of this problem, interpret the value of the y-intercept.</li>
+<li>What is the predicted zinc concentration if the lead concentration is 2.5 mg/kg?</li>
+<li>What is the predicted zinc concentration if the lead concentration is 6?</li>
+<li>What is the residual if the zinc concentration is 100 mg/kg and the lead concentration is 3.2 mg/kg?</li>
+<li>What is the correlation coefficient between the concentrations of zinc and lead?</li>
+<li>What proportion of the variability in zinc concentration is explained by knowing the concentration of lead?</li>
+<li>What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?</li>
+</ul>
+</div>
+<div id="getting-the-data" class="section level2">
+<h2>Getting the Data</h2>
+<pre class="r"><code>&gt; library(NCStats)
+&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs&quot;)
+&gt; ( sr &lt;- read.csv(&quot;MetalsFish.csv&quot;) )</code></pre>
+<pre><code>   lead  zinc
+1  0.73  45.3
+2  1.14  50.8
+3  0.60  40.2
+4  1.59  64.0
+5  4.34 150.0
+6  1.98 106.0
+7  3.12  90.8
+8  1.80  58.8
+9  0.65  35.4
+10 0.56  28.4</code></pre>
+</div>
+<div id="fitting-the-regression-and-seeing-the-results" class="section level2">
+<h2>Fitting the Regression and Seeing the Results</h2>
+<pre class="r"><code>&gt; ( lm.sr &lt;- lm(zinc~lead,data=sr) )</code></pre>
+<pre><code>Coefficients:
+(Intercept)         lead  
+      19.54        28.73  </code></pre>
+<pre class="r"><code>&gt; rSquared(lm.sr)</code></pre>
+<pre><code>[1] 0.8846028</code></pre>
+<pre class="r"><code>&gt; fitPlot(lm.sr,xlab=&quot;lead (ppm)&quot;,ylab=&quot;zinc (ppm)&quot;,main=&quot;&quot;)</code></pre>
+<p><img src="SimpleLinearRegression_files/figure-html/unnamed-chunk-4-1.png" title="" alt="" width="336" /></p>
+</div>
+<div id="using-the-regression" class="section level2">
+<h2>Using the Regression</h2>
+<pre class="r"><code>&gt; predict(lm.sr,data.frame(lead=2.5))</code></pre>
+<pre><code>       1 
+91.35772 </code></pre>
+<pre class="r"><code>&gt; ( yhat &lt;- predict(lm.sr,data.frame(lead=3.2)) )</code></pre>
+<pre><code>       1 
+111.4654 </code></pre>
+<pre class="r"><code>&gt; 100-yhat</code></pre>
+<pre><code>        1 
+-11.46538 </code></pre>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

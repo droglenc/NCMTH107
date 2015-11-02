@@ -1,0 +1,70 @@
+---
+layout: page
+title: "Inference Concepts"
+author: "Derek H. Ogle"
+output:
+---
+
+
+<div id="background" class="section level2">
+<h2>Background</h2>
+<p>Barrels designed to hold 200-gallons of gasoline were recently found in an abandoned warehouse. The contents of a random sample of 38 barrels were carefully measured to determine if the barrels had leaked a significant amount of gasoline. Assume that it is known that the actual content of the barrels has a standard deviation of 10 gallons. The results for the sample are found in <a href="https://github.com/droglenc/NCData/blob/master/Barrels.csv">barrels.csv</a> on the class webpage. Use results computed from the sample to determine, at the 10% level, if there is evidence that the barrels had leaked.</p>
+</div>
+<div id="getting-the-data" class="section level2">
+<h2>Getting the Data</h2>
+<pre class="r"><code>&gt; library(NCStats)
+&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs&quot;)
+&gt; brls &lt;- read.csv(&quot;Barrels.csv&quot;)
+&gt; str(brls)</code></pre>
+<pre><code>&#39;data.frame&#39;:   38 obs. of  2 variables:
+ $ barrel  : int  1 2 3 4 5 6 7 8 9 10 ...
+ $ gasoline: num  183 197 192 200 190 ...</code></pre>
+</div>
+<div id="quick-eda" class="section level2">
+<h2>Quick EDA</h2>
+<pre class="r"><code>&gt; Summarize(~gasoline,data=brls,digits=1)</code></pre>
+<pre><code>       n   nvalid     mean       sd      min       Q1   median       Q3      max percZero 
+    38.0     38.0    197.7     10.6    178.8    189.5    199.3    204.4    223.4      0.0 </code></pre>
+<pre class="r"><code>&gt; hist(~gasoline,data=brls,xlab=&quot;Gallons of Gasoline&quot;)</code></pre>
+<p><img src="InferenceConcepts_files/figure-html/unnamed-chunk-4-1.png" title="" alt="" width="336" /></p>
+</div>
+<div id="sample-z-test" class="section level2">
+<h2>1-Sample Z-test</h2>
+<pre class="r"><code>&gt; ( gas.z &lt;- z.test(brls$gasoline,sd=10,mu=200,alt=&quot;less&quot;,conf.level=0.90) )</code></pre>
+<pre><code>One Sample z-test with brls$gasoline 
+z = -1.4243, n = 38.000, Std. Dev. = 10.000, Std. Dev. of the sample mean =
+1.622, p-value = 0.07718
+alternative hypothesis: true mean is less than 200 
+90 percent confidence interval:
+     -Inf 199.7684 
+sample estimates:
+mean of brls$gasoline 
+             197.6895 </code></pre>
+<pre class="r"><code>&gt; plot(gas.z)</code></pre>
+<p><img src="InferenceConcepts_files/figure-html/unnamed-chunk-5-1.png" title="" alt="" width="336" /></p>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

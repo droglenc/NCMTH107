@@ -1,0 +1,74 @@
+---
+layout: page
+title: "Bivariate EDA"
+author: "Derek H. Ogle"
+output:
+  html_document:
+    fig_width: 3.5
+    fig_height: 3.5
+    self_contained: no
+  pdf_document:
+    fig_width: 3.5
+    fig_height: 3.5
+  word_document:
+    fig_width: 3.5
+    fig_height: 3.5
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs"); source("../../rhelpers/rhelpers.R")
+fnm <- "BivariateEDA"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message='FALSE'}
+fnm <- "BivariateEDA"
+source("../../rhelpers/knitr_setup.R")
+```
+
+## Background
+Measurements of the levels of arsenic in the drinking water, cooking water, and toenail samples, as well as related covariates, were measured on 21 individuals with private wells in a New Hampshire community.  The variables below were recorded in the [https://github.com/droglenc/NCData/blob/master/Arsenic.csv](Arsenic.csv) file located on the R Resources web page.
+
+* `age`: Age (yrs) of person
+* `sex`: Sex of person
+* `usedrink`: Household well used for drinking -- A="$<\frac{1}{4}$", B="$\approx\frac{1}{4}$",  C="$\approx\frac{1}{2}$",  D="$\approx\frac{3}{4}$",  E="$>\frac{3}{4}$"
+* `usecook`: Household well used for cooking -- A="$<\frac{1}{4}$", B="$\approx\frac{1}{4}$",  C="$\approx\frac{1}{2}$",  D="$\approx\frac{3}{4}$",  E="$>\frac{3}{4}$"
+* `arswater`: Arsenic in water (ppm)
+* `arsnails`: Arsenic in toenails (ppm)
+
+In this handout, we will consider the questions below.
+
+* What type of variable is each variable in the data set?
+* Describe the relationship between the level of arsenic in the toenails and the age of the person.
+* Describe the relationship between the "amount" that the well is used for drinking and the sex of the person.
+* What percentage of females used the well for drinking water more than three-quarters of the time?
+* What percentage of all persons in the study were female and used the well for drinking water about one-half of the time?
+* What percentage of the sample was female?
+
+## Getting The Data
+```{r message=FALSE, warning=FALSE}
+library(NCStats)
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs")
+Ars <- read.csv("Arsenic.csv")
+str(Ars)
+view(Ars)
+```
+
+## Bivariate EDA -- Quantitative
+```{r fig.show='asis'}
+plot(arsnails~age,data=Ars,pch=19)
+cor(Ars$arsnails,Ars$age)
+```
+
+## Bivariate EDA -- Categorical
+```{r }
+( freq.tbl <- xtabs(~sex+usedrink,data=Ars) )
+percTable(freq.tbl,margin=1,digits=1)
+percTable(freq.tbl,margin=2,digits=1)
+percTable(freq.tbl,digits=1)
+```
+
+```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
+purl2(paste0(fnm,".Rmd"))
+```

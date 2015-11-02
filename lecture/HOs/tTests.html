@@ -1,0 +1,101 @@
+---
+layout: page
+title: "t-Tests"
+author: "Derek H. Ogle"
+output:
+---
+
+
+<div id="first-commands" class="section level2">
+<h2>First Commands</h2>
+<pre class="r"><code>&gt; library(NCStats)
+&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs&quot;)
+&gt; library(car)   # for leveneTest</code></pre>
+</div>
+<div id="t-distribution-calculations" class="section level2">
+<h2>t Distribution Calculations</h2>
+<p>An example of computing the p-value if <span class="math">\(H_{A}:\mu&gt;70\)</span>, t=2.67, and df=18.</p>
+<pre class="r"><code>&gt; ( distrib(2.67,distrib=&quot;t&quot;,df=18,lower.tail=FALSE) )</code></pre>
+<p><img src="tTests_files/figure-html/unnamed-chunk-4-1.png" title="" alt="" width="336" /></p>
+<pre><code>[1] 0.007807045</code></pre>
+<p>An example of finding <span class="math">\(t^{*}\)</span> if <span class="math">\(H_{A}:\mu\neq70\)</span>, <span class="math">\(\alpha\)</span>=0.05, and df=28.</p>
+<pre class="r"><code>&gt; ( distrib(0.025,distrib=&quot;t&quot;,df=28,type=&quot;q&quot;,lower.tail=FALSE) )</code></pre>
+<p><img src="tTests_files/figure-html/unnamed-chunk-5-1.png" title="" alt="" width="336" /></p>
+<pre><code>[1] 2.048407</code></pre>
+</div>
+<div id="one-sample-t-test" class="section level2">
+<h2>One-Sample t-Test</h2>
+<p>Researchers (Based on data from Blem, C.R. and L.B. Blem. 1995. Journal of Herpetology 29:391-398) have determined that a population of cottonmouth snakes (<strong>Agkistrodon piscivorus</strong>) must have an average litter size of greater than 5.8 snakes in order for the population to grow. A sample of snake litters from this population was taken and the number of snakes in the litter was recorded. The results were recorded in <a href="https://github.com/droglenc/NCData/blob/master/Cottonmouth.csv">Cottonmouth.csv</a> on the class webpage. Test, at a very conservative level, if the average litter size is large enough for the population to grow.</p>
+<pre class="r"><code>&gt; cm  &lt;- read.csv(&quot;Cottonmouth.csv&quot;)
+&gt; str(cm)</code></pre>
+<pre><code>&#39;data.frame&#39;:   44 obs. of  1 variable:
+ $ num: int  5 12 7 7 6 8 12 9 7 4 ...</code></pre>
+<pre class="r"><code>&gt; # if n was &lt;40 then I would have done -- hist(~num,data=cm,xlab=&quot;Number in Litter&quot;)
+&gt; ( cm.t &lt;- t.test(cm$num,mu=5.8,alt=&quot;greater&quot;,conf.level=0.99) )</code></pre>
+<pre><code>One Sample t-test with cm$num 
+t = 3.6985, df = 43, p-value = 0.0003055
+alternative hypothesis: true mean is greater than 5.8 
+99 percent confidence interval:
+ 6.342094      Inf 
+sample estimates:
+mean of x 
+ 7.363636 </code></pre>
+<pre class="r"><code>&gt; plot(cm.t)</code></pre>
+<p><img src="tTests_files/figure-html/unnamed-chunk-6-1.png" title="" alt="" width="336" /></p>
+</div>
+<div id="two-sample-t-test" class="section level2">
+<h2>Two-Sample t-Test</h2>
+<p>A sample (from Sholl, M.J., <strong>et al.</strong> 2000. The relation of sex and sense of direction to spatial orientation in an unfamiliar environment. Journal of Environmental Psychology. 20:17-28.) of 30 males and 30 female was taken to an unfamiliar wooded park and given spatial orientation tests, including pointing to the south. The absolute pointing error, in degrees, was recorded. The results are in the <a href="https://github.com/droglenc/NCData/blob/master/SexDirection.csv">SexDirection</a> on the class webpage. Test if men have a better sense of direction than women, at the 1% level?</p>
+<pre class="r"><code>&gt; sdir &lt;- read.csv(&quot;SexDirection.csv&quot;)
+&gt; str(sdir)</code></pre>
+<pre><code>&#39;data.frame&#39;:   60 obs. of  2 variables:
+ $ abserr: int  13 13 38 59 58 8 130 68 23 5 ...
+ $ sex   : Factor w/ 2 levels &quot;female&quot;,&quot;male&quot;: 2 2 2 2 2 2 2 2 2 2 ...</code></pre>
+<pre class="r"><code>&gt; Summarize(abserr~sex,data=sdir,digits=1)</code></pre>
+<pre><code>     sex  n nvalid mean   sd min   Q1 median   Q3 max percZero
+1 female 30     30 55.8 48.3   3 15.8   35.0 88.2 176        0
+2   male 30     30 37.6 38.5   3 11.5   22.5 58.8 167        0</code></pre>
+<pre class="r"><code>&gt; hist(abserr~sex,data=sdir,xlab=&quot;Absolute Pointing Error&quot;)</code></pre>
+<p><img src="tTests_files/figure-html/unnamed-chunk-8-1.png" title="" alt="" width="672" /></p>
+<pre class="r"><code>&gt; leveneTest(abserr~sex,data=sdir)</code></pre>
+<pre><code>Levene&#39;s Test for Homogeneity of Variance (center = median)
+      Df F value Pr(&gt;F)
+group  1  2.1692 0.1462
+      58               </code></pre>
+<pre class="r"><code>&gt; ( t2 &lt;- t.test(abserr~sex,data=sdir,var.equal=TRUE,alt=&quot;greater&quot;,conf.level=0.99) )</code></pre>
+<pre><code> Two Sample t-test with abserr by sex 
+t = 1.6149, df = 58, p-value = 0.05588
+alternative hypothesis: true difference in means is greater than 0 
+99 percent confidence interval:
+ -8.761457       Inf 
+sample estimates:
+mean in group female   mean in group male 
+                55.8                 37.6 </code></pre>
+<pre class="r"><code>&gt; plot(t2)</code></pre>
+<p><img src="tTests_files/figure-html/unnamed-chunk-9-1.png" title="" alt="" width="336" /></p>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

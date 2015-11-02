@@ -66,7 +66,7 @@ See [class preparation videos below](#preparation-videos).
   <tr>
     <td class="tg-leftcol">Data Production</td>
     <td class="tg-cell"><a href="Slides/07_DataProduction.pptx"><img src="../img/ppt.png" alt="MSPowerPoint"></a></td>
-    <td class="tg-cell"><a href="HOs/DataProduction.html"><img src="../img/web.png" alt="Webpage"></a> <a href="HOs/DataProduction.pdf"><img src="../img/pdf.png" alt="PDF"></a> <a href="HOs/DataProduction.docx"><img src="../img/word.png" alt="MSWord"></a> <a href="HOs/DataProduction.R"><img src="../img/script.png" alt="R Script"></a></td>
+    <td class="tg-cell"> -- </td>
     <td class="tg-cell"> -- </td>
   </tr>
   
@@ -107,7 +107,8 @@ See [class preparation videos below](#preparation-videos).
 
 </table>
 
-
+\ 
+\ 
 
 # Preparation Videos
 

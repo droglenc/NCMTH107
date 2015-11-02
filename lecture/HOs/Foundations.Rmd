@@ -5,11 +5,14 @@ author: "Derek H. Ogle"
 output:
   html_document:
     fig_width: 3.5
+    fig_height: 3.5
     self_contained: no
   pdf_document: 
     fig_width: 3.5
+    fig_height: 3.5
   word_document:
     fig_width: 3.5
+    fig_height: 3.5
 ---
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
@@ -18,7 +21,7 @@ fnm <- "Foundations"
 modHTML(fnm)
 ```
 
-```{r echo=FALSE, results='hide', message='FALSE'}
+```{r echo=FALSE, results='hide', message=FALSE}
 fnm <- "Foundations"
 source("../../rhelpers/knitr_setup.R")
 ```
@@ -67,4 +70,3 @@ abline(v=Summarize(ABCens90$sex)["male","perc"],lwd=2,lty=2)
 ```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
 purl2(paste0(fnm,".Rmd"))
 ```
-

@@ -1,0 +1,70 @@
+---
+layout: page
+title: "Univariate EDA"
+author: "Derek H. Ogle"
+output:
+  html_document:
+    fig_width: 3.5
+    fig_height: 3.5
+    self_contained: no
+  pdf_document:
+    fig_width: 3.5
+    fig_height: 3.5
+  word_document:
+    fig_width: 3.5
+    fig_height: 3.5
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs"); source("../../rhelpers/rhelpers.R")
+fnm <- "UnivariateEDA"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+fnm <- "UnivariateEDA"
+source("../../rhelpers/knitr_setup.R")
+```
+
+## Background
+Measurements of the levels of arsenic in the drinking water, cooking water, and toenail samples, as well as related covariates, were measured on 21 individuals with private wells in a New Hampshire community.  The variables below were recorded in the [https://github.com/droglenc/NCData/blob/master/Arsenic.csv](Arsenic.csv) file located on the R Resources web page.
+
+* `age`: Age (yrs) of person
+* `sex`: Sex of person
+* `usedrink`: Household well used for drinking -- A="$<\frac{1}{4}$", B="$\approx\frac{1}{4}$",  C="$\approx\frac{1}{2}$",  D="$\approx\frac{3}{4}$",  E="$>\frac{3}{4}$"
+* `usecook`: Household well used for cooking -- A="$<\frac{1}{4}$", B="$\approx\frac{1}{4}$",  C="$\approx\frac{1}{2}$",  D="$\approx\frac{3}{4}$",  E="$>\frac{3}{4}$"
+* `arswater`: Arsenic in water (ppm)
+* `arsnails`: Arsenic in toenails (ppm)
+
+## Getting the Data
+```{r message=FALSE, warning=FALSE}
+library(NCStats)
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs")
+Ars <- read.csv("Arsenic.csv")
+str(Ars)
+view(Ars)
+```
+
+## Univariate EDA -- Quantitative
+```{r}
+Summarize(~age,data=Ars,digits=2)
+hist(~age,data=Ars,main="",xlab="Age (yrs)")
+```
+
+## Univariate EDA -- Quantitative (Separated by Groups)
+```{r fig.width=2*figsz, fig.height=figsz, par2=TRUE}
+Summarize(age~sex,data=Ars,digits=2)
+hist(age~sex,data=Ars,xlab="Age (yrs)",col="gray90")
+```
+
+## Univariate EDA -- Categorical
+```{r}
+( tbl.drink <- xtabs(~usedrink,data=Ars) )
+percTable(tbl.drink,digits=1)
+barplot(tbl.drink,xlab="Rating of Use for Drinking",ylab="Frequency",col="gray90")
+```
+
+```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
+purl2(paste0(fnm,".Rmd"))
+```

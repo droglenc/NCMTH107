@@ -1,0 +1,108 @@
+---
+layout: page
+title: "Chi-Square Tests"
+author: "Derek H. Ogle"
+output:
+  html_document:
+    fig_width: 3.5
+    fig_height: 3.5
+    self_contained: no
+  pdf_document:
+    fig_width: 3.5
+    fig_height: 3.5
+  word_document:
+    fig_width: 3.5
+    fig_height: 3.5
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs") source("../../rhelpers/rhelpers.R")
+fnm <- "ChiSquareTests"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message='FALSE'}
+fnm <- "ChiSquareTests"
+source("../../rhelpers/knitr_setup.R")
+```
+
+## First Commands
+```{r message=FALSE, warning=FALSE}
+library(NCStats)
+```
+
+## Chi-Square Distribution Calculations
+An example of computing the p-value $\chi^{2}$=2.67 and df=3.
+```{r par1a=TRUE}
+( distrib(2.67,distrib="chisq",df=3,lower.tail=FALSE) )
+```
+
+An example of computing the p-value if $\chi^{2}$=16.82 and df=8.
+```{r par1a=TRUE}
+( distrib(16.82,distrib="chisq",df=8,lower.tail=FALSE) )
+```
+
+## Chi-Square Test
+### From Summarized Observed Table
+Do the dominant food items in lake trout and chinook salmon differ at the 5\% level?  The summarized observed table was given in class.
+```{r}
+freq <- c(32,10,8,18,18,4)
+( obs <- matrix(freq,nrow=2,byrow=TRUE) )
+rownames(obs) <- c("lake trout","chinook salmon")
+colnames(obs) <- c("lake herring","smelt","mysis")
+obs
+chi1 <- chisq.test(obs,correct=FALSE)
+chi1$expected
+chi1$expected >= 5
+chi1
+chi1$residuals
+percTable(obs,margin=1,digits=1)
+```
+
+```{r}
+( obs2 <- obs[,-2] )
+( chi2 <- chisq.test(obs2,correct=FALSE) )
+chi2
+```
+
+### From Raw Data
+On the GSS, respondents were asked to state their opinion on how true the following statement was "All radioactivity is made by humans."  Respondents were also categorized by their highest educational degree.  Use the results in the [SciTest1.csv](https://github.com/droglenc/NCData/blob/master/SciTest1.csv) data file to determine, at the 5% level, if the response to the question differs among levels of education
+
+```{r }
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs")
+ST1 <- read.csv("SciTest1.csv")
+str(ST1)
+levels(ST1$degree)
+ST1$fdegree <- factor(ST1$degree,levels=c("lt.hs","hs","jc","bach","grad"))
+levels(ST1$scitest)
+ST1$fscitest <- factor(ST1$scitest,levels=c("def.not","prob.not","prob.true","def.true"))
+```
+```{r}
+( freq.tbl <- xtabs(~fdegree+fscitest,data=ST1) )
+ST1.chi <- chisq.test(freq.tbl,correct=FALSE)
+ST1.chi$expected
+ST1.chi$expected >= 5
+all(chi1$expected >= 5)
+ST1.chi
+ST1.chi$residuals
+percTable(freq.tbl,margin=1,digits=1)
+```
+
+## Goodness-of-Fit Test
+Four-o'clocks (**Mirabilis jalapa**) are plants native to tropical America.  Individual four-o'clocks can have red, white, or pink flowers.  Flower color in this species is thought to controlled by a single gene locus with two alleles experssing incomplete dominance, so that heterozygotes are pink-flower, while homozygotes for one allele are white-flowered and homozygotes for the other allele are red-flowered.  According to Mendelian genetic principles, self-pollination of pink-flowered plants should produce progeny that have red, pink, and white flowers in a 1:2:1 ratio.  A horticulturist self-pollinates several pink-flowered plants and produces 240 progeny with 55 that are red-flowered, 132 that are pink-flowered, and 53 that are white-flowered.  Use the results to determine, at the 5% level, if the theoretical 1:2:1 ratio is upheld with these data (This is example 11.1 from Glover, T. and K. Mitchell.  2008.  An Introduction to Biostatistics, 2nd edition.  Waveland Press).
+
+```{r par1a=TRUE, fig.show='asis'}
+obs <- c(red=55,pink=132,white=53)
+exp.p <- c(red=1/4,pink=2/4,white=1/4)
+chi1 <- chisq.test(obs,p=exp.p,rescale=TRUE,correct=FALSE)
+chi1$expected
+chi1$observed
+chi1
+plot(chi1)
+gofCI(chi1,digits=3)
+```
+
+```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
+purl2(paste0(fnm,".Rmd"))
+```
