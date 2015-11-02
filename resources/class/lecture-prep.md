@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Class Materials
+subtitle: Preparation Videos
 css: "/css/lecture-tables.css"
 ---
 
