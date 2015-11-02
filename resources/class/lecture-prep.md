@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Class Materials
-css: "lecture-tables.css"
+css: "css/lecture-tables.css"
 ---
 
 Also see [in-class materials](lecture-in-class.html).
