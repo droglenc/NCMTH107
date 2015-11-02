@@ -3,9 +3,11 @@ layout: page
 title: Resources
 ---
 
-1. **Data Files**
-    * [GitHub](https://github.com/droglenc/NCData){:target="_blank"}
-    * [Google Sites](https://sites.google.com/site/ncstats/data){:target="_blank"} [*deprecated, will be removed by 31-Dec-15*]
+1. **Class Materials**
+    * [Class Preparation Videos](class/lecture-prep.html)
+    * [In-Class Materials](class/lecture-in-class.html)
+    
+1. [**Data Files** (on GitHub)](https://github.com/droglenc/NCData){:target="_blank"}
 
 1. **Homework Answer Keys**
 
