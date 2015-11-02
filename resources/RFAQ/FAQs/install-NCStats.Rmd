@@ -2,14 +2,14 @@
 layout: page
 author: Derek H. Ogle
 title: MTH107 FAQ
-subtitle: How do I install the NCStats package?
+subtitle: How do I install NCStats?
 ---
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/RFAQ/FAQs")
 source("../../../rhelpers/rhelpers.R")
-fnm <- "install_NCStats"
+fnm <- "install-NCStats"
 modHTML(fnm)
 ```
 
@@ -36,7 +36,7 @@ After installing the `NCStats`, it is loaded for use with ...
 library(NCStats)
 ```
 
-If this command produces an error where R says that it cannot find another package, then see [this FAQ](install_other_packages.html).
+If this command produces an error where R says that it cannot find another package, then see [this FAQ](install-other-packages.html).
 
 The following command should open the help file and also indicates that the download and installation were successful.
 ```{r eval=FALSE}

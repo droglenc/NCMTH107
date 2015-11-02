@@ -7,9 +7,9 @@ The following are links to answers for frequently asked questions by Northland C
 
 ## Running R
 
-* [How do I install the NCStats package?](FAQs/install_NCStats.html)
-* When I load the NCStats package R says that it cannot find some other packages.
-* R cannot find the NCStats package.
+* [How do I install `NCStats`?](FAQs/install-NCStats.html)
+* [When I load `NCStats`, R cannot find some other packages.](FAQs/install-other-packages.html)
+* [R cannot find `NCStats`.](FAQs/cant-find-NCStats.html)
 * Why is the R prompt a "+" rather than a ">"?
 * I can't remember the names of objects that I have created.
 * R says that "a previously saved workspace has been restored".
