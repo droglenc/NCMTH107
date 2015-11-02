@@ -107,7 +107,8 @@ See [class preparation videos below](#preparation-videos).
 
 </table>
 
-\vspace{24pt}
+----
+----
 
 # Preparation Videos
 
