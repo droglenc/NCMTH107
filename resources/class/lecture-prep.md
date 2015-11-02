@@ -5,8 +5,6 @@ subtitle: Preparation Videos
 css: "/css/lecture-tables.css"
 ---
 
-Also see [in-class materials](lecture-in-class.html).
-
 <table class="tg">
   <tr>
     <th class="tg-hdrrow">Module</th>
@@ -131,3 +129,7 @@ Also see [in-class materials](lecture-in-class.html).
   </tr>
 
 </table>
+
+----
+
+Also see [in-class materials](lecture-in-class.html).
