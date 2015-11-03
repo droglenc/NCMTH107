@@ -1,0 +1,32 @@
+---
+layout: page
+author: Derek H. Ogle
+title: MTH107 FAQ
+subtitle: Why can't R find leveneTest()?
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/RFAQ/FAQs")
+source("../../../rhelpers/rhelpers.R")
+fnm <- "cant-find-Levenes"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message='FALSE'}
+source("../../../rhelpers/knitr_setup.R")
+```
+
+----
+
+The `leveneTest()` function requires that the `car` package be installed.  Thus, if you get this error ...
+```{r error=TRUE}
+leveneTest(extra~group,data=sleep)
+```
+
+then you need to make sure that the `car` package is loaded.
+```{r message=FALSE}
+library(car)
+leveneTest(extra~group,data=sleep)
+```
+

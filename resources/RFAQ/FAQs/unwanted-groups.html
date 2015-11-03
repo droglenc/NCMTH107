@@ -7,7 +7,7 @@ subtitle: Why do unwanted groups still appear after I have subsetted a data.fram
 
 
 <hr />
-<p>Base R uses a function called <code>subset()</code> to construct subsets of a data.frame. For example, the following code can be used to construct a data.frame fro the <code>Iris.csv</code> file that contains a single species.</p>
+<p>Base R uses a function called <code>subset()</code> to construct subsets of a data.frame. For example, the following code can be used to construct a data.frame for the <code>Iris.csv</code> file that contains a single species.</p>
 <pre class="r"><code>&gt; df &lt;- read.csv(&quot;data/Iris.csv&quot;)
 &gt; str(df)</code></pre>
 <pre><code>'data.frame':   150 obs. of  5 variables:
@@ -20,17 +20,17 @@ subtitle: Why do unwanted groups still appear after I have subsetted a data.fram
 <pre><code>[1] &quot;setosa&quot;     &quot;versicolor&quot; &quot;virginica&quot; </code></pre>
 <pre class="r"><code>&gt; tmp &lt;- subset(df,species==&quot;versicolor&quot;)</code></pre>
 <p>A quick table of results shows that only one species remains in the data.frame.</p>
-<pre class="r"><code>&gt; xtabs(~species,data=df)</code></pre>
+<pre class="r"><code>&gt; xtabs(~species,data=tmp)</code></pre>
 <pre><code>species
     setosa versicolor  virginica 
-        50         50         50 </code></pre>
-<p>But annoyingly, the variable has maintained the names of the other species that were present in the original data.frame. This unwanted behavior can be corrected by using <code>filterD()</code> from <code>FSA</code> (which is loaded with <code>NCStats</code>) instead of <code>subset()</code>.</p>
+         0         50          0 </code></pre>
+<p>But, annoyingly, the variable has maintained the names of the other species that were present in the original data.frame. This unwanted behavior can be corrected by using <code>filterD()</code> from <code>FSA</code> (which is loaded with <code>NCStats</code>) instead of <code>subset()</code>.</p>
 <pre class="r"><code>&gt; library(NCStats)
 &gt; tmp &lt;- filterD(df,species==&quot;versicolor&quot;)
-&gt; xtabs(~species,data=df)</code></pre>
+&gt; xtabs(~species,data=tmp)</code></pre>
 <pre><code>species
-    setosa versicolor  virginica 
-        50         50         50 </code></pre>
+versicolor 
+        50 </code></pre>
 
 
 </div>

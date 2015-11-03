@@ -20,7 +20,8 @@ modHTML <- function(f,need2render=TRUE) {
     render(paste0(f,".Rmd"),output_format="all",clean=FALSE)
   }
   # Delete .md files left over because clear=FALSE was needed
-  file.remove(list.files(pattern="\\.md"))
+  tmp <- list.files(pattern="\\.md")
+  if (any(grepl(f,tmp))) file.remove(tmp[which(grepl(f,tmp))])
   # Delete files in directories in f_files that are not needed on the webpage
   unlink(paste0(getwd(),"/",f,"_files","/bootstrap-3.3.1"),recursive=TRUE)
   unlink(paste0(getwd(),"/",f,"_files","/jquery-1.11.0"),recursive=TRUE)

@@ -19,7 +19,7 @@ source("../../../rhelpers/knitr_setup.R")
 
 ----
 
-Base R uses a function called `subset()` to construct subsets of a data.frame.  For example, the following code can be used to construct a data.frame fro the `Iris.csv` file that contains a single species.
+Base R uses a function called `subset()` to construct subsets of a data.frame.  For example, the following code can be used to construct a data.frame for the `Iris.csv` file that contains a single species.
 ```{r}
 df <- read.csv("data/Iris.csv")
 str(df)
@@ -29,12 +29,12 @@ tmp <- subset(df,species=="versicolor")
 
 A quick table of results shows that only one species remains in the data.frame.
 ```{r}
-xtabs(~species,data=df)
+xtabs(~species,data=tmp)
 ```
 
-But annoyingly, the variable has maintained the names of the other species that were present in the original data.frame.  This unwanted behavior can be corrected by using `filterD()` from `FSA` (which is loaded with `NCStats`) instead of `subset()`.
+But, annoyingly, the variable has maintained the names of the other species that were present in the original data.frame.  This unwanted behavior can be corrected by using `filterD()` from `FSA` (which is loaded with `NCStats`) instead of `subset()`.
 ```{r message=FALSE}
 library(NCStats)
 tmp <- filterD(df,species=="versicolor")
-xtabs(~species,data=df)
+xtabs(~species,data=tmp)
 ```
