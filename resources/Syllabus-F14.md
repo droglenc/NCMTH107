@@ -16,7 +16,7 @@ subtitle: MTH107
 
 ## Description
 
-Introduction to the concepts and interpretation of statistics.  Summary graphs and statistics; data production (sampling and experiments); random variables and sampling distributions; inference - introduction, for distributions, for proportions; correlation and regression.  Prerequisite: MTH103, ACT math > 17, or SAT math > 830.  4 Credits.
+Introduction to the concepts and interpretation of statistics.  Summary graphs and statistics; data production (sampling and experiments); random variables and sampling distributions; inference - introduction, for distributions, for proportions; correlation and regression.  Prerequisite: MTH103, ACT math > 17, or SAT math > 470.  4 Credits.
 
 ## Learning Outcomes
 

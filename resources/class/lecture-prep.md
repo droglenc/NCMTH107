@@ -16,7 +16,7 @@ css: "/css/lecture-tables.css"
   <tr>
     <td class="tg-leftcol">Introduction</td>
     <td class="tg-leftcol2">Why Statistics?</td>
-    <td class="tg-cell"><a href="https://www.youtube.com/v/yxXsPc0bphQ?version=3"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/5YsiVJFSwGo?version=3&start=35&autoplay=1"><img src="../../img/videolink.png" alt="YouTube"></a> <br> <a href="https://www.youtube.com/v/yl_yuxHFIXc?version=3&start=18&end=333&autoplay=1"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/wV0Ks7aS7YI?version=3"><img src="../../img/videolink.png" alt="YouTube"></a> </td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/yxXsPc0bphQ?version=3&autoplay=1"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/5YsiVJFSwGo?version=3&start=35&autoplay=1"><img src="../../img/videolink.png" alt="YouTube"></a> <br> <a href="https://www.youtube.com/v/yl_yuxHFIXc?version=3&start=18&end=333&autoplay=1"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/wV0Ks7aS7YI?version=3&autoplay=1"><img src="../../img/videolink.png" alt="YouTube"></a> </td>
     <td class="tg-cell"> -- </td>
   </tr>
   
