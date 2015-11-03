@@ -23,11 +23,11 @@ css: "/css/lecture-tables.css"
   <tr>
     <td class="tg-leftcol" rowspan="2">Foundations</td>
     <td class="tg-leftcol2">IVPPSS</td>
-    <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-ivppss"><img src="../../img/dhovid.png" alt="Ogle Lecture"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/oBF8nNvnq9A?version=3&autoplay=1" target="_blank"><img src="../../img/dhovid.png" alt="Ogle Lecture"></a></td>
     <td class="tg-cell"> -- </td>
   </tr><tr>
     <td class="tg-leftcol2">Variable Types</td>
-    <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-vartypes"><img src="../../img/dhovid.png" alt="Ogle Lecture"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/_k72pdEQGJs?version=3&autoplay=1" target="_blank"><img src="../../img/dhovid.png" alt="Ogle Lecture"></a></td>
     <td class="tg-cell"> -- </td>
   </tr>
   
@@ -50,23 +50,23 @@ css: "/css/lecture-tables.css"
     <td class="tg-leftcol" rowspan="6">Getting Started with R</td>
     <td class="tg-leftcol2">Retrieve data from webpage</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-preparedatawebpage"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/1p2vuGUjmBQ?version=3&autoplay=1" target="_blank"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Enter own data (using Excel)</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-preparedataexcel"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/JCOnCeyU778?version=3&autoplay=1" target="_blank"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Enter own data (not using Excel)</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-preparedatatextfile"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/RQ7ijopKu7w?version=3&autoplay=1" target="_blank"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Load data into RStudio</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-loadcsvrstudio"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/ySfZd1qLuZw?version=3&autoplay=1" target="_blank"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Subset data.frame with filterD</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="https://www.youtube.com/v/mu7_RVGkYA4?version=3&autoplay=1"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/mu7_RVGkYA4?version=3&autoplay=1" target="_blank"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Subset data.frame with Subset</td>
     <td class="tg-cell"> -- </td>
@@ -76,28 +76,28 @@ css: "/css/lecture-tables.css"
   <tr>
     <td class="tg-leftcol" rowspan="5">Univarite EDA</td>
     <td class="tg-leftcol2">Construct Histograms</td>
-    <td class="tg-cell"><a href="http://youtu.be/sC7gjg9g3JU"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="http://youtu.be/H9ITfdaX2ZQ"><img src="../../img/videolink.png" alt="YouTube"></a></td>
-    <td class="tg-cell" rowspan="4"><a href="https://vimeo.com/user45324800/ncstats-uedaq"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/sC7gjg9g3JU?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/H9ITfdaX2ZQ?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
+    <td class="tg-cell" rowspan="4"><a href="https://www.youtube.com/v/lB2h9GpyoLw?version=3&autoplay=1" target="_blank"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Calculate Median</td>
-    <td class="tg-cell"><a href="http://youtu.be/0SYsi38XucI"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="http://youtu.be/hTYTaOaQUcw?list=UUAjbU4EB30lTsJ2NSE5a7DQ"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="http://youtu.be/9a8M_KfclBE"><img src="../../img/videolink.png" alt="YouTube"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/0SYsi38XucI?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/hTYTaOaQUcw?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/9a8M_KfclBE?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Calculate Standard Deviation</td>
-    <td class="tg-cell"><a href="http://youtu.be/qqOyy_NjflU"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="http://youtu.be/atS4wX8I9H0"><img src="../../img/videolink.png" alt="YouTube"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/qqOyy_NjflU?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/atS4wX8I9H0?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Calculate IQR</td>
-    <td class="tg-cell"><a href="http://youtu.be/R6VDj7pEG30"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="http://youtu.be/F3WcEAW-M80?t=6m6s"><img src="../../img/videolink.png" alt="YouTube"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/R6VDj7pEG30?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/F3WcEAW-M80?version=3&start=366&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Construct Tables & Barplots</td>
     <td class="tg-cell">--</td>
-    <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-uedac"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/R6W0GpAYp-4?version=3&autoplay=1" target="_blank"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
   </tr>
 
 
   <tr>
     <td class="tg-leftcol" rowspan="3">Normal Distribution</td>
     <td class="tg-leftcol2">68-95-99.7 Rule</td>
-    <td class="tg-cell"><a href="https://www.youtube.com/watch?v=cgxPcdPbujI"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/watch?v=PJPXFOK8F8E"><img src="../../img/videolink.png" alt="YouTube"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/cgxPcdPbujI?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/PJPXFOK8F8E?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
     <td class="tg-cell"> -- </td>
   </tr><tr>
     <td class="tg-leftcol2">Forward Calculations</td>
@@ -112,11 +112,11 @@ css: "/css/lecture-tables.css"
   <tr>
     <td class="tg-leftcol" rowspan="2">Bivariate EDA</td>
     <td class="tg-leftcol2">Scatterplots</td>
-    <td class="tg-cell"><a href="https://www.youtube.com/watch?v=yXmz922K9Ks"><img src="../../img/videolink.png" alt="YouTube"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/yXmz922K9Ks?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
     <td class="tg-cell" rowspan="2"><a href="http://www.screenr.com/n4PH"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Correlation</td>
-    <td class="tg-cell"><a href="http://youtu.be/PtYVrF_WT3A?t=32s"><img src="../../img/videolink.png" alt="YouTube"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/PtYVrF_WT3A?version=3&start=32&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
   </tr>
   
   <tr>
