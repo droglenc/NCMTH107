@@ -1,4 +1,5 @@
 ---
+layout: page
 author: Derek H. Ogle
 title: MTH107 FAQ
 subtitle: How do I install R?
