@@ -1,0 +1,45 @@
+---
+layout: page
+author: Derek H. Ogle
+title: MTH107 FAQ
+subtitle: Why are my variables labelled with Xs?
+---
+
+
+<hr />
+<p>This problem looks like this …</p>
+<pre class="r"><code>&gt; df &lt;- read.csv(&quot;data/no-header.csv&quot;)
+&gt; str(df)</code></pre>
+<pre><code>'data.frame':   2 obs. of  2 variables:
+ $ X3: int  5 7
+ $ X4: int  6 8</code></pre>
+<pre class="r"><code>&gt; df</code></pre>
+<pre><code>  X3 X4
+1  5  6
+2  7  8</code></pre>
+<p>If you used <code>read.csv()</code>, then this problem usually occurs if you have not included a header row on your CSV file. See how to construct an external CSV file in <a href="enter-data.html">this FAQ</a>.</p>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

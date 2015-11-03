@@ -1,0 +1,31 @@
+---
+layout: page
+author: Derek H. Ogle
+title: MTH107 FAQ
+subtitle: read.csv() does not find my data file
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/RFAQ/FAQs")
+source("../../../rhelpers/rhelpers.R")
+fnm <- "cant-find-file"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message='FALSE'}
+source("../../../rhelpers/knitr_setup.R")
+```
+
+----
+
+This error typically looks like this ...
+```{r error=TRUE}
+df <- read.csv("no-header.csv")
+```
+
+The most common reasons for this error are as follows
+
+* You have misspelled the actual name of the file.
+* You have not changed the working directory to where the data file is saved.  See [this FAQ]() on how to change the working directory.  Make sure you change the working directory to where your file is actually saved.
+* You have not saved the file as a CSV file.  Most commonly you saved it as an Excel file.  Saving an Excel file as a CSV file is described in [this R Tutorial video](https://vimeo.com/user45324800/ncstats-preparedataexcel).

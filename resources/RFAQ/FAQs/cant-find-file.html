@@ -1,0 +1,44 @@
+---
+layout: page
+author: Derek H. Ogle
+title: MTH107 FAQ
+subtitle: read.csv() does not find my data file
+---
+
+
+<hr />
+<p>This error typically looks like this …</p>
+<pre class="r"><code>&gt; df &lt;- read.csv(&quot;no-header.csv&quot;)</code></pre>
+<pre><code>Warning in file(file, &quot;rt&quot;): cannot open file 'no-header.csv': No such file or directory</code></pre>
+<pre><code>Error in file(file, &quot;rt&quot;): cannot open the connection</code></pre>
+<p>The most common reasons for this error are as follows</p>
+<ul>
+<li>You have misspelled the actual name of the file.</li>
+<li>You have not changed the working directory to where the data file is saved. See <a href>this FAQ</a> on how to change the working directory. Make sure you change the working directory to where your file is actually saved.</li>
+<li>You have not saved the file as a CSV file. Most commonly you saved it as an Excel file. Saving an Excel file as a CSV file is described in <a href="https://vimeo.com/user45324800/ncstats-preparedataexcel">this R Tutorial video</a>.</li>
+</ul>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

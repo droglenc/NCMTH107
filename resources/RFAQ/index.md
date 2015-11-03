@@ -5,8 +5,11 @@ title: MTH107 FAQ
 
 The following are links to answers for frequently asked questions by Northland College students while using R to perform statistical analyses.  Other questions may be answered by reading the class text or e-mailing Derek Ogle.
 
-## Running R
+## Installing R and RStudio
+* [How do I install R](FAQs/installR.html)
+* [How do I install RStudio](FAQs/installRStudio.html)
 
+## Running R
 * [How do I install `NCStats`?](FAQs/install-NCStats.html)
 * [When I load `NCStats`, R cannot find some other packages.](FAQs/install-other-packages.html)
 * [R cannot find `NCStats`.](FAQs/cant-find-NCStats.html)
@@ -17,12 +20,11 @@ The following are links to answers for frequently asked questions by Northland C
 * [R can't find the function I want to use.](FAQs/cant-find-function.html)
 
 ## Reading Data Files
-* Where are the data files that Prof. Ogle provides for us?
-* Is there an easy way to enter data into R?
-* How do I change the working directory?
-* When I change the working directory I cannot see my data file?
-* `read.csv()` does not find my data file.
-* My variables are called `V1`, `V2`, ...
+* [Where are the data files that Prof. Ogle provides for us?](FAQs/where-data.html)
+* [Is there an easy way to enter data into R?](FAQs/enter-data.html)
+* [How do I change the working directory?](FAQs/changing-working-directory.html)
+* [`read.csv()` does not find my data file.](FAQs/cant-find-file.html)
+* [Why are my variables are labelled with Xs?](FAQs/variable-called-V1.html)
 
 ## Using Data Frames and Subsetting
 * How do I select two groups of a factor variable?
