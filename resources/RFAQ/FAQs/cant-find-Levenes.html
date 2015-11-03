@@ -8,11 +8,7 @@ subtitle: Why can't R find leveneTest()?
 
 <hr />
 <p>The <code>leveneTest()</code> function requires that the <code>car</code> package be installed. Thus, if you get this error …</p>
-<pre class="r"><code>&gt; leveneTest(extra~group,data=sleep)</code></pre>
-<pre><code>Levene's Test for Homogeneity of Variance (center = median)
-      Df F value Pr(&gt;F)
-group  1  0.2482 0.6244
-      18               </code></pre>
+<pre><code>Error: could not find function &quot;leveneTest&quot;</code></pre>
 <p>then you need to make sure that the <code>car</code> package is loaded.</p>
 <pre class="r"><code>&gt; library(car)
 &gt; leveneTest(extra~group,data=sleep)</code></pre>
