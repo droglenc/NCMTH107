@@ -93,6 +93,7 @@ css: "/css/lecture-tables.css"
     <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-uedac"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
   </tr>
 
+
   <tr>
     <td class="tg-leftcol" rowspan="3">Normal Distribution</td>
     <td class="tg-leftcol2">68-95-99.7 Rule</td>
