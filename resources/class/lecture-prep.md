@@ -66,7 +66,7 @@ css: "/css/lecture-tables.css"
   </tr><tr>
     <td class="tg-leftcol2">Subset data.frame with filterD</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="https://vimeo.com/user45324800/filterd"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/mu7_RVGkYA4?version=3&autoplay=1"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Subset data.frame with Subset</td>
     <td class="tg-cell"> -- </td>
