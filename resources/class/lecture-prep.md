@@ -5,12 +5,12 @@ subtitle: Preparation Videos
 css: "/css/lecture-tables.css"
 ---
 
-<table class="tg" style="width:600px;">
+<table class="tg" style="width:800px;">
   <tr>
-    <th class="tg-hdrrow" style="width:30%;">Module</th>
-    <th class="tg-hdrrow" style="width:30%;">Topic</th>
-    <th class="tg-hdrrow" style="width:20%;">Lecture</th>
-    <th class="tg-hdrrow" style="width:20%;">R Tutorial</th>
+    <th class="tg-hdrrow" style="width:42%;">Module</th>
+    <th class="tg-hdrrow" style="width:34%;">Topic</th>
+    <th class="tg-hdrrow" style="width:12%;">Lecture</th>
+    <th class="tg-hdrrow" style="width:12%;">R Tutorial</th>
   </tr>
   
   <tr>
