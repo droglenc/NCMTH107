@@ -5,12 +5,19 @@ subtitle: Preparation Videos
 css: "/css/lecture-tables.css"
 ---
 
-<table class="tg" style="width:800px;">
+<table class="tg" style="width:700px;">
   <tr>
-    <th class="tg-hdrrow" style="width:42%;">Module</th>
-    <th class="tg-hdrrow" style="width:34%;">Topic</th>
-    <th class="tg-hdrrow" style="width:12%;">Lecture</th>
-    <th class="tg-hdrrow" style="width:12%;">R Tutorial</th>
+    <th class="tg-hdrrow" style="width:35%;">Module</th>
+    <th class="tg-hdrrow" style="width:35%;">Topic</th>
+    <th class="tg-hdrrow" style="width:15%;">Lecture</th>
+    <th class="tg-hdrrow" style="width:15%;">R Tutorial</th>
+  </tr>
+  
+  <tr>
+    <td class="tg-leftcol">Introduction</td>
+    <td class="tg-leftcol2">Why Statistics?</td>
+    <td class="tg-cell"><a href="https://youtu.be/yxXsPc0bphQ"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://youtu.be/5YsiVJFSwGo"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://youtu.be/yl_yuxHFIXc?start=18&end=333"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/watch?v=wV0Ks7aS7YI"><img src="../../img/videolink.png" alt="YouTube"></a> </td>
+    <td class="tg-cell"> -- </td>
   </tr>
   
   <tr>
@@ -23,7 +30,22 @@ css: "/css/lecture-tables.css"
     <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-vartypes"><img src="../../img/dhovid.png" alt="Ogle Lecture"></a></td>
     <td class="tg-cell"> -- </td>
   </tr>
-
+  
+  <tr>
+    <td class="tg-leftcol" rowspan="3">Producing Data</td>
+    <td class="tg-leftcol2">Types of Studies</td>
+    <td class="tg-cell"> -- </td>
+    <td class="tg-cell"> -- </td>
+  </tr><tr>
+    <td class="tg-leftcol2">Sampling Design</td>
+    <td class="tg-cell"> -- </td>
+    <td class="tg-cell"> -- </td>
+  </tr><tr>
+    <td class="tg-leftcol2">Experimental Design</td>
+    <td class="tg-cell"> -- </td>
+    <td class="tg-cell"> -- </td>
+  </tr>
+  
   <tr>
     <td class="tg-leftcol" rowspan="6">Getting Started with R</td>
     <td class="tg-leftcol2">Retrieve data from webpage</td>

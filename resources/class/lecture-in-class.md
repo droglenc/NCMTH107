@@ -26,6 +26,13 @@ css: "/css/lecture-tables.css"
     <td class="tg-cell"> -- </td>
     <td class="tg-cell"> <a href="CEs/FoundationsIVPPSS.html"><img src="../../img/web.png" alt="Webpage"></a> </td>
   </tr>
+  
+  <tr>
+    <td class="tg-leftcol">Data Production</td>
+    <td class="tg-cell"><a href="Slides/07_DataProduction.pptx"><img src="../../img/ppt.png" alt="MSPowerPoint"></a></td>
+    <td class="tg-cell"> -- </td>
+    <td class="tg-cell"> -- </td>
+  </tr>
 
   <tr>
     <td class="tg-leftcol">Getting Started with R</td>
@@ -60,13 +67,6 @@ css: "/css/lecture-tables.css"
     <td class="tg-cell"><a href="Slides/06_SimpleLinearRegression.pptx"><img src="../../img/ppt.png" alt="MSPowerPoint"></a></td>
     <td class="tg-cell"><a href="HOs/SimpleLinearRegression.html"><img src="../../img/web.png" alt="Webpage"></a> <a href="HOs/SimpleLinearRegression.pdf"><img src="../../img/pdf.png" alt="PDF"></a> <a href="HOs/SimpleLinearRegression.docx"><img src="../../img/word.png" alt="MSWord"></a> <a href="HOs/SimpleLinearRegression.R"><img src="../../img/script.png" alt="R Script"></a></td>
     <td class="tg-cell"> <a href="CEs/SimpleLinearRegression.html"><img src="../../img/web.png" alt="Webpage"></a> </td>
-  </tr>
-  
-  <tr>
-    <td class="tg-leftcol">Data Production</td>
-    <td class="tg-cell"><a href="Slides/07_DataProduction.pptx"><img src="../../img/ppt.png" alt="MSPowerPoint"></a></td>
-    <td class="tg-cell"> -- </td>
-    <td class="tg-cell"> -- </td>
   </tr>
   
   <tr>
