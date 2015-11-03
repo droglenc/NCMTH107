@@ -27,8 +27,8 @@ The following are links to answers for frequently asked questions by Northland C
 * [Why are my variables are labelled with Xs?](FAQs/variable-called-V1.html)
 
 ## Using Data Frames and Subsetting
-* How do I select two groups of a factor variable?
-* I've subsetted my data by a factor, but groups that I don't want still appear.
+* [How do I select two groups of a factor variable?](FAQs/subset-2groups.html)
+* [Why do unwanted groups still appear after I have subsetted a data.frame?](FAQs/unwanted-groups.html)
 
 ## Specific Functions
 * My frequency table contains unwanted levels.

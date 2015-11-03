@@ -1,0 +1,36 @@
+---
+layout: page
+author: Derek H. Ogle
+title: MTH107 FAQ
+subtitle: I accidentally saved the workspace image.  How do I remove it?
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/RFAQ/FAQs")
+source("../../../rhelpers/rhelpers.R")
+fnm <- "subset-2groups"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message='FALSE'}
+source("../../../rhelpers/knitr_setup.R")
+```
+
+----
+
+In some instances you may want to create a smaller data.frame that contains only those individuals that belong in two groups.  The smaller data frame can be constructed using `filterD()` from `FSA` (which is loaded with `NCStats`) with the `%in%` operator.  For example, the following data.frame contains measurements on petals and sepals from three species of iris.
+```{r}
+df <- read.csv("data/Iris.csv")
+str(df)
+levels(df$species)
+```
+
+One can select the `versicolor` and `virginica` species with the following code.
+```{r message=FALSE}
+library(NCStats)
+tmp <- filterD(df,species %in% c("virginica","versicolor"))
+levels(tmp$species)
+```
+
+This type of filtering or subsetting is also described in [this R Tutorial video](https://vimeo.com/user45324800/filterd).
