@@ -88,7 +88,7 @@ css: "/css/lecture-tables.css"
     <td class="tg-leftcol2">Calculate IQR</td>
     <td class="tg-cell"><a href="https://www.youtube.com/v/R6VDj7pEG30?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/F3WcEAW-M80?version=3&start=366&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
   </tr>
-    <td class="tg-leftcol" rowspan="4">Univariate EDA<br>-- Categorical</td>
+    <td class="tg-leftcol">Univariate EDA<br>-- Categorical</td>
    <tr>
     <td class="tg-leftcol2">Construct Tables & Barplots</td>
     <td class="tg-cell">--</td>
