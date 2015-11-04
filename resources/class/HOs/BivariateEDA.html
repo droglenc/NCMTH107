@@ -29,10 +29,10 @@ css: "/css/pygment_highlights.css"
 </div>
 <div id="getting-the-data" class="section level2">
 <h2>Getting The Data</h2>
-<pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="kw">library</span>(NCStats)
-&gt;<span class="st"> </span><span class="kw">setwd</span>(<span class="st">&quot;C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs&quot;</span>)
-&gt;<span class="st"> </span>Ars &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;Arsenic.csv&quot;</span>)
-&gt;<span class="st"> </span><span class="kw">str</span>(Ars)</code></pre>
+<pre class="r"><code>&gt; library(NCStats)
+&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs&quot;)
+&gt; Ars &lt;- read.csv(&quot;Arsenic.csv&quot;)
+&gt; str(Ars)</code></pre>
 <pre><code>&#39;data.frame&#39;:   21 obs. of  6 variables:
  $ age     : int  44 45 44 66 37 45 47 38 41 49 ...
  $ sex     : Factor w/ 2 levels &quot;F&quot;,&quot;M&quot;: 1 1 2 1 2 1 2 1 1 1 ...
@@ -40,41 +40,41 @@ css: "/css/pygment_highlights.css"
  $ usecook : Factor w/ 2 levels &quot;B&quot;,&quot;E&quot;: 2 2 2 2 2 2 2 2 1 2 ...
  $ arswater: num  0.00087 0.00021 0 0.00115 0 0 0.00013 0.00069 0.00039 0 ...
  $ arsnails: num  0.119 0.118 0.099 0.118 0.277 0.358 0.08 0.158 0.31 0.105 ...</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="kw">view</span>(Ars)</code></pre>
+<pre class="r"><code>&gt; view(Ars)</code></pre>
 <pre><code>   age sex usedrink usecook arswater arsnails
+3   44   M        E       E  0.00000    0.099
 6   45   F        E       E  0.00000    0.358
-7   47   M        E       E  0.00013    0.080
-12  45   F        A       E  0.04600    0.832
-13  53   M        E       E  0.01940    0.517
-14  86   F        E       E  0.13700    2.252
-15   8   F        E       E  0.02140    0.851</code></pre>
+8   38   F        D       E  0.00069    0.158
+11  72   F        E       E  0.00000    0.073
+15   8   F        E       E  0.02140    0.851
+21  36   M        E       E  0.00410    0.175</code></pre>
 </div>
 <div id="bivariate-eda-quantitative" class="section level2">
 <h2>Bivariate EDA – Quantitative</h2>
-<pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="kw">plot</span>(arsnails~age,<span class="dt">data=</span>Ars,<span class="dt">pch=</span><span class="dv">19</span>)</code></pre>
+<pre class="r"><code>&gt; plot(arsnails~age,data=Ars,pch=19)</code></pre>
 <p><img src="BivariateEDA_files/figure-html/unnamed-chunk-4-1.png" title="" alt="" width="336" /></p>
-<pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="kw">cor</span>(Ars$arsnails,Ars$age)</code></pre>
+<pre class="r"><code>&gt; cor(Ars$arsnails,Ars$age)</code></pre>
 <pre><code>[1] 0.2807416</code></pre>
 </div>
 <div id="bivariate-eda-categorical" class="section level2">
 <h2>Bivariate EDA – Categorical</h2>
-<pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span>( freq.tbl &lt;-<span class="st"> </span><span class="kw">xtabs</span>(~sex+usedrink,<span class="dt">data=</span>Ars) )</code></pre>
+<pre class="r"><code>&gt; ( freq.tbl &lt;- xtabs(~sex+usedrink,data=Ars) )</code></pre>
 <pre><code>   usedrink
 sex A B C D E
   F 1 0 2 3 7
   M 0 1 0 0 7</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="kw">percTable</span>(freq.tbl,<span class="dt">margin=</span><span class="dv">1</span>,<span class="dt">digits=</span><span class="dv">1</span>)</code></pre>
+<pre class="r"><code>&gt; percTable(freq.tbl,margin=1,digits=1)</code></pre>
 <pre><code>   usedrink
 sex     A     B     C     D     E   Sum
   F   7.7   0.0  15.4  23.1  53.8 100.0
   M   0.0  12.5   0.0   0.0  87.5 100.0</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="kw">percTable</span>(freq.tbl,<span class="dt">margin=</span><span class="dv">2</span>,<span class="dt">digits=</span><span class="dv">1</span>)</code></pre>
+<pre class="r"><code>&gt; percTable(freq.tbl,margin=2,digits=1)</code></pre>
 <pre><code>     usedrink
 sex     A   B   C   D   E
   F   100   0 100 100  50
   M     0 100   0   0  50
   Sum 100 100 100 100 100</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span><span class="kw">percTable</span>(freq.tbl,<span class="dt">digits=</span><span class="dv">1</span>)</code></pre>
+<pre class="r"><code>&gt; percTable(freq.tbl,digits=1)</code></pre>
 <pre><code>     usedrink
 sex       A     B     C     D     E   Sum
   F     4.8   0.0   9.5  14.3  33.3  61.9

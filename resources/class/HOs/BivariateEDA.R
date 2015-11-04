@@ -22,4 +22,4 @@ percTable(freq.tbl,margin=2,digits=1)
 percTable(freq.tbl,digits=1)
 
 
-# Script created at 2015-11-03 20:43:30
+# Script created at 2015-11-03 20:46:24
