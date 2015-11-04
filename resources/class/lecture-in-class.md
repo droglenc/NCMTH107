@@ -58,7 +58,7 @@ css: "/css/lecture-tables.css"
   <tr>
     <td class="tg-leftcol">Bivariate EDA</td>
     <td class="tg-cell"><a href="Slides/05_BivEDA.pptx"><img src="../../img/ppt.png" alt="MSPowerPoint"></a></td>
-    <td class="tg-cell"><a href="HOs/BivEDA.html"><img src="../../img/web.png" alt="Webpage"></a> <a href="HOs/BivEDA.pdf"><img src="../../img/pdf.png" alt="PDF"></a> <a href="HOs/BivEDA.docx"><img src="../../img/word.png" alt="MSWord"></a> <a href="HOs/BivEDA.R"><img src="../../img/script.png" alt="R Script"></a></td>
+    <td class="tg-cell"><a href="HOs/BivariateEDA.html"><img src="../../img/web.png" alt="Webpage"></a> <a href="HOs/BivariateEDA.pdf"><img src="../../img/pdf.png" alt="PDF"></a> <a href="HOs/BivariateEDA.docx"><img src="../../img/word.png" alt="MSWord"></a> <a href="HOs/BivariateEDA.R"><img src="../../img/script.png" alt="R Script"></a></td>
     <td class="tg-cell"> <a href="CEs/BivariateEDA.html"><img src="../../img/web.png" alt="Webpage"></a> </td>
   </tr>
   
