@@ -4,8 +4,8 @@ title: "Bivariate EDA"
 author: "Derek H. Ogle"
 output:
   html_document:
-    fig_width: 3.5
     fig_height: 3.5
+    fig_width: 3.5
     self_contained: no
   pdf_document:
     fig_width: 3.5
@@ -15,16 +15,49 @@ output:
     fig_height: 3.5
 ---
 
+<style type="text/css">
+code{ 
+  white-space: pre;
+}
+
+code > span.kw { color: #0000ff; }
+code > span.ch { color: #008080; }
+code > span.st { color: #008080; }
+code > span.co { color: #008000; }
+code > span.ot { color: #ff4000; }
+code > span.al { color: #ff0000; }
+code > span.er { font-weight: bold; }
+
+pre:not([class]) {
+    background-color: white;
+}
+
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img { 
+  max-width:100%; 
+  height: auto; 
+}
+</style>
+
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs"); source("../../rhelpers/rhelpers.R")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
+source("../../../rhelpers/rhelpers.R")
 fnm <- "BivariateEDA"
 modHTML(fnm)
 ```
 
 ```{r echo=FALSE, results='hide', message='FALSE'}
 fnm <- "BivariateEDA"
-source("../../rhelpers/knitr_setup.R")
+source("../../../rhelpers/knitr_setup.R")
 ```
 
 ## Background
@@ -49,7 +82,7 @@ In this handout, we will consider the questions below.
 ## Getting The Data
 ```{r message=FALSE, warning=FALSE}
 library(NCStats)
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
 Ars <- read.csv("Arsenic.csv")
 str(Ars)
 view(Ars)
