@@ -6,37 +6,6 @@ output:
 ---
 
 
-<style type="text/css">
-code{ 
-  white-space: pre;
-}
-
-code > span.kw { color: #0000ff; }
-code > span.ch { color: #008080; }
-code > span.st { color: #008080; }
-code > span.co { color: #008000; }
-code > span.ot { color: #ff4000; }
-code > span.al { color: #ff0000; }
-code > span.er { font-weight: bold; }
-
-pre:not([class]) {
-    background-color: white;
-}
-
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img { 
-  max-width:100%; 
-  height: auto; 
-}
-</style>
 <div id="background" class="section level2">
 <h2>Background</h2>
 <p>Measurements of the levels of arsenic in the drinking water, cooking water, and toenail samples, as well as related covariates, were measured on 21 individuals with private wells in a New Hampshire community. The variables below were recorded in the <a href="Arsenic.csv"><a href="https://github.com/droglenc/NCData/blob/master/Arsenic.csv" class="uri">https://github.com/droglenc/NCData/blob/master/Arsenic.csv</a></a> file located on the R Resources web page.</p>
@@ -73,12 +42,12 @@ img {
  $ arsnails: num  0.119 0.118 0.099 0.118 0.277 0.358 0.08 0.158 0.31 0.105 ...</code></pre>
 <pre class="r"><code>&gt; view(Ars)</code></pre>
 <pre><code>   age sex usedrink usecook arswater arsnails
-1   44   F        E       E  0.00087    0.119
-4   66   F        C       E  0.00115    0.118
-11  72   F        E       E  0.00000    0.073
-12  45   F        A       E  0.04600    0.832
-16  32   F        E       E  0.01750    0.269
-20  62   M        E       E  0.00012    0.135</code></pre>
+3   44   M        E       E  0.00000    0.099
+5   37   M        B       E  0.00000    0.277
+8   38   F        D       E  0.00069    0.158
+10  49   F        D       E  0.00000    0.105
+17  44   M        E       E  0.07640    0.433
+19  42   M        E       E  0.01650    0.275</code></pre>
 </div>
 <div id="bivariate-eda-quantitative" class="section level2">
 <h2>Bivariate EDA – Quantitative</h2>
