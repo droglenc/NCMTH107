@@ -50,34 +50,34 @@ css: "/css/lecture-tables.css"
     <td class="tg-leftcol" rowspan="6">Getting Started with R</td>
     <td class="tg-leftcol2">Retrieve data from webpage</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="https://www.youtube.com/v/1p2vuGUjmBQ?version=3&autoplay=1" target="_blank"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/1p2vuGUjmBQ?version=3&autoplay=1" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Enter own data (using Excel)</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="https://www.youtube.com/v/JCOnCeyU778?version=3&autoplay=1" target="_blank"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/JCOnCeyU778?version=3&autoplay=1" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Enter own data (not using Excel)</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="https://www.youtube.com/v/RQ7ijopKu7w?version=3&autoplay=1" target="_blank"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/RQ7ijopKu7w?version=3&autoplay=1" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Load data into RStudio</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="https://www.youtube.com/v/ySfZd1qLuZw?version=3&autoplay=1" target="_blank"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/ySfZd1qLuZw?version=3&autoplay=1" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Subset data.frame with filterD</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="https://www.youtube.com/v/mu7_RVGkYA4?version=3&autoplay=1" target="_blank"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/mu7_RVGkYA4?version=3&autoplay=1" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Subset data.frame with Subset</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="http://www.screenr.com/z27N"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="http://www.screenr.com/z27N"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr>
   
   <tr>
     <td class="tg-leftcol" rowspan="5">Univarite EDA</td>
     <td class="tg-leftcol2">Construct Histograms</td>
     <td class="tg-cell"><a href="https://www.youtube.com/v/sC7gjg9g3JU?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/H9ITfdaX2ZQ?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
-    <td class="tg-cell" rowspan="4"><a href="https://www.youtube.com/v/lB2h9GpyoLw?version=3&autoplay=1" target="_blank"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell" rowspan="4"><a href="https://www.youtube.com/v/lB2h9GpyoLw?version=3&autoplay=1" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Calculate Median</td>
     <td class="tg-cell"><a href="https://www.youtube.com/v/0SYsi38XucI?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/hTYTaOaQUcw?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/9a8M_KfclBE?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
@@ -90,7 +90,7 @@ css: "/css/lecture-tables.css"
   </tr><tr>
     <td class="tg-leftcol2">Construct Tables & Barplots</td>
     <td class="tg-cell">--</td>
-    <td class="tg-cell"><a href="https://www.youtube.com/v/R6W0GpAYp-4?version=3&autoplay=1" target="_blank"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://www.youtube.com/v/R6W0GpAYp-4?version=3&autoplay=1" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr>
 
 
@@ -102,18 +102,18 @@ css: "/css/lecture-tables.css"
   </tr><tr>
     <td class="tg-leftcol2">Forward Calculations</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="http://www.screenr.com/e27N"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="http://www.screenr.com/e27N"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Reverse Calculations</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="http://www.screenr.com/a27N"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="http://www.screenr.com/a27N"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr>
 
   <tr>
     <td class="tg-leftcol" rowspan="2">Bivariate EDA</td>
     <td class="tg-leftcol2">Scatterplots</td>
     <td class="tg-cell"><a href="https://www.youtube.com/v/yXmz922K9Ks?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
-    <td class="tg-cell" rowspan="2"><a href="http://www.screenr.com/n4PH"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell" rowspan="2"><a href="http://www.screenr.com/n4PH"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Correlation</td>
     <td class="tg-cell"><a href="https://www.youtube.com/v/PtYVrF_WT3A?version=3&start=32&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
@@ -123,32 +123,32 @@ css: "/css/lecture-tables.css"
     <td class="tg-leftcol">Linear Regression</td>
     <td class="tg-leftcol2">Linear Regression</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="http://www.screenr.com/JGPH"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="http://www.screenr.com/JGPH"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr>
   
   <tr>
     <td class="tg-leftcol" rowspan="2">t-tests</td>
     <td class="tg-leftcol2">1-sample t-tests</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="http://www.screenr.com/GXPH"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="http://www.screenr.com/GXPH"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">2-sample t-tests</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="http://www.screenr.com/cCPH"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="http://www.screenr.com/cCPH"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr>  
   <tr>
     <td class="tg-leftcol" rowspan="3">Chi-Square Tests</td>
     <td class="tg-leftcol2">Goodness-of-Fit</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="http://www.screenr.com/JXPH"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="http://www.screenr.com/JXPH"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Chi-square with Raw Data</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="http://www.screenr.com/pOPH"><img src="../../img/Rlogo.png" alt="R Tutorial"></a> <a href="http://www.screenr.com/6OPH"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="http://www.screenr.com/pOPH"><img src="../../img/dhovid.png" alt="R Tutorial"></a> <a href="http://www.screenr.com/6OPH"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Chi-square with Summarized Data</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="http://www.screenr.com/Q0PH"><img src="../../img/Rlogo.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="http://www.screenr.com/Q0PH"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr>
 
 </table>
