@@ -1,10 +1,11 @@
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs"); source("../../rhelpers/rhelpers.R")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
+source("../../../rhelpers/rhelpers.R")
 fnm <- "NormalDistribution"
 modHTML(fnm)
 
 fnm <- "NormalDistribution"
-source("../../rhelpers/knitr_setup.R")
+source("../../../rhelpers/knitr_setup.R")
 
 library(NCStats)
 
@@ -24,4 +25,4 @@ ab-a
 ( distrib(0.25,mean=16,sd=4,type="q",lower.tail=FALSE) )
 
 
-# Script created at 2015-11-01 17:48:19
+# Script created at 2015-11-03 21:03:58

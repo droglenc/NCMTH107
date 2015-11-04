@@ -2,6 +2,7 @@
 layout: page
 title: "Chi-Square Tests"
 author: "Derek H. Ogle"
+css: "/css/handouts.css"
 output:
   html_document:
     fig_width: 3.5
@@ -17,14 +18,15 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs") source("../../rhelpers/rhelpers.R")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
+source("../../../rhelpers/rhelpers.R")
 fnm <- "ChiSquareTests"
 modHTML(fnm)
 ```
 
 ```{r echo=FALSE, results='hide', message='FALSE'}
 fnm <- "ChiSquareTests"
-source("../../rhelpers/knitr_setup.R")
+source("../../../rhelpers/knitr_setup.R")
 ```
 
 ## First Commands
@@ -70,7 +72,7 @@ chi2
 On the GSS, respondents were asked to state their opinion on how true the following statement was "All radioactivity is made by humans."  Respondents were also categorized by their highest educational degree.  Use the results in the [SciTest1.csv](https://github.com/droglenc/NCData/blob/master/SciTest1.csv) data file to determine, at the 5% level, if the response to the question differs among levels of education
 
 ```{r }
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
 ST1 <- read.csv("SciTest1.csv")
 str(ST1)
 levels(ST1$degree)

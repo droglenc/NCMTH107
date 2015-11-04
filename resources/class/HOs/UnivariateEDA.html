@@ -2,13 +2,13 @@
 layout: page
 title: "Univariate EDA"
 author: "Derek H. Ogle"
-output:
+css: "/css/handouts.css"
 ---
 
 
 <div id="background" class="section level2">
 <h2>Background</h2>
-<p>Measurements of the levels of arsenic in the drinking water, cooking water, and toenail samples, as well as related covariates, were measured on 21 individuals with private wells in a New Hampshire community. The variables below were recorded in the <a href="Arsenic.csv"><a href="https://github.com/droglenc/NCData/blob/master/Arsenic.csv" class="uri">https://github.com/droglenc/NCData/blob/master/Arsenic.csv</a></a> file located on the R Resources web page.</p>
+<p>Measurements of the levels of arsenic in the drinking water, cooking water, and toenail samples, as well as related covariates, were measured on 21 individuals with private wells in a New Hampshire community. The variables below were recorded in the <a href="https://github.com/droglenc/NCData/blob/master/Arsenic.csv">Arsenic.csv</a> file located on the R Resources web page.</p>
 <ul>
 <li><code>age</code>: Age (yrs) of person</li>
 <li><code>sex</code>: Sex of person</li>
@@ -21,7 +21,7 @@ output:
 <div id="getting-the-data" class="section level2">
 <h2>Getting the Data</h2>
 <pre class="r"><code>&gt; library(NCStats)
-&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs&quot;)
+&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs&quot;)
 &gt; Ars &lt;- read.csv(&quot;Arsenic.csv&quot;)
 &gt; str(Ars)</code></pre>
 <pre><code>&#39;data.frame&#39;:   21 obs. of  6 variables:

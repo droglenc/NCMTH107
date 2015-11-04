@@ -1,10 +1,11 @@
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs"); source("../../rhelpers/rhelpers.R")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
+source("../../../rhelpers/rhelpers.R")
 fnm <- "Foundations"
 modHTML(fnm)
 
 fnm <- "Foundations"
-source("../../rhelpers/knitr_setup.R")
+source("../../../rhelpers/knitr_setup.R")
 
 library(NCStats)
 data(ABCens90)
@@ -29,4 +30,4 @@ hist(~replicate(1000,Summarize(srsdf(ABCens90,50)$sex)["male","perc"]),xlab="Per
 abline(v=Summarize(ABCens90$sex)["male","perc"],lwd=2,lty=2)
 
 
-# Script created at 2015-11-01 17:48:03
+# Script created at 2015-11-03 21:02:55

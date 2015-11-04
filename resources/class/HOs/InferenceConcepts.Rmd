@@ -2,6 +2,7 @@
 layout: page
 title: "Inference Concepts"
 author: "Derek H. Ogle"
+css: "/css/handouts.css"
 output:
   html_document:
     fig_width: 3.5
@@ -17,14 +18,15 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs") source("../../rhelpers/rhelpers.R")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
+source("../../../rhelpers/rhelpers.R")
 fnm <- "InferenceConcepts"
 modHTML(fnm)
 ```
 
 ```{r echo=FALSE, results='hide', message='FALSE'}
 fnm <- "InferenceConcepts"
-source("../../rhelpers/knitr_setup.R")
+source("../../../rhelpers/knitr_setup.R")
 ```
 
 ## Background
@@ -33,7 +35,7 @@ Barrels designed to hold 200-gallons of gasoline were recently found in an aband
 ## Getting the Data
 ```{r message=FALSE, warning=FALSE}
 library(NCStats)
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
 brls <- read.csv("Barrels.csv")
 str(brls)
 ```

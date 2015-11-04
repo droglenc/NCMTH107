@@ -2,6 +2,7 @@
 layout: page
 title: "Normal Distribution"
 author: "Derek H. Ogle"
+css: "/css/handouts.css"
 output:
   html_document:
     fig_width: 3.5
@@ -17,14 +18,15 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs"); source("../../rhelpers/rhelpers.R")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
+source("../../../rhelpers/rhelpers.R")
 fnm <- "NormalDistribution"
 modHTML(fnm)
 ```
 
 ```{r echo=FALSE, results='hide', message='FALSE'}
 fnm <- "NormalDistribution"
-source("../../rhelpers/knitr_setup.R")
+source("../../../rhelpers/knitr_setup.R")
 ```
 
 ## Wood-Burning Example

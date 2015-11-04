@@ -1,10 +1,11 @@
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs"); source("../../rhelpers/rhelpers.R")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
+source("../../../rhelpers/rhelpers.R")
 fnm <- "FoundationsR"
 modHTML(fnm)
 
 fnm <- "FoundationsR"
-source("../../rhelpers/knitr_setup.R")
+source("../../../rhelpers/knitr_setup.R")
 
 library(NCStats)
 
@@ -25,7 +26,7 @@ nums[3]
 profs[2]
 heads[1]
 
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
 iris <- read.csv("Iris.csv")
 str(iris)
 headtail(iris)     # NOT the entire data.frame
@@ -58,4 +59,4 @@ headtail(ver_or_gt5)
 ls()
 
 
-# Script created at 2015-11-01 17:38:28
+# Script created at 2015-11-03 21:03:18

@@ -2,6 +2,7 @@
 layout: page
 title: "Univariate EDA"
 author: "Derek H. Ogle"
+css: "/css/handouts.css"
 output:
   html_document:
     fig_width: 3.5
@@ -17,18 +18,19 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs"); source("../../rhelpers/rhelpers.R")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
+source("../../../rhelpers/rhelpers.R")
 fnm <- "UnivariateEDA"
 modHTML(fnm)
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 fnm <- "UnivariateEDA"
-source("../../rhelpers/knitr_setup.R")
+source("../../../rhelpers/knitr_setup.R")
 ```
 
 ## Background
-Measurements of the levels of arsenic in the drinking water, cooking water, and toenail samples, as well as related covariates, were measured on 21 individuals with private wells in a New Hampshire community.  The variables below were recorded in the [https://github.com/droglenc/NCData/blob/master/Arsenic.csv](Arsenic.csv) file located on the R Resources web page.
+Measurements of the levels of arsenic in the drinking water, cooking water, and toenail samples, as well as related covariates, were measured on 21 individuals with private wells in a New Hampshire community.  The variables below were recorded in the [Arsenic.csv](https://github.com/droglenc/NCData/blob/master/Arsenic.csv) file located on the R Resources web page.
 
 * `age`: Age (yrs) of person
 * `sex`: Sex of person
@@ -40,7 +42,7 @@ Measurements of the levels of arsenic in the drinking water, cooking water, and 
 ## Getting the Data
 ```{r message=FALSE, warning=FALSE}
 library(NCStats)
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
 Ars <- read.csv("Arsenic.csv")
 str(Ars)
 view(Ars)

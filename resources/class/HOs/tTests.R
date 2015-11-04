@@ -1,13 +1,14 @@
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs") source("../../rhelpers/rhelpers.R")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
+source("../../../rhelpers/rhelpers.R")
 fnm <- "tTests"
 modHTML(fnm)
 
 fnm <- "tTests"
-source("../../rhelpers/knitr_setup.R")
+source("../../../rhelpers/knitr_setup.R")
 
 library(NCStats)
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
 library(car)   # for leveneTest
 
 ( distrib(2.67,distrib="t",df=18,lower.tail=FALSE) )
@@ -31,4 +32,4 @@ leveneTest(abserr~sex,data=sdir)
 plot(t2)
 
 
-# Script created at 2015-11-01 18:11:20
+# Script created at 2015-11-03 21:05:21

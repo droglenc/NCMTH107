@@ -1,13 +1,14 @@
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs") source("../../rhelpers/rhelpers.R")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
+source("../../../rhelpers/rhelpers.R")
 fnm <- "InferenceConcepts"
 modHTML(fnm)
 
 fnm <- "InferenceConcepts"
-source("../../rhelpers/knitr_setup.R")
+source("../../../rhelpers/knitr_setup.R")
 
 library(NCStats)
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
 brls <- read.csv("Barrels.csv")
 str(brls)
 
@@ -18,4 +19,4 @@ hist(~gasoline,data=brls,xlab="Gallons of Gasoline")
 plot(gas.z)
 
 
-# Script created at 2015-11-01 18:03:46
+# Script created at 2015-11-03 21:03:37

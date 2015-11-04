@@ -2,6 +2,7 @@
 layout: page
 title: "Simple Linear Regresssion"
 author: "Derek H. Ogle"
+css: "/css/handouts.css"
 output:
   html_document:
     fig_width: 3.5
@@ -17,14 +18,15 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs"); source("../../rhelpers/rhelpers.R")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
+source("../../../rhelpers/rhelpers.R")
 fnm <- "SimpleLinearRegression"
 modHTML(fnm)
 ```
 
 ```{r echo=FALSE, results='hide', message='FALSE'}
 fnm <- "SimpleLinearRegression"
-source("../../rhelpers/knitr_setup.R")
+source("../../../rhelpers/knitr_setup.R")
 ```
 
 ## Background
@@ -45,7 +47,7 @@ Rainbow trout, mountain whitefish and large-scale suckers taken from four differ
 ## Getting the Data
 ```{r message=FALSE, warning=FALSE}
 library(NCStats)
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
 ( sr <- read.csv("MetalsFish.csv") )
 ```
 

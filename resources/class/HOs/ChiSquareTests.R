@@ -1,10 +1,11 @@
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs") source("../../rhelpers/rhelpers.R")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
+source("../../../rhelpers/rhelpers.R")
 fnm <- "ChiSquareTests"
 modHTML(fnm)
 
 fnm <- "ChiSquareTests"
-source("../../rhelpers/knitr_setup.R")
+source("../../../rhelpers/knitr_setup.R")
 
 library(NCStats)
 
@@ -28,7 +29,7 @@ percTable(obs,margin=1,digits=1)
 ( chi2 <- chisq.test(obs2,correct=FALSE) )
 chi2
 
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/lecture/HOs")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
 ST1 <- read.csv("SciTest1.csv")
 str(ST1)
 levels(ST1$degree)
@@ -55,4 +56,4 @@ plot(chi1)
 gofCI(chi1,digits=3)
 
 
-# Script created at 2015-11-01 18:15:14
+# Script created at 2015-11-03 21:02:25
