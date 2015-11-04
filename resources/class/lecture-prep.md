@@ -74,7 +74,7 @@ css: "/css/lecture-tables.css"
   </tr>
   
   <tr>
-    <td class="tg-leftcol" rowspan="4">Univariate EDA<br>&nbsp;&nbsp Quantitative</td>
+    <td class="tg-leftcol" rowspan="4">Univariate EDA<br>-- Quantitative</td>
     <td class="tg-leftcol2">Construct Histograms</td>
     <td class="tg-cell"><a href="https://www.youtube.com/v/sC7gjg9g3JU?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/H9ITfdaX2ZQ?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
     <td class="tg-cell" rowspan="4"><a href="https://www.youtube.com/v/lB2h9GpyoLw?version=3&autoplay=1" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
@@ -88,7 +88,7 @@ css: "/css/lecture-tables.css"
     <td class="tg-leftcol2">Calculate IQR</td>
     <td class="tg-cell"><a href="https://www.youtube.com/v/R6VDj7pEG30?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/F3WcEAW-M80?version=3&start=366&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
   </tr>
-    <td class="tg-leftcol" rowspan="4">Univariate EDA<br>&nbsp;&nbsp Categorical</td>
+    <td class="tg-leftcol" rowspan="4">Univariate EDA<br>-- Categorical</td>
    <tr>
     <td class="tg-leftcol2">Construct Tables & Barplots</td>
     <td class="tg-cell">--</td>
@@ -112,7 +112,7 @@ css: "/css/lecture-tables.css"
   </tr>
 
   <tr>
-    <td class="tg-leftcol" rowspan="2">Bivariate EDA</td>
+    <td class="tg-leftcol" rowspan="2">Bivariate EDA<br>--Quantitative</td>
     <td class="tg-leftcol2">Scatterplots</td>
     <td class="tg-cell"><a href="https://www.youtube.com/v/yXmz922K9Ks?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
     <td class="tg-cell" rowspan="2"><a href="http://www.screenr.com/n4PH"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
@@ -121,6 +121,13 @@ css: "/css/lecture-tables.css"
     <td class="tg-cell"><a href="https://www.youtube.com/v/PtYVrF_WT3A?version=3&start=32&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
   </tr>
   
+  <tr>
+    <td class="tg-leftcol">Bivariate EDA<br>--Categorical</td>
+    <td class="tg-leftcol2">Frequency Tables</td>
+    <td class="tg-cell"> -- </td>
+    <td class="tg-cell"> -- </td>
+  </tr>
+
   <tr>
     <td class="tg-leftcol">Linear Regression</td>
     <td class="tg-leftcol2">Linear Regression</td>
