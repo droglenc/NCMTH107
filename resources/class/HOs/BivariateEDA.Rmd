@@ -30,7 +30,7 @@ source("../../../rhelpers/knitr_setup.R")
 ```
 
 ## Background
-Measurements of the levels of arsenic in the drinking water, cooking water, and toenail samples, as well as related covariates, were measured on 21 individuals with private wells in a New Hampshire community.  The variables below were recorded in the [https://github.com/droglenc/NCData/blob/master/Arsenic.csv](Arsenic.csv) file located on the R Resources web page.
+Measurements of the levels of arsenic in the drinking water, cooking water, and toenail samples, as well as related covariates, were measured on 21 individuals with private wells in a New Hampshire community.  The variables below were recorded in the [Arsenic.csv](https://github.com/droglenc/NCData/blob/master/Arsenic.csv) file located on the R Resources web page.
 
 * `age`: Age (yrs) of person
 * `sex`: Sex of person
@@ -58,7 +58,7 @@ view(Ars)
 ```
 
 ## Bivariate EDA -- Quantitative
-```{r fig.show='asis'}
+```{r fig.show='asis', par1=TRUE}
 plot(arsnails~age,data=Ars,pch=19)
 cor(Ars$arsnails,Ars$age)
 ```
