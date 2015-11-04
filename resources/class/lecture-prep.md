@@ -74,7 +74,7 @@ css: "/css/lecture-tables.css"
   </tr>
   
   <tr>
-    <td class="tg-leftcol" rowspan="5">Univarite EDA</td>
+    <td class="tg-leftcol" rowspan="4">Univariate EDA<br>&nbsp;&nbsp Quantitative</td>
     <td class="tg-leftcol2">Construct Histograms</td>
     <td class="tg-cell"><a href="https://www.youtube.com/v/sC7gjg9g3JU?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/H9ITfdaX2ZQ?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
     <td class="tg-cell" rowspan="4"><a href="https://www.youtube.com/v/lB2h9GpyoLw?version=3&autoplay=1" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
@@ -87,7 +87,9 @@ css: "/css/lecture-tables.css"
   </tr><tr>
     <td class="tg-leftcol2">Calculate IQR</td>
     <td class="tg-cell"><a href="https://www.youtube.com/v/R6VDj7pEG30?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/F3WcEAW-M80?version=3&start=366&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
-  </tr><tr>
+  </tr>
+    <td class="tg-leftcol" rowspan="4">Univariate EDA<br>&nbsp;&nbsp Categorical</td>
+   <tr>
     <td class="tg-leftcol2">Construct Tables & Barplots</td>
     <td class="tg-cell">--</td>
     <td class="tg-cell"><a href="https://www.youtube.com/v/R6W0GpAYp-4?version=3&autoplay=1" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
