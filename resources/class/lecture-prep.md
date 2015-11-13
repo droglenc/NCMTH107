@@ -50,23 +50,23 @@ css: "/css/lecture-tables.css"
     <td class="tg-leftcol" rowspan="6">Getting Started with R</td>
     <td class="tg-leftcol2">Retrieve data from webpage</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="https://www.youtube.com/v/1p2vuGUjmBQ?version=3&autoplay=1" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-preparedatawebpage" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Enter own data (using Excel)</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="https://www.youtube.com/v/JCOnCeyU778?version=3&autoplay=1" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-preparedataexcel" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Enter own data (not using Excel)</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="https://www.youtube.com/v/RQ7ijopKu7w?version=3&autoplay=1" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-preparedatatextfile" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Load data into RStudio</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="https://www.youtube.com/v/ySfZd1qLuZw?version=3&autoplay=1" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-loadcsvrstudio" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Subset data.frame with filterD</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="https://www.youtube.com/v/mu7_RVGkYA4?version=3&autoplay=1" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/filterd" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Subset data.frame with Subset</td>
     <td class="tg-cell"> -- </td>
@@ -77,7 +77,7 @@ css: "/css/lecture-tables.css"
     <td class="tg-leftcol" rowspan="4">Univariate EDA<br>-- Quantitative</td>
     <td class="tg-leftcol2">Construct Histograms</td>
     <td class="tg-cell"><a href="https://www.youtube.com/v/sC7gjg9g3JU?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/H9ITfdaX2ZQ?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
-    <td class="tg-cell" rowspan="4"><a href="https://www.youtube.com/v/lB2h9GpyoLw?version=3&autoplay=1" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell" rowspan="4"><a href="https://vimeo.com/user45324800/ncstats-uedaq" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Calculate Median</td>
     <td class="tg-cell"><a href="https://www.youtube.com/v/0SYsi38XucI?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/hTYTaOaQUcw?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/9a8M_KfclBE?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
@@ -92,7 +92,7 @@ css: "/css/lecture-tables.css"
     <td class="tg-leftcol">Univariate EDA<br>-- Categorical</td>
     <td class="tg-leftcol2">Construct Tables & Barplots</td>
     <td class="tg-cell">--</td>
-    <td class="tg-cell"><a href="https://www.youtube.com/v/R6W0GpAYp-4?version=3&autoplay=1" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-uedac" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr>
 
 
