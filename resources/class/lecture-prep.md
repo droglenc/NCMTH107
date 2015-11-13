@@ -104,11 +104,11 @@ css: "/css/lecture-tables.css"
   </tr><tr>
     <td class="tg-leftcol2">Forward Calculations</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="https://vimeo.com/user45324800/normdist-forward"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/normdist-forward" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Reverse Calculations</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="http://www.screenr.com/a27N"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/normdist-reverse" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr>
 
   <tr>
