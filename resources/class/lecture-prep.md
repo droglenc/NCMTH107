@@ -23,11 +23,11 @@ css: "/css/lecture-tables.css"
   <tr>
     <td class="tg-leftcol" rowspan="2">Foundations</td>
     <td class="tg-leftcol2">IVPPSS</td>
-    <td class="tg-cell"><a href="https://www.youtube.com/v/oBF8nNvnq9A?version=3&autoplay=1" target="_blank"><img src="../../img/dhovid.png" alt="Ogle Lecture"></a></td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-ivppss" target="_blank"><img src="../../img/dhovid.png" alt="Ogle Lecture"></a></td>
     <td class="tg-cell"> -- </td>
   </tr><tr>
     <td class="tg-leftcol2">Variable Types</td>
-    <td class="tg-cell"><a href="https://www.youtube.com/v/_k72pdEQGJs?version=3&autoplay=1" target="_blank"><img src="../../img/dhovid.png" alt="Ogle Lecture"></a></td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-vartypes" target="_blank"><img src="../../img/dhovid.png" alt="Ogle Lecture"></a></td>
     <td class="tg-cell"> -- </td>
   </tr>
   
@@ -104,7 +104,7 @@ css: "/css/lecture-tables.css"
   </tr><tr>
     <td class="tg-leftcol2">Forward Calculations</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="http://www.screenr.com/e27N"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/normdist-forward"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Reverse Calculations</td>
     <td class="tg-cell"> -- </td>
