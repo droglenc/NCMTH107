@@ -25,42 +25,42 @@ css: "/css/handouts.css"
 <h2>Chi-Square Test</h2>
 <div id="from-summarized-observed-table" class="section level3">
 <h3>From Summarized Observed Table</h3>
-<p>Do the dominant food items in lake trout and chinook salmon differ at the 5% level? The summarized observed table was given in class.</p>
+<p>When <a href="https://en.wikipedia.org/wiki/Chinook_salmon">Chinook Salmon (<em>Oncorhynchus tshawytscha</em>)</a> were first introduced to Lake Superior there was concern that they would compete with native <a href="https://en.wikipedia.org/wiki/Lake_trout">Lake Trout (<em>Salvelinus namaycush</em>)</a> for <a href="https://en.wikipedia.org/wiki/Coregonus_artedi">Cisco (<em>Coregonus artedi</em>)</a>. Preliminarily, fisheries biologists classified the dominant food items (Cisco, <a href="https://en.wikipedia.org/wiki/Rainbow_smelt">Smelt (<em>Osmerus mordax</em></a>) (another type of fish), or <a href="https://en.wikipedia.org/wiki/Mysis_relicta"><em>Mysis</em></a> (an invertebrate)) in the diets of 50 Lake Trout and 40 Chinook Salmon. They found that 32, 10, and 8 Lake Trout diets were dominated by Cisco, Smelt, and <em>Mysis</em>, respectively. Similarly, 18, 18, and 4 Chinook Salmon diets were dominated by Cisco, Smelt, and <em>Mysis</em>, respectively. Test (at the 10% level) if the distribution of dominant food items differs at the 5% level?</p>
 <pre class="r"><code>&gt; freq &lt;- c(32,10,8,18,18,4)
 &gt; ( obs &lt;- matrix(freq,nrow=2,byrow=TRUE) )</code></pre>
 <pre><code>     [,1] [,2] [,3]
 [1,]   32   10    8
 [2,]   18   18    4</code></pre>
-<pre class="r"><code>&gt; rownames(obs) &lt;- c(&quot;lake trout&quot;,&quot;chinook salmon&quot;)
-&gt; colnames(obs) &lt;- c(&quot;lake herring&quot;,&quot;smelt&quot;,&quot;mysis&quot;)
+<pre class="r"><code>&gt; rownames(obs) &lt;- c(&quot;Lake Trout&quot;,&quot;Chinook Salmon&quot;)
+&gt; colnames(obs) &lt;- c(&quot;Cisco&quot;,&quot;Smelt&quot;,&quot;Mysis&quot;)
 &gt; obs</code></pre>
-<pre><code>               lake herring smelt mysis
-lake trout               32    10     8
-chinook salmon           18    18     4</code></pre>
+<pre><code>               Cisco Smelt Mysis
+Lake Trout        32    10     8
+Chinook Salmon    18    18     4</code></pre>
 <pre class="r"><code>&gt; chi1 &lt;- chisq.test(obs,correct=FALSE)
 &gt; chi1$expected</code></pre>
-<pre><code>               lake herring    smelt    mysis
-lake trout         27.77778 15.55556 6.666667
-chinook salmon     22.22222 12.44444 5.333333</code></pre>
+<pre><code>                  Cisco    Smelt    Mysis
+Lake Trout     27.77778 15.55556 6.666667
+Chinook Salmon 22.22222 12.44444 5.333333</code></pre>
 <pre class="r"><code>&gt; chi1$expected &gt;= 5</code></pre>
-<pre><code>               lake herring smelt mysis
-lake trout             TRUE  TRUE  TRUE
-chinook salmon         TRUE  TRUE  TRUE</code></pre>
+<pre><code>               Cisco Smelt Mysis
+Lake Trout      TRUE  TRUE  TRUE
+Chinook Salmon  TRUE  TRUE  TRUE</code></pre>
 <pre class="r"><code>&gt; chi1</code></pre>
 <pre><code>Pearson&#39;s Chi-squared test with obs 
 X-squared = 6.5083, df = 2, p-value = 0.03861</code></pre>
 <pre class="r"><code>&gt; chi1$residuals</code></pre>
-<pre><code>               lake herring     smelt      mysis
-lake trout        0.8011103 -1.408590  0.5163978
-chinook salmon   -0.8956686  1.574852 -0.5773503</code></pre>
+<pre><code>                    Cisco     Smelt      Mysis
+Lake Trout      0.8011103 -1.408590  0.5163978
+Chinook Salmon -0.8956686  1.574852 -0.5773503</code></pre>
 <pre class="r"><code>&gt; percTable(obs,margin=1,digits=1)</code></pre>
-<pre><code>               lake herring smelt mysis Sum
-lake trout               64    20    16 100
-chinook salmon           45    45    10 100</code></pre>
+<pre><code>               Cisco Smelt Mysis Sum
+Lake Trout        64    20    16 100
+Chinook Salmon    45    45    10 100</code></pre>
 <pre class="r"><code>&gt; ( obs2 &lt;- obs[,-2] )</code></pre>
-<pre><code>               lake herring mysis
-lake trout               32     8
-chinook salmon           18     4</code></pre>
+<pre><code>               Cisco Mysis
+Lake Trout        32     8
+Chinook Salmon    18     4</code></pre>
 <pre class="r"><code>&gt; ( chi2 &lt;- chisq.test(obs2,correct=FALSE) )</code></pre>
 <pre><code>Warning in chisq.test(obs2, correct = FALSE): Chi-squared approximation may be incorrect</code></pre>
 <pre><code>Pearson&#39;s Chi-squared test with obs2 
@@ -71,7 +71,7 @@ X-squared = 0.0301, df = 1, p-value = 0.8624</code></pre>
 </div>
 <div id="from-raw-data" class="section level3">
 <h3>From Raw Data</h3>
-<p>On the GSS, respondents were asked to state their opinion on how true the following statement was “All radioactivity is made by humans.” Respondents were also categorized by their highest educational degree. Use the results in the <a href="https://github.com/droglenc/NCData/blob/master/SciTest1.csv">SciTest1.csv</a> data file to determine, at the 5% level, if the response to the question differs among levels of education</p>
+<p>The <a href="http://www.norc.org/Research/Projects/Pages/general-social-survey.aspx">General Social Survey</a> (GSS) is a nationwide survey that has been administered since 1972 to gather data on contemporary American society in an attempt to monitor and explain trends in attitudes, behaviors, and attributes of American society. One part of that survey asked respondents to state their opinion on how true the following statement was – “<em>All radioactivity is made by humans.</em>” Respondents were also categorized by their highest educational degree. The results from this portion of the GSS is in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/SciTest1.csv">SciTest1.csv</a>. Use these data to determine, at the 5% level, if the distribution of responses to this statement differs among levels of education.</p>
 <pre class="r"><code>&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs&quot;)
 &gt; ST1 &lt;- read.csv(&quot;SciTest1.csv&quot;)
 &gt; str(ST1)</code></pre>
@@ -134,7 +134,7 @@ fdegree def.not prob.not prob.true def.true   Sum
 </div>
 <div id="goodness-of-fit-test" class="section level2">
 <h2>Goodness-of-Fit Test</h2>
-<p>Four-o’clocks (<strong>Mirabilis jalapa</strong>) are plants native to tropical America. Individual four-o’clocks can have red, white, or pink flowers. Flower color in this species is thought to controlled by a single gene locus with two alleles experssing incomplete dominance, so that heterozygotes are pink-flower, while homozygotes for one allele are white-flowered and homozygotes for the other allele are red-flowered. According to Mendelian genetic principles, self-pollination of pink-flowered plants should produce progeny that have red, pink, and white flowers in a 1:2:1 ratio. A horticulturist self-pollinates several pink-flowered plants and produces 240 progeny with 55 that are red-flowered, 132 that are pink-flowered, and 53 that are white-flowered. Use the results to determine, at the 5% level, if the theoretical 1:2:1 ratio is upheld with these data (This is example 11.1 from Glover, T. and K. Mitchell. 2008. An Introduction to Biostatistics, 2nd edition. Waveland Press).</p>
+<p><a href="https://en.wikipedia.org/wiki/Mirabilis_jalapa">Four-o’clocks (<em>Mirabilis jalapa</em>)</a> are plants native to tropical America. Individual four-o’clocks can have red, white, or pink flowers. <a href="https://en.wikipedia.org/wiki/Mirabilis_jalapa#Genetic_studies">Flower color in this species is thought to be controlled by a single gene locus with two alleles experssing incomplete dominance, so that heterozygotes are pink-flowered, while homozygotes for one allele are white-flowered and homozygotes for the other allele are red-flowered.</a> According to <a href="https://en.wikipedia.org/wiki/Mendelian_inheritance">Mendelian genetic principles</a>, self-pollination of pink-flowered plants should produce progeny that have red, pink, and white flowers in a 1:2:1 ratio. A horticulturist allowed several pink-flowered plants to self-pollinate and produce 240 progeny with 55 that were red-flowered, 132 that were pink-flowered, and 53 that were white-flowered. Use the results to determine, at the 5% level, if the theoretical 1:2:1 ratio is upheld with these data.</p>
 <pre class="r"><code>&gt; obs &lt;- c(red=55,pink=132,white=53)
 &gt; exp.p &lt;- c(red=1/4,pink=2/4,white=1/4)
 &gt; chi1 &lt;- chisq.test(obs,p=exp.p,rescale=TRUE,correct=FALSE)

@@ -47,12 +47,13 @@ An example of computing the p-value if $\chi^{2}$=16.82 and df=8.
 
 ## Chi-Square Test
 ### From Summarized Observed Table
-Do the dominant food items in lake trout and chinook salmon differ at the 5\% level?  The summarized observed table was given in class.
+When [Chinook Salmon (*Oncorhynchus tshawytscha*)](https://en.wikipedia.org/wiki/Chinook_salmon) were first introduced to Lake Superior there was concern that they would compete with native [Lake Trout (*Salvelinus namaycush*)](https://en.wikipedia.org/wiki/Lake_trout) for [Cisco (*Coregonus artedi*)](https://en.wikipedia.org/wiki/Coregonus_artedi).  Preliminarily, fisheries biologists classified the dominant food items (Cisco, [Smelt (*Osmerus mordax*](https://en.wikipedia.org/wiki/Rainbow_smelt)) (another type of fish), or [*Mysis*](https://en.wikipedia.org/wiki/Mysis_relicta) (an invertebrate)) in the diets of 50 Lake Trout and 40 Chinook Salmon.  They found that 32, 10, and 8 Lake Trout diets were dominated by Cisco, Smelt, and *Mysis*, respectively.  Similarly, 18, 18, and 4 Chinook Salmon diets were dominated by Cisco, Smelt, and *Mysis*, respectively.  Test (at the 10% level) if the distribution of dominant food items differs at the 5% level?
+
 ```{r}
 freq <- c(32,10,8,18,18,4)
 ( obs <- matrix(freq,nrow=2,byrow=TRUE) )
-rownames(obs) <- c("lake trout","chinook salmon")
-colnames(obs) <- c("lake herring","smelt","mysis")
+rownames(obs) <- c("Lake Trout","Chinook Salmon")
+colnames(obs) <- c("Cisco","Smelt","Mysis")
 obs
 chi1 <- chisq.test(obs,correct=FALSE)
 chi1$expected
@@ -69,9 +70,9 @@ chi2
 ```
 
 ### From Raw Data
-On the GSS, respondents were asked to state their opinion on how true the following statement was "All radioactivity is made by humans."  Respondents were also categorized by their highest educational degree.  Use the results in the [SciTest1.csv](https://github.com/droglenc/NCData/blob/master/SciTest1.csv) data file to determine, at the 5% level, if the response to the question differs among levels of education
+The [General Social Survey](http://www.norc.org/Research/Projects/Pages/general-social-survey.aspx) (GSS) is a nationwide survey that has been administered since 1972 to gather data on contemporary American society in an attempt to monitor and explain trends in attitudes, behaviors, and attributes of American society.  One part of that survey asked respondents to state their opinion on how true the following statement was -- "*All radioactivity is made by humans.*"  Respondents were also categorized by their highest educational degree.  The results from this portion of the GSS is in [SciTest1.csv](https://raw.githubusercontent.com/droglenc/NCData/master/SciTest1.csv).  Use these data to determine, at the 5% level, if the distribution of responses to this statement differs among levels of education.
 
-```{r }
+```{r}
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
 ST1 <- read.csv("SciTest1.csv")
 str(ST1)
@@ -91,8 +92,9 @@ ST1.chi$residuals
 percTable(freq.tbl,margin=1,digits=1)
 ```
 
+
 ## Goodness-of-Fit Test
-Four-o'clocks (**Mirabilis jalapa**) are plants native to tropical America.  Individual four-o'clocks can have red, white, or pink flowers.  Flower color in this species is thought to controlled by a single gene locus with two alleles experssing incomplete dominance, so that heterozygotes are pink-flower, while homozygotes for one allele are white-flowered and homozygotes for the other allele are red-flowered.  According to Mendelian genetic principles, self-pollination of pink-flowered plants should produce progeny that have red, pink, and white flowers in a 1:2:1 ratio.  A horticulturist self-pollinates several pink-flowered plants and produces 240 progeny with 55 that are red-flowered, 132 that are pink-flowered, and 53 that are white-flowered.  Use the results to determine, at the 5% level, if the theoretical 1:2:1 ratio is upheld with these data (This is example 11.1 from Glover, T. and K. Mitchell.  2008.  An Introduction to Biostatistics, 2nd edition.  Waveland Press).
+[Four-o'clocks (*Mirabilis jalapa*)](https://en.wikipedia.org/wiki/Mirabilis_jalapa) are plants native to tropical America.  Individual four-o'clocks can have red, white, or pink flowers.  [Flower color in this species is thought to be controlled by a single gene locus with two alleles experssing incomplete dominance, so that heterozygotes are pink-flowered, while homozygotes for one allele are white-flowered and homozygotes for the other allele are red-flowered.](https://en.wikipedia.org/wiki/Mirabilis_jalapa#Genetic_studies)  According to [Mendelian genetic principles](https://en.wikipedia.org/wiki/Mendelian_inheritance), self-pollination of pink-flowered plants should produce progeny that have red, pink, and white flowers in a 1:2:1 ratio.  A horticulturist allowed several pink-flowered plants to self-pollinate and produce 240 progeny with 55 that were red-flowered, 132 that were pink-flowered, and 53 that were white-flowered.  Use the results to determine, at the 5% level, if the theoretical 1:2:1 ratio is upheld with these data.
 
 ```{r par1a=TRUE, fig.show='asis'}
 obs <- c(red=55,pink=132,white=53)

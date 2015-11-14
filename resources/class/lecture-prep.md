@@ -144,7 +144,7 @@ css: "/css/lecture-tables.css"
 
   <tr>
     <td class="tg-leftcol" rowspan="3">t-tests</td>
-    <td class="tg-leftcol2">t distribution</td>
+    <td class="tg-leftcol2">t Distribution</td>
     <td class="tg-cell"> -- </td>
     <td class="tg-cell"><a href=""><img src="../../img/dhovid.png" alt="R Tutorial"></a> <a href="HOs/tTests.pdf"><img src="../../img/pdf.png" alt="PDF"></a></td>
   </tr><tr>
@@ -157,7 +157,11 @@ css: "/css/lecture-tables.css"
     <td class="tg-cell"><a href="http://www.screenr.com/cCPH"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr>  
   <tr>
-    <td class="tg-leftcol" rowspan="3">Chi-Square Tests</td>
+    <td class="tg-leftcol" rowspan="4">Chi-Square Tests</td>
+    <td class="tg-leftcol2">Chi-Square Distribution</td>
+    <td class="tg-cell"> -- </td>
+    <td class="tg-cell"><a href=""><img src="../../img/dhovid.png" alt="R Tutorial"></a> <a href="HOs/tTests.pdf"><img src="../../img/pdf.png" alt="PDF"></a></td>
+  </tr><tr>
     <td class="tg-leftcol2">Goodness-of-Fit</td>
     <td class="tg-cell"> -- </td>
     <td class="tg-cell"><a href="http://www.screenr.com/JXPH"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>

@@ -15,8 +15,8 @@ library(NCStats)
 
 freq <- c(32,10,8,18,18,4)
 ( obs <- matrix(freq,nrow=2,byrow=TRUE) )
-rownames(obs) <- c("lake trout","chinook salmon")
-colnames(obs) <- c("lake herring","smelt","mysis")
+rownames(obs) <- c("Lake Trout","Chinook Salmon")
+colnames(obs) <- c("Cisco","Smelt","Mysis")
 obs
 chi1 <- chisq.test(obs,correct=FALSE)
 chi1$expected
@@ -56,4 +56,4 @@ plot(chi1)
 gofCI(chi1,digits=3)
 
 
-# Script created at 2015-11-03 21:02:25
+# Script created at 2015-11-14 09:50:27
