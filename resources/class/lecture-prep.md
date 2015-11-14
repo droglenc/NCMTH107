@@ -136,7 +136,7 @@ css: "/css/lecture-tables.css"
   </tr>
 
   <tr>
-    <td class="tg-leftcol" rowspan="2">Inference Concepts</td>
+    <td class="tg-leftcol">Inference Concepts</td>
     <td class="tg-leftcol2">1-sample Z-test</td>
     <td class="tg-cell"> -- </td>
     <td class="tg-cell"><a href=""><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
