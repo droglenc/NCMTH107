@@ -9,7 +9,9 @@ source("../../../rhelpers/knitr_setup.R")
 
 library(NCStats)
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
-( d <- read.csv("AvianPecMusc.csv") )
+d <- read.csv("AvianPecMusc.csv")
+str(d)
+headtail(d)
 
 ( lm.mt <- lm(mass~thickness,data=d) )
 rSquared(lm.mt)
@@ -19,4 +21,4 @@ fitPlot(lm.mt,ylab="Pectoral Muscle Mass (g)",xlab="Pectoral Muscle Thickness (m
 12-predM
 
 
-# Script created at 2015-11-14 08:09:23
+# Script created at 2015-11-14 08:34:14

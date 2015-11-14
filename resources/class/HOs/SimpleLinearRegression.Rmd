@@ -50,7 +50,9 @@ These two variables are recorded in [AvianPecMusc.csv](https://github.com/drogle
 ```{r message=FALSE, warning=FALSE}
 library(NCStats)
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
-( d <- read.csv("AvianPecMusc.csv") )
+d <- read.csv("AvianPecMusc.csv")
+str(d)
+headtail(d)
 ```
 
 ## Fitting the Regression and Seeing the Results
