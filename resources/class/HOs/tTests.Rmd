@@ -58,7 +58,7 @@ plot(cm.t)
 ```
 
 ## Two-Sample t-Test
-[Sholl *et al.* (2000)](http://www.sciencedirect.com/science/article/pii/S0272494499901469) performed an experiment to test the effect of sex (male, female) on spatial orientation ability.  In one part of their study, the researchers took 30 males and 30 female to an unfamiliar wooded park and asked them to point to the south.  The absolute pointing error (degrees, `abserr`) was recorded in [SexDirection](https://raw.githubusercontent.com/droglenc/NCData/master/SexDirection.csv) .  Test if men have a better sense of direction than women, at the 1% level?
+[Sholl *et al.* (2000)](http://www.sciencedirect.com/science/article/pii/S0272494499901469) performed an experiment to test the effect of sex (male, female) on spatial orientation ability.  In one part of their study, the researchers took 30 males and 30 females to an unfamiliar wooded park and asked each individual to point to the south.  The absolute pointing error (positive degrees off from due south, `abserr`) was recorded in [SexDirection.csv](https://raw.githubusercontent.com/droglenc/NCData/master/SexDirection.csv) .  Test if men have a better sense of direction than women, at the 1% level?
 ```{r}
 sdir <- read.csv("SexDirection.csv")
 str(sdir)

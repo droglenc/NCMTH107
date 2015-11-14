@@ -32,4 +32,4 @@ leveneTest(abserr~sex,data=sdir)
 plot(t2)
 
 
-# Script created at 2015-11-14 08:57:17
+# Script created at 2015-11-14 14:39:59

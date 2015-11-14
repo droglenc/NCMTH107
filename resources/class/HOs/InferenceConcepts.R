@@ -19,4 +19,4 @@ hist(~score,data=d,xlab="SSHA Score")
 plot(z1)
 
 
-# Script created at 2015-11-14 08:27:13
+# Script created at 2015-11-14 12:55:49

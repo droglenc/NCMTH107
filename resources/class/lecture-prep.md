@@ -146,11 +146,11 @@ css: "/css/lecture-tables.css"
     <td class="tg-leftcol" rowspan="3">t-tests</td>
     <td class="tg-leftcol2">t Distribution</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href=""><img src="../../img/dhovid.png" alt="R Tutorial"></a> <a href="HOs/tTests.pdf"><img src="../../img/pdf.png" alt="PDF"></a></td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/tdistribution" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a> <a href="HOs/tTests.pdf"><img src="../../img/pdf.png" alt="PDF"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">1-sample t-test</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="http://www.screenr.com/GXPH"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/1samplettest" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">2-sample t-test</td>
     <td class="tg-cell"> -- </td>
