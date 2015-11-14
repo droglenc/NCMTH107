@@ -143,7 +143,11 @@ css: "/css/lecture-tables.css"
   </tr>
 
   <tr>
-    <td class="tg-leftcol" rowspan="2">t-tests</td>
+    <td class="tg-leftcol" rowspan="3">t-tests</td>
+    <td class="tg-leftcol2">t distribution</td>
+    <td class="tg-cell"> -- </td>
+    <td class="tg-cell"><a href=""><img src="../../img/dhovid.png" alt="R Tutorial"></a> <a href="HOs/tTests.pdf"><img src="../../img/pdf.png" alt="PDF"></a></td>
+  </tr><tr>
     <td class="tg-leftcol2">1-sample t-test</td>
     <td class="tg-cell"> -- </td>
     <td class="tg-cell"><a href="http://www.screenr.com/GXPH"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>

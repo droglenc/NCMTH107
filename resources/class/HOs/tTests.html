@@ -25,7 +25,7 @@ css: "/css/handouts.css"
 </div>
 <div id="one-sample-t-test" class="section level2">
 <h2>One-Sample t-Test</h2>
-<p>Researchers (Based on data from Blem, C.R. and L.B. Blem. 1995. Journal of Herpetology 29:391-398) have determined that a population of cottonmouth snakes (<strong>Agkistrodon piscivorus</strong>) must have an average litter size of greater than 5.8 snakes in order for the population to grow. A sample of snake litters from this population was taken and the number of snakes in the litter was recorded. The results were recorded in <a href="https://github.com/droglenc/NCData/blob/master/Cottonmouth.csv">Cottonmouth.csv</a> on the class webpage. Test, at a very conservative level, if the average litter size is large enough for the population to grow.</p>
+<p><a href="http://www.jstor.org/stable/1564989?seq=1#page_scan_tab_contents">Blem and Blem (1995)</a> examined the reproductive characteristics of <a href="https://en.wikipedia.org/wiki/Agkistrodon_piscivorus">Eastern Cottonmouth snakes (<em>Agkistrodon piscivorus</em>)</a>, a once widely distributed snake whose numbers have decreased recently due to encroachment by humans. In one part of their study they determined that the population being examined must have an average litter size greater than 5.8 snakes for the population to grow. A random sample of snake litters from this population was taken and the number of snakes in each litter was recorded in in <a href="https://github.com/droglenc/NCData/raw/master/Cottonmouth.csv">Cottonmouth.csv</a>. Test, at a very conservative level, if the average litter size is large enough for this population to grow.</p>
 <pre class="r"><code>&gt; cm  &lt;- read.csv(&quot;Cottonmouth.csv&quot;)
 &gt; str(cm)</code></pre>
 <pre><code>&#39;data.frame&#39;:   44 obs. of  1 variable:
@@ -45,7 +45,7 @@ mean of x
 </div>
 <div id="two-sample-t-test" class="section level2">
 <h2>Two-Sample t-Test</h2>
-<p>A sample (from Sholl, M.J., <strong>et al.</strong> 2000. The relation of sex and sense of direction to spatial orientation in an unfamiliar environment. Journal of Environmental Psychology. 20:17-28.) of 30 males and 30 female was taken to an unfamiliar wooded park and given spatial orientation tests, including pointing to the south. The absolute pointing error, in degrees, was recorded. The results are in the <a href="https://github.com/droglenc/NCData/blob/master/SexDirection.csv">SexDirection</a> on the class webpage. Test if men have a better sense of direction than women, at the 1% level?</p>
+<p><a href="http://www.sciencedirect.com/science/article/pii/S0272494499901469">Sholl <em>et al.</em> (2000)</a> performed an experiment to test the effect of sex (male, female) on spatial orientation ability. In one part of their study, the researchers took 30 males and 30 female to an unfamiliar wooded park and asked them to point to the south. The absolute pointing error (degrees, <code>abserr</code>) was recorded in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/SexDirection.csv">SexDirection</a> . Test if men have a better sense of direction than women, at the 1% level?</p>
 <pre class="r"><code>&gt; sdir &lt;- read.csv(&quot;SexDirection.csv&quot;)
 &gt; str(sdir)</code></pre>
 <pre><code>&#39;data.frame&#39;:   60 obs. of  2 variables:
