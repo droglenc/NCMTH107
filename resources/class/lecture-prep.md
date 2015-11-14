@@ -139,7 +139,7 @@ css: "/css/lecture-tables.css"
     <td class="tg-leftcol">Inference Concepts</td>
     <td class="tg-leftcol2">1-sample Z-test</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href=""><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/ztest" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr>
 
   <tr>
