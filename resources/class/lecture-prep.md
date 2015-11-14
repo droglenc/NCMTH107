@@ -115,7 +115,7 @@ css: "/css/lecture-tables.css"
     <td class="tg-leftcol" rowspan="2">Bivariate EDA<br>--Quantitative</td>
     <td class="tg-leftcol2">Scatterplots</td>
     <td class="tg-cell"><a href="https://www.youtube.com/v/yXmz922K9Ks?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
-    <td class="tg-cell" rowspan="2"><a href="http://www.screenr.com/n4PH"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell" rowspan="2"><a href="https://vimeo.com/user45324800/biveda-quant" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Correlation</td>
     <td class="tg-cell"><a href="https://www.youtube.com/v/PtYVrF_WT3A?version=3&start=32&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
@@ -123,18 +123,25 @@ css: "/css/lecture-tables.css"
   
   <tr>
     <td class="tg-leftcol">Bivariate EDA<br>--Categorical</td>
-    <td class="tg-leftcol2">Frequency Tables</td>
+    <td class="tg-leftcol2">Frequency/Percent Tables</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"> -- </td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/biveda-cat" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr>
 
   <tr>
     <td class="tg-leftcol">Linear Regression</td>
     <td class="tg-leftcol2">Linear Regression</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="http://www.screenr.com/JGPH"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/regression1" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr>
-  
+
+  <tr>
+    <td class="tg-leftcol" rowspan="2">Inference Concepts</td>
+    <td class="tg-leftcol2">1-sample Z-test</td>
+    <td class="tg-cell"> -- </td>
+    <td class="tg-cell"><a href=""><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
+  </tr>
+
   <tr>
     <td class="tg-leftcol" rowspan="2">t-tests</td>
     <td class="tg-leftcol2">1-sample t-tests</td>
