@@ -9,14 +9,14 @@ source("../../../rhelpers/knitr_setup.R")
 
 library(NCStats)
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
-brls <- read.csv("Barrels.csv")
-str(brls)
+d <- read.csv("SSHA.csv")
+str(d)
 
-Summarize(~gasoline,data=brls,digits=1)
-hist(~gasoline,data=brls,xlab="Gallons of Gasoline")
+Summarize(~score,data=d,digits=1)
+hist(~score,data=d,xlab="SSHA Score")
 
-( gas.z <- z.test(brls$gasoline,sd=10,mu=200,alt="less",conf.level=0.90) )
-plot(gas.z)
+( z1 <- z.test(d$score,sd=20,mu=110,alt="greater",conf.level=0.95) )
+plot(z1)
 
 
-# Script created at 2015-11-03 21:03:37
+# Script created at 2015-11-14 08:27:13

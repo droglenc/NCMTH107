@@ -9,15 +9,14 @@ source("../../../rhelpers/knitr_setup.R")
 
 library(NCStats)
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
-( sr <- read.csv("MetalsFish.csv") )
+( d <- read.csv("AvianPecMusc.csv") )
 
-( lm.sr <- lm(zinc~lead,data=sr) )
-rSquared(lm.sr)
-fitPlot(lm.sr,xlab="lead (ppm)",ylab="zinc (ppm)",main="")
+( lm.mt <- lm(mass~thickness,data=d) )
+rSquared(lm.mt)
+fitPlot(lm.mt,ylab="Pectoral Muscle Mass (g)",xlab="Pectoral Muscle Thickness (mm)")
 
-predict(lm.sr,data.frame(lead=2.5))
-( yhat <- predict(lm.sr,data.frame(lead=3.2)) )
-100-yhat
+( predM <- predict(lm.mt,data.frame(thickness=10)) )
+12-predM
 
 
-# Script created at 2015-11-03 21:04:27
+# Script created at 2015-11-14 08:09:23

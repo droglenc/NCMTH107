@@ -8,18 +8,19 @@ css: "/css/handouts.css"
 
 <div id="background" class="section level2">
 <h2>Background</h2>
-<p>Rainbow trout, mountain whitefish and large-scale suckers taken from four different localities along the Spokane River (eastern Washington) during summer 1999 were analyzed for three heavy metals (lead, zinc and cadmium). Metal contents are reported in milligrams of metal per kilogram of fish (mg/kg), which is equivalent to parts per million (ppm). The source of the heavy metals is upstream from Spokane in the Coeur d’Alene mining district of northern Idaho, one of the richest, and most heavily contaminated, mining districts in the U.S. Acid mine drainage directly from shafts and adits, and from leaching of metal rich mine tailings (waste rock), as well as metal-rich discharges from smelters, have contaminated many streams, rivers and lakes in the Spokane/Coeur d’Alene watershed. Metals are both dissolved in the river water and found as minute particles that can enter the food web at various stages. The lead and zinc data are found in a tab-delimited text file at <a href="https://github.com/droglenc/NCData/blob/master/MetalsFish.csv">MetalsFish.csv</a>. Note that the authors are interested in determining if zinc concentrations can be explained by knowing lead concentrations. Use this information to answer the questions below.</p>
+<p><a href="http://www.ncbi.nlm.nih.gov/pubmed/10667974">Lindstrom et al. (2000)</a> examined the change in <a href="http://www.birdwatchingdaily.com/blog/2014/01/30/the-amazing-muscles-and-bones-that-make-birds-fly/">pectoral muscle</a> size of <a href="https://en.wikipedia.org/wiki/Red_knot">Red Knots (<em>Calidris canutus</em>)</a> during periods of sustained flight and fasting. Their primary objective was to determine if these birds extracted energy from the pectoral muscle during times of high activity and stress and then if the muscle was rebuilt relatively quickly. In one part of their study, they examined whether variability in the mass (g) of the pectoral muscle could be explained by knowing the thickness (mm) of the pectoral muscle.</p>
+<p>These two variables are recorded in <a href="https://github.com/droglenc/NCData/raw/master/AvianPecMusc.csv">AvianPecMusc.csv</a>. Use this information to answer the questions below.</p>
 <ul>
 <li>What is the response variable?</li>
 <li>What is the explanatory variable?</li>
 <li>In terms of the variables of this problem, what is the equation of the best-fit line?</li>
 <li>In terms of the variables of this problem, interpret the value of the slope.</li>
 <li>In terms of the variables of this problem, interpret the value of the y-intercept.</li>
-<li>What is the predicted zinc concentration if the lead concentration is 2.5 mg/kg?</li>
-<li>What is the predicted zinc concentration if the lead concentration is 6?</li>
-<li>What is the residual if the zinc concentration is 100 mg/kg and the lead concentration is 3.2 mg/kg?</li>
-<li>What is the correlation coefficient between the concentrations of zinc and lead?</li>
-<li>What proportion of the variability in zinc concentration is explained by knowing the concentration of lead?</li>
+<li>What is the predicted pectoral muscle mass if the pectoral muscle thickness is 10 mm?</li>
+<li>What is the predicted pectoral muscle mass if the pectoral muscle thickness is 30 mm?</li>
+<li>What is the residual if the pectoral muscle mass is 12 g and the pectoral muscle thickness is 10 mm?</li>
+<li>What is the correlation coefficient between the pectoral muscle mass and thickness?</li>
+<li>What proportion of the variability in pectoral muscle mass is explained by knowing the pectoral muscle thickness?</li>
 <li>What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?</li>
 </ul>
 </div>
@@ -27,41 +28,50 @@ css: "/css/handouts.css"
 <h2>Getting the Data</h2>
 <pre class="r"><code>&gt; library(NCStats)
 &gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs&quot;)
-&gt; ( sr &lt;- read.csv(&quot;MetalsFish.csv&quot;) )</code></pre>
-<pre><code>   lead  zinc
-1  0.73  45.3
-2  1.14  50.8
-3  0.60  40.2
-4  1.59  64.0
-5  4.34 150.0
-6  1.98 106.0
-7  3.12  90.8
-8  1.80  58.8
-9  0.65  35.4
-10 0.56  28.4</code></pre>
+&gt; ( d &lt;- read.csv(&quot;AvianPecMusc.csv&quot;) )</code></pre>
+<pre><code>   thickness  mass
+1        7.7  6.26
+2        7.3  7.98
+3        7.7  8.96
+4        8.7  8.60
+5        7.8 11.42
+6        7.5 11.67
+7        7.5 13.14
+8        8.2 15.35
+9        8.3 15.96
+10       8.4 15.23
+11      10.5 13.14
+12      10.3 16.82
+13      10.8 20.39
+14      10.6 25.79
+15      13.3 27.26
+16      13.6 26.77
+17      13.7 26.77
+18      13.7 26.40
+19      14.6 24.19
+20      15.2 23.82
+21      13.8 28.86
+22      14.2 29.23</code></pre>
 </div>
 <div id="fitting-the-regression-and-seeing-the-results" class="section level2">
 <h2>Fitting the Regression and Seeing the Results</h2>
-<pre class="r"><code>&gt; ( lm.sr &lt;- lm(zinc~lead,data=sr) )</code></pre>
+<pre class="r"><code>&gt; ( lm.mt &lt;- lm(mass~thickness,data=d) )</code></pre>
 <pre><code>Coefficients:
-(Intercept)         lead  
-      19.54        28.73  </code></pre>
-<pre class="r"><code>&gt; rSquared(lm.sr)</code></pre>
-<pre><code>[1] 0.8846028</code></pre>
-<pre class="r"><code>&gt; fitPlot(lm.sr,xlab=&quot;lead (ppm)&quot;,ylab=&quot;zinc (ppm)&quot;,main=&quot;&quot;)</code></pre>
+(Intercept)    thickness  
+     -7.426        2.431  </code></pre>
+<pre class="r"><code>&gt; rSquared(lm.mt)</code></pre>
+<pre><code>[1] 0.8056638</code></pre>
+<pre class="r"><code>&gt; fitPlot(lm.mt,ylab=&quot;Pectoral Muscle Mass (g)&quot;,xlab=&quot;Pectoral Muscle Thickness (mm)&quot;)</code></pre>
 <p><img src="SimpleLinearRegression_files/figure-html/unnamed-chunk-4-1.png" title="" alt="" width="336" /></p>
 </div>
 <div id="using-the-regression" class="section level2">
 <h2>Using the Regression</h2>
-<pre class="r"><code>&gt; predict(lm.sr,data.frame(lead=2.5))</code></pre>
-<pre><code>       1 
-91.35772 </code></pre>
-<pre class="r"><code>&gt; ( yhat &lt;- predict(lm.sr,data.frame(lead=3.2)) )</code></pre>
-<pre><code>       1 
-111.4654 </code></pre>
-<pre class="r"><code>&gt; 100-yhat</code></pre>
+<pre class="r"><code>&gt; ( predM &lt;- predict(lm.mt,data.frame(thickness=10)) )</code></pre>
+<pre><code>      1 
+16.8834 </code></pre>
+<pre class="r"><code>&gt; 12-predM</code></pre>
 <pre><code>        1 
--11.46538 </code></pre>
+-4.883402 </code></pre>
 </div>
 
 

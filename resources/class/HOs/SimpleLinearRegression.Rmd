@@ -30,39 +30,40 @@ source("../../../rhelpers/knitr_setup.R")
 ```
 
 ## Background
-Rainbow trout, mountain whitefish and large-scale suckers taken from four different localities along the Spokane River (eastern Washington) during summer 1999 were analyzed for three heavy metals (lead, zinc and cadmium).  Metal contents are reported in milligrams of metal per kilogram of fish (mg/kg), which is equivalent to parts per million (ppm).  The source of the heavy metals is upstream from Spokane in the Coeur d'Alene mining district of northern Idaho, one of the richest, and most heavily contaminated, mining districts in the U.S.  Acid mine drainage directly from shafts and adits, and from leaching of metal rich mine tailings (waste rock), as well as metal-rich discharges from smelters, have contaminated many streams, rivers and lakes in the Spokane/Coeur d'Alene watershed.  Metals are both dissolved in the river water and found as minute particles that can enter the food web at various stages.  The lead and zinc data are found in a tab-delimited text file at [MetalsFish.csv](https://github.com/droglenc/NCData/blob/master/MetalsFish.csv).  Note that the authors are interested in determining if zinc concentrations can be explained by knowing lead concentrations.  Use this information to answer the questions below.
+[Lindstrom et al. (2000)](http://www.ncbi.nlm.nih.gov/pubmed/10667974) examined the change in [pectoral muscle](http://www.birdwatchingdaily.com/blog/2014/01/30/the-amazing-muscles-and-bones-that-make-birds-fly/) size of [Red Knots (*Calidris canutus*)](https://en.wikipedia.org/wiki/Red_knot) during periods of sustained flight and fasting.  Their primary objective was to determine if these birds extracted energy from the pectoral muscle during times of high activity and stress and then if the muscle was rebuilt relatively quickly.  In one part of their study, they examined whether variability in the mass (g) of the pectoral muscle could be explained by knowing the thickness (mm) of the pectoral muscle.
+
+These two variables are recorded in [AvianPecMusc.csv](https://github.com/droglenc/NCData/raw/master/AvianPecMusc.csv).  Use this information to answer the questions below.
 
 * What is the response variable?
 * What is the explanatory variable?
 * In terms of the variables of this problem, what is the equation of the best-fit line?
 * In terms of the variables of this problem, interpret the value of the slope.
 * In terms of the variables of this problem, interpret the value of the y-intercept.
-* What is the predicted zinc concentration if the lead concentration is 2.5 mg/kg?
-* What is the predicted zinc concentration if the lead concentration is 6?
-* What is the residual if the zinc concentration is 100 mg/kg and the lead concentration is 3.2 mg/kg?
-* What is the correlation coefficient between the concentrations of zinc and lead?
-* What proportion of the variability in zinc concentration is explained by knowing the concentration of lead?
+* What is the predicted pectoral muscle mass if the pectoral muscle thickness is 10 mm?
+* What is the predicted pectoral muscle mass if the pectoral muscle thickness is 30 mm?
+* What is the residual if the pectoral muscle mass is 12 g and the pectoral muscle thickness is 10 mm?
+* What is the correlation coefficient between the pectoral muscle mass and thickness?
+* What proportion of the variability in pectoral muscle mass is explained by knowing the pectoral muscle thickness?
 * What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?
 
 ## Getting the Data
 ```{r message=FALSE, warning=FALSE}
 library(NCStats)
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
-( sr <- read.csv("MetalsFish.csv") )
+( d <- read.csv("AvianPecMusc.csv") )
 ```
 
 ## Fitting the Regression and Seeing the Results
 ```{r par1=TRUE}
-( lm.sr <- lm(zinc~lead,data=sr) )
-rSquared(lm.sr)
-fitPlot(lm.sr,xlab="lead (ppm)",ylab="zinc (ppm)",main="")
+( lm.mt <- lm(mass~thickness,data=d) )
+rSquared(lm.mt)
+fitPlot(lm.mt,ylab="Pectoral Muscle Mass (g)",xlab="Pectoral Muscle Thickness (mm)")
 ```
 
 ## Using the Regression
 ```{r}
-predict(lm.sr,data.frame(lead=2.5))
-( yhat <- predict(lm.sr,data.frame(lead=3.2)) )
-100-yhat
+( predM <- predict(lm.mt,data.frame(thickness=10)) )
+12-predM
 ```
 
 ```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}

@@ -30,28 +30,26 @@ source("../../../rhelpers/knitr_setup.R")
 ```
 
 ## Background
-The Survey of Study Habits and Attitudes (SSHA) is a psychological test that measures the motivation, attitudes, and study habits of college students. Scores range from 0 to 200 and follow (approximately) a normal distribution, with a mean of 110 and a standard deviation of 20.  The survey was given to 40 "non-traditional" students to test the hypothesiis that they had stronger study habits and greater motivation for school work.
-
-The results of the study are in [SSHA.csv](https://github.com/droglenc/NCData/raw/master/SSHA.csv).  Use these data to test the hypothesis at the 5% level.
+Barrels designed to hold 200-gallons of gasoline were recently found in an abandoned warehouse.  The contents of a random sample of 38 barrels were carefully measured to determine if the barrels had leaked a significant amount of gasoline.   Assume that it is known that the actual content of the barrels has a standard deviation of 10 gallons.  The results for the sample are found in [barrels.csv](https://github.com/droglenc/NCData/blob/master/Barrels.csv) on the class webpage.  Use results computed from the sample to determine, at the 10% level, if there is evidence that the barrels had leaked.
 
 ## Getting the Data
 ```{r message=FALSE, warning=FALSE}
 library(NCStats)
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
-d <- read.csv("SSHA.csv")
-str(d)
+brls <- read.csv("Barrels.csv")
+str(brls)
 ```
 
 ## Quick EDA
 ```{r par1=TRUE}
-Summarize(~score,data=d,digits=1)
-hist(~score,data=d,xlab="SSHA Score")
+Summarize(~gasoline,data=brls,digits=1)
+hist(~gasoline,data=brls,xlab="Gallons of Gasoline")
 ```
 
 ## 1-Sample Z-test
 ```{r par1a=TRUE}
-( z1 <- z.test(d$score,sd=20,mu=110,alt="greater",conf.level=0.95) )
-plot(z1)
+( gas.z <- z.test(brls$gasoline,sd=10,mu=200,alt="less",conf.level=0.90) )
+plot(gas.z)
 ```
 
 ```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
