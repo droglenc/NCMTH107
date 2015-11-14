@@ -132,23 +132,23 @@ css: "/css/lecture-tables.css"
     <td class="tg-leftcol">Linear Regression</td>
     <td class="tg-leftcol2">Linear Regression</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="https://vimeo.com/user45324800/regression1" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a> <a href="HOs/SimpleLinearRegression.docx"><img src="../../img/word.png" alt="MSWord"></a></td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/regression1" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a> <a href="HOs/SimpleLinearRegression.pdf"><img src="../../img/pdf.png" alt="PDF"></a></td>
   </tr>
 
   <tr>
     <td class="tg-leftcol">Inference Concepts</td>
     <td class="tg-leftcol2">1-sample Z-test</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="https://vimeo.com/user45324800/ztest" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a> <a href="HOs/InferenceConcepts.docx"><img src="../../img/word.png" alt="MSWord"></a></td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/ztest" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a> <a href="HOs/InferenceConcepts.pdf"><img src="../../img/pdf.png" alt="PDF"></a></td>
   </tr>
 
   <tr>
     <td class="tg-leftcol" rowspan="2">t-tests</td>
-    <td class="tg-leftcol2">1-sample t-tests</td>
+    <td class="tg-leftcol2">1-sample t-test</td>
     <td class="tg-cell"> -- </td>
     <td class="tg-cell"><a href="http://www.screenr.com/GXPH"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr><tr>
-    <td class="tg-leftcol2">2-sample t-tests</td>
+    <td class="tg-leftcol2">2-sample t-test</td>
     <td class="tg-cell"> -- </td>
     <td class="tg-cell"><a href="http://www.screenr.com/cCPH"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr>  
