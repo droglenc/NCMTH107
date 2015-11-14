@@ -65,9 +65,6 @@ Chinook Salmon    18     4</code></pre>
 <pre><code>Warning in chisq.test(obs2, correct = FALSE): Chi-squared approximation may be incorrect</code></pre>
 <pre><code>Pearson&#39;s Chi-squared test with obs2 
 X-squared = 0.0301, df = 1, p-value = 0.8624</code></pre>
-<pre class="r"><code>&gt; chi2</code></pre>
-<pre><code>Pearson&#39;s Chi-squared test with obs2 
-X-squared = 0.0301, df = 1, p-value = 0.8624</code></pre>
 </div>
 <div id="from-raw-data" class="section level3">
 <h3>From Raw Data</h3>
@@ -147,8 +144,6 @@ fdegree def.not prob.not prob.true def.true   Sum
 <pre class="r"><code>&gt; chi1</code></pre>
 <pre><code>Chi-squared test for given probabilities with obs 
 X-squared = 2.4333, df = 2, p-value = 0.2962</code></pre>
-<pre class="r"><code>&gt; plot(chi1)</code></pre>
-<p><img src="ChiSquareTests_files/figure-html/unnamed-chunk-10-1.png" title="" alt="" width="336" /></p>
 <pre class="r"><code>&gt; gofCI(chi1,digits=3)</code></pre>
 <pre><code>      p.obs p.LCI p.UCI p.exp
 red   0.229 0.181 0.286  0.25

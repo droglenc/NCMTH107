@@ -154,7 +154,7 @@ css: "/css/lecture-tables.css"
   </tr><tr>
     <td class="tg-leftcol2">2-sample t-test</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href="http://www.screenr.com/cCPH"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/2samplettest" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
   </tr>  
   <tr>
     <td class="tg-leftcol" rowspan="4">Chi-Square Tests</td>

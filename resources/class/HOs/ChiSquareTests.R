@@ -27,7 +27,6 @@ percTable(obs,margin=1,digits=1)
 
 ( obs2 <- obs[,-2] )
 ( chi2 <- chisq.test(obs2,correct=FALSE) )
-chi2
 
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
 ST1 <- read.csv("SciTest1.csv")
@@ -52,8 +51,7 @@ chi1 <- chisq.test(obs,p=exp.p,rescale=TRUE,correct=FALSE)
 chi1$expected
 chi1$observed
 chi1
-plot(chi1)
 gofCI(chi1,digits=3)
 
 
-# Script created at 2015-11-14 09:54:36
+# Script created at 2015-11-14 17:29:35
