@@ -56,4 +56,4 @@ plot(chi1)
 gofCI(chi1,digits=3)
 
 
-# Script created at 2015-11-14 09:50:27
+# Script created at 2015-11-14 09:54:36
