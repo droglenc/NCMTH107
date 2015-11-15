@@ -25,4 +25,4 @@ ab-a
 ( distrib(0.25,mean=16,sd=4,type="q",lower.tail=FALSE) )
 
 
-# Script created at 2015-11-03 21:03:58
+# Script created at 2015-11-15 07:27:47
