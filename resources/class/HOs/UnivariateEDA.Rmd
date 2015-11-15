@@ -53,13 +53,13 @@ headtail(ars)
 ## Univariate EDA -- Quantitative
 ```{r}
 Summarize(~age,data=ars,digits=2)
-hist(~age,data=ars,main="",xlab="Age (yrs)")
+hist(~age,data=ars,xlab="Age (yrs)")
 ```
 
 ## Univariate EDA -- Quantitative (Separated by Groups)
 ```{r fig.width=2*figsz, fig.height=figsz, par2=TRUE}
 Summarize(age~sex,data=ars,digits=2)
-hist(age~sex,data=ars,xlab="Age (yrs)",col="gray90")
+hist(age~sex,data=ars,xlab="Age (yrs)")
 ```
 
 ## Univariate EDA -- Categorical

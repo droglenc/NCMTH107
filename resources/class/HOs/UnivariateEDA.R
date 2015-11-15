@@ -14,14 +14,14 @@ str(ars)
 headtail(ars)
 
 Summarize(~age,data=ars,digits=2)
-hist(~age,data=ars,main="",xlab="Age (yrs)")
+hist(~age,data=ars,xlab="Age (yrs)")
 
 Summarize(age~sex,data=ars,digits=2)
-hist(age~sex,data=ars,xlab="Age (yrs)",col="gray90")
+hist(age~sex,data=ars,xlab="Age (yrs)")
 
 ( tbl.drink <- xtabs(~usedrink,data=ars) )
 percTable(tbl.drink,digits=1)
 barplot(tbl.drink,xlab="Rating of Use for Drinking",ylab="Frequency",col="gray90")
 
 
-# Script created at 2015-11-15 08:24:03
+# Script created at 2015-11-15 14:14:06
