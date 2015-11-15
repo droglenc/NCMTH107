@@ -160,7 +160,7 @@ css: "/css/lecture-tables.css"
     <td class="tg-leftcol" rowspan="4">Chi-Square Tests</td>
     <td class="tg-leftcol2">Chi-Square Distribution</td>
     <td class="tg-cell"> -- </td>
-    <td class="tg-cell"><a href=""><img src="../../img/dhovid.png" alt="R Tutorial"></a> <a href="HOs/tTests.pdf"><img src="../../img/pdf.png" alt="PDF"></a></td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/chisqdistribution" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a> <a href="HOs/ChiSquareTests.pdf"><img src="../../img/pdf.png" alt="PDF"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Goodness-of-Fit</td>
     <td class="tg-cell"> -- </td>
