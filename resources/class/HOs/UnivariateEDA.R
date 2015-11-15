@@ -9,19 +9,19 @@ source("../../../rhelpers/knitr_setup.R")
 
 library(NCStats)
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
-Ars <- read.csv("Arsenic.csv")
-str(Ars)
-view(Ars)
+ars <- read.csv("Arsenic.csv")
+str(ars)
+headtail(ars)
 
-Summarize(~age,data=Ars,digits=2)
-hist(~age,data=Ars,main="",xlab="Age (yrs)")
+Summarize(~age,data=ars,digits=2)
+hist(~age,data=ars,main="",xlab="Age (yrs)")
 
-Summarize(age~sex,data=Ars,digits=2)
-hist(age~sex,data=Ars,xlab="Age (yrs)",col="gray90")
+Summarize(age~sex,data=ars,digits=2)
+hist(age~sex,data=ars,xlab="Age (yrs)",col="gray90")
 
-( tbl.drink <- xtabs(~usedrink,data=Ars) )
+( tbl.drink <- xtabs(~usedrink,data=ars) )
 percTable(tbl.drink,digits=1)
 barplot(tbl.drink,xlab="Rating of Use for Drinking",ylab="Frequency",col="gray90")
 
 
-# Script created at 2015-11-03 21:05:51
+# Script created at 2015-11-15 07:22:20
