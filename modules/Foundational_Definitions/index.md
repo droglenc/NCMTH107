@@ -42,7 +42,7 @@ After completing this module, the student should be able to ...
 
 <style type="text/css">
 header.header-page .page-heading h1 {
-  font-size: 10px;
+  font-size: 45px;
   margin-top: 0;
 }
 </style>
