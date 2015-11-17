@@ -5,13 +5,15 @@ css: /css/modules.css
 ---
 
 <div class="ILOs">
-It is important to understand the relationship between two variables.  With categorical data, this primarily consists of using tables to describe how the distribution of individuals into levels of one variable differs depending on the levels of another variable.  This module describes how to construct tables to assess these relationships and how to use these results to prepare a synthetic description of the relationship between two categorical variables.
+<p>It is important to understand the relationship between two variables.  With categorical data, this primarily consists of using tables to describe how the distribution of individuals into levels of one variable differs depending on the levels of another variable.  This module describes how to construct tables to assess these relationships and how to use these results to prepare a synthetic description of the relationship between two categorical variables.</p>
 
-After completing this module, the student should be able to ...
+<p>After completing this module, the student should be able to ...</p>
 
-1. Construct two-way frequency tables by hand and with R.
-1. Constrcut row-, column-, and total-percent percentage tables by hand and with R.
-1. Construct a succinct written summary that addresses the relationship between two categorical variables.
+<ol>
+  <li>Construct two-way frequency tables by hand and with R.</li>
+  <li>Constrcut row-, column-, and total-percent percentage tables by hand and with R.</li>
+  <li>Construct a succinct written summary that addresses the relationship between two categorical variables.
+</ol>
 </div>
 ----
 
