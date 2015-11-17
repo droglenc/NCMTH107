@@ -2,6 +2,7 @@
 layout: page
 ---
 
+<meta property="og:title" content="Foundational Definitions" />
 <p style="text-align: center; font-size: 3em; font-weight: bold; font-family: Sans-Serif">Foundational Definitions</p>
 
 As with most areas of study, Statistics requires an understanding of key foundational words.  This module introduces those words and their definitions.
