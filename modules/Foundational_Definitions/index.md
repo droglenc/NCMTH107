@@ -1,9 +1,7 @@
 ---
 layout: page
+title: Foundational Definitions
 ---
-
-<meta property="og:title" content="Foundational Definitions" />
-<p style="text-align: center; font-size: 3em; font-weight: bold; font-family: Sans-Serif">Foundational Definitions</p>
 
 As with most areas of study, Statistics requires an understanding of key foundational words.  This module introduces those words and their definitions.
 
@@ -40,3 +38,11 @@ After completing this module, the student should be able to ...
 ### Archived Related Materials
 
 * [Slides used in videos](Foundational_Defns.pptx) ![PowerPoint](../../img/ppt.png)
+
+
+<style type="text/css">
+header.header-page .page-heading h1 {
+  font-size: 10px;
+  margin-top: 0;
+}
+</style>
