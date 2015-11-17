@@ -15,6 +15,7 @@ css: /css/modules.css
   <li>Construct a succinct written summary that addresses the relationship between two categorical variables.
 </ol>
 </div>
+
 ----
 
 ## Class Preparation
