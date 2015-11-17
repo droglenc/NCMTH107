@@ -1,19 +1,18 @@
 ---
 layout: page
 title: Bivariate EDA - Categorical
+css: /css/modules.css
 ---
 
+<div class="boxed">
 It is important to understand the relationship between two variables.  With categorical data, this primarily consists of using tables to describe how the distribution of individuals into levels of one variable differs depending on the levels of another variable.  This module describes how to construct tables to assess these relationships and how to use these results to prepare a synthetic description of the relationship between two categorical variables.
 
-----
-
-## Intended Learning Outcomes
 After completing this module, the student should be able to ...
 
 1. Construct two-way frequency tables by hand and with R.
 1. Constrcut row-, column-, and total-percent percentage tables by hand and with R.
 1. Construct a succinct written summary that addresses the relationship between two categorical variables.
-
+</div>
 ----
 
 ## Class Preparation
@@ -42,11 +41,3 @@ After completing this module, the student should be able to ...
 
 * [Old Lecture Slides](PPT_old.pptx) ![PowerPoint](../../img/ppt.png)
 
-----
-
-<style type="text/css">
-header.header-page .page-heading h1 {
-  font-size: 45px;
-  margin-top: 0;
-}
-</style>
