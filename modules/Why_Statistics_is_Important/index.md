@@ -12,3 +12,9 @@ Please watch the following videos.
 * [What is Statistics?](https://www.youtube.com/v/5YsiVJFSwGo?version=3&start=35&autoplay=1){:target="_blank"} [![Youtube](../../img/youtube.png) 12 mins]
 * [Why You Need to Study Statistics](https://www.youtube.com/v/wV0Ks7aS7YI?version=3&autoplay=1){:target="_blank"} [![Youtube](../../img/youtube.png) 3 mins]
 * [What is Important About Statistics in Psychology?](https://www.youtube.com/v/yl_yuxHFIXc?version=3&start=18&end=333&autoplay=1){:target="_blank"} [![Youtube](../../img/youtube.png) 6 mins]
+
+## In-Class Materials
+We will use the following materials in class.
+
+* [Slides](WhyStatistics.pptx) [![PowerPoint](../../img/ppt.png)]
+* [Class Exercies](WhyStatistics_CE.html) [![Webpage](../../img/web.png)]

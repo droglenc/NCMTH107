@@ -1,0 +1,85 @@
+---
+layout: page
+title: "Introduction"
+author: "Derek H. Ogle"
+css: "/css/handouts.css"
+output:
+  html_document:
+    fig_width: 3.5
+    fig_height: 3.5
+    self_contained: no
+---
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Why_Statistics_is_Important")
+source("../../rhelpers/rhelpers.R")
+fnm <- "WhyStatistics_CE"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+fnm <- "WhyStatistics_CE"
+source("../../rhelpers/knitr_setup.R")
+```
+
+The following code is used to produce a "live" example for class.  The meaning of this code will be explained later.  For now, we simply want the results that are produced.  Thus, type the code exactly as shown here.
+
+## Job 1 -- Load the NCStats package
+```{r echo=-2, results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+data(ABCens90)
+```
+
+## Job 2 -- Obtain a Random Sample of Residents from Ashland-Bayfield Counties
+```{r results='hide'}
+data(ABCens90)
+( smp1 <- srsdf(ABCens90,50) )
+```
+
+* Were the individuals in your sample identical?  Why or why not?
+* Can you quickly explain the "general" age and sex of individuals in your sample?  Why or why not?
+
+## Job 3 -- Summarize that Sample
+```{r results='hide'}
+Summarize(~age,data=smp1,digits=1)
+Summarize(~sex,data=smp1)
+```
+
+* Can you quickly explain the "general" age and sex of individuals in your sample?  Why or why not?
+
+
+## Job 4 -- Obtain a Second Random Sample of Residents from Ashland-Bayfield Counties
+```{r results='hide'}
+( smp2 <- srsdf(ABCens90,50) )
+Summarize(~age,data=smp2,digits=1)
+Summarize(~sex,data=smp2)
+```
+
+* Were the mean ages from the two samples identical?
+* Were the percentage of females from the two samples identical?
+* Are your results typical or expected?  Why or why not?
+
+
+## Job 5 -- Compare Your Results to the Truth
+```{r}
+Summarize(~age,data=ABCens90,digits=1)
+Summarize(~sex,data=ABCens90)
+```
+
+* Did your sample mean ages exactly equal this true value for the population?
+* Did you sample percentages of females exactly equal the true percentage of females in the population?
+* Are your results typical or expected?  Why or why not?
+
+
+## Job 6 -- Examine Many Random Samples of Residents from Ashland-Bayfield Counties
+```{r echo=FALSE, results='hide', par1=TRUE}
+set.seed(14787834)
+hist(~replicate(1000,mean(srsdf(ABCens90,50)$age)),xlab="Mean Age",main="",col="gray90",breaks=15)
+abline(v=mean(ABCens90$age),lwd=2,lty=2)
+hist(~replicate(1000,Summarize(srsdf(ABCens90,50)$sex)["male","perc"]),xlab="Percent Male",main="",col="gray90",breaks=15)
+abline(v=Summarize(ABCens90$sex)["male","perc"],lwd=2,lty=2)
+```
+
+```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
+purl2(paste0(fnm,".Rmd"))
+```

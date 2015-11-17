@@ -1,0 +1,86 @@
+---
+layout: page
+title: "Introduction"
+author: "Derek H. Ogle"
+css: "/css/handouts.css"
+---
+
+
+<p>The following code is used to produce a “live” example for class. The meaning of this code will be explained later. For now, we simply want the results that are produced. Thus, type the code exactly as shown here.</p>
+<div id="job-1-load-the-ncstats-package" class="section level2">
+<h2>Job 1 – Load the NCStats package</h2>
+<pre class="r"><code>&gt; library(NCStats)</code></pre>
+</div>
+<div id="job-2-obtain-a-random-sample-of-residents-from-ashland-bayfield-counties" class="section level2">
+<h2>Job 2 – Obtain a Random Sample of Residents from Ashland-Bayfield Counties</h2>
+<pre class="r"><code>&gt; data(ABCens90)
+&gt; ( smp1 &lt;- srsdf(ABCens90,50) )</code></pre>
+<ul>
+<li>Were the individuals in your sample identical? Why or why not?</li>
+<li>Can you quickly explain the “general” age and sex of individuals in your sample? Why or why not?</li>
+</ul>
+</div>
+<div id="job-3-summarize-that-sample" class="section level2">
+<h2>Job 3 – Summarize that Sample</h2>
+<pre class="r"><code>&gt; Summarize(~age,data=smp1,digits=1)
+&gt; Summarize(~sex,data=smp1)</code></pre>
+<ul>
+<li>Can you quickly explain the “general” age and sex of individuals in your sample? Why or why not?</li>
+</ul>
+</div>
+<div id="job-4-obtain-a-second-random-sample-of-residents-from-ashland-bayfield-counties" class="section level2">
+<h2>Job 4 – Obtain a Second Random Sample of Residents from Ashland-Bayfield Counties</h2>
+<pre class="r"><code>&gt; ( smp2 &lt;- srsdf(ABCens90,50) )
+&gt; Summarize(~age,data=smp2,digits=1)
+&gt; Summarize(~sex,data=smp2)</code></pre>
+<ul>
+<li>Were the mean ages from the two samples identical?</li>
+<li>Were the percentage of females from the two samples identical?</li>
+<li>Are your results typical or expected? Why or why not?</li>
+</ul>
+</div>
+<div id="job-5-compare-your-results-to-the-truth" class="section level2">
+<h2>Job 5 – Compare Your Results to the Truth</h2>
+<pre class="r"><code>&gt; Summarize(~age,data=ABCens90,digits=1)</code></pre>
+<pre><code>       n   nvalid     mean       sd      min       Q1   median       Q3      max percZero 
+ 30335.0  30335.0     37.3     24.3      0.0     16.0     35.0     57.0     96.0      1.2 </code></pre>
+<pre class="r"><code>&gt; Summarize(~sex,data=ABCens90)</code></pre>
+<pre><code>        freq   perc
+female 15261  50.31
+male   15074  49.69
+Total  30335 100.00</code></pre>
+<ul>
+<li>Did your sample mean ages exactly equal this true value for the population?</li>
+<li>Did you sample percentages of females exactly equal the true percentage of females in the population?</li>
+<li>Are your results typical or expected? Why or why not?</li>
+</ul>
+</div>
+<div id="job-6-examine-many-random-samples-of-residents-from-ashland-bayfield-counties" class="section level2">
+<h2>Job 6 – Examine Many Random Samples of Residents from Ashland-Bayfield Counties</h2>
+<p><img src="WhyStatistics_CE_files/figure-html/unnamed-chunk-8-1.png" title="" alt="" width="336" /><img src="WhyStatistics_CE_files/figure-html/unnamed-chunk-8-2.png" title="" alt="" width="336" /></p>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
