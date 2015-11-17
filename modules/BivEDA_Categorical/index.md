@@ -4,7 +4,7 @@ title: Bivariate EDA - Categorical
 css: /css/modules.css
 ---
 
-<div class="boxed">
+<div class="ILOs">
 It is important to understand the relationship between two variables.  With categorical data, this primarily consists of using tables to describe how the distribution of individuals into levels of one variable differs depending on the levels of another variable.  This module describes how to construct tables to assess these relationships and how to use these results to prepare a synthetic description of the relationship between two categorical variables.
 
 After completing this module, the student should be able to ...
