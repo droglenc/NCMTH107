@@ -28,8 +28,8 @@ Please watch the following videos.
 
 ## In-Class Materials
 
-* [Slides](WhyStatistics.pptx) [![PowerPoint](../../img/ppt.png)]
-* [Class Exercise](WhyStatistics_CE.html) [![Webpage](../../img/web.png)]
+* [Slides](PPT.pptx) [![PowerPoint](../../img/ppt.png)]
+* [Class Exercise](CE.html) [![Webpage](../../img/web.png)]
 
 
 ## Class Follow-Up Assignment

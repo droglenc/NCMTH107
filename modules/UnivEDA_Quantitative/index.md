@@ -10,7 +10,9 @@ It is important to understand the distribution of individuals for a single varia
 ## Intended Learning Outcomes
 After completing this module, the student should be able to ...
 
-1. 
+1. Compute measures of center (mean and median) by hand and in R.
+1. Compute mesures of dispersion (standard deviation, IQR, and range) by hand and in R.
+1. Construct a succinct written summary that addresses the four key characteristics (shape, outliers, center, and dispersion) of the distribution of a quantitative variable.
 
 ----
 
@@ -21,9 +23,9 @@ After completing this module, the student should be able to ...
 * Watch "Calculate Standard Deviation" [A](https://www.youtube.com/v/qqOyy_NjflU?version=3&autoplay=1){:target="_blank"} [5 mins] **or** [B](https://www.youtube.com/v/atS4wX8I9H0?version=3&autoplay=1){:target="_blank"} [13 mins] ![YouTube](../../img/youtube.png)
 * Watch "Calculate IQR" [A](https://www.youtube.com/v/R6VDj7pEG30?version=3&autoplay=1){:target="_blank"} [3 mins] **or** [B](https://www.youtube.com/v/F3WcEAW-M80?version=3&start=366&autoplay=1){:target="_blank"} [9 mins] ![YouTube](../../img/youtube.png)
 
-* Watch ["Univariate EDA in R"](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [ mins] ![Ogle](../../img/dhovid.png)
+* Watch ["Univariate EDA in R"](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins] ![Ogle](../../img/dhovid.png)
     * Take notes on this handout -- [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx) [![Webpage](../../img/web.png)](RHO.html){:target="_blank"}
-    * Related [![R Script](../../img/script.png)](RHO.R){:target="_blank"}).
+    * [R Script ![R Script](../../img/script.png)](RHO.R){:target="_blank"}.
 
 * Read Sections XXX in the textbook.
 

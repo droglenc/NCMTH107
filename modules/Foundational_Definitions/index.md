@@ -25,7 +25,7 @@ After completing this module, the student should be able to ...
 
 ## In-Class Materials
 
-* [Class Exercise](Foundational_Defns_CE.html) ![Webpage](../../img/web.png)
+* [Class Exercise](CE.html) ![Webpage](../../img/web.png)
 
 ----
 
@@ -37,7 +37,7 @@ After completing this module, the student should be able to ...
 
 ### Archived Related Materials
 
-* [Slides used in videos](Foundational_Defns.pptx) ![PowerPoint](../../img/ppt.png)
+* [Slides used in videos](PPT_Video.pptx) ![PowerPoint](../../img/ppt.png)
 
 
 ----
