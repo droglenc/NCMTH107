@@ -50,7 +50,7 @@ levels(d$response)
 ```
 
 ## Bivariate EDA -- Categorical
-```{r}
+```{r par1=TRUE}
 ( freq.tbl <- xtabs(~year+response,data=d) )
 percTable(freq.tbl,margin=1,digits=2)
 percTable(freq.tbl,margin=2,digits=2)

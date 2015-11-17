@@ -23,4 +23,4 @@ percTable(freq.tbl,digits=2)
 barplot(freq.tbl,beside=TRUE,legend=TRUE,ylab="Frequency")
 
 
-# Script created at 2015-11-17 16:27:56
+# Script created at 2015-11-17 17:25:36

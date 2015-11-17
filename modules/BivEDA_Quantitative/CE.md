@@ -8,7 +8,7 @@ css: "/css/lecture.css"
 ----
 
 ## Urban Runoff
-<img src="../imgs/no-dumping-drains-to-ocean.jpg" alt="No Dumping" class="img-right">
+<img src="../zimgs/no-dumping-drains-to-ocean.jpg" alt="No Dumping" class="img-right">
 Urbanization poses a major threat to stream and watershed ecosystems.  One aspect of urbanization is the conversion of natural areas to land with impervious surfaces, thus increasing runoff of rain and, likely, pollutants.  A University of Washington researcher recorded the percent of impervious land and the benthic index of biotic integrity (IBI) for 14 areas in the state of Washington.  The IBI has been described as a measure of ``the capability of supporting and maintaining a balanced, integrated, adaptive community of organisms having a species composition and functional organization comparable to that of natural habitat in the region.''  In this example, the researchers were attempting to identify how the percentage of impervious surfaces in the area effects the IBI.  The data for this study are below (note that much more information can be obtained at the [QELP site](http://seattlecentral.edu/qelp/sets/077/077.html\#About)).
 
 <pre>
