@@ -28,6 +28,7 @@ After completing this module, the student should be able to ...
     * [R Script ![R Script](../../img/script.png)](RHO.R){:target="_blank"}
 * Watch ["Reverse Calculations in R"](https://vimeo.com/user45324800/normdist-reverse){:target="_blank"} [6 mins] ![Ogle](../../img/dhovid.png)
     * Take notes on the same handout.
+
 * Read Sections XXX in the textbook.
 
 ----
