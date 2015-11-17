@@ -77,7 +77,7 @@ css: "/css/lecture-tables.css"
     <td class="tg-leftcol" rowspan="4">Univariate EDA<br>-- Quantitative</td>
     <td class="tg-leftcol2">Construct Histograms</td>
     <td class="tg-cell"><a href="https://www.youtube.com/v/sC7gjg9g3JU?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/H9ITfdaX2ZQ?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
-    <td class="tg-cell" rowspan="4"><a href="https://vimeo.com/user45324800/ncstats-uedaq" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell" rowspan="4"><a href="https://vimeo.com/user45324800/ncstats-uedaq" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a> <a href="HOs/UnivariateEDA.pdf"><img src="../../img/pdf.png" alt="PDF"></a></td>
   </tr><tr>
     <td class="tg-leftcol2">Calculate Median</td>
     <td class="tg-cell"><a href="https://www.youtube.com/v/0SYsi38XucI?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/hTYTaOaQUcw?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a> <a href="https://www.youtube.com/v/9a8M_KfclBE?version=3&autoplay=1" target="_blank"><img src="../../img/videolink.png" alt="YouTube"></a></td>
@@ -92,7 +92,7 @@ css: "/css/lecture-tables.css"
     <td class="tg-leftcol">Univariate EDA<br>-- Categorical</td>
     <td class="tg-leftcol2">Construct Tables & Barplots</td>
     <td class="tg-cell">--</td>
-    <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-uedac" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a></td>
+    <td class="tg-cell"><a href="https://vimeo.com/user45324800/ncstats-uedac" target="_blank"><img src="../../img/dhovid.png" alt="R Tutorial"></a> <a href="HOs/UnivariateEDA.pdf"><img src="../../img/pdf.png" alt="PDF"></a></td>
   </tr>
 
 
