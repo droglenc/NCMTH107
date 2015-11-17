@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Introduction"
+title: "Why Statistics Is Important"
 author: "Derek H. Ogle"
 css: "/css/handouts.css"
 ---
@@ -8,13 +8,13 @@ css: "/css/handouts.css"
 
 <p>The following code is used to produce a “live” example for class. The meaning of this code will be explained later. For now, we simply want the results that are produced. Thus, type the code exactly as shown in each grey box and attempt to answer the follow-up questions</p>
 <p> </p>
-<div id="job-1-load-the-ncstats-package" class="section level2">
-<h2>Job 1 – Load the NCStats package</h2>
+<div id="load-the-ncstats-package" class="section level2">
+<h2>Load the NCStats package</h2>
 <pre class="r"><code>&gt; library(NCStats)</code></pre>
 <p> </p>
 </div>
-<div id="job-2-obtain-a-random-sample-of-residents-from-ashland-bayfield-counties" class="section level2">
-<h2>Job 2 – Obtain a Random Sample of Residents from Ashland-Bayfield Counties</h2>
+<div id="obtain-a-random-sample-of-residents-from-ashland-bayfield-counties" class="section level2">
+<h2>Obtain a Random Sample of Residents from Ashland-Bayfield Counties</h2>
 <pre class="r"><code>&gt; data(ABCens90)
 &gt; ( smp1 &lt;- srsdf(ABCens90,50) )</code></pre>
 <ul>
@@ -23,8 +23,8 @@ css: "/css/handouts.css"
 </ul>
 <p> </p>
 </div>
-<div id="job-3-summarize-that-sample" class="section level2">
-<h2>Job 3 – Summarize that Sample</h2>
+<div id="summarize-that-sample" class="section level2">
+<h2>Summarize that Sample</h2>
 <pre class="r"><code>&gt; Summarize(~age,data=smp1,digits=1)
 &gt; Summarize(~sex,data=smp1)</code></pre>
 <ul>
@@ -32,8 +32,8 @@ css: "/css/handouts.css"
 </ul>
 <p> </p>
 </div>
-<div id="job-4-obtain-a-second-random-sample-of-residents-from-ashland-bayfield-counties" class="section level2">
-<h2>Job 4 – Obtain a Second Random Sample of Residents from Ashland-Bayfield Counties</h2>
+<div id="obtain-a-second-random-sample-of-residents-from-ashland-bayfield-counties" class="section level2">
+<h2>Obtain a Second Random Sample of Residents from Ashland-Bayfield Counties</h2>
 <pre class="r"><code>&gt; ( smp2 &lt;- srsdf(ABCens90,50) )
 &gt; Summarize(~age,data=smp2,digits=1)
 &gt; Summarize(~sex,data=smp2)</code></pre>
@@ -44,8 +44,8 @@ css: "/css/handouts.css"
 </ul>
 <p> </p>
 </div>
-<div id="job-5-compare-your-results-to-the-truth" class="section level2">
-<h2>Job 5 – Compare Your Results to the Truth</h2>
+<div id="compare-your-results-to-the-truth" class="section level2">
+<h2>Compare Your Results to the Truth</h2>
 <pre class="r"><code>&gt; Summarize(~age,data=ABCens90,digits=1)</code></pre>
 <pre><code>       n   nvalid     mean       sd      min       Q1   median       Q3      max percZero 
  30335.0  30335.0     37.3     24.3      0.0     16.0     35.0     57.0     96.0      1.2 </code></pre>
@@ -61,8 +61,8 @@ Total  30335 100.00</code></pre>
 </ul>
 <p> </p>
 </div>
-<div id="job-6-examine-many-random-samples-of-residents-from-ashland-bayfield-counties" class="section level2">
-<h2>Job 6 – Examine Many Random Samples of Residents from Ashland-Bayfield Counties</h2>
+<div id="examine-many-random-samples-of-residents-from-ashland-bayfield-counties" class="section level2">
+<h2>Examine Many Random Samples of Residents from Ashland-Bayfield Counties</h2>
 <p><img src="WhyStatistics_CE_files/figure-html/unnamed-chunk-8-1.png" title="" alt="" width="336" /><img src="WhyStatistics_CE_files/figure-html/unnamed-chunk-8-2.png" title="" alt="" width="336" /></p>
 </div>
 

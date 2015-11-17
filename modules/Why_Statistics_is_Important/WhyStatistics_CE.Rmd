@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Introduction"
+title: "Why Statistics Is Important"
 author: "Derek H. Ogle"
 css: "/css/handouts.css"
 output:
@@ -26,7 +26,7 @@ The following code is used to produce a "live" example for class.  The meaning o
 
 \ 
 
-## Job 1 -- Load the NCStats package
+## Load the NCStats package
 ```{r echo=-2, results='hide', message=FALSE, warning=FALSE}
 library(NCStats)
 data(ABCens90)
@@ -34,7 +34,7 @@ data(ABCens90)
 
 \ 
 
-## Job 2 -- Obtain a Random Sample of Residents from Ashland-Bayfield Counties
+## Obtain a Random Sample of Residents from Ashland-Bayfield Counties
 ```{r results='hide'}
 data(ABCens90)
 ( smp1 <- srsdf(ABCens90,50) )
@@ -45,7 +45,7 @@ data(ABCens90)
 
 \ 
 
-## Job 3 -- Summarize that Sample
+## Summarize that Sample
 ```{r results='hide'}
 Summarize(~age,data=smp1,digits=1)
 Summarize(~sex,data=smp1)
@@ -55,7 +55,7 @@ Summarize(~sex,data=smp1)
 
 \ 
 
-## Job 4 -- Obtain a Second Random Sample of Residents from Ashland-Bayfield Counties
+## Obtain a Second Random Sample of Residents from Ashland-Bayfield Counties
 ```{r results='hide'}
 ( smp2 <- srsdf(ABCens90,50) )
 Summarize(~age,data=smp2,digits=1)
@@ -68,7 +68,7 @@ Summarize(~sex,data=smp2)
 
 \ 
 
-## Job 5 -- Compare Your Results to the Truth
+## Compare Your Results to the Truth
 ```{r}
 Summarize(~age,data=ABCens90,digits=1)
 Summarize(~sex,data=ABCens90)
@@ -80,7 +80,7 @@ Summarize(~sex,data=ABCens90)
 
 \ 
 
-## Job 6 -- Examine Many Random Samples of Residents from Ashland-Bayfield Counties
+## Examine Many Random Samples of Residents from Ashland-Bayfield Counties
 ```{r echo=FALSE, results='hide', par1=TRUE}
 set.seed(14787834)
 hist(~replicate(1000,mean(srsdf(ABCens90,50)$age)),xlab="Mean Age",main="",col="gray90",breaks=15)

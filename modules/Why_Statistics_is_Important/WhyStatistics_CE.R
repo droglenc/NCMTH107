@@ -30,4 +30,4 @@ hist(~replicate(1000,Summarize(srsdf(ABCens90,50)$sex)["male","perc"]),xlab="Per
 abline(v=Summarize(ABCens90$sex)["male","perc"],lwd=2,lty=2)
 
 
-# Script created at 2015-11-17 11:38:09
+# Script created at 2015-11-17 11:40:10
