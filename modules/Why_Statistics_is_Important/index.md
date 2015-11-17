@@ -8,7 +8,7 @@ Statistics is a required course for many majors at Northland College and meets t
 ## Class Preparation
 Please watch the following videos.
 
-* [![alt text](../../img/youtub.png)Why Statistics?](https://www.youtube.com/v/yxXsPc0bphQ?version=3&autoplay=1){:target="_blank"}
-* ![alt text](../../img/youtub.png)What is Statistics?
-* ![alt text](../../img/youtub.png)Why You Need to Study Statistics
-* ![alt text](../../img/youtub.png)What is Important About Statistics in Psychology?
+* [![Youtube](../../img/youtube.png)Why Statistics?](https://www.youtube.com/v/yxXsPc0bphQ?version=3&autoplay=1){:target="_blank"} [4 mins]
+* [![Youtube](../../img/youtube.png)What is Statistics?](https://www.youtube.com/v/5YsiVJFSwGo?version=3&start=35&autoplay=1){:target="_blank"} [12 mins]
+* [![Youtube](../../img/youtube.png)Why You Need to Study Statistics](https://www.youtube.com/v/wV0Ks7aS7YI?version=3&autoplay=1){:target="_blank"} [3 mins]
+* [![Youtube](../../img/youtube.png)What is Important About Statistics in Psychology?](https://www.youtube.com/v/yl_yuxHFIXc?version=3&start=18&end=333&autoplay=1){:target="_blank"} [6 mins]
