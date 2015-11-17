@@ -9,7 +9,7 @@ title: Learning Modules
 1. Getting Started With RStudio
 1. [Univariate EDA - Quantitative](UnivEDA_Quantitative/)
 1. [Univariate EDA - Categorical](UnivEDA_Categorical/)
-1. Normal Distributions
+1. [Normal Distributions](Normal_Distributions/)
 1. Bivariate EDA - Quantitative
 1. Bivariate EDA - Categorical
 1. Linear Regression
