@@ -3,15 +3,11 @@ layout: page
 title: Resources
 ---
 
-1. **Class Materials**
-    * [Class Preparation Videos](class/lecture-prep.html)
-    * [In-Class Materials](class/lecture-in-class.html)
-
-1. [**FAQ (mostly related to R)**](RFAQ/)
-
 1. [**Data Files** (on GitHub)](https://github.com/droglenc/NCData){:target="_blank"}
 
 1. **Homework Answer Keys**
+
+1. [**FAQ (mostly related to R)**](RFAQ/)
 
 1. **Software Installation Links**
     * R -- [Windows](http://derekogle.com/IFAR/supplements/installations/InstallRWin.html){:target="_blank"} / [Mac OS](http://derekogle.com/IFAR/supplements/installations/InstallRMac.html){:target="_blank"}
