@@ -2,7 +2,7 @@
 layout: page
 ---
 
-# Foundational Definitions
+<p style="text-align: center; font-size: 1.5em; font-weight: bold;">Foundational Definitions</p>
 
 As with most areas of study, Statistics requires an understanding of key foundational words.  This module introduces those words and their definitions.
 
@@ -17,19 +17,14 @@ After completing this module, the student should be able to ...
 ----
 
 ## Class Preparation
-Please watch the following videos ...
 
-* [IVPPSS](https://vimeo.com/user45324800/ncstats-ivppss){:target="_blank"} [7 mins] ![Ogle](../../img/dhovid.png)
-* [Variable Types](https://vimeo.com/user45324800/ncstats-vartypes){:target="_blank"} [5 mins] ![Ogle](../../img/dhovid.png)
-
-And read the following sections in the textbook ...
-
-* XXX
+* Watch [IVPPSS](https://vimeo.com/user45324800/ncstats-ivppss){:target="_blank"} [7 mins] ![Ogle](../../img/dhovid.png)
+* Watch [Variable Types](https://vimeo.com/user45324800/ncstats-vartypes){:target="_blank"} [5 mins] ![Ogle](../../img/dhovid.png)
+* Read Sections XXX in the textbook.
 
 ----
 
 ## In-Class Materials
-We will use the following materials in class.
 
 * [Class Exercise](Foundational_Defns_CE.html) ![Webpage](../../img/web.png)
 
@@ -37,7 +32,7 @@ We will use the following materials in class.
 
 ## Class Follow-Up Assignment
 
-Please complete questions XXX-xxx in the textbook.
+* Complete questions XXX-XXX in the textbook.
 
 ----
 
