@@ -1,19 +1,21 @@
 ---
 layout: page
 title: Bivariate EDA - Quantitative
+css: /css/modules.css
 ---
 
-It is important to understand the relationship between two variables.  With quantitative data, this primarily consists of using a scatterplot and the correlation coefficient to describe four key characteristics of the relationship.  This module describes how to construct a scatterplot, calculate a correlation coefficient, and how to use these results to prepare a synthetic description of the relationship between two quantitative variables.
+<div class="ILOs">
+<p>It is important to understand the relationship between two variables.  With quantitative data, this primarily consists of using a scatterplot and the correlation coefficient to describe four key characteristics of the relationship.  This module describes how to construct a scatterplot, calculate a correlation coefficient, and how to use these results to prepare a synthetic description of the relationship between two quantitative variables.</p>
 
-----
+<p>After completing this module, the student should be able to ...</p>
 
-## Intended Learning Outcomes
-After completing this module, the student should be able to ...
-
-1. Construct a scatterplot with R.
-1. Know when it is appropriate to calculation a correlation coefficient.
-1. Calculate a correlation coefficient with R.
-1. Construct a succinct written summary that addresses the four key characteristics (form, direction, outliers, and strength) of the relationship between two quantitative variables.
+<ol>
+  <li>Construct a scatterplot with R.</li>
+  <li>Know when it is appropriate to calculation a correlation coefficient.</li>
+  <li>Calculate a correlation coefficient with R.</li>
+  <li>Construct a succinct written summary that addresses the four key characteristics (form, direction, outliers, and strength) of the relationship between two quantitative variables.</li>
+</ol>
+</div>
 
 ----
 

@@ -1,21 +1,23 @@
 ---
 layout: page
 title: Normal Distributions
+css: /css/modules.css
 ---
 
-Many natural phenomena can be closely approximated by simple statistical distributions.  The most common of these distributions is the normal distribution, most often referred to by laypeople as the "bell-shaped curve."  Because of its prevalence, the normal distribution is the foundation of many statistical methods.  This module describes how to make calculations with a normal distribution.  These calculations are useful in their own right, but they also form the foundation for many of the methods used in later modules.
+<div class="ILOs">
+<p>Many natural phenomena can be closely approximated by simple statistical distributions.  The most common of these distributions is the normal distribution, most often referred to by laypeople as the "bell-shaped curve."  Because of its prevalence, the normal distribution is the foundation of many statistical methods.  This module describes how to make calculations with a normal distribution.  These calculations are useful in their own right, but they also form the foundation for many of the methods used in later modules.</p>
 
-----
+<p>After completing this module, the student should be able to ...</p>
 
-## Intended Learning Outcomes
-After completing this module, the student should be able to ...
-
-1. Describe the shape, center, and dispersion of a normal distribution.
-1. Explain the physical characteristics of a normal distribution that are represented by the mean and standard deviation.
-1. Estimate percentages of individuals and values of variables using the 68-95-99.7 Rule.
-1. Identify the difference between "forward" and "reverse" types of calculations.
-1. Accurately make "forward" calculations with R.
-1. Accurately make "reverse" calculations with R.
+<ol>
+  <li>Describe the shape, center, and dispersion of a normal distribution.</li>
+  <li>Explain the physical characteristics of a normal distribution that are represented by the mean and standard deviation.</li>
+  <li>Estimate percentages of individuals and values of variables using the 68-95-99.7 Rule.</li>
+  <li>Identify the difference between "forward" and "reverse" types of calculations.</li>
+  <li>Accurately make "forward" calculations with R.</li>
+  <li>Accurately make "reverse" calculations with R.</li>
+</ol>
+</div>
 
 ----
 

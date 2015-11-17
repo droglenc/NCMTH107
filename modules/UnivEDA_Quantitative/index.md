@@ -1,19 +1,21 @@
 ---
 layout: page
 title: Univariate EDA - Quantitative
+css: /css/modules.css
 ---
 
-It is important to understand the distribution of individuals for a single variable.  With quantitative data, four characteristics are generally described from several graphs and numerical summaries.  This module describes how to construct these graphs, compute these numerical summaries, and use these results to prepare a synthetic description of the distribution of a quantitative variable.
+<div class="ILOs">
+<p>It is important to understand the distribution of individuals for a single variable.  With quantitative data, four characteristics are generally described from several graphs and numerical summaries.  This module describes how to construct these graphs, compute these numerical summaries, and use these results to prepare a synthetic description of the distribution of a quantitative variable.</p>
 
-----
+<p>After completing this module, the student should be able to ...</p>
 
-## Intended Learning Outcomes
-After completing this module, the student should be able to ...
-
-1. Construct histograms.
-1. Compute measures of center (mean and median) by hand and with R.
-1. Compute mesures of dispersion (standard deviation, IQR, and range) by hand and with R.
-1. Construct a succinct written summary that addresses the four key characteristics (shape, outliers, center, and dispersion) of the distribution of a quantitative variable.
+<ol>
+  <li>Construct histograms.</li>
+  <li>Compute measures of center (mean and median) by hand and with R.</li>
+  <li>Compute mesures of dispersion (standard deviation, IQR, and range) by hand and with R.</li>
+  <li>Construct a succinct written summary that addresses the four key characteristics (shape, outliers, center, and dispersion) of the distribution of a quantitative variable.</li>
+</ol>
+</div>
 
 ----
 

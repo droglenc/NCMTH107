@@ -1,18 +1,20 @@
 ---
 layout: page
 title: Why Statistics is Important
+css: /css/modules.css
 ---
 
-Why is Statistics a required course for many majors at Northland College?  Why does Statistics meet the quantitative reasoning requirement of the Connections curriculum?  This module is designed to help you identify answers to these questions.
+<div class="ILOs">
+<p>Why is Statistics a required course for many majors at Northland College?  Why does Statistics meet the quantitative reasoning requirement of the Connections curriculum?  This module is designed to help you identify answers to these questions.</p>
 
-----
+<p>After completing this module, the student should be able to ...</p>
 
-## Intended Learning Outcomes
-After completing this module, the student should be able to ...
-
-1. Describe the two major goals of statistics and why they are important.
-1. Define natural and sampling variability.
-1. Explain why statistics is important to their field of study.
+<ol>
+  <li>Describe the two major goals of statistics and why they are important.</li>
+  <li>Define natural and sampling variability.</li>
+  <li>Explain why statistics is important to their field of study.</li>
+</ol>
+</div>
 
 ----
 
