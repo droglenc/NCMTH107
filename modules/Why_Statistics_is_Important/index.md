@@ -36,3 +36,11 @@ Please watch the following videos.
 
 * Complete questions XXX-XXX in the textbook.
 
+----
+
+<style type="text/css">
+header.header-page .page-heading h1 {
+  font-size: 45px;
+  margin-top: 0;
+}
+</style>

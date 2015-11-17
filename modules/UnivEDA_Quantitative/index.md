@@ -1,17 +1,16 @@
 ---
 layout: page
-title: Foundational Definitions
+title: Univariate EDA - Quantitative
 ---
 
-As with most areas of study, Statistics requires an understanding of key foundational words.  This module introduces those words and their definitions.
+It is important to understand the distribution of individuals for a single variable.  With quantitative data, four characteristics are generally described from several graphs and numerical summaries.  This module describes how to construct these graphs, compute these numerical summaries, and use these results to prepare a synthetic description of the distribution of a quantitative variable.
 
 ----
 
 ## Intended Learning Outcomes
 After completing this module, the student should be able to ...
 
-1. Identify the components of an IVPPSS from a real-world situation.
-1. Identify the type of variable for a variable.
+1. 
 
 ----
 
@@ -38,3 +37,12 @@ After completing this module, the student should be able to ...
 ### Archived Related Materials
 
 * [Slides used in videos](Foundational_Defns.pptx) ![PowerPoint](../../img/ppt.png)
+
+----
+
+<style type="text/css">
+header.header-page .page-heading h1 {
+  font-size: 45px;
+  margin-top: 0;
+}
+</style>
