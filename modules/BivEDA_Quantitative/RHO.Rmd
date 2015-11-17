@@ -1,0 +1,55 @@
+---
+layout: page
+title: "Bivariate EDA - Quantitative"
+author: "Derek H. Ogle"
+css: "/css/handouts.css"
+output:
+  html_document:
+    fig_height: 3.5
+    fig_width: 3.5
+    self_contained: no
+  pdf_document:
+    fig_width: 3.5
+    fig_height: 3.5
+  word_document:
+    fig_width: 3.5
+    fig_height: 3.5
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/BivEDA_Quantitative")
+source("../../rhelpers/rhelpers.R")
+fnm <- "RHO"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message='FALSE'}
+fnm <- "RHO"
+source("../../rhelpers/knitr_setup.R")
+```
+
+## Background
+[Erickson et al. (2004)](http://onlinelibrary.wiley.com/doi/10.1017/S0952836903004400/abstract) compared the bite-force performance between [American Alligators (*Alligator mississippiensis*)](https://en.wikipedia.org/wiki/American_alligator) from the wild and those that had been in long-term captivity.  In one aspect of their research they examined the relationship between the `mass` (kg) and snout-vent length (`svl`; cm) of the alligators.  Their primary interest here was in determining if variability in the mass could be explained by knowing the snout-vent length of the individual.  The data are recorded in [Alligators1.csv](https://github.com/droglenc/NCData/blob/master/Alligators1.csv).  Use these data to describe the relationship between the mass and snout-vent length of the alligators.
+
+## Getting The Data
+```{r message=FALSE, warning=FALSE}
+library(NCStats)
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/BivEDA_Quantitative")
+d <- read.csv("Alligators1.csv")
+str(d)
+headtail(d)
+```
+
+## Bivariate EDA -- Quantitative
+```{r fig.show='asis', par1=TRUE}
+plot(mass~svl,data=d,xlab="Snout-Vent Length (cm)",ylab="Body Mass (KG)",pch=19)
+corr(mass~svl,data=d)
+corr(mass~svl,data=d,use="pairwise.complete.obs")
+plot(mass~svl,data=d,xlab="Snout-Vent Length (cm)",ylab="Body Mass (KG)",pch=19,col=type)
+legend("topleft",levels(d$type),pch=19,col=1:2,bty="n")
+```
+
+```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
+purl2(paste0(fnm,".Rmd"))
+```

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Class Exercise
-subtitle: Univariate EDA
+subtitle: Univariate EDA - Categorical
 css: "/css/lecture.css"
 ---
 

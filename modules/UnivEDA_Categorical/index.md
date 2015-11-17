@@ -10,8 +10,8 @@ It is important to understand the distribution of individuals for a single varia
 ## Intended Learning Outcomes
 After completing this module, the student should be able to ...
 
-1. Compute frequency tables by hand and with R.
-1. Compute percentage tables by hand and with R.
+1. Construct frequency tables by hand and with R.
+1. Construct percentage tables by hand and with R.
 1. Construct a bar chart.
 1. Construct a succinct written summary that addresses the distribution of a categorical variable.
 
@@ -19,7 +19,7 @@ After completing this module, the student should be able to ...
 
 ## Class Preparation
 
-* Watch ["Univariate EDA in R"](https://vimeo.com/user45324800/ncstats-uedac){:target="_blank"} [4 mins] ![Ogle](../../img/dhovid.png)
+* Watch ["Univariate EDA (Categorical) in R"](https://vimeo.com/user45324800/ncstats-uedac){:target="_blank"} [4 mins] ![Ogle](../../img/dhovid.png)
     * Take notes on this handout -- [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx) [![Webpage](../../img/web.png)](RHO.html){:target="_blank"}
     * [R Script ![R Script](../../img/script.png)](RHO.R){:target="_blank"}
 * Read Sections XXX in the textbook.

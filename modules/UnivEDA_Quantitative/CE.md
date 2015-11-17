@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Class Exercise
-subtitle: Univariate EDA
+subtitle: Univariate EDA - Quantitative
 css: "/css/lecture.css"
 ---
 

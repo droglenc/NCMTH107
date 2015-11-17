@@ -1,0 +1,63 @@
+---
+layout: page
+title: "Bivariate EDA - Categorical"
+author: "Derek H. Ogle"
+css: "/css/handouts.css"
+output:
+  html_document:
+    fig_height: 3.5
+    fig_width: 3.5
+    self_contained: no
+  pdf_document:
+    fig_width: 3.5
+    fig_height: 3.5
+  word_document:
+    fig_width: 3.5
+    fig_height: 3.5
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/BivEDA_Categorical")
+source("../../rhelpers/rhelpers.R")
+fnm <- "RHO"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message='FALSE'}
+fnm <- "RHO"
+source("../../rhelpers/knitr_setup.R")
+```
+
+## Background
+The [General Social Survey](http://www.norc.org/Research/Projects/Pages/general-social-survey.aspx) (GSS) is a nationwide survey that has been administered since 1972 to gather data on contemporary American society in an attempt to monitor and explain trends in attitudes, behaviors, and attributes of American society.  One part of that survey asked respondents to state their opinion on how their level of agreement with the following statement -- "Animals have rights too".  The results from respondents in 1993 and 1994 are recorded in [AnimalRights.csv](https://github.com/droglenc/NCData/blob/master/AnimalRights.csv).  Use the data to answer the questions below.
+
+* What type of variable is each variable in the data set?
+* What percentage of respondents were from 1993 and strongly agreed with the statement?
+* What percentage of the respondents from 1993 strongly disagreed with the statement?
+* What percentage of the respondents that were neutral about the statement were from 1993?
+
+## Getting The Data
+```{r message=FALSE, warning=FALSE}
+library(NCStats)
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/BivEDA_Categorical")
+d <- read.csv("AnimalRights.csv")
+str(d)
+levels(d$response)
+d$response <- factor(d$response,
+  levels=c("StrDis","Disagree","Neither","Agree","StrAgree"))
+levels(d$response)
+```
+
+## Bivariate EDA -- Categorical
+```{r}
+( freq.tbl <- xtabs(~year+response,data=d) )
+percTable(freq.tbl,margin=1,digits=2)
+percTable(freq.tbl,margin=2,digits=2)
+percTable(freq.tbl,digits=2)
+barplot(freq.tbl,beside=TRUE,legend=TRUE,ylab="Frequency")
+```
+
+```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
+purl2(paste0(fnm,".Rmd"))
+```

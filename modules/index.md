@@ -10,8 +10,8 @@ title: Learning Modules
 1. [Univariate EDA - Quantitative](UnivEDA_Quantitative/)
 1. [Univariate EDA - Categorical](UnivEDA_Categorical/)
 1. [Normal Distributions](Normal_Distributions/)
-1. Bivariate EDA - Quantitative
-1. Bivariate EDA - Categorical
+1. [Bivariate EDA - Quantitative](BivEDA_Quantitative/)
+1. [Bivariate EDA - Categorical](BivEDA_Categorical/)
 1. Linear Regression
 1. Inference Concepts
 1. 1-Sample Z-Test
