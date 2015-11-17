@@ -22,13 +22,17 @@ fnm <- "WhyStatistics_CE"
 source("../../rhelpers/knitr_setup.R")
 ```
 
-The following code is used to produce a "live" example for class.  The meaning of this code will be explained later.  For now, we simply want the results that are produced.  Thus, type the code exactly as shown here.
+The following code is used to produce a "live" example for class.  The meaning of this code will be explained later.  For now, we simply want the results that are produced.  Thus, type the code exactly as shown in each grey box and attempt to answer the follow-up questions
+
+\ 
 
 ## Job 1 -- Load the NCStats package
 ```{r echo=-2, results='hide', message=FALSE, warning=FALSE}
 library(NCStats)
 data(ABCens90)
 ```
+
+\ 
 
 ## Job 2 -- Obtain a Random Sample of Residents from Ashland-Bayfield Counties
 ```{r results='hide'}
@@ -39,6 +43,8 @@ data(ABCens90)
 * Were the individuals in your sample identical?  Why or why not?
 * Can you quickly explain the "general" age and sex of individuals in your sample?  Why or why not?
 
+\ 
+
 ## Job 3 -- Summarize that Sample
 ```{r results='hide'}
 Summarize(~age,data=smp1,digits=1)
@@ -47,6 +53,7 @@ Summarize(~sex,data=smp1)
 
 * Can you quickly explain the "general" age and sex of individuals in your sample?  Why or why not?
 
+\ 
 
 ## Job 4 -- Obtain a Second Random Sample of Residents from Ashland-Bayfield Counties
 ```{r results='hide'}
@@ -59,6 +66,7 @@ Summarize(~sex,data=smp2)
 * Were the percentage of females from the two samples identical?
 * Are your results typical or expected?  Why or why not?
 
+\ 
 
 ## Job 5 -- Compare Your Results to the Truth
 ```{r}
@@ -70,6 +78,7 @@ Summarize(~sex,data=ABCens90)
 * Did you sample percentages of females exactly equal the true percentage of females in the population?
 * Are your results typical or expected?  Why or why not?
 
+\ 
 
 ## Job 6 -- Examine Many Random Samples of Residents from Ashland-Bayfield Counties
 ```{r echo=FALSE, results='hide', par1=TRUE}

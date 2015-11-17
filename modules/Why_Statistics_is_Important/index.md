@@ -17,4 +17,4 @@ Please watch the following videos.
 We will use the following materials in class.
 
 * [Slides](WhyStatistics.pptx) [![PowerPoint](../../img/ppt.png)]
-* [Class Exercies](WhyStatistics_CE.html) [![Webpage](../../img/web.png)]
+* [Class Exercise](WhyStatistics_CE.html) [![Webpage](../../img/web.png)]
