@@ -16,15 +16,20 @@ After completing this module, the student should be able to ...
 
 ## Class Preparation
 
-* Watch [IVPPSS](https://vimeo.com/user45324800/ncstats-ivppss){:target="_blank"}. [7 mins] ![Ogle](../../img/dhovid.png)
-* Watch [Variable Types](https://vimeo.com/user45324800/ncstats-vartypes){:target="_blank"}. [5 mins] ![Ogle](../../img/dhovid.png)
+* Watch ["Construct a Histogram"](https://www.youtube.com/v/sC7gjg9g3JU?version=3&autoplay=1){:target="_blank"} [13 mins] ![YouTube](../../img/youtube.png) and  ["Describe Shape"](https://www.youtube.com/v/H9ITfdaX2ZQ?version=3&autoplay=1){:target="_blank"} [13 mins] ![YouTube](../../img/youtube.png)
+    * Watch ["Calculate Median A"](https://www.youtube.com/v/0SYsi38XucI?version=3&autoplay=1){:target="_blank"} [2 mins] ![YouTube](../../img/youtube.png), ["Calculate Median B"](https://www.youtube.com/v/hTYTaOaQUcw?version=3&autoplay=1){:target="_blank"} [5 mins] ![YouTube](../../img/youtube.png), or ["Calculate Median C"](https://www.youtube.com/v/9a8M_KfclBE?version=3&autoplay=1){:target="_blank"} [3 mins] ![YouTube](../../img/youtube.png)
+    * Watch ["Calculate Standard Deviation A"](https://www.youtube.com/v/qqOyy_NjflU?version=3&autoplay=1){:target="_blank"} [5 mins] ![YouTube](../../img/youtube.png) or ["Calculate Standard Deviation B"](https://www.youtube.com/v/atS4wX8I9H0?version=3&autoplay=1){:target="_blank"} [13 mins] ![YouTube](../../img/youtube.png)
+    * Watch ["Calculate IQR A"](https://www.youtube.com/v/R6VDj7pEG30?version=3&autoplay=1){:target="_blank"} [3 mins] ![YouTube](../../img/youtube.png) or ["Calculate IQR B"](https://www.youtube.com/v/F3WcEAW-M80?version=3&start=366&autoplay=1){:target="_blank"} [9 mins] ![YouTube](../../img/youtube.png)
+
+* Watch ["Univariate EDA in R"](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [ mins] ![Ogle](../../img/dhovid.png) and take notes on this handout ([![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx) [![Webpage](../../img/web.png)](RHO.html){:target="_blank"} [![R Script](../../img/script.png)](RHO.R){:target="_blank"}).
+
 * Read Sections XXX in the textbook.
 
 ----
 
 ## In-Class Materials
 
-* [Class Exercise](Foundational_Defns_CE.html) ![Webpage](../../img/web.png)
+* [Class Exercise](CE.html) ![Webpage](../../img/web.png)
 
 ----
 
