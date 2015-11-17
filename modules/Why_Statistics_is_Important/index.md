@@ -1,9 +1,7 @@
 ---
 layout: page
+title: Why Statistics is Important
 ---
-
-<meta property="og:title" content="Why Statistics is Important" />
-<p style="text-align: center; font-size: 3em; font-weight: bold; font-family: Sans-Serif">Why Statistics is Important</p>
 
 Why is Statistics a required course for many majors at Northland College?  Why does Statistics meet the quantitative reasoning requirement of the Connections curriculum?  This module is designed to help you identify answers to these questions.
 
@@ -33,6 +31,12 @@ Please watch the following videos.
 * [Slides](WhyStatistics.pptx) [![PowerPoint](../../img/ppt.png)]
 * [Class Exercise](WhyStatistics_CE.html) [![Webpage](../../img/web.png)]
 
+
+## Class Follow-Up Assignment
+
+* Complete questions XXX-XXX in the textbook.
+
+----
 
 <style type="text/css">
 header.header-page .page-heading h1 {

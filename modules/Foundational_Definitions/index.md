@@ -39,6 +39,7 @@ After completing this module, the student should be able to ...
 
 * [Slides used in videos](Foundational_Defns.pptx) ![PowerPoint](../../img/ppt.png)
 
+----
 
 <style type="text/css">
 header.header-page .page-heading h1 {
