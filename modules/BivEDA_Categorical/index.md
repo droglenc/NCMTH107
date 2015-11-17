@@ -12,7 +12,7 @@ css: /css/modules.css
 <ol>
   <li>Construct two-way frequency tables by hand and with R.</li>
   <li>Constrcut row-, column-, and total-percent percentage tables by hand and with R.</li>
-  <li>Construct a succinct written summary that addresses the relationship between two categorical variables.
+  <li>Construct a succinct written summary that addresses the relationship between two categorical variables.</li>
 </ol>
 </div>
 
