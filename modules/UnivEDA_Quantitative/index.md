@@ -10,6 +10,7 @@ It is important to understand the distribution of individuals for a single varia
 ## Intended Learning Outcomes
 After completing this module, the student should be able to ...
 
+1. Construct histograms.
 1. Compute measures of center (mean and median) by hand and with R.
 1. Compute mesures of dispersion (standard deviation, IQR, and range) by hand and with R.
 1. Construct a succinct written summary that addresses the four key characteristics (shape, outliers, center, and dispersion) of the distribution of a quantitative variable.
@@ -44,7 +45,7 @@ After completing this module, the student should be able to ...
 
 ### Archived Related Materials
 
-* [Old Lecture Slides](Foundational_Defns.pptx) ![PowerPoint](../../img/ppt.png)
+* [Old Lecture Slides](PPT_old.pptx) ![PowerPoint](../../img/ppt.png)
 
 ----
 

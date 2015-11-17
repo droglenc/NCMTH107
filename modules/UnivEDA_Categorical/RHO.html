@@ -1,0 +1,81 @@
+---
+layout: page
+title: "Univariate EDA"
+author: "Derek H. Ogle"
+css: "/css/handouts.css"
+---
+
+
+<div id="background" class="section level2">
+<h2>Background</h2>
+<p><a href="http://www.ncbi.nlm.nih.gov/pubmed/8896897">Karagas et al. (1996)</a> conducted a pilot study to assess the utility of <a href="https://en.wikipedia.org/wiki/Arsenic">arsenic</a> concentrations in the <a href="https://en.wikipedia.org/wiki/Nail_%28anatomy%29">toenail</a> as an indicator of ingestion of arsenic-containing water. They interviewed 21 individuals whose household drinking water supply was provided by a private (unregulated) well, including 10 individuals who lived in areas of New Hampshire where elevated water levels of arsenic had been reported previously. Each participant also provided a sample of water and toenail clippings.</p>
+<p>The data are recorded in <a href="https://github.com/droglenc/NCData/raw/master/Arsenic.csv">Arsenic.csv</a>. Descriptions of the variables are below.</p>
+<ul>
+<li><code>age</code>: Age (yrs) of person</li>
+<li><code>sex</code>: Sex of person</li>
+<li><code>usedrink</code>: How much (fraction of time) the well is used for drinking – A=“<span class="math">\(&lt;\frac{1}{4}\)</span>”, B=“<span class="math">\(\approx\frac{1}{4}\)</span>”, C=“<span class="math">\(\approx\frac{1}{2}\)</span>”, D=“<span class="math">\(\approx\frac{3}{4}\)</span>”, E=“<span class="math">\(&gt;\frac{3}{4}\)</span>”</li>
+<li><code>usecook</code>: How much (fraction of time) the well is used for cooking – A=“<span class="math">\(&lt;\frac{1}{4}\)</span>”, B=“<span class="math">\(\approx\frac{1}{4}\)</span>”, C=“<span class="math">\(\approx\frac{1}{2}\)</span>”, D=“<span class="math">\(\approx\frac{3}{4}\)</span>”, E=“<span class="math">\(&gt;\frac{3}{4}\)</span>”</li>
+<li><code>arswater</code>: Arsenic in water (ppm)</li>
+<li><code>arsnails</code>: Arsenic in toenails (ppm)</li>
+</ul>
+</div>
+<div id="getting-the-data" class="section level2">
+<h2>Getting the Data</h2>
+<pre class="r"><code>&gt; library(NCStats)
+&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules/UnivEDA_Categorical&quot;)
+&gt; ars &lt;- read.csv(&quot;Arsenic.csv&quot;)
+&gt; str(ars)</code></pre>
+<pre><code>&#39;data.frame&#39;:   21 obs. of  6 variables:
+ $ age     : int  44 45 44 66 37 45 47 38 41 49 ...
+ $ sex     : Factor w/ 2 levels &quot;F&quot;,&quot;M&quot;: 1 1 2 1 2 1 2 1 1 1 ...
+ $ usedrink: Factor w/ 5 levels &quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,..: 5 4 5 3 2 5 5 4 3 4 ...
+ $ usecook : Factor w/ 2 levels &quot;B&quot;,&quot;E&quot;: 2 2 2 2 2 2 2 2 1 2 ...
+ $ arswater: num  0.00087 0.00021 0 0.00115 0 0 0.00013 0.00069 0.00039 0 ...
+ $ arsnails: num  0.119 0.118 0.099 0.118 0.277 0.358 0.08 0.158 0.31 0.105 ...</code></pre>
+<pre class="r"><code>&gt; headtail(ars)</code></pre>
+<pre><code>   age sex usedrink usecook arswater arsnails
+1   44   F        E       E  0.00087    0.119
+2   45   F        D       E  0.00021    0.118
+3   44   M        E       E  0.00000    0.099
+19  42   M        E       E  0.01650    0.275
+20  62   M        E       E  0.00012    0.135
+21  36   M        E       E  0.00410    0.175</code></pre>
+</div>
+<div id="univariate-eda-categorical" class="section level2">
+<h2>Univariate EDA – Categorical</h2>
+<pre class="r"><code>&gt; ( tbl.drink &lt;- xtabs(~usedrink,data=ars) )</code></pre>
+<pre><code>usedrink
+ A  B  C  D  E 
+ 1  1  2  3 14 </code></pre>
+<pre class="r"><code>&gt; percTable(tbl.drink,digits=1)</code></pre>
+<pre><code>usedrink
+    A     B     C     D     E   Sum 
+  4.8   4.8   9.5  14.3  66.7 100.1 </code></pre>
+<pre class="r"><code>&gt; barplot(tbl.drink,xlab=&quot;Rating of Use for Drinking&quot;,ylab=&quot;Frequency&quot;,col=&quot;gray90&quot;)</code></pre>
+<p><img src="RHO_files/figure-html/unnamed-chunk-4-1.png" title="" alt="" width="336" /></p>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -24,7 +24,6 @@ exposure med med low med med med med med med med
 
 Enter the data into Excel, save as a CSV, and load the data into R.  [**HINT:** *these are the same data that you entered in [a previous class exercise](../Getting_Started_R/CE.html).  Use that file and recycle the portion of that R script that you used to load the data.*]  Use this information to answer the following questions.
 
-1. Perform a univariate EDA for `diameter`.
-1. Perform a univariate EDA for `diameter` separately for the low- and medium-`exposure` sites.
+1. Perform a univariate EDA for `exposure`.
 
 ----
