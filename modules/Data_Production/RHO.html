@@ -1,0 +1,75 @@
+---
+layout: page
+title: Data Production
+author: Derek H. Ogle
+css: /css/handouts.css
+---
+
+
+<pre><code>## Loading required package: FSA
+## 
+## 
+##  ############################################
+##  ##      FSA package, version 0.8.4        ##
+##  ##    Derek H. Ogle, Northland College    ##
+##  ##                                        ##
+##  ## Run ?FSA for documentation.            ##
+##  ## Run citation(&#39;FSA&#39;) for citation ...   ##
+##  ##   please cite if used in publication.  ##
+##  ##                                        ##
+##  ## See derekogle.com/fishR/ for more      ##
+##  ##   thorough analytical vignettes.       ##
+##  ############################################
+## 
+## 
+## 
+## 
+##  ############################################
+##  ## NCStats package, version 0.4.4         ##
+##  ##   by Derek H. Ogle, Northland College  ##
+##  ##                                        ##
+##  ##    type ?NCStats for documentation.    ##
+##  ############################################</code></pre>
+<div id="select-n-from-n-random-numbers" class="section level2">
+<h2>Select n from N Random Numbers</h2>
+<p>Suppose that you want to select (n=)10 individuals from (N=)736 individuals.</p>
+<pre class="r"><code>&gt; sample(736,10)</code></pre>
+<pre><code> [1] 690 620  48 384 534 437 216 731  68 448</code></pre>
+</div>
+<div id="randomly-allocate-n-individuals" class="section level2">
+<h2>Randomly Allocate N Individuals</h2>
+<p>Suppose that you want to randomly (and evenly) allocate 24 individuals to 3 treatments.</p>
+<pre class="r"><code>&gt; ( alloc &lt;- sample(24) )</code></pre>
+<pre><code> [1]  2  6 21  9 14 15  4  3 22 11  5 13 18 19 16  7 17  1 12 20  8 24 23 10</code></pre>
+<pre class="r"><code>&gt; alloc[1:8]</code></pre>
+<pre><code>[1]  2  6 21  9 14 15  4  3</code></pre>
+<pre class="r"><code>&gt; alloc[9:16]</code></pre>
+<pre><code>[1] 22 11  5 13 18 19 16  7</code></pre>
+<pre class="r"><code>&gt; alloc[17:24]</code></pre>
+<pre><code>[1] 17  1 12 20  8 24 23 10</code></pre>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

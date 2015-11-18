@@ -1,0 +1,52 @@
+---
+layout: page
+title: Data Production
+author: Derek H. Ogle
+css: /css/handouts.css
+output:
+  html_document:
+    fig_width: 3.5
+    fig_height: 3.5
+    self_contained: no
+  pdf_document:
+    fig_width: 3.5
+    fig_height: 3.5
+  word_document:
+    fig_width: 3.5
+    fig_height: 3.5
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Data_Production")
+source("../../rhelpers/rhelpers.R")
+fnm <- "RHO"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message='FALSE'}
+library(NCStats)
+fnm <- "RHO"
+source("../../rhelpers/knitr_setup.R")
+set.seed(11545345)
+```
+
+## Select n from N Random Numbers
+Suppose that you want to select (n=)10 individuals from (N=)736 individuals.
+```{r}
+sample(736,10)
+```
+
+## Randomly Allocate N Individuals
+Suppose that you want to randomly (and evenly) allocate 24 individuals to 3 treatments.
+```{r}
+( alloc <- sample(24) )
+alloc[1:8]
+alloc[9:16]
+alloc[17:24]
+```
+
+
+```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
+purl2(paste0(fnm,".Rmd"))
+```
