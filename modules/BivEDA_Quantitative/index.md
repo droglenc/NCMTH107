@@ -9,7 +9,7 @@ css: /css/modules.css
 
 <p>After completing this module, you should be able to ...</p>
 
-<ol style="margin-top: -1em;">
+<ol>
   <li>Construct a scatterplot with R.</li>
   <li>Know when it is appropriate to calculation a correlation coefficient.</li>
   <li>Calculate a correlation coefficient with R.</li>
