@@ -7,7 +7,7 @@ css: /css/modules.css
 <div class="ILOs">
 <p>It is important to understand the distribution of individuals for a single variable.  With quantitative data, four characteristics are generally described from several graphs and numerical summaries.  This module describes how to construct these graphs, compute these numerical summaries, and use these results to prepare a synthetic description of the distribution of a quantitative variable.</p>
 
-<p>After completing this module, the student should be able to ...</p>
+<p>After completing this module, you should be able to ...</p>
 
 <ol>
   <li>Construct histograms.</li>

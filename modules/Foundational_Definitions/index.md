@@ -7,7 +7,7 @@ css: /css/modules.css
 <div class="ILOs">
 <p>As with most areas of study, Statistics requires an understanding of key foundational words.  This module introduces those words and their definitions.</p>
 
-<p>After completing this module, the student should be able to ...</p>
+<p>After completing this module, you should be able to ...</p>
 
 <ol>
   <li>Identify the components of an IVPPSS from a real-world situation.</li>

@@ -7,7 +7,7 @@ css: /css/modules.css
 <div class="ILOs">
 <p>Why is Statistics a required course for many majors at Northland College?  Why does Statistics meet the quantitative reasoning requirement of the Connections curriculum?  This module is designed to help you identify answers to these questions.</p>
 
-<p>After completing this module, the student should be able to ...</p>
+<p>After completing this module, you should be able to ...</p>
 
 <ol>
   <li>Describe the two major goals of statistics and why they are important.</li>

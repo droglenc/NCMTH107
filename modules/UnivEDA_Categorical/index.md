@@ -7,7 +7,7 @@ css: /css/modules.css
 <div class="ILOs">
 <p>It is important to understand the distribution of individuals for a single variable.  With categorical data, this primarily consists of using tables and graphs to describe the levels in which most individuals are found.  This module describes how to construct these tables and graphs and how to use these results to prepare a synthetic description of the distribution of a categorical variable.</p>
 
-<p>After completing this module, the student should be able to ...</p>
+<p>After completing this module, you should be able to ...</p>
 
 <ol>
   <li>Construct frequency tables by hand and with R.</li>

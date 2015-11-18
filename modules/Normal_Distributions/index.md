@@ -7,7 +7,7 @@ css: /css/modules.css
 <div class="ILOs">
 <p>Many natural phenomena can be closely approximated by simple statistical distributions.  The most common of these distributions is the normal distribution, most often referred to by laypeople as the "bell-shaped curve."  Because of its prevalence, the normal distribution is the foundation of many statistical methods.  This module describes how to make calculations with a normal distribution.  These calculations are useful in their own right, but they also form the foundation for many of the methods used in later modules.</p>
 
-<p>After completing this module, the student should be able to ...</p>
+<p>After completing this module, you should be able to ...</p>
 
 <ol>
   <li>Describe the shape, center, and dispersion of a normal distribution.</li>
