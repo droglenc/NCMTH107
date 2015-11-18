@@ -19,9 +19,9 @@ css: /css/modules.css
 
 ## Class Preparation
 
+* Read Sections XXX in the textbook.
 * Watch [IVPPSS](https://vimeo.com/user45324800/ncstats-ivppss){:target="_blank"}. [7 mins] ![Ogle](../../img/dhovid.png)
 * Watch [Variable Types](https://vimeo.com/user45324800/ncstats-vartypes){:target="_blank"}. [5 mins] ![Ogle](../../img/dhovid.png)
-* Read Sections XXX in the textbook.
 
 ----
 

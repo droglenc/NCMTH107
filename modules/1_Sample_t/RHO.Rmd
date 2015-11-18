@@ -1,0 +1,61 @@
+---
+layout: page
+title: t-Tests
+author: Derek H. Ogle
+css: /css/handouts.css
+output:
+  html_document:
+    fig_width: 3.5
+    fig_height: 3.5
+    self_contained: no
+  pdf_document:
+    fig_width: 3.5
+    fig_height: 3.5
+  word_document:
+    fig_width: 3.5
+    fig_height: 3.5
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/1_Sample_t")
+source("../../rhelpers/rhelpers.R")
+fnm <- "RHO"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message='FALSE'}
+fnm <- "RHO"
+source("../../rhelpers/knitr_setup.R")
+```
+
+## First Commands
+```{r message=FALSE, warning=FALSE}
+library(NCStats)
+```
+
+## t Distribution Calculations
+An example of computing the p-value if $H_{A}:\mu>70$, t=2.67, and df=18.
+```{r par1a=TRUE}
+( distrib(2.67,distrib="t",df=18,lower.tail=FALSE) )
+```
+
+An example of finding $t^{*}$ if $H_{A}:\mu\neq70$, $\alpha$=0.05, and df=28.
+```{r par1a=TRUE}
+( distrib(0.025,distrib="t",df=28,type="q",lower.tail=FALSE) )
+```
+
+## One-Sample t-Test
+[Blem and Blem (1995)](http://www.jstor.org/stable/1564989?seq=1#page_scan_tab_contents) examined the reproductive characteristics of [Eastern Cottonmouth snakes (*Agkistrodon piscivorus*)](https://en.wikipedia.org/wiki/Agkistrodon_piscivorus), a once widely distributed snake whose numbers have decreased recently due to encroachment by humans.  In one part of their study they determined that the population being examined must have an average litter size greater than 5.8 snakes for the population to grow.  A random sample of snake litters from this population was taken and the number of snakes in each litter was recorded in in [Cottonmouth.csv](https://github.com/droglenc/NCData/raw/master/Cottonmouth.csv).  Test, at a very conservative level, if the average litter size is large enough for this population to grow.
+```{r par1a=TRUE}
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/1_Sample_t")
+cm  <- read.csv("Cottonmouth.csv")
+str(cm)
+# if n was <40 then I would have done -- hist(~num,data=cm,xlab="Number in Litter")
+( cm.t <- t.test(cm$num,mu=5.8,alt="greater",conf.level=0.99) )
+plot(cm.t)
+```
+
+```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
+purl2(paste0(fnm,".Rmd"))
+```

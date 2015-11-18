@@ -21,10 +21,10 @@ css: /css/modules.css
 
 ## Class Preparation
 
+* Read Sections XXX in the textbook.
 * Watch ["Univariate EDA (Categorical) in R"](https://vimeo.com/user45324800/ncstats-uedac){:target="_blank"} [4 mins] ![Ogle](../../img/dhovid.png)
     * Take notes on this handout -- [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx) [![Webpage](../../img/web.png)](RHO.html){:target="_blank"}
     * [R Script ![R Script](../../img/script.png)](RHO.R){:target="_blank"}
-* Read Sections XXX in the textbook.
 
 ----
 

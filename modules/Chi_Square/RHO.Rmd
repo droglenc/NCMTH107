@@ -1,0 +1,96 @@
+---
+layout: page
+title: Chi-Square Tests
+author: Derek H. Ogle
+css: /css/handouts.css
+output:
+  html_document:
+    fig_width: 3.5
+    fig_height: 3.5
+    self_contained: no
+  pdf_document:
+    fig_width: 3.5
+    fig_height: 3.5
+  word_document:
+    fig_width: 3.5
+    fig_height: 3.5
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Chi_Square")
+source("../../rhelpers/rhelpers.R")
+fnm <- "RHO"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message='FALSE'}
+fnm <- "RHO"
+source("../../rhelpers/knitr_setup.R")
+```
+
+## First Commands
+```{r message=FALSE, warning=FALSE}
+library(NCStats)
+```
+
+## Chi-Square Distribution Calculations
+An example of computing the p-value $\chi^{2}$=2.67 and df=3.
+```{r par1a=TRUE}
+( distrib(2.67,distrib="chisq",df=3,lower.tail=FALSE) )
+```
+
+An example of computing the p-value if $\chi^{2}$=16.82 and df=8.
+```{r par1a=TRUE}
+( distrib(16.82,distrib="chisq",df=8,lower.tail=FALSE) )
+```
+
+## Chi-Square Test
+### From Summarized Observed Table
+When [Chinook Salmon (*Oncorhynchus tshawytscha*)](https://en.wikipedia.org/wiki/Chinook_salmon) were first introduced to Lake Superior there was concern that they would compete with native [Lake Trout (*Salvelinus namaycush*)](https://en.wikipedia.org/wiki/Lake_trout) for [Cisco (*Coregonus artedi*)](https://en.wikipedia.org/wiki/Coregonus_artedi).  Preliminarily, fisheries biologists classified the dominant food items (Cisco, [Smelt (*Osmerus mordax*](https://en.wikipedia.org/wiki/Rainbow_smelt)) (another type of fish), or [*Mysis*](https://en.wikipedia.org/wiki/Mysis_relicta) (an invertebrate)) in the diets of 50 Lake Trout and 40 Chinook Salmon.  They found that 32, 10, and 8 Lake Trout diets were dominated by Cisco, Smelt, and *Mysis*, respectively.  Similarly, 18, 18, and 4 Chinook Salmon diets were dominated by Cisco, Smelt, and *Mysis*, respectively.  Test (at the 10% level) if the distribution of dominant food items differs at the 5% level?
+
+```{r}
+freq <- c(32,10,8,18,18,4)
+( obs <- matrix(freq,nrow=2,byrow=TRUE) )
+rownames(obs) <- c("Lake Trout","Chinook Salmon")
+colnames(obs) <- c("Cisco","Smelt","Mysis")
+obs
+chi1 <- chisq.test(obs,correct=FALSE)
+chi1$expected
+chi1$expected >= 5
+chi1
+chi1$residuals
+percTable(obs,margin=1,digits=1)
+```
+
+```{r}
+( obs2 <- obs[,-2] )
+( chi2 <- chisq.test(obs2,correct=FALSE) )
+```
+
+### From Raw Data
+The [General Social Survey](http://www.norc.org/Research/Projects/Pages/general-social-survey.aspx) (GSS) is a nationwide survey that has been administered since 1972 to gather data on contemporary American society in an attempt to monitor and explain trends in attitudes, behaviors, and attributes of American society.  One part of that survey asked respondents to state their opinion on how true the following statement was -- "*All radioactivity is made by humans.*"  Respondents were also categorized by their highest educational degree.  The results from this portion of the GSS is in [SciTest1.csv](https://raw.githubusercontent.com/droglenc/NCData/master/SciTest1.csv).  Use these data to determine, at the 5% level, if the distribution of responses to this statement differs among levels of education.
+
+```{r}
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Chi_Square")
+ST1 <- read.csv("SciTest1.csv")
+str(ST1)
+levels(ST1$degree)
+ST1$fdegree <- factor(ST1$degree,levels=c("lt.hs","hs","jc","bach","grad"))
+levels(ST1$scitest)
+ST1$fscitest <- factor(ST1$scitest,levels=c("def.not","prob.not","prob.true","def.true"))
+```
+```{r}
+( freq.tbl <- xtabs(~fdegree+fscitest,data=ST1) )
+ST1.chi <- chisq.test(freq.tbl,correct=FALSE)
+ST1.chi$expected
+ST1.chi$expected >= 5
+all(chi1$expected >= 5)
+ST1.chi
+ST1.chi$residuals
+percTable(freq.tbl,margin=1,digits=1)
+```
+
+```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
+purl2(paste0(fnm,".Rmd"))
+```

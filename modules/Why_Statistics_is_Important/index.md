@@ -19,7 +19,6 @@ css: /css/modules.css
 ----
 
 ## Class Preparation
-Please watch the following videos.
 
 * Watch "[Why Statistics?](https://www.youtube.com/v/yxXsPc0bphQ?version=3&autoplay=1){:target="_blank"}" [![Youtube](../../img/youtube.png) 4 mins]
 * Watch "[What is Statistics?](https://www.youtube.com/v/5YsiVJFSwGo?version=3&start=35&autoplay=1){:target="_blank"}" [![Youtube](../../img/youtube.png) 12 mins]
@@ -30,8 +29,8 @@ Please watch the following videos.
 
 ## In-Class Materials
 
-* [Slides](PPT.pptx) [![PowerPoint](../../img/ppt.png)]
-* [Class Exercise](CE.html) [![Webpage](../../img/web.png)]
+* [Slides](PPT.pptx) ![PowerPoint](../../img/ppt.png)
+* [Class Exercise](CE.html) ![Webpage](../../img/web.png)
 
 
 ## Class Follow-Up Assignment

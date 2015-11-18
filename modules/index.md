@@ -5,17 +5,19 @@ title: Learning Modules
 
 1. [Why Statistics is Important](Why_Statistics_is_Important/)
 1. [Foundational Definitions](Foundational_Definitions/)
-1. Producing Data
-1. Getting Started With RStudio
+1. [Data Production](Data_Production/)
+1. [Getting Started With RStudio](Getting_Started_R)
 1. [Univariate EDA - Quantitative](UnivEDA_Quantitative/)
 1. [Univariate EDA - Categorical](UnivEDA_Categorical/)
 1. [Normal Distributions](Normal_Distributions/)
 1. [Bivariate EDA - Quantitative](BivEDA_Quantitative/)
 1. [Bivariate EDA - Categorical](BivEDA_Categorical/)
-1. Linear Regression
+1. [Linear Regression](Linear_Regression/)
+1. [Sampling Distributions](Sampling_Distributions/)
+1. [Probability Introduction](Probability/)
 1. Inference Concepts
-1. 1-Sample Z-Test
-1. 1-Sample t-Test
-1. 2-Sample t-Test
-1. Chi-Square Test
-1. Goodness-of-Fit Test
+1. [1-Sample Z-Test](1_Sample_Z/)
+1. [1-Sample t-Test](1_Sample_t/)
+1. [2-Sample t-Test](2_Sample_t/)
+1. [Chi-Square Test](Chi_Square/)
+1. [Goodness-of-Fit Test](Goodness_of_Fit/)

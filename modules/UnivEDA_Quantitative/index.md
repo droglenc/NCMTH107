@@ -21,6 +21,7 @@ css: /css/modules.css
 
 ## Class Preparation
 
+* Read Sections XXX in the textbook.
 * Watch ["Construct a Histogram"](https://www.youtube.com/v/sC7gjg9g3JU?version=3&autoplay=1){:target="_blank"} [13 mins] ![YouTube](../../img/youtube.png)
 * Watch ["Describe Shape"](https://www.youtube.com/v/H9ITfdaX2ZQ?version=3&autoplay=1){:target="_blank"} [13 mins] ![YouTube](../../img/youtube.png)
 * Watch "Calculate Median" [A](https://www.youtube.com/v/0SYsi38XucI?version=3&autoplay=1){:target="_blank"} [2 mins], [B](https://www.youtube.com/v/hTYTaOaQUcw?version=3&autoplay=1){:target="_blank"} [5 mins], **or** [C](https://www.youtube.com/v/9a8M_KfclBE?version=3&autoplay=1){:target="_blank"} [3 mins] ![YouTube](../../img/youtube.png)
@@ -29,7 +30,6 @@ css: /css/modules.css
 * Watch ["Univariate EDA (Quantitative) in R"](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins] ![Ogle](../../img/dhovid.png)
     * Take notes on this handout -- [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx) [![Webpage](../../img/web.png)](RHO.html){:target="_blank"}
     * [R Script ![R Script](../../img/script.png)](RHO.R){:target="_blank"}
-* Read Sections XXX in the textbook.
 
 ----
 
