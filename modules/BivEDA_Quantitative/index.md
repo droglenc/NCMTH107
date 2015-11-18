@@ -7,9 +7,9 @@ css: /css/modules.css
 <div class="ILOs">
 <p>It is important to understand the relationship between two variables.  With quantitative data, this primarily consists of using a scatterplot and the correlation coefficient to describe four key characteristics of the relationship.  This module describes how to construct a scatterplot, calculate a correlation coefficient, and how to use these results to prepare a synthetic description of the relationship between two quantitative variables.</p>
 
-<p>After completing this module, the student should be able to ...</p>
+<p>After completing this module, you should be able to ...</p>
 
-<ol>
+<ol style="margin-top: 0.2em;">
   <li>Construct a scatterplot with R.</li>
   <li>Know when it is appropriate to calculation a correlation coefficient.</li>
   <li>Calculate a correlation coefficient with R.</li>
