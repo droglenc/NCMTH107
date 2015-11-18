@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Goodness-of_fit Test
+title: Goodness-of-fit Test
 css: /css/modules.css
 ---
 
@@ -19,7 +19,7 @@ css: /css/modules.css
 ## Class Preparation
 
 * Read Sections XXX in the textbook.
-* Watch ["Goodness-of-Fit Tests in R"]){:target="_blank"} [6 mins] ![Ogle](../../img/dhovid.png)
+* Watch ["Goodness-of-Fit Tests in R"](){:target="_blank"} [6 mins] ![Ogle](../../img/dhovid.png)
     * Take notes on this handout -- [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx) [![Webpage](../../img/web.png)](RHO.html){:target="_blank"}
     * [R Script ![R Script](../../img/script.png)](RHO.R){:target="_blank"}
 

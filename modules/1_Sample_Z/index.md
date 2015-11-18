@@ -22,9 +22,7 @@ css: /css/modules.css
 * Watch ["1-Sample Z-test in R"](https://vimeo.com/user45324800/ztest){:target="_blank"} [6 mins] ![Ogle](../../img/dhovid.png)
     * Take notes on this handout -- [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx) [![Webpage](../../img/web.png)](RHO.html){:target="_blank"}
     * [R Script ![R Script](../../img/script.png)](RHO.R){:target="_blank"}
-* Watch ["Reverse Calculations in R"](https://vimeo.com/user45324800/normdist-reverse){:target="_blank"} [6 mins] ![Ogle](../../img/dhovid.png)
-    * Take notes on the same handout.
-    
+
 ----
 
 ## In-Class Materials

@@ -19,7 +19,7 @@ css: /css/modules.css
 ## Class Preparation
 
 * Read Sections XXX in the textbook.
-* Watch "Introduction to Sampling Distributions" [B](https://www.youtube.com/v/Zbw-YvELsaM?version=3&autoplay=1){:target="_blank"} [8 mins] ![YouTube](../../img/youtube.png)
+* Watch ["Introduction to Sampling Distributions"](https://www.youtube.com/v/Zbw-YvELsaM?version=3&autoplay=1){:target="_blank"} [8 mins] ![YouTube](../../img/youtube.png)
 
 ----
 
