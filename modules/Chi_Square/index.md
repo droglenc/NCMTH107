@@ -19,9 +19,11 @@ css: /css/modules.css
 ## Class Preparation
 
 * Read Sections XXX in the textbook.
-* Watch ["Chi-Square Test (with Summarized Data in R"](){:target="_blank"} [6 mins] ![Ogle](../../img/dhovid.png)
+* Watch ["Chi-Square Distribution in R"](https://vimeo.com/user45324800/chisqdistribution){:target="_blank"} [2 mins] ![Ogle](../../img/dhovid.png)
     * Take notes on this handout -- [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx) [![Webpage](../../img/web.png)](RHO.html){:target="_blank"}
     * [R Script ![R Script](../../img/script.png)](RHO.R){:target="_blank"}
+* Watch ["Chi-Square Test (with Summarized Data in R"](){:target="_blank"} [6 mins] ![Ogle](../../img/dhovid.png)
+    * Take notes on the same handout.
 * Watch ["Chi-Square Test (with Raw Data in R"](){:target="_blank"} [6 mins] ![Ogle](../../img/dhovid.png)
     * Take notes on the same handout.
     

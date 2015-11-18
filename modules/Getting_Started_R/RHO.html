@@ -1,0 +1,157 @@
+---
+layout: page
+title: Getting Started with R
+author: Derek H. Ogle
+css: /css/handouts.css
+---
+
+
+<div id="always-first-command" class="section level2">
+<h2>Always First Command</h2>
+<pre class="r"><code>&gt; library(NCStats)</code></pre>
+</div>
+<div id="basic-vectors" class="section level2">
+<h2>Basic Vectors</h2>
+<pre class="r"><code>&gt; ( profs &lt;- c(&quot;Derek&quot;,&quot;Young&quot;,&quot;Jodi&quot;) )</code></pre>
+<pre><code>[1] &quot;Derek&quot; &quot;Young&quot; &quot;Jodi&quot; </code></pre>
+<pre class="r"><code>&gt; ( nums &lt;- c(4,2,6,4,3) )</code></pre>
+<pre><code>[1] 4 2 6 4 3</code></pre>
+<pre class="r"><code>&gt; ( heads &lt;- c(TRUE, TRUE, FALSE, FALSE) )</code></pre>
+<pre><code>[1]  TRUE  TRUE FALSE FALSE</code></pre>
+<pre class="r"><code>&gt; ls()</code></pre>
+<pre><code>[1] &quot;f&quot;           &quot;fnm&quot;         &quot;heads&quot;       &quot;need2render&quot; &quot;nums&quot;        &quot;profs&quot;      </code></pre>
+<pre class="r"><code>&gt; nums[3]</code></pre>
+<pre><code>[1] 6</code></pre>
+<pre class="r"><code>&gt; profs[2]</code></pre>
+<pre><code>[1] &quot;Young&quot;</code></pre>
+<pre class="r"><code>&gt; heads[1]</code></pre>
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div id="basic-data-frames" class="section level2">
+<h2>Basic Data Frames</h2>
+<pre class="r"><code>&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules/Getting_Started_R&quot;)
+&gt; iris &lt;- read.csv(&quot;Iris.csv&quot;)
+&gt; str(iris)</code></pre>
+<pre><code>&#39;data.frame&#39;:   150 obs. of  5 variables:
+ $ seplen : int  50 46 46 51 55 48 52 49 44 50 ...
+ $ sepwid : int  33 34 36 33 35 31 34 36 32 35 ...
+ $ petlen : int  14 14 10 17 13 16 14 14 13 16 ...
+ $ petwid : int  2 3 2 5 2 2 2 1 2 6 ...
+ $ species: Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<pre class="r"><code>&gt; headtail(iris)     # NOT the entire data.frame</code></pre>
+<pre><code>    seplen sepwid petlen petwid   species
+1       50     33     14      2    setosa
+2       46     34     14      3    setosa
+3       46     36     10      2    setosa
+148     57     25     50     20 virginica
+149     58     28     51     24 virginica
+150     63     33     60     25 virginica</code></pre>
+<pre class="r"><code>&gt; ls()</code></pre>
+<pre><code>[1] &quot;f&quot;           &quot;fnm&quot;         &quot;heads&quot;       &quot;iris&quot;        &quot;need2render&quot; &quot;nums&quot;       
+[7] &quot;profs&quot;      </code></pre>
+</div>
+<div id="working-with-data-frames" class="section level2">
+<h2>Working With Data Frames</h2>
+<pre class="r"><code>&gt; iris[2,]</code></pre>
+<pre><code>  seplen sepwid petlen petwid species
+2     46     34     14      3  setosa</code></pre>
+<pre class="r"><code>&gt; iris$seplen</code></pre>
+<pre><code>  [1] 50 46 46 51 55 48 52 49 44 50 44 47 48 51 48 50 50 43 58 51 49 51 50 46 57 50 54 52
+ [29] 55 49 54 50 44 47 46 51 50 49 54 54 51 48 48 45 57 51 54 51 52 53 65 62 59 61 60 56
+ [57] 57 63 70 64 61 55 54 58 55 50 67 56 58 60 57 57 49 56 57 66 52 60 50 55 58 62 59 60
+ [85] 67 63 56 63 61 64 51 57 61 56 69 55 55 66 68 67 64 67 63 69 65 65 58 68 62 77 67 76
+[113] 49 67 59 63 64 79 67 77 63 72 61 61 64 62 77 63 58 72 71 64 60 63 77 60 69 74 56 73
+[141] 67 65 69 72 65 64 68 57 58 63</code></pre>
+<pre class="r"><code>&gt; iris$seplen[3]</code></pre>
+<pre><code>[1] 46</code></pre>
+<pre class="r"><code>&gt; iris[3,2]</code></pre>
+<pre><code>[1] 36</code></pre>
+<pre class="r"><code>&gt; iris[c(1,3,5),]</code></pre>
+<pre><code>  seplen sepwid petlen petwid species
+1     50     33     14      2  setosa
+3     46     36     10      2  setosa
+5     55     35     13      2  setosa</code></pre>
+</div>
+<div id="filtering-data-frames" class="section level2">
+<h2>Filtering Data Frames</h2>
+<pre class="r"><code>&gt; set &lt;- filterD(iris,species==&quot;setosa&quot;)
+&gt; str(set)</code></pre>
+<pre><code>&#39;data.frame&#39;:   50 obs. of  5 variables:
+ $ seplen : int  50 46 46 51 55 48 52 49 44 50 ...
+ $ sepwid : int  33 34 36 33 35 31 34 36 32 35 ...
+ $ petlen : int  14 14 10 17 13 16 14 14 13 16 ...
+ $ petwid : int  2 3 2 5 2 2 2 1 2 6 ...
+ $ species: Factor w/ 1 level &quot;setosa&quot;: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<pre class="r"><code>&gt; gt5 &lt;- filterD(iris,seplen&gt;5)
+&gt; headtail(gt5)</code></pre>
+<pre><code>    seplen sepwid petlen petwid   species
+1       50     33     14      2    setosa
+2       46     34     14      3    setosa
+3       46     36     10      2    setosa
+148     57     25     50     20 virginica
+149     58     28     51     24 virginica
+150     63     33     60     25 virginica</code></pre>
+<pre class="r"><code>&gt; setver1 &lt;- filterD(iris,species!=&quot;virginica&quot;)
+&gt; str(setver1)</code></pre>
+<pre><code>&#39;data.frame&#39;:   100 obs. of  5 variables:
+ $ seplen : int  50 46 46 51 55 48 52 49 44 50 ...
+ $ sepwid : int  33 34 36 33 35 31 34 36 32 35 ...
+ $ petlen : int  14 14 10 17 13 16 14 14 13 16 ...
+ $ petwid : int  2 3 2 5 2 2 2 1 2 6 ...
+ $ species: Factor w/ 2 levels &quot;setosa&quot;,&quot;versicolor&quot;: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<pre class="r"><code>&gt; setver &lt;- filterD(iris,species %in% c(&quot;setosa&quot;,&quot;versicolor&quot;))
+&gt; str(setver)</code></pre>
+<pre><code>&#39;data.frame&#39;:   100 obs. of  5 variables:
+ $ seplen : int  50 46 46 51 55 48 52 49 44 50 ...
+ $ sepwid : int  33 34 36 33 35 31 34 36 32 35 ...
+ $ petlen : int  14 14 10 17 13 16 14 14 13 16 ...
+ $ petwid : int  2 3 2 5 2 2 2 1 2 6 ...
+ $ species: Factor w/ 2 levels &quot;setosa&quot;,&quot;versicolor&quot;: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<pre class="r"><code>&gt; ver_and_gt5 &lt;- filterD(iris,species==&quot;versicolor&quot;,seplen&gt;5)
+&gt; headtail(ver_and_gt5)</code></pre>
+<pre><code>   seplen sepwid petlen petwid    species
+1      65     28     46     15 versicolor
+2      62     22     45     15 versicolor
+3      59     32     48     18 versicolor
+48     66     30     44     14 versicolor
+49     68     28     48     14 versicolor
+50     67     30     50     17 versicolor</code></pre>
+<pre class="r"><code>&gt; ver_or_gt5 &lt;- filterD(iris,species==&quot;versicolor&quot; | seplen&gt;5)
+&gt; headtail(ver_or_gt5)</code></pre>
+<pre><code>    seplen sepwid petlen petwid   species
+1       50     33     14      2    setosa
+2       46     34     14      3    setosa
+3       46     36     10      2    setosa
+148     57     25     50     20 virginica
+149     58     28     51     24 virginica
+150     63     33     60     25 virginica</code></pre>
+<pre class="r"><code>&gt; ls()</code></pre>
+<pre><code> [1] &quot;f&quot;           &quot;fnm&quot;         &quot;gt5&quot;         &quot;heads&quot;       &quot;iris&quot;        &quot;need2render&quot;
+ [7] &quot;nums&quot;        &quot;profs&quot;       &quot;set&quot;         &quot;setver&quot;      &quot;setver1&quot;     &quot;ver_and_gt5&quot;
+[13] &quot;ver_or_gt5&quot; </code></pre>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

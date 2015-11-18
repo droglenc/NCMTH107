@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Normal Distributions
+title: Getting Started with R
 css: /css/modules.css
 ---
 
@@ -20,13 +20,11 @@ css: /css/modules.css
 
 * Watch "68-95-99.7 Rule" [B](https://www.youtube.com/v/PJPXFOK8F8E?version=3&autoplay=1){:target="_blank"} [9 mins] **or** [A](https://www.youtube.com/v/cgxPcdPbujI?version=3&autoplay=1){:target="_blank"} [8 mins] ![YouTube](../../img/youtube.png)
 
-* Watch ["Forward Calculations in R"](https://vimeo.com/user45324800/normdist-forward){:target="_blank"} [6 mins] ![Ogle](../../img/dhovid.png)
-    * Take notes on this handout -- [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx) [![Webpage](../../img/web.png)](RHO.html){:target="_blank"}
-    * [R Script ![R Script](../../img/script.png)](RHO.R){:target="_blank"}
-* Watch ["Reverse Calculations in R"](https://vimeo.com/user45324800/normdist-reverse){:target="_blank"} [6 mins] ![Ogle](../../img/dhovid.png)
-    * Take notes on the same handout.
-
 * Read Sections XXX in the textbook.
+* Watch ["Retrieve Data from Webpage"](https://vimeo.com/user45324800/ncstats-preparedatawebpage){:target="_blank"} [3 mins] ![Ogle](../../img/dhovid.png)
+* Watch ["Enter Your Own Data (with Excel)"](http://derekogle.com/NCMTH107/img/dhovid.png){:target="_blank"} [4 mins] or ["Enter Your Own Data (without Excel)"](https://vimeo.com/user45324800/ncstats-preparedatatextfile){:target="_blank"} [4 mins] ![Ogle](../../img/dhovid.png)
+* Watch ["Load Data into RStudio"](https://vimeo.com/user45324800/ncstats-loadcsvrstudio){:target="_blank"} [6 mins]
+* Watch ["Subset data.frame with filterD"](https://vimeo.com/user45324800/filterd){:target="_blank"} [6 mins]
 
 ----
 
