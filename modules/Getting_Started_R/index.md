@@ -5,12 +5,17 @@ css: /css/modules.css
 ---
 
 <div class="ILOs">
-<p>.</p>
+<p>R is fast becoming the primary software for performing statistical analyses in many industries and areas of study.  This module is designed to introduce you to R, describe foundational concepts of R, and explain how to enter data into R.  R will be used for specific applications in other modules.</p>
 
 <p>After completing this module, you should be able to ...</p>
 
 <ol>
-  <li>.</li>
+  <li>Describe what R and RStudio are.</li>
+  <li>Describe the difference between R expressions and assignments.</li>
+  <li>Describe the different types of data that can be stored in R.</li>
+  <li>Enter data into R data.frames.</li>
+  <li>Isolate individual variables and individuals in R.</li>
+  <li>Create data.frames that are subsets of larger data.frames.</li>
 </ol>
 </div>
 
@@ -18,9 +23,9 @@ css: /css/modules.css
 
 ## Class Preparation
 
-* Watch "68-95-99.7 Rule" [B](https://www.youtube.com/v/PJPXFOK8F8E?version=3&autoplay=1){:target="_blank"} [9 mins] **or** [A](https://www.youtube.com/v/cgxPcdPbujI?version=3&autoplay=1){:target="_blank"} [8 mins] ![YouTube](../../img/youtube.png)
-
 * Read Sections XXX in the textbook.
+* Watch ["What is R?"](https://www.youtube.com/v/TR2bHSJ_eck?version=3&autoplay=1){:target="_blank"} [2 mins] 
+* Watch ["What's Up with R?"](https://www.youtube.com/v/ZwYQPtU2Pa0?version=3&autoplay=1&start=1&end=111){:target="_blank"} [3 mins] ![YouTube](../../img/youtube.png)
 * Watch ["Retrieve Data from Webpage"](https://vimeo.com/user45324800/ncstats-preparedatawebpage){:target="_blank"} [3 mins] ![Ogle](../../img/dhovid.png)
 * Watch ["Enter Your Own Data (with Excel)"](http://derekogle.com/NCMTH107/img/dhovid.png){:target="_blank"} [4 mins] or ["Enter Your Own Data (without Excel)"](https://vimeo.com/user45324800/ncstats-preparedatatextfile){:target="_blank"} [4 mins] ![Ogle](../../img/dhovid.png)
 * Watch ["Load Data into RStudio"](https://vimeo.com/user45324800/ncstats-loadcsvrstudio){:target="_blank"} [6 mins]

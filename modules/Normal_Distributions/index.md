@@ -24,7 +24,7 @@ css: /css/modules.css
 ## Class Preparation
 
 * Read Sections XXX in the textbook.
-* Watch "68-95-99.7 Rule" [B](https://www.youtube.com/v/PJPXFOK8F8E?version=3&autoplay=1){:target="_blank"} [9 mins] **or** [A](https://www.youtube.com/v/cgxPcdPbujI?version=3&autoplay=1){:target="_blank"} [8 mins] ![YouTube](../../img/youtube.png)
+* Watch "68-95-99.7 Rule" [A](https://www.youtube.com/v/PJPXFOK8F8E?version=3&autoplay=1){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/cgxPcdPbujI?version=3&autoplay=1){:target="_blank"} [8 mins] ![YouTube](../../img/youtube.png)
 * Watch ["Forward Calculations in R"](https://vimeo.com/user45324800/normdist-forward){:target="_blank"} [6 mins] ![Ogle](../../img/dhovid.png)
     * Take notes on this handout -- [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx) [![Webpage](../../img/web.png)](RHO.html){:target="_blank"}
     * [R Script ![R Script](../../img/script.png)](RHO.R){:target="_blank"}
