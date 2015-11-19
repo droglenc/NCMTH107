@@ -20,7 +20,7 @@ css: /css/modules.css
 
 You should prepare for the concepts of this module by *reading Sections XXX* in [the textbook](../../book/) and watching the following videos:
 
-* Watch ["Bivariate EDA (Categorical) in R"](https://vimeo.com/user45324800/biveda-cat){:target="_blank"} [8 mins]
+* [Bivariate EDA (Categorical) in R](https://vimeo.com/user45324800/biveda-cat){:target="_blank"} [8 mins]
     * Take notes on [this handout](RHO.html){:target="_blank"} (or [![PDF](../../img/pdf.png)](RHO.pdf) or [![MSWord](../../img/word.png)](RHO.docx))
     * [R Script](RHO.R){:target="_blank"}
 

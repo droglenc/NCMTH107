@@ -18,7 +18,7 @@ css: /css/modules.css
 
 You should prepare for the concepts of this module by *reading Sections XXX* in [the textbook](../../book/) and watching the following videos:
 
-* Watch ["Introduction to Sampling Distributions"](https://www.youtube.com/v/Zbw-YvELsaM?version=3&autoplay=1){:target="_blank"} [8 mins]
+* [Introduction to Sampling Distributions](https://www.youtube.com/v/Zbw-YvELsaM?version=3&autoplay=1){:target="_blank"} [8 mins]
 
 Questions XXX in [the textbook](../../book/) will assess your understanding of these materials.
 
