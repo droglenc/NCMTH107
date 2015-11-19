@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Class Exercise
-subtitle: Statistical Foundations
+subtitle: Foundational Definitions
 css: "/css/lecture.css"
 ---
 
