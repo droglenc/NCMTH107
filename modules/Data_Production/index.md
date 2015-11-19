@@ -21,8 +21,6 @@ css: /css/modules.css
 
 ----
 
-## Current Materials
-
 You should prepare for the concepts of this module by *reading Sections XXX* in [the textbook](../../book/) and watching the following videos:
 
 * Types of Studies -- [A](https://www.youtube.com/v/qksFkFh2ezo?version=3&autoplay=1&start=456&end=958){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/KDPBD3SPTPY?version=3&autoplay=1){:target="_blank"} [8 mins]

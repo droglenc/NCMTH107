@@ -21,6 +21,7 @@ For each question below, identify (and explain why) whether it represents an obs
 1. A recent study in Europe looked at a large group of women of childbearing age.  The 
 researchers asked each woman how much alcohol they had consumed over the past 12 months.  The researchers found that women who drank moderate amounts of alcohol were somewhat less likely to have infertility than women who did not.  The study said it “controlled for age, income, and religion”. 
 
+----
 
 ## Study Types II
 For each question below, identify (and explain why) whether it represents a voluntary response, convenience, or random sample.
@@ -53,3 +54,4 @@ A student wanted to see how far she could hit two brands of softballs with three
 1. Identify the response variable, factors, levels, treatments, and replicates.
 1. Using R, identify which specific individuals will be allocated to each treatment.  Comment on what this physically means in terms of implementing this experiment.
 
+----
