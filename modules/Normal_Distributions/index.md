@@ -23,11 +23,11 @@ css: /css/modules.css
 
 You should prepare for the concepts of this module by *reading Sections XXX* in [the textbook](../../book/) and watching the following videos:
 
-* Watch "68-95-99.7 Rule" [A](https://www.youtube.com/v/PJPXFOK8F8E?version=3&autoplay=1){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/cgxPcdPbujI?version=3&autoplay=1){:target="_blank"} [8 mins] ![YouTube](../../img/youtube.png)
-* Watch ["Forward Calculations in R"](https://vimeo.com/user45324800/normdist-forward){:target="_blank"} [6 mins] ![Ogle](../../img/dhovid.png)
-    * Take notes on this handout -- [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx) [![Webpage](../../img/web.png)](RHO.html){:target="_blank"}
-    * [R Script ![R Script](../../img/script.png)](RHO.R){:target="_blank"}
-* Watch ["Reverse Calculations in R"](https://vimeo.com/user45324800/normdist-reverse){:target="_blank"} [6 mins] ![Ogle](../../img/dhovid.png)
+* Watch "68-95-99.7 Rule" [A](https://www.youtube.com/v/PJPXFOK8F8E?version=3&autoplay=1){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/cgxPcdPbujI?version=3&autoplay=1){:target="_blank"} [8 mins]
+* Watch ["Forward Calculations in R"](https://vimeo.com/user45324800/normdist-forward){:target="_blank"} [6 mins]
+    * Take notes on [this handout](RHO.html){:target="_blank"} (or [![PDF](../../img/pdf.png)](RHO.pdf) or [![MSWord](../../img/word.png)](RHO.docx))
+    * [R Script](RHO.R){:target="_blank"}
+* Watch ["Reverse Calculations in R"](https://vimeo.com/user45324800/normdist-reverse){:target="_blank"} [6 mins]
     * Take notes on the same handout.
 
 Questions XXX in [the textbook](../../book/) will assess your understanding of these materials.
