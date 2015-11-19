@@ -16,9 +16,8 @@ css: /css/modules.css
 
 ----
 
-## Class Preparation
+You should prepare for the concepts of this module by *reading Sections XXX* in [the textbook](../../book/) and watching the following videos:
 
-* Read Sections XXX in the textbook.
 * Watch ["Chi-Square Distribution in R"](https://vimeo.com/user45324800/chisqdistribution){:target="_blank"} [2 mins] ![Ogle](../../img/dhovid.png)
     * Take notes on this handout -- [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx) [![Webpage](../../img/web.png)](RHO.html){:target="_blank"}
     * [R Script ![R Script](../../img/script.png)](RHO.R){:target="_blank"}
@@ -27,20 +26,11 @@ css: /css/modules.css
 * Watch ["Chi-Square Test (with Raw Data in R"](){:target="_blank"} [6 mins] ![Ogle](../../img/dhovid.png)
     * Take notes on the same handout.
     
-----
-
-## In-Class Materials
-
-* [Class Exercise](CE.html) ![Webpage](../../img/web.png)
+Questions XXX in [the textbook](../../book/) will assess your understanding of these materials.
 
 ----
 
-## Class Follow-Up Assignment
+### Related materials
 
-* Complete questions XXX-XXX in the textbook.
-
-----
-
-### Archived Related Materials
-
-* [Old Lecture Slides](PPT_old.pptx) ![PowerPoint](../../img/ppt.png)
+* [In-Class Exercise](CE.html)
+* [Old Lecture Slides](PPT_old.pptx)

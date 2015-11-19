@@ -16,25 +16,15 @@ css: /css/modules.css
 
 ----
 
-## Class Preparation
+You should prepare for the concepts of this module by *reading Sections XXX* in [the textbook](../../book/) and watching the following videos:
 
-* Read Sections XXX in the textbook.
 * Watch ["Introduction to Sampling Distributions"](https://www.youtube.com/v/Zbw-YvELsaM?version=3&autoplay=1){:target="_blank"} [8 mins] ![YouTube](../../img/youtube.png)
 
-----
-
-## In-Class Materials
-
-* [Class Exercise](CE.html) ![Webpage](../../img/web.png)
+Questions XXX in [the textbook](../../book/) will assess your understanding of these materials.
 
 ----
 
-## Class Follow-Up Assignment
+### Related materials
 
-* Complete questions XXX-XXX in the textbook.
-
-----
-
-### Archived Related Materials
-
-* [Old Lecture Slides](PPT_old.pptx) ![PowerPoint](../../img/ppt.png)
+* [In-Class Exercise](CE.html)
+* [Old Lecture Slides](PPT_old.pptx)

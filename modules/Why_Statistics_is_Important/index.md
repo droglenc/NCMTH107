@@ -18,30 +18,18 @@ css: /css/modules.css
 
 ----
 
-## Class Preparation
+You should prepare for the concepts of this module by *reading Sections XXX* in [the textbook](../../book/) and watching the following videos:
 
 * Watch "[Why Statistics?](https://www.youtube.com/v/yxXsPc0bphQ?version=3&autoplay=1){:target="_blank"}" [![Youtube](../../img/youtube.png) 4 mins]
 * Watch "[What is Statistics?](https://www.youtube.com/v/5YsiVJFSwGo?version=3&start=35&autoplay=1){:target="_blank"}" [![Youtube](../../img/youtube.png) 12 mins]
 * Watch "[Why You Need to Study Statistics](https://www.youtube.com/v/wV0Ks7aS7YI?version=3&autoplay=1){:target="_blank"}" [![Youtube](../../img/youtube.png) 3 mins]
 * Watch "[What is Important About Statistics in Psychology?](https://www.youtube.com/v/yl_yuxHFIXc?version=3&start=18&end=333&autoplay=1){:target="_blank"}" [![Youtube](../../img/youtube.png) 6 mins]
 
-----
-
-## In-Class Materials
-
-* [Slides](PPT.pptx) ![PowerPoint](../../img/ppt.png)
-* [Class Exercise](CE.html) ![Webpage](../../img/web.png)
-
-
-## Class Follow-Up Assignment
-
-* Complete questions XXX-XXX in the textbook.
+Questions XXX in [the textbook](../../book/) will assess your understanding of these materials.
 
 ----
 
-<style type="text/css">
-header.header-page .page-heading h1 {
-  font-size: 45px;
-  margin-top: 0;
-}
-</style>
+### Related materials
+
+* [Class Lecture Slides](PPT.pptx)
+* [Class Exercise](CE.html)

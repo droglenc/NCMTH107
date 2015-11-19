@@ -21,9 +21,8 @@ css: /css/modules.css
 
 ----
 
-## Class Preparation
+You should prepare for the concepts of this module by *reading Sections XXX* in [the textbook](../../book/) and watching the following videos:
 
-* Read Sections XXX in the textbook.
 * Watch "68-95-99.7 Rule" [A](https://www.youtube.com/v/PJPXFOK8F8E?version=3&autoplay=1){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/cgxPcdPbujI?version=3&autoplay=1){:target="_blank"} [8 mins] ![YouTube](../../img/youtube.png)
 * Watch ["Forward Calculations in R"](https://vimeo.com/user45324800/normdist-forward){:target="_blank"} [6 mins] ![Ogle](../../img/dhovid.png)
     * Take notes on this handout -- [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx) [![Webpage](../../img/web.png)](RHO.html){:target="_blank"}
@@ -31,29 +30,11 @@ css: /css/modules.css
 * Watch ["Reverse Calculations in R"](https://vimeo.com/user45324800/normdist-reverse){:target="_blank"} [6 mins] ![Ogle](../../img/dhovid.png)
     * Take notes on the same handout.
 
-----
-
-## In-Class Materials
-
-* [Class Exercise](CE.html) ![Webpage](../../img/web.png)
+Questions XXX in [the textbook](../../book/) will assess your understanding of these materials.
 
 ----
 
-## Class Follow-Up Assignment
+### Related materials
 
-* Complete questions XXX-XXX in the textbook.
-
-----
-
-### Archived Related Materials
-
-* [Old Lecture Slides](PPT_old.pptx) ![PowerPoint](../../img/ppt.png)
-
-----
-
-<style type="text/css">
-header.header-page .page-heading h1 {
-  font-size: 45px;
-  margin-top: 0;
-}
-</style>
+* [In-Class Exercise](CE.html)
+* [Old Lecture Slides](PPT_old.pptx)

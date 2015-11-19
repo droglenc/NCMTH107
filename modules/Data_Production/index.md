@@ -39,4 +39,3 @@ Questions XXX in [the textbook](../../book/) will assess your understanding of t
 
 * [In-Class Exercise](CE.html)
 * [Old Lecture Slides](PPT_old.pptx)
-

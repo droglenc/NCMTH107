@@ -19,9 +19,8 @@ css: /css/modules.css
 
 ----
 
-## Class Preparation
+You should prepare for the concepts of this module by *reading Sections XXX* in [the textbook](../../book/) and watching the following videos:
 
-* Read Sections XXX in the textbook.
 * Watch ["Construct a Histogram"](https://www.youtube.com/v/sC7gjg9g3JU?version=3&autoplay=1){:target="_blank"} [13 mins] ![YouTube](../../img/youtube.png)
 * Watch ["Describe Shape"](https://www.youtube.com/v/H9ITfdaX2ZQ?version=3&autoplay=1){:target="_blank"} [13 mins] ![YouTube](../../img/youtube.png)
 * Watch "Calculate Median" [A](https://www.youtube.com/v/0SYsi38XucI?version=3&autoplay=1){:target="_blank"} [2 mins], [B](https://www.youtube.com/v/hTYTaOaQUcw?version=3&autoplay=1){:target="_blank"} [5 mins], **or** [C](https://www.youtube.com/v/9a8M_KfclBE?version=3&autoplay=1){:target="_blank"} [3 mins] ![YouTube](../../img/youtube.png)
@@ -31,29 +30,11 @@ css: /css/modules.css
     * Take notes on this handout -- [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx) [![Webpage](../../img/web.png)](RHO.html){:target="_blank"}
     * [R Script ![R Script](../../img/script.png)](RHO.R){:target="_blank"}
 
-----
-
-## In-Class Materials
-
-* [Class Exercise](CE.html) ![Webpage](../../img/web.png)
+Questions XXX in [the textbook](../../book/) will assess your understanding of these materials.
 
 ----
 
-## Class Follow-Up Assignment
+### Related materials
 
-* Complete questions XXX-XXX in the textbook.
-
-----
-
-### Archived Related Materials
-
-* [Old Lecture Slides](PPT_old.pptx) ![PowerPoint](../../img/ppt.png)
-
-----
-
-<style type="text/css">
-header.header-page .page-heading h1 {
-  font-size: 45px;
-  margin-top: 0;
-}
-</style>
+* [In-Class Exercise](CE.html)
+* [Old Lecture Slides](PPT_old.pptx)

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Normal Distributions
+title: Inference Concepts
 css: /css/modules.css
 ---
 
@@ -16,32 +16,14 @@ css: /css/modules.css
 
 ----
 
-## Class Preparation
 
-* Watch "68-95-99.7 Rule" [B](https://www.youtube.com/v/PJPXFOK8F8E?version=3&autoplay=1){:target="_blank"} [9 mins] **or** [A](https://www.youtube.com/v/cgxPcdPbujI?version=3&autoplay=1){:target="_blank"} [8 mins] ![YouTube](../../img/youtube.png)
+You should prepare for the concepts of this module by *reading Sections XXX* in [the textbook](../../book/) and watching the following videos:
 
-* Watch ["Forward Calculations in R"](https://vimeo.com/user45324800/normdist-forward){:target="_blank"} [6 mins] ![Ogle](../../img/dhovid.png)
-    * Take notes on this handout -- [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx) [![Webpage](../../img/web.png)](RHO.html){:target="_blank"}
-    * [R Script ![R Script](../../img/script.png)](RHO.R){:target="_blank"}
-* Watch ["Reverse Calculations in R"](https://vimeo.com/user45324800/normdist-reverse){:target="_blank"} [6 mins] ![Ogle](../../img/dhovid.png)
-    * Take notes on the same handout.
-
-* Read Sections XXX in the textbook.
+Questions XXX in [the textbook](../../book/) will assess your understanding of these materials.
 
 ----
 
-## In-Class Materials
+### Related materials
 
-* [Class Exercise](CE.html) ![Webpage](../../img/web.png)
-
-----
-
-## Class Follow-Up Assignment
-
-* Complete questions XXX-XXX in the textbook.
-
-----
-
-### Archived Related Materials
-
-* [Old Lecture Slides](PPT_old.pptx) ![PowerPoint](../../img/ppt.png)
+* [In-Class Exercise](CE.html)
+* [Old Lecture Slides](PPT_old.pptx)
