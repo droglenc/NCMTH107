@@ -45,7 +45,7 @@ Questions XXX in [the textbook](../../book/) will assess your understanding of t
 <style type="text/css">
 hr.style14 { 
   border: 0; 
-  height: 1px; 
+  height: 3px; 
   background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
   background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
   background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
