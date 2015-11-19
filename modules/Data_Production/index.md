@@ -24,9 +24,11 @@ css: /css/modules.css
 You should prepare for the concepts of this module by *reading Sections XXX* in [the textbook](../../book/) and watching the following videos:
 
 * Types of Studies -- [A](https://www.youtube.com/v/qksFkFh2ezo?version=3&autoplay=1&start=456&end=958){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/KDPBD3SPTPY?version=3&autoplay=1){:target="_blank"} [8 mins]
-* Types of Conclusions -- [A](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=1597){:target="_blank"} [3 mins]
+* [Types of Conclusions](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=1597){:target="_blank"} [3 mins]
+* [Types of Observational Studies]() [x mins]
 * Sample Design -- [A](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=20&end=580){:target="_blank"} [10 mins]
 * Experimental Design --  [A](https://www.youtube.com/v/v-xnPVCi9wM?version=3&autoplay=1&start=81&end=527){:target="_blank"} [10 mins] **or** [B](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=754&end=1126){:target="_blank"} [6 mins]
+* [Definitions in Experimental Design]() [x mins]
 * Randomization in R -- [A](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins]
     * Take notes on [this handout](RHO.html){:target="_blank"} (or [![PDF](../../img/pdf.png)](RHO.pdf) or [![MSWord](../../img/word.png)](RHO.docx))
     * [R Script](RHO.R){:target="_blank"}
