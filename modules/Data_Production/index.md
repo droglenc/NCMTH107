@@ -21,31 +21,24 @@ css: /css/modules.css
 
 ----
 
-## Class Preparation
+## Current Materials
 
-* Read Sections XXX in the textbook.
-* Watch "Types of Studies" [A](https://www.youtube.com/v/qksFkFh2ezo?version=3&autoplay=1&start=456&end=958){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/KDPBD3SPTPY?version=3&autoplay=1){:target="_blank"} [8 mins]
-* Watch [Types of Conclusions](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=1597){:target="_blank"} [3 mins]
-* Watch ["Sample Design"](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=20&end=580){:target="_blank"} [10 mins]
-* Watch "Experimental Design" [A](https://www.youtube.com/v/v-xnPVCi9wM?version=3&autoplay=1&start=81&end=527){:target="_blank"} [10 mins] **or** [B](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=754&end=1126){:target="_blank"} [6 mins]
-* Watch ["Randomization in R"](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins]
-    * Take notes on this handout -- [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx) [![Webpage](../../img/web.png)](RHO.html){:target="_blank"}
+You should prepare for the concepts of this module by *reading Sections XXX* in [the textbook](../../book/) and watching the following videos:
+
+* Types of Studies -- [A](https://www.youtube.com/v/qksFkFh2ezo?version=3&autoplay=1&start=456&end=958){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/KDPBD3SPTPY?version=3&autoplay=1){:target="_blank"} [8 mins]
+* Types of Conclusions -- [A](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=1597){:target="_blank"} [3 mins]
+* Sample Design -- [A](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=20&end=580){:target="_blank"} [10 mins]
+* Experimental Design --  [A](https://www.youtube.com/v/v-xnPVCi9wM?version=3&autoplay=1&start=81&end=527){:target="_blank"} [10 mins] **or** [B](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=754&end=1126){:target="_blank"} [6 mins]
+* ["Randomization in R"](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins]
+    * Take notes on [this handout](RHO.html){:target="_blank"} (or [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx) [![Webpage](../../img/web.png)](RHO.html){:target="_blank"})
     * [R Script](RHO.R){:target="_blank"}
 
-----
-
-## In-Class Materials
-
-* [Class Exercise](CE.html)
+Questions XXX in [the textbook](../../book/) will assess your understanding of the materials in this module.
 
 ----
-
-## Class Follow-Up Assignment
-
-* Complete questions XXX-XXX in the textbook.
-
 ----
 
-### Archived Related Materials
+### Related materials
 
+* [In-Class Exercise](CE.html)
 * [Old Lecture Slides](PPT_old.pptx)
