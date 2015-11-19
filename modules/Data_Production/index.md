@@ -30,15 +30,25 @@ You should prepare for the concepts of this module by *reading Sections XXX* in 
 * Sample Design -- [A](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=20&end=580){:target="_blank"} [10 mins]
 * Experimental Design --  [A](https://www.youtube.com/v/v-xnPVCi9wM?version=3&autoplay=1&start=81&end=527){:target="_blank"} [10 mins] **or** [B](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=754&end=1126){:target="_blank"} [6 mins]
 * ["Randomization in R"](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins]
-    * Take notes on [this handout](RHO.html){:target="_blank"} (or [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx) [![Webpage](../../img/web.png)](RHO.html){:target="_blank"})
+    * Take notes on [this handout](RHO.html){:target="_blank"} (or [![PDF](../../img/pdf.png)](RHO.pdf) or [![MSWord](../../img/word.png)](RHO.docx))
     * [R Script](RHO.R){:target="_blank"}
 
-Questions XXX in [the textbook](../../book/) will assess your understanding of the materials in this module.
+Questions XXX in [the textbook](../../book/) will assess your understanding of these materials.
 
-----
-----
+<hr class="style14">
 
 ### Related materials
 
 * [In-Class Exercise](CE.html)
 * [Old Lecture Slides](PPT_old.pptx)
+
+<style type="text/css">
+hr.style14 { 
+  border: 0; 
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+</style>
