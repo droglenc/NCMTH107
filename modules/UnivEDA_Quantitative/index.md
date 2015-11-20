@@ -26,9 +26,7 @@ You should prepare for the concepts of this module by *reading Sections XXX* in 
 * Calculate Median -- [A](https://www.youtube.com/v/0SYsi38XucI?version=3&autoplay=1){:target="_blank"} [2 mins], [B](https://www.youtube.com/v/hTYTaOaQUcw?version=3&autoplay=1){:target="_blank"} [5 mins], **or** [C](https://www.youtube.com/v/9a8M_KfclBE?version=3&autoplay=1){:target="_blank"} [3 mins]
 * Calculate Standard Deviation -- [A](https://www.youtube.com/v/qqOyy_NjflU?version=3&autoplay=1){:target="_blank"} [5 mins] **or** [B](https://www.youtube.com/v/atS4wX8I9H0?version=3&autoplay=1){:target="_blank"} [13 mins]
 * Calculate IQR -- [A](https://www.youtube.com/v/R6VDj7pEG30?version=3&autoplay=1){:target="_blank"} [3 mins] **or** [B](https://www.youtube.com/v/F3WcEAW-M80?version=3&start=366&autoplay=1){:target="_blank"} [9 mins]
-* [Univariate EDA (Quantitative) in R](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins]
-    * Take notes on [this handout](RHO.html){:target="_blank"} (or [![PDF](../../img/pdf.png)](RHO.pdf) or [![MSWord](../../img/word.png)](RHO.docx))
-    * [R Script](RHO.R){:target="_blank"}
+* [Univariate EDA (Quantitative) in R](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins]  [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 
 Questions XXX in [the textbook](../../book/) will assess your understanding of these materials.
 
