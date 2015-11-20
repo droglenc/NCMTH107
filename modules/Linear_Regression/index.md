@@ -18,9 +18,7 @@ css: /css/modules.css
 
 You should prepare for the concepts of this module by *reading Sections XXX* in [the textbook](../../book/) and watching the following videos:
 
-* [Linear Regression in R](https://vimeo.com/user45324800/regression1){:target="_blank"} [8 mins]
-    * Take notes on [this handout](RHO.html){:target="_blank"} (or [![PDF](../../img/pdf.png)](RHO.pdf) or [![MSWord](../../img/word.png)](RHO.docx))
-    * [R Script](RHO.R){:target="_blank"}
+* [Linear Regression in R](https://vimeo.com/user45324800/regression1){:target="_blank"} [8 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 
 Questions XXX in [the textbook](../../book/) will assess your understanding of these materials.
 

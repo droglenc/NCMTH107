@@ -23,9 +23,7 @@ You should prepare for the concepts of this module by *reading Sections XXX* in 
 
 * [Construct a Scatterplot](https://www.youtube.com/v/yXmz922K9Ks?version=3&autoplay=1){:target="_blank"} [7 mins]
 * [What is the Correlation?](https://www.youtube.com/v/PtYVrF_WT3A?version=3&start=32&autoplay=1){:target="_blank"} [8 mins]
-* [Bivariate EDA (Quantitative) in R](https://vimeo.com/user45324800/biveda-quant){:target="_blank"} [8 mins]
-    * Take notes on [this handout](RHO.html){:target="_blank"} (or [![PDF](../../img/pdf.png)](RHO.pdf) or [![MSWord](../../img/word.png)](RHO.docx))
-    * [R Script](RHO.R){:target="_blank"}
+* [Bivariate EDA (Quantitative) in R](https://vimeo.com/user45324800/biveda-quant){:target="_blank"} [8 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 
 Questions XXX in [the textbook](../../book/) will assess your understanding of these materials.
 
