@@ -5,7 +5,7 @@ css: /css/modules.css
 ---
 
 <div class="ILOs">
-<p>Statistical analyses rely on data and that data must be properly produced (or collected).  There are two major methods for producing data -- observational and experimental studies.  This module explores the differences in structure and conclusions that can be made from these two types of studies and briefly describes key definitions and concepts for each.</p>
+<p>Statistical analyses rely on data and that data must be properly produced (or collected).  This module explores the differences in structure and conclusions that can be made from the two major types of studies and briefly describes key definitions and concepts for each.</p>
 
 <p>After completing this module, you should be able to ...</p>
 
@@ -25,10 +25,10 @@ You should prepare for the concepts of this module by *reading Sections XXX* in 
 
 * Types of Studies -- [A](https://www.youtube.com/v/qksFkFh2ezo?version=3&autoplay=1&start=456&end=958){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/KDPBD3SPTPY?version=3&autoplay=1){:target="_blank"} [8 mins]
 * [Types of Conclusions](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=1597){:target="_blank"} [3 mins]
-* [Types of Observational Studies]() [x mins]
+* [Types of Observational Studies](https://vimeo.com/user45324800/observationaltypes){:target="_blank"} [3 mins]
 * Sample Design -- [A](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=20&end=580){:target="_blank"} [10 mins]
 * Experimental Design --  [A](https://www.youtube.com/v/v-xnPVCi9wM?version=3&autoplay=1&start=81&end=527){:target="_blank"} [10 mins] **or** [B](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=754&end=1126){:target="_blank"} [6 mins]
-* [Definitions in Experimental Design]() [x mins]
+* [Definitions in Experimental Design](https://vimeo.com/user45324800/experimentdefns){:target="_blank"} [4 mins]
 * [Randomization in R](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 
 Questions XXX in [the textbook](../../book/) will assess your understanding of these materials.
@@ -38,4 +38,5 @@ Questions XXX in [the textbook](../../book/) will assess your understanding of t
 ### Related materials
 
 * [In-Class Exercise](CE.html)
+* [Slides in Video](PPT.pptx)
 * [Old Lecture Slides](PPT_old.pptx)
