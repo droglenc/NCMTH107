@@ -21,30 +21,20 @@ css: /css/modules.css
 
 ----
 
-## Class Preparation
+You should prepare for the concepts of this module by *reading Sections XXX* in [the textbook](../../book/) and watching the following videos:
 
-* Read Sections XXX in the textbook.
-* Watch ["What is R?"](https://www.youtube.com/v/TR2bHSJ_eck?version=3&autoplay=1){:target="_blank"} [2 mins] 
-* Watch ["What's Up with R?"](https://www.youtube.com/v/ZwYQPtU2Pa0?version=3&autoplay=1&start=1&end=111){:target="_blank"} [3 mins] ![YouTube](../../img/youtube.png)
-* Watch ["Retrieve Data from Webpage"](https://vimeo.com/user45324800/ncstats-preparedatawebpage){:target="_blank"} [3 mins] ![Ogle](../../img/dhovid.png)
-* Watch ["Enter Your Own Data (with Excel)"](http://derekogle.com/NCMTH107/img/dhovid.png){:target="_blank"} [4 mins] or ["Enter Your Own Data (without Excel)"](https://vimeo.com/user45324800/ncstats-preparedatatextfile){:target="_blank"} [4 mins] ![Ogle](../../img/dhovid.png)
-* Watch ["Load Data into RStudio"](https://vimeo.com/user45324800/ncstats-loadcsvrstudio){:target="_blank"} [6 mins]
-* Watch ["Subset data.frame with filterD"](https://vimeo.com/user45324800/filterd){:target="_blank"} [6 mins]
+* [What is R?](https://www.youtube.com/v/TR2bHSJ_eck?version=3&autoplay=1){:target="_blank"} [2 mins] 
+* [What's Up with R?](https://www.youtube.com/v/ZwYQPtU2Pa0?version=3&autoplay=1&start=1&end=111){:target="_blank"} [3 mins] ![YouTube](../../img/youtube.png)
+* [Retrieve Data from Webpage](https://vimeo.com/user45324800/ncstats-preparedatawebpage){:target="_blank"} [3 mins] ![Ogle](../../img/dhovid.png)
+* [Enter Your Own Data (with Excel)](http://derekogle.com/NCMTH107/img/dhovid.png){:target="_blank"} [4 mins] or [Enter Your Own Data (without Excel)](https://vimeo.com/user45324800/ncstats-preparedatatextfile){:target="_blank"} [4 mins] ![Ogle](../../img/dhovid.png)
+* [Load Data into RStudio](https://vimeo.com/user45324800/ncstats-loadcsvrstudio){:target="_blank"} [6 mins]
+* [Subset data.frame with filterD](https://vimeo.com/user45324800/filterd){:target="_blank"} [6 mins]
 
-----
-
-## In-Class Materials
-
-* [Class Exercise](CE.html) ![Webpage](../../img/web.png)
+Questions XXX in [the textbook](../../book/) will assess your understanding of these materials.
 
 ----
 
-## Class Follow-Up Assignment
+### Related materials
 
-* Complete questions XXX-XXX in the textbook.
-
-----
-
-### Archived Related Materials
-
-* [Old Lecture Slides](PPT_old.pptx) ![PowerPoint](../../img/ppt.png)
+* [Demonstration Handout](RHO.html)
+* [In-Class Exercise](CE.html)
