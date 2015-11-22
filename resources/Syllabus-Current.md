@@ -2,12 +2,15 @@
 layout: page
 title: Statistical Concepts and Analysis
 subtitle: MTH107
+css: /css/lecture.css
 ---
+
+<img class="img-right" src="../img/dbh.jpg">
 
 * [Description](#description)
 * [Learning Outcomes](#learning-outcomes)
 * [Tutors](#tutors)
-* [Grading](#grading) -- [Quizzes](#quizzes), [Participation](#participation), [Homework](#homework), [Exams](#exams), [Extra Credit](#extra-credit)
+* [Grading](#grading) -- [Quizzes](#quizzes), [Participation](#participation), [Homework](#homework), [Exams](#exams), [Project](project.html), [Extra Credit](#extra-credit)
 * [Conduct](#conduct)
 * [Accomodations](#accomodations)
 * [Tentative Schedule](#tentative-schedule)
