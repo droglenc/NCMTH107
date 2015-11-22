@@ -1,7 +1,10 @@
 ---
 layout: page
 title: Statistics Project
+css: /css/lecture.css
 ---
+
+<img class="img-right" src="../img/dbh.jpg">
 
 * [Extent](#extent)
 * [Data Collection](#data-collection)

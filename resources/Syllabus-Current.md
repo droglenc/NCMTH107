@@ -2,10 +2,7 @@
 layout: page
 title: Statistical Concepts and Analysis
 subtitle: MTH107
-css: /css/lecture.css
 ---
-
-<img class="img-right" src="../img/dbh.jpg">
 
 * [Description](#description)
 * [Learning Outcomes](#learning-outcomes)
