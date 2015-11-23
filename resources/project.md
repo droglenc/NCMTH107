@@ -4,8 +4,6 @@ title: Statistics Project
 css: /css/lecture.css
 ---
 
-<img class="img-right" src="../img/dbh.jpg">
-
 * [Extent](#extent)
 * [Data Collection](#data-collection)
 * [Proposal](#proposal)
@@ -19,6 +17,7 @@ css: /css/lecture.css
 You will complete a “term project” that is a brief statistical study to answer a question of interest to you.  In this project, you will formulate a question (and hypotheses), develop a data production strategy, collect data, perform relevant analyses to answer the question, and produce a document that details your findings.  More specific information about the project is listed below.
 
 ## Extent
+<img class="img-right" src="../img/dbh.jpg">
 
 Your project should provide an opportunity for you to demonstrate your proficiency in (i) producing data, (ii) performing EDAs, and (iii) performing hypothesis tests.  Thus, you should develop a question of interest to you (and me[^1]) that will require you to record at least one variable on individuals sampled from at least two populations such that your question may be answered with one of the “two-or-more samples” hypothesis tests that you will learn in this class (i.e., 2-sample t- or chi-square tests).  Research questions that may be answered with linear regression or one of the 1-sample methods may be considered but I will need to pre-approve these projects (i.e., you will need to make a strong argument for why your proposed study is of great interest to you).  Past project titles and some reports (as examples) are [shown below](past-projects).
 
@@ -36,25 +35,27 @@ Before beginning your project you must submit a typed proposal to me.  This prop
 * identification of the individual, variable(s), and population(s) you will study, and
 * a thorough description of how you will collect your data.
 
-Your proposal is due in the fourth week (see [Due Dates page](../calendar.html)).  I will review your proposal within the context of correctness and efficiency.  You may be required to submit a corrected proposal.
+Your proposal is due in the fourth week (see [Due Dates page](../calendar.html){:target="_blank"}).  I will review your proposal within the context of correctness and efficiency.  You may be required to submit a corrected proposal.
 
 ## Exploratory Data Analysis
 
-The initial project report will include thorough univariate EDA for each variable, a thorough univariate EDA for your response variable separated by each group, and appropriate bivariate EDAs.  Your analyses should be typed, carefully writted (concise and grammatically correct), and refer to graphs and tables as appropriate.
+The initial project report will include thorough univariate EDA for each variable, a thorough univariate EDA for your response variable separated by each group, and appropriate bivariate EDAs.  Your analyses should be typed, carefully written (concise and grammatically correct), and refer to graphs and tables as appropriate.
 
-Your EDA write-up is due in the tenth week (see [Due Dates page](../calendar.html))
+Your EDA write-up is due in the tenth week (see [Due Dates page](../calendar.html){:target="_blank"})
 
 ## Hypothesis Testing
 
 The final project report will include a thorough statistical analysis of your research questions.  Specifically, your report should include:
 
-* Introduction: background information needed to understand the project, why the results are important to people, why you were interested in the project, and what the objectives of the study were (i.e., the research hypothesis).
-* Methods: describe the methodology you used to collect and analyze the data.
-* Results: the results from your 11-steps of hypothesis testing.
-•	Discussion: a summary of what you found in the results and how it relates to your reasoning from the introduction.  Also include any items that you would change if you were to analyze this research hypothesis again or where future research should go.
-•	Works cited: list of references (if any) used to support your project.
+* **Introduction:** background information needed to understand the project, why the results are important to people, why you were interested in the project, and what the objectives of the study were (i.e., the research hypothesis).
+* **Methods:** describe the methodology you used to collect and analyze the data.
+* **Results:** the results from your 11-steps of hypothesis testing.
+* **Discussion:** a summary of what you found in the results and how it relates to your reasoning from the introduction.  Also include any items that you would change if you were to analyze this research hypothesis again or where future research should go.
+* **Works cited:** list of references (if any) used to support your project.
+* **R Appendix:** all relevant and working R commands.
+* **Other Appendix:** other relevant materials (e.g., survey instrument) as necessary.
 
-This final write-up is due in the fourteenth week (see [Due Dates page](../calendar.html))
+This final write-up is due in the fourteenth week (see [Due Dates page](../calendar.html){:target="_blank"})
 
 ## Past Projects
 
