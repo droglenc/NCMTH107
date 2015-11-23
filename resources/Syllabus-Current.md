@@ -7,7 +7,7 @@ subtitle: MTH107
 * [Description](#description)
 * [Learning Outcomes](#learning-outcomes)
 * [Tutors](#tutors)
-* [Grading](#grading) -- [Quizzes](#quizzes), [Participation](#participation), [Homework](#homework), [Exams](#exams), [Project](project.html), [Extra Credit](#extra-credit)
+* [Grading](#grading) -- [Quizzes](#quizzes), [Homework](#homework), [Exams](#exams), [Project](project.html), [Extra Credit](#extra-credit)
 * [Conduct](#conduct)
 * [Accomodations](#accomodations)
 * [Tentative Schedule](#tentative-schedule)
@@ -81,18 +81,13 @@ Lowest possible final letter grades will be assigned by comparing your overall p
 ### Quizzes
 
 A short quiz will be given in the FIRST 4-10 minutes of EVERY class period.  These quizzes are intended to encourage you to complete the preparation required for that day's class.  Thus, quizzes are "open notes" (but **not** "open book" or "open computer").  You will be notified at the end of each class period about what portion of the text and online resources are required to prepare for the next class period.  Quizzes that are missed for reasons that have not been approved by me cannot be made up.  
-
-### Participation
-
-This course is taught in the framework of active-learning, peer-instruction, and inquiry-based pedagogies.  This means that you will be asked to prepare for the class period, answer questions based on your reading, work in small groups with others, and participate in small- and large-group discussions.  Your participation in these activities is critical to your learning and, thus, your success in this course.
-
 ### Homework
 
 The text contains many review exercises throughout each chapter and a few homework problems at the end of each chapter.  Homework problems will be assigned when a concept module has been completed.  Homework problems will be handed in but will only be graded for completeness (i.e., checking whether the questions have been completely answered or not).  Answer keys will be posted online so that you may check your work.
 
 ### Exams
 
-Exams will be on 3-Oct (Fri), 24-Oct (Fri), and 12-Dec (Fri).  Make-up exams will be provided only if you have a fixed commitment of sufficient importance that was set before the beginning of the semester or a verifiable medical condition.  You will not be allowed to make up an exam missed without my prior approval.  The final exam will not be given early.
+Exam dates are shown on the [Due Dates page](../calendar.html){:target="_blank"}.  Make-up exams will be provided only if you have a fixed commitment of sufficient importance that was set before the beginning of the semester or a verifiable medical condition.  You will not be allowed to make up an exam missed without my prior approval.  The final exam will not be given early.
 
 ### "Statistics in Use" Reports
 
@@ -101,11 +96,6 @@ Three typed reports about the use of statistics in your everyday life.  These re
 ### Project
 
 See the [Class Project page](project.html).
-
-
-### Incomplete Grades
-
-Under Northland College policy, an incomplete grade will be given ONLY under extreme circumstances beyond your control, such as a major illness.  An incomplete grade will be given ONLY if you have successfully completed the entire course except for the final exam.
 
 ### Extra Credit
 
@@ -116,6 +106,10 @@ Extra credit may be obtained by completing a two-part (described below) typed re
 
 Each exam reflection is worth the lesser of either 2% or the percentage required for your exam score to equal 100% times 0.2.  For example, if Jonny and Jenny each write perfect exam reflections but Jonny had a 70% on his exam and Jenny had a 92% on her exam, then Jonny will earn 2% extra credit and Jenny will earn 8%*0.2=1.6% extra credit.
 
+### Incomplete Grades
+
+Under Northland College policy, an incomplete grade will be given ONLY under extreme circumstances beyond your control, such as a major illness.  An incomplete grade will be given ONLY if you have successfully completed the entire course except for the final exam.
+
 
 ## Conduct
 
@@ -123,10 +117,13 @@ Your conduct in class should revolve around the idea of being respectful of me a
 
 * Arrive to class on time.  If you arrive late, then take the first available seat as quietly as possible.
 * Do not bring friends, children, pets, meals, or anything else to class that should not be there.
-* Turn off and store out-of-sight cell phones and other electronic devices (use of personal laptops for work related to class are permitted).
+* Turn off and store out-of-sight cell phones and other electronic devices (use of a personal laptop for work related to class is permitted).
 * Do not use the college or personal computers for other than assigned tasks.
 * Do not engage in side discussions while I or others are speaking to the entire class.
 * Do not use disrespectful language when addressing others.
+
+
+This course is taught in the framework of active-learning, peer-instruction, and inquiry-based pedagogies.  This means that you will be asked to prepare for the class period, answer questions based on your reading, work in small groups with others, and participate in small- and large-group discussions.  Your participation in these activities is critical to your learning and success in this course, but also to the overall success of the course.
 
 ## Accomodations
 Students in need of academic accommodation should contact [Kathleen Skoraczewski](mailto:kskoraczewski@northland.edu), Campus Counselor	and Disabilities Service Coordinator, ext. 1369, Ponzio Center Rm. 232.
