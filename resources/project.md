@@ -171,3 +171,4 @@ The following are titles (with links to some final reports) of projects that stu
 * Comparison of favorite aspects of Christmas holiday by gender.
 * Measurement of changes in self-esteem before and after completing difficult word puzzles.
 
+## Footnotes
