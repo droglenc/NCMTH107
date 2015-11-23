@@ -80,7 +80,8 @@ Lowest possible final letter grades will be assigned by comparing your overall p
 
 ### Quizzes
 
-A short quiz will be given in the FIRST 4-10 minutes of EVERY class period.  These quizzes are intended to encourage you to complete the preparation required for that day's class.  Thus, quizzes are "open notes" (but **not** "open book" or "open computer").  You will be notified at the end of each class period about what portion of the text and online resources are required to prepare for the next class period.  Quizzes that are missed for reasons that have not been approved by me cannot be made up.  
+A short quiz will be given in the FIRST 4-10 minutes of EVERY class period.  These quizzes are intended to encourage you to complete the preparation required for that day's class.  Thus, quizzes are "open notes" (but **not** "open book" or "open computer").  You will be notified at the end of each class period about what portion of the text and online resources are required to prepare for the next class period.  Quizzes that are missed for reasons that have not been approved by me cannot be made up.
+
 ### Homework
 
 The text contains many review exercises throughout each chapter and a few homework problems at the end of each chapter.  Homework problems will be assigned when a concept module has been completed.  Homework problems will be handed in but will only be graded for completeness (i.e., checking whether the questions have been completely answered or not).  Answer keys will be posted online so that you may check your work.
@@ -91,7 +92,11 @@ Exam dates are shown on the [Due Dates page](../calendar.html){:target="_blank"}
 
 ### "Statistics in Use" Reports
 
-Three typed reports about the use of statistics in your everyday life.  These reports may come from the use of statistics in the news, in your other classes, or other work that you have done.  If you report on news items then you should discuss the background of the information in the report, the use of statistics, how the statistics relate to what you’ve learned in class, how the statistics were presented, how you feel about that presentation, and any questions that you may have.  The FOCUS of your report should be on the statistics used in the news item (not just the news item).  If you used statistics in another class then you should discuss the background of the project where you used statistics, what the statistics were used for (i.e., purpose), a presentation of your statistical work in the report (i.e., findings), how the statistics relate to what you've learned in class, and any questions that you may have.  Again, the FOCUS should be on the statistics that you used.
+Three typed reports about the use of statistics in your everyday life.  These reports may come from the use of statistics in the news, in your other classes, or other work that you have done.
+
+If you report on news items then you should discuss the background of the information in the report, the use of statistics, how the statistics relate to what you’ve learned in class, how the statistics were presented, how you feel about that presentation, and any questions that you may have.  The FOCUS of your report should be on the statistics used in the news item (not just the news item).
+
+If you used statistics in another class then you should discuss the background of the project where you used statistics, what the statistics were used for (i.e., purpose), a presentation of your statistical work in the report (i.e., findings), how the statistics relate to what you've learned in class, and any questions that you may have.  Again, the FOCUS should be on the statistics that you used.
 
 ### Project
 
