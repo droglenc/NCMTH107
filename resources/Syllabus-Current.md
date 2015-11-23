@@ -102,7 +102,7 @@ Lowest possible final letter grades will be assigned by comparing your overall p
 <td><input type="checkbox" name="PROJ_USE"></td></tr>
 
 <tr><th>Percent</th>
-<td><input type="text" name="QUIZ_SC"></td>
+<td><input type="text" name="QUIZ_SC" size="2"></td>
 <td><input type="text" name="HW_SC"></td>
 <td><input type="text" name="SIUR_SC"></td>
 <td><input type="text" name="MT1_SC"></td>
