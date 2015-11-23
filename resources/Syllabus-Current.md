@@ -2,7 +2,10 @@
 layout: page
 title: Statistical Concepts and Analysis
 subtitle: MTH107
+css: /css/syllabus.css
 ---
+
+<SCRIPT SRC="../js/grader.js"></SCRIPT>
 
 * [Description](#description)
 * [Learning Outcomes](#learning-outcomes)
@@ -13,8 +16,6 @@ subtitle: MTH107
 * [Tentative Schedule](#tentative-schedule)
 
 ----
-
-<SCRIPT SRC="../js/grader.js"></SCRIPT>
 
 ## Description
 
@@ -60,29 +61,24 @@ An overall percentage score will be computed from the items and associated weigh
 
 Lowest possible final letter grades will be assigned by comparing your overall percentage score (rounded to a whole number) to the values shown below:
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg .ctrcell{text-align:center}
-</style>
 <table class="tg">
   <tr>
-    <td class="ctrcell"></td><td class="ctrcell">A 92-100</td><td class="ctrcell">A- 90-91</td>
+    <td></td><td>A 92-100</td><td>A- 90-91</td>
   </tr>
   <tr>
-    <td class="ctrcell">B+ 87-89</td><td class="ctrcell">B  82-86</td><td class="ctrcell">B- 80-81</td>
+    <td>B+ 87-89</td><td>B  82-86</td><td>B- 80-81</td>
   </tr>
   <tr>
-    <td class="ctrcell">C+ 77-79</td><td class="ctrcell">C  70-76</td><td class="ctrcell"></td>
+    <td>C+ 77-79</td><td>C  70-76</td><td></td>
   </tr>
   <tr>
-    <td class="ctrcell">D+ 67-69</td><td class="ctrcell">D  60-66</td><td class="ctrcell">F   0-59</td>
+    <td>D+ 67-69</td><td>D  60-66</td><td>F   0-59</td>
   </tr>
 </table>
 
 
 <form name="GRADECALC">
-<table>
+<table class="grader">
 <tr><th>Assessment</th>
 <th><a href="#quizzes">Quiz</a></th>
 <th><a href="#homework">HW</a></th>
@@ -95,7 +91,7 @@ Lowest possible final letter grades will be assigned by comparing your overall p
 <tr><th>Done?</th>
 <td><input type="checkbox" name="QUIZ_USE" checked></td>
 <td><input type="checkbox" name="HW_USE" checked></td>
-<td><input type="checkbox" name="SIUR_USE" checked></td>
+<td><input type="checkbox" name="SIUR_USE"></td>
 <td><input type="checkbox" name="MT1_USE"></td>
 <td><input type="checkbox" name="MT2_USE"></td>
 <td><input type="checkbox" name="FNL_USE"></td>
