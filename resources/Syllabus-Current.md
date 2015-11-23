@@ -103,16 +103,16 @@ Lowest possible final letter grades will be assigned by comparing your overall p
 <td><input type="checkbox" name="PROJ_USE"></td></tr>
 
 <tr><th>Percent</th>
-<td><input type="text", name="QUIZ_SC", size=4></td>
-<td><input type="text", name="HW_SC", size=4></td>
-<td><input type="text", name="SIU_SC", size=4></td>
-<td><input type="text", name="MT1_SC", size=4></td>
-<td><input type="text", name="MT2_SC", size=4></td>
-<td><input type="text", name="FNL_SC", size=4></td>
-<td><input type="text", name="PROJ_SC", size=4></td></tr>
+<td><input type="text" name="QUIZ_SC" size=4></td>
+<td><input type="text" name="HW_SC" size=4></td>
+<td><input type="text" name="SIU_SC" size=4></td>
+<td><input type="text" name="MT1_SC" size=4></td>
+<td><input type="text" name="MT2_SC" size=4></td>
+<td><input type="text" name="FNL_SC" size=4></td>
+<td><input type="text" name="PROJ_SC" size=4></td></tr>
 
 <tr><th>Weight</th>
-<th>15%</th><th>%</th><th>5%</th><th>7%</th><th>17.5%</th><th>17.5%</th><th>25%</th><th>13%</th></tr>
+<th>15%</th><th>5%</th><th>7%</th><th>17.5%</th><th>17.5%</th><th>25%</th><th>13%</th></tr>
 
 <tr><th colspan=8><input type="button", value=" CALCULATE YOUR CURRENT GRADE ", onclick=calc_grade(this.form)></th></tr>
 
