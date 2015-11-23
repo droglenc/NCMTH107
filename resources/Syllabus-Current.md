@@ -94,9 +94,9 @@ Lowest possible final letter grades will be assigned by comparing your overall p
 <th><a href="#project">Project</A></th></tr>
 
 <tr><th>Done?</th>
-<td><input type="checkbox" name="QUIZ_USE" checked=true></td>
-<td><input type="checkbox" name="HW_USE" checked=true></td>
-<td><input type="checkbox" name="SIUR_USE" checked=false></td>
+<td><input type="checkbox" name="QUIZ_USE" checked></td>
+<td><input type="checkbox" name="HW_USE" checked></td>
+<td><input type="checkbox" name="SIUR_USE" checked></td>
 <td><input type="checkbox" name="MT1_USE"></td>
 <td><input type="checkbox" name="MT2_USE"></td>
 <td><input type="checkbox" name="FNL_USE"></td>
@@ -114,7 +114,7 @@ Lowest possible final letter grades will be assigned by comparing your overall p
 <tr><th>Weight</th>
 <th>15%</th><th>%</th><th>5%</th><th>7%</th><th>17.5%</th><th>17.5%</th><th>25%</th><th>13%</th></tr>
 
-<tr><th colspan=8><input type="button", Value=" CALCULATE YOUR CURRENT GRADE ", onclick=calc_grade(this.form)></th></tr>
+<tr><th colspan=8><input type="button", value=" CALCULATE YOUR CURRENT GRADE ", onclick=calc_grade(this.form)></th></tr>
 
 <tr><th colspan=4>O'all Percentage: <input type="text", name="SCORE", size=5></th>
 <th colspan=4>Projected Grade: <input type="text", name="GRADE", size=2></th></tr>
