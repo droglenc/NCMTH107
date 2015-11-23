@@ -80,10 +80,11 @@ Lowest possible final letter grades will be assigned by comparing your overall p
   </tr>
 </table>
 
-<FORM NAME="GRADECALC">
+
+<form name="GRADECALC">
 <div align="center">
-<table BORDER=1 CELLSPACING=3 CELLPADDING=3>
-<tr BGCOLOR="#C0C0C0">
+<table style="border: 1; padding: 3;">
+<tr style="bgcolor: #C0C0C0;">
 <th>Assessment</th><th><a href="#quizzes">Quiz</a></th>
 <th><a href="#homework">HW</a></th>
 <th><a href="#statistics-in-use-reports">SIUR</a></th>
@@ -92,32 +93,32 @@ Lowest possible final letter grades will be assigned by comparing your overall p
 <th><a href="#exams">Final</A></th>
 <th><a href="#project">Project</A></th></tr>
 
-<tr ALIGN=CENTER><th BGCOLOR="#C0C0C0">Done?</th>
-<td><INPUT TYPE="checkbox" NAME="QUIZ_USE" checked=true></td>
-<td><INPUT TYPE="checkbox" NAME="HW_USE" checked=true></td>
-<td><INPUT TYPE="checkbox" NAME="SIUR_USE" checked=false></td>
-<td><INPUT TYPE="checkbox" NAME="MT1_USE"></td>
-<td><INPUT TYPE="checkbox" NAME="MT2_USE"></td>
-<td><INPUT TYPE="checkbox" NAME="FNL_USE"></td>
-<td><INPUT TYPE="checkbox" NAME="PROJ_USE"></td></tr>
+<tr style="text-align: center;"><th style="bgcolor: #C0C0C0;">Done?</th>
+<td><input type="checkbox" name="QUIZ_USE" checked=true></td>
+<td><input type="checkbox" name="HW_USE" checked=true></td>
+<td><input type="checkbox" name="SIUR_USE" checked=false></td>
+<td><input type="checkbox" name="MT1_USE"></td>
+<td><input type="checkbox" name="MT2_USE"></td>
+<td><input type="checkbox" name="FNL_USE"></td>
+<td><input type="checkbox" name="PROJ_USE"></td></tr>
 
-<tr ALIGN=CENTER><th BGCOLOR="#C0C0C0">Percent</th>
-<td><INPUT TYPE="text", NAME="QUIZ_SC", SIZE=4></td>
-<td><INPUT TYPE="text", NAME="HW_SC", SIZE=4></td>
-<td><INPUT TYPE="text", NAME="SIU_SC", SIZE=4></td>
-<td><INPUT TYPE="text", NAME="MT1_SC", SIZE=4></td>
-<td><INPUT TYPE="text", NAME="MT2_SC", SIZE=4></td>
-<td><INPUT TYPE="text", NAME="FNL_SC", SIZE=4></td>
-<td><INPUT TYPE="text", NAME="PROJ_SC", SIZE=4></td></tr>
+<tr style="text-align: center;"><th style="bgcolor: #C0C0C0;">Percent</th>
+<td><input type="text", name="QUIZ_SC", size=4></td>
+<td><input type="text", name="HW_SC", size=4></td>
+<td><input type="text", name="SIU_SC", size=4></td>
+<td><input type="text", name="MT1_SC", size=4></td>
+<td><input type="text", name="MT2_SC", size=4></td>
+<td><input type="text", name="FNL_SC", size=4></td>
+<td><input type="text", name="PROJ_SC", size=4></td></tr>
 
-<tr ALIGN=CENTER><th BGCOLOR="#C0C0C0">Weight</th>
+<tr ALIGN=CENTER><th style="bgcolor: #C0C0C0;">Weight</th>
 <th>15%</th><th>%</th><th>5%</th><th>7%</th><th>17.5%</th><th>17.5%</th><th>25%</th><th>13%</th></tr>
 
-<tr><th colspan=8><INPUT TYPE="button", Value=" CALCULATE YOUR CURRENT GRADE ", ONCLICK=calc_grade(this.form)></th></tr>
+<tr><th colspan=8><input type="button", Value=" CALCULATE YOUR CURRENT GRADE ", ONCLICK=calc_grade(this.form)></th></tr>
 
-<tr><th colspan=4><FONT COLOR="#FF0000">O'all Percentage:</FONT> <INPUT TYPE="text", NAME="SCORE", SIZE=5></th>
-<th COLSPAN=4><FONT COLOR="#FF0000">Projected Grade:</FONT> <INPUT TYPE="text", NAME="GRADE", SIZE=2></th></tr>
-</TABLE></div>
+<tr><th colspan=4>O'all Percentage: <input type="text", name="SCORE", size=5></th>
+<th colspan=4>Projected Grade: <input type="text", name="GRADE", size=2></th></tr>
+</table></div>
 
 
 
