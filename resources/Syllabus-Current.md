@@ -83,8 +83,8 @@ Lowest possible final letter grades will be assigned by comparing your overall p
 
 <form name="GRADECALC">
 <div align="center">
-<table style="border: 1; padding: 3;">
-<tr style="bgcolor: #C0C0C0;">
+<table>
+<tr>
 <th>Assessment</th><th><a href="#quizzes">Quiz</a></th>
 <th><a href="#homework">HW</a></th>
 <th><a href="#statistics-in-use-reports">SIUR</a></th>
@@ -93,7 +93,7 @@ Lowest possible final letter grades will be assigned by comparing your overall p
 <th><a href="#exams">Final</A></th>
 <th><a href="#project">Project</A></th></tr>
 
-<tr style="text-align: center;"><th style="bgcolor: #C0C0C0;">Done?</th>
+<tr><th>Done?</th>
 <td><input type="checkbox" name="QUIZ_USE" checked=true></td>
 <td><input type="checkbox" name="HW_USE" checked=true></td>
 <td><input type="checkbox" name="SIUR_USE" checked=false></td>
@@ -102,7 +102,7 @@ Lowest possible final letter grades will be assigned by comparing your overall p
 <td><input type="checkbox" name="FNL_USE"></td>
 <td><input type="checkbox" name="PROJ_USE"></td></tr>
 
-<tr style="text-align: center;"><th style="bgcolor: #C0C0C0;">Percent</th>
+<tr><th>Percent</th>
 <td><input type="text", name="QUIZ_SC", size=4></td>
 <td><input type="text", name="HW_SC", size=4></td>
 <td><input type="text", name="SIU_SC", size=4></td>
@@ -111,10 +111,10 @@ Lowest possible final letter grades will be assigned by comparing your overall p
 <td><input type="text", name="FNL_SC", size=4></td>
 <td><input type="text", name="PROJ_SC", size=4></td></tr>
 
-<tr ALIGN=CENTER><th style="bgcolor: #C0C0C0;">Weight</th>
+<tr><th>Weight</th>
 <th>15%</th><th>%</th><th>5%</th><th>7%</th><th>17.5%</th><th>17.5%</th><th>25%</th><th>13%</th></tr>
 
-<tr><th colspan=8><input type="button", Value=" CALCULATE YOUR CURRENT GRADE ", ONCLICK=calc_grade(this.form)></th></tr>
+<tr><th colspan=8><input type="button", Value=" CALCULATE YOUR CURRENT GRADE ", onclick=calc_grade(this.form)></th></tr>
 
 <tr><th colspan=4>O'all Percentage: <input type="text", name="SCORE", size=5></th>
 <th colspan=4>Projected Grade: <input type="text", name="GRADE", size=2></th></tr>
