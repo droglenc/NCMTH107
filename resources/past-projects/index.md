@@ -3,7 +3,7 @@ layout: page
 title: Past Projects
 ---
 
-The following are titles of projects completed by students in past sections. Some are linked to the student's actual report. These reports did not necessarily earn perfect scores.  Thus, they should be used as general examples, not as templates for your own reports.
+The following are titles (with links to some final reports) of projects that students in past semester have completed.  Note that the directions for these past projects were different and these reports did not receive perfect scores.  Thus, use these as examples for the scope of the project and the level of write-up but refer to the directions above for specific instructions for your project.
 
 ### Fall, 2008
 
