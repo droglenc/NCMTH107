@@ -17,7 +17,7 @@ css: /css/lecture.css
 You will complete a “term project” that is a brief statistical study to answer a question of interest to you.  In this project, you will formulate a question (and hypotheses), develop a data production strategy, collect data, perform relevant analyses to answer the question, and produce a document that details your findings.  More specific information about the project is listed below.
 
 ## Extent
-<img class="img-right" src="../img/dbh.jpg">
+<img class="img-right" src="../img/datacollection.jpg">
 
 Your project should provide an opportunity for you to demonstrate your proficiency in (i) producing data, (ii) performing EDAs, and (iii) performing hypothesis tests.  Thus, you should develop a question of interest to you (and me[^1]) that will require you to record at least one variable on individuals sampled from at least two populations such that your question may be answered with one of the “two-or-more samples” hypothesis tests that you will learn in this class (i.e., 2-sample t- or chi-square tests).  Research questions that may be answered with linear regression or one of the 1-sample methods may be considered but I will need to pre-approve these projects (i.e., you will need to make a strong argument for why your proposed study is of great interest to you).  Past project titles and some reports (as examples) are [shown below](past-projects).
 
@@ -44,6 +44,7 @@ The initial project report will include thorough univariate EDA for each variabl
 Your EDA write-up is due in the tenth week (see [Due Dates page](../calendar.html){:target="_blank"})
 
 ## Hypothesis Testing
+<img class="img-right" src="../img/dbh.jpg">
 
 The final project report will include a thorough statistical analysis of your research questions.  Specifically, your report should include:
 
