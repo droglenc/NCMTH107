@@ -38,10 +38,20 @@ function find_grade(form, pts, outof) {
 function calc_grade(form) {
 	get_wghts();
 	pts = 0; outof=0;
-	if (form.LAB_USE.checked) {
-		temp = eval(form.LAB_SC.value);
+	if (form.QUIZ_USE.checked) {
+		temp = eval(form.QUIZ_SC.value);
 		if (temp > 1) {temp=temp/100};
-		pts += LAB_WT*temp;	outof += LAB_WT;
+		pts += QUIZ_WT*temp;	outof += QUIZ_WT;
+	}
+	if (form.HW_USE.checked) {
+		temp = eval(form.HW_SC.value);
+		if (temp > 1) {temp=temp/100};
+		pts += HW_WT*temp;	outof += HW_WT;
+	}
+	if (form.SIUR_USE.checked) {
+		temp = eval(form.SIUR_SC.value);
+		if (temp > 1) {temp=temp/100};
+		pts += SIUR_WT*temp;	outof += SIUR_WT;
 	}
 	if (form.MT1_USE.checked) {
 		temp = eval(form.MT1_SC.value);
@@ -53,21 +63,15 @@ function calc_grade(form) {
 		if (temp > 1) {temp=temp/100};
 		pts += MT2_WT*temp;	outof += MT2_WT;
 	}
-	if (form.MT3_USE.checked) {
-		temp = eval(form.MT3_SC.value);
-		if (temp > 1) {temp=temp/100};
-		pts += MT3_WT*temp;	outof += MT3_WT;
-	}
 	if (form.FNL_USE.checked) {
 		temp = eval(form.FNL_SC.value);
 		if (temp > 1) {temp=temp/100};
 		pts += FNL_WT*temp;	outof += FNL_WT;
 	}
-	if (form.QUIZ_USE.checked) {
-		temp = eval(form.QUIZ_SC.value);
+	if (form.PROJ_USE.checked) {
+		temp = eval(form.PROJ_SC.value);
 		if (temp > 1) {temp=temp/100};
-		if (temp > 0.6) {temp=1};
-		pts += QUIZ_WT*temp;	outof += QUIZ_WT;
+		pts += PROJ_WT*temp;	outof += PROJ_WT;
 	}
 	find_grade(form, pts, outof);
 }
