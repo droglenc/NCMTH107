@@ -114,10 +114,10 @@ Lowest possible final letter grades will be assigned by comparing your overall p
 <tr><th>Weight</th>
 <th>15%</th><th>5%</th><th>7%</th><th>17.5%</th><th>17.5%</th><th>25%</th><th>13%</th></tr>
 
-<tr><th colspan=8><input type="button", value=" CALCULATE YOUR CURRENT GRADE ", onclick=calc_grade(this.form)></th></tr>
+<tr><th colspan=8><input type="button" value=" CALCULATE YOUR CURRENT GRADE " onclick="calc_grade(this.form)"></th></tr>
 
-<tr><th colspan=4>O'all Percentage: <input type="text", name="SCORE", size=5></th>
-<th colspan=4>Projected Grade: <input type="text", name="GRADE", size=2></th></tr>
+<tr><th colspan=4>O'all Percentage: <input type="text" name="SCORE" size=5></th>
+<th colspan=4>Projected Grade: <input type="text" name="GRADE" size=2></th></tr>
 </table></div>
 
 
