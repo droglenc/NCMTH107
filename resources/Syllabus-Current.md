@@ -69,13 +69,13 @@ An overall percentage score will be computed from the items and associated weigh
 <th>15%</th><th>5%</th><th>7%</th><th>17.5%</th><th>17.5%</th><th>25%</th><th>13%</th></tr>
 
 <tr><th>Percent</th>
-<td><input type="text" name="QUIZ_SC" size="3"></td>
-<td><input type="text" name="HW_SC" size="3"></td>
-<td><input type="text" name="SIUR_SC" size="3"></td>
-<td><input type="text" name="MT1_SC" size="3"></td>
-<td><input type="text" name="MT2_SC" size="3"></td>
-<td><input type="text" name="FNL_SC" size="3"></td>
-<td><input type="text" name="PROJ_SC" size="3"></td></tr>
+<td><input type="text" name="QUIZ_SC" size="3" tabindex=1 onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="HW_SC" size="3" tabindex=2 onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="SIUR_SC" size="3" tabindex=3 onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="MT1_SC" size="3" tabindex=4 onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="MT2_SC" size="3" tabindex=5 onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="FNL_SC" size="3" tabindex=6 onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="PROJ_SC" size="3" tabindex=7 onchange="calc_grade(this.form)"></td></tr>
 
 <tr><th colspan="8"><input type="button" value=" CALCULATE YOUR CURRENT GRADE " onclick="calc_grade(this.form)"></th></tr>
 
