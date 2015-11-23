@@ -10,7 +10,7 @@ css: /css/syllabus.css
 * [Description](#description)
 * [Learning Outcomes](#learning-outcomes)
 * [Tutors](#tutors)
-* [Grading](#grading) -- [Quizzes](#quizzes), [Homework](#homework), [Exams](#exams), [Project](project.html), [Extra Credit](#extra-credit)
+* [Grading](#grading) -- [Quizzes](#quizzes), [Homework](#homework), [SIU Reports](#statistics-in-use-reports) [Exams](#exams), [Project](project.html), [Extra Credit](#extra-credit)
 * [Conduct](#conduct)
 * [Accomodations](#accomodations)
 * [Tentative Schedule](#tentative-schedule)
