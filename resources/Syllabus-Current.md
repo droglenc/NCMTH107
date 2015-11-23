@@ -14,6 +14,8 @@ subtitle: MTH107
 
 ----
 
+<SCRIPT SRC="../js/grader.js"></SCRIPT>
+
 ## Description
 
 Introduction to the concepts and interpretation of statistics.  Summary graphs and statistics; data production (sampling and experiments); random variables and sampling distributions; inference - introduction, for distributions, for proportions; correlation and regression.  Prerequisite: MTH103, ACT math > 17, or SAT math > 470.  4 Credits.
@@ -77,6 +79,48 @@ Lowest possible final letter grades will be assigned by comparing your overall p
     <td class="ctrcell">D+ 67-69</td><td class="ctrcell">D  60-66</td><td class="ctrcell">F   0-59</td>
   </tr>
 </table>
+
+<FORM NAME="GRADECALC">
+<div align="center">
+<table TABLE BORDER=1 CELLSPACING=3 CELLPADDING=3>
+<tr BGCOLOR="#C0C0C0">
+<th>Assessment</th><th><a href="#quizzes">Quiz</a></th>
+<th><a href="#homework">HW</a></th>
+<th><a href="#statistics-in-use-reports">SIUR</a></th>
+<th><a href="#exams">MT1</A></th>
+<th><a href="#exams">MT2</A></th>
+<th><a href="#exams">Final</A></th>
+<th><a href="#project">Project</A></th></tr>
+
+<tr ALIGN=CENTER><th BGCOLOR="#C0C0C0">Done?</th>
+<td><INPUT TYPE="checkbox" NAME="QUIZ_USE" checked=true></td>
+<td><INPUT TYPE="checkbox" NAME="HW_USE" checked=true></td>
+<td><INPUT TYPE="checkbox" NAME="SIUR_USE" checked=false></td>
+<td><INPUT TYPE="checkbox" NAME="MT1_USE"></td>
+<td><INPUT TYPE="checkbox" NAME="MT2_USE"></td>
+<td><INPUT TYPE="checkbox" NAME="FNL_USE"></td>
+<td><INPUT TYPE="checkbox" NAME="PROJ_USE"></td></tr>
+
+<tr ALIGN=CENTER><th BGCOLOR="#C0C0C0">Percent</th>
+<td><INPUT TYPE="text", NAME="QUIZ_SC", SIZE=4></td>
+<td><INPUT TYPE="text", NAME="HW_SC", SIZE=4></td>
+<td><INPUT TYPE="text", NAME="SIU_SC", SIZE=4></td>
+<td><INPUT TYPE="text", NAME="MT1_SC", SIZE=4></td>
+<td><INPUT TYPE="text", NAME="MT2_SC", SIZE=4></td>
+<td><INPUT TYPE="text", NAME="FNL_SC", SIZE=4></td>
+<td><INPUT TYPE="text", NAME="PROJ_SC", SIZE=4></td></tr>
+
+<tr ALIGN=CENTER><th BGCOLOR="#C0C0C0">Weight</th>
+<th>15%</th><th>%</th><th>5%</th><th>7%</th><th>17.5%</th><th>17.5%</th><th>25%</th><th>13%</th></tr>
+
+<tr><th COLSPAN=8><INPUT TYPE="button", Value=" CALCULATE YOUR CURRENT GRADE ", ONCLICK=calc_grade(this.form)></th></tr>
+
+<tr><th COLSPAN=4><FONT COLOR="#FF0000">O'all Percentage:</FONT> <INPUT TYPE="text", NAME="SCORE", SIZE=5></th>
+<th COLSPAN=4><FONT COLOR="#FF0000">Projected Grade:</FONT> <INPUT TYPE="text", NAME="GRADE", SIZE=2></th></tr>
+</TABLE></div>
+
+
+
 
 ### Quizzes
 
