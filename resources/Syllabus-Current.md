@@ -109,15 +109,12 @@ Under Northland College policy, an incomplete grade will be given ONLY under ext
 
 ### Extra Credit
 
-There are three options to earn as much as 5% extra credit on your final grade.
+Extra credit may be obtained by completing a two-part (described below) typed reflection on each midterm exam.  The two parts are as follows:
 
-1. **Exam Reflections. –** A two-part (described below)typed reflection on each midterm exam.  Each exam reflection is worth the lesser of either 1.5% or the percentage required for your exam score to equal 100% times 0.15.  For example, if Jonny and Jenny each write perfect exam reflections but Jonny had a 70% on his exam and Jenny had a 92% on her exam, then Jonny will earn 1.5% extra credit and Jenny will earn 8%*0.15=1.2% extra credit.
+* **Correction**: Correct answers for each question you missed along with *an explanation of why the answer you originally provided was not correct and why the correct answer is correct.*  You will receive no credit for simply correcting your answer, for providing another incorrect answer, or saying "*I have no idea why I put that answer*," "*I simply wrote the wrong answer*," "*I don't know what I was thinking,*" or any other nonsensical reason.  You must address every question you missed to receive full credit for this portion.  Your answers must be typed and easy to find (i.e., neatly organized by question number) and you *must include the original exam*.  This portion is worth 2/3rd of the overall value of the exam reflection.
+* **Reflection**: Your *thoughtful* reflections about the exam, including what you did well on the exam (and why), what you did not do so well on the exam (and why), what strategy you used to prepare for the exam, how you will change your strategy to prepare for the next exam, and whether you considered the exam to be fair or not.  This portion should be at least one page but not more than two pages and is worth 1/3rd of the overall value of the exam reflection.
 
-    * The "correction" portion of the reflection should include correct answers for each question you missed along with **an explanation of why the answer you originally provided was not correct and why the correct answer is correct.**  You will receive no credit for simply correcting your answer, for providing another incorrect answer, or saying "*I have no idea why I put that answer*," "*I simply wrote the wrong answer*," "*I don't know what I was thinking,*" or any other nonsensical reason.  You must address every question you missed to receive full credit for this portion.  Your answers must be typed and easy to find (i.e., neatly organized by question number) and you **must include the original exam**.  This portion is worth 2/3rd of the overall value.
-
-    * The "reflection" portion should include your **thoughtful** reflections about the exam, including what you did well on the exam (and why), what you did not do so well on the exam (and why), what strategy you used in preparing for the exam, how you will change your strategy to prepare for the next exam, and whether you considered the exam to be fair or not.  This portion should be at least one page but not more than two pages and is worth 1/3rd of the overall value.
-
-
+Each exam reflection is worth the lesser of either 2% or the percentage required for your exam score to equal 100% times 0.2.  For example, if Jonny and Jenny each write perfect exam reflections but Jonny had a 70% on his exam and Jenny had a 92% on her exam, then Jonny will earn 2% extra credit and Jenny will earn 8%*0.2=1.6% extra credit.
 
 
 ## Conduct
