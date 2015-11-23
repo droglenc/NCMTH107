@@ -82,7 +82,7 @@ Lowest possible final letter grades will be assigned by comparing your overall p
 
 <FORM NAME="GRADECALC">
 <div align="center">
-<table TABLE BORDER=1 CELLSPACING=3 CELLPADDING=3>
+<table BORDER=1 CELLSPACING=3 CELLPADDING=3>
 <tr BGCOLOR="#C0C0C0">
 <th>Assessment</th><th><a href="#quizzes">Quiz</a></th>
 <th><a href="#homework">HW</a></th>
@@ -113,9 +113,9 @@ Lowest possible final letter grades will be assigned by comparing your overall p
 <tr ALIGN=CENTER><th BGCOLOR="#C0C0C0">Weight</th>
 <th>15%</th><th>%</th><th>5%</th><th>7%</th><th>17.5%</th><th>17.5%</th><th>25%</th><th>13%</th></tr>
 
-<tr><th COLSPAN=8><INPUT TYPE="button", Value=" CALCULATE YOUR CURRENT GRADE ", ONCLICK=calc_grade(this.form)></th></tr>
+<tr><th colspan=8><INPUT TYPE="button", Value=" CALCULATE YOUR CURRENT GRADE ", ONCLICK=calc_grade(this.form)></th></tr>
 
-<tr><th COLSPAN=4><FONT COLOR="#FF0000">O'all Percentage:</FONT> <INPUT TYPE="text", NAME="SCORE", SIZE=5></th>
+<tr><th colspan=4><FONT COLOR="#FF0000">O'all Percentage:</FONT> <INPUT TYPE="text", NAME="SCORE", SIZE=5></th>
 <th COLSPAN=4><FONT COLOR="#FF0000">Projected Grade:</FONT> <INPUT TYPE="text", NAME="GRADE", SIZE=2></th></tr>
 </TABLE></div>
 
