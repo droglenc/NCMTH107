@@ -50,37 +50,12 @@ We will focus on the understanding of statistical concepts and proper interpreta
 
 ## Grading
 
-An overall percentage score will be computed from the items and associated weights below:
-
-* 15% -- Daily Reading Quizzes
-* &nbsp;5% -- Homework
-* &nbsp;7% -- "Stats in Use" Reports
-* 35% -- Midterm Exams
-* 25% -- Final Exam
-* 13% -- Project
-
-Lowest possible final letter grades will be assigned by comparing your overall percentage score (rounded to a whole number) to the values shown below:
-
-<table class="tg">
-  <tr>
-    <td></td><td>A 92-100</td><td>A- 90-91</td>
-  </tr>
-  <tr>
-    <td>B+ 87-89</td><td>B  82-86</td><td>B- 80-81</td>
-  </tr>
-  <tr>
-    <td>C+ 77-79</td><td>C  70-76</td><td></td>
-  </tr>
-  <tr>
-    <td>D+ 67-69</td><td>D  60-66</td><td>F   0-59</td>
-  </tr>
-</table>
-
+An overall percentage score will be computed from the items and associated weights listed in the table below.  You can also use this table to compute your current grade or project your future grade.  To compute your current grade, check the box under The table below can be used to calculate your overall percentage score for the course.  The assessments used this semester are listed across the top row of the table.  The relative weight of each assessment is shown in the "Weight" row.  To compute your overall percentage and grade, select the assessments that you have completed to date by checking the corresponding boxes in the "Completed?" row, enter your current percentage on each assessment in the "Score" row, and press the "Calculate" button.  You can also use the calculator to "predict" your future overall percentage given certain values on upcoming assessments by inputing scores on assessments already completed and entering potential scores on future assessments.
 
 
 <form name="GRADECALC">
 <table class="grader">
-<tr><th>Assessment</th>
+<tr><th></th>
 <th><a href="#quizzes">Quiz</a></th>
 <th><a href="#homework">HW</a></th>
 <th><a href="#statistics-in-use-reports">SIUR</a></th>
@@ -88,6 +63,9 @@ Lowest possible final letter grades will be assigned by comparing your overall p
 <th><a href="#exams">MT2</A></th>
 <th><a href="#exams">Final</A></th>
 <th><a href="#project">Project</A></th></tr>
+
+<tr><th>Weight</th>
+<th>15%</th><th>5%</th><th>7%</th><th>17.5%</th><th>17.5%</th><th>25%</th><th>13%</th></tr>
 
 <tr><th>Done?</th>
 <td><input type="checkbox" name="QUIZ_USE" checked></td>
@@ -107,15 +85,30 @@ Lowest possible final letter grades will be assigned by comparing your overall p
 <td><input type="text" name="FNL_SC" size="4"></td>
 <td><input type="text" name="PROJ_SC" size="4"></td></tr>
 
-<tr><th>Weight</th>
-<th>15%</th><th>5%</th><th>7%</th><th>17.5%</th><th>17.5%</th><th>25%</th><th>13%</th></tr>
-
 <tr><th colspan="8"><input type="button" value=" CALCULATE YOUR CURRENT GRADE " onclick="calc_grade(this.form)"></th></tr>
 
 <tr><th colspan="4">O'all Percentage: <input type="text" name="SCORE" size="5"></th>
 <th colspan="4">Projected Grade: <input type="text" name="GRADE" size="4"></th></tr>
 </table>
 </form>
+
+
+Lowest possible final letter grades will be assigned by comparing your overall percentage score (rounded to a whole number) to the values shown below:
+
+<table class="tg">
+  <tr>
+    <td></td><td>A 92-100</td><td>A- 90-91</td>
+  </tr>
+  <tr>
+    <td>B+ 87-89</td><td>B  82-86</td><td>B- 80-81</td>
+  </tr>
+  <tr>
+    <td>C+ 77-79</td><td>C  70-76</td><td></td>
+  </tr>
+  <tr>
+    <td>D+ 67-69</td><td>D  60-66</td><td>F   0-59</td>
+  </tr>
+</table>
 
 
 
