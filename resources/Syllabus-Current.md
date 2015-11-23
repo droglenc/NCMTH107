@@ -50,11 +50,11 @@ We will focus on the understanding of statistical concepts and proper interpreta
 An overall percentage score will be computed from the items and associated weights below:
 
 * 15% -- Daily Reading Quizzes
-*  5% -- Homework
-*  5% -- "Stats in Use" Reports
-* 40% -- 2 Midterm Exams (18% each)
+* &nbsp;5% -- Homework
+* &nbsp;7% -- "Stats in Use" Reports
+* 35% -- Midterm Exams
 * 25% -- Final Exam
-* 10% -- Project
+* 13% -- Project
 
 Lowest possible final letter grades will be assigned by comparing your overall percentage score (rounded to a whole number) to the values shown below:
 
