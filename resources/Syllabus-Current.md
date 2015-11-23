@@ -52,16 +52,7 @@ We will focus on the understanding of statistical concepts and proper interpreta
 
 An overall percentage score will be computed from the items and associated weights listed in the table below.  You can also use this table to compute your current grade or project your future grade.  To compute your current grade, enter your percentage scores in the boxes for assessments that have been completed.  To project your grade, also include projected grades for future assessements.  Then press the "Calculate" button to compute an overall percentage and a minimum projected letter grade.
 
-<script type="javascript">
-//**********************************************************************************
-//**  Sets weights for assessment components                                      **
-//**********************************************************************************
-function get_wghts() {
-  QUIZ_WT = 0.15; HW_WT = 0.05; SIUR_WT = 0.07;
-  MT1_WT = 0.175;	MT2_WT = 0.175;	FNL_WT = 0.25;
-  PROJ_WT = 0.13;
-}
-</script>
+<!-- if the assessment weights change then you must change the values in get_wghts() in the grader.js file -->
 
 <form name="GRADECALC">
 <table class="grader">
