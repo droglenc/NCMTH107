@@ -50,7 +50,7 @@ We will focus on the understanding of statistical concepts and proper interpreta
 
 ## Grading
 
-An overall percentage score will be computed from the items and associated weights listed in the table below.  You can also use this table to compute your current grade or project your future grade.  To compute your current grade, enter your percentage scores in the boxes for assessments that have been completed.  To project your grade, also include projected grades for future assessements.  Then press the "Calculate" button to compute an overall percentage and a minimum projected letter grade.
+An overall percentage score will be computed from the items and associated weights listed in the table below.  A specific description for each item is given further below.  You can also use this table to compute your current or project your future grade.  To compute your current grade, enter your percentage scores in the boxes for assessments that have been completed.  To project your future grade, also include percentages for future assessements.
 
 <!-- if the assessment weights change then you must change the values in get_wghts() in the grader.js file -->
 
@@ -77,8 +77,6 @@ An overall percentage score will be computed from the items and associated weigh
 <td><input type="text" name="FNL_SC" size="3" tabindex="6" onchange="calc_grade(this.form)"></td>
 <td><input type="text" name="PROJ_SC" size="3" tabindex="7" onchange="calc_grade(this.form)"></td></tr>
 
-<tr><th colspan="8"><input type="button" value=" CALCULATE YOUR CURRENT GRADE " onclick="calc_grade(this.form)"></th></tr>
-
 <tr><th colspan="4">Overall Percentage: <input type="text" name="SCORE" size="4"></th>
 <th colspan="4">Projected Grade: <input type="text" name="GRADE" size="2"></th></tr>
 </table>
@@ -96,7 +94,7 @@ Lowest possible final letter grades will be assigned by comparing your overall p
 
 ### Quizzes
 
-A short quiz will be given in the FIRST 4-10 minutes of EVERY class period.  These quizzes are intended to encourage you to complete the preparation required for that day's class.  Thus, quizzes are "open notes" (but **not** "open book" or "open computer").  You will be notified at the end of each class period about what portion of the text and online resources are required to prepare for the next class period.  Quizzes that are missed for reasons that have not been approved by me cannot be made up.
+A short quiz will be given in the **FIRST 5-10 minutes of EVERY** class period.  These quizzes are intended to encourage you to complete the preparation required for that day's class.  Thus, quizzes are "open notes" (but **not** "open book" or "open computer").  You will be notified at the end of each class period about what portion of the text and online resources are required to prepare for the next class period.  Quizzes that are missed for reasons that have not been approved by me cannot be made up.
 
 ### Homework
 
