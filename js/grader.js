@@ -39,37 +39,37 @@ function calc_grade(form) {
 	get_wghts();
 	pts = 0; outof=0;
 	if (form.QUIZ_USE.checked) {
-		temp = eval(form.QUIZ_SC.value);
+		temp = form.QUIZ_SC.value;
 		if (temp > 1) {temp=temp/100};
 		pts += QUIZ_WT*temp;	outof += QUIZ_WT;
 	}
 	if (form.HW_USE.checked) {
-		temp = eval(form.HW_SC.value);
+		temp = form.HW_SC.value;
 		if (temp > 1) {temp=temp/100};
 		pts += HW_WT*temp;	outof += HW_WT;
 	}
 	if (form.SIUR_USE.checked) {
-		temp = eval(form.SIUR_SC.value);
+		temp = form.SIUR_SC.value;
 		if (temp > 1) {temp=temp/100};
 		pts += SIUR_WT*temp;	outof += SIUR_WT;
 	}
 	if (form.MT1_USE.checked) {
-		temp = eval(form.MT1_SC.value);
+		temp = form.MT1_SC.value;
 		if (temp > 1) {temp=temp/100};
 		pts += MT1_WT*temp;	outof += MT1_WT;
 	}
 	if (form.MT2_USE.checked) {
-		temp = eval(form.MT2_SC.value);
+		temp = form.MT2_SC.value;
 		if (temp > 1) {temp=temp/100};
 		pts += MT2_WT*temp;	outof += MT2_WT;
 	}
 	if (form.FNL_USE.checked) {
-		temp = eval(form.FNL_SC.value);
+		temp = form.FNL_SC.value;
 		if (temp > 1) {temp=temp/100};
 		pts += FNL_WT*temp;	outof += FNL_WT;
 	}
 	if (form.PROJ_USE.checked) {
-		temp = eval(form.PROJ_SC.value);
+		temp = form.PROJ_SC.value;
 		if (temp > 1) {temp=temp/100};
 		pts += PROJ_WT*temp;	outof += PROJ_WT;
 	}
