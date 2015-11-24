@@ -41,7 +41,7 @@ We will focus on the understanding of statistical concepts and proper interpreta
 ## Instructors
 
 <table class="tutors" width="90%">
-<tr><th><img src="../img/book.jpg"></th><th><img src="../img/book.jpg"></th></tr>
+<tr><th><img src="../img/DerekOgle1.jpg"></th><th><img src="../img/DerekOgle1.jpg"></th></tr>
 <tr><th><a href="http://derekogle.com" target="_blank">Dr. Derek H. Ogle</a><br>Professor of Mathematical Sciences<br> & Natural Resources</th><th>Jodi Supanich</th></tr>
 <tr><td>CSE239<br><a href="mailto:dogle@northland.edu">dogle@northland.edu</a><br>682-1300</td><td>CSE229<br><a href="mailto:jsupanic@northland.edu">jsupanich@northland.edu</a><br>682-1857</td></tr>
 <tr><td>Office Hours:<br>
