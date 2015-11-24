@@ -34,7 +34,7 @@ Two Northland students were interested in whether the average amount of playing 
 
 ----
 
-## Playing Time Among NHL Rookies
+## Public Attitudes Towards Wolves in Wisconsin
 <img src="../zimgs/wiwolf.jpg" alt="Wolf" class="img-right">
 [Hogberg et al. (2013)](http://faculty.nelson.wisc.edu/treves/wolves/reports/hogberg_treves_shaw_naughton_2013surveyreport.pdf) were interested in determining if public attitudes towards wolves had changed following the 2012 wolf harvest (the first legal harvest of wolves in Wisconsin).  The researchers obtained surveys from 773 residents of Wisconsin that had participated in three previous surveys.  Among other things, the researchers were interested in determining if the percent of respondents who agreed with "*my tolerance for wolves would increase if people could hunt wolves*" had increased following the wolf harvest.
 
