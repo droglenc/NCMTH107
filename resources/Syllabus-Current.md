@@ -145,7 +145,7 @@ Under Northland College policy, an incomplete grade will be given ONLY under ext
 
 This course is taught in the framework of active-learning, peer-instruction, and inquiry-based pedagogies.  This means that you will be asked to prepare for the class period, answer questions based on your reading, work in small groups with others, and participate in small- and large-group discussions.  Your participation in these activities is critical to your learning and success in this course, but also to the overall success of the course.
 
-<img class="img-right" src="../img/datacollection.jpg">
+<img class="img-right" src="../img/studying.jpg">
 
 As a general rule-of-thumb ([here](http://www.collegeparents.org/members/resources/articles/your-college-student-investing-enough-time-studying){:target="_blank"}, [here](http://classroom.synonym.com/ratio-studying-class-time-college-1075.html){:target="_blank"}, [here](https://www.usu.edu/asc/idea_sheets/pdf/estimate_study_hours.pdf){:target="_blank"}, and [here](http://collegelife.about.com/od/academiclife/f/How-Much-Time-Should-I-Spend-Studying-In-College.htm){:target="_blank"}, among many), students are expected to spend between 2-3 hours of time outside of class for each hour in class.  This course meets for 4.5 hours per week and, thus, we expect between 9 and 13.5 hours of time outside of class will be dedicated to preparing for class, completing homework and other assessments, and studying for exams.  We fully believe that the work required for this course can be completed within this expected amount of time, **if that time is quality-time** (i.e., without distraction).
 
