@@ -9,6 +9,7 @@ css: /css/syllabus.css
 
 * [Description](#description)
 * [Learning Outcomes](#learning-outcomes)
+* [Instructors](#instructors)
 * [Tutors](#tutors)
 * [Grading](#grading) -- [Quizzes](#quizzes), [Homework](#homework), [SIU Reports](#statistics-in-use-reports), [Exams](#exams), [Project](project.html), [Extra Credit](#extra-credit)
 * [Conduct](#conduct)
@@ -41,12 +42,12 @@ We will focus on the understanding of statistical concepts and proper interpreta
 
 <table class="tutors" width="90%">
 <tr><th><img src="../img/book.jpg"></th><th><img src="../img/book.jpg"></th></tr>
-<tr><th>[Dr. Derek H. Ogle](http://derekogle.com)<br>&nbsp;&nbsp;Professor of Mathematical Sciences<br>&nbsp;&nbsp; & Natural Resources</th><th>Jodi Supanich</th></tr>
-<tr><td>CSE239<br>[dogle@northland.edu](mailto:dogle@northland.edu)<br>682-1300</td><td>Office Hours:<br>
+<tr><th><a href="http://derekogle.com" target="_blank">Dr. Derek H. Ogle</a><br>Professor of Mathematical Sciences<br> & Natural Resources</th><th>Jodi Supanich</th></tr>
+<tr><td>CSE239<br><a href="mailto:dogle@northland.edu">dogle@northland.edu</a><br>682-1300</td><td>CSE229<br><a href="mailto:jsupanic@northland.edu">jsupanich@northland.edu</a><br>682-1857</td></tr>
+<tr><td>Office Hours:<br>
 Tues 12-1p<br>
 Thurs 10-11a<br>
-Fri 3-4p</td></tr>
-<tr><td>CSE229<br>[jsupanich@northland.edu](mailto:jsupanic@northland.edu)<br>682-1857</td><td>Office Hours:<br></td></tr>
+Fri 3-4p</td><td>Office Hours:<br></td></tr>
 </table>
 
 ## Tutors
