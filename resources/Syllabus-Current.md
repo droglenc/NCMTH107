@@ -37,11 +37,17 @@ At the end of this class you will be able to ...
 
 We will focus on the understanding of statistical concepts and proper interpretation of statistical results.
 
-## Instructor
+## Instructors
 
-* [Dr. Derek H. Ogle](http://derekogle.com), Professor of Mathematical Sciences & Natural Resources
-* CSE239; 682-1300; [dogle@northland.edu](mailto:dogle@northland.edu)
-* Office Hours: T 12-1p; R 10-11a; F 3-4p
+<table class="tutors" width="90%">
+<tr><th><img src="../img/book.jpg"></th><th><img src="../img/book.jpg"></th></tr>
+<tr><th>[Dr. Derek H. Ogle](http://derekogle.com)<br>&nbsp;&nbsp;Professor of Mathematical Sciences<br>&nbsp;&nbsp; & Natural Resources</th><th>Jodi Supanich</th></tr>
+<tr><td>CSE239<br>[dogle@northland.edu](mailto:dogle@northland.edu)<br>682-1300</td><td>Office Hours:<br>
+Tues 12-1p<br>
+Thurs 10-11a<br>
+Fri 3-4p</td></tr>
+<tr><td>CSE229<br>[jsupanich@northland.edu](mailto:jsupanic@northland.edu)<br>682-1857</td><td>Office Hours:<br></td></tr>
+</table>
 
 ## Tutors
 
