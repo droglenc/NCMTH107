@@ -12,7 +12,7 @@ css: /css/syllabus.css
 * [Instructors](#instructors)
 * [Tutors](#tutors)
 * [Grading](#grading) -- [Quizzes](#quizzes), [Homework](#homework), [SIU Reports](#statistics-in-use-reports), [Exams](#exams), [Project](project.html), [Extra Credit](#extra-credit)
-* [Conduct](#conduct)
+* [Participation and Conduct](#participation-and-conduct)
 * [Accomodations](#accomodations)
 * [Tentative Schedule](#tentative-schedule)
 
@@ -141,9 +141,16 @@ Each exam reflection is worth the lesser of either 2% or the percentage required
 Under Northland College policy, an incomplete grade will be given ONLY under extreme circumstances beyond your control, such as a major illness.  An incomplete grade will be given ONLY if you have successfully completed the entire course except for the final exam.
 
 
-## Conduct
+## Participation and Conduct
 
-Your conduct in class should revolve around the idea of being respectful of me and others in the class.  I will ask you to leave class if your behavior is disrespectful.  Adhering to the following policies should be considered the minimum requirements to being respectful of others:
+This course is taught in the framework of active-learning, peer-instruction, and inquiry-based pedagogies.  This means that you will be asked to prepare for the class period, answer questions based on your reading, work in small groups with others, and participate in small- and large-group discussions.  Your participation in these activities is critical to your learning and success in this course, but also to the overall success of the course.
+
+<img class="img-right" src="../img/datacollection.jpg">
+As a general rule-of-thumb ([here](http://www.collegeparents.org/members/resources/articles/your-college-student-investing-enough-time-studying), [here](http://classroom.synonym.com/ratio-studying-class-time-college-1075.html), [here](https://www.usu.edu/asc/idea_sheets/pdf/estimate_study_hours.pdf), and [here](http://collegelife.about.com/od/academiclife/f/How-Much-Time-Should-I-Spend-Studying-In-College.htm), among many), students are expected to spend between 2-3 hours of time outside of class for each hour in class.  This course meets for 4.5 hours per week and, thus, we expect between 9 and 13.5 hours of time outside of class will be dedicated to preparing for class, completing homework and other assessments, and studying for exams.  We fully believe that the work required for this course can be completed within this expected amount of time, **if that time is quality-time** (i.e., without distraction).
+
+If you feel that you are spending an inordinate amount of time on some assignments because you are "stuck", then start your assignments early so that you can stop (and do other things) and make plans to see the [tutors](#tutors) or [instructor](#instructor) for help.
+
+Your conduct in class should revolve around the idea of being respectful of all others in the class.  Adhering to the following policies should be considered the minimum requirements to being respectful of others:
 
 * Arrive to class on time.  If you arrive late, then take the first available seat as quietly as possible.
 * Do not bring friends, children, pets, meals, or anything else to class that should not be there.
@@ -152,8 +159,7 @@ Your conduct in class should revolve around the idea of being respectful of me a
 * Do not engage in side discussions while I or others are speaking to the entire class.
 * Do not use disrespectful language when addressing others.
 
-
-This course is taught in the framework of active-learning, peer-instruction, and inquiry-based pedagogies.  This means that you will be asked to prepare for the class period, answer questions based on your reading, work in small groups with others, and participate in small- and large-group discussions.  Your participation in these activities is critical to your learning and success in this course, but also to the overall success of the course.
+You will be asked to leave class if your behavior is disrespectful of others. 
 
 ## Accomodations
 Students in need of academic accommodation should contact [Kathleen Skoraczewski](mailto:kskoraczewski@northland.edu), Campus Counselor	and Disabilities Service Coordinator, ext. 1369, Ponzio Center Rm. 232.
