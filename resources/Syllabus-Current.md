@@ -136,7 +136,7 @@ Under Northland College policy, an incomplete grade will be given ONLY under ext
 
 ## Conduct
 
-Your conduct in class should revolve around the idea of being respectful of me and others in the class.  I will ask you to leave class if you behave disrespectfully.  Adhering to the following policies should be considered the minimum requirements to being respectful of others:
+Your conduct in class should revolve around the idea of being respectful of me and others in the class.  I will ask you to leave class if your behavior is disrespectful.  Adhering to the following policies should be considered the minimum requirements to being respectful of others:
 
 * Arrive to class on time.  If you arrive late, then take the first available seat as quietly as possible.
 * Do not bring friends, children, pets, meals, or anything else to class that should not be there.
