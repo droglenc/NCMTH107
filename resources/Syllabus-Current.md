@@ -54,7 +54,7 @@ We will focus on the understanding of statistical concepts and proper interpreta
 
 ## Grading
 
-An overall percentage score will be computed from the items and associated weights listed in the table below.  A specific description for each item is given further below.  You can also use this table to compute your current or project your future grade.  To compute your current grade, enter your percentage scores in the boxes for assessments that have been completed.  To project your future grade, also include percentages for future assessements.  [*It is your responsibility to track your scores on the individual assessments.*]
+An overall percentage score will be computed from the items and associated weights listed in the table below.  A specific description for each item is given further below.  You can also use this table to compute your current or projected future grade.  To compute your current grade, enter your percentage scores in the boxes for assessments that have been completed.  To project your future grade, also include percentages for future assessements.  [*It is your responsibility to track your scores on the individual assessments.*]
 
 <!-- if the assessment weights change then you must change the values in get_wghts() in the grader.js file -->
 
@@ -86,7 +86,7 @@ An overall percentage score will be computed from the items and associated weigh
 </table>
 </form>
 
-Lowest possible final letter grades will be assigned by comparing your overall percentage score (rounded to a whole number) to the values shown below:
+Lowest possible final letter grades will be assigned by comparing your overall percentage (rounded to a whole number) to the values shown below:
 
 <table class="tg">
   <tr><td></td><td>A 92-100</td><td>A- 90-91</td></tr>
@@ -102,7 +102,7 @@ A short quiz will be given in the **FIRST 5-10 minutes of EVERY** class period. 
 
 ### Homework
 
-The text contains many review exercises throughout each chapter and a few homework problems at the end of each chapter.  Homework problems will be assigned when a concept module has been completed.  Homework problems will be handed in but will only be graded for completeness (i.e., checking whether the questions have been completely answered or not).  Answer keys will be posted online so that you may check your work.
+The text contains many review exercises throughout each chapter and a few homework problems at the end of each chapter.  Homework problems will be assigned when a concept module has been completed.  Homework problems will be handed in but will only be graded for completeness (i.e., checking whether the questions have been completely answered or not).  Answer keys will be [posted online](homework-keys) so that you may check your work.
 
 ### Exams
 
@@ -110,11 +110,11 @@ Exam dates are shown on the [Due Dates page](../calendar.html){:target="_blank"}
 
 ### "Statistics in Use" Reports
 
-Three typed reports about the use of statistics in your everyday life.  These reports may come from the use of statistics in the news, in your other classes, or other work that you have done.
+Three typed reports about the use of statistics in your everyday life.  Informations for these reports may come from the use of statistics in the news, in your other classes, or other work that you have done.
 
-If you report on news items then you should discuss the background of the information in the report, the use of statistics, how the statistics relate to what you’ve learned in class, how the statistics were presented, how you feel about that presentation, and any questions that you may have.  The FOCUS of your report should be on the statistics used in the news item (not just the news item).
+If you report on a news item, then you should discuss the background of the information in the report, the use of statistics, how the statistics relate to what you’ve learned in class, how the statistics were presented, how you feel about that presentation, and any questions that you may have.  The FOCUS of your report should be on the statistics used in the news item (not just the news item).  You may not use the same type of news item for more than one report (e.g., you cannot report on presidential race polls more than once).
 
-If you used statistics in another class then you should discuss the background of the project where you used statistics, what the statistics were used for (i.e., purpose), a presentation of your statistical work in the report (i.e., findings), how the statistics relate to what you've learned in class, and any questions that you may have.  Again, the FOCUS should be on the statistics that you used.
+If you report on statistics used in another class, then you should discuss the background of the project where you used statistics, what the statistics were used for (i.e., purpose), a presentation of your statistical work in the report (i.e., findings), how the statistics relate to what you've learned in this class, and any questions that you may have.  Again, the FOCUS should be on the statistics that you used.
 
 ### Project
 
@@ -122,7 +122,7 @@ See the [Class Project page](project.html).
 
 ### Extra Credit
 
-Extra credit may be obtained by completing a two-part (described below) typed reflection on each midterm exam.  The two parts are as follows:
+Extra credit may be obtained by completing a two-part typed reflection on each midterm exam.  The two parts are as follows:
 
 * **Correction**: Correct answers for each question you missed along with *an explanation of why the answer you originally provided was not correct and why the correct answer is correct.*  You will receive no credit for simply correcting your answer, for providing another incorrect answer, or saying "*I have no idea why I put that answer*," "*I simply wrote the wrong answer*," "*I don't know what I was thinking,*" or any other nonsensical reason.  You must address every question you missed to receive full credit for this portion.  Your answers must be typed and easy to find (i.e., neatly organized by question number) and you *must include the original exam*.  This portion is worth 2/3rd of the overall value of the exam reflection.
 * **Reflection**: Your *thoughtful* reflections about the exam, including what you did well on the exam (and why), what you did not do so well on the exam (and why), what strategy you used to prepare for the exam, how you will change your strategy to prepare for the next exam, and whether you considered the exam to be fair or not.  This portion should be at least one page but not more than two pages and is worth 1/3rd of the overall value of the exam reflection.
