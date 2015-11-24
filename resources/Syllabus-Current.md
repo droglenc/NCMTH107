@@ -10,7 +10,7 @@ css: /css/syllabus.css
 * [Description](#description)
 * [Learning Outcomes](#learning-outcomes)
 * [Tutors](#tutors)
-* [Grading](#grading) -- [Quizzes](#quizzes), [Homework](#homework), [SIU Reports](#statistics-in-use-reports) [Exams](#exams), [Project](project.html), [Extra Credit](#extra-credit)
+* [Grading](#grading) -- [Quizzes](#quizzes), [Homework](#homework), [SIU Reports](#statistics-in-use-reports), [Exams](#exams), [Project](project.html), [Extra Credit](#extra-credit)
 * [Conduct](#conduct)
 * [Accomodations](#accomodations)
 * [Tentative Schedule](#tentative-schedule)
@@ -41,12 +41,16 @@ We will focus on the understanding of statistical concepts and proper interpreta
 
 * [Dr. Derek H. Ogle](http://derekogle.com), Professor of Mathematical Sciences & Natural Resources
 * CSE239; 682-1300; [dogle@northland.edu](mailto:dogle@northland.edu)
-* Office Hours: XXX
+* Office Hours: T 12-1p; R 10-11a; F 3-4p
 
 ## Tutors
 
-* XXX XXX -- Tu 7-9p; Th 1230-230p
-* XXX XXX -- W 7-9p; Th 7-9p
+<table class="tutors" width="90%">
+<tr><th><img src="../img/book.jpg"></th><th><img src="../img/book.jpg"></th></tr>
+<tr><th>Louis Corcoran</th><th>Darian Erb</th></tr>
+<tr><td>A note.</td><td>A note.</td></tr>
+<tr><td>Hours here</td><td>Hours Here</td></tr>
+</table>
 
 ## Grading
 
