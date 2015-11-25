@@ -21,7 +21,7 @@ output: html_document
     * Quiz, Questions, Go through the demonstration handout
 
 1. Getting Started with R II
-    * Quiz (short), Questions, all class exercises
+    * Quiz (short), Questions, all class exercises, HW
 
 1. Quantitative Univariate EDA -- Calculations
     * Quiz, Questions, 
