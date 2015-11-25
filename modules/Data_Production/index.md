@@ -21,7 +21,7 @@ css: /css/modules.css
 
 ----
 
-You should prepare for the concepts of this module by *reading Sections XXX* in [the textbook](../../book/) and watching the following videos:
+You should prepare for the concepts of this module by reading **Chapter 7** in [the textbook](../../book/) and watching the following videos:
 
 * Types of Studies -- [A](https://www.youtube.com/v/qksFkFh2ezo?version=3&autoplay=1&start=456&end=958){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/KDPBD3SPTPY?version=3&autoplay=1){:target="_blank"} [8 mins]
 * [Types of Conclusions](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=1597){:target="_blank"} [3 mins]
@@ -31,7 +31,7 @@ You should prepare for the concepts of this module by *reading Sections XXX* in 
 * [Definitions in Experimental Design](https://vimeo.com/user45324800/experimentdefns){:target="_blank"} [4 mins]
 * [Randomization in R](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 
-Questions XXX in [the textbook](../../book/) will assess your understanding of these materials.
+Questions 7.10 and 7.11 in [the textbook](../../book/) will assess your understanding of these materials.
 
 ----
 

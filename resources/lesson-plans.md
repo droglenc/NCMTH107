@@ -14,19 +14,19 @@ output: html_document
 1. IVPPSS, Variable Types
     * Quiz, Questions, 3-4 IVPPSS scenarios, all Type of Variables questions, HW
 
-1. X
+1. Data Production
+    * Quiz, Questions, All (but Study Types II), HW
+
+1. Getting Started with R
+    * Quiz, Questions, Go through the demonstration handout
+
+1. Getting Started with R II
+    * Quiz (short), Questions, all class exercises
+
+1. Quantitative Univariate EDA -- Calculations
     * Quiz, Questions, 
 
-1. X
-    * Quiz, Questions, 
-
-1. X
-    * Quiz, Questions, 
-
-1. X
-    * Quiz, Questions, 
-
-1. X
+1. Quantitative Univariate EDA -- Statements
     * Quiz, Questions, 
 
 1. X

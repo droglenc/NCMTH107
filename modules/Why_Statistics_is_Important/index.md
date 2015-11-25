@@ -18,7 +18,7 @@ css: /css/modules.css
 
 ----
 
-You should prepare for the concepts of this module by *reading Section 1.1* in [the textbook](../../book/) and watching the following videos:
+You should prepare for the concepts of this module by reading **Section 1.1** in [the textbook](../../book/) and watching the following videos:
 
 * [Why Statistics?](https://www.youtube.com/v/yxXsPc0bphQ?version=3&autoplay=1){:target="_blank"} [4 mins]
 * [What is Statistics?](https://www.youtube.com/v/5YsiVJFSwGo?version=3&start=35&autoplay=1){:target="_blank"} [12 mins]
