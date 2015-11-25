@@ -30,7 +30,7 @@ You should prepare for the concepts of this module by reading **Section 3.1** in
 
 Additionally, you should prepare by reading **Section 3.3** in [the textbook](../../book/) and watching the following videos:
 
-* Interpreting a Univariate EDA (Quantitative)
+* Interpreting a Univariate EDA (Quantitative)  [![PowerPOint](../../img/ppt.png)](PPT.pptx)
 
 Question 3.50 in [the textbook](../../book/) will assess your understanding of these materials.
 
