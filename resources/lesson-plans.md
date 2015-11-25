@@ -6,7 +6,7 @@ output: html_document
 ---
 
 1. Orientation
-    * Discuss syllabus, describe the book, walk through resources on the webpage, discuss the active pedagogy that requires preparation, check login to computers, check that RStudio opens for everybody, take orders for the book
+    * Discuss syllabus, describe the book, walk through resources on the webpage, discuss the active pedagogy that requires preparation, show handout links for modules, check login to computers, check that RStudio opens for everybody, take orders for the book
 
 1. Why Statistics is Important
     * Quiz, Questions, Cheesehead example, HW
@@ -24,10 +24,10 @@ output: html_document
     * Quiz (short), Questions, all class exercises, HW
 
 1. Quantitative Univariate EDA -- Calculations
-    * Quiz, Questions, 
+    * Quiz, Questions, all of first class exercise
 
 1. Quantitative Univariate EDA -- Statements
-    * Quiz, Questions, 
+    * Quiz, Questions, all of second class exercise, HW
 
 1. X
     * Quiz, Questions, 
