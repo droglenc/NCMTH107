@@ -29,8 +29,8 @@ output: html_document
 1. Quantitative Univariate EDA -- Statements
     * Quiz, Questions, all of second class exercise, HW
 
-1. X
-    * Quiz, Questions, 
+1. Categorical Univariate EDA
+    * Quiz, Questions, all exercises, HW
 
 1. X
     * Quiz, Questions, 
