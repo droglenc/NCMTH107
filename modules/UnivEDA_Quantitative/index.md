@@ -19,7 +19,7 @@ css: /css/modules.css
 
 ----
 
-You should prepare for the concepts of this module by *reading Sections XXX* in [the textbook](../../book/) and watching the following videos:
+You should prepare for the concepts of this module by reading **Section 3.1** in [the textbook](../../book/) and watching the following videos:
 
 * [Construct a Histogram](https://www.youtube.com/v/sC7gjg9g3JU?version=3&autoplay=1){:target="_blank"} [13 mins]
 * [Describe Shape](https://www.youtube.com/v/H9ITfdaX2ZQ?version=3&autoplay=1){:target="_blank"} [13 mins]
@@ -28,11 +28,16 @@ You should prepare for the concepts of this module by *reading Sections XXX* in 
 * Calculate IQR -- [A](https://www.youtube.com/v/R6VDj7pEG30?version=3&autoplay=1){:target="_blank"} [3 mins] **or** [B](https://www.youtube.com/v/F3WcEAW-M80?version=3&start=366&autoplay=1){:target="_blank"} [9 mins]
 * [Univariate EDA (Quantitative) in R](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins]  [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 
-Questions XXX in [the textbook](../../book/) will assess your understanding of these materials.
+Additionally, you should prepare by reading **Section 3.3** in [the textbook](../../book/) and watching the following videos:
+
+* Interpreting a Univariate EDA (Quantitative)
+
+Question 3.50 in [the textbook](../../book/) will assess your understanding of these materials.
 
 ----
 
 ### Related materials
 
-* [In-Class Exercise](CE.html)
+* [In-Class Exercise I](CE1.html)
+* [In-Class Exercise II](CE2.html)
 * [Old Lecture Slides](PPT_old.pptx)

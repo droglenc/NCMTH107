@@ -39,7 +39,7 @@ Use this information to answer the following questions.  Use R to answer all que
 ## Cars
 
 <img src="../zimgs/cars93.jpg" alt="1993 Nissan Skyline" class="img-right">
-[Locke (1993)](http://www.amstat.org/publications/jse/v1n1/datasets.lock.html) recorded data on a random sample of cars from the 1993 model year.  His data are in [93cars.csv](https://github.com/droglenc/NCData/raw/master/93cars.csv)).  
+[Locke (1993)](http://www.amstat.org/publications/jse/v1n1/datasets.lock.html) recorded data on a random sample of cars from the 1993 model year.  His data are in [93cars.csv](https://github.com/droglenc/NCData/raw/master/93cars.csv).  
 Use this information to answer the following questions (by using R).  You should have an R script saved in RStudio and a MSWord document formatted as directed in section 1.4 of the textbook when you are finished.
 
 1. Download the data from the class webpage and load the data into RStudio.
@@ -52,3 +52,5 @@ Use this information to answer the following questions (by using R).  You should
     * Cars that had an automatic transmission and get more than 25 miles per gallon on the highway.
     * Cars that had a horsepower between 150 and 200.
     * Cars that were either domestically manufactured or were four cylinders.
+
+----
