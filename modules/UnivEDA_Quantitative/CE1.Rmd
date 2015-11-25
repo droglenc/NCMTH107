@@ -90,10 +90,8 @@ Data Set 3
 
 1. Hand calculate the mean of Data Set 1.
 1. Hand calculate the standard deviation of Data Set 1.
-
 1. Hand calculate the median of Data Set 2.
 1. Hand calculate the IQR of Data Set 2.
-
 1. Hand calculate the median of Dat Set 3.
 1. Hand calculate the IQR of Dat Set 3.
 1. Hand calculate the range of Data Set 3.
@@ -105,8 +103,28 @@ sdCalc(d)
 iqrCalc(d)
 ```
 
+----
 
-## Calculate Measures of Dispersion
+## Mean Versus Median
 
-1. Calculate the standard deviation of 
-1. 
+Using the `meanMedian()` function with no arguments will open a plot constructed from random data that looks like that below.
+
+```{r echo=FALSE, fig.height=4, fig.width=5}
+meanMedian()
+```
+
+The top plot is a histogram.  The lower plot shows individuals above the median (blue vertical line) with red dots and individuals below the median with black dots.  In addition, the dashed horizontal lines represent the differences of each individual from the mean (red vertical line) with negative values in black and positive values in red.
+
+In RStudio, this plot will also have a small "gear" icon in the upper-left corner.  Clicking the gear opens a dialog box where you can control the sample size, two shape parameters, and whether an outlier is modeled or not.  In the questions below, leave the sample size at 30 and press the "reradnomize" button several (~10) times for each question to make sure that your conclusions are not based on a single random sample.
+
+1. For each scenario below identify (i) the shape of the distribution, (ii) whether a substantive outlier is present, and (iii) whether the value of the mean is more or less than the value of the median.
+    1. `shape1=1`, `shape2=1`, and no outliers.
+    1. `shape1=8`, `shape2=1`, and no outliers.
+    1. `shape1=1`, `shape2=8`, and no outliers.
+    1. `shape1=3`, `shape2=3`, and no outliers.
+    1. `shape1=3`, `shape2=3`, and an outlier at the `min`.
+    1. `shape1=3`, `shape2=3`, and an outlier at the `max`.
+1. Can you make a conclusion about the effect of the shape of the distribution on the relative values of the mean and median?  [*Compare your observations from scenarios 1-4.*] 
+1. Can you make a conclusion about the effect of outliers on the relative values of the mean and median?  [*Compare your observations from scenarios 4-6.*]
+1. Why do you think the mean and median behave this way?
+
