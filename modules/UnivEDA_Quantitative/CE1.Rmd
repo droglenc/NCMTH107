@@ -3,7 +3,7 @@ layout: page
 title: Class Exercise 1
 subtitle: Univariate EDA - Quantitative
 author: Derek H. Ogle
-css: "/css/lecture.css"
+css: "/css/handouts.css"
 output:
   html_document:
     self_contained: no
@@ -25,11 +25,11 @@ source("../../rhelpers/knitr_setup.R")
 
 ----
 
-## Histograms
+## Histograms I
 
-1. The [U.S. Census](http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map) asked individuals 16 years old and older "How long in minutes is your one-way commute to work each day?".  The mean for individuals from each state was computed and is plotted in the histogram below.  Use this information to answer the questions further below.
+The [U.S. Census](http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map) asked individuals 16 years old and older "How long in minutes is your one-way commute to work each day?".  The mean for individuals from each state was computed and is plotted in the histogram below.
 
-```{r echo=FALSE, fig.cap="Histogram of mean commute time for U.S. states.", fig.width=3.5, fig.height=3.5}
+```{r echo=FALSE, fig.cap="Histogram of mean commute time for U.S. states.", fig.width=5, fig.height=5, par1=TRUE}
 df <- data.frame(time=c(24.2,18.8,24.6,21.3,27.2,24.5,24.8,24.8,29.7,25.9,27,
                         26,20,28,23.2,18.8,19,22.8,24.9,23.3,32,28,24,22.9,
                         23.9,23.1,18,18.1,23.8,26.3,30.4,21.6,31.6,23.6,16.9,
@@ -39,32 +39,37 @@ hist(~time,data=df,breaks=seq(16,32,2),xaxt="n",xlab="Mean Commute Time (mins)")
 axis(1,seq(16,32,2))
 ```
 
-    1. What is an individual in this example?
-    1. What type of variable is recorded?
-    1. How many individuals are represented in this histogram?
-    1. How many individuals had a mean commute time between 16 and 18 minutes?
-    1. How many states had a mean commute time between 18 and 24 minutes?
-    1. What was the range of mean commute times for the bin with exactly five states?
-    1. What is the shape of this distribution.
-    1. Are there any outliers represented in this distribution?
-    
-1. Describe the shape for each histogram shown below.
+Use this histogram to answer these questions.
+
+1. What is an individual in this example?
+1. What type of variable is recorded?
+1. How many individuals are represented in this histogram?
+1. How many individuals had a mean commute time between 16 and 18 minutes?
+1. How many states had a mean commute time between 18 and 24 minutes?
+1. What was the range of mean commute times for the bin with exactly five states?
+1. What is the shape of this distribution.
+1. Are there any outliers represented in this distribution?
+
+----
+
+## Histograms II
+
+For each histogram below, describe the shape and presence of outliers.
 
 ```{r echo=FALSE, fig.height=3, fig.width=3, fig.show='hold'}
 set.seed(125689)
 n <- 200
 xlbl <- "Quantitative Variable"
 par(mar=c(2,2,2,2),mgp=c(0.5,0,0),tcl=-0.2)
-hist(~rbeta(n,1,1),xlab=xlbl,main="#1",xaxt="n",yaxt="n")
-hist(~rbeta(n,1,6),xlab=xlbl,main="#2",xaxt="n",yaxt="n")
-hist(~rbeta(n,6,3),xlab=xlbl,main="#3",xaxt="n",yaxt="n")
-hist(~rbeta(n,2,7),xlab=xlbl,main="#4",xaxt="n",yaxt="n")
-hist(~rbeta(n,5,5),xlab=xlbl,main="#5",xaxt="n",yaxt="n")
+hist(~rbeta(n,1,6),xlab=xlbl,main="#1",xaxt="n",yaxt="n")
+hist(~rbeta(n,6,3),xlab=xlbl,main="#2",xaxt="n",yaxt="n")
+hist(~c(rbeta(n,2,7),0.91),xlab=xlbl,main="#3",xaxt="n",yaxt="n")
+hist(~rbeta(n,5,5),xlab=xlbl,main="#4",xaxt="n",yaxt="n")
+hist(~rbeta(n,1,1),xlab=xlbl,main="#5",xaxt="n",yaxt="n")
 hist(~rbeta(n,9,1),xlab=xlbl,main="#6",xaxt="n",yaxt="n")
-hist(~rbeta(n,8,4),xlab=xlbl,main="#7",xaxt="n",yaxt="n")
+hist(~c(rbeta(n,8,4),0),xlab=xlbl,main="#7",xaxt="n",yaxt="n")
 hist(~c(rbeta(n/2,7,2),rbeta(n/2,2,7)),xlab=xlbl,main="#8",xaxt="n",yaxt="n")
 ```
-
 
 ----
 
