@@ -14,13 +14,12 @@ Suppose that the distribution of number of Carpenter Ants in a nest is known to 
 1. What is an individual?
 1. What is the variable?
 1. What type of variable is that?
-1. What is $$\mu$$?
-1. What is $$\sigma$$?
+1. What is $\mu$?
+1. What is $\sigma$?
 
 Additionally, for each question below (a) identify the type of question (e.g., "forward-left", "reverse-between") and then (b) answer the question.
 
-<!-- list-start: 6 -->
-1. What percentage of nests have more than 1900 ants?
+6. What percentage of nests have more than 1900 ants?
 1. What is the number of ants such that 15% of nests have more ants?
 1. What is the number of ants such that 33% of nests have fewer ants?
 1. What percentage of nests have between 700 and 1900 ants?
