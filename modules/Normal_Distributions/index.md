@@ -23,9 +23,9 @@ css: /css/modules.css
 
 You should prepare for the concepts of this module by reading **Sections 4.1-4.4** in [the textbook](../../book/) and watching the following videos:
 
-* Characteristics of Normal Distributions
+* [Characteristics of Normal Distributions](){:target="_blank"} [XX mins]  [![PowerPOint](../../img/ppt.png)](PPT.pptx)
 * 68-95-99.7 Rule -- [A](https://www.youtube.com/v/PJPXFOK8F8E?version=3&autoplay=1){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/cgxPcdPbujI?version=3&autoplay=1){:target="_blank"} [8 mins]
-* Types of Calculations (Forward & Reverse)
+* [Types of Calculations (Forward & Reverse)](){:target="_blank"} [XX mins]  [![PowerPOint](../../img/ppt.png)](PPT2.pptx)
 * [Forward Calculations in R](https://vimeo.com/user45324800/normdist-forward){:target="_blank"} [6 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 * [Reverse Calculations in R](https://vimeo.com/user45324800/normdist-reverse){:target="_blank"} [6 mins]
 
