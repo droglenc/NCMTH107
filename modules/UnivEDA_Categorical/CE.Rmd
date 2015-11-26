@@ -38,9 +38,9 @@ The breed that won the "Herding Group" at the Westminster Kennel Club championsh
 
 ## Bar Chart I
 <img src="../zimgs/weddingring.jpg" alt="Wedding Ring" class="img-right">
-[A Northland College student](../../resources/past-projects/F07_Brilla.pdf) asked 50 of her peers "Why should people get married (Select one of "Love", "Money","Pregnancy", or "Other")?"  Her resutls are shown in the bar chart below.  Use this information to answer the questions further below.
+[A Northland College student](../../resources/past-projects/F07_Brilla.pdf) asked 50 of her peers "Why should people get married (Select one of "Love", "Money", "Pregnancy", or  "Other")?"  Her resutls are shown in the bar chart below.  Use this information to answer the questions further below.
 
-```{r echo=FALSE, fig.cap="Histogram of mean commute time for U.S. states.", fig.width=5, fig.height=5, par1=TRUE}
+```{r echo=FALSE, fig.cap="Histogram of mean commute time for U.S. states.", fig.width=5, fig.height=4, par1=TRUE}
 tbl <- c(Love=45,Money=1,Pregnancy=0,Other=4)
 barplot(tbl,xlab="Reaons to Marry",ylab="Frequency of Respondents",col="gray90",yaxt="n")
 axis(2,seq(0,45,5))
@@ -58,7 +58,7 @@ axis(2,seq(0,45,5))
 [King et al. (2013)](https://www.aphis.usda.gov/wildlife_damage/nwrc/publications/13pubs/king132.pdf) examined the habitat use of [Brown Pelicans (*Pelecanus
 occidentalis*)](https://en.wikipedia.org/wiki/Brown_pelican) in the Northern Gulf of Mexico.  The bar chart below show the percentage of GPS locations recorded for the sample of Brown Pelicans in major habitats.  Use this information to answer the questions further below.  [Note that `Water`="shallow near-shore waters", `EEW`="estuarine emergent wetland", `Grassland`="shoreline grasslands", `UnShore`="unconsolidated shore", `DeepWater`="deeper offshore waters", and `Other`="all other habitats".]
 
-```{r echo=FALSE, fig.cap="Histogram of mean commute time for U.S. states.", fig.width=5, fig.height=5, par1=TRUE}
+```{r echo=FALSE, fig.cap="Histogram of mean commute time for U.S. states.", fig.width=6, fig.height=4, par1=TRUE}
 tbl <- c(0.618,0.2551,0.0392,0.0271,0.0239)
 tbl <- c(tbl,1-sum(tbl))*100
 names(tbl) <- c("Water","EEW","Grassland","UnShore","DeepWater","other")
@@ -102,3 +102,5 @@ Enter the data into Excel, save as a CSV, and load the data into R.  [**HINT:** 
 1. Perform a univariate EDA for `goals`.
 1. Perform a univariate EDA for `sports`.
 1. Perform a univariate EDA for `type` of school.  Does this suggest anything about the way that students were sampled?
+
+----
