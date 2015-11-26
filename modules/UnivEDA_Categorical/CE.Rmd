@@ -1,0 +1,104 @@
+---
+layout: page
+title: Class Exercise
+subtitle: Univariate EDA - Categorical
+author: Derek H. Ogle
+css: "/css/handouts.css"
+output:
+  html_document:
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/UnivEDA_Categorical/")
+source("../../rhelpers/rhelpers.R")
+fnm <- "CE"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+fnm <- "CE"
+source("../../rhelpers/knitr_setup.R")
+```
+
+----
+
+## Hand Calculations
+<img src="../zimgs/sheltie-herding.jpg" alt="Sheltie Herding" class="img-right">
+The breed that won the "Herding Group" at the Westminster Kennel Club championships are [listed here](http://www.westminsterkennelclub.org/history/herdwinners.html).  Perform the following tasks with those data.
+
+1. Construct a table that shows the frequency of breeds won the group.
+1. Construct a table that shows the percentage by breed that won the group.
+1. Hand draw (roughly) a bar chart of your results.
+1. Hand draw (roughly) a pie chart of your results.
+
+----
+
+## Bar Chart I
+<img src="../zimgs/weddingring.jpg" alt="Wedding Ring" class="img-right">
+[A Northland College student](../../resources/past-projects/F07_Brilla.pdf) asked 50 of her peers "Why should people get married (Select one of "Love", "Money","Pregnancy", or "Other")?"  Her resutls are shown in the bar chart below.  Use this information to answer the questions further below.
+
+```{r echo=FALSE, fig.cap="Histogram of mean commute time for U.S. states.", fig.width=5, fig.height=5, par1=TRUE}
+tbl <- c(Love=45,Money=1,Pregnancy=0,Other=4)
+barplot(tbl,xlab="Reaons to Marry",ylab="Frequency of Respondents",col="gray90",yaxt="n")
+axis(2,seq(0,45,5))
+```
+
+1. What is an individual in this example?
+1. What type of variable is recorded?
+1. Construct a frequency table from this bar chart.
+1. Construct a percentage table from this bar chart.
+
+----
+
+## Bar Chart II
+<img src="../zimgs/brownpelican.jpg" alt="Brown Pelican" class="img-right">
+[King et al. (2013)](https://www.aphis.usda.gov/wildlife_damage/nwrc/publications/13pubs/king132.pdf) examined the habitat use of [Brown Pelicans (*Pelecanus
+occidentalis*)](https://en.wikipedia.org/wiki/Brown_pelican) in the Northern Gulf of Mexico.  The bar chart below show the percentage of GPS locations recorded for the sample of Brown Pelicans in major habitats.  Use this information to answer the questions further below.  [Note that `Water`="shallow near-shore waters", `EEW`="estuarine emergent wetland", `Grassland`="shoreline grasslands", `UnShore`="unconsolidated shore", `DeepWater`="deeper offshore waters", and `Other`="all other habitats".]
+
+```{r echo=FALSE, fig.cap="Histogram of mean commute time for U.S. states.", fig.width=5, fig.height=5, par1=TRUE}
+tbl <- c(0.618,0.2551,0.0392,0.0271,0.0239)
+tbl <- c(tbl,1-sum(tbl))*100
+names(tbl) <- c("Water","EEW","Grassland","UnShore","DeepWater","other")
+barplot(tbl,xlab="Main Habitats",ylab="Percent of Recordings",col="gray90")
+```
+
+1. What is an individual in this example?
+1. What type of variable is recorded?
+1. What (approximate) percentage of individuals used "shallow nearshore waters"?
+1. What (approximate) percentage of individuals used "estuaring emegerent wetlands"?
+1. What (approximate) percentate of individuals were not in the two most common habitat types?
+1. What is the shape of this distribution?
+
+----
+
+## Coarse Woody Debris
+<img src="../zimgs/cwd2.jpg" alt="CWD" class="img-right">
+Coarse woody debris (CWD) in lakes is important for aquatic systems as it provides refuge for young fish and invertebrates as well as providing areas for periphyton to grow.  Coarse woody debris was studied in the north basin of Allequash Lake in northern Wisconsin.  Among other things, the researchers recorded the diameter (cm) of CWD found in the lake littoral zone and a qualitative measure of the degree to which the location where the CWD was found was exposed to winds (low or medium).  The data (sampled from information on the [North Temperate Lakes Long Term Ecological Research website](http://lter.limnology.wisc.edu/spatial/source/data_cat_new.htm) they observed are shown below.
+
+<pre>
+diameter  21  15  18  23  18  17  19  17  15  22  16  20  16  17  18  15  16  24  24  23
+exposure med med med low med low med med med med med med low med med med med low med med
+
+diameter  18  17  19  17  17  15  17  18  19  31  25  15  17  34  16  18  19  15  16  15
+exposure med med med med med med med med low med med med med low low med med med low med
+
+diameter  20  23  34  20  17  20  15  34  18  24
+exposure med med low med med med med med med med
+</pre>
+
+Enter the data into Excel, save as a CSV, and load the data into R.  [**HINT:** *these are the same data that you entered in [a previous class exercise](../Getting_Started_R/CE.html).  Use that file and recycle the portion of that R script that you used to load the data.*]  Use this information to answer the following questions.
+
+1. Perform a univariate EDA for `exposure`.
+
+----
+
+## Popularity in Middle School
+<img src="../zimgs/sports_kids_1.jpg" alt="Sports Kids" class="img-right">
+[Chase and Drummer (1992)](http://www.ncbi.nlm.nih.gov/pubmed/1439167) examined sports as a social status determinant for children.  In their study, they surveyed 227 boys and 251 girls in grades 4, 5, and 6 from schools in Michigan to determine which criteria were most important in determining personal, female, and male popularity.  In two parts of their study, students were asked what their personal goals were for school (options were "make good grades", "be popular", and "be good in sports"; `goals`) and to rank the importance that "being good in sports" is in defining popularity (1="most important"-4="least important"; `sports`).  These data (and answers to several other questions) are in [PopularKids.csv](https://github.com/droglenc/NCData/raw/master/PopularKids.csv).  Use these data to answer the following questions.
+
+1. Perform a univariate EDA for `goals`.
+1. Perform a univariate EDA for `sports`.
+1. Perform a univariate EDA for `type` of school.  Does this suggest anything about the way that students were sampled?

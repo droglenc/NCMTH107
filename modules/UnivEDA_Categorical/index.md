@@ -19,12 +19,13 @@ css: /css/modules.css
 
 ----
 
-You should prepare for the concepts of this module by *reading Sections XXX* in [the textbook](../../book/) and watching the following videos:
+You should prepare for the concepts of this module by reading **Sections 3.2 and 3.3* in [the textbook](../../book/) and watching the following videos:
 
 * [Frequency Table & Barchart](https://www.youtube.com/v/k-AlrutdsFI?version=3&autoplay=1){:target="_blank"} [9 mins]
 * [Univariate EDA (Categorical) in R](https://vimeo.com/user45324800/ncstats-uedac){:target="_blank"} [4 mins]  [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
+* [Interpreting a Univariate EDA (Categorical)](https://vimeo.com/user45324800/ueda-catsum){:target="_blank"} [xx mins]  [![PowerPOint](../../img/ppt.png)](PPT.pptx)
 
-Questions XXX in [the textbook](../../book/) will assess your understanding of these materials.
+Question 3.51 in [the textbook](../../book/) will assess your understanding of these materials.
 
 ----
 
