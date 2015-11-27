@@ -37,7 +37,7 @@ Load these data into R to answer the questions below.
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="index.html">*</a></li>
+  <li><a href="index.html">^</a></li>
   <li><a href="CE1.html">1</a></li>
   <li class="active"><a href="#">2</a></li>
 </ul>
