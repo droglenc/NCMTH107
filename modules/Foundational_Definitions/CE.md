@@ -2,7 +2,7 @@
 layout: page
 title: Class Exercise
 subtitle: Foundational Definitions
-css: "/css/lecture.css"
+css: "/css/modules.css"
 ---
 
 ----
