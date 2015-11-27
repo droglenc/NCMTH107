@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Class Exercise
-subtitle: Simple Linear Regression
-css: "/css/lecture.css"
+title: Simple Linear Regression
+subtitle: Class Exercise
+css: "/css/modules.css"
 ---
 
 ----
@@ -45,3 +45,5 @@ Download these Excel data with the line from above, rename the variables (column
 1. What is the correlation coefficient between coffee sales and maximum temperature?
 1. What proportion of the variability in coffee sales is explained by knowing the maximum temperature?
 1. What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?
+
+----

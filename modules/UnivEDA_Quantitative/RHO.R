@@ -19,9 +19,5 @@ hist(~age,data=ars,xlab="Age (yrs)")
 Summarize(age~sex,data=ars,digits=2)
 hist(age~sex,data=ars,xlab="Age (yrs)")
 
-( tbl.drink <- xtabs(~usedrink,data=ars) )
-percTable(tbl.drink,digits=1)
-barplot(tbl.drink,xlab="Rating of Use for Drinking",ylab="Frequency",col="gray90")
 
-
-# Script created at 2015-11-17 13:46:30
+# Script created at 2015-11-27 09:14:52

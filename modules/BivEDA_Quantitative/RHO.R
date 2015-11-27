@@ -20,4 +20,4 @@ plot(mass~svl,data=d,xlab="Snout-Vent Length (cm)",ylab="Body Mass (KG)",pch=19,
 legend("topleft",levels(d$type),pch=19,col=1:2,bty="n")
 
 
-# Script created at 2015-11-17 16:20:44
+# Script created at 2015-11-27 09:21:13

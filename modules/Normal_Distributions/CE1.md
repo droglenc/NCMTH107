@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Class Exercise I
-subtitle: Normal Distributions
+title: Normal Distributions
+subtitle: Class Exercise 1
 css: "/css/modules.css"
 ---
 

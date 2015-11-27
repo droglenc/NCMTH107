@@ -46,4 +46,4 @@ ST1.chi$residuals
 percTable(freq.tbl,margin=1,digits=1)
 
 
-# Script created at 2015-11-17 20:23:20
+# Script created at 2015-11-27 09:23:26

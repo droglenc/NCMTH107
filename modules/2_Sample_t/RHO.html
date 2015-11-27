@@ -1,11 +1,13 @@
 ---
 layout: page
 title: t-Tests
+subtitle: R Handout
 author: Derek H. Ogle
-css: /css/handouts.css
+css: /css/modules.css
 ---
 
 
+<hr />
 <div id="first-commands" class="section level2">
 <h2>First Commands</h2>
 <pre class="r"><code>&gt; library(NCStats)
@@ -14,7 +16,7 @@ css: /css/handouts.css
 <div id="two-sample-t-test" class="section level2">
 <h2>Two-Sample t-Test</h2>
 <p><a href="http://www.sciencedirect.com/science/article/pii/S0272494499901469">Sholl <em>et al.</em> (2000)</a> performed an experiment to test the effect of sex (male, female) on spatial orientation ability. In one part of their study, the researchers took 30 males and 30 females to an unfamiliar wooded park and asked each individual to point to the south. The absolute pointing error (positive degrees off from due south, <code>abserr</code>) was recorded in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/SexDirection.csv">SexDirection.csv</a> . Test if men have a better sense of direction than women, at the 1% level?</p>
-<pre class="r"><code>&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules/1_Sample_t&quot;)
+<pre class="r"><code>&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules/2_Sample_t&quot;)
 &gt; sdir &lt;- read.csv(&quot;SexDirection.csv&quot;)
 &gt; str(sdir)</code></pre>
 <pre><code>&#39;data.frame&#39;:   60 obs. of  2 variables:

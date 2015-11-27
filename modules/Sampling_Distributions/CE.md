@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Class Exercise
-subtitle: Sampling Distributions
+title: Sampling Distributions
+subtitle: Class Exercise
 css: "/css/lecture.css"
 ---
 

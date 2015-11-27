@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Class Exercise
-subtitle: Bivariate EDA - Quantitative
-css: "/css/lecture.css"
+title: Bivariate EDA - Quantitative
+subtitle: Class Exercise
+css: "/css/modules.css"
 ---
 
 ----
@@ -32,3 +32,5 @@ Load these data into R to answer the questions below.
 1. Perform a bivariate EDA for the number of coffees sold and maximum temperature. 
 1. Describe the relationship between the number of cofees sold and the number of sodas sold.
 1. How is the number of coffees sold related to the number of days since the cafe opened?
+
+----

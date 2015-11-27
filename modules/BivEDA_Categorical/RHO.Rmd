@@ -1,8 +1,9 @@
 ---
 layout: page
 title: "Bivariate EDA - Categorical"
+subtitle: R Handout
 author: "Derek H. Ogle"
-css: "/css/handouts.css"
+css: "/css/modules.css"
 output:
   html_document:
     fig_height: 3.5
@@ -29,6 +30,8 @@ fnm <- "RHO"
 source("../../rhelpers/knitr_setup.R")
 ```
 
+----
+
 ## Background
 The [General Social Survey](http://www.norc.org/Research/Projects/Pages/general-social-survey.aspx) (GSS) is a nationwide survey that has been administered since 1972 to gather data on contemporary American society in an attempt to monitor and explain trends in attitudes, behaviors, and attributes of American society.  One part of that survey asked respondents to state their opinion on how their level of agreement with the following statement -- "Animals have rights too".  The results from respondents in 1993 and 1994 are recorded in [AnimalRights.csv](https://github.com/droglenc/NCData/blob/master/AnimalRights.csv).  Use the data to answer the questions below.
 
@@ -36,6 +39,8 @@ The [General Social Survey](http://www.norc.org/Research/Projects/Pages/general-
 * What percentage of respondents were from 1993 and strongly agreed with the statement?
 * What percentage of the respondents from 1993 strongly disagreed with the statement?
 * What percentage of the respondents that were neutral about the statement were from 1993?
+
+----
 
 ## Getting The Data
 ```{r message=FALSE, warning=FALSE}

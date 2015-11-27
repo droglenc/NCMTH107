@@ -10,7 +10,7 @@ source("../../rhelpers/knitr_setup.R")
 library(NCStats)
 library(car)   # for leveneTest
 
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/1_Sample_t")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/2_Sample_t")
 sdir <- read.csv("SexDirection.csv")
 str(sdir)
 
@@ -22,4 +22,4 @@ leveneTest(abserr~sex,data=sdir)
 plot(t2)
 
 
-# Script created at 2015-11-17 20:15:17
+# Script created at 2015-11-27 09:19:38

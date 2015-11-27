@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Class Exercise
-subtitle: Bivariate EDA - Categorical
-css: "/css/lecture.css"
+title: Bivariate EDA - Categorical
+subtitle: Class Exercise
+css: "/css/modules.css"
 ---
 
 ----
@@ -33,3 +33,5 @@ Hely *et al.* (2000; Journal of Vegetation Science 11:813-824) examined the effe
 1. What percentage of all students said that their goal was to "make good grades"?
 1. What percentage of students that said that their goal was to "be popular" were in the sixth grade.
 1. Comment on how the distribution of students into the `goal` categories differs (or not) among grades.
+
+----

@@ -21,4 +21,4 @@ fitPlot(lm.mt,ylab="Pectoral Muscle Mass (g)",xlab="Pectoral Muscle Thickness (m
 12-predM
 
 
-# Script created at 2015-11-17 19:32:46
+# Script created at 2015-11-27 09:24:31
