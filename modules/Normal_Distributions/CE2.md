@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Class Exercise
+title: Class Exercise II
 subtitle: Normal Distributions
 css: "/css/lecture.css"
 ---
@@ -25,7 +25,7 @@ Additionally, for each question below (a) identify the type of question (e.g., "
 1. What percentage of nests have between 700 and 1900 ants?
 1. What percentage of nests have fewer than 300 ants?
 1. What is the number of ants such that 5% of nests have more ants?
-1. The most common 80% of number of ants in a nest are between what two values?
+1. The most common 80% of nests have between what two numbers of ants?
 
 ----
 

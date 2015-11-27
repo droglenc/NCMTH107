@@ -32,22 +32,20 @@ output: html_document
 1. Categorical Univariate EDA
     * Quiz, Questions, all exercises, HW
 
-1. X
+1. Normal Distributions I
     * Quiz, Questions, 
 
-1. X
+1. Normal Distributions II
     * Quiz, Questions, 
 
-1. X
+1. REVIEW DAY
+
+1. EXAM
+
+1. Bivariate EDA -- Quantitative
     * Quiz, Questions, 
 
-1. X
-    * Quiz, Questions, 
-
-1. X
-    * Quiz, Questions, 
-
-1. X
+1. Bivariate EDA -- Categorical
     * Quiz, Questions, 
 
 1. X

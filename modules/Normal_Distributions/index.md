@@ -35,5 +35,6 @@ Questions 4.24 and 4.25 in [the textbook](../../book/) will assess your understa
 
 ### Related materials
 
-* [In-Class Exercise](CE.html)
+* [In-Class Exercise I](CE1.html)
+* [In-Class Exercise II](CE2.html)
 * [Old Lecture Slides](PPT_old.pptx)
