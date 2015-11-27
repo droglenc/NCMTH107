@@ -34,3 +34,8 @@ Load these data into R to answer the questions below.
 1. How is the number of coffees sold related to the number of days since the cafe opened?
 
 ----
+
+<ul class="pagination pagination-lg">
+  <li><a href="CE2.html">1</a></li>
+  <li class="active"><a href="#">2</a></li>
+</ul>
