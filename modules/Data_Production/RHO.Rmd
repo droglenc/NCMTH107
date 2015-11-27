@@ -32,11 +32,15 @@ source("../../rhelpers/knitr_setup.R")
 set.seed(11545345)
 ```
 
+----
+
 ## Select n from N Random Numbers
 Suppose that you want to select (n=)10 individuals from (N=)736 individuals.
 ```{r}
 sample(736,10)
 ```
+
+\ 
 
 ## Randomly Allocate N Individuals
 Suppose that you want to randomly (and evenly) allocate 24 individuals to 3 treatments.
