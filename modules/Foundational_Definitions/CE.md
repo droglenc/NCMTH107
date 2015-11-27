@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Class Exercise
-subtitle: Foundational Definitions
+title: Foundational Definitions
+subtitle: Class Exercise
 css: "/css/modules.css"
 ---
 
