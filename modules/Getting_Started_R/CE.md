@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Class Exercise
-subtitle: Getting Started With R
+title: Getting Started With R
+subtitle: Class Exercise
 css: "/css/modules.css"
 ---
 
