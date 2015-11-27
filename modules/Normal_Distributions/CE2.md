@@ -58,3 +58,11 @@ For each questions below (a) identify the type of question (e.g., "forward-left"
 1. What is the median time to pass between the two points?
 
 ----
+
+<div class="text-center">
+<ul class="pagination pagination-lg">
+  <li><a href="index.html">^</a></li>
+  <li><a href="CE1.html">1</a></li>
+  <li class="active"><a href="#">2</a></li>
+</ul>
+</div>

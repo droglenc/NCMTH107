@@ -45,3 +45,10 @@ Answer each question below without using R.  Show your work with a careful drawi
     1. What is the most common 99.7% of Z values?
 
 ----
+
+<div class="text-center">
+<ul class="pagination pagination-lg">
+  <li><a href="index.html">^</a></li>
+  <li class="active"><a href="#">1</a></li>
+  <li><a href="CE2.html">2</a></li>
+</ul>

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Statistics Project
-css: /css/lecture.css
+css: /css/modules.css
 ---
 
 ----

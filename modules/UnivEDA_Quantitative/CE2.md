@@ -38,3 +38,13 @@ Enter the data into Excel, save as a CSV, and load the data into R.  [**HINT:** 
 1. Perform a univariate EDA for the number of sodas sold.
 1. Examine the effect of day of the week on the distribution of number of sodas sold.
 1. Construct a "take home message" from your analyses.
+
+----
+
+<div class="text-center">
+<ul class="pagination pagination-lg">
+  <li><a href="index.html">^</a></li>
+  <li><a href="CE1.html">1</a></li>
+  <li class="active"><a href="#">2</a></li>
+</ul>
+</div>
