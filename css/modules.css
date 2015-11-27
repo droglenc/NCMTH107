@@ -1,3 +1,47 @@
+/* --- Reduces default size of header --- */
+header.header-page .page-heading h1 {
+  font-size: 45px;
+  margin-top: 0;
+}
+
+
+/* --- Creates a nicer looking horizontal rule --- */
+hr {
+  border: 0;
+  height: 3px;
+  border-radius: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+
+
+/* --- Makes the second level of order list use letters --- */
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+
+/* --- Creates images that float to the right or left --- */
+.img-right {
+   display: inline-block;
+   margin: 0px 0px 40px 20px;
+   float: right;
+   max-width: 200px;
+   height: auto;
+   border-radius:3%;
+}
+
+.img-left {
+   display: inline-block;
+   margin: 0px 20px 40px 0px;
+   float: left;
+   width: 200px;
+   border-radius:3%;
+}
+
+/* --- Creates a class for ILOs list --- */
 .ILOs {
   background-color: #f6f6ee;
 	border: 1px solid #53532c;
@@ -17,17 +61,3 @@
   margin-top: -1em;
 }
 
-header.header-page .page-heading h1 {
-  font-size: 45px;
-  margin-top: 0;
-}
-
-hr {
-  border: 0;
-  height: 3px;
-  border-radius: 1px;
-  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-}

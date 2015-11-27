@@ -2,43 +2,10 @@
 layout: page
 title: Class Exercise II
 subtitle: Normal Distributions
-css: "/css/lecture.css"
+css: "/css/modules.css"
 ---
 
 ----
-
-<div class="panel-group">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h2 class="panel-title">
-        <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
-      </h2>
-    </div>
-    <div id="collapse1" class="panel-collapse collapse">
-      <div class="panel-body">
-<img src="../zimgs/carpenterant.jpg" alt="Carpenter Ant" class="img-right">
-Suppose that the distribution of number of Carpenter Ants in a nest is known to be N(1400,300).  From this, answer the following questions.
-
-1. What is an individual?
-1. What is the variable?
-1. What type of variable is that?
-1. What is mu?
-1. What is sigma?
-
-Additionally, for each question below (a) identify the type of question (e.g., "forward-left", "reverse-between") and then (b) answer the question.
-
-6. What percentage of nests have more than 1900 ants?
-1. What is the number of ants such that 15% of nests have more ants?
-1. What is the number of ants such that 33% of nests have fewer ants?
-1. What percentage of nests have between 700 and 1900 ants?
-1. What percentage of nests have fewer than 300 ants?
-1. What is the number of ants such that 5% of nests have more ants?
-1. The most common 80% of nests have between what two numbers of ants?
-      </div>
-    </div>
-  </div>
-</div>
-
 
 ## Carpenter Ants
 <img src="../zimgs/carpenterant.jpg" alt="Carpenter Ant" class="img-right">
