@@ -18,12 +18,12 @@ css: /css/modules.css
 
 ----
 
-You should prepare for the concepts of this module by *reading Sections XXX* in [the textbook](../../book/) and watching the following videos:
+You should prepare for the concepts of this module by reading **Section 5.2** in [the textbook](../../book/) and watching the following videos:
 
 * [Percentage Tables](https://www.youtube.com/v/k8xFH6fCIWs?version=3&autoplay=1){:target="_blank"} [6 mins]
 * [Bivariate EDA (Categorical) in R](https://vimeo.com/user45324800/biveda-cat){:target="_blank"} [8 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 
-Questions XXX in [the textbook](../../book/) will assess your understanding of these materials.
+Question 5.26 in [the textbook](../../book/) will assess your understanding of these materials.
 
 ----
 
