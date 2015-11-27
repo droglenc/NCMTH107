@@ -36,11 +36,11 @@ Suppose that it is known that the distribution of the total weed pollen count (s
 For each questions below (a) identify the type of question (e.g., "forward-left", "reverse-between") and then (b) answer the question.
 
 1. What is the number of pores/m<sup>3</sup> such that 10% of the days have higher pore counts?
-1. What proportion of days in LaCrosse have a weed pollen count less than 50 pores/$m^{3}$?
-1. What proportion of days in LaCrosse have a weed pollen count between 32 and 55 pores/$m^{3}$?
-1. What is the number of pores/$m^{3}$ such that 30% of the days have lower pore counts?
-1. What is the most common 70% of number of pores/$m^{3}$?
-1. What proportion of days in LaCrosse have a weed pollen count greater than 35 pores/$m^{3}$?
+1. What proportion of days in LaCrosse have a weed pollen count less than 50 pores/<sup>3</sup>?
+1. What proportion of days in LaCrosse have a weed pollen count between 32 and 55 pores/<sup>3</sup>?
+1. What is the number of pores/<sup>3</sup> such that 30% of the days have lower pore counts?
+1. What is the most common 70% of number of pores/<sup>3</sup>?
+1. What proportion of days in LaCrosse have a weed pollen count greater than 35 pores/<sup>3</sup>?
 
 ----
 
