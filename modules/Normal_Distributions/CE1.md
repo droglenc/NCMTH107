@@ -11,8 +11,8 @@ css: "/css/lecture.css"
 
 Use `snorm()` from `NCStats` to answer the following questions.
 
-1. Describe what happens to the normal distribution if $\mu$ is increased?
-1. Describe what happens to the normal distribution if $\sigma$ is increased?
+1. Describe what happens to the normal distribution if &mu; is increased?
+1. Describe what happens to the normal distribution if &sigma; is increased?
 
 ----
 

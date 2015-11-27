@@ -33,10 +33,10 @@ output: html_document
     * Quiz, Questions, all exercises, HW
 
 1. Normal Distributions I
-    * Quiz, Questions, 
+    * Quiz, Questions, Class Exercise I
 
 1. Normal Distributions II
-    * Quiz, Questions, 
+    * Quiz, Questions, Class Exercise II, HW
 
 1. REVIEW DAY
 
