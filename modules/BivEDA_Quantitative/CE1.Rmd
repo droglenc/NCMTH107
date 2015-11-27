@@ -1,0 +1,65 @@
+---
+layout: page
+title: Bivariate EDA - Quantitative
+subtitle: Class Exercise
+author: Derek H. Ogle
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/BivEDA_Quantitative/")
+source("../../rhelpers/rhelpers.R")
+fnm <- "CE1"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+fnm <- "CE1"
+source("../../rhelpers/knitr_setup.R")
+```
+
+----
+
+## Scatterplots
+<img src="../zimgs/no-dumping-drains-to-ocean.jpg" alt="No Dumping" class="img-right">
+[Kelly (1998)](https://sora.unm.edu/sites/default/files/journals/jfo/v069n03/p0386-p0390.pdf) used data from the [Christmas Bird Count](https://en.wikipedia.org/wiki/Christmas_Bird_Count) (in 1994) to examine the latitudinal variation in the sex ratio of [Eastern Belted Kingfishers (*Ceryle alcyo*)](https://en.wikipedia.org/wiki/Belted_kingfisher).  The scatterplot below illustrates the relationship between the percent of female Kingfishers and the latitude of the survey.
+
+```{r echo=FALSE, fig.width=5, fig.height=5, par1=TRUE}
+tmp <- read.csv("Kingfishers.csv")
+plot(perc.female~latitude,data=tmp,xlab="Latitude (N)",ylab="Percent Female",pch=19)
+```
+
+Use this scatterplot to answer these questions.
+
+1. What is an individual in this example?
+1. What types of variables are the two variables used here?
+1. What was the maximum latitude examined?
+1. What was the minimum percent of females observed?
+1. What are the values for both variables for the point at the very top of the plot?
+1. How many surveys recorded fewer than 30% female Kingfishers?
+1. How many surveys were between 40 and 45<sup>o</sup>N?
+1. What is the association exhibited in this plot?
+
+----
+
+## Thought Questions
+
+Identify whether, and describe your reasoning, you would expect to see a positive, negative, or no (neutral) association between each pair of variables below.
+
+1. Weight and gas mileage of a car.
+1. Proportion of the population that was vaccinated and the proportion of the population that became ill.
+1. The expected salary of an individual and how many years they invested in post-secondary education.
+1. Exam score and the age of the student's mother.
+1. Mean summer temperature and the proportion of households that have an air conditioner (recorded for communities from across the U.S.).
+1. Proportion of population with a post-secondary education and the proportion of the population that have been incarcerated.
+1. Temperature and sales of ice cream.
+1. Hours spent exercising and percent body fat.
+1. Average annual mount of snowfall and the proportion that support conceal-and-carry gun laws (recorded for states from across the U.S.)
+
+----
+
