@@ -16,6 +16,7 @@ css: /css/modules.css
   <li>Describe the principles of observational studies.</li>
   <li>Understand basic ideas of designing simple observational studies, and</li>
   <li>Explain the importance of randomization in both experiments and observational studies.</li>
+  <li>Identify the response and explanatory variable in bivariate relationships.</li>
 </ol>
 </div>
 
@@ -30,6 +31,7 @@ You should prepare for the concepts of this module by reading **Chapter 7** in [
 * Experimental Design --  [A](https://www.youtube.com/v/v-xnPVCi9wM?version=3&autoplay=1&start=81&end=527){:target="_blank"} [10 mins] **or** [B](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=754&end=1126){:target="_blank"} [6 mins]
 * [Definitions in Experimental Design](https://vimeo.com/user45324800/experimentdefns){:target="_blank"} [4 mins]  [![PowerPOint](../../img/ppt.png)](PPT.pptx)
 * [Randomization in R](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
+* Response and Explanatory Variables - [A](https://www.youtube.com/v/bokeTCH2aJY?version=3&autoplay=1&start=60&end=148){:target="_blank"} [2 mins] **and**  [B](https://www.youtube.com/v/bokeTCH2aJY?version=3&autoplay=1&start=378){:target="_blank"} [2 mins]
 
 Questions 7.10 and 7.11 in [the textbook](../../book/) will assess your understanding of these materials.
 
