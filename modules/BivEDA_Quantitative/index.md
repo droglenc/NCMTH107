@@ -24,7 +24,7 @@ You should prepare for the concepts of this module by reading **Section 5.1** in
 * [Construct a Scatterplot](https://www.youtube.com/v/yXmz922K9Ks?version=3&autoplay=1){:target="_blank"} [7 mins]
 * [What is the Correlation?](https://www.youtube.com/v/PtYVrF_WT3A?version=3&start=32&autoplay=1){:target="_blank"} [8 mins]
 * [Bivariate EDA (Quantitative) in R](https://vimeo.com/user45324800/biveda-quant){:target="_blank"} [8 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
-* [Interpeting a Bivarite EDA (Quantitative)](){:target="_blank"} [X mins]  [![PowerPOint](../../img/ppt.png)](PPT.pptx)
+* [Interpeting a Bivarite EDA (Quantitative)](https://vimeo.com/user45324800/ueda-quantsum){:target="_blank"} [10 mins]  [![PowerPOint](../../img/ppt.png)](PPT.pptx)
 
 Questions 5.24 and 5.25 in [the textbook](../../book/) will assess your understanding of these materials.
 
