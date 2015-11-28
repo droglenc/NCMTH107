@@ -7,6 +7,16 @@ css: "/css/modules.css"
 
 ----
 
+## Constructing Tables
+
+Use the data below to construct a (i) two-way frequency table, (ii) a row-percentage table, (iii) a column-percentage table, and (iv) a total-percentage table.
+
+<pre>
+D C A C A D C A D B A B B A C D A C A B B A D C A C B B
+c c b c a c a b c b c c b c c c c c b b a b c b a b a b
+</pre>
+
+
 ## Forest Composition
 <img src="../zimgs/forestcomp.jpg" alt="Forest Composition" class="img-right">
 Hely *et al.* (2000; Journal of Vegetation Science 11:813-824) examined the effects of stand composition on fire hazard in mixed-wood Canadian boreal forests.  Two variables that they recorded for each stand were stand type (`sttype`, where `d`=deciduous, `c`=coniferous, `mc`=mixed coniferous, and `md`=mixed deciduous) and the time since the last fire (`tslf`) which was treated as a categorical variable with the categories corresponding to 100 year blocks of time (i.e., `0-100`, `100-200`, etc.).  These data may be found in [Fire.csv](https://github.com/droglenc/NCData/raw/master/Fire.csv).  Load these data into R, **refactor** `sttype` so that the `c` and `d` levels are ordered at the ends (i.e., so that the categories are arranged from mostly coniferous to mostly deciduous), and create appropriate tables to answer the following questions.
