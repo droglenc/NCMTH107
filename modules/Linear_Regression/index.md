@@ -16,7 +16,7 @@ css: /css/modules.css
   <li>Identify the response and explanatory variables.</li>
   <li>Describe the equation of a line and what the slope and intercept "mean."</li>
   <li>Make appropriate predictions using the best-fit line.</li>
-  <li>Describe the meaning of the coefficient of determination..
+  <li>Describe the meaning of the coefficient of determination.</li>
 </ol>
 </div>
 
