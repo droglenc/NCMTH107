@@ -4,8 +4,16 @@ title: Why Statistics is Important
 css: /css/modules.css
 ---
 
-<div class="ILOs">
-<p>Why is Statistics a required course for many majors at Northland College?  Why does Statistics meet the quantitative reasoning requirement of the Connections curriculum?  This module is designed to help you identify answers to these questions.</p>
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">
+        <a data-toggle="collapse" href="#ILOs">Learning Outcomes <small>(click to see)</small></a>
+      </h2>
+    </div>
+    <div id="ILOs" class="panel-collapse collapse">
+      <div class="panel-body">
+Why is Statistics a required course for many majors at Northland College?  Why does Statistics meet the quantitative reasoning requirement of the Connections curriculum?  This module is designed to help you identify answers to these questions.
 
 <p>After completing this module, you should be able to ...</p>
 
@@ -14,6 +22,9 @@ css: /css/modules.css
   <li>Define natural and sampling variability.</li>
   <li>Explain why statistics is important to their field of study.</li>
 </ol>
+      </div>
+    </div>
+  </div>
 </div>
 
 ----

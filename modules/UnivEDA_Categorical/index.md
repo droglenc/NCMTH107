@@ -4,8 +4,16 @@ title: Univariate EDA - Categorical
 css: /css/modules.css
 ---
 
-<div class="ILOs">
-<p>It is important to understand the distribution of individuals for a single variable.  With categorical data, this primarily consists of using tables and graphs to describe the levels in which most individuals are found.  This module describes how to construct these tables and graphs and how to use these results to prepare a synthetic description of the distribution of a categorical variable.</p>
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">
+        <a data-toggle="collapse" href="#ILOs">Learning Outcomes <small>(click to see)</small></a>
+      </h2>
+    </div>
+    <div id="ILOs" class="panel-collapse collapse">
+      <div class="panel-body">
+It is important to understand the distribution of individuals for a single variable.  With categorical data, this primarily consists of using tables and graphs to describe the levels in which most individuals are found.  This module describes how to construct these tables and graphs and how to use these results to prepare a synthetic description of the distribution of a categorical variable.
 
 <p>After completing this module, you should be able to ...</p>
 
@@ -15,6 +23,9 @@ css: /css/modules.css
   <li>Construct a bar chart.</li>
   <li>Construct a succinct written summary that addresses the distribution of a categorical variable.</li>
 </ol>
+      </div>
+    </div>
+  </div>
 </div>
 
 ----

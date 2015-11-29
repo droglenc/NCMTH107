@@ -4,8 +4,16 @@ title: Univariate EDA - Quantitative
 css: /css/modules.css
 ---
 
-<div class="ILOs">
-<p>It is important to understand the distribution of individuals for a single variable.  With quantitative data, four characteristics are generally described from several graphs and numerical summaries.  This module describes how to construct these graphs, compute these numerical summaries, and use these results to prepare a synthetic description of the distribution of a quantitative variable.</p>
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">
+        <a data-toggle="collapse" href="#ILOs">Learning Outcomes <small>(click to see)</small></a>
+      </h2>
+    </div>
+    <div id="ILOs" class="panel-collapse collapse">
+      <div class="panel-body">
+It is important to understand the distribution of individuals for a single variable.  With quantitative data, four characteristics are generally described from several graphs and numerical summaries.  This module describes how to construct these graphs, compute these numerical summaries, and use these results to prepare a synthetic description of the distribution of a quantitative variable.
 
 <p>After completing this module, you should be able to ...</p>
 
@@ -15,6 +23,9 @@ css: /css/modules.css
   <li>Compute mesures of dispersion (standard deviation, IQR, and range) by hand and with R.</li>
   <li>Construct a succinct written summary that addresses the four key characteristics (shape, outliers, center, and dispersion) of the distribution of a quantitative variable.</li>
 </ol>
+      </div>
+    </div>
+  </div>
 </div>
 
 ----

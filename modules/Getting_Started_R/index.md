@@ -4,8 +4,16 @@ title: Getting Started with R
 css: /css/modules.css
 ---
 
-<div class="ILOs">
-<p>R is fast becoming the primary software for performing statistical analyses in many industries and areas of study.  This module is designed to introduce you to R, describe foundational concepts of R, and explain how to enter data into R.  R will be used for specific applications in other modules.</p>
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">
+        <a data-toggle="collapse" href="#ILOs">Learning Outcomes <small>(click to see)</small></a>
+      </h2>
+    </div>
+    <div id="ILOs" class="panel-collapse collapse">
+      <div class="panel-body">
+R is fast becoming the primary software for performing statistical analyses in many industries and areas of study.  This module is designed to introduce you to R, describe foundational concepts of R, and explain how to enter data into R.  R will be used for specific applications in other modules.
 
 <p>After completing this module, you should be able to ...</p>
 
@@ -17,6 +25,9 @@ css: /css/modules.css
   <li>Isolate individual variables and individuals in R.</li>
   <li>Create data.frames that are subsets of larger data.frames.</li>
 </ol>
+      </div>
+    </div>
+  </div>
 </div>
 
 ----

@@ -4,8 +4,16 @@ title: Normal Distributions
 css: /css/modules.css
 ---
 
-<div class="ILOs">
-<p>Many natural phenomena can be closely approximated by simple statistical distributions.  The most common of these distributions is the normal distribution, most often referred to by laypeople as the "bell-shaped curve."  Because of its prevalence, the normal distribution is the foundation of many statistical methods.  This module describes how to make calculations with a normal distribution.  These calculations are useful in their own right, but they also form the foundation for many of the methods used in later modules.</p>
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">
+        <a data-toggle="collapse" href="#ILOs">Learning Outcomes <small>(click to see)</small></a>
+      </h2>
+    </div>
+    <div id="ILOs" class="panel-collapse collapse">
+      <div class="panel-body">
+Many natural phenomena can be closely approximated by simple statistical distributions.  The most common of these distributions is the normal distribution, most often referred to by laypeople as the "bell-shaped curve."  Because of its prevalence, the normal distribution is the foundation of many statistical methods.  This module describes how to make calculations with a normal distribution.  These calculations are useful in their own right, but they also form the foundation for many of the methods used in later modules.
 
 <p>After completing this module, you should be able to ...</p>
 
@@ -17,6 +25,9 @@ css: /css/modules.css
   <li>Accurately make "forward" calculations with R.</li>
   <li>Accurately make "reverse" calculations with R.</li>
 </ol>
+      </div>
+    </div>
+  </div>
 </div>
 
 ----

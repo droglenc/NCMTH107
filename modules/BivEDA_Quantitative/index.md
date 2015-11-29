@@ -4,8 +4,16 @@ title: Bivariate EDA - Quantitative
 css: /css/modules.css
 ---
 
-<div class="ILOs">
-<p>It is important to understand the relationship between two variables.  With quantitative data, this primarily consists of using a scatterplot and the correlation coefficient to describe four key characteristics of the relationship.  This module describes how to construct a scatterplot, calculate a correlation coefficient, and how to use these results to prepare a synthetic description of the relationship between two quantitative variables.</p>
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">
+        <a data-toggle="collapse" href="#ILOs">Learning Outcomes <small>(click to see)</small></a>
+      </h2>
+    </div>
+    <div id="ILOs" class="panel-collapse collapse">
+      <div class="panel-body">
+It is important to understand the relationship between two variables.  With quantitative data, this primarily consists of using a scatterplot and the correlation coefficient to describe four key characteristics of the relationship.  This module describes how to construct a scatterplot, calculate a correlation coefficient, and how to use these results to prepare a synthetic description of the relationship between two quantitative variables.
 
 <p>After completing this module, you should be able to ...</p>
 
@@ -15,6 +23,9 @@ css: /css/modules.css
   <li>Calculate a correlation coefficient with R.</li>
   <li>Construct a succinct written summary that addresses the four key characteristics (form, direction, outliers, and strength) of the relationship between two quantitative variables.</li>
 </ol>
+      </div>
+    </div>
+  </div>
 </div>
 
 ----

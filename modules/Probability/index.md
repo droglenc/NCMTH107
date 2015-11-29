@@ -4,14 +4,24 @@ title: Normal Distributions
 css: /css/modules.css
 ---
 
-<div class="ILOs">
-<p>.</p>
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">
+        <a data-toggle="collapse" href="#ILOs">Learning Outcomes <small>(click to see)</small></a>
+      </h2>
+    </div>
+    <div id="ILOs" class="panel-collapse collapse">
+      <div class="panel-body">
 
 <p>After completing this module, you should be able to ...</p>
 
 <ol>
   <li>.</li>
 </ol>
+      </div>
+    </div>
+  </div>
 </div>
 
 ----

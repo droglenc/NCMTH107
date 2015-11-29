@@ -4,8 +4,16 @@ title: Data Production
 css: /css/modules.css
 ---
 
-<div class="ILOs">
-<p>Statistical analyses rely on data and that data must be properly produced (or collected).  This module explores the differences in structure and conclusions that can be made from the two major types of studies and briefly describes key definitions and concepts for each.</p>
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">
+        <a data-toggle="collapse" href="#ILOs">Learning Outcomes <small>(click to see)</small></a>
+      </h2>
+    </div>
+    <div id="ILOs" class="panel-collapse collapse">
+      <div class="panel-body">
+Statistical analyses rely on data and that data must be properly produced (or collected).  This module explores the differences in structure and conclusions that can be made from the two major types of studies and briefly describes key definitions and concepts for each.
 
 <p>After completing this module, you should be able to ...</p>
 
@@ -18,6 +26,9 @@ css: /css/modules.css
   <li>Explain the importance of randomization in both experiments and observational studies.</li>
   <li>Identify the response and explanatory variable in bivariate relationships.</li>
 </ol>
+      </div>
+    </div>
+  </div>
 </div>
 
 ----

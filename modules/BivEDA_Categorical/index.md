@@ -4,8 +4,16 @@ title: Bivariate EDA - Categorical
 css: /css/modules.css
 ---
 
-<div class="ILOs">
-<p>It is important to understand the relationship between two variables.  With categorical data, this primarily consists of using tables to describe how the distribution of individuals into levels of one variable differs depending on the levels of another variable.  This module describes how to construct tables to assess these relationships and how to use these results to prepare a synthetic description of the relationship between two categorical variables.</p>
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">
+        <a data-toggle="collapse" href="#ILOs">Learning Outcomes <small>(click to see)</small></a>
+      </h2>
+    </div>
+    <div id="ILOs" class="panel-collapse collapse">
+      <div class="panel-body">
+It is important to understand the relationship between two variables.  With categorical data, this primarily consists of using tables to describe how the distribution of individuals into levels of one variable differs depending on the levels of another variable.  This module describes how to construct tables to assess these relationships and how to use these results to prepare a synthetic description of the relationship between two categorical variables.
 
 <p>After completing this module, the student should be able to ...</p>
 
@@ -14,6 +22,9 @@ css: /css/modules.css
   <li>Constrcut row-, column-, and total-percent percentage tables by hand and with R.</li>
   <li>Construct a succinct written summary that addresses the relationship between two categorical variables.</li>
 </ol>
+      </div>
+    </div>
+  </div>
 </div>
 
 ----

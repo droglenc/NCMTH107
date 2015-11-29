@@ -4,8 +4,16 @@ title: Foundational Definitions
 css: /css/modules.css
 ---
 
-<div class="ILOs">
-<p>As with most areas of study, Statistics requires an understanding of key foundational words.  This module introduces those words and their definitions.</p>
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">
+        <a data-toggle="collapse" href="#ILOs">Learning Outcomes <small>(click to see)</small></a>
+      </h2>
+    </div>
+    <div id="ILOs" class="panel-collapse collapse">
+      <div class="panel-body">
+As with most areas of study, Statistics requires an understanding of key foundational words.  This module introduces those words and their definitions.
 
 <p>After completing this module, you should be able to ...</p>
 
@@ -13,6 +21,9 @@ css: /css/modules.css
   <li>Identify the components of an IVPPSS in a real-world situation.</li>
   <li>Identify the type of variable for a variable.</li>
 </ol>
+      </div>
+    </div>
+  </div>
 </div>
 
 ----
