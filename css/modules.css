@@ -42,22 +42,36 @@ ol ol {
 }
 
 /* --- Creates a class for ILOs list --- */
-.ILOs {
+.panel-group-ILOs {
+  margin-bottom: 20px;
   background-color: #f6f6ee;
 	border: 1px solid #53532c;
 	border-left: 6px solid #53532c;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 0.1em;
-  padding-bottom: 0.1em;
   border-radius: 1em;
-  margin-top: 1em;
-  margin-bottom: 2em;
-  margin-left: 5%;
-  margin-right: 5%;
+}
+.panel-group-ILOs .panel {
+  margin-bottom: 0;
+  border-radius: 4px;
+}
+.panel-group-ILOs .panel + .panel {
+  margin-top: 5px;
+}
+.panel-group-ILOs .panel-heading {
+  border-bottom: 0;
+}
+.panel-group-ILOs .panel-heading + .panel-collapse > .panel-body,
+.panel-group-ILOs .panel-heading + .panel-collapse > .list-group {
+  border-top: 1px solid #ddd;
+}
+.panel-group-ILOs .panel-footer {
+  border-top: 0;
+}
+.panel-group-ILOs .panel-footer + .panel-collapse .panel-body {
+  border-bottom: 1px solid #ddd;
 }
 
-.ILOs > ol {
+
+.panel-group-ILOs .ILOs > ol {
   margin-top: -1em;
 }
 
