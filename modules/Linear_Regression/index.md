@@ -4,7 +4,15 @@ title: Linear Regression
 css: /css/modules.css
 ---
 
-<div class="ILOs">
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">
+        <a data-toggle="collapse" href="#ILOs">Learning Outcomes (click to see)</a>
+      </h2>
+    </div>
+    <div id="ILOs" class="panel-collapse collapse">
+      <div class="panel-body">
 <p>One of the most common things in statistics is to describe the linear relationship between two variables by fitting a best-fit line to the scatterplot of those variables.  The method for finding the best-fit line is called simple linear regression and is the topic of this module.</p>
 
 <p>After completing this module, you should be able to ...</p>
@@ -18,6 +26,9 @@ css: /css/modules.css
   <li>Make appropriate predictions using the best-fit line.</li>
   <li>Describe the meaning of the coefficient of determination.</li>
 </ol>
+      </div>
+    </div>
+  </div>
 </div>
 
 ----
