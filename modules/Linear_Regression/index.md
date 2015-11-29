@@ -15,7 +15,7 @@ css: /css/modules.css
       <div class="panel-body">
 One of the most common things in statistics is to describe the linear relationship between two variables by fitting a best-fit line to the scatterplot of those variables.  The method for finding the best-fit line is called simple linear regression and is the topic of this module.
 
-After completing this module, you should be able to ...
+<p>After completing this module, you should be able to ...</p>
 
 <ol>
   <li>Describe the purposes of regression.</li>
