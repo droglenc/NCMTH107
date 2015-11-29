@@ -13,9 +13,9 @@ css: /css/modules.css
     </div>
     <div id="ILOs" class="panel-collapse collapse">
       <div class="panel-body">
-<p>One of the most common things in statistics is to describe the linear relationship between two variables by fitting a best-fit line to the scatterplot of those variables.  The method for finding the best-fit line is called simple linear regression and is the topic of this module.</p>
+One of the most common things in statistics is to describe the linear relationship between two variables by fitting a best-fit line to the scatterplot of those variables.  The method for finding the best-fit line is called simple linear regression and is the topic of this module.
 
-<p>After completing this module, you should be able to ...</p>
+After completing this module, you should be able to ...
 
 <ol>
   <li>Describe the purposes of regression.</li>
