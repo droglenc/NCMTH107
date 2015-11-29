@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Simple Linear Regression
-subtitle: Class Exercise
+subtitle: Class Exercise 2
 css: "/css/modules.css"
 ---
 
@@ -47,3 +47,11 @@ Download these Excel data with the line from above, rename the variables (column
 1. What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?
 
 ----
+
+<div class="text-center">
+<ul class="pagination pagination-lg">
+  <li><a href="index.html">^</a></li>
+  <li><a href="CE1.html">1</a></li>
+  <li class="active"><a href="#">2</a></li>
+</ul>
+</div>

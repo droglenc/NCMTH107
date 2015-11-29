@@ -26,10 +26,10 @@ You should prepare for the concepts of this module by reading **Chapter 6** in [
 
 * Response and Explanatory Variables -  [A](https://www.youtube.com/v/bokeTCH2aJY?version=3&autoplay=1&start=60&end=148){:target="_blank"} [2 mins] **and**  [B](https://www.youtube.com/v/bokeTCH2aJY?version=3&autoplay=1&start=378){:target="_blank"} [2 mins]
 * [Introduction to Regression](https://www.youtube.com/v/k_OB1tWX9PM?version=3&autoplay=1){:target="_blank"} [14 mins]
-* [Assumptions](https://vimeo.com/user45324800/slr-assumptions){:target="_blank"} [xx mins]  [![PowerPoint](../../img/ppt.png)](PPT.pptx)
-* [R-Squared](https://vimeo.com/user45324800/slr-rsquared){:target="_blank"} [xx mins]  [![PowerPoint](../../img/ppt.png)](PPT2.pptx)
+* [Assumptions](https://vimeo.com/user45324800/slr-assumptions){:target="_blank"} [3 mins]  [![PowerPoint](../../img/ppt.png)](PPT.pptx)
+* [R-Squared](https://vimeo.com/user45324800/slr-rsquared){:target="_blank"} [5 mins]  [![PowerPoint](../../img/ppt.png)](PPT2.pptx)
 * [Linear Regression in R](https://vimeo.com/user45324800/regression1){:target="_blank"} [8 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
-* [Regression Questions](https://vimeo.com/user45324800/slr-questions){:target="_blank"} [xx mins]  [![PowerPoint](../../img/ppt.png)](PPT3.pptx)
+* [Regression Questions](https://vimeo.com/user45324800/slr-questions){:target="_blank"} [10 mins]  [![PowerPoint](../../img/ppt.png)](PPT3.pptx)
 
 Question 6.19 in [the textbook](../../book/) will assess your understanding of these materials.
 
@@ -37,5 +37,6 @@ Question 6.19 in [the textbook](../../book/) will assess your understanding of t
 
 ### Related materials
 
-* [In-Class Exercise](CE.html)
+* [In-Class Exercises I](CE1.html)
+* [In-Class Exercises II](CE2.html)
 * [Old Lecture Slides](PPT_old.pptx)
