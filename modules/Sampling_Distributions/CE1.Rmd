@@ -25,6 +25,32 @@ source("../../rhelpers/knitr_setup.R")
 
 ----
 
+## Constructing a Sampling Distribution
+
+Use the very simple population of five individuals with the following values -- 12, 14, 16, 18, 20 -- to answer the following questions.
+
+1. Compute the center and dispersion of this population.  Label your results with appropriate symbols.
+1. Identify all possible samples of n=2 from this population.  [*Note that there are 10 such samples.*]
+1. Compute the mean for each of these samples.
+1. Compute the mean of all 10 sample means.  [*See the hint further below*]
+1. Compute the standard deviation of all 10 sample means.  What should this result be called?
+1. Repeat the previous four questions for samples of n=3.  [*Note that there is again 10 samples.*]
+1. Repeat the previous question for samples of n=4.  [*Note that there are 5 such samples*]
+1. How did the mean of the sample means compare to the population mean?
+1. How did the standard deviation of the sample means compare to the population standard deviation?
+1. What values did you expect the standard deviation of the sample means to equal (i.e., based on the Central Limit Theorem)?
+1. How did the mean of the sample means change with increasing n?
+1. How did the standard deviation of the sample means change with increasing n?
+
+Hint: the mean and standard deviation of the sample means can be efficiently computed by entering the means into a vector in R and the submitting that vector to `Summarize()` from `NCStats`.
+
+```{r}
+mns <- c(5.6,6.7,7.8,8.9)  # dummy data as an example
+Summarize(mns,digits=3)
+```
+
+----
+
 ## Checking the CLT
 We can provide evidence to support (or not) the Central Limit Theorem (CLT) by (i) creating a known population, (ii) stating our expectations from the CLT for the sampling distribution of the means, (iii) repeatedly sampling fronm the population to construct a simulated sampling distribution of the means, (iv) recording results from the repeated sampling, and (v) comparing the observed results to what was expected from the CLT.
 
@@ -50,17 +76,13 @@ The table below can be used to efficiently record your expectations and observed
 
 Use `cltSim()` and the table above to answer the following questions.
 
-1. Construct a population distribution where `shape1=1` and `shape2=1` (the default values).
+1. Construct a population distribution where `shape1=1` and `shape2=1`.
     1. What is the shape, center, and dispersion of this population?
     1. What would you *expect*, based on the CLT (*not* the results from `cltSim()`), the sampling distribution of the sample means to look like for n=10, 25, and 50.  Record your expectations in the appropriate cells of the table from above.
     1. What did you *observe* (from `cltSim()`) for the simulated sampling distributions of the sample means for n=10, 25, and 50.  Record your observations in the approprate cells of the table from above.
     1. Did each of your observations match your expectations?  Does this give you confidence in the CLT?
 1. Repeat for `shape=1` and `shape2=5`.
 1. Repeat for `shape=5` and `shape2=3`.
-
-
-
-
 
 ----
 
