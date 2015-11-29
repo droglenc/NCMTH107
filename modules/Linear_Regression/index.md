@@ -8,7 +8,7 @@ css: /css/modules.css
   <div class="panel panel-default">
     <div class="panel-heading">
       <h2 class="panel-title">
-        <a data-toggle="collapse" href="#ILOs">Learning Outcomes (click to see)</a>
+        <a data-toggle="collapse" href="#ILOs">Learning Outcomes <small>(click to see)</small></a>
       </h2>
     </div>
     <div id="ILOs" class="panel-collapse collapse">
