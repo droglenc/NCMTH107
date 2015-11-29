@@ -13,6 +13,7 @@ css: /css/modules.css
     </div>
     <div id="ILOs" class="panel-collapse collapse">
       <div class="panel-body">
+Sampling distributions show the distribution of a statistic from many all possible samples.  Sampling distributions are the cornerstone of inferential statistics.  Thus, understanding sampling distributions is key as we transition to performing inferential statistics.  Sampling distributions are the subject of this module.
 
 <p>After completing this module, you should be able to ...</p>
 
