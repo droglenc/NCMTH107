@@ -10,22 +10,24 @@ css: "/css/modules.css"
 <hr />
 <div id="constructing-a-sampling-distribution" class="section level2">
 <h2>Constructing a Sampling Distribution</h2>
-<p>Use the very simple population of five individuals with the following values – 12, 14, 16, 18, 20 – to answer the following questions.</p>
+<p><img src="../zimgs/calculator-1.jpg" alt="Calculations" class="img-right"> Use the very simple population of five individuals with the following values – 12, 14, 16, 18, 20 – to answer the following questions.</p>
 <ol>
 <li>Compute the center and dispersion of this population. Label your results with appropriate symbols.</li>
 <li>Identify all possible samples of n=2 from this population. [<em>Note that there are 10 such samples.</em>]</li>
-<li>Compute the mean for each of these samples.</li>
+<li>Compute the mean for each sample.</li>
 <li>Compute the mean of all 10 sample means. [<em>See the hint further below</em>]</li>
 <li>Compute the standard deviation of all 10 sample means. What should this result be called?</li>
 <li>Repeat the previous four questions for samples of n=3. [<em>Note that there is again 10 samples.</em>]</li>
 <li>Repeat the previous question for samples of n=4. [<em>Note that there are 5 such samples</em>]</li>
 <li>How did the mean of the sample means compare to the population mean?</li>
 <li>How did the standard deviation of the sample means compare to the population standard deviation?</li>
-<li>What values did you expect the standard deviation of the sample means to equal (i.e., based on the Central Limit Theorem)?</li>
+<li>What values did you expect the standard deviation of the sample means to equal (i.e., based on the Central Limit Theorem)? Did they equal your expectations?</li>
 <li>How did the mean of the sample means change with increasing n?</li>
 <li>How did the standard deviation of the sample means change with increasing n?</li>
 </ol>
-<p>Hint: the mean and standard deviation of the sample means can be efficiently computed by entering the means into a vector in R and the submitting that vector to <code>Summarize()</code> from <code>NCStats</code>.</p>
+<p class="bg-info">
+<strong>Hint:</strong> the mean and standard deviation of the sample means can be efficiently computed by entering the means into a vector in R and the submitting that vector to <code>Summarize()&lt;&gt; from <code>NCStats&lt;&gt;.
+</p>
 <pre class="r"><code>&gt; mns &lt;- c(5.6,6.7,7.8,8.9)  # dummy data as an example
 &gt; Summarize(mns,digits=3)</code></pre>
 <pre><code>       n   nvalid     mean       sd      min       Q1   median       Q3      max percZero 
@@ -34,7 +36,7 @@ css: "/css/modules.css"
 </div>
 <div id="checking-the-clt" class="section level2">
 <h2>Checking the CLT</h2>
-<p>We can provide evidence to support (or not) the Central Limit Theorem (CLT) by (i) creating a known population, (ii) stating our expectations from the CLT for the sampling distribution of the means, (iii) repeatedly sampling fronm the population to construct a simulated sampling distribution of the means, (iv) recording results from the repeated sampling, and (v) comparing the observed results to what was expected from the CLT.</p>
+<p><img src="../zimgs/computer-1.jpg" alt="Simulations" class="img-right"> We can provide evidence to support (or not) the Central Limit Theorem (CLT) by (i) creating a known population, (ii) stating our expectations from the CLT for the sampling distribution of the means, (iii) repeatedly sampling fronm the population to construct a simulated sampling distribution of the means, (iv) recording results from the repeated sampling, and (v) comparing the observed results to what was expected from the CLT.</p>
 <p>The <code>cltSim()</code> function (with no arguments) from <code>NCStats</code> provides an efficient method to create a known population, repeatedly sample (5000 times) from that population, and summarize the resulting simulated sampling distribution. For example, <code>cltSim()</code> produced the plots shown below. The histogram on the left is a known population distribution with the parameters (μ&amp;σ) shown. The histogram on the right is a simulated sampling distribution; i.e., the distribution of means from 5000 independent samples of size n taken from the known population. In RStudio, this plot will have a gear icon in the upper-left corner that will open a dialog box that allows you to modify n. Additionally, you can control two shape parameters that will alter the known population distribution.</p>
 <p><img src="CE1_files/figure-html/unnamed-chunk-4-1.png" title="" alt="" width="672" /></p>
 <p>The table below can be used to efficiently record your expectations and observed results for different sample sizes.</p>
