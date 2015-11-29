@@ -17,9 +17,18 @@ css: /css/modules.css
 <p>After completing this module, you should be able to ...</p>
 
 <ol>
-  <li>.</li>
+  <li>Describe the concept of sampling variability.</li>
+  <li>Describe why sampling variability must be dealt with to make inferences.</li>
+  <li>Describe what a sampling distribution represents.</li>
+  <li>Identify how a sampling distribution differs from a population distribution.</li>
+  <li>Describe what a standard error is.</li>
+  <li>Identify how a standard error differs from a standard deviation.</li>
+  <li>Describe how and why sampling distributions are simulated.</li>
+  <li>Explain the concepts of precision, accuracy, and bias as it relates to statistics and parameters.</li>
+  <li>Describe the theoretical distribution of the sampling distribution of the sample means.</li>
+  <li>Gain some belief that the theoretical distribution actually represents the sampling distribution of the sample means.</li>
+  <li>Use the sampling distribution of sample means to compute the probability of particular sets of means.</li>
 </ol>
-</div>
       </div>
     </div>
   </div>
@@ -27,11 +36,11 @@ css: /css/modules.css
 
 ----
 
-You should prepare for the concepts of this module by *reading Sections XXX* in [the textbook](../../book/) and watching the following videos:
+You should prepare for the concepts of this module by reading **Chapter 9** in [the textbook](../../book/) and watching the following videos:
 
 * [Introduction to Sampling Distributions](https://www.youtube.com/v/Zbw-YvELsaM?version=3&autoplay=1){:target="_blank"} [8 mins]
 
-Questions XXX in [the textbook](../../book/) will assess your understanding of these materials.
+Questions 9.22-9.24 in [the textbook](../../book/) will assess your understanding of these materials.
 
 ----
 
