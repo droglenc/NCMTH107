@@ -4,7 +4,7 @@ title: Sampling Distributions
 css: /css/modules.css
 ---
 
-<div class="panel-group">
+<div class="panel-group-ILOs">
   <div class="panel panel-default">
     <div class="panel-heading">
       <h2 class="panel-title">
