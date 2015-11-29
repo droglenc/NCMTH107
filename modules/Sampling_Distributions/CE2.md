@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Sampling Distributions
-subtitle: Class Exercise
+subtitle: Class Exercise 2
 css: "/css/modules.css"
 ---
 
@@ -63,3 +63,11 @@ Supposed that it is know that the distribution of times spent plowing a city blo
 1. What is the Q1 for the mean plow time in samples of 40 blocks?
 
 ----
+
+<div class="text-center">
+<ul class="pagination pagination-lg">
+  <li><a href="index.html">^</a></li>
+  <li><a href="CE1.html">1</a></li>
+  <li class="active"><a href="#">2</a></li>
+</ul>
+</div>

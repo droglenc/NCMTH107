@@ -1,0 +1,61 @@
+---
+layout: page
+title: Sampling Distributions
+subtitle: Class Exercise 1
+author: Derek H. Ogle
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Sampling_Distributions/")
+source("../../rhelpers/rhelpers.R")
+fnm <- "CE1"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+fnm <- "CE1"
+source("../../rhelpers/knitr_setup.R")
+```
+
+----
+
+## Checking the CLT
+The sampling distribution of the sample mean is simulated with `cltSim()` from the `NCStats` package.  Running this function (with no arguments) will produce the plot below.  The histogram on the left is a known population distribution with the parameters shown.  The histogram on the right shows the distribution of means from 5000 independent samples of size n taken from the population shown on the left.  When run in RStudio this plot will have a gear icon in the upper-left corner that will allow you to control the size of n.  In addition, you can control two shape parameters that will alter the look at parameters of the known population distribution.
+
+```{r echo=FALSE, fig.width=7,fig.height=3,par2=TRUE}
+cltSim()
+```
+
+The questions below will use the following table to record results.
+
+<table class="table table-bordered">
+  <thead>
+    <tr><th></th><th colspan=3>Expected from CLT</th><th colspan=3>Observed</th></tr>
+    <tr><th>n</th><th>Shape</th><th>Center</th><th>Dispersion</th>
+        <th>Shape</th><th>Center</th><th>Dispersion</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>10</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+                   <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr><td>25</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+                   <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr><td>50</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+                   <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+  </tbody>
+</table>
+
+
+----
+
+<div class="text-center">
+<ul class="pagination pagination-lg">
+  <li><a href="index.html">^</a></li>
+  <li class="active"><a href="#">1</a></li>
+  <li><a href="CE2.html">2</a></li>
+</ul>

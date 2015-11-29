@@ -1,0 +1,69 @@
+---
+layout: page
+title: Sampling Distributions
+subtitle: Class Exercise 1
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="checking-the-clt" class="section level2">
+<h2>Checking the CLT</h2>
+<p>The sampling distribution of the sample mean is simulated with <code>cltSim()</code> from the <code>NCStats</code> package. Running this function (with no arguments) will produce the plot below. The histogram on the left is a known population distribution with the parameters shown. The histogram on the right shows the distribution of means from 5000 independent samples of size n taken from the population shown on the left. When run in RStudio this plot will have a gear icon in the upper-left corner that will allow you to control the size of n. In addition, you can control two shape parameters that will alter the look at parameters of the known population distribution.</p>
+<p><img src="CE1_files/figure-html/unnamed-chunk-3-1.png" title="" alt="" width="672" /></p>
+<p>The questions below will use the following table to record results.</p>
+<table class="table table-bordered">
+<thead>
+<pre><code>&lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th colspan=3&gt;Expected from CLT&lt;/th&gt;&lt;th colspan=3&gt;Observed&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;n&lt;/th&gt;&lt;th&gt;Shape&lt;/th&gt;&lt;th&gt;Center&lt;/th&gt;&lt;th&gt;Dispersion&lt;/th&gt;
+    &lt;th&gt;Shape&lt;/th&gt;&lt;th&gt;Center&lt;/th&gt;&lt;th&gt;Dispersion&lt;/th&gt;&lt;/tr&gt;</code></pre>
+</thead>
+<tbody>
+<pre><code>&lt;tr&gt;&lt;td&gt;10&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+               &lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;25&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+               &lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;50&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+               &lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;</code></pre>
+</tbody>
+</table>
+<hr />
+<div class="text-center">
+<ul class="pagination pagination-lg">
+<li>
+<a href="index.html">^</a>
+</li>
+<li class="active">
+<a href="#">1</a>
+</li>
+<li>
+<a href="CE2.html">2</a>
+</li>
+</ul>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
