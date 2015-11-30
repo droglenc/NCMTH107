@@ -10,112 +10,72 @@ output: html_document
 
 1. Why Statistics is Important
     * Quiz, Questions, Cheesehead example, HW
-
 1. IVPPSS, Variable Types
     * Quiz, Questions, 3-4 IVPPSS scenarios, all Type of Variables questions, HW
-
 1. Data Production
     * Quiz, Questions, All (but Study Types II), HW
-
 1. Getting Started with R
     * Quiz, Questions, Go through the demonstration handout
-
 1. Getting Started with R II
     * Quiz (short), Questions, all class exercises, HW
-
 1. Quantitative Univariate EDA -- Calculations
     * Quiz, Questions, all of first class exercise
-
 1. Quantitative Univariate EDA -- Statements
     * Quiz, Questions, all of second class exercise, HW
-
 1. Categorical Univariate EDA
     * Quiz, Questions, all exercises, HW
-
 1. Normal Distributions I
     * Quiz, Questions, Class Exercise I
-
 1. Normal Distributions II
     * Quiz, Questions, Class Exercise II, HW
-
 1. REVIEW DAY
-
 1. EXAM
-
 1. Bivariate EDA -- Quantitative
-    * Quiz, Questions, 
-
+    * Quiz, Questions, All Class Exercises, HW?
 1. Bivariate EDA -- Categorical
+    * Quiz, Questions, Class Exercise, HW
+1. Linear Regression
+    * Quiz, Questions, Class Exercise I
+1. Linear Regression
+    * Quiz, Questions, Class Exercise II, HW
+1. Sampling Distributions
     * Quiz, Questions, 
-
+1. Sampling Distributions
+    * Quiz, Questions, 
+1. Probability
+    * Quiz, Questions, 
+1. Inference - Hypothesis Testing
+    * Quiz, Questions, 
+1. Inference - Hypothesis Testing
+    * Quiz, Questions, 
+1. Inference - Confidence Regions
+    * Quiz, Questions, 
+1. Inference - Confidence Regions
+    * Quiz, Questions, 
+1. FLEX DAY
+1. EXAM REVIEW
+1. EXAM
 1. X
     * Quiz, Questions, 
-
 1. X
     * Quiz, Questions, 
-
 1. X
     * Quiz, Questions, 
-
 1. X
     * Quiz, Questions, 
-
 1. X
     * Quiz, Questions, 
-
 1. X
     * Quiz, Questions, 
-
 1. X
     * Quiz, Questions, 
-
 1. X
     * Quiz, Questions, 
-
 1. X
     * Quiz, Questions, 
-
 1. X
     * Quiz, Questions, 
-
 1. X
     * Quiz, Questions, 
-
-1. X
-    * Quiz, Questions, 
-
-1. X
-    * Quiz, Questions, 
-
-1. X
-    * Quiz, Questions, 
-
-1. X
-    * Quiz, Questions, 
-
-1. X
-    * Quiz, Questions, 
-
-1. X
-    * Quiz, Questions, 
-
-1. X
-    * Quiz, Questions, 
-
-1. X
-    * Quiz, Questions, 
-
-1. X
-    * Quiz, Questions, 
-
-1. X
-    * Quiz, Questions, 
-
-1. X
-    * Quiz, Questions, 
-
-1. X
-    * Quiz, Questions, 
-
 1. X
     * Quiz, Questions, 

@@ -13,7 +13,7 @@ css: /css/modules.css
     </div>
     <div id="ILOs" class="panel-collapse collapse">
       <div class="panel-body">
-Sampling distributions show the distribution of a statistic from many all possible samples.  Sampling distributions are the cornerstone of inferential statistics.  Thus, understanding sampling distributions is key as we transition to performing inferential statistics.  Sampling distributions are the subject of this module.
+Sampling distributions show the distribution of a statistic from all possible samples and are the cornerstones of inferential statistics.  Thus, understanding sampling distributions, the subject of this module, is key as we transition to performing inferential statistics.
 
 <p>After completing this module, you should be able to ...</p>
 
@@ -40,6 +40,8 @@ Sampling distributions show the distribution of a statistic from many all possib
 You should prepare for the concepts of this module by reading **Chapter 9** in [the textbook](../../book/) and watching the following videos:
 
 * [Introduction to Sampling Distributions](https://www.youtube.com/v/Zbw-YvELsaM?version=3&autoplay=1){:target="_blank"} [8 mins]
+* Central Limit Theorem
+* [Types of Questions](https://vimeo.com/user45324800/smplngd-questions){:target="_blank"} [7 mins] [![PowerPoint](../../img/ppt.png)](PPT2.pptx)
 
 Questions 9.22-9.24 in [the textbook](../../book/) will assess your understanding of these materials.
 
