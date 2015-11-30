@@ -41,7 +41,7 @@ You should prepare for the concepts of this module by reading **Chapter 9** in [
 
 * [Introduction to Sampling Distributions](https://www.youtube.com/v/Zbw-YvELsaM?version=3&autoplay=1){:target="_blank"} [8 mins]
 * Central Limit Theorem
-* [Types of Questions](https://vimeo.com/user45324800/smplngd-questions){:target="_blank"} [7 mins] [![PowerPoint](../../img/ppt.png)](PPT2.pptx)
+* [Types of Questions](https://vimeo.com/user45324800/smplngd-questions){:target="_blank"} [6 mins] [![PowerPoint](../../img/ppt.png)](PPT2.pptx)
 
 Questions 9.22-9.24 in [the textbook](../../book/) will assess your understanding of these materials.
 
