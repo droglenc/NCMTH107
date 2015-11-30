@@ -38,11 +38,11 @@ output: html_document
     * Quiz, Questions, Class Exercise I
 1. Linear Regression
     * Quiz, Questions, Class Exercise II, HW
-1. Sampling Distributions
-    * Quiz, Questions, 
-1. Sampling Distributions
-    * Quiz, Questions, 
 1. Probability
+    * Quiz, Questions, Class Exercise, HW
+1. Sampling Distributions
+    * Quiz, Questions, 
+1. Sampling Distributions
     * Quiz, Questions, 
 1. Inference - Hypothesis Testing
     * Quiz, Questions, 

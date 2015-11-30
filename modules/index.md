@@ -13,9 +13,10 @@ title: Learning Modules
 1. [Bivariate EDA - Quantitative](BivEDA_Quantitative/)
 1. [Bivariate EDA - Categorical](BivEDA_Categorical/)
 1. [Linear Regression](Linear_Regression/)
-1. [Sampling Distributions](Sampling_Distributions/)
 1. [Probability Introduction](Probability/)
-1. Inference Concepts
+1. [Sampling Distributions](Sampling_Distributions/)
+1. [Hypothesis Testing](Hypothesis_Testing/)
+1. [Confidence Regions](Confidence_Regions/)
 1. [1-Sample Z-Test](1_Sample_Z/)
 1. [1-Sample t-Test](1_Sample_t/)
 1. [2-Sample t-Test](2_Sample_t/)

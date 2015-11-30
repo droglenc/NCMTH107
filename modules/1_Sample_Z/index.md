@@ -13,11 +13,13 @@ css: /css/modules.css
     </div>
     <div id="ILOs" class="panel-collapse collapse">
       <div class="panel-body">
+The simplest hypothesis test occurs when one is making a claim that the population mean is equal to a specific value and the population standard deviation is known.  This hypothesis test is called a 1-sample Z-test and is the focus of this module.  Performing this test will serve as an introduction to more realistic tests in subsequent modules.
 
 <p>After completing this module, you should be able to ...</p>
 
 <ol>
-  <li>.</li>
+  <li>Understand the specifics of a one-sample Z-test.</li>
+  <li>Perform the 11-steps of a significance test in a one-sample Z-test situation.</li>
 </ol>
       </div>
     </div>
@@ -26,13 +28,13 @@ css: /css/modules.css
 
 ----
 
-You should prepare for the concepts of this module by *reading Sections XXX* in [the textbook](../../book/) and watching the following videos:
+You should prepare for the concepts of this module by reading **Sections 10.5 and 10.6** in [the textbook](../../book/) and watching the following videos:
 
 * [1-Sample Z-test in R](https://vimeo.com/user45324800/ztest){:target="_blank"} [6 mins]
     * Take notes on [this handout](RHO.html){:target="_blank"} (or [![PDF](../../img/pdf.png)](RHO.pdf) or [![MSWord](../../img/word.png)](RHO.docx))
     * [R Script](RHO.R){:target="_blank"}
 
-Questions XXX in [the textbook](../../book/) will assess your understanding of these materials.
+Questions 10.45-10.47 in [the textbook](../../book/) will assess your understanding of these materials.
 
 ----
 
