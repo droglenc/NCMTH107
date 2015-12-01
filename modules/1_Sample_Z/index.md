@@ -34,7 +34,7 @@ You should prepare for the concepts of this module by first reading **Section 10
 
 Then you should read **Section 10.6** in [the textbook](../../book/) and watch the following videos:
 
-* [1-Sample Z-Test Example](https://vimeo.com/user45324800/ztest-ex1){:target="_blank"} [x mins] [![PowerPoint](../../img/ppt.png)](PPT2.pptx)
+* [1-Sample Z-Test Example](https://vimeo.com/user45324800/ztest-ex1){:target="_blank"} [5 mins] [![PowerPoint](../../img/ppt.png)](PPT2.pptx)
 * [1-Sample Z-test in R](https://vimeo.com/user45324800/ztest){:target="_blank"} [6 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 
 Questions 10.46-10.47 in [the textbook](../../book/) will assess your understanding of these materials.
