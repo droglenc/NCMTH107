@@ -1,0 +1,47 @@
+---
+layout: page
+title: 1-Sample Z-test
+subtitle: Class Exercise
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="hand-calculations" class="section level2">
+<h2>Hand Calculations</h2>
+<p><img src="../zimgs/cancer-cells.jpg" alt="Cancer Cells" class="img-right"> Unfortunately, certain kinds of tumors tend to recur. <a href="">Byar and Blackard (1977)</a> examined the rate of recurrence for bladder cancer following chemotherapy. Specifically, they recorded the time of recurrence (in months) for patients that received a placebo. Assume that it was know that the population distribution was strongly right-skewed and the standard deviation was 15 months. The summary statistics from this group are shown below. Use this information to determine if the mean length of tumor recurrene is greater than 36 months. Make sure to provide explicit answers with your work shown for all 11 steps of hypothesis testing.</p>
+<pre><code>       n   nvalid     mean       sd      min       Q1   median       Q3      max percZero 
+    42.0     42.0     31.7     16.3      1.0     19.0     37.0     44.5     59.0      0.0 </code></pre>
+<hr />
+</div>
+<div id="r-calculations" class="section level2">
+<h2>R Calculations</h2>
+<p><img src="../zimgs/hawk-ridge.jpg" alt="Hawk Ridge" class="img-right"> The Duluth, MN Tourism Board would like to advertise that, on average, more than 50,000 raptors are seen at <a href="http://www.hawkridge.org/">Hawk Ridge</a> per year. Data was recorded for a number of raptor species from 1971-2003 and recorded in HawksRidge.csv (<a href="https://github.com/droglenc/NCData/raw/master/HawksRidge.csv">file</a>, <a href="https://github.com/droglenc/NCData/blob/master/HawksRidge_meta.txt">meta</a>). Note that the <code>Total</code> variable should be used from this data file as the Board is focused on the total number of raptors seen in a year. Further, assume that it is known that the population standard deviation is 37,000 raptors per year. The board wants there to be strong, if any, evidence to support their claim (i.e., test at the 1% level). Use these data to determine if there is support in these data for the Board’s claim. Make sure to provide explicit answers with your work shown for all 11 steps of hypothesis testing.</p>
+<hr />
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
