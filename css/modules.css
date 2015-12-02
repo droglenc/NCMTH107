@@ -69,22 +69,14 @@ ol ol {
   border-bottom: 1px solid #ddd;
 }
 
-.panel-group-ILOs > a:link {
-  color: red;
-}
-
-.panel-group-ILOs > a:visited {
-  color: red;
+.panel-group-ILOs > a:link, a:visited, a:active {
+  color: black;
+  text-decoration: none;
 }
 
 .panel-group-ILOs > a:hover {
-  color: red;
-}
 
-.panel-group-ILOs > a:active {
-  color: red;
 }
-
 
 /* --- Handles the look of code on handouts --- */
 code{
