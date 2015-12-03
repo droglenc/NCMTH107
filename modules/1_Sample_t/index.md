@@ -28,10 +28,12 @@ css: /css/modules.css
 
 ----
 
-You should prepare for the concepts of this module by reading **Sections 11.1 and 11.2** in [the textbook](../../book/) and watching the following videos:
+You should prepare for the concepts of this module by first reading **Section 11.1** in [the textbook](../../book/) and watching the following videos:
 
 * [t Distribution](https://vimeo.com/user45324800/hotest-11steps){:target="_blank"} [x mins] [![PowerPoint](../../img/ppt.png)](PPT1.pptx)
 * [t Distributions in R](https://vimeo.com/user45324800/tdistribution){:target="_blank"} [8 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
+
+Then read **Section 11.2** in [the textbook](../../book/) and watching the following videos:
 * [1-Sample t-Test Example](https://vimeo.com/user45324800/ttest1-ex1){:target="_blank"} [x mins] [![PowerPoint](../../img/ppt.png)](PPT2.pptx)
 * [1-Sample t-Test in R](https://vimeo.com/user45324800/1samplettest){:target="_blank"} [5 mins]
 
