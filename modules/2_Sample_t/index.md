@@ -30,7 +30,7 @@ css: /css/modules.css
 
 You should prepare for the concepts of this module by reading **Section 11.3** in [the textbook](../../book/) and watching the following videos:
 
-* [2-Sample t-Test Example](https://vimeo.com/user45324800/t2test-ex1){:target="_blank"} [x mins] [![PowerPoint](../../img/ppt.png)](PPT.pptx)
+* [2-Sample t-Test Example](https://vimeo.com/user45324800/t2test-ex1){:target="_blank"} [22 mins] [![PowerPoint](../../img/ppt.png)](PPT.pptx)
 * [2-Sample t-Test in R](https://vimeo.com/user45324800/2samplettest){:target="_blank"} [8 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 
 Questions 11.24 and 11.25 in [the textbook](../../book/) will assess your understanding of these materials.
