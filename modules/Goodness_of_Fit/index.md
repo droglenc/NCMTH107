@@ -26,13 +26,12 @@ css: /css/modules.css
 
 ----
 
-You should prepare for the concepts of this module by *reading Sections XXX* in [the textbook](../../book/) and watching the following videos:
+You should prepare for the concepts of this module by reading **Section 12.2** in [the textbook](../../book/) and watching the following videos:
 
-* [Goodness-of-Fit Tests in R](){:target="_blank"} [6 mins]
-    * Take notes on [this handout](RHO.html){:target="_blank"} (or [![PDF](../../img/pdf.png)](RHO.pdf) or [![MSWord](../../img/word.png)](RHO.docx))
-    * [R Script](RHO.R){:target="_blank"}
+* [Goodness-of-Fit Test Example](https://vimeo.com/user45324800/goftest-ex1){:target="_blank"} [x mins] [![PowerPoint](../../img/ppt.png)](PPT.pptx)
+* [Goodness-of-Fit Tests in R](){:target="_blank"} [x mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 
-Questions XXX in [the textbook](../../book/) will assess your understanding of these materials.
+Questions 12.35-12.37 in [the textbook](../../book/) will assess your understanding of these materials.
 
 ----
 
