@@ -21,12 +21,12 @@ output:
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Chi_Square")
 source("../../rhelpers/rhelpers.R")
-fnm <- "RHO"
+fnm <- "RHO2"
 modHTML(fnm)
 ```
 
-```{r echo=FALSE, results='hide', message='FALSE'}
-fnm <- "RHO"
+```{r echo=FALSE, results='hide', message=FALSE}
+fnm <- "RHO2"
 source("../../rhelpers/knitr_setup.R")
 ```
 
@@ -35,17 +35,6 @@ source("../../rhelpers/knitr_setup.R")
 ## First Commands
 ```{r message=FALSE, warning=FALSE}
 library(NCStats)
-```
-
-## Chi-Square Distribution Calculations
-An example of computing the p-value $\chi^{2}$=2.67 and df=3.
-```{r par1a=TRUE}
-( distrib(2.67,distrib="chisq",df=3,lower.tail=FALSE) )
-```
-
-An example of computing the p-value if $\chi^{2}$=16.82 and df=8.
-```{r par1a=TRUE}
-( distrib(16.82,distrib="chisq",df=8,lower.tail=FALSE) )
 ```
 
 ## Chi-Square Test

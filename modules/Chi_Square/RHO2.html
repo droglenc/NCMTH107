@@ -12,17 +12,6 @@ css: /css/modules.css
 <h2>First Commands</h2>
 <pre class="r"><code>&gt; library(NCStats)</code></pre>
 </div>
-<div id="chi-square-distribution-calculations" class="section level2">
-<h2>Chi-Square Distribution Calculations</h2>
-<p>An example of computing the p-value <span class="math">\(\chi^{2}\)</span>=2.67 and df=3.</p>
-<pre class="r"><code>&gt; ( distrib(2.67,distrib=&quot;chisq&quot;,df=3,lower.tail=FALSE) )</code></pre>
-<p><img src="RHO_files/figure-html/unnamed-chunk-4-1.png" title="" alt="" width="336" /></p>
-<pre><code>[1] 0.4453496</code></pre>
-<p>An example of computing the p-value if <span class="math">\(\chi^{2}\)</span>=16.82 and df=8.</p>
-<pre class="r"><code>&gt; ( distrib(16.82,distrib=&quot;chisq&quot;,df=8,lower.tail=FALSE) )</code></pre>
-<p><img src="RHO_files/figure-html/unnamed-chunk-5-1.png" title="" alt="" width="336" /></p>
-<pre><code>[1] 0.03203895</code></pre>
-</div>
 <div id="chi-square-test" class="section level2">
 <h2>Chi-Square Test</h2>
 <div id="from-summarized-observed-table" class="section level3">

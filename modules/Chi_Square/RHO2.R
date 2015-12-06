@@ -1,17 +1,13 @@
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Chi_Square")
 source("../../rhelpers/rhelpers.R")
-fnm <- "RHO"
+fnm <- "RHO2"
 modHTML(fnm)
 
-fnm <- "RHO"
+fnm <- "RHO2"
 source("../../rhelpers/knitr_setup.R")
 
 library(NCStats)
-
-( distrib(2.67,distrib="chisq",df=3,lower.tail=FALSE) )
-
-( distrib(16.82,distrib="chisq",df=8,lower.tail=FALSE) )
 
 freq <- c(32,10,8,18,18,4)
 ( obs <- matrix(freq,nrow=2,byrow=TRUE) )
@@ -46,4 +42,4 @@ ST1.chi$residuals
 percTable(freq.tbl,margin=1,digits=1)
 
 
-# Script created at 2015-11-27 09:23:26
+# Script created at 2015-12-06 13:05:05
