@@ -17,7 +17,8 @@ css: /css/modules.css
 <p>After completing this module, you should be able to ...</p>
 
 <ol>
-  <li>.</li>
+  <li> Identify when a chi-square test is appropriate.</li>
+  <li> Perform the 11 steps of a significance test in a chi-square test situation.</li>
 </ol>
       </div>
     </div>
