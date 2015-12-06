@@ -19,7 +19,7 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/class/HOs")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Goodness_of_Fit/")
 source("../../rhelpers/rhelpers.R")
 fnm <- "RHO"
 modHTML(fnm)
@@ -31,6 +31,11 @@ source("../../rhelpers/knitr_setup.R")
 ```
 
 ----
+
+## First Commands
+```{r message=FALSE, warning=FALSE}
+library(NCStats)
+```
 
 ## Goodness-of-Fit Test
 [Four-o'clocks (*Mirabilis jalapa*)](https://en.wikipedia.org/wiki/Mirabilis_jalapa) are plants native to tropical America.  Individual four-o'clocks can have red, white, or pink flowers.  Flower color in this species is thought to be controlled by a single gene locus with two alleles experssing incomplete dominance, so that heterozygotes are pink-flowered, while homozygotes for one allele are white-flowered and homozygotes for the other allele are red-flowered [(see this)](https://en.wikipedia.org/wiki/Mirabilis_jalapa#Genetic_studies).  According to [Mendelian genetic principles](https://en.wikipedia.org/wiki/Mendelian_inheritance), self-pollination of pink-flowered plants should produce progeny that have red, pink, and white flowers in a 1:2:1 ratio.  A horticulturist allowed several pink-flowered plants to self-pollinate and produce 240 progeny with 55 that were red-flowered, 132 that were pink-flowered, and 53 that were white-flowered.  Use the results to determine, at the 5% level, if the theoretical 1:2:1 ratio is upheld with these data.
