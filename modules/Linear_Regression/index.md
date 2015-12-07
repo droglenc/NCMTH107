@@ -48,6 +48,5 @@ Question 6.19 in [the textbook](../../book/) will assess your understanding of t
 
 ### Related materials
 
-* [In-Class Exercises I](CE1.html)
-* [In-Class Exercises II](CE2.html)
+* In-Class Exercises -- [I](CE1.html) / [II](CE2.html)
 * [Old Lecture Slides](PPT_old.pptx)

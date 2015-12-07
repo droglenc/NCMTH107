@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Bivariate EDA - Categorical
+title: Data Production
 subtitle: Class Exercise
 css: "/css/modules.css"
 ---
