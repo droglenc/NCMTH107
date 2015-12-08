@@ -36,10 +36,9 @@ ST1$fscitest <- factor(ST1$scitest,levels=c("def.not","prob.not","prob.true","de
 ST1.chi <- chisq.test(freq.tbl,correct=FALSE)
 ST1.chi$expected
 ST1.chi$expected >= 5
-all(chi1$expected >= 5)
 ST1.chi
 ST1.chi$residuals
 percTable(freq.tbl,margin=1,digits=1)
 
 
-# Script created at 2015-12-06 13:05:05
+# Script created at 2015-12-08 11:54:08
