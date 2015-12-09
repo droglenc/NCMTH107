@@ -35,6 +35,7 @@ You should prepare for the concepts of this module by first reading **Section 12
 Then read **Section 12.3** in [the textbook](../../book/) and watching the following videos:
 
 * [Chi-Square Test Example](https://vimeo.com/user45324800/chisqtest-ex1){:target="_blank"} [x mins] [![PowerPoint](../../img/ppt.png)](PPT2.pptx)
+* [Where Do Expected Values Come From?](https://vimeo.com/user45324800/chisq-expvals){:target="_blank"} [x mins] [![PowerPoint](../../img/ppt.png)](PPT2.pptx)
 * [Chi-Square Test (with Summarized Data) in R](https://vimeo.com/user45324800/chisqsmrzd-ex1){:target="_blank"} [8 mins] [![Web](../../img/web.png)](RHO2.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO2.pdf) [![MSWord](../../img/word.png)](RHO2.docx)  [![R](../../img/Rlogo.png)](RHO2.R){:target="_blank"}
 * [Chi-Square Test (with Raw Data) in R](https://vimeo.com/user45324800/chisqraw-ex1){:target="_blank"} [11 mins] [same handout]
     
