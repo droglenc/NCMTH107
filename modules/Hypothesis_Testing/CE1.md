@@ -38,3 +38,11 @@ In each situation below, describe what a Type I and a Type II error is and make 
 1. The process of manufacturing a certain drug is quite complex.  Small departures from the standard procedure can result in a drug that does not meet specifications and is dangerous to the user.  Before being released for use a sample of a batch of the drug is tested to determine if a particular chemical in the drug exceeds specifications.
 
 ----
+
+
+<div class="text-center">
+<ul class="pagination pagination-lg">
+  <li><a href="index.html">^</a></li>
+  <li class="active"><a href="#">1</a></li>
+  <li><a href="CE2.html">2</a></li>
+</ul>
