@@ -23,7 +23,7 @@ cost of bariatric (weight loss) surgery is $22,500.  You think that this informa
 
 Compute the p-value and make a decision about H<sub>0</sub> for each situation below.
 
-1. &alpha;=0.10, H<sub>A</sub>: &mu;>75, n=50, &sigma;=12, x&#772;=80.5
+1. &alpha;=0.10, H<sub>A</sub>: &mu;>75, n=50, &sigma;=12, x&#772;=80.5, x&#x0304;=80.5
 
 ----
 
