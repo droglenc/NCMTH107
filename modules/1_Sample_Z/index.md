@@ -28,7 +28,7 @@ The simplest hypothesis test occurs when one is making a claim that the populati
 
 ----
 
-You should prepare for the concepts of this module by first reading **Section 10.5** in [the textbook](../../book/) and watching the following video:
+You should prepare for the concepts of this module by first (re-)reading **Section 10.5** in [the textbook](../../book/) and (re-)watching the following video:
 
 * [11 Steps for Any Hypothesis Test](https://vimeo.com/user45324800/hotest-11steps){:target="_blank"} [5 mins] [![PowerPoint](../../img/ppt.png)](PPT1.pptx)
 
