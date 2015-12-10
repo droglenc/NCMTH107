@@ -32,7 +32,7 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
 
 In contrast to other modules, an in-class lecture will be used for this modujle.  However, you should prepare for this by reading **Section 10.1** in [the textbook](../../book/) and watching the following video:
 
-* [Forming Statistical Hypotheses Test](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [x mins] [![PowerPoint](../../img/ppt.png)](PPT-hypotheses.pptx)
+* [Forming Statistical Hypotheses](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins] [![PowerPoint](../../img/ppt.png)](PPT-hypotheses.pptx)
 
 Following the in-class lecture you should re-read **Section 10.1**, also read **Section 10.5** in [the textbook](../../book/), and watch the following videos:
 

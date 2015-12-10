@@ -19,6 +19,8 @@ In each situation below, describe what a Type I and a Type II error is and make 
 ## Understanding Power Relationships
 
 
+----
+
 <div class="text-center">
 <ul class="pagination pagination-lg">
   <li><a href="index.html">^</a></li>
@@ -26,4 +28,3 @@ In each situation below, describe what a Type I and a Type II error is and make 
   <li class="active"><a href="#">2</a></li>
 </ul>
 
-----
