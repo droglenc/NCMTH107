@@ -1,0 +1,55 @@
+---
+layout: page
+title: Hypothesis Testing
+subtitle: Class Exercise 2
+author: Derek H. Ogle
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Hypothesis_Testing/")
+source("../../rhelpers/rhelpers.R")
+fnm <- "CE2"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+fnm <- "CE2"
+source("../../rhelpers/knitr_setup.R")
+```
+---
+
+----
+
+## Identifying Type I and II Errors
+
+In each situation below, describe what a Type I and a Type II error is and make an argument for which error is more egregious.  [*Hint: begin by identifying the H<sub>0</sub> and H<sub>A</sub>.*]
+
+1. The United States Department of Agriculture's (USDA) limit for salmonella contamination for chicken is 20%.  A meat inspector reports that the chicken produced by a company exceeds the USDA limit.  You perform a hypothesis test to determine whether the meat inspector’s claim is true.
+1. The process of manufacturing a certain drug is quite complex.  Small departures from the standard procedure can result in a drug that does not meet specifications and is dangerous to the user.  Before being released for use a sample of a batch of the drug is tested to determine if a particular chemical in the drug exceeds specifications.
+
+----
+
+## Understanding Power Relationships
+<img src="../zimgs/computer-1.jpg" alt="Simulations" class="img-right">
+The probability of a type II error (&beta;) and power cannot be computed because the true population mean (&mu;<sub>a</sub>) is not known.  However, &beta; and power are affected by &alpha;, n, &sigma;, and "how wrong" the null hypothesized value is.  Simulations with known populations can be used to understand the relationships between &beta;, power, and these other values.  Because &alpha; and n are chosen by the statistician, decisions can be made that will affect the values of &beta; and power (though we will never know the actual values of &beta and power).
+
+The `powerSim()` function (with no arguments) from `NCStats` provides an efficient method to perform these simulations.  For example, `powerSim()` produced the plots shown below.   create a known population, repeatedly sample (5000 times) from that population, and summarize the resulting simulated sampling distribution.  The histogram on the left is a known population distribution with the parameters (&mu;&amp;&sigma;) shown.  The histogram on the right is a simulated sampling distribution; i.e., the distribution of means from 5000 independent samples of size n taken from the known population.  In RStudio, this plot will have a gear icon in the upper-left corner that will open a dialog box that allows you to modify n.  Additionally, you can control two shape parameters that will alter the known population distribution.
+
+```{r echo=FALSE, fig.width=4,fig.height=7}
+powerSim()
+```
+
+----
+
+<div class="text-center">
+<ul class="pagination pagination-lg">
+  <li><a href="index.html">^</a></li>
+  <li><a href="CE1.html">1</a></li>
+  <li class="active"><a href="#">2</a></li>
+</ul>
