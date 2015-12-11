@@ -11,10 +11,10 @@ css: "/css/modules.css"
 <hr />
 <div id="identifying-type-i-and-ii-errors" class="section level2">
 <h2>Identifying Type I and II Errors</h2>
-<p>In each situation below, describe what a Type I and a Type II error is and make an argument for which error is more egregious. [<em>Hint: begin by identifying the H<sub>0</sub> and H<sub>A</sub>.</em>]</p>
+<p>In each situation below, describe what a Type I and a Type II error is and make an argument for which error is more egregious. [<em>Hint: begin by identifying the H<sub>0</sub> and H<sub>A</sub> and writing what these hypotheses mean in words.</em>]</p>
 <ol>
-<li>The United States Department of Agriculture’s (USDA) limit for salmonella contamination for chicken is 20%. A meat inspector reports that the chicken produced by a company exceeds the USDA limit. You perform a hypothesis test to determine whether the meat inspectorâ€™s claim is true.</li>
-<li>The process of manufacturing a certain drug is quite complex. Small departures from the standard procedure can result in a drug that does not meet specifications and is dangerous to the user. Before being released for use a sample of a batch of the drug is tested to determine if a particular chemical in the drug exceeds specifications.</li>
+<li>The United States Department of Agriculture’s (USDA) limit for salmonella contamination for chicken parts is 15.4% (<a href="http://www.foodsafetynews.com/2015/01/fsis-releases-new-salmonella-campylobacter-performance-standards-for-poultry/">source</a>). Suppose that a meat inspector reports that the chicken produced by a particular company exceeds the USDA limit. A hypothesis test will be performed to determine whether the meat inspectorâ€™s claim appears to be true or not.</li>
+<li>The process of manufacturing a certain drug is quite complex. Small departures from the standard procedure can result in a drug that does not meet specifications and is dangerous to the user. Before being released for use, a sample of a batch of the drug is tested to determine if the mean amount of a particular chemical in the drug exceeds specifications. A hypothesis test will be performed to determine if the safe level was exceeded.</li>
 </ol>
 <hr />
 </div>
@@ -23,7 +23,22 @@ css: "/css/modules.css"
 <p><img src="../zimgs/computer-1.jpg" alt="Simulations" class="img-right"> The probability of a type II error (β) and power cannot be computed because the true population mean (μ<sub>a</sub>) is not known. However, β and power are affected by α, n, σ, and “how wrong” the null hypothesized value is. Simulations with known populations can be used to understand the relationships between β, power, and these other values. Because α and n are chosen by the statistician, decisions can be made that will affect the values of β and power (though we will never know the actual values of β and power).</p>
 <p>The <code>powerSim()</code> function (with no arguments) from <code>NCStats</code> provides an efficient method to perform these simulations. For example, <code>powerSim()</code> produced the plots shown below. The top plot is the “null distribution” or the sampling distribution of the sample means assuming that H<sub>0</sub>: μ=100 is true (and σ=10 and n=30). The rejection region that is defined by α=0.05 and assuming that H</sub>A</sub>: μ&lt;100 (i.e., lower-tailed) is shown on the null distribution as the red shaded area bound by the vertical red line. Thus, any sample mean in this shaded area would result in a decision to reject H<sub>0</sub>.</p>
 <p><img src="CE2_files/figure-html/unnamed-chunk-3-1.png" title="" alt="" width="480" /></p>
-<p>The lower plot is the “actual distribtion” or the sampling distribution that would result if μ=95 (in this example) and σ=10 and n=30. The rejection region is projected onto this plot with the red vertical line. Because μ=95 is different than μ<sub>0</sub>=100, these graphs represent the situation where the H<sub>0</sub> is incorrect. Rejecting H<sub>0</sub> in this situation is a correct decision and the probability of making that decision is power. Power is shown on the actual distribution with the green shaded area and is equal to the value shown in the upper corner (left corner in this case). A type II error occurs if the H<sub>0</sub> is not rejected. The probability of making this errors is shown by the The area in this distribution that is in the rejection region</p>
+<p>The lower plot is the “actual distribtion” or the sampling distribution that would result if μ=95 (in this example) and σ=10 and n=30. The rejection region is projected onto this plot with the red vertical line. Because μ=95 is different than μ<sub>0</sub>=100, these graphs represent the situation where the H<sub>0</sub> is incorrect. Rejecting H<sub>0</sub> in this situation is a correct decision and the probability of making that decision is power. Power is shown on the actual distribution with the green shaded area and is equal to the value shown in the upper corner (left corner in this case). A type II error occurs if the H<sub>0</sub> is not rejected. The probability of making this errors is shown by the off-red shaded area on the actual distribution and is equal to the value in the upper corner (right corner in this case).</p>
+<p>In RStudio, these plots will have a gear icon in the upper-left corner that will open a dialog box that allows you to modify α n, σ, and the actual population mean. The plots will update automatically when any of these items are changed. Use these plots to answer the questions below.</p>
+<ol>
+<li>For the default values, show that the value of the sample mean that defines the rejection region is correct. [<em>Hint: this is a reverse normal distribution calculation using the null distribution.</em>]</li>
+<li>For the default values, show that the value for β is correct. [<em>Hint: this is a forward normal distribution calculation using the actual distribution.</em>]</li>
+<li>Determine the effect on β for each of the following situations. Provide graphical or numerical evidence for each of your answers.
+<ol>
+<li>Increasing α.</li>
+<li>Increasing n.</li>
+<li>Increasing σ.</li>
+<li>Increasing “how wrong” the H<sub>0</sub>.</li>
+</ol></li>
+<li>Repeat the previous question but for the effect on power.</li>
+<li>What decisions can you, as a statistician, make to decrease β.</li>
+<li>What decisions can you, as a statistician, make to increase power.</li>
+</ol>
 <hr />
 <div class="text-center">
 <ul class="pagination pagination-lg">

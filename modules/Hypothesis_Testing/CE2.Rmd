@@ -28,10 +28,10 @@ source("../../rhelpers/knitr_setup.R")
 
 ## Identifying Type I and II Errors
 
-In each situation below, describe what a Type I and a Type II error is and make an argument for which error is more egregious.  [*Hint: begin by identifying the H<sub>0</sub> and H<sub>A</sub>.*]
+In each situation below, describe what a Type I and a Type II error is and make an argument for which error is more egregious.  [*Hint: begin by identifying the H<sub>0</sub> and H<sub>A</sub> and writing what these hypotheses mean in words.*]
 
-1. The United States Department of Agriculture's (USDA) limit for salmonella contamination for chicken is 20%.  A meat inspector reports that the chicken produced by a company exceeds the USDA limit.  You perform a hypothesis test to determine whether the meat inspector’s claim is true.
-1. The process of manufacturing a certain drug is quite complex.  Small departures from the standard procedure can result in a drug that does not meet specifications and is dangerous to the user.  Before being released for use a sample of a batch of the drug is tested to determine if a particular chemical in the drug exceeds specifications.
+1. The United States Department of Agriculture's (USDA) limit for salmonella contamination for chicken parts is 15.4% ([source](http://www.foodsafetynews.com/2015/01/fsis-releases-new-salmonella-campylobacter-performance-standards-for-poultry/)).  Suppose that a meat inspector reports that the chicken produced by a particular company exceeds the USDA limit.  A hypothesis test will be performed to determine whether the meat inspector’s claim appears to be true or not.
+1. The process of manufacturing a certain drug is quite complex.  Small departures from the standard procedure can result in a drug that does not meet specifications and is dangerous to the user.  Before being released for use, a sample of a batch of the drug is tested to determine if the mean amount of a particular chemical in the drug exceeds specifications.  A hypothesis test will be performed to determine if the safe level was exceeded.
 
 ----
 
@@ -45,7 +45,20 @@ The `powerSim()` function (with no arguments) from `NCStats` provides an efficie
 powerSim()
 ```
 
-The lower plot is the "actual distribtion" or the sampling distribution that would result if &mu;=95 (in this example) and &sigma;=10 and n=30.  The rejection region is projected onto this plot with the red vertical line.  Because &mu;=95 is different than &mu;<sub>0</sub>=100, these graphs represent the situation where the H<sub>0</sub> is incorrect.  Rejecting H<sub>0</sub> in this situation is a correct decision and the probability of making that decision is power.  Power is shown on the actual distribution with the green shaded area and is equal to the value shown in the upper corner (left corner in this case).  A type II error occurs if the H<sub>0</sub> is not rejected.  The probability of making this errors is shown by the   The area in this distribution that is in the rejection region
+The lower plot is the "actual distribtion" or the sampling distribution that would result if &mu;=95 (in this example) and &sigma;=10 and n=30.  The rejection region is projected onto this plot with the red vertical line.  Because &mu;=95 is different than &mu;<sub>0</sub>=100, these graphs represent the situation where the H<sub>0</sub> is incorrect.  Rejecting H<sub>0</sub> in this situation is a correct decision and the probability of making that decision is power.  Power is shown on the actual distribution with the green shaded area and is equal to the value shown in the upper corner (left corner in this case).  A type II error occurs if the H<sub>0</sub> is not rejected.  The probability of making this errors is shown by the off-red shaded area on the actual distribution and is equal to the value in the upper corner (right corner in this case).
+
+In RStudio, these plots will have a gear icon in the upper-left corner that will open a dialog box that allows you to modify &alpha; n, &sigma;, and the actual population mean.  The plots will update automatically when any of these items are changed.  Use these plots to answer the questions below.
+
+1. For the default values, show that the value of the sample mean that defines the rejection region is correct.  [*Hint: this is a reverse normal distribution calculation using the null distribution.*]
+1. For the default values, show that the value for &beta; is correct.  [*Hint: this is a forward normal distribution calculation using the actual distribution.*]
+1. Determine the effect on &beta; for each of the following situations.  Provide graphical or numerical evidence for each of your answers.
+    1. Increasing &alpha;.
+    1. Increasing n.
+    1. Increasing &sigma;.
+    1. Increasing "how wrong" the H<sub>0</sub>.
+1. Repeat the previous question but for the effect on power.
+1. What decisions can you, as a statistician, make to decrease &beta;.
+1. What decisions can you, as a statistician, make to increase power.
 
 ----
 
