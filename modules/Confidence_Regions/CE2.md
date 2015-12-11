@@ -37,19 +37,15 @@ For each situation below, (i) identify the level of confidence; (ii) whether a l
 
 ----
 
-### Footnotes
-
-[^1]: This question was adapted from [Shoemaker (1996)](http://www.amstat.org/publications/jse/v4n2/datasets.shoemaker.html).
-
-----
-
-----
-
-
-
 <div class="text-center">
 <ul class="pagination pagination-lg">
   <li><a href="index.html">^</a></li>
   <li><a href="CE1.html">1</a></li>
   <li class="active"><a href="#">2</a></li>
 </ul>
+
+----
+
+### Footnotes
+
+[^1]: This question was adapted from [Shoemaker (1996)](http://www.amstat.org/publications/jse/v4n2/datasets.shoemaker.html).

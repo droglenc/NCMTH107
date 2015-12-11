@@ -39,15 +39,18 @@ Compute the p-value, include a drawing to support your calculation, and make a d
 
 ----
 
-### Footnotes
-
-[^1]: This question was adapted from [Shoemaker (1996)](http://www.amstat.org/publications/jse/v4n2/datasets.shoemaker.html).
-
-----
-
 <div class="text-center">
 <ul class="pagination pagination-lg">
   <li><a href="index.html">^</a></li>
   <li class="active"><a href="#">1</a></li>
   <li><a href="CE2.html">2</a></li>
 </ul>
+
+
+----
+
+### Footnotes
+
+[^1]: This question was adapted from [Shoemaker (1996)](http://www.amstat.org/publications/jse/v4n2/datasets.shoemaker.html).
+
+----
