@@ -22,7 +22,6 @@ library(NCStats)
 fnm <- "CE2"
 source("../../rhelpers/knitr_setup.R")
 ```
----
 
 ----
 
@@ -41,11 +40,11 @@ The probability of a type II error (&beta;) and power cannot be computed because
 
 The `powerSim()` function (with no arguments) from `NCStats` provides an efficient method to perform these simulations.  For example, `powerSim()` produced the plots shown below.  The top plot is the "null distribution" or the sampling distribution of the sample means assuming that H<sub>0</sub>: &mu;=100 is true (and &sigma;=10 and n=30).  The rejection region that is defined by &alpha;=0.05 and assuming that H</sub>A</sub>: &mu;<100  (i.e., lower-tailed) is shown on the null distribution as the red shaded area bound by the vertical red line.  Thus, any sample mean in this shaded area would result in a decision to reject H<sub>0</sub>.
 
+The lower plot is the "actual distribtion" or the sampling distribution that would result if &mu;=95 (in this example) and &sigma;=10 and n=30.  The rejection region is projected onto this plot with the red vertical line.  Because &mu;=95 is different than &mu;<sub>0</sub>=100, these graphs represent the situation where the H<sub>0</sub> is incorrect.  Rejecting H<sub>0</sub> in this situation is a correct decision and the probability of making that decision is power.  Power is shown on the actual distribution with the green shaded area and is equal to the value shown in the upper corner (left corner in this case).  A type II error occurs if the H<sub>0</sub> is not rejected.  The probability of making this errors is shown by the off-red shaded area on the actual distribution and is equal to the value in the upper corner (right corner in this case).
+
 ```{r echo=FALSE, fig.width=5,fig.height=6}
 powerSim()
 ```
-
-The lower plot is the "actual distribtion" or the sampling distribution that would result if &mu;=95 (in this example) and &sigma;=10 and n=30.  The rejection region is projected onto this plot with the red vertical line.  Because &mu;=95 is different than &mu;<sub>0</sub>=100, these graphs represent the situation where the H<sub>0</sub> is incorrect.  Rejecting H<sub>0</sub> in this situation is a correct decision and the probability of making that decision is power.  Power is shown on the actual distribution with the green shaded area and is equal to the value shown in the upper corner (left corner in this case).  A type II error occurs if the H<sub>0</sub> is not rejected.  The probability of making this errors is shown by the off-red shaded area on the actual distribution and is equal to the value in the upper corner (right corner in this case).
 
 In RStudio, these plots will have a gear icon in the upper-left corner that will open a dialog box that allows you to modify &alpha; n, &sigma;, and the actual population mean.  The plots will update automatically when any of these items are changed.  Use these plots to answer the questions below.
 
@@ -55,7 +54,7 @@ In RStudio, these plots will have a gear icon in the upper-left corner that will
     1. Increasing &alpha;.
     1. Increasing n.
     1. Increasing &sigma;.
-    1. Increasing "how wrong" the H<sub>0</sub>.
+    1. Increasing "how wrong" the H<sub>0</sub> is.
 1. Repeat the previous question but for the effect on power.
 1. What decisions can you, as a statistician, make to decrease &beta;.
 1. What decisions can you, as a statistician, make to increase power.
