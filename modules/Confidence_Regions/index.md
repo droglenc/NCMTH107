@@ -29,13 +29,16 @@ A major goal of inferential statistics is to estimate the value of a parameter f
 
 ----
 
-
 You should prepare for the concepts of this module by reading **Sections 10.2-10.4** in [the textbook](../../book/) and watching the following videos:
 
+* [Introduction to Confidence Intervals](https://www.youtube.com/v/27iSnzss2wM?version=3&autoplay=1){:target="_blank"} [7 mins]
+* [Interpreting Confidence Intervals](https://www.youtube.com/v/JYP6gc--sGQ?version=3&autoplay=1){:target="_blank"} [6 mins]
+* [Constructing a Confidence Interval](https://www.youtube.com/v/27KG921rfbTDw?version=3&autoplay=1){:target="_blank"} [10 mins] [**Skip from 7:49 to 8:28.**]
+* Constructing Confidence Regions
 
 ----
 
 ### Related materials
 
-* [In-Class Exercise](CE.html)
+* In-Class Exercises -- [I](CE1.html) and [II](CE2.html)
 * [Old Lecture Slides](PPT_old.pptx)

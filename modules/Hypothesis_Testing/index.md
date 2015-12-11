@@ -30,13 +30,14 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
 
 ----
 
-In contrast to other modules, an in-class lecture will be used for this modujle.  However, you should prepare for this by reading **Section 10.1** in [the textbook](../../book/) and watching the following video:
+In contrast to other modules, an in-class lecture will be used for this module.  However, you should prepare for this by reading **Section 10.1** in [the textbook](../../book/) and watching the following video:
 
 * [Forming Statistical Hypotheses](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins] [![PowerPoint](../../img/ppt.png)](PPT-hypotheses.pptx)
 
 Following the in-class lecture you should re-read **Section 10.1**, also read **Section 10.5** in [the textbook](../../book/), and watch the following videos:
 
 * Error Types -- [I](https://www.youtube.com/v/7mE-K_w1v90?version=3&autoplay=1){:target="_blank"} [8 mins] and [II](https://www.youtube.com/v/OWn3Ko1WYTA?version=3&start=89&end=247&autoplay=1){:target="_blank"} [3 mins]
+* [Calculate &beta; &amp; power](https://www.youtube.com/v/BJZpx7Mdde4?version=3&autoplay=1){:target="_blank"} [12 mins]
 * [11 Steps for Any Hypothesis Test](https://vimeo.com/user45324800/hotest-11steps){:target="_blank"} [5 mins] [![PowerPoint](../../img/ppt.png)](../1-Sample-Z/PPT1.pptx)
 
 
