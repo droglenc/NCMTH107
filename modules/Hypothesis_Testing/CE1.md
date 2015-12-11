@@ -52,5 +52,3 @@ Compute the p-value, include a drawing to support your calculation, and make a d
 ### Footnotes
 
 [^1]: This question was adapted from [Shoemaker (1996)](http://www.amstat.org/publications/jse/v4n2/datasets.shoemaker.html).
-
-----
