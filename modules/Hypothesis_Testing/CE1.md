@@ -45,7 +45,7 @@ Compute the p-value, include a drawing to support your calculation, and make a d
   <li class="active"><a href="#">1</a></li>
   <li><a href="CE2.html">2</a></li>
 </ul>
-
+</div>
 
 ----
 

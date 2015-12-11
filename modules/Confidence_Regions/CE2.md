@@ -43,6 +43,7 @@ For each situation below, (i) identify the level of confidence; (ii) whether a l
   <li><a href="CE1.html">1</a></li>
   <li class="active"><a href="#">2</a></li>
 </ul>
+</div>
 
 ----
 
