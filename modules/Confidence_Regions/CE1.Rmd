@@ -27,24 +27,24 @@ source("../../rhelpers/knitr_setup.R")
 
 ## Understanding the Concept of Confidence Intervals
 <img src="../zimgs/computer-1.jpg" alt="Simulations" class="img-right">
-The concept of confidence in a confidence interval (CI) is subtle because it depends on thinking about sampling all possible times from a known population distribution, computing the CI for each sample, and then determining if the CI captures the parameter or not.  This thought-process is complicated by the fact that the parameter is unknown and taking all possible samples is impossible (and tedious).  The `ciSim()` function (with no arguments) from `NCStats` provides an efficient method to perform simulate this process and provide a graphic result of the CIs relative to the parameter from many (but not all possible) samples.  An example is shown in the plot below.  In this plot, the known population mean is depicted by the solid vertical line (&mu;=100 in this example).  Each horizontal line is one realization of a CI (the endpoints of the horizontal line is the CI and the point in the middle is the sample mean).  The CIs that do not capture &mu; are in red.  The percentage of CIs that capture &mu; is shown at the top along with the margin-of-error (m.e.), or half the width of the CI.
+The concept of confidence in a confidence interval (CI) is subtle because it depends on thinking about taking all possible samples from a known population distribution, computing the CI for each sample, and then determining if the CI captures the parameter or not.  This thought-process is complicated by the fact that the parameter is unknown and taking all possible samples is impossible (not to mention tedious).  The `ciSim()` function (with no arguments) from `NCStats` provides an efficient method to simulate this process and provide a graphical result of the CIs relative to the parameter from many (but not all possible) samples.
+
+An example from `ciSim()` is shown in the plot below.  In this plot, the known population mean is depicted by the solid vertical line (&mu;=100 in this example).  Each horizontal line is one realization of a CI (the endpoints of the horizontal line is the CI and the point in the middle is the sample mean).  The CIs that do not capture &mu; are in red.  The percentage of CIs that capture &mu; is shown at the top along with the margin-of-error (m.e.), or half the width of the CI.
 
 ```{r echo=FALSE, fig.width=4,fig.height=5}
 ciSim()
 ```
 
-In RStudio, this plots will have a gear icon in the upper-left corner that will open a dialog box that allows you to modify n, the level of confidence, and the type of confidence region (which is based on the type of alternative hypothesis).  In addition, a "rerandomize button" is provided to efficiently construct another set of CIs.  The plots will update automatically when any of these items are changed.  Use these plots to answer the questions below.
+In RStudio, this plot will have a gear icon in the upper-left corner that will open a dialog box that allows you to modify n, the level of confidence, and the type of confidence region (which is based on the type of alternative hypothesis).  In addition, a "rerandomize button" is provided to efficiently construct another set of CIs.  The plot will update automatically when any of these items is changed.  Use this plot to answer the questions below.
 
-1. Set the level of confidence to 0.95 for the following questions.
-    1. What is Z<sup>*</sup>?
-    1. This function assumes that &sigma;=10.  Thus, what is the SE?
-    1. Show how the margin-of-error was computed.
+1. Set the level of confidence to 0.95 and n=10 for the following questions.
+    1. This function assumes that &sigma;=10.  With this information, compute the margin-of-error "by hand" to determine if that computed by `ciSim()` is correct.
     1. How many of the CIs captured &mu; [*press "rerandomize" twenty times and mentally average the percentages to form a general conclusion.*]
 1. Comment on how the percentage of CIs that captured &mu; changed in each situation below.  [*For each situation, use the "two-sided" alternative and begin with n=10 and 80% confidence.*]
     1. Increase the sample size.  [*Try at least four different values of n.*]
     1. Increase the level of confidence.  [*Try each available option.*]
-1. Repeat the previous question but comment on how the margin-of-error cahnged.
-1. Summarize what happens to CIs in the following situations.
+1. Repeat the previous question but comment on how the margin-of-error changed.
+1. Summarize what happens to a CI in the following situations.
     1. n is increased.
     1. Level of confidence is decreased.
 1. What two things can you, as a statistician, do to make a confidence interval narrower?  Are there any negative consequences to these decisions?

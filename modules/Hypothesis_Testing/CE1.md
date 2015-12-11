@@ -21,7 +21,7 @@ cost of bariatric (weight loss) surgery is $22,500.  You think that this informa
 
 ## P-Value Calculations and Decisions
 
-Compute the p-value, include a drawing to support your calculation, and make a decision about H<sub>0</sub> for each situation below.
+For each situation below, (i) compute the p-value (include a drawing to support your calculation) and (ii) make a decision about H<sub>0</sub>.
 
 1. &alpha;=0.10, H<sub>A</sub>: &mu;>75, n=50, &sigma;=12, x&#772;=80.5.
 1. &alpha;=0.05, H<sub>A</sub>: &mu;&#8800;14, n=25, &sigma;=6, x&#772;=10.2.
@@ -35,7 +35,7 @@ Compute the p-value, include a drawing to support your calculation, and make a d
 
 ## Body Temperature
 <img src="../zimgs/body-temperature-1.jpg" alt="Body Temperature" class="img-right">
-[Machowiak (1992)](http://www.ncbi.nlm.nih.gov/pubmed/1302471)[^1] provide a critical examination of whether normal body temperature was 37<sup>o</sup>C.  They recorded the orally-determined body temperatures of 65 male and 65 female subjects.  Their data is found in NormTemp.csv ([file](https://github.com/droglenc/NCData/raw/master/NormTemp.csv), [meta](https://github.com/droglenc/NCData/blob/master/NormTemp_meta.txt)).  Use this information to (i) construct statistical hypotheses, (ii) compute the sample mean, (iii) compute the p-value assuming that &sigma;=0.41, (iv) make a decision about the hypotheses using &alpha;=0.05, and (v) summarize your findings in terms of body temperatures.
+[Machowiak (1992)](http://www.ncbi.nlm.nih.gov/pubmed/1302471)[^1] provided a critical examination of whether normal body temperature was 37<sup>o</sup>C.  They recorded the orally-determined body temperatures of 65 male and 65 female subjects.  Their data is found in NormTemp.csv ([file](https://github.com/droglenc/NCData/raw/master/NormTemp.csv), [meta](https://github.com/droglenc/NCData/blob/master/NormTemp_meta.txt)).  Use this information to (i) construct statistical hypotheses, (ii) compute the sample mean, (iii) compute the p-value assuming that &sigma;=0.41, (iv) make a decision about the hypotheses using &alpha;=0.05, and (v) summarize your findings in terms of body temperatures.
 
 ----
 
