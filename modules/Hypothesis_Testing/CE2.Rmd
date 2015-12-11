@@ -37,13 +37,15 @@ In each situation below, describe what a Type I and a Type II error is and make 
 
 ## Understanding Power Relationships
 <img src="../zimgs/computer-1.jpg" alt="Simulations" class="img-right">
-The probability of a type II error (&beta;) and power cannot be computed because the true population mean (&mu;<sub>a</sub>) is not known.  However, &beta; and power are affected by &alpha;, n, &sigma;, and "how wrong" the null hypothesized value is.  Simulations with known populations can be used to understand the relationships between &beta;, power, and these other values.  Because &alpha; and n are chosen by the statistician, decisions can be made that will affect the values of &beta; and power (though we will never know the actual values of &beta and power).
+The probability of a type II error (&beta;) and power cannot be computed because the true population mean (&mu;<sub>a</sub>) is not known.  However, &beta; and power are affected by &alpha;, n, &sigma;, and "how wrong" the null hypothesized value is.  Simulations with known populations can be used to understand the relationships between &beta;, power, and these other values.  Because &alpha; and n are chosen by the statistician, decisions can be made that will affect the values of &beta; and power (though we will never know the actual values of &beta; and power).
 
-The `powerSim()` function (with no arguments) from `NCStats` provides an efficient method to perform these simulations.  For example, `powerSim()` produced the plots shown below.   create a known population, repeatedly sample (5000 times) from that population, and summarize the resulting simulated sampling distribution.  The histogram on the left is a known population distribution with the parameters (&mu;&amp;&sigma;) shown.  The histogram on the right is a simulated sampling distribution; i.e., the distribution of means from 5000 independent samples of size n taken from the known population.  In RStudio, this plot will have a gear icon in the upper-left corner that will open a dialog box that allows you to modify n.  Additionally, you can control two shape parameters that will alter the known population distribution.
+The `powerSim()` function (with no arguments) from `NCStats` provides an efficient method to perform these simulations.  For example, `powerSim()` produced the plots shown below.  The top plot is the "null distribution" or the sampling distribution of the sample means assuming that H<sub>0</sub>: &mu;=100 is true (and &sigma;=10 and n=30).  The rejection region that is defined by &alpha;=0.05 and assuming that H</sub>A</sub>: &mu;<100  (i.e., lower-tailed) is shown on the null distribution as the red shaded area bound by the vertical red line.  Thus, any sample mean in this shaded area would result in a decision to reject H<sub>0</sub>.
 
-```{r echo=FALSE, fig.width=4,fig.height=7}
+```{r echo=FALSE, fig.width=5,fig.height=6}
 powerSim()
 ```
+
+The lower plot is the "actual distribtion" or the sampling distribution that would result if &mu;=95 (in this example) and &sigma;=10 and n=30.  The rejection region is projected onto this plot with the red vertical line.  Because &mu;=95 is different than &mu;<sub>0</sub>=100, these graphs represent the situation where the H<sub>0</sub> is incorrect.  Rejecting H<sub>0</sub> in this situation is a correct decision and the probability of making that decision is power.  Power is shown on the actual distribution with the green shaded area and is equal to the value shown in the upper corner (left corner in this case).  A type II error occurs if the H<sub>0</sub> is not rejected.  The probability of making this errors is shown by the   The area in this distribution that is in the rejection region
 
 ----
 
