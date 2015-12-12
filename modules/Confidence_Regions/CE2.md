@@ -29,7 +29,7 @@ For each situation below, (i) identify the level of confidence; (ii) whether a l
 
 ## Radius of Jupiter
 <img src="../zimgs/jupiter.jpg" alt="Jupiter" class="img-right">
-Researchers measured the equatorial radius of [Jupiter](https://en.wikipedia.org/wiki/Jupiter) 40 different times.  The mean of these measurements was 71492 km.  Assuming that &simga;=28 km and &alpha;=0.01, (i) construct an appropriate confidence interval and (ii) specifically interpret your findings.[^2]
+Researchers measured the equatorial radius of [Jupiter](https://en.wikipedia.org/wiki/Jupiter) 40 different times.  The method used is largely without bias but there is measurement-to-measurement variability.  In fact, &simga; is assumed to be 28 km.  The mean of the 40 measurements was 71492 km.  From this, (i) construct an appropriate confidence interval assuming that &alpha;=0.01 and (ii) specifically interpret your findings.[^2]
 
 ----
 
