@@ -39,13 +39,13 @@ Before beginning your project you must submit a typed proposal to me.  This prop
 * identification of the individual, variable(s), and population(s) you will study, and
 * a thorough description of how you will collect your data.
 
-Your proposal is due in the fourth week (see [Due Dates page](../calendar.html){:target="_blank"}).  I will review your proposal within the context of correctness and efficiency.  You may be required to submit a corrected proposal.  The proposal is worth **10%** of the overall project grade.
+Your proposal is due in the fourth week (see [Due Dates page](calendar.html){:target="_blank"}).  I will review your proposal within the context of correctness and efficiency.  You may be required to submit a corrected proposal.  The proposal is worth **10%** of the overall project grade.
 
 ## Exploratory Data Analysis
 
 The initial project report will include a thorough univariate EDA for each variable, a thorough univariate EDA for your response variable separated by each group, and appropriate bivariate EDAs.  Your analyses should be typed, carefully written (concise and grammatically correct), and refer to graphs and tables as appropriate.
 
-Your EDA write-up is due in the tenth week (see [Due Dates page](../calendar.html){:target="_blank"}).  This report is worth **30%** of the overall project grade.
+Your EDA write-up is due in the tenth week (see [Due Dates page](calendar.html){:target="_blank"}).  This report is worth **30%** of the overall project grade.
 
 ## Hypothesis Testing
 <img class="img-right" src="../img/dbh.jpg">
@@ -60,7 +60,7 @@ The final project report will include a thorough statistical analysis of your re
 * **R Appendix:** all relevant and working R commands.
 * **Other Appendix:** other relevant materials (e.g., survey instrument) as necessary.
 
-This final write-up is due in the fourteenth week (see [Due Dates page](../calendar.html){:target="_blank"}).  This report is worth **60%** of the overall project grade.
+This final write-up is due in the fourteenth week (see [Due Dates page](calendar.html){:target="_blank"}).  This report is worth **60%** of the overall project grade.
 
 ## Past Projects
 

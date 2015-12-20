@@ -118,7 +118,7 @@ The text contains many review exercises throughout each chapter and a few homewo
 
 ### Exams
 
-Exam dates are shown on the [Due Dates page](../calendar.html){:target="_blank"}.  Make-up exams will be provided only if you have a fixed commitment of sufficient importance that was set before the beginning of the semester or a verifiable medical condition.  You will not be allowed to make up an exam missed without my prior approval.  The final exam will not be given early.
+Exam dates are shown on the [Due Dates page](calendar.html){:target="_blank"}.  Make-up exams will be provided only if you have a fixed commitment of sufficient importance that was set before the beginning of the semester or a verifiable medical condition.  You will not be allowed to make up an exam missed without my prior approval.  The final exam will not be given early.
 
 ### "Statistics in Use" Reports
 
