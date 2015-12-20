@@ -7,14 +7,11 @@ css: /css/syllabus.css
 
 <SCRIPT SRC="../js/grader.js"></SCRIPT>
 
-* [Description](#description)
-* [Learning Outcomes](#learning-outcomes)
-* [Instructors](#instructors)
-* [Tutors](#tutors)
+* Class [Description](#description) and [Learning Outcomes](#learning-outcomes)
+* [Instructors](#instructors) and [Tutors](#tutors)
 * [Grading](#grading) -- [Quizzes](#quizzes), [Homework](#homework), [SIU Reports](#statistics-in-use-reports), [Exams](#exams), [Project](project.html), [Extra Credit](#extra-credit)
 * [Participation and Conduct](#participation-and-conduct)
 * [Accomodations](#accomodations)
-* [Tentative Schedule](#tentative-schedule)
 
 ----
 
@@ -169,7 +166,3 @@ You will be asked to leave class if your behavior is disrespectful of others.
 
 ## Accomodations
 Students in need of academic accommodation should contact [Kathleen Skoraczewski](mailto:kskoraczewski@northland.edu), Campus Counselor	and Disabilities Service Coordinator, ext. 1369, Ponzio Center Rm. 232.
-
-## Tentative Schedule
-<iframe src="ScheduleOfTopics.html" style="border:none" width="100%" height="700">
-</iframe>
