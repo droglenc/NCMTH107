@@ -41,12 +41,12 @@ We will focus on the understanding of statistical concepts and proper interpreta
 <tr><th><a href="http://derekogle.com" target="_blank">Dr. Derek H. Ogle</a><br>Professor of Mathematical Sciences<br> & Natural Resources</th><th style="vertical-align:top">Jodi Supanich<br>Math Specialist</th></tr>
 <tr><th><img src="../img/DerekOgle1.jpg"></th><th><img src="../img/JodiSupanich1.jpg"></th></tr>
 <tr><td>10-1130 Section</td><td>820-950 Section</td></tr>
-<tr><td>CSE239; 682-1300<br><a href="mailto:dogle@northland.edu">dogle@northland.edu</a><br>
+<tr style="vertical-align:top"><td>CSE239; 682-1300<br><a href="mailto:dogle@northland.edu">dogle@northland.edu</a><br>
 <a href="https://www.suggestionox.com/r/W16-107">Feedback / Suggestions</a></td><td>CSE229; 682-1857<br><a href="mailto:jsupanic@northland.edu">jsupanich@northland.edu</a></td></tr>
-<tr><td style="vertical-align:top">Office Hours:<br>
+<tr style="vertical-align:top"><td>Office Hours:<br>
 Tues 12-1p<br>
 Thurs 10-11a<br>
-Fri 3-4p</td><td style="vertical-align:top">Office Hours:<br>
+Fri 3-4p</td><td>Office Hours:<br>
 Mon 12-1p<br>
 Tues 11a-12<br>
 Wed 12-1p</td></tr>
@@ -57,8 +57,8 @@ Wed 12-1p</td></tr>
 <table class="tutors" width="90%">
 <tr><th><img src="../img/Louis_W16.jpg"></th><th><img src="../img/Darian_W16.jpg"></th></tr>
 <tr><th>Louis Corcoran</th><th>Darian Erb</th></tr>
-<tr><td>Louis is a senior majoring in mathematics and chemistry. After graduating from Northland he plans to attend grad school for chemistry. This is his third year tutoring statistics so if you need any help, feel free to stop by!</td><td>Darian is a Math and Chemistry major from Lancaster, Pa.  He enjoys working out and helping fellow students understand mathematics.</td></tr>
-<tr><td>Hours here</td><td>Tues 7-9p<br>Thurs 12-2p</td></tr>
+<tr style="vertical-align:top"><td>Louis is a senior majoring in mathematics and chemistry. After graduating from Northland he plans to attend grad school for chemistry. This is his third year tutoring statistics so if you need any help, feel free to stop by!</td><td>Darian is a Math and Chemistry major from Lancaster, Pa.  He enjoys working out and helping fellow students understand mathematics.</td></tr>
+<tr style="vertical-align:top"><td>Hours here</td><td>Tues 7-9p<br>Thurs 12-2p</td></tr>
 </table>
 
 ## Grading
