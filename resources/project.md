@@ -21,11 +21,11 @@ The “term project” is a brief statistical study to answer a question of inte
 ## Extent
 <img class="img-right" src="../img/datacollection.jpg">
 
-Your[^1] project should provide an opportunity for you to demonstrate your proficiency in (i) producing data, (ii) performing EDAs, and (iii) performing hypothesis tests.  Thus, you should develop a question of interest to you (and me[^2]) that will require you to record at least one variable on individuals sampled from at least two populations such that your question may be answered with one of the “two-or-more samples” hypothesis tests that you will learn in this class (i.e., 2-sample t- or chi-square tests)[^3].  Past project titles and some reports (as examples) are [shown below](past-projects).
+Your[^1] project should provide an opportunity for you to demonstrate your proficiency in (i) producing data, (ii) performing EDAs, and (iii) performing hypothesis tests.  Thus, you should develop a question of interest to you (and me[^2]) that will require you to record at least one variable on individuals sampled from at least two populations such that your question may be answered with one of the “two-or-more samples” hypothesis tests that you will learn in this class (i.e., 2-sample t- or chi-square tests).[^3]  Past project titles and some reports (as examples) are [shown below](past-projects).
 
 [^1]: You may work with one other person, but the project will need to be more involved (e.g., larger sample) or complex (e.g., multiple questions).
 [^2]: Questions about the colors of candies and who lives in which residence hall are not interesting to me!
-[^3]: Research questions that may be answered with linear regression or one of the 1-sample methods may be considered but I will need to pre-approve these projects (i.e., you will need to make a strong argument for why your proposed study is of great interest to you).
+[^3]: Research questions that may be answered with linear regression or one of the 1-sample methods may be considered, but I will need to pre-approve these projects (i.e., you will need to make a strong argument for why your proposed study is of great interest to you).
 
 ## Data collection
 

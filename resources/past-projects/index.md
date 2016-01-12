@@ -5,6 +5,8 @@ title: Past Projects
 
 The following are titles (with links to some final reports) of projects that students in past semester have completed.  Note that the directions for these past projects were different and these reports did not receive perfect scores.  Thus, use these as examples for the scope of the project and the level of write-up but refer to the directions above for specific instructions for your project.
 
+----
+
 ### Fall, 2008
 
 * [Has the annual temperature in Milwaukee increased in the last 10 years?](F08_BallwanzHageman.pdf)
@@ -58,7 +60,7 @@ The following are titles (with links to some final reports) of projects that stu
 * Do males and females differ in whether they prefer The Lion King or Bambi?
 * Do males and females differ in their preference for regular or diet soda?
 
-## Winter, 2006
+### Winter, 2006
 
 * Do Nextel Cup drivers have more top-5 finishes in their 6th year of competition vs. their rookie year?
 * Do more women than men at Northland wear skirts?
