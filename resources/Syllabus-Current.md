@@ -42,7 +42,7 @@ We will focus on the understanding of statistical concepts and proper interpreta
 <tr><th><img src="../img/DerekOgle1.jpg"></th><th><img src="../img/JodiSupanich1.jpg"></th></tr>
 <tr><td>10-1130 Section</td><td>820-950 Section</td></tr>
 <tr style="vertical-align:top"><td>CSE239; 682-1300<br><a href="mailto:dogle@northland.edu">dogle@northland.edu</a><br>
-<a href="https://www.suggestionox.com/r/W16-107">Feedback / Suggestions</a></td><td>CSE229; 682-1857<br><a href="mailto:jsupanic@northland.edu">jsupanich@northland.edu</a></td></tr>
+<a href="https://www.suggestionox.com/r/W16-107">Feedback / Suggestions</a></td><td>CSE229; 682-1857<br><a href="mailto:jsupanich@northland.edu">jsupanich@northland.edu</a></td></tr>
 <tr style="vertical-align:top"><td>Office Hours:<br>
 Tues 12-1p<br>
 Thurs 10-11a<br>
@@ -63,7 +63,7 @@ Wed 12-1p</td></tr>
 
 ## Grading
 
-An overall percentage score will be computed from the items and associated weights listed in the table below.  A specific description for each item is given further below.  You can also use this table to compute your current or projected future grade.  To compute your current grade, enter your percentage scores in the boxes for assessments that have been completed.  To project your future grade, also include percentages for future assessements.  [*It is your responsibility to track your scores on the individual assessments.*]
+An overall percentage score will be computed from the items and associated weights listed in the table below.  A specific description for each item is given further below.  You can also use this table to compute your current or projected future grade.  To compute your current grade, enter your percentage scores in the boxes for assessments that have been completed.  To project your future grade, also include percentages for future assessments.  [*It is your responsibility to track your scores on the individual assessments.*]
 
 <!-- if the assessment weights change then you must change the values in get_wghts() in the grader.js file -->
 
@@ -119,9 +119,9 @@ Exam dates are shown on the [Due Dates page](calendar.html){:target="_blank"}.  
 
 ### "Statistics in Use" Reports
 
-Three typed reports about the use of statistics in your everyday life.  Informations for these reports may come from the use of statistics in the news, in your other classes, or other work that you have done.
+Three typed reports about the use of statistics in your everyday life.  Information for these reports may come from the use of statistics in the news, in your other classes, or other work that you have done.
 
-If you report on a news item, then you should discuss the background of the information in the report, the use of statistics, how the statistics relate to what you’ve learned in class, how the statistics were presented, how you feel about that presentation, and any questions that you may have.  The FOCUS of your report should be on the statistics used in the news item (not just the news item).  You may not use the same type of news item for more than one report (e.g., you cannot report on presidential race polls more than once).
+If you report on a news item, then you should discuss the background of the information in the report, the use of statistics, how the statistics relate to what you have learned in class, how the statistics were presented, how you feel about that presentation, and any questions that you may have.  The FOCUS of your report should be on the statistics used in the news item (not just the news item).  You may not use the same type of news item for more than one report (e.g., you cannot report on presidential race polls more than once).
 
 If you report on statistics used in another class, then you should discuss the background of the project where you used statistics, what the statistics were used for (i.e., purpose), a presentation of your statistical work in the report (i.e., findings), how the statistics relate to what you've learned in this class, and any questions that you may have.  Again, the FOCUS should be on the statistics that you used.
 
@@ -136,7 +136,7 @@ Extra credit may be obtained by completing a two-part typed reflection on each m
 * **Correction**: Correct answers for each question you missed along with *an explanation of why the answer you originally provided was not correct and why the correct answer is correct.*  You will receive no credit for simply correcting your answer, for providing another incorrect answer, or saying "*I have no idea why I put that answer*," "*I simply wrote the wrong answer*," "*I don't know what I was thinking,*" or any other nonsensical reason.  You must address every question you missed to receive full credit for this portion.  Your answers must be typed and easy to find (i.e., neatly organized by question number) and you *must include the original exam*.  This portion is worth 2/3rd of the overall value of the exam reflection.
 * **Reflection**: Your *thoughtful* reflections about the exam, including what you did well on the exam (and why), what you did not do so well on the exam (and why), what strategy you used to prepare for the exam, how you will change your strategy to prepare for the next exam, and whether you considered the exam to be fair or not.  This portion should be at least one page but not more than two pages and is worth 1/3rd of the overall value of the exam reflection.
 
-Each exam reflection is worth the lesser of either 2% or the percentage required for your exam score to equal 100% times 0.2.  For example, if Jonny and Jenny each write perfect exam reflections but Jonny had a 70% on his exam and Jenny had a 92% on her exam, then Jonny will earn 2% extra credit and Jenny will earn 8%*0.2=1.6% extra credit.
+A perfect exam reflection will add 10% to your final exam score (but the final score cannot be greater than 100%).
 
 ### Incomplete Grades
 
