@@ -58,7 +58,7 @@ Wed 12-1p</td></tr>
 <tr><th><img src="../img/Louis_W16.jpg"></th><th><img src="../img/Darian_W16.jpg"></th></tr>
 <tr><th>Louis Corcoran</th><th>Darian Erb</th></tr>
 <tr style="vertical-align:top"><td>Louis is a senior majoring in mathematics and chemistry. After graduating from Northland he plans to attend grad school for chemistry. This is his third year tutoring statistics so if you need any help, feel free to stop by!</td><td>Darian is a Math and Chemistry major from Lancaster, Pa.  He enjoys working out and helping fellow students understand mathematics.</td></tr>
-<tr style="vertical-align:top"><td>Hours here</td><td>Tues 7-9p<br>Thurs 12-2p</td></tr>
+<tr style="vertical-align:top"><td>Tues 7-9p<br>W 1-3p</td><td>Tues 7-9p<br>Thurs 12-2p</td></tr>
 </table>
 
 ## Grading
