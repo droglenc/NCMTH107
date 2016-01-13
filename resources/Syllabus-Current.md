@@ -35,6 +35,8 @@ At the end of this class you will be able to ...
 
 We will focus on the understanding of statistical concepts and proper interpretation of statistical results.
 
+\ 
+
 ## Instructors
 
 <table class="tutors" width="90%">
@@ -119,7 +121,7 @@ Exam dates are shown on the [Due Dates page](calendar.html){:target="_blank"}.  
 
 ### "Statistics in Use" Reports
 
-Three typed reports about the use of statistics in your everyday life.  Information for these reports may come from the use of statistics in the news, in your other classes, or other work that you have done.
+Three typed reports about the use of statistics in your everyday life.  Information for these reports may come from the use of statistics in the news, in your other classes, or other work that you have done.  These reports are due in the fourth, ninth, and thirteenth weeks of class (see  [Dates page](calendar.html){:target="_blank"}).
 
 If you report on a news item, then you should discuss the background of the information in the report, the use of statistics, how the statistics relate to what you have learned in class, how the statistics were presented, how you feel about that presentation, and any questions that you may have.  The FOCUS of your report should be on the statistics used in the news item (not just the news item).  You may not use the same type of news item for more than one report (e.g., you cannot report on presidential race polls more than once).
 
