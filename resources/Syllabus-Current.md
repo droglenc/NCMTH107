@@ -35,7 +35,6 @@ At the end of this class you will be able to ...
 
 We will focus on the understanding of statistical concepts and proper interpretation of statistical results.
 
-\ 
 
 ## Instructors
 
@@ -54,6 +53,7 @@ Tues 11a-12<br>
 Wed 12-1p</td></tr>
 </table>
 
+
 ## Tutors
 
 <table class="tutors" width="90%">
@@ -62,6 +62,7 @@ Wed 12-1p</td></tr>
 <tr style="vertical-align:top"><td>Louis is a senior majoring in mathematics and chemistry. After graduating from Northland he plans to attend grad school for chemistry. This is his third year tutoring statistics so if you need any help, feel free to stop by!</td><td>Darian is a Math and Chemistry major from Lancaster, Pa.  He enjoys working out and helping fellow students understand mathematics.</td></tr>
 <tr style="vertical-align:top"><td>Tues 7-9p<br>W 1-3p</td><td>Tues 7-9p<br>Thurs 12-2p</td></tr>
 </table>
+
 
 ## Grading
 
@@ -165,6 +166,7 @@ Your conduct in class should revolve around the idea of being respectful of all 
 * Do not use disrespectful language when addressing others.
 
 You will be asked to leave class if your behavior is disrespectful of others. 
+
 
 ## Accomodations
 Students in need of academic accommodation should contact [Kathleen Skoraczewski](mailto:kskoraczewski@northland.edu), Campus Counselor	and Disabilities Service Coordinator, ext. 1369, Ponzio Center Rm. 232.
