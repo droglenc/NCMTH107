@@ -1,14 +1,15 @@
 ---
 layout: page
-title: Glossary - Symbols
+title: Symbols
 ---
 
-<div class="container">
+The following are symbols that you will encounter in this course.  They are ordered by roughly the order in which you will encounter the symbol.
 
+<div class="container">
 <dl class="dl-horizontal">
 <dt>n</dt><dd>- Sample size.</dd>
 <dt>N</dt><dd>- Population size.</dd>
-<dt>$\bar{x}</dt><dd>- Sample mean (average).</dd>
+<dt>$\bar{x}$</dt><dd>- Sample mean (average).</dd>
 <dt>&mu;</dt><dd>- The population mean.</dd>
 <dt>s</dt><dd>- The sample standard deviation.</dd>
 <dt>&sigma;</dt><dd>- The population standard deviation.</dd>
