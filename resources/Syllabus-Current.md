@@ -60,7 +60,7 @@ Wed 12-1p</td></tr>
 <tr><th><img src="../img/Louis_W16.jpg"></th><th><img src="../img/Darian_W16.jpg"></th></tr>
 <tr><th>Louis Corcoran</th><th>Darian Erb</th></tr>
 <tr style="vertical-align:top"><td>Louis is a senior majoring in mathematics and chemistry. After graduating from Northland he plans to attend grad school for chemistry. This is his third year tutoring statistics so if you need any help, feel free to stop by!</td><td>Darian is a Math and Chemistry major from Lancaster, Pa.  He enjoys working out and helping fellow students understand mathematics.</td></tr>
-<tr style="vertical-align:top"><td>Tues 7-9p<br>W 1-3p</td><td>Tues 7-9p<br>Thurs 12-2p</td></tr>
+<tr style="vertical-align:top"><td>Tues 7-9p<br>W 1-3p</td><td>Wed 7-9p<br>Thurs 12-2p</td></tr>
 </table>
 
 
@@ -73,16 +73,17 @@ An overall percentage score will be computed from the items and associated weigh
 <form name="GRADECALC">
 <table class="grader">
 <tr><th></th>
-<th><a href="#quizzes">Quiz</a></th>
-<th><a href="#homework">HW</a></th>
-<th><a href="#statistics-in-use-reports">SIUR</a></th>
 <th><a href="#exams">MT1</A></th>
 <th><a href="#exams">MT2</A></th>
 <th><a href="#exams">Final</A></th>
-<th><a href="#project">Project</A></th></tr>
+<th><a href="#project">Project</A></th>
+<th><a href="#homework">HW</a></th>
+<th><a href="#statistics-in-use-reports">SIUR</a></th>
+<th><a href="#quizzes">Quiz</a></th>
+</tr>
 
 <tr><th>Weight</th>
-<th>15%</th><th>5%</th><th>7%</th><th>17.5%</th><th>17.5%</th><th>25%</th><th>13%</th></tr>
+<th>17.5%</th><th>17.5%</th><th>25%</th><th>13%</th><th>5%</th><th>7%</th><th>15%</th></tr>
 
 <tr><th>Percent</th>
 <td><input type="text" name="QUIZ_SC" size="3" tabindex="1" onchange="calc_grade(this.form)"></td>
@@ -107,18 +108,17 @@ Lowest possible final letter grades will be assigned by comparing your overall p
   <tr><td>D+ 67-69</td><td>D  60-66</td><td>F   0-59</td></tr>
 </table>
 
+### Exams
 
-### Quizzes
+Exam dates are shown on the [Due Dates page](calendar.html){:target="_blank"}.  Make-up exams will be provided only if you have a fixed commitment of sufficient importance that was set before the beginning of the semester or a verifiable medical condition.  You will not be allowed to make up an exam missed without my prior approval.  The final exam will not be given early.
 
-A short quiz will be given in the **FIRST 5-10 minutes of EVERY** class period.  These quizzes are intended to encourage you to complete the preparation required for that day's class.  Thus, quizzes are "open notes" (but **not** "open book" or "open computer").  You will be notified at the end of each class period about what portion of the text and online resources are required to prepare for the next class period.  Quizzes that are missed for reasons that have not been approved by me cannot be made up.
+### Project
+
+See the [Class Project page](project.html).
 
 ### Homework
 
 The text contains many review exercises throughout each chapter and a few homework problems at the end of each chapter.  Homework problems will be assigned when a concept module has been completed.  Homework problems will be handed in but will only be graded for completeness (i.e., checking whether the questions have been completely answered or not).  Answer keys will be [posted online](homework-keys) so that you may check your work.
-
-### Exams
-
-Exam dates are shown on the [Due Dates page](calendar.html){:target="_blank"}.  Make-up exams will be provided only if you have a fixed commitment of sufficient importance that was set before the beginning of the semester or a verifiable medical condition.  You will not be allowed to make up an exam missed without my prior approval.  The final exam will not be given early.
 
 ### "Statistics in Use" Reports
 
@@ -128,9 +128,9 @@ If you report on a news item, then you should discuss the background of the info
 
 If you report on statistics used in another class, then you should discuss the background of the project where you used statistics, what the statistics were used for (i.e., purpose), a presentation of your statistical work in the report (i.e., findings), how the statistics relate to what you've learned in this class, and any questions that you may have.  Again, the FOCUS should be on the statistics that you used.
 
-### Project
+### Quizzes
 
-See the [Class Project page](project.html).
+A short quiz will be given in the **FIRST 5-10 minutes of EVERY** class period.  These quizzes are intended to encourage you to complete the preparation required for that day's class.  Thus, quizzes are "open notes" (but **not** "open book" or "open computer").  You will be notified at the end of each class period about what portion of the text and online resources are required to prepare for the next class period.  Quizzes that are missed for reasons that have not been approved by me cannot be made up.
 
 ### Extra Credit
 
