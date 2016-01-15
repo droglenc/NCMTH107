@@ -6,7 +6,7 @@ css: /css/syllabus.css
 
 ## Homework Due Dates
 <dl class="dl-horizontal">
-<dt></dt><dd></dd>
+<dt>20-Jan</dt><dd>1.27-1.29</dd>
 </dl>
 
 ---- 
