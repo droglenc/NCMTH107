@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Data Production
-subtitle: Class Exercise
+subtitle: Class Exercise 1
 css: "/css/modules.css"
 ---
 
@@ -27,52 +27,13 @@ For each question below, identify (and explain why) whether it represents an obs
 1. [Helle et al. (2002)](http://www.sciencemag.org/content/296/5570/1085.full?ijkey=4842612ad61bcf9386845ff5a129be9ae15c158f&keytype2=tf_ipsecsha) reported on a study of women in Finland that indicated that having sons shortened the lifespan of mothers by about 34 weeks per son, but that daughters helped to lengthen the mothers’ lives. The data came from church records from the period 1640 to 1870.
 1. Some gardeners prefer to use nonchemical methods to control insect pests in their gardens. Researchers have designed two kinds of traps, and want to know which design will be more effective. They randomly choose 10 locations in a large garden and place one of each kind of trap at each location. After a week, they count the number of bugs in each trap.
 
-
 ----
 
-## Types of Observational Studies
-For each question below, identify (and explain why) whether it represents a voluntary response, convenience, or random sample.
-
-1. A researcher is interested in the makes of cars found in Ashland.  She sits at the corner of Ellis and Hwy 2 and records the makes of cars that are driven by.
-1. A researcher is interested in the makes of cars found in Ashland.  She calls a random sample of Ashland phone numbers and asks the respondents if they will take her survey.  If they do, she records the make of car they own.
-1. A researcher is interested in the makes of cars found in Ashland.  She collects a sample of car registrations for Ashland owners from a statewide database such that each registration had the same chance of being selected.
-1. The manager at Burger King is interested in customer satisfaction.  To get a handle on this he provides each customer with a short survey card to be completed and returned to a collection box on the front counter.
-1. A wildlife manager needs to determine the sex ratio of deer in northern Wisconsin.  Towards this end, he records the sex of road-kill deer from along Hwy 2.
-
-----
-
-## Blood Pressure Study
-<img src="../zimgs/bloodpressure.jpg" alt="Blood Pressure" class="img-right">
-A student is designing an experiment to determine the simultaneous effects of calcium in the diet and regular exercise on blood pressure.  Some subjects will be given a calcium supplement pill and some will be given a placebo pill.  In addition, some subjects will be required to perform aerobic exercises once a day, whereas others will not.  The researcher has 32 male subjects available that are as similar as possible (similar ages, weights, initial blood pressures, etc.).
-
-1. Explain why this is an observational or experimental study.
-1. What is an individual?
-1. Identify the response variable, factors, levels, treatments, and replicates.
-1. Using R, identify which specific individuals will be allocated to each treatment.
-
-----
-
-## Softball Bats and Balls
-<img src="../zimgs/pitchingmachine.jpg" alt="Pitching Machine" class="img-right">
-A student wanted to see how far she could hit two brands of softballs with three types of bats.  The three bats were all 34 inches long and weighed 34 ounces.  Four new balls of each brand were placed into a pitching machine in a random order (the student did not now which type of ball was coming).  The distance (in feet) that each ball was hit (if the ball was not hit or was hit very poorly, then it was put back into the pitching machine).
-
-1. Explain why this is an observational or experimental study.
-1. What is an individual?
-1. Identify the response variable, factors, levels, treatments, and replicates.
-1. Using R, identify which specific individuals will be allocated to each treatment.  Comment on what this physically means in terms of implementing this experiment.
-
-----
-
-## Identify Response and Explanatory Variables
-
-Identify the (i) response and (ii) explanatory variable in each of the following situations.
-
-1. The distance of a putt and the golfer's success rate at making the putt.
-1. Response time to a particular dexterity test and the amount of time awake.
-1. Amount of fertilizer and growth of tomatoe plants.
-1. Sales of shoes and sales of hats.
-1. Amount of rainfall and sales of umbrellas (in New York City).
-1. The age and weight of a child (measured over time).
-
-
-----
+<div class="text-center">
+<ul class="pagination pagination-lg">
+  <li><a href="index.html">^</a></li>
+  <li class="active"><a href="#">1</a></li>
+  <li><a href="CE2.html">2</a></li>
+  <li><a href="CE3.html">3</a></li>
+  <li><a href="CE4.html">4</a></li>
+</ul>
