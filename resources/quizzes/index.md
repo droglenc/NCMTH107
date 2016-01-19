@@ -9,7 +9,7 @@ title: Daily Quizzes, W16
 * [Mon, 25-Jan](){:target="_blank"}
 
 * [Fri, 22-Jan](){:target="_blank"}
-* [Wed, 20-Jan](){:target="_blank"}
+* [Wed, 20-Jan](http://goo.gl/forms/acdehNdbEI){:target="_blank"}
 -->
 
 * [Fri, 15-Jan](http://goo.gl/forms/cZwVAarfKj){:target="_blank"}
