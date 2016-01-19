@@ -3,18 +3,18 @@ layout: page
 title: Resources
 ---
 
-## Administrative Resources
+## Administrative
 1. Feedback / Suggestions -- [Dr. Ogle](https://www.suggestionox.com/r/W16-107){:target="_blank"}
 1. [**Quizzes**](quizzes/)
 1. [**Homework Answer Keys**](homework-keys/)
 
-## Learning Assistance Resources
+## Learning Assistance
 1. [**FAQ (mostly related to R)**](RFAQ/)
 1. **Glossaries**
     * Definitions
     * Symbols
 
-## Compute Resources
+## Computer
 1. [**Data Files** (on GitHub)](https://github.com/droglenc/NCData){:target="_blank"}
 1. **Software Installation Links**
     * R -- [Windows](http://derekogle.com/IFAR/supplements/installations/InstallRWin.html){:target="_blank"} / [Mac OS](http://derekogle.com/IFAR/supplements/installations/InstallRMac.html){:target="_blank"}
