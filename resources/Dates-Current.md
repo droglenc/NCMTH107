@@ -5,9 +5,21 @@ css: /css/syllabus.css
 ---
 
 ## Homework Due Dates
+#### Prof. Ogle's Section
 <dl class="dl-horizontal">
 <dt>25-Jan</dt><dd>1.30-1.35</dd>
+<!---
 <dt>20-Jan</dt><dd>1.27-1.29</dd>
+--->
+</dl>
+
+#### Prof. Supanich's Sectio
+<dl class="dl-horizontal">
+<dt>27-Jan</dt><dd>7.10-7.11</dd>
+<dt>22-Jan</dt><dd>1.27-1.35</dd>
+<!---
+<dt>20-Jan</dt><dd>1.27-1.29</dd>
+--->
 </dl>
 
 ---- 

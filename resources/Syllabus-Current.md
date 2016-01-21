@@ -48,9 +48,9 @@ We will focus on the understanding of statistical concepts and proper interpreta
 Tues 12-1p<br>
 Thurs 10-11a<br>
 Fri 3-4p</td><td>Office Hours:<br>
-Mon 12-1p<br>
-Tues 11a-12<br>
-Wed 12-1p</td></tr>
+Mon 950-1050a<br>
+Wed 950-1050a<br>
+Fri 950-1050a</td></tr>
 </table>
 
 
