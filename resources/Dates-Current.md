@@ -27,7 +27,7 @@ css: /css/syllabus.css
       </dl>
     </div>
   </div>
-</div<
+</div>
 
 ---- 
 
