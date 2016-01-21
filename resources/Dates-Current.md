@@ -8,7 +8,7 @@ css: /css/syllabus.css
 
 <div class="container">
   <div class="row">
-    <div class="col-*6*">
+    <div class="col-sm-6">
       <h4>Prof. Ogle's Section</h4>
       <dl class="dl-horizontal">
       <dt>25-Jan</dt><dd>1.30-1.35</dd>
@@ -17,7 +17,7 @@ css: /css/syllabus.css
 --->
       </dl>
     </div>
-    <div class="col-*6*">
+    <div class="col-sm-6">
       <h4>Prof. Supanich's Section</h4>
       <dl class="dl-horizontal">
       <dt>22-Jan</dt><dd>1.27-1.35</dd>
