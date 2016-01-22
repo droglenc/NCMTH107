@@ -123,7 +123,7 @@ The text contains many review exercises throughout each chapter and a few homewo
 <div class="container-fluid">
   <table class="table table-bordered">
   <thead>
-    <tr class="info"><th>1</th><th>3</th><th>5</th></tr>
+    <tr class="info"><th>1 point</th><th>3 points</th><th>5 points</th></tr>
   </thead>
   <tbody>
     <tr><td>Very few questions answered completely.</td><td>Most questions answered completely.  Format for homework may not have been followed.</td><td>All questions answered completely.  Format for homework followed exactly.</td></tr>
