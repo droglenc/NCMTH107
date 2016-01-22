@@ -118,7 +118,20 @@ See the [Class Project page](project.html).
 
 ### Homework
 
-The text contains many review exercises throughout each chapter and a few homework problems at the end of each chapter.  Homework problems will be assigned when a concept module has been completed.  Homework problems will be handed in but will only be graded for completeness (i.e., checking whether the questions have been completely answered or not).  Answer keys will be [posted online](homework-keys) so that you may check your work.
+The text contains many review exercises throughout each chapter and a few homework problems at the end of each chapter.  Homework problems will be assigned when a concept module has been completed.  Homework problems will be handed in but will only be graded for completeness accordig to the following rubric.
+
+<div class="container">
+  <table class="table table-bordered">
+  <thead>
+    <tr class="info"><th>1</th><th>3</th><th>5</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Very few questions answered completely.</td><td>Most questions answered completely.  Format for homework may not have been followed.</td><td>All questions answered completely.  Format for homework followed exactly.</td></tr>
+  </tbody>
+  </table
+</div>
+
+Answer keys will be [posted online](homework-keys) so that you may check your work.
 
 ### "Statistics in Use" Reports
 
