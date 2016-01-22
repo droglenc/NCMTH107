@@ -120,7 +120,7 @@ See the [Class Project page](project.html).
 
 The text contains many review exercises throughout each chapter and a few homework problems at the end of each chapter.  Homework problems will be assigned when a concept module has been completed.  Homework problems will be handed in but will only be graded for completeness accordig to the following rubric.
 
-<div class="container">
+<div class="container-fluid">
   <table class="table table-bordered">
   <thead>
     <tr class="info"><th>1</th><th>3</th><th>5</th></tr>
