@@ -128,7 +128,7 @@ The text contains many review exercises throughout each chapter and a few homewo
   <tbody>
     <tr><td>Very few questions answered completely.</td><td>Most questions answered completely.  Format for homework may not have been followed.</td><td>All questions answered completely.  Format for homework followed exactly.</td></tr>
   </tbody>
-  </table
+  </table>
 </div>
 
 Answer keys will be [posted online](homework-keys) so that you may check your work.
