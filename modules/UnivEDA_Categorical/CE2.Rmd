@@ -13,20 +13,17 @@ output:
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/UnivEDA_Categorical/")
 source("../../rhelpers/rhelpers.R")
-fnm <- "CE2"
-modHTML(fnm)
+modHTML("CE2")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
-library(NCStats)
-fnm <- "CE2"
 source("../../rhelpers/knitr_setup.R")
 ```
 
 ----
 
 ## Bar Chart I
-<img src="../zimgs/weddingring.jpg" alt="Wedding Ring" class="img-right">
+<img src="../../zimgs/weddingring.jpg" alt="Wedding Ring" class="img-right">
 [A Northland College student](../../resources/past-projects/F07_Brilla.pdf) asked 50 of her peers "Why should people get married (Select Love, Money, Pregnancy, or Other)?"  Her resutls are shown in the bar chart below.  Use this information to answer the questions further below.
 
 ```{r echo=FALSE, fig.width=5, fig.height=4, par1=TRUE}
