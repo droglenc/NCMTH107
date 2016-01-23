@@ -47,5 +47,5 @@ Question 2.12 in [the textbook](../../book/) will assess your understanding of t
 
 ### Related materials
 
-* [Demonstration Handout](RHO.html)
+* Demonstration Handout [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 * [In-Class Exercise](CE.html)
