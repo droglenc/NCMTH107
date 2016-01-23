@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Univariate EDA - Quantitative
-subtitle: Class Exercise 2
+subtitle: Class Exercise 4
 css: "/css/modules.css"
 ---
 
@@ -45,6 +45,8 @@ Enter the data into Excel, save as a CSV, and load the data into R.  [**HINT:** 
 <ul class="pagination pagination-lg">
   <li><a href="index.html">^</a></li>
   <li><a href="CE1.html">1</a></li>
-  <li class="active"><a href="#">2</a></li>
+  <li><a href="CE2.html">2</a></li>
+  <li><a href="CE3.html">3</a></li>
+  <li class="active"><a href="#">4</a></li>
 </ul>
 </div>
