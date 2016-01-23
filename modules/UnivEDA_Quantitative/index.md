@@ -49,5 +49,5 @@ Question 3.50 in [the textbook](../../book/) will assess your understanding of t
 
 ### Related materials
 
-* In-Class Exercises -- [I](CE1.html) / [II](CE2.html)
+* In-Class Exercises -- [I](CE1.html) / [II](CE2.html) / [II](CE3.html) / [II](CE4.html)
 * [Old Lecture Slides](PPT_old.pptx)
