@@ -12,7 +12,9 @@ css: "/css/modules.css"
 1. Use `snorm()` from `NCStats` to answer the following questions.
     1. Describe what happens to the normal distribution if &mu; is increased?
     1. Describe what happens to the normal distribution if &sigma; is increased?
-<br/>
+
+\ 
+
 1. For each situation below, (i) identify &mu;, (ii) identify &sigma;, and (iii) draw the normal distribution with an approximately accurate scale on the x-axis.
     1. X~N(75,10)
     1. Y~N(5500,600)
