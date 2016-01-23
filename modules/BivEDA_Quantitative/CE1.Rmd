@@ -29,6 +29,7 @@ source("../../rhelpers/knitr_setup.R")
 ```{r echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
 tmp <- read.csv("Kingfishers.csv")
 plot(perc.female~latitude,data=tmp,xlab="Latitude (N)",ylab="Percent Female",pch=19)
+grid()
 ```
 
 Use this scatterplot to answer these questions.
