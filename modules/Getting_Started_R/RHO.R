@@ -7,7 +7,7 @@ modHTML(fnm)
 
 fnm <- "RHO"
 source("../../rhelpers/knitr_setup.R")
-# END IGNORE THIS CODE ========================================================
+# END IGNORE THIS CODE =========================================================
 
 library(NCStats)
 
@@ -56,4 +56,4 @@ ver_or_gt5 <- filterD(iris,species=="versicolor" | seplen>5)
 headtail(ver_or_gt5)
 
 
-# Script created at 2016-01-23 10:43:05
+# Script created at 2016-01-23 10:45:38
