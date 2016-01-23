@@ -16,7 +16,7 @@ Urbanization poses a major threat to stream and watershed ecosystems.  One aspec
 IBI       9 11 13 23 31 31 21 23 27 37 39 29 31 43 33 35 37
 </pre>
 
-Load these data into R to answer the questions below.  [Note that these are the same data that you entered in a [previous class exercise](../BivEDA_Quantitative/CE.html#urban-runoff).]
+Load these data into R to answer the questions below.  [*Note that these are the same data that you entered in a [previous class exercise](../BivEDA_Quantitative/CE3.html#urban-runoff).*]
 
 1. In terms of the variables of this problem, what is the equation of the best-fit line?
 1. In terms of the variables of this problem, INTERPRET the value of the slope?
