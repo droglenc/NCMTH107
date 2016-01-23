@@ -13,20 +13,16 @@ output:
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/UnivEDA_Categorical/")
 source("../../rhelpers/rhelpers.R")
-fnm <- "CE4"
-modHTML(fnm)
+modHTML("CE4")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
-library(NCStats)
-fnm <- "CE4"
-source("../../rhelpers/knitr_setup.R")
 ```
 
 ----
 
 ## Bar Chart II
-<img src="../zimgs/brownpelican.jpg" alt="Brown Pelican" class="img-right">
+<img src="http://derekogle.com/NCMTH107/modules/zimgs/brownpelican.jpg" alt="Brown Pelican" class="img-right">
 [King et al. (2013)](https://www.aphis.usda.gov/wildlife_damage/nwrc/publications/13pubs/king132.pdf) examined the habitat use of [Brown Pelicans (*Pelecanus
 occidentalis*)](https://en.wikipedia.org/wiki/Brown_pelican) in the Northern Gulf of Mexico.  The bar chart below show the percentage of GPS locations recorded for the sample of Brown Pelicans in major habitats.  Use this information to answer the questions further below.  [Note that `Water`="shallow near-shore waters", `EEW`="estuarine emergent wetland", `Grassland`="shoreline grasslands", `UnShore`="unconsolidated shore", `DeepWater`="deeper offshore waters", and `Other`="all other habitats".]
 
