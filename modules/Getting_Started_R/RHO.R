@@ -16,12 +16,10 @@ b <- 3.8
 h <- 4.2
 (1/2)*b*h
 ( result <- log(17) )
-ls()
 
 ( profs <- c("Derek","Young","Jodi") )
 ( nums <- c(4,2,6,4,3) )
 ( heads <- c(TRUE, TRUE, FALSE, FALSE) )
-ls()
 nums[3]
 profs[2]
 heads[1]
@@ -30,7 +28,6 @@ setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Getting_Started_R")
 iris <- read.csv("Iris.csv")
 str(iris)
 headtail(iris)     # NOT the entire data.frame
-ls()
 
 iris[2,]
 iris$seplen
@@ -57,4 +54,4 @@ ver_or_gt5 <- filterD(iris,species=="versicolor" | seplen>5)
 headtail(ver_or_gt5)
 
 
-# Script created at 2016-01-23 10:26:18
+# Script created at 2016-01-23 10:37:10
