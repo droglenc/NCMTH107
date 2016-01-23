@@ -9,7 +9,7 @@ css: "/css/modules.css"
 
 ## Carpenter Ants
 <img src="../zimgs/carpenterant.jpg" alt="Carpenter Ant" class="img-right">
-Suppose that the distribution of number of Carpenter Ants in a nest is known to be N(1400,300).  From this, answer the following questions.
+Suppose that the distribution of number of [Carpenter Ants (*Camponotus* spp.)](https://en.wikipedia.org/wiki/Carpenter_ant) in a nest is known to be N(1400,300).  From this, answer the following questions.
 
 1. What is an individual?
 1. What is the variable?
