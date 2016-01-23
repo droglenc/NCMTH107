@@ -56,7 +56,5 @@ headtail(ver_and_gt5)
 ver_or_gt5 <- filterD(iris,species=="versicolor" | seplen>5)
 headtail(ver_or_gt5)
 
-ls()
 
-
-# Script created at 2015-11-27 09:10:14
+# Script created at 2016-01-23 10:26:18

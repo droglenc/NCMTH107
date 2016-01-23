@@ -36,7 +36,7 @@ library(NCStats)
 
 ----
 
-## Basic Mathematics
+<!--- ## Basic Mathematics -->
 ```{r eval=FALSE, echo=FALSE}
 3-pi
 junk <- 3-pi
@@ -48,8 +48,8 @@ h <- 4.2
 ls()
 ```
 
-## Basic Vectors
-```{r}
+<!--- ## Basic Vectors -->
+```{r eval=FALSE, echo=FALSE}
 ( profs <- c("Derek","Young","Jodi") )
 ( nums <- c(4,2,6,4,3) )
 ( heads <- c(TRUE, TRUE, FALSE, FALSE) )
@@ -96,8 +96,6 @@ headtail(ver_and_gt5)
 
 ver_or_gt5 <- filterD(iris,species=="versicolor" | seplen>5)
 headtail(ver_or_gt5)
-
-ls()
 ```
 
 ```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
