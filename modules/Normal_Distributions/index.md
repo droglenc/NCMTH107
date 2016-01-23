@@ -37,7 +37,7 @@ You should prepare for the concepts of this module by first reading **Sections 4
 * [Characteristics of Normal Distributions](https://vimeo.com/user45324800/normcharacteristics){:target="_blank"} [7 mins]  [![PowerPoint](../../img/ppt.png)](PPT.pptx)
 * 68-95-99.7 Rule -- [A](https://www.youtube.com/v/PJPXFOK8F8E?version=3&autoplay=1){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/cgxPcdPbujI?version=3&autoplay=1){:target="_blank"} [8 mins]
 
-Second, you should read **Sections 4.3-4.4** in [the textbook](../../book/) and watching the following videos:
+Second, you should read **Sections 4.3-4.4** in [the textbook](../../book/) and watch the following videos:
 
 * [Types of Calculations (Forward & Reverse)](https://vimeo.com/user45324800/normcalctypes){:target="_blank"} [4 mins]  [![PowerPoint](../../img/ppt.png)](PPT2.pptx)
 * [Forward Calculations in R](https://vimeo.com/user45324800/normdist-forward){:target="_blank"} [6 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
