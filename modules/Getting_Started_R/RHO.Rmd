@@ -17,6 +17,7 @@ output:
     fig_height: 3.5
 ---
 ```{r echo=FALSE, eval=FALSE}
+# BEGIN IGNORE THIS CODE =======================================================
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Getting_Started_R")
 source("../../rhelpers/rhelpers.R")
@@ -27,6 +28,7 @@ modHTML(fnm)
 ```{r echo=FALSE, results='hide', message=FALSE}
 fnm <- "RHO"
 source("../../rhelpers/knitr_setup.R")
+# END IGNORE THIS CODE ========================================================
 ```
 
 ## Always First Command
