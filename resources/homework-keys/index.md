@@ -19,7 +19,8 @@ title: Homework Keys, W16
 * HW 3.50
 * HW 2.12
 * HW 7.10-7.11
-* [HW 1.30-1.35](Chapter1HWb_noPrint.pdf){:target="_blank"}
 -->
 
+
+* [HW 1.30-1.35](Chapter1HWb_noPrint.pdf){:target="_blank"}
 * [HW 1.27-1.29](Chapter1HWa_noPrint.pdf){:target="_blank"}
