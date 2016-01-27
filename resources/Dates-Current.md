@@ -12,6 +12,7 @@ css: /css/syllabus.css
       <h4>Prof. Ogle's Section</h4>
       <dl class="dl-horizontal">
       <dt>29-Jan</dt><dd>2.12</dd>
+      <dt>3-Feb</dt><dd>3.50</dd>
 <!---
       <dt>27-Jan</dt><dd>7.10-7.11</dd>
       <dt>25-Jan</dt><dd>1.30-1.35</dd>
@@ -22,6 +23,7 @@ css: /css/syllabus.css
     <div class="col-sm-5">
       <h4>Prof. Supanich's Section</h4>
       <dl class="dl-horizontal">
+      <dt>3-Feb</dt><dd>2.12</dd>
 <!---
       <dt>27-Jan</dt><dd>7.10-7.11</dd>
       <dt>22-Jan</dt><dd>1.27-1.35</dd>
