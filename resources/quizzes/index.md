@@ -4,9 +4,13 @@ title: Daily Quizzes, W16
 ---
 
 <!--
-* [Fri, 29-Jan](){:target="_blank"}
+
+* [Fri, 5-Feb](){:target="_blank"}
+* [Wed, 3-Feb](){:target="_blank"}
+* [Mon, 1-Feb](){:target="_blank"}
 -->
 
+* [Fri, 29-Jan](http://goo.gl/forms/FCKbRB8E6z){:target="_blank"}
 * [Wed, 27-Jan](http://goo.gl/forms/dTOFBFNCtx){:target="_blank"}
 * [Mon, 25-Jan](http://goo.gl/forms/nkPlgwmkbT){:target="_blank"}
 * [Fri, 22-Jan](http://goo.gl/forms/gCxt5byzaG){:target="_blank"}
