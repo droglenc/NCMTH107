@@ -6,9 +6,9 @@ title: Daily Quizzes, W16
 <!--
 
 * [Fri, 5-Feb](){:target="_blank"}
-* [Wed, 3-Feb](http://goo.gl/forms/mFrP0ilUVA){:target="_blank"}
 -->
 
+* [Wed, 3-Feb](http://goo.gl/forms/mFrP0ilUVA){:target="_blank"}
 * [Mon, 1-Feb](http://goo.gl/forms/WUE4kr0iUJ){:target="_blank"}
 * [Fri, 29-Jan](http://goo.gl/forms/FCKbRB8E6z){:target="_blank"}
 * [Wed, 27-Jan](http://goo.gl/forms/dTOFBFNCtx){:target="_blank"}
