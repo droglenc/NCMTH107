@@ -12,13 +12,13 @@ title: Homework Keys, W16
 * HW 9.22-9.24
 * HW 8.4-8.5
 * HW 6.19
-* HW 5.26
 * HW 5.25-5.25
+* HW 5.26
 * HW 4.24-4.25
-* [HW 3.51](Chapter3HWb_noPrint.pdf){:target="_blank"}
 
 -->
 
+* [HW 3.51](Chapter3HWb_noPrint.pdf){:target="_blank"}
 * [HW 3.50](Chapter3HWa_noPrint.pdf){:target="_blank"}
 * [HW 2.12](Chapter2HW_noPrint.pdf){:target="_blank"}
 * [HW 7.10-7.11](Chapter7HW_noPrint.pdf){:target="_blank"}
