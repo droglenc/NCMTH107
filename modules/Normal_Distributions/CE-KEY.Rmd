@@ -1,0 +1,103 @@
+---
+title: "Normal Distributions CE KEY"
+subtitle: ""
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Normal_Distributions/")
+source("../../rhelpers/rhelpers.R")
+modHTML("CE-KEY")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+source("../../rhelpers/knitr_setup.R")
+```
+
+----
+
+## Class Excercise 1
+
+1. NA
+1. Below
+    1. $\mu$=75, $\sigma$=10
+    1. $\mu$=5500, $\sigma$=600
+    1. $\mu$=0, $\sigma$=1
+
+----
+
+## Class Excercise 2
+1. For X~N(75,10) 
+    1. 97.5%
+    1. 0.15%
+    1. 68%
+    1. 81.5%
+    1. Between X=55 and 95.
+    1. Greater than X=95.
+2. For Z~N(0,1)
+    1. Z=1
+    1. 2.5%
+    1. 99.85%
+    1. Betrween Z=-3 and 3.
+
+----
+
+## Class Excercise 3
+#### Top questions
+1. A nest
+1. Number of Carpenter Ants in a nest
+1. Discrete quantitative
+1. $\mu$=1400
+1. $\sigma$=300
+
+#### Bottom questions
+1. `r formatC(distrib(1900,mean=1400,sd=300,lower.tail=FALSE)*100,format="f",digits=2)`%.
+1. `r formatC(distrib(0.15,mean=1400,sd=300,type="q",lower.tail=FALSE),format="f",digits=0)` ants.
+1. `r formatC(distrib(0.33,mean=1400,sd=300,type="q"),format="f",digits=0)` ants.
+1. `r formatC((distrib(1900,mean=1400,sd=300)-distrib(700,mean=1400,sd=300))*100,format="f",digits=2)`%.
+1. `r formatC(distrib(300,mean=1400,sd=300)*100,format="f",digits=3)`%.
+1. `r formatC(distrib(0.05,mean=1400,sd=300,type="q",lower.tail=FALSE),format="f",digits=0)` ants.
+1. Between `r formatC(distrib(0.10,mean=1400,sd=300,type="q"),format="f",digits=0)` and  `r formatC(distrib(0.10,mean=1400,sd=300,type="q",lower.tail=FALSE),format="f",digits=0)` ants.
+
+----
+
+## Class Excercise 4
+#### Top questions
+1. A day in LaCrosse, WI n early September
+1. Pollen count (spores per cubic meter)
+1. Discrete quantitative
+1. $\mu$=40
+1. $\sigma$=8
+
+#### Bottom questions
+1. `r formatC(distrib(0.1,mean=40,sd=8,type="q",lower.tail=FALSE),format="f",digits=1)` spores per cubic meter.
+1. `r formatC(distrib(50,mean=40,sd=8),format="f",digits=3)`.
+1. `r formatC(distrib(55,mean=40,sd=8)-distrib(32,mean=40,sd=8),format="f",digits=3)`.
+1. `r formatC(distrib(0.3,mean=40,sd=8,type="q"),format="f",digits=1)` spores per cubic meter.
+1. Between `r formatC(distrib(0.15,mean=40,sd=8,type="q"),format="f",digits=1)` and  `r formatC(distrib(0.15,mean=40,sd=8,type="q",lower.tail=FALSE),format="f",digits=1)` spores per cubic meter.
+1. `r formatC(distrib(35,mean=40,sd=8,lower.tail=FALSE),format="f",digits=3)`.
+
+----
+
+## Class Excercise 5
+#### Top questions
+1. A car traveling between the two points
+1. Time to travel between the two points
+1. Continuous quantitative
+1. $\mu$=2.5
+1. $\sigma$=0.75
+
+#### Bottom questions
+1. `r formatC(distrib(0.15,mean=2.5,sd=0.75,type="q",lower.tail=FALSE),format="f",digits=2)` s
+1. `r formatC(distrib(1,mean=2.5,sd=0.75),format="f",digits=3)`.
+1. `r formatC(distrib(4.5,mean=2.5,sd=0.75)-distrib(1.5,mean=2.5,sd=0.75),format="f",digits=3)`.
+1. The IQR is from a Q1 of `r formatC(distrib(0.25,mean=2.5,sd=0.75,type="q"),format="f",digits=2)` s to a Q3 of `r formatC(distrib(0.25,mean=2.5,sd=0.75,type="q",lower.tail=FALSE),format="f",digits=2)` s.
+1. `r formatC(distrib(7,mean=2.5,sd=0.75,lower.tail=FALSE),format="f",digits=12)`.
+1. 2.5 s.
