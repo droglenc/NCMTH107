@@ -11,9 +11,9 @@ css: /css/syllabus.css
     <div class="col-sm-5">
       <h4>Prof. Ogle's Section</h4>
       <dl class="dl-horizontal">
-      <dt>8-Feb</dt><dd>4.24&4.25</dd>
       <dt>15-Feb</dt><dd>5.26</dd>
 <!---
+      <dt>8-Feb</dt><dd>4.24&4.25</dd>
       <dt>5-Feb</dt><dd>3.51</dd>
       <dt>3-Feb</dt><dd>3.50</dd>
       <dt>29-Jan</dt><dd>2.12</dd>
@@ -26,9 +26,9 @@ css: /css/syllabus.css
     <div class="col-sm-5">
       <h4>Prof. Supanich's Section</h4>
       <dl class="dl-horizontal">
-      <dt>8-Feb</dt><dd>4.24&4.25</dd>
       <dt>15-Feb</dt><dd>5.26</dd>
 <!---
+      <dt>8-Feb</dt><dd>4.24&4.25</dd>
       <dt>5-Feb</dt><dd>3.51</dd>
       <dt>3-Feb</dt><dd>2.12</dd>
       <dt>3-Feb</dt><dd>3.50</dd>
@@ -48,8 +48,9 @@ css: /css/syllabus.css
 <dl class="dl-horizontal">
 <!---
 <dt>1-Feb</dt><dd>First <a href="Syllabus-Current.html#statistics-in-use-reports">"Stats-in-Use" Report</a></dd>
--->
 <dt>5-Feb</dt><dd><a href="project.html">Project Proposal</a></dd>
+-->
+<dt>22-Feb</dt><dd><a href="project.html">Project Proposal REDO</a></dd>
 <dt>12-Feb</dt><dd>First Exam</dd>
 <dt>7-Mar</dt><dd>Second <a href="Syllabus-Current.html#statistics-in-use-reports">"Stats-in-Use" Report</a></dd>
 <dt>18-Mar</dt><dd><a href="project.html">Project EDA</a></dd>
