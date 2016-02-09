@@ -28,10 +28,10 @@ source("../../rhelpers/knitr_setup.R")
 
 Should match those below
 
-#### Study Types II
+#### R Calculations
 
 <ol>
-<li>Two-way frequency table is below.<li>
+<li>Two-way frequency table is below.</li>
 ```{r}
 d <- data.frame(VAR1 <- c("D","C","A","C","A","D","C","A","D","B","A","B",
                           "B","A","C","D","A","C","A","B","B","A","D","C","A","C","B","B"),
@@ -54,6 +54,7 @@ percTable(tbl,margin=2,digits=1)
 ```{r}
 percTable(tbl,digits=1)
 ```
+</ol>
 
 ----
 
@@ -81,6 +82,7 @@ percTable(tbl,digits=1)
 1. 31.2%
 1. 15.4%
 1. Those with more recent fires tended to be deciduous, those without recent fires tended to be coniferous.
+
 ----
 
 ## Class Excercise 3
