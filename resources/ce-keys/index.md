@@ -6,7 +6,7 @@ title: Learning Modules
 1. Why Statistics is Important
 1. [Foundational Definitions](Foundational_Definitions.html)
 1. [Data Production](Data_Production.html)
-1. [Getting Started With RStudio](Getting_Started_R.html)
+1. Getting Started With RStudio
 1. [Univariate EDA - Quantitative](UnivEDA_Quantitative.html)
 1. [Univariate EDA - Categorical](UnivEDA_Categorical.html)
 1. [Normal Distributions](Normal_Distributions.html)

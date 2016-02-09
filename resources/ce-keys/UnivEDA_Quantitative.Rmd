@@ -95,7 +95,6 @@ iqrCalc(c(93,81,34,5,54,84,54,13,1,35,79,63,97,71))
 <li>The diameter of CWD is largely right-skewed with a separate group of 4 individuals at higher diameters (Figure 1).  With this definition of shape, there are no outliers.  The center as measured by the median is 18 cm and the IQR is from a Q1 of 16.25 to a Q3 of 20.75 cm.  I chose to use the median and IQR because of the right-skewed shape.</li>
 ```{r fig.width=3, fig.height=3, par1=TRUE}
 d <- read.csv("cwd.csv")
-str(d)
 hist(~diameter,data=d,xlab="Diameter of CWD")
 Summarize(~diameter,data=d,digits=2)
 ```

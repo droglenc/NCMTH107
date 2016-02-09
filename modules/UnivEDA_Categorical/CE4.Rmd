@@ -31,6 +31,7 @@ tbl <- c(0.618,0.2551,0.0392,0.0271,0.0239)
 tbl <- c(tbl,1-sum(tbl))*100
 names(tbl) <- c("Water","EEW","Grassland","UnShore","DeepWater","other")
 barplot(tbl,xlab="Main Habitats",ylab="Percent of Recordings",col="gray90")
+axis(2,1:59,NA,tcl=-0.1)
 ```
 
 1. What is an individual in this example?
