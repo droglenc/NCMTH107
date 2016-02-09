@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Learning Modules
+title: Class Exercise Keys
 ---
 
 1. Why Statistics is Important
