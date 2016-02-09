@@ -4,6 +4,8 @@ title: Daily Quizzes, W16
 ---
 
 <!--
+* [Wed, 17-Feb](){:target="_blank"}
+* [Mon, 15-Feb](){:target="_blank"}
 -->
 
 * [Mon, 8-Feb](http://goo.gl/forms/y1yIQn6bAJ){:target="_blank"}

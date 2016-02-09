@@ -14,8 +14,6 @@ title: Homework Keys, W16
 * HW 6.19
 * HW 5.25-5.25
 * HW 5.26
-
-
 -->
 
 * [HW 4.24-4.25](Chapter4HW_noPrint.pdf){:target="_blank"}

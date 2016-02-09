@@ -7,6 +7,7 @@ title: Resources
 1. Feedback / Suggestions -- [Dr. Ogle](https://www.suggestionox.com/r/W16-107){:target="_blank"}
 1. [**Quizzes**](quizzes/)
 1. [**Homework Answer Keys**](homework-keys/)
+1. [**Class Exercise Answer Keys**](ce-keys/)
 
 ## Learning Assistance
 1. [**FAQ (mostly related to R)**](RFAQ/)
