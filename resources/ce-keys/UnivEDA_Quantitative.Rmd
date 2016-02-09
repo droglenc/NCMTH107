@@ -1,0 +1,114 @@
+---
+title: "Answer Key"
+subtitle: "Univariate EDA - Quantitative CE"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/ce-keys/")
+source("../../rhelpers/rhelpers.R")
+modHTML("UnivEDA_Quantitative")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+source("../../rhelpers/knitr_setup.R")
+```
+
+----
+
+## Class Excercise 2
+#### Histograms I
+
+1. An individual 16-years and older in the U.S.
+1. Mean Commute time (mins)
+1. 51
+1. 2
+1. 25
+1. 26-28
+1. Symmetric (possibly slightly right-skewed)
+1. No outliers
+
+#### Histograms II
+
+1. (Strongly) Right skewed, outlier at maximum
+1. Left skewed, no outliers
+1. Right skewed, outlier at maximum
+1. Approximately symmetric, no outliers
+1. Approximately symmetric, no outliers
+1. (Srongly) Left skewed, no outliers
+1. Left skewed, outlier at minimum
+1. Bimodal (symmetric), no outliers
+
+----
+
+## Class Excercise 2
+#### Hand Calculations
+
+<ol>
+<li>Shown below</li>
+```{r}
+sdCalc(c(18,28,25,21,16,24))
+```
+<li>Shown above</li>
+<li>Shown below</li>
+```{r}
+iqrCalc(c(4,54,16,85,52,29,24,71,61,60,2))
+```
+<li>Shown above</li>
+<li>Shown below</li>
+```{r}
+iqrCalc(c(93,81,34,5,54,84,54,13,1,35,79,63,97,71))
+```
+
+<li>Shown above</li>
+<li>Range is 5 to 97.</li>
+</ol>
+
+----
+
+## Class Excercise 3
+1. NA
+1. The mean is greater than the median for right-skewed distributions, less than the median for left-skewed distributions, and approximately equal to the median for approximately symmetric distributions.
+1. Outliers attract the mean but have little effect on the median.  For example, if the outlier is at the maximum value then the mean will be greater than the median.
+1. See below.
+    1. Mean > Median
+    1. Mean < Median (only slightly)
+    1. Mean > Median
+    1. Mean = Median (approximately)
+    1. Mean = Median (approximately)
+    1. Mean < Median
+    1. Mean < Median
+    1. Mean = Median (approximately)
+1. The mean uses the actual values whereas the median is only concerned with relative positions.
+
+----
+
+## Class Excercise 4
+<ol>
+<li>The diameter of CWD is largely right-skewed with a separate group of 4 individuals at higher diameters (Figure 1).  With this definition of shape, there are no outliers.  The center as measured by the median is 18 cm and the IQR is from a Q1 of 16.25 to a Q3 of 20.75 cm.  I chose to use the median and IQR because of the right-skewed shape.</li>
+```{r fig.width=3, fig.height=3, par1=TRUE}
+d <- read.csv("cwd.csv")
+str(d)
+hist(~diameter,data=d,xlab="Diameter of CWD")
+Summarize(~diameter,data=d,digits=2)
+```
+
+<li>The diameter of CWD is largely right-skewed for both low- and medium-exposure sites (Figure 2).  There are no obvious outliers.  [<i>Note that it is difficult to describe shape and outliers in this case because the sample sizes in the two groups are so small.</i>]  The medians are 19 and 18, respectively, for the low- and medium-exposure sites.  The IQR is from a Q1 of 16 to a Q3 of 24 for the low-exposure sites and from a Q1 of 17 to a Q3 of 20 for the medium-exposure sites.  The median and IQR were used because of the skewed shape for both distributions.</li>
+```{r fig.width=6, fig.height=3, par1=TRUE}
+hist(diameter~exposure,data=d,xlab="Diameter of CWD")
+Summarize(diameter~exposure,data=d,digits=2)
+```
+</ol>
+
+----
+
+## Class Excercise 5
+
+**Not Yet Completed**
