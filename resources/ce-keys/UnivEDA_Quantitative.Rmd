@@ -110,4 +110,34 @@ Summarize(diameter~exposure,data=d,digits=2)
 
 ## Class Excercise 5
 
-**Not Yet Completed**
+<ol>
+<li>The distribution of coffees sold was right-skewed with a hint of bimodality (a small peak near 10 coffees sold and a taller peak near 30 coffees sold), but no obvious outliers.  The center as measured by the median was 23 coffees sold and the IQR was from a Q1 of 12 to a Q3 of 30 coffees sold.  I chose to use the median and IQR to measure center and dispersion because of the skewed shape.</li>
+
+```{r fig.width=3, fig.height=3, par1=TRUE}
+d <- read.csv("cafedata.csv")
+d$dow <- factor(d$dow,levels=c("Mon","Tue","Wed","Thu","Fri"))
+hist(~coffee.sold,data=d,xlab="Number of Coffees Sold",ylim=c(0,10))
+Summarize(~coffee.sold,data=d,digits=2)
+```
+
+<li>In general, slightly more coffees were sold in the middle of the week.  There was slightly less variability on Mondays. [<i>I did not make histograms for each different day of the week because the sample sizes for each day were small (<=10).</i>]</li>
+
+```{r fig.width=3, fig.height=3, par1=TRUE}
+Summarize(coffee.sold~dow,data=d,digits=2)
+```
+
+<li>The distribution of sodas sold was primarily symmetric with no obvious outliers.  The center as measured by the mean was 29.6 sodas sold and the dispersion as measured by the standard deviation was 11.9 sodas sold.  I chose to use the mean and standard deviation to measure center and dispersion because of the symmetric shape and lack of outliers.</li>
+
+```{r fig.width=3, fig.height=3, par1=TRUE}
+hist(~sodas.sold,data=d,xlab="Number of Sodas Sold",ylim=c(0,10))
+Summarize(~sodas.sold,data=d,digits=2)
+```
+
+<li>In general, slightly more coffees were sold in the middle of the week.  There was slightly less variability on Mondays.</li>
+
+```{r fig.width=3, fig.height=3, par1=TRUE}
+Summarize(sodas.sold~dow,data=d,digits=2)
+```
+
+<li>There was likely a smaller "population" of potential customers on Mondays and Fridays then during the middle of the week.</li>
+</ol>

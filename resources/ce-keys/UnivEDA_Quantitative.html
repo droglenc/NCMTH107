@@ -133,11 +133,7 @@ Range is 5 to 97.
 The diameter of CWD is largely right-skewed with a separate group of 4 individuals at higher diameters (Figure 1). With this definition of shape, there are no outliers. The center as measured by the median is 18 cm and the IQR is from a Q1 of 16.25 to a Q3 of 20.75 cm. I chose to use the median and IQR because of the right-skewed shape.
 </li>
 <pre class="r"><code>&gt; d &lt;- read.csv(&quot;cwd.csv&quot;)
-&gt; str(d)</code></pre>
-<pre><code>&#39;data.frame&#39;:   50 obs. of  2 variables:
- $ diameter: int  21 15 18 23 18 17 19 17 15 22 ...
- $ exposure: Factor w/ 2 levels &quot;low&quot;,&quot;med&quot;: 2 2 2 1 2 1 2 2 2 2 ...</code></pre>
-<pre class="r"><code>&gt; hist(~diameter,data=d,xlab=&quot;Diameter of CWD&quot;)</code></pre>
+&gt; hist(~diameter,data=d,xlab=&quot;Diameter of CWD&quot;)</code></pre>
 <p><img src="UnivEDA_Quantitative_files/figure-html/unnamed-chunk-6-1.png" title="" alt="" width="288" /></p>
 <pre class="r"><code>&gt; Summarize(~diameter,data=d,digits=2)</code></pre>
 <pre><code>       n   nvalid     mean       sd      min       Q1   median       Q3      max percZero 
@@ -156,7 +152,49 @@ The diameter of CWD is largely right-skewed for both low- and medium-exposure si
 </div>
 <div id="class-excercise-5" class="section level2">
 <h2>Class Excercise 5</h2>
-<p><strong>Not Yet Completed</strong></p>
+<ol>
+<li>
+The distribution of coffees sold was right-skewed with a hint of bimodality (a small peak near 10 coffees sold and a taller peak near 30 coffees sold), but no obvious outliers. The center as measured by the median was 23 coffees sold and the IQR was from a Q1 of 12 to a Q3 of 30 coffees sold. I chose to use the median and IQR to measure center and dispersion because of the skewed shape.
+</li>
+<pre class="r"><code>&gt; d &lt;- read.csv(&quot;cafedata.csv&quot;)
+&gt; d$dow &lt;- factor(d$dow,levels=c(&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;))
+&gt; hist(~coffee.sold,data=d,xlab=&quot;Number of Coffees Sold&quot;,ylim=c(0,10))</code></pre>
+<p><img src="UnivEDA_Quantitative_files/figure-html/unnamed-chunk-8-1.png" title="" alt="" width="288" /></p>
+<pre class="r"><code>&gt; Summarize(~coffee.sold,data=d,digits=2)</code></pre>
+<pre><code>       n   nvalid     mean       sd      min       Q1   median       Q3      max percZero 
+   48.00    47.00    21.51    11.08     3.00    12.00    23.00    30.00    48.00     0.00 </code></pre>
+<li>
+In general, slightly more coffees were sold in the middle of the week. There was slightly less variability on Mondays. [<i>I did not make histograms for each different day of the week because the sample sizes for each day were small (&lt;=10).</i>]
+</li>
+<pre class="r"><code>&gt; Summarize(coffee.sold~dow,data=d,digits=2)</code></pre>
+<pre><code>  dow  n nvalid  mean    sd min    Q1 median    Q3 max percZero
+1 Mon  9      9 19.33  8.63   5 16.00   20.0 25.00  31        0
+2 Tue 10     10 22.80 11.34   6 15.50   22.5 29.75  41        0
+3 Wed 10     10 22.30 14.74   4 10.25   24.0 32.75  48        0
+4 Thu 10     10 22.80 10.41   4 15.00   25.5 30.25  35        0
+5 Fri  9      8 19.75 11.06   3 13.00   23.5 27.75  31        0</code></pre>
+<li>
+The distribution of sodas sold was primarily symmetric with no obvious outliers. The center as measured by the mean was 29.6 sodas sold and the dispersion as measured by the standard deviation was 11.9 sodas sold. I chose to use the mean and standard deviation to measure center and dispersion because of the symmetric shape and lack of outliers.
+</li>
+<pre class="r"><code>&gt; hist(~sodas.sold,data=d,xlab=&quot;Number of Sodas Sold&quot;,ylim=c(0,10))</code></pre>
+<p><img src="UnivEDA_Quantitative_files/figure-html/unnamed-chunk-10-1.png" title="" alt="" width="288" /></p>
+<pre class="r"><code>&gt; Summarize(~sodas.sold,data=d,digits=2)</code></pre>
+<pre><code>       n   nvalid     mean       sd      min       Q1   median       Q3      max percZero 
+   48.00    47.00    29.57    11.86    11.00    21.00    29.00    36.00    55.00     0.00 </code></pre>
+<li>
+In general, slightly more coffees were sold in the middle of the week. There was slightly less variability on Mondays.
+</li>
+<pre class="r"><code>&gt; Summarize(sodas.sold~dow,data=d,digits=2)</code></pre>
+<pre><code>  dow  n nvalid  mean    sd min    Q1 median    Q3 max percZero
+1 Mon  9      9 24.00  6.93  13 19.00   25.0 26.00  36        0
+2 Tue 10     10 39.90 11.45  20 33.00   37.5 49.50  55        0
+3 Wed 10     10 28.50 10.97  13 21.00   28.5 34.75  45        0
+4 Thu 10     10 35.30  8.54  23 29.50   34.0 41.50  50        0
+5 Fri  9      8 17.12  5.91  11 12.75   14.5 22.50  26        0</code></pre>
+<li>
+There was likely a smaller “population” of potential customers on Mondays and Fridays then during the middle of the week.
+</li>
+</ol>
 </div>
 
 
