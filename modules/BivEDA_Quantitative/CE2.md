@@ -29,7 +29,7 @@ Identify whether, and describe your reasoning, you would expect to see a positiv
 <ul class="pagination pagination-lg">
   <li><a href="index.html">^</a></li>
   <li><a href="CE1.html">1</a></li>
-  <li class="active"><a href="#">1</a></li>
+  <li class="active"><a href="#">2</a></li>
   <li><a href="CE3.html">3</a></li>
   <li><a href="CE4.html">4</a></li>
 </ul>
