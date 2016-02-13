@@ -1,6 +1,6 @@
 ---
 title: "Answer Key"
-subtitle: "Bivariate EDA Quantitative CE"
+subtitle: "Linear Regression CE"
 author: Derek H. Ogle
 layout: page
 css: "/css/modules.css"
@@ -13,7 +13,7 @@ output:
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/ce-keys/")
 source("../../rhelpers/rhelpers.R")
-modHTML("BivEDA_Quantitative")
+modHTML("Linear_Regression")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
@@ -25,13 +25,33 @@ source("../../rhelpers/knitr_setup.R")
 
 ## Class Excercise 1
 
-1. Location of the Christmas bird count.
-1. Both are quantitative, continuous.
-1. 55 degrees north.
-1. Approximately 11%.
-1. 6 surveys.
-1. 4 surveys (not including 40 and 45).
-1. Negative.
+1. **Dishwasher Example**
+    1. response - Height of suds (mm)
+    1. explanatory - Amount of soap (g)
+    1. slope is 12.4
+    1. intercept is -20.2
+    1. For each additional gram of soap, the height of sudes increases by 12.4 mm, on average.
+    1. For 0 grams of soap, the height of suds is -20.2 mm, on average.  [*This is an extrapolation.*]
+    1. Ask to predict height of suds for an amount of soap between 3.5 and 8.0 grams.  Example ... "What is the predicted height of suds for 5 g of soap?"  Answer ... -20.2+12.4*5=41.8 mm.
+    1. Ask to predict height of sudes for an amount of soap not between 3.5 and 8.0 grams.  Example ... "What is the predicted height of suds for 10 g of soap?"
+1. **Livestock Food Example**
+    1. response - Costs
+    1. explanatory - Livestock food mix in pounds
+    1. Slope is 190.
+    1. Intercept is 12075
+    1. For each additional ton of the food mix, the cost increases by $190, on average.
+    1. For 0 tons of the food mix, the costs are $12075, on average. [*This may be considered as "start-up" costs.*]
+    1. Ask to predict costs for food mix amounts between 36.5 and 42 tons.  Example ... "What is the cost to make 40 tons of the mix?"  Answer ... 190*40+12075 = $19675.
+    1. Ask to predict costs for food mix amounts not between 36.5 and 42 tons.  Example ... "What is the cos to make 70 tons of the mix?"
+1. **Grey Kangaroo Example**
+    1. response -
+    1. explanatory -
+    1.
+    1.
+    1.
+    1.
+    1.
+    1.
 
 ----
 
