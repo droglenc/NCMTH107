@@ -11,6 +11,8 @@ css: /css/syllabus.css
     <div class="col-sm-5">
       <h4>Prof. Ogle's Section</h4>
       <dl class="dl-horizontal">
+      <dt>24-Feb</dt><dd>6.19</dd>
+      <dt>22-Feb</dt><dd>5.24 & 5.25</dd>
       <dt>15-Feb</dt><dd>5.26</dd>
 <!---
       <dt>8-Feb</dt><dd>4.24&4.25</dd>
