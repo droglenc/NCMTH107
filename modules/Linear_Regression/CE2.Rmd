@@ -31,8 +31,8 @@ Geologists examined the relationship between the median diameter (mm) of sand gr
 d <- read.csv("Beaches.csv")
 lm1 <- lm(sand~slope,data=d)
 fitPlot(lm1,xlab="Beach Slope (Degrees)",ylab="Median Sand Diameter (mm)")
-legend("topleft",c(paste0("SAND=",formatC(coef(lm1)[1],format="f",digits=3),"+",
-                          formatC(coef(lm1)[2],format="f",digits=3),"*SLOPE"),
+legend("topleft",c(paste0("Y=",formatC(coef(lm1)[1],format="f",digits=3),"+",
+                          formatC(coef(lm1)[2],format="f",digits=3),"*X"),
                    paste0("r^2=",formatC(rSquared(lm1),format="f",digits=3))),bty="n")
 ```
 
