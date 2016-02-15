@@ -11,7 +11,7 @@ title: Class Exercise Keys
 1. [Univariate EDA - Categorical](UnivEDA_Categorical.html)
 1. [Normal Distributions](Normal_Distributions.html)
 1. [Bivariate EDA - Categorical](BivEDA_Categorical.html)
-1. Bivariate EDA - Quantitative
+1. [Bivariate EDA - Quantitative](BivEDA_Quantitative.html)
 1. Linear Regression
 1. Probability Introduction
 1. Sampling Distributions
