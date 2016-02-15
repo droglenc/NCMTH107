@@ -13,13 +13,11 @@ output:
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Sampling_Distributions/")
 source("../../rhelpers/rhelpers.R")
-fnm <- "CE1"
-modHTML(fnm)
+modHTML("CE1")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
-fnm <- "CE1"
 source("../../rhelpers/knitr_setup.R")
 ```
 
@@ -51,45 +49,11 @@ Summarize(mns,digits=3)
 
 ----
 
-## Checking the CLT
-<img src="../zimgs/computer-1.jpg" alt="Simulations" class="img-right">
-We can provide evidence to support (or not) the Central Limit Theorem (CLT) by (i) creating a known population, (ii) stating our expectations from the CLT for the sampling distribution of the means, (iii) repeatedly sampling fronm the population to construct a simulated sampling distribution of the means, (iv) recording results from the repeated sampling, and (v) comparing the observed results to what was expected from the CLT.
-
-The `cltSim()` function (with no arguments) from `NCStats` provides an efficient method to create a known population, repeatedly sample (5000 times) from that population, and summarize the resulting simulated sampling distribution.  For example, `cltSim()` produced the plots shown below.  The histogram on the left is a known population distribution with the parameters (&mu;&amp;&sigma;) shown.  The histogram on the right is a simulated sampling distribution; i.e., the distribution of means from 5000 independent samples of size n taken from the known population.  In RStudio, this plot will have a gear icon in the upper-left corner that will open a dialog box that allows you to modify n.  Additionally, you can control two shape parameters that will alter the known population distribution.
-
-```{r echo=FALSE, fig.width=7,fig.height=3,par2=TRUE}
-cltSim()
-```
-
-The table below can be used to efficiently record your expectations and observed results for different sample sizes.
-
-<table class="table table-bordered table-condensed">
-<thead>
-<tr><th></th><th colspan=3 class="text-center">Expected from CLT</th><th colspan=3 class="text-center">Observed from <code>cltSim()</code></th></tr>
-<tr><th>n=</th><th class="text-center">Shape</th><th class="text-center">Center</th><th class="text-center">Dispersion</th><th class="text-center">Shape</th><th class="text-center">Center</th><th class="text-center">Dispersion</th></tr>
-</thead>
-<tbody>
-<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-</tbody>
-</table>
-
-Use `cltSim()` and the table above to answer the following questions.
-
-1. Construct a population distribution where `shape1=1` and `shape2=1`.
-    1. What is the shape, center, and dispersion of this population?
-    1. What would you *expect*, based on the CLT (*not* the results from `cltSim()`), the sampling distribution of the sample means to look like for n=10, 25, and 50.  Record your expectations in the appropriate cells of the table from above.
-    1. What did you *observe* (from `cltSim()`) for the simulated sampling distributions of the sample means for n=10, 25, and 50.  Record your observations in the approprate cells of the table from above.
-    1. Did each of your observations match your expectations?  Does this give you confidence in the CLT?
-1. Repeat for `shape=1` and `shape2=5`.
-1. Repeat for `shape=5` and `shape2=3`.
-
-----
-
 <div class="text-center">
 <ul class="pagination pagination-lg">
   <li><a href="index.html">^</a></li>
   <li class="active"><a href="#">1</a></li>
   <li><a href="CE2.html">2</a></li>
+  <li><a href="CE3.html">3</a></li>
+  <li><a href="CE4.html">4</a></li>
 </ul>

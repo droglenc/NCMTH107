@@ -10,7 +10,7 @@ css: "/css/modules.css"
 <hr />
 <div id="constructing-a-sampling-distribution" class="section level2">
 <h2>Constructing a Sampling Distribution</h2>
-<p><img src="../zimgs/calculator-1.jpg" alt="Calculations" class="img-right"> Use the very simple population of five individuals with the following values – 12, 14, 16, 18, 20 – to answer the following questions.</p>
+<p><img src="C:/aaaWork/Web/GitHub/NCMTH107/modules/zimgs/calculator-1.jpg" alt="Calculations" class="img-right"> Use the very simple population of five individuals with the following values – 12, 14, 16, 18, 20 – to answer the following questions.</p>
 <ol>
 <li>Compute the center and dispersion of this population. Label your results with appropriate symbols.</li>
 <li>Identify all possible samples of n=2 from this population. [<em>Note that there are 10 such samples.</em>]</li>
@@ -33,134 +33,6 @@ css: "/css/modules.css"
 <pre><code>       n   nvalid     mean       sd      min       Q1   median       Q3      max percZero 
    4.000    4.000    7.250    1.420    5.600    6.425    7.250    8.075    8.900    0.000 </code></pre>
 <hr />
-</div>
-<div id="checking-the-clt" class="section level2">
-<h2>Checking the CLT</h2>
-<p><img src="../zimgs/computer-1.jpg" alt="Simulations" class="img-right"> We can provide evidence to support (or not) the Central Limit Theorem (CLT) by (i) creating a known population, (ii) stating our expectations from the CLT for the sampling distribution of the means, (iii) repeatedly sampling fronm the population to construct a simulated sampling distribution of the means, (iv) recording results from the repeated sampling, and (v) comparing the observed results to what was expected from the CLT.</p>
-<p>The <code>cltSim()</code> function (with no arguments) from <code>NCStats</code> provides an efficient method to create a known population, repeatedly sample (5000 times) from that population, and summarize the resulting simulated sampling distribution. For example, <code>cltSim()</code> produced the plots shown below. The histogram on the left is a known population distribution with the parameters (μ&amp;σ) shown. The histogram on the right is a simulated sampling distribution; i.e., the distribution of means from 5000 independent samples of size n taken from the known population. In RStudio, this plot will have a gear icon in the upper-left corner that will open a dialog box that allows you to modify n. Additionally, you can control two shape parameters that will alter the known population distribution.</p>
-<p><img src="CE1_files/figure-html/unnamed-chunk-4-1.png" title="" alt="" width="672" /></p>
-<p>The table below can be used to efficiently record your expectations and observed results for different sample sizes.</p>
-<table class="table table-bordered table-condensed">
-<thead>
-<tr>
-<th>
-</th>
-<th colspan="3" class="text-center">
-Expected from CLT
-</th>
-<th colspan="3" class="text-center">
-Observed from <code>cltSim()</code>
-</th>
-</tr>
-<tr>
-<th>
-n=
-</th>
-<th class="text-center">
-Shape
-</th>
-<th class="text-center">
-Center
-</th>
-<th class="text-center">
-Dispersion
-</th>
-<th class="text-center">
-Shape
-</th>
-<th class="text-center">
-Center
-</th>
-<th class="text-center">
-Dispersion
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
- 
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-</tr>
-<tr>
-<td>
- 
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-</tr>
-<tr>
-<td>
- 
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-<td>
- 
-</td>
-</tr>
-</tbody>
-</table>
-<p>Use <code>cltSim()</code> and the table above to answer the following questions.</p>
-<ol>
-<li>Construct a population distribution where <code>shape1=1</code> and <code>shape2=1</code>.
-<ol>
-<li>What is the shape, center, and dispersion of this population?</li>
-<li>What would you <em>expect</em>, based on the CLT (<em>not</em> the results from <code>cltSim()</code>), the sampling distribution of the sample means to look like for n=10, 25, and 50. Record your expectations in the appropriate cells of the table from above.</li>
-<li>What did you <em>observe</em> (from <code>cltSim()</code>) for the simulated sampling distributions of the sample means for n=10, 25, and 50. Record your observations in the approprate cells of the table from above.</li>
-<li>Did each of your observations match your expectations? Does this give you confidence in the CLT?</li>
-</ol></li>
-<li>Repeat for <code>shape=1</code> and <code>shape2=5</code>.</li>
-<li>Repeat for <code>shape=5</code> and <code>shape2=3</code>.</li>
-</ol>
-<hr />
 <div class="text-center">
 <ul class="pagination pagination-lg">
 <li>
@@ -171,6 +43,12 @@ Dispersion
 </li>
 <li>
 <a href="CE2.html">2</a>
+</li>
+<li>
+<a href="CE3.html">3</a>
+</li>
+<li>
+<a href="CE4.html">4</a>
 </li>
 </ul>
 </div>
