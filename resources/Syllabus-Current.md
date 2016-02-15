@@ -82,7 +82,7 @@ An overall percentage score will be computed from the items and associated weigh
 </tr>
 
 <tr><th>Weight</th>
-<th>17.5%</th><th>17.5%</th><th>25%</th><th>13%</th><th>5%</th><th>7%</th><th>15%</th></tr>
+<th>22%</th><th>22%</th><th>29%</th><th>5%</th><th>7%</th><th>15%</th></tr>
 
 <tr><th>Percent</th>
 <td><input type="text" name="QUIZ_SC" size="3" tabindex="1" onchange="calc_grade(this.form)"></td>

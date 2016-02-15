@@ -13,8 +13,7 @@ function roundDec(x, dcml)  {
 //**********************************************************************************
 function get_wghts() {
   QUIZ_WT = 0.15; HW_WT = 0.05; SIUR_WT = 0.07;
-  MT1_WT = 0.175;	MT2_WT = 0.175;	FNL_WT = 0.25;
-  PROJ_WT = 0.13;
+  MT1_WT = 0.22;	MT2_WT = 0.22;	FNL_WT = 0.29;
 }
 
 //**********************************************************************************
@@ -67,11 +66,6 @@ function calc_grade(form) {
 	if (temp!=="") {
 		if (temp > 1) {temp=temp/100};
 		pts += FNL_WT*temp;	outof += FNL_WT;
-	}
-	temp = form.PROJ_SC.value;
-	if (temp!=="") {
-		if (temp > 1) {temp=temp/100};
-		pts += PROJ_WT*temp;	outof += PROJ_WT;
 	}
 	find_grade(form, pts, outof);
 }
