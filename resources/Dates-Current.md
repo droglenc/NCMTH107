@@ -13,6 +13,7 @@ css: /css/syllabus.css
       <dl class="dl-horizontal">
       <dt>24-Feb</dt><dd>6.19</dd>
       <dt>22-Feb</dt><dd>5.24 & 5.25</dd>
+      <dt>22-Feb</dt><dd>(optional) MT1 [XC Reflection](http://derekogle.com/NCMTH107/resources/Syllabus-Current#extra-credit)</dd>
       <dt>15-Feb</dt><dd>5.26</dd>
 <!---
       <dt>8-Feb</dt><dd>4.24&4.25</dd>
@@ -28,6 +29,9 @@ css: /css/syllabus.css
     <div class="col-sm-5">
       <h4>Prof. Supanich's Section</h4>
       <dl class="dl-horizontal">
+      <dt>24-Feb</dt><dd>6.19</dd>
+      <dt>22-Feb</dt><dd>5.24 & 5.25</dd>
+      <dt>22-Feb</dt><dd>(optional) MT1 [XC Reflection](http://derekogle.com/NCMTH107/resources/Syllabus-Current#extra-credit)</dd>
       <dt>15-Feb</dt><dd>5.26</dd>
 <!---
       <dt>8-Feb</dt><dd>4.24&4.25</dd>
@@ -52,7 +56,6 @@ css: /css/syllabus.css
 <dt>1-Feb</dt><dd>First <a href="Syllabus-Current.html#statistics-in-use-reports">"Stats-in-Use" Report</a></dd>
 <dt>5-Feb</dt><dd><a href="project.html">Project Proposal</a></dd>
 -->
-<dt>22-Feb</dt><dd><a href="project.html">Project Proposal REDO</a></dd>
 <dt>12-Feb</dt><dd>First Exam</dd>
 <dt>7-Mar</dt><dd>Second <a href="Syllabus-Current.html#statistics-in-use-reports">"Stats-in-Use" Report</a></dd>
 <dt>18-Mar</dt><dd><a href="project.html">Project EDA</a></dd>
