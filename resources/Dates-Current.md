@@ -55,13 +55,13 @@ css: /css/syllabus.css
 <!---
 <dt>1-Feb</dt><dd>First <a href="Syllabus-Current.html#statistics-in-use-reports">"Stats-in-Use" Report</a></dd>
 <dt>5-Feb</dt><dd><a href="project.html">Project Proposal</a></dd>
--->
 <dt>12-Feb</dt><dd>First Exam</dd>
-<dt>7-Mar</dt><dd>Second <a href="Syllabus-Current.html#statistics-in-use-reports">"Stats-in-Use" Report</a></dd>
 <dt>18-Mar</dt><dd><a href="project.html">Project EDA</a></dd>
+<dt>15-Apr</dt><dd><a href="project.html">Project Final Report</a></dd>
+-->
+<dt>7-Mar</dt><dd>Second <a href="Syllabus-Current.html#statistics-in-use-reports">"Stats-in-Use" Report</a></dd>
 <dt>23-Mar</dt><dd>Second Exam</dd>
 <dt>8-Apr</dt><dd>Third <a href="Syllabus-Current.html#statistics-in-use-reports">"Stats-in-Use" Report</a></dd>
-<dt>15-Apr</dt><dd><a href="project.html">Project Final Report</a></dd>
 <dt>22-Apr</dt><dd>Final Exam</dd>
 </dl>
 

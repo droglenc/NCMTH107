@@ -9,7 +9,7 @@ css: /css/syllabus.css
 
 * Class [Description](#description) and [Learning Outcomes](#learning-outcomes)
 * [Instructors](#instructors) and [Tutors](#tutors)
-* [Grading](#grading) -- [Quizzes](#quizzes), [Homework](#homework), [SIU Reports](#statistics-in-use-reports), [Exams](#exams), [Project](project.html), [Extra Credit](#extra-credit)
+* [Grading](#grading) -- [Quizzes](#quizzes), [Homework](#homework), [SIU Reports](#statistics-in-use-reports), [Exams](#exams), [Extra Credit](#extra-credit)
 * [Participation and Conduct](#participation-and-conduct)
 * [Accomodations](#accomodations)
 
@@ -76,7 +76,6 @@ An overall percentage score will be computed from the items and associated weigh
 <th><a href="#exams">MT1</A></th>
 <th><a href="#exams">MT2</A></th>
 <th><a href="#exams">Final</A></th>
-<th><a href="#project">Project</A></th>
 <th><a href="#homework">HW</a></th>
 <th><a href="#statistics-in-use-reports">SIUR</a></th>
 <th><a href="#quizzes">Quiz</a></th>
@@ -92,7 +91,7 @@ An overall percentage score will be computed from the items and associated weigh
 <td><input type="text" name="MT1_SC" size="3" tabindex="4" onchange="calc_grade(this.form)"></td>
 <td><input type="text" name="MT2_SC" size="3" tabindex="5" onchange="calc_grade(this.form)"></td>
 <td><input type="text" name="FNL_SC" size="3" tabindex="6" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="PROJ_SC" size="3" tabindex="7" onchange="calc_grade(this.form)"></td></tr>
+</tr>
 
 <tr><th colspan="4">Overall Percentage: <input type="text" name="SCORE" size="4"></th>
 <th colspan="4">Projected Grade: <input type="text" name="GRADE" size="2"></th></tr>
@@ -111,10 +110,6 @@ Lowest possible final letter grades will be assigned by comparing your overall p
 ### Exams
 
 Exam dates are shown on the [Due Dates page](Dates-Current.html){:target="_blank"}.  Make-up exams will be provided only if you have a fixed commitment of sufficient importance that was set before the beginning of the semester or a verifiable medical condition.  You will not be allowed to make up an exam missed without my prior approval.  The final exam will not be given early.
-
-### Project
-
-See the [Class Project page](project.html).
 
 ### Homework
 
@@ -153,6 +148,9 @@ Extra credit may be obtained by completing a two-part typed reflection on each m
 * **Reflection**: Your *thoughtful* reflections about the exam, including what you did well on the exam (and why), what you did not do so well on the exam (and why), what strategy you used to prepare for the exam, how you will change your strategy to prepare for the next exam, and whether you considered the exam to be fair or not.  This portion should be at least one page but not more than two pages and is worth 1/3rd of the overall value of the exam reflection.
 
 A perfect exam reflection will add 10% to your final exam score (but the final score cannot be greater than 100%).
+
+In addition, up to 5% extra credit added to your final grade can be earned by completing a [Class Project](project.html) (note that the topic of your project must be approved by me).
+
 
 ### Incomplete Grades
 
