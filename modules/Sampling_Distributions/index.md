@@ -49,5 +49,5 @@ Questions 9.22-9.24 in [the textbook](../../book/) will assess your understandin
 
 ### Related materials
 
-* In-Class Exercises -- [I](CE1.html) / [II](CE2.html)
+* In-Class Exercises -- [I](CE1.html) / [II](CE2.html) / [III](CE3.html) / [IV](CE4.html)
 * [Old Lecture Slides](PPT_old.pptx)
