@@ -75,10 +75,9 @@ plot(IBI~imp,data=d,pch=19,xlab="% Impervious Surface",ylab="IBI")
 d <- read.csv("cafedata.csv")
 plot(coffee.sold~max.temp,data=d,pch=19,xlab="Maximum Daily Temperature",
      ylab="Number of Coffees Sold")
-corr(coffee.sold~max.temp,data=d,use="pairwise.complete.obs")
 ```
 
-<li>The relationship between the number of coffees sold and the number of sodas sold at the cafe is negative, linear, and weak (r=-0.740) with no obvious outliers.  I identified strength from the value of the correlation coefficient because of the linear form and lack of outliers.</li>
+<li>The relationship between the number of coffees sold and the number of sodas sold at the cafe is negative, linear, and weak (r=-0.40) with no obvious outliers.  I identified strength from the value of the correlation coefficient because of the linear form and lack of outliers.</li>
 
 ```{r fig.width=3, fig.height=3, par1=TRUE}
 d <- read.csv("cafedata.csv")

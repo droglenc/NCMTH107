@@ -62,10 +62,8 @@ The relationship between number of coffees sold at the cafe and maximum daily te
 &gt; plot(coffee.sold~max.temp,data=d,pch=19,xlab=&quot;Maximum Daily Temperature&quot;,
        ylab=&quot;Number of Coffees Sold&quot;)</code></pre>
 <p><img src="BivEDA_Quantitative_files/figure-html/unnamed-chunk-4-1.png" title="" alt="" width="288" /></p>
-<pre class="r"><code>&gt; corr(coffee.sold~max.temp,data=d,use=&quot;pairwise.complete.obs&quot;)</code></pre>
-<pre><code>[1] -0.741302</code></pre>
 <li>
-The relationship between the number of coffees sold and the number of sodas sold at the cafe is negative, linear, and weak (r=-0.740) with no obvious outliers. I identified strength from the value of the correlation coefficient because of the linear form and lack of outliers.
+The relationship between the number of coffees sold and the number of sodas sold at the cafe is negative, linear, and weak (r=-0.40) with no obvious outliers. I identified strength from the value of the correlation coefficient because of the linear form and lack of outliers.
 </li>
 <pre class="r"><code>&gt; d &lt;- read.csv(&quot;cafedata.csv&quot;)
 &gt; plot(coffee.sold~sodas.sold,data=d,pch=19,xlab=&quot;Number of Sodas Sold&quot;,
