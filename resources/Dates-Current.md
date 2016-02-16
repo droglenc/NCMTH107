@@ -14,8 +14,8 @@ css: /css/syllabus.css
       <dt>24-Feb</dt><dd>6.19</dd>
       <dt>22-Feb</dt><dd>5.24 & 5.25</dd>
       <dt>22-Feb</dt><dd>(optional) MT1 <a href="Syllabus-Current.html#extra-credit">XC Reflection</a></dd>
-      <dt>15-Feb</dt><dd>5.26</dd>
 <!---
+      <dt>15-Feb</dt><dd>5.26</dd>
       <dt>8-Feb</dt><dd>4.24&4.25</dd>
       <dt>5-Feb</dt><dd>3.51</dd>
       <dt>3-Feb</dt><dd>3.50</dd>
@@ -32,8 +32,8 @@ css: /css/syllabus.css
       <dt>24-Feb</dt><dd>6.19</dd>
       <dt>22-Feb</dt><dd>5.24 & 5.25</dd>
       <dt>22-Feb</dt><dd>(optional) MT1 <a href="Syllabus-Current.html#extra-credit">XC Reflection</a></dd>
-      <dt>15-Feb</dt><dd>5.26</dd>
 <!---
+      <dt>15-Feb</dt><dd>5.26</dd>
       <dt>8-Feb</dt><dd>4.24&4.25</dd>
       <dt>5-Feb</dt><dd>3.51</dd>
       <dt>3-Feb</dt><dd>2.12</dd>
