@@ -10,7 +10,7 @@ css: "/css/modules.css"
 
 ## Equation of the Line
 
-For each situation below, identify the (a) response variable, (b) explanatory variable, (c) slope, and (d) intercept; interpret the (e) slope and (f) intercept; (g) construct a valid prediction; and (h) identify what an extrapolation would be.
+For each situation below, identify the (a) response variable, (b) explanatory variable, (c) slope, and (d) intercept; interpret the (e) slope and (f) intercept; (g) construct a valid prediction (and answer the question you construct); and (h) identify what an extrapolation would be.
 
 1. A student recorded the height of suds (mm) in a dishwasher for ten different amounts of soap (g).  The resulting best-fit line was Y=-20.2+12.4*X for 24<Y<80 and 3.5<X<8.0.
 1. A farmer estimated the costs required to produce the daily livestock food mix (in tons) for a 20 day period.  The resulting best-fit line was Y=190*X+12075 for 19000<Y<21000 and 36.5<X<42.
