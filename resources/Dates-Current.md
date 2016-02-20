@@ -11,9 +11,10 @@ css: /css/syllabus.css
     <div class="col-sm-5">
       <h4>Prof. Ogle's Section</h4>
       <dl class="dl-horizontal">
-      <dt>24-Feb</dt><dd>6.19</dd>
       <dt>22-Feb</dt><dd>5.24 & 5.25</dd>
       <dt>22-Feb</dt><dd>(optional) MT1 <a href="Syllabus-Current.html#extra-credit">XC Reflection</a></dd>
+      <dt>24-Feb</dt><dd>6.19</dd>
+      <dt>26-Feb</dt><dd>8.4 & 8.5</dd>
 <!---
       <dt>15-Feb</dt><dd>5.26</dd>
       <dt>8-Feb</dt><dd>4.24&4.25</dd>
@@ -29,9 +30,9 @@ css: /css/syllabus.css
     <div class="col-sm-5">
       <h4>Prof. Supanich's Section</h4>
       <dl class="dl-horizontal">
-      <dt>24-Feb</dt><dd>6.19</dd>
       <dt>22-Feb</dt><dd>5.24 & 5.25</dd>
       <dt>22-Feb</dt><dd>(optional) MT1 <a href="Syllabus-Current.html#extra-credit">XC Reflection</a></dd>
+      <dt>24-Feb</dt><dd>6.19</dd>
 <!---
       <dt>15-Feb</dt><dd>5.26</dd>
       <dt>8-Feb</dt><dd>4.24&4.25</dd>
@@ -69,9 +70,11 @@ css: /css/syllabus.css
 
 ## Cancelled Classes
 <dl class="dl-horizontal">
-<dt>18-Jan</dt><dd>NO CLASS (Please participate in Martin Luther King, Jr. Day Activities)</dd>
-<dt>19-Feb</dt><dd>NO CLASS (Dr. Ogle at AFS Conference)</dd>
 <dt>9-Mar</dt><dd>NO CLASS (Midterm Break)</dd>
 <dt>11-Mar</dt><dd>NO CLASS (Midterm Break)</dd>
 <dt>25-Mar</dt><dd>NO CLASS (Good Friday)</dd>
 </dl>
+<!---
+<dt>18-Jan</dt><dd>NO CLASS (Please participate in Martin Luther King, Jr. Day Activities)</dd>
+<dt>19-Feb</dt><dd>NO CLASS (Dr. Ogle at AFS Conference)</dd>
+--->
