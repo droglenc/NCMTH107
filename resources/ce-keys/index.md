@@ -3,7 +3,7 @@ layout: page
 title: Class Exercise Keys
 ---
 
-1. Why Statistics is Important
+1. Why Statistics is Important 
 1. [Foundational Definitions](Foundational_Definitions.html)
 1. [Data Production](Data_Production.html)
 1. Getting Started With RStudio
@@ -13,7 +13,7 @@ title: Class Exercise Keys
 1. [Bivariate EDA - Categorical](BivEDA_Categorical.html)
 1. [Bivariate EDA - Quantitative](BivEDA_Quantitative.html)
 1. [Linear Regression](Linear_Regression.html)
-1. Probability Introduction
+1. [Probability Introduction](Probability.html)
 1. Sampling Distributions
 1. Hypothesis Testing
 1. Confidence Regions

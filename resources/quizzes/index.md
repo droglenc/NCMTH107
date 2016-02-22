@@ -12,10 +12,10 @@ title: Daily Quizzes, W16
 
 * [Fri, 26-Feb](){:target="_blank"}
 * [Wed, 24-Feb](){:target="_blank"}
-* [Mon, 22-Feb](http://goo.gl/forms/3ubYL0K1My){:target="_blank"}
 
 -->
 
+* [Mon, 22-Feb](http://goo.gl/forms/3ubYL0K1My){:target="_blank"}
 * [Wed, 17-Feb](http://goo.gl/forms/SwEHtLsxQ1){:target="_blank"}
 * [Mon, 15-Feb](http://goo.gl/forms/JxsZNJNHkQ){:target="_blank"}
 * [Mon, 8-Feb](http://goo.gl/forms/y1yIQn6bAJ){:target="_blank"}
