@@ -23,8 +23,8 @@ The level of nitrogen oxides (NOX) in the exhaust of a particular car model is r
 
 1. What is the probability that a car will have a NOX greater than 1 g/mi?
 1. What is the probability that a random sample of 15 cars will have a mean NOX greater than 1 g/mi?
-1. What is the probability that a random sample of 50 cars will have a mean NOX greater than 1 g/mi?
-1. What is the probability that a random sample of 50 cars will have a mean NOX less than 0.8 g/mi?
+1. What is the probability that a random sample of 50 cars will have a mean NOX greater than 0.92 g/mi?
+1. What is the probability that a random sample of 50 cars will have a mean NOX less than 0.85 g/mi?
 1. What is the mean NOX such that only 1% of samples of 50 cars have a larger mean?
 
 ----

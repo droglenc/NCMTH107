@@ -12,8 +12,8 @@ css: "/css/modules.css"
 Suppose that it is known that the distribution of lengths of acorns is slightly right-skewed with a mean of 21 mm and a standard deviation of 6 mm.  For each question below identify (a) the distribution that would be used to answer the question, (b) whether the question can be answered or not, (c) specific characteristics of the required distribution, and (d) if appropriate, the answer to the question.
 
 1. What is the probability that an acorn will have a length greater than 25 mm?
-1. What is the probability that the mean length of a sample of 25 acorns will be greater than 25 mm?
-1.	What is the probability that the mean length of a sample of 50 acorns will be between 20 and 25 mm?
+1. What is the probability that the mean length of a sample of 20 acorns will be greater than 25 mm?
+1. What is the probability that the mean length of a sample of 50 acorns will be between 20 and 25 mm?
 1. What is the probability that the mean length of a sample of 6 acorns will be less than 20 mm?
 1. What is the probability that an acorn will have a length less than 20 mm?
 
@@ -33,7 +33,7 @@ A study of rush-hour traffic in San Francisco counted the number of people in a 
 
 ## Plowing Snow
 <img src="../zimgs/snowplow.jpg" alt="Snow plowing" class="img-right">
-Supposed that it is know that the distribution of times spent plowing a city block on snow days is right-skewed with a mean of 45 seconds and a standard deviation of 28 seconds.
+Suppose that it is know that the distribution of times spent plowing a single city block on snow days is right-skewed with a mean of 45 seconds and a standard deviation of 28 seconds.
 
 1. What is the probability that in a sample of 5 blocks that the mean is greater than 60 seconds?
 1. What is the probability that it will take longer than 60 seconds for one block?
