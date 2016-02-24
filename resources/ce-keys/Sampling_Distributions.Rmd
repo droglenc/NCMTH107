@@ -1,0 +1,122 @@
+---
+title: "Answer Key"
+subtitle: "Sampling Distributions CE"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/ce-keys/")
+source("../../rhelpers/rhelpers.R")
+modHTML("Sampling_Distributions")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+source("../../rhelpers/knitr_setup.R")
+```
+
+----
+
+## Class Excercise 1
+
+```{r echo=FALSE, results='hide'}
+d <- c(12,14,16,18,20)
+mu <- mean(d)
+sigma <- sd(d)
+
+d2 <- combn(d,2)
+d2mns <- combn(d,2,FUN=mean)
+d2m <- mean(d2mns)
+d2se <- sd(d2mns)
+
+d3 <- combn(d,3)
+d3mns <- combn(d,3,FUN=mean)
+d3m <- mean(d3mns)
+d3se <- sd(d3mns)
+
+d4 <- combn(d,4)
+d4mns <- combn(d,4,FUN=mean)
+d4m <- mean(d4mns)
+d4se <- sd(d4mns)
+
+ses <- sigma/sqrt(2:4)
+```
+
+<ol>
+  <li> $\mu$=`r formatC(mu,format="f",digits=0)`, $\sigma$=`r formatC(sigma,format="f",digits=3)`.</li>
+  <li> All samples of n=2 are shown in columns below.</li>
+```{r echo=FALSE}
+d2
+```
+  <li> Means from all samples of n=2 are shown below.</li>
+```{r echo=FALSE}
+d2mns
+```
+  <li> The mean of all sample means from n=2 is `r formatC(d2m,format="f",digits=0)`.</li>
+  <li> The standard deviation of all sample means from n=2 is `r formatC(d2se,format="f",digits=3)`.  This is really a standard error.</li>
+  <li> The above for n=3 are below.</li>
+```{r echo=FALSE}
+d3
+d3mns
+d3m
+d3se
+```
+  <li> The above for n=4 are below.</li>
+```{r echo=FALSE}
+d4
+d4mns
+d4m
+d4se
+```
+
+  <li>Same.</li>
+  <li>Did not change (were not affected by n).</li>
+  <li>All smaller.</li>
+  <li>Decreased with increasing n.</li>
+</ol>
+
+----
+
+## Class Excercise 2
+
+**NOT DONE**
+
+----
+
+## Class Excercise 3
+#### Melatonin and Sleep
+
+1. below.
+    1. Sampling.
+    1. Can be answered
+    1. `r formatC(distrib(12,mean=15,sd=5/sqrt(4),lower.tail=FALSE),format="f",digits=4)`
+1. below.
+    1. Sampling.
+    1. Can be answered
+    1. `r formatC(distrib(12,mean=15,sd=5/sqrt(4),lower.tail=FALSE),format="f",digits=4)`
+1. below.
+    1. Sampling.
+    1. Can be answered
+    1. `r formatC(distrib(12,mean=15,sd=5/sqrt(4),lower.tail=FALSE),format="f",digits=4)`
+1. below.
+    1. Sampling.
+    1. Can be answered
+    1. `r formatC(distrib(12,mean=15,sd=5/sqrt(4),lower.tail=FALSE),format="f",digits=4)`
+    
+#### Pollutants in Auto Exhaust
+
+----
+
+## Class Excercise 4
+#### Acorn Length
+
+#### People in Car
+
+#### Plowing Snow
+

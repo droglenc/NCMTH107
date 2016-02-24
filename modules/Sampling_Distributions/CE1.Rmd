@@ -27,18 +27,17 @@ source("../../rhelpers/knitr_setup.R")
 <img src="http://derekogle.com/NCMTH107/modules/zimgs/calculator-1.jpg" alt="Calculations" class="img-right">
 Use the very simple population of five individuals with the following values -- 12, 14, 16, 18, 20 -- to answer the following questions.
 
-1. Compute the center and dispersion of this population.  Label your results with appropriate symbols.
+1. Compute the center and dispersion (to three decimals) of this population.  Label your results with appropriate symbols.
 1. Identify all possible samples of n=2 from this population.  [*Note that there are 10 such samples.*]
 1. Compute the mean for each sample.
 1. Compute the mean of all 10 sample means.  [*See the hint further below*]
 1. Compute the standard deviation of all 10 sample means.  What should this result be called?
 1. Repeat the previous four questions for samples of n=3.  [*Note that there is again 10 samples.*]
 1. Repeat the previous question for samples of n=4.  [*Note that there are 5 such samples*]
-1. How did the mean of the sample means compare to the population mean?
-1. How did the standard deviation of the sample means compare to the population standard deviation?
-1. What values did you expect the standard deviation of the sample means to equal (i.e., based on the Central Limit Theorem)?  Did they equal your expectations?
-1. How did the mean of the sample means change with increasing n?
-1. How did the standard deviation of the sample means change with increasing n?
+1. How did each of the three means of the sample means compare to the population mean?
+1. How did the means of the sample means change with increasing n?
+1. How did each of the three standard deviations of the sample means compare to the population standard deviation?
+1. How did the standard deviations of the sample means change with increasing n?
 
 <p class="bg-info"><strong>Hint:</strong> the mean and standard deviation of the sample means can be efficiently computed by entering the means into a vector in R and the submitting that vector to <code>Summarize()</code> from <code>NCStats</code>.</p>
 
