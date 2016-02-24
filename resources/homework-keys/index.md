@@ -11,9 +11,9 @@ title: Homework Keys, W16
 * [HW 10.46-10.47](Chapter10HW_noPrint.pdf){:target="_blank"}
 * [HW 9.22-9.24](Chapter9HW_noPrint.pdf){:target="_blank"}
 * [HW 8.4-8.5](Chapter8HW_noPrint.pdf){:target="_blank"}
-* [HW 6.19](Chapter6HW_noPrint.pdf){:target="_blank"}
 -->
 
+* [HW 6.19](Chapter6HW_noPrint.pdf){:target="_blank"}
 * [HW 5.24-5.25](Chapter5HWa_noPrint.pdf){:target="_blank"}
 * [HW 5.26](Chapter5HWb_noPrint.pdf){:target="_blank"}
 * [HW 4.24-4.25](Chapter4HW_noPrint.pdf){:target="_blank"}
