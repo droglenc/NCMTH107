@@ -45,7 +45,11 @@ d4mns <- combn(d,4,FUN=mean)
 d4m <- mean(d4mns)
 d4se <- sd(d4mns)
 
-ses <- sigma/sqrt(2:4)
+## Theoretical SEs need to be corrected for sampling from finite populations
+ns <- 2:4
+N <- length(d)
+fpc <- sqrt((N-ns)/(N-1))
+ses <- (sigma/sqrt(ns))*fpc
 ```
 
 <ol>
