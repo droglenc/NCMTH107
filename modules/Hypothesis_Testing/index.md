@@ -45,5 +45,5 @@ Following the in-class lecture you should re-read **Section 10.1**, also read **
 
 ### Related materials
 
-* In-Class Exercise -- [I](CE1.html) / [II](CE2.html)
+* In-Class Exercise -- [I](CE1.html) / [II](CE2.html) / [IEE](CE3.html) / [IV](CE4.html) / [V](CE5.html)
 * [Old Lecture Slides](PPT_old.pptx)
