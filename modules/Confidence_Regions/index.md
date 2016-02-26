@@ -36,9 +36,11 @@ You should prepare for the concepts of this module by reading **Sections 10.2-10
 * [Constructing a Confidence Interval](https://www.youtube.com/v/27KG921rfbTDw?version=3&autoplay=1){:target="_blank"} [10 mins] [**Skip from 7:49 to 8:28.**]
 * Constructing Confidence Regions
 
+After completing this module you should re-read **Section 10.5** in [the textbook](../../book/).
+
 ----
 
 ### Related materials
 
-* In-Class Exercises -- [I](CE1.html) and [II](CE2.html)
+* In-Class Exercises -- [I](CE1.html), [II](CE2.html), and [III](CE3.html)
 * [Old Lecture Slides](PPT_old.pptx)
