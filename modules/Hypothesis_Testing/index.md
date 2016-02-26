@@ -30,18 +30,11 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
 
 ----
 
-Your initial preparation for this module should begin by reading **Section 10.1** in [the textbook](../../book/) and watching this video on [Forming Statistical Hypotheses](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins] [![PowerPoint](../../img/ppt.png)](PPT-hypotheses.pptx).  We will begin class with [this class exercise](CE1.html).
-
-A first lecture ([these slides](PPT-Lecture-1.pptx)) will be used to introduce the concept of hypothesis testing.  This lecture will be followed by [this](CE2.html) and [this](CE3.html) class exercises.
-
-Following this you should re-read **Section 10.1** in [the textbook](../../book/), and watch the following videos:
-
-* Error Types -- [I](https://www.youtube.com/v/7mE-K_w1v90?version=3&autoplay=1){:target="_blank"} [8 mins] and [II](https://www.youtube.com/v/OWn3Ko1WYTA?version=3&start=89&end=247&autoplay=1){:target="_blank"} [3 mins]
-* [Calculate &beta; &amp; power](https://www.youtube.com/v/BJZpx7Mdde4?version=3&autoplay=1){:target="_blank"} [12 mins]
-
-We will again have a short lecture on this material ([these slides](PPT-Lecture-2.pptx)) before working on [this](CE4.html) and [this](CE5.html) class exercises.
-
-Finally, you should read **Section 10.5** in [the textbook](../../book/) and watch this video on the [11 Steps for Any Hypothesis Test](https://vimeo.com/user45324800/hotest-11steps){:target="_blank"} [5 mins] [![PowerPoint](../../img/ppt.png)](../1-Sample-Z/PPT1.pptx).
+* Your initial preparation for this module should begin by reading **Section 10.1** in [the textbook](../../book/) and watching this video on [Forming Statistical Hypotheses](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins; [![PowerPoint](../../img/ppt.png)](PPT-hypotheses.pptx)].  We will begin class with [this class exercise](CE1.html).
+* A first lecture ([these slides](PPT-Lecture-1.pptx)) will be used to introduce the concept of hypothesis testing.  This lecture will be followed by [this](CE2.html) and [this](CE3.html) class exercises.
+* Following this you should re-read **Section 10.1** in [the textbook](../../book/), and watch [this](https://www.youtube.com/v/7mE-K_w1v90?version=3&autoplay=1){:target="_blank"} [8 mins] and [this](https://www.youtube.com/v/OWn3Ko1WYTA?version=3&start=89&end=247&autoplay=1){:target="_blank"} [3 mins] videos on statistical error types and [this](https://www.youtube.com/v/BJZpx7Mdde4?version=3&autoplay=1){:target="_blank"} [12 mins] video on computing &beta; &amp; power.
+* A second lecture ([these slides](PPT-Lecture-2.pptx)) will be used to reinforce these materials before working on [this](CE4.html) and [this](CE5.html) class exercises.
+* Finally, you should read **Section 10.5** in [the textbook](../../book/) and watch this video on the [11 Steps for Any Hypothesis Test](https://vimeo.com/user45324800/hotest-11steps){:target="_blank"} [5 mins; [![PowerPoint](../../img/ppt.png)](../1-Sample-Z/PPT1.pptx)].
 
 ----
 
