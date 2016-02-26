@@ -30,20 +30,21 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
 
 ----
 
-In contrast to other modules, an in-class lecture will be used for this module.  However, you should prepare for this by reading **Section 10.1** in [the textbook](../../book/) and watching the following video:
+Your initial preparation for this module should begin by reading **Section 10.1** in [the textbook](../../book/) and watching this video on [Forming Statistical Hypotheses](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins] [![PowerPoint](../../img/ppt.png)](PPT-hypotheses.pptx).  We will begin class with [this class exercise](CE1.html).
 
-* [Forming Statistical Hypotheses](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins] [![PowerPoint](../../img/ppt.png)](PPT-hypotheses.pptx)
+A first lecture ([these slides](PPT-Lecture-1.pptx)) will be used to introduce the concept of hypothesis testing.  This lecture will be followed by [this](CE2.html) and [this](CE3.html) class exercises.
 
-Following the in-class lecture you should re-read **Section 10.1**, also read **Section 10.5** in [the textbook](../../book/), and watch the following videos:
+Following this you should re-read **Section 10.1** in [the textbook](../../book/), and watch the following videos:
 
 * Error Types -- [I](https://www.youtube.com/v/7mE-K_w1v90?version=3&autoplay=1){:target="_blank"} [8 mins] and [II](https://www.youtube.com/v/OWn3Ko1WYTA?version=3&start=89&end=247&autoplay=1){:target="_blank"} [3 mins]
 * [Calculate &beta; &amp; power](https://www.youtube.com/v/BJZpx7Mdde4?version=3&autoplay=1){:target="_blank"} [12 mins]
-* [11 Steps for Any Hypothesis Test](https://vimeo.com/user45324800/hotest-11steps){:target="_blank"} [5 mins] [![PowerPoint](../../img/ppt.png)](../1-Sample-Z/PPT1.pptx)
 
+We will again have a short lecture on this material ([these slides](PPT-Lecture-2.pptx)) before working on [this](CE4.html) and [this](CE5.html) class exercises.
+
+Finally, you should read **Section 10.5** in [the textbook](../../book/) and watch this video on the [11 Steps for Any Hypothesis Test](https://vimeo.com/user45324800/hotest-11steps){:target="_blank"} [5 mins] [![PowerPoint](../../img/ppt.png)](../1-Sample-Z/PPT1.pptx).
 
 ----
 
 ### Related materials
 
-* In-Class Exercise -- [I](CE1.html) / [II](CE2.html) / [IEE](CE3.html) / [IV](CE4.html) / [V](CE5.html)
 * [Old Lecture Slides](PPT_old.pptx)
