@@ -33,7 +33,8 @@ You should prepare for the concepts of this module by reading **Sections 10.2-10
 
 * [Introduction to Confidence Intervals](https://www.youtube.com/v/27iSnzss2wM?version=3&autoplay=1){:target="_blank"} [7 mins]
 * [Interpreting Confidence Intervals](https://www.youtube.com/v/JYP6gc--sGQ?version=3&autoplay=1){:target="_blank"} [6 mins]
-* [Constructing a Confidence Interval](https://www.youtube.com/v/27KG921rfbTDw?version=3&autoplay=1){:target="_blank"} [10 mins] [**Skip from 7:49 to 8:28.**]
+* [Constructing a Confidence Interval](https://www.youtube.com/v/KG921rfbTDw?version=3&autoplay=1){:target="_blank"} [10 mins] [**Skip from 7:49 to 8:28.**]
+* [Confidence Interval Overview](https://www.youtube.com/v/FUaXoKdCre4?version=3&autoplay=1){:target="_blank"} [6 mins]
 * Constructing Confidence Regions
 
 After completing this module you should re-read **Section 10.5** in [the textbook](../../book/).
