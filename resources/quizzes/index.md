@@ -7,7 +7,7 @@ title: Daily Quizzes, W16
 * [Mon, 7-Mar](){:target="_blank"}
 
 * [Fri, 4-Mar](){:target="_blank"}
-* [Wed, 2-Mar](){:target="_blank"}
+* [Wed, 2-Mar](http://goo.gl/forms/CL1MLa0zcv){:target="_blank"}
 
 -->
 

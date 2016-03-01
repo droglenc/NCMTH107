@@ -28,7 +28,3 @@ In each situation below, describe what a Type I and a Type II error is and make 
 </div>
 
 ----
-
-### Footnotes
-
-[^1]: This question was adapted from [Shoemaker (1996)](http://www.amstat.org/publications/jse/v4n2/datasets.shoemaker.html).
