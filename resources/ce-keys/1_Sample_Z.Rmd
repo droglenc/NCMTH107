@@ -71,8 +71,8 @@ hr <- read.csv("https://github.com/droglenc/NCData/raw/master/HawksRidge.csv")
 <li>$H_{O}:\mu=50000$, $H_{A}:\mu>50000$, where $\mu$ is the mean number of raptors seen in ALL years at Hawk's Ridge.</li>
 <li>A one-sample Z-test is required because (i) a quantitative variable (number of raptors) was measured, (ii)the individuals are from one population (all years at Hawk's Ridge), and (iii) $\sigma$ is known (=37000).  Thus, the population mean is being compared to a specific value in the null hypothesis.</li>
 <li>An observational sample of years that was not random was taken.</li>
-<li>The assumptions are met because $n32>30$ and $\sigma$ is known.</li>
-<li>$\bar{x}=$ `r formatC(hr.z$estimate,format="f",digits=1)` (`r tbls("HawksRidge",display="cite")`).</li>
+<li>The assumptions are met because $n=32>30$ and $\sigma$ is known.</li>
+<li>$\bar{x}=$ `r formatC(hr.z$estimate,format="f",digits=0)` (`r tbls("HawksRidge",display="cite")`).</li>
 
 `r tbls("HawksRidge")`
 
