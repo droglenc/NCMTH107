@@ -25,7 +25,7 @@ source("../../rhelpers/knitr_setup.R")
 
 ## Recurrence of Cancer Tumors
 <img src=""http://derekogle.com/NCMTH107/modules/zimgs/cancer-cells.jpg" alt="Cancer Cells" class="img-right">
-Unfortunately, certain kinds of tumors tend to recur.  [Byar and Blackard (1977)]() examined the rate of recurrence for bladder cancer following chemotherapy.  Specifically, they recorded the time of recurrence (in months) for patients that received a placebo.  Assume that it was known that the population distribution was strongly right-skewed and the standard deviation was 15 months.  The summary statistics from this group are shown below.  Use this information to determine, at the 10% level, if the mean length of tumor recurrence is greater than 27 months.  Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../Hypothesis_Testing/11-steps.html).
+Unfortunately, certain kinds of tumors tend to recur.  [Byar and Blackard (1977)]() examined the rate of recurrence for bladder cancer following chemotherapy.  Specifically, they recorded the time of recurrence (in months) for patients that received a placebo.  Assume that it was known that the population distribution was strongly right-skewed and the standard deviation was 15 months.  Use the summary statistics from this group shown below to determine, at the 10% level, if the mean length of tumor recurrence is greater than 27 months.  Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../Hypothesis_Testing/11-steps.html).
 ```{r echo=FALSE}
 tmp <- read.csv("tumors.csv") 
 Summarize(~months,data=tmp,digits=1)
