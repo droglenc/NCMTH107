@@ -7,10 +7,10 @@ title: Daily Quizzes, W16
 * [Mon, 7-Mar](){:target="_blank"}
 
 * [Fri, 4-Mar](){:target="_blank"}
-* [Wed, 2-Mar](http://goo.gl/forms/CL1MLa0zcv){:target="_blank"}
 
 -->
 
+* [Wed, 2-Mar](http://goo.gl/forms/CL1MLa0zcv){:target="_blank"}
 * [Mon, 29-Feb](http://goo.gl/forms/t2LG0mEVuJ){:target="_blank"}
 * [Fri, 26-Feb](http://goo.gl/forms/RylzTNWe5O){:target="_blank"}
 * [Wed, 24-Feb](http://goo.gl/forms/jh8KAZEbEI){:target="_blank"}
