@@ -1,0 +1,130 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "1-Sample Z CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="cancer-tumors" class="section level2">
+<h2>Cancer Tumors</h2>
+<ol>
+<li>
+<span class="math inline">\(\alpha\)</span>=0.10.
+</li>
+<li>
+<span class="math inline">\(H_{A}: \mu=27\)</span> and <span class="math inline">\(H_{0}: \mu=27\)</span>, where <span class="math inline">\(\mu\)</span> is the mean time of recurrence for ALL bladder cancer patients that received the placebo.
+</li>
+<li>
+1-sample Z-test because (i) one population (bladder cancer patients that received the placebo) was sampled, (ii) a quantitative variable (time of recurrence) was recorded, and (iii) <span class="math inline">\(\sigma\)</span> is assumed to be known (=15).
+</li>
+<li>
+Loosely an “experiment” as the subjects were given a placebo treatment. There is no obvious randomization apparent in this study.
+</li>
+<li>
+The assumptions are met because (i) <span class="math inline">\(\sigma\)</span> is known (=15) and (ii) n=42&gt;30.
+</li>
+<li>
+<span class="math inline">\(\bar{x}\)</span>=31.7 months.
+</li>
+<li>
+t=2.0306.
+</li>
+<li>
+p-value=<span class="math inline">\(0.0211\)</span>.
+</li>
+<li>
+Reject <span class="math inline">\(H_{0}\)</span> because the p-value&lt;<span class="math inline">\(\alpha\)</span>.
+</li>
+<li>
+It appears that the time of recurrence for the tumor for ALL patients that received the placebo is greater than the hypothesized 27 months.
+</li>
+<li>
+I am 90% confident that the time of recurrence for the tumor for ALL patients that received the placebo is greater than 28.73 months.
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>xbar &lt;- 31.7; sigma &lt;- 15; n &lt;- 42
+se &lt;- 15/sqrt(42)
+t &lt;- (31.7-27)/se
+pv &lt;- distrib(t,lower.tail=FALSE)
+lcb &lt;- 31.7+distrib(0.9,lower.tail=FALSE,type=&quot;q&quot;)*se</code></pre>
+<hr />
+</div>
+<div id="raptors-at-hawks-ridge" class="section level2">
+<h2>Raptors at Hawk’s Ridge</h2>
+<ol>
+<li>
+<span class="math inline">\(\alpha=0.01\)</span>
+</li>
+<li>
+<span class="math inline">\(H_{O}:\mu=50000\)</span>, <span class="math inline">\(H_{A}:\mu&gt;50000\)</span>, where <span class="math inline">\(\mu\)</span> is the mean number of raptors seen in ALL years at Hawk’s Ridge.
+</li>
+<li>
+A one-sample Z-test is required because (i) a quantitative variable (number of raptors) was measured, (ii)the individuals are from one population (all years at Hawk’s Ridge), and (iii) <span class="math inline">\(\sigma\)</span> is known (=37000). Thus, the population mean is being compared to a specific value in the null hypothesis.
+</li>
+<li>
+An observational sample of years that was not random was taken.
+</li>
+<li>
+The assumptions are met because <span class="math inline">\(n32&gt;30\)</span> and <span class="math inline">\(\sigma\)</span> is known.
+</li>
+<li>
+<span class="math inline">\(\bar{x}=\)</span> 68183.1 (Table 1).
+</li>
+<p>Table 1: Results from the one-sample z-test for testing that the mean number of hawks observed at Hawk Ridge, MN is greater than 50000 per year.</p>
+<pre><code>z = 2.78, n = 32.000, Std. Dev. = 37000.000, Std. Dev. of the sample mean =
+6540.738, p-value = 0.002718
+99 percent confidence interval:
+ 52967.06      Inf 
+sample estimates:
+mean of hr$Total 
+        68183.09 </code></pre>
+<li>
+The test statistic is Z=2.780 (Table 1).
+</li>
+<li>
+The p-value is <span class="math inline">\(0.0027\)</span> (Table 1).
+</li>
+<li>
+The <span class="math inline">\(H_{O}\)</span> is rejected because the <span class="math inline">\(p-value&lt;\alpha\)</span> (Table 1).
+</li>
+<li>
+The mean number of raptors seen per year in ALL years appears to be greater than 50000.
+</li>
+<li>
+I am 99% confident that the mean number of raptors seen per year in ALL years is more than 52967 (Table 1).
+</li>
+</ol>
+<p>R Appendix</p>
+<pre class="r"><code>hr &lt;- read.csv(&quot;https://github.com/droglenc/NCData/raw/master/HawksRidge.csv&quot;)
+( hr.z &lt;- z.test(hr$Total,mu=50000,sd=37000,alt=&quot;greater&quot;,conf.level=0.99) )</code></pre>
+<hr />
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

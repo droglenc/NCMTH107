@@ -1,6 +1,6 @@
 ---
 title: "Answer Key"
-subtitle: "Confidence Intervals CE"
+subtitle: "1-Sample Z CE"
 author: Derek H. Ogle
 layout: page
 css: "/css/modules.css"
@@ -15,134 +15,80 @@ output:
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/ce-keys/")
 source("../../rhelpers/rhelpers.R")
-modHTML("Confidence_Intervals")
+modHTML("1_Sample_Z")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
 source("../../rhelpers/knitr_setup.R")
+library(captioner)
+tbls <- captioner(prefix="Table")
+tbls(name="HawksRidge","Results from the one-sample z-test for testing that the mean number of hawks observed at Hawk Ridge, MN is greater than 50000 per year.")
 ```
 
 ----
 
-## Class Excercise 1
+## Cancer Tumors
+```{r TumorCalc, echo=FALSE, results='hide', fig.show='hide'}
+xbar <- 31.7; sigma <- 15; n <- 42
+se <- 15/sqrt(42)
+t <- (31.7-27)/se
+pv <- distrib(t,lower.tail=FALSE)
+lcb <- 31.7+distrib(0.9,lower.tail=FALSE,type="q")*se
+```
 
-Not done.
+<ol>
+<li>$\alpha$=0.10.</li>
+<li>$H_{A}: \mu=27$ and $H_{0}: \mu=27$, where $\mu$ is the mean time of recurrence for ALL bladder cancer patients that received the placebo.</li>
+<li>1-sample Z-test because (i) one population (bladder cancer patients that received the placebo) was sampled, (ii) a quantitative variable (time of recurrence) was recorded, and (iii) $\sigma$ is assumed to be known (=15).</li>
+<li>Loosely an "experiment" as the subjects were given a placebo treatment.  There is no obvious randomization apparent in this study.</li>
+<li>The assumptions are met because (i) $\sigma$ is known (=15) and (ii) n=42>30.</li>
+<li>$\bar{x}$=`r xbar` months.</li>
+<li>t=`r formatC(t,format="f",digits=4)`.</li>
+<li>p-value=`r kPvalue(pv,include.p=FALSE)`.</li>
+<li>Reject $H_{0}$ because the p-value<$\alpha$.</li>
+<li>It appears that the time of recurrence for the tumor for ALL patients that received the placebo is greater than the hypothesized 27 months.</li>
+<li>I am 90% confident that the time of recurrence for the tumor for ALL patients that received the placebo is greater than `r formatC(lcb,format="f",digits=2)` months.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+<<TumorCalc>>
+```
+
 
 ----
 
-## Class Excercise 2
+## Raptors at Hawk's Ridge
+
+```{r HawksRidgeCode, echo=FALSE, results='hide'}
+hr <- read.csv("https://github.com/droglenc/NCData/raw/master/HawksRidge.csv")
+( hr.z <- z.test(hr$Total,mu=50000,sd=37000,alt="greater",conf.level=0.99) )
+```
 
 <ol>
-<li>See below.</li>
-<ol type="a">
-<li>C=0.90</li>
-<li>Lower bound</li>
-<li>Z*=`r formatC(distrib(0.9,type="q",lower.tail=FALSE),format="f",digits=3)`.</li>
-```{r}
-zstar <- distrib(0.9,type="q",lower.tail=FALSE)
+<li>$\alpha=0.01$</li>
+<li>$H_{O}:\mu=50000$, $H_{A}:\mu>50000$, where $\mu$ is the mean number of raptors seen in ALL years at Hawk's Ridge.</li>
+<li>A one-sample Z-test is required because (i) a quantitative variable (number of raptors) was measured, (ii)the individuals are from one population (all years at Hawk's Ridge), and (iii) $\sigma$ is known (=37000).  Thus, the population mean is being compared to a specific value in the null hypothesis.</li>
+<li>An observational sample of years that was not random was taken.</li>
+<li>The assumptions are met because $n32>30$ and $\sigma$ is known.</li>
+<li>$\bar{x}=$ `r formatC(hr.z$estimate,format="f",digits=1)` (`r tbls("HawksRidge",display="cite")`).</li>
+
+`r tbls("HawksRidge")`
+
+```{r echo=FALSE}
+kHtest(hr.z)
 ```
-<li>`r formatC(79.5+zstar*12/sqrt(50),format="f",digits=1)`.</li>
-<li>I am 90% confident that the true population mean is greater than `r formatC(79.5+zstar*12/sqrt(50),format="f",digits=1)`.</li>
+<li>The test statistic is Z=`r formatC(hr.z$statistic,format="f",digits=3)` (`r tbls("HawksRidge",display="cite")`).</li>
+<li>The p-value is `r kPvalue(hr.z$p.value,include.p=FALSE)` (`r tbls("HawksRidge",display="cite")`).</li>
+<li>The $H_{O}$ is rejected because the $p-value<\alpha$ (`r tbls("HawksRidge",display="cite")`).</li>
+<li>The mean number of raptors seen per year in ALL years appears to be greater than 50000.</li>
+<li>I am 99\% confident that the mean number of raptors seen per year in ALL years is more than `r formatC(hr.z$conf.int[1],format="f",digits=0)` (`r tbls("HawksRidge",display="cite")`).</li>
 </ol>
 
-<li>See below.</li>
-<ol type="a">
-<li>C=0.95</li>
-<li>Interval</li>
-<li>Z*= $\pm$ `r formatC(distrib(0.025,type="q",lower.tail=FALSE),format="f",digits=3)`.</li>
-```{r}
-zstar <- distrib(0.025,type="q",lower.tail=FALSE)
+R Appendix
+```{r eval=FALSE, prompt=FALSE}
+<<HawksRidgeCode>>
 ```
-<li>`r formatC(11.2-zstar*6/sqrt(25),format="f",digits=1)`-`r formatC(11.2+zstar*6/sqrt(25),format="f",digits=1)`.</li>
-<li>I am 95% confident that the true population mean is between `r formatC(11.2-zstar*6/sqrt(25),format="f",digits=1)` and `r formatC(11.2+zstar*6/sqrt(25),format="f",digits=1)`.</li>
-</ol>
-
-<li>See below.</li>
-<ol type="a">
-<li>C=0.99</li>
-<li>Lower bound</li>
-<li>Z*=`r formatC(distrib(0.99,type="q",lower.tail=FALSE),format="f",digits=3)`.</li>
-```{r}
-zstar <- distrib(0.99,type="q",lower.tail=FALSE)
-```
-<li>`r formatC(918+zstar*90/sqrt(80),format="f",digits=1)`.</li>
-<li>I am 99% confident that the true population mean is greater than `r formatC(918+zstar*90/sqrt(80),format="f",digits=1)`.</li>
-</ol>
-
-<li>See below.</li>
-<ol type="a">
-<li>C=0.90</li>
-<li>Upper bound</li>
-<li>Z*=`r formatC(distrib(0.9,type="q"),format="f",digits=3)`.</li>
-```{r}
-zstar <- distrib(0.9,type="q")
-```
-<li>`r formatC(13700+zstar*8000/sqrt(50),format="f",digits=1)`.</li>
-<li>I am 90% confident that the true population mean is less than `r formatC(13700+zstar*8000/sqrt(50),format="f",digits=1)`.</li>
-</ol>
-
-<li>See below.</li>
-<ol type="a">
-<li>C=0.99</li>
-<li>Interval</li>
-<li>Z*= $\pm$ `r formatC(distrib(0.005,type="q",lower.tail=FALSE),format="f",digits=3)`.</li>
-```{r}
-zstar <- distrib(0.005,type="q",lower.tail=FALSE)
-```
-<li>`r formatC(824-zstar*60/sqrt(25),format="f",digits=1)`-`r formatC(824+zstar*60/sqrt(25),format="f",digits=1)`.</li>
-<li>I am 99% confident that the true population mean is between `r formatC(824-zstar*60/sqrt(25),format="f",digits=1)` and `r formatC(824+zstar*60/sqrt(25),format="f",digits=1)`.</li>
-</ol>
-
-<li>See below.</li>
-<ol type="a">
-<li>C=0.95</li>
-<li>Upper bound</li>
-<li>Z*=`r formatC(distrib(0.95,type="q"),format="f",digits=3)`.</li>
-```{r}
-zstar <- distrib(0.95,type="q")
-```
-<li>`r formatC(73+zstar*20/sqrt(30),format="f",digits=1)`.</li>
-<li>I am 95% confident that the true population mean is less than `r formatC(73+zstar*20/sqrt(30),format="f",digits=1)`.</li>
-</ol>
-
-<li>See below.</li>
-<ol type="a">
-<li>C=0.95</li>
-<li>Interval</li>
-<li>Z*= $\pm$ `r formatC(distrib(0.025,type="q",lower.tail=FALSE),format="f",digits=3)`.</li>
-```{r}
-zstar <- distrib(0.025,type="q",lower.tail=FALSE)
-```
-<li>`r formatC(1370-zstar*800/sqrt(40),format="f",digits=1)`-`r formatC(1370+zstar*800/sqrt(40),format="f",digits=1)`.</li>
-<li>I am 95% confident that the true population mean is between `r formatC(1370-zstar*800/sqrt(40),format="f",digits=1)` and `r formatC(1370+zstar*800/sqrt(40),format="f",digits=1)`.</li>
-</ol>
-
-</ol>
-
-----
-
-## Class Excercise 3
-#### Body Temperatures
-<ol>
-```{r echo=-(4:5), fig.show='hide'}
-d <- read.csv("https://github.com/droglenc/NCData/raw/master/NormTemp.csv")
-Summarize(d$bodytemp,digits=2)
-(zstar <- distrib(0.025,type="q",lower.tail=FALSE))
-mn <- mean(d$bodytemp)
-n <- nrow(d)
-```
-<li>`r formatC(mn-zstar*0.41/sqrt(n),format="f",digits=1)`-`r formatC(mn+zstar*0.41/sqrt(n),format="f",digits=1)`.</li>
-<li>I am 95% confident that the true population mean body temperature is between `r formatC(mn-zstar*0.41/sqrt(n),format="f",digits=1)` and `r formatC(mn+zstar*0.41/sqrt(n),format="f",digits=1)`C.</li>
-</ol>
-
-#### Radius of Jupiter
-<ol>
-```{r fig.show='hide'}
-(zstar <- distrib(0.005,type="q",lower.tail=FALSE))
-```
-<li>`r formatC(71492-zstar*28/sqrt(40),format="f",digits=1)`-`r formatC(71492+zstar*28/sqrt(40),format="f",digits=1)`.</li>
-<li>I am 95% confident that the true population mean equatorial radius of Jupiter is between `r formatC(71492-zstar*28/sqrt(40),format="f",digits=0)` and `r formatC(71492+zstar*28/sqrt(40),format="f",digits=0)` km.</li>
-</ol>
 
 ----
