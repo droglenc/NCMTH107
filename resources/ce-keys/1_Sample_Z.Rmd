@@ -31,10 +31,10 @@ tbls(name="HawksRidge","Results from the one-sample z-test for testing that the 
 ## Cancer Tumors
 ```{r TumorCalc, echo=FALSE, results='hide', fig.show='hide'}
 xbar <- 31.7; sigma <- 15; n <- 42
-se <- 15/sqrt(42)
-t <- (31.7-27)/se
+se <- sigma/sqrt(n)
+t <- (xbar-27)/se
 pv <- distrib(t,lower.tail=FALSE)
-lcb <- 31.7+distrib(0.9,lower.tail=FALSE,type="q")*se
+lcb <- xbar+distrib(0.9,lower.tail=FALSE,type="q")*se
 ```
 
 <ol>

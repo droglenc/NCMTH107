@@ -1,0 +1,130 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "1-Sample t CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="increased-civility" class="section level2">
+<h2>Increased Civility</h2>
+<ol>
+<li>
+<span class="math inline">\(\alpha\)</span>=0.05.
+</li>
+<li>
+<span class="math inline">\(H_{A}: \mu&lt;4104\)</span> and <span class="math inline">\(H_{0}: \mu=4104\)</span>, where <span class="math inline">\(\mu\)</span> is the mean number of citizens killed by ALL nation-states.
+</li>
+<li>
+1-sample t-test because (i) one population (all nation-states) was sampled, (ii) a quantitative variable (number of killings) was recorded, and (iii) <span class="math inline">\(\sigma\)</span> is not known.
+</li>
+<li>
+An observational study with clear randomization of 75 countries.
+</li>
+<li>
+The assumptions are met because (i) <span class="math inline">\(\sigma\)</span> is not known and (ii) n=75&gt;40.
+</li>
+<li>
+<span class="math inline">\(\bar{x}\)</span>=3292.8 killings.
+</li>
+<li>
+t=-1.4592 with 74 df.
+</li>
+<li>
+p-value=<span class="math inline">\(0.0744\)</span>.
+</li>
+<li>
+Do not reject <span class="math inline">\(H_{0}\)</span> because the p-value&gt;<span class="math inline">\(\alpha\)</span>.
+</li>
+<li>
+It appears that the number of killings for recent times is NOT significanlty lower than it was as determined from 19th century history books.
+</li>
+<li>
+Strinctly not needed, but one could say that they were 95% confident that the number of killings in recent years for ALL nation-states is less than 4219 (which contains the value in the <span class="math inline">\(H_{0}\)</span>).
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>xbar &lt;- 3292.8; sigma &lt;- 4814.5; n &lt;- 75
+se &lt;- sigma/sqrt(n)
+t &lt;- (xbar-4104)/se
+df &lt;- n-1
+pv &lt;- distrib(t,distrib=&quot;t&quot;,df=df)
+ucb &lt;- xbar+distrib(0.95,type=&quot;q&quot;,distrib=&quot;t&quot;,df=df)*se</code></pre>
+<hr />
+</div>
+<div id="thickness-of-the-ozone-layer" class="section level2">
+<h2>Thickness of the Ozone Layer</h2>
+<ol>
+<li>
+<span class="math inline">\(\alpha=0.01\)</span>
+</li>
+<li>
+<span class="math inline">\(H_{O}:\mu=300\)</span>, <span class="math inline">\(H_{A}:\mu\neq300\)</span>, where <span class="math inline">\(\mu\)</span> is the mean thickness of the ozone layer from ALL locations.
+</li>
+<li>
+A one-sample t-test is required because (i) a quantitative variable (thickness) was measured, (ii)the individuals are from one population (the ozone layer), and (iii) <span class="math inline">\(\sigma\)</span> is not known. Thus, the population mean is being compared to a specific value in the null hypothesis.
+</li>
+<li>
+An observational study of 45 random samples of the ozone was conducted.
+</li>
+<li>
+The assumptions are met because <span class="math inline">\(n=45&gt;40\)</span> and <span class="math inline">\(\sigma\)</span> is UNknown.
+</li>
+<li>
+<span class="math inline">\(\bar{x}=\)</span> 345 (Table 1).
+</li>
+<p>Table 1: Results from the one-sample t-test for testing that the mean thickness of the ozone layer is different than 300 Dobson units.</p>
+<pre><code>t = 13.9234, df = 44, p-value &lt; 2.2e-16
+99 percent confidence interval:
+ 336.5675 354.0992 
+sample estimates:
+mean of x 
+ 345.3333 </code></pre>
+<li>
+The test statistic is Z=13.923 with 44 df (Table 1).
+</li>
+<li>
+The p-value <span class="math inline">\(&lt;0.00005\)</span> (Table 1).
+</li>
+<li>
+The <span class="math inline">\(H_{O}\)</span> is rejected because the <span class="math inline">\(p-value&lt;\alpha\)</span> (Table 1).
+</li>
+<li>
+The mean thickness of the ozone layer at ALL locations appears to be different (specifically greater) than 300 Dobson units.
+</li>
+<li>
+I am 99% confident that the mean thickness of the ozone layer in ALL locations between 337 and 354 Dobson Units (Table 1).
+</li>
+</ol>
+<p>R Appendix</p>
+<pre class="r"><code>ozo &lt;- read.csv(&quot;https://github.com/droglenc/NCData/raw/master/OzoneSWI.csv&quot;)
+( ozo.t &lt;- t.test(ozo$Ozone,mu=300,conf.level=0.99) )</code></pre>
+<hr />
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

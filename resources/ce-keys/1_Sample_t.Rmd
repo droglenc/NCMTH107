@@ -1,0 +1,95 @@
+---
+title: "Answer Key"
+subtitle: "1-Sample t CE"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3
+    fig_width: 3.5
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/ce-keys/")
+source("../../rhelpers/rhelpers.R")
+modHTML("1_Sample_t")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+source("../../rhelpers/knitr_setup.R")
+library(captioner)
+tbls <- captioner(prefix="Table")
+tbls(name="Ozone","Results from the one-sample t-test for testing that the mean thickness of the ozone layer is different than 300 Dobson units.")
+```
+
+----
+
+## Increased Civility
+```{r KillingsCalc, echo=FALSE, results='hide', fig.show='hide'}
+xbar <- 3292.8; sigma <- 4814.5; n <- 75
+se <- sigma/sqrt(n)
+t <- (xbar-4104)/se
+df <- n-1
+pv <- distrib(t,distrib="t",df=df)
+ucb <- xbar+distrib(0.95,type="q",distrib="t",df=df)*se
+```
+
+<ol>
+<li>$\alpha$=0.05.</li>
+<li>$H_{A}: \mu<4104$ and $H_{0}: \mu=4104$, where $\mu$ is the mean number of citizens killed by ALL nation-states.</li>
+<li>1-sample t-test because (i) one population (all nation-states) was sampled, (ii) a quantitative variable (number of killings) was recorded, and (iii) $\sigma$ is not known.</li>
+<li>An observational study with clear randomization of 75 countries.</li>
+<li>The assumptions are met because (i) $\sigma$ is not known and (ii) n=75>40.</li>
+<li>$\bar{x}$=`r xbar` killings.</li>
+<li>t=`r formatC(t,format="f",digits=4)` with `r df` df.</li>
+<li>p-value=`r kPvalue(pv,include.p=FALSE)`.</li>
+<li>Do not reject $H_{0}$ because the p-value>$\alpha$.</li>
+<li>It appears that the number of killings for recent times is NOT significanlty lower than it was as determined from 19th century history books.</li>
+<li>Strinctly not needed, but one could say that they were 95% confident that the number of killings in recent years for ALL nation-states is less than `r formatC(ucb,format="f",digits=0)` (which contains the value in the $H_{0}$).</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+<<KillingsCalc>>
+```
+
+
+----
+
+## Thickness of the Ozone Layer
+
+```{r OzoneCode, echo=FALSE, results='hide'}
+ozo <- read.csv("https://github.com/droglenc/NCData/raw/master/OzoneSWI.csv")
+( ozo.t <- t.test(ozo$Ozone,mu=300,conf.level=0.99) )
+```
+
+<ol>
+<li>$\alpha=0.01$</li>
+<li>$H_{O}:\mu=300$, $H_{A}:\mu\neq300$, where $\mu$ is the mean thickness of the ozone layer from ALL locations.</li>
+<li>A one-sample t-test is required because (i) a quantitative variable (thickness) was measured, (ii)the individuals are from one population (the ozone layer), and (iii) $\sigma$ is not known.  Thus, the population mean is being compared to a specific value in the null hypothesis.</li>
+<li>An observational study of 45 random samples of the ozone was conducted.</li>
+<li>The assumptions are met because $n=45>40$ and $\sigma$ is UNknown.</li>
+<li>$\bar{x}=$ `r formatC(ozo.t$estimate,format="f",digits=0)` (`r tbls("Ozone",display="cite")`).</li>
+
+`r tbls("Ozone")`
+
+```{r echo=FALSE}
+kHtest(ozo.t)
+```
+<li>The test statistic is Z=`r formatC(ozo.t$statistic,format="f",digits=3)` with `r formatC(ozo.t$parameter,format="f",digits=0)` df (`r tbls("Ozone",display="cite")`).</li>
+<li>The p-value `r kPvalue(ozo.t$p.value,include.p=FALSE)` (`r tbls("Ozone",display="cite")`).</li>
+<li>The $H_{O}$ is rejected because the $p-value<\alpha$ (`r tbls("Ozone",display="cite")`).</li>
+<li>The mean thickness of the ozone layer at ALL locations appears to be different (specifically greater) than 300 Dobson units.</li>
+<li>I am 99\% confident that the mean thickness of the ozone layer in ALL locations between `r formatC(ozo.t$conf.int[1],format="f",digits=0)` and  `r formatC(ozo.t$conf.int[2],format="f",digits=0)` Dobson Units (`r tbls("Ozone",display="cite")`).</li>
+</ol>
+
+R Appendix
+```{r eval=FALSE, prompt=FALSE}
+<<OzoneCode>>
+```
+
+----
