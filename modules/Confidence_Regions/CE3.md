@@ -25,6 +25,7 @@ Researchers measured the equatorial radius of [Jupiter](https://en.wikipedia.org
   <li><a href="CE1.html">1</a></li>
   <li><a href="CE2.html">2</a></li>
   <li class="active"><a href="#">3</a></li>
+  <li><a href="CE4.html">4</a></li>
 </ul>
 </div>
 

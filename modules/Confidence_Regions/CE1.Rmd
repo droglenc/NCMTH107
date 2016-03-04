@@ -13,13 +13,11 @@ output:
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Confidence_Regions/")
 source("../../rhelpers/rhelpers.R")
-fnm <- "CE1"
-modHTML(fnm)
+modHTML("CE1")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
-fnm <- "CE1"
 source("../../rhelpers/knitr_setup.R")
 ```
 
@@ -57,4 +55,5 @@ In RStudio, this plot will have a gear icon in the upper-left corner that will o
   <li class="active"><a href="#">1</a></li>
   <li><a href="CE2.html">2</a></li>
   <li><a href="CE3.html">3</a></li>
+  <li><a href="CE4.html">4</a></li>
 </ul>

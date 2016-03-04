@@ -36,6 +36,7 @@ You should prepare for the concepts of this module by reading **Sections 10.2-10
 * [Constructing a Confidence Interval](https://www.youtube.com/v/KG921rfbTDw?version=3&autoplay=1){:target="_blank"} [10 mins] [**Skip from 7:49 to 8:28.**]
 * [Confidence Interval Overview](https://www.youtube.com/v/FUaXoKdCre4?version=3&autoplay=1){:target="_blank"} [6 mins]
 * Constructing Confidence Regions
+* [Compute Sample Size](https://www.youtube.com/v/4-5pFrqJz9w?version=3&autoplay=1){:target="_blank"} [2 mins]
 
 After completing this module you should re-read **Section 10.5** in [the textbook](../../book/).
 
@@ -43,5 +44,5 @@ After completing this module you should re-read **Section 10.5** in [the textboo
 
 ### Related materials
 
-* In-Class Exercises -- [I](CE1.html), [II](CE2.html), and [III](CE3.html)
+* In-Class Exercises -- [I](CE1.html), [II](CE2.html), [III](CE3.html), and [IV](CE4.html).
 * [Old Lecture Slides](PPT_old.pptx)
