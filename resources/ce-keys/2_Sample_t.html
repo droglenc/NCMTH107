@@ -18,13 +18,13 @@ css: "/css/modules.css"
 <span class="math inline">\(H_{A}: \mu_{b}-\mu_{h}&gt;0\)</span> and <span class="math inline">\(H_{0}: \mu_{b}-\mu_{h}=0\)</span>, where <span class="math inline">\(\mu\)</span> is the mean number of germinated plants, <span class="math inline">\(b\)</span> is the bought compost, and <span class="math inline">\(h\)</span> is the homemade compost.
 </li>
 <li>
-2-sample t-test because (i) two populations/groups are considered (bought and homemade compost), (ii) a quantitative variable (number germinated) was recorded, and (iii) the sanples are independent (there is no known connection between all pairs of bought and homemade individuals.
+2-sample t-test because (i) two populations/groups are considered (bought and homemade compost), (ii) a quantitative variable (number germinated) was recorded, and (iii) the samples are independent (there is no known connection between all pairs of bought and homemade individuals.
 </li>
 <li>
 An experimental study with some randomization (placement of containers in the greenhouse).
 </li>
 <li>
-The assumptions are met because (i) the samples are independent (as described above) and (ii) <span class="math inline">\(n_{b}+n_{h}\)</span>=18+10=28&gt;15 and the two sampling distributions are not obviously strongly skewed.
+The assumptions are met because (i) the samples are independent (as described above), (ii) <span class="math inline">\(n_{b}+n_{h}\)</span>=18+10=28&gt;15 and the two sample distributions (shown on the handout) are not obviously strongly skewed, and (iii) the variances appear to be equal (Levene’s p-value=0.2414&gt;<span class="math inline">\(\alpha\)</span>).
 </li>
 <li>
 <span class="math inline">\(\bar{x}_{1}-\bar{x}_{2}\)</span>=42.67-28.9=13.77.
@@ -42,10 +42,19 @@ Reject <span class="math inline">\(H_{0}\)</span> because the p-value&lt;<span c
 It appears that the the number of plants that germinate is significantly lower for the homemage than the bought compost.
 </li>
 <li>
-I am 90% confident that the number of plants that germinated with the bought compost is more than 11.7 greater than the number of plants that germinated with the homemade compost.
+I am 90% confident that the number of plants that germinated with the bought compost is more than 11.7 plants greater than the number of plants that germinated with the homemade compost.
 </li>
 </ol>
 <p>R Appendix.</p>
+<pre class="r"><code>xbar1 &lt;- 42.67; sigma1 &lt;- 4.33; n1 &lt;- 18
+xbar2 &lt;- 28.90; sigma2 &lt;- 3.21; n2 &lt;- 10
+df &lt;- n1+n2-2
+sp2 &lt;- ((n1-1)*(sigma1^2)+(n2-1)*(sigma2^2))/df
+se &lt;- sqrt(sp2*(1/n1+1/n2))
+stat &lt;- xbar1-xbar2
+t &lt;- stat/se
+pv &lt;- distrib(t,distrib=&quot;t&quot;,df=df,lower.tail=FALSE)
+lcb &lt;- stat+distrib(0.9,type=&quot;q&quot;,distrib=&quot;t&quot;,df=df,lower.tail=FALSE)*se</code></pre>
 <hr />
 </div>
 <div id="thickness-of-the-ozone-layer" class="section level2">
@@ -55,46 +64,44 @@ I am 90% confident that the number of plants that germinated with the bought com
 <span class="math inline">\(\alpha=0.01\)</span>
 </li>
 <li>
-<span class="math inline">\(H_{O}:\mu=300\)</span>, <span class="math inline">\(H_{A}:\mu\neq300\)</span>, where <span class="math inline">\(\mu\)</span> is the mean thickness of the ozone layer from ALL locations.
+<span class="math inline">\(H_{A}: \mu_{b}-\mu_{g}&lt;0\)</span> and <span class="math inline">\(H_{0}: \mu_{b}-\mu_{g}=0\)</span>, where <span class="math inline">\(\mu\)</span> is the mean time to deliver ALL shipments, <span class="math inline">\(b\)</span> is for Bosnia, and <span class="math inline">\(g\)</span> is for Persian Gulf War.
 </li>
 <li>
-A one-sample t-test is required because (i) a quantitative variable (thickness) was measured, (ii)the individuals are from one population (the ozone layer over Arosa, SWI), and (iii) <span class="math inline">\(\sigma\)</span> is not known. Thus, the population mean is being compared to a specific value in the null hypothesis.
+2-sample t-test because (i) two populations/groups are considered (Bosnia and Persian Gulf), (ii) a quantitative variable (delivery time) was recorded, and (iii) the samples are independent (there is no known connection between all deliveries to the two wars).
 </li>
 <li>
-An observational study of 45 random samples of ozone was conducted.
+An observational study with clear randomization of the two samples.
 </li>
 <li>
-The assumptions are met because <span class="math inline">\(n=45&gt;40\)</span> and <span class="math inline">\(\sigma\)</span> is UNknown.
+The assumptions are met because (i) the samples are independent (as described above), (ii) <span class="math inline">\(n_{b}+n_{g}\)</span>=9+9=18&gt;15 and the two sample distributions () are not obviously strongly skewed (also told to assume that the distribution are not strongly skewed), and (iii) the variances appear to be equal (Levene’s p-value=<span class="math inline">\(0.0736\)</span>&gt;<span class="math inline">\(\alpha\)</span>).
 </li>
 <li>
-<span class="math inline">\(\bar{x}=\)</span> 345 (Table 1).
+<span class="math inline">\(\bar{x}_{1}-\bar{x}_{2}\)</span>=7.1555556-25.2444444=-18.0888889.
 </li>
-<p>Table 1: Results from the one-sample t-test for testing that the mean thickness of the ozone layer is different than 300 Dobson units.</p>
-<pre><code>t = 13.9234, df = 44, p-value &lt; 2.2e-16
-99 percent confidence interval:
- 336.5675 354.0992 
+<p>Table 1: Results from the two-sample t-test for testing that the mean delivery time was lower for the Bosnian than the Persian Gulf war.</p>
+<pre><code>t = -4.8458, df = 16, p-value = 8.942e-05
+95 percent confidence interval:
+      -Inf -11.57169 
 sample estimates:
-mean of x 
- 345.3333 </code></pre>
+mean in group Bosnia   mean in group Gulf 
+            7.155556            25.244444 </code></pre>
 <li>
-The test statistic is Z=13.923 with 44 df (Table 1).
+The test statistic is Z=-4.846 with 16 df (Table 1).
 </li>
 <li>
-The p-value <span class="math inline">\(&lt;0.00005\)</span> (Table 1).
+The p-value <span class="math inline">\(0.0001\)</span> (Table 1).
 </li>
 <li>
 The <span class="math inline">\(H_{O}\)</span> is rejected because the <span class="math inline">\(p-value&lt;\alpha\)</span> (Table 1).
 </li>
 <li>
-The mean thickness of the ozone layer at ALL areas abova Arosa, SWI appears to be different (specifically greater) than 300 Dobson units.
+The mean delivery time was significantly lower in Bosnia than in the Persian Gulf War.
 </li>
 <li>
-I am 99% confident that the mean thickness of the ozone layer in ALL areas above Arosa, SWI is between 337 and 354 Dobson Units (Table 1).
+I am 95% confident that the mean delivery time for Bosnia was more than 11.6 days faster than for the Persian Gulf War (Table 1).
 </li>
 </ol>
 <p>R Appendix</p>
-<pre class="r"><code>ozo &lt;- read.csv(&quot;https://github.com/droglenc/NCData/raw/master/OzoneSWI.csv&quot;)
-( ozo.t &lt;- t.test(ozo$Ozone,mu=300,conf.level=0.99) )</code></pre>
 <hr />
 </div>
 

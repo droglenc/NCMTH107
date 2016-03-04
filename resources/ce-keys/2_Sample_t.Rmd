@@ -23,7 +23,9 @@ library(NCStats)
 source("../../rhelpers/knitr_setup.R")
 library(captioner)
 tbls <- captioner(prefix="Table")
-tbls(name="Ozone","Results from the one-sample t-test for testing that the mean thickness of the ozone layer is different than 300 Dobson units.")
+figs <- captioner(prefix="Figure")
+tbls(name="Deliveries","Results from the two-sample t-test for testing that the mean delivery time was lower for the Bosnian than the Persian Gulf war.")
+figs(name="DeliveriesHist","Histograms of the delivery times for military supplies in the Bosnian and Persian Gulf war.")
 ```
 
 ----
@@ -46,7 +48,7 @@ lcb <- stat+distrib(0.9,type="q",distrib="t",df=df,lower.tail=FALSE)*se
 <li>$H_{A}: \mu_{b}-\mu_{h}>0$ and $H_{0}: \mu_{b}-\mu_{h}=0$, where $\mu$ is the mean number of germinated plants, $b$ is the bought compost, and $h$ is the homemade compost.</li>
 <li>2-sample t-test because (i) two populations/groups are considered (bought and homemade compost), (ii) a quantitative variable (number germinated) was recorded, and (iii) the samples are independent (there is no known connection between all pairs of bought and homemade individuals.</li>
 <li>An experimental study with some randomization (placement of containers in the greenhouse).</li>
-<li>The assumptions are met because (i) the samples are independent (as described above) and (ii) $n_{b}+n_{h}$=18+10=28>15 and the two sample distributions (shown on the handout) are not obviously strongly skewed.</li>
+<li>The assumptions are met because (i) the samples are independent (as described above), (ii) $n_{b}+n_{h}$=18+10=28>15 and the two sample distributions (shown on the handout) are not obviously strongly skewed, and (iii) the variances appear to be equal (Levene's p-value=0.2414>$\alpha$).</li>
 <li>$\bar{x}_{1}-\bar{x}_{2}$=`r xbar1`-`r xbar2`=`r stat`.</li>
 <li>t=`r formatC(t,format="f",digits=4)` with `r df` df.</li>
 <li>p-value`r kPvalue(pv,include.p=FALSE)`.</li>
@@ -63,7 +65,7 @@ R Appendix.
 
 ----
 
-## Thickness of the Ozone Layer
+## Delivering Military Supplies
 
 ```{r DeliveryCode, echo=FALSE, results='hide'}
 del <- data.frame(war=rep(c("Gulf","Bosnia"),each=9),
@@ -75,22 +77,22 @@ del <- data.frame(war=rep(c("Gulf","Bosnia"),each=9),
 
 <ol>
 <li>$\alpha=0.01$</li>
-<li>$H_{A}: \mu_{b}-\mu_{g}<0$ and $H_{0}: \mu_{b}-\mu_{g}=0$, where $\mu$ is the mean time to deliver ALL shipmenets, $b$ is for Bosnia, and $g$ is for Persian Gulf War.</li>
+<li>$H_{A}: \mu_{b}-\mu_{g}<0$ and $H_{0}: \mu_{b}-\mu_{g}=0$, where $\mu$ is the mean time to deliver ALL shipments, $b$ is for Bosnia, and $g$ is for Persian Gulf War.</li>
 <li>2-sample t-test because (i) two populations/groups are considered (Bosnia and Persian Gulf), (ii) a quantitative variable (delivery time) was recorded, and (iii) the samples are independent (there is no known connection between all deliveries to the two wars).</li>
-<li>An observational study of 45 random samples of ozone was conducted.</li>
-<li>The assumptions are met because $n=45>40$ and $\sigma$ is UNknown.</li>
-<li>$\bar{x}=$ `r formatC(ozo.t$estimate,format="f",digits=0)` (`r tbls("Ozone",display="cite")`).</li>
+<li>An observational study with clear randomization of the two samples.</li>
+<li>The assumptions are met because (i) the samples are independent (as described above), (ii) $n_{b}+n_{g}$=9+9=18>15 and the two sample distributions () are not obviously strongly skewed (also told to assume that the distribution are not strongly skewed), and (iii) the variances appear to be equal (Levene's p-value=`r  kPvalue(del.lev$"Pr(>F)"[1],include.p=FALSE)`>$\alpha$).</li>
+<li>$\bar{x}_{1}-\bar{x}_{2}$=`r del.t$estimate[1]`-`r del.t$estimate[2]`=`r del.t$estimate[1]-del.t$estimate[2]`.</li>
 
-`r tbls("Ozone")`
+`r tbls("Deliveries")`
 
 ```{r echo=FALSE}
-kHtest(ozo.t)
+kHtest(del.t)
 ```
-<li>The test statistic is Z=`r formatC(ozo.t$statistic,format="f",digits=3)` with `r formatC(ozo.t$parameter,format="f",digits=0)` df (`r tbls("Ozone",display="cite")`).</li>
-<li>The p-value `r kPvalue(ozo.t$p.value,include.p=FALSE)` (`r tbls("Ozone",display="cite")`).</li>
-<li>The $H_{O}$ is rejected because the $p-value<\alpha$ (`r tbls("Ozone",display="cite")`).</li>
-<li>The mean thickness of the ozone layer at ALL areas abova Arosa, SWI appears to be different (specifically greater) than 300 Dobson units.</li>
-<li>I am 99\% confident that the mean thickness of the ozone layer in ALL areas above Arosa, SWI is between `r formatC(ozo.t$conf.int[1],format="f",digits=0)` and  `r formatC(ozo.t$conf.int[2],format="f",digits=0)` Dobson Units (`r tbls("Ozone",display="cite")`).</li>
+<li>The test statistic is Z=`r formatC(del.t$statistic,format="f",digits=3)` with `r formatC(del.t$parameter,format="f",digits=0)` df (`r tbls("Deliveries",display="cite")`).</li>
+<li>The p-value `r kPvalue(del.t$p.value,include.p=FALSE)` (`r tbls("Deliveries",display="cite")`).</li>
+<li>The $H_{O}$ is rejected because the $p-value<\alpha$ (`r tbls("Deliveries",display="cite")`).</li>
+<li>The mean delivery time was significantly lower in Bosnia than in the Persian Gulf War.</li>
+<li>I am 95\% confident that the mean delivery time for Bosnia was more than `r formatC(-1*del.t$conf.int[2],format="f",digits=1)` days faster than for the Persian Gulf War (`r tbls("Deliveries",display="cite")`).</li>
 </ol>
 
 R Appendix
