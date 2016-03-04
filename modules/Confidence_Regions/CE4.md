@@ -19,7 +19,7 @@ Suppose that you are starting a business and it is important for your business p
 ----
 
 ## Blood Pressure in Children
-<img src="../zimgs/bloodpressure2.jpg" alt="Blood Pressure class="img-right">
+<img src="../zimgs/bloodpressure2.jpg" alt="Blood Pressure" class="img-right">
 
 An investigator wants to estimate the mean systolic blood pressure in children with congenital heart disease who are between the ages of 3 and 5.  The investigator plans on using a 99% confidence interval and desires a margin of error of 5 units.  The standard deviation of systolic blood pressure is unknown, but the investigator conducted a literature review and found that the standard deviation of systolic blood pressures in children with other cardiac defects is between 15 and 20.[^2]
 
