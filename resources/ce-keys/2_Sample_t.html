@@ -57,11 +57,11 @@ pv &lt;- distrib(t,distrib=&quot;t&quot;,df=df,lower.tail=FALSE)
 lcb &lt;- stat+distrib(0.9,type=&quot;q&quot;,distrib=&quot;t&quot;,df=df,lower.tail=FALSE)*se</code></pre>
 <hr />
 </div>
-<div id="thickness-of-the-ozone-layer" class="section level2">
-<h2>Thickness of the Ozone Layer</h2>
+<div id="delivering-military-supplies" class="section level2">
+<h2>Delivering Military Supplies</h2>
 <ol>
 <li>
-<span class="math inline">\(\alpha=0.01\)</span>
+<span class="math inline">\(\alpha=0.05\)</span>
 </li>
 <li>
 <span class="math inline">\(H_{A}: \mu_{b}-\mu_{g}&lt;0\)</span> and <span class="math inline">\(H_{0}: \mu_{b}-\mu_{g}=0\)</span>, where <span class="math inline">\(\mu\)</span> is the mean time to deliver ALL shipments, <span class="math inline">\(b\)</span> is for Bosnia, and <span class="math inline">\(g\)</span> is for Persian Gulf War.
@@ -75,8 +75,10 @@ An observational study with clear randomization of the two samples.
 <li>
 The assumptions are met because (i) the samples are independent (as described above), (ii) <span class="math inline">\(n_{b}+n_{g}\)</span>=9+9=18&gt;15 and the two sample distributions () are not obviously strongly skewed (also told to assume that the distribution are not strongly skewed), and (iii) the variances appear to be equal (Levene’s p-value=<span class="math inline">\(0.0736\)</span>&gt;<span class="math inline">\(\alpha\)</span>).
 </li>
+<p><img src="2_Sample_t_files/figure-html/DeliveriesHist-1.png" title="" alt="" width="576" /></p>
+<p>Figure 1: Histograms of the delivery times for military supplies in the Bosnian and Persian Gulf war.</p>
 <li>
-<span class="math inline">\(\bar{x}_{1}-\bar{x}_{2}\)</span>=7.1555556-25.2444444=-18.0888889.
+<span class="math inline">\(\bar{x}_{1}-\bar{x}_{2}\)</span>=7.16-25.24=-18.09 (Table 1).
 </li>
 <p>Table 1: Results from the two-sample t-test for testing that the mean delivery time was lower for the Bosnian than the Persian Gulf war.</p>
 <pre><code>t = -4.8458, df = 16, p-value = 8.942e-05
@@ -89,7 +91,7 @@ mean in group Bosnia   mean in group Gulf
 The test statistic is Z=-4.846 with 16 df (Table 1).
 </li>
 <li>
-The p-value <span class="math inline">\(0.0001\)</span> (Table 1).
+The p-value= <span class="math inline">\(0.0001\)</span> (Table 1).
 </li>
 <li>
 The <span class="math inline">\(H_{O}\)</span> is rejected because the <span class="math inline">\(p-value&lt;\alpha\)</span> (Table 1).
@@ -102,6 +104,12 @@ I am 95% confident that the mean delivery time for Bosnia was more than 11.6 day
 </li>
 </ol>
 <p>R Appendix</p>
+<pre class="r"><code>del &lt;- data.frame(war=rep(c(&quot;Gulf&quot;,&quot;Bosnia&quot;),each=9),
+                  time=c(28.0,20.0,26.5,10.6,9.1,35.2,29.1,41.2,27.5,
+                         15.1,6.4,5.0,11.4,6.5,6.5,3.0,7.0,3.5))
+hist(time~war,data=del)
+(del.lev &lt;- levenesTest(time~war,data=del) )
+( del.t &lt;- t.test(time~war,data=del,var.equal=TRUE,alt=&quot;less&quot;) )</code></pre>
 <hr />
 </div>
 
