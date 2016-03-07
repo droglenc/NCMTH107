@@ -4,7 +4,11 @@ title: Daily Quizzes, W16
 ---
 
 <!--
-* [Mon, 7-Mar](){:target="_blank"}
+* [Fri, 18-Mar](){:target="_blank"}
+* [Wed, 16-Mar](){:target="_blank"}
+* [Mon, 14-Mar](){:target="_blank"}
+
+* [Mon, 7-Mar](http://goo.gl/forms/q64oohJtJi){:target="_blank"}
 
 
 -->
