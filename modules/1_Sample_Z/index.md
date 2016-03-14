@@ -43,5 +43,6 @@ Questions 10.46-10.47 in [the textbook](../../book/) will assess your understand
 
 ### Related materials
 
+* [Class Example](CExmpl.html)
 * [Class Exercise](CE.html)
 * [Old Lecture Slides](PPT_old.pptx)
