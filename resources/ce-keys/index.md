@@ -17,7 +17,7 @@ title: Class Exercise Keys
 1. [Sampling Distributions](Sampling_Distributions.html)
 1. [Hypothesis Testing](Hypothesis_Testing.html)
 1. [Confidence Regions](Confidence_Intervals.html)
-1. 1-Sample Z-Test
+1. [1-Sample Z-Test](1_Sample_Z.html)
 1. 1-Sample t-Test
 1. 2-Sample t-Test
 1. Chi-Square Test
