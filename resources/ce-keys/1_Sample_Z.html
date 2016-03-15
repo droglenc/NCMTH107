@@ -5,6 +5,7 @@ subtitle: "1-Sample Z CE"
 author: Derek H. Ogle
 css: "/css/modules.css"
 ---
+</div>
 
 
 <hr />
@@ -12,10 +13,10 @@ css: "/css/modules.css"
 <h2>Cancer Tumors</h2>
 <ol>
 <li>
-<span class="math inline">\(\alpha\)</span>=0.10.
+α=0.10.
 </li>
 <li>
-<span class="math inline">\(H_{A}: \mu=27\)</span> and <span class="math inline">\(H_{0}: \mu=27\)</span>, where <span class="math inline">\(\mu\)</span> is the mean time of recurrence for ALL bladder cancer patients that received the placebo.
+H<sup>A</sup>: μ≠27 and H<sup>0</sup>: μ=27, where μ is the mean time of recurrence for ALL bladder cancer patients that received the placebo.
 </li>
 <li>
 1-sample Z-test because (i) one population (bladder cancer patients that received the placebo) was sampled, (ii) a quantitative variable (time of recurrence) was recorded, and (iii) <span class="math inline">\(\sigma\)</span> is assumed to be known (=15).
@@ -103,6 +104,8 @@ I am 99% confident that the mean number of raptors seen per year in ALL years is
 ( hr.z &lt;- z.test(hr$Total,mu=50000,sd=37000,alt=&quot;greater&quot;,conf.level=0.99) )</code></pre>
 <hr />
 </div>
+
+
 
 
 </div>
