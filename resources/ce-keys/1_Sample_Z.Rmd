@@ -67,12 +67,12 @@ hr <- read.csv("https://github.com/droglenc/NCData/raw/master/HawksRidge.csv")
 ```
 
 <ol>
-<li>$\alpha=0.01$</li>
-<li>$H_{O}:\mu=50000$, $H_{A}:\mu>50000$, where $\mu$ is the mean number of raptors seen in ALL years at Hawk's Ridge.</li>
-<li>A one-sample Z-test is required because (i) a quantitative variable (number of raptors) was measured, (ii)the individuals are from one population (all years at Hawk's Ridge), and (iii) $\sigma$ is known (=37000).  Thus, the population mean is being compared to a specific value in the null hypothesis.</li>
+<li>&alpha;=0.01</li>
+<li>H<sub>O</sub>: &mu;=50000, H<sub>A</sub>: &mu;>50000, where &mu; is the mean number of raptors seen in ALL years at Hawk's Ridge.</li>
+<li>A one-sample Z-test is required because (i) a quantitative variable (number of raptors) was measured, (ii)the individuals are from one population (all years at Hawk's Ridge), and (iii) &sigma; is known (=37000).  Thus, the population mean is being compared to a specific value in the null hypothesis.</li>
 <li>An observational sample of years that was not random was taken.</li>
-<li>The assumptions are met because $n=32>30$ and $\sigma$ is known.</li>
-<li>$\bar{x}=$ `r formatC(hr.z$estimate,format="f",digits=0)` (`r tbls("HawksRidge",display="cite")`).</li>
+<li>The assumptions are met because n=32>30 and &sigma; is known.</li>
+<li>The sample mean ($\bar{x}=$) is `r formatC(hr.z$estimate,format="f",digits=0)` (`r tbls("HawksRidge",display="cite")`).</li>
 
 `r tbls("HawksRidge")`
 
@@ -80,8 +80,8 @@ hr <- read.csv("https://github.com/droglenc/NCData/raw/master/HawksRidge.csv")
 kHtest(hr.z)
 ```
 <li>The test statistic is Z=`r formatC(hr.z$statistic,format="f",digits=3)` (`r tbls("HawksRidge",display="cite")`).</li>
-<li>The p-value is `r kPvalue(hr.z$p.value,include.p=FALSE)` (`r tbls("HawksRidge",display="cite")`).</li>
-<li>The $H_{O}$ is rejected because the $p-value<\alpha$ (`r tbls("HawksRidge",display="cite")`).</li>
+<li>The p-value is `r kPvalue(hr.z$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("HawksRidge",display="cite")`).</li>
+<li>The H<sub>O</sub> is rejected because the p-value<&alpha; (`r tbls("HawksRidge",display="cite")`).</li>
 <li>The mean number of raptors seen per year in ALL years appears to be greater than 50000.</li>
 <li>I am 99\% confident that the mean number of raptors seen per year in ALL years is more than `r formatC(hr.z$conf.int[1],format="f",digits=0)` (`r tbls("HawksRidge",display="cite")`).</li>
 </ol>
