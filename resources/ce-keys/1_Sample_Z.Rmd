@@ -39,14 +39,14 @@ lcb <- xbar+distrib(0.9,lower.tail=FALSE,type="q")*se
 
 <ol>
 <li>&alpha;=0.10.</li>
-<li>H<sup>A</sup>: &mu;&ne;27 and H<sup>0</sup>: &mu;=27, where &mu; is the mean time of recurrence for ALL bladder cancer patients that received the placebo.</li>
-<li>1-sample Z-test because (i) one population (bladder cancer patients that received the placebo) was sampled, (ii) a quantitative variable (time of recurrence) was recorded, and (iii) $\sigma$ is assumed to be known (=15).</li>
+<li>H<sub>A</sub>: &mu;&ne;27 and H<sub>0</sub>: &mu;=27, where &mu; is the mean time of recurrence for ALL bladder cancer patients that received the placebo.</li>
+<li>1-sample Z-test because (i) one population (bladder cancer patients that received the placebo) was sampled, (ii) a quantitative variable (time of recurrence) was recorded, and (iii) &sigma; is assumed to be known (=15).</li>
 <li>Loosely an "experiment" as the subjects were given a placebo treatment.  There is no obvious randomization apparent in this study.</li>
-<li>The assumptions are met because (i) $\sigma$ is known (=15) and (ii) n=42>30.</li>
-<li>$\bar{x}$=`r xbar` months.</li>
+<li>The assumptions are met because (i) &sigma; is known (=15) and (ii) n=42>30.</li>
+<li>The sample mean ($\bar{x}$) is `r xbar` months.</li>
 <li>t=`r formatC(t,format="f",digits=4)`.</li>
-<li>p-value=`r kPvalue(pv,include.p=FALSE)`.</li>
-<li>Reject $H_{0}$ because the p-value<$\alpha$.</li>
+<li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
+<li>Reject H<sub>0</sub> because the p-value<&alpha;.</li>
 <li>It appears that the time of recurrence for the tumor for ALL patients that received the placebo is greater than the hypothesized 27 months.</li>
 <li>I am 90% confident that the time of recurrence for the tumor for ALL patients that received the placebo is greater than `r formatC(lcb,format="f",digits=2)` months.</li>
 </ol>
