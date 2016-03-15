@@ -1,8 +1,8 @@
 ---
+layout: page
 title: "Answer Key"
 subtitle: "1-Sample Z CE"
 author: Derek H. Ogle
-layout: page
 css: "/css/modules.css"
 output:
   html_document:
@@ -39,7 +39,7 @@ lcb <- xbar+distrib(0.9,lower.tail=FALSE,type="q")*se
 
 <ol>
 <li>&alpha;=0.10.</li>
-<li>H<sub>A</sub>: &mu;&ne;27 and H<sub>0</sub>: &mu;=27, where &mu; is the mean time of recurrence for ALL bladder cancer patients that received the placebo.</li>
+<li>H<sub>A</sub>: &mu>27 and H<sub>0</sub>: &mu;=27, where &mu; is the mean time of recurrence for ALL bladder cancer patients that received the placebo.</li>
 <li>1-sample Z-test because (i) one population (bladder cancer patients that received the placebo) was sampled, (ii) a quantitative variable (time of recurrence) was recorded, and (iii) &sigma; is assumed to be known (=15).</li>
 <li>Loosely an "experiment" as the subjects were given a placebo treatment.  There is no obvious randomization apparent in this study.</li>
 <li>The assumptions are met because (i) &sigma; is known (=15) and (ii) n=42>30.</li>
