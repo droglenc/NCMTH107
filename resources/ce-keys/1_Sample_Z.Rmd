@@ -43,7 +43,7 @@ lcb <- xbar+distrib(0.9,lower.tail=FALSE,type="q")*se
 <li>1-sample Z-test because (i) one population (bladder cancer patients that received the placebo) was sampled, (ii) a quantitative variable (time of recurrence) was recorded, and (iii) &sigma; is assumed to be known (=15).</li>
 <li>Loosely an "experiment" as the subjects were given a placebo treatment.  There is no obvious randomization apparent in this study.</li>
 <li>The assumptions are met because (i) &sigma; is known (=15) and (ii) n=42>30.</li>
-<li>The sample mean ($\bar{x}$) &oline;x is `r xbar` months.</li>
+<li>The sample mean ($\bar{x}$) is `r xbar` months.</li>
 <li>t=`r formatC(t,format="f",digits=4)`.</li>
 <li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
 <li>Reject H<sub>0</sub> because the p-value<&alpha;.</li>
