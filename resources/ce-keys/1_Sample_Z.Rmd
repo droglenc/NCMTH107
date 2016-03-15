@@ -43,7 +43,7 @@ lcb <- xbar+distrib(0.9,lower.tail=FALSE,type="q")*se
 <li>1-sample Z-test because (i) one population (bladder cancer patients that received the placebo) was sampled, (ii) a quantitative variable (time of recurrence) was recorded, and (iii) &sigma; is assumed to be known (=15).</li>
 <li>Loosely an "experiment" as the subjects were given a placebo treatment.  There is no obvious randomization apparent in this study.</li>
 <li>The assumptions are met because (i) &sigma; is known (=15) and (ii) n=42>30.</li>
-<li>The sample mean ($\bar{x}$) is `r xbar` months.</li>
+<li>The sample mean ($\bar{x}$) &oline;x is `r xbar` months.</li>
 <li>t=`r formatC(t,format="f",digits=4)`.</li>
 <li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
 <li>Reject H<sub>0</sub> because the p-value<&alpha;.</li>
@@ -72,7 +72,7 @@ hr <- read.csv("https://github.com/droglenc/NCData/raw/master/HawksRidge.csv")
 <li>A one-sample Z-test is required because (i) a quantitative variable (number of raptors) was measured, (ii)the individuals are from one population (all years at Hawk's Ridge), and (iii) &sigma; is known (=37000).  Thus, the population mean is being compared to a specific value in the null hypothesis.</li>
 <li>An observational sample of years that was not random was taken.</li>
 <li>The assumptions are met because n=32>30 and &sigma; is known.</li>
-<li>The sample mean ($\bar{x}=$) is `r formatC(hr.z$estimate,format="f",digits=0)` (`r tbls("HawksRidge",display="cite")`).</li>
+<li>The sample mean ($\bar{x}$) is `r formatC(hr.z$estimate,format="f",digits=0)` (`r tbls("HawksRidge",display="cite")`).</li>
 
 `r tbls("HawksRidge")`
 
