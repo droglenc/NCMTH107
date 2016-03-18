@@ -5,44 +5,44 @@ subtitle: "1-Sample t CE"
 author: Derek H. Ogle
 css: "/css/modules.css"
 ---
+</div>
 
 
 <hr />
 <div id="increased-civility" class="section level2">
 <h2>Increased Civility</h2>
 <ol>
-<li>
-<span class="math inline">\(\alpha\)</span>=0.05.
+&lt;liα=0.05.
 </li>
 <li>
-<span class="math inline">\(H_{A}: \mu&lt;4104\)</span> and <span class="math inline">\(H_{0}: \mu=4104\)</span>, where <span class="math inline">\(\mu\)</span> is the mean number of citizens killed by ALL nation-states.
+H<sub>A</sub>: μ&lt;4104 and H<sub>0</sub>: &amp;mu=4104, where <span class="math inline">\(\mu\)</span> is the mean number of citizens killed by ALL nation-states.
 </li>
 <li>
-1-sample t-test because (i) one population (all nation-states) was sampled, (ii) a quantitative variable (number of killings) was recorded, and (iii) <span class="math inline">\(\sigma\)</span> is not known.
+1-sample t-test because (i) one population (all nation-states) was sampled, (ii) a quantitative variable (number of killings) was recorded, and (iii) σ is not known.
 </li>
 <li>
 An observational study with clear randomization of 75 countries.
 </li>
 <li>
-The assumptions are met because (i) <span class="math inline">\(\sigma\)</span> is not known and (ii) n=75&gt;40.
+The assumptions are met because (i) σ is not known and (ii) n=75&gt;40.
 </li>
 <li>
-<span class="math inline">\(\bar{x}\)</span>=3292.8 killings.
+The sample mean (<span class="math inline">\(\bar{x}\)</span>) is 3292.8 killings.
 </li>
 <li>
 t=-1.4592 with 74 df.
 </li>
 <li>
-p-value=<span class="math inline">\(0.0744\)</span>.
+p-value=0.0744.
 </li>
 <li>
-Do not reject <span class="math inline">\(H_{0}\)</span> because the p-value&gt;<span class="math inline">\(\alpha\)</span>.
+Do not reject H<sub>0</sub> because the p-value&gt;α.
 </li>
 <li>
 It appears that the number of killings for recent times is NOT significanlty lower than it was as determined from 19th century history books.
 </li>
 <li>
-Strictly not needed, but one could say that they were 95% confident that the number of killings in recent years for ALL nation-states is less than 4219 (which contains the value in the <span class="math inline">\(H_{0}\)</span>).
+Strictly not needed, but one could say that they were 95% confident that the number of killings in recent years for ALL nation-states is less than 4219 (which contains the value in the H<sub>0</sub>).
 </li>
 </ol>
 <p>R Appendix.</p>
@@ -58,22 +58,22 @@ ucb &lt;- xbar+distrib(0.95,type=&quot;q&quot;,distrib=&quot;t&quot;,df=df)*se</
 <h2>Thickness of the Ozone Layer</h2>
 <ol>
 <li>
-<span class="math inline">\(\alpha=0.01\)</span>
+α=0.01
 </li>
 <li>
-<span class="math inline">\(H_{O}:\mu=300\)</span>, <span class="math inline">\(H_{A}:\mu\neq300\)</span>, where <span class="math inline">\(\mu\)</span> is the mean thickness of the ozone layer from ALL locations.
+H<sub>0</sub>:μ=300, H<sub>A</sub>: μ%neq;300, where <span class="math inline">\(\mu\)</span> is the mean thickness of the ozone layer from ALL locations.
 </li>
 <li>
-A one-sample t-test is required because (i) a quantitative variable (thickness) was measured, (ii)the individuals are from one population (the ozone layer over Arosa, SWI), and (iii) <span class="math inline">\(\sigma\)</span> is not known. Thus, the population mean is being compared to a specific value in the null hypothesis.
+A one-sample t-test is required because (i) a quantitative variable (thickness) was measured, (ii)the individuals are from one population (the ozone layer over Arosa, SWI), and (iii) σ is not known. Thus, the population mean is being compared to a specific value in the null hypothesis.
 </li>
 <li>
 An observational study of 45 random samples of ozone was conducted.
 </li>
 <li>
-The assumptions are met because <span class="math inline">\(n=45&gt;40\)</span> and <span class="math inline">\(\sigma\)</span> is UNknown.
+The assumptions are met because n=45&gt;40 and σ is UNknown.
 </li>
 <li>
-<span class="math inline">\(\bar{x}=\)</span> 345 (Table 1).
+The sample mean (<span class="math inline">\(\bar{x}\)</span>) is 345 (Table 1).
 </li>
 <p>Table 1: Results from the one-sample t-test for testing that the mean thickness of the ozone layer is different than 300 Dobson units.</p>
 <pre><code>t = 13.9234, df = 44, p-value &lt; 2.2e-16
@@ -86,10 +86,10 @@ mean of x
 The test statistic is Z=13.923 with 44 df (Table 1).
 </li>
 <li>
-The p-value <span class="math inline">\(&lt;0.00005\)</span> (Table 1).
+The p-value &lt;0.00005 (Table 1).
 </li>
 <li>
-The <span class="math inline">\(H_{O}\)</span> is rejected because the <span class="math inline">\(p-value&lt;\alpha\)</span> (Table 1).
+The H<sub>0</sub> is rejected because the p-value&lt;α (Table 1).
 </li>
 <li>
 The mean thickness of the ozone layer at ALL areas abova Arosa, SWI appears to be different (specifically greater) than 300 Dobson units.
@@ -103,6 +103,8 @@ I am 99% confident that the mean thickness of the ozone layer in ALL areas above
 ( ozo.t &lt;- t.test(ozo$Ozone,mu=300,conf.level=0.99) )</code></pre>
 <hr />
 </div>
+
+
 
 
 </div>
