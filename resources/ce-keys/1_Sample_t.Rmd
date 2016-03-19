@@ -39,8 +39,8 @@ ucb <- xbar+distrib(0.95,type="q",distrib="t",df=df)*se
 ```
 
 <ol>
-<li&alpha;=0.05.</li>
-<li>H<sub>A</sub>: &mu;<4104 and H<sub>0</sub>: &mu=4104, where $\mu$ is the mean number of citizens killed by ALL nation-states.</li>
+<li>&alpha;=0.05.</li>
+<li>H<sub>A</sub>: &mu;<4104 and H<sub>0</sub>: &mu;=4104, where $\mu$ is the mean number of citizens killed by ALL nation-states.</li>
 <li>1-sample t-test because (i) one population (all nation-states) was sampled, (ii) a quantitative variable (number of killings) was recorded, and (iii) &sigma; is not known.</li>
 <li>An observational study with clear randomization of 75 countries.</li>
 <li>The assumptions are met because (i) &sigma; is not known and (ii) n=75>40.</li>
@@ -69,7 +69,7 @@ ozo <- read.csv("https://github.com/droglenc/NCData/raw/master/OzoneSWI.csv")
 
 <ol>
 <li>&alpha;=0.01</li>
-<li>H<sub>0</sub>:&mu;=300, H<sub>A</sub>: &mu;%neq;300, where $\mu$ is the mean thickness of the ozone layer from ALL locations.</li>
+<li>H<sub>0</sub>:&mu;=300, H<sub>A</sub>: &mu;&neq;300, where $\mu$ is the mean thickness of the ozone layer from ALL locations.</li>
 <li>A one-sample t-test is required because (i) a quantitative variable (thickness) was measured, (ii)the individuals are from one population (the ozone layer over Arosa, SWI), and (iii) &sigma; is not known.  Thus, the population mean is being compared to a specific value in the null hypothesis.</li>
 <li>An observational study of 45 random samples of ozone was conducted.</li>
 <li>The assumptions are met because n=45>40 and &sigma; is UNknown.</li>
