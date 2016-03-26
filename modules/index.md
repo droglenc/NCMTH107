@@ -20,5 +20,5 @@ title: Learning Modules
 1. [1-Sample Z-Test](1_Sample_Z/)
 1. [1-Sample t-Test](1_Sample_t/)
 1. [2-Sample t-Test](2_Sample_t/)
-1. [Chi-Square Test](Chi_Square/)
 1. [Goodness-of-Fit Test](Goodness_of_Fit/)
+1. [Chi-Square Test](Chi_Square/)
