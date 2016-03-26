@@ -84,7 +84,7 @@ distrib(0.9,df=49,type="q",lower.tail=FALSE,distrib="t")
 tstar <- distrib(0.975,df=24,type="q",distrib="t")
 ci <- 11.2+c(-1,1)*tstar*6.1/sqrt(25)
 ```
-<li>t*=+/-`r formatC(tstar,format="f",digits=3)`.</li>
+<li>t*=&plusmn;`r formatC(tstar,format="f",digits=3)`.</li>
 ```{r echo=FALSE}
 distrib(0.975,df=24,type="q",distrib="t")
 ```
@@ -116,7 +116,7 @@ distrib(0.99,df=79,type="q",distrib="t")
 tstar <- distrib(0.975,df=39,type="q",distrib="t")
 ci <- 1730+c(-1,1)*tstar*790/sqrt(40)
 ```
-<li>t*=+/-`r formatC(tstar,format="f",digits=3)`.</li>
+<li>t*=&plusmn;`r formatC(tstar,format="f",digits=3)`.</li>
 ```{r echo=FALSE}
 distrib(0.975,df=39,type="q",distrib="t")
 ```
@@ -141,7 +141,7 @@ ci <- xbar+c(-1,1)*tstar*se
 
 <ol>
 <li>&alpha;=0.05.</li>
-<li>H<sub>A</sub>: &mu;&#8800;178 and H<sub>0</sub>: &mu;=178, where $\mu$ is the mean number of CFU per 100 ml in ALL samples from this lake on this date.</li>
+<li>H<sub>A</sub>: &mu;&ne;178 and H<sub>0</sub>: &mu;=178, where $\mu$ is the mean number of CFU per 100 ml in ALL samples from this lake on this date.</li>
 <li>1-sample t-test because (i) one population (this lake) was sampled, (ii) a quantitative variable (number of CFU per 100 ml) was recorded, and (iii) &sigma; is not known.</li>
 <li>An observational study without clear randomization of 25 water samples.</li>
 <li>The assumptions are met because (i) &sigma; is not known and (ii) n=25>15 and the histogram (given in question) is not strongly skewed.</li>
@@ -186,6 +186,7 @@ df <- read.csv("FecalColiform.csv")
 ```{r CFU2Hist, echo=FALSE, fig.width=4, fig.height=4}
 hist(~CFU,data=df,xlab="Colony Forming Units per 100 ml")
 ```
+
 `r figs("FChist")`
 
 <li>The sample mean ($\bar{x}$) is `r formatC(fc.t$estimate,format="f",digits=1)` (`r tbls("FC",display="cite")`).</li>
