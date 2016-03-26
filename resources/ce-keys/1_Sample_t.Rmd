@@ -28,6 +28,50 @@ tbls(name="Ozone","Results from the one-sample t-test for testing that the mean 
 
 ----
 
+## P-Value Calculations and Decisions
+
+<ol>
+<li>Reject $H_{0}$ because p-value=`r formatC(distrib((79.5-75)/(11.7/sqrt(50)),df=49,lower.tail=FALSE),format="f",digits=4)`<&alpha;.</li>
+```{r echo=FALSE}
+distrib((79.5-75)/(11.7/sqrt(50)),df=49,lower.tail=FALSE)
+```
+
+<li>Reject $H_{0}$ because p-value=`r formatC(2*distrib((11.2-14)/(6.1/sqrt(25)),df=24),format="f",digits=4)`<&alpha;.</li>
+```{r echo=FALSE}
+distrib((11.2-14)/(6.1/sqrt(25)),df=24)
+```
+
+<li>Do Not Reject $H_{0}$ because p-value=`r formatC(distrib((858-880)/(92/sqrt(80)),df=79),format="f",digits=4)`>&alpha;.</li>
+```{r echo=FALSE}
+distrib((858-880)/(92/sqrt(80)),df=79)
+```
+
+<li>Do Not Reject $H_{0}$ because p-value=`r formatC(2*distrib((1730-1500)/(790/sqrt(40)),df=39,lower.tail=FALSE),format="f",digits=4)`<&alpha;.</li>
+```{r echo=FALSE}
+distrib((1730-1500)/(790/sqrt(40)),df=39,lower.tail=FALSE)
+```
+</ol>
+
+----
+
+## Confidence Interval Calculations
+
+
+
+----
+
+## Fecal Coliform Counts I
+
+
+
+----
+
+## Fecal Coliform Counts I
+
+
+
+----
+
 ## Increased Civility
 ```{r KillingsCalc, echo=FALSE, results='hide', fig.show='hide'}
 xbar <- 3292.8; sigma <- 4814.5; n <- 75
