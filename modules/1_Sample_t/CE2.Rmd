@@ -30,7 +30,7 @@ df <- read.csv("FecalColiform.csv")
 
 Students recorded fecal coliform counts (number of colony forming units (CFU) per 100 ml) in water samples from a nearby lake following a rainstorm that resulted in considerable runoff.  The results from their samples are shown below.
 
-```{r echo=FALSE}
+```{r echo=FALSE, fig.width=4, fig.height=4}
 Summarize(~CFU,data=df,digits=2)
 hist(~CFU,data=df,xlab="Colony Forming Units per 100 ml")
 ```
