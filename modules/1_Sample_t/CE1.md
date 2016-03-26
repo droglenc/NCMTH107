@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Hypothesis Testing
-subtitle: Class Exercise 2
+title: 1-Sample t-test
+subtitle: Class Exercise 1
 css: "/css/modules.css"
 ---
 
@@ -9,7 +9,7 @@ css: "/css/modules.css"
 
 ## P-Value Calculations and Decisions
 
-For each situation below, (i) compute the p-value (include a drawing to support your calculation) and (ii) make a decision about H<sub>0</sub>.
+For each situation below, (i) compute the t test statistic, (ii) compute the p-value (include a drawing to support your calculation), and (iii) make a decision about H<sub>0</sub>.
 
 1. &alpha;=0.10, H<sub>A</sub>: &mu;>75, n=50, s=11.7, x&#772;=79.5.
 1. &alpha;=0.05, H<sub>A</sub>: &mu;&#8800;14, n=25, s=6.1, x&#772;=11.2.
