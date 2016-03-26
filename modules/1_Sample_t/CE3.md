@@ -23,6 +23,17 @@ The typical thickness of the ozone layer over the Earth's surface is 300 [Dobson
 
 ----
 
+<div class="text-center">
+<ul class="pagination pagination-lg">
+  <li><a href="index.html">^</a></li>
+  <li><a href="CE1.html">1</a></li>
+  <li class="active"><a href="#">2</a></li>
+  <li><a href="CE3.html">3</a></li>
+</ul>
+</div>
+
+----
+
 <h3>Footnotes</h3>
 
 [^1]: This example was modified [from here](http://www.shortell.org/book/chap12.html).

@@ -44,5 +44,5 @@ Questions 11.22 and 11.23 in [the textbook](../../book/) will assess your unders
 
 ### Related materials
 
-* [Class Exercise](CE.html)
+* Class Exercise -- [I](CE1.html), [II](CE2.html), and [III](CE3.html)
 * [Old Lecture Slides](PPT_old.pptx)
