@@ -32,9 +32,10 @@ Students recorded fecal coliform counts (number of colony forming units (CFU) pe
 
 ```{r echo=FALSE}
 Summarize(~CFU,data=df,digits=2)
+hist(~CFU,data=df,xlab="Colony Forming Units per 100 ml")
 ```
 
-Test, at the 1% level, if these results differ from the mean of 178 CFU/100ml predicted by a computer model.  Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../Hypothesis_Testing/11-steps.html).
+Test, at the 5% level, if these results differ from the mean of 178 CFU/100ml predicted by a computer model.  Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../Hypothesis_Testing/11-steps.html).
 
 ----
 

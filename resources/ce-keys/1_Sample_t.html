@@ -122,10 +122,53 @@ I am 95% confident that the true population mean is between 1477.3 and 1982.7.
 </div>
 <div id="fecal-coliform-counts-i" class="section level2">
 <h2>Fecal Coliform Counts I</h2>
+<ol>
+<li>
+α=0.05.
+</li>
+<li>
+H<sub>A</sub>: μ&amp;neq;178 and H<sub>0</sub>: μ=178, where <span class="math inline">\(\mu\)</span> is the mean number of CFU per 100 ml in ALL samples from this lake on this date.
+</li>
+<li>
+1-sample t-test because (i) one population (this lake) was sampled, (ii) a quantitative variable (number of CFU per 100 ml) was recorded, and (iii) σ is not known.
+</li>
+<li>
+An observational study without clear randomization of 25 water samples.
+</li>
+<li>
+The assumptions are met because (i) σ is not known and (ii) n=25&gt;15 and the histogram (given in question) is not strongly skewed.
+</li>
+<li>
+The sample mean (<span class="math inline">\(\bar{x}\)</span>) is 168.19 CFU per 100 ml.
+</li>
+<li>
+t=-2.2095 with 24 df.
+</li>
+<li>
+p-value=0.0369.
+</li>
+<li>
+Reject H<sub>0</sub> because the p-value&gt;α.
+</li>
+<li>
+It appears that the mean CFU per ALL 100 ml of water sampled from this lake on this date is less than what the computer model predicted.
+</li>
+<li>
+One can be 95% confident that the mean CFU per ALL 100 ml of water sampled from this lake on this date is between 159 and 177.
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>xbar &lt;- 168.19; s &lt;- 22.20; n &lt;- 25
+se &lt;- s/sqrt(n)
+t &lt;- (xbar-178)/se
+df &lt;- n-1
+pv &lt;- 2*distrib(t,distrib=&quot;t&quot;,df=df)
+tstar &lt;- distrib(0.975,type=&quot;q&quot;,distrib=&quot;t&quot;,df=df)
+ci &lt;- xbar+c(-1,1)*tstar*se</code></pre>
 <hr />
 </div>
-<div id="fecal-coliform-counts-i-1" class="section level2">
-<h2>Fecal Coliform Counts I</h2>
+<div id="fecal-coliform-counts-ii" class="section level2">
+<h2>Fecal Coliform Counts II</h2>
 <hr />
 </div>
 <div id="increased-civility" class="section level2">

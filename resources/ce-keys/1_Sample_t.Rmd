@@ -126,11 +126,38 @@ distrib(0.975,df=39,type="q",distrib="t")
 
 ## Fecal Coliform Counts I
 
+```{r CFU1Calc, echo=FALSE, results='hide', fig.show='hide'}
+xbar <- 168.19; s <- 22.20; n <- 25
+se <- s/sqrt(n)
+t <- (xbar-178)/se
+df <- n-1
+pv <- 2*distrib(t,distrib="t",df=df)
+tstar <- distrib(0.975,type="q",distrib="t",df=df)
+ci <- xbar+c(-1,1)*tstar*se
+```
 
+<ol>
+<li>&alpha;=0.05.</li>
+<li>H<sub>A</sub>: &mu;&neq;178 and H<sub>0</sub>: &mu;=178, where $\mu$ is the mean number of CFU per 100 ml in ALL samples from this lake on this date.</li>
+<li>1-sample t-test because (i) one population (this lake) was sampled, (ii) a quantitative variable (number of CFU per 100 ml) was recorded, and (iii) &sigma; is not known.</li>
+<li>An observational study without clear randomization of 25 water samples.</li>
+<li>The assumptions are met because (i) &sigma; is not known and (ii) n=25>15 and the histogram (given in question) is not strongly skewed.</li>
+<li>The sample mean ($\bar{x}$) is `r xbar` CFU per 100 ml.</li>
+<li>t=`r formatC(t,format="f",digits=4)` with `r df` df.</li>
+<li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
+<li>Reject H<sub>0</sub> because the p-value>&alpha;.</li>
+<li>It appears that the mean CFU per ALL 100 ml of water sampled from this lake on this date is less than what the computer model predicted.</li>
+<li>One can be 95% confident that the mean CFU per ALL 100 ml of water sampled from this lake on this date is between `r formatC(ci[1],format="f",digits=0)` and  `r formatC(ci[2],format="f",digits=0)`.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+<<CFU1Calc>>
+```
 
 ----
 
-## Fecal Coliform Counts I
+## Fecal Coliform Counts II
 
 
 
