@@ -19,7 +19,7 @@ modHTML <- function(f,need2render=TRUE) {
     require(rmarkdown)
     render(paste0(f,".Rmd"),output_format="all",clean=FALSE)
   }
-  # Delete .md files left over because clear=FALSE was needed
+  # Delete .md files left over because clean=FALSE was needed
   tmp <- list.files(pattern="\\.md")
   if (any(grepl(f,tmp))) file.remove(tmp[which(grepl(f,tmp))])
   # Delete files in directories in f_files that are not needed on the webpage
@@ -30,10 +30,14 @@ modHTML <- function(f,need2render=TRUE) {
   # Read in HTML and RMarkdown files
   h <- readLines(paste0(f,".html"))
   r <- readLines(paste0(f,".Rmd"))
-  # Remove everything before the line after the last mention of
+  # Remove everything before the line (blank) after the last mention of
   # Derek H. Ogle in the HTML file
   tmp <- which(grepl("<em>Derek H. Ogle</em>",h))
   h <- h[-(1:(tmp[length(tmp)]+1))]
+  # there may be a </div> left at the top, if so delete it
+  tmp1 <- grep("</div>",h)[1]   # where is first </div>
+  tmp2 <- grep("<div",h)[1]     # where is first <div
+  if (tmp1<tmp2) h <- h[-(1:tmp1)]     # remove before if </div> if it is before a <div
   # Get the layout, title, subtitle, author, and css from RMD file
   tmp <- c(which(grepl("layout:",r)),which(grepl("title:",r)),which(grepl("author:",r)),which(grepl("css:",r)))
   r <- r[tmp]
