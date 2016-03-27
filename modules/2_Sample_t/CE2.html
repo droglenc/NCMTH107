@@ -1,0 +1,70 @@
+---
+layout: page
+title: 2-Sample t-test
+subtitle: Class Exercise 2
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="compost-type-and-germination-rates" class="section level2">
+<h2>Compost Type and Germination Rates</h2>
+<p><img src="http://derekogle.com/NCMTH107/modules/zimgs/tagetes.jpg" alt="Tagetes" class="img-right"> The owner of a greenhouse developed a methodology to produce sterilized compost for growing plants that was cheaper than the compost she could buy from her soil supplier and allowed her to reduce waste production. However, these benefits could be offset by losses related to poor plant germination and growth. Thus, the owner attempted to answer the queston about germination success by planting 50 seeds of <a href="https://en.wikipedia.org/wiki/Tagetes">marigolds (<em>Tagetes</em> spp.)</a> into individual containers that were filled with either the home-made sterilized compost or compost purchased from the soil supplier. The containers were randomly placed into a large greenhouse where environmental conditions were controlled (i.e., all containers received the same environmental conditions). After five days, the number of (the 50) seeds in each container that had germinated was recorded. The results are shown below.</p>
+<pre><code>   compost  n nvalid  mean   sd min    Q1 median    Q3 max percZero
+1   bought 18     18 42.67 4.33  36 39.00   42.5 45.50  50        0
+2 homemade 10     10 28.90 3.21  24 27.25   28.0 31.75  33        0</code></pre>
+<pre><code>Levene&#39;s Test for Homogeneity of Variance (center = median)
+      Df F value Pr(&gt;F)
+group  1  1.4387 0.2412
+      26               </code></pre>
+<p><img src="CE2_files/figure-html/unnamed-chunk-3-1.png" title="" alt="" width="576" /></p>
+<p>Use this information to determine, at the 10% level, if the number of seeds that germinated was lower in the home-made compost. [<em>Note that we are testing to see if the germination rate was lower in the home-made compost because that would suggest that it performs worse than the other compost and would increase costs to the greenhouse.</em>] Make sure to provide explicit answers with your work shown for all <a href="../Hypothesis_Testing/11-steps.html">11 steps of a hypothesis test</a>.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+<hr />
+</div>
+<div id="delivering-military-supplies" class="section level2">
+<h2>Delivering Military Supplies</h2>
+<p><img src="http://derekogle.com/NCMTH107/modules/zimgs/navy-shipping.jpg" alt="Navy Shipping" class="img-right"> Following the <a href="https://en.wikipedia.org/wiki/Gulf_War">Persian Gulf War</a>, the Pentagon changed its logistics processes to be more “corporate-like” – the “just-in-case” mentality was replaced with “just-in-time” systems. Emulating Federal Express and United Parcel Service, deliveries from factories to foxholes were expedited using bar codes, laser cards, radio tags, and databases to track supplies. The data below contains order-to-delivery times (in days) for shipments from the United States to the Persian Gulf in 1991 (old system) and shipments to Bosnia in 1995 (new system). Use these data to determine, at the 5% level, if the mean delivery rates declined significantly under the new system. Assume that the distribution are approxiately normally distributed. Make sure to provide explicit answers with your work shown for all <a href="../Hypothesis_Testing/11-steps.html">11 steps of a hypothesis test</a>.<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a></p>
+<pre>
+Persian Gulf 28.0 20.0 26.5 10.6 9.1 35.2 29.1 41.2 27.5
+Bosnia       15.1  6.4  5.0 11.4 6.5  6.5  3.0  7.0  3.5
+</pre>
+<hr />
+<h3>
+Footnotes
+</h3>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>This questions was adapted from <a href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-1405149566.html">Emden (2008) Statistics for Terrified Biologists</a><a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>This question was adapted from <a href="http://www.amazon.com/First-Course-Business-Statistics-TEXT/dp/B000MLT2MY/">McClave <em>et al.</em> (1998) <em>First Course in Business Statistics</em></a>.<a href="#fnref2">↩</a></p></li>
+</ol>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
