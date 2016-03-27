@@ -47,9 +47,9 @@ t <- stat/se
 pv <- distrib(t,distrib="t",df=df,lower.tail=FALSE)
 ```
 <ol type="a">
-<li>t=`r formatC(t,format="f",digits=3)` with `r df` df (and noting that s<sub>p</sub><sup>2</sup>=`r formatC(spsq,format="f",digits=3)` and SE=`r formatC(se,format="f",digits=3)`).</li>
+<li>t = `r formatC(t,format="f",digits=3)` with `r df` df (and noting that s<sub>p</sub><sup>2</sup> = `r formatC(spsq,format="f",digits=3)` and SE = `r formatC(se,format="f",digits=3)`).</li>
 <li>p-value=`r formatC(pv,format="f",digits=4)`.</li>
-<li>Reject H<sub>0</sub> because p-value&lt;&alpha;.</li>
+<li>Reject H<sub>0</sub> because p-value &lt; &alpha;.</li>
 </ol>
 
 <li>See below.</li>
@@ -66,9 +66,9 @@ t <- stat/se
 pv <- distrib(t,distrib="t",df=df)
 ```
 <ol type="a">
-<li>t=`r formatC(t,format="f",digits=3)` with `r df` df (and noting that s<sub>p</sub><sup>2</sup>=`r formatC(spsq,format="f",digits=3)` and SE=`r formatC(se,format="f",digits=3)`).</li>
-<li>p-value=`r formatC(pv,format="f",digits=4)`.</li>
-<li>Reject H<sub>0</sub> because p-value&lt;&alpha;.</li>
+<li>t = `r formatC(t,format="f",digits=3)` with `r df` df (and noting that s<sub>p</sub><sup>2</sup> = `r formatC(spsq,format="f",digits=3)` and SE = `r formatC(se,format="f",digits=3)`).</li>
+<li>p-value = `r formatC(pv,format="f",digits=4)`.</li>
+<li>Reject H<sub>0</sub> because p-value &lt; &alpha;.</li>
 </ol>
 
 <li>See below.</li>
@@ -85,9 +85,9 @@ t <- stat/se
 pv <- 2*distrib(t,distrib="t",df=df,lower.tail=FALSE)
 ```
 <ol type="a">
-<li>t=`r formatC(t,format="f",digits=3)` with `r df` df (and noting that s<sub>p</sub><sup>2</sup>=`r formatC(spsq,format="f",digits=3)` and SE=`r formatC(se,format="f",digits=3)`).</li>
-<li>p-value=`r formatC(pv,format="f",digits=4)`.</li>
-<li>Do Not Reject H<sub>0</sub> because p-value&gt;&alpha;.</li>
+<li>t = `r formatC(t,format="f",digits=3)` with `r df` df (and noting that s<sub>p</sub><sup>2</sup> = `r formatC(spsq,format="f",digits=3)` and SE = `r formatC(se,format="f",digits=3)`).</li>
+<li>p-value = `r formatC(pv,format="f",digits=4)`.</li>
+<li>Do Not Reject H<sub>0</sub> because p-value  &gt;  &alpha;.</li>
 </ol>
 
 </ol>
@@ -105,9 +105,9 @@ tstar <- distrib(0.9,df=df,type="q",lower.tail=FALSE,distrib="t")
 lcb <- stat+tstar*se
 ```
 
-<li>C=0.90</li>
+<li>C = 0.90</li>
 <li>Lower bound</li>
-<li>t*=`r formatC(tstar,format="f",digits=3)`.</li>
+<li>t* = `r formatC(tstar,format="f",digits=3)`.</li>
 <li>`r formatC(lcb,format="f",digits=3)`.</li>
 <li>I am 90% confident that the true difference in population means is greater than `r formatC(lcb,format="f",digits=3)`.  More specifically, I am 90% confident that the true mean for the first group is <i>at least</i> `r formatC(lcb,format="f",digits=3)` greater than the true mean for the second group.</li>
 </ol>
@@ -120,9 +120,9 @@ tstar <- distrib(0.95,df=df,type="q",distrib="t")
 ucb <- stat+tstar*se
 ```
 
-<li>C=0.95</li>
+<li>C = 0.95</li>
 <li>Upper bound</li>
-<li>t*=`r formatC(tstar,format="f",digits=3)`.</li>
+<li>t* = `r formatC(tstar,format="f",digits=3)`.</li>
 <li>`r formatC(lcb,format="f",digits=3)`.</li>
 <li>I am 90% confident that the true difference in population means is less than `r formatC(ucb,format="f",digits=3)`.  More specifically, I am 90% confident that the true mean for the first group is <i>at least</i> `r formatC(ucb,format="f",digits=3)` less than the true mean for the second group.</li>
 </ol>
@@ -136,9 +136,9 @@ tstar <- distrib(0.975,df=df,type="q",distrib="t")
 ci <- stat+c(-1,1)*tstar*se
 ```
 
-<li>C=0.95</li>
+<li>C = 0.95</li>
 <li>interval</li>
-<li>t*=&pm;`r formatC(tstar,format="f",digits=3)`.</li>
+<li>t* = &pm;`r formatC(tstar,format="f",digits=3)`.</li>
 <li>(`r formatC(ci[1],format="f",digits=3)`,`r formatC(ci[2],format="f",digits=3)`).</li>
 <li>I am 90% confident that the true difference in population means is between `r formatC(ci[1],format="f",digits=3)` and  `r formatC(ci[2],format="f",digits=3)`.  [<i>This one is difficult to interpret because the H<sub>0</sub> was not rejected.  However, this shows that the true mean for the first group could be `r formatC(-1*ci[1],format="f",digits=3)` lower or `r formatC(ci[2],format="f",digits=3)` greater than the mean for the second group.</i>]</li>
 </ol>
@@ -162,15 +162,15 @@ ci <- stat+c(-1,1)*tstar*se
 ```
 
 <ol>
-<li>&alpha;=0.05.</li>
-<li>H<sub>A</sub>: &mu;<sub>b</sub>-&mu;<sub>l</sub>&ne;0 and H<sub>0</sub>: &mu;<sub>b</sub>-&mu;<sub>l</sub>=0, where &mu; is the mean decrease in LDL of a male, b is the Befizal drug, and l is the Lipanthyl drug.</li>
+<li>&alpha; = 0.05.</li>
+<li>H<sub>A</sub>: &mu;<sub>b</sub>-&mu;<sub>l</sub> &ne; 0 and H<sub>0</sub>: &mu;<sub>b</sub>-&mu;<sub>l</sub> = 0, where &mu; is the mean decrease in LDL of a male, b is the Befizal drug, and l is the Lipanthyl drug.</li>
 <li>2-sample t-test because (i) two populations/groups are considered (Befizal and Lipanthyl drugs), (ii) a quantitative variable (decrease in LDL level) was recorded, and (iii) the samples are independent (there is no known connection between all pairs of male subjects in the two drug treatments).</li>
 <li>An experimental study with random allocation (placement of subjects into the treatments) but no obvious random selection (men did not appear to be randomly selected for the experiment).</li>
-<li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>l</sub>=13+12=25&gt;15 and the two sample distributions (shown on the handout) are not obviously strongly skewed (though it is difficult to actually see that because the sample sizes are small), and (iii) the variances appear to be equal (Levene's p-value=0.8315&gt;&alpha;).</li>
-<li>x&#772;<sub>b</sub>-x&#772;<sub>h</sub> = `r xbar1`-`r xbar2`=`r stat`.</li>
-<li>t=`r formatC(t,format="f",digits=4)` with `r df` df.</li>
+<li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>l</sub> = 13+12 = 25 &gt; 15 and the two sample distributions (shown on the handout) are not obviously strongly skewed (though it is difficult to actually see that because the sample sizes are small), and (iii) the variances appear to be equal (Levene's p-value = 0.8315 &gt; &alpha;).</li>
+<li>x&#772;<sub>b</sub>-x&#772;<sub>h</sub> = `r xbar1`-`r xbar2` = `r stat`.</li>
+<li>t = `r formatC(t,format="f",digits=4)` with `r df` df.</li>
 <li>p-value`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
-<li>Do not reject H<sub>0</sub> because the p-value&lt;&alpha;.</li>
+<li>Do not reject H<sub>0</sub> because the p-value &lt; &alpha;.</li>
 <li>It appears that the mean decrease in LDL is not significantly different between the two drug treatments.  These data do not provide a significant indication about which drug is more likely to reduce the mean LDL level in men with high cholesterol.</li>
 <li>I am 95% confident that the mean decrease in LDL is between `r formatC(-1*ci[1],format="f",digits=3)` lower and `r formatC(ci[2],format="f",digits=3)` higher for men given Befizal as compared to men give Lipanthyl.  [<i>Note that the ambiguousness of this statement is consistent with not rejection the H<sub>0</sub>.</i>]</li>
 </ol>
@@ -204,15 +204,15 @@ lcb <- stat+distrib(0.9,type="q",distrib="t",df=df,lower.tail=FALSE)*se
 ```
 
 <ol>
-<li>&alpha;=0.10.</li>
-<li>H<sub>A</sub>: &mu;<sub>b</sub>-&mu;<sub>h</sub>&gt;0 and H<sub>0</sub>: &mu;<sub>b</sub>-&mu;<sub>h</sub>=0, where &mu; is the mean number of germinated plants, b is the bought compost, and h is the homemade compost.</li>
+<li>&alpha; = 0.10.</li>
+<li>H<sub>A</sub>: &mu;<sub>b</sub>-&mu;<sub>h</sub> &gt; 0 and H<sub>0</sub>: &mu;<sub>b</sub>-&mu;<sub>h</sub> = 0, where &mu; is the mean number of germinated plants, b is the bought compost, and h is the homemade compost.</li>
 <li>2-sample t-test because (i) two populations/groups are considered (bought and homemade compost), (ii) a quantitative variable (number germinated) was recorded, and (iii) the samples are independent (there is no known connection between all pairs of bought and homemade individuals).</li>
 <li>An experimental study with some randomization (placement of containers in the greenhouse).</li>
-<li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>h</sub>=18+10=28&gt;15 and the two sample distributions (shown on the handout) are not obviously strongly skewed, and (iii) the variances appear to be equal (Levene's p-value=0.2414&gt;&alpha;).</li>
-<li>x&#772;<sub>b</sub>-x&#772;<sub>h</sub> = `r xbar1`-`r xbar2`=`r stat`.</li>
-<li>t=`r formatC(t,format="f",digits=4)` with `r df` df.</li>
+<li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>h</sub> = 18+10 = 28 &gt; 15 and the two sample distributions (shown on the handout) are not obviously strongly skewed, and (iii) the variances appear to be equal (Levene's p-value = 0.2414 &gt; &alpha;).</li>
+<li>x&#772;<sub>b</sub>-x&#772;<sub>h</sub> = `r xbar1`-`r xbar2` = `r stat`.</li>
+<li>t = `r formatC(t,format="f",digits=4)` with `r df` df.</li>
 <li>p-value`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
-<li>Reject H<sub>0</sub> because the p-value&lt;&alpha;.</li>
+<li>Reject H<sub>0</sub> because the p-value &lt; &alpha;.</li>
 <li>It appears that the the number of plants that germinate is significantly lower for the homemade than the bought compost.  Thus, the homemade compost "performs" worse than the store bought compost and may lead to increased costs for the greenhouse.</li>
 <li>I am 90% confident that the number of plants that germinated with the bought compost is at least `r formatC(lcb,format="f",digits=1)` plants greater than the number of plants that germinated with the homemade compost.</li>
 </ol>
@@ -238,11 +238,11 @@ del <- data.frame(war=rep(c("Gulf","Bosnia"),each=9),
 ```
 
 <ol>
-<li>&alpha;=0.05</li>
-<li>H<sub>A</sub>: &mu;<sub>b</sub>-&mu;<sub>g</sub>&lt;0 and H<sub>0</sub>: &mu;<sub>b</sub>-&mu;<sub>g</sub>=0, where &mu; is the mean time to deliver ALL shipments, b is for Bosnia, and g is for Persian Gulf War.</li>
+<li>&alpha; = 0.05</li>
+<li>H<sub>A</sub>: &mu;<sub>b</sub>-&mu;<sub>g</sub> &lt; 0 and H<sub>0</sub>: &mu;<sub>b</sub>-&mu;<sub>g</sub> = 0, where &mu; is the mean time to deliver ALL shipments, b is for Bosnia, and g is for Persian Gulf War.</li>
 <li>2-sample t-test because (i) two populations/groups are considered (Bosnia and Persian Gulf), (ii) a quantitative variable (delivery time) was recorded, and (iii) the samples are independent (there is no known connection between all deliveries to the two wars).</li>
 <li>An observational study with clear randomization of the two samples.</li>
-<li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>g</sub>=9+9=18&gt;15 and the two sample distributions () are not obviously strongly skewed (also told to assume that the distribution are not strongly skewed), and (iii) the variances appear to be equal (Levene's p-value=`r  kPvalue(del.lev$"Pr(>F)"[1],include.p=FALSE)`&gt;&alpha;).</li>
+<li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>g</sub> = 9+9 = 18 &gt; 15 and the two sample distributions () are not obviously strongly skewed (also told to assume that the distribution are not strongly skewed), and (iii) the variances appear to be equal (Levene's p-value = `r  kPvalue(del.lev$"Pr(>F)"[1],include.p=FALSE)` &gt; &alpha;).</li>
 ```{r DeliveriesHist, fig.width=6, fig.height=3,echo=FALSE}
 hist(time~war,data=del)
 ```
@@ -256,9 +256,9 @@ hist(time~war,data=del)
 ```{r echo=FALSE}
 kHtest(del.t)
 ```
-<li>The test statistic is Z=`r formatC(del.t$statistic,format="f",digits=3)` with `r formatC(del.t$parameter,format="f",digits=0)` df (`r tbls("Deliveries",display="cite")`).</li>
-<li>The p-value= `r kPvalue(del.t$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("Deliveries",display="cite")`).</li>
-<li>The H<sub>0</sub> is rejected because the p-value&lt;&alpha; (`r tbls("Deliveries",display="cite")`).</li>
+<li>The test statistic is t = `r formatC(del.t$statistic,format="f",digits=3)` with `r formatC(del.t$parameter,format="f",digits=0)` df (`r tbls("Deliveries",display="cite")`).</li>
+<li>The p-value = `r kPvalue(del.t$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("Deliveries",display="cite")`).</li>
+<li>The H<sub>0</sub> is rejected because the p-value &lt; &alpha; (`r tbls("Deliveries",display="cite")`).</li>
 <li>The mean delivery time was significantly lower in Bosnia than in the Persian Gulf War.  Thus, the new "just-in-time" entality for deliveries appears to have resulted in quicker delivery times.</li>
 <li>I am 95% confident that the mean delivery time for Bosnia was more than `r formatC(-1*del.t$conf.int[2],format="f",digits=1)` days faster than for the Persian Gulf War (`r tbls("Deliveries",display="cite")`).</li>
 </ol>
