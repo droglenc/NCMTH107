@@ -35,7 +35,7 @@ figs(name="DeliveriesHist","Histograms of the delivery times for military suppli
 <ol>
 <li>See below.</li>
 <ol type="a">
-```{r echo=FALSE, fig.show='hide'}
+```{r 2t1, echo=FALSE, fig.show='hide'}
 xbar1 <- 27.3; xbar2 <- 23.2
 s1 <- 6.6; s2 <- 6.4
 s1sq <- s1^2; s2sq <- s2^2
@@ -50,7 +50,7 @@ pv <- distrib(t,distrib="t",df=df,lower.tail=FALSE)
 
 <li>See below.</li>
 <ol type="a">
-```{r echo=FALSE, fig.show='hide'}
+```{r 2t2, echo=FALSE, fig.show='hide'}
 xbar1 <- 79.5; xbar2 <- 87.5
 s1 <- 8; s2 <- 9
 s1sq <- s1^2; s2sq <- s2^2
@@ -70,7 +70,7 @@ pv <- distrib(t,distrib="t",df=df)
 
 <li>See below.</li>
 <ol type="a">
-```{r echo=FALSE, fig.show='hide'}
+```{r 2t3, echo=FALSE, fig.show='hide'}
 xbar1 <- 307; xbar2 <- 268
 s1 <- 56; s2 <- 64
 s1sq <- s1^2; s2sq <- s2^2
@@ -98,18 +98,17 @@ pv <- 2*distrib(t,distrib="t",df=df,lower.tail=FALSE)
 <ol>
 <li>See below.</li>
 <ol type="a">
+```{r echo=FALSE}
+<<2t1>>
+tstar <- distrib(0.9,df=df,type="q",lower.tail=FALSE,distrib="t")
+lcb <- stat+tstar*se
+```
+
 <li>C=0.90</li>
 <li>Lower bound</li>
-```{r echo=FALSE, results='hide', fig.show='hide'}
-tstar <- distrib(0.9,df=49,type="q",lower.tail=FALSE,distrib="t")
-lcb <- 79.5+tstar*11.7/sqrt(50)
-```
 <li>t*=`r formatC(tstar,format="f",digits=3)`.</li>
-```{r echo=FALSE}
-distrib(0.9,df=49,type="q",lower.tail=FALSE,distrib="t")
-```
 <li>`r formatC(lcb,format="f",digits=1)`.</li>
-<li>I am 90% confident that the true population mean is greater than `r formatC(lcb,format="f",digits=1)`.</li>
+<li>I am 90% confident that the true difference in population means is greater than `r formatC(lcb,format="f",digits=1)`.  More specifically, I am 90% confident that the true mean for the first group is <i>at least</i> `r formatC(lcb,format="f",digits=1)` greater than the true mean for the second group.</li>
 </ol>
 
 
