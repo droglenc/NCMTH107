@@ -33,13 +33,13 @@ figs(name="DeliveriesHist","Histograms of the delivery times for military suppli
 <ol>
 <li>See below.</li>
 <ol type="a">
-```{r echo=FALSE}
+```{r echo=FALSE, fig.show='hide'}
 xbar1 <- 79.5; xbar2 <- 87.5
 s1 <- 8; s2 <- 9
 s1sq <- s1^2; s2sq <- s2^2
 n1 <- n2 <- 15
 df <- n1+n2-2
-spsq <- ((n1-1)*s1sq+(n2-1)*s1sq)/df
+spsq <- ((n1-1)*s1sq+(n2-1)*s2sq)/df
 se <- sqrt((1/n1+1/n2)*spsq)
 stat <- xbar1-xbar2
 t <- stat/se
@@ -51,6 +51,25 @@ pv <- distrib(t,distrib="t",df=df)
 <li>Reject H<sub>0</sub> because p-value&lt;&alpha;.</li>
 </ol>
 
+<li>See below.</li>
+<ol type="a">
+```{r echo=FALSE, fig.show='hide'}
+xbar1 <- 307; xbar2 <- 268
+s1 <- 56; s2 <- 64
+s1sq <- s1^2; s2sq <- s2^2
+n1 <- 20; n2 <- 15
+df <- n1+n2-2
+spsq <- ((n1-1)*s1sq+(n2-1)*s2sq)/df
+se <- sqrt((1/n1+1/n2)*spsq)
+stat <- xbar1-xbar2
+t <- stat/se
+pv <- 2*distrib(t,distrib="t",df=df,lower.tail=FALSE)
+```
+
+<li>t=`r formatC(t,format="f",digits=3)` with `r df` df (and noting that s<sub>p</sub><sup>2</sup>=`r formatC(spsq,format="f",digits=3)` and SE=`r formatC(se,format="f",digits=3)`).</li>
+<li>p-value=`r formatC(pv,format="f",digits=4)`.</li>
+<li>Reject H<sub>0</sub> because p-value&lt;&alpha;.</li>
+</ol>
 
 
 </ol>
