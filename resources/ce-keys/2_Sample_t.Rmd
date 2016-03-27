@@ -206,9 +206,9 @@ lcb <- stat+distrib(0.9,type="q",distrib="t",df=df,lower.tail=FALSE)*se
 <ol>
 <li>&alpha;=0.10.</li>
 <li>H<sub>A</sub>: &mu;<sub>b</sub>-&mu;<sub>h</sub>&gt;0 and H<sub>0</sub>: &mu;<sub>b</sub>-&mu;<sub>h</sub>=0, where &mu; is the mean number of germinated plants, b is the bought compost, and h is the homemade compost.</li>
-<li>2-sample t-test because (i) two populations/groups are considered (bought and homemade compost), (ii) a quantitative variable (number germinated) was recorded, and (iii) the samples are independent (there is no known connection between all pairs of bought and homemade individuals.</li>
+<li>2-sample t-test because (i) two populations/groups are considered (bought and homemade compost), (ii) a quantitative variable (number germinated) was recorded, and (iii) the samples are independent (there is no known connection between all pairs of bought and homemade individuals).</li>
 <li>An experimental study with some randomization (placement of containers in the greenhouse).</li>
-<li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>h</sub>=18+10=28&gt;15 and the two sample distributions (shown on the handout) are not obviously strongly skewed, and (iii) the variances appear to be equal (Levene's p-value=0.2414>&alpha;).</li>
+<li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>h</sub>=18+10=28&gt;15 and the two sample distributions (shown on the handout) are not obviously strongly skewed, and (iii) the variances appear to be equal (Levene's p-value=0.2414&gt;&alpha;).</li>
 <li>x&#772;<sub>b</sub>-x&#772;<sub>h</sub> = `r xbar1`-`r xbar2`=`r stat`.</li>
 <li>t=`r formatC(t,format="f",digits=4)` with `r df` df.</li>
 <li>p-value`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
