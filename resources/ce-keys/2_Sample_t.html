@@ -116,7 +116,7 @@ t*=±2.035.
 (-2.365,80.365).
 </li>
 <li>
-I am 90% confident that the true difference in population means is between -2.365 and 80.365. More specifically, I am 90% confident that the true mean for the first group is <i>at least</i> -2.711 less than the true mean for the second group. [<i>This one is difficult to interpret because the H<sub>0</sub> was not rejected. However, this shows that the true mean for the first group could be 2.365 lower or 80.365 greater than the mean for the second group.</i>]
+I am 90% confident that the true difference in population means is between -2.365 and 80.365. [<i>This one is difficult to interpret because the H<sub>0</sub> was not rejected. However, this shows that the true mean for the first group could be 2.365 lower or 80.365 greater than the mean for the second group.</i>]
 </li>
 </ol>
 </ol>
@@ -141,13 +141,13 @@ An experimental study with some randomization (placement of containers in the gr
 The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>h</sub>=18+10=28&gt;15 and the two sample distributions (shown on the handout) are not obviously strongly skewed, and (iii) the variances appear to be equal (Levene’s p-value=0.2414&gt;α).
 </li>
 <li>
-<span class="math inline">\(\bar{x}_{1}-\bar{x}_{2}\)</span>=42.67-28.9=13.77.
+x̄<sub>b</sub>-x̄<sub>h</sub>=42.67-28.9=13.77.
 </li>
 <li>
 t=8.7763 with 26 df.
 </li>
 <li>
-p-value<span class="math inline">\(&lt;0.00005\)</span>.
+p-value&lt;0.00005.
 </li>
 <li>
 Reject H<sub>0</sub> because the p-value&lt;α.
@@ -156,7 +156,7 @@ Reject H<sub>0</sub> because the p-value&lt;α.
 It appears that the the number of plants that germinate is significantly lower for the homemage than the bought compost.
 </li>
 <li>
-I am 90% confident that the number of plants that germinated with the bought compost is more than 11.7 plants greater than the number of plants that germinated with the homemade compost.
+I am 90% confident that the number of plants that germinated with the bought compost is at least 11.7 plants greater than the number of plants that germinated with the homemade compost.
 </li>
 </ol>
 <p>R Appendix.</p>
@@ -175,10 +175,10 @@ lcb &lt;- stat+distrib(0.9,type=&quot;q&quot;,distrib=&quot;t&quot;,df=df,lower.
 <h2>Delivering Military Supplies</h2>
 <ol>
 <li>
-<span class="math inline">\(\alpha=0.05\)</span>
+α=0.05
 </li>
 <li>
-<span class="math inline">\(H_{A}: \mu_{b}-\mu_{g}&lt;0\)</span> and <span class="math inline">\(H_{0}: \mu_{b}-\mu_{g}=0\)</span>, where <span class="math inline">\(\mu\)</span> is the mean time to deliver ALL shipments, <span class="math inline">\(b\)</span> is for Bosnia, and <span class="math inline">\(g\)</span> is for Persian Gulf War.
+H<sub>A</sub>: μ<sub>b</sub>-μ<sub>g</sub>&lt;0 and H<sub>0</sub>: μ<sub>b</sub>-μ<sub>g</sub>=0, where μ is the mean time to deliver ALL shipments, b is for Bosnia, and g is for Persian Gulf War.
 </li>
 <li>
 2-sample t-test because (i) two populations/groups are considered (Bosnia and Persian Gulf), (ii) a quantitative variable (delivery time) was recorded, and (iii) the samples are independent (there is no known connection between all deliveries to the two wars).
@@ -187,12 +187,12 @@ lcb &lt;- stat+distrib(0.9,type=&quot;q&quot;,distrib=&quot;t&quot;,df=df,lower.
 An observational study with clear randomization of the two samples.
 </li>
 <li>
-The assumptions are met because (i) the samples are independent (as described above), (ii) <span class="math inline">\(n_{b}+n_{g}\)</span>=9+9=18&gt;15 and the two sample distributions () are not obviously strongly skewed (also told to assume that the distribution are not strongly skewed), and (iii) the variances appear to be equal (Levene’s p-value=<span class="math inline">\(0.0736\)</span>&gt;<span class="math inline">\(\alpha\)</span>).
+The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>g</sub>=9+9=18&gt;15 and the two sample distributions () are not obviously strongly skewed (also told to assume that the distribution are not strongly skewed), and (iii) the variances appear to be equal (Levene’s p-value=<span class="math inline">\(0.0736\)</span>&gt;α).
 </li>
 <p><img src="2_Sample_t_files/figure-html/DeliveriesHist-1.png" title="" alt="" width="576" /></p>
 <p>Figure 1: Histograms of the delivery times for military supplies in the Bosnian and Persian Gulf war.</p>
 <li>
-<span class="math inline">\(\bar{x}_{1}-\bar{x}_{2}\)</span>=7.16-25.24=-18.09 (Table 1).
+x̄<sub>b</sub>-x̄<sub>g</sub>==7.16-25.24=-18.09 (Table 1).
 </li>
 <p>Table 1: Results from the two-sample t-test for testing that the mean delivery time was lower for the Bosnian than the Persian Gulf war.</p>
 <pre><code>t = -4.8458, df = 16, p-value = 8.942e-05
@@ -205,10 +205,10 @@ mean in group Bosnia   mean in group Gulf
 The test statistic is Z=-4.846 with 16 df (Table 1).
 </li>
 <li>
-The p-value= <span class="math inline">\(0.0001\)</span> (Table 1).
+The p-value= 0.0001 (Table 1).
 </li>
 <li>
-The <span class="math inline">\(H_{O}\)</span> is rejected because the <span class="math inline">\(p-value&lt;\alpha\)</span> (Table 1).
+The H<sub>0</sub> is rejected because the p-value&lt;α (Table 1).
 </li>
 <li>
 The mean delivery time was significantly lower in Bosnia than in the Persian Gulf War.
