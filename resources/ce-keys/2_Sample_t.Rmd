@@ -169,7 +169,7 @@ lcb <- stat+distrib(0.9,type="q",distrib="t",df=df,lower.tail=FALSE)*se
 <li>t=`r formatC(t,format="f",digits=4)` with `r df` df.</li>
 <li>p-value`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
 <li>Reject H<sub>0</sub> because the p-value&lt;&alpha;.</li>
-<li>It appears that the the number of plants that germinate is significantly lower for the homemage than the bought compost.</li>
+<li>It appears that the the number of plants that germinate is significantly lower for the homemade than the bought compost.  Thus, the homemade compost "performs" worse than the store bought compost and may lead to increased costs for the greenhouse.</li>
 <li>I am 90% confident that the number of plants that germinated with the bought compost is at least `r formatC(lcb,format="f",digits=1)` plants greater than the number of plants that germinated with the homemade compost.</li>
 </ol>
 
@@ -215,7 +215,7 @@ kHtest(del.t)
 <li>The test statistic is Z=`r formatC(del.t$statistic,format="f",digits=3)` with `r formatC(del.t$parameter,format="f",digits=0)` df (`r tbls("Deliveries",display="cite")`).</li>
 <li>The p-value= `r kPvalue(del.t$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("Deliveries",display="cite")`).</li>
 <li>The H<sub>0</sub> is rejected because the p-value&lt;&alpha; (`r tbls("Deliveries",display="cite")`).</li>
-<li>The mean delivery time was significantly lower in Bosnia than in the Persian Gulf War.</li>
+<li>The mean delivery time was significantly lower in Bosnia than in the Persian Gulf War.  Thus, the new "just-in-time" entality for deliveries appears to have resulted in quicker delivery times.</li>
 <li>I am 95% confident that the mean delivery time for Bosnia was more than `r formatC(-1*del.t$conf.int[2],format="f",digits=1)` days faster than for the Persian Gulf War (`r tbls("Deliveries",display="cite")`).</li>
 </ol>
 

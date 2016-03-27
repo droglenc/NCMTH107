@@ -141,11 +141,11 @@ ci <- xbar+c(-1,1)*tstar*se
 
 <ol>
 <li>&alpha;=0.05.</li>
-<li>H<sub>A</sub>: &mu;&ne;178 and H<sub>0</sub>: &mu;=178, where $\mu$ is the mean number of CFU per 100 ml in ALL samples from this lake on this date.</li>
+<li>H<sub>A</sub>: &mu;&ne;178 and H<sub>0</sub>: &mu;=178, where &mu; is the mean number of CFU per 100 ml in ALL samples from this lake on this date.</li>
 <li>1-sample t-test because (i) one population (this lake) was sampled, (ii) a quantitative variable (number of CFU per 100 ml) was recorded, and (iii) &sigma; is not known.</li>
 <li>An observational study without clear randomization of 25 water samples.</li>
 <li>The assumptions are met because (i) &sigma; is not known and (ii) n=25>15 and the histogram (given in question) is not strongly skewed.</li>
-<li>The sample mean ($\bar{x}$) is `r xbar` CFU per 100 ml.</li>
+<li>x&#772;=`r xbar` CFU per 100 ml.</li>
 <li>t=`r formatC(t,format="f",digits=4)` with `r df` df.</li>
 <li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
 <li>Reject H<sub>0</sub> because the p-value>&alpha;.</li>
@@ -179,7 +179,7 @@ df <- read.csv("FecalColiform.csv")
 
 <ol>
 <li>&alpha;=0.10.</li>
-<li>H<sub>A</sub>: &mu;>150 and H<sub>0</sub>: &mu;=150, where $\mu$ is the mean number of CFU per 100 ml in ALL samples from this lake on this date.</li>
+<li>H<sub>A</sub>: &mu;>150 and H<sub>0</sub>: &mu;=150, where &mu; is the mean number of CFU per 100 ml in ALL samples from this lake on this date.</li>
 <li>1-sample t-test because (i) one population (this lake) was sampled, (ii) a quantitative variable (number of CFU per 100 ml) was recorded, and (iii) &sigma; is not known.</li>
 <li>An observational study without clear randomization of 25 water samples.</li>
 <li>The assumptions are met because (i) &sigma; is not known and (ii) n=25>15 and the histogram (`r figs("FChist",display="cite")`) is not strongly skewed.</li>
@@ -189,7 +189,7 @@ hist(~CFU,data=df,xlab="Colony Forming Units per 100 ml")
 
 `r figs("FChist")`
 
-<li>The sample mean ($\bar{x}$) is `r formatC(fc.t$estimate,format="f",digits=1)` (`r tbls("FC",display="cite")`).</li>
+<li>x&#772;=`r formatC(fc.t$estimate,format="f",digits=1)` (`r tbls("FC",display="cite")`).</li>
 
 `r tbls("FC")`
 
@@ -214,8 +214,8 @@ R Appendix
 
 ## Increased Civility
 ```{r KillingsCalc, echo=FALSE, results='hide', fig.show='hide'}
-xbar <- 3292.8; sigma <- 4814.5; n <- 75
-se <- sigma/sqrt(n)
+xbar <- 3292.8; s <- 4814.5; n <- 75
+se <- s/sqrt(n)
 t <- (xbar-4104)/se
 df <- n-1
 pv <- distrib(t,distrib="t",df=df)
@@ -224,11 +224,11 @@ ucb <- xbar+distrib(0.95,type="q",distrib="t",df=df)*se
 
 <ol>
 <li>&alpha;=0.05.</li>
-<li>H<sub>A</sub>: &mu;<4104 and H<sub>0</sub>: &mu;=4104, where $\mu$ is the mean number of citizens killed by ALL nation-states.</li>
+<li>H<sub>A</sub>: &mu;<4104 and H<sub>0</sub>: &mu;=4104, where &mu; is the mean number of citizens killed by ALL nation-states.</li>
 <li>1-sample t-test because (i) one population (all nation-states) was sampled, (ii) a quantitative variable (number of killings) was recorded, and (iii) &sigma; is not known.</li>
 <li>An observational study with clear randomization of 75 countries.</li>
 <li>The assumptions are met because (i) &sigma; is not known and (ii) n=75>40.</li>
-<li>The sample mean ($\bar{x}$) is `r xbar` killings.</li>
+<li>x&#772;=`r xbar` killings.</li>
 <li>t=`r formatC(t,format="f",digits=4)` with `r df` df.</li>
 <li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
 <li>Do not reject H<sub>0</sub> because the p-value>&alpha;.</li>
@@ -253,11 +253,11 @@ ozo <- read.csv("https://github.com/droglenc/NCData/raw/master/OzoneSWI.csv")
 
 <ol>
 <li>&alpha;=0.01</li>
-<li>H<sub>0</sub>:&mu;=300, H<sub>A</sub>: &mu;&ne;300, where $\mu$ is the mean thickness of the ozone layer from ALL locations.</li>
+<li>H<sub>0</sub>:&mu;=300, H<sub>A</sub>: &mu;&ne;300, where &mu; is the mean thickness of the ozone layer from ALL locations.</li>
 <li>A one-sample t-test is required because (i) a quantitative variable (thickness) was measured, (ii)the individuals are from one population (the ozone layer over Arosa, SWI), and (iii) &sigma; is not known.  Thus, the population mean is being compared to a specific value in the null hypothesis.</li>
 <li>An observational study of 45 random samples of ozone was conducted.</li>
 <li>The assumptions are met because n=45>40 and &sigma; is UNknown.</li>
-<li>The sample mean ($\bar{x}$) is `r formatC(ozo.t$estimate,format="f",digits=0)` (`r tbls("Ozone",display="cite")`).</li>
+<li>x&#772;=`r formatC(ozo.t$estimate,format="f",digits=0)` (`r tbls("Ozone",display="cite")`).</li>
 
 `r tbls("Ozone")`
 
