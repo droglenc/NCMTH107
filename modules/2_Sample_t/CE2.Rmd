@@ -23,36 +23,42 @@ source("../../rhelpers/knitr_setup.R")
 
 ----
 
-## Compost Type and Germination Rates
-<img src="http://derekogle.com/NCMTH107/modules/zimgs/tagetes.jpg" alt="Tagetes" class="img-right">
-The owner of a greenhouse developed a methodology to produce sterilized compost for growing plants that was cheaper than the compost she could buy from her soil supplier and allowed her to reduce waste production.  However, these benefits could be offset by losses related to poor plant germination and growth.  Thus, the owner attempted to answer the queston about germination success by planting 50 seeds of [marigolds (*Tagetes* spp.)](https://en.wikipedia.org/wiki/Tagetes) into individual containers that were filled with either the home-made sterilized compost or compost purchased from the soil supplier.  The containers were randomly placed into a large greenhouse where environmental conditions were controlled (i.e., all containers received the same environmental conditions).  After five days, the number of (the 50) seeds in each container that had germinated was recorded.  The results are shown below.
+## Cholesterol Drug Treatments I
+<img src="http://derekogle.com/NCMTH107/modules/zimgs/cholesterol_blood_test.jpg.jpg" alt="Cholesterol test" class="img-right">
 
-```{r echo=FALSE, fig.width=6, fig.height=3.5, par1=TRUE}
-tmp <- data.frame(compost=factor(rep(c("bought","homemade"),c(18,10))),
-                  germination=c(36,43,44,39,44,50,39,44,46,39,42,50,42,46,
-                                39,38,49,38,28,31,25,28,28,27,32,24,33,33))
-Summarize(germination~compost,data=tmp,digits=2)
-levenesTest(germination~compost,data=tmp)
-hist(germination~compost,data=tmp,xlab="Number Germinated")
+[Low density lipoprotein (LDL)](https://en.wikipedia.org/wiki/Low-density_lipoprotein) is often called "bad cholesterol" because they can cause lipids to be deposited in artery walls, thus causing arteries to become blocked.  Levels of LDL may be lowered with lifestyle changes and pharmaceuticals.  Researchers conducted an experiment where 25 men with high cholesterol were randomly assigned one of two drugs (Befizal and Lipanthyl) designed to lower LDL levels.  The results from this test are shown below.
+
+```{r echo=FALSE, fig.height=3.5, fig.width=7}
+d <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Cholesterol2.csv")
+d$decrease <- d$before-d$after
+Summarize(decrease~tx,data=d,digits=3)
+levenesTest(decrease~tx,data=d)
+hist(decrease~tx,data=d,xlab="Reduction in LDL (g/l)")
 ```
 
-Use this information to determine, at the 10% level, if the number of seeds that germinated was lower in the home-made compost.  [*Note that we are testing to see if the germination rate was lower in the home-made compost because that would suggest that it performs worse than the other compost and would increase costs to the greenhouse.*]  Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../Hypothesis_Testing/11-steps.html).[^1]
+Determine, at the 5% level, if there is a difference in the mean decrease in LDL between the two drugs.  Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../Hypothesis_Testing/11-steps.html).
 
 ----
 
-## Delivering Military Supplies
-<img src="http://derekogle.com/NCMTH107/modules/zimgs/navy-shipping.jpg" alt="Navy Shipping" class="img-right">
-Following the [Persian Gulf War](https://en.wikipedia.org/wiki/Gulf_War), the Pentagon changed its logistics processes to be more "corporate-like" -- the "just-in-case" mentality was replaced with "just-in-time" systems.  Emulating Federal Express and United Parcel Service, deliveries from factories to foxholes were expedited using bar codes, laser cards, radio tags, and databases to track supplies.  The data below contains order-to-delivery times (in days) for shipments from the United States to the Persian Gulf in 1991 (old system) and shipments to Bosnia in 1995 (new system).  Use these data to determine, at the 5% level, if the mean delivery rates declined significantly under the new system.  Assume that the distribution are approxiately normally distributed.  Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../Hypothesis_Testing/11-steps.html).[^2]
+## Cholesterol Drug Treatments II
 
-<pre>
-Persian Gulf 28.0 20.0 26.5 10.6 9.1 35.2 29.1 41.2 27.5
-Bosnia       15.1  6.4  5.0 11.4 6.5  6.5  3.0  7.0  3.5
-</pre>
+The results from the previous experiment were recorded in Cholesterol2.csv ([file](https://raw.githubusercontent.com/droglenc/NCData/master/Cholesterol2.csv), [meta](https://github.com/droglenc/NCData/blob/master/Cholesterol2_meta.txt)).  Use these data (note that you will need to create a variable that contains the reduction in LDL levels for each subject) to confirm your calculations in the previous exercise.
+
+```{r echo=FALSE, results='hide'}
+levenesTest(decrease~tx,data=d)
+t.test(decrease~tx,data=d,var.equal=TRUE)
+```
+
 
 ----
 
+<div class="text-center">
+<ul class="pagination pagination-lg">
+  <li><a href="index.html">^</a></li>
+  <li><a href="CE1.html">1</a></li>
+  <li class="active"><a href="#">2</a></li>
+  <li><a href="CE3.html">3</a></li>
+</ul>
+</div>
 
-<h3>Footnotes</h3>
-
-[^1]: This questions was adapted from [Emden (2008) Statistics for Terrified Biologists](http://www.wiley.com/WileyCDA/WileyTitle/productCd-1405149566.html)
-[^2]: This question was adapted from [McClave *et al.* (1998) *First Course in Business Statistics*](http://www.amazon.com/First-Course-Business-Statistics-TEXT/dp/B000MLT2MY/).
+----
