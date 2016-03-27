@@ -98,7 +98,7 @@ pv <- 2*distrib(t,distrib="t",df=df,lower.tail=FALSE)
 <ol>
 <li>See below.</li>
 <ol type="a">
-```{r echo=FALSE}
+```{r echo=FALSE, fig.show="hide"}
 <<2t1>>
 tstar <- distrib(0.9,df=df,type="q",lower.tail=FALSE,distrib="t")
 lcb <- stat+tstar*se
@@ -107,8 +107,39 @@ lcb <- stat+tstar*se
 <li>C=0.90</li>
 <li>Lower bound</li>
 <li>t*=`r formatC(tstar,format="f",digits=3)`.</li>
-<li>`r formatC(lcb,format="f",digits=1)`.</li>
-<li>I am 90% confident that the true difference in population means is greater than `r formatC(lcb,format="f",digits=1)`.  More specifically, I am 90% confident that the true mean for the first group is <i>at least</i> `r formatC(lcb,format="f",digits=1)` greater than the true mean for the second group.</li>
+<li>`r formatC(lcb,format="f",digits=3)`.</li>
+<li>I am 90% confident that the true difference in population means is greater than `r formatC(lcb,format="f",digits=3)`.  More specifically, I am 90% confident that the true mean for the first group is <i>at least</i> `r formatC(lcb,format="f",digits=3)` greater than the true mean for the second group.</li>
+</ol>
+
+<li>See below.</li>
+<ol type="a">
+```{r echo=FALSE, fig.show="hide"}
+<<2t2>>
+tstar <- distrib(0.95,df=df,type="q",distrib="t")
+ucb <- stat+tstar*se
+```
+
+<li>C=0.95</li>
+<li>Upper bound</li>
+<li>t*=`r formatC(tstar,format="f",digits=3)`.</li>
+<li>`r formatC(lcb,format="f",digits=3)`.</li>
+<li>I am 90% confident that the true difference in population means is less than `r formatC(ucb,format="f",digits=3)`.  More specifically, I am 90% confident that the true mean for the first group is <i>at least</i> `r formatC(ucb,format="f",digits=3)` less than the true mean for the second group.</li>
+</ol>
+
+
+<li>See below.</li>
+<ol type="a">
+```{r echo=FALSE, fig.show="hide"}
+<<2t3>>
+tstar <- distrib(0.975,df=df,type="q",distrib="t")
+ci <- stat+c(-1,1)*tstar*se
+```
+
+<li>C=0.95</li>
+<li>interval</li>
+<li>t*=&pm;`r formatC(tstar,format="f",digits=3)`.</li>
+<li>(`r formatC(ci[1],format="f",digits=3)`,`r formatC(ci[2],format="f",digits=3)`).</li>
+<li>I am 90% confident that the true difference in population means is between `r formatC(ci[1],format="f",digits=3)` and  `r formatC(ci[2],format="f",digits=3)`.  More specifically, I am 90% confident that the true mean for the first group is <i>at least</i> `r formatC(ucb,format="f",digits=3)` less than the true mean for the second group.</li>
 </ol>
 
 
