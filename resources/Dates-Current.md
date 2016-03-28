@@ -66,8 +66,8 @@ css: /css/syllabus.css
 <dt>7-Mar</dt><dd>Second <a href="Syllabus-Current.html#statistics-in-use-reports">"Stats-in-Use" Report</a></dd>
 <dt>18-Mar</dt><dd><a href="project.html">Project EDA</a></dd>
 <dt>15-Apr</dt><dd><a href="project.html">Project Final Report</a></dd>
--->
 <dt>23-Mar</dt><dd>Second Exam</dd>
+-->
 <dt>8-Apr</dt><dd>Third <a href="Syllabus-Current.html#statistics-in-use-reports">"Stats-in-Use" Report</a></dd>
 <dt>22-Apr</dt><dd>Final Exam</dd>
 </dl>
@@ -76,11 +76,11 @@ css: /css/syllabus.css
 
 ## Cancelled Classes
 <dl class="dl-horizontal">
-<dt>25-Mar</dt><dd>NO CLASS (Good Friday)</dd>
 </dl>
 <!---
 <dt>18-Jan</dt><dd>NO CLASS (Please participate in Martin Luther King, Jr. Day Activities)</dd>
 <dt>19-Feb</dt><dd>NO CLASS (Dr. Ogle at AFS Conference)</dd>
 <dt>9-Mar</dt><dd>NO CLASS (Midterm Break)</dd>
 <dt>11-Mar</dt><dd>NO CLASS (Midterm Break)</dd>
+<dt>25-Mar</dt><dd>NO CLASS (Good Friday)</dd>
 --->
