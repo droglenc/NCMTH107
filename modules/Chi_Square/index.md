@@ -45,5 +45,5 @@ Question 12.38 in [the textbook](../../book/) will assess your understanding of 
 
 ### Related materials
 
-* [In-Class Exercise](CE.html)
+* Class Exercises -- [I](CE1.html), [II](CE2.html)
 * [Old Lecture Slides](PPT_old.pptx)
