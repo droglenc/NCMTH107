@@ -38,5 +38,5 @@ Questions 12.35-12.37 in [the textbook](../../book/) will assess your understand
 
 ### Related materials
 
-* [In-Class Exercise](CE.html)
+* Class Exercises -- [I](CE1.html), [II](CE2.html), [III](CE3.html)
 * [Old Lecture Slides](PPT_old.pptx)
