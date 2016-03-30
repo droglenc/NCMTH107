@@ -59,6 +59,7 @@ css: /css/syllabus.css
 
 ## Exam or Other Due Dates
 <dl class="dl-horizontal">
+<dt>4-Apr</dt><dd>Second Exam XC Reflection (Optional)</a></dd>
 <!---
 <dt>1-Feb</dt><dd>First <a href="Syllabus-Current.html#statistics-in-use-reports">"Stats-in-Use" Report</a></dd>
 <dt>5-Feb</dt><dd><a href="project.html">Project Proposal</a></dd>

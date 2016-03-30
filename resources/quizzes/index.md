@@ -5,9 +5,9 @@ title: Daily Quizzes, W16
 
 <!--
 * [Apr, 1-Mar](){:target="_blank"}
-* [Wed, 30-Mar](http://goo.gl/forms/RyG8dAJSsI){:target="_blank"}
 -->
 
+* [Wed, 30-Mar](http://goo.gl/forms/RyG8dAJSsI){:target="_blank"}
 * [Mon, 28-Mar](http://goo.gl/forms/HwColl8Iaw){:target="_blank"}
 * [Fri, 18-Mar](http://goo.gl/forms/0fUwFeIXFJ){:target="_blank"}
 * [Wed, 16-Mar](http://goo.gl/forms/NjZ211wFVE){:target="_blank"}
