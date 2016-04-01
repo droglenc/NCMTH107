@@ -123,8 +123,8 @@ ucb <- stat+tstar*se
 <li>C = 0.95</li>
 <li>Upper bound</li>
 <li>t* = `r formatC(tstar,format="f",digits=3)`.</li>
-<li>`r formatC(lcb,format="f",digits=3)`.</li>
-<li>I am 90% confident that the true difference in population means is less than `r formatC(ucb,format="f",digits=3)`.  More specifically, I am 90% confident that the true mean for the first group is <i>at least</i> `r formatC(ucb,format="f",digits=3)` less than the true mean for the second group.</li>
+<li>`r formatC(ucb,format="f",digits=3)`.</li>
+<li>I am 95% confident that the true difference in population means is less than `r formatC(ucb,format="f",digits=3)`.  More specifically, I am 90% confident that the true mean for the first group is <i>at least</i> `r formatC(ucb,format="f",digits=3)` less than the true mean for the second group.</li>
 </ol>
 
 
@@ -140,7 +140,7 @@ ci <- stat+c(-1,1)*tstar*se
 <li>interval</li>
 <li>t* = &pm;`r formatC(tstar,format="f",digits=3)`.</li>
 <li>(`r formatC(ci[1],format="f",digits=3)`,`r formatC(ci[2],format="f",digits=3)`).</li>
-<li>I am 90% confident that the true difference in population means is between `r formatC(ci[1],format="f",digits=3)` and  `r formatC(ci[2],format="f",digits=3)`.  [<i>This one is difficult to interpret because the H<sub>0</sub> was not rejected.  However, this shows that the true mean for the first group could be `r formatC(-1*ci[1],format="f",digits=3)` lower or `r formatC(ci[2],format="f",digits=3)` greater than the mean for the second group.</i>]</li>
+<li>I am 95% confident that the true difference in population means is between `r formatC(ci[1],format="f",digits=3)` and  `r formatC(ci[2],format="f",digits=3)`.  [<i>This one is difficult to interpret because the H<sub>0</sub> was not rejected.  However, this shows that the true mean for the first group could be `r formatC(-1*ci[1],format="f",digits=3)` lower or `r formatC(ci[2],format="f",digits=3)` greater than the mean for the second group.</i>]</li>
 </ol>
 
 </ol>
