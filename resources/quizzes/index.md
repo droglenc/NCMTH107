@@ -4,10 +4,16 @@ title: Daily Quizzes, W16
 ---
 
 <!--
+* [Fri, 15-Apr](){:target="_blank"} 
+* [Wed, 13-Apr](){:target="_blank"} 
+* [Mon, 11-Apr](){:target="_blank"} 
 
+* [Fri, 8-Apr](){:target="_blank"} 
+* [Wed, 6-Apr](){:target="_blank"} 
+* [Mon, 4-Apr](){:target="_blank"} 
 -->
 
-* [Apr, 1-Mar](http://goo.gl/forms/JM5TrTwXzt){:target="_blank"} 
+* [Fri, 1-Apr](http://goo.gl/forms/JM5TrTwXzt){:target="_blank"} 
 * [Wed, 30-Mar](http://goo.gl/forms/RyG8dAJSsI){:target="_blank"}
 * [Mon, 28-Mar](http://goo.gl/forms/HwColl8Iaw){:target="_blank"}
 * [Fri, 18-Mar](http://goo.gl/forms/0fUwFeIXFJ){:target="_blank"}
