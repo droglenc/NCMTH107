@@ -10,9 +10,9 @@ title: Daily Quizzes, W16
 
 * [Fri, 8-Apr](){:target="_blank"} 
 * [Wed, 6-Apr](http://goo.gl/forms/ThHQYOvRus){:target="_blank"} 
-* [Mon, 4-Apr](http://goo.gl/forms/xbLmlond0s){:target="_blank"} 
 -->
 
+* [Mon, 4-Apr](http://goo.gl/forms/xbLmlond0s){:target="_blank"} 
 * [Fri, 1-Apr](http://goo.gl/forms/JM5TrTwXzt){:target="_blank"} 
 * [Wed, 30-Mar](http://goo.gl/forms/RyG8dAJSsI){:target="_blank"}
 * [Mon, 28-Mar](http://goo.gl/forms/HwColl8Iaw){:target="_blank"}
