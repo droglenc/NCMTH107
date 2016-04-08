@@ -12,8 +12,8 @@ css: /css/syllabus.css
       <h4>Prof. Ogle's Section</h4>
       <dl class="dl-horizontal">
       <dt>13-Apr</dt><dd>12.38</dd>
-      <dt>8-Apr</dt><dd>11.24-11.25</dd>
       <!---
+      <dt>8-Apr</dt><dd>11.24-11.25</dd>
       <dt>29-Mar</dt><dd>11.22-11.23</dd>
       <dt>21-Mar</dt><dd>10.46-10.47</dd>
       <dt>29-Feb</dt><dd>9.22-9.24</dd>
@@ -63,8 +63,8 @@ css: /css/syllabus.css
 
 ## Exam or Other Due Dates
 <dl class="dl-horizontal">
-<dt>4-Apr</dt><dd>Second Exam XC Reflection (Optional)</a></dd>
 <!---
+<dt>4-Apr</dt><dd>Second Exam XC Reflection (Optional)</a></dd>
 <dt>1-Feb</dt><dd>First <a href="Syllabus-Current.html#statistics-in-use-reports">"Stats-in-Use" Report</a></dd>
 <dt>5-Feb</dt><dd><a href="project.html">Project Proposal</a></dd>
 <dt>12-Feb</dt><dd>First Exam</dd>
@@ -72,8 +72,8 @@ css: /css/syllabus.css
 <dt>18-Mar</dt><dd><a href="project.html">Project EDA</a></dd>
 <dt>15-Apr</dt><dd><a href="project.html">Project Final Report</a></dd>
 <dt>23-Mar</dt><dd>Second Exam</dd>
--->
 <dt>8-Apr</dt><dd>Third <a href="Syllabus-Current.html#statistics-in-use-reports">"Stats-in-Use" Report</a></dd>
+-->
 <dt>22-Apr</dt><dd>Final Exam</dd>
 </dl>
 
