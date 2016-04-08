@@ -8,7 +8,7 @@ title: Daily Quizzes, W16
 * [Wed, 13-Apr](){:target="_blank"} 
 * [Mon, 11-Apr](){:target="_blank"} 
 
-* [Fri, 8-Apr](){:target="_blank"} 
+* [Fri, 8-Apr](http://goo.gl/forms/a3G7VZbxXS){:target="_blank"} 
 -->
 
 * [Wed, 6-Apr](http://goo.gl/forms/ThHQYOvRus){:target="_blank"} 

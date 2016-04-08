@@ -1,0 +1,105 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Chi-Square CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="forest-composition" class="section level2">
+<h2>Forest Composition</h2>
+<ol>
+<li>
+α=0.05.
+</li>
+<li>
+H<sub>A</sub>: “The distribution of stands into the times since last fire differs for at least one pair of stand types” and H<sub>O</sub>: “The distribution of stands into the times since last fire DOES NOT differ among stand types”.
+</li>
+<li>
+Chi-square test because (i) two or more populations (stand types) were sampled and (ii) the response variable (time since last fire) is categorial (in the way it was recorded).
+</li>
+<li>
+This is an observational study because the stand type was not set or manipulated by the researcher. The stands were not obviously randomly selected.
+</li>
+<li>
+All cells in the expected frequency table (Table 1) were NOT greater than 5. The p-value calculation below is suspect.
+</li>
+<p>Table 1: Expected frequency of stands (assuming that Ho is true) by time since last fire in each of the four stand type populations.</p>
+<pre><code>      tslf
+sttype     0-100   100-200 200-300
+    c  1.6041667  3.208333  2.1875
+    mc 0.9166667  1.833333  1.2500
+    md 2.9791667  5.958333  4.0625
+    d  5.5000000 11.000000  7.5000</code></pre>
+<li>
+The observed frequency table is shown in Table 2.
+</li>
+<p>Table 2: Observed frequency of stands by time since last fire in each of the four stand type populations.</p>
+<pre><code>      tslf
+sttype 0-100 100-200 200-300
+    c      0       0       7
+    mc     0       2       2
+    md     2       5       6
+    d      9      15       0</code></pre>
+<li>
+χ<sup>2</sup>=29.3636 with 6 df (Table 3).
+</li>
+<p>Table 3: Chi-square test results for testing that the distribution of stands by time since last fire differs among stand types.</p>
+<pre><code>Pearson&#39;s Chi-squared test with obs 
+X-squared = 29.3636, df = 6, p-value = 5.191e-05</code></pre>
+<li>
+p-value=0.0001 (Table 3).
+</li>
+<li>
+Reject H<sub>0</sub> because the p-value&gt;α.
+</li>
+<li>
+It appears that the distribution of stands into the times since last fire differs among at least one pair of the stand types. Analysis of the row percentage table (Table 4) suggests the time since last fire increases as one moves from primarily deciduous to primarily coniferous stands.
+</li>
+<p>Table 4: Row percentage table for time since last fire by stand type.</p>
+<pre><code>      tslf
+sttype 0-100 100-200 200-300   Sum
+    c    0.0     0.0   100.0 100.0
+    mc   0.0    50.0    50.0 100.0
+    md  15.4    38.5    46.2 100.1
+    d   37.5    62.5     0.0 100.0</code></pre>
+<li>
+N/A with a chi-square test.
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>d &lt;- read.csv(&quot;https://raw.githubusercontent.com/droglenc/NCData/master/Fire.csv&quot;)
+d$sttype &lt;- factor(d$sttype,levels=c(&quot;c&quot;,&quot;mc&quot;,&quot;md&quot;,&quot;d&quot;))
+obs &lt;- xtabs(~sttype+tslf,data=d)
+chi1 &lt;- chisq.test(obs,correct=FALSE)</code></pre>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

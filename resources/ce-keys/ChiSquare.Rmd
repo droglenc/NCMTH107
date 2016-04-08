@@ -1,0 +1,91 @@
+---
+title: "Answer Key"
+subtitle: "Chi-Square CE"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3
+    fig_width: 3.5
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/ce-keys/")
+source("../../rhelpers/rhelpers.R")
+modHTML("ChiSquare")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+source("../../rhelpers/knitr_setup.R")
+library(captioner)
+tbls <- captioner(prefix="Table")
+figs <- captioner(prefix="Figure")
+tbls(name="ForestExpTable","Expected frequency of stands (assuming that Ho is true) by time since last fire in each of the four stand type populations.")
+tbls(name="ForestObsTable","Observed frequency of stands by time since last fire in each of the four stand type populations.")
+tbls(name="ForestResults","Chi-square test results for testing that the distribution of stands by time since last fire differs among stand types.")
+tbls(name="ForestPercTable","Row percentage table for time since last fire by stand type.")
+```
+
+----
+
+## Forest Composition
+
+```{r ForestCalc, echo=FALSE, results='hide', fig.show='hide', warning=FALSE}
+d <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Fire.csv")
+d$sttype <- factor(d$sttype,levels=c("c","mc","md","d"))
+obs <- xtabs(~sttype+tslf,data=d)
+chi1 <- chisq.test(obs,correct=FALSE)
+```
+
+<ol>
+<li>&alpha;=0.05.</li>
+<li>H<sub>A</sub>: "The distribution of stands into the times since last fire differs for at least one pair of stand types" and H<sub>O</sub>: "The distribution of stands into the times since last fire DOES NOT differ among stand types".</li>
+<li>Chi-square test because (i) two or more populations (stand types) were sampled and (ii) the response variable (time since last fire) is categorial (in the way it was recorded).</li>
+<li>This is an observational study because the stand type was not set or manipulated by the researcher.  The stands were not obviously randomly selected.</li>
+<li>All cells in the expected frequency table (`r tbls("ForestExpTable",display="cite")`) were NOT greater than 5.  The p-value calculation below is suspect.</li>
+
+`r tbls("ForestExpTable")`
+
+```{r echo=FALSE}
+chi1$expected
+```
+
+<li>The observed frequency table is shown in `r tbls("ForestObsTable",display="cite")`.</li>
+
+`r tbls("ForestObsTable")`
+
+```{r echo=FALSE}
+chi1$observed
+```
+
+<li>&chi;<sup>2</sup>=`r formatC(chi1$statistic,format="f",digits=4)` with `r chi1$parameter` df (`r tbls("ForestResults",display="cite")`).</li>
+
+`r tbls("ForestResults")`
+
+```{r echo=FALSE}
+chi1
+```
+
+<li>p-value=`r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("ForestResults",display="cite")`).</li>
+<li>Reject H<sub>0</sub> because the p-value>&alpha;.</li>
+<li>It appears that the distribution of stands into the times since last fire differs among at least one pair of the stand types.  Analysis of the row percentage table (`r tbls("ForestPercTable",display="cite")`) suggests the time since last fire increases as one moves from primarily deciduous to primarily coniferous stands.</li>
+
+`r tbls("ForestPercTable")`
+
+```{r echo=FALSE}
+percTable(obs,margin=1,digits=1)
+```
+
+<li>N/A with a chi-square test.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+<<ForestCalc>>
+```
+
+----
