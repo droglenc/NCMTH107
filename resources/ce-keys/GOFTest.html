@@ -51,13 +51,13 @@ Reject H<sub>0</sub> because the p-value&lt;α.
 It appears that there is a preference for water type by the students. Further analysis (Table 4) suggests that the students preferred the tap water.
 </li>
 <p>Table 4: Summary table of the proportion of students in each water type choice, with 95% confidence intervals and expected proportions from the goodness-of-fit test.</p>
-<pre><code>             p.obs     p.LCI     p.UCI p.exp
-tap      0.4766355 0.3844611 0.5704294  0.25
-Aquafina 0.1682243 0.1091421 0.2503033  0.25
-Fiji     0.1588785 0.1016268 0.2397749  0.25
-Sams     0.1962617 0.1321041 0.2814727  0.25</code></pre>
+<pre><code>         p.obs p.LCI p.UCI p.exp
+tap      0.477 0.384 0.570  0.25
+Aquafina 0.168 0.109 0.250  0.25
+Fiji     0.159 0.102 0.240  0.25
+Sams     0.196 0.132 0.281  0.25</code></pre>
 <li>
-From Table 4, one can conclude that between 38.4and 57.0% of the students chose the tapwater.
+From Table 4, one can conclude that between 38.4 and 57.0% of the students chose the tapwater.
 </li>
 </ol>
 <p>R Appendix.</p>
@@ -65,7 +65,7 @@ From Table 4, one can conclude that between 38.4and 57.0% of the students chose 
 w.exp &lt;- c(tap=1,Aquafina=1,Fiji=1,Sams=1)/4
 w.chi &lt;- chisq.test(w.obs,p=w.exp,rescale.p=TRUE,correct=FALSE)
 w.chi
-percTable(as.table(w.obs),digits=1)</code></pre>
+gofCI(w.chi,digits=3)</code></pre>
 <hr />
 </div>
 <div id="habitat-use-by-wild-turkeys" class="section level2">
@@ -96,7 +96,7 @@ The observed frequency table is shown in Table 6.
 <pre><code>    Aspen    Meadow      Pine OakSpruce 
        61         9       807         1 </code></pre>
 <li>
-χ<sup>2</sup>=29.6355 with 3 df (Table 7).
+χ<sup>2</sup>=91.5299 with 3 df (Table 7).
 </li>
 <p>Table 7: Goodness-of-fit test results for testing that the distribution of turkeys in the spring is the same as the disribution of available habitats.</p>
 <pre><code>Chi-squared test for given probabilities with t.obs 
@@ -111,13 +111,13 @@ Reject H<sub>0</sub> because the p-value&lt;α.
 It appears that the turkeys show a habitat preference in the spring. Further analysis (Table 8) suggests that the turkeys showed a strong avoidance of meadows, a moderate avoidance of Oak/Spruce habitats, and a moderate preference for aspen and pine habitats.
 </li>
 <p>Table 8: Summary table of the proportion of turkeys in each habitat type, with 95% confidence intervals and expected proportions from the goodness-of-fit test.</p>
-<pre><code>              p.obs     p.LCI     p.UCI     p.exp
-Aspen     0.0694761 0.0544654 0.0882376 0.0515845
-Meadow    0.0102506 0.0054021 0.0193659 0.1015695
-Pine      0.9191344 0.8992223 0.9353948 0.8368489
-OakSpruce 0.0011390 0.0000584 0.0064231 0.0099970</code></pre>
+<pre><code>          p.obs p.LCI p.UCI p.exp
+Aspen     0.069 0.054 0.088 0.052
+Meadow    0.010 0.005 0.019 0.102
+Pine      0.919 0.899 0.935 0.837
+OakSpruce 0.001 0.000 0.006 0.010</code></pre>
 <li>
-From Table 8, one can conclude that between 89.9and 93.5% of the turkey observations were in the pine habitat.
+From Table 8, one can conclude that between 89.9 and 93.5% of the turkey observations were in the pine habitat.
 </li>
 </ol>
 <p>R Appendix.</p>
@@ -125,7 +125,72 @@ From Table 8, one can conclude that between 89.9and 93.5% of the turkey observat
 t.exp &lt;- c(Aspen=0.0516,Meadow=0.1016,Pine=0.8371,OakSpruce=0.0100)
 t.chi &lt;- chisq.test(t.obs,p=t.exp,rescale.p=TRUE,correct=FALSE)
 t.chi
-gofCI(t.chi)</code></pre>
+gofCI(t.chi,digits=3)</code></pre>
+<hr />
+</div>
+<div id="random-jury-pool" class="section level2">
+<h2>Random Jury Pool</h2>
+<ol>
+<li>
+α=0.10.
+</li>
+<li>
+H<sub>A</sub>: “The age distribution of the actual jury is not the same as the age distribution in the district as a whole” and H<sub>O</sub>: “The age distribution of the actual jury is the same as the age distribution in the district as a whole”.
+</li>
+<li>
+Goodness-of-fit test because (i) one population (the jury in this district) were sampled and (ii) the response variable (age category) is categorial.
+</li>
+<li>
+This is observational as the jurors were not allocated to ages. In theory the jury was randomly selected from the district, but that is what is being tested.
+</li>
+<li>
+All cells in the expected frequency table (Table 9) were greater than 5; the assumptions for a goodness-of-fit test have been met.
+</li>
+<p>Table 9:</p>
+<pre><code>  18-19   20-24   25-29   30-39   40-49   50-64     65+ 
+ 81.496 200.400 180.360 289.912 204.408 243.152 136.272 </code></pre>
+<li>
+The observed frequency table is shown in Table 10.
+</li>
+<p>Table 10:</p>
+<pre><code>18-19 20-24 25-29 30-39 40-49 50-64   65+ 
+   23    96   134   293   297   380   113 </code></pre>
+<li>
+χ<sup>2</sup>=231.2600 with 6 df (Table 11).
+</li>
+<p>Table 11:</p>
+<pre><code>Chi-squared test for given probabilities with j.obs 
+X-squared = 231.26, df = 6, p-value &lt; 2.2e-16</code></pre>
+<li>
+p-value=&lt;0.00005 (Table 11).
+</li>
+<li>
+Reject H<sub>0</sub> because the p-value&lt;α.
+</li>
+<li>
+It appears that the age distribution of the jury does not match the age distribution of the district as a whole. Further analysis (Table 12) suggests that the jury has a higher percentage of older jurors (ages “40-49” and “50-64”) and a lower percentage of younger jurors (ages “18-19”, “20-24”, and “25-29”) than expected as based on the age distribution in the district as a whole.
+</li>
+<p>Table 12:</p>
+<pre><code>      p.obs p.LCI p.UCI p.exp
+18-19 0.017 0.011 0.026 0.061
+20-24 0.072 0.059 0.087 0.150
+25-29 0.100 0.085 0.118 0.135
+30-39 0.219 0.198 0.242 0.217
+40-49 0.222 0.201 0.245 0.153
+50-64 0.284 0.261 0.309 0.182
+65+   0.085 0.071 0.101 0.102</code></pre>
+<li>
+From Table 12, one can conclude, for example, that between 1.1 and 2.6% of the jurors were between 18-19 years old.
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>j.obs &lt;- c(&quot;18-19&quot;=23,&quot;20-24&quot;=96,&quot;25-29&quot;=134,&quot;30-39&quot;=293,
+           &quot;40-49&quot;=297,&quot;50-64&quot;=380,&quot;65+&quot;=113)
+j.exp &lt;- c(&quot;18-19&quot;=6.1,&quot;20-24&quot;=15.0,&quot;25-29&quot;=13.5,&quot;30-39&quot;=21.7,
+           &quot;40-49&quot;=15.3,&quot;50-64&quot;=18.2,&quot;65+&quot;=10.2)
+j.chi &lt;- chisq.test(j.obs,p=j.exp,rescale.p=TRUE,correct=FALSE)
+j.chi
+gofCI(j.chi,digits=3)</code></pre>
 </div>
 
 

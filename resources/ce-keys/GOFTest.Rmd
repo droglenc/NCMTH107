@@ -45,7 +45,7 @@ w.obs <- c(tap=51,Aquafina=18,Fiji=17,Sams=21)
 w.exp <- c(tap=1,Aquafina=1,Fiji=1,Sams=1)/4
 w.chi <- chisq.test(w.obs,p=w.exp,rescale.p=TRUE,correct=FALSE)
 w.chi
-percTable(as.table(w.obs),digits=1)
+gofCI(w.chi,digits=3)
 ```
 
 <ol>
@@ -84,10 +84,10 @@ w.chi
 `r tbls("WaterSum")`
 
 ```{r echo=FALSE}
-gofCI(w.chi)
+gofCI(w.chi,digits=3)
 ```
 
-<li>From `r tbls("WaterSum",display="cite")`, one can conclude that between `r formatC(gofCI(w.chi)["tap","p.LCI"]*100,format="f",digits=1)`and  `r formatC(gofCI(w.chi)["tap","p.UCI"]*100,format="f",digits=1)`% of the students chose the tapwater.</li>
+<li>From `r tbls("WaterSum",display="cite")`, one can conclude that between `r formatC(gofCI(w.chi)["tap","p.LCI"]*100,format="f",digits=1)` and  `r formatC(gofCI(w.chi)["tap","p.UCI"]*100,format="f",digits=1)`% of the students chose the tapwater.</li>
 </ol>
 
 R Appendix.
@@ -104,7 +104,7 @@ t.obs <- c(Aspen=61,Meadow=9,Pine=807,OakSpruce=1)
 t.exp <- c(Aspen=0.0516,Meadow=0.1016,Pine=0.8371,OakSpruce=0.0100)
 t.chi <- chisq.test(t.obs,p=t.exp,rescale.p=TRUE,correct=FALSE)
 t.chi
-gofCI(t.chi)
+gofCI(t.chi,digits=3)
 ```
 
 <ol>
@@ -128,7 +128,7 @@ t.chi$expected
 t.chi$observed
 ```
 
-<li>&chi;<sup>2</sup>=`r formatC(w.chi$statistic,format="f",digits=4)` with `r t.chi$parameter` df (`r tbls("TurkeyResults",display="cite")`).</li>
+<li>&chi;<sup>2</sup>=`r formatC(t.chi$statistic,format="f",digits=4)` with `r t.chi$parameter` df (`r tbls("TurkeyResults",display="cite")`).</li>
 
 `r tbls("TurkeyResults")`
 
@@ -143,10 +143,10 @@ t.chi
 `r tbls("TurkeySum")`
 
 ```{r echo=FALSE}
-gofCI(t.chi)
+gofCI(t.chi,digits=3)
 ```
 
-<li>From `r tbls("TurkeySum",display="cite")`, one can conclude that between `r formatC(gofCI(t.chi)["Pine","p.LCI"]*100,format="f",digits=1)`and  `r formatC(gofCI(t.chi)["Pine","p.UCI"]*100,format="f",digits=1)`% of the turkey observations were in the pine habitat.</li>
+<li>From `r tbls("TurkeySum",display="cite")`, one can conclude that between `r formatC(gofCI(t.chi)["Pine","p.LCI"]*100,format="f",digits=1)` and `r formatC(gofCI(t.chi)["Pine","p.UCI"]*100,format="f",digits=1)`% of the turkey observations were in the pine habitat.</li>
 </ol>
 
 R Appendix.
@@ -154,5 +154,63 @@ R Appendix.
 <<TurkeyCalc>>
 ```
 
+----
 
+## Random Jury Pool
 
+```{r JuryCalc, echo=FALSE, results='hide', fig.show='hide', warning=FALSE}
+j.obs <- c("18-19"=23,"20-24"=96,"25-29"=134,"30-39"=293,
+           "40-49"=297,"50-64"=380,"65+"=113)
+j.exp <- c("18-19"=6.1,"20-24"=15.0,"25-29"=13.5,"30-39"=21.7,
+           "40-49"=15.3,"50-64"=18.2,"65+"=10.2)
+j.chi <- chisq.test(j.obs,p=j.exp,rescale.p=TRUE,correct=FALSE)
+j.chi
+gofCI(j.chi,digits=3)
+```
+
+<ol>
+<li>&alpha;=0.10.</li>
+<li>H<sub>A</sub>: "The age distribution of the actual jury is not the same as the age distribution in the district as a whole" and H<sub>O</sub>: "The age distribution of the actual jury is the same as the age distribution in the district as a whole".</li>
+<li>Goodness-of-fit test because (i) one population (the jury in this district) were sampled and (ii) the response variable (age category) is categorial.</li>
+<li>This is observational as the jurors were not allocated to ages.  In theory the jury was randomly selected from the district, but that is what is being tested.</li>
+<li>All cells in the expected frequency table (`r tbls("JuryExpTable",display="cite")`) were greater than 5; the assumptions for a goodness-of-fit test have been met.</li>
+
+`r tbls("JuryExpTable")`
+
+```{r echo=FALSE}
+j.chi$expected
+```
+
+<li>The observed frequency table is shown in `r tbls("JuryObsTable",display="cite")`.</li>
+
+`r tbls("JuryObsTable")`
+
+```{r echo=FALSE}
+j.chi$observed
+```
+
+<li>&chi;<sup>2</sup>=`r formatC(j.chi$statistic,format="f",digits=4)` with `r j.chi$parameter` df (`r tbls("JuryResults",display="cite")`).</li>
+
+`r tbls("JuryResults")`
+
+```{r echo=FALSE}
+j.chi
+```
+
+<li>p-value=`r kPvalue(j.chi$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("JuryResults",display="cite")`).</li>
+<li>Reject H<sub>0</sub> because the p-value&lt;&alpha;.</li>
+<li>It appears that the age distribution of the jury does not match the age distribution of the district as a whole.  Further analysis (`r tbls("JurySum",display="cite")`) suggests that the jury has a higher percentage of older jurors (ages "40-49" and "50-64") and a lower percentage of younger jurors (ages "18-19", "20-24", and "25-29") than expected as based on the age distribution in the district as a whole.</li>
+
+`r tbls("JurySum")`
+
+```{r echo=FALSE}
+gofCI(j.chi,digits=3)
+```
+
+<li>From `r tbls("JurySum",display="cite")`, one can conclude, for example, that between `r formatC(gofCI(j.chi)["18-19","p.LCI"]*100,format="f",digits=1)` and `r formatC(gofCI(j.chi)["18-19","p.UCI"]*100,format="f",digits=1)`% of the jurors were between 18-19 years old.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+<<JuryCalc>>
+```
