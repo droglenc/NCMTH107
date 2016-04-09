@@ -48,13 +48,16 @@ p-value=&lt;0.00005 (Table 3).
 Reject H<sub>0</sub> because the p-value&lt;α.
 </li>
 <li>
-It appears that there is a preference for water type by the students. Analysis of the percentage table (Table 4) suggests that the students preferred the tap water.
+It appears that there is a preference for water type by the students. Further analysis (Table 4) suggests that the students preferred the tap water.
 </li>
-<p>Table 4: Percentage table for water type choices by the students.</p>
-<pre><code>     tap Aquafina     Fiji     Sams      Sum 
-    47.7     16.8     15.9     19.6    100.0 </code></pre>
+<p>Table 4: Summary table of the proportion of students in each water type choice, with 95% confidence intervals and expected proportions from the goodness-of-fit test.</p>
+<pre><code>             p.obs     p.LCI     p.UCI p.exp
+tap      0.4766355 0.3844611 0.5704294  0.25
+Aquafina 0.1682243 0.1091421 0.2503033  0.25
+Fiji     0.1588785 0.1016268 0.2397749  0.25
+Sams     0.1962617 0.1321041 0.2814727  0.25</code></pre>
 <li>
-Not necessary with a chi-square test.
+From Table 4, one can conclude that between 38.4and 57.0% of the students chose the tapwater.
 </li>
 </ol>
 <p>R Appendix.</p>
@@ -64,6 +67,65 @@ w.chi &lt;- chisq.test(w.obs,p=w.exp,rescale.p=TRUE,correct=FALSE)
 w.chi
 percTable(as.table(w.obs),digits=1)</code></pre>
 <hr />
+</div>
+<div id="habitat-use-by-wild-turkeys" class="section level2">
+<h2>Habitat Use by Wild Turkeys</h2>
+<ol>
+<li>
+α=0.05.
+</li>
+<li>
+H<sub>A</sub>: “There is a preference by the turkeys for habitat (i.e., the distribution of turkeys will NOT follow the distribution of available habitats)” and H<sub>O</sub>: “There is NOT a preference by the turkeys for habitat (i.e., the distribution of turkeys will follow the distribution of available habitats)”.
+</li>
+<li>
+Goodness-of-fit test because (i) one population (South Dakota tukeys) were sampled and (ii) the response variable (habitat use) is categorial.
+</li>
+<li>
+This is observational as habitat use by the turkeys was simply recorded. The turkey observations were not randomly selected (the researchers likely chose days to sample).
+</li>
+<li>
+All cells in the expected frequency table (Table 5) were greater than 5; the assumptions for a goodness-of-fit test have been met.
+</li>
+<p>Table 5: Expected frequency of turkeys (assuming that Ho is true) by habitat in the spring.</p>
+<pre><code>     Aspen     Meadow       Pine  OakSpruce 
+ 45.291213  89.178047 734.753374   8.777367 </code></pre>
+<li>
+The observed frequency table is shown in Table 6.
+</li>
+<p>Table 6: Observed frequency of turkeys by habitat in the spring.</p>
+<pre><code>    Aspen    Meadow      Pine OakSpruce 
+       61         9       807         1 </code></pre>
+<li>
+χ<sup>2</sup>=29.6355 with 3 df (Table 7).
+</li>
+<p>Table 7: Goodness-of-fit test results for testing that the distribution of turkeys in the spring is the same as the disribution of available habitats.</p>
+<pre><code>Chi-squared test for given probabilities with t.obs 
+X-squared = 91.5299, df = 3, p-value &lt; 2.2e-16</code></pre>
+<li>
+p-value=&lt;0.00005 (Table 7).
+</li>
+<li>
+Reject H<sub>0</sub> because the p-value&lt;α.
+</li>
+<li>
+It appears that the turkeys show a habitat preference in the spring. Further analysis (Table 8) suggests that the turkeys showed a strong avoidance of meadows, a moderate avoidance of Oak/Spruce habitats, and a moderate preference for aspen and pine habitats.
+</li>
+<p>Table 8: Summary table of the proportion of turkeys in each habitat type, with 95% confidence intervals and expected proportions from the goodness-of-fit test.</p>
+<pre><code>              p.obs     p.LCI     p.UCI     p.exp
+Aspen     0.0694761 0.0544654 0.0882376 0.0515845
+Meadow    0.0102506 0.0054021 0.0193659 0.1015695
+Pine      0.9191344 0.8992223 0.9353948 0.8368489
+OakSpruce 0.0011390 0.0000584 0.0064231 0.0099970</code></pre>
+<li>
+From Table 8, one can conclude that between 89.9and 93.5% of the turkey observations were in the pine habitat.
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>t.obs &lt;- c(Aspen=61,Meadow=9,Pine=807,OakSpruce=1)
+t.exp &lt;- c(Aspen=0.0516,Meadow=0.1016,Pine=0.8371,OakSpruce=0.0100)
+t.chi &lt;- chisq.test(t.obs,p=t.exp,rescale.p=TRUE,correct=FALSE)
+t.chi
+gofCI(t.chi)</code></pre>
 </div>
 
 

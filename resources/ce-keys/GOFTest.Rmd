@@ -27,7 +27,12 @@ tbls <- captioner(prefix="Table")
 tbls(name="WaterExpTable","Expected frequency of students (assuming that Ho is true) by water type choice.")
 tbls(name="WaterObsTable","Observed frequency of students by water type choice.")
 tbls(name="WaterResults","Goodness-of-fit test results for testing that the distribution of students was the same among water type choices.")
-tbls(name="WaterPercTable","Percentage table for water type choices by the students.")
+tbls(name="WaterSum","Summary table of the proportion of students in each water type choice, with 95% confidence intervals and expected proportions from the goodness-of-fit test.")
+
+tbls(name="TurkeyExpTable","Expected frequency of turkeys (assuming that Ho is true) by habitat in the spring.")
+tbls(name="TurkeyObsTable","Observed frequency of turkeys by habitat in the spring.")
+tbls(name="TurkeyResults","Goodness-of-fit test results for testing that the distribution of turkeys in the spring is the same as the disribution of available habitats.")
+tbls(name="TurkeySum","Summary table of the proportion of turkeys in each habitat type, with 95% confidence intervals and expected proportions from the goodness-of-fit test.")
 
 ```
 
@@ -74,15 +79,15 @@ w.chi
 
 <li>p-value=`r kPvalue(w.chi$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("WaterResults",display="cite")`).</li>
 <li>Reject H<sub>0</sub> because the p-value&lt;&alpha;.</li>
-<li>It appears that there is a preference for water type by the students.  Analysis of the percentage table (`r tbls("WaterPercTable",display="cite")`) suggests that the students preferred the tap water.</li>
+<li>It appears that there is a preference for water type by the students.  Further analysis (`r tbls("WaterSum",display="cite")`) suggests that the students preferred the tap water.</li>
 
-`r tbls("WaterPercTable")`
+`r tbls("WaterSum")`
 
 ```{r echo=FALSE}
-percTable(as.table(w.obs),digits=1)
+gofCI(w.chi)
 ```
 
-<li>Not necessary with a chi-square test.</li>
+<li>From `r tbls("WaterSum",display="cite")`, one can conclude that between `r formatC(gofCI(w.chi)["tap","p.LCI"]*100,format="f",digits=1)`and  `r formatC(gofCI(w.chi)["tap","p.UCI"]*100,format="f",digits=1)`% of the students chose the tapwater.</li>
 </ol>
 
 R Appendix.
@@ -91,3 +96,63 @@ R Appendix.
 ```
 
 ----
+
+## Habitat Use by Wild Turkeys
+
+```{r TurkeyCalc, echo=FALSE, results='hide', fig.show='hide', warning=FALSE}
+t.obs <- c(Aspen=61,Meadow=9,Pine=807,OakSpruce=1)
+t.exp <- c(Aspen=0.0516,Meadow=0.1016,Pine=0.8371,OakSpruce=0.0100)
+t.chi <- chisq.test(t.obs,p=t.exp,rescale.p=TRUE,correct=FALSE)
+t.chi
+gofCI(t.chi)
+```
+
+<ol>
+<li>&alpha;=0.05.</li>
+<li>H<sub>A</sub>: "There is a preference by the turkeys for habitat (i.e., the distribution of turkeys will NOT follow the distribution of available habitats)" and H<sub>O</sub>: "There is NOT a preference by the turkeys for habitat (i.e., the distribution of turkeys will follow the distribution of available habitats)".</li>
+<li>Goodness-of-fit test because (i) one population (South Dakota tukeys) were sampled and (ii) the response variable (habitat use) is categorial.</li>
+<li>This is observational as habitat use by the turkeys was simply recorded.  The turkey observations were not randomly selected (the researchers likely chose days to sample).</li>
+<li>All cells in the expected frequency table (`r tbls("TurkeyExpTable",display="cite")`) were greater than 5; the assumptions for a goodness-of-fit test have been met.</li>
+
+`r tbls("TurkeyExpTable")`
+
+```{r echo=FALSE}
+t.chi$expected
+```
+
+<li>The observed frequency table is shown in `r tbls("TurkeyObsTable",display="cite")`.</li>
+
+`r tbls("TurkeyObsTable")`
+
+```{r echo=FALSE}
+t.chi$observed
+```
+
+<li>&chi;<sup>2</sup>=`r formatC(w.chi$statistic,format="f",digits=4)` with `r t.chi$parameter` df (`r tbls("TurkeyResults",display="cite")`).</li>
+
+`r tbls("TurkeyResults")`
+
+```{r echo=FALSE}
+t.chi
+```
+
+<li>p-value=`r kPvalue(t.chi$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("TurkeyResults",display="cite")`).</li>
+<li>Reject H<sub>0</sub> because the p-value&lt;&alpha;.</li>
+<li>It appears that the turkeys show a habitat preference in the spring.  Further analysis (`r tbls("TurkeySum",display="cite")`) suggests that the turkeys showed a strong avoidance of meadows, a moderate avoidance of Oak/Spruce habitats, and a moderate preference for aspen and pine habitats.</li>
+
+`r tbls("TurkeySum")`
+
+```{r echo=FALSE}
+gofCI(t.chi)
+```
+
+<li>From `r tbls("TurkeySum",display="cite")`, one can conclude that between `r formatC(gofCI(t.chi)["Pine","p.LCI"]*100,format="f",digits=1)`and  `r formatC(gofCI(t.chi)["Pine","p.UCI"]*100,format="f",digits=1)`% of the turkey observations were in the pine habitat.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+<<TurkeyCalc>>
+```
+
+
+
