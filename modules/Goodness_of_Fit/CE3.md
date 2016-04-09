@@ -21,7 +21,7 @@ Jury Pool       23       96      134      293      297      380      113
 District      6.1%    15.0%    13.5%    21.7%    15.3%    18.2%    10.2%
 </pre>
 
-Use these results to determine if the age distribution in the jury pool accurately represents the age distriction of the district as a whole.  Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../Hypothesis_Testing/11-steps.html).  Also comment on whether the attorney's specific concern was warranted.
+Use these results to determine, at the 10% level, if the age distribution in the jury pool accurately represents the age distriction of the district as a whole.  Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../Hypothesis_Testing/11-steps.html).  Also comment on whether the attorney's specific concern was warranted.
 
 ----
 
