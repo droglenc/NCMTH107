@@ -23,16 +23,16 @@ library(NCStats)
 source("../../rhelpers/knitr_setup.R")
 library(captioner)
 tbls <- captioner(prefix="Table")
-tbls(name="ForestExpTable","Expected frequency of stands (assuming that Ho is true) by time since last fire in each of the four stand type populations.")
-tbls(name="ForestObsTable","Observed frequency of stands by time since last fire in each of the four stand type populations.")
-tbls(name="ForestResults","Chi-square test results for testing that the distribution of stands by time since last fire differs among stand types.")
-tbls(name="ForestPercTable","Row percentage table for time since last fire by stand type.")
 
 tbls(name="PopExpTable","Expected frequency of students (assuming that Ho is true) by stated goal for three grades.")
 tbls(name="PopObsTable","Observed frequency of students by stated goal for three grades.")
 tbls(name="PopResults","Chi-square test results for testing that the distribution of students by goals differs among grades.")
 tbls(name="PopPercTable","Row percentage table for goals by grade of the student.")
 
+tbls(name="ForestExpTable","Expected frequency of stands (assuming that Ho is true) by time since last fire in each of the four stand type populations.")
+tbls(name="ForestObsTable","Observed frequency of stands by time since last fire in each of the four stand type populations.")
+tbls(name="ForestResults","Chi-square test results for testing that the distribution of stands by time since last fire differs among stand types.")
+tbls(name="ForestPercTable","Row percentage table for time since last fire by stand type.")
 ```
 
 ----
@@ -69,7 +69,7 @@ chi1$expected
 chi1$observed
 ```
 
-<li>&chi;<sup>2</sup>=`r formatC(chi1$statistic,format="f",digits=4)` with `r chi1$parameter` df (`r tbls("ForestResults",display="cite")`).</li>
+<li>&chi;<sup>2</sup>=`r formatC(chi1$statistic,format="f",digits=4)` with `r chi1$parameter` df (`r tbls("PopResults",display="cite")`).</li>
 
 `r tbls("PopResults")`
 
@@ -77,7 +77,7 @@ chi1$observed
 chi1
 ```
 
-<li>p-value=`r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("ForestResults",display="cite")`).</li>
+<li>p-value=`r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("PopResults",display="cite")`).</li>
 <li>Do not reject H<sub>0</sub> because the p-value&gt;&alpha;.</li>
 <li>It appears that the distributions of goals by students does not differ by grade.  Analysis of the row percentage table (`r tbls("PopPercTable",display="cite")`) suggests that grades are the primary goal for each grade.</li>
 
