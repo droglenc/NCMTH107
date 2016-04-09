@@ -1,0 +1,94 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Goodness-of-Fit CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="preference-for-bottled-water" class="section level2">
+<h2>Preference for Bottled Water?</h2>
+<ol>
+<li>
+α=0.01.
+</li>
+<li>
+H<sub>A</sub>: “There is a preference among the water choices (i.e., the distribution of students will NOT follow a theoretical distribution of equal proportions among the water choices)” and H<sub>O</sub>: “There is no preference among the water choices (i.e., the distribution of students will follow a theoretical distribution of equal proportions among the water choices)”.
+</li>
+<li>
+Goodness-of-fit test because (i) one population (students) were sampled and (ii) the response variable (water choice) is categorial.
+</li>
+<li>
+This is quasi-experimental as the students were given a choice of only certain waters. The students were not obviously randomly selected (and were likely part of a voluntary response survey).
+</li>
+<li>
+All cells in the expected frequency table (Table 1) were greater than 5; the assumptions for a goodness-of-fit test have been met.
+</li>
+<p>Table 1: Expected frequency of students (assuming that Ho is true) by water type choice.</p>
+<pre><code>     tap Aquafina     Fiji     Sams 
+   26.75    26.75    26.75    26.75 </code></pre>
+<li>
+The observed frequency table is shown in Table 2.
+</li>
+<p>Table 2: Observed frequency of students by water type choice.</p>
+<pre><code>     tap Aquafina     Fiji     Sams 
+      51       18       17       21 </code></pre>
+<li>
+χ<sup>2</sup>=29.6355 with 3 df (Table 3).
+</li>
+<p>Table 3: Goodness-of-fit test results for testing that the distribution of students was the same among water type choices.</p>
+<pre><code>Chi-squared test for given probabilities with w.obs 
+X-squared = 29.6355, df = 3, p-value = 1.646e-06</code></pre>
+<li>
+p-value=&lt;0.00005 (Table 3).
+</li>
+<li>
+Reject H<sub>0</sub> because the p-value&lt;α.
+</li>
+<li>
+It appears that there is a preference for water type by the students. Analysis of the percentage table (Table 4) suggests that the students preferred the tap water.
+</li>
+<p>Table 4: Percentage table for water type choices by the students.</p>
+<pre><code>     tap Aquafina     Fiji     Sams      Sum 
+    47.7     16.8     15.9     19.6    100.0 </code></pre>
+<li>
+Not necessary with a chi-square test.
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>w.obs &lt;- c(tap=51,Aquafina=18,Fiji=17,Sams=21)
+w.exp &lt;- c(tap=1,Aquafina=1,Fiji=1,Sams=1)/4
+w.chi &lt;- chisq.test(w.obs,p=w.exp,rescale.p=TRUE,correct=FALSE)
+w.chi
+percTable(as.table(w.obs),digits=1)</code></pre>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

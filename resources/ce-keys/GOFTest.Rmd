@@ -1,0 +1,93 @@
+---
+title: "Answer Key"
+subtitle: "Goodness-of-Fit CE"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3
+    fig_width: 3.5
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/ce-keys/")
+source("../../rhelpers/rhelpers.R")
+modHTML("GOFTest")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+source("../../rhelpers/knitr_setup.R")
+library(captioner)
+tbls <- captioner(prefix="Table")
+
+tbls(name="WaterExpTable","Expected frequency of students (assuming that Ho is true) by water type choice.")
+tbls(name="WaterObsTable","Observed frequency of students by water type choice.")
+tbls(name="WaterResults","Goodness-of-fit test results for testing that the distribution of students was the same among water type choices.")
+tbls(name="WaterPercTable","Percentage table for water type choices by the students.")
+
+```
+
+----
+
+## Preference for Bottled Water?
+
+```{r WaterCalc, echo=FALSE, results='hide', fig.show='hide', warning=FALSE}
+w.obs <- c(tap=51,Aquafina=18,Fiji=17,Sams=21)
+w.exp <- c(tap=1,Aquafina=1,Fiji=1,Sams=1)/4
+w.chi <- chisq.test(w.obs,p=w.exp,rescale.p=TRUE,correct=FALSE)
+w.chi
+percTable(as.table(w.obs),digits=1)
+```
+
+<ol>
+<li>&alpha;=0.01.</li>
+<li>H<sub>A</sub>: "There is a preference among the water choices (i.e., the distribution of students will NOT follow a theoretical distribution of equal proportions among the water choices)" and H<sub>O</sub>: "There is no preference among the water choices (i.e., the distribution of students will follow a theoretical distribution of equal proportions among the water choices)".</li>
+<li>Goodness-of-fit test because (i) one population (students) were sampled and (ii) the response variable (water choice) is categorial.</li>
+<li>This is quasi-experimental as the students were given a choice of only certain waters.  The students were not obviously randomly selected (and were likely part of a voluntary response survey).</li>
+<li>All cells in the expected frequency table (`r tbls("WaterExpTable",display="cite")`) were greater than 5; the assumptions for a goodness-of-fit test have been met.</li>
+
+`r tbls("WaterExpTable")`
+
+```{r echo=FALSE}
+w.chi$expected
+```
+
+<li>The observed frequency table is shown in `r tbls("WaterObsTable",display="cite")`.</li>
+
+`r tbls("WaterObsTable")`
+
+```{r echo=FALSE}
+w.chi$observed
+```
+
+<li>&chi;<sup>2</sup>=`r formatC(w.chi$statistic,format="f",digits=4)` with `r w.chi$parameter` df (`r tbls("WaterResults",display="cite")`).</li>
+
+`r tbls("WaterResults")`
+
+```{r echo=FALSE}
+w.chi
+```
+
+<li>p-value=`r kPvalue(w.chi$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("WaterResults",display="cite")`).</li>
+<li>Reject H<sub>0</sub> because the p-value&lt;&alpha;.</li>
+<li>It appears that there is a preference for water type by the students.  Analysis of the percentage table (`r tbls("WaterPercTable",display="cite")`) suggests that the students preferred the tap water.</li>
+
+`r tbls("WaterPercTable")`
+
+```{r echo=FALSE}
+percTable(as.table(w.obs),digits=1)
+```
+
+<li>Not necessary with a chi-square test.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+<<WaterCalc>>
+```
+
+----
