@@ -17,7 +17,7 @@ css: /css/modules.css
 <p><a href="https://en.wikipedia.org/wiki/Mirabilis_jalapa">Four-o’clocks (<em>Mirabilis jalapa</em>)</a> are plants native to tropical America. Individual four-o’clocks can have red, white, or pink flowers. Flower color in this species is thought to be controlled by a single gene locus with two alleles experssing incomplete dominance, so that heterozygotes are pink-flowered, while homozygotes for one allele are white-flowered and homozygotes for the other allele are red-flowered <a href="https://en.wikipedia.org/wiki/Mirabilis_jalapa#Genetic_studies">(see this)</a>. According to <a href="https://en.wikipedia.org/wiki/Mendelian_inheritance">Mendelian genetic principles</a>, self-pollination of pink-flowered plants should produce progeny that have red, pink, and white flowers in a 1:2:1 ratio. A horticulturist allowed several pink-flowered plants to self-pollinate and produce 240 progeny with 55 that were red-flowered, 132 that were pink-flowered, and 53 that were white-flowered. Use the results to determine, at the 5% level, if the theoretical 1:2:1 ratio is upheld with these data.</p>
 <pre class="r"><code>&gt; obs &lt;- c(red=55,pink=132,white=53)
 &gt; exp.p &lt;- c(red=1/4,pink=2/4,white=1/4)
-&gt; chi1 &lt;- chisq.test(obs,p=exp.p,rescale=TRUE,correct=FALSE)
+&gt; chi1 &lt;- chisq.test(obs,p=exp.p,rescale.p=TRUE,correct=FALSE)
 &gt; chi1$expected</code></pre>
 <pre><code>  red  pink white 
    60   120    60 </code></pre>
@@ -33,6 +33,8 @@ red   0.229 0.181 0.286  0.25
 pink  0.550 0.487 0.612  0.50
 white 0.221 0.173 0.277  0.25</code></pre>
 </div>
+
+
 
 
 </div>
