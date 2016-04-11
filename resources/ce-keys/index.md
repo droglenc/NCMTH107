@@ -21,4 +21,4 @@ title: Class Exercise Keys
 1. [1-Sample t-Test](1_Sample_t.html)
 1. [2-Sample t-Test](2_Sample_t.html)
 1. [Chi-Square Test](ChiSquare.html)
-1. Goodness-of-Fit Test
+1. [Goodness-of-Fit Test](GOFTest.html)
