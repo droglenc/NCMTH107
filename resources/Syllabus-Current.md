@@ -85,12 +85,12 @@ An overall percentage score will be computed from the items and associated weigh
 <th>22%</th><th>22%</th><th>29%</th><th>5%</th><th>7%</th><th>15%</th></tr>
 
 <tr><th>Percent</th>
-<td><input type="text" name="QUIZ_SC" size="3" tabindex="1" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="HW_SC" size="3" tabindex="2" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="SIUR_SC" size="3" tabindex="3" onchange="calc_grade(this.form)"></td>
 <td><input type="text" name="MT1_SC" size="3" tabindex="4" onchange="calc_grade(this.form)"></td>
 <td><input type="text" name="MT2_SC" size="3" tabindex="5" onchange="calc_grade(this.form)"></td>
 <td><input type="text" name="FNL_SC" size="3" tabindex="6" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="HW_SC" size="3" tabindex="2" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="SIUR_SC" size="3" tabindex="3" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="QUIZ_SC" size="3" tabindex="1" onchange="calc_grade(this.form)"></td>
 </tr>
 
 <tr><th colspan="4">Overall Percentage: <input type="text" name="SCORE" size="4"></th>
