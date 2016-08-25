@@ -141,7 +141,7 @@ Three possibilities for extra credit are:
 
 ### Incomplete Grades
 
-Under Northland College policy (see "Incomplete Grades" under the "Grades" tab on [this page](https://my.northland.edu/student-policies/academic-policies/){:target="_blank"}), an incomplete grade will be given ONLY under extreme circumstances beyond your control, such as a major illness.  An incomplete grade will be given ONLY if you have successfully completed the entire course except for the final exam.
+Under [Northland College policy](https://my.northland.edu/student-policies/academic-policies/#grades){:target="_blank"} (scroll down to "Incomplete Grades"), an incomplete grade will be given ONLY under extreme circumstances beyond your control, such as a major illness.  An incomplete grade will be given ONLY if you have successfully completed the entire course except for the final exam.
 
 ----
 
@@ -168,7 +168,7 @@ Your conduct in class should revolve around the idea of being respectful of all 
 
 You will be asked to leave class if your behavior is disrespectful of others. 
 
-Finally, note that the College's Academic Integrity Statement & Policy will be followed in this course.  Please make sure that you are familiar with its content (under the "Academic Integrity Statement & Policy" tab [on this page](https://my.northland.edu/student-policies/academic-policies/){:target="_blank"}).
+Finally, note that the [College's Academic Integrity Statement & Policy](https://my.northland.edu/student-policies/academic-policies/#academic-integrity){:target="_blank"} will be followed in this course.  Please make sure that you are familiar with its content.
 
 ----
 
