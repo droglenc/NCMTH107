@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Statistical Concepts and Analysis
-subtitle: MTH107
+subtitle: MTH107 -- Fall, 2016
 css: /css/syllabus.css
 ---
 
@@ -9,8 +9,8 @@ css: /css/syllabus.css
 
 * Class [Description](#description) and [Learning Outcomes](#learning-outcomes)
 * [Instructors](#instructors) and [Tutors](#tutors)
-* [Grading](#grading) -- [Quizzes](#quizzes), [Homework](#homework), [SIU Reports](#statistics-in-use-reports), [Exams](#exams), [Extra Credit](#extra-credit)
-* [Participation and Conduct](#participation-and-conduct)
+* [Grading](#grading) -- [Quizzes](#quizzes), [Homework](#homework), [Exams](#exams), [Extra Credit](#extra-credit)
+* [Participation, Classroom Conduct, and Academic Integrity](#participation-classroom-conduct-and-academic-integrity)
 * [Accomodations](#accomodations)
 
 ----
@@ -36,31 +36,28 @@ At the end of this class you will be able to ...
 We will focus on the understanding of statistical concepts and proper interpretation of statistical results.
 
 
-## Instructors
+## Instructor
 
 <table class="tutors" width="90%">
-<tr><th><a href="http://derekogle.com" target="_blank">Dr. Derek H. Ogle</a><br>Professor of Mathematical Sciences<br> & Natural Resources</th><th style="vertical-align:top">Jodi Supanich<br>Math Specialist</th></tr>
-<tr><th><img src="../img/DerekOgle1.jpg"></th><th><img src="../img/JodiSupanich1.jpg"></th></tr>
-<tr><td>10-1130 Section</td><td>820-950 Section</td></tr>
-<tr style="vertical-align:top"><td>CSE239; 682-1300<br><a href="mailto:dogle@northland.edu">dogle@northland.edu</a><br>
-<a href="https://www.suggestionox.com/r/W16-107">Feedback / Suggestions</a></td><td>CSE229; 682-1857<br><a href="mailto:jsupanich@northland.edu">jsupanich@northland.edu</a></td></tr>
+<tr><th><a href="http://derekogle.com" target="_blank">Dr. Derek H. Ogle</a><br>Professor of Mathematical Sciences<br> & Natural Resources</th></tr>
+<tr><th><img src="../img/DerekOgle1.jpg"></th></tr>
+<tr><td>10-1130 Section</td></tr>
+<tr style="vertical-align:top"><td>CSE228; 682-1300<br><a href="mailto:dogle@northland.edu">dogle@northland.edu</a><br>
+<a href="https://www.suggestionox.com/r/W16-107">Feedback / Suggestions</a></td></tr>
 <tr style="vertical-align:top"><td>Office Hours:<br>
 Tues 12-1p<br>
 Thurs 10-11a<br>
-Fri 3-4p</td><td>Office Hours:<br>
-Mon 950-1050a<br>
-Wed 950-1050a<br>
-Fri 950-1050a</td></tr>
+Fri 3-4p</td></tr>
 </table>
 
 
 ## Tutors
 
 <table class="tutors" width="90%">
-<tr><th><img src="../img/Louis_W16.jpg"></th><th><img src="../img/Darian_W16.jpg"></th></tr>
-<tr><th>Louis Corcoran</th><th>Darian Erb</th></tr>
-<tr style="vertical-align:top"><td>Louis is a senior majoring in mathematics and chemistry. After graduating from Northland he plans to attend grad school for chemistry. This is his third year tutoring statistics so if you need any help, feel free to stop by!</td><td>Darian is a Math and Chemistry major from Lancaster, Pa.  He enjoys working out and helping fellow students understand mathematics.</td></tr>
-<tr style="vertical-align:top"><td>Tues 7-9p<br>W 1230-230p</td><td>Wed 7-9p<br>Thurs 12-2p</td></tr>
+<tr><th><img src="../img/Bronte_W16.jpg"></th><th><img src="../img/Adam_W16.jpg"></th></tr>
+<tr><th>Bronte Gross</th><th>Adam Gunnelson</th></tr>
+<tr style="vertical-align:top"><td>XXX</td><td>XXX</td></tr>
+<tr style="vertical-align:top"><td>XXX<br>XXX</td><td>XXX<br>XXX</td></tr>
 </table>
 
 
@@ -77,19 +74,17 @@ An overall percentage score will be computed from the items and associated weigh
 <th><a href="#exams">MT2</A></th>
 <th><a href="#exams">Final</A></th>
 <th><a href="#homework">HW</a></th>
-<th><a href="#statistics-in-use-reports">SIUR</a></th>
 <th><a href="#quizzes">Quiz</a></th>
 </tr>
 
 <tr><th>Weight</th>
-<th>22%</th><th>22%</th><th>29%</th><th>5%</th><th>7%</th><th>15%</th></tr>
+<th>20%</th><th>20%</th><th>30%</th><th>15%</th><th>15%</th></tr>
 
 <tr><th>Percent</th>
 <td><input type="text" name="MT1_SC" size="3" tabindex="4" onchange="calc_grade(this.form)"></td>
 <td><input type="text" name="MT2_SC" size="3" tabindex="5" onchange="calc_grade(this.form)"></td>
 <td><input type="text" name="FNL_SC" size="3" tabindex="6" onchange="calc_grade(this.form)"></td>
 <td><input type="text" name="HW_SC" size="3" tabindex="2" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="SIUR_SC" size="3" tabindex="3" onchange="calc_grade(this.form)"></td>
 <td><input type="text" name="QUIZ_SC" size="3" tabindex="1" onchange="calc_grade(this.form)"></td>
 </tr>
 
@@ -113,7 +108,9 @@ Exam dates are shown on the [Due Dates page](Dates-Current.html){:target="_blank
 
 ### Homework
 
-The text contains many review exercises throughout each chapter and a few homework problems at the end of each chapter.  Homework problems will be assigned when a concept module has been completed.  Homework problems will be handed in but will only be graded for completeness accordig to the following rubric.
+The text contains many review exercises throughout each chapter and a few homework problems at the end of each chapter.  A due date for the homework problems will be assigned when a concept module has been completed.  Each assignment should be neatly typed (on occasion you will be notified that some answers can be hand-written) and is **due at the beginning of the due date class period.  Late assignments will not be accepted.**
+
+Each homework assigment is worth a 10 points and will be graded in two parts.  The first part is an assessment of completeness according to the following rubric.
 
 <div class="container-fluid">
   <table class="table table-bordered">
@@ -126,15 +123,7 @@ The text contains many review exercises throughout each chapter and a few homewo
   </table>
 </div>
 
-Answer keys will be [posted online](homework-keys) so that you may check your work.
-
-### "Statistics in Use" Reports
-
-Three typed reports about the use of statistics in your everyday life.  Information for these reports may come from the use of statistics in the news, in your other classes, or other work that you have done.  These reports are due in the fourth, ninth, and thirteenth weeks of class (see  [Dates page](Dates-Current.html){:target="_blank"}).
-
-If you report on a news item, then you should discuss the background of the information in the report, the use of statistics, how the statistics relate to what you have learned in class, how the statistics were presented, how you feel about that presentation, and any questions that you may have.  The FOCUS of your report should be on the statistics used in the news item (not just the news item).  You may not use the same type of news item for more than one report (e.g., you cannot report on presidential race polls more than once).
-
-If you report on statistics used in another class, then you should discuss the background of the project where you used statistics, what the statistics were used for (i.e., purpose), a presentation of your statistical work in the report (i.e., findings), how the statistics relate to what you've learned in this class, and any questions that you may have.  Again, the FOCUS should be on the statistics that you used.
+The second part, also worth 5 points, is an assessment of the quality of the work.  In this part, only some (approximately half) of the questions will be assessed.  Answer keys will be [posted online](homework-keys) so that you may check your work.
 
 ### Quizzes
 
@@ -142,22 +131,20 @@ A short quiz will be given in the **FIRST 5-10 minutes of EVERY** class period. 
 
 ### Extra Credit
 
-Extra credit may be obtained by completing a two-part typed reflection on each midterm exam.  The two parts are as follows:
+Three possibilities for extra credit are:
 
-* **Correction**: Correct answers for each question you missed along with *an explanation of why the answer you originally provided was not correct and why the correct answer is correct.*  You will receive no credit for simply correcting your answer, for providing another incorrect answer, or saying "*I have no idea why I put that answer*," "*I simply wrote the wrong answer*," "*I don't know what I was thinking,*" or any other nonsensical reason.  You must address every question you missed to receive full credit for this portion.  Your answers must be typed and easy to find (i.e., neatly organized by question number) and you *must include the original exam*.  This portion is worth 2/3rd of the overall value of the exam reflection.
-* **Reflection**: Your *thoughtful* reflections about the exam, including what you did well on the exam (and why), what you did not do so well on the exam (and why), what strategy you used to prepare for the exam, how you will change your strategy to prepare for the next exam, and whether you considered the exam to be fair or not.  This portion should be at least one page but not more than two pages and is worth 1/3rd of the overall value of the exam reflection.
+1. **Exam Reflections** -- Complete a two-part typed reflection on each midterm exam.  The **first part** is correct answers for each question you missed, along with *an explanation of why the answer you originally provided was not correct and why the correct answer is correct.*  You will receive no credit for simply correcting your answer, for providing another incorrect answer, or saying "*I have no idea why I put that answer*," "*I simply wrote the wrong answer*," "*I don't know what I was thinking,*" or any other nonsensical reason.  You must address every question you missed to receive full credit for this portion.  The **second part** is a *thoughtful* reflection about the exam including what you did well on the exam (and why), what you did not do so well on the exam (and why), what strategy you used to prepare for the exam, how you will change your strategy to prepare for the next exam, and whether you considered the exam to be fair or not.  Your reflection must be typed and easy to read (e.g., neatly organize your corrections by question number) and you *must include the original exam*.  A perfect reflection will add 10% to your final exam score (but the final score cannot exceed 100%) with 2/3rd of the overall grade from the first part.  Reflections are due one week after the corrected exam is returned (late reflections will not be accepted).
 
-A perfect exam reflection will add 10% to your final exam score (but the final score cannot be greater than 100%).
-
-In addition, up to 5% extra credit added to your final grade can be earned by completing a [Class Project](project.html) (note that the topic of your project must be approved by me).
+1. **"Statistics in Use" Reports** - Report on the use of statistics in your life -- e.g., from the news, your other classes, or other work that you have done.  If you report on a news item, then you should discuss the background of the information in the report, the use of statistics, how the statistics relate to what you have learned in class, how the statistics were presented, how you feel about that presentation, and any questions that you may have.  If you report on statistics used in another class, then you should discuss the background of the project where you used statistics, what the statistics were used for (i.e., purpose), a presentation of your statistical work in the report (i.e., findings), how the statistics relate to what you've learned in this class, and any questions that you may have.  The FOCUS of your report should be on the statistics used in the news item or class (not just the news item or the topic in the other class).  Each report should be typed, at least one page (single-spaced), and include the item being reported on.  Your report will be graded on how well it is and written and how well you relate the item to class.  You may complete up to two reports for as much as 3% extra credit on your final grade.  Note that you may not use the same type of news item for more than one report (e.g., you cannot report on presidential race polls more than once).
+1. **Class Project**. -- Complere a [Class Project](project.html) to earn up to 5% extra credit on your final grade.  Note that the topic of your project and the procedures you will follow to collect data must be approved by me.
 
 
 ### Incomplete Grades
 
-Under Northland College policy, an incomplete grade will be given ONLY under extreme circumstances beyond your control, such as a major illness.  An incomplete grade will be given ONLY if you have successfully completed the entire course except for the final exam.
+Under Northland College policy (see "Incomplete Grades" under the "Grades" tab on [this page](https://my.northland.edu/student-policies/academic-policies/)), an incomplete grade will be given ONLY under extreme circumstances beyond your control, such as a major illness.  An incomplete grade will be given ONLY if you have successfully completed the entire course except for the final exam.
 
 
-## Participation and Conduct
+## Participation, Classroom Conduct, and Academic Integrity
 
 This course is taught in the framework of active-learning, peer-instruction, and inquiry-based pedagogies.  This means that you will be asked to prepare for the class period, answer questions based on your reading, work in small groups with others, and participate in small- and large-group discussions.  Your participation in these activities is critical to your learning and success in this course, but also to the overall success of the course.
 
@@ -167,7 +154,7 @@ As a general rule-of-thumb ([here](http://www.collegeparents.org/members/resourc
 
 If you feel that you are spending an inordinate amount of time on some assignments because you are "stuck," then start your assignments early so that you can stop (and do other things) and make plans to see the [tutors](#tutors) or [instructor](#instructor) for help.
 
-Your conduct in class should revolve around the idea of being respectful of all others in the class.  Adhering to the following policies should be considered the minimum requirements to being respectful of others:
+Your conduct in class should revolve around the idea of being respectful of all others in the class.  Adhering to the following behaviors should be considered the minimum requirements to being respectful of others:
 
 * Arrive to class on time.  If you arrive late, then take the first available seat as quietly as possible.
 * Do not bring friends, children, pets, meals, or anything else to class that should not be there.
@@ -178,6 +165,7 @@ Your conduct in class should revolve around the idea of being respectful of all 
 
 You will be asked to leave class if your behavior is disrespectful of others. 
 
+Finally, note that the College's Academic Integrity Statement & Policy will be followe in this course.  Please make sure you are familiar with its content (under the "Academic Integrity Statement & Policy" tab [on this page](https://my.northland.edu/student-policies/academic-policies/)).
 
 ## Accomodations
-Students in need of academic accommodation should contact [Kathleen Skoraczewski](mailto:kskoraczewski@northland.edu), Campus Counselor	and Disabilities Service Coordinator, ext. 1369, Ponzio Center Rm. 232.
+It is the policy and practice of Northland College to create inclusive and accessible learning environments consistent with federal and state law.  *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course.  *If you have not yet established services* through OAR, but have a condition that requires accommodations (e.g., mental health, attention-related, learning, vision, hearing, physical or health impacts), you should contact OAR (Ponzio 231 or 715-682-1387) or [Donna Jones-Ilsley, Coordinator of Student Accessibility Resources](mailto:djones-ilsley@northland.edu).
