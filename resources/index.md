@@ -16,7 +16,9 @@ title: Resources
     * Symbols
 
 ## Computer
-1. [**Data Files** (on GitHub)](https://github.com/droglenc/NCData){:target="_blank"}
+1. **Data Files**
+    * [Specific to MTH107](data_107)
+    * [Other files (on GitHub)](https://github.com/droglenc/NCData){:target="_blank"}
 1. **Software Installation Links**
     * R -- [Windows](http://derekogle.com/IFAR/supplements/installations/InstallRWin.html){:target="_blank"} / [Mac OS](http://derekogle.com/IFAR/supplements/installations/InstallRMac.html){:target="_blank"}
     * RStudio -- [Windows](http://derekogle.com/IFAR/supplements/installations/InstallRStudioWin.html){:target="_blank"} / [Mac OS](http://derekogle.com/IFAR/supplements/installations/InstallPackagesRMac.html){:target="_blank"}
