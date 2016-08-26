@@ -27,10 +27,10 @@ set_parent('IntroStats.Rnw')
 \defn{Bivariate}{Data where two variables have been measured on the same individuals.}
 
 \section{Quantitative Bivariate EDA} \label{sect:QbivEDA}
-Data on the \var{weight} (lbs) and highway miles per gallon (stored as \var{HMPG}) for 93 cars from the 1993 model year will be used as an example throughout this section (data from \cite{Lock1993}).  Ultimately, the relationship between highway MPG and the weight of a car will be examined.  These are bivariate data because measurements of both variables (\var{HMPG} and \var{Weight}) are recorded for each individual (i.e., a car).  The data are stored in \href{https://sites.google.com/site/ncstats/data/93cars.txt}{93cars.txt}.  The following commands read the data into R and lists the \var{HMPG} and \var{weight} values for six randomly selected cars\footnote{The vector in the second argument to \R{view()} is used to show only the two variables of interest.}.
+Data on the \var{weight} (lbs) and highway miles per gallon (stored as \var{HMPG}) for 93 cars from the 1993 model year will be used as an example throughout this section (data from \cite{Lock1993}).  Ultimately, the relationship between highway MPG and the weight of a car will be examined.  These are bivariate data because measurements of both variables (\var{HMPG} and \var{Weight}) are recorded for each individual (i.e., a car).  The data are stored in \href{https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv}{93cars.csv}.  The following commands read the data into R and lists the \var{HMPG} and \var{weight} values for six randomly selected cars\footnote{The vector in the second argument to \R{headtail()} is used to show only the two variables of interest.}.
 <<>>=
-cars93 <- read.table("data/93cars.txt",header=TRUE)
-view(cars93,which=c("HMPG","Weight"))
+cars93 <- read.csv("data/93cars.csv")
+headtail(cars93,which=c("HMPG","Weight"))
 @
 
 \subsection{Scatterplots} \index{Scatterplot!Construction}
@@ -368,7 +368,7 @@ The following overall bivariate summary for the relationship between highway MPG
 \textit{A 2001 report from the \href{http://www.eia.doe.gov/}{Energy Information Administration} of the Department of Energy details the total consumption of a variety of energy sources by state in 2001.  Construct a proper EDA for the relationship between total petroleum and coal consumption (in trillions of BTU).}
 \end{quote}
 <<scatNRG1, echo=FALSE, fig.cap="Scatterplot of the total consumption of petroleum versus the consumption of coal (in trillions of BTU) by all 50 states and the District of Columbia.  The points shown in the left with total petroleum values greater than 3000 trillion BTU are deleted in the right plot.">>=
-NRG <- read.table("data/NRG_Consump_2001.txt",header=TRUE)
+NRG <- read.csv("data/NRG_Consump_2001.csv")
 plot(TotalPet~Coal,data=NRG,pch=16,xlab="Coal",ylab="Total Petroleum (trillion BTU)")
 NRG1 <- NRG[-c(5,44),]
 plot(TotalPet~Coal,data=NRG1,pch=16,xlab="Coal",ylab="Total Petroleum (trillion BTU)")
@@ -399,11 +399,11 @@ legend("topleft",legend=paste("r=",round(cor(meuse$copper,meuse$cadmium),3),sep=
     \includegraphics[width=3in]{Figs/ScatVital1.png}
   \end{center}
 
-  \item \label{revex:qbEDAAllen} \rhw{} \cite{Allenetal1997} investigated the impact of the density of red-imported fire ants (RIFA) on the recruitment of white-tailed deer fawns (an index of does to fawns).  A modified version of their data is recorded in \href{https://sites.google.com/site/ncstats/data/rifa.txt}{rifa.txt}.  Use this information to write a brief description of this bivariate relationship. \ansref{ans:qbEDAAllen}
+  \item \label{revex:qbEDAAllen} \rhw{} \cite{Allenetal1997} investigated the impact of the density of red-imported fire ants (RIFA) on the recruitment of white-tailed deer fawns (an index of does to fawns).  A modified version of their data is recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/RIFA.csv}{RIFA.csv}.  Use this information to write a brief description of this bivariate relationship. \ansref{ans:qbEDAAllen}
 
   \item \label{revex:qbEDAMPG} Researchers at Chevrolet attempted to determine the relationship between gas mileage (MPG) of Luminas in the city (CITY) and on the highway (HIGHWAY).  Their results are shown below.  Use this information to write a brief description of this bivariate relationship.\ansref{ans:qbEDAMPG}
 <<ScatLumina, echo=FALSE, results='hide', include=FALSE, fig.width=3.5, fig.height=3.5, par1=TRUE>>=
-lum <- read.table("data/Lumina.txt",header=TRUE)
+lum <- read.csv("data/Lumina.csv")
 plot(CMPG~HMPG,data=lum,pch=16,xlab="Highway MPG",ylab="City MPG")
 legend("topleft",legend=paste("r=",round(cor(lum$CMPG,lum$HMPG),3),sep=""),bty="n")
 @
@@ -411,11 +411,11 @@ legend("topleft",legend=paste("r=",round(cor(lum$CMPG,lum$HMPG),3),sep=""),bty="
   \includegraphics[width=3in]{Figs/ScatLumina-1}
 \end{center}
 
-  \item \label{revex:qbEDAMlad} \rhw{} \cite{Mladenoffetal1997} estimated the territory size (km$^{2}$) of wolf (\textit{Canis lupus}) packs and the density of whitetail deer (number/km$^{2}$; \textit{Odocoileus virginianus}) in the same areas in northern Wisconsin.  Their data is recorded in \href{https://sites.google.com/site/ncstats/data/Wolves2.txt}{Wolves2.txt}.  Load these data into R and generate results to write a brief description of this bivariate relationship. \ansref{ans:qbEDAMlad}
+  \item \label{revex:qbEDAMlad} \rhw{} \cite{Mladenoffetal1997} estimated the territory size (km$^{2}$) of wolf (\textit{Canis lupus}) packs and the density of whitetail deer (number/km$^{2}$; \textit{Odocoileus virginianus}) in the same areas in northern Wisconsin.  Their data is recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Wolves2.csv}{Wolves2.csv}.  Load these data into R and generate results to write a brief description of this bivariate relationship. \ansref{ans:qbEDAMlad}
 
-  \item \label{revex:qbEDAPerch} \rhw{} The Park Management team of Kejimkujik National Park, Nova Scotia examined the relationship between the length and weight of yellow perch (\emph{Perca flavescens}) captured form Grafton Lake in the park in 2000 following the removal of a dam \citep{Brylinsky2001}.  Their data is stored in \href{https://sites.google.com/site/ncstats/data/PerchGL.txt}{PerchGL.txt}.  Load these data into R, isolate just the results from 2000 (i.e., use \R{Subset()}), and generate results to describe this bivariate relationship.  \ansref{ans:qbEDAPerch}
+  \item \label{revex:qbEDAPerch} \rhw{} The Park Management team of Kejimkujik National Park, Nova Scotia examined the relationship between the length and weight of yellow perch (\emph{Perca flavescens}) captured form Grafton Lake in the park in 2000 following the removal of a dam \citep{Brylinsky2001}.  Their data is stored in \href{https://raw.githubusercontent.com/droglenc/NCData/master/PerchGL.csv}{PerchGL.csv}.  Load these data into R, isolate just the results from 2000 (i.e., use \R{filterD()}), and generate results to describe this bivariate relationship.  \ansref{ans:qbEDAPerch}
 
-  \item \label{revex:qbEDACrckt} \rhw{} It has been said that you can roughly estimate the temperature from the number of cricket chirps heard.  To determine if this relationship existed, an entomologist recorded the number of chirps in a 15-second interval by crickets held at different temperatures.  The researcher's data is recorded in \href{https://sites.google.com/site/ncstats/data/Chirps.txt}{Chirps.txt}.  Load these data into R and generate results to write a brief description of this bivariate relationship. \ansref{ans:qbEDACrckt}
+  \item \label{revex:qbEDACrckt} \rhw{} It has been said that you can roughly estimate the temperature from the number of cricket chirps heard.  To determine if this relationship existed, an entomologist recorded the number of chirps in a 15-second interval by crickets held at different temperatures.  The researcher's data is recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Chirps.csv}{Chirps.csv}.  Load these data into R and generate results to write a brief description of this bivariate relationship. \ansref{ans:qbEDACrckt}
 
   \item \label{revex:qbEDArChos1} Five of the scatterplots below correspond to the following correlation coefficients --- 0.89, -0.48, -0.92, 0.56, 0.00. Identify the scatterplot that each correlation corresponds to. Some scatterplots will not be used. \ansref{ans:qbEDArChos1}
 \begin{center}
@@ -466,11 +466,11 @@ Throughout this section we will consider the following data from the General Soc
   \item What is your highest degree earned? [choices -- ``less than high school diploma'', ``high school diploma'', ``junior college'', ``bachelors'', or ``graduate''; labeled as \var{degree}]
   \item How willing would you be to accept cuts in your standard of living in order to protect the environment? [choices -- ``very willing'', ``fairly willing'', ``neither willing nor unwilling'', ``not very willing'', or ``not at all willing''; labeled as \var{grnsol}]
 \end{Itemize}
-These data, stored in \href{https://sites.google.com/site/ncstats/data/GSSWill2Pay.txt}{GSSWill2Pay.txt}, are loaded into R, with the structure and a random six individuals were observed with
+These data, stored in \href{https://raw.githubusercontent.com/droglenc/NCData/master/GSSWill2Pay.csv}{GSSWill2Pay.csv}, are loaded into R, with the structure and a random six individuals were observed with
 <<>>=
-gss <- read.table("data/GSSWill2Pay.txt",header=TRUE)
+gss <- read.csv("data/GSSWill2Pay.csv")
 str(gss)
-view(gss)
+headtail(gss)
 @
 The \var{degree} and \var{grnsol} variables are both \emph{ordinal} categorical variables.  By default R orders the levels for a factor variable alphabetically.  Alphabetically is not typically the ``natural order'' of the levels.  Thus, it is important to identify the order of levels for each ordinal variable by submitting the variable name to \R{levels()}.  For example, the levels for the \var{degree} and \var{grnsol} variable are seen with
 <<>>=
@@ -705,10 +705,10 @@ percTable(tbl1,margin=2,digits=1)
 
   \item \label{revex:cbEDASeal2r} Construct a row-, column-, and table-percentage table from the frequency table for the seal data in Review Exercise \ref{revex:cbEDASeal1r}. \ansref{ans:cbEDASeal2r}
 
-  \item \label{revex:cbEDAArsenic4} Use the \href{https://sites.google.com/site/ncstats/data/Arsenic.txt}{Arsenic.txt} data introduced in Review Exercise \ref{revex:EDAArsenic1} to construct a bivariate EDA for the drinking and usage variables. \ansref{ans:cbEDAArsenic4}
+  \item \label{revex:cbEDAArsenic4} Use the \href{https://raw.githubusercontent.com/droglenc/NCData/master/Arsenic.csv}{Arsenic.csv} data introduced in Review Exercise \ref{revex:EDAArsenic1} to construct a bivariate EDA for the drinking and usage variables. \ansref{ans:cbEDAArsenic4}
 
 \begin{minipage}{\textwidth}
-  \item \label{revex:cbEDAGSS2}  In the General Social Survey (GSS), two questions were asked -- ``How often do you make a special effort to sort glass or cans or plastic or papers and so on for recycling?'' and ``In general, do you think that a rise in the world's temperature caused by the greenhouse effect, is extremely likely, very likely, somewhat likely, not very likely, or not at all likely?''.  Both of these variables are recorded in the \href{https://sites.google.com/site/ncstats/data/GSSEnviroQues.txt}{GSSEnviroQues} file.  Use these data to answer the questions below. \ansref{ans:cbEDAGSS2}
+  \item \label{revex:cbEDAGSS2}  In the General Social Survey (GSS), two questions were asked -- ``How often do you make a special effort to sort glass or cans or plastic or papers and so on for recycling?'' and ``In general, do you think that a rise in the world's temperature caused by the greenhouse effect, is extremely likely, very likely, somewhat likely, not very likely, or not at all likely?''.  Both of these variables are recorded in the \href{https://raw.githubusercontent.com/droglenc/NCData/master/GSSEnviroQues.csv}{GSSEnviroQues.csv} file.  Use these data to answer the questions below. \ansref{ans:cbEDAGSS2}
   \begin{Enumerate}
     \item What percentage of all respondents recycle often and feel that it is very likely that the greenhouse effect has caused the rise in world's temperature?
     \item What percentage of those respondents that recycle often feel that it is very likely that the greenhouse effect has caused the rise in world's temperature?
@@ -718,7 +718,7 @@ percTable(tbl1,margin=2,digits=1)
   \end{Enumerate}
 \end{minipage}
 
-  \item \label{revex:cbEDAZoo1} \rhw{} The data in \href{}{Zoo1.csv} contains a list of animals found in several different zoos\footnote{These data are stored in a ``comma separated values'' (CSV) file rather than a ``tab delimited text'' file.  Thus, these data must be loaded into R with \R{read.csv()} rather than \R{read.table()}.  The arguments to \R{read.csv()} are the same as \R{read.table()}.}.  In addition, each animal was classified into broad ``type'' categories (``mammal'', ``bird'', and ``amph/rep'').  The researchers that collected these data wanted to examine if the distribution of broad animal types differed among zoos.  Use these data to answer the questions below.\ansref{ans:cbEDAZoo1}
+  \item \label{revex:cbEDAZoo1} \rhw{} The data in \href{}{Zoo1.csv} contains a list of animals found in several different zoos\footnote{These data are stored in a ``comma separated values'' (CSV) file rather than a ``tab delimited text'' file.  Thus, these data must be loaded into R with \R{read.csv()} rather than \R{read.csv()}.  The arguments to \R{read.csv()} are the same as \R{read.csv()}.}.  In addition, each animal was classified into broad ``type'' categories (``mammal'', ``bird'', and ``amph/rep'').  The researchers that collected these data wanted to examine if the distribution of broad animal types differed among zoos.  Use these data to answer the questions below.\ansref{ans:cbEDAZoo1}
   \begin{Enumerate}
     \item What is the ``response'' variable in this analysis?
     \item What percentage of all animals were birds?
@@ -734,7 +734,7 @@ percTable(tbl1,margin=2,digits=1)
 
   \item \label{hwprob:qbEDACarr} \cite{Carroll1975} examined the relationship between per capita consumption of animal fat (g/day; AnimFatI) and age-adjusted death rate from breast cancer (AgeAdjDe) for 39 countries.  Use the following results from her data to describe the bivariate relationship between these two variables.
 <<ScatCancerFat, echo=FALSE, results='hide', include=FALSE, fig.width=3.5, fig.height=3.5, par1=TRUE>>=
-cf <- read.table("data/CancerFat.txt",header=TRUE)
+cf <- read.csv("data/CancerFat.csv")
 plot(adjdeath~fatintake,data=cf,pch=16,xlab="Fat Intake (g/day)",ylab="Age-Adjusted Death Rate")
 r <- round(cor(cf$adjdeath,cf$fatintake),3)
 legend("topleft",legend=paste("r=",round(cor(cf$adjdeath,cf$fatintake),3),sep=""),bty="n")
@@ -743,7 +743,7 @@ legend("topleft",legend=paste("r=",round(cor(cf$adjdeath,cf$fatintake),3),sep=""
   \includegraphics[width=2in]{Figs/ScatCancerFat-1}
 \end{center}
 
-  \item \label{hwprob:qbEDAFishCr} \rhw{} The instantaneous discharge (cubic feet per second) and total suspended sediments (in milligrams per liter) were recorded on 28 dates for North Fish Creek near Ashland, WI\footnote{The original data are available from \href{http://nwis.waterdata.usgs.gov/wi/nwis/qwdata/?site_no=040263491}{here}.}.  These data are found in \href{https://sites.google.com/site/ncstats/data/FIshCrNWaterQuality.txt}{FishCrNWaterQuality.txt}.  Load these data into R and produce results to describe the bivariate relationship between these two variables.
+  \item \label{hwprob:qbEDAFishCr} \rhw{} The instantaneous discharge (cubic feet per second) and total suspended sediments (in milligrams per liter) were recorded on 28 dates for North Fish Creek near Ashland, WI\footnote{The original data are available from \href{http://nwis.waterdata.usgs.gov/wi/nwis/qwdata/?site_no=040263491}{here}.}.  These data are found in \href{https://raw.githubusercontent.com/droglenc/NCData/master/FishCrNWaterQuality.csv}{FishCrNWaterQuality.csv}.  Load these data into R and produce results to describe the bivariate relationship between these two variables.
 
   \item \label{hwprob:cbEDABlight} \rhw{} Researchers conducted an experiment on 24 trees subject to a fire blight disease.  Each tree was treated with one of several treatments (A=no action (control), B=removal of the affected branches, C=spraying of foliage with an antibiotic and removal of the affected branches).  Each tree was then recorded according to one of three outcomes (1=tree died in the same year that the disease was noticed, 2=tree died after 2-4 years, 3=tree died after 4 years).  The data below are the treatment and outcomes for each of the 24 trees.  Load these data into R and compute results that can be used to answer the questions below.
 

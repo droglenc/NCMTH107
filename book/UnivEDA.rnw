@@ -56,10 +56,10 @@ EQx <- xtable(matrix(EQ,nrow=1,byrow=TRUE),digits=1,caption="Richter scale recor
 print(EQx,caption.placement="top",hline.after=c(0,nrow(EQx)),include.rownames=FALSE,include.colnames=FALSE)
 @
 
-The third data set is the number of days of ice cover at ice gauge station 9004 in Lake Superior (data originally\footnote{This data was found at the \href{http://www.seattlecentral.org/qelp/}{Quantitative Environmental Learning Project website}.} from the \href{http://www.nsidc.org/}{National Snow and Ice Data Center} and found in the \href{https://sites.google.com/site/ncstats/data/LakeSuperiorIce.txt}{LakeSuperiorIce.txt} data file on the class webpage\footnote{See \sectref{sect:RAltData} for more description of how to access these data.}).  One variable in this file, \var{days}, is the total number of days of ice cover at this site for nearly every ice season from 1955-56 to 1996-97 (three years were missing).  These data are loaded and observed with
+The third data set is the number of days of ice cover at ice gauge station 9004 in Lake Superior (data originally\footnote{This data was found at the \href{http://www.seattlecentral.org/qelp/}{Quantitative Environmental Learning Project website}.} from the \href{http://www.nsidc.org/}{National Snow and Ice Data Center} and found in the \href{https://raw.githubusercontent.com/droglenc/NCData/master/LakeSuperiorIce.csv}{LakeSuperiorIce.csv} data file on the class webpage\footnote{See \sectref{sect:RAltData} for more description of how to access these data.}).  One variable in this file, \var{days}, is the total number of days of ice cover at this site for nearly every ice season from 1955-56 to 1996-97 (three years were missing).  These data are loaded and observed with
 <<echo=-3>>=
-LSI <- read.table("data/LakeSuperiorIce.txt",header=TRUE)
-view(LSI)
+LSI <- read.csv("data/LakeSuperiorIce.csv")
+headtail(LSI)
 sumLSI <- Summarize(~days,data=LSI)
 @
 
@@ -668,7 +668,7 @@ boxplot(days~fdecade,data=LSI,ylab="Days of Ice Cover",xlab="Decade")
 
 \vspace{100pt}
 \begin{exsection}
-  \item \label{revex:EDAArsenic1} \rhw{} Arsenic concentrations were measured in the well water and in the toe nails of 21 people with home wells.  Also recorded were the person's age, sex, and qualitative measurements of usage for drinking and cooking.  The data are found in \href{https://sites.google.com/site/ncstats/data/Arsenic.txt}{Arsenic.txt}.  Load these data into R to answer the questions below. \ansref{ans:EDAArsenic1}
+  \item \label{revex:EDAArsenic1} \rhw{} Arsenic concentrations were measured in the well water and in the toe nails of 21 people with home wells.  Also recorded were the person's age, sex, and qualitative measurements of usage for drinking and cooking.  The data are found in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Arsenic.csv}{Arsenic.csv}.  Load these data into R to answer the questions below. \ansref{ans:EDAArsenic1}
   \begin{Enumerate}
     \item Construct a univariate EDA for the well water measurements.
     \item Construct a univariate EDA for the measurements of arsenic in the toe nails.
@@ -740,9 +740,9 @@ Sex   Perc          Year   Perc
 \warn{Percentage tables show the percentage of all individuals in each category (or level) of a categorical variable.}
 
 \subsection{Tables in R}
-The General Sociological Survey (GSS) is a very large survey that has been administered 25 times since 1972.  The basic purpose of the GSS is to gather data on contemporary American society in order to monitor and explain trends in attitudes, behaviors, and attributes.  One question that was asked in a recent GSS was, ``How often do you make a special effort to sort glass or cans or plastic or papers and so on for recycling?''  These data are found in the \var{recycle} variable of the \href{https://sites.google.com/site/ncstats/data/GSSEnviroQues.txt}{GSSEnviroQues.txt} file.  These data are loaded and observed with
+The General Sociological Survey (GSS) is a very large survey that has been administered 25 times since 1972.  The basic purpose of the GSS is to gather data on contemporary American society in order to monitor and explain trends in attitudes, behaviors, and attributes.  One question that was asked in a recent GSS was, ``How often do you make a special effort to sort glass or cans or plastic or papers and so on for recycling?''  These data are found in the \var{recycle} variable of the \href{https://raw.githubusercontent.com/droglenc/NCData/master/GSSEnviroQues.csv}{GSSEnviroQues.csv} file.  These data are loaded and observed with
 <<>>=
-GSS <- read.table("data/GSSEnviroQues.txt",header=TRUE)
+GSS <- read.csv("data/GSSEnviroQues.csv")
 str(GSS)
 levels(GSS$recycle)
 @
@@ -795,7 +795,7 @@ barplot(tabRecycle,ylab="Frequency",xlab="Recycle Response")
 @
 
 \begin{exsection}
-  \item \label{revex:EDAArsenic2} \rhw{} Use the \href{https://sites.google.com/site/ncstats/data/Aresenic.txt}{Arsenic.txt} data in Exercise \ref{revex:EDAArsenic1} to answer the questions below. \ansref{ans:EDAArsenic2}
+  \item \label{revex:EDAArsenic2} \rhw{} Use the \href{https://raw.githubusercontent.com/droglenc/NCData/master/Arsenic.csv}{Arsenic.csv} data in Exercise \ref{revex:EDAArsenic1} to answer the questions below. \ansref{ans:EDAArsenic2}
   \begin{Enumerate}
     \item Construct a univariate EDA for the assessment of drinking water usage.
     \item Construct a univariate EDA for the assessment of cooking water usage.
@@ -879,7 +879,7 @@ print(xtable(mstat1,digits=2,caption="Descriptive statistics of mouse water cons
 R commands:
 <<eval=FALSE>>=
 setwd("c:/data/")
-mc <- read.table("MouseData.txt",header=TRUE)
+mc <- read.csv("MouseData.csv")
 str(mc)
 Summarize(~consump,data=mc,digits=2)
 hist(~consump,data=mc,xlab="Water Consumption (mm)",main="")
@@ -915,7 +915,7 @@ print(xtable(cstat1,digits=2,caption="Descriptive statistics of crayfish tempera
 R commands:
 <<eval=FALSE>>=
 setwd("c:/data/")
-cray <- read.table("Crayfish.txt",header=TRUE)
+cray <- read.csv("Crayfish.csv")
 str(cray)
 brks <- seq(15.9,31.9,2)
 hist(~temp,data=cray,breaks=brks,main="",xlab="Preferred Temperature",
@@ -926,11 +926,11 @@ Summarize(~temp,data=cray,digits=2)
 
 \subsubsection{Mixture Seed Count}
 \begin{quote}
-\textit{A bag of seeds was purchased for seeding a recently constructed wetland.  The purchaser wanted to determine if the percentage of seeds in four broad categories -- ``grasses'', ``sedges'', ``wildflowers'', and ``legumes'' -- was similar to what the seed manufacturer advertised.  The purchaser examined a 0.25-lb sample of seeds from the bag and recorded the results in \href{https://sites.google.com/site/ncstats/data/WetlandSeeds.txt}{WetlandSeeds.txt}.  Use these data to describe the distribution of seed counts into the four broad categories.}
+\textit{A bag of seeds was purchased for seeding a recently constructed wetland.  The purchaser wanted to determine if the percentage of seeds in four broad categories -- ``grasses'', ``sedges'', ``wildflowers'', and ``legumes'' -- was similar to what the seed manufacturer advertised.  The purchaser examined a 0.25-lb sample of seeds from the bag and recorded the results in \href{https://raw.githubusercontent.com/droglenc/NCData/master/WetlandSeeds.csv}{WetlandSeeds.csv}.  Use these data to describe the distribution of seed counts into the four broad categories.}
 \end{quote}
 
 <<echo=FALSE, results='hide'>>=
-ws <- read.table("data/WetlandSeeds.txt",header=TRUE)
+ws <- read.csv("data/WetlandSeeds.csv")
 wtbl <- xtabs(~type,data=ws)
 wptbl <- percTable(wtbl)
 @
@@ -950,7 +950,7 @@ print(xtable(wptbl2,digits=1,caption="Percentage distribution of wetland seeds b
 \begin{minipage}{\textwidth}
 R commands:
 <<eval=FALSE>>=
-ws <- read.table("data/WetlandSeeds.txt",header=TRUE)
+ws <- read.csv("data/WetlandSeeds.csv")
 str(ws)
 wtbl <- xtabs(~type,data=ws)
 percTable(wtbl,digits=1)
@@ -965,26 +965,26 @@ barplot(wptbl,ylab="Percentage of Total Seeds",xlab="Seed Type")
     \end{Verbatim}
   \item \label{revex:quEDACP} \rhw{} Construct a proper EDA for the creatine phosphokinase data presented in Exercise \ref{revex:quEDACreatPhosph}.  Make sure to defend your choice of numerical summaries.  \ansref{ans:quEDACP}
   \item \label{revex:quEDADJTI} \rhw{} \hspace{12pt} The Dow Jones Travel Index tracks the cost of hotel and car-rental rates in 20 major cities.  For its May 7, 1996, survey the following rates were given for the 20 cities: 152, 180, 167, 119, 115, 113, 119, 135, 140, 126, 114, 133, 205, 104, 149, 124, 127, 161, 106, and 179.  Thoroughly describe the distribution of these data.  [\textit{Note: You can use fewer than the ideal number of bars on your histogram because the sample size is so small in this situation.}] \ansref{ans:quEDADJTI}
-  \item \label{revex:cuEDAZoo1} \rhw{} The data in \href{}{Zoo1.csv} contains a list of animals found in several different zoos\footnote{These data are stored in a ``comma separated values'' (CSV) file rather than a ``tab delimited text'' file.  Thus, these data must be loaded into R with \R{read.csv()} rather than \R{read.table()}.  The arguments to \R{read.csv()} are the same as \R{read.table()}.}.  In addition, each animal was classified into broad ``type'' categories (``mammal'', ``bird'', and ``amph/rep'').  Perform a univariate EDA on the \var{type} variable. \ansref{ans:cuEDAZoo1}
-  \item \label{revex:quEDAZoo2} \rhw{} The data in \href{}{Zoo2.csv} contains the physical size (in acres) of a sample of zoos from around the United States\footnote{These data are stored in a ``comma separated values'' (CSV) file rather than a ``tab delimited text'' file.  Thus, these data must be loaded into R with \R{read.csv()} rather than \R{read.table()}.  The arguments to \R{read.csv()} are the same as \R{read.table()}.}.  Perform a univariate EDA on the \var{size} variable. \ansref{ans:quEDAZoo2}
+  \item \label{revex:cuEDAZoo1} \rhw{} The data in \href{}{Zoo1.csv} contains a list of animals found in several different zoos\footnote{These data are stored in a ``comma separated values'' (CSV) file rather than a ``tab delimited text'' file.  Thus, these data must be loaded into R with \R{read.csv()} rather than \R{read.csv()}.  The arguments to \R{read.csv()} are the same as \R{read.csv()}.}.  In addition, each animal was classified into broad ``type'' categories (``mammal'', ``bird'', and ``amph/rep'').  Perform a univariate EDA on the \var{type} variable. \ansref{ans:cuEDAZoo1}
+  \item \label{revex:quEDAZoo2} \rhw{} The data in \href{}{Zoo2.csv} contains the physical size (in acres) of a sample of zoos from around the United States\footnote{These data are stored in a ``comma separated values'' (CSV) file rather than a ``tab delimited text'' file.  Thus, these data must be loaded into R with \R{read.csv()} rather than \R{read.csv()}.  The arguments to \R{read.csv()} are the same as \R{read.csv()}.}.  Perform a univariate EDA on the \var{size} variable. \ansref{ans:quEDAZoo2}
 \end{exsection}
 
 \newpage
 \begin{hwsection}{All questions below should be typed and answered following the expectations identified in \sectref{sect:ReportWriting}.  All work must be shown.  Questions marked with the R logo must include R output with your R commands in an attached appendix.}
 
-  \item \label{hwprob:quEDABOD} \rhw{} Municipal wastewater treatment plants are required by law to monitor their discharges into rivers and streams on a regular basis.  Concern about the reliability of data from one of these self-monitoring programs led to a study in which samples of effluent were divided and sent to two labs -- a State of Wisconsin lab and a private commercial lab.  Each lab measured the Biological Oxygen Demand (BOD) on the effluent sample sent to them.  Enter these data, in stacked format with two columns labeled \var{lab} and \var{bod} in Excel\footnote{Descriptions for how to enter these data are found in \sectref{sect:REnterData}.}, save the data to a tab-delimited text file, and read the data into an object named \var{d} in R.
+  \item \label{hwprob:quEDABOD} \rhw{} Municipal wastewater treatment plants are required by law to monitor their discharges into rivers and streams on a regular basis.  Concern about the reliability of data from one of these self-monitoring programs led to a study in which samples of effluent were divided and sent to two labs -- a State of Wisconsin lab and a private commercial lab.  Each lab measured the Biological Oxygen Demand (BOD) on the effluent sample sent to them.  Enter these data, in stacked format with two columns labeled \var{lab} and \var{bod} in Excel\footnote{Descriptions for how to enter these data are found in \sectref{sect:REnterData}.}, save the data to a CSV file, and read the data into an object named \var{d} in R.
     \begin{Verbatim}[xleftmargin=5mm]
 State -- 6,6,8,11,18,20,28,33,34,43,71
 Private -- 15,25,28,29,34,35,36,39,42,44,54
     \end{Verbatim}
   \begin{Enumerate}
-    \item List all measurements for the state lab.  [HINT: use \R{Subset()}\footnote{See \sectref{sect:RSubsetdf}.}.]
+    \item List all measurements for the state lab.  [HINT: use \R{filterD()}\footnote{See \sectref{sect:RSubsetdf}.}.]
     \item List the eighth measurement for the state lab.
     \item Perform separate appropriate EDAs for \textbf{each} lab.  Refer to figures and tables as appropriate.  [HINT: construct your figures and tables with one R command each\footnote{See \sectref{sect:MultGroups}.}.]
     \item What major differences did you see in results from the two labs?
   \end{Enumerate}
 
-  \item \label{hwprob:cuEDA} \rhw{} In June 2000, facilities management at the University of Massachusetts -- Boston surveyed lab managers at the University regarding chemical waste disposal.  One question that they asked the survey participants was, ``Which federal agency regulates the disposal of chemical wastes: Occupational Safety and Health Administration, Environmental Protection Agency, Department of Transportation, or National Institutes of Health?''  The individual responses for this survey are shown below by showing the first letter corresponding to each participant's category choice.  Note that one participant did not answer this question and is labeled with a ``U'' for ``unanswered.''  Enter these data into Excel\footnote{A description for how to enter these data is found in \sectref{sect:REnterData}.}, save the data to a tab-delimited text file, and load the file into R.  Use these data to answer the questions below.
+  \item \label{hwprob:cuEDA} \rhw{} In June 2000, facilities management at the University of Massachusetts -- Boston surveyed lab managers at the University regarding chemical waste disposal.  One question that they asked the survey participants was, ``Which federal agency regulates the disposal of chemical wastes: Occupational Safety and Health Administration, Environmental Protection Agency, Department of Transportation, or National Institutes of Health?''  The individual responses for this survey are shown below by showing the first letter corresponding to each participant's category choice.  Note that one participant did not answer this question and is labeled with a ``U'' for ``unanswered.''  Enter these data into Excel\footnote{A description for how to enter these data is found in \sectref{sect:REnterData}.}, save the data to a CSV file, and load the file into R.  Use these data to answer the questions below.
   \begin{Verbatim}
 O, E, E, O, E, E, E, O, D, O, E, O, E, D, E, O, N, O, E, D,
 N, E, D, E, D, O, E, O, E, O, E, E, D, O, E, E, E, E, O, E,

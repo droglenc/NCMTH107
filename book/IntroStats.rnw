@@ -1,7 +1,7 @@
 \documentclass[10pt,openany]{book}
 
-\input{c:/aaaWork/zGnrlLatex/BookPreamble_HC}   % use for the hard-copy version
-%\input{c:/aaaWork/zGnrlLatex/BookPreamble}
+%\input{c:/aaaWork/zGnrlLatex/BookPreamble_HC}   % use for the hard-copy version
+\input{c:/aaaWork/zGnrlLatex/BookPreamble}
 \hypersetup{pdftitle = MTH107 Notes}
 \input{c:/aaaWork/zGnrlLatex/JustRPreamble}
 \usepackage{animate}
@@ -62,8 +62,8 @@ for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
     \appendix
     \input{FBMatter/Symbols}
     \input{FBMatter/HOTests}
-<<child-RFAQ, child='RFAQ.Rnw', eval=TRUE>>=
-@
+%<<child-RFAQ, child='RFAQ.Rnw', eval=TRUE>>=
+%@
 <<child-Animations, child='animations.Rnw', eval=TRUE>>=
 @
 <<child-AnsRevEx, child='AnsRevEx.Rnw', eval=TRUE>>=

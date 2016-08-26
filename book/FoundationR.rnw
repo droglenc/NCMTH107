@@ -19,216 +19,21 @@ set_parent('IntroStats.Rnw')
 \minitoc
 \newpage
 
-
 \section{Setting Up R and Helpers} \label{sect:RSetup}
-You will need a working R (version 3.1.1 or more recent), \R{NCStats} package (version 0.4.3 or more recent), and RStudio (version 0.98.X or more recent) to efficiently perform the analyses described in this and subsequent chapters.  Methods for downloading, installing, and configuring R, RStudio, and NCStats are described in detail below.
+\vspace{-8pt}
+Detailed methods for downloading, installing, and configuring R, RStudio, and \R{NCStats} on your personal computer are given on the \href{http://derekogle.com/NCMTH107/resources/}{Resources page of the course website}.
 
-\subsection{Install R}
-\begin{enumerate}
-  \item Go to the RStudio CRAN mirror (at \href{http://cran.rstudio.edu/}{cran.rstudio.edu/}) in order to select the appropriate operating system for your computer\footnote{You can select a different mirror by going to \href{http://www.r-project.org/}{the R homepage}, selecting the ``download R'' link in the ``Getting Started'' box and selecting a mirror location from the ensuing page.}.  The remainder of these steps will illustrate the installation of R for the WINDOWS environment.
-\begin{center}
-  \includegraphics[width=4in]{Figs/InstallR_ChooseOS.png}
-\end{center}
-
-  \item Select the ``base'' option.
-\begin{center}
-  \includegraphics[width=4in]{Figs/InstallR_ChooseBase.png}
-\end{center}
-
-  \item Select the ``Download R 3.1.1 for Windows'' option (or whatever the latest version is).  Make sure to note where this executable program is saved on your computer.
-\begin{center}
-  \includegraphics[width=4in]{Figs/InstallR_Download.png}
-\end{center}
-
-  \item Locate and run the downloaded file (called ``R-3.1.1-win.exe'' or similar if the version number has changed).  Select ``English'' language in the first dialog box (depending on your operating system you may have received security warnings before this dialog box appears).
-
-  \item Press ``Next'' on the next two dialog boxes (the first is a simple description and the second is a user agreement).
-
-  \item Select a location to install R (simply use the default location if the location is not important to you -- in the dialog box below I installed in a custom directory).  Press ``Next.''
-\begin{center}
-  \includegraphics[width=2.5in]{Figs/InstallR_Directory.png}
-\end{center}
-
-  \item At this point you can choose to install 32- or 64-bit or both versions of R.  If you don't have a 64-bit computer then, obviously, you must install the 32-bit version.  If you do have a 64-bit computer, I suggest, initially and for simplicity, installing one version or the other.  I usually install the 32-bit version as it has some slight advantages when not working with extremely large data sets and with other software I have installed on my machine (see this \href{http://streaming.stat.iastate.edu/CRAN/bin/windows/base/rw-FAQ.html#Should-I-run-32_002dbit-or-64_002dbit-R_003f}{R FAQ}).  In this demonstration, I will install only the 32-bit version of R (and the Core Files).  Press ``Next.''
-\begin{center}
-  \includegraphics[width=2.5in]{Figs/InstallR_32Bit.png}
-\end{center}
-
-  \item Select the ``No (accept defaults)'' (this is the default) option.  Press ``Next.''
-
-  \item Decide whether or not to create a Start Menu folder.  Press ``Next.''
-
-  \item Decide whether or not to create desktop or Quick Launch icons (top two choices) and whether to register the version number and associate .RData files with R (bottom two choices).  Generally, you will want to register the version number and associate the .RData files with R.  Press ``Next.''
-\begin{center}
-  \includegraphics[width=2.5in]{Figs/InstallR_Options1.png}
-\end{center}
-
-  \item R should then begin installing files into the directory you chose previously.  If everything goes well then you should get one last dialog box noting such.  Press ``Finish.''
-\begin{center}
-  \includegraphics[width=2.5in]{Figs/InstallR_Finish.png}
-\end{center}
-\end{enumerate}
-
-
-\subsection{Install RStudio}
-\begin{enumerate}
-  \item Go to the R Studio homepage at \href{http://www.rstudio.com/}{www.rstudio.com/}.  Press ``Download RStudio'' button/graphic.
-\begin{center}
-  \includegraphics[width=4in]{Figs/InstallRStudio_Home.png}
-\end{center}
-
-  \item Press the ``DOWNLOAD RSTUDIO DESKTOP'' button/graphic (you need to scroll down the page some).
-\begin{center}
-  \includegraphics[width=4in]{Figs/InstallRStudio_Download.png}
-\end{center}
-
-  \item Select the link that corresponds to the operating system appropriate for your computer.  In the remainder of these directions I will demonstrate the installation for a WINDOWS operating system.  Make sure to note where this executable program is saved on your computer.
-\begin{center}
-  \includegraphics[width=4in]{Figs/InstallRStudio_ChooseOS.png}
-\end{center}
-
-  \item Locate and run the downloaded file (called ``RStudio-0.98.994.exe'' or similar if the version number has changed).  Press ``Next'' on the first dialog box (depending on your operating system you may have received security warnings before this dialog box appears).
-
-  \item Select a location to install RStudio (simply use the default location if the location is not important to you -- in the dialog box below I installed in a custom directory).  Press ``Next.''
-\begin{center}
-  \includegraphics[width=2.5in]{Figs/InstallRStudio_Directory.png}
-\end{center}
-
-  \item Decide whether or not to create a shortcut in the Start Menu folder.  Press ``Install.''
-
-  \item RStudio should then begin installing files into the directory you chose previously.  If everything goes well then you should get one last dialog box noting such.  Press ``Finish.''
-\begin{center}
-  \includegraphics[width=2.5in]{Figs/InstallRStudio_Finish.png}
-\end{center}
-
-\end{enumerate}
-
-
-\subsection{Preparing RStudio}
-\begin{enumerate}
-  \item Open RStudio.
-
-  \item Select the ``Tools'' menu and then the ``Global Options'' submenu.  In the ensuing dialog box select the ``General'' icon on the left (this should already be selected).  Confirm that the R version reads ``[Default][32-bit]'' followed by the path to the R program (as shown in the dialog box above).  If this does not appear, then select the ``Change...'' button and then select ``Use your machine's default version of R (32-bit).''\footnote{Of course, if you installed the 64-bit version of R then you may replace ``32-bit'' with ``64-bit'' in these instructions.}
-\begin{center}
-  \includegraphics[width=3in]{Figs/PrepRStudio_OptionsGeneral.png}
-\end{center}
-
-  \item Select the ``Packages'' icon in the ``options'' dialog box.  It is useful to set a CRAN mirror in this dialog box.  To do so, select the ``Change...'' button next to the box below ``CRAN mirror'' and select a location.  I have set my CRAN mirror to Michigan Tech University.
-\begin{center}
-  \includegraphics[width=3in]{Figs/PrepRStudio_OptionsCRAN.png}
-\end{center}
-
-\item Select the ``Code Editing'' icon in the ``Options'' dialog box.  I suggest, in addition to the default selections, selecting the ``Highlight selected line'', ``Show margin'', and ``Show syntax highlighting in console input.''
-\begin{center}
-  \includegraphics[width=3in]{Figs/PrepRStudio_OptionsCodeEditing.png}
-\end{center}
-
-  \item No other options need to be set for our purposes.  Press ``OK.''
-\end{enumerate}
-
-
-
-\subsection{Installing Needed R Packages}
-\begin{enumerate}
-  \item Open RStudio (if not already open).
-
-  \item Open a new R script window by selecting the ``down arrow'' next to the ``New'' icon to the far left on the RStudio toolbar (directly under the ``File'' menu item).  In the ensuing list, choose ``R script'' (alternatively, \verb+<CTRL>+ + \verb+<Shift>+ + \verb+N+).  This will open a blank window in the upper-left pane of the RStudio window (below the toolbar, above the ``Console'' window).
-\begin{center}
-  \includegraphics[width=4in]{Figs/RStudio_NewScript.png}
-\end{center}
-
-  \item In the R script window, type the EXACT code shown in the window below.
-\begin{center}
-  \includegraphics[width=4.5in]{Figs/RStudio_SourceNCStats.png}
-\end{center}
-
-  \item While the cursor is still on the line just typed in RStudio, press the ``Run'' button near the far right of the ``R Script'' window toolbar.  This will ``send'' the R command you just typed to the Console window.  R should now download and install a number of extra packages that we will use throughout the course.  This will take a few minutes with a finish noted by an R prompt (a ``greater than'') symbol in the Console pane.  If R/RStudio seems to be ``sitting there'' then take note of the following two possibilities.
-  \begin{itemize}
-    \item R may say that a library directory is not writable and a dialog box will appear that will ask ``Would you like to use a personal library instead?''  You can choose ``Yes'' for this dialog box.  Also note that this dialog box may appear in the background.  If R seems to be ``waiting'' after saying that the directory is not writable, then look in your windows toolbar for an icon that represents the dialog box.
-    \item If the CRAN mirror did not get set properly as discussed above, then R may ask you to choose a mirror.  You may be able to select a mirror with a separate dialog box (again look for this in the Windows toolbar) or with a text menu in the Console pane (in this case, click in the R console window and type the number corresponding to the CRAN mirror you wish to use (Michigan Tech is number 86)).
-  \end{itemize}
-
-  \item Type \R{library(NCStats)} into the R Script window and ``Run'' it by again selecting the ``Run'' icon.  The end of your Console pane should look like that below (the version number may be different).
-\begin{center}
-  \includegraphics[width=5in]{Figs/RStudio_LibraryNCStats.png}
-\end{center}
-
-  \item Type \R{?NCStats} into the R Script window and ``Run'' it by again selecting the ``Run'' icon.  A help page that looks like that shown below should now appear in the ``Help'' window in the lower-right corner of the RStudio window.  If this help page appears then the installation is complete and correct.
-\begin{center}
-  \includegraphics[width=4in]{Figs/RStudio_NCStatsHelp.png}
-\end{center}
-\end{enumerate}
-
-
-\subsection{What is RStudio}
-R is an open-source software environment for statistical computing and graphics that runs on Windows, Mac OS, and many UNIX platforms.  Unlike many other programs, users interact with R through the issuance of commands on a command line rather than through a graphical user interface.    While such an interface may be unusual for many users, it's primary strength is the ability for a user to develop scripts of commands to perform various analyses that can then be easily repeated.
-
-RStudio is an open-source integrated development environment (IDE) that serves as a front-end ``on top'' of R that eases the user's interaction with R by providing some of the conveniences of a GUI and, more importantly, a means for efficiently constructing and running R scripts.  Among other conveniences, RStudio provides a four-panel layout that includes a feature-rich source-code editor (includes syntax highlighting, parentheses completion, spell-checking, etc.), a tight link to the R console, a system for examining objects saved in R, an interface to R help, and extended features to examine and save plots.  More information about RStudio can be found at \href{https://support.rstudio.com/hc/en-us/categories/200035113-Documentation}{support.rstudio.com/}.
-
-
-\subsection{RStudio Design}
-RStudio is organized around a four-panel layout \figrefp{fig:RStudioLayout}.  The upper-left panel is the R \emph{Script Editor}.  R commands will be typed in this panel and submitted to the R \emph{Console} in the lower-left panel.  For most applications, you will type R commands in the \emph{Script Editor} and submit them to the \emph{Console}; you will not type commands directly into the \emph{Console}.  The \emph{Script Editor} acts as a high-level text editor whereas the \emph{Console} is the actual R program.
-
-\begin{figure}[htbp]
-  \centering
-    \includegraphics[width=6.2in]{Figs/RStudio_Layout.png}
-    \caption{Example of the RStudio layout with the \emph{Script Editor} in the upper-left panel, \emph{Console} in the lower-right panel, the \emph{Workspace} tab shown in the upper-right panel, and the \emph{Plot} tab shown in the lower-right panel.}
-  \label{fig:RStudioLayout}
-\end{figure}
-
-The upper-right panel contains two tabs -- \emph{Environment} and \emph{History}.  Items listed under the \emph{Environment} tab can be double-clicked to open them for viewing as a tab in the \emph{Script Editor}.  The \emph{History} tab shows all the commands that have been submitted to the \emph{Console} during the current session.
-
-The lower-right panel contains five tabs -- \emph{Files}, \emph{Plots}, \emph{Packages}, \emph{Help}, and \emph{Viewer}.  The \emph{Files} tab shows the files in the current directory.  The \emph{Viewer} will not be used during this course.
-
-The \emph{Plots} tab will show the high-level plots produced by commands submitted to the \emph{Console}.  One can cycle through the history of constructed plots with the arrows on the left side of the plot toolbar and plots can be saved to external files using the ``Export'' tab on the plot toolbar \figrefp{fig:RStudioLayout}.
-
-A list of all installed packaged is seen by selecting the \emph{Packages} tab.  Help for each package is obtained by clicking on the name of package.  The help then appears in the \emph{Help} tab.
-
-
-\subsection{Basic Usage}
-Our primary interaction with RStudio is through R scripts written in the \emph{Script Editor}, submitting those scripts to the \emph{Console}, and viewing textual or tabular results in the \emph{Console}, and graphical results in the \emph{Plot} panel.  In this section, I briefly introduce how to construct and run R scripts in RStudio.
-
-A blank script is open in RStudio with the ``New'' icon (\includegraphics[scale=0.8]{Figs/RStudio_NewIcon.png}) or by selecting the \texttt{File} menu, \texttt{New} submenu, and \texttt{R Script} item.  In the ensuing tab of the \emph{Script Editor}, type the three lines exactly as shown below\footnote{For the moment, don't worry about what these lines ``do.''}.
-
-<<eval=FALSE,tidy=FALSE>>=
-dat <- rnorm(100)    # create random normal data (n=100)
-hist(dat,main="")    # histogram of data without a title
-summary(dat)         # summary statistics
-@
-
-These commands must submitted to the \emph{Console} to perform the requested calculations.   Commands are submitted in a variety of ways:
-
-\begin{itemize}
-  \item Put the cursor on the first line in the \emph{Script Editor} and press the ``run'' icon (\includegraphics[scale=0.8]{Figs/RStudio_RunIcon.png}).  This will submit the first line to the \emph{Console} and move the cursor to the second line in the \emph{Script Editor}.  Pressing the ``Run'' icon will now submit the second line.  And so on.
-  \item Select the ``down arrow'' on the ``Source'' icon (\includegraphics[scale=0.8]{Figs/RStudio_SourceIcon.png}) and select \texttt{Source with Echo} (alternatively, press \verb+<CTRL>+ + \verb+<Shift>+ + \verb+<Enter>+).  This will simultaneously submit all commands to the \emph{Console}.
-  \item Select all commands in the \emph{Script Editor} that you wish to submit and then press the ``run'' icon.
-\end{itemize}
-
-The RStudio layout after using the first method is shown in \figref{fig:RStudioLayout}.
-
-The R Script in the \emph{Script Editor} should now be saved by selecting the \texttt{File} menu and the \texttt{Save} item (alternatively, pressing \verb+<CTRL>+ + \verb+S+).  RStudio can now be closed (do NOT save the workspace) and re-opened.  The script can then be re-opened (choose the \texttt{File} menu and the \texttt{Open file ...} submenu if the file is not already in the \emph{Script Editor}) and re-submitted to the \emph{Console} to exactly repeat the analyses\footnote{Note that the results of commands are not saved in R or RStudio; rather the commands are saved and re-submitted to re-perform the analysis.}.
-
-\warn{Do not save and restore the workspace in R.}
-
-\vspace{-12pt}
-\warn{In most cases it is best to press the ``esc'' key in the R Console if a ``plus sign'' (\textbf{+}) prompt appears.}
-
-Results are copied from the RStudio console and plot windows and pasted into document software (e.g., MSWord) to create a report of your analysis.  The tabular results are copied as expected from the R console but when they are pasted into MSWord they will be contained within a grey background, which is annoying.  To paste without the grey background, choose to paste unformatted text (found by right-clicking in the MSWord document and choosing one of the unformatted options).  Plots are not copied from the plot window; rather they are exported by selecting the ``Export'' button in the Plots window and then the ``Copy Plot to Clipboard''  option.  This will open the window shown in \figref{fig:RStudioCopyGraph}.  In this window, select ``Metafile'' and then ``Copy Plot.''  The plot can then be pasted into MSWord as usual.
-
-\begin{figure}[htbp]
-  \centering
-    \includegraphics[width=3in]{Figs/RStudio_CopyGraph.png}
-    \caption{Example of the RStudio ``Copy Plot to Clipboard'' window.}
-  \label{fig:RStudioCopyGraph}
-\end{figure}
-
+\vspace{-8pt}
 \section{Working With R Basics} \label{sect:RBasics}
+\vspace{-12pt}
 \subsection{Saving Results} \label{sect:RSaving}
-Results are not saved in R or RStudio.  Rather, one should save the ``script'' of successful R commands and, then, if the analysis needs to be re-done, the entire set of commands can be opened in RStudio and run again.  When writing a report, all tabular and graphical output should be copied from RStudio and pasted into your report document.  This document will serve as your analysis report and can be modified to include answers to questions, references to the tables and graphs, etc.  Specifics for how this report should be prepared are discussed in \sectref{sect:ReportWriting}.  All data that is not a simple vector (see \sectref{sect:RInfoStorage}) should be entered into R through text files (see \sectref{sect:REnterData}).  With this method, the data will only need to be typed once.
+Results are not saved in R or RStudio.  Rather, ``scripts'' of successful R commands are saved and, then, if the analysis needs to be re-done, the entire set of commands is opened in RStudio and run again.  When writing a report, all tabular and graphical output should be copied from RStudio and pasted into your report document.  This document will serve as your analysis report and can be modified to include answers to questions, references to the tables and graphs, etc.  Specifics for how this report should be prepared are discussed in \sectref{sect:ReportWriting}.  All data that is not a simple vector (see \sectref{sect:RInfoStorage}) should be entered into R through text files (see \sectref{sect:REnterData}).  With this method, the data will only need to be typed once.
 
 R does allow one to save a ``workspace.''  I strongly urge you to follow the three suggestions of the previous paragraph rather than saving the workspace.  Saving the workspace ``brings back'' objects that a student has either forgotten about, contain incorrect information, or otherwise clutter the work area.  Saving a workspace appears to cause trouble for most students.  Save your ``good'' commands in a script and save your ``good'' results in a report document; do not save the workspace.
 
+\vspace{-8pt}
 \subsection{Expressions and Assignments} \label{sect:RExprAssn}
+\vspace{-8pt}
 Expressions in R are mathematical ``equations'' that are evaluated by R with a result seen immediately.  An example of an expression in R is
 <<>>=
 5+log(7)-pi
@@ -259,6 +64,7 @@ As a general rule, you should assign your computations to an object so that the 
 \vspace{-12pt}
 \warn{Type the name of the object after making the assignment to confirm the results.}
 
+\vspace{-8pt}
 \begin{exsection}
   \item \label{revex:BasicsExpr1} \rhw{} Compute the value of $\frac{3}{7}+\frac{1}{2}$. \ansref{ans:BasicsExpr1}
   \item \label{revex:BasicsExpr2} \rhw{} Compute the value of $\pi*3.7^{2}$. \ansref{ans:BasicsExpr2}
@@ -399,7 +205,7 @@ fish$len[3]
 \end{exsection}
 
 \subsection{Entering Data}  \label{sect:REnterData}
-For data that consists of data for several variables recorded from many individuals it is most efficient to enter the data into an external spreadsheet or database program, export the data from that program to a tab-delimited text file, and then import that file into R.  While this may sound cumbersome, it is a very efficient way to store data as most data, for realistic size situations, has already been entered into a spreadsheet or database program.  In the following paragraphs, I demonstrate how to enter data regarding lady bugs into Microsoft Excel, how to export that data to a tab-delimited text file, and then how to import that file into R.
+For data that consists of data for several variables recorded from many individuals it is most efficient to enter the data into an external spreadsheet or database program, export the data from that program to a comma-separated values (CSV) text file, and then import that file into R.  While this may sound cumbersome, it is a very efficient way to store data as most data, for realistic size situations, has already been entered into a spreadsheet or database program.  In the following paragraphs, I demonstrate how to enter data regarding lady bugs into Microsoft Excel, how to export that data to a CSV file, and then how to import that file into R.
 
 The Excel file should be organized with variable names in the first row and the recorded data in rows below that.  In this example, the variable name \var{len} is entered into the first cell of the first row and the seven length measurements are listed in the cells of the next seven rows as illustrated below.
 \begin{center}
@@ -410,14 +216,14 @@ The variable names must NOT contain any spaces.  For example use \var{len} rathe
 
 \warn{Variable names and data should not contain spaces.  The \R{Error in scan} error message usually indicates that you have spaces in the variable names or data.}
 
-The Excel file should be saved in its native Excel format (the usual  \verb"File..Save" menu items) and as a tab-delimited text file.  The tab-delimited text file is created by selecting the \verb"File..Save As" menu item which produces the following dialog box.
+The Excel file should be saved as a CSV file by selecting the \verb"File..Save As" menu item which produces the following dialog box.
 \begin{center}
-  \includegraphics[width=5.5in]{Figs/Data_File_2.jpg}
+  \includegraphics[width=4.5in]{Figs/Data_File_2.jpg}
 \end{center}
 
-In this dialog box change \verb"Save as type" to \verb"Text (Tab delimited) (*.txt)" (you may have to scroll down), provide a file name, select a location to save the file (and don't forget this location!!), and press \verb"OK".  Two ``warning'' dialog boxes will then appear -- select \verb"OK" on the first and \verb"YES" on the second.  A text file will now be created with the name and in the folder you provided.  You can now close the Excel file (you will likely be asked to save changes -- you should say \verb"No").
+In this dialog box change \verb"Save as type" to \verb"CSV (Comma delimited) (*.csv)" (you may have to scroll down), provide a file name (don't have any periods in the name besides ``.csv''), select a location to save the file (and don't forget this location!!), and press \verb"Save".  Two ``warning'' dialog boxes may then appear -- select \verb"OK" on the first and \verb"YES" on the second.  A CSV file will now be created with the name and in the folder you provided.  You can now close the Excel file (you will likely be asked to save changes -- you should say \verb"No").
 
-The R working directory must be set to the directory where the the tab-delimited text file was saved before it can be read into R.  The simplest method for setting the working directory is to save an RStudio script file in the same directory as the data file.  If you do this, then you can choose the \verb"Session", \verb"Set Working Directory ...", \verb"To Source File Location" menu items in RStudio which will send an appropriate \R{setwd()} command to the R console.  This command should then be copied from the R console to your RStudio script for future use\footnote{Doing this will eliminate the need to manually select the menu options every time you want to run this script.}.
+The R working directory must be set to the directory where the the CSV file was saved before it can be read into R.  The simplest method for setting the working directory is to save an RStudio script file in the same directory as the data file.  If you do this, then you can choose the \verb"Session", \verb"Set Working Directory ...", \verb"To Source File Location" menu items in RStudio which will send an appropriate \R{setwd()} command to the R console.  This command should then be copied from the R console to your RStudio script for future use\footnote{Doing this will eliminate the need to manually select the menu options every time you want to run this script.}.
 
 Regardless of which method you use, the result is a \R{setwd()} command that has the path to the directory containing the data as the argument.  For example, I stored the lady bug data file in the \verb"C:/data" directory.  Thus, the method of the previous paragraph would result in the following command which I then copied to my script file.
 
@@ -425,12 +231,12 @@ Regardless of which method you use, the result is a \R{setwd()} command that has
 setwd("C:/data/")
 @
 
-The tab-delimited data file is read into R with \R{read.table()}.  This function requires the filename in quotes as the first argument.  In addition, the \R{header=TRUE} argument is included to indicate that the data file contains a header row of variable names.  Thus, the tab-delimited data file of lady bug data is read into R and stored in a data frame called \var{LB} with
+The CSV file is read into R with \R{read.csv()}.  This function requires the filename in quotes as the first argument.  For example, the CSV file of lady bug data is read into R and stored in a data frame called \var{LB} with
 <<eval=FALSE>>=
-LB <- read.table("ladybug.txt",header=TRUE)
+LB <- read.table("ladybug.csv")
 @
 
-\warn{Data stored in a tab-delimited external text file is read into R with \R{read.table()}.}
+\warn{Data stored in an external CSV file is read into R with \R{read.csv()}.}
 
 It is important that each row of the data frame correspond to one individual.  This will become critically important when data is recorded for two different groups (e.g., for a two-sample t-test; see \sectref{sect:t2test}).  For example, consider the following data of methyl mercury levels recorded in mussels from a location labeled as ``impacted'' and a separate location labeled as ``reference'',
 \begin{Verbatim}
@@ -444,7 +250,7 @@ To follow the ``one individual per row'' rule, these data would have to be enter
 \end{center}
 
 \subsubsection*{Alternative Forms of Getting Data} \label{sect:RAltData}
-Some of the data files that you will use are provided on the \href{https://sites.google.com/site/ncstats/data}{R Data} page of the class webpage.  In these cases, the data should be downloaded from the webpage and saved in the same directory or folder as your analysis script.  The downloaded file is then read into R in the same manner as described previously (i.e., set the working direcotry with \R{setwd()} and then use \R{read.table()}).  All data files on the webpage will include a header; thus, you will always need \R{header=TRUE}.
+Some of the data files that you will use are provided on the \href{http://derekogle.com/NCMTH107/resources/data_107}{Data for MTH107} resource page of the class webpage.  In these cases, the data should be downloaded from the webpage and saved in the same directory or folder as your analysis script.  The downloaded file is then read into R in the same manner as described previously (i.e., set the working direcotry with \R{setwd()} and then use \R{read.csv()}).
 
 \warn{Every data file provided with this book contains a header and, thus, \R{header=TRUE} must be used in \R{read.table()}.}
 
@@ -459,9 +265,9 @@ Many users are disoriented in R because they cannot ``see'' their data in the sa
 <<>>=
 fish
 @
-but not so useful for large data frames.  The entire data frame is opened in a separate window by double-clicking on the name of the data frame in the \R{Workspace} tab of RStudio.  Portions of a data frame are viewed by including the data frame object in \R{view()}.  For example, a random\footnote{The first and last six rows are viewed with \R{head()} and \R{tail()}, respectively.} six rows are viewed with
+but not so useful for large data frames.  The entire data frame is opened in a separate window by double-clicking on the name of the data frame in the \R{Workspace} tab of RStudio.  The first and last three rows of a data frame are viewed by including the data.frame object in \R{headtail()}.
 <<>>=
-view(iris)
+headtail(iris)
 @
 
 In addition to viewing the contents of the data frame, it is often useful to examine the structure of the data frame returned from \R{str()}.  For example, the structure of the \dfile{iris} data frame is obtained with
@@ -474,16 +280,16 @@ levels(iris$Species)
 @
 
 \vspace{-12pt}
-\subsection{Subsetting a Data Frame}  \label{sect:RSubsetdf}
+\subsection{Filtering a Data Frame}  \label{sect:RSubsetdf}
 \vspace{-12pt}
-It is common to create a new data frame that contains only some of the individuals from an existing data frame.  For example, a researcher may want to extract only the data for the \emph{setosa} species or those irises with sepal lengths greater than 5 cm from the \var{iris} data frame.  The process of creating the newer, smaller data frame is called subsetting and is accomplished with \R{Subset()}.  The \R{Subset()} function requires the original data frame as the first argument and a conditioning statement as the second argument.  The conditioning statement is a statement that is used to either include or exclude the individuals from the original data frame that will make up the new data frame.  The result from \R{Subset()} should be assigned an object which will then be the name of the new data frame.
+It is common to create a new data frame that contains only some of the individuals from an existing data frame.  For example, a researcher may want to extract only the data for the \emph{setosa} species or those irises with sepal lengths greater than 5 cm from the \var{iris} data frame.  The process of creating the newer, smaller data frame is called filtering (or subsetting) and is accomplished with \R{filterD()}.  The \R{filterD()} function requires the original data frame as the first argument and a conditioning statement as the second argument.  The conditioning statement is a statement that is used to either include or exclude the individuals from the original data frame that will make up the new data frame.  The result from \R{filterD()} should be assigned an object which will then be the name of the new data frame.
 
-\warn{The \R{Subset()} function is used to create a new data frame that consists of individuals selected by some criterion from an existing data frame.}
+\warn{The \R{filterD()} function is used to create a new data frame that consists of individuals selected by some criterion from an existing data frame.}
 
-The conditioning statements used in \R{Subset()} can be fairly complex.  However, in this book, the conditioning statements will usually consist of the name of a variable in the original data frame, a comparison operator, and a comparison value.  Some common comparison operators are shown in \tabrefp{tab:RSubsetConditions}.
+The conditioning statements used in \R{filterD()} can be fairly complex.  However, in this book, the conditioning statements will usually consist of the name of a variable in the original data frame, a comparison operator, and a comparison value.  Some common comparison operators are shown in \tabrefp{tab:RSubsetConditions}.
 
 \begin{table}[htbp]
-  \caption{Condition operators used in \R{Subset()} and their results.  Note that \emph{variable} generically represents a variable in the original data frame and \emph{value} is a generic value or level.  Both of these would be replaced with specific items.}  \label{tab:RSubsetConditions}
+  \caption{Condition operators used in \R{filterD()} and their results.  Note that \emph{variable} generically represents a variable in the original data frame and \emph{value} is a generic value or level.  Both of these would be replaced with specific items.}  \label{tab:RSubsetConditions}
   \centering
 \begin{tabular}{cc}
 \hline\hline
@@ -502,40 +308,40 @@ Operator &  Individuals Returned from Original Data Frame \\
 \end{tabular}
 \end{table}
 
-The following items are examples of new data frames created by subsetting the \var{iris} data frame\footnote{The \R{view()} function is used in these examples to show a random selection of rows in the new data frame.}.
+The following items are examples of new data frames created by subsetting the \var{iris} data frame\footnote{The \R{headtail()} function is used in these examples to show some rows in the new data frame.}.
 
 \begin{itemize}
   \item A data frame that contains only individuals of the \emph{setosa} species\footnote{Note that in this, and all ensuing examples, that the object name to the left of the assignment operator (i.e., \R{iris.set} in this example) can be nearly any name of the authors choosing.  In other words, this object does not have to be called \R{iris.set}; it could be called nearly anything else.}.
 <<>>=
-iris.set <- Subset(iris,Species=="setosa")
-view(iris.set)
+iris.set <- filterD(iris,Species=="setosa")
+headtail(iris.set)
 @
 
   \item A data frame that contains individuals of the \emph{setosa} and \emph{versicolor} species.
 <<>>=
-iris.setver <- Subset(iris,Species=="setosa" | Species=="versicolor")
-view(iris.setver)
+iris.setver <- filterD(iris,Species=="setosa" | Species=="versicolor")
+headtail(iris.setver)
 @
 
   \item A data frame that contains individuals with a sepal length greater than 5 cm.
 <<>>=
-iris.gt5 <- Subset(iris,Sepal.Length>5)
-view(iris.gt5)
+iris.gt5 <- filterD(iris,Sepal.Length>5)
+headtail(iris.gt5)
 @
 
   \item A data frame that contains individuals of the \emph{setosa} species with a sepal length greater than 5 cm.
 <<>>=
-iris.setgt5 <- Subset(iris,Species=="setosa" & Sepal.Length>5)
-view(iris.setgt5)
+iris.setgt5 <- filterD(iris,Species=="setosa" & Sepal.Length>5)
+headtail(iris.setgt5)
 @
 \end{itemize}
 
 Note that after each subsetting you should either view or examine the structure of the new data frame to determine if the data frame actually contains the items that you desire.
 
-\warn{View or ``structure'' the data frame created from using \R{Subset()} to assure that it contains data.}
+\warn{View or ``structure'' the data frame created from using \R{filterD()} to assure that it contains data.}
 
 \begin{exsection}
-  \item \label{revex:BasicsDataFrame1} \rhw{} Two students at Seattle Community College made biometric measurements on 25 Douglas fir (\emph{Pseudotsuga menziesii}) trees in the lowlands of western Washington.  The variables recorded in the \href{https://sites.google.com/site/ncstats/data/DougFirBiometrics.txt}{DougFirBiometrics.txt} file are a unique tree identifier (\var{tree}), the observer's name (\var{observer}; either ``Ingrid'' or ``Dylan''), the circumference at breast height (meters; \var{circ}), the height to the eye of the observer (meters; \var{eyeht}), the horizontal distance between observer and tree (meters; \var{horizdist}), the angle between observer and top of tree (degrees; \var{angle}), and the estimated height of tree (meters; \var{height}) using right-angle trigonometry. \ansref{ans:BasicsDataFrame1}
+  \item \label{revex:BasicsDataFrame1} \rhw{} Two students at Seattle Community College made biometric measurements on 25 Douglas fir (\emph{Pseudotsuga menziesii}) trees in the lowlands of western Washington.  The variables recorded in the \href{https://raw.githubusercontent.com/droglenc/NCData/master/DougFirBiometrics.csv}{DougFirBiometrics.csv} file are a unique tree identifier (\var{tree}), the observer's name (\var{observer}; either ``Ingrid'' or ``Dylan''), the circumference at breast height (meters; \var{circ}), the height to the eye of the observer (meters; \var{eyeht}), the horizontal distance between observer and tree (meters; \var{horizdist}), the angle between observer and top of tree (degrees; \var{angle}), and the estimated height of tree (meters; \var{height}) using right-angle trigonometry. \ansref{ans:BasicsDataFrame1}
   \begin{Enumerate}
     \item Read this data file into an object called \R{DF}.
     \item Examine the structure of this data frame.
@@ -564,12 +370,12 @@ In addition, the researchers also recorded a qualitative measure of the shadines
 O,S,S,S,O,O,S,P,O,O,S,S,P,P,P,P,S,O,S
     \end{Verbatim}
 
-Enter these data into an Excel file with columns labeled as \var{lstrf} and \var{shade}.  Save this file as a tab-delimited text file and read that file into an object called \R{df} in R.  Use this to answer the questions below using R commands (i.e., don't re-type the data).
+Enter these data into an Excel file with columns labeled as \var{lstrf} and \var{shade}.  Save this file as a CSV file and read that file into an object called \R{df} in R.  Use this to answer the questions below using R commands (i.e., don't re-type the data).
 
   \begin{Enumerate}
     \item List the number of purple loosestrife plants and shadiness category for the 10th plot.
     \item List the number of purple loosestrife plants in each plot.
-    \item List the data for all\footnote{Don't use \R{view()} when asked to show all individuals, as \R{view()} only shows a random six individuals.} of the completely shaded plots.
+    \item List the data for all\footnote{Don't use \R{headtail()} when asked to show all individuals, as \R{headtail()} only shows six individuals.} of the completely shaded plots.
     \item List the data for all of the open plots.
     \item List the data for all of the completely open or partially shaded plots (use only one command in R).
     \item List the data for all plots with more than 10 purple loosestrife plants.

@@ -179,7 +179,7 @@ lines(c(df2[2,1],df2[2,1]),c(480,p2[2]),lwd=2,lty=2,col="red")
 
   \item \label{revex:RegLumina} Researchers at Chevrolet attempted to determine the relationship between gas mileage (MPG) of Luminas in the city (CITY) and on the highway (HIGHWAY).  Results of their analysis is shown below.  \ansref{ans:RegLumina}
 <<LuminaFLP, echo=FALSE, results='hide', include=FALSE, fig.width=3.5, fig.height=3.5, par1a=TRUE>>=
-lum <- read.table("data/Lumina.txt",header=TRUE)
+lum <- read.csv("data/Lumina.csv")
 lm.lum <- lm(CMPG~HMPG,data=lum)
 fitPlot(lm.lum,pch=16,xlab="Highway MPG",ylab="City MPG",main="")
 r2 <- rSquared(lm.lum,digits=3)
@@ -382,11 +382,11 @@ All answers should refer to the variables of the problem -- thus, ``y'', ``x'', 
 
 \subsection*{Chimp Hunting Parties}
 \begin{quote}
-\textit{\cite{Stanford1996} gathered data to determine if the size of the hunting party (number of individuals hunting together) affected the hunting success of the party (number of hunts that resulted in a kill) for wild chimpanzees (Pan troglodytes) at Gombe.  The results of their analysis for 17 hunting parties is shown in the figure below\footnote{These data came from \href{https://sites.google.com/site/ncstats/data/Chimp.txt}{Chimp.txt}.}.  Use these results to answer the questions below.}
+\textit{\cite{Stanford1996} gathered data to determine if the size of the hunting party (number of individuals hunting together) affected the hunting success of the party (number of hunts that resulted in a kill) for wild chimpanzees (Pan troglodytes) at Gombe.  The results of their analysis for 17 hunting parties is shown in the figure below\footnote{These data came from \href{https://raw.githubusercontent.com/droglenc/NCData/master/Chimp.csv}{Chimp.csv}.}.  Use these results to answer the questions below.}
 \end{quote}
 
 <<ChimpFLP, echo=FALSE>>=
-chimp <- read.table("data/Chimp.txt",header=TRUE)
+chimp <- read.csv("data/Chimp.csv")
 lm.chimp <- lm(percsucc~huntparty,data=chimp)
 fitPlot(lm.chimp,pch=16,xlab="Number of Hunting Party Members",ylab="% Successful Hunts",main="")
 r2 <- formatC(rSquared(lm.chimp),format="f",digits=3)
@@ -449,7 +449,7 @@ mtext(bquote(paste(Y==.(formatC(coef(lm.chimp)[1],format="f",digits=3))+.(format
 \begin{exsection}
   \item \label{revex:RegBP} The age (in years) and systolic blood pressure were measured for 32 white males over the age of 40.  The researchers wanted to determine if systolic blood pressure increased with increasing age.  Thus, they computed the regression depicted in the fitted-line plot below.  Use these results to answer the questions below.  \ansref{ans:RegBP}
 <<SBPFLP, echo=FALSE, results='hide', include=FALSE, fig.width=3.5, fig.height=3.5, par1a=TRUE>>=
-sbp1 <- read.table("data/sbp.txt",header=TRUE)
+sbp1 <- read.csv("data/sbp.csv")
 lm.sbp <- lm(sbp~age,data=sbp1)
 fitPlot(lm.sbp,pch=16,xlab="Age (yrs)",ylab="Systolic Blood Pressure",main="")
 r2 <- rSquared(lm.sbp)
@@ -474,7 +474,7 @@ mtext(bquote(paste(Y==.(formatC(coef(lm.sbp)[1],format="f",digits=3))+.(formatC(
 
   \item \label{revex:RegTVRate} There are at least two ways that special TV programs could be rated, and both are of interest to advertisers -- the estimated size of the audience and the percentage of TV-owning households that tuned into the program.  Use the results below for the 20 all-time top-rated programs to determine if the estimated size of the audience can be predicted from the percentage of TV-owning households tuned into the program.  \ansref{ans:RegTVRate}
 <<TVFLP, echo=FALSE, results='hide', include=FALSE, fig.width=3.5, fig.height=3.5, par1a=TRUE>>=
-tv <- read.table("data/tv.txt",header=TRUE)
+tv <- read.csv("data/tv.csv")
 lm.tv <- lm(audience~rating,data=tv)
 fitPlot(lm.tv,pch=16,xlab="Rating (%)",ylab="Audience (1000s)",main="")
 r2 <- formatC(rSquared(lm.tv),format="f",digits=3)
@@ -496,7 +496,7 @@ mtext(bquote(paste(Y==.(formatC(coef(lm.tv)[1],format="f",digits=3))+.(formatC(c
 
   \item \label{revex:RegThrush} \cite{VegaRivera1998} examined the relationship between the duration of molt and the date of molt start (measured in days since July 1) for wood thrush (\textit{Hylocichla mustelina}).  A recreation of their results is shown below (note that the outlier marked by a ``+'' in the scatterplot was ignored in the calculation of the best-fit line).  Use these results to answer the questions below.  \ansref{ans:RegThrush}
 <<MoltFLP, echo=FALSE, results='hide', include=FALSE, fig.width=3.5, fig.height=3.5, par1a=TRUE>>=
-molt <- read.table("data/molt.txt",header=TRUE)
+molt <- read.csv("data/molt.csv")
 out <- molt[33,]
 molt1 <- molt[-33,]
 lm.molt <- lm(duration~date,data=molt1)
@@ -524,7 +524,7 @@ mtext(bquote(paste(Y==.(formatC(coef(lm.molt)[1],format="f",digits=3))-.(formatC
 
   \item \label{revex:RegFawns2} Wildlife ecologists in Texas wanted to determine if the number of fawns born to each doe could be explained by the doe's body mass \citep{GinnettYoung2000}.  As part of their study, the researchers recorded the mean number of fawns born to a doe (over a period of time) and the body mass of the doe (kg).  Use the results in the following graph to explain the relationship to answer the questions below. \ansref{ans:RegFawns2}
 <<Deer2FLP, echo=FALSE, results='hide', include=FALSE, fig.width=3.5, fig.height=3.5, par1a=TRUE>>=
-d2 <- read.table("data/deer2.txt",header=TRUE)
+d2 <- read.csv("data/deer2.csv")
 lm.d2 <- lm(fawns~bodymass,data=d2)
 fitPlot(lm.d2,pch=16,xlab="Doe Body Mass (kg)",ylab="Mean Fawns per Doe",main="",ylim=c(1,4))
 r2 <- formatC(rSquared(lm.d2),format="f",digits=3)
@@ -557,7 +557,7 @@ The linear regression model is fit to two quantitative variables with \R{lm()}. 
 The regression is fit to the mercury in the blood and the intake of mercury data by first loading and viewing the structure of the data with
 <<eval=FALSE>>=
 setwd('c:/data/')
-merc <- read.table("Mercury.txt",header=TRUE)
+merc <- read.csv("Mercury.csv")
 @
 \vspace{-12pt}
 <<>>=
@@ -592,7 +592,7 @@ Thus, \Sexpr{formatC(rSquared(lm1,percent=TRUE),format="f",digits=1)}\% of the v
 \subsection*{Car Weight and MPG}
 In \chapref{chap:BivEDA}, an EDA for the relationship between \var{HMPG} (the highway miles per gallon) and \var{Weight} (lbs) of 93 cars from the 1993 model year was performed.  This relationship will be explored further here as an example of a complete regression analysis.  In this analysis, the regression output will be examined within the context of answering the ten typical questions.  These data are read into R with
 <<>>=
-cars93 <- read.table("data/93cars.txt",header=TRUE)
+cars93 <- read.csv("data/93cars.csv")
 @
 The linear regression model is fit, coefficients extracted, fitted-line plot constructed, and coefficient of determination extracted with
 
@@ -656,7 +656,7 @@ Therefore, it appears that this car gets \Sexpr{formatC(-1*(24-predict(lm2,data.
 
 \vspace{-12pt}
 \begin{exsection}
-  \item \label{revex:RegFlyC} \rhw{} \cite{WangFinch1997} hypothesized that larger willow flycatchers (\emph{Empidonax traillii}) migrated up the Middle Rio Grande River earlier than small willow flycatchers.  To test this hypothesis they captured flycatchers on several days during their migration and measured the wing length (mm; an index of overall body size) of each bird.  They recorded the date that the bird was captured as a Julian date (days since Jan. 1).   The results of their study are found in \href{https://sites.google.com/site/ncstats/data/Flycatcher.txt}{Flycatcher.txt}.  Load these data into R and produce results that can be used to answer the questions below.  \ansref{ans:RegFlyC}
+  \item \label{revex:RegFlyC} \rhw{} \cite{WangFinch1997} hypothesized that larger willow flycatchers (\emph{Empidonax traillii}) migrated up the Middle Rio Grande River earlier than small willow flycatchers.  To test this hypothesis they captured flycatchers on several days during their migration and measured the wing length (mm; an index of overall body size) of each bird.  They recorded the date that the bird was captured as a Julian date (days since Jan. 1).   The results of their study are found in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Flycatcher.csv}{Flycatcher.csv}.  Load these data into R and produce results that can be used to answer the questions below.  \ansref{ans:RegFlyC}
     \begin{Enumerate}
       \item What is the explanatory variable?
       \item What is the response variable?
@@ -671,7 +671,7 @@ Therefore, it appears that this car gets \Sexpr{formatC(-1*(24-predict(lm2,data.
       \item Comment on the assumptions of the linear regression.
     \end{Enumerate}
 
-  \item \label{revex:RegFat} \rhw{} \cite{Carroll1975} examined the relationship between per capita consumption of animal fat (g/day; AnimFatI) and age-adjusted death rate from breast cancer (AgeAdjDe) for 39 countries.  Her goal was to determine if variability in the breast cancer death rate could be explained by the amount of fat consumed.  The data for their study are found in \href{https://sites.google.com/site/ncstats/data/CancerFat.txt}{CancerFat.txt}.  Load these data into R and produce results that can be used to answer the questions below. \ansref{ans:RegFat}
+  \item \label{revex:RegFat} \rhw{} \cite{Carroll1975} examined the relationship between per capita consumption of animal fat (g/day; AnimFatI) and age-adjusted death rate from breast cancer (AgeAdjDe) for 39 countries.  Her goal was to determine if variability in the breast cancer death rate could be explained by the amount of fat consumed.  The data for their study are found in \href{https://raw.githubusercontent.com/droglenc/NCData/master/CancerFat.csv}{CancerFat.csv}.  Load these data into R and produce results that can be used to answer the questions below. \ansref{ans:RegFat}
     \begin{Enumerate}
       \item Which variable is the response variable?
       \item What is an individual in this study?
@@ -685,7 +685,7 @@ Therefore, it appears that this car gets \Sexpr{formatC(-1*(24-predict(lm2,data.
       \item Can it be said that an increase in intake of animal fat is the cause for an increase in the age adjusted death rate due to breast cancer? Why or why not?
     \end{Enumerate}
 
-  \item \label{revex:RegRIFA} \rhw{} \cite{Allenetal1997} investigated the impact of the density of red-imported fire ants (\emph{Solenopsis invicta}; RIFA) on the recruitment of white-tailed deer (\emph{Odocoileus virginianus}) fawns (an index of does to fawns).  A modified version of their results are found in \href{https://sites.google.com/site/ncstats/data/rifa.txt}{rifa.txt}.  Load these data into R and produce results that can be used to answer the questions below. \ansref{ans:RegRIFA}
+  \item \label{revex:RegRIFA} \rhw{} \cite{Allenetal1997} investigated the impact of the density of red-imported fire ants (\emph{Solenopsis invicta}; RIFA) on the recruitment of white-tailed deer (\emph{Odocoileus virginianus}) fawns (an index of does to fawns).  A modified version of their results are found in \href{https://raw.githubusercontent.com/droglenc/NCData/master/RIFA.csv}{RIFA.csv}.  Load these data into R and produce results that can be used to answer the questions below. \ansref{ans:RegRIFA}
     \begin{Enumerate}
       \item What is the response variable?
       \item What is the explanatory variable?
@@ -699,7 +699,7 @@ Therefore, it appears that this car gets \Sexpr{formatC(-1*(24-predict(lm2,data.
       \item Comment on the assumptions in this regression.
     \end{Enumerate}
 
-  \item \label{revex:RegMathAss} \rhw{} All incoming freshmen are required to take a math assessment test to determine which math classes they should take. Sometimes pre-registering students will register before taking the assessment.  To make the best possible course choices for these students, the adviser would like to predict their assessment score (ASSESS) based on their math ACT scores (ACT). The ACT score and assessment score from 72 freshmen from 2003 are stored in \href{https://sites.google.com/site/ncstats/data/NCAssess.txt}{NCAssess.txt}.  Load these data into R and produce results that can be used to answer the questions below. \ansref{ans:RegMathAss}
+  \item \label{revex:RegMathAss} \rhw{} All incoming freshmen are required to take a math assessment test to determine which math classes they should take. Sometimes pre-registering students will register before taking the assessment.  To make the best possible course choices for these students, the adviser would like to predict their assessment score (ASSESS) based on their math ACT scores (ACT). The ACT score and assessment score from 72 freshmen from 2003 are stored in \href{https://raw.githubusercontent.com/droglenc/NCData/master/NCAssess.csv}{NCAssess.csv}.  Load these data into R and produce results that can be used to answer the questions below. \ansref{ans:RegMathAss}
     \begin{Enumerate}
       \item What is the explanatory variable?
       \item In terms of ACT and Assessment test scores, what does the value of the slope mean?
@@ -711,7 +711,7 @@ Therefore, it appears that this car gets \Sexpr{formatC(-1*(24-predict(lm2,data.
       \item Do you think that these results provide a useful predictor of math assessment scores in cases where those scores are not available but ACT scores are? Explain.
     \end{Enumerate}
 
-  \item \label{revex:RegDNA} \rhw{} \cite{SuitBauer1990} examined DNA indices obtained from fresh and frozen tissue samples with the goal of determining if fresh values could be predicted from frozen values.  The data for their study are found in \href{https://sites.google.com/site/ncstats/data/dna.txt}{dna.txt}.  Load these data into R and produce results that can be used to answer the questions below.  Note that one outlier should be excluded from the analysis. \ansref{ans:RegDNA}
+  \item \label{revex:RegDNA} \rhw{} \cite{SuitBauer1990} examined DNA indices obtained from fresh and frozen tissue samples with the goal of determining if fresh values could be predicted from frozen values.  The data for their study are found in \href{https://raw.githubusercontent.com/droglenc/NCData/master/DNA.csv}{DNA.csv}.  Load these data into R and produce results that can be used to answer the questions below.  Note that one outlier should be excluded from the analysis. \ansref{ans:RegDNA}
     \begin{Enumerate}
       \item What did the researchers consider as the response variable?
       \item What is the equation of the best-fit line in terms of the variables of the problem?
@@ -723,7 +723,7 @@ Therefore, it appears that this car gets \Sexpr{formatC(-1*(24-predict(lm2,data.
       \item What are the two major assumptions of regression and do they look like they've been met with these data (be specific!)?
     \end{Enumerate}
 
-  \item \label{revex:RegFawns} \rhw{} Wildlife ecologist in Texas wanted to determine if the amount of precipitation could explain some of the variability observed in the number of fawns born to each doe \citep{GinnettYoung2000}.  Because Texas has many different climatic regions, the state was broken down into eight precipitation zones, and the mean precipitation for each zone over a period of five years was calculated.  Furthermore, the researchers measured the mean number of fawns born per 100 does for each of these five years.  The data for their study are found in \href{https://sites.google.com/site/ncstats/data/deer1.txt}{deer1.txt}.  Load these data into R and produce results that can be used to answer the questions below.  \ansref{ans:RegFawns}
+  \item \label{revex:RegFawns} \rhw{} Wildlife ecologist in Texas wanted to determine if the amount of precipitation could explain some of the variability observed in the number of fawns born to each doe \citep{GinnettYoung2000}.  Because Texas has many different climatic regions, the state was broken down into eight precipitation zones, and the mean precipitation for each zone over a period of five years was calculated.  Furthermore, the researchers measured the mean number of fawns born per 100 does for each of these five years.  The data for their study are found in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Deer1.csv}{deer1.csv}.  Load these data into R and produce results that can be used to answer the questions below.  \ansref{ans:RegFawns}
     \begin{Enumerate}
       \item Express the equation of the best-fit line in terms of the variables of the problem.
       \item Interpret the slope of the best-fit line in terms of the variables.
@@ -734,7 +734,7 @@ Therefore, it appears that this car gets \Sexpr{formatC(-1*(24-predict(lm2,data.
       \item If the average amount of precipitation increases by 100 mm, how many more fawns per 100 does would you expect to be born?
     \end{Enumerate}
 
-  \item \label{revex:RegChirps} \rhw{} It has been said that temperature can be estimated from the number of cricket chirps heard.  To determine if this relationship existed, an entomologist recorded the number of chirps in a 15-second interval by crickets held at different temperatures.  The data for their study are found in \href{https://sites.google.com/site/ncstats/data/chirps.txt}{chirps.txt}.  Load these data into R and produce results that can be used to answer the questions below. \ansref{ans:RegChirps}
+  \item \label{revex:RegChirps} \rhw{} It has been said that temperature can be estimated from the number of cricket chirps heard.  To determine if this relationship existed, an entomologist recorded the number of chirps in a 15-second interval by crickets held at different temperatures.  The data for their study are found in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Chirps.csv}{Chirps.csv}.  Load these data into R and produce results that can be used to answer the questions below. \ansref{ans:RegChirps}
     \begin{Enumerate}
       \item What is the response variable?
       \item What is the explanatory variable?
@@ -753,7 +753,7 @@ Therefore, it appears that this car gets \Sexpr{formatC(-1*(24-predict(lm2,data.
 \vspace{36pt}
 \begin{hwsection}{All questions below should be typed and answered following the expectations identified in \sectref{sect:ReportWriting}.  All work must be shown.  Questions marked with the R logo must include R output with your R commands in an attached appendix.}
 
-  \item \label{hwprob:RegIndex} \rhw{} Wyoming Fish and Game researchers would like to be able to predict monthly fishing pressure (total number of angler-hours) with an index count of the number of vehicles in lake access parking lots because the latter is much cheaper to measure than the former. Towards this end they examined the relationship between pressure and index count on weekdays of Alcova Reservoir.  Use the data in \href{https://sites.google.com/site/ncstats/data/AlcovaRes.txt}{AlcovaRes.txt}, properly subsetted to include only the data from the weekdays (\textbf{YOU MUST DO THIS SUBSETTING}\footnote{See \sectref{sect:RSubsetdf} for a review of subsetting.}), to construct results that can be used to answer the questions below.
+  \item \label{hwprob:RegIndex} \rhw{} Wyoming Fish and Game researchers would like to be able to predict monthly fishing pressure (total number of angler-hours) with an index count of the number of vehicles in lake access parking lots because the latter is much cheaper to measure than the former. Towards this end they examined the relationship between pressure and index count on weekdays of Alcova Reservoir.  Use the data in \href{https://raw.githubusercontent.com/droglenc/NCData/master/AlcovaRes.csv}{AlcovaRes.csv}, properly subsetted to include only the data from the weekdays (\textbf{YOU MUST DO THIS FILTERING}\footnote{See \sectref{sect:RSubsetdf} for a review of subsetting.}), to construct results that can be used to answer the questions below.
     \begin{Enumerate}
       \item What is the response variable?
       \item What is the explanatory variable?

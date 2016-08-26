@@ -106,7 +106,7 @@ The study and collection of data are important in the work of many professions, 
 \begin{exsection}
 <<echo=FALSE>>=
 data(ABDLakes)
-named <- Subset(ABDLakes,named)
+named <- filterD(ABDLakes,named)
 @
 
   \item \label{revex:WhyStatsLakes} There are \Sexpr{formatC(nrow(ABDLakes),format="f",digits=0)} lakes in Ashland, Bayfield, and Douglas counties of Wisconsin.  However, only \Sexpr{formatC(nrow(named),format="f",digits=0)} of these are named.  A random sample of named lakes from this population is extracted with the following R code:
@@ -114,7 +114,7 @@ named <- Subset(ABDLakes,named)
 <<eval=FALSE>>=
 library(NCStats)
 data(ABDLakes)
-named <- Subset(ABDLakes,named)
+named <- filterD(ABDLakes,named)
 srsdf(named,n=50,vars=c("county","area"))
 @
 Use this code and some hand (or calculator) calculations to answer the questions below. \ansref{ans:WhyStatsLakes}

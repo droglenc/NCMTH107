@@ -54,9 +54,9 @@ Of course, this last ``reverse'' calculation would be the $t^{*}$ for a 95\% low
 \newpage
 \begin{exsection}
   \item \label{revex:tTestpv1} \rhw{} What is the p-value if $H_{A}:\mu<125$, $t=-2.178$, and $df=35$? \ansref{ans:tTestpv1}
-  \item \label{revex:tTestci1} \rhw{} What is $t^{*}$ for the previous question if $\alpha=0.05$? \ansref{ans:tTestci1}  
+  \item \label{revex:tTestci1} \rhw{} What is $t^{*}$ for the previous question if $\alpha=0.05$? \ansref{ans:tTestci1}
   \item \label{revex:tTestpv2} \rhw{} What is the p-value if $H_{A}:\mu>125$, $t=1.856$, and $df=81$? \ansref{ans:tTestpv2}
-  \item \label{revex:tTestci2} \rhw{} What is $t^{*}$ for the previous question if $\alpha=0.01$? \ansref{ans:tTestci2}   
+  \item \label{revex:tTestci2} \rhw{} What is $t^{*}$ for the previous question if $\alpha=0.01$? \ansref{ans:tTestci2}
   \item \label{revex:tTestpv3} \rhw{} What is the p-value if $H_{A}:\mu\neq125$, $t=-2.178$, and $df=99$? \ansref{ans:tTestpv3}
   \item \label{revex:tTestci3} \rhw{} What is $t^{*}$ for the previous question if $\alpha=0.10$? \ansref{ans:tTestci3}
 \end{exsection}
@@ -103,7 +103,7 @@ The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for th
     \item A one-sided 95\% lower confidence bound is warranted for this situation.  The $t^{*}=$\Sexpr{formatC(qt(0.95,df=49,lower.tail=FALSE),format="f",digits=3)} as computed with
 <<fig.show='hide'>>=
 ( distrib(0.95,distrib="t",type="q",df=49,lower.tail=FALSE) )
-@    
+@
 Thus, $20.1-1.677\frac{0.76}{\sqrt{50}}$ or $20.1-0.18$ = $19.92$.  Thus, one is 95\% confident that the mean weight of all salmon in the lot is greater than 19.92 lbs.
 \end{enumerate}
 
@@ -139,7 +139,7 @@ The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for th
     \item As stated, $\alpha$ should be set at 0.01.
     \item The null hypothesis will be about $\mu$ and it will be tested against a specific value, namely $\mu_{0}=24.3^{0}$C.  Thus, $H_{0}:\mu=24.3^{0}$C.  The $H_{A}:\mu\neq24.3^{0}$C (the researcher is interested in identifying a difference).
     \item A one-sample t-test is required because a quantitative variable (temperature) was measured on individuals from one population, the population mean is compared to a specific value in the null hypothesis, and $\sigma$ is \textbf{UN}known.
-    \item The data appear to be part of an experimental study (the temperature was controlled) with no suggestion of random selection of individuals.  The data were entered into the \var{ct} vector in R with\footnote{These data my be more easily entered into a tab-delimited text file as described in \sectref{sect:REnterData} and then read into R with \R{read.table()}.}
+    \item The data appear to be part of an experimental study (the temperature was controlled) with no suggestion of random selection of individuals.  The data were entered into the \var{ct} vector in R with\footnote{These data my be more easily entered into a CSV file as described in \sectref{sect:REnterData} and then read into R with \R{read.csv()}.}
 <<>>=
 ct <- c(22.9,22.9,23.3,23.5,23.9,23.9,24.0,24.3,24.5,24.6,24.6,24.8,24.8,
 25.1,25.4,25.4,25.5,25.5,25.8,26.1,26.2,26.3,27.0,27.3,28.1)
@@ -153,7 +153,7 @@ Because both assumptions are adequately met, one can continue with the computati
 <<Ex1tpvalue, par1a=TRUE, out.width='.3\\linewidth', fig.cap="Depiction of the p-value for the crab body temperature example.">>=
 ( ct.t <- t.test(ct,mu=24.3,conf.level=0.99) )
 plot(ct.t)
-@  
+@
     \item The statistic is $\bar{x}$=\Sexpr{formatC(ct.t$estimate,format="f",digits=2)}$^{0}$C.
     \item The test statistic is $t$=\Sexpr{formatC(ct.t$statistic,format="f",digits=3)}.  This test statistic has \Sexpr{formatC(ct.t$parameter,format="f",digits=0)} df.
     \item The p-value is \Sexpr{kPvalue(ct.t$p.value)} \figrefp{fig:Ex1tpvalue}.
@@ -170,18 +170,18 @@ plot(ct.t)
   6.8 5.9 5.8 6.7 6.3 6.2 5.4 5.5 6.7 5.9
 \end{Verbatim}
 
-  \item \label{revex:tTestStrawberries} \rhw{} Last year I planted 400 everbearing strawberry plants in my garden.  The company I bought the plants from claimed that in the year following planting, each plant would produce an average of 12 berries.  I was surprised by this claim and hypothesized that the plants would actually produce less than what the company said, on average.  To test this claim, I randomly selected 50 plants on which I counted the number of ripe berries produced for the entire season.  These data are found in \href{https://sites.google.com/site/ncstats/data/Strawberries.txt}{Strawberries.txt}.  Use these results to perform an appropriate hypothesis test, at the 10\% level. \ansref{ans:tTestStrawberries}
+  \item \label{revex:tTestStrawberries} \rhw{} Last year I planted 400 everbearing strawberry plants in my garden.  The company I bought the plants from claimed that in the year following planting, each plant would produce an average of 12 berries.  I was surprised by this claim and hypothesized that the plants would actually produce less than what the company said, on average.  To test this claim, I randomly selected 50 plants on which I counted the number of ripe berries produced for the entire season.  These data are found in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Strawberries.csv}{Strawberries.csv}.  Use these results to perform an appropriate hypothesis test, at the 10\% level. \ansref{ans:tTestStrawberries}
 
-  \item \label{revex:tTestToyRate} \rhw{} The toy industry rates toys regarding their ease for being put together.  The three categories are (1) easy, (2) moderate, and (3) difficult.  A toy is placed into the easy category if it takes 10 minutes or less to put the toy together, in the moderate category if it takes 20 minutes or less (and more than 10 minutes), and in the difficult category if it takes more than 20 minutes.  A randomly selected group of 34 adults were asked to put together a new toy to determine which rating the toy should receive.  The results from these 34 individuals are in \href{https://sites.google.com/site/ncstats/data/ToyTime.txt}{ToyTime.txt}.  Conduct a hypothesis test, at the 10\% level, to determine whether the toy should receive the difficult rating. \ansref{ans:tTestToyRate}
+  \item \label{revex:tTestToyRate} \rhw{} The toy industry rates toys regarding their ease for being put together.  The three categories are (1) easy, (2) moderate, and (3) difficult.  A toy is placed into the easy category if it takes 10 minutes or less to put the toy together, in the moderate category if it takes 20 minutes or less (and more than 10 minutes), and in the difficult category if it takes more than 20 minutes.  A randomly selected group of 34 adults were asked to put together a new toy to determine which rating the toy should receive.  The results from these 34 individuals are in \href{https://raw.githubusercontent.com/droglenc/NCData/master/ToyTime.csv}{ToyTime.csv}.  Conduct a hypothesis test, at the 10\% level, to determine whether the toy should receive the difficult rating. \ansref{ans:tTestToyRate}
 
-  \item \label{revex:tTestYahara1} \rhw{} One of the dominant uses of Madison area lakes is for boating.  In order to develop a long term data set on the temporal fluctuations and trends in such activity, the Long Term Ecological Research (LTER) project has obtained records of boat traffic that passes through the locks at the head of the Yahara River on its stretch between Lake Mendota and Lake Monona.  This data set (stored in \href{https://sites.google.com/site/ncstats/data/Yahara.txt}{Yahara.txt}) has been collected nearly daily from April through October since 1976.  Use these data to determine, at the 5\% level, if the mean total number of boats passing through the locks during the months of June, July, and August of 2005 is greater than 75.  HINT: you will have to create a new data frame that contains just the data for this period (i.e., the data file contains more data than is needed for this question).  I suggest that you do this in three separate steps -- isolate 2005 data, isolate data for months after May (5), and then isolate data for months before September (9). \ansref{ans:tTestYahara1}
-  
-  \item \label{revex:tTestBeads} \rhw{} The golden rectangle is a rectangle with a length-to-width ratio of 1:1.618, or equivalently, a width-to-length ratio of 0.618:1 (See a description of the golden rectangle \href{http://en.wikipedia.org/wiki/Golden_rectangle}{here}).  The golden rectangle is evident in several works by ancient Greeks and Egyptians.  Anthropologists measured the width-to-length ratios of beaded rectangles used by the Shoshoni Indians of America to decorate their leather goods.  These data are found in the \href{http://www.statsci.org/data/general/shoshoni.txt}{shoshoni.txt} data file\footnote{This question and these data originated at \href{http://www.statsci.org/data/general/shoshoni.html}{OzDASL}.}.  Use these data to determine, at the 5\% level, if the golden rectangle is evident in the beadwork of the Shoshonis. \ansref{ans:tTestBeads}
+  \item \label{revex:tTestYahara1} \rhw{} One of the dominant uses of Madison area lakes is for boating.  In order to develop a long term data set on the temporal fluctuations and trends in such activity, the Long Term Ecological Research (LTER) project has obtained records of boat traffic that passes through the locks at the head of the Yahara River on its stretch between Lake Mendota and Lake Monona.  This data set (stored in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Yahara.csv}{Yahara.csv}) has been collected nearly daily from April through October since 1976.  Use these data to determine, at the 5\% level, if the mean total number of boats passing through the locks during the months of June, July, and August of 2005 is greater than 75.  HINT: you will have to create a new data frame that contains just the data for this period (i.e., the data file contains more data than is needed for this question).  I suggest that you do this in three separate steps -- isolate 2005 data, isolate data for months after May (5), and then isolate data for months before September (9). \ansref{ans:tTestYahara1}
+
+  \item \label{revex:tTestBeads} \rhw{} The golden rectangle is a rectangle with a length-to-width ratio of 1:1.618, or equivalently, a width-to-length ratio of 0.618:1 (See a description of the golden rectangle \href{http://en.wikipedia.org/wiki/Golden_rectangle}{here}).  The golden rectangle is evident in several works by ancient Greeks and Egyptians.  Anthropologists measured the width-to-length ratios of beaded rectangles used by the Shoshoni Indians of America to decorate their leather goods.  These data are found in the \href{https://raw.githubusercontent.com/droglenc/NCData/master/Shoshoni.csv}{Shoshoni.csv} data file\footnote{This question and these data originated at \href{http://www.statsci.org/data/general/shoshoni.html}{OzDASL}.}.  Use these data to determine, at the 5\% level, if the golden rectangle is evident in the beadwork of the Shoshonis. \ansref{ans:tTestBeads}
 
 \end{exsection}
 
 
-\section{Two-Sample t-test} \label{sect:t2test}\index{t Test!two-sample} 
+\section{Two-Sample t-test} \label{sect:t2test}\index{t Test!two-sample}
 While it is often useful to test whether a population mean is equal to a specific value, as was done with the one-sample z-test and one-sample t-tests, there are many instances where interest is determining whether the means from two populations are equal.  In these situations, one is usually trying to determine if a difference exists between the two population means.  For example, is there a difference in income between males and females, in test scores between students from high- or low-income families, in percent body fat between raccoons from southern and northern Wisconsin, or in amount of milk produced between cows provided with a hormone and cows provided with a placebo.  In all of these situations, two populations are being examined (males and females, students from high- and low-income families, raccoons from southern and northern Wisconsin, cows given a hormone and cows given a placebo) and interests is in determining if a difference in population means exists.  The \textbf{two-sample t-test} is used to make these determinations and is the subject of this section.
 
 \subsection{Specifics}
@@ -277,7 +277,7 @@ The standard error of the statistic is,
     \item The p-value is \Sexpr{kPvalue(pt(2.207,df=48,lower.tail=FALSE))}, as computed with
 <<fig.show='hide'>>=
 ( distrib(2.207,distrib="t",df=48,lower.tail=FALSE) )
-@     
+@
     \item The $H_{0}$ is rejected because the $p-value <\alpha=0.05$.
     \item The average height of the corn plants appears to be greater for the plants grown with the synthetic fertilizer than those plants grown with the organic fertilizer.
     \item A 95\% confidence lower bound is warranted in this situation.  The $t^{*}=$\Sexpr{formatC(qt(0.95,df=48,lower.tail=FALSE),format="f",digits=3)} as computed with
@@ -357,8 +357,8 @@ The data for a two-sample t-test must be entered in stacked format.  In stacked 
 
 The data for BOD measurements in either the inlet or outlet to an aquaculture facility are shown below.  These data illustrate stacked data because each row corresponds to one individual and the columns are two variables defined on that individual with one variable being the measurement and the other variable being the group to which the individual belongs.
 <<echo=FALSE>>=
-aqua <- read.table("data/BOD.txt",header=TRUE)
-view(aqua)
+aqua <- read.csv("data/BOD.csv")
+headtail(aqua)
 @
 
 \defn{Stacked Data}{Data where the quantitative measurements of two groups are ``stacked'' on top of each other and a second variable is used to record to which group the measurement belongs.}
@@ -367,15 +367,15 @@ view(aqua)
 \warn{Stacked data is the preferred format for two-sample data, because each vector corresponds to a variable and each row corresponds to only one individual.}
 
 \subsubsection{Levene's Test}\index{Levene's Test}
-Before conducting a two-sample t-test, the assumption of equal variances must be tested with a Levene's test.  The Levene's test is computed in R with stacked data using \R{leveneTest()}\footnote{This function is in the \var{car} package which is loaded with \var{NCStats}.}.  The first argument to this function is a model formula of the type \R{response\TILDE factor} where \R{response} represents the vector containing the quantitative measurements and \R{factor} represents the vector containing the categorical grouping variable\footnote{This is the same model formula introduced in \sectref{sect:MultGroups} for summarizing multiple groups of data.}.  The data frame containing the variables in the formula must also be supplied in the \R{data=} argument of \R{leveneTest()}.
+Before conducting a two-sample t-test, the assumption of equal variances must be tested with a Levene's test.  The Levene's test is computed in R with stacked data using \R{levenesTest()}\footnote{This function is in the \var{car} package which is loaded with \var{NCStats}.}.  The first argument to this function is a model formula of the type \R{response\TILDE factor} where \R{response} represents the vector containing the quantitative measurements and \R{factor} represents the vector containing the categorical grouping variable\footnote{This is the same model formula introduced in \sectref{sect:MultGroups} for summarizing multiple groups of data.}.  The data frame containing the variables in the formula must also be supplied in the \R{data=} argument of \R{levenesTest()}.
 
 \subsubsection{Two-Sample t-Test}\index{t Test!two-sample}
-A two-sample t-test is computed in R with the same \R{t.test()} function used for the one-sample t-test.  The first argument to the \R{t.test()} function is a model formula of the exact same type sent to \R{leveneTest()}.  In addition to this argument, the following arguments may be specified when conducting a two-sample t-test with \R{t.test()}
+A two-sample t-test is computed in R with the same \R{t.test()} function used for the one-sample t-test.  The first argument to the \R{t.test()} function is a model formula of the exact same type sent to \R{levenesTest()}.  In addition to this argument, the following arguments may be specified when conducting a two-sample t-test with \R{t.test()}
 \begin{itemize}
   \item \R{mu}: The specific value of the null hypothesis.  In the two-sample case this is the hypothesized difference among the population means.  The default value is $0$ and, thus, this argument does not usually have to be specified.
   \item \R{alt=}: A character string indicating the type of alternative hypothesis (\R{"two.sided"}, \R{"greater"}, or \R{"less"}).  As previously, \R{"two.sided"} is the default.
   \item \R{conf.level=}: The level of confidence to be used when constructing the confidence interval for $\mu_{1}-\mu_{2}$.  As previously, \R{0.95} is the default.
-  \item \R{var.equal=}: A logical value indicating whether the two population variances should be considered to be equal or not.  If \R{var.equal=TRUE}, then the pooled sample variance is calculated and used in the standard error.  The default value is to assume unequal variances; thus, this argument must be set to \R{TRUE} if the result from \R{leveneTest()} suggests that the variances are equal.
+  \item \R{var.equal=}: A logical value indicating whether the two population variances should be considered to be equal or not.  If \R{var.equal=TRUE}, then the pooled sample variance is calculated and used in the standard error.  The default value is to assume unequal variances; thus, this argument must be set to \R{TRUE} if the result from \R{levenesTest()} suggests that the variances are equal.
 \end{itemize}
 
 \warn{The \R{var.equal=TRUE} argument must be used in the \R{t.test()} function if one is to assume equal variances.  This is NOT the default setting in R.}
@@ -390,7 +390,7 @@ Two things should be noted about the commands above.  First, I ``saved'' the re-
 \subsubsection{Example - BOD in Aquaculture Water}
 Consider the following situation (which was examined in parts above),
 \begin{quote}
-\textsl{An aquaculture farm takes water from a stream and returns it to the stream after it has circulated through the fish tanks.  The owner is concerned that the water may contain heightened levels of organic matter when it is released into the stream after it has circulated in the tanks.  He has taken steps to reduce this possibility, i.e., circulated the water rather quickly through the tanks, but is still concerned about the increase in organic material in the effluent.  To determine if this is true, he takes samples of the water at the intake and, at other times, downstream from the outlet and measures the biological oxygen demand (BOD) as a measure of the organics in the effluent (a higher BOD at the outlet would imply that organics are taken up from the tanks).  The farmers data are recorded in \href{https://sites.google.com/site/ncstats/data/BOD.txt}{BOD.txt}}.  Test for any evidence (i.e., at the 10\% level) of support for the farmers concern.
+\textsl{An aquaculture farm takes water from a stream and returns it to the stream after it has circulated through the fish tanks.  The owner is concerned that the water may contain heightened levels of organic matter when it is released into the stream after it has circulated in the tanks.  He has taken steps to reduce this possibility, i.e., circulated the water rather quickly through the tanks, but is still concerned about the increase in organic material in the effluent.  To determine if this is true, he takes samples of the water at the intake and, at other times, downstream from the outlet and measures the biological oxygen demand (BOD) as a measure of the organics in the effluent (a higher BOD at the outlet would imply that organics are taken up from the tanks).  The farmers data are recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/BOD.csv}{BOD.csv}}.  Test for any evidence (i.e., at the 10\% level) of support for the farmers concern.
 \end{quote}
 
 The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for this example are as follows:
@@ -400,9 +400,9 @@ The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for th
     \item A two-sample t-test is required because a quantitative variable (BOD level) was measured on two populations (outlet or inlet) that were \textbf{IN}dependent and two population means are being compared in the null hypothesis.
     \item The data appear to be part of an observational study with no obvious randomization.  The data were loaded with
 <<>>=
-aqua <- read.table("data/BOD.txt",header=TRUE)
-view(aqua)
-@    
+aqua <- read.csv("data/BOD.csv")
+headtail(aqua)
+@
 The order of the levels of the \var{src} variable were then changed to match the order of subtraction in the hypotheses with
 <<>>=
 aqua$src1 <- factor(aqua$src,levels=c("outlet","inlet"))
@@ -413,11 +413,11 @@ levels(aqua$src1)
 hist(BOD~src1,data=aqua,main="",xlab="BOD Measurement")
 @
 
-The variances appear to be equal because the Levene's test p-value (\Sexpr{kPvalue(leveneTest(BOD~src1,data=aqua)[1,"Pr(>F)"])}) is larger than $\alpha$.  The Levene's test was computed with
+The variances appear to be equal because the Levene's test p-value (\Sexpr{kPvalue(levenesTest(BOD~src1,data=aqua)[1,"Pr(>F)"])}) is larger than $\alpha$.  The Levene's test was computed with
 <<>>=
-leveneTest(BOD~src1,data=aqua)
+levenesTest(BOD~src1,data=aqua)
 @
-    
+
 With the assumptions met (independence and equal variances) or nearly met (sample size), the two-sample t-test was conducted with
 <<Aquapvalue, par1a=TRUE, out.width='.3\\linewidth', fig.cap="Depiction of the p-value in the two-sample t-test of BOD measurements in aquaculture example.">>=
 ( aqua.t <- t.test(BOD~src1,data=aqua,var.equal=TRUE,alt="greater",conf.level=0.90) )
@@ -433,15 +433,15 @@ plot(aqua.t)
 
 \newpage
 \begin{exsection}
-  \item \label{revex:tTestMilk} \rhw{} A study\footnote{Data was recreated from Blaisdell 1998.} examined the effectiveness of foil-lined milk cartons in reducing the ``leakage'' of dioxins from the carton to the milk (dioxins were found in milk cartons due to the bleaching process).  The dioxin content (parts per thousand, ppt) in milk from 50 unlined and 50 lined cartons of milk were measured and recorded in \href{https://sites.google.com/site/ncstats/data/MilkCartons.txt}{MilkCartons.txt}.  Use these data to determine, at the 1\% level, if lining the cartons with foil significantly reduced the amount of dioxin in the milk. \ansref{ans:tTestMilk}
+  \item \label{revex:tTestMilk} \rhw{} A study\footnote{Data was recreated from Blaisdell 1998.} examined the effectiveness of foil-lined milk cartons in reducing the ``leakage'' of dioxins from the carton to the milk (dioxins were found in milk cartons due to the bleaching process).  The dioxin content (parts per thousand, ppt) in milk from 50 unlined and 50 lined cartons of milk were measured and recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/MilkCartons.csv}{MilkCartons.csv}.  Use these data to determine, at the 1\% level, if lining the cartons with foil significantly reduced the amount of dioxin in the milk. \ansref{ans:tTestMilk}
 
-  \item \label{revex:tTestMathGrades} \rhw{} The math department at the University of North Carolina is apparently noted for ``giving out'' low grades, relative to the rest of the school.  To examine this, a random sample of the gpa for 22 math classes and 29 ``other'' university classes (from the last year) were examined.  Use the data stored in \href{https://sites.google.com/site/ncstats/data/UNCGrades.txt}{UNCGrades.txt} to determine if grades in math classes are significantly (at the 10\% level) lower than grades in other classes. \ansref{ans:tTestMathGrades}
-    
+  \item \label{revex:tTestMathGrades} \rhw{} The math department at the University of North Carolina is apparently noted for ``giving out'' low grades, relative to the rest of the school.  To examine this, a random sample of the gpa for 22 math classes and 29 ``other'' university classes (from the last year) were examined.  Use the data stored in \href{https://raw.githubusercontent.com/droglenc/NCData/master/UNCgrades.csv}{UNCGrades.csv} to determine if grades in math classes are significantly (at the 10\% level) lower than grades in other classes. \ansref{ans:tTestMathGrades}
+
   \item \label{revex:tTestMedSchool} \rhw{} A health commissioner needs to determine if the number of hours worked per week by medical interns differs between two cities.  To examine this, the commissioner finds the mean number of hours worked by interns in the first city for a random sample of 13 weeks and the same for a random sample of 16 weeks from the second city.  These results are found in \href{https://sites.google.com/site/ncstats/data/MedInternHrs}{MedInternHrs}.  Use those results to determine if the hours worked by the interns differs, at the 10\% level, between the two cities. \ansref{ans:tTestMedSchool}
 
-  \item \label{revex:tTestYield} \rhw{} Agronomists are interested in determining conditions that increase the yield of crops.  In one experiment 80 one-acre plots of corn were randomly divided into two groups of 40 plots each.  An insecticide was used on each plot in one group and sterilized male individuals of an insect pest were released on each plot of the other group.  The resulting yields were recorded in \href{https://sites.google.com/site/ncstats/data/CropYield.txt}{CropYield.txt}.  Is there a difference, at the 10\% level, in yield between the two treatments.  \ansref{ans:tTestYield}
+  \item \label{revex:tTestYield} \rhw{} Agronomists are interested in determining conditions that increase the yield of crops.  In one experiment 80 one-acre plots of corn were randomly divided into two groups of 40 plots each.  An insecticide was used on each plot in one group and sterilized male individuals of an insect pest were released on each plot of the other group.  The resulting yields were recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/CropYield.csv}{CropYield.csv}.  Is there a difference, at the 10\% level, in yield between the two treatments.  \ansref{ans:tTestYield}
 
-  \item \label{revex:tTestDAS} \rhw{} Templer's Death Anxiety Scale (DAS) is a measure of an individual's anxiety concerning death.  \cite{Robbins1990} examined 25 organ donors and 69 non-organ donors to determine if there was a difference in anxiety levels concerning death between these groups of people.  The results are recorded in \href{DeathAnxiety.txt}{DeathAnxiety.txt}.  Test Robbins' researcher's hypothesis at the 1\% significance level. \ansref{ans:tTestDAS}
+  \item \label{revex:tTestDAS} \rhw{} Templer's Death Anxiety Scale (DAS) is a measure of an individual's anxiety concerning death.  \cite{Robbins1990} examined 25 organ donors and 69 non-organ donors to determine if there was a difference in anxiety levels concerning death between these groups of people.  The results are recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/DeathAnxiety.csv}{DeathAnxiety.csv}.  Test Robbins' researcher's hypothesis at the 1\% significance level. \ansref{ans:tTestDAS}
 
 \end{exsection}
 
@@ -451,7 +451,7 @@ plot(aqua.t)
 
   \item \label{hwprob:tTestSeaLevel} A group of ecologists (work of \href{http://www3.lehigh.edu/steps/research/sahagian.html}{Sahagian} et al.) examined the effects of human activities (including aquifer mining, surface water diversion and volume changes of inland lakes, desertification, wetland drainage, soil erosion in agriculture, deforestation, and dam building) on a number of water quantity measurements, including sea level rise rate, in 23 ``ecosystems'' in the late 20th century.  The mean (standard deviation) total sea level rise rate among the 23 sampled ecosystems was 0.059 (0.135) mm/yr.  Use these results, and the assumption that the sample distribution is not skewed, to determine, at the 1\% significance level, if the mean sea-level increased significantly over the period of Sahagian's work.  [Hint: When identifying the hypotheses, think about what type of values the measured ``sea level rise rate'' would be if the sea level was indeed rising.  Take special note that a ``rise \textit{rate}'' was recorded.]
 
-  \item \label{hwprob:tTestPH} \rhw{} The pH scales falls between 0 and 14 with values $<7$ considered acidic and values $>7$ considered basic.  Rain water is naturally acidic, usually around 5.6 on the pH scale.  Thus, the EPA defines rainwater with a pH less than 5.6 as being ``acid rain.''  A series of rain collection samples were taken at the Big Meadows station in the Shenandoah National Park, VA with the results stored in \href{https://sites.google.com/site/ncstats/data/pHlevels.txt}{pHlevels.txt}\footnote(Data originally from \href{http://www.cvgs.k12.va.us/DIGSTATS/main/inferant/a_acidrain.htm}{here}.}.  Use these data to determine, at the 1\% level, if there is evidence for ``acid rain'' at this site.
+  \item \label{hwprob:tTestPH} \rhw{} The pH scales falls between 0 and 14 with values $<7$ considered acidic and values $>7$ considered basic.  Rain water is naturally acidic, usually around 5.6 on the pH scale.  Thus, the EPA defines rainwater with a pH less than 5.6 as being ``acid rain.''  A series of rain collection samples were taken at the Big Meadows station in the Shenandoah National Park, VA with the results stored in \href{https://raw.githubusercontent.com/droglenc/NCData/master/pHlevels.csv}{pHlevels.csv}\footnote(Data originally from \href{http://www.cvgs.k12.va.us/DIGSTATS/main/inferant/a_acidrain.htm}{here}.}.  Use these data to determine, at the 1\% level, if there is evidence for ``acid rain'' at this site.
 
   \item \label{hwprob:tTestCommitment} A researcher has constructed a ``survey'' to determine an individual person's ``commitment to adult animals.''  Each individual survey leads to a single number that measures that individual's ``commitment.''  This number is larger for ``greater commitments.''  The researcher wanted to determine if the mean ``commitment'' according to this measure was greater for people who evacuated all or some of their pets versus those who did not evacuate any pets during a propane tanker derailment in Weyauwega, Wisconsin in 1996.  The table below shows the results for the ``commitment'' measure for 116 individuals that evacuated all or some of their pets (i.e., DidEvac) and for 125 individuals that evacuated none of their pets (i.e., NoEvac).  Also note that the Levene's p-value for these data is 0.678.  Use these results to examine the researcher's hypothesis at the 1\% significance level.
 
@@ -460,11 +460,11 @@ plot(aqua.t)
   DidEvac  116 7.694  7.658 3.410  0.317  -0.863 14.763  5.035 10.204
   NoEvac   125 6.640  6.599 3.102  0.277  -1.214 14.444  4.568  8.696
   \end{Verbatim}
-  
+
   \item \label{hwprob:tTestMussels} \rhw{} \cite{MierzykowskiCarr2001} examined the amount of methyl-mercury in freshwater mussels (\emph{Elliptio complanata}) in four areas in the Sudbury River watershed in Massachusetts.  Two of the locations they examined were categorized as reservoirs with one being considered as impacted by the Nyanza Chemical site and the other as not being impacted.  The total methyl mercury (in $\mu$g meHG per g wet-weight of mussels) for individual mussels sampled from each site is shown below.  Use these data to determine if there is a significant difference, at the 5\% level, in methyl mercury levels found in mussels between the two locations.  Continue with the analysis even if you find that the assumptions have not been met.
-  
+
   \begin{Verbatim}
     impacted   0.011  0.054  0.056  0.095  0.051  0.077
     reference  0.031  0.040  0.029  0.066  0.018  0.042  0.044
   \end{Verbatim}
-\end{hwsection} 
+\end{hwsection}

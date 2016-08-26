@@ -384,7 +384,7 @@ make.smplingdist <- function(mu,SE,C=0.95) {
   lines(c(min(x),max(x)),c(0,0),lwd=2)                                    # put a pseudo-x-axis
   lpi <- mu-z*SE; upi <- mu+z*SE                                          # find lower & upper value of expected sample mns
   pi.ht <- dnorm(mu-2.5*SE,mu,SE)                                         # set height for bar of expected sample means
-  polygon(c(lpi,lpi,upi,upi,lpi),c(0,pi.ht,pi.ht,0,0),col="light green")  # make horiz bar that covers expected sample means    
+  polygon(c(lpi,lpi,upi,upi,lpi),c(0,pi.ht,pi.ht,0,0),col="light green")  # make horiz bar that covers expected sample means
   lines(c(mu,mu),c(0,dnorm(mu,mu,SE)),lwd=3,lty=3)                        # put vert line at mu
   par(op)
 } # end make.smplingdist
@@ -492,7 +492,7 @@ which makes the generic confidence interval formula,
 
 The scaling factor serves a dual purpose -- controls the width and type of the confidence region.  The relative magnitude of the value controls the relative width of the region such that the parameter is contained in the region at a rate according to the level of confidence.  For example, in 99\% confidence regions the scaling factor will be set such that 99\% of the confidence regions will contain the parameter.  The actual value of the scaling factor is computed from known sampling distributions.  In the case, where $\sigma$ is known (the situation considered here), the scaling factor is computed from a $N(0,1)$ and is called a $Z^{*}$.
 
-The sign of the scaling factor controls whether an interval, upper bound, or lower bound is computed.  For example, if the alternative hypothesis is two-tailed, then two values of $Z^{*}$ should be found such that an area equal to the level of confidence is contained between them (\figref{fig:CIboundsZ}-Left).  The two values that delineate these boundaries will be the exact same value but with different signs because the $N(0,1)$ distribution is symmetric about zero.  Thus, a confidence interval is computed with a scaling factor of $\pm Z^{*}$. 
+The sign of the scaling factor controls whether an interval, upper bound, or lower bound is computed.  For example, if the alternative hypothesis is two-tailed, then two values of $Z^{*}$ should be found such that an area equal to the level of confidence is contained between them (\figref{fig:CIboundsZ}-Left).  The two values that delineate these boundaries will be the exact same value but with different signs because the $N(0,1)$ distribution is symmetric about zero.  Thus, a confidence interval is computed with a scaling factor of $\pm Z^{*}$.
 
 <<CIboundsZ, echo=FALSE, fig.width=6, fig.height=2, out.width='.8\\linewidth', fig.cap="Depiction of the areas that define the $z^{*}$ for creating confidence bounds of a parameter in a hypothesis test.">>=
 par(mfcol=c(1,3),mar=c(2,0,2,0),las=1,tcl=-0.2)
@@ -542,9 +542,9 @@ text(cv2,-0.03,expression(-z),cex=2,xpd=TRUE)
 text(-2.8,0.12,expression(alpha),col="blue",cex=2)
 arrows(-2.8,0.10,-2.2,0.01,col="blue",length=0.1,lwd=2)
 text(0,0.15,expression(C),col="blue",cex=2)
-@ 
+@
 
-In contrast, if the alternative hypothesis is a ``less than'', then an upper confidence bound is desired.  In this case the $Z^{*}$ is found such that it has an area equal to the level of confidence LESS THAN it (\figref{fig:CIboundsZ}-Middle).  As the level of confidence will always be greater than 50\%, this definition will produce a positive value of $Z^{*}$ so that the scaling factor will be $+Z^{*}$.  Similarly, if the alternative hypothesis is a ``greater than'', then a lower confidence bound is desired and a value of $Z^{*}$ with an area equal to the level of confidence GREATER THAN it should be found (\figref{fig:CIboundsZ}-Right).  This will produce a negative value of $Z^{*}$ so that the scaling factor will be $-Z^{*}$. 
+In contrast, if the alternative hypothesis is a ``less than'', then an upper confidence bound is desired.  In this case the $Z^{*}$ is found such that it has an area equal to the level of confidence LESS THAN it (\figref{fig:CIboundsZ}-Middle).  As the level of confidence will always be greater than 50\%, this definition will produce a positive value of $Z^{*}$ so that the scaling factor will be $+Z^{*}$.  Similarly, if the alternative hypothesis is a ``greater than'', then a lower confidence bound is desired and a value of $Z^{*}$ with an area equal to the level of confidence GREATER THAN it should be found (\figref{fig:CIboundsZ}-Right).  This will produce a negative value of $Z^{*}$ so that the scaling factor will be $-Z^{*}$.
 
 \warn{Confidence intervals can be constructed for any level of confidence and for nearly every parameter.}
 
@@ -556,19 +556,19 @@ The following are three examples for calculating confidence regions.
   \item For the Square Lake example, with $H_{A}:\mu < 105$ and $\alpha=0.05$, a 95\% upper confidence bound should be constructed.  The corresponding $Z^{*}=$\Sexpr{formatC(qnorm(0.95),format="f",digits=3)} is found with
 <<fig.show='hide'>>=
 ( distrib(0.95,type="q") )
-@  
+@
 Thus, with the summary information for a single sample of $n=50$ shown in \tabref{tab:SquareLakeSample1}, the 95\% upper confidence bound is $100.04+1.645\frac{31.49}{\sqrt{50}}$, $100.04+7.33$, or $107.37)$.  Thus, one is 95\% confident that the true mean total length of all fish in Square Lake is less than 107.4 mm.  By confident, it is meant that 95\% of all 95\% confidence regions will contain the true $\mu$.
 
   \item Suppose that the mouse water consumption data from \tabref{tab:MouseData} was tested with $H_{A}:\mu \neq 10$ and $\alpha=0.01$.  In this case a 99\% confidence interval should be constructed.  The corresponding $Z^{*}=\pm$\Sexpr{formatC(qnorm(0.995),format="f",digits=3)} is found with
 <<fig.show='hide'>>=
 ( distrib(0.995,type="q") )
-@  
+@
 Thus, assuming that $\sigma=$2 ml and using the summary information computed in \sectref{sec:quEDACenter} the 99\% confidence bound is $14.04\pm2.576\frac{2}{\sqrt{30}}$, $14.04\pm0.94$, or $(13.10,14.98)$.  Thus, one is 99\% confident that the true mean level of water consumption by all mice is between 13.1 and 15.0 ml.  By confident, it is meant that 99\% of all 99\% confidence regions will contain the true $\mu$.
 
   \item Suppose the third example hypothesis that started this chapter is being tested with an $\alpha=0.10$.  In this case a 90\% upper confidence bound should be constructed.  The corresponding $Z^{*}=+$\Sexpr{formatC(qnorm(0.90),format="f",digits=3)} is found with
 <<fig.show='hide'>>=
 ( distrib(0.90,type="q") )
-@  
+@
 Thus, assuming that $\sigma=$15, $\bar{x}=$75, and $n=$40, the 90\% confidence bound is $75+1.282\frac{15}{\sqrt{40}}$, $75+3.04$, or $78.04$.  Thus, one is 90\% confident that the true mean monthly heating bill for all houses is less than \$78.04.  By confident, it is meant that 90\% of all 90\% confidence regions will contain the true $\mu$.
 \end{enumerate}
 
@@ -620,7 +620,7 @@ plot(0,0,xlim=c(min(mu)-int,max(mu)+int),ylim=range(res),xlab="Population Mean",
 for (i in 1:length(mu)) {
   px <- c(rep(mu[i]-wid,2),rep(mu[i]+wid,2),mu[i])
   py <- c(res[i,1],res[i,2],res[i,2],res[i,1],res[i,1])
-  if ((xbar>res[i,1]) & (xbar<res[i,2])) {   
+  if ((xbar>res[i,1]) & (xbar<res[i,2])) {
     polygon(px,py,col="green")
   } else {
     polygon(px,py,col="red")
@@ -782,7 +782,7 @@ Use of \R{z.test()} and \R{plot()} are illustrated in the following example.
 \subsubsection{Body Temperature}
 Consider the following situation\footnote{There is an interesting discussion of studies of body temperature at \href{http://hypertextbook.com/facts/LenaWong.shtml}{The Physics Factbook}.},
 \begin{quote}
-\textsl{\cite{Machowiaketal1992} critically examined the belief that the mean body temperature is 98.6$^{0}$F by measuring the body temperatures in a sample of healthy humans.  Their data are found in \href{https://sites.google.com/site/ncstats/data/BodyTemp.txt}{BodyTemp.txt}.  Use these data, with a supposedly known $\sigma=0.63^{0}$F, and an $\alpha=0.01$ to determine if the mean body temperature differs from 98.6$^{0}$F.}
+\textsl{\cite{Machowiaketal1992} critically examined the belief that the mean body temperature is 98.6$^{0}$F by measuring the body temperatures in a sample of healthy humans.  Their data are found in \href{https://raw.githubusercontent.com/droglenc/NCData/master/BodyTemp.csv}{BodyTemp.csv}.  Use these data, with a supposedly known $\sigma=0.63^{0}$F, and an $\alpha=0.01$ to determine if the mean body temperature differs from 98.6$^{0}$F.}
 \end{quote}
 
 The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for this example are as follows:
@@ -790,13 +790,13 @@ The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for th
   \item As stated, $\alpha$ should be set at 0.01.
   \item The null hypothesis will be about $\mu$ and it will be tested against a specific value, namely $\mu_{0}=98.6^{0}$F.  Thus, $H_{0}:\mu=98.6^{0}$F.  The $H_{A}:\mu\neq98.6^{0}$F (the researchers want to determine if the temperature is \textbf{different from} $98.6^{0}$F).
   \item A one-sample Z-test is required because a quantitative variable (i.e., body temperature) was measured on individuals from one population, the population mean is compared to a specific value in the null hypothesis, and $\sigma$ is known (given in the background).
-  \item The data appear to be part of an observational study although this is not made clear in the background information.  There is also no evidence that randomization was used.  The data were loaded into R from \dfile{BodyTemp.txt} and the results of the one-sample Z-test were computed as follows,
+  \item The data appear to be part of an observational study although this is not made clear in the background information.  There is also no evidence that randomization was used.  The data were loaded into R from \dfile{BodyTemp.csv} and the results of the one-sample Z-test were computed as follows,
 <<Ex2Zpvalue, par1a=TRUE, out.width='.3\\linewidth',fig.cap="Depiction of the p-value for the body temperature example.",fig.pos="!h">>=
-bt <- read.table("data/BodyTemp.txt",header=TRUE)
-view(bt)
+bt <- read.csv("data/BodyTemp.csv")
+headtail(bt)
 ( bt.z <- z.test(bt$temp,mu=98.6,sd=0.63,conf.level=0.99) )
 plot(bt.z)
-@  
+@
   \item The sample size (\Sexpr{round(bt.z$parameter["n"],0)}) is much greater than 30, thus the test statistic computed below should reasonably follow a standard normal distribution.  In addition, $\sigma$ is known ($=0.63^{0}$F).
   \item The hypothesis is about $\mu$.  Therefore, we want to calculate $\bar{x}$, which from the output above, is \Sexpr{round(bt.z$estimate,2)}$^{0}$F.
   \item The z test statistic is \Sexpr{round(bt.z$statistic,2)}.
@@ -808,14 +808,14 @@ plot(bt.z)
 
 \begin{exsection}
   \item \label{revex:HypTestZPain} \rhw{} A study by \cite{Cheshireetal1994} reported on six patients with chronic myofascial pain syndrome (introduced in Review Exercise \ref{revex:HypTPain}).  The researchers determined the duration of pain for the six patients were 2.5, 2.7, 2.8, 2.8, 2.8, and 3.0.  Test the hypothesis that the mean pain length was greater than 2.5 years at the 10\% significance level.  Assume that it is known that the distribution of duration of pain is normal with a standard deviation of 0.5 years. \ansref{ans:HypTestZPain}
-  
-  \item \label{revex:HypTestAsianCholest} \rhw{} Suppose that it is known that cholesterol levels in women aged 21-40 in the U.S. has a mean of 190 mg/dl and standard deviation of 40 mg/dl.  Suppose that we want to determine, at the 10\% significance level, if the cholesterol level of Asian women is different from U.S. women as determined from 40 randomly selected Asian women aged 21-40 who had recently immigrated to the U.S.  Assume that the Asian women have the same standard deviation as the U.S. women population.  The data from this sample are found in \href{https://sites.google.com/site/ncstats/data/Cholesterol.txt}{Cholesterol.txt}.  \ansref{ans:HypTestZAsianCholest}
+
+  \item \label{revex:HypTestAsianCholest} \rhw{} Suppose that it is known that cholesterol levels in women aged 21-40 in the U.S. has a mean of 190 mg/dl and standard deviation of 40 mg/dl.  Suppose that we want to determine, at the 10\% significance level, if the cholesterol level of Asian women is different from U.S. women as determined from 40 randomly selected Asian women aged 21-40 who had recently immigrated to the U.S.  Assume that the Asian women have the same standard deviation as the U.S. women population.  The data from this sample are found in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Cholesterol.csv}{Cholesterol.csv}.  \ansref{ans:HypTestZAsianCholest}
 \end{exsection}
 
 \newpage
 \begin{hwsection}{All questions below should be typed and answered following the expectations identified in \sectref{sect:ReportWriting}.  All work must be shown.  Questions marked with the R logo must include R output with your R commands in an attached appendix.}
 
-  \item \label{hwprob:HypTestZHawks} \rhw{} The Duluth, MN touristry board would like to advertise that, on average, more than 50,000 raptors are seen at Hawk's Ridge\footnote{Information about Hawk Ridge is found \href{http://www.hawkridge.org/}{here}.} per year.  Data was recorded for a number of raptor species from 1971-2003 and recorded in \href{https://sites.google.com/site/ncstats/data/HawksRidge.txt}{HawksRidge.txt}.  Note that the \var{Total} variable should be used from this data file as the board is focused on the total number of raptors seen in a year.  Further, assume that it is known that the population standard deviation is 37,000 raptors per year.  The board wants there to be strong, if any, evidence to support their claim (i.e., test at the 1\% level).  Use these data to determine if there is support in these data for the board's claim.
+  \item \label{hwprob:HypTestZHawks} \rhw{} The Duluth, MN touristry board would like to advertise that, on average, more than 50,000 raptors are seen at Hawk's Ridge\footnote{Information about Hawk Ridge is found \href{http://www.hawkridge.org/}{here}.} per year.  Data was recorded for a number of raptor species from 1971-2003 and recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/HawksRidge.csv}{HawksRidge.csv}.  Note that the \var{Total} variable should be used from this data file as the board is focused on the total number of raptors seen in a year.  Further, assume that it is known that the population standard deviation is 37,000 raptors per year.  The board wants there to be strong, if any, evidence to support their claim (i.e., test at the 1\% level).  Use these data to determine if there is support in these data for the board's claim.
 
   \item \label{hwprob:HypTestZCredit} Credit card companies use a regression model (includes such factors as income, employment, credit history) to determine the credit worthiness of a prospective card holder. In the past, the companies used a threshold (cutoff) limit of 630 to receive a card.  It is also assumed that the standard deviation of all potential credit card holders is 5.  Recent information suggests that delinquencies have been increasing and it is hypothesized that credit card companies will raise the ``cutoff score'' in response.  Examine the following results concerning ``cutoff scores'' from 44 credit card issuers to see if there is evidence that the ``cutoff score'' has been increased significantly from 630.  Use $\alpha=0.10$.
   \begin{Verbatim}
@@ -828,7 +828,7 @@ plot(bt.z)
  5.20, 7.79, 6.46, 8.60, 8.97,8.65, 9.60,9.09,
 12.42,10.70,11.59,10.68,10.61,9.04,10.89
   \end{Verbatim}
-  
+
   \item \label{hwprob:CInPlants} Suppose that a plant ecologist is to examine a very large tract of land that has been subdivided into 1400 plots of 10 $m^{2}$ (10 square meters).  The researcher wants to determine the mean density of plants per 10 $m^{2}$ plots for the entire tract of land to within 10 plants per 10 $m^{2}$ plot with 90\% confidence.  A pilot study indicated that the standard deviation was approximately 50 plants per 10 $m^{2}$ plot.  Determine how many 10 $m^{2}$ plots the researcher should examine to reach her stated goals.
 
 \end{hwsection}

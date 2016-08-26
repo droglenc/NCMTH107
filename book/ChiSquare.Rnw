@@ -170,7 +170,7 @@ Let $p$ be the population proportion in a particular level and $\hat{p}$ be the 
 where the scaling factor is the familiar $Z^{*}$.  Thus, the confidence interval for $p$ is constructed with
 
   \[ \hat{p} \pm Z^{*}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \]
-  
+
 Note that one does not need to worry about lower and upper bounds, only confidence intervals will be computed, because of the two-tailed nature of the chi-square test statistic.
 
 In the Wyoming survey example, the proportion of respondents in the sample that either disagreed or strongly disagreed was $\hat{p}$=$\frac{196}{371}$=$0.528$.  The standard error for this sample proportion is $\sqrt{\frac{0.528(1-0.528)}{371}}$=$0.026$.  For a 95\% confidence interval the $Z^{*}$=$\pm$\Sexpr{formatC(qnorm(0.975),format="f",digits=3)} as computed with
@@ -218,7 +218,7 @@ The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for th
     \item A 90\% confidence interval is warranted using $z^{*}=$\Sexpr{formatC(qnorm(0.95),format="f",digits=3)} as determined with
 <<fig.show='hide'>>=
 ( distrib(0.95,type="q") )
-@    
+@
 The sample proportion opposing the \$1 coin is $\frac{54}{80}$=$0.68125$ with a standard error of $\sqrt{\frac{0.68125*0.31875}{80}}$ = $0.0521$.  Thus, $0.68125\pm1.645*0.0521$, $0.68125\pm0.0857$, and $(0.5956,0.7670)$.  Therefore, one is 90\% confident that the proportion of all Ashland residents opposed to the \$1 coin is between 0.596 and 0.767.
 \end{enumerate}
 
@@ -322,7 +322,7 @@ From these results it is apparent that the shrikes use the ``open'' habitat much
 The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for the example below is shown below:
 
 \begin{quote}
-\textsl{\cite{HerrigesKing1999} examined modes of fishing for a large number of recreational saltwater users in southern California.  One of the questions asked in their Southern California Sportfishing Survey was what ``mode'' they used for fishing -- ``from the beach'', ``from a fishing pier'', ``on a private boat'', or ``on a chartered boat.''  The results to this question, along with other data not used here, are found in \href{https://sites.google.com/site/ncstats/data/FishingModes.txt}{FishingModes.txt}.  One hypothesis of interest states that two-thirds of the users will fish from a boat, split evenly between private and charter boats, while the other one-third will fish from land, also split even between those fishing on the beach and those from a pier.  Use the data in the \var{mode} variable of the data file to determine if this hypothesis is supported at the 10\% level.}
+\textsl{\cite{HerrigesKing1999} examined modes of fishing for a large number of recreational saltwater users in southern California.  One of the questions asked in their Southern California Sportfishing Survey was what ``mode'' they used for fishing -- ``from the beach'', ``from a fishing pier'', ``on a private boat'', or ``on a chartered boat.''  The results to this question, along with other data not used here, are found in \href{https://raw.githubusercontent.com/droglenc/NCData/master/FishingModes.csv}{FishingModes.csv}.  One hypothesis of interest states that two-thirds of the users will fish from a boat, split evenly between private and charter boats, while the other one-third will fish from land, also split even between those fishing on the beach and those from a pier.  Use the data in the \var{mode} variable of the data file to determine if this hypothesis is supported at the 10\% level.}
 \end{quote}
 
 \begin{enumerate}
@@ -331,7 +331,7 @@ The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for th
   \item A goodness-of-fit test is required because a categorical variable (mode) with four levels from a single population (Southern California Sportfishers) was recorded and will be compared to a theoretical distribution in the null hypothesis.
   \item The data appear to be part of an observational study where the individuals were not obviously (probably were not) randomly selected.  The raw data was read in with
 <<>>=
-sf <- read.table("data/FishingModes.txt",header=TRUE)
+sf <- read.csv("data/FishingModes.csv")
 @
 The \var{mode} variable was summarized with
 <<>>=
@@ -410,8 +410,8 @@ From these results it is apparent that the proportion of progeny with red-eyes w
 
 \begin{exsection}
   \item \label{revex:ChiGOFPref1} \rhw{} The leader of a local lake association conducted a survey of all members of the association.  One question on the survey was, ``What is your preferred method of receiving notices from the lake association: by regular mail, by e-mail, by phone, by poster (at the local boat landing), or other?''  Of the surveys returned, 47 respondents preferred regular mail, 63 e-mail, 17 phone, 73 by poster, and 8 some other method.  OF THE RESPONDENTS WHO DID NOT PREFER SOME OTHER METHOD, is there evidence, at the 5\% level, of a difference in the preferred method of contact? \ansref{ans:ChiGOFPref1}
-  
-  \item \label{revex:ChiGOFOtterMortality} \rhw{} \cite{Philcoxetal1999} examined patterns in the road-related mortalities of otters (\emph{Lutra lutra}) in Britain from 1971 to 1996.  One aspect of their analysis was to examine the sex ratio of road-killed otters.  The sex of all otters for which sex could be identified are recorded in \href{https://sites.google.com/site/ncstats/data/OtterMort.txt}{OtterMort.txt}.  Use these data to determine if there is a significant (at the 1\% level) bias in the sex ratio of road-killed otters. \ansref{ans:ChiGOFOtterMortality}
+
+  \item \label{revex:ChiGOFOtterMortality} \rhw{} \cite{Philcoxetal1999} examined patterns in the road-related mortalities of otters (\emph{Lutra lutra}) in Britain from 1971 to 1996.  One aspect of their analysis was to examine the sex ratio of road-killed otters.  The sex of all otters for which sex could be identified are recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/OtterMort.csv}{OtterMort.csv}.  Use these data to determine if there is a significant (at the 1\% level) bias in the sex ratio of road-killed otters. \ansref{ans:ChiGOFOtterMortality}
 
   \item \label{revex:ChiGOFCoin} \rhw{} While imprisoned by the Germans during World War II, the English mathematician John Kerrich tossed a coin 10000 times and obtained 5067 heads.  Use his results to determine (at the 1\% level) whether the coin was fair or not (i.e., equal chance of heads and tails). \ansref{ans:ChiGOFCoin}
 
@@ -424,7 +424,7 @@ From these results it is apparent that the proportion of progeny with red-eyes w
     \end{Verbatim}
 
   \item \label{revex:chiGOFBlood} \rhw{} Past data suggest that of the patients that a hospital serves 44\% have type O, 45\% have type A, 8\% have type B, and 3\% have type AB blood.  In a more recent survey they found that 67 patients had type O, 83 had type A, 29 had type B, and 8 had type AB.  Use the more recent results to determine, at the 5\% level, if the past results still hold. \ansref{ans:chiGOFBlood}
-  
+
   \item \label{revex:ChiGOFDA} \rhw{} A county district attorney would like to run for the office of state district attorney. She has decided that she will give up her county office and run for state office if more than 65\% of her party constituents support her.  As her campaign manager, you collected data on 950 randomly selected party members and find that 660 party members support the candidate. Test at the 5\% significance level whether she should give up her county office and run for the state office. \ansref{ans:ChiGOFDA}
 
   \item \label{revex:ChiGOFSurv} \rhw{} Suppose that you know that a population of deer is at a stable age distribution and stable population size.  In addition, it is hypothesized that the survival rate from year-to-year is 50\%.  Through a random sample of animals from this population you determine that 134 are in the 0-1 age group, 66 are aged 1-2, 30 are aged 2-3, 13 are aged 3-4, 4 are aged 4-5, and 6 are aged 5-6.  Use these results to determine, at the 10\% level, if the survival rate is indeed 50\%.  [Hint: Find the expected number of animals in each age category.  The expected number in the first age category, $X$, is found by solving the following equation $X+(0.5^{1}+0.5^{2}+0.5^{3}+0.5^{4}+0.5^{5})X = n$ where $n$ is the total number of observed animals.  The expected values in the remaining categories are determined from the value of $X$ and the hypothesized survival rate.] \ansref{ans:ChiGOFSurv}
@@ -436,7 +436,7 @@ From these results it is apparent that the proportion of progeny with red-eyes w
   \item \label{revex:ChiGOFPref2R} \rhw{} Repeat Review Exercise \ref{revex:ChiGOFPref2} using R. \ansref{ans:ChiGOFPref2R}
 
   \item \label{revex:ChiGOFMendels1R} \rhw{} Repeat Review Exercise \ref{revex:ChiGOFMendels1} using R. \ansref{ans:ChiGOFMendels1R}
-  
+
   \item \label{revex:ChiGOFByCatch} \rhw{} An Alaskan pollock (\textit{Theragra chalcogramma}) trawling boat will discontinue trawling in an area if the by-catch of king salmon (\textit{Oncorhynchus tshawytscha}) caught in that area exceeds 10\% of the catch.  In a very large trawl catch the independent observer on the boat randomly sampled 1256 fish and found that 145 were king salmon.  Is there evidence, at the 10\% level, that the boat should discontinue trawling in that area? \ansref{ans:ChiGOFByCatch}
 \end{exsection}
 
@@ -446,7 +446,7 @@ The chi-square goodness-of-fit test was used to determine how closely the distri
 \warn{This hypothesis test is called a chi-square test, NOT a chi-square\textbf{D} test.}
 
 \subsection{Hypotheses}
-The statistical hypotheses for a chi-square test are, in general, ``wordy.''  Before considering these hypotheses first let's assume that a two-way contingency table (see \sectref{sect:BEDACategorical}) will be used to summarize the data where the rows will correspond to the levels that represent the separate populations and the columns correspond to the different levels of the response variable.  In this organization, the null hypothesis basically says that the row percentage (or proportion) are all equal -- i.e., ``the percentage or proportional distribution of individuals into the levels of the response variable is the same for all populations.''  The alternative hypothesis claims that there is some difference among the row percentages -- i.e., ``the percentage or proportional distribution of individuals into the levels of the response variable is NOT the same for all populations.'' 
+The statistical hypotheses for a chi-square test are, in general, ``wordy.''  Before considering these hypotheses first let's assume that a two-way contingency table (see \sectref{sect:BEDACategorical}) will be used to summarize the data where the rows will correspond to the levels that represent the separate populations and the columns correspond to the different levels of the response variable.  In this organization, the null hypothesis basically says that the row percentage (or proportion) are all equal -- i.e., ``the percentage or proportional distribution of individuals into the levels of the response variable is the same for all populations.''  The alternative hypothesis claims that there is some difference among the row percentages -- i.e., ``the percentage or proportional distribution of individuals into the levels of the response variable is NOT the same for all populations.''
 
 In instances where there are only two levels of the categorical response variable the hypotheses may be slightly simpler.  In these instances, the null hypothesis would be ``the proportion of individuals in the level of interest is the same for all populations'' whereas the alternative hypothesis is ``the proportion of individuals in the level of interest is NOT the same for all populations.''
 
@@ -628,14 +628,14 @@ The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for th
   \begin{center}
     \begin{tabular}{c|rr|r}
       \hline\hline
-      Clinic Type & \multicolumn{1}{c}{HEE} & \multicolumn{1}{c|}{not HEE} & \multicolumn{1}{c}{total} \\ 
+      Clinic Type & \multicolumn{1}{c}{HEE} & \multicolumn{1}{c|}{not HEE} & \multicolumn{1}{c}{total} \\
       \hline
-      non-ANCC, non-Onc & 362 & 534 & 896 \\ 
-      non-ANCC, Onc     & 58  & 92  & 150 \\ 
-      ANCC, non-Onc     & 197 & 558 & 755 \\ 
-      ANCC, Onc         & 30  & 125 & 155 \\ 
+      non-ANCC, non-Onc & 362 & 534 & 896 \\
+      non-ANCC, Onc     & 58  & 92  & 150 \\
+      ANCC, non-Onc     & 197 & 558 & 755 \\
+      ANCC, Onc         & 30  & 125 & 155 \\
       \hline
-      total & 647 & 1309 & 1956 \\ 
+      total & 647 & 1309 & 1956 \\
       \hline\hline
     \end{tabular}
   \end{center}
@@ -700,7 +700,7 @@ which is basically the appropriately signed square root of the parts in the $\ch
 \subsubsection{Example - Father Present at Birth}
 Consider this situation,
 \begin{quote}
-\textsl{Daniel Weiss (in ``100\% American'') reported the results of a survey of 300 first-time fathers from four different hospitals (labeled as A, B, C, and D).  Each father was asked if he was present (or not) in the delivery room when his child was born.  The results of the survey are in \href{https://sites.google.com/site/ncstats/data/FatherPresent.txt}{FatherPresent.txt}.  Use these data to determine if there is a difference, at the 5\% level, in the proportion of fathers present in the delivery room among the four hospitals.}
+\textsl{Daniel Weiss (in ``100\% American'') reported the results of a survey of 300 first-time fathers from four different hospitals (labeled as A, B, C, and D).  Each father was asked if he was present (or not) in the delivery room when his child was born.  The results of the survey are in \href{https://raw.githubusercontent.com/droglenc/NCData/master/FatherPresent.csv}{FatherPresent.csv}.  Use these data to determine if there is a difference, at the 5\% level, in the proportion of fathers present in the delivery room among the four hospitals.}
 \end{quote}
 
 The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for this situation are as follows:
@@ -710,7 +710,7 @@ The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for th
     \item A chi-square test is required because a categorical variable with two levels (present or absent) was measured on four populations (the hospitals) and the distributions into the levels is being compared among populations in the null hypothesis.
     \item The data appear to be part of an observational study with no clear indication of randomization (likely a voluntary response survey).  The raw data were loaded into R with
 <<>>=
-fp <- read.table("data/FatherPresent.txt",header=TRUE)
+fp <- read.csv("data/FatherPresent.csv")
 str(fp)
 @
     \item The observed table was constructed, saved, and submitted to \R{chisq.test} for, at this stage, observing the expected frequency table.
@@ -766,7 +766,7 @@ ai.obs <- matrix(freq,nrow=2,byrow=TRUE)
 rownames(ai.obs) <- c("DI","BP")
 colnames(ai.obs) <- c("A","B","C","D","E","F")
 ai.obs
-@    
+@
 This observed table was submitted to \R{chisq.test()} for, at this stage, observing the expected frequency table.
 <<>>=
 ai.chi <- chisq.test(ai.obs)
@@ -783,7 +783,7 @@ ai.chi
     \item There does appear to be a significant difference in the distribution of the dominant plants between the two sites.  A look at the Pearson residuals,
 <<>>=
 ai.chi$residuals
-@  
+@
 and the row-percentage table,
 <<>>=
 percTable(ai.obs,margin=1,digits=2)
@@ -796,16 +796,16 @@ both suggest that the biggest difference between the two locations is due to ``p
   \end{enumerate}
 
 \begin{exsection}
-  \item \label{revex:ChiWoodpeckers} \rhw{} \cite{Saenzetal1998} examined the effectiveness of ``restrictor plates'' (a metal plate designed to reduce ``pecking'' by pileated woodpeckers (\emph{Dryocopus pileatus}) in reducing damage by pileated woodpeckers) on cavity trees for red-cockaded woodpeckers (\emph{Picoides borealis}) in Eastern Texas.  For each red-cockaded woodpecker cavity hole they recorded whether the hole was fit with a restrictor plate or not and, ultimately, whether the cavity hole was damaged or not.  The results of their study are recorded in \href{https://sites.google.com/site/ncstats/data/RestrictorPlates.txt}{RestrictorPlates.txt}.  Examine these data to determine, at the 5\% level, if restrictor plates reduced the damage done by pileated woodpeckers. \ansref{ans:ChiWoodpeckers}
+  \item \label{revex:ChiWoodpeckers} \rhw{} \cite{Saenzetal1998} examined the effectiveness of ``restrictor plates'' (a metal plate designed to reduce ``pecking'' by pileated woodpeckers (\emph{Dryocopus pileatus}) in reducing damage by pileated woodpeckers) on cavity trees for red-cockaded woodpeckers (\emph{Picoides borealis}) in Eastern Texas.  For each red-cockaded woodpecker cavity hole they recorded whether the hole was fit with a restrictor plate or not and, ultimately, whether the cavity hole was damaged or not.  The results of their study are recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/RestrictorPlates.csv}{RestrictorPlates.csv}.  Examine these data to determine, at the 5\% level, if restrictor plates reduced the damage done by pileated woodpeckers. \ansref{ans:ChiWoodpeckers}
 
-  \item \label{revex:ChiCervids} \rhw{} On the eastern slopes of the Rocky Mountains in Colorado, Wyoming, and Montana, whitetail deer (\textit{Odocoileus virginianus}), mule deer (\textit{Odocoileus hemionus}), and elk (\textit{Cervus canadensis}) habitats overlap.  It has been observed that in these areas where these species interact, diseases common to each species tend to infect more animals than in other areas.  To examine this phenomenon, infection information on all three species was observed from individuals killed during the hunting seasons in areas where the habitats overlapped.  In particular, it was recorded whether the animal was infected with one of the diseases common to each species or not.  These data are recorded in \href{https://sites.google.com/site/ncstats/data/CervidDisease.txt}{CervidDisease.txt}.  Test at the 1\% significance level if there is a difference in the infection rate among the three species. \ansref{ans:ChiCervids}
-  
+  \item \label{revex:ChiCervids} \rhw{} On the eastern slopes of the Rocky Mountains in Colorado, Wyoming, and Montana, whitetail deer (\textit{Odocoileus virginianus}), mule deer (\textit{Odocoileus hemionus}), and elk (\textit{Cervus canadensis}) habitats overlap.  It has been observed that in these areas where these species interact, diseases common to each species tend to infect more animals than in other areas.  To examine this phenomenon, infection information on all three species was observed from individuals killed during the hunting seasons in areas where the habitats overlapped.  In particular, it was recorded whether the animal was infected with one of the diseases common to each species or not.  These data are recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/CervidDisease.csv}{CervidDisease.csv}.  Test at the 1\% significance level if there is a difference in the infection rate among the three species. \ansref{ans:ChiCervids}
+
   \item \label{revex:ChiAshland} \rhw{} Ashland High School conducted a survey to determine if parents or students favored the idea of uniforms being required apparel for attending school (December 5, 1999, Ashland Daily Press).  The surveys were administered to 223 parents at parent-teacher conferences and to 572 students by the Student Council.  No other information about the surveys was given in the report.  From these surveys it was learned that 70 parents and 101 students FAVORED the wearing of uniforms.  Determine, at the 5\% level, if there is a difference in the level of support for wearing uniforms between parents and students. \ansref{ans:ChiAshland}
-  
+
   \item \label{revex:ChiArthritis} \rhw{} Five hundred patients participated in a comparison of the effectiveness of three arthritic pain relievers (175 received medication A, 150 received medication B, and 175 received medication C).  Each patient used one of the three medications for one month and then was asked if the product was effective.  The results showed 115 patients using medication A, 78 patients using medication B, and 140 patients using medication C said their medication was effective.  Test, at the 10\% level, if there is a difference in effectiveness among the three medications. \ansref{ans:ChiArthritis}
 
-  \item \label{revex:ChiExer} \rhw{} USA Today presented two sets of data on why Americans don't exercise.  One set was for 1000 randomly selected men.  The other was for 1000 randomly selected women.  The results of the surveys are recorded in \href{https://sites.google.com/site/ncstats/data/Exercise.txt}{Exercise.txt}.  Determine, at the 1\% level, if the distribution of men and women differs among the six responses given. \ansref{ans:ChiExer}
- 
+  \item \label{revex:ChiExer} \rhw{} USA Today presented two sets of data on why Americans don't exercise.  One set was for 1000 randomly selected men.  The other was for 1000 randomly selected women.  The results of the surveys are recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Exercise.csv}{Exercise.csv}.  Determine, at the 1\% level, if the distribution of men and women differs among the six responses given. \ansref{ans:ChiExer}
+
   \item \label{revex:ChiHPV} \rhw{} \cite{Fairleyetal1994} gave the results in the table below concerning the age and the number who were positive for human papillomavirus infection among the 290 participants in their study.  Test the hypothesis, at the 5\% level, that the same proportion for each age-group is HPV-positive. \ansref{ans:ChiHPV}
   \begin{center}
     \begin{tabular}{ccc}
@@ -819,34 +819,34 @@ both suggest that the biggest difference between the two locations is due to ``p
       \hline\hline
     \end{tabular}
   \end{center}
-  
-  \item \label{revex:chiTitanic} \rhw{} Passengers aboard the RMS Titanic were classified as to their ``class'' (first, second, third, or crew) and whether or not they survived the wreck (yes or no).  Use the data found in \href{https://sites.google.com/site/ncstats/data/Titanic.txt}{Titanic.txt} to determine if there was a difference, at the 1\% level, in the survival rate among the classes of passengers. \ansref{ans:chiTitanic}
+
+  \item \label{revex:chiTitanic} \rhw{} Passengers aboard the RMS Titanic were classified as to their ``class'' (first, second, third, or crew) and whether or not they survived the wreck (yes or no).  Use the data found in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Titanic.csv}{Titanic.csv} to determine if there was a difference, at the 1\% level, in the survival rate among the classes of passengers. \ansref{ans:chiTitanic}
 
   \item \label{revex:ChiMVC} \rhw{} \cite{Melikeretal2004} examined the records of 773 motor-vehicle crashes in southeastern Michigan.  Of these, 139 had a driver with a blood alcohol level greater than 0.10\% and were defined as alcohol-related crashes.  Of these alcohol-related drivers, 79\% were male, while 56\% of the non-alcohol-related drivers were male.  Use this information to determine, at the 1\%, if males are more or less likely to be involved in a an alcohol-related crash than females.  [\textit{HINT: I'd construct a 2x2 contingency table \sectrefp{sect:UEDACategorical} of these results with the response variable as columns.  Note that the results as presented above are in column-percentage format and the results needed to answer the question are row-percentage format.  Also, note that the column totals are given indirectly in the information above but the row totals need to be determined.}] \ansref{ans:ChiMVC}
-  
+
   \item \label{revex:ChiByCatch} \rhw{} Shrimp trawlers are required to have turtle exclusion device (TED), that allows most loggerhead sea turtles (\textit{Caretta caretta}) to escape the net, thus reducing turtle mortality due to by-catch.  In the Gulf of Mexico, the TEDs were originally required to be 32"x10" but a new law now requires to TEDs to be 71"x26" with the thought that turtle mortality would be further reduced by the larger opening.  This thought was examined by recording the number of trawl tows that had at least one turtle mortality.  In 75 tows with the original smaller opening there were 16 tows with at least one turtle mortality.  In contrast, in 88 tows with the the newer larger opening there were 8 tows with at least one turtle mortality.  Test at the 10\% level if there is a significant difference in the proportion of trawl tows with at least one turtle mortality between trawls with the different sized openings.\ansref{ans:ChiByCatch}
-  
+
   \item \label{revex:ChiDolphins} \rhw{} Researchers observed groups of dolphins off the coast of Iceland near Keflavik in 1998\footnote{Data was originally from \href{http://www.statsci.org/data/general/dolpacti.html}{here}.}.  The researchers recorded the time of the day (``Morning'', ``Noon'', ``Afternoon'', and ``Evenings'') and the main activity of the group, whether travelling quickly (``Travel''), feeding (``Feed''), or socializing (``Social'').  The number of dolphin groups observed by each time of day and activity is shown in the table below.  Use this information to determine, at the 5\% level if the proportion of groups exhibiting each activity differs by time of day. \ansref{ans:ChiDolphins}
 
   \begin{center}
     \begin{tabular}{|l|c|c|c|}
       \cline{2-4}
-      \multicolumn{1}{l|}{} & \multicolumn{3}{c|}{Activity} \\ 
+      \multicolumn{1}{l|}{} & \multicolumn{3}{c|}{Activity} \\
       \hline
-      Time of Day & Travel & Feed & Social \\ 
+      Time of Day & Travel & Feed & Social \\
       \hline
-      Morning & 6 & 28 & 38 \\ 
+      Morning & 6 & 28 & 38 \\
       \hline
-      Noon & 6 & 4 & 5 \\ 
+      Noon & 6 & 4 & 5 \\
       \hline
-      Afternoon & 14 & 0 & 9 \\ 
+      Afternoon & 14 & 0 & 9 \\
       \hline
-      Evening & 13 & 56 & 10 \\ 
+      Evening & 13 & 56 & 10 \\
       \hline
     \end{tabular}
   \end{center}
-  
-  \item \label{revex:chiZoo1} \rhw{} The data in \href{}{Zoo1.csv} contains a list of animals found in several different zoos\footnote{These data are stored in a ``comma separated values'' (CSV) file rather than a ``tab delimited text'' file.  Thus, these data must be loaded into R with \R{read.csv()} rather than \R{read.table()}.  The arguments to \R{read.csv()} are the same as \R{read.table()}.}.  In addition, each animal was classified into broad ``type'' categories (``mammal'', ``bird'', and ``amph/rep'').  The researchers that collected these data wanted to examine if the distribution of broad animal types differed among zoos.  Test the researcher's question at the 5\% level \ansref{ans:chiZoo1}
+
+  \item \label{revex:chiZoo1} \rhw{} The data in \href{}{Zoo1.csv} contains a list of animals found in several different zoos\footnote{These data are stored in a ``comma separated values'' (CSV) file rather than a ``tab delimited text'' file.  Thus, these data must be loaded into R with \R{read.csv()} rather than \R{read.csv()}.  The arguments to \R{read.csv()} are the same as \R{read.csv()}.}.  In addition, each animal was classified into broad ``type'' categories (``mammal'', ``bird'', and ``amph/rep'').  The researchers that collected these data wanted to examine if the distribution of broad animal types differed among zoos.  Test the researcher's question at the 5\% level \ansref{ans:chiZoo1}
 
 \end{exsection}
 
@@ -856,9 +856,9 @@ both suggest that the biggest difference between the two locations is due to ``p
 
   \item \label{hwprob:ChiGOFBear1} A researcher for the Wisconsin Department of Natural Resources has radio-collared several black bears in northern Wisconsin.  At randomly selected times the researcher attempts to locate the bears and record what type of habitat they are in.  For one particular bear the researcher recorded the following data: 47 observations in lowland conifer habitat, 12 in aspen, 10 in open areas, 21 in upland hardwood, and 10 in mixed upland.  In addition, through GIS analysis of vegetation cover layers the researcher has determined that 34\% of the available habitat is lowland conifer, 17\% is in aspen, 12\% is in open areas, 25\% is in upland hardwoods, and 12\% is in mixed upland.  Use these results to determine, at the 10\% level, if this bear uses these habitats in proportion to their availability.
 
-  \item \label{hwprob:ChiGOFDeerGinseng} \rhw{} \cite{FurediMcGraw2004} examined predation of American ginseng (\textit{Panax quinquefolius} L.) by white-tail deer (\textit{Odocoileus virginianus} Z.).  At one location and year in their study (P5, 2003) they found that 33 of 73 randomly selected reproductive ginseng plants had been consumed by deer.  Use this information to determine, at the 5\% significance level, if more than 33\% of all plants at this location and year were consumed by deer. 
+  \item \label{hwprob:ChiGOFDeerGinseng} \rhw{} \cite{FurediMcGraw2004} examined predation of American ginseng (\textit{Panax quinquefolius} L.) by white-tail deer (\textit{Odocoileus virginianus} Z.).  At one location and year in their study (P5, 2003) they found that 33 of 73 randomly selected reproductive ginseng plants had been consumed by deer.  Use this information to determine, at the 5\% significance level, if more than 33\% of all plants at this location and year were consumed by deer.
 
-  \item \label{hwprob:chiRoadRage} \rhw{} Road rage was defined as ``an incident in which an angry or impatient motorist or passenger intentionally injures or kills another motorist, passenger, or pedestrian, or attempts or threatens to injure or kill another motorist, passenger, or pedestrian.''  \cite{RathboneHuckabee1999} reported the day of the week that 69 incidents of road rage occurred.  The results of the study are in the \href{https://sites.google.com/site/ncstats/data/RoadRage.txt}{RoadRage.txt} data file.  Use this information to determine, at the 5\% level, if incidents of road rage occur more often on certain days of the week.
+  \item \label{hwprob:chiRoadRage} \rhw{} Road rage was defined as ``an incident in which an angry or impatient motorist or passenger intentionally injures or kills another motorist, passenger, or pedestrian, or attempts or threatens to injure or kill another motorist, passenger, or pedestrian.''  \cite{RathboneHuckabee1999} reported the day of the week that 69 incidents of road rage occurred.  The results of the study are in the \href{https://raw.githubusercontent.com/droglenc/NCData/master/RoadRage.csv}{RoadRage.csv} data file.  Use this information to determine, at the 5\% level, if incidents of road rage occur more often on certain days of the week.
 
   \item \label{hwprob:chiAidsHIV} \rhw{} Acquired immunodeficiency syndrome (AIDS) is a specific group of diseases or conditions that indicate severe immunosuppression related to infection with the human immunodeficiency virus (HIV).  According to the HIV/AIDS Surveillance Report (11(2)), the number of AIDS cases in the United States for 1999, by gender and race/ethnicity, is shown in the following contingency table.  Use this information to determine, at the 1\% level, if the distribution of males into the four race/ethnic categories differs from the distribution of females into the four groups.
 \begin{center}
@@ -874,4 +874,4 @@ both suggest that the biggest difference between the two locations is due to ``p
   \end{tabular}
 \end{center}
 
-\end{hwsection} 
+\end{hwsection}
