@@ -50,5 +50,5 @@ Questions 2.10 and 2.11 in [the textbook](../../book/) will assess your understa
 
 ### Related materials
 
-* [In-Class Exercise](CE.html)
+* In-Class Exercise -- [I](CE1.html) / [II](CE2.html) /  [III](CE3.html) / [IV](CE4.html)
 * [Old Lecture Slides](PPT_old.pptx)
