@@ -30,7 +30,7 @@ It is important to understand the distribution of individuals for a single varia
 
 ----
 
-You should prepare for the concepts of this module by reading **Section 3.1** in [the textbook](../../book/) and watching the following videos:
+You should prepare for the concepts of this module by reading **Section 4.1** in [the textbook](../../book/) and watching the following videos:
 
 * [Construct a Histogram](https://www.youtube.com/v/sC7gjg9g3JU?version=3&autoplay=1){:target="_blank"} [13 mins]
 * [Describe Shape](https://www.youtube.com/v/H9ITfdaX2ZQ?version=3&autoplay=1){:target="_blank"} [13 mins]
@@ -39,11 +39,11 @@ You should prepare for the concepts of this module by reading **Section 3.1** in
 * Calculate IQR -- [A](https://www.youtube.com/v/R6VDj7pEG30?version=3&autoplay=1){:target="_blank"} [3 mins] **or** [B](https://www.youtube.com/v/F3WcEAW-M80?version=3&start=366&autoplay=1){:target="_blank"} [9 mins]
 * [Univariate EDA (Quantitative) in R](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins]  [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 
-Additionally, you should prepare by reading **Section 3.3** in [the textbook](../../book/) and watching the following videos:
+Additionally, you should prepare by reading **Section 4.3** in [the textbook](../../book/) and watching the following videos:
 
 * [Interpreting a Univariate EDA (Quantitative)](https://vimeo.com/user45324800/ueda-quantsum){:target="_blank"} [11 mins]  [![PowerPOint](../../img/ppt.png)](PPT.pptx)
 
-Question 3.50 in [the textbook](../../book/) will assess your understanding of these materials.
+Question 4.50 in [the textbook](../../book/) will assess your understanding of these materials.
 
 ----
 

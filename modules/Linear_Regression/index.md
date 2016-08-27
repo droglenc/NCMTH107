@@ -33,7 +33,7 @@ One of the most common things in statistics is to describe the linear relationsh
 
 ----
 
-You should prepare for the concepts of this module by reading **Chapter 6** in [the textbook](../../book/) and watching the following videos:
+You should prepare for the concepts of this module by reading **Chapter 7** in [the textbook](../../book/) and watching the following videos:
 
 * Response and Explanatory Variables -  [A](https://www.youtube.com/v/bokeTCH2aJY?version=3&autoplay=1&start=60&end=148){:target="_blank"} [2 mins] **and**  [B](https://www.youtube.com/v/bokeTCH2aJY?version=3&autoplay=1&start=378){:target="_blank"} [2 mins]
 * [Introduction to Regression](https://www.youtube.com/v/k_OB1tWX9PM?version=3&autoplay=1){:target="_blank"} [14 mins]
@@ -42,7 +42,7 @@ You should prepare for the concepts of this module by reading **Chapter 6** in [
 * [Linear Regression in R](https://vimeo.com/user45324800/regression1){:target="_blank"} [8 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 * [Regression Questions](https://vimeo.com/user45324800/slr-questions){:target="_blank"} [10 mins]  [![PowerPoint](../../img/ppt.png)](PPT3.pptx)
 
-Question 6.19 in [the textbook](../../book/) will assess your understanding of these materials.
+Question 7.19 in [the textbook](../../book/) will assess your understanding of these materials.
 
 ----
 

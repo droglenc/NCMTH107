@@ -32,18 +32,18 @@ Many natural phenomena can be closely approximated by simple statistical distrib
 
 ----
 
-You should prepare for the concepts of this module by first reading **Sections 4.1-4.2** in [the textbook](../../book/) and watching the following videos:
+You should prepare for the concepts of this module by first reading **Sections 5.1-5.2** in [the textbook](../../book/) and watching the following videos:
 
 * [Characteristics of Normal Distributions](https://vimeo.com/user45324800/normcharacteristics){:target="_blank"} [7 mins]  [![PowerPoint](../../img/ppt.png)](PPT.pptx)
 * 68-95-99.7 Rule -- [A](https://www.youtube.com/v/PJPXFOK8F8E?version=3&autoplay=1){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/cgxPcdPbujI?version=3&autoplay=1){:target="_blank"} [8 mins]
 
-Second, you should read **Sections 4.3-4.4** in [the textbook](../../book/) and watch the following videos:
+Second, you should read **Sections 5.3-5.4** in [the textbook](../../book/) and watch the following videos:
 
 * [Types of Calculations (Forward & Reverse)](https://vimeo.com/user45324800/normcalctypes){:target="_blank"} [4 mins]  [![PowerPoint](../../img/ppt.png)](PPT2.pptx)
 * [Forward Calculations in R](https://vimeo.com/user45324800/normdist-forward){:target="_blank"} [6 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 * [Reverse Calculations in R](https://vimeo.com/user45324800/normdist-reverse){:target="_blank"} [6 mins]
 
-Questions 4.24 and 4.25 in [the textbook](../../book/) will assess your understanding of these materials.
+Questions 5.24 and 5.25 in [the textbook](../../book/) will assess your understanding of these materials.
 
 ----
 

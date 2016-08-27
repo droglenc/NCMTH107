@@ -32,7 +32,7 @@ R is fast becoming the primary software for performing statistical analyses in m
 
 ----
 
-You should prepare for the concepts of this module by reading **Sections 2.2-2.4** in [the textbook](../../book/) and watching the following videos:
+You should prepare for the concepts of this module by reading **Sections 3.2-3.4** in [the textbook](../../book/) and watching the following videos:
 
 * [What is R?](https://www.youtube.com/v/TR2bHSJ_eck?version=3&autoplay=1){:target="_blank"} [2 mins] 
 * [What's Up with R?](https://www.youtube.com/v/ZwYQPtU2Pa0?version=3&autoplay=1&start=1&end=111){:target="_blank"} [3 mins]
@@ -41,7 +41,7 @@ You should prepare for the concepts of this module by reading **Sections 2.2-2.4
 * [Load Data into RStudio](https://vimeo.com/user45324800/ncstats-loadcsvrstudio){:target="_blank"} [6 mins]
 * [Subset data.frame with filterD](https://vimeo.com/user45324800/filterd){:target="_blank"} [6 mins]
 
-Question 2.12 in [the textbook](../../book/) will assess your understanding of these materials.
+Question 3.12 in [the textbook](../../book/) will assess your understanding of these materials.
 
 ----
 
