@@ -35,7 +35,6 @@ source("../../rhelpers/knitr_setup.R")
 ## First Commands
 ```{r message=FALSE, warning=FALSE}
 library(NCStats)
-library(car)   # for leveneTest
 ```
 
 ## Two-Sample t-Test
@@ -49,7 +48,7 @@ str(sdir)
 ```{r fig.width=2*figsz, fig.height=figsz, par2=TRUE, fig.show='asis'}
 Summarize(abserr~sex,data=sdir,digits=1)
 hist(abserr~sex,data=sdir,xlab="Absolute Pointing Error")
-leveneTest(abserr~sex,data=sdir)
+levenesTest(abserr~sex,data=sdir)
 ```
 
 ```{r par1a=TRUE}

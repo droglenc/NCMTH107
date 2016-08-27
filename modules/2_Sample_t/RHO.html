@@ -10,8 +10,7 @@ css: /css/modules.css
 <hr />
 <div id="first-commands" class="section level2">
 <h2>First Commands</h2>
-<pre class="r"><code>&gt; library(NCStats)
-&gt; library(car)   # for leveneTest</code></pre>
+<pre class="r"><code>&gt; library(NCStats)</code></pre>
 </div>
 <div id="two-sample-t-test" class="section level2">
 <h2>Two-Sample t-Test</h2>
@@ -27,8 +26,8 @@ css: /css/modules.css
 1 female 30     30 55.8 48.3   3 15.8   35.0 88.2 176        0
 2   male 30     30 37.6 38.5   3 11.5   22.5 58.8 167        0</code></pre>
 <pre class="r"><code>&gt; hist(abserr~sex,data=sdir,xlab=&quot;Absolute Pointing Error&quot;)</code></pre>
-<p><img src="RHO_files/figure-html/unnamed-chunk-5-1.png" title="" alt="" width="672" /></p>
-<pre class="r"><code>&gt; leveneTest(abserr~sex,data=sdir)</code></pre>
+<p><img src="RHO_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<pre class="r"><code>&gt; levenesTest(abserr~sex,data=sdir)</code></pre>
 <pre><code>Levene&#39;s Test for Homogeneity of Variance (center = median)
       Df F value Pr(&gt;F)
 group  1  2.1692 0.1462
@@ -43,8 +42,10 @@ sample estimates:
 mean in group female   mean in group male 
                 55.8                 37.6 </code></pre>
 <pre class="r"><code>&gt; plot(t2)</code></pre>
-<p><img src="RHO_files/figure-html/unnamed-chunk-6-1.png" title="" alt="" width="336" /></p>
+<p><img src="RHO_files/figure-html/unnamed-chunk-6-1.png" width="336" /></p>
 </div>
+
+
 
 
 </div>
@@ -55,6 +56,7 @@ mean in group female   mean in group male
 $(document).ready(function () {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 });
+
 
 </script>
 
