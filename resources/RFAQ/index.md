@@ -23,7 +23,7 @@ The following are links to answers for frequently asked questions by Northland C
 * [Where are the data files that Prof. Ogle provides for us?](FAQs/where-data.html)
 * [Is there an easy way to enter data into R?](FAQs/enter-data.html)
 * [How do I change the working directory?](FAQs/changing-working-directory.html)
-* [Why can `read.csv()` find my data file?](FAQs/cant-find-file.html)
+* [Why can't `read.csv()` find my data file?](FAQs/cant-find-file.html)
 * [Why are my variables are labelled with Xs?](FAQs/variable-called-V1.html)
 
 ## Using Data Frames and Subsetting

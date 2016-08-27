@@ -1,24 +1,17 @@
 ---
 layout: page
-author: Derek H. Ogle
 title: MTH107 FAQ
 subtitle: Why can't R find leveneTest()?
+author: Derek H. Ogle
 ---
 
 
 <hr />
-<p>The <code>leveneTest()</code> function requires that the <code>car</code> package be installed. Thus, if you get this error …</p>
-<pre><code>Error: could not find function &quot;leveneTest&quot;</code></pre>
-<p>then you need to make sure that the <code>car</code> package is loaded.</p>
-<pre class="r"><code>&gt; library(car)
-&gt; leveneTest(extra~group,data=sleep)</code></pre>
-<pre><code>Levene's Test for Homogeneity of Variance (center = median)
-      Df F value Pr(&gt;F)
-group  1  0.2482 0.6244
-      18               </code></pre>
+<p>The function provided in <code>NCStats</code> is <code>levenesTest()</code> (note the <code>s</code> on <code>levenes</code>) rather than the <code>leveneTest()</code> provided by the <code>car</code> package. So, make sure to include the <code>s</code>.</p>
 
 
-</div>
+
+
 
 <script>
 
@@ -26,6 +19,7 @@ group  1  0.2482 0.6244
 $(document).ready(function () {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 });
+
 
 </script>
 

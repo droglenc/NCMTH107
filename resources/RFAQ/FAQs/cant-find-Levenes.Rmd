@@ -19,14 +19,4 @@ source("../../../rhelpers/knitr_setup.R")
 
 ----
 
-The `leveneTest()` function requires that the `car` package be installed.  Thus, if you get this error ...
-```
-Error: could not find function "leveneTest"
-```
-
-then you need to make sure that the `car` package is loaded.
-```{r message=FALSE}
-library(car)
-leveneTest(extra~group,data=sleep)
-```
-
+The function provided in `NCStats` is `levenesTest()` (note the `s` on `levenes`) rather than the `leveneTest()` provided by the `car` package.  So, make sure to include the `s`.
