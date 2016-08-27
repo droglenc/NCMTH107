@@ -146,7 +146,7 @@ ct <- c(22.9,22.9,23.3,23.5,23.9,23.9,24.0,24.3,24.5,24.6,24.6,24.8,24.8,
 @
     \item The $\sigma$ is unknown.  The sample size is not greater than 40 but it is greater than 15 and the distribution of values in the sample appears to be only slightly right-skewed \figrefp{fig:CrabTempHist}.  The histogram was constructed with
 <<CrabTempHist, out.width='.3\\linewidth', fig.cap="Histogram of the body temperatures of n=25 crabs exposed to an ambient temperature of $24.3^{0}$C.">>=
-hist(ct,main="",xlab="Crab Body Temp (C)")
+hist(~ct,main="",xlab="Crab Body Temp (C)")
 @
 
 Because both assumptions are adequately met, one can continue with the computation of the statistic, test statistic, p-value, and confidence region with
@@ -367,7 +367,7 @@ headtail(aqua)
 \warn{Stacked data is the preferred format for two-sample data, because each vector corresponds to a variable and each row corresponds to only one individual.}
 
 \subsubsection{Levene's Test}\index{Levene's Test}
-Before conducting a two-sample t-test, the assumption of equal variances must be tested with a Levene's test.  The Levene's test is computed in R with stacked data using \R{levenesTest()}\footnote{This function is in the \var{car} package which is loaded with \var{NCStats}.}.  The first argument to this function is a model formula of the type \R{response\TILDE factor} where \R{response} represents the vector containing the quantitative measurements and \R{factor} represents the vector containing the categorical grouping variable\footnote{This is the same model formula introduced in \sectref{sect:MultGroups} for summarizing multiple groups of data.}.  The data frame containing the variables in the formula must also be supplied in the \R{data=} argument of \R{levenesTest()}.
+Before conducting a two-sample t-test, the assumption of equal variances must be tested with a Levene's test.  The Levene's test is computed in R with stacked data using \R{levenesTest()}.  The first argument to this function is a model formula of the type \R{response\TILDE factor} where \R{response} represents the vector containing the quantitative measurements and \R{factor} represents the vector containing the categorical grouping variable\footnote{This is the same model formula introduced in \sectref{sect:MultGroups} for summarizing multiple groups of data.}.  The data frame containing the variables in the formula must also be supplied in the \R{data=} argument of \R{levenesTest()}.
 
 \subsubsection{Two-Sample t-Test}\index{t Test!two-sample}
 A two-sample t-test is computed in R with the same \R{t.test()} function used for the one-sample t-test.  The first argument to the \R{t.test()} function is a model formula of the exact same type sent to \R{levenesTest()}.  In addition to this argument, the following arguments may be specified when conducting a two-sample t-test with \R{t.test()}

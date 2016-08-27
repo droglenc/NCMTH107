@@ -902,7 +902,7 @@ The shape of the data is slightly left-skewed \figrefp{fig:CrayfishTempHist} wit
 
 <<CrayfishTempHist, echo=FALSE, fig.cap="Histogram of crayfish temperature preferences.">>=
 brks <- seq(15.9,31.9,2)
-hist(CT,breaks=brks,main="",xlab="Preferred Temperature",ylab="Frequency of Crayfish")
+hist(~CT,breaks=brks,main="",xlab="Preferred Temperature",ylab="Frequency of Crayfish")
 @
 
 <<CrayfishStats, results='asis', echo=FALSE>>=
