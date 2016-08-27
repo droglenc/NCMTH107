@@ -73,6 +73,156 @@ This appendix contains answers to some of the review questions in each chapter o
 
 
 
+\section*{Data Production}
+\begin{itemize}
+  \item \hypertarget{ans:ExpDSeals}{\ref{revex:ExpDSeals}}
+    \begin{enumerate}
+      \item The table representing the experiment is shown below.
+
+\begin{tabular}{cc|c|}
+ & \multicolumn{2}{c}{Seal Type} \\
+\cline{2-3}
+\multicolumn{1}{c|}{Temp} & Wild & Domestic \\
+\hline
+\multicolumn{1}{c|}{$<47$} &  & \multicolumn{1}{c|}{} \\
+\hline
+\multicolumn{1}{c|}{$>47$} &  &  \multicolumn{1}{c|}{} \\
+\cline{2-3}
+\end{tabular}
+
+      \item The health of the seals is the response variable.
+      \item The two factors are water temperature and seal origin (i.e., wild or domestic).
+      \item There are two levels of water temperature and two levels of seal origin.
+      \item There are four total treatments.
+      \item There are ten seals per treatment.
+    \end{enumerate}
+
+  \item \hypertarget{ans:ExpDFert1}{\ref{revex:ExpDFert1}}
+    \begin{enumerate}
+      \item The two factors are plowing depth and amount of fertilizer.
+      \item There are three levels of plowing depth and two levels of fertilizer amount.
+      \item There are six total treatments.
+      \item There would be six plots in each treatment.
+      \item A plot or field is the individual or replicate in this experiment.
+      \item I would allocate plots by assigning each plot a unique number from between 1 and 36 and then randomly ordering the numbers between 1 and 36.  Plots corresponding to the first six numbers would go in the first treatment, the next six in the second treatment, and so on.  The random numbers were drawn in R with
+<<>>=
+sample(36)
+@
+    \end{enumerate}
+
+  \item \hypertarget{ans:ExpDTrans}{\ref{revex:ExpDTrans}}
+    \begin{enumerate}
+      \item A schematic table for this experiment is shown below.
+
+\begin{tabular}{cc|c|}
+ & \multicolumn{2}{c}{Acclimatization} \\
+\cline{2-3}
+\multicolumn{1}{c|}{Tranquilization} & Allowed & Not Allowed \\
+\hline
+\multicolumn{1}{c|}{Yes} &  & \multicolumn{1}{c|}{} \\
+\hline
+\multicolumn{1}{c|}{No} &  &  \multicolumn{1}{c|}{} \\
+\cline{2-3}
+\end{tabular}
+
+      \item The response variable is whether the rabbit survives or not.
+      \item The two factors are tranquillization and acclimatization.
+      \item There are two levels for tranquillization (tranquillized, not tranquillized) and two levels for acclimatization (allowed to acclimate, not allowed to acclimate).
+      \item There are four treatments.
+      \item There are 16 rabbits in each treatment.
+      \item A rabbit is an individual in this experiment.
+    \end{enumerate}
+
+  \item \hypertarget{ans:ExpDDeerDiet}{\ref{revex:ExpDDeerDiet}}
+    \begin{enumerate}
+      \item The response variable is the health of the deer.
+      \item The factor is location and what the deer ate (combined together as one factor).
+      \item There are four levels for the one factor.
+      \item There are four treatments.
+      \item There are 16 deer per treatment.
+      \item A deer is the individual or replicate in this experiment.
+    \end{enumerate}
+
+  \item \hypertarget{ans:ExpDChemRxn}{\ref{revex:ExpDChemRxn}}
+    \begin{enumerate}
+      \item The two factors are temperature and stirring rate.
+      \item There are two levels of temperature and three levels of stirring rates.
+      \item There are six treatments in this experiment.
+      \item The response variable is yield.
+      \item There are five vessels allocated to each treatment.
+      \item An individual or replicate is a vessel.
+      \item I would allocate vessels by assigning each vessels a unique number from between 1 and 30 and then randomly ordering the numbers between 1 and 30.  Plots corresponding to the first five numbers would go in the first treatment, the next five in the second treatment, and so on.  The random numbers were drawn in R with
+<<>>=
+( vsls <- sample(30) )
+@
+      \item A table representing this experiment is shown below,
+
+\begin{tabular}{cc|c|c}
+ & \multicolumn{3}{c}{Stirring Rates} \\
+\cline{2-4}
+Temp & 60 rpm & 90 rpm & 120 rpm  \\
+\cline{2-4}
+\multicolumn{1}{c|}{50C} & \Sexpr{paste(vsls[1:5],collapse=",")} & \Sexpr{paste(vsls[6:10],collapse=",")} & \multicolumn{1}{c|}{\Sexpr{paste(vsls[11:15],collapse=",")}} \\
+\hline
+\multicolumn{1}{c|}{60C} & \Sexpr{paste(vsls[16:20],collapse=",")} & \Sexpr{paste(vsls[21:25],collapse=",")} & \multicolumn{1}{c|}{\Sexpr{paste(vsls[26:30],collapse=",")}} \\
+\cline{2-4}
+\end{tabular}
+    \end{enumerate}
+
+  \item \hypertarget{ans:ExpDBP}{\ref{revex:ExpDBP}}
+    \begin{enumerate}
+      \item The two factors are calcium and exercise.
+      \item There are two levels of calcium and two levels of exercise.
+      \item There are four treatments.
+      \item The response variable is the blood pressure reading.
+      \item There are eight male subjects per treatment.
+      \item A male subject is the individual or replicate in this experiment.
+      \item I would allocate male subjects by assigning each male a unique number from between 1 and 32 and then randomly ordering the numbers between 1 and 32.  Plots corresponding to the first eight numbers would go in the first treatment, the next eight in the second treatment, and so on.  The random numbers were drawn in R with
+<<>>=
+( mls <- sample(32) )
+@
+      \item A table describing this experiment is shown below.
+
+\begin{tabular}{cc|c|}
+ & \multicolumn{2}{c}{Calcium} \\
+\cline{2-3}
+\multicolumn{1}{c|}{Exercise} & Yes & No \\
+\hline
+\multicolumn{1}{c|}{Yes} & \Sexpr{paste(mls[1:8],collapse=",")} & \multicolumn{1}{c|}{\Sexpr{paste(mls[9:16],collapse=",")}} \\
+\hline
+\multicolumn{1}{c|}{No} & \Sexpr{paste(mls[17:24],collapse=",")} &  \multicolumn{1}{c|}{\Sexpr{paste(mls[25:32],collapse=",")}} \\
+\cline{2-3}
+\end{tabular}
+    \end{enumerate}
+
+  \item \hypertarget{ans:ObsSWIH}{\ref{revex:ObsSWIH}} -- Observational study; a convenience sample in regards to the selection of the clinics and a voluntary response in regards to the subjects.  Overall, I would call it a voluntary response sample as the individuals of the study are the subjects.
+
+  \item \hypertarget{ans:ObsSDOT}{\ref{revex:ObsSDOT}} -- Observational study; a convenience sample in regards to selecting the subjects but a random sample in regards to the times observed.  Overall, I would call this a random sample as the time periods are the individual of interest (although, any inferences will only pertain to the set of subjects observed in this study).
+
+  \item \hypertarget{ans:ExpDPine}{\ref{revex:ExpDPine}}
+    \begin{enumerate}
+      \item This experiment is summarized in the following table.
+
+\begin{tabular}{cc|c|}
+ & \multicolumn{2}{c}{CO (ppm)} \\
+\cline{2-3}
+\multicolumn{1}{c|}{Salt (ppt)} & 0 & 5 \\
+\hline
+\multicolumn{1}{c|}{0} & 18,20,6,8,12 & \multicolumn{1}{c|}{4,11,19,2,17} \\
+\hline
+\multicolumn{1}{c|}{4} & 14,3,9,15,10 &  \multicolumn{1}{c|}{1,5,7,13,16} \\
+\cline{2-3}
+\end{tabular}
+
+      \item The treatment with 0 ppm CO and 0 ppt Salt is considered a control because it represents natural (background) levels of CO and salt.  Thus, with regard to the factors being studied, nothing has been done to the seedlings in that treatment.
+      \item The experimental (second) study will provide a definitive answer to my hypothesis because it is the only type of study from which ``causal'' statements can be made.  In the experiment, all other variables were controlled for except for the two that I was interested in.  In the observational study, other variables may be responsible for any effect observed.
+    \end{enumerate}
+
+\end{itemize}
+
+
+
+
 %=============================================================
 \section*{Getting Started with R}
 \begin{itemize}
@@ -1330,156 +1480,6 @@ fitPlot(ch.lm,main="")
 
 
 %=============================================================
-\section*{Data Production}
-\begin{itemize}
-  \item \hypertarget{ans:ExpDSeals}{\ref{revex:ExpDSeals}}
-    \begin{enumerate}
-      \item The table representing the experiment is shown below.
-
-\begin{tabular}{cc|c|}
- & \multicolumn{2}{c}{Seal Type} \\
-\cline{2-3}
-\multicolumn{1}{c|}{Temp} & Wild & Domestic \\
-\hline
-\multicolumn{1}{c|}{$<47$} &  & \multicolumn{1}{c|}{} \\
-\hline
-\multicolumn{1}{c|}{$>47$} &  &  \multicolumn{1}{c|}{} \\
-\cline{2-3}
-\end{tabular}
-
-      \item The health of the seals is the response variable.
-      \item The two factors are water temperature and seal origin (i.e., wild or domestic).
-      \item There are two levels of water temperature and two levels of seal origin.
-      \item There are four total treatments.
-      \item There are ten seals per treatment.
-    \end{enumerate}
-
-  \item \hypertarget{ans:ExpDFert1}{\ref{revex:ExpDFert1}}
-    \begin{enumerate}
-      \item The two factors are plowing depth and amount of fertilizer.
-      \item There are three levels of plowing depth and two levels of fertilizer amount.
-      \item There are six total treatments.
-      \item There would be six plots in each treatment.
-      \item A plot or field is the individual or replicate in this experiment.
-      \item I would allocate plots by assigning each plot a unique number from between 1 and 36 and then randomly ordering the numbers between 1 and 36.  Plots corresponding to the first six numbers would go in the first treatment, the next six in the second treatment, and so on.  The random numbers were drawn in R with
-<<>>=
-sample(36)
-@
-    \end{enumerate}
-
-  \item \hypertarget{ans:ExpDTrans}{\ref{revex:ExpDTrans}}
-    \begin{enumerate}
-      \item A schematic table for this experiment is shown below.
-
-\begin{tabular}{cc|c|}
- & \multicolumn{2}{c}{Acclimatization} \\
-\cline{2-3}
-\multicolumn{1}{c|}{Tranquilization} & Allowed & Not Allowed \\
-\hline
-\multicolumn{1}{c|}{Yes} &  & \multicolumn{1}{c|}{} \\
-\hline
-\multicolumn{1}{c|}{No} &  &  \multicolumn{1}{c|}{} \\
-\cline{2-3}
-\end{tabular}
-
-      \item The response variable is whether the rabbit survives or not.
-      \item The two factors are tranquillization and acclimatization.
-      \item There are two levels for tranquillization (tranquillized, not tranquillized) and two levels for acclimatization (allowed to acclimate, not allowed to acclimate).
-      \item There are four treatments.
-      \item There are 16 rabbits in each treatment.
-      \item A rabbit is an individual in this experiment.
-    \end{enumerate}
-
-  \item \hypertarget{ans:ExpDDeerDiet}{\ref{revex:ExpDDeerDiet}}
-    \begin{enumerate}
-      \item The response variable is the health of the deer.
-      \item The factor is location and what the deer ate (combined together as one factor).
-      \item There are four levels for the one factor.
-      \item There are four treatments.
-      \item There are 16 deer per treatment.
-      \item A deer is the individual or replicate in this experiment.
-    \end{enumerate}
-
-  \item \hypertarget{ans:ExpDChemRxn}{\ref{revex:ExpDChemRxn}}
-    \begin{enumerate}
-      \item The two factors are temperature and stirring rate.
-      \item There are two levels of temperature and three levels of stirring rates.
-      \item There are six treatments in this experiment.
-      \item The response variable is yield.
-      \item There are five vessels allocated to each treatment.
-      \item An individual or replicate is a vessel.
-      \item I would allocate vessels by assigning each vessels a unique number from between 1 and 30 and then randomly ordering the numbers between 1 and 30.  Plots corresponding to the first five numbers would go in the first treatment, the next five in the second treatment, and so on.  The random numbers were drawn in R with
-<<>>=
-( vsls <- sample(30) )
-@
-      \item A table representing this experiment is shown below,
-
-\begin{tabular}{cc|c|c}
- & \multicolumn{3}{c}{Stirring Rates} \\
-\cline{2-4}
-Temp & 60 rpm & 90 rpm & 120 rpm  \\
-\cline{2-4}
-\multicolumn{1}{c|}{50C} & \Sexpr{paste(vsls[1:5],collapse=",")} & \Sexpr{paste(vsls[6:10],collapse=",")} & \multicolumn{1}{c|}{\Sexpr{paste(vsls[11:15],collapse=",")}} \\
-\hline
-\multicolumn{1}{c|}{60C} & \Sexpr{paste(vsls[16:20],collapse=",")} & \Sexpr{paste(vsls[21:25],collapse=",")} & \multicolumn{1}{c|}{\Sexpr{paste(vsls[26:30],collapse=",")}} \\
-\cline{2-4}
-\end{tabular}
-    \end{enumerate}
-
-  \item \hypertarget{ans:ExpDBP}{\ref{revex:ExpDBP}}
-    \begin{enumerate}
-      \item The two factors are calcium and exercise.
-      \item There are two levels of calcium and two levels of exercise.
-      \item There are four treatments.
-      \item The response variable is the blood pressure reading.
-      \item There are eight male subjects per treatment.
-      \item A male subject is the individual or replicate in this experiment.
-      \item I would allocate male subjects by assigning each male a unique number from between 1 and 32 and then randomly ordering the numbers between 1 and 32.  Plots corresponding to the first eight numbers would go in the first treatment, the next eight in the second treatment, and so on.  The random numbers were drawn in R with
-<<>>=
-( mls <- sample(32) )
-@
-      \item A table describing this experiment is shown below.
-
-\begin{tabular}{cc|c|}
- & \multicolumn{2}{c}{Calcium} \\
-\cline{2-3}
-\multicolumn{1}{c|}{Exercise} & Yes & No \\
-\hline
-\multicolumn{1}{c|}{Yes} & \Sexpr{paste(mls[1:8],collapse=",")} & \multicolumn{1}{c|}{\Sexpr{paste(mls[9:16],collapse=",")}} \\
-\hline
-\multicolumn{1}{c|}{No} & \Sexpr{paste(mls[17:24],collapse=",")} &  \multicolumn{1}{c|}{\Sexpr{paste(mls[25:32],collapse=",")}} \\
-\cline{2-3}
-\end{tabular}
-    \end{enumerate}
-
-  \item \hypertarget{ans:ObsSWIH}{\ref{revex:ObsSWIH}} -- Observational study; a convenience sample in regards to the selection of the clinics and a voluntary response in regards to the subjects.  Overall, I would call it a voluntary response sample as the individuals of the study are the subjects.
-
-  \item \hypertarget{ans:ObsSDOT}{\ref{revex:ObsSDOT}} -- Observational study; a convenience sample in regards to selecting the subjects but a random sample in regards to the times observed.  Overall, I would call this a random sample as the time periods are the individual of interest (although, any inferences will only pertain to the set of subjects observed in this study).
-
-  \item \hypertarget{ans:ExpDPine}{\ref{revex:ExpDPine}}
-    \begin{enumerate}
-      \item This experiment is summarized in the following table.
-
-\begin{tabular}{cc|c|}
- & \multicolumn{2}{c}{CO (ppm)} \\
-\cline{2-3}
-\multicolumn{1}{c|}{Salt (ppt)} & 0 & 5 \\
-\hline
-\multicolumn{1}{c|}{0} & 18,20,6,8,12 & \multicolumn{1}{c|}{4,11,19,2,17} \\
-\hline
-\multicolumn{1}{c|}{4} & 14,3,9,15,10 &  \multicolumn{1}{c|}{1,5,7,13,16} \\
-\cline{2-3}
-\end{tabular}
-
-      \item The treatment with 0 ppm CO and 0 ppt Salt is considered a control because it represents natural (background) levels of CO and salt.  Thus, with regard to the factors being studied, nothing has been done to the seedlings in that treatment.
-      \item The experimental (second) study will provide a definitive answer to my hypothesis because it is the only type of study from which ``causal'' statements can be made.  In the experiment, all other variables were controlled for except for the two that I was interested in.  In the observational study, other variables may be responsible for any effect observed.
-    \end{enumerate}
-
-\end{itemize}
-
-
-
-
 
 %=============================================================
 \section*{Probability}
