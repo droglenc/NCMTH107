@@ -33,7 +33,7 @@ css: /css/syllabus.css
 <!---
 -->
 <dt>7-Oct</dt><dd>First Exam</dd>
-<dt>17-Oct</dt><dd>First Exam XC Reflection (Optional)</dd>
+<dt>19-Oct</dt><dd>First Exam XC Reflection (Optional)</dd>
 <dt>16-Nov</dt><dd>Second Exam</dd>
 <dt>26-Nov</dt><dd>Second Exam XC Reflection (Optional)</dd>
 <dt>9-Dec</dt><dd>"Stats-In-Use" and Project Extra Credit Reports (Optional)</dd>
