@@ -6,7 +6,6 @@ css: /css/syllabus.css
 ---
 
 <SCRIPT SRC="../js/grader.js"></SCRIPT>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 * Class [Description](#description) and [Learning Outcomes](#learning-outcomes)
 * [Instructors](#instructors) and [Tutors](#tutors)
@@ -55,7 +54,7 @@ Mon, Wed, Fri 1300-1500<br>By Appointment</td></tr>
 
 <table class="tutors" width="90%">
 <tr><th><img src="../img/Bronte_F16.jpg"></th><th><img src="../img/Adam_F16.jpg"></th></tr>
-<tr><th>Bronte Gross</th><th>Adam Gunnelson</th></tr>
+<tr><th>Bront&euml; Gross</th><th>Adam Gunnelson</th></tr>
 <tr style="vertical-align:top"><td>Bront&euml; is a senior majoring in Writing and Outdoor Education. He has a passion for helping others learn, and is excited to branch out into his first year of stats tutoring.</td><td>XXX</td></tr>
 <tr style="vertical-align:top"><td>W 7-9p<br>R 950-1150a</td><td>XXX<br>XXX</td></tr>
 </table>
