@@ -7,6 +7,6 @@ The following are links to answers for frequently asked questions by Northland C
 
 ## Homework format
 * [How do I make Word single space my document?](FAQs/Word_SingleSpace)
-* [How should I properly label my tables and figures?]()
-* [How do I easily make my tabular results from R line-up in MSWord?]()
-* [How do I make Greek symbols in MSWord?]()
+* [How should I properly label my tables and figures?](FAQs/)
+* [How do I easily make my tabular results from R line-up in MSWord?](FAQs/Word_RLineup)
+* [How do I make Greek symbols in MSWord?](FAQs/Word_GreekLetters)
