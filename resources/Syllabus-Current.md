@@ -118,7 +118,7 @@ Each homework assigment is worth 10 points and will be graded in two parts.  The
     <tr class="info"><th>1 point</th><th>3 points</th><th>5 points</th></tr>
   </thead>
   <tbody>
-    <tr><td>Very few questions answered completely.</td><td>Most questions answered completely.  [Format for homework](hwformat){:target="_blank"} may not have been followed.</td><td>All questions answered completely.  [Format for homework](hwformat){:target="_blank"} followed exactly.</td></tr>
+    <tr><td>Very few questions answered completely.</td><td>Most questions answered completely.  <a href="hwformat.html" target="_blank">Format for homework</a> may not have been followed.</td><td>All questions answered completely.  <a href="hwformat.html" target="_blank">Format for homework</a> followed exactly.</td></tr>
   </tbody>
   </table>
 </div>
