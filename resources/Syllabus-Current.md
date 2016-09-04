@@ -108,7 +108,7 @@ Exam dates are shown on the [Due Dates page](Dates-Current.html){:target="_blank
 
 ### Homework
 
-The text contains many review exercises throughout each chapter and a few homework problems at the end of each chapter.  A due date for the homework problems will be assigned when a concept module has been completed.  Each assignment should be neatly typed (on occasion you will be notified that some answers may be hand-written) and is **due at the beginning of the due date class period.  Late assignments will not be accepted.**
+The text contains many review exercises throughout each chapter and a few homework problems at the end of each chapter.  A due date for the homework problems will be assigned when a concept module has been completed.  Each assignment should follow [the expectations outlined here](hwformat){:target="_blank"}.  Printed homework assignments are **due at the beginning of the due date class period; late assignments will not be accepted.**
 
 Each homework assigment is worth 10 points and will be graded in two parts.  The first part is an assessment of completeness according to the following rubric.
 
@@ -118,7 +118,7 @@ Each homework assigment is worth 10 points and will be graded in two parts.  The
     <tr class="info"><th>1 point</th><th>3 points</th><th>5 points</th></tr>
   </thead>
   <tbody>
-    <tr><td>Very few questions answered completely.</td><td>Most questions answered completely.  Format for homework may not have been followed.</td><td>All questions answered completely.  Format for homework followed exactly.</td></tr>
+    <tr><td>Very few questions answered completely.</td><td>Most questions answered completely.  [Format for homework](hwformat){:target="_blank"} may not have been followed.</td><td>All questions answered completely.  [Format for homework](hwformat){:target="_blank"} followed exactly.</td></tr>
   </tbody>
   </table>
 </div>
