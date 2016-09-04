@@ -5,11 +5,12 @@ title: MTH107 FAQ
 
 The following are links to answers for frequently asked questions by Northland College students in the Statistical Concepts and Analysis course.  Other questions may be answered by reading the [class text](../../book/) or [e-mailing Derek Ogle](mailto:dogle@northland.edu).
 
-[R/RStudo](#r-related) / [Homework](homework-format)
+[R/RStudo](#r-rstudio-related) / [Homework](#homework-format)
 
 ----
 
-## R Related
+## R/RStudio Related
+
 ### Installing R and RStudio
 * [How do I install R?](FAQs/installR.html)
 * [How do I install RStudio?](FAQs/installRStudio.html)

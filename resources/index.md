@@ -10,8 +10,7 @@ title: Resources
 1. [**Class Exercise Answer Keys**](ce-keys/)
 
 ## Learning Assistance
-1. [**R FAQ**](RFAQ/)
-1. [**Other FAQ**](otherFAQ/)
+1. [**FAQ**](FAQ/)
 1. **Glossaries**
     * Definitions
     * Symbols
