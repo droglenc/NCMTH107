@@ -5,7 +5,7 @@ title: MTH107 FAQ
 
 The following are links to answers for frequently asked questions by Northland College students in the Statistical Concepts and Analysis course.  Other questions may be answered by reading the [class text](../../book/) or [e-mailing Derek Ogle](mailto:dogle@northland.edu).
 
-[R/RStudo](#r-rstudio-related) / [Homework](#homework-format)
+Related to: [R/RStudo](#rrstudio-related) / [Homework](#homework-format)
 
 ----
 
