@@ -2,7 +2,7 @@
 layout: page
 author: Derek H. Ogle
 title: MTH107 FAQ
-subtitle: How do I easily make my tabular results from R line-up in MSWord?
+subtitle: How do I make Greek symbols in MSWord?
 ---
 
 In homework assignments you may want to represent key statistical concepts with Greek letters.  Greek letters can be constructed in MSWord by changing the font of a specific Roman letter to *Symbol*.  To change the font type
