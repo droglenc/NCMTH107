@@ -1,9 +1,9 @@
 ---
 layout: page
-title: MTH107 FAQ
+title: MTH107 R FAQ
 ---
 
-The following are links to answers for frequently asked questions by Northland College students while using R to perform statistical analyses.  Other questions may be answered by reading the class text or e-mailing Derek Ogle.
+The following are links to answers for frequently asked questions by Northland College students while using R to perform statistical analyses.  Other questions may be answered by reading the [class text](../../book/) or [e-mailing Derek Ogle](mailto:dogle@northland.edu).
 
 ## Installing R and RStudio
 * [How do I install R?](FAQs/installR.html)
