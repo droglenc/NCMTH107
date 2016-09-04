@@ -16,7 +16,7 @@ set_parent('IntroStats.Rnw')
     \item Explain the concepts of precision, accuracy, and bias as it relates to statistics and parameters.
     \item Describe the theoretical distribution of the sampling distribution of the sample means.
     \item Gain some belief that the theoretical distribution actually represents the sampling distribution of the sample means.
-    \item Use the sampling distribution of sample means to compute the probability of particular sets of means.    
+    \item Use the sampling distribution of sample means to compute the probability of particular sets of means.
   \end{Enumerate}
 \end{ChapObj}
 
@@ -233,7 +233,7 @@ text.cex <- 1.4
 resamples <- 1000
 res.mdn50 <- replicate(resamples,median(sample(SquareLakePopn$tl,50)))
 res.sd50 <- replicate(resamples,sd(sample(SquareLakePopn$tl,50)))
-res.rng50 <- replicate(resamples,range(sample(SquareLakePopn$tl,50))) 
+res.rng50 <- replicate(resamples,range(sample(SquareLakePopn$tl,50)))
 res.rng50 <- res.rng50[2,]-res.rng50[1,]
 hist(res.mdn50,main="",ylab="Frequency of Samples",xlab="Sample Median",col="gray95",cex.lab=hist.cex,xaxs="i")
 sums.mdn50 <- as.matrix(c(Summarize(res.mdn50)[c("mean","sd","min","max")],median(SquareLakePopn$tl)))
@@ -411,7 +411,7 @@ for (i in 1:length(ns)) {
     \item What would you expect the center of the sampling distribution of the sample means to equal?
     \item What would you expect the standard deviation of the sampling distribution of the means to equal?
     \item What would you expect the standard error of $\bar{x}$ to equal?
-  \end{Enumerate}  
+  \end{Enumerate}
 \end{exsection}
 
 
@@ -453,7 +453,7 @@ One issue that you have probably noticed while doing these calculations is that 
        \item What is the probability that a hunter will spend more than 55 hrs hunting moose?
        \item What is the probability that the average hours spent hunting by a sample of 25 hunters is greater than 48 hrs?
     \end{Enumerate}
-    
+
   \item \label{revex:CLTWr} \rhw{} Facilities management is interested in the mean relative weight (= actual weight / predicted weight; $W_{r}$) of fish in the portion of Bay City Creek that runs through the Northland campus.  For each question below assume that $W_{r}$ for fish in the population is $\sim N(1, 0.2)$. \ansref{ans:CLTWr}
     \begin{Enumerate}
        \item What is the population of interest (be very specific)?
@@ -524,7 +524,7 @@ One issue that you have probably noticed while doing these calculations is that 
 \end{exsection}
 
 \newpage
-\begin{hwsection}{All questions below should be typed and answered following the expectations identified in \sectref{sect:ReportWriting}.  All work must be shown.  Questions marked with the R logo must include R output with your R commands in an attached appendix.}
+\begin{hwsection}{All questions below should be typed and answered following the expectations identified on the syllabus.  All work must be shown.  Questions marked with the R logo must include R output with your R commands in an attached appendix.}
 
   \item \label{hwprob:SamplingDist1} \rhw{} Suppose that a population consists of eight individuals with the following ``values'': 2, 3, 4, 5, 6, 7, 8, and 9.  Use this information to answer the questions below.
     \begin{Enumerate}
@@ -541,7 +541,7 @@ One issue that you have probably noticed while doing these calculations is that 
       \item Construct a hypothetical series of four numbers that would be considered precise but inaccurate.
       \item Construct a hypothetical series of four numbers that would be considered imprecise and inaccurate.
     \end{Enumerate}
-    
+
   \item \label{hwprob:CLTRoeDeer} \rhw{} Researchers on Storfosna Island, Norway examined the reproductive habits of roe deer (\emph{Capreolus pygargus}) in the northern extremities of the island \citep{AndersenLinnell2000}.  The researchers found that the distribution of number of fawns born to a female between 1991 and 1994 was extremely right-skewed with a mean of 2.2 and a standard deviation of 0.46 fawns.  Assume that these values represent the entire population of roe deer.  Use this information to answer the questions below (note: if you decide that a question cannot be answered, then describe your reasoning very specifically).
     \begin{Enumerate}
       \item What is the probability that a roe deer has more than 2 fawns?
@@ -552,4 +552,4 @@ One issue that you have probably noticed while doing these calculations is that 
       \item What is the mean such that 20\% of all samples of $n=35$ roe deer have a smaller mean?
     \end{Enumerate}
 
-\end{hwsection} 
+\end{hwsection}

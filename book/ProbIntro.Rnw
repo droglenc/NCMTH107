@@ -17,7 +17,7 @@ set_parent('IntroStats.Rnw')
 \lettrine{P}{robability} is the ``language'' used by statisticians to describe the proportion of time that a random event will occur.  The language of probability is at the center of statistical inference.  Thus, an understanding of probability is critical to understanding inferential statistical methods (see \chapref{chap:Inference}).  The level of understanding of probability required to understand the basic statistical methods found in most basic inferential methods, including all of those in this book, is not great.  Thus, this chapter provides a very short, example-based, introduction to probability.  Remember that this is a very basic introduction that will suffice for the topics of this book; a deeper understanding of probability is required to understand more complex inferential methods.
 
 The most basic forms of probability assume that the items in any probability calculation was selected completely randomly.  In other words, simple probability calculations require that each item, whether that item is an individual or an entire sample, has the same chance of being selected.  Thus, in simple intuitive examples it will be stated that the ``box of balls was thoroughly mixed'' and more realistic examples will require randomization\footnote{See sections in \chapref{chap:DataProd} for methods of selecting or allocating random individuals.}.  In its most basic form, probability requires randomization!
-            
+
 \warn{Individuals must be randomly selected from the population or samples must be produced randomly for the concept of probability to work accurately.}
 
 If every individual has the same chance of being selected, then the probability of an event is equal to the proportion of items in the event out of the entire population.  In other words, the probability is the number of items in the event divided by the total number of items in the population.  For example, the probability of selecting a red ball from a thoroughly mixed box containing 15 red and 10 blue balls is equal to $\frac{15}{25}=0.6$ (i.e., 15 individuals (``balls'') in the event (``red'') divided by the total number of individuals (``all balls in the box'').  Similarly, the probability of randomly selecting a woman from a room containing 20 women and 30 men is 0.4 ($=\frac{20}{50}$).  In both of these examples, the calculation can be considered a probability because (i) individuals were randomly selected and (ii) a proportion of a total was computed.
@@ -53,7 +53,7 @@ A theory that explains the distribution of statistics computed from all possible
   \end{Enumerate}
 \end{exsection}
 
-\begin{hwsection}{All questions below should be typed and answered following the expectations identified in \sectref{sect:ReportWriting}.  All work must be shown.  Questions marked with the R logo must include R output with your R commands in an attached appendix.}
+\begin{hwsection}{All questions below should be typed and answered following the expectations identified on the syllabus.  All work must be shown.  Questions marked with the R logo must include R output with your R commands in an attached appendix.}
 
   \item \label{hwprob:ProbChipmunk} An ``arena'' contains 8 acorns and 9 kernels of corn.  Assume that a chipmunk placed in the arena chooses items to eat at random.  Use this information to answer the questions below.
   \begin{Enumerate}
@@ -68,4 +68,4 @@ A theory that explains the distribution of statistics computed from all possible
     \item What is the probability that between 75 and 150 gallons is used by this household on a random day?
     \item What is the probability that more than 100 gallons is used by this household on a random day?
   \end{Enumerate}
-\end{hwsection} 
+\end{hwsection}
