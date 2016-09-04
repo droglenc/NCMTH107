@@ -1,0 +1,47 @@
+---
+layout: page
+author: Derek H. Ogle
+title: MTH107 FAQ
+subtitle: Why does my frequency table or bar chart contain unwanted levels?
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/FAQ/FAQs")
+source("../../../rhelpers/rhelpers.R")
+fnm <- "freqtable-levels-problem"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message='FALSE'}
+source("../../../rhelpers/knitr_setup.R")
+```
+
+----
+
+Base R uses a function called `subset()` to construct subsets of a data.frame.  For example, the following code can be used to construct a data.frame for the `Iris.csv` file that contains two of three species.
+```{r}
+df <- read.csv("data/Iris.csv")
+str(df)
+levels(df$species)
+tmp <- subset(df,species!="versicolor")
+```
+
+A quick table of results shows that only one species remains in the data.frame.
+```{r}
+( freq <- xtabs(~species,data=tmp) )
+```
+
+But, annoyingly, the variable has maintained the names of the other species that were present in the original data.frame.  This also results in a bar chart with empty bars.
+
+```{r}
+barplot(freq,xlab="Species",ylab="Frequency")
+```
+
+This unwanted behavior is corrected by using `filterD()` from `FSA` (which is loaded with `NCStats`) instead of `subset()`.
+```{r message=FALSE}
+library(NCStats)
+tmp <- filterD(df,species!="versicolor")
+( freq <- xtabs(~species,data=tmp) )
+barplot(freq,xlab="Species",ylab="Frequency")
+```

@@ -1,0 +1,27 @@
+---
+layout: page
+author: Derek H. Ogle
+title: MTH107 FAQ
+subtitle: Why does R say the alternative hypothesis is true, even though the p-value>alpha?
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/FAQ/FAQs")
+source("../../../rhelpers/rhelpers.R")
+fnm <- "alt-hyp-misinterp"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message='FALSE'}
+source("../../../rhelpers/knitr_setup.R")
+```
+
+----
+
+Typical results from a `t.test()` (two-sample t-test in this example) look like this.
+```{r}
+t.test(extra~group,data=sleep,var.equal=TRUE)
+```
+
+We would not reject the null hypothesis with these results if $\alpha=0.05$ was being used (note `r kPvalue(t.test(extra~group,data=sleep,var.equal=TRUE)$p.value)`>$\alpha$).  However, some students mistakenly interpret the third line of output as saying that the alternative hypothesis is true (and thus the null hypothesis is rejected).  R does NOT make the rejection decision for you.  The third line of output is simply a reminder of what you set the alternative hypothesis to in `alt=` of `t.test()` (note that the default is `alt="two.sided"` or "not equals").  You must decide to reject or not to reject the null hypothesis by comparing the p-value reported in the second line of output to the $\alpha$ that you have chosen to use.

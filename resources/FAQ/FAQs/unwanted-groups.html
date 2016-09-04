@@ -1,0 +1,60 @@
+---
+layout: page
+title: MTH107 FAQ
+subtitle: Why do unwanted groups still appear after I have subsetted a data.frame?
+author: Derek H. Ogle
+---
+
+
+<hr />
+<p>Base R uses a function called <code>subset()</code> to construct subsets of a data.frame. For example, the following code can be used to construct a data.frame for the <code>Iris.csv</code> file that contains a single species.</p>
+<pre class="r"><code>&gt; df &lt;- read.csv(&quot;data/Iris.csv&quot;)
+&gt; str(df)</code></pre>
+<pre><code>'data.frame':   150 obs. of  5 variables:
+ $ seplen : int  50 46 46 51 55 48 52 49 44 50 ...
+ $ sepwid : int  33 34 36 33 35 31 34 36 32 35 ...
+ $ petlen : int  14 14 10 17 13 16 14 14 13 16 ...
+ $ petwid : int  2 3 2 5 2 2 2 1 2 6 ...
+ $ species: Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<pre class="r"><code>&gt; levels(df$species)</code></pre>
+<pre><code>[1] &quot;setosa&quot;     &quot;versicolor&quot; &quot;virginica&quot; </code></pre>
+<pre class="r"><code>&gt; tmp &lt;- subset(df,species==&quot;versicolor&quot;)</code></pre>
+<p>A quick table of results shows that only one species remains in the data.frame.</p>
+<pre class="r"><code>&gt; xtabs(~species,data=tmp)</code></pre>
+<pre><code>species
+    setosa versicolor  virginica 
+         0         50          0 </code></pre>
+<p>But, annoyingly, the variable has maintained the names of the other species that were present in the original data.frame. This unwanted behavior can be corrected by using <code>filterD()</code> from <code>FSA</code> (which is loaded with <code>NCStats</code>) instead of <code>subset()</code>.</p>
+<pre class="r"><code>&gt; library(NCStats)
+&gt; tmp &lt;- filterD(df,species==&quot;versicolor&quot;)
+&gt; xtabs(~species,data=tmp)</code></pre>
+<pre><code>species
+versicolor 
+        50 </code></pre>
+
+
+
+
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

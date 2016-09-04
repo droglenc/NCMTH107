@@ -1,0 +1,57 @@
+---
+layout: page
+title: MTH107 FAQ
+subtitle: Why does the df for my two-sample t-test contain decimals?
+author: Derek H. Ogle
+---
+
+
+<hr />
+<p>There are two types of two-sample t-tests – (1) variances are equal and (2) variances are unequal. In our introductory statistics course we only discussed the equal variances case. In the equal variances case the degrees-of-freedom (df) are <span class="math inline">\(n_{1}+n_{2}-2\)</span> which alwasy results in a whole number. However, the df formula for the unequal variances case is much more complicated and often results in decimal degrees-of-freedom. Thus, if you expected the two-sample t-test df to be <span class="math inline">\(n_{1}+n_{2}-2\)</span>, but they were a decimal, then you forgot to set <code>var.equal=TRUE</code> in <code>t.test()</code>. Of course, before doing this you should verify with <code>levenesTest()</code> from <code>car</code> that the variances are statistically equal (see <a href="cant-find-Levenes.html">this FAQ</a>).</p>
+<p>As an example, the following is the results from using <code>t.test()</code> without setting <code>var.equal=TRUE</code> (<em>note that the unequal variances version is also called the Welch two-sample t-test</em>).</p>
+<pre class="r"><code>&gt; t.test(extra~group,data=sleep)</code></pre>
+<pre><code>Welch Two Sample t-test with extra by group 
+t = -1.8608, df = 17.776, p-value = 0.07939
+alternative hypothesis: true difference in means is not equal to 0 
+95 percent confidence interval:
+ -3.3654832  0.2054832 
+sample estimates:
+mean in group 1 mean in group 2 
+           0.75            2.33 </code></pre>
+<p>In contrast, these are the results from using <code>t.test()</code> with <code>var.equal=TRUE</code> for the same data.</p>
+<pre class="r"><code>&gt; t.test(extra~group,data=sleep,var.equal=TRUE)</code></pre>
+<pre><code> Two Sample t-test with extra by group 
+t = -1.8608, df = 18, p-value = 0.07919
+alternative hypothesis: true difference in means is not equal to 0 
+95 percent confidence interval:
+ -3.363874  0.203874 
+sample estimates:
+mean in group 1 mean in group 2 
+           0.75            2.33 </code></pre>
+
+
+
+
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+---
+layout: page
+author: Derek H. Ogle
+title: MTH107 FAQ
+subtitle: Why does the df for my two-sample t-test contain decimals?
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/FAQ/FAQs")
+source("../../../rhelpers/rhelpers.R")
+fnm <- "t2test-df-decimals"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message='FALSE'}
+source("../../../rhelpers/knitr_setup.R")
+```
+
+----
+
+There are two types of two-sample t-tests -- (1) variances are equal and (2) variances are unequal.  In our introductory statistics course we only discussed the equal variances case.  In the equal variances case the degrees-of-freedom (df) are $n_{1}+n_{2}-2$ which alwasy results in a whole number.  However, the df formula for the unequal variances case is much more complicated and often results in decimal degrees-of-freedom.  Thus, if you expected the two-sample t-test df to be $n_{1}+n_{2}-2$, but they were a decimal, then you forgot to set `var.equal=TRUE` in `t.test()`.  Of course, before doing this you should verify with `levenesTest()` from `car` that the variances are statistically equal (see [this FAQ](cant-find-Levenes.html)).
+
+As an example, the following is the results from using `t.test()` without setting `var.equal=TRUE` (*note that the unequal variances version is also called the Welch two-sample t-test*).
+```{r}
+t.test(extra~group,data=sleep)
+```
+
+In contrast, these are the results from using `t.test()` with `var.equal=TRUE` for the same data.
+```{r}
+t.test(extra~group,data=sleep,var.equal=TRUE)
+```

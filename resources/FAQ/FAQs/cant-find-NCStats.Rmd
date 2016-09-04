@@ -1,0 +1,25 @@
+---
+layout: page
+author: Derek H. Ogle
+title: MTH107 FAQ
+subtitle: Why can't R find NCStats
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/FAQ/FAQs")
+source("../../../rhelpers/rhelpers.R")
+fnm <- "cant-find-NCStats"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message='FALSE'}
+source("../../../rhelpers/knitr_setup.R")
+```
+
+If R cannot find `NCStats` when you submit
+```{r eval=FALSE}
+library(NCStats)
+```
+
+then `NCStats` has not been properly installed on your computer.  See [this FAQ](install-NCStats.html) for directions on how to install `NCStats`.
