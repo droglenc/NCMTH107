@@ -18,7 +18,7 @@ set_parent('IntroStats.Rnw')
 \minitoc
 \newpage
 
-\lettrine{S}{tatistical inference is the process} of making conclusions about an entire population based on the results from the individuals in a single sample.\index{Inference!Definition}  To make conclusions about the larger population from our data requires data that fairly represents the larger population.  In this chapter we will discuss two ways of producing data -- (1) Experiments and (2) Observational Studies.  The information in this chapter is critical to the field of statistics and science in general, because if data are not properly collected, then inferences and proper conclusions cannot be made.
+\lettrine{S}{tatistical inference is the process} of making conclusions about an entire population based on the results from the individuals in a single sample.\index{Inference!Definition}  To make conclusions about the larger population from a sample requires a sample that fairly represents the larger population.  In this chapter two ways of producing data -- (1) Experiments and (2) Observational Studies -- are described.  The information in this chapter is critical to the field of statistics and science in general, because if data are not properly collected, then inferences and proper conclusions cannot be made.
 
 \defn{Inference}{The process of forming conclusions about the unknown parameters of a population by computing statistics from the individuals in a sample.}
 
@@ -26,7 +26,7 @@ set_parent('IntroStats.Rnw')
 
 
 \section{Experiments}
-An experiment deliberately imposes a condition, or treatment, on individuals in order to observe their response.\index{Experiment!Definition}  In a properly designed experiment all variables that we are not interested in are held constant while the variable(s) that we are interested in are changed among groups.  As long as the experiment is designed properly (see below), we can test for differences in the response variable among treatment groups.  If differences occur among treatment groups, then those differences are due either to the variable(s) that were deliberately changed or randomness (chance).  Thus, strong cause-and-effect statements can be made from data collected with a carefully designed experiment.
+An experiment deliberately imposes a condition, or treatment, on individuals in order to observe their response.\index{Experiment!Definition}  In a properly designed experiment all variables that we are not interested in are held constant while the variable(s) that we are interested in are changed among treatments.  As long as the experiment is designed properly (see below), tests for differences in the response variable among treatment groups can be made.  If differences among treatment groups occur, then those differences are due either to the variable(s) that were deliberately changed or randomness (chance).  Thus, strong cause-and-effect statements can be made from data collected with a carefully designed experiment.
 
 \warn{An experiment deliberately imposes a condition, or treatment, on individuals in order to observe their response.}
 
@@ -34,19 +34,19 @@ An experiment deliberately imposes a condition, or treatment, on individuals in 
 \warn{Strong cause-and-effect statements can be made from data collected with a carefully designed experiment.}
 
 \subsection{Single-factor Experiments}\index{Experiment!Single-Factor}
-A factor is the variable that is deliberately manipulated to determine its effect on the response variable.\index{Factor!Experiment}  Sometimes the factor is called an explanatory variable because we are attempting to determine how it affects the response variable (i.e., how does it ``explain'' the response variable).\index{Response Variable!Experiment}  The simplest experiment is a single-factor experiment where the individuals are split into groups defined by the categories of a single factor variable.
+A factor is the variable that is deliberately manipulated to determine its effect on the response variable.\index{Factor!Experiment}  Sometimes the factor is called an explanatory variable because we are attempting to determine how it affects (or ``explains'') the response variable.\index{Response Variable!Experiment}  The simplest experiment is a single-factor experiment where the individuals are split into groups defined by the categories of a single factor variable.
 
-For example, suppose that a researcher wants to examine the effect of temperature on the growth rate of a strain of bacteria (i.e., total number of bacterial cells at the end of the experiment).  The researcher has decided that she will examine growth at only two temperatures in this simple experiment -- $10^{o}C$ and $15^{o}C$.  In addition, she has prepared 120 agars (petri dishes with a material on which the bacteria can grow) that were inoculated with the bacteria and placed in a chamber where the temperature and all other environmental conditions (e.g., humidity, light) were controlled exactly.  In this very simple experiment, temperature is the only factor as it is the only variable that is manipulated to different values to determine its impact on the growth rate response variable.
+For example, suppose that a research group wants to examine the effect of temperature on the growth rate of a strain of bacteria (i.e., total number of bacterial cells at the end of the experiment).  The researchers will examine growth at only two temperatures in this simple experiment -- $10^{o}$C and $15^{o}$C.  In addition, they have prepared 120 agars (petri dishes with a material on which the bacteria can grow) that were inoculated with the bacteria and placed in a chamber where the temperature and all other environmental conditions (e.g., humidity, light) were controlled exactly.  In this very simple experiment, temperature is the only factor as it is the only variable that is manipulated to different values to determine its impact on the growth rate response variable.
 
-\defn{Factor(s)}{The variable(s) that is (are) deliberately manipulated in the experiment to determine its effect on the response variable, sometimes called the explanatory variable.}
+\defn{Factor(s)}{The variable(s) that is (are) deliberately manipulated in the experiment to determine its effect on the response variable.  Sometimes called the explanatory variable.}
 
 \vspace{-12pt}
 \defn{Response}{The variable observed in an experiment to identify the effect of the factors on it.}
 
 \vspace{-12pt}
-\warn{In a single-factor experiment only one explanatory variable or factor is allowed to vary; all other explanatory variables are held constant.}
+\warn{In a single-factor experiment only one explanatory variable (i.e., factor) is allowed to vary; all other explanatory variables are held constant.}
 
-Levels are the number of categories of the factor variable.\index{Level!Experimental}  In this example, there are two levels -- $10^{o}C$ and $15^{o}C$.  Treatments are the number of unique conditions that individuals in the experiment are exposed to.  In single-factor experiments, the number of treatments is the same as the number of levels of the single factor.\index{Treatment, Experimental}  Thus, in this simple experiment, there are two treatments -- $10^{o}C$ and $15^{o}C$.  Treatments will be discussed more thoroughly in the next section.
+Levels are the number of categories of the factor variable.\index{Level!Experimental}  In this example, there are two levels -- $10^{o}$C and $15^{o}$C.  Treatments are the number of unique conditions that individuals in the experiment are exposed to.  In single-factor experiments, the number of treatments is the same as the number of levels of the single factor.\index{Treatment, Experimental}  Thus, in this simple experiment, there are two treatments -- $10^{o}$C and $15^{o}$C.  Treatments will be discussed more thoroughly in the next section.
 
 The number of replicates in an experiment is the number of individuals that will receive each treatment.\index{Replicates}  In this example, the replicates are the number of inoculated agars that will receive each of the two temperature treatments.  The number of replicates is determined by dividing the total number of available individuals (120) by the number of treatments (2).  Thus, in this case, the number of replicates is 60 inoculated agars.
 
@@ -61,16 +61,16 @@ The number of replicates in an experiment is the number of individuals that will
 \vspace{-12pt}
 \warn{The number of replicates is determined by dividing the total number of available individuals by the number of treatments.}
 
-The agars used in this experiment will be randomly allocated to the two temperature treatments.  All other variables -- humidity, light, etc. -- are kept the same for each group.  At the end of two weeks, the total number of bacterial cells on each agar (i.e., the response variable) will be recorded and compared between the agars kept at both temperatures\footnote{Methods for making this comparison are shown in \chapref{chap:tTest}.}.  Any difference in average growth rates was either due to the different temperature treatments or randomness, because all other variables were the same between the two treatment groups.
+The agars used in this experiment will be randomly allocated to the two temperature treatments.  All other variables -- humidity, light, etc. -- are kept the same for each group.  At the end of two weeks, the total number of bacterial cells on each agar (i.e., the response variable) will be recorded and compared between the agars kept at both temperatures.\footnote{Methods for making this comparison are shown in \chapref{chap:tTest}.}  Any difference in average growth rates was either due to the different temperature treatments or randomness, because all other variables were the same between the two treatment groups.
 
 \warn{Differences among treatment groups are either caused by randomness (chance) or the factor.}
 
-We are not restricted to just two categories for our single factor.  For example, we may be interested in more than two temperatures, say $10^{o}C$, $12.5^{o}C$, $15^{o}C$, and $17.5^{o}C$.  There is still only one factor with this modification -- temperature -- but there are now four levels.  Because this is still a single-factor experiment there are still only as many treatment groups as levels of the factor (four in this case).
+We are not restricted to just two categories for our single factor.  For example, we may be interested in more than two temperatures, say $10^{o}$C, $12.5^{o}$C, $15^{o}$C, and $17.5^{o}$C.  There is still only one factor with this modification -- temperature -- but there are now four levels.  Because this is still a single-factor experiment there are still only as many treatment groups as levels of the factor (four in this case).
 
 \subsection{Multi-factor Experiments}
 More than one factor can be tested in one experiment.\index{Experiment!Multi-Factor}  In fact, it can be shown that it is more efficient to have a properly designed but slightly more complex experiment where more than one factor is varied at a time than it is to use separate experiments in which only one factor is varied in each.  However, before showing this benefit let's examine the definitions from the previous section in a multi-factor experiment.
 
-Suppose that the previous experiment was modified by examining, in addition to the two temperatures from above, the effect of different relative humidity levels on the growth of this strain of bacteria.  This modified experiment now has two factors -- temperature, which has two levels ($10^{o}C$ or $15^{o}C$), and level of relative humidity, which has four levels (20\%, 40\%, 60\%, and 80\%).  The number of combinations of all factors in the experiment is the number of treatments and is found by multiplying the levels of all factors (i.e., 2x4=8 in this case).\index{Treatment, Experimental}  The number of replicates in this experiment is now 15, the total number of available agars divided by eight (120/8).
+Suppose that the previous experiment was modified to examine, in addition to the two temperatures from above, the effect of different relative humidity levels on the growth of this strain of bacteria.  This modified experiment now has two factors -- temperature (with two levels of $10^{o}$C or $15^{o}$C) and relative humidity (with four levels of 20\%, 40\%, 60\%, and 80\%).  The number of combinations of all factors in the experiment is the number of treatments and is found by multiplying the levels of all factors (i.e., 2$\times$4=8 in this case).\index{Treatment, Experimental}  The number of replicates in this experiment is now 15 (i.e., the total number of available agars divided by eight; 120/8).
 
 A quick drawing of the experimental design can be instructive (below).  The drawing is a grid where the levels of one factor make up the rows and the levels of the other factor make up the columns of the grid.  The number of rows and columns correspond to the levels of the two factors, respectively, whereas the number of cells in the grid is the number of treatments (numbered in this table to show eight treatments).
 
@@ -80,9 +80,9 @@ A quick drawing of the experimental design can be instructive (below).  The draw
 \cline{2-5}
  & 20\% & 40\% & 60\% & 80\% \\
 \cline{2-5}
-\multicolumn{1}{c|}{$10^{o}C$} & 1 & 2 & 3 & \multicolumn{1}{c|}{4} \\
+\multicolumn{1}{c|}{$10^{o}$C} & 1 & 2 & 3 & \multicolumn{1}{c|}{4} \\
 \hline
-\multicolumn{1}{c|}{$15^{o}C$} & 5 & 6 & 7 & \multicolumn{1}{c|}{8} \\
+\multicolumn{1}{c|}{$15^{o}$C} & 5 & 6 & 7 & \multicolumn{1}{c|}{8} \\
 \cline{2-5}
 \end{tabular}
 \end{center}
@@ -97,13 +97,13 @@ A quick drawing of the experimental design can be instructive (below).  The draw
 
 The statistical analysis of a multi-factor experimental design such as this is more involved than what will be shown in this book.  However, multi-factor experiments have many benefits.  The benefits of a multi-factor experiment can be illustrated by comparing the design of a multi-factor experiment to separate single-factor experiments.  Let's continue with the experiment to identify the effect of both temperature and relative humidity on the growth rate of a certain strain of bacteria.  However, consider for the moment that (1) separate single-factor experiments will also be conducted to determine the effect of each factor and (2) we cannot use any of the individuals (i.e., agars) in more than one experiment.
 
-To conduct the separate experiments, randomly split the 120 available agars into two equally-sized groups of 60.  The first 60 will be used in the first experiment concerning the effect of temperature on growth rate.  In this experiment, the 60 individuals will be split into two groups of 30 individuals (corresponding to the two levels of the temperature factor).  The second 60 individuals will be used in the second experiment concerning relative humidity.  In this experiment, the 60 individuals will be split into four groups of 15 individuals (corresponding to the four levels of the relative humidity factor).  These separate single-factor experiments are summarized in the following tables (where the numbers in the cells represent replicates for that experiment).
+To conduct the two separate experiments, randomly split the 120 available agars into two equally-sized groups of 60.  The first 60 will be used in the first experiment concerning the effect of temperature on growth rate.  In this experiment, the 60 individuals will be split into two groups of 30 individuals (for the two levels of temperature).  The second 60 individuals will be used in the second experiment concerning relative humidity.  In this experiment, the 60 individuals will be split into four groups of 15 individuals (for the four levels of relative humidity).  These separate single-factor experiments are summarized in the following tables (where the numbers in the cells represent the number of replicates in each treatment).
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \multicolumn{2}{c}{Temperature} & \multicolumn{1}{c}{} & \multicolumn{4}{c}{Relative Humidity} \\
 \cline{1-2}\cline{4-7}
-$10^{o}C$ & $15^{o}C$ & & 20\% & 40\% & 60\% & 80\% \\
+$10^{o}$C & $15^{o}$C & & 20\% & 40\% & 60\% & 80\% \\
 \cline{1-2}\cline{4-7}
 30 & 30 & & 15 & 15 & 15 & 15 \\
 \cline{1-2}\cline{4-7}
@@ -118,18 +118,18 @@ Now reconsider the design where both factors were varied at once (the table belo
 \cline{2-5}
  & 20\% & 40\% & 60\% & 80\% \\
 \cline{2-5}
-\multicolumn{1}{c|}{$10^{o}C$} & 15 & 15 & 15 & \multicolumn{1}{c|}{15} \\
+\multicolumn{1}{c|}{$10^{o}$C} & 15 & 15 & 15 & \multicolumn{1}{c|}{15} \\
 \hline
-\multicolumn{1}{c|}{$15^{o}C$} & 15 & 15 & 15 & \multicolumn{1}{c|}{15} \\
+\multicolumn{1}{c|}{$15^{o}$C} & 15 & 15 & 15 & \multicolumn{1}{c|}{15} \\
 \cline{2-5}
 \end{tabular}
 \end{center}
 
-The key to examining the benefits of the multi-factor experiment is to determine the number of individuals that give ``information'' about (i.e., are exposed to) each factor.  From the table it is evident that all 120 individuals are exposed to one of the temperature levels with 60 individuals exposed to each level.  This is compared to the single-factor experiment where only 30 individuals were exposed to these levels.  In addition, all 120 individuals are exposed to one of the relative humidity levels with 30 individuals exposed to each level.  Again, this is compared to the single-factor experiment above where only 15 individuals were exposed to these levels.  Thus, the first advantage of multi-factor experiments is that the available individuals are used more efficiently.  In other words, more ``information'' (i.e., the responses of more individuals) is obtained from a multi-factor experiment than from combinations of single-factor experiments\footnote{The real importance of this advantage will become apparent when statistical power is introduced in \chapref{chap:Inference}.}.
+The key to examining the benefits of the multi-factor experiment is to determine the number of individuals that give ``information'' about (i.e., are exposed to) each factor.  From the last table it is seen that all 120 individuals are exposed to one of the temperature levels with 60 individuals exposed to each level.  In contrast, only 30 individuals were exposed to these levels in the single-factor experiment.  In addition, all 120 individuals are exposed to one of the relative humidity levels with 30 individuals exposed to each level.  Again, this is in contrast to the single-factor experiment where only 15 individuals were exposed to these levels.  Thus, the first advantage of multi-factor experiments is that the available individuals are used more efficiently.  In other words, more ``information'' (i.e., the responses of more individuals) is obtained from a multi-factor experiment than from combinations of single-factor experiments.\footnote{The real importance of this advantage will become apparent when statistical power is introduced in \chapref{chap:Inference}.}
 
 \warn{Multi-factor experiments use available individuals more efficiently; i.e., more ``information'' about the effect of the factors on the response is gained from the same number of individuals.}
 
-A properly designed multi-factor experiment does more than just use individuals more efficiently.  It allows us to determine if the two factors (or more factors if they exist) interact to impact an individual's response.\index{Interaction effect}  For example, consider \figref{fig:ExpDInt} of hypothetical results from this experiment\footnote{The means of each treatment are plotted and connected with lines in this plot.}.  The effect of relative humidity is to increase the growth rate for those individuals at $10^{o}C$ (black line) but to decrease the growth rate for those individuals at $15^{o}C$ (blue line).  That is, the effect of relative humidity differs depending on the level of temperature.  When the effect of one factor differs depending on the level of the other factor, then the two factors are said to interact.  Interactions cannot be determined from the two single-factor experiments, because the same individuals are not exposed to levels of the two factors at the same time.
+A properly designed multi-factor experiment also allows researchers to determine if multiple factors interact to impact an individual's response.\index{Interaction effect}  For example, consider the hypothetical results from this experiment in \figref{fig:ExpDInt}.\footnote{The means of each treatment are plotted and connected with lines in this plot.}  The effect of relative humidity is to increase the growth rate for those individuals at $10^{o}$C (black line) but to decrease the growth rate for those individuals at $15^{o}$C (blue line).  That is, the effect of relative humidity differs depending on the level of temperature.  When the effect of one factor differs depending on the level of the other factor, then the two factors are said to \textit{interact}.  Interactions cannot be determined from the two single-factor experiments because the same individuals are not exposed to levels of the two factors at the same time.
 
 <<ExpDInt, echo=FALSE, fig.cap="Mean growth rates in a two-factor experiment that depict an interaction effect.">>=
 par(mar=c(3.5,2.5,1,1),mgp=c(2,0.75,0))
@@ -143,7 +143,7 @@ axis(1,at=as.numeric(levels(relhum)),labels=levels(relhum))
 legend("right",legend=c("10C","15C"),col=c("black","blue"),pch=19,lwd=2,cex=0.9,bty="n")
 @
 
-Multi-factor experiments are used to detect the presence or absence of interaction, not just the presence of it.  The hypothetical results in \figref{fig:ExpDNoInt} show that the growth rate increases with increasing relative humidity at about the same rate for both temperatures.  Thus, there does not appear to be an interaction between the two factors.  Again, this could not be determined from the separate single-factor experiments.  Note also that this graph shows that the growth rate was generally higher at $10^{o}C$ than at $15^{o}C$ for all relative humidity levels.
+Multi-factor experiments are used to detect the presence or absence of interaction, not just the presence of it.  The hypothetical results in \figref{fig:ExpDNoInt} show that the growth rate increases with increasing relative humidity at about the same rate for both temperatures.  Thus, because the effect of relative humidity is the same for each temperature (and vice versa), there does not appear to be an interaction between the two factors.  Again, this could not be determined from the separate single-factor experiments.
 
 <<ExpDNoInt, echo=FALSE, fig.cap="Mean growth rates in a two-factor experiment that depict no interaction effect.">>=
 par(mar=c(3.5,2.5,1,1),mgp=c(2,0.75,0))
@@ -161,14 +161,14 @@ legend("right",legend=c("10C","15C"),col=c("black","blue"),pch=19,lwd=2,cex=0.9,
 
 
 \subsection{Allocating Individuals}
-In the previous examples, each individual\footnote{When discussing experiments, an ``individual'' is often referred to as a ``replicate'' or an ``experimental unit.''} was placed into, or allocated to, treatment groups.\index{Replicates}  Individuals should be allocated to treatment groups with a randomization procedure.  Randomization will tend to even out differences among groups for variables not considered in the experiment.  In other words, randomization should help assure that all groups are similar before the treatments are imposed.  In the statistical lexicon, randomly allocating individuals to treatments removes any bias (foreseen or unforeseen) from entering the experiment.
+In the previous examples, each individual\footnote{When discussing experiments, an ``individual'' is often referred to as a ``replicate'' or an ``experimental unit.''} was allocated (i.e., placed into) treatment groups.\index{Replicates}  Individuals should be allocated to treatment groups with a randomization procedure.  Randomization will tend to even out differences among groups for variables not considered in the experiment.  In other words, randomization should help assure that all groups are similar before the treatments are imposed.  Thus, randomly allocating individuals to treatments removes any bias (foreseen or unforeseen) from entering the experiment.
 
-In the single-factor experiment above -- two treatments of temperature -- there were 120 agars.  To randomly allocate these individuals to the treatments, 60 pieces of paper marked with a ``10'' and 60 marked with a ``15'' could be placed into a hat.  The pieces of paper would then be drawn for each agar and that agar would receive the temperature found on the piece of paper.  Alternatively, each agar could be assigned a unique number between 1 and 120 and pieces of paper with these numbers could be placed into the hat.  The agars corresponding to the first 60 numbers drawn from the hat could then be placed in the first treatment with the agars for the next (or remaining) 60 numbers in the second treatment.  This process is essentially the same as randomly ordering the 120 numbers.  A random order of numbers is obtained with R by including the count of numbers as the only argument to \R{sample()}.  For example, randomly ordering the numbers 1 through 120 is accomplished (and saved to an object) with
+In the single-factor experiment above -- two treatments of temperature -- there were 120 agars.  To randomly allocate these individuals to the treatments, 60 pieces of paper marked with a ``10'' and 60 marked with a ``15'' could be placed into a hat.  The pieces of paper would then be drawn for each agar and that agar would receive the temperature found on the piece of paper.  Alternatively, each agar could be assigned a unique number between 1 and 120 and pieces of paper with these numbers could be placed into the hat.  The agars corresponding to the first 60 numbers drawn from the hat could then be placed into the first treatment with the agars for the next (or remaining) 60 numbers in the second treatment.  This process is essentially the same as randomly ordering the 120 numbers.  A random order of numbers is obtained with R by including the count of numbers as the only argument to \R{sample()}.  For example, randomly ordering the numbers 1 through 120 is accomplished (and saved to an object) with
 <<echo=-1>>=
 set.seed(153434)
 ( ragars1 <- sample(120) )
 @
-Thus, the first five agars in the 10$^{o}C$ treatment are \Sexpr{ragars1[1]}, \Sexpr{ragars1[2]}, \Sexpr{ragars1[3]}, \Sexpr{ragars1[4]}, and \Sexpr{ragars1[5]}.  The first five agars in the 15$^{o}C$ treatment are \Sexpr{ragars1[61]}, \Sexpr{ragars1[62]}, \Sexpr{ragars1[63]}, \Sexpr{ragars1[64]}, and \Sexpr{ragars1[65]}.
+Thus, the first five agars in the 10$^{o}$C treatment are \Sexpr{ragars1[1]}, \Sexpr{ragars1[2]}, \Sexpr{ragars1[3]}, \Sexpr{ragars1[4]}, and \Sexpr{ragars1[5]}.  The first five agars in the 15$^{o}$C treatment are \Sexpr{ragars1[61]}, \Sexpr{ragars1[62]}, \Sexpr{ragars1[63]}, \Sexpr{ragars1[64]}, and \Sexpr{ragars1[65]}.
 
 Now consider the modified experiment with two factors -- temperature and relative humidity -- with eight treatments containing 15 agars each.  In this case, it is more efficient to save the sorted numbers into an object and then select the numbers in the first 15 positions, then the second 15 positions, etc.  For example,
 <<>>=
@@ -177,7 +177,7 @@ ragars2[1:15]     # "grab" the first 15 numbers
 ragars2[16:30]    # "grab" the second 15 numbers, and so on
 @
 
-This design might be shown with the following table, where the numbers in each cell represent the first two agars selected to receive that treatment\footnote{Only the first two numbers are shown because of space constraints.}.
+This design might be shown with the following table, where the numbers in each cell represent the first two agars selected to receive that treatment.\footnote{Only the first two numbers are shown because of space constraints.}
 
 \begin{center}
 \begin{tabular}{cc|c|c|c}
@@ -185,14 +185,14 @@ This design might be shown with the following table, where the numbers in each c
 \cline{2-5}
  & 20\% & 40\% & 60\% & 80\% \\
 \cline{2-5}
-\multicolumn{1}{c|}{$10^{o}C$} & \Sexpr{ragars2[1]},\Sexpr{ragars2[2]},$\cdots$ & \Sexpr{ragars2[16]},\Sexpr{ragars2[17]},$\cdots$ & \Sexpr{ragars2[31]},\Sexpr{ragars2[32]},$\cdots$ & \multicolumn{1}{c|}{\Sexpr{ragars2[46]},\Sexpr{ragars2[47]},$\cdots$} \\
+\multicolumn{1}{c|}{$10^{o}$C} & \Sexpr{ragars2[1]},\Sexpr{ragars2[2]},$\cdots$ & \Sexpr{ragars2[16]},\Sexpr{ragars2[17]},$\cdots$ & \Sexpr{ragars2[31]},\Sexpr{ragars2[32]},$\cdots$ & \multicolumn{1}{c|}{\Sexpr{ragars2[46]},\Sexpr{ragars2[47]},$\cdots$} \\
 \hline
-\multicolumn{1}{c|}{$15^{o}C$} & \Sexpr{ragars2[61]},\Sexpr{ragars2[62]},$\cdots$ & \Sexpr{ragars2[76]},\Sexpr{ragars2[77]},$\cdots$ & \Sexpr{ragars2[91]},\Sexpr{ragars2[92]},$\cdots$ & \multicolumn{1}{c|}{\Sexpr{ragars2[106]},\Sexpr{ragars2[107]},$\cdots$} \\
+\multicolumn{1}{c|}{$15^{o}$C} & \Sexpr{ragars2[61]},\Sexpr{ragars2[62]},$\cdots$ & \Sexpr{ragars2[76]},\Sexpr{ragars2[77]},$\cdots$ & \Sexpr{ragars2[91]},\Sexpr{ragars2[92]},$\cdots$ & \multicolumn{1}{c|}{\Sexpr{ragars2[106]},\Sexpr{ragars2[107]},$\cdots$} \\
 \cline{2-5}
 \end{tabular}
 \end{center}
 
-\warn{Individuals should be randomly allocated to treatments to remove bias from the experiment.}
+\warn{Individuals should be randomly allocated to treatments to remove bias.}
 
 
 \subsection{Design Principles}
@@ -200,10 +200,10 @@ There are many other methods of designing experiments and allocating individuals
 \begin{Enumerate}
   \item Control the effect of variables on the response variable by deliberately manipulating factors to certain levels and maintaining constancy among other confounding variables.
   \item Randomize the allocation of individuals to treatments to eliminate bias in the experiment.
-  \item Replicate individuals in the experiment (use many individuals) to reduce chance variation in the results.
+  \item Replicate individuals (use many individuals) in the experiment to reduce chance variation in the results.
 \end{Enumerate}
 
-Proper control in an experiment allows the experiment to produce strong cause-and-effect statements; i.e., to state that an observed difference in the response variable was due to the levels of the factor or chance variation rather than some foreseen or unforeseen other variable(s).  Randomly allocating individuals to treatments removes any bias that may be included in the experiment.  For example, if we don't randomly allocate the agars to the treatments, then it is possible that a set of all ``poor'' agars may end up in one treatment.  In this case, any observed differences in the response may not be due to the levels of the factor but to the prior ``level'' of the agars.  Replication means that there should be more than one or a few individuals in each treatment.  This reduces the effect of each individual on the overall results.  For example, if there was one agar in each treatment then, even with random allocation, the effect of that treatment is probably mostly due to some inherent properties of that agar rather than the levels of the factors.  Replication, along with randomization, helps assure that the groups of individuals in each treatment are as alike (homogeneous) as possible at the start of the experiment.
+Proper control in an experiment allows the experiment to produce strong cause-and-effect statements; i.e., to state that an observed difference in the response variable was due to the levels of the factor or chance variation rather than some other variable (foreseen or unforeseen).  Randomly allocating individuals to treatments removes any bias that may be included in the experiment.  For example, if we don't randomly allocate the agars to the treatments, then it is possible that a set of all ``poor'' agars may end up in one treatment.  In this case, any observed differences in the response may not be due to the levels of the factor but to the prior quality of the agars.  Replication means that there should be more than one or a few individuals in each treatment.  This reduces the effect of each individual on the overall results.  For example, if there was one agar in each treatment then, even with random allocation, the effect of that treatment may be due to some inherent properties of that agar rather than the levels of the factors.  Replication, along with randomization, helps assure that the groups of individuals in each treatment are as alike (homogeneous) as possible at the start of the experiment.
 
 \warn{Control, Randomization, and Replication are the three major principles of experimental design.}
 
@@ -283,7 +283,7 @@ Consider the following as an example of the problems that can occur when all var
 
 \warn{Strong cause-and-effect statements CANNOT be made from data collected as part of observational studies.}
 
-In observational studies, it is important to understand to what population inferences will be made\footnote{Thus, it is very important to first perform an IVPPS as discussed in \sectref{sect:IVPPSS}.}.  To make useful inferences from a sample, the sample must be an unbiased representation of the population.  In other words, it must not systematically represent or favor certain individuals or outcomes.
+In observational studies, it is important to understand to what population inferences will be made.\footnote{Thus, it is very important to first perform an IVPPS as discussed in \sectref{sect:IVPPSS}.}  To make useful inferences from a sample, the sample must be an unbiased representation of the population.  In other words, it must not systematically represent or favor certain individuals or outcomes.
 
 For example, consider that you want to determine the mean length of all fish in a particular lake (e.g., Square Lake as introduced in \sectref{sect:IVPPSS}).  Using a net with large mesh, such that only large fish are caught, would produce a biased sample because interest is in all fish not just the large fish in Square Lake.  Setting the nets near spawning beds (i.e., only adult fish) would also produce a biased sample.  In both instances, a sample would be collected from a population other than the population in which interest lies.  This is why it is important that the population is specified and a sample selection technique is used that selects individuals from that population.
 
@@ -304,15 +304,15 @@ A convenience sample is a sample of individuals who are easiest to reach for the
 \vspace{-12pt}
 \warn{Voluntary response and convenience samples often produces a biased sample.}
 
-In probability-based sampling, each member of the population has a known chance of being selected for the sample.  The simplest form of probability-based sample is the \textbf{Simple Random Sample} (SRS) where each member of the population has the same chance of being selected.\index{Simple Random Sample}  Proper selection of an SRS requires that each member of the population is assigned a unique number.  The individuals in the SRS can then be selected by choosing random numbers, and collecting the individuals that those numbers correspond to.
+In probability-based sampling, each member of the population has a known chance of being selected for the sample.  The simplest form of probability-based sample is the \textbf{Simple Random Sample} (SRS) where each member of the population has the same chance of being selected.\index{Simple Random Sample}  Proper selection of an SRS requires each member of the population to be assigned a unique number.  The individuals in the SRS are then selected by choosing random numbers and collecting the individuals that those numbers correspond to.
 
-For example, an auditor may need to select a sample of 30 financial transactions from all transactions of a particular bank during the previous month.  Because each transaction is numbered the auditor may know that there was a total of 1112 transactions at this bank during the previous month (i.e., the population).  The auditor would then number each transaction from 1 to 1112 (this is likely already done in this case), randomly select 30 numbers (with no repeats) from between 1 and 1112, and then physically locate the 30 transactions that correspond to the 30 selected numbers.  Those 30 transactions are the SRS.  A random selection of numbers is selected by including the total number as the first argument and the number to select as the second argument to \R{sample()}.  For example, 30 numbers from between 1 and 1112 is selected (and saved into an object) with
+For example, an auditor may need to select a sample of 30 financial transactions from all transactions of a particular bank during the previous month.  Because each transaction is numbered, the auditor may know that there was a total of 1112 transactions at this bank during the previous month (i.e., the population).  The auditor would then number each transaction from 1 to 1112 (this is likely already done in this case), randomly select 30 numbers (with no repeats) from between 1 and 1112, and then physically locate the 30 transactions that correspond to the 30 selected numbers.  Those 30 transactions are the SRS.  A random selection of numbers is selected by including the total number as the first argument and the number to select as the second argument to \R{sample()}.  For example, 30 numbers from between 1 and 1112 is selected (and saved into an object) with
 <<>>=
 ( raccts <- sample(1112,30) )
 @
 Thus, the first five accounts to be selected would be the accounts corresponding to the numbers \Sexpr{raccts[1]}, \Sexpr{raccts[2]}, \Sexpr{raccts[3]}, \Sexpr{raccts[4]}, and \Sexpr{raccts[5]}.
 
-You should note that there are other more complex types of probability-based samples -- e.g., stratified samples and nested or multistage samples -- that are beyond the scope of this book.  However, you should note that the goal of these types of samples is generally to impart a little more control into the sampling design.
+There are other more complex types of probability-based samples -- e.g., stratified samples and nested or multistage samples -- that are beyond the scope of this book.  However, the goal of these more complex types of samples is generally to impart more control into the sampling design.
 
 \defn{Probability-based Sample}{A sample where each individual of the population has a known chance of being selected for the sample.}
 
@@ -333,13 +333,13 @@ Polls, campaign or otherwise, are examples of observational studies that you are
 \end{Itemize}
 
 \subsection{Of What Value are Observational Studies?}
-In the last two sections it has become readily apparent that properly designed experiments can lead to ``cause-and-effect'' statements and that a properly designed observational study is unlikely to lead to such statements.  Furthermore, in the last section, it was suggested that it is very difficult to take a proper probability-based sample because it is hard to assign a number to each individual in the population (precisely because entire populations are very difficult to ``see'').  So, do observational studies have any value?  There are at least three reasons why observational studies are useful.
+In the last two sections it may have become apparent that properly designed experiments can lead to ``cause-and-effect'' statements, whereas observational studies (even properly designed) are unlikely to lead to such statements.  Furthermore, in the last section, it was suggested that it is very difficult to take a proper probability-based sample because it is hard to assign a number to each individual in the population (precisely because entire populations are very difficult to ``see'').  So, do observational studies have any value?  There are at least three reasons why observational studies are useful.
 
 The scientific method begins with a scientist making an observation about a natural phenomenon.  Observational studies may serve to provide such an observation.  Alternatively, observational studies may be deployed after an observation has been made to see if that observation is ``prevalent'' and worthy of further investigation.  Thus, observational studies may lead directly to hypotheses that form the basis of experiments.
 
-Experiments are often conducted under very confined and controlled conditions so that the effect of one or more factors on the response variable can be identified.  However, at the conclusion of an experiment it is often questioned whether a similar response would be observed ``in nature'' under much less controlled conditions.  For example, one might determine that a certain fertilizer increases growth of a certain plant in the greenhouse, with consistent soil characteristics, temperatures, lighting, etc.  However, it is a much different, and, perhaps, more interesting, question to determine if that fertilizer has the same response when applied to an actual field.
+Experiments are often conducted under very confined and controlled conditions so that the effect of one or more factors on the response variable can be identified.  However, at the conclusion of an experiment it is often questioned whether a similar response would be observed ``in nature'' under much less controlled conditions.  For example, one might determine that a certain fertilizer increases growth of a certain plant in the greenhouse, with consistent soil characteristics, temperatures, lighting, etc.  However, it is a much different, and, perhaps, more interesting, question to determine if that fertilizer elicits the same response when applied to an actual field.
 
-Finally, there are situations where conducting an experiment simply cannot be done, either for ethical, financial, size, or other constraints.  For example, it is generally accepted that smoking causes cancer in humans even though an experiment where one group of people was forced to smoke while another was not allowed to smoke has not been conducted.  Similarly, it is also very difficult to perform valid experiments on ``ecosystems.''  In these situations, an observational study is simply the best study allowable.  Cause-and-effect statements are arrived at in these situations because observational studies can be conducted with some, though not absolute, control and control can be imparted mathematically into some analyses\footnote{These analyses are beyond the scope of this book, though.} and a ``preponderance of evidence'' may be arrived at if enough observational studies point to the same conclusion.
+Finally, there are situations where conducting an experiment simply cannot be done, either for ethical, financial, size, or other constraints.  For example, it is generally accepted that smoking causes cancer in humans even though an experiment where one group of people was forced to smoke while another was not allowed to smoke has not been conducted.  Similarly, it is also very difficult to perform valid experiments on ``ecosystems.''  In these situations, an observational study is simply the best study allowable.  Cause-and-effect statements are arrived at in these situations because observational studies can be conducted with some, though not absolute, control and control can be imparted mathematically into some analyses.\footnote{These analyses are beyond the scope of this book, though.}  In addition, a ``preponderance of evidence'' may be arrived at if enough observational studies point to the same conclusion.
 
 \newpage
 \begin{exsection}
