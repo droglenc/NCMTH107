@@ -349,7 +349,7 @@ creat <- data.frame(cp)
 creat <- read.csv("data/Creatine.csv")
 @
 <<HistCP, fig.width=3.5, fig.height=3.5, par1=TRUE>>=
-hist(~cp,data=creat,breaks=seq(20,220,20),xlab="Creatine Phosphate (Iu/L)",main="")
+hist(~cp,data=creat,w=20,xlab="Creatine Phosphate (Iu/L)")
 @
 
   \item \hypertarget{ans:quEDAAirPolln}{\ref{revex:quEDAAirPolln}} -- I used class sizes 20 wide beginning with 20 to create the histogram shown.
@@ -361,7 +361,7 @@ ap <- data.frame(polln)
 ap <- read.csv("data/AirPollution.csv")
 @
 <<HistAirPolln, fig.width=3.5, fig.height=3.5, par1=TRUE>>=
-hist(~polln,data=ap,breaks=seq(20,280,20),xlab="Carbon Monoxide (ppm)",main="")
+hist(~polln,data=ap,w=20,xlab="Carbon Monoxide (ppm)")
 @
 
   \item \hypertarget{ans:quEDALSkew}{\ref{revex:quEDALSkew}} --  Left-skewed.
@@ -640,7 +640,7 @@ print(xtable(plstat1,digits=2,caption="Descriptive statistics of number of purpl
 
   \item \hypertarget{ans:quEDACP}{\ref{revex:quEDACP}} --   The creatine phosphokinase data appears to be right-skewed with two possible outliers having concentrations near 200 u/l \figrefp{fig:CPHist}.  In addition, the center of the distribution is best measured by the median which is \Sexpr{formatC(creatSum["median"],format="f",digits=2)} u/l \tabrefp{tab:CPSum}.  Finally, the dispersion of the middle 50\% of individuals (i.e., the IQR) is from Q1=\Sexpr{formatC(creatSum["Q1"],format="f",digits=2)} to Q3=\Sexpr{formatC(creatSum["Q3"],format="f",digits=2)} u/l.  I chose to use the median and IQR because the data were not symmetric and outliers were present.
 <<CPHist, fig.width=3.5, fig.height=3.5, fig.cap="Histogram of creatine phosphokinase values in 36 male volunteers.", par1=TRUE>>=
-hist(~cp,data=creat,breaks=seq(20,220,20),xlab="Creatine Phosphate (Iu/L)",main="")
+hist(~cp,data=creat,w=20,xlab="Creatine Phosphate (Iu/L)")
 @
 <<eval=FALSE>>=
 Summarize(~cp,data=creat,digits=2)
@@ -1546,7 +1546,7 @@ sum4 <- Summarize(mns4)
 @
       \item The histogram is shown in \figref{fig:SDistQuiz4}.  The shape of this sampling distribution is symmetric.
 <<Quiz4, echo=FALSE, fig.width=3.5, fig.height=3.5, fig.cap="Sampling distribution of mean quiz scores from samples of $n=4$ from the simple population of quiz scores.", par1=TRUE>>=
-hist(mns4,xlab="Sample Mean",ylab="Frequency of Samples",breaks=seq(5.25,7,0.25),right=FALSE,col="gray95",main="",xlim=c(5.25,7))
+hist(~mns4,xlab="Sample Mean",ylab="Frequency of Samples",w=0.25,xlim=c(5.25,7))
 @
       \item The mean of all fifteen sample means is \Sexpr{formatC(sum4["mean"],format="f",digits=3)}, as is the mean of the six individuals in the population.
       \item The standard deviation of the fifteen sample means is \Sexpr{formatC(sum4["sd"],format="f",digits=3)} which is less than the standard deviation of the six individuals (1.414) and the standard deviation of the means from $n=2$ (0.845) and $n=3$ (0.593).  It appears that the standard deviation of the means decreases with increasing $n$.
@@ -1554,8 +1554,7 @@ hist(mns4,xlab="Sample Mean",ylab="Frequency of Samples",breaks=seq(5.25,7,0.25)
 scores <- c(6,6,4,5,7,8)
 mns4 <- combn(scores,4,mean)
 sum4 <- Summarize(mns4)
-hist(mns4,xlab="Sample Mean",ylab="Frequency of Samples",breaks=seq(5.25,7,0.25),
- right=FALSE,main="",xlim=c(5.25,7))
+hist(~mns4,xlab="Sample Mean",ylab="Frequency of Samples",w=0.25,xlim=c(5.25,7))
 @
     \end{enumerate}
 

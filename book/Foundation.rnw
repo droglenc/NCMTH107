@@ -53,7 +53,7 @@ Pb
 \end{table}
 
 <<KreherParkPbhist, echo=FALSE, fig.cap="Histogram and summary statistics of lead concentration measurements ($\\mu g \\cdot m^{-3}$) at each of 119 sites in Kreher Park superfund site.">>=
-hist(Pb,right=TRUE,main="",xlab="Pb Concentration",ylab="Frequency of Sites",col="gray90")
+hist(~Pb,xlab="Pb Concentration",ylab="Frequency of Sites")
 Pb.sum <- as.matrix(summary(Pb))
 colnames(Pb.sum)[1] <- "Pb"
 textplot(Pb.sum)
@@ -64,7 +64,7 @@ A critical question at this point is whether or not the results from the one sam
 <<KreherParkPbhist1, echo=FALSE, fig.scap="Kreher Park 1", fig.cap="Histogram and summary statistics of lead concentration measurements ($\\mu g \\cdot m^{-3}$) at each of 119 sites (different from the sites shown in \\figref{fig:KreherParkPbhist}) in Kreher Park superfund site.">>=
 set.seed(6)
 Pb1 <- round(rnorm(119,1,0.15),2)
-hist(Pb1,right=TRUE,main="",xlab="Pb Concentration",ylab="Frequency of Sites",col="gray90")
+hist(~Pb1,xlab="Pb Concentration",ylab="Frequency of Sites")
 Pb1.sum <- as.matrix(summary(Pb1))
 colnames(Pb1.sum)[1] <- "Pb"
 textplot(Pb1.sum)
@@ -141,7 +141,7 @@ SL$i<-seq(1:1015)
 SL$x<-runif(1015)
 SL$y<-runif(1015)
 plot(SL$x,SL$y,pch=16,main="",xlab="",ylab="",xaxt="n",yaxt="n")
-hist(SL$tl,right=TRUE,main="",xlab="Total Length",ylab="Frequency of Fish",col="gray90")
+hist(~tl,data=SL,xlab="Total Length",ylab="Frequency of Fish")
 @
 
 \subsection{Definitions}
@@ -166,7 +166,7 @@ A \textbf{parameter} is a summary computed from ALL individuals in a population.
 slstat <- Summarize(SL$tl,digits=2)
 slstat1 <- matrix(slstat,nrow=1)
 colnames(slstat1) <- names(slstat)
-sl.x <- xtable(slstat1,align=rep("c",ncol(slstat1)+1),digits=c(0,0,0,2,2,0,0,0,0,0,1),caption="Summary parameters for the total length of all 1015 fish in the Square Lake population.","tab:SquareLakePopn")
+sl.x <- xtable(slstat1,align=rep("c",ncol(slstat1)+1),digits=c(0,0,2,2,0,0,0,0,0),caption="Summary parameters for the total length of all 1015 fish in the Square Lake population.","tab:SquareLakePopn")
 print(sl.x,caption.placement="top",hline.after=c(0,nrow(sl.x)),include.rownames=FALSE)
 @
 
@@ -182,7 +182,7 @@ set.seed(1)
 SL1 <- srsdf(SL,n=50)
 plot(y~x,data=SL,pch=19,main="",xlab="",ylab="",xaxt="n",yaxt="n")
 points(y~x,data=SL1,pch=19,col="red",cex=1.25)
-hist(SL1$tl,right=TRUE,main="",xlab="Total Length",ylab="Frequency of Fish",col="gray90")
+hist(~tl,data=SL1,xlab="Total Length",ylab="Frequency of Fish")
 @
 
 \defn{Sample}{A subset of the population examined by a researcher.}
@@ -193,7 +193,7 @@ Summaries computed from individuals in a sample are called \textbf{statistics}.\
 slstat <- Summarize(SL1$tl,digits=2)
 slstat1 <- matrix(slstat,nrow=1)
 colnames(slstat1) <- names(slstat)
-sl1.x <- xtable(slstat1,align=rep("c",ncol(slstat1)+1),digits=c(0,0,0,2,2,0,0,0,0,0,1),caption="Summary statistics for the total length of a sample of 50 fish from the Square Lake population.","tab:SquareLakeSample1")
+sl1.x <- xtable(slstat1,align=rep("c",ncol(slstat1)+1),digits=c(0,0,2,2,0,0,0,0,0),caption="Summary statistics for the total length of a sample of 50 fish from the Square Lake population.","tab:SquareLakeSample1")
 print(sl1.x,caption.placement="top",hline.after=c(0,nrow(sl1.x)),include.rownames=FALSE)
 @
 
@@ -262,9 +262,9 @@ plot(SL$x,SL$y,pch=16,main="",xlab="",ylab="",xaxt="n",yaxt="n")
 points(SL3$x,SL3$y,pch=16,col="red",cex=1.25)
 plot(SL$x,SL$y,pch=16,main="",xlab="",ylab="",xaxt="n",yaxt="n")
 points(SL4$x,SL4$y,pch=16,col="red",cex=1.25)
-hist(SL2$tl,right=TRUE,main="",xlab="Total Length",ylab="Frequency of Fish",col="gray90")
-hist(SL3$tl,right=TRUE,main="",xlab="Total Length",ylab="Frequency of Fish",col="gray90")
-hist(SL4$tl,right=TRUE,main="",xlab="Total Length",ylab="Frequency of Fish",col="gray90")
+hist(~tl,data=SL2,xlab="Total Length",ylab="Frequency of Fish")
+hist(~tl,data=SL3,xlab="Total Length",ylab="Frequency of Fish")
+hist(~tl,data=SL4,xlab="Total Length",ylab="Frequency of Fish")
 @
 
 <<SquareLakeSample234s, results="asis", echo=FALSE >>=
@@ -273,7 +273,7 @@ SL3.sum <- Summarize(SL3$tl,digits=2)
 SL4.sum <- Summarize(SL4$tl,digits=2)
 SL234.sum <- rbind(SL2.sum,SL3.sum,SL4.sum)
 rownames(SL234.sum) <- 2:4
-SL234.x <- xtable(SL234.sum,align=rep("c",ncol(slstat1)+1),digits=c(0,0,0,2,2,0,0,0,0,0,1),caption="Summary statistics for the total length in three samples of 50 fish from the Square Lake population.","tab:SquareLakeSample234")
+SL234.x <- xtable(SL234.sum,align=rep("c",ncol(slstat1)+1),digits=c(0,0,2,2,0,0,0,0,0),caption="Summary statistics for the total length in three samples of 50 fish from the Square Lake population.","tab:SquareLakeSample234")
 print(SL234.x,caption.placement="top",hline.after=c(0,nrow(SL234.x)),include.rownames=FALSE,table.placement="htbp")
 @
 
