@@ -1,6 +1,9 @@
 ---
+title: "Statistical Concepts and Analysis"
 layout: page
-title: Statistical Concepts and Analysis
+output:
+  word_document: default
+  pdf_document: default
 subtitle: MTH107 -- Fall, 2016
 css: /css/syllabus.css
 ---
@@ -171,5 +174,5 @@ Finally, note that the [College's Academic Integrity Statement & Policy](https:/
 
 ----
 
-## Accomodations
-It is the policy and practice of Northland College to create inclusive and accessible learning environments consistent with federal and state law.  *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course.  *If you have not yet established services* through OAR, but have a condition that requires accommodations (e.g., mental health; attention-related; or learning, vision, hearing, physical or health impacts), you should contact OAR (Ponzio 231 or 715-682-1387) or [Donna Jones-Ilsley, Coordinator of Student Accessibility Resources](mailto:djones-ilsley@northland.edu).
+## Accommodations
+It is the policy and practice of Northland College to create inclusive and accessible learning environments consistent with federal and state law.  *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course.  *If you have not yet established services* through OAR, but have a condition that requires accommodations (e.g., attention, learning, vision, hearing, mental, physical, or other health related concern), you should contact OAR (Ponzio 231 or 715-682-1387) or [Donna Jones-Ilsley, Coordinator of Student Accessibility Resources](mailto:djones-ilsley@northland.edu).
