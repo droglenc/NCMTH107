@@ -492,6 +492,7 @@ If the variables had been nominal or if the natural order of levels were the sam
 \warn{Levels for a factor variable are ordered alphabetically by default in R.  You may need to use \R{factor()} with \R{levels=} to control the order of levels if the factor variable is ordinal.}
 
 \subsection{Frequency Tables}\index{Table!Frequency}
+\vspace{-12pt}
 <<echo=FALSE, results='hide'>>=
 tbl1 <- xtabs(~fdegree+fgrnsol,data=gss)
 tbl2 <- addMargins(tbl1)
@@ -505,6 +506,7 @@ print(xtbl,caption.placement="top")
 
 A two-way frequency table is usually augmented with a column of row totals and a row of column totals (as in \tabref{tab:EnvFreq}).  This row and column is called the marginal row and the marginal column, respectively.  Each marginal total represents the distribution of one of the categorical variables while ignoring the other categorical variable.  The total column represents the distribution of the row variable; in this case, the highest degree completed.  Thus, in this case the total column represents the number of respondents according to their highest degree completed.  Similarly, the total row represents the distribution of the column variable.  In this case, the total row represents the number of respondents according to their willingness to cut their standard of living to protect the environment.  Thus, for example there were \Sexpr{tbl2["JC","Sum"]} respondents whose highest complete degree was junior college and there were \Sexpr{tbl2["Sum","vun"]} respondents who were very unwilling to cut their standard of living to protect the environment.
 
+\vspace{-12pt}
 \begin{exsection}
   \item \label{revex:cbEDASeal1} A group of marine biologists from California wanted to study the foraging ecology of northern elephant seals off the California coast \citep{LeBoeufetal2000}.  Part of their analysis required that they record, for each observed seal, the month that it was observed and the sex of the seal.  Their results from 47 seals are listed below.  Construct a two-way frequency table, including the marginal totals, of these data with month as the column variable. \ansref{ans:cbEDASeal1}
 \begin{Verbatim}
@@ -521,7 +523,6 @@ Mon   Jul Jul Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug
 Sex    F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
 \end{Verbatim}
 \end{exsection}
-
 
 \subsection{Percentage Tables}\index{Table!Percentage}\index{Table!Proportion}
 Two-way frequency tables are often converted to two-way percentage tables to allow for ease of comparison between levels of the variables and also between samples.  For example, it is difficult to determine from \tabref{tab:EnvFreq} if respondents with a high school degree are more likely to be very willing to cut their standard of living than respondents with a graduate degree, because there are approximately seven times as many respondents with a high school degree in the sample.  This comparison is easily made, however, if the frequencies are converted to percentages.  Three types of percentage tables are constructed from a raw frequency table.  These are discussed in the next sections.
@@ -700,6 +701,7 @@ percTable(tbl1,margin=2,digits=1)
 
 \warn{The table submitted as the first argument to \R{percTable()} must be a raw frequency table \textbf{WITHOUT} margin totals added to it.}
 
+\newpage
 \begin{exsection}
   \item \label{revex:cbEDASeal1r} \rhw{} Using the data provided in Review Exercise \ref{revex:cbEDASeal1}.  Construct a two-way frequency table, including the marginal totals, of these data with month as the column variable. \ansref{ans:cbEDASeal1r}
 

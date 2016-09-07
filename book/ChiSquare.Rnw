@@ -19,7 +19,9 @@ set_parent('IntroStats.Rnw')
 
 \lettrine{T}{he hypothesis tests in} \chapref{chap:tTest} were specific to situations where the response variable was quantitative and was, thus, summarized with a mean.  Situations where a categorical response variable is recorded would be summarized with a frequency or percentage table (see \sectref{sect:UEDACategorical} and \sectref{sect:BEDACategorical}).  The appropriate test statistic in these situations is not the t test statistic but a chi-square test statistic.  The chi-square test statistic follows a chi-square distribution which will be introduced first in this chapter.  The rest of the chapter is dedicated to two types of hypothesis tests relying on the chi-square test statistic.
 
+\vspace{-12pt}
 \section{Chi-square Distribution}
+\vspace{-12pt}
 A chi-square ($\chi^2$) distribution is generally right-skewed \figrefp{fig:chiDist}.  The exact shape of the $\chi^2$ distribution depends on the degrees-of-freedom (df), where, as the df increase, the sharpness of the skew decreases \figrefp{fig:chiDist}.
 
 <<chiDist, echo=FALSE, cache=TRUE, fig.show='animate', fig.cap='$\\chi^2$ distributions with varying degrees-of-freedom.', aniopts='controls,loop,autoplay'>>=
@@ -518,7 +520,7 @@ These expected frequencies are computed directly and easily from the marginal to
   \item $160*\frac{153}{421}=\frac{160*153}{421}=58.147$ rural households to have a natural tree.
   \item $160*\frac{268}{421}=\frac{160*268}{421}=101.853$ rural households to NOT have a natural tree.
 \end{Itemize}
-All of these expected value calculations follow the same general rule -- multiply the row and column totals and divide by the total number of individuals -- and are depicted in \href{http://www.ncfaculty.net/dogle/mth107/lecture/support/chi_table_anim.htm}{this animation}.  These expected values are summarized in a two-way table, called the expected frequencies table \tabrefp{tab:ChiTreeExp}.
+All of these expected value calculations follow the same general rule -- multiply the row and column totals and divide by the total number of individuals.  These expected values are summarized in a two-way table, called the expected frequencies table \tabrefp{tab:ChiTreeExp}.
 
 \begin{table}[htbp]
   \centering

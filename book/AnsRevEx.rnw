@@ -2146,7 +2146,7 @@ fl <- c(6.1,5.3,5.5,4.9,6.2,6.5,5.7,5.5,4.7,6.2,6.8,5.9,5.8,6.7,6.3,6.2,5.4,5.5,
 @
       \item The $\sigma$ is unknown.  The sample size (=\Sexpr{length(fl)}) is not greater than 40, however, it is greater than 15.  The histogram \figrefp{fig:FishingLineHist} suggests that the sample distribution is roughly symmetric.  Thus, the assumptions are adequately met and the sampling distribution of the test statistic should follow a t-distribution.
 <<FishingLineHist, fig.width=3.5, fig.height=3.5, fig.cap="Histogram of fishing line break weights.", par1=TRUE>>=
-hist(fl,main="",xlab="Fishing Line Break Weight (lbs)")
+hist(~fl,xlab="Fishing Line Break Weight (lbs)")
 @
 The results of the t-test were then computed with
 <<>>=
