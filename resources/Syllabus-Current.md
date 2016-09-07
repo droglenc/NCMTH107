@@ -59,7 +59,7 @@ Mon, Wed, Fri 1300-1500<br>By Appointment</td></tr>
 <tr><th width="50%"><img src="../img/Bronte_F16.jpg"></th><th width="50%"><img src="../img/Adam_F16.jpg"></th></tr>
 <tr><th>Bront&euml; Gross</th><th>Adam Gunnelson</th></tr>
 <tr style="vertical-align:top"><td>Bront&euml; is a senior majoring in Writing and Outdoor Education. He has a passion for helping others learn, and is excited to branch out into his first year of stats tutoring.</td><td>Adam is a chemistry major and math minor. He is a bowtie enthusiast, and enjoys helping people with math.</td></tr>
-<tr style="vertical-align:top"><td>W 7-9p<br>R 950-1150a</td><td>XXX<br>XXX</td></tr>
+<tr style="vertical-align:top"><td>Wed 7-9p<br>Thurs 950-1150a</td><td>Tues 3-5p<br>Thur 7-9p</td></tr>
 </table>
 
 ----
