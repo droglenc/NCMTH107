@@ -68,7 +68,7 @@ An overall percentage score will be computed from the items and associated weigh
 <!-- if the assessment weights change then you must change the values in get_wghts() in the grader.js file -->
 
 <form name="GRADECALC">
-<table class="grader">
+<table class="grader" width="80%">
 <tr><th></th>
 <th><a href="#quizzes">Quiz</a></th>
 <th><a href="#homework">HW</a></th>
