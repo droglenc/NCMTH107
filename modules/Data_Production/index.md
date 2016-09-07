@@ -35,14 +35,14 @@ Statistical analyses rely on data and that data must be properly produced (or co
 
 You should prepare for the concepts of this module by reading **Chapter 2** in [the textbook](../../book/) and watching the following videos:
 
-* Types of Studies -- [A](https://www.youtube.com/v/qksFkFh2ezo?version=3&autoplay=1&start=456&end=958){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/KDPBD3SPTPY?version=3&autoplay=1){:target="_blank"} [8 mins]
-* [Types of Conclusions](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=1597){:target="_blank"} [3 mins]
-* [Types of Observational Studies](https://vimeo.com/user45324800/observationaltypes){:target="_blank"} [3 mins]  [![PowerPOint](../../img/ppt.png)](PPT.pptx)
-* [Sample Design](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=20&end=580){:target="_blank"} [10 mins]
-* Experimental Design --  [A](https://www.youtube.com/v/v-xnPVCi9wM?version=3&autoplay=1&start=81&end=527){:target="_blank"} [10 mins] **or** [B](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=754&end=1126){:target="_blank"} [6 mins]
-* [Definitions in Experimental Design](https://vimeo.com/user45324800/experimentdefns){:target="_blank"} [4 mins]  [![PowerPOint](../../img/ppt.png)](PPT.pptx)
+* Types of Studies -- [A](https://www.youtube.com/v/qksFkFh2ezo?version=3&autoplay=1&start=456&end=958){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/KDPBD3SPTPY?version=3&autoplay=1){:target="_blank"} [8 mins] ... [alt ver A (end 16:00)](https://www.youtube.com/watch?v=qksFkFh2ezo#t=456){:target="_blank"}, [alt ver B](https://www.youtube.com/watch?v=KDPBD3SPTPY){:target="_blank"}
+* [Types of Conclusions](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=1597){:target="_blank"} [3 mins]... [alt ver](https://www.youtube.com/watch?v=5zkg1w5zoQ0#t=1597){:target="_blank"}
+* [Types of Observational Studies](https://vimeo.com/user45324800/observationaltypes){:target="_blank"} [3 mins]  [![PowerPoint](../../img/ppt.png)](PPT.pptx)
+* [Sample Design](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=20&end=580){:target="_blank"} [10 mins]... [alt ver (end 9:40)](https://www.youtube.com/watch?v=5zkg1w5zoQ0#t=20){:target="_blank"}
+* Experimental Design --  [A](https://www.youtube.com/v/v-xnPVCi9wM?version=3&autoplay=1&start=81&end=527){:target="_blank"} [10 mins] **or** [B](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=754&end=1126){:target="_blank"} [6 mins]... [alt ver A (end 8:47)](https://www.youtube.com/watch?v=v-xnPVCi9wM#t=81){:target="_blank"}, [alt ver B (end 18:46)](https://www.youtube.com/watch?v=5zkg1w5zoQ0#t=754){:target="_blank"}
+* [Definitions in Experimental Design](https://vimeo.com/user45324800/experimentdefns){:target="_blank"} [4 mins]  [![PowerPoint](../../img/ppt.png)](PPT.pptx)
 * [Randomization in R](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
-* Response and Explanatory Variables - [A](https://www.youtube.com/v/bokeTCH2aJY?version=3&autoplay=1&start=60&end=148){:target="_blank"} [2 mins] **and**  [B](https://www.youtube.com/v/bokeTCH2aJY?version=3&autoplay=1&start=378){:target="_blank"} [2 mins]
+* Response and Explanatory Variables - [A](https://www.youtube.com/v/bokeTCH2aJY?version=3&autoplay=1&start=60&end=148){:target="_blank"} [2 mins] **and**  [B](https://www.youtube.com/v/bokeTCH2aJY?version=3&autoplay=1&start=378){:target="_blank"} [2 mins]... [alt ver A (end 2:28)](https://www.youtube.com/watch?v=bokeTCH2aJY#t=60){:target="_blank"}, [alt ver B](https://www.youtube.com/watch?v=bokeTCH2aJY#t=378){:target="_blank"}
 
 Questions 2.10 and 2.11 in [the textbook](../../book/) will assess your understanding of these materials.
 
