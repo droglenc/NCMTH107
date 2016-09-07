@@ -69,12 +69,12 @@ An overall percentage score will be computed from the items and associated weigh
 
 <form name="GRADECALC">
 <table class="grader" width="80%">
-<tr><th width="17%"></th>
-<th width="17%"><a href="#quizzes">Quiz</a></th>
-<th width="17%"><a href="#homework">HW</a></th>
-<th width="17%"><a href="#exams">MT1</A></th>
-<th width="16%"><a href="#exams">MT2</A></th>
-<th width="16%"><a href="#exams">Final</A></th>
+<tr><th width="16%"></th>
+<th width="16%"><a href="#quizzes">Quiz</a></th>
+<th width="16%"><a href="#homework">HW</a></th>
+<th width="16%"><a href="#exams">MT1</A></th>
+<th width="18%"><a href="#exams">MT2</A></th>
+<th width="18%"><a href="#exams">Final</A></th>
 </tr>
 
 <tr><th>Weight</th>
