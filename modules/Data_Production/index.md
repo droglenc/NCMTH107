@@ -33,6 +33,8 @@ Statistical analyses rely on data and that data must be properly produced (or co
 
 ----
 
+## Preparation for Class
+
 You should prepare for the concepts of this module by reading **Chapter 2** in [the textbook](../../book/) and watching the following videos:
 
 * Types of Studies -- [A](https://www.youtube.com/v/qksFkFh2ezo?version=3&autoplay=1&start=456&end=958){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/KDPBD3SPTPY?version=3&autoplay=1){:target="_blank"} [8 mins] ... [alt ver A](https://www.youtube.com/watch?v=qksFkFh2ezo#t=456){:target="_blank"} (end 16:00), [alt ver B](https://www.youtube.com/watch?v=KDPBD3SPTPY){:target="_blank"}
@@ -44,11 +46,22 @@ You should prepare for the concepts of this module by reading **Chapter 2** in [
 * [Randomization in R](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 * Response/Explanatory Variables - [A](https://www.youtube.com/v/bokeTCH2aJY?version=3&autoplay=1&start=60&end=148){:target="_blank"} **and**  [B](https://www.youtube.com/v/bokeTCH2aJY?version=3&autoplay=1&start=378){:target="_blank"} [4 mins]... [alt ver A](https://www.youtube.com/watch?v=bokeTCH2aJY#t=60){:target="_blank"} (end 2:28), [alt ver B](https://www.youtube.com/watch?v=bokeTCH2aJY#t=378){:target="_blank"}
 
-Questions 2.10 and 2.11 in [the textbook](../../book/) will assess your understanding of these materials.
+----
+
+## In-Class Practice
+
+* In-Class Exercise -- [I](CE1.html) / [II](CE2.html) /  [III](CE3.html) / [IV](CE4.html)
 
 ----
 
-### Related materials
+## Homework Assignment
 
-* In-Class Exercise -- [I](CE1.html) / [II](CE2.html) /  [III](CE3.html) / [IV](CE4.html)
+* Questions **2.10 and 2.11** in [the textbook](../../book/) will assess your understanding of these materials.  The due date will be announced in class and posted in [due dates](../../resources/Dates-Current).
+
+----
+
+## Archived Materials
+
 * [Old Lecture Slides](PPT_old.pptx)
+
+----

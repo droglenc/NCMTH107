@@ -33,6 +33,8 @@ One of the most common things in statistics is to describe the linear relationsh
 
 ----
 
+## Preparation for Class
+
 You should prepare for the concepts of this module by reading **Chapter 7** in [the textbook](../../book/) and watching the following videos:
 
 * Response and Explanatory Variables -  [A](https://www.youtube.com/v/bokeTCH2aJY?version=3&autoplay=1&start=60&end=148){:target="_blank"} [2 mins] **and**  [B](https://www.youtube.com/v/bokeTCH2aJY?version=3&autoplay=1&start=378){:target="_blank"} [2 mins]
@@ -42,11 +44,22 @@ You should prepare for the concepts of this module by reading **Chapter 7** in [
 * [Linear Regression in R](https://vimeo.com/user45324800/regression1){:target="_blank"} [8 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 * [Regression Questions](https://vimeo.com/user45324800/slr-questions){:target="_blank"} [10 mins]  [![PowerPoint](../../img/ppt.png)](PPT3.pptx)
 
-Question 7.19 in [the textbook](../../book/) will assess your understanding of these materials.
+----
+
+## In-Class Practice
+
+* In-Class Exercises -- [I](CE1.html) / [II](CE2.html) / [III](CE3.html) / [IV](CE4.html)
 
 ----
 
-### Related materials
+## Homework Assignment
 
-* In-Class Exercises -- [I](CE1.html) / [II](CE2.html) / [III](CE3.html) / [IV](CE4.html)
+* Question **7.19** in [the textbook](../../book/) will assess your understanding of these materials.  The due date will be announced in class and posted in [due dates](../../resources/Dates-Current).
+
+----
+
+## Archived Materials
+
 * [Old Lecture Slides](PPT_old.pptx)
+
+----

@@ -30,6 +30,8 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
 
 ----
 
+## Preparation for Class
+
 * Your initial preparation for this module should begin by reading **Section 10.1** in [the textbook](../../book/) and watching this video on [Forming Statistical Hypotheses](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins; [![PowerPoint](../../img/ppt.png)](PPT-hypotheses.pptx)].  We will begin class with [this class exercise](CE1.html).
 * A first lecture ([these slides](PPT-Lecture-1.pptx)) will be used to introduce the concept of hypothesis testing.  This lecture will be followed by [this](CE2.html) and [this](CE3.html) class exercises.
 * Following this you should re-read **Section 10.1** in [the textbook](../../book/), and watch [this](https://www.youtube.com/v/7mE-K_w1v90?version=3&autoplay=1){:target="_blank"} [8 mins] and [this](https://www.youtube.com/v/OWn3Ko1WYTA?version=3&start=89&end=247&autoplay=1){:target="_blank"} [3 mins] videos on statistical error types and [this](https://www.youtube.com/v/BJZpx7Mdde4?version=3&autoplay=1){:target="_blank"} [12 mins] video on computing &beta; &amp; power.
@@ -38,6 +40,20 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
 
 ----
 
-### Related materials
+## In-Class Practice
+
+* None.
+
+----
+
+## Homework Assignment
+
+* None.
+
+----
+
+## Archived Materials
 
 * [Old Lecture Slides](PPT_old.pptx)
+
+----

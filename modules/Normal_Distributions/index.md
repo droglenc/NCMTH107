@@ -32,6 +32,8 @@ Many natural phenomena can be closely approximated by simple statistical distrib
 
 ----
 
+## Preparation for Class
+
 You should prepare for the concepts of this module by first reading **Sections 5.1-5.2** in [the textbook](../../book/) and watching the following videos:
 
 * [Characteristics of Normal Distributions](https://vimeo.com/user45324800/normcharacteristics){:target="_blank"} [7 mins]  [![PowerPoint](../../img/ppt.png)](PPT.pptx)
@@ -43,11 +45,22 @@ Second, you should read **Sections 5.3-5.4** in [the textbook](../../book/) and 
 * [Forward Calculations in R](https://vimeo.com/user45324800/normdist-forward){:target="_blank"} [6 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 * [Reverse Calculations in R](https://vimeo.com/user45324800/normdist-reverse){:target="_blank"} [6 mins]
 
-Questions 5.24 and 5.25 in [the textbook](../../book/) will assess your understanding of these materials.
+----
+
+## In-Class Practice
+
+* In-Class Exercise -- [I](CE1.html) / [II](CE2.html) /  [III](CE3.html) / [IV](CE4.html) /  [V](CE5.html)
 
 ----
 
-### Related materials
+## Homework Assignment
 
-* In-Class Exercise -- [I](CE1.html) / [II](CE2.html) /  [III](CE3.html) / [IV](CE4.html) /  [V](CE5.html)
+* Questions **5.24 and 5.25** in [the textbook](../../book/) will assess your understanding of these materials.  The due date will be announced in class and posted in [due dates](../../resources/Dates-Current).
+
+----
+
+## Archived Materials
+
 * [Old Lecture Slides](PPT_old.pptx)
+
+----

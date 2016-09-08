@@ -29,6 +29,8 @@ A major goal of inferential statistics is to estimate the value of a parameter f
 
 ----
 
+## Preparation for Class
+
 You should prepare for the concepts of this module by reading **Sections 10.2-10.4** in [the textbook](../../book/) and watching the following videos:
 
 * [Introduction to Confidence Intervals](https://www.youtube.com/v/27iSnzss2wM?version=3&autoplay=1){:target="_blank"} [7 mins]
@@ -42,7 +44,20 @@ After completing this module you should re-read **Section 10.5** in [the textboo
 
 ----
 
-### Related materials
+## In-Class Practice
 
 * In-Class Exercises -- [I](CE1.html), [II](CE2.html), [III](CE3.html), and [IV](CE4.html).
+
+----
+
+## Homework Assignment
+
+* None.
+
+----
+
+## Archived Materials
+
 * [Old Lecture Slides](PPT_old.pptx)
+
+----

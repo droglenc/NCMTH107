@@ -28,6 +28,8 @@ The simplest hypothesis test occurs when one is making a claim that the populati
 
 ----
 
+## Preparation for Class
+
 You should prepare for the concepts of this module by first (re-)reading **Section 10.5** in [the textbook](../../book/) and (re-)watching the following video:
 
 * [11 Steps for Any Hypothesis Test](https://vimeo.com/user45324800/hotest-11steps){:target="_blank"} [5 mins] [![PowerPoint](../../img/ppt.png)](PPT1.pptx)
@@ -37,12 +39,23 @@ Then you should read **Section 10.6** in [the textbook](../../book/) and watch t
 * [1-Sample Z-Test Example](https://vimeo.com/user45324800/ztest-ex1){:target="_blank"} [12 mins] [![PowerPoint](../../img/ppt.png)](PPT2.pptx)
 * [1-Sample Z-test in R](https://vimeo.com/user45324800/ztest){:target="_blank"} [6 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 
-Questions 10.46-10.47 in [the textbook](../../book/) will assess your understanding of these materials.
-
 ----
 
-### Related materials
+## In-Class Practice
 
 * [Class Example](CExmpl.html)
 * [Class Exercise](CE.html)
+
+----
+
+## Homework Assignment
+
+* Questions **10.46-10.47** in [the textbook](../../book/) will assess your understanding of these materials.  The due date will be announced in class and posted in [due dates](../../resources/Dates-Current).
+
+----
+
+## Archived Materials
+
 * [Old Lecture Slides](PPT_old.pptx)
+
+----

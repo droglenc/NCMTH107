@@ -30,6 +30,8 @@ It is important to understand the distribution of individuals for a single varia
 
 ----
 
+## Preparation for Class
+
 You should prepare for the concepts of this module by reading **Section 4.1** in [the textbook](../../book/) and watching the following videos:
 
 * [Construct a Histogram](https://www.youtube.com/v/sC7gjg9g3JU?version=3&autoplay=1){:target="_blank"} [13 mins]
@@ -41,13 +43,24 @@ You should prepare for the concepts of this module by reading **Section 4.1** in
 
 Additionally, you should prepare by reading **Section 4.3** in [the textbook](../../book/) and watching the following videos:
 
-* [Interpreting a Univariate EDA (Quantitative)](https://vimeo.com/user45324800/ueda-quantsum){:target="_blank"} [11 mins]  [![PowerPOint](../../img/ppt.png)](PPT.pptx)
-
-Question 4.50 in [the textbook](../../book/) will assess your understanding of these materials.
+* [Interpreting a Univariate EDA (Quantitative)](https://vimeo.com/user45324800/ueda-quantsum){:target="_blank"} [11 mins]  [![PowerPoint](../../img/ppt.png)](PPT.pptx)
 
 ----
 
-### Related materials
+## In-Class Practice
 
-* In-Class Exercises -- [I](CE1.html) / [II](CE2.html) / [III](CE3.html) / [IV](CE4.html) / [V](CE5.html)
+* Question **4.50** in [the textbook](../../book/) will assess your understanding of these materials.  In-Class Exercises -- [I](CE1.html) / [II](CE2.html) / [III](CE3.html) / [IV](CE4.html) / [V](CE5.html)
+
+----
+
+## Homework Assignment
+
+*   The due date will be announced in class and posted in [due dates](../../resources/Dates-Current).
+
+----
+
+## Archived Materials
+
 * [Old Lecture Slides](PPT_old.pptx)
+
+----

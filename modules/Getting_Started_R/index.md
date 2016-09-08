@@ -32,6 +32,8 @@ R is fast becoming the primary software for performing statistical analyses in m
 
 ----
 
+## Preparation for Class
+
 You should prepare for the concepts of this module by reading **Sections 3.2-3.4** in [the textbook](../../book/) and watching the following videos:
 
 * [What is R?](https://www.youtube.com/v/TR2bHSJ_eck?version=3&autoplay=1){:target="_blank"} [2 mins] 
@@ -41,11 +43,23 @@ You should prepare for the concepts of this module by reading **Sections 3.2-3.4
 * [Load Data into RStudio](https://vimeo.com/user45324800/ncstats-loadcsvrstudio){:target="_blank"} [6 mins]
 * [Subset data.frame with filterD](https://vimeo.com/user45324800/filterd){:target="_blank"} [6 mins]
 
-Question 3.12 in [the textbook](../../book/) will assess your understanding of these materials.
-
 ----
 
-### Related materials
+## In-Class Practice
 
 * Demonstration Handout [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 * In-Class Exercise -- [I](CE1.html) / [II](CE2.html)
+
+----
+
+## Homework Assignment
+
+* Question **3.12** in [the textbook](../../book/) will assess your understanding of these materials.  The due date will be announced in class and posted in [due dates](../../resources/Dates-Current).
+
+----
+
+## Archived Materials
+
+* none
+
+----

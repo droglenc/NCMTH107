@@ -30,6 +30,8 @@ It is important to understand the relationship between two variables.  With quan
 
 ----
 
+## Preparation for Class
+
 You should prepare for the concepts of this module by reading **Section 6.1** in [the textbook](../../book/) and watching the following videos:
 
 * [Construct a Scatterplot](https://www.youtube.com/v/yXmz922K9Ks?version=3&autoplay=1){:target="_blank"} [7 mins]
@@ -37,11 +39,22 @@ You should prepare for the concepts of this module by reading **Section 6.1** in
 * [Bivariate EDA (Quantitative) in R](https://vimeo.com/user45324800/biveda-quant){:target="_blank"} [8 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 * [Interpeting a Bivariate EDA (Quantitative)](https://vimeo.com/user45324800/beda-quantsum){:target="_blank"} [10 mins]  [![PowerPoint](../../img/ppt.png)](PPT.pptx)
 
-Questions 6.24 and 6.25 in [the textbook](../../book/) will assess your understanding of these materials.
+----
+
+## In-Class Practice
+
+* In-Class Exercise -- [I](CE1.html) / [II](CE2.html) / [III](CE3.html) / [IV](CE4.html)
 
 ----
 
-### Related materials
+## Homework Assignment
 
-* In-Class Exercise -- [I](CE1.html) / [II](CE2.html) / [III](CE3.html) / [IV](CE4.html)
+* Questions **6.24 and 6.25** in [the textbook](../../book/) will assess your understanding of these materials.  The due date will be announced in class and posted in [due dates](../../resources/Dates-Current).
+
+----
+
+## Archived Materials
+
 * [Old Lecture Slides](PPT_old.pptx)
+
+----

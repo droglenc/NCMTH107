@@ -27,16 +27,29 @@ css: /css/modules.css
 
 ----
 
+## Preparation for Class
+
 You should prepare for the concepts of this module by reading **Section 12.2** in [the textbook](../../book/) and watching the following videos:
 
 * [Goodness-of-Fit Test Example](https://vimeo.com/user45324800/goftest-ex1){:target="_blank"} [8 mins] [![PowerPoint](../../img/ppt.png)](PPT.pptx)
 * [Goodness-of-Fit Tests in R](https://vimeo.com/user45324800/rgoftest){:target="_blank"} [6 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 
-Questions 12.35-12.37 in [the textbook](../../book/) will assess your understanding of these materials.
+----
+
+## In-Class Practice
+
+* Class Exercises -- [I](CE1.html), [II](CE2.html), [III](CE3.html)
 
 ----
 
-### Related materials
+## Homework Assignment
 
-* Class Exercises -- [I](CE1.html), [II](CE2.html), [III](CE3.html)
+* Questions **12.35-12.37** in [the textbook](../../book/) will assess your understanding of these materials.  The due date will be announced in class and posted in [due dates](../../resources/Dates-Current).
+
+----
+
+## Archived Materials
+
 * [Old Lecture Slides](PPT_old.pptx)
+
+----

@@ -28,6 +28,8 @@ css: /css/modules.css
 
 ----
 
+## Preparation for Class
+
 You should prepare for the concepts of this module by first reading **Section 11.1** in [the textbook](../../book/) and watching the following videos:
 
 * [t Distribution](https://vimeo.com/user45324800/tdist){:target="_blank"} [4 mins] [![PowerPoint](../../img/ppt.png)](PPT1.pptx)
@@ -38,11 +40,22 @@ Then read **Section 11.2** in [the textbook](../../book/) and watching the follo
 * [1-Sample t-Test Example](https://vimeo.com/user45324800/t1test-ex1){:target="_blank"} [12 mins] [![PowerPoint](../../img/ppt.png)](PPT2.pptx)
 * [1-Sample t-Test in R](https://vimeo.com/user45324800/1samplettest){:target="_blank"} [5 mins]
 
-Questions 11.22 and 11.23 in [the textbook](../../book/) will assess your understanding of these materials.
+----
+
+## In-Class Practice
+
+* Class Exercises -- [I](CE1.html), [II](CE2.html), and [III](CE3.html)
 
 ----
 
-### Related materials
+## Homework Assignment
 
-* Class Exercise -- [I](CE1.html), [II](CE2.html), and [III](CE3.html)
+* Questions 11.22 and 11.23 in [the textbook](../../book/) will assess your understanding of these materials.  The due date will be announced in class and posted in [due dates](../../resources/Dates-Current).
+
+----
+
+## Archived Materials
+
 * [Old Lecture Slides](PPT_old.pptx)
+
+----
