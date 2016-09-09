@@ -29,7 +29,7 @@ css: "/css/modules.css"
 <div id="summarize-that-sample" class="section level2">
 <h2>Summarize that Sample</h2>
 <pre class="r"><code>&gt; Summarize(~age,data=smp1,digits=1)
-&gt; Summarize(~sex,data=smp1)</code></pre>
+&gt; percTable(xtabs(~sex,data=smp1))</code></pre>
 <ul>
 <li>Can you quickly explain the “general” age and sex of individuals in your sample? Why or why not?</li>
 </ul>
@@ -39,7 +39,7 @@ css: "/css/modules.css"
 <h2>Obtain a Second Random Sample of Residents from Ashland-Bayfield Counties</h2>
 <pre class="r"><code>&gt; ( smp2 &lt;- srsdf(ABCens90,50) )
 &gt; Summarize(~age,data=smp2,digits=1)
-&gt; Summarize(~sex,data=smp2)</code></pre>
+&gt; percTable(xtabs(~sex,data=smp2))</code></pre>
 <ul>
 <li>Were the mean ages from the two samples identical?</li>
 <li>Were the percentage of females from the two samples identical?</li>
@@ -50,13 +50,12 @@ css: "/css/modules.css"
 <div id="compare-your-results-to-the-truth" class="section level2">
 <h2>Compare Your Results to the Truth</h2>
 <pre class="r"><code>&gt; Summarize(~age,data=ABCens90,digits=1)</code></pre>
-<pre><code>       n   nvalid     mean       sd      min       Q1   median       Q3      max percZero 
- 30335.0  30335.0     37.3     24.3      0.0     16.0     35.0     57.0     96.0      1.2 </code></pre>
-<pre class="r"><code>&gt; Summarize(~sex,data=ABCens90)</code></pre>
-<pre><code>        freq   perc
-female 15261  50.31
-male   15074  49.69
-Total  30335 100.00</code></pre>
+<pre><code>       n     mean       sd      min       Q1   median       Q3      max percZero 
+ 30335.0     37.3     24.3      0.0     16.0     35.0     57.0     96.0      1.2 </code></pre>
+<pre class="r"><code>&gt; percTable(xtabs(~sex,data=ABCens90))</code></pre>
+<pre><code>sex
+   female      male       Sum 
+ 50.30822  49.69178 100.00000 </code></pre>
 <ul>
 <li>Did your sample mean ages exactly equal this true value for the population?</li>
 <li>Did your sample percentages of females exactly equal this true percentage of females in the population?</li>
@@ -66,8 +65,10 @@ Total  30335 100.00</code></pre>
 </div>
 <div id="examine-many-random-samples-of-residents-from-ashland-bayfield-counties" class="section level2">
 <h2>Examine Many Random Samples of Residents from Ashland-Bayfield Counties</h2>
-<p><img src="CE_files/figure-html/unnamed-chunk-8-1.png" title="" alt="" width="336" /><img src="CE_files/figure-html/unnamed-chunk-8-2.png" title="" alt="" width="336" /></p>
+<p><img src="CE_files/figure-html/unnamed-chunk-8-1.png" width="336" /><img src="CE_files/figure-html/unnamed-chunk-8-2.png" width="336" /></p>
 </div>
+
+
 
 
 </div>
@@ -78,6 +79,7 @@ Total  30335 100.00</code></pre>
 $(document).ready(function () {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 });
+
 
 </script>
 
