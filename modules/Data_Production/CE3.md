@@ -32,7 +32,7 @@ A student wanted to see how far she could hit two brands of softballs with three
 <div class="text-center">
 <ul class="pagination pagination-lg">
   <li><a href="index.html">^</a></li>
-  <li><a href="CE.html">1</a></li>
+  <li><a href="CE1.html">1</a></li>
   <li><a href="CE2.html">2</a></li>
   <li class="active"><a href="#">3</a></li>
   <li><a href="CE4.html">4</a></li>
