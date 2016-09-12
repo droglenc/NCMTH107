@@ -4,9 +4,9 @@ title: Class Exercise Keys
 ---
 
 1. Why Statistics is Important
+1. [Foundational Definitions](Foundational_Definitions.html)
 
 <!--
-1. [Foundational Definitions](Foundational_Definitions.html)
 1. [Data Production](Data_Production.html)
 1. Getting Started With RStudio
 1. [Univariate EDA - Quantitative](UnivEDA_Quantitative.html)
