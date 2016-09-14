@@ -12,10 +12,10 @@ title: Daily Quizzes
 * [Wed, 21-Sep](){:target="_blank"}
 * [Mon, 19-Sep](){:target="_blank"}
 * [Fri, 16-Sep](){:target="_blank"}
-* [Wed, 14-Sep](){:target="_blank"}
 
 -->
 
+* [Wed, 14-Sep](https://goo.gl/forms/hVGjpM828nafBbek2){:target="_blank"}
 * [Mon, 12-Sep](https://goo.gl/forms/ddTFoxWzMYXIxahq2){:target="_blank"}
 
 * [Fri, 9-Sep](https://goo.gl/forms/OjDVPoG5Fyx0kLlq2){:target="_blank"}
