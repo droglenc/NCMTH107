@@ -22,7 +22,7 @@ diameter  20  23  34  20  17  20  15  34  18  24
 exposure med med low med med med med med med med
 </pre>
 
-Use this information to answer the following questions.  Use R to answer all questions even though most questions can be answered by observing these simple data from the table above.  You should have an R script saved in RStudio and a MSWord document formatted as directed in section 1.4 of the textbook when you are finished.
+Use this information to answer the following questions.  Use R to answer all questions even though most questions can be answered by observing these simple data from the table above.
 
 1. Enter the data into Excel, save as a CSV file, and load the data into RStudio.
 1. What is (just) the diameter measurement for the seventh individual?
