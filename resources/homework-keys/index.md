@@ -21,6 +21,5 @@ title: Homework Keys, W16
 * [HW 7.10-7.11](Chapter7HW_noPrint.pdf){:target="_blank"}
 -->
 
-* [HW 1.30-1.35](Chapter1HWb_noPrint.pdf){:target="_blank"}
-* [HW 1.27-1.29](Chapter1HWa_noPrint.pdf){:target="_blank"}
+* [1.27-1.29](Chapter1HWa_noPrint.pdf){:target="_blank"} and [ 1.30-1.35](Chapter1HWb_noPrint.pdf){:target="_blank"}
 
