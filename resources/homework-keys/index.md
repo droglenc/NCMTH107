@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Homework Keys, W16
+title: Homework Keys
 ---
 
 <!--
