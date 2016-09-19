@@ -238,7 +238,7 @@ setwd("C:/data/")
 
 The CSV file is read into R by including the name of the file (in quotes) in \R{read.csv()}.  For example, the CSV file from above (called \R{"ladybug.csv"} is read into R and stored in a data frame called \var{LB} with
 <<eval=FALSE>>=
-LB <- read.table("ladybug.csv")
+LB <- read.csv("ladybug.csv")
 @
 
 \warn{Data stored in an external CSV file is read into R with \R{read.csv()}.}
