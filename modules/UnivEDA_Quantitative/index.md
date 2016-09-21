@@ -49,13 +49,13 @@ Additionally, you should prepare by reading **Section 4.3** in [the textbook](..
 
 ## In-Class Practice
 
-* Question **4.50** in [the textbook](../../book/) will assess your understanding of these materials.  In-Class Exercises -- [I](CE1.html) / [II](CE2.html) / [III](CE3.html) / [IV](CE4.html) / [V](CE5.html)
+* In-Class Exercises -- [I](CE1.html) / [II](CE2.html) / [III](CE3.html) / [IV](CE4.html) / [V](CE5.html)
 
 ----
 
 ## Homework Assignment
 
-*   The due date will be announced in class and posted in [due dates](../../resources/Dates-Current).
+* Question **4.50** in [the textbook](../../book/) will assess your understanding of these materials.  The due date will be announced in class and posted in [due dates](../../resources/Dates-Current).
 
 ----
 
