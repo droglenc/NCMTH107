@@ -21,7 +21,7 @@ Frequency Table
          Border Collie   Bouvier Des Flandres  Bouviers des Flandres 
                      1                      2                      1 
   Cardigan Welsh Corgi        German Shepherd    German Shepherd Dog 
-                     1                      1                      7 
+                     1                      1                      8 
   Old English Sheepdog                   Puli      Shetland Sheepdog 
                      5                      3                      4 
 Welsh Corgi (Pembroke) 
@@ -32,19 +32,19 @@ Percentage Table
 <pre class="r"><code>&gt; percTable(tbl,digits=1)</code></pre>
 <pre><code>breed
    Australian Shepherd         Bearded Collie       Belgian Tervuren 
-                   3.0                    6.1                    3.0 
+                   2.9                    5.9                    2.9 
          Border Collie   Bouvier Des Flandres  Bouviers des Flandres 
-                   3.0                    6.1                    3.0 
+                   2.9                    5.9                    2.9 
   Cardigan Welsh Corgi        German Shepherd    German Shepherd Dog 
-                   3.0                    3.0                   21.2 
+                   2.9                    2.9                   23.5 
   Old English Sheepdog                   Puli      Shetland Sheepdog 
-                  15.2                    9.1                   12.1 
+                  14.7                    8.8                   11.8 
 Welsh Corgi (Pembroke)                    Sum 
-                  12.1                   99.9 </code></pre>
+                  11.8                   99.8 </code></pre>
 <li>
 Bar Chart
 </li>
-<p><img src="UnivEDA_Categorical_files/figure-html/unnamed-chunk-5-1.png" title="" alt="" width="576" /></p>
+<p><img src="UnivEDA_Categorical_files/figure-html/unnamed-chunk-5-1.png" width="576" /></p>
 <li>
 <i>Can not Bring Myself to Make One</i>
 </li>
@@ -109,7 +109,7 @@ The goal for most kids was getting good grades, followed by being popular, and t
  Grades Popular  Sports 
     247     141      90 </code></pre>
 <pre class="r"><code>&gt; barplot(tbl,xlab=&quot;Student&#39;s Goal&quot;,ylab=&quot;Frequency&quot;,ylim=c(0,250))</code></pre>
-<img src="UnivEDA_Categorical_files/figure-html/unnamed-chunk-9-1.png" title="" alt="" width="384" />
+<img src="UnivEDA_Categorical_files/figure-html/unnamed-chunk-9-1.png" width="384" />
 <li>
 Students feel that “being good in sports” is an important contributor to popularity as approximately 2/3rds of studens ranked this as either “most important” or “somewhat important” to being popular.
 </li>
@@ -119,7 +119,7 @@ Students feel that “being good in sports” is an important contributor to pop
    1    2    3    4  Sum 
 34.5 32.2 23.4  9.8 99.9 </code></pre>
 <pre class="r"><code>&gt; barplot(tbl,xlab=&quot;Rank of Sports in Popularity&quot;,ylab=&quot;Frequency&quot;,ylim=c(0,200))</code></pre>
-<p><img src="UnivEDA_Categorical_files/figure-html/unnamed-chunk-10-1.png" title="" alt="" width="384" /></p>
+<p><img src="UnivEDA_Categorical_files/figure-html/unnamed-chunk-10-1.png" width="384" /></p>
 <li>
 Students were nearly evenly distributed among rural, suburban, and urban schools. Students were likely sampled nearly equally from each type of school.
 </li>
@@ -128,9 +128,11 @@ Students were nearly evenly distributed among rural, suburban, and urban schools
    Rural Suburban    Urban 
      149      151      178 </code></pre>
 <pre class="r"><code>&gt; barplot(tbl,xlab=&quot;School Type&quot;,ylab=&quot;Frequency&quot;,ylim=c(0,200))</code></pre>
-<img src="UnivEDA_Categorical_files/figure-html/unnamed-chunk-11-1.png" title="" alt="" width="384" />
+<img src="UnivEDA_Categorical_files/figure-html/unnamed-chunk-11-1.png" width="384" />
 </ol>
 </div>
+
+
 
 
 </div>
@@ -141,6 +143,7 @@ Students were nearly evenly distributed among rural, suburban, and urban schools
 $(document).ready(function () {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 });
+
 
 </script>
 

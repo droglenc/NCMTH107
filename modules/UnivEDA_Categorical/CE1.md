@@ -10,7 +10,7 @@ css: "/css/modules.css"
 
 ## Hand Calculations
 <img src="../zimgs/sheltie-herding.jpg" alt="Sheltie Herding" class="img-right">
-The breeds that won the "Herding Group" at the Westminster Kennel Club championships are [listed here](http://www.westminsterkennelclub.org/history/herdwinners.html).  Perform the following tasks with those data.
+The breeds that won the "Herding Group" at the Westminster Kennel Club championships are [listed here](http://www.westminsterkennelclub.org/about-sensation/history/herding-group-winners/).  Perform the following tasks with those data.
 
 1. Construct a table that shows the frequency of breeds that won the group.
 1. Construct a table that shows the percentage by breed that won the group.
