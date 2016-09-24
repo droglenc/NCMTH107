@@ -12,6 +12,7 @@ css: /css/syllabus.css
       <h4>Prof. Ogle's Section</h4>
       <dl class="dl-horizontal">
       <dt>28-Sep</dt><dd>4.50-4.51</dd>
+      <dt>3-Oct</dt><dd>5.24-5.25</dd>
 <!---
       <dt>16-Sep</dt><dd>1.27-1.35</dd>
       <dt>19-Sep</dt><dd>2.10-2.11</dd>
