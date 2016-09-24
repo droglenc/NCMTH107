@@ -9,9 +9,9 @@ title: Class Exercise Keys
 1. Getting Started With RStudio
 1. [Univariate EDA - Quantitative](UnivEDA_Quantitative.html)
 1. [Univariate EDA - Categorical](UnivEDA_Categorical.html)
+1. [Normal Distributions](Normal_Distributions.html)
 
 <!--
-1. [Normal Distributions](Normal_Distributions.html)
 1. [Bivariate EDA - Categorical](BivEDA_Categorical.html)
 1. [Bivariate EDA - Quantitative](BivEDA_Quantitative.html)
 1. [Linear Regression](Linear_Regression.html)
