@@ -9,7 +9,7 @@ css: "/css/modules.css"
 
 ## Normal Distribution Characteristics
 
-1. Use `snorm()` from `NCStats` to answer the following questions.
+1. Use `snorm()` from `NCStats` to answer the following questions.  [*Hint: Uncheck 'Show PDF & CDF'*]
     1. Describe what happens to the normal distribution if &mu; is increased?
     1. Describe what happens to the normal distribution if &sigma; is increased?
 

@@ -9,7 +9,7 @@ css: "/css/modules.css"
 
 ## Hand Calculations
 
-Answer each question below without using R.  Show your work with a careful drawing for each question.
+Answer each question below **without using R**.  Show your work with a careful drawing for each question.
 
 1. For X~N(75,10)
     1. What percent of X values are less than 95?

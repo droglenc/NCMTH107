@@ -16,8 +16,8 @@ A police officer in Kansas has recorded the amount of time it takes cars to trav
 1. What is an individual?
 1. What is the variable?
 1. What type of variable is that?
-1. What is mu?
-1. What is sigma?
+1. What is &mu;?
+1. What is &sigma;?
 
 Additionally, for each questions below (a) identify the type of question (e.g., "forward-left", "reverse-between") and then (b) answer the question.
 
