@@ -17,9 +17,9 @@ title: Homework Keys
 * [HW 5.24-5.25](Chapter5HW_noPrint.pdf){:target="_blank"}
 * [HW 4.51](Chapter4HWb_noPrint.pdf){:target="_blank"}
 * [HW 4.50](Chapter4HWa_noPrint.pdf){:target="_blank"}
-* [HW 3.12](Chapter3HW_noPrint.pdf){:target="_blank"}
 -->
 
+* [HW 3.12](Chapter3HW_noPrint.pdf){:target="_blank"}
 * [HW 2.10-2.11](Chapter2HW_noPrint.pdf){:target="_blank"}
 * [1.27-1.29](Chapter1HWa_noPrint.pdf){:target="_blank"} and [ 1.30-1.35](Chapter1HWb_noPrint.pdf){:target="_blank"}
 
