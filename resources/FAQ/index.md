@@ -31,6 +31,7 @@ Related to: [R/RStudo](#rrstudio-related) / [Homework](#homework-format)
 * [How do I change the working directory?](FAQs/changing-working-directory.html)
 * [Why can't `read.csv()` find my data file?](FAQs/cant-find-file.html)
 * [Why are my variables are labelled with Xs?](FAQs/variable-called-V1.html)
+* [How should data from two groups be entered?](FAQs/stacked-data.html)
 
 ### Using Data Frames and Subsetting
 * [How do I select two groups of a factor variable?](FAQs/subset-2groups.html)
