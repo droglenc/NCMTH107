@@ -49,7 +49,7 @@ css: "/css/modules.css"
 <pre class="r"><code>&gt; d &lt;- data.frame(imp=c(60,43,43,34,27,25,21,18,11,8,8,8,7,7,5,4,2),
                   IBI=c(9,11,13,23,31,31,21,23,27,37,39,29,31,43,33,35,37))
 &gt; plot(IBI~imp,data=d,pch=19,xlab=&quot;% Impervious Surface&quot;,ylab=&quot;IBI&quot;)</code></pre>
-<p><img src="BivEDA_Quantitative_files/figure-html/unnamed-chunk-3-1.png" title="" alt="" width="288" /></p>
+<p><img src="BivEDA_Quantitative_files/figure-html/unnamed-chunk-3-1.png" width="288" /></p>
 <hr />
 </div>
 <div id="class-excercise-4" class="section level2">
@@ -61,14 +61,14 @@ The relationship between number of coffees sold at the cafe and maximum daily te
 <pre class="r"><code>&gt; d &lt;- read.csv(&quot;cafedata.csv&quot;)
 &gt; plot(coffee.sold~max.temp,data=d,pch=19,xlab=&quot;Maximum Daily Temperature&quot;,
        ylab=&quot;Number of Coffees Sold&quot;)</code></pre>
-<p><img src="BivEDA_Quantitative_files/figure-html/unnamed-chunk-4-1.png" title="" alt="" width="288" /></p>
+<p><img src="BivEDA_Quantitative_files/figure-html/unnamed-chunk-4-1.png" width="288" /></p>
 <li>
 The relationship between the number of coffees sold and the number of sodas sold at the cafe is negative, linear, and weak (r=-0.40) with no obvious outliers. I identified strength from the value of the correlation coefficient because of the linear form and lack of outliers.
 </li>
 <pre class="r"><code>&gt; d &lt;- read.csv(&quot;cafedata.csv&quot;)
 &gt; plot(coffee.sold~sodas.sold,data=d,pch=19,xlab=&quot;Number of Sodas Sold&quot;,
        ylab=&quot;Number of Coffees Sold&quot;)</code></pre>
-<p><img src="BivEDA_Quantitative_files/figure-html/unnamed-chunk-5-1.png" title="" alt="" width="288" /></p>
+<p><img src="BivEDA_Quantitative_files/figure-html/unnamed-chunk-5-1.png" width="288" /></p>
 <pre class="r"><code>&gt; corr(coffee.sold~sodas.sold,data=d,use=&quot;pairwise.complete.obs&quot;)</code></pre>
 <pre><code>[1] -0.4021785</code></pre>
 <li>
@@ -78,9 +78,11 @@ The relationship between the number of coffees sold at the cafe and the number o
 &gt; plot(coffee.sold~days.since.start,data=d,pch=19,xlab=&quot;Days Since the Cafe Opened&quot;,
        ylab=&quot;Number of Coffees Sold&quot;)
 &gt; lines(coffee.sold~days.since.start,data=d,col=&quot;gray90&quot;)</code></pre>
-<p><img src="BivEDA_Quantitative_files/figure-html/unnamed-chunk-6-1.png" title="" alt="" width="288" /></p>
+<p><img src="BivEDA_Quantitative_files/figure-html/unnamed-chunk-6-1.png" width="288" /></p>
 </ol>
 </div>
+
+
 
 
 </div>
@@ -91,6 +93,7 @@ The relationship between the number of coffees sold at the cafe and the number o
 $(document).ready(function () {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 });
+
 
 </script>
 
