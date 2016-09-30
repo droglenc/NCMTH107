@@ -4,15 +4,17 @@ title: Daily Quizzes
 ---
 
 <!--
+* [Fri, 14-Oct](){:target="_blank"}
+* [Wed, 12-Oct](){:target="_blank"}
+* [Mon, 10-Oct](){:target="_blank"}
 
 * [Fri, 30-Sep](){:target="_blank"}
-* [Wed, 28-Sep](){:target="_blank"}
-* [Mon, 26-Sep](){:target="_blank"}
-
-* [Fri, 30-Sep](https://goo.gl/forms/5f5yJ9y1ZYJ4Hxut2){:target="_blank"}
+* [Wed, 5-Oct](){:target="_blank"}
+* [Mon, 3-Oct](){:target="_blank"}
 
 -->
 
+* [Fri, 30-Sep](https://goo.gl/forms/5f5yJ9y1ZYJ4Hxut2){:target="_blank"}
 * [Wed, 28-Sep](https://goo.gl/forms/VUfznu1tSbvVPHrp2){:target="_blank"}
 * [Mon, 26-Sep](https://goo.gl/forms/55kxCWkqrgaHxEQ52){:target="_blank"}
 
