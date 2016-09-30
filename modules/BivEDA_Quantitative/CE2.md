@@ -9,8 +9,7 @@ css: "/css/modules.css"
 
 ## Associations
 
-Identify whether, and describe your reasoning, you would expect to see a positive, negative, or no (neutral) association between each pair of variables below.
-
+Identify whether you would expect to see a positive, negative, or no (neutral) association between each pair of variables below.  Explain your reasoning.
 1. Weight and gas mileage of a car.
 1. Proportion of the population that was vaccinated and the proportion of the population that became ill.
 1. The expected salary of an individual and how many years they invested in post-secondary education.
