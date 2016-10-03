@@ -10,9 +10,10 @@ title: Daily Quizzes
 
 * [Fri, 30-Sep](){:target="_blank"}
 * [Wed, 5-Oct](){:target="_blank"}
-* [Mon, 3-Oct](){:target="_blank"}
 
 -->
+
+* [Mon, 3-Oct](https://goo.gl/forms/uXqKRW6Y7o4eLjHF2){:target="_blank"}
 
 * [Fri, 30-Sep](https://goo.gl/forms/5f5yJ9y1ZYJ4Hxut2){:target="_blank"}
 * [Wed, 28-Sep](https://goo.gl/forms/VUfznu1tSbvVPHrp2){:target="_blank"}
