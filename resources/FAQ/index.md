@@ -40,6 +40,7 @@ Related to: [R/RStudo](#rrstudio-related) / [Homework](#homework-format)
 
 ### Specific Functions
 * [Why does my frequency table or bar chart contain unwanted levels?](FAQs/freqtable-levels-problem.html)
+* [How can I reorder the levels of my categorical variable?](FAQs/reorder-levels.html)
 * [Why can't R find `leveneTest()`?](FAQs/cant-find-Levenes.html)
 * [Why does the df for my two-sample t-test contain decimals?](FAQs/t2test-df-decimals.html)
 * [Why does R say the alternative hypothesis is true, even though the p-value>alpha?](FAQs/alt-hyp-misinterp.html)

@@ -1,0 +1,62 @@
+---
+layout: page
+title: MTH107 FAQ
+subtitle: How can I reorder the levels of my categorical variable?
+author: Derek H. Ogle
+---
+
+
+<hr />
+<p>By default, R will alphabetically order the levels of a factor (i.e., categorical) variable. There may be times when you want an order other than alphabtical. Reordering the levels may be accomplished by using the <code>levels=</code> argument with the <code>factor()</code> function. The first argument to <code>factor()</code> is the name of the variable for which you wish to reorder the levels. The <code>levels=</code> argument can then be set equal to a vector of level names that are spelled <strong>exactly</strong> as they appear in the original variable, but are placed in the order you wish.</p>
+<p>For example, suppose that you used the code below to create a data.frame of information about three species of iris.</p>
+<pre class="r"><code>&gt; df &lt;- read.csv(&quot;data/Iris.csv&quot;)
+&gt; str(df)</code></pre>
+<pre><code>'data.frame':   150 obs. of  5 variables:
+ $ seplen : int  50 46 46 51 55 48 52 49 44 50 ...
+ $ sepwid : int  33 34 36 33 35 31 34 36 32 35 ...
+ $ petlen : int  14 14 10 17 13 16 14 14 13 16 ...
+ $ petwid : int  2 3 2 5 2 2 2 1 2 6 ...
+ $ species: Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<p>From this, it is seen that the <code>species</code> variable has three levels, but it is not clear what the three levels are. The complete list of levels may be seen by including the variable name in <code>levels()</code> as shown below.</p>
+<pre class="r"><code>&gt; levels(df$species)</code></pre>
+<pre><code>[1] &quot;setosa&quot;     &quot;versicolor&quot; &quot;virginica&quot; </code></pre>
+<p>Now suppose that, for some reason, you would like the levels of <code>species</code> to be reordered such that <code>versicolor</code> is listed fist, followed by <code>setosa</code> and then <code>viriginica</code>. The code below creates a new variable called <code>species2</code> in which the species will follow this new odering</p>
+<pre class="r"><code>&gt; df$species2 &lt;- factor(df$species,levels=c(&quot;versicolor&quot;,&quot;setosa&quot;,&quot;virginica&quot;))
+&gt; levels(df$species2)</code></pre>
+<pre><code>[1] &quot;versicolor&quot; &quot;setosa&quot;     &quot;virginica&quot; </code></pre>
+<p>The new order is seen more clearly in the following two frequency tables.</p>
+<pre class="r"><code>&gt; xtabs(~species,data=df)</code></pre>
+<pre><code>species
+    setosa versicolor  virginica 
+        50         50         50 </code></pre>
+<pre class="r"><code>&gt; xtabs(~species2,data=df)</code></pre>
+<pre><code>species2
+versicolor     setosa  virginica 
+        50         50         50 </code></pre>
+
+
+
+
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
