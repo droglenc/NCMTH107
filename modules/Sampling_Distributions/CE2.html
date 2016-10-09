@@ -11,8 +11,8 @@ css: "/css/modules.css"
 <div id="checking-the-clt" class="section level2">
 <h2>Checking the CLT</h2>
 <p><img src="http://derekogle.com/NCMTH107/modules/zimgs/computer-1.jpg" alt="Simulations" class="img-right"> We can provide evidence to support (or not) the Central Limit Theorem (CLT) by (i) creating a known population, (ii) stating our expectations from the CLT for the sampling distribution of the means, (iii) repeatedly sampling fronm the population to construct a simulated sampling distribution of the means, (iv) recording results from the repeated sampling, and (v) comparing the observed results to what was expected from the CLT.</p>
-<p>The <code>cltSim()</code> function (with no arguments) from <code>NCStats</code> provides an efficient method to create a known population, repeatedly sample (5000 times) from that population, and summarize the resulting simulated sampling distribution. For example, <code>cltSim()</code> produced the plots shown below. The histogram on the left is a known population distribution with the parameters (μ&amp;σ) shown. The histogram on the right is a simulated sampling distribution; i.e., the distribution of means from 5000 independent samples of size n taken from the known population. In RStudio, this plot will have a gear icon in the upper-left corner that will open a dialog box that allows you to modify n. Additionally, you can control two shape parameters that will alter the known population distribution.</p>
-<p><img src="CE2_files/figure-html/unnamed-chunk-3-1.png" title="" alt="" width="672" /></p>
+<p>The <code>cltSim()</code> function (with no arguments) from <code>NCStats</code> provides an efficient method to create a known population, repeatedly sample (5000 times) from that population, and summarize the resulting simulated sampling distribution. For example, <code>cltSim()</code> produced the plots shown below. The histogram on the left is a known population distribution with the parameters (μ &amp; σ) shown. The histogram on the right is a simulated sampling distribution; i.e., the distribution of means from 5000 independent samples of size n taken from the known population. In RStudio, this plot will have a gear icon in the upper-left corner that will open a dialog box that allows you to modify n. Additionally, you can control two shape parameters that will alter the known population distribution.</p>
+<p><img src="CE2_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p>The table below can be used to efficiently record your expectations and observed results for different sample sizes.</p>
 <table class="table table-bordered table-condensed">
 <thead>
@@ -156,6 +156,8 @@ Dispersion
 </div>
 
 
+
+
 </div>
 
 <script>
@@ -164,6 +166,7 @@ Dispersion
 $(document).ready(function () {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 });
+
 
 </script>
 
