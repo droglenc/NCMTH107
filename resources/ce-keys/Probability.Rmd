@@ -37,6 +37,6 @@ source("../../rhelpers/knitr_setup.R")
 1. `r formatC(distrib(1000,mean=875,sd=220)-distrib(700,mean=875,sd=220),format="f",digits=4)` 
 1. `r formatC(distrib(5000/4,mean=875,sd=220),format="f",digits=4)` 
 1. An Oak tree must be randomly selected.
-1. `r formatC(distrib(0.20,mean=875,sd=220),format="f",digits=1)` acorns.
+1. `r formatC(distrib(0.20,mean=875,sd=220,type="q"),format="f",digits=1)` acorns.
     
 ----
