@@ -8,14 +8,14 @@ title: Daily Quizzes
 * [Wed, 12-Oct](){:target="_blank"}
 * [Mon, 10-Oct](){:target="_blank"}
 
-* [Fri, 14-Oct](){:target="_blank"}
-* [Wed, 12-Oct](){:target="_blank"}
+* [Fri, 21-Oct](){:target="_blank"}
+* [Wed, 19-Oct](){:target="_blank"}
 
-* [Fri, 14-Oct](){:target="_blank"}
-* [Wed, 12-Oct](){:target="_blank"}
+* [Fri, 14-Oct](https://goo.gl/forms/RvdXz5xjzn752JaY2){:target="_blank"}
 
 -->
 
+* [Wed, 12-Oct](https://goo.gl/forms/NdV97hjlHWVlFOlc2){:target="_blank"}
 * [Mon, 10-Oct](https://goo.gl/forms/mGIewh9miyAmrAOG2){:target="_blank"}
 
 * [Mon, 3-Oct](https://goo.gl/forms/uXqKRW6Y7o4eLjHF2){:target="_blank"}
