@@ -182,7 +182,7 @@ lines(c(df2[2,1],df2[2,1]),c(480,p2[2]),lwd=2,lty=2,col="red")
 <<LuminaFLP, echo=FALSE, results='hide', include=FALSE, fig.width=3.5, fig.height=3.5, par1a=TRUE>>=
 lum <- read.csv("data/Lumina.csv")
 lm.lum <- lm(CMPG~HMPG,data=lum)
-fitPlot(lm.lum,pch=16,xlab="Highway MPG",ylab="City MPG",main="")
+fitPlot(lm.lum,pch=16,xlab="Highway MPG",ylab="City MPG")
 r2 <- rSquared(lm.lum,digits=3)
 mtext(bquote(paste(Y==.(round(coef(lm.lum)[1],3))+.(round(coef(lm.lum)[2],3))*X,"    ",r^2==.(r2))),line=0.2,cex=0.8)
 @
@@ -203,7 +203,7 @@ An infinite number of lines can be placed on a graph.  Obviously, many of those 
 
 Residuals are a measure of how far away an individual is from a candidate best-fit line.  All residuals computed from all individuals in a data set is a measure of how far away all of the individuals are from the candidate best-fit line.  Thus, the residuals for all individuals can be used to identify the best-fit line.  The residual sum-of-squares (RSS) is defined as the sum of all squared residuals.\index{RSS}  The least-squares criterion says that the ``best-fit'' line is the line out of all possible lines that has the minimum RSS.  Only one candidate line will have the minimum RSS and the least-squares method defines this as the ``best-fit'' line to the data \figref{fig:RSSanim}.
 
-<<RSSanim, echo=FALSE, cache=TRUE, fig.width=7, fig.height=3.5, fig.show='animate',fig.cap="An animation illustrating how the residual sum-of-squares (RSS) for a series of candidate lines (red lines) is minimized at the best-fit line (green line).", aniopts='controls,palindrome,autoplay',out.width='.8\\linewidth'>>=
+<<RSSanim, echo=FALSE, fig.width=7, fig.height=3.5, fig.show='animate',fig.cap="An animation illustrating how the residual sum-of-squares (RSS) for a series of candidate lines (red lines) is minimized at the best-fit line (green line).", aniopts='controls,palindrome,autoplay',out.width='.8\\linewidth'>>=
 ################################################################################
 # Function to calculate the RSS given a dataframe that must have the explanatory
 #   variable in the first column and the response variable in the second column
@@ -307,13 +307,13 @@ x <- rnorm(n,mu,sigma)
 e1 <- rnorm(n,mu,sigma)
 y1 <- slp*x+int+e1
 lm1 <- lm(y1~x)
-fitPlot(lm1,xlab="Explanatory",ylab="Response",xaxt="n",yaxt="n",main="")
+fitPlot(lm1,xlab="Explanatory",ylab="Response",xaxt="n",yaxt="n")
 mtext("Assumptions Met",line=0.25,col="blue")
 
 e2 <- ((x-mean(x))/5)^2 + rnorm(n,0,sigma/4)
 y2 <- slp*x+int+e2
 lm2 <- lm(y2~x)
-fitPlot(lm2,xlab="Explanatory",ylab="Response",xaxt="n",yaxt="n",main="")
+fitPlot(lm2,xlab="Explanatory",ylab="Response",xaxt="n",yaxt="n")
 mtext("Non-Linear",line=0.25,col="red")
 
 x1 <- runif(n,min=0,max=10)
@@ -321,13 +321,13 @@ e3 <- rep(0,n)
 for (i in 1:n) e3[i] <- rnorm(1,0,x1[i]/2)
 y3 <- slp*x1+int+e3
 lm3 <- lm(y3~x1)
-fitPlot(lm3,xlab="Explanatory",ylab="Response",xaxt="n",yaxt="n",main="")
+fitPlot(lm3,xlab="Explanatory",ylab="Response",xaxt="n",yaxt="n")
 mtext("Heteroscedastic",line=0.25,col="red")
 
 y4 <- 2*log(x1) + rnorm(n,0,0.4)
 y4 <- exp(y4)
 lm4 <- lm(y4~x1)
-fitPlot(lm4,xlab="Explanatory",ylab="Response",xaxt="n",yaxt="n",main="")
+fitPlot(lm4,xlab="Explanatory",ylab="Response",xaxt="n",yaxt="n")
 mtext("Non-linear & Heteroscedastic",line=0.25,col="red")
 @
 
@@ -389,7 +389,7 @@ All answers should refer to the variables of the problem -- thus, ``y'', ``x'', 
 <<ChimpFLP, echo=FALSE>>=
 chimp <- read.csv("data/Chimp.csv")
 lm.chimp <- lm(percsucc~huntparty,data=chimp)
-fitPlot(lm.chimp,pch=16,xlab="Number of Hunting Party Members",ylab="% Successful Hunts",main="")
+fitPlot(lm.chimp,pch=16,xlab="Number of Hunting Party Members",ylab="% Successful Hunts")
 r2 <- formatC(rSquared(lm.chimp),format="f",digits=3)
 mtext(bquote(paste(Y==.(formatC(coef(lm.chimp)[1],format="f",digits=3))+.(formatC(coef(lm.chimp)[2],format="f",digits=3))*X,"    ",r^2==.(r2))),line=0.2,cex=0.8)
 @
@@ -452,7 +452,7 @@ mtext(bquote(paste(Y==.(formatC(coef(lm.chimp)[1],format="f",digits=3))+.(format
 <<SBPFLP, echo=FALSE, results='hide', include=FALSE, fig.width=3.5, fig.height=3.5, par1a=TRUE>>=
 sbp1 <- read.csv("data/sbp.csv")
 lm.sbp <- lm(sbp~age,data=sbp1)
-fitPlot(lm.sbp,pch=16,xlab="Age (yrs)",ylab="Systolic Blood Pressure",main="")
+fitPlot(lm.sbp,pch=16,xlab="Age (yrs)",ylab="Systolic Blood Pressure")
 r2 <- rSquared(lm.sbp)
 mtext(bquote(paste(Y==.(formatC(coef(lm.sbp)[1],format="f",digits=3))+.(formatC(coef(lm.sbp)[2],format="f",digits=3))*X,"    ",r^2==.(formatC(r2,format="f",digits=3)))),line=0.2,cex=0.8)
 @
@@ -477,7 +477,7 @@ mtext(bquote(paste(Y==.(formatC(coef(lm.sbp)[1],format="f",digits=3))+.(formatC(
 <<TVFLP, echo=FALSE, results='hide', include=FALSE, fig.width=3.5, fig.height=3.5, par1a=TRUE>>=
 tv <- read.csv("data/tv.csv")
 lm.tv <- lm(audience~rating,data=tv)
-fitPlot(lm.tv,pch=16,xlab="Rating (%)",ylab="Audience (1000s)",main="")
+fitPlot(lm.tv,pch=16,xlab="Rating (%)",ylab="Audience (1000s)")
 r2 <- formatC(rSquared(lm.tv),format="f",digits=3)
 mtext(bquote(paste(Y==.(formatC(coef(lm.tv)[1],format="f",digits=3))+.(formatC(coef(lm.tv)[2],format="f",digits=3))*X,"    ",r^2==.(r2))),line=0.2,cex=0.8)
 @
@@ -501,7 +501,7 @@ molt <- read.csv("data/molt.csv")
 out <- molt[33,]
 molt1 <- molt[-33,]
 lm.molt <- lm(duration~date,data=molt1)
-fitPlot(lm.molt,pch=16,xlab="Start Date (d since July 1)",ylab="Duration (d))",main="")
+fitPlot(lm.molt,pch=16,xlab="Start Date (d since July 1)",ylab="Duration (d))")
 points(out$date,out$duration,pch=3)
 r2 <- formatC(rSquared(lm.molt),format="f",digits=3)
 mtext(bquote(paste(Y==.(formatC(coef(lm.molt)[1],format="f",digits=3))-.(formatC(-1*coef(lm.molt)[2],format="f",digits=3))*X,"    ",r^2==.(r2))),line=0.2,cex=0.8)
@@ -527,7 +527,7 @@ mtext(bquote(paste(Y==.(formatC(coef(lm.molt)[1],format="f",digits=3))-.(formatC
 <<Deer2FLP, echo=FALSE, results='hide', include=FALSE, fig.width=3.5, fig.height=3.5, par1a=TRUE>>=
 d2 <- read.csv("data/deer2.csv")
 lm.d2 <- lm(fawns~bodymass,data=d2)
-fitPlot(lm.d2,pch=16,xlab="Doe Body Mass (kg)",ylab="Mean Fawns per Doe",main="",ylim=c(1,4))
+fitPlot(lm.d2,pch=16,xlab="Doe Body Mass (kg)",ylab="Mean Fawns per Doe",ylim=c(1,4))
 r2 <- formatC(rSquared(lm.d2),format="f",digits=3)
 mtext(bquote(paste(Y==.(formatC(coef(lm.d2)[1],format="f",digits=3))+.(formatC(coef(lm.d2)[2],format="f",digits=4))*X,"    ",r^2==.(r2))),line=0.2,cex=0.8)
 @
@@ -571,7 +571,7 @@ The appropriate formula and \R{data=} arguments are then submitted to \R{lm()}, 
 From this it is seen that the intercept is \Sexpr{formatC(coef(lm1)[1],format="f",digits=3)} and the slope is \Sexpr{formatC(coef(lm1)[2],format="f",digits=3)}.  A fitted-line plot (i.e., a scatterplot with the best-fit line superimposed) is constructed by submitting the \R{lm} object to \R{fitPlot()}.  For example, the fitted-line plot shown in \figref{fig:HGFLP} was constructed with\index{Regression!Finding best-fit line}
 
 <<HGFLP, fig.cap="Fitted-line plots for the regression of mercury in the blood on mercury intake.">>=
-fitPlot(lm1,main="")
+fitPlot(lm1)
 @
 
 Predicted values from the linear regression is obtained with \R{predict()}.\index{Predictions!Regression}  The \R{predict()} function requires the saved  \R{lm} object as its first argument.  The second argument is a data frame constructed with \R{data.frame()} that contains the \textbf{EXACT} name of the explanatory variable as it appeared in \R{lm()} set equal to the value of the explanatory at which the prediction should be made.  For example, the predicted amount of mercury in the blood for an intake of 240 $\mu$g per day is obtained with
@@ -599,7 +599,7 @@ The linear regression model is fit, coefficients extracted, fitted-line plot con
 
 <<CarFit, fig.cap="Fitted line plot of the regression of highway MPG on weight of 93 cars from 1993.">>=
 ( lm2 <- lm(HMPG~Weight,data=cars93) )
-fitPlot(lm2,ylab="Highway MPG",main="")
+fitPlot(lm2,ylab="Highway MPG")
 rSquared(lm2,digits=3)
 @
 

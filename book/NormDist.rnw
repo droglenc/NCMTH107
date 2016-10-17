@@ -24,10 +24,10 @@ par(mar=c(4,1,1,1),mgp=c(2.1,0.4,0),mfcol=c(1,3),las=1,tcl=-0.2)
 set.seed(1)
 popn <- rnorm(10000)
 br <- seq(-4,4,0.5)
-hist(popn,probability=TRUE,breaks=br,xlab="Measurement",ylab="",yaxt="n",main="",col="gray90")
-hist(popn,probability=TRUE,breaks=br,xlab="Measurement",ylab="",yaxt="n",main="",col="gray90")
+hist(~popn,probability=TRUE,breaks=br,xlab="Measurement",ylab="",yaxt="n")
+hist(~popn,probability=TRUE,breaks=br,xlab="Measurement",ylab="",yaxt="n")
 x <- seq(-4,4,0.001)
-lines(x,dnorm(x),lwd=3,col="red")
+lines(x,dnorm(x),lwd=3,col="red",xpd=TRUE)
 plot(x,dnorm(x),type="l",lwd=3,col="red",xlab="Measurement",ylab="",yaxt="n",bty="n")
 @
 
@@ -83,14 +83,14 @@ Let's consider finding the proportion of individuals in a \textit{sample} with v
 
 <<NormDistShade, echo=FALSE, fig.width=7, out.width='.8\\linewidth',fig.cap="Depiction of finding the proportion of individuals between 0 and 2 on a histogram (\\textbf{Left}) and on a standard normal distribution (\\textbf{Right}).">>=
 par(mar=c(4,1,1,1),mgp=c(2.1,0.4,0),mfcol=c(1,2),las=1,tcl=-0.2)
-hist(popn,probability=TRUE,breaks=br,xlab="Measurement",ylab="",yaxt="n",main="")
+hist(~popn,probability=TRUE,breaks=br,xlab="Measurement",ylab="",yaxt="n")
 h <- hist(popn,breaks=br,plot=FALSE)
 rect(0,0,0.5,h$density[9],col="red")
 rect(0.5,0,1,h$density[10],col="red")
 rect(1,0,1.5,h$density[11],col="red")
 rect(1.5,0,2,h$density[12],col="red")
 x <- seq(-4,4,0.001)
-plot(x,dnorm(x),type="l",lwd=3,col="red",xlab="Measurement",ylab="",yaxt="n",xlim=c(-4,4))
+plot(x,dnorm(x),type="l",lwd=3,col="red",xlab="Measurement",ylab="",yaxt="n",xlim=c(-4,4),bty="n",yaxs="i")
 x.shade <- x[x>=0 & x<=2]
 y.shade <- dnorm(x.shade)
 x.shade <- c(x.shade,2,0)

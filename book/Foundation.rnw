@@ -140,7 +140,7 @@ SL <- SquareLakePopn
 SL$i<-seq(1:1015)
 SL$x<-runif(1015)
 SL$y<-runif(1015)
-plot(SL$x,SL$y,pch=16,main="",xlab="",ylab="",xaxt="n",yaxt="n")
+plot(SL$x,SL$y,pch=16,xlab="",ylab="",xaxt="n",yaxt="n")
 hist(~tl,data=SL,xlab="Total Length",ylab="Frequency of Fish")
 @
 
@@ -180,7 +180,7 @@ The entire population cannot be ``seen'' in real life.  Thus, the only alternati
 <<SquareLakeSample1, echo=FALSE, fig.cap="Schematic representation (\\textbf{Left}) of a sample of 50 fish (i.e., red dots) from Square Lake and histogram (\\textbf{Right}) of the total length of the 50 fish in this sample.">>=
 set.seed(1)
 SL1 <- srsdf(SL,n=50)
-plot(y~x,data=SL,pch=19,main="",xlab="",ylab="",xaxt="n",yaxt="n")
+plot(y~x,data=SL,pch=19,xlab="",ylab="",xaxt="n",yaxt="n")
 points(y~x,data=SL1,pch=19,col="red",cex=1.25)
 hist(~tl,data=SL1,xlab="Total Length",ylab="Frequency of Fish")
 @
@@ -256,11 +256,11 @@ set.seed(2); SL2 <- SL[sample(SL$i,50),]
 set.seed(3); SL3 <- SL[sample(SL$i,50),]
 set.seed(4); SL4 <- SL[sample(SL$i,50),]
 par(mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),mfcol=c(3,2))
-plot(SL$x,SL$y,pch=16,main="",xlab="",ylab="",xaxt="n",yaxt="n")
+plot(SL$x,SL$y,pch=16,xlab="",ylab="",xaxt="n",yaxt="n")
 points(SL2$x,SL2$y,pch=16,col="red",cex=1.25)
-plot(SL$x,SL$y,pch=16,main="",xlab="",ylab="",xaxt="n",yaxt="n")
+plot(SL$x,SL$y,pch=16,xlab="",ylab="",xaxt="n",yaxt="n")
 points(SL3$x,SL3$y,pch=16,col="red",cex=1.25)
-plot(SL$x,SL$y,pch=16,main="",xlab="",ylab="",xaxt="n",yaxt="n")
+plot(SL$x,SL$y,pch=16,xlab="",ylab="",xaxt="n",yaxt="n")
 points(SL4$x,SL4$y,pch=16,col="red",cex=1.25)
 hist(~tl,data=SL2,xlab="Total Length",ylab="Frequency of Fish")
 hist(~tl,data=SL3,xlab="Total Length",ylab="Frequency of Fish")

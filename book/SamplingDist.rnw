@@ -211,7 +211,7 @@ Sampling distributions are simulated by drawing many (hundreds or thousands) sam
 
 To illustrate the simulation of a sampling distribution, let's return to the Square Lake fish population explored in \sectref{sect:IVPPSS}.  Recall that this is a hypothetical population with 1015 fish, a population distribution shown in \figref{fig:SquareLakePopn}, and parameters shown in \tabref{tab:SquareLakePopn}.  Further recall that four samples of $n=50$ were removed from this population and summarized in \tabref{tab:SquareLakeSample1} and \tabref{tab:SquareLakeSample234}.  Suppose, that an additional 996 samples of $n=50$ were extracted in exactly the same way as the first four, the sample mean was computed in each sample, and the 1000 sample means were collected to form the histogram in \figref{fig:SampDistSLMean50}.  This histogram is a simulated sampling distribution of sample means because it represents the distribution of sample means from 1000, rather than all possible, samples.
 
-<<SampDistSLMean50, echo=FALSE, cache=TRUE, fig.cap="Histogram (\\textbf{Left}) and summary statistics (\\textbf{Right}) from 1000 sample mean total lengths computed from samples of $n=50$ from the Square Lake fish population.">>=
+<<SampDistSLMean50, echo=FALSE, fig.cap="Histogram (\\textbf{Left}) and summary statistics (\\textbf{Right}) from 1000 sample mean total lengths computed from samples of $n=50$ from the Square Lake fish population.">>=
 data(SquareLakePopn)
 set.seed(10)
 resamples <- 1000
@@ -226,7 +226,7 @@ As with the actual sampling distributions discussed previously, three characteri
 
 As before, computing a different statistic on each sample results in a different sampling distribution.  This is illustrated by comparing the sampling distributions of a variety of statistics from the same 1000 samples of size n=50 taken above \figrefp{fig:SampDistSLOther50}.
 
-<<SampDistSLOther50, echo=FALSE, cache=TRUE, fig.width=10.5, fig.height=5.25, out.width='.95\\linewidth', fig.cap="Histograms from 1000 sample median (\\textbf{Left}), standard deviation (\\textbf{Center}), and range (\\textbf{Right}) of total lengths computed from samples of $n=50$ from the Square Lake fish population.  Note that the value in the parameter row is the value computed from the entire population.">>=
+<<SampDistSLOther50, echo=FALSE, fig.width=10.5, fig.height=5.25, out.width='.95\\linewidth', fig.cap="Histograms from 1000 sample median (\\textbf{Left}), standard deviation (\\textbf{Center}), and range (\\textbf{Right}) of total lengths computed from samples of $n=50$ from the Square Lake fish population.  Note that the value in the parameter row is the value computed from the entire population.">>=
 layout(matrix(c(1,2,3,4,5,6),2,3,byrow=F),c(1,1,1),c(2,1))
 set.seed(10)
 hist.cex <- 1.4
@@ -305,7 +305,7 @@ A major consequence of this definition of ``large'' is that the sampling distrib
 \subsection{Exploring CLT}
 Characteristics of the sampling distribution of $\bar{x}$ can be explored with the hypothetical population of 1015 lengths of fish in Square Lake.  Recall from \sectref{sect:IVPPSS} that the population distribution \figrefp{fig:SquareLakePopn} and several parameters are known \tabrefp{tab:SquareLakePopn} and that the sampling distribution from $n=50$ was previously examined \figrefp{fig:SampDistSLMean50}.  The effect of changing $n$ on the sampling distribution of sample means can be explored in a similar manner and then examined to determine if the specifics of the CLT appear to be true \figrefp{fig:SampDistSLMeann}.\footnote{The effect of changing $n$ can also be explored with the animation in \appref{app:CLTAnim}.}
 
-<<SampDistSLMeann, echo=FALSE, cache=TRUE, fig.width=5, fig.height=7.5, out.width='.8\\linewidth', fig.scap="Sampling distribution of sample means from Square Lake", fig.cap="Sampling distribution of the sample mean TL simulated from 5000 samples of six different sample sizes extracted from the Square Lake fish population.  The vertical blue line is the mean of the 5000 means and the horizontal red line represents $\\pm1$SE from the mean.">>=
+<<SampDistSLMeann, echo=FALSE, fig.width=5, fig.height=7.5, out.width='.8\\linewidth', fig.scap="Sampling distribution of sample means from Square Lake", fig.cap="Sampling distribution of the sample mean TL simulated from 5000 samples of six different sample sizes extracted from the Square Lake fish population.  The vertical blue line is the mean of the 5000 means and the horizontal red line represents $\\pm1$SE from the mean.">>=
   set.seed(10)
 par(mar=c(5,4,1.5,1),mfrow=c(3,2),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
 xlbl <- "Sample Mean"
@@ -336,7 +336,7 @@ Several observations can be made relative to the CLT from the results shown in \
 
 To illustrate that the CLT is not true just for the hypothetical Square Lake population, Figures \ref{fig:SampDistUnifMeann} and \ref{fig:SampDistExpMeann} show similar results for samples from a uniform (i.e., rectangular) and a strongly right-skewed exponential distribution, respectively.\footnote{Sampling distributions from theoretical population distributions are further explored with \R{cltSim()}.}  For each figure, note how (1) each distribution becomes more ``normal'' as $n$ increases, (2) the sampling distributions of sample means from the uniform distribution become normal faster (i.e., at a smaller $n$), (3) each sampling distribution remains centered on approximately the same value for all values of $n$ (approximately 0.5 for the uniform and 1 for the skewed population distribution), (4) each sampling distribution becomes narrower as $n$ increases (i.e., SE gets smaller), and (5) the observed SE is approximately equal to the SE expected from the CLT.
 
-<<SampDistUnifMeann, echo=FALSE, cache=TRUE, fig.width=5, fig.height=7.5, out.width='.8\\linewidth', fig.scap="Sampling distribution of sample means from uniform distribution", fig.cap="Sampling distribution of the sample mean simulated from 5000 samples of six different sample sizes extracted from a uniform population distribution.  The vertical blue line is the mean of the 5000 means and the horizontal red line represents $\\pm1$SE from the mean.">>=
+<<SampDistUnifMeann, echo=FALSE, fig.width=5, fig.height=7.5, out.width='.8\\linewidth', fig.scap="Sampling distribution of sample means from uniform distribution", fig.cap="Sampling distribution of the sample mean simulated from 5000 samples of six different sample sizes extracted from a uniform population distribution.  The vertical blue line is the mean of the 5000 means and the horizontal red line represents $\\pm1$SE from the mean.">>=
 set.seed(11)
 par(mar=c(5,4,1.5,1),mgp=c(2.1,0.4,0),mfrow=c(3,2),las=1,tcl=-0.2)
 xlbl <- "Sample Mean"
@@ -364,7 +364,7 @@ for (i in 1:length(ns)) {
 }
 @
 
-<<SampDistExpMeann, echo=FALSE, cache=TRUE, fig.width=5, fig.height=7.5, out.width='.8\\linewidth', fig.scap="Sampling distribution of sample means from exponential distribution", fig.cap="Sampling distribution of the sample mean simulated from 5000 samples of six different sample sizes extracted from an exponential population distribution ($\\lambda=1$).  The vertical blue line is the mean of the 5000 means and the horizontal red line represents $\\pm1$SE from the mean.">>=
+<<SampDistExpMeann, echo=FALSE, fig.width=5, fig.height=7.5, out.width='.8\\linewidth', fig.scap="Sampling distribution of sample means from exponential distribution", fig.cap="Sampling distribution of the sample mean simulated from 5000 samples of six different sample sizes extracted from an exponential population distribution ($\\lambda=1$).  The vertical blue line is the mean of the 5000 means and the horizontal red line represents $\\pm1$SE from the mean.">>=
 set.seed(11)
 par(mar=c(5,4,1.5,1),mgp=c(2.1,0.4,0),mfrow=c(3,2),las=1,tcl=-0.2)
 xlbl <- "Sample Mean"

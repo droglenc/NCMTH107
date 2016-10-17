@@ -128,7 +128,7 @@ hist(~mc,data=tmp,w=1,xlab=xlbl,xlim=c(9,19),ylim=c(0,5))
 
 Ideally eight to ten classes (i.e., bars) are used to construct a histogram.  Too many or too few bars make it difficult to identify the shape and may lead to different interpretations.  A dramatic example of the effect of changing the number of classes is seen in histograms of the length of eruptions for the Old Faithful geyser \figrefp{fig:histOF}.
 
-<<histOF, echo=FALSE, cache=TRUE, fig.show='animate', fig.cap='Hisgoram of length (minutes) of eruptions for Old Faitfhul geyser with varying number of classes.', aniopts='controls,palindrome,autoplay'>>=
+<<histOF, echo=FALSE, fig.show='animate', fig.cap='Hisgoram of length (minutes) of eruptions for Old Faitfhul geyser with varying number of classes.', aniopts='controls,palindrome,autoplay'>>=
 brksw <- c(seq(0.02,1,0.02),1.5,2)
 for (i in brksw) hist(~eruptions,data=faithful,breaks=seq(1.5,6,i),xlim=c(1.5,6),xlab="Duration of Eruption (mins)")
 @

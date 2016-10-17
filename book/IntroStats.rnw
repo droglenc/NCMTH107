@@ -7,6 +7,25 @@
 \usepackage{animate}
 
 \begin{document}
+<<echo=FALSE, eval=FALSE>>=
+## Run this manually (Ctrl-Alt-C) after compiling PDF to remove
+## the ability to print the PDF
+fn <- "IntroStats"
+dir <- "C:/aaaWork/Web/GitHub/NCMTH107/book/"
+eng <- paste0(dir,"pdftk.exe")
+inp <- paste0(dir,fn,".pdf")
+out <- paste0("output ",dir,fn,"_noPrint.pdf")
+pw <- paste("owner_pw mth107")
+( tmp <- paste(eng,inp,out,pw,"verbose") )
+system(tmp,show.output.on.console=TRUE)
+
+## Removes intermediate files from the directory
+tmp <- list.files(dir)
+tmp <- tmp[grepl(fn,tmp)]
+tmp <- tmp[!grepl(".pdf",tmp) & !grepl(".rnw",tmp)]
+file.remove(paste0(dir,tmp))
+@
+
 <<setup,echo=FALSE,include=FALSE>>=
 ## load knitr helper materials
 source("c:/aaaWork/zGnrlLatex/knitr_setup.R")

@@ -519,7 +519,7 @@ awSum <- Summarize(~arswater,data=ars)
       \item The distribution of arsenic in the well water is very strongly right-skewed with an outlier at \Sexpr{formatC(awSum["max"],format="f",digits=4)} ppm.  The center as measured by the median is \Sexpr{formatC(awSum["median"],format="f",digits=4)} and the IQR is from a Q1 of \Sexpr{formatC(awSum["Q1"],format="f",digits=4)} to a Q3 of \Sexpr{formatC(awSum["Q3"],format="f",digits=4)}.  The median and IQR were used because of the highly skewed distribution and the presence of an outlier.
 <<ArsHist1, fig.width=3.5, fig.height=3.5, par1=TRUE>>=
 Summarize(~arswater,data=ars,digits=4)
-hist(~arswater,data=ars,xlab="Arsenic in Well-Water",ylab="Frequency",main="")
+hist(~arswater,data=ars,xlab="Arsenic in Well-Water",ylab="Frequency")
 @
 
 <<echo=FALSE, results='hide'>>=
@@ -528,7 +528,7 @@ atSum <- Summarize(~arsnails,data=ars)
       \item The distribution of arsenic in the toe nails is very strongly right-skewed with an outlier at \Sexpr{formatC(atSum["max"],format="f",digits=4)} ppm.  The center as measured by the median is \Sexpr{formatC(atSum["median"],format="f",digits=4)} and the IQR is from a Q1 of \Sexpr{formatC(atSum["Q1"],format="f",digits=4)} to a Q3 of \Sexpr{formatC(atSum["Q3"],format="f",digits=4)}.  The median and IQR were used because of the highly skewed distribution and the presence of an outlier.
 <<ArsHist2, fig.width=3.5, fig.height=3.5, par1=TRUE>>=
 Summarize(~arsnails,data=ars,digits=4)
-hist(~arsnails,data=ars,xlab="Arsenic in Toe-Nails",ylab="Frequency",main="")
+hist(~arsnails,data=ars,xlab="Arsenic in Toe-Nails",ylab="Frequency")
 @
 
       \item The sample size is very low for four of the five groups (sample sizes less than or equal to 3).  Thus, the distribution can only be described for the category with the most usage for drinking water.  The distribution of arsenic in toe nails for the largest drinking usage group is right-skewed, with no obvious outliers, a median of 0.2220, and an IQR from 0.1230 to 0.4143.  The median and IQR were used because of the highly skewed distribution and the presence of an outlier.
@@ -626,7 +626,7 @@ ggSum <- Summarize(~pl,data=gg)
 gg <- read.csv("data/GreenGables.csv")
 @
 <<PLHist, fig.width=3.5, fig.height=3.5, fig.cap="Histogram of number of purple loosestrife plants in Green Gables Slough.", par1=TRUE>>=
-hist(~pl,data=gg,xlab="Number of Plants",main="")
+hist(~pl,data=gg,xlab="Number of Plants")
 @
 <<eval=FALSE>>=
 Summarize(~pl,data=gg,digits=2)
@@ -663,7 +663,7 @@ djSum <- Summarize(~hcr,data=dj)
 dj <- read.csv("data/DowJones.csv")
 @
 <<DJHist, fig.width=3.5, fig.height=3.5, fig.cap="Histogram of the Dow Jones Travel Index for 20 cities.", par1=TRUE>>=
-hist(~hcr,data=dj,xlab="Dow Jones Travel Index",main="")
+hist(~hcr,data=dj,xlab="Dow Jones Travel Index")
 @
 <<eval=FALSE>>=
 Summarize(~hcr,data=dj,digits=2)
@@ -701,7 +701,7 @@ dSum <- Summarize(~size,data=d)
 d <- read.csv("data/Zoo2.csv",header=TRUE)
 @
 <<ZooHist, fig.width=3.5, fig.height=3.5, fig.cap="Histogram of the size of 46 American zoos.", par1=TRUE>>=
-hist(~size,data=d,xlab="Size (acres)",main="")
+hist(~size,data=d,xlab="Size (acres)")
 @
 <<eval=FALSE>>=
 Summarize(~size,data=d,digits=2)
@@ -1282,7 +1282,7 @@ rSquared(fc.lm)
       \item The correlation coefficient is $r$ = \Sexpr{formatC(-1*sqrt(rSquared(fc.lm)),format="f",digits=3)}. [$\sqrt{r^{2}}$], but don't forget the negative sign because of negative association in the plot.]
       \item The data appear to be linear but there is a slight hint of heteroscedasticity, though this hint is largely due to the slight outlier in the lower-right corner of the fitted-line plot \figrefp{fig:FlyCatFitPlot}.  The fitted-line plot was constructed with
 <<FlyCatFitPlot, fig.width=3.5, fig.height=3.5, fig.cap="Fitted line plot for the relationship between flycatcher wing length and the days since January 1.", par1=TRUE>>=
-fitPlot(fc.lm,xlab="Days Since Jan. 1",ylab="Wing Length (mm)",main="")
+fitPlot(fc.lm,xlab="Days Since Jan. 1",ylab="Wing Length (mm)")
 @
     \end{enumerate}
 
@@ -1345,7 +1345,7 @@ rSquared(r.lm)
 @
       \item The assumptions appear to be met as the fitted-line plot \figrefp{fig:RIFAFitPlot} does not exhibit any curvature or funneling.  The fitted-line plot was constructed with
 <<RIFAFitPlot, fig.width=3.5, fig.height=3.5, fig.cap="Fitted line plot for the relationship between fawn recruitment and RIFA index.", par1=TRUE>>=
-fitPlot(r.lm,xlab="RIFA Index",ylab="Fawn Recruitment",main="")
+fitPlot(r.lm,xlab="RIFA Index",ylab="Fawn Recruitment")
 @
     \end{enumerate}
 
@@ -1378,7 +1378,7 @@ rSquared(ma.lm)
 @
       \item Neither the linearity or homoscedasticity assumption seems to be violated in this analysis because the fitted-linel plot does not show any curvature or funneling \figrefp{fig:NCAssessFitPlot}.  The fitted-line plot was constructed with
 <<NCAssessFitPlot, fig.width=3.5, fig.height=3.5, fig.cap="Fitted-line plot for the relationship between ACT score and math assessment score.", par1=TRUE>>=
-fitPlot(ma.lm,xlab="ACT Score",ylab="Math Assessment Score",main="")
+fitPlot(ma.lm,xlab="ACT Score",ylab="Math Assessment Score")
 @
       \item Yes, predictions should be good because the assumptions have been met and the $r^{2}$ values is fairly high indicating good predictability.
     \end{enumerate}
@@ -1410,7 +1410,7 @@ rSquared(ff.lm)
       \item The correlation coefficient is $r$ = \Sexpr{formatC(sqrt(rSquared(ff.lm)),format="f",digits=3)} (the square root of $r^{2}$ shown in the previous answer).
       \item The data generally appear to be linear and homoscedastic because there is no curvature or funneling inthe fitted line plot \figrefp{fig:dnaFitPlot}.  There is, however, an outlier much below the line on the far right; the results of this regression may be suspect because of this outlier \figrefp{fig:dnaFitPlot}.  The fitted-line plot was constructed with
 <<dnaFitPlot, fig.width=3.5, fig.height=3.5, fig.cap="Fitted-line plot for the relationship between fresh and frozen DNA samples.", par1=TRUE>>=
-fitPlot(ff.lm,main="")
+fitPlot(ff.lm)
 @
     \end{enumerate}
 
@@ -1470,7 +1470,7 @@ rSquared(ch.lm)
 @
       \item The assumptions look largely met as the fitted-line plot \figrefp{fig:ChirpsFitPlot} is largely linear although there is a small hint of heteroscedasticity.  The fitted-line plot was constructed with
 <<ChirpsFitPlot, fig.width=3.5, fig.height=3.5, fig.cap="Fitted-line plot for the relationship between temperature and the number of chirps.", par1=TRUE>>=
-fitPlot(ch.lm,main="")
+fitPlot(ch.lm)
 @
     \end{enumerate}
 
@@ -2191,7 +2191,7 @@ str(tt)
 @
       \item The $\sigma$ is unknown.  The sample size (=\Sexpr{length(tt$time)}) is not greater than 40, however it is greater than 15.  The histogram \figrefp{fig:ToyTimeHist} suggests that the sample distribution is roughly symmetric.  Thus, the assumptions are adequately met and the sampling distribution of the test statistic should follow a t-distribution.
 <<ToyTimeHist, fig.width=3.5, fig.height=3.5, fig.cap="Histogram of time to assemble toy.", par1=TRUE>>=
-hist(~time,data=tt,main="",xlab="Time to Assemble Toy (mins)")
+hist(~time,data=tt,xlab="Time to Assemble Toy (mins)")
 @
 The results of the t-test were then computed with
 <<>>=
@@ -2240,7 +2240,7 @@ str(d)
 @
       \item The $\sigma$ is unknown.  The sample size (=\Sexpr{dim(d)[1]}) is greater than 15 and the sample distribution is somewhat right-skewed with minor outliers \figrefp{fig:BeadsHist}.  The assumptions are marginally met and the sampling distribution of the test statistic will likely follow a t-distribution.
 <<BeadsHist, fig.width=3.5, fig.height=3.5, fig.cap="Histogram of the width-to-length ratio of Shoshoni beads.", par1=TRUE>>=
-hist(~ratios,data=d,main="",xlab="Width-to-Length Ratio of Beads")
+hist(~ratios,data=d,xlab="Width-to-Length Ratio of Beads")
 @
 The results of the t-test were then computed with
 <<>>=
@@ -2369,7 +2369,7 @@ headtail(med)
 @
       \item The populations are independent (all interns were not in both cities).  The sample size ($n_{1}+n_{2}$=\Sexpr{dim(med)[1]}) is $<40$ but $>15$.  Histograms constructed for both groups \figrefp{fig:MedInternHrsHist} suggested a right-skewness but not an overly strong skew (this is very difficult to ascertain because of the small sample size).
 <<MedInternHrsHist, fig.width=7, fig.height=3.5, fig.cap="Histogram of hours worked by medical school interns in two cities.", par1=TRUE>>=
-hist(hrs.worked~city,data=med,main="",xlab="Hours Worked")
+hist(hrs.worked~city,data=med,xlab="Hours Worked")
 @
 <<echo=FALSE,results='hide'>>=
 tmp <- levenesTest(hrs.worked~city,data=med)
