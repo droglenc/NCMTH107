@@ -50,12 +50,6 @@ After completing this module you should re-read **Section 10.5** in [the textboo
 
 ----
 
-## Homework Assignment
-
-* None.
-
-----
-
 ## Archived Materials
 
 * [Old Lecture Slides](PPT_old.pptx)

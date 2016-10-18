@@ -53,12 +53,6 @@ Second, you should read **Sections 5.3-5.4** in [the textbook](../../book/) and 
 
 ----
 
-## Homework Assignment
-
-* Questions **5.24 and 5.25** in [the textbook](../../book/) will assess your understanding of these materials.  The due date will be announced in class and posted in [due dates](../../resources/Dates-Current).
-
-----
-
 ## Archived Materials
 
 * [Old Lecture Slides](PPT_old.pptx)

@@ -52,12 +52,6 @@ You should prepare for the concepts of this module by reading **Sections 3.2-3.4
 
 ----
 
-## Homework Assignment
-
-* Question **3.12** in [the textbook](../../book/) will assess your understanding of these materials.  The due date will be announced in class and posted in [due dates](../../resources/Dates-Current).
-
-----
-
 ## Archived Materials
 
 * none

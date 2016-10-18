@@ -48,12 +48,6 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
 
 ----
 
-## Homework Assignment
-
-* None.
-
-----
-
 ## Archived Materials
 
 * [Old Lecture Slides](PPT_old.pptx)

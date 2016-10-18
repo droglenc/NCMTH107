@@ -46,12 +46,6 @@ You should prepare for the concepts of this module by reading **Section 1.1** in
 
 ----
 
-## Homework Assignment
-
-* Questions **1.27-1.29** in [the textbook](../../book/) will assess your understanding of these materials.  The due date will be announced in class and posted in [due dates](../../resources/Dates-Current).
-
-----
-
 ## Archived Materials
 
 * [Class Lecture Slides](PPT.pptx)
