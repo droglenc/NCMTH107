@@ -12,6 +12,7 @@ css: /css/syllabus.css
       <h4>Prof. Ogle's Section</h4>
       <dl class="dl-horizontal">
       <dt>19-Oct</dt><dd>7.19 and (separately) 8.4 and 8.5</dd>
+      <dt>24-Oct</dt><dd>9.22-9.24</dd>
 <!---
       <dt>16-Sep</dt><dd>1.27-1.35</dd>
       <dt>19-Sep</dt><dd>2.10-2.11</dd>
@@ -54,9 +55,9 @@ css: /css/syllabus.css
 
 ## Cancelled Classes
 <dl class="dl-horizontal">
-<dt>17-Oct</dt><dd>NO CLASS (College Reading Day)</dd>
 <dt>23-Nov</dt><dd>NO CLASS (Thanksgiving Break)</dd>
 <dt>25-Nov</dt><dd>NO CLASS (Thanksgiving Break)</dd>
 <!---
+<dt>17-Oct</dt><dd>NO CLASS (College Reading Day)</dd>
 --->
 </dl>
