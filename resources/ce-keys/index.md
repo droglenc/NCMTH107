@@ -14,9 +14,9 @@ title: Class Exercise Keys
 1. [Bivariate EDA - Categorical](BivEDA_Categorical.html)
 1. [Linear Regression](Linear_Regression.html)
 1. [Probability Introduction](Probability.html)
+1. [Sampling Distributions](Sampling_Distributions.html)
 
 <!--
-1. [Sampling Distributions](Sampling_Distributions.html)
 1. [Hypothesis Testing](Hypothesis_Testing.html)
 1. [Confidence Regions](Confidence_Intervals.html)
 1. [1-Sample Z-Test](1_Sample_Z.html)
