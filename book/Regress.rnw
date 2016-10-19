@@ -203,7 +203,7 @@ An infinite number of lines can be placed on a graph.  Obviously, many of those 
 
 Residuals are a measure of how far away an individual is from a candidate best-fit line.  All residuals computed from all individuals in a data set is a measure of how far away all of the individuals are from the candidate best-fit line.  Thus, the residuals for all individuals can be used to identify the best-fit line.  The residual sum-of-squares (RSS) is defined as the sum of all squared residuals.\index{RSS}  The least-squares criterion says that the ``best-fit'' line is the line out of all possible lines that has the minimum RSS.  Only one candidate line will have the minimum RSS and the least-squares method defines this as the ``best-fit'' line to the data \figref{fig:RSSanim}.
 
-<<RSSanim, echo=FALSE, fig.width=7, fig.height=3.5, fig.show='animate',fig.cap="An animation illustrating how the residual sum-of-squares (RSS) for a series of candidate lines (red lines) is minimized at the best-fit line (green line).", aniopts='controls,palindrome,autoplay',out.width='.8\\linewidth'>>=
+<<RSSanim, echo=FALSE, cache=TRUE, fig.width=7, fig.height=3.5, fig.show='animate',fig.cap="An animation illustrating how the residual sum-of-squares (RSS) for a series of candidate lines (red lines) is minimized at the best-fit line (green line).", aniopts='controls,palindrome,autoplay',out.width='.8\\linewidth'>>=
 ################################################################################
 # Function to calculate the RSS given a dataframe that must have the explanatory
 #   variable in the first column and the response variable in the second column

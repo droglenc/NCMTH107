@@ -23,7 +23,7 @@ set_parent('IntroStats.Rnw')
 \section{t-distribution}\label{sect:tDist}\index{t Distribution!Characteristics}
 A t-distribution is similar to a standard normal distribution (i.e., N(0,1)) in that it is centered on 0 and is bell shaped \figrefp{fig:tvsZ}.  The t-distribution differs from the standard normal distribution in that it is heavier in the tails, flatter near the center, and its exact dispersion is dictated by a quantity called the degrees-of-freedom (df).  The t-distribution is ``flatter and fatter'' because of the uncertainty surrounding the use of the sample standard deviation in the standard error calculation\footnote{Recall that the sample standard deviation is a statistic and is thus subject to sampling variability.}.  The degrees of freedom are a function of the sample size and generally come from the denominator of the sample standard deviation calculation.  As the degrees-of-freedom increase, the t-distribution becomes narrower and taller and approaches the shape and dispersion of the standard normal distribution \figrefp{fig:tvsZ}.
 
-<<tvsZ, echo=FALSE, fig.show='animate', fig.cap="Standard normal (black) and t-distributions (red) with varying degrees-of-freedom.", aniopts="controls,loop,autoplay">>=
+<<tvsZ, echo=FALSE, cache=TRUE, fig.show='animate', fig.cap="Standard normal (black) and t-distributions (red) with varying degrees-of-freedom.", aniopts="controls,loop,autoplay">>=
 par(mar=c(3,1,1,1),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
 x <- seq(-4,4,by=0.001)
 n1 <- dnorm(x,0,1)

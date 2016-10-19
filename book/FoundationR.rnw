@@ -9,9 +9,9 @@ set_parent('IntroStats.Rnw')
     \item Understand the difference between R expressions and assignments.
     \item Understand the different types of data that can be stored in R.
     \item Understand the different types of data structures used in R.
-    \item Be able to enter data into R data frames.
+    \item Be able to enter data into R data.frames.
     \item Be able to isolate individual variables and individuals in R.
-    \item Be able to create data frames that are subsets of larger data frames.
+    \item Be able to create data.frames that are subsets of larger data.frames.
     \item Understand how homework assignments should be formatted.
   \end{Enumerate}
 \end{ChapObj}
@@ -27,9 +27,9 @@ Detailed methods for downloading, installing, and configuring R, RStudio, and \R
 \section{Working With R Basics} \label{sect:RBasics}
 \vspace{-12pt}
 \subsection{Saving Results} \label{sect:RSaving}
-Results are not saved in R or RStudio.  Rather, ``scripts'' of successful R commands are saved and, then, if the analysis needs to be re-done, the entire set of commands is opened in RStudio and run again.  When writing a report, all tabular and graphical output should be copied from RStudio and pasted into your report document.  This document will serve as your analysis report and can be modified to include answers to questions, references to the tables and graphs, etc.\footnote{Specifics for how to format homework assignments in on the course syllabus}  All data that is not a simple vector (see \sectref{sect:RInfoStorage}) should be entered into R through text files (see \sectref{sect:REnterData}).
+Results are not saved in R or RStudio.  Rather, ``scripts'' of successful R commands are saved and, then, if the analysis needs to be re-done, the entire set of commands is opened in RStudio and run again.  When writing a report, all tabular and graphical output should be copied from RStudio and pasted into your report document.  This document will serve as your analysis report and can be modified to include answers to questions, references to the tables and graphs, etc.\footnote{Specifics for how to format homework assignments in on the course syllabus}  All data that is not a simple vector (see \sectref{sect:RVectors}) should be entered into R through text files (see \sectref{sect:REnterData}).
 
-R does allow one to save a ``workspace.''  I strongly urge you to follow the workflow described in the previous paragraph rather than saving the workspace.  Saving the workspace will ``bring back'' objects that you have either forgotten about, contain incorrect information, or otherwise clutter the work area which creates problems for most students.  Save your ``good'' commands in a script and save your ``good'' results in a report document; do not save the workspace.
+R does allow one to save a ``workspace'', though I urge you not to do that.  Rather, save your ``good'' commands in a script and save your ``good'' results in a report document; do not save the workspace.
 
 \warn{Do NOT save the workspace in R.}
 
@@ -41,16 +41,16 @@ Expressions in R are mathematical ``equations'' that are evaluated by R with a r
 5+log(7)-pi
 @
 
-where \R{log()} and \R{pi} are built-in functions used to compute the natural log and find the value of $\pi$, respectively.  Expressions in R are like using a calculator where the result is shown but not saved for subsequent analyses.  In addition, expressions in R follow the same order of operations and use of parentheses as expressions entered into your calculator.
+where \R{log()} and \R{pi} are built-in functions used to compute the natural log and find the value of $\pi$, respectively.  Expressions in R are like using a calculator where the result is shown, but not saved for subsequent analyses.  In addition, expressions in R follow the same order of operations and use of parentheses as expressions entered into your calculator.
 
 \warn{The results of expressions in R are temporary unless the result is assigned to an object.}
 
-Typically results from an expression will be saved for further computations.  This ``saving'' is accomplished by assigning the results of an expression to an object in R.  The results of an expression is assigned to an object with the assignment operator (i.e., \R{<-}).  The general form for saving the result of an expression into an object is \R{object <- expression}.  The result of the expression will not be seen unless the object name is subsequently typed into R (but see below).  For example, the result of the previous expression is saved into an object called \var{x} and then viewed with
+Results from an expression are typically saved for further computations by assigning the results of the expression to an object with the assignment operator (i.e., \R{<-}).  The general form for saving the result of an expression into an object is \R{object <- expression}.  The result of the expression will not be seen unless the object name is subsequently typed into R (but see below).  For example, the result of the previous expression is saved into an object called \R{x} and then viewed with
 <<>>=
 x <- 5+log(7)-pi
 x
 @
-Many times one wants to also see the result of an expression immediately after it has been saved to an object.  As shown above, one can simply type the name of the object.  However, a short-cut for both assigning and printing the result of an expression is to surround the entire command in parentheses.  For example, the following both assigns the result of the expression to \var{y} and prints the result,\footnote{Note that the spaces after the opening parentheses and before the closing parentheses are not needed.  However, they make the code more legible.}
+A short-cut for both assigning and printing the result of an expression is to surround the entire command in parentheses.  For example, the following assigns the result of the expression to \R{y} and prints the result.\footnote{Note that the spaces after the opening parentheses and before the closing parentheses are not needed.  However, they make the code more legible.}
 <<>>=
 ( y <- 15*exp(2) )
 # note that the next line is now not needed
@@ -59,7 +59,7 @@ y
 
 \warn{The convention of surrounding commands in parentheses to both assign and print the results will be used extensively in this book to save space.}
 
-As a general rule, you should assign your computations to an object so that the result can be easily retrieved later.\footnote{Note, however, that each assignment uses computer memory.  Thus, if you know for sure that you will not need the result for later use, then do not assign it to an object.  Memory can also be made available by removing objects that are known to no longer be of use.  Objects are removed from R with \R{rm(objectname)}.  A list of current objects is obtained with \R{ls()} and all objects are removed with the \R{Menu..Remove All Objects} menu item.}  The name of the object can generally be whatever you want with the exception that it cannot start with a number, contain a space, or be the name of a reserved word or function in R (e.g., \R{pi} or \R{log}).  Furthermore, you should keep object names short and simple enough that you can remember what is contained in the object.  It is also good practice to type the name of the object immediately after making the assignment to make sure that it (1) contains results and (2) contains results that seem appropriate.
+An object can be named whatever you want, with the exception that it cannot start with a number, contain a space, or be the name of a reserved word or function in R (e.g., \R{pi} or \R{log}).  Furthermore, object names should be short and simple enough that you can remember what is contained in the object.  It is also good practice to view the object immediately after making the assignment to make sure that it contains results that seem appropriate.
 
 \warn{In general, computational results should be assigned to an object.}
 
@@ -77,7 +77,7 @@ As a general rule, you should assign your computations to an object so that the 
 
 \vspace{-12pt}
 \subsection{Functions and Arguments}  \label{sect:RFunctions}
-R contains many ``programs,'' or functions, to perform particular tasks.  A function is ``called'' by typing the function name followed by open and closed parentheses.  Arguments sent to the function, which the function will use to perform its task, are contained within the parentheses.  The \R{log()} function, used in the previous section, is an example of a function.  The name of the function is \R{log} and the argument, the number for which to compute the natural log, is contained within the parentheses following the function name.  The performance of many other functions will be described below and in subsequent chapters.
+R contains many ``programs,'' or functions, to perform particular tasks.  A function is ``called'' by typing the function name followed by open and closed parentheses.  Arguments, which the function will use to perform its task, are contained within the parentheses.  The \R{log()} function, used in the previous section, is an example of a function.  The name of the function is \R{log} and the argument, the number for which to compute the natural log, is contained within the parentheses following the function name.  Many other functions will be described below and in subsequent chapters.
 
 \defn{Function}{An R program that performs a particular task.}
 
@@ -88,162 +88,65 @@ R contains many ``programs,'' or functions, to perform particular tasks.  A func
 \warn{Regular curved parentheses have two primary uses in R: (1) to control order of operations in expressions (as with a calculator) and (2) to contain the arguments sent to a function.}
 
 
-\section{Information/Data Storage}
-\vspace{-12pt}
+\section{Working With Data}
 \subsection{Data Types}  \label{sect:RDataTypes}
-R uses the following data types:
-\begin{Enumerate}
-  \item \textbf{int}: Integer.
-  \item \textbf{num}: Non-integer numeric.
-  \item \textbf{chr}: Character.
-  \item \textbf{factor}: Factor (special form of character).
-  \item \textbf{logi}: Logical (i.e., \R{TRUE} and \R{FALSE}).
-\end{Enumerate}
-The data type of an object is found by including the object name in \R{str()}.\footnote{Note that \R{str} comes from the word ``structure.''}
-<<>>=
-x <- 5+log(7)-pi
-str(x)
-prof <- "Derek"
-str(prof)
-@
-
-In addition, there is a special \textbf{factor} data type that consists of characters with underlying integer codes that identify specific groupings\index{Factor!Variable in R}.  In other words, a factor identifies to which group an individual belongs.  For example, suppose that the numeric vector \var{group} contains a ``0'' if the individual is a male and a ``1'' if the individual is a female.  R will treat these ``codes'' as numbers unless it is explicitly told to treat them as grouping codes.  In the example below, \R{factor()} is used to create the new \var{fgroup} vector which explicitly tells R to consider these numbers as codes.
-<<>>=
-group <- c(0,0,1,1,0,1,1)
-str(group)
-fgroup <- factor(group)
-str(fgroup)
-@
+Data in R will be designated as an integer (whole numbers), numeric (non-integer numerica values), character (strings), factor (group membershop), or logical (TRUE/FALSE).  The type of data largely dictates the types of analyses that can be performed.  Data types will be discussed in more detail as needed.  Note, however, that the \textbf{factor} data type is a special case of the character data type, where the specific items describe to which group an individual belongs.  This description allows certain types of analyses to be performed in later chapters.
 
 \defn{Factor}{A special type of variable that identifies the group to which an individual belongs.}
 
-\vspace{-12pt}
-\warn{A character or integer vector that is designed to identify to which group an individual belongs should be converted to a group factor variable with the \R{factor()} function.}
-
-
-\subsection{Information Storage}  \label{sect:RInfoStorage}
-Data is stored in one of four object types, which may be categorized by their general shape (or number of dimensions) and restrictions on the type of data that each can contain \tabrefp{tab:InfoStoreObjects}.  The vector and data frame types are used almost exclusively in this book.
-
-\begin{table}[htbp]
-  \centering
-  \caption{Information storage objects in R categorized by dimensions of the object and the data types possible in the object.}\label{tab:InfoStoreObjects}
-  \begin{tabular}{c||c|c|}
-    \multicolumn{1}{c}{} & \multicolumn{2}{c}{\widen{-1}{6}{Dimensions}} \\
-    \cline{2-3}
-    \widen{-1}{6}{Data Types} & One & Multi \\
-    \hline\hline
-    \multicolumn{1}{|c||}{\widen{-1}{6}{One}} & Vector & Matrix \\
-    \hline
-    \multicolumn{1}{|c||}{\widen{-1}{6}{Mixed}} & List & Data Frame \\
-    \hline
-  \end{tabular}
-\end{table}
-
-The primary information storage object in R is the \emph{vector}.  A vector consists of a one-dimensional list of items of the same data type (e.g., all numeric, all character, etc.).  Vectors are usually displayed in one row (with many columns), but they may also be thought of as a single column (with many rows).
-
-\defn{Vector}{A one-dimensional list of items of the same data type.  The primary information storage unit in R.}
-
-Data are entered into a vector with \R{c()}, where the individual arguments are specific numbers, characters, or logical values.\footnote{Note that \R{c} comes from the word ``concatenate.''}  For example, the following concatenates the numbers 1, 2, and 5 into a vector called \var{v},
-<<>>=
-( v <- c(1,2,5) )
-@
-
-The ``values'' for a character variable must be contained within paired quotes when entered into a vector.
-<<>>=
-( y <- c("Iowa","Minnesota","Wisconsin") )
-@
-
-Each item in a vector may be accessed with the numeric position of that item within square brackets following the name of the vector.  For example, the third item in the \var{v} vector is found with
-<<>>=
-v[3]
-@
-
-\warn{The value of an item within a vector is found by including the position of the item in square brackets immediately after the name of the vector.}
-
-\vspace{-12pt}
-\warn{Identifying the position of an item in an object is the ONLY time that square brackets are used in R.}
-
-A \emph{data frame} is a two-dimensional object of potentially different data types.  In a data frame, the columns correspond to variables and the rows correspond to individuals.  For simplicity, a data frame can be thought of as a ``spreadsheet'' that contains several variables (columns) recorded on many individuals (rows).
-
-\defn{Data Frame}{A two-dimensional organization of variables (as columns) recorded on multiple individuals (as rows) where the columns may be of different data types.}
-
-\vspace{-12pt}
-\warn{A data frame may have columns of different data types (e.g., numeric and character) whereas a vector must have columns all of the same data type.}
-
-\vspace{-12pt}
-\warn{The columns of a data frame correspond to variables and the rows of a data frame correspond to individuals.}
-
-A data frame is constructed from separate vectors with \R{data.frame()}.\footnote{Note, however, that it is generally much more efficient to read data from an external text file into a data frame (see \sectref{sect:REnterData}).}  The arguments to \R{data.frame()} are the vectors to be combined column-wise into the data frame.  An example of creating a simple data frame, called \var{moths}, from vectors is
-<<>>=
-len <- c(45,56,67)
-sex <- c("M","M","F")
-dead <- c(TRUE,FALSE,FALSE)
-( moths <- data.frame(len,sex,dead) )
-@
-
-\warn{Data is most often entered into a data frame through an external file rather than through \R{data.frame()}.}
-
-Each column of a data frame corresponds to a vector representing a single variable.  A particular variable is accessed by typing the data frame name, followed by a dollar sign, followed by the name of the variable (i.e., \R{data.frame\$variable}).  In other words, the \var{len} variable in the \var{moths} data frame is specifically accessed with \R{moths\$len}.  As the result of this command is a simple vector, the measurement of \var{len} on the third individual is accessed with \R{moths\$len[3]}.
-<<>>=
-moths$len      # all lengths
-moths$len[3]   # length of third individual
-@
-
-\warn{The columns of a data frame are accessed with the name of the data frame, a dollar sign, and then the name of the variable -- i.e., generically, \R{dataframe\$varname}.}
-
-\vspace{-12pt}
-\warn{A dollar sign is ONLY used in R to separate the name of a data frame from the name of a variable within that data frame.}
-
-\begin{exsection}
-  \item \label{revex:BasicsData1}\rhw{} Create a vector called \var{h} that contains nine heights of people. \ansref{ans:BasicsData1}
-  \item \label{revex:BasicsData2}\rhw{} Create a vector called \var{w} that contains nine weights of people. \ansref{ans:BasicsData2}
-  \item \label{revex:BasicsData3}\rhw{} Create a vector called \var{hc} that contains nine hair colors of people. \ansref{ans:BasicsData3}
-  \item \label{revex:BasicsData4}\rhw{} Create a vector called \var{m} that contains nine logical values (=\R{TRUE} if male). \ansref{ans:BasicsData4}
-  \item \label{revex:BasicsData5}\rhw{} Using the vectors from the previous questions,  \ansref{ans:BasicsData5}
-  \begin{Enumerate}
-    \item ... create the largest possible data frame (use \R{data.frame()}).
-    \item ... identify the height of the third individual of this data frame.
-    \item ... identify the hair color for the sixth individual of this data frame.
-  \end{Enumerate}
-\end{exsection}
-
 \subsection{Entering Data}  \label{sect:REnterData}
-For data that consists of several variables from many individuals it is most efficient to enter the data into an external spreadsheet or database program, export the data from that program to a comma-separated values (CSV) text file, and then import that file into R.  While this may sound cumbersome, it is a very efficient way to store data as most data, for realistic size situations, has already been entered into a spreadsheet or database program.  The following paragraphs describe how to enter data into Microsoft Excel, export that data to a CSV file, and then import that file into R.
+For real data (i.e., several variables from many individuals) it is most efficient to enter data into a comma-separated values (CSV) file and then import that file into R.  Creating a CSV file with Microsoft Excel is described below, though there are other ways to create CSV files (see \href{http://derekogle.com/NCMTH107/resources/FAQ/}{FAQs on class webpage}).  This explanation assumes that you have a basic understanding of Excel (or other spreadsheet softwares).
 
 \warn{Realistic datasets are most efficiently entered into a comma-separated values (CSV) file in preparation for importing into R.}
 
-The Excel file should be organized with variable names in the first row and the recorded data in rows below that.  In this example, the variable name \var{len} is entered into the first cell of the first row and seven length measurements are listed in the next seven rows.
+The spreadsheet should be organized with variables in columns and individuals in rows, with the exception that the first row should contain variable names.  The example spreadsheet below shows the length (cm), weight (kg), and capture location data for a small sample of Black Bears.
+
 \begin{center}
   \includegraphics[width=1.5in]{Figs/Data_File_1.jpg}
 \end{center}
 
-The variable name must NOT contain any spaces.  For example use \var{len} rather than \var{total length} or \var{length (mm)}.  If you feel the need to have longer variable names, then separate the parts with a period (e.g., \var{total.length}) or an underscore (e.g., \var{total\_length}).  Furthermore, numerical measurements should NOT include units (e.g., don't use \verb"7 mm").  Finally, when using categorical data to denote group memberships make sure that all category labels are consistent (e.g., do not have a column that contains both \verb"male" and \verb"Male").
+
+\defn{Data Frame}{A two-dimensional organization of variables (as columns) recorded on multiple individuals (as rows) where the columns may be of different data types.}
+
+\vspace{-12pt}
+\warn{A data.frame may have columns of different data types (e.g., numeric and character) whereas a vector must have columns all of the same data type.}
+
+\vspace{-12pt}
+\warn{The columns of a data.frame correspond to variables and the rows of a data.frame correspond to individuals.}
+
+Variable names must NOT contain spaces.  For example, don't use \var{total length} or \var{length (cm)}.  If you feel the need to have longer variable names, then separate the parts with a period (e.g., \var{length.cm}) or an underscore (e.g., \var{length\_cm}).  Furthermore, numerical measurements should NOT include units (e.g., don't use \verb"7 cm").  Finally, for categorical data, make sure that all categories are consistent (e.g., do not have a column that contains both \verb"bayfield" and \verb"Bayfield").
 
 \warn{Variable names and data should not contain spaces.  The \R{Error in scan} error message usually indicates that you have spaces in the variable names or data.}
 
-The Excel file should be saved as a CSV file by selecting the \verb"File..Save As" menu item which produces the following dialog box.
+The spreadsheet is saved as a CSV file by selecting the \verb"File..Save As" menu item, which will produce the dialog box below. In this dialog box, change \verb"Save as type" to \verb"CSV (Comma delimited) (*.csv)" (you may have to scroll down), provide a file name (don't have any periods in the name besides for ``.csv'', which you should not have to type), select a location to save the file (don't forget this location!!), and press \verb"Save".  Two ``warning'' dialog boxes may then appear -- select \verb"OK" for the first and \verb"YES" for the second.  You can now close the spreadsheet file (you may be asked to save changes -- you should say \verb"No").
 \begin{center}
-  \includegraphics[width=4.5in]{Figs/Data_File_2.jpg}
+  \includegraphics[width=3.5in]{Figs/Data_File_2.jpg}
 \end{center}
 
-In this dialog box, change \verb"Save as type" to \verb"CSV (Comma delimited) (*.csv)" (you may have to scroll down), provide a file name (don't have any periods in the name besides for ``.csv''), select a location to save the file (don't forget this location!!), and press \verb"Save".  Two ``warning'' dialog boxes may then appear -- select \verb"OK" on the first and \verb"YES" on the second.  A CSV file will now be created with the name and in the folder you provided.  You can now close the Excel file (you will likely be asked to save changes -- you should say \verb"No").
+The following steps should be used to load the data in the CSV file into R.
 
-The R working directory must be set to the directory where the the CSV file was saved before it can be read into R.  The simplest method for setting the working directory is to save an RStudio script file in the same directory as the data file.  If you do this, then you can choose the \verb"Session", \verb"Set Working Directory ...", \verb"To Source File Location" menu items in RStudio which will send an appropriate \R{setwd()} command to the R console.  This command should then be copied from the console to your script for future use.\footnote{Doing this will eliminate the need to manually select the menu options every time you want to run this script.}
+\begin{Itemize}
+  \item Open RStudio.
+  \item Open a new script by selecting the \verb"File", \verb"New File", \verb"R Script" menu items.
+  \item Type \R{library(NCStats)} in the new script.
+  \item Save this script by selecting the \verb"File", \verb"Save" menu items.  In the ensuing dialog box, navigate to the \textbf{exact same directory} where you saved the data, type a name for the file in the \verb"File name:" box (\textbf{do not use a period in this name!!}), and press \verb"Save".
 
-Regardless of which method you use, the result is a \R{setwd()} command that has the path to the directory that contains the data as the argument.  For example, I stored the file creaed above in the \verb"C:/data" directory.  Thus, the method of the previous paragraph would result in the following code for \R{setwd()}, which I then put in my script.
+\begin{center}
+  \includegraphics[width=3.5in]{Figs/Data_File_3.jpg}
+\end{center}
 
-<<eval=FALSE>>=
-setwd("C:/data/")
+  \item Set the working directory (tell R where the file is) with the \verb"Session", \verb"Set Working Directory ...", \verb"To Source File Location" menu items in RStudio.  RStudio will print an appropriate \R{setwd()} command to the console.  Copy this command from the console to the second line in your script.\footnote{Doing this will eliminate the need to manually select the menu options every time you want to run this script.}  For example, I stored the file created above in the \verb"C:/data" directory, so that RStudio will create this \R{setwd("C:/data")}.
+  \item The CSV file is read into R by including the name of the file (in quotes) in \R{read.csv()}.  For example, \R{"Bears.csv"} is read into R and stored into an object called \R{bears} with \R{bears <- read.csv("Bears.csv")}.
+<<echo=FALSE>>=
+bears <- read.csv("data/Bears.csv")
 @
 
-The CSV file is read into R by including the name of the file (in quotes) in \R{read.csv()}.  For example, the CSV file from above (called \R{"ladybug.csv"} is read into R and stored in a data frame called \var{LB} with
-<<eval=FALSE>>=
-LB <- read.csv("ladybug.csv")
-@
+  \item One should check the data in this object as descried in \sectref{sect:RViewdf} below
+\end{Itemize}
 
 \warn{Data stored in an external CSV file is read into R with \R{read.csv()}.}
 
-It is important that each row of the data frame correspond to one individual.  This is critically important when data are recorded for two different groups (e.g., for a two-sample t-test; see \sectref{sect:t2test}).  For example, consider the following data of methyl mercury levels recorded in mussels from a location labeled as ``impacted'' and a separate location labeled as ``reference.''
+It is important that each row of the data.frame correspond to one individual.  This is critically important when data are recorded for two different groups (e.g., for a two-sample t-test; see \sectref{sect:t2test}).  For example, consider the following data of methyl mercury levels recorded in mussels from a location labeled as ``impacted'' and a separate location labeled as ``reference.''
 \begin{Verbatim}
   impacted   0.011  0.054  0.056  0.095  0.051  0.077
   reference  0.031  0.040  0.029  0.066  0.018  0.042  0.044
@@ -251,7 +154,7 @@ It is important that each row of the data frame correspond to one individual.  T
 To follow the ``one individual per row'' rule, these data are entered in stacked format where the ``reference'' data are stacked underneath the ``impacted'' data and a column is used to indicate to which group the individuals belong.  For example, the Excel file for data entry would look like the following
 
 \begin{center}
-  \includegraphics[width=1.5in]{Figs/StackedData.jpg}
+  \includegraphics[width=1.25in]{Figs/StackedData.jpg}
 \end{center}
 
 \warn{All data files should be constructed so that there is only dat from one individual in each row.}
@@ -265,38 +168,69 @@ data(iris)
 @
 
 
-\section{Working With Data Frames}  \label{sect:RWorkdf}
-\subsection{Viewing a Data Frame}  \label{sect:RViewdf}
-Many users are disoriented in R because they cannot ``see'' their data in the same way that they see it in a spreadsheet program.  There are, however, several options for viewing your data in R.  First, you can type the name of the data frame object to see the entire contents of the data frame.
+\subsection{Working With Data Frames}  \label{sect:RWorkdf}
+\subsubsection{Viewing a Data Frame}  \label{sect:RViewdf}
+Many users are disoriented in RStudio because they cannot ``see'' their data in the same way that they see it in a spreadsheet program.  There are, however, several options for viewing your data.  First, you can type the name of the data.frame object to see its entire contents.
 <<>>=
-moths
+bears
 @
 
-Typing the name is adequate for small data frames, but not so useful for large data frames.  The entire data frame is opened in a separate window by double-clicking on the name of the data frame in the \R{Environment} tab of RStudio.  The first and last three rows of a data frame are viewed by including the data.frame object in \R{headtail()}.
+Typing the name is adequate for small data.frames, but not useful for large data.frames.  The entire data.frame is opened in a separate window by double-clicking on the name of the data.frame in the \R{Environment} tab of RStudio.  Alternatively, the first and last three rows are viewed by including the data.frame object in \R{headtail()}.
 <<>>=
-headtail(iris)
+headtail(bears)
 @
 
-In addition to viewing the contents of the data frame, it is often useful to examine the structure of the data frame returned from \R{str()}.
+In addition to viewing the contents of the data.frame, it is often useful to examine the structure of the data.frame returned from \R{str()}.  In this example, it is seen that \Sexpr{kCounts(ncol(bears))} variables were recorded on \Sexpr{nrow(bears)} individuals.  The first variables -- \var{\Sexpr{names(bears)[1]}} and \var{\Sexpr{names(bears)[2]}} -- are numerical measurements made on the bears.  The last variable -- \var{\Sexpr{names(bears)[3]}} -- is a factor variable that records the capture location for each bear.
 <<>>=
-str(iris)
+str(bears)
 @
-In this example, it is seen that \Sexpr{kCounts(ncol(iris))} variables were recorded on \Sexpr{nrow(iris)} individuals.  The first four variables -- \var{\Sexpr{names(iris)[1]}}, \var{\Sexpr{names(iris)[2]}}, \var{\Sexpr{names(iris)[3]}}, and \var{\Sexpr{names(iris)[4]}} -- are various numerical measurements of sepals and petals.  The last variable -- \var{\Sexpr{names(iris)[5]}} -- is a factor variable that records the species of iris examined.  The levels of the \var{\Sexpr{names(iris)[5]}} variable may be seen by including this variable (must also include the data frame name) as the argument to \R{levels()}.
+The levels of the \var{\Sexpr{names(bears)[3]}} variable may be seen by including this variable (with the data.frame name) as the argument to \R{levels()}.
 <<>>=
-levels(iris$Species)
+levels(bears$loc)
+@
+
+In the previous example, the \R{\$} notation was used to identify a particular variable (i.e., \R{loc}) from within a particular data.frame (\R{bears}).  Think of variables as being nested inside of a data.frame and, thus, to access the variable you must first identify the data.frame in which it exists and then the name of the variable.  The \R{\$} simply separates the data.frame from the variable.
+<<>>=
+bears$length.cm
+bears$loc
+@
+
+\warn{A dollar sign is ONLY used in R to separate the name of a data.frame from the name of a variable within that data.frame.}
+
+\subsubsection{Selecting Individuals}  \label{sect:RSelectIndivs}
+\vspace{-12pt}
+
+In some instances, it may be important to select or exclude an individual from a data.frame.  Data.frames are two-dimensional objects that are indexed by a row and a column, in that order.  Positions within a data.frame are selected within paired square brackets.  For example, the item in the third row and second column of \R{bears} is selected with
+<<>>=
+bears[3,2]
+@
+
+\warn{Identifying the position of an item in an object is the ONLY time that square brackets are used in R.}
+
+An entire row or column may be selected by omitting the other dimension.  For example, one could select the entire second column with \R{bears[,2]}, but this is also the \R{weight.kg} variable and is better selected, as shown above, with \R{bears\$weight.kg}.  As a better example, the entire third row is selected with (note that the column designation was omitted)
+<<>>=
+bears[3,]
+@
+
+More than one row can be selected by first combining the row indices together with \R{c()} (more about \R{c()} in \sectref{sect:RVectors}).  For example, the third, fifth, and eighth rows are selected with (again, the column index is omitted)
+<<>>=
+bears[c(3,5,8),]
+@
+
+Finally, rows can be excluded by preceding the row indices with a negative sign.
+<<>>=
+bears[-c(3,5,8,10,12),]
 @
 
 \vspace{-12pt}
-\subsection{Filtering a Data Frame}  \label{sect:RSubsetdf}
+\subsubsection{Filtering a data.frame}  \label{sect:RSubsetdf}
 \vspace{-12pt}
-It is common to create a new data frame that contains only some of the individuals from an existing data frame.  For example, a researcher may want to extract from the \var{iris} data frame only data for the \emph{setosa} species or irises with sepal lengths greater than 5 cm.  The process of creating the newer, smaller data frame is called filtering (or subsetting) and is accomplished with \R{filterD()}.  The \R{filterD()} function requires the original data frame as the first argument and a conditioning statement as the second argument.  The conditioning statement is a statement that is used to either include or exclude the individuals from the original data frame that will make up the new data frame.  The result from \R{filterD()} should be assigned an object which will then be the name of the new data frame.
+It is common to create a new data.frame that contains only some of the individuals from an existing data.frame.  For example, a researcher may want a data.frame of only bears captured in Bayfield County or bears that weighed more than 100 kg.  The process of creating the newer, smaller data.frame is called filtering (or subsetting) and is accomplished with \R{filterD()}.  The \R{filterD()} function requires the original data.frame as the first argument and a condition statement as the second argument.  The condition statement is used to either include or exclude individuals from the original data.frame.  Condition statements consist of the name of a variable in the original data.frame, a comparison operator, and a comparison value \tabrefp{tab:RSubsetConditions}.  The result from \R{filterD()} should be assigned to an object, which is then the name of the new data.frame.
 
-\warn{The \R{filterD()} function is used to create a new data frame that consists of individuals selected by some criterion from an existing data frame.}
-
-The conditioning statements used in \R{filterD()} can be fairly complex.  However, in this course, the conditioning statements will usually consist of the name of a variable in the original data frame, a comparison operator, and a comparison value.  Some common comparison operators are shown in \tabref{tab:RSubsetConditions}.
+\warn{The \R{filterD()} function is used to create a new data.frame that consists of individuals selected by some criterion from an existing data.frame.}
 
 \begin{table}[htbp]
-  \caption{Condition operators used in \R{filterD()} and their results.  Note that \emph{variable} generically represents a variable in the original data frame and \emph{value} is a generic value or level.  Both \emph{variable} and \emph{value} would be replaced with specific items.}  \label{tab:RSubsetConditions}
+  \caption{Condition operators used in \R{filterD()} and their results.  Note that \emph{variable} generically represents a variable in the original data.frame and \emph{value} is a generic value or level.  Both \emph{variable} and \emph{value} would be replaced with specific items.}  \label{tab:RSubsetConditions}
   \centering
 \begin{tabular}{cc}
 \hline\hline
@@ -314,44 +248,40 @@ Condition Operator &  Individuals Returned from Original Data Frame \\
 \end{tabular}
 \end{table}
 
-The following are examples of new data frames created by filtering the \var{iris} data frame\footnote{The \R{headtail()} function is used in these examples to show some rows in the new data frame.}.  Note that the names of the new data frames (i.e., object to the left of the assignment operator) can be any valid data frame name.
+The following are examples of new data.frames created from \var{bears}.  The name of the new data.frame (i.e., object to the left of the assignment operator) can be any valid object name.  As demonstrated below, the new data.frame (or its structure) should be examined after each filtering to ensure that the data.frame actually contains the items that you desire.
 
 \begin{itemize}
-  \item Only individuals of the \emph{setosa} species.
+  \item Only individuals from \emph{Bayfield} county.
 <<>>=
-iris.set <- filterD(iris,Species=="setosa")
-headtail(iris.set)
+bf <- filterD(bears,loc=="Bayfield")
+bf
 @
 
-  \item Individuals of the \emph{setosa} and \emph{versicolor} species.
+  \item Individuals from both \emph{Bayfield} and \emph{Ashland} counties.
 <<>>=
-iris.setver <- filterD(iris,Species=="setosa" | Species=="versicolor")
-headtail(iris.setver)
+bfash <- filterD(bears,loc %in% c("Bayfield","Ashland"))
+bfash
 @
 
-  \item Individuals with a sepal length greater than 5 cm.
+  \item Individuals with a weight greater than 100 kg.
 <<>>=
-iris.gt5 <- filterD(iris,Sepal.Length>5)
-headtail(iris.gt5)
+gt100 <- filterD(bears,weight.kg>100)
+gt100
 @
 
-  \item Individuals of the \emph{setosa} species with a sepal length greater than 5 cm.
+  \item Individuals from \emph{Douglas} County that weigh at least 150 kg.
 <<>>=
-iris.setgt5 <- filterD(iris,Species=="setosa", Sepal.Length>5)
-headtail(iris.setgt5)
+do150 <- filterD(bears,loc=="Douglas",weight.kg>=150)
+do150
 @
 \end{itemize}
 
-Note that after each subsetting you should either view or examine the structure of the new data frame to determine if the data frame actually contains the items that you desire.
-
-\warn{View or ``structure'' the data frame created from using \R{filterD()} to assure that it contains data.}
-
-\newpage
+\warn{View or ``structure'' the data.frame created from using \R{filterD()} to assure that it contains data.}
 \begin{exsection}
   \item \label{revex:BasicsDataFrame1} \rhw{} Two students at Seattle Community College made biometric measurements on 25 Douglas fir (\emph{Pseudotsuga menziesii}) trees in the lowlands of western Washington.  The variables recorded in the \href{https://raw.githubusercontent.com/droglenc/NCData/master/DougFirBiometrics.csv}{DougFirBiometrics.csv} file are a unique tree identifier (\var{tree}), the observer's name (\var{observer}; either ``Ingrid'' or ``Dylan''), the circumference at breast height (meters; \var{circ}), the height to the eye of the observer (meters; \var{eyeht}), the horizontal distance between observer and tree (meters; \var{horizdist}), the angle between observer and top of tree (degrees; \var{angle}), and the estimated height of tree (meters; \var{height}) using right-angle trigonometry. \ansref{ans:BasicsDataFrame1}
   \begin{Enumerate}
     \item Read this data file into an object called \R{DF}.
-    \item Examine the structure of this data frame.
+    \item Examine the structure of this data.frame.
     \item Show all measurements made on the third tree. [Do not do this manually; use R code.]
     \item Show all estimated tree heights.
     \item Show the estimated tree height for the fifth tree.
@@ -359,6 +289,39 @@ Note that after each subsetting you should either view or examine the structure 
     \item Show all estimated tree heights for all trees measured by ``Dylan''.  [HINT: use filtering.]
     \item Show all measurements for tree heights less than 10 m.  [HINT: use filtering.]
     \item Show all measurements for tree heights greater than 10 m and circumference less than 1 m.  [HINT: use filtering.]
+  \end{Enumerate}
+\end{exsection}
+
+\vspace{-12pt}
+\subsection{Vectors}  \label{sect:RVectors}
+\vspace{-12pt}
+
+Data.frames are the primary structure in which to store real data.  However, much simpler situations that don't require a data.frame may arise.  In R, items of the same data type \sectrefp{sect:RDataTypes} are stored in a one-dimensional ``list'' called a \emph{vector}.  Vectors are usually displayed in one row (with many columns), but they may also be thought of as a single column (with many rows).  Items are entered into a vector with \R{c()}, where the individual arguments are specific numbers, characters, or logical values.\footnote{Note that \R{c} comes from the word ``concatenate.''}  Items for a vector of characters must be contained within paired quotes.
+<<>>=
+( v <- c(1,2,5) )
+( y <- c("Iowa","Minnesota","Wisconsin") )
+@
+
+\defn{Vector}{A one-dimensional list of items of the same data type.  The primary information storage unit in R.}
+
+Single variables from a data.frame are vectors.  Vectors that are not extracted from a data.frame will only be used in this course for very simple lists of items, usually as arguments in a function.
+<<>>=
+bears$length.cm
+@
+
+\warn{The columns of a data.frame are accessed with the name of the data.frame, a dollar sign, and then the name of the variable -- i.e., generically, \R{dataframe\$varname}.}
+
+
+\begin{exsection}
+  \item \label{revex:BasicsData1}\rhw{} Create a vector called \var{h} that contains nine heights of people. \ansref{ans:BasicsData1}
+  \item \label{revex:BasicsData2}\rhw{} Create a vector called \var{w} that contains nine weights of people. \ansref{ans:BasicsData2}
+  \item \label{revex:BasicsData3}\rhw{} Create a vector called \var{hc} that contains nine hair colors of people. \ansref{ans:BasicsData3}
+  \item \label{revex:BasicsData4}\rhw{} Create a vector called \var{m} that contains nine logical values (=\R{TRUE} if male). \ansref{ans:BasicsData4}
+  \item \label{revex:BasicsData5}\rhw{} Using the vectors from the previous questions,  \ansref{ans:BasicsData5}
+  \begin{Enumerate}
+    \item ... create the largest possible data.frame (use \R{data.frame()}).
+    \item ... identify the height of the third individual of this data.frame.
+    \item ... identify the hair color for the sixth individual of this data.frame.
   \end{Enumerate}
 \end{exsection}
 
