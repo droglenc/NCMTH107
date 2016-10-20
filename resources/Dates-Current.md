@@ -11,7 +11,6 @@ css: /css/syllabus.css
     <div class="col-sm-5">
       <h4>Prof. Ogle's Section</h4>
       <dl class="dl-horizontal">
-      <dt>19-Oct</dt><dd>7.19 and (separately) 8.4 and 8.5</dd>
       <dt>24-Oct</dt><dd>9.22-9.24</dd>
 <!---
       <dt>16-Sep</dt><dd>1.27-1.35</dd>
@@ -20,6 +19,7 @@ css: /css/syllabus.css
       <dt>28-Sep</dt><dd>4.50-4.51</dd>
       <dt>3-Oct</dt><dd>5.24-5.25</dd>
       <dt>12-Oct</dt><dd>6.24-6.26</dd>
+      <dt>19-Oct</dt><dd>7.19 and (separately) 8.4 and 8.5</dd>
 --->
       </dl>
     </div>
@@ -39,7 +39,6 @@ css: /css/syllabus.css
 <dl class="dl-horizontal">
 <!---
 -->
-<dt>19-Oct</dt><dd>First Exam XC Reflection (Optional)</dd>
 <dt>16-Nov</dt><dd>Second Exam</dd>
 <dt>28-Nov</dt><dd>Second Exam XC Reflection (Optional)</dd>
 <dt>9-Dec</dt><dd>"Stats-In-Use" and Project Extra Credit Reports (Optional)</dd>
@@ -48,6 +47,7 @@ css: /css/syllabus.css
 
 <!---
 <dt>7-Oct</dt><dd>First Exam</dd>
+<dt>19-Oct</dt><dd>First Exam XC Reflection (Optional)</dd>
 
 --->
 

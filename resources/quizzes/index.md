@@ -8,7 +8,6 @@ title: Daily Quizzes
 * [Wed, 12-Oct](){:target="_blank"}
 * [Mon, 10-Oct](){:target="_blank"}
 
-* [Fri, 21-Oct](){:target="_blank"}
 
 -->
 
