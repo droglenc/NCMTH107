@@ -9,7 +9,7 @@ css: "/css/modules.css"
 
 ## P-Value Calculations and Decisions
 
-For each situation below, (i) compute the p-value (include a drawing to support your calculation) and (ii) make a decision about H<sub>0</sub>.
+For each situation below, (i) write a sentence that defines the p-value specific to that situation, (ii) compute the p-value (include a drawing to support your calculation), and (iii) make a decision about H<sub>0</sub>.
 
 1. &alpha;=0.10, H<sub>A</sub>: &mu;>75, n=50, &sigma;=12, x&#772;=79.5.
 1. &alpha;=0.05, H<sub>A</sub>: &mu;&#8800;14, n=25, &sigma;=6, x&#772;=11.2.

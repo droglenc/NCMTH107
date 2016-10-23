@@ -39,41 +39,41 @@ source("../../rhelpers/knitr_setup.R")
 ## Class Excercise 2
 
 <ol>
-<li>Reject $H_{0}$ because p-value=`r formatC(distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE),format="f",digits=4)`<&alpha;.</li>
+<li>The p-value is "the probabiity of observing a sample mean of 79.5 or greater if the population mean is 75." Reject $H_{0}$ because p-value=`r formatC(distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE),format="f",digits=4)`<&alpha;.</li>
 ```{r echo=FALSE}
 distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE)
 ```
 
-<li>Reject $H_{0}$ because p-value=`r formatC(2*distrib(11.2,mean=14,sd=6/sqrt(25)),format="f",digits=4)`<&alpha;.</li>
+<li>The p-value is "the probabiity of observing a sample mean of 11.2 or 'different' if the population mean is 14." Reject $H_{0}$ because p-value=`r formatC(2*distrib(11.2,mean=14,sd=6/sqrt(25)),format="f",digits=4)`<&alpha;.</li>
 ```{r echo=FALSE, results='hide'}
 2*distrib(11.2,mean=14,sd=6/sqrt(25))
 ```
 
-<li>Reject $H_{0}$ because p-value=`r formatC(distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE),format="f",digits=4)`<&alpha;.</li>
+<li>The p-value is "the probabiity of observing a sample mean of 918 or greater if the population mean is 880." Reject $H_{0}$ because p-value=`r formatC(distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE),format="f",digits=4)`<&alpha;.</li>
 
 ```{r echo=FALSE}
 distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE)
 ```
 
-<li>Do not reject $H_{0}$ because p-value=`r formatC(distrib(13700,mean=15000,sd=8000/sqrt(50)),format="f",digits=4)`>&alpha;.</li>
+<li>The p-value is "the probabiity of observing a sample mean of 13700 or less if the population mean is 15000." Do not reject $H_{0}$ because p-value=`r formatC(distrib(13700,mean=15000,sd=8000/sqrt(50)),format="f",digits=4)`>&alpha;.</li>
 
 ```{r echo=FALSE}
 distrib(13700,mean=15000,sd=8000/sqrt(50))
 ```
 
-<li>Do not reject $H_{0}$ because p-value=`r formatC(2*distrib(824,mean=800,sd=60/sqrt(25),lower.tail=FALSE),format="f",digits=4)`>&alpha;.</li>
+<li>The p-value is "the probabiity of observing a sample mean of 824 or 'different' if the population mean is 800." Do not reject $H_{0}$ because p-value=`r formatC(2*distrib(824,mean=800,sd=60/sqrt(25),lower.tail=FALSE),format="f",digits=4)`>&alpha;.</li>
 
 ```{r echo=FALSE, results='hide'}
 2*distrib(824,mean=800,sd=60/sqrt(25),lower.tail=FALSE)
 ```
 
-<li>Reject $H_{0}$ because p-value=`r formatC(distrib(73,mean=80,sd=20/sqrt(30)),format="f",digits=4)`<&alpha;.</li>
+<li>The p-value is "the probabiity of observing a sample mean of 73 or less if the population mean is 80." Reject $H_{0}$ because p-value=`r formatC(distrib(73,mean=80,sd=20/sqrt(30)),format="f",digits=4)`<&alpha;.</li>
 
 ```{r echo=FALSE}
 distrib(73,mean=80,sd=20/sqrt(30))
 ```
 
-<li>Do not reject $H_{0}$ because p-value=`r formatC(2*distrib(1370,mean=1500,sd=800/sqrt(40)),format="f",digits=4)`>alpha;.</li>
+<li>The p-value is "the probabiity of observing a sample mean of 1370 or 'different' if the population mean is 1500." Do not reject $H_{0}$ because p-value=`r formatC(2*distrib(1370,mean=1500,sd=800/sqrt(40)),format="f",digits=4)`>alpha;.</li>
 
 ```{r echo=FALSE, results='hide'}
 2*distrib(1370,mean=1500,sd=800/sqrt(40))
