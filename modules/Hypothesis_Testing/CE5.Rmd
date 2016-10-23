@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Hypothesis Testing
-subtitle: Class Exercise 2
+subtitle: Class Exercise 5
 author: Derek H. Ogle
 css: "/css/modules.css"
 output:
@@ -26,19 +26,19 @@ source("../../rhelpers/knitr_setup.R")
 ## Understanding Power Relationships
 <img src="http://derekogle.com/NCMTH107/modules/zimgs/computer-1.jpg" alt="Simulations" class="img-right">The probability of a type II error (&beta;) and power cannot be computed because the true population mean (&mu;<sub>a</sub>) is not known.  However, &beta; and power are affected by &alpha;, n, &sigma;, and "how wrong" the null hypothesized value is.  Simulations with known populations can be used to understand the relationships between &beta;, power, and these other values.  Because &alpha; and n are chosen by the statistician, decisions can be made that will affect the values of &beta; and power (though we will never know the actual values of &beta; and power).
 
-The `powerSim()` function (with no arguments) from `NCStats` provides an efficient method to perform these simulations.  For example, `powerSim()` produced the plots shown below.  The top plot is the "null distribution" or the sampling distribution of the sample means assuming that H<sub>0</sub>: &mu;=100 is true (and &sigma;=10 and n=30).  The rejection region that is defined by &alpha;=0.05 and assuming that H</sub>A</sub>: &mu;<100  (i.e., lower-tailed) is shown on the null distribution as the red shaded area bound by the vertical red line.  Thus, any sample mean in this shaded area would result in a decision to reject H<sub>0</sub>.
+The `powerSim()` function (with no arguments) from `NCStats` provides an efficient method to perform these simulations.  For example, `powerSim()` produced the plots shown below.  The top plot is the "null distribution" or the sampling distribution of the sample means assuming that H<sub>0</sub>: &mu;=100 is true (and &sigma;=10 and n=30).  The rejection region that is defined by &alpha;=0.05 and assuming that H<sub>A</sub>: &mu;<100  (i.e., lower-tailed) is shown on the null distribution as the red shaded area bound by the vertical red line.  Thus, any sample mean in this shaded area would result in a decision to reject H<sub>0</sub>.
 
-The lower plot is the "actual distribtion" or the sampling distribution that would result if &mu;=95 (in this example) and &sigma;=10 and n=30.  The rejection region is projected onto this plot with the red vertical line.  Because &mu;=95 is different than &mu;<sub>0</sub>=100, these graphs represent the situation where the H<sub>0</sub> is incorrect.  Rejecting H<sub>0</sub> in this situation is a correct decision and the probability of making that decision is power.  Power is shown on the actual distribution with the green shaded area and is equal to the value shown in the upper corner (left corner in this case).  A type II error occurs if the H<sub>0</sub> is not rejected.  The probability of making this errors is shown by the off-red shaded area on the actual distribution and is equal to the value in the upper corner (right corner in this case).
+The lower plot is the "actual distribtion" or the sampling distribution that would result if &mu;=95 (in this example) and &sigma;=10 and n=30.  The rejection region is projected onto this plot with the red vertical line.  Because &mu;=95 is different than &mu;<sub>0</sub>=100, these graphs represent the situation where the H<sub>0</sub> is incorrect.  Rejecting H<sub>0</sub> in this situation is a correct decision and the probability of making that decision is power.  Power is shown on the actual distribution with the green shaded area and is equal to the value shown in the upper corner (left corner in this case).  A type II error occurs if the H<sub>0</sub> is not rejected.  The probability of making this error is shown by the off-red shaded area on the actual distribution and is equal to the value in the upper corner (right corner in this case).
 
 ```{r echo=FALSE, fig.width=5,fig.height=6}
 powerSim()
 ```
 
-In RStudio, these plots will have a gear icon in the upper-left corner that will open a dialog box that allows you to modify &alpha; n, &sigma;, and the actual population mean.  The plots will update automatically when any of these items are changed.  Use these plots to answer the questions below.
+In RStudio, these plots will have a gear icon in the upper-left corner that will open a dialog box that allows you to modify &alpha;, n, &sigma;, and the actual population mean.  The plots will update automatically when any of these items is changed.  Use these plots to answer the questions below.
 
 1. For the default values, show that the value of the sample mean that defines the rejection region is correct.  [*Hint: this is a reverse normal distribution calculation using the null distribution.*]
 1. For the default values, show that the value for &beta; is correct.  [*Hint: this is a forward normal distribution calculation using the actual distribution.*]
-1. Determine the effect on &beta; for each of the following situations.  Provide graphical or numerical evidence for each of your answers.
+1. Determine how &beta; is affected in each of the following situations.  Provide graphical or numerical evidence for each of your answers.
     1. Increasing &alpha;.
     1. Increasing n.
     1. Increasing &sigma;.
