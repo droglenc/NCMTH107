@@ -46,7 +46,7 @@ css: /css/syllabus.css
 </dl>
 
 <!---
-<dt>7-Oct</dt><dd>First Exam</dd>
+<dt>7-Oct</dt><dd>First Exam</dd> 
 <dt>19-Oct</dt><dd>First Exam XC Reflection (Optional)</dd>
 
 --->
