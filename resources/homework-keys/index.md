@@ -9,9 +9,9 @@ title: Homework Keys
 * [HW 11.24-11.25](Chapter11bHW_noPrint.pdf){:target="_blank"}
 * [HW 11.22-11.23](Chapter11aHW_noPrint.pdf){:target="_blank"}
 * [HW 10.46-10.47](Chapter10HW_noPrint.pdf){:target="_blank"}
-* [HW 9.22-9.24](Chapter09HW_noPrint.pdf){:target="_blank"}
 -->
 
+* [HW 9.22-9.24](Chapter09HW_noPrint.pdf){:target="_blank"}
 * [HW 8.4-8.5](Chapter08HW_noPrint.pdf){:target="_blank"}
 * [HW 7.19](Chapter07HW_noPrint.pdf){:target="_blank"}
 * [HW 6.24-6.25](Chapter06HWa_noPrint.pdf){:target="_blank"} and [HW 6.26](Chapter06HWb_noPrint.pdf){:target="_blank"}
