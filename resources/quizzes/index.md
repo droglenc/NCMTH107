@@ -4,11 +4,13 @@ title: Daily Quizzes
 ---
 
 <!--
-* [Fri, 28-Oct](){:target="_blank"}
-
+* [Fri, 4-Nov](){:target="_blank"}
+* [Wed, 2-Nov](){:target="_blank"}
+* [Mon, 31-Oct](){:target="_blank"}
 
 -->
 
+* [Fri, 28-Oct](https://goo.gl/forms/QH37f22TyD5zRisU2){:target="_blank"}
 * [Wed, 26-Oct](https://goo.gl/forms/ZWp8Q7ddq1FSTzSk1){:target="_blank"}
 * [Mon, 24-Oct](https://goo.gl/forms/1kE7iyPQSNWzEnSw2){:target="_blank"}
 
