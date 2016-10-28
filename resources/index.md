@@ -10,7 +10,7 @@ title: Resources
 1. [**Class Exercise Answer Keys**](ce-keys/)
 
 ## Learning Assistance
-1. [**R Cheat Sheet**](MTH107-Rcheatsheet.pdf)
+1. **R Cheat Sheet** ([PDF](MTH107-Rcheatsheet.pdf) or [PPT](MTH107-Rcheatsheet.pptx))
 1. [**FAQ**](FAQ/)
 1. **Glossaries**
     * Definitions
