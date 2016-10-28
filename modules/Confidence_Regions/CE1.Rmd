@@ -33,18 +33,29 @@ An example from `ciSim()` is shown in the plot below.  In this plot, the known p
 ciSim()
 ```
 
-In RStudio, this plot will have a gear icon in the upper-left corner that will open a dialog box that allows you to modify n, the level of confidence, and the type of confidence region (which is based on the type of alternative hypothesis).  In addition, a "rerandomize button" is provided to efficiently construct another set of CIs.  The plot will update automatically when any of these items is changed.  Use this plot to answer the questions below.
+In RStudio, this plot will have a gear icon in the upper-left corner that will open a dialog box that allows you to modify n, the level of confidence, and the type of confidence region (which is based on the type of alternative hypothesis).  In addition, a "rerandomize button" is provided to efficiently construct another set of CIs.  The plot will update automatically when any of these items is changed.
 
-1. Set the level of confidence to 0.95 and n=10 for the following questions.
-    1. This function assumes that &sigma;=10.  With this information, compute the margin-of-error "by hand" to determine if that computed by `ciSim()` is correct.
-    1. How many of the CIs captured &mu; [*press "rerandomize" twenty times and mentally average the percentages to form a general conclusion.*]
-1. Comment on how the percentage of CIs that captured &mu; changed in each situation below.  [*For each situation, use the "two-sided" alternative and begin with n=10 and 80% confidence.*]
-    1. Increase the sample size.  [*Try at least four different values of n.*]
-    1. Increase the level of confidence.  [*Try each available option.*]
-1. Repeat the previous question but comment on how the margin-of-error changed.
-1. Summarize what happens to a CI in the following situations.
-    1. n is increased.
-    1. Level of confidence is decreased.
+The table below can be used to efficiently record your results for different sample sizes and levels of confidence (*press "rerandomize" twenty times and mentally average the percentages to form a general conclusion.*).
+
+<table class="table table-bordered table-condensed">
+<thead>
+<tr><th></th><th colspan=2 class="text-center">99% Confidence</th><th colspan=2 class="text-center">95% Confidence</th><th colspan=2 class="text-center">90% Confidence</th></tr>
+<tr><th>n=</th><th class="text-center">% w/ &mu;</th><th class="text-center">m.e.</th><th class="text-center">% w/ &mu;</th><th class="text-center">m.e.</th><th class="text-center">% w/ &mu;</th><th class="text-center">m.e.</th></tr>
+</thead>
+<tbody>
+<tr><td>10</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>25</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>50</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</tbody>
+</table>
+
+Use `ciSim()` and the table above to answer the following questions.
+
+1. Compute the margin-of-error "by hand" for the 99% confidence and n=10 situation to determine if that computed by `ciSim()` is correct. Note that `ciSim()` assumes that &sigma;=10.
+1. How did the percentage of CIs that captured &mu; change with increasing n.
+1. How did the percentage of CIs that captured &mu; change with increasing level of confidence.
+1. How did the margin-of-error change with increasing n.
+1. How did the margin-of-error change with increasing level of confidence.
 1. What two things can you, as a statistician, do to make a confidence interval narrower?  Are there any negative consequences to these decisions?
 
 ----

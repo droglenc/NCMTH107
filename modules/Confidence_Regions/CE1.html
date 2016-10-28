@@ -12,25 +12,127 @@ css: "/css/modules.css"
 <h2>Understanding the Concept of Confidence Intervals</h2>
 <p><img src="http://derekogle.com/NCMTH107/modules/zimgs/computer-1.jpg" alt="Simulations" class="img-right"> The concept of confidence in a confidence interval (CI) is subtle because it depends on thinking about taking all possible samples from a known population distribution, computing the CI for each sample, and then determining if the CI captures the parameter or not. This thought-process is complicated by the fact that the parameter is unknown and taking all possible samples is impossible (not to mention tedious). The <code>ciSim()</code> function (with no arguments) from <code>NCStats</code> provides an efficient method to simulate this process and provide a graphical result of the CIs relative to the parameter from many (but not all possible) samples.</p>
 <p>An example from <code>ciSim()</code> is shown in the plot below. In this plot, the known population mean is depicted by the solid vertical line (μ=100 in this example). Each horizontal line is one realization of a CI (the endpoints of the horizontal line is the CI and the point in the middle is the sample mean). The CIs that do not capture μ are in red. The percentage of CIs that capture μ is shown at the top along with the margin-of-error (m.e.), or half the width of the CI.</p>
-<p><img src="CE1_files/figure-html/unnamed-chunk-3-1.png" title="" alt="" width="384" /></p>
-<p>In RStudio, this plot will have a gear icon in the upper-left corner that will open a dialog box that allows you to modify n, the level of confidence, and the type of confidence region (which is based on the type of alternative hypothesis). In addition, a “rerandomize button” is provided to efficiently construct another set of CIs. The plot will update automatically when any of these items is changed. Use this plot to answer the questions below.</p>
+<p><img src="CE1_files/figure-html/unnamed-chunk-3-1.png" width="384" /></p>
+<p>In RStudio, this plot will have a gear icon in the upper-left corner that will open a dialog box that allows you to modify n, the level of confidence, and the type of confidence region (which is based on the type of alternative hypothesis). In addition, a “rerandomize button” is provided to efficiently construct another set of CIs. The plot will update automatically when any of these items is changed.</p>
+<p>The table below can be used to efficiently record your results for different sample sizes and levels of confidence (<em>press “rerandomize” twenty times and mentally average the percentages to form a general conclusion.</em>).</p>
+<table class="table table-bordered table-condensed">
+<thead>
+<tr>
+<th>
+</th>
+<th colspan="2" class="text-center">
+99% Confidence
+</th>
+<th colspan="2" class="text-center">
+95% Confidence
+</th>
+<th colspan="2" class="text-center">
+90% Confidence
+</th>
+</tr>
+<tr>
+<th>
+n=
+</th>
+<th class="text-center">
+% w/ μ
+</th>
+<th class="text-center">
+m.e.
+</th>
+<th class="text-center">
+% w/ μ
+</th>
+<th class="text-center">
+m.e.
+</th>
+<th class="text-center">
+% w/ μ
+</th>
+<th class="text-center">
+m.e.
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+10
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+</tr>
+</tbody>
+</table>
+<p>Use <code>ciSim()</code> and the table above to answer the following questions.</p>
 <ol>
-<li>Set the level of confidence to 0.95 and n=10 for the following questions.
-<ol>
-<li>This function assumes that σ=10. With this information, compute the margin-of-error “by hand” to determine if that computed by <code>ciSim()</code> is correct.</li>
-<li>How many of the CIs captured μ [<em>press “rerandomize” twenty times and mentally average the percentages to form a general conclusion.</em>]</li>
-</ol></li>
-<li>Comment on how the percentage of CIs that captured μ changed in each situation below. [<em>For each situation, use the “two-sided” alternative and begin with n=10 and 80% confidence.</em>]
-<ol>
-<li>Increase the sample size. [<em>Try at least four different values of n.</em>]</li>
-<li>Increase the level of confidence. [<em>Try each available option.</em>]</li>
-</ol></li>
-<li>Repeat the previous question but comment on how the margin-of-error changed.</li>
-<li>Summarize what happens to a CI in the following situations.
-<ol>
-<li>n is increased.</li>
-<li>Level of confidence is decreased.</li>
-</ol></li>
+<li>Compute the margin-of-error “by hand” for the 99% confidence and n=10 situation to determine if that computed by <code>ciSim()</code> is correct. Note that <code>ciSim()</code> assumes that σ=10.</li>
+<li>How did the percentage of CIs that captured μ change with increasing n.</li>
+<li>How did the percentage of CIs that captured μ change with increasing level of confidence.</li>
+<li>How did the margin-of-error change with increasing n.</li>
+<li>How did the margin-of-error change with increasing level of confidence.</li>
 <li>What two things can you, as a statistician, do to make a confidence interval narrower? Are there any negative consequences to these decisions?</li>
 </ol>
 <hr />
@@ -55,6 +157,8 @@ css: "/css/modules.css"
 </div>
 
 
+
+
 </div>
 
 <script>
@@ -63,6 +167,7 @@ css: "/css/modules.css"
 $(document).ready(function () {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 });
+
 
 </script>
 
