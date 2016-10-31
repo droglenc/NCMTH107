@@ -151,21 +151,21 @@ n <- nrow(d)
 #### Internet Usage
 
 <ol>
-```{r}
+```{r fig.show='hide'}
 sigma <- 6.95; me <- 1
 (zstar <- distrib(0.025,type="q",lower.tail=FALSE))
 (zstar*sigma/me)^2
 ```
 <li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` household to achieve the desired level of confidence and margin-of-error.</li>
 
-```{r}
+```{r fig.show='hide'}
 sigma <- 6.95; me <- 1
 (zstar <- distrib(0.05,type="q",lower.tail=FALSE))
 (zstar*sigma/me)^2
 ```
 <li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` household to achieve the desired level of confidence and margin-of-error.</li>
 
-```{r}
+```{r fig.show='hide'}
 sigma <- 6.95; me <- 0.5
 (zstar <- distrib(0.025,type="q",lower.tail=FALSE))
 (zstar*sigma/me)^2
@@ -176,13 +176,13 @@ sigma <- 6.95; me <- 0.5
 #### Blood Pressure in Children
 
 <ol>
-```{r}
+```{r fig.show='hide'}
 sigma <- 20; me <- 5
 (zstar <- distrib(0.005,type="q",lower.tail=FALSE))
 (zstar*sigma/me)^2
 ```
 <li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` children to achieve the desired level of confidence and margin-of-error with the "worse-case" standard deviation of 20.</li>
-```{r}
+```{r fig.show='hide'}
 sigma <- 15; me <- 5
 (zstar <- distrib(0.005,type="q",lower.tail=FALSE))
 (zstar*sigma/me)^2
