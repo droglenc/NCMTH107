@@ -151,43 +151,61 @@ n <- nrow(d)
 #### Internet Usage
 
 <ol>
-```{r fig.show='hide'}
+```{r ncalc1, echo=FALSE, results='hide', fig.show='hide'}
 sigma <- 6.95; me <- 1
 (zstar <- distrib(0.025,type="q",lower.tail=FALSE))
 (zstar*sigma/me)^2
 ```
 <li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` household to achieve the desired level of confidence and margin-of-error.</li>
-
 ```{r fig.show='hide'}
+<<ncalc1>>
+```
+
+```{r ncalc2, echo=FALSE, results='hide', fig.show='hide'}
 sigma <- 6.95; me <- 1
 (zstar <- distrib(0.05,type="q",lower.tail=FALSE))
 (zstar*sigma/me)^2
 ```
 <li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` household to achieve the desired level of confidence and margin-of-error.</li>
-
 ```{r fig.show='hide'}
+<<ncalc2>>
+```
+
+```{r ncalc3, echo=FALSE, results='hide', fig.show='hide'}
 sigma <- 6.95; me <- 0.5
 (zstar <- distrib(0.025,type="q",lower.tail=FALSE))
 (zstar*sigma/me)^2
 ```
+
 <li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` household to achieve the desired level of confidence and margin-of-error.</li>
+```{r fig.show='hide'}
+<<ncalc3>>
+```
 </ol>
 
 #### Blood Pressure in Children
 
 <ol>
-```{r fig.show='hide'}
+```{r ncalc4, echo=FALSE, results='hide', fig.show='hide'}
 sigma <- 20; me <- 5
 (zstar <- distrib(0.005,type="q",lower.tail=FALSE))
 (zstar*sigma/me)^2
 ```
+
 <li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` children to achieve the desired level of confidence and margin-of-error with the "worse-case" standard deviation of 20.</li>
 ```{r fig.show='hide'}
+<<ncalc4>>
+```
+
+```{r ncalc5, echo=FALSE, results='hide', fig.show='hide'}
 sigma <- 15; me <- 5
 (zstar <- distrib(0.005,type="q",lower.tail=FALSE))
 (zstar*sigma/me)^2
 ```
 <li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` children to achieve the desired level of confidence and margin-of-error with the "best-case" standard deviation of 15.</li>
+```{r fig.show='hide'}
+<<ncalc5>>
+```
 </ol>
 
 ----
