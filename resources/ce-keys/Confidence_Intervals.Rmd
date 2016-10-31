@@ -156,21 +156,21 @@ sigma <- 6.95; me <- 1
 (zstar <- distrib(0.025,type="q",lower.tail=FALSE))
 (zstar*sigma/me)^2
 ```
-<li>One should take a sample size of `formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` household to achieve the desired level of confidence and margin-of-error.</li>
+<li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` household to achieve the desired level of confidence and margin-of-error.</li>
 
 ```{r}
 sigma <- 6.95; me <- 1
 (zstar <- distrib(0.05,type="q",lower.tail=FALSE))
 (zstar*sigma/me)^2
 ```
-<li>One should take a sample size of `formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` household to achieve the desired level of confidence and margin-of-error.</li>
+<li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` household to achieve the desired level of confidence and margin-of-error.</li>
 
 ```{r}
 sigma <- 6.95; me <- 0.5
 (zstar <- distrib(0.025,type="q",lower.tail=FALSE))
 (zstar*sigma/me)^2
 ```
-<li>One should take a sample size of `formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` household to achieve the desired level of confidence and margin-of-error.</li>
+<li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` household to achieve the desired level of confidence and margin-of-error.</li>
 </ol>
 
 #### Blood Pressure in Children
@@ -181,13 +181,13 @@ sigma <- 20; me <- 5
 (zstar <- distrib(0.005,type="q",lower.tail=FALSE))
 (zstar*sigma/me)^2
 ```
-<li>One should take a sample size of `formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` children to achieve the desired level of confidence and margin-of-error with the "worse-case" standard deviation of 20.</li>
+<li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` children to achieve the desired level of confidence and margin-of-error with the "worse-case" standard deviation of 20.</li>
 ```{r}
 sigma <- 15; me <- 5
 (zstar <- distrib(0.005,type="q",lower.tail=FALSE))
 (zstar*sigma/me)^2
 ```
-<li>One should take a sample size of `formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` children to achieve the desired level of confidence and margin-of-error with the "best-case" standard deviation of 15.</li>
+<li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` children to achieve the desired level of confidence and margin-of-error with the "best-case" standard deviation of 15.</li>
 </ol>
 
 ----
