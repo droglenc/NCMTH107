@@ -5,7 +5,6 @@ subtitle: "Confidence Intervals CE"
 author: Derek H. Ogle
 css: "/css/modules.css"
 ---
-</div>
 
 
 <hr />
@@ -31,7 +30,7 @@ Lower bound
 Z*=-1.282.
 </li>
 <pre class="r"><code>&gt; zstar &lt;- distrib(0.9,type=&quot;q&quot;,lower.tail=FALSE)</code></pre>
-<img src="Confidence_Intervals_files/figure-html/unnamed-chunk-3-1.png" title="" alt="" width="336" />
+<img src="Confidence_Intervals_files/figure-html/unnamed-chunk-3-1.png" width="336" />
 <li>
 77.3.
 </li>
@@ -53,7 +52,7 @@ Interval
 Z*= <span class="math inline">\(\pm\)</span> 1.960.
 </li>
 <pre class="r"><code>&gt; zstar &lt;- distrib(0.025,type=&quot;q&quot;,lower.tail=FALSE)</code></pre>
-<img src="Confidence_Intervals_files/figure-html/unnamed-chunk-4-1.png" title="" alt="" width="336" />
+<img src="Confidence_Intervals_files/figure-html/unnamed-chunk-4-1.png" width="336" />
 <li>
 8.8-13.6.
 </li>
@@ -75,7 +74,7 @@ Lower bound
 Z*=-2.326.
 </li>
 <pre class="r"><code>&gt; zstar &lt;- distrib(0.99,type=&quot;q&quot;,lower.tail=FALSE)</code></pre>
-<img src="Confidence_Intervals_files/figure-html/unnamed-chunk-5-1.png" title="" alt="" width="336" />
+<img src="Confidence_Intervals_files/figure-html/unnamed-chunk-5-1.png" width="336" />
 <li>
 894.6.
 </li>
@@ -97,7 +96,7 @@ Upper bound
 Z*=1.282.
 </li>
 <pre class="r"><code>&gt; zstar &lt;- distrib(0.9,type=&quot;q&quot;)</code></pre>
-<img src="Confidence_Intervals_files/figure-html/unnamed-chunk-6-1.png" title="" alt="" width="336" />
+<img src="Confidence_Intervals_files/figure-html/unnamed-chunk-6-1.png" width="336" />
 <li>
 15149.9.
 </li>
@@ -119,7 +118,7 @@ Interval
 Z*= <span class="math inline">\(\pm\)</span> 2.576.
 </li>
 <pre class="r"><code>&gt; zstar &lt;- distrib(0.005,type=&quot;q&quot;,lower.tail=FALSE)</code></pre>
-<img src="Confidence_Intervals_files/figure-html/unnamed-chunk-7-1.png" title="" alt="" width="336" />
+<img src="Confidence_Intervals_files/figure-html/unnamed-chunk-7-1.png" width="336" />
 <li>
 793.1-854.9.
 </li>
@@ -141,7 +140,7 @@ Upper bound
 Z*=1.645.
 </li>
 <pre class="r"><code>&gt; zstar &lt;- distrib(0.95,type=&quot;q&quot;)</code></pre>
-<img src="Confidence_Intervals_files/figure-html/unnamed-chunk-8-1.png" title="" alt="" width="336" />
+<img src="Confidence_Intervals_files/figure-html/unnamed-chunk-8-1.png" width="336" />
 <li>
 79.0.
 </li>
@@ -163,7 +162,7 @@ Interval
 Z*= <span class="math inline">\(\pm\)</span> 1.960.
 </li>
 <pre class="r"><code>&gt; zstar &lt;- distrib(0.025,type=&quot;q&quot;,lower.tail=FALSE)</code></pre>
-<img src="Confidence_Intervals_files/figure-html/unnamed-chunk-9-1.png" title="" alt="" width="336" />
+<img src="Confidence_Intervals_files/figure-html/unnamed-chunk-9-1.png" width="336" />
 <li>
 1122.1-1617.9.
 </li>
@@ -181,8 +180,8 @@ I am 95% confident that the true population mean is between 1122.1 and 1617.9.
 <ol>
 <pre class="r"><code>&gt; d &lt;- read.csv(&quot;https://github.com/droglenc/NCData/raw/master/NormTemp.csv&quot;)
 &gt; Summarize(d$bodytemp,digits=2)</code></pre>
-<pre><code>       n   nvalid     mean       sd      min       Q1   median       Q3      max percZero 
-  130.00   130.00    36.81     0.41    35.70    36.60    36.80    37.10    38.20     0.00 </code></pre>
+<pre><code>     n   mean     sd    min     Q1 median     Q3    max 
+130.00  36.81   0.41  35.70  36.60  36.80  37.10  38.20 </code></pre>
 <pre class="r"><code>&gt; (zstar &lt;- distrib(0.025,type=&quot;q&quot;,lower.tail=FALSE))</code></pre>
 <pre><code>[1] 1.959964</code></pre>
 <li>
@@ -202,7 +201,66 @@ I am 95% confident that the true population mean body temperature is between 36.
 71480.6-71503.4.
 </li>
 <li>
-I am 95% confident that the true population mean equatorial radius of Jupiter is between 71481 and 71503 km.
+I am 99% confident that the true population mean equatorial radius of Jupiter is between 71481 and 71503 km.
+</li>
+</ol>
+<hr />
+</div>
+</div>
+<div id="class-excercise-4" class="section level2">
+<h2>Class Excercise 4</h2>
+<div id="internet-usage" class="section level4">
+<h4>Internet Usage</h4>
+<ol>
+<pre class="r"><code>&gt; sigma &lt;- 6.95; me &lt;- 1
+&gt; (zstar &lt;- distrib(0.025,type=&quot;q&quot;,lower.tail=FALSE))</code></pre>
+<p><img src="Confidence_Intervals_files/figure-html/unnamed-chunk-12-1.png" width="336" /></p>
+<pre><code>[1] 1.959964</code></pre>
+<pre class="r"><code>&gt; (zstar*sigma/me)^2</code></pre>
+<pre><code>[1] 185.5521</code></pre>
+<li>
+One should take a sample size of <code>formatC(ceiling((zstar*sigma/me)^2),format=&quot;f&quot;,digits=0)</code> household to achieve the desired level of confidence and margin-of-error.
+</li>
+<pre class="r"><code>&gt; sigma &lt;- 6.95; me &lt;- 1
+&gt; (zstar &lt;- distrib(0.05,type=&quot;q&quot;,lower.tail=FALSE))</code></pre>
+<p><img src="Confidence_Intervals_files/figure-html/unnamed-chunk-13-1.png" width="336" /></p>
+<pre><code>[1] 1.644854</code></pre>
+<pre class="r"><code>&gt; (zstar*sigma/me)^2</code></pre>
+<pre><code>[1] 130.6845</code></pre>
+<li>
+One should take a sample size of <code>formatC(ceiling((zstar*sigma/me)^2),format=&quot;f&quot;,digits=0)</code> household to achieve the desired level of confidence and margin-of-error.
+</li>
+<pre class="r"><code>&gt; sigma &lt;- 6.95; me &lt;- 0.5
+&gt; (zstar &lt;- distrib(0.025,type=&quot;q&quot;,lower.tail=FALSE))</code></pre>
+<p><img src="Confidence_Intervals_files/figure-html/unnamed-chunk-14-1.png" width="336" /></p>
+<pre><code>[1] 1.959964</code></pre>
+<pre class="r"><code>&gt; (zstar*sigma/me)^2</code></pre>
+<pre><code>[1] 742.2083</code></pre>
+<li>
+One should take a sample size of <code>formatC(ceiling((zstar*sigma/me)^2),format=&quot;f&quot;,digits=0)</code> household to achieve the desired level of confidence and margin-of-error.
+</li>
+</ol>
+</div>
+<div id="blood-pressure-in-children" class="section level4">
+<h4>Blood Pressure in Children</h4>
+<ol>
+<pre class="r"><code>&gt; sigma &lt;- 20; me &lt;- 5
+&gt; (zstar &lt;- distrib(0.005,type=&quot;q&quot;,lower.tail=FALSE))</code></pre>
+<p><img src="Confidence_Intervals_files/figure-html/unnamed-chunk-15-1.png" width="336" /></p>
+<pre><code>[1] 2.575829</code></pre>
+<pre class="r"><code>&gt; (zstar*sigma/me)^2</code></pre>
+<pre><code>[1] 106.1583</code></pre>
+<li>
+One should take a sample size of <code>formatC(ceiling((zstar*sigma/me)^2),format=&quot;f&quot;,digits=0)</code> children to achieve the desired level of confidence and margin-of-error with the “worse-case” standard deviation of 20.
+</li>
+<pre class="r"><code>&gt; sigma &lt;- 15; me &lt;- 5
+&gt; (zstar &lt;- distrib(0.005,type=&quot;q&quot;,lower.tail=FALSE))</code></pre>
+<p><img src="Confidence_Intervals_files/figure-html/unnamed-chunk-16-1.png" width="336" /></p>
+<pre><code>[1] 2.575829</code></pre>
+<pre class="r"><code>&gt; (zstar*sigma/me)^2</code></pre>
+<pre><code>[1] 59.71407</code></pre>
+<li>
+One should take a sample size of <code>formatC(ceiling((zstar*sigma/me)^2),format=&quot;f&quot;,digits=0)</code> children to achieve the desired level of confidence and margin-of-error with the “best-case” standard deviation of 15.
 </li>
 </ol>
 <hr />
@@ -220,6 +278,7 @@ I am 95% confident that the true population mean equatorial radius of Jupiter is
 $(document).ready(function () {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 });
+
 
 </script>
 
