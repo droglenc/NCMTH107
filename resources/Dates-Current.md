@@ -12,6 +12,7 @@ css: /css/syllabus.css
       <h4>Prof. Ogle's Section</h4>
       <dl class="dl-horizontal">
       <dt>9-Nov</dt><dd>10.45-10.48</dd>
+      <dt>21-Nov</dt><dd>11.23-11.24</dd>
 <!---
       <dt>16-Sep</dt><dd>1.27-1.35</dd>
       <dt>19-Sep</dt><dd>2.10-2.11</dd>
@@ -40,7 +41,7 @@ css: /css/syllabus.css
 <dl class="dl-horizontal">
 <!---
 -->
-<dt>16-Nov</dt><dd>Second Exam</dd>
+<dt>14-Nov</dt><dd>Second Exam</dd>
 <dt>28-Nov</dt><dd>Second Exam XC Reflection (Optional)</dd>
 <dt>9-Dec</dt><dd>"Stats-In-Use" and Project Extra Credit Reports (Optional)</dd>
 <dt>16-Dec</dt><dd>Final Exam</dd>
