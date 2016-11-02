@@ -20,14 +20,14 @@ Did, at the 10% level, the training result in an increase in the mean transactio
 
 ----
 
-## Diet and Weight Gain
-<img src="http://derekogle.com/NCMTH107/modules/zimgs/taking-weight.jpg" alt="Cancer Cells" class="img-right">
-Suppose that 1500 women followed a popular diet for a month.  A random sample of 35 of these women was taken and the results for weight gained are shown below.
 
-<pre><code>
- n   mean    sd    min    Q1  median     Q3    max
-35    6.7   7.3   -2.8   0.7     4.2   10.5   17.2 </code></pre>
-
-Assuming that the standard deviation for all 1500 women was 7.1, test, at the 5% level, that the average weight gain per woman for the month was over 5 pounds.  Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../Hypothesis_Testing/11-steps.html).
+## Recurrence of Cancer Tumors
+<img src="http://derekogle.com/NCMTH107/modules/zimgs/cancer-cells.jpg" alt="Cancer Cells" class="img-right">
+Unfortunately, certain kinds of tumors tend to recur.  [Byar and Blackard (1977)](http://www.sciencedirect.com/science/article/pii/0090429577901017) examined the rate of recurrence for bladder cancer following chemotherapy.  Specifically, they recorded the time of recurrence (in months) for patients that received a placebo.  Assume that it was known that the population distribution was strongly right-skewed and the standard deviation was 15 months.  Use the summary statistics from this group shown below to determine, at the 10% level, if the mean length of tumor recurrence is greater than 27 months.  Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../Hypothesis_Testing/11-steps.html).
+```{r echo=FALSE, results='hide'}
+tmp <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Tumors.csv") 
+Summarize(~months,data=tmp,digits=1)
+z.test(tmp$months,mu=27,alt="greater",conf.level=0.90,sd=15)
+```
 
 ----
