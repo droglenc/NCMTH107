@@ -18,22 +18,22 @@ css: "/css/modules.css"
 H<sub>A</sub>: μ&gt;5 and H<sub>0</sub>: μ=5, where μ is the mean weight gain for all women that followed the diet.
 </li>
 <li>
-1-sample Z-test because (i) one population (women that followed this diet) was sampled, (ii) a quantitative variable (weight gain) was recorded, and (iii) σ is assumed to be known (=5).
+1-sample Z-test because (i) one population (women that followed this diet) was sampled, (ii) a quantitative variable (weight gain) was recorded, and (iii) σ is assumed to be known (=7.1).
 </li>
 <li>
 An observational study as the women chose to be on the diet. There is clear randomization in this study.
 </li>
 <li>
-The assumptions are met because (i) σ is known (=5) and (ii) n=35&gt;30.
+The assumptions are met because (i) σ is known (=7.1) and (ii) n=35&gt;30.
 </li>
 <li>
 x̄=6.7 months.
 </li>
 <li>
-t=0.5833.
+t=1.4165.
 </li>
 <li>
-p-value=0.2799.
+p-value=0.0783.
 </li>
 <li>
 Do not reject H<sub>0</sub> because the p-value&gt;α.
@@ -48,7 +48,7 @@ Not required
 <p>R Appendix.</p>
 <pre class="r"><code>xbar &lt;- 6.7; sigma &lt;- 7.1; n &lt;- 35
 se &lt;- sigma/sqrt(n)
-t &lt;- (xbar-6)/se
+t &lt;- (xbar-5)/se
 pv &lt;- distrib(t,lower.tail=FALSE)
 lcb &lt;- xbar+distrib(0.95,lower.tail=FALSE,type=&quot;q&quot;)*se</code></pre>
 <hr />

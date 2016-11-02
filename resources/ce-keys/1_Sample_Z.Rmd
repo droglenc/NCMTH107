@@ -32,7 +32,7 @@ tbls(name="HawksRidge","Results from the one-sample z-test for testing that the 
 ```{r TumorCalc, echo=FALSE, results='hide', fig.show='hide'}
 xbar <- 6.7; sigma <- 7.1; n <- 35
 se <- sigma/sqrt(n)
-t <- (xbar-6)/se
+t <- (xbar-5)/se
 pv <- distrib(t,lower.tail=FALSE)
 lcb <- xbar+distrib(0.95,lower.tail=FALSE,type="q")*se
 ```
@@ -40,9 +40,9 @@ lcb <- xbar+distrib(0.95,lower.tail=FALSE,type="q")*se
 <ol>
 <li>&alpha;=0.05.</li>
 <li>H<sub>A</sub>: &mu;>5 and H<sub>0</sub>: &mu;=5, where &mu; is the mean weight gain for all women that followed the diet.</li>
-<li>1-sample Z-test because (i) one population (women that followed this diet) was sampled, (ii) a quantitative variable (weight gain) was recorded, and (iii) &sigma; is assumed to be known (=5).</li>
+<li>1-sample Z-test because (i) one population (women that followed this diet) was sampled, (ii) a quantitative variable (weight gain) was recorded, and (iii) &sigma; is assumed to be known (=7.1).</li>
 <li>An observational study as the women chose to be on the diet.  There is clear randomization in this study.</li>
-<li>The assumptions are met because (i) &sigma; is known (=5) and (ii) n=35>30.</li>
+<li>The assumptions are met because (i) &sigma; is known (=7.1) and (ii) n=35>30.</li>
 <li>x&#772;=`r xbar` months.</li>
 <li>t=`r formatC(t,format="f",digits=4)`.</li>
 <li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
