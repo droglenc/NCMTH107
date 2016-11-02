@@ -30,25 +30,25 @@ tbls(name="HawksRidge","Results from the one-sample z-test for testing that the 
 
 ## Cancer Tumors
 ```{r TumorCalc, echo=FALSE, results='hide', fig.show='hide'}
-xbar <- 31.7; sigma <- 15; n <- 42
+xbar <- 6.7; sigma <- 7.1; n <- 35
 se <- sigma/sqrt(n)
-t <- (xbar-27)/se
+t <- (xbar-6)/se
 pv <- distrib(t,lower.tail=FALSE)
-lcb <- xbar+distrib(0.9,lower.tail=FALSE,type="q")*se
+lcb <- xbar+distrib(0.95,lower.tail=FALSE,type="q")*se
 ```
 
 <ol>
-<li>&alpha;=0.10.</li>
-<li>H<sub>A</sub>: &mu;>27 and H<sub>0</sub>: &mu;=27, where &mu; is the mean time of recurrence for ALL bladder cancer patients that received the placebo.</li>
-<li>1-sample Z-test because (i) one population (bladder cancer patients that received the placebo) was sampled, (ii) a quantitative variable (time of recurrence) was recorded, and (iii) &sigma; is assumed to be known (=15).</li>
-<li>Loosely an "experiment" as the subjects were given a placebo treatment.  There is no obvious randomization apparent in this study.</li>
-<li>The assumptions are met because (i) &sigma; is known (=15) and (ii) n=42>30.</li>
+<li>&alpha;=0.05.</li>
+<li>H<sub>A</sub>: &mu;>5 and H<sub>0</sub>: &mu;=5, where &mu; is the mean weight gain for all women that followed the diet.</li>
+<li>1-sample Z-test because (i) one population (women that followed this diet) was sampled, (ii) a quantitative variable (weight gain) was recorded, and (iii) &sigma; is assumed to be known (=5).</li>
+<li>An observational study as the women chose to be on the diet.  There is clear randomization in this study.</li>
+<li>The assumptions are met because (i) &sigma; is known (=5) and (ii) n=35>30.</li>
 <li>x&#772;=`r xbar` months.</li>
 <li>t=`r formatC(t,format="f",digits=4)`.</li>
 <li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
-<li>Reject H<sub>0</sub> because the p-value<&alpha;.</li>
-<li>It appears that the time of recurrence for the tumor for ALL patients that received the placebo is greater than the hypothesized 27 months.</li>
-<li>I am 90% confident that the time of recurrence for the tumor for ALL patients that received the placebo is greater than `r formatC(lcb,format="f",digits=2)` months.</li>
+<li>Do not reject H<sub>0</sub> because the p-value>&alpha;.</li>
+<li>There is not enough evidence to conclude that the mean weight gain for ALL women on this diet is greater than 5 pounds.</li>
+<li>Not required</li>
 </ol>
 
 R Appendix.

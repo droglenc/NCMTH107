@@ -12,45 +12,45 @@ css: "/css/modules.css"
 <h2>Cancer Tumors</h2>
 <ol>
 <li>
-α=0.10.
+α=0.05.
 </li>
 <li>
-H<sub>A</sub>: μ&gt;27 and H<sub>0</sub>: μ=27, where μ is the mean time of recurrence for ALL bladder cancer patients that received the placebo.
+H<sub>A</sub>: μ&gt;5 and H<sub>0</sub>: μ=5, where μ is the mean weight gain for all women that followed the diet.
 </li>
 <li>
-1-sample Z-test because (i) one population (bladder cancer patients that received the placebo) was sampled, (ii) a quantitative variable (time of recurrence) was recorded, and (iii) σ is assumed to be known (=15).
+1-sample Z-test because (i) one population (women that followed this diet) was sampled, (ii) a quantitative variable (weight gain) was recorded, and (iii) σ is assumed to be known (=5).
 </li>
 <li>
-Loosely an “experiment” as the subjects were given a placebo treatment. There is no obvious randomization apparent in this study.
+An observational study as the women chose to be on the diet. There is clear randomization in this study.
 </li>
 <li>
-The assumptions are met because (i) σ is known (=15) and (ii) n=42&gt;30.
+The assumptions are met because (i) σ is known (=5) and (ii) n=35&gt;30.
 </li>
 <li>
-x̄=31.7 months.
+x̄=6.7 months.
 </li>
 <li>
-t=2.0306.
+t=0.5833.
 </li>
 <li>
-p-value=0.0211.
+p-value=0.2799.
 </li>
 <li>
-Reject H<sub>0</sub> because the p-value&lt;α.
+Do not reject H<sub>0</sub> because the p-value&gt;α.
 </li>
 <li>
-It appears that the time of recurrence for the tumor for ALL patients that received the placebo is greater than the hypothesized 27 months.
+There is not enough evidence to conclude that the mean weight gain for ALL women on this diet is greater than 5 pounds.
 </li>
 <li>
-I am 90% confident that the time of recurrence for the tumor for ALL patients that received the placebo is greater than 28.73 months.
+Not required
 </li>
 </ol>
 <p>R Appendix.</p>
-<pre class="r"><code>xbar &lt;- 31.7; sigma &lt;- 15; n &lt;- 42
+<pre class="r"><code>xbar &lt;- 6.7; sigma &lt;- 7.1; n &lt;- 35
 se &lt;- sigma/sqrt(n)
-t &lt;- (xbar-27)/se
+t &lt;- (xbar-6)/se
 pv &lt;- distrib(t,lower.tail=FALSE)
-lcb &lt;- xbar+distrib(0.9,lower.tail=FALSE,type=&quot;q&quot;)*se</code></pre>
+lcb &lt;- xbar+distrib(0.95,lower.tail=FALSE,type=&quot;q&quot;)*se</code></pre>
 <hr />
 </div>
 <div id="raptors-at-hawks-ridge" class="section level2">
@@ -115,6 +115,7 @@ I am 99% confident that the mean number of raptors seen per year in ALL years is
 $(document).ready(function () {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 });
+
 
 </script>
 
