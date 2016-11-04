@@ -8,8 +8,8 @@ css: "/css/modules.css"
 
 
 <hr />
-<div id="cancer-tumors" class="section level2">
-<h2>Cancer Tumors</h2>
+<div id="diet-and-weight-gain" class="section level2">
+<h2>Diet and Weight Gain</h2>
 <ol>
 <li>
 α=0.05.
@@ -27,7 +27,7 @@ An observational study as the women chose to be on the diet. There is clear rand
 The assumptions are met because (i) σ is known (=7.1) and (ii) n=35&gt;30.
 </li>
 <li>
-x̄=6.7 months.
+x̄=6.7 pounds gained.
 </li>
 <li>
 Z=1.4165.
@@ -46,11 +46,6 @@ Not required
 </li>
 </ol>
 <p>R Appendix.</p>
-<pre class="r"><code>xbar &lt;- 6.7; sigma &lt;- 7.1; n &lt;- 35
-se &lt;- sigma/sqrt(n)
-t &lt;- (xbar-5)/se
-pv &lt;- distrib(t,lower.tail=FALSE)
-lcb &lt;- xbar+distrib(0.95,lower.tail=FALSE,type=&quot;q&quot;)*se</code></pre>
 <hr />
 </div>
 <div id="raptors-at-hawks-ridge" class="section level2">

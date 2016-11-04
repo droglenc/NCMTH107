@@ -28,8 +28,8 @@ tbls(name="HawksRidge","Results from the one-sample z-test for testing that the 
 
 ----
 
-## Cancer Tumors
-```{r TumorCalc, echo=FALSE, results='hide', fig.show='hide'}
+## Diet and Weight Gain
+```{r DietCalc, echo=FALSE, results='hide', fig.show='hide'}
 xbar <- 6.7; sigma <- 7.1; n <- 35
 se <- sigma/sqrt(n)
 t <- (xbar-5)/se
@@ -43,7 +43,7 @@ lcb <- xbar+distrib(0.95,lower.tail=FALSE,type="q")*se
 <li>1-sample Z-test because (i) one population (women that followed this diet) was sampled, (ii) a quantitative variable (weight gain) was recorded, and (iii) &sigma; is assumed to be known (=7.1).</li>
 <li>An observational study as the women chose to be on the diet.  There is clear randomization in this study.</li>
 <li>The assumptions are met because (i) &sigma; is known (=7.1) and (ii) n=35>30.</li>
-<li>x&#772;=`r xbar` months.</li>
+<li>x&#772;=`r xbar` pounds gained.</li>
 <li>Z=`r formatC(t,format="f",digits=4)`.</li>
 <li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
 <li>Do not reject H<sub>0</sub> because the p-value>&alpha;.</li>
