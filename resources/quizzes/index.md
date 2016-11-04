@@ -8,10 +8,10 @@ title: Daily Quizzes
 * [Wed, 9-Nov](){:target="_blank"}
 * [Mon, 7-Nov](){:target="_blank"}
 
-* [Fri, 4-Nov](https://goo.gl/forms/1SXCeygQ20VZG8DH3){:target="_blank"}
 
 -->
 
+* [Fri, 4-Nov](https://goo.gl/forms/1SXCeygQ20VZG8DH3){:target="_blank"}
 * [Wed, 2-Nov](https://goo.gl/forms/IBdj0xlQbvrrCMSp1){:target="_blank"}
 * [Mon, 31-Oct](https://goo.gl/forms/6p4oRcjC0Zm3LVu93){:target="_blank"}
 
