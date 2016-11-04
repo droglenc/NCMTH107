@@ -44,7 +44,7 @@ lcb <- xbar+distrib(0.95,lower.tail=FALSE,type="q")*se
 <li>An observational study as the women chose to be on the diet.  There is clear randomization in this study.</li>
 <li>The assumptions are met because (i) &sigma; is known (=7.1) and (ii) n=35>30.</li>
 <li>x&#772;=`r xbar` months.</li>
-<li>t=`r formatC(t,format="f",digits=4)`.</li>
+<li>Z=`r formatC(t,format="f",digits=4)`.</li>
 <li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
 <li>Do not reject H<sub>0</sub> because the p-value>&alpha;.</li>
 <li>There is not enough evidence to conclude that the mean weight gain for ALL women on this diet is greater than 5 pounds.</li>
