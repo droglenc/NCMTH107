@@ -5,12 +5,13 @@ title: Daily Quizzes
 
 <!--
 * [Fri, 11-Nov](){:target="_blank"}
-* [Wed, 9-Nov](){:target="_blank"}
-* [Mon, 7-Nov](){:target="_blank"}
-
+* [Wed, 9-Nov](https://goo.gl/forms/P0hlePhIBrAU5MdB3){:target="_blank"}
 
 -->
 
+* [Mon, 7-Nov](https://goo.gl/forms/SWGg6Q0qVsFLDJg03){:target="_blank"}
+
+<!--
 * [Fri, 4-Nov](https://goo.gl/forms/1SXCeygQ20VZG8DH3){:target="_blank"}
 * [Wed, 2-Nov](https://goo.gl/forms/IBdj0xlQbvrrCMSp1){:target="_blank"}
 * [Mon, 31-Oct](https://goo.gl/forms/6p4oRcjC0Zm3LVu93){:target="_blank"}
@@ -40,5 +41,4 @@ title: Daily Quizzes
 
 * [Fri, 9-Sep](https://goo.gl/forms/OjDVPoG5Fyx0kLlq2){:target="_blank"}
 * [Wed, 7-Sep](https://goo.gl/forms/txWvbULnMlllIQLA2){:target="_blank"}
-
-
+-->
