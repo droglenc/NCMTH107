@@ -11,7 +11,6 @@ css: /css/syllabus.css
     <div class="col-sm-5">
       <h4>Prof. Ogle's Section</h4>
       <dl class="dl-horizontal">
-      <dt>9-Nov</dt><dd>10.45-10.48</dd>
       <dt>21-Nov</dt><dd>11.22-11.23</dd>
 <!---
       <dt>16-Sep</dt><dd>1.27-1.35</dd>
@@ -22,6 +21,7 @@ css: /css/syllabus.css
       <dt>12-Oct</dt><dd>6.24-6.26</dd>
       <dt>19-Oct</dt><dd>7.19 and (separately) 8.4 and 8.5</dd>
       <dt>26-Oct</dt><dd>9.22-9.24</dd>
+      <dt>9-Nov</dt><dd>10.45-10.48</dd>
 --->
       </dl>
     </div>
