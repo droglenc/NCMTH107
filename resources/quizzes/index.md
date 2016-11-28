@@ -4,10 +4,10 @@ title: Daily Quizzes
 ---
 
 <!--
-* [Mon, 21-Nov](){:target="_blank"}
 
 -->
 
+* [Mon, 28-Nov](https://goo.gl/forms/cU0KvXJkYgILNQQt1){:target="_blank"}
 
 
 <!--
