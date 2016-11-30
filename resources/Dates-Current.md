@@ -6,7 +6,6 @@ css: /css/syllabus.css
 
 ## Homework Due Dates
 <dl class="dl-horizontal">
-<dt>21-Nov</dt><dd>11.22-11.23</dd>
 <dt>30-Nov</dt><dd>11.24-11.25</dd>
 <dt>5-Dec</dt><dd>12.38</dd>
 <!---
@@ -19,6 +18,7 @@ css: /css/syllabus.css
 <dt>19-Oct</dt><dd>7.19 and (separately) 8.4 and 8.5</dd>
 <dt>26-Oct</dt><dd>9.22-9.24</dd>
 <dt>9-Nov</dt><dd>10.45-10.48</dd>
+<dt>21-Nov</dt><dd>11.22-11.23</dd>
 --->
 </dl>
 
