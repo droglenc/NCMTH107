@@ -7,10 +7,10 @@ title: Daily Quizzes
 
 -->
 
-* [Wed, 30-Nov](https://goo.gl/forms/sKQJZtOMXsiJ8SLp1){:target="_blank"}
-
+* [Wed, 30-Nov](https://goo.gl/forms/wMK3hlrler0DmO2J3){:target="_blank"}
 
 <!--
+* [Wed, 30-Nov](https://goo.gl/forms/sKQJZtOMXsiJ8SLp1){:target="_blank"}
 * [Mon, 28-Nov](https://goo.gl/forms/cU0KvXJkYgILNQQt1){:target="_blank"}
 * [Fri, 18-Nov](https://goo.gl/forms/IHb5nKWhPSAykyF73){:target="_blank"}
 * [Wed, 9-Nov](https://goo.gl/forms/P0hlePhIBrAU5MdB3){:target="_blank"}
