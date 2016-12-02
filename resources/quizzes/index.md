@@ -3,11 +3,7 @@ layout: page
 title: Daily Quizzes
 ---
 
-<!--
-
--->
-
-* [Wed, 30-Nov](https://goo.gl/forms/wMK3hlrler0DmO2J3){:target="_blank"}
+* [Fri, 2-Dec](https://goo.gl/forms/wMK3hlrler0DmO2J3){:target="_blank"}
 
 <!--
 * [Wed, 30-Nov](https://goo.gl/forms/sKQJZtOMXsiJ8SLp1){:target="_blank"}
