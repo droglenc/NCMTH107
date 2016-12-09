@@ -6,9 +6,10 @@ title: Daily Quizzes
 * [Fri, 9-Dec](https://goo.gl/forms/UQbGnxWcjerU2aus1){:target="_blank"}
 -->
 
-* [Wed, 7-Dec](https://goo.gl/forms/iEhZjrrVZ2xO0qey1){:target="_blank"}
+* [Fri, 9-Dec](https://goo.gl/forms/UQbGnxWcjerU2aus1){:target="_blank"}
 
 <!--
+* [Wed, 7-Dec](https://goo.gl/forms/iEhZjrrVZ2xO0qey1){:target="_blank"}
 * [Mon, 5-Dec](https://goo.gl/forms/5VMB2yJyDgcsS0xs2){:target="_blank"}
 * [Fri, 2-Dec](https://goo.gl/forms/wMK3hlrler0DmO2J3){:target="_blank"}
 * [Wed, 30-Nov](https://goo.gl/forms/sKQJZtOMXsiJ8SLp1){:target="_blank"}
