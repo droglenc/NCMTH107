@@ -12,7 +12,7 @@ function roundDec(x, dcml)  {
 //**  Sets weights for assessment components                                      **
 //**********************************************************************************
 function get_wghts() {
-  QUIZ_WT = 0.15; HW_WT = 0.15; SIUR_WT = 0.0;
+  QUIZ_WT = 0.10; PART_WT = 0.10; HW_WT = 0.15; SIUR_WT = 0.0;
   MT1_WT = 0.20;	MT2_WT = 0.20;	FNL_WT = 0.30;
 }
 
@@ -41,6 +41,11 @@ function calc_grade(form) {
 	if (temp!=="") {
 		if (temp > 1) {temp=temp/100};
 		pts += QUIZ_WT*temp;	outof += QUIZ_WT;
+	}
+	temp = form.PART_SC.value;
+	if (temp!=="") {
+		if (temp > 1) {temp=temp/100};
+		pts += PART_WT*temp;	outof += QUIZ_WT;
 	}
 	temp = form.HW_SC.value;
 	if (temp!=="") {

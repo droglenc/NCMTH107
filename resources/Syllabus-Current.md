@@ -45,11 +45,11 @@ We will focus on the understanding of statistical concepts and proper interpreta
 <table class="tutors" width="45%">
 <tr><th><a href="http://derekogle.com" target="_blank">Dr. Derek H. Ogle</a><br>Professor of Mathematical Sciences<br> & Natural Resources</th></tr>
 <tr><th><img src="../img/DerekOgle1.jpg"></th></tr>
-<tr><td>900-1030 & 11-1230 Sections</td></tr>
+<tr><td>10-1130 Sections</td></tr>
 <tr style="vertical-align:top"><td>CSE228; 682-1300<br><a href="mailto:dogle@northland.edu">dogle@northland.edu</a><br>
 <a href="https://www.suggestionox.com/r/W16-107">Feedback / Suggestions</a></td></tr>
 <tr style="vertical-align:top"><td>Office Hours:<br>
-Mon, Wed, Fri 1300-1500<br>By Appointment</td></tr>
+Mon, Wed, Fri 900-950; Thus 1200-1300<br>By Appointment</td></tr>
 </table>
 
 
@@ -65,34 +65,35 @@ Mon, Wed, Fri 1300-1500<br>By Appointment</td></tr>
 ----
 
 ## Grading
-
 An overall percentage score will be computed from the items and associated weights listed in the table below.  A specific description for each item is given further below.  You can also use this table to compute your current or projected future grade.  To compute your current grade, enter your percentage scores in the boxes for assessments that have been completed.  To project your future grade, also include percentages for future assessments.  [*It is your responsibility to track your scores on the individual assessments.*]
 
 <!-- if the assessment weights change then you must change the values in get_wghts() in the grader.js file -->
 
 <form name="GRADECALC">
-<table class="grader" width="80%">
-<tr><th width="16%"></th>
-<th width="16%"><a href="#quizzes">Quiz</a></th>
-<th width="16%"><a href="#homework">HW</a></th>
-<th width="16%"><a href="#exams">MT1</A></th>
-<th width="18%"><a href="#exams">MT2</A></th>
-<th width="18%"><a href="#exams">Final</A></th>
+<table class="grader" width="90%">
+<tr><th width="14%"></th>
+<th width="14%"><a href="#quizzes">Quiz</a></th>
+<th width="14%"><a href="#homework">HW</a></th>
+<th width="14%"><a href="#participation">Participation</a></th>
+<th width="14%"><a href="#exams">MT1</A></th>
+<th width="15%"><a href="#exams">MT2</A></th>
+<th width="15%"><a href="#exams">Final</A></th>
 </tr>
 
 <tr><th>Weight</th>
-<th>15%</th><th>15%</th><th>20%</th><th>20%</th><th>30%</th></tr>
+<th>10%</th><th>10%</th><th>10%</th><th>20%</th><th>20%</th><th>30%</th></tr>
 
 <tr><th>Percent</th>
 <td><input type="text" name="QUIZ_SC" size="3" tabindex="1" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="HW_SC" size="3" tabindex="2" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="MT1_SC" size="3" tabindex="3" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="MT2_SC" size="3" tabindex="4" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="FNL_SC" size="3" tabindex="5" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="PART_SC" size="3" tabindex="2" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="HW_SC" size="3" tabindex="3" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="MT1_SC" size="3" tabindex="4" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="MT2_SC" size="3" tabindex="5" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="FNL_SC" size="3" tabindex="6" onchange="calc_grade(this.form)"></td>
 </tr>
 
 <tr><th colspan="4">Overall Percentage: <input type="text" name="SCORE" size="4"></th>
-<th colspan="2">Projected Grade: <input type="text" name="GRADE" size="2"></th></tr>
+<th colspan="3">Projected Grade: <input type="text" name="GRADE" size="2"></th></tr>
 </table>
 </form>
 
@@ -105,12 +106,40 @@ Lowest possible final letter grades will be assigned by comparing your overall p
   <tr><td>D+ 67-69</td><td>D  60-66</td><td>F   0-59</td></tr>
 </table>
 
-### Exams
 
-Exam dates are shown on the [Due Dates page](Dates-Current.html){:target="_blank"}.  Make-up exams will be provided only if you have a fixed commitment of sufficient importance that was set before the beginning of the semester or a verifiable medical condition.  **You will not be allowed to make up an exam missed without my prior approval.  The final exam will not be given early.**
+### Quizzes
+A short quiz will be given via the computer in the **FIRST 5-10 minutes of EVERY** class period.  These quizzes are intended to encourage you to complete the preparation required for that day's class.  Thus, quizzes are "open notes" (but **not** "open book" or "open computer").  You will be notified at the end of each class period about which module will form the next class period's quiz.  *You should show up before the start of class to start your computer for taking the quiz.*  **Quizzes that are missed for reasons that have not been approved by me cannot be made up.  Quizzes taken from outside of the classroom will not be accepted.** 
+Your lowest four quiz scores will be excluded when computing your overall grade.
+
+
+### Participation
+This course is taught using active learning, peer-instruction, and inquiry-based pedagogies.  You will be asked to prepare for each class period, answer questions based on your preparations, work with others in small groups, ask questions, and actively work on in-class exercises. Your full participation is critical to your learning and success in this course. To encourage your full participation, I will assess your level of participation at the end of each class period with the following rubric.
+
+<div class="container-fluid">
+  <table class="table table-bordered">
+  <thead>
+    <tr class="info"><th>0 points</th><th>1 point</th><th>2 points</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Very little active participation in the day's activities.</td><td>Participated in many, but not all, of the day's activities</td><td>Fully participated in the day's activities.</td></tr>
+  </tbody>
+  </table>
+</div>
+
+You can demonstrate full participation to me with the following behaviors:
+
+- Attend the class period.
+- Diligently work on the class exercises (or homework assignments if you have complted the class exercise).
+- Ask pertinent questions.
+- Work with others on class material.
+- Follow the class code of conduct.
+
+<img class="img-right" src="../img/studying.jpg">
+
+As a general rule-of-thumb ([here](http://www.collegeparents.org/members/resources/articles/your-college-student-investing-enough-time-studying){:target="_blank"}, [here](http://classroom.synonym.com/ratio-studying-class-time-college-1075.html){:target="_blank"}, [here](https://www.usu.edu/asc/studysmart/pdf/estimating_study_hours.pdf){:target="_blank"}, and [here](http://collegelife.about.com/od/academiclife/f/How-Much-Time-Should-I-Spend-Studying-In-College.htm){:target="_blank"}, among many), students are expected to spend between 2-3 hours of time outside of class for each hour in class.  This course meets for 4.5 hours per week and, thus, you should dedicate between 9 and 13.5 hours of time outside of class to preparing for class, completing homework and other assessments, and studying for exams.  The work required for this course can be completed within this expected amount of time, **if that time is quality-time** (i.e., without distraction).  If you feel that you are spending an inordinate amount of time on some assignments because you are "stuck," then start your assignments early so that you can stop (and do other things) and make plans to see the [tutors](#tutors) or [instructor](#instructor) for help.
+
 
 ### Homework
-
 The text contains many review exercises throughout each chapter and a few homework problems at the end of each chapter.  A due date for the homework problems will be assigned when a concept module has been completed.  Each assignment should follow [the expectations outlined here](hwformat){:target="_blank"}.  Printed homework assignments are **due at the beginning of the due date class period; late assignments will not be accepted.**
 
 Each homework assigment is worth 10 points and will be graded in two parts.  The first part is an assessment of completeness according to the following rubric.
@@ -128,13 +157,15 @@ Each homework assigment is worth 10 points and will be graded in two parts.  The
 
 The second part, also worth 5 points, is an assessment of the quality of the work.  In this part, only some (approximately half) of the questions will be assessed.  Answer keys will be [posted online](homework-keys) so that you may check your work.
 
-### Quizzes
+Your lowest homework grade will be excluded when computing your overall grade.
 
-A short quiz will be given via the computer in the **FIRST 5-10 minutes of EVERY** class period.  These quizzes are intended to encourage you to complete the preparation required for that day's class.  Thus, quizzes are "open notes" (but **not** "open book" or "open computer").  You will be notified at the end of each class period about what portion of the text and online resources are required to prepare for the next class period.  *You should show up before the start of class to start your computer for taking the quiz.*  **Quizzes that are missed for reasons that have not been approved by me cannot be made up.**
+
+### Exams
+Exam dates are shown on the [Due Dates page](Dates-Current.html){:target="_blank"}.  Make-up exams will be provided only if you have a fixed commitment of sufficient importance that was set before the beginning of the semester or a verifiable medical condition.  **You will not be allowed to make up an exam missed without my prior approval.  The final exam will not be given early.**
+
 
 ### Extra Credit
-
-Three possibilities for extra credit are:
+Three options for extra credit are:
 
 1. **Exam Corrections** -- Complete a two-part typed correction for each midterm exam.  The **first part** is corrected answers for each question you missed, along with *an explanation of why the answer you originally provided was not correct and why the correct answer is correct.*  You will not receive credit for simply correcting your answer, for providing another incorrect answer, or saying "*I have no idea why I put that answer*," "*I simply wrote the wrong answer*," "*I don't know what I was thinking,*" or any other nonsensical explanation.  You must address every question you missed to receive full credit for this portion.  The **second part** is a *thoughtful* reflection about the exam including what you did well on the exam (and why), what you did poorly on the exam (and why), what strategy you used to prepare for the exam, how you will change your strategy to prepare for the next exam, and whether you considered the exam to be fair or not.  Your reflection must be typed and easy to read (e.g., neatly organize your corrections by question number) and you *must include the original exam*.  A perfect correction will add the lesser of 10% or the amount it would take for your exam score to be 100%, with 1/3rd of the overall grade from the reflection (second part).  Corrections are due one week after the corrected exam is returned (**late corrections will not be accepted**).
 
@@ -144,31 +175,23 @@ Three possibilities for extra credit are:
 
 
 ### Incomplete Grades
-
 Under [Northland College policy](https://my.northland.edu/student-policies/academic-policies/#grades){:target="_blank"} (scroll down to "Incomplete Grades"), an incomplete grade will be given ONLY under extreme circumstances beyond your control, such as a major illness.  An incomplete grade will be given ONLY if you have successfully completed the entire course except for the final exam.
 
 ----
 
-## Participation, Classroom Conduct, and Academic Integrity
-
-This course is taught in the framework of active-learning, peer-instruction, and inquiry-based pedagogies.  This means that you will be asked to prepare for the class period, answer questions based on your reading, work in small groups with others, and participate in small- and large-group discussions.  Your participation in these activities is critical to your learning and success in this course, but also to the overall success of the course.
-
-<img class="img-right" src="../img/studying.jpg">
-
-As a general rule-of-thumb ([here](http://www.collegeparents.org/members/resources/articles/your-college-student-investing-enough-time-studying){:target="_blank"}, [here](http://classroom.synonym.com/ratio-studying-class-time-college-1075.html){:target="_blank"}, [here](https://www.usu.edu/asc/studysmart/pdf/estimating_study_hours.pdf){:target="_blank"}, and [here](http://collegelife.about.com/od/academiclife/f/How-Much-Time-Should-I-Spend-Studying-In-College.htm){:target="_blank"}, among many), students are expected to spend between 2-3 hours of time outside of class for each hour in class.  This course meets for 4.5 hours per week and, thus, you should dedicate between 9 and 13.5 hours of time outside of class to preparing for class, completing homework and other assessments, and studying for exams.  The work required for this course can be completed within this expected amount of time, **if that time is quality-time** (i.e., without distraction).  If you feel that you are spending an inordinate amount of time on some assignments because you are "stuck," then start your assignments early so that you can stop (and do other things) and make plans to see the [tutors](#tutors) or [instructor](#instructor) for help.
+## Classroom Conduct and Academic Integrity
 
 Your conduct in class should revolve around the idea of being respectful of all others in the class.  Adhering to the following behaviors should be considered the minimum requirements to being respectful of others:
 
 * Arrive to class on time.  If you arrive late, then take the first available seat as quietly as possible.  If you need to leave early, then please sit near the exit.
 * Do not bring friends, children, pets, meals, or anything else to class that should not be there.
-* Turn off and store out-of-sight cell phones and other electronic devices (use of a personal laptop for work related to class is permitted).
-* Do not use the college or personal computers for other than assigned tasks.
 * Do not engage in side discussions while I or others are speaking to the entire class.
 *	Do not sleep in class -- this behavior is rude and distracting to others (especially the professor).
 * Unpack before and pack after class -- opening and closing  backpacks, rustling of papers or jackets is disruptive and disrespectful to others.
 * Do not use disrespectful language when addressing others.
-
-You will be asked to leave class if your behavior is disrespectful of others. 
+* Turn off and store out-of-sight cell phones and other electronic devices
+* All class work should be conducted on a college computer.  Personal computers are not permitted for in-class work.
+* You are expected to attend the entire class period.  Leaving class early defeats the purpose of the class period, does not take advantage of resources (i.e., the professor) that can significantly help your learning, and does not build statistical stamina.
 
 Finally, note that the [College's Academic Integrity Statement & Policy](https://my.northland.edu/student-policies/academic-policies/#academic-integrity){:target="_blank"} will be followed in this course.  Please make sure that you are familiar with its content.
 
