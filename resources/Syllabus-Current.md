@@ -12,7 +12,7 @@ css: /css/syllabus.css
 
 * Class [Description](#description) and [Learning Outcomes](#learning-outcomes)
 * [Instructors](#instructors) and [Tutors](#tutors)
-* [Grading](#grading) -- [Quizzes](#quizzes), [Homework](#homework), [Exams](#exams), [Extra Credit](#extra-credit)
+* [Grading](#grading) -- [Quizzes](#quizzes), [Participation](#participation), [Homework](#homework), [Exams](#exams), [Extra Credit](#extra-credit)
 * [Participation, Classroom Conduct, and Academic Integrity](#classroom-conduct-and-academic-integrity)
 * [Accomodations](#accomodations)
 
