@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Data Production
-subtitle: Class Exercise 3
+title: Class Exercise
+subtitle: Class ExerciseData Production 3
 css: "/css/modules.css"
 ---
 
