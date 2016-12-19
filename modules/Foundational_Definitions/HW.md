@@ -15,7 +15,7 @@ css: "/css/modules.css"
 
 ## Crayfish and Bass
 <img src="../zimgs/smallmouth-eats-crayfish.jpg" alt="Smallmouth Eats a Crayfish" class="img-right">
-A NC student, for their Biology capstone, wants to determine the mean carapace length of Rusty Crayfish (*Orconectes rusticus*) in a lake with Smallmouth Bass (*Micropterus dolomieu*). In 2015, the student gathered and examined 235 crayfish in a manner that was as random as possible.
+As part of their Biology Capstone research, a Northland College student wanted to determine the mean carapace length of Rusty Crayfish (*Orconectes rusticus*) in a lake with Smallmouth Bass (*Micropterus dolomieu*). In 2015, the student gathered (as randomly as possible) and measured the carapace length of 235 Rusty Crayfish from the lake with Smallmouth Bass.
 
 1. Identify the individual, variable, population, parameter, sample, and statistic.
 1. What type of variable is the variable you identified? [*Be specific*]
@@ -32,14 +32,14 @@ Many invasive aquatic organisms have been transferred to the Great Lakes in the 
 
 ----
 
-## Realities
+## Variable Types
 <img src="../zimgs/data-recording.jpg" alt="Recording Data" class="img-right">
 
 For each question below, identify the specific type of variable. Include a short sentence that explains your reasoning.
 
 1. The concentration (ppm) of lead at 119 sites in Chequamegon Bay.
 1. An actuary rates potential insurees as "low risk", "moderate risk", or "high risk".
-1. Sociologist asked respondents from which medium they receive most of their information about wolves: "TV", "Newspaper", "Outdoor Magazines", "Public Policy Meetings", "Friends or Family", or "Other".
-1. The Koppen scheme of classifying "climates" contains five principal groups: "Tropical rainy", "dry", "temerate rainy", "Cold snowy forest", and "Polar". -
+1. A Sociologist asked respondents from which medium they receive most of their information about wolves: "TV", "Newspaper", "Outdoor Magazines", "Public Policy Meetings", "Friends or Family", or "Other".
+1. The Koppen scheme of classifying "climates" contains five principal groups: "Tropical rainy", "dry", "temerate rainy", "Cold snowy forest", and "Polar".
 
 ----
