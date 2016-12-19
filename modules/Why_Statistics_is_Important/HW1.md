@@ -5,7 +5,7 @@ subtitle: Homework Assignment
 css: "/css/modules.css"
 ---
 
-<div class="alert alert-info">
+<div class="alert alert-warning">
   <strong>Note</strong> Your answers to the questions below should follow the <a href="../../resources/hwformat" target="_blank">expectations for homework found here</a> (and <a href="../../resources/FAQ/FAQs/HWFormat_Example.pdf" target="_blank">demonstrated here</a>).
 </div>
 
