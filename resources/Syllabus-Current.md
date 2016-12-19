@@ -13,7 +13,7 @@ css: /css/syllabus.css
 * Class [Description](#description) and [Learning Outcomes](#learning-outcomes)
 * [Instructors](#instructors) and [Tutors](#tutors)
 * [Grading](#grading) -- [Quizzes](#quizzes), [Homework](#homework), [Exams](#exams), [Extra Credit](#extra-credit)
-* [Participation, Classroom Conduct, and Academic Integrity](#participation-classroom-conduct-and-academic-integrity)
+* [Participation, Classroom Conduct, and Academic Integrity](#classroom-conduct-and-academic-integrity)
 * [Accomodations](#accomodations)
 
 ----
@@ -42,14 +42,14 @@ We will focus on the understanding of statistical concepts and proper interpreta
 
 ## Instructor
 
-<table class="tutors" width="45%">
+<table class="tutors" width="60%">
 <tr><th><a href="http://derekogle.com" target="_blank">Dr. Derek H. Ogle</a><br>Professor of Mathematical Sciences<br> & Natural Resources</th></tr>
 <tr><th><img src="../img/DerekOgle1.jpg"></th></tr>
-<tr><td>10-1130 Sections</td></tr>
+<tr><td>10-1130 Section</td></tr>
 <tr style="vertical-align:top"><td>CSE228; 682-1300<br><a href="mailto:dogle@northland.edu">dogle@northland.edu</a><br>
 <a href="https://www.suggestionox.com/r/W16-107">Feedback / Suggestions</a></td></tr>
 <tr style="vertical-align:top"><td>Office Hours:<br>
-Mon, Wed, Fri 900-950; Thus 1200-1300<br>By Appointment</td></tr>
+Mon, Wed, Fri 900-950; Thurs 1200-1300<br>By Appointment</td></tr>
 </table>
 
 
@@ -65,19 +65,19 @@ Mon, Wed, Fri 900-950; Thus 1200-1300<br>By Appointment</td></tr>
 ----
 
 ## Grading
-An overall percentage score will be computed from the items and associated weights listed in the table below.  A specific description for each item is given further below.  You can also use this table to compute your current or projected future grade.  To compute your current grade, enter your percentage scores in the boxes for assessments that have been completed.  To project your future grade, also include percentages for future assessments.  [*It is your responsibility to track your scores on the individual assessments.*]
+An overall percentage score will be computed from the items and associated weights listed in the table below. To compute your current grade, enter your percentage scores in the boxes for assessments that have been completed. To project your future grade, also include percentages for future assessments.  [*It is your responsibility to track your scores on the individual assessments.*]
 
 <!-- if the assessment weights change then you must change the values in get_wghts() in the grader.js file -->
 
 <form name="GRADECALC">
 <table class="grader" width="90%">
 <tr><th width="14%"></th>
-<th width="14%"><a href="#quizzes">Quiz</a></th>
-<th width="14%"><a href="#homework">HW</a></th>
-<th width="14%"><a href="#participation">Participation</a></th>
+<th width="12%"><a href="#quizzes">Quiz</a></th>
+<th width="12%"><a href="#homework">HW</a></th>
+<th width="20%"><a href="#participation">Participation</a></th>
 <th width="14%"><a href="#exams">MT1</A></th>
-<th width="15%"><a href="#exams">MT2</A></th>
-<th width="15%"><a href="#exams">Final</A></th>
+<th width="14%"><a href="#exams">MT2</A></th>
+<th width="14%"><a href="#exams">Final</A></th>
 </tr>
 
 <tr><th>Weight</th>
@@ -97,7 +97,7 @@ An overall percentage score will be computed from the items and associated weigh
 </table>
 </form>
 
-Lowest possible final letter grades will be assigned by comparing your overall percentage (rounded to a whole number) to the values shown below:
+Letter grades will be assigned by comparing your overall percentage (rounded to a whole number) to the values shown below:
 
 <table class="tg">
   <tr><td></td><td>A 92-100</td><td>A- 90-91</td></tr>
@@ -108,8 +108,7 @@ Lowest possible final letter grades will be assigned by comparing your overall p
 
 
 ### Quizzes
-A short quiz will be given via the computer in the **FIRST 5-10 minutes of EVERY** class period.  These quizzes are intended to encourage you to complete the preparation required for that day's class.  Thus, quizzes are "open notes" (but **not** "open book" or "open computer").  You will be notified at the end of each class period about which module will form the next class period's quiz.  *You should show up before the start of class to start your computer for taking the quiz.*  **Quizzes that are missed for reasons that have not been approved by me cannot be made up.  Quizzes taken from outside of the classroom will not be accepted.** 
-Your lowest four quiz scores will be excluded when computing your overall grade.
+A short quiz will be given in the **FIRST 5-10 minutes of EVERY** class period. These quizzes are intended to encourage you to complete the preparation required for that day's class. Thus, quizzes are "open notes" (but **not** "open book" or "open computer"). You will be notified at the end of each class period about which module will form the next class period's quiz. **Missed quizzes cannot be made up and quizzes taken from outside of the classroom will not be accepted.** Your lowest four quiz scores will be excluded when computing your overall grade.
 
 
 ### Participation
@@ -126,13 +125,15 @@ This course is taught using active learning, peer-instruction, and inquiry-based
   </table>
 </div>
 
-You can demonstrate full participation to me with the following behaviors:
+The following behaviors are indicative of full participation:
 
-- Attend the class period.
-- Diligently work on the class exercises (or homework assignments if you have complted the class exercise).
-- Ask pertinent questions.
-- Work with others on class material.
-- Follow the class code of conduct.
+- Attended the entire class period.
+- Diligently worked on the class exercises (or homework assignments if you have completed the class exercise).
+- Asked pertinent questions.
+- Worked with others on class material.
+- Took notes during lectures.
+- Paid attention during lectures.
+- Followed the [class conduct guidelines](#classroom-conduct-and-academic-integrity).
 
 <img class="img-right" src="../img/studying.jpg">
 
@@ -140,14 +141,14 @@ As a general rule-of-thumb ([here](http://www.collegeparents.org/members/resourc
 
 
 ### Homework
-The text contains many review exercises throughout each chapter and a few homework problems at the end of each chapter.  A due date for the homework problems will be assigned when a concept module has been completed.  Each assignment should follow [the expectations outlined here](hwformat){:target="_blank"}.  Printed homework assignments are **due at the beginning of the due date class period; late assignments will not be accepted.**
+The text contains many review exercises throughout each chapter and a few homework problems at the end of each chapter. A due date for the homework problems will be assigned when a concept module has been completed. Printed homework assignments are **due at the beginning of the due date class period; late assignments will not be accepted.** Each assignment should follow [the expectations outlined here](hwformat){:target="_blank"}. An assigment may receive a grade of 0 if it does not follow the required format or is difficult to follow.
 
 Each homework assigment is worth 10 points and will be graded in two parts.  The first part is an assessment of completeness according to the following rubric.
 
 <div class="container-fluid">
   <table class="table table-bordered">
   <thead>
-    <tr class="info"><th>1 point</th><th>3 points</th><th>5 points</th></tr>
+    <tr class="info"><th>0-1 points</th><th>2-4 points</th><th>5 points</th></tr>
   </thead>
   <tbody>
     <tr><td>Very few questions answered completely.</td><td>Most questions answered completely.  <a href="hwformat.html" target="_blank">Format for homework</a> may not have been followed.</td><td>All questions answered completely.  <a href="hwformat.html" target="_blank">Format for homework</a> followed exactly.</td></tr>
@@ -184,14 +185,15 @@ Under [Northland College policy](https://my.northland.edu/student-policies/acade
 Your conduct in class should revolve around the idea of being respectful of all others in the class.  Adhering to the following behaviors should be considered the minimum requirements to being respectful of others:
 
 * Arrive to class on time.  If you arrive late, then take the first available seat as quietly as possible.  If you need to leave early, then please sit near the exit.
-* Do not bring friends, children, pets, meals, or anything else to class that should not be there.
+* You are expected to attend the entire class period.  Leaving class early defeats the purpose of the class period, does not take advantage of resources (i.e., the professor) that can significantly help your learning, and does not build statistical stamina.
+* Turn off and store out-of-sight cell phones and other electronic devices
+* Turn your computer on immediately so that you can promptly begin the daily quiz.
+* Computer use is limited to class work.
+* If you choose to use your own computer, then please sit as far forward in class as possible.
 * Do not engage in side discussions while I or others are speaking to the entire class.
 *	Do not sleep in class -- this behavior is rude and distracting to others (especially the professor).
 * Unpack before and pack after class -- opening and closing  backpacks, rustling of papers or jackets is disruptive and disrespectful to others.
 * Do not use disrespectful language when addressing others.
-* Turn off and store out-of-sight cell phones and other electronic devices
-* All class work should be conducted on a college computer.  Personal computers are not permitted for in-class work.
-* You are expected to attend the entire class period.  Leaving class early defeats the purpose of the class period, does not take advantage of resources (i.e., the professor) that can significantly help your learning, and does not build statistical stamina.
 
 Finally, note that the [College's Academic Integrity Statement & Policy](https://my.northland.edu/student-policies/academic-policies/#academic-integrity){:target="_blank"} will be followed in this course.  Please make sure that you are familiar with its content.
 
