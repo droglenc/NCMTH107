@@ -6,7 +6,7 @@ css: "/css/modules.css"
 ---
 
 <div class="alert alert-info">
-  <strong>Note</strong> Your answers to the questions below should follow the <a href="../../resources/hwformat">expectations for homework found here</a> (and <a href="../../resources/FAQ/FAQs/HWFormat_Example.pdf">demonstrated here</a>).
+  <strong>Note</strong> Your answers to the questions below should follow the <a href="../../resources/hwformat" target="_blank">expectations for homework found here</a> (and <a href="../../resources/FAQ/FAQs/HWFormat_Example.pdf" target="_blank">demonstrated here</a>).
 </div>
 
 ----
