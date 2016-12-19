@@ -1,9 +1,11 @@
 ---
 layout: page
-title: Why Statistics Is Important
-subtitle: Homework Assignment
+title: Homework Assignment
+subtitle: Why Statistics Is Important
 css: "/css/modules.css"
 ---
+
+----
 
 <div class="alert alert-warning">
   <strong>Note</strong> Your answers to the questions below should follow the <a href="../../resources/hwformat" target="_blank">expectations for homework found here</a> (and <a href="../../resources/FAQ/FAQs/HWFormat_Example.pdf" target="_blank">demonstrated here</a>).
