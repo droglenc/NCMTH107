@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Why Statistics Is Important"
-subtitle: Class Exercise
+title: "Class Exercise"
+subtitle: "Why Statistics Is Important"
 author: "Derek H. Ogle"
 css: "/css/modules.css"
 output:
@@ -34,15 +34,13 @@ Type the code exactly as shown in each grey box and attempt to answer the follow
 ## Load the NCStats package
 ```{r echo=-2, results='hide', message=FALSE, warning=FALSE}
 library(NCStats)
-data(ABCens90)
 ```
 
 \ 
 
 ## Obtain a Random Sample of Residents from Ashland-Bayfield Counties
 ```{r results='hide'}
-data(ABCens90)
-( smp1 <- srsdf(ABCens90,50) )
+( sam1 <- srsdf(ABCens90,n=50) )
 ```
 
 * Were the individuals in your sample identical?  Why or why not?
@@ -52,8 +50,8 @@ data(ABCens90)
 
 ## Summarize that Sample
 ```{r results='hide'}
-Summarize(~age,data=smp1,digits=1)
-percTable(xtabs(~sex,data=smp1))
+Summarize(~age,data=sam1,digits=1)
+percTable(xtabs(~sex,data=sam1),digits=1)
 ```
 
 * Can you quickly explain the "general" age and sex of individuals in your sample?  Why or why not?
@@ -62,9 +60,9 @@ percTable(xtabs(~sex,data=smp1))
 
 ## Obtain a Second Random Sample of Residents from Ashland-Bayfield Counties
 ```{r results='hide'}
-( smp2 <- srsdf(ABCens90,50) )
-Summarize(~age,data=smp2,digits=1)
-percTable(xtabs(~sex,data=smp2))
+( sam2 <- srsdf(ABCens90,n=50) )
+Summarize(~age,data=sam2,digits=1)
+percTable(xtabs(~sex,data=sam2),digits=1)
 ```
 
 * Were the mean ages from the two samples identical?
@@ -76,7 +74,7 @@ percTable(xtabs(~sex,data=smp2))
 ## Compare Your Results to the Truth
 ```{r}
 Summarize(~age,data=ABCens90,digits=1)
-percTable(xtabs(~sex,data=ABCens90))
+percTable(xtabs(~sex,data=ABCens90),digits=1)
 ```
 
 * Did your sample mean ages exactly equal this true value for the population?
