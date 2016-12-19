@@ -36,11 +36,14 @@ Biologists at the Sigurd Olson Environmental Institute (SOEI) were interested in
 1. Define natural and sampling variability.
 1. Describe natural and sampling variability within the context of a "real-life" (or realistic) situation of interest to you. [*This situation is completely of your choosing and can be fictitious, but should be realistic. Alternatively, think of a situation that may have arise in one of your other classes.*]
 
+<br>
 ----
 
 ## Realities
 <img src="../zimgs/penguin-population.jpg" alt="Population of Penguins" class="img-right">
 
 1. Identify and describe two "realities" that, if they did not exist, would eliminate the need for the field of statistics (i.e., what exists in nature and life that lead to the existence of the field of statistics).
+
+<br>
 
 ----
