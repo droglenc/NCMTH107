@@ -36,4 +36,5 @@ A student wanted to see how far she could hit two brands of softballs with three
   <li><a href="CE2.html">2</a></li>
   <li class="active"><a href="#">3</a></li>
   <li><a href="CE4.html">4</a></li>
+  <li><a href="CE5.html">5</a></li>
 </ul>
