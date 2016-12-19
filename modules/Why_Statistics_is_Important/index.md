@@ -42,7 +42,13 @@ You should prepare for the concepts of this module by reading **Section 1.1** in
 
 ## In-Class Practice
 
-* [Class Exercise](CE.html)
+* [Class Exercise](CE)
+
+----
+
+## Homework
+
+* [Questions](HW1)
 
 ----
 
