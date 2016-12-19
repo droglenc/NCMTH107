@@ -19,13 +19,13 @@ Biologists at the Sigurd Olson Environmental Institute (SOEI) were interested in
 
 1. What is one of the individuals sampled in this scenario? [*Hint: Think about what the variable is and make sure that it makes sense to record that variable about your individual.*]
 1. Do you think it is reasonable to count the number of frogs on every lake in northern Wisconsin at the same time (say, in the same week)? Why or why not?
-1. Hypothetical visual and call counts for every lake in northern Wisconsin (i.e., the population) are recorded in the `Frogs` data.frame in the `NCStats` package (make sure you have loaded the `NCStats` package with `library(NCStats)`. The visual and call counts for a random sample of 10 lakes can be taken from this population by running `srsdf(Frogs,n=10)` in RStudio. Copy the output returned from this code into your report document.
-1. Compare the **visual** count of frogs recorded on the first two lakes. What do you observe? This is an example of what type of variability?
+1. Hypothetical visual and call counts for every lake in northern Wisconsin (i.e., the population) are recorded in the `Frogs` data.frame (make sure you have run `library(NCStats)`. The visual and call counts for a random sample of 10 lakes may be taken from this population by running `srsdf(Frogs,n=10)` in RStudio. Paste the output returned from this function into your report document.
+1. How do the **visual** counts of frogs recorded from the first three lakes in your sample compare? This is an example of what type of variability?
 1. Compute the average **visual** count of frogs in all lakes in your sample. Show your work! [*You may leave space in your document and hand write your work before handing it in*]
-1. Extract another sample of 10 lakes (run the `srsdf()` line from above again). Copy and paste the results into your report document.
+1. Extract another sample of 10 lakes (run `srsdf(Frogs,n=10)` again). Paste the results into your report document.
 1. Compute the average **visual** count of frogs in all lakes in your second sample. Show your work!
-1. How do the two average **visual** count of frogs in your two samples compare? This is an example of what type of variability?
-1. I happen to know that the average **visual** count of frogs on all lakes in northern Wisconsin (the population) is 225. Was the average visual counts from both of your samples equal to this population value? Were you surprised? Why or why not?
+1. How do the average **visual** count of frogs in your two samples compare? This is an example of what type of variability?
+1. Suppose that the average **visual** counts of frogs on all lakes in northern Wisconsin (the population) is 225. Was the average visual counts from both of your samples equal to this population value? Were you surprised? Why or why not?
 
 ----
 
@@ -33,7 +33,7 @@ Biologists at the Sigurd Olson Environmental Institute (SOEI) were interested in
 <img src="../zimgs/variability.jpg" alt="Variability" class="img-right">
 
 1. Define natural and sampling variability.
-1. Describe natural and sampling variability within the context of a "real-life" (or realistic) situation of interest to you. [*This situation is completely of your choosing and can be fictitious, but should be realistic. Alternatively, think of a situation that may have arise in one of your other classes.*]
+1. Describe natural and sampling variability within the context of a "real-life" (or realistic) situation of interest to you. Make sure to clearly articulate the situation. [*This situation is completely of your choosing and can be fictitious, but should be realistic. Alternatively, think of a situation that may have arise in one of your other classes.*]
 
 <br>
 
@@ -42,7 +42,7 @@ Biologists at the Sigurd Olson Environmental Institute (SOEI) were interested in
 ## Realities
 <img src="../zimgs/penguin-population.jpg" alt="Population of Penguins" class="img-right">
 
-1. Identify and describe two "realities" that, if they did not exist, would eliminate the need for the field of statistics (i.e., what exists in nature and life that lead to the existence of the field of statistics).
+1. Identify and describe two "realities" that, if they did not exist, would eliminate the need for the field of statistics (i.e., what exists in nature and life that leads to the existence of the field of statistics).
 
 <br><br><br>
 
