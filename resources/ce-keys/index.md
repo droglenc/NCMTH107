@@ -4,6 +4,8 @@ title: Class Exercise Keys
 ---
 
 1. Why Statistics is Important
+
+<!--
 1. [Foundational Definitions](Foundational_Definitions.html)
 1. [Data Production](Data_Production.html)
 1. Getting Started With RStudio
@@ -22,6 +24,4 @@ title: Class Exercise Keys
 1. [2-Sample t-Test](2_Sample_t.html)
 1. [Chi-Square Test](ChiSquare.html)
 1. [Goodness-of-Fit Test](GOFTest.html)
-
-<!--
 -->

@@ -4,8 +4,6 @@ title: Homework Keys
 ---
 
 <!--
--->
-
 * [HW 12.35-12.37](HW_noPrint.pdf){:target="_blank"}
 * [HW 12.38](HW_noPrint.pdf){:target="_blank"}
 * [HW 11.24-11.25](Chapter11bHW_noPrint.pdf){:target="_blank"}
@@ -20,3 +18,5 @@ title: Homework Keys
 * [HW 3.12](Chapter03HW_noPrint.pdf){:target="_blank"}
 * [HW 2.10-2.11](Chapter02HW_noPrint.pdf){:target="_blank"}
 * [1.27-1.29](Chapter01HWa_noPrint.pdf){:target="_blank"} and [ 1.30-1.35](Chapter01HWb_noPrint.pdf){:target="_blank"}
+-->
+
