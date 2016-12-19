@@ -40,15 +40,10 @@ You should prepare for the concepts of this module by reading **Section 1.1** in
 
 ----
 
-## In-Class Practice
+## Practice
 
 * [Class Exercise](CE)
-
-----
-
-## Homework
-
-* [Questions](HW)
+* [Homework Assignment](HW)
 
 ----
 
