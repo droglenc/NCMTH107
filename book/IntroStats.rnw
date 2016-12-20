@@ -1,5 +1,10 @@
 \documentclass[10pt,openany]{book}
 
+<<echo=FALSE,results='hide'>>=
+## Set this to TRUE to include answers to review exercises
+inclRevEx <- TRUE
+@
+
 %\input{c:/aaaWork/zGnrlLatex/BookPreamble_HC}   % use for the hard-copy version
 \input{c:/aaaWork/zGnrlLatex/BookPreamble}
 \hypersetup{pdftitle = MTH107 Notes}
@@ -94,7 +99,7 @@ for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
     \appendix
 <<child-Animations, child='animations.Rnw', eval=FALSE>>=
 @
-<<child-AnsRevEx, child='AnsRevEx.Rnw', eval=FALSE>>=
+<<child-AnsRevEx, child='AnsRevEx.Rnw', eval=inclRevEx>>=
 @
 
   \backmatter
