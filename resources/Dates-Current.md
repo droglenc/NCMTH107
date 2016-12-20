@@ -10,9 +10,14 @@ css: /css/syllabus.css
 
 <!---
 <dt>XX-Jan</dt><dd><a href="../modules/Foundational_Definitions/HW">Foundational Definitions</a></dd>
-
-
-
+<dt>XX-Jan</dt><dd><a href="../modules/Data_Production/HW">Data Production</a></dd>
+<dt>XX-Jan</dt><dd><a href="../modules/Getting_Data_Into_R/HW">Getting Data Into R</a></dd>
+<dt>XX-Jan</dt><dd><a href="../modules/UnivEDA_Quantitative/HW">Univariate EDA - Quantitative</a></dd>
+<dt>XX-Jan</dt><dd><a href="../modules/UnivEDA_Categorical/HW">Univariate EDA - Categorical</a></dd>
+<dt>XX-Jan</dt><dd><a href="../modules/Normal_Distributions/HW">Normal Distributions</a></dd>
+<dt>XX-Jan</dt><dd><a href="../modules/BivEDA_Quantitative/HW">Bivariate EDA - Quantitative</a></dd>
+<dt>XX-Jan</dt><dd><a href="../modules/BivEDA_Categorical/HW">Bivariate EDA - Categorical</a></dd>
+<dt>XX-Jan</dt><dd><a href="../modules/Linear_Regression/HW">Linear Regression</a></dd>
 
 <dt>19-Sep</dt><dd>2.10-2.11</dd>
 <dt>23-Sep</dt><dd>3.12</dd>
