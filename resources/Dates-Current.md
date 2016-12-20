@@ -18,6 +18,10 @@ css: /css/syllabus.css
 <dt>XX-Jan</dt><dd><a href="../modules/BivEDA_Quantitative/HW">Bivariate EDA - Quantitative</a></dd>
 <dt>XX-Jan</dt><dd><a href="../modules/BivEDA_Categorical/HW">Bivariate EDA - Categorical</a></dd>
 <dt>XX-Jan</dt><dd><a href="../modules/Linear_Regression/HW">Linear Regression</a></dd>
+<dt>XX-Jan</dt><dd><a href="../modules/Probability/HW">Probability Introduction</a></dd>
+
+
+
 
 <dt>19-Sep</dt><dd>2.10-2.11</dd>
 <dt>23-Sep</dt><dd>3.12</dd>

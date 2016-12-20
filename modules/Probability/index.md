@@ -35,9 +35,10 @@ You should prepare for the concepts of this module by reading **Chapter 8** in [
 
 ----
 
-## In-Class Practice
+## Practice
 
-* [In-Class Exercise](CE.html)
+* [In-Class Exercise](CE)
+* [Homework Assignment](HW)
 
 ----
 
