@@ -2,10 +2,6 @@
 layout: page
 title: Symbols
 author: "Derek H. Ogle"
-css: "/css/symbols.css"
-output:
-  html_document:
-    self_contained: no
 ---
 
 ```{r echo=FALSE, eval=FALSE}
@@ -36,7 +32,7 @@ The following are symbols that you will encounter in this course.  They are orde
 <dt>X~N(&mu;,&sigma;)</dt><dd>The variable X is normally distributioned with a mean of &mu; and standard deviation of &sigma;.</dd>
 <dt>N(0,1)</dt><dd>Standard normal distribution.</dd>
 <dt>p</dt><dd>Population proportion of successes.</dd>
-<dt>x&#770;</dt><dd>Sample proportion of successes.</dd>
+<dt>$\hat{\textrm{p}}$</dt><dd>Sample proportion of successes.</dd>
 <dt>Q1</dt><dd>First quartile.</dd>
 <dt>Q3</dt><dd>Third quartile.</dd>
 <dt>r</dt><dd>The sample correlation coefficient OR number of rows in a two-way frequency table.</dd>
@@ -49,7 +45,8 @@ The following are symbols that you will encounter in this course.  They are orde
 <dt>&sigma;<sup>2</sup></dt><dd>Population variance.</dd>
 <dt>t</dt><dd>A variable that follows a t-distribution OR the test statistic in t-tests.</dd>
 <dt>x<sub>i</sub></dt><dd>Value of the X variable for the ith individual.</dd>
-<dt>$\bar{x}$ or x&#772;</dt><dd>Sample mean (average) of the X variable.</dd>
+<dt>$\bar{\textrm{x}}$</dt><dd>Sample mean (average) of the X variable.</dd>
+<dt>$\hat{\textrm{y}_{\textrm{i}}}$</dt><dd>Predicted value of the response variable (in regression).</dd>
 <dt>Z</dt><dd>A variable that follows a N(0,1) OR the test statistic in a one-sample Z-test.</dd>
 </dl>
 </div>
