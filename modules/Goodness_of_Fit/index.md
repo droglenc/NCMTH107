@@ -38,7 +38,8 @@ You should prepare for the concepts of this module by reading **Section 12.2** i
 
 ## In-Class Practice
 
-* Class Exercises -- [I](CE1.html), [II](CE2.html), [III](CE3.html)
+* Class Exercises -- [I](CE1) / [II](CE2) / [III](CE3)
+* [Homework Assignment](HW)
 
 ----
 

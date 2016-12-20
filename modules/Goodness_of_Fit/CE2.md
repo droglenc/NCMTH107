@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Goodness-of-Fit Test
-subtitle: Class Exercise
+title: Class Exercise
+subtitle: Goodness-of-Fit Test 2
 author: Derek H. Ogle
 css: "/css/modules.css"
 output:
