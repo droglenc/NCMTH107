@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Confidence Regions
-subtitle: Class Exercise 1
+title: Class Exercise
+subtitle: Confidence Regions 1
 author: Derek H. Ogle
 css: "/css/modules.css"
 ---
@@ -164,8 +164,11 @@ m.e.
 <script>
 
 // add bootstrap table styles to pandoc tables
-$(document).ready(function () {
+function bootstrapStylePandocTables() {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
 });
 
 

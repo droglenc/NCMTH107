@@ -40,11 +40,11 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
 
 ----
 
-## In-Class Practice
+## Practice
 
-* First set of in-class exercises -- [I](CE1.html)
-* Second set of in-class exercises --  [II](CE2.html) / [III](CE3.html)
-* Third set of in-class exercises -- [IV](CE4.html) / [V](CE5.html)
+* First set of in-class exercises -- [I](CE1)
+* Second set of in-class exercises --  [II](CE2) / [III](CE3)
+* Third set of in-class exercises -- [IV](CE4) / [V](CE5)
 
 ----
 

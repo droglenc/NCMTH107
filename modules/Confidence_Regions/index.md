@@ -44,9 +44,9 @@ After completing this module you should re-read **Section 10.5** in [the textboo
 
 ----
 
-## In-Class Practice
+## Practice
 
-* In-Class Exercises -- [I](CE1.html), [II](CE2.html), [III](CE3.html), and [IV](CE4.html).
+* In-Class Exercises -- [I](CE1), [II](CE2), [III](CE3), [IV](CE4).
 
 ----
 
