@@ -41,10 +41,11 @@ Then you should read **Section 10.6** in [the textbook](../../book/) and watch t
 
 ----
 
-## In-Class Practice
+## Practice
 
-* [Class Example](CExmpl.html)
-* [Class Exercise](CE.html)
+* [Class Example](CExmpl)
+* [Class Exercise](CE)
+* [Homework Assignment](HW)
 
 ----
 

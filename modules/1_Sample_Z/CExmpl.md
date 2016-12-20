@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 1-Sample Z-test
-subtitle: Class Example
+title: Class Example
+subtitle: 1-Sample Z-test
 author: Derek H. Ogle
 css: "/css/modules.css"
 ---
