@@ -141,9 +141,9 @@ As a general rule-of-thumb ([here](https://www.collegeparentcentral.com/2010/02/
 
 
 ### Homework
-The text contains many review exercises throughout each chapter and a few homework problems at the end of each chapter. A due date for the homework problems will be assigned when a concept module has been completed. Printed homework assignments are **due at the beginning of the due date class period; late assignments will not be accepted.** Each assignment should follow [the expectations outlined here](hwformat){:target="_blank"}. An assigment may receive a grade of 0 if it does not follow the required format or is difficult to follow.
+A homework assigment for each module will generally be due within one week of completing a module (exact due dates will be announced in class). **PRINTED** homework assignments are **due at the beginning of the due date class period; late assignments will not be accepted.** Each assignment should follow [the expectations outlined here](hwformat){:target="_blank"}. An assigment may receive a grade of 0 if it does not follow the required format or is difficult to follow.
 
-Each homework assigment is worth 10 points and will be graded in two parts.  The first part is an assessment of completeness according to the following rubric.
+Each homework assigment is worth 10 points and will be graded in two parts.  The first part is an assessment of completeness and formatting according to the following rubric.
 
 <div class="container-fluid">
   <table class="table table-bordered">
@@ -158,7 +158,7 @@ Each homework assigment is worth 10 points and will be graded in two parts.  The
 
 The second part, also worth 5 points, is an assessment of the quality of the work.  In this part, only some (approximately half) of the questions will be assessed.  Answer keys will be [posted online](homework-keys) so that you may check your work.
 
-Your lowest homework grade will be excluded when computing your overall grade.
+Your lowest two homework grades will be excluded when computing your overall grade.
 
 
 ### Exams
