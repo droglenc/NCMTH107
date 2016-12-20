@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Univariate EDA - Categorical
-subtitle: Class Exercise 4
+title: Class Exercise
+subtitle: Univariate EDA - Categorical 4
 author: Derek H. Ogle
 css: "/css/modules.css"
 ---
@@ -11,7 +11,7 @@ css: "/css/modules.css"
 <div id="bar-chart-ii" class="section level2">
 <h2>Bar Chart II</h2>
 <p><img src="http://derekogle.com/NCMTH107/modules/zimgs/brownpelican.jpg" alt="Brown Pelican" class="img-right"> <a href="https://www.aphis.usda.gov/wildlife_damage/nwrc/publications/13pubs/king132.pdf">King et al. (2013)</a> examined the habitat use of <a href="https://en.wikipedia.org/wiki/Brown_pelican">Brown Pelicans (<em>Pelecanus occidentalis</em>)</a> in the Northern Gulf of Mexico. The bar chart below show the percentage of GPS locations recorded for the sample of Brown Pelicans in major habitats. Use this information to answer the questions further below. [Note that <code>Water</code>=“shallow near-shore waters”, <code>EEW</code>=“estuarine emergent wetland”, <code>Grassland</code>=“shoreline grasslands”, <code>UnShore</code>=“unconsolidated shore”, <code>DeepWater</code>=“deeper offshore waters”, and <code>Other</code>=“all other habitats”.]</p>
-<p><img src="CE4_files/figure-html/unnamed-chunk-3-1.png" title="" alt="" width="672" /></p>
+<p><img src="CE4_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <ol>
 <li>What is an individual in this example?</li>
 <li>What type of variable is recorded?</li>
@@ -45,14 +45,20 @@ css: "/css/modules.css"
 </div>
 
 
+
+
 </div>
 
 <script>
 
 // add bootstrap table styles to pandoc tables
-$(document).ready(function () {
+function bootstrapStylePandocTables() {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
 });
+
 
 </script>
 

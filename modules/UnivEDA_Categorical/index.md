@@ -42,9 +42,10 @@ You should prepare for the concepts of this module by reading **Sections 4.2 and
 
 ----
 
-## In-Class Practice
+## Practice
 
-* In-Class Exercises -- [I](CE1.html) / [II](CE2.html) / [III](CE3.html) / [IV](CE4.html) / [V](CE5.html)
+* In-Class Exercises -- [I](CE1) / [II](CE2) / [III](CE3) / [IV](CE4) / [V](CE5)
+* [Homework Assignment](HW)
 
 ----
 

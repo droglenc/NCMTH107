@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Univariate EDA - Categorical
-subtitle: Class Exercise 3
+title: Class Exercise
+subtitle: Univariate EDA - Categorical 3
 author: Derek H. Ogle
 css: "/css/modules.css"
 ---
@@ -23,7 +23,7 @@ diameter  20  23  34  20  17  20  15  34  18  24
 exposure med med low med med med med med med med
 </pre>
 
-Enter the data into Excel, save as a CSV, and load the data into R.  [**HINT:** *these are the same data that you entered in [a previous class exercise](../Getting_Started_R/CE.html).  Use that file and recycle the portion of that R script that you used to load the data.*]  Use this information to answer the following questions.
+Enter the data into Excel, save as a CSV, and load the data into R.  [**HINT:** *these are the same data that you entered in [a previous class exercise](../Getting_Data_Into_R/CE2.html).  Use that file and recycle the portion of that R script that you used to load the data.*]  Use this information to answer the following questions.
 
 1. Perform a univariate EDA for `exposure`.
 

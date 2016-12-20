@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Univariate EDA - Categorical
-subtitle: Class Exercise 5
+title: Class Exercise
+subtitle: Univariate EDA - Categorical 5
 author: Derek H. Ogle
 css: "/css/modules.css"
 output:
