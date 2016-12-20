@@ -41,10 +41,10 @@ You should prepare for the concepts of this module by reading **Section 6.1** in
 
 ----
 
-## In-Class Practice
+## Practice
 
-* In-Class Exercise -- [I](CE1.html) / [II](CE2.html) / [III](CE3.html) / [IV](CE4.html)
-
+* In-Class Exercise -- [I](CE1) / [II](CE2) / [III](CE3) / [IV](CE4)
+* [Homework Assignment](HW)
 ----
 
 ## Archived Materials

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Bivariate EDA - Quantitative
-subtitle: Class Exercise 2
+title: Class Exercise
+subtitle: Bivariate EDA - Quantitative 2
 author: Derek H. Ogle
 css: "/css/modules.css"
 ---
