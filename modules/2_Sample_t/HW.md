@@ -29,7 +29,7 @@ NoEvac   125 6.640  6.599 3.102  0.277  -1.214 14.444 4.568  8.696
 ## Methyl Mercury in Mussels
 <img src="../zimgs/freshwater-mussel.jpg" alt="Freshwater Mussel" class="img-right">
 
-Mierzykowski and Carr (2001) examined the amount of methyl-mercury in freshwater mussels (*Elliptio complanata*) in four areas in the Sudbury River watershed in Massachusetts. Two of the locations they examined were categorized as reservoirs with one being considered as impacted by the Nyanza Chemical site and the other as not being impacted. The total methyl mercury (in &mu;g meHG per g wet-weight of mussels) for individual mussels sampled from each site is shown below. Use these data to determine if there is a significant difference, at the 5% level, in methyl mercury levels found in mussels between the two locations. Continue with the analysis even if you find that the assumptions have not been met.
+[Mierzykowski and Carr (2001)](https://www.fws.gov/northeast/mainecontaminants/pdf/nyanmussels.pdf) examined the amount of methyl-mercury in freshwater mussels (*Elliptio complanata*) in four areas in the Sudbury River watershed in Massachusetts. Two of the locations they examined were categorized as reservoirs with one being considered as impacted by the Nyanza Chemical site and the other as not being impacted. The total methyl mercury (in &mu;g meHG per g wet-weight of mussels) for individual mussels sampled from each site is shown below. Use these data to determine if there is a significant difference, at the 5% level, in methyl mercury levels found in mussels between the two locations. Continue with the analysis even if you find that the assumptions have not been met.
 
 <pre>
 impacted  0.011 0.054 0.056 0.095 0.051 0.077

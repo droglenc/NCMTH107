@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Chi-Square Test
-subtitle: Class Exercise 2
+title: Class Exercise
+subtitle: Chi-Square Test2
 css: "/css/modules.css"
 ---
 
