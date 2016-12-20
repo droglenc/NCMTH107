@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Univariate EDA - Quantitative
-subtitle: Class Exercise 1
+title: Class Exercise
+subtitle: Univariate EDA - Quantitative 1
 author: Derek H. Ogle
 css: "/css/modules.css"
 ---
@@ -11,7 +11,7 @@ css: "/css/modules.css"
 <div id="histograms-i" class="section level2">
 <h2>Histograms I</h2>
 <p>The <a href="http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map">U.S. Census</a> asked individuals 16 years old and older “How long in minutes is your one-way commute to work each day?”. The mean for individuals from each state was computed and is plotted in the histogram below.</p>
-<p><img src="CE1_files/figure-html/unnamed-chunk-3-1.png" title="" alt="" width="384" /></p>
+<p><img src="CE1_files/figure-html/unnamed-chunk-3-1.png" width="384" /></p>
 <p>Use this histogram to answer these questions.</p>
 <ol>
 <li>What is an individual in this example?</li>
@@ -28,7 +28,7 @@ css: "/css/modules.css"
 <div id="histograms-ii" class="section level2">
 <h2>Histograms II</h2>
 <p>For each histogram below, describe the shape and presence of outliers.</p>
-<p><img src="CE1_files/figure-html/unnamed-chunk-4-1.png" title="" alt="" width="288" /><img src="CE1_files/figure-html/unnamed-chunk-4-2.png" title="" alt="" width="288" /><img src="CE1_files/figure-html/unnamed-chunk-4-3.png" title="" alt="" width="288" /><img src="CE1_files/figure-html/unnamed-chunk-4-4.png" title="" alt="" width="288" /><img src="CE1_files/figure-html/unnamed-chunk-4-5.png" title="" alt="" width="288" /><img src="CE1_files/figure-html/unnamed-chunk-4-6.png" title="" alt="" width="288" /><img src="CE1_files/figure-html/unnamed-chunk-4-7.png" title="" alt="" width="288" /><img src="CE1_files/figure-html/unnamed-chunk-4-8.png" title="" alt="" width="288" /></p>
+<p><img src="CE1_files/figure-html/unnamed-chunk-4-1.png" width="288" /><img src="CE1_files/figure-html/unnamed-chunk-4-2.png" width="288" /><img src="CE1_files/figure-html/unnamed-chunk-4-3.png" width="288" /><img src="CE1_files/figure-html/unnamed-chunk-4-4.png" width="288" /><img src="CE1_files/figure-html/unnamed-chunk-4-5.png" width="288" /><img src="CE1_files/figure-html/unnamed-chunk-4-6.png" width="288" /><img src="CE1_files/figure-html/unnamed-chunk-4-7.png" width="288" /><img src="CE1_files/figure-html/unnamed-chunk-4-8.png" width="288" /></p>
 <hr />
 <div class="text-center">
 <ul class="pagination pagination-lg">
@@ -54,14 +54,20 @@ css: "/css/modules.css"
 </div>
 
 
+
+
 </div>
 
 <script>
 
 // add bootstrap table styles to pandoc tables
-$(document).ready(function () {
+function bootstrapStylePandocTables() {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
 });
+
 
 </script>
 
