@@ -18,7 +18,7 @@ pw <- paste("owner_pw mth107")
 ( tmp <- paste(eng,inp,out,pw,"verbose") )
 system(tmp,show.output.on.console=TRUE)
 
-## Removes intermediate files from the directory
+## Removes intermediate files from the directory ... just looks cleaner
 tmp <- list.files(dir)
 tmp <- tmp[grepl(fn,tmp)]
 tmp <- tmp[!grepl(".pdf",tmp) & !grepl(".rnw",tmp)]
@@ -87,15 +87,11 @@ for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
 <<child-GOF, child='GoodnessOfFit.Rnw', eval=TRUE>>=
 @
 
-%    \cleardoublepage
-%    \phantomsection
-%    \addcontentsline{toc}{part}{Appendix}
-%    \chapter*{Appendices}
-%    \appendix
-%    \input{FBMatter/Symbols}
-%    \input{FBMatter/HOTests}
-<<child-RFAQ, child='RFAQ.Rnw', eval=FALSE>>=
-@
+    \cleardoublepage
+    \phantomsection
+    \addcontentsline{toc}{part}{Appendix}
+    \chapter*{Appendices}
+    \appendix
 <<child-Animations, child='animations.Rnw', eval=FALSE>>=
 @
 <<child-AnsRevEx, child='AnsRevEx.Rnw', eval=FALSE>>=
