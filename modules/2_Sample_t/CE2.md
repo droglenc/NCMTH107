@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 2-Sample t-test
-subtitle: Class Exercise 2
+title: Class Exercise
+subtitle: 2-Sample t-test 2
 css: "/css/modules.css"
 ---
 
