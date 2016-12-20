@@ -32,4 +32,5 @@ Assume that it is known that the daily water usage for a household is normally d
 1. What is the probability that less than 60 gallons is used by this household on a random day?
 1. What is the probability that between 75 and 150 gallons is used by this household on a random day?
 1. What is the probability that more than 100 gallons is used by this household on a random day?
+
 ----
