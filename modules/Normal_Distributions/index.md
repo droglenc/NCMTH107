@@ -47,9 +47,10 @@ Second, you should read **Sections 5.3-5.4** in [the textbook](../../book/) and 
 
 ----
 
-## In-Class Practice
+## Practice
 
 * In-Class Exercise -- [I](CE1.html) / [II](CE2.html) /  [III](CE3.html) / [IV](CE4.html) /  [V](CE5.html)
+* [Homework Assignments](HW)
 
 ----
 
