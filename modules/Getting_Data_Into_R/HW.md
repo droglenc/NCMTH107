@@ -1,0 +1,40 @@
+---
+layout: page
+title: Homework Assignment
+subtitle: Getting Data Into R
+css: "/css/modules.css"
+---
+
+----
+
+<div class="alert alert-warning">
+  <strong>Note</strong> Your answers to the questions below do NOT need to follow the usual homework format. Rather compile your R script into a Word document (this will be demonstrated in class).
+</div>
+
+----
+
+## Purple Loosestrife Plants
+<img src="../zimgs/purple-loosestrife.jpg" alt="Purple Loosestrife" class="img-right">
+
+The data below are the number of Purple Loosestrife (*Lythrum salicaria*) plants found in each of 19 randomly selected plots in the Green Gables Creek Slough.
+
+```
+13, 2, 1, 0, 9, 11, 5, 5, 14, 23, 0, 2, 3, 3, 6, 7, 4, 16, 1
+```
+
+In addition, the researchers also recorded a qualitative measure of the shadiness of the plot. The three levels of "shadiness" (along with abbreviations) used were "completely shaded" (S), "partially shaded" (P), and "completely open" (O). The data below are the shadiness levels of the same 19 plots in the same order as
+the number of Loosestrife plants shown above.
+
+```
+O, S, S, S, O, O, S, P, O, O, S, S, P, P, P, P, S, O, S
+```
+
+Enter these data into a CSV file with columns labeled as `lstrf` and `shade`. Read that file into an object called `df` in R. Use this to answer the questions below using R commands (i.e., don't re-type the data).
+
+1. List the data for all of the completely shaded plots. [*Note: Don't use `headtail()` when asked to show all individuals. Type the name of the new data.frame instead.*]
+1. List the data for all of the open plots.
+1. List the data for all of the completely open or partially shaded plots (use only one command in R).
+1. List the data for all plots with more than 10 purple loosestrife plants.
+1. List the data for all plots with less than 5 purple loosestrife plants and that are completely shaded (use only one command in R).
+
+----
