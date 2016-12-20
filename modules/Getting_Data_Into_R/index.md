@@ -42,10 +42,11 @@ You should prepare for the concepts of this module by reading **Sections 3.2-3.4
 
 ----
 
-## In-Class Practice
+## Practice
 
-* Demonstration Handout [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
+* In-Class Demonstration -- [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 * In-Class Exercise -- [I](CE1) / [II](CE2) / [III](CE3)
+* [Homework Assignment](HW)
 
 ----
 
