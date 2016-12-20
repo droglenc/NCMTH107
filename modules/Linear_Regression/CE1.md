@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Simple Linear Regression
-subtitle: Class Exercise 1
+title: Class Exercise
+subtitle: Simple Linear Regression 1
 author: Derek H. Ogle
 css: "/css/modules.css"
 ---

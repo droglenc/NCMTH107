@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Simple Linear Regression
-subtitle: Class Exercise 2
+title: Class Exercise
+subtitle: Simple Linear Regression 2
 author: Derek H. Ogle
 css: "/css/modules.css"
 ---
@@ -11,7 +11,7 @@ css: "/css/modules.css"
 <div id="beach-sand" class="section level2">
 <h2>Beach Sand</h2>
 <p><img src="http://derekogle.com/NCMTH107/modules/zimgs/beaches.jpg" alt="Beach Sand" class="img-right"> Geologists examined the relationship between the median diameter (mm) of sand granules and the slope or angle (degrees) for nine ocean beaches. Their primary interest was in determining if the variability in sand granule size could be explained by the angle of the beach. The results of their analysis is shown in the scatterplot below.</p>
-<p><img src="CE2_files/figure-html/unnamed-chunk-3-1.png" title="" alt="" width="384" /></p>
+<p><img src="CE2_files/figure-html/unnamed-chunk-3-1.png" width="384" /></p>
 <p>Use these results to answer the questions below.</p>
 <ol>
 <li>In terms of the variables of this problem, what is the equation of the best-fit line?</li>
@@ -46,14 +46,20 @@ css: "/css/modules.css"
 </div>
 
 
+
+
 </div>
 
 <script>
 
 // add bootstrap table styles to pandoc tables
-$(document).ready(function () {
+function bootstrapStylePandocTables() {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
 });
+
 
 </script>
 

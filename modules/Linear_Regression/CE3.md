@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Simple Linear Regression
-subtitle: Class Exercise 3
+title: Class Exercise
+subtitle: Simple Linear Regression 3
 css: "/css/modules.css"
 ---
 
