@@ -324,31 +324,3 @@ bears$length.cm
     \item ... identify the hair color for the sixth individual of this data.frame.
   \end{Enumerate}
 \end{exsection}
-
-\newpage
-\begin{hwsection}{All questions below should be typed and answered following the expectations identified on the syllabus.  All work must be shown.  Questions marked with the R logo must include R output with your R commands in an attached appendix.}
-
-  \item \label{hwprob:RBasicsPL1} \rhw{} The data below are the number of purple loosestrife (\textit{Lythrum salicaria}) plants found in each of 19 randomly selected plots in the Green Gables Creek Slough.
-
-    \begin{Verbatim}[xleftmargin=5mm]
-13, 2, 1, 0, 9, 11, 5, 5, 14, 23, 0, 2, 3, 3, 6, 7, 4, 16, 1
-    \end{Verbatim}
-
-In addition, the researchers also recorded a qualitative measure of the shadiness of the plot.  The three levels of ``shadiness'' (along with abbreviations) used were ``completely shaded'' (S), ``partially shaded'' (P), and ``completely open'' (O).  The data below are the shadiness levels of the same 19 plots in the same order as the number of loosestrife plants shown above,
-
-    \begin{Verbatim}[xleftmargin=5mm]
-O,S,S,S,O,O,S,P,O,O,S,S,P,P,P,P,S,O,S
-    \end{Verbatim}
-
-Enter these data into an Excel file with columns labeled as \var{lstrf} and \var{shade}.  Save this file as a CSV file and read that file into an object called \R{df} in R.  Use this to answer the questions below using R commands (i.e., don't re-type the data).
-
-  \begin{Enumerate}
-    \item List the number of purple loosestrife plants and shadiness category for the 10th plot.
-    \item List the number of purple loosestrife plants in each plot.
-    \item List the data for all of the completely shaded plots.  [\emph{Note: Don't use \R{headtail()} when asked to show all individuals, as \R{headtail()} only shows six individuals.}]
-    \item List the data for all of the open plots.
-    \item List the data for all of the completely open or partially shaded plots (use only one command in R).
-    \item List the data for all plots with more than 10 purple loosestrife plants.
-    \item List the data for all plots with less than 5 purple loosestrife plants and that are completely shaded (use only one command in R).
-  \end{Enumerate}
-\end{hwsection}

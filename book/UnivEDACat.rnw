@@ -1,0 +1,236 @@
+<<echo=FALSE, cache=FALSE, results='hide'>>=
+set_parent('IntroStats.Rnw')
+@
+
+\chapter{Univariate EDA - Categorical} \label{chap:UnivEDACat}
+\begin{ChapObj}{\boxwidth}
+  \textbf{Chapter Objectives:}
+  \begin{Enumerate}
+    \item Construct frequency and percentage tables with categorical data.
+    \item Construct bar-charts with categorical data, and
+    \item Use tables and graphs to describe the categorical data.
+  \end{Enumerate}
+\end{ChapObj}
+
+\minitoc
+\newpage
+
+\section{Items to Describe}
+Interpreting summaries of a single categorical variable is more intuitive and less defined than that for quantitative data.\index{EDA!Univariate!Categorical}  Specifically, one DOES NOT describe shape, center, dispersion, and outliers for categorical data.  In this chapter, methods to construct tables and graphs for categorical data are described and the interpretation of the results demonstrated.  These concepts are illustrated with data recorded about MTH107 students in the Winter 2010 semester.  Whether or not a student was required to take the course for a subset of individuals is shown in \tabref{tab:MTH107Subset}.
+
+\begin{table}[htbp]
+  \caption{Whether (Y) or not (N) MTH107 was required for a subset of individuals in MTH107 in Winter 2010.}
+  \label{tab:MTH107Subset}
+  \centering
+  \begin{Verbatim}[xleftmargin=5mm]
+Individual  1  2  3  4  5  6  7  8
+Required    Y  N  N  Y  Y  Y  N  Y
+  \end{Verbatim}
+\end{table}
+
+
+\section{Summary Tables}
+A simple method to summarize categorical data is to count the number of individuals in each category (or level) of the categorical variable.  These counts are called frequencies and the resulting table \tabrefp{tab:MTH107SubsetFreq} is called a frequency table.\index{Table!Frequency}  From this table, it is seen that there were five students that were required and three that were not required to take MTH107.
+
+\begin{table}[htbp]
+  \caption{Frequency table for whether MTH107 was required (Y) or not (N) for a subset of individuals in MTH107 in Winter 2010.}
+  \label{tab:MTH107SubsetFreq}
+  \centering
+  \begin{Verbatim}[xleftmargin=5mm]
+Required  Freq
+    Y       5
+    N       3
+  \end{Verbatim}
+\end{table}
+
+\warn{Frequency tables show the total count or number of individuals in each category (or level) of a categorical variable.}
+
+The remainder of this chapter will use the results from the entire class rather than the subset used above to illustrate computing a frequency table.  The frequency tables of individuals by sex and by year-in-school for the entire class is shown in \tabref{tab:Mth107Freq}.
+
+\begin{table}[htbp]
+  \caption{Frequency tables for whether (Y) or not (N) MTH107 was required (Left) and year-in-school (Right) of all individuals in MTH107 in Winter 2010.}
+  \label{tab:Mth107Freq}
+  \centering
+  \begin{Verbatim}[xleftmargin=5mm]
+Required  Freq          Year  Freq
+    Y      38            Fr    19
+    N      30            So    12
+                         Jr    29
+                         Sr     9
+   \end{Verbatim}
+\end{table}
+
+Many times, frequency tables are modified by showing the percentage, rather than the frequency, of individuals in each category.  These modified tables are called \textbf{percentage tables}.\index{Table!Percentage}  Percentage tables are constructed from frequency tables by dividing the frequency of individuals in each category by the total number of individuals examined ($n$) and then multiplying by 100.  For example, the percentage tables for both whether or not MTH107 was required and year-in-school \tabrefp{tab:Mth107Prop} for students in MTH107 is constructed from \tabref{tab:Mth107Freq} by dividing the value in each cell by 68, the total number of students in the class, and then multiplying by 100.  From this it is seen that 55.9\% of students were required to take the course and 13.2\% were seniors.
+
+\begin{table}[htbp]
+  \caption{Percentage tablesfor whether (Y) or not (N) MTH107 was required (Left) and year-in-school (Right) of all individuals in MTH107 in Winter 2000.}
+  \label{tab:Mth107Prop}
+  \centering
+  \begin{Verbatim}[xleftmargin=5mm]
+Required   Perc          Year   Perc
+   Y       55.9           Fr    27.9
+   N       44.1           So    17.6
+                          Jr    42.6
+                          Sr    13.2
+  \end{Verbatim}
+\end{table}
+
+\warn{Percentage tables show the percentage of all individuals in each category (or level) of a categorical variable.}
+
+\subsection{Tables in R}
+The General Sociological Survey (GSS) is a very large survey that has been administered 25 times since 1972.  The basic purpose of the GSS is to gather data on contemporary American society in order to monitor and explain trends in attitudes, behaviors, and attributes.  One question that was asked in a recent GSS was ``How often do you make a special effort to sort glass or cans or plastic or papers and so on for recycling?''  These data are found in the \var{recycle} variable of the \href{https://raw.githubusercontent.com/droglenc/NCData/master/GSSEnviroQues.csv}{GSSEnviroQues.csv} file.
+<<>>=
+GSS <- read.csv("data/GSSEnviroQues.csv")
+str(GSS)
+levels(GSS$recycle)
+@
+
+These results show the five levels in the \var{recycle} factor variable.  Note that the levels appear to be out of order because the default for a factor variable is to alphabetically order the levels.  The levels should be in the order ``Always'', ``Often'', ``Sometimes'', ``Never'', and ``Not Avail'' to follow the natural order of this ordinal variable.  The order of a factor variable is controlled by including the ordered level names within a vector sent to the \R{levels=} argument in \R{factor()}.\index{Factor!Variable in R}\index{Level!Controlling in R}  The level names in this vector must be exactly as they appear in the original variable and they must be contained within quotes.  The order of the levels of \var{recycle} is changed and stored in a new variable in \var{GSS} with
+<<>>=
+GSS$frecycle <- factor(GSS$recycle,levels=c("Always","Often","Sometimes","Never","Not Avail"))
+levels(GSS$frecycle)
+@
+The advantage of correcting this order is that when the summary table is made, the order will follow the natural order of the variable rather than the alphabetical order.
+
+\warn{The order of the levels of a factor are controlled with the \R{levels=} argument in the \R{factor()} function.}
+
+\vspace{-12pt}
+\warn{When changing the order of the levels with the \R{levels=} argument, the level names must be contained within quotes and they must be spelled exactly as they were spelled in the original variable.}
+
+The frequency table of a single categorical variable is computed with \R{xtabs()} where the first argument is a one-sided formula of the form \R{\TILDE var} with the corresponding data.frame in \R{data=}.  The result from \R{xtabs()} should be assigned to an object for further processing.  For example, the frequency table is produced, stored in the \var{tabRecycle} object, and displayed with
+<<>>=
+( tabRecycle <- xtabs(~frecycle,data=GSS) )
+@
+Thus, for example, \Sexpr{tabRecycle["Always"]} respondents answered ``Always'' to the recycling question.
+
+The percentage table is computed in R by including the saved frequency table as the first argument to \R{percTable()}.\footnote{Thus, \R{xtabs()} must be completed and saved to an object before \R{percTable()}.}  The number of digits of output is controlled with \R{digits=}.
+<<>>=
+percTable(tabRecycle,digits=1)
+@
+Thus, for example, \Sexpr{formatC(percTable(tabRecycle)["Always"],format="f",digits=1)}\% of respondents answered ``Always'' to the recycling question.
+
+\section{Bar Plots}
+Bar plots, or bar charts, are used to display the frequency or percentage of individuals in each level of a categorical variable.\index{Bar Chart}  Bar plots look similar to histograms in that they have the frequency of individuals on the y-axis.  However, category labels rather than quantitative values are plotted on the x-axis.  In addition, bars on a bar plot are usually not connected in order to highlight the categorical nature of the data.  A bar plot for whether or not individuals were required to take MTH107 is shown in \figref{fig:MTH107BarChart}-Left.  This bar plot is not very helpful because there were only two categories (i.e., it does not add much to the frequency table).  However, bar plots make it easier to compare the number of individuals in each of several categories as in \figref{fig:MTH107BarChart}-Right.
+
+<<MTH107BarChart, echo=FALSE, fig.cap="Bar charts of the frequency of individuals in MTH107 during Winter 2010 by whether or not they were required to take MTH107 (\\textbf{Left}) and year-in-school (\\textbf{Right}).">>=
+rqrd <- c(N=30,Y=38)
+barplot(rqrd,ylim=c(0,40),xlab="Required to Take MTH107?",ylab="Frequency of Students")
+yis <- c(Fr=19,So=12,Jr=29,Sr=9)
+barplot(yis,ylim=c(0,30),xlab="Year-In-School",ylab="Frequency of Students")
+@
+
+\warn{Bar charts are used to display the frequency of individuals in the categories of a categorical variable. Histograms are used to display the frequency of individuals in classes created from quantitative variables.}
+
+Shape, center, dispersion, and outliers are not described for categorical data because the data is not numerical and, if nominal, no order exists.  In general, the major characteristics of the table or graph are described from an intuitive basis.  For example, there were more males than females in the Winter 2010 MTH107 class and mostly juniors and Freshmen.
+
+\warn{Do not describe shape, center, dispersion, and outliers for a categorical variable.}
+
+\subsection{Bar Plots in R} \label{sect:BarChart}\index{Bar Chart!Construction}
+A bar plot is produced by submitting the \R{xtabs()} object as the first argument to \R{barplot()}.  The x- and y-axes may be explicitly labeled with \R{xlab=} and \R{ylab=}, respectively.  The bar plot for the recycling data \figrefp{fig:Barchart1} is produced with
+
+<<Barchart1, fig.cap="Bar chart of the frequency of responses to the recycling question on the GSS.">>=
+barplot(tabRecycle,ylab="Frequency",xlab="Recycle Response")
+@
+
+\begin{exsection}
+  \item \label{revex:EDAArsenic2} \rhw{} Use the \href{https://raw.githubusercontent.com/droglenc/NCData/master/Arsenic.csv}{Arsenic.csv} data in Exercise \ref{revex:EDAArsenic1} to answer the questions below. \ansref{ans:EDAArsenic2}
+  \begin{Enumerate}
+    \item Construct a univariate EDA for the assessment of drinking water usage.
+    \item Construct a univariate EDA for the assessment of cooking water usage.
+  \end{Enumerate}
+
+  \item \label{revex:cuEDAEPA}The Environmental Protection Agency (EPA) commissioned the Gallup Organization to conduct a nationwide telephone survey of 1000 households during August and September of 2002 regarding consumer knowledge and satisfaction with drinking water quality.  Of the 1000 respondents surveyed, 751 knew that their drinking water came from a public or commercial water supplier.  Of these 751 respondents, the following percentages knew precisely where that water was derived:
+
+  \begin{center}
+  \begin{tabular}{c|c|c|c|c|c}
+    \hline\hline
+    Ground- & Lake/ &  & Multiple & Don't & Refused \\
+    water & Reservoir & River & Sources & Know & Answer \\
+    \hline
+    15.9\% & 29.2\% & 9.6\% & 15.7\% & 29.4\% & 0.2\% \\
+    \hline\hline
+  \end{tabular}
+  \end{center}
+
+  Use these data to answer the questions below. \ansref{ans:cuEDAEPA}
+  \begin{Enumerate}
+    \item Construct a frequency table of these data (note percentages above were rounded).
+    \item Write a brief conclusion derived from these data.
+  \end{Enumerate}
+
+  \item \label{revex:cuEDAHI} \rhw{} A neighborhood in Honolulu conducted a survey to determine if residents participated in the curbside recycling program.  One question on their survey was, ``How much has curbside recycling reduced your regular refuse? 0\%, 25\%, 50\%, 75\%, 100\%, or `too early to tell'?''  The individual responses for the returned surveys are shown below with letters corresponding to the category choices offered (e.g., \verb"A"=0\%, \verb"B"=25\%, and so on).
+
+  \begin{Verbatim}
+C, C, B, B, B, B, C, E, B, B, C, B, C, B, C, C, C, E, B, B, B,
+C, B, B, C, C, C, B, C, B, C, B, B, C, B, C, B, B, B, C, E, B,
+E, B, B, C, C, B, B, B, E, B, C, C, C, B, B, C, B, B, B, B, B
+  \end{Verbatim}
+
+  Use these data to answer the questions below. \ansref{ans:cuEDAHI}
+  \begin{Enumerate}
+    \item Construct a frequency table of these data.
+    \item Construct a percentage table of these data.
+    \item Write a brief conclusion derived from these data.
+  \end{Enumerate}
+
+  \item \label{revex:cuEDARice} \rhw{} Students in a senior level environmental studies class at Rice University conducted a voluntary response survey regarding water usage by their peers.  They received returned surveys from a total 130 students.  One question on their survey was, ``On average, for how many minutes do you let the water run each time you take a shower? 0-5, 6-10, 11-15, or over 15 minutes?''  The individual responses for this survey are shown below with letters corresponding to the category choices offered (e.g., \verb"A"=``0-5'', \verb"B"=``6-10'', and so on). \ansref{ans:cuEDARice}
+
+  \begin{Verbatim}
+  D, C, B, B, C, C, B, B, C, C, C, B, D, B, C, C, B, C, D, D,
+  B, C, C, A, B, C, C, A, C, C, D, A, C, C, B, B, B, B, B, C,
+  D, B, D, B, C, B, C, C, D, C, B, B, D, C, B, C, B, B, C, C,
+  B, C, B, C, B, B, C, D, B, C, D, C, B, C, D, C, C, B, C, B,
+  D, B, B, D, B, C, B, B, C, B, C, D, D, C, D, B, B, C, B, C,
+  A, A, B, C, B, C, D, D, C, B, D, C, C, C, C, A, C, D, B, C,
+  B, B, D, C, B, B, A, B, C, B
+  \end{Verbatim}
+
+  Use these data to answer the questions below.
+  \begin{Enumerate}
+    \item Construct a frequency table of these data.
+    \item Construct a percentage table of these data.
+    \item Write a brief conclusion derived from these data.
+  \end{Enumerate}
+\end{exsection}
+
+
+\section{Example Interpretations}\index{EDA!Univariate!Quantitative}
+While most of the previous sections focused on how to construct various graphs and numerical summaries, the most important aspect of this chapter is that you can make appropriate interpretations for an EDA from the summary results.  For categorical data, an appropriate EDA consists of identifying the major characteristics among the categories.
+
+\subsection{Mixture Seed Count}
+\begin{quote}
+\textit{A bag of seeds was purchased for seeding a recently constructed wetland.  The purchaser wanted to determine if the percentage of seeds in four broad categories -- ``grasses'', ``sedges'', ``wildflowers'', and ``legumes'' -- was similar to what the seed manufacturer advertised.  The purchaser examined a 0.25-lb sample of seeds from the bag and recorded the results in \href{https://raw.githubusercontent.com/droglenc/NCData/master/WetlandSeeds.csv}{WetlandSeeds.csv}.  Use these data to describe the distribution of seed counts into the four broad categories.}
+\end{quote}
+
+<<echo=FALSE, results='hide'>>=
+ws <- read.csv("data/WetlandSeeds.csv")
+wtbl <- xtabs(~type,data=ws)
+wptbl <- percTable(wtbl)
+@
+
+The majority of seeds were either sedge or grass with sedge being more than twice as abundant as grass (\tabref{tab:SeedTable}; \figref{fig:SeedBarplot}).  Very few legumes or wildflowers were found in the sample.
+
+<<SeedBarplot, echo=FALSE, fig.width=5, out.width='.5\\linewidth', fig.cap="Barplot of the percentage of wetland seeds by type.">>=
+barplot(wptbl[-5],ylab="Percentage of Total Seeds",xlab="Seed Type")
+@
+
+<<SeedStats, results='asis', echo=FALSE>>=
+wptbl2 <- matrix(wptbl,ncol=length(wptbl))
+colnames(wptbl2) <- names(wptbl)
+print(xtable(wptbl2,digits=1,caption="Percentage distribution of wetland seeds by type.","tab:SeedTable"),caption.placement="top",include.rownames=FALSE)
+@
+
+\begin{minipage}{\textwidth}
+R commands:
+<<eval=FALSE>>=
+ws <- read.csv("data/WetlandSeeds.csv")
+str(ws)
+wtbl <- xtabs(~type,data=ws)
+percTable(wtbl,digits=1)
+barplot(wptbl[-5],ylab="Percentage of Total Seeds",xlab="Seed Type")
+@
+\end{minipage}
+
+\begin{exsection}
+  \item \label{revex:cuEDAZoo1} \rhw{} The data in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Zoo1.csv}{Zoo1.csv} contains a list of animals found in several different zoos.  In addition, each animal was classified into broad ``type'' categories (``mammal'', ``bird'', and ``amph/rep'').  Perform a univariate EDA on the \var{type} variable. \ansref{ans:cuEDAZoo1}
+\end{exsection}

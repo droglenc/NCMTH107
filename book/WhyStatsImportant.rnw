@@ -1,0 +1,121 @@
+<<echo=FALSE, cache=FALSE, results='hide'>>=
+set_parent('IntroStats.Rnw')
+@
+
+\chapter{Why Statistics is Important} \label{chap:WhyStatsImportant}
+\begin{ChapObj}{\boxwidth}
+  \textbf{Chapter Objectives:}
+  \begin{Enumerate}
+    \item Describe the two major reasons why statistics is important for understanding populations.
+    \item Define natural and sampling variability.
+    \item Describe ``difficulties'' in making conclusions about population caused by sampling variability.
+    \item Define ``statistics'' (as a field of study).
+    \item Appreciate the importance of statistics in scientific inquiry.
+  \end{Enumerate}
+\end{ChapObj}
+
+\minitoc
+\newpage
+
+\section{Realities}\label{sect:Realities}
+\lettrine{T}{he city of Ashland} performed an investigation in the area of Kreher Park \figrefp{fig:KreherParkMap} when considering the possible expansion of an existing wastewater treatment facility in 1989.  The discovery of contamination from what was believed to be creosote waste in the subsoils and ground water at Kreher Park prompted the city to abandon the project. A subsequent assessment by the Wisconsin Department of Natural Resources (WDNR) indicated elevated levels of hazardous substances in soil borings and ground water samples and in the sediments of Chequamegon Bay directly offshore of Kreher Park.  In 1995 and 1999, the Northern States Power Company conducted investigations that further defined the area of contamination and confirmed the presence of specific contaminants associated with coal tar wastes.  This site is now listed as a superfund site and is being given considerably more attention.\footnote{More information at the \href{https://cumulis.epa.gov/supercpad/cursites/csitinfo.cfm?id=0507952}{EPA} and the \href{http://dnr.wi.gov/topic/brownfields/ashland.html}{WDNR} websites.}
+
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=6in]{Figs/Kreher_Park_Map.png}
+  \caption{Location of the Ashland superfund site (left) with the location of 119 historical sediment sampling sites (right).}
+  \label{fig:KreherParkMap}
+\end{figure}
+
+The WDNR wants to study elements in the sediment (among other things) in the entire approximately 3000 m$^2$ area shaded in \figref{fig:KreherParkMap}.  Is it physically possible to examine every square meter of that area?  Is it prudent, ecologically and economically, to examine every square meter of this area?  The answer, of course, is ``no.''  How then will the WDNR be able to make conclusions about this entire area if they cannot reasonably examine the whole area?  The most reasonable solution is to sample a subset of all of this area and use the results from this sample to make inferences about the entire area.
+
+Methods for properly selecting a sample that fairly represents a larger collection of individuals are an important area of study in the field of statistics.  For example, the WDNR would not want to sample areas that are only conveniently near shore because this will likely not be an accurate representation of the entire area to be studied.  In this example, it appears that the WDNR employed a grid to assure a relatively even dispersal of samples throughout the study area \figrefp{fig:KreherParkMap}.  Methods for choosing the number of individuals to select and how to select these individuals will be discussed in \chapref{chap:DataProd}.
+
+<<echo=FALSE >>=
+set.seed(1)
+Pb <- round(rnorm(119,1,0.15),2)
+@
+Suppose that the WDNR measured the concentration of lead at each of the 119 locations shown in \figref{fig:KreherParkMap} and that they were to present the results from these data at a public meeting.  Further suppose that the WDNR scientist came to the meeting and showed a slide that simply had the list of lead concentration measurements on it \tabrefp{tab:KreherParkPbconc}.\footnote{These are hypothetical data for this site.}  Is it easy to come to any conclusion about what these data mean from this type of presentation?  Instead, suppose that the scientist came to the meeting with a simple plot of the frequency of concentrations present in the data and brief numerical summaries \figrefp{fig:KreherParkPbhist}.  With this presentation one can fairly easily see that the measurements were fairly symmetric with no obviously ``weird'' measurements and ranged from as low as \Sexpr{formatC(min(Pb),format="f",digits=2)} $\mu g \cdot m^{-3}$ to as high as \Sexpr{formatC(max(Pb),format="f",digits=2)} $\mu g \cdot m^{-3}$ with the measurements centered on approximately 1.0 $\mu g \cdot m^{-3}$.  These summaries will be discussed in detail in \chapref{chap:UnivEDA}.  However, at this point note that statistical methods are important for distilling or summarizing large quantities of data into graphs or numerical summaries from which it is much easier to identify characteristics of the data.
+
+\begin{table}[htbp]   \label{tab:KreherParkPbconc}
+  \caption{Lead concentration measurements ($\mu g \cdot m^{-3}$) at each of 119 sites in Kreher Park superfund site.}
+  \begin{center}
+<<echo=FALSE, background='white'>>=
+Pb
+@
+  \end{center}
+\end{table}
+
+<<KreherParkPbhist, echo=FALSE, fig.cap="Histogram and summary statistics of lead concentration measurements ($\\mu g \\cdot m^{-3}$) at each of 119 sites in Kreher Park superfund site.">>=
+hist(~Pb,xlab="Pb Concentration",ylab="Frequency of Sites")
+Pb.sum <- as.matrix(summary(Pb))
+colnames(Pb.sum)[1] <- "Pb"
+textplot(Pb.sum)
+@
+
+A critical question at this point is whether or not the results from the one sample of 119 sites perfectly represents what the results would be for the entire area.  One way to consider this question is to examine the results obtained from another sample of 119 sites.  The results from this second sample \figrefp{fig:KreherParkPbhist1} are clearly, though not radically, different from the results of the first sample.  Thus, it is seen that any one sample from a large area will not perfectly represent the area.  Furthermore, it is observed that two different samples give two different results which will likely lead to two different, albeit generally only slightly different, conclusions.
+
+<<KreherParkPbhist1, echo=FALSE, fig.scap="Kreher Park 1", fig.cap="Histogram and summary statistics of lead concentration measurements ($\\mu g \\cdot m^{-3}$) at each of 119 sites (different from the sites shown in \\figref{fig:KreherParkPbhist}) in Kreher Park superfund site.">>=
+set.seed(6)
+Pb1 <- round(rnorm(119,1,0.15),2)
+hist(~Pb1,xlab="Pb Concentration",ylab="Frequency of Sites")
+Pb1.sum <- as.matrix(summary(Pb1))
+colnames(Pb1.sum)[1] <- "Pb"
+textplot(Pb1.sum)
+@
+
+The results of two different samples do not perfectly agree because each sample contains different individuals, and no two individuals (sites in this example) are exactly alike in every regard.  The fact that no two individuals are exactly alike is \textbf{natural variability}\index{Natural Variability!Definition}, because of the ``natural'' differences that occur among individuals.  The fact that the results from different samples are different is called \textbf{sampling variability}\index{Sampling Variability!Definition}.  If there was no natural variability, then there would be no sampling variability.  If there was no sampling variability, then the field of statistics would not be needed because a sample (even of one individual) would perfectly represent the larger group of individuals.  Thus, understanding variability is at the core of statistical practice.  These concepts of natural and sampling variability will be revisited continuously throughout this course.
+
+\defn{Natural Variability}{The fact that no two individuals are exactly alike.}
+
+\vspace{-12pt}
+\defn{Sampling Variability}{The fact that the results (i.e., statistics) from different samples are different.}
+
+All of this may be a bit unsettling!  First, it was shown that an entire area or all of the individuals of interest cannot be examined.  It was then shown that a sample of a subset of individuals did not perfectly represent all of the individuals.  Furthermore, each sample is unique and will likely lead to a different conclusion.  These are all real and difficult issues faced by the practicing scientist and considered by the informed consumer.  However, the field of statistics is designed to ``deal with'' these issues such that the results from a relatively small subset of measurements can be used to make conclusions about the entire collection of measurements.
+
+\warn{Statistics provides methods for overcoming the difficulties caused by the requirement of sampling and the presence of sampling variability.}
+
+
+\section{Purpose of Statistics}
+The field of statistics has two primary purposes, which were illustrated in the Kreher Park example.  First, statistics provides methods to summarize large quantities of data into concise and informative numerical or graphical summaries.  For example, it is easier to discern the general underlying structure of the lead measurements from the statistics and histograms presented in Figures \ref{fig:KreherParkPbhist} and \ref{fig:KreherParkPbhist1} than it is from the full list of lead measurements in \tabref{tab:KreherParkPbconc}.  Second, statistical methods allow inferences to be made about all individuals (i.e., a population) from a few individuals (i.e., a sample).  Population and sample are defined more completely in \sectref{sect:IVPPSS}.
+
+\warn{Statistics, as a field of study, is used to (1) summarize large quantities of data and (2) make inferences about populations from samples.}
+
+
+\section{Definition of Statistics}
+With the Kreher Park example in mind, let's consider a definition of statistics.  Statistics is the science of collecting, organizing, and interpreting numerical information or data \citep{MooreMcCabe1998}\index{Statistics, Field of!Definition}.  People (students and professionals) study statistics for a variety of reasons, including \citep{Bluman2000}:
+\begin{Enumerate}
+  \item They must be able to read and understand the statistical studies performed in their field. To have this understanding they must be knowledgeable about the vocabulary, symbols, concepts, and statistical procedures used in these studies.
+  \item They may need to conduct research in their field. To accomplish this they must be able to design experiments and samples; collect, organize, analyze, and summarize data; and possibly make reliable predictions or forecasts for future use. They must also be able to communicate the results of the study.
+  \item They also need to be better consumers of statistical information.
+\end{Enumerate}
+
+The science of statistics permeates a wide variety of disciplines. \cite{MooreMcCabe1998} state:
+\begin{quote}
+The study and collection of data are important in the work of many professions, so that training in the science of statistics is valuable preparation for a variety of careers.  Each month, for example, government statistical offices release the latest numerical information on unemployment and inflation.  Economists and financial advisers, as well as policy makers in government and business study these data in order to make informed decisions.  Doctors must understand the origin and trustworthiness of the data that appear in medical journals if they are to offer their patients the most effective treatments. Politicians rely on data from polls of public opinion.  Business decisions are based on market research data that reveal customer tastes.  Farmers study data from field trials of new crop varieties.  Engineers gather data on the quality and reliability of manufactured products.  Most areas of academic study make use of numbers, and therefore also make use of the methods of statistics.
+\end{quote}
+
+\defn{Statistics}{The science of collecting, organizing, and interpreting numerical information or data.}
+
+\begin{exsection}
+<<echo=FALSE>>=
+data(ABDLakes)
+named <- filterD(ABDLakes,named)
+@
+
+  \item \label{revex:WhyStatsLakes} There are \Sexpr{formatC(nrow(ABDLakes),format="f",digits=0)} lakes in Ashland, Bayfield, and Douglas counties of Wisconsin.  However, only \Sexpr{formatC(nrow(named),format="f",digits=0)} of these are named.  A random sample of named lakes from this population is extracted with the following R code:
+\vspace{-12pt}
+<<eval=FALSE>>=
+library(NCStats)
+data(ABDLakes)
+named <- filterD(ABDLakes,named)
+srsdf(named,n=50,vars=c("county","area"))
+@
+Use this code and some hand (or calculator) calculations to answer the questions below. \ansref{ans:WhyStatsLakes}
+    \begin{Enumerate}
+      \item Extract a sample of 50 lakes with the code above.  Compare the size (area in acres) of the first two lakes.  What do you observe?  This is an example of what type of variability?
+      \item Compute the proportion of lakes in your sample that are from Bayfield county.
+      \item Extract another sample of 50 lakes.  Compare the proportion of lakes that are from Bayfield county in this sample to the proportion from your first sample.  What do you observe?  This is an example of what type of variability?
+      \item Of the named lakes in the three counties, \Sexpr{formatC(table(named$county)[2],format="f",digits=0)} are from Bayfield county.  Was the proportion of lakes from Bayfield County in either of your samples equal to the proportion of all named lakes that were from Bayfield County?  Were you surprised?  Why or why not?
+    \end{Enumerate}
+\end{exsection}

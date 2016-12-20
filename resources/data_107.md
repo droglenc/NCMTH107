@@ -57,4 +57,6 @@ title: Data for MTH107
 * WetlandSeeds -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/WetlandSeeds.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/WetlandSeeds_meta.txt)
 * Wolves2 -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/Wolves2.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/Wolves2_meta.txt)
 * Yahara -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/Yahara.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/Yahara_meta.txt)
+* Zoo1 -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/Zoo1.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/Zoo1_meta.txt)
+* Zoo2 -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/Zoo2.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/Zoo2_meta.txt)
 * 93cars -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/93cars_meta.txt)

@@ -2,13 +2,11 @@
 set_parent('IntroStats.Rnw')
 @
 
-\chapter[Chi-square Tests]{Chi-square Tests for Categorical Data} \label{chap:ChiSquare}
+\chapter[Chi-Square Tests]{Chi-Square Tests} \label{chap:ChiSquare}
 
 \begin{ChapObj}{\boxwidth}
   \textbf{Chapter Objectives:}
   \begin{Enumerate}
-    \item Identify when a goodness-of-fit test is appropriate.
-    \item Perform the 11 steps of a significance test in a chi-square goodness-of-fit test situation.
     \item Identify when a chi-square test is appropriate.
     \item Perform the 11 steps of a significance test in a chi-square test situation.
   \end{Enumerate}
@@ -17,10 +15,10 @@ set_parent('IntroStats.Rnw')
 \minitoc
 \newpage
 
-\lettrine{T}{he hypothesis tests in} \chapref{chap:tTest} were specific to situations where the response variable was quantitative and was, thus, summarized with a mean.  Situations where a categorical response variable is recorded would be summarized with a frequency or percentage table (see \sectref{sect:UEDACategorical} and \sectref{sect:BEDACategorical}).  The appropriate test statistic in these situations is not the t test statistic but a chi-square test statistic.  The chi-square test statistic follows a chi-square distribution which will be introduced first in this chapter.  The rest of the chapter is dedicated to two types of hypothesis tests relying on the chi-square test statistic.
+\lettrine{S}{ituations where a categorical} response variable is recorded would be summarized with a frequency or percentage table (see \sectref{sect:UEDACategorical} and \sectref{sect:BEDACategorical}).  The appropriate test statistic in these situations is a chi-square rather than a t.  The chi-square test statistic follows a chi-square distribution which is introduced below.  The rest of this chapter is dedicated to the general chi-square test where a categorical response is compared between two or more populations. The related goodness-of-fit test for a categorical response recorded for only one population is introduced in \chapref{chap:GOF}.
 
 \vspace{-12pt}
-\section{Chi-square Distribution}
+\section{Chi-Square Distribution}
 \vspace{-12pt}
 A chi-square ($\chi^2$) distribution is generally right-skewed \figrefp{fig:chiDist}.  The exact shape of the $\chi^2$ distribution depends on the degrees-of-freedom (df), where, as the df increase, the sharpness of the skew decreases \figrefp{fig:chiDist}.
 
@@ -59,391 +57,8 @@ P-values are computed on a $\chi^2$ distribution with \R{distrib()} very similar
   \item \label{revex:ChiPVal3} What is the p-value if $\chi^{2}=10.25$ and $df=6$? \ansref{ans:ChiPVal3}
 \end{exsection}
 
-\section{Goodness-of-Fit Test}
-It is a common question to determine if the frequency of individuals in the various levels of a categorical variable follow frequencies suggested by a particular distribution.  The simplest of these situations occurs when a researcher is making a hypothesis about the percentage or proportion of individuals in one of two categories.  The ``distribution'' of individuals in two categories comes from the proportion in the hypothesis for one group and one minus the proportion in the hypothesis for the other group.  In situations with more than two levels, the ``distribution'' of individuals into the categories likely comes from the hypothesis that a particular theoretical distribution holds true.  For example, a researcher may want to determine if frequencies predicted from a certain genetic theory are upheld by the observed frequencies found in a breeding experiment, if the frequency that a certain animal uses various habitats is in proportion to the availability of those habitats, or if the frequency of consumers that show a preference for a certain product (over other comparable products) is non-random.
-
-In each of these cases, the theoretical distribution articulated in the research hypothesis must be converted to statistical hypotheses that will then be used to generate expected frequencies for each level.  These expected frequencies will then be statistically compared to the observed frequencies to determine if the theoretical distribution represented in the null hypothesis is supported by the data.  The method used for comparing the observed to expected frequencies where the expected frequencies come from a hypothesized theoretical distribution is called a chi-square goodness-of-fit test, or simply a goodness-of-fit test, and is the subject of this section.
-
-\warn{The hypothesis test is called a chi-square goodness-of-fit test, NOT a chi-square\textbf{D} goodness-of-fit test.}
-
-\subsection{The Hypotheses}
-A chi-square goodness-of-fit test is used when a single categorical variable has been recorded and the frequency of individuals in the levels of this variable are to be compared to a theoretical distribution.\index{Chi-square!Goodness-of-Fit Test}  In its most general form the statistical hypotheses for the goodness-of-fit test will be ``wordy.''  The language in the statistical hypotheses will relate to whether the ``distribution'' of individuals into the levels of the variable follows a specific theoretical distribution.  The null hypothesis will generically look something like $H_{0}:$ ``the observed distribution of individuals into the levels follows the `theoretical distribution' '', where `theoretical distribution' will likely be replaced with more specific language.  For example, the research hypothesis that states that ``50\% of students at Northland are from Wisconsin, 25\% are from neighboring states, and 25\% are from other states'' would be converted to these statistical hypotheses -- $H_{0}$: ``the proportion of students from Wisconsin, neighboring states, and other states is 0.50, 0.25, and 0.25, respectively'' with an $H_{A}$: ``the proportion of students from Wisconsin, neighboring states, and other states is NOT 0.50, 0.25, and 0.25, respectively.''
-
-\warn{The statistical hypotheses for a goodness-of-fit test are ``wordy'' and relate the observed distribution of individuals into levels of the categorical variable to those expected from a theoretical distribution.}
-
-The hypotheses are simpler, but you must be more careful, when there are only two levels.  For example, the research hypothesis that states that ``less than 40\% of new-born bear cubs are female'' would be converted to $H_{0}$: ``the proportion of bear cubs that are female and male is 0.40 and 0.60, respectively'' with an $H_{A}$: ``the proportion of bear cubs that are female and male is NOT 0.40 and 0.60, respectively.''  However, these hypotheses are often simplified to focus on only one level as the other level is implied by subtraction from one.  Thus, these statistical hypotheses are more likely to be written as $H_{0}$: ``the proportion of bear cubs that are female is 0.40'' with an $H_{A}$: ``the proportion of bear cubs that are female is NOT 0.40.''
-
-\warn{The statistical hypotheses for a goodness-of-fit test with only two levels of the categorical variable often relate only to the proportion or percentage of individuals in one level.}
-
-One may also have expected, from the wording of the research hypothesis about the sex of bear cubs, that the alternative hypothesis would have been $H_{A}$: ``the proportion of bear cubs that are female is LESS THAN 0.40.''  Recall, however, that the chi-square test statistic always represents the two-tailed situation.  Thus, the $H_{A}$ here must reflect that constraint.  The researcher will ultimately be able to determine if the proportion is less than 0.40 if the p-value from the goodness-of-fit test indicates a difference and the observed proportion of female bear cubs is less than 0.40.
-
-\subsection{The Tables}
-The observed data are usually summarized in a raw frequency table as shown in \sectref{sect:UEDACategorical}.  In the context of a goodness-of-fit test this table is called the \textbf{observed frequency table}.
-
-In addition to the observed frequency table, a table of expected frequencies must be constructed from the theoretical distribution of proportions in the null hypothesis and the total number of observed individuals ($n$).  Specifically, the expected frequencies are found by multiplying the expected theoretical proportions in the null hypothesis by $n$.  For example, consider this situation,
-
-\begin{quote}
-\cite{BathBuchanan1989} surveyed residents of Wyoming by distributing a mailing to a random selection of residents and collecting voluntarily returned surveys.  One question asked of the respondents was, ``Do you strongly agree, agree, neither agree or disagree, disagree, or strongly disagree with this statement? -- `Wolves would have a significant impact on big game hunting opportunities near Yellowstone National Park'.''  The researchers hypothesized that more than 50\% of Wyoming residents would either disagree or strongly disagree with the statement.  Of the 371 residents that returned the survey, 153 disagreed and 43 strongly disagreed with the statement.
-\end{quote}
-
-At first glance it may seem that this variable has five levels -- i.e., the levels of agreement offered in the actual survey.  However, the researcher's hypothesis collapsed the results of the survey question into two levels: (1) strongly disagree or disagree combined and (2) all other responses.  Thus, the statistical hypotheses for this situation are $H_{0}$: ``the proportion of respondents that disagreed or strongly disagreed is 0.50'' and $H_{A}$: ``the proportion of respondents that disagreed or strongly disagreed is NOT 0.50.''
-
-The expected frequencies in each level are derived from the total number of individuals examined and the specific null hypothesis.  For example, if the null hypothesis is true, then 50\% of the 371 respondents would be expected to disagree or strongly disagree with the statement.  In other words, $371*0.50$=$185.5$ individuals would be expected to disagree or strongly disagree.  Furthermore, the other 50\%, or $371*(1-0.50)$=$185.5$ would be expected to ``not'' disagree or strongly disagree.  The expectations for the two levels of this variable are summarized as in \tabref{tab:WYOtable}.  The observed frequencies in each category are usually appended to the expected frequency table as another column \tabrefp{tab:WYOtable}.
-
-\begin{table}[htbp]
-  \centering
-  \caption{Expected and observed frequency of respondents that disagreed or strongly disagreed (i.e., labeled as ``Disagree'') with the given statement in the Wyoming survey example.}\label{tab:WYOtable}
-  \begin{tabular}{ccc}
-    \hline\hline
-    \multicolumn{1}{c}{\widen{0}{5}{}} & \multicolumn{2}{c}{Frequency} \\
-    \widen{-2}{0}{Category} & Expected & Observed\\
-    \hline
-    \widen{-1}{6}{``Disagree''} & 185.5 & 196 \\
-    \widen{-1}{6}{not ``Disagree''} & 185.5 & 175 \\
-    \hline
-    \widen{-2}{7}{Total} & 371 & 371 \\
-    \hline\hline
-  \end{tabular}
-\end{table}
-
-\warn{The expected table should maintain at least one decimal in each cell even though the values represent frequencies.}
-
-The hypothesis test method developed in the following sections will be used to determine if the differences between the expected and observed frequencies in these categories is ``large'' enough to suggest that the observed frequencies do not support the distribution represented in the null hypothesis.  Before developing this methodology, though, consider the following situation as an illustration where the construction of expected frequencies is bit more complex.
-
-\begin{quote}
-\textsl{Mendel's law of independent assortment predicts that the genotypes (i.e., how they look) of the offspring from mating the offspring of a dihybrid cross of homozygous dominant and homozygous recessive parents should follow a 9:3:3:1 ratio.  In an experiment to test this, Mendel crossed a pea plant that produces round, yellow seeds (i.e., all dominant alleles, YYWW) with a pea plant that produces green, wrinkled seeds (i.e., all recessive alleles, yyww) such that only round, yellow heterozygous offspring (i.e., YyWw) were produced.  Pairs of these offspring were then bred.  Mendel's theory says that $\frac{9}{16}$ of these offspring should be round, yellow; $\frac{3}{16}$ should be round, green; $\frac{3}{16}$ should be wrinkled, yellow; and $\frac{1}{16}$ should be wrinkled, green.  Of 566 seeds studied in this experiment, Mendel found that 315 were round, yellow; 108 were round, green; 101 were wrinkled, yellow; and 32 were wrinkled, green.  Use these results to determine, at the 5\% level, if Mendel's law of independent assortment is supported by these results.}
-\end{quote}
-
-The statistical hypotheses are as follows,
-\[ \begin{split}
-  H_{0}&: \text{``the proportion of RY, RG, WY, and WG individuals will be $\frac{9}{16}$, $\frac{3}{16}$, $\frac{3}{16}$, and $\frac{1}{16}$, respectively''} \\
-  H_{A}&: \text{``the proportion of RY, RG, WY, and WG individuals will NOT be $\frac{9}{16}$, $\frac{3}{16}$, $\frac{3}{16}$, and $\frac{1}{16}$, respectively''}
-\end{split} \]
-where RY=``round, yellow'', RG=``round, green'', WY=``wrinkled, yellow'', and WG=``wrinkled, green''.  If these proportions are applied to the $n=566$ observed offspring, then the following frequencies for each genotype would be expected:
-\begin{itemize}
-  \item $\frac{9}{16}566 = 318.375$ would be expected to be round, yellow.
-  \item $\frac{3}{16}566 = 106.125$ would be expected to be round, green.
-  \item $\frac{3}{16}566 = 106.125$ would be expected to be wrinkled, yellow.
-  \item $\frac{1}{16}566 = 35.375$ would be expected to be wrinkled, green.
-\end{itemize}
-These expected frequencies, along with the observed frequencies, are summarized in \tabref{tab:PEAtable}.
-
-\begin{table}[htbp]
-  \centering
-  \caption{Expected and observed frequency of 566 pea seeds in four types.}\label{tab:PEAtable}
-  \begin{tabular}{ccc}
-    \hline\hline
-    \multicolumn{1}{c}{\widen{0}{5}{}} & \multicolumn{2}{c}{Frequency} \\
-    \widen{-2}{0}{Category} & Expected & Observed\\
-    \hline
-    \widen{-1}{6}{round, yellow} & 318.375 & 314 \\
-    \widen{-1}{6}{round, green} & 106.125 & 108 \\
-    \widen{-1}{6}{wrinkled, yellow} & 106.125 & 101 \\
-    \widen{-1}{6}{wrinkled, green} & 35.375 & 32 \\
-    \hline
-    \widen{-2}{7}{Total} & 566 & 566 \\
-    \hline\hline
-  \end{tabular}
-\end{table}
-
-\subsection{Specifics}
-The chi-square goodness-of-fit test is characterized by a single categorical variable with two or more levels.\index{Chi-square!Goodness-of-Fit Test}  The hypotheses tested usually cannot be converted to mathematical symbols and are thus ``word'' hypotheses.  Specifics of the chi-square goodness-of-fit test are shown in \tabref{tab:ChiGOFspec}.
-
-\begin{table}[htbp]
-  \caption{Characteristics of a chi-square goodness-of-fit test.}   \label{tab:ChiGOFspec}
-    \begin{Itemize}
-      \item \textbf{Hypotheses:} $H_{0}:$``the observed distribution of individuals into the levels follows the `theoretical distribution' ''\\ $H_{A}:$``the observed distribution of individuals into the levels DOES NOT follow the `theoretical distribution' ''
-      \item \textbf{Statistic:} Observed frequency table.
-      \vspace{6pt}
-      \item \textbf{Test Stat:} $\chi^{2} = \Sum_{cells}\frac{(Observed-Expected)^{2}}{Expected}$
-      \vspace{6pt}
-      \item \textbf{df:} Number of levels minus 1.
-      \vspace{6pt}
-      \item \textbf{Assumptions:} Expected value in each level is $\geq5$.
-    \end{Itemize}
-\end{table}
-
-As per our usual steps, it is customary to produce a confidence region following the rejection of a null hypothesis.  This is cumbersome in a goodness-of-fit test because there generally is not a single parameter (i.e., there are as many parameters as levels in the variable) for which a single confidence region is computed.  However, there is a method for computing these multiple confidence intervals.  The method will be discussed here but will only be computed ``by hand'' in the situation where there are two levels.  The method will be implemented when using R (as discussed in a subsequent section) no matter the number of levels.
-
-Let $p$ be the population proportion in a particular level and $\hat{p}$ be the sample proportion in the same interval.  The $\hat{p}$ is computed by dividing the frequency of individuals in this level by the total number of individuals in the sample (i.e., $n$).  The $\hat{p}$ is a statistic that is subject to sampling variable with that sampling variability measured by $SE_{\hat{p}}=\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$ for ``large'' values of $n$.  For ``large'' values of $n$ the $\hat{p}$ will follow a normal distribution such that a confidence interval for $p$ is computed using the general confidence interval formula found in \sectref{sec:CIConstruct} and repeated below:
-
-  \[ \text{``Statistic''} (\pm \text{``scaling factor''}) * SE_{statistic} \]
-
-where the scaling factor is the familiar $Z^{*}$.  Thus, the confidence interval for $p$ is constructed with
-
-  \[ \hat{p} \pm Z^{*}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \]
-
-Note that one does not need to worry about lower and upper bounds, only confidence intervals will be computed, because of the two-tailed nature of the chi-square test statistic.
-
-In the Wyoming survey example, the proportion of respondents in the sample that either disagreed or strongly disagreed was $\hat{p}$=$\frac{196}{371}$=$0.528$.  The standard error for this sample proportion is $\sqrt{\frac{0.528(1-0.528)}{371}}$=$0.026$.  For a 95\% confidence interval the $Z^{*}$=$\pm$\Sexpr{formatC(qnorm(0.975),format="f",digits=3)} as computed with
-<<fig.show='hide'>>=
-( distrib(0.975,type="q") )
-@
-Thus, the confidence interval is $0.528 \pm 1.960*0.026$ or $0.528 \pm 0.051$ or $(0.477,0.579)$.  Therefore, one is 95\% confident that the true population proportion that either disagreed or strongly disagreed is between 0.477 and 0.579.  Because there are only two levels in this example it can also be said with 95\% confidence that the population proportion that did not either disagree or strongly disagree is between 0.421 and 0.523.
-
-\subsubsection{Example - \$1 Coins}
-Consider the following situation,
-\begin{quote}
-\textsl{USA Today (June 14, 1995) reported that 77\% of the population opposes replacing \$1 bills with \$1 coins.  To test if this claim holds true for the residents of Ashland a student selected a sample of 80 Ashland residents and found that 54 were opposed to replacing the bills with coins.  Develop a hypothesis test (at the 10\% level) to determine if the proportion of Ashland residents that are opposed to replacing bills with coins is different from the proportion opposed for the general population.}
-\end{quote}
-
-The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for this example are as follows:
-\begin{enumerate}
-    \item As stated, $\alpha$ should be set at 0.10.
-    \item The $H_{0}$: ``The proportion of Ashland residents that oppose replacing the \$1 bill with the \$1 coin is 0.77'' and the $H_{A}$: ``The proportion of Ashland residents that oppose replacing the \$1 bill with the \$1 coin is NOT 0.77.''
-    \item A goodness-of-fit test is required because a single categorical variable from a single population was recorded and the frequency of responses is being compared to a hypothesized distribution in the null hypothesis.
-    \item The data appear to be part of an observational study with no clear indication of random selection of individuals.
-    \item The expected number in the ``oppose'' level is $80*0.77$=$61.6$.  The expected number in the ``do not oppose category is $80*0.23$=$18.4$.  These expectations are shown in the table in the next step.  The assumption of more than five individual in all cells of the expected table has been met.
-    \item The observed table is shown below (along with the expected table).
-    \vspace{12pt}
-    \begin{center}
-      \begin{tabular}{ccc}
-        \hline\hline
-        \multicolumn{1}{c}{\widen{0}{5}{}} & \multicolumn{2}{c}{Frequency} \\
-        \widen{-2}{0}{Level} & Expected & Observed\\
-        \hline
-        \widen{-1}{6}{``Oppose''} & 61.6 & 54 \\
-        \widen{-1}{6}{``Do Not Oppose''} & 18.4 & 26 \\
-        \hline
-        \widen{-2}{7}{Total} & 80 & 80 \\
-        \hline\hline
-      \end{tabular}
-    \end{center}
-    \vspace{12pt}
-    \item The test statistic is $\chi^{2}$ = $\frac{(61.6-54)^{2}}{55} + \frac{(18.4-26)^{2}}{25}$ = $0.938 + 3.139$ = $4.077$ with $2-1=1$ df.
-    \item The p-value is \Sexpr{kPvalue(pchisq(4.077,df=1,lower.tail=FALSE))} as computed with
-<<fig.show='hide'>>=
-( distrib(4.077,distrib="chisq",df=1,lower.tail=FALSE) )
-@
-    \item The $H_{0}$ is rejected because the $p-value <\alpha=0.10$).
-    \item The proportion of Ashland residents that oppose replacing the \$1 bill with the \$1 coin does appear to be different from the proportion (0.77) reported for the general population.
-    \item A 90\% confidence interval is warranted using $z^{*}=$\Sexpr{formatC(qnorm(0.95),format="f",digits=3)} as determined with
-<<fig.show='hide'>>=
-( distrib(0.95,type="q") )
-@
-The sample proportion opposing the \$1 coin is $\frac{54}{80}$=$0.68125$ with a standard error of $\sqrt{\frac{0.68125*0.31875}{80}}$ = $0.0521$.  Thus, $0.68125\pm1.645*0.0521$, $0.68125\pm0.0857$, and $(0.5956,0.7670)$.  Therefore, one is 90\% confident that the proportion of all Ashland residents opposed to the \$1 coin is between 0.596 and 0.767.
-\end{enumerate}
-
-\newpage
-\begin{exsection}
-  \item \label{revex:ChiGOFShrike} In the same study used in the example of this chapter, \cite{BohallWood1987} more closely examined the habitat use of the shrikes observed in the open habitat by looking at four ``sub-habitats'' within these areas.  Of the 1456 shrike observations in this habitat, 149 were in ``settled'' areas, 944 were in improved pastures, 192 were in overgrown pastures, and 171 were in crop fields.  In addition, 20.5\% of this habitat was considered to be ``settled'', 58.6\% was improved pasture, 10.3\% was overgrown pasture, and 10.6\% was crop fields.    Use these results to determine, at the 5\% level, if shrikes found in open areas use the sub-habitats in proportion to their availability. \ansref{ans:ChiGOFShrike}
-
-  \item \label{revex:ChiGOFClinton} Between June 11 and 15, 1993, the Times Mirror Center for People and the Press interviewed 1006 adults concerning their views on media treatment of the then newly inaugurated President Clinton.  They found 433 of those sampled felt that news organizations were ``criticizing Clinton unfairly.''  Test the hypothesis (with $\alpha=0.10$) that more than 45\% of all adults feel that Clinton has been criticized unfairly. \ansref{ans:ChiGOFClinton}
-
-  \item \label{revex:ChiGOFPref2} A random selection of consumers present at the Mall of America were allowed to taste three types of cola (Pepsi, Coke, and a generic brand).  After tasting each type (which were supplied to each person in a random order) the person was to select which cola they preferred.  The results indicated that 57 people preferred Pepsi, 63 preferred Coke, and 34 preferred the generic brand.  Is there evidence, at the 5\% level, that these customers prefer one brand over the others? \ansref{ans:ChiGOFPref2}
-
-  \item \label{revex:ChiGOFMendels1} A particular type of corn is known to have one of four types of kernels: purple-smooth, purple-wrinkled, yellow-smooth, and yellow-wrinkled (see figure below).  The purple (P) and smooth (S) alleles are dominant.  The cross between heterozygous individuals (i.e., PpSs) should produce a 9:3:3:1 ratio of purple-smooth, purple-wrinkled, yellow-smooth, and yellow-wrinkled individuals.  Of the kernels shown in the graphic below (a random picture location but not a random selection of each individual) 32 are purple-smooth, 14 are purple-wrinkled, 8 are yellow-smooth, and 4 are yellow-wrinkled.  Use the results to determine, at the 5\% level, if the theoretical 9:3:3:1 ratio is upheld with these data. \ansref{ans:ChiGOFMendels1}
-    \begin{center}
-      \includegraphics[width=1.5in]{Figs/ChiGOF_corn.jpg}
-    \end{center}
-\end{exsection}
-
-\subsection{Goodness-of-Fit Test in R}
-\subsubsection{Data Format}
-A goodness-of-fit test is conducted in R with \R{chisq.test()} which requires an observed table as the first argument.  This observed table is entered from previously summarized data using \R{c()}.  However, raw data consisting of the recorded level for each individual must be summarized to a frequency table, and stored in an object, with \R{table()} as shown in \sectref{sect:UEDACategorical} before being submitted to \R{chisq.test()}.
-
-For example, suppose that the frequencies of shrike observations in the ``open'', ``mid-successional'', ``scattered trees'', ``woods'', and ``wetland'' habitats shown previously are known to be 1456, 43, 112, 44 and 6, respectively.  These summarized values are entered directly into a named vector with
-<<>>=
-( obs <- c(Open=1456,MidSucc=43,ScatTree=112,Woods=6,Wetland=44) )
-@
-
-However, instead of having summarized frequencies suppose that you have raw data in a variable called \var{hab.use} in a data frame called \var{shrike.raw} that looks like this,
-<<echo=FALSE>>=
-shrike.raw <- data.frame(hab.use=factor(rep(names(obs),c(1456,43,112,44,6))))
-shrike.raw[c(10,20,30,40,1475,1510,1614,1650),]
-@
-These raw data must then be summarized into a table like this
-<<>>=
-( obs <- xtabs(~hab.use,data=shrike.raw) )
-@
-Note that the two vectors/tables are identical with the exception of the ordering of the levels.
-
-\warn{If the raw un-summarized data are entered into a vector, then that vector must be summarized with \R{table()} and assigned to an object before performing the goodness-of-fit test.}
-
-\subsubsection{Goodness-of-Fit Test}
-The chi-square goodness-of-fit test is computed with \R{chisq.test()} with a vector or table of observed frequencies in each level of the categorical variable as the first argument.  The following arguments may also be used:
-\begin{Itemize}
-  \item \R{p=}: a vector of expected proportions for the levels of the theoretical distribution.
-  \item \R{rescale.p=}: a logical indicating whether the values given in \R{p=} should be rescaled so that they sum to 1.  This rescaling is useful if the proportions entered into \R{p=} were rounded or are actually the expected frequencies.  Using \R{rescale.p=TRUE} will perform the rescaling.
-  \item \R{correct=}: a logical indicating whether a so-called ``continuity correction'' should be used or not.  Some authors argue that small chi-square tables with small sample sizes should be corrected for the fact that the chi-square distribution is a continuous distribution.  This correction is applied by simply subtracting 0.5 from each observed-expected calculation.  The default is to use the correction (\R{=TRUE}) which is fine but the results will not match your hand calculations if you do not use the correction.  Use \R{correct=FALSE} to turn off the continuity correction.
-\end{Itemize}
-
-\warn{A goodness-of-fit test should include the \R{rescale.p=TRUE} argument in the \R{chisq.test()} function to correct for any rounding errors in the theoretical proportions.}
-
-\vspace{-12pt}
-\warn{A chi-square test statistic can be corrected for ``continuity'' issues with the \R{correct=TRUE} argument to \R{chisq.test()}.}
-
-The results from \R{chisq.test()} should be assigned to an object because a variety of useful information can be extracted from this object.  For example, suppose that the results of \R{chisq.test()} were saved into the \var{chi1} object.  With this object, the observed frequencies are extracted with \R{chi1\$observed}, the expected frequencies are extracted with \R{chi1\$expected}, and a visualization of the p-value is obtained with \R{plot(chi1)}.  Finally, confidence intervals for the proportion of individuals in each level are constructed by submitting the saved object to \R{gofCI} (e.g., \R{gofCI(chi1)}).
-
-\warn{The results from \R{chisq.test()} should be assigned to an object.}
-
-\subsubsection{Example - Loggerhead Shrikes}
-The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for the example below is shown below:
-
-\begin{quote}
-\textsl{\cite{BohallWood1987} constructed 24 random 16-km transects along roads in counties near Gainesville, FL.  Two observers censused each transect once every 2 weeks from 18 October 1981 to 30 October 1982, by driving 32 km/h and scanning both sides of the road for perched and flying shrikes (\textbf{Lanius ludovicianus}).  The habitat, whether the bird was on the roadside or actually in the habitat, and the perch type were recorded for each shrike observed.  Habitats were grouped into five categories.  The number of shrikes observed in each habitat was 1456 in open areas, 43 in midsuccessional, 112 in scattered trees, 44 in woods, and 6 in wetlands.  Separate analyses were used to construct the proportion of habitat available in each of the five habitat types.  These results were as follows: 0.358 open, 0.047 midsuccessional, 0.060 scattered trees, 0.531 woods, and 0.004 wetlands.  Use these data to determine, at the 5\% level, if shrikes are using the habitat in proportion to its availability.}
-\end{quote}
-
-\begin{enumerate}
-  \item As stated, $\alpha$ should be set at 0.05.
-  \item The  $H_{0}$:``The distribution of habitat use by shrikes is the same as the proportions of available habitat'' versus $H_{A}$:``The distribution of habitat use by shrikes is NOT the same as the proportions of available habitat.''
-  \item A goodness-of-fit test is required because a categorical variable (habitat use) with five levels from a single population (shrikes in this are) was recorded and will be compared to a theoretical distribution in the null hypothesis.
-  \item The data appear to be part of an observational study where the individuals were not randomly selected but the transects upon which they were observed were.  As the summary data is given in the background it was entered into R with
-<<>>=
-( obs <- c(Open=1456,MidSucc=43,ScatTree=112,Woods=6,Wetland=44) )
-@
-The \R{chisq.test()} function was used at this point, before the assumptions have been assessed, so that R could be used to compute the expected frequencies.  The expected proportions of available habitat were first entered into a vector with
-<<>>=
-( p.exp <- c(Open=0.358,MidSucc=0.047,ScatTree=0.060,Woods=0.531,Wetland=0.004) )
-@
-The observed frequencies and expected proportions were then submitted to \R{chisq.test()} with the results saved to an object with
-<<>>=
-shrike.chi <- chisq.test(obs,p=p.exp,rescale.p=TRUE)
-@
-Finally, a ``table'' of observed and expected frequencies was extracted with
-<<>>=
-data.frame(obs=shrike.chi$observed,exp=shrike.chi$expected)
-@
-  \item The test statistic below should follow a $\chi^{2}$ distribution because there are more than five individuals expected in each habitat level as shown in the output above.
-  \item The appropriate statistic is the observed frequency table shown in the output above.
-  \item The test statistic is $\chi^2$=\Sexpr{formatC(shrike.chi$statistic,format="f",digits=0)} with \Sexpr{round(shrike.chi$parameter,0)} df as shown with
-<<>>=
-shrike.chi
-@
-  \item The p-value is \Sexpr{kPvalue(shrike.chi$p.value)} as seen above.
-  \item The $H_{0}$ is rejected because the $p-value<\alpha$.
-  \item The shrikes do not appear to use habitats in the same proportions as the availability of the habitat.
-  \item The 95\% confidence intervals for the proportion of use in each habitat level is obtained with
-<<>>=
-gofCI(shrike.chi,digits=3)
-@
-From these results it is apparent that the shrikes use the ``open'' habitat much more often and the ``woods'' habitat mush less often than would be expected if they used all habitats in proportion to their availability.
-\end{enumerate}
-
-\subsubsection{Example - Modes of Fishing}
-The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for the example below is shown below:
-
-\begin{quote}
-\textsl{\cite{HerrigesKing1999} examined modes of fishing for a large number of recreational saltwater users in southern California.  One of the questions asked in their Southern California Sportfishing Survey was what ``mode'' they used for fishing -- ``from the beach'', ``from a fishing pier'', ``on a private boat'', or ``on a chartered boat.''  The results to this question, along with other data not used here, are found in \href{https://raw.githubusercontent.com/droglenc/NCData/master/FishingModes.csv}{FishingModes.csv}.  One hypothesis of interest states that two-thirds of the users will fish from a boat, split evenly between private and charter boats, while the other one-third will fish from land, also split even between those fishing on the beach and those from a pier.  Use the data in the \var{mode} variable of the data file to determine if this hypothesis is supported at the 10\% level.}
-\end{quote}
-
-\begin{enumerate}
-  \item As stated, $\alpha$ should be set at 0.10.
-  \item The  $H_{0}$:``The distribution will follow the proportions of $\frac{1}{3}$, $\frac{1}{3}$, $\frac{1}{6}$, and $\frac{1}{6}$ for private boat, charter boat, beach, and pier modes of fishing, respectively'' versus $H_{A}$:``The distribution will NOT follow the proportions of $\frac{1}{3}$, $\frac{1}{3}$, $\frac{1}{6}$, and $\frac{1}{6}$ for private boat, charter boat, beach, and pier modes of fishing, respectively.''  [These fractions were found with the following thought process -- the two-thirds for ``boat'' fishing is split in half for one-third each for private and charter boats; the one-third, or two-sixths, for ``land'' fishing is split in half for one-sixth each for beach and pier fishing.]
-  \item A goodness-of-fit test is required because a categorical variable (mode) with four levels from a single population (Southern California Sportfishers) was recorded and will be compared to a theoretical distribution in the null hypothesis.
-  \item The data appear to be part of an observational study where the individuals were not obviously (probably were not) randomly selected.  The raw data was read in with
-<<>>=
-sf <- read.csv("data/FishingModes.csv")
-@
-The \var{mode} variable was summarized with
-<<>>=
-( obs <- xtabs(~mode,data=sf) )
-@
-The order of the levels is made note of here so that the expected proportions below can be entered in the same order,
-<<>>=
-( p.exp <- c(beach=1/6,boat=1/3,charter=1/3,pier=1/6) )
-@
-The \R{chisq.test()} function is used at this point, before the assumptions have been assessed, so that R could be used to compute the expected frequencies,
-<<>>=
-sf.chi <- chisq.test(obs,p=p.exp,rescale.p=TRUE)
-@
-Finally, a ``table'' of observed and expected frequencies was extracted,
-<<>>=
-data.frame(obs=sf.chi$observed,exp=sf.chi$expected)
-@
-  \item The test statistic below should follow a $\chi^{2}$ distribution because there are more than five individuals expected in each habitat level as shown in the output above.
-  \item The appropriate statistic is the observed frequency table shown in the output above.
-  \item The test statistic is $\chi^2$=\Sexpr{formatC(sf.chi$statistic,format="f",digits=0)} with \Sexpr{round(sf.chi$parameter,0)} df as shown with
-<<>>=
-sf.chi
-@
-  \item The p-value is \Sexpr{kPvalue(sf.chi$p.value)} as seen above.
-  \item The $H_{0}$ is rejected because the $p-value<\alpha$.
-  \item The modes of fishing do not appear to match the distribution outlined in the null hypothesis.
-  \item The 95\% confidence intervals for the proportion of use of each mode is obtained with
-<<>>=
-gofCI(sf.chi,digits=3)
-@
-From these results it is apparent that the users use the beach slightly less than expected and use the charter boats slightly more than expected.  The use of the pier and private boats are not different from what was expected.
-\end{enumerate}
-
-\subsubsection{Example - Mendelian Genetics II}
-The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for the example below is shown below:
-
-\begin{quote}
-\textsl{Geneticists hypothesized that three of every four progeny from a cross between two parent fruitflies known to possess both a dominant and recessive allele would have red eyes.  In a carefully controlled experiment, 82 of 151 randomly selected progeny had red-eyes.  Test at the 1\% level if the percentage of red-eyed progeny in the population of progeny is different than what the researchers hypothesized.}
-\end{quote}
-
-\begin{enumerate}
-  \item As stated, $\alpha$ should be set at 0.01.
-  \item The  $H_{0}$:``The proportion of progeny with red-eyes is 0.75'' versus $H_{A}$:``The proportion of progeny with red-eyes is NOT 0.75.''
-  \item A goodness-of-fit test is required because a categorical variable (eye color) with two levels from a single population was recorded and will be compared to a theoretical distribution in the null hypothesis.
-  \item The data appear to be quasi-experimental in that a specific cross was made but there are very little controls.  Selected progeny were randomly selected.  As the summary data is given in the background it was entered into R with
-<<>>=
-( obs <- c(red=82,nonred=151-82) )
-@
-The \R{chisq.test()} function was used at this point, before the assumptions have been assessed, so that R could be used to compute the expected frequencies.  The expected proportions of available habitat were first entered into a vector with
-<<>>=
-( p.exp <- c(red=0.75,nonred=0.25) )
-@
-The observed frequencies and expected proportions were then submitted to \R{chisq.test()} with the results saved to an object with
-<<>>=
-m.chi <- chisq.test(obs,p=p.exp,rescale.p=TRUE)
-@
-Finally, a ``table'' of observed and expected frequencies was extracted with
-<<>>=
-data.frame(obs=m.chi$observed,exp=m.chi$expected)
-@
-  \item The test statistic below should follow a $\chi^{2}$ distribution because there are more than five individuals expected in each eye level as shown in the output above.
-  \item The appropriate statistic is the observed frequency table shown in the output above.
-  \item The test statistic is $\chi^2$=\Sexpr{formatC(m.chi$statistic,format="f",digits=2)} with \Sexpr{round(m.chi$parameter,0)} df as shown with
-<<>>=
-m.chi
-@
-  \item The p-value is \Sexpr{kPvalue(m.chi$p.value)} as seen above.
-  \item The $H_{0}$ is rejected because the $p-value<\alpha$.
-  \item The proportion of red-eyed progeny appears to be different than 0.75.  Thus, the Mendelian theory is not supported by these results.
-  \item The 95\% confidence intervals for the proportion of progeny in each eye level is obtained with
-<<>>=
-gofCI(m.chi,digits=3)
-@
-From these results it is apparent that the proportion of progeny with red-eyes was between \Sexpr{formatC(gofCI(m.chi)["red","p.LCI"],format="f",digits=3)} and \Sexpr{formatC(gofCI(m.chi)["red","p.UCI"],format="f",digits=3)} indicating that there were many fewer red-eyed progeny than would be expected from the Mendelian theory.
-\end{enumerate}
-
-\begin{exsection}
-  \item \label{revex:ChiGOFPref1} \rhw{} The leader of a local lake association conducted a survey of all members of the association.  One question on the survey was, ``What is your preferred method of receiving notices from the lake association: by regular mail, by e-mail, by phone, by poster (at the local boat landing), or other?''  Of the surveys returned, 47 respondents preferred regular mail, 63 e-mail, 17 phone, 73 by poster, and 8 some other method.  OF THE RESPONDENTS WHO DID NOT PREFER SOME OTHER METHOD, is there evidence, at the 5\% level, of a difference in the preferred method of contact? \ansref{ans:ChiGOFPref1}
-
-  \item \label{revex:ChiGOFOtterMortality} \rhw{} \cite{Philcoxetal1999} examined patterns in the road-related mortalities of otters (\emph{Lutra lutra}) in Britain from 1971 to 1996.  One aspect of their analysis was to examine the sex ratio of road-killed otters.  The sex of all otters for which sex could be identified are recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/OtterMort.csv}{OtterMort.csv}.  Use these data to determine if there is a significant (at the 1\% level) bias in the sex ratio of road-killed otters. \ansref{ans:ChiGOFOtterMortality}
-
-  \item \label{revex:ChiGOFCoin} \rhw{} While imprisoned by the Germans during World War II, the English mathematician John Kerrich tossed a coin 10000 times and obtained 5067 heads.  Use his results to determine (at the 1\% level) whether the coin was fair or not (i.e., equal chance of heads and tails). \ansref{ans:ChiGOFCoin}
-
-  \item \label{revex:ChiGOFCD} \rhw{} Fisher claims that the randomization function of its ``Studio-Standard'' 60-disc CD changer is completely random.  To test this assertion, the owner of one of these units randomly filled the CD changer with 20 copies of ``The Best of Taj Mahal'' and 40 copies of ``Beethoven's Greatest.''  Each CD had 20 songs on it.  The owner set out to test the randomness of the CD player by listening to 100 songs chosen by the CD changer.  The owner recorded whether a song came from the Taj Mahal (T) CD or the Beethoven (B) CD.  The data collected are listed below (organized into rows of 25 for convenience).  Test, at the 5\% level, the hypothesis that the randomization function on the CD changer is indeed random. \ansref{ans:ChiGOFCD}
-    \begin{Verbatim}
-    T T B B B B T B T B T B B B T B T B B B B B B B B
-    T T T B B T B T T B T B B T B T B B B T T B T T B
-    T B B T B B B T B B B B T T B B B B B B B B T T B
-    B T T B B T B B T T B T B B T B T B B B B T B T B
-    \end{Verbatim}
-
-  \item \label{revex:chiGOFBlood} \rhw{} Past data suggest that of the patients that a hospital serves 44\% have type O, 45\% have type A, 8\% have type B, and 3\% have type AB blood.  In a more recent survey they found that 67 patients had type O, 83 had type A, 29 had type B, and 8 had type AB.  Use the more recent results to determine, at the 5\% level, if the past results still hold. \ansref{ans:chiGOFBlood}
-
-  \item \label{revex:ChiGOFDA} \rhw{} A county district attorney would like to run for the office of state district attorney. She has decided that she will give up her county office and run for state office if more than 65\% of her party constituents support her.  As her campaign manager, you collected data on 950 randomly selected party members and find that 660 party members support the candidate. Test at the 5\% significance level whether she should give up her county office and run for the state office. \ansref{ans:ChiGOFDA}
-
-  \item \label{revex:ChiGOFSurv} \rhw{} Suppose that you know that a population of deer is at a stable age distribution and stable population size.  In addition, it is hypothesized that the survival rate from year-to-year is 50\%.  Through a random sample of animals from this population you determine that 134 are in the 0-1 age group, 66 are aged 1-2, 30 are aged 2-3, 13 are aged 3-4, 4 are aged 4-5, and 6 are aged 5-6.  Use these results to determine, at the 10\% level, if the survival rate is indeed 50\%.  [Hint: Find the expected number of animals in each age category.  The expected number in the first age category, $X$, is found by solving the following equation $X+(0.5^{1}+0.5^{2}+0.5^{3}+0.5^{4}+0.5^{5})X = n$ where $n$ is the total number of observed animals.  The expected values in the remaining categories are determined from the value of $X$ and the hypothesized survival rate.] \ansref{ans:ChiGOFSurv}
-
-  \item \label{revex:ChiGOFShrikeR} \rhw{} Repeat Review Exercise \ref{revex:ChiGOFShrike} using R. \ansref{ans:ChiGOFShrikeR}
-
-  \item \label{revex:ChiGOFClintonR} \rhw{} Repeat Review Exercise \ref{revex:ChiGOFClinton} using R. \ansref{ans:ChiGOFClintonR}
-
-  \item \label{revex:ChiGOFPref2R} \rhw{} Repeat Review Exercise \ref{revex:ChiGOFPref2} using R. \ansref{ans:ChiGOFPref2R}
-
-  \item \label{revex:ChiGOFMendels1R} \rhw{} Repeat Review Exercise \ref{revex:ChiGOFMendels1} using R. \ansref{ans:ChiGOFMendels1R}
-
-  \item \label{revex:ChiGOFByCatch} \rhw{} An Alaskan pollock (\textit{Theragra chalcogramma}) trawling boat will discontinue trawling in an area if the by-catch of king salmon (\textit{Oncorhynchus tshawytscha}) caught in that area exceeds 10\% of the catch.  In a very large trawl catch the independent observer on the boat randomly sampled 1256 fish and found that 145 were king salmon.  Is there evidence, at the 10\% level, that the boat should discontinue trawling in that area? \ansref{ans:ChiGOFByCatch}
-\end{exsection}
-
-\section{Chi-Square Test}
-The chi-square goodness-of-fit test was used to determine how closely the distribution of individuals into the levels of a single categorical variable matched a theoretical distribution.  Another common situation is that one will want to compare the distribution of individuals into the levels of one categorical variable among multiple populations indexed by a second categorical variable.  For example, suppose that researchers want to determine if the proportion of failing students differs between males and females, if the proportion of kids playing sports differs between kids from high- or low-income families, if the distribution of four major plant species differs between two locations, or if the distribution of responses to a five-choice question differs between respondents from neighboring counties.  All of these questions require the collection of data for two categorical variables and making a comparison among two or more populations.  Under these conditions, the goodness-of-fit test is inappropriate.  However, the methods and concepts learned for a goodness-of-fit test are extended to what is called a chi-square test.  The chi-square test is the subject of this section\footnote{The chi-square test presented here is quite flexible and can be derived from different types of hypotheses than those described here.  This section will only deal with this one type of chi-square test hypothesis.}.
+\section{Chi-Square Test Specifics}
+It is common that one wants to compare the distribution of individuals into the levels of one categorical variable among multiple populations indexed by a second categorical variable.  For example, suppose that researchers want to determine if the proportion of failing students differs between males and females, if the proportion of kids playing sports differs between kids from high- or low-income families, if the distribution of four major plant species differs between two locations, or if the distribution of responses to a five-choice question differs between respondents from neighboring counties.  All of these questions require the collection of data for two categorical variables and making a comparison among two or more populations.  Under these conditions, the goodness-of-fit test is inappropriate.  However, the methods and concepts learned for a goodness-of-fit test are extended to what is called a chi-square test.  The chi-square test is the subject of this section\footnote{The chi-square test presented here is quite flexible and can be derived from different types of hypotheses than those described here.  This section will only deal with this one type of chi-square test hypothesis.}.
 
 \warn{This hypothesis test is called a chi-square test, NOT a chi-square\textbf{D} test.}
 
@@ -562,7 +177,7 @@ In general, confidence intervals are not constructed in relation to a chi-square
 
 \warn{Step 11 will not be computed for a chi-square test.}
 
-\subsubsection{Example -- Christmas Trees}
+\subsection{Example -- Christmas Trees}
 The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for the Christmas tree example presented at the beginning of this chapter are as follows:
   \begin{enumerate}
     \item As stated, $\alpha$ should be set at 0.10.
@@ -648,8 +263,8 @@ The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for th
 \end{exsection}
 
 
-\subsection{Chi-Square Test in R}
-\subsubsection{Data Format}
+\section{Chi-Square Test in R}
+\subsection{Data Format}
 As with the goodness-of-fit test, the data for a chi-square test are entered from summarized data or computed from ``raw'' data on individuals.  The raw individual data must be in the stacked format where one column in the data frame represents the response variable and another column represents the variable that denotes the populations.  The raw data must be summarized into a two-way frequency table with \R{table()} as described in \sectref{sect:BEDACategorical} and saved into an object.  The two-way table must contain frequencies and not proportions or percentages (so don't use \R{percTable()}) and must not contain the marginal totals (so don't use \R{addMargins()}).
 
 In contrast to the goodness-of-fit test, the summarized data must be entered into a two-dimensional \textbf{matrix} rather than a one-dimensional vector.  The creation of a matrix first requires that the summarized data be entered into a vector such that the values that will be the first row of the matrix are followed by the values that will form the second row which are followed by the values that will form the third row and so on\footnote{The data could be entered such that the values in the first column are followed by the values in the second column and so on, but it is generally easier to enter the values as if you were reading a paragraph -- left-to-right, top-to-bottom.}.  This vector of values will serve as the first argument to \R{matrix()}.  Additionally, \R{matrix()} should include the number of rows to be in the final matrix in the \R{nrow=} argument and \R{byrow=TRUE} to indicate that the values in the vector should be entered into the matrix in a row-wise manner.
@@ -687,10 +302,10 @@ colnames(obstbl) <- c("A","B","C","D","E","F")
 obstbl
 @
 
-\subsubsection{Chi-Square Test}
+\subsection{Chi-Square Test}
 The chi-square test is performed with \R{chisq.test()}.  The table of summary results, either entered through \R{matrix()} or generated through \R{table()}, is the first argument to this function.  The only other argument that may be needed is the \R{correct=} argument for applying the continuity correction as described for the goodness-of-fit test.  As per usual, the results of \R{chisq.test()} should be assigned to an object so that the observed table, expected table, and a visual of the p-value can be easily extracted.
 
-\subsubsection{Post-Hoc Analysis}
+\subsection{Post-Hoc Analysis}
 Rejecting the null hypothesis in a chi-square test indicates that there is some difference in the distribution of individuals into the levels of the response variable among some of the populations.  However, rejecting the null hypothesis does not indicate which populations are different.  In addition, as mentioned previously, confidence intervals are generally not performed with a chi-square test\footnote{It won't be done in this book, but a common exception to this rule is to compute a confidence interval for the difference in proportions when there are only two levels of the response variable and two populations.}.  A post-hoc method for helping determine which populations are different following the rejection of a null hypothesis is obtained by observing the so-called Pearson residuals.
 
 A Pearson residual is computed for each cell in the table as,
@@ -699,7 +314,7 @@ A Pearson residual is computed for each cell in the table as,
 
 which is basically the appropriately signed square root of the parts in the $\chi^2$ test statistic calculation.  Therefore, cells that have Pearson residuals far from zero have contributed substantially to the large $\chi^2$ test statistic that resulted in a small p-value and the ultimate rejection of $H_{0}$.  Patterns in where the large Pearson residuals are found may allow one to qualitatively determine which populations differ and, thus, which levels of the response differ the most.  This process will be illustrated more fully in the examples and review exercises.  The Pearson residuals are obtained from the saved \R{chisq.test()} object by appending \R{\$residuals} to the object name -- e.g., \R{chi.result\$residuals}.
 
-\subsubsection{Example - Father Present at Birth}
+\subsection{Example - Father Present at Birth}
 Consider this situation,
 \begin{quote}
 \textsl{Daniel Weiss (in ``100\% American'') reported the results of a survey of 300 first-time fathers from four different hospitals (labeled as A, B, C, and D).  Each father was asked if he was present (or not) in the delivery room when his child was born.  The results of the survey are in \href{https://raw.githubusercontent.com/droglenc/NCData/master/FatherPresent.csv}{FatherPresent.csv}.  Use these data to determine if there is a difference, at the 5\% level, in the proportion of fathers present in the delivery room among the four hospitals.}
@@ -735,7 +350,7 @@ percTable(fp.obs,margin=1,digits=2)
 @
   \end{enumerate}
 
-\subsubsection{Example - Apostle Islands Plants}
+\subsection{Example - Apostle Islands Plants}
 Consider this situation,
 \begin{quote}
 \textsl{In her Senior Capstone project a Northland College student recorded the dominant (i.e., most abundant) plant species in 100 randomly selected plots on both Devil's Island and the Bayfield Peninsula (i.e., the mainland).  There were a total of six ``species'' (one group was called ``other'') recorded (labeled as A, B, C, D, E, and F).  The results are shown in the table below.  Determine, at the 5\% level, if the frequency of dominant species differs between the two locations.}
@@ -851,29 +466,3 @@ both suggest that the biggest difference between the two locations is due to ``p
   \item \label{revex:chiZoo1} \rhw{} The data in \href{}{Zoo1.csv} contains a list of animals found in several different zoos\footnote{These data are stored in a ``comma separated values'' (CSV) file rather than a ``tab delimited text'' file.  Thus, these data must be loaded into R with \R{read.csv()} rather than \R{read.csv()}.  The arguments to \R{read.csv()} are the same as \R{read.csv()}.}.  In addition, each animal was classified into broad ``type'' categories (``mammal'', ``bird'', and ``amph/rep'').  The researchers that collected these data wanted to examine if the distribution of broad animal types differed among zoos.  Test the researcher's question at the 5\% level \ansref{ans:chiZoo1}
 
 \end{exsection}
-
-
-\newpage
-\begin{hwsection}{All questions below should be typed and answered following the expectations identified on the syllabus.  All work must be shown.  Questions marked with the R logo must include R output with your R commands in an attached appendix.}
-
-  \item \label{hwprob:ChiGOFBear1} A researcher for the Wisconsin Department of Natural Resources has radio-collared several black bears in northern Wisconsin.  At randomly selected times the researcher attempts to locate the bears and record what type of habitat they are in.  For one particular bear the researcher recorded the following data: 47 observations in lowland conifer habitat, 12 in aspen, 10 in open areas, 21 in upland hardwood, and 10 in mixed upland.  In addition, through GIS analysis of vegetation cover layers the researcher has determined that 34\% of the available habitat is lowland conifer, 17\% is in aspen, 12\% is in open areas, 25\% is in upland hardwoods, and 12\% is in mixed upland.  Use these results to determine, at the 10\% level, if this bear uses these habitats in proportion to their availability.
-
-  \item \label{hwprob:ChiGOFDeerGinseng} \rhw{} \cite{FurediMcGraw2004} examined predation of American ginseng (\textit{Panax quinquefolius} L.) by white-tail deer (\textit{Odocoileus virginianus} Z.).  At one location and year in their study (P5, 2003) they found that 33 of 73 randomly selected reproductive ginseng plants had been consumed by deer.  Use this information to determine, at the 5\% significance level, if more than 33\% of all plants at this location and year were consumed by deer.
-
-  \item \label{hwprob:chiRoadRage} \rhw{} Road rage was defined as ``an incident in which an angry or impatient motorist or passenger intentionally injures or kills another motorist, passenger, or pedestrian, or attempts or threatens to injure or kill another motorist, passenger, or pedestrian.''  \cite{RathboneHuckabee1999} reported the day of the week that 69 incidents of road rage occurred.  The results of the study are in the \href{https://raw.githubusercontent.com/droglenc/NCData/master/RoadRage.csv}{RoadRage.csv} data file.  Use this information to determine, at the 5\% level, if incidents of road rage occur more often on certain days of the week.
-
-  \item \label{hwprob:chiAidsHIV} \rhw{} Acquired immunodeficiency syndrome (AIDS) is a specific group of diseases or conditions that indicate severe immunosuppression related to infection with the human immunodeficiency virus (HIV).  According to the HIV/AIDS Surveillance Report (11(2)), the number of AIDS cases in the United States for 1999, by gender and race/ethnicity, is shown in the following contingency table.  Use this information to determine, at the 1\% level, if the distribution of males into the four race/ethnic categories differs from the distribution of females into the four groups.
-\begin{center}
-  \begin{tabular}{c||c|c|c|c|}
-    \multicolumn{1}{c}{\widen{-1}{6}{}} & \multicolumn{4}{c}{Race / Ethnicity} \\
-    \cline{2-5}
-    \widen{-1}{6}{Sex} & White & Black & Hispanic & Other \\
-    \hline
-    \multicolumn{1}{|c||}{\widen{-1}{6}{Male}} & 12855 & 14946 & 7019 & 439 \\
-    \hline
-    \multicolumn{1}{|c||}{\widen{-1}{6}{Female}} & 1924 & 6784 & 1948 & 103 \\
-    \hline\hline
-  \end{tabular}
-\end{center}
-
-\end{hwsection}

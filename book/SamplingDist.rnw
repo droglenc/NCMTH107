@@ -527,34 +527,3 @@ One issue that you have probably noticed while doing these calculations is that 
       \item What are the most common 80\% of times to hatching?
     \end{Enumerate}
 \end{exsection}
-
-\newpage
-\begin{hwsection}{All questions below should be typed and answered following the expectations identified on the syllabus.  All work must be shown.  Questions marked with the R logo must include R output with your R commands in an attached appendix.}
-
-  \item \label{hwprob:SamplingDist1} \rhw{} Suppose that a population consists of eight individuals with the following ``values'': 2, 3, 4, 5, 6, 7, 8, and 9.  Use this information to answer the questions below.
-    \begin{Enumerate}
-      \item Construct a table of values for all possible samples of $n=2$.  [\textit{Hints: There are 28 such samples.  See footnote related to \tabref{tab:SDistQuiz2}.}]  [\textit{Note: you can just copy the output from R rather than attempting to format the table like that in \tabref{tab:SDistQuiz2}.}]
-      \item Construct a table of means for all possible samples of $n=2$.  [\textit{Hint: See footnote related to \tabref{tab:SDistQuiz2}.}]
-      \item Describe the general shape of the histogram of the sample means from all 28 samples.  [\textit{See footnote related to \figref{tab:SDistQuiz2}.}]
-      \item Construct the average of the sample means from all 28 samples.  How does this compare to the mean of all eight individuals in the population?  What statistical definition does this illustrate about the sample mean as an estimator of the population mean? [\textit{Hint: See \sectref{sect:DescStatsCenter} for a reminder about how to compute means and standard deviations (next question) in R.}]
-      \item Construct the standard deviation of the sample means from all 28 samples.  What is the correct name for the value of this standard deviation?  How do you expect this value to change if means from samples of $n=3$ were used instead of $n=2$?
-    \end{Enumerate}
-  \item \label{hwprob:SamplingDistPA} Answer the questions below assuming that a population is known to have a mean of 60.
-    \begin{Enumerate}
-      \item Construct a hypothetical series of four numbers (that could represent sample means) that would be considered both precise and accurate.
-      \item Construct a hypothetical series of four numbers that would be considered imprecise but accurate.
-      \item Construct a hypothetical series of four numbers that would be considered precise but inaccurate.
-      \item Construct a hypothetical series of four numbers that would be considered imprecise and inaccurate.
-    \end{Enumerate}
-
-  \item \label{hwprob:CLTRoeDeer} \rhw{} Researchers on Storfosna Island, Norway examined the reproductive habits of roe deer (\emph{Capreolus pygargus}) in the northern extremities of the island \citep{AndersenLinnell2000}.  The researchers found that the distribution of number of fawns born to a female between 1991 and 1994 was extremely right-skewed with a mean of 2.2 and a standard deviation of 0.46 fawns.  Assume that these values represent the entire population of roe deer.  Use this information to answer the questions below (note: if you decide that a question cannot be answered, then describe your reasoning very specifically).
-    \begin{Enumerate}
-      \item What is the probability that a roe deer has more than 2 fawns?
-      \item What is the probability that a sample of 10 roe deer will have an average of more than 2 fawns?
-      \item What is the probability that a sample of 35 roe deer will have an average of more than 2 fawns?
-      \item What is the probability that a sample of 35 roe deer will have a mean between 2.0 and 2.3 fawns?
-      \item What is the most common 90\% of sample means for $n=35$ roe deer?
-      \item What is the mean such that 20\% of all samples of $n=35$ roe deer have a smaller mean?
-    \end{Enumerate}
-
-\end{hwsection}

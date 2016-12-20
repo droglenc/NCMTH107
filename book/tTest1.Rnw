@@ -1,0 +1,178 @@
+<<echo=FALSE, cache=FALSE, results='hide'>>=
+set_parent('IntroStats.Rnw')
+@
+
+\chapter{1-Sample t-Test} \label{chap:tTest1}
+\begin{ChapObj}{\boxwidth}
+  \textbf{Chapter Objectives:}
+  \begin{Enumerate}
+    \item Identify when a 1-sample t-Test is appropriate.
+    \item Perform the 11 steps of a significance test in a 1-sample t-Test situation.
+  \end{Enumerate}
+\end{ChapObj}
+
+\minitoc
+\newpage
+
+\lettrine{P}{rior to this chapter}, the hypothesis testing methods have required knowing $\sigma$.  Of course, $\sigma$ is a parameter that is seldom actually known, but is estimated by $s$, the sample standard deviation.  When $\sigma$ is replaced by $s$, the test statistic follows a Student's t rather than a standard normal (Z) distribution.  In this chapter, the specifics of the t-distribution are described and a 1-sample t-Test for testing that the mean from one population equals a specific value is introduced. A 2-sample t-Test for comparing the means of two populations is introduced in \chapref{chap:tTest2}.
+
+
+\section{t-distribution}\label{sect:tDist}\index{t Distribution!Characteristics}
+A t-distribution is similar to a standard normal distribution (i.e., N(0,1)) in that it is centered on 0 and is bell shaped \figrefp{fig:tvsZ}.  The t-distribution differs from the standard normal distribution in that it is heavier in the tails, flatter near the center, and its exact dispersion is dictated by a quantity called the degrees-of-freedom (df).  The t-distribution is ``flatter and fatter'' because of the uncertainty surrounding the use of the sample standard deviation in the standard error calculation\footnote{Recall that the sample standard deviation is a statistic and is thus subject to sampling variability.}.  The degrees of freedom are a function of the sample size and generally come from the denominator of the sample standard deviation calculation.  As the degrees-of-freedom increase, the t-distribution becomes narrower and taller and approaches the shape and dispersion of the standard normal distribution \figrefp{fig:tvsZ}.
+
+<<tvsZ, echo=FALSE, cache=TRUE, fig.show='animate', fig.cap="Standard normal (black) and t-distributions (red) with varying degrees-of-freedom.", aniopts="controls,loop,autoplay">>=
+par(mar=c(3,1,1,1),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+x <- seq(-4,4,by=0.001)
+n1 <- dnorm(x,0,1)
+for (i in 1:30) {
+  plot(x,n1,type="l",lwd=3,xlab="t",ylab="",yaxt="n")
+  t1 <- dt(x,i)
+  lines(x,t1,lwd=3,col="red")
+  text(2,0.8*max(n1),paste("df=",i,sep=""),cex=1.5)
+}
+@
+
+\warn{A t-distribution is ``wider'' than a z-distribution because of the extra uncertainty from using $s$ rather than $\sigma$ in the test statistic calculation.}
+
+Proportional areas on a t-distribution are computed using \R{distrib()} in a manner similar to that described for a normal distribution in \chapref{chap:NormDist}.  To compute the area on a t-distribution the first argument to \R{distrib()} must be the value of t, the \R{distrib=} argument is required and is set equal to \R{"t"}, and the \R{type=} argument is \R{"p"}\footnote{The \R{type=} argument defaults to \R{"p"} so it may be omitted.}.  In addition, the df (how to find the df will be discussed in subsequent sections) must also be provided in the \R{df=} argument.  As before, \R{lower.tail=FALSE} is used to compute the upper tail area.  For example, the area to the right of $t=-1.456$ on a t-distribution with 9 df is \Sexpr{formatC(pt(-1.456,df=9,lower.tail=FALSE),format="f",digits=4)} \figrefp{fig:tarea1} and is found with
+
+<<tarea1, par1a=TRUE, fig.cap="Depiction of the area to the right of $t=-1.456$ on a t-distribution with 9 df.">>=
+( distrib(-1.456,distrib="t",df=9,lower.tail=FALSE) )
+@
+
+Values of $t$ with a certain area to the right or left can also be found with \R{distrib()}.  In these cases, the first argument should be changed to the desired area and the \R{type=} argument must be set equal to \R{"q"}.  For example, the value of $t$ with an area of 0.95 to the right on a t-distribution with 19 df is \Sexpr{formatC(qt(0.95,df=19,lower.tail=FALSE),format="f",digits=3)} \figrefp{fig:tstar1} and is found with
+
+<<tstar1, par1a=TRUE, fig.cap="Depiction of the value of t with an area to the right of 0.95 on a t-distribution with 19 df.">>=
+( distrib(0.95,distrib="t",type="q",df=19,lower.tail=FALSE) )
+@
+
+Of course, this last ``reverse'' calculation would be the $t^{*}$ for a 95\% lower confidence bound.  This use will be illustrated in subsequent sections.
+
+\newpage
+\begin{exsection}
+  \item \label{revex:tTestpv1} \rhw{} What is the p-value if $H_{A}:\mu<125$, $t=-2.178$, and $df=35$? \ansref{ans:tTestpv1}
+  \item \label{revex:tTestci1} \rhw{} What is $t^{*}$ for the previous question if $\alpha=0.05$? \ansref{ans:tTestci1}
+  \item \label{revex:tTestpv2} \rhw{} What is the p-value if $H_{A}:\mu>125$, $t=1.856$, and $df=81$? \ansref{ans:tTestpv2}
+  \item \label{revex:tTestci2} \rhw{} What is $t^{*}$ for the previous question if $\alpha=0.01$? \ansref{ans:tTestci2}
+  \item \label{revex:tTestpv3} \rhw{} What is the p-value if $H_{A}:\mu\neq125$, $t=-2.178$, and $df=99$? \ansref{ans:tTestpv3}
+  \item \label{revex:tTestci3} \rhw{} What is $t^{*}$ for the previous question if $\alpha=0.10$? \ansref{ans:tTestci3}
+\end{exsection}
+
+
+\vspace{-24pt}
+\section{1-Sample t-Test Specifics} \label{sect:t1test}\index{t Test!1-sample}
+A 1-sample t-Test is very similar to a 1-sample z-test in that both tests test the same null hypothesis.  The big difference, as discussed previously, is that when $\sigma$ is unknown it is replaced by an estimate of $\sigma$ (i.e., $s$), which causes the test statistic to become a $t$.  Other aspects are similar between the two tests as shown in \tabref{tab:1tspec}\footnote{Compare this table to \tabref{tab:1Zspec}.}.
+
+\begin{table}[htbp]
+  \caption{Characteristics of a 1-Sample t-Test.}
+  \label{tab:1tspec}
+    \begin{Itemize}
+      \item \textbf{Hypothesis:} $H_{0}:\mu=\mu_{0}$
+      \item \textbf{Statistic:} $\bar{x}$
+      \item \textbf{Test Statistic:} $t=\frac{\bar{x}-\mu_{0}}{\frac{s}{\sqrt{n}}}$
+      \item \textbf{Confidence Region:} $\bar{x}(\pm t^{*})\frac{s}{\sqrt{n}}$
+      \item \textbf{df:} $n-1$
+      \item \textbf{Assumptions:} $n>40$, $n>15$ and \textbf{sample} is not strongly skewed, OR \textbf{sample} is normally distributed.
+    \end{Itemize}
+\end{table}
+
+\subsection{Example - Purchase Lot of Salmon?}
+Consider the following situation,
+\begin{quote}
+\textsl{A fish wholesaler has a catch of several thousand salmon.  A prospective buyer will buy the lot if it can be shown that the mean weight of all salmon is at least 19.9 lbs.  A random selection of 50 salmon had a mean of 20.1 and a standard deviation of 0.76 lbs.  Should the buyer accept the catch at the 5\% level?}
+\end{quote}
+
+The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for this example are as follows:
+\begin{enumerate}
+    \item As stated, $\alpha$ should be set at 0.05.
+    \item The null hypothesis will be about $\mu$ and it will be tested against a specific value, namely $\mu_{0}=19.9$ lbs.  Thus, $H_{0}:\mu=19.9$ lbs.  The $H_{A}:\mu >19.9$ lbs (the buyer will buy the lot if the average weight is ``at least'' or, alternatively, ``more than'' 19.9 lbs).
+    \item A 1-sample t-Test is required because a quantitative variable (weight) was measured on individuals from one population (this lot of salmon), the population mean is compared to a specific value in the null hypothesis, and $\sigma$ is \textbf{UN}known\footnote{If $\sigma$ is given, then it will appear in the background information to the question and will be in a sentence that uses the words ``population'', ``assume that'', or ``suppose that.''}.
+    \item The data appear to be part of an observational study with random selection.
+    \item The $\sigma$ is unknown.  The sample size is greater than 40; thus, the test statistic computed below should reasonably follow a t-distribution.
+    \item The statistic is $\bar{x}$ (=20.1; from the background).  In addition, the sample standard deviation is given as 0.76 lbs.
+    \item The test statistic is $t$ = $\frac{20.1-19.9}{\frac{0.76}{\sqrt{50}}} = \frac{0.2}{0.107} = 1.87$.  This test statistic has $50-1=49$ df.
+    \item The p-value is \Sexpr{kPvalue(pt(1.87,df=49,lower.tail=FALSE))} as calculated with
+<<fig.show='hide'>>=
+( distrib(1.87,distrib="t",df=49,lower.tail=FALSE) )
+@
+    \item The $H_{0}$ is rejected because the $p-value < \alpha=0.05$.
+    \item The average weight of all salmon in this lot appears to be greater than 19.9 lbs; thus, the buyer should accept this lot of salmon.
+    \item A 95\% lower confidence bound is warranted for this situation.  The $t^{*}=$\Sexpr{formatC(qt(0.95,df=49,lower.tail=FALSE),format="f",digits=3)} as computed with
+<<fig.show='hide'>>=
+( distrib(0.95,distrib="t",type="q",df=49,lower.tail=FALSE) )
+@
+Thus, $20.1-1.677\frac{0.76}{\sqrt{50}}$ or $20.1-0.18$ = $19.92$.  Thus, one is 95\% confident that the mean weight of all salmon in the lot is greater than 19.92 lbs.
+\end{enumerate}
+
+
+\begin{exsection}
+  \item \label{revex:tTestSuperInt} A general achievement test is standardized so that students should average 80 with a standard deviation of 5 (this is for the entire population not the population of students at the school described below).  The superintendent at a school in a large district would like to show that her students averaged better than the 80 points.  To test this, she had the test given to 32 randomly selected students from her school.  The summary statistics for those 32 students are: mean=83.2, median=82.5, standard deviation=5.5, and IQR=7.  Perform the appropriate hypothesis test for this superintendent at the 0.05 level. \ansref{ans:tTestSuperInt}
+
+  \item \label{revex:tTestLASalary} The Northwestern University Placement center conducts random surveys on starting salaries of college graduates and publishes the results every year.  The Dean of the College of Liberal Arts suggested to prospective students that graduates from the College would earn more than \$32000 as a starting salary on average.  The results in the table below are from a part of the Placement Center's results for graduates of the College of Liberal Arts for the year just prior to the Dean's statements [Note that the measurements are in 1000s of dollars.].  Use these results at the 10\% level to determine the correctness of the Dean's statement. \ansref{ans:tTestLASalary}
+  \begin{center}
+    \begin{Verbatim}
+           n   Min.  1st Qu. Median  3rd Qu.    Max.    Mean  StDev
+          42  29.30   31.30   32.50    33.80   36.80  32.511  1.713
+    \end{Verbatim}
+  \end{center}
+\end{exsection}
+
+\section{1-Sample t-Test in R}
+The p-value in a 1-sample t-Test is computed from summary information using \R{distrib()}.  However, if raw data exists it is more efficient to use \R{t.test()}.  The arguments to this function are very similar to the arguments to \R{z.test()}.  The \R{t.test()} function requires a vector of the quantitative data as the first argument and the hypothesized value for $\mu$ in the \R{mu=} argument.  In addition, the type of alternative hypothesis (\R{"two.sided"}, \R{"less"}, or \R{"greater"}) is set in the \R{alt=} argument and a level of confidence is declared (as a proportion) in the \R{conf.level=} argument.  As with \R{z.test()}, \R{t.test()} will default to a ``not equals'' alternative and a 95\% confidence level.  The results of \R{t.test()} should be assigned to an object with the results then seen by typing the name of that object and an illustrative plot of the p-value created by submitting that object to \R{plot()}.  The use of \R{t.test()} is illustrated in the following example.
+
+\subsection{Example - Crab Body Temperature}
+Consider the following situation,
+\begin{quote}
+\textsl{A marine biologist wanted to determine if the body temperature of crabs exposed to ambient air temperature would be different than the ambient air temperature.  The biologist exposed a sample of 25 crabs to an air temperature of 24.3$^{0}$C for several minutes and then measured the body temperature of each crab.  The body temperatures for individual crabs is shown below.  Perform a hypothesis test (at the $\alpha=0.01$) level to answer the biologist's question.}
+\end{quote}
+
+\begin{Verbatim}[xleftmargin=5mm]
+22.9,22.9,23.3,23.5,23.9,23.9,24.0,24.3,24.5,24.6,24.6,24.8,24.8,
+25.1,25.4,25.4,25.5,25.5,25.8,26.1,26.2,26.3,27.0,27.3,28.1
+\end{Verbatim}
+
+The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for this example are as follows:
+\begin{enumerate}
+    \item As stated, $\alpha$ should be set at 0.01.
+    \item The null hypothesis will be about $\mu$ and it will be tested against a specific value, namely $\mu_{0}=24.3^{0}$C.  Thus, $H_{0}:\mu=24.3^{0}$C.  The $H_{A}:\mu\neq24.3^{0}$C (the researcher is interested in identifying a difference).
+    \item A 1-sample t-Test is required because a quantitative variable (temperature) was measured on individuals from one population, the population mean is compared to a specific value in the null hypothesis, and $\sigma$ is \textbf{UN}known.
+    \item The data appear to be part of an experimental study (the temperature was controlled) with no suggestion of random selection of individuals.  The data were entered into the \var{ct} vector in R with\footnote{These data my be more easily entered into a CSV file as described in \sectref{sect:REnterData} and then read into R with \R{read.csv()}.}
+<<>>=
+ct <- c(22.9,22.9,23.3,23.5,23.9,23.9,24.0,24.3,24.5,24.6,24.6,24.8,24.8,
+25.1,25.4,25.4,25.5,25.5,25.8,26.1,26.2,26.3,27.0,27.3,28.1)
+@
+    \item The $\sigma$ is unknown.  The sample size is not greater than 40 but it is greater than 15 and the distribution of values in the sample appears to be only slightly right-skewed \figrefp{fig:CrabTempHist}.  The histogram was constructed with
+<<CrabTempHist, out.width='.3\\linewidth', fig.cap="Histogram of the body temperatures of n=25 crabs exposed to an ambient temperature of $24.3^{0}$C.">>=
+hist(~ct,xlab="Crab Body Temp (C)")
+@
+
+Because both assumptions are adequately met, one can continue with the computation of the statistic, test statistic, p-value, and confidence region with
+<<Ex1tpvalue, par1a=TRUE, out.width='.3\\linewidth', fig.cap="Depiction of the p-value for the crab body temperature example.">>=
+( ct.t <- t.test(ct,mu=24.3,conf.level=0.99) )
+plot(ct.t)
+@
+    \item The statistic is $\bar{x}$=\Sexpr{formatC(ct.t$estimate,format="f",digits=2)}$^{0}$C.
+    \item The test statistic is $t$=\Sexpr{formatC(ct.t$statistic,format="f",digits=3)}.  This test statistic has \Sexpr{formatC(ct.t$parameter,format="f",digits=0)} df.
+    \item The p-value is \Sexpr{kPvalue(ct.t$p.value)} \figrefp{fig:Ex1tpvalue}.
+    \item The $H_{0}$ is not rejected because the $p-value >\alpha=0.01$.
+    \item It appears that the average body temperature of the crabs is not different than the ambient temperature of 24.3$^{0}$C.
+    \item \textit{A confidence interval is not required as the $H_{0}$ was not rejected.}  However, this confidence interval shows that the true mean body temperature of the crabs is likely between \Sexpr{formatC(ct.t$conf.int[1],format="f",digits=2)}$^{0}$C and \Sexpr{formatC(ct.t$conf.int[2],format="f",digits=2)}$^{0}$C.  Note that this interval contains $\mu_{0}$ which is why $H_{0}$ was not rejected.
+\end{enumerate}
+
+\newpage
+\begin{exsection}
+  \item \label{revex:tTestFishLine} \rhw{} Fishing line is graded by the pounds (lbs) of pressure that it can withstand before breaking.  For example, line that is rated as 6-lbs should not break for pressures under 6 lbs.  Two physics students developed an apparatus for testing the breaking point of 2-foot sections of line to test the manufacturer's claim (i.e., determine if line rated at 6-lbs broke, on average, at pressures below 6 lbs).  To test this, they measured the pounds of pressure it took 20 randomly selected 2-foot sections of line to break.  Use their results shown below to test their hypothesis at the 10\% level. \ansref{ans:tTestFishLine}
+\begin{Verbatim}[xleftmargin=5mm]
+  6.1 5.3 5.5 4.9 6.2 6.5 5.7 5.5 4.7 6.2
+  6.8 5.9 5.8 6.7 6.3 6.2 5.4 5.5 6.7 5.9
+\end{Verbatim}
+
+  \item \label{revex:tTestStrawberries} \rhw{} Last year I planted 400 everbearing strawberry plants in my garden.  The company I bought the plants from claimed that in the year following planting, each plant would produce an average of 12 berries.  I was surprised by this claim and hypothesized that the plants would actually produce less than what the company said, on average.  To test this claim, I counted the number of ripe berries produced for the entire season on 50 randomly selected plants.  Use the data in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Strawberries.csv}{Strawberries.csv} to test the company's claim at the 10\% level. \ansref{ans:tTestStrawberries}
+
+  \item \label{revex:tTestToyRate} \rhw{} The toy industry rates toys regarding their ease for being put together in three categories: easy, moderate, and difficult.  A toy is placed into the easy category if it takes 10 minutes or less to put the toy together, in the moderate category if it takes 20 minutes or less (and more than 10 minutes), and in the difficult category if it takes more than 20 minutes.  A randomly selected group of 34 adults were asked to put together a new toy to determine which rating the toy should receive.  The results from these 34 individuals are in \href{https://raw.githubusercontent.com/droglenc/NCData/master/ToyTime.csv}{ToyTime.csv}.  Conduct a hypothesis test, at the 10\% level, to determine whether the toy should receive the difficult rating. \ansref{ans:tTestToyRate}
+
+  \item \label{revex:tTestYahara1} \rhw{} One of the dominant uses of Madison area lakes is for boating.  To develop a long-term data set on the temporal fluctuations and trends in such activity, the Long Term Ecological Research (LTER) project obtained records of boat traffic that passes through the locks at the head of the Yahara River on its stretch between Lake Mendota and Lake Monona.  These data in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Yahara.csv}{Yahara.csv}) have been collected nearly daily from April through October since 1976.  Use these data to determine, at the 5\% level, if the mean total number of boats passing through the locks during the months of June, July, and August of 2005 is greater than 75.  HINT: create a new data frame that contains just the data for this period (i.e., the data file contains more data than is needed for this question).  I suggest that you do this in three separate steps -- isolate 2005 data, isolate data for months after May (5), and then isolate data for months before September (9). \ansref{ans:tTestYahara1}
+
+  \item \label{revex:tTestBeads} \rhw{} The golden rectangle is a rectangle with a length-to-width ratio of 1:1.618, or equivalently, a width-to-length ratio of 0.618:1 (See a description of the golden rectangle \href{http://en.wikipedia.org/wiki/Golden_rectangle}{here}).  The golden rectangle is evident in several works by ancient Greeks and Egyptians.  Anthropologists measured the width-to-length ratios of beaded rectangles used by the Shoshoni Indians of America to decorate their leather goods.  Use their data\footnote{This question and these data originated at \href{http://www.statsci.org/data/general/shoshoni.html}{OzDASL}.} in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Shoshoni.csv}{Shoshoni.csv} to determine, at the 5\% level, if the golden rectangle is evident in the beadwork of the Shoshonis. \ansref{ans:tTestBeads}
+
+\end{exsection}

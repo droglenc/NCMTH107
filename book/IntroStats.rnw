@@ -42,7 +42,9 @@ for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
 
   \mainmatter
     \part{Beginnings}
-<<child-Foundation, child='Foundation.Rnw', eval=TRUE>>=
+<<child-WhyStatsImportant, child='WhyStatsImportant.Rnw', eval=TRUE>>=
+@
+<<child-FoundationalDefinitions, child='FoundationalDefinitions.Rnw', eval=TRUE>>=
 @
 <<child-DataProd, child='DataProd.Rnw', eval=TRUE>>=
 @
@@ -50,11 +52,15 @@ for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
 @
 
     \part{Exploratory Data Analysis}
-<<child-UnivEDA, child='UnivEDA.Rnw', eval=TRUE>>=
+<<child-UnivEDAQuant, child='UnivEDAQuant.Rnw', eval=TRUE>>=
+@
+<<child-UnivEDACat, child='UnivEDACat.Rnw', eval=TRUE>>=
 @
 <<child-NormDist, child='NormDist.Rnw', eval=TRUE>>=
 @
-<<child-BivEDA, child='BivEDA.Rnw', eval=TRUE>>=
+<<child-BivEDAQuant, child='BivEDAQuant.Rnw', eval=TRUE>>=
+@
+<<child-BivEDACat, child='BivEDACat.Rnw', eval=TRUE>>=
 @
 <<child-Regress, child='Regress.Rnw', eval=TRUE>>=
 @
@@ -64,13 +70,21 @@ for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
 @
 <<child-SamplingDist, child='SamplingDist.Rnw', eval=TRUE>>=
 @
-<<child-Inference, child='Inference.Rnw', eval=TRUE>>=
+<<child-HypothesisTests, child='HypothesisTests.Rnw', eval=TRUE>>=
+@
+<<child-ConfidenceRegions, child='ConfidenceRegions.Rnw', eval=TRUE>>=
 @
 
     \part{Specific Hypothesis Tests}
-<<child-tTests, child='tTests.Rnw', eval=TRUE>>=
+<<child-ZTest, child='ZTest.Rnw', eval=TRUE>>=
+@
+<<child-tTest1, child='tTest1.Rnw', eval=TRUE>>=
+@
+<<child-tTest2, child='tTest2.Rnw', eval=TRUE>>=
 @
 <<child-ChiSquare, child='chiSquare.Rnw', eval=TRUE>>=
+@
+<<child-GOF, child='GoodnessOfFit.Rnw', eval=TRUE>>=
 @
 
     \cleardoublepage
@@ -80,11 +94,11 @@ for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
     \appendix
     \input{FBMatter/Symbols}
     \input{FBMatter/HOTests}
-%<<child-RFAQ, child='RFAQ.Rnw', eval=TRUE>>=
-%@
-<<child-Animations, child='animations.Rnw', eval=TRUE>>=
+<<child-RFAQ, child='RFAQ.Rnw', eval=FALSE>>=
 @
-<<child-AnsRevEx, child='AnsRevEx.Rnw', eval=TRUE>>=
+<<child-Animations, child='animations.Rnw', eval=FALSE>>=
+@
+<<child-AnsRevEx, child='AnsRevEx.Rnw', eval=FALSE>>=
 @
 
   \backmatter

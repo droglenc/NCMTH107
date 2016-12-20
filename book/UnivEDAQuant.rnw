@@ -2,7 +2,7 @@
 set_parent('IntroStats.Rnw')
 @
 
-\chapter{Univariate EDA} \label{chap:UnivEDA}
+\chapter{Univariate EDA - Quantitative} \label{chap:UnivEDAQuant}
 \begin{ChapObj}{\boxwidth}
   \textbf{Chapter Objectives:}
   \begin{Enumerate}
@@ -12,21 +12,18 @@ set_parent('IntroStats.Rnw')
     \item Calculate summary statistics for measuring the center of quantitative data,
     \item Calculate summary statistics for measuring the dispersion of quantitative data,
     \item Describe the underlying differences in how the different statistics measure center and dispersion,
-    \item Identify which summary statistics are appropriate in a given situation,
-    \item Construct an appropriate overall numerical summary, and
-    \item Construct frequency and percentage tables with categorical data.
-    \item Construct bar-charts with categorical data, and
-    \item Use tables and graphs to describe the categorical data.
+    \item Identify which summary statistics are appropriate in a given situation, and
+    \item Construct an appropriate overall numerical summary.
   \end{Enumerate}
 \end{ChapObj}
 
 \minitoc
 \newpage
 
-\lettrine{O}{nce data have been collected} \chaprefp{chap:DataProd}, it is important to develop a ``feel'' for the data, to identify what types of values each variable takes, and to determine if there are any ``issues'' in the data.  This first step in a statistical analysis is called \textsc{Exploratory Data Analysis} (EDA).  We will begin by examining the distribution of each variable by itself, called a univariate EDA, and then examine pairs of variables, called a bivariate EDA (see \chapref{chap:BivEDA}).  In addition, the methods employed differ for quantitative and categorical variables.  Thus, in this chapter, methods for conducting a univariate EDA will be described separately for quantitative and categorical data.
+\lettrine{O}{nce data have been collected} \chaprefp{chap:DataProd}, it is important to develop a ``feel'' for the data, to identify what types of values each variable takes, and to determine if there are any ``issues'' in the data.  This first step in a statistical analysis is called \textsc{Exploratory Data Analysis} (EDA).  We will begin by examining the distribution of each variable by itself, called a univariate EDA, and then examine pairs of variables, called a bivariate EDA (see Chapters \ref{chap:BivEDAQuant} and \ref{chap:BivEDACat}). Additionally, the methods employed differ for quantitative and categorical variables. Quantitative variables are the focus of this chapter, whereas categorical variables are the focus of \chapref{chap:UnivEDACat}.
 
 \vspace{-6pt}
-\section{Quantitative Univariate EDA}
+\section{Items to Describe}
 \vspace{-12pt}
 A univariate EDA for a quantitative variable is concerned with describing the distribution of the values for that variable; i.e., describing what values occurred and how often those values occurred.\index{EDA!Univariate!Quantitative}  Specifically, the distribution is described by four specific attributes:
 
@@ -73,9 +70,9 @@ EQx <- xtable(matrix(EQ,nrow=1,byrow=TRUE),digits=1,caption="Richter scale recor
 print(EQx,caption.placement="top",hline.after=c(0,nrow(EQx)),include.rownames=FALSE,include.colnames=FALSE)
 @
 
-\subsection{Histograms}\index{Histogram!Construction}\index{Sample Distribution!Histogram}
+\section{Histograms}\index{Histogram!Construction}\index{Sample Distribution!Histogram}
 \vspace{-8pt}
-\subsubsection{General Construction}
+\subsection{General Construction}
 \vspace{-8pt}
 A histogram is a plot of the frequency of occurrence of individuals (y-axis) in classes of values of the variable (x-axis).  The steps for constructing a histogram from raw data are:
 \vspace{-6pt}
@@ -133,7 +130,7 @@ brksw <- c(seq(0.02,1,0.02),1.5,2)
 for (i in brksw) hist(~eruptions,data=faithful,breaks=seq(1.5,6,i),xlim=c(1.5,6),xlab="Duration of Eruption (mins)")
 @
 
-\subsubsection{Histograms in R}
+\subsection{Histograms in R}
 A simple (by default) histogram is constructed with \R{hist()} using a one-sided formula of the form \R{\TILDE quant}, where \R{quant} generically represents the quantitative variable, and the corresponding data frame in \R{data=}.  The x-axis label may be improved from the default value by including a label in \R{xlab=}.\footnote{\R{xlab=} is for the ``x-axis label.''}  The width of the classes may be controlled by including a class width in \R{w=}.\footnote{The endpoints for the classes may also be set by giving a vector of endpoints to \R{breaks=}.}
 
 <<Histogram1, fig.cap="Histograms of the duration of ice cover at ice gauge 9004 in Lake Superior using the default class widths (Left) and widths of 20 days (Right).">>=
@@ -160,7 +157,7 @@ hist(~days,data=LSI,xlab="Days of Ice Cover",w=20) # Right
     \end{Verbatim}
 \end{exsection}
 
-\subsection{Interpreting Shape}\index{Histogram!Interpretation}
+\section{Interpreting Shape}\index{Histogram!Interpretation}
 A histogram has two tails -- a left-tail for smaller or more negative values and a right-tail for larger or more positive values.  The relative appearance of these two tails is used to identify three different shapes of distributions -- symmetric, left-skewed, and right-skewed.\index{Shape}\index{Symmetric}\index{Skewed}  If the left- and right-tail of a histogram are equal in shape (length and height), then the distribution is said to be \textbf{symmetric}.  Perfectly symmetric distributions rarely occur in ``real-life.''  Therefore, if the left- and right-tail are approximately equal in shape, then the distribution is \textbf{approximately symmetric}.  If the left-tail of the histogram is stretched out or, alternatively, the left-tail is longer and flatter than the right-tail, then the distribution is negatively- or \textbf{left-skewed}.  If the right-tail of the histogram is stretched out or, alternatively, the right-tail is longer and flatter than the left-tail, then the distribution is positively- or \textbf{right-skewed}.  The type of skew is defined by the longer tail; a longer right-tail means the distribution is right-skewed and a longer left-tail means it is left-skewed.  Examples of each shape are shown in \figref{fig:ShapeExamples}.
 
 <<ShapeExamples, echo=FALSE, fig.width=10.5, fig.height=10.5, out.width='.7\\linewidth', fig.cap="Examples of approximately symmetric (top, red), left-skewed (middle, blue), and right-skewed (bottom, green) histograms.  Note that the axes labels were removed to focus attention on the shape of the histograms.  Each histogram was constructed from n=1000 individuals and the x-axis range is from 0 to 1.">>=
@@ -204,7 +201,7 @@ You will find in practice that these labels form a continuum.  For example, a pe
 \warn{Symmetric, left-skewed, and right-skewed descriptors are guides; many ``real'' distributions will not fall neatly into these categories.}
 
 
-\subsection{Interpreting Outliers}\index{Outlier}\index{Histogram!Interpretation}
+\section{Interpreting Outliers}\index{Outlier}\index{Histogram!Interpretation}
 An outlier is an individual in a sample whose value is widely separated from the main cluster of values in the sample.  On histograms, outliers appear as bars that are separated from the main cluster of bars by ``white space'' or areas with no bars \figrefp{fig:OutlierExHist}.  In general, outliers must be on the margins of the histogram, should be separated by one or two missing bars, and should only be one or two individuals.
 
 <<OutlierExHist, echo=FALSE, fig.cap="Example histogram with an outlier to the right.">>=
@@ -249,7 +246,7 @@ hist(rbeta(100,6,5),main="",xlab="",ylab="",xaxt="n",yaxt="n",col="gray90")
 \end{exsection}
 
 
-\subsection{Measures of Center} \label{sec:quEDACenter}
+\section{Measures of Center} \label{sec:quEDACenter}
 There are three common methods to measure the center of a distribution: the mode, median, and mean.\index{Center}  The median and mean are the most widely used methods.  The choice of which method to use depends, in part, on the shape of the distribution, the presence of outliers, and your purpose.
 
 The modes, medians, and means computed in this section are summary statistics -- i.e., they are computations from individuals in a sample.  Thus, they should specifically be called the sample mode, sample median, and sample mean.  The mode, median, and mean can also be computed from every individual in the population, if it is known.  The computed values would then be parameters and should be called the population mode, population median, and population mean.  See \sectref{sect:IVPPSS} for clarification on the differences between populations and samples and parameters and statistics.
@@ -259,7 +256,7 @@ The modes, medians, and means computed in this section are summary statistics --
 \vspace{-12pt}
 \warn{Measures of center computed from individuals in a sample are preceded by the word ``sample''; those computed from all individuals in a population are preceded by the word ``population.''}
 
-\subsubsection{Mode}
+\subsection{Mode}
 The mode is the value that occurs most often in a data set.\index{Mode}  If the variable is continuous, then the modal class is the class of values that occurs most often in a data set.  In other words, it is the class that forms the peak of a distribution.  For example, in the mouse water consumption data \figrefp{fig:MouseHist2} the modal class is the 13.0-13.9 class.  Some data sets may have what looks like two ``humps.''  Each ``hump'' is considered a mode and the distribution is said to be \textbf{bimodal}.
 
 \defn{Mode}{The value or class of values that occurs most often in a data set.}
@@ -267,7 +264,7 @@ The mode is the value that occurs most often in a data set.\index{Mode}  If the 
 \vspace{-12pt}
 \defn{Bimodal}{The shape of a distribution with two peaks or ``humps.''}
 
-\subsubsection{Median} \label{sec:Median}
+\subsection{Median} \label{sec:Median}
 The median is the value of the individual in the position that splits the \textbf{ordered} list of individuals into two equal-\textbf{sized} halves.\index{Median!Calculation}  In other words, if the data are ordered, half the values will be smaller than the median and half will be larger.
 
 The process for finding the median consists of three steps,\footnote{Most computer programs use a more sophisticated algorithm for computing the median and, thus, will produce different results than what will result from applying these steps.}
@@ -290,7 +287,7 @@ As another example, consider finding the median of the Richter Scale magnitude r
 
 \defn{Median}{The midpoint of the data, i.e., the value of the individual in the position that splits the ordered list of individuals into two equal-sized halves.}
 
-\subsubsection{Mean}
+\subsection{Mean}
 The mean is the arithmetic average of the data.\index{Mean!Calculation}  The sample mean is denoted by $\bar{x}$ and the population mean is denoted by $\mu$.\index{Mean!Sample Symbol}\index{Mean!Population Symbol}  If the measurement of the generic variable $x$ on the $i$th individual is denoted as $x_{i}$, then the sample mean is computed with these two steps,
 \begin{Enumerate}
   \item Sum (i.e., add together) all of the values -- $\Sum_{i=1}^{n}x_{i}$.
@@ -436,7 +433,7 @@ As shown above, the mean and median measure center in different ways.  The quest
 \end{exsection}
 
 
-\subsection{Measures of Dispersion}
+\section{Measures of Dispersion}
 There are three common measures of the dispersion of a distribution: the range, inter-quartile range (IQR), and standard deviation.\index{Dispersion}  The standard deviation is the most widely used method.  The choice of which method to use depends, however, on what statistic you chose as the measure of center (which, as described in \sectref{sect:MeanMedian}, depends on the shape of the distribution, presence of outliers, and your purpose).
 
 The range, IQR, and standard deviation computed in this section are summary statistics -- i.e., they are computations from individuals in a sample.  Thus, they should all be preceded with the word ``sample.''  See \sectref{sect:IVPPSS} for clarification on the differences between populations and samples and parameters and statistics.
@@ -446,7 +443,7 @@ The range, IQR, and standard deviation computed in this section are summary stat
 \vspace{-12pt}
 \warn{Measures of dispersion computed from individuals in a sample are preceded by the word ``sample''; those computed from all individuals in a population are preceded by the word ``population.''}
 
-\subsubsection{Range}
+\subsection{Range}
 The range is the difference between the maximum and minimum values in the data.\index{Range}  It is a measure of the ultimate dispersion or spread of the data.  The range in the mouse consumption data \tabrefp{tab:MouseData} is \Sexpr{formatC(max(mc),format="f",digits=1)}-\Sexpr{formatC(min(mc),format="f",digits=1)} = \Sexpr{formatC(max(mc)-min(mc),format="f",digits=1)}.
 
 The range should never be used by itself as a measure of dispersion.  The range is extremely sensitive to outliers and is best used only to show all possible values present in the data.  The range (as strictly defined) also suffers from a lack of information.  For example, what does a range of 9 mean?  It can have a completely different interpretation if it came from the values of 1 to 10 or if it came from the values of 1000 to 1009.  Thus, the range is more instructive if presented as both the maximum and minimum value rather than just the range.
@@ -456,7 +453,7 @@ The range should never be used by itself as a measure of dispersion.  The range 
 \vspace{-12pt}
 \warn{Never use the range by itself as a measure of dispersion.}
 
-\subsubsection{IQR}
+\subsection{IQR}
 Quartiles are the values for the three individuals that divide ordered data into four (approximately) equal parts.\index{Quartile}  Finding the three quartiles consists of finding the median, splitting the data into two equal parts at the median, and then finding the medians of the two halves.\footnote{You should review how a median is computed before proceeding with this section.}  A concern in this process is that the median is NOT part of either half if there is an odd number of individuals.  These steps are summarized as,
 \begin{Enumerate}
   \item Order the data from smallest to largest.
@@ -479,7 +476,7 @@ The interquartile range is the difference between the third quartile (Q3) and th
 \vspace{-12pt}
 \warn{The IQR should be used as the measure of dispersion only if the median is chosen as the measure of center.}
 
-\subsubsection{Standard Deviation}\label{sect:StdDev}
+\subsection{Standard Deviation}\label{sect:StdDev}
 The sample standard deviation, denoted by $s$, can be thought of as ``the average difference between the observed values and the mean.''\footnote{This statement is not strictly correct as will likely become obvious.  However, this is an acceptable general interpretation of the standard deviation.}\index{Standard Deviation!Sample symbol}\index{Standard Deviation!Interpretation}\index{Standard Deviation!Calculation}\index{Variance!Calculation}  The standard deviation is computed with these six steps:
 \begin{Enumerate}
   \item Compute the sample mean (i.e., $\bar{x}$).
@@ -574,11 +571,11 @@ Thus, $s=$\Sexpr{formatC(sumLSI["sd"],format="f",digits=2)}, the IQR is from $Q1
 \end{exsection}
 
 
-\subsection{Overall Summaries}
+\section{Overall Summaries}
 The relationships among measures of center and dispersion must be considered in order to create an overall numerical summary of the data.  From the previous section it should be obvious that the standard deviation and mean are conceptually linked as are the median and IQR.  Indeed, the linked measure of center must be computed first in both dispersion measure calculations.  Thus, if it is decided that the mean will be used to measure center, then the standard deviation must be used to measure dispersion.\index{Standard Deviation!When to use}  Similarly, if the median is used to measure center, then the IQR must be used to measure dispersion.\footnote{Recall that the range will never be used by itself.}\index{IQR!When to use}
 
 
-\subsubsection{Boxplots}
+\subsection{Boxplots}
 The median, range, and IQR form the \textbf{five-number summary}.\index{Five Number Summary}  Specifically, the five-number summary consists of the minimum value, Q1, median, Q3, and maximum value.  The five-number summary for the mouse consumption data is \Sexpr{formatC(sumLSI["min"],format="f",digits=1)}, \Sexpr{formatC(sumLSI["Q1"],format="f",digits=1)}, \Sexpr{formatC(sumLSI["median"],format="f",digits=1)}, \Sexpr{formatC(sumLSI["Q3"],format="f",digits=1)}, and \Sexpr{formatC(sumLSI["max"],format="f",digits=1)} (all values computed in the previous section).
 
 The five-number summary is typically displayed as a graph called a box-and-whisker or \textbf{boxplot}.\index{Boxplot!Construction}  A traditional boxplot consists of a horizontal line at the median, horizontal lines at Q1 and Q3 that are connected with vertical lines to form a box, and then vertical lines (or whiskers) from Q1 to the minimum value and from Q3 to the maximum value.  Modern boxplots have been modified to allow easier detection of outliers.  Many of these modern boxplots construct the ``box'' in the same manner as the traditional boxplot.  However, the upper whisker extends from Q3 to the last observed value that is within 1.5 IQRs of Q3 and the lower whisker extends from Q1 to the last observed value that is within 1.5 IQRs of Q1.  Observed values outside of the whiskers are termed ``outliers'' by this algorithm and are typically plotted with circles or asterisks.  If no individuals are deemed ``outliers'' by this algorithm, then the two forms of boxplots will be the same.  A boxplot of the mouse consumption data is shown in \figref{fig:MouseBoxplot}.
@@ -642,7 +639,7 @@ boxplot(d~g,data=bp,main="",xlab="",ylab="",xaxt="n",yaxt="n")
   \item \label{revex:quEDAQShape2} What is the shape of the distribution if Q3-Q2 is greater than Q2-Q1? \ansref{ans:quEDAQShape2}
 \end{exsection}
 
-\subsection{Multiple Groups} \label{sect:MultGroups}
+\section{Multiple Groups} \label{sect:MultGroups}
 It is common to conduct a univariate EDA for a quantitative variable separately for multiple groups of individuals.  In these cases it is beneficial to have a function that will efficiently construct a histogram and compute summary statistics for the quantitative variable separated by the levels of a factor variable.  Separate histograms are constructed with \R{hist()} if the first argument is a ``formula'' of the type \R{quant\TILDE group} where \R{quant} represents the quantitative response variable of interest and \R{group} represents the factor variable that indicates to which group the individual belongs.\index{Histogram!Multiple}  The data frame that contains \R{quant} and \R{groups} is given to \R{data=}.  Summary statistics are separated by group by supplying the same formula and \R{data=} arguments to \R{Summarize()}.
 
 As an example, suppose that you want to examine the average annual days of ice for each decade (using the \R{LSI} data).  One might expect to use the \R{days\TILDE decade} formula except that the \R{decade} variable is not a factor.\footnote{It is not a factor because the data in that variable looks numeric to R.}  A new variable, called \var{fdecade}, that is a factored version of \var{decade} is created by including \var{decade} in \R{factor()} as follows,
@@ -673,186 +670,6 @@ boxplot(days~fdecade,data=LSI,ylab="Days of Ice Cover",xlab="Decade")
     \item Construct a univariate EDA for the well water measurements.
     \item Construct a univariate EDA for the measurements of arsenic in the toe nails.
     \item Construct a univariate EDA for the toe nail arsenic levels separated by levels of drinking water usage.
-  \end{Enumerate}
-\end{exsection}
-
-
-\clearpage
-\section{Categorical Univariate EDA}  \label{sect:UEDACategorical}
-Interpreting summaries of a single categorical variable is more intuitive and less defined than that for quantitative data.\index{EDA!Univariate!Categorical}  Specifically, one DOES NOT describe shape, center, dispersion, and outliers for categorical data.  In this chapter, methods to construct tables and graphs for categorical data are described and the interpretation of the results demonstrated.  These concepts are illustrated with data recorded about MTH107 students in the Winter 2010 semester.  Whether or not a student was required to take the course for a subset of individuals is shown in \tabref{tab:MTH107Subset}.
-
-\begin{table}[htbp]
-  \caption{Whether (Y) or not (N) MTH107 was required for a subset of individuals in MTH107 in Winter 2010.}
-  \label{tab:MTH107Subset}
-  \centering
-  \begin{Verbatim}[xleftmargin=5mm]
-Individual  1  2  3  4  5  6  7  8
-Required    Y  N  N  Y  Y  Y  N  Y
-  \end{Verbatim}
-\end{table}
-
-
-\subsection{Summary Tables}
-A simple method to summarize categorical data is to count the number of individuals in each category (or level) of the categorical variable.  These counts are called frequencies and the resulting table \tabrefp{tab:MTH107SubsetFreq} is called a frequency table.\index{Table!Frequency}  From this table, it is seen that there were five students that were required and three that were not required to take MTH107.
-
-\begin{table}[htbp]
-  \caption{Frequency table for whether MTH107 was required (Y) or not (N) for a subset of individuals in MTH107 in Winter 2010.}
-  \label{tab:MTH107SubsetFreq}
-  \centering
-  \begin{Verbatim}[xleftmargin=5mm]
-Required  Freq
-    Y       5
-    N       3
-  \end{Verbatim}
-\end{table}
-
-\warn{Frequency tables show the total count or number of individuals in each category (or level) of a categorical variable.}
-
-The remainder of this chapter will use the results from the entire class rather than the subset used above to illustrate computing a frequency table.  The frequency tables of individuals by sex and by year-in-school for the entire class is shown in \tabref{tab:Mth107Freq}.
-
-\begin{table}[htbp]
-  \caption{Frequency tables for whether (Y) or not (N) MTH107 was required (Left) and year-in-school (Right) of all individuals in MTH107 in Winter 2010.}
-  \label{tab:Mth107Freq}
-  \centering
-  \begin{Verbatim}[xleftmargin=5mm]
-Required  Freq          Year  Freq
-    Y      38            Fr    19
-    N      30            So    12
-                         Jr    29
-                         Sr     9
-   \end{Verbatim}
-\end{table}
-
-Many times, frequency tables are modified by showing the percentage, rather than the frequency, of individuals in each category.  These modified tables are called \textbf{percentage tables}.\index{Table!Percentage}  Percentage tables are constructed from frequency tables by dividing the frequency of individuals in each category by the total number of individuals examined ($n$) and then multiplying by 100.  For example, the percentage tables for both whether or not MTH107 was required and year-in-school \tabrefp{tab:Mth107Prop} for students in MTH107 is constructed from \tabref{tab:Mth107Freq} by dividing the value in each cell by 68, the total number of students in the class, and then multiplying by 100.  From this it is seen that 55.9\% of students were required to take the course and 13.2\% were seniors.
-
-\begin{table}[htbp]
-  \caption{Percentage tablesfor whether (Y) or not (N) MTH107 was required (Left) and year-in-school (Right) of all individuals in MTH107 in Winter 2000.}
-  \label{tab:Mth107Prop}
-  \centering
-  \begin{Verbatim}[xleftmargin=5mm]
-Required   Perc          Year   Perc
-   Y       55.9           Fr    27.9
-   N       44.1           So    17.6
-                          Jr    42.6
-                          Sr    13.2
-  \end{Verbatim}
-\end{table}
-
-\warn{Percentage tables show the percentage of all individuals in each category (or level) of a categorical variable.}
-
-\subsection{Tables in R}
-The General Sociological Survey (GSS) is a very large survey that has been administered 25 times since 1972.  The basic purpose of the GSS is to gather data on contemporary American society in order to monitor and explain trends in attitudes, behaviors, and attributes.  One question that was asked in a recent GSS was ``How often do you make a special effort to sort glass or cans or plastic or papers and so on for recycling?''  These data are found in the \var{recycle} variable of the \href{https://raw.githubusercontent.com/droglenc/NCData/master/GSSEnviroQues.csv}{GSSEnviroQues.csv} file.
-<<>>=
-GSS <- read.csv("data/GSSEnviroQues.csv")
-str(GSS)
-levels(GSS$recycle)
-@
-
-These results show the five levels in the \var{recycle} factor variable.  Note that the levels appear to be out of order because the default for a factor variable is to alphabetically order the levels.  The levels should be in the order ``Always'', ``Often'', ``Sometimes'', ``Never'', and ``Not Avail'' to follow the natural order of this ordinal variable.  The order of a factor variable is controlled by including the ordered level names within a vector sent to the \R{levels=} argument in \R{factor()}.\index{Factor!Variable in R}\index{Level!Controlling in R}  The level names in this vector must be exactly as they appear in the original variable and they must be contained within quotes.  The order of the levels of \var{recycle} is changed and stored in a new variable in \var{GSS} with
-<<>>=
-GSS$frecycle <- factor(GSS$recycle,levels=c("Always","Often","Sometimes","Never","Not Avail"))
-levels(GSS$frecycle)
-@
-The advantage of correcting this order is that when the summary table is made, the order will follow the natural order of the variable rather than the alphabetical order.
-
-\warn{The order of the levels of a factor are controlled with the \R{levels=} argument in the \R{factor()} function.}
-
-\vspace{-12pt}
-\warn{When changing the order of the levels with the \R{levels=} argument, the level names must be contained within quotes and they must be spelled exactly as they were spelled in the original variable.}
-
-The frequency table of a single categorical variable is computed with \R{xtabs()} where the first argument is a one-sided formula of the form \R{\TILDE var} with the corresponding data.frame in \R{data=}.  The result from \R{xtabs()} should be assigned to an object for further processing.  For example, the frequency table is produced, stored in the \var{tabRecycle} object, and displayed with
-<<>>=
-( tabRecycle <- xtabs(~frecycle,data=GSS) )
-@
-Thus, for example, \Sexpr{tabRecycle["Always"]} respondents answered ``Always'' to the recycling question.
-
-The percentage table is computed in R by including the saved frequency table as the first argument to \R{percTable()}.\footnote{Thus, \R{xtabs()} must be completed and saved to an object before \R{percTable()}.}  The number of digits of output is controlled with \R{digits=}.
-<<>>=
-percTable(tabRecycle,digits=1)
-@
-Thus, for example, \Sexpr{formatC(percTable(tabRecycle)["Always"],format="f",digits=1)}\% of respondents answered ``Always'' to the recycling question.
-
-\subsection{Bar Plots}
-Bar plots, or bar charts, are used to display the frequency or percentage of individuals in each level of a categorical variable.\index{Bar Chart}  Bar plots look similar to histograms in that they have the frequency of individuals on the y-axis.  However, category labels rather than quantitative values are plotted on the x-axis.  In addition, bars on a bar plot are usually not connected in order to highlight the categorical nature of the data.  A bar plot for whether or not individuals were required to take MTH107 is shown in \figref{fig:MTH107BarChart}-Left.  This bar plot is not very helpful because there were only two categories (i.e., it does not add much to the frequency table).  However, bar plots make it easier to compare the number of individuals in each of several categories as in \figref{fig:MTH107BarChart}-Right.
-
-<<MTH107BarChart, echo=FALSE, fig.cap="Bar charts of the frequency of individuals in MTH107 during Winter 2010 by whether or not they were required to take MTH107 (\\textbf{Left}) and year-in-school (\\textbf{Right}).">>=
-rqrd <- c(N=30,Y=38)
-barplot(rqrd,ylim=c(0,40),xlab="Required to Take MTH107?",ylab="Frequency of Students")
-yis <- c(Fr=19,So=12,Jr=29,Sr=9)
-barplot(yis,ylim=c(0,30),xlab="Year-In-School",ylab="Frequency of Students")
-@
-
-\warn{Bar charts are used to display the frequency of individuals in the categories of a categorical variable. Histograms are used to display the frequency of individuals in classes created from quantitative variables.}
-
-Shape, center, dispersion, and outliers are not described for categorical data because the data is not numerical and, if nominal, no order exists.  In general, the major characteristics of the table or graph are described from an intuitive basis.  For example, there were more males than females in the Winter 2010 MTH107 class and mostly juniors and Freshmen.
-
-\warn{Do not describe shape, center, dispersion, and outliers for a categorical variable.}
-
-\subsubsection{Bar Plots in R} \label{sect:BarChart}\index{Bar Chart!Construction}
-A bar plot is produced by submitting the \R{xtabs()} object as the first argument to \R{barplot()}.  The x- and y-axes may be explicitly labeled with \R{xlab=} and \R{ylab=}, respectively.  The bar plot for the recycling data \figrefp{fig:Barchart1} is produced with
-
-<<Barchart1, fig.cap="Bar chart of the frequency of responses to the recycling question on the GSS.">>=
-barplot(tabRecycle,ylab="Frequency",xlab="Recycle Response")
-@
-
-\begin{exsection}
-  \item \label{revex:EDAArsenic2} \rhw{} Use the \href{https://raw.githubusercontent.com/droglenc/NCData/master/Arsenic.csv}{Arsenic.csv} data in Exercise \ref{revex:EDAArsenic1} to answer the questions below. \ansref{ans:EDAArsenic2}
-  \begin{Enumerate}
-    \item Construct a univariate EDA for the assessment of drinking water usage.
-    \item Construct a univariate EDA for the assessment of cooking water usage.
-  \end{Enumerate}
-
-  \item \label{revex:cuEDAEPA}The Environmental Protection Agency (EPA) commissioned the Gallup Organization to conduct a nationwide telephone survey of 1000 households during August and September of 2002 regarding consumer knowledge and satisfaction with drinking water quality.  Of the 1000 respondents surveyed, 751 knew that their drinking water came from a public or commercial water supplier.  Of these 751 respondents, the following percentages knew precisely where that water was derived:
-
-  \begin{center}
-  \begin{tabular}{c|c|c|c|c|c}
-    \hline\hline
-    Ground- & Lake/ &  & Multiple & Don't & Refused \\
-    water & Reservoir & River & Sources & Know & Answer \\
-    \hline
-    15.9\% & 29.2\% & 9.6\% & 15.7\% & 29.4\% & 0.2\% \\
-    \hline\hline
-  \end{tabular}
-  \end{center}
-
-  Use these data to answer the questions below. \ansref{ans:cuEDAEPA}
-  \begin{Enumerate}
-    \item Construct a frequency table of these data (note percentages above were rounded).
-    \item Write a brief conclusion derived from these data.
-  \end{Enumerate}
-
-  \item \label{revex:cuEDAHI} \rhw{} A neighborhood in Honolulu conducted a survey to determine if residents participated in the curbside recycling program.  One question on their survey was, ``How much has curbside recycling reduced your regular refuse? 0\%, 25\%, 50\%, 75\%, 100\%, or `too early to tell'?''  The individual responses for the returned surveys are shown below with letters corresponding to the category choices offered (e.g., \verb"A"=0\%, \verb"B"=25\%, and so on).
-
-  \begin{Verbatim}
-C, C, B, B, B, B, C, E, B, B, C, B, C, B, C, C, C, E, B, B, B,
-C, B, B, C, C, C, B, C, B, C, B, B, C, B, C, B, B, B, C, E, B,
-E, B, B, C, C, B, B, B, E, B, C, C, C, B, B, C, B, B, B, B, B
-  \end{Verbatim}
-
-  Use these data to answer the questions below. \ansref{ans:cuEDAHI}
-  \begin{Enumerate}
-    \item Construct a frequency table of these data.
-    \item Construct a percentage table of these data.
-    \item Write a brief conclusion derived from these data.
-  \end{Enumerate}
-
-  \item \label{revex:cuEDARice} \rhw{} Students in a senior level environmental studies class at Rice University conducted a voluntary response survey regarding water usage by their peers.  They received returned surveys from a total 130 students.  One question on their survey was, ``On average, for how many minutes do you let the water run each time you take a shower? 0-5, 6-10, 11-15, or over 15 minutes?''  The individual responses for this survey are shown below with letters corresponding to the category choices offered (e.g., \verb"A"=``0-5'', \verb"B"=``6-10'', and so on). \ansref{ans:cuEDARice}
-
-  \begin{Verbatim}
-  D, C, B, B, C, C, B, B, C, C, C, B, D, B, C, C, B, C, D, D,
-  B, C, C, A, B, C, C, A, C, C, D, A, C, C, B, B, B, B, B, C,
-  D, B, D, B, C, B, C, C, D, C, B, B, D, C, B, C, B, B, C, C,
-  B, C, B, C, B, B, C, D, B, C, D, C, B, C, D, C, C, B, C, B,
-  D, B, B, D, B, C, B, B, C, B, C, D, D, C, D, B, B, C, B, C,
-  A, A, B, C, B, C, D, D, C, B, D, C, C, C, C, A, C, D, B, C,
-  B, B, D, C, B, B, A, B, C, B
-  \end{Verbatim}
-
-  Use these data to answer the questions below.
-  \begin{Enumerate}
-    \item Construct a frequency table of these data.
-    \item Construct a percentage table of these data.
-    \item Write a brief conclusion derived from these data.
   \end{Enumerate}
 \end{exsection}
 
@@ -922,78 +739,8 @@ Summarize(~temp,data=cray,digits=2)
 @
 \end{minipage}
 
-\subsubsection{Mixture Seed Count}
-\begin{quote}
-\textit{A bag of seeds was purchased for seeding a recently constructed wetland.  The purchaser wanted to determine if the percentage of seeds in four broad categories -- ``grasses'', ``sedges'', ``wildflowers'', and ``legumes'' -- was similar to what the seed manufacturer advertised.  The purchaser examined a 0.25-lb sample of seeds from the bag and recorded the results in \href{https://raw.githubusercontent.com/droglenc/NCData/master/WetlandSeeds.csv}{WetlandSeeds.csv}.  Use these data to describe the distribution of seed counts into the four broad categories.}
-\end{quote}
-
-<<echo=FALSE, results='hide'>>=
-ws <- read.csv("data/WetlandSeeds.csv")
-wtbl <- xtabs(~type,data=ws)
-wptbl <- percTable(wtbl)
-@
-
-The majority of seeds were either sedge or grass with sedge being more than twice as abundant as grass (\tabref{tab:SeedTable}; \figref{fig:SeedBarplot}).  Very few legumes or wildflowers were found in the sample.
-
-<<SeedBarplot, echo=FALSE, fig.width=5, out.width='.5\\linewidth', fig.cap="Barplot of the percentage of wetland seeds by type.">>=
-barplot(wptbl[-5],ylab="Percentage of Total Seeds",xlab="Seed Type")
-@
-
-<<SeedStats, results='asis', echo=FALSE>>=
-wptbl2 <- matrix(wptbl,ncol=length(wptbl))
-colnames(wptbl2) <- names(wptbl)
-print(xtable(wptbl2,digits=1,caption="Percentage distribution of wetland seeds by type.","tab:SeedTable"),caption.placement="top",include.rownames=FALSE)
-@
-
-\begin{minipage}{\textwidth}
-R commands:
-<<eval=FALSE>>=
-ws <- read.csv("data/WetlandSeeds.csv")
-str(ws)
-wtbl <- xtabs(~type,data=ws)
-percTable(wtbl,digits=1)
-barplot(wptbl[-5],ylab="Percentage of Total Seeds",xlab="Seed Type")
-@
-\end{minipage}
-
 \begin{exsection}
-  \item \label{revex:quEDAPL} \rhw{} The data below are the number of purple loosestrife (\textit{Lythrum salicaria}) plants found in each of 19 randomly selected plots in the Green Gables Creek Slough.  Describe the distribution of these data.  [\textit{Note: You should use fewer bars on your histogram because the sample size is so small in this situation.}] \ansref{ans:quEDAPL}
-    \begin{Verbatim}[xleftmargin=5mm]
-13, 2, 1, 0, 9, 11, 5, 5, 14, 23, 0, 2, 3, 3, 6, 7, 4, 16, 1
-    \end{Verbatim}
   \item \label{revex:quEDACP} \rhw{} Construct a proper EDA for the creatine phosphokinase data presented in Exercise \ref{revex:quEDACreatPhosph}.  Make sure to defend your choice of numerical summaries.  \ansref{ans:quEDACP}
   \item \label{revex:quEDADJTI} \rhw{} \hspace{12pt} The Dow Jones Travel Index tracks the cost of hotel and car-rental rates in 20 major cities.  For its May 7, 1996, survey the following rates were given for the 20 cities: 152, 180, 167, 119, 115, 113, 119, 135, 140, 126, 114, 133, 205, 104, 149, 124, 127, 161, 106, and 179.  Thoroughly describe the distribution of these data.  [\textit{Note: You can use fewer than the ideal number of bars on your histogram because the sample size is so small in this situation.}] \ansref{ans:quEDADJTI}
-  \item \label{revex:cuEDAZoo1} \rhw{} The data in \href{}{Zoo1.csv} contains a list of animals found in several different zoos.\footnote{These data are stored in a ``comma separated values'' (CSV) file rather than a ``tab delimited text'' file.  Thus, these data must be loaded into R with \R{read.csv()} rather than \R{read.csv()}.  The arguments to \R{read.csv()} are the same as \R{read.csv()}.}  In addition, each animal was classified into broad ``type'' categories (``mammal'', ``bird'', and ``amph/rep'').  Perform a univariate EDA on the \var{type} variable. \ansref{ans:cuEDAZoo1}
-  \item \label{revex:quEDAZoo2} \rhw{} The data in \href{}{Zoo2.csv} contains the physical size (in acres) of a sample of zoos from around the United States.\footnote{These data are stored in a ``comma separated values'' (CSV) file rather than a ``tab delimited text'' file.  Thus, these data must be loaded into R with \R{read.csv()} rather than \R{read.csv()}.  The arguments to \R{read.csv()} are the same as \R{read.csv()}.}  Perform a univariate EDA on the \var{size} variable. \ansref{ans:quEDAZoo2}
+  \item \label{revex:quEDAZoo2} \rhw{} The data in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Zoo2.csv}{Zoo2.csv} contains the physical size (in acres) of a sample of zoos from around the United States.  Perform a univariate EDA on the \var{size} variable. \ansref{ans:quEDAZoo2}
 \end{exsection}
-
-\newpage
-\begin{hwsection}{All questions below should be typed and answered following the expectations identified on the syllabus.  All work must be shown.  Questions marked with the R logo must include R output with your R commands in an attached appendix.}
-
-  \item \label{hwprob:quEDABOD} \rhw{} Municipal wastewater treatment plants are required by law to monitor their discharges into rivers and streams on a regular basis.  Concern about the reliability of data from one of these self-monitoring programs led to a study in which samples of effluent were divided and sent to two labs -- a State of Wisconsin lab and a private commercial lab.  Each lab measured the Biological Oxygen Demand (BOD) on the effluent sample sent to them.  Enter these data (in stacked format with two columns labeled \var{lab} and \var{bod}) into a CSV file and read into an object named \var{d} in R.\footnote{Descriptions for how to enter these data are found in \sectref{sect:REnterData}.}
-    \begin{Verbatim}[xleftmargin=5mm]
-State -- 6,6,8,11,18,20,28,33,34,43,71
-Private -- 15,25,28,29,34,35,36,39,42,44,54
-    \end{Verbatim}
-  \begin{Enumerate}
-    \item List all measurements for the state lab.  [HINT: use \R{filterD()}.\footnote{See \sectref{sect:RSubsetdf}.}]
-    \item List the eighth measurement for the state lab.
-    \item Perform separate appropriate EDAs for \textbf{each} lab.  Refer to figures and tables as appropriate.  [HINT: construct your figures and tables with one R command each.\footnote{See \sectref{sect:MultGroups}.}]
-    \item What major differences did you see in results from the two labs?
-  \end{Enumerate}
-
-  \item \label{hwprob:cuEDA} \rhw{} In June 2000, facilities management at the University of Massachusetts -- Boston surveyed lab managers at the University regarding chemical waste disposal.  One question that they asked the survey participants was, ``Which federal agency regulates the disposal of chemical wastes: Occupational Safety and Health Administration, Environmental Protection Agency, Department of Transportation, or National Institutes of Health?''  The individual responses for this survey are shown below by showing the first letter corresponding to each participant's category choice.  Note that one participant did not answer this question and is labeled with a ``U'' for ``unanswered.''  Enter these data into a CSV file and load into R.\footnote{A description for how to enter these data is found in \sectref{sect:REnterData}.}  Use these data to answer the questions below.
-  \begin{Verbatim}
-O, E, E, O, E, E, E, O, D, O, E, O, E, D, E, O, N, O, E, D,
-N, E, D, E, D, O, E, O, E, O, E, E, D, O, E, E, E, E, O, E,
-N, O, N, O, E, N, E, O, E, E, E, D, N, E, O, E, N, E, E, N,
-E, E, E, N, E, E, N, D, D, E, O, O, E, E, E, N, O, O, O, E,
-O, O, E, E, U, O, E, O
-  \end{Verbatim}
-
-  \begin{Enumerate}
-    \item Construct a frequency table of these data.
-    \item Construct a percentage table of these data.
-    \item Write a brief conclusion regarding the beliefs of lab managers derived from these data.
-  \end{Enumerate}
-\end{hwsection}

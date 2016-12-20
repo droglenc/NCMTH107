@@ -1,0 +1,281 @@
+<<echo=FALSE, cache=FALSE, results='hide'>>=
+set_parent('IntroStats.Rnw')
+@
+
+\chapter{2-Sample t-Test} \label{chap:tTest2}
+\begin{ChapObj}{\boxwidth}
+  \textbf{Chapter Objectives:}
+  \begin{Enumerate}
+    \item Identify when a 2-Sample t-Test is appropriate.
+    \item Describe what a homogeneity of variance test is and why it is required within a 2-Sample t-Test.
+    \item Perform the 11 steps of a significance test in a 2-Sample t-Test situation.
+  \end{Enumerate}
+\end{ChapObj}
+
+\minitoc
+\newpage
+
+\lettrine{T}{he t distribution} and 1-Sample t-Test for comparing the mean of one population to a specific value were introduced in \chapref{chap:tTest1}. In this chapter, a 2-sample t-Test for comparing the means of two populations is introduced.\index{t Test!2-sample}
+
+While it is often useful to test whether a population mean is equal to a specific value, as was done with the 1-Sample Z-Test and 1-Sample t-Tests, there are many instances where interest is determining whether the means from two populations are equal.  In these situations, one is usually trying to determine if a difference exists between the two population means.  For example, is there a difference in income between males and females, in test scores between students from high- or low-income families, in percent body fat between raccoons from southern and northern Wisconsin, or in amount of milk produced between cows provided with a hormone and cows provided with a placebo.  In all of these situations, two populations are being examined (males and females, students from high- and low-income families, raccoons from southern and northern Wisconsin, cows given a hormone and cows given a placebo) and interests is in determining if a difference in population means exists.  The \textbf{2-sample t-Test} is used to make these determinations and is the subject of this section.
+
+\section{2-Sample t-Test Specifics}
+In a 2-sample t-Test, the null hypothesis is that the two population means are equal, i.e., $H_{0}:\mu_{1}=\mu_{2}$.  The null hypothesis can be rewritten as $H_{0}:\mu_{1}-\mu_{2}=0$, because the difference between two population means should be zero if the two population means are equal.  With this new organization of the null hypothesis, one must think of finding a statistic that will be an estimate of $\mu_{1}-\mu_{2}$, the hypothesized ``parameter.''  Analogous to using $\bar{x}$ as an estimate of $\mu$ in the 1-Sample t-Test, $\bar{x}_{1}-\bar{x}_{2}$ is an estimate of $\mu_{1}-\mu_{2}$.
+
+\warn{The parameter in a 2-sample t-Test is the difference in population means ($\mu_{1}-\mu_{2}$).  The corresponding statistic is the difference in sample means ($\bar{x}_{1}-\bar{x}_{2}$).}
+
+Now, when looking at the same ``general'' test statistic as used in the 1-Sample inferences -- i.e., \eqref{eqn:zTestStatGeneral} as
+
+\[ \text{Test Statistic} = \frac{\text{Observed Statistic}-\text{Hypothesized Parameter}}{SE_{\text{Statistic}}} \]
+
+it becomes apparent that an estimate of the standard error of $\bar{x}_{1}-\bar{x}_{2}$ (i.e., our statistic) is needed.  Unfortunately, the calculation of this standard error depends on whether the two population variances are equal or not.  When the variances are approximately equal (discussed in the next section), we first calculate a pooled estimate of the variance ($s_{p}^{2}$) as a weighted average of the sample variances from the two samples, or\index{Variance!Pooled}
+
+\[s_{p}^{2}=\frac{(n_{1}-1)s_{1}^{2}+(n_{2}-1)s_{2}^{2}}{n_{1}+n_{2}-2} \]
+
+\warn{The $s_{p}^{2}$ calculation can be ``checked'' by determining if the value of $s_{p}^{2}$ is between $s_{1}^{2}$ and $s_{2}^{2}$ or if the value of $\sqrt{s_{p}^{2}}$ is between $s_{1}$ and $s_{2}$.}
+
+The standard error of $\bar{x}_{1}-\bar{x}_{2}$ is the square root of the product of the pooled variance and the sum of the inverses of the sample sizes, or
+
+\[ SE_{\bar{x}_{1}-\bar{x}_{2}}= \sqrt{s_{p}^{2}\left(\frac{1}{n_{1}}+\frac{1}{n_{2}} \right)}  \]
+
+The degrees-of-freedom for the 2-sample t-Test with equal variances still comes from the denominator of the variance (pooled in this case) calculation. Thus, the $df=n_{1}+n_{2}-2$.  These specifics are summarized in \tabref{tab:2tspec}. The specifics for the 2-sample t-Test when the variances are unequal are not discussed in this book.
+
+\begin{table}[htbp]
+  \caption{Characteristics of a 2-sample t-Test with equal variances.}
+  \label{tab:2tspec}
+    \begin{itemize}
+      \item \textbf{Hypothesis:} $H_{0}:\mu_{1}-\mu_{2}=0$
+      \item \textbf{Statistic:} $\bar{x}_{1}-\bar{x}_{2}$
+      \item \textbf{Test Statistic:} $t=\frac{\bar{x}_{1}-\bar{x}_{2}-0}{\sqrt{s_{p}^{2}\left(\frac{1}{n_{1}}+\frac{1}{n_{2}} \right)}}$ where $s_{p}^{2}=\frac{(n_{1}-1)s_{1}^{2}+(n_{2}-1)s_{2}^{2}}{n_{1}+n_{2}-2}$.
+      \item \textbf{Confidence Region:} $\bar{x}_{1}-\bar{x}_{2}(\pm t^{*})\sqrt{s_{p}^{2}\left(\frac{1}{n_{1}}+\frac{1}{n_{2}} \right)}$
+      \item \textbf{df:} $n_{1}+n_{2}-2$
+      \item \textbf{Assumptions:} $n_{1}+n_{2}>40$, $n_{1}+n_{2}-2>15$ and \textbf{each sample} is not strongly skewed, OR \textbf{each sample} is normally distributed.
+    \end{itemize}
+\end{table}
+
+Many times the 2-sample t-Test will be used to test an alternative hypothesis of simply finding a difference between the two populations.  However, if the null hypothesis is rejected in these instances (thus, identifying a significant difference between the two populations), then special care should be taken to specifically describe how the two populations differ.  If the statistic is negative, then the mean of the first population is lower than the mean of the second population and, if the statistic is positive, then the mean of the first population is larger than the mean of the second population.  The values of the confidence region should be used to identify how much larger or smaller the mean from one population is compared to the mean of the other population.
+
+\warn{Use the statistic and confidence region results to specifically determine which population has a larger or smaller mean when the null hypothesis of the 2-sample t-Test has been rejected in favor of the ``not equals'' alternative hypothesis.}
+
+\section{Testing for Equal Variances}\index{Levene's Test}
+As noted above, the methods of a 2-sample t-Test differ depending on whether the population variances from the two populations are equal or not.  This should present a problem to you because the population variances are parameters and are typically not known\footnote{Actually, the population variances don't have to be known exactly, it just needs to be known whether they are equal or not.}.  The question of whether these parameters are equal or not will be handled in the same manner as all other questions about a parameter or parameters have been handled -- i.e., with a hypothesis test.
+
+\warn{A hypothesis test must be used to determine if two population variances are equal.}
+
+There are two hypothesis tests that are commonly used to test whether two (actually ``two or more'') population variances are equal or not.  The first is called Bartlett's test and is used when it is known that two population distributions are normally distributed.  The second test is called Levene's test and is used for all continuous distributions, whether normal or not.  Levene's test will be used throughout this book as it is more general and a bit more conservative\footnote{Levene's test is more conservative because it does not require a normal distribution.}.
+
+\warn{Use Levene's test to test the hypothesis that two population variances are equal, because it does not require populations that are normally distributed.}
+
+The specifics of the Levene's test will not be examined in detail in this book.  Rather you will only need to know that the $H_{0}:\sigma_{1}^{2}=\sigma_{2}^{2}$ is tested against the $H_{A}:\sigma_{1}^{2}\neq\sigma_{2}^{2}$.  The one-tailed alternatives are not considered with this test, nor are they of interest in this situation; i.e., one only needs to know if there is a difference in the population variances.  Without knowing the full details of the Levene's test, we will rely on computer software to compute the p-value.  The p-value is interpreted as always -- if the $p-value<\alpha$, then reject the $H_{0}$ and conclude that the variances are unequal, if the $p-value>\alpha$, then do not reject the $H_{0}$ and conclude that the variances are at least approximately equal.
+
+\warn{If the p-value from Levene's test is less than $\alpha$, then reject the $H_{0}$ and conclude that the variances are unequal.}
+
+\vspace{-12pt}
+\warn{If the p-value from Levene's test is greater than $\alpha$, then do not reject $H_{0}$ and conclude that the variances are at least approximately equal.}
+
+\subsection{Example - Corn and Fertilizers}
+Consider the following situation,
+\begin{quote}
+\textsl{An agricultural researcher thought that corn plants grown in pots exposed to a certain type of synthetic fertilizer would grow taller than plants exposed to an organic fertilizer.  To collect data to test this idea, he grew 50 corn plants in individual pots -- 25 were treated with organic fertilizer and 25 were treated with synthetic fertilizer.  Each pot contained soil from a well-mixed common source and was planted in the same greenhouse.  Each plant was similar in all regards (similar genetics, age, etc.).  Use the results (heights of individual plants) in \tabref{tab:CornFert} to test the researcher's hypothesis (at the $\alpha=0.05$ level).}
+\end{quote}
+
+\begin{table}[htbp]
+  \caption{Summary statistics and histogram of the corn plant height in two treatments.}
+  \label{tab:CornFert}
+  \begin{center}
+    \begin{minipage}{3in}
+      \begin{Verbatim}
+        Synthetic  Organic
+means:    51.46     47.49
+SD:       5.975     6.721
+Levene's Test:  p=0.1341
+      \end{Verbatim}
+    \end{minipage}
+    \begin{minipage}{2in}
+%      \includegraphics[width=2in]{Figs/Corn_Box.png}
+    \end{minipage}
+  \end{center}
+\end{table}
+
+The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for this example are as follows:
+  \begin{enumerate}
+    \item As stated, $\alpha$ should be set at 0.05.
+    \item Thus, $H_{0}:\mu_{s}-\mu_{o}=0$ where $s$ represents the synthetic and $o$ represents the organic fertilizer (thus, positive numbers represent larger values for the synthetic fertilizer).  The $H_{A}:\mu_{s}-\mu_{o}>0$ (representing the idea that the synthetic fertilizer will produce taller plants).
+    \item A 2-sample t-Test is required because a quantitative variable (height) was measured on two populations (synthetic and organic fertilizers) that were \textbf{IN}dependent and two population means are being compared in the null hypothesis.
+    \item The data appear to be part of an experimental study (the researcher imposed the treatments on the plants) with no clear indication of random selection of plants or random allocation of plants to the two treatments.
+    \item The sample size ($n_{s}+n_{o}$ = 50) is $>40$.  Therefore, the test statistic computed below should reasonably follow a t-distribution with $n_{s}+n_{o}-2=48$ df.  In addition, the two samples are independent as there does not appear to be any connection between pots.  The two population variances appear to be equal because the p-value for Levene's test of the homogeneity of variance test (given as 0.1341) is ``large'' (i.e., $>0.05$).
+    \item The statistic is $\bar{x}_{s}-\bar{x}_{0}$ $= 51.46-47.49$ $= 3.97$ (values from \tabref{tab:CornFert}).  The pooled sample variance is,
+    \[s_{p}^{2}=\frac{(25-1)5.975^{2}+(25-1)6.721^{2}}{25+25-2} = 40.44 \]
+The standard error of the statistic is,
+    \[ SE_{\bar{x}_{s}-\bar{x}_{o}}=\sqrt{40.44\left(\frac{1}{25}+\frac{1}{25} \right)} = 1.799  \]
+    \item The test statistic is $t$=$\frac{3.97-0}{1.799} = \frac{3.97}{1.799} = 2.207$.  This test statistic has $25+25-2=48$ df.
+    \item The p-value is \Sexpr{kPvalue(pt(2.207,df=48,lower.tail=FALSE))}, as computed with
+<<fig.show='hide'>>=
+( distrib(2.207,distrib="t",df=48,lower.tail=FALSE) )
+@
+    \item The $H_{0}$ is rejected because the $p-value <\alpha=0.05$.
+    \item The average height of the corn plants appears to be greater for the plants grown with the synthetic fertilizer than those plants grown with the organic fertilizer.
+    \item A 95\% confidence lower bound is warranted in this situation.  The $t^{*}=$\Sexpr{formatC(qt(0.95,df=48,lower.tail=FALSE),format="f",digits=3)} as computed with
+<<fig.show='hide'>>=
+( distrib(0.95,distrib="t",type="q",df=48,lower.tail=FALSE) )
+@
+Thus, $3.97-1.677*1.799$ or $3.97-3.02$ = $0.95$.  Thus, one is 95\% confident that plants grown with synthetic fertilizer are more than 0.95 cm taller, on average, than plants grown with the organic fertilizer.
+  \end{enumerate}
+
+\subsection{Example - Music and Anxiety}
+Consider the following situation,
+\begin{quote}
+\textsl{An oral surgeon conducted an experiment to determine if background music decreased the anxiety level of patients during a tooth extraction.  Over a one-month period, 32 patients had a tooth removed while listening to music and 36 had a tooth removed with no music to listen to.  Each patient was given a questionnaire following the extraction.  Answers to the questionnaire were converted to a numeric scale to measure the patient's level of anxiety (larger numbers mean greater anxiety).  For those given background music, the mean anxiety level was 4.2 (with a standard deviation of 1.2), while the group without music had a mean of 5.9 (with a standard deviation of 1.9).  The surgeon also reported a Levene's test p-value of 0.089.  Test the surgeon's hypothesis using $\alpha=0.05$.}
+\end{quote}
+
+The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for this example are as follows:
+  \begin{enumerate}
+    \item As stated, $\alpha$ should be set at 0.05.
+    \item The $H_{0}:\mu_{w}-\mu_{o}=0$ where $w$ represents ``with'' and $o$ represents ``without'' the music (thus, negative numbers represent lower anxiety values in patients in the ``with music'' treatment).  The $H_{A}:\mu_{w}-\mu_{o}<0$ (representing lower levels of anxiety in patients in the ``with music'' treatment).
+    \item A 2-sample t-Test is required because a quantitative variable (anxiety level) was measured on two populations (music or no music) that were \textbf{IN}dependent and two population means are being compared in the null hypothesis.
+    \item The data appear to be part of an observational study with $n_{w}=32$ and $n_{o}=36$.  There is no obvious random selection or allocation in this study.
+    \item The sample size ($n_{w}+n_{o}$ = 68) is $>40$.  Therefore, the test statistic computed below should reasonably follow a t-distribution with $n_{w}+n_{o}-2=66$ df.  In addition, the two samples are independent because no one patient had any effect or impact on any other patient.  The population variances appear to be equal between the two treatment groups because the p-value for Levene's test of the homogeneity of variance test (given as 0.089) is ``large'' (i.e., $>0.05$).
+    \item The statistic is $\bar{x}_{w}-\bar{x}_{o}$ $= 4.2-5.9$ $= -1.7$.  The pooled sample variance is,
+    \[s_{p}^{2}=\frac{(32-1)1.2^{2}+(36-1)1.9^{2}}{32+36-2} = 2.59 \]
+The standard error of the statistic is,
+    \[ SE_{\bar{x}_{w}-\bar{x}_{o}}=\sqrt{2.59\left(\frac{1}{32}+\frac{1}{36} \right)} = 0.391  \]
+    \item The test statistic is $t$=$\frac{-1.7-0}{0.391} = -4.348$.  This test statistic has $32+36-2=66$ df.
+    \item The p-value is \Sexpr{kPvalue(pt(-4.348,df=66))}, as computed with
+<<fig.show='hide'>>=
+( distrib(-4.348,distrib="t",df=66) )
+@
+    \item The $H_{0}$ is rejected because the $p-value <\alpha=0.05$.
+    \item The average anxiety level of the patients differed between when music was played and when it was not.  In fact, it appears that the anxiety level was lower when the music was played.
+    \item A 95\% upper confidence bound is warranted in this situation.  The $t^{*}=$\Sexpr{formatC(qt(0.95,df=66),format="f",digits=3)} as computed with
+<<fig.show='hide'>>=
+( distrib(0.95,distrib="t",type="q",df=66) )
+@
+Thus, $-1.7+1.668*0.391$ or $-1.7+0.65$ = $-1.05$.  Thus, one is 95\% confident that the mean anxiety level is more than -1.05 points lower, on average, when music is played than when it is not.
+  \end{enumerate}
+
+\begin{exsection}
+  \item \label{revex:tTestPopcorn} Erville Redenbacher wanted to see if the number of unpopped kernels differed between yellow and white varieties of his grandpa's famous popcorn.  To test this, he would put 100 kernels of either white or yellow popcorn into a standard air popper, pop the corn until no ``pops'' were heard, and then count the number of unpopped kernels.  He tested 30 randomly selected groups of 100 kernels for both white and yellow varieties (Erville is very thorough).  Use the results below to test, at the 10\% level, Erville's hypothesis. \ansref{ans:tTestPopcorn}
+
+  \begin{Verbatim}
+         Variable  N  Mean  Median  StDev  SE Mean
+         White    30 4.267   2.000  4.456    0.814
+         Yellow   30 3.567   1.500  4.485    0.819
+
+         Levene's Test -- P-Value = 0.972
+  \end{Verbatim}
+\begin{center}
+    \includegraphics[width=2.5in]{Figs/t2_pcorn.jpg}
+\end{center}
+
+  \item \label{revex:tTestHeatVent} A study was performed in order to evaluate the effectiveness of two devices for improving the efficiency of gas home-heating systems.  Energy consumption in houses was measured after one of the two devices was installed.  The two devices were an electric vent damper (DampVent=Electric) and a thermally activated vent damper (DampVent=ThermAct).  Energy consumption (in BTUs) was measured for a variety of houses fitted with the two devices.  Compare, at the 10\% level, the effectiveness of these two devices by determining if a difference exists in energy consumption between houses fitted with the devices.  Note that Levene's test p-value is 0.996. \ansref{ans:tTestHeatVent}
+  \begin{Verbatim}
+Variable DampVent   N    Mean  Median  StDev SE Mean Minimum Maximum     Q1     Q3
+BTU.In   Electric  40   9.908   9.590  3.020   0.477   4.000  18.260  7.885 11.555
+         ThermAct  50  10.143  10.290  2.767   0.391   2.970  16.060  8.127 12.212
+  \end{Verbatim}
+
+  \item \label{revex:tTestPigBFT} A pig diet manufacturer wants to determine if the backfat thickness differs between pigs raised on two different diets.  Backfat thickness is an indicator of pork quality; smaller thicknesses mean better quality.  A group of 24 pigs was randomly allocated to two groups which differed only in the diet received.  Test the results from this experiment to see if a difference in backfat thickness is evident at the $\alpha=0.05$ level.  Note that Levene's test p-value is 0.532. \ansref{ans:tTestPigBFT}
+  \begin{Verbatim}
+         Var Diet  N   Mean Median  StDev SE Mean  Min  Max
+         BFT    1 12  3.420  3.390  0.295  0.0850  2.87 3.87
+                2 12  2.989  3.035  0.375  0.108   2.40 3.62
+  \end{Verbatim}
+  \begin{center}
+    \includegraphics[width=5in]{Figs/t2pigbft.png}
+  \end{center}
+
+\end{exsection}
+
+\section{2-Sample t-Tests in R}
+\subsection{Data Format}
+The data for a 2-sample t-Test must be entered in stacked format.  In stacked format the measurements are in one vector and a label for which group the measurement was recorded from is in another vector.  If both vectors are in a data frame\footnote{This will most likely be the case as this data will most likely be read from an external data file.}, then each row corresponds to the measurement and the group of a single individual.  This is the general format in which most data is entered and in which most databases and R functions require the data.
+
+The data for BOD measurements in either the inlet or outlet to an aquaculture facility are shown below.  These data illustrate stacked data because each row corresponds to one individual and the columns are two variables defined on that individual with one variable being the measurement and the other variable being the group to which the individual belongs.
+<<echo=FALSE>>=
+aqua <- read.csv("data/BOD.csv")
+headtail(aqua)
+@
+
+\defn{Stacked Data}{Data where the quantitative measurements of two groups are ``stacked'' on top of each other and a second variable is used to record to which group the measurement belongs.}
+
+\vspace{-12pt}
+\warn{Stacked data is the preferred format for 2-sample data, because each vector corresponds to a variable and each row corresponds to only one individual.}
+
+\subsection{Levene's Test}\index{Levene's Test}
+Before conducting a 2-sample t-Test, the assumption of equal variances must be tested with a Levene's test.  The Levene's test is computed in R with stacked data using \R{levenesTest()}.  The first argument to this function is a model formula of the type \R{response\TILDE factor} where \R{response} represents the vector containing the quantitative measurements and \R{factor} represents the vector containing the categorical grouping variable\footnote{This is the same model formula introduced in \sectref{sect:MultGroups} for summarizing multiple groups of data.}.  The data frame containing the variables in the formula must also be supplied in the \R{data=} argument of \R{levenesTest()}.
+
+\subsection{2-Sample t-Test}\index{t Test!2-sample}
+A 2-sample t-Test is computed in R with the same \R{t.test()} function used for the 1-Sample t-Test.  The first argument to the \R{t.test()} function is a model formula of the exact same type sent to \R{levenesTest()}.  In addition to this argument, the following arguments may be specified when conducting a 2-sample t-Test with \R{t.test()}
+\begin{itemize}
+  \item \R{mu}: The specific value of the null hypothesis.  In the 2-sample case this is the hypothesized difference among the population means.  The default value is $0$ and, thus, this argument does not usually have to be specified.
+  \item \R{alt=}: A character string indicating the type of alternative hypothesis (\R{"two.sided"}, \R{"greater"}, or \R{"less"}).  As previously, \R{"two.sided"} is the default.
+  \item \R{conf.level=}: The level of confidence to be used when constructing the confidence interval for $\mu_{1}-\mu_{2}$.  As previously, \R{0.95} is the default.
+  \item \R{var.equal=}: A logical value indicating whether the two population variances should be considered to be equal or not.  If \R{var.equal=TRUE}, then the pooled sample variance is calculated and used in the standard error.  The default value is to assume unequal variances; thus, this argument must be set to \R{TRUE} if the result from \R{levenesTest()} suggests that the variances are equal.
+\end{itemize}
+
+\warn{The \R{var.equal=TRUE} argument must be used in the \R{t.test()} function if one is to assume equal variances.  This is NOT the default setting in R.}
+
+It must be noted that R computes the difference in \R{t.test()} as the mean of the ``first'' level minus the mean of the ``second'' level where the default behavior orders the levels alphabetically.  For example, if the two levels are \var{inlet} and \var{outlet}, then R will compute $\mu_{inlet}-\mu_{outlet}$.  This may or may not be the order that you want to use.  Thus, for example, if you wanted $\mu_{outlet}-\mu_{inlet}$, then you need to ``manually'' change the order of the levels with \R{factor()}.  The \R{factor()} function requires the name of the categorical variable as its first argument.  The order of the levels of this variable is explicitly set by setting the \R{levels=} argument of \R{factor()} equal to a vector of the level names in the desired order.  For example, the order of the levels of the \var{src} variable in the \var{aqua} data frame is changed and stored in a new variable name in the data frame with
+<<>>=
+aqua$src1 <- factor(aqua$src,levels=c("outlet","inlet"))
+levels(aqua$src1)
+@
+Two things should be noted about the commands above.  First, I ``saved'' the re-ordered factor variable in a new name (i.e., \var{src1}) in the data frame so as not to over-write the original data.  This is prudent so that, in case you made a mistake, you can always retrieve your original data.  Second, \R{levels()} is used to show the ordering of the levels of a factor variable.
+
+\subsection{Example - BOD in Aquaculture Water}
+Consider the following situation (which was examined in parts above),
+\begin{quote}
+\textsl{An aquaculture farm takes water from a stream and returns it to the stream after it has circulated through the fish tanks.  The owner is concerned that the water may contain heightened levels of organic matter when it is released into the stream after it has circulated in the tanks.  He has taken steps to reduce this possibility, i.e., circulated the water rather quickly through the tanks, but is still concerned about the increase in organic material in the effluent.  To determine if this is true, he takes samples of the water at the intake and, at other times, downstream from the outlet and measures the biological oxygen demand (BOD) as a measure of the organics in the effluent (a higher BOD at the outlet would imply that organics are taken up from the tanks).  The farmers data are recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/BOD.csv}{BOD.csv}}.  Test for any evidence (i.e., at the 10\% level) of support for the farmers concern.
+\end{quote}
+
+The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for this example are as follows:
+  \begin{enumerate}
+    \item As stated, $\alpha$ should be set at 0.10.
+    \item The $H_{0}:\mu_{outlet}-\mu_{inlet}=0$ where $outlet$ represents the outlet source and $inlet$ represents the inlet source (thus, positive numbers represent larger values at the outlet implying that BOD is increasing in the water released from the facility).  Thus, the $H_{A}:\mu_{outlet}-\mu_{inlet}>0$ (which represents an increase in BOD in water released from the facility).
+    \item A 2-sample t-Test is required because a quantitative variable (BOD level) was measured on two populations (outlet or inlet) that were \textbf{IN}dependent and two population means are being compared in the null hypothesis.
+    \item The data appear to be part of an observational study with no obvious randomization.  The data were loaded with
+<<>>=
+aqua <- read.csv("data/BOD.csv")
+headtail(aqua)
+@
+The order of the levels of the \var{src} variable were then changed to match the order of subtraction in the hypotheses with
+<<>>=
+aqua$src1 <- factor(aqua$src,levels=c("outlet","inlet"))
+levels(aqua$src1)
+@
+    \item The two samples are independent because there is no connection between specific measurements at the inlet and outlet (e.g., they were not taken at the same time). The combined sample size (\Sexpr{dim(aqua)[1]}) is $<40$ but $>15$.  The histograms \figrefp{fig:AquaHist} are inconclusive about the shape because of the small sample sizes in each group.  However, it appears that the \var{inlet} data is not strongly skewed whereas there is evidence that the \var{outlet} data is skewed.  This result may invalidate the results of this hypothesis test but I will continue anyway.  The histograms were constructed with
+<<AquaHist, fig.width=7, out.width='.8\\linewidth', fig.cap="Histogram of the BOD measurements at the outlet and inlet of the aquaculture facility.">>=
+hist(BOD~src1,data=aqua,main="",xlab="BOD Measurement")
+@
+
+The variances appear to be equal because the Levene's test p-value (\Sexpr{kPvalue(levenesTest(BOD~src1,data=aqua)[1,"Pr(>F)"])}) is larger than $\alpha$.  The Levene's test was computed with
+<<>>=
+levenesTest(BOD~src1,data=aqua)
+@
+
+With the assumptions met (independence and equal variances) or nearly met (sample size), the 2-sample t-Test was conducted with
+<<Aquapvalue, par1a=TRUE, out.width='.3\\linewidth', fig.cap="Depiction of the p-value in the 2-sample t-Test of BOD measurements in aquaculture example.">>=
+( aqua.t <- t.test(BOD~src1,data=aqua,var.equal=TRUE,alt="greater",conf.level=0.90) )
+plot(aqua.t)
+@
+    \item The group statistics are $\bar{x}_{outlet}$=\Sexpr{formatC(aqua.t$estimate[1],format="f",digits=2)} and $\bar{x}_{inlet}$=\Sexpr{formatC(aqua.t$estimate[2],format="f",digits=2)}.  Thus, the statistic is \Sexpr{formatC(aqua.t$estimate[1],format="f",digits=2)}-\Sexpr{formatC(aqua.t$estimate[2],format="f",digits=2)}=\Sexpr{formatC(aqua.t$estimate[1]-aqua.t$estimate[2],format="f",digits=2)}.
+    \item The test statistic is $t$=\Sexpr{formatC(aqua.t$statistic,format="f",digits=3)} with \Sexpr{formatC(aqua.t$parameter,format="f",digits=0)} df.
+    \item The p-value is \Sexpr{kPvalue(aqua.t$p.value)} \figrefp{fig:Aquapvalue}.
+    \item The $H_{0}$ is rejected because the $p-value <\alpha$.
+    \item The average BOD is greater at the outlet than at the inlet to the aquaculture facility.  Thus, it appears that the aquaculture facility adds to the oxygen demand of the water.
+    \item A 90\% lower confidence bound is warranted in this situation and is \Sexpr{formatC(aqua.t$conf.int[1],format="f",digits=2)}.  Thus, one is 90\% confident that the BOD measurement at the outlet is AT LEAST \Sexpr{formatC(aqua.t$conf.int[1],format="f",digits=2)} GREATER than the BOD measurement at the inlet.
+  \end{enumerate}
+
+\newpage
+\begin{exsection}
+  \item \label{revex:tTestMilk} \rhw{} A study\footnote{Data was recreated from Blaisdell 1998.} examined the effectiveness of foil-lined milk cartons in reducing the ``leakage'' of dioxins from the carton to the milk (dioxins were found in milk cartons due to the bleaching process).  The dioxin content (parts per thousand, ppt) in milk from 50 unlined and 50 lined cartons of milk were measured and recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/MilkCartons.csv}{MilkCartons.csv}.  Use these data to determine, at the 1\% level, if lining the cartons with foil significantly reduced the amount of dioxin in the milk. \ansref{ans:tTestMilk}
+
+  \item \label{revex:tTestMathGrades} \rhw{} The math department at the University of North Carolina is apparently noted for ``giving out'' low grades, relative to the rest of the school.  To examine this, a random sample of the gpa for 22 math classes and 29 ``other'' university classes (from the last year) were examined.  Use the data stored in \href{https://raw.githubusercontent.com/droglenc/NCData/master/UNCgrades.csv}{UNCGrades.csv} to determine if grades in math classes are significantly (at the 10\% level) lower than grades in other classes. \ansref{ans:tTestMathGrades}
+
+  \item \label{revex:tTestMedSchool} \rhw{} A health commissioner needs to determine if the number of hours worked per week by medical interns differs between two cities.  To examine this, the commissioner finds the mean number of hours worked by interns in the first city for a random sample of 13 weeks and the same for a random sample of 16 weeks from the second city.  These results are found in \href{https://sites.google.com/site/ncstats/data/MedInternHrs}{MedInternHrs}.  Use those results to determine if the hours worked by the interns differs, at the 10\% level, between the two cities. \ansref{ans:tTestMedSchool}
+
+  \item \label{revex:tTestYield} \rhw{} Agronomists are interested in determining conditions that increase the yield of crops.  In one experiment 80 one-acre plots of corn were randomly divided into two groups of 40 plots each.  An insecticide was used on each plot in one group and sterilized male individuals of an insect pest were released on each plot of the other group.  The resulting yields were recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/CropYield.csv}{CropYield.csv}.  Is there a difference, at the 10\% level, in yield between the two treatments.  \ansref{ans:tTestYield}
+
+  \item \label{revex:tTestDAS} \rhw{} Templer's Death Anxiety Scale (DAS) is a measure of an individual's anxiety concerning death.  \cite{Robbins1990} examined 25 organ donors and 69 non-organ donors to determine if there was a difference in anxiety levels concerning death between these groups of people.  The results are recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/DeathAnxiety.csv}{DeathAnxiety.csv}.  Test Robbins' researcher's hypothesis at the 1\% significance level. \ansref{ans:tTestDAS}
+
+\end{exsection}

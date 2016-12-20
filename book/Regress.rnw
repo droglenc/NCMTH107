@@ -750,24 +750,3 @@ Therefore, it appears that this car gets \Sexpr{formatC(-1*(24-predict(lm2,data.
     \end{Enumerate}
 
 \end{exsection}
-
-\vspace{36pt}
-\begin{hwsection}{All questions below should be typed and answered following the expectations identified on the syllabus.  All work must be shown.  Questions marked with the R logo must include R output with your R commands in an attached appendix.}
-
-  \item \label{hwprob:RegIndex} \rhw{} Wyoming Fish and Game researchers would like to be able to predict monthly fishing pressure (total number of angler-hours) with an index count of the number of vehicles in lake access parking lots because the latter is much cheaper to measure than the former. Towards this end they examined the relationship between pressure and index count on weekdays of Alcova Reservoir.  Use the data in \href{https://raw.githubusercontent.com/droglenc/NCData/master/AlcovaRes.csv}{AlcovaRes.csv}, properly subsetted to include only the data from the weekdays (\textbf{YOU MUST DO THIS FILTERING}\footnote{See \sectref{sect:RSubsetdf} for a review of subsetting.}), to construct results that can be used to answer the questions below.
-    \begin{Enumerate}
-      \item What is the response variable?
-      \item What is the explanatory variable?
-      \item In terms of the variables of this problem, what is the equation of the best-fit line?
-      \item In terms of the variables of this problem, interpret the value of the slope.
-      \item In terms of the variables of this problem, interpret the value of the intercept.
-      \item What is the predicted pressure for an index count of 20 vehicles?
-      \item What is the predicted pressure for an index count of 5 vehicles?
-      \item What is the residual if the pressure is 5100 and the index count is 8 vehicles?
-      \item What is the correlation coefficient between pressure and index count?
-      \item What proportion of the variability in pressure is explained by knowing the index count?
-      \item How much will the pressure estimate be under-predicted, on average, if the number of vehicles is accidentally under-counted by two vehicles?
-      \item What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?
-    \end{Enumerate}
-
-\end{hwsection}
