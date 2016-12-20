@@ -9,6 +9,78 @@ author: "Derek H. Ogle"
 <div class="container">
 <dl class="dl-horizontal">
 <dt>
+α
+</dt>
+<dd>
+The rejection criterion OR probability of making a Type I error.
+</dd>
+<dt>
+β
+</dt>
+<dd>
+The probability of making a Type II error.
+</dd>
+<dt>
+c
+</dt>
+<dd>
+The number of columns in a two-way frequency table.
+</dd>
+<dt>
+C
+</dt>
+<dd>
+The level of confidence for a confidence region.
+</dd>
+<dt>
+Χ<sup>2</sup>
+</dt>
+<dd>
+A variable that follows a chi-square distribution OR the test statistic in chi-square tests.
+</dd>
+<dt>
+df
+</dt>
+<dd>
+Degrees-of-freedom.
+</dd>
+<dt>
+H<sub>0</sub>
+</dt>
+<dd>
+The null hypothesis.
+</dd>
+<dt>
+H<sub>A</sub>
+</dt>
+<dd>
+The alternative hypothesis.
+</dd>
+<dt>
+IQR
+</dt>
+<dd>
+Interquartile range (Q3-Q1).
+</dd>
+<dt>
+μ
+</dt>
+<dd>
+Population mean.
+</dd>
+<dt>
+μ<sub>0</sub>
+</dt>
+<dd>
+Specific value of μ in the H<sub>0</sub> of 1-Sample Z- and t-Tests.
+</dd>
+<dt>
+M
+</dt>
+<dd>
+The sample median. [<emph>rarely used</emph>]
+</dd>
+<dt>
 n
 </dt>
 <dd>
@@ -18,25 +90,61 @@ Sample size.
 N
 </dt>
 <dd>
-Population size.
+Population size. [<emph>generally unknown</emph>]
 </dd>
 <dt>
-x<sub>i</sub>
+X~N(μ,σ)
 </dt>
 <dd>
-Value of the X variable for the ith individual.
+The variable X is normally distributioned with a mean of μ and standard deviation of σ.
 </dd>
 <dt>
-<span class="math">\(\bar{x}\)</span>
+N(0,1)
 </dt>
 <dd>
-Sample mean (average) of the X variable.
+Standard normal distribution.
 </dd>
 <dt>
-μ
+p
 </dt>
 <dd>
-Population mean.
+Population proportion of successes.
+</dd>
+<dt>
+x̂
+</dt>
+<dd>
+Sample proportion of successes.
+</dd>
+<dt>
+Q1
+</dt>
+<dd>
+First quartile.
+</dd>
+<dt>
+Q3
+</dt>
+<dd>
+Third quartile.
+</dd>
+<dt>
+r
+</dt>
+<dd>
+The sample correlation coefficient OR number of rows in a two-way frequency table.
+</dd>
+<dt>
+r<sup>2</sup>
+</dt>
+<dd>
+The coefficient of determination.
+</dd>
+<dt>
+RSS
+</dt>
+<dd>
+Residual sum-of-squares.
 </dd>
 <dt>
 s
@@ -57,135 +165,45 @@ s<sup>2</sup>
 Sample variance.
 </dd>
 <dt>
-Q1
+s<sub>p</sub><sup>2</sup>
 </dt>
 <dd>
-First quartile.
+Pooled sample variance in a 2-Sample t-Test.
 </dd>
 <dt>
-Q3
+σ<sup>2</sup>
 </dt>
 <dd>
-Third quartile.
+Population variance.
 </dd>
 <dt>
-IQR
+t
 </dt>
 <dd>
-Interquartile range (Q3-Q1).
+A variable that follows a t-distribution OR the test statistic in t-tests.
 </dd>
 <dt>
-X~N(μ,σ)
+x<sub>i</sub>
 </dt>
 <dd>
-The variable X is normally distributioned with a mean of μ and standard deviation of σ.
+Value of the X variable for the ith individual.
 </dd>
 <dt>
-N(0,1)
+<span class="math inline">\(\bar{x}\)</span> or x̄
 </dt>
 <dd>
-Standard normal distribution.
+Sample mean (average) of the X variable.
 </dd>
 <dt>
 Z
 </dt>
 <dd>
-<ol style="list-style-type: lower-roman">
-<li>A variable that follows a N(0,1). (ii) The test statistic in a one-sample Z-test.
+A variable that follows a N(0,1) OR the test statistic in a one-sample Z-test.
 </dd>
-<dt>
-r
-</dt>
-<dd>
-<ol style="list-style-type: lower-roman">
-<li>The sample correlation coefficient. (ii) The number of rows in a two-way frequency table.
-</dd>
-<dt>
-c
-</dt>
-<dd>
-The number of columns in a two-way frequency table.
-</dd>
-<dt>
-</dt>
-<dd>
-</dd></li>
-</ol></li>
-</ol>
-<dt>
-α
-</dt>
-<dd>
-<ol style="list-style-type: lower-roman">
-<li>The rejection criterion. (ii) The probability of making a Type I error.
-</dd>
-<dt>
-β
-</dt>
-<dd>
-The probability of making a Type II error.
-</dd>
-<dt>
-M
-</dt>
-<dd>
-The sample median.
-</dd>
-<dt>
-</dt>
-<dd>
-</dd>
-<dt>
-</dt>
-<dd>
-</dd>
-<dt>
-</dt>
-<dd>
-</dd>
-<dt>
-</dt>
-<dd>
-</dd>
-<dt>
-</dt>
-<dd>
-</dd>
-<dt>
-</dt>
-<dd>
-</dd>
-<dt>
-</dt>
-<dd>
-</dd>
-<dt>
-</dt>
-<dd>
-</dd>
-<dt>
-</dt>
-<dd>
-</dd>
-<dt>
-</dt>
-<dd>
-</dd>
-<dt>
-</dt>
-<dd>
-</dd>
-<dt>
-</dt>
-<dd>
-</dd>
-<dt>
-</dt>
-<dd>
-</dd></li>
-</ol>
 </dl>
 </div>
+
+
 
 
 </div>
@@ -193,9 +211,13 @@ The sample median.
 <script>
 
 // add bootstrap table styles to pandoc tables
-$(document).ready(function () {
+function bootstrapStylePandocTables() {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
 });
+
 
 </script>
 

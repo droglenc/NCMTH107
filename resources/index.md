@@ -14,7 +14,7 @@ title: Resources
 1. [**FAQ**](FAQ/)
 1. **Glossaries**
     * Definitions
-    * Symbols
+    * [Symbols](symbols)
 
 ## Computer
 1. **Data Files**
