@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Bivariate EDA - Categorical
-subtitle: Class Exercise 3
+title: Class Exercise
+subtitle: Bivariate EDA - Categorical 3
 css: "/css/modules.css"
 ---
 
