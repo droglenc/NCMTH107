@@ -5,16 +5,16 @@ title: Resources
 
 ## Administrative
 1. Feedback / Suggestions -- [Dr. Ogle](https://www.suggestionox.com/r/W16-107){:target="_blank"}
-1. [**Quizzes**](quizzes/)
+1. [**Daily Quiz**](quizzes/)
 1. [**Homework Answer Keys**](homework-keys/)
 1. [**Class Exercise Answer Keys**](ce-keys/)
 
 ## Learning Assistance
 1. **R Cheat Sheet** ([PDF](MTH107-Rcheatsheet.pdf) or [PPT](MTH107-Rcheatsheet.pptx))
 1. [**FAQ**](FAQ/)
-1. **Glossaries**
-    * Definitions
-    * [Symbols](symbols)
+1. **Hypothesis Testing Fact Sheet** ([PDF](MTH107-HOcheatsheet.pdf) or [PPT](MTH107-HOcheatsheet.ppt))
+1. [**List of Symbols**](symbols)
+1. **Common Definitions** 
 
 ## Computer
 1. **Data Files**
