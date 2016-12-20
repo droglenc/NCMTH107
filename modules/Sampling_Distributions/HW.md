@@ -31,10 +31,10 @@ Suppose that a population consists of eight individuals with the following "valu
 
 Answer the questions below assuming that a population is known to have a mean of 60.
 
-(a) Construct a hypothetical series of four numbers (that could represent sample means) that would be considered both precise and accurate.
-(b) Construct a hypothetical series of four numbers that would be considered imprecise but accurate.
-(c) Construct a hypothetical series of four numbers that would be considered precise but inaccurate.
-(d) Construct a hypothetical series of four numbers that would be considered imprecise and inaccurate.
+1. Construct a hypothetical series of four numbers (that could represent sample means) that would be considered both precise and accurate.
+1. Construct a hypothetical series of four numbers that would be considered imprecise but accurate.
+1. Construct a hypothetical series of four numbers that would be considered precise but inaccurate.
+1. Construct a hypothetical series of four numbers that would be considered imprecise and inaccurate.
 
 ----
 
