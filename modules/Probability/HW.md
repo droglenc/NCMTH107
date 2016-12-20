@@ -13,7 +13,7 @@ css: "/css/modules.css"
 
 ----
 
-## Estimating Fishing Pressure
+## Food Choice by Chipmunks
 <img src="../zimgs/urn.png" alt="Urn" class="img-right">
 
 An "arena" contains 8 acorns and 9 kernels of corn. Assume that a chipmunk placed in the arena chooses items to eat at random. Use this information to answer the questions below.

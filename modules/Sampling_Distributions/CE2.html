@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Sampling Distributions
-subtitle: Class Exercise 2
+title: Class Exercise
+subtitle: Sampling Distributions 2
 author: Derek H. Ogle
 css: "/css/modules.css"
 ---
@@ -163,8 +163,11 @@ Dispersion
 <script>
 
 // add bootstrap table styles to pandoc tables
-$(document).ready(function () {
+function bootstrapStylePandocTables() {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
 });
 
 

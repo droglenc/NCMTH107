@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Sampling Distributions
-subtitle: Class Exercise 3
+title: Class Exercise
+subtitle: Sampling Distributions 3
 css: "/css/modules.css"
 ---
 

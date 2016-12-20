@@ -19,6 +19,7 @@ css: /css/syllabus.css
 <dt>XX-Jan</dt><dd><a href="../modules/BivEDA_Categorical/HW">Bivariate EDA - Categorical</a></dd>
 <dt>XX-Jan</dt><dd><a href="../modules/Linear_Regression/HW">Linear Regression</a></dd>
 <dt>XX-Jan</dt><dd><a href="../modules/Probability/HW">Probability Introduction</a></dd>
+<dt>XX-Jan</dt><dd><a href="../modules/Sampling_Distributions/HW">Sampling Distributions</a></dd>
 
 
 
