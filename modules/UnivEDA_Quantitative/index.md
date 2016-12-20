@@ -49,7 +49,7 @@ Additionally, you should prepare by reading **Section 4.3** in [the textbook](..
 
 ## Practice
 
-* In-Class Exercises -- [I](CE1) / [II](CE2) / [III](CE3) / [IV](CE4) / [V](CE5)
+* In-Class Exercises -- [1](CE1) / [2](CE2) / [3](CE3) / [4](CE4) / [5](CE5)
 * [Homework Assignment](HW)
 
 ----

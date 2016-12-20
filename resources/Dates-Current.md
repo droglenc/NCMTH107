@@ -20,22 +20,11 @@ css: /css/syllabus.css
 <dt>XX-Jan</dt><dd><a href="../modules/Linear_Regression/HW">Linear Regression</a></dd>
 <dt>XX-Jan</dt><dd><a href="../modules/Probability/HW">Probability Introduction</a></dd>
 <dt>XX-Jan</dt><dd><a href="../modules/Sampling_Distributions/HW">Sampling Distributions</a></dd>
-
-
-
-
-<dt>19-Sep</dt><dd>2.10-2.11</dd>
-<dt>23-Sep</dt><dd>3.12</dd>
-<dt>28-Sep</dt><dd>4.50-4.51</dd>
-<dt>3-Oct</dt><dd>5.24-5.25</dd>
-<dt>12-Oct</dt><dd>6.24-6.26</dd>
-<dt>19-Oct</dt><dd>7.19 and (separately) 8.4 and 8.5</dd>
-<dt>26-Oct</dt><dd>9.22-9.24</dd>
-<dt>9-Nov</dt><dd>10.45-10.48</dd>
-<dt>21-Nov</dt><dd>11.22-11.23</dd>
-<dt>30-Nov</dt><dd>11.24-11.25</dd>
-<dt>5-Dec</dt><dd>12.38</dd>
-<dt>9-Dec</dt><dd>12.35</dd>
+<dt>XX-Jan</dt><dd><a href="../modules/1_Sample_Z/HW">1-Sample Z-Test</a></dd>
+<dt>XX-Jan</dt><dd><a href="../modules/1_Sample_t/HW">1-Sample t-Test</a></dd>
+<dt>XX-Jan</dt><dd><a href="../modules/2_Sample_t/HW">2-Sample t-Test</a></dd>
+<dt>XX-Jan</dt><dd><a href="../modules/Chi_Square/HW">Chi-Square Test</a></dd>
+<dt>XX-Jan</dt><dd><a href="../modules/Goodness_of_Fit/HW">Goodness-of-Fit Test</a></dd>
 --->
 </dl>
 

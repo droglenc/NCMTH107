@@ -39,7 +39,7 @@ You should prepare for the concepts of this module by reading **Section 11.3** i
 
 ## Practice
 
-* In-Class Exercise -- [I](CE1) / [II](CE2) / [III](CE3)
+* In-Class Exercise -- [1](CE1) / [2](CE2) / [3](CE3)
 * [Homework Assignment](HW)
 
 ----

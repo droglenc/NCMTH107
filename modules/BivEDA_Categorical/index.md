@@ -40,7 +40,7 @@ You should prepare for the concepts of this module by reading **Section 6.2** in
 
 ## Practice
 
-* In-Class Exercises -- [I](CE1.html) / [II](CE2.html) / [III](CE3.html)
+* In-Class Exercises -- [1](CE1.html) / [2](CE2.html) / [3](CE3.html)
 * [Homework Assignment](HW)
 
 ----

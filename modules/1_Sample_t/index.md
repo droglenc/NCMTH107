@@ -44,7 +44,7 @@ Then read **Section 11.2** in [the textbook](../../book/) and watching the follo
 
 ## In-Class Practice
 
-* Class Exercises -- [I](CE1) / [II](CE2) / [III](CE3)
+* Class Exercises -- [1](CE1) / [2](CE2) / [3](CE3)
 * [Homework Assignment](HW)
 
 ----

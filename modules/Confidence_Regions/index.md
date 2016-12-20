@@ -46,7 +46,7 @@ After completing this module you should re-read **Section 10.5** in [the textboo
 
 ## Practice
 
-* In-Class Exercises -- [I](CE1), [II](CE2), [III](CE3), [IV](CE4).
+* In-Class Exercises -- [1](CE1) / [2](CE2) / [3](CE3) / [4](CE4).
 
 ----
 

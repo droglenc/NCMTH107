@@ -30,7 +30,7 @@ source("../../rhelpers/knitr_setup.R")
 
 ## Animal Fat and Breast Cancer
 
-Carroll (1975) examined the relationship between per capita consumption of animal fat (g/day; AnimFatI) and age-adjusted death rate from breast cancer (AgeAdjDe) for 39 countries.  Use the following results from her data to describe the bivariate relationship between these two variables.
+[Carroll (1975)](https://www.ncbi.nlm.nih.gov/pubmed/1104150) examined the relationship between per capita consumption of animal fat (g/day; AnimFatI) and age-adjusted death rate from breast cancer (AgeAdjDe) for 39 countries.  Use the following results from her data to describe the bivariate relationship between these two variables.
 
 ```{r echo=FALSE, fig.width=3.5, fig.height=3.5, par1=TRUE}
 cf <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/CancerFat.csv")

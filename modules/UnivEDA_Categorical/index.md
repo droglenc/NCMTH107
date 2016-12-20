@@ -44,7 +44,7 @@ You should prepare for the concepts of this module by reading **Sections 4.2 and
 
 ## Practice
 
-* In-Class Exercises -- [I](CE1) / [II](CE2) / [III](CE3) / [IV](CE4) / [V](CE5)
+* In-Class Exercises -- [1](CE1) / [2](CE2) / [3](CE3) / [4](CE4) / [5](CE5)
 * [Homework Assignment](HW)
 
 ----

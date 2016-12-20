@@ -50,7 +50,7 @@ You should prepare for the concepts of this module by reading **Chapter 2** in [
 
 ## Practice
 
-* In-Class Exercises -- [I](CE1.html) / [II](CE2.html) /  [III](CE3.html) / [IV](CE4.html) / [V](CE5.html)
+* In-Class Exercises -- [1](CE1) / [2](CE2) /  [3](CE3) / [4](CE4) / [5](CE5)
 * [Homework Assignment](HW)
 
 ----

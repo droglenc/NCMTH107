@@ -42,9 +42,9 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
 
 ## Practice
 
-* First set of in-class exercises -- [I](CE1)
-* Second set of in-class exercises --  [II](CE2) / [III](CE3)
-* Third set of in-class exercises -- [IV](CE4) / [V](CE5)
+* First set of in-class exercises -- [1](CE1)
+* Second set of in-class exercises --  [2](CE2) / [3](CE3)
+* Third set of in-class exercises -- [4](CE4) / [5](CE5)
 
 ----
 
