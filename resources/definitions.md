@@ -39,10 +39,11 @@ collecting, organizing, and interpreting numerical information or data.</dd>
   </div>
 </div>
 
-
+<style>
 .panel {
     width: 500px;  
 }
 .panel .dl-horizontal dt {
     white-space: normal;
 }
+</style>
