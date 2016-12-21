@@ -40,11 +40,6 @@ collecting, organizing, and interpreting numerical information or data.</dd>
 </div>
 
 <style>
-.panel .dl-horizontal dd {
-    padding-left: 0.5em;
-    padding-bottom: 0.2em;
-    width: 69%
-}
 .panel .dl-horizontal dt {
     white-space: normal;
     width: 29%;
@@ -52,5 +47,11 @@ collecting, organizing, and interpreting numerical information or data.</dd>
 }
 .panel .dl-horizontal dt:after {
     content: ":";
+    padding-left: 0.5em;
 }
+.panel .dl-horizontal dd {
+    padding-left: 0.5em;
+    padding-bottom: 0.2em;
+}
+
 </style>
