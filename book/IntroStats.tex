@@ -57,6 +57,7 @@
 \hypersetup{pdftitle = MTH107 Notes}
 \input{c:/aaaWork/zGnrlLatex/JustRPreamble}
 \usepackage{animate}
+\renewcommand{\chaptername}{Module}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
 
@@ -96,30 +97,32 @@
   \label{fig:KreherParkMap}
 \end{figure}
 
-The WDNR wants to study elements in the sediment (among other things) in the entire approximately 3000 m$^2$ area shaded in \figref{fig:KreherParkMap}.  Is it physically possible to examine every square meter of that area?  Is it prudent, ecologically and economically, to examine every square meter of this area?  The answer, of course, is ``no.''  How then will the WDNR be able to make conclusions about this entire area if they cannot reasonably examine the whole area?  The most reasonable solution is to sample a subset of all of this area and use the results from this sample to make inferences about the entire area.
+The WDNR wants to study elements in the sediment (among other things) in the entire 3000 m$^2$ area shaded in \figref{fig:KreherParkMap}.  Is it physically possible to examine every square meter of that area?  Is it prudent, ecologically and economically, to examine every square meter of this area?  The answer, of course, is ``no.''  How then will the WDNR be able to make conclusions about this entire area if they cannot reasonably examine the whole area?  The most reasonable solution is to sample a subset of the area and use the results from this sample to make inferences about the entire area.
 
-Methods for properly selecting a sample that fairly represents a larger collection of individuals are an important area of study in the field of statistics.  For example, the WDNR would not want to sample areas that are only conveniently near shore because this will likely not be an accurate representation of the entire area to be studied.  In this example, it appears that the WDNR employed a grid to assure a relatively even dispersal of samples throughout the study area \figrefp{fig:KreherParkMap}.  Methods for choosing the number of individuals to select and how to select these individuals will be discussed in \chapref{chap:DataProd}.
+Methods for properly selecting a sample that fairly represents a larger collection of individuals are an important area of study in statistics.  For example, the WDNR would not want to sample areas that are only conveniently near shore because this will likely not be an accurate representation of the entire area.  In this example, it appears that the WDNR used a grid to assure a relatively even dispersal of samples throughout the study area \figrefp{fig:KreherParkMap}.  Methods for choosing the number of individuals to select and how to select those individuals are discussed in \chapref{chap:DataProd}.
 
 
-Suppose that the WDNR measured the concentration of lead at each of the 119 locations shown in \figref{fig:KreherParkMap} and that they were to present the results from these data at a public meeting.  Further suppose that the WDNR scientist came to the meeting and showed a slide that simply had the list of lead concentration measurements on it \tabrefp{tab:KreherParkPbconc}.\footnote{These are hypothetical data for this site.}  Is it easy to come to any conclusion about what these data mean from this type of presentation?  Instead, suppose that the scientist came to the meeting with a simple plot of the frequency of concentrations present in the data and brief numerical summaries \figrefp{fig:KreherParkPbhist}.  With this presentation one can fairly easily see that the measurements were fairly symmetric with no obviously ``weird'' measurements and ranged from as low as 0.67 $\mu g \cdot m^{-3}$ to as high as 1.36 $\mu g \cdot m^{-3}$ with the measurements centered on approximately 1.0 $\mu g \cdot m^{-3}$.  These summaries will be discussed in detail in \chapref{chap:UnivEDA}.  However, at this point note that statistical methods are important for distilling or summarizing large quantities of data into graphs or numerical summaries from which it is much easier to identify characteristics of the data.
+Suppose that the WDNR measured the concentration of lead at each of the 119 locations shown in \figref{fig:KreherParkMap}. Further suppose that they presented their results at a public meeting by simply showing the list of lead concentration measurements \tabrefp{tab:KreherParkPbconc}.\footnote{These are hypothetical data for this site.}  Is it easy to make conclusions about what these data mean from this type of presentation?  Instead, suppose that the scientists came to the meeting with a simple plot of the frequency of observed lead concentrations and brief numerical summaries \figrefp{fig:KreherParkPbhist}.  With this presentation one can easily see that the measurements were fairly symmetric with no obviously ``weird'' measurements and ranged from as low as 0.67 $\mu g \cdot m^{-3}$ to as high as 1.36 $\mu g \cdot m^{-3}$ with the measurements centered on approximately 1.0 $\mu g \cdot m^{-3}$.  These summaries will be discussed in detail in \chapref{chap:UnivEDAQuant}.  However, at this point, note that statistical methods are important for distilling or summarizing large quantities of data into graphs or numerical summaries from which it is easier to identify meaning from the data.
 
 \begin{table}[htbp]   \label{tab:KreherParkPbconc}
-  \caption{Lead concentration measurements ($\mu g \cdot m^{-3}$) at each of 119 sites in Kreher Park superfund site.}
+  \caption{Lead concentration ($\mu g \cdot m^{-3}$) from 119 sites in Kreher Park superfund site.}
   \begin{center}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{verbatim}
-  [1] 0.91 1.03 0.87 1.24 1.05 0.88 1.07 1.11 1.09 0.95 1.23 1.06 0.91 0.67 1.17 0.99
- [17] 1.00 1.14 1.12 1.09 1.14 1.12 1.01 0.70 1.09 0.99 0.98 0.78 0.93 1.06 1.20 0.98
- [33] 1.06 0.99 0.79 0.94 0.94 0.99 1.17 1.11 0.98 0.96 1.10 1.08 0.90 0.89 1.05 1.12
- [49] 0.98 1.13 1.06 0.91 1.05 0.83 1.21 1.30 0.94 0.84 1.09 0.98 1.36 0.99 1.10 1.00
- [65] 0.89 1.03 0.73 1.22 1.02 1.33 1.07 0.89 1.09 0.86 0.81 1.04 0.93 1.00 1.01 0.91
- [81] 0.91 0.98 1.18 0.77 1.09 1.05 1.16 0.95 1.06 1.04 0.92 1.18 1.17 1.11 1.24 1.08
- [97] 0.81 0.91 0.82 0.93 0.91 1.01 0.86 1.02 0.90 1.27 1.11 1.14 1.06 1.25 0.90 0.93
-[113] 1.21 0.90 0.97 0.94 0.95 0.96 1.07
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
+% latex table generated in R 3.3.2 by xtable 1.8-2 package
+% Tue Dec 20 23:50:41 2016
+\begin{tabular}{rrrrrrrrrrrrrrr}
+  \hline
+  \hline
+0.91 & 1.09 & 1.00 & 1.09 & 1.06 & 0.98 & 0.98 & 0.94 & 0.89 & 1.09 & 0.91 & 1.06 & 0.81 & 0.90 & 1.21 \\ 
+  1.03 & 0.95 & 1.14 & 0.99 & 0.99 & 0.96 & 1.13 & 0.84 & 1.03 & 0.86 & 0.98 & 1.04 & 0.91 & 1.27 & 0.90 \\ 
+  0.87 & 1.23 & 1.12 & 0.98 & 0.79 & 1.10 & 1.06 & 1.09 & 0.73 & 0.81 & 1.18 & 0.92 & 0.82 & 1.11 & 0.97 \\ 
+  1.24 & 1.06 & 1.09 & 0.78 & 0.94 & 1.08 & 0.91 & 0.98 & 1.22 & 1.04 & 0.77 & 1.18 & 0.93 & 1.14 & 0.94 \\ 
+  1.05 & 0.91 & 1.14 & 0.93 & 0.94 & 0.90 & 1.05 & 1.36 & 1.02 & 0.93 & 1.09 & 1.17 & 0.91 & 1.06 & 0.95 \\ 
+  0.88 & 0.67 & 1.12 & 1.06 & 0.99 & 0.89 & 0.83 & 0.99 & 1.33 & 1.00 & 1.05 & 1.11 & 1.01 & 1.25 & 0.96 \\ 
+  1.07 & 1.17 & 1.01 & 1.20 & 1.17 & 1.05 & 1.21 & 1.10 & 1.07 & 1.01 & 1.16 & 1.24 & 0.86 & 0.90 & 1.07 \\ 
+  1.11 & 0.99 & 0.70 & 0.98 & 1.11 & 1.12 & 1.30 & 1.00 & 0.89 & 0.91 & 0.95 & 1.08 & 1.02 & 0.93 &  \\ 
+   \hline
+\end{tabular}
+
   \end{center}
 \end{table}
 
@@ -153,28 +156,29 @@ A critical question at this point is whether or not the results from the one sam
 
 \end{knitrout}
 
-The results of two different samples do not perfectly agree because each sample contains different individuals, and no two individuals (sites in this example) are exactly alike in every regard.  The fact that no two individuals are exactly alike is \textbf{natural variability}\index{Natural Variability!Definition}, because of the ``natural'' differences that occur among individuals.  The fact that the results from different samples are different is called \textbf{sampling variability}\index{Sampling Variability!Definition}.  If there was no natural variability, then there would be no sampling variability.  If there was no sampling variability, then the field of statistics would not be needed because a sample (even of one individual) would perfectly represent the larger group of individuals.  Thus, understanding variability is at the core of statistical practice.  These concepts of natural and sampling variability will be revisited continuously throughout this course.
+\vspace{18pt}
+The results of two different samples do not perfectly agree because each sample contains different individuals, and no two individuals (sites in this example) are exactly alike.  The fact that no two individuals are exactly alike is \textbf{natural variability}\index{Natural Variability!Definition}, because of the ``natural'' differences that occur among individuals.  The fact that the results from different samples are different is called \textbf{sampling variability}\index{Sampling Variability!Definition}.  If there was no natural variability, then there would be no sampling variability.  If there was no sampling variability, then the field of statistics would not be needed because a sample (even of one individual) would perfectly represent the larger group of individuals.  Thus, understanding variability is at the core of statistical practice.  Natural and sampling variability will be revisited continuously throughout this course.
 
 \defn{Natural Variability}{The fact that no two individuals are exactly alike.}
 
 \vspace{-12pt}
 \defn{Sampling Variability}{The fact that the results (i.e., statistics) from different samples are different.}
 
-All of this may be a bit unsettling!  First, it was shown that an entire area or all of the individuals of interest cannot be examined.  It was then shown that a sample of a subset of individuals did not perfectly represent all of the individuals.  Furthermore, each sample is unique and will likely lead to a different conclusion.  These are all real and difficult issues faced by the practicing scientist and considered by the informed consumer.  However, the field of statistics is designed to ``deal with'' these issues such that the results from a relatively small subset of measurements can be used to make conclusions about the entire collection of measurements.
+This may be a bit unsettling!  First, it was shown that an entire area or all of the individuals of interest cannot be examined.  It was then shown that a sample of individuals from the larger set did not perfectly represent all of the individuals.  Furthermore, each sample is unique and will likely lead to a different conclusion.  These are all real and difficult issues faced by the practicing scientist and considered by the informed consumer.  However, the field of statistics is designed to ``deal with'' these issues such that the results from a relatively small subset of measurements can be used to make conclusions about the entire collection of measurements.
 
 \warn{Statistics provides methods for overcoming the difficulties caused by the requirement of sampling and the presence of sampling variability.}
 
 
-\section{Purpose of Statistics}
-The field of statistics has two primary purposes, which were illustrated in the Kreher Park example.  First, statistics provides methods to summarize large quantities of data into concise and informative numerical or graphical summaries.  For example, it is easier to discern the general underlying structure of the lead measurements from the statistics and histograms presented in Figures \ref{fig:KreherParkPbhist} and \ref{fig:KreherParkPbhist1} than it is from the full list of lead measurements in \tabref{tab:KreherParkPbconc}.  Second, statistical methods allow inferences to be made about all individuals (i.e., a population) from a few individuals (i.e., a sample).  Population and sample are defined more completely in \sectref{sect:IVPPSS}.
+\section{Major Goals or Purposes of Statistics}
+The field of statistics has two primary purposes, which were illustrated in the Kreher Park example above.  First, statistics provides methods to summarize large quantities of data into concise and informative numerical or graphical summaries.  For example, it was easier to discern the general underlying structure of the lead measurements from the statistics and histograms presented in Figures \ref{fig:KreherParkPbhist} and \ref{fig:KreherParkPbhist1} than it was from the full list of lead measurements in \tabref{tab:KreherParkPbconc}.  Second, statistical methods allow inferences to be made about all individuals (i.e., a population) from a few individuals (i.e., a sample).  Population and sample are defined more completely in \sectref{sect:IVPPSS}.
 
 \warn{Statistics, as a field of study, is used to (1) summarize large quantities of data and (2) make inferences about populations from samples.}
 
 
 \section{Definition of Statistics}
-With the Kreher Park example in mind, let's consider a definition of statistics.  Statistics is the science of collecting, organizing, and interpreting numerical information or data \citep{MooreMcCabe1998}\index{Statistics, Field of!Definition}.  People (students and professionals) study statistics for a variety of reasons, including \citep{Bluman2000}:
+Statistics is the science of collecting, organizing, and interpreting numerical information or data \citep{MooreMcCabe1998}\index{Statistics, Field of!Definition}.  People study statistics for a variety of reasons, including \citep{Bluman2000}:
 \begin{Enumerate}
-  \item They must be able to read and understand the statistical studies performed in their field. To have this understanding they must be knowledgeable about the vocabulary, symbols, concepts, and statistical procedures used in these studies.
+  \item They must be able to read and understand the statistical studies performed in their field. To have this understanding they must be knowledgeable about the vocabulary, symbols, concepts, and statistical procedures used in those studies.
   \item They may need to conduct research in their field. To accomplish this they must be able to design experiments and samples; collect, organize, analyze, and summarize data; and possibly make reliable predictions or forecasts for future use. They must also be able to communicate the results of the study.
   \item They also need to be better consumers of statistical information.
 \end{Enumerate}
@@ -186,16 +190,14 @@ The study and collection of data are important in the work of many professions, 
 
 \defn{Statistics}{The science of collecting, organizing, and interpreting numerical information or data.}
 
+\newpage
 \begin{exsection}
-
-
   \item \label{revex:WhyStatsLakes} There are 1499 lakes in Ashland, Bayfield, and Douglas counties of Wisconsin.  However, only 605 of these are named.  A random sample of named lakes from this population is extracted with the following R code:
 \vspace{-12pt}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{kframe}
 \begin{verbatim}
 > library(NCStats)
-> data(ABDLakes)
 > named <- filterD(ABDLakes,named)
 > srsdf(named,n=50,vars=c("county","area"))
 \end{verbatim}
@@ -203,10 +205,10 @@ The study and collection of data are important in the work of many professions, 
 \end{knitrout}
 Use this code and some hand (or calculator) calculations to answer the questions below. \ansref{ans:WhyStatsLakes}
     \begin{Enumerate}
-      \item Extract a sample of 50 lakes with the code above.  Compare the size (area in acres) of the first two lakes.  What do you observe?  This is an example of what type of variability?
-      \item Compute the proportion of lakes in your sample that are from Bayfield county.
-      \item Extract another sample of 50 lakes.  Compare the proportion of lakes that are from Bayfield county in this sample to the proportion from your first sample.  What do you observe?  This is an example of what type of variability?
-      \item Of the named lakes in the three counties, 346 are from Bayfield county.  Was the proportion of lakes from Bayfield County in either of your samples equal to the proportion of all named lakes that were from Bayfield County?  Were you surprised?  Why or why not?
+      \item Extract a sample of n=50 lakes with the code above.  Compare the sizes (area in acres) of the first three lakes.  This is an example of what type of variability?
+      \item Compute the proportion of lakes in your sample that are from Bayfield County.
+      \item Extract another sample of n=50 lakes and compute the proportion of lakes that are from Bayfield County? Compare your two proportions. This is an example of what type of variability?
+      \item Of the named lakes in the three counties, 346 are from Bayfield County.  Was the proportion of lakes from Bayfield County in either of your samples equal to the proportion of all named lakes that were from Bayfield County?  Were you surprised?  Why or why not?
     \end{Enumerate}
 \end{exsection}
 
@@ -228,11 +230,11 @@ Use this code and some hand (or calculator) calculations to answer the questions
 \minitoc
 \newpage
 
-\lettrine{S}{tatistical inference is the process} of forming conclusions about the unknown parameters of a population by computing statistics from the individuals in a sample.\index{Inference!Definition}  As you can imagine from this definition, it is important that you understand the difference between a population and a sample and a parameter and a statistic before you can understand and appreciate the process of making statistical inferences.  Before identifying these items you must also identify the individual and variable(s) of interest.  These six items must be explicitly identified at the beginning of any statistical analysis for that analysis to be conducted properly.  Understanding and identifying these items is the focus of this section.  Formal methods of inference are discussed beginning with \chapref{chap:ProbIntro}.
+\lettrine{S}{tatistical inference is the process} of forming conclusions about the unknown parameters of a population by computing statistics from the individuals in a sample.\index{Inference!Definition}  As you can imagine from this definition, it is important that you understand the difference between a population and a sample and a parameter and a statistic before you can understand and appreciate the process of making statistical inferences.  Before identifying these items, the individual and variable(s) of interest must also be identified.  Understanding and identifying these six items is the focus of this Chapter.  Formal methods of inference are discussed beginning with \chapref{chap:ProbIntro}.
 
 \defn{Inference}{The process of forming conclusions about the unknown parameters of a population by computing statistics from the individuals in a sample.}
 
-Throughout this chapter we will identify the individual, variable, population, parameter, sample, and statistic (referred to as the \textbf{IVPPSS}) for the following hypothetical example.  Assume that interest is in determining the mean (or average) length of the 1015 fish in Square Lake \figrefp{fig:SquareLakePopn}.  Note that in ``real life'' we would not know how many fish are in this lake.  However, for the purpose of illustrating the concepts of this chapter we will suppose that specific values of several variables for all 1015 fish in this lake are known.
+The following hypothetical example is used throughout this chapter.  Assume that interest is in determining the mean (or average) length of the 1015 fish in Square Lake \figrefp{fig:SquareLakePopn}. In ``real life'' you would not know how many fish are in this lake.  However, for the purpose of illustrating important concepts in this chapter, it is assumed that all information for all 1015 fish in this lake is known.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{figure}[hbtp]
@@ -248,7 +250,9 @@ Throughout this chapter we will identify the individual, variable, population, p
 
 \end{knitrout}
 
-\section{IVPPSS Definitions}
+\vspace{-24pt}
+\section{Definitions} \label{sect:IVPPSS}
+\vspace{-12pt}
 The \textbf{individual} in a statistical analysis is one of the ``items'' to be examined by the researcher.\index{Individual, Definition}  Sometimes the individual is a person, but it may be an animal, a piece of wood, a site or location, a particular time, or an event.  It is extremely important that you don't always visualize a person when you use the word individual in a statistical context.  Synonyms for individual are unit, experimental unit (usually used in experiments), sampling unit (usually used in observational studies), case, and subject (usually used in studies involving humans).  The individual of interest in the Square Lake example is an individual fish, because the researcher will collect a set of fish and examine each fish individually.
 
 \defn{Individual}{One of the items examined by the researcher.}
@@ -256,21 +260,21 @@ The \textbf{individual} in a statistical analysis is one of the ``items'' to be 
 \vspace{-12pt}
 \warn{An individual is not necessarily a person.}
 
-The \textbf{variable} is the characteristic of interest about each individual.\index{Variable!Definition}  The variable is the information that the researcher records about each individual. The variable of interest in the Square Lake example is the length of each fish. Note that in most ``real life'' studies the researcher will be interested in more than one variable.  For example, in this example, the researcher may also record the fish's weight, sex, and age.  Studies with one variable are called univariate studies, studies with two variables are bivariate studies, and studies with more than two variables are called multivariate studies.
+The \textbf{variable} is the characteristic of interest recorded about each individual.\index{Variable!Definition} The variable of interest in the Square Lake example is the length of each fish. Note that in most ``real life'' studies the researcher will record more than one variable.  For this example, the researcher may also record the fish's weight, sex, and age.  Studies with one variable are called univariate studies, studies with two variables are bivariate studies, and studies with more than two variables are called multivariate studies.
 
-\defn{Variable}{The characteristic of interest about each individual.}
+\defn{Variable}{The characteristic of interest recorded about each individual.}
 
-A \textbf{population} is the collection of ALL individuals of interest.\index{Population}  Simply put, the population is all of the individuals.  In the Square Lake example, the population is all 1015 fish in the lake.  You should define the population as thoroughly as possible including all qualifiers as necessary.  This example is simple because Square Lake is so well defined; however, as you will see in the chapter review exercises, the population is often only well-defined by your choice of descriptors.
+A \textbf{population} is ALL individuals of interest.\index{Population} In the Square Lake example, the population is all 1015 fish in the lake.  The population should be defined as thoroughly as possible including qualifiers as necessary.  This example is simple because Square Lake is so well defined; however, as you will see in the review exercises, the population is often only well-defined by your choice of descriptors.
 
-\defn{Population}{The collection of ALL individuals of interest.}
+\defn{Population}{ALL individuals of interest.}
 
-A \textbf{parameter} is a summary computed from ALL individuals in a population.\index{Parameter!Definition}  The term for the particular summary is usually preceded by the word ``population.''  Parameters are ultimately what is of interest because interest is in all individuals in the population.  However, in practice, parameters cannot be computed because the entire population cannot be ``seen.''  In this hypothetical example, all 1015 fish are accessible and the parameters are computed \tabrefp{tab:SquareLakePopn}.\footnote{We will discuss how to compute and interpret each of these values in later chapters.}  As stated above, in this example, interest is in the population mean (or average) length of all fish in Square Lake, which is 98.06 mm.
+A \textbf{parameter} is a summary computed from ALL individuals in a population.\index{Parameter!Definition}  The term for the particular summary is usually preceded by the word ``population.''  Parameters are ultimately what is of interest because interest is in all individuals in the population.  However, in practice, parameters cannot be computed because the entire population cannot be ``seen.''  In this hypothetical example, the parameters can be computed because all 1015 fish are accessible.  In this example, the researchers were interested in the population mean length of all fish in Square Lake, which is 98.06 mm \tabrefp{tab:SquareLakePopn}.\footnote{We will discuss how to compute and interpret each of these values in later chapters.}
 
 % latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Tue Dec 20 17:50:31 2016
+% Tue Dec 20 23:50:41 2016
 \begin{table}[ht]
 \centering
-\caption{Summary parameters for the total length of all 1015 fish in the Square Lake population.} 
+\caption{Parameters for the total length of ALL 1015 fish in the Square Lake population.} 
 \label{tab:SquareLakePopn}
 \begin{tabular}{cccccccc}
  n & mean & sd & min & Q1 & median & Q3 & max \\ 
@@ -281,12 +285,12 @@ A \textbf{parameter} is a summary computed from ALL individuals in a population.
 \end{table}
 
 
-\defn{Parameter}{A summary of all individuals in a population.}
+\defn{Parameter}{A summary of ALL individuals in a population.}
 
 \vspace{-12pt}
 \warn{Populations and parameters can generally not be ``seen.''}
 
-The entire population cannot be ``seen'' in real life.  Thus, the only alternative for learning something about the population is to examine a subset of the population.  This subset is called a \textbf{sample}.\index{Sample!Definition}  The red dots in \figref{fig:SquareLakeSample1} represent a random sample of 50 fish from Square Lake (note that the sample size is usually denoted by a lower-case n; i.e., n=50).
+The entire population cannot be ``seen'' in real life.  Thus, a subset of the population is usually examined to learn something about the population.  This subset is called a \textbf{sample}.\index{Sample!Definition}  The red dots in \figref{fig:SquareLakeSample1} represent a random sample of n=50 fish from Square Lake (note that the sample size is usually denoted by n).
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{figure}[hbtp]
@@ -304,10 +308,12 @@ The entire population cannot be ``seen'' in real life.  Thus, the only alternati
 
 \defn{Sample}{A subset of the population examined by a researcher.}
 
-Summaries computed from individuals in a sample are called \textbf{statistics}.\index{Statistic!Definition}  Specific names of statistics should be preceded by the word ``sample.''  The statistic of interest is always the same as the parameter of interest; i.e., the statistic describes the sample the same way that the parameter describes the population.  For example, if interest is in the population mean, then the sample mean would be computed.  Some statistics computed from this sample are shown in \tabref{tab:SquareLakeSample1} and \figref{fig:SquareLakeSample1}.  The sample mean of 100.04 mm is the best ``guess'' at the population mean.  Not surprisingly from the discussion in \sectref{sect:WhyStats}, the sample mean does not perfectly equal the population mean.
+Summaries computed from individuals in a sample are called \textbf{statistics}.\index{Statistic!Definition}  Specific names of statistics are preceded by ``sample.''  The statistic of interest is always the same as the parameter of interest; i.e., the statistic describes the sample in the same way that the parameter describes the population.  For example, if interest is in the population mean, then the sample mean would be computed.
+
+Some statistics computed from the sample from Square Lake are shown in \tabref{tab:SquareLakeSample1} and \figref{fig:SquareLakeSample1}.  The sample mean of 100.04 mm is the best ``guess'' at the population mean.  Not surprisingly from the discussion in \chapref{chap:WhyStatsImportant}, the sample mean does not perfectly equal the population mean.
 
 % latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Tue Dec 20 17:50:31 2016
+% Tue Dec 20 23:50:41 2016
 \begin{table}[ht]
 \centering
 \caption{Summary statistics for the total length of a sample of 50 fish from the Square Lake population.} 
@@ -321,41 +327,44 @@ Summaries computed from individuals in a sample are called \textbf{statistics}.\
 \end{table}
 
 
+\defn{Statistic}{A summary of all individuals in a sample.}
+
 
 \section{Performing an IVPPSS}
-In each statistical analysis it is important that you determine the Individual, Variable, Population, Parameter, Sample, and Statistics (IVPPSS).  It is simplest to do this in this order -- IVPPSS.  First, determine what items you are actually going to look at; those are your individuals.  Second, what are you going to record when you look at an individual; that is the variable.  Third, the population is simply ALL of the individuals.  Fourth, the parameter is a summary (e.g., mean or proportion) of the variable recorded from all of the individuals in the population.\footnote{Again, parameters generally cannot be computed because all of the individuals in the population can generally not be seen.  Thus, the parameter is largely conceptual.}  Fifth, we realize that we cannot see all of the individuals in the population so we examined only a few; those few were the sample.  Finally, the summary of the individuals in the sample is the statistic.  The statistic has to be the same summary of the sample as the parameter was of the population.
+\vspace{-12pt}
+In each statistical analysis it is important that you determine the Individual, Variable, Population, Parameter, Sample, and Statistic (\textbf{IVPPSS}). First, determine what items you are actually going to look at; those are your individuals.  Second, what are you going to record when you look at an individual; that is the variable.  Third, the population is simply ALL of the individuals.  Fourth, the parameter is a summary (e.g., mean or proportion) of the variable recorded from ALL of the individuals in the population.\footnote{Again, parameters generally cannot be computed because all of the individuals in the population can not be seen.  Thus, the parameter is largely conceptual.}  Fifth, we usually cannot see all of the individuals in the population so only a few are examined; those few are the sample.  Finally, the summary of the individuals in the sample is the statistic.
 
-When performing an IVPPSS, keep in mind that parameters describe populations (note that they both start with ``p'') and statistics describe samples (note that they both start with ``s'').  This can also be looked at from another perspective.  A sample is an estimate of the population and a statistic is an estimate of a parameter.
+When performing an IVPPSS, keep in mind that parameters describe populations (note that they both start with ``p'') and statistics describe samples (note that they both start with ``s'').  This can also be looked at from another perspective.  A sample is an estimate of the population and a statistic is an estimate of a parameter.  Thus, the statistic has to be the same summary (mean or proportion) of the sample as the parameter is of the population.
 
-This process can be illustrated by performing an IVPPSS for the following situation:
+The IVPPSS process is illustrated for the following situation:
+\vspace{-12pt}
 \begin{quote}
-\textit{A University of New Hampshire graduate student (and Northland College alum) investigated habitat utilization by New England (Sylvilagus transitionalis) and Eastern (Sylvilagus floridanus) cottontail rabbits in Maine.  In a preliminary portion of his research he determined the proportion of ``rabbit patches'' that were inhabited by New England cottontails.  He examined 70 ``patches'' and found that 53 showed evidence of inhabitance by New England cottontails.}
+\textit{A University of New Hampshire graduate student (and Northland College alum) investigated habitat utilization by New England (Sylvilagus transitionalis) and Eastern (Sylvilagus floridanus) cottontail rabbits in eastern Maine in 2007.  In a preliminary portion of his research he determined the proportion of ``rabbit patches'' that were inhabited by New England cottontails.  He examined 70 ``patches'' and found that 53 showed evidence of inhabitance by New England cottontails.}
 \end{quote}
 
 \begin{Itemize}
-  \item The individuals are the rabbit patches (i.e., a rabbit patch is the ``item'' being sampled and examined).
+  \item An individual is a rabbit patch in eastern Maine in 2007 (i.e., a rabbit patch is the ``item'' being sampled and examined).
   \item The variable is ``evidence for New England cottontails or not (yes or no)'' (i.e., the characteristic of each rabbit patch that was recorded).
-  \item The population is ALL rabbit patches in Maine.
-  \item The parameter is the proportion of ALL rabbit patches in Maine that showed evidence for New England cottontails.\footnote{Note that this population and parameter cannot actually be calculated but it is what the researcher wants to know.}
-  \item The sample is the 70 rabbit patches in Maine that were actually examined by the researcher.
-  \item The statistic is the proportion of the 70 rabbit patches in Maine actually examined that showed evidence for New England cottontails.\footnote{Note that this statistic is the same as the parameter; it is just computed on a different collection of individuals.}
+  \item The population is ALL rabbit patches in eastern Maine in 2007.
+  \item The parameter is the proportion of ALL rabbit patches in eastern Maine in 2007 that showed evidence for New England cottontails.\footnote{Note that this population and parameter cannot actually be calculated but it is what the researcher wants to know.}
+  \item The sample is the 70 rabbit patches from eastern Maine in 2007 that were actually examined by the researcher.
+  \item The statistic is the proportion of the 70 rabbit patches from eastern Maine in 2007 actually examined that showed evidence for New England cottontails. [In this case, the statistic would be 53/70 or 0.757.]
 \end{Itemize}
 
-In some situations it may be easier to start by identifying the sample.  From this, and through the realization that a sample is always ``of the individuals'', it may be easier to identify the individual.  This process is illustrated in the following example, with the items listed in the order identified rather than in the traditional IVPPSS order.
+In some situations it may be easier to identifying the sample first.  From this, and through the realization that a sample is always ``of the individuals'', it may be easier to identify the individual.  This process is illustrated in the following example, with the items listed in the order identified rather than in the traditional IVPPSS order.
 
 \begin{quote}
-\textit{The Duluth, MN touristry board is interested in the average number of raptors seen per year at Hawk Ridge.\footnote{Information about Hawk Ridge is found \href{http://www.hawkridge.org/}{here}.}  To determine this value, they collected the total number of raptors seen in a sample of years from 1971-2003.}
+\textit{The Duluth, MN Touristry Board is interested in the average number of raptors seen per year at Hawk Ridge.\footnote{Information about Hawk Ridge is found \href{http://www.hawkridge.org/}{here}.}  To determine this value, they collected the total number of raptors seen in a sample of years from 1971-2003.}
 \end{quote}
 
 \begin{Itemize}
   \item The sample is the 32 years between 1971-2003 at Hawk Ridge.
   \item An individual is a year (because a ``sample of \emph{years}'' was taken) at Hawk Ridge.
-  \item The variable recorded was the number of raptors seen in one year.
-  \item The population is ALL years (this is a bit ambiguous but may be thought of as all years that Hawk Ridge has existed).
-  \item The parameter is the average number of raptors seen per year in ALL years.
-  \item The statistic is the average number of raptors seen in the 1971-2003 sample of years.
+  \item The variable recorded was the number of raptors seen in one year at Hawk Ridge.
+  \item The population is ALL years at Hawk Ridge(this is a bit ambiguous but may be thought of as all years that Hawk Ridge has existed).
+  \item The parameter is the average number of raptors seen per year in ALL years at Hawk Ridge.
+  \item The statistic is the average number of raptors seen in the 1971-2003 sample of years at Hawk Ridge.
 \end{Itemize}
-
 
 \begin{exsection}
   \item \label{revex:IVPPSSDad}My Dad owns 60 acres of timber (mostly Oak, Walnut, and Poplar) in Iowa.  He wants to measure the mean diameter-at-breast-height (DBH) of the oak trees on his property.  He measures the DBH of 75 randomly selected oak trees.  Use this information to perform an IVPPSS. \ansref{ans:IVPPSSDad}
@@ -372,8 +381,8 @@ In some situations it may be easier to start by identifying the sample.  From th
 \end{exsection}
 
 
-\subsection{Sampling Variability, Again}
-It is instructive to once again consider how the statistics might change when different samples are taken.  \tabref{tab:SquareLakeSample234} and \figref{fig:SquareLakeSample234} show the results from three more samples of 50 fish from the Square Lake population.  All four samples (including the sample shown in \tabref{tab:SquareLakeSample1} and \figref{fig:SquareLakeSample1}) had means that were quite different from the known population mean of 98.06.  All four histograms were similar in appearance but were slightly different in actual values.  Similar conclusions could be made for the other parameters and statistics (e.g., compare the population and sample standard deviations, min, max, etc.).  The concept illustrated here is that a sample will likely represent the population of interest, but there will be variability among samples.  This variability between samples is called \textbf{sampling variability}, which is one of the most important concepts in statistics and will be discussed in great detail throughout this course.\index{Sampling Variability!Definition}
+\subsection{Sampling Variability (Revisited)}
+It is instructive to once again (see \chapref{chap:WhyStatsImportant}) consider how statistics differ among samples.  \tabref{tab:SquareLakeSample234} and \figref{fig:SquareLakeSample234} show results from three more samples of n=50 fish from the Square Lake population.  The means from all four samples (including the sample in \tabref{tab:SquareLakeSample1} and \figref{fig:SquareLakeSample1}) were quite different from the known population mean of 98.06 mm.  Similarly, all four histograms were similar in appearance but were slightly different in actual values. These results illustrate that a statistic (or sample) will only approximate the parameter (or population) and that statistics vary among samples.  This \textbf{sampling variability} is one of the most important concepts in statistics and will be discussed in great detail beginning in \chapref{chap:SamplingDist}.\index{Sampling Variability!Definition}
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{figure}[hbtp]
@@ -389,7 +398,7 @@ It is instructive to once again consider how the statistics might change when di
 \end{knitrout}
 
 % latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Tue Dec 20 17:50:31 2016
+% Tue Dec 20 23:50:42 2016
 \begin{table}[htbp]
 \centering
 \caption{Summary statistics for the total length in three samples of 50 fish from the Square Lake population.} 
@@ -407,14 +416,14 @@ It is instructive to once again consider how the statistics might change when di
 
 \defn{Sampling Variability}{The realization that no two samples are exactly alike. Thus, statistics computed from different samples will likely vary.}
 
-This example also illustrates another important statistical concept.  Parameters are fixed values because populations don't change.  If a population does change, then it is considered to be a different population.  In the Square Lake example, if a fish is removed from the lake, then the lake would then be considered a different population of fish.  Statistics, on the other hand, vary in value depending on the sample because each sample consists of different individuals and individuals vary (i.e., sampling variability exists because natural variability exists).
+This example also illustrates that parameters are fixed values because populations don't change.  If a population does change, then it is considered to be a different population.  In the Square Lake example, if a fish is removed from the lake, then the lake would then be considered a different population of fish.  Statistics, on the other hand, vary depending on the sample because each sample consists of different individuals that vary (i.e., sampling variability exists because natural variability exists).
 
 \warn{Parameters are fixed in value, while statistics vary in value.}
 
 
+\clearpage
 \section{Variable Types}\label{sect:VarTypes}
-The type of statistic that can be calculated is dictated by the type of variable to be analyzed.  For example, a sample mean (or average) can only be calculated for a quantitative variable (defined below).  Thus, immediately after identifying the variable in the IVPPSS procedure you should identify the type of that variable.
-
+The type of statistic that can be calculated is dictated by the type of variable to be analyzed.  For example, a sample mean (or average) can only be calculated for a quantitative variable (defined below).  Thus, the type of that variable should be identifie immediately after performing an IVPPSS.
 
 \subsection{Variable Definitions}
 There are two main groups of variable types -- quantitative and categorical \figrefp{fig:VarTypes}.  \textbf{Quantitative} variables are variables with numerical values for which it makes sense to do arithmetic operations (like adding or averaging).\index{Quantitative Variable}  Synonyms for quantitative are measurement or numerical.  \textbf{Categorical} variables are variables that record to which group or category an individual belongs.\index{Categorical Variable}  Synonyms for categorical are qualitative or attribute.  Within each main type of variable are two subgroups \figrefp{fig:VarTypes}.
@@ -422,7 +431,7 @@ There are two main groups of variable types -- quantitative and categorical \fig
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{figure}[hbtp]
 
-{\centering \includegraphics[width=.7\linewidth]{Figs/VarTypes-1} 
+{\centering \includegraphics[width=.5\linewidth]{Figs/VarTypes-1} 
 
 }
 
@@ -459,15 +468,19 @@ Ordinal and nominal variables are easily distinguished by determining if the ord
 
 The following are some issues to consider when identifying the type of a variable:
 \begin{Enumerate}
-  \item The categories of a categorical variable are sometimes labeled with numbers.  Don't let this fool you into calling the variable quantitative.
+  \item The categories of a categorical variable are sometimes labeled with numbers. For example, 1=``Poor'', 3=``Fair'', and 5=``Good''.  Don't let this fool you into calling the variable quantitative.
   \item Rankings, ratings, and preferences are ordinal (categorical) variables.
   \item Counts of numbers are discrete (quantitative) variables.
   \item Measurements are typically continuous (quantitative) variables.
+  \item It does not matter how precisely quantiative variables are recorded when deciding if the variable is continuous or discrete. For example, the weight of the duck might have been recorded to the nearest kg. However, this was just a choice that was made, the actual values can be continuously finer than kg and, thus, weight is a continuous variable.
   \item Categorical variables that consist of only two levels or categories will be labeled as a nominal variable (because any order of the groups makes sense).  This type of variable is also often called ``binomial.''.
   \item Do not confuse ``what type of variable'' (answer is one of ``continuous'', ``discrete'', ``nominal'', or ``ordinal'')  with ``what type of variability'' (answer is ``natural'' or ``sampling'') questions.
 \end{Enumerate}
 
-\warn{``What type of variable is ...?'' is a different question than ``what type of variability is ...?''  Be careful to note the word difference (i.e., ``variable'' versus ``variabiltiy'' when answering these questions.}
+\warn{``What type of variable is ...?'' is a different question than ``what type of variability is ...?''  Be careful to note the word difference (i.e., ``variable'' versus ``variability'' when answering these questions.}
+
+\vspace{-12pt}
+\warn{The precision to which a quantitative variable was recorded does not determine whether it is continuous or discrete. How precisely the variable COULD have been recorded is the important consideration.}
 
 \begin{exsection}
   \item \label{revex:VarTypeDucks} What type of variable is the number of ducks found at the ``Hot Pond'' every morning? \ansref{ans:VarTypeDucks}
@@ -504,7 +517,7 @@ The following are some issues to consider when identifying the type of a variabl
 \minitoc
 \newpage
 
-\lettrine{S}{tatistical inference is the process} of making conclusions about an entire population based on the results from the individuals in a single sample.\index{Inference!Definition}  To make conclusions about the larger population from a sample requires a sample that fairly represents the larger population.  In this chapter two ways of producing data -- (1) Experiments and (2) Observational Studies -- are described.  The information in this chapter is critical to the field of statistics and science in general, because if data are not properly collected, then inferences and proper conclusions cannot be made.
+\lettrine{S}{tatistical inference is the process} of making conclusions about an entire population based on the results from the individuals in a single sample.\index{Inference!Definition}  To make conclusions about the larger population from a sample requires a sample that fairly represents the larger population.  In this chapter, two ways of producing data -- (1) Experiments and (2) Observational Studies -- are described.  The proper collection (or production) of data is critical to statistics (and science in general) so that proper inferences and conclusions can be made.
 
 \defn{Inference}{The process of forming conclusions about the unknown parameters of a population by computing statistics from the individuals in a sample.}
 
@@ -512,7 +525,7 @@ The following are some issues to consider when identifying the type of a variabl
 
 
 \section{Experiments}
-An experiment deliberately imposes a condition, or treatment, on individuals in order to observe their response.\index{Experiment!Definition}  In a properly designed experiment all variables that we are not interested in are held constant while the variable(s) that we are interested in are changed among treatments.  As long as the experiment is designed properly (see below), tests for differences in the response variable among treatment groups can be made.  If differences among treatment groups occur, then those differences are due either to the variable(s) that were deliberately changed or randomness (chance).  Thus, strong cause-and-effect statements can be made from data collected with a carefully designed experiment.
+An experiment deliberately imposes a condition, or treatment, on individuals to observe their response.\index{Experiment!Definition}  In a properly designed experiment all variables that are not of interest are held constant while the variable(s) that are of interest are changed among treatments.  As long as the experiment is designed properly (see below), tests for differences in the response variable among treatments can be made.  If differences among treatments occur, then those differences are due either to the variable(s) that were deliberately changed or randomness (chance).  Thus, strong cause-and-effect statements can be made from data collected with a carefully designed experiment.
 
 \warn{An experiment deliberately imposes a condition, or treatment, on individuals in order to observe their response.}
 
@@ -522,7 +535,7 @@ An experiment deliberately imposes a condition, or treatment, on individuals in 
 \subsection{Single-factor Experiments}\index{Experiment!Single-Factor}
 A factor is the variable that is deliberately manipulated to determine its effect on the response variable.\index{Factor!Experiment}  Sometimes the factor is called an explanatory variable because we are attempting to determine how it affects (or ``explains'') the response variable.\index{Response Variable!Experiment}  The simplest experiment is a single-factor experiment where the individuals are split into groups defined by the categories of a single factor variable.
 
-For example, suppose that a research group wants to examine the effect of temperature on the growth rate of a strain of bacteria (i.e., total number of bacterial cells at the end of the experiment).  The researchers will examine growth at only two temperatures in this simple experiment -- $10^{o}$C and $15^{o}$C.  In addition, they have prepared 120 agars (petri dishes with a material on which the bacteria can grow) that were inoculated with the bacteria and placed in a chamber where the temperature and all other environmental conditions (e.g., humidity, light) were controlled exactly.  In this very simple experiment, temperature is the only factor as it is the only variable that is manipulated to different values to determine its impact on the growth rate response variable.
+For example, suppose that a research group wants to examine the effect of temperature on the total number of bacterial cells after two weeks. They have inoculated 120 agars (petri dishes with a growth medium for the bacteria) with the bacteria and placed them in a chamber where all environmental conditions (e.g., temperature, humidity, light) can be controlled exactly.  The researchers will use only two temperatures in this simple experiment -- $10^{o}$C and $15^{o}$C.  Thus, temperature is the only factor in this simple experiement because it is the only variable manipulated to different values to determine its impact on the number of bacterial cells.
 
 \defn{Factor(s)}{The variable(s) that is (are) deliberately manipulated in the experiment to determine its effect on the response variable.  Sometimes called the explanatory variable.}
 
@@ -532,9 +545,9 @@ For example, suppose that a research group wants to examine the effect of temper
 \vspace{-12pt}
 \warn{In a single-factor experiment only one explanatory variable (i.e., factor) is allowed to vary; all other explanatory variables are held constant.}
 
-Levels are the number of categories of the factor variable.\index{Level!Experimental}  In this example, there are two levels -- $10^{o}$C and $15^{o}$C.  Treatments are the number of unique conditions that individuals in the experiment are exposed to.  In single-factor experiments, the number of treatments is the same as the number of levels of the single factor.\index{Treatment, Experimental}  Thus, in this simple experiment, there are two treatments -- $10^{o}$C and $15^{o}$C.  Treatments will be discussed more thoroughly in the next section.
+Levels are the number of categories of the factor variable.\index{Level!Experimental}  In this example, there are two levels -- $10^{o}$C and $15^{o}$C.  Treatments are the number of unique conditions that individuals in the experiment are exposed to.  In a single-factor experiment, the number of treatments is the same as the number of levels of the factor.\index{Treatment, Experimental}  Thus, in this simple experiment, there are two treatments -- $10^{o}$C and $15^{o}$C.  Treatments are discussed more thoroughly in the next section.
 
-The number of replicates in an experiment is the number of individuals that will receive each treatment.\index{Replicates}  In this example, the replicates are the number of inoculated agars that will receive each of the two temperature treatments.  The number of replicates is determined by dividing the total number of available individuals (120) by the number of treatments (2).  Thus, in this case, the number of replicates is 60 inoculated agars.
+The number of replicates in an experiment is the number of individuals that will receive each treatment.\index{Replicates}  In this example, the replicates are the number of inoculated agars that will receive each of the two temperature treatments.  The number of replicates is determined by dividing the total number of available individuals (120) by the number of treatments (2).  In this case, the number of replicates is 60 inoculated agars.
 
 \defn{Levels}{The number of categories or groupings of the factor.}
 
@@ -547,18 +560,18 @@ The number of replicates in an experiment is the number of individuals that will
 \vspace{-12pt}
 \warn{The number of replicates is determined by dividing the total number of available individuals by the number of treatments.}
 
-The agars used in this experiment will be randomly allocated to the two temperature treatments.  All other variables -- humidity, light, etc. -- are kept the same for each group.  At the end of two weeks, the total number of bacterial cells on each agar (i.e., the response variable) will be recorded and compared between the agars kept at both temperatures.\footnote{Methods for making this comparison are shown in \chapref{chap:tTest}.}  Any difference in average growth rates was either due to the different temperature treatments or randomness, because all other variables were the same between the two treatment groups.
+The agars used in this experiment will be randomly allocated to the two temperature treatments.  All other variables -- humidity, light, etc. -- are kept the same for each treatment.  At the end of two weeks, the total number of bacterial cells on each agar (i.e., the response variable) will be recorded and compared between the agars kept at both temperatures.\footnote{Methods for making this comparison are in \chapref{chap:tTest2}.}  Any difference in mean number of bacterial cells will be due to either different temperature treatments or randomness, because all other variables were the same between the two treatments.
 
-\warn{Differences among treatment groups are either caused by randomness (chance) or the factor.}
+\warn{Differences among treatments are either caused by randomness (chance) or the factor.}
 
-We are not restricted to just two categories for our single factor.  For example, we may be interested in more than two temperatures, say $10^{o}$C, $12.5^{o}$C, $15^{o}$C, and $17.5^{o}$C.  There is still only one factor with this modification -- temperature -- but there are now four levels.  Because this is still a single-factor experiment there are still only as many treatment groups as levels of the factor (four in this case).
+The single factor is not restricted to just two levels.  For example, more than two temperatures, say $10^{o}$C, $12.5^{o}$C, $15^{o}$C, and $17.5^{o}$C, could have been tested.  With this modification, there is still only one factor -- temperature -- but there are now four levels (and only four treatments).
 
 \subsection{Multi-factor Experiments}
-More than one factor can be tested in one experiment.\index{Experiment!Multi-Factor}  In fact, it can be shown that it is more efficient to have a properly designed but slightly more complex experiment where more than one factor is varied at a time than it is to use separate experiments in which only one factor is varied in each.  However, before showing this benefit let's examine the definitions from the previous section in a multi-factor experiment.
+More than one factor can be tested in one experiment.\index{Experiment!Multi-Factor}  In fact, it is more efficient to have a properly designed experiment where more than one factor is varied at a time than it is to use separate experiments in which only one factor is varied in each.  However, before showing this benefit, let's examine the definitions from the previous section in a multi-factor experiment.
 
-Suppose that the previous experiment was modified to examine, in addition to the two temperatures from above, the effect of different relative humidity levels on the growth of this strain of bacteria.  This modified experiment now has two factors -- temperature (with two levels of $10^{o}$C or $15^{o}$C) and relative humidity (with four levels of 20\%, 40\%, 60\%, and 80\%).  The number of combinations of all factors in the experiment is the number of treatments and is found by multiplying the levels of all factors (i.e., 2$\times$4=8 in this case).\index{Treatment, Experimental}  The number of replicates in this experiment is now 15 (i.e., the total number of available agars divided by eight; 120/8).
+Suppose that the previous experiment was modified to also examine the effect of relative humidity on the number of bacteria cells.  This modified experiment has two factors -- temperature (with two levels of $10^{o}$C or $15^{o}$C) and relative humidity (with four levels of 20\%, 40\%, 60\%, and 80\%).  The number of treatments, or combinations of all factors, in this experiment is found by multiplying the levels of all factors (i.e., 2$\times$4=8 in this case).\index{Treatment, Experimental}  The number of replicates in this experiment is now 15 (i.e., total number of available agars divided by eight; 120/8).
 
-A quick drawing of the experimental design can be instructive (below).  The drawing is a grid where the levels of one factor make up the rows and the levels of the other factor make up the columns of the grid.  The number of rows and columns correspond to the levels of the two factors, respectively, whereas the number of cells in the grid is the number of treatments (numbered in this table to show eight treatments).
+A quick drawing of the experimental design can be instructive (below).  The drawing is a grid where the levels of one factor are the rows and the levels of the other factor are the columns.  The number of rows and columns correspond to the levels of the two factors, respectively, whereas the number of cells in the grid is the number of treatments (numbered in this table to show eight treatments).
 
 \begin{center}
 \begin{tabular}{cc|c|c|c}
@@ -581,9 +594,9 @@ A quick drawing of the experimental design can be instructive (below).  The draw
 \vspace{-12pt}
 \warn{The number of treatments is determined for the overall experiment, whereas the number of levels is determined for each factor.}
 
-The statistical analysis of a multi-factor experimental design such as this is more involved than what will be shown in this book.  However, multi-factor experiments have many benefits.  The benefits of a multi-factor experiment can be illustrated by comparing the design of a multi-factor experiment to separate single-factor experiments.  Let's continue with the experiment to identify the effect of both temperature and relative humidity on the growth rate of a certain strain of bacteria.  However, consider for the moment that (1) separate single-factor experiments will also be conducted to determine the effect of each factor and (2) we cannot use any of the individuals (i.e., agars) in more than one experiment.
+The analysis of a multi-factor experimental design is more involved than what will be shown in this course.  However, multi-factor experiments have many benefits, which can be illustrated by comparing a multi-factor experiment to separate single-factor experiments.  Let's continue with the experiment to identify the effect of both temperature and relative humidity on the number of bacterial cells.  However, consider for the moment that (1) separate single-factor experiments will also be conducted to determine the effect of each factor and (2) we cannot use any of the individuals (i.e., agars) in more than one experiment.
 
-To conduct the two separate experiments, randomly split the 120 available agars into two equally-sized groups of 60.  The first 60 will be used in the first experiment concerning the effect of temperature on growth rate.  In this experiment, the 60 individuals will be split into two groups of 30 individuals (for the two levels of temperature).  The second 60 individuals will be used in the second experiment concerning relative humidity.  In this experiment, the 60 individuals will be split into four groups of 15 individuals (for the four levels of relative humidity).  These separate single-factor experiments are summarized in the following tables (where the numbers in the cells represent the number of replicates in each treatment).
+To conduct the two separate experiments, randomly split the 120 available agars into two equally-sized groups of 60.  The first 60 will be split into two groups of 30 for the first experiment with temperature.  The second 60 will be split into four groups of 15 for the second experiment with relative humidity. These separate single-factor experiments are summarized in the following tables (where the numbers in the cells represent the number of replicates in each treatment).
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|}
@@ -611,9 +624,9 @@ Now reconsider the design where both factors were varied at once (the table belo
 \end{tabular}
 \end{center}
 
-The key to examining the benefits of the multi-factor experiment is to determine the number of individuals that give ``information'' about (i.e., are exposed to) each factor.  From the last table it is seen that all 120 individuals are exposed to one of the temperature levels with 60 individuals exposed to each level.  In contrast, only 30 individuals were exposed to these levels in the single-factor experiment.  In addition, all 120 individuals are exposed to one of the relative humidity levels with 30 individuals exposed to each level.  Again, this is in contrast to the single-factor experiment where only 15 individuals were exposed to these levels.  Thus, the first advantage of multi-factor experiments is that the available individuals are used more efficiently.  In other words, more ``information'' (i.e., the responses of more individuals) is obtained from a multi-factor experiment than from combinations of single-factor experiments.\footnote{The real importance of this advantage will become apparent when statistical power is introduced in \chapref{chap:Inference}.}
+The key to examining the benefits of the multi-factor experiment is to determine the number of individuals that give ``information'' about (i.e., are exposed to) each factor.  From the last table it is seen that all 120 individuals are exposed to one of the temperature levels with 60 individuals exposed to each level.  In contrast, only 30 individuals were exposed to these levels in the single-factor experiment.  In addition, all 120 individuals are exposed to one of the relative humidity levels with 30 individuals exposed to each level.  Again, this is in contrast to the single-factor experiment where only 15 individuals were exposed to these levels.  Thus, the first advantage of multi-factor experiments is that the available individuals are used more efficiently.  In other words, more ``information'' (i.e., the responses of more individuals) is obtained from a multi-factor experiment than from combinations of single-factor experiments.\footnote{The real importance of this advantage will become apparent when statistical power is introduced in \chapref{chap:HypothesisTests}.}
 
-\warn{Multi-factor experiments use available individuals more efficiently; i.e., more ``information'' about the effect of the factors on the response is gained from the same number of individuals.}
+\warn{Multi-factor experiments use individuals more efficiently; i.e., more ``information'' about the effect of the factors on the response is gained from the same number of individuals.}
 
 A properly designed multi-factor experiment also allows researchers to determine if multiple factors interact to impact an individual's response.\index{Interaction effect}  For example, consider the hypothetical results from this experiment in \figref{fig:ExpDInt}.\footnote{The means of each treatment are plotted and connected with lines in this plot.}  The effect of relative humidity is to increase the growth rate for those individuals at $10^{o}$C (black line) but to decrease the growth rate for those individuals at $15^{o}$C (blue line).  That is, the effect of relative humidity differs depending on the level of temperature.  When the effect of one factor differs depending on the level of the other factor, then the two factors are said to \textit{interact}.  Interactions cannot be determined from the two single-factor experiments because the same individuals are not exposed to levels of the two factors at the same time.
 
@@ -629,6 +642,7 @@ A properly designed multi-factor experiment also allows researchers to determine
 
 
 \end{knitrout}
+\vspace{9pt} % added because of paragraph compressions following R code
 
 Multi-factor experiments are used to detect the presence or absence of interaction, not just the presence of it.  The hypothetical results in \figref{fig:ExpDNoInt} show that the growth rate increases with increasing relative humidity at about the same rate for both temperatures.  Thus, because the effect of relative humidity is the same for each temperature (and vice versa), there does not appear to be an interaction between the two factors.  Again, this could not be determined from the separate single-factor experiments.
 
@@ -649,13 +663,21 @@ Multi-factor experiments are used to detect the presence or absence of interacti
 
 
 \subsection{Allocating Individuals}
-In the previous examples, each individual\footnote{When discussing experiments, an ``individual'' is often referred to as a ``replicate'' or an ``experimental unit.''} was allocated (i.e., placed into) treatment groups.\index{Replicates}  Individuals should be allocated to treatment groups with a randomization procedure.  Randomization will tend to even out differences among groups for variables not considered in the experiment.  In other words, randomization should help assure that all groups are similar before the treatments are imposed.  Thus, randomly allocating individuals to treatments removes any bias (foreseen or unforeseen) from entering the experiment.
+In the previous examples, each individual\footnote{When discussing experiments, an ``individual'' is often referred to as a ``replicate'' or an ``experimental unit.''} was allocated to (i.e., placed into) treatments.\index{Replicates}  Individuals should be randomly allocated to treatments.  Randomization will tend to even out differences among groups for variables not considered in the experiment.  In other words, randomization should help assure that all groups are similar before the treatments are imposed.  Thus, randomly allocating individuals to treatments removes any bias (foreseen or unforeseen) from entering the experiment.
 
-In the single-factor experiment above -- two treatments of temperature -- there were 120 agars.  To randomly allocate these individuals to the treatments, 60 pieces of paper marked with a ``10'' and 60 marked with a ``15'' could be placed into a hat.  The pieces of paper would then be drawn for each agar and that agar would receive the temperature found on the piece of paper.  Alternatively, each agar could be assigned a unique number between 1 and 120 and pieces of paper with these numbers could be placed into the hat.  The agars corresponding to the first 60 numbers drawn from the hat could then be placed into the first treatment with the agars for the next (or remaining) 60 numbers in the second treatment.  This process is essentially the same as randomly ordering the 120 numbers.  A random order of numbers is obtained with R by including the count of numbers as the only argument to \R{sample()}.  For example, randomly ordering the numbers 1 through 120 is accomplished (and saved to an object) with
+In the single-factor experiment above -- two treatments of temperature -- there were 120 agars.  To randomly allocate these individuals to the treatments, 60 pieces of paper marked with ``10'' and 60 marked with ``15'' could be placed into a hat.  One piece of paper would be drawn for each agar and the agar would receive the temperature found on the piece of paper.  Alternatively, each agar could be assigned a unique number between 1 and 120 and pieces of paper with these numbers could be placed into the hat.  The agars corresponding to the first 60 numbers drawn from the hat could then be placed into the first treatment with the agars for the next (or remaining) 60 numbers in the second treatment.  This process is essentially the same as randomly ordering the 120 numbers.  A random order of numbers is obtained with R by including the count of numbers as the only argument to \R{sample()}.  For example, randomly ordering the numbers 1 through 120 is accomplished with
+
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{kframe}
 \begin{verbatim}
-> ( ragars1 <- sample(120) )
+> sample(120)
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+\vspace{-12pt}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
   [1]  80  30 100  90  21  68 104  79  64 106  98  16  73  91 107   1  60  54  26  99
  [21] 108 111  31  47  57  92   5  58  37  50  34  88  41  66  65  29 110 113   4  75
  [41]  93  23  49  97  35  84  74   7  15  39  70  94 114  14  71  20  33  67  86   8
@@ -665,9 +687,10 @@ In the single-factor experiment above -- two treatments of temperature -- there 
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
+
 Thus, the first five agars in the 10$^{o}$C treatment are 80, 30, 100, 90, and 21.  The first five agars in the 15$^{o}$C treatment are 6, 28, 52, 48, and 13.
 
-Now consider the modified experiment with two factors -- temperature and relative humidity -- with eight treatments containing 15 agars each.  In this case, it is more efficient to save the sorted numbers into an object and then select the numbers in the first 15 positions, then the second 15 positions, etc.  For example,
+Now consider the modified experiment with two factors -- temperature and relative humidity -- with eight treatments containing 15 agars each.  Here, it is more efficient to save the random numbers into an object and then select the numbers in the first 15 positions, then the second 15 positions, etc.
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{kframe}
 \begin{verbatim}
@@ -699,14 +722,14 @@ This design might be shown with the following table, where the numbers in each c
 
 
 \subsection{Design Principles}
-There are many other methods of designing experiments and allocating individuals, including blocked designs, nested designs, etc., that are beyond the scope of this book.  However, all experimental designs contain these three basic principles of experimental design.\index{Experiment!Principles}
+There are many other methods of designing experiments and allocating individuals, including blocked designs, nested designs, etc., that are beyond the scope of this book.  However, all experimental designs contain these three basic principles.\index{Experiment!Principles}
 \begin{Enumerate}
-  \item Control the effect of variables on the response variable by deliberately manipulating factors to certain levels and maintaining constancy among other confounding variables.
-  \item Randomize the allocation of individuals to treatments to eliminate bias in the experiment.
-  \item Replicate individuals (use many individuals) in the experiment to reduce chance variation in the results.
+  \item \textbf{Control} the effect of variables on the response variable by deliberately manipulating factors to certain levels and maintaining constancy among other variables.
+  \item \textbf{Randomize} the allocation of individuals to treatments to eliminate bias.
+  \item \textbf{Replicate individuals} (use many individuals) in the experiment to reduce chance variation in the results.
 \end{Enumerate}
 
-Proper control in an experiment allows the experiment to produce strong cause-and-effect statements; i.e., to state that an observed difference in the response variable was due to the levels of the factor or chance variation rather than some other variable (foreseen or unforeseen).  Randomly allocating individuals to treatments removes any bias that may be included in the experiment.  For example, if we don't randomly allocate the agars to the treatments, then it is possible that a set of all ``poor'' agars may end up in one treatment.  In this case, any observed differences in the response may not be due to the levels of the factor but to the prior quality of the agars.  Replication means that there should be more than one or a few individuals in each treatment.  This reduces the effect of each individual on the overall results.  For example, if there was one agar in each treatment then, even with random allocation, the effect of that treatment may be due to some inherent properties of that agar rather than the levels of the factors.  Replication, along with randomization, helps assure that the groups of individuals in each treatment are as alike (homogeneous) as possible at the start of the experiment.
+Proper control in an experiment allows for strong cause-and-effect statements; i.e., to state that an observed difference in the response variable was due to the levels of the factor or chance variation rather than some other variable (foreseen or unforeseen).  Randomly allocating individuals to treatments removes any bias that may be included in the experiment.  For example, if we do not randomly allocate the agars to the treatments, then it is possible that a set of all ``poor'' agars may end up in one treatment.  In this case, any observed differences in the response may not be due to the levels of the factor but to the prior quality of the agars.  Replication means that there should be more than one or a few individuals in each treatment.  This reduces the effect of each individual on the overall results.  For example, if there was one agar in each treatment, then, even with random allocation, the effect of that treatment may be due to some inherent properties of that agar rather than the levels of the factors.  Replication, along with randomization, helps assure that the groups of individuals in each treatment are as alike as possible at the start of the experiment.
 
 \warn{Control, Randomization, and Replication are the three major principles of experimental design.}
 
@@ -779,25 +802,27 @@ Proper control in an experiment allows the experiment to produce strong cause-an
 \end{exsection}
 
 
+\vspace{-24pt}
 \section{Observational Studies -- Sampling}
-In observational studies the researcher has no control over any of the variables observed for an individual.\index{Observational Study}  The researcher simply observes individuals, disturbing them as little as possible, trying to get a ``picture'' of the population.  Observational studies cannot be used to make cause-and-effect statements, because all variables that may affect the outcome may not have been measured or specifically controlled.  Thus, any observed difference among groups may be caused by the variables measured, some other unmeasured variables, or chance (randomness).
+\vspace{-9pt}
+In observational studies the researcher has no control over any of the variables observed for an individual.\index{Observational Study}  The researcher simply observes individuals, disturbing them as little as possible, trying to get a ``picture'' of the population.  Observational studies cannot be used to make cause-and-effect statements because all variables that may affect the outcome may not have been measured or specifically controlled.  Thus, any observed difference among groups may be caused by the variables measured, some other unmeasured variables, or chance (randomness).
 
-Consider the following as an example of the problems that can occur when all variables are not measured in a study.  For many years scientists thought that the brains of females weighed less than that of males.  They used this finding to support all kinds of ideas about sex-based differences in learning ability.  However, these earlier researchers failed to measure body weight, which has since been found to be strongly related to brain weight in both males and females.  After controlling for the effect of differences in body weights, there was no difference in brain weights between the sexes.  Thus, many sexist ideas persisted for years because cause-and-effect statements were inferred from data where all variables were not recorded.
+Consider the following as an example of the problems that can occur when all variables are not measured.  For many years scientists thought that the brains of females weighed less than the brains of males.  They used this finding to support all kinds of ideas about sex-based differences in learning ability.  However, these earlier researchers failed to measure body weight, which has since been found to be strongly related to brain weight in both males and females.  After controlling for the effect of differences in body weights, there was no difference in brain weights between the sexes.  Thus, many sexist ideas persisted for years because cause-and-effect statements were inferred from data where all variables were not recorded.
 
-\warn{Strong cause-and-effect statements CANNOT be made from data collected as part of observational studies.}
+\warn{Strong cause-and-effect statements CANNOT be made from observational studies.}
 
-In observational studies, it is important to understand to what population inferences will be made.\footnote{Thus, it is very important to first perform an IVPPS as discussed in \sectref{sect:IVPPSS}.}  To make useful inferences from a sample, the sample must be an unbiased representation of the population.  In other words, it must not systematically represent or favor certain individuals or outcomes.
+In observational studies, it is important to understand to what population inferences will be made.\footnote{Thus, it is very important to first perform an IVPPS as discussed in \sectref{sect:IVPPSS}.}  To make useful inferences from a sample, the sample must be an unbiased representation of the population.  In other words, it must not systematically favor certain individuals or outcomes.
 
-For example, consider that you want to determine the mean length of all fish in a particular lake (e.g., Square Lake as introduced in \sectref{sect:IVPPSS}).  Using a net with large mesh, such that only large fish are caught, would produce a biased sample because interest is in all fish not just the large fish in Square Lake.  Setting the nets near spawning beds (i.e., only adult fish) would also produce a biased sample.  In both instances, a sample would be collected from a population other than the population in which interest lies.  This is why it is important that the population is specified and a sample selection technique is used that selects individuals from that population.
+For example, consider that you want to determine the mean length of all fish in a particular lake (e.g., Square Lake from \sectref{sect:IVPPSS}).  Using a net with large mesh, such that only large fish are caught, would produce a biased sample because interest is in all fish not just the large fish in Square Lake.  Setting the nets near spawning beds (i.e., only adult fish) would also produce a biased sample.  In both instances, a sample would be collected from a population other than the population of interest.  Thus it is important to select a sample from the specified population.
 
 \warn{It is important to understand what the population is before considering how to take a sample.}
 
 \subsection{Types of Sampling Designs}
-Three common types of sampling schemes -- voluntary response, convenience, and probability-based samples -- are considered in this section.  Voluntary response and convenience samples tend to produce biased samples, whereas probability-based samples, if done properly, will produce an unbiased sample.
+Three common types of sampling designs -- voluntary response, convenience, and probability-based samples -- are considered in this section.  Voluntary response and convenience samples tend to produce biased samples, whereas proper probability-based samples will produce an unbiased sample.
 
-A voluntary response sample is a sample of individuals that choose themselves for the sample by responding to a general appeal.\index{Voluntary Response Sample}  An example of a voluntary response sample would be the group of people that respond to a general appeal placed in the school newspaper.  If the population of interest in this sample was all students at the school, then this type of general appeal would likely produce a biased sample of students that (i) read the school newspaper, (ii) feel strongly about the topic, or (iii) both.
+A voluntary response sample consists of individuals that have chosen themselves for the sample by responding to a general appeal.\index{Voluntary Response Sample}  An example of a voluntary response sample would be the group of people that respond to a general appeal placed in the school newspaper.  If the population of interest in this sample was all students at the school, then this type of general appeal would likely produce a biased sample of students that (i) read the school newspaper, (ii) feel strongly about the topic, or (iii) both.
 
-A convenience sample is a sample of individuals who are easiest to reach for the researcher.\index{Convenience Sample}  An example of a convenience sample might be a situation where a researcher queried only those students in a particular class.  This sample is ``convenient'' because the individuals are easy to gather.  However, if the population of interest was all students at the school, then this type of sample would likely produce a biased sample of students that is likely (i) of one major or another, (ii) in one or two-years (e.g., Freshman or Sophomores), or (iii) both.
+A convenience sample consists of individuals who are easiest to reach for the researcher.\index{Convenience Sample}  An example of a convenience sample is when a researcher queries only those students in a particular class.  This sample is ``convenient'' because the individuals are easy to gather.  However, if the population of interest was all students at the school, then this type of sample would likely produce a biased sample of students that is likely (i) of one major or another, (ii) in one or two-years (e.g., Freshman or Sophomores), or (iii) both.
 
 \defn{Voluntary Response Sample}{A sample of individuals that choose themselves for the sample by responding to a general appeal.}
 
@@ -807,21 +832,32 @@ A convenience sample is a sample of individuals who are easiest to reach for the
 \vspace{-12pt}
 \warn{Voluntary response and convenience samples often produces a biased sample.}
 
-In probability-based sampling, each member of the population has a known chance of being selected for the sample.  The simplest form of probability-based sample is the \textbf{Simple Random Sample} (SRS) where each member of the population has the same chance of being selected.\index{Simple Random Sample}  Proper selection of an SRS requires each member of the population to be assigned a unique number.  The individuals in the SRS are then selected by choosing random numbers and collecting the individuals that those numbers correspond to.
+In probability-based sampling, each individual of the population has a known chance of being selected for the sample.  The simplest probability-based sample is the \textbf{Simple Random Sample} (SRS) where each individual has the same chance of being selected.\index{Simple Random Sample}  Proper selection of an SRS requires each individual to be assigned a unique number.  The SRS is then formed by choosing random numbers and collecting the individuals that correspond to those numbers.
 
-For example, an auditor may need to select a sample of 30 financial transactions from all transactions of a particular bank during the previous month.  Because each transaction is numbered, the auditor may know that there was a total of 1112 transactions at this bank during the previous month (i.e., the population).  The auditor would then number each transaction from 1 to 1112 (this is likely already done in this case), randomly select 30 numbers (with no repeats) from between 1 and 1112, and then physically locate the 30 transactions that correspond to the 30 selected numbers.  Those 30 transactions are the SRS.  A random selection of numbers is selected by including the total number as the first argument and the number to select as the second argument to \R{sample()}.  For example, 30 numbers from between 1 and 1112 is selected (and saved into an object) with
+For example, an auditor may need to select a sample of 30 financial transactions from all transactions of a particular bank during the previous month.  Because each transaction is numbered, the auditor may know that there were 1112 transactions during the previous month (i.e., the population).  The auditor would then number each transaction from 1 to 1112 (likely already done in this case), randomly select 30 numbers (with no repeats) from between 1 and 1112, and then physically locate the 30 transactions that correspond to the 30 selected numbers.  Those 30 transactions are the SRS.
+
+Random numbers are selected in R by including the population size as the first and sample size as the second argument to \R{sample()}.  For example, 30 numbers from between 1 and 1112 is selected with
+
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{kframe}
 \begin{verbatim}
-> ( raccts <- sample(1112,30) )
+> sample(1112,30)
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+\vspace{-12pt}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
  [1]   75  320  874  104  128  870  607 1091 1030 1053 1031  518  433  893  816  903
 [17]  342 1016  136  580  670  376  576 1076 1034  365  492  189  409   66
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
-Thus, the first five accounts to be selected would be the accounts corresponding to the numbers 75, 320, 874, 104, and 128.
 
-There are other more complex types of probability-based samples -- e.g., stratified samples and nested or multistage samples -- that are beyond the scope of this book.  However, the goal of these more complex types of samples is generally to impart more control into the sampling design.
+Thus, accounts 75, 320, 874, 104, and 128 would be the first five selected.
+
+There are other more complex types of probability-based samples -- e.g., stratified samples and nested or multistage samples -- that are beyond the scope of this course.  However, the goal of these more complex types of samples is generally to impart more control into the sampling design.
 
 \defn{Probability-based Sample}{A sample where each individual of the population has a known chance of being selected for the sample.}
 
@@ -841,8 +877,10 @@ Polls, campaign or otherwise, are examples of observational studies that you are
   \item \href{http://www2.psych.purdue.edu/~codelab/Invalid.Polls.html}{Why Do Campaign Polls Zigzag So Much? by G.S. Wasserman, Purdue U}.
 \end{Itemize}
 
+\vspace{-12pt}
 \subsection{Of What Value are Observational Studies?}
-In the last two sections it may have become apparent that properly designed experiments can lead to ``cause-and-effect'' statements, whereas observational studies (even properly designed) are unlikely to lead to such statements.  Furthermore, in the last section, it was suggested that it is very difficult to take a proper probability-based sample because it is hard to assign a number to each individual in the population (precisely because entire populations are very difficult to ``see'').  So, do observational studies have any value?  There are at least three reasons why observational studies are useful.
+\vspace{-12pt}
+In this chapter it became apparent that properly designed experiments can lead to ``cause-and-effect'' statements, whereas observational studies (even properly designed) are unlikely to lead to such statements.  Furthermore, in the last section, it was suggested that it is very difficult to take a proper probability-based sample because it is hard to assign a number to each individual in the population (precisely because entire populations are very difficult to ``see'').  So, do observational studies have any value?  There are at least three reasons why observational studies are useful.
 
 The scientific method begins with a scientist making an observation about a natural phenomenon.  Observational studies may serve to provide such an observation.  Alternatively, observational studies may be deployed after an observation has been made to see if that observation is ``prevalent'' and worthy of further investigation.  Thus, observational studies may lead directly to hypotheses that form the basis of experiments.
 
@@ -850,18 +888,18 @@ Experiments are often conducted under very confined and controlled conditions so
 
 Finally, there are situations where conducting an experiment simply cannot be done, either for ethical, financial, size, or other constraints.  For example, it is generally accepted that smoking causes cancer in humans even though an experiment where one group of people was forced to smoke while another was not allowed to smoke has not been conducted.  Similarly, it is also very difficult to perform valid experiments on ``ecosystems.''  In these situations, an observational study is simply the best study allowable.  Cause-and-effect statements are arrived at in these situations because observational studies can be conducted with some, though not absolute, control and control can be imparted mathematically into some analyses.\footnote{These analyses are beyond the scope of this book, though.}  In addition, a ``preponderance of evidence'' may be arrived at if enough observational studies point to the same conclusion.
 
-\newpage
+\vspace{-9pt}
 \begin{exsection}
-  \item \label{revex:ObsSWIH} The National Institutes of Health (NIH) established the Women's Health Initiative (WHI) in 1991 to address the most common causes of death, disability and impaired quality of life in postmenopausal women.  The WHI addressed cardiovascular disease, cancer, and osteoporosis.  The WHI was a 15 year multi-million dollar endeavor, and one of the largest U.S. prevention studies of its kind.  One aspect of the WHI enlisted 93,676 postmenopausal women between the ages of 50-79 from 40 Clinical Centers from throughout the United States (see \href{http://www.nhlbi.nih.gov/whi/whict.htm#map}{this map}).  The women were not asked to take any medication or change their health habits.  The health of OS participants was tracked over an average of eight years through asking the women to fill out periodic health forms.  What type of study is this? \ansref{ans:ObsSWIH}
+  \item \label{revex:ObsSWIH} The National Institutes of Health (NIH) established the Women's Health Initiative (WHI) in 1991 to address the most common causes of death, disability and impaired quality of life in postmenopausal women.  The WHI addressed cardiovascular disease, cancer, and osteoporosis.  The WHI was a 15 year multi-million dollar endeavor, and one of the largest U.S. prevention studies of its kind.  One aspect of the WHI enlisted 93,676 postmenopausal women between the ages of 50-79 from 40 Clinical Centers from throughout the United States (see \href{http://www.nhlbi.nih.gov/whi/whict.htm#map}{this map}).  The women were not asked to take any medication or change their health habits.  The health of participants was tracked over an average of eight years by periodically asking the women to complete health forms.  What type of study is this? \ansref{ans:ObsSWIH}
 
-  \item \label{revex:ObsSDOT} The U.S. Department of Transportation sponsored a study to determine the transportation patterns and motivations for driving among offenders before, during, and after suspension of their driver's license for an alcohol-related offense (more information \href{http://www.nhtsa.dot.gov/people/injury/research/observation_study/index.htm}{here}.).  For each subject their travel patterns were examined for two four-hour periods during the last month of the suspension period (one observation Monday-Thursday 6 - 10 a.m. and the other observation Friday or Saturday evening 6 - 10 p.m.; the actual days were randomly selected).  These observation periods were selected to include a time period when the subject would likely be traveling to work and a time period when the subject would likely be traveling for personal, recreational, or social reasons.  Similar examinations were conducted at least one month after drivers had had their license reinstated. These post-suspension observations were to be conducted for each subject at the same times of day and days of the week as the during-suspension observations.  What type of study is this?  Why? \ansref{ans:ObsSDOT}
+  \item \label{revex:ObsSDOT} The U.S. Department of Transportation sponsored a study to determine the transportation patterns and motivations for driving among offenders before, during, and after suspension of their driver's license for an alcohol-related offense (more information \href{http://www.nhtsa.dot.gov/people/injury/research/observation_study/index.htm}{here}.).  The travel patterns for each subject were examined for two four-hour periods during the last month of the suspension period (one observation Monday-Thursday 6 - 10 a.m. and the other observation Friday or Saturday evening 6 - 10 p.m.; actual days were randomly selected).  These observation periods were selected to include a time period when the subject would likely be traveling to work and a time period when the subject would likely be traveling for personal, recreational, or social reasons.  Similar examinations were conducted at least one month after drivers had had their license reinstated. These post-suspension observations were conducted for each subject at the same times of day and days of the week as the during-suspension observations.  What type of study is this?  Why? \ansref{ans:ObsSDOT}
 
-  \item \label{revex:ExpDPine} I have noticed that the needles of white pine trees near major highways are brown.  I hypothesized that this may be caused by increased levels of carbon monoxide (CO; ppm) and salt (ppt) near the roads.  I am considering two studies to test this hypothesis.  First, at two types of sites -- near highways and far from highways -- I will count the number of trees that are mostly brown and measure levels of CO and salt.  Second, I will determine the effect of CO and salt levels by growing randomly-selected nearly-identical seedlings in pots that only differ in the levels of CO and salt -- 0 and 5 ppm CO and 0 and 4 ppt salt (NOTE: the 0 levels correspond to normal background levels).  I have 20 trees to allocate to the different treatments. \ansref{ans:ExpDPine}
+  \item \label{revex:ExpDPine} I have noticed that the needles of white pine trees near major highways are brown.  I hypothesized that this may be caused by increased levels of carbon monoxide (CO; ppm) and salt (ppt) near the roads.  I am considering two studies to test this hypothesis.  First, at two types of sites -- near highways and far from highways -- I will count the number of trees that are mostly brown and measure levels of CO and salt.  Second, I will determine the effect of CO and salt levels by growing 20 randomly-selected nearly-identical seedlings in pots that only differ in the levels of CO and salt -- 0 and 5 ppm CO and 0 and 4 ppt salt (NOTE: the 0 levels correspond to normal background levels). \ansref{ans:ExpDPine}
 \begin{Enumerate}
   \item Use a diagram to clearly depict the experimental situation described above.
-  \item \rhw{} Write the numeric label for each individual in the appropriate place on your diagram.  Show your R work.
+  \item \rhw{} Write the numeric label for each individual in the appropriate place on your diagram.
   \item In the experiment, which treatment is considered a control?  Why?
-  \item Which study will provide a definitive answer to my stated hypothesis?  Explain why!
+  \item Which study will provide a definitive answer to the stated hypothesis?  Explain why!
 \end{Enumerate}
 
 \end{exsection}
@@ -1402,7 +1440,7 @@ Three primary data sets will be explored throughout this chapter.
 \end{Itemize}
 
 % latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Tue Dec 20 17:50:31 2016
+% Tue Dec 20 23:50:42 2016
 \begin{table}[ht]
 \centering
 \caption{Amount of water consumed (in ml) in one hour by a sample of mice.} 
@@ -1417,7 +1455,7 @@ Three primary data sets will be explored throughout this chapter.
 
 
 % latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Tue Dec 20 17:50:31 2016
+% Tue Dec 20 23:50:42 2016
 \begin{table}[ht]
 \centering
 \caption{Richter scale recordings for 15 major earthquakes.} 
@@ -1713,7 +1751,7 @@ The process for finding the median consists of three steps,\footnote{Most comput
 As an example, the ordered mouse water consumption data from \tabref{tab:MouseData} are,
 
 % latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Tue Dec 20 17:50:32 2016
+% Tue Dec 20 23:50:42 2016
 \begin{tabular}{rrrrrrrrrrrrrrr}
   9.4 & 10.0 & 10.6 & 11.1 & 11.4 & 11.5 & 12.0 & 12.5 & 12.6 & 12.9 & 13.0 & 13.5 & 13.6 & 13.7 & 13.7 \\ 
   14.0 & 14.1 & 14.3 & 14.7 & 15.2 & 15.4 & 15.8 & 15.8 & 16.5 & 16.6 & 16.6 & 17.0 & 17.4 & 18.2 & 18.4 \\ 
@@ -2151,7 +2189,7 @@ While most of the previous sections focused on how to construct various graphs a
 Mouse water consumption appears to be approximately symmetric without any outliers present \figrefp{fig:MouseHist2}.  The center of the distribution is best measured by the mean, which is 14.05 ml \tabrefp{tab:MouseStats}.  The range of water consumption by the mice in the sample is from 9.4 to 18.4 ml while the dispersion as measured by the standard deviation is 2.41 ml \tabrefp{tab:MouseStats}.  I chose to use the mean and standard deviation because the data were symmetric with no outliers.  [\textit{NOTE: 1) the use of units, 2) the reference to the figure and table, 3) the labeling of the figure and table, 4) I did not present or discuss the median and IQR because I chose to use the mean and standard deviation, 5) I did not use the range alone as a measure of dispersion, 6) I explained why I used the mean and standard deviation rather than the median and IQR, and 7) I provided the R code used.}]
 
 % latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Tue Dec 20 17:50:32 2016
+% Tue Dec 20 23:50:43 2016
 \begin{table}[ht]
 \centering
 \caption{Descriptive statistics of mouse water consumption.} 
@@ -2187,7 +2225,7 @@ R commands:
 \end{quote}
 
 % latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Tue Dec 20 17:50:32 2016
+% Tue Dec 20 23:50:43 2016
 \begin{tabular}{rrrrrrrrrrrrrrrr}
   30 & 26 & 26 & 26 & 25 & 25 & 25 & 25 & 25 & 24 & 24 & 24 & 24 & 24 & 24 & 23 \\ 
   23 & 23 & 23 & 22 & 22 & 22 & 22 & 21 & 21 & 21 & 20 & 20 & 19 & 19 & 18 & 16 \\ 
@@ -2210,7 +2248,7 @@ The shape of the data is slightly left-skewed \figrefp{fig:CrayfishTempHist} wit
 \end{knitrout}
 
 % latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Tue Dec 20 17:50:32 2016
+% Tue Dec 20 23:50:43 2016
 \begin{table}[ht]
 \centering
 \caption{Descriptive statistics of crayfish temperature preferences.} 
@@ -2513,7 +2551,7 @@ The majority of seeds were either sedge or grass with sedge being more than twic
 \end{knitrout}
 
 % latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Tue Dec 20 17:50:32 2016
+% Tue Dec 20 23:50:43 2016
 \begin{table}[ht]
 \centering
 \caption{Percentage distribution of wetland seeds by type.} 
@@ -3521,7 +3559,7 @@ If the variables had been nominal or if the natural order of levels were the sam
 A common method of summarizing bivariate categorical data is to count the number of individuals that have each combination of the first and second categorical variables.  For example, how many respondents had less than a HS degree and were very willing, how many had a high school degree and were very willing, and so on.  The count of the number of individuals of each combination is called a frequency.  A two-way frequency table offers an efficient way to display these frequencies \tabrefp{tab:EnvFreq}.  Thus, for example, 40 of the respondents had less than a high school degree and were very willing to take a cut in their standard of living to protect the environment.  Similarly, 542 respondents had a high school degree and were willing to cut their standard of living.
 
 % latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Tue Dec 20 17:50:35 2016
+% Tue Dec 20 23:50:45 2016
 \begin{table}[ht]
 \centering
 \caption{Frequency table of respondent's highest completed degree and willingness to cut their standard of living to protect the environment.} 
@@ -3568,7 +3606,7 @@ Two-way frequency tables are often converted to two-way percentage tables to all
 A \textbf{row-percentage table} is computed by dividing the value in the SAME cell on the original frequency table by the TOTAL value in the same row on the original frequency table and multiplying by 100.  For example, the value in the ``vwill'' column and ``ltHS'' row on the row-percentage table \tabrefp{tab:EnvRowP} is computed by dividing the value in the ``vwill'' column and ``ltHS'' row on the original frequency table (i.e., 40; \tabref{tab:EnvFreq}) by the value in the ``Sum'' column and the ``ltHS'' row on the original frequency table (i.e., 646) and multiplying by 100.
 
 % latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Tue Dec 20 17:50:35 2016
+% Tue Dec 20 23:50:45 2016
 \begin{table}[ht]
 \centering
 \caption{Row-percentage table of respondent's highest completed degree and willingness to cut their standard of living to protect the environment.} 
@@ -3598,7 +3636,7 @@ The value in each cell of a row-percentage table is the percentage OF ALL indivi
 A \textbf{column-percentage table} is computed by dividing the value in the SAME cell on the original frequency table by the TOTAL value in the same column on the original frequency table and multiplying by 100.  For example, the value in the ``vwill'' column and ``ltHS'' row on the column-percentage table \tabrefp{tab:EnvColP} is computed by dividing the value in the ``vwill'' column and ``ltHS'' row on the original frequency table (i.e., 40; \tabref{tab:EnvFreq}) by the value in the ``Sum'' row and the ``vwill'' column on the original frequency table (i.e., 208) and multiplying by 100.
 
 % latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Tue Dec 20 17:50:35 2016
+% Tue Dec 20 23:50:45 2016
 \begin{table}[ht]
 \centering
 \caption{Column-percentage table of respondent's highest completed degree and willingness to cut their standard of living to protect the environment.} 
@@ -3629,7 +3667,7 @@ The value in each cell of a column-percentage table is the percentage OF ALL ind
 Each value in a \textbf{table-percentage table} is computed by dividing the value in the SAME cell on the original frequency table by the TOTAL number of ALL individuals in the original frequency table and multiplying by 100.  For example, the value in the ``vwill'' column and ``ltHS'' row on the table-percentage table \tabrefp{tab:EnvTblP} is computed by dividing the value in the ``vwill'' column and ``ltHS'' row on the original frequency table (i.e., 40; \tabref{tab:EnvFreq}) by the value in the ``Sum'' row and the ``Sum'' column on the original frequency table (i.e., 3955) and multiplying by 100.
 
 % latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Tue Dec 20 17:50:35 2016
+% Tue Dec 20 23:50:45 2016
 \begin{table}[ht]
 \centering
 \caption{Table-percentage table of respondent's highest completed degree and willingness to cut their standard of living to protect the environment.} 
@@ -8685,7 +8723,7 @@ Levels: blonde brunette red
 \end{kframe}
 \end{knitrout}
 % latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Tue Dec 20 17:50:41 2016
+% Tue Dec 20 23:50:51 2016
 \begin{table}[ht]
 \centering
 \caption{Descriptive statistics of number of purple loosestrife plants in Green Gables Slough.} 
@@ -8725,7 +8763,7 @@ n & mean & sd & min & Q1 & median & Q3 & max & percZero \\
 \end{kframe}
 \end{knitrout}
 % latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Tue Dec 20 17:50:41 2016
+% Tue Dec 20 23:50:52 2016
 \begin{table}[ht]
 \centering
 \caption{Descriptive statistics of creatine phosphokinase values in 36 male volunteers.} 
@@ -8774,7 +8812,7 @@ n & mean & sd & min & Q1 & median & Q3 & max \\
 \end{kframe}
 \end{knitrout}
 % latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Tue Dec 20 17:50:41 2016
+% Tue Dec 20 23:50:52 2016
 \begin{table}[ht]
 \centering
 \caption{Descriptive statistics of the Dow Jones Travel Index for 20 cities.} 
@@ -8801,7 +8839,7 @@ n & mean & sd & min & Q1 & median & Q3 & max \\
 \end{kframe}
 \end{knitrout}
 % latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Tue Dec 20 17:50:41 2016
+% Tue Dec 20 23:50:52 2016
 \begin{table}[ht]
 \centering
 \caption{Percentage of all animals in the three major types.} 
@@ -8849,7 +8887,7 @@ amph/rep & bird & mammal & Sum \\
 \end{kframe}
 \end{knitrout}
 % latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Tue Dec 20 17:50:42 2016
+% Tue Dec 20 23:50:52 2016
 \begin{table}[ht]
 \centering
 \caption{Descriptive statistics of the sizes of 46 American zoos.} 
@@ -9013,7 +9051,7 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-220-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-223-1} 
 
 }
 
@@ -9029,7 +9067,7 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-221-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-224-1} 
 
 }
 
@@ -9049,8 +9087,8 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-222-1} 
-\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-222-2} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-225-1} 
+\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-225-2} 
 
 }
 
@@ -9066,7 +9104,7 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-223-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-226-1} 
 
 }
 
@@ -9082,7 +9120,7 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-224-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-227-1} 
 
 }
 
@@ -9102,8 +9140,8 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-225-1} 
-\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-225-2} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-228-1} 
+\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-228-2} 
 
 }
 
@@ -9120,7 +9158,7 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-226-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-229-1} 
 
 }
 
@@ -9136,7 +9174,7 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-227-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-230-1} 
 
 }
 
@@ -9154,8 +9192,8 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-228-1} 
-\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-228-2} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-231-1} 
+\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-231-2} 
 
 }
 
@@ -9174,7 +9212,7 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-229-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-232-1} 
 
 }
 
@@ -9190,7 +9228,7 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-230-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-233-1} 
 
 }
 
@@ -9208,8 +9246,8 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-231-1} 
-\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-231-2} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-234-1} 
+\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-234-2} 
 
 }
 
@@ -9225,7 +9263,7 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-232-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-235-1} 
 
 }
 
@@ -9249,8 +9287,8 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-233-1} 
-\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-233-2} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-236-1} 
+\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-236-2} 
 
 }
 
@@ -9271,7 +9309,7 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-234-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-237-1} 
 
 }
 
@@ -9291,8 +9329,8 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-235-1} 
-\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-235-2} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-238-1} 
+\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-238-2} 
 
 }
 
@@ -9308,7 +9346,7 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-236-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-239-1} 
 
 }
 
@@ -9328,7 +9366,7 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-237-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-240-1} 
 
 }
 
@@ -9344,7 +9382,7 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-238-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-241-1} 
 
 }
 
@@ -9364,8 +9402,8 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-239-1} 
-\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-239-2} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-242-1} 
+\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-242-2} 
 
 }
 
@@ -9381,7 +9419,7 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-240-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-243-1} 
 
 }
 
@@ -9399,8 +9437,8 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-241-1} 
-\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-241-2} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-244-1} 
+\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-244-2} 
 
 }
 
@@ -9421,7 +9459,7 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-242-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-245-1} 
 
 }
 
@@ -9437,7 +9475,7 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-243-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-246-1} 
 
 }
 
@@ -9457,8 +9495,8 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-244-1} 
-\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-244-2} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-247-1} 
+\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-247-2} 
 
 }
 
@@ -9474,7 +9512,7 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-245-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-248-1} 
 
 }
 
@@ -9490,7 +9528,7 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-246-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-249-1} 
 
 }
 
@@ -9508,8 +9546,8 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-247-1} 
-\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-247-2} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-250-1} 
+\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-250-2} 
 
 }
 
@@ -9533,8 +9571,8 @@ water
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-248-1} 
-\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-248-2} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-251-1} 
+\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-251-2} 
 
 }
 
@@ -9551,7 +9589,7 @@ Thus, the number out of 50000 that I could sell is 3e+04 crayfish.
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-249-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-252-1} 
 
 }
 
@@ -9884,7 +9922,7 @@ From this it is concluded that two-thirds of all respondents have the highest ca
 
 
 % latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Tue Dec 20 17:50:43 2016
+% Tue Dec 20 23:50:53 2016
 \begin{table}[ht]
 \centering
 \caption{Frequency table of respondents by answers to the two questions on the GSS.} 
@@ -9913,7 +9951,7 @@ Always & 279 & 349 & 492 & 147 & 22 & 1289 \\
     \end{enumerate}
 
 % latex table generated in R 3.3.2 by xtable 1.8-2 package
-% Tue Dec 20 17:50:43 2016
+% Tue Dec 20 23:50:53 2016
 \begin{table}[ht]
 \centering
 \caption{Frequency table of animals by broad animal type and location of the zoo.} 
@@ -10523,8 +10561,8 @@ Coefficients:
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-301-1} 
-\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-301-2} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-304-1} 
+\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-304-2} 
 
 }
 
@@ -10539,7 +10577,7 @@ Coefficients:
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-302-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-305-1} 
 
 }
 
@@ -10554,7 +10592,7 @@ Coefficients:
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-303-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-306-1} 
 
 }
 
@@ -10717,7 +10755,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-308-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-311-1} 
 
 }
 
@@ -10744,7 +10782,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-309-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-312-1} 
 
 }
 
@@ -10762,8 +10800,8 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-310-1} 
-\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-310-2} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-313-1} 
+\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-313-2} 
 
 }
 
@@ -10781,8 +10819,8 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-311-1} 
-\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-311-2} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-314-1} 
+\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-314-2} 
 
 }
 
@@ -10802,7 +10840,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-312-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-315-1} 
 
 }
 
@@ -10818,7 +10856,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-313-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-316-1} 
 
 }
 
@@ -10838,7 +10876,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-314-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-317-1} 
 
 }
 
@@ -10856,8 +10894,8 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-315-1} 
-\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-315-2} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-318-1} 
+\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-318-2} 
 
 }
 
@@ -10873,7 +10911,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-316-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-319-1} 
 
 }
 
@@ -10890,7 +10928,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-317-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-320-1} 
 
 }
 
@@ -10909,7 +10947,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-318-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-321-1} 
 
 }
 
@@ -10925,7 +10963,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-319-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-322-1} 
 
 }
 
@@ -10941,7 +10979,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-320-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-323-1} 
 
 }
 
@@ -10957,7 +10995,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-321-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-324-1} 
 
 }
 
@@ -10973,7 +11011,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-322-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-325-1} 
 
 }
 
@@ -10994,7 +11032,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-323-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-326-1} 
 
 }
 
@@ -11010,7 +11048,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-324-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-327-1} 
 
 }
 
@@ -11032,8 +11070,8 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-325-1} 
-\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-325-2} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-328-1} 
+\includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-328-2} 
 
 }
 
@@ -11049,7 +11087,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-326-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-329-1} 
 
 }
 
@@ -11070,7 +11108,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-327-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-330-1} 
 
 }
 
@@ -11086,7 +11124,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-328-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-331-1} 
 
 }
 
@@ -11102,7 +11140,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-329-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-332-1} 
 
 }
 
@@ -11188,7 +11226,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-330-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-333-1} 
 
 }
 
@@ -11212,7 +11250,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-331-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-334-1} 
 
 }
 
@@ -11255,7 +11293,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-332-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-335-1} 
 
 }
 
@@ -11271,7 +11309,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-333-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-336-1} 
 
 }
 
@@ -11287,7 +11325,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-334-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-337-1} 
 
 }
 
@@ -11303,7 +11341,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-335-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-338-1} 
 
 }
 
@@ -11319,7 +11357,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-336-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-339-1} 
 
 }
 
@@ -11335,7 +11373,7 @@ $Y_{3}$,$N_{2}$,$N_{3}$ & 0.33 & $Y_{4}$,$N_{1}$,$N_{2}$ & 0.33 & $Y_{4}$,$N_{1}
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-337-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-340-1} 
 
 }
 
@@ -11353,7 +11391,7 @@ Note that $\bar{x}=2504$, the $SE_{\bar{x}}$=$\frac{1200}{\sqrt(118)}$=110.5, an
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-339-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-342-1} 
 
 }
 
@@ -11372,7 +11410,7 @@ Note that $\bar{x}=$3.60, the $SE_{\bar{x}}$=$\frac{125}{\sqrt(15)}$=0.06, and $
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-341-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-344-1} 
 
 }
 
@@ -11391,7 +11429,7 @@ Note that $\bar{x}=$1.725, the $SE_{\bar{x}}$=$\frac{0.2}{\sqrt(16)}$=0.050, and
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-343-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-346-1} 
 
 }
 
@@ -11410,7 +11448,7 @@ Note that $\bar{x}=$92.86, the $SE_{\bar{x}}$=$\frac{125}{\sqrt(15)}$=32.27, and
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-345-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-348-1} 
 
 }
 
@@ -11429,7 +11467,7 @@ Note that $\bar{x}=$98.28, the $SE_{\bar{x}}$=$\frac{40}{\sqrt(36)}$=6.67, and $
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-347-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-350-1} 
 
 }
 
@@ -11459,7 +11497,7 @@ Note that $\bar{x}=$44.61, the $SE_{\bar{x}}$=$\frac{15}{\sqrt(15)}$=3.87, and $
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-350-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-353-1} 
 
 }
 
@@ -11509,7 +11547,7 @@ Thus, a 99\% confidence interval is 44.61$\pm$2.576*3.87, 44.61$\pm$9.98, or (34
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-351-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-354-1} 
 
 }
 
@@ -11527,7 +11565,7 @@ Thus, a 99\% confidence interval is 44.61$\pm$2.576*3.87, 44.61$\pm$9.98, or (34
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-352-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-355-1} 
 
 }
 
@@ -11555,7 +11593,7 @@ Thus, $3.26+1.645*0.44$ or $3.26+0.72$ = $3.98$.  Thus, one is 95\% confident th
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-353-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-356-1} 
 
 }
 
@@ -11573,7 +11611,7 @@ Thus, $3.26+1.645*0.44$ or $3.26+0.72$ = $3.98$.  Thus, one is 95\% confident th
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-354-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-357-1} 
 
 }
 
@@ -11678,7 +11716,7 @@ mean of ch$cholest
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-359-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-362-1} 
 
 }
 
@@ -11694,7 +11732,7 @@ mean of ch$cholest
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-360-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-363-1} 
 
 }
 
@@ -11710,7 +11748,7 @@ mean of ch$cholest
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-361-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-364-1} 
 
 }
 
@@ -11726,7 +11764,7 @@ mean of ch$cholest
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-362-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-365-1} 
 
 }
 
@@ -11742,7 +11780,7 @@ mean of ch$cholest
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-363-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-366-1} 
 
 }
 
@@ -11757,7 +11795,7 @@ mean of ch$cholest
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-364-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-367-1} 
 
 }
 
@@ -11783,7 +11821,7 @@ mean of ch$cholest
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-365-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-368-1} 
 
 }
 
@@ -11801,7 +11839,7 @@ mean of ch$cholest
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-366-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-369-1} 
 
 }
 
@@ -11828,7 +11866,7 @@ Thus, $83.2-1.696\frac{5.5}{\sqrt{32}}$ or $83.2-1.65$=$81.455$.  One is 95\% co
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-367-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-370-1} 
 
 }
 
@@ -11846,7 +11884,7 @@ Thus, $83.2-1.696\frac{5.5}{\sqrt{32}}$ or $83.2-1.65$=$81.455$.  One is 95\% co
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-368-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-371-1} 
 
 }
 
@@ -12132,7 +12170,7 @@ mean of x
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-380-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-383-1} 
 
 }
 
@@ -12160,7 +12198,7 @@ mean of x
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-381-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-384-1} 
 
 }
 
@@ -12188,7 +12226,7 @@ mean of x
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-382-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-385-1} 
 
 }
 
@@ -12206,7 +12244,7 @@ mean of x
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-383-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-386-1} 
 
 }
 
@@ -12536,7 +12574,7 @@ sample estimates:
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-401-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-404-1} 
 
 }
 
@@ -12552,7 +12590,7 @@ sample estimates:
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-402-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-405-1} 
 
 }
 
@@ -12568,7 +12606,7 @@ sample estimates:
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-403-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-406-1} 
 
 }
 
@@ -12607,7 +12645,7 @@ sample estimates:
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-404-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-407-1} 
 
 }
 
@@ -12650,7 +12688,7 @@ sample estimates:
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-405-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-408-1} 
 
 }
 
@@ -12702,7 +12740,7 @@ sample estimates:
 
 {\ttfamily\noindent\bfseries\color{errorcolor}{Error in plot.window(...): need finite 'ylim' values}}\end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-406-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-409-1} 
 
 }
 
@@ -12759,7 +12797,7 @@ sample estimates:
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-407-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-410-1} 
 
 }
 
@@ -13661,7 +13699,7 @@ suggest that the major differences are that the San Antonio zoo has more amphibi
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-467-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-470-1} 
 
 }
 
@@ -13703,7 +13741,7 @@ suggest that the major differences are that the San Antonio zoo has more amphibi
 
 {\ttfamily\noindent\bfseries\color{errorcolor}{Error in plot.window(...): need finite 'ylim' values}}\end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-468-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-471-1} 
 
 }
 
@@ -13753,7 +13791,7 @@ suggest that the major differences are that the San Antonio zoo has more amphibi
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-469-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-472-1} 
 
 }
 
@@ -13809,7 +13847,7 @@ where RY=``round, yellow'', RG=``round, green'', WY=``wrinkled, yellow'', and WG
 \end{verbatim}
 \end{kframe}
 
-{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-470-1} 
+{\centering \includegraphics[width=.4\linewidth]{Figs/unnamed-chunk-473-1} 
 
 }
 

@@ -18,11 +18,11 @@ set_parent('IntroStats.Rnw')
 \minitoc
 \newpage
 
-\lettrine{S}{tatistical inference is the process} of forming conclusions about the unknown parameters of a population by computing statistics from the individuals in a sample.\index{Inference!Definition}  As you can imagine from this definition, it is important that you understand the difference between a population and a sample and a parameter and a statistic before you can understand and appreciate the process of making statistical inferences.  Before identifying these items you must also identify the individual and variable(s) of interest.  These six items must be explicitly identified at the beginning of any statistical analysis for that analysis to be conducted properly.  Understanding and identifying these items is the focus of this section.  Formal methods of inference are discussed beginning with \chapref{chap:ProbIntro}.
+\lettrine{S}{tatistical inference is the process} of forming conclusions about the unknown parameters of a population by computing statistics from the individuals in a sample.\index{Inference!Definition}  As you can imagine from this definition, it is important that you understand the difference between a population and a sample and a parameter and a statistic before you can understand and appreciate the process of making statistical inferences.  Before identifying these items, the individual and variable(s) of interest must also be identified.  Understanding and identifying these six items is the focus of this Chapter.  Formal methods of inference are discussed beginning with \chapref{chap:ProbIntro}.
 
 \defn{Inference}{The process of forming conclusions about the unknown parameters of a population by computing statistics from the individuals in a sample.}
 
-Throughout this chapter we will identify the individual, variable, population, parameter, sample, and statistic (referred to as the \textbf{IVPPSS}) for the following hypothetical example.  Assume that interest is in determining the mean (or average) length of the 1015 fish in Square Lake \figrefp{fig:SquareLakePopn}.  Note that in ``real life'' we would not know how many fish are in this lake.  However, for the purpose of illustrating the concepts of this chapter we will suppose that specific values of several variables for all 1015 fish in this lake are known.
+The following hypothetical example is used throughout this chapter.  Assume that interest is in determining the mean (or average) length of the 1015 fish in Square Lake \figrefp{fig:SquareLakePopn}. In ``real life'' you would not know how many fish are in this lake.  However, for the purpose of illustrating important concepts in this chapter, it is assumed that all information for all 1015 fish in this lake is known.
 
 <<SquareLakePopn, echo=FALSE, fig.cap="Schematic representation of individual fish (i.e., dots; \\textbf{Left}) and histogram (\\textbf{Right}) of the total length of the 1015 fish in Square Lake.">>=
 data(SquareLakePopn)
@@ -34,7 +34,9 @@ plot(SL$x,SL$y,pch=16,xlab="",ylab="",xaxt="n",yaxt="n")
 hist(~tl,data=SL,xlab="Total Length",ylab="Frequency of Fish")
 @
 
-\section{IVPPSS Definitions}
+\vspace{-24pt}
+\section{Definitions} \label{sect:IVPPSS}
+\vspace{-12pt}
 The \textbf{individual} in a statistical analysis is one of the ``items'' to be examined by the researcher.\index{Individual, Definition}  Sometimes the individual is a person, but it may be an animal, a piece of wood, a site or location, a particular time, or an event.  It is extremely important that you don't always visualize a person when you use the word individual in a statistical context.  Synonyms for individual are unit, experimental unit (usually used in experiments), sampling unit (usually used in observational studies), case, and subject (usually used in studies involving humans).  The individual of interest in the Square Lake example is an individual fish, because the researcher will collect a set of fish and examine each fish individually.
 
 \defn{Individual}{One of the items examined by the researcher.}
@@ -42,30 +44,30 @@ The \textbf{individual} in a statistical analysis is one of the ``items'' to be 
 \vspace{-12pt}
 \warn{An individual is not necessarily a person.}
 
-The \textbf{variable} is the characteristic of interest about each individual.\index{Variable!Definition}  The variable is the information that the researcher records about each individual. The variable of interest in the Square Lake example is the length of each fish. Note that in most ``real life'' studies the researcher will be interested in more than one variable.  For example, in this example, the researcher may also record the fish's weight, sex, and age.  Studies with one variable are called univariate studies, studies with two variables are bivariate studies, and studies with more than two variables are called multivariate studies.
+The \textbf{variable} is the characteristic of interest recorded about each individual.\index{Variable!Definition} The variable of interest in the Square Lake example is the length of each fish. Note that in most ``real life'' studies the researcher will record more than one variable.  For this example, the researcher may also record the fish's weight, sex, and age.  Studies with one variable are called univariate studies, studies with two variables are bivariate studies, and studies with more than two variables are called multivariate studies.
 
-\defn{Variable}{The characteristic of interest about each individual.}
+\defn{Variable}{The characteristic of interest recorded about each individual.}
 
-A \textbf{population} is the collection of ALL individuals of interest.\index{Population}  Simply put, the population is all of the individuals.  In the Square Lake example, the population is all 1015 fish in the lake.  You should define the population as thoroughly as possible including all qualifiers as necessary.  This example is simple because Square Lake is so well defined; however, as you will see in the chapter review exercises, the population is often only well-defined by your choice of descriptors.
+A \textbf{population} is ALL individuals of interest.\index{Population} In the Square Lake example, the population is all 1015 fish in the lake.  The population should be defined as thoroughly as possible including qualifiers as necessary.  This example is simple because Square Lake is so well defined; however, as you will see in the review exercises, the population is often only well-defined by your choice of descriptors.
 
-\defn{Population}{The collection of ALL individuals of interest.}
+\defn{Population}{ALL individuals of interest.}
 
-A \textbf{parameter} is a summary computed from ALL individuals in a population.\index{Parameter!Definition}  The term for the particular summary is usually preceded by the word ``population.''  Parameters are ultimately what is of interest because interest is in all individuals in the population.  However, in practice, parameters cannot be computed because the entire population cannot be ``seen.''  In this hypothetical example, all 1015 fish are accessible and the parameters are computed \tabrefp{tab:SquareLakePopn}.\footnote{We will discuss how to compute and interpret each of these values in later chapters.}  As stated above, in this example, interest is in the population mean (or average) length of all fish in Square Lake, which is \Sexpr{round(mean(SL$tl),2)} mm.
+A \textbf{parameter} is a summary computed from ALL individuals in a population.\index{Parameter!Definition}  The term for the particular summary is usually preceded by the word ``population.''  Parameters are ultimately what is of interest because interest is in all individuals in the population.  However, in practice, parameters cannot be computed because the entire population cannot be ``seen.''  In this hypothetical example, the parameters can be computed because all 1015 fish are accessible.  In this example, the researchers were interested in the population mean length of all fish in Square Lake, which is \Sexpr{round(mean(SL$tl),2)} mm \tabrefp{tab:SquareLakePopn}.\footnote{We will discuss how to compute and interpret each of these values in later chapters.}
 
 <<SquareLakePopnTbl, results="asis", echo=FALSE >>=
 slstat <- Summarize(SL$tl,digits=2)
 slstat1 <- matrix(slstat,nrow=1)
 colnames(slstat1) <- names(slstat)
-sl.x <- xtable(slstat1,align=rep("c",ncol(slstat1)+1),digits=c(0,0,2,2,0,0,0,0,0),caption="Summary parameters for the total length of all 1015 fish in the Square Lake population.","tab:SquareLakePopn")
+sl.x <- xtable(slstat1,align=rep("c",ncol(slstat1)+1),digits=c(0,0,2,2,0,0,0,0,0),caption="Parameters for the total length of ALL 1015 fish in the Square Lake population.","tab:SquareLakePopn")
 print(sl.x,caption.placement="top",hline.after=c(0,nrow(sl.x)),include.rownames=FALSE)
 @
 
-\defn{Parameter}{A summary of all individuals in a population.}
+\defn{Parameter}{A summary of ALL individuals in a population.}
 
 \vspace{-12pt}
 \warn{Populations and parameters can generally not be ``seen.''}
 
-The entire population cannot be ``seen'' in real life.  Thus, the only alternative for learning something about the population is to examine a subset of the population.  This subset is called a \textbf{sample}.\index{Sample!Definition}  The red dots in \figref{fig:SquareLakeSample1} represent a random sample of 50 fish from Square Lake (note that the sample size is usually denoted by a lower-case n; i.e., n=50).
+The entire population cannot be ``seen'' in real life.  Thus, a subset of the population is usually examined to learn something about the population.  This subset is called a \textbf{sample}.\index{Sample!Definition}  The red dots in \figref{fig:SquareLakeSample1} represent a random sample of n=50 fish from Square Lake (note that the sample size is usually denoted by n).
 
 <<SquareLakeSample1, echo=FALSE, fig.cap="Schematic representation (\\textbf{Left}) of a sample of 50 fish (i.e., red dots) from Square Lake and histogram (\\textbf{Right}) of the total length of the 50 fish in this sample.">>=
 set.seed(1)
@@ -77,7 +79,9 @@ hist(~tl,data=SL1,xlab="Total Length",ylab="Frequency of Fish")
 
 \defn{Sample}{A subset of the population examined by a researcher.}
 
-Summaries computed from individuals in a sample are called \textbf{statistics}.\index{Statistic!Definition}  Specific names of statistics should be preceded by the word ``sample.''  The statistic of interest is always the same as the parameter of interest; i.e., the statistic describes the sample the same way that the parameter describes the population.  For example, if interest is in the population mean, then the sample mean would be computed.  Some statistics computed from this sample are shown in \tabref{tab:SquareLakeSample1} and \figref{fig:SquareLakeSample1}.  The sample mean of \Sexpr{round(mean(SL1$tl),2)} mm is the best ``guess'' at the population mean.  Not surprisingly from the discussion in \sectref{sect:WhyStats}, the sample mean does not perfectly equal the population mean.
+Summaries computed from individuals in a sample are called \textbf{statistics}.\index{Statistic!Definition}  Specific names of statistics are preceded by ``sample.''  The statistic of interest is always the same as the parameter of interest; i.e., the statistic describes the sample in the same way that the parameter describes the population.  For example, if interest is in the population mean, then the sample mean would be computed.
+
+Some statistics computed from the sample from Square Lake are shown in \tabref{tab:SquareLakeSample1} and \figref{fig:SquareLakeSample1}.  The sample mean of \Sexpr{round(mean(SL1$tl),2)} mm is the best ``guess'' at the population mean.  Not surprisingly from the discussion in \chapref{chap:WhyStatsImportant}, the sample mean does not perfectly equal the population mean.
 
 <<SquareLakeSample1s, results="asis", echo=FALSE >>=
 slstat <- Summarize(SL1$tl,digits=2)
@@ -87,41 +91,44 @@ sl1.x <- xtable(slstat1,align=rep("c",ncol(slstat1)+1),digits=c(0,0,2,2,0,0,0,0,
 print(sl1.x,caption.placement="top",hline.after=c(0,nrow(sl1.x)),include.rownames=FALSE)
 @
 
+\defn{Statistic}{A summary of all individuals in a sample.}
+
 
 \section{Performing an IVPPSS}
-In each statistical analysis it is important that you determine the Individual, Variable, Population, Parameter, Sample, and Statistics (IVPPSS).  It is simplest to do this in this order -- IVPPSS.  First, determine what items you are actually going to look at; those are your individuals.  Second, what are you going to record when you look at an individual; that is the variable.  Third, the population is simply ALL of the individuals.  Fourth, the parameter is a summary (e.g., mean or proportion) of the variable recorded from all of the individuals in the population.\footnote{Again, parameters generally cannot be computed because all of the individuals in the population can generally not be seen.  Thus, the parameter is largely conceptual.}  Fifth, we realize that we cannot see all of the individuals in the population so we examined only a few; those few were the sample.  Finally, the summary of the individuals in the sample is the statistic.  The statistic has to be the same summary of the sample as the parameter was of the population.
+\vspace{-12pt}
+In each statistical analysis it is important that you determine the Individual, Variable, Population, Parameter, Sample, and Statistic (\textbf{IVPPSS}). First, determine what items you are actually going to look at; those are your individuals.  Second, what are you going to record when you look at an individual; that is the variable.  Third, the population is simply ALL of the individuals.  Fourth, the parameter is a summary (e.g., mean or proportion) of the variable recorded from ALL of the individuals in the population.\footnote{Again, parameters generally cannot be computed because all of the individuals in the population can not be seen.  Thus, the parameter is largely conceptual.}  Fifth, we usually cannot see all of the individuals in the population so only a few are examined; those few are the sample.  Finally, the summary of the individuals in the sample is the statistic.
 
-When performing an IVPPSS, keep in mind that parameters describe populations (note that they both start with ``p'') and statistics describe samples (note that they both start with ``s'').  This can also be looked at from another perspective.  A sample is an estimate of the population and a statistic is an estimate of a parameter.
+When performing an IVPPSS, keep in mind that parameters describe populations (note that they both start with ``p'') and statistics describe samples (note that they both start with ``s'').  This can also be looked at from another perspective.  A sample is an estimate of the population and a statistic is an estimate of a parameter.  Thus, the statistic has to be the same summary (mean or proportion) of the sample as the parameter is of the population.
 
-This process can be illustrated by performing an IVPPSS for the following situation:
+The IVPPSS process is illustrated for the following situation:
+\vspace{-12pt}
 \begin{quote}
-\textit{A University of New Hampshire graduate student (and Northland College alum) investigated habitat utilization by New England (Sylvilagus transitionalis) and Eastern (Sylvilagus floridanus) cottontail rabbits in Maine.  In a preliminary portion of his research he determined the proportion of ``rabbit patches'' that were inhabited by New England cottontails.  He examined 70 ``patches'' and found that 53 showed evidence of inhabitance by New England cottontails.}
+\textit{A University of New Hampshire graduate student (and Northland College alum) investigated habitat utilization by New England (Sylvilagus transitionalis) and Eastern (Sylvilagus floridanus) cottontail rabbits in eastern Maine in 2007.  In a preliminary portion of his research he determined the proportion of ``rabbit patches'' that were inhabited by New England cottontails.  He examined 70 ``patches'' and found that 53 showed evidence of inhabitance by New England cottontails.}
 \end{quote}
 
 \begin{Itemize}
-  \item The individuals are the rabbit patches (i.e., a rabbit patch is the ``item'' being sampled and examined).
+  \item An individual is a rabbit patch in eastern Maine in 2007 (i.e., a rabbit patch is the ``item'' being sampled and examined).
   \item The variable is ``evidence for New England cottontails or not (yes or no)'' (i.e., the characteristic of each rabbit patch that was recorded).
-  \item The population is ALL rabbit patches in Maine.
-  \item The parameter is the proportion of ALL rabbit patches in Maine that showed evidence for New England cottontails.\footnote{Note that this population and parameter cannot actually be calculated but it is what the researcher wants to know.}
-  \item The sample is the 70 rabbit patches in Maine that were actually examined by the researcher.
-  \item The statistic is the proportion of the 70 rabbit patches in Maine actually examined that showed evidence for New England cottontails.\footnote{Note that this statistic is the same as the parameter; it is just computed on a different collection of individuals.}
+  \item The population is ALL rabbit patches in eastern Maine in 2007.
+  \item The parameter is the proportion of ALL rabbit patches in eastern Maine in 2007 that showed evidence for New England cottontails.\footnote{Note that this population and parameter cannot actually be calculated but it is what the researcher wants to know.}
+  \item The sample is the 70 rabbit patches from eastern Maine in 2007 that were actually examined by the researcher.
+  \item The statistic is the proportion of the 70 rabbit patches from eastern Maine in 2007 actually examined that showed evidence for New England cottontails. [In this case, the statistic would be 53/70 or \Sexpr{formatC(53/70,format="f",digits=3)}.]
 \end{Itemize}
 
-In some situations it may be easier to start by identifying the sample.  From this, and through the realization that a sample is always ``of the individuals'', it may be easier to identify the individual.  This process is illustrated in the following example, with the items listed in the order identified rather than in the traditional IVPPSS order.
+In some situations it may be easier to identifying the sample first.  From this, and through the realization that a sample is always ``of the individuals'', it may be easier to identify the individual.  This process is illustrated in the following example, with the items listed in the order identified rather than in the traditional IVPPSS order.
 
 \begin{quote}
-\textit{The Duluth, MN touristry board is interested in the average number of raptors seen per year at Hawk Ridge.\footnote{Information about Hawk Ridge is found \href{http://www.hawkridge.org/}{here}.}  To determine this value, they collected the total number of raptors seen in a sample of years from 1971-2003.}
+\textit{The Duluth, MN Touristry Board is interested in the average number of raptors seen per year at Hawk Ridge.\footnote{Information about Hawk Ridge is found \href{http://www.hawkridge.org/}{here}.}  To determine this value, they collected the total number of raptors seen in a sample of years from 1971-2003.}
 \end{quote}
 
 \begin{Itemize}
   \item The sample is the 32 years between 1971-2003 at Hawk Ridge.
   \item An individual is a year (because a ``sample of \emph{years}'' was taken) at Hawk Ridge.
-  \item The variable recorded was the number of raptors seen in one year.
-  \item The population is ALL years (this is a bit ambiguous but may be thought of as all years that Hawk Ridge has existed).
-  \item The parameter is the average number of raptors seen per year in ALL years.
-  \item The statistic is the average number of raptors seen in the 1971-2003 sample of years.
+  \item The variable recorded was the number of raptors seen in one year at Hawk Ridge.
+  \item The population is ALL years at Hawk Ridge(this is a bit ambiguous but may be thought of as all years that Hawk Ridge has existed).
+  \item The parameter is the average number of raptors seen per year in ALL years at Hawk Ridge.
+  \item The statistic is the average number of raptors seen in the 1971-2003 sample of years at Hawk Ridge.
 \end{Itemize}
-
 
 \begin{exsection}
   \item \label{revex:IVPPSSDad}My Dad owns 60 acres of timber (mostly Oak, Walnut, and Poplar) in Iowa.  He wants to measure the mean diameter-at-breast-height (DBH) of the oak trees on his property.  He measures the DBH of 75 randomly selected oak trees.  Use this information to perform an IVPPSS. \ansref{ans:IVPPSSDad}
@@ -138,8 +145,8 @@ In some situations it may be easier to start by identifying the sample.  From th
 \end{exsection}
 
 
-\subsection{Sampling Variability, Again}
-It is instructive to once again consider how the statistics might change when different samples are taken.  \tabref{tab:SquareLakeSample234} and \figref{fig:SquareLakeSample234} show the results from three more samples of 50 fish from the Square Lake population.  All four samples (including the sample shown in \tabref{tab:SquareLakeSample1} and \figref{fig:SquareLakeSample1}) had means that were quite different from the known population mean of 98.06.  All four histograms were similar in appearance but were slightly different in actual values.  Similar conclusions could be made for the other parameters and statistics (e.g., compare the population and sample standard deviations, min, max, etc.).  The concept illustrated here is that a sample will likely represent the population of interest, but there will be variability among samples.  This variability between samples is called \textbf{sampling variability}, which is one of the most important concepts in statistics and will be discussed in great detail throughout this course.\index{Sampling Variability!Definition}
+\subsection{Sampling Variability (Revisited)}
+It is instructive to once again (see \chapref{chap:WhyStatsImportant}) consider how statistics differ among samples.  \tabref{tab:SquareLakeSample234} and \figref{fig:SquareLakeSample234} show results from three more samples of n=50 fish from the Square Lake population.  The means from all four samples (including the sample in \tabref{tab:SquareLakeSample1} and \figref{fig:SquareLakeSample1}) were quite different from the known population mean of 98.06 mm.  Similarly, all four histograms were similar in appearance but were slightly different in actual values. These results illustrate that a statistic (or sample) will only approximate the parameter (or population) and that statistics vary among samples.  This \textbf{sampling variability} is one of the most important concepts in statistics and will be discussed in great detail beginning in \chapref{chap:SamplingDist}.\index{Sampling Variability!Definition}
 
 <<SquareLakeSample234, echo=FALSE, fig.width=5, fig.height=7.5, out.width='.7\\linewidth', fig.cap="Schematic representation (\\textbf{Left}) of three samples of 50 fish (i.e., red dots) from Square Lake and histograms (\\textbf{Right}) of the total length of the 50 fish in each sample.">>=
 set.seed(2); SL2 <- SL[sample(SL$i,50),]
@@ -169,35 +176,35 @@ print(SL234.x,caption.placement="top",hline.after=c(0,nrow(SL234.x)),include.row
 
 \defn{Sampling Variability}{The realization that no two samples are exactly alike. Thus, statistics computed from different samples will likely vary.}
 
-This example also illustrates another important statistical concept.  Parameters are fixed values because populations don't change.  If a population does change, then it is considered to be a different population.  In the Square Lake example, if a fish is removed from the lake, then the lake would then be considered a different population of fish.  Statistics, on the other hand, vary in value depending on the sample because each sample consists of different individuals and individuals vary (i.e., sampling variability exists because natural variability exists).
+This example also illustrates that parameters are fixed values because populations don't change.  If a population does change, then it is considered to be a different population.  In the Square Lake example, if a fish is removed from the lake, then the lake would then be considered a different population of fish.  Statistics, on the other hand, vary depending on the sample because each sample consists of different individuals that vary (i.e., sampling variability exists because natural variability exists).
 
 \warn{Parameters are fixed in value, while statistics vary in value.}
 
 
+\clearpage
 \section{Variable Types}\label{sect:VarTypes}
-The type of statistic that can be calculated is dictated by the type of variable to be analyzed.  For example, a sample mean (or average) can only be calculated for a quantitative variable (defined below).  Thus, immediately after identifying the variable in the IVPPSS procedure you should identify the type of that variable.
-
+The type of statistic that can be calculated is dictated by the type of variable to be analyzed.  For example, a sample mean (or average) can only be calculated for a quantitative variable (defined below).  Thus, the type of that variable should be identifie immediately after performing an IVPPSS.
 
 \subsection{Variable Definitions}
 There are two main groups of variable types -- quantitative and categorical \figrefp{fig:VarTypes}.  \textbf{Quantitative} variables are variables with numerical values for which it makes sense to do arithmetic operations (like adding or averaging).\index{Quantitative Variable}  Synonyms for quantitative are measurement or numerical.  \textbf{Categorical} variables are variables that record to which group or category an individual belongs.\index{Categorical Variable}  Synonyms for categorical are qualitative or attribute.  Within each main type of variable are two subgroups \figrefp{fig:VarTypes}.
 
-<<VarTypes, echo=FALSE, fig.width=6.5, fig.height=3.5, out.width='.7\\linewidth', fig.cap="Schematic representation of the four types of variables.">>=
+<<VarTypes, echo=FALSE, fig.width=5, fig.height=2.5, out.width='.5\\linewidth', fig.cap="Schematic representation of the four types of variables.">>=
 par(mar=c(0,0,0,0),cex=1.5)
-plot(-10,-10,xlim=c(0,6),ylim=c(-2,2),xaxt="n",yaxt="n",xlab="",ylab="",bty="n")
+plot(NA,xlim=c(0,5),ylim=c(-1.,1.),xaxt="n",yaxt="n",xlab="",ylab="",bty="n")
 text(-0.25,0,"Variable",pos=4)
-arrows(0.95,0,1.65,-0.9,lwd=3,length=0.1,col="blue")
-text(1.55,-1,"Quantitative",pos=4,col="blue")
-arrows(3.2,-1,4.1,-1.45,lwd=3,length=0.1,col="blue")
-text(4,-1.5,"Discrete",pos=4,col="blue")
-arrows(3.2,-1,4.1,-0.55,lwd=3,length=0.1,col="blue")
-text(4,-0.5,"Continuous",pos=4,col="blue")
+text(1.3,-0.65,"Quantitative",pos=4,col="blue")
+text(3.6,-0.25,"Continuous",pos=4,col="blue")
+text(3.6,-0.95,"Discrete",pos=4,col="blue")
+arrows(0.95,0,1.45,-0.55,lwd=3,length=0.1,col="blue")
+arrows(2.95,-0.65,3.7,-0.25,lwd=3,length=0.1,col="blue")
+arrows(2.95,-0.65,3.7,-0.95,lwd=3,length=0.1,col="blue")
 
-arrows(0.95,0,1.65,0.9,lwd=3,length=0.1,col="red")
-text(1.55,1,"Categorical",pos=4,col="red")
-arrows(3.1,1,4.1,1.45,lwd=3,length=0.1,col="red")
-text(4,0.5,"Ordinal",pos=4,col="red")
-text(4,1.5,"Nominal",pos=4,col="red")
-arrows(3.1,1,4.1,0.55,lwd=3,length=0.1,col="red")
+text(1.3,0.65,"Categorical",pos=4,col="red")
+text(3.6,0.95,"Nominal",pos=4,col="red")
+text(3.6,0.25,"Ordinal",pos=4,col="red")
+arrows(0.95,0,1.45,0.55,lwd=3,length=0.1,col="red")
+arrows(2.9,0.65,3.7,0.95,lwd=3,length=0.1,col="red")
+arrows(2.9,0.65,3.7,0.25,lwd=3,length=0.1,col="red")
 @
 \vspace{9pt} % added because of paragraph compressions following R code
 
@@ -227,15 +234,19 @@ Ordinal and nominal variables are easily distinguished by determining if the ord
 
 The following are some issues to consider when identifying the type of a variable:
 \begin{Enumerate}
-  \item The categories of a categorical variable are sometimes labeled with numbers.  Don't let this fool you into calling the variable quantitative.
+  \item The categories of a categorical variable are sometimes labeled with numbers. For example, 1=``Poor'', 3=``Fair'', and 5=``Good''.  Don't let this fool you into calling the variable quantitative.
   \item Rankings, ratings, and preferences are ordinal (categorical) variables.
   \item Counts of numbers are discrete (quantitative) variables.
   \item Measurements are typically continuous (quantitative) variables.
+  \item It does not matter how precisely quantiative variables are recorded when deciding if the variable is continuous or discrete. For example, the weight of the duck might have been recorded to the nearest kg. However, this was just a choice that was made, the actual values can be continuously finer than kg and, thus, weight is a continuous variable.
   \item Categorical variables that consist of only two levels or categories will be labeled as a nominal variable (because any order of the groups makes sense).  This type of variable is also often called ``binomial.''.
   \item Do not confuse ``what type of variable'' (answer is one of ``continuous'', ``discrete'', ``nominal'', or ``ordinal'')  with ``what type of variability'' (answer is ``natural'' or ``sampling'') questions.
 \end{Enumerate}
 
-\warn{``What type of variable is ...?'' is a different question than ``what type of variability is ...?''  Be careful to note the word difference (i.e., ``variable'' versus ``variabiltiy'' when answering these questions.}
+\warn{``What type of variable is ...?'' is a different question than ``what type of variability is ...?''  Be careful to note the word difference (i.e., ``variable'' versus ``variability'' when answering these questions.}
+
+\vspace{-12pt}
+\warn{The precision to which a quantitative variable was recorded does not determine whether it is continuous or discrete. How precisely the variable COULD have been recorded is the important consideration.}
 
 \begin{exsection}
   \item \label{revex:VarTypeDucks} What type of variable is the number of ducks found at the ``Hot Pond'' every morning? \ansref{ans:VarTypeDucks}
