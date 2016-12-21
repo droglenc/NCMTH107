@@ -14,7 +14,8 @@ title: Resources
 1. [**FAQ**](FAQ/)
 1. **Hypothesis Testing Fact Sheet** ([PDF](MTH107-HOcheatsheet.pdf) or [PPT](MTH107-HOcheatsheet.ppt))
 1. [**List of Symbols**](symbols)
-1. [**Common Definitions**](definitions) 
+1. [**Common Definitions**](definitions)
+1. [**Whole Book**](../book/IntroStats_noPrint.pdf)
 
 ## Computer
 1. **Data Files**
