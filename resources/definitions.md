@@ -1,18 +1,12 @@
 ---
 layout: page
 title: Definitions
-author: "Derek H. Ogle"
 ---
 
-```{r echo=FALSE, eval=FALSE}
-# Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/")
-source("../rhelpers/rhelpers.R")
-modHTML("definitions")
-```
-
-<div class="container">
-<dl class="dl-horizontal">
+<div class="panel panel-info">
+  <div class="panel-heading">Word <span class="pull-right">Definition</span></div>
+  <div class="panel-body">
+    <dl class="dl-horizontal">
 
 <dt>Bivariate</dt><dd>Examining two variables.</dd>
 <dt>Continuous Variable</dt><dd>A quantitative variable that can assume an uncountable number of values.</dd>
@@ -40,17 +34,15 @@ collecting, organizing, and interpreting numerical information or data.</dd>
 <dt>Univariate</dt><dd>Examining one variable.</dd>
 <dt>Variable</dt><dd>The characteristic of interest recorded about each individual.</dd>
 <dt>Voluntary Response Sample</dt><dd>A sample of individuals that choose themselves for the sample by responding to a general appeal.</dd>
-
-
-
-
-<dt></dt><dd>.</dd>
-<dt></dt><dd>.</dd>
-<dt></dt><dd>.</dd>
-<dt></dt><dd>.</dd>
-<dt></dt><dd>.</dd>
-<dt></dt><dd>.</dd>
-
 </dl>
+
+  </div>
 </div>
 
+
+.panel {
+    width: 500px;  
+}
+.panel .dl-horizontal dt {
+    white-space: normal;
+}
