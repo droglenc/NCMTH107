@@ -41,7 +41,7 @@ collecting, organizing, and interpreting numerical information or data.</dd>
 
 <style>
 .panel .dl-horizontal dd {
-    padding: 0 0 0.5em 0;
+    padding: 0.5em 0 0 0;
 }
 .panel .dl-horizontal dt {
     white-space: normal;
