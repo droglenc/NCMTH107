@@ -4,15 +4,15 @@ title: Resources
 ---
 
 ## Administrative
-1. Feedback / Suggestions -- [Dr. Ogle](https://www.suggestionox.com/r/W16-107){:target="_blank"}
+1. [Anonymous Feedback / Suggestions for Dr. Ogle](https://www.suggestionox.com/r/TBifTA){:target="_blank"}
 1. [**Daily Quiz**](quizzes/)
 1. [**Homework Answer Keys**](homework-keys/)
 1. [**Class Exercise Answer Keys**](ce-keys/)
 
 ## Learning Assistance
-1. **R Cheat Sheet** ([PDF](MTH107-Rcheatsheet.pdf) or [PPT](MTH107-Rcheatsheet.pptx))
+1. [**R Cheat Sheet**](MTH107-Rcheatsheet.pdf) (or as [PPT](MTH107-Rcheatsheet.pptx))
 1. [**FAQ**](FAQ/)
-1. **Hypothesis Testing Fact Sheet** ([PDF](MTH107-HOcheatsheet.pdf) or [PPT](MTH107-HOcheatsheet.ppt))
+1. [**Hypothesis Testing Fact Sheet**](MTH107-HOcheatsheet.pdf) (or as [PPT](MTH107-HOcheatsheet.ppt))
 1. [**List of Symbols**](symbols)
 1. [**Common Definitions**](definitions)
 1. [**Whole Book**](../book/IntroStats_noPrint.pdf)
