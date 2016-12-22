@@ -11,6 +11,7 @@ title: Definitions
 <dt>Argument</dt><dd>In R, A "directive" provided within the parentheses of a function.</dd>
 <dt>Bimodal</dt><dd>The shape of a distribution with two peaks or "humps."</dd>
 <dt>Bivariate</dt><dd>Examining two variables.</dd>
+<dt>Coefficient of Determination</dt><dd>The proportion of the total variability in the response variable that is explained away by knowing the explanatory variable and the best-fit model.</dd>
 <dt>Continuous</dt><dd>A quantitative variable that can assume an uncountable number of values.</dd>
 <dt>Convenience</dt><dd>A sample of individuals who are easiest to reach for the researcher.</dd>
 <dt>data.frame</dt><dd>In R, a two-dimensional organization of variables (as columns, possibly of different data types) recorded on multiple individuals (as rows).</dd>
@@ -22,6 +23,7 @@ title: Definitions
 <dt>Individual</dt><dd>One of the items examined by the researcher.</dd>
 <dt>Inference</dt><dd>The process of forming conclusions about the unknown parameters of a population by computing statistics from the individuals in a sample.</dd>
 <dt>Inter-Quartile Range (IQR)</dt><dd>The difference between the third (Q3) and first (Q1) quartiles.</dd>
+<dt>Intercept</dt><dd>The value of the response variable when the explanatory variable is equal to zero.</dd>
 <dt>Left-Skewed</dt><dd>The left-tail of a distribution is longer or more drawn out than the right-tail.</dd>
 <dt>Levels</dt><dd>In an experiment, the number of categories or groupings of the factor.</dd>
 <dt>Mean</dt><dd>The center of gravity or balance point of the data, i.e., the sum of the data divided by the number of individuals.</dd>
@@ -37,11 +39,13 @@ title: Definitions
 <dt>Quartiles</dt><dd>The values that divide the ordered data into quarters.</dd>
 <dt>Range</dt><dd>The difference between the maximum and minimum value in a data set.</dd>
 <dt>Replicates</dt><dd>In an experiment, the number of individuals in each treatment group.</dd>
+<dt>Residual</dt><dd>The difference between the observed and predicted values of the response variable for an individual. In regression, the vertical difference between the observed and predicted values of the response variable for an individual.</dd>
 <dt>Response</dt><dd>The variable to be predicted or explained.</dd>
 <dt>Right-Skewed</dt><dd>The right-tail of a distribution is longer or more drawn out than the left-tail.</dd>
 <dt>Sample</dt><dd>A subset of the population examined by a researcher.</dd>
 <dt>Sampling Variability</dt><dd>The fact that the results (i.e., statistics) from different samples are different.</dd>
 <dt>Simple Random</dt><dd>A probability-based sample where each individual of the population has the same chance of being selected for the sample. Usually abbreviated as SRS.</dd>
+<dt>Slope</dt><dd>The change in value of the response variable for a unit change in value of the explanatory variable.</dd>
 <dt>Standard Deviation</dt><dd>"Essentially" the average deviation or difference of individuals from the mean.</dd>
 <dt>Statistic</dt><dd>A summary of all individuals in a sample.</dd>
 <dt>Statistics</dt><dd>As a field of study ... The science of
@@ -53,10 +57,6 @@ collecting, organizing, and interpreting numerical information or data.</dd>
 <dt> Vector</dt><dd>In R, a one-dimensional list of items of the same data type.</dd>
 <dt>Voluntary Response</dt><dd>A sample of individuals that choose themselves for the sample by responding to a general appeal.</dd>
 
-<dt></dt><dd></dd>
-<dt></dt><dd></dd>
-<dt></dt><dd></dd>
-<dt></dt><dd></dd>
 <dt></dt><dd></dd>
 <dt></dt><dd></dd>
 <dt></dt><dd></dd>

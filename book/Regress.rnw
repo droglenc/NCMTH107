@@ -29,17 +29,20 @@ set_parent('IntroStats.Rnw')
 
 \warn{Explaining variability of and predicting future values of response variables are the two goals of regression.}
 
-Exact predictions cannot be made because of natural variability.  For example, two people with the same intake of mercury (from consumption of fish) will not have the same level of mercury in their blood stream (e.g., observe the two individuals in \figref{fig:HGscat} that had intakes of 580 ug HG/day).  Thus, the best that can be accomplished is to predict the average or expected value for a person with a particular intake value.  This will be accomplished by finding the line that best ``fits'' the points on a scatterplot of the data.  Finding and using that ``best-fit'' line is the topic of this chapter.
+Exact predictions cannot be made because of natural variability.  For example, two people with the same intake of mercury (from consumption of fish) will not have the same level of mercury in their blood stream (e.g., observe the two individuals in \figref{fig:HGscat} that had intakes of 580 ug HG/day).  Thus, the best that can be accomplished is to predict the average or expected value for a person with a particular intake value.  This is accomplished by finding the line that best ``fits'' the points on a scatterplot of the data and using that line to make predictions.  Finding and using the ``best-fit'' line is the topic of this chapter.
 
-<<HGscat, echo=FALSE, fig.cap="Scatterplot between the intake of mercury in fish and the mercury in the blood stream of individuals.">>=
+<<HGscat, echo=FALSE, fig.cap="Scatterplot of intake of mercury in fish and the mercury in the blood stream.">>=
 intake <- c(180,200,230,410,600,550,275,580,580,105,250, 60,650)
 blood  <- c( 90,120,125,290,310,290,170,275,350, 70,105, 75,480)
 merc <- data.frame(intake,blood)
 plot(blood~intake,data=merc,pch=16,xlab="Intake (ug Hg/day)",ylab="Blood (ng/g)")
+axis(1,at=c(200,400,600))
 @
 
+\vspace{-12pt}
 \section{Response and Explanatory Variables}
-The variable to be predicted and the variable used to make the prediction must be identified before conducting a regression analysis.  The variable to be predicted is the \textbf{response variable}\footnote{A synonym is dependent variable.}.\index{Response Variable!Regression}  The variable used to make the prediction is called the \textbf{explanatory variable}\footnote{A synonym is independent variable.}.\index{Explanatory Variable!Regression}  In the examples mentioned above, future sales, family expenditures on recreation, the animal's food consumption, and score on the assessment test are the response variables and product price, family income, temperature, and years studying German are the explanatory variables, respectively.  When a scatterplot is made in a regression analysis, the response variable must be placed on the y-axis (and, thus, the explanatory variable on the x-axis)\footnote(This is the same as what was done in \chapref{chap:BivEDA}.}.
+\vspace{-12pt}
+Recall from \sectref{sect:RespExplan1} that the response (or dependent) variable is the variable to be predicted or explained and the explanatoroy (or independent) variale is the variable that will help do the predicting or explaining.\index{Response Variable!Regression}\index{Explanatory Variable!Regression}  In the examples mentioned above, future sales, family expenditures on recreation, the animal's food consumption, and score on the assessment test are response variables and product price, family income, temperature, and years studying German are explanatory variables, respectively.  The response variable is on the y-axis and the explanatory variable is on the x-axis of scatterplots.
 
 \defn{Response Variable}{The variable that will be explained or predicted.}
 
@@ -52,19 +55,19 @@ The variable to be predicted and the variable used to make the prediction must b
 \end{exsection}
 
 
-\section{Slope \& Intercept}\index{Line!General Equation}
-The equation of a line is commonly known as,
+\section{Slope and Intercept}\index{Line!General Equation}
+The equation of a line is commonly expressed as,
   \[ y = mx + b  \]
-where both $x$ and $y$ are variables, $m$ represents the slope of the line, and $b$ represents the y-intercept\footnote{Hereafter, simply called the ``intercept.''}.  It is important that you can look at the equation of a line and identify the response variable, explanatory variable, slope, and intercept.  The response variable will always appear on one side of the equation (usually the left) by itself.   The value or symbol that is multiplied by the explanatory variable (e.g., $x$) is the slope and the value or symbol by itself is the intercept.  For example, without any further explanation, consider the following equation of a line,
+where both $x$ and $y$ are variables, $m$ represents the slope of the line, and $b$ represents the y-intercept.\footnote{Hereafter, simply called the ``intercept.''}  It is important that you can look at the equation of a line and identify the response variable, explanatory variable, slope, and intercept.  The response variable will always appear on one side of the equation (usually the left) by itself.   The value or symbol that is multiplied by the explanatory variable (e.g., $x$) is the slope, and the value or symbol by itself is the intercept.  For example, in
 \[ blood = 3.501 + 0.579*intake \]
-From this it is seen that \var{blood} is the response variable, \var{intake} is the explanatory variable, $0.579$ is the slope (it is multiplied by the explanatory variable), and $3.501$ is the intercept (it is not multiplied by anything in the equation).  The same conclusions are reached even if the equation is written as
+\var{blood} is the response variable, \var{intake} is the explanatory variable, $0.579$ is the slope (it is multiplied by the explanatory variable), and $3.501$ is the intercept (it is not multiplied by anything in the equation).  The same conclusions would be made if the equation had been written as
   \[ blood = 0.579*intake+3.501 \]
 
 \warn{In the equation of a line, the slope is always multiplied by the explanatory variable and the intercept is always by itself.}
 
 In addition to being able to identify the slope and intercept of a line you also need to be able to interpret these values.  Most students define the slope as ``rise over run'' and the intercept as ``where the line crosses the y-axis.''  These ``definitions'' are very loose geometric representations.  For our purposes, the slope and intercept must be more strictly defined.
 
-To define the slope, first think of ``plugging'' two values of intake into the equation discussed above.  For example, if $intake=100$, then $blood=3.501+0.579*100$=\Sexpr{formatC(3.501+0.579*100,format="f",digits=2)} and if $intake$ is one unit larger (i.e., $intake=101$), then $blood=3.501+0.579*101$=\Sexpr{formatC(3.501+0.579*101,format="f",digits=2)}.  The difference between these two values is \Sexpr{formatC(3.501+0.579*101,format="f",digits=2)}-\Sexpr{formatC(3.501+0.579*100,format="f",digits=2)}=$0.579$.  Thus, it is seen that the slope is the change in value of the response variable for a single unit change in the value of the explanatory variable \figrefp{fig:SlopeInt}.\index{Slope!Definition}  That is, mercury in the blood changes 0.579 units for a single unit change in mercury intake.  So, if an individual increases mercury intake by one unit, then mercury in the blood will increase by 0.579 units, on average.  Alternatively, if one individual has one more unit of mercury intake than another individual, then the first individual will have, on average, 0.579 more mercury units in the blood.
+To define the slope, first think of ``plugging'' two values of intake into the equation discussed above.  For example, if $intake=100$, then $blood=3.501+0.579*100$=\Sexpr{formatC(3.501+0.579*100,format="f",digits=2)} and if $intake$ is one unit larger (i.e., $intake=101$), then $blood=3.501+0.579*101$=\Sexpr{formatC(3.501+0.579*101,format="f",digits=2)}.\footnote{For simplicity of exposition, the actual units are not used in this discussion. However, ``units'' would usually be replaced with the actual units used for the measurements.}  The difference between these two values is \Sexpr{formatC(3.501+0.579*101,format="f",digits=2)}-\Sexpr{formatC(3.501+0.579*100,format="f",digits=2)}=$0.579$.  Thus, it is seen that the slope is the change in value of the response variable for a single unit change in the value of the explanatory variable \figrefp{fig:SlopeInt}.\index{Slope!Definition}  That is, mercury in the blood changes 0.579 units for a single unit change in mercury intake.  So, if an individual increases mercury intake by one unit, then mercury in the blood will increase by 0.579 units, ON AVERAGE.  Alternatively, if one individual has one more unit of mercury intake than another individual, then the first individual will have, ON AVERAGE, 0.579 more units of mercury in the blood.
 
 <<SlopeInt, echo=FALSE, fig.cap="Schematic representation of the meaning of the intercept and slope in a linear equation.">>=
 par(mar=c(4.5,4.5,0,0),mgp=c(2,0.75,0))
@@ -83,11 +86,11 @@ text(6.5,int+slope*6,"1",pos=1,col="red")
 text(7,int+slope*6.5,"slope",pos=4,col="red")
 @
 
-To define the intercept, first ``plug'' $intake=0$ into the equation discussed above.  Thus, if $intake=0$, then $blood=3.501+0.579*0$=$3.501$.  Thus, it is seen that the intercept is the value of the response variable when the explanatory variable is equal to zero \figrefp{fig:SlopeInt}.\index{Intercept!Definition}  In this example, the average mercury in the blood for an individual with no mercury intake is 3.501 units.  Many times, as is true with this example, the interpretation of the intercept will be nonsensical.  This is because $x=0$ will likely be outside the range of the data collected and, perhaps, outside the range of possible data that could be collected.
+To define the intercept, first ``plug'' $intake=0$ into the equation discussed above; i.e., $blood=3.501+0.579*0$=$3.501$.  Thus, the intercept is the value of the response variable when the explanatory variable is equal to zero \figrefp{fig:SlopeInt}.\index{Intercept!Definition}  In this example, the average mercury in the blood for an individual with no mercury intake is 3.501.  Many times, as is true with this example, the interpretation of the intercept will be nonsensical.  This is because $x=0$ will likely be outside the range of the data collected and, perhaps, outside the range of possible data that could be collected.
 
 The equation of the line is a model for the relationship depicted in a scatterplot.  Thus, the interpretations for the slope and intercept represent the \textit{average} change or the \textit{average} response variable.  Thus, whenever a slope or intercept is being interpreted it must be noted that the result is an \textit{average} or \textit{on average}.
 
-\defn{Slope}{The change in value of the response variable for a unit change in the value of the explanatory variable.}
+\defn{Slope}{The change in value of the response variable for a unit change in value of the explanatory variable.}
 
 \vspace{-12pt}
 \defn{Intercept}{The value of the response variable when the explanatory variable is equal to zero.}
@@ -111,14 +114,14 @@ The equation of the line is a model for the relationship depicted in a scatterpl
 \end{exsection}
 
 
-\section{Predictions and Residuals}\index{Regression!Predictions}\index{Predictions!Regression}
+\section{Predictions}\index{Regression!Predictions}\index{Predictions!Regression}
 Once a best-fit line has been identified (criteria for doing so is discussed in \sectref{sect:BestFitLine}), the equation of the line can be used to predict the average value of the response variable for individuals with a particular value of the explanatory variable.  For example, the best-fit line for the mercury data shown in \figref{fig:HGscat} is
   \[ blood = 3.501 + 0.579*intake \]
 Thus, the predicated average level of mercury in the blood for an individual that consumed 240 ug HG/day is found with
   \[ blood = 3.501 + 0.579*240 = 142.461 \]
 Similarly, the predicted average level of mercury in the blood for an individual that consumed 575 ug HG/day is found with
   \[ blood = 3.501 + 0.579*575 = 336.426 \]
-Graphically, a prediction can be visualized by finding the value of the explanatory variable on the x-axis, drawing a vertical line until the best-fit line is intercepted, and then drawing a horizontal line over to the y-axis and reading off the value of the response variable \figrefp{fig:HGpredict}.
+A prediction may be visualized by finding the value of the explanatory variable on the x-axis, drawing a vertical line until the best-fit line is reached, and then drawing a horizontal line over to the y-axis where the value of the response variable is read \figrefp{fig:HGpredict}.
 
 <<HGpredict, echo=FALSE, fig.cap="Scatterplot between the intake of mercury in fish and the mercury in the blood stream of individuals with superimposed best-fit regression line illustrating predictions for two values of mercury intake.">>=
 par(mar=c(4,4,0.5,0.5),mgp=c(2.5,0.75,0))
@@ -138,17 +141,18 @@ text(-20,p1,formatC(p1,format="f",digits=1),col="Red",xpd=TRUE)
 \vspace{-12pt}
 \warn{The predicted value of the response variable at a given value of the explanatory variable is found by ``plugging'' the value of the explanatory variable into the equation of the line.}
 
-When predicting values of the response variable, it is important to not extrapolate beyond the range of the data.  In particular, you should try not to make predictions with values of the explanatory variable that are outside the range of values of the explanatory variable that were used to find the best-fit line.  An excellent example would be to consider the height ``data'' collected during the early parts of a human's life (say the first ten years).  During these early years there is likely a good fit between height (the response variable) and age.  Using this relationship to predict an individual's height at age 40 would likely result in a ridiculous answer (i.e., probably over ten feet).  The problem is that the best-fit line only ``works'' for the first ten years of our life; i.e., it is not known if the same linear relationship exists outside that range of years.  In fact, with human heights, it is generally known that growth first slows, eventually quits, and may, at very old ages, actually decline.  Thus, the linear relationship found early in life does not hold for later years.  Critical mistakes can be made when using a linear relationship to extrapolate outside the range of the data.
+When predicting values of the response variable, it is important to not extrapolate beyond the range of the data.  In other words, predictions with values outside the range of observed values of the explanatory variable should be made cautiously (if at all).  An excellent example would be to consider the height ``data'' collected during the early parts of a human's life (say the first ten years).  During these early years there is likely a good fit between height (the response variable) and age.  However, using this relationship to predict an individual's height at age 40 would likely result in a ridiculous answer (i.e., probably over ten feet).  The problem here is that the linear relationship only holds for the observed (i.e., the first ten years of life); it is not known if the same linear relationship exists outside that range of years.  In fact, with human heights, it is generally known that growth first slows, eventually quits, and may, at very old ages, actually decline.  Thus, the linear relationship found early in life does not hold for later years.  Critical mistakes can be made when using a linear relationship to extrapolate outside the range of the data.
 
 \warn{When making predictions of the response variable, do not extrapolate beyond the range of the data.}
 
-The predicted value is a ``best-guess'' for an individual based on the best-fit line.  The actual value for any individual is likely to be different from this predicted value.  The \textbf{residual} is a measure of how ``far off'' the prediction is from what is actually observed for an individual.\index{Residual!Definition}\index{Residual!Computation}  Specifically, the residual for an individual is computed by subtracting the predicted value (given the individual's observed value of the explanatory variable) from the individual's observed value of the response variable, or
+\section{Residuals}
+The predicted value is a ``best-guess'' for an individual based on the best-fit line.  The actual value for any individual is likely to be different from this predicted value.  The \textbf{residual} is a measure of how ``far off'' the prediction is from what is actually observed.\index{Residual!Definition}\index{Residual!Computation}  Specifically, the residual for an individual is found by subtracting the predicted value (given the individual's observed value of the explanatory variable) from the individual's observed value of the response variable, or
   \[ \text{residual}=\text{observed response}-\text{predicted response} \]
-For example, consider an individual that has an observed intake of 650 and an observed level of mercury in the blood of 480.  The predicted level of mercury in the blood for this individual is
+For example, consider an individual that has an observed intake of 650 and an observed level of mercury in the blood of 480.  As shown in the previous section, the predicted level of mercury in the blood for this individual is
   \[ blood = 3.501 + 0.579*650 = 379.851 \]
-The residual for this individual is then $480-379.851$ = $100.149$.  This positive residual indicates that the observed value is approximately 100 units greater than would be expected based on the best-fit line\footnote{In other words, the observed value is ``above'' the line.}.  As a second example, consider a second individual with an observed intake of 250 and an observed level of mercury in the blood of 105.  The predicted value for this individual is
+The residual for this individual is then $480-379.851$ = $100.149$.  This positive residual indicates that the observed value is approximately 100 units greater than the average for individuals with an intake of 650.\footnote{In other words, the observed value is ``above'' the line.}  As a second example, consider an individual with an observed intake of 250 and an observed level of mercury in the blood of 105.  The predicted value for this individual is
   \[ blood = 3.501 + 0.579*250 = 148.251 \]
-The residual for this individual is then $105-148.251$ = $-43.251$.  This negative residual indicates that the observed value is approximately 43 units less than would be expected based on the best-fit.  Both of these residuals are visualized as the vertical distances between an individual's point and the corresponding point on the best-fit line in \figref{fig:HGresidual}.
+and the residual is $105-148.251$ = $-43.251$.  This negative residual indicates that the observed value is approximately 43 units less than the average for individuals with an intage of 250.  A residuals is the vertical distance between an individual's point and the best-fit line \figrefp{fig:HGresidual}.
 
 \defn{Residual}{The vertical difference between the observed and predicted values of the response variable for an individual; computed as the difference between the observed and predicted values of the response.}
 
@@ -197,11 +201,12 @@ mtext(bquote(paste(Y==.(round(coef(lm.lum)[1],3))+.(round(coef(lm.lum)[2],3))*X,
     \end{Enumerate}
 \end{exsection}
 
-\vspace{-24pt}
+\newpage
 \section{Best-fit Criteria}\label{sect:BestFitLine}\index{Regression!Finding best-fit line}
-An infinite number of lines can be placed on a graph.  Obviously, many of those lines do not adequately describe the data.  In contrast, many of the lines will appear, to our eye, to adequately describe the data.  So as not to rely on the subjectivity of our eye, a specific procedure will be employed to derive a quantifiable and objective measure of which line best ``fits'' the data.  This procedure is called \textbf{least-squares regression} and is discussed in this section.
+\vspace{-12pt}
+An infinite number of lines can be placed on a graph, but many of those lines do not adequately describe the data.  In contrast, many of the lines will appear, to our eye, to adequately describe the data.  So, how does one find THE best-fit line from all possible lines. The \textbf{least-squares} method described below provides a quantifiable and objective measure of which line best ``fits'' the data.
 
-Residuals are a measure of how far away an individual is from a candidate best-fit line.  All residuals computed from all individuals in a data set is a measure of how far away all of the individuals are from the candidate best-fit line.  Thus, the residuals for all individuals can be used to identify the best-fit line.  The residual sum-of-squares (RSS) is defined as the sum of all squared residuals.\index{RSS}  The least-squares criterion says that the ``best-fit'' line is the line out of all possible lines that has the minimum RSS.  Only one candidate line will have the minimum RSS and the least-squares method defines this as the ``best-fit'' line to the data \figref{fig:RSSanim}.
+Residuals are a measure of how far an individual is from a candidate best-fit line.  Residuals computed from all individuals in a data set is a measure of how far all individuals are from the candidate best-fit line.  Thus, the residuals for all individuals can be used to identify the best-fit line. The residual sum-of-squares (RSS) is the sum of all squared residuals.\index{RSS}  The least-squares criterion says that the ``best-fit'' line is the one line out of all possible lines that has the minimum RSS \figref{fig:RSSanim}.
 
 <<RSSanim, echo=FALSE, cache=TRUE, fig.width=7, fig.height=3.5, fig.show='animate',fig.cap="An animation illustrating how the residual sum-of-squares (RSS) for a series of candidate lines (red lines) is minimized at the best-fit line (green line).", aniopts='controls,palindrome,autoplay',out.width='.8\\linewidth'>>=
 ################################################################################
@@ -273,27 +278,32 @@ for(i in 1:nrow(params)) {                                                   # C
 \vspace{-12pt}
 \warn{The least-squares criterion is that the ``best-fit'' line is the line of all possible lines with the minimum RSS.}
 
-The presentation so far implies that all possible lines must be ``fit'' to the data and the one with the minimum RSS is chosen as the ``best-fit'' line.  As there are an infinite number of possible lines, this would be impossible to do.  Theoretical statisticians have shown that the application of the least-squares criterion always produces a best-fit line with a slope given by\index{Slope!Calculation}\index{Intercept!Calculation}
+The disucssion thusfar implies that all possible lines must be ``fit'' to the data and the one with the minimum RSS is chosen as the ``best-fit'' line.  As there are an infinite number of possible lines, this would be impossible to do.  Theoretical statisticians have shown that the application of the least-squares criterion always produces a best-fit line with a slope given by\index{Slope!Calculation}\index{Intercept!Calculation}
   \[ slope = r\frac{s_{y}}{s_{x}}  \]
 and an intercept given by
   \[ intercept = \bar{y}-slope*\bar{x}   \]
-So, one can apply these formulas to the bivariate data to find the best-fit line but these formulas effectively find the best-fit line by minimizing the RSS from all possible lines.
+Thus, using these formulas finds the slope and intercept for the line, out of all possible lines, that minimizes the RSS.
 
 
 \section{Assumptions}\label{sect:RegAssumptions}\index{Regression!Assumptions}
-The least-squares method to find a best-fit line only works appropriately if each of several assumptions about the data has been met.  The five assumptions of least-squares regression are,
+\vspace{-12pt}
+The least-squares method for finding the best-fit line only works appropriately if each of the following five assumptions about the data has been met.
 
+\vspace{-12pt}
 \begin{Enumerate}
-  \item A line describes the data.
+  \item A line describes the data (i.e., a linear form).
   \item Homoscedasticity.
   \item Normally distributed residuals at a given x.
   \item Independent residuals at a given x.
   \item The explanatory variable is measured without error.
 \end{Enumerate}
+\vspace{-6pt}
 
-While all five assumptions of linear regression are important, only the first two are vital when the best-fit line is being used primarily as a descriptive model for data\footnote{In contrast to using the model to make inferences about a population model.}.  Description is the primary goal of linear regression used in this book and, thus, we will focus on the first two assumptions, which are required for adequate description.
+While all five assumptions of linear regression are important, only the first two are vital when the best-fit line is being used primarily as a descriptive model for data.\footnote{In contrast to using the model to make inferences about a population model.}  Description is the primary goal of linear regression used in this course and, thus, only the first two assumptions are considered further.
 
-The first assumption appears to be obvious -- if a line does not represent the data, then don't try to fit a line to it!  Violations of this assumption are evident by a non-linear or curving form in the scatterplot.  The second assumption, homoscedasticity, states that the variability about the line is the same at all values of the explanatory variable.\index{Homoscedasticity} In other words, the dispersion of the data about the line must be the same everywhere along the entire line.  Violations of this assumption are generally evident by a ``funnel-shaped'' dispersion of points from left-to-right on a scatterplot.  Violations of these assumptions are often evident on so-called ``fitted-line plots'' -- i.e., scatterplots with the best-fit line superimposed \figrefp{fig:ResidPlotEx}\footnote{Residual plots, not discussed in this text, are another plot that often times is used to better assess assumption violations.}.  If the points look more-or-less like random scatter around the best-fit line, then neither the linearity nor the homoscedasticity assumption has been violated.
+The linearity assumption appears obvious -- if a line does not represent the data, then don't try to fit a line to it!  Violations of this assumption are evident by a non-linear or curving form in the scatterplot.  The homoscedasticity assumption states that the variability about the line is the same for all values of the explanatory variable.\index{Homoscedasticity} In other words, the dispersion of the data around the line must be the same everywhere along the entire line.  Violations of this assumption generally present as a ``funnel-shaped'' dispersion of points from left-to-right on a scatterplot.
+
+Violations of these assumptions are often evident on ``fitted-line plots'' -- i.e., scatterplots with the best-fit line superimposed \figrefp{fig:ResidPlotEx}.\footnote{Residual plots, not discussed in this text, are another plot that often times is used to better assess assumption violations.}  If the points look more-or-less like random scatter around the best-fit line, then neither the linearity nor the homoscedasticity assumption has been violated.
 
 <<ResidPlotEx, echo=FALSE, fig.width=6, fig.height=6, out.width='.8\\linewidth', fig.cap="Fitted-line plots illustrating when the regression assumptions are met (upper-left) and three common assumption violations.">>=
 par(mar=c(2,3,3,2),mgp=c(0.5,0,0),mfrow=c(2,2))
@@ -330,15 +340,17 @@ lm4 <- lm(y4~x1)
 fitPlot(lm4,xlab="Explanatory",ylab="Response",xaxt="n",yaxt="n")
 mtext("Non-linear & Heteroscedastic",line=0.25,col="red")
 @
+\vspace{12pt}  %fixes spaces gobbled up by R code
 
 In this text, if an assumption has been violated, then one should not continue to interpret the linear regression.  However, in many instances, an assumption violation can be ``corrected'' by transforming one or both variables to a different scale.  Transformations are not discussed in this book.
 
 \warn{If the regression assumptions are not met, then the regression results should not be interpreted.}
 
 \section{Coefficient of Determination}\index{r-squared@{$r^{2}$}}
-The coefficient of determination, abbreviated as $r^{2}$, is the proportion of the total variability in the response variable that is explained away by knowing the explanatory variable and the best-fit model.  The $r^{2}$ can take values between 0 and 1\footnote{It is common for $r^{2}$ to be presented as a percentage.}.  In simple linear regression\footnote{Simple linear regression is the fitting of a model with a single explanatory variable and is the only model considered in this chapter and this book.} $r^{2}$ is literally the square of $r$, the correlation coefficient\footnote{See \sectref{sect:corr} for a review of the correlation coefficient.}.
+\vspace{-12pt}
+The coefficient of determination, abbreviated as $r^{2}$, is the proportion of the total variability in the response variable that is explained away by knowing the value of the explanatory variable and the best-fit model.  The $r^{2}$ can take values between 0 and 1.\footnote{It is common for $r^{2}$ to be presented as a percentage.}  In simple linear regression, $r^{2}$ is literally the square of $r$, the correlation coefficient.\footnote{Simple linear regression is the fitting of a model with a single explanatory variable and is the only model considered in this chapter and this course. See \sectref{sect:corr} for a review of the correlation coefficient.}
 
-\defn{Coefficient of Determination}{The proportion of the total variability in the response variable that is explained away by knowing the explanatory variable and the best-fit model; abbreviated as $r^{2}$.}
+\defn{Coefficient of Determination}{The proportion of the total variability in the response variable that is explained away by knowing the value of the explanatory variable and the best-fit model; abbreviated as $r^{2}$.}
 
 \vspace{-12pt}
 \warn{$r^{2}$ can take values between 0 and 1.}
@@ -362,7 +374,7 @@ If the variability explained away (the green box in \figref{fig:CoeffDeterm}) ap
 
 
 \section{Examples I}
-There are twelve questions that are commonly asked relative to linear regression results.  These twelve questions are listed below with some hints about things to remember when answering some of the questions.  An example of these questions in context is then provided.
+There are twelve questions that are commonly asked about linear regression results.  These twelve questions are listed below with some hints about things to remember when answering some of the questions.  An example of these questions in context is then provided.
 
 \begin{Enumerate}
   \item What is the response variable?  \textit{Identify which variable is to be predicted or explained, which variable is dependent on another variable, which would be hardest to measure, or which is on the y-axis.}
@@ -370,7 +382,7 @@ There are twelve questions that are commonly asked relative to linear regression
   \item Comment on linearity and homoscedasticity.  \textit{Examine fitted-line plot for curvature (i.e., non-linearity) or a funnel-shape (i.e., heteroscedasticity).}
   \item What is the equation of the best-fit line?  \textit{In the generic equation of the line ($y=mx+b$) replace $y$ with the name of the response variable, $x$ with the name of the explanatory variable, $m$ with the value of the slope, and $b$ with the value of the intercept.}
   \item Interpret the value of the slope.  \textit{Comment on how the response variable changes by slope amount for each one unit change of the explanatory variable, on average.}
-  \item Interpret the value of the intercept.  \textit{Comment on how the response variable equals the slope, on average, if the explanatory variable is zero.}
+  \item Interpret the value of the intercept.  \textit{Comment on how the response variable equals the intercept, on average, if the explanatory variable is zero.}
   \item Make a prediction given a value of the explanatory variable.  \textit{Plug the given value of the explanatory variable into the equation of the best-fit line.}
   \item Compute a residual given values of both the explanatory and response variables.  \textit{Make a prediction (see previous question) and then subtract this value from the observed value of the response.}
   \item Identify an extrapolation in the context of a prediction problem.  \textit{Examine the x-axis scale on the fitted-line plot and do not make predictions outside of the plotted range.}
@@ -383,7 +395,7 @@ All answers should refer to the variables of the problem -- thus, ``y'', ``x'', 
 
 \subsection*{Chimp Hunting Parties}
 \begin{quote}
-\textit{\cite{Stanford1996} gathered data to determine if the size of the hunting party (number of individuals hunting together) affected the hunting success of the party (number of hunts that resulted in a kill) for wild chimpanzees (Pan troglodytes) at Gombe.  The results of their analysis for 17 hunting parties is shown in the figure below\footnote{These data came from \href{https://raw.githubusercontent.com/droglenc/NCData/master/Chimp.csv}{Chimp.csv}.}.  Use these results to answer the questions below.}
+\textit{\cite{Stanford1996} gathered data to determine if the size of the hunting party (number of individuals hunting together) affected the hunting success of the party (number of hunts that resulted in a kill) for wild chimpanzees (Pan troglodytes) at Gombe.  The results of their analysis for 17 hunting parties is shown in the figure below.\footnote{These data are in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Chimp.csv}{Chimp.csv}.}  Use these results to answer the questions below.}
 \end{quote}
 
 <<ChimpFLP, echo=FALSE>>=
@@ -391,7 +403,7 @@ chimp <- read.csv("data/Chimp.csv")
 lm.chimp <- lm(percsucc~huntparty,data=chimp)
 fitPlot(lm.chimp,pch=16,xlab="Number of Hunting Party Members",ylab="% Successful Hunts")
 r2 <- formatC(rSquared(lm.chimp),format="f",digits=3)
-mtext(bquote(paste(Y==.(formatC(coef(lm.chimp)[1],format="f",digits=3))+.(formatC(coef(lm.chimp)[2],format="f",digits=3))*X,"    ",r^2==.(r2))),line=0.2,cex=0.8)
+mtext(bquote(paste(Y==.(formatC(coef(lm.chimp)[1],format="f",digits=3))+.(formatC(coef(lm.chimp)[2],format="f",digits=3))*X,"    ",r^2==.(r2))),line=0,cex=0.8)
 @
 
 \begin{QAlist}
@@ -417,7 +429,7 @@ mtext(bquote(paste(Y==.(formatC(coef(lm.chimp)[1],format="f",digits=3))+.(format
   \end{QAlist}
   \item What is the predicted hunt success if the hunting party consists of 20 chimpanzees?
   \begin{QAlist}
-    \item The predicted hunt success for parties with 20 individuals is an extrapolation, because 20 is outside the range of the number of members observed on the fitted-line plot.
+    \item The predicted hunt success for parties with 20 individuals is an extrapolation, because 20 is outside the range of the number of members observed on the x-axis of the fitted-line plot.
   \end{QAlist}
   \item What is the predicted hunt success if the hunting party consists of 12 chimpanzees?
   \begin{QAlist}
@@ -551,59 +563,63 @@ mtext(bquote(paste(Y==.(formatC(coef(lm.d2)[1],format="f",digits=3))+.(formatC(c
 
 
 \section{Regression in R}
-The linear regression model is fit to two quantitative variables with \R{lm()}.  The first argument to \R{lm()} is a model formula of the form \R{response\TILDE explanatory} where \R{response} is a vector containing the response variable and \R{explanatory} is a vector containing the explanatory variable.  These two vectors must be found in the data frame that is sent to the \R{data=} argument.  The results of \R{lm()} should be assigned to an object so that that object can be submitted to other functions to extract specific results.
-
-\warn{The model formula used in the scatterplot and the linear model should be the same.}
-
-The regression is fit to the mercury in the blood and the intake of mercury data by first loading and viewing the structure of the data with
+\vspace{-12pt}
+The mercury intake and amount in the blood data is loaded below as an example for this section.
 <<eval=FALSE>>=
 setwd('c:/data/')
 merc <- read.csv("Mercury.csv")
 @
-\vspace{-12pt}
+\vspace{-14pt}
 <<>>=
 str(merc)
 @
-The appropriate formula and \R{data=} arguments are then submitted to \R{lm()}, with the result assigned to an object and the results printed\footnote{Alternatively, the coefficients are obtained by submitting the \R{lm} object to \R{coef()} as such \R{coef(lm1)}.}, with
+
+The linear regression model is fit to two quantitative variables with \R{lm()}.  The first argument is a formula of the form \R{response\TILDE explanatory}, where \R{response} contains the response variable and \R{explanatory} contains the explanatory variable, and the corresponding data.frame is in \R{data=}.  The results of \R{lm()} should be assigned to an object so that specific results can be extracted.
+
+\warn{The same formula is used to make a scatterplot with \R{plot()} and find the best-fit line with \R{lm()}.}
+
+<<echo=FALSE>>=
+lm1 <- lm(blood~intake,data=merc)
+@
+
+The regression was fit to the mercury data below. From this it is seen that the intercept is \Sexpr{formatC(coef(lm1)[1],format="f",digits=3)} and the slope is \Sexpr{formatC(coef(lm1)[2],format="f",digits=3)}.
 <<>>=
 ( lm1 <- lm(blood~intake,data=merc) )
 @
-From this it is seen that the intercept is \Sexpr{formatC(coef(lm1)[1],format="f",digits=3)} and the slope is \Sexpr{formatC(coef(lm1)[2],format="f",digits=3)}.  A fitted-line plot (i.e., a scatterplot with the best-fit line superimposed) is constructed by submitting the \R{lm} object to \R{fitPlot()}.  For example, the fitted-line plot shown in \figref{fig:HGFLP} was constructed with\index{Regression!Finding best-fit line}
+
+A fitted-line plot \figrefp{fig:HGFLP} is constructed by submitting the \R{lm()} object to \R{fitPlot()}.\index{Regression!Finding best-fit line}
 
 <<HGFLP, fig.cap="Fitted-line plots for the regression of mercury in the blood on mercury intake.">>=
 fitPlot(lm1)
 @
 
-Predicted values from the linear regression is obtained with \R{predict()}.\index{Predictions!Regression}  The \R{predict()} function requires the saved  \R{lm} object as its first argument.  The second argument is a data frame constructed with \R{data.frame()} that contains the \textbf{EXACT} name of the explanatory variable as it appeared in \R{lm()} set equal to the value of the explanatory at which the prediction should be made.  For example, the predicted amount of mercury in the blood for an intake of 240 $\mu$g per day is obtained with
+Predicted values from the linear regression are obtained with \R{predict()}.\index{Predictions!Regression}  The \R{predict()} function requires the saved \R{lm()} object as its first argument.  The second argument is a data.frame constructed with \R{data.frame()} that contains the \textbf{EXACT} name of the explanatory variable as it appeared in \R{lm()} set equal to the value of the explanatory at which the prediction should be made.  For example, the predicted amount of mercury in the blood for an intake of 240 $\mu$g per day is \Sexpr{formatC(predict(lm1,data.frame(intake=240)),format="f",digits=1)}, as obtained below.
 <<>>=
 predict(lm1,data.frame(intake=240))
 @
-Thus, a fish with an intake of 240 $\mu$g of mercury per day will have \Sexpr{formatC(predict(lm1,data.frame(intake=240)),format="f",digits=1)} mg per g of mercury in the blood, on average.
 
-\warn{The name of the explanatory variable used in the \R{predict()} function must be exactly the same as it appears in the original data frame.}
+\warn{The name of the explanatory variable used in \R{predict()}  must be exactly the same as it appears in the original data frame.}
 
-The coefficient of determination is computed by submitting the objected saved from \R{lm()} to \R{rSquared()}.  In addition, the value can be rounded to a certain level of digits by using the \R{digits=} argument.  For example, the $r^{2}$ value for this exampled is computed with
+The coefficient of determination is computed by submitting the saved \R{lm()} object to \R{rSquared()}. For example, \Sexpr{formatC(rSquared(lm1,percent=TRUE),format="f",digits=1)}\% of the variability in mercury in the blood is explained by knowing the amount of mercury at intake. [Note the use of \R{digits=} to control the number of decimals.]
 <<>>=
 rSquared(lm1,digits=3)
 @
-Thus, \Sexpr{formatC(rSquared(lm1,percent=TRUE),format="f",digits=1)}\% of the variability in mercury in the blood is explained by knowing the amount of mercury at intake.
 
-
+\vspace{-8pt}
 \section{Examples II}
+\vspace{-12pt}
 \subsection*{Car Weight and MPG}
-In \chapref{chap:BivEDA}, an EDA for the relationship between \var{HMPG} (the highway miles per gallon) and \var{Weight} (lbs) of 93 cars from the 1993 model year was performed.  This relationship will be explored further here as an example of a complete regression analysis.  In this analysis, the regression output will be examined within the context of answering the ten typical questions.  These data are read into R with
-<<>>=
-cars93 <- read.csv("data/93cars.csv")
-@
-The linear regression model is fit, coefficients extracted, fitted-line plot constructed, and coefficient of determination extracted with
-
+\vspace{-12pt}
+In \chapref{chap:BivEDAQuant}, an EDA for the relationship between \var{HMPG} (the highway miles per gallon) and \var{Weight} (lbs) of 93 cars from the 1993 model year was performed.  This relationship will be explored further here as an example of a complete regression analysis.  In this analysis, the regression output will be examined within the context of answering the twelve typical questions.  These data are read into R below and the linear regression model is fit, coefficients extracted, fitted-line plot constructed, and coefficient of determination extracted.
 <<CarFit, fig.cap="Fitted line plot of the regression of highway MPG on weight of 93 cars from 1993.">>=
+cars93 <- read.csv("data/93cars.csv")
 ( lm2 <- lm(HMPG~Weight,data=cars93) )
 fitPlot(lm2,ylab="Highway MPG")
 rSquared(lm2,digits=3)
 @
 
-The simple linear regression model appears to fit the data moderately well as the fitted-line plot \figrefp{fig:CarFit} shows only a very slight curvature and only very slight heteroscedasticity\footnote{In advanced statistics books, objective measures for determining whether there is significant curvature or heteroscedasticity in the data are used.  In this book, we will only be concerned with whether there is strong evidence of curvature or heteroscedasticity.  There does not seem to be either here.}.  The sample slope is \Sexpr{formatC(coef(lm2)[2],format="f",digits=5)}, the sample intercept is \Sexpr{formatC(coef(lm2)[1],format="f",digits=5)}, and the coefficient of determination is \Sexpr{formatC(rSquared(lm2),format="f",digits=3)}.
+\vspace{-12pt}
+The simple linear regression model appears to fit the data moderately well as the fitted-line plot \figrefp{fig:CarFit} shows only a very slight curvature and only very slight heteroscedasticity.\footnote{In advanced statistics books, objective measures for determining whether there is significant curvature or heteroscedasticity in the data are used.  In this book, we will only be concerned with whether there is strong evidence of curvature or heteroscedasticity.  There does not seem to be either here.}  The sample slope is \Sexpr{formatC(coef(lm2)[2],format="f",digits=4)}, the sample intercept is \Sexpr{formatC(coef(lm2)[1],format="f",digits=1)}, and the coefficient of determination is \Sexpr{formatC(rSquared(lm2),format="f",digits=3)}.
 
 \begin{QAlist}
   \item What is the response variable?
@@ -616,19 +632,19 @@ The simple linear regression model appears to fit the data moderately well as th
   \end{QAlist}
   \item In terms of the variables of the problem, what is the equation of the best-fit line?
   \begin{QAlist}
-    \item The equation of the best-fit line for this problem is HMPG = \Sexpr{formatC(coef(lm2)[1],format="f",digits=5)} - \Sexpr{formatC(-1*coef(lm2)[2],format="f",digits=5)}Weight\footnote{The phrase ``in terms of the variables of the problem'' means to substitute the actual response variable for $y$ and the actual explanatory variable for $x$.  Your answer should not contain references to ``y'', ``x'', ``response variable'', or ``explanatory variable'' but to the actual variable names.}.
+    \item The equation of the best-fit line for this problem is HMPG = \Sexpr{formatC(coef(lm2)[1],format="f",digits=1)} - \Sexpr{formatC(-1*coef(lm2)[2],format="f",digits=4)}Weight.
   \end{QAlist}
   \item Interpret the value of the slope in terms of the variables of the problem.
   \begin{QAlist}
-    \item The slope indicates that for every increase of one pound of car weight the highway MPG decreases by \Sexpr{formatC(coef(lm2)[2],format="f",digits=3)}, on average\footnote{The words ``on average'' are important in this and other answers as the best-fit line predicts the average response for a given value of the explanatory variable not the actual value for an individual which will vary due to natural variability.}.
+    \item The slope indicates that for every increase of one pound of car weight the highway MPG decreases by \Sexpr{formatC(coef(lm2)[2],format="f",digits=4)}, on average.
   \end{QAlist}
   \item Interpret the value of the intercept in terms of the variables of the problem.
   \begin{QAlist}
-    \item The intercept indicates that a car with 0 weight will have a highway MPG value of \Sexpr{formatC(coef(lm2)[1],format="f",digits=1)}, on average\footnote{This is the correct interpretation of the intercept.  However, the interpretation of the intercept will often be nonsensical because it is likely an extrapolation (i.e., note that no value of car weight is near 0).}.
+    \item The intercept indicates that a car with 0 weight will have a highway MPG value of \Sexpr{formatC(coef(lm2)[1],format="f",digits=1)}, on average.\footnote{This is the correct interpretation of the intercept.  However, it is nonsensical because it is an extrapolation; i.e., no car will weight 0 pounds.}
   \end{QAlist}
   \item What is the predicted highway MPG for a car that weighs 3100 lbs?
   \begin{QAlist}
-    \item The predicted highway MPG for a car that weighs 3100 lbs is \Sexpr{formatC(coef(lm2)[1],format="f",digits=5)} - \Sexpr{formatC(-1*coef(lm2)[2],format="f",digits=5)}(3100) = \Sexpr{formatC(predict(lm2,data.frame(Weight=3100)),format="f",digits=1)} MPG\footnote{The given weight is plugged into the best-fit line equation for the weight variable, because the weight of the car is within the domain of the data.}.  Alternatively, this value is computed in R with
+    \item The predicted highway MPG for a car that weighs 3100 lbs is \Sexpr{formatC(coef(lm2)[1],format="f",digits=5)} - \Sexpr{formatC(-1*coef(lm2)[2],format="f",digits=5)}(3100) = \Sexpr{formatC(predict(lm2,data.frame(Weight=3100)),format="f",digits=1)} MPG.  Alternatively, this value is computed with
 <<>>=
 predict(lm2,data.frame(Weight=3100))
 @
@@ -651,7 +667,11 @@ Therefore, it appears that this car gets \Sexpr{formatC(-1*(24-predict(lm2,data.
   \end{QAlist}
   \item What is the correlation between highway MPG and car weight?
   \begin{QAlist}
-    \item The correlation between highway MPG and car weight is $r=$\Sexpr{formatC(-1*sqrt(rSquared(lm2)),format="f",digits=2)}\footnote{Remember to put a negative sign in front of your result from taking the square root of $r^2$, because the relationship between highway MPG and weight is negative.}.
+    \item The correlation between highway MPG and car weight is $r=$\Sexpr{formatC(-1*sqrt(rSquared(lm2)),format="f",digits=2)}.\footnote{Put a negative sign in front of your result from taking the square root of $r^2$, because the relationship between highway MPG and weight is negative.}
+  \end{QAlist}
+  \item How much is the highway MPG expected to change if a car is 1000 lbs heavier?
+  \begin{QAlist}
+    \item If he car was 1000 lbs heavier, you would expect the car's highway MPG to decrease by \Sexpr{formatC(-1000*coef(lm2)[2],format="f",digits=2)} (i.e., 1000 slopes).
   \end{QAlist}
 \end{QAlist}
 
