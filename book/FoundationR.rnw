@@ -27,7 +27,7 @@ Detailed methods for downloading, installing, and configuring R, RStudio, and \R
 \section{Working With R Basics} \label{sect:RBasics}
 \vspace{-12pt}
 \subsection{Saving Results} \label{sect:RSaving}
-Results are not saved in R or RStudio.  Rather, ``scripts'' of successful R commands are saved and, then, if the analysis needs to be re-done, the entire set of commands is opened in RStudio and run again.  When writing a report, all tabular and graphical output should be copied from RStudio and pasted into your report document.  This document will serve as your analysis report and can be modified to include answers to questions, references to the tables and graphs, etc.\footnote{Specifics for how to format homework assignments in on the course syllabus}  All data that is not a simple vector (see \sectref{sect:RVectors}) should be entered into R through text files (see \sectref{sect:REnterData}).
+Results are not saved in R or RStudio.  Rather, ``scripts'' of successful R commands are saved and, then, if the analysis needs to be re-done, the entire set of commands is opened in RStudio and run again.  When writing a report, all tabular and graphical output should be copied from RStudio and pasted into your report document.  This document will serve as your analysis report and can be modified to include answers to questions, references to the tables and graphs, etc.\footnote{Specifics for how to format homework assignments is on the course syllabus}  All data that is not a simple vector (see \sectref{sect:RVectors}) should be entered into R through text files (see \sectref{sect:REnterData}).
 
 R does allow one to save a ``workspace'', though I urge you not to do that.  Rather, save your ``good'' commands in a script and save your ``good'' results in a report document; do not save the workspace.
 
@@ -50,11 +50,9 @@ Results from an expression are typically saved for further computations by assig
 x <- 5+log(7)-pi
 x
 @
-A short-cut for both assigning and printing the result of an expression is to surround the entire command in parentheses.  For example, the following assigns the result of the expression to \R{y} and prints the result.\footnote{Note that the spaces after the opening parentheses and before the closing parentheses are not needed.  However, they make the code more legible.}
+The result of an expression can be both assigned and printed by surrounding the command in parentheses.  For example, the following assigns the result of the expression to \R{y} and prints the result.\footnote{The spaces between the expression and the parentheses are only needed to increase legibility.}
 <<>>=
 ( y <- 15*exp(2) )
-# note that the next line is now not needed
-y
 @
 
 \warn{The convention of surrounding commands in parentheses to both assign and print the results will be used extensively in this book to save space.}
@@ -75,8 +73,9 @@ An object can be named whatever you want, with the exception that it cannot star
   \item \label{revex:BasicsExpr5} \rhw{} \hspace{18pt} Assign the value 1.2 to \var{r} and then re-evaluate $\pi r^{2}$. \ansref{ans:BasicsExpr5}
 \end{exsection}
 
-\vspace{-12pt}
+\vspace{-18pt}
 \subsection{Functions and Arguments}  \label{sect:RFunctions}
+\vspace{-12pt}
 R contains many ``programs,'' or functions, to perform particular tasks.  A function is ``called'' by typing the function name followed by open and closed parentheses.  Arguments, which the function will use to perform its task, are contained within the parentheses.  The \R{log()} function, used in the previous section, is an example of a function.  The name of the function is \R{log} and the argument, the number for which to compute the natural log, is contained within the parentheses following the function name.  Many other functions will be described below and in subsequent chapters.
 
 \defn{Function}{An R program that performs a particular task.}
@@ -89,12 +88,16 @@ R contains many ``programs,'' or functions, to perform particular tasks.  A func
 
 
 \section{Working With Data}
+\vspace{-12pt}
 \subsection{Data Types}  \label{sect:RDataTypes}
-Data in R will be designated as an integer (whole numbers), numeric (non-integer numerica values), character (strings), factor (group membershop), or logical (TRUE/FALSE).  The type of data largely dictates the types of analyses that can be performed.  Data types will be discussed in more detail as needed.  Note, however, that the \textbf{factor} data type is a special case of the character data type, where the specific items describe to which group an individual belongs.  This description allows certain types of analyses to be performed in later chapters.
+\vspace{-12pt}
+Data in R will be designated as an integer (whole numbers), numeric (non-integer numerica values), character (strings), factor (group membershop), or logical (TRUE/FALSE).  The type of data largely dictates the type of analysis that can be performed.  Data types will be discussed in more detail as needed.  Note, however, that the \textbf{factor} data type is a special case of the character data type, where the specific items describe the group to which an individual belongs.  This description allows for certain analyses in later chapters.
 
 \defn{Factor}{A special type of variable that identifies the group to which an individual belongs.}
 
+\vspace{-12pt}
 \subsection{Entering Data}  \label{sect:REnterData}
+\vspace{-12pt}
 For real data (i.e., several variables from many individuals) it is most efficient to enter data into a comma-separated values (CSV) file and then import that file into R.  Creating a CSV file with Microsoft Excel is described below, though there are other ways to create CSV files (see \href{http://derekogle.com/NCMTH107/resources/FAQ/}{FAQs on class webpage}).  This explanation assumes that you have a basic understanding of Excel (or other spreadsheet softwares).
 
 \warn{Realistic datasets are most efficiently entered into a comma-separated values (CSV) file in preparation for importing into R.}
@@ -106,24 +109,21 @@ The spreadsheet should be organized with variables in columns and individuals in
 \end{center}
 
 
-\defn{Data Frame}{A two-dimensional organization of variables (as columns) recorded on multiple individuals (as rows) where the columns may be of different data types.}
-
-\vspace{-12pt}
-\warn{A data.frame may have columns of different data types (e.g., numeric and character) whereas a vector must have columns all of the same data type.}
+\defn{data.frame}{A two-dimensional organization of variables (as columns, possibly of different data types) recorded on multiple individuals (as rows).}
 
 \vspace{-12pt}
 \warn{The columns of a data.frame correspond to variables and the rows of a data.frame correspond to individuals.}
 
 Variable names must NOT contain spaces.  For example, don't use \var{total length} or \var{length (cm)}.  If you feel the need to have longer variable names, then separate the parts with a period (e.g., \var{length.cm}) or an underscore (e.g., \var{length\_cm}).  Furthermore, numerical measurements should NOT include units (e.g., don't use \verb"7 cm").  Finally, for categorical data, make sure that all categories are consistent (e.g., do not have a column that contains both \verb"bayfield" and \verb"Bayfield").
 
-\warn{Variable names and data should not contain spaces.  The \R{Error in scan} error message usually indicates that you have spaces in the variable names or data.}
+\warn{Variable names and data should not contain spaces.  An "\R{Error in scan}" message usually indicates spaces in the variable names or data.}
 
 The spreadsheet is saved as a CSV file by selecting the \verb"File..Save As" menu item, which will produce the dialog box below. In this dialog box, change \verb"Save as type" to \verb"CSV (Comma delimited) (*.csv)" (you may have to scroll down), provide a file name (don't have any periods in the name besides for ``.csv'', which you should not have to type), select a location to save the file (don't forget this location!!), and press \verb"Save".  Two ``warning'' dialog boxes may then appear -- select \verb"OK" for the first and \verb"YES" for the second.  You can now close the spreadsheet file (you may be asked to save changes -- you should say \verb"No").
 \begin{center}
   \includegraphics[width=3.5in]{Figs/Data_File_2.jpg}
 \end{center}
 
-The following steps should be used to load the data in the CSV file into R.
+The following steps are used to load the data in the CSV file into RStudio.
 
 \begin{Itemize}
   \item Open RStudio.
@@ -146,7 +146,7 @@ bears <- read.csv("data/Bears.csv")
 
 \warn{Data stored in an external CSV file is read into R with \R{read.csv()}.}
 
-It is important that each row of the data.frame correspond to one individual.  This is critically important when data are recorded for two different groups (e.g., for a two-sample t-test; see \sectref{sect:t2test}).  For example, consider the following data of methyl mercury levels recorded in mussels from a location labeled as ``impacted'' and a separate location labeled as ``reference.''
+It is important that each row of the data.frame correspond to one individual.  This is critically important when data are recorded for two different groups (e.g., for a two-sample t-test; see \chapref{chap:tTest2}).  For example, the following data are methyl mercury levels recorded in mussels from two locations labeled as ``impacted'' and ``reference.''
 \begin{Verbatim}
   impacted   0.011  0.054  0.056  0.095  0.051  0.077
   reference  0.031  0.040  0.029  0.066  0.018  0.042  0.044
@@ -154,12 +154,13 @@ It is important that each row of the data.frame correspond to one individual.  T
 To follow the ``one individual per row'' rule, these data are entered in stacked format where the ``reference'' data are stacked underneath the ``impacted'' data and a column is used to indicate to which group the individuals belong.  For example, the Excel file for data entry would look like the following
 
 \begin{center}
-  \includegraphics[width=1.25in]{Figs/StackedData.jpg}
+  \includegraphics[width=1in]{Figs/StackedData.jpg}
 \end{center}
 
-\warn{All data files should be constructed so that there is only dat from one individual in each row.}
+\warn{Data files are constructed with data from only one individual in each row.}
 
 \subsubsection*{Alternative Forms of Getting Data} \label{sect:RAltData}
+\vspace{-12pt}
 Some of the data files that you will use are provided on the \href{http://derekogle.com/NCMTH107/resources/data_107}{Data for MTH107} resource page of the class webpage.  In these cases, the data should be downloaded from the webpage and saved in the same directory or folder as your analysis script.  The downloaded file is then read into R in the same manner as described previously (i.e., set the working directory with \R{setwd()} and use \R{read.csv()}).
 
 A few data files used in this book are supplied with R or the NCStats package.  These files are loaded with \R{data()}.  For example, the \dfile{iris} data file is loaded into R with
@@ -169,7 +170,9 @@ data(iris)
 
 
 \subsection{Working With Data Frames}  \label{sect:RWorkdf}
+\vspace{-12pt}
 \subsubsection{Viewing a Data Frame}  \label{sect:RViewdf}
+\vspace{-12pt}
 Many users are disoriented in RStudio because they cannot ``see'' their data in the same way that they see it in a spreadsheet program.  There are, however, several options for viewing your data.  First, you can type the name of the data.frame object to see its entire contents.
 <<>>=
 bears
@@ -180,7 +183,7 @@ Typing the name is adequate for small data.frames, but not useful for large data
 headtail(bears)
 @
 
-In addition to viewing the contents of the data.frame, it is often useful to examine the structure of the data.frame returned from \R{str()}.  In this example, it is seen that \Sexpr{kCounts(ncol(bears))} variables were recorded on \Sexpr{nrow(bears)} individuals.  The first variables -- \var{\Sexpr{names(bears)[1]}} and \var{\Sexpr{names(bears)[2]}} -- are numerical measurements made on the bears.  The last variable -- \var{\Sexpr{names(bears)[3]}} -- is a factor variable that records the capture location for each bear.
+In addition to viewing the contents, it is useful to examine the structure of the data.frame as returned from \R{str()}.  In this example, it is seen that \Sexpr{kCounts(ncol(bears))} variables were recorded on \Sexpr{nrow(bears)} individuals.  The first variables -- \var{\Sexpr{names(bears)[1]}} and \var{\Sexpr{names(bears)[2]}} -- are numerical measurements made on the bears.  The last variable -- \var{\Sexpr{names(bears)[3]}} -- is a factor variable that records the capture location for each bear.
 <<>>=
 str(bears)
 @
@@ -189,7 +192,7 @@ The levels of the \var{\Sexpr{names(bears)[3]}} variable may be seen by includin
 levels(bears$loc)
 @
 
-In the previous example, the \R{\$} notation was used to identify a particular variable (i.e., \R{loc}) from within a particular data.frame (\R{bears}).  Think of variables as being nested inside of a data.frame and, thus, to access the variable you must first identify the data.frame in which it exists and then the name of the variable.  The \R{\$} simply separates the data.frame from the variable.
+In the previous example, the \R{\$} notation was used to identify a particular variable (i.e., \R{loc}) within a data.frame (\R{bears}).  Think of variables as being nested inside data.frames and, thus, to access the variable you must first identify the data.frame in which it exists and then the name of the variable.  The \R{\$} simply separates the data.frame from the variable.
 <<>>=
 bears$length.cm
 bears$loc
@@ -200,19 +203,19 @@ bears$loc
 \subsubsection{Selecting Individuals}  \label{sect:RSelectIndivs}
 \vspace{-12pt}
 
-In some instances, it may be important to select or exclude an individual from a data.frame.  Data.frames are two-dimensional objects that are indexed by a row and a column, in that order.  Positions within a data.frame are selected within paired square brackets.  For example, the item in the third row and second column of \R{bears} is selected with
+In some instances, it may be important to select or exclude an individual from a data.frame.  Data.frames are two-dimensional objects that are indexed by a row and a column, in that order.  Positions within a data.frame are selected within paired square brackets.  For example, the item in the third row and second column of \R{bears} is selected below.
 <<>>=
 bears[3,2]
 @
 
 \warn{Identifying the position of an item in an object is the ONLY time that square brackets are used in R.}
 
-An entire row or column may be selected by omitting the other dimension.  For example, one could select the entire second column with \R{bears[,2]}, but this is also the \R{weight.kg} variable and is better selected, as shown above, with \R{bears\$weight.kg}.  As a better example, the entire third row is selected with (note that the column designation was omitted)
+An entire row or column may be selected by omitting the other dimension.  For example, one could select the entire second column with \R{bears[,2]}, but this is also the \R{weight.kg} variable and is better selected, as shown above, with \R{bears\$weight.kg}.  As a better example, the entire third row is selected below (note that the column designation was omitted).
 <<>>=
 bears[3,]
 @
 
-More than one row can be selected by first combining the row indices together with \R{c()} (more about \R{c()} in \sectref{sect:RVectors}).  For example, the third, fifth, and eighth rows are selected with (again, the column index is omitted)
+Multiple rows are selected by combining row indices together with \R{c()} (more about \R{c()} in \sectref{sect:RVectors}).  For example, the third, fifth, and eighth rows are selected below (again, the column index is omitted).
 <<>>=
 bears[c(3,5,8),]
 @
@@ -227,7 +230,7 @@ bears[-c(3,5,8,10,12),]
 \vspace{-12pt}
 It is common to create a new data.frame that contains only some of the individuals from an existing data.frame.  For example, a researcher may want a data.frame of only bears captured in Bayfield County or bears that weighed more than 100 kg.  The process of creating the newer, smaller data.frame is called filtering (or subsetting) and is accomplished with \R{filterD()}.  The \R{filterD()} function requires the original data.frame as the first argument and a condition statement as the second argument.  The condition statement is used to either include or exclude individuals from the original data.frame.  Condition statements consist of the name of a variable in the original data.frame, a comparison operator, and a comparison value \tabrefp{tab:RSubsetConditions}.  The result from \R{filterD()} should be assigned to an object, which is then the name of the new data.frame.
 
-\warn{The \R{filterD()} function is used to create a new data.frame that consists of individuals selected by some criterion from an existing data.frame.}
+\warn{\R{filterD()} is used to create a new data.frame that consists of individuals selected by some criterion from an existing data.frame.}
 
 \begin{table}[htbp]
   \caption{Condition operators used in \R{filterD()} and their results.  Note that \emph{variable} generically represents a variable in the original data.frame and \emph{value} is a generic value or level.  Both \emph{variable} and \emph{value} would be replaced with specific items.}  \label{tab:RSubsetConditions}
@@ -248,6 +251,7 @@ Condition Operator &  Individuals Returned from Original Data Frame \\
 \end{tabular}
 \end{table}
 
+\vspace{18pt}
 The following are examples of new data.frames created from \var{bears}.  The name of the new data.frame (i.e., object to the left of the assignment operator) can be any valid object name.  As demonstrated below, the new data.frame (or its structure) should be examined after each filtering to ensure that the data.frame actually contains the items that you desire.
 
 \begin{itemize}
@@ -276,7 +280,8 @@ do150
 @
 \end{itemize}
 
-\warn{View or ``structure'' the data.frame created from using \R{filterD()} to assure that it contains data.}
+\warn{View or ``structure'' the data.frame from \R{filterD()} to be sure that it contains data.}
+
 \begin{exsection}
   \item \label{revex:BasicsDataFrame1} \rhw{} Two students at Seattle Community College made biometric measurements on 25 Douglas fir (\emph{Pseudotsuga menziesii}) trees in the lowlands of western Washington.  The variables recorded in the \href{https://raw.githubusercontent.com/droglenc/NCData/master/DougFirBiometrics.csv}{DougFirBiometrics.csv} file are a unique tree identifier (\var{tree}), the observer's name (\var{observer}; either ``Ingrid'' or ``Dylan''), the circumference at breast height (meters; \var{circ}), the height to the eye of the observer (meters; \var{eyeht}), the horizontal distance between observer and tree (meters; \var{horizdist}), the angle between observer and top of tree (degrees; \var{angle}), and the estimated height of tree (meters; \var{height}) using right-angle trigonometry. \ansref{ans:BasicsDataFrame1}
   \begin{Enumerate}

@@ -17,7 +17,7 @@ set_parent('IntroStats.Rnw')
 \newpage
 
 
-\lettrine{A}{ model for the distribution} of a single quantitative variable can be visualized by ``fitting'' a smooth curve to a histogram, removing the histogram, and using the remaining curve as a model for the distribution of the entire population of individuals.  This process is illustrated with the set of three figures shown in \figref{fig:NormDensityEx}.  The underlying histogram was computed from the individuals in a very large sample.  The smooth red curve was drawn over the histogram and then removed to serve as a model for the distribution of the entire population.\index{Population Distribution!Normal Distribution}  If the smooth curve follows a known distribution, then certain calculations will be greatly simplified.
+\lettrine{A}{ model for the distribution} of a single quantitative variable can be visualized by ``fitting'' a smooth curve to a histogram, removing the histogram, and using the remaining curve as a model for the distribution of the entire population of individuals.  This process is illustrated with the three figures shown in \figref{fig:NormDensityEx}.  The underlying histogram was computed from the individuals in a very large sample.  The smooth red curve was drawn over the histogram and then removed to serve as a model for the distribution of the entire population.\index{Population Distribution!Normal Distribution}  If the smooth curve follows a known distribution, then certain calculations are greatly simplified.
 
 <<NormDensityEx, echo=FALSE, fig.width=10.5, out.width='.95\\linewidth', fig.cap="Depiction of fitting a smooth curve to a histogram and then removing the histogram to leave the smooth curve model.">>=
 par(mar=c(4,1,1,1),mgp=c(2.1,0.4,0),mfcol=c(1,3),las=1,tcl=-0.2)
@@ -31,15 +31,15 @@ lines(x,dnorm(x),lwd=3,col="red",xpd=TRUE)
 plot(x,dnorm(x),type="l",lwd=3,col="red",xlab="Measurement",ylab="",yaxt="n",bty="n")
 @
 
-The normal distribution is one of the most important distributions in statistics because it serves as a model for the distribution of individuals in many natural situations and the distribution of statistics from repeated samplings (i.e., sampling distributions\footnote{See \chapref{chap:SamplingDist}.}).  The use of a normal distribution model to make certain calculations will be demonstrated in this chapter.
+The normal distribution is one of the most important distributions in statistics because it serves as a model for the distribution of individuals in many natural situations and the distribution of statistics from repeated samplings (i.e., sampling distributions).\footnote{See \chapref{chap:SamplingDist}.}  The use of a normal distribution model to make certain calculations is demonstrated in this chapter.
 
-\section{Characteristics}\index{Normal Distribution!Characteristics}
+\section{Characteristics of a Normal Distribution}\index{Normal Distribution!Characteristics}
 The normal distribution is the common bell-shaped curve that you are probably familiar with (\figref{fig:NormDensityEx}-Right).  Normal distributions are abstractions of reality that are meant to represent all of the individuals in a population.  The height of the curve at a value of $x$ is found with
 \begin{equation}
   \label{eqn:NormDistfx}
     f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}}
 \end{equation}
-which has the two parameters\footnote{The $e$ and $\pi$ are the usual numerical constants.} -- the population mean, $\mu$,\index{Mean!Population symbol} and the population standard deviation, $\sigma$.\index{Standard Deviation!Population symbol}  The mean, $\mu$, controls the center and the standard deviation, $\sigma$, controls the dispersion of the normal distribution \figrefp{fig:NormMultDists}.
+which has two parameters\footnote{The $e$ and $\pi$ are the usual numerical constants.} -- the population mean, $\mu$,\index{Mean!Population symbol} and the population standard deviation, $\sigma$.\index{Standard Deviation!Population symbol}  The mean, $\mu$, controls the center and the standard deviation, $\sigma$, controls the dispersion of the distribution \figrefp{fig:NormMultDists}.
 
 <<NormMultDists, echo=FALSE, fig.width=7, out.width='.8\\linewidth', fig.cap="Multiple normal distributions.  Distributions with the same line type have the same value of $\\mu$.  Distributions with the same color have the same value of $\\sigma$.  Values of $\\mu$ are 0 (solid), 2 (dashed), and 5 (dotted).  Values of $\\sigma$ are 0.5 (black), 1 (red), and 2 (green).">>=
 par(mar=c(4,1,1,1),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
@@ -57,13 +57,13 @@ for (i in 1:length(mu)) {
 matplot(x,y,type="l",lwd=3,xlab="Measurement",ylab="",yaxt="n",col=rep(1:3,times=3),lty=rep(1:3,each=3,times=1))
 @
 
-\warn{It is not important that you remember the equation for the height of a normal distribution; you need to remember, though, that the exact position and width of the normal distribution is controlled \textsc{\textbf{only}} by the values of $\mu$ and $\sigma$.}
+\warn{It is not important that you remember the equation for the height of a normal distribution; however, you do need to remember that the exact position and width of the normal distribution is controlled \textsc{\textbf{only}} by the values of $\mu$ and $\sigma$.}
 
 \begin{minipage}{\textwidth}
 There are an infinite number of normal distributions because there are an infinite number of combinations of $\mu$ and $\sigma$.  However, each normal distribution will
 \begin{Enumerate}
   \item be bell-shaped and symmetric,
-  \item have a center at $\mu$,
+  \item centered at $\mu$,
   \item have inflection points at $\mu \pm \sigma$, and
   \item have a total area under the curve equal to 1.
 \end{Enumerate}
@@ -76,8 +76,10 @@ If a generic variable $X$ follows a normal distribution with a mean of $\mu$ and
 \warn{A generic variable $X$ that is normally distributed with a mean of $\mu$ and standard deviation of $\sigma$ is abbreviated as $X\sim N(\mu,\sigma)$.}
 
 
+
 \section{Simple Areas Under the Curve}
-A common statistical problem is to determine the proportion of individuals that have values of the variable between two numbers.  For example, you might be faced with determining the proportion of all sites that have lead concentrations between 1.2 and 1.5 $\mu g \cdot m^{-3}$, the proportion of students that scored higher that 700 on the SAT, or the proportion of least weasels that are shorter than 150 mm.  Before considering these more realistic situations we will explore the calculations for the generic variable $X$ shown in \figref{fig:NormDistShade}.
+\vspace{-8pt}
+A common statistical problem is to determine the proportion of individuals with a value of the variable between two numbers.  For example, you might be faced with determining the proportion of all sites that have lead concentrations between 1.2 and 1.5 $\mu g \cdot m^{-3}$, the proportion of students that scored higher than 700 on the SAT, or the proportion of Least Weasels that are shorter than 150 mm.  Before considering these more realistic situations, we explore calculations for the generic variable $X$ shown in \figref{fig:NormDistShade}.
 
 Let's consider finding the proportion of individuals in a \textit{sample} with values between 0 and 2.  A histogram can be used to answer this question because it is about the individuals in a sample (\figref{fig:NormDistShade}-Left).  In this case, the proportion of individuals with values between 0 and 2 is computed by dividing the number of individuals in the red shaded bars by the total number of individuals in the histogram.  The analogous computation on the superimposed smooth curve is to find the area under the curve between 0 and 2 (\figref{fig:NormDistShade}-Right).  The area under the curve is a ``proportion of the total'' because, as stated above, the area under the entire curve is equal to 1.  The actual calculations on the normal curve will be shown in the following sections.  However, at this point, note that the calculation of an area on a normal curve is analogous to summing the number of individuals in the appropriate classes of the histogram and dividing by $n$.
 
@@ -98,7 +100,7 @@ y.shade <- c(y.shade,0,0)
 polygon(x.shade,y.shade,col="red",border="red")
 @
 
-\warn{The proportion of individuals between two values of a variable that is normally distributed is found by finding the area under the normal distribution between those two values.}
+\warn{The proportion of individuals between two values of a variable that is normally distributed is the area under the normal distribution between those two values.}
 
 The 68-95-99.7 Rule\footnote{Other authors call this the ``Empirical Rule.''} states that 68\% of the individuals that follow a normal distribution will have values between $\mu-1\sigma$ and $\mu+1\sigma$, 95\% will be between $\mu-2\sigma$ and $\mu+2\sigma$, and 99.7\% will be between $\mu-3\sigma$ and $\mu+3\sigma$ \figrefp{fig:NormEmpiricalRule}.\index{Normal Distribution!68-95-99.7\% Rule}\index{68-95-99.7\% Rule}  The 68-95-99.7 Rule is true no matter what $\mu$ and $\sigma$ are as long as the distribution is normal.  For example, if $A\sim N(3,1)$, then 68\% of the individuals will fall between 2 (i.e., 3-1*1) and 4 (i.e., 3+1*1) and 99.7\% will fall between 0 (i.e., 3-3*1) and 6 (i.e., 3+3*1).  Alternatively, if $B\sim N(9,3)$, then 68\% of the individuals will fall between 6 (i.e., 9-1*3) and 12 (i.e., 9+1*3) and 95\% will be between 3 (i.e., 9-2*3) and 15 (i.e., 9+2*3).  Similar calculations can be made for any normal distribution.
 
@@ -143,7 +145,7 @@ text(0,-0.015,expression(mu),xpd=TRUE,cex=0.99)
 
 \defn{68-95-99.7 Rule}{For all normal distributions 68\% of the individuals will be between $\mu\pm1\sigma$, 95\% will be between $\mu\pm2\sigma$, and 99.7\% will be between $\mu\pm3\sigma$}
 
-The 68-95-99.7 Rule is used to find areas under the normal curve as long as the value of interest is an \textbf{integer} number of standard deviations away from the mean.  For example, the proportion of individuals that have a value of A greater than 5 is found by first realizing that 95\% of the individuals on this distribution fall between 1 and 5.  By subtraction this means that 5\% of the individuals must be less than 1 \textbf{AND} greater than 5.  Finally, because of the symmetry of normal distributions, the same proportion of individuals must be less than 1 as are greater than 5.  Thus, half of 5\%, or 2.5\%, of the individuals have a value of A greater than 5.
+The 68-95-99.7 Rule is used to find areas under the normal curve as long as the value of interest is an \textbf{integer} number of standard deviations away from the mean.  For example, the proportion of individuals that have a value of A greater than 5 is found by first realizing that 95\% of the individuals on this distribution fall between 1 and 5.  By subtraction this means that 5\% of the individuals must be less than 1 \textbf{AND} greater than 5.  Finally, because normal distributions are symmetric, the same proportion of individuals must be less than 1 as are greater than 5.  Thus, half of 5\%, or 2.5\%, of the individuals have a value of A greater than 5.
 
 \warn{The 68-95-99.7 Rule can only be used for questions involving \textbf{integer} standard deviations away from the mean.}
 
@@ -175,21 +177,24 @@ text(3.5,0.13,"A",col="blue",cex=2)
 
 
 \section[Forward Calculations]{More Complex Areas (Forward Calculations)}
-Areas under the curve relative to a non-integer number of standard deviations away from the mean used to be found via a calculation and examination of a so-called standard normal table.  With the advent of computers and cheap software these areas are now found simply with the aid of computer software like R.  The area under a normal curve relative to a particular value is computed in R with \R{distrib()}.  This function requires the \textit{particular value} as the first argument, the mean of the normal distribution in the \R{mean=} argument, and the standard deviation of the normal distribution in the \R{sd=} argument.  The \R{distrib()} function defaults to finding the area under the curve to the \textbf{left of} the particular value but it can find the area under the curve to the right of the particular value by including the \R{lower.tail=FALSE} argument.
+\vspace{-12pt}
+Areas under the curve relative to non-integer numbers of standard deviations away from the mean used to be found via a calculation and examination of a so-called standard normal table.  With the advent of computers and cheap software these areas are now found simply with the aid of computer software like R.
 
-For example, suppose that the heights of a population of students, represented by $H$, is known to be $H\sim N(66,3)$.  Thus, the proportion of students in this population that have a height less than 71 inches is computed with (the results are shown below and in \figref{fig:NormZCalc1}),
+The area under a normal curve relative to a particular value is computed in R with \R{distrib()}.  This function requires the \textit{particular value} as the first argument and the mean and standard deviation of the normal distribution in the \R{mean=} and \R{sd=} arguments, respectively.  The \R{distrib()} function defaults to finding the area under the curve to the \textbf{left of} the particular value, but it can find the area under the curve to the right of the particular value by including \R{lower.tail=FALSE}.
+
+For example, suppose that the heights of a population of students, represented by $H$, is known to be $H\sim N(66,3)$.  Thus, the proportion of students in this population that have a height less than 71 inches is computed below. Thus, approximately \Sexpr{formatC(pnorm(71,mean=66,sd=3)*100,format="f",digits=1)}\% of the students in this population have a height less than 71 inches \figrefp{fig:NormZCalc1}.
 <<NormZCalc1, par1a=TRUE, fig.cap="Calculation of the proportion of individuals on a $N(66,3)$ with a value less than 71.">>=
 ( distrib(71,mean=66,sd=3) )
 @
-Thus, approximately \Sexpr{formatC(pnorm(71,mean=66,sd=3)*100,format="f",digits=1)}\% of the students in this population have a height less than 71 inches.  The proportion of students in this population that have a height \textit{greater} than 68 inches is computed by including the \R{lower.tail=FALSE} argument as follows (with the results shown below and in \figref{fig:NormZCalc2}),
+
+The proportion of students in this population that have a height \textit{greater} than 68 inches is computed below (note use of \R{lower.tail=FALSE}). Thus, approximately \Sexpr{formatC(pnorm(68,mean=66,sd=3,lower.tail=FALSE)*100,format="f",digits=1)}\% of the students in this population have a height greater than 68 inches \figrefp{fig:NormZCalc2}.
 <<NormZCalc2, par1a=TRUE, fig.cap="Calculation of the proportion of individuals on a $N(66,3)$ with a value greater than 68.">>=
 ( distrib(68,mean=66,sd=3,lower.tail=FALSE) )
 @
-Thus, approximately \Sexpr{formatC(pnorm(68,mean=66,sd=3,lower.tail=FALSE)*100,format="f",digits=1)}\% of the students in this population have a height greater than 68 inches.
 
 \warn{The area greater than a particular value is found by including the \R{lower.tail=FALSE} argument in \R{distrib()}.}
 
-Finding the area between two particular values is a bit more work.  To answer ``between''-type problems, the area less than the smaller of the two values is subtracted from the area less than the larger of the two values.  This is illustrated by noting that two values split the area under the normal curve into three parts -- A, B, and C \figrefp{fig:NormDistBetween}.  The area between the two values is B.  The area to the left of the larger value corresponds to the combined area of A and B (i.e., A+B).  The area to the left of the smaller value corresponds to the area A.  Thus, subtracting the latter from the former leaves the ``in-between'' area B (i.e., (A+B)-A = B).
+Finding the area between two particular values is a bit more work.  To answer ``between''-type questions, the area less than the smaller of the two values is subtracted from the area less than the larger of the two values.  This is illustrated by noting that two values split the area under the normal curve into three parts -- A, B, and C \figrefp{fig:NormDistBetween}.  The area between the two values is B.  The area to the left of the larger value corresponds to the area A+B.  The area to the left of the smaller value corresponds to the area A.  Thus, subtracting the latter from the former leaves the ``in-between'' area B (i.e., (A+B)-A = B).
 
 <<NormDistBetween, echo=FALSE, fig.cap="Schematic representation of how to find the area between two $Z$ values.">>=
 par(mar=c(4,4,1,1),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
@@ -210,16 +215,15 @@ text(mu-1.6*sd,0.01,"A",cex=1.25)
 text(mu-0.2*sd,0.01,"B",cex=1.25)
 text(mu+1.5*sd,0.01,"C",cex=1.25)
 @
+\vspace{12pt} % because the spacing is gobbled by the R code.
 
-For example, the area between 62 and 70 inches of height is found with (with intermediate calculations shown in \figref{fig:NormZCalc3})
+For example, the area between 62 and 70 inches of height is found below (intermediate calculations shown in \figref{fig:NormZCalc3}). Thus, \Sexpr{formatC((pnorm(70,mean=66,sd=3)-pnorm(62,mean=66,sd=3))*100,format="f",digits=1)}\% of students in this population have a height between 62 and 70 inches.
 
-<<NormZCalc3, echo=-1, par1a=TRUE, fig.cap="Calculation of the areas less than 70 inches (\\textbf{Left}) and 62 inches (\textbf{Right}).">>=
+<<NormZCalc3, par1a=TRUE, fig.cap="Calculation of the areas less than 70 inches (\\textbf{Left}) and 62 inches (\\textbf{Right}).">>=
 ( AB <- distrib(70,mean=66,sd=3) )
 ( A <- distrib(62,mean=66,sd=3) )
 AB-A
 @
-
-Thus, \Sexpr{formatC((pnorm(70,mean=66,sd=3)-pnorm(62,mean=66,sd=3))*100,format="f",digits=1)}\% of students in this population have a height between 62 and 70 inches.
 
 \warn{The area between two values is found by subtracting the area less than the smaller value from the area less than the larger value.}
 
@@ -234,21 +238,19 @@ Thus, \Sexpr{formatC((pnorm(70,mean=66,sd=3)-pnorm(62,mean=66,sd=3))*100,format=
 
 
 \section[Reverse Calculations]{Values from Areas (Reverse Calculations)}
-Another important calculation with normal distributions is finding the value or values of $X$ with a given proportion of individuals less than, greater than, or between.  For example, it may be necessary to find the test score such that 90\% (or 0.90 as a proportion) of the students scored lower.  In contrast to the calculations in the previous section, the value of $X$ is given and a proportion of individuals (or area) is asked for, the calculations in this section give a proportion and ask for a value of $X$.  These types of questions have been dubbed \textbf{``reverse'' normal distribution questions} to contrast them with the questions in the previous section.
+Another important calculation with normal distributions is finding the value or values of $X$ with a given proportion of individuals less than, greater than, or between.  For example, it may be necessary to find the test score such that 90\% (or 0.90 as a proportion) of the students scored lower.  In contrast to the calculations in the previous section (where the value of $X$ was given and a proportion of individuals was asked for), the calculations in this section give a proportion and ask for a value of $X$.  These types of questions are called \textbf{``reverse'' normal distribution questions} to contrast them with questions from the previous section.
 
-Reverse questions are also answered with \R{distrib()}.  Again, the first argument must be the value of interest -- a proportion (or area) in these questions -- and the mean and standard deviation are given in \R{mean=} and \R{sd=}, respectively.  However, the question is treated as a ``reverse'' question when the \R{type="q"} argument is supplied.\footnote{``q'' stands for quantile.}  Thus, the height that has 20\% of all individuals shorter \figrefp{fig:NormZCalc4} is computed with
+Reverse questions are also answered with \R{distrib()}, though the first argument is the proportion (or area) of interest.  The calculated will be treated as a ``reverse'' question when \R{type="q"} is given to \R{distrib()}.\footnote{``q'' stands for quantile.}  For example, the height that has 20\% of all students shorter is  \Sexpr{formatC(qnorm(0.20,mean=66,sd=3),format="f",digits=1)} inches, as computed below \figrefp{fig:NormZCalc4}.
 <<NormZCalc4, par1a=TRUE,fig.cap="Calculation of the height with 20\\% of all students shorter.">>=
 ( distrib(0.20,mean=66,sd=3,type="q") )
 @
 
-Thus, 20\% of the population of students is shorter than \Sexpr{formatC(qnorm(0.20,mean=66,sd=3),format="f",digits=1)} inches.  ``Greater than'' reverse questions are computed by including the \R{lower.tail=FALSE} argument.  For example, the top 10\% of heights \figrefp{fig:NormZCalc5} is found with
+``Greater than'' reverse questions are computed by including \R{lower.tail=FALSE}.  For example, 10\% of the population of students is taller than \Sexpr{formatC(qnorm(0.10,mean=66,sd=3,lower.tail=FALSE),format="f",digits=1)} inches, as computed below \figrefp{fig:NormZCalc5}.
 <<NormZCalc5, par1a=TRUE, fig.cap="Calculation of the height with 10\\% of all students taller.">>=
 ( distrib(0.10,mean=66,sd=3,type="q",lower.tail=FALSE) )
 @
 
-Thus, 10\% of the population of students is taller than \Sexpr{formatC(qnorm(0.10,mean=66,sd=3,lower.tail=FALSE),format="f",digits=1)} inches.
-
-``Between'' questions can only be easily handled if the question is looking for endpoint values that are symmetric about $\mu$.  In other words, the question must ask for the two values that contain the ``most common'' proportion of individuals.  For example, suppose that you were asked to find the most common 80\% of heights.  This type of question is handled by converting this ``symmetric between'' question into two ``less than'' questions.  For example, in \figref{fig:NormRevBetween} the area D is the symmetric area of interest.  If D is 0.80, then C+E must be 0.20.\footnote{Because all three areas must sum to 1.}  Because D is symmetric about $mu$, C and E must both equal 0.10.  Thus, the lower bound on D is the value that has 10\% of all values smaller.  Similarly, because the combined area of C and D is 0.90, the upper bound on D is the value that has 90\% of all values smaller.  This question has now been converted from a ``symmetric between'' to two ``less than'' questions that can be answered exactly as shown above.  For example, the two heights that have a symmetric 80\% of individuals between them are \Sexpr{formatC(qnorm(0.10,mean=66,sd=3),format="f",digits=1)} and \Sexpr{formatC(qnorm(0.90,mean=66,sd=3),format="f",digits=1)} as computed with
+``Between'' questions can only be easily handled if the question is looking for endpoint values that are symmetric about $\mu$.  In other words, the question must ask for the two values that contain the ``most common'' proportion of individuals.  For example, suppose that you were asked to find the most common 80\% of heights.  This type of question is handled by converting this ``symmetric between'' question into two ``less than'' questions.  For example, in \figref{fig:NormRevBetween} the area D is the symmetric area of interest.  If D is 0.80, then C+E must be 0.20.\footnote{Because all three areas must sum to 1.}  Because D is symmetric about $mu$, C and E must both equal 0.10.  Thus, the lower bound on D is the value that has 10\% of all values smaller.  Similarly, because the combined area of C and D is 0.90, the upper bound on D is the value that has 90\% of all values smaller.  This question has now been converted from a ``symmetric between'' to two ``less than'' questions that can be answered exactly as shown above.  For example, the two heights that have a symmetric 80\% of individuals between them are \Sexpr{formatC(qnorm(0.10,mean=66,sd=3),format="f",digits=1)} and \Sexpr{formatC(qnorm(0.90,mean=66,sd=3),format="f",digits=1)} as computed below.
 <<fig.keep='none'>>=
 ( distrib(0.10,mean=66,sd=3,type="q") )
 ( distrib(0.90,mean=66,sd=3,type="q") )
@@ -282,10 +284,11 @@ text(mu+1.5*sd,0.01,"E",cex=1.25)
 
 
 \subsection{Distinguish Calculation Types}\index{Normal Distribution!Finding areas}\index{Normal Distribution!Finding values}
-It is critical to be able to distinguish between the two main types of calculations made with normal distributions.  The first type of calculation is a ``forward'' calculation where the area or proportion of individuals relative to a value of the variable must be found.  The second type of calculation is a ``reverse'' calculation where the value of the variable relative to a particular area is calculated.
+It is critical to be able to distinguish between the two main types of calculations made from normal distributions.  The first type of calculation is a ``forward'' calculation where the area or proportion of individuals relative to a value of the variable must be found.  The second type of calculation is a ``reverse'' calculation where the value of the variable relative to a particular area is calculated.
 
-Distinguishing between these two types of calculations a matter of deciding if (i) the value of the variable is known and the proportion (or area) is to be found or (ii) if the proportion (or area) is known and the value of the variable is to be found.  Therefore, distinguishing between the calculation types is as simple as identifying what is known and what must be found.  If the value of the variable is known but not the proportion or area, then a forward calculation is used.  If the area or proportion is known, then a reverse calculation to find the value of the variable is used.
+Distinguishing between these two types of calculations is a matter of deciding if (i) the value of the variable is given and the proportion (or area) is to be found or (ii) if the proportion (or area) is given and the value of the variable is to be found.  Therefore, distinguishing between the calculation types is as simple as identifying what is given (or known) and what must be found.  If the value of the variable is given but not the proportion or area, then a forward calculation is used.  If the area or proportion is given, then a reverse calculation to find the value of the variable is used.
 
+\newpage
 \begin{exsection}
   \item \label{revex:quNormStudentAge} The age at which ``traditional'' students graduate from college is N(22.1, 1.1).  Use this information to answer the questions below. \ansref{ans:quNormStudentAge}
 \begin{Enumerate}
@@ -336,33 +339,36 @@ Distinguishing between these two types of calculations a matter of deciding if (
 \end{exsection}
 
 
+\vspace{-12pt}
 \section{Standardization and Z-Scores}\label{sect:Standardizing}
-The relative magnitude that an individual differs from the mean is often better expressed as the number of standard deviations that the individual is away from the mean.  For example, if heights are $N(66,3)$ and an individual's height is 59 inches, then it is said that the individual is seven inches shorter than average.  Can this be considered to be a large or a small difference?  However, it can also be said that the individual is $\frac{-7}{3}$ = $-2.33$ standard deviations below the mean.  One can conclude that the height of this individual is relatively rare because it is known\footnote{From the 68-95-99.7\% Rule.} that very few individuals are more than two standard deviations away from the mean.
+\vspace{-12pt}
+An individual that is 59 inches tall is 7 inches shorter than average if heights are $N(66,3)$. Is this a large or a small difference?  Alternatively, this same individual is $\frac{-7}{3}$ = $-2.33$ standard deviations below the mean. Thus, a height of 59 inches is relatively rare in this population because few individuals are more than two standard deviations away from the mean.\footnote{From the 68-95-99.7\% Rule.} As seen here, the relative magnitude that an individual differs from the mean is better expressed as the number of standard deviations that the individual is away from the mean.
 
-Values are ``standardized'' by changing the original scale (inches in this example) to one that counts the number of standard deviations (i.e., $\sigma$) that the value is away from the center of the distribution (i.e., $\mu$).  For example, with the height variable (i.e., N(66,3)), 69 inches is one standard deviation above the mean and, thus, corresponds to 1 on the standardized scale.  Similarly, 60 inches is two standard deviations below the mean and corresponds to -2 on the standardized scale.  Finally, 67.5 inches on the original scale is one half standard deviation above the mean and corresponds to 0.5 on the standardized scale.
+Values are ``standardized'' by changing the original scale (inches in this example) to one that counts the number of standard deviations (i.e., $\sigma$) that the value is away from the mean (i.e., $\mu$).  For example, with the height variable (i.e., $N(66,3)$), 69 inches is one standard deviation above the mean, which corresponds to +1 on the standardized scale. Similarly, 60 inches is two standard deviations below the mean, which corresponds to -2 on the standardized scale. Finally, 67.5 inches on the original scale is one half standard deviation above the mean or +0.5 on the standardized scale.
 
-The process of computing the number of standard deviations that an individual is away from the mean is called \textbf{standardizing}.  Standardizing is accomplished with the generic formula,
+The process of computing the number of standard deviations that an individual is away from the mean is called \textbf{standardizing}.  Standardizing is accomplished with
 \begin{equation}
   \label{eqn:Zgeneral}
     Z = \frac{\text{``value''}-\text{``center''}}{\text{``dispersion''}}
 \end{equation}
-or with the more specific formula,
+or, more specifically,
 \begin{equation}
   \label{eqn:Zspecific}
     Z = \frac{x-\mu}{\sigma}
 \end{equation}
-The more general of these two formulae, i.e., \eqref{eqn:Zgeneral}, is preferred over the specific formula because it will work in all later applications.  Using the height example again, the standardized value of an individual with a height of 59 inches is $z=\frac{59-66}{3}=-2.33$.  Thus, this individual's height is 2.33 standard deviations below the average height in the population.
+For example, the standardized value of an individual with a height of 59 inches is $z=\frac{59-66}{3}=-2.33$. Thus, this individual's height is 2.33 standard deviations below the average height in the population.
 
-The standardized value ($Z$) that is the result from \eqref{eqn:Zgeneral} follows a $N(0,1)$.  Thus, the $N(0,1)$ is called the ``standard normal distribution.''  The relationship between $X$ and $Z$ is one-to-one meaning that each value of $X$ converts to one and only one value of $Z$.  This means that the area to the left of $X$ on a $N(\mu,\sigma)$ is the same as the area to the left of $Z = \frac{x-\mu}{\sigma}$ on a $N(0,1)$.  This one-to-one relationship is illustrated in \figref{fig:NormStandardizingEx} using the individual with a height of 59 inches which resulted in $Z=-2.33$.
+Standardized values ($Z$) follow a $N(0,1)$.  Thus, the $N(0,1)$ is called the ``standard normal distribution.''  The relationship between $X$ and $Z$ is one-to-one meaning that each value of $X$ converts to one and only one value of $Z$.  This means that the area to the left of $X$ on a $N(\mu,\sigma)$ is the same as the area to the left of $Z$ on a $N(0,1)$.  This one-to-one relationship is illustrated in \figref{fig:NormStandardizingEx} using the individual with a height of 59 inches and $Z=-2.33$.
 
+\vspace{-6pt}
 \warn{The standardized scale (i.e., z-scores) represents the number of standard deviations that a value is from the mean.}
 
-<<NormStandardizingEx, echo=FALSE, fig.cap="Plots depicting the area to the left of 59 on a $N(66,3)$ (\textbf{Left}) and the area to the right of the corresponding Z-score of $Z=-2.33$ on a $N(0,1)$ (\textbf{Right}).  Not that the x-axis scales are different.">>=
+<<NormStandardizingEx, echo=FALSE, fig.cap="Plots depicting the area to the left of 59 on a $N(66,3)$ (\\textbf{Left}) and the area to the right of the corresponding Z-score of $Z=-2.33$ on a $N(0,1)$ (\\textbf{Right}).  Not that the x-axis scales are different.">>=
 par(mar=c(3.5,3.5,3,3),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
 x <- 59
 mu <- 66
 sigma <- 3
 Z = (x-mu)/sigma
 distrib(x,mean=mu,sd=sigma)
-distrib(Z)
+distrib(Z,xlab="Z")
 @
