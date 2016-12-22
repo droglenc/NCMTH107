@@ -4,7 +4,7 @@ set_parent('IntroStats.Rnw')
 
 \chapter{1-Sample Z-Test} \label{chap:ZTest}
 \begin{ChapObj}{\boxwidth}
-  \textbf{Chapter Objectives:}
+  \textbf{Objectives:}
   \begin{Enumerate}
     \item Properly construct statistical hypotheses.
     \item Understand the specifics of a 1-Sample Z-Test.
@@ -16,7 +16,7 @@ set_parent('IntroStats.Rnw')
 \newpage
 
 \section{11-Steps of Hypothesis Testing}\index{Hypothesis Testing!Steps}  \label{sec:11Steps}
-I have created an 11-step process to make sure that you complete all aspects important to statistical hypothesis testing.  These steps are listed below and should be used for all hypothesis tests in ensuing chapters.
+I have created an 11-step process to make sure that you complete all aspects important to statistical hypothesis testing.  These steps are listed below and should be used for all hypothesis tests in ensuing modules.
 \begin{Enumerate}
   \item State the rejection criterion ($\alpha$),
   \item State the null and alternative hypotheses to be tested and define the parameter(s),
@@ -40,9 +40,9 @@ Two of these steps require amplifying discussion.  First, the ``collect the data
 
 
 \section{1-Sample Z-Test Specifics} \label{sect:ZTest}\index{Z-Test}
-A 1-Sample Z-Test is the name for the procedure developed previously in this chapter.  A 1-Sample Z-Test tests the null hypothesis that the population mean is equal to a specific value or, symbolically, $H_{0}:\mu=\mu_{0}$ where $\mu_{0}$ represents any specific value of the population mean.  In this section, the specifics of a 1-Sample Z-Test are summarized and, in doing so, a framework to be used for subsequent hypothesis tests is developed.  In addition, two full examples, using the 11-steps of any hypothesis test, will be completed.
+A 1-Sample Z-Test is the name for the procedure developed previously in this module.  A 1-Sample Z-Test tests the null hypothesis that the population mean is equal to a specific value or, symbolically, $H_{0}:\mu=\mu_{0}$ where $\mu_{0}$ represents any specific value of the population mean.  In this section, the specifics of a 1-Sample Z-Test are summarized and, in doing so, a framework to be used for subsequent hypothesis tests is developed.  In addition, two full examples, using the 11-steps of any hypothesis test, will be completed.
 
-A 1-Sample Z-Test is characterized by testing $H_{0}:\mu=\mu_{0}$ in the situation when $\sigma$ is known.  The only test that can possibly be confused with a 1-Sample Z-Test is a 1-Sample t-Test \chaprefp{chap:tTest}, which tests the same null hypothesis but in the situation where $\sigma$ is unknown.  The specifics of a 1-Sample Z-Test are identified in \tabref{tab:1Zspec}.  The conceptual underpinnings of the 1-Sample Z-Test were discussed in great detail in previous sections of this chapter and in \chapref{chap:SamplingDist}.
+A 1-Sample Z-Test is characterized by testing $H_{0}:\mu=\mu_{0}$ in the situation when $\sigma$ is known.  The only test that can possibly be confused with a 1-Sample Z-Test is a 1-Sample t-Test \modrefp{chap:tTest}, which tests the same null hypothesis but in the situation where $\sigma$ is unknown.  The specifics of a 1-Sample Z-Test are identified in \tabref{tab:1Zspec}.  The conceptual underpinnings of the 1-Sample Z-Test were discussed in great detail in previous sections of this module and in \modref{chap:SamplingDist}.
 
 \begin{table}[htbp]
   \caption{Characteristics of a 1-Sample Z-Test.}

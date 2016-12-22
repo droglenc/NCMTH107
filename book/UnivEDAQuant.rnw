@@ -4,7 +4,7 @@ set_parent('IntroStats.Rnw')
 
 \chapter{Univariate EDA - Quantitative} \label{chap:UnivEDAQuant}
 \begin{ChapObj}{\boxwidth}
-  \textbf{Chapter Objectives:}
+  \textbf{Objectives:}
   \begin{Enumerate}
     \item Construct histograms with quantitative data,
     \item Use graphs to describe the shape of a distribution, and
@@ -20,7 +20,7 @@ set_parent('IntroStats.Rnw')
 \minitoc
 \newpage
 
-\lettrine{O}{nce data have been collected} \chaprefp{chap:DataProd}, it is important to develop a ``feel'' for the data, to identify what types of values each variable takes, and to determine if there are any ``issues'' in the data.  This first step in a statistical analysis is called \textsc{Exploratory Data Analysis} (EDA).  We will begin by examining the distribution of each variable by itself, called a univariate EDA, and then examine pairs of variables, called a bivariate EDA (see Chapters \ref{chap:BivEDAQuant} and \ref{chap:BivEDACat}). Additionally, the methods employed differ for quantitative and categorical variables. Quantitative variables are the focus of this chapter, whereas categorical variables are the focus of \chapref{chap:UnivEDACat}.
+\lettrine{O}{nce data have been collected} \modrefp{chap:DataProd}, it is important to develop a ``feel'' for the data, to identify what types of values each variable takes, and to determine if there are any ``issues'' in the data.  This first step in a statistical analysis is called \textsc{Exploratory Data Analysis} (EDA).  We will begin by examining the distribution of each variable by itself, called a univariate EDA, and then examine pairs of variables, called a bivariate EDA (see Modules \ref{chap:BivEDAQuant} and \ref{chap:BivEDACat}). Additionally, the methods employed differ for quantitative and categorical variables. Quantitative variables are the focus of this module, whereas categorical variables are the focus of \modref{chap:UnivEDACat}.
 
 \vspace{-6pt}
 \section{Items to Describe}
@@ -44,7 +44,7 @@ Graphs are used to identify shape and the presence of outliers and to get a gene
 \vspace{-12pt}
 \warn{Shape and outliers are described from graphs; center and dispersion are describe with numerical summaries.}
 
-Three primary data sets will be explored throughout this chapter.
+Three primary data sets will be explored throughout this module.
 
 \vspace{-12pt}
 \begin{Itemize}
@@ -545,7 +545,7 @@ At the beginning of this section, the standard deviation was defined as ``essent
 
 Further note that the mean is the value that minimizes the value of the standard deviation calculation -- i.e., putting any other value besides the mean into the standard deviation equation will result in a larger value.
 
-Finally, why is the sum of the squared differences divided by $n-1$, rather than $n$, in the standard deviation calculation?  Recall (from \sectref{sect:IVPPSS}) that statistics are meant to estimate parameters.  The sample standard deviation is supposed to estimate the population standard deviation ($\sigma$).  Theorists have shown that if we divide by $n$, $s$ will consistently underestimate $\sigma$.  Thus, $s$ calculated in this way would be a biased estimator of $\sigma$.  Theorists have found, though, that dividing by $n-1$ will cause $s$ to be an unbiased estimator of $\sigma$.  Being unbiased is generally good -- it means that on average our statistic estimates our parameter (this concept is discussed in more detail in \chapref{chap:SamplingDist}).
+Finally, why is the sum of the squared differences divided by $n-1$, rather than $n$, in the standard deviation calculation?  Recall (from \sectref{sect:IVPPSS}) that statistics are meant to estimate parameters.  The sample standard deviation is supposed to estimate the population standard deviation ($\sigma$).  Theorists have shown that if we divide by $n$, $s$ will consistently underestimate $\sigma$.  Thus, $s$ calculated in this way would be a biased estimator of $\sigma$.  Theorists have found, though, that dividing by $n-1$ will cause $s$ to be an unbiased estimator of $\sigma$.  Being unbiased is generally good -- it means that on average our statistic estimates our parameter (this concept is discussed in more detail in \modref{chap:SamplingDist}).
 
 \vspace{-6pt}
 \subsection{Measures of Dispersion in R} \label{sect:DescStatsDispersion}\index{Standard Deviation!Calculation}\index{IQR!Calculation}\index{Quartile!Calculation}\index{Range!Calculation}
@@ -667,7 +667,7 @@ boxplot(days~decade,data=LSI,ylab="Days of Ice Cover",xlab="Decade")
 
 \section{Example Interpretations}\index{EDA!Univariate!Quantitative}
 \vspace{-12pt}
-While most of the previous sections focused on how to construct various graphs and numerical summaries, the most important aspect of this chapter is that you can make appropriate interpretations for an EDA from the summary results.  For quantitative data, an appropriate EDA consists of identifying the shape, center, dispersion, and outliers for the variable.  For categorical data, an appropriate EDA consists of identifying the major characteristics among the categories.  Below, I model properly constructed EDAs for the mouse consumption data and two new data sets.
+While most of the previous sections focused on how to construct various graphs and numerical summaries, the most important aspect of this module is that you can make appropriate interpretations for an EDA from the summary results.  For quantitative data, an appropriate EDA consists of identifying the shape, center, dispersion, and outliers for the variable.  For categorical data, an appropriate EDA consists of identifying the major characteristics among the categories.  Below, I model properly constructed EDAs for the mouse consumption data and two new data sets.
 
 \subsubsection{Mouse Consumption Example}
 \vspace{-12pt}

@@ -4,7 +4,7 @@ set_parent('IntroStats.Rnw')
 
 \chapter{Linear Regression}  \label{chap:Regress}
 \begin{ChapObj}{\boxwidth}
-  \textbf{Chapter Objectives:}
+  \textbf{Objectives:}
   \begin{Enumerate}
     \item Describe the purposes of regression.
     \item Describe the criteria used to determine the best-fit line to a set of bivariate data.
@@ -29,7 +29,7 @@ set_parent('IntroStats.Rnw')
 
 \warn{Explaining variability of and predicting future values of response variables are the two goals of regression.}
 
-Exact predictions cannot be made because of natural variability.  For example, two people with the same intake of mercury (from consumption of fish) will not have the same level of mercury in their blood stream (e.g., observe the two individuals in \figref{fig:HGscat} that had intakes of 580 ug HG/day).  Thus, the best that can be accomplished is to predict the average or expected value for a person with a particular intake value.  This is accomplished by finding the line that best ``fits'' the points on a scatterplot of the data and using that line to make predictions.  Finding and using the ``best-fit'' line is the topic of this chapter.
+Exact predictions cannot be made because of natural variability.  For example, two people with the same intake of mercury (from consumption of fish) will not have the same level of mercury in their blood stream (e.g., observe the two individuals in \figref{fig:HGscat} that had intakes of 580 ug HG/day).  Thus, the best that can be accomplished is to predict the average or expected value for a person with a particular intake value.  This is accomplished by finding the line that best ``fits'' the points on a scatterplot of the data and using that line to make predictions.  Finding and using the ``best-fit'' line is the topic of this module.
 
 <<HGscat, echo=FALSE, fig.cap="Scatterplot of intake of mercury in fish and the mercury in the blood stream.">>=
 intake <- c(180,200,230,410,600,550,275,580,580,105,250, 60,650)
@@ -348,7 +348,7 @@ In this text, if an assumption has been violated, then one should not continue t
 
 \section{Coefficient of Determination}\index{r-squared@{$r^{2}$}}
 \vspace{-12pt}
-The coefficient of determination, abbreviated as $r^{2}$, is the proportion of the total variability in the response variable that is explained away by knowing the value of the explanatory variable and the best-fit model.  The $r^{2}$ can take values between 0 and 1.\footnote{It is common for $r^{2}$ to be presented as a percentage.}  In simple linear regression, $r^{2}$ is literally the square of $r$, the correlation coefficient.\footnote{Simple linear regression is the fitting of a model with a single explanatory variable and is the only model considered in this chapter and this course. See \sectref{sect:corr} for a review of the correlation coefficient.}
+The coefficient of determination, abbreviated as $r^{2}$, is the proportion of the total variability in the response variable that is explained away by knowing the value of the explanatory variable and the best-fit model.  The $r^{2}$ can take values between 0 and 1.\footnote{It is common for $r^{2}$ to be presented as a percentage.}  In simple linear regression, $r^{2}$ is literally the square of $r$, the correlation coefficient.\footnote{Simple linear regression is the fitting of a model with a single explanatory variable and is the only model considered in this module and this course. See \sectref{sect:corr} for a review of the correlation coefficient.}
 
 \defn{Coefficient of Determination}{The proportion of the total variability in the response variable that is explained away by knowing the value of the explanatory variable and the best-fit model; abbreviated as $r^{2}$.}
 
@@ -610,7 +610,7 @@ rSquared(lm1,digits=3)
 \vspace{-12pt}
 \subsection*{Car Weight and MPG}
 \vspace{-12pt}
-In \chapref{chap:BivEDAQuant}, an EDA for the relationship between \var{HMPG} (the highway miles per gallon) and \var{Weight} (lbs) of 93 cars from the 1993 model year was performed.  This relationship will be explored further here as an example of a complete regression analysis.  In this analysis, the regression output will be examined within the context of answering the twelve typical questions.  These data are read into R below and the linear regression model is fit, coefficients extracted, fitted-line plot constructed, and coefficient of determination extracted.
+In \modref{chap:BivEDAQuant}, an EDA for the relationship between \var{HMPG} (the highway miles per gallon) and \var{Weight} (lbs) of 93 cars from the 1993 model year was performed.  This relationship will be explored further here as an example of a complete regression analysis.  In this analysis, the regression output will be examined within the context of answering the twelve typical questions.  These data are read into R below and the linear regression model is fit, coefficients extracted, fitted-line plot constructed, and coefficient of determination extracted.
 <<CarFit, fig.cap="Fitted line plot of the regression of highway MPG on weight of 93 cars from 1993.">>=
 cars93 <- read.csv("data/93cars.csv")
 ( lm2 <- lm(HMPG~Weight,data=cars93) )

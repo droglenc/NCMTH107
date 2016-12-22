@@ -4,7 +4,7 @@ set_parent('IntroStats.Rnw')
 
 \chapter{1-Sample t-Test} \label{chap:tTest1}
 \begin{ChapObj}{\boxwidth}
-  \textbf{Chapter Objectives:}
+  \textbf{Objectives:}
   \begin{Enumerate}
     \item Identify when a 1-sample t-Test is appropriate.
     \item Perform the 11 steps of a significance test in a 1-sample t-Test situation.
@@ -14,7 +14,7 @@ set_parent('IntroStats.Rnw')
 \minitoc
 \newpage
 
-\lettrine{P}{rior to this chapter}, the hypothesis testing methods have required knowing $\sigma$.  Of course, $\sigma$ is a parameter that is seldom actually known, but is estimated by $s$, the sample standard deviation.  When $\sigma$ is replaced by $s$, the test statistic follows a Student's t rather than a standard normal (Z) distribution.  In this chapter, the specifics of the t-distribution are described and a 1-sample t-Test for testing that the mean from one population equals a specific value is introduced. A 2-sample t-Test for comparing the means of two populations is introduced in \chapref{chap:tTest2}.
+\lettrine{P}{rior to this module}, the hypothesis testing methods have required knowing $\sigma$.  Of course, $\sigma$ is a parameter that is seldom actually known, but is estimated by $s$, the sample standard deviation.  When $\sigma$ is replaced by $s$, the test statistic follows a Student's t rather than a standard normal (Z) distribution.  In this module, the specifics of the t-distribution are described and a 1-sample t-Test for testing that the mean from one population equals a specific value is introduced. A 2-sample t-Test for comparing the means of two populations is introduced in \modref{chap:tTest2}.
 
 
 \section{t-distribution}\label{sect:tDist}\index{t Distribution!Characteristics}
@@ -34,7 +34,7 @@ for (i in 1:30) {
 
 \warn{A t-distribution is ``wider'' than a z-distribution because of the extra uncertainty from using $s$ rather than $\sigma$ in the test statistic calculation.}
 
-Proportional areas on a t-distribution are computed using \R{distrib()} in a manner similar to that described for a normal distribution in \chapref{chap:NormDist}.  To compute the area on a t-distribution the first argument to \R{distrib()} must be the value of t, the \R{distrib=} argument is required and is set equal to \R{"t"}, and the \R{type=} argument is \R{"p"}\footnote{The \R{type=} argument defaults to \R{"p"} so it may be omitted.}.  In addition, the df (how to find the df will be discussed in subsequent sections) must also be provided in the \R{df=} argument.  As before, \R{lower.tail=FALSE} is used to compute the upper tail area.  For example, the area to the right of $t=-1.456$ on a t-distribution with 9 df is \Sexpr{formatC(pt(-1.456,df=9,lower.tail=FALSE),format="f",digits=4)} \figrefp{fig:tarea1} and is found with
+Proportional areas on a t-distribution are computed using \R{distrib()} in a manner similar to that described for a normal distribution in \modref{chap:NormDist}.  To compute the area on a t-distribution the first argument to \R{distrib()} must be the value of t, the \R{distrib=} argument is required and is set equal to \R{"t"}, and the \R{type=} argument is \R{"p"}\footnote{The \R{type=} argument defaults to \R{"p"} so it may be omitted.}.  In addition, the df (how to find the df will be discussed in subsequent sections) must also be provided in the \R{df=} argument.  As before, \R{lower.tail=FALSE} is used to compute the upper tail area.  For example, the area to the right of $t=-1.456$ on a t-distribution with 9 df is \Sexpr{formatC(pt(-1.456,df=9,lower.tail=FALSE),format="f",digits=4)} \figrefp{fig:tarea1} and is found with
 
 <<tarea1, par1a=TRUE, fig.cap="Depiction of the area to the right of $t=-1.456$ on a t-distribution with 9 df.">>=
 ( distrib(-1.456,distrib="t",df=9,lower.tail=FALSE) )

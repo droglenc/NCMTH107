@@ -4,7 +4,7 @@ set_parent('IntroStats.Rnw')
 
 \chapter{Normal Distribution}  \label{chap:NormDist}
 \begin{ChapObj}{\boxwidth}
-  \textbf{Chapter Objectives:}
+  \textbf{Objectives:}
   \begin{Enumerate}
     \item Describe what a normal distribution looks like and what parameters control its shape.
     \item Describe simple properties describing the distribution of individuals on a normal distribution.
@@ -31,7 +31,7 @@ lines(x,dnorm(x),lwd=3,col="red",xpd=TRUE)
 plot(x,dnorm(x),type="l",lwd=3,col="red",xlab="Measurement",ylab="",yaxt="n",bty="n")
 @
 
-The normal distribution is one of the most important distributions in statistics because it serves as a model for the distribution of individuals in many natural situations and the distribution of statistics from repeated samplings (i.e., sampling distributions).\footnote{See \chapref{chap:SamplingDist}.}  The use of a normal distribution model to make certain calculations is demonstrated in this chapter.
+The normal distribution is one of the most important distributions in statistics because it serves as a model for the distribution of individuals in many natural situations and the distribution of statistics from repeated samplings (i.e., sampling distributions).\footnote{See \modref{chap:SamplingDist}.}  The use of a normal distribution model to make certain calculations is demonstrated in this module.
 
 \section{Characteristics of a Normal Distribution}\index{Normal Distribution!Characteristics}
 The normal distribution is the common bell-shaped curve that you are probably familiar with (\figref{fig:NormDensityEx}-Right).  Normal distributions are abstractions of reality that are meant to represent all of the individuals in a population.  The height of the curve at a value of $x$ is found with

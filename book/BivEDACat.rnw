@@ -4,7 +4,7 @@ set_parent('IntroStats.Rnw')
 
 \chapter{Bivariate EDA - Categorical} \label{chap:BivEDACat}
 \begin{ChapObj}{\boxwidth}
-  \textbf{Chapter Objectives:}
+  \textbf{Objectives:}
   \begin{Enumerate}
     \item Describe bivariate data.
     \item Distinguish between response and explanatory variables.
@@ -18,10 +18,10 @@ set_parent('IntroStats.Rnw')
 \minitoc
 \vspace{48pt}
 
-\lettrine{T}{wo-way frequency tables} summarize two categorical variables recorded on the same individual by displaying the categories of the first variable as rows and the categories of the second variable as columns.\index{Table!Frequency}\index{EDA!Bivariate!Categorical}  Each cell in this table contains a count of the number of individuals that were in the corresponding categories of each variable.  Frequency tables are often converted to percentage tables for ease of summarization and comparison among populations.  This chapter explores the construction and interpretation of these types of tables.
+\lettrine{T}{wo-way frequency tables} summarize two categorical variables recorded on the same individual by displaying the categories of the first variable as rows and the categories of the second variable as columns.\index{Table!Frequency}\index{EDA!Bivariate!Categorical}  Each cell in this table contains a count of the number of individuals that were in the corresponding categories of each variable.  Frequency tables are often converted to percentage tables for ease of summarization and comparison among populations.  This module explores the construction and interpretation of these types of tables.
 
 \newpage
-The following data from the General Sociological Survey (GSS) will be considered throughout this chapter.  Two questions asked to 3955 respondents were:
+The following data from the General Sociological Survey (GSS) will be considered throughout this module.  Two questions asked to 3955 respondents were:
 \vspace{-12pt}
 \begin{Itemize}
   \item What is your highest degree earned? [choices -- ``less than high school diploma'', ``high school diploma'', ``junior college'', ``bachelor's'', or ``graduate''; labeled as \var{degree}]

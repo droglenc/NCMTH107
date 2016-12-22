@@ -4,7 +4,7 @@ set_parent('IntroStats.Rnw')
 
 \chapter{Foundational Definitions} \label{chap:FoundationalDefinitions}
 \begin{ChapObj}{\boxwidth}
-  \textbf{Chapter Objectives:}
+  \textbf{Objectives:}
   \begin{Enumerate}
     \item Describe what an individual is.
     \item Describe what a population and a sample are and how they differ.
@@ -18,11 +18,11 @@ set_parent('IntroStats.Rnw')
 \minitoc
 \newpage
 
-\lettrine{S}{tatistical inference is the process} of forming conclusions about the unknown parameters of a population by computing statistics from the individuals in a sample.\index{Inference!Definition}  As you can imagine from this definition, it is important that you understand the difference between a population and a sample and a parameter and a statistic before you can understand and appreciate the process of making statistical inferences.  Before identifying these items, the individual and variable(s) of interest must also be identified.  Understanding and identifying these six items is the focus of this Chapter.  Formal methods of inference are discussed beginning with \chapref{chap:ProbIntro}.
+\lettrine{S}{tatistical inference is the process} of forming conclusions about the unknown parameters of a population by computing statistics from the individuals in a sample.\index{Inference!Definition}  As you can imagine from this definition, it is important that you understand the difference between a population and a sample and a parameter and a statistic before you can understand and appreciate the process of making statistical inferences.  Before identifying these items, the individual and variable(s) of interest must also be identified.  Understanding and identifying these six items is the focus of this module.  Formal methods of inference are discussed beginning with \modref{chap:ProbIntro}.
 
 \defn{Inference}{The process of forming conclusions about the unknown parameters of a population by computing statistics from the individuals in a sample.}
 
-The following hypothetical example is used throughout this chapter.  Assume that interest is in determining the mean (or average) length of the 1015 fish in Square Lake \figrefp{fig:SquareLakePopn}. In ``real life'' you would not know how many fish are in this lake.  However, for the purpose of illustrating important concepts in this chapter, it is assumed that all information for all 1015 fish in this lake is known.
+The following hypothetical example is used throughout this module.  Assume that interest is in determining the mean (or average) length of the 1015 fish in Square Lake \figrefp{fig:SquareLakePopn}. In ``real life'' you would not know how many fish are in this lake.  However, for the purpose of illustrating important concepts in this module, it is assumed that all information for all 1015 fish in this lake is known.
 
 <<SquareLakePopn, echo=FALSE, fig.cap="Schematic representation of individual fish (i.e., dots; \\textbf{Left}) and histogram (\\textbf{Right}) of the total length of the 1015 fish in Square Lake.">>=
 data(SquareLakePopn)
@@ -52,7 +52,7 @@ A \textbf{population} is ALL individuals of interest.\index{Population} In the S
 
 \defn{Population}{ALL individuals of interest.}
 
-A \textbf{parameter} is a summary computed from ALL individuals in a population.\index{Parameter!Definition}  The term for the particular summary is usually preceded by the word ``population.''  Parameters are ultimately what is of interest because interest is in all individuals in the population.  However, in practice, parameters cannot be computed because the entire population cannot be ``seen.''  In this hypothetical example, the parameters can be computed because all 1015 fish are accessible.  In this example, the researchers were interested in the population mean length of all fish in Square Lake, which is \Sexpr{round(mean(SL$tl),2)} mm \tabrefp{tab:SquareLakePopn}.\footnote{We will discuss how to compute and interpret each of these values in later chapters.}
+A \textbf{parameter} is a summary computed from ALL individuals in a population.\index{Parameter!Definition}  The term for the particular summary is usually preceded by the word ``population.''  Parameters are ultimately what is of interest because interest is in all individuals in the population.  However, in practice, parameters cannot be computed because the entire population cannot be ``seen.''  In this hypothetical example, the parameters can be computed because all 1015 fish are accessible.  In this example, the researchers were interested in the population mean length of all fish in Square Lake, which is \Sexpr{round(mean(SL$tl),2)} mm \tabrefp{tab:SquareLakePopn}.\footnote{We will discuss how to compute and interpret each of these values in later modules.}
 
 <<SquareLakePopnTbl, results="asis", echo=FALSE >>=
 slstat <- Summarize(SL$tl,digits=2)
@@ -81,7 +81,7 @@ hist(~tl,data=SL1,xlab="Total Length",ylab="Frequency of Fish")
 
 Summaries computed from individuals in a sample are called \textbf{statistics}.\index{Statistic!Definition}  Specific names of statistics are preceded by ``sample.''  The statistic of interest is always the same as the parameter of interest; i.e., the statistic describes the sample in the same way that the parameter describes the population.  For example, if interest is in the population mean, then the sample mean would be computed.
 
-Some statistics computed from the sample from Square Lake are shown in \tabref{tab:SquareLakeSample1} and \figref{fig:SquareLakeSample1}.  The sample mean of \Sexpr{round(mean(SL1$tl),2)} mm is the best ``guess'' at the population mean.  Not surprisingly from the discussion in \chapref{chap:WhyStatsImportant}, the sample mean does not perfectly equal the population mean.
+Some statistics computed from the sample from Square Lake are shown in \tabref{tab:SquareLakeSample1} and \figref{fig:SquareLakeSample1}.  The sample mean of \Sexpr{round(mean(SL1$tl),2)} mm is the best ``guess'' at the population mean.  Not surprisingly from the discussion in \modref{chap:WhyStatsImportant}, the sample mean does not perfectly equal the population mean.
 
 <<SquareLakeSample1s, results="asis", echo=FALSE >>=
 slstat <- Summarize(SL1$tl,digits=2)
@@ -146,7 +146,7 @@ In some situations it may be easier to identifying the sample first.  From this,
 
 
 \subsection{Sampling Variability (Revisited)}
-It is instructive to once again (see \chapref{chap:WhyStatsImportant}) consider how statistics differ among samples.  \tabref{tab:SquareLakeSample234} and \figref{fig:SquareLakeSample234} show results from three more samples of n=50 fish from the Square Lake population.  The means from all four samples (including the sample in \tabref{tab:SquareLakeSample1} and \figref{fig:SquareLakeSample1}) were quite different from the known population mean of 98.06 mm.  Similarly, all four histograms were similar in appearance but were slightly different in actual values. These results illustrate that a statistic (or sample) will only approximate the parameter (or population) and that statistics vary among samples.  This \textbf{sampling variability} is one of the most important concepts in statistics and will be discussed in great detail beginning in \chapref{chap:SamplingDist}.\index{Sampling Variability!Definition}
+It is instructive to once again (see \modref{chap:WhyStatsImportant}) consider how statistics differ among samples.  \tabref{tab:SquareLakeSample234} and \figref{fig:SquareLakeSample234} show results from three more samples of n=50 fish from the Square Lake population.  The means from all four samples (including the sample in \tabref{tab:SquareLakeSample1} and \figref{fig:SquareLakeSample1}) were quite different from the known population mean of 98.06 mm.  Similarly, all four histograms were similar in appearance but were slightly different in actual values. These results illustrate that a statistic (or sample) will only approximate the parameter (or population) and that statistics vary among samples.  This \textbf{sampling variability} is one of the most important concepts in statistics and will be discussed in great detail beginning in \modref{chap:SamplingDist}.\index{Sampling Variability!Definition}
 
 <<SquareLakeSample234, echo=FALSE, fig.width=5, fig.height=7.5, out.width='.7\\linewidth', fig.cap="Schematic representation (\\textbf{Left}) of three samples of 50 fish (i.e., red dots) from Square Lake and histograms (\\textbf{Right}) of the total length of the 50 fish in each sample.">>=
 set.seed(2); SL2 <- SL[sample(SL$i,50),]

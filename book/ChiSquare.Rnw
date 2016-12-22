@@ -5,7 +5,7 @@ set_parent('IntroStats.Rnw')
 \chapter[Chi-Square Tests]{Chi-Square Tests} \label{chap:ChiSquare}
 
 \begin{ChapObj}{\boxwidth}
-  \textbf{Chapter Objectives:}
+  \textbf{Objectives:}
   \begin{Enumerate}
     \item Identify when a chi-square test is appropriate.
     \item Perform the 11 steps of a significance test in a chi-square test situation.
@@ -15,7 +15,7 @@ set_parent('IntroStats.Rnw')
 \minitoc
 \newpage
 
-\lettrine{S}{ituations where a categorical} response variable is recorded would be summarized with a frequency or percentage table (see \sectref{sect:UEDACategorical} and \sectref{sect:BEDACategorical}).  The appropriate test statistic in these situations is a chi-square rather than a t.  The chi-square test statistic follows a chi-square distribution which is introduced below.  The rest of this chapter is dedicated to the general chi-square test where a categorical response is compared between two or more populations. The related goodness-of-fit test for a categorical response recorded for only one population is introduced in \chapref{chap:GOF}.
+\lettrine{S}{ituations where a categorical} response variable is recorded would be summarized with a frequency or percentage table (see Modules \ref{chap:UnivEDACat} and \ref{sect:BivEDACat}).  The appropriate test statistic in these situations is a chi-square rather than a t.  The chi-square test statistic follows a chi-square distribution which is introduced below.  The rest of this module is dedicated to the general chi-square test where a categorical response is compared between two or more populations. The related goodness-of-fit test for a categorical response recorded for only one population is introduced in \modref{chap:GOF}.
 
 \vspace{-12pt}
 \section{Chi-Square Distribution}
@@ -178,7 +178,7 @@ In general, confidence intervals are not constructed in relation to a chi-square
 \warn{Step 11 will not be computed for a chi-square test.}
 
 \subsection{Example -- Christmas Trees}
-The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for the Christmas tree example presented at the beginning of this chapter are as follows:
+The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for the Christmas tree example presented at the beginning of this module are as follows:
   \begin{enumerate}
     \item As stated, $\alpha$ should be set at 0.10.
     \item The $H_{0}$: ``the proportion of households with a natural tree is the same for urban and rural households'' versus $H_{A}$: ``the proportion of households with a natural tree is NOT the same for urban and rural households.''

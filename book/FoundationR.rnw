@@ -4,7 +4,7 @@ set_parent('IntroStats.Rnw')
 
 \chapter{Getting Started with R} \label{chap:FoundationsR}
 \begin{ChapObj}{\boxwidth}
-  \textbf{Chapter Objectives:}
+  \textbf{Objectives:}
   \begin{Enumerate}
     \item Understand the difference between R expressions and assignments.
     \item Understand the different types of data that can be stored in R.
@@ -76,7 +76,7 @@ An object can be named whatever you want, with the exception that it cannot star
 \vspace{-18pt}
 \subsection{Functions and Arguments}  \label{sect:RFunctions}
 \vspace{-12pt}
-R contains many ``programs,'' or functions, to perform particular tasks.  A function is ``called'' by typing the function name followed by open and closed parentheses.  Arguments, which the function will use to perform its task, are contained within the parentheses.  The \R{log()} function, used in the previous section, is an example of a function.  The name of the function is \R{log} and the argument, the number for which to compute the natural log, is contained within the parentheses following the function name.  Many other functions will be described below and in subsequent chapters.
+R contains many ``programs,'' or functions, to perform particular tasks.  A function is ``called'' by typing the function name followed by open and closed parentheses.  Arguments, which the function will use to perform its task, are contained within the parentheses.  The \R{log()} function, used in the previous section, is an example of a function.  The name of the function is \R{log} and the argument, the number for which to compute the natural log, is contained within the parentheses following the function name.  Many other functions will be described below and in subsequent modules.
 
 \defn{Function}{An R program that performs a particular task.}
 
@@ -91,7 +91,7 @@ R contains many ``programs,'' or functions, to perform particular tasks.  A func
 \vspace{-12pt}
 \subsection{Data Types}  \label{sect:RDataTypes}
 \vspace{-12pt}
-Data in R will be designated as an integer (whole numbers), numeric (non-integer numerica values), character (strings), factor (group membershop), or logical (TRUE/FALSE).  The type of data largely dictates the type of analysis that can be performed.  Data types will be discussed in more detail as needed.  Note, however, that the \textbf{factor} data type is a special case of the character data type, where the specific items describe the group to which an individual belongs.  This description allows for certain analyses in later chapters.
+Data in R will be designated as an integer (whole numbers), numeric (non-integer numerica values), character (strings), factor (group membershop), or logical (TRUE/FALSE).  The type of data largely dictates the type of analysis that can be performed.  Data types will be discussed in more detail as needed.  Note, however, that the \textbf{factor} data type is a special case of the character data type, where the specific items describe the group to which an individual belongs.  This description allows for certain analyses in later modules.
 
 \defn{Factor}{A special type of variable that identifies the group to which an individual belongs.}
 
@@ -146,7 +146,7 @@ bears <- read.csv("data/Bears.csv")
 
 \warn{Data stored in an external CSV file is read into R with \R{read.csv()}.}
 
-It is important that each row of the data.frame correspond to one individual.  This is critically important when data are recorded for two different groups (e.g., for a two-sample t-test; see \chapref{chap:tTest2}).  For example, the following data are methyl mercury levels recorded in mussels from two locations labeled as ``impacted'' and ``reference.''
+It is important that each row of the data.frame correspond to one individual.  This is critically important when data are recorded for two different groups (e.g., for a two-sample t-test; see \modref{chap:tTest2}).  For example, the following data are methyl mercury levels recorded in mussels from two locations labeled as ``impacted'' and ``reference.''
 \begin{Verbatim}
   impacted   0.011  0.054  0.056  0.095  0.051  0.077
   reference  0.031  0.040  0.029  0.066  0.018  0.042  0.044

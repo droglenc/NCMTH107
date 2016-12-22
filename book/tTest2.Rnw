@@ -4,7 +4,7 @@ set_parent('IntroStats.Rnw')
 
 \chapter{2-Sample t-Test} \label{chap:tTest2}
 \begin{ChapObj}{\boxwidth}
-  \textbf{Chapter Objectives:}
+  \textbf{Objectives:}
   \begin{Enumerate}
     \item Identify when a 2-Sample t-Test is appropriate.
     \item Describe what a homogeneity of variance test is and why it is required within a 2-Sample t-Test.
@@ -15,7 +15,7 @@ set_parent('IntroStats.Rnw')
 \minitoc
 \newpage
 
-\lettrine{T}{he t distribution} and 1-Sample t-Test for comparing the mean of one population to a specific value were introduced in \chapref{chap:tTest1}. In this chapter, a 2-sample t-Test for comparing the means of two populations is introduced.\index{t Test!2-sample}
+\lettrine{T}{he t distribution} and 1-Sample t-Test for comparing the mean of one population to a specific value were introduced in \modref{chap:tTest1}. In this module, a 2-sample t-Test for comparing the means of two populations is introduced.\index{t Test!2-sample}
 
 While it is often useful to test whether a population mean is equal to a specific value, as was done with the 1-Sample Z-Test and 1-Sample t-Tests, there are many instances where interest is determining whether the means from two populations are equal.  In these situations, one is usually trying to determine if a difference exists between the two population means.  For example, is there a difference in income between males and females, in test scores between students from high- or low-income families, in percent body fat between raccoons from southern and northern Wisconsin, or in amount of milk produced between cows provided with a hormone and cows provided with a placebo.  In all of these situations, two populations are being examined (males and females, students from high- and low-income families, raccoons from southern and northern Wisconsin, cows given a hormone and cows given a placebo) and interests is in determining if a difference in population means exists.  The \textbf{2-sample t-Test} is used to make these determinations and is the subject of this section.
 

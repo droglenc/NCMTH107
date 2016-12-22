@@ -4,7 +4,7 @@ set_parent('IntroStats.Rnw')
 
 \chapter{Data Production} \label{chap:DataProd}
 \begin{ChapObj}{\boxwidth}
-  \textbf{Chapter Objectives:}
+  \textbf{Objectives:}
   \begin{Enumerate}
     \item Identify major differences between data produced from experiments and observational studies.
     \item Understand basic ideas of simple random experiments with one and two factors.
@@ -18,7 +18,7 @@ set_parent('IntroStats.Rnw')
 \minitoc
 \newpage
 
-\lettrine{S}{tatistical inference is the process} of making conclusions about an entire population based on the results from the individuals in a single sample.\index{Inference!Definition}  To make conclusions about the larger population from a sample requires a sample that fairly represents the larger population.  In this chapter, two ways of producing data -- (1) Experiments and (2) Observational Studies -- are described.  The proper collection (or production) of data is critical to statistics (and science in general) so that proper inferences and conclusions can be made.
+\lettrine{S}{tatistical inference is the process} of making conclusions about an entire population based on the results from the individuals in a single sample.\index{Inference!Definition}  To make conclusions about the larger population from a sample requires a sample that fairly represents the larger population.  In this module, two ways of producing data -- (1) Experiments and (2) Observational Studies -- are described.  The proper collection (or production) of data is critical to statistics (and science in general) so that proper inferences and conclusions can be made.
 
 \defn{Inference}{The process of forming conclusions about the unknown parameters of a population by computing statistics from the individuals in a sample.}
 
@@ -61,7 +61,7 @@ The number of replicates in an experiment is the number of individuals that will
 \vspace{-12pt}
 \warn{The number of replicates is determined by dividing the total number of available individuals by the number of treatments.}
 
-The agars used in this experiment will be randomly allocated to the two temperature treatments.  All other variables -- humidity, light, etc. -- are kept the same for each treatment.  At the end of two weeks, the total number of bacterial cells on each agar (i.e., the response variable) will be recorded and compared between the agars kept at both temperatures.\footnote{Methods for making this comparison are in \chapref{chap:tTest2}.}  Any difference in mean number of bacterial cells will be due to either different temperature treatments or randomness, because all other variables were the same between the two treatments.
+The agars used in this experiment will be randomly allocated to the two temperature treatments.  All other variables -- humidity, light, etc. -- are kept the same for each treatment.  At the end of two weeks, the total number of bacterial cells on each agar (i.e., the response variable) will be recorded and compared between the agars kept at both temperatures.\footnote{Methods for making this comparison are in \modref{chap:tTest2}.}  Any difference in mean number of bacterial cells will be due to either different temperature treatments or randomness, because all other variables were the same between the two treatments.
 
 \warn{Differences among treatments are either caused by randomness (chance) or the factor.}
 
@@ -125,7 +125,7 @@ Now reconsider the design where both factors were varied at once (the table belo
 \end{tabular}
 \end{center}
 
-The key to examining the benefits of the multi-factor experiment is to determine the number of individuals that give ``information'' about (i.e., are exposed to) each factor.  From the last table it is seen that all 120 individuals are exposed to one of the temperature levels with 60 individuals exposed to each level.  In contrast, only 30 individuals were exposed to these levels in the single-factor experiment.  In addition, all 120 individuals are exposed to one of the relative humidity levels with 30 individuals exposed to each level.  Again, this is in contrast to the single-factor experiment where only 15 individuals were exposed to these levels.  Thus, the first advantage of multi-factor experiments is that the available individuals are used more efficiently.  In other words, more ``information'' (i.e., the responses of more individuals) is obtained from a multi-factor experiment than from combinations of single-factor experiments.\footnote{The real importance of this advantage will become apparent when statistical power is introduced in \chapref{chap:HypothesisTests}.}
+The key to examining the benefits of the multi-factor experiment is to determine the number of individuals that give ``information'' about (i.e., are exposed to) each factor.  From the last table it is seen that all 120 individuals are exposed to one of the temperature levels with 60 individuals exposed to each level.  In contrast, only 30 individuals were exposed to these levels in the single-factor experiment.  In addition, all 120 individuals are exposed to one of the relative humidity levels with 30 individuals exposed to each level.  Again, this is in contrast to the single-factor experiment where only 15 individuals were exposed to these levels.  Thus, the first advantage of multi-factor experiments is that the available individuals are used more efficiently.  In other words, more ``information'' (i.e., the responses of more individuals) is obtained from a multi-factor experiment than from combinations of single-factor experiments.\footnote{The real importance of this advantage will become apparent when statistical power is introduced in \modref{chap:HypothesisTests}.}
 
 \warn{Multi-factor experiments use individuals more efficiently; i.e., more ``information'' about the effect of the factors on the response is gained from the same number of individuals.}
 
@@ -356,7 +356,7 @@ Polls, campaign or otherwise, are examples of observational studies that you are
 \vspace{-12pt}
 \subsection{Of What Value are Observational Studies?}
 \vspace{-12pt}
-In this chapter it became apparent that properly designed experiments can lead to ``cause-and-effect'' statements, whereas observational studies (even properly designed) are unlikely to lead to such statements.  Furthermore, in the last section, it was suggested that it is very difficult to take a proper probability-based sample because it is hard to assign a number to each individual in the population (precisely because entire populations are very difficult to ``see'').  So, do observational studies have any value?  There are at least three reasons why observational studies are useful.
+In this module it became apparent that properly designed experiments can lead to ``cause-and-effect'' statements, whereas observational studies (even properly designed) are unlikely to lead to such statements.  Furthermore, in the last section, it was suggested that it is very difficult to take a proper probability-based sample because it is hard to assign a number to each individual in the population (precisely because entire populations are very difficult to ``see'').  So, do observational studies have any value?  There are at least three reasons why observational studies are useful.
 
 The scientific method begins with a scientist making an observation about a natural phenomenon.  Observational studies may serve to provide such an observation.  Alternatively, observational studies may be deployed after an observation has been made to see if that observation is ``prevalent'' and worthy of further investigation.  Thus, observational studies may lead directly to hypotheses that form the basis of experiments.
 

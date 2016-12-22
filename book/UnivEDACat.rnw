@@ -4,7 +4,7 @@ set_parent('IntroStats.Rnw')
 
 \chapter{Univariate EDA - Categorical} \label{chap:UnivEDACat}
 \begin{ChapObj}{\boxwidth}
-  \textbf{Chapter Objectives:}
+  \textbf{Objectives:}
   \begin{Enumerate}
     \item Construct frequency and percentage tables with categorical data.
     \item Construct bar-charts with categorical data, and
@@ -15,7 +15,7 @@ set_parent('IntroStats.Rnw')
 \minitoc
 \vspace{24pt}
 
-\lettrine{I}{nterpreting summaries of a} single categorical variable is more intuitive and less defined than that for quantitative data.\index{EDA!Univariate!Categorical}  Specifically, one DOES NOT describe shape, center, dispersion, and outliers for categorical data.  In this chapter, methods to construct tables and graphs for categorical data are described and the interpretation of the results demonstrated.  These concepts are illustrated with data recorded about MTH107 students in the Winter 2010 semester.  Whether or not a student was required to take the course for a subset of individuals is shown in \tabref{tab:MTH107Subset}.
+\lettrine{I}{nterpreting summaries of a} single categorical variable is more intuitive and less defined than that for quantitative data.\index{EDA!Univariate!Categorical}  Specifically, one DOES NOT describe shape, center, dispersion, and outliers for categorical data.  In this module, methods to construct tables and graphs for categorical data are described and the interpretation of the results demonstrated.  These concepts are illustrated with data recorded about MTH107 students in the Winter 2010 semester.  Whether or not a student was required to take the course for a subset of individuals is shown in \tabref{tab:MTH107Subset}.
 
 \begin{table}[htbp]
   \caption{Whether (Y) or not (N) MTH107 was required for eight individuals in MTH107 in Winter 2010.}
@@ -46,7 +46,7 @@ Required  Freq
 \vspace{-12pt}
 \warn{Frequency tables show the number of individuals in each category of a categorical variable.}
 
-The remainder of this chapter will use the results from the entire class rather than the subset used above.  For example, the frequency tables of individuals by sex and year-in-school for the entire class is in \tabref{tab:Mth107Freq}.
+The remainder of this module will use the results from the entire class rather than the subset used above.  For example, the frequency tables of individuals by sex and year-in-school for the entire class is in \tabref{tab:Mth107Freq}.
 
 \begin{table}[htbp]
   \caption{Frequency tables for whether (Y) or not (N) MTH107 was required (Left) and year-in-school (Right) for all individuals in MTH107 in Winter 2010.}

@@ -5,7 +5,7 @@ set_parent('IntroStats.Rnw')
 \chapter[Goodness-of-Fit]{Goodness-of-Fit Test} \label{chap:GOF}
 
 \begin{ChapObj}{\boxwidth}
-  \textbf{Chapter Objectives:}
+  \textbf{Objectives:}
   \begin{Enumerate}
     \item Identify when a goodness-of-fit test is appropriate.
     \item Perform the 11 steps of a significance test in a goodness-of-fit test situation.
@@ -15,7 +15,7 @@ set_parent('IntroStats.Rnw')
 \minitoc
 \newpage
 
-\lettrine{T}{he chi-square distribution} and the general chi-square test for a categorical response wit two or more populations were introduced in \chapref{chap:ChiSquare}. The goodness-of-fit for a categorical response recorded for one population and compared to a theoretical distribution is focus of this chapter.
+\lettrine{T}{he chi-square distribution} and the general chi-square test for a categorical response wit two or more populations were introduced in \modref{chap:ChiSquare}. The goodness-of-fit for a categorical response recorded for one population and compared to a theoretical distribution is focus of this module.
 
 \section{Goodness-of-Fit Test Specifics}
 It is a common question to determine if the frequency of individuals in the various levels of a categorical variable follow frequencies suggested by a particular distribution.  The simplest of these situations occurs when a researcher is making a hypothesis about the percentage or proportion of individuals in one of two categories.  The ``distribution'' of individuals in two categories comes from the proportion in the hypothesis for one group and one minus the proportion in the hypothesis for the other group.  In situations with more than two levels, the ``distribution'' of individuals into the categories likely comes from the hypothesis that a particular theoretical distribution holds true.  For example, a researcher may want to determine if frequencies predicted from a certain genetic theory are upheld by the observed frequencies found in a breeding experiment, if the frequency that a certain animal uses various habitats is in proportion to the availability of those habitats, or if the frequency of consumers that show a preference for a certain product (over other comparable products) is non-random.
@@ -182,7 +182,7 @@ The sample proportion opposing the \$1 coin is $\frac{54}{80}$=$0.68125$ with a 
 
 \newpage
 \begin{exsection}
-  \item \label{revex:ChiGOFShrike} In the same study used in the example of this chapter, \cite{BohallWood1987} more closely examined the habitat use of the shrikes observed in the open habitat by looking at four ``sub-habitats'' within these areas.  Of the 1456 shrike observations in this habitat, 149 were in ``settled'' areas, 944 were in improved pastures, 192 were in overgrown pastures, and 171 were in crop fields.  In addition, 20.5\% of this habitat was considered to be ``settled'', 58.6\% was improved pasture, 10.3\% was overgrown pasture, and 10.6\% was crop fields.    Use these results to determine, at the 5\% level, if shrikes found in open areas use the sub-habitats in proportion to their availability. \ansref{ans:ChiGOFShrike}
+  \item \label{revex:ChiGOFShrike} In the same study used in the example of this module, \cite{BohallWood1987} more closely examined the habitat use of the shrikes observed in the open habitat by looking at four ``sub-habitats'' within these areas.  Of the 1456 shrike observations in this habitat, 149 were in ``settled'' areas, 944 were in improved pastures, 192 were in overgrown pastures, and 171 were in crop fields.  In addition, 20.5\% of this habitat was considered to be ``settled'', 58.6\% was improved pasture, 10.3\% was overgrown pasture, and 10.6\% was crop fields.    Use these results to determine, at the 5\% level, if shrikes found in open areas use the sub-habitats in proportion to their availability. \ansref{ans:ChiGOFShrike}
 
   \item \label{revex:ChiGOFClinton} Between June 11 and 15, 1993, the Times Mirror Center for People and the Press interviewed 1006 adults concerning their views on media treatment of the then newly inaugurated President Clinton.  They found 433 of those sampled felt that news organizations were ``criticizing Clinton unfairly.''  Test the hypothesis (with $\alpha=0.10$) that more than 45\% of all adults feel that Clinton has been criticized unfairly. \ansref{ans:ChiGOFClinton}
 
