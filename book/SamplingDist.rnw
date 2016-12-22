@@ -23,13 +23,13 @@ set_parent('IntroStats.Rnw')
 \minitoc
 \newpage
 
-\lettrine{S}{tatistical inference is the process} of making a conclusion about the parameter of a population based on the statistic computed from a sample.\index{Inference!Definition}  This process is made more difficult by the fact that a statistic is a random variable; i.e., the exact value of the statistic depends on the individuals in the sample from which it was computed.  For example, recall from \sectref{sect:IVPPSS} that the mean length of fish differed among the four samples of fish that were ``taken'' from Square Lake.  Thus, to be able to make conclusions about the population from the sample, the distribution of the statistic computed from all possible samples must be understood.  In other words, to adequately take sampling variability into account in making inferences, the shape, center, and dispersion of the statistic as if all possible samples had been taken must be understood.\footnote{See \sectref{sect:WhyStats} for a review of sampling variability.}  In this chapter, the distribution of statistics from all possible samples is explored and generalizations used to make inferences are identified.  In subsequent chapters, this information along with results from a single sample, will be used to make specific inferences about the population.
+\lettrine{S}{tatistical inference is the process} of making a conclusion about the parameter of a population based on the statistic computed from a sample.\index{Inference!Definition}  This process is difficult becauses statistics are random variables (i.e., the exact value of the statistic depends on the individuals in the sample from which it was computed).  For example, recall from \sectref{sect:IVPPSS} that the mean length of fish differed among the four samples of fish ``taken'' from Square Lake.  Thus, to make conclusions about the population from the sample, the distribution of the statistic computed from all possible samples must be understood.  In other words, to adequately consider sampling variability when making inferences, the shape, center, and dispersion of the statistic among samples must be understood.\footnote{See \chapref{chap:WhyStatsImportant} for a review of sampling variability.}  In this chapter, the distribution of statistics from all possible samples is explored and generalizations used to make inferences are identified.  In subsequent chapters, this information along with results from a single sample, will be used to make specific inferences about the population.
 
 \warn{Making statistical inferences requires a consideration of sampling variability.}
 
 
 \section{Definition and Characteristics}  \label{sec:SDistDefn}
-A \textbf{Sampling distribution} is the distribution of the values of a particular statistic computed from all possible samples of the same size from the same population.\index{Sampling Distribution!Definition}  It is important to note, though, that only one sample is ever taken from a population.  However, this discussion of sampling distributions and all subsequent theories related to statistical inference are based on repeated samplings from the same population.  As these theories are developed, we will consider taking multiple samples; however, after the theories have been developed, then only one sample will be taken with the theory then being applied to those results.
+A \textbf{Sampling distribution} is the distribution of the values of a particular statistic computed from all possible samples of the same size from the same population.\index{Sampling Distribution!Definition} The discussion of sampling distributions and all subsequent theories related to statistical inference are based on repeated samples from the same population.  As these theories are developed, we will consider taking multiple samples; however, after the theories have been developed, then only one sample will be taken with the theory then being applied to those results. Thus, it is important to note that only one sample is ever actually taken from a population.
 
 \defn{Sampling Distribution}{The distribution of the values of a particular statistic computed from all possible samples of the same size from the same population.}
 
@@ -37,7 +37,7 @@ A \textbf{Sampling distribution} is the distribution of the values of a particul
 scores <- c(6,6,4,5,7,8)
 @
 
-Sampling distributions are integral to making statistical inferences about parameters in a population but can really only be computed for very small populations.  Thus, to illustrate the concept of a sampling distribution, consider a population of six students that have scored \Sexpr{paste(scores[1:5],collapse=", ")} and \Sexpr{scores[6]} points, respectively, on an 8-point quiz.  The mean of this population is $\mu=$ \Sexpr{formatC(mean(scores),format="f",digits=3)} points and the standard deviation is $\sigma=$ \Sexpr{formatC(sd(scores),format="f",digits=3)} points.  Suppose that every sample of size $n=2$ is extracted from this population and the sample mean is computed for each sample \tabrefp{tab:SDistQuiz2}.\footnote{These samples are found by putting the values into a vector with \R{vals <- c(6,6,4,5,7,8)} and then using \R{combn(vals,2)}.  The means are found with \R{mns <- as.numeric(combn(vals,2,mean))}.}  The histogram of these 15 means is the sampling distribution of the sample mean from samples of $n=2$ from this population \figrefp{fig:SDistQuiz2}.\footnote{The histogram is constructed with \R{hist(\TILDE mns,w=0.5)}.}
+Actual sampling distributions can only be computed for very small populations.\footnote{See \sectref{sect:SDSimulate} for how sampling distributions for larger populations are simulated.}  Thus, to illustrate the concept of a sampling distribution, consider a population of six students that have scored \Sexpr{paste(scores[1:5],collapse=", ")} and \Sexpr{scores[6]} points, respectively, on an 8-point quiz.  The mean of this population is $\mu=$ \Sexpr{formatC(mean(scores),format="f",digits=3)} points and the standard deviation is $\sigma=$ \Sexpr{formatC(sd(scores),format="f",digits=3)} points.  Suppose that every sample of size $n=2$ is extracted from this population and the sample mean is computed for each sample \tabrefp{tab:SDistQuiz2}.\footnote{These samples are found by putting the values into a vector with \R{vals <- c(6,6,4,5,7,8)} and then using \R{combn(vals,2)}.  The means are found with \R{mns <- as.numeric(combn(vals,2,mean))}.}  The histogram of these 15 means is the sampling distribution of the sample mean from samples of $n=2$ from this population \figrefp{fig:SDistQuiz2}.\footnote{The histogram is constructed with \R{hist(\TILDE mns,w=0.5)}.}
 
 \begin{table}[htbp]
   \caption{All possible samples of $n=2$ and the corresponding sample mean from the simple population of quiz scores.}
@@ -59,20 +59,21 @@ mns2 <- as.numeric(combn(scores,2,mean))
 hist(~mns2,xlab="Sample Mean",ylab="Frequency of Samples",w=0.5,xlim=c(4.5,8))
 @
 
-The mean and standard deviation of the 15 sample means are measures of center and dispersion for the sampling distribution.  The mean and standard deviation of the 15 sample means are \Sexpr{formatC(mean(mns2),format="f",digits=3)} and \Sexpr{formatC(sd(mns2),format="f",digits=3)}, respectively.  The standard deviation of the statistics (i.e., the dispersion of the sampling distribution) is generally referred to as the \textbf{standard error of the statistic} (abbreviated as $SE_{stat}$).\index{Sampling Distribution!Dispersion}\index{Sampling Variability!Measure}\index{Standard Error!Definition}  This new terminology is used to help keep the dispersion of the sampling distribution separate from the dispersion of the individuals in the population, which is measured by the standard deviation.  Thus, the standard deviation of all possible sample means is generally referred to as the standard error of the sample means, or SE.  The SE in this example is thus \Sexpr{formatC(sd(mns2),format="f",digits=3)}.
+\vspace{24pt}
+The mean and standard deviation of the 15 sample means are measures of center and dispersion for the sampling distribution.  The mean and standard deviation of the 15 sample means are \Sexpr{formatC(mean(mns2),format="f",digits=3)} and \Sexpr{formatC(sd(mns2),format="f",digits=3)}, respectively.  The standard deviation of the statistics (i.e., the dispersion of the sampling distribution) is generally referred to as the \textbf{standard error of the statistic} (abbreviated as $SE_{stat}$).\index{Sampling Distribution!Dispersion}\index{Sampling Variability!Measure}\index{Standard Error!Definition}  This new terminology is used to help keep the dispersion of the sampling distribution separate from the dispersion of the individuals in the population, which is measured by the standard deviation.  Thus, the standard deviation of all possible sample means is generally referred to as the standard error of the sample means, or SE.  Thus, the SE in this example is \Sexpr{formatC(sd(mns2),format="f",digits=3)}.
 
 \defn{Standard Error}{The numerical measure of dispersion used for sampling distributions -- i.e., measures the dispersion among statistics from all possible samples.}
 
-This simple example illustrates three major concepts concerning sampling distributions.  First, the sampling distribution of the statistic will more closely resemble a normal distribution than the original population distribution (unless, of course, the population distribution was a normal distribution).\index{Sampling Distribution!Shape}
+This simple example illustrates three major concepts concerning sampling distributions.  First, the sampling distribution of the statistic will more closely resemble a normal distribution than the original population distribution (unless, of course, the population distribution was normal).\index{Sampling Distribution!Shape}
 
-Second, the center (i.e., mean) of the sampling distribution of a statistic will equal the parameter that the statistic was intended to estimate (e.g., a sample mean is intended to be an estimate of the population mean).\index{Sampling Distribution!Center} In this example, it is seen that the mean of all possible sample means from this population (= \Sexpr{formatC(mean(mns2),format="f",digits=1)} points) is equal to the mean of the original population ($\mu=$ \Sexpr{formatC(mean(scores),format="f",digits=1)} points).  A statistic is said to be \textbf{unbiased} if the center (mean) of its sampling distribution equals the parameter it was intended to estimate.\index{Unbiased}  This example illustrates that the sample mean is an unbiased estimator of the population mean.
+Second, the center (i.e., mean) of the sampling distribution of a statistic will equal the parameter that the statistic was intended to estimate (e.g., a sample mean is intended to be an estimate of the population mean).\index{Sampling Distribution!Center} In this example, the mean of all possible sample means (= \Sexpr{formatC(mean(mns2),format="f",digits=1)} points) is equal to the mean of the original population ($\mu=$ \Sexpr{formatC(mean(scores),format="f",digits=1)} points).  A statistic is said to be \textbf{unbiased} if the center (mean) of its sampling distribution equals the parameter it was intended to estimate.\index{Unbiased}  This example illustrates that the sample mean is an unbiased estimator of the population mean.
 
 \defn{Unbiased Statistic}{A statistic in which the center of its sampling distribution equals the parameter it is intended to estimate.}
 
 \vspace{-12pt}
-\warn{Most statistics encountered in this book are unbiased.}
+\warn{All statistics in this course are unbiased.}
 
-Third, the standard error of the statistic will be less than the standard deviation of the original population.\index{Sampling Distribution!Dispersion}  In other words, the dispersion of statistics is less than the dispersion of individuals in the population.  For example, the dispersion of individuals in the population is $\sigma=$ \Sexpr{formatC(sd(scores),format="f",digits=3)} points whereas the dispersion of statistics from all possible samples is $SE_{\bar{x}}=$ \Sexpr{formatC(sd(mns2),format="f",digits=3)} points.
+Third, the standard error of the statistic is less than the standard deviation of the original population.\index{Sampling Distribution!Dispersion}  In other words, the dispersion of statistics is less than the dispersion of individuals in the population.  For example, the dispersion of individuals in the population is $\sigma=$ \Sexpr{formatC(sd(scores),format="f",digits=3)} points, whereas the dispersion of statistics from all possible samples is $SE_{\bar{x}}=$ \Sexpr{formatC(sd(mns2),format="f",digits=3)} points.
 
 \warn{The sampling distribution will be more normal than the original population distribution.}
 
@@ -102,10 +103,12 @@ Third, the standard error of the statistic will be less than the standard deviat
 \end{exsection}
 
 
+\vspace{-18pt}
 \subsection{Critical Distinction}
-There are generally three distributions that are considered in statistical analyses.\index{Distribution, Distinguishing}  In this chapter, the sampling distribution or the distribution of a statistic computed from all possible samples of the same size from the same population was introduced.\index{Sampling Distribution!Definition}  The key words in this definition are ``distribution of a statistic.''  In addition, the population distribution, which is the distribution of all individuals in a population, was introduced in \chapref{chap:NormDist}.\index{Population Distribution!Definition}  The key words in this definition are ``distribution of individuals.''  The last distribution used in statistics is the sample distribution which is the distribution of all individuals in a sample.  This is also a distribution of individuals but only of those in a sample.\index{Sample Distribution!Definition}  The histograms of \chapref{chap:UnivEDA} were examples of sample distributions.  As we continue to introduced inferential statistics, it is critically important that you distinguish between the population and sampling distributions.  Always keep in mind that one (population) is the distribution of individuals and the other (sampling) is the distribution of statistics.
+\vspace{-12pt}
+Three distributions are considered in statisticals.\index{Distribution, Distinguishing}  The sampling distribution is the distribution of a statistic computed from all possible samples of the same size from the same population.\index{Sampling Distribution!Definition}, the population distribution is the distribution of all individuals in a population (see \chapref{chap:NormDist}),\index{Population Distribution!Definition} and the sample distribution is the distribution of all individuals in a sample (see histograms in \chapref{chap:UnivEDAQuant}).\index{Sample Distribution!Definition}  The sampling distribution is about \textbf{statistics}, whereas the population and sample distributions are about \textbf{individuals}. For inferential statistics, it is important to distinguish between the population and sampling distributions. Keep in mind that one (population) is the distribution of individuals and the other (sampling) is the distribution of statistics.
 
-Just as importantly, you must remember that a standard error measures the dispersion among statistics (i.e., sampling variability) whereas a standard deviation measures dispersion among individuals (i.e., natural variability).\index{Standard Error!Measure of}\index{Standard Deviation!Measure of}\index{Natural Variability!Measure}\index{Sampling Variability!Measure}  Specifically, the population standard deviation measures dispersion among all individuals in the population and the sample standard deviation measures the dispersion of all individuals in a sample.  In contrast, the standard error measures the dispersion among statistics computed from all possible samples.  The population standard deviation is the dispersion on a population distribution whereas the standard error is the dispersion on a sampling distribution.
+Just as importantly, remember that a standard error measures the dispersion among statistics (i.e., sampling variability), whereas a standard deviation measures dispersion among individuals (i.e., natural variability).\index{Standard Error!Measure of}\index{Standard Deviation!Measure of}\index{Natural Variability!Measure}\index{Sampling Variability!Measure}  Specifically, the population standard deviation measures dispersion among all individuals in the population and the sample standard deviation measures the dispersion of all individuals in a sample.  In contrast, the standard error measures the dispersion among statistics computed from all possible samples.  The population standard deviation is the dispersion on a population distribution, whereas the standard error is the dispersion on a sampling distribution.
 
 \warn{Sampling distributions represent the distribution of statistics from all possible samples, whereas population distributions represent the distribution of all individuals in a population.}
 
@@ -117,22 +120,24 @@ Just as importantly, you must remember that a standard error measures the disper
 
 
 \begin{exsection}
-  \item \label{revex:SamplingDistBS} What type of distribution is the distribution of blood serum level for every individual in a population? \ansref{ans:SamplingDistBS}
-  \item \label{revex:SamplingDistCL} What type of distribution is the distribution of mean cholesterol level computed from all possible samples of $n=15$ patients for a clinic?  \ansref{ans:SamplingDistCL}
-  \item \label{revex:SamplingDistWD1} What type of distribution is the distribution of water discharge amounts for Bay City Creek for every day in 2005 assuming that all days in 2005 was the population of interest? \ansref{ans:SamplingDistWD1}
-  \item \label{revex:SamplingDistWD2} What type of distribution is the distribution of water discharge amounts for Bay City Creek for every day in 2005 if the population of interest is all days in the 21st century? \ansref{ans:SamplingDistWD2}
+  \item \label{revex:SamplingDistBS} What type of distribution is blood serum level for every individual in a population? \ansref{ans:SamplingDistBS}
+  \item \label{revex:SamplingDistCL} What type of distribution is mean cholesterol level computed from all possible samples of $n=15$ patients for a clinic?  \ansref{ans:SamplingDistCL}
+  \item \label{revex:SamplingDistWD1} What type of distribution is water discharge amounts for Bay City Creek for every day in 2005 assuming that all days in 2005 was the population of interest? \ansref{ans:SamplingDistWD1}
+  \item \label{revex:SamplingDistWD2} What type of distribution is water discharge amounts for Bay City Creek for every day in 2005 if the population of interest is all days in the 21st century? \ansref{ans:SamplingDistWD2}
   \item \label{revex:SamplingDistWD3} What type of distribution is the proportion of days where the water discharge from Bay City Creek is near negligible calculated from all samples of $n=30$ days. \ansref{ans:SamplingDistWD3}
   \item \label{revex:SamplingDistC} On average, the mean length of $n=30$ cicadas is 2.9 mm away from the overall average.  Is this a standard deviation or a standard error? \ansref{ans:SamplingDistC}
   \item \label{revex:SamplingDistET} On average, the number of litter items found along the Escarpment Trail in the Porcupine Mountains on a single day is 12 items different than the overall mean.  Is this a standard deviation or a standard error? \ansref{ans:SamplingDistET}
 \end{exsection}
 
 
+\vspace{-18pt}
 \subsection{Dependencies}
+\vspace{-12pt}
 <<echo=FALSE, results='hide'>>=
 mns3 <- as.numeric(combn(scores,3,mean))
 @
 
-The sampling distribution of sample means from samples of $n=2$ from the population of quizzes was shown above.  The sampling distribution will look different if means from any other sample size are computed instead.  For example, the samples and means from each sample of $n=3$ is shown in \tabref{tab:SDistQuiz3}.  The mean of these means is \Sexpr{formatC(mean(mns3),format="f",digits=3)}, the standard error is \Sexpr{formatC(sd(mns3),format="f",digits=3)}, and the sampling distribution is symmetric, perhaps approximately normal \figrefp{fig:SDistQuiz3}.  The three major characteristics of sampling distributions noted in \sectref{sec:SDistDefn} are still true: the sampling distribution is still more normal than the original population, the sample mean is still unbiased (i.e, the mean of the means is equal to $\mu$), and the standard error is smaller than the standard deviation of the original population.  However, also take note that the standard error of the sample mean is smaller from samples of $n=3$ than from $n=2$.\footnote{One should also look at the results from $n=4$ in Review Exercise \ref{revex:SamplingDistn3}.}
+The sampling distribution of sample means from samples of $n=2$ from the population of quizzes was shown above.  The sampling distribution will look different if any other sample size is used.  For example, the samples and means from each sample of $n=3$ are shown in \tabref{tab:SDistQuiz3}.  The mean of these means is \Sexpr{formatC(mean(mns3),format="f",digits=3)}, the standard error is \Sexpr{formatC(sd(mns3),format="f",digits=3)}, and the sampling distribution is symmetric, perhaps approximately normal \figrefp{fig:SDistQuiz3}.  The three major characteristics of sampling distributions noted in \sectref{sec:SDistDefn} are still true: the sampling distribution is still more normal than the original population, the sample mean is still unbiased (i.e, the mean of the means is equal to $\mu$), and the standard error is smaller than the standard deviation of the original population.  However, also take note that the standard error of the sample mean is smaller from samples of $n=3$ than from $n=2$.\footnote{One should also look at the results from $n=4$ in Review Exercise \ref{revex:SamplingDistn3}.}
 
 \begin{table}[htbp]
   \caption{All possible samples of $n=3$ and the corresponding sample means from the simple population of quiz scores.}
@@ -184,7 +189,7 @@ hist(~mdn3,ylab="Frequency of Samples",xlab="Sample Median",w=1,xlim=c(5,8))
 
 \warn{Sampling distributions for different statistics are different.}
 
-These examples bring up another important point.  You must be very specific when naming a sampling distribution.  For example, the first sampling distribution in this chapter should be described as the ``sampling distribution of sample means from samples of size n=2.''  This last example should be described as the ``sampling distribution of sample medians from samples of size n=3.''  Doing this with each distribution will reinforce the point that sampling distributions depend on the sample size and the statistic calculated.
+These examples demonstrate that the naming of a sampling distribution must be specific.  For example, the first sampling distribution in this chapter should be described as the ``sampling distribution of sample means from samples of n=2.''  This last example should be described as the ``sampling distribution of sample medians from samples of n=3.''  Doing this with each distribution reinforces the point that sampling distributions depend on the sample size and the statistic calculated.
 
 \warn{Each sampling distribution should be specifically labeled with the statistic calculated and the sample size of the samples.}
 
@@ -192,13 +197,13 @@ These examples bring up another important point.  You must be very specific when
 \vspace{-12pt}
 \section{Simulating}  \label{sect:SDSimulate}
 \vspace{-12pt}
-In \sectref{sec:SDistDefn}, exact sampling distribution for statistics computed from very small samples taken from a small population were shown.\index{Sampling Distribution!Simulation}  Exact sampling distributions are very difficult to show for even moderate sample sizes from moderately-sized populations.  For example, there are \Sexpr{formatC(choose(20,5),format="f",digits=0)} unique samples of $n=5$ from a population of 20 individuals.  How are sampling distributions examined in these larger cases?
+In \sectref{sec:SDistDefn}, exact sampling distribution were computed for very small samples taken from a small population.\index{Sampling Distribution!Simulation}  Exact sampling distributions are difficult to show for even moderate sample sizes from moderately-sized populations.  For example, there are \Sexpr{formatC(choose(20,5),format="f",digits=0)} unique samples of $n=5$ from a population of 20 individuals.  How are sampling distributions examined in these larger cases?
 
-There are two ways to examine sampling distributions in situations with large sample and large population sizes.  First, the computer can take many (hundreds or thousands) samples and compute the statistic for each.  These statistics can then be summarized to give an indication of what the actual sampling distribution would look like.  This process is called ``simulating a sampling distribution'' and is the subject of this section.  Second, theorems exist that describe the specifics of sampling distributions under certain conditions.  One such theorem is described in \sectref{sect:CLT}.  These theorems will be relied upon in subsequent chapters.
+There are two ways to examine sampling distributions in situations with large sample and population sizes.  First, the computer can take many (hundreds or thousands) samples and compute the statistic for each.  These statistics can then be summarized to give an indication of what the actual sampling distribution would look like.  This process is called ``simulating a sampling distribution'' and is the subject of this section.  Second, theorems exist that describe the specifics of sampling distributions under certain conditions.  One such theorem is described in \sectref{sect:CLT}.  These theorems will be relied upon in subsequent chapters.
 
 \warn{The approximate shape of sampling distributions from large samples or large populations can be obtained from (1) theorems or (2) computer simulations.}
 
-Sampling distributions are simulated by drawing many (hundreds or thousands) samples from a population, computing the statistic of interest for each sample, and constructing a histogram of these statistics \figrefp{fig:SamplingDistributionScheme}.  The computer is very helpful with this simulation; however, keep in mind that the computer is basically following the same process as used in \sectref{sec:SDistDefn} with the exception that not every sample is viewed.
+Sampling distributions are simulated by drawing many samples from a population, computing the statistic of interest for each sample, and constructing a histogram of these statistics \figrefp{fig:SamplingDistributionScheme}.  The computer is helpful with this simulation; however, keep in mind that the computer is basically following the same process as used in \sectref{sec:SDistDefn}, with the exception that not every sample is taken.
 
 \begin{figure}[htbp]
   \centering
@@ -222,7 +227,7 @@ colnames(sums.avg50)[1] <- "Means"
 textplot(round(sums.avg50,2),cex=0.75)
 @
 
-As with the actual sampling distributions discussed previously, three characteristics (shape, center, and dispersion) are examined with simulated sampling distributions.  First, this sampling distribution looks at least approximately normally distributed.  Second, the mean of the 1000 means in the sampling distribution (=\Sexpr{formatC(sums.avg50["mean",],format="f",digits=2)}) is approximately equal to the mean of the original 1015 fish in Square Lake (=\Sexpr{formatC(mean(SquareLakePopn$tl),format="f",digits=2)}).  These two values are not exactly the same because the simulated sampling distribution was constructed from only a ``few'' samples rather than all possible samples.  If all possible samples had been taken, then these values would be exactly equal, as was shown in \sectref{sec:SDistDefn}.  Third, the standard error of the sample means (=\Sexpr{formatC(sums.avg50["sd",],format="f",digits=2)}) is much less than the standard deviation of individuals in the original population (=\Sexpr{formatC(sd(SquareLakePopn$tl),format="f",digits=2)}).  So, within reasonable approximation, the concepts identified with actual sampling distributions also appear to hold for simulated sampling distributions.
+As with the actual sampling distributions discussed previously, three characteristics (shape, center, and dispersion) are examined with simulated sampling distributions.  First, this sampling distribution looks at least approximately normally distributed.  Second, the mean of the 1000 means in the sampling distribution (=\Sexpr{formatC(sums.avg50["mean",],format="f",digits=2)}) is approximately equal to the mean of the original 1015 fish in Square Lake (=\Sexpr{formatC(mean(SquareLakePopn$tl),format="f",digits=2)}).  These two values are not exactly the same because the simulated sampling distribution was constructed from only a ``few'' samples rather than all possible samples.  Third, the standard error of the sample means (=\Sexpr{formatC(sums.avg50["sd",],format="f",digits=2)}) is much less than the standard deviation of individuals in the original population (=\Sexpr{formatC(sd(SquareLakePopn$tl),format="f",digits=2)}).  So, within reasonable approximation, the concepts identified with actual sampling distributions also appear to hold for simulated sampling distributions.
 
 As before, computing a different statistic on each sample results in a different sampling distribution.  This is illustrated by comparing the sampling distributions of a variety of statistics from the same 1000 samples of size n=50 taken above \figrefp{fig:SampDistSLOther50}.
 
@@ -253,57 +258,61 @@ colnames(sums.rng50)[1] <- "Ranges"
 rownames(sums.rng50)[5] <- "Parameter"
 textplot(round(sums.rng50,2),cex=text.cex)
 @
+\vspace{12pt}  %because knitr gobbled it up.
 
-Simulating a sampling distribution by taking many samples of the same size from a population is powerful for two reasons.  First, it reinforces the ideas of sampling variability -- i.e., each sample results in a slightly different statistic.  Second, the entire concept of inferential statistics is based on theoretical sampling distributions.  Simulating sampling distributions will allow us to check this theory and better visualize the theoretical concepts.  From this chapter forward, though, you must remember that we will simulate sampling distributions mainly as a check of theoretical concepts.  In real life, only one sample is taken from the population and the theory is used to identify the specifics of the sampling distribution.
+Simulating a sampling distribution by taking many samples of the same size from a population is powerful for two reasons.  First, it reinforces the ideas of sampling variability -- i.e., each sample results in a slightly different statistic.  Second, the entire concept of inferential statistics is based on theoretical sampling distributions.  Simulating sampling distributions will allow us to check this theory and better visualize the theoretical concepts.  From this chapter forward, though, remember that sampling distributions are simulated primarily as a check of theoretical concepts.  In real-life, only one sample is taken from the population and the theory is used to identify the specifics of the sampling distribution.
 
-\warn{Simulating sampling distributions is a powerful tool for checking the theory concerning sampling distributions; however, in ``real-life'' only one sample from the population is needed.}
-
-
-\section{Accuracy and Precision}
-\vspace{-12pt}
-\textbf{Accuracy} and \textbf{precision} are often used to describe characteristics of a sampling distribution.  Accuracy refers to how closely a statistic estimates the intended parameter.  If, \textbf{on average}, a statistic is approximately equal to the parameter it was intended to estimate, then the statistic is considered \textbf{accurate}.\index{Accuracy}  Unbiased statistics are also accurate statistics.\index{Unbiased}  Precision refers to the repeatability of a statistic.\index{Precision}  A statistic is considered to be \textbf{precise} if multiple samples produce ``nearly alike'' statistics.  The standard error of a statistic is a measure of precision; i.e., a high SE means low precision and a low SE means high precision.\index{Standard Error!Measure of}
-
-The concepts of accuracy and precision are illustrated in \figref{fig:AccPrec}.  The targets in \figref{fig:AccPrec} provide an intuitive interpretation of accuracy and precision, whereas the sampling distributions (i.e., histograms) are what statisticians look at to identify accuracy and precision.  Targets in which the blue plus (i.e., mean of the means) is close to the bullseye are considered accurate or unbiased.  Similarly, sampling distributions where the observed center (i.e., blue vertical line) is very close to the actual parameter (i.e., black tick labeled with a ``T'') are considered accurate or unbiased.  Targets in which the red dots are closely clustered are considered precise.  Similarly, sampling distributions that exhibit little variability (low dispersion) are considered precise.
-
-<<AccPrec, echo=FALSE, fig.width=3, fig.height=6, fig.scap="Accuracy and precision model", fig.cap="Model used to demonstrate accuracy, precision, and bias.  The center of each target (i.e., the bullseye) and the point marked with a ``T'' (for ``truth'') represent the parameter of interest.  Each dot on the target represents a statistic computed from a single sample and, thus, the many red dots on each target represent repeated samplings from the same population.  The center of the samples (analogous to the center of the sampling distribution) is denoted by a blue plus-sign on the target and a blue vertical line on the histogram.  The target concept is modified from \\cite{RattiGarton94}.">>=
-accuracyPrecision(pts.trans=1/3)
-@
-
-\defn{Accuracy}{The tendency of a statistic to come close to the parameter it was intended to estimate.}
-
-\vspace{-12pt}
-\defn{Precision}{The tendency to have values clustered closely together. Precision is related inversely to the dispersion of the sampling distribution -- the smaller the dispersion, the greater the precision.}
-
-\newpage
-\begin{exsection}
-  \item \label{revex:SamplingDistPA} Suppose that it is known that a population has $\mu$=10.  Use this to answer the questions below. \ansref{ans:SamplingDistPA}
-  \begin{Enumerate}
-    \item Which is more accurate -- four samples with means of 9,10,11, and 9 or means of 6,8,7, and 9?
-    \item Which is more accurate -- four samples with means of 6,14,8, and 12 or means of 8,7,9, and 8?
-    \item Which is more precise -- four samples with means of 7,14,8, and 11 or means of 7,7,9, and 8?
-    \item How would you judge the accuracy and precision of four samples with means of 2,8,12, and 18?
-    \item How would you judge the accuracy and precision of four samples with means of 9,10,11, and 10?
-    \item How would you judge the accuracy and precision of four samples with means of 1,7,8, and 19?
-  \end{Enumerate}
-\end{exsection}
+\warn{Simulating sampling distributions is a tool for checking the theory concerning sampling distributions; however, in ``real-life'' only one sample from the population is needed.}
 
 
 \section{Central Limit Theorem} \label{sect:CLT}
+\vspace{-12pt}
 The sampling distribution of the sample mean was examined in the previous sections by taking all possible samples from a small population \sectrefp{sec:SDistDefn} or taking a large number of samples from a large population \sectrefp{sect:SDSimulate}.  In both instances, it was observed that the sampling distribution \textit{of the sample mean} was approximately normally distributed, centered on the true mean of the population, and had a standard error that was smaller than the standard deviation of the population and decreased as $n$ increased.  In this section, the Central Limit Theorem (CLT) is introduced and explored as a method for identifying the specific characteristics of the sampling distribution of the sample mean without going through the process of extracting multiple samples from the population.
 
-The CLT specifically addresses the shape, center, and dispersion of the sampling distribution of the sample means by stating that $\bar{x}\sim N\left(\mu,\frac{\sigma}{\sqrt{n}}\right)$ as long as $n$ is ``large.''\index{Central Limit Theorem!Definition}  A ``large'' sample size is defined as,
-\vspace{-12pt}
-\begin{Enumerate}
+The CLT specifically addresses the shape, center, and dispersion of the sampling distribution of the sample means by stating that $\bar{x}\sim N\left(\mu,\frac{\sigma}{\sqrt{n}}\right)$ as long as\index{Central Limit Theorem!Definition}
+
+\begin{Itemize}
   \item $n\geq30$,
   \item $n\geq15$ and the population distribution is not strongly skewed, \textbf{or}
   \item the population distribution is normally distributed.
-\end{Enumerate}
-A major consequence of this definition of ``large'' is that the sampling distribution of $\bar{x}$ should be normally distributed \textbf{no matter what the shape of the population distribution is} as long as the means are computed from samples of $n\geq30$.  The CLT also suggests that $\bar{x}$ is unbiased and that the formula for the $SE_{\bar{x}}$ is $\frac{\sigma}{\sqrt{n}}$ regardless of the size of $n$.  In other words, $n$ impacts the shape of the sampling distribution of the sample means, but not the center or formula for computing the dispersion.
+\end{Itemize}
+
+Thus, the sampling distribution of $\bar{x}$ should be normally distributed \textbf{no matter what the shape of the population distribution is} as long as $n\geq30$.  The CLT also suggests that $\bar{x}$ is unbiased and that the formula for the $SE_{\bar{x}}$ is $\frac{\sigma}{\sqrt{n}}$ regardless of the size of $n$.  In other words, $n$ impacts the shape of the sampling distribution of the sample means, but not the center or formula for computing the standard error.
 
 \defn{Central Limit Theorem}{If a variable $x$ has a population distribution with a mean, $\mu$, and a standard deviation, $\sigma$, then the sampling distribution of the sample means ($\bar{x}$) from random samples of size $n$, will have a mean equal to $\mu$, a standard error equal to $\frac{\sigma}{\sqrt{n}}$, and a shape that will tend to be normal as $n$ becomes ``large.''}
 
 \subsection{Exploring CLT}
-Characteristics of the sampling distribution of $\bar{x}$ can be explored with the hypothetical population of 1015 lengths of fish in Square Lake.  Recall from \sectref{sect:IVPPSS} that the population distribution \figrefp{fig:SquareLakePopn} and several parameters are known \tabrefp{tab:SquareLakePopn} and that the sampling distribution from $n=50$ was previously examined \figrefp{fig:SampDistSLMean50}.  The effect of changing $n$ on the sampling distribution of sample means can be explored in a similar manner and then examined to determine if the specifics of the CLT appear to be true \figrefp{fig:SampDistSLMeann}.\footnote{The effect of changing $n$ can also be explored with the animation in \appref{app:CLTAnim}.}
+\vspace{-12pt}
+The validity of the CLT can be examined by again simulating several (with different $n$) sampling distributions of $\bar{x}$ from the Square Lake population \figrefp{fig:SampDistSLMeann}. Recall from \sectref{sect:IVPPSS} that the population distribution \figrefp{fig:SquareLakePopn} and several parameters \tabrefp{tab:SquareLakePopn} are known and the sampling distribution from $n=50$ is in \figref{fig:SampDistSLMean50}.
+
+Several observations about the CLT can be made from the results in \figref{fig:SampDistSLMeann}.\index{Central Limit Theorem!Effect of n}  First, the sampling distribution is approximately normal even for very small $n$ because the population distribution is only slightly skewed \figrefp{fig:SquareLakePopn}. If the population distribution had been strongly skewed, then the sampling distributions would only approximate normality for larger $n$ (see next paragraph).  Second, the means of all sampling distributions are approximately equal to $\mu=98.06$, regardless of $n$.  Third, the dispersion of the sampling distributions (i.e., the SE of the means) becomes smaller with increasing $n$.\index{Standard Error!Effect of n}  Furthermore, the SE from the simulated results closely match the SE expected from the CLT (i.e., $\frac{34.19}{\sqrt{n}}$).
+
+To illustrate that the CLT is not true just for the Square Lake population, similar results from uniform (i.e., rectangular) and strongly right-skewed population distributions are in Figures \ref{fig:SampDistUnifMeann} and \ref{fig:SampDistExpMeann}, respectively. For each figure, note how (1) each distribution becomes more ``normal'' as $n$ increases, (2) the sampling distributions from the uniform distribution become normal at smaller $n$, (3) each sampling distribution remains centered on approximately the same value for all $n$ (approximately 0.5 for the uniform and 1 for the skewed population distributions), (4) each sampling distribution becomes narrower as $n$ increases (i.e., SE gets smaller), and (5) the observed SE is approximately equal to the SE expected from the CLT.
+
+\vspace{-15pt}
+\begin{exsection}
+  \item \label{revex:CLT1} Assume that the population distribution is $\sim N(100,20)$ and you take samples of $n=50$. \ansref{ans:CLT1}
+  \begin{Enumerate}
+    \item What shape would you expect the sampling distribution of the sample means to be?
+    \item What do you expect the center of the sampling distribution of the sample means to equal?
+    \item What do you expect the standard deviation of the sampling distribution of the sample means to equal?
+    \item What do you expect the standard error of $\bar{x}$ to equal?
+  \end{Enumerate}
+  \item \label{revex:CLT2} Assume that the population distribution is skewed to the right with $\mu=500$ and $\sigma=60$.  Further suppose that samples of $n=100$ are taken. \ansref{ans:CLT2}
+  \begin{Enumerate}
+    \item What shape would you expect the sampling distribution of the sample means to be?
+    \item What do you expect the center of the sampling distribution of the sample means to equal?
+    \item What do you expect the standard deviation of the sampling distribution of the means to equal?
+    \item What do you expect the standard error of $\bar{x}$ to equal?
+  \end{Enumerate}
+  \item \label{revex:CLT3} Assume that the population distribution is slightly skewed to the right with $\mu=500$ and $\sigma=60$.  Further suppose that samples of $n=20$ are taken.  \ansref{ans:CLT3}
+  \begin{Enumerate}
+    \item What shape would you expect the sampling distribution of the sample means to be?
+    \item What do you expect the center of the sampling distribution of the sample means to equal?
+    \item What do you expect the standard deviation of the sampling distribution of the means to equal?
+    \item What do you expect the standard error of $\bar{x}$ to equal?
+  \end{Enumerate}
+\end{exsection}
 
 <<SampDistSLMeann, echo=FALSE, fig.width=5, fig.height=7.5, out.width='.8\\linewidth', fig.scap="Sampling distribution of sample means from Square Lake", fig.cap="Sampling distribution of the sample mean TL simulated from 5000 samples of six different sample sizes extracted from the Square Lake fish population.  The vertical blue line is the mean of the 5000 means and the horizontal red line represents $\\pm1$SE from the mean.">>=
   set.seed(10)
@@ -331,10 +340,7 @@ for (i in 1:length(ns)) {
   text(xlmt[1]+(xlmt[2]-xlmt[1])/1.7,0.85*ylmt[2],paste("Observed\nmean=",formatC(mn,format="f",digits=2),"\nSE=",formatC(s,format="f",digits=2)),pos=4)
 }
 @
-
-Several observations can be made relative to the CLT from the results shown in \figref{fig:SampDistSLMeann}.\index{Central Limit Theorem!Effect of n}  First, the sampling distribution is approximately normal even for very small sample sizes.  This happened because the population distribution is only very slightly skewed \figrefp{fig:SquareLakePopn}. If the population distribution had been decidedly not normal, then the sampling distributions would only be approximately normally distributed for larger values of $n$ (see next paragraph).  Second, the centers (i.e., means) of all simulated sampling distributions are approximately equal to the known $\mu=98.06$, regardless of sample size.  Third, the dispersion of the sampling distributions (i.e., the standard error of the means) becomes smaller with increasing $n$.\index{Standard Error!Effect of n}  Furthermore, the standard errors from the simulated results closely matched the SE expected from the CLT (i.e., $\frac{34.19}{\sqrt{n}}$).
-
-To illustrate that the CLT is not true just for the hypothetical Square Lake population, Figures \ref{fig:SampDistUnifMeann} and \ref{fig:SampDistExpMeann} show similar results for samples from a uniform (i.e., rectangular) and a strongly right-skewed exponential distribution, respectively.\footnote{Sampling distributions from theoretical population distributions are further explored with \R{cltSim()}.}  For each figure, note how (1) each distribution becomes more ``normal'' as $n$ increases, (2) the sampling distributions of sample means from the uniform distribution become normal faster (i.e., at a smaller $n$), (3) each sampling distribution remains centered on approximately the same value for all values of $n$ (approximately 0.5 for the uniform and 1 for the skewed population distribution), (4) each sampling distribution becomes narrower as $n$ increases (i.e., SE gets smaller), and (5) the observed SE is approximately equal to the SE expected from the CLT.
+\vspace{12pt}  %because knitr gobbled it up.
 
 <<SampDistUnifMeann, echo=FALSE, fig.width=5, fig.height=7.5, out.width='.8\\linewidth', fig.scap="Sampling distribution of sample means from uniform distribution", fig.cap="Sampling distribution of the sample mean simulated from 5000 samples of six different sample sizes extracted from a uniform population distribution.  The vertical blue line is the mean of the 5000 means and the horizontal red line represents $\\pm1$SE from the mean.">>=
 set.seed(11)
@@ -391,38 +397,12 @@ for (i in 1:length(ns)) {
 }
 @
 
-\clearpage
-\begin{exsection}
-  \item \label{revex:CLT1} Assume that the population distribution is $\sim N(100,20)$ and you take samples of $n=50$. \ansref{ans:CLT1}
-  \begin{Enumerate}
-    \item What shape would you expect the sampling distribution of the sample means to be?
-    \item What do you expect the center of the sampling distribution of the sample means to equal?
-    \item What do you expect the standard deviation of the sampling distribution of the sample means to equal?
-    \item What do you expect the standard error of $\bar{x}$ to equal?
-  \end{Enumerate}
-  \item \label{revex:CLT2} Assume that the population distribution is skewed to the right with $\mu=500$ and $\sigma=60$.  Further suppose that samples of $n=100$ are taken. \ansref{ans:CLT2}
-  \begin{Enumerate}
-    \item What shape would you expect the sampling distribution of the sample means to be?
-    \item What do you expect the center of the sampling distribution of the sample means to equal?
-    \item What do you expect the standard deviation of the sampling distribution of the means to equal?
-    \item What do you expect the standard error of $\bar{x}$ to equal?
-  \end{Enumerate}
-  \item \label{revex:CLT3} Assume that the population distribution is slightly skewed to the right with $\mu=500$ and $\sigma=60$.  Further suppose that samples of $n=20$ are taken.  \ansref{ans:CLT3}
-  \begin{Enumerate}
-    \item What shape would you expect the sampling distribution of the sample means to be?
-    \item What do you expect the center of the sampling distribution of the sample means to equal?
-    \item What do you expect the standard deviation of the sampling distribution of the means to equal?
-    \item What do you expect the standard error of $\bar{x}$ to equal?
-  \end{Enumerate}
-\end{exsection}
 
-
-\vspace{-24pt}
-\subsection{Probability Calculations} \label{sect:sdprob} \index{Probability}
+\section{Probability Calculations} \label{sect:sdprob} \index{Probability}
 \vspace{-12pt}
-If the sample size is large enough (either outright or relative to the shape of the population distribution), then the CLT states that the sampling distribution of sample means is approximately normally distributed.  If the sampling distribution is normal, then the methods from \chapref{chap:NormDist} may be used.  Thus, if the sampling distribution of the sample means is normally distributed, then questions such as ``what is the probability of observing a sample mean of less than 95 mm from a sample of size 50 from Square Lake?'' can be answered.  In other words, questions about \textbf{statistics} can be answered.
+If the sample size is large enough, then the CLT states that the sampling distribution of sample means is approximately normally distributed.  If the sampling distribution is normal, then the methods from \chapref{chap:NormDist} may be used to compute probabilities.  Thus, if the sampling distribution of the sample means is normally distributed, then questions such as ``what is the probability of observing a sample mean of less than 95 mm from a sample of $n=50$ from Square Lake?'' can be answered.  In other words, questions related to the probabilitiy of \textbf{statistics} can be answered.
 
-The question above is answered by first recalling that, for the length of all fish in Square Lake, $\mu=$\Sexpr{formatC(mean(SquareLakePopn$tl),format="f",digits=2)} and $\sigma=$\Sexpr{formatC(sd(SquareLakePopn$tl),format="f",digits=2)}.  Because the sample size in the question is greater than 30, the CLT says that the distribution of the sample means from samples of $n=50$ is $\bar{x}\sim N(98.06,\frac{34.19}{\sqrt{50}})$ or $\bar{x}\sim N(98.06,4.84)$.  Thus, the answer to the question is as simple as computing the area less than 95 on a $N(98.06,4.84)$ distribution.  The proportion of samples of $n=50$ from Square Lake with an $\bar{x}<95$ mm is \Sexpr{formatC(pnorm(95,mean=98.06,sd=34.19/sqrt(50)),format="f",digits=4)} \figrefp{fig:NormTL95} as computed with\footnote{Notice that the standard error of $\bar{x}$ is put into the \R{sd=} argument of \R{distrib()}.  Recall that a standard error really is a standard deviation, it is just named differently (see \sectref{sec:SDistDefn}).  R has no way of knowing whether the question is about an individual or a statistic; it requires the dispersion in either case and calls both of them \R{sd=}.}
+The question above is answered by first recalling that, for the length of all fish in Square Lake, $\mu=$\Sexpr{formatC(mean(SquareLakePopn$tl),format="f",digits=2)} and $\sigma=$\Sexpr{formatC(sd(SquareLakePopn$tl),format="f",digits=2)}.  Because $n=50$ is greater than 30, the CLT says that the distribution of the sample means from samples of $n=50$ is $\bar{x}\sim N(98.06,\frac{34.19}{\sqrt{50}})$ or $\bar{x}\sim N(98.06,4.835)$.  Thus, the proportion of samples of $n=50$ from Square Lake with an $\bar{x}<95$ mm is \Sexpr{formatC(pnorm(95,mean=98.06,sd=34.19/sqrt(50)),format="f",digits=4)}, which comes from computing the area less than 95 on a $N(98.06,4.835)$ distribution \figrefp{fig:NormTL95}.\footnote{Notice that the standard error of $\bar{x}$ is put into the \R{sd=} argument of \R{distrib()}.  Recall that a standard error really is a standard deviation, it is just named differently (see \sectref{sec:SDistDefn}).  R has no way of knowing whether the question is about an individual or a statistic; it requires the dispersion in either case and calls both of them \R{sd=}.}
 
 <<NormTL95, par1a=TRUE, fig.cap="Proportion of sample means less than 95 mm on a $N(98.06,4.84)$ distribution.">>=
 ( distrib(95,mean=98.06,sd=34.19/sqrt(50)) )
@@ -430,7 +410,7 @@ The question above is answered by first recalling that, for the length of all fi
 
 \warn{Calculating the probability of a set of means is as simple as computing areas on a normal distribution as long as the assumptions of the CLT hold true (i.e., $n$ is large enough).}
 
-Consider another question -- ``what is the probability, in a sample of size $n=$40 from Square Lake, of observing a sample mean of more than 95 mm?''  At first glance it may appear that this question can be answered from the work done for the previous question.  However, the sample sizes differ between the two questions and, because the sampling distribution depends on the sample size, a different sampling distribution is used here.  Because $n>30$ the sampling distribution will be $\bar{x}\sim N(98.06,\frac{34.19}{\sqrt{40}})$ or $\bar{x}\sim N(98.06,5.41)$ (Note the different value of the SE).  Thus, the answer to this question is the area to the right of 95 on a $N(98.06,5.41)$ or \Sexpr{formatC(pnorm(95,mean=98.06,sd=34.19/sqrt(40),lower.tail=FALSE),format="f",digits=4)} \figrefp{fig:NormTLgt95} as computed with
+Consider another question -- ``what is the probability of observing a sample mean of more than 95 mm in a sample of $n=$40 from Square Lake?''  At first glance it may appear that this question can be answered from the work done for the previous question.  However, the sample sizes differ between the two questions and, because the sampling distribution depends on the sample size, a different sampling distribution is used here.  Because $n>30$ the sampling distribution will be $\bar{x}\sim N(98.06,\frac{34.19}{\sqrt{40}})$ or $\bar{x}\sim N(98.06,5.406)$ (Note the different value of the SE).  Thus, the answer to this question is the area to the right of 95 on a $N(98.06,5.406)$ or \Sexpr{formatC(pnorm(95,mean=98.06,sd=34.19/sqrt(40),lower.tail=FALSE),format="f",digits=4)} \figrefp{fig:NormTLgt95}.
 
 <<NormTLgt95, par1a=TRUE, fig.cap="Proportion of sample means greater than 95 mm on a $N(98.06,5,41)$ distribution.">>=
 ( distrib(95,mean=98.06,sd=34.19/sqrt(40),lower.tail=FALSE) )
@@ -438,18 +418,17 @@ Consider another question -- ``what is the probability, in a sample of size $n=$
 
 \warn{Always check what sample size is being used -- if the sample size changes, then the sampling distribution changes.}
 
-Consider one more Square Lake example  -- ``What is the probability that a fish will have a length less than 85 mm?''  Note that this question is about an individual, not a statistic from a sample as in the previous questions.  Thus, the population distribution and NOT the sampling distribution is the appropriate distribution to use for this question.  However, this question cannot be answered because the population distribution is not known to be normally distributed.  Two points are illustrated with this example.  First, if the question refers to an individual, then the population distribution is used; however, if the question refers to a statistic computed from a sample, then a sampling distribution is used.  Second, no matter which distribution is used, if the distribution is not known to be normal, then the probability cannot be computed (at least with the techniques in this book).
+Consider two more Square Lake example questions.  First, ``what is the probability of observing a sample mean of more than 95 mm in a sample of $n=$10 from Square Lake?'' This question is again about a statistic, but because $n<15$ and the population is not know to be normal it is not known that the sampling distribution will be normal. Thus, this questions cannot be answered. Second, ``What is the probability that a fish will have a length less than 85 mm?''  This question is about an individual, not a statistic as in the previous questions.  Thus, the population distribution, NOT the sampling distribution, is appropriate here.  However, this question also cannot be answered because the population distribution is not known to be normally distributed.
 
-\warn{If the question refers to individuals, then use the population distribution.  If the question refers to a statistic computed from a sample, then use a sampling distribution.}
+Two points are illustrated with the last two questions.  First, population distributions are used for questions about individuals and sampling distributions are used for questions about statistics.  Second, if the distribution is not known to be normal, no matter which distribution is used, then the probability cannot be computed.\footnote{At least with the techniques in this course.}
 
-\subsection{Calculation Considerations}
-Suppose that it is known that an Isle Royale loon spends a mean of 13\% (this is $\mu$) of its time preening during the summer months.  The distribution of time spent preening is strongly right-skewed with a standard deviation of 3\% (this is $\sigma$).  Now consider this question -- ``What is the probability, in a sample of size 10, of observing a mean time preening of less than 10\%?''  This is a question about a mean; thus, a sampling distribution should be used.  However, because the population distribution is strongly skewed and the sample size is $<30$, the sampling distribution is not known to follow a normal distribution.  Therefore, the calculations required to answer this question cannot be made.  You cannot make normal distribution calculations on a distribution that is not known to be normal.
+\warn{If the question refers to individuals, then use the population distribution.  If the question refers to a statistic, then use a sampling distribution.}
 
+\vspace{-12pt}
 \warn{If the distribution needed to answer a question is not normal, then normal distribution calculations cannot be used to answer the question.  The proper answer to the question in this case is to say ``I cannot compute the probability because the required distribution is not known to be normal.''}
 
-One issue that you have probably noticed while doing these calculations is that they can only be made if the mean, standard deviation, and shape (if $n<30$) of the population is known.  However, remember from \sectref{sect:WhyStats} that one of the main reasons why statistics is important is because the population usually cannot be ``seen.''  So it should feel ``uncomfortable'' to assume that so much is known about the population.  The only appropriate response to this concern is that we are building towards being able to make inferences with statements based on probabilities that take into account sampling variability.  To make these probabilistic statements we need the skills and concepts about sampling distributions that we have just learned.  These skills, while they aren't generally used to answer the questions that we have just practiced on (and will continue to practice on), will be used to make inferences.  The goal is to learn these calculations thoroughly here, with these simple questions, so that you can focus on the subtle concepts involved in making inferences in later chapters.
+One issue you may have noticed is that these calculations require knowing the mean, standard deviation, and shape (if $n<30$) of the population.  However, the population usually cannot be ``seen'' (recall \chapref{chap:WhyStatsImportant}) and, thus, it is uncomfortable to assume so much to be known about the population.  The only appropriate response to this concern is that we are building towards being able to make inferences with statements based on probabilities that take into account sampling variability.  To make these probabilistic statements we need to fully understand sampling distributions.  These questions, while not yet realistic, will help you to better understand sampling distibutions for when they are needed to make inferences in later chapters.
 
-\newpage
 \begin{exsection}
   \item \label{revex:CLTMoose} \rhw{} Assume that it is known that the distribution of time spent hunting (hours) by an individual Minnesota moose (\textit{Alces alces}) hunter is approximately symmetric in shape with a mean of 40 hours and a standard deviation of 15 hours.  Use this information to answer the questions below.  \ansref{ans:CLTMoose}
     \begin{Enumerate}
@@ -526,4 +505,33 @@ One issue that you have probably noticed while doing these calculations is that 
       \item What is the mean number of days until hatching such that 20\% of samples of 50 turtles have a smaller mean?
       \item What are the most common 80\% of times to hatching?
     \end{Enumerate}
+\end{exsection}
+
+
+
+\section{Accuracy and Precision}
+\vspace{-12pt}
+\textbf{Accuracy} and \textbf{precision} are often used to describe characteristics of a sampling distribution.  Accuracy refers to how closely a statistic estimates the intended parameter.  If, \textbf{on average}, a statistic is approximately equal to the parameter it was intended to estimate, then the statistic is considered \textbf{accurate}.\index{Accuracy}  Unbiased statistics are also accurate statistics.\index{Unbiased}  Precision refers to the repeatability of a statistic.\index{Precision}  A statistic is considered to be \textbf{precise} if multiple samples produce similar statistics.  The standard error is a measure of precision; i.e., a high SE means low precision and a low SE means high precision.\index{Standard Error!Measure of}
+
+The concepts of accuracy and precision are illustrated in \figref{fig:AccPrec}.  The targets in \figref{fig:AccPrec} provide an intuitive interpretation of accuracy and precision, whereas the sampling distributions (i.e., histograms) are what statisticians look at to identify accuracy and precision.  Targets in which the blue plus (i.e., mean of the means) is close to the bullseye are considered accurate (i.e., unbiased).  Similarly, sampling distributions where the observed center (i.e., blue vertical line) is very close to the actual parameter (i.e., black tick labeled with a ``T'') are considered accurate.  Targets in which the red dots are closely clustered are considered precise.  Similarly, sampling distributions that exhibit little variability (low dispersion) are considered precise.
+
+<<AccPrec, echo=FALSE, fig.width=3, fig.height=6, fig.scap="Accuracy and precision model", fig.cap="Model used to demonstrate accuracy, precision, and bias.  The center of each target (i.e., the bullseye) and the point marked with a ``T'' (for ``truth'') represent the parameter of interest.  Each dot on the target represents a statistic computed from a single sample and, thus, the many red dots on each target represent repeated samplings from the same population.  The center of the samples (analogous to the center of the sampling distribution) is denoted by a blue plus-sign on the target and a blue vertical line on the histogram.  The target concept is modified from \\cite{RattiGarton94}.">>=
+accuracyPrecision(pts.trans=1/3)
+@
+
+\defn{Accuracy}{The tendency of a statistic to come close to the parameter it was intended to estimate.}
+
+\vspace{-12pt}
+\defn{Precision}{The tendency to have values clustered closely together. Precision is inversely related to the standard error -- the smaller the standard error, the greater the precision.}
+
+\begin{exsection}
+  \item \label{revex:SamplingDistPA} Suppose that it is known that a population has $\mu$=10.  Use this to answer the questions below. \ansref{ans:SamplingDistPA}
+  \begin{Enumerate}
+    \item Which is more accurate -- four samples with means of 9,10,11, and 9 or means of 6,8,7, and 9?
+    \item Which is more accurate -- four samples with means of 6,14,8, and 12 or means of 8,7,9, and 8?
+    \item Which is more precise -- four samples with means of 7,14,8, and 11 or means of 7,7,9, and 8?
+    \item How would you judge the accuracy and precision of four samples with means of 2,8,12, and 18?
+    \item How would you judge the accuracy and precision of four samples with means of 9,10,11, and 10?
+    \item How would you judge the accuracy and precision of four samples with means of 1,7,8, and 19?
+  \end{Enumerate}
 \end{exsection}
