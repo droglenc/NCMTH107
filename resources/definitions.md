@@ -62,10 +62,10 @@ collecting, organizing, and interpreting numerical information or data.</dd>
 <dt> Vector</dt><dd>In R, a one-dimensional list of items of the same data type.</dd>
 <dt>Voluntary Response</dt><dd>A sample of individuals that choose themselves for the sample by responding to a general appeal.</dd>
 
-<dt></dt><dd></dd>
-<dt></dt><dd></dd>
-<dt></dt><dd></dd>
-<dt></dt><dd></dd>
+<dt>Research Hypothesis</dt><dd>A general statement about the question or phenomenon being tested.</dd>
+<dt>Null Hypothesis</dt><dd>A statistical hypothesis that states that there is no difference between a parameter and a specific value or between two parameters.</dd>
+<dt>Alternative Hypothesis</dt><dd>A statistical hypothesis that states that there is a difference between a parameter and a specific value or between two parameters.</dd>
+<dt>p-value</dt><dd>The probability of the observed statistic or a value of the statistic more extreme assuming the null hypothesis is true.</dd>
 <dt></dt><dd></dd>
 <dt></dt><dd></dd>
 <dt></dt><dd></dd>

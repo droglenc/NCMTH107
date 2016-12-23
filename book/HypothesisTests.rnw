@@ -16,65 +16,67 @@ set_parent('IntroStats.Rnw')
 \minitoc
 \newpage
 
-\lettrine{A}{ statistic is, because of sampling variability,} an imperfect estimate of the unknown parameter.  Thus conclusions about the parameter from the statistics could be wrong and should include a measure of the precision of the estimate.  There are two possible calculations using the results of a single sample that recognize this imperfectness and allow conclusions about parameters.  First, a researcher may form an \emph{a priori} hypothesis about the parameter and then use the information in the sample to make a judgment about the ``correctness'' of this hypothesis.  Second, a researcher may form, from the information in the sample, a range of values that is likely to contain the parameter.  The methods of the first calculation are called \emph{hypothesis testing} and are the subject of this module. The second method consists of constructing a \emph{confidence region}, which is introduced in \modref{chap:ConfidenceRegions}. Specific applications of these two techniques are described in Modules \ref{chap:ZTest}-\ref{chap:GOF}.
+\lettrine{A}{ statistic is an imperfect estimate} of the unknown parameter because of sampling variability.  There are two calculations using the results of a single sample that recognize this imperfectness and allow conclusions to be made about a parameter.  First, a researcher may form an \emph{a priori} hypothesis about the parameter and then use the information in the sample to make a judgment about the ``correctness'' of that hypothesis.  Second, a researcher may form, from the information in the sample, a range of values that is likely to contain the parameter.  The first method is called \emph{hypothesis testing} and is the subject of this module. The second method consists of constructing a \emph{confidence region}, which is introduced in \modref{chap:ConfidenceRegions}. Specific applications of these two techniques are described in Modules \ref{chap:ZTest}-\ref{chap:GOF}.
 
 
-\section{Hypothesis Testing and the Scientific Method} \label{sect:SciMethod}
+\section{Hypothesis Testing \& Scientific Method} \label{sect:SciMethod}
+\vspace{-12pt}
 In its simplest form, the scientific method has four steps:\index{Scientific Method}
 
+\vspace{-12pt}
 \begin{Enumerate}
   \item Observation and description of a natural phenomenon.
   \item Formulation of a hypothesis to explain the phenomenon.
-  \item Use of the hypothesis to predict new observations.
-  \item Performance of experimental tests of the predictions.
+  \item Use the hypothesis to predict new observations.
+  \item Experimentally test the predictions.
 \end{Enumerate}
+\vspace{-6pt}
 
-If the predictions do not match the results of the experiment, then the hypothesis is rejected and an alternative hypothesis is proposed.  If the predictions do closely match the results of the experiment, then belief in the hypothesis is gained, but the hypothesis will likely be subjected to further scrutiny.
+If the results of the experiment do not match the predictions, then the hypothesis is rejected and an alternative hypothesis is proposed.  If the results of the experiment closely match the predictions, then belief in the hypothesis is gained, but the hypothesis will likely be subjected to further scrutiny.
 
-Statistical hypothesis testing is key to performing the scientific method and, in fact, closely follows the scientific method in concept.  Statistical hypothesis testing begins by taking a research hypothesis and formulating it into competing statistical hypotheses.  The null hypothesis is used to make a prediction about a parameter of interest.  Data is then collected and statistical methods are used to determine whether the observed statistic closely matches the predictions made from the null hypothesis or not.  Probability is used in the measure of matching and sampling variability is taken into account.  This process and the theory underlying statistical hypothesis testing is explained in the following sections
+Statistical hypothesis testing is key to using the scientific method in many fields of study and, in fact, closely follows the scientific method in concept.  Statistical hypothesis testing begins by formulat two competing statistical hypotheses from a research hypothesis.  One of these hypotheses (the null) is used to predict a parameter of interest.  Data is then collected and statistical methods are used to determine whether the observed statistic closely matches the prediction made from the null hypothesis or not.  Probability \modrefp{chap:ProbIntro} is used to measure the degree of matching and sampling variability is taken into account.  This process and the theory underlying statistical hypothesis testing is explained in this module.
 
 
 \section{Statistical Hypotheses} \label{sec:Hypotheses}
-The hypotheses in a research study are classified into two types: (1) research hypothesis and (2) statistical hypotheses.  A research hypothesis is usually a general statement, stated in prose, about the phenomenon that the researcher is interested in investigating.\index{Hypothesis!Research}  The research hypothesis must be transferred into statistical hypotheses that are more mathematical and, thus, more easily subjected to statistical methods.
+\vspace{-12pt}
+Hypotheses in a research study are classified into two types: (1) research hypothesis and (2) statistical hypotheses.  A research hypothesis is a ``wordy'' statement about the question or phenomenon that the researcher is testing.\index{Hypothesis!Research}  The research hypothesis is transferred into statistical hypotheses that are mathematical and more easily subjected to statistical methods.
 
-\defn{Research Hypothesis}{A very generally stated hypothesis about the phenomenon of interest.}
+\defn{Research Hypothesis}{A general statement about the question or phenomenon being tested.}
 
 \vspace{-12pt}
-\defn{Statistical Hypothesis}{A specific mathematically stated hypothesis about the phenomenon of interest.}
+\defn{Statistical Hypothesis}{Mathematical statements about the question or phenomenon being tested.}
 
-There are two types of statistical hypotheses: (1) the null hypothesis and (2) the alternative hypothesis.  The \textbf{null hypothesis}, typically abbreviated with $H_{0}$, is a specific statement of no difference between a parameter and a specific value or between two parameters.\index{Hypothesis!Null}  Because $H_{0}$ is always the ``no difference'' situation it always contains the equals sign.  The \textbf{alternative hypothesis}, usually abbreviated as $H_{A}$ always states that there is a difference of some sort between a parameter and a specific value or between two parameters.\index{Hypothesis!Alternative}  The exact type of difference comes from the researcher's question of interest and results in the use of a less than (\verb"<"), greater than (\verb">"), or not equals ($\neq$) sign.  The phenomenon described in the research hypothesis is most often mathematically formalized in the $H_{A}$.
+There are two types of statistical hypotheses: (1) the null hypothesis and (2) the alternative hypothesis.  The \textbf{null hypothesis}, abbreviated as $H_{0}$, is a specific statement of no difference between a parameter and a specific value or between two parameters.\index{Hypothesis!Null}  The $H_{0}$ ALWAYS contains an equals sign because it always represents ``no difference.''  The \textbf{alternative hypothesis}, abbreviated as $H_{A}$, always states that there is some sort of difference between a parameter and a specific value or between two parameters.\index{Hypothesis!Alternative}  The type of difference comes from the research hypothesis and will require use of a less than (\verb"<"), greater than (\verb">"), or not equals ($\neq$) sign.
 
 \defn{Null Hypothesis}{A statistical hypothesis that states specifically that there is no difference between a parameter and a specific value or between two parameters; typically abbreviated with H$_{0}$.}
-
-\vspace{-12pt}
-\warn{Null hypotheses always represent the ``no difference'' situation and, thus, always contain an equals sign.}
 
 \vspace{-12pt}
 \defn{Alternative Hypothesis}{A statistical hypothesis that states a specific difference between a parameter and a specific value or between two parameters; typically abbreviated with $H_{A}$.}
 
 \vspace{-12pt}
+\warn{Null hypotheses always represent the ``no difference'' situation and, thus, always contain an equals sign.}
+
+\vspace{-12pt}
 \warn{Alternative hypotheses always represent some sort of difference and, thus, always contain one of these three directional symbols ($\neq$, $>$, and $<$).}
 
-The relationships between the research, null, and alternative hypotheses are illustrated with the following examples (the research hypothesis is listed first):
+The relationships between the research, null, and alternative hypotheses are illustrated with the following examples:
 
 \begin{Enumerate}
-  \item A medical researcher wants to determine if a new medicine has any undesirable side effects, particularly does it change the patients' mean pulse rate.
+  \item A medical researcher is concerned that a new medicine may change the patients' mean pulse rate (from the ``known'' mean pulse rate of 82 bpm for individuals in the study population not using the new medicine).
   \begin{Itemize}
-    \item $H_{A}:\mu\neq82$ and $H_{0}:\mu=82$ (where $\mu$ represents the mean pulse rate and 82 is the ``known'' mean pulse rate in the population under study; thus, this alternative hypothesis represents a change from the ``normal'' pulse rate).
+    \item $H_{A}:\mu\neq82$ and $H_{0}:\mu=82$ (where $\mu$ represents the mean pulse rate for individuals in the study population that take the new medicine; thus, the alternative hypothesis represents a change from the ``normal'' pulse rate).
   \end{Itemize}
-   \item A chemist has invented an additive to automobile batteries that is intended to extend the average life of the battery.
+   \item A chemist has invented an additive to automobile batteries that she thinks will extend the current 36 month average life of a battery.
   \begin{Itemize}
-    \item $H_{A}:\mu>36$ and $H_{0}:\mu=36$ (where $\mu$ represents the mean battery life and 36 is the ``known'' mean battery life of batteries without the new additive; thus, this alternative hypothesis represents an extension of the current battery life).
+    \item $H_{A}:\mu>36$ and $H_{0}:\mu=36$ (where $\mu$ represents mean life of batteries with the new additive; thus, this alternative hypothesis represents an extension of the current battery life).
   \end{Itemize}
-  \item An engineer wants to determine if a new type of insulation will reduce the average heating costs of a typical house.
+  \item An engineer wants to determine if a new type of insulation will reduce the average heating costs of a typical house (which are currently \$145 per month).
    \begin{Itemize}
-    \item $H_{A}:\mu<78$ and $H_{0}:\mu=78$ (where $\mu$ represents the mean monthly heating bill and 78 is the ``known'' mean monthly heating bill without the new insulation; thus, this alternative hypothesis represents a decline in heating bills from the previous ``normal'' amount).
+    \item $H_{A}:\mu<145$ and $H_{0}:\mu=145$ (where $\mu$ represents the mean monthly heating bill for houses that receive the new type of insulation; thus, this alternative hypothesis represents a decline in heating bills from the previous ``normal'' amount).
   \end{Itemize}
 \end{Enumerate}
 
-\warn{There are always two competing statistical hypotheses -- null and alternative hypotheses.}
-
-The sign used in the alternative hypothesis comes directly from the wording of the research hypothesis \tabrefp{tab:HAwords}.  An alternative hypothesis that contains the $\neq$ sign is called a \textbf{two-tailed alternative} as the value can be ``not equal'' to another value in two ways; i.e., less than or greater than the value.  Alternative hypotheses with the $<$ or the $>$ signs are called \textbf{one-tailed alternatives}.  The null hypothesis is easily constructed from the alternative hypothesis by replacing the sign in the alternative hypothesis with an equals sign.
+The sign used in the alternative hypothesis comes directly from the wording of the research hypothesis \tabrefp{tab:HAwords}.  An alternative hypothesis that contains the $\neq$ sign is called a \textbf{two-tailed alternative}, as the value can be ``not equal'' to another value in two ways; i.e., less than or greater than.  Alternative hypotheses with the $<$ or the $>$ signs are called \textbf{one-tailed alternatives}.  The null hypothesis is easily constructed from the alternative hypothesis by replacing the sign in the alternative hypothesis with an equals sign.
 
 \begin{table}[htbp]
   \caption{Common words that indicate which sign to use in the alternative hypothesis.}
@@ -98,6 +100,7 @@ is not less than & is not more than &  \\
 
 \warn{The ``not-equals'' alternative is called a two-tailed alternative, whereas the other two alternative hypotheses are called one-tailed alternatives.}
 
+\newpage
 \begin{exsection}
   \item \label{revex:HypTCactus} A researcher is investigating the mean growth of a certain cactus under a variety of environmental conditions. Under the current environmental conditions, he hypothesizes that mean growth is no more than 4 cm. What is $H_{0}$ and $H_{A}$ in this situation? \ansref{ans:HypTCactus}
   \item \label{revex:HypTBodyTemp} \cite{Machowiaketal1992} critically examined the belief that the mean body temperature differed from 98.6$^{0}$F by measuring the body temperatures of 93 healthy humans.  What is $H_{0}$ and $H_{A}$ in this situation? \ansref{ans:HypTBodyTemp}
@@ -105,20 +108,22 @@ is not less than & is not more than &  \\
 \end{exsection}
 
 
+\vspace{-12pt}
 \subsection{Hypothesis Testing Concept}\index{Hypothesis Testing!Concept}
-Statistical hypothesis testing begins by using the null hypothesis to make a prediction of what value one should expect for the mean in a sample.  So, for the Square Lake example, if $H_{0}:\mu=105$ and $H_{A}:\mu<105$, then one would expect, if the null hypothesis is true, that the observed mean in a sample would be 105.  If sampling variability did not exist and the observed sample mean was NOT equal to 105, then the prediction based on the null hypothesis would not be supported and the conclusion would be that the null hypothesis is incorrect.  In other words, one could conclude that the population mean was not equal to 105.
+\vspace{-12pt}
+Statistical hypothesis testing begins by using the null hypothesis to make a prediction of what value one should expect for the mean in a sample.  So, for the Square Lake example (from \modref{chap:WhatStatsImportant}), if $H_{0}:\mu=105$ and $H_{A}:\mu<105$, then one would expect, if the null hypothesis is true, that the observed sample mean would be 105.  If sampling variability did not exist and the observed sample mean was NOT equal to 105, then the prediction based on the null hypothesis would not be supported and the conclusion would be that the null hypothesis is incorrect.  In other words, one would conclude that the population mean was not equal to 105.
 
 Of course, sampling variability does exist and its existence complicates matters.  The simple interpretation of not supporting $H_{0}$ because the observed sample mean did not equal the hypothesized population mean canNOT be made because, with sampling variability, one would not expect a statistic to exactly equal the parameter in the population from which the sample was extracted.  For example, even if the null hypothesis was correct, then one would not expect, with sampling variability, the observed sample mean to exactly equal 105; rather, one would expect the observed sample mean to be \textbf{reasonably} close to 105.
 
-Thus, hypothesis testing is a procedure for determining if the difference between the observed statistic and the expected statistic based on the null hypothesis is ``large'' \textbf{relative to sampling variability}.  For example, the standard error of $\bar{x}$ in samples of $n=50$ in the Square Lake example is equal to $\frac{\sigma}{\sqrt{n}}=$$\frac{31.5}{\sqrt{50}}$$=4.45$.  Thus, with this amount of sampling variability, an observed sample mean of 103 would be considered reasonably close to 105 and one would have more belief in $H_{0}:\mu=105$.  However, an observed sample mean of 70 would be considered further away from 105 than one would expect based on sampling variability alone and the belief in $H_{0}:\mu=105$ would lessen.
+Thus, hypothesis testing is a procedure for determining if the difference between the observed statistic and the expected statistic based on the null hypothesis is ``large'' \textbf{relative to sampling variability}.  For example, the standard error of $\bar{x}$ in samples of $n=50$ in the Square Lake example is $\frac{\sigma}{\sqrt{n}}=$$\frac{31.5}{\sqrt{50}}$$=4.45$.  Thus, with this amount of sampling variability, an observed sample mean of 103 would be considered reasonably close to 105 and one would have more belief in $H_{0}:\mu=105$.  However, an observed sample mean of 70 would be considered further away from 105 than one would expect based on sampling variability alone and the belief in $H_{0}:\mu=105$ would lessen.
 
-While the above procedure is intuitively appealing, it loses some of its objectivity when the examples chosen (i.e., samples means of 103 and 70) are not as extremely close or distant from the null hypothesized value (e.g., what would the ``conclusion'' be if the observed sample mean was 97?).  A first step in creating a more objective decision criteria is to compute a value called the ``p-value.''\index{p-value}  A p-value is defined as the probability of the observed statistic or a value of the statistic more extreme assuming that the null hypothesis is true.  A more detailed description of the p-value is warranted given the centrality of the p-value to making conclusions about statistical hypotheses.
+While the above procedure is intuitively appealing, it loses some of its objectivity when the examples chosen (i.e., samples means of 103 and 70) are not as extremely close or distant from the null hypothesized value (e.g., what would the conclusion be if the observed sample mean was 97?).  A first step in creating a more objective decision criteria is to compute the ``p-value.''\index{p-value}  A p-value is the probability of the observed statistic or a value of the statistic more extreme assuming that the null hypothesis is true.  The p-value is described in more detail below given its centrality to making conclusions about statistical hypotheses.
 
 \defn{p-value}{The probability of the observed statistic or a value of the statistic more extreme assuming the null hypothesis is true.}
 
-The meaning of the phrase ``or more extreme'' is derived from the sign in $H_{A}$ \figrefp{fig:HOtails}.  If $H_{A}$ is the ``less than'' situation, then ``or more extreme'' means ``less than'' or ``shade to the left'' for the probability calculation.  The ``greater than'' situation is defined similarly but would result in shading to the ``right.''  In the ``not equals'' situation, ``or more extreme'' means further into the tail AND the exact same size of tail on the other side of the distribution.  It should be clear from \figref{fig:HOtails} why the ``less than'' and ``greater than'' alternatives are called one-tailed hypotheses and the ``not equals'' alternative is called a two-tailed hypothesis.
+The meaning of the phrase ``or more extreme'' is derived from the sign in $H_{A}$ \figrefp{fig:HOtails}.  If $H_{A}$ is the ``less than'' situation, then ``or more extreme'' means ``less than'' or ``shade to the left'' for the probability calculation.  The ``greater than'' situation is defined similarly but would result in shading to the ``right.''  In the ``not equals'' situation, ``or more extreme'' means further into the tail AND the exact same size of tail on the other side of the distribution.  It is clear from \figref{fig:HOtails} why ``less than'' and ``greater than'' are one-tailed alternatives and ``not equals'' is a two-tailed alternative.
 
-<<HOtails, echo=FALSE, fig.width=6, fig.height=2, out.width='.8\\linewidth', fig.cap="Depiction of the meaning of ``or more extreme'' in the calculation of p-values for the three possible alternative hypotheses.">>=
+<<HOtails, echo=FALSE, fig.width=6, fig.height=2, out.width='.8\\linewidth', fig.cap="Depiction of ``or more extreme'' (red shaded area) in p-values for the three possible alternative hypotheses.">>=
 par(mfcol=c(1,3),mar=c(2,0,2,0),las=1,tcl=-0.2)
 x0 <- seq(-4,4,by=0.001)
 norm0 <- dnorm(x0,0,1)
@@ -148,9 +153,9 @@ lines(x0,norm0,lwd=3)
 text(cv2,-0.03,expression(bar(x)),cex=2,xpd=TRUE)
 @
 
-The ``assuming that the null hypothesis is true'' phrase is used to define a $\mu$ for the sampling distribution on which the p-value will be calculated.  This sampling distribution is called the \textbf{null distribution} because it depends on the value of $\mu$ in the null hypothesis.  One must remember that the null distribution represents the distribution of all possible sample means assuming that the null hypothesis is true; it does NOT represent the actual sample means\footnote{Of course, unless the null hypothesis happens to be perfectly true.}.  The null distribution in the Square Lake example is thus $\bar{x}\sim N(105,4.45)$ because $n=50>30$, $H_{0}:\mu=105$, and SE=$\frac{31.49}{\sqrt{50}}$=$4.45$.
+The ``assuming that the null hypothesis is true'' phrase is used to define a $\mu$ for the sampling distribution on which the p-value will be calculated.  This sampling distribution is called the \textbf{null distribution} because it depends on the value of $\mu$ in the null hypothesis.  One must remember that the null distribution represents the distribution of all possible sample means assuming that the null hypothesis is true; it does NOT represent the actual sample means.\footnote{Of course, unless the null hypothesis happens to be perfectly true.}  The null distribution in the Square Lake example is thus $\bar{x}\sim N(105,4.45)$ because $n=50>30$, $H_{0}:\mu=105$, and SE=$\frac{31.49}{\sqrt{50}}$=$4.45$.
 
-The p-value is computed with a ``forward'' normal distribution calculation on the null sampling distribution.  For example, suppose that a sample mean of 100 was observed in a sample of $n=50$ from Square Lake (as it was in \tabref{tab:SquareLakeSample1}).  The definition of the p-value in this particular instance would be ``the probability of observing $\bar{x}=100$ or a smaller value assuming that $\mu=105$.''  The answer to this definition is computed by finding the area to the left of 100 on a $N(105,4.45)$ null distribution.  This is the exact same type of calculation that was made on sampling distributions in \sectref{sect:sdprob}.  Thus, a p-value of \Sexpr{kPvalue(pnorm(100,mean=105,sd=31.49/sqrt(50)))} is computed and visualized \figrefp{fig:SLpvalue1} with
+The p-value is computed with a ``forward'' normal distribution calculation on the null sampling distribution.  For example, suppose that a sample mean of 100 was observed with $n=50$ from Square Lake (as it was in \tabref{tab:SquareLakeSample1}).  The p-value in this case would be ``the probability of observing $\bar{x}=100$ or a smaller value assuming that $\mu=105$.''  This probability is computed by finding the area to the left of 100 on a $N(105,4.45)$ null distribution and is the exact same type of calculation that was made in \sectref{sect:sdprob}.  Thus, this p-value of \Sexpr{kPvalue(pnorm(100,mean=105,sd=31.49/sqrt(50)))} is computed below \figrefp{fig:SLpvalue1}.
 
 <<SLpvalue1, par1a=TRUE, fig.cap="Depiction of the p-value for the Square Lake example where $\\bar{x}=100$ and $H_{A}:\\mu<105$.">>=
 ( distrib(100,mean=105,sd=31.49/sqrt(50)) )
@@ -160,7 +165,7 @@ Interpreting the p-value requires critically thinking about the p-value definiti
 
 \warn{Small p-values are evidence against the null hypothesis.}
 
-The p-value serves as a numerical measure on which to base a conclusion about $H_{0}$.  To do this objectively requires an objective definition of what it means to be a ``small'' or ``large'' p-value.  Statisticians use a cut-off value, called the rejection criterion which is symbolized as $\alpha$, such that p-values less than $\alpha$ are considered small and would result in the rejection of $H_{0}$ as a viable hypothesis.\index{alpha@{$\alpha$}}  The value of $\alpha$ is typically small, usually set at $0.05$, although $\alpha=0.01$ and $\alpha=0.10$ are also commonly used.
+The p-value serves as a numerical measure on which to base a conclusion about $H_{0}$.  To do this objectively requires an objective definition of what it means to be a ``small'' or ``large'' p-value.  Statisticians use a cut-off value, called the rejection criterion and symbolized with $\alpha$, such that p-values less than $\alpha$ are considered small and would result in rejecting $H_{0}$ as a viable hypothesis.\index{alpha@{$\alpha$}}  The value of $\alpha$ is typically small, usually set at $0.05$, although $\alpha=0.01$ and $\alpha=0.10$ are also commonly used.
 
 \defn{$\alpha$}{A predetermined rejection criterion value used in hypothesis testing.  This value sets the ``cutoff'' for determining whether it was reasonable to have seen the observed statistic or not assuming the null hypothesis is true.}
 
@@ -174,7 +179,7 @@ The choice of $\alpha$ is made by the person conducting the hypothesis test and 
 \vspace{-12pt}
 \warn{Set $\alpha$ to lower values to make it more difficult to reject $H_{0}$.}
 
-The null hypothesis in the Square Lake example was not rejected because the calculated p-value (i.e., \Sexpr{kPvalue(pnorm(100,mean=105,sd=31.49/sqrt(50)))}) is larger than any of the common values of $\alpha$.  Thus, the conclusion in this example is that it is possible that the mean of the entire population is equal to 105 and it is not likely that the population mean is less than 105.  In other words, observing a sample mean of 100 is likely to happen based on random sampling variability alone and it is unlikely that the null hypothesized value is incorrect.
+The null hypothesis in the Square Lake example is not rejected because the calculated p-value (i.e., \Sexpr{kPvalue(pnorm(100,mean=105,sd=31.49/sqrt(50)))}) is larger than any of the common values of $\alpha$.  Thus, the conclusion in this example is that it is possible that the mean of the entire population is equal to 105 and it is not likely that the population mean is less than 105.  In other words, observing a sample mean of 100 is likely to happen based on random sampling variability alone and it is unlikely that the null hypothesized value is incorrect.
 
 \begin{exsection}
   \item \label{revex:HypTCalc1} Compute the p-value and make a decision about $H_{0}$ with the following information -- $\alpha=0.10$, $H_{0}:\mu=10$, $H_{A}:\mu>10$, $\sigma=5$, $n=25$, and $\bar{x}=12.1$. \ansref{ans:HypTCalc1}
@@ -185,7 +190,8 @@ The null hypothesis in the Square Lake example was not rejected because the calc
 
 
 \section{Test Statistics and Effect Sizes}
-Instead of just reporting the observed statistic and the resulting p-value, it may be of interest to a researcher to know how ``far'' the observed statistic was from the hypothesized value of the parameter.  This simplistic value is easily calculated with
+\vspace{-12pt}
+Instead of reporting the observed statistic and the resulting p-value, it may be of interest to know how ``far'' the observed statistic was from the hypothesized value of the parameter.  This is easily calculated with
 \[ \text{Observed Statistic}-\text{Hypothesized Parameter} \]
 where ``Hypothesized Parameter'' represents the specific value in $H_{0}$.  However, the meaning of this value is difficult to interpret without an understanding of the standard error of the statistic.  For example, a difference of 10 between the observed statistic and the hypothesized parameter seems ``very different'' if the standard error is 1 but does not seem ``different'' if the standard error is 100.  Thus, it is common practice to standardize this difference by dividing by the standard error of the statistic.  This measure of distance is called a \emph{test statistic} and is generalized with
 
@@ -193,28 +199,27 @@ where ``Hypothesized Parameter'' represents the specific value in $H_{0}$.  Howe
   \text{Test Statistic} = \frac{\text{Observed Statistic}-\text{Hypothesized Parameter}}{SE_{\text{Statistic}}}
 \end{equation}
 
-Thus, the test statistic \eqref{eqn:zTestStatGeneral} measures how many standard errors the observed statistic is away from the hypothesized parameter.  Relatively large values are indicative of a difference that is likely not due to randomness (i.e., sampling variability) and suggest a rejection of the null hypothesis.  There are other forms for calculating test statistics\footnote{A few of which we will see in this class.}, but all test statistics retain the general idea of scaling the difference between what was observed and what was expected from the null hypothesis in terms of sampling variability.  Even though there is a one-to-one relationship between a test statistic and a p-value, a test statistic is often reported with a hypothesis test to give another feel for the magnitude of the difference between what was observed and what was predicted.
+Thus, the test statistic \eqref{eqn:zTestStatGeneral} measures how many standard errors the observed statistic is away from the hypothesized parameter.  Relatively large values are indicative of a difference that is likely not due to randomness (i.e., sampling variability) and suggest rejecting the null hypothesis.  There are other forms for calculating test statistics, but all test statistics retain the general idea of scaling the difference between what was observed and what was expected from the null hypothesis in terms of sampling variability.  Even though there is a one-to-one relationship between a test statistic and a p-value, a test statistic is often reported with a hypothesis test to give another feel for the magnitude of the difference between what was observed and what was predicted.
 
 \warn{A test statistic measures how many standard errors the observed statistic is away from the hypothesized parameter.}
 
 
 \section{Hypothesis Testing Concept Summary}\index{Hypothesis Testing!Concept}\index{p-value}\index{alpha@{$\alpha$}}
-In summary, hypothesis tests are statistically examined with the following procedure.
+\vspace{-12pt}
+In summary, hypotheses are statistically examined with the following procedure.
 \begin{Enumerate}
-  \item Construct null and alternative statistical hypotheses from the research hypothesis.
+  \item Construct null and alternative hypotheses from the research hypothesis.
   \item Construct an expected value of the statistic based on the null hypothesis (i.e., assume that the null hypothesis is true).
   \item Calculate an observed statistic from the individuals in a sample.
   \item Compare the difference between the observed statistic and the expected statistic based on the null hypothesis in relation to sampling variability (i.e., calculate a test statistic and p-value).
-  \item Use the $p-value$ to determine if this difference is ``large'' or not .
+  \item Use the $p-value$ to determine if this difference is ``large'' or not.
   \begin{Itemize}
     \item If this difference is ``large'' (i.e., $p-value<\alpha$), then reject the null hypothesis.
     \item If this difference is not ``large'' (i.e., $p-value>\alpha$), then ``Do Not Reject'' the null hypothesis.
   \end{Itemize}
 \end{Enumerate}
 
-When the p-value $>\alpha$, suggesting little evidence against the null hypothesis, you must be very careful to say ``do not reject H$_{0}$'' rather than ``accept H$_{0}$ as true.'' There are two reasons for this very specific choice of words.
-
-First, there are several other possible values, besides the specific value of the null hypothesis, that would lead to ``do not reject'' conclusions.  For example, if a null hypothesized value of 105 was not rejected, then values of 104.99, 104.98, etc. would also likely not be rejected\footnote{In fact, for example, the values in a 95\% confidence interval -- see next section -- represent all possible hypothesized values that would not be rejected with a two-tailed alternative hypothesis using $\alpha=0.05$.}  So, we don't want to say that we ``accept'' a particular hypothesized value when we know many other values would also be ``accepted.''
+Statisticians say ``do not reject H$_{0}$'' rather than ``accept H$_{0}$ as true'' when the p-value $>\alpha$ for two reasons. First, there are several other possible values, besides the specific value in the null hypothesis, that would lead to ``do not reject'' conclusions.  For example, if a null hypothesized value of 105 was not rejected, then values of 104.99, 104.98, etc. would also likely not be rejected\footnote{In fact, for example, the values in a 95\% confidence interval -- see \modref{chap:ConfRegions} -- represent all possible hypothesized values that would not be rejected with a two-tailed $H_{A}$ using $\alpha=0.05$.}  So, we don't say that we ``accept'' a particular hypothesized value when we know many other values would also be ``accepted.''
 
 Second, the null hypothesis is almost always not true.  Consider the null hypothesis of the Square Lake example (i.e., ``that the mean length is 105'').  The mean length of fish in Square Lake is undoubtedly not exactly equal to 105.  It may be 104.9, 105.01, or some other more disparate value.  The point is that the specific value of the hypothesis is likely never true, especially for a continuous variable.  The problem is that it takes large amounts of data to be able to distinguish means that are very close to the true population mean (i.e., it is difficult to distinguish between 104.9 and 105 when sampling variability is present).  Very often we will not take a sample size large enough to distinguish these subtle differences.  Thus, we will say that we ``do not reject H$_{0}$'' because there simply was not enough data to reject it.
 
@@ -273,11 +278,11 @@ The goal of hypothesis testing is to make a decision about $H_{0}$.  Unfortunate
 
 The decision in the Square Lake example above produced a Type II error because $H_{0}:\mu=105$ was not rejected even though we know that $\mu=98.06$ \tabrefp{tab:SquareLakePopn}.  Unfortunately, in real life, it will never be known exactly when a Type I or a Type II error has been made because the true $\mu$ is not known.  However, it is known that a Type I error will be made $100\alpha$\% of the time.  The probability of a type II error ($\beta$), though, is never known because this probability depends on the true $\mu$.  Decisions can be made, however, that affect the magnitude of $\beta$ (discussed below with power).
 
-A concept that is very closely related to decision-making errors is the idea of \textbf{power}.\index{Power}  Power is the probability of correctly rejecting a false $H_{0}$.  In other words, it is the probability of detecting a difference from the hypothesized value if a difference really exists.  That is, power is used to demonstrate how sensitive a hypothesis test is for identifying a difference.  High power related to a $H_{0}$ that is not rejected implies that the $H_{0}$ really should not have been rejected.  Conversely, low power related to a $H_{0}$ that was not rejected implies that the test was very unlikely to detect a difference, so not rejecting $H_{0}$ is not surprising nor particularly conclusive.
+A concept that is very closely related to decision-making errors is the idea of \textbf{power}.\index{Power}  Power is the probability of correctly rejecting a false $H_{0}$.  In other words, it is the probability of detecting a difference from the hypothesized value if a difference really exists.  Power is used to demonstrate how sensitive a hypothesis test is for identifying a difference.  High power related to a $H_{0}$ that is not rejected implies that the $H_{0}$ really should not have been rejected.  Conversely, low power related to a $H_{0}$ that was not rejected implies that the test was very unlikely to detect a difference, so not rejecting $H_{0}$ is not surprising nor particularly conclusive.
 
 \defn{Power}{The probability of correctly rejecting $H_{0}$ when $H_{0}$ was actually false.}
 
-Power is equal to $1-\beta$ and, thus, like $\beta$ it cannot be computed directly.  However, a researcher can make decisions that will positively affect power (\figref{fig:SLPowerRelations}, \appref{app:PowerAnim}).  For example, a researcher can positively impact power by increasing $\alpha$ or by increasing $n$.  Increasing $n$ is a more beneficial alternative as it does not result in an increase in Type I errors as increasing $\alpha$ would.  In addition, power decreases as the difference between the hypothesized mean ($\mu_{0}$) and the actual mean ($\mu_{A}$) decreases.  This means that the ability to detect increasingly smaller differences decreases.  In addition, power decreases with an increasing amount of natural variability (i.e., $\sigma$).  In other words, the ability to detect a difference decreases with increasing amounts of variability among individuals.  A researcher cannot control the difference between $\mu_{0}$ and $\mu_{A}$ or the value of $\sigma$.  However, it is important to know that if a situation with a ``large'' amount of variability is encountered or the difference to be detected is small, the researcher will need to increase $n$ to gain power.
+Power is equal to $1-\beta$ and, thus, like $\beta$ it cannot be computed directly.  However, a researcher can make decisions that will positively affect power \figrefp{fig:SLPowerRelations}.  For example, a researcher can positively impact power by increasing $\alpha$ or $n$.  Increasing $n$ is more beneficial because it does not result in an increase in Type I errors as would occur with increasing $\alpha$.  In addition, power decreases as the difference between the hypothesized mean ($\mu_{0}$) and the actual mean ($\mu_{A}$) decreases.  This means that the ability to detect increasingly smaller differences decreases.  In addition, power decreases with an increasing amount of natural variability (i.e., $\sigma$).  In other words, the ability to detect a difference decreases with increasing amounts of variability among individuals.  A researcher cannot control the difference between $\mu_{0}$ and $\mu_{A}$ or the value of $\sigma$.  However, it is important to know that if a situation with a ``large'' amount of variability is encountered or the difference to be detected is small, the researcher will need to increase $n$ to gain power.
 
 \warn{Power = 1-$\beta$.}
 
@@ -325,7 +330,8 @@ psigma <- power(mu0,muA,sigmas,n,alpha,FALSE)
 plot(sigmas,psigma,type="l",xlab=expression(sigma),ylab="Power",lwd=3,xlim=c(0,max(sigmas)),ylim=ylmts)
 @
 
-Power cannot usually be calculated because the actual mean ($\mu_{A}$) is usually not known.  However, in the Square Lake example, $\mu_{A}$ is known and power can be calculated in four steps:
+\vspace{12pt}
+Power cannot usually be calculated because the actual mean ($\mu_{A}$) is not known.  However, in the Square Lake example, $\mu_{A}$ is known and power can be calculated in four steps:
 \begin{Enumerate}
  \item Draw the sampling distribution assuming the $H_{0}$ is true (called the null distribution).
  \begin{itemize}
@@ -333,26 +339,19 @@ Power cannot usually be calculated because the actual mean ($\mu_{A}$) is usuall
  \end{itemize}
  \item Find the rejection region borders (based on $\alpha$ and $H_{A}$) in terms of the value of the statistic (a ``reverse'' calculation on the null distribution).
  \begin{itemize}
-   \item The rejection region is delineated by the $\bar{x}$ that has $\alpha=0.10$ to the left (because $H_{A}$ is a ``less than'') of it.  The Z with 0.10 to the left of it is -1.282.  Thus, the $\bar{x}$ on the null distribution with 0.10 to the left of it is $-1.282\frac{31.49}{\sqrt{50}}+105 = 99.2908$.
+   \item The rejection region is delineated by the $\bar{x}$ that has $\alpha=0.10$ to the left (because $H_{A}$ is a ``less than'').  The Z with 0.10 to the left of it is -1.282.  Thus, the $\bar{x}$ on the null distribution with 0.10 to the left of it is $-1.282\frac{31.49}{\sqrt{50}}+105 = 99.2908$.
  \end{itemize}
  \item Draw the sampling distribution corresponding to the ``actual'' parameter value (SE is the same as that for the null distribution).
  \begin{itemize}
    \item The actual $\mu$ is 98.06.  Thus, the actual sampling distribution is $N(98.06,\frac{31.49}{\sqrt{50}})$.
  \end{itemize}
- \item Compute the portion of the ``actual'' sampling distribution in the REJECTION region of null distribution (i.e., a ``forward'' calculation on the actual distribution).
+ \item Compute the portion of the ``actual'' sampling distribution in the REJECTION region of the null distribution (i.e., a ``forward'' calculation on the actual distribution).
  \begin{itemize}
    \item This computation is to find the area to the left of 99.2908 on $N(98.06,\frac{31.49}{\sqrt{50}})$.  The corresponding Z is $\frac{99.2908-98.06}{\frac{31.49}{\sqrt{50}}}=0.29$.  The area to the left of this Z is 0.6141.
  \end{itemize}
 \end{Enumerate}
 
-Thus, the power to detect a $\mu_{A}=98.06$ was 0.6141 (the value in \figref{fig:SLPowerCalcEx} is slightly more accurate because the approximate Z table was not used).  This means that only about 61\% of the time will the false $H_{0}:\mu=105$ be correctly rejected.  Thus, it is not too surprising that we did not reject $H_{0}$ in this example.  If $n$ could be doubled to 100, however, the power to correctly reject $H_{0}:\mu=105$ would increase to approximately 0.82 \figrefp{fig:SLPowerRelations}.
-
-%\begin{figure}[htbp]
-% \centering
-%   \includegraphics[width=4in]{Figs/SLPower.png}
-% \caption{The calculation of the power to detect $\mu_{A}=98.06$ in the Square Lake example.}
-%   \label{fig:SLPowerCalcEx}
-%\end{figure}
+Thus, the power to detect a $\mu_{A}=98.06$ was 0.6141.  This means that in only about 61\% of the samples will the false $H_{0}:\mu=105$ be correctly rejected.  Thus, it is not too surprising that $H_{0}$ was not rejected in this example.  If $n$ could be doubled to 100, however, the power to correctly reject $H_{0}:\mu=105$ would increase to approximately 0.82 \figrefp{fig:SLPowerRelations}.
 
 \begin{exsection}
   \item \label{revex:HypTPower1} What is $\beta$ if power=0.875? \ansref{ans:HypTPower1}
