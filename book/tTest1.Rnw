@@ -112,7 +112,7 @@ The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for th
 \begin{minipage}{\textwidth}
 \textbf{R Appendix:}
 \vspace{-6pt}
-<<eval=FALSE>>=
+<<eval=FALSE, prompt=FALSE>>=
 ( distrib(1.87,distrib="t",df=49,lower.tail=FALSE) )
 ( distrib(0.95,distrib="t",type="q",df=49,lower.tail=FALSE) )
 @
@@ -175,7 +175,7 @@ The 11-steps \sectrefp{sec:11Steps} of a hypothesis test for this example are as
 
 \begin{minipage}{\textwidth}
 \textbf{R Appendix:}
-<<eval=FALSE, results='hide',fig.show='hide'>>=
+<<eval=FALSE, results='hide', fig.show='hide', prompt=FALSE>>=
 df <- read.csv("data/CrabTemps.csv")
 <<1tcrabs>>
 @

@@ -18,7 +18,7 @@ set_parent('IntroStats.Rnw')
 \lettrine{S}{ituations where a categorical} response variable is recorded would be summarized with a frequency or percentage table (see Modules \ref{chap:UnivEDACat} and \ref{chap:BivEDACat}).  The appropriate test statistic in these situations is a chi-square rather than a t.  The Chi-Square Test statistic follows a chi-square distribution, which is introduced below.  The rest of this module is dedicated to the general Chi-Square Test where the distribution of a categorical response variable is compared between two or more populations. The related goodness-of-fit test for a categorical response recorded for only one population is introduced in \modref{chap:GOF}.
 
 \vspace{-12pt}
-\section{Chi-Square Distribution}
+\section{Chi-Square Distribution}\label{sect:ChiDist}
 \vspace{-12pt}
 A chi-square ($\chi^2$) distribution is generally right-skewed \figrefp{fig:chiDist}, with the exact shape dictated by the degrees-of-freedom (df; as df increase, the sharpness of the skew decreases; \figref{fig:chiDist}). In its simplest form, the $\chi^2$ distribution arises as a sampling distribution for the $\chi^2$ test statistic,
 
@@ -200,7 +200,7 @@ The 11-steps \sectrefp{sec:11Steps} for a hypothesis test for the Christmas tree
 \begin{minipage}{\textwidth}
 \textbf{R Appendix:}
 \vspace{-6pt}
-<<eval=FALSE>>=
+<<eval=FALSE, prompt=FALSE>>=
 ( distrib(4.927,distrib="chisq",df=1,lower.tail=FALSE) )
 @
 \end{minipage}
@@ -328,7 +328,7 @@ The 11-steps \sectrefp{sec:11Steps} for a hypothesis test for this situation are
 
 \begin{minipage}{\textwidth}
 \textbf{R Appendix:}
-<<eval=FALSE, results='hide', fig.show='hide'>>=
+<<eval=FALSE, results='hide', fig.show='hide', prompt=FALSE>>=
 <<ChiFP>>
 @
 \end{minipage}
@@ -421,7 +421,7 @@ The 11-steps \sectrefp{sec:11Steps} for a hypothesis test for the Northland Coll
 
 \begin{minipage}{\textwidth}
 \textbf{R Appendix:}
-<<eval=FALSE, results='hide', fig.show='hide'>>=
+<<eval=FALSE, results='hide', fig.show='hide', prompt=FALSE>>=
 <<ChiAI>>
 @
 \end{minipage}

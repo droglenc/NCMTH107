@@ -97,7 +97,7 @@ The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for th
 \vspace{-8pt}
 \begin{minipage}{\textwidth}
 \textbf{R Appendix:}
-<<eval=FALSE>>=
+<<eval=FALSE, prompt=FALSE>>=
 ( distrib(10.12,mean=10,sd=1.60/sqrt(100),lower.tail=FALSE) )
 @
 \end{minipage}
@@ -146,7 +146,7 @@ The 11-steps \sectrefp{sec:11Steps} for a hypothesis test for this example are a
 
 \begin{minipage}{\textwidth}
 \textbf{R Appendix:}
-<<results='hide',fig.show='hide'>>=
+<<eval=FALSE, results='hide',fig.show='hide', prompt=FALSE>>=
 <<1Zbtex>>
 @
 \end{minipage}

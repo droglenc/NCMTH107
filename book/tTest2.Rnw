@@ -122,7 +122,7 @@ and
 \begin{minipage}{\textwidth}
 \textbf{R Appendix:}
 \vspace{-6pt}
-<<eval=FALSE>>=
+<<eval=FALSE, prompt=FALSE>>=
 ( distrib(2.207,distrib="t",df=48,lower.tail=FALSE) )
 ( distrib(0.95,distrib="t",type="q",df=48,lower.tail=FALSE) )
 @
@@ -160,7 +160,7 @@ and
 \begin{minipage}{\textwidth}
 \textbf{R Appendix:}
 \vspace{-6pt}
-<<eval=FALSE>>=
+<<eval=FALSE, prompt=FALSE>>=
 ( distrib(-4.348,distrib="t",df=66) )
 ( distrib(0.95,distrib="t",type="q",df=66) )
 @
@@ -269,7 +269,7 @@ The 11-steps \sectrefp{sec:11Steps} for a hypothesis test for this example are a
 
 \begin{minipage}{\textwidth}
 \textbf{R Appendix:}
-<<eval=FALSE, results='hide', fig.show='hide'>>=
+<<eval=FALSE, results='hide', fig.show='hide', prompt=FALSE>>=
 <<2tBOD>>
 @
 \end{minipage}

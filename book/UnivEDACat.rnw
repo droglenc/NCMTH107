@@ -222,8 +222,8 @@ print(xtable(wptbl2,digits=1,caption="Percentage distribution of wetland seeds b
 @
 
 \begin{minipage}{\textwidth}
-R commands:
-<<eval=FALSE>>=
+R Appendix:
+<<eval=FALSE, prompt=FALSE>>=
 ws <- read.csv("data/WetlandSeeds.csv")
 str(ws)
 wtbl <- xtabs(~type,data=ws)

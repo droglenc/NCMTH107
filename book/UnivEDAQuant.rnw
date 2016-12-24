@@ -689,7 +689,7 @@ print(xtable(mstat1,digits=2,caption="Descriptive statistics of mouse water cons
 
 \begin{minipage}{\textwidth}
 R Appendix:
-<<eval=FALSE>>=
+<<eval=FALSE, prompt=FALSE>>=
 setwd("c:/data/")
 mc <- read.csv("MouseData.csv")
 str(mc)
@@ -724,7 +724,7 @@ print(xtable(cstat1,digits=2,caption="Descriptive statistics of crayfish tempera
 
 \begin{minipage}{\textwidth}
 R Appendix:
-<<eval=FALSE>>=
+<<eval=FALSE, prompt=FALSE>>=
 setwd("c:/data/")
 cray <- read.csv("Crayfish.csv")
 str(cray)
