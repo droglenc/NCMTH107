@@ -13,7 +13,7 @@ set_parent('IntroStats.Rnw')
 \end{ChapObj}
 
 \minitoc
-\newpage
+\vspace{24pt}
 
 \lettrine{T}{he chi-square distribution} and the general chi-square test for a categorical response wit two or more populations were introduced in \modref{chap:ChiSquare}. The goodness-of-fit for a categorical response recorded for one population and compared to a theoretical distribution is focus of this module.
 
@@ -105,18 +105,21 @@ These expected frequencies, along with the observed frequencies, are summarized 
 \subsection{Specifics}
 The goodness-of-fit test is characterized by a single categorical variable with two or more levels.\index{Chi-square!Goodness-of-Fit Test}  The hypotheses tested usually cannot be converted to mathematical symbols and are thus ``word'' hypotheses.  Specifics of the goodness-of-fit test are shown in \tabref{tab:ChiGOFspec}.
 
-\begin{table}[htbp]
-  \caption{Characteristics of a goodness-of-fit test.}   \label{tab:ChiGOFspec}
-    \begin{Itemize}
+\begin{table}[h]
+\centering
+\colorbox{ltgray}{
+\begin{minipage}{.8\textwidth}
+  \centering
+	\caption{Characteristics of a goodness-of-fit test.}\label{tab:ChiGOFspec}
+  \begin{Itemize}
       \item \textbf{Hypotheses:} $H_{0}:$``the observed distribution of individuals into the levels follows the `theoretical distribution' ''\\ $H_{A}:$``the observed distribution of individuals into the levels DOES NOT follow the `theoretical distribution' ''
       \item \textbf{Statistic:} Observed frequency table.
-      \vspace{6pt}
-      \item \textbf{Test Stat:} $\chi^{2} = \Sum_{cells}\frac{(Observed-Expected)^{2}}{Expected}$
-      \vspace{6pt}
+      \item \textbf{Test Statistic:} $\chi^{2} = \Sum_{cells}\frac{(Observed-Expected)^{2}}{Expected}$
       \item \textbf{df:} Number of levels minus 1.
-      \vspace{6pt}
       \item \textbf{Assumptions:} Expected value in each level is $\geq5$.
-    \end{Itemize}
+      \item \textbf{When to Use:} Categorical response, one population, comparing to a theoretical distribution.
+  \end{Itemize}
+\end{minipage}}
 \end{table}
 
 As per our usual steps, it is customary to produce a confidence region following the rejection of a null hypothesis.  This is cumbersome in a goodness-of-fit test because there generally is not a single parameter (i.e., there are as many parameters as levels in the variable) for which a single confidence region is computed.  However, there is a method for computing these multiple confidence intervals.  The method will be discussed here but will only be computed ``by hand'' in the situation where there are two levels.  The method will be implemented when using R (as discussed in a subsequent section) no matter the number of levels.

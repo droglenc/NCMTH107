@@ -2,25 +2,29 @@
 set_parent('IntroStats.Rnw')
 @
 
-\chapter[Chi-Square Tests]{Chi-Square Tests} \label{chap:ChiSquare}
+\chapter[Chi-Square Test]{Chi-Square Test} \label{chap:ChiSquare}
 
 \begin{ChapObj}{\boxwidth}
   \textbf{Objectives:}
   \begin{Enumerate}
-    \item Identify when a chi-square test is appropriate.
-    \item Perform the 11 steps of a significance test in a chi-square test situation.
+    \item Identify when a Chi-Square Test is appropriate.
+    \item Perform the 11 steps of a significance test in a Chi-Square Test situation.
   \end{Enumerate}
 \end{ChapObj}
 
 \minitoc
-\newpage
+\vspace{12pt}
 
-\lettrine{S}{ituations where a categorical} response variable is recorded would be summarized with a frequency or percentage table (see Modules \ref{chap:UnivEDACat} and \ref{sect:BivEDACat}).  The appropriate test statistic in these situations is a chi-square rather than a t.  The chi-square test statistic follows a chi-square distribution which is introduced below.  The rest of this module is dedicated to the general chi-square test where a categorical response is compared between two or more populations. The related goodness-of-fit test for a categorical response recorded for only one population is introduced in \modref{chap:GOF}.
+\lettrine{S}{ituations where a categorical} response variable is recorded would be summarized with a frequency or percentage table (see Modules \ref{chap:UnivEDACat} and \ref{chap:BivEDACat}).  The appropriate test statistic in these situations is a chi-square rather than a t.  The Chi-Square Test statistic follows a chi-square distribution, which is introduced below.  The rest of this module is dedicated to the general Chi-Square Test where the distribution of a categorical response variable is compared between two or more populations. The related goodness-of-fit test for a categorical response recorded for only one population is introduced in \modref{chap:GOF}.
 
 \vspace{-12pt}
 \section{Chi-Square Distribution}
 \vspace{-12pt}
-A chi-square ($\chi^2$) distribution is generally right-skewed \figrefp{fig:chiDist}.  The exact shape of the $\chi^2$ distribution depends on the degrees-of-freedom (df), where, as the df increase, the sharpness of the skew decreases \figrefp{fig:chiDist}.
+A chi-square ($\chi^2$) distribution is generally right-skewed \figrefp{fig:chiDist}, with the exact shape dictated by the degrees-of-freedom (df; as df increase, the sharpness of the skew decreases; \figref{fig:chiDist}). In its simplest form, the $\chi^2$ distribution arises as a sampling distribution for the $\chi^2$ test statistic,
+
+\[ \chi^{2} = \Sum_{cells}\frac{(Observed-Expected)^{2}}{Expected} \]
+
+where ``Observed'' and ``Expected'' represent the observed and expected individuals in the cells of frequency tables (see \modref{chap:UnivEDACat} and \modref{chap:BivEDACat}) and ``cells'' generically represents the number of cells in one of these tables.  Thus, the $\chi^2$ distribution arises from comparing the frequencies in two tables.\footnote{Subsequent sections demonstrate how this test statistic is used to compare observed frequencies (i.e., from a sample) to a table of expected frequencies (i.e., from a null hypothesis).}
 
 <<chiDist, echo=FALSE, cache=TRUE, fig.show='animate', fig.cap='$\\chi^2$ distributions with varying degrees-of-freedom.', aniopts='controls,loop,autoplay'>>=
 par(mar=c(3,1,1,1),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
@@ -33,23 +37,16 @@ for (i in 1:10) {
 }
 @
 
-In its simplest form the $\chi^2$ distribution arises as a sampling distribution for the test statistic,
-
-\[ \chi^{2} = \Sum_{cells}\frac{(Observed-Expected)^{2}}{Expected} \]
-
-where ``Observed'' and ``Expected'' represent the observed and expected frequencies of individuals in the cells of summary tables for categorical variables (see \sectref{sect:UEDACategorical} and \sectref{sect:BEDACategorical}) and ``cells'' generically represents the number of cells in one of these tables.  Thus, the $\chi^2$ distribution arises naturally when the frequencies in two tables are being compared.  Subsequent sections will demonstrate how this test statistic is used to compare a table of observed frequencies (i.e., from a sample) to a table of expected frequencies (i.e., from a null hypothesis).
-
-Unlike with the other two distributions that we have seen (normal and t), the $\chi^2$ distribution will always represent the two-tailed situation although the ``two tails'' will appear as one tail on the right side of the distribution.  The simplest explanation for this characteristic is that the ``squaring'' in the calculation of the $\chi^{2}$ test statistic results in what would be the ``negative tail'' being ``folded over'' onto what is the ``positive tail'' providing the appearance of only one tail.  The result of this characteristic is that all area (i.e., probability) calculations on a $\chi^{2}$ will pertain to two-tailed alternative hypotheses.
+Unlike with the other two distributions that we have seen (normal and t), the $\chi^2$ distribution always represents the two-tailed situation, although the ``two tails'' will appear as one tail on the right side of the distribution.  The simplest explanation for this characteristic is that the ``squaring'' in the calculation of the $\chi^{2}$ test statistic results in what would be a ``negative tail'' being ``folded over'' onto what is the ``positive tail.''  Thus, all probability (i.e., area) calculations on a $\chi^{2}$ distribution represent the two-tailed alternative hypotheses.
 
 \warn{Probability calculations on a $\chi^{2}$ distribution always pertain to a two-tailed alternative hypothesis.}
 
-P-values are computed on a $\chi^2$ distribution with \R{distrib()} very similarly to what was described for the normal \sectrefp{sect:ZTest} and t distributions \sectrefp{sect:tDist}.  The first argument to this function is the value of the $\chi^2$ test statistic, the \R{distrib=} argument must be set to \R{"chisq"}, and the \R{type=} argument is \R{"p"}\footnote{The \R{type=} argument defaults to \R{"p"} so it may be omitted when computing a probability.}.  In addition, the df (how to find the df will be discussed in subsequent sections) must also be provided in the \R{df=} argument.  ``More extreme'' on a $\chi^2$ distribution when computing p-values is always into the upper tail.  Thus, all p-value calculations on a $\chi^2$ must use \R{lower.tail=FALSE} in \R{distrib()}.  For example, the area to the right of $\chi^2=6.456$ on a $\chi^2$ distribution with 2 df is \Sexpr{formatC(pchisq(6.456,df=2,lower.tail=FALSE),format="f",digits=4)} \figrefp{fig:chiarea1} and is found with
-
+Proportional areas on a $\chi^2$ distribution are computed using \R{disrib()} similar to what was described for normal and t distributions in Modules \ref{chap:NormDist}, \ref{chap:SamplingDist}, and \ref{chap:tTest1}. The major exceptions for using \R{distrib()} with a $\chi^2$ distribution is that \R{distrib="chisq"} must be used and the degrees-of-freedom must be given to \R{df=} (how to find the df will be discussed in subsequent sections). In addition, if calculating a p-value, then \R{lower.tail=FALSE} is always used because the upper-tail probability represents the two-tailed alternative inherent to all Chi-Square Tests.  For example, the area right of $\chi^2=6.456$ on a $\chi^2$ distribution with 2 df is \Sexpr{formatC(pchisq(6.456,df=2,lower.tail=FALSE),format="f",digits=4)} \figrefp{fig:chiarea1}.
 <<chiarea1, par1a=TRUE, fig.cap="Depiction of the area to the right of $\\chi^2=6.456$ on a $\\chi^2$ distribution with 2 df.">>=
 ( distrib(6.456,distrib="chisq",df=2,lower.tail=FALSE) )
 @
 
-\vspace{-12pt}
+\newpage
 \begin{exsection}
 \vspace{-3pt}
   \item \label{revex:ChiPVal1} What is the p-value if $\chi^{2}=10.25$ and $df=3$? \ansref{ans:ChiPVal1}
@@ -57,39 +54,41 @@ P-values are computed on a $\chi^2$ distribution with \R{distrib()} very similar
   \item \label{revex:ChiPVal3} What is the p-value if $\chi^{2}=10.25$ and $df=6$? \ansref{ans:ChiPVal3}
 \end{exsection}
 
-\section{Chi-Square Test Specifics}
-It is common that one wants to compare the distribution of individuals into the levels of one categorical variable among multiple populations indexed by a second categorical variable.  For example, suppose that researchers want to determine if the proportion of failing students differs between males and females, if the proportion of kids playing sports differs between kids from high- or low-income families, if the distribution of four major plant species differs between two locations, or if the distribution of responses to a five-choice question differs between respondents from neighboring counties.  All of these questions require the collection of data for two categorical variables and making a comparison among two or more populations.  Under these conditions, the goodness-of-fit test is inappropriate.  However, the methods and concepts learned for a goodness-of-fit test are extended to what is called a chi-square test.  The chi-square test is the subject of this section\footnote{The chi-square test presented here is quite flexible and can be derived from different types of hypotheses than those described here.  This section will only deal with this one type of chi-square test hypothesis.}.
 
-\warn{This hypothesis test is called a chi-square test, NOT a chi-square\textbf{D} test.}
+\section{Chi-Square Test Specifics}
+Researchers commonly want to compare the distribution of individuals into the levels of a categorical variable among two or more populations. For example, researchers may want to determine if the disribution of failing students differs between males and females, if the distribution of kids playing sports differs between kids from high- or low-income families, if the distribution of four major plant species differs between two locations, or if the distribution of responses to a five-choice question differs between respondents from neighboring counties.  All of these questions have a categorical response variable (fail o no, play sport or not, plant species, answer to five-choice question) compared among two or more populations (gender, income category, two locations, neighboring counties). The Chi-Square Test, the subject of this module, can be used for each of these situations.\footnote{The Chi-Square Test presented here is quite flexible and can be derived from different types of hypotheses than those described here.}
+
+\warn{A Chi-Square test is used to compare the distribution of responses among two or more populations.}
 
 \subsection{Hypotheses}
-The statistical hypotheses for a chi-square test are, in general, ``wordy.''  Before considering these hypotheses first let's assume that a two-way contingency table (see \sectref{sect:BEDACategorical}) will be used to summarize the data where the rows will correspond to the levels that represent the separate populations and the columns correspond to the different levels of the response variable.  In this organization, the null hypothesis basically says that the row percentage (or proportion) are all equal -- i.e., ``the percentage or proportional distribution of individuals into the levels of the response variable is the same for all populations.''  The alternative hypothesis claims that there is some difference among the row percentages -- i.e., ``the percentage or proportional distribution of individuals into the levels of the response variable is NOT the same for all populations.''
+\vspace{-12pt}
+The statistical hypotheses for a Chi-Square Test are ``wordy.''  To explore this, let's first assume that a two-way frequency table (see \modref{chap:BivEDACat}) will summarize the data where the rows correspond to separate populations and the columns correspond to levels of the response variable.  In this organization, the Chi-Square Test null hypothesis is that the row percentages (or proportions) are equal -- i.e., ``the percentage or proportional distribution of individuals into the levels of the response variable is the same for all populations.''  The alternative hypothesis states that there is some difference among the row percentages -- i.e., ``the percentage or proportional distribution of individuals into the levels of the response variable is NOT the same for all populations.''
 
-In instances where there are only two levels of the categorical response variable the hypotheses may be slightly simpler.  In these instances, the null hypothesis would be ``the proportion of individuals in the level of interest is the same for all populations'' whereas the alternative hypothesis is ``the proportion of individuals in the level of interest is NOT the same for all populations.''
+As one example (more are shown below), consider the following situation,
 
-As one example (more will be shown below), consider the following situation,
-
+\vspace{-12pt}
 \begin{quote}
-\textsl{An association of Christmas tree growers in Indiana sponsored a survey of Indiana households to help improve the marketing of Christmas trees.  In telephone surveys of 421 households they found 160 households in rural areas and 261 households in urban areas.  Of the rural households, 64 had a natural tree (as compared to an artificial tree).  Of the urban households, 89 had a natural tree.  Use these results to determine, at the 10\% level, if the proportion of households with a natural tree differs between rural and urban households.}
+\textsl{An association of Christmas tree growers in Indiana sponsored a survey of Indiana households to help improve the marketing of Christmas trees.  In telephone surveys of 421 households they found 160 households in rural areas and 261 households in urban areas.  Of the rural households, 64 had a natural tree (as compared to an artificial tree).  Of the urban households, 89 had a natural tree.  Use these results to determine, at the 10\% level, if the distribution of households with a natural tree differed between rural and urban households.}
 \end{quote}
 
-In this case there are two populations (rural and urban areas) and only two levels of the response variable (natural or artificial tree).  Thus, the best way to write the hypotheses for this situation is,
+The hypotheses for this situation are,
 \[ \begin{split}
-  H_{0}&: \text{``the proportion of households with a natural tree is the same for urban and rural households''} \\
-  H_{A}&: \text{``the proportion of households with a natural tree is NOT the same for urban and rural households''}
+  H_{0}&: \text{``the distrubution of households into the tree types is the same for urban and rural households''} \\
+  H_{A}&: \text{``the distrubution of households into the tree types is NOT the same for urban and rural households''}
 \end{split} \]
 
 
 \subsection{Tables}
-As noted above, all two-way contingency tables used for a chi-square analysis will be organized such that the categorical response variable forms the columns and the variable that defines the populations forms the rows.  With this organization, the row-percentage table becomes the table of primary interest in a chi-square test because it relates directly to the hypotheses described above.  The question of a chi-square test then becomes one of determining whether each row of the row-proportions table is equal given sampling variability.
+\vspace{-12pt}
+As noted above, all two-way frequency tables used for a Chi-Square Test will be organized such that the response variable forms the columns and the populations form the rows.  With this organization, the row-percentage table becomes the table of primary interest because it relates directly to the hypotheses described above.  The question of a Chi-Square Test then becomes one of determining whether each row of the row-percentage table is equal given sampling variability.
 
-\warn{In a chi-square test the categorical variable used to identify the population that an individual belongs to forms the rows of the summary two-way contingency table.  Each chi-square test is then a test of whether or not each row in the row-percentage table is equivalent given sampling variability.}
+\warn{For Chi-Square Tests, the populations form the rows of the two-way frequency table such that the Chi-Square Test becomes a test of whether or not each row in the row-percentage table is equivalent given sampling variability.}
 
-The observed raw data must be organized into a two-way observed table using the methods described in \sectref{sect:BEDACategorical}.  For example, the Christmas tree data is summarized in a two-way table as shown in \tabref{tab:ChiTreeObs}.  The actual calculations for a chi-square test are performed on this observed table.  However, the hypothesis test, as described above, is best viewed as a method for determining if each row in the row-percentage table is statistically equivalent or not.  Thus, it is often useful for interpretation of the test results to examine the row-percentage table computed from the observed counts \tabrefp{tab:ChiTreeObsProp}.
+The observed raw data must be organized into a two-way frequency table as described in \modref{chap:BivEDACat}.  For example, the Christmas tree data is summarized as in \tabref{tab:ChiTreeObs}.  The actual calculations for a Chi-Square Test are performed on this observed table.  However, the hypothesis test, as described above, is best viewed as a method to determine if each row of the row-percentage table is statistically equivalent or not.  Thus, the row-percentage table computed from the frequency table is useful when interpreting the results of a Chi-Square Test \tabrefp{tab:ChiTreeObsProp}.
 
 \begin{table}[htbp]
   \centering
-  \caption{Contingency table showing the observed frequency of individuals in urban and rural households that have a natural or an artificial Christmas tree.}\label{tab:ChiTreeObs}
+  \caption{Frequency of individuals in urban and rural households that have a natural or an artificial Christmas tree.}\label{tab:ChiTreeObs}
     \begin{tabular}{c|c|c|c|}
       \multicolumn{1}{c}{} & \multicolumn{2}{c}{Tree Type} & \multicolumn{1}{c}{} \\
       \cline{2-3}
@@ -106,7 +105,7 @@ The observed raw data must be organized into a two-way observed table using the 
 
 \begin{table}[htbp]
   \centering
-  \caption{Contingency table showing the observed (row) percentage of individuals within urban and rural households that have a natural or an artificial Christmas tree.}\label{tab:ChiTreeObsProp}
+  \caption{Percentage of individuals within urban and rural households that have a natural or an artificial Christmas tree.}\label{tab:ChiTreeObsProp}
     \begin{tabular}{c|c|c|c|}
       \multicolumn{1}{c}{} & \multicolumn{2}{c}{Tree Type} & \multicolumn{1}{c}{} \\
       \cline{2-3}
@@ -121,25 +120,22 @@ The observed raw data must be organized into a two-way observed table using the 
     \end{tabular}
 \end{table}
 
-As with all chi-square tests, a corresponding table of expected values, derived from the null hypothesis, must be constructed.\index{Chi-square!Expected Table}  Unlike with the goodness-of-fit test the expected table in a chi-square test does not obviously come from a theoretical distribution.  The expected table in a chi-square test is derived from the margins of the observed table and is best seen through an illustrative example.
+The Chi-Square Test requires constructing a table of expected values that is derived from the null hypothesis.\index{Chi-square!Expected Table} Specifically, the ``expected'' table contains the expected frequency of individuals in each level of the response variable for each population assuming that the distribution of responses does not differ among populations. These expected table are computed from the margins of the observed table, but are best explained with an illustrative example.
 
-In the Christmas tree example, the null hypothesis states that there is no difference between the rural and urban areas in the proportion of households with a natural tree.  Thus, under this null hypothesis, one would expect the proportion of households with a natural tree to be same in both groups.  This common proportion is estimated with the proportion of both urban and rural households with a natural tree -- i.e., $\frac{153}{421}$=$0.363$.  Under the null hypothesis, the proportion of rural and the proportion of urban households with a natural tree is $0.363$.  Because there is a different number of urban and rural households in the study, the actual NUMBER (rather than proportion) of households expected to have a natural tree will differ.  The NUMBER of urban households expected to HAVE a natural tree is found by multiplying the number of urban households by the combined proportion computed above -- i.e., $261*0.363$=$94.743$.  The remaining urban households would be expected to NOT have a natural tree -- i.e., $261-94.743$=$261(1-0.363)$=$166.257$.  Similar calculations are made for the rural households as follows:
-\begin{Itemize}
-  \item $160*0.363=58.08$ rural households to have a natural tree.
-  \item $160*(1-0.363)=101.92$ rural households to NOT have a natural tree.
-\end{Itemize}
+In the Christmas tree example, the null hypothesis states that there is no difference in the distribution of households with a natural tree between the rural and urban areas.  Thus, under this null hypothesis, one would expect the proportion of households with a natural tree to be the same in both groups.  The proportion of households with a natural tree, regardless of location, is $\frac{153}{421}$=$0.363$.  Thus, under the null hypothesis, the proportion of rural AND the proportion of urban households with a natural tree is $0.363$.  Because there is a different number of urban and rural households in the study, the actual NUMBER (rather than proportion) of households expected to have a natural tree will differ.  The NUMBER of urban households expected to HAVE a natural tree is found by multiplying the number of urban households by the common proportion computed above -- i.e., $261*0.363$=$94.743$.  The remaining urban households would be expected to NOT have a natural tree -- i.e., $261-94.743$=$261(1-0.363)$=$166.257$.  Similar calculations are made for the rural households (i.e., $160*0.363=58.08$ expected to have a natural tree and $160*(1-0.363)=101.92$ expected to NOT have a natural tree.
 
-These expected frequencies are computed directly and easily from the marginal totals of the original observed frequency table \tabrefp{tab:ChiTreeObs}.  For example, when the fractional representation of the decimal proportions are substituted into the calculation for the expected number of urban households with a natural tree that calculation becomes $261*\frac{153}{421}$=$\frac{261*153}{421}$.  A close examination of this formula and the marginal totals in \tabref{tab:ChiTreeObs} shows that this value is equal to the product of the corresponding row and column marginal totals in the observed table divided by the total number of individuals.  The other expected values are as follows,
+These expected frequencies are computed directly and easily from the marginal totals of the observed frequency table \tabrefp{tab:ChiTreeObs}.  For example, substituting the fractional representation of the decimal proportions into the calculation of the expected number of urban households with a natural tree gives $261*\frac{153}{421}$=$\frac{261*153}{421}$.  A close examination of this formula and the marginal totals in \tabref{tab:ChiTreeObs} shows that this value is equal to the product of the corresponding row and column marginal totals in the observed table divided by the total number of individuals.  The other expected values follow a similar pattern as follows,
 \begin{Itemize}
   \item $261*\frac{268}{421}=\frac{261*268}{421}=166.147$ urban households to NOT have a natural tree.
   \item $160*\frac{153}{421}=\frac{160*153}{421}=58.147$ rural households to have a natural tree.
   \item $160*\frac{268}{421}=\frac{160*268}{421}=101.853$ rural households to NOT have a natural tree.
 \end{Itemize}
-All of these expected value calculations follow the same general rule -- multiply the row and column totals and divide by the total number of individuals.  These expected values are summarized in a two-way table, called the expected frequencies table \tabrefp{tab:ChiTreeExp}.
+
+Thust, all expected values in a Chi-Square test can be calculated multiplying the row and column totals of the frequency table and dividing by the total number of individuals.  These expected values are summarized in a two-way table, called the expected frequencies table \tabrefp{tab:ChiTreeExp}.
 
 \begin{table}[htbp]
   \centering
-  \caption{Contingency table showing the expected frequency of individuals in urban and rural households that have a natural or an artificial Christmas tree.}\label{tab:ChiTreeExp}
+  \caption{The expected frequency of individuals in urban and rural households that have a natural or an artificial Christmas tree.}\label{tab:ChiTreeExp}
     \begin{tabular}{c|c|c|c|}
       \multicolumn{1}{c}{} & \multicolumn{2}{c}{Tree Type} & \multicolumn{1}{c}{} \\
       \cline{2-3}
@@ -154,75 +150,61 @@ All of these expected value calculations follow the same general rule -- multipl
     \end{tabular}
 \end{table}
 
-\subsection{Specifics}\index{Chi-square!Hypothesis Test}
-The chi-square test is characterized by categorical data of two or more categories recorded for two or more populations.  The specifics of the chi-square test are identified in \tabref{tab:Chispec}.
+\warn{Expected frequencies are computed by multiplying observed row and column marginal totals and dividing by the total number of individuals.}
 
-\begin{table}[htbp]
-  \caption{Characteristics of a chi-square test.}
-  \label{tab:Chispec}
-    \begin{Itemize}
-      \item \textbf{Null Hypothesis:} ``The proportional distribution of individuals into the levels of the response variable is the same for all populations''
-      \item \textbf{Alternative Hypothesis:} ``The proportional distribution of individuals into the levels of the response variable is NOT the same for all populations.''
+\subsection{Specifics}\index{Chi-square!Hypothesis Test}
+\vspace{-12pt}
+The Chi-Square Test is characterized by a categorical response variable recorded for two or more populations.  The specifics of the Chi-Square Test are identified in \tabref{tab:Chispec}.
+
+\begin{table}[h]
+\centering
+\colorbox{ltgray}{
+\begin{minipage}{.8\textwidth}
+  \centering
+	\caption{Characteristics of a Chi-Square Test.}\label{tab:Chispec}
+  \begin{Itemize}
+      \item \textbf{Null Hypothesis:} ``The distribution of individuals into the levels of the response variable is the same for all populations''
+      \item \textbf{Alternative Hypothesis:} ``The distribution of individuals into the levels of the response variable is NOT the same for all populations.''
       \item \textbf{Statistic:} Observed frequency table.
-      \vspace{6pt}
-      \item \textbf{Test Stat:} $\chi^{2} = \Sum_{cells}\frac{(Observed-Expected)^{2}}{Expected}$
-      \vspace{6pt}
+      \item \textbf{Test Statistic:} $\chi^{2} = \Sum_{cells}\frac{(Observed-Expected)^{2}}{Expected}$
       \item \textbf{df:} $(r-1)(c-1)$ where $r=$ number of rows and $c=$ number of columns
-      \vspace{6pt}
       \item \textbf{Assumptions:} Expected value for each category is $\geq5$.
-    \end{Itemize}
+      \item \textbf{When to Use:} Categorical response, two or more populations.
+  \end{Itemize}
+\end{minipage}}
 \end{table}
 
-In general, confidence intervals are not constructed in relation to a chi-square test because of the complexity of the parameter (i.e., same size as the observed table).  Thus, in this book, step 11 will never be computed for a chi-square test.
+In general, confidence intervals are not constructed with a Chi-Square Test because of the complexity of the parameter (i.e., same size as the observed table).  Thus, in this course, Step 11 for a hypothesis test will not be computed for a Chi-Square Test.
 
-\warn{Step 11 will not be computed for a chi-square test.}
+\warn{Step 11 is not be computed for a Chi-Square Test.}
 
 \subsection{Example -- Christmas Trees}
-The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for the Christmas tree example presented at the beginning of this module are as follows:
-  \begin{enumerate}
-    \item As stated, $\alpha$ should be set at 0.10.
-    \item The $H_{0}$: ``the proportion of households with a natural tree is the same for urban and rural households'' versus $H_{A}$: ``the proportion of households with a natural tree is NOT the same for urban and rural households.''
-    \item A chi-square test is required because a categorical response variable with two levels (natural and artificial trees) measured on two populations (urban and rural households) was taken and the distribution of responses is being compared among populations in the null hypothesis.
-    \item The data appear to be part of an observational study with no clear indication of randomization.  The observed frequencies are shown in the following table,
-      \begin{center}
-        \begin{tabular}{c|c|c|c|}
-          \multicolumn{1}{c}{} & \multicolumn{2}{c}{Tree Type} & \multicolumn{1}{c}{} \\
-          \cline{2-3}
-          Household & Natural & Artificial & \multicolumn{1}{c}{} \\
-          \hline
-          \multicolumn{1}{|c|}{Urban} & 89 & 172 & \textbf{261} \\
-          \hline
-          \multicolumn{1}{|c|}{Rural} & 64 & 96 & \textbf{160} \\
-          \hline
-           & \textbf{153} & \textbf{268} & \textbf{421} \\
-          \cline{2-4}
-        \end{tabular}
-      \end{center}
-    \item The expected frequency for each cell is shown in the table below,
-      \begin{center}
-        \begin{tabular}{c|c|c|c|}
-          \multicolumn{1}{c}{} & \multicolumn{2}{c}{Tree Type} & \multicolumn{1}{c}{} \\
-          \cline{2-3}
-          Household & Natural & Artificial & \multicolumn{1}{c}{} \\
-          \hline
-          \multicolumn{1}{|c|}{Urban} & 94.853 & 166.147 & \textbf{261} \\
-          \hline
-          \multicolumn{1}{|c|}{Rural} & 58.147 & 101.853 & \textbf{160} \\
-          \hline
-           & \textbf{153} & \textbf{268} & \textbf{421} \\
-          \cline{2-4}
-        \end{tabular}
-      \end{center}
-      The expected count in each of the four cells of the table is greater than five.  Thus, the assumptions are met and the test statistic computed below should reasonably follow a $\chi^{2}$distribution.
-    \item The statistic is the observed frequency table shown in Step 4 above.
-    \item The test statistic is $\chi^{2}$ = $\frac{(89-94.853)^{2}}{94.853}$ + $\frac{(172-166.147)^{2}}{166.147}$ + $\frac{(64-58.147)^{2}}{58.147}$ + $\frac{(96-101.853)^{2}}{101.853}$ = $0.3611+0.2062+0.5891+0.3363$ = $1.4927$ with 1 df.
-    \item The p-value is \Sexpr{kPvalue(pchisq(4.927,df=1,lower.tail=FALSE))}.
-<<fig.show='hide'>>=
+\vspace{-12pt}
+The 11-steps \sectrefp{sec:11Steps} for a hypothesis test for the Christmas tree example are as follows:
+\vspace{-12pt}
+  \begin{Enumerate}
+    \item $\alpha$=0.10.
+    \item $H_{0}$: ``distribution of households with a natural tree is the same for urban and rural households'' vs. $H_{A}$: ``distribution of households with a natural tree is NOT the same for urban and rural households.''
+    \item A Chi-Square Test is required because (i) a categorical response variable was recorded (type of tree) and (ii) two populations were sampled (urban and rural households).
+    \item The data appear to be part of an observational study with no clear indication of randomization.
+    \item The expected frequency in each of the four cells is greater than five \tabrefp{tab:ChiTreeObs}.
+    \item The observed frequency table is in \tabref{tab:ChiTreeObs}.
+    \item $\chi^{2}$ = $\frac{(89-94.853)^{2}}{94.853}$ + $\frac{(172-166.147)^{2}}{166.147}$ + $\frac{(64-58.147)^{2}}{58.147}$ + $\frac{(96-101.853)^{2}}{101.853}$ = $0.3611+0.2062+0.5891+0.3363$ = $1.4927$ with 1 df.
+    \item p-value=\Sexpr{kPvalue(pchisq(4.927,df=1,lower.tail=FALSE),include.p=FALSE)}.
+    \item $H_{0}$ is not rejected because the p-value is $>\alpha$.
+    \item There does not appear to be a significant difference between the distribution of rural and the distribution of urban households that have a natural Christmas tree.
+    \item Not performed for Chi-Square Test.
+  \end{Enumerate}
+
+\vspace{-6pt}
+\begin{minipage}{\textwidth}
+\textbf{R Appendix:}
+\vspace{-6pt}
+<<eval=FALSE>>=
 ( distrib(4.927,distrib="chisq",df=1,lower.tail=FALSE) )
 @
-    \item The $H_{0}$ is not rejected because the p-value is $>\alpha$.
-    \item There does not appear to be a significant difference between the proportion of rural and the proportion of urban households that have a natural Christmas tree.
-  \end{enumerate}
+\end{minipage}
+
 
 \begin{exsection}
   \item \label{revex:ChiCyprin} Researchers in Asia (Roberts, 2000) wanted to describe the distribution of the fish genera Cyprinidae in Asian rivers.  They collected 228 fish from the Brahmaputra, Irrawaddy, and Salween rivers and recorded whether the fish was a member of the Cyprinidae family or not.  Because the rivers were relatively equal in size, they expected the same proportions of Cyprinidae in each of the rivers.  Using the data in the table below, test to see if there was a difference in the proportion of Cyprinidae among the rivers at the 5\% level. \ansref{ans:ChiCyprin}
@@ -264,14 +246,14 @@ The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for th
 
 
 \section{Chi-Square Test in R}
+\vspace{-12pt}
 \subsection{Data Format}
-As with the goodness-of-fit test, the data for a chi-square test are entered from summarized data or computed from ``raw'' data on individuals.  The raw individual data must be in the stacked format where one column in the data frame represents the response variable and another column represents the variable that denotes the populations.  The raw data must be summarized into a two-way frequency table with \R{table()} as described in \sectref{sect:BEDACategorical} and saved into an object.  The two-way table must contain frequencies and not proportions or percentages (so don't use \R{percTable()}) and must not contain the marginal totals (so don't use \R{addMargins()}).
+\vspace{-12pt}
+The data for a Chi-Square Test may be entered from summarized data or computed from raw data on individuals.  Raw data must be in stacked format where one column in the data.frame represents the response variable and another column represents the populations (see Sections \ref{sect:REnterData} and \ref{sect:2tData}). Raw data must be summarized into a two-way frequency table with \R{xtabs()} as described in \modref{chap:BivEDACat}.  The two-way table must contain frequencies, not proportions or percentages (don't use \R{percTable()}), without marginal totals (don't use \R{addMargins()}).
 
-In contrast to the goodness-of-fit test, the summarized data must be entered into a two-dimensional \textbf{matrix} rather than a one-dimensional vector.  The creation of a matrix first requires that the summarized data be entered into a vector such that the values that will be the first row of the matrix are followed by the values that will form the second row which are followed by the values that will form the third row and so on\footnote{The data could be entered such that the values in the first column are followed by the values in the second column and so on, but it is generally easier to enter the values as if you were reading a paragraph -- left-to-right, top-to-bottom.}.  This vector of values will serve as the first argument to \R{matrix()}.  Additionally, \R{matrix()} should include the number of rows to be in the final matrix in the \R{nrow=} argument and \R{byrow=TRUE} to indicate that the values in the vector should be entered into the matrix in a row-wise manner.
+Summarized data must be entered into a two-dimensional \textbf{matrix}with \R{matrix()}.  The frequencies must first be entred into a vector with the first row of values followed by second row and so on.  This vector is then the first argument to \R{matrix()}, which will also include the number of rows in the frequency table in \R{nrow=} and \R{byrow=TRUE} (indicate that the values in the vector should be entered into the matrix in a row-wise manner). The process of entering summarized data into a matrix is better explained by example.
 
-\warn{Observed frequencies are entered into a matrix by first entering the data into a vector such that the values in any row follow the values of the row that preceded it.}
-
-The process of entering summarized data into a matrix is better explained by example.  Suppose that you are given the observed frequencies shown in this table.
+Suppose that you are given this observed frequency table.
 
 \begin{center}
   \begin{tabular}{c|c|c|c|c|c|c|c|}
@@ -288,14 +270,13 @@ The process of entering summarized data into a matrix is better explained by exa
   \end{tabular}
 \end{center}
 
-The observed frequencies, ignoring the marginal sums, are entered into an R object with the following code (notice how the values from the second row follow the values from the first row),
+The observed frequencies, ignoring the marginal sums, are first entered into a vector called \R{freq} below, which is then transformed into a matrix called \R{obstbl}.
 <<>>=
-# put frequencies into a vector first
 ( freq <- c(34,22,14,13,12,5,62,12,8,7,6,5) )
-# allocate those frequencies by row to a matrix with two rows
 ( obstbl <- matrix(freq,nrow=2,byrow=TRUE) )
 @
-It would be better if the rows and columns of this matrix were named.  Following the construction of the matrix, the rows and columns of the matrix are named with \R{rownames()} and \R{colnames()}, respectively.  Each of these functions uses the named matrix object as its only argument and it is assigned a vector that contains the desired names of the rows and columns, respectively.  The vector of names must have exactly as many names as there are rows and columns.  The rows and columns of the \R{obstbl} object created above are named with,
+
+The matrix is more informative if the rows and columns are named. The following use of \R{rownames()} and \R{colnames()} illustrates how to label the rows and columns of the \R{obstbl} matrix, respectively.
 <<>>=
 rownames(obstbl) <- c("DI","BP")
 colnames(obstbl) <- c("A","B","C","D","E","F")
@@ -303,52 +284,105 @@ obstbl
 @
 
 \subsection{Chi-Square Test}
-The chi-square test is performed with \R{chisq.test()}.  The table of summary results, either entered through \R{matrix()} or generated through \R{table()}, is the first argument to this function.  The only other argument that may be needed is the \R{correct=} argument for applying the continuity correction as described for the goodness-of-fit test.  As per usual, the results of \R{chisq.test()} should be assigned to an object so that the observed table, expected table, and a visual of the p-value can be easily extracted.
+\vspace{-12pt}
+The Chi-Square Test is performed with \R{chisq.test()}, which takes an observed frequency table either entered through \R{matrix()} or summarized with \R{xtabs()} as the first argument.  The only other argument needed is \R{correct=FALSE} so that the continuity correction is not used.\footnote{The continuity correction is not used here simply so that the results using R will match hand-calculations. The continuity correction should usually be used.} The results of \R{chisq.test()} should be assigned to an object. The Chi-Square test statistic and p-value are extracted by simply printing the saved object. The expected frequency table is returned by appending \R{\$expected} to the saved object.
 
 \subsection{Post-Hoc Analysis}
-Rejecting the null hypothesis in a chi-square test indicates that there is some difference in the distribution of individuals into the levels of the response variable among some of the populations.  However, rejecting the null hypothesis does not indicate which populations are different.  In addition, as mentioned previously, confidence intervals are generally not performed with a chi-square test\footnote{It won't be done in this book, but a common exception to this rule is to compute a confidence interval for the difference in proportions when there are only two levels of the response variable and two populations.}.  A post-hoc method for helping determine which populations are different following the rejection of a null hypothesis is obtained by observing the so-called Pearson residuals.
+\vspace{-12pt}
+Rejecting the null hypothesis in a Chi-Square Test indicates that there is some difference in the distribution of individuals into the levels of the response variable among some of the populations.  However, rejecting the null hypothesis does not indicate which populations are different.  In addition, as mentioned previously, confidence intervals are generally not performed with a Chi-Square Test.  A post-hoc method for helping determine which populations differ is obtained by observing the Pearson residuals.
 
 A Pearson residual is computed for each cell in the table as,
 
 \[ \frac{Observed-Expected}{\sqrt{Expected}} \]
 
-which is basically the appropriately signed square root of the parts in the $\chi^2$ test statistic calculation.  Therefore, cells that have Pearson residuals far from zero have contributed substantially to the large $\chi^2$ test statistic that resulted in a small p-value and the ultimate rejection of $H_{0}$.  Patterns in where the large Pearson residuals are found may allow one to qualitatively determine which populations differ and, thus, which levels of the response differ the most.  This process will be illustrated more fully in the examples and review exercises.  The Pearson residuals are obtained from the saved \R{chisq.test()} object by appending \R{\$residuals} to the object name -- e.g., \R{chi.result\$residuals}.
+which is the appropriately signed square root of the parts in the $\chi^2$ test statistic calculation.  Therefore, cells that have Pearson residuals far from zero contributed substantially to the large $\chi^2$ test statistic that resulted in a small p-value and the ultimate rejection of $H_{0}$.  Patterns in where the large Pearson residuals are found may allow one to qualitatively determine which populations differ and, thus, which levels of the response differ the most.  This process will be illustrated more fully in the examples and review exercises.  The Pearson residuals are obtained from the saved \R{chisq.test()} object by appending \R{\$residuals}.
 
 \subsection{Example - Father Present at Birth}
+\vspace{-12pt}
 Consider this situation,
 \begin{quote}
 \textsl{Daniel Weiss (in ``100\% American'') reported the results of a survey of 300 first-time fathers from four different hospitals (labeled as A, B, C, and D).  Each father was asked if he was present (or not) in the delivery room when his child was born.  The results of the survey are in \href{https://raw.githubusercontent.com/droglenc/NCData/master/FatherPresent.csv}{FatherPresent.csv}.  Use these data to determine if there is a difference, at the 5\% level, in the proportion of fathers present in the delivery room among the four hospitals.}
 \end{quote}
 
-The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for this situation are as follows:
-  \begin{enumerate}
-    \item As stated, $\alpha$ should be set at 0.05.
-    \item The $H_{0}$:``The proportion of fathers present during the birth of their child is the same for all four hospitals'' versus $H_{A}:$ ``The proportion of fathers present during the birth of their child is NOT the same for all four hospitals.''
-    \item A chi-square test is required because a categorical variable with two levels (present or absent) was measured on four populations (the hospitals) and the distributions into the levels is being compared among populations in the null hypothesis.
-    \item The data appear to be part of an observational study with no clear indication of randomization (likely a voluntary response survey).  The raw data were loaded into R with
-<<>>=
+<<ChiFP, echo=FALSE, results='hide', fig.show='hide'>>=
 fp <- read.csv("data/FatherPresent.csv")
-str(fp)
-@
-    \item The observed table was constructed, saved, and submitted to \R{chisq.test} for, at this stage, observing the expected frequency table.
-<<>>=
 ( fp.obs <- xtabs(~hospital+father,data=fp) )
-fp.chi <- chisq.test(fp.obs)
+( fp.chi <- chisq.test(fp.obs) )
+fp.chi$expected
+percTable(fp.obs,margin=1,digits=1)
+@
+
+The 11-steps \sectrefp{sec:11Steps} for a hypothesis test for this situation are as follows:
+  \begin{Enumerate}
+    \item $\alpha$=0.05.
+    \item $H_{0}$:``distribution of fathers presence (or not) during the birth of their child is the same for all four hospitals'' vs. $H_{A}:$ ``the distribution of fathers presence during the birth of their child is NOT the same for all four hospitals.''
+    \item A Chi-Square Test is required because (i) a categorical variable (present or absent) was recorded and (ii) four populations were sampled (the hospitals).
+    \item The data appear to be part of an observational study with no clear indication of randomization (likely a voluntary response survey).
+    \item There are at least five individuals in each cell of the expected table \tabrefp{tab:ChiFPexp}.
+    \item The statistic is the observed frequency table \tabrefp{tab:ChiFPobs}.
+    \item $\chi^{2}$=\Sexpr{formatC(fp.chi$statistic,format="f",digits=0)} with \Sexpr{fp.chi$parameter} df \tabrefp{tab:ChiFPchi}.
+    \item p-value=\Sexpr{kPvalue(fp.chi$p.value,include.p=FALSE)} \tabrefp{tab:ChiFPchi}.
+    \item $H_{0}$ is not rejected because the p-value is $>\alpha$.
+    \item There does not appear to be a significant difference between the distribution of father's presence at their child's birth and the hospital where that birth occurred.  For comparative purposes, the row-percentage table is in \tabref{tab:ChiFProw}.
+  \end{Enumerate}
+
+\begin{minipage}{\textwidth}
+\textbf{R Appendix:}
+<<eval=FALSE, results='hide', fig.show='hide'>>=
+<<ChiFP>>
+@
+\end{minipage}
+
+\begin{table}[h]
+  \caption{Expected frequency table the Chi-Square Test for differences in father's presence during child birth among four hospitals.}
+  \label{tab:ChiFPexp}
+  \vspace{-12pt}
+<<echo=FALSE, background='white'>>=
 fp.chi$expected
 @
-The test statistic computed below should reasonably follow a $\chi^{2}$distribution, because there are at least five individuals in each cell of the expected table shown above.
-    \item The statistic is the observed frequency table shown in the output of Step 5 above.
-    \item The test statistic is $\chi^{2}$=\Sexpr{formatC(fp.chi$statistic,format="f",digits=0)} with \Sexpr{fp.chi$parameter} df as seen with
-<<>>=
-fp.chi
+\end{table}
+
+\begin{table}[h]
+  \caption{Observed frequency table the Chi-Square Test for differences in father's presence during child birth among four hospitals.}
+  \label{tab:ChiFPobs}
+  \vspace{-12pt}
+<<echo=FALSE, background='white'>>=
+fp.obs
 @
-    \item The p-value is \Sexpr{kPvalue(fp.chi$p.value)} as seen in the results above.
-    \item The null hypothesis is not rejected because the p-value is $>\alpha$.
-    \item There does not appear to be a significant difference between the proportion of fathers that were present at their child's birth and the hospital where that birth occurred.  For comparative purposes, the row-percentage table is seen with
-<<>>=
-percTable(fp.obs,margin=1,digits=2)
+\end{table}
+
+\begin{table}[h]
+  \caption{Results from the Chi-Square Test for differences in father's presence during child birth among four hospitals.}
+  \label{tab:ChiFPchi}
+  \vspace{-12pt}
+<<echo=FALSE, background='white'>>=
+kHtest(fp.chi)
 @
-  \end{enumerate}
+\end{table}
+
+\begin{table}[h]
+  \caption{Percentage of father's presence during child birth among four hospitals.}
+  \label{tab:ChiFProw}
+  \vspace{-12pt}
+<<echo=FALSE, background='white'>>=
+percTable(fp.obs,margin=1,digits=1)
+@
+\end{table}
+
+
+<<ChiAI, echo=FALSE, results='hide', fig.show='hide', warning=FALSE>>=
+freq <- c(34,22,14,13,12,5,62,12,8,7,6,5)
+ai.obs <- matrix(freq,nrow=2,byrow=TRUE)
+rownames(ai.obs) <- c("DI","BP")
+colnames(ai.obs) <- c("A","B","C","D","E","F")
+( ai.chi <- chisq.test(ai.obs) )
+ai.chi$expected
+ai.chi$residuals
+percTable(ai.obs,margin=1,digits=1)
+ai.obs1 <- ai.obs[,-1]
+( ai.chi1 <- chisq.test(ai.obs1) )
+@
+
 
 \subsection{Example - Apostle Islands Plants}
 Consider this situation,
@@ -371,47 +405,65 @@ Consider this situation,
   \end{tabular}
 \end{center}
 
-The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for the Northland College student's Senior Capstone example above is as follows
-  \begin{enumerate}
-    \item As stated, $\alpha$ should be set at 0.05.
-    \item The $H_{0}$: ``The distribution of dominant plants species is the same between Devil's Island and the Bayfield Peninsula'' versus $H_{A}$: ``The distribution of dominant plants species is NOT the same between Devil's Island and the Bayfield Peninsula.''
-    \item A chi-square test is required because a categorical variable with six levels (plant species) was measured on two populations (Devil's Island and Bayfield Peninsula) and the distributions are being compared in the null hypothesis.
-    \item The data appear to be part of an observational study where the plots were randomly selected.  The observed frequency table given in the background information was entered into R with
-<<>>=
-freq <- c(34,22,14,13,12,5,62,12,8,7,6,5)
-ai.obs <- matrix(freq,nrow=2,byrow=TRUE)
-rownames(ai.obs) <- c("DI","BP")
-colnames(ai.obs) <- c("A","B","C","D","E","F")
-ai.obs
+The 11-steps \sectrefp{sec:11Steps} for a hypothesis test for the Northland College student's Senior Capstone example above is as follows
+  \begin{Enumerate}
+    \item $\alpha$=0.05.
+    \item $H_{0}$: ``the distribution of dominant plants species is the same between Devil's Island and the Bayfield Peninsula'' vs. $H_{A}$: ``the distribution of dominant plants species is NOT the same between Devil's Island and the Bayfield Peninsula.''
+    \item A Chi-Square Test is required because (i) a categorical variable with six levels (plant species) was recorded and (ii) two populations were sampled (Devil's Island and Bayfield Peninsula).
+    \item The data appear to be part of an observational study where the plots were randomly selected.
+    \item Tthere are more than five individuals in each cell of the expected table \tabrefp{tab:ChiAIexp}.
+    \item The statistic is the observed frequency table given in the background.
+    \item $\chi^{2}$=\Sexpr{formatC(ai.chi$statistic,format="f",digits=2)} with \Sexpr{ai.chi$parameter} df \tabrefp{tab:ChiAIchi}.
+    \item p-value=\Sexpr{kPvalue(ai.chi$p.value,include.p=FALSE)} \tabrefp{tab:ChiAIchi}.
+    \item $H_{0}$ is rejected because the p-value is $<\alpha$.
+    \item There does appear to be a significant difference in the distribution of the dominant plants between the two sites.  A look at the Pearson residuals \tabrefp{tab:ChiAIres} and the row-percentage table \tabrefp{tab:ChiAIrow} both suggest that the biggest difference between the two locations is due to ``plant A.''\footnote{When ``Plant A'' is removed from the observed table, the Chi-Square Test performed on the remaining plant species showed no difference in the distribution of the remaining plants between the two locations (\Sexpr{kPvalue(ai.chi1$p.value)}).  Thus, most of the difference in plant distributions between Devil's Island and the Bayfield Peninsula appears to be due primarily to ``plant A'' with more of ``plant A'' found on the Bayfield Peninsula than on Devil's Island.}
+  \end{Enumerate}
+
+\begin{minipage}{\textwidth}
+\textbf{R Appendix:}
+<<eval=FALSE, results='hide', fig.show='hide'>>=
+<<ChiAI>>
 @
-This observed table was submitted to \R{chisq.test()} for, at this stage, observing the expected frequency table.
-<<>>=
-ai.chi <- chisq.test(ai.obs)
+\end{minipage}
+
+\begin{table}[h]
+  \caption{Expected frequency table for the Chi-Square Test for differences in dominant species Devil's Island and Bayfield Peninsula.}
+  \label{tab:ChiAIexp}
+  \vspace{-12pt}
+<<echo=FALSE, background='white'>>=
 ai.chi$expected
 @
-The test statistic computed below should reasonably follow a $\chi^{2}$distribution, because there are more than five individuals in each cell of the expected table shown above.
-    \item The statistic is the observed frequency table shown in the output of Step 4 above.
-    \item The test statistic is $\chi^{2}$=\Sexpr{formatC(ai.chi$statistic,format="f",digits=2)} with \Sexpr{ai.chi$parameter} df as seen with
-<<>>=
-ai.chi
+\end{table}
+
+\begin{table}[h]
+  \caption{Results from the Chi-Square Test for differences in dominant species Devil's Island and Bayfield Peninsula.}
+  \label{tab:ChiAIchi}
+  \vspace{-12pt}
+<<echo=FALSE, background='white'>>=
+kHtest(ai.chi)
 @
-    \item The p-value is \Sexpr{kPvalue(ai.chi$p.value)} as seen in the results above.
-    \item The null hypothesis is rejected because the p-value is $<\alpha$.
-    \item There does appear to be a significant difference in the distribution of the dominant plants between the two sites.  A look at the Pearson residuals,
-<<>>=
+\end{table}
+
+\begin{table}[h]
+  \caption{Pearson residuals from the Chi-Square Test for differences in dominant species Devil's Island and Bayfield Peninsula.}
+  \label{tab:ChiAIres}
+  \vspace{-12pt}
+<<echo=FALSE, background='white'>>=
 ai.chi$residuals
 @
-and the row-percentage table,
-<<>>=
-percTable(ai.obs,margin=1,digits=2)
-@
-<<echo=FALSE, results='hide', warning=FALSE>>=
-ai.obs1 <- ai.obs[,-1]
-ai.chi1 <- chisq.test(ai.obs1)
-@
-both suggest that the biggest difference between the two locations is due to ``plant A.''\footnote{When ``Plant A'' is removed from the observed table, the chi-square test performed on the remaining plant species showed no difference in the distribution of the remaining plants between the two locations (\Sexpr{kPvalue(ai.chi1$p.value)}).  Thus, most of the difference in plant distributions between Devil's Island and the Bayfield Peninsula appears to be due primarily to ``plant A'' with more of ``plant A'' found on the Bayfield Peninsula than on Devil's Island.}
-  \end{enumerate}
+\end{table}
 
+\begin{table}[h]
+  \caption{Percentage of dominant species within each location (Devil's Island and Bayfield Peninsula).}
+  \label{tab:ChiAIrow}
+  \vspace{-12pt}
+<<echo=FALSE, background='white'>>=
+percTable(ai.obs,margin=1,digits=1)
+@
+\end{table}
+
+
+\newpage
 \begin{exsection}
   \item \label{revex:ChiWoodpeckers} \rhw{} \cite{Saenzetal1998} examined the effectiveness of ``restrictor plates'' (a metal plate designed to reduce ``pecking'' by pileated woodpeckers (\emph{Dryocopus pileatus}) in reducing damage by pileated woodpeckers) on cavity trees for red-cockaded woodpeckers (\emph{Picoides borealis}) in Eastern Texas.  For each red-cockaded woodpecker cavity hole they recorded whether the hole was fit with a restrictor plate or not and, ultimately, whether the cavity hole was damaged or not.  The results of their study are recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/RestrictorPlates.csv}{RestrictorPlates.csv}.  Examine these data to determine, at the 5\% level, if restrictor plates reduced the damage done by pileated woodpeckers. \ansref{ans:ChiWoodpeckers}
 
@@ -463,6 +515,6 @@ both suggest that the biggest difference between the two locations is due to ``p
     \end{tabular}
   \end{center}
 
-  \item \label{revex:chiZoo1} \rhw{} The data in \href{}{Zoo1.csv} contains a list of animals found in several different zoos\footnote{These data are stored in a ``comma separated values'' (CSV) file rather than a ``tab delimited text'' file.  Thus, these data must be loaded into R with \R{read.csv()} rather than \R{read.csv()}.  The arguments to \R{read.csv()} are the same as \R{read.csv()}.}.  In addition, each animal was classified into broad ``type'' categories (``mammal'', ``bird'', and ``amph/rep'').  The researchers that collected these data wanted to examine if the distribution of broad animal types differed among zoos.  Test the researcher's question at the 5\% level \ansref{ans:chiZoo1}
+  \item \label{revex:chiZoo1} \rhw{} The data in \href{}{Zoo1.csv} contains a list of animals found in several different zoos.  In addition, each animal was classified into broad ``type'' categories (``mammal'', ``bird'', and ``amph/rep'').  The researchers that collected these data wanted to examine if the distribution of broad animal types differed among zoos.  Test the researcher's question at the 5\% level \ansref{ans:chiZoo1}
 
 \end{exsection}

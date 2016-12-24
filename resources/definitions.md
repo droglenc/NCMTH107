@@ -9,6 +9,7 @@ title: Definitions
     <dl class="dl-horizontal">
 
 <dt>Accuracy</dt><dd>The tendency of a statistic to come close to the parameter it was intended to estimate.</dd>
+<dt>Alternative Hypothesis</dt><dd>A statistical hypothesis that states that there is a difference between a parameter and a specific value or between two parameters.</dd>
 <dt>Argument</dt><dd>In R, A "directive" provided within the parentheses of a function.</dd>
 <dt>Bimodal</dt><dd>The shape of a distribution with two peaks or "humps."</dd>
 <dt>Bivariate</dt><dd>Examining two variables.</dd>
@@ -33,14 +34,17 @@ title: Definitions
 <dt>Multivariate</dt><dd>Examining more than two variables.</dd>
 <dt>Natural Variability</dt><dd>The fact that no two individuals are exactly alike.</dd>
 <dt>Nominal</dt><dd>A categorical variable for which a natural order DOES NOT exist among the categories.</dd>
+<dt>Null Hypothesis</dt><dd>A statistical hypothesis that states that there is no difference between a parameter and a specific value or between two parameters.</dd>
 <dt>Ordinal</dt><dd>A categorical variable for which a natural order exists among the categories.</dd>
 <dt>Outlier</dt><dd>An individual whose value is widely separated from the main cluster of values in the sample.</dd>
+<dt>p-value</dt><dd>The probability of the observed statistic or a value of the statistic more extreme assuming the null hypothesis is true.</dd>
 <dt>Parameter</dt><dd>A summary of all individuals in a population.</dd>
 <dt>Population</dt><dd>ALL individuals of interest.</dd>
 <dt>Precision</dt><dd>The tendency to have values clustered closely together. Precision is inversely related to the standard error – the smaller the standard error, the greater the precision.</dd>
 <dt>Quartiles</dt><dd>The values that divide the ordered data into quarters.</dd>
 <dt>Range</dt><dd>The difference between the maximum and minimum value in a data set.</dd>
 <dt>Replicates</dt><dd>In an experiment, the number of individuals in each treatment group.</dd>
+<dt>Research Hypothesis</dt><dd>A general statement about the question or phenomenon being tested.</dd>
 <dt>Residual</dt><dd>The difference between the observed and predicted values of the response variable for an individual. In regression, the vertical difference between the observed and predicted values of the response variable for an individual.</dd>
 <dt>Response</dt><dd>The variable to be predicted or explained.</dd>
 <dt>Right-Skewed</dt><dd>The right-tail of a distribution is longer or more drawn out than the left-tail.</dd>
@@ -62,10 +66,6 @@ collecting, organizing, and interpreting numerical information or data.</dd>
 <dt> Vector</dt><dd>In R, a one-dimensional list of items of the same data type.</dd>
 <dt>Voluntary Response</dt><dd>A sample of individuals that choose themselves for the sample by responding to a general appeal.</dd>
 
-<dt>Research Hypothesis</dt><dd>A general statement about the question or phenomenon being tested.</dd>
-<dt>Null Hypothesis</dt><dd>A statistical hypothesis that states that there is no difference between a parameter and a specific value or between two parameters.</dd>
-<dt>Alternative Hypothesis</dt><dd>A statistical hypothesis that states that there is a difference between a parameter and a specific value or between two parameters.</dd>
-<dt>p-value</dt><dd>The probability of the observed statistic or a value of the statistic more extreme assuming the null hypothesis is true.</dd>
 <dt></dt><dd></dd>
 <dt></dt><dd></dd>
 <dt></dt><dd></dd>
