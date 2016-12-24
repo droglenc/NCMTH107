@@ -30,12 +30,12 @@ css: /css/modules.css
 
 ## Preparation for Class
 
-You should prepare for the concepts of this module by first reading **Section 11.1** in [the textbook](../../book/) and watching the following videos:
+You should [read **Section 16.1**](../../book/16_IntroStats.pdf) and watch these videos:
 
 * [t Distribution](https://vimeo.com/user45324800/tdist){:target="_blank"} [4 mins] [![PowerPoint](../../img/ppt.png)](PPT1.pptx)
 * [t Distributions in R](https://vimeo.com/user45324800/tdistribution){:target="_blank"} [8 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
 
-Then read **Section 11.2** in [the textbook](../../book/) and watching the following videos:
+Then [read **Sections 16.2 & 16.3**](../../book/16_IntroStats.pdf) and watch these videos:
 
 * [1-Sample t-Test Example](https://vimeo.com/user45324800/t1test-ex1){:target="_blank"} [12 mins] [![PowerPoint](../../img/ppt.png)](PPT2.pptx)
 * [1-Sample t-Test in R](https://vimeo.com/user45324800/1samplettest){:target="_blank"} [5 mins]
