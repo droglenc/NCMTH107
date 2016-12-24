@@ -65,12 +65,6 @@ collecting, organizing, and interpreting numerical information or data.</dd>
 <dt>Variable</dt><dd>The characteristic of interest recorded about each individual.</dd>
 <dt> Vector</dt><dd>In R, a one-dimensional list of items of the same data type.</dd>
 <dt>Voluntary Response</dt><dd>A sample of individuals that choose themselves for the sample by responding to a general appeal.</dd>
-
-<dt></dt><dd></dd>
-<dt></dt><dd></dd>
-<dt></dt><dd></dd>
-<dt></dt><dd></dd>
-<dt></dt><dd></dd>
 </dl>
 
   </div>
