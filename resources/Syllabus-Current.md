@@ -13,7 +13,7 @@ css: /css/syllabus.css
 * Class [Description](#description) and [Learning Outcomes](#learning-outcomes)
 * [Instructors](#instructors) and [Tutors](#tutors)
 * [Grading](#grading) -- [Quizzes](#quizzes), [Participation](#participation), [Homework](#homework), [Exams](#exams), [Extra Credit](#extra-credit)
-* [Participation, Classroom Conduct, and Academic Integrity](#classroom-conduct-and-academic-integrity)
+* [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
 * [Accomodations](#accomodations)
 
 ----
@@ -108,7 +108,7 @@ Letter grades will be assigned by comparing your overall percentage (rounded to 
 
 
 ### Quizzes
-A short quiz will be given in the **FIRST 5-10 minutes of EVERY** class period. These quizzes are intended to encourage you to complete the preparation required for that day's class. Thus, quizzes are "open notes" (but **not** "open book" or "open computer"). You will be notified at the end of each class period about which module will form the next class period's quiz. **Missed quizzes cannot be made up and quizzes taken from outside of the classroom will not be accepted.** Your lowest four quiz scores will be excluded when computing your overall grade.
+A short quiz will be given in the **FIRST 5-10 minutes of EVERY** class period. These quizzes are intended to encourage you to complete the preparation required for that day's class. Thus, quizzes are "open notes" (but **not** "open book" or "open computer"). You will be notified at the end of each class period about which module will form the next class period's quiz. **Missed quizzes cannot be made up and quizzes taken from outside of the classroom will not be accepted.** Your lowest four quiz scores will be excluded when computing your overall grade (*if you meet with me in my office before the end of the second week of class*).
 
 
 ### Participation
@@ -158,7 +158,7 @@ Each homework assigment is worth 10 points and will be graded in two parts.  The
 
 The second part, also worth 5 points, is an assessment of the quality of the work.  In this part, only some (approximately half) of the questions will be assessed.  Answer keys will be [posted online](homework-keys) so that you may check your work.
 
-Your lowest two homework grades will be excluded when computing your overall grade.
+Your lowest two homework grades will be excluded when computing your overall grade (*if you meet with me in my office before the end of the second week of class*).
 
 
 ### Exams
