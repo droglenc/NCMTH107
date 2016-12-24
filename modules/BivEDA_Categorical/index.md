@@ -31,7 +31,7 @@ It is important to understand the relationship between two variables.  With cate
 
 ## Preparation for Class
 
-You should prepare for the concepts of this module by reading **Section 6.2** in [the textbook](../../book/) and watching the following videos:
+You should [read this](../../book/9_IntroStats.pdf) and watch these videos:
 
 * [Percentage Tables](https://www.youtube.com/v/k8xFH6fCIWs?version=3&autoplay=1){:target="_blank"} [6 mins]
 * [Bivariate EDA (Categorical) in R](https://vimeo.com/user45324800/biveda-cat){:target="_blank"} [8 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}

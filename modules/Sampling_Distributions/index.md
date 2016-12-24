@@ -39,7 +39,7 @@ Sampling distributions show the distribution of a statistic from all possible sa
 
 ## Preparation for Class
 
-You should prepare for the concepts of this module by reading **Chapter 9** in [the textbook](../../book/) and watching the following videos:
+You should [read this](../../book/12_IntroStats.pdf) and watch these videos:
 
 * Introduction to Sampling Distributions -- [A](https://vimeo.com/user45324800/smplngd-intro){:target="_blank"} [9 mins] [![PowerPoint](../../img/ppt.png)](PPT.pptx) **and** [B](https://www.youtube.com/v/Zbw-YvELsaM?version=3&autoplay=1){:target="_blank"} [8 mins]
 * [Central Limit Theorem](https://vimeo.com/user45324800/smplngd-clt){:target="_blank"} [4 mins] [![PowerPoint](../../img/ppt.png)](PPT2.pptx)

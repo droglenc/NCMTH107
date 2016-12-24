@@ -32,7 +32,7 @@ It is important to understand the distribution of individuals for a single varia
 
 ## Preparation for Class
 
-You should prepare for the concepts of this module by reading **Section 4.1** in [the textbook](../../book/) and watching the following videos:
+You should [read this](../../book/5_IntroStats.pdf) and watch these videos:
 
 * [Construct a Histogram](https://www.youtube.com/v/sC7gjg9g3JU?version=3&autoplay=1){:target="_blank"} [13 mins]
 * [Describe Shape](https://www.youtube.com/v/H9ITfdaX2ZQ?version=3&autoplay=1){:target="_blank"} [13 mins]
@@ -40,9 +40,6 @@ You should prepare for the concepts of this module by reading **Section 4.1** in
 * Calculate Standard Deviation -- [A](https://www.youtube.com/v/qqOyy_NjflU?version=3&autoplay=1){:target="_blank"} [5 mins] **or** [B](https://www.youtube.com/v/atS4wX8I9H0?version=3&autoplay=1){:target="_blank"} [13 mins]
 * Calculate IQR -- [A](https://www.youtube.com/v/R6VDj7pEG30?version=3&autoplay=1){:target="_blank"} [3 mins] **or** [B](https://www.youtube.com/v/F3WcEAW-M80?version=3&start=366&autoplay=1){:target="_blank"} [9 mins]
 * [Univariate EDA (Quantitative) in R](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins]  [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
-
-Additionally, you should prepare by reading **Section 4.3** in [the textbook](../../book/) and watching the following videos:
-
 * [Interpreting a Univariate EDA (Quantitative)](https://vimeo.com/user45324800/ueda-quantsum){:target="_blank"} [11 mins]  [![PowerPoint](../../img/ppt.png)](PPT.pptx)
 
 ----

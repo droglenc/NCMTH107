@@ -35,7 +35,7 @@ One of the most common things in statistics is to describe the linear relationsh
 
 ## Preparation for Class
 
-You should prepare for the concepts of this module by reading **Chapter 7** in [the textbook](../../book/) and watching the following videos:
+You should [read this](../../book/10_IntroStats.pdf) and watch these videos:
 
 * Response and Explanatory Variables -  [A](https://www.youtube.com/v/bokeTCH2aJY?version=3&autoplay=1&start=60&end=148){:target="_blank"} [2 mins] **and**  [B](https://www.youtube.com/v/bokeTCH2aJY?version=3&autoplay=1&start=378){:target="_blank"} [2 mins] ... [alt. version A (stop at 2:30)](https://www.youtube.com/watch?v=bokeTCH2aJY#t=62) and [alt. version B (stop at 8:11)](https://www.youtube.com/watch?v=bokeTCH2aJY#t=378)
 * [Introduction to Regression](https://www.youtube.com/v/k_OB1tWX9PM?version=3&autoplay=1){:target="_blank"} [14 mins] ... [alt. version](https://www.youtube.com/watch?v=k_OB1tWX9PM)

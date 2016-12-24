@@ -31,7 +31,7 @@ Why is Statistics a required course for many majors at Northland College?  Why d
 
 ## Preparation for Class
 
-You should prepare for the concepts of this module by reading **Section 1.1** in [the textbook](../../book/) and watching the following videos:
+You should [read this](../../book/1_IntroStats.pdf) and watch these videos:
 
 * [Why Statistics?](https://www.youtube.com/v/yxXsPc0bphQ?version=3&autoplay=1){:target="_blank"} [4 mins] ... [alt version](https://www.youtube.com/watch?v=yxXsPc0bphQ){:target="_blank"}
 * [What is Statistics?](https://www.youtube.com/v/5YsiVJFSwGo?version=3&start=35&autoplay=1){:target="_blank"} [12 mins] ... [alt version](https://www.youtube.com/watch?v=5YsiVJFSwGo#t=35){:target="_blank"}

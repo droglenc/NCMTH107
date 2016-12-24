@@ -31,7 +31,7 @@ Probability is the "language" used by statisticians to describe the proportion o
 
 ## Preparation for Class
 
-You should prepare for the concepts of this module by reading **Chapter 8** in [the textbook](../../book/).
+You should [read this](../../book/11_IntroStats.pdf).
 
 ----
 

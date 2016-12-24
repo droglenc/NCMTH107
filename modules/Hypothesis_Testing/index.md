@@ -32,14 +32,23 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
 
 ## Preparation for Class
 
-* Your initial preparation for this module should begin by reading **Section 10.1** in [the textbook](../../book/) and watching this video on [Forming Statistical Hypotheses](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins; [![PowerPoint](../../img/ppt.png)](PPT-hypotheses.pptx)].  We will begin class with the first class exercise below.
-* A first lecture ([these slides](PPT-Lecture-1.pptx)) will be used to introduce the concept of hypothesis testing.  This lecture will be followed by work on the second set of class exercises below.
-* Following this you should re-read **Section 10.1** in [the textbook](../../book/), and watch [this](https://www.youtube.com/v/7mE-K_w1v90?version=3&autoplay=1){:target="_blank"} [8 mins] and [this](https://www.youtube.com/v/OWn3Ko1WYTA?version=3&start=89&end=247&autoplay=1){:target="_blank"} [3 mins] video on statistical error types and [this](https://www.youtube.com/v/BJZpx7Mdde4?version=3&autoplay=1){:target="_blank"} [12 mins] video on computing &beta; &amp; power.
-* A second lecture ([these slides](PPT-Lecture-2.pptx)) will be used to reinforce these materials before working on the last set of class exercises below.
-* Finally, you should read **Section 10.5** in [the textbook](../../book/) and watch this video on the [11 Steps for Any Hypothesis Test](https://vimeo.com/user45324800/hotest-11steps){:target="_blank"} [5 mins; [![PowerPoint](../../img/ppt.png)](../1-Sample-Z/PPT1.pptx)].
+You should [read **Sections 13.1-13.4**](../../book/13_IntroStats.pdf) and watch these videos:
+
+* [Forming Statistical Hypothesis](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins; [![PowerPoint](../../img/ppt.png)](PPT-hypotheses.pptx)].
+
+Following this, you should [read **Section 13.5**](../../book/13_IntroStats.pdf), and watch these videos:
+
+* Statistical Error Types -- [here](https://www.youtube.com/v/7mE-K_w1v90?version=3&autoplay=1){:target="_blank"} [8 mins] and [here](https://www.youtube.com/v/OWn3Ko1WYTA?version=3&start=89&end=247&autoplay=1){:target="_blank"} [3 mins]
+* [Computing &beta; &amp; power](https://www.youtube.com/v/BJZpx7Mdde4?version=3&autoplay=1){:target="_blank"} [12 mins].
 
 ----
 
+## In-Class
+
+* [First Lecture](PPT-Lecture-1.pptx)
+* [Second Lecture](PPT-Lecture-2.pptx)
+
+----
 ## Practice
 
 * First set of in-class exercises -- [1](CE1)

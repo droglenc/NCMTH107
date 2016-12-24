@@ -30,7 +30,7 @@ css: /css/modules.css
 
 ## Preparation for Class
 
-You should prepare for the concepts of this module by reading **Section 11.3** in [the textbook](../../book/) and watching the following videos:
+You should [read this](../../book/17_IntroStats.pdf) and watch these videos:
 
 * [2-Sample t-Test Example](https://vimeo.com/user45324800/t2test-ex1){:target="_blank"} [22 mins] [![PowerPoint](../../img/ppt.png)](PPT.pptx)
 * [2-Sample t-Test in R](https://vimeo.com/user45324800/2samplettest){:target="_blank"} [8 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}

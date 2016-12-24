@@ -32,7 +32,7 @@ It is important to understand the distribution of individuals for a single varia
 
 ## Preparation for Class
 
-You should prepare for the concepts of this module by reading **Sections 4.2 and 4.3** in [the textbook](../../book/) and watching the following videos:
+You should [read this](../../book/6_IntroStats.pdf) and watch these videos:
 
 * [Frequency Table](https://www.youtube.com/v/LVnzV1ZXdiY?version=3&autoplay=1){:target="_blank"} [2 mins]
 * [Barchart](https://www.youtube.com/v/PM39_HA1qSc?version=3&autoplay=1){:target="_blank"} [3 mins]

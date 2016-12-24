@@ -32,7 +32,7 @@ It is important to understand the relationship between two variables.  With quan
 
 ## Preparation for Class
 
-You should prepare for the concepts of this module by reading **Section 6.1** in [the textbook](../../book/) and watching the following videos:
+You should [read this](../../book/8_IntroStats.pdf) and watch these videos:
 
 * [Construct a Scatterplot](https://www.youtube.com/v/yXmz922K9Ks?version=3&autoplay=1){:target="_blank"} [7 mins]
 * [What is the Correlation?](https://www.youtube.com/v/PtYVrF_WT3A?version=3&start=32&autoplay=1){:target="_blank"} [8 mins]

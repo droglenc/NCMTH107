@@ -30,7 +30,7 @@ As with most areas of study, Statistics requires an understanding of key foundat
 
 ## Preparation for Class
 
-You should prepare for the concepts of this module by reading **Sections 1.2 and 1.3** in [the textbook](../../book/) and watching the following videos:
+You should [read this](../../book/2_IntroStats.pdf) and watch these videos:
 
 * [IVPPSS](https://vimeo.com/user45324800/ncstats-ivppss){:target="_blank"} [7 mins]  [![PowerPOint](../../img/ppt.png)](PPT.pptx)
 * [Variable Types](https://vimeo.com/user45324800/ncstats-vartypes){:target="_blank"} [5 mins]
