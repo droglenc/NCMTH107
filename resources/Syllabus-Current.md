@@ -11,7 +11,7 @@ css: /css/syllabus.css
 <SCRIPT SRC="../js/grader.js"></SCRIPT>
 
 * Class [Description](#description) and [Learning Outcomes](#learning-outcomes)
-* [Instructors](#instructors) and [Tutors](#tutors)
+* [Instructors](#instructor) and [Tutors](#tutors)
 * [Grading](#grading) -- [Quizzes](#quizzes), [Participation](#participation), [Homework](#homework), [Exams](#exams), [Extra Credit](#extra-credit)
 * [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
 * [Accomodations](#accomodations)
