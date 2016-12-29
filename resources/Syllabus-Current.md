@@ -14,7 +14,7 @@ css: /css/syllabus.css
 * [Instructors](#instructor) and [Tutors](#tutors)
 * [Grading](#grading) -- [Quizzes](#quizzes), [Participation](#participation), [Homework](#homework), [Exams](#exams), [Extra Credit](#extra-credit)
 * [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
-* [Accomodations](#accomodations)
+* [Accommodations](#accommodations)
 
 ----
 
