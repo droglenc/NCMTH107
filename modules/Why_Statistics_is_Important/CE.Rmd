@@ -31,15 +31,9 @@ Type the code exactly as shown in each grey box and attempt to answer the follow
 
 ---- 
 
-## Load the NCStats package
-```{r results='hide', message=FALSE, warning=FALSE, propmt=FALSE}
-library(NCStats)
-```
-
-\ 
-
 ## Obtain a Random Sample of Residents from Ashland-Bayfield Counties
-```{r results='hide', prompt=FALSE}
+```{r results='hide', message=FALSE, warning=FALSE, prompt=FALSE}
+library(NCStats)
 ( samA <- srsdf(ABCens90,n=100) )
 ```
 
