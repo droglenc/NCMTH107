@@ -48,7 +48,7 @@ css: /css/syllabus.css
 
 ## Cancelled Classes
 <dl class="dl-horizontal">
-<dt>16-Jan</dt><dd>NO CLASS (MLK Jr Day)</dd>
+<dt>16-Jan</dt><dd>NO CLASS (Please participate in Martin Luther King, Jr. Day Activities)</dd>
 <dt>6-Mar</dt><dd>NO CLASS (Mid-Session Break)</dd>
 <dt>8-Mar</dt><dd>NO CLASS (Mid-Session Break)</dd>
 <dt>10-Mar</dt><dd>NO CLASS (Mid-Session Break)</dd>
