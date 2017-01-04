@@ -47,7 +47,7 @@ We will focus on the understanding of statistical concepts and proper interpreta
 <tr><th><img src="../img/DerekOgle1.jpg"></th></tr>
 <tr><td>10-1130 Section</td></tr>
 <tr style="vertical-align:top"><td>CSE228; 682-1300<br><a href="mailto:dogle@northland.edu">dogle@northland.edu</a><br>
-<a href="https://www.suggestionox.com/r/W17-107">Feedback / Suggestions</a></td></tr>
+<a href="https://www.suggestionox.com/r/W17-107" target="_blank">Feedback / Suggestions</a></td></tr>
 <tr style="vertical-align:top"><td>Office Hours:<br>
 Mon, Wed, Fri 900-950; Thurs 1200-1300<br>By Appointment</td></tr>
 </table>
