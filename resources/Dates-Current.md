@@ -6,7 +6,8 @@ css: /css/syllabus.css
 
 ## Homework Due Dates
 <dl class="dl-horizontal">
-<dt>XX-Jan</dt><dd><a href="../modules/Why_Statistics_is_Important/HW">Why Statistics is Important</a></dd>
+<dt>18-Jan</dt><dd><a href="../modules/Why_Statistics_is_Important/HW">Why Statistics is Important</a></dd>
+<dt>18-Jan</dt><dd><a href="../modules/Foundational_Definitions/HW">Foundational Definitions</a></dd>
 
 <!---
 <dt>XX-Jan</dt><dd><a href="../modules/Foundational_Definitions/HW">Foundational Definitions</a></dd>

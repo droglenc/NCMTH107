@@ -4,7 +4,7 @@ layout: page
 output:
   word_document: default
   pdf_document: default
-subtitle: MTH107 -- Fall, 2016
+subtitle: MTH107 -- Winter, 2017
 css: /css/syllabus.css
 ---
 
@@ -12,7 +12,7 @@ css: /css/syllabus.css
 
 * Class [Description](#description) and [Learning Outcomes](#learning-outcomes)
 * [Instructors](#instructor) and [Tutors](#tutors)
-* [Grading](#grading) -- [Quizzes](#quizzes), [Participation](#participation), [Homework](#homework), [Exams](#exams), [Extra Credit](#extra-credit)
+* [Grading](#grading) -- [Quizzes](#quizzes), [Homework](#homework), [Participation](#participation), [Exams](#exams), [Extra Credit](#extra-credit)
 * [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
 * [Accommodations](#accommodations)
 
@@ -111,6 +111,27 @@ Letter grades will be assigned by comparing your overall percentage (rounded to 
 A short quiz will be given in the **FIRST 5-10 minutes of EVERY** class period. These quizzes are intended to encourage you to complete the preparation required for that day's class. Thus, quizzes are "open notes" (but **not** "open book" or "open computer"). You will be notified at the end of each class period about which module will form the next class period's quiz. **Missed quizzes cannot be made up and quizzes taken from outside of the classroom will not be accepted.** Your lowest four quiz scores will be excluded when computing your overall grade (*if you meet with me in my office before the end of the second week of class*).
 
 
+### Homework
+A homework assigment for each module will generally be due within one week of completing a module (exact due dates will be announced in class). **PRINTED** homework assignments are **due at the beginning of the due date class period; late assignments will not be accepted.** Each assignment should follow [the expectations outlined here](hwformat){:target="_blank"}. An assigment may receive a grade of 0 if it does not follow the required format or is difficult to follow.
+
+Each homework assigment is worth 10 points and will be graded in two parts.  The first part is an assessment of completeness and formatting according to the following rubric.
+
+<div class="container-fluid">
+  <table class="table table-bordered">
+  <thead>
+    <tr class="info"><th>0-1 points</th><th>2-4 points</th><th>5 points</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Very few questions answered completely.</td><td>Most questions answered completely.  <a href="hwformat.html" target="_blank">Format for homework</a> may not have been followed.</td><td>All questions answered completely.  <a href="hwformat.html" target="_blank">Format for homework</a> followed exactly.</td></tr>
+  </tbody>
+  </table>
+</div>
+
+The second part, also worth 5 points, is an assessment of the quality of the work.  In this part, only some (approximately half) of the questions will be assessed.  Answer keys will be [posted online](homework-keys) so that you may check your work.
+
+Your lowest three homework grades will be excluded when computing your overall grade (*if you meet with me in my office before the end of the second week of class*).
+
+
 ### Participation
 This course is taught using active learning, peer-instruction, and inquiry-based pedagogies.  You will be asked to prepare for each class period, answer questions based on your preparations, work with others in small groups, ask questions, and actively work on in-class exercises. Your full participation is critical to your learning and success in this course. To encourage your full participation, I will assess your level of participation at the end of each class period with the following rubric.
 
@@ -138,27 +159,6 @@ The following behaviors are indicative of full participation:
 <img class="img-right" src="../img/studying.jpg">
 
 As a general rule-of-thumb ([here](https://www.collegeparentcentral.com/2010/02/is-your-college-student-investing-enough-time-studying/){:target="_blank"}, [here](http://classroom.synonym.com/ratio-studying-class-time-college-1075.html){:target="_blank"}, [here](https://www.usu.edu/asc/studysmart/pdf/estimating_study_hours.pdf){:target="_blank"}, and [here](http://collegelife.about.com/od/academiclife/f/How-Much-Time-Should-I-Spend-Studying-In-College.htm){:target="_blank"}, among many), students are expected to spend between 2-3 hours of time outside of class for each hour in class.  This course meets for 4.5 hours per week and, thus, you should dedicate between 9 and 13.5 hours of time outside of class to preparing for class, completing homework and other assessments, and studying for exams.  The work required for this course can be completed within this expected amount of time, **if that time is quality-time** (i.e., without distraction).  If you feel that you are spending an inordinate amount of time on some assignments because you are "stuck," then start your assignments early so that you can stop (and do other things) and make plans to see the [tutors](#tutors) or [instructor](#instructor) for help.
-
-
-### Homework
-A homework assigment for each module will generally be due within one week of completing a module (exact due dates will be announced in class). **PRINTED** homework assignments are **due at the beginning of the due date class period; late assignments will not be accepted.** Each assignment should follow [the expectations outlined here](hwformat){:target="_blank"}. An assigment may receive a grade of 0 if it does not follow the required format or is difficult to follow.
-
-Each homework assigment is worth 10 points and will be graded in two parts.  The first part is an assessment of completeness and formatting according to the following rubric.
-
-<div class="container-fluid">
-  <table class="table table-bordered">
-  <thead>
-    <tr class="info"><th>0-1 points</th><th>2-4 points</th><th>5 points</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Very few questions answered completely.</td><td>Most questions answered completely.  <a href="hwformat.html" target="_blank">Format for homework</a> may not have been followed.</td><td>All questions answered completely.  <a href="hwformat.html" target="_blank">Format for homework</a> followed exactly.</td></tr>
-  </tbody>
-  </table>
-</div>
-
-The second part, also worth 5 points, is an assessment of the quality of the work.  In this part, only some (approximately half) of the questions will be assessed.  Answer keys will be [posted online](homework-keys) so that you may check your work.
-
-Your lowest three homework grades will be excluded when computing your overall grade (*if you meet with me in my office before the end of the second week of class*).
 
 
 ### Exams
