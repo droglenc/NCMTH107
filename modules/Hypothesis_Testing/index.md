@@ -49,6 +49,7 @@ Following this, you should [read **Section 13.5**](../../book/13_IntroStats.pdf)
 * [Second Lecture](PPT-Lecture-2.pptx)
 
 ----
+
 ## Practice
 
 * First set of in-class exercises -- [1](CE1)
