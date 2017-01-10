@@ -8,7 +8,7 @@ css: "/css/modules.css"
 ----
 
 <div class="alert alert-warning">
-  <strong>Note</strong> Your answers to the questions below do NOT need to follow the usual homework format. Rather compile your R script into a Word document (this will be demonstrated in class).
+<strong>Note:</strong> Your answers to the questions below should follow the <a href="../../resources/hwformat" target="_blank">expectations for homework found here</a> (and <a href="../../resources/FAQ/FAQs/HWFormat_Example.pdf" target="_blank">demonstrated here</a>). Date due on <a href="../../resources/Dates-Current.html" target="_blank">Dates page</a>.
 </div>
 
 ----
