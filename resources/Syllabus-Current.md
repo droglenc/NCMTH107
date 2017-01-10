@@ -158,7 +158,7 @@ Each homework assigment is worth 10 points and will be graded in two parts.  The
 
 The second part, also worth 5 points, is an assessment of the quality of the work.  In this part, only some (approximately half) of the questions will be assessed.  Answer keys will be [posted online](homework-keys) so that you may check your work.
 
-Your lowest two homework grades will be excluded when computing your overall grade (*if you meet with me in my office before the end of the second week of class*).
+Your lowest three homework grades will be excluded when computing your overall grade (*if you meet with me in my office before the end of the second week of class*).
 
 
 ### Exams
