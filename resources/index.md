@@ -13,10 +13,10 @@ title: Resources
 1. [**List of Symbols**](symbols)
 1. [**Common Definitions**](definitions)
 1. [**11 Steps of Hypothesis Testing**](../modules/Hypothesis_Testing/11-steps)
-1. [**Hypothesis Testing Fact Sheet**](MTH107-HOcheatsheet.pdf) (or as [PPT](MTH107-HOcheatsheet.ppt))
+1. [**Hypothesis Testing Fact Sheet**](MTH107-HOcheatsheet.pdf){:target="_blank"} (or as [PPT](MTH107-HOcheatsheet.ppt))
 1. [**FAQ**](FAQ/)
 1. [**Whole Book**](../book/IntroStats_noPrint.pdf)
-1. [**R Cheat Sheet**](MTH107-Rcheatsheet.pdf) (or as [PPT](MTH107-Rcheatsheet.pptx))
+1. [**R Cheat Sheet**](MTH107-Rcheatsheet.pdf){:target="_blank"} (or as [PPT](MTH107-Rcheatsheet.pptx))
 
 ## Computer
 1. [**Data Files**](data_107)
