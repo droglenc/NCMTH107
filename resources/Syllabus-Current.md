@@ -108,7 +108,7 @@ Letter grades will be assigned by comparing your overall percentage (rounded to 
 
 
 ### Quizzes
-A short quiz will be given in the **FIRST 5-10 minutes of EVERY** class period. These quizzes are intended to encourage you to complete the preparation required for that day's class. Thus, quizzes are "open notes" (but **not** "open book" or "open computer"). You will be notified at the end of each class period about which module will form the next class period's quiz. **Missed quizzes cannot be made up and quizzes taken from outside of the classroom will not be accepted.** Your lowest four quiz scores will be excluded when computing your overall grade (*if you meet with me in my office before the end of the second week of class*).
+A short quiz will be given in the **FIRST 5-10 minutes of EVERY** class period. These quizzes are intended to encourage you to complete the preparation required for that day's class. Thus, quizzes are "open notes" (but **not** "open book" or "open computer"). You will be notified at the end of each class period about which module will form the next class period's quiz. **Missed quizzes cannot be made up and quizzes taken from outside of the classroom will not be accepted.**
 
 
 ### Homework
@@ -128,9 +128,6 @@ Each homework assigment is worth 10 points and will be graded in two parts.  The
 </div>
 
 The second part, also worth 5 points, is an assessment of the quality of the work.  In this part, only some (approximately half) of the questions will be assessed.  Answer keys will be [posted online](homework-keys) so that you may check your work.
-
-Your lowest three homework grades will be excluded when computing your overall grade (*if you meet with me in my office before the end of the second week of class*).
-
 
 ### Participation
 This course is taught using active learning, peer-instruction, and inquiry-based pedagogies.  You will be asked to prepare for each class period, answer questions based on your preparations, work with others in small groups, ask questions, and actively work on in-class exercises. Your full participation is critical to your learning and success in this course. To encourage your full participation, I will assess your level of participation at the end of each class period with the following rubric.
@@ -163,6 +160,10 @@ As a general rule-of-thumb ([here](https://www.collegeparentcentral.com/2010/02/
 
 ### Exams
 Exam dates are shown on the [Due Dates page](Dates-Current.html){:target="_blank"}.  Make-up exams will be provided only if you have a fixed commitment of sufficient importance that was set before the beginning of the semester or a verifiable medical condition.  **You will not be allowed to make up an exam missed without my prior approval.  The final exam will not be given early.**
+
+
+### Adjustments
+**If you meet with me in my office before the end of the second week of class**, your lowest four quiz, four participation, and three homework grades will be excluded when computing your overall grade.
 
 
 ### Extra Credit
