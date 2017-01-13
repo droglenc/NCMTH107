@@ -33,7 +33,7 @@ Biologists at the Sigurd Olson Environmental Institute (SOEI) were interested in
 <img src="../zimgs/variability.jpg" alt="Variability" class="img-right">
 
 1. Define natural and sampling variability.
-1. Describe natural and sampling variability within the context of a "real-life" (or realistic) situation of interest to you. Make sure to clearly articulate the situation. [*This situation is completely of your choosing and can be fictitious, but should be realistic. Alternatively, think of a situation that may have arise in one of your other classes.*]
+1. Describe natural and sampling variability within the context of a "real-life" (or realistic) situation of interest to you. Make sure to clearly articulate the situation. [*This situation is completely of your choosing and can be fictitious, but should be realistic. Alternatively, think of a situation that may have arisen in one of your other classes.*]
 
 <br>
 

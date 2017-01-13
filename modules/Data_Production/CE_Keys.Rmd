@@ -11,9 +11,9 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/ce-keys/")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Data_Production/")
 source("../../rhelpers/rhelpers.R")
-modHTML("Data_Production")
+modHTML("CE_Keys")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
@@ -23,8 +23,7 @@ source("../../rhelpers/knitr_setup.R")
 
 ----
 
-## Class Excercise 1
-#### Study Types I
+## Study Types I
 1. Experiment ... the people were given a treatment (placebo or fish oil)
 1. Experiment ... the men were given a treatment (training program) with before/after results recorded
 1. Observational ... the women were "followed" over time, no treatment was imparted (the B12 deficiency or not was naturally induced)
@@ -32,15 +31,9 @@ source("../../rhelpers/knitr_setup.R")
 1. Experimental ... a treatment (animations or not) was imparted
 1. Observational ... no treatment was imparted (alcohol use was a choice of the women)
 
-
-#### Study Types II
-1. Observational ... no treatment was imparted (work at night was a "choice" of the women)
-1. Observational ... no treatment was imparted (observation of church records)
-1. Experiment ... a treatment (type of trap) was imparted.
-
 ----
 
-## Class Excercise 2
+## Types of Observational Studies
 1. Convenience sample.
 1. Voluntary response.
 1. Simple random sample (probability-based sample).
@@ -49,7 +42,6 @@ source("../../rhelpers/knitr_setup.R")
 
 ----
 
-## Class Excercise 3
 #### Blood Pressure Study
 1. Experimental ... a treatment is imposed.
 1. A male subject.
@@ -67,6 +59,8 @@ alloc[9:16]   # second treatment
 alloc[17:24]  # third treatment
 alloc[25:32]  # fourth treatment
 ```
+
+----
 
 #### Softball Bats and Balls
 1. Experimental ... imparting treatments (ball types and bats were chosen specifically)
@@ -87,10 +81,19 @@ sample(8)  # third order of balls
 
 ----
 
-## Class Excercise 4
+## Identify Response and Explanatory Variables
 1. Response is "success rate", explanatory is distance of putt.
 1. Response is "response time", explanatory is amount of time awake.
 1. Response is growth, explanatory is amount of fertilizer.
 1. It is not obvious which is the response or expanatory ... would depend on the researcher's question.
 1. Response is sales of umbrellas, explanatory is amount of rainfall.
 1. Response is weight, explanatory is age.
+
+----
+
+## Study Types II
+1. Observational ... no treatment was imparted (work at night was a "choice" of the women)
+1. Observational ... no treatment was imparted (observation of church records)
+1. Experiment ... a treatment (type of trap) was imparted.
+
+----

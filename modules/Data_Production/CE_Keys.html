@@ -8,10 +8,8 @@ css: "/css/modules.css"
 
 
 <hr />
-<div id="class-excercise-1" class="section level2">
-<h2>Class Excercise 1</h2>
-<div id="study-types-i" class="section level4">
-<h4>Study Types I</h4>
+<div id="study-types-i" class="section level2">
+<h2>Study Types I</h2>
 <ol>
 <li>Experiment … the people were given a treatment (placebo or fish oil)</li>
 <li>Experiment … the men were given a treatment (training program) with before/after results recorded</li>
@@ -20,19 +18,10 @@ css: "/css/modules.css"
 <li>Experimental … a treatment (animations or not) was imparted</li>
 <li>Observational … no treatment was imparted (alcohol use was a choice of the women)</li>
 </ol>
-</div>
-<div id="study-types-ii" class="section level4">
-<h4>Study Types II</h4>
-<ol>
-<li>Observational … no treatment was imparted (work at night was a “choice” of the women)</li>
-<li>Observational … no treatment was imparted (observation of church records)</li>
-<li>Experiment … a treatment (type of trap) was imparted.</li>
-</ol>
 <hr />
 </div>
-</div>
-<div id="class-excercise-2" class="section level2">
-<h2>Class Excercise 2</h2>
+<div id="types-of-observational-studies" class="section level2">
+<h2>Types of Observational Studies</h2>
 <ol>
 <li>Convenience sample.</li>
 <li>Voluntary response.</li>
@@ -41,9 +30,6 @@ css: "/css/modules.css"
 <li>Convenience sample.</li>
 </ol>
 <hr />
-</div>
-<div id="class-excercise-3" class="section level2">
-<h2>Class Excercise 3</h2>
 <div id="blood-pressure-study" class="section level4">
 <h4>Blood Pressure Study</h4>
 <ol>
@@ -61,13 +47,14 @@ css: "/css/modules.css"
 </ol>
 <pre class="r"><code>&gt; alloc &lt;- sample(32)
 &gt; alloc[1:8]    # first treatment</code></pre>
-<pre><code>[1] 26 25  2  1 32 27 22  7</code></pre>
+<pre><code>[1] 11 15  7  1  4  8 13 27</code></pre>
 <pre class="r"><code>&gt; alloc[9:16]   # second treatment</code></pre>
-<pre><code>[1]  3 18 10  4 23 15 24 30</code></pre>
+<pre><code>[1] 12  9 19 16  2  3 25 30</code></pre>
 <pre class="r"><code>&gt; alloc[17:24]  # third treatment</code></pre>
-<pre><code>[1] 14  8 16 17 20  6 11 13</code></pre>
+<pre><code>[1] 31 17  5 20 22 26  6 14</code></pre>
 <pre class="r"><code>&gt; alloc[25:32]  # fourth treatment</code></pre>
-<pre><code>[1] 28 29 21 31 12 19  9  5</code></pre>
+<pre><code>[1] 29 18 10 32 23 24 28 21</code></pre>
+<hr />
 </div>
 <div id="softball-bats-and-balls" class="section level4">
 <h4>Softball Bats and Balls</h4>
@@ -87,16 +74,16 @@ css: "/css/modules.css"
 <pre class="r"><code>&gt; sample(3)  # random order of bats</code></pre>
 <pre><code>[1] 1 2 3</code></pre>
 <pre class="r"><code>&gt; sample(8)  # first order of balls ... 1-4 is first brand, 5-8 second</code></pre>
-<pre><code>[1] 1 2 3 5 6 7 8 4</code></pre>
+<pre><code>[1] 2 3 1 4 7 5 6 8</code></pre>
 <pre class="r"><code>&gt; sample(8)  # second order of balls</code></pre>
-<pre><code>[1] 5 2 1 6 4 8 3 7</code></pre>
+<pre><code>[1] 2 4 3 8 1 7 5 6</code></pre>
 <pre class="r"><code>&gt; sample(8)  # third order of balls</code></pre>
-<pre><code>[1] 4 8 1 3 5 7 2 6</code></pre>
+<pre><code>[1] 8 3 1 2 4 7 5 6</code></pre>
 <hr />
 </div>
 </div>
-<div id="class-excercise-4" class="section level2">
-<h2>Class Excercise 4</h2>
+<div id="identify-response-and-explanatory-variables" class="section level2">
+<h2>Identify Response and Explanatory Variables</h2>
 <ol>
 <li>Response is “success rate”, explanatory is distance of putt.</li>
 <li>Response is “response time”, explanatory is amount of time awake.</li>
@@ -105,7 +92,19 @@ css: "/css/modules.css"
 <li>Response is sales of umbrellas, explanatory is amount of rainfall.</li>
 <li>Response is weight, explanatory is age.</li>
 </ol>
+<hr />
 </div>
+<div id="study-types-ii" class="section level2">
+<h2>Study Types II</h2>
+<ol>
+<li>Observational … no treatment was imparted (work at night was a “choice” of the women)</li>
+<li>Observational … no treatment was imparted (observation of church records)</li>
+<li>Experiment … a treatment (type of trap) was imparted.</li>
+</ol>
+<hr />
+</div>
+
+
 
 
 </div>
@@ -113,9 +112,13 @@ css: "/css/modules.css"
 <script>
 
 // add bootstrap table styles to pandoc tables
-$(document).ready(function () {
+function bootstrapStylePandocTables() {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
 });
+
 
 </script>
 
