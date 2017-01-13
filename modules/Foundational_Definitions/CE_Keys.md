@@ -16,7 +16,7 @@ css: "/css/modules.css"
 * Pa - *Average* number of miles driven per week by **ALL** Northland College Students in Fall, 2013
 * Sa - 147 sampled Northland College students
 * St - *Average* number of miles driven per week by 147 sampled Northland College Students in Fall, 2013 
-* Variable Type - Continuous, Quantitative
+* Variable Type - Quantitative, Continuous
 
 ----
 
