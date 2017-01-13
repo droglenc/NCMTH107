@@ -26,7 +26,7 @@ css: "/css/modules.css"
 * V - Total snowfall amount
 * Po - **All** December in Duluth, MN in recorded history
 * Pa -- *Average* total snowfall amount from ALL Decembers in Duluth, MN in recorded history
-* Sa - 35 sampled Decembers
+* Sa - 35 randomly sampled Decembers in Duluth, MN
 * St - *Average* total snowfall amount for the 35 sampled Decembers
 * Variable Type - Quantitative, Continuous
 
