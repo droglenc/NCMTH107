@@ -1,0 +1,136 @@
+---
+title: "Answer Key"
+subtitle: "Linear Regression CE"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Linear_Regression/")
+source("../../rhelpers/rhelpers.R")
+modHTML("CE_Keys")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+source("../../rhelpers/knitr_setup.R")
+```
+
+----
+
+## Equation of the Line
+
+1. **Dishwasher Example**
+    1. response - Height of suds (mm)
+    1. explanatory - Amount of soap (g)
+    1. slope is 12.4
+    1. intercept is -20.2
+    1. For each additional gram of soap, the height of sudes increases by 12.4 mm, on average.
+    1. For 0 grams of soap, the height of suds is -20.2 mm, on average.  [*This is an extrapolation.*]
+    1. Ask to predict height of suds for an amount of soap between 3.5 and 8.0 grams.  Example ... "What is the predicted height of suds for 5 g of soap?"  Answer ... -20.2+12.4*5=41.8 mm.
+    1. Ask to predict height of sudes for an amount of soap not between 3.5 and 8.0 grams.  Example ... "What is the predicted height of suds for 10 g of soap?"
+1. **Livestock Food Example**
+    1. response - Costs
+    1. explanatory - Livestock food mix in pounds
+    1. Slope is 190.
+    1. Intercept is 12075
+    1. For each additional ton of the food mix, the cost increases by $190, on average.
+    1. For 0 tons of the food mix, the costs are $12075, on average. [*This may be considered as "start-up" costs.*]
+    1. Ask to predict costs for food mix amounts between 36.5 and 42 tons.  Example ... "What is the cost to make 40 tons of the mix?"  Answer ... 190*40+12075 = $19675.
+    1. Ask to predict costs for food mix amounts not between 36.5 and 42 tons.  Example ... "What is the cost to make 70 tons of the mix?"
+1. **Grey Kangaroo Example**
+    1. response - Nasal width (x10)
+    1. explanatory - Nasal length (x10)
+    1. The slope is 0.2876.
+    1. The intercept is 46.451.
+    1. For every 1 unit (10 mm) increase in nasal length, the nasal width increases by 0.2876 units (i.e., 2.876 mm), on average.
+    1. The nasal width when the nasal length is 0 mm is 46.451 units (i.e., 464.51 mm), on average.
+    1. Ask to predict the nasal width when the nasal length (x10) is between 450 and 900.  Example ... "What is the predicted nasal width when the nasal length (x10) is 600 (i.e., 60 mm)?"  Answer ... Y=0.2876*600+46.451=219.01 (or 21.9 mm).
+    1. Ask to predict the nasal width when the nasal length (x10) is not between 450 and 900.  Example ... "What is the predicted nasal width when the nasal length (x10) is 250 (i.e., 25 mm)?"
+
+----
+
+## Beach Sand
+```{r echo=FALSE}
+m <- 0.053
+b <- 0.159
+rsq <- 0.912
+```
+
+1. SAND = `r b`+`r m`*ANGLE
+1. For each 1 degree increase in beach angle, the median sand diameter increases by `r m` mm, on average.
+1. If there is 0 beach angle, then the median sand diameter is `r b` mm, on average.
+1. This prediction should not be computed, because 15 degrees of beach angle is outside of the domain of the data used to define the relationship (i.e., this is an extrapolation).
+1. `r formatC(b+m*4,format="f",digits=3)` mm.
+1. `r formatC(0.2-(b+m*5),format="f",digits=3)` mm.
+1. `r formatC(rsq,format="f",digits=3)`.
+1. `r formatC(sqrt(rsq),format="f",digits=3)`.
+1. The relationship appears to be nonlinear.
+
+----
+
+## Class Excercise 3
+
+Results used in the answers below were computed as follows:
+```{r echo=FALSE}
+d <- data.frame(imp=c(60,43,43,34,27,25,21,18,11,8,8,8,7,7,5,4,2),
+                IBI=c(9,11,13,23,31,31,21,23,27,37,39,29,31,43,33,35,37))
+```
+```{r eval=FALSE}
+d <- read.csv("runoff.csv")
+```
+```{r fig.width=3,fig.height=3,par1=TRUE}
+( lm1 <- lm(IBI~imp,data=d) )
+rSquared(lm1)
+fitPlot(lm1)
+```
+```{r echo=FALSE}
+cfs <- coef(lm1)
+```
+
+1. IBI=`r formatC(cfs[1],format="f",digits=4)`-`r formatC(-cfs[2],format="f",digits=4)`*imp.
+1. If the percent of impervious surface increases by 1%, then the IBI score decreases by `r formatC(-cfs[2],format="f",digits=2)`, on average.
+1. If the percent of impervious surface is 0, then the IBI score is `r formatC(cfs[1],format="f",digits=1)`, on average.
+1. Extrapolation.
+1. `r formatC(predict(lm1,data.frame(imp=20)),format="f",digits=1)`.
+1. `r formatC(20-predict(lm1,data.frame(imp=30)),format="f",digits=1)`.
+1. `r formatC(-sqrt(rSquared(lm1)),format="f",digits=2)`.
+1. `r formatC(rSquared(lm1),format="f",digits=2)`.
+1. Very slight evidence of a curve (nonlinear relationship).
+
+----
+
+## Class Excercise 4
+
+Results used in the answers below were computed as follows:
+```{r echo=FALSE}
+d <- read.csv("../UnivEDA_Quantitative/cafedata.csv")
+```
+```{r eval=FALSE}
+d <- read.csv("cafedata.csv")
+```
+```{r fig.width=3,fig.height=3,par1=TRUE}
+( lm1 <- lm(coffee.sold~max.temp,data=d) )
+rSquared(lm1)
+fitPlot(lm1)
+```
+```{r echo=FALSE}
+cfs <- coef(lm1)
+```
+
+1. COFFEESOLD = `r formatC(cfs[1],format="f",digits=4)`-`r formatC(-cfs[2],format="f",digits=4)`*MAXTEMP
+1. For each additional degree of maximum temperature, the number of coffees sold decreases by `r formatC(-cfs[2],format="f",digits=2)`, on average.
+1. If the maximum temperature is 0, then the number of coffees sold is `r formatC(cfs[1],format="f",digits=1)`, on average.
+1. `r formatC(predict(lm1,data.frame(max.temp=40)),format="f",digits=1)`.
+1. Extrapolation.
+1. `r formatC(30-predict(lm1,data.frame(max.temp=40)),format="f",digits=1)`.
+1. `r formatC(-sqrt(rSquared(lm1)),format="f",digits=2)`.
+1. `r formatC(rSquared(lm1),format="f",digits=2)`.
+1. A nonlinear relationship is apparent.
+
+----
