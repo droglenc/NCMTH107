@@ -13,9 +13,9 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/ce-keys/")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Hypothesis_Testing/")
 source("../../rhelpers/rhelpers.R")
-modHTML("Hypothesis_Testing")
+modHTML("CE_Keys")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
@@ -25,7 +25,7 @@ source("../../rhelpers/knitr_setup.R")
 
 ----
 
-## Class Excercise 1
+## Identifying Hypotheses
 
 <ol>
 <li>$H_{A}: \mu < 90$ vs. $H_{0}: \mu = 90$</li>
@@ -36,7 +36,7 @@ source("../../rhelpers/knitr_setup.R")
 
 ----
 
-## Class Excercise 2
+## P-Value Calculations and Decisions
 
 <ol>
 <li>The p-value is "the probabiity of observing a sample mean of 79.5 or greater if the population mean is 75." Reject $H_{0}$ because p-value=`r formatC(distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE),format="f",digits=4)`<&alpha;.</li>
@@ -82,8 +82,7 @@ distrib(73,mean=80,sd=20/sqrt(30))
 
 ----
 
-## Class Excercise 3
-#### Body Temperatures
+## Body Temperature
 <ol>
 <li>$H_{A}: \mu \neq 37$ vs. $H_{0}: \mu = 37$</li>
 ```{r echo=FALSE}
@@ -99,7 +98,7 @@ n <- nrow(d)
 
 ----
 
-## Class Excercise 4
+## Identifying Type I and II Errors
 
 <ol>
 <li>The $H_{0}: \mu=15.4$ and $H_{A}: \mu>15.4$.  A Type I error would be saying that the chicken is contaminated when it really is not contaminated.  A Type II error would be saying that the chicken is not contaminated when it really is contaminated.  In my mind, a Type I error is more egregious as people would be eating contaminated chicken that they have been told is not contaminated.</li>
@@ -107,7 +106,7 @@ n <- nrow(d)
 </ol>
 ----
 
-## Class Excercise 5
+## Understanding Power Relationships
 
 <ol>
 <li>See below.</li>

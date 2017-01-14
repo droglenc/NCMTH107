@@ -18,7 +18,7 @@ title: Class Exercise Keys
 1. [Probability Introduction](../modules/Probability/CE_Keys.html)
 1. [Sampling Distributions](../modules/Sampling_Distributions/CE_Keys.html)
 1. [Hypothesis Testing](../modules/Hypothesis_Testing/CE_Keys.html)
-1. [Confidence Regions](../modules/Confidence_Intervals/CE_Keys.html)
+1. [Confidence Regions](../modules/Confidence_Regions/CE_Keys.html)
 1. [1-Sample Z-Test](../modules/1_Sample_Z/CE_Keys.html)
 1. [1-Sample t-Test](../modules/1_Sample_t/CE_Keys.html)
 1. [2-Sample t-Test](../modules/2_Sample_t/CE_Keys.html)

@@ -7,7 +7,7 @@ css: "/css/modules.css"
 
 ----
 
-## Confidence Interval Calculations
+## Confidence Region Calculations
 
 For each situation below, (a) identify the level of confidence; (b) whether a lower confidence bound, upper confidence bound, or confidence interval should be constructed; (c) find Z<sup>*</sup> (include a drawing that illustrates your calculation); (d) construct the confidence region; and (e) specifically interpret the confidence region.
 

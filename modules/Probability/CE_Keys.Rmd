@@ -11,9 +11,9 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/ce-keys/")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Probability/")
 source("../../rhelpers/rhelpers.R")
-modHTML("Probability")
+modHTML("CE_Keys")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
@@ -23,15 +23,16 @@ source("../../rhelpers/knitr_setup.R")
 
 ----
 
-## Class Excercise 1
-#### **Banking Example**
+## Banking Example
 
 1. `r formatC(distrib(800,mean=550,sd=150,lower.tail=FALSE),format="f",digits=4)` 
 1. `r formatC(distrib(200,mean=550,sd=150),format="f",digits=4)` 
 1. `r formatC(distrib(600,mean=550,sd=150),format="f",digits=4)` 
 1. `r formatC(distrib(850,mean=550,sd=150)-distrib(700,mean=550,sd=150),format="f",digits=4)` 
     
-#### **Acorn Production Example**
+----
+
+## Acorn Production Example
 
 1. `r formatC(distrib(1000,mean=875,sd=220,lower.tail=FALSE),format="f",digits=4)` 
 1. `r formatC(distrib(1000,mean=875,sd=220)-distrib(700,mean=875,sd=220),format="f",digits=4)` 

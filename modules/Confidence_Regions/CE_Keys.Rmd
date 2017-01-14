@@ -1,6 +1,6 @@
 ---
 title: "Answer Key"
-subtitle: "Confidence Intervals CE"
+subtitle: "Confidence Regions CE"
 author: Derek H. Ogle
 layout: page
 css: "/css/modules.css"
@@ -13,9 +13,9 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/ce-keys/")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Confidence_Regions/")
 source("../../rhelpers/rhelpers.R")
-modHTML("Confidence_Intervals")
+modHTML("CE_Keys")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
@@ -25,13 +25,13 @@ source("../../rhelpers/knitr_setup.R")
 
 ----
 
-## Class Excercise 1
+## Understanding the Concept of Confidence Intervals
 
 Not done.
 
 ----
 
-## Class Excercise 2
+## Confidence Region Calculations
 
 <ol>
 <li>See below.</li>
@@ -122,8 +122,7 @@ zstar <- distrib(0.025,type="q",lower.tail=FALSE)
 
 ----
 
-## Class Excercise 3
-#### Body Temperatures
+## Body Temperatures
 <ol>
 ```{r echo=-(4:5), fig.show='hide'}
 d <- read.csv("https://github.com/droglenc/NCData/raw/master/NormTemp.csv")
@@ -136,7 +135,9 @@ n <- nrow(d)
 <li>I am 95% confident that the true population mean body temperature is between `r formatC(mn-zstar*0.41/sqrt(n),format="f",digits=1)` and `r formatC(mn+zstar*0.41/sqrt(n),format="f",digits=1)`C.</li>
 </ol>
 
-#### Radius of Jupiter
+----
+
+## Radius of Jupiter
 <ol>
 ```{r fig.show='hide'}
 (zstar <- distrib(0.005,type="q",lower.tail=FALSE))
@@ -147,8 +148,7 @@ n <- nrow(d)
 
 ----
 
-## Class Excercise 4
-#### Internet Usage
+## Internet Usage
 
 <ol>
 ```{r ncalc1, echo=FALSE, results='hide', fig.show='hide'}
@@ -183,7 +183,9 @@ sigma <- 6.95; me <- 0.5
 ```
 </ol>
 
-#### Blood Pressure in Children
+----
+
+## Blood Pressure in Children
 
 <ol>
 ```{r ncalc4, echo=FALSE, results='hide', fig.show='hide'}

@@ -11,9 +11,9 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/ce-keys/")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Sampling_Distributions/")
 source("../../rhelpers/rhelpers.R")
-modHTML("Sampling_Distributions")
+modHTML("CE_Keys")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
@@ -23,7 +23,7 @@ source("../../rhelpers/knitr_setup.R")
 
 ----
 
-## Class Excercise 1
+## Constructing a Sampling Distribution
 
 ```{r echo=FALSE, results='hide'}
 d <- c(12,14,16,18,20)
@@ -87,14 +87,13 @@ round(d4se,3)
 
 ----
 
-## Class Excercise 2
+## Checking the CLT
 
-**NOT DONE**
+**NOT AVAILABLE**
 
 ----
 
-## Class Excercise 3
-#### Melatonin and Sleep
+## Melatonin and Sleep
 
 1. About a mean from n=4 ...
     1. Sampling.
@@ -112,7 +111,9 @@ round(d4se,3)
     1. N(15,`r formatC(5/sqrt(25),format="f",digits=3)`)
     1. `r formatC(distrib(15.5,mean=15,sd=5/sqrt(25),lower.tail=FALSE),format="f",digits=4)`.
 
-#### Pollutants in Auto Exhaust
+----
+
+## Pollutants in Auto Exhaust
 
 1. About an individual ...
     1. Population.
@@ -143,8 +144,7 @@ round(d4se,3)
 
 ----
 
-## Class Excercise 4
-#### Acorn Length
+## Acorn Length
 
 1. About an individual ...
     1. Population.
@@ -172,7 +172,9 @@ round(d4se,3)
     1. Right-skewed (not normal).
     1. Can't answer.
 
-#### People in Car
+----
+
+## People in Car
 
 1. No.  Left side will be truncated at 0 (i.e., more than 2 SD away from mean becomes negative, which is not possible).  Discrete data with lots of ones and twos with few higher than that.
 1. About a mean from n=40 ...
@@ -196,7 +198,9 @@ round(d4se,3)
     1. N(1.5,`r formatC(0.75/sqrt(700),format="f",digits=4)`)
     1. `r formatC(distrib(1075/700,mean=1.5,sd=0.75/sqrt(700),lower.tail=FALSE),format="f",digits=4)`.
 
-#### Plowing Snow
+----
+
+## Plowing Snow
 
 1. About a mean from n=5 ...
     1. Sampling.
@@ -218,3 +222,5 @@ round(d4se,3)
     1. Can be answered.
     1. N(45,`r formatC(28/sqrt(40),format="f",digits=4)`)
     1. `r formatC(distrib(0.25,mean=45,sd=28/sqrt(40),type="q"),format="f",digits=1)` secs.
+
+----
