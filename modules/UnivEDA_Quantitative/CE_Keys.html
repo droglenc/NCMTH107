@@ -127,7 +127,7 @@ Range is 1 to 97.
 <li>
 The diameter of CWD is largely right-skewed with a separate group of four individuals at higher diameters (Figure 1). With this definition of shape, there are no outliers. The center as measured by the median is 18 cm and the IQR is from a Q1 of 16.25 to a Q3 of 20.75 cm (Table 1). I chose to use the median and IQR because of the right-skewed shape.
 </li>
-<p><img src="CE_Keys_files/figure-html/CWDHist-1.png" width="288" /></p>
+<p><img src="CE_Keys_files/figure-html/CWDHist1-1.png" width="288" /></p>
 <p>Figure 1: Histogram of the diameter (cm) of coarse woody debris in Allequash Lake, WI.</p>
 <p>Table 1: Summary statistics for the diameter (cm) of coarse woody debris in Allequash Lake, WI.</p>
 <pre><code>     n   mean     sd    min     Q1 median     Q3    max 
@@ -143,7 +143,7 @@ The diameter of CWD is largely right-skewed for both low- and medium-exposure si
 2      med 41 18.98 4.15  15 17     18 20  34</code></pre>
 </ol>
 <p>R Appendix.</p>
-<pre class="r"><code>d &lt;- read.csv(&quot;cwd.csv&quot;)
+<pre class="r"><code>d &lt;- read.csv(&quot;CWD.csv&quot;)
 hist(~diameter,data=d,xlab=&quot;Diameter of CWD&quot;)
 Summarize(~diameter,data=d,digits=2)
 hist(diameter~exposure,data=d,xlab=&quot;Diameter of CWD&quot;)

@@ -21,7 +21,7 @@ library(NCStats)
 source("../../rhelpers/knitr_setup.R")
 library(captioner)
 tbls <- captioner(prefix="Table")
-tbls(name="CWD","Summary statistics for the diameter (cm) of coarse woody debris in Allequash Lake, WI.")
+tbls(name="CWD1","Summary statistics for the diameter (cm) of coarse woody debris in Allequash Lake, WI.")
 tbls(name="CWD2","Summary statistics for the diameter (cm) of coarse woody debris in Allequash Lake, WI separated by exposure category.")
 tbls(name="Cafe1","Summary statistics of the number of coffees sold in the college cafe.")
 tbls(name="Cafe2","Summary statistics of the number of coffees sold in the college cafe separated by day of the week.")
@@ -29,7 +29,7 @@ tbls(name="Cafe3","Summary statistics of the number of sodas sold in the college
 tbls(name="Cafe4","Summary statistics of the number of sodas sold in the college cafe separated by day of the week.")
 
 figs <- captioner(prefix="Figure")
-figs(name="CWD","Histogram of the diameter (cm) of coarse woody debris in Allequash Lake, WI.")
+figs(name="CWD1","Histogram of the diameter (cm) of coarse woody debris in Allequash Lake, WI.")
 figs(name="CWD2","Histogram of the diameter (cm) of coarse woody debris in Allequash Lake, WI separated by exposure category.")
 figs(name="Cafe1","Histogram of the number of coffees sold in the college cafe.")
 figs(name="Cafe3","Histogram of the number of sodas sold in the college cafe.")
@@ -106,17 +106,17 @@ iqrCalc(c(93,81,34,5,54,84,54,13,1,35,79,63,97,71))
 
 ## Coarse Woody Debris
 <ol>
-<li>The diameter of CWD is largely right-skewed with a separate group of four individuals at higher diameters (`r figs("CWD",display="cite")`).  With this definition of shape, there are no outliers.  The center as measured by the median is 18 cm and the IQR is from a Q1 of 16.25 to a Q3 of 20.75 cm (`r tbls("CWD",display="cite")`).  I chose to use the median and IQR because of the right-skewed shape.</li>
-```{r CWDHist, echo=FALSE, fig.width=3, fig.height=3, par1=TRUE}
-d <- read.csv("cwd.csv")
+<li>The diameter of CWD is largely right-skewed with a separate group of four individuals at higher diameters (`r figs("CWD1",display="cite")`).  With this definition of shape, there are no outliers.  The center as measured by the median is 18 cm and the IQR is from a Q1 of 16.25 to a Q3 of 20.75 cm (`r tbls("CWD1",display="cite")`).  I chose to use the median and IQR because of the right-skewed shape.</li>
+```{r CWDHist1, echo=FALSE, fig.width=3, fig.height=3, par1=TRUE}
+d <- read.csv("CWD.csv")
 hist(~diameter,data=d,xlab="Diameter of CWD")
 ```
 
-`r figs("CWD")`
+`r figs("CWD1")`
 
-`r tbls("CWD")`
+`r tbls("CWD1")`
 
-```{r CWDSum, echo=FALSE, background="white"}
+```{r CWDSum1, echo=FALSE, background="white"}
 Summarize(~diameter,data=d,digits=2)
 ```
 
@@ -137,8 +137,8 @@ Summarize(diameter~exposure,data=d,digits=2)
 
 R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
-<<CWDHist>>
-<<CWDSum>>
+<<CWDHist1>>
+<<CWDSum1>>
 <<CWDHist2>>
 <<CWDSum2>>
 ```
