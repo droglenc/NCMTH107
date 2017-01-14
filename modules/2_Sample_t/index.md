@@ -39,7 +39,7 @@ You should [read this](../../book/17_IntroStats.pdf) and watch these videos:
 
 ## Practice
 
-* In-Class Exercise -- [1](CE1) / [2](CE2) / [3](CE3)
+* In-Class Exercise -- [1](CE1) / [2](CE2) / [3](CE3) / [4](CE4)
 * [Homework Assignment](HW)
 
 ----

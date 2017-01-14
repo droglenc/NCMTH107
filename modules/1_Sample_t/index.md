@@ -42,9 +42,9 @@ Then [read **Sections 16.2 & 16.3**](../../book/16_IntroStats.pdf) and watch the
 
 ----
 
-## In-Class Practice
+## Practice
 
-* Class Exercises -- [1](CE1) / [2](CE2) / [3](CE3)
+* Class Exercises -- [1](CE1) / [2](CE2) / [3](CE3) / [4](CE4)
 * [Homework Assignment](HW)
 
 ----

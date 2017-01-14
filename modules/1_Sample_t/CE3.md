@@ -17,18 +17,13 @@ Common wisdom has it that the world is becoming more civilized.  This would sugg
 
 ----
 
-## Thickness of the Ozone Layer
-<img src="../zimgs/ozone-hole.jpg" alt="Ozone Hole" class="img-right">
-The typical thickness of the ozone layer over the Earth's surface is 300 [Dobson units](http://ozonewatch.gsfc.nasa.gov/facts/dobson_SH.html).  Researchers at the Laboratorium für Atmospharensphysic in Switzerland recorded the thickness of the ozone layer over [Arosa, Switzerland](https://en.wikipedia.org/wiki/Arosa) from 1926 to the present.  The data in OzoneSWI.csv ([file](https://github.com/droglenc/NCData/raw/master/OzoneSWI.csv), [meta](https://github.com/droglenc/NCData/blob/master/OzoneSWI_meta.txt)) contains the measurements from a random sample of 45 years between 1926 and the mid 1990s.  Use these data to determine, at the 1% level, if the thickness of the ozone layer over Arosa is different than that which is typical for the Earth's surface.  Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../Hypothesis_Testing/11-steps.html).[^2]
-
-----
-
 <div class="text-center">
 <ul class="pagination pagination-lg">
   <li><a href="index.html">^</a></li>
   <li><a href="CE1.html">1</a></li>
   <li><a href="CE2.html">2</a></li>
   <li class="active"><a href="#">3</a></li>
+  <li><a href="CE4.html">4</a></li>
 </ul>
 </div>
 

@@ -30,5 +30,6 @@ For the same situations above, (a) identify the level of confidence; (b) whether
   <li class="active"><a href="#">1</a></li>
   <li><a href="CE2.html">2</a></li>
   <li><a href="CE3.html">3</a></li>
+  <li><a href="CE4.html">4</a></li>
 </ul>
 </div>
