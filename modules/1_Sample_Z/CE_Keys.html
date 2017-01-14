@@ -46,6 +46,11 @@ Not required
 </li>
 </ol>
 <p>R Appendix.</p>
+<pre class="r"><code>xbar &lt;- 6.7; sigma &lt;- 7.1; n &lt;- 35
+se &lt;- sigma/sqrt(n)
+t &lt;- (xbar-5)/se
+pv &lt;- distrib(t,lower.tail=FALSE)
+lcb &lt;- xbar+distrib(0.95,lower.tail=FALSE,type=&quot;q&quot;)*se</code></pre>
 <hr />
 </div>
 <div id="raptors-at-hawks-ridge" class="section level2">
