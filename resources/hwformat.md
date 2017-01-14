@@ -9,7 +9,7 @@ css: /css/modules.css
 I have very specific expectations for your homework assignment reports.  These expectations and requirements are described below.  [A document that demonstrates several of these expectations is here](FAQ/FAQs/HWFormat_Example.pdf){:target="_blank"} (note the comments in "balloons").
 
 1. Each document should be typed and printed (**double-sided**) to hand in as a hard-copy.
-1. Each document should be labeled with your name and homework title (e.g., "Chapter 10 Homework").  It is not important to include the name of the class or my name (I already know both of these).
+1. Each document should be labeled with your name and homework title (e.g., "Module 10 Homework").  It is not important to include the name of the class or my name (I already know both of these).
 1. Each document should include the following statement along with your signature -- "*I have neither given nor received unauthorized aid in completing this work, nor have I presented someone else's work as my own.*"
 1. Your document should "look nice."  This means that you should include spaces that increase readability (e.g., between a paragraph and a table) but remove spaces that waste paper (e.g., there is no need to have five empty lines between a paragraph and a graphic).  In addition, you should not use "non-standard" fonts -- the most common of which is "comic sans."  Scientific presentations require a "serious" font which is likely one of "Times New Roman", "Arial", "Calibri", or "Helvetica."  The one exception to this is the use of the "Courier" for results from R/RStudio (see below).
 1. You should use complete sentences whenever possible.  This may result in very simple sentences -- e.g., "The sample mean is 3.26 (Table 1)." -- but should become your default.
