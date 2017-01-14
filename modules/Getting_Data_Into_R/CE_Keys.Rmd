@@ -36,9 +36,9 @@ setwd("T:/Stats")
 bhobj <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/BrainHead.csv")
 ```
 
-1. There are `r ncol(bhobj)` variables in BrainHead.csv.
+1. There are `r kCounts(ncol(bhobj))` variables in BrainHead.csv.
 1. The variables in Brainhead.csv are: `r paste(names(bhobj),collapse=", ")`.
-1. There are `r nrow(bhobj)` individuals in BrainHead.csv.
+1. There are `r kCounts(nrow(bhobj))` individuals in BrainHead.csv.
 
 ```{r eval=FALSE}
 bhobj <- read.csv("BrainHead.csv")
@@ -50,9 +50,9 @@ str(bhobj)
 pkobj <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/PopularKids.csv")
 ```
 
-1. There are `r ncol(pkobj)` variables in PopularKids.csv.
+1. There are `r kCounts(ncol(pkobj))` variables in PopularKids.csv.
 1. The variables in PopularKids.csv are: `r paste(names(pkobj),collapse=", ")`.
-1. There are `r nrow(pkobj)` individuals in PopularKids.csv.
+1. There are `r kCounts(nrow(pkobj))` individuals in PopularKids.csv.
 
 ```{r eval=FALSE}
 pkobj <- read.csv("PopularKids.csv")
@@ -64,9 +64,9 @@ str(pkobj)
 yobj <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Yahara.csv")
 ```
 
-1. There are `r ncol(yobj)` variables in Yahara.csv.
+1. There are `r kCounts(ncol(yobj))` variables in Yahara.csv.
 1. The variables in Yahara.csv are: `r paste(names(yobj),collapse=", ")`.
-1. There are `r nrow(yobj)` individuals in Yahara.csv.
+1. There are `r kCounts(nrow(yobj))` individuals in Yahara.csv.
 
 ```{r eval=FALSE}
 yobj <- read.csv("Yahara.csv")
