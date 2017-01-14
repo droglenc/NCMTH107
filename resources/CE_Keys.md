@@ -8,7 +8,7 @@ title: Class Exercise Keys
 
 <!--
 1. [Data Production](../modules/Data_Production/CE_Keys.html)
-1. Getting Started With RStudio
+1. [Getting Data into RStudio](../modules/Getting_Data_Into_R/CE_Keys.html)
 1. [Univariate EDA - Quantitative](UnivEDA_Quantitative.html)
 1. [Univariate EDA - Categorical](UnivEDA_Categorical.html)
 1. [Normal Distributions](Normal_Distributions.html)

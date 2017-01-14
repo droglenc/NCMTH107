@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Getting Started with R
-subtitle: R Handout
+title: R Handout
+subtitle: Getting Data Into R
 author: Derek H. Ogle
 css: /css/modules.css
 output:
@@ -17,18 +17,19 @@ output:
     fig_height: 3.5
 ---
 ```{r echo=FALSE, eval=FALSE}
+# ==============================================================================
 # BEGIN IGNORE THIS CODE =======================================================
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Getting_Data_Into_R")
 source("../../rhelpers/rhelpers.R")
-fnm <- "RHO"
-modHTML(fnm)
+modHTML("RHO")
 ```
 
-```{r echo=FALSE, results='hide', message=FALSE}
-fnm <- "RHO"
+```{r echo=FALSE, results='hide', message=FALSE, warnings=FALSE}
 source("../../rhelpers/knitr_setup.R")
+purl2("RHO.Rmd")
 # END IGNORE THIS CODE =========================================================
+# ==============================================================================
 ```
 
 ## Always First Command
@@ -41,38 +42,34 @@ library(NCStats)
 ## Basic Data Frames
 ```{r}
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Getting_Data_Into_R")
-iris <- read.csv("Iris.csv")
-str(iris)
-headtail(iris)     # NOT the entire data.frame
+dfobj <- read.csv("Iris.csv")
+str(dfobj)
+headtail(dfobj)     # NOT the entire data.frame
 ```
 
 ## Working With Data Frames
 ```{r}
-iris$seplen
-iris$species
+dfobj$seplen
+dfobj$species
 ```
 
 ## Filtering Data Frames
 ```{r}
-set <- filterD(iris,species=="setosa")
+set <- filterD(dfobj,species=="setosa")
 str(set)
 
-gt5 <- filterD(iris,seplen>5)
+gt5 <- filterD(dfobj,seplen>5)
 headtail(gt5)
 
-setver1 <- filterD(iris,species!="virginica")
+setver1 <- filterD(dfobj,species!="virginica")
 str(setver1)
 
-setver <- filterD(iris,species %in% c("setosa","versicolor"))
+setver <- filterD(dfobj,species %in% c("setosa","versicolor"))
 str(setver)
 
-ver_and_gt5 <- filterD(iris,species=="versicolor",seplen>5)
+ver_and_gt5 <- filterD(dfobj,species=="versicolor",seplen>5)
 headtail(ver_and_gt5)
 
-ver_or_gt5 <- filterD(iris,species=="versicolor" | seplen>5)
+ver_or_gt5 <- filterD(dfobj,species=="versicolor" | seplen>5)
 headtail(ver_or_gt5)
-```
-
-```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
-purl2(paste0(fnm,".Rmd"))
 ```

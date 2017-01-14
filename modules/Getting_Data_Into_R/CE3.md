@@ -18,9 +18,9 @@ Use this information to answer the following questions (by using R).
 1. How many individuals are recorded in this data.frame?
 1. Isolate the following subsets of data (show the structure or a view of the resultant data.frame to verify your results).
     * Cars that were manufactured by Ford.
-    * Cars that get more than 25 miles per gallon in the city.
-    * Cars that had an automatic transmission and get more than 25 miles per gallon on the highway.
-    * Cars that had a horsepower between 150 and 200.
+    * Cars that get more than 30 miles per gallon in the city.
+    * Cars that had an automatic transmission and get more than 30 miles per gallon on the highway.
+    * Cars that had a horsepower between 175 and 200.
     * Cars that were either domestically manufactured or were four cylinders.
 
 ----

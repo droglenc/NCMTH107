@@ -1,41 +1,41 @@
+# ==============================================================================
 # BEGIN IGNORE THIS CODE =======================================================
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Getting_Data_Into_R")
 source("../../rhelpers/rhelpers.R")
-fnm <- "RHO"
-modHTML(fnm)
+modHTML("RHO")
 
-fnm <- "RHO"
 source("../../rhelpers/knitr_setup.R")
 # END IGNORE THIS CODE =========================================================
+# ==============================================================================
 
 library(NCStats)
 
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Getting_Data_Into_R")
-iris <- read.csv("Iris.csv")
-str(iris)
-headtail(iris)     # NOT the entire data.frame
+dfobj <- read.csv("Iris.csv")
+str(dfobj)
+headtail(dfobj)     # NOT the entire data.frame
 
-iris$seplen
-iris$species
+dfobj$seplen
+dfobj$species
 
-set <- filterD(iris,species=="setosa")
+set <- filterD(dfobj,species=="setosa")
 str(set)
 
-gt5 <- filterD(iris,seplen>5)
+gt5 <- filterD(dfobj,seplen>5)
 headtail(gt5)
 
-setver1 <- filterD(iris,species!="virginica")
+setver1 <- filterD(dfobj,species!="virginica")
 str(setver1)
 
-setver <- filterD(iris,species %in% c("setosa","versicolor"))
+setver <- filterD(dfobj,species %in% c("setosa","versicolor"))
 str(setver)
 
-ver_and_gt5 <- filterD(iris,species=="versicolor",seplen>5)
+ver_and_gt5 <- filterD(dfobj,species=="versicolor",seplen>5)
 headtail(ver_and_gt5)
 
-ver_or_gt5 <- filterD(iris,species=="versicolor" | seplen>5)
+ver_or_gt5 <- filterD(dfobj,species=="versicolor" | seplen>5)
 headtail(ver_or_gt5)
 
 
-# Script created at 2016-12-19 11:42:07
+# Script created at 2017-01-14 09:08:05
