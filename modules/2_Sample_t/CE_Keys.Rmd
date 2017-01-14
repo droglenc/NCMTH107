@@ -13,9 +13,9 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/ce-keys/")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/2_Sample_t/")
 source("../../rhelpers/rhelpers.R")
-modHTML("2_Sample_t")
+modHTML("CE_Keys")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
@@ -180,9 +180,14 @@ R Appendix.
 <<Chol1Calc>>
 ```
 
-## Cholesterol Drug Treatments I
-```{r}
+## Cholesterol Drug Treatments II
+```{r echo=FALSE}
 d <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Cholesterol2.csv")
+```
+```{r eval=FALSE}
+d <- read.csv("Cholesterol2.csv")
+```
+```{r}
 d$decrease <- d$before-d$after
 levenesTest(decrease~tx,data=d)
 t.test(decrease~tx,data=d,var.equal=TRUE)
@@ -265,7 +270,7 @@ kHtest(del.t)
 
 R Appendix
 ```{r eval=FALSE, prompt=FALSE}
-<<DeliveriesData>>
+del <- read.csv("Deliveries.csv")
 <<DeliveriesHist>>
 <<DeliveriesCode>>
 ```
