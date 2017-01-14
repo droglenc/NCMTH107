@@ -44,7 +44,7 @@ Then you should [read **Section 10.6**](../../book/15_IntroStats.pdf) and watch 
 ## Practice
 
 * [Class Example](CExmpl)
-* [Class Exercise](CE)
+* Class Exercises - [1](CE1) / [2](CE2)
 * [Homework Assignment](HW)
 
 ----
