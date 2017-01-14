@@ -47,6 +47,7 @@ CCards   636.86  636.50  4.42  629  647  633.25 640.00
 ## Counting Plants in Plots
 <img src="../zimgs/counting-plants.jpg" alt="Counting PLants" class="img-right">
 
-Suppose that a plant ecologist is to examine a very large tract of land that has been subdivided into 1400 plots of 10 m^2^ (10 square meters). The researcher wants to determine, with 90% confidence, the mean density of plants per plot for the entire tract of land to within 10 plants per plot. A pilot study indicated that the standard deviation was approximately 50 plants per plot. Determine how many 10 m^2^ plots the researcher should examine to reach her stated goals.
+Suppose that a plant ecologist is to examine a very large tract of land that has been subdivided into 1400 plots of 10 m<sup>2</sup> (10 square meters). The researcher wants to determine, with 90% confidence, the mean density of plants per plot for the entire tract of land to within 10 plants per plot. A pilot study indicated that the standard deviation was approximately 50 plants per plot. Determine how many 10 m<sup>2</sup> plots the researcher should examine to reach her stated goals.
 
+&nbsp; &nbsp;
 ----
