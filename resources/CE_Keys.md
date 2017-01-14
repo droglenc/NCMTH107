@@ -24,5 +24,5 @@ title: Class Exercise Keys
 1. [1-Sample Z-Test](../modules/1_Sample_Z/CE_Keys.html)
 1. [1-Sample t-Test](../modules/1_Sample_t/CE_Keys.html)
 1. [2-Sample t-Test](../modules/2_Sample_t/CE_Keys.html)
-1. [Chi-Square Test](../modules/ChiSquare/CE_Keys.html)
+1. [Chi-Square Test](../modules/Chi_Square/CE_Keys.html)
 1. [Goodness-of-Fit Test](../modules/Goodness_of_Fit/CE_Keys.html)
