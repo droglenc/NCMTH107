@@ -50,66 +50,60 @@ css: "/css/modules.css"
 <div id="beach-sand" class="section level2">
 <h2>Beach Sand</h2>
 <ol>
-<li>SAND = 0.159+0.053*ANGLE</li>
+<li>The equation of the best-fit line is SAND = 0.159+0.053*ANGLE</li>
 <li>For each 1 degree increase in beach angle, the median sand diameter increases by 0.053 mm, on average.</li>
 <li>If there is 0 beach angle, then the median sand diameter is 0.159 mm, on average.</li>
 <li>This prediction should not be computed, because 15 degrees of beach angle is outside of the domain of the data used to define the relationship (i.e., this is an extrapolation).</li>
-<li>0.371 mm.</li>
-<li>-0.224 mm.</li>
-<li>0.912.</li>
-<li>0.955.</li>
-<li>The relationship appears to be nonlinear.</li>
+<li>The predicted median sand diameter for a beach angle of 4 degrees is 0.371 mm.</li>
+<li>The residual for an observed median sand diamter of 0.2 mm and beach angle of 5 degrees is -0.224 mm.</li>
+<li>The proportion of variabiilty in median sand diameter that is explained by knowing the angle of the beach is 0.912.</li>
+<li>The correlation coefficient between median sand diameter and beach angle is 0.955.</li>
+<li>The relationship betwen median sand diameter and beach angle appears to be nonlinear.</li>
 </ol>
 <hr />
 </div>
 <div id="class-excercise-3" class="section level2">
 <h2>Class Excercise 3</h2>
-<p>Results used in the answers below were computed as follows:</p>
-<pre class="r"><code>&gt; d &lt;- read.csv(&quot;runoff.csv&quot;)</code></pre>
-<pre class="r"><code>&gt; ( lm1 &lt;- lm(IBI~imp,data=d) )</code></pre>
-<pre><code>Coefficients:
-(Intercept)          imp  
-    37.8242      -0.5136  </code></pre>
-<pre class="r"><code>&gt; rSquared(lm1)</code></pre>
-<pre><code>[1] 0.7632712</code></pre>
-<pre class="r"><code>&gt; fitPlot(lm1)</code></pre>
-<p><img src="CE_Keys_files/figure-html/unnamed-chunk-6-1.png" width="288" /></p>
 <ol>
-<li>IBI=37.8242-0.5136*imp.</li>
+<li>The equation of the best-fit line is IBI=37.8242-0.5136*imp.</li>
 <li>If the percent of impervious surface increases by 1%, then the IBI score decreases by 0.51, on average.</li>
 <li>If the percent of impervious surface is 0, then the IBI score is 37.8, on average.</li>
-<li>Extrapolation.</li>
-<li>27.6.</li>
-<li>-2.4.</li>
-<li>-0.87.</li>
-<li>0.76.</li>
-<li>Very slight evidence of a curve (nonlinear relationship).</li>
+<li>This questions is an extrapolation and should not be answered.</li>
+<li>The IBI score is predicted to be 27.6 when the percent of impervious surface is 20%.</li>
+<li>The residual for an observed IBI score of 20 and a percent of impervious surface of 30% is -2.4.</li>
+<li>The correlation coefficient between IBI score and percent of impervious surface is -0.87.</li>
+<li>The proportion of variability in IBI scores that is explained by knowing the percent of impervious surface is 0.76.</li>
+<li>There appears to be homoscedasticity, but there is slight evidence of a curve suggesting that the relationship is nonlinear (Figure 1).</li>
 </ol>
+<p><img src="CE_Keys_files/figure-html/IBIPlot-1.png" width="288" /></p>
+<p>Figure 1: Fitted-line plot for the relatinoship between IBI scores and the percentage of imperious surface for 14 locations in Washington.</p>
+<p>R Appendix.</p>
+<pre class="r"><code>d &lt;- read.csv(&quot;runoff.csv&quot;)
+( lm1 &lt;- lm(IBI~imp,data=d) )
+rSquared(lm1)
+fitPlot(lm1,xlab=&quot;Percentage of Impervious Surface&quot;)</code></pre>
 <hr />
 </div>
 <div id="class-excercise-4" class="section level2">
 <h2>Class Excercise 4</h2>
-<p>Results used in the answers below were computed as follows:</p>
-<pre class="r"><code>&gt; d &lt;- read.csv(&quot;cafedata.csv&quot;)</code></pre>
-<pre class="r"><code>&gt; ( lm1 &lt;- lm(coffee.sold~max.temp,data=d) )</code></pre>
-<pre><code>Coefficients:
-(Intercept)     max.temp  
-    45.3131      -0.5693  </code></pre>
-<pre class="r"><code>&gt; rSquared(lm1)</code></pre>
-<pre><code>[1] 0.5495287</code></pre>
-<pre class="r"><code>&gt; fitPlot(lm1)</code></pre>
-<p><img src="CE_Keys_files/figure-html/unnamed-chunk-10-1.png" width="288" /></p>
 <ol>
-<li>COFFEESOLD = 45.3131-0.5693*MAXTEMP</li>
+<li>The equation of the best-fit line is COFFEESOLD = 45.3131-0.5693*MAXTEMP</li>
 <li>For each additional degree of maximum temperature, the number of coffees sold decreases by 0.57, on average.</li>
-<li>If the maximum temperature is 0, then the number of coffees sold is 45.3, on average.</li>
-<li>22.5.</li>
-<li>Extrapolation.</li>
-<li>7.5.</li>
-<li>-0.74.</li>
-<li>0.55.</li>
-<li>A nonlinear relationship is apparent.</li>
+<li>If the maximum temperature is 0F, then the number of coffees sold is 45.3, on average.</li>
+<li>The predicted number of coffees sold if the maximum temperature if 40F is 22.5.</li>
+<li>This question is an extrapolation and should not be answered.</li>
+<li>The residual for an observation of 30 coffees sold when the maximum temperature was 40F is 7.5.</li>
+<li>The correlation coefficient between the number of coffees sold and the maximum temperature is -0.74 (this should be interpreted cautiously as the relationship is slighly nonlinear; Figure 2).</li>
+<li>The proportion of variability in number of coffees sold explained by knowing the maximum temperature is 0.55.</li>
+<li>The relationship appears to be homoscedastic, but nonlinear (Figure 2).</li>
 </ol>
+<p><img src="CE_Keys_files/figure-html/CafePlot-1.png" width="288" /></p>
+<p>Figure 2: Fitted-line plot for the relatinoship between number of coffees sold and the maximum daily temperature for the college cafe.</p>
+<p>R Appendix.</p>
+<pre class="r"><code>d &lt;- read.csv(&quot;cafedata.csv&quot;)
+( lm1 &lt;- lm(coffee.sold~max.temp,data=d) )
+rSquared(lm1)
+fitPlot(lm1,xlab=&quot;Maximum Temperature&quot;,ylab=&quot;Number of Coffees Sold&quot;)</code></pre>
 <hr />
 </div>
 

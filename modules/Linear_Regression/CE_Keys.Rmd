@@ -19,6 +19,11 @@ modHTML("CE_Keys")
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
 source("../../rhelpers/knitr_setup.R")
+library(captioner)
+figs <- captioner(prefix="Figure")
+figs(name="IBI1","Fitted-line plot for the relatinoship between IBI scores and the percentage of imperious surface for 14 locations in Washington.")
+figs(name="Cafe1","Fitted-line plot for the relatinoship between number of coffees sold and the maximum daily temperature for the college cafe.")
+
 ```
 
 ----
@@ -62,75 +67,91 @@ b <- 0.159
 rsq <- 0.912
 ```
 
-1. SAND = `r b`+`r m`*ANGLE
+1. The equation of the best-fit line is SAND = `r b`+`r m`*ANGLE
 1. For each 1 degree increase in beach angle, the median sand diameter increases by `r m` mm, on average.
 1. If there is 0 beach angle, then the median sand diameter is `r b` mm, on average.
 1. This prediction should not be computed, because 15 degrees of beach angle is outside of the domain of the data used to define the relationship (i.e., this is an extrapolation).
-1. `r formatC(b+m*4,format="f",digits=3)` mm.
-1. `r formatC(0.2-(b+m*5),format="f",digits=3)` mm.
-1. `r formatC(rsq,format="f",digits=3)`.
-1. `r formatC(sqrt(rsq),format="f",digits=3)`.
-1. The relationship appears to be nonlinear.
+1. The predicted median sand diameter for a beach angle of 4 degrees is `r formatC(b+m*4,format="f",digits=3)` mm.
+1. The residual for an observed median sand diamter of 0.2 mm and beach angle of 5 degrees is `r formatC(0.2-(b+m*5),format="f",digits=3)` mm.
+1. The proportion of variabiilty in median sand diameter that is explained by knowing the angle of the beach is `r formatC(rsq,format="f",digits=3)`.
+1. The correlation coefficient between median sand diameter and beach angle is `r formatC(sqrt(rsq),format="f",digits=3)`.
+1. The relationship betwen median sand diameter and beach angle appears to be nonlinear.
 
 ----
 
 ## Class Excercise 3
 
-Results used in the answers below were computed as follows:
 ```{r echo=FALSE}
 d <- data.frame(imp=c(60,43,43,34,27,25,21,18,11,8,8,8,7,7,5,4,2),
                 IBI=c(9,11,13,23,31,31,21,23,27,37,39,29,31,43,33,35,37))
 ```
-```{r eval=FALSE}
-d <- read.csv("runoff.csv")
-```
-```{r fig.width=3,fig.height=3,par1=TRUE}
+```{r IBICalc,echo=FALSE, results="hide"}
 ( lm1 <- lm(IBI~imp,data=d) )
 rSquared(lm1)
-fitPlot(lm1)
 ```
 ```{r echo=FALSE}
 cfs <- coef(lm1)
 ```
 
-1. IBI=`r formatC(cfs[1],format="f",digits=4)`-`r formatC(-cfs[2],format="f",digits=4)`*imp.
+1. The equation of the best-fit line is IBI=`r formatC(cfs[1],format="f",digits=4)`-`r formatC(-cfs[2],format="f",digits=4)`*imp.
 1. If the percent of impervious surface increases by 1%, then the IBI score decreases by `r formatC(-cfs[2],format="f",digits=2)`, on average.
 1. If the percent of impervious surface is 0, then the IBI score is `r formatC(cfs[1],format="f",digits=1)`, on average.
-1. Extrapolation.
-1. `r formatC(predict(lm1,data.frame(imp=20)),format="f",digits=1)`.
-1. `r formatC(20-predict(lm1,data.frame(imp=30)),format="f",digits=1)`.
-1. `r formatC(-sqrt(rSquared(lm1)),format="f",digits=2)`.
-1. `r formatC(rSquared(lm1),format="f",digits=2)`.
-1. Very slight evidence of a curve (nonlinear relationship).
+1. This questions is an extrapolation and should not be answered.
+1. The IBI score is predicted to be `r formatC(predict(lm1,data.frame(imp=20)),format="f",digits=1)` when the percent of impervious surface is 20%.
+1. The residual for an observed IBI score of 20 and a percent of impervious surface of 30% is `r formatC(20-predict(lm1,data.frame(imp=30)),format="f",digits=1)`.
+1. The correlation coefficient between IBI score and percent of impervious surface is `r formatC(-sqrt(rSquared(lm1)),format="f",digits=2)`.
+1. The proportion of variability in IBI scores that is explained by knowing the percent of impervious surface is `r formatC(rSquared(lm1),format="f",digits=2)`.
+1. There appears to be homoscedasticity, but there is slight evidence of a curve suggesting that the relationship is nonlinear (`r figs("IBI1",display="cite")`).
+
+```{r IBIPlot,echo=FALSE,fig.width=3,fig.height=3,par1=TRUE}
+fitPlot(lm1,xlab="Percentage of Impervious Surface")
+```
+
+`r figs("IBI1")`
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+d <- read.csv("runoff.csv")
+<<IBICalc>>
+<<IBIPlot>>
+```
 
 ----
 
 ## Class Excercise 4
 
-Results used in the answers below were computed as follows:
 ```{r echo=FALSE}
 d <- read.csv("../UnivEDA_Quantitative/cafedata.csv")
 ```
-```{r eval=FALSE}
-d <- read.csv("cafedata.csv")
-```
-```{r fig.width=3,fig.height=3,par1=TRUE}
+```{r CafeCalc,echo=FALSE,results="hide"}
 ( lm1 <- lm(coffee.sold~max.temp,data=d) )
 rSquared(lm1)
-fitPlot(lm1)
 ```
 ```{r echo=FALSE}
 cfs <- coef(lm1)
 ```
 
-1. COFFEESOLD = `r formatC(cfs[1],format="f",digits=4)`-`r formatC(-cfs[2],format="f",digits=4)`*MAXTEMP
+1. The equation of the best-fit line is COFFEESOLD = `r formatC(cfs[1],format="f",digits=4)`-`r formatC(-cfs[2],format="f",digits=4)`*MAXTEMP
 1. For each additional degree of maximum temperature, the number of coffees sold decreases by `r formatC(-cfs[2],format="f",digits=2)`, on average.
-1. If the maximum temperature is 0, then the number of coffees sold is `r formatC(cfs[1],format="f",digits=1)`, on average.
-1. `r formatC(predict(lm1,data.frame(max.temp=40)),format="f",digits=1)`.
-1. Extrapolation.
-1. `r formatC(30-predict(lm1,data.frame(max.temp=40)),format="f",digits=1)`.
-1. `r formatC(-sqrt(rSquared(lm1)),format="f",digits=2)`.
-1. `r formatC(rSquared(lm1),format="f",digits=2)`.
-1. A nonlinear relationship is apparent.
+1. If the maximum temperature is 0F, then the number of coffees sold is `r formatC(cfs[1],format="f",digits=1)`, on average.
+1. The predicted number of coffees sold if the maximum temperature if 40F is `r formatC(predict(lm1,data.frame(max.temp=40)),format="f",digits=1)`.
+1. This question is an extrapolation and should not be answered.
+1. The residual for an observation of 30 coffees sold when the maximum temperature was 40F is `r formatC(30-predict(lm1,data.frame(max.temp=40)),format="f",digits=1)`.
+1. The correlation coefficient between the number of coffees sold and the maximum temperature is `r formatC(-sqrt(rSquared(lm1)),format="f",digits=2)` (this should be interpreted cautiously as the relationship is slighly nonlinear; `r figs("Cafe1",display="cite")`).
+1. The proportion of variability in number of coffees sold explained by knowing the maximum temperature is `r formatC(rSquared(lm1),format="f",digits=2)`.
+1. The relationship appears to be homoscedastic, but nonlinear (`r figs("Cafe1",display="cite")`).
+
+```{r CafePlot,echo=FALSE,fig.width=3,fig.height=3,par1=TRUE}
+fitPlot(lm1,xlab="Maximum Temperature",ylab="Number of Coffees Sold")
+```
+
+`r figs("Cafe1")`
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+d <- read.csv("cafedata.csv")
+<<CafeCalc>>
+<<CafePlot>>
+```
 
 ----
