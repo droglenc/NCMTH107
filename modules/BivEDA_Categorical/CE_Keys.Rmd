@@ -25,6 +25,10 @@ tbls(name="TreesRaw",'Raw freuency table for stands by type ("sttype": c="conife
 tbls(name="TreesRow",'Row percentages table for stands by type ("sttype": c="coniferous",mc="mostly coniferous",md="mostly deciduous", and d="deciduous" and years since last fire category (tslf).')
 tbls(name="TreesCol",'Column percentages table for stands by type ("sttype": c="coniferous",mc="mostly coniferous",md="mostly deciduous", and d="deciduous" and years since last fire category (tslf).')
 tbls(name="TreesTot",'Total percentages table for stands by type ("sttype": c="coniferous",mc="mostly coniferous",md="mostly deciduous", and d="deciduous" and years since last fire category (tslf).')
+tbls(name="KidsRaw",'Raw freuency table for grade school students by goals and grade.')
+tbls(name="KidsRow",'Row percentages table for grade school students by goals and grade.')
+tbls(name="KidsCol",'Column percentages table for grade school students by goals and grade.')
+tbls(name="KidsTot",'Total percentages table for grade school students by goals and grade.')
 ```
 
 ----
@@ -66,33 +70,58 @@ percTable(tbl,digits=1)
 
 ## Forest Composition
 
-The questions below use the following tables.
 ```{r echo=FALSE}
 d <- read.csv("https://github.com/droglenc/NCData/raw/master/Fire.csv")
-```
-```{r eval=FALSE}
-d <- read.csv("Fire.csv")
-```
-```{r}
 d$sttype <- factor(d$sttype,levels=c("c","mc","md","d"))
-## Raw Frequency Table
-(tbl <- xtabs(~tslf+sttype,data=d))
-## Row Percentage Table
+tbl <- xtabs(~tslf+sttype,data=d)
+row <- percTable(tbl,margin=1)
+col <- percTable(tbl,margin=2)
+tot <- percTable(tbl)
+```
+
+1. There were `r sum(tbl["200-300",])` stands that last had a fire between 200 and 300 years ago (`r tbls("TreesRaw",display="cite")`).
+1. The percentage of deciduous tree stands with a fire in the last 100 years is `r formatC(col["0-100","d"],format="f",digits=1)`% (`r tbls("TreesCol",display="cite")`).
+1. The percentage of mixed-coniferous tree stands with a fire between 200 and 300 years ago is `r formatC(col["200-300","mc"],format="f",digits=1)`% (`r tbls("TreesCol",display="cite")`).
+1. The percentage of all stands that were coniferous with a fire between 200 and 300 years ago is `r formatC(tot["200-300","c"],format="f",digits=1)`% (`r tbls("TreesTot",display="cite")`).
+1. The percentage of tree stands that had a fire between 200 and 300 years ago that were coniferous is `r formatC(row["200-300","c"],format="f",digits=1)`% (`r tbls("TreesRow",display="cite")`).
+1. The percentage of all stands that were deciduous with a fire between 100 and 200 years ago is `r formatC(tot["100-200","d"],format="f",digits=1)`% (`r tbls("TreesTot",display="cite")`).
+1. The percentage of mixed-deciduous stands that had a fire within the last 100 years is `r formatC(col["0-100","md"],format="f",digits=1)`% (`r tbls("TreesCol",display="cite")`).
+1. Those with more recent fires tended to be deciduous, those without recent fires tended to be coniferous.
+
+`r tbls("TreesRaw")`
+
+```{r treesRaw, echo=FALSE}
+d$sttype <- factor(d$sttype,levels=c("c","mc","md","d"))
+( tbl <- xtabs(~tslf+sttype,data=d) )
+```
+
+`r tbls("TreesRow")`
+
+```{r treesRow, echo=FALSE}
 percTable(tbl,margin=1,digits=1)
-## Column Percentage Table
+```
+
+`r tbls("TreesCol")`
+
+```{r treesCol, echo=FALSE}
 percTable(tbl,margin=2,digits=1)
-## TotalPercentage Table
+```
+
+`r tbls("TreesTot")`
+
+```{r treesTot, echo=FALSE}
 percTable(tbl,digits=1)
 ```
 
-1. 15 stands
-1. 37.5%
-1. 50%
-1. 14.6%
-1. 46.7%
-1. 31.2%
-1. 15.4%
-1. Those with more recent fires tended to be deciduous, those without recent fires tended to be coniferous.
+R Appendix:
+```{r eval=FALSE, prompt=FALSE}
+d <- read.csv("Fire.csv")
+<<treesRaw>>
+<<treesRow>>
+<<treesCol>>
+<<treesTot>>
+```
+
 
 ----
 
@@ -102,25 +131,49 @@ The questions below use the following tables.
 
 ```{r echo=FALSE}
 d <- read.csv("https://github.com/droglenc/NCData/raw/master/PopularKids.csv")
+tbl <- xtabs(~grade+goals,data=d)
+row <- percTable(tbl,margin=1,digits=1)
+col <- percTable(tbl,margin=2,digits=1)
+tot <- percTable(tbl,digits=1)
 ```
-```{r eval=FALSE}
-d <- read.csv("PopularKids.csv")
+
+1. There were `r sum(tbl["4",])` students from the fourth grade in the sample.
+1. The percentage of All students in the fifth grade with the goal "to be popular' was `r formatC(tot["5","Popular"],format="f",digits=1)`% (`r tbls("KidsTot",display="cite")`).
+1. The percentage of fourth grade students with the goal "to be good in sports" was `r formatC(row["4","Sports"],format="f",digits=1)`% (`r tbls("KidsRow",display="cite")`).
+1. The percentage of fifth grade students with the goal "to make good grades" was `r formatC(row["5","Grades"],format="f",digits=1)`% (`r tbls("KidsRow",display="cite")`).
+1. The percentage of all students with the goal to "make good grades" was `r formatC(tot["Sum","Grades"],format="f",digits=1)`% (`r tbls("KidsTot",display="cite")`).
+1. The percentage of students with the goal "to be popular" that were in the sixth grade was `r formatC(col["6","Popular"],format="f",digits=1)`% (`r tbls("KidsCol",display="cite")`).
+1. Fairly even distribution of students into the goals categories among the grades.  Thus, there is no real difference in goals by grade in school.
+
+`r tbls("KidsRaw")`
+
+```{r kidsRaw, echo=FALSE}
+tbl <- xtabs(~grade+goals,data=d)
 ```
-```{r}
-## Raw Frequency Table
-(tbl <- xtabs(~grade+goals,data=d))
-## Row Percentage Table
+
+`r tbls("KidsRow")`
+
+```{r kidsRow, echo=FALSE}
 percTable(tbl,margin=1,digits=1)
-## Column Percentage Table
+```
+
+`r tbls("KidsCol")`
+
+```{r kidsCol, echo=FALSE}
 percTable(tbl,margin=2,digits=1)
-## TotalPercentage Table
+```
+
+`r tbls("KidsTot")`
+
+```{r kidsTot, echo=FALSE}
 percTable(tbl,digits=1)
 ```
 
-1. 119 students
-1. 11.5%
-1. 21.0%
-1. 50.0%
-1. 51.7%
-1. 39.0%
-1. Fairly even distribution of students into the goals categories among the grades.  Thus, there is no real difference in goals by grade in school.
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+d <- read.csv("PopularKids.csv")
+<<kidsRaw>>
+<<kidsRow>>
+<<kidsCol>>
+<<kidsTot>>
+```
