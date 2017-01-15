@@ -16,6 +16,13 @@ css: "/css/modules.css"
 <li>0.6306</li>
 <li>0.1359</li>
 </ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(800,mean=550,sd=150,lower.tail=FALSE)
+distrib(200,mean=550,sd=150)
+distrib(600,mean=550,sd=150)
+ab &lt;- distrib(850,mean=550,sd=150)
+a &lt;- distrib(700,mean=550,sd=150)
+ab-a</code></pre>
 <hr />
 </div>
 <div id="acorn-production-example" class="section level2">
@@ -27,6 +34,13 @@ css: "/css/modules.css"
 <li>An Oak tree must be randomly selected.</li>
 <li>690 acorns.</li>
 </ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(1000,mean=875,sd=220,lower.tail=FALSE)
+ab &lt;- distrib(1000,mean=875,sd=220)
+a &lt;- distrib(700,mean=875,sd=220)
+ab-a
+distrib(5000/4,mean=875,sd=220)
+distrib(0.20,mean=875,sd=220,type=&quot;q&quot;)</code></pre>
 <hr />
 </div>
 
