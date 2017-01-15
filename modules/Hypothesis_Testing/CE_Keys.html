@@ -30,34 +30,47 @@ css: "/css/modules.css"
 <h2>P-Value Calculations and Decisions</h2>
 <ol>
 <li>
-The p-value is “the probabiity of observing a sample mean of 79.5 or greater if the population mean is 75.” Reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0040&lt;α.
+The p-value is “the probabiity of observing a sample mean of 79.5 or greater if the population mean is 75.” Reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0040&lt;α (Figure 1).
 </li>
-<p><img src="CE_Keys_files/figure-html/unnamed-chunk-3-1.png" width="336" /></p>
+<p><img src="CE_Keys_files/figure-html/P1-1.png" width="336" /></p>
+<p>Figure 1: Normal distribution representing the p-value calculation for the first example.</p>
 <li>
-The p-value is “the probabiity of observing a sample mean of 11.2 or ‘different’ if the population mean is 14.” Reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0196&lt;α.
+The p-value is “the probabiity of observing a sample mean of 11.2 or ‘different’ if the population mean is 14.” Reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0196&lt;α (Figure 2).
 </li>
-<p><img src="CE_Keys_files/figure-html/unnamed-chunk-4-1.png" width="336" /></p>
+<p><img src="CE_Keys_files/figure-html/P2-1.png" width="336" /></p>
+<p>Figure 2: Normal distribution representing the p-value calculation for the second example.</p>
 <li>
-The p-value is “the probabiity of observing a sample mean of 918 or greater if the population mean is 880.” Reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0001&lt;α.
+The p-value is “the probabiity of observing a sample mean of 918 or greater if the population mean is 880.” Reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0001&lt;α (Figure 3).
 </li>
-<p><img src="CE_Keys_files/figure-html/unnamed-chunk-5-1.png" width="336" /></p>
+<p><img src="CE_Keys_files/figure-html/p3-1.png" width="336" /></p>
+<p>Figure 3: Normal distribution representing the p-value calculation for the third example.</p>
 <li>
-The p-value is “the probabiity of observing a sample mean of 13700 or less if the population mean is 15000.” Do not reject <span class="math inline">\(H_{0}\)</span> because p-value=0.1253&gt;α.
+The p-value is “the probabiity of observing a sample mean of 13700 or less if the population mean is 15000.” Do not reject <span class="math inline">\(H_{0}\)</span> because p-value=0.1253&gt;α (Figure 4).
 </li>
-<p><img src="CE_Keys_files/figure-html/unnamed-chunk-6-1.png" width="336" /></p>
+<p><img src="CE_Keys_files/figure-html/p4-1.png" width="336" /></p>
+<p>Figure 4: Normal distribution representing the p-value calculation for the fourth example.</p>
 <li>
-The p-value is “the probabiity of observing a sample mean of 824 or ‘different’ if the population mean is 800.” Do not reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0455&gt;α.
+The p-value is “the probabiity of observing a sample mean of 824 or ‘different’ if the population mean is 800.” Do not reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0455&gt;α (Figure 5).
 </li>
-<p><img src="CE_Keys_files/figure-html/unnamed-chunk-7-1.png" width="336" /></p>
+<p><img src="CE_Keys_files/figure-html/p5-1.png" width="336" /></p>
+<p>Figure 5: Normal distribution representing the p-value calculation for the fifth example.</p>
 <li>
-The p-value is “the probabiity of observing a sample mean of 73 or less if the population mean is 80.” Reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0276&lt;α.
+The p-value is “the probabiity of observing a sample mean of 73 or less if the population mean is 80.” Reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0276&lt;α (Figure 6).
 </li>
-<p><img src="CE_Keys_files/figure-html/unnamed-chunk-8-1.png" width="336" /></p>
+<p><img src="CE_Keys_files/figure-html/p6-1.png" width="336" /></p>
+<p>Figure 6: Normal distribution representing the p-value calculation for the sixth example.</p>
 <li>
-The p-value is “the probabiity of observing a sample mean of 1370 or ‘different’ if the population mean is 1500.” Do not reject <span class="math inline">\(H_{0}\)</span> because p-value=0.3041&gt;alpha;.
+The p-value is “the probabiity of observing a sample mean of 1370 or ‘different’ if the population mean is 1500.” Do not reject <span class="math inline">\(H_{0}\)</span> because p-value=0.3041&gt;alpha; (Figure 7).
 </li>
-<img src="CE_Keys_files/figure-html/unnamed-chunk-9-1.png" width="336" />
+<p><img src="CE_Keys_files/figure-html/p7-1.png" width="336" /></p>
+<p>Figure 7: Normal distribution representing the p-value calculation for the seventh example.</p>
 </ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE)
+distrib(13700,mean=15000,sd=8000/sqrt(50))
+2*distrib(824,mean=800,sd=60/sqrt(25),lower.tail=FALSE)
+distrib(73,mean=80,sd=20/sqrt(30))
+2*distrib(1370,mean=1500,sd=800/sqrt(40))</code></pre>
 <hr />
 </div>
 <div id="body-temperature" class="section level2">
@@ -79,6 +92,10 @@ Reject <span class="math inline">\(H_{0}\)</span> because p-value &lt; alpha;.
 Average body temperature is somewhat less (but significantly) less than 37C.
 </li>
 </ol>
+<p>R Appendix.</p>
+<pre class="r"><code>d &lt;- read.csv(&quot;NormTemp.csv&quot;)
+Summarize(~bodytemp,data=d,digits=3)
+2*distrib(36.808,mean=37,sd=0.41/sqrt(130))</code></pre>
 <hr />
 </div>
 <div id="identifying-type-i-and-ii-errors" class="section level2">
@@ -97,15 +114,15 @@ The <span class="math inline">\(H_{0}\)</span> is that the drug does not exceed 
 <h2>Understanding Power Relationships</h2>
 <ol>
 <li>
-See below.
+See Figure 8.
 </li>
-<pre class="r"><code>&gt; distrib(0.05,mean=100,sd=10/sqrt(30),type=&quot;q&quot;)</code></pre>
-<p><img src="CE_Keys_files/figure-html/unnamed-chunk-11-1.png" width="336" /></p>
+<p><img src="CE_Keys_files/figure-html/Pwr1-1.png" width="336" /></p>
+<p>Figure 8: NULL normal distribution representing the rejection region for the power calculation example.</p>
 <li>
-See below.
+See Figure 9.
 </li>
-<pre class="r"><code>&gt; distrib(96.997,mean=95,sd=10/sqrt(30))</code></pre>
-<p><img src="CE_Keys_files/figure-html/unnamed-chunk-12-1.png" width="336" /></p>
+<p><img src="CE_Keys_files/figure-html/Pwr2-1.png" width="336" /></p>
+<p>Figure 9: ACTUAL normal distribution representing power in the power calculation example.</p>
 <li>
 Effects on β
 </li>
@@ -147,6 +164,9 @@ Increase n, increase α
 Increase n, increase α
 </li>
 </ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(0.05,mean=100,sd=10/sqrt(30),type=&quot;q&quot;)
+distrib(96.997,mean=95,sd=10/sqrt(30))</code></pre>
 <hr />
 </div>
 
