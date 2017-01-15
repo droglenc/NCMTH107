@@ -68,6 +68,20 @@ source("../../rhelpers/knitr_setup.R")
 1. `r formatC(distrib(0.05,mean=1400,sd=300,type="q",lower.tail=FALSE),format="f",digits=0)` ants.
 1. Between `r formatC(distrib(0.10,mean=1400,sd=300,type="q"),format="f",digits=0)` and  `r formatC(distrib(0.10,mean=1400,sd=300,type="q",lower.tail=FALSE),format="f",digits=0)` ants.
 
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+distrib(1900,mean=1400,sd=300,lower.tail=FALSE)*100
+distrib(0.15,mean=1400,sd=300,type="q",lower.tail=FALSE)
+distrib(0.33,mean=1400,sd=300,type="q")
+ab <- distrib(1900,mean=1400,sd=300)
+a <- distrib(700,mean=1400,sd=300)
+(ab-a)*100
+distrib(300,mean=1400,sd=300)*100
+distrib(0.05,mean=1400,sd=300,type="q",lower.tail=FALSE)
+distrib(0.10,mean=1400,sd=300,type="q")
+distrib(0.10,mean=1400,sd=300,type="q",lower.tail=FALSE)
+```
+
 ----
 
 ## Pollen Counts
@@ -86,6 +100,19 @@ source("../../rhelpers/knitr_setup.R")
 1. Between `r formatC(distrib(0.15,mean=40,sd=8,type="q"),format="f",digits=1)` and  `r formatC(distrib(0.15,mean=40,sd=8,type="q",lower.tail=FALSE),format="f",digits=1)` spores per cubic meter.
 1. `r formatC(distrib(35,mean=40,sd=8,lower.tail=FALSE),format="f",digits=3)`.
 
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+distrib(0.1,mean=40,sd=8,type="q",lower.tail=FALSE)
+distrib(50,mean=40,sd=8)
+ab <- distrib(55,mean=40,sd=8)
+a <- distrib(32,mean=40,sd=8)
+ab-a
+distrib(0.3,mean=40,sd=8,type="q")
+distrib(0.15,mean=40,sd=8,type="q")
+distrib(0.15,mean=40,sd=8,type="q",lower.tail=FALSE)
+distrib(35,mean=40,sd=8,lower.tail=FALSE)
+```
+
 ----
 
 ## Driving Speed
@@ -103,3 +130,17 @@ source("../../rhelpers/knitr_setup.R")
 1. The IQR is from a Q1 of `r formatC(distrib(0.25,mean=2.5,sd=0.75,type="q"),format="f",digits=2)` s to a Q3 of `r formatC(distrib(0.25,mean=2.5,sd=0.75,type="q",lower.tail=FALSE),format="f",digits=2)` s.
 1. `r formatC(distrib(7,mean=2.5,sd=0.75,lower.tail=FALSE),format="f",digits=12)`.
 1. 2.5 s.
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+distrib(0.15,mean=2.5,sd=0.75,type="q",lower.tail=FALSE)
+distrib(1,mean=2.5,sd=0.75)
+ab <- distrib(4.5,mean=2.5,sd=0.75)
+a <- distrib(1.5,mean=2.5,sd=0.75)
+ab-a
+distrib(0.25,mean=2.5,sd=0.75,type="q")
+distrib(0.25,mean=2.5,sd=0.75,type="q",lower.tail=FALSE)
+distrib(7,mean=2.5,sd=0.75,lower.tail=FALSE)
+```
+
+----
