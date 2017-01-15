@@ -25,7 +25,7 @@ source("../../rhelpers/knitr_setup.R")
 
 ## Constructing a Sampling Distribution
 
-```{r echo=FALSE, results='hide'}
+```{r SDistCalc, echo=FALSE, results='hide'}
 d <- c(12,14,16,18,20)
 mu <- mean(d)
 sigma <- sd(d)
@@ -44,7 +44,8 @@ d4 <- combn(d,4)
 d4mns <- combn(d,4,FUN=mean)
 d4m <- mean(d4mns)
 d4se <- sd(d4mns)
-
+```
+```{r echo=FALSE}
 ## Theoretical SEs need to be corrected for sampling from finite populations
 ns <- 2:4
 N <- length(d)
@@ -85,6 +86,11 @@ round(d4se,3)
   <li>Decreased with increasing n.</li>
 </ol>
 
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+<<SDistCalc>>
+```
+
 ----
 
 ## Checking the CLT
@@ -110,6 +116,13 @@ round(d4se,3)
     1. Can be answered.
     1. N(15,`r formatC(5/sqrt(25),format="f",digits=3)`)
     1. `r formatC(distrib(15.5,mean=15,sd=5/sqrt(25),lower.tail=FALSE),format="f",digits=4)`.
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+distrib(12,mean=15,sd=5/sqrt(4),lower.tail=FALSE)
+distrib(12,mean=15,sd=5,lower.tail=FALSE)
+distrib(15.5,mean=15,sd=5/sqrt(25),lower.tail=FALSE)
+```
 
 ----
 
@@ -141,6 +154,12 @@ round(d4se,3)
     1. N(0.9,`r formatC(0.15/sqrt(50),format="f",digits=4)`)
     1. `r formatC(distrib(0.01,mean=0.9,sd=0.15/sqrt(50),lower.tail=FALSE,type="q"),format="f",digits=3)` g/mi.
 
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+distrib(0.92,mean=0.9,sd=0.15/sqrt(50),lower.tail=FALSE)
+distrib(0.85,mean=0.9,sd=0.15/sqrt(50))
+distrib(0.01,mean=0.9,sd=0.15/sqrt(50),lower.tail=FALSE,type="q")
+```
 
 ----
 
@@ -172,6 +191,14 @@ round(d4se,3)
     1. Right-skewed (not normal).
     1. Can't answer.
 
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+distrib(25,mean=21,sd=6/sqrt(20),lower.tail=FALSE)
+ab <- distrib(25,mean=21,sd=6/sqrt(50))
+a <- distrib(20,mean=21,sd=6/sqrt(50))
+ab-a
+```
+
 ----
 
 ## People in Car
@@ -198,6 +225,13 @@ round(d4se,3)
     1. N(1.5,`r formatC(0.75/sqrt(700),format="f",digits=4)`)
     1. `r formatC(distrib(1075/700,mean=1.5,sd=0.75/sqrt(700),lower.tail=FALSE),format="f",digits=4)`.
 
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+distrib(1.2,mean=1.5,sd=0.75/sqrt(40))
+distrib(2,mean=1.5,sd=0.75/sqrt(50),lower.tail=FALSE)
+distrib(1075/700,mean=1.5,sd=0.75/sqrt(700),lower.tail=FALSE)
+```
+
 ----
 
 ## Plowing Snow
@@ -222,5 +256,12 @@ round(d4se,3)
     1. Can be answered.
     1. N(45,`r formatC(28/sqrt(40),format="f",digits=4)`)
     1. `r formatC(distrib(0.25,mean=45,sd=28/sqrt(40),type="q"),format="f",digits=1)` secs.
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+ab <- distrib(50,mean=45,sd=28/sqrt(40))
+a <- distrib(40,mean=45,sd=28/sqrt(40))
+distrib(0.25,mean=45,sd=28/sqrt(40),type="q")
+```
 
 ----

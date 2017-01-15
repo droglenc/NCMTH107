@@ -64,6 +64,25 @@ All smaller.
 Decreased with increasing n.
 </li>
 </ol>
+<p>R Appendix.</p>
+<pre class="r"><code>d &lt;- c(12,14,16,18,20)
+mu &lt;- mean(d)
+sigma &lt;- sd(d)
+
+d2 &lt;- combn(d,2)
+d2mns &lt;- combn(d,2,FUN=mean)
+d2m &lt;- mean(d2mns)
+d2se &lt;- sd(d2mns)
+
+d3 &lt;- combn(d,3)
+d3mns &lt;- combn(d,3,FUN=mean)
+d3m &lt;- mean(d3mns)
+d3se &lt;- sd(d3mns)
+
+d4 &lt;- combn(d,4)
+d4mns &lt;- combn(d,4,FUN=mean)
+d4m &lt;- mean(d4mns)
+d4se &lt;- sd(d4mns)</code></pre>
 <hr />
 </div>
 <div id="checking-the-clt" class="section level2">
@@ -96,6 +115,10 @@ Decreased with increasing n.
 <li>0.3085.</li>
 </ol></li>
 </ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(12,mean=15,sd=5/sqrt(4),lower.tail=FALSE)
+distrib(12,mean=15,sd=5,lower.tail=FALSE)
+distrib(15.5,mean=15,sd=5/sqrt(25),lower.tail=FALSE)</code></pre>
 <hr />
 </div>
 <div id="pollutants-in-auto-exhaust" class="section level2">
@@ -137,6 +160,10 @@ Decreased with increasing n.
 <li>0.949 g/mi.</li>
 </ol></li>
 </ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(0.92,mean=0.9,sd=0.15/sqrt(50),lower.tail=FALSE)
+distrib(0.85,mean=0.9,sd=0.15/sqrt(50))
+distrib(0.01,mean=0.9,sd=0.15/sqrt(50),lower.tail=FALSE,type=&quot;q&quot;)</code></pre>
 <hr />
 </div>
 <div id="acorn-length" class="section level2">
@@ -178,6 +205,11 @@ Decreased with increasing n.
 <li>Can’t answer.</li>
 </ol></li>
 </ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(25,mean=21,sd=6/sqrt(20),lower.tail=FALSE)
+ab &lt;- distrib(25,mean=21,sd=6/sqrt(50))
+a &lt;- distrib(20,mean=21,sd=6/sqrt(50))
+ab-a</code></pre>
 <hr />
 </div>
 <div id="people-in-car" class="section level2">
@@ -213,6 +245,10 @@ Decreased with increasing n.
 <li>0.1039.</li>
 </ol></li>
 </ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(1.2,mean=1.5,sd=0.75/sqrt(40))
+distrib(2,mean=1.5,sd=0.75/sqrt(50),lower.tail=FALSE)
+distrib(1075/700,mean=1.5,sd=0.75/sqrt(700),lower.tail=FALSE)</code></pre>
 <hr />
 </div>
 <div id="plowing-snow" class="section level2">
@@ -247,6 +283,10 @@ Decreased with increasing n.
 <li>42.0 secs.</li>
 </ol></li>
 </ol>
+<p>R Appendix.</p>
+<pre class="r"><code>ab &lt;- distrib(50,mean=45,sd=28/sqrt(40))
+a &lt;- distrib(40,mean=45,sd=28/sqrt(40))
+distrib(0.25,mean=45,sd=28/sqrt(40),type=&quot;q&quot;)</code></pre>
 <hr />
 </div>
 
