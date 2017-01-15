@@ -165,7 +165,7 @@ tbl3 <- xtabs(~type,data=d)
 ```
 
 ```{r KidsBar3, echo=FALSE, fig.width=4, fig.height=3, par1=TRUE}
-barplot(tbl,xlab="School Type",ylab="Percentage")
+barplot(ptbl3,xlab="School Type",ylab="Percentage")
 ```
 
 `r figs("KidsBar3")`
