@@ -4,19 +4,25 @@ title: Homework Keys
 ---
 
 <!--
-* [HW 12.35-12.37](HW_noPrint.pdf){:target="_blank"}
-* [HW 12.38](HW_noPrint.pdf){:target="_blank"}
-* [HW 11.24-11.25](Chapter11bHW_noPrint.pdf){:target="_blank"}
-* [HW 11.22-11.23](Chapter11aHW_noPrint.pdf){:target="_blank"}
-* [HW 10.46-10.47](Chapter10HW_noPrint.pdf){:target="_blank"}
-* [HW 9.22-9.24](Chapter09HW_noPrint.pdf){:target="_blank"}
-* [HW 8.4-8.5](Chapter08HW_noPrint.pdf){:target="_blank"}
-* [HW 7.19](Chapter07HW_noPrint.pdf){:target="_blank"}
-* [HW 6.24-6.25](Chapter06HWa_noPrint.pdf){:target="_blank"} and [HW 6.26](Chapter06HWb_noPrint.pdf){:target="_blank"}
-* [HW 5.24-5.25](Chapter05HW_noPrint.pdf){:target="_blank"}
-* [HW 4.50](Chapter04HWa_noPrint.pdf){:target="_blank"} and [HW 4.51](Chapter04HWb_noPrint.pdf){:target="_blank"} 
-* [HW 3.12](Chapter03HW_noPrint.pdf){:target="_blank"}
-* [HW 2.10-2.11](Chapter02HW_noPrint.pdf){:target="_blank"}
-* [1.27-1.29](Chapter01HWa_noPrint.pdf){:target="_blank"} and [ 1.30-1.35](Chapter01HWb_noPrint.pdf){:target="_blank"}
+* [Why Statistics is Important](Why_Stats_Is_Important_noPrint.pdf){:target="_blank"}
+* [Foundational Definitions](Foundational_Definitions_noPrint.pdf){:target="_blank"}
+* [Data Production](Data_Production_noPrint.pdf){:target="_blank"}
+* [Getting Data into R](_noPrint.pdf){:target="_blank"}
+* [Univariate EDA - Quantitative](_noPrint.pdf){:target="_blank"}
+* [Univariate EDA - Categorical](_noPrint.pdf){:target="_blank"}
+* [Normal Distributions](_noPrint.pdf){:target="_blank"}
+* [Bivariate EDA - Quantitative](_noPrint.pdf){:target="_blank"}
+* [Bivariate EDA - Categorical](_noPrint.pdf){:target="_blank"}
+* [Linear Regression](_noPrint.pdf){:target="_blank"}
+* [Probability Introduction](_noPrint.pdf){:target="_blank"}
+* [Sampling Distributions](_noPrint.pdf){:target="_blank"}
+* [Hypothesis Testing](_noPrint.pdf){:target="_blank"}
+* [Confidence Regions](_noPrint.pdf){:target="_blank"}
+* [1-Sample Z-Test](_noPrint.pdf){:target="_blank"}
+* [1-Sample t-Test](_noPrint.pdf){:target="_blank"}
+* [2-Sample t-Test](_noPrint.pdf){:target="_blank"}
+* [Chi_Square Test](_noPrint.pdf){:target="_blank"}
+* [Goodness-of-Fit Test](_noPrint.pdf){:target="_blank"}
+
 -->
 
