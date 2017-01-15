@@ -76,13 +76,16 @@ Percentage table is below.
 <div id="coarse-woody-debris" class="section level2">
 <h2>Coarse Woody Debris</h2>
 <ol>
-<li>The vast majority (82%) of the sites had medium exposure.</li>
+<li>The vast majority (82%) of the sites had medium exposure (Table 1).</li>
 </ol>
-<pre class="r"><code>&gt; d &lt;- read.csv(&quot;cwd.csv&quot;)</code></pre>
-<pre class="r"><code>&gt; xtabs(~exposure,data=d)</code></pre>
+<p>Table 1: Percentage of coarse woody debris sites by level of exposure (low or medium).</p>
 <pre><code>exposure
 low med 
-  9  41 </code></pre>
+ 18  82 </code></pre>
+<p>R Appendix.</p>
+<pre class="r"><code>d &lt;- read.csv(&quot;cwd.csv&quot;)
+tbl &lt;- xtabs(~exposure,data=d)
+percTable(tbl,digits=1,addMargins=FALSE)</code></pre>
 <hr />
 </div>
 <div id="bar-chart-ii" class="section level2">
@@ -101,35 +104,44 @@ low med
 <h2>Popularity in Middle School</h2>
 <ol>
 <li>
-The goal for most kids was getting good grades, followed by being popular, and then being good in sports.
+The goal for most kids was getting good grades, followed by being popular, and then being good in sports (Table 2; Figure 1).
 </li>
-<pre class="r"><code>&gt; d &lt;- read.csv(&quot;PopularKids.csv&quot;)</code></pre>
-<pre class="r"><code>&gt; ( tbl &lt;- xtabs(~goals,data=d) )</code></pre>
+<p>Table 2: Percentage of grade school children by their stated goal.</p>
 <pre><code>goals
  Grades Popular  Sports 
-    247     141      90 </code></pre>
-<pre class="r"><code>&gt; barplot(tbl,xlab=&quot;Student&#39;s Goal&quot;,ylab=&quot;Frequency&quot;,ylim=c(0,250))</code></pre>
-<img src="CE_Keys_files/figure-html/unnamed-chunk-13-1.png" width="384" />
+   51.7    29.5    18.8 </code></pre>
+<p><img src="CE_Keys_files/figure-html/KidsBar1-1.png" width="384" /></p>
+<p>Figure 1: Bar chart of percentage of grade school children by their stated goal.</p>
 <li>
-Students feel that “being good in sports” is an important contributor to popularity as approximately 2/3rds of studens ranked this as either “most important” or “somewhat important” to being popular.
+Students feel that “being good in sports” is an important contributor to popularity as approximately 2/3rds of studens ranked this as either “most important” or “somewhat important” to being popular (Table 3; Figure 2).
 </li>
-<pre class="r"><code>&gt; tbl &lt;- xtabs(~sports,data=d)
-&gt; percTable(tbl,digits=1)</code></pre>
+<p>Table 3: Percentage of grade school children by their rank of the impiortance of being good in sports (1=most important).</p>
 <pre><code>sports
-   1    2    3    4  Sum 
-34.5 32.2 23.4  9.8 99.9 </code></pre>
-<pre class="r"><code>&gt; barplot(tbl,xlab=&quot;Rank of Sports in Popularity&quot;,ylab=&quot;Frequency&quot;,ylim=c(0,200))</code></pre>
-<p><img src="CE_Keys_files/figure-html/unnamed-chunk-14-1.png" width="384" /></p>
+   1    2    3    4 
+34.5 32.2 23.4  9.8 </code></pre>
+<p><img src="CE_Keys_files/figure-html/KidsBar2-1.png" width="384" /></p>
+<p>Figure 2: Bar chart of percentage of grade school children by their rank of the impiortance of being good in sports (1=most important).</p>
 <li>
-Students were nearly evenly distributed among rural, suburban, and urban schools. Students were likely sampled nearly equally from each type of school.
+Students were nearly evenly distributed among rural, suburban, and urban schools. Students were likely sampled nearly equally from each type of school (Table 4; Figure 3).
 </li>
-<pre class="r"><code>&gt; ( tbl &lt;- xtabs(~type,data=d) )</code></pre>
+<p>Table 4: Percentage of grade school children by location of their school.</p>
 <pre><code>type
    Rural Suburban    Urban 
-     149      151      178 </code></pre>
-<pre class="r"><code>&gt; barplot(tbl,xlab=&quot;School Type&quot;,ylab=&quot;Frequency&quot;,ylim=c(0,200))</code></pre>
-<img src="CE_Keys_files/figure-html/unnamed-chunk-15-1.png" width="384" />
+    31.2     31.6     37.2 </code></pre>
+<p><img src="CE_Keys_files/figure-html/KidsBar3-1.png" width="384" /></p>
+<p>Figure 3: Bar chart of percentage of grade school children by location of their school.</p>
 </ol>
+<p>R Appendix.</p>
+<pre class="r"><code>d &lt;- read.csv(&quot;PopularKids.csv&quot;)
+tbl1 &lt;- xtabs(~goals,data=d)
+( ptbl1 &lt;- percTable(tbl1,digits=1,addMargins=FALSE) )
+barplot(ptbl1,xlab=&quot;Student&#39;s Goal&quot;,ylab=&quot;Percentage&quot;)
+tbl2 &lt;- xtabs(~sports,data=d)
+( ptbl2 &lt;- percTable(tbl2,digits=1,addMargins=FALSE) )
+barplot(ptbl2,xlab=&quot;Rank of Sports in Popularity&quot;,ylab=&quot;Percentage&quot;)
+tbl3 &lt;- xtabs(~type,data=d)
+( ptbl3 &lt;- percTable(tbl3,digits=1,addMargins=FALSE) )
+barplot(tbl,xlab=&quot;School Type&quot;,ylab=&quot;Percentage&quot;)</code></pre>
 <hr />
 </div>
 
