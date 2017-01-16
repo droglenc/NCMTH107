@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Data Production
-subtitle: R Handout
+title: R Handout
+subtitle: Data Production
 author: Derek H. Ogle
 css: /css/modules.css
 output:
@@ -21,13 +21,11 @@ output:
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Data_Production")
 source("../../rhelpers/rhelpers.R")
-fnm <- "RHO"
-modHTML(fnm)
+modHTML("RHO")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
-fnm <- "RHO"
 source("../../rhelpers/knitr_setup.R")
 set.seed(11545345)
 ```
@@ -53,5 +51,5 @@ alloc[17:24]
 
 
 ```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
-purl2(paste0(fnm,".Rmd"))
+purl2("RHO.Rmd")
 ```
