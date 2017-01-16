@@ -45,7 +45,7 @@ You should [read this](../../book/4_IntroStats.pdf) and watch these videos:
 ## Practice
 
 * In-Class Demonstration -- [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
-* In-Class Exercise -- [1](CE1) / [2](CE2) / [3](CE3)
+* In-Class Exercise -- [1](CE1) / [2](CE2) (*time permitting* ... [3](CE3))
 * [Homework Assignment](HW)
 
 ----
