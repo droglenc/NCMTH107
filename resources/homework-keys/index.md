@@ -3,9 +3,10 @@ layout: page
 title: Homework Keys
 ---
 
-<!--
 * [Why Statistics is Important](Why_Stats_Is_Important_noPrint.pdf){:target="_blank"}
 * [Foundational Definitions](Foundational_Definitions_noPrint.pdf){:target="_blank"}
+
+<!--
 * [Data Production](Data_Production_noPrint.pdf){:target="_blank"}
 * [Getting Data into R](_noPrint.pdf){:target="_blank"}
 * [Univariate EDA - Quantitative](_noPrint.pdf){:target="_blank"}
