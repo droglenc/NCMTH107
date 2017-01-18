@@ -48,11 +48,11 @@ css: /css/syllabus.css
 
 ## Cancelled Classes
 <dl class="dl-horizontal">
-<dt>16-Jan</dt><dd>NO CLASS (Please participate in <a href="https://www.northland.edu/event/martin-luther-king-jr-day-2017/" target="_blank">Martin Luther King, Jr. Day Activities</a>)</dd>
 <dt>6-Mar</dt><dd>NO CLASS (Mid-Session Break)</dd>
 <dt>8-Mar</dt><dd>NO CLASS (Mid-Session Break)</dd>
 <dt>10-Mar</dt><dd>NO CLASS (Mid-Session Break)</dd>
 <dt>14-Apr</dt><dd>NO CLASS (Good Friday)</dd>
 <!---
+<dt>16-Jan</dt><dd>NO CLASS (Please participate in <a href="https://www.northland.edu/event/martin-luther-king-jr-day-2017/" target="_blank">Martin Luther King, Jr. Day Activities</a>)</dd>
 --->
 </dl>
