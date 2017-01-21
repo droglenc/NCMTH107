@@ -37,7 +37,7 @@ You should [read this](../../book/11_IntroStats.pdf).
 
 ## Practice
 
-* [In-Class Exercise](CE)
+* In-Class Exercises -- [1](CE1) / [2](CE2)
 * [Homework Assignment](HW)
 
 ----
