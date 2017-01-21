@@ -38,4 +38,5 @@ Additionally, for each questions below (a) identify the type of question (e.g., 
   <li><a href="CE3.html">3</a></li>
   <li><a href="CE4.html">4</a></li>
   <li class="active"><a href="#">5</a></li>
+  <li><a href="CE6.html">6</a></li>
 </ul>

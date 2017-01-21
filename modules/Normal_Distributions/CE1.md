@@ -28,4 +28,5 @@ css: "/css/modules.css"
   <li><a href="CE3.html">3</a></li>
   <li><a href="CE4.html">4</a></li>
   <li><a href="CE5.html">5</a></li>
+  <li><a href="CE6.html">6</a></li>
 </ul>

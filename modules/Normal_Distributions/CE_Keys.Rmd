@@ -35,7 +35,7 @@ source("../../rhelpers/knitr_setup.R")
 
 ----
 
-## Hand Calculations
+## Hand Calculations I
 1. For X~N(75,10) 
     1. 97.5%
     1. 0.15%
@@ -43,11 +43,6 @@ source("../../rhelpers/knitr_setup.R")
     1. 81.5%
     1. Between X=55 and 95.
     1. Greater than X=95.
-2. For Z~N(0,1)
-    1. Z=1
-    1. 2.5%
-    1. 99.85%
-    1. Betrween Z=-3 and 3.
 
 ----
 
@@ -142,5 +137,14 @@ distrib(0.25,mean=2.5,sd=0.75,type="q")
 distrib(0.25,mean=2.5,sd=0.75,type="q",lower.tail=FALSE)
 distrib(7,mean=2.5,sd=0.75,lower.tail=FALSE)
 ```
+
+----
+
+## Hand Calculations II
+1. For Z~N(0,1)
+    1. Z=1
+    1. 2.5%
+    1. 99.85%
+    1. Between Z=-3 and 3.
 
 ----
