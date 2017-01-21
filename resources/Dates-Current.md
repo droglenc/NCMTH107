@@ -8,6 +8,7 @@ css: /css/syllabus.css
 <dl class="dl-horizontal">
 <dt>23-Jan</dt><dd><a href="../modules/Data_Production/HW">Data Production</a></dd>
 <dt>25-Jan</dt><dd><a href="../modules/Getting_Data_Into_R/HW">Getting Data Into R</a></dd>
+
 <!---
 <dt>18-Jan</dt><dd><a href="../modules/Why_Statistics_is_Important/HW">Why Statistics is Important</a></dd>
 <dt>18-Jan</dt><dd><a href="../modules/Foundational_Definitions/HW">Foundational Definitions</a></dd>
