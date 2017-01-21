@@ -5,18 +5,6 @@ title: MTH107 FAQ
 subtitle: How should data from two groups be entered?
 ---
 
-```{r echo=FALSE, eval=FALSE}
-# Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/FAQ/FAQs")
-source("../../../rhelpers/rhelpers.R")
-fnm <- "stacked-data"
-modHTML(fnm)
-```
-
-```{r echo=FALSE, results='hide', message='FALSE'}
-source("../../../rhelpers/knitr_setup.R")
-```
-
 ----
 
 Suppose that you have data from two groups -- heights of male and female students, salaries of CEOs from public and private businesses, or, what I will use here, the number of books owned by science and humanities majors.  Further suppose that the data look like this
