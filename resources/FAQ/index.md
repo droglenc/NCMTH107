@@ -26,7 +26,8 @@ Related to: [R/RStudo](#rrstudio-related) / [Homework](#homework-format)
 * [Why can't R find the XXX function?](FAQs/cant-find-function.html)
 
 ### Reading Data Files
-* [Where are the data files that Prof. Ogle provides for us?](FAQs/where-data.html)
+* [Where are the data files that Prof. Ogle provides for us?](FAQs/where-data)
+* [How do I fix a CSV file that downloaded as a text file?](FAQs/fix-CSV-download)
 * [Is there an easy way to enter data into R?](FAQs/enter-data.html)
 * [Can I use Google Sheets to enter data?](FAQs/enter-data-google-sheets.html)
 * [How do I change the working directory?](FAQs/changing-working-directory.html)
