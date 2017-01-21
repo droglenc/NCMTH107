@@ -87,23 +87,6 @@ iqrCalc(c(93,81,34,5,54,84,54,13,1,35,79,63,97,71))
 
 ----
 
-## Mean vs Median
-1. NA
-1. The mean is greater than the median for right-skewed distributions, less than the median for left-skewed distributions, and approximately equal to the median for approximately symmetric distributions.
-1. Outliers attract the mean but have little effect on the median.  For example, if the outlier is at the maximum value then the mean will be greater than the median.
-1. See below.
-    1. Mean > Median
-    1. Mean < Median (only slightly)
-    1. Mean > Median
-    1. Mean = Median (approximately)
-    1. Mean = Median (approximately)
-    1. Mean < Median
-    1. Mean < Median
-    1. Mean = Median (approximately)
-1. The mean uses the actual values whereas the median is only concerned with relative positions.
-
-----
-
 ## Coarse Woody Debris
 <ol>
 <li>The diameter of CWD is largely right-skewed with a separate group of four individuals at higher diameters (`r figs("CWD1",display="cite")`).  With this definition of shape, there are no outliers.  The center as measured by the median is 18 cm and the IQR is from a Q1 of 16.25 to a Q3 of 20.75 cm (`r tbls("CWD1",display="cite")`).  I chose to use the median and IQR because of the right-skewed shape.</li>
@@ -142,6 +125,23 @@ R Appendix.
 <<CWDHist2>>
 <<CWDSum2>>
 ```
+
+----
+
+## Mean vs Median
+1. NA
+1. The mean is greater than the median for right-skewed distributions, less than the median for left-skewed distributions, and approximately equal to the median for approximately symmetric distributions.
+1. Outliers attract the mean but have little effect on the median.  For example, if the outlier is at the maximum value then the mean will be greater than the median.
+1. See below.
+    1. Mean > Median
+    1. Mean < Median (only slightly)
+    1. Mean > Median
+    1. Mean = Median (approximately)
+    1. Mean = Median (approximately)
+    1. Mean < Median
+    1. Mean < Median
+    1. Mean = Median (approximately)
+1. The mean uses the actual values whereas the median is only concerned with relative positions.
 
 ----
 
