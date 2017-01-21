@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Class Exercise
-subtitle: Probability Introduction 1
+subtitle: Probability Introduction 2
 css: "/css/modules.css"
 ---
 
