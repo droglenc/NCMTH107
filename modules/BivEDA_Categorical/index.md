@@ -40,7 +40,7 @@ You should [read this](../../book/9_IntroStats.pdf) and watch these videos:
 
 ## Practice
 
-* In-Class Exercises -- [1](CE1.html) / [2](CE2.html) / [3](CE3.html)
+* In-Class Exercises -- [1](CE1.html) / [2](CE2.html) (*time permitting* ... [3](CE3.html))
 * [Homework Assignment](HW)
 
 ----
