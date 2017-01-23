@@ -6,7 +6,6 @@ css: /css/syllabus.css
 
 ## Homework Due Dates
 <dl class="dl-horizontal">
-<dt>23-Jan</dt><dd><a href="../modules/Data_Production/HW">Data Production</a></dd>
 <dt>25-Jan</dt><dd><a href="../modules/Getting_Data_Into_R/HW">Getting Data Into R</a></dd>
 
 <!---
