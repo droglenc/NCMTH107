@@ -6,14 +6,15 @@ css: /css/syllabus.css
 
 ## Homework Due Dates
 <dl class="dl-horizontal">
-<dt>25-Jan</dt><dd><a href="../modules/Getting_Data_Into_R/HW">Getting Data Into R</a></dd>
+<dt>30-Jan</dt><dd><a href="../modules/UnivEDA_Quantitative/HW">Univariate EDA - Quantitative</a></dd>
+<dt>1-Feb</dt><dd><a href="../modules/UnivEDA_Categorical/HW">Univariate EDA - Categorical</a></dd>
 
 <!---
 <dt>18-Jan</dt><dd><a href="../modules/Why_Statistics_is_Important/HW">Why Statistics is Important</a></dd>
 <dt>18-Jan</dt><dd><a href="../modules/Foundational_Definitions/HW">Foundational Definitions</a></dd>
 <dt>23-Jan</dt><dd><a href="../modules/Data_Production/HW">Data Production</a></dd>
-<dt>XX-Jan</dt><dd><a href="../modules/UnivEDA_Quantitative/HW">Univariate EDA - Quantitative</a></dd>
-<dt>XX-Jan</dt><dd><a href="../modules/UnivEDA_Categorical/HW">Univariate EDA - Categorical</a></dd>
+<dt>25-Jan</dt><dd><a href="../modules/Getting_Data_Into_R/HW">Getting Data Into R</a></dd>
+
 <dt>XX-Jan</dt><dd><a href="../modules/Normal_Distributions/HW">Normal Distributions</a></dd>
 <dt>XX-Jan</dt><dd><a href="../modules/BivEDA_Quantitative/HW">Bivariate EDA - Quantitative</a></dd>
 <dt>XX-Jan</dt><dd><a href="../modules/BivEDA_Categorical/HW">Bivariate EDA - Categorical</a></dd>
