@@ -183,6 +183,8 @@ Under [Northland College policy](https://my.northland.edu/student-policies/acade
 
 ## Classroom Conduct and Academic Integrity
 
+<img class="img-right" src="../img/cell-cheat.jpg">
+
 Your conduct in class should revolve around the idea of being respectful of all others in the class.  Adhering to the following behaviors should be considered the minimum requirements to being respectful of others:
 
 * Arrive to class on time.  If you arrive late, then take the first available seat as quietly as possible.  If you need to leave early, then please sit near the exit.
