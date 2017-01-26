@@ -7,7 +7,7 @@ subtitle: Can I get the "full" MS Office products for my own computer?
 
 ----
 
-As a student at Northland College, you have access to Microsoft Office products (Word, Excel, etc.). Many students use these programs through "online" versions. However, the "online" versions are not fully functional which limits their use in this class. To install the "full" versions of these programs on your personal computer, logon on to your computer in the same way that you would to check your Northland e-mail. This should give you a screen similar to that below. Here, select the "Install Office 2016" icon (on the right) and follow the directions to install the Microsoft Office programs onto your computer.
+As a student at Northland College, you have no-cost access to Microsoft Office products (Word, Excel, etc.). Many students use these programs through "online" versions. However, the "online" versions are not fully functional, which limits their use in this class. To install the "full" versions of these programs on your personal computer, logon on to your computer in the same way that you would to check your Northland e-mail, which should give you a screen similar to that below. Here, select the "Install Office 2016" icon (on the right) and follow the directions.
 
 ![alt text](Figs/getMSOffice.JPG)
 
