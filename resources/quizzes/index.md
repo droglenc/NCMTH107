@@ -5,5 +5,5 @@ title: Daily Quizzes
 <!--
 -->
 
-* [Wed, 25-Jan](https://goo.gl/forms/WR7BgcgOlb5JIWnk1){:target="_blank"}
+* [Fri, 27-Jan](https://goo.gl/forms/VjssDJneS8jniEsz1){:target="_blank"}
 
