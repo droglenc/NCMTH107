@@ -8,9 +8,9 @@ title: Homework Keys
 * [Data Production](Data_Production_noPrint.pdf){:target="_blank"}
 * [Getting Data into R](Getting_Data_Into_R_noPrint.pdf){:target="_blank"}
 * [Univariate EDA - Quantitative](UnivEDA_Quant_noPrint.pdf){:target="_blank"}
+* [Univariate EDA - Categorical](UnivEDA_Cat_noPrint.pdf){:target="_blank"}
 
 <!--
-* [Univariate EDA - Categorical](UnivEDA_Cat_noPrint.pdf){:target="_blank"}
 * [Normal Distributions](Normal_Distributions_noPrint.pdf){:target="_blank"}
 * [Bivariate EDA - Quantitative](BivEDA_Quant_noPrint.pdf){:target="_blank"}
 * [Bivariate EDA - Categorical](BivEDA_Cat_noPrint.pdf){:target="_blank"}
