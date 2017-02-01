@@ -8,6 +8,7 @@ css: /css/syllabus.css
 <dl class="dl-horizontal">
 <dt>1-Feb</dt><dd><a href="../modules/UnivEDA_Categorical/HW">Univariate EDA - Categorical</a></dd>
 <dt>6-Feb</dt><dd><a href="../modules/Normal_Distributions/HW">Normal Distributions</a></dd>
+<dt>13-Feb</dt><dd><a href="../modules/BivEDA_Quantitative/HW">Bivariate EDA - Quantitative</a></dd>
 
 <!---
 <dt>18-Jan</dt><dd><a href="../modules/Why_Statistics_is_Important/HW">Why Statistics is Important</a></dd>
@@ -17,7 +18,6 @@ css: /css/syllabus.css
 <dt>30-Jan</dt><dd><a href="../modules/UnivEDA_Quantitative/HW">Univariate EDA - Quantitative</a></dd>
 
 
-<dt>XX-Jan</dt><dd><a href="../modules/BivEDA_Quantitative/HW">Bivariate EDA - Quantitative</a></dd>
 <dt>XX-Jan</dt><dd><a href="../modules/BivEDA_Categorical/HW">Bivariate EDA - Categorical</a></dd>
 <dt>XX-Jan</dt><dd><a href="../modules/Linear_Regression/HW">Linear Regression</a></dd>
 <dt>XX-Jan</dt><dd><a href="../modules/Probability/HW">Probability Introduction</a></dd>
