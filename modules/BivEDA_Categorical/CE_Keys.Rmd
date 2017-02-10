@@ -25,7 +25,7 @@ tbls(name="TreesRaw",'Raw freuency table for stands by type ("sttype": c="conife
 tbls(name="TreesRow",'Row percentages table for stands by type ("sttype": c="coniferous",mc="mostly coniferous",md="mostly deciduous", and d="deciduous" and years since last fire category (tslf).')
 tbls(name="TreesCol",'Column percentages table for stands by type ("sttype": c="coniferous",mc="mostly coniferous",md="mostly deciduous", and d="deciduous" and years since last fire category (tslf).')
 tbls(name="TreesTot",'Total percentages table for stands by type ("sttype": c="coniferous",mc="mostly coniferous",md="mostly deciduous", and d="deciduous" and years since last fire category (tslf).')
-tbls(name="KidsRaw",'Raw freuency table for grade school students by goals and grade.')
+tbls(name="KidsRaw",'Raw frequency table for grade school students by goals and grade.')
 tbls(name="KidsRow",'Row percentages table for grade school students by goals and grade.')
 tbls(name="KidsCol",'Column percentages table for grade school students by goals and grade.')
 tbls(name="KidsTot",'Total percentages table for grade school students by goals and grade.')
@@ -148,7 +148,7 @@ tot <- percTable(tbl,digits=1)
 `r tbls("KidsRaw")`
 
 ```{r kidsRaw, echo=FALSE}
-tbl <- xtabs(~grade+goals,data=d)
+( tbl <- xtabs(~grade+goals,data=d) )
 ```
 
 `r tbls("KidsRow")`

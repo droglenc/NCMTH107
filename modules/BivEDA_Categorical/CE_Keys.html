@@ -112,7 +112,12 @@ percTable(tbl,digits=1)</code></pre>
 <li>The percentage of students with the goal “to be popular” that were in the sixth grade was 39.0% (Table 7).</li>
 <li>Fairly even distribution of students into the goals categories among the grades. Thus, there is no real difference in goals by grade in school.</li>
 </ol>
-<p>Table 5: Raw freuency table for grade school students by goals and grade.</p>
+<p>Table 5: Raw frequency table for grade school students by goals and grade.</p>
+<pre><code>     goals
+grade Grades Popular Sports
+    4     63      31     25
+    5     88      55     33
+    6     96      55     32</code></pre>
 <p>Table 6: Row percentages table for grade school students by goals and grade.</p>
 <pre><code>     goals
 grade Grades Popular Sports   Sum
@@ -135,7 +140,7 @@ grade Grades Popular Sports   Sum
   Sum   51.7    29.5   18.8 100.0</code></pre>
 <p>R Appendix.</p>
 <pre class="r"><code>d &lt;- read.csv(&quot;PopularKids.csv&quot;)
-tbl &lt;- xtabs(~grade+goals,data=d)
+( tbl &lt;- xtabs(~grade+goals,data=d) )
 percTable(tbl,margin=1,digits=1)
 percTable(tbl,margin=2,digits=1)
 percTable(tbl,digits=1)</code></pre>
