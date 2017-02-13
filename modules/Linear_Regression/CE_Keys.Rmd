@@ -73,8 +73,8 @@ rsq <- 0.912
 1. This prediction should not be computed, because 15 degrees of beach angle is outside of the domain of the data used to define the relationship (i.e., this is an extrapolation).
 1. The predicted median sand diameter for a beach angle of 4 degrees is `r formatC(b+m*4,format="f",digits=3)` mm.
 1. The residual for an observed median sand diamter of 0.2 mm and beach angle of 5 degrees is `r formatC(0.2-(b+m*5),format="f",digits=3)` mm.
-1. The proportion of variabiilty in median sand diameter that is explained by knowing the angle of the beach is `r formatC(rsq,format="f",digits=3)`.
 1. The correlation coefficient between median sand diameter and beach angle is `r formatC(sqrt(rsq),format="f",digits=3)`.
+1. The proportion of variabiilty in median sand diameter that is explained by knowing the angle of the beach is `r formatC(rsq,format="f",digits=3)`.
 1. The relationship betwen median sand diameter and beach angle appears to be nonlinear.
 
 ----
