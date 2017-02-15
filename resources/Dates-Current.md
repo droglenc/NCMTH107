@@ -8,6 +8,7 @@ css: /css/syllabus.css
 <dl class="dl-horizontal">
 <dt>15-Feb</dt><dd><a href="../modules/BivEDA_Categorical/HW">Bivariate EDA - Categorical</a></dd>
 <dt>17-Feb</dt><dd><a href="../modules/Linear_Regression/HW">Linear Regression</a></dd>
+<dt>20-Feb</dt><dd><a href="../modules/Probability/HW">Probability</a></dd>
 
 <!---
 <dt>18-Jan</dt><dd><a href="../modules/Why_Statistics_is_Important/HW">Why Statistics is Important</a></dd>
