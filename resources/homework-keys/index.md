@@ -12,10 +12,10 @@ title: Homework Keys
 * [Normal Distributions](Normal_Distributions_noPrint.pdf){:target="_blank"}
 * [Bivariate EDA - Quantitative](BivEDA_Quant_noPrint.pdf){:target="_blank"}
 * [Bivariate EDA - Categorical](BivEDA_Cat_noPrint.pdf){:target="_blank"}
+* [Linear Regression](Linear_Regression_noPrint.pdf){:target="_blank"}
 
 <!--
 
-* [Linear Regression](Linear_Regression_noPrint.pdf){:target="_blank"}
 * [Probability Introduction](Probability_Introduction_noPrint.pdf){:target="_blank"}
 * [Sampling Distributions](Sampling_Distributions_noPrint.pdf){:target="_blank"}
 * [1-Sample Z-Test](1_Sample_Z_noPrint.pdf){:target="_blank"}
