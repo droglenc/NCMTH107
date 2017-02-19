@@ -7,6 +7,7 @@ css: /css/syllabus.css
 ## Homework Due Dates
 <dl class="dl-horizontal">
 <dt>20-Feb</dt><dd><a href="../modules/Probability/HW">Probability</a></dd>
+<dt>24-Feb</dt><dd><a href="../modules/Sampling_Distributions/HW">Sampling Distributions</a></dd>
 
 <!---
 <dt>18-Jan</dt><dd><a href="../modules/Why_Statistics_is_Important/HW">Why Statistics is Important</a></dd>
