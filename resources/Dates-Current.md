@@ -6,7 +6,6 @@ css: /css/syllabus.css
 
 ## Homework Due Dates
 <dl class="dl-horizontal">
-<dt>20-Feb</dt><dd><a href="../modules/Probability/HW">Probability</a></dd>
 <dt>24-Feb</dt><dd><a href="../modules/Sampling_Distributions/HW">Sampling Distributions</a></dd>
 
 <!---
@@ -20,6 +19,7 @@ css: /css/syllabus.css
 <dt>13-Feb</dt><dd><a href="../modules/BivEDA_Quantitative/HW">Bivariate EDA - Quantitative</a></dd>
 <dt>15-Feb</dt><dd><a href="../modules/BivEDA_Categorical/HW">Bivariate EDA - Categorical</a></dd>
 <dt>17-Feb</dt><dd><a href="../modules/Linear_Regression/HW">Linear Regression</a></dd>
+<dt>20-Feb</dt><dd><a href="../modules/Probability/HW">Probability</a></dd>
 
 
 <dt>XX-Jan</dt><dd><a href="../modules/BivEDA_Categorical/HW">Bivariate EDA - Categorical</a></dd>
@@ -41,8 +41,8 @@ css: /css/syllabus.css
 <dl class="dl-horizontal">
 <!---
 <dt>8-Feb</dt><dd>First Exam</dd> 
--->
 <dt>17-Feb</dt><dd>First Exam XC Reflection (Optional)</dd>
+-->
 <dt>22-Mar</dt><dd>Second Exam</dd>
 <dt>31-Mar</dt><dd>Second Exam XC Reflection (Optional)</dd>
 <dt>14-Apr</dt><dd>"Stats-In-Use" and Project Extra Credit Reports (Optional)</dd>
