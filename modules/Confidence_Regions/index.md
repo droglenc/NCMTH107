@@ -45,6 +45,7 @@ You should [read](../../book/14_IntroStats.pdf) and watch these videos:
 ## Practice
 
 * In-Class Exercises -- [1](CE1) / [2](CE2) / [3](CE3) / [4](CE4).
+* [Homework Assignment](HW)
 
 ----
 

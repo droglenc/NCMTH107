@@ -130,61 +130,13 @@ Z*= <span class="math inline">\(\pm\)</span> 2.576 (Figure 5).
 I am 99% confident that the true population mean is between 793.1 and 854.9.
 </li>
 </ol>
-<p><br></p>
-<li>
-See below.
-</li>
-<ol type="a">
-<li>
-C=0.95
-</li>
-<li>
-Upper bound
-</li>
-<li>
-Z*=1.645 (Figure 6).
-</li>
-<p><img src="CE_Keys_files/figure-html/Z6-1.png" width="336" /></p>
-<p>Figure 6: Normal distribution representing the Z* the sixth confidence region example.</p>
-<li>
-79.0.
-</li>
-<li>
-I am 95% confident that the true population mean is less than 79.0.
-</li>
-</ol>
-<p><br></p>
-<li>
-See below.
-</li>
-<ol type="a">
-<li>
-C=0.95
-</li>
-<li>
-Interval
-</li>
-<li>
-Z*= <span class="math inline">\(\pm\)</span> 1.960 (Figure 7).
-</li>
-<p><img src="CE_Keys_files/figure-html/Z7-1.png" width="336" /></p>
-<p>Figure 7: Normal distribution representing the Z* the seventh confidence region example.</p>
-<li>
-1122.1-1617.9.
-</li>
-<li>
-I am 95% confident that the true population mean is between 1122.1 and 1617.9.
-</li>
-</ol>
 </ol>
 <p>R Appendix</p>
 <pre class="r"><code>zstar &lt;- distrib(0.9,type=&quot;q&quot;,lower.tail=FALSE)
 zstar &lt;- distrib(0.025,type=&quot;q&quot;,lower.tail=FALSE)
 zstar &lt;- distrib(0.99,type=&quot;q&quot;,lower.tail=FALSE)
 zstar &lt;- distrib(0.9,type=&quot;q&quot;)
-zstar &lt;- distrib(0.005,type=&quot;q&quot;,lower.tail=FALSE)
-zstar &lt;- distrib(0.95,type=&quot;q&quot;)
-zstar &lt;- distrib(0.025,type=&quot;q&quot;,lower.tail=FALSE)</code></pre>
+zstar &lt;- distrib(0.005,type=&quot;q&quot;,lower.tail=FALSE)</code></pre>
 <hr />
 </div>
 <div id="body-temperatures" class="section level2">

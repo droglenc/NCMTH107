@@ -30,6 +30,6 @@ Researchers examined the size of two different species of beetles. They hypothes
 1. compute the sample mean, 
 1. compute the p-value assuming that &sigma;=14, 
 1. make a decision about the hypotheses using &alpha;=0.05, and 
-1. summarize your findings in terms of the beetles thorax size.
+1. summarize your findings in terms of the beetle's thorax size.
 
 ----

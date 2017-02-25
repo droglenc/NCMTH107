@@ -122,39 +122,6 @@ zstar <- distrib(0.005,type="q",lower.tail=FALSE)
 <li>`r formatC(824-zstar*60/sqrt(25),format="f",digits=1)`-`r formatC(824+zstar*60/sqrt(25),format="f",digits=1)`.</li>
 <li>I am 99% confident that the true population mean is between `r formatC(824-zstar*60/sqrt(25),format="f",digits=1)` and `r formatC(824+zstar*60/sqrt(25),format="f",digits=1)`.</li>
 </ol>
-<br>
-
-<li>See below.</li>
-<ol type="a">
-<li>C=0.95</li>
-<li>Upper bound</li>
-<li>Z*=`r formatC(distrib(0.95,type="q"),format="f",digits=3)` (`r figs("Z6",display="cite")`).</li>
-```{r Z6, echo=FALSE}
-zstar <- distrib(0.95,type="q")
-```
-
-`r figs("Z6")`
-
-<li>`r formatC(73+zstar*20/sqrt(30),format="f",digits=1)`.</li>
-<li>I am 95% confident that the true population mean is less than `r formatC(73+zstar*20/sqrt(30),format="f",digits=1)`.</li>
-</ol>
-<br>
-
-<li>See below.</li>
-<ol type="a">
-<li>C=0.95</li>
-<li>Interval</li>
-<li>Z*= $\pm$ `r formatC(distrib(0.025,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z7",display="cite")`).</li>
-```{r Z7, echo=FALSE}
-zstar <- distrib(0.025,type="q",lower.tail=FALSE)
-```
-
-`r figs("Z7")`
-
-<li>`r formatC(1370-zstar*800/sqrt(40),format="f",digits=1)`-`r formatC(1370+zstar*800/sqrt(40),format="f",digits=1)`.</li>
-<li>I am 95% confident that the true population mean is between `r formatC(1370-zstar*800/sqrt(40),format="f",digits=1)` and `r formatC(1370+zstar*800/sqrt(40),format="f",digits=1)`.</li>
-</ol>
-
 </ol>
 
 R Appendix
@@ -164,8 +131,6 @@ R Appendix
 <<Z3>>
 <<Z4>>
 <<Z5>>
-<<Z6>>
-<<Z7>>
 ```
 
 ----
