@@ -54,23 +54,11 @@ The p-value is “the probabiity of observing a sample mean of 824 or ‘differe
 </li>
 <p><img src="CE_Keys_files/figure-html/p5-1.png" width="336" /></p>
 <p>Figure 5: Normal distribution representing the p-value calculation for the fifth example.</p>
-<li>
-The p-value is “the probabiity of observing a sample mean of 73 or less if the population mean is 80.” Reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0276&lt;α (Figure 6).
-</li>
-<p><img src="CE_Keys_files/figure-html/p6-1.png" width="336" /></p>
-<p>Figure 6: Normal distribution representing the p-value calculation for the sixth example.</p>
-<li>
-The p-value is “the probabiity of observing a sample mean of 1370 or ‘different’ if the population mean is 1500.” Do not reject <span class="math inline">\(H_{0}\)</span> because p-value=0.3041&gt;alpha; (Figure 7).
-</li>
-<p><img src="CE_Keys_files/figure-html/p7-1.png" width="336" /></p>
-<p>Figure 7: Normal distribution representing the p-value calculation for the seventh example.</p>
 </ol>
 <p>R Appendix.</p>
 <pre class="r"><code>distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE)
 distrib(13700,mean=15000,sd=8000/sqrt(50))
-2*distrib(824,mean=800,sd=60/sqrt(25),lower.tail=FALSE)
-distrib(73,mean=80,sd=20/sqrt(30))
-2*distrib(1370,mean=1500,sd=800/sqrt(40))</code></pre>
+2*distrib(824,mean=800,sd=60/sqrt(25),lower.tail=FALSE)</code></pre>
 <hr />
 </div>
 <div id="body-temperature" class="section level2">

@@ -55,6 +55,7 @@ Following this, you should [read **Section 13.5**](../../book/13_IntroStats.pdf)
 * First set of in-class exercises -- [1](CE1)
 * Second set of in-class exercises --  [2](CE2) / [3](CE3)
 * Third set of in-class exercises -- [4](CE4) / [5](CE5)
+* [Homework Assignment](HW)
 
 ----
 

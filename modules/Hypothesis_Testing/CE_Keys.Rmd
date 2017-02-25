@@ -88,22 +88,6 @@ distrib(13700,mean=15000,sd=8000/sqrt(50))
 
 `r figs("P5")`
 
-<li>The p-value is "the probabiity of observing a sample mean of 73 or less if the population mean is 80." Reject $H_{0}$ because p-value=`r formatC(distrib(73,mean=80,sd=20/sqrt(30)),format="f",digits=4)`<&alpha; (`r figs("P6",display="cite")`).</li>
-
-```{r p6, echo=FALSE}
-distrib(73,mean=80,sd=20/sqrt(30))
-```
-
-`r figs("P6")`
-
-<li>The p-value is "the probabiity of observing a sample mean of 1370 or 'different' if the population mean is 1500." Do not reject $H_{0}$ because p-value=`r formatC(2*distrib(1370,mean=1500,sd=800/sqrt(40)),format="f",digits=4)`>alpha; (`r figs("P7",display="cite")`).</li>
-
-```{r p7, echo=FALSE, results='hide'}
-2*distrib(1370,mean=1500,sd=800/sqrt(40))
-```
-
-`r figs("P7")`
-
 </ol>
 
 R Appendix.
@@ -113,8 +97,6 @@ R Appendix.
 <<p3>>
 <<p4>>
 <<p5>>
-<<p6>>
-<<p7>>
 ```
 
 ----

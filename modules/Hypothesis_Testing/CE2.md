@@ -16,8 +16,6 @@ For each situation below, (i) write a sentence that defines the p-value specific
 1. &alpha;=0.01, H<sub>A</sub>: &mu;>880, n=80, &sigma;=90, x&#772;=918.
 1. &alpha;=0.10, H<sub>A</sub>: &mu;<15000, n=50, &sigma;=8000, x&#772;=13700.
 1. &alpha;=0.01, H<sub>A</sub>: &mu;&#8800;800, n=25, &sigma;=60, x&#772;=824.
-1. &alpha;=0.05, H<sub>A</sub>: &mu;<80, n=30, &sigma;=20, x&#772;=73.
-1. &alpha;=0.05, H<sub>A</sub>: &mu;&#8800;1500, n=40, &sigma;=800, x&#772;=1370.
 
 ----
 
