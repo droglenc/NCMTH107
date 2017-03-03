@@ -6,7 +6,6 @@ css: /css/syllabus.css
 
 ## Homework Due Dates
 <dl class="dl-horizontal">
-<dt>3-Mar</dt><dd><a href="../modules/Hypothesis_Testing/HW">Hypothesis Testing</a></dd>
 <dt>13-Mar</dt><dd><a href="../modules/Confidence_Regions/HW">Confidence Regions</a></dd>
 
 <!---
@@ -22,12 +21,9 @@ css: /css/syllabus.css
 <dt>17-Feb</dt><dd><a href="../modules/Linear_Regression/HW">Linear Regression</a></dd>
 <dt>20-Feb</dt><dd><a href="../modules/Probability/HW">Probability</a></dd>
 <dt>24-Feb</dt><dd><a href="../modules/Sampling_Distributions/HW">Sampling Distributions</a></dd>
+<dt>3-Mar</dt><dd><a href="../modules/Hypothesis_Testing/HW">Hypothesis Testing</a></dd>
 
 
-<dt>XX-Jan</dt><dd><a href="../modules/BivEDA_Categorical/HW">Bivariate EDA - Categorical</a></dd>
-<dt>XX-Jan</dt><dd><a href="../modules/Linear_Regression/HW">Linear Regression</a></dd>
-<dt>XX-Jan</dt><dd><a href="../modules/Probability/HW">Probability Introduction</a></dd>
-<dt>XX-Jan</dt><dd><a href="../modules/Sampling_Distributions/HW">Sampling Distributions</a></dd>
 <dt>XX-Jan</dt><dd><a href="../modules/1_Sample_Z/HW">1-Sample Z-Test</a></dd>
 <dt>XX-Jan</dt><dd><a href="../modules/1_Sample_t/HW">1-Sample t-Test</a></dd>
 <dt>XX-Jan</dt><dd><a href="../modules/2_Sample_t/HW">2-Sample t-Test</a></dd>
