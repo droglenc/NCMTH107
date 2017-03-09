@@ -6,7 +6,7 @@ css: /css/syllabus.css
 
 ## Homework Due Dates
 <dl class="dl-horizontal">
-<dt>22-Mar</dt><dd><a href="../modules/1_Sample_Z/HW">1-Sample Z-Test</a></dd>
+<dt>20-Mar</dt><dd><a href="../modules/1_Sample_Z/HW">1-Sample Z-Test</a></dd>
 <dt>13-Mar</dt><dd><a href="../modules/Confidence_Regions/HW">Confidence Regions</a></dd>
 
 <!---
