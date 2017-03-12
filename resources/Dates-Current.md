@@ -6,8 +6,8 @@ css: /css/syllabus.css
 
 ## Homework Due Dates
 <dl class="dl-horizontal">
-<dt>20-Mar</dt><dd><a href="../modules/1_Sample_Z/HW">1-Sample Z-Test</a></dd>
 <dt>13-Mar</dt><dd><a href="../modules/Confidence_Regions/HW">Confidence Regions</a></dd>
+<dt>20-Mar</dt><dd><a href="../modules/1_Sample_Z/HW">1-Sample Z-Test</a></dd>
 
 <!---
 <dt>18-Jan</dt><dd><a href="../modules/Why_Statistics_is_Important/HW">Why Statistics is Important</a></dd>
@@ -51,12 +51,12 @@ css: /css/syllabus.css
 ---- 
 
 ## Cancelled Classes
+<dt>14-Apr</dt><dd>NO CLASS (Good Friday)</dd>
+<!---
+<dt>16-Jan</dt><dd>NO CLASS (Please participate in <a href="https://www.northland.edu/event/martin-luther-king-jr-day-2017/" target="_blank">Martin Luther King, Jr. Day Activities</a>)</dd>
 <dl class="dl-horizontal">
 <dt>6-Mar</dt><dd>NO CLASS (Mid-Session Break)</dd>
 <dt>8-Mar</dt><dd>NO CLASS (Mid-Session Break)</dd>
 <dt>10-Mar</dt><dd>NO CLASS (Mid-Session Break)</dd>
-<dt>14-Apr</dt><dd>NO CLASS (Good Friday)</dd>
-<!---
-<dt>16-Jan</dt><dd>NO CLASS (Please participate in <a href="https://www.northland.edu/event/martin-luther-king-jr-day-2017/" target="_blank">Martin Luther King, Jr. Day Activities</a>)</dd>
 --->
 </dl>
