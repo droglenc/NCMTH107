@@ -15,10 +15,10 @@ title: Homework Keys
 * [Linear Regression](Linear_Regression_noPrint.pdf){:target="_blank"}
 * [Probability Introduction](Probability_Introduction_noPrint.pdf){:target="_blank"}
 * [Sampling Distributions](Sampling_Distributions_noPrint.pdf){:target="_blank"}
-
-<!--
 * [Hypothesis Testing](Hypothesis_Testing_noPrint.pdf){:target="_blank"}
 * [Confidence Regions](Confidence_Regions_noPrint.pdf){:target="_blank"}
+
+<!--
 * [1-Sample Z-Test](1_Sample_Z_noPrint.pdf){:target="_blank"}
 * [1-Sample t-Test](1_Sample_t_noPrint.pdf){:target="_blank"}
 * [2-Sample t-Test](2_Sample_t_noPrint.pdf){:target="_blank"}
