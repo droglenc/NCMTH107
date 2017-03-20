@@ -6,7 +6,7 @@ css: /css/syllabus.css
 
 ## Homework Due Dates
 <dl class="dl-horizontal">
-<dt>20-Mar</dt><dd><a href="../modules/1_Sample_Z/HW">1-Sample Z-Test</a></dd>
+<dt>27-Mar</dt><dd><a href="../modules/1_Sample_t/HW">1-Sample t-Test</a></dd>
 
 <!---
 <dt>18-Jan</dt><dd><a href="../modules/Why_Statistics_is_Important/HW">Why Statistics is Important</a></dd>
@@ -23,6 +23,7 @@ css: /css/syllabus.css
 <dt>24-Feb</dt><dd><a href="../modules/Sampling_Distributions/HW">Sampling Distributions</a></dd>
 <dt>3-Mar</dt><dd><a href="../modules/Hypothesis_Testing/HW">Hypothesis Testing</a></dd>
 <dt>13-Mar</dt><dd><a href="../modules/Confidence_Regions/HW">Confidence Regions</a></dd>
+<dt>20-Mar</dt><dd><a href="../modules/1_Sample_Z/HW">1-Sample Z-Test</a></dd>
 
 
 <dt>XX-Jan</dt><dd><a href="../modules/1_Sample_t/HW">1-Sample t-Test</a></dd>
