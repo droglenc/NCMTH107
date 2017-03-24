@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Class Exercise
-subtitle: 2-Sample t-test 1
+title: Class Example
+subtitle: 2-Sample t-test
 author: Derek H. Ogle
 css: "/css/modules.css"
 output:
@@ -13,7 +13,7 @@ output:
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/2_Sample_t/")
 source("../../rhelpers/rhelpers.R")
-modHTML("CE1")
+modHTML("CExmpl")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
@@ -48,18 +48,5 @@ The results from the previous experiment were recorded in Cholesterol2.csv ([fil
 levenesTest(decrease~tx,data=d)
 t.test(decrease~tx,data=d,var.equal=TRUE)
 ```
-
-
-----
-
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="index.html">^</a></li>
-  <li class="active"><a href="#">1</a></li>
-  <li><a href="CE2.html">2</a></li>
-  <li><a href="CE3.html">3</a></li>
-  <li><a href="CE4.html">4</a></li>
-</ul>
-</div>
 
 ----
