@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Homework Assignment
-subtitle: 1-Sample t-test
+subtitle: 2-Sample t-test
 css: "/css/modules.css"
 ---
 
