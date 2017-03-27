@@ -18,9 +18,9 @@ title: Homework Keys
 * [Hypothesis Testing](Hypothesis_Testing_noPrint.pdf){:target="_blank"}
 * [Confidence Regions](Confidence_Regions_noPrint.pdf){:target="_blank"}
 * [1-Sample Z-Test](1_Sample_Z_noPrint.pdf){:target="_blank"}
+* [1-Sample t-Test](1_Sample_t_noPrint.pdf){:target="_blank"}
 
 <!--
-* [1-Sample t-Test](1_Sample_t_noPrint.pdf){:target="_blank"}
 * [2-Sample t-Test](2_Sample_t_noPrint.pdf){:target="_blank"}
 * [Chi_Square Test](Chi_Square_noPrint.pdf){:target="_blank"}
 * [Goodness-of-Fit Test](Goodness_of_Fit_Test_noPrint.pdf){:target="_blank"}
