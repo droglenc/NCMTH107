@@ -34,6 +34,7 @@ title: Data for MTH107
 * LakeSurvey -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/LakeSurvey.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/LakeSurvey_meta.txt)
 * LaysanFinch -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/LaysanFinch.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/LaysanFinch_meta.txt)
 * Loon1 -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/Loon1.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/Loon1_meta.txt)
+* LSPredDiet -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/LSPredDiet.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/LSPredDiet_meta.txt)
 * MedInternHrs -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/MedInternHrs.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/MedInternHrs_meta.txt)
 * MilkCartons -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/MilkCartons.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/MilkCartons_meta.txt)
 * NCAssess -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/NCAssess.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/NCAssess_meta.txt)
