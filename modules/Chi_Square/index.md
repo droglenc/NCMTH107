@@ -33,7 +33,7 @@ You should [read this](../../book/18_IntroStats.pdf) and watch these videos:
 
 * [Chi-Square Distribution](https://vimeo.com/user45324800/chisqdist){:target="_blank"} [4 mins] [![PowerPoint](../../img/ppt.png)](PPT1.pptx)
 * [Chi-Square Distribution in R](https://vimeo.com/user45324800/chisqdistribution){:target="_blank"} [2 mins] [![Web](../../img/web.png)](RHO1.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO1.pdf) [![MSWord](../../img/word.png)](RHO1.docx)  [![R](../../img/Rlogo.png)](RHO1.R){:target="_blank"}
-* [Chi-Square Test Example](https://vimeo.com/user45324800/chisqtest-ex1){:target="_blank"} [x mins] [![PowerPoint](../../img/ppt.png)](PPT2.pptx)
+* Chi-Square Test Example [x mins] [![PowerPoint](../../img/ppt.png)](PPT2.pptx)
 * [Where Do Expected Values Come From?](https://vimeo.com/user45324800/chisqtest-expvals){:target="_blank"} [5 mins] [![PowerPoint](../../img/ppt.png)](PPT2.pptx)
 * [Chi-Square Test (with Summarized Data) in R](https://vimeo.com/user45324800/chisqsmrzd-ex1){:target="_blank"} [8 mins] [![Web](../../img/web.png)](RHO2.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO2.pdf) [![MSWord](../../img/word.png)](RHO2.docx)  [![R](../../img/Rlogo.png)](RHO2.R){:target="_blank"}
 * [Chi-Square Test (with Raw Data) in R](https://vimeo.com/user45324800/chisqraw-ex1){:target="_blank"} [11 mins] [same handout]
