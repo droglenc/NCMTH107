@@ -42,6 +42,7 @@ You should [read this](../../book/18_IntroStats.pdf) and watch these videos:
 
 ## In-Class Practice
 
+* [Class Example](CExmpl)
 * Class Exercises -- [1](CE1) / [2](CE2)
 * [Homework Assignment](HW)
 
