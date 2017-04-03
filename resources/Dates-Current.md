@@ -6,8 +6,7 @@ css: /css/syllabus.css
 
 ## Homework Due Dates
 <dl class="dl-horizontal">
-<dt>3-Apr</dt><dd><a href="../modules/2_Sample_t/HW">2-Sample t-Test</a></dd>
-<dt>10-Apr</dt><dd><a href="../modules/Chi_Square/HW">Chi-Square Test</a></dd>
+<dt>7-Apr</dt><dd><a href="../modules/Chi_Square/HW">Chi-Square Test</a></dd>
 
 <!---
 <dt>18-Jan</dt><dd><a href="../modules/Why_Statistics_is_Important/HW">Why Statistics is Important</a></dd>
@@ -26,6 +25,7 @@ css: /css/syllabus.css
 <dt>13-Mar</dt><dd><a href="../modules/Confidence_Regions/HW">Confidence Regions</a></dd>
 <dt>20-Mar</dt><dd><a href="../modules/1_Sample_Z/HW">1-Sample Z-Test</a></dd>
 <dt>27-Mar</dt><dd><a href="../modules/1_Sample_t/HW">1-Sample t-Test</a></dd>
+<dt>3-Apr</dt><dd><a href="../modules/2_Sample_t/HW">2-Sample t-Test</a></dd>
 
 <dt>XX-Jan</dt><dd><a href="../modules/Goodness_of_Fit/HW">Goodness-of-Fit Test</a></dd>
 --->
@@ -40,8 +40,8 @@ css: /css/syllabus.css
 <dt>8-Feb</dt><dd>First Exam</dd> 
 <dt>17-Feb</dt><dd>First Exam XC Reflection (Optional)</dd>
 <dt>22-Mar</dt><dd>Second Exam</dd>
--->
 <dt>31-Mar</dt><dd>Second Exam XC Reflection (Optional)</dd>
+-->
 <dt>14-Apr</dt><dd>"Stats-In-Use" and Project Extra Credit Reports (Optional)</dd>
 <dt>21-Apr</dt><dd>Final Exam</dd>
 </dl>
