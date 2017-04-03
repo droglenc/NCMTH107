@@ -13,7 +13,7 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/ChiSquare/")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Chi_Square/")
 source("../../rhelpers/rhelpers.R")
 modHTML("CE_Keys")
 ```
@@ -53,7 +53,7 @@ percTable(obs,margin=1,digits=1)
 <li>H<sub>A</sub>: "The distribution of students into the goals categories differs for at least one pair of grades" and H<sub>O</sub>: "The distribution of students into the goals categories DOES NOT differ among grades".</li>
 <li>Chi-square test because (i) two or more populations (grades) were sampled and (ii) the response variable (goals category) is categorial.</li>
 <li>This is an observational study because the students were not allocated to grades.  The students were not obviously randomly selected (and were likely part of a voluntary response survey).</li>
-<li>All cells in the expected frequency table (`r tbls("PopTable",display="cite")`) were greater than 5; the assumptions for a chi-square test have been met.</li>
+<li>All cells in the expected frequency table (`r tbls("PopExpTable",display="cite")`) were greater than 5; the assumptions for a chi-square test have been met.</li>
 
 `r tbls("PopExpTable")`
 
@@ -61,7 +61,7 @@ percTable(obs,margin=1,digits=1)
 chi1$expected
 ```
 
-<li>The observed frequency table is shown in `r tbls("PopTable",display="cite")`.</li>
+<li>The observed frequency table is shown in `r tbls("PopObsTable",display="cite")`.</li>
 
 `r tbls("PopObsTable")`
 
