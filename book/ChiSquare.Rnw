@@ -187,7 +187,7 @@ The 11-steps \sectrefp{sec:11Steps} for a hypothesis test for the Christmas tree
     \item $H_{0}$: ``distribution of households with a natural tree is the same for urban and rural households'' vs. $H_{A}$: ``distribution of households with a natural tree is NOT the same for urban and rural households.''
     \item A Chi-Square Test is required because (i) a categorical response variable was recorded (type of tree) and (ii) two populations were sampled (urban and rural households).
     \item The data appear to be part of an observational study with no clear indication of randomization.
-    \item The expected frequency in each of the four cells is greater than five \tabrefp{tab:ChiTreeObs}.
+    \item The expected frequency in each of the four cells is greater than five \tabrefp{tab:ChiTreeExp}.
     \item The observed frequency table is in \tabref{tab:ChiTreeObs}.
     \item $\chi^{2}$ = $\frac{(89-94.853)^{2}}{94.853}$ + $\frac{(172-166.147)^{2}}{166.147}$ + $\frac{(64-58.147)^{2}}{58.147}$ + $\frac{(96-101.853)^{2}}{101.853}$ = $0.3611+0.2062+0.5891+0.3363$ = $1.4927$ with 1 df.
     \item p-value=\Sexpr{kPvalue(pchisq(4.927,df=1,lower.tail=FALSE),include.p=FALSE)}.
