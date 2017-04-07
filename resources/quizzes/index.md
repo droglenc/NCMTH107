@@ -5,4 +5,4 @@ title: Daily Quizzes
 <!--
 -->
 
-* [Wed, 5-Apr](https://goo.gl/forms/wNwv80VAgsS28LB02){:target="_blank"}
+* [Fri, 7-Apr](https://goo.gl/forms/2wOdTj9RLjVax6UH2){:target="_blank"}
