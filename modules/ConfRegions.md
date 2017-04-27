@@ -31,8 +31,9 @@ A major goal of inferential statistics is to estimate the value of a parameter f
 
 ## Preparation for Class
 
-You should [read](../../book/14_IntroStats.pdf) and watch these videos:
+Use the materials below to answer the questions on [this preparation guide](ConfRegions_Prep).
 
+* [Reading](../book/14_IntroStats.pdf)
 * [Introduction to Confidence Intervals](https://www.youtube.com/v/27iSnzss2wM?version=3&autoplay=1){:target="_blank"} [7 mins]
 * [Interpreting Confidence Intervals](https://www.youtube.com/v/JYP6gc--sGQ?version=3&autoplay=1){:target="_blank"} [6 mins]
 * [Constructing a Confidence Interval](https://www.youtube.com/v/KG921rfbTDw?version=3&autoplay=1){:target="_blank"} [10 mins] [**Skip from 7:49 to 8:28.**]
@@ -44,13 +45,13 @@ You should [read](../../book/14_IntroStats.pdf) and watch these videos:
 
 ## Practice
 
-* In-Class Exercises -- [1](CE1) / [2](CE2) / [3](CE3) / [4](CE4).
-* [Homework Assignment](HW)
+* In-Class Exercises -- [1](ConfRegions_CE1) / [2](ConfRegions_CE2) / [3](ConfRegions_CE3) / [4](ConfRegions_CE4).
+* [Homework Assignment](ConfRegions_HW)
 
 ----
 
 ## Archived Materials
 
-* [Old Lecture Slides](PPT_old.pptx)
+* [Old Lecture Slides](ConfRegions_PPT_old.pptx)
 
 ----

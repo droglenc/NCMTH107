@@ -21,11 +21,11 @@ For each situation below, (a) identify the level of confidence; (b) whether a lo
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="index.html">^</a></li>
-  <li><a href="CE1.html">1</a></li>
+  <li><a href="ConfRegions.html">^</a></li>
+  <li><a href="ConfRegions_CE1.html">1</a></li>
   <li class="active"><a href="#">2</a></li>
-  <li><a href="CE3.html">3</a></li>
-  <li><a href="CE4.html">4</a></li>
+  <li><a href="ConfRegions_CE3.html">3</a></li>
+  <li><a href="ConfRegions_CE4.html">4</a></li>
 </ul>
 </div>
 

@@ -13,14 +13,14 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Confidence_Regions/")
-source("../../rhelpers/rhelpers.R")
-modHTML("CE_Keys")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+source("../rhelpers/rhelpers.R")
+modHTML("ConfRegions_CE_Keys")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
-source("../../rhelpers/knitr_setup.R")
+source("../rhelpers/knitr_setup.R")
 library(captioner)
 figs <- captioner(prefix="Figure")
 figs(name="Z1","Normal distribution representing the Z* the first confidence region example.")
