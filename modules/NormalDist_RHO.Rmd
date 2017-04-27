@@ -23,10 +23,9 @@ setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules")
 source("../rhelpers/rhelpers.R")
 modHTML("NormalDist_RHO")
 ```
-
-```{r echo=FALSE, results='hide', message='FALSE'}
-fnm <- "NormalDist_RHO"
+```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
 source("../rhelpers/knitr_setup.R")
+purl2("NormalDist_RHO.Rmd",moreItems=c("Renders","source","modHTML","github.com","NCMTH107"))
 ```
 
 ----
@@ -82,8 +81,4 @@ ab-a
 ```{r par1a=TRUE}
 ( distrib(0.25,mean=16,sd=4,type="q") )
 ( distrib(0.25,mean=16,sd=4,type="q",lower.tail=FALSE) )
-```
-
-```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
-purl2(paste0(fnm,".Rmd"))
 ```

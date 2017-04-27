@@ -23,10 +23,9 @@ setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
 source("../rhelpers/rhelpers.R")
 modHTML("BEDAQuant_RHO")
 ```
-
-```{r echo=FALSE, results='hide', message='FALSE'}
-fnm <- "BEDAQuant_RHO"
+```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
 source("../rhelpers/knitr_setup.R")
+purl2("BEDAQuant_RHO.Rmd",moreItems=c("Renders","source","modHTML","github.com","NCMTH107"))
 ```
 
 ----
@@ -37,10 +36,17 @@ source("../rhelpers/knitr_setup.R")
 ----
 
 ## Getting The Data
+```{r echo=FALSE}
+d <- read.csv("https://github.com/droglenc/NCData/raw/master/Alligators1.csv")
+```
 ```{r message=FALSE, warning=FALSE}
 library(NCStats)
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+```
+```{r eval=FALSE}
+setwd("C:/stats/")
 d <- read.csv("Alligators1.csv")
+```
+```{r}
 str(d)
 headtail(d)
 ```
@@ -52,8 +58,4 @@ corr(mass~svl,data=d)
 corr(mass~svl,data=d,use="pairwise.complete.obs")
 plot(mass~svl,data=d,xlab="Snout-Vent Length (cm)",ylab="Body Mass (KG)",pch=19,col=type)
 legend("topleft",levels(d$type),pch=19,col=1:2,bty="n")
-```
-
-```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
-purl2(paste0(fnm,".Rmd"))
 ```

@@ -17,7 +17,8 @@ css: /css/modules.css
 <div id="from-summarized-observed-table" class="section level3">
 <h3>From Summarized Observed Table</h3>
 <p>When <a href="https://en.wikipedia.org/wiki/Chinook_salmon">Chinook Salmon (<em>Oncorhynchus tshawytscha</em>)</a> were first introduced to Lake Superior there was concern that they would compete with native <a href="https://en.wikipedia.org/wiki/Lake_trout">Lake Trout (<em>Salvelinus namaycush</em>)</a> for <a href="https://en.wikipedia.org/wiki/Coregonus_artedi">Cisco (<em>Coregonus artedi</em>)</a>. Preliminarily, fisheries biologists classified the dominant food items (Cisco, <a href="https://en.wikipedia.org/wiki/Rainbow_smelt">Smelt (<em>Osmerus mordax</em></a>) (another type of fish), or <a href="https://en.wikipedia.org/wiki/Mysis_relicta"><em>Mysis</em></a> (an invertebrate)) in the diets of 50 Lake Trout and 40 Chinook Salmon. They found that 32, 10, and 8 Lake Trout diets were dominated by Cisco, Smelt, and <em>Mysis</em>, respectively. Similarly, 18, 18, and 4 Chinook Salmon diets were dominated by Cisco, Smelt, and <em>Mysis</em>, respectively. Test (at the 10% level) if the distribution of dominant food items differs at the 5% level?</p>
-<pre class="r"><code>&gt; freq &lt;- c(32,10,8,18,18,4)
+<pre class="r"><code>&gt; # From already summarized data
+&gt; freq &lt;- c(32,10,8,18,18,4)
 &gt; ( obs &lt;- matrix(freq,nrow=2,byrow=TRUE) )</code></pre>
 <pre><code>     [,1] [,2] [,3]
 [1,]   32   10    8
@@ -60,9 +61,10 @@ X-squared = 0.0301, df = 1, p-value = 0.8624</code></pre>
 <div id="from-raw-data" class="section level3">
 <h3>From Raw Data</h3>
 <p>The <a href="http://www.norc.org/Research/Projects/Pages/general-social-survey.aspx">General Social Survey</a> (GSS) is a nationwide survey that has been administered since 1972 to gather data on contemporary American society in an attempt to monitor and explain trends in attitudes, behaviors, and attributes of American society. One part of that survey asked respondents to state their opinion on how true the following statement was – “<em>All radioactivity is made by humans.</em>” Respondents were also categorized by their highest educational degree. The results from this portion of the GSS is in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/SciTest1.csv">SciTest1.csv</a>. Use these data to determine, at the 5% level, if the distribution of responses to this statement differs among levels of education.</p>
-<pre class="r"><code>&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules/&quot;)
-&gt; ST1 &lt;- read.csv(&quot;SciTest1.csv&quot;)
-&gt; str(ST1)</code></pre>
+<pre class="r"><code>&gt; # From raw (individual) data
+&gt; setwd(&quot;C:/stats/&quot;)
+&gt; ST1 &lt;- read.csv(&quot;SciTest1.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; str(ST1)</code></pre>
 <pre><code>&#39;data.frame&#39;:   2549 obs. of  2 variables:
  $ degree : Factor w/ 5 levels &quot;bach&quot;,&quot;grad&quot;,..: 5 5 5 5 5 5 5 5 5 5 ...
  $ scitest: Factor w/ 4 levels &quot;def.not&quot;,&quot;def.true&quot;,..: 2 2 2 2 2 2 2 2 2 2 ...</code></pre>

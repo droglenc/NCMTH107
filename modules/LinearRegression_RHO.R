@@ -1,13 +1,8 @@
-# Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
-source("../rhelpers/rhelpers.R")
-modHTML("LinearRegression_RHO")
-
-source("../rhelpers/knitr_setup.R")
-
 library(NCStats)
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+
+setwd("C:/stats/")
 d <- read.csv("AvianPecMusc.csv")
+
 str(d)
 headtail(d)
 
@@ -19,4 +14,4 @@ fitPlot(lm.mt,ylab="Pectoral Muscle Mass (g)",xlab="Pectoral Muscle Thickness (m
 12-predM
 
 
-# Script created at 2017-04-27 08:07:23
+# Script created at 2017-04-27 10:33:07

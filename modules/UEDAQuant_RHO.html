@@ -24,10 +24,10 @@ css: "/css/modules.css"
 </div>
 <div id="getting-the-data" class="section level2">
 <h2>Getting the Data</h2>
-<pre class="r"><code>&gt; library(NCStats)
-&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules&quot;)
-&gt; ars &lt;- read.csv(&quot;Arsenic.csv&quot;)
-&gt; str(ars)</code></pre>
+<pre class="r"><code>&gt; library(NCStats)</code></pre>
+<pre class="r"><code>&gt; setwd(&quot;C:/stats/&quot;)
+&gt; ars &lt;- read.csv(&quot;Arsenic.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; str(ars)</code></pre>
 <pre><code>&#39;data.frame&#39;:   21 obs. of  6 variables:
  $ age     : int  44 45 44 66 37 45 47 38 41 49 ...
  $ sex     : Factor w/ 2 levels &quot;F&quot;,&quot;M&quot;: 1 1 2 1 2 1 2 1 1 1 ...
@@ -50,7 +50,7 @@ css: "/css/modules.css"
 <pre><code>     n   mean     sd    min     Q1 median     Q3    max 
  21.00  47.57  16.08   8.00  41.00  45.00  53.00  86.00 </code></pre>
 <pre class="r"><code>&gt; hist(~age,data=ars,xlab=&quot;Age (yrs)&quot;)</code></pre>
-<p><img src="UEDAQuant_RHO_files/figure-html/unnamed-chunk-4-1.png" width="336" /></p>
+<p><img src="UEDAQuant_RHO_files/figure-html/unnamed-chunk-7-1.png" width="336" /></p>
 </div>
 <div id="univariate-eda-quantitative-separated-by-groups" class="section level2">
 <h2>Univariate EDA – Quantitative (Separated by Groups)</h2>
@@ -59,7 +59,7 @@ css: "/css/modules.css"
 1   F 13 48.77 19.60   8 41.00     45 63.0  86
 2   M  8 45.62  8.53  36 40.75     44 48.5  62</code></pre>
 <pre class="r"><code>&gt; hist(age~sex,data=ars,xlab=&quot;Age (yrs)&quot;)</code></pre>
-<p><img src="UEDAQuant_RHO_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="UEDAQuant_RHO_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 </div>
 
 

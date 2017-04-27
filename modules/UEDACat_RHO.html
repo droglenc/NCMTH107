@@ -24,10 +24,10 @@ css: "/css/modules.css"
 </div>
 <div id="getting-the-data" class="section level2">
 <h2>Getting the Data</h2>
-<pre class="r"><code>&gt; library(NCStats)
-&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules&quot;)
-&gt; ars &lt;- read.csv(&quot;Arsenic.csv&quot;)
-&gt; str(ars)</code></pre>
+<pre class="r"><code>&gt; library(NCStats)</code></pre>
+<pre class="r"><code>&gt; setwd(&quot;C:/stats/&quot;)
+&gt; ars &lt;- read.csv(&quot;Arsenic.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; str(ars)</code></pre>
 <pre><code>&#39;data.frame&#39;:   21 obs. of  6 variables:
  $ age     : int  44 45 44 66 37 45 47 38 41 49 ...
  $ sex     : Factor w/ 2 levels &quot;F&quot;,&quot;M&quot;: 1 1 2 1 2 1 2 1 1 1 ...
@@ -55,7 +55,7 @@ css: "/css/modules.css"
    A    B    C    D    E 
  4.8  4.8  9.5 14.3 66.7 </code></pre>
 <pre class="r"><code>&gt; barplot(tbl.drink,xlab=&quot;Rating of Use for Drinking&quot;,ylab=&quot;Frequency&quot;,col=&quot;gray90&quot;)</code></pre>
-<p><img src="UEDACat_RHO_files/figure-html/unnamed-chunk-4-1.png" width="336" /></p>
+<p><img src="UEDACat_RHO_files/figure-html/unnamed-chunk-7-1.png" width="336" /></p>
 </div>
 
 

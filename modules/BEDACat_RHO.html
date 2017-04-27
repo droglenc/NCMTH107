@@ -25,10 +25,10 @@ css: "/css/modules.css"
 </div>
 <div id="getting-the-data" class="section level2">
 <h2>Getting The Data</h2>
-<pre class="r"><code>&gt; library(NCStats)
-&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules/&quot;)
-&gt; d &lt;- read.csv(&quot;AnimalRights.csv&quot;)
-&gt; str(d)</code></pre>
+<pre class="r"><code>&gt; library(NCStats)</code></pre>
+<pre class="r"><code>&gt; setwd(&quot;C:/stats/&quot;)
+&gt; d &lt;- read.csv(&quot;AnimalRights.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; str(d)</code></pre>
 <pre><code>&#39;data.frame&#39;:   2793 obs. of  2 variables:
  $ year    : int  1993 1993 1993 1993 1993 1993 1993 1993 1993 1993 ...
  $ response: Factor w/ 5 levels &quot;Agree&quot;,&quot;Disagree&quot;,..: 4 4 4 4 4 4 4 4 4 4 ...</code></pre>
@@ -64,7 +64,7 @@ year   StrDis Disagree Neither  Agree StrAgree    Sum
   1994   8.84    15.83    9.74  10.31     2.40  47.12
   Sum   15.86    34.45   20.27  23.63     5.80 100.01</code></pre>
 <pre class="r"><code>&gt; barplot(freq.tbl,beside=TRUE,legend=TRUE,ylab=&quot;Frequency&quot;)</code></pre>
-<p><img src="BEDACat_RHO_files/figure-html/unnamed-chunk-4-1.png" width="336" /></p>
+<p><img src="BEDACat_RHO_files/figure-html/unnamed-chunk-7-1.png" width="336" /></p>
 </div>
 
 

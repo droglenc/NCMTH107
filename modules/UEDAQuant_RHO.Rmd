@@ -23,10 +23,9 @@ setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules")
 source("../rhelpers/rhelpers.R")
 modHTML("UEDAQuant_RHO")
 ```
-
-```{r echo=FALSE, results='hide', message=FALSE}
-fnm <- "UEDAQuant_RHO"
+```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
 source("../rhelpers/knitr_setup.R")
+purl2("UEDAQuant_RHO.Rmd",moreItems=c("Renders","source","modHTML","github.com","NCMTH107"))
 ```
 
 ----
@@ -46,10 +45,17 @@ The data are recorded in [Arsenic.csv](https://github.com/droglenc/NCData/raw/ma
 ----
 
 ## Getting the Data
+```{r echo=FALSE}
+ars <- read.csv("https://github.com/droglenc/NCData/raw/master/Arsenic.csv")
+```
 ```{r message=FALSE, warning=FALSE}
 library(NCStats)
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules")
+```
+```{r eval=FALSE}
+setwd("C:/stats/")
 ars <- read.csv("Arsenic.csv")
+```
+```{r}
 str(ars)
 headtail(ars)
 ```
@@ -64,8 +70,4 @@ hist(~age,data=ars,xlab="Age (yrs)")
 ```{r fig.width=2*figsz, fig.height=figsz, par2=TRUE}
 Summarize(age~sex,data=ars,digits=2)
 hist(age~sex,data=ars,xlab="Age (yrs)")
-```
-
-```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
-purl2(paste0(fnm,".Rmd"))
 ```

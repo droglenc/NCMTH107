@@ -29,10 +29,10 @@ css: /css/modules.css
 </div>
 <div id="getting-the-data" class="section level2">
 <h2>Getting the Data</h2>
-<pre class="r"><code>&gt; library(NCStats)
-&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules/&quot;)
-&gt; d &lt;- read.csv(&quot;AvianPecMusc.csv&quot;)
-&gt; str(d)</code></pre>
+<pre class="r"><code>&gt; library(NCStats)</code></pre>
+<pre class="r"><code>&gt; setwd(&quot;C:/stats/&quot;)
+&gt; d &lt;- read.csv(&quot;AvianPecMusc.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; str(d)</code></pre>
 <pre><code>&#39;data.frame&#39;:   22 obs. of  2 variables:
  $ thickness: num  7.7 7.3 7.7 8.7 7.8 7.5 7.5 8.2 8.3 8.4 ...
  $ mass     : num  6.26 7.98 8.96 8.6 11.42 ...</code></pre>
@@ -54,7 +54,7 @@ css: /css/modules.css
 <pre class="r"><code>&gt; rSquared(lm.mt)</code></pre>
 <pre><code>[1] 0.8056638</code></pre>
 <pre class="r"><code>&gt; fitPlot(lm.mt,ylab=&quot;Pectoral Muscle Mass (g)&quot;,xlab=&quot;Pectoral Muscle Thickness (mm)&quot;)</code></pre>
-<p><img src="LinearRegression_RHO_files/figure-html/unnamed-chunk-4-1.png" width="336" /></p>
+<p><img src="LinearRegression_RHO_files/figure-html/unnamed-chunk-7-1.png" width="336" /></p>
 </div>
 <div id="using-the-regression" class="section level2">
 <h2>Using the Regression</h2>

@@ -26,7 +26,7 @@ modHTML("BEDACat_RHO")
 
 ```{r echo=FALSE, results='hide', message='FALSE', warnings=FALSE}
 source("../rhelpers/knitr_setup.R")
-purl2("BEDACat_RHO.Rmd")
+purl2("BEDACat_RHO.Rmd",moreItems=c("Renders","source","modHTML","github.com","NCMTH107"))
 ```
 
 ----
@@ -42,10 +42,17 @@ The [General Social Survey](http://www.norc.org/Research/Projects/Pages/general-
 ----
 
 ## Getting The Data
+```{r echo=FALSE}
+d <- read.csv("https://github.com/droglenc/NCData/raw/master/AnimalRights.csv")
+```
 ```{r message=FALSE, warning=FALSE}
 library(NCStats)
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+```
+```{r eval=FALSE}
+setwd("C:/stats/")
 d <- read.csv("AnimalRights.csv")
+```
+```{r}
 str(d)
 levels(d$response)
 d$response <- factor(d$response,

@@ -1,12 +1,6 @@
-# Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
-source("../rhelpers/rhelpers.R")
-modHTML("ChiSquare_RHO2")
-
-source("../rhelpers/knitr_setup.R")
-
 library(NCStats)
 
+# From already summarized data
 freq <- c(32,10,8,18,18,4)
 ( obs <- matrix(freq,nrow=2,byrow=TRUE) )
 rownames(obs) <- c("Lake Trout","Chinook Salmon")
@@ -22,8 +16,10 @@ percTable(obs,margin=1,digits=1)
 ( obs2 <- obs[,-2] )
 ( chi2 <- chisq.test(obs2,correct=FALSE) )
 
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+# From raw (individual) data
+setwd("C:/stats/")
 ST1 <- read.csv("SciTest1.csv")
+
 str(ST1)
 levels(ST1$degree)
 ST1$fdegree <- factor(ST1$degree,levels=c("lt.hs","hs","jc","bach","grad"))
@@ -39,4 +35,4 @@ ST1.chi$residuals
 percTable(freq.tbl,margin=1,digits=1)
 
 
-# Script created at 2017-04-27 10:00:11
+# Script created at 2017-04-27 10:31:00

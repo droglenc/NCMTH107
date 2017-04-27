@@ -23,10 +23,11 @@ setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules")
 source("../rhelpers/rhelpers.R")
 modHTML("DataProduction_RHO")
 ```
-
-```{r echo=FALSE, results='hide', message=FALSE}
-library(NCStats)
+```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
 source("../rhelpers/knitr_setup.R")
+purl2("DataProduction_RHO.Rmd",moreItems=c("Renders","source","modHTML","github.com","NCMTH107","set.seed"))
+```
+```{r echo=FALSE, results='hide', message=FALSE}
 set.seed(11545345)
 ```
 
@@ -47,9 +48,4 @@ Suppose that you want to randomly (and evenly) allocate 24 individuals to 3 trea
 alloc[1:8]
 alloc[9:16]
 alloc[17:24]
-```
-
-
-```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
-purl2("DataProduction_RHO.Rmd")
 ```

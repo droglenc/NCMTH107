@@ -17,19 +17,14 @@ output:
     fig_height: 3.5
 ---
 ```{r echo=FALSE, eval=FALSE}
-# ==============================================================================
-# BEGIN IGNORE THIS CODE =======================================================
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules")
 source("../rhelpers/rhelpers.R")
 modHTML("DataIntoR_RHO")
 ```
-
 ```{r echo=FALSE, results='hide', message=FALSE, warnings=FALSE}
 source("../rhelpers/knitr_setup.R")
-purl2("DataIntoR_RHO.Rmd")
-# END IGNORE THIS CODE =========================================================
-# ==============================================================================
+purl2("DataIntoR_RHO.Rmd",moreItems=c("Renders","source","modHTML","github.com","NCMTH107"))
 ```
 
 ## Always First Command
@@ -40,9 +35,14 @@ library(NCStats)
 ----
 
 ## Basic Data Frames
-```{r}
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+```{r echo=FALSE}
+dfobj <- read.csv("https://github.com/droglenc/NCData/raw/master/Iris.csv")
+```
+```{r eval=FALSE}
+setwd("C:/stats/")
 dfobj <- read.csv("Iris.csv")
+```
+```{r}
 str(dfobj)
 headtail(dfobj)     # NOT the entire data.frame
 ```

@@ -15,9 +15,9 @@ css: /css/modules.css
 <div id="two-sample-t-test" class="section level2">
 <h2>Two-Sample t-Test</h2>
 <p><a href="http://www.sciencedirect.com/science/article/pii/S0272494499901469">Sholl <em>et al.</em> (2000)</a> performed an experiment to test the effect of sex (male, female) on spatial orientation ability. In one part of their study, the researchers took 30 males and 30 females to an unfamiliar wooded park and asked each individual to point to the south. The absolute pointing error (positive degrees off from due south, <code>abserr</code>) was recorded in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/SexDirection.csv">SexDirection.csv</a> . Test if men have a better sense of direction than women, at the 1% level?</p>
-<pre class="r"><code>&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules/&quot;)
-&gt; sdir &lt;- read.csv(&quot;SexDirection.csv&quot;)
-&gt; str(sdir)</code></pre>
+<pre class="r"><code>&gt; setwd(&quot;C:/stats/&quot;)
+&gt; sdir &lt;- read.csv(&quot;SexDirection.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; str(sdir)</code></pre>
 <pre><code>&#39;data.frame&#39;:   60 obs. of  2 variables:
  $ abserr: int  13 13 38 59 58 8 130 68 23 5 ...
  $ sex   : Factor w/ 2 levels &quot;female&quot;,&quot;male&quot;: 2 2 2 2 2 2 2 2 2 2 ...</code></pre>
@@ -26,7 +26,7 @@ css: /css/modules.css
 1 female 30 55.8 48.3   3 15.8   35.0 88.2 176
 2   male 30 37.6 38.5   3 11.5   22.5 58.8 167</code></pre>
 <pre class="r"><code>&gt; hist(abserr~sex,data=sdir,xlab=&quot;Absolute Pointing Error&quot;)</code></pre>
-<p><img src="2Samplet_RHO_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="2Samplet_RHO_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <pre class="r"><code>&gt; levenesTest(abserr~sex,data=sdir)</code></pre>
 <pre><code>Levene&#39;s Test for Homogeneity of Variance (center = median)
       Df F value Pr(&gt;F)
@@ -42,7 +42,7 @@ sample estimates:
 mean in group female   mean in group male 
                 55.8                 37.6 </code></pre>
 <pre class="r"><code>&gt; plot(t2)</code></pre>
-<p><img src="2Samplet_RHO_files/figure-html/unnamed-chunk-6-1.png" width="336" /></p>
+<p><img src="2Samplet_RHO_files/figure-html/unnamed-chunk-8-1.png" width="336" /></p>
 </div>
 
 

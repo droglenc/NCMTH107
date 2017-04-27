@@ -25,7 +25,7 @@ modHTML("ChiSquare_RHO2")
 ```
 ```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
 source("../rhelpers/knitr_setup.R")
-purl2("ChiSquare_RHO2.Rmd")
+purl2("ChiSquare_RHO2.Rmd",moreItems=c("Renders","source","modHTML","github.com","NCMTH107"))
 ```
 
 ----
@@ -40,6 +40,7 @@ library(NCStats)
 When [Chinook Salmon (*Oncorhynchus tshawytscha*)](https://en.wikipedia.org/wiki/Chinook_salmon) were first introduced to Lake Superior there was concern that they would compete with native [Lake Trout (*Salvelinus namaycush*)](https://en.wikipedia.org/wiki/Lake_trout) for [Cisco (*Coregonus artedi*)](https://en.wikipedia.org/wiki/Coregonus_artedi).  Preliminarily, fisheries biologists classified the dominant food items (Cisco, [Smelt (*Osmerus mordax*](https://en.wikipedia.org/wiki/Rainbow_smelt)) (another type of fish), or [*Mysis*](https://en.wikipedia.org/wiki/Mysis_relicta) (an invertebrate)) in the diets of 50 Lake Trout and 40 Chinook Salmon.  They found that 32, 10, and 8 Lake Trout diets were dominated by Cisco, Smelt, and *Mysis*, respectively.  Similarly, 18, 18, and 4 Chinook Salmon diets were dominated by Cisco, Smelt, and *Mysis*, respectively.  Test (at the 10% level) if the distribution of dominant food items differs at the 5% level?
 
 ```{r}
+# From already summarized data
 freq <- c(32,10,8,18,18,4)
 ( obs <- matrix(freq,nrow=2,byrow=TRUE) )
 rownames(obs) <- c("Lake Trout","Chinook Salmon")
@@ -60,10 +61,15 @@ percTable(obs,margin=1,digits=1)
 
 ### From Raw Data
 The [General Social Survey](http://www.norc.org/Research/Projects/Pages/general-social-survey.aspx) (GSS) is a nationwide survey that has been administered since 1972 to gather data on contemporary American society in an attempt to monitor and explain trends in attitudes, behaviors, and attributes of American society.  One part of that survey asked respondents to state their opinion on how true the following statement was -- "*All radioactivity is made by humans.*"  Respondents were also categorized by their highest educational degree.  The results from this portion of the GSS is in [SciTest1.csv](https://raw.githubusercontent.com/droglenc/NCData/master/SciTest1.csv).  Use these data to determine, at the 5% level, if the distribution of responses to this statement differs among levels of education.
-
-```{r}
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+```{r echo=FALSE}
+ST1 <- read.csv("https://github.com/droglenc/NCData/raw/master/SciTest1.csv")
+```
+```{r eval=FALSE}
+# From raw (individual) data
+setwd("C:/stats/")
 ST1 <- read.csv("SciTest1.csv")
+```
+```{r}
 str(ST1)
 levels(ST1$degree)
 ST1$fdegree <- factor(ST1$degree,levels=c("lt.hs","hs","jc","bach","grad"))

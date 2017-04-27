@@ -15,10 +15,10 @@ css: "/css/modules.css"
 </div>
 <div id="getting-the-data" class="section level2">
 <h2>Getting The Data</h2>
-<pre class="r"><code>&gt; library(NCStats)
-&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules/&quot;)
-&gt; d &lt;- read.csv(&quot;Alligators1.csv&quot;)
-&gt; str(d)</code></pre>
+<pre class="r"><code>&gt; library(NCStats)</code></pre>
+<pre class="r"><code>&gt; setwd(&quot;C:/stats/&quot;)
+&gt; d &lt;- read.csv(&quot;Alligators1.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; str(d)</code></pre>
 <pre><code>&#39;data.frame&#39;:   44 obs. of  3 variables:
  $ type: Factor w/ 2 levels &quot;captive&quot;,&quot;wild&quot;: 2 2 2 2 2 2 2 2 2 2 ...
  $ svl : num  192 175 172 168 147 ...
@@ -35,14 +35,14 @@ css: "/css/modules.css"
 <div id="bivariate-eda-quantitative" class="section level2">
 <h2>Bivariate EDA – Quantitative</h2>
 <pre class="r"><code>&gt; plot(mass~svl,data=d,xlab=&quot;Snout-Vent Length (cm)&quot;,ylab=&quot;Body Mass (KG)&quot;,pch=19)</code></pre>
-<p><img src="BEDAQuant_RHO_files/figure-html/unnamed-chunk-4-1.png" width="336" /></p>
+<p><img src="BEDAQuant_RHO_files/figure-html/unnamed-chunk-7-1.png" width="336" /></p>
 <pre class="r"><code>&gt; corr(mass~svl,data=d)</code></pre>
 <pre><code>[1] 0.9126669</code></pre>
 <pre class="r"><code>&gt; corr(mass~svl,data=d,use=&quot;pairwise.complete.obs&quot;)</code></pre>
 <pre><code>[1] 0.9126669</code></pre>
 <pre class="r"><code>&gt; plot(mass~svl,data=d,xlab=&quot;Snout-Vent Length (cm)&quot;,ylab=&quot;Body Mass (KG)&quot;,pch=19,col=type)
 &gt; legend(&quot;topleft&quot;,levels(d$type),pch=19,col=1:2,bty=&quot;n&quot;)</code></pre>
-<p><img src="BEDAQuant_RHO_files/figure-html/unnamed-chunk-4-2.png" width="336" /></p>
+<p><img src="BEDAQuant_RHO_files/figure-html/unnamed-chunk-7-2.png" width="336" /></p>
 </div>
 
 

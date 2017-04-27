@@ -26,9 +26,9 @@ css: /css/modules.css
 <div id="one-sample-t-test" class="section level2">
 <h2>One-Sample t-Test</h2>
 <p><a href="http://www.jstor.org/stable/1564989?seq=1#page_scan_tab_contents">Blem and Blem (1995)</a> examined the reproductive characteristics of <a href="https://en.wikipedia.org/wiki/Agkistrodon_piscivorus">Eastern Cottonmouth snakes (<em>Agkistrodon piscivorus</em>)</a>, a once widely distributed snake whose numbers have decreased recently due to encroachment by humans. In one part of their study they determined that the population being examined must have an average litter size greater than 5.8 snakes for the population to grow. A random sample of snake litters from this population was taken and the number of snakes in each litter was recorded in in <a href="https://github.com/droglenc/NCData/raw/master/Cottonmouth.csv">Cottonmouth.csv</a>. Test, at a very conservative level, if the average litter size is large enough for this population to grow.</p>
-<pre class="r"><code>&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules/&quot;)
-&gt; cm  &lt;- read.csv(&quot;Cottonmouth.csv&quot;)
-&gt; str(cm)</code></pre>
+<pre class="r"><code>&gt; setwd(&quot;C:/stats/&quot;)
+&gt; cm &lt;- read.csv(&quot;Cottonmouth.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; str(cm)</code></pre>
 <pre><code>&#39;data.frame&#39;:   44 obs. of  1 variable:
  $ num: int  5 12 7 7 6 8 12 9 7 4 ...</code></pre>
 <pre class="r"><code>&gt; # if n was &lt;40 then I would have done -- hist(~num,data=cm,xlab=&quot;Number in Litter&quot;)
@@ -42,7 +42,7 @@ sample estimates:
 mean of x 
  7.363636 </code></pre>
 <pre class="r"><code>&gt; plot(cm.t)</code></pre>
-<p><img src="1Samplet_RHO_files/figure-html/unnamed-chunk-6-1.png" width="336" /></p>
+<p><img src="1Samplet_RHO_files/figure-html/unnamed-chunk-9-1.png" width="336" /></p>
 </div>
 
 

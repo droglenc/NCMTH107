@@ -26,7 +26,7 @@ modHTML("LinearRegression_RHO")
 
 ```{r echo=FALSE, results='hide', message=FALSE, warnings=FALSE}
 source("../rhelpers/knitr_setup.R")
-purl2("LinearRegression_RHO.Rmd")
+purl2("LinearRegression_RHO.Rmd",moreItems=c("Renders","source","modHTML","github.com","NCMTH107"))
 ```
 
 ----
@@ -51,10 +51,17 @@ These two variables are recorded in [AvianPecMusc.csv](https://github.com/drogle
 ----
 
 ## Getting the Data
+```{r echo=FALSE}
+d <- read.csv("https://github.com/droglenc/NCData/raw/master/AvianPecMusc.csv")
+```
 ```{r message=FALSE, warning=FALSE}
 library(NCStats)
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+```
+```{r eval=FALSE}
+setwd("C:/stats/")
 d <- read.csv("AvianPecMusc.csv")
+```
+```{r}
 str(d)
 headtail(d)
 ```

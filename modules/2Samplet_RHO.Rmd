@@ -25,7 +25,7 @@ modHTML("2Samplet_RHO")
 ```
 ```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
 source("../rhelpers/knitr_setup.R")
-purl2("2Samplet_RHO.Rmd")
+purl2("2Samplet_RHO.Rmd",moreItems=c("Renders","source","modHTML","github.com","NCMTH107"))
 ```
 
 ----
@@ -37,12 +37,16 @@ library(NCStats)
 
 ## Two-Sample t-Test
 [Sholl *et al.* (2000)](http://www.sciencedirect.com/science/article/pii/S0272494499901469) performed an experiment to test the effect of sex (male, female) on spatial orientation ability.  In one part of their study, the researchers took 30 males and 30 females to an unfamiliar wooded park and asked each individual to point to the south.  The absolute pointing error (positive degrees off from due south, `abserr`) was recorded in [SexDirection.csv](https://raw.githubusercontent.com/droglenc/NCData/master/SexDirection.csv) .  Test if men have a better sense of direction than women, at the 1% level?
-```{r}
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+```{r echo=FALSE}
+sdir <- read.csv("https://github.com/droglenc/NCData/raw/master/SexDirection.csv")
+```
+```{r eval=FALSE}
+setwd("C:/stats/")
 sdir <- read.csv("SexDirection.csv")
+```
+```{r}
 str(sdir)
 ```
-
 ```{r fig.width=2*figsz, fig.height=figsz, par2=TRUE, fig.show='asis'}
 Summarize(abserr~sex,data=sdir,digits=1)
 hist(abserr~sex,data=sdir,xlab="Absolute Pointing Error")
