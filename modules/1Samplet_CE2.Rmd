@@ -1,0 +1,60 @@
+---
+layout: page
+title: Class Exercise
+subtitle: 1-Sample t-test 2
+author: Derek H. Ogle
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+source("../rhelpers/rhelpers.R")
+modHTML("1Samplet_CE2")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+source("../rhelpers/knitr_setup.R")
+df <- read.csv("FecalColiform.csv")
+```
+
+----
+
+## Fecal Coliform Counts I
+<img src="http://derekogle.com/NCMTH107/modules/zimgs/warning_sign.jpg" alt="Checking out" class="img-right">
+[Fecal coliform](https://en.wikipedia.org/wiki/Fecal_coliform) is a bacterium that originates in the intestines of warm-blooded animals and, thus, may be found in their feces.  Organic matter containing fecal coliform may be washed into lakes and streams in runoff following large rain events.  In lakes and streams, the fecal coliform may lead to the growth of pathogens that are dangerous to the health of humans, or reduce oxygen available to fish and other aquatic life.  Thus, fecal coliform levels are routinely monitored in many waterbodies in the United States.
+
+Students recorded fecal coliform counts (number of colony forming units (CFU) per 100 ml) in water samples from a nearby lake following a rainstorm that resulted in considerable runoff.  The results from their samples are shown below.
+
+```{r echo=FALSE, fig.width=4, fig.height=4}
+Summarize(~CFU,data=df,digits=2)
+hist(~CFU,data=df,xlab="Colony Forming Units per 100 ml")
+```
+
+Test, at the 5% level, if these results differ from the mean of 178 CFU/100ml predicted by a computer model.  Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../Hypothesis_Testing/11-steps.html).
+
+----
+
+## Fecal Coliform Counts II
+The students' data was recorded in [FecalColiform.csv](FecalColiform.csv).  Use the data in this file to confirm your calculations above.
+
+----
+
+## Fecal Coliform Counts II
+Use the data in [FecalColiform.csv](FecalColiform.csv) to determine, at the 10% level, if the mean CFU from this event exceeds the 150 CFU/100ml threshold value that would require closing the lake to swimming.  Again, make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../Hypothesis_Testing/11-steps.html).
+
+----
+
+<div class="text-center">
+<ul class="pagination pagination-lg">
+  <li><a href="1Samplet.html">^</a></li>
+  <li><a href="1Samplet_CE1.html">1</a></li>
+  <li class="active"><a href="#">2</a></li>
+  <li><a href="1Samplet_CE3.html">3</a></li>
+  <li><a href="1Samplet_CE4.html">4</a></li>
+</ul>
+</div>
