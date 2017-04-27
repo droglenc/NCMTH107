@@ -11,14 +11,14 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Sampling_Distributions/")
-source("../../rhelpers/rhelpers.R")
-modHTML("CE1")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+source("../rhelpers/rhelpers.R")
+modHTML("SamplingDist_CE1")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
-source("../../rhelpers/knitr_setup.R")
+source("../rhelpers/knitr_setup.R")
 ```
 
 ----
@@ -50,9 +50,9 @@ Summarize(mns,digits=3)
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="index.html">^</a></li>
+  <li><a href="SamplingDist.html">^</a></li>
   <li class="active"><a href="#">1</a></li>
-  <li><a href="CE2.html">2</a></li>
-  <li><a href="CE3.html">3</a></li>
-  <li><a href="CE4.html">4</a></li>
+  <li><a href="SamplingDist_CE2.html">2</a></li>
+  <li><a href="SamplingDist_CE3.html">3</a></li>
+  <li><a href="SamplingDist_CE4.html">4</a></li>
 </ul>

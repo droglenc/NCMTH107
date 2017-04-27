@@ -8,7 +8,7 @@ css: "/css/modules.css"
 ----
 
 ## Acorn Length
-<img src="../zimgs/acorns2.jpg" alt="Acorns" class="img-right">
+<img src="zimgs/acorns2.jpg" alt="Acorns" class="img-right">
 Suppose that it is known that the distribution of lengths of acorns is slightly right-skewed with a mean of 21 mm and a standard deviation of 6 mm.  For each question below identify (a) the distribution that would be used to answer the question, (b) whether the question can be answered or not, (c) specific characteristics of the required distribution, and (d) if appropriate, the answer to the question.
 
 1. What is the probability that an acorn will have a length greater than 25 mm?
@@ -20,7 +20,7 @@ Suppose that it is known that the distribution of lengths of acorns is slightly 
 ----
 
 ## People in Car
-<img src="../zimgs/carpooling.jpg" alt="car pooling" class="img-right">
+<img src="zimgs/carpooling.jpg" alt="car pooling" class="img-right">
 A study of rush-hour traffic in San Francisco counted the number of people in a car entering a freeway at a suburban interchange.  Suppose that, in the population, this count has a mean of 1.5 people with a standard deviation of 0.75.
 
 1. Do you expect this count to follow a normal distribution?  What are two pieces of evidence to support your answer?
@@ -32,7 +32,7 @@ A study of rush-hour traffic in San Francisco counted the number of people in a 
 ----
 
 ## Plowing Snow
-<img src="../zimgs/snowplow.jpg" alt="Snow plowing" class="img-right">
+<img src="zimgs/snowplow.jpg" alt="Snow plowing" class="img-right">
 Suppose that it is know that the distribution of times spent plowing a single city block on snow days is right-skewed with a mean of 45 seconds and a standard deviation of 28 seconds.
 
 1. What is the probability that in a sample of 5 blocks that the mean is greater than 60 seconds?
@@ -44,10 +44,10 @@ Suppose that it is know that the distribution of times spent plowing a single ci
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="index.html">^</a></li>
-  <li><a href="CE1.html">1</a></li>
-  <li><a href="CE2.html">2</a></li>
-  <li><a href="CE3.html">3</a></li>
+  <li><a href="SamplingDist.html">^</a></li>
+  <li><a href="SamplingDist_CE1.html">1</a></li>
+  <li><a href="SamplingDist_CE2.html">2</a></li>
+  <li><a href="SamplingDist_CE3.html">3</a></li>
   <li class="active"><a href="#">4</a></li>
 </ul>
 </div>
