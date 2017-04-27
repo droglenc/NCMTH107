@@ -30,22 +30,23 @@ As with most areas of study, Statistics requires an understanding of key foundat
 
 ## Preparation for Class
 
-You should [read this](../../book/2_IntroStats.pdf) and watch these videos:
+Use the materials below to answer the questions on [this preparation guide](FoundationalDefns_Prep).
 
-* [IVPPSS](https://vimeo.com/user45324800/ncstats-ivppss){:target="_blank"} [7 mins]  [![PowerPOint](../../img/ppt.png)](PPT.pptx)
+* [Reading](../book/2_IntroStats.pdf)
+* [IVPPSS](https://vimeo.com/user45324800/ncstats-ivppss){:target="_blank"} [7 mins]  [![PowerPoint](../../img/ppt.png)](FoundationalDefns_PPT.pptx)
 * [Variable Types](https://vimeo.com/user45324800/ncstats-vartypes){:target="_blank"} [5 mins]
 
 ----
 
 ## Practice
 
-* In-Class Exercises - [1](CE1) / [2](CE2) / [3](CE3)
-* [Homework Assignment](HW)
+* In-Class Exercises - [1](FoundationalDefns_CE1) / [2](FoundationalDefns_CE2) / [3](FoundationalDefns_CE3)
+* [Homework Assignment](FoundationalDefns_HW)
 
 ----
 
 ## Archived Materials
 
-* [Old Lecture Slides](PPT_old.pptx)
+* [Old Lecture Slides](FoundationalDefns_PPT_old.pptx)
 
 ----
