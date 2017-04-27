@@ -23,7 +23,7 @@ css: "/css/modules.css"
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="index.html">^</a></li>
+  <li><a href="FoundationalDefns.html">^</a></li>
   <li><a href="FoundationalDefns_CE1.html">1</a></li>
   <li class="active"><a href="#">2</a></li>
   <li><a href="FoundationalDefns_CE3.html">3</a></li>

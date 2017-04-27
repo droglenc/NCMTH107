@@ -27,7 +27,7 @@ Two Northland students were interested in whether the average amount of playing 
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="index.html">^</a></li>
+  <li><a href="FoundationalDefns.html">^</a></li>
   <li><a href="FoundationalDefns_CE1.html">1</a></li>
   <li><a href="FoundationalDefns_CE2.html">2</a></li>
   <li class="active"><a href="#">3</a></li>

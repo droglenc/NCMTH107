@@ -27,7 +27,7 @@ A climatologist wanted to determine the average amount of snow for December in D
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="index.html">^</a></li>
+  <li><a href="FoundationalDefns.html">^</a></li>
   <li class="active"><a href="#">1</a></li>
   <li><a href="FoundationalDefns_CE2.html">2</a></li>
   <li><a href="FoundationalDefns_CE3.html">3</a></li>
