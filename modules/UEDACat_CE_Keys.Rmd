@@ -1,0 +1,189 @@
+---
+title: "Answer Key"
+subtitle: "Univariate EDA - Categorical CE"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules")
+source("../rhelpers/rhelpers.R")
+modHTML("UEDACat_CE_Keys")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+source("../rhelpers/knitr_setup.R")
+library(captioner)
+tbls <- captioner(prefix="Table")
+tbls(name="CWDPerc",'Percentage of coarse woody debris sites by level of exposure (low or medium).')
+tbls(name="KidsPerc1",'Percentage of grade school children by their stated goal.')
+tbls(name="KidsPerc2",'Percentage of grade school children by their rank of the impiortance of being good in sports (1=most important).')
+tbls(name="KidsPerc3",'Percentage of grade school children by location of their school.')
+
+figs <- captioner(prefix="Figure")
+figs(name="KidsBar1",'Bar chart of percentage of grade school children by their stated goal.')
+figs(name="KidsBar2",'Bar chart of percentage of grade school children by their rank of the impiortance of being good in sports (1=most important).')
+figs(name="KidsBar3",'Bar chart of percentage of grade school children by location of their school.')
+```
+
+----
+
+## Hand Calculations
+
+*Should be performed by hand to match results below*
+
+<ol>
+<li>Frequency Table</li>
+```{r echo=FALSE}
+d <- read.csv("breeds.csv")
+( tbl <- xtabs(~breed,data=d) )
+```
+
+<li>Percentage Table</li>
+```{r}
+percTable(tbl,digits=1)
+```
+
+<li>Bar Chart</li>
+```{r echo=FALSE, fig.width=6, fig.height=3, par1=TRUE}
+barplot(tbl,xlab="Breed of Dog",ylab="Frequency of Wins")
+```
+
+<li><i>Can not Bring Myself to Make One</i></li>
+</ol>
+
+----
+
+## Bar Chart I
+
+<ol>
+<li>A Northland College student.</li>
+<li>Categorical, nominal.</li>
+<li>Frequency table is below.</li>
+```{r echo=FALSE}
+( d <- c(Love=45,Money=1,Pregnancy=0,Other=4) )
+```
+<li>Percentage table is below.</li>
+```{r echo=FALSE}
+round(d/sum(d)*100,1)
+```
+</ol>
+ 
+----
+
+## Coarse Woody Debris
+
+1. The vast majority (82%) of the sites had medium exposure (`r tbls("CWDPerc",display="cite")`).
+```{r echo=FALSE}
+d <- read.csv("cwd.csv")
+```
+```{r CWDTable, echo=FALSE}
+tbl <- xtabs(~exposure,data=d)
+```
+
+`r tbls("CWDPerc")`
+
+```{r CWDPTable, echo=FALSE, background="white"}
+percTable(tbl,digits=1,addMargins=FALSE)
+```
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+d <- read.csv("cwd.csv")
+<<CWDTable>>
+<<CWDPTable>>
+```
+
+----
+
+## Bar Chart II
+
+1. A Brown Pelican in the Northern Gulf of Mexico.
+1. The habitat used is categorical, nominal.
+1. 62%
+1. 26%
+1. 12% (100-62-26)
+1. Cannot address shape of bar charts.
+
+----
+
+## Popularity in Middle School
+
+<ol>
+<li>The goal for most kids was getting good grades, followed by being popular, and then being good in sports (`r tbls("KidsPerc1",display="cite")`; `r figs("KidsBar1",display="cite")`).</li>
+```{r echo=FALSE}
+d <- read.csv("https://github.com/droglenc/NCData/raw/master/PopularKids.csv")
+```
+```{r KidsTbl1, echo=FALSE}
+tbl1 <- xtabs(~goals,data=d)
+```
+
+`r tbls("KidsPerc1")`
+
+```{r KidsPTbl1, echo=FALSE}
+( ptbl1 <- percTable(tbl1,digits=1,addMargins=FALSE) )
+```
+
+```{r KidsBar1, echo=FALSE, fig.width=4, fig.height=3, par1=TRUE}
+barplot(ptbl1,xlab="Student's Goal",ylab="Percentage")
+```
+
+`r figs("KidsBar1")`
+
+<li>Students feel that "being good in sports" is an important contributor to popularity as approximately 2/3rds of studens ranked this as either "most important" or "somewhat important" to being popular (`r tbls("KidsPerc2",display="cite")`; `r figs("KidsBar2",display="cite")`).</li>
+```{r KidsTbl2, echo=FALSE}
+tbl2 <- xtabs(~sports,data=d)
+```
+
+`r tbls("KidsPerc2")`
+
+```{r KidsPTbl2, echo=FALSE}
+( ptbl2 <- percTable(tbl2,digits=1,addMargins=FALSE) )
+```
+
+```{r KidsBar2, echo=FALSE, fig.width=4, fig.height=3, par1=TRUE}
+barplot(ptbl2,xlab="Rank of Sports in Popularity",ylab="Percentage")
+```
+
+`r figs("KidsBar2")`
+
+<li>Students were nearly evenly distributed among rural, suburban, and urban schools.  Students were likely sampled nearly equally from each type of school (`r tbls("KidsPerc3",display="cite")`; `r figs("KidsBar3",display="cite")`).</li>
+```{r KidsTbl3, echo=FALSE}
+tbl3 <- xtabs(~type,data=d)
+```
+
+`r tbls("KidsPerc3")`
+
+```{r KidsPTbl3, echo=FALSE}
+( ptbl3 <- percTable(tbl3,digits=1,addMargins=FALSE) )
+```
+
+```{r KidsBar3, echo=FALSE, fig.width=4, fig.height=3, par1=TRUE}
+barplot(ptbl3,xlab="School Type",ylab="Percentage")
+```
+
+`r figs("KidsBar3")`
+
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+d <- read.csv("PopularKids.csv")
+<<KidsTbl1>>
+<<KidsPTbl1>>
+<<KidsBar1>>
+<<KidsTbl2>>
+<<KidsPTbl2>>
+<<KidsBar2>>
+<<KidsTbl3>>
+<<KidsPTbl3>>
+<<KidsBar3>>
+```
+
+----

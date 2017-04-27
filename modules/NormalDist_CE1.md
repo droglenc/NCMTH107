@@ -1,0 +1,32 @@
+---
+layout: page
+title: Class Exercise
+subtitle: Normal Distributions 1
+css: "/css/modules.css"
+---
+
+----
+
+## Normal Distribution Characteristics
+
+1. Use `snorm()` from `NCStats` to answer the following questions.  [*Hint: Uncheck 'Show PDF & CDF'*]
+    1. Describe what happens to the normal distribution if &mu; is increased?
+    1. Describe what happens to the normal distribution if &sigma; is increased?
+
+1. For each situation below, (i) identify &mu;, (ii) identify &sigma;, and (iii) draw the normal distribution with an approximately accurate scale on the x-axis.
+    1. X~N(75,10)
+    1. Y~N(5500,600)
+    1. Z~N(0,1)
+
+----
+
+<div class="text-center">
+<ul class="pagination pagination-lg">
+  <li><a href="NormalDist.html">^</a></li>
+  <li class="active"><a href="#">1</a></li>
+  <li><a href="NormalDist_CE2.html">2</a></li>
+  <li><a href="NormalDist_CE3.html">3</a></li>
+  <li><a href="NormalDist_CE4.html">4</a></li>
+  <li><a href="NormalDist_CE5.html">5</a></li>
+  <li><a href="NormalDist_CE6.html">6</a></li>
+</ul>

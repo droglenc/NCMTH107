@@ -1,0 +1,27 @@
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules")
+source("../rhelpers/rhelpers.R")
+modHTML("NormalDist_RHO")
+
+fnm <- "NormalDist_RHO"
+source("../rhelpers/knitr_setup.R")
+
+library(NCStats)
+
+( distrib(22,mean=16,sd=4) )
+
+( distrib(15,mean=16,sd=4,lower.tail=FALSE) )
+
+( ab <- distrib(26,mean=16,sd=4) )
+( a <- distrib(11,mean=16,sd=4) )
+ab-a
+
+( distrib(0.1,mean=16,sd=4,type="q") )
+
+( distrib(0.20,mean=16,sd=4,type="q",lower.tail=FALSE) )
+
+( distrib(0.25,mean=16,sd=4,type="q") )
+( distrib(0.25,mean=16,sd=4,type="q",lower.tail=FALSE) )
+
+
+# Script created at 2017-04-26 23:01:51
