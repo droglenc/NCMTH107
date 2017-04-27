@@ -4,7 +4,7 @@ layout: page
 output:
   word_document: default
   pdf_document: default
-subtitle: MTH107 -- Winter, 2017
+subtitle: MTH107 -- Fall, 2017
 css: /css/syllabus.css
 ---
 
@@ -45,21 +45,20 @@ We will focus on the understanding of statistical concepts and proper interpreta
 <table class="tutors" width="60%">
 <tr><th><a href="http://derekogle.com" target="_blank">Dr. Derek H. Ogle</a><br>Professor of Mathematical Sciences<br> & Natural Resources</th></tr>
 <tr><th><img src="../img/DerekOgle1.jpg"></th></tr>
-<tr><td>10-1130 Section</td></tr>
 <tr style="vertical-align:top"><td>CSE228; 682-1300<br><a href="mailto:dogle@northland.edu">dogle@northland.edu</a><br>
 <a href="https://www.suggestionox.com/r/W17-107" target="_blank">Feedback / Suggestions</a></td></tr>
 <tr style="vertical-align:top"><td>Office Hours:<br>
-Mon, Wed, Fri 900-950; Tues 1200-1300<br>By Appointment</td></tr>
+XXX<br>By Appointment</td></tr>
 </table>
 
 
 ## Tutors
 
 <table class="tutors" width="90%">
-<tr><th width="50%"><img src="../img/Bronte_F16.jpg"></th><th width="50%"><img src="../img/Adam_F16.jpg"></th></tr>
-<tr><th>Bront&euml; Gross</th><th>Adam Gunnelson</th></tr>
-<tr style="vertical-align:top"><td>Bront&euml; is a senior majoring in Writing and Outdoor Education. He has a passion for helping others learn, and is excited to branch out into his first year of stats tutoring.</td><td>Adam is a chemistry major and math minor. He is a bowtie enthusiast, and enjoys helping people with math.</td></tr>
-<tr style="vertical-align:top"><td>Tues 7-9p<br>Thurs 9-11a</td><td>Tues 4-6p<br>Wed 7-9p</td></tr>
+<tr><th width="50%"><img src="../img/XXX_F17.jpg"></th><th width="50%"><img src="../img/Adam_F16.jpg"></th></tr>
+<tr><th>XXX</th><th>Adam Gunnelson</th></tr>
+<tr style="vertical-align:top"><td>XXX</td><td>Adam is a chemistry major and math minor. He is a bowtie enthusiast, and enjoys helping people with math.</td></tr>
+<tr style="vertical-align:top"><td>XXX<br>XXX</td><td>XXX<br>XXX</td></tr>
 </table>
 
 ----
