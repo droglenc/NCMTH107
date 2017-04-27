@@ -1,0 +1,114 @@
+---
+layout: page
+title: Class Exercise
+subtitle: Univariate EDA - Quantitative 2
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="hand-calculations" class="section level2">
+<h2>Hand Calculations</h2>
+<p>Consider the following three data sets for the questions below. Show your work for all questions.</p>
+<pre>
+Data Set 1
+18 28 25 21 16 24
+
+Data Set 2
+4 54 16 85 52 29 24 71 61 60 2
+
+Data Set 3
+93 81 34 5 54 84 54 13 1 35 79 63 97 71
+</pre>
+<ol>
+<li>Hand calculate the mean of Data Set 1.</li>
+<li>Hand calculate the standard deviation of Data Set 1.</li>
+<li>Hand calculate the median of Data Set 2.</li>
+<li>Hand calculate the IQR of Data Set 2.</li>
+<li>Hand calculate the median of Dat Set 3.</li>
+<li>Hand calculate the IQR of Dat Set 3.</li>
+<li>Hand calculate the range of Data Set 3.</li>
+</ol>
+<p>You can check your work with <code>sdCalc()</code> and <code>iqrCalc()</code>. For example,</p>
+<pre class="r"><code>&gt; d &lt;- c(16,23,47,13,18,12)
+&gt; sdCalc(d)</code></pre>
+<pre><code>Demonstration of parts of a std. dev. calculation.
+
+      x diffs diffs.sq
+1    16  -5.5    30.25
+2    23   1.5     2.25
+3    47  25.5   650.25
+4    13  -8.5    72.25
+5    18  -3.5    12.25
+6    12  -9.5    90.25
+sum 129   0.0   857.50
+
+Mean = x-bar = 129 / 6 = 21.5 
+
+Variance = s^2 = 857.5 / 5 = 171.5 
+
+Std. Dev = s = sqrt(171.5) = 13.0958</code></pre>
+<pre class="r"><code>&gt; iqrCalc(d)</code></pre>
+<pre><code>Median (=17) is the average of values in positions 3 and 4.
+  12 13 [16 18] 23 47
+
+Q1 (=13) is the value in position 2 of the lower half.
+  12 [13] 16
+
+Q3 (=23) is the value in position 2 of the upper half.
+  18 [23] 47</code></pre>
+<hr />
+<div class="text-center">
+<ul class="pagination pagination-lg">
+<li>
+<a href="UEDAQuant.html">^</a>
+</li>
+<li>
+<a href="UEDAQuant_CE1.html">1</a>
+</li>
+<li class="active">
+<a href="#">2</a>
+</li>
+<li>
+<a href="UEDAQuant_CE3.html">3</a>
+</li>
+<li>
+<a href="UEDAQuant_CE4.html">4</a>
+</li>
+<li>
+<a href="UEDAQuant_CE5.html">5</a>
+</li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
