@@ -18,12 +18,12 @@ In each situation below, describe what a Type I and a Type II error is and make 
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="index.html">^</a></li>
-  <li><a href="CE1.html">1</a></li>
-  <li><a href="CE2.html">2</a></li>
-  <li><a href="CE3.html">3</a></li>
+  <li><a href="HypTesting.html">^</a></li>
+  <li><a href="HypTesting_CE1.html">1</a></li>
+  <li><a href="HypTesting_CE2.html">2</a></li>
+  <li><a href="HypTesting_CE3.html">3</a></li>
   <li class="active"><a href="#">4</a></li>
-  <li><a href="CE5.html">5</a></li>
+  <li><a href="HypTesting_CE5.html">5</a></li>
 </ul>
 </div>
 

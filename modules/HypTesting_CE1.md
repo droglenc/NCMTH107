@@ -20,11 +20,11 @@ For each research hypothesis or statement below, construct the null and alternat
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="index.html">^</a></li>
+  <li><a href="HypTesting.html">^</a></li>
   <li class="active"><a href="#">1</a></li>
-  <li><a href="CE2.html">2</a></li>
-  <li><a href="CE3.html">3</a></li>
-  <li><a href="CE4.html">4</a></li>
-  <li><a href="CE5.html">5</a></li>
+  <li><a href="HypTesting_CE2.html">2</a></li>
+  <li><a href="HypTesting_CE3.html">3</a></li>
+  <li><a href="HypTesting_CE4.html">4</a></li>
+  <li><a href="HypTesting_CE5.html">5</a></li>
 </ul>
 </div>

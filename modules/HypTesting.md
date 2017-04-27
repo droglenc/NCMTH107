@@ -32,12 +32,14 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
 
 ## Preparation for Class
 
-You should [read **Sections 13.1-13.4**](../../book/13_IntroStats.pdf) and watch these videos:
+Use the materials below to answer the questions on [this preparation guide](HypTesting_Prep1).
 
-* [Forming Statistical Hypothesis](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins; [![PowerPoint](../../img/ppt.png)](PPT-hypotheses.pptx)].
+* [Reading **Sections 13.1-13.4**](../book/13_IntroStats.pdf).
+* [Forming Statistical Hypothesis](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins; [![PowerPoint](../img/ppt.png)](HypTesting_PPT-hypotheses.pptx)].
 
-Following this, you should [read **Section 13.5**](../../book/13_IntroStats.pdf), and watch these videos:
+Use the materials below to answer the questions on [this preparation guide](HypTesting_Prep2).
 
+* [Reading **Section 13.5**](../book/13_IntroStats.pdf).
 * Statistical Error Types -- [here](https://www.youtube.com/v/7mE-K_w1v90?version=3&autoplay=1){:target="_blank"} [8 mins] and [here](https://www.youtube.com/v/OWn3Ko1WYTA?version=3&start=89&end=247&autoplay=1){:target="_blank"} [3 mins]
 * [Computing &beta; &amp; power](https://www.youtube.com/v/BJZpx7Mdde4?version=3&autoplay=1){:target="_blank"} [12 mins].
 
@@ -45,22 +47,22 @@ Following this, you should [read **Section 13.5**](../../book/13_IntroStats.pdf)
 
 ## In-Class
 
-* [First Lecture](PPT-Lecture-1.pptx)
-* [Second Lecture](PPT-Lecture-2.pptx)
+* [First Lecture](HypTesting_PPT-Lecture-1.pptx)
+* [Second Lecture](HypTesting_PPT-Lecture-2.pptx)
 
 ----
 
 ## Practice
 
-* First set of in-class exercises -- [1](CE1)
-* Second set of in-class exercises --  [2](CE2) / [3](CE3)
-* Third set of in-class exercises -- [4](CE4) / [5](CE5)
-* [Homework Assignment](HW)
+* First set of in-class exercises -- [1](HypTesting_CE1)
+* Second set of in-class exercises --  [2](HypTesting_CE2) / [3](HypTesting_CE3)
+* Third set of in-class exercises -- [4](HypTesting_CE4) / [5](HypTesting_CE5)
+* [Homework Assignment](HypTesting_HW)
 
 ----
 
 ## Archived Materials
 
-* [Old Lecture Slides](PPT_old.pptx)
+* [Old Lecture Slides](HypTesting_PPT_old.pptx)
 
 ----
