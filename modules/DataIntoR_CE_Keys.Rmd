@@ -11,14 +11,14 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Getting_Data_Into_R/")
-source("../../rhelpers/rhelpers.R")
-modHTML("CE_Keys")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules")
+source("../rhelpers/rhelpers.R")
+modHTML("DataIntoR_CE_Keys")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
-source("../../rhelpers/knitr_setup.R")
+source("../rhelpers/knitr_setup.R")
 ```
 
 ----
@@ -110,6 +110,5 @@ str(car)
 ( hpsub <- filterD(car,HP>175,HP<200) )
 anor <- filterD(car,Domestic=="Yes"|Cyls==4) # large, didn't show result
 ```
-
 
 ----

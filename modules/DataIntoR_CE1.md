@@ -26,9 +26,9 @@ For each situation below, enter the data into a CSV file, load the data into a d
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="index.html">^</a></li>
+  <li><a href="DataIntoR.html">^</a></li>
   <li class="active"><a href="#">1</a></li>
-  <li><a href="CE2.html">2</a></li>
-  <li><a href="CE3.html">3</a></li>
+  <li><a href="DataIntoR_CE2.html">2</a></li>
+  <li><a href="DataIntoR_CE3.html">3</a></li>
 </ul>
 

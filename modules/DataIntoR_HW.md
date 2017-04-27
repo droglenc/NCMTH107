@@ -8,13 +8,13 @@ css: "/css/modules.css"
 ----
 
 <div class="alert alert-warning">
-<strong>Note:</strong> Your answers to the questions below should follow the <a href="../../resources/hwformat" target="_blank">expectations for homework found here</a> (and <a href="../../resources/FAQ/FAQs/HWFormat_Example.pdf" target="_blank">demonstrated here</a>). Date due on <a href="../../resources/Dates-Current.html" target="_blank">Dates page</a>.
+<strong>Note:</strong> Your answers to the questions below should follow the <a href="../resources/hwformat" target="_blank">expectations for homework found here</a> (and <a href="../resources/FAQ/FAQs/HWFormat_Example.pdf" target="_blank">demonstrated here</a>). Date due on <a href="../resources/Dates-Current.html" target="_blank">Dates page</a>.
 </div>
 
 ----
 
 ## Purple Loosestrife Plants
-<img src="../zimgs/purple-loosestrife.jpg" alt="Purple Loosestrife" class="img-right">
+<img src="zimgs/purple-loosestrife.jpg" alt="Purple Loosestrife" class="img-right">
 
 The data below are the number of Purple Loosestrife (*Lythrum salicaria*) plants found in each of 19 randomly selected plots in the Green Gables Creek Slough.
 

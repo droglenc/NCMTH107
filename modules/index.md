@@ -6,7 +6,7 @@ title: Learning Modules
 1. [Why Statistics is Important](WhyStats)
 1. [Foundational Definitions](FoundationalDefns)
 1. [Data Production](DataProduction)
-1. [Getting Data Into R](Getting_Data_Into_R)
+1. [Getting Data Into R](DataIntoR)
 1. [Univariate EDA - Quantitative](UnivEDA_Quantitative/)
 1. [Univariate EDA - Categorical](UnivEDA_Categorical/)
 1. [Normal Distributions](Normal_Distributions/)

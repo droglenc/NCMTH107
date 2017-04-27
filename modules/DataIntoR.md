@@ -31,8 +31,9 @@ R is fast becoming the primary software for performing statistical analyses in m
 
 ## Preparation for Class
 
-You should [read this](../../book/4_IntroStats.pdf) and watch these videos:
+Use the materials below to answer the questions on [this preparation guide](DataIntoR_Prep).
 
+* [Reading](../book/4_IntroStats.pdf)
 * [What is R?](https://www.youtube.com/v/TR2bHSJ_eck?version=3&autoplay=1){:target="_blank"} [2 mins] 
 * [What's Up with R?](https://www.youtube.com/v/ZwYQPtU2Pa0?version=3&autoplay=1&start=1&end=111){:target="_blank"} [3 mins]
 * [Retrieve Data from Webpage](https://vimeo.com/user45324800/ncstats-preparedatawebpage){:target="_blank"} [3 mins] **OUT-OF-DATE (will be updated in class)**
@@ -44,9 +45,9 @@ You should [read this](../../book/4_IntroStats.pdf) and watch these videos:
 
 ## Practice
 
-* In-Class Demonstration -- [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
-* In-Class Exercise -- [1](CE1) / [2](CE2) (*time permitting* ... [3](CE3))
-* [Homework Assignment](HW)
+* In-Class Demonstration -- [![Web](../img/web.png)](DataIntoR_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](DataIntoR_RHO.pdf) [![MSWord](../img/word.png)](DataIntoR_RHO.docx)  [![R](../img/Rlogo.png)](DataIntoR_RHO.R){:target="_blank"}
+* In-Class Exercise -- [1](DataIntoR_CE1) / [2](DataIntoR_CE2) (*time permitting* ... [3](DataIntoR_CE3))
+* [Homework Assignment](DataIntoR_HW)
 
 ----
 
