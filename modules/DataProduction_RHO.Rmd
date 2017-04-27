@@ -19,14 +19,14 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Data_Production")
-source("../../rhelpers/rhelpers.R")
-modHTML("RHO")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules")
+source("../rhelpers/rhelpers.R")
+modHTML("DataProduction_RHO")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
-source("../../rhelpers/knitr_setup.R")
+source("../rhelpers/knitr_setup.R")
 set.seed(11545345)
 ```
 
@@ -51,5 +51,5 @@ alloc[17:24]
 
 
 ```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
-purl2("RHO.Rmd")
+purl2("DataProduction_RHO.Rmd")
 ```

@@ -22,10 +22,10 @@ Identify the (i) response and (ii) explanatory variable in each of the following
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="index.html">^</a></li>
-  <li><a href="CE1.html">1</a></li>
-  <li><a href="CE2.html">2</a></li>
-  <li><a href="CE3.html">3</a></li>
+  <li><a href="DataProduction.html">^</a></li>
+  <li><a href="DataProduction_CE1.html">1</a></li>
+  <li><a href="DataProduction_CE2.html">2</a></li>
+  <li><a href="DataProduction_CE3.html">3</a></li>
   <li class="active"><a href="#">4</a></li>
-  <li><a href="CE5.html">5</a></li>
+  <li><a href="DataProduction_CE5.html">5</a></li>
 </ul>

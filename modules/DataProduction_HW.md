@@ -8,13 +8,13 @@ css: "/css/modules.css"
 ----
 
 <div class="alert alert-warning">
-<strong>Note:</strong> Your answers to the questions below should follow the <a href="../../resources/hwformat" target="_blank">expectations for homework found here</a> (and <a href="../../resources/FAQ/FAQs/HWFormat_Example.pdf" target="_blank">demonstrated here</a>). Date due on <a href="../../resources/Dates-Current.html" target="_blank">Dates page</a>.
+<strong>Note:</strong> Your answers to the questions below should follow the <a href="../resources/hwformat" target="_blank">expectations for homework found here</a> (and <a href="../resources/FAQ/FAQs/HWFormat_Example.pdf" target="_blank">demonstrated here</a>). Date due on <a href="../resources/Dates-Current.html" target="_blank">Dates page</a>.
 </div>
 
 ----
 
 ## Salt, Sand, and Ice
-<img src="../zimgs/deicer.jpg" alt="De-icer Truck" class="img-right">
+<img src="zimgs/deicer.jpg" alt="De-icer Truck" class="img-right">
 
 A salt and sand mixture is often placed on highways in the winter to aid ice removal. The melting rate of the ice is a function of the percent of salt in the mixture and the ambient air temperature. The melting rate probably levels off after a certain percent of salt and that percent probably differs by temperature. The Department of Transportation (DOT) could save some money if they knew the effect of these two things
 on the melting rate.
@@ -35,7 +35,7 @@ Use this information to answer the questions below.
 ----
 
 ## Fabry Disease
-<img src="../zimgs/Fabry-disease.png" alt="Fabry Disease" class="img-right">
+<img src="zimgs/Fabry-disease.png" alt="Fabry Disease" class="img-right">
 
 The National Institute of Neurological Disorders and Stroke (NINDS) is currently compiling a registry of patients with Fabry disease, an inherited metabolic disorder. The Fabry disease registry is open to any patient who chooses to participate and is an anonymous list. The registry includes information about the patients' health and allows doctors to follow changes in their symptoms and test results over time. It also allows doctors to compare symptoms between patients who are receiving certain therapies with those who are not receiving therapy.
 
