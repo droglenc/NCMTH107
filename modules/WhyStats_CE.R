@@ -1,11 +1,11 @@
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Why_Statistics_is_Important")
-source("../../rhelpers/rhelpers.R")
-fnm <- "CE"
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules")
+source("../rhelpers/rhelpers.R")
+fnm <- "WhyStats_CE"
 modHTML(fnm)
 
-fnm <- "CE"
-source("../../rhelpers/knitr_setup.R")
+fnm <- "WhyStats_CE"
+source("../rhelpers/knitr_setup.R")
 
 library(NCStats)
 ( samA <- srsdf(ABCens90,n=100) )
@@ -28,4 +28,4 @@ hist(~tmp,xlab="Percent Male",w=2)
 abline(v=percTable(xtabs(~sex,data=ABCens90))[["male"]],lwd=2,lty=2)
 
 
-# Script created at 2017-01-03 10:10:07
+# Script created at 2017-04-26 21:50:29
