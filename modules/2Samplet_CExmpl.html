@@ -1,0 +1,61 @@
+---
+layout: page
+title: Class Example
+subtitle: 2-Sample t-test
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="cholesterol-drug-treatments-i" class="section level2">
+<h2>Cholesterol Drug Treatments I</h2>
+<p><img src="http://derekogle.com/NCMTH107/modules/zimgs/cholesterol_blood_test.jpg" alt="Cholesterol test" class="img-right"></p>
+<p><a href="https://en.wikipedia.org/wiki/Low-density_lipoprotein">Low density lipoprotein (LDL)</a> is often called “bad cholesterol” because they can cause lipids to be deposited in artery walls, thus causing arteries to become blocked. Levels of LDL may be lowered with lifestyle changes and pharmaceuticals. Researchers conducted an experiment where 25 men with high cholesterol were randomly assigned one of two drugs (Befizal and Lipanthyl) designed to lower LDL levels. The results from this test are shown below.</p>
+<pre><code>         tx  n  mean    sd   min    Q1 median    Q3  max
+1   Befizal 13 0.278 0.134 -0.02 0.190  0.320 0.370 0.45
+2 Lipanthyl 12 0.356 0.128  0.15 0.268  0.315 0.482 0.53</code></pre>
+<pre><code>Levene&#39;s Test for Homogeneity of Variance (center = median)
+      Df F value Pr(&gt;F)
+group  1  0.0463 0.8315
+      23               </code></pre>
+<p><img src="2Samplet_CExmpl_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Determine, at the 5% level, if there is a difference in the mean decrease in LDL between the two drugs. Make sure to provide explicit answers with your work shown for all <a href="11-steps.html">11 steps of a hypothesis test</a>.</p>
+<hr />
+</div>
+<div id="cholesterol-drug-treatments-ii" class="section level2">
+<h2>Cholesterol Drug Treatments II</h2>
+<p>The results from the previous experiment were recorded in Cholesterol2.csv (<a href="https://raw.githubusercontent.com/droglenc/NCData/master/Cholesterol2.csv">file</a>, <a href="https://github.com/droglenc/NCData/blob/master/Cholesterol2_meta.txt">meta</a>). Use these data (note that you will need to create a variable that contains the reduction in LDL levels for each subject) to confirm your calculations in the previous exercise.</p>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "2-Sample t CExmpl"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="cholesterol-drug-treatments-i" class="section level2">
+<h2>Cholesterol Drug Treatments I</h2>
+<ol>
+<li>
+α = 0.05.
+</li>
+<li>
+H<sub>A</sub>: μ<sub>b</sub>-μ<sub>l</sub> ≠ 0 and H<sub>0</sub>: μ<sub>b</sub>-μ<sub>l</sub> = 0, where μ is the mean decrease in LDL of a male, b is the Befizal drug, and l is the Lipanthyl drug.
+</li>
+<li>
+2-sample t-test because (i) two populations/groups are considered (Befizal and Lipanthyl drugs), (ii) a quantitative variable (decrease in LDL level) was recorded, and (iii) the samples are independent (there is no known connection between all pairs of male subjects in the two drug treatments).
+</li>
+<li>
+An experimental study with random allocation (placement of subjects into the treatments) but no obvious random selection (men did not appear to be randomly selected for the experiment).
+</li>
+<li>
+The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>l</sub> = 13+12 = 25 &gt; 15 and the two sample distributions (shown on the handout) are not obviously strongly skewed (though it is difficult to actually see that because the sample sizes are small), and (iii) the variances appear to be equal (Levene’s p-value = 0.8315 &gt; α).
+</li>
+<li>
+x̄<sub>b</sub>-x̄<sub>h</sub> = 0.278-0.356 = -0.078.
+</li>
+<li>
+t = -1.4855 with 23 df.
+</li>
+<li>
+p-value0.1510.
+</li>
+<li>
+Do not reject H<sub>0</sub> because the p-value &lt; α.
+</li>
+<li>
+It appears that the mean decrease in LDL is not significantly different between the two drug treatments. These data do not provide a significant indication about which drug is more likely to reduce the mean LDL level in men with high cholesterol.
+</li>
+<li>
+I am 95% confident that the mean decrease in LDL is between 0.187 lower and 0.031 higher for men given Befizal as compared to men give Lipanthyl. [<i>Note that the ambiguousness of this statement is consistent with not rejection the H<sub>0</sub>.</i>]
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>xbar1 &lt;- 0.278; s1 &lt;- 0.134; n1 &lt;- 13
+xbar2 &lt;- 0.356; s2 &lt;- 0.128; n2 &lt;- 12
+df &lt;- n1+n2-2
+sp2 &lt;- ((n1-1)*(s1^2)+(n2-1)*(s2^2))/df
+se &lt;- sqrt(sp2*(1/n1+1/n2))
+stat &lt;- xbar1-xbar2
+t &lt;- stat/se
+pv &lt;- 2*distrib(t,distrib=&quot;t&quot;,df=df)
+tstar &lt;- distrib(0.975,type=&quot;q&quot;,distrib=&quot;t&quot;,df=df)
+ci &lt;- stat+c(-1,1)*tstar*se</code></pre>
+</div>
+<div id="cholesterol-drug-treatments-ii" class="section level2">
+<h2>Cholesterol Drug Treatments II</h2>
+<pre class="r"><code>&gt; d &lt;- read.csv(&quot;Cholesterol2.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; d$decrease &lt;- d$before-d$after
+&gt; levenesTest(decrease~tx,data=d)</code></pre>
+<pre><code>Levene&#39;s Test for Homogeneity of Variance (center = median)
+      Df F value Pr(&gt;F)
+group  1  0.0463 0.8315
+      23               </code></pre>
+<pre class="r"><code>&gt; t.test(decrease~tx,data=d,var.equal=TRUE)</code></pre>
+<pre><code> Two Sample t-test with decrease by tx 
+t = -1.4885, df = 23, p-value = 0.1502
+alternative hypothesis: true difference in means is not equal to 0 
+95 percent confidence interval:
+ -0.18673806  0.03045601 
+sample estimates:
+  mean in group Befizal mean in group Lipanthyl 
+              0.2776923               0.3558333 </code></pre>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

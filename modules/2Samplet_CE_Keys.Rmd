@@ -1,0 +1,230 @@
+---
+title: "Answer Key"
+subtitle: "2-Sample t CE"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3
+    fig_width: 3.5
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+source("../rhelpers/rhelpers.R")
+modHTML("2Samplet_CE_Keys")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+source("../rhelpers/knitr_setup.R")
+library(captioner)
+tbls <- captioner(prefix="Table")
+figs <- captioner(prefix="Figure")
+tbls(name="Deliveries","Results from the two-sample t-test for testing that the mean delivery time was lower for the Bosnian than the Persian Gulf war.")
+figs(name="DeliveriesHist","Histograms of the delivery times for military supplies in the Bosnian and Persian Gulf war.")
+```
+
+----
+
+## P-Value Calculations and Decisions
+
+<ol>
+<li>See below.</li>
+```{r 2t1, echo=FALSE, fig.show='hide'}
+xbar1 <- 27.3; xbar2 <- 23.2
+s1 <- 6.6; s2 <- 6.4
+s1sq <- s1^2; s2sq <- s2^2
+n1 <- 12; n2 <- 14
+df <- n1+n2-2
+spsq <- ((n1-1)*s1sq+(n2-1)*s2sq)/df
+se <- sqrt((1/n1+1/n2)*spsq)
+stat <- xbar1-xbar2
+t <- stat/se
+pv <- distrib(t,distrib="t",df=df,lower.tail=FALSE)
+```
+<ol type="a">
+<li>t = `r formatC(t,format="f",digits=3)` with `r df` df (and noting that s<sub>p</sub><sup>2</sup> = `r formatC(spsq,format="f",digits=3)` and SE = `r formatC(se,format="f",digits=3)`).</li>
+<li>p-value=`r formatC(pv,format="f",digits=4)`.</li>
+<li>Reject H<sub>0</sub> because p-value &lt; &alpha;.</li>
+</ol>
+
+<li>See below.</li>
+```{r 2t2, echo=FALSE, fig.show='hide'}
+xbar1 <- 79.5; xbar2 <- 87.5
+s1 <- 8; s2 <- 9
+s1sq <- s1^2; s2sq <- s2^2
+n1 <- n2 <- 15
+df <- n1+n2-2
+spsq <- ((n1-1)*s1sq+(n2-1)*s2sq)/df
+se <- sqrt((1/n1+1/n2)*spsq)
+stat <- xbar1-xbar2
+t <- stat/se
+pv <- distrib(t,distrib="t",df=df)
+```
+<ol type="a">
+<li>t = `r formatC(t,format="f",digits=3)` with `r df` df (and noting that s<sub>p</sub><sup>2</sup> = `r formatC(spsq,format="f",digits=3)` and SE = `r formatC(se,format="f",digits=3)`).</li>
+<li>p-value = `r formatC(pv,format="f",digits=4)`.</li>
+<li>Reject H<sub>0</sub> because p-value &lt; &alpha;.</li>
+</ol>
+
+<li>See below.</li>
+```{r 2t3, echo=FALSE, fig.show='hide'}
+xbar1 <- 307; xbar2 <- 268
+s1 <- 56; s2 <- 64
+s1sq <- s1^2; s2sq <- s2^2
+n1 <- 20; n2 <- 15
+df <- n1+n2-2
+spsq <- ((n1-1)*s1sq+(n2-1)*s2sq)/df
+se <- sqrt((1/n1+1/n2)*spsq)
+stat <- xbar1-xbar2
+t <- stat/se
+pv <- 2*distrib(t,distrib="t",df=df,lower.tail=FALSE)
+```
+<ol type="a">
+<li>t = `r formatC(t,format="f",digits=3)` with `r df` df (and noting that s<sub>p</sub><sup>2</sup> = `r formatC(spsq,format="f",digits=3)` and SE = `r formatC(se,format="f",digits=3)`).</li>
+<li>p-value = `r formatC(pv,format="f",digits=4)`.</li>
+<li>Do Not Reject H<sub>0</sub> because p-value  &gt;  &alpha;.</li>
+</ol>
+
+</ol>
+
+----
+
+## Confidence Interval Calculations
+
+<ol>
+<li>See below.</li>
+<ol type="a">
+```{r echo=FALSE, fig.show="hide"}
+<<2t1>>
+tstar <- distrib(0.9,df=df,type="q",lower.tail=FALSE,distrib="t")
+lcb <- stat+tstar*se
+```
+
+<li>C = 0.90</li>
+<li>Lower bound</li>
+<li>t* = `r formatC(tstar,format="f",digits=3)`.</li>
+<li>`r formatC(lcb,format="f",digits=3)`.</li>
+<li>I am 90% confident that the true difference in population means is greater than `r formatC(lcb,format="f",digits=3)`.  More specifically, I am 90% confident that the true mean for the first group is <i>at least</i> `r formatC(lcb,format="f",digits=3)` greater than the true mean for the second group.</li>
+</ol>
+
+<li>See below.</li>
+<ol type="a">
+```{r echo=FALSE, fig.show="hide"}
+<<2t2>>
+tstar <- distrib(0.95,df=df,type="q",distrib="t")
+ucb <- stat+tstar*se
+```
+
+<li>C = 0.95</li>
+<li>Upper bound</li>
+<li>t* = `r formatC(tstar,format="f",digits=3)`.</li>
+<li>`r formatC(ucb,format="f",digits=3)`.</li>
+<li>I am 95% confident that the true difference in population means is less than `r formatC(ucb,format="f",digits=3)`.  More specifically, I am 90% confident that the true mean for the first group is <i>at least</i> `r formatC(ucb,format="f",digits=3)` less than the true mean for the second group.</li>
+</ol>
+
+
+<li>See below.</li>
+<ol type="a">
+```{r echo=FALSE, fig.show="hide"}
+<<2t3>>
+tstar <- distrib(0.975,df=df,type="q",distrib="t")
+ci <- stat+c(-1,1)*tstar*se
+```
+
+<li>C = 0.95</li>
+<li>interval</li>
+<li>t* = &pm;`r formatC(tstar,format="f",digits=3)`.</li>
+<li>(`r formatC(ci[1],format="f",digits=3)`,`r formatC(ci[2],format="f",digits=3)`).</li>
+<li>I am 95% confident that the true difference in population means is between `r formatC(ci[1],format="f",digits=3)` and  `r formatC(ci[2],format="f",digits=3)`.  [<i>This one is difficult to interpret because the H<sub>0</sub> was not rejected.  However, this shows that the true mean for the first group could be `r formatC(-1*ci[1],format="f",digits=3)` lower or `r formatC(ci[2],format="f",digits=3)` greater than the mean for the second group.</i>]</li>
+</ol>
+
+</ol>
+
+----
+
+## Compost Type and Germination Rates
+```{r GerminationCalc, echo=FALSE, results='hide', fig.show='hide'}
+xbar1 <- 42.67; s1 <- 4.33; n1 <- 18
+xbar2 <- 28.90; s2 <- 3.21; n2 <- 10
+df <- n1+n2-2
+sp2 <- ((n1-1)*(s1^2)+(n2-1)*(s2^2))/df
+se <- sqrt(sp2*(1/n1+1/n2))
+stat <- xbar1-xbar2
+t <- stat/se
+pv <- distrib(t,distrib="t",df=df,lower.tail=FALSE)
+lcb <- stat+distrib(0.9,type="q",distrib="t",df=df,lower.tail=FALSE)*se
+```
+
+<ol>
+<li>&alpha; = 0.10.</li>
+<li>H<sub>A</sub>: &mu;<sub>b</sub>-&mu;<sub>h</sub> &gt; 0 and H<sub>0</sub>: &mu;<sub>b</sub>-&mu;<sub>h</sub> = 0, where &mu; is the mean number of germinated plants, b is the bought compost, and h is the homemade compost.</li>
+<li>2-sample t-test because (i) two populations/groups are considered (bought and homemade compost), (ii) a quantitative variable (number germinated) was recorded, and (iii) the samples are independent (there is no known connection between all pairs of bought and homemade individuals).</li>
+<li>An experimental study with some randomization (placement of containers in the greenhouse).</li>
+<li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>h</sub> = 18+10 = 28 &gt; 15 and the two sample distributions (shown on the handout) are not obviously strongly skewed, and (iii) the variances appear to be equal (Levene's p-value = 0.2414 &gt; &alpha;).</li>
+<li>x&#772;<sub>b</sub>-x&#772;<sub>h</sub> = `r xbar1`-`r xbar2` = `r stat`.</li>
+<li>t = `r formatC(t,format="f",digits=4)` with `r df` df.</li>
+<li>p-value`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
+<li>Reject H<sub>0</sub> because the p-value &lt; &alpha;.</li>
+<li>It appears that the the number of plants that germinate is significantly lower for the homemade than the bought compost.  Thus, the homemade compost "performs" worse than the store bought compost and may lead to increased costs for the greenhouse.</li>
+<li>I am 90% confident that the number of plants that germinated with the bought compost is at least `r formatC(lcb,format="f",digits=1)` plants greater than the number of plants that germinated with the homemade compost.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+<<GerminationCalc>>
+```
+
+
+----
+
+## Delivering Military Supplies
+```{r DeliveriesData, echo=FALSE, results='hide'}
+del <- data.frame(war=rep(c("Gulf","Bosnia"),each=9),
+                  time=c(28.0,20.0,26.5,10.6,9.1,35.2,29.1,41.2,27.5,
+                         15.1,6.4,5.0,11.4,6.5,6.5,3.0,7.0,3.5))
+```
+
+```{r DeliveriesCode, echo=FALSE, results='hide'}
+(del.lev <- levenesTest(time~war,data=del) )
+( del.t <- t.test(time~war,data=del,var.equal=TRUE,alt="less") )
+```
+
+<ol>
+<li>&alpha; = 0.05</li>
+<li>H<sub>A</sub>: &mu;<sub>b</sub>-&mu;<sub>g</sub> &lt; 0 and H<sub>0</sub>: &mu;<sub>b</sub>-&mu;<sub>g</sub> = 0, where &mu; is the mean time to deliver ALL shipments, b is for Bosnia, and g is for Persian Gulf War.</li>
+<li>2-sample t-test because (i) two populations/groups are considered (Bosnia and Persian Gulf), (ii) a quantitative variable (delivery time) was recorded, and (iii) the samples are independent (there is no known connection between all deliveries to the two wars).</li>
+<li>An observational study with clear randomization of the two samples.</li>
+<li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>g</sub> = 9+9 = 18 &gt; 15 and the two sample distributions () are not obviously strongly skewed (also told to assume that the distribution are not strongly skewed), and (iii) the variances appear to be equal (Levene's p-value = `r  kPvalue(del.lev$"Pr(>F)"[1],include.p=FALSE)` &gt; &alpha;).</li>
+```{r DeliveriesHist, fig.width=6, fig.height=3,echo=FALSE}
+hist(time~war,data=del)
+```
+
+`r figs("DeliveriesHist")`
+
+<li>x&#772;<sub>b</sub>-x&#772;<sub>g</sub> = `r formatC(del.t$estimate[1],format="f",digits=2)`-`r formatC(del.t$estimate[2],format="f",digits=2)` = `r formatC(del.t$estimate[1]-del.t$estimate[2],format="f",digits=2)` (`r tbls("Deliveries",display="cite")`).</li>
+
+`r tbls("Deliveries")`
+
+```{r echo=FALSE}
+kHtest(del.t)
+```
+<li>The test statistic is t = `r formatC(del.t$statistic,format="f",digits=3)` with `r formatC(del.t$parameter,format="f",digits=0)` df (`r tbls("Deliveries",display="cite")`).</li>
+<li>The p-value = `r kPvalue(del.t$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("Deliveries",display="cite")`).</li>
+<li>The H<sub>0</sub> is rejected because the p-value &lt; &alpha; (`r tbls("Deliveries",display="cite")`).</li>
+<li>The mean delivery time was significantly lower in Bosnia than in the Persian Gulf War.  Thus, the new "just-in-time" entality for deliveries appears to have resulted in quicker delivery times.</li>
+<li>I am 95% confident that the mean delivery time for Bosnia was more than `r formatC(-1*del.t$conf.int[2],format="f",digits=1)` days faster than for the Persian Gulf War (`r tbls("Deliveries",display="cite")`).</li>
+</ol>
+
+R Appendix
+```{r eval=FALSE, prompt=FALSE}
+del <- read.csv("Deliveries.csv")
+<<DeliveriesHist>>
+<<DeliveriesCode>>
+```
+
+----
