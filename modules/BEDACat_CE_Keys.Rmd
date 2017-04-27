@@ -11,14 +11,14 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/BivEDA_Categorical/")
-source("../../rhelpers/rhelpers.R")
-modHTML("CE_Keys")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+source("../rhelpers/rhelpers.R")
+modHTML("BEDACat_CE_Keys")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
-source("../../rhelpers/knitr_setup.R")
+source("../rhelpers/knitr_setup.R")
 library(captioner)
 tbls <- captioner(prefix="Table")
 tbls(name="TreesRaw",'Raw freuency table for stands by type ("sttype": c="coniferous",mc="mostly coniferous",md="mostly deciduous", and d="deciduous" and years since last fire category (tslf).')

@@ -1,14 +1,12 @@
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/BivEDA_Categorical")
-source("../../rhelpers/rhelpers.R")
-fnm <- "RHO"
-modHTML(fnm)
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+source("../rhelpers/rhelpers.R")
+modHTML("BEDACat_RHO")
 
-fnm <- "RHO"
-source("../../rhelpers/knitr_setup.R")
+source("../rhelpers/knitr_setup.R")
 
 library(NCStats)
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/BivEDA_Categorical")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
 d <- read.csv("AnimalRights.csv")
 str(d)
 levels(d$response)
@@ -23,4 +21,4 @@ percTable(freq.tbl,digits=2)
 barplot(freq.tbl,beside=TRUE,legend=TRUE,ylab="Frequency")
 
 
-# Script created at 2015-11-27 09:20:22
+# Script created at 2017-04-27 07:54:45

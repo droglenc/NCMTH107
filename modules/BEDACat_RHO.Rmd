@@ -19,15 +19,14 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/BivEDA_Categorical")
-source("../../rhelpers/rhelpers.R")
-fnm <- "RHO"
-modHTML(fnm)
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+source("../rhelpers/rhelpers.R")
+modHTML("BEDACat_RHO")
 ```
 
-```{r echo=FALSE, results='hide', message='FALSE'}
-fnm <- "RHO"
-source("../../rhelpers/knitr_setup.R")
+```{r echo=FALSE, results='hide', message='FALSE', warnings=FALSE}
+source("../rhelpers/knitr_setup.R")
+purl2(paste0("BEDACat_RHO",".Rmd"))
 ```
 
 ----
@@ -45,7 +44,7 @@ The [General Social Survey](http://www.norc.org/Research/Projects/Pages/general-
 ## Getting The Data
 ```{r message=FALSE, warning=FALSE}
 library(NCStats)
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/BivEDA_Categorical")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
 d <- read.csv("AnimalRights.csv")
 str(d)
 levels(d$response)
@@ -61,8 +60,4 @@ percTable(freq.tbl,margin=1,digits=2)
 percTable(freq.tbl,margin=2,digits=2)
 percTable(freq.tbl,digits=2)
 barplot(freq.tbl,beside=TRUE,legend=TRUE,ylab="Frequency")
-```
-
-```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
-purl2(paste0(fnm,".Rmd"))
 ```

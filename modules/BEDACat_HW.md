@@ -8,13 +8,13 @@ css: "/css/modules.css"
 ----
 
 <div class="alert alert-warning">
-<strong>Note:</strong> Your answers to the questions below should follow the <a href="../../resources/hwformat" target="_blank">expectations for homework found here</a> (and <a href="../../resources/FAQ/FAQs/HWFormat_Example.pdf" target="_blank">demonstrated here</a>). Date due on <a href="../../resources/Dates-Current.html" target="_blank">Dates page</a>.
+<strong>Note:</strong> Your answers to the questions below should follow the <a href="../resources/hwformat" target="_blank">expectations for homework found here</a> (and <a href="../resources/FAQ/FAQs/HWFormat_Example.pdf" target="_blank">demonstrated here</a>). Date due on <a href="../resources/Dates-Current.html" target="_blank">Dates page</a>.
 </div>
 
 ----
 
 ## Fire Blight Disease
-<img src="../zimgs/fire-blight.jpg" alt="Fire Blight Disease" class="img-right">
+<img src="zimgs/fire-blight.jpg" alt="Fire Blight Disease" class="img-right">
 
 Researchers conducted an experiment on 24 trees subject to a fire blight disease.  Each tree was treated with one of several treatments (`A`=no action (control), `B`=removal of the affected branches, `C`=spraying of foliage with an antibiotic and removal of the affected branches).  Each tree was then recorded according to one of three outcomes (`1`=tree died in the same year, `2`=tree died 2-4 years after, `3`=tree died more than 4 years after the disease was noticed). The data below are the treatment and outcomes for each of the 24 trees. Load these data into RStudio and compute results that can be used to answer the questions below.
 

@@ -24,8 +24,8 @@ Use R to confirm your hand calculations from above.
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="index.html">^</a></li>
+  <li><a href="BEDACat.html">^</a></li>
   <li class="active"><a href="#">1</a></li>
-  <li><a href="CE2.html">2</a></li>
-  <li><a href="CE3.html">3</a></li>
+  <li><a href="BEDACat_CE2.html">2</a></li>
+  <li><a href="BEDACat_CE3.html">3</a></li>
 </ul>

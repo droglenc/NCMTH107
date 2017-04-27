@@ -31,22 +31,23 @@ It is important to understand the relationship between two variables.  With cate
 
 ## Preparation for Class
 
-You should [read this](../../book/9_IntroStats.pdf) and watch these videos:
+Use the materials below to answer the questions on [this preparation guide](BEDACat_Prep).
 
+* [Reading](../book/9_IntroStats.pdf)
 * [Percentage Tables](https://www.youtube.com/v/k8xFH6fCIWs?version=3&autoplay=1){:target="_blank"} [6 mins]
-* [Bivariate EDA (Categorical) in R](https://vimeo.com/user45324800/biveda-cat){:target="_blank"} [8 mins] [![Web](../../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../../img/pdf.png)](RHO.pdf) [![MSWord](../../img/word.png)](RHO.docx)  [![R](../../img/Rlogo.png)](RHO.R){:target="_blank"}
+* [Bivariate EDA (Categorical) in R](https://vimeo.com/user45324800/biveda-cat){:target="_blank"} [8 mins] [![Web](../img/web.png)](BEDACat_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](BEDACat_RHO.pdf) [![MSWord](../img/word.png)](BEDACat_RHO.docx)  [![R](../img/Rlogo.png)](BEDACat_RHO.R){:target="_blank"}
 
 ----
 
 ## Practice
 
-* In-Class Exercises -- [1](CE1.html) / [2](CE2.html) (*time permitting* ... [3](CE3.html))
-* [Homework Assignment](HW)
+* In-Class Exercises -- [1](BEDACat_CE1.html) / [2](BEDACat_CE2.html) (*time permitting* ... [3](BEDACat_CE3.html))
+* [Homework Assignment](BEDACat_HW)
 
 ----
 
 ## Archived Materials
 
-* [Old Lecture Slides](PPT_old.pptx)
+* [Old Lecture Slides](BEDACat_PPT_old.pptx)
 
 ----
