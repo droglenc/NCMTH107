@@ -19,15 +19,13 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/1_Sample_Z")
-source("../../rhelpers/rhelpers.R")
-fnm <- "RHO"
-modHTML(fnm)
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+source("../rhelpers/rhelpers.R")
+modHTML("1SampleZ_RHO")
 ```
-
-```{r echo=FALSE, results='hide', message='FALSE'}
-fnm <- "RHO"
-source("../../rhelpers/knitr_setup.R")
+```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
+source("../rhelpers/knitr_setup.R")
+purl2("1SampleZ_RHO.Rmd",moreItems=c("Renders","source","modHTML","github.com","NCMTH107"))
 ```
 
 ----
@@ -40,10 +38,17 @@ The results of the study are in [SSHA.csv](https://github.com/droglenc/NCData/ra
 ----
 
 ## Getting the Data
+```{r echo=FALSE}
+d <- read.csv("https://github.com/droglenc/NCData/raw/master/SSHA.csv")
+```
 ```{r message=FALSE, warning=FALSE}
 library(NCStats)
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/1_Sample_Z")
+```
+```{r eval=FALSE}
+setwd("C:/stats/")
 d <- read.csv("SSHA.csv")
+```
+```{r}
 str(d)
 ```
 
@@ -57,8 +62,4 @@ hist(~score,data=d,xlab="SSHA Score")
 ```{r par1a=TRUE}
 ( z1 <- z.test(d$score,sd=20,mu=110,alt="greater",conf.level=0.95) )
 plot(z1)
-```
-
-```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
-purl2(paste0(fnm,".Rmd"))
 ```

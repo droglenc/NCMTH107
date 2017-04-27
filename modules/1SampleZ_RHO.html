@@ -16,20 +16,20 @@ css: "/css/modules.css"
 </div>
 <div id="getting-the-data" class="section level2">
 <h2>Getting the Data</h2>
-<pre class="r"><code>&gt; library(NCStats)
-&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules/1_Sample_Z&quot;)
-&gt; d &lt;- read.csv(&quot;SSHA.csv&quot;)
-&gt; str(d)</code></pre>
+<pre class="r"><code>&gt; library(NCStats)</code></pre>
+<pre class="r"><code>&gt; setwd(&quot;C:/stats/&quot;)
+&gt; d &lt;- read.csv(&quot;SSHA.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; str(d)</code></pre>
 <pre><code>&#39;data.frame&#39;:   40 obs. of  1 variable:
  $ score: int  113 131 108 72 124 129 125 100 141 117 ...</code></pre>
 </div>
 <div id="quick-eda" class="section level2">
 <h2>Quick EDA</h2>
 <pre class="r"><code>&gt; Summarize(~score,data=d,digits=1)</code></pre>
-<pre><code>       n   nvalid     mean       sd      min       Q1   median       Q3      max percZero 
-    40.0     40.0    121.1     24.8     72.0    106.8    125.0    138.0    180.0      0.0 </code></pre>
+<pre><code>     n   mean     sd    min     Q1 median     Q3    max 
+  40.0  121.1   24.8   72.0  106.8  125.0  138.0  180.0 </code></pre>
 <pre class="r"><code>&gt; hist(~score,data=d,xlab=&quot;SSHA Score&quot;)</code></pre>
-<p><img src="RHO_files/figure-html/unnamed-chunk-4-1.png" title="" alt="" width="336" /></p>
+<p><img src="1SampleZ_RHO_files/figure-html/unnamed-chunk-7-1.png" width="336" /></p>
 </div>
 <div id="sample-z-test" class="section level2">
 <h2>1-Sample Z-test</h2>
@@ -44,8 +44,10 @@ sample estimates:
 mean of d$score 
           121.1 </code></pre>
 <pre class="r"><code>&gt; plot(z1)</code></pre>
-<p><img src="RHO_files/figure-html/unnamed-chunk-5-1.png" title="" alt="" width="336" /></p>
+<p><img src="1SampleZ_RHO_files/figure-html/unnamed-chunk-8-1.png" width="336" /></p>
 </div>
+
+
 
 
 </div>
@@ -53,9 +55,13 @@ mean of d$score
 <script>
 
 // add bootstrap table styles to pandoc tables
-$(document).ready(function () {
+function bootstrapStylePandocTables() {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
 });
+
 
 </script>
 

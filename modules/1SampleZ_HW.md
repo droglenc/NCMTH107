@@ -8,13 +8,13 @@ css: "/css/modules.css"
 ----
 
 <div class="alert alert-warning">
-<strong>Note:</strong> Your answers to the questions below should follow the <a href="../../resources/hwformat" target="_blank">expectations for homework found here</a> (and <a href="../../resources/FAQ/FAQs/HWFormat_Example.pdf" target="_blank">demonstrated here</a>). Date due on <a href="../../resources/Dates-Current.html" target="_blank">Dates page</a>.
+<strong>Note:</strong> Your answers to the questions below should follow the <a href="../resources/hwformat" target="_blank">expectations for homework found here</a> (and <a href="../resources/FAQ/FAQs/HWFormat_Example.pdf" target="_blank">demonstrated here</a>). Date due on <a href="../resources/Dates-Current.html" target="_blank">Dates page</a>.
 </div>
 
 ----
 
 ## Elk Density in Banff
-<img src="../zimgs/elk-inBanff.jpg" alt="Elk in Banff" class="img-right">
+<img src="zimgs/elk-inBanff.jpg" alt="Elk in Banff" class="img-right">
 
 [Hebblewhite (2000)](http://www.carnivoreconservation.org/files/thesis/hebblewhite_2000_msc.pdf) recorded the density (number per square km) of Elk (*Cervus elaphus*) in Banff National Park, Alberta, CA from 1986 to 2000. The raw data from his study are shown below. Further assume that it is known from previous studies that the standard deviation of density estimates for all years is 2 elk per square kilometer and the distribution is approximately normal. Use this information to construct and fully interpret a test, at the 10% significance level, of whether the mean density of elk is greater than 8 per square km.
 
@@ -26,7 +26,7 @@ css: "/css/modules.css"
 ----
 
 ## Credit Card Limits
-<img src="../zimgs/credit-card.jpg" alt="Credit Cards" class="img-right">
+<img src="zimgs/credit-card.jpg" alt="Credit Cards" class="img-right">
 
 Credit card companies use a regression model (includes such factors as income, employment, credit history) to determine the credit worthiness of a prospective card holder. In the past, the companies used a threshold (cutoff) limit of 630 to receive a card. It is also assumed that the standard deviation of all potential credit card holders is 5. Recent information suggests that delinquencies have been increasing and it is hypothesized that credit card companies will raise the "cutoff score" in response. Examine the following results concerning "cutoff scores" from 44 credit card issuers to determine, at the 10% level, if there is evidence that the "cutoff score" has been increased significantly from 630.
 
@@ -38,7 +38,7 @@ CCards   636.86  636.50  4.42  629  647  633.25 640.00
 ----
 
 ## Counting Plants in Plots
-<img src="../zimgs/counting-plants.jpg" alt="Counting PLants" class="img-right">
+<img src="zimgs/counting-plants.jpg" alt="Counting PLants" class="img-right">
 
 Suppose that a plant ecologist is to examine a very large tract of land that has been subdivided into 1400 plots of 10 m<sup>2</sup> (10 square meters). The researcher wants to determine, with 90% confidence, the mean density of plants per plot for the entire tract of land to within 10 plants per plot. A pilot study indicated that the standard deviation was approximately 50 plants per plot. Determine how many 10 m<sup>2</sup> plots the researcher should examine to reach her stated goals.
 

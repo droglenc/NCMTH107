@@ -13,14 +13,14 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/1_Sample_Z/")
-source("../../rhelpers/rhelpers.R")
-modHTML("CE_Keys")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+source("../rhelpers/rhelpers.R")
+modHTML("1SampleZ_CE_Keys")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
-source("../../rhelpers/knitr_setup.R")
+source("../rhelpers/knitr_setup.R")
 library(captioner)
 tbls <- captioner(prefix="Table")
 tbls(name="HawksRidge","Results from the one-sample z-test for testing that the mean number of hawks observed at Hawk Ridge, MN is greater than 50000 per year.")
