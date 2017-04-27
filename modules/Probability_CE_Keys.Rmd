@@ -1,0 +1,64 @@
+---
+title: "Answer Key"
+subtitle: "Probability CE"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+source("../rhelpers/rhelpers.R")
+modHTML("Probability_CE_Keys")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+source("../rhelpers/knitr_setup.R")
+```
+
+----
+
+## Banking Example
+
+1. `r formatC(distrib(800,mean=550,sd=150,lower.tail=FALSE),format="f",digits=4)` 
+1. `r formatC(distrib(200,mean=550,sd=150),format="f",digits=4)` 
+1. `r formatC(distrib(600,mean=550,sd=150),format="f",digits=4)` 
+1. `r formatC(distrib(850,mean=550,sd=150)-distrib(700,mean=550,sd=150),format="f",digits=4)` 
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+distrib(800,mean=550,sd=150,lower.tail=FALSE)
+distrib(200,mean=550,sd=150)
+distrib(600,mean=550,sd=150)
+ab <- distrib(850,mean=550,sd=150)
+a <- distrib(700,mean=550,sd=150)
+ab-a
+```
+
+
+----
+
+## Acorn Production Example
+
+1. `r formatC(distrib(1000,mean=875,sd=220,lower.tail=FALSE),format="f",digits=4)` 
+1. `r formatC(distrib(1000,mean=875,sd=220)-distrib(700,mean=875,sd=220),format="f",digits=4)` 
+1. `r formatC(distrib(5000/4,mean=875,sd=220),format="f",digits=4)` 
+1. An Oak tree must be randomly selected.
+1. `r formatC(distrib(0.20,mean=875,sd=220,type="q"),format="f",digits=0)` acorns.
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+distrib(1000,mean=875,sd=220,lower.tail=FALSE)
+ab <- distrib(1000,mean=875,sd=220)
+a <- distrib(700,mean=875,sd=220)
+ab-a
+distrib(5000/4,mean=875,sd=220)
+distrib(0.20,mean=875,sd=220,type="q")
+```
+
+----
