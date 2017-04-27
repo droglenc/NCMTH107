@@ -19,15 +19,13 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Goodness_of_Fit/")
-source("../../rhelpers/rhelpers.R")
-fnm <- "RHO"
-modHTML(fnm)
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+source("../rhelpers/rhelpers.R")
+modHTML("GOFTest_RHO")
 ```
-
-```{r echo=FALSE, results='hide', message='FALSE'}
-fnm <- "RHO"
-source("../../rhelpers/knitr_setup.R")
+```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
+source("../rhelpers/knitr_setup.R")
+purl2("GOFTest_RHO.Rmd")
 ```
 
 ----
@@ -48,8 +46,4 @@ chi1$expected
 chi1$observed
 chi1
 gofCI(chi1,digits=3)
-```
-
-```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
-purl2(paste0(fnm,".Rmd"))
 ```

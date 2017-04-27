@@ -21,4 +21,4 @@ title: Learning Modules
 1. [1-Sample t-Test](1Samplet)
 1. [2-Sample t-Test](2Samplet)
 1. [Chi-Square Test](ChiSquare)
-1. [Goodness-of-Fit Test](GoodnessFit)
+1. [Goodness-of-Fit Test](GOFTest)

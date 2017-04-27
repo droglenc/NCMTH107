@@ -1,11 +1,9 @@
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Goodness_of_Fit/")
-source("../../rhelpers/rhelpers.R")
-fnm <- "RHO"
-modHTML(fnm)
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+source("../rhelpers/rhelpers.R")
+modHTML("GOFTest_RHO")
 
-fnm <- "RHO"
-source("../../rhelpers/knitr_setup.R")
+source("../rhelpers/knitr_setup.R")
 
 library(NCStats)
 
@@ -18,4 +16,4 @@ chi1
 gofCI(chi1,digits=3)
 
 
-# Script created at 2016-04-11 10:54:59
+# Script created at 2017-04-27 10:10:27

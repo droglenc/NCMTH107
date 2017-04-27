@@ -13,14 +13,14 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Goodness_of_Fit/")
-source("../../rhelpers/rhelpers.R")
-modHTML("CE_Keys")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+source("../rhelpers/rhelpers.R")
+modHTML("GOFTest_CE_Keys")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
-source("../../rhelpers/knitr_setup.R")
+source("../rhelpers/knitr_setup.R")
 library(captioner)
 tbls <- captioner(prefix="Table")
 
