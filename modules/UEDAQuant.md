@@ -35,19 +35,19 @@ It is important to understand the distribution of individuals for a single varia
 Use the materials below to answer the questions on [this preparation guide](UEDAQuant_Prep).
 
 * [Reading](../book/5_IntroStats.pdf)
-* [Construct a Histogram](https://www.youtube.com/v/sC7gjg9g3JU?version=3&autoplay=1){:target="_blank"} [13 mins]
-* [Describe Shape](https://www.youtube.com/v/H9ITfdaX2ZQ?version=3&autoplay=1){:target="_blank"} [13 mins]
-* Calculate Median -- [A](https://www.youtube.com/v/0SYsi38XucI?version=3&autoplay=1){:target="_blank"} [2 mins], [B](https://www.youtube.com/v/hTYTaOaQUcw?version=3&autoplay=1){:target="_blank"} [5 mins], **or** [C](https://www.youtube.com/v/9a8M_KfclBE?version=3&autoplay=1){:target="_blank"} [3 mins]
-* Calculate Standard Deviation -- [A](https://www.youtube.com/v/qqOyy_NjflU?version=3&autoplay=1){:target="_blank"} [5 mins] **or** [B](https://www.youtube.com/v/atS4wX8I9H0?version=3&autoplay=1){:target="_blank"} [13 mins]
-* Calculate IQR -- [A](https://www.youtube.com/v/R6VDj7pEG30?version=3&autoplay=1){:target="_blank"} [3 mins] **or** [B](https://www.youtube.com/v/F3WcEAW-M80?version=3&start=366&autoplay=1){:target="_blank"} [9 mins]
-* [Univariate EDA (Quantitative) in R](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins]  [![Web](../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](RHO.pdf) [![MSWord](../img/word.png)](RHO.docx)  [![R](../img/Rlogo.png)](RHO.R){:target="_blank"}
-* [Interpreting a Univariate EDA (Quantitative)](https://vimeo.com/user45324800/ueda-quantsum){:target="_blank"} [11 mins]  [![PowerPoint](../img/ppt.png)](PPT.pptx)
+* Video: [Construct a Histogram](https://www.youtube.com/v/sC7gjg9g3JU?version=3&autoplay=1){:target="_blank"} [13 mins]
+* Video: [Describe Shape](https://www.youtube.com/v/H9ITfdaX2ZQ?version=3&autoplay=1){:target="_blank"} [13 mins]
+* Video: Calculate Median -- [A](https://www.youtube.com/v/0SYsi38XucI?version=3&autoplay=1){:target="_blank"} [2 mins], [B](https://www.youtube.com/v/hTYTaOaQUcw?version=3&autoplay=1){:target="_blank"} [5 mins], **or** [C](https://www.youtube.com/v/9a8M_KfclBE?version=3&autoplay=1){:target="_blank"} [3 mins]
+* Video: Calculate Standard Deviation -- [A](https://www.youtube.com/v/qqOyy_NjflU?version=3&autoplay=1){:target="_blank"} [5 mins] **or** [B](https://www.youtube.com/v/atS4wX8I9H0?version=3&autoplay=1){:target="_blank"} [13 mins]
+* Video: Calculate IQR -- [A](https://www.youtube.com/v/R6VDj7pEG30?version=3&autoplay=1){:target="_blank"} [3 mins] **or** [B](https://www.youtube.com/v/F3WcEAW-M80?version=3&start=366&autoplay=1){:target="_blank"} [9 mins]
+* Video: [Univariate EDA (Quantitative) in R](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins]  [![Web](../img/web.png)](RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](RHO.pdf) [![MSWord](../img/word.png)](RHO.docx)  [![R](../img/Rlogo.png)](RHO.R){:target="_blank"}
+* Video: [Interpreting a Univariate EDA (Quantitative)](https://vimeo.com/user45324800/ueda-quantsum){:target="_blank"} [11 mins]  [![PowerPoint](../img/ppt.png)](PPT.pptx)
 
 ----
 
 ## Practice
 
-* In-Class Exercises -- [1](UEDAQuant_CE1) / [2](UEDAQuant_CE2) / [3](UEDAQuant_CE3) / [4](UEDAQuant_CE4) (*time permitting* ... [5](UEDAQuant_CE5))
+* Class Exercises: [1](UEDAQuant_CE1) / [2](UEDAQuant_CE2) / [3](UEDAQuant_CE3) / [4](UEDAQuant_CE4) (*time permitting* ... [5](UEDAQuant_CE5))
 * [Homework Assignment](UEDAQuant_HW)
 
 ----

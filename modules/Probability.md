@@ -39,7 +39,7 @@ Use the materials below to answer the questions on [this preparation guide](Prob
 
 ## Practice
 
-* In-Class Exercises -- [1](Probability_CE1) / [2](Probability_CE2)
+* Class Exercises: [1](Probability_CE1) / [2](Probability_CE2)
 * [Homework Assignment](Probability_HW)
 
 ----

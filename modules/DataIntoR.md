@@ -34,19 +34,19 @@ R is fast becoming the primary software for performing statistical analyses in m
 Use the materials below to answer the questions on [this preparation guide](DataIntoR_Prep).
 
 * [Reading](../book/4_IntroStats.pdf)
-* [What is R?](https://www.youtube.com/v/TR2bHSJ_eck?version=3&autoplay=1){:target="_blank"} [2 mins] 
-* [What's Up with R?](https://www.youtube.com/v/ZwYQPtU2Pa0?version=3&autoplay=1&start=1&end=111){:target="_blank"} [3 mins]
-* [Retrieve Data from Webpage](https://vimeo.com/user45324800/ncstats-preparedatawebpage){:target="_blank"} [3 mins] **OUT-OF-DATE (will be updated in class)**
-* [Enter Your Own Data (with Excel)](https://vimeo.com/user45324800/ncstats-preparedataexcel){:target="_blank"} [4 mins] or [Enter Your Own Data (without Excel)](https://vimeo.com/user45324800/ncstats-preparedatatextfile){:target="_blank"} [4 mins]
-* [Load Data into RStudio](https://vimeo.com/user45324800/ncstats-loadcsvrstudio){:target="_blank"} [6 mins]
-* [Subset data.frame with filterD](https://vimeo.com/user45324800/filterd){:target="_blank"} [6 mins]
+* Video: [What is R?](https://www.youtube.com/v/TR2bHSJ_eck?version=3&autoplay=1){:target="_blank"} [2 mins] 
+* Video: [What's Up with R?](https://www.youtube.com/v/ZwYQPtU2Pa0?version=3&autoplay=1&start=1&end=111){:target="_blank"} [3 mins]
+* Video: [Retrieve Data from Webpage](https://vimeo.com/user45324800/ncstats-preparedatawebpage){:target="_blank"} [3 mins] **OUT-OF-DATE (will be updated in class)**
+* Video: [Enter Your Own Data (with Excel)](https://vimeo.com/user45324800/ncstats-preparedataexcel){:target="_blank"} [4 mins] or [Enter Your Own Data (without Excel)](https://vimeo.com/user45324800/ncstats-preparedatatextfile){:target="_blank"} [4 mins]
+* Video: [Load Data into RStudio](https://vimeo.com/user45324800/ncstats-loadcsvrstudio){:target="_blank"} [6 mins]
+* Video: [Subset data.frame with filterD](https://vimeo.com/user45324800/filterd){:target="_blank"} [6 mins]
 
 ----
 
 ## Practice
 
 * In-Class Demonstration -- [![Web](../img/web.png)](DataIntoR_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](DataIntoR_RHO.pdf) [![MSWord](../img/word.png)](DataIntoR_RHO.docx)  [![R](../img/Rlogo.png)](DataIntoR_RHO.R){:target="_blank"}
-* In-Class Exercise -- [1](DataIntoR_CE1) / [2](DataIntoR_CE2) (*time permitting* ... [3](DataIntoR_CE3))
+* Class Exercises: [1](DataIntoR_CE1) / [2](DataIntoR_CE2) (*time permitting* ... [3](DataIntoR_CE3))
 * [Homework Assignment](DataIntoR_HW)
 
 ----

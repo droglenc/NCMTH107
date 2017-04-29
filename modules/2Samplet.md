@@ -33,15 +33,15 @@ css: /css/modules.css
 Use the materials below to answer the questions on [this preparation guide](2Samplet_Prep).
 
 * [Reading](../book/17_IntroStats.pdf)
-* [2-Sample t-Test Example](https://vimeo.com/user45324800/t2test-ex1){:target="_blank"} [22 mins] [![PowerPoint](../img/ppt.png)](PPT.pptx)
-* [2-Sample t-Test in R](https://vimeo.com/user45324800/2samplettest){:target="_blank"} [8 mins] [![Web](../img/web.png)](2Samplet_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](2Samplet_RHO.pdf) [![MSWord](../img/word.png)](2Samplet_RHO.docx)  [![R](../img/Rlogo.png)](2Samplet_RHO.R){:target="_blank"}
+* Video: [2-Sample t-Test Example](https://vimeo.com/user45324800/t2test-ex1){:target="_blank"} [22 mins] [![PowerPoint](../img/ppt.png)](PPT.pptx)
+* Video: [2-Sample t-Test in R](https://vimeo.com/user45324800/2samplettest){:target="_blank"} [8 mins] [![Web](../img/web.png)](2Samplet_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](2Samplet_RHO.pdf) [![MSWord](../img/word.png)](2Samplet_RHO.docx)  [![R](../img/Rlogo.png)](2Samplet_RHO.R){:target="_blank"}
 
 ----
 
 ## Practice
 
 * [Class Example](2Samplet_CExmpl)
-* In-Class Exercise -- [1](2Samplet_CE1) / [2](2Samplet_CE2) / (time permitting ... [3](2Samplet_CE3))
+* Class Exercises: [1](2Samplet_CE1) / [2](2Samplet_CE2) / (time permitting ... [3](2Samplet_CE3))
 * [Homework Assignment](2Samplet_HW)
 
 ----

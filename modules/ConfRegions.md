@@ -34,18 +34,18 @@ A major goal of inferential statistics is to estimate the value of a parameter f
 Use the materials below to answer the questions on [this preparation guide](ConfRegions_Prep).
 
 * [Reading](../book/14_IntroStats.pdf)
-* [Introduction to Confidence Intervals](https://www.youtube.com/v/27iSnzss2wM?version=3&autoplay=1){:target="_blank"} [7 mins]
-* [Interpreting Confidence Intervals](https://www.youtube.com/v/JYP6gc--sGQ?version=3&autoplay=1){:target="_blank"} [6 mins]
-* [Constructing a Confidence Interval](https://www.youtube.com/v/KG921rfbTDw?version=3&autoplay=1){:target="_blank"} [10 mins] [**Skip from 7:49 to 8:28.**]
-* [Confidence Interval Overview](https://www.youtube.com/v/FUaXoKdCre4?version=3&autoplay=1){:target="_blank"} [6 mins]
+* Video: [Introduction to Confidence Intervals](https://www.youtube.com/v/27iSnzss2wM?version=3&autoplay=1){:target="_blank"} [7 mins]
+* Video: [Interpreting Confidence Intervals](https://www.youtube.com/v/JYP6gc--sGQ?version=3&autoplay=1){:target="_blank"} [6 mins]
+* Video: [Constructing a Confidence Interval](https://www.youtube.com/v/KG921rfbTDw?version=3&autoplay=1){:target="_blank"} [10 mins] [**Skip from 7:49 to 8:28.**]
+* Video: [Confidence Interval Overview](https://www.youtube.com/v/FUaXoKdCre4?version=3&autoplay=1){:target="_blank"} [6 mins]
 * Constructing Confidence Regions
-* [Compute Sample Size](https://www.youtube.com/v/4-5pFrqJz9w?version=3&autoplay=1){:target="_blank"} [2 mins]
+* Video: [Compute Sample Size](https://www.youtube.com/v/4-5pFrqJz9w?version=3&autoplay=1){:target="_blank"} [2 mins]
 
 ----
 
 ## Practice
 
-* In-Class Exercises -- [1](ConfRegions_CE1) / [2](ConfRegions_CE2) / [3](ConfRegions_CE3) / [4](ConfRegions_CE4).
+* Class Exercises: [1](ConfRegions_CE1) / [2](ConfRegions_CE2) / [3](ConfRegions_CE3) / [4](ConfRegions_CE4).
 * [Homework Assignment](ConfRegions_HW)
 
 ----

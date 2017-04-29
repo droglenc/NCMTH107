@@ -35,17 +35,17 @@ It is important to understand the distribution of individuals for a single varia
 Use the materials below to answer the questions on [this preparation guide](UEDACat_Prep).
 
 * [Reading](../book/6_IntroStats.pdf)
-* [Frequency Table](https://www.youtube.com/v/LVnzV1ZXdiY?version=3&autoplay=1){:target="_blank"} [2 mins]
-* [Barchart](https://www.youtube.com/v/PM39_HA1qSc?version=3&autoplay=1){:target="_blank"} [3 mins]
-* [Univariate EDA (Categorical) in R](https://vimeo.com/user45324800/ncstats-uedac){:target="_blank"} [4 mins]  [![Web](../img/web.png)](UEDACat_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](UEDACat_RHO.pdf) [![MSWord](../img/word.png)](UEDACat_RHO.docx)  [![R](../img/Rlogo.png)](UEDACat_RHO.R){:target="_blank"}
-* [Interpreting a Univariate EDA (Categorical)](https://vimeo.com/user45324800/ueda-catsum){:target="_blank"} [2 mins]  [![PowerPOint](../img/ppt.png)](UEDACat_PPT.pptx)
-* [Quick Rant about Pie and 3-D Charts](https://vimeo.com/user45324800/ueda-badplotrant){:target="_blank"} [3 mins]  [![PowerPOint](../img/ppt.png)](UEDACat_PPT2.pptx)
+* Video: [Frequency Table](https://www.youtube.com/v/LVnzV1ZXdiY?version=3&autoplay=1){:target="_blank"} [2 mins]
+* Video: [Barchart](https://www.youtube.com/v/PM39_HA1qSc?version=3&autoplay=1){:target="_blank"} [3 mins]
+* Video: [Univariate EDA (Categorical) in R](https://vimeo.com/user45324800/ncstats-uedac){:target="_blank"} [4 mins]  [![Web](../img/web.png)](UEDACat_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](UEDACat_RHO.pdf) [![MSWord](../img/word.png)](UEDACat_RHO.docx)  [![R](../img/Rlogo.png)](UEDACat_RHO.R){:target="_blank"}
+* Video: [Interpreting a Univariate EDA (Categorical)](https://vimeo.com/user45324800/ueda-catsum){:target="_blank"} [2 mins]  [![PowerPOint](../img/ppt.png)](UEDACat_PPT.pptx)
+* Video: [Quick Rant about Pie and 3-D Charts](https://vimeo.com/user45324800/ueda-badplotrant){:target="_blank"} [3 mins]  [![PowerPOint](../img/ppt.png)](UEDACat_PPT2.pptx)
 
 ----
 
 ## Practice
 
-* In-Class Exercises -- [1](UEDACat_CE1) / [2](UEDACat_CE2) / [3](UEDACat_CE3) (*time permitting* ... [4](UEDACat_CE4) / [5](UEDACat_CE5))
+* Class Exercises: [1](UEDACat_CE1) / [2](UEDACat_CE2) / [3](UEDACat_CE3) (*time permitting* ... [4](UEDACat_CE4) / [5](UEDACat_CE5))
 * [Homework Assignment](UEDACat_HW)
 
 ----
