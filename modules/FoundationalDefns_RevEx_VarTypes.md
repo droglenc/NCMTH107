@@ -137,7 +137,7 @@ You can click on each question to see an answer. Click on it again to close the 
         <a data-toggle="collapse" href="#Frogs">What type of variable is the number of legs on frogs collected in Bayfield County?</a>
       </div>
     </div>
-    <div id="" class="panel-collapse collapse">
+    <div id="Frogs" class="panel-collapse collapse">
       <div class="panel-body">Discrete quantitative</div>
     </div>
   </div>
@@ -161,7 +161,7 @@ You can click on each question to see an answer. Click on it again to close the 
         <a data-toggle="collapse" href="#Towns">What type of variable is the number of incorporated towns in a county?</a>
       </div>
     </div>
-    <div id="" class="panel-collapse collapse">
+    <div id="Towns" class="panel-collapse collapse">
       <div class="panel-body">Discrete quantitative</div>
     </div>
   </div>
@@ -179,3 +179,5 @@ You can click on each question to see an answer. Click on it again to close the 
   </div>
 
 </div>
+
+---

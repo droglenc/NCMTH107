@@ -39,7 +39,7 @@ opts_knit$set(child.command='input')
 ## Turn off highlighting and darken box a bit
 opts_chunk$set(highlight=FALSE,background=c(235,235,235)/255)
 ## Make sure that the required packages are loaded
-rqrd <- c("NCStats","FSAdata","gplots","mvtnorm","TeachingDemos","xtable")
+rqrd <- c("NCStats","FSAdata","dplyr","gplots","mvtnorm","TeachingDemos","xtable")
 for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
 @
 
