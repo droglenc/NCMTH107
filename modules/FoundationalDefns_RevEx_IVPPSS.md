@@ -5,6 +5,11 @@ subtitle: Foundational Definitions I
 css: "/css/modules.css"
 ---
 
+Perform a thorough IVPPSS for each situation below. Make sure to explicitly identify an individual, use appropriate specific words for the population and parameter and the sample sample statistic, and use an appropriate summary for the parameter and statistic.
+
+You can click on each question to see an answer. Click on it again to close the answer.
+
+---
 <div class="panel-group">
   <div class="panel panel-default">
     <div class="panel-heading">
