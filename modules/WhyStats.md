@@ -44,7 +44,8 @@ Use the materials below to answer the questions on [this preparation guide](WhyS
 
 ## Practice
 
-* [Class Exercise](WhyStats_CE)
+* [Review Exercise](WhyStats_RevEx)
+* [In-Class Exercise](WhyStats_CE)
 * [Homework Assignment](WhyStats_HW)
 
 ----

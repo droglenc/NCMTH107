@@ -108,7 +108,7 @@ Suppose that the WDNR measured the concentration of lead at each of the 119 loca
   \caption{Lead concentration ($\mu g \cdot m^{-3}$) from 119 sites in Kreher Park superfund site.}
   \begin{center}
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sat Apr 29 22:15:51 2017
+% Sat Apr 29 22:48:29 2017
 \begin{tabular}{rrrrrrrrrrrrrrr}
   \hline
   \hline
@@ -161,11 +161,6 @@ A critical question at this point is whether or not the results from the one sam
 \vspace{18pt}
 The results from two different samples do not perfectly agree because each sample contains different individuals (sites in this example), and no two individuals are exactly alike. The fact that no two individuals are exactly alike is \textbf{natural variability}\index{Natural Variability!Definition}, because of the ``natural'' differences that occur among individuals. The fact that the results from different samples are different is called \textbf{sampling variability}\index{Sampling Variability!Definition}. If there was no natural variability, then there would be no sampling variability. If there was no sampling variability, then the field of statistics would not be needed because a sample (even of one individual) would perfectly represent the larger group of individuals. Thus, understanding variability is at the core of statistical practice. Natural and sampling variability will be revisited continuously throughout this course.
 
-%\defn{Natural Variability}{The fact that no two individuals are exactly alike.}
-
-%\vspace{-12pt}
-%\defn{Sampling Variability}{The fact that the results (i.e., statistics) from different samples are different.}
-
 This may be unsettling! First, it was shown that an entire area or all of the individuals of interest cannot be examined. It was then shown that a sample of individuals from the larger whole did not perfectly represent the larger whole. Furthermore, each sample is unique and will likely lead to a (slightly) different conclusion. These are all real and difficult issues faced by the practicing scientist and considered by the informed consumer. However, the field of statistics is designed to ``deal with'' these issues such that the results from a relatively small subset of measurements can be used to make conclusions about the entire collection of measurements.
 
 \warn{Statistics provides methods for overcoming the difficulties caused by the requirement of sampling and the presence of sampling variability.}
@@ -174,8 +169,6 @@ This may be unsettling! First, it was shown that an entire area or all of the in
 \section{Major Goals or Purposes of Statistics}
 \vspace{-12pt}
 As seen in the Kreher Park example, the field of statistics has two primary purposes. First, statistics provides methods to summarize large quantities of data into concise and informative numerical or graphical summaries. For example, it was easier to discern the general underlying structure of the lead measurements from the statistics and histograms presented in Figures \ref{fig:KreherParkPbhist} and \ref{fig:KreherParkPbhist1}, than it was from the full list of lead measurements in \tabref{tab:KreherParkPbconc}. Second, statistical methods allow inferences to be made about all individuals (i.e., a population) from a few individuals (i.e., a sample).\footnote{Population and sample are defined more completely in \sectref{sect:IVPPSS}.}
-
-%\warn{Statistics, as a field of study, is used to (1) summarize large quantities of data and (2) make inferences about populations from samples.}
 
 
 \section{Definition of Statistics}
@@ -190,29 +183,6 @@ Statistics permeates a wide variety of disciplines. \cite{MooreMcCabe1998} state
 \begin{quote}
 The study and collection of data are important in the work of many professions, so that training in the science of statistics is valuable preparation for a variety of careers. Each month, for example, government statistical offices release the latest numerical information on unemployment and inflation. Economists and financial advisers, as well as policy makers in government and business study these data in order to make informed decisions. Doctors must understand the origin and trustworthiness of the data that appear in medical journals if they are to offer their patients the most effective treatments. Politicians rely on data from polls of public opinion. Business decisions are based on market research data that reveal customer tastes. Farmers study data from field trials of new crop varieties. Engineers gather data on the quality and reliability of manufactured products. Most areas of academic study make use of numbers, and therefore also make use of the methods of statistics.
 \end{quote}
-
-%\defn{Statistics}{The science of collecting, organizing, and interpreting numerical information or data.}
-
-\begin{exsection}
-  \item \label{revex:WhyStatsLakes} There are 1499 lakes in Ashland, Bayfield, and Douglas counties of Wisconsin. However, only 605 of these are named. A random sample of named lakes from this population is extracted with the following R code:
-\vspace{-12pt}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{kframe}
-\begin{verbatim}
-library(NCStats)
-named <- filterD(ABDLakes,named)
-srsdf(named,n=50,vars=c("county","area"))
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-Use this code and some hand (or calculator) calculations to answer the questions below.
-\begin{Enumerate}
-  \item Extract a sample of n=50 lakes with the (last line of) code above. Compare the sizes (area in acres) of the first three lakes. This is an example of what type of variability?
-  \item Compute the proportion of lakes in your sample that are from Bayfield County.
-  \item Extract another sample of n=50 lakes and compute the proportion of lakes that are from Bayfield County? Compare your two proportions. This is an example of what type of variability?
-  \item Of the 605 named lakes in the three counties, 346 are from Bayfield County. Was the proportion of named lakes from Bayfield County in either of your samples equal to the proportion of all named lakes that were from Bayfield County?  Were you surprised?  Why or why not?
-\end{Enumerate}
-\end{exsection}
 
 
 
@@ -261,7 +231,7 @@ A \textbf{population} is ALL individuals of interest.\index{Population} In the S
 
 A \textbf{parameter} is a summary computed from ALL individuals in a population.\index{Parameter!Definition}  The term for the particular summary is usually preceded by the word ``population.'' For example, the population average length of all 1015 fish in Square Lake is 98.06 mm and the population standard deviation is 31.49 mm \tabrefp{tab:SquareLakePopn}.\footnote{We will discuss how to compute and interpret each of these values in later modules.} Parameters are ultimately what is of interest, because interest is in all individuals in the population. However, in practice, parameters cannot be computed because the entire population cannot usually be ``seen.''
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sat Apr 29 22:15:52 2017
+% Sat Apr 29 22:48:30 2017
 \begin{table}[ht]
 \centering
 \caption{Parameters for the total length of ALL 1015 fish in the Square Lake population.} 
@@ -296,7 +266,7 @@ Summaries computed from individuals in a sample are called \textbf{statistics}.\
 Some statistics computed from the sample from Square Lake are shown in \tabref{tab:SquareLakeSample1} and \figref{fig:SquareLakeSample1}. The sample mean of 100.04 mm is the best ``guess'' at the population mean. Not surprisingly from the discussion in \modref{chap:WhyStatsImportant}, the sample mean does not perfectly equal the population mean.
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sat Apr 29 22:15:52 2017
+% Sat Apr 29 22:48:30 2017
 \begin{table}[ht]
 \centering
 \caption{Summary statistics for the total length of a sample of 50 fish from the Square Lake population.} 
@@ -340,7 +310,7 @@ The IVPPSS process is illustrated for the following situation:
 
 In the descriptions above, take note that the individual is very carefully defined (including stating a specific time (2007) and place (eastern Maine)), the population and parameter both use the word ``ALL'', the sample and statistic both use the specific sample size (70 rabbits), and that the parameter and statistics both use the same summary (i.e., proportion of patches that showed evidence of New England cottontails).
 
-In some situations it may be easier to identify the sample first. From this, and through the realization that a sample is always ``of the individuals,'' it may be easier to identify the individual. This process is illustrated in the following example, with the items listed in the order identified rather than in the traditional IVPPSS order.
+In some situations it may be easier to identify the sample first. From this, and realizing that a sample is always ``of the individuals,'' it may be easier to identify the individual. This process is illustrated in the following example, with the items listed in the order identified rather than in the traditional IVPPSS order.
 
 \vspace{-6pt}
 \begin{quote}
@@ -388,7 +358,7 @@ It is instructive to once again (see \modref{chap:WhyStatsImportant}) consider h
 \end{knitrout}
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sat Apr 29 22:15:52 2017
+% Sat Apr 29 22:48:30 2017
 \begin{table}[htbp]
 \centering
 \caption{Summary statistics for the total length in three samples of 50 fish from the Square Lake population.} 
@@ -1416,7 +1386,7 @@ Three primary data sets will be explored throughout this module.
 \end{Itemize}
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sat Apr 29 22:15:53 2017
+% Sat Apr 29 22:48:31 2017
 \begin{table}[ht]
 \centering
 \caption{Amount of water consumed (in ml) in one hour by a sample of mice.} 
@@ -1431,7 +1401,7 @@ Three primary data sets will be explored throughout this module.
 
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sat Apr 29 22:15:53 2017
+% Sat Apr 29 22:48:31 2017
 \begin{table}[ht]
 \centering
 \caption{Richter scale recordings for 15 major earthquakes.} 
@@ -1724,7 +1694,7 @@ The process for finding the median consists of three steps,\footnote{Most comput
 As an example, the ordered mouse water consumption data from \tabref{tab:MouseData} are,
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sat Apr 29 22:15:53 2017
+% Sat Apr 29 22:48:31 2017
 \begin{tabular}{rrrrrrrrrrrrrrr}
   9.4 & 10.0 & 10.6 & 11.1 & 11.4 & 11.5 & 12.0 & 12.5 & 12.6 & 12.9 & 13.0 & 13.5 & 13.6 & 13.7 & 13.7 \\ 
   14.0 & 14.1 & 14.3 & 14.7 & 15.2 & 15.4 & 15.8 & 15.8 & 16.5 & 16.6 & 16.6 & 17.0 & 17.4 & 18.2 & 18.4 \\ 
@@ -2158,7 +2128,7 @@ While most of the previous sections focused on how to construct various graphs a
 Mouse water consumption is approximately symmetric without any outliers present \figrefp{fig:MouseHist2}.  The center of the distribution is best measured by the mean, which is 14.05 ml \tabrefp{tab:MouseStats}.  The range of water consumption by the mice in the sample is from 9.4 to 18.4 ml while the dispersion as measured by the standard deviation is 2.41 ml \tabrefp{tab:MouseStats}.  I chose to use the mean and standard deviation because the data were symmetric with no outliers.  [\textit{NOTE: 1) use of units, 2) reference to the figure and table, 3) labeling of the figure and table, 4) median and IQR were not discussed as I chose to use the mean and standard deviation, 5) the range was not used alone as a measure of dispersion, 6) the explanation for why the mean and standard deviation were used rather than the median and IQR, and 7) R code was provided.}]
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sat Apr 29 22:15:53 2017
+% Sat Apr 29 22:48:31 2017
 \begin{table}[ht]
 \centering
 \caption{Descriptive statistics of mouse water consumption.} 
@@ -2194,7 +2164,7 @@ hist(~consump,data=mc,xlab="Water Consumption (mm)")
 \end{quote}
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sat Apr 29 22:15:53 2017
+% Sat Apr 29 22:48:31 2017
 \begin{tabular}{rrrrrrrrrrrrrrrr}
   30 & 26 & 26 & 26 & 25 & 25 & 25 & 25 & 25 & 24 & 24 & 24 & 24 & 24 & 24 & 23 \\ 
   23 & 23 & 23 & 22 & 22 & 22 & 22 & 21 & 21 & 21 & 20 & 20 & 19 & 19 & 18 & 16 \\ 
@@ -2217,7 +2187,7 @@ The shape of temperatures selected by the dominant crayfish is slightly left-ske
 \end{knitrout}
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sat Apr 29 22:15:53 2017
+% Sat Apr 29 22:48:31 2017
 \begin{table}[ht]
 \centering
 \caption{Descriptive statistics of crayfish temperature preferences.} 
@@ -2522,7 +2492,7 @@ The majority of seeds were either sedge or grass with sedge being more than twic
 \end{knitrout}
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sat Apr 29 22:15:53 2017
+% Sat Apr 29 22:48:31 2017
 \begin{table}[ht]
 \centering
 \caption{Percentage distribution of wetland seeds by type.} 
@@ -3498,7 +3468,7 @@ If the variables had been nominal or if the natural order of levels is alphabeti
 A common method of summarizing bivariate categorical data is to count individuals that have each combination of levels of the two categorical variables.  For example, how many respondents had less than a HS degree and were very willing, how many had a high school degree and were willing, and so on.  The count of the number of individuals of each combination is called a frequency.  A two-way frequency table offers an efficient way to display these frequencies \tabrefp{tab:EnvFreq}.  For example, 40 of the respondents had less than a high school degree and were very willing to take a cut in their standard of living to protect the environment.  Similarly, 542 respondents had a high school degree and were willing to cut their standard of living.
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sat Apr 29 22:15:55 2017
+% Sat Apr 29 22:48:34 2017
 \begin{table}[ht]
 \centering
 \caption{Frequency table of respondent's highest completed degree and willingness to cut their standard of living to protect the environment.} 
@@ -3547,7 +3517,7 @@ Two-way frequency tables are often converted to percentage tables to allow for e
 A \textbf{row-percentage table} is computed by dividing each cell of the frequency table by the total in the same row of the frequency table and multiplying by 100 \tabrefp{tab:EnvRowP}.  For example, the value in the ``vwill'' column and ``ltHS'' row of the row-percentage table is computed by dividing the value in the ``vwill'' column and ``ltHS'' row of the frequency table (i.e., 40; \tabref{tab:EnvFreq}) by the ``Sum'' of the ``ltHS'' row of the frequency table (i.e., 646) and multiplying by 100.
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sat Apr 29 22:15:55 2017
+% Sat Apr 29 22:48:34 2017
 \begin{table}[ht]
 \centering
 \caption{Row-percentage table of respondent's highest completed degree and willingness to cut their standard of living to protect the environment.} 
@@ -3578,7 +3548,7 @@ The value in each cell of a row-percentage table is the percentage OF ALL indivi
 A \textbf{column-percentage table} is computed by dividing each cell of the frequency table by the total in the same column of the frequency table and multiplying by 100 \tabrefp{tab:EnvColP}.  For example, the value in the ``vwill'' column and ``ltHS'' row on the column-percentage table is computed by dividing the value in the ``vwill'' column and ``ltHS'' row of the frequency table (i.e., 40; \tabref{tab:EnvFreq}) by the ``Sum'' of the ``vwill'' column of the frequency table (i.e., 208) and multiplying by 100.
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sat Apr 29 22:15:56 2017
+% Sat Apr 29 22:48:34 2017
 \begin{table}[ht]
 \centering
 \caption{Column-percentage table of respondent's highest completed degree and willingness to cut their standard of living to protect the environment.} 
@@ -3611,7 +3581,7 @@ The value in each cell of a column-percentage table is the percentage OF ALL ind
 Each value in a \textbf{table-percentage table} is computed by dividing each cell of the frequency table by the total number of ALL individuals in the frequency table and multiplying by 100.  For example, the value in the ``vwill'' column and ``ltHS'' row of the table-percentage table \tabrefp{tab:EnvTblP} is computed by dividing the value in the ``vwill'' column and ``ltHS'' row of the frequency table (i.e., 40; \tabref{tab:EnvFreq}) by the ``Sum'' of the entire frequency table (i.e., 3955) and multiplying by 100.
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sat Apr 29 22:15:56 2017
+% Sat Apr 29 22:48:34 2017
 \begin{table}[ht]
 \centering
 \caption{Table-percentage table of respondent's highest completed degree and willingness to cut their standard of living to protect the environment.} 
