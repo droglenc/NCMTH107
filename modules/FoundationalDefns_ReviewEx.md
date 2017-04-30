@@ -13,7 +13,12 @@ css: "/css/modules.css"
       </div>
     </div>
     <div id="IVPPSSDad" class="panel-collapse collapse">
-      <div class="panel-body">Ind= an oak tree on Dad's property; Var= DBH; Popn= ALL oak trees on Dad's property; Param= mean DBH of ALL oak trees on Dad's property; Sample= 75 oak trees Dad measured; Stat= mean DBH of the 75 oak trees Dad measured.</div>
+      <div class="panel-body">Ind= an oak tree on Dad's property;
+      Var= DBH;
+      Popn= ALL oak trees on Dad's property;
+      Param= mean DBH of ALL oak trees on Dad's property;
+      Sample= 75 oak trees Dad measured;
+      Stat= mean DBH of the 75 oak trees Dad measured.</div>
     </div>
   </div>
   <div class="panel panel-default">
