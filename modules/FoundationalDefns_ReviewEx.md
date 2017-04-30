@@ -15,7 +15,8 @@ css: "/css/modules.css"
     <div id="IVPPSSDad" class="panel-collapse collapse">
       <div class="panel-body">Hello</div>
     </div>
-    
+  </div>
+  <div class="panel panel-default">
     <div class="panel-heading">
       <h6 class="panel-title">
         <a data-toggle="collapse" href="#FishStore">I have a friend who wants to start a (fishing) bait store on the West end of Ashland. He wants to determine what proportion of Ashland residents who currently use the East end bait store would use a store in the West end if one existed. He sends out 5000 questionnaires and receives 2378 back from patrons of the East end store. Use this information to perform an IVPPSS.</a>
@@ -23,7 +24,7 @@ css: "/css/modules.css"
     </div>
     <div id="FishStore" class="panel-collapse collapse">
       <div class="panel-body">Hello</div>
-    </div>    
-    
+    </div>
   </div>
+  
 </div>
