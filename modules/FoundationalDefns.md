@@ -40,7 +40,8 @@ Use the materials below to answer the questions on [this preparation guide](Foun
 
 ## Practice
 
-* Class Exercises: [1](FoundationalDefns_CE1) / [2](FoundationalDefns_CE2) / [3](FoundationalDefns_CE3)
+* Review Exercises: [IVPPSS](FoundationalDefns_RevEx_IVPPSS) / [Variable Types](FoundationalDens_RevEx_VarTypes)
+* In-class Exercises: [1](FoundationalDefns_CE1) / [2](FoundationalDefns_CE2) / [3](FoundationalDefns_CE3)
 * [Homework Assignment](FoundationalDefns_HW)
 
 ----
