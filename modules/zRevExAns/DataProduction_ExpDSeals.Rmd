@@ -33,11 +33,14 @@ dseals[1:10]  # domestic <47F
 dseals[11:20] # domestic >47F
 ```
 
-1. The table representing the experiment is shown below.
+This allocation could be visualized in the following table (note that the "X" columns are simply counters for individuals allocated to that treatment).
+```{r}
+data.frame(Treatment=1:4,
+           Seal=rep(c("Wild","Domestic"),each=2),
+           Temperature=rep(c("<47",">47"),2),
+           rbind(wseals[1:10],wseals[11:20],dseals[1:10],dseals[11:20]))
+```
 
-|     | Wild Seals | Domestic Seals |
-|-----|------------|----------------|
-| <47 |            |                |
-| >47 |            |                |
+
 
 ----
