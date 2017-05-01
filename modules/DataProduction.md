@@ -51,7 +51,8 @@ Use the materials below to answer the questions on [this preparation guide](Data
 
 ## Practice
 
-* Class Exercises: [1](DataProduction_CE1) / [2](DataProduction_CE2) /  [3](DataProduction_CE3) / [4](DataProduction_CE4) (*time permitting* ... [5](DataProduction_CE5))
+* Review Exercises: [Experimental Design](DataProduction_RevEx_Experiments) / [Observational Studies](DataProduction_RevEx_Observational)
+* In-Class Exercises: [1](DataProduction_CE1) / [2](DataProduction_CE2) /  [3](DataProduction_CE3) / [4](DataProduction_CE4) (*time permitting* ... [5](DataProduction_CE5))
 * [Homework Assignment](DataProduction_HW)
 
 ----
