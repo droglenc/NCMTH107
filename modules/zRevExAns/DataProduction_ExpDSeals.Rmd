@@ -34,7 +34,7 @@ dseals[11:20] # domestic >47F
 ```
 
 This allocation could be visualized in the following table (note that the "X" columns are simply counters for individuals allocated to that treatment).
-```{r}
+```{r echo=FALSE}
 data.frame(Treatment=1:4,
            Seal=rep(c("Wild","Domestic"),each=2),
            Temperature=rep(c("<47",">47"),2),
