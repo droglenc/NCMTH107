@@ -9,14 +9,15 @@ css: "/css/modules.css"
 
 While studying the foraging ecology of northern elephant seals, marine biologists from California observed the health of wild seals in fenced enclosures of two different water temperatures ($<47^{o}F$ and $>47^{o}F$) and compared these results to the health of domestic seals in two pools, with water temperatures analogous to the wild seals.  The wild seals were allowed to eat what they wanted, but the domestic seals were fed a known diet.  There were 20 wild seals and 20 domestic seals, each of which was randomly allocated to the two water temperatures (enclosures for the wild seals).  Use this information to answer the questions below.
 
-1. Construct a simple diagram to represent this experiment.
 1. What is the response variable?
 1. What are the factors (list all of them)?
 1. How many levels are there (list in same order as factors in answer c)?
 1. How many treatments are there?
 1. How many replicates are there?
+1. Describe how you would allocate individuals to treatments.  Show your R work.
+1. Construct a simple diagram to represent this experiment.
 
-[See answer here](zRevExAns/DataProduction_ExpDSeals)
+[See answer here](zRevExAns/DataProduction_ExpDSeals){:target="_blank"}
 
 ----
 
@@ -29,7 +30,7 @@ An agronomist is interested in the effect of plowing depth (10 cm, 17 cm, and 25
 1. Physically, what is a replicate in this case?
 1. Describe how you would allocate individuals to treatments.  Show your R work.
 
-[See answer here](zRevExAns/DataProduction_Fert1)
+[See answer here](zRevExAns/DataProduction_Fert1){:target="_blank"}
 
 ----
 
@@ -43,7 +44,7 @@ An agronomist is interested in the effect of plowing depth (10 cm, 17 cm, and 25
 1. How many replicates are there?
 1. What is an individual in this experiment?
 
-[See answer here](zRevExAns/DataProduction_ExpDTrans)
+[See answer here](zRevExAns/DataProduction_ExpDTrans){:target="_blank"}
 
 ----
 
@@ -56,7 +57,7 @@ An agronomist is interested in the effect of plowing depth (10 cm, 17 cm, and 25
 1. How many replicates are there?
 1. What is an individual in this experiment?
 
-[See answer here](zRevExAns/DataProduction_ExpDDeerDiet)
+[See answer here](zRevExAns/DataProduction_ExpDDeerDiet){:target="_blank"}
 
 ----
 
@@ -71,7 +72,7 @@ An agronomist is interested in the effect of plowing depth (10 cm, 17 cm, and 25
 1. Identify the individuals for each treatment.  Show your R work.
 1. Use a simple table to diagram the experimental setup.
 
-[See answer here](zRevExAns/DataProduction_ExpDChemRxn)
+[See answer here](zRevExAns/DataProduction_ExpDChemRxn){:target="_blank"}
 
 ----
 
@@ -86,6 +87,6 @@ An agronomist is interested in the effect of plowing depth (10 cm, 17 cm, and 25
 1. Identify the individuals for each treatment.  Show your R work.
 1. Use a simple table to diagram the experimental setup.
 
-[See answer here](zRevExAns/DataProduction_ExpDBP)
+[See answer here](zRevExAns/DataProduction_ExpDBP){:target="_blank"}
 
 ----
