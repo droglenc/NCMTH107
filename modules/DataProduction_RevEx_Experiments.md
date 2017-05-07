@@ -30,21 +30,21 @@ While studying the foraging ecology of northern elephant seals (*Mirounga angust
 An agronomist is interested in the effect of plowing depth (10 cm, 17 cm, and 25 cm) and amount of applied fertilizer (none or 3 kg per acre) on the harvest of sugar beets. There are 36 nearly identical plots (fields) available for research.  The agronomist has asked you to help design an experiment.  Specifically, you are asked the questions below.
 
 1. What are the factors (list all of them)?
-1. How many levels are there (list in same order as factors in answer c)?
+1. How many levels are there (list in same order as factors in answer a)?
 1. How many treatments?
 1. How many replicates for each treatment?
 1. Physically, what is a replicate (i.e., not a number)?
 1. What is the response variable?
 1. Describe how you would allocate individuals to treatments.  Show your R work.
 
-[See answer here](zRevExAns/DataProduction_Fert1){:target="_blank"}
+[See answer here](zRevExAns/DataProduction_Beets){:target="_blank"}
 
 ----
 
 ## Translocating Rabbits
 <img src="zimgs/pygmy_rabbit.jpg" alt="Pygmy Rabbit" class="img-right">
 
-1. Translocation is an important tool in modern wildlife management. Current techniques, however, result in the death of many translocated individuals shortly after release in their new homes. Researchers in France (Letty *et al.* 2000) simultaneously examined the use of tranquilization (tranquilized or not) and acclimatization pens (pens where an individual can "get used to" the new environment; used acclimatization pen or not) on the survival rate (survived or not) of translocated rabbits. Their experiment used a total of 64 European wild rabbits. Use this information to answer the questions below.
+Translocation is an important tool in modern wildlife management. Current techniques, however, result in the death of many translocated individuals shortly after release in their new homes. Researchers in France (Letty *et al.* 2000) simultaneously examined the use of tranquilization (tranquilized or not) and acclimatization pens (pens where an individual can "get used to" the new environment; used acclimatization pen or not) on the survival rate (survived or not) of translocated rabbits. Their experiment used a total of 64 European wild rabbits. Use this information to answer the questions below.
 
 1. What is the response variable?
 1. What are the factors (list all of them)?
@@ -61,7 +61,7 @@ An agronomist is interested in the effect of plowing depth (10 cm, 17 cm, and 25
 ## Eating Habits of Deer
 <img src="zimgs/DeerBrowsing.jpg" alt="Deer Browsing" class="img-right">
 
-1. In 1994, biologists studied the health of whitetail deer (*Odocoileus virginianus*) as it relates to eating habits. Sixty-four deer were randomly allocated into four groups. One group was to be kept on a deer farm and fed a strict diet. The other two groups would be sent to Channel Island off the coast of Alaska. One of the Channel Island groups would be restricted to browsing in prairies to simulate farm fields. The second was to be restricted to browsing in hardwood forests. The third Channel Island group would be fed a strict diet on the island. The researchers literally followed these deer around for 9 months, recording what the deer ate as they moved. Urine was also collected to assess the health of the deer. Use this information to answer the questions below.
+In 1994, biologists studied the health of whitetail deer (*Odocoileus virginianus*) as it relates to eating habits. Sixty-four deer were randomly allocated into four groups. One group was to be kept on a deer farm and fed a strict diet. The other three groups would be sent to Channel Island off the coast of Alaska. One of the Channel Island groups would be restricted to browsing in prairies to simulate farm fields. The second was to be restricted to browsing in hardwood forests. The third Channel Island group would be fed a strict diet on the island. The researchers literally followed these deer around for 9 months, recording what the deer ate as they moved. Urine was also collected to assess the health of the deer. Use this information to answer the questions below.
 
 1. What is the response variable?
 1. What are the factors (list all of them)?
@@ -75,10 +75,10 @@ An agronomist is interested in the effect of plowing depth (10 cm, 17 cm, and 25
 
 ----
 
-## Chemistry Product
+## Chemistry Reaction
 <img src="zimgs/stirring.jpg" alt="Stirring chemicals" class="img-right">
 
-1. A chemical engineer is designing the production process for a new product. The chemical reaction that produces the product may have higher or lower yield, depending on the temperature and stirring rate in the vessel in which the reaction takes place. The engineer decides to investigate the effect on yield of two temperatures (50C and 60C) and three stirring rates (60, 90, and 120 rpm). A new vessel should be used for each production and only 30 vessels exist. Help the engineer set up this experiment by answering the questions below.
+A chemical engineer is designing the production process for a new product. The chemical reaction that produces the product may have higher or lower yield, depending on the temperature and stirring rate in the vessel in which the reaction takes place. The engineer decides to investigate the effect on yield of two temperatures (50C and 60C) and three stirring rates (60, 90, and 120 rpm). A new vessel should be used for each production and only 30 vessels exist. Help the engineer set up this experiment by answering the questions below.
 
 1. What is the response variable?
 1. What are the factors (list all of them)?
@@ -95,7 +95,7 @@ An agronomist is interested in the effect of plowing depth (10 cm, 17 cm, and 25
 ## Diet, Exercise, Blood Pressure
 <img src="zimgs/exercise.jpg" alt="Exercise" class="img-right">
 
-1. A student is designing an experiment to determine the simultaneous effects of calcium in the diet and regular exercise on blood pressure. In this experiment, some subjects will be given a calcium supplement pill and some will be given a placebo sugar pill. In addition, some subjects will be required to perform aerobic exercises once a day, whereas others will not. The researcher has 32 male subjects available that are as similar as possible (similar ages, weights, initial blood pressures, etc.).  Help the student design this experiment by answering the questions below.
+A student is designing an experiment to determine the simultaneous effects of calcium in the diet and regular exercise on blood pressure. In this experiment, some subjects will be given a calcium supplement pill and some will be given a placebo sugar pill. In addition, some subjects will be required to perform aerobic exercises once a day, whereas others will not. The researcher has 32 male subjects available that are as similar as possible (similar ages, weights, initial blood pressures, etc.).  Help the student design this experiment by answering the questions below.
 
 1. What are the factors (list all of them)?
 1. How many levels are there (list in same order as factors in answer a)?

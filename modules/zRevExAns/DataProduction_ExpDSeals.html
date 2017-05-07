@@ -14,24 +14,24 @@ css: "/css/modules.css"
 <li>There are four total treatments.</li>
 <li>There are ten seals per treatment.</li>
 <li>A seal is an individual/replicate.</li>
-<li>I would randomly select ten of the wild seals for the &lt;47F treatment (with the other ten put in the &gt;47F treatment) and then do the same for the domestic seals. Thus, I would generate two randome selections of ten numbers from twenty numbers.</li>
+<li>I would randomly select ten of the wild seals for the &lt;47F treatment (with the other ten put in the &gt;47F treatment) and then do the same for the domestic seals. Thus, I would generate two random selections of ten numbers from twenty numbers.</li>
 </ol>
 <pre class="r"><code>wseals &lt;- sample(20)
 wseals[1:10]  # wild &lt;47F</code></pre>
-<pre><code>##  [1] 11  9 12 20 19  3  1 10  5  4</code></pre>
+<pre><code>##  [1] 16 11  2 14 10 17  5 18  8  7</code></pre>
 <pre class="r"><code>wseals[11:20] # wild &gt;47F</code></pre>
-<pre><code>##  [1] 18  8 15 17  2 13 16 14  6  7</code></pre>
+<pre><code>##  [1] 13 20 15  4  3 19  1 12  6  9</code></pre>
 <pre class="r"><code>dseals &lt;- sample(20)
 dseals[1:10]  # domestic &lt;47F</code></pre>
-<pre><code>##  [1]  1 16  8 12 15 18  5 17  4 20</code></pre>
+<pre><code>##  [1] 20  6 17  3 12 18 19 10 16 11</code></pre>
 <pre class="r"><code>dseals[11:20] # domestic &gt;47F</code></pre>
-<pre><code>##  [1] 14  3  2  6 13 11  9 19 10  7</code></pre>
+<pre><code>##  [1] 13 14  8  1  4  5  7 15  9  2</code></pre>
 <p>This allocation could be visualized in the following table (note that the “X” columns are simply counters for individuals allocated to that treatment).</p>
 <pre><code>##   Treatment     Seal Temperature X1 X2 X3 X4 X5 X6 X7 X8 X9 X10
-## 1         1     Wild         &lt;47 11  9 12 20 19  3  1 10  5   4
-## 2         2     Wild         &gt;47 18  8 15 17  2 13 16 14  6   7
-## 3         3 Domestic         &lt;47  1 16  8 12 15 18  5 17  4  20
-## 4         4 Domestic         &gt;47 14  3  2  6 13 11  9 19 10   7</code></pre>
+## 1         1     Wild         &lt;47 16 11  2 14 10 17  5 18  8   7
+## 2         2     Wild         &gt;47 13 20 15  4  3 19  1 12  6   9
+## 3         3 Domestic         &lt;47 20  6 17  3 12 18 19 10 16  11
+## 4         4 Domestic         &gt;47 13 14  8  1  4  5  7 15  9   2</code></pre>
 <hr />
 
 
