@@ -23,6 +23,7 @@ modHTML("DataProduction_ExpDSeals")
 1. There are two levels of water temperature and two levels of seal origin.
 1. There are four total treatments.
 1. There are ten seals per treatment.
+1. A seal is an individual/replicate.
 1. I would randomly select ten of the wild seals for the <47F treatment (with the other ten put in the >47F treatment) and then do the same for the domestic seals. Thus, I would generate two randome selections of ten numbers from twenty numbers.
 ```{r}
 wseals <- sample(20)
