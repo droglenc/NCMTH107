@@ -37,7 +37,7 @@ An agronomist is interested in the effect of plowing depth (10 cm, 17 cm, and 25
 1. What is the response variable?
 1. Describe how you would allocate individuals to treatments.  Show your R work.
 
-[See answer here](zRevExAns/DataProduction_Beets){:target="_blank"}
+[See answer here](zRevExAns/DataProduction_ExpDBeets){:target="_blank"}
 
 ----
 
