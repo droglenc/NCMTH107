@@ -43,7 +43,7 @@ You can click on each question to see an answer. Click on it again to close the 
         <a data-toggle="collapse" href="#Pines">I have noticed that the needles of white pine trees near major highways are brown. I hypothesized that this may be caused by increased levels of carbon monoxide (CO; ppm) and salt (ppt) near the roads. I am considering two studies to test this hypothesis. First, at two types of sites -- near highways and far from highways -- I will count the number of trees that are mostly brown and measure levels of CO and salt. Second, I will determine the effect of CO and salt levels by growing 20 randomly-selected nearly-identical seedlings in pots that only differ in the levels of CO and salt -- 0 and 5 ppm CO and 0 and 4 ppt salt. Which study is an observational study? Which study will provide a definitive answer to the stated hypothesis?</a>
       </div>
     </div>
-    <div id="Genetics2" class="panel-collapse collapse">
+    <div id="Pines" class="panel-collapse collapse">
       <div class="panel-body">The first study is the observational study because no conditions are imparted onto the pine trees (in the second study the seedlings are given CO and salt amounts). The experimental (second) study will provide a definitive answer to my hypothesis because it is the only type of study from which ``causal'' statements can be made.  In the experiment, all other variables were controlled for except for the two that I was interested in.  In the observational study, other variables may be responsible for any effect observed.
       </div>
     </div>
