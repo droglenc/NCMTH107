@@ -16,7 +16,6 @@ title: Resources
 1. [Hypothesis Testing Fact Sheet](MTH107-HOcheatsheet.pdf){:target="_blank"} (or as [PPT](MTH107-HOcheatsheet.ppt))
 1. [FAQ](FAQ/)
 1. [R Cheat Sheet](MTH107-Rcheatsheet.pdf){:target="_blank"} (or as [PPT](MTH107-Rcheatsheet.pptx))
-1. Readings Review Exercise Answers
 
 ## Computer
 1. [Data Files](data_107)
