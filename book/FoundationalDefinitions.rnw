@@ -36,9 +36,7 @@ plot(y~x,data=SL,pch=21,col=clr1,bg=clr2,xlab="",ylab="",xaxt="n",yaxt="n")
 hist(~tl,data=SL,xlab=xlbl,ylab=ylbl,w=hwid,xlim=xlmt)
 @
 
-\vspace{-24pt}
 \section{Definitions} \label{sect:IVPPSS}
-\vspace{-12pt}
 The \textbf{individual} in a statistical analysis is one of the ``items'' examined by the researcher.\index{Individual, Definition}  Sometimes the individual is a person, but it may be an animal, a piece of wood, a location, a particular time, or an event. It is extremely important that you don't always visualize a person when considering an individual in a statistical sense. Synonyms for individual are unit, experimental unit (usually used in experiments), sampling unit (usually used in observational studies), case, and subject (usually used in studies involving humans). An individual in the Square Lake example is a fish, because the researcher will collect a set of fish and examine each individual fish.
 
 The \textbf{variable} is the characteristic recorded about each individual.\index{Variable!Definition} The variable in the Square Lake example is the length of each fish. In most studies, the researcher will record more than one variable. For example, the researcher may also record the fish's weight, sex, age, time of capture, and location of capture. In this module, only one variable is considered. In other modules, two variables will be considered.
@@ -83,7 +81,6 @@ print(sl1.x,caption.placement="top",hline.after=c(0,nrow(sl1.x)),include.rowname
 
 
 \section{Performing an IVPPSS}
-\vspace{-12pt}
 In each statistical analysis it is important that you determine the Individual, Variable, Population, Parameter, Sample, and Statistic (\textbf{IVPPSS}). First, determine what items you are actually going to look at; those are the individuals. Second, determine what is recorded about each individual; that is the variable. Third, ALL individuals is the population. Fourth, the summary (e.g., mean or proportion) of the variable recorded from ALL individuals in the population is the parameter.\footnote{Again, parameters generally cannot be computed because all of the individuals in the population can not be seen. Thus, the parameter is largely conceptual.} Fifth, the population usually cannot be seen, so only a few individuals are examined; those few individuals are the sample. Finally, the summary of the individuals in the sample is the statistic.
 
 When performing an IVPPSS, keep in mind that parameters describe populations (note that they both start with ``p'') and statistics describe samples (note that they both start with ``s''). This can also be looked at from another perspective. A sample is an estimate of the population and a statistic is an estimate of a parameter. Thus, the statistic has to be the same summary (mean or proportion) of the sample as the parameter is of the population.
@@ -203,24 +200,12 @@ The two types of quantitative variables are continuous and discrete variables. \
 
 Continuous and discrete variables are easily distinguished by determining if it is possible for a value to exist between every two values of the variable. For example, can there be between 2 and 3 ducks on a pond?  No!  Thus, the number of ducks is a discrete variable. Alternatively, can a duck weigh between 2 and 3 kg?  Yes!  Can it weigh between 2 and 2.1 kg?  Yes!  Can it weigh between 2 and 2.01 kg?  Yes!  You can see that this line of questions could continue forever; thus, duck weight is a continuous variable.
 
-%\defn{Discrete Variable}{A quantitative variable that can assume a countable number of values.}
-
-%\vspace{-12pt}
-%\defn{Continuous Variable}{A quantitative variable that can assume an uncountable number of values.}
-
-%\vspace{-12pt}
 \warn{A quantitative variable is continuous if a possible value exists between every two values of the variable; otherwise, it is discrete.}
 
 The two types of categorical variables are ordinal and nominal. \textbf{Ordinal} variables are categorical variables where a natural order or ranking exists among the categories.\index{Ordinal Variable}  \textbf{Nominal} variables are categorical variables where no order or ranking exists among the categories.\index{Nominal Variable}
 
 Ordinal and nominal variables are easily distinguished by determining if the order of the categories matters. For example, suppose that a researcher recorded a subjective measure of condition (i.e., poor, average, excellent) and the species of each duck. Order matters with the condition variable -- i.e., condition improves from the first (poor) to the last category (excellent) -- and some reorderings of the categories would not make sense -- i.e., average, poor, excellent does not make sense. Thus, condition is an ordinal variable. In contrast, species (e.g., mallard, redhead, canvasback, and wood duck) is a nominal variable because there is no inherent order among the categories (i.e., any reordering of the categories also ``makes sense'').
 
-%\defn{Ordinal Variable}{A categorical variable for which a natural order exists among the categories.}
-
-%\vspace{-12pt}
-%\defn{Nominal Variable}{A categorical variable for which a natural order DOES NOT exist among the categories.}
-
-%\vspace{-12pt}
 \warn{\textbf{Ord}inal means that an \textbf{ord}er among the categories exists (note ``ord'' in both ordinal and order).}
 
 The following are some issues to consider when identifying the type of a variable:
