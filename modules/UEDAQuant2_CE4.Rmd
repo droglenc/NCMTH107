@@ -32,12 +32,12 @@ figs(name="Crabs","Histogram for post-smolt carapace length (mm) of Dungeness cr
 
 ----
 
-## Shape and Outliers II
+## Commute Times
 <img src="zimgs/commuting.jpg" alt="Commuting" class="img-right">
 
-The [U.S. Census](http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map) asked individuals 16 years old and older "How long in minutes is your one-way commute to work each day?".  The mean for individuals from each state was recorded with summary results shown in `r figs("Commute",display="cite")` and `r tbls("Commute",display="cite")`.
+The [U.S. Census](http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map) asked individuals 16 years old and older "How long in minutes is your one-way commute to work each day?".  The mean for individuals from each state was recorded with summary results shown in `r figs("Commute",display="cite")` and `r tbls("Commute",display="cite")`. Perform a thorough EDA with these results.
 
-```{r echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
+```{r CommuteHist, echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
 df <- data.frame(time=c(24.2,18.8,24.6,21.3,27.2,24.5,24.8,24.8,29.7,25.9,27,
                         26,20,28,23.2,18.8,19,22.8,24.9,23.3,32,28,24,22.9,
                         23.9,23.1,18,18.1,23.8,26.3,30.4,21.6,31.6,23.6,16.9,
@@ -47,29 +47,33 @@ hist(~time,data=df,breaks=seq(16,32,2),xaxt="n",xlab="Mean Commute Time (mins)")
 axis(1,seq(16,32,2))
 ```
 
-Use this histogram to answer these questions.
+`r figs("Commute")`
 
-1. What is the shape of this distribution.
-1. Are there any outliers represented in this distribution?
-1. Which measures would you use to describe the center and dispersion of this distribution?
+`r tbls("Commute")`
+
+```{r CommuteSum, echo=FALSE, background="white"}
+Summarize(~time,data=df,digits=2)
+```
 
 ----
 
-## Shape and Outliers III
+## Dungeness Crabs
 <img src="zimgs/Dungeness.jpg" alt="Dungeness Crab" class="img-right">
 
-Scientists were concered about the overexploitation of Dungeness Crabs (**) in some California waters. To better manage this species they examined the post-molt carapace length from a large sample of crabs. Their results are displayed in `r figs("Crabs",display="cite")` and `r tbls("Crabs",display="cite")`.
+Scientists were concered about the overexploitation of Dungeness Crabs (**) in some California waters. To better manage this species they examined the post-molt carapace length from a large sample of crabs. Their results are displayed in `r figs("Crabs",display="cite")` and `r tbls("Crabs",display="cite")`. Perform a thorough EDA with these results.
 
-```{r echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
+```{r CrabsHist, echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
 df <- read.table("http://www.stat.berkeley.edu/~statlabs/data/crabs.data",header=TRUE)
-hist(~postsz,data=df,w=10,xlab="Post-Molt Carapace Size (mm)")
+hist(~postsz,data=df,w=10,xlab="Post-Molt Carapace Length (mm)")
 ```
 
-Use this histogram to answer these questions.
+`r figs("Crabs")`
 
-1. What is the shape of this distribution.
-1. Are there any outliers represented in this distribution?
-1. Which measures would you use to describe the center and dispersion of this distribution?
+`r tbls("Crabs")`
+
+```{r CrabsSum, echo=FALSE, background="white"}
+Summarize(~postsz,data=df,digits=1)
+```
 
 ----
 
