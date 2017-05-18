@@ -22,7 +22,7 @@ source("../rhelpers/knitr_setup.R")
 library(captioner)
 tbls <- captioner(prefix="Table")
 tbls(name="Commute","Summary statistics for the mean commute time (mins) for each state.")
-tbls(name="Crab","Summary statistics for post-smolt carapace length (mm) of Dungeness crab collected in California.")
+tbls(name="Crabs","Summary statistics for post-smolt carapace length (mm) of Dungeness crab collected in California.")
 
 figs <- captioner(prefix="Figure")
 figs(name="Commute","Histogram for the mean commute time (mins) for each state.")
