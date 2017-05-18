@@ -13,12 +13,21 @@ output:
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules")
 source("../rhelpers/rhelpers.R")
-modHTML("UEDAQuant2_CE2")
+modHTML("UEDAQuant2_CE4")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
 source("../rhelpers/knitr_setup.R")
+library(captioner)
+tbls <- captioner(prefix="Table")
+tbls(name="Commute","Summary statistics for the mean commute time (mins) for each state.")
+tbls(name="Crab","Summary statistics for post-smolt carapace length (mm) of Dungeness crab collected in California.")
+
+figs <- captioner(prefix="Figure")
+figs(name="Commute","Histogram for the mean commute time (mins) for each state.")
+figs(name="Crabs","Histogram for post-smolt carapace length (mm) of Dungeness crab collected in California.")
+
 ```
 
 ----
@@ -26,7 +35,7 @@ source("../rhelpers/knitr_setup.R")
 ## Shape and Outliers II
 <img src="zimgs/commuting.jpg" alt="Commuting" class="img-right">
 
-The [U.S. Census](http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map) asked individuals 16 years old and older "How long in minutes is your one-way commute to work each day?".  The mean for individuals from each state was computed and is plotted in the histogram below.
+The [U.S. Census](http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map) asked individuals 16 years old and older "How long in minutes is your one-way commute to work each day?".  The mean for individuals from each state was recorded with summary results shown in `r figs("Commute",display="cite")` and `r tbls("Commute",display="cite")`.
 
 ```{r echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
 df <- data.frame(time=c(24.2,18.8,24.6,21.3,27.2,24.5,24.8,24.8,29.7,25.9,27,
@@ -49,7 +58,7 @@ Use this histogram to answer these questions.
 ## Shape and Outliers III
 <img src="zimgs/Dungeness.jpg" alt="Dungeness Crab" class="img-right">
 
-Scientists were concered about the overexploitation of Dungeness Crabs (**) in some California waters. To better manage this species they examined the post-molt carapace length from a large sample of crabs. Their results are displayed in the histogram below.
+Scientists were concered about the overexploitation of Dungeness Crabs (**) in some California waters. To better manage this species they examined the post-molt carapace length from a large sample of crabs. Their results are displayed in `r figs("Crabs",display="cite")` and `r tbls("Crabs",display="cite")`.
 
 ```{r echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
 df <- read.table("http://www.stat.berkeley.edu/~statlabs/data/crabs.data",header=TRUE)
@@ -68,9 +77,9 @@ Use this histogram to answer these questions.
 <ul class="pagination pagination-lg">
   <li><a href="UEDAQuant2.html">^</a></li>
   <li><a href="UEDAQuant2_CE1.html">1</a></li>
-  <li class="active"><a href="#">2</a></li>
+  <li><a href="UEDAQuant2_CE2.html">2</a></li>
   <li><a href="UEDAQuant2_CE3.html">3</a></li>
-  <li><a href="UEDAQuant2_CE4.html">4</a></li>
+  <li class="active"><a href="#">4</a></li>
   <li><a href="UEDAQuant2_CE5.html">5</a></li>
   <li><a href="UEDAQuant2_CE6.html">6</a></li>
 </ul>
