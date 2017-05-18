@@ -1,0 +1,74 @@
+---
+layout: page
+title: "Univariate EDA Quantitative"
+subtitle: R Handout
+author: "Derek H. Ogle"
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_width: 3.5
+    fig_height: 3.5
+    self_contained: no
+  pdf_document:
+    fig_width: 3.5
+    fig_height: 3.5
+  word_document:
+    fig_width: 3.5
+    fig_height: 3.5
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules")
+source("../rhelpers/rhelpers.R")
+modHTML("UEDAQuant1_RHO")
+```
+```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
+source("../rhelpers/knitr_setup.R")
+library(NCStats)
+purl2("UEDAQuant1_RHO.Rmd",moreItems=c("Renders","source","modHTML","github.com","NCMTH107"))
+```
+
+----
+
+## Background
+[Karagas et al. (1996)](http://www.ncbi.nlm.nih.gov/pubmed/8896897) conducted a pilot study to assess the utility of [arsenic](https://en.wikipedia.org/wiki/Arsenic) concentrations in the [toenail](https://en.wikipedia.org/wiki/Nail_%28anatomy%29) as an indicator of ingestion of arsenic-containing water.  They interviewed 21 individuals whose household drinking water supply was provided by a private (unregulated) well, including 10 individuals who lived in areas of New Hampshire where elevated water levels of arsenic had been reported previously.  Each participant also provided a sample of water and toenail clippings.
+
+The data are recorded in [Arsenic.csv](https://github.com/droglenc/NCData/raw/master/Arsenic.csv).  Descriptions of the variables are below.
+
+* `age`: Age (yrs) of person
+* `sex`: Sex of person
+* `usedrink`: How much (fraction of time) the well is used for drinking -- A="$<\frac{1}{4}$", B="$\approx\frac{1}{4}$",  C="$\approx\frac{1}{2}$",  D="$\approx\frac{3}{4}$",  E="$>\frac{3}{4}$"
+* `usecook`: How much (fraction of time) the well is used for cooking -- A="$<\frac{1}{4}$", B="$\approx\frac{1}{4}$",  C="$\approx\frac{1}{2}$",  D="$\approx\frac{3}{4}$",  E="$>\frac{3}{4}$"
+* `arswater`: Arsenic in water (ppm)
+* `arsnails`: Arsenic in toenails (ppm)
+
+----
+
+## Getting the Data
+```{r echo=FALSE}
+ars <- read.csv("https://github.com/droglenc/NCData/raw/master/Arsenic.csv")
+```
+```{r message=FALSE, warning=FALSE}
+library(NCStats)
+```
+```{r eval=FALSE}
+setwd("C:/stats/")
+ars <- read.csv("Arsenic.csv")
+```
+```{r}
+str(ars)
+headtail(ars)
+```
+
+## Univariate EDA -- Quantitative
+```{r}
+Summarize(~age,data=ars,digits=2)
+hist(~age,data=ars,xlab="Age (yrs)")
+```
+
+## Univariate EDA -- Quantitative (Separated by Groups)
+```{r fig.width=2*figsz, fig.height=figsz, par2=TRUE}
+Summarize(age~sex,data=ars,digits=2)
+hist(age~sex,data=ars,xlab="Age (yrs)")
+```
