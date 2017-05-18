@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Class Exercise
-subtitle: Univ EDA - Quantitative Methods 2
+subtitle: Univariate EDA - Quantitative I (Methods) 2
 author: Derek H. Ogle
 css: "/css/modules.css"
 output:
@@ -25,7 +25,7 @@ source("../rhelpers/knitr_setup.R")
 
 ## Hand Calculations
 
-Consider the following three data sets for the questions below.  Show your work for all questions.
+Consider the following three data sets for questions below. Show your work for all questions.
 
 <pre>
 Data Set 1
@@ -48,7 +48,9 @@ Data Set 3
 
 You can check your work with `sdCalc()` and `iqrCalc()`.  For example,
 ```{r}
+# Enter (example) data into d vector
 d <- c(16,23,47,13,18,12)
+# Check calculations for data in d
 sdCalc(d)
 iqrCalc(d)
 ```
