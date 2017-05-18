@@ -13,20 +13,16 @@ css: "/css/modules.css"
 <p>Using the <code>meanMedian()</code> function with no arguments will open a plot constructed from random data that looks like that below.</p>
 <p><img src="UEDAQuant2_CE3_files/figure-html/unnamed-chunk-3-1.png" width="480" /></p>
 <p>The top plot is a histogram. The lower plot shows individuals above the median (blue vertical line) with red dots and individuals below the median with black dots. In addition, the dashed horizontal lines represent the differences of each individual from the mean (red vertical line) with negative values in black and positive values in red.</p>
-<p>In RStudio, this plot will also have a small “gear” icon in the upper-left corner. Clicking the gear opens a dialog box where you can control the sample size, two shape parameters, and whether an outlier is modeled or not. In the questions below, leave the sample size at 30 and press the “reradnomize” button several (~10) times for each question to make sure that your conclusions are not based on a single random sample.</p>
+<p>In RStudio, this plot will also have a small “gear” icon in the upper-left corner. Clicking the gear opens a dialog box where you can control the sample size, two shape parameters, and whether an outlier is modeled or not. In the questions below, leave the sample size at 30 and press the “rerandomize” button several times.</p>
 <ol>
-<li>For each scenario below identify (i) the shape of the distribution, (ii) whether a substantive outlier is present, and (iii) whether the value of the mean is more or less than the value of the median.
-<ol>
-<li><code>shape1=1</code>, <code>shape2=1</code>, and no outliers.</li>
-<li><code>shape1=8</code>, <code>shape2=1</code>, and no outliers.</li>
-<li><code>shape1=1</code>, <code>shape2=8</code>, and no outliers.</li>
-<li><code>shape1=3</code>, <code>shape2=3</code>, and no outliers.</li>
-<li><code>shape1=3</code>, <code>shape2=3</code>, and an outlier at the <code>min</code>.</li>
-<li><code>shape1=3</code>, <code>shape2=3</code>, and an outlier at the <code>max</code>.</li>
-</ol></li>
-<li>Can you make a conclusion about the effect of the shape of the distribution on the relative values of the mean and median? [<em>Compare your observations from scenarios a-d.</em>]</li>
-<li>Can you make a conclusion about the effect of outliers on the relative values of the mean and median? [<em>Compare your observations from scenarios d-f.</em>]</li>
-<li>Return to the <a href="UEDAQuant_CE1.html#histograms-ii">Histograms II</a> question and, for each histogram, identify whether the mean would be less than, greater than, or approximately equal to the median.</li>
+<li>Identify (i) the shape of the distribution, (ii) whether a substantive outlier is present, and (iii) whether the value of the mean is more or less than the value of the median when <code>shape1=5</code>, <code>shape2=1</code>, and there are no outliers.</li>
+<li>Identify (i) the shape of the distribution, (ii) whether a substantive outlier is present, and (iii) whether the value of the mean is more or less than the value of the median when <code>shape1=1</code>, <code>shape2=5</code>, and there are no outliers.</li>
+<li>What conclusion can you make about the effect of the shape of the distribution on the relative values of the mean and median?</li>
+<li>What would expect the relative values of the mean and median to be if the distribution was perfectly symmetric?</li>
+<li>Identify (i) the shape of the distribution, (ii) whether a substantive outlier is present, and (iii) whether the value of the mean is more or less than the value of the median when <code>shape1=3</code>, <code>shape2=3</code>, and there is an outlier at the minimum value.</li>
+<li>Identify (i) the shape of the distribution, (ii) whether a substantive outlier is present, and (iii) whether the value of the mean is more or less than the value of the median when <code>shape1=3</code>, <code>shape2=3</code>, and there is an outlier at the maximum value.</li>
+<li>Can you make a conclusion about the effect of outliers on the relative values of the mean and median?</li>
+<li>Return to the <a href="UEDAQuant2_CE1.html#shape-and-outliers-i">Shape and Outliers I</a> class exercse and, for each histogram, identify whether the mean would be less than, greater than, or approximately equal to the median.</li>
 <li>Why do you think the mean and median behave this way?</li>
 </ol>
 <hr />
