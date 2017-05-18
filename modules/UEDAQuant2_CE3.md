@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Class Exercise
-subtitle: Univ EDA - Quantitative Interpretation 3
+subtitle: Univariate EDA - Quantitative II (Interpretation)
 css: "/css/modules.css"
 ---
 

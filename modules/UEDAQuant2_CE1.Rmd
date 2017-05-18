@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Class Exercise
-subtitle: Univ EDA - Quantitative Interpretation 1
+subtitle: Univariate EDA - Quantitative II (Interpretation)
 author: Derek H. Ogle
 css: "/css/modules.css"
 output:
@@ -23,28 +23,7 @@ source("../rhelpers/knitr_setup.R")
 
 ----
 
-## Histograms I
-
-The [U.S. Census](http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map) asked individuals 16 years old and older "How long in minutes is your one-way commute to work each day?".  The mean for individuals from each state was computed and is plotted in the histogram below.
-
-```{r echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
-df <- data.frame(time=c(24.2,18.8,24.6,21.3,27.2,24.5,24.8,24.8,29.7,25.9,27,
-                        26,20,28,23.2,18.8,19,22.8,24.9,23.3,32,28,24,22.9,
-                        23.9,23.1,18,18.1,23.8,26.3,30.4,21.6,31.6,23.6,16.9,
-                        23,21,22.5,25.9,23.6,23.5,16.9,24.3,25,21.4,22.2,27.7,
-                        25.7,25.5,21.7,18.3))
-hist(~time,data=df,breaks=seq(16,32,2),xaxt="n",xlab="Mean Commute Time (mins)")
-axis(1,seq(16,32,2))
-```
-
-Use this histogram to answer these questions.
-
-1. What is the shape of this distribution.
-1. Are there any outliers represented in this distribution?
-
-----
-
-## Histograms II
+## Shape and Outliers I
 
 For each histogram below, describe the shape and presence of outliers.
 
@@ -62,6 +41,47 @@ hist(~rbeta(n,9,1),xlab=xlbl,main="#6",xaxt="n",yaxt="n")
 hist(~c(rbeta(n,8,4),0),xlab=xlbl,main="#7",xaxt="n",yaxt="n")
 hist(~c(rbeta(n/2,7,2),rbeta(n/2,2,7)),xlab=xlbl,main="#8",xaxt="n",yaxt="n")
 ```
+
+----
+
+## Shape and Outliers II
+<img src="zimgs/commuting.jpg" alt="Commuting" class="img-right">
+
+The [U.S. Census](http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map) asked individuals 16 years old and older "How long in minutes is your one-way commute to work each day?".  The mean for individuals from each state was computed and is plotted in the histogram below.
+
+```{r echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
+df <- data.frame(time=c(24.2,18.8,24.6,21.3,27.2,24.5,24.8,24.8,29.7,25.9,27,
+                        26,20,28,23.2,18.8,19,22.8,24.9,23.3,32,28,24,22.9,
+                        23.9,23.1,18,18.1,23.8,26.3,30.4,21.6,31.6,23.6,16.9,
+                        23,21,22.5,25.9,23.6,23.5,16.9,24.3,25,21.4,22.2,27.7,
+                        25.7,25.5,21.7,18.3))
+hist(~time,data=df,breaks=seq(16,32,2),xaxt="n",xlab="Mean Commute Time (mins)")
+axis(1,seq(16,32,2))
+```
+
+Use this histogram to answer these questions.
+
+1. What is the shape of this distribution.
+1. Are there any outliers represented in this distribution?
+1. Which measures would you use to describe the center and dispersion of this distribution?
+
+----
+
+## Shape and Outliers III
+<img src="zimgs/Dungeness.jpg" alt="Dungeness Crab" class="img-right">
+
+Scientists were concered about the overexploitation of Dungeness Crabs (**) in some California waters. To better manage this species they examined the post-molt carapace length from a large sample of crabs. Their results are displayed in the histogram below.
+
+```{r echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
+df <- read.table("http://www.stat.berkeley.edu/~statlabs/data/crabs.data",header=TRUE)
+hist(~postsz,data=df,w=10,xlab="Post-Molt Carapace Size (mm)")
+```
+
+Use this histogram to answer these questions.
+
+1. What is the shape of this distribution.
+1. Are there any outliers represented in this distribution?
+1. Which measures would you use to describe the center and dispersion of this distribution?
 
 ----
 
