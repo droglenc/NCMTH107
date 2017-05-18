@@ -11,7 +11,7 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules")
 source("../rhelpers/rhelpers.R")
 modHTML("UEDAQuant2_CE2")
 ```
@@ -23,29 +23,44 @@ source("../rhelpers/knitr_setup.R")
 
 ----
 
-## Mean Versus Median
+## Shape and Outliers II
+<img src="zimgs/commuting.jpg" alt="Commuting" class="img-right">
 
-Using the `meanMedian()` function with no arguments will open a plot constructed from random data that looks like that below.
+The [U.S. Census](http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map) asked individuals 16 years old and older "How long in minutes is your one-way commute to work each day?".  The mean for individuals from each state was computed and is plotted in the histogram below.
 
-```{r echo=FALSE, fig.height=4, fig.width=5}
-meanMedian()
+```{r echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
+df <- data.frame(time=c(24.2,18.8,24.6,21.3,27.2,24.5,24.8,24.8,29.7,25.9,27,
+                        26,20,28,23.2,18.8,19,22.8,24.9,23.3,32,28,24,22.9,
+                        23.9,23.1,18,18.1,23.8,26.3,30.4,21.6,31.6,23.6,16.9,
+                        23,21,22.5,25.9,23.6,23.5,16.9,24.3,25,21.4,22.2,27.7,
+                        25.7,25.5,21.7,18.3))
+hist(~time,data=df,breaks=seq(16,32,2),xaxt="n",xlab="Mean Commute Time (mins)")
+axis(1,seq(16,32,2))
 ```
 
-The top plot is a histogram.  The lower plot shows individuals above the median (blue vertical line) with red dots and individuals below the median with black dots.  In addition, the dashed horizontal lines represent the differences of each individual from the mean (red vertical line) with negative values in black and positive values in red.
+Use this histogram to answer these questions.
 
-In RStudio, this plot will also have a small "gear" icon in the upper-left corner.  Clicking the gear opens a dialog box where you can control the sample size, two shape parameters, and whether an outlier is modeled or not.  In the questions below, leave the sample size at 30 and press the "reradnomize" button several (~10) times for each question to make sure that your conclusions are not based on a single random sample.
+1. What is the shape of this distribution.
+1. Are there any outliers represented in this distribution?
+1. Which measures would you use to describe the center and dispersion of this distribution?
 
-1. For each scenario below identify (i) the shape of the distribution, (ii) whether a substantive outlier is present, and (iii) whether the value of the mean is more or less than the value of the median.
-    1. `shape1=1`, `shape2=1`, and no outliers.
-    1. `shape1=8`, `shape2=1`, and no outliers.
-    1. `shape1=1`, `shape2=8`, and no outliers.
-    1. `shape1=3`, `shape2=3`, and no outliers.
-    1. `shape1=3`, `shape2=3`, and an outlier at the `min`.
-    1. `shape1=3`, `shape2=3`, and an outlier at the `max`.
-1. Can you make a conclusion about the effect of the shape of the distribution on the relative values of the mean and median?  [*Compare your observations from scenarios a-d.*] 
-1. Can you make a conclusion about the effect of outliers on the relative values of the mean and median?  [*Compare your observations from scenarios d-f.*]
-1. Return to the [Histograms II](UEDAQuant_CE1.html#histograms-ii) question and, for each histogram, identify whether the mean would be less than, greater than, or approximately equal to the median.
-1. Why do you think the mean and median behave this way?
+----
+
+## Shape and Outliers III
+<img src="zimgs/Dungeness.jpg" alt="Dungeness Crab" class="img-right">
+
+Scientists were concered about the overexploitation of Dungeness Crabs (**) in some California waters. To better manage this species they examined the post-molt carapace length from a large sample of crabs. Their results are displayed in the histogram below.
+
+```{r echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
+df <- read.table("http://www.stat.berkeley.edu/~statlabs/data/crabs.data",header=TRUE)
+hist(~postsz,data=df,w=10,xlab="Post-Molt Carapace Size (mm)")
+```
+
+Use this histogram to answer these questions.
+
+1. What is the shape of this distribution.
+1. Are there any outliers represented in this distribution?
+1. Which measures would you use to describe the center and dispersion of this distribution?
 
 ----
 
@@ -56,4 +71,5 @@ In RStudio, this plot will also have a small "gear" icon in the upper-left corne
   <li class="active"><a href="#">2</a></li>
   <li><a href="UEDAQuant2_CE3.html">3</a></li>
   <li><a href="UEDAQuant2_CE4.html">4</a></li>
+  <li><a href="UEDAQuant2_CE5.html">5</a></li>
 </ul>

@@ -33,13 +33,13 @@ Use the materials below to answer the questions on [this preparation guide](UEDA
 
 * [Reading](../book/6_IntroStats.pdf)
 * Video: [Describe Shape](https://www.youtube.com/v/H9ITfdaX2ZQ?version=3&autoplay=1){:target="_blank"} [13 mins]
-* Video: [Interpreting a Univariate EDA (Quantitative)](https://vimeo.com/user45324800/ueda-quantsum){:target="_blank"} [11 mins] [![PowerPoint](../img/ppt.png)](UEDAQuant_2_PPT.pptx)
+* Video: [Interpreting a Univariate EDA (Quantitative)](https://vimeo.com/user45324800/ueda-quantsum){:target="_blank"} [11 mins] [![PowerPoint](../img/ppt.png)](UEDAQuant2_PPT.pptx)
 
 ----
 
 ## Practice
 
-* Class Exercises: [1](UEDAQuant2_CE1) / [2](UEDAQuant2_CE2) / [3](UEDAQuant2_CE3) / (*time permitting* ... [4](UEDAQuant2_CE4))
+* Class Exercises: [1](UEDAQuant2_CE1) / [2](UEDAQuant2_CE2) / [3](UEDAQuant2_CE3) / [4](UEDAQuant2_CE4) / (*time permitting* ... [5](UEDAQuant2_CE5))
 * [Homework Assignment](UEDAQuant2_HW)
 
 ----

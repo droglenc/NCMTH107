@@ -1,33 +1,36 @@
 ---
 layout: page
 title: Class Exercise
-subtitle: Univ EDA - Quantitative Interpretation 2
+subtitle: Univariate EDA - Quantitative II (Interpretation)
 author: Derek H. Ogle
 css: "/css/modules.css"
 ---
 
 
 <hr />
-<div id="mean-versus-median" class="section level2">
-<h2>Mean Versus Median</h2>
-<p>Using the <code>meanMedian()</code> function with no arguments will open a plot constructed from random data that looks like that below.</p>
-<p><img src="UEDAQuant2_CE2_files/figure-html/unnamed-chunk-3-1.png" width="480" /></p>
-<p>The top plot is a histogram. The lower plot shows individuals above the median (blue vertical line) with red dots and individuals below the median with black dots. In addition, the dashed horizontal lines represent the differences of each individual from the mean (red vertical line) with negative values in black and positive values in red.</p>
-<p>In RStudio, this plot will also have a small “gear” icon in the upper-left corner. Clicking the gear opens a dialog box where you can control the sample size, two shape parameters, and whether an outlier is modeled or not. In the questions below, leave the sample size at 30 and press the “reradnomize” button several (~10) times for each question to make sure that your conclusions are not based on a single random sample.</p>
+<div id="shape-and-outliers-ii" class="section level2">
+<h2>Shape and Outliers II</h2>
+<p><img src="zimgs/commuting.jpg" alt="Commuting" class="img-right"></p>
+<p>The <a href="http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map">U.S. Census</a> asked individuals 16 years old and older “How long in minutes is your one-way commute to work each day?”. The mean for individuals from each state was computed and is plotted in the histogram below.</p>
+<p><img src="UEDAQuant2_CE2_files/figure-html/unnamed-chunk-3-1.png" width="384" /></p>
+<p>Use this histogram to answer these questions.</p>
 <ol>
-<li>For each scenario below identify (i) the shape of the distribution, (ii) whether a substantive outlier is present, and (iii) whether the value of the mean is more or less than the value of the median.
+<li>What is the shape of this distribution.</li>
+<li>Are there any outliers represented in this distribution?</li>
+<li>Which measures would you use to describe the center and dispersion of this distribution?</li>
+</ol>
+<hr />
+</div>
+<div id="shape-and-outliers-iii" class="section level2">
+<h2>Shape and Outliers III</h2>
+<p><img src="zimgs/Dungeness.jpg" alt="Dungeness Crab" class="img-right"></p>
+<p>Scientists were concered about the overexploitation of Dungeness Crabs (**) in some California waters. To better manage this species they examined the post-molt carapace length from a large sample of crabs. Their results are displayed in the histogram below.</p>
+<p><img src="UEDAQuant2_CE2_files/figure-html/unnamed-chunk-4-1.png" width="384" /></p>
+<p>Use this histogram to answer these questions.</p>
 <ol>
-<li><code>shape1=1</code>, <code>shape2=1</code>, and no outliers.</li>
-<li><code>shape1=8</code>, <code>shape2=1</code>, and no outliers.</li>
-<li><code>shape1=1</code>, <code>shape2=8</code>, and no outliers.</li>
-<li><code>shape1=3</code>, <code>shape2=3</code>, and no outliers.</li>
-<li><code>shape1=3</code>, <code>shape2=3</code>, and an outlier at the <code>min</code>.</li>
-<li><code>shape1=3</code>, <code>shape2=3</code>, and an outlier at the <code>max</code>.</li>
-</ol></li>
-<li>Can you make a conclusion about the effect of the shape of the distribution on the relative values of the mean and median? [<em>Compare your observations from scenarios a-d.</em>]</li>
-<li>Can you make a conclusion about the effect of outliers on the relative values of the mean and median? [<em>Compare your observations from scenarios d-f.</em>]</li>
-<li>Return to the <a href="UEDAQuant_CE1.html#histograms-ii">Histograms II</a> question and, for each histogram, identify whether the mean would be less than, greater than, or approximately equal to the median.</li>
-<li>Why do you think the mean and median behave this way?</li>
+<li>What is the shape of this distribution.</li>
+<li>Are there any outliers represented in this distribution?</li>
+<li>Which measures would you use to describe the center and dispersion of this distribution?</li>
 </ol>
 <hr />
 <div class="text-center">
@@ -46,6 +49,9 @@ css: "/css/modules.css"
 </li>
 <li>
 <a href="UEDAQuant2_CE4.html">4</a>
+</li>
+<li>
+<a href="UEDAQuant2_CE5.html">5</a>
 </li>
 </ul>
 </div>
