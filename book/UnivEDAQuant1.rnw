@@ -1,0 +1,367 @@
+<<echo=FALSE, cache=FALSE, results='hide'>>=
+set_parent('IntroStats.Rnw')
+@
+
+\chapter[Quant UnivEDA Methods]{Univariate EDA - Quantitative I (Methods)} \label{chap:UnivEDAQuant1}
+\begin{ChapObj}{\boxwidth}
+  \textbf{Objectives:}
+  \begin{Enumerate}
+    \item Construct histograms with quantitative data,
+    \item Calculate summary statistics for measuring the center of quantitative data,
+    \item Calculate summary statistics for measuring the dispersion of quantitative data, and
+    \item Describe the underlying differences in how the different statistics measure center and dispersion.
+  \end{Enumerate}
+\end{ChapObj}
+
+\minitoc
+\newpage
+
+\lettrine{O}{nce data have been collected} \modrefp{chap:DataProd}, it is important to develop a ``feel'' for the data, to identify what types of values each variable takes, and to determine if there are any ``issues'' in the data. This first step in a statistical analysis is called \textsc{Exploratory Data Analysis} (EDA). We begin by examining the distribution of each variable by itself, called a univariate EDA. In later modules (see Modules \ref{chap:BivEDAQuant} and \ref{chap:BivEDACat}). Here we describe specific graphs and numerical summaries for quantitative data. In \modref{chap:UnivEDAQuant2}, interpretations from these graphs and numerical summaries will be described. Finally, analysis of categorical variables is the focus of \modref{chap:UnivEDACat}.
+
+Three data sets will be explored throughout this module.
+
+\vspace{-12pt}
+\begin{Itemize}
+  \item Measurements of water consumption in one hour by mice \tabrefp{tab:MouseData}.\footnote{See \sectref{sect:REnterData} for how to enter these data into R.}
+  \item Richter scale recordings for 15 major earthquakes \tabrefp{tab:EQData}.
+  \item The number of days of ice cover at ice gauge station 9004 in Lake Superior (data in \href{https://raw.githubusercontent.com/droglenc/NCData/master/LakeSuperiorIce.csv}{LakeSuperiorIce.csv}).\footnote{See \sectref{sect:RAltData} for a description of how to access these data. These datat are originally from the \href{http://www.nsidc.org/}{National Snow and Ice Data Center}.}  The \var{days} variable is the total number of days of ice cover at this site for nearly every ice season from 1955-56 to 1996-97 (three years were missing). These data are loaded into \R{LSI} below.
+\vspace{-6pt}
+<<echo=-2>>=
+LSI <- read.csv("data/LakeSuperiorIce.csv")
+sumLSI <- Summarize(~days,data=LSI)
+@
+\end{Itemize}
+
+<<MouseData, results='asis', echo=FALSE>>=
+mc <- c(10.6,14.1,13.7,15.2,15.4,12.5,12.9,14.3,13.0,16.6,11.5, 9.4,16.5,13.7,14.7,12.6,12.0,14.0,10.0,18.2,18.4,17.4,11.1,15.8,15.8,16.6,11.4,17.0,13.6,13.5)
+mcx <- xtable(matrix(mc,nrow=2,byrow=TRUE),digits=1,caption="Amount of water consumed (in ml) in one hour by a sample of mice.","tab:MouseData")
+print(mcx,caption.placement="top",hline.after=c(0,nrow(mcx)),include.rownames=FALSE,include.colnames=FALSE)
+@
+
+<<EQData, results='asis', echo=FALSE>>=
+EQ <- c(5.5,6.3,6.5,6.5,6.8,6.8,6.9,7.1,7.3,7.3,7.7,7.7,7.7,7.8,8.1)
+EQx <- xtable(matrix(EQ,nrow=1,byrow=TRUE),digits=1,caption="Richter scale recordings for 15 major earthquakes.","tab:EQData")
+print(EQx,caption.placement="top",hline.after=c(0,nrow(EQx)),include.rownames=FALSE,include.colnames=FALSE)
+@
+
+
+\section{Numerical Measures of Center} \label{sec:quEDACenter}
+There are three common methods to measure the center of a distribution: the mode, median, and mean.\index{Center}  The median and mean are the most widely used methods. The choice of which method to use depends, in part, on the shape of the distribution, the presence of outliers, and your purpose.
+
+The modes, medians, and means computed in this section are summary statistics -- i.e., they are computations from individuals in a sample. Thus, they should specifically be called the sample mode, sample median, and sample mean. The mode, median, and mean can also be computed from every individual in the population, if it is known. The computed values would then be parameters and would be called the population mode, population median, and population mean. See \sectref{sect:IVPPSS} for clarification on the differences between populations and samples and parameters and statistics.
+
+\subsection{Mode}
+The mode is the value that occurs most often in a data set.\index{Mode}  If the variable is continuous, then the modal class is the class of values that occurs most often in a data set. In other words, it is the class that forms the peak of a distribution. For example, in the mouse water consumption data \figrefp{fig:MouseHist2} the modal class is 13.0-13.9. Some data sets may have two ``humps,'' where each ``hump'' is considered a mode and the distribution is said to be \textbf{bimodal}.
+
+
+\subsection{Median} \label{sec:Median}
+The median is the value of the individual in the position that splits the \textbf{ordered} list of individuals into two equal-\textbf{sized} halves.\index{Median!Calculation}  In other words, if the data are ordered, half the values will be smaller than the median and half will be larger.
+
+The process for finding the median consists of three steps,\footnote{Most computer programs use a more sophisticated algorithm for computing the median and, thus, will produce different results than what will result from applying these steps.}
+\begin{Enumerate}
+  \item Order the data from smallest to largest.
+  \item Find the ``middle \textbf{position}'' ($mp$) with $mp=\frac{n+1}{2}$.
+  \item If $mp$ is an integer (i.e., no decimal), then the median is the value of the individual in that position. If $mp$ is not an integer, then the median is the average of the value immediately below and the value immediately above the $mp$.
+\end{Enumerate}
+
+As an example, the ordered mouse water consumption data from \tabref{tab:MouseData} are,
+
+<<results='asis', echo=FALSE>>=
+mcx <- xtable(matrix(mc[order(mc)],nrow=2,byrow=TRUE),digits=1)
+print(mcx,floating=FALSE,include.rownames=FALSE,include.colnames=FALSE,hline.after=NULL)
+@
+
+Because $n=30$, the $mp=\frac{30+1}{2}=15.5$. The $mp$ is not an integer so the median is the average of the values in the 15th and 16th ordered positions (i.e., the two positions closest to $mp$). Thus, the median water consumption in this sample of mice is $\frac{13.7+14.0}{2}=13.85$ mm.
+
+As another example, consider finding the median of the Richter Scale magnitude recorded for fifteen major earthquakes (ordered data in \tabref{tab:EQData}). Because $n=15$, the $mp=\frac{15+1}{2}=8$. The $mp$ is an integer so the median is the value of the individual in the 8th ordered position, which is 7.1.
+
+
+\subsection{Mean}
+The mean is the arithmetic average of the data.\index{Mean!Calculation}  The sample mean is denoted by $\bar{x}$ and the population mean by $\mu$.\index{Mean!Sample Symbol}\index{Mean!Population Symbol}  If the measurement of the generic variable $x$ on the $i$th individual is denoted as $x_{i}$, then the sample mean is computed with these two steps,
+\begin{Enumerate}
+  \item Sum (i.e., add together) all of the values -- $\Sum_{i=1}^{n}x_{i}$.
+  \item Divide by the number of individuals in the sample -- $n$.
+\end{Enumerate}
+or more succinctly summarized with this equation,
+
+\begin{equation} \label{eqn:SampleMean}
+     \bar{x} = \frac{\Sum_{i=1}^{n}x_{i}}{n}
+\end{equation}
+
+For example, the sample mean of the mouse consumption data is computed as follows:
+
+\[ \bar{x} = \frac{9.4+10.0+10.6+11.1+11.4+11.5+ ... +16.6+16.6+17.0+17.4+18.2}{30} = \frac{421.2}{30} = 14.04  \]
+
+
+\subsection{Measures of Center in R} \label{sect:DescStatsCenter}\index{Mean!Calculation}\index{Median!Calculation}
+The mean and median (along with other measures) are calculated in R with \R{Summarize()} using a one-side formula of the form \R{\TILDE quant}, where \R{quant} generically represents the quantitative variable, and the \R{data=} argument. The number of digits after the decimal place may be controlled with \R{digits=}.
+<<>>=
+Summarize(~days,data=LSI,digits=2)
+@
+
+From this it is seen that the sample mean is \Sexpr{formatC(sumLSI["mean"],format="f",digits=2)} days and the sample median is \Sexpr{formatC(sumLSI["median"],format="f",digits=2)} days.
+
+\begin{exsection}
+  \item \label{revex:quEDABrule} \rhw{} The following values are the maximum gauge heights of the Bois Brule River in Brule, WI from 10-25Feb05.\footnote{Data collected from \href{http://waterdata.usgs.gov/wi/nwis/uv?04025500}{USGS}.}  Compute the mean and median of these data both ``by hand'' and with R. [HINT: Load data from a CSV file as in \sectref{sect:REnterData}.] \ansref{ans:quEDABrule}
+  \begin{Verbatim}[xleftmargin=5mm]
+1.56 1.54 1.54 1.57 1.58 1.61 1.60 1.69 1.99 2.11 1.98 1.76 1.69 1.99 1.86 1.53
+  \end{Verbatim}
+
+  \item \label{revex:quEDAWIc} \rhw{} The following values are the population density (number of people per acre of land) for 15 randomly selected Wisconsin counties.\footnote{Data collected from \href{http://factfinder.census.gov/}{U.S. census}.}  Compute the mean and median of these data both ``by hand'' and with R. [HINT: Load data from a CSV file as in \sectref{sect:REnterData}.] \ansref{ans:quEDAWIC}
+  \begin{Verbatim}[xleftmargin=5mm]
+429.0  67.8  52.1  97.4  57.9 354.9  16.2  19.1
+127.0  27.6  10.2  54.6  28.8  30.1  20.2
+  \end{Verbatim}
+
+  \item \label{revex:quEDACreatPhosph2} \rhw{} Compute the mean and median of the creatine phosphate data in Exercise \ref{revex:quEDACreatPhosph}. \ansref{ans:quEDACreatPhosph2}
+
+    \item \label{revex:quEDAAirPolln2} \rhw{} \hspace{12pt} Compute the mean and median of the carbon monoxide data in Exercise \ref{revex:quEDAAirPolln}. \ansref{ans:quEDAAirPolln2}
+\end{exsection}
+
+
+\section{Numerical Measures of Dispersion}
+There are three common measures of the dispersion of a distribution: the range, inter-quartile range (IQR), and standard deviation.\index{Dispersion}  The standard deviation is the most widely used. The choice of which method to use depends, however, on what statistic you chose as the measure of center (which, as described in \sectref{sect:MeanMedian}, depends on the shape of the distribution, presence of outliers, and your purpose).
+
+The range, IQR, and standard deviation computed in this section are summary statistics -- i.e., they are computations from individuals in a sample. Thus, they should all be preceded with ``sample.''  See \sectref{sect:IVPPSS} for clarification on the differences between populations and samples and parameters and statistics.
+
+
+\subsection{Range}
+The range is the difference between the maximum and minimum values in the data and measures the ultimate dispersion or spread of the data.\index{Range} The range in the mouse consumption data \tabrefp{tab:MouseData} is \Sexpr{formatC(max(mc),format="f",digits=1)}-\Sexpr{formatC(min(mc),format="f",digits=1)} = \Sexpr{formatC(max(mc)-min(mc),format="f",digits=1)}.
+
+The range should \textbf{never be used by itself} as a measure of dispersion. The range is extremely sensitive to outliers and is best used only to show all possible values present in the data. The range (as strictly defined) also suffers from a lack of information. For example, what does a range of 9 mean?  It can have a completely different interpretation if it came from values of 1 to 10 or if it came from values of 1000 to 1009. Thus, the range is more instructive if presented as both the maximum and minimum value rather than the difference.
+
+
+\subsection{IQR}
+Quartiles are the values for the three individuals that divide ordered data into four (approximately) equal parts.\index{Quartile}  Finding the three quartiles consists of finding the median, splitting the data into two equal parts at the median, and then finding the medians of the two halves.\footnote{You should review how a median is computed before proceeding with this section.}  A concern in this process is that the median is NOT part of either half if there is an odd number of individuals. These steps are summarized as,
+\begin{Enumerate}
+  \item Order the data from smallest to largest.
+  \item Find the median -- this is the second quartile (Q2).
+  \item Split the data into two halves at the median. If $n$ is odd (so that the median is one of the observed values), then the median is not part of either half.\footnote{Some authors put the median into both halves when $n$ is odd. The difference between the two methods is minimal for large $n$.}
+  \item Find the median of the lower half of data -- this is the 1st quartile (Q1).
+  \item Find the median of the upper half of data -- this is the third quartile (Q3).
+\end{Enumerate}
+
+These calculations are illustrated with the earthquake data \tabrefp{tab:EQData}. Recall from above \sectrefp{sec:Median} that the median (=7.1) is in the eighth position of the ordered data. The value in the eighth position will not be included in either half. Thus, the two halves of the data are \Sexpr{paste(EQ[1:7],collapse=" ")} and \Sexpr{paste(EQ[9:15],collapse=" ")}. Each half contains seven individuals, so the middle position for each half is $mp=\frac{7+1}{2}=4$. Thus, the median for each half is the individual in the fourth position. Therefore, the median of the first half is $Q1=6.5$ and the median of the second half is $Q3=7.7$.
+
+As another example, consider the quartiles of the mouse consumption data (the median was computed in \sectref{sec:Median}). Because $n=30$ is even, the halves of the data split naturally with 15 individuals in each half. Therefore, the $mp=\frac{15+1}{2}=8$ and the median of each half is the value of the individual in the eighth position. Thus, $Q1=12.5$ and $Q3=15.8$. In summary, the first, second, and third quartiles for the mouse water consumption data are 12.5, 13.85, and 15.8, respectively. These three values separate the ordered individuals into approximately four equally-sized groups -- those with values less than 12.5, with values between 12.5 and 13.85, with values between 13.85 and 15.8, and with values greater than 15.8.
+
+The interquartile range is the difference between the third quartile (Q3) and the first quartile (Q1), namely Q3-Q1.\index{IQR!Calculation}  The IQR for the mouse consumption data is, thus, 15.8-12.5 = 3.3. Intuitively, the IQR can be thought of as the ``range of the middle half of the data.''  The IQR is favored over the range because it is not sensitive to outliers (\textit{you should convince yourself that this is true}). As with the range, however, the IQR suffers from a lack of information. Thus, you should always present the IQR by presenting both Q1 and Q3 rather than the difference between the two. Finally, the IQR should be chosen as the measure of dispersion when the median is used as the measure of center because they are conceptually related (both rely on position rather than actual value).\index{IQR!When to use}
+
+
+\subsection{Standard Deviation}\label{sect:StdDev}
+The sample standard deviation, denoted by $s$, can be thought of as ``the average difference between the observed values and the mean.''\footnote{This statement is not strictly correct as will become obvious. However, this is an acceptable general interpretation of $s$.}\index{Standard Deviation!Sample symbol}\index{Standard Deviation!Interpretation}\index{Standard Deviation!Calculation}\index{Variance!Calculation}  The standard deviation is computed with these six steps:
+\begin{Enumerate}
+  \item Compute the sample mean (i.e., $\bar{x}$).
+  \item For each value ($x_{i}$), find the difference between the value and the mean, namely $x_{i}-\bar{x}$.
+  \item Square each difference, namely $(x_{i}-\bar{x})^{2}$.
+  \item Add together all the squared differences.
+  \item Divide this sum by $n-1$. [\textit{Stopping here gives the sample variance, $s^{2}$.}]
+  \item Square root the result from the previous step to get $s$.
+\end{Enumerate}
+These steps are neatly summarized with
+\begin{equation}
+  \label{eqn:SampleSD}
+     s = \sqrt{\frac{\Sum_{i=1}^{n}(x_{i}-\bar{x})^{2}}{n-1}}
+\end{equation}
+
+The calculation of the standard deviation of the earthquake data \tabrefp{tab:EQData} is facilitated with the calculations shown in \tabref{tab:SDCalc}. In \tabref{tab:SDCalc}, note that $\bar{x}$ is equal to the sum of the ``Value'' column divided by $n=15$ (i.e., $\bar{x}=7.07$). The ``Diff'' column which contains each observed value minus the calculated $\bar{x}$ (i.e., Step 2). The ``Diff$^2$'' column contains the square of the previously calculated differences (i.e., Step 3). The sum of the ``Diff$^2$'' column is Step 4. The sample variance (i.e., Step 5) is equal to this sum divided by $n-1=14$ or $\frac{6.773}{14}=0.484$. Finally, the sample standard deviation is the square root of the sample variance or $s=\sqrt{0.484}=0.696$. Thus, on average, each earthquake is approximately 0.7 Richter Scale units different than the average earthquake in these data.
+
+\begin{table}[htbp]
+  \caption{Table showing an efficient calculation of the standard deviation of the earthquake data.}
+  \label{tab:SDCalc}
+    \centering
+    \begin{tabular}{cccc}
+\hline\hline
+Indiv & Value & Diff & Diff$^2$ \\
+i & $x_{i}$ & $x_{i}-\bar{x}$ & $(x_{i}-\bar{x})^{2}$ \\
+\hline
+1 & 5.5 & -1.57 & 2.454 \\
+2 & 6.3 & -0.77 & 0.588 \\
+3 & 6.5 & -0.57 & 0.321 \\
+4 & 6.5 & -0.57 & 0.321 \\
+5 & 6.8 & -0.27 & 0.071 \\
+6 & 6.8 & -0.27 & 0.071 \\
+7 & 6.9 & -0.17 & 0.028 \\
+8 & 7.1 & 0.03 & 0.001 \\
+9 & 7.3 & 0.23 & 0.054 \\
+10 & 7.3 & 0.23 & 0.054 \\
+11 & 7.7 & 0.63 & 0.401 \\
+12 & 7.7 & 0.63 & 0.401 \\
+13 & 7.7 & 0.63 & 0.401 \\
+14 & 7,8 & 0.73 & 0.538 \\
+15 & 8.1 & 1.03 & 1.068 \\
+\hline
+Sum & 106 & 0 & 6.773 \\
+\hline\hline
+    \end{tabular}
+\end{table}
+
+\warn{In the standard deviation calculations don't forget to take the square root of the variance.}
+
+There are three characteristics of the standard deviation that you should be aware of:\index{Standard Deviation!Characteristics}
+\begin{Enumerate}
+  \item $s \geq$ 0 ($s$=0 only if there is no dispersion; i.e., all values are the same).
+  \item $s$ is strongly influenced by outliers.
+  \item $s$ is inflated for skewed distributions (similar to the mean).
+\end{Enumerate}
+The final two characteristics are a result of the standard deviation being computed from the \textbf{values}, rather than the position, of the individuals (as is the mean). The argument here is the same as it was for the mean. In fact, it should be obvious that the mean and standard deviation are conceptually linked (i.e., they both require the actual values and the mean is within the standard deviation calculation).
+
+At the beginning of this section, the standard deviation was defined as ``essentially the average difference between the values and the mean.''\index{Standard Deviation!Interpretation} \textbf{Essentially} was emphasized because the formula for the standard deviation does not simply add together the differences and divide by $n$ as this definition would imply. Notice in \tabref{tab:SDCalc} that the sum of the differences from the mean is 0. This will be the case for all standard deviation calculations using the correct mean, because the mean balances the distance to individuals below the mean with the distance of individuals above the mean (review \sectref{sect:MeanMedian}). Thus, the mean difference will always be zero. This ``problem'' is corrected by squaring the differences before summing them. To get back to the original units, the squaring is later ``reversed'' by the square root. So, more accurately, the standard deviation is the square root of the average squared difference between the values and the mean. Therefore, the original definition of the standard deviation is strictly incorrect; however, it works well as a practical definition of the meaning of the standard deviation.
+
+\warn{Use the fact that the sum of all differences from the mean equals zero as a check of your standard deviation calculation.}
+
+Further note that the mean is the value that minimizes the value of the standard deviation calculation -- i.e., putting any other value besides the mean into the standard deviation equation will result in a larger value.
+
+Finally, why is the sum of the squared differences divided by $n-1$, rather than $n$, in the standard deviation calculation?  Recall (from \sectref{sect:IVPPSS}) that statistics are meant to estimate parameters. The sample standard deviation is supposed to estimate the population standard deviation ($\sigma$). Theorists have shown that if we divide by $n$, $s$ will consistently underestimate $\sigma$. Thus, $s$ calculated in this way would be a biased estimator of $\sigma$. Theorists have found, though, that dividing by $n-1$ will cause $s$ to be an unbiased estimator of $\sigma$. Being unbiased is generally good -- it means that on average our statistic estimates our parameter (this concept is discussed in more detail in \modref{chap:SamplingDist}).
+
+
+\subsection{Measures of Dispersion in R} \label{sect:DescStatsDispersion}\index{Standard Deviation!Calculation}\index{IQR!Calculation}\index{Quartile!Calculation}\index{Range!Calculation}
+The minimum, maximum, Q1, Q3, and standard deviation are calculated with \R{Summarize()} as described previously for the mean and median. Thus, $s=$\Sexpr{formatC(sumLSI["sd"],format="f",digits=2)}, the IQR is from $Q1=$\Sexpr{formatC(sumLSI["Q1"],format="f",digits=2)} to $Q3=$\Sexpr{formatC(sumLSI["Q3"],format="f",digits=2)}, and the range is from \Sexpr{formatC(sumLSI["min"],format="f",digits=2)} to \Sexpr{formatC(sumLSI["max"],format="f",digits=2)}.
+<<>>=
+Summarize(~days,data=LSI,digits=2)
+@
+
+\vspace{-8pt}
+\begin{exsection}
+  \item \label{revex:quEDABruleDisp} \rhw{} Compute the range, IQR, and standard deviation for the maximum gauge heights of the Bois Brule River in Brule, WI from Exercise \ref{revex:quEDABrule} both ``by hand'' and with R. \ansref{ans:quEDABruleDisp}
+
+  \item \label{revex:quEDAWIDisp} \rhw{} Compute the range, IQR, and standard deviation for the population density of Wisconsin counties from Exercise \ref{revex:quEDAWIc} both ``by hand'' and with R. \ansref{ans:quEDAWIDisp}
+
+  \item \label{revex:quEDACreatPhosph3} \rhw{} Compute the range, IQR, and standard deviation of the creatine phosphate data in Exercise \ref{revex:quEDACreatPhosph}. \ansref{ans:quEDACreatPhosph3}
+
+  \item \label{revex:quEDAAirPolln3} \rhw{} \hspace{12pt} Compute the range, IQR, and standard deviation of the CO data in Exercise \ref{revex:quEDAAirPolln}. \ansref{ans:quEDAAirPolln3}
+\end{exsection}
+
+
+
+
+\section{Graphs}
+\subsection{Histograms}\index{Histogram!Construction}\index{Sample Distribution!Histogram}
+\subsubsection{General Construction}
+A histogram is a plot of the frequency of occurrence of individuals (y-axis) in classes of values of the variable (x-axis). The steps for constructing a histogram from raw data are:
+\vspace{-6pt}
+\begin{Enumerate}
+  \item Create categorical classes of values for the variable of interest,
+  \item Count the frequency of individuals in each class,
+  \item Construct a graph template with values of the variable on the x-axis and frequency of individuals on the y-axis, and
+  \item Draw bars on the graph that are as wide as the class of values and as tall as the frequency of individuals.
+\end{Enumerate}
+
+These steps are illustrated with the mouse water consumption data. The easiest way to create a list of classes is to divide the difference between the maximum and minimum values in the data by a ``nice'' number near eight to ten, and then round up to make classes that are easy to work with. The ``nice'' number between eight and ten is chosen to make the division easy and will be the number of classes. In this example, the range of values is 18.4-9.4 = 9.0. A ``nice'' value between eight and ten to divide this range by is nine. Thus, the classes of data should be one unit wide and, for ease, will begin at 9 mm \tabrefp{tab:MouseFreqTable}.
+
+\begin{table}[htbp]
+  \caption{Frequency table of mouse consumption values in one-unit classes.}
+  \label{tab:MouseFreqTable}
+    \begin{Verbatim}[xleftmargin=25mm]
+Class     Frequency
+ 9.0- 9.9      1
+10.0-10.9      2
+11.0-11.9      3
+12.0-12.9      4
+13.0-13.9      5
+14.0-14.9      4
+15.0-15.9      4
+16.0-16.9      3
+17.0-17.9      2
+18.0-18.9      2
+    \end{Verbatim}
+\end{table}
+
+The number of individuals with a value of the variable in each class is called a frequency and are shown in the second column of \tabref{tab:MouseFreqTable}. The plot is prepared with values of the classes forming the x-axis and frequencies forming the y-axis (\figref{fig:MouseHist1}-Left). The first bar added to this skeleton plot has the bottom-left corner at 9 and the bottom-right corner at 10 on the x-axis, and a height equal to the frequency of individuals in the 9 to 9.9 class (\figref{fig:MouseHist1}-Center). A second bar is then added with the bottom-left corner at 10 and the bottom-right corner at 11 on the x-axis, and a height equal to the frequency of individuals in the 10 to 10.9 class (\figref{fig:MouseHist1}-Right). This process is continued with the remaining classes until the full histogram is constructed \figrefp{fig:MouseHist2}.
+
+<<MouseHist1, echo=FALSE, fig.width=10.5, out.width='.95\\linewidth', fig.cap="Steps illustrating the development of a histogram.">>=
+par(mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),mfcol=c(1,3),las=1,tcl=-0.2)
+tmp <- data.frame(mc)
+xlbl <- "Water Consumption (mm)"
+hist(~c(0),w=1,xlab=xlbl,xlim=c(9,19),ylim=c(0,5),col="white")
+hist(~mc,data=filterD(tmp,mc<10),w=1,xlab=xlbl,xlim=c(9,19),ylim=c(0,5))
+hist(~mc,data=filterD(tmp,mc<11),w=1,xlab=xlbl,xlim=c(9,19),ylim=c(0,5))
+@
+
+\vspace{24pt}  % handles an overlapping problem with the floats
+
+<<MouseHist2, echo=FALSE, fig.cap="Histogram of water consumption (mm) by mice.">>=
+hist(~mc,data=tmp,w=1,xlab=xlbl,xlim=c(9,19),ylim=c(0,5))
+@
+
+Ideally eight to ten classes (i.e., bars) are used to construct a histogram. Too many or too few bars make it difficult to identify the shape and may lead to different interpretations. A dramatic example of the effect of changing the number of classes is seen in histograms of the length of eruptions for the Old Faithful geyser \figrefp{fig:histOF}.
+
+<<histOF, echo=FALSE, cache=TRUE, fig.show='animate', fig.cap='Histogram of length (minutes) of eruptions for Old Faitfhul geyser with varying number of classes.', aniopts='controls,palindrome,autoplay'>>=
+brksw <- c(seq(0.02,1,0.02),1.5,2)
+for (i in brksw) hist(~eruptions,data=faithful,breaks=seq(1.5,6,i),xlim=c(1.5,6),xlab="Duration of Eruption (mins)")
+@
+
+\subsubsection{Histograms in R}
+A simple (by default) histogram is constructed with \R{hist()} using a one-sided formula of the form \R{\TILDE quant}, where \R{quant} generically represents the quantitative variable, and the corresponding data frame in \R{data=}. The x-axis label may be improved from the default value by including a label in \R{xlab=}.\footnote{\R{xlab=} is for the ``x-axis label.''}  The width of the classes may be controlled by including a class width in \R{w=}.\footnote{The endpoints for the classes may also be set by giving a vector of endpoints to \R{breaks=}.}
+
+<<Histogram1, fig.cap="Histograms of the duration of ice cover at ice gauge 9004 in Lake Superior using the default class widths (Left) and widths of 20 days (Right).">>=
+hist(~days,data=LSI,xlab="Days of Ice Cover")      # Fig 5.4-Left
+hist(~days,data=LSI,xlab="Days of Ice Cover",w=20) # Fig 5.4-Right
+@
+
+\warn{The default histogram should be modified by properly labeling the x-axis and possibly changing the class width.}
+
+\begin{exsection}
+  \item \label{revex:quEDAHistVar} Histograms are constructed from what type of variables? \ansref{ans:quEDAHistVar}
+  \item \label{revex:quEDAHistX} What type of values are plotted on the x-axis of a histogram? \ansref{ans:quEDAHistX}
+  \item \label{revex:quEDAHistY} What type of values are plotted on the y-axis of a histogram? \ansref{ans:quEDAHistY}
+  \item \label{revex:quEDAHistBins} What is the ideal number of bars on a histogram? \ansref{ans:quEDAHistBins}
+  \item \label{revex:quEDACreatPhosph} \rhw{} The table below contains the concentrations (International Units per liter) of creatine phosphokinase (an enzyme related to muscle and brain functions) in 36 male volunteers. Construct a histogram from these data. [HINT: Load data from a CSV file as in \sectref{sect:REnterData}.]\ansref{ans:quEDACreatPhosph}
+    \begin{Verbatim}[xleftmargin=5mm]
+121  82 100 151  68  58  95 145  64 119 104 110 113 118 203  62  83  67
+201 101 163  84  57 139  60  78  94  93  92 110  25 123  70  48  95  42
+    \end{Verbatim}
+  \item \label{revex:quEDAAirPolln} \rhw{} The table below contains the carbon monoxide levels (ppm) arising from one of the stacks for an oil refinery northeast of San Francisco between April 16 and May 16, 1993. The measurements were submitted as evidence for establishing a baseline to the Bay Area Air Quality Management District (BAAQMD).\footnote{BAAQMD personnel had also made nine independent measurements of the carbon monoxide from this same stack over the period from September 11, 1990, to March 30, 1993, (which are not shown).}  Construct a histogram from these data. [HINT: Load data from a CSV file as in \sectref{sect:REnterData}.]\ansref{ans:quEDAAirPolln}
+    \begin{Verbatim}[xleftmargin=5mm]
+30 30 34 36 37 38 40 42 43  43  45  52  55  58 58 58
+59 63 63 71 75 85 86 86 99 102 102 141 153 261 21
+    \end{Verbatim}
+\end{exsection}
+
+
+
+\subsection{Boxplots}
+The median, range, and IQR form the \textbf{five-number summary}.\index{Five Number Summary}  Specifically, the five-number summary consists of the minimum value, Q1, median, Q3, and maximum value. The five-number summary for the mouse consumption data is \Sexpr{formatC(sumLSI["min"],format="f",digits=1)}, \Sexpr{formatC(sumLSI["Q1"],format="f",digits=1)}, \Sexpr{formatC(sumLSI["median"],format="f",digits=1)}, \Sexpr{formatC(sumLSI["Q3"],format="f",digits=1)}, and \Sexpr{formatC(sumLSI["max"],format="f",digits=1)} (all values computed in the previous section).
+
+The five-number summary may be displayed as a \textbf{boxplot}.\index{Boxplot!Construction}  A traditional boxplot \figrefp{fig:MouseBoxplot} consists of a horizontal line at the median, horizontal lines at Q1 and Q3 that are connected with vertical lines to form a box, and vertical lines from Q1 to the minimum value and from Q3 to the maximum value. The vertical lines have been modified on modern boxplots to allow easier detection of outliers. Specifically, the upper line extends from Q3 to the last observed value that is within 1.5 IQRs of Q3 and the lower line extends from Q1 to the last observed value that is within 1.5 IQRs of Q1. Observed values outside of the whiskers are termed ``outliers'' by this algorithm and are typically plotted with circles or asterisks. If no individuals are deemed ``outliers'' by this algorithm, then the two traditional and modern boxplots will be the same.
+
+<<MouseBoxplot, echo=FALSE, fig.cap="Boxplot of the mouse consumption data.">>=
+boxplot(mc,ylab="Water Consumption (mm)")
+@
+
+A boxplot is constructed in R with \R{boxplot()}. This function requires only the name of the quantitative variable as the first argument although the x- and y-axes are labeled with \R{xlab=} and \R{ylab=}, respectively.
+
+\newpage
+
+
+
+
+\section{Multiple Groups} \label{sect:MultGroups}
+It is common to conduct a univariate EDA for a quantitative variable separately for groups of individuals. In these cases it is beneficial to have a function that will efficiently construct a histogram and compute summary statistics for the quantitative variable separated by the levels of a factor variable. Separate histograms are constructed with \R{hist()} if the first argument is a ``formula'' of the type \R{quant\TILDE group} where \R{quant} represents the quantitative response variable of interest and \R{group} represents the factor variable that indicates to which group the individual belongs.\index{Histogram!Multiple}  The data frame that contains \R{quant} and \R{group} is given to \R{data=}. Summary statistics are separated by group by supplying the same formula and \R{data=} arguments to \R{Summarize()}.
+
+As an example, suppose that you want to examine the average annual days of ice for each decade (using the \R{LSI} data). One might expect to use the \R{days\TILDE decade} formula except that the \R{decade} variable is not a factor.\footnote{It was not a factor because the data in \R{decade} looks numeric to R.}  This can be connverted to a factor by including the variable to the left of the assignment operator and in \R{factor()}. The desired grouping variable may already be a factor in many data.frames and, thus, will not require modification with \R{factor()}.
+<<>>=
+LSI$decade <- factor(LSI$decade)
+str(LSI)
+@
+
+Histograms \figrefp{fig:mhist1} and summary statistics separated by decade are then constructed as below.
+<<mhist1, fig.width=7, fig.height=7, out.width='.8\\linewidth', fig.cap="Histograms of the duration of ice cover at ice gauge 9004 in Lake Superior by each decade.">>=
+hist(days~decade,data=LSI,ylab="Days of Ice Cover",w=20)
+Summarize(days~decade,data=LSI,digits=2)
+@
+
+Side-by-side boxplots \figrefp{fig:Boxplot1} are an alternative to separated histograms and are constructed by including the same formula and \R{data=} arguments to \R{boxplot()}.
+<<Boxplot1, fig.cap="Boxplot of the duration of ice cover at ice gauge 9004 in Lake Superior by each decade.">>=
+boxplot(days~decade,data=LSI,ylab="Days of Ice Cover",xlab="Decade")
+@
+
+\clearpage
+\begin{exsection}
+  \item \label{revex:EDAArsenic1} \rhw{} Arsenic concentrations were measured in the well water and in the toe nails of 21 people with home wells. Also recorded were the person's age, sex, and qualitative measurements of usage for drinking and cooking. The data are found in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Arsenic.csv}{Arsenic.csv}. Load these data into R to answer the questions below. \ansref{ans:EDAArsenic1}
+  \begin{Enumerate}
+    \item Construct a univariate EDA for the well water measurements.
+    \item Construct a univariate EDA for the measurements of arsenic in the toe nails.
+    \item Construct a univariate EDA for the toe nail arsenic levels separated by levels of drinking water usage.
+  \end{Enumerate}
+\end{exsection}

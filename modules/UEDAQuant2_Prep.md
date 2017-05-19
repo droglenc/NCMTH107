@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Read/Viewing Guide
-subtitle: Univ EDA - Quantitative Interpretation
+subtitle: Univariate EDA - Quantitative II (Interpretation)
 css: "/css/modules.css"
 ---
 

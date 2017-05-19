@@ -62,39 +62,41 @@ for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
 @
 
     \part{Exploratory Data Analysis}
-<<child-UnivEDAQuant, child='UnivEDAQuant.Rnw', eval=TRUE>>=
+<<child-UnivEDAQuant1, child='UnivEDAQuant1.Rnw', eval=TRUE>>=
 @
-<<child-UnivEDACat, child='UnivEDACat.Rnw', eval=TRUE>>=
+<<child-UnivEDAQuant2, child='UnivEDAQuant2.Rnw', eval=TRUE>>=
 @
-<<child-NormDist, child='NormDist.Rnw', eval=TRUE>>=
+<<child-UnivEDACat, child='UnivEDACat.Rnw', eval=FALSE>>=
 @
-<<child-BivEDAQuant, child='BivEDAQuant.Rnw', eval=TRUE>>=
+<<child-NormDist, child='NormDist.Rnw', eval=FALSE>>=
 @
-<<child-BivEDACat, child='BivEDACat.Rnw', eval=TRUE>>=
+<<child-BivEDAQuant, child='BivEDAQuant.Rnw', eval=FALSE>>=
 @
-<<child-Regress, child='Regress.Rnw', eval=TRUE>>=
+<<child-BivEDACat, child='BivEDACat.Rnw', eval=FALSE>>=
+@
+<<child-Regress, child='Regress.Rnw', eval=FALSE>>=
 @
 
     \part{Inference Concepts}
-<<child-ProbIntro, child='ProbIntro.Rnw', eval=TRUE>>=
+<<child-ProbIntro, child='ProbIntro.Rnw', eval=FALSE>>=
 @
-<<child-SamplingDist, child='SamplingDist.Rnw', eval=TRUE>>=
+<<child-SamplingDist, child='SamplingDist.Rnw', eval=FALSE>>=
 @
-<<child-HypothesisTests, child='HypothesisTests.Rnw', eval=TRUE>>=
+<<child-HypothesisTests, child='HypothesisTests.Rnw', eval=FALSE>>=
 @
-<<child-ConfidenceRegions, child='ConfidenceRegions.Rnw', eval=TRUE>>=
+<<child-ConfidenceRegions, child='ConfidenceRegions.Rnw', eval=FALSE>>=
 @
 
     \part{Specific Hypothesis Tests}
-<<child-ZTest, child='ZTest.Rnw', eval=TRUE>>=
+<<child-ZTest, child='ZTest.Rnw', eval=FALSE>>=
 @
-<<child-tTest1, child='tTest1.Rnw', eval=TRUE>>=
+<<child-tTest1, child='tTest1.Rnw', eval=FALSE>>=
 @
-<<child-tTest2, child='tTest2.Rnw', eval=TRUE>>=
+<<child-tTest2, child='tTest2.Rnw', eval=FALSE>>=
 @
-<<child-ChiSquare, child='chiSquare.Rnw', eval=TRUE>>=
+<<child-ChiSquare, child='chiSquare.Rnw', eval=FALSE>>=
 @
-<<child-GOF, child='GoodnessOfFit.Rnw', eval=TRUE>>=
+<<child-GOF, child='GoodnessOfFit.Rnw', eval=FALSE>>=
 @
 
     \cleardoublepage

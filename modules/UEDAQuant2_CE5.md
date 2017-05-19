@@ -35,8 +35,8 @@ Enter the data into Excel, save as a CSV, and load the data into R.  [**HINT:** 
   <li><a href="UEDAQuant2_CE1.html">1</a></li>
   <li><a href="UEDAQuant2_CE2.html">2</a></li>
   <li><a href="UEDAQuant2_CE3.html">3</a></li>
-  <li class="active"><a href="#">4</a></li>
-  <li><a href="UEDAQuant2_CE5.html">5</a></li>
+  <li><a href="UEDAQuant2_CE4.html">4</a></li>
+  <li class="active"><a href="#">5</a></li>
   <li><a href="UEDAQuant2_CE6.html">6</a></li>
 </ul>
 </div>
