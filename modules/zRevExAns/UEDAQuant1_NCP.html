@@ -1,0 +1,103 @@
+---
+layout: page
+title: "Review Exercise Key"
+subtitle: "Univariate EDA Quantitative Methods I"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<p>The calculation of the median and IQR is shown below.</p>
+<pre><code>Median (=94.5) is the average of values in positions 18 and 19.
+  25 42 48 57 58 60 62 64 67 68 70 78 82 83 84 92 93 [94 95] 95 100 101 104 110 110 113 118 119 121 123 139 145 151 163 201 203
+
+Q1 (=67.5) is average of values in positions 9 and 10 of the lower half.
+  25 42 48 57 58 60 62 64 [67 68] 70 78 82 83 84 92 93 94
+
+Q3 (=118.5) is average of values in positions 9 and 10 of the upper half.
+  95 95 100 101 104 110 110 113 [118 119] 121 123 139 145 151 163 201 203</code></pre>
+<p>The calculation of the mean and standard deviation is shown below.</p>
+<pre><code>Demonstration of parts of a std. dev. calculation.
+
+       x      diffs     diffs.sq
+1    121  22.722222   516.299383
+2     82 -16.277778   264.966049
+3    100   1.722222     2.966049
+4    151  52.722222  2779.632716
+5     68 -30.277778   916.743827
+6     58 -40.277778  1622.299383
+7     95  -3.277778    10.743827
+8    145  46.722222  2182.966049
+9     64 -34.277778  1174.966049
+10   119  20.722222   429.410494
+11   104   5.722222    32.743827
+12   110  11.722222   137.410494
+13   113  14.722222   216.743827
+14   118  19.722222   388.966049
+15   203 104.722222 10966.743827
+16    62 -36.277778  1316.077160
+17    83 -15.277778   233.410494
+18    67 -31.277778   978.299383
+19   201 102.722222 10551.854938
+20   101   2.722222     7.410494
+21   163  64.722222  4188.966049
+22    84 -14.277778   203.854938
+23    57 -41.277778  1703.854938
+24   139  40.722222  1658.299383
+25    60 -38.277778  1465.188272
+26    78 -20.277778   411.188272
+27    94  -4.277778    18.299383
+28    93  -5.277778    27.854938
+29    92  -6.277778    39.410494
+30   110  11.722222   137.410494
+31    25 -73.277778  5369.632716
+32   123  24.722222   611.188272
+33    70 -28.277778   799.632716
+34    48 -50.277778  2527.854938
+35    95  -3.277778    10.743827
+36    42 -56.277778  3167.188272
+sum 3538   0.000000 57071.222222
+
+Mean = x-bar = 3538 / 36 = 98.27778 
+
+Variance = s^2 = 57071.22 / 35 = 1630.606 
+
+Std. Dev = s = sqrt(1630.606) = 40.38077</code></pre>
+<div id="r-code-appendix" class="section level1">
+<h1>R Code Appendix</h1>
+<pre><code>library(NCStats)
+df &lt;- read.csv(&quot;data/CreatinePhosphate.csv&quot;)
+Summarize(~cp,data=df)</code></pre>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

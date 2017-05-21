@@ -1,0 +1,100 @@
+---
+layout: page
+title: "Review Exercise Key"
+subtitle: "Univariate EDA Quantitative Methods I"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<p>The calculation of the median and IQR is shown below.</p>
+<pre><code>Median (=58) is the value in position 16.
+  21 30 30 34 36 37 38 40 42 43 43 45 52 55 58 [58] 58 59 63 63 71 75 85 86 86 99 102 102 141 153 261
+
+Q1 (=40) is the value in position 8 of the lower half.
+  21 30 30 34 36 37 38 [40] 42 43 43 45 52 55 58
+
+Q3 (=86) is the value in position 8 of the upper half.
+  58 59 63 63 71 75 85 [86] 86 99 102 102 141 153 261
+
+**Note that the median (=58) is NOT in both halves.</code></pre>
+<p>The calculation of the mean and standard deviation is shown below.</p>
+<pre><code>Demonstration of parts of a std. dev. calculation.
+
+       x      diffs     diffs.sq
+1     30 -39.870968  1589.694069
+2     30 -39.870968  1589.694069
+3     34 -35.870968  1286.726327
+4     36 -33.870968  1147.242456
+5     37 -32.870968  1080.500520
+6     38 -31.870968  1015.758585
+7     40 -29.870968   892.274714
+8     42 -27.870968   776.790843
+9     43 -26.870968   722.048907
+10    43 -26.870968   722.048907
+11    45 -24.870968   618.565036
+12    52 -17.870968   319.371488
+13    55 -14.870968   221.145682
+14    58 -11.870968   140.919875
+15    58 -11.870968   140.919875
+16    58 -11.870968   140.919875
+17    59 -10.870968   118.177940
+18    63  -6.870968    47.210198
+19    63  -6.870968    47.210198
+20    71   1.129032     1.274714
+21    75   5.129032    26.306972
+22    85  15.129032   228.887617
+23    86  16.129032   260.145682
+24    86  16.129032   260.145682
+25    99  29.129032   848.500520
+26   102  32.129032  1032.274714
+27   102  32.129032  1032.274714
+28   141  71.129032  5059.339230
+29   153  83.129032  6910.436004
+30   261 191.129032 36530.306972
+31    21 -48.870968  2388.371488
+sum 2166   0.000000 67195.483871
+
+Mean = x-bar = 2166 / 31 = 69.87097 
+
+Variance = s^2 = 67195.48 / 30 = 2239.849 
+
+Std. Dev = s = sqrt(2239.849) = 47.32705</code></pre>
+<div id="r-code-appendix" class="section level1">
+<h1>R Code Appendix</h1>
+<pre><code>library(NCStats)
+df &lt;- read.csv(&quot;data/Polln.csv&quot;)
+Summarize(~polln,data=df)</code></pre>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

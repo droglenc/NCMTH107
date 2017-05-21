@@ -15,26 +15,26 @@ output:
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/zRevExAns/")
 source("../../rhelpers/rhelpers.R")
-modHTML("UEDAQuant1_NBrule")
+modHTML("UEDAQuant1_NCP")
 ```
 
 The calculation of the median and IQR is shown below.
 ```{r echo=FALSE, comment=""}
-hts <- c(1.56,1.54,1.54,1.57,1.58,1.61,1.60,1.69,
-         1.99,2.11,1.98,1.76,1.69,1.99,1.86,1.53)
-iqrCalc(hts)
+cp <- c(121,82,100,151,68,58,95,145,64,119,104,110,113,118,203,62,83,67,201,
+101,163,84,57,139,60,78,94,93,92,110,25,123,70,48,95,42)
+iqrCalc(cp)
 ```
 
 The calculation of the mean and standard deviation is shown below.
 ```{r echo=FALSE, comment=""}
-sdCalc(hts)
+sdCalc(cp)
 ```
 
 # R Code Appendix
 ```
 library(NCStats)
-df <- read.csv("data/BruleRiver.csv")
-Summarize(~gauge,data=df)
+df <- read.csv("data/CreatinePhosphate.csv")
+Summarize(~cp,data=df)
 ```
 
 ----

@@ -48,7 +48,7 @@ All measures computed in this module are summary statistics -- i.e., they are co
 
 
 \subsection{Median} \label{sec:Median}
-The median is the value of the individual in the position that splits the \textbf{ordered} list of individuals into two equal-\textbf{sized} halves.\index{Median!Calculation}  In other words, if the data are ordered, half the values will be smaller than the median and half will be larger.
+The median is the value of the individual in the position that splits the \textbf{ordered} list of individuals into two equal-\textbf{sized} halves. In other words, if the data are ordered, half the values will be smaller than the median and half will be larger.
 
 The process for finding the median consists of three steps,\footnote{Most computer programs use a more sophisticated algorithm for computing the median and, thus, will produce different results than what will result from applying these steps.}
 \vspace{-8pt}
@@ -73,7 +73,7 @@ Consider finding the median of the Richter Scale magnitude recorded for fifteen 
 
 
 \subsection{Inter-Quartile Range}
-Quartiles are the values for the three individuals that divide ordered data into four (approximately) equal parts.\index{Quartile}  Finding the three quartiles consists of finding the median, splitting the data into two equal parts at the median, and then finding the medians of the two halves.\footnote{You should review how a median is computed before proceeding with this section.}  A concern in this process is that the median is NOT part of either half if there is an odd number of individuals. These steps are summarized as,
+Quartiles are the values for the three individuals that divide ordered data into four (approximately) equal parts. Finding the three quartiles consists of finding the median, splitting the data into two equal parts at the median, and then finding the medians of the two halves.\footnote{You should review how a median is computed before proceeding with this section.}  A concern in this process is that the median is NOT part of either half if there is an odd number of individuals. These steps are summarized as,
 \begin{Enumerate}
   \item Order the data from smallest to largest.
   \item Find the median -- this is the second quartile (Q2).
@@ -104,7 +104,7 @@ The interquartile range (IQR) is the difference between $Q3$ and $Q1$, namely $Q
 
 
 \subsection{Mean}
-The mean is the arithmetic average of the data.\index{Mean!Calculation}  The sample mean is denoted by $\bar{x}$ and the population mean by $\mu$.\index{Mean!Sample Symbol}\index{Mean!Population Symbol} The mean is simply computed by adding up all of the values and dividing by the number of indivuals. If the measurement of the generic variable $x$ on the $i$th individual is denoted as $x_{i}$, then the sample mean is computed with these two steps,
+The mean is the arithmetic average of the data. The sample mean is denoted by $\bar{x}$ and the population mean by $\mu$. The mean is simply computed by adding up all of the values and dividing by the number of indivuals. If the measurement of the generic variable $x$ on the $i$th individual is denoted as $x_{i}$, then the sample mean is computed with these two steps,
 \begin{Enumerate}
   \item Sum (i.e., add together) all of the values -- $\Sum_{i=1}^{n}x_{i}$.
   \item Divide by the number of individuals in the sample -- $n$.
@@ -201,7 +201,7 @@ Finally, you may be wondering why the sum of the squared differences in the stan
 
 
 \subsection{Mode}
-The mode is the value that occurs most often in a data set.\index{Mode} For example, one open pit mine is the mode in the open pit mine data \tabrefp{tab:MCmode}.
+The mode is the value that occurs most often in a data set. For example, one open pit mine is the mode in the open pit mine data \tabrefp{tab:MCmode}.
 
 <<MCmode, results='asis', echo=FALSE>>=
 MCmode <- xtabs(~mc)
@@ -227,7 +227,7 @@ print(xEQmode,caption.placement="top",hline.after=c(0,nrow(EQmode)),include.rown
 Some data sets may have two values or classes with the maximum frequency. In these situations the variable is said to be \textbf{bimodal}.
 
 \subsection{Range}
-The range is the difference between the maximum and minimum values in the data and measures the ultimate dispersion or spread of the data.\index{Range} The range in the open pit mine data is \Sexpr{formatC(max(mc),format="f",digits=0)}-\Sexpr{formatC(min(mc),format="f",digits=0)} = \Sexpr{formatC(max(mc)-min(mc),format="f",digits=0)}.
+The range is the difference between the maximum and minimum values in the data and measures the ultimate dispersion or spread of the data. The range in the open pit mine data is \Sexpr{formatC(max(mc),format="f",digits=0)}-\Sexpr{formatC(min(mc),format="f",digits=0)} = \Sexpr{formatC(max(mc)-min(mc),format="f",digits=0)}.
 
 The range should \textbf{never be used by itself} as a measure of dispersion. The range is extremely sensitive to outliers and is best used only to show all possible values present in the data. The range (as strictly defined) also suffers from a lack of information. For example, what does a range of 9 mean?  It can have a completely different interpretation if it came from values of 1 to 10 or if it came from values of 1000 to 1009. Thus, the range is more instructive if presented as both the maximum and minimum value rather than the difference.
 
@@ -241,39 +241,9 @@ Summarize(~days,data=LSI,digits=2)
 From this it is seen that the sample median is \Sexpr{formatC(sumLSI["median"],format="f",digits=0)} days, sample mean is \Sexpr{formatC(sumLSI["mean"],format="f",digits=1)} days, sample IQR is from \Sexpr{formatC(sumLSI["Q1"],format="f",digits=0)} to \Sexpr{formatC(sumLSI["Q3"],format="f",digits=0)} days, the sample standard deviation is \Sexpr{formatC(sumLSI["sd"],format="f",digits=2)} days, and the range is from \Sexpr{formatC(sumLSI["min"],format="f",digits=0)} to \Sexpr{formatC(sumLSI["max"],format="f",digits=0)}.
 
 
-\begin{exsection}
-  \item \label{revex:quEDABrule} \rhw{} The following values are the maximum gauge heights of the Bois Brule River in Brule, WI from 10-25Feb05.\footnote{Data collected from \href{http://waterdata.usgs.gov/wi/nwis/uv?04025500}{USGS}.}  Compute the mean and median of these data both ``by hand'' and with R. [HINT: Load data from a CSV file as in \sectref{sect:REnterData}.] \ansref{ans:quEDABrule}
-  \begin{Verbatim}[xleftmargin=5mm]
-1.56 1.54 1.54 1.57 1.58 1.61 1.60 1.69 1.99 2.11 1.98 1.76 1.69 1.99 1.86 1.53
-  \end{Verbatim}
-
-  \item \label{revex:quEDAWIc} \rhw{} The following values are the population density (number of people per acre of land) for 15 randomly selected Wisconsin counties.\footnote{Data collected from \href{http://factfinder.census.gov/}{U.S. census}.}  Compute the mean and median of these data both ``by hand'' and with R. [HINT: Load data from a CSV file as in \sectref{sect:REnterData}.] \ansref{ans:quEDAWIC}
-  \begin{Verbatim}[xleftmargin=5mm]
-429.0  67.8  52.1  97.4  57.9 354.9  16.2  19.1
-127.0  27.6  10.2  54.6  28.8  30.1  20.2
-  \end{Verbatim}
-
-  \item \label{revex:quEDACreatPhosph2} \rhw{} Compute the mean and median of the creatine phosphate data in Exercise \ref{revex:quEDACreatPhosph}. \ansref{ans:quEDACreatPhosph2}
-
-    \item \label{revex:quEDAAirPolln2} \rhw{} \hspace{12pt} Compute the mean and median of the carbon monoxide data in Exercise \ref{revex:quEDAAirPolln}. \ansref{ans:quEDAAirPolln2}
-\end{exsection}
-
-\vspace{-8pt}
-\begin{exsection}
-  \item \label{revex:quEDABruleDisp} \rhw{} Compute the range, IQR, and standard deviation for the maximum gauge heights of the Bois Brule River in Brule, WI from Exercise \ref{revex:quEDABrule} both ``by hand'' and with R. \ansref{ans:quEDABruleDisp}
-
-  \item \label{revex:quEDAWIDisp} \rhw{} Compute the range, IQR, and standard deviation for the population density of Wisconsin counties from Exercise \ref{revex:quEDAWIc} both ``by hand'' and with R. \ansref{ans:quEDAWIDisp}
-
-  \item \label{revex:quEDACreatPhosph3} \rhw{} Compute the range, IQR, and standard deviation of the creatine phosphate data in Exercise \ref{revex:quEDACreatPhosph}. \ansref{ans:quEDACreatPhosph3}
-
-  \item \label{revex:quEDAAirPolln3} \rhw{} \hspace{12pt} Compute the range, IQR, and standard deviation of the CO data in Exercise \ref{revex:quEDAAirPolln}. \ansref{ans:quEDAAirPolln3}
-\end{exsection}
-
-
-
 
 \section{Graphical Summaries}
-\subsection{Histograms}\index{Histogram!Construction}\index{Sample Distribution!Histogram}
+\subsection{Histograms}
 \subsubsection{General Construction}
 A histogram is a plot of the frequency of occurrence of individuals (y-axis) in classes of values of the variable (x-axis). The steps for constructing a histogram from raw data are:
 \vspace{-6pt}
@@ -355,9 +325,9 @@ hist(~days,data=LSI,xlab="Days of Ice Cover",w=20) # Fig 5.4-Right
 
 
 \subsection{Boxplots}
-The median, range, and IQR form the \textbf{five-number summary}.\index{Five Number Summary}  Specifically, the five-number summary consists of the minimum value, Q1, median, Q3, and maximum value. The five-number summary for the open pit mine data is \Sexpr{formatC(sumMC["min"],format="f",digits=0)}, \Sexpr{formatC(sumMC["Q1"],format="f",digits=0)}, \Sexpr{formatC(sumMC["median"],format="f",digits=0)}, \Sexpr{formatC(sumMC["Q3"],format="f",digits=0)}, and \Sexpr{formatC(sumMC["max"],format="f",digits=0)} (all values computed in the previous section).
+The median, range, and IQR form the \textbf{five-number summary}. Specifically, the five-number summary consists of the minimum value, Q1, median, Q3, and maximum value. The five-number summary for the open pit mine data is \Sexpr{formatC(sumMC["min"],format="f",digits=0)}, \Sexpr{formatC(sumMC["Q1"],format="f",digits=0)}, \Sexpr{formatC(sumMC["median"],format="f",digits=0)}, \Sexpr{formatC(sumMC["Q3"],format="f",digits=0)}, and \Sexpr{formatC(sumMC["max"],format="f",digits=0)} (all values computed in the previous section).
 
-The five-number summary may be displayed as a \textbf{boxplot}.\index{Boxplot!Construction}  A traditional boxplot \figrefp{fig:MineBoxplot} consists of a horizontal line at the median, horizontal lines at Q1 and Q3 that are connected with vertical lines to form a box, and vertical lines from Q1 to the minimum value and from Q3 to the maximum value. The vertical lines have been modified on modern boxplots to allow easier detection of outliers. Specifically, the upper line extends from Q3 to the last observed value that is within 1.5 IQRs of Q3 and the lower line extends from Q1 to the last observed value that is within 1.5 IQRs of Q1. Observed values outside of the whiskers are termed ``outliers'' by this algorithm and are typically plotted with circles or asterisks. If no individuals are deemed ``outliers'' by this algorithm, then the two traditional and modern boxplots will be the same.
+The five-number summary may be displayed as a \textbf{boxplot}. A traditional boxplot \figrefp{fig:MineBoxplot} consists of a horizontal line at the median, horizontal lines at Q1 and Q3 that are connected with vertical lines to form a box, and vertical lines from Q1 to the minimum value and from Q3 to the maximum value. The vertical lines have been modified on modern boxplots to allow easier detection of outliers. Specifically, the upper line extends from Q3 to the last observed value that is within 1.5 IQRs of Q3 and the lower line extends from Q1 to the last observed value that is within 1.5 IQRs of Q1. Observed values outside of the whiskers are termed ``outliers'' by this algorithm and are typically plotted with circles or asterisks. If no individuals are deemed ``outliers'' by this algorithm, then the two traditional and modern boxplots will be the same.
 
 <<MineBoxplot, echo=FALSE, fig.cap="Boxplot of the open pit mine data.">>=
 boxplot(mc,ylab="Number of Open Pit Mines")
@@ -368,7 +338,7 @@ A boxplot is constructed in R with \R{boxplot()}. This function requires only th
 
 
 \section{Multiple Groups} \label{sect:MultGroups}
-It is common to conduct a univariate EDA for a quantitative variable separately for groups of individuals. In these cases it is beneficial to have a function that will efficiently construct a histogram and compute summary statistics for the quantitative variable separated by the levels of a factor variable. Separate histograms are constructed with \R{hist()} if the first argument is a ``formula'' of the type \R{quant\TILDE group} where \R{quant} represents the quantitative response variable of interest and \R{group} represents the factor variable that indicates to which group the individual belongs.\index{Histogram!Multiple}  The data frame that contains \R{quant} and \R{group} is given to \R{data=}. Summary statistics are separated by group by supplying the same formula and \R{data=} arguments to \R{Summarize()}.
+It is common to conduct a univariate EDA for a quantitative variable separately for groups of individuals. In these cases it is beneficial to have a function that will efficiently construct a histogram and compute summary statistics for the quantitative variable separated by the levels of a factor variable. Separate histograms are constructed with \R{hist()} if the first argument is a ``formula'' of the type \R{quant\TILDE group} where \R{quant} represents the quantitative response variable of interest and \R{group} represents the factor variable that indicates to which group the individual belongs. The data frame that contains \R{quant} and \R{group} is given to \R{data=}. Summary statistics are separated by group by supplying the same formula and \R{data=} arguments to \R{Summarize()}.
 
 As an example, suppose that you want to examine the average annual days of ice for each decade (using the \R{LSI} data). One might expect to use the \R{days\TILDE decade} formula except that the \R{decade} variable is not a factor.\footnote{It was not a factor because the data in \R{decade} looks numeric to R.}  This can be connverted to a factor by including the variable to the left of the assignment operator and in \R{factor()}. The desired grouping variable may already be a factor in many data.frames and, thus, will not require modification with \R{factor()}.
 <<>>=
