@@ -285,6 +285,18 @@ As shown above, the mean and median measure center in different ways. The questi
 
 
 \section{Overall Summaries}
+
+Finally, the IQR should be chosen as the measure of dispersion when the median is used as the measure of center because they are conceptually related (both rely on position rather than actual value).
+
+The standard deviation has three important characteristics:
+\begin{Enumerate}
+  \item $s \geq$ 0 ($s$=0 only if there is no dispersion; i.e., all values are the same).
+  \item $s$ is strongly influenced by outliers.
+  \item $s$ is inflated for skewed distributions (similar to the mean).
+\end{Enumerate}
+The final two characteristics are a result of the standard deviation being computed from the \textbf{values}, rather than the position, of the individuals (as is the mean). The argument here is the same as it was for the mean. In fact, it should be obvious that the mean and standard deviation are conceptually linked (i.e., they both require the actual values and the mean is within the standard deviation calculation).
+
+
 Overall numerical summaries come from considering the relationship between measures of center and dispersion. From the previous section it was seen that the standard deviation and mean are conceptually linked, as are the median and IQR. Indeed, the linked measure of center must be computed first in both dispersion calculations. Thus, if the mean is used to measure center, then the standard deviation must be used to measure dispersion.\index{Standard Deviation!When to use}  Similarly, if the median is used to measure center, then the IQR must be used to measure dispersion.\footnote{Recall that the range will never be used by itself.}\index{IQR!When to use}
 
 

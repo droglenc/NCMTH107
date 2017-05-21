@@ -14,28 +14,24 @@ set_parent('IntroStats.Rnw')
 \end{ChapObj}
 
 \minitoc
-\newpage
+\vspace{48pt}
 
-\lettrine{O}{nce data have been collected} \modrefp{chap:DataProd}, it is important to develop a ``feel'' for the data, to identify what types of values each variable takes, and to determine if there are any ``issues'' in the data. This first step in a statistical analysis is called \textsc{Exploratory Data Analysis} (EDA). We begin by examining the distribution of each variable by itself, called a univariate EDA. In later modules (see Modules \ref{chap:BivEDAQuant} and \ref{chap:BivEDACat}). Here we describe specific graphs and numerical summaries for quantitative data. In \modref{chap:UnivEDAQuant2}, interpretations from these graphs and numerical summaries will be described. Finally, analysis of categorical variables is the focus of \modref{chap:UnivEDACat}.
+\lettrine{O}{nce data have been collected} \modrefp{chap:DataProd}, it is important to develop a ``feel'' for the data, to identify what types of values each variable takes, and to determine if there are any ``issues'' in the data. This first step in a statistical analysis is called \textsc{Exploratory Data Analysis} (EDA). We begin by examining the distribution of each variable by itself, called a univariate EDA. Here we describe specific graphs and numerical summaries for quantitative data. In \modref{chap:UnivEDAQuant2}, interpretations from these graphs and numerical summaries will be described. Categorical variables are considered in \modref{chap:UnivEDACat} and a bivariate EDA is described in Modules \ref{chap:BivEDAQuant} and \ref{chap:BivEDACat}.
 
-Three data sets will be explored throughout this module.
-
-\vspace{-12pt}
-\begin{Itemize}
-  \item Measurements of water consumption in one hour by mice \tabrefp{tab:MouseData}.\footnote{See \sectref{sect:REnterData} for how to enter these data into R.}
-  \item Richter scale recordings for 15 major earthquakes \tabrefp{tab:EQData}.
-  \item The number of days of ice cover at ice gauge station 9004 in Lake Superior (data in \href{https://raw.githubusercontent.com/droglenc/NCData/master/LakeSuperiorIce.csv}{LakeSuperiorIce.csv}).\footnote{See \sectref{sect:RAltData} for a description of how to access these data. These datat are originally from the \href{http://www.nsidc.org/}{National Snow and Ice Data Center}.}  The \var{days} variable is the total number of days of ice cover at this site for nearly every ice season from 1955-56 to 1996-97 (three years were missing). These data are loaded into \R{LSI} below.
-\vspace{-6pt}
-<<echo=-2>>=
+Two data sets will be considered in this module when making calculations ``by hand'' (i.e., without using R). The first data set consists of the number of open pit mines in countries that have open pit mines \tabrefp{tab:MineData}.\footnote{These data were collected from \href{https://en.wikipedia.org/wiki/List_of_open-pit_mines}{this page}. See \sectref{sect:REnterData} for how to enter these data into R.} The second data set is Richter scale recordings for 15 major earthquakes \tabrefp{tab:EQData}. A third data set -- number of days of ice cover at ice gauge station 9004 in Lake Superior -- will be used to demonstrate calculations with R. These data are in \href{https://raw.githubusercontent.com/droglenc/NCData/master/LakeSuperiorIce.csv}{LakeSuperiorIce.csv} and are loaded into \R{LSI} below.\footnote{See \sectref{sect:RAltData} for a description of how to access these data. These data are originally from the \href{http://www.nsidc.org/}{National Snow and Ice Data Center}.}
+<<eval=FALSE>>=
 LSI <- read.csv("data/LakeSuperiorIce.csv")
+@
+<<echo=FALSE>>=
+LSI <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/LakeSuperiorIce.csv")
 sumLSI <- Summarize(~days,data=LSI)
 @
-\end{Itemize}
 
-<<MouseData, results='asis', echo=FALSE>>=
-mc <- c(10.6,14.1,13.7,15.2,15.4,12.5,12.9,14.3,13.0,16.6,11.5, 9.4,16.5,13.7,14.7,12.6,12.0,14.0,10.0,18.2,18.4,17.4,11.1,15.8,15.8,16.6,11.4,17.0,13.6,13.5)
-mcx <- xtable(matrix(mc,nrow=2,byrow=TRUE),digits=1,caption="Amount of water consumed (in ml) in one hour by a sample of mice.","tab:MouseData")
+<<MineData, results='asis', echo=FALSE>>=
+mc <- c(2,11,4,1,15,12,1,1,3,2,2,1,1,1,1,2,4,1,4,2,4,2,1,4,11,1)
+mcx <- xtable(matrix(mc,nrow=2,byrow=TRUE),digits=1,caption="Number of open pit mines in countries that have open pit mines.","tab:MineData")
 print(mcx,caption.placement="top",hline.after=c(0,nrow(mcx)),include.rownames=FALSE,include.colnames=FALSE)
+sumMC <- Summarize(~mc)
 @
 
 <<EQData, results='asis', echo=FALSE>>=
@@ -45,39 +41,70 @@ print(EQx,caption.placement="top",hline.after=c(0,nrow(EQx)),include.rownames=FA
 @
 
 
-\section{Numerical Measures of Center} \label{sec:quEDACenter}
-There are three common methods to measure the center of a distribution: the mode, median, and mean.\index{Center}  The median and mean are the most widely used methods. The choice of which method to use depends, in part, on the shape of the distribution, the presence of outliers, and your purpose.
+\section{Numerical Summaries} \label{sec:quEDACenter}
+A ``typical'' value and the ``variability'' of a quantitative variable are often described from numerical summaries. Calculation of these summaries is described in this module, whereas their interpretation is described in \modref{chap:UnivEDAQuant1}. As you will see in \modref{chap:UnivEDAQuant1}, ``typical'' values are measures of \textbf{center} and ``variability'' is often described as \textbf{dispersion} (or spread). Three measures of center are the median, mean, and mode. Three measures of dispersion are the inter-quartile range, standard deviation, and range.
 
-The modes, medians, and means computed in this section are summary statistics -- i.e., they are computations from individuals in a sample. Thus, they should specifically be called the sample mode, sample median, and sample mean. The mode, median, and mean can also be computed from every individual in the population, if it is known. The computed values would then be parameters and would be called the population mode, population median, and population mean. See \sectref{sect:IVPPSS} for clarification on the differences between populations and samples and parameters and statistics.
-
-\subsection{Mode}
-The mode is the value that occurs most often in a data set.\index{Mode}  If the variable is continuous, then the modal class is the class of values that occurs most often in a data set. In other words, it is the class that forms the peak of a distribution. For example, in the mouse water consumption data \figrefp{fig:MouseHist2} the modal class is 13.0-13.9. Some data sets may have two ``humps,'' where each ``hump'' is considered a mode and the distribution is said to be \textbf{bimodal}.
+All measures computed in this module are summary statistics -- i.e., they are computed from individuals in a sample. Thus, the name of each measure should be preceded by ``sample'' -- e.g., sample median, sample mean, and sample standard deviation. These measures could be computed from every individual, if the population was known. These values would then be parameters and would be preceded by ``population'' -- e.g., population median, population mean, and population standard deviation.\footnote{See \modref{sect:IVPPSS} for clarification on the differences between populations and samples and parameters and statistics.}
 
 
 \subsection{Median} \label{sec:Median}
 The median is the value of the individual in the position that splits the \textbf{ordered} list of individuals into two equal-\textbf{sized} halves.\index{Median!Calculation}  In other words, if the data are ordered, half the values will be smaller than the median and half will be larger.
 
 The process for finding the median consists of three steps,\footnote{Most computer programs use a more sophisticated algorithm for computing the median and, thus, will produce different results than what will result from applying these steps.}
+\vspace{-8pt}
 \begin{Enumerate}
   \item Order the data from smallest to largest.
   \item Find the ``middle \textbf{position}'' ($mp$) with $mp=\frac{n+1}{2}$.
   \item If $mp$ is an integer (i.e., no decimal), then the median is the value of the individual in that position. If $mp$ is not an integer, then the median is the average of the value immediately below and the value immediately above the $mp$.
 \end{Enumerate}
 
-As an example, the ordered mouse water consumption data from \tabref{tab:MouseData} are,
+As an example, the open pit data from \tabref{tab:MineData} are,
 
 <<results='asis', echo=FALSE>>=
-mcx <- xtable(matrix(mc[order(mc)],nrow=2,byrow=TRUE),digits=1)
+mcx <- xtable(matrix(mc[order(mc)],nrow=2,byrow=TRUE),digits=0)
 print(mcx,floating=FALSE,include.rownames=FALSE,include.colnames=FALSE,hline.after=NULL)
 @
 
-Because $n=30$, the $mp=\frac{30+1}{2}=15.5$. The $mp$ is not an integer so the median is the average of the values in the 15th and 16th ordered positions (i.e., the two positions closest to $mp$). Thus, the median water consumption in this sample of mice is $\frac{13.7+14.0}{2}=13.85$ mm.
+Because $n=26$, the $mp=\frac{26+1}{2}=13.5$. The $mp$ is not an integer so the median is the average of the values in the 13th and 14th ordered positions (i.e., the two positions closest to $mp$). Thus, the median number of open pit mines in this sample of countries is $\frac{2+2}{2}=2$.
 
-As another example, consider finding the median of the Richter Scale magnitude recorded for fifteen major earthquakes (ordered data in \tabref{tab:EQData}). Because $n=15$, the $mp=\frac{15+1}{2}=8$. The $mp$ is an integer so the median is the value of the individual in the 8th ordered position, which is 7.1.
+Consider finding the median of the Richter Scale magnitude recorded for fifteen major earthquakes as another example (ordered data are in \tabref{tab:EQData}). Because $n=15$, the $mp=\frac{15+1}{2}=8$. The $mp$ is an integer so the median is the value of the individual in the 8th ordered position, which is 7.1.
+
+\warn{Don't forget to order the data when computing the median.}
+
+
+\subsection{Inter-Quartile Range}
+Quartiles are the values for the three individuals that divide ordered data into four (approximately) equal parts.\index{Quartile}  Finding the three quartiles consists of finding the median, splitting the data into two equal parts at the median, and then finding the medians of the two halves.\footnote{You should review how a median is computed before proceeding with this section.}  A concern in this process is that the median is NOT part of either half if there is an odd number of individuals. These steps are summarized as,
+\begin{Enumerate}
+  \item Order the data from smallest to largest.
+  \item Find the median -- this is the second quartile (Q2).
+  \item Split the data into two halves at the median. If $n$ is odd (so that the median is one of the observed values), then the median is not part of either half.\footnote{Some authors put the median into both halves when $n$ is odd. The difference between the two methods is minimal for large $n$.}
+  \item Find the median of the lower half of data -- this is the 1st quartile (Q1).
+  \item Find the median of the upper half of data -- this is the third quartile (Q3).
+\end{Enumerate}
+
+These calculations are illustrated with the open pit mine data (the median was computed in \sectref{sec:Median}). Because $n=26$ is even, the halves of the data split naturally into two halves each with 13 individuals. Therefore, the $mp=\frac{13+1}{2}=7$ and the median of each half is the value of the individual in the seventh position. Thus, $Q1=1$ and $Q3=4$.
+
+<<results='asis', echo=FALSE>>=
+mco <- mc[order(mc)]
+mco <- c(mco[1:13],NA,mco[14:26],NA)
+mcx <- xtable(matrix(mco,nrow=4,byrow=TRUE),digits=0)
+print(mcx,floating=FALSE,include.rownames=FALSE,include.colnames=FALSE,hline.after=NULL)
+@
+
+In summary, the first, second, and third quartiles for the open pit mine data are 1, 2, and 4, respectively. These three values separate the ordered individuals into approximately four equally-sized groups -- those with values less than (or equal to) 1, with values between (inclusive) 1 and 2, with values between (inclusive) 2 and 4, and with values greater (or equal to) than 4.
+
+As another example, consider finding the quartiles for the earthquake data \tabrefp{tab:EQData}. Recall from above \sectrefp{sec:Median} that the median (=7.1) is in the eighth position of the ordered data. The value in the eighth position will not be included in either half. Thus, the two halves of the data are \Sexpr{paste(EQ[1:7],collapse=", ")} and \Sexpr{paste(EQ[9:15],collapse=", ")}. The middle position for each half is then $mp=\frac{7+1}{2}=4$. Thus, the median for each half is the individual in the fourth position. Therefore, the median of the first half is $Q1=6.5$ and the median of the second half is $Q3=7.7$.
+
+The interquartile range (IQR) is the difference between $Q3$ and $Q1$, namely $Q3-Q1$. However, the IQR (as strictly defined) suffers from a lack of information. For example, what does an IQR of 9 mean?  It can have a completely different interpretation if the IQR is from values of 1 to 10 or if it is from values of 1000 to 1009. Thus, the IQR is more useful if presented as both $Q3$ and $Q1$, rather than as the difference. Thus, for example, the IQR for the open pit mine data is from a $Q3$ of 4 to a $Q1$ of 1 and the IQR for the earthquake data is from a $Q3$ of 7 to a $Q1$ of 6.5.
+
+\warn{The IQR can be thought of as the ``range of the middle half of the data.''}
+
+\vspace{-12pt}
+\warn{When reporting the IQR, explicitly state both $Q3$ and $Q1$ (i.e., do not subtract them).}
 
 
 \subsection{Mean}
-The mean is the arithmetic average of the data.\index{Mean!Calculation}  The sample mean is denoted by $\bar{x}$ and the population mean by $\mu$.\index{Mean!Sample Symbol}\index{Mean!Population Symbol}  If the measurement of the generic variable $x$ on the $i$th individual is denoted as $x_{i}$, then the sample mean is computed with these two steps,
+The mean is the arithmetic average of the data.\index{Mean!Calculation}  The sample mean is denoted by $\bar{x}$ and the population mean by $\mu$.\index{Mean!Sample Symbol}\index{Mean!Population Symbol} The mean is simply computed by adding up all of the values and dividing by the number of indivuals. If the measurement of the generic variable $x$ on the $i$th individual is denoted as $x_{i}$, then the sample mean is computed with these two steps,
 \begin{Enumerate}
   \item Sum (i.e., add together) all of the values -- $\Sum_{i=1}^{n}x_{i}$.
   \item Divide by the number of individuals in the sample -- $n$.
@@ -88,83 +115,44 @@ or more succinctly summarized with this equation,
      \bar{x} = \frac{\Sum_{i=1}^{n}x_{i}}{n}
 \end{equation}
 
-For example, the sample mean of the mouse consumption data is computed as follows:
+For example, the sample mean of the open pit mine data is computed as follows:
 
-\[ \bar{x} = \frac{9.4+10.0+10.6+11.1+11.4+11.5+ ... +16.6+16.6+17.0+17.4+18.2}{30} = \frac{421.2}{30} = 14.04  \]
+\[ \bar{x} = \frac{2+11+4+1+15+ ... +2+1+4+11+1}{26} = \frac{94}{26} = 3.6  \]
 
+Note in this example with a discrete variable that it is possible (and reaonsable) to present the mean with a decimal. For example, it is not possible for a country to have 3.6 open pit mines, but it IS possible for the mean of a sample of countries to be 3.6 open pit mines.
 
-\subsection{Measures of Center in R} \label{sect:DescStatsCenter}\index{Mean!Calculation}\index{Median!Calculation}
-The mean and median (along with other measures) are calculated in R with \R{Summarize()} using a one-side formula of the form \R{\TILDE quant}, where \R{quant} generically represents the quantitative variable, and the \R{data=} argument. The number of digits after the decimal place may be controlled with \R{digits=}.
-<<>>=
-Summarize(~days,data=LSI,digits=2)
-@
+\warn{As a general rule-of-thumb, present the mean with one more decimal than the number of decimals it was recorded in.}
 
-From this it is seen that the sample mean is \Sexpr{formatC(sumLSI["mean"],format="f",digits=2)} days and the sample median is \Sexpr{formatC(sumLSI["median"],format="f",digits=2)} days.
-
-\begin{exsection}
-  \item \label{revex:quEDABrule} \rhw{} The following values are the maximum gauge heights of the Bois Brule River in Brule, WI from 10-25Feb05.\footnote{Data collected from \href{http://waterdata.usgs.gov/wi/nwis/uv?04025500}{USGS}.}  Compute the mean and median of these data both ``by hand'' and with R. [HINT: Load data from a CSV file as in \sectref{sect:REnterData}.] \ansref{ans:quEDABrule}
-  \begin{Verbatim}[xleftmargin=5mm]
-1.56 1.54 1.54 1.57 1.58 1.61 1.60 1.69 1.99 2.11 1.98 1.76 1.69 1.99 1.86 1.53
-  \end{Verbatim}
-
-  \item \label{revex:quEDAWIc} \rhw{} The following values are the population density (number of people per acre of land) for 15 randomly selected Wisconsin counties.\footnote{Data collected from \href{http://factfinder.census.gov/}{U.S. census}.}  Compute the mean and median of these data both ``by hand'' and with R. [HINT: Load data from a CSV file as in \sectref{sect:REnterData}.] \ansref{ans:quEDAWIC}
-  \begin{Verbatim}[xleftmargin=5mm]
-429.0  67.8  52.1  97.4  57.9 354.9  16.2  19.1
-127.0  27.6  10.2  54.6  28.8  30.1  20.2
-  \end{Verbatim}
-
-  \item \label{revex:quEDACreatPhosph2} \rhw{} Compute the mean and median of the creatine phosphate data in Exercise \ref{revex:quEDACreatPhosph}. \ansref{ans:quEDACreatPhosph2}
-
-    \item \label{revex:quEDAAirPolln2} \rhw{} \hspace{12pt} Compute the mean and median of the carbon monoxide data in Exercise \ref{revex:quEDAAirPolln}. \ansref{ans:quEDAAirPolln2}
-\end{exsection}
-
-
-\section{Numerical Measures of Dispersion}
-There are three common measures of the dispersion of a distribution: the range, inter-quartile range (IQR), and standard deviation.\index{Dispersion}  The standard deviation is the most widely used. The choice of which method to use depends, however, on what statistic you chose as the measure of center (which, as described in \sectref{sect:MeanMedian}, depends on the shape of the distribution, presence of outliers, and your purpose).
-
-The range, IQR, and standard deviation computed in this section are summary statistics -- i.e., they are computations from individuals in a sample. Thus, they should all be preceded with ``sample.''  See \sectref{sect:IVPPSS} for clarification on the differences between populations and samples and parameters and statistics.
-
-
-\subsection{Range}
-The range is the difference between the maximum and minimum values in the data and measures the ultimate dispersion or spread of the data.\index{Range} The range in the mouse consumption data \tabrefp{tab:MouseData} is \Sexpr{formatC(max(mc),format="f",digits=1)}-\Sexpr{formatC(min(mc),format="f",digits=1)} = \Sexpr{formatC(max(mc)-min(mc),format="f",digits=1)}.
-
-The range should \textbf{never be used by itself} as a measure of dispersion. The range is extremely sensitive to outliers and is best used only to show all possible values present in the data. The range (as strictly defined) also suffers from a lack of information. For example, what does a range of 9 mean?  It can have a completely different interpretation if it came from values of 1 to 10 or if it came from values of 1000 to 1009. Thus, the range is more instructive if presented as both the maximum and minimum value rather than the difference.
-
-
-\subsection{IQR}
-Quartiles are the values for the three individuals that divide ordered data into four (approximately) equal parts.\index{Quartile}  Finding the three quartiles consists of finding the median, splitting the data into two equal parts at the median, and then finding the medians of the two halves.\footnote{You should review how a median is computed before proceeding with this section.}  A concern in this process is that the median is NOT part of either half if there is an odd number of individuals. These steps are summarized as,
-\begin{Enumerate}
-  \item Order the data from smallest to largest.
-  \item Find the median -- this is the second quartile (Q2).
-  \item Split the data into two halves at the median. If $n$ is odd (so that the median is one of the observed values), then the median is not part of either half.\footnote{Some authors put the median into both halves when $n$ is odd. The difference between the two methods is minimal for large $n$.}
-  \item Find the median of the lower half of data -- this is the 1st quartile (Q1).
-  \item Find the median of the upper half of data -- this is the third quartile (Q3).
-\end{Enumerate}
-
-These calculations are illustrated with the earthquake data \tabrefp{tab:EQData}. Recall from above \sectrefp{sec:Median} that the median (=7.1) is in the eighth position of the ordered data. The value in the eighth position will not be included in either half. Thus, the two halves of the data are \Sexpr{paste(EQ[1:7],collapse=" ")} and \Sexpr{paste(EQ[9:15],collapse=" ")}. Each half contains seven individuals, so the middle position for each half is $mp=\frac{7+1}{2}=4$. Thus, the median for each half is the individual in the fourth position. Therefore, the median of the first half is $Q1=6.5$ and the median of the second half is $Q3=7.7$.
-
-As another example, consider the quartiles of the mouse consumption data (the median was computed in \sectref{sec:Median}). Because $n=30$ is even, the halves of the data split naturally with 15 individuals in each half. Therefore, the $mp=\frac{15+1}{2}=8$ and the median of each half is the value of the individual in the eighth position. Thus, $Q1=12.5$ and $Q3=15.8$. In summary, the first, second, and third quartiles for the mouse water consumption data are 12.5, 13.85, and 15.8, respectively. These three values separate the ordered individuals into approximately four equally-sized groups -- those with values less than 12.5, with values between 12.5 and 13.85, with values between 13.85 and 15.8, and with values greater than 15.8.
-
-The interquartile range is the difference between the third quartile (Q3) and the first quartile (Q1), namely Q3-Q1.\index{IQR!Calculation}  The IQR for the mouse consumption data is, thus, 15.8-12.5 = 3.3. Intuitively, the IQR can be thought of as the ``range of the middle half of the data.''  The IQR is favored over the range because it is not sensitive to outliers (\textit{you should convince yourself that this is true}). As with the range, however, the IQR suffers from a lack of information. Thus, you should always present the IQR by presenting both Q1 and Q3 rather than the difference between the two. Finally, the IQR should be chosen as the measure of dispersion when the median is used as the measure of center because they are conceptually related (both rely on position rather than actual value).\index{IQR!When to use}
 
 
 \subsection{Standard Deviation}\label{sect:StdDev}
-The sample standard deviation, denoted by $s$, can be thought of as ``the average difference between the observed values and the mean.''\footnote{This statement is not strictly correct as will become obvious. However, this is an acceptable general interpretation of $s$.}\index{Standard Deviation!Sample symbol}\index{Standard Deviation!Interpretation}\index{Standard Deviation!Calculation}\index{Variance!Calculation}  The standard deviation is computed with these six steps:
+The sample standard deviation, denoted by $s$, is computed with these six steps:
 \begin{Enumerate}
   \item Compute the sample mean (i.e., $\bar{x}$).
-  \item For each value ($x_{i}$), find the difference between the value and the mean, namely $x_{i}-\bar{x}$.
-  \item Square each difference, namely $(x_{i}-\bar{x})^{2}$.
+  \item For each value ($x_{i}$), find the difference between the value and the mean (i.e., $x_{i}-\bar{x}$).
+  \item Square each difference (i.e., $(x_{i}-\bar{x})^{2}$).
   \item Add together all the squared differences.
   \item Divide this sum by $n-1$. [\textit{Stopping here gives the sample variance, $s^{2}$.}]
   \item Square root the result from the previous step to get $s$.
 \end{Enumerate}
+
 These steps are neatly summarized with
+\vspace{-6pt}
 \begin{equation}
   \label{eqn:SampleSD}
      s = \sqrt{\frac{\Sum_{i=1}^{n}(x_{i}-\bar{x})^{2}}{n-1}}
 \end{equation}
 
-The calculation of the standard deviation of the earthquake data \tabrefp{tab:EQData} is facilitated with the calculations shown in \tabref{tab:SDCalc}. In \tabref{tab:SDCalc}, note that $\bar{x}$ is equal to the sum of the ``Value'' column divided by $n=15$ (i.e., $\bar{x}=7.07$). The ``Diff'' column which contains each observed value minus the calculated $\bar{x}$ (i.e., Step 2). The ``Diff$^2$'' column contains the square of the previously calculated differences (i.e., Step 3). The sum of the ``Diff$^2$'' column is Step 4. The sample variance (i.e., Step 5) is equal to this sum divided by $n-1=14$ or $\frac{6.773}{14}=0.484$. Finally, the sample standard deviation is the square root of the sample variance or $s=\sqrt{0.484}=0.696$. Thus, on average, each earthquake is approximately 0.7 Richter Scale units different than the average earthquake in these data.
+The calculation of the standard deviation of the earthquake data \tabrefp{tab:EQData} is facilitated with the calculations shown in \tabref{tab:SDCalc}. In \tabref{tab:SDCalc}, note that
+\vspace{-6pt}
+\begin{Itemize}
+  \item $\bar{x}$ is the sum of the ``Value'' column divided by $n=15$ (i.e., $\bar{x}=7.07$).
+  \item The ``Diff'' column is each observed value minus $\bar{x}$ (i.e., Step 2).
+  \item The ``Diff$^2$'' column is the square of the differences (i.e., Step 3).
+  \item The sum of the ``Diff$^2$'' column is Step 4.
+  \item The sample variance (i.e., Step 5) is equal to this sum divided by $n-1=14$ or $\frac{6.773}{14}=0.484$.
+  \item The sample standard deviation is the square root of the sample variance or $s=\sqrt{0.484}=0.696$.
+\end{Itemize}
 
 \begin{table}[htbp]
   \caption{Table showing an efficient calculation of the standard deviation of the earthquake data.}
@@ -196,30 +184,79 @@ Sum & 106 & 0 & 6.773 \\
     \end{tabular}
 \end{table}
 
+From this, on average, each earthquake is approximately 0.7 Richter Scale units different than the average earthquake in these data.
+
 \warn{In the standard deviation calculations don't forget to take the square root of the variance.}
 
-There are three characteristics of the standard deviation that you should be aware of:\index{Standard Deviation!Characteristics}
-\begin{Enumerate}
-  \item $s \geq$ 0 ($s$=0 only if there is no dispersion; i.e., all values are the same).
-  \item $s$ is strongly influenced by outliers.
-  \item $s$ is inflated for skewed distributions (similar to the mean).
-\end{Enumerate}
-The final two characteristics are a result of the standard deviation being computed from the \textbf{values}, rather than the position, of the individuals (as is the mean). The argument here is the same as it was for the mean. In fact, it should be obvious that the mean and standard deviation are conceptually linked (i.e., they both require the actual values and the mean is within the standard deviation calculation).
+\vspace{-12pt}
+\warn{The standard deviation is greater than or equal to zero.}
 
-At the beginning of this section, the standard deviation was defined as ``essentially the average difference between the values and the mean.''\index{Standard Deviation!Interpretation} \textbf{Essentially} was emphasized because the formula for the standard deviation does not simply add together the differences and divide by $n$ as this definition would imply. Notice in \tabref{tab:SDCalc} that the sum of the differences from the mean is 0. This will be the case for all standard deviation calculations using the correct mean, because the mean balances the distance to individuals below the mean with the distance of individuals above the mean (review \sectref{sect:MeanMedian}). Thus, the mean difference will always be zero. This ``problem'' is corrected by squaring the differences before summing them. To get back to the original units, the squaring is later ``reversed'' by the square root. So, more accurately, the standard deviation is the square root of the average squared difference between the values and the mean. Therefore, the original definition of the standard deviation is strictly incorrect; however, it works well as a practical definition of the meaning of the standard deviation.
+The standard deviation can be thought of as ``the average difference between the values and the mean.'' This is, however, not a strict definition because the formula for the standard deviation does not simply add the differences and divide by $n$ as this definition would imply. Notice in \tabref{tab:SDCalc} that the sum of the differences from the mean is 0. This will be the case for all standard deviation calculations using the correct mean, because the mean balances the distance to individuals below the mean with the distance of individuals above the mean (see \sectref{sect:MeanMedian} in the next module). Thus, the mean difference will always be zero. This ``problem'' is corrected by squaring the differences before summing them. To get back to the original units, the squaring is later ``reversed'' by the square root. So, more accurately, the standard deviation is the square root of the average squared differences between the values and the mean. Therefore, ``the average difference between the values and the mean'' works as a practical definition of the meaning of the standard deviation, but it is not strictly correct.
 
 \warn{Use the fact that the sum of all differences from the mean equals zero as a check of your standard deviation calculation.}
 
 Further note that the mean is the value that minimizes the value of the standard deviation calculation -- i.e., putting any other value besides the mean into the standard deviation equation will result in a larger value.
 
-Finally, why is the sum of the squared differences divided by $n-1$, rather than $n$, in the standard deviation calculation?  Recall (from \sectref{sect:IVPPSS}) that statistics are meant to estimate parameters. The sample standard deviation is supposed to estimate the population standard deviation ($\sigma$). Theorists have shown that if we divide by $n$, $s$ will consistently underestimate $\sigma$. Thus, $s$ calculated in this way would be a biased estimator of $\sigma$. Theorists have found, though, that dividing by $n-1$ will cause $s$ to be an unbiased estimator of $\sigma$. Being unbiased is generally good -- it means that on average our statistic estimates our parameter (this concept is discussed in more detail in \modref{chap:SamplingDist}).
+Finally, you may be wondering why the sum of the squared differences in the standard deviation calculation is divided by $n-1$, rather than $n$. Recall (from \sectref{sect:IVPPSS}) that statistics are meant to estimate parameters. The sample standard deviation is supposed to estimate the population standard deviation ($\sigma$). Theorists have shown that if we divide by $n$, $s$ will consistently underestimate $\sigma$. Thus, $s$ calculated in this way would be a biased estimator of $\sigma$. Theorists have found, though, that dividing by $n-1$ will cause $s$ to be an unbiased estimator of $\sigma$. Being unbiased is generally good -- it means that on average our statistic estimates our parameter (this concept is discussed in more detail in \modref{chap:SamplingDist}).
 
 
-\subsection{Measures of Dispersion in R} \label{sect:DescStatsDispersion}\index{Standard Deviation!Calculation}\index{IQR!Calculation}\index{Quartile!Calculation}\index{Range!Calculation}
-The minimum, maximum, Q1, Q3, and standard deviation are calculated with \R{Summarize()} as described previously for the mean and median. Thus, $s=$\Sexpr{formatC(sumLSI["sd"],format="f",digits=2)}, the IQR is from $Q1=$\Sexpr{formatC(sumLSI["Q1"],format="f",digits=2)} to $Q3=$\Sexpr{formatC(sumLSI["Q3"],format="f",digits=2)}, and the range is from \Sexpr{formatC(sumLSI["min"],format="f",digits=2)} to \Sexpr{formatC(sumLSI["max"],format="f",digits=2)}.
+\subsection{Mode}
+The mode is the value that occurs most often in a data set.\index{Mode} For example, one open pit mine is the mode in the open pit mine data \tabrefp{tab:MCmode}.
+
+<<MCmode, results='asis', echo=FALSE>>=
+MCmode <- xtabs(~mc)
+MCmode <- rbind(as.numeric(names(MCmode)),
+                matrix(MCmode,nrow=1))
+rownames(MCmode) = c("Number of Mines","Freq of Countries")
+xMCmode <- xtable(MCmode,digits=0,caption="Frequency of countries by each number of open pit mines.","tab:MCmode")
+print(xMCmode,caption.placement="top",hline.after=c(0,nrow(MCmode)),include.rownames=TRUE,include.colnames=FALSE)
+@
+
+The mode for a continuous variable is the class or bin with the highest frequency of individuals. For example, if 0.5-unit class widths are used in the Richter scale data, then the modal class is 6.5-6.9 \tabrefp{tab:EQmode}.
+
+<<EQmode, results='asis', echo=FALSE>>=
+EQmode <- xtabs(~lencat(EQ,w=0.5))
+tmp <- as.numeric(names(EQmode))
+tmp <- paste(tmp,c(tmp[-1],tmp[length(tmp)]+0.5)-0.1,sep="-")
+EQmode <- rbind(tmp,matrix(EQmode,nrow=1))
+rownames(EQmode) = c("Richter Scale Class","Freq of Earthquakes")
+xEQmode <- xtable(EQmode,digits=0,caption="Frequency of earthquakes by Richter Scale class.","tab:EQmode")
+print(xEQmode,caption.placement="top",hline.after=c(0,nrow(EQmode)),include.rownames=TRUE,include.colnames=FALSE)
+@
+
+Some data sets may have two values or classes with the maximum frequency. In these situations the variable is said to be \textbf{bimodal}.
+
+\subsection{Range}
+The range is the difference between the maximum and minimum values in the data and measures the ultimate dispersion or spread of the data.\index{Range} The range in the open pit mine data is \Sexpr{formatC(max(mc),format="f",digits=0)}-\Sexpr{formatC(min(mc),format="f",digits=0)} = \Sexpr{formatC(max(mc)-min(mc),format="f",digits=0)}.
+
+The range should \textbf{never be used by itself} as a measure of dispersion. The range is extremely sensitive to outliers and is best used only to show all possible values present in the data. The range (as strictly defined) also suffers from a lack of information. For example, what does a range of 9 mean?  It can have a completely different interpretation if it came from values of 1 to 10 or if it came from values of 1000 to 1009. Thus, the range is more instructive if presented as both the maximum and minimum value rather than the difference.
+
+
+\subsection{Summary Measures in R} \label{sect:DescStatsCenter}
+All summary statistics described above, with the excpetion of the mode, is  calculated in R with \R{Summarize()}. To summarize a single variable a one-sided formula of the form \R{\TILDE quant} is used, where \R{quant} generically represents the quantitative variable, along with the \R{data=} argument. The number of digits after the decimal place is controlled with \R{digits=}.
 <<>>=
 Summarize(~days,data=LSI,digits=2)
 @
+
+From this it is seen that the sample median is \Sexpr{formatC(sumLSI["median"],format="f",digits=0)} days, sample mean is \Sexpr{formatC(sumLSI["mean"],format="f",digits=1)} days, sample IQR is from \Sexpr{formatC(sumLSI["Q1"],format="f",digits=0)} to \Sexpr{formatC(sumLSI["Q3"],format="f",digits=0)} days, the sample standard deviation is \Sexpr{formatC(sumLSI["sd"],format="f",digits=2)} days, and the range is from \Sexpr{formatC(sumLSI["min"],format="f",digits=0)} to \Sexpr{formatC(sumLSI["max"],format="f",digits=0)}.
+
+
+\begin{exsection}
+  \item \label{revex:quEDABrule} \rhw{} The following values are the maximum gauge heights of the Bois Brule River in Brule, WI from 10-25Feb05.\footnote{Data collected from \href{http://waterdata.usgs.gov/wi/nwis/uv?04025500}{USGS}.}  Compute the mean and median of these data both ``by hand'' and with R. [HINT: Load data from a CSV file as in \sectref{sect:REnterData}.] \ansref{ans:quEDABrule}
+  \begin{Verbatim}[xleftmargin=5mm]
+1.56 1.54 1.54 1.57 1.58 1.61 1.60 1.69 1.99 2.11 1.98 1.76 1.69 1.99 1.86 1.53
+  \end{Verbatim}
+
+  \item \label{revex:quEDAWIc} \rhw{} The following values are the population density (number of people per acre of land) for 15 randomly selected Wisconsin counties.\footnote{Data collected from \href{http://factfinder.census.gov/}{U.S. census}.}  Compute the mean and median of these data both ``by hand'' and with R. [HINT: Load data from a CSV file as in \sectref{sect:REnterData}.] \ansref{ans:quEDAWIC}
+  \begin{Verbatim}[xleftmargin=5mm]
+429.0  67.8  52.1  97.4  57.9 354.9  16.2  19.1
+127.0  27.6  10.2  54.6  28.8  30.1  20.2
+  \end{Verbatim}
+
+  \item \label{revex:quEDACreatPhosph2} \rhw{} Compute the mean and median of the creatine phosphate data in Exercise \ref{revex:quEDACreatPhosph}. \ansref{ans:quEDACreatPhosph2}
+
+    \item \label{revex:quEDAAirPolln2} \rhw{} \hspace{12pt} Compute the mean and median of the carbon monoxide data in Exercise \ref{revex:quEDAAirPolln}. \ansref{ans:quEDAAirPolln2}
+\end{exsection}
 
 \vspace{-8pt}
 \begin{exsection}
@@ -235,7 +272,7 @@ Summarize(~days,data=LSI,digits=2)
 
 
 
-\section{Graphs}
+\section{Graphical Summaries}
 \subsection{Histograms}\index{Histogram!Construction}\index{Sample Distribution!Histogram}
 \subsubsection{General Construction}
 A histogram is a plot of the frequency of occurrence of individuals (y-axis) in classes of values of the variable (x-axis). The steps for constructing a histogram from raw data are:
@@ -247,41 +284,38 @@ A histogram is a plot of the frequency of occurrence of individuals (y-axis) in 
   \item Draw bars on the graph that are as wide as the class of values and as tall as the frequency of individuals.
 \end{Enumerate}
 
-These steps are illustrated with the mouse water consumption data. The easiest way to create a list of classes is to divide the difference between the maximum and minimum values in the data by a ``nice'' number near eight to ten, and then round up to make classes that are easy to work with. The ``nice'' number between eight and ten is chosen to make the division easy and will be the number of classes. In this example, the range of values is 18.4-9.4 = 9.0. A ``nice'' value between eight and ten to divide this range by is nine. Thus, the classes of data should be one unit wide and, for ease, will begin at 9 mm \tabrefp{tab:MouseFreqTable}.
+These steps are illustrated with the open pit mine data. The easiest way to create a list of classes is to divide the difference between the maximum and minimum values in the data by a ``nice'' number near eight to ten, and then round up to make classes that are easy to work with. The ``nice'' number between eight and ten is chosen to make the division easy and will be the number of classes. In this example, the range of values is 15-1 = 14. A ``nice'' value near eight and ten to divide this range by is seven. Thus, the classes of data should be two units wide and, for ease, will begin at 0 \tabrefp{tab:MineFreqTable}.
 
 \begin{table}[htbp]
-  \caption{Frequency table of mouse consumption values in one-unit classes.}
-  \label{tab:MouseFreqTable}
+  \caption{Frequency table of number of countries in two-mine-wide classes.}
+  \label{tab:MineFreqTable}
     \begin{Verbatim}[xleftmargin=25mm]
-Class     Frequency
- 9.0- 9.9      1
-10.0-10.9      2
-11.0-11.9      3
-12.0-12.9      4
-13.0-13.9      5
-14.0-14.9      4
-15.0-15.9      4
-16.0-16.9      3
-17.0-17.9      2
-18.0-18.9      2
+Class  Frequency
+ 0- 1     10
+ 2- 3      7
+ 4- 5      5
+ 6- 7      0
+ 8- 9      0
+10-11      2
+12-13      1
+14-15      1
     \end{Verbatim}
 \end{table}
 
-The number of individuals with a value of the variable in each class is called a frequency and are shown in the second column of \tabref{tab:MouseFreqTable}. The plot is prepared with values of the classes forming the x-axis and frequencies forming the y-axis (\figref{fig:MouseHist1}-Left). The first bar added to this skeleton plot has the bottom-left corner at 9 and the bottom-right corner at 10 on the x-axis, and a height equal to the frequency of individuals in the 9 to 9.9 class (\figref{fig:MouseHist1}-Center). A second bar is then added with the bottom-left corner at 10 and the bottom-right corner at 11 on the x-axis, and a height equal to the frequency of individuals in the 10 to 10.9 class (\figref{fig:MouseHist1}-Right). This process is continued with the remaining classes until the full histogram is constructed \figrefp{fig:MouseHist2}.
+The number of individuals with a value of the variable in each class is called a frequency and are shown in the second column of \tabref{tab:MineFreqTable}. The plot is prepared with values of the classes forming the x-axis and frequencies forming the y-axis (\figref{fig:MineHist1}-Left). The first bar added to this skeleton plot has the bottom-left corner at 0 and the bottom-right corner at 2 on the x-axis, and a height equal to the frequency of individuals in the 0 and 1 class (\figref{fig:MineHist1}-Center). A second bar is then added with the bottom-left corner at 2 and the bottom-right corner at 4 on the x-axis, and a height equal to the frequency of individuals in the 2 and 3 class (\figref{fig:MineHist1}-Right). This process is continued with the remaining classes until the full histogram is constructed \figrefp{fig:MineHist2}.
 
-<<MouseHist1, echo=FALSE, fig.width=10.5, out.width='.95\\linewidth', fig.cap="Steps illustrating the development of a histogram.">>=
+<<MineHist1, echo=FALSE, fig.width=10.5, out.width='.95\\linewidth', fig.cap="Steps illustrating the development of a histogram.">>=
 par(mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),mfcol=c(1,3),las=1,tcl=-0.2)
-tmp <- data.frame(mc)
-xlbl <- "Water Consumption (mm)"
-hist(~c(0),w=1,xlab=xlbl,xlim=c(9,19),ylim=c(0,5),col="white")
-hist(~mc,data=filterD(tmp,mc<10),w=1,xlab=xlbl,xlim=c(9,19),ylim=c(0,5))
-hist(~mc,data=filterD(tmp,mc<11),w=1,xlab=xlbl,xlim=c(9,19),ylim=c(0,5))
+xlbl <- "Number of open pit mines."
+hist(~c(-2),w=2,xlab=xlbl,xlim=c(0,16),ylim=c(0,10),col="white")
+hist(~mc,data=filterD(data.frame(mc),mc<2),w=2,xlab=xlbl,xlim=c(0,16),ylim=c(0,10))
+hist(~mc,data=filterD(data.frame(mc),mc<4),w=2,xlab=xlbl,xlim=c(0,16),ylim=c(0,10))
 @
 
 \vspace{24pt}  % handles an overlapping problem with the floats
 
-<<MouseHist2, echo=FALSE, fig.cap="Histogram of water consumption (mm) by mice.">>=
-hist(~mc,data=tmp,w=1,xlab=xlbl,xlim=c(9,19),ylim=c(0,5))
+<<MineHist2, echo=FALSE, fig.cap="Histogram of number of open pit mines.">>=
+hist(~mc,w=2,xlab=xlbl,xlim=c(0,16),ylim=c(0,10))
 @
 
 Ideally eight to ten classes (i.e., bars) are used to construct a histogram. Too many or too few bars make it difficult to identify the shape and may lead to different interpretations. A dramatic example of the effect of changing the number of classes is seen in histograms of the length of eruptions for the Old Faithful geyser \figrefp{fig:histOF}.
@@ -321,18 +355,15 @@ hist(~days,data=LSI,xlab="Days of Ice Cover",w=20) # Fig 5.4-Right
 
 
 \subsection{Boxplots}
-The median, range, and IQR form the \textbf{five-number summary}.\index{Five Number Summary}  Specifically, the five-number summary consists of the minimum value, Q1, median, Q3, and maximum value. The five-number summary for the mouse consumption data is \Sexpr{formatC(sumLSI["min"],format="f",digits=1)}, \Sexpr{formatC(sumLSI["Q1"],format="f",digits=1)}, \Sexpr{formatC(sumLSI["median"],format="f",digits=1)}, \Sexpr{formatC(sumLSI["Q3"],format="f",digits=1)}, and \Sexpr{formatC(sumLSI["max"],format="f",digits=1)} (all values computed in the previous section).
+The median, range, and IQR form the \textbf{five-number summary}.\index{Five Number Summary}  Specifically, the five-number summary consists of the minimum value, Q1, median, Q3, and maximum value. The five-number summary for the open pit mine data is \Sexpr{formatC(sumMC["min"],format="f",digits=0)}, \Sexpr{formatC(sumMC["Q1"],format="f",digits=0)}, \Sexpr{formatC(sumMC["median"],format="f",digits=0)}, \Sexpr{formatC(sumMC["Q3"],format="f",digits=0)}, and \Sexpr{formatC(sumMC["max"],format="f",digits=0)} (all values computed in the previous section).
 
-The five-number summary may be displayed as a \textbf{boxplot}.\index{Boxplot!Construction}  A traditional boxplot \figrefp{fig:MouseBoxplot} consists of a horizontal line at the median, horizontal lines at Q1 and Q3 that are connected with vertical lines to form a box, and vertical lines from Q1 to the minimum value and from Q3 to the maximum value. The vertical lines have been modified on modern boxplots to allow easier detection of outliers. Specifically, the upper line extends from Q3 to the last observed value that is within 1.5 IQRs of Q3 and the lower line extends from Q1 to the last observed value that is within 1.5 IQRs of Q1. Observed values outside of the whiskers are termed ``outliers'' by this algorithm and are typically plotted with circles or asterisks. If no individuals are deemed ``outliers'' by this algorithm, then the two traditional and modern boxplots will be the same.
+The five-number summary may be displayed as a \textbf{boxplot}.\index{Boxplot!Construction}  A traditional boxplot \figrefp{fig:MineBoxplot} consists of a horizontal line at the median, horizontal lines at Q1 and Q3 that are connected with vertical lines to form a box, and vertical lines from Q1 to the minimum value and from Q3 to the maximum value. The vertical lines have been modified on modern boxplots to allow easier detection of outliers. Specifically, the upper line extends from Q3 to the last observed value that is within 1.5 IQRs of Q3 and the lower line extends from Q1 to the last observed value that is within 1.5 IQRs of Q1. Observed values outside of the whiskers are termed ``outliers'' by this algorithm and are typically plotted with circles or asterisks. If no individuals are deemed ``outliers'' by this algorithm, then the two traditional and modern boxplots will be the same.
 
-<<MouseBoxplot, echo=FALSE, fig.cap="Boxplot of the mouse consumption data.">>=
-boxplot(mc,ylab="Water Consumption (mm)")
+<<MineBoxplot, echo=FALSE, fig.cap="Boxplot of the open pit mine data.">>=
+boxplot(mc,ylab="Number of Open Pit Mines")
 @
 
 A boxplot is constructed in R with \R{boxplot()}. This function requires only the name of the quantitative variable as the first argument although the x- and y-axes are labeled with \R{xlab=} and \R{ylab=}, respectively.
-
-\newpage
-
 
 
 
