@@ -15,25 +15,26 @@ output:
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/zRevExAns/")
 source("../../rhelpers/rhelpers.R")
-modHTML("UEDAQuant1_NPolln")
+modHTML("UEDAQuant1_GPolln")
+```
+```{r echo=FALSE}
+library(captioner)
+figs <- captioner(prefix="Figure")
+figs(name="GPolln","Histogram of the carbon monoxide levels arising from the oil refinery stack.")
 ```
 
-The calculation of the median and IQR is shown below.
-```{r echo=FALSE, comment=""}
+The histogram is in `r figs("GPolln",display="cite")`.
+
+```{r GPolln, echo=FALSE, comment=""}
 polln <- c(30,30,34,36,37,38,40,42,43,43,45,52,55,58,58,58,59,63,63,71,75,85,86,86,99,102,102,141,153,261,21)
-iqrCalc(polln)
-```
-
-The calculation of the mean and standard deviation is shown below.
-```{r echo=FALSE, comment=""}
-sdCalc(polln)
+hist(~polln)
 ```
 
 # R Code Appendix
 ```
 library(NCStats)
 df <- read.csv("data/Polln.csv")
-Summarize(~polln,data=df)
+hist(~polln,data=df)
 ```
 
 ----

@@ -2,7 +2,7 @@
 set_parent('IntroStats.Rnw')
 @
 
-\chapter[Summary Single Quant]{Summaries for Single Quantitative Variable)} \label{chap:UnivEDAQuant1}
+\chapter[Summary One Quant Var]{Summaries for One Quantitative Variable)} \label{chap:UnivEDAQuant1}
 \begin{ChapObj}{\boxwidth}
   \textbf{Objectives:}
   \begin{Enumerate}
@@ -16,7 +16,7 @@ set_parent('IntroStats.Rnw')
 \minitoc
 \vspace{48pt}
 
-\lettrine{S}{ummarizing large quantities of data with} few graphical or numerical summaries makes it is easier to identify meaning from data (disccused in \modref{chap:WhyStatsImportant}). Numeric and graphical summaries specific to a single quantitative variable are described in this module. Interpretations from these numeric and graphical summaries are described in the next module.
+\lettrine{S}{ummarizing large quantities of data with} few graphical or numerical summaries makes it is easier to identify meaning from data (discussed in \modref{chap:WhyStatsImportant}). Numeric and graphical summaries specific to a single quantitative variable are described in this module. Interpretations from these numeric and graphical summaries are described in the next module.
 
 Two data sets will be considered in this module when making calculations ``by hand'' (i.e., without using R). The first data set consists of the number of open pit mines in countries that have open pit mines \tabrefp{tab:MineData}.\footnote{These data were collected from \href{https://en.wikipedia.org/wiki/List_of_open-pit_mines}{this page}. See \sectref{sect:REnterData} for how to enter these data into R.} The second data set is Richter scale recordings for 15 major earthquakes \tabrefp{tab:EQData}. A third data set -- number of days of ice cover at ice gauge station 9004 in Lake Superior -- will be used to demonstrate calculations with R. These data are in \href{https://raw.githubusercontent.com/droglenc/NCData/master/LakeSuperiorIce.csv}{LakeSuperiorIce.csv} and are loaded into \R{LSI} below.\footnote{See \sectref{sect:RAltData} for a description of how to access these data. These data are originally from the \href{http://www.nsidc.org/}{National Snow and Ice Data Center}.}
 <<eval=FALSE>>=
@@ -104,7 +104,7 @@ The interquartile range (IQR) is the difference between $Q3$ and $Q1$, namely $Q
 
 
 \subsection{Mean}
-The mean is the arithmetic average of the data. The sample mean is denoted by $\bar{x}$ and the population mean by $\mu$. The mean is simply computed by adding up all of the values and dividing by the number of indivuals. If the measurement of the generic variable $x$ on the $i$th individual is denoted as $x_{i}$, then the sample mean is computed with these two steps,
+The mean is the arithmetic average of the data. The sample mean is denoted by $\bar{x}$ and the population mean by $\mu$. The mean is simply computed by adding up all of the values and dividing by the number of individuals. If the measurement of the generic variable $x$ on the $i$th individual is denoted as $x_{i}$, then the sample mean is computed with these two steps,
 \begin{Enumerate}
   \item Sum (i.e., add together) all of the values -- $\Sum_{i=1}^{n}x_{i}$.
   \item Divide by the number of individuals in the sample -- $n$.
@@ -119,7 +119,7 @@ For example, the sample mean of the open pit mine data is computed as follows:
 
 \[ \bar{x} = \frac{2+11+4+1+15+ ... +2+1+4+11+1}{26} = \frac{94}{26} = 3.6  \]
 
-Note in this example with a discrete variable that it is possible (and reaonsable) to present the mean with a decimal. For example, it is not possible for a country to have 3.6 open pit mines, but it IS possible for the mean of a sample of countries to be 3.6 open pit mines.
+Note in this example with a discrete variable that it is possible (and reasonable) to present the mean with a decimal. For example, it is not possible for a country to have 3.6 open pit mines, but it IS possible for the mean of a sample of countries to be 3.6 open pit mines.
 
 \warn{As a general rule-of-thumb, present the mean with one more decimal than the number of decimals it was recorded in.}
 
@@ -232,8 +232,8 @@ The range is the difference between the maximum and minimum values in the data a
 The range should \textbf{never be used by itself} as a measure of dispersion. The range is extremely sensitive to outliers and is best used only to show all possible values present in the data. The range (as strictly defined) also suffers from a lack of information. For example, what does a range of 9 mean?  It can have a completely different interpretation if it came from values of 1 to 10 or if it came from values of 1000 to 1009. Thus, the range is more instructive if presented as both the maximum and minimum value rather than the difference.
 
 
-\subsection{Numerical Summaries in R} \label{sect:DescStatsCenter}
-All summary statistics described above, with the excpetion of the mode, is  calculated in R with \R{Summarize()}. To summarize a single variable a one-sided formula of the form \R{\TILDE quant} is used, where \R{quant} generically represents the quantitative variable, along with the \R{data=} argument. The number of digits after the decimal place is controlled with \R{digits=}.
+\subsection{Computation of Summaries in R} \label{sect:DescStats}
+All summary statistics described above, with the exception of the mode, is  calculated in R with \R{Summarize()}. To summarize a single variable a one-sided formula of the form \R{\TILDE quant} is used, where \R{quant} generically represents the quantitative variable, along with the \R{data=} argument. The number of digits after the decimal place is controlled with \R{digits=}.
 <<>>=
 Summarize(~days,data=LSI,digits=2)
 @
@@ -242,127 +242,94 @@ From this it is seen that the sample median is \Sexpr{formatC(sumLSI["median"],f
 
 
 
+\newpage
 \section{Graphical Summaries}
-\subsection{Histograms}
-\subsubsection{General Construction}
-A histogram is a plot of the frequency of occurrence of individuals (y-axis) in classes of values of the variable (x-axis). The steps for constructing a histogram from raw data are:
+\subsection{Histogram}
+A histogram plots the frequency of individuals (y-axis) in classes of values of the quantitative variable (x-axis). Construction of a histogram begins by creating classes of values for the variable of interest. The easiest way to create a list of classes is to divide the range (i.e., maximum minus minimum value) by a ``nice'' number near eight to ten, and then round up to make classes that are easy to work with. The ``nice'' number between eight and ten is chosen to make the division easy and will be the number of classes. For example, the range of values in the open pit mine example is 15-1 = 14. A ``nice'' value near eight and ten to divide this range by is seven. Thus, the classes should be two units wide (=14/7) and, for ease, will begin at 0 \tabrefp{tab:MineFreqTable}.
+
 \vspace{-6pt}
-\begin{Enumerate}
-  \item Create categorical classes of values for the variable of interest,
-  \item Count the frequency of individuals in each class,
-  \item Construct a graph template with values of the variable on the x-axis and frequency of individuals on the y-axis, and
-  \item Draw bars on the graph that are as wide as the class of values and as tall as the frequency of individuals.
-\end{Enumerate}
-
-These steps are illustrated with the open pit mine data. The easiest way to create a list of classes is to divide the difference between the maximum and minimum values in the data by a ``nice'' number near eight to ten, and then round up to make classes that are easy to work with. The ``nice'' number between eight and ten is chosen to make the division easy and will be the number of classes. In this example, the range of values is 15-1 = 14. A ``nice'' value near eight and ten to divide this range by is seven. Thus, the classes of data should be two units wide and, for ease, will begin at 0 \tabrefp{tab:MineFreqTable}.
-
 \begin{table}[htbp]
   \caption{Frequency table of number of countries in two-mine-wide classes.}
   \label{tab:MineFreqTable}
     \begin{Verbatim}[xleftmargin=25mm]
-Class  Frequency
- 0- 1     10
- 2- 3      7
- 4- 5      5
- 6- 7      0
- 8- 9      0
-10-11      2
-12-13      1
-14-15      1
+Class      0-1   2-3   4-5   6-7   8-9 10-11 12-13 14-15
+Frequency   10     7     5     0     0     2     1     1
     \end{Verbatim}
 \end{table}
+\vspace{-12pt}
 
-The number of individuals with a value of the variable in each class is called a frequency and are shown in the second column of \tabref{tab:MineFreqTable}. The plot is prepared with values of the classes forming the x-axis and frequencies forming the y-axis (\figref{fig:MineHist1}-Left). The first bar added to this skeleton plot has the bottom-left corner at 0 and the bottom-right corner at 2 on the x-axis, and a height equal to the frequency of individuals in the 0 and 1 class (\figref{fig:MineHist1}-Center). A second bar is then added with the bottom-left corner at 2 and the bottom-right corner at 4 on the x-axis, and a height equal to the frequency of individuals in the 2 and 3 class (\figref{fig:MineHist1}-Right). This process is continued with the remaining classes until the full histogram is constructed \figrefp{fig:MineHist2}.
+The frequency of individuals in each class is then counted (shown in the second row of \tabref{tab:MineFreqTable}). The plot is prepared with values of the classes forming the x-axis and frequencies forming the y-axis (\figref{fig:MineHist1}A). The first bar added to this skeleton plot has the bottom-left corner at 0 and the bottom-right corner at 2 on the x-axis, and a height equal to the frequency of individuals in the 0 and 1 class (\figref{fig:MineHist1}B). A second bar is then added with the bottom-left corner at 2 and the bottom-right corner at 4 on the x-axis, and a height equal to the frequency of individuals in the 2 and 3 class (\figref{fig:MineHist1}C). This process is continued with the remaining classes until the full histogram is constructed (\figref{fig:MineHist1}D).
 
-<<MineHist1, echo=FALSE, fig.width=10.5, out.width='.95\\linewidth', fig.cap="Steps illustrating the development of a histogram.">>=
-par(mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),mfcol=c(1,3),las=1,tcl=-0.2)
-xlbl <- "Number of open pit mines."
+<<MineHist1, echo=FALSE, fig.width=6, fig.height=6, out.width='.6\\linewidth', fig.cap="Steps (described in text) illustrating the construction of a histogram.">>=
+par(mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),mfcol=c(2,2),las=1,tcl=-0.2)
+xlbl <- "Number of open pit mines"
 hist(~c(-2),w=2,xlab=xlbl,xlim=c(0,16),ylim=c(0,10),col="white")
+legend("topright","A",bty="n",cex=1.5)
 hist(~mc,data=filterD(data.frame(mc),mc<2),w=2,xlab=xlbl,xlim=c(0,16),ylim=c(0,10))
+legend("topright","B",bty="n",cex=1.5)
 hist(~mc,data=filterD(data.frame(mc),mc<4),w=2,xlab=xlbl,xlim=c(0,16),ylim=c(0,10))
-@
-
-\vspace{24pt}  % handles an overlapping problem with the floats
-
-<<MineHist2, echo=FALSE, fig.cap="Histogram of number of open pit mines.">>=
+legend("topright","C",bty="n",cex=1.5)
 hist(~mc,w=2,xlab=xlbl,xlim=c(0,16),ylim=c(0,10))
+legend("topright","D",bty="n",cex=1.5)
 @
 
-Ideally eight to ten classes (i.e., bars) are used to construct a histogram. Too many or too few bars make it difficult to identify the shape and may lead to different interpretations. A dramatic example of the effect of changing the number of classes is seen in histograms of the length of eruptions for the Old Faithful geyser \figrefp{fig:histOF}.
+Ideally eight to ten classes are used in a histogram. Too many or too few bars make it difficult to identify the shape and may lead to different interpretations. A dramatic example of the effect of changing the number of classes is seen in histograms of the length of eruptions for the Old Faithful geyser \figrefp{fig:histOF}.
 
-<<histOF, echo=FALSE, cache=TRUE, fig.show='animate', fig.cap='Histogram of length (minutes) of eruptions for Old Faitfhul geyser with varying number of classes.', aniopts='controls,palindrome,autoplay'>>=
+<<histOF, echo=FALSE, cache=TRUE, fig.show='animate', fig.cap='Histogram of length of eruptions for Old Faitfhul geyser with varying number of classes.', aniopts='controls,palindrome,autoplay', fig.width=3.5, fig.height=3.5, out.width='.35\\linewidth'>>=
 brksw <- c(seq(0.02,1,0.02),1.5,2)
 for (i in brksw) hist(~eruptions,data=faithful,breaks=seq(1.5,6,i),xlim=c(1.5,6),xlab="Duration of Eruption (mins)")
 @
 
-\subsubsection{Histograms in R}
-A simple (by default) histogram is constructed with \R{hist()} using a one-sided formula of the form \R{\TILDE quant}, where \R{quant} generically represents the quantitative variable, and the corresponding data frame in \R{data=}. The x-axis label may be improved from the default value by including a label in \R{xlab=}.\footnote{\R{xlab=} is for the ``x-axis label.''}  The width of the classes may be controlled by including a class width in \R{w=}.\footnote{The endpoints for the classes may also be set by giving a vector of endpoints to \R{breaks=}.}
 
-<<Histogram1, fig.cap="Histograms of the duration of ice cover at ice gauge 9004 in Lake Superior using the default class widths (Left) and widths of 20 days (Right).">>=
+\subsection{Boxplot}
+The \textbf{five-number summary} consists of the minimum, Q1, median, Q3, and maximum values (effectively contains the range, IQR, and median). For example, the five-number summary for the open pit mine data is \Sexpr{formatC(sumMC["min"],format="f",digits=0)}, \Sexpr{formatC(sumMC["Q1"],format="f",digits=0)}, \Sexpr{formatC(sumMC["median"],format="f",digits=0)}, \Sexpr{formatC(sumMC["Q3"],format="f",digits=0)}, and \Sexpr{formatC(sumMC["max"],format="f",digits=0)} (all values computed in the previous section). The five-number summary may be displayed as a \textbf{boxplot}. A traditional boxplot (\figref{fig:MineBoxplot}-Left) consists of a horizontal line at the median, horizontal lines at Q1 and Q3 that are connected with vertical lines to form a box, and vertical lines from Q1 to the minimum and from Q3 to the maximum. In modern boxplots (\figref{fig:MineBoxplot}-Right) the upper line extends from Q3 to the last observed value that is within 1.5 IQRs of Q3 and the lower line extends from Q1 to the last observed value that is within 1.5 IQRs of Q1. Observed values outside of the whiskers are termed ``outliers'' by this algorithm and are typically plotted with circles or asterisks. If no individuals are deemed ``outliers'' by this algorithm, then the two traditional and modern boxplots will be the same.
+
+<<MineBoxplot, echo=FALSE, fig.cap="Traditional (Left) and modern (Right) boxplots of the open pit mine data.", fig.width=6, fig.height=3, out.width='.65\\linewidth'>>=
+par(mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),mfcol=c(1,2),las=1,tcl=-0.2)
+ylbl <- "Number of open pit mines"
+boxplot(mc,ylab=ylbl,range=0)
+boxplot(mc,ylab=ylbl)
+@
+
+
+\subsection{Construction of Graphs in R}
+A simple (by default) histogram is constructed in R with \R{hist()} using a one-sided formula of the form \R{\TILDE quant}, where \R{quant} generically represents the quantitative variable, and the corresponding data frame in \R{data=}.\footnote{Note that this is the same formula used in \R{Summarize()}.} The x-axis label may be improved from the default value by including a label in \R{xlab=}. The width of the classes may be controlled with a positive integer in \R{w=}.\footnote{The endpoints for the classes may also be set by giving a vector of endpoints to \R{breaks=}.}
+
+<<Histogram1, fig.cap="Histograms of the duration of ice cover at ice gauge 9004 in Lake Superior using the default class widths (Left) and widths of 20 days (Right).", out.width='.34\\linewidth'>>=
 hist(~days,data=LSI,xlab="Days of Ice Cover")      # Fig 5.4-Left
 hist(~days,data=LSI,xlab="Days of Ice Cover",w=20) # Fig 5.4-Right
 @
 
-\warn{The default histogram should be modified by properly labeling the x-axis and possibly changing the class width.}
+A modern boxplot of a single variable is constructed in R with \R{boxplot()}, where the first argument is usually a specific variable in a data.frame. Additionally, the y-axis may be properly labeled with \R{ylab=}.
 
-\begin{exsection}
-  \item \label{revex:quEDAHistVar} Histograms are constructed from what type of variables? \ansref{ans:quEDAHistVar}
-  \item \label{revex:quEDAHistX} What type of values are plotted on the x-axis of a histogram? \ansref{ans:quEDAHistX}
-  \item \label{revex:quEDAHistY} What type of values are plotted on the y-axis of a histogram? \ansref{ans:quEDAHistY}
-  \item \label{revex:quEDAHistBins} What is the ideal number of bars on a histogram? \ansref{ans:quEDAHistBins}
-  \item \label{revex:quEDACreatPhosph} \rhw{} The table below contains the concentrations (International Units per liter) of creatine phosphokinase (an enzyme related to muscle and brain functions) in 36 male volunteers. Construct a histogram from these data. [HINT: Load data from a CSV file as in \sectref{sect:REnterData}.]\ansref{ans:quEDACreatPhosph}
-    \begin{Verbatim}[xleftmargin=5mm]
-121  82 100 151  68  58  95 145  64 119 104 110 113 118 203  62  83  67
-201 101 163  84  57 139  60  78  94  93  92 110  25 123  70  48  95  42
-    \end{Verbatim}
-  \item \label{revex:quEDAAirPolln} \rhw{} The table below contains the carbon monoxide levels (ppm) arising from one of the stacks for an oil refinery northeast of San Francisco between April 16 and May 16, 1993. The measurements were submitted as evidence for establishing a baseline to the Bay Area Air Quality Management District (BAAQMD).\footnote{BAAQMD personnel had also made nine independent measurements of the carbon monoxide from this same stack over the period from September 11, 1990, to March 30, 1993, (which are not shown).}  Construct a histogram from these data. [HINT: Load data from a CSV file as in \sectref{sect:REnterData}.]\ansref{ans:quEDAAirPolln}
-    \begin{Verbatim}[xleftmargin=5mm]
-30 30 34 36 37 38 40 42 43  43  45  52  55  58 58 58
-59 63 63 71 75 85 86 86 99 102 102 141 153 261 21
-    \end{Verbatim}
-\end{exsection}
-
-
-
-\subsection{Boxplots}
-The median, range, and IQR form the \textbf{five-number summary}. Specifically, the five-number summary consists of the minimum value, Q1, median, Q3, and maximum value. The five-number summary for the open pit mine data is \Sexpr{formatC(sumMC["min"],format="f",digits=0)}, \Sexpr{formatC(sumMC["Q1"],format="f",digits=0)}, \Sexpr{formatC(sumMC["median"],format="f",digits=0)}, \Sexpr{formatC(sumMC["Q3"],format="f",digits=0)}, and \Sexpr{formatC(sumMC["max"],format="f",digits=0)} (all values computed in the previous section).
-
-The five-number summary may be displayed as a \textbf{boxplot}. A traditional boxplot \figrefp{fig:MineBoxplot} consists of a horizontal line at the median, horizontal lines at Q1 and Q3 that are connected with vertical lines to form a box, and vertical lines from Q1 to the minimum value and from Q3 to the maximum value. The vertical lines have been modified on modern boxplots to allow easier detection of outliers. Specifically, the upper line extends from Q3 to the last observed value that is within 1.5 IQRs of Q3 and the lower line extends from Q1 to the last observed value that is within 1.5 IQRs of Q1. Observed values outside of the whiskers are termed ``outliers'' by this algorithm and are typically plotted with circles or asterisks. If no individuals are deemed ``outliers'' by this algorithm, then the two traditional and modern boxplots will be the same.
-
-<<MineBoxplot, echo=FALSE, fig.cap="Boxplot of the open pit mine data.">>=
-boxplot(mc,ylab="Number of Open Pit Mines")
+<<BoxplotLSI, fig.cap="Boxplot of the duration of ice cover at ice gauge 9004 in Lake Superior.", out.width='.3\\linewidth'>>=
+boxplot(LSI$days,ylab="Days of Ice Cover")
 @
 
-A boxplot is constructed in R with \R{boxplot()}. This function requires only the name of the quantitative variable as the first argument although the x- and y-axes are labeled with \R{xlab=} and \R{ylab=}, respectively.
-
+\warn{The default histogram and boxplot should be modified by properly labeling the axes.}
 
 
 \section{Multiple Groups} \label{sect:MultGroups}
-It is common to conduct a univariate EDA for a quantitative variable separately for groups of individuals. In these cases it is beneficial to have a function that will efficiently construct a histogram and compute summary statistics for the quantitative variable separated by the levels of a factor variable. Separate histograms are constructed with \R{hist()} if the first argument is a ``formula'' of the type \R{quant\TILDE group} where \R{quant} represents the quantitative response variable of interest and \R{group} represents the factor variable that indicates to which group the individual belongs. The data frame that contains \R{quant} and \R{group} is given to \R{data=}. Summary statistics are separated by group by supplying the same formula and \R{data=} arguments to \R{Summarize()}.
+It is common to need to compute numerical or construct graphical summaries of a quantitative variable separately for groups of individuals. In these cases it is beneficial to have a function that will efficiently construct a histogram and compute summary statistics for the quantitative variable separated by the levels of a factor variable. Separate histograms are constructed with \R{hist()}, if the first argument is a ``formula'' of the type \R{quant\TILDE group} where \R{quant} represents the quantitative response variable of interest and \R{group} represents the factor variable that indicates to which group the individual belongs. The data.frame that contains \R{quant} and \R{group} is given to \R{data=}. Summary statistics are separated by group by supplying the same formula and \R{data=} arguments to \R{Summarize()}.
 
-As an example, suppose that you want to examine the average annual days of ice for each decade (using the \R{LSI} data). One might expect to use the \R{days\TILDE decade} formula except that the \R{decade} variable is not a factor.\footnote{It was not a factor because the data in \R{decade} looks numeric to R.}  This can be connverted to a factor by including the variable to the left of the assignment operator and in \R{factor()}. The desired grouping variable may already be a factor in many data.frames and, thus, will not require modification with \R{factor()}.
+As an example, the LSI data.frame contains a \R{period} variable that indicates whether the ice season was ``pre-1975'' or ``post-1975'' (which included 1975). Thus, one may be interested in examining the distribution of annual days of ice for each of these periods period. Histograms \figrefp{fig:mhist1} and summary statistics separated by period are constructed below.
+<<mhist1, fig.width=7, fig.height=3.5, out.width='.8\\linewidth', fig.cap="Histograms of the duration of ice cover at ice gauge 9004 in Lake Superior by period.">>=
+hist(days~period,data=LSI,ylab="Days of Ice Cover",w=20)
+Summarize(days~period,data=LSI,digits=2)
+@
+
+Side-by-side boxplots \figrefp{fig:Boxplot1} are an alternative to separated histograms and are constructed by including the same formula and \R{data=} arguments to \R{boxplot()}.
+<<Boxplot1, fig.cap="Boxplot of the duration of ice cover at ice gauge 9004 in Lake Superior by period.">>=
+boxplot(days~period,data=LSI,ylab="Days of Ice Cover",xlab="Period")
+@
+
+Note that the formulae above required the grouping variable to be a factor. In some instances, a grouping variable may appear as an integer variable to R. For example, one may want to explore days of ice by decade, but the decade variable is not a factor variable.
+<<>>=
+str(LSI)
+@
+
+In these cases, the variale needs to be explicitly converted to a factor variable using \R{factor()}, as shown below. The use of \R{factor()} is not needed if R already recognizes the variable as a factor variable.
 <<>>=
 LSI$decade <- factor(LSI$decade)
 str(LSI)
 @
-
-Histograms \figrefp{fig:mhist1} and summary statistics separated by decade are then constructed as below.
-<<mhist1, fig.width=7, fig.height=7, out.width='.8\\linewidth', fig.cap="Histograms of the duration of ice cover at ice gauge 9004 in Lake Superior by each decade.">>=
-hist(days~decade,data=LSI,ylab="Days of Ice Cover",w=20)
-Summarize(days~decade,data=LSI,digits=2)
-@
-
-Side-by-side boxplots \figrefp{fig:Boxplot1} are an alternative to separated histograms and are constructed by including the same formula and \R{data=} arguments to \R{boxplot()}.
-<<Boxplot1, fig.cap="Boxplot of the duration of ice cover at ice gauge 9004 in Lake Superior by each decade.">>=
-boxplot(days~decade,data=LSI,ylab="Days of Ice Cover",xlab="Decade")
-@
-
-\clearpage
-\begin{exsection}
-  \item \label{revex:EDAArsenic1} \rhw{} Arsenic concentrations were measured in the well water and in the toe nails of 21 people with home wells. Also recorded were the person's age, sex, and qualitative measurements of usage for drinking and cooking. The data are found in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Arsenic.csv}{Arsenic.csv}. Load these data into R to answer the questions below. \ansref{ans:EDAArsenic1}
-  \begin{Enumerate}
-    \item Construct a univariate EDA for the well water measurements.
-    \item Construct a univariate EDA for the measurements of arsenic in the toe nails.
-    \item Construct a univariate EDA for the toe nail arsenic levels separated by levels of drinking water usage.
-  \end{Enumerate}
-\end{exsection}

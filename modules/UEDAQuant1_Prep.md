@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Read/Viewing Guide
-subtitle: Summaries for Single Quantitative Variable
+subtitle: Summaries for One Quantitative Variable
 css: "/css/modules.css"
 ---
 

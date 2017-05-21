@@ -7,37 +7,21 @@ css: "/css/modules.css"
 ---
 
 
-<p>The calculation of the median and IQR is shown below.</p>
-<pre><code>Median (=11.5) is the average of values in positions 3 and 4.
-  3 4 [8 15] 17 19
-
-Q1 (=4) is the value in position 2 of the lower half.
-  3 [4] 8
-
-Q3 (=17) is the value in position 2 of the upper half.
-  15 [17] 19</code></pre>
-<p>The calculation of the mean and standard deviation is shown below.</p>
-<pre><code>Demonstration of parts of a std. dev. calculation.
-
-     x diffs diffs.sq
-1    8    -3        9
-2    3    -8       64
-3   17     6       36
-4   15     4       16
-5    4    -7       49
-6   19     8       64
-sum 66     0      238
-
-Mean = x-bar = 66 / 6 = 11 
-
-Variance = s^2 = 238 / 5 = 47.6 
-
-Std. Dev = s = sqrt(47.6) = 6.899275</code></pre>
+<pre><code>## [1] &quot;Figure  1: Histogram of the carbon monoxide levels arising from the oil refinery stack.&quot;</code></pre>
+<p>The histogram is in Figure 1.</p>
+<p><img src="UEDAQuant1_GPolln_files/figure-html/GPolln-1.png" width="336" /></p>
+<div id="r-code-appendix" class="section level1">
+<h1>R Code Appendix</h1>
+<pre><code>library(NCStats)
+df &lt;- read.csv(&quot;data/Polln.csv&quot;)
+hist(~polln,data=df)</code></pre>
 <hr />
+</div>
 
 
 
 
+</div>
 
 <script>
 

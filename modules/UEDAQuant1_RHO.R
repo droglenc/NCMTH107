@@ -15,4 +15,4 @@ Summarize(age~sex,data=ars,digits=2)
 hist(age~sex,data=ars,xlab="Age (yrs)")
 
 
-# Script created at 2017-05-21 09:36:50
+# Script created at 2017-05-21 11:38:29
