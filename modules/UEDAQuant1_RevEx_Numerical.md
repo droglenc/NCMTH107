@@ -16,7 +16,7 @@ A student asked six of her friends how many states that have visited in their li
 
 ----
 
-## Number of States Visited
+## Home Range of Red Kangaroos
 <img src="zimgs/red_kangaroo.jpg" alt="Brule River" class="img-right">
 
 In a preliminary study, a researcher recorded the weekly home range of five Red Kangaroos (*Macropus rufus*) in New South Wales. The five home ranges were 258, 310, 560, 470, and 502 hectares. Compute the median, mean, standard deviation, and range of these data "by hand."
