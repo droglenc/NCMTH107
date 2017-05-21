@@ -2,21 +2,21 @@
 set_parent('IntroStats.Rnw')
 @
 
-\chapter[Quant UnivEDA Methods]{Univariate EDA - Quantitative I (Methods)} \label{chap:UnivEDAQuant1}
+\chapter[Summary Single Quant]{Summaries for Single Quantitative Variable)} \label{chap:UnivEDAQuant1}
 \begin{ChapObj}{\boxwidth}
   \textbf{Objectives:}
   \begin{Enumerate}
-    \item Construct histograms with quantitative data,
-    \item Calculate summary statistics for measuring the center of quantitative data,
-    \item Calculate summary statistics for measuring the dispersion of quantitative data, and
-    \item Describe the underlying differences in how the different statistics measure center and dispersion.
+    \item Calculate median, mean, and mode of a quantitative variable,
+    \item Calculate IQR, standard deviation, and range of a quantitative variable,
+    \item Construct a histogram for a quantitative variable, and
+    \item Construct a boxplot for a quantitative variable,
   \end{Enumerate}
 \end{ChapObj}
 
 \minitoc
 \vspace{48pt}
 
-\lettrine{O}{nce data have been collected} \modrefp{chap:DataProd}, it is important to develop a ``feel'' for the data, to identify what types of values each variable takes, and to determine if there are any ``issues'' in the data. This first step in a statistical analysis is called \textsc{Exploratory Data Analysis} (EDA). We begin by examining the distribution of each variable by itself, called a univariate EDA. Here we describe specific graphs and numerical summaries for quantitative data. In \modref{chap:UnivEDAQuant2}, interpretations from these graphs and numerical summaries will be described. Categorical variables are considered in \modref{chap:UnivEDACat} and a bivariate EDA is described in Modules \ref{chap:BivEDAQuant} and \ref{chap:BivEDACat}.
+\lettrine{S}{ummarizing large quantities of data with} few graphical or numerical summaries makes it is easier to identify meaning from data (disccused in \modref{chap:WhyStatsImportant}). Numeric and graphical summaries specific to a single quantitative variable are described in this module. Interpretations from these numeric and graphical summaries are described in the next module.
 
 Two data sets will be considered in this module when making calculations ``by hand'' (i.e., without using R). The first data set consists of the number of open pit mines in countries that have open pit mines \tabrefp{tab:MineData}.\footnote{These data were collected from \href{https://en.wikipedia.org/wiki/List_of_open-pit_mines}{this page}. See \sectref{sect:REnterData} for how to enter these data into R.} The second data set is Richter scale recordings for 15 major earthquakes \tabrefp{tab:EQData}. A third data set -- number of days of ice cover at ice gauge station 9004 in Lake Superior -- will be used to demonstrate calculations with R. These data are in \href{https://raw.githubusercontent.com/droglenc/NCData/master/LakeSuperiorIce.csv}{LakeSuperiorIce.csv} and are loaded into \R{LSI} below.\footnote{See \sectref{sect:RAltData} for a description of how to access these data. These data are originally from the \href{http://www.nsidc.org/}{National Snow and Ice Data Center}.}
 <<eval=FALSE>>=
@@ -232,7 +232,7 @@ The range is the difference between the maximum and minimum values in the data a
 The range should \textbf{never be used by itself} as a measure of dispersion. The range is extremely sensitive to outliers and is best used only to show all possible values present in the data. The range (as strictly defined) also suffers from a lack of information. For example, what does a range of 9 mean?  It can have a completely different interpretation if it came from values of 1 to 10 or if it came from values of 1000 to 1009. Thus, the range is more instructive if presented as both the maximum and minimum value rather than the difference.
 
 
-\subsection{Summary Measures in R} \label{sect:DescStatsCenter}
+\subsection{Numerical Summaries in R} \label{sect:DescStatsCenter}
 All summary statistics described above, with the excpetion of the mode, is  calculated in R with \R{Summarize()}. To summarize a single variable a one-sided formula of the form \R{\TILDE quant} is used, where \R{quant} generically represents the quantitative variable, along with the \R{data=} argument. The number of digits after the decimal place is controlled with \R{digits=}.
 <<>>=
 Summarize(~days,data=LSI,digits=2)

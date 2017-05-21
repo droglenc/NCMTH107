@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Univariate EDA - Quantitative I
+title: Summaries for Single Quantitative Variable
 css: /css/modules.css
 ---
 

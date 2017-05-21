@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Review Exercises I
-subtitle: Univarite EDA Quantitative 1 (Methods)
+subtitle: Summaries for Single Quantitative Variable
 css: "/css/modules.css"
 ---
 
@@ -10,7 +10,7 @@ css: "/css/modules.css"
 ## Number of States Visited
 <img src="zimgs/travel.jpg" alt="Brule River" class="img-right">
 
-A student asked six of her friends how many states that have visited in their lifetime. Their answers 8, 3, 17, 15, 4, and 19. Compute the median, mean, standard deviation, and range of these data "by hand."
+A student asked six of her friends how many states they had visited in their lifetime. Their answers 8, 3, 17, 15, 4, and 19. Compute the median, mean, standard deviation, and range of these data "by hand."
 
 [See answer here](zRevExAns/UEDAQuant1_NTravel){:target="_blank"}
 

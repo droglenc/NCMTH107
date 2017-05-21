@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Read/Viewing Guide
-subtitle: Univariate EDA - Quantitative I (Methods)
+subtitle: Summaries for Single Quantitative Variable
 css: "/css/modules.css"
 ---
 
