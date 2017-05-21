@@ -44,6 +44,7 @@ Use the materials below to answer the questions on [this preparation guide](UEDA
 
 ## Practice
 
+* Review Exercises: [Numerical](UEDAQuant1_RevEx_Numerical) / [Graphical](UEDAQuant1_RevEx_Graphical)
 * Class Exercises: [1](UEDAQuant1_CE1) / [2](UEDAQuant1_CE2)
 
 ----
