@@ -1,0 +1,66 @@
+---
+layout: page
+title: "Review Exercise Key"
+subtitle: "Univariate EDA Quantitative Methods I"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<p>The calculation of the median and IQR is shown below.</p>
+<pre><code>Median (=11.5) is the average of values in positions 3 and 4.
+  3 4 [8 15] 17 19
+
+Q1 (=4) is the value in position 2 of the lower half.
+  3 [4] 8
+
+Q3 (=17) is the value in position 2 of the upper half.
+  15 [17] 19</code></pre>
+<p>The calculation of the mean and standard deviation is shown below.</p>
+<pre><code>Demonstration of parts of a std. dev. calculation.
+
+     x diffs diffs.sq
+1    8    -3        9
+2    3    -8       64
+3   17     6       36
+4   15     4       16
+5    4    -7       49
+6   19     8       64
+sum 66     0      238
+
+Mean = x-bar = 66 / 6 = 11 
+
+Variance = s^2 = 238 / 5 = 47.6 
+
+Std. Dev = s = sqrt(47.6) = 6.899275</code></pre>
+<hr />
+
+
+
+
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
