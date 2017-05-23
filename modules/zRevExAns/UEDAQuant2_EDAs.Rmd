@@ -48,6 +48,7 @@ tabs(name="CPSum","Summary statistics of the creatine phosphokinase concentratio
 The distribution of creatine phosphate concentrations is slightly right-skewed with no obvious outliers (`r figs("GCP",display="cite")`). [*Note that I did not call the individuals above 200 outliers because they were only one bar removed, there were two individuals, and they "felt" like an extension of the right-tail.*] The center is at a mean of `r formatC(cpsum["mean"],format="f",digits=1)` and the dispersion is a standard deviation of `r formatC(cpsum["sd"],format="f",digits=1)` (`r tabs("CPHist",display="cite")`). The mean and standard deviation were used because the distribution was not strongly skewed and outliers were not present.
 
 ```{r CPHist, echo=FALSE, comment=""}
+par(mar=c(3.05,3.05,0.65,0.65),mgp=c(1.9,0.3,0),tcl=-0.2)
 hist(~cp,xlab="Creatine Phosphate Concentration")
 ```
 
