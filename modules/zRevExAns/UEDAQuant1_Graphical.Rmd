@@ -17,7 +17,7 @@ setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/zRevExAns/")
 source("../../rhelpers/rhelpers.R")
 modHTML("UEDAQuant1_Graphical")
 ```
-```{r echo=FALSE}
+```{r echo=FALSE, results="hide"}
 library(captioner)
 figs <- captioner(prefix="Figure")
 figs(name="CPHist","Histogram of the creatine phosphokinase concentrations in 36 male volunteers.")
