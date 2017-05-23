@@ -24,19 +24,18 @@ source("../rhelpers/knitr_setup.R")
 ----
 
 ## Time Spent Playing Video Games 
-<img src="zimgs/.jpg" alt="XXX" class="img-right">
+<img src="zimgs/videogame.jpg" alt="Video Game" class="img-right">
 
 For a class project, a student asked 91 students how much time they had spent playing video games in the last two days. Use the results in the figure and table below to construct a univariate EDA for these data.
 
 ```{r echo=FALSE}
 vg <- read.table("http://www.stat.berkeley.edu/~statlabs/data/video.data",header=TRUE)
-str(vg)
 hist(~time,data=vg,w=2)
 Summarize(~time,data=vg,digits=1)
 ```
 
 
-[See answer here](zRevExAns/UEDAQuant2_XXX){:target="_blank"}
+[See answer here](zRevExAns/UEDAQuant2_VideoGames)
 
 ----
 
@@ -51,7 +50,7 @@ data(Transact)
 hist(~time,data=Transact,w=2000)
 ```
 
-[See answer here](zRevExAns/UEDAQuant2_Bank){:target="_blank"}
+[See answer here](zRevExAns/UEDAQuant2_Bank)
 
 ----
 
@@ -67,7 +66,7 @@ The table below contains the concentrations (International Units per liter) of c
  93  92 110  25 123  70  48  95  42
 ```
 
-[See answer here](zRevExAns/UEDAQuant2_CP){:target="_blank"}
+[See answer here](zRevExAns/UEDAQuant2_CP)
 
 ----
 
@@ -82,7 +81,7 @@ The table below contains the carbon monoxide levels (ppm) arising from one of th
 86 86 99 102 102 141 153 261 21
 ```
 
-[See answer here](zRevExAns/UEDAQuant2_Polln){:target="_blank"}
+[See answer here](zRevExAns/UEDAQuant2_Polln)
 
 ----
 
@@ -96,7 +95,7 @@ The Dow Jones Travel Index tracks the cost of hotel and car-rental rates in 20 m
 140 126 114 133 205 104 149 124 106 179
 ```
 
-[See answer here](zRevExAns/UEDAQuant2_DowJones){:target="_blank"}
+[See answer here](zRevExAns/UEDAQuant2_DowJones)
 
 ----
 
@@ -105,6 +104,6 @@ The Dow Jones Travel Index tracks the cost of hotel and car-rental rates in 20 m
 
 The data in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Zoo2.csv}{Zoo2.csv} contains the physical size (in acres) of a sample of zoos from around the United States. Perform a univariate EDA on the "size" variable.
 
-[See answer here](zRevExAns/UEDAQuant2_Zoos){:target="_blank"}
+[See answer here](zRevExAns/UEDAQuant2_Zoos)
 
 ----
