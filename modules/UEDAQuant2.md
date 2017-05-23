@@ -39,6 +39,7 @@ Use the materials below to answer the questions on [this preparation guide](UEDA
 
 ## Practice
 
+* Review Exercises: [Definitions](UEDAQuant2_RevEx_Defns) / [Interpretations](UEDAQuant2_RevEx_EDAs)
 * Class Exercises: [1](UEDAQuant2_CE1) / [2](UEDAQuant2_CE2) / [3](UEDAQuant2_CE3) / [4](UEDAQuant2_CE4) / [5](UEDAQuant2_CE5) / (*time permitting* ... [6](UEDAQuant2_CE6))
 * [Homework Assignment](UEDAQuant2_HW)
 
