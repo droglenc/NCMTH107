@@ -1,0 +1,69 @@
+---
+title: "Review Exercise Key"
+subtitle: "Univariate EDA"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3
+    fig_width: 3.5
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/zRevExAns/")
+source("../../rhelpers/rhelpers.R")
+modHTML("UEDAQuant2_EDAs")
+```
+```{r echo=FALSE}
+library(NCStats)
+library(captioner)
+figs <- captioner(prefix="Figure")
+tabs <- captioner(prefix="Table")
+```
+
+## Time Spent Playing Video Games
+
+The time spent playing video games is very strongly right-skewed with an extreme outlier at 30 hours and another outlier at approximately 15 hours. The center is at a median of 0 hours and the dispersion is from a Q1 of 0 hours to a Q3 of 1.2 hours. The median and IQR were used because of the skew and presence of outliers. [*Results are derived from the figure and table presented in the question.*]
+
+----
+
+## Bank Transaction Times
+
+The bank transaction times are strongly right-skewed with no obvious outliers. The center is at a median of 93.0 hours and the dispersion is from a Q1 of 60.3 hours to a Q3 of 145.2 hours. The median and IQR were used because of the skew and presence of outliers. [*Results are derived from the figure and table presented in the question.*]
+
+----
+
+## Creatine Phosphate Concentrations
+```{r}
+cp <- c(121,82,100,151,68,58,95,145,64,119,104,110,113,118,203,62,83,67,201,
+101,163,84,57,139,60,78,94,93,92,110,25,123,70,48,95,42)
+cpsum <- Summarize(~cp,digits=1)
+figs(name="GCP","Histogram of the creatine phosphokinase concentrations in 36 male volunteers.")
+tabs(name="GCP","Summary statistics of the creatine phosphokinase concentrations in 36 male volunteers.")
+```
+
+The distribution of creatine phosphate concentrations is slightly right-skewed with no obvious outliers (`r figs("GCP",display="cite")`). [*Note that I did not call the individuals above 200 outliers because they were only one bar removed, there were two individuals, and they "felt" like an extension of the right-tail.*] The center is at a mean of `r formatC(cpsum["mean"],format="f",digits=1)` and the dispersion is a standard deviation of `r formatC(cpsum["sd"],format="f",digits=1)`. The mean and standard deviation were used because the distribution was not strongly skewed and outliers were not present.
+
+```{r CPHist, echo=FALSE, comment=""}
+hist(~cp,xlab="Creatine Phosphate Concentration")
+```
+
+`r figs("CP")`
+
+`r tabs("CP")`
+```{r CPSum, echo=FALSE, comment=""}
+cpsum
+```
+
+
+# R Code Appendix
+```
+library(NCStats)
+df <- read.csv("data/CreatinePhosphate.csv")
+hist(~cp,data=df,xlab="Creatine Phosphate Concentration")
+Summarize(~cp,data=df)
+```
+
