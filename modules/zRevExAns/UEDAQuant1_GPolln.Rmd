@@ -27,7 +27,7 @@ The histogram is in `r figs("GPolln",display="cite")`.
 
 ```{r GPolln, echo=FALSE, comment=""}
 polln <- c(30,30,34,36,37,38,40,42,43,43,45,52,55,58,58,58,59,63,63,71,75,85,86,86,99,102,102,141,153,261,21)
-hist(~polln)
+hist(~polln,xlab="Carbon Monoxide Levels")
 ```
 
 # R Code Appendix
