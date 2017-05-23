@@ -8,15 +8,32 @@ css: "/css/modules.css"
 
 
 <pre><code>## [1] &quot;Figure  1: Histogram of the creatine phosphokinase concentrations in 36 male volunteers.&quot;</code></pre>
+<pre><code>## [1] &quot;Figure  2: Histogram of the carbon monoxide levels arising from the oil refinery stack.&quot;</code></pre>
+<div id="creatine-phosphate-concentrations" class="section level2">
+<h2>Creatine Phosphate Concentrations</h2>
 <p>The histogram is in Figure 1.</p>
-<p><img src="UEDAQuant1_GCP_files/figure-html/GCP-1.png" width="336" /></p>
+<p><img src="UEDAQuant1_Graphical_files/figure-html/CPHist-1.png" width="336" /></p>
 <p>Figure 1: Histogram of the creatine phosphokinase concentrations in 36 male volunteers.</p>
-<div id="r-code-appendix" class="section level1">
-<h1>R Code Appendix</h1>
+<div id="r-code-appendix" class="section level3">
+<h3>R Code Appendix</h3>
 <pre><code>library(NCStats)
 df &lt;- read.csv(&quot;data/CreatinePhosphate.csv&quot;)
-hist(~cp,data=df)</code></pre>
+hist(~cp,data=df,xlab=&quot;Creatine Phosphate Concentration (ppm)&quot;)</code></pre>
 <hr />
+</div>
+</div>
+<div id="air-pollution" class="section level2">
+<h2>Air Pollution</h2>
+<p>The histogram is in Figure 2.</p>
+<p><img src="UEDAQuant1_Graphical_files/figure-html/POLLNHist-1.png" width="336" /></p>
+<p>Figure 2: Histogram of the carbon monoxide levels arising from the oil refinery stack.</p>
+<div id="r-code-appendix-1" class="section level3">
+<h3>R Code Appendix</h3>
+<pre><code>library(NCStats)
+df &lt;- read.csv(&quot;data/Polln.csv&quot;)
+hist(~polln,data=df,xlab=&quot;Carbon Monoxide Levels (ppm))</code></pre>
+<hr />
+</div>
 </div>
 
 

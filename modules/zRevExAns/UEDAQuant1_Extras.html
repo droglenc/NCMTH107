@@ -7,6 +7,54 @@ css: "/css/modules.css"
 ---
 
 
+<div id="brule-river-gauge-heights" class="section level2">
+<h2>Brule River Gauge Heights</h2>
+<p>The calculation of the median and IQR is shown below.</p>
+<pre><code>Median (=1.65) is the average of values in positions 8 and 9.
+  1.53 1.54 1.54 1.56 1.57 1.58 1.6 [1.61 1.69] 1.69 1.76 1.86 1.98 1.99 1.99 2.11
+
+Q1 (=1.565) is average of values in positions 4 and 5 of the lower half.
+  1.53 1.54 1.54 [1.56 1.57] 1.58 1.6 1.61
+
+Q3 (=1.92) is average of values in positions 4 and 5 of the upper half.
+  1.69 1.69 1.76 [1.86 1.98] 1.99 1.99 2.11</code></pre>
+<p>The calculation of the mean and standard deviation is shown below.</p>
+<pre><code>Demonstration of parts of a std. dev. calculation.
+
+        x  diffs diffs.sq
+1    1.56 -0.165 0.027225
+2    1.54 -0.185 0.034225
+3    1.54 -0.185 0.034225
+4    1.57 -0.155 0.024025
+5    1.58 -0.145 0.021025
+6    1.61 -0.115 0.013225
+7    1.60 -0.125 0.015625
+8    1.69 -0.035 0.001225
+9    1.99  0.265 0.070225
+10   2.11  0.385 0.148225
+11   1.98  0.255 0.065025
+12   1.76  0.035 0.001225
+13   1.69 -0.035 0.001225
+14   1.99  0.265 0.070225
+15   1.86  0.135 0.018225
+16   1.53 -0.195 0.038025
+sum 27.60  0.000 0.583200
+
+Mean = x-bar = 27.6 / 16 = 1.725 
+
+Variance = s^2 = 0.5832 / 15 = 0.03888 
+
+Std. Dev = s = sqrt(0.03888) = 0.1971801</code></pre>
+<div id="r-code-appendix" class="section level3">
+<h3>R Code Appendix</h3>
+<pre><code>library(NCStats)
+df &lt;- read.csv(&quot;data/BruleRiver.csv&quot;)
+Summarize(~gauge,data=df)</code></pre>
+<hr />
+</div>
+</div>
+<div id="population-density-in-wisconsin-counties" class="section level2">
+<h2>Population Density in Wisconsin Counties</h2>
 <p>The calculation of the median and IQR is shown below.</p>
 <pre><code>Median (=52.1) is the value in position 8.
   10.2 16.2 19.1 20.2 27.6 28.8 30.1 [52.1] 54.6 57.9 67.8 97.4 127 354.9 429
@@ -44,12 +92,13 @@ Mean = x-bar = 1392.9 / 15 = 92.86
 Variance = s^2 = 223547.4 / 14 = 15967.67 
 
 Std. Dev = s = sqrt(15967.67) = 126.3633</code></pre>
-<div id="r-code-appendix" class="section level1">
-<h1>R Code Appendix</h1>
+<div id="r-code-appendix-1" class="section level3">
+<h3>R Code Appendix</h3>
 <pre><code>library(NCStats)
 df &lt;- read.csv(&quot;data/WIDensity.csv&quot;)
 Summarize(~dens,data=df)</code></pre>
 <hr />
+</div>
 </div>
 
 

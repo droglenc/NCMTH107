@@ -72,7 +72,7 @@ The table below contains the concentrations (International Units per liter) of c
  93  92 110  25 123  70  48  95  42
 ```
 
-[See answer here](zRevExAns/UEDAQuant1_GCP){:target="_blank"}
+[See answer here](zRevExAns/UEDAQuant1_Graphical.html#creatine-phosphate-concentrations)
 
 
 ----
@@ -88,6 +88,6 @@ The table below contains the carbon monoxide levels (ppm) arising from one of th
 86 86 99 102 102 141 153 261 21
 ```
 
-[See answer here](zRevExAns/UEDAQuant1_GPolln){:target="_blank"}
+[See answer here](zRevExAns/UEDAQuant1_Graphical.html#air-pollution)
 
 ----

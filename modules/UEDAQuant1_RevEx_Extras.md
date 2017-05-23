@@ -17,7 +17,7 @@ The following values are the maximum gauge heights of the Bois Brule River in Br
 1.99 2.11 1.98 1.76 1.69 1.99 1.86 1.53
 ```
 
-[See answer here](zRevExAns/UEDAQuant1_NBrule){:target="_blank"}
+[See answer here](zRevExAns/UEDAQuant1_Extras.html#brule-river-gauge-heights)
 
 ----
 
@@ -31,6 +31,6 @@ The following values are the population density (number of people per acre of la
 127.0  27.6  10.2  54.6  28.8  30.1  20.2
 ```
 
-[See answer here](zRevExAns/UEDAQuant1_NWIC){:target="_blank"}
+[See answer here](zRevExAns/UEDAQuant1_Extras.html#population-density-in-wisconsin-counties)
 
 ----

@@ -8,20 +8,20 @@ css: "/css/modules.css"
 ----
 
 ## Number of States Visited
-<img src="zimgs/travel.jpg" alt="Brule River" class="img-right">
+<img src="zimgs/travel.jpg" alt="Traveling" class="img-right">
 
 A student asked six of her friends how many states they had visited in their lifetime. Their answers 8, 3, 17, 15, 4, and 19. Compute the median, mean, standard deviation, and range of these data "by hand."
 
-[See answer here](zRevExAns/UEDAQuant1_NTravel){:target="_blank"}
+[See answer here](zRevExAns/UEDAQuant1_Numerical.html#number-of-states-visited)
 
 ----
 
 ## Home Range of Red Kangaroos
-<img src="zimgs/red_kangaroo.jpg" alt="Brule River" class="img-right">
+<img src="zimgs/red_kangaroo.jpg" alt="Red Kangaroo" class="img-right">
 
 In a preliminary study, a researcher recorded the weekly home range of five Red Kangaroos (*Macropus rufus*) in New South Wales. The five home ranges were 258, 310, 560, 470, and 502 hectares. Compute the median, mean, standard deviation, and range of these data "by hand."
 
-[See answer here](zRevExAns/UEDAQuant1_NKangaroos){:target="_blank"}
+[See answer here](zRevExAns/UEDAQuant1_Numerical.html#home-range-of-red-kangaroos)
 
 ----
 
@@ -37,8 +37,7 @@ The table below contains the concentrations (International Units per liter) of c
  93  92 110  25 123  70  48  95  42
 ```
 
-[See answer here](zRevExAns/UEDAQuant1_NCP){:target="_blank"}
-
+[See answer here](zRevExAns/UEDAQuant1_Numerical.html#creatine-phosphate-concentrations)
 
 ----
 
@@ -53,6 +52,6 @@ The table below contains the carbon monoxide levels (ppm) arising from one of th
 86 86 99 102 102 141 153 261 21
 ```
 
-[See answer here](zRevExAns/UEDAQuant1_NPolln){:target="_blank"}
+[See answer here](zRevExAns/UEDAQuant1_Numerical.html#air-pollution)
 
 ----
