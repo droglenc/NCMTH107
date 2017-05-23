@@ -6,8 +6,8 @@ author: Derek H. Ogle
 css: "/css/modules.css"
 output:
   html_document:
-    fig_height: 3
-    fig_width: 3
+    fig_height: 3.5
+    fig_width: 3.5
     self_contained: no
 ---
 
@@ -31,7 +31,7 @@ source("../rhelpers/knitr_setup.R")
 For a class project, a student asked 91 students how much time they had spent playing video games in the last two days. Use the results in the figure and table below to construct a univariate EDA for these data.
 
 ```{r echo=FALSE}
-par(mar=c(3,3,0.5,0.5),mgp=c(1.9,0.5,0),tcl=-0.2)
+par(mar=c(3,3,1,1),mgp=c(1.9,0.5,0),tcl=-0.2)
 vg <- read.table("http://www.stat.berkeley.edu/~statlabs/data/video.data",header=TRUE)
 hist(~time,data=vg,w=2)
 Summarize(~time,data=vg,digits=1)
@@ -48,7 +48,7 @@ Summarize(~time,data=vg,digits=1)
 Cunningham and Heathcote (1989) recorded the total transaction time (in hours) for a large number of transactions at a branch office of a large Australian bank. Describe the distribution of these data from the results shown below.
 
 ```{r echo=FALSE}
-par(mar=c(3,3,0.5,0.5),mgp=c(1.9,0.5,0),tcl=-0.2)
+par(mar=c(3,3,1,1),mgp=c(1.9,0.5,0),tcl=-0.2)
 library(car)
 data(Transact)
 Transact$time <- Transact$time/60
