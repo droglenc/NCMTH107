@@ -19,17 +19,10 @@ css: "/css/modules.css"
 </div>
 <div id="creatine-phosphate-concentrations" class="section level2">
 <h2>Creatine Phosphate Concentrations</h2>
-<pre class="r"><code>cp &lt;- c(121,82,100,151,68,58,95,145,64,119,104,110,113,118,203,62,83,67,201,
-101,163,84,57,139,60,78,94,93,92,110,25,123,70,48,95,42)
-cpsum &lt;- Summarize(~cp,digits=1)
-figs(name=&quot;GCP&quot;,&quot;Histogram of the creatine phosphokinase concentrations in 36 male volunteers.&quot;)</code></pre>
-<pre><code>## [1] &quot;Figure  1: Histogram of the creatine phosphokinase concentrations in 36 male volunteers.&quot;</code></pre>
-<pre class="r"><code>tabs(name=&quot;GCP&quot;,&quot;Summary statistics of the creatine phosphokinase concentrations in 36 male volunteers.&quot;)</code></pre>
-<pre><code>## [1] &quot;Table  1: Summary statistics of the creatine phosphokinase concentrations in 36 male volunteers.&quot;</code></pre>
-<p>The distribution of creatine phosphate concentrations is slightly right-skewed with no obvious outliers (Figure 1). [<em>Note that I did not call the individuals above 200 outliers because they were only one bar removed, there were two individuals, and they “felt” like an extension of the right-tail.</em>] The center is at a mean of 98.3 and the dispersion is a standard deviation of 40.4. The mean and standard deviation were used because the distribution was not strongly skewed and outliers were not present.</p>
+<p>The distribution of creatine phosphate concentrations is slightly right-skewed with no obvious outliers (Figure 2). [<em>Note that I did not call the individuals above 200 outliers because they were only one bar removed, there were two individuals, and they “felt” like an extension of the right-tail.</em>] The center is at a mean of 98.3 and the dispersion is a standard deviation of 40.4 (Table 2). The mean and standard deviation were used because the distribution was not strongly skewed and outliers were not present.</p>
 <p><img src="UEDAQuant2_EDAs_files/figure-html/CPHist-1.png" width="336" /></p>
-<p>Figure 2:</p>
-<p>Table 2:</p>
+<p>Figure 1: Histogram of the creatine phosphokinase concentrations in 36 male volunteers.</p>
+<p>Table 1: Summary statistics of the creatine phosphokinase concentrations in 36 male volunteers.</p>
 <pre><code>     n   mean     sd    min     Q1 median     Q3    max 
   36.0   98.3   40.4   25.0   67.8   94.5  118.2  203.0 </code></pre>
 </div>
