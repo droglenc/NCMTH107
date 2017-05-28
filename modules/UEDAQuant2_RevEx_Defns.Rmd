@@ -1,0 +1,174 @@
+---
+layout: page
+title: Review Exercise
+subtitle: Univariate EDA - Quantitative
+author: Derek H. Ogle
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+source("../rhelpers/rhelpers.R")
+modHTML("UEDAQuant2_RevEx_Defns")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+source("../rhelpers/knitr_setup.R")
+```
+
+----
+
+## Definitional Questions
+
+You can click on each question to see an answer. Click on it again to close the answer.
+
+<div class="panel-group">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <a data-toggle="collapse" href="#Shape1">What is a distribution with a long left-tail called?</a>
+      </div>
+    </div>
+    <div id="Shape1" class="panel-collapse collapse">
+      <div class="panel-body">Left-skewed</div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <a data-toggle="collapse" href="#Shape2">What is a distribution with a long right-tail called?</a>
+      </div>
+    </div>
+    <div id="Shape2" class="panel-collapse collapse">
+      <div class="panel-body">Right-skewed</div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <a data-toggle="collapse" href="#MeanMedian1">Is the mean divided by the median less than 1, equal to 1, or greater than 1 for a symmetric distribution?</a>
+      </div>
+    </div>
+    <div id="MeanMedian1" class="panel-collapse collapse">
+      <div class="panel-body">Equal to 1</div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <a data-toggle="collapse" href="#MeanMedian2">Is the mean divided by the median less than 1, equal to 1, or greater than 1 for a strongly right-skewed distribution?</a>
+      </div>
+    </div>
+    <div id="MeanMedian2" class="panel-collapse collapse">
+      <div class="panel-body">Greater than 1</div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <a data-toggle="collapse" href="#ShapeQuarts1">Is Q3-Q2 less than, approximately equal to, or greater than Q2-Q1 if the data are left-skewed?</a>
+      </div>
+    </div>
+    <div id="ShapeQuarts1" class="panel-collapse collapse">
+      <div class="panel-body">Less than</div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <a data-toggle="collapse" href="#ShapeQuarts2">What is the shape of the distribution if Q3-Q2 is greater than Q2-Q1?</a>
+      </div>
+    </div>
+    <div id="ShapeQuarts2" class="panel-collapse collapse">
+      <div class="panel-body">Right-skewed</div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <a data-toggle="collapse" href="#Which1">If the distribution is obviuosly skewed left, which measures should you generally use for center and dispersion?</a>
+      </div>
+    </div>
+    <div id="Which1" class="panel-collapse collapse">
+      <div class="panel-body">Median and IQR</div>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <a data-toggle="collapse" href="#Which2">Which measures of center and dispersion should you generally be used for an obviously right-skewed distribution?</a>
+      </div>
+    </div>
+    <div id="Which2" class="panel-collapse collapse">
+      <div class="panel-body">Median and IQR.</div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <a data-toggle="collapse" href="#Which3">Which measures of center and dispersion should you generally be used for a symmetric distribution?</a>
+      </div>
+    </div>
+    <div id="Which3" class="panel-collapse collapse">
+      <div class="panel-body">Mean and standard deviation.</div>
+    </div>
+  </div>
+
+
+</div>
+
+----
+
+## Shape from Histograms
+
+Answer the questions below using the histograms below.
+```{r HistQuest, echo=FALSE}
+par(mfrow=c(1,3), mar=c(0.25,0.5,1,0.5))
+set.seed(12489)
+hist(rbeta(100,6,1),main="A",xlab="",ylab="",xaxt="n",yaxt="n",col="gray90")
+hist(rbeta(100,1,6),main="B",xlab="",ylab="",xaxt="n",yaxt="n",col="gray90")
+hist(rbeta(100,6,5),main="C",xlab="",ylab="",xaxt="n",yaxt="n",col="gray90")
+```
+
+1. What is the shape of each histogram?
+1. For each histogram describe whether the mean is greater than, less than, or approximately equal to the median.
+
+[See answer here](zRevExAns/UEDAQuant2_Defns.html#shape-from-histograms)
+
+----
+
+## Shape from Boxplots
+
+Answer the questions below using the boxplots below.
+```{r BoxQuest, echo=FALSE}
+par(mar=c(2,0.5,1,0.5),mgp=c(1.9,0.5,0))
+set.seed(12487)
+d1 <- rbeta(100,16,15)
+d2 <- rbeta(100,6,1)
+d3 <- rbeta(100,1,6)
+d1 <- d1-mean(d1)
+d2 <- d2-mean(d2)
+d3 <- d3-mean(d3)
+bp <- data.frame(d=c(d1,d2,d3),g=factor(rep(c("A","B","C"),each=100)))
+boxplot(d~g,data=bp,main="",xlab="",ylab="",yaxt="n",range=0)
+```
+
+1. What is the shape of each boxplot?
+
+[See answer here](zRevExAns/UEDAQuant2_Defns.html#shape-from-boxplots)
+
+----

@@ -5,8 +5,6 @@ subtitle: Data Production II
 css: "/css/modules.css"
 ---
 
-Determine the specific type of variable for each question below.
-
 You can click on each question to see an answer. Click on it again to close the answer.
 
 ---
