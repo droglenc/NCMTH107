@@ -1,0 +1,155 @@
+---
+layout: page
+title: "Review Exercise Key"
+subtitle: "Normal Distributions"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<div id="college-graduation" class="section level2">
+<h2>College Graduation</h2>
+<ol>
+<li>Approximately 15.9% of the students have graduated by age 21.</li>
+<li>Approximately 4.2% of the students graduated after age 24.</li>
+<li>The most common 95% of graduates are between 19.9 and is 24.3 years old.</li>
+<li>The age at which 90% of the students have graduated is 20.7</li>
+</ol>
+<div id="r-appendix" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>( q1 &lt;- distrib(21,mean=22.1,sd=1.1) )</code></pre>
+<pre class="r"><code>( q2 &lt;- distrib(24,mean=22.1,sd=1.1,lower.tail=FALSE) )</code></pre>
+<pre class="r"><code>( q3a &lt;- distrib(0.025,mean=22.1,sd=1.1,type=&quot;q&quot;) )</code></pre>
+<pre class="r"><code>( q3b &lt;- distrib(0.975,mean=22.1,sd=1.1,type=&quot;q&quot;) )</code></pre>
+<pre class="r"><code>( q4 &lt;- distrib(0.9,mean=22.1,sd=1.1,type=&quot;q&quot;,lower.tail=FALSE) )</code></pre>
+<hr />
+</div>
+</div>
+<div id="black-bear-size" class="section level2">
+<h2>Black Bear Size</h2>
+<ol>
+<li>Approximately 62.5% of the bears have a body length between 45&quot; and 65“.</li>
+<li>The largest 20% of neck girths are greater than 24.9“.</li>
+<li>The most common 50% of head lengths are between 12.42 and 14.98.</li>
+<li>This question cannot be answered because weight is not know to be normally distributed.</li>
+</ol>
+<div id="r-appendix-1" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>library(NCStats)
+( q1a &lt;- distrib(45,mean=60,sd=10) )</code></pre>
+<pre class="r"><code>( q1ab &lt;- distrib(65,mean=60,sd=10) )</code></pre>
+<pre class="r"><code>q1ab-q1a
+( q2 &lt;- distrib(0.2,mean=20.9,sd=4.8,type=&quot;q&quot;,lower.tail=FALSE) )</code></pre>
+<pre class="r"><code>( q3a &lt;- distrib(0.25,mean=13.7,sd=1.9,type=&quot;q&quot;) )</code></pre>
+<pre class="r"><code>( q3b &lt;- distrib(0.75,mean=13.7,sd=1.9,type=&quot;q&quot;) )</code></pre>
+<hr />
+</div>
+</div>
+<div id="shrew-brain-weights" class="section level2">
+<h2>Shrew Brain Weights</h2>
+<ol>
+<li>Approximately 10.6% of short-tailed shrews have a brain weight of less than 0.09 g.</li>
+<li>Approximately 66.8% of short-tailed shrews have a brain weight between 0.09 and 0.17 g.</li>
+<li>The largest 30% of short-tailed shrew brain weights are larger than 0.16 g.</li>
+</ol>
+<div id="r-appendix-2" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>( q1 &lt;- distrib(0.09,mean=0.14,sd=0.04) )</code></pre>
+<pre class="r"><code>( q2 &lt;- distrib(0.17,mean=0.14,sd=0.04) )</code></pre>
+<pre class="r"><code>q2-q1
+( q3 &lt;- distrib(0.3,mean=0.14,sd=0.04,type=&quot;q&quot;,lower.tail=FALSE) )</code></pre>
+<hr />
+</div>
+</div>
+<div id="bus-arrival-times" class="section level2">
+<h2>Bus Arrival Times</h2>
+<ol>
+<li>Approximately 4.8% of arrivals are more than 5 minutes late.</li>
+<li>Approximately 9.1% of arrivals are more than 4 minutes early.</li>
+<li>Approximately 81.8% of arrivals are between 4 minutes early and 4 minutes late.</li>
+<li>The latest 25% of arrival times are more than 2.0 minutes late.</li>
+<li>The most common 60% of arrival times are between -2.5 and 2.5 minutes.</li>
+<li>The arrival time is a continuous quantitative variable.</li>
+</ol>
+<div id="r-appendix-3" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>( q1 &lt;- distrib(5,mean=0,sd=3,lower.tail=FALSE) )</code></pre>
+<pre class="r"><code>( q2 &lt;- distrib(-4,mean=0,sd=3) )</code></pre>
+<pre class="r"><code>( q3 &lt;- distrib(4,mean=0,sd=3) )</code></pre>
+<pre class="r"><code>q3-q2
+( q4 &lt;- distrib(0.25,mean=0,sd=3,type=&quot;q&quot;,lower.tail=FALSE) )</code></pre>
+<pre class="r"><code>( q5a &lt;- distrib(0.2,mean=0,sd=3,type=&quot;q&quot;) )</code></pre>
+<pre class="r"><code>( q5b &lt;- distrib(0.8,mean=0,sd=3,type=&quot;q&quot;) )</code></pre>
+<hr />
+</div>
+</div>
+<div id="roe-deer-fawns" class="section level2">
+<h2>Roe Deer Fawns</h2>
+<ol>
+<li>Approximately 30.5% of does have less than two fawns.</li>
+<li>Approximately 4.8% of does have more than three fawns.</li>
+<li>Approximately 94.8% of does have between one and three fawns.</li>
+<li>The number of fawns such that 7.6% of does have fewer fawns is 1.6.</li>
+<li>The number of fawns such that 4.2% of does have more fawns is 3.0.</li>
+<li>The most common 87% of number of fawns per does are between 1.5 and 2.9.</li>
+</ol>
+<div id="r-appendix-4" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>( q1 &lt;- distrib(2,mean=2.235,sd=0.460) )</code></pre>
+<pre class="r"><code>( q2 &lt;- distrib(3,mean=2.235,sd=0.460,lower.tail=FALSE) )</code></pre>
+<pre class="r"><code>( q3a &lt;- distrib(1,mean=2.235,sd=0.460) )</code></pre>
+<pre class="r"><code>( q3ab &lt;- distrib(3,mean=2.235,sd=0.460) )</code></pre>
+<pre class="r"><code>q3ab-q3a
+( q4 &lt;- distrib(0.076,mean=2.235,sd=0.460,type=&quot;q&quot;) )</code></pre>
+<pre class="r"><code>( q5 &lt;- distrib(0.042,mean=2.235,sd=0.460,type=&quot;q&quot;,lower.tail=FALSE) )</code></pre>
+<pre class="r"><code>( q6a &lt;- distrib(0.065,mean=2.235,sd=0.460,type=&quot;q&quot;) )</code></pre>
+<pre class="r"><code>( q6b &lt;- distrib(0.935,mean=2.235,sd=0.460,type=&quot;q&quot;) )</code></pre>
+<hr />
+</div>
+</div>
+<div id="commercial-crayfishing" class="section level2">
+<h2>Commercial Crayfishing</h2>
+<ol>
+<li>I could send the Swedish market approximately 31469 crayfish.</li>
+<li>I could send the alternative market approximately 840 crayfish.</li>
+</ol>
+<div id="r-appendix-5" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>( q1ab &lt;- distrib(110,mean=93,sd=8) )</code></pre>
+<pre class="r"><code>( q1a &lt;- distrib(90,mean=93,sd=8) )</code></pre>
+<pre class="r"><code>50000*(q1ab-q1a)
+50000*(1-q1ab)</code></pre>
+<hr />
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

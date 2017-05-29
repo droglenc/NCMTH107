@@ -10,7 +10,7 @@ css: "/css/modules.css"
 ## College Graduation
 <img src="zimgs/graduation.jpg" alt="Graduation" class="img-right">
 
-The age at which ``traditional'' students graduate from college is N(22.1, 1.1). Use this information to answer the questions below.
+The age at which "traditional" students graduate from college is N(22.1, 1.1). Use this information to answer the questions below.
 
 1. What percentage of the students graduate by the age of 21?
 1. What percentage of the students graduate after age 24?
@@ -26,6 +26,8 @@ The age at which ``traditional'' students graduate from college is N(22.1, 1.1).
 
 We know, from years of study of Black Bears, that the population distributions for head length is N(13.7,1.9), neck girth is N(20.9,4.8), and body length is N(60.0,10). All other variables measured on Black Bears cannot be described by a normal distribution. Use this information to answer the questions below. 
 1. What is the percentage of bears between 45" and 65" in body length?
+1. What is the neck girth such that 20% of the bears have a larger girth?
+1. What is the most common 50% of head lengths?
 1. What is the percentage of bears that weighs more than 200 lbs?
 
 [See answer here](zRevExAns/NormalDist_Calc2.html#black-bear-size)
@@ -39,7 +41,7 @@ The brain weights of short-tailed shrews (*Blarina brevicauda*) is normally dist
 
 1. What percentage of shrews have a brain weight less than 0.09 grams?
 1. What percentage of shrews have a brain weight between 0.09 and 0.17 grams?
-1. What is the brain weight such that 30\% of all shrews have a larger brain weight?
+1. What is the brain weight such that 30% of all shrews have a larger brain weight?
 
 [See answer here](zRevExAns/NormalDist_Calc2.html#shrew-brain-weights)
 
@@ -64,7 +66,7 @@ The distribution of arrival times for the BART bus at Northland is normally dist
 ## Roe Deer Fawns
 <img src="zimgs/roe-deer-fawn2.jpg" alt="Roe Deer Fawn" class="img-right">
 
-Researchers on Storfosna Is., Norway wanted to examine reproductive habits of roe deer *Capreolus capreolus in the northern extremities (Andersen and Linnell 2000). The researchers observed how many fawns were born to each of 149 female, sexually mature roe deer between the years 1991 and 1994. The mean number of fawns from each deer was 2.235 with a standard deviation of 0.460. Use this information to answer the questions below.
+Researchers on Storfosna Is., Norway wanted to examine reproductive habits of roe deer *Capreolus capreolus* in the northern extremities (Andersen and Linnell 2000). The researchers observed how many fawns were born to each of 149 female, sexually mature roe deer between the years 1991 and 1994. The mean number of fawns from each deer was 2.235 with a standard deviation of 0.460. Use this information to answer the questions below.
 
 1. What percentage of does have less than 2 fawns.
 1. What percentage of does have more than 3 fawns.
@@ -83,7 +85,7 @@ Researchers on Storfosna Is., Norway wanted to examine reproductive habits of ro
 I recently investigated the efficacy of becoming a commercial crayfisherman (crayfish = crawfish = crawdad) on the lake I live on. With carefully constructed samples I concluded that the size of crayfish was N(93,8). The market for crayfish resides in Sweden. Swedes prefer (hence, will only buy) crayfish that are between 90 and 110 mm long (<90 are too small to deal with and >110 taste bad). Use this information to answer the questions below.
 
 1. How many acceptably-sized crayfish could I send to market, if I could catch approximately 50,000 crayfish? [HINT: compute the proportion of preferably-sized crayfish first.]
-1. If I could find an alternative market for the larger ($>110$) crayfish, how many could I send to it (again assume that I could catch 50,000 crayfish)?
+1. If I could find an alternative market for the larger (>110) crayfish, how many could I send to it (again assume that I could catch 50,000 crayfish)?
 
 [See answer here](zRevExAns/NormalDist_Calc2.html#commercial-crayfishing)
 
