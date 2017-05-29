@@ -39,9 +39,23 @@ plot(B~x,type="l",lwd=3,xlab="Quantitative Variable (X)",
 lines(B~x,lwd=3,col="red")
 lines(A~x,lwd=3,col="blue")
 abline(v=seq(-5,7,1),lwd=1,lty=3,col="lightgray")
-text(-2.65,0.2,"B",col="red",cex=2)
+text(-2.5,0.2,"B",col="red",cex=2)
 text(3.5,0.13,"A",col="blue",cex=2)
 ```
+
+<div class="panel-group">
+
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="panel-title">
+<a data-toggle="collapse" href="#NormDist1">See Answer Here</a>
+</div>
+</div>
+<div id="NormDist1" class="panel-collapse collapse">
+<div class="panel-body">A~N(1,2) and B~N(-1,1)</div>
+</div>
+</div>
+</div>
 
 [See answer here](zRevExAns/NormalDist_Simple.html#normal-distribution-characteristics-i)
 
@@ -61,7 +75,7 @@ plot(B~x,type="l",lwd=3,xlab="Quantitative Variable (X)",
 lines(B~x,lwd=3,col="red")
 lines(A~x,lwd=3,col="blue")
 grid(ny=NA)
-text(5,0.02,"B",col="red",cex=2)
+text(3,0.02,"B",col="red",cex=2)
 text(38,0.06,"A",col="blue",cex=2)
 ```
 
