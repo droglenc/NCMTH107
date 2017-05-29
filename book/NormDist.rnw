@@ -287,56 +287,6 @@ distrib(Z,xlab="Z")
 @
 
 
-\clearpage
-\newpage
-
-\begin{exsection}
-  \item \label{revex:quNorm68} On any normal distribution, what percentage of the individuals is within $\pm1\sigma$ of $\mu$? \ansref{ans:quNorm68}
-  \item \label{revex:quNorm68gt} On any normal distribution, what percentage of the individuals are greater than $\mu+\sigma$? \ansref{ans:quNorm68gt}
-  \item \label{revex:quNorm95gt} On any normal distribution, what percentage of the individuals are greater than $\mu-2\sigma$? \ansref{ans:quNorm95gt}
-  \item \label{revex:quNormbt6895} On any normal distribution, what percentage of the individuals are between $\mu-2\sigma$ and $\mu+1\sigma$? \ansref{ans:quNormbt6895}
-  \item \label{revex:quNorm84} On a N(-1,1) distribution, what percentage of the individuals are negative? \ansref{ans:quNorm84}
-  \item \label{revex:quNorm16} On a N(100,20) distribution, what percentage of the individuals are less than 80? \ansref{ans:quNorm16}
-  \item \label{revex:quNorm16a} On a N(-20,100) distribution, what percentage of the individuals are greater than 80? \ansref{ans:quNorm16a}
-  \item \label{revex:quNormAB} Identify the mean and standard deviation for each population on the graph below (HINT: ``eyeball'' integers). \ansref{ans:quNormAB}
-<<Guess, echo=FALSE, results='hide', include=FALSE, fig.width=5, fig.height=4>>=
-par(mar=c(3.5,1,1,1),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
-x <- seq(-5,7,by=0.001)
-B <- dnorm(x,-1,1)
-A <- dnorm(x,1,2)
-plot(B~x,type="l",lwd=3,xlab="Quantitative Variable (X)",ylab="",yaxt="n",xlim=c(-5,7),col="red")
-lines(B~x,lwd=3,col="red")
-lines(A~x,lwd=3,col="blue")
-abline(v=seq(-5,7,1),lwd=1,lty=3,col="gray1")
-text(-2.65,0.2,"B",col="red",cex=2)
-text(3.5,0.13,"A",col="blue",cex=2)
-@
-    \begin{center}
-      \includegraphics[width=3in]{Figs/Guess-1}
-    \end{center}
-\end{exsection}
-
-
-\begin{exsection}
-  \item \label{revex:quNormZ0.11} If $X\sim N(0,1)$, then what is the percentage of $X<0.11$? \ansref{ans:quNormZ0.11}
-  \item \label{revex:quNormZm0.11} If $X\sim N(0,1)$, then what is the percentage of $X>-0.11$? \ansref{ans:quNormZm0.11}
-  \item \label{revex:quNormZbtwn} If $X\sim N(0,1)$, then what is the percentage of $-1.45<X<1.11$? \ansref{ans:quNormZbtwn}
-  \item \label{revex:quNormXgt75} If $Y\sim N(70,6)$, then what is the percentage of $Y>75$? \ansref{ans:quNormXgt75}
-  \item \label{revex:quNormXlt63} If $Y\sim N(70,6)$, then what is the percentage of $Y<63$? \ansref{ans:quNormXlt63}
-  \item \label{revex:quNormXbtwn} If $Y\sim N(70,6)$, then what is the percentage of $62.3<Y<72.9$? \ansref{ans:quNormXbtwn}
-\end{exsection}
-
-
-
-\begin{exsection}
-  \item \label{revex:quNormXrev03} If $Y\sim N(70,6)$, then what is Y such that the area to the left of it is 0.3? \ansref{ans:quNormXrev03}
-  \item \label{revex:quNormXrev04} If $Y\sim N(70,6)$, then what is Y such that the area to the right of it is 0.4? \ansref{ans:quNormXrev04}
-  \item \label{revex:quNormXrev05} If $Y\sim N(70,6)$, then what are the Ys such that the area between them is 0.5? \ansref{ans:quNormXrev05}
-\end{exsection}
-
-
-
-
 \begin{exsection}
   \item \label{revex:quNormStudentAge} The age at which ``traditional'' students graduate from college is N(22.1, 1.1). Use this information to answer the questions below. \ansref{ans:quNormStudentAge}
 \begin{Enumerate}

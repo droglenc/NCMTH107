@@ -1,0 +1,80 @@
+---
+title: "Review Exercise Key"
+subtitle: "Normal Distributions"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3
+    fig_width: 3.5
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/zRevExAns/")
+source("../../rhelpers/rhelpers.R")
+modHTML("NormalDist_Calc1")
+```
+
+## Situation 1
+
+```{r NormCalc1Sit1, echo=FALSE, results='hide', fig.show='hide', message=FALSE}
+library(NCStats)
+( q1 <- distrib(0.11,mean=0,sd=1) )
+( q2 <- distrib(-0.11,mean=0,sd=1,lower.tail=FALSE) )
+( q3a <- distrib(-1.45,mean=0,sd=1) )
+( q3ab <- distrib(-1.11,mean=0,sd=1) )
+q3ab-q3a
+
+( q4 <- distrib(0.33,mean=0,sd=1,type="q") )
+( q5 <- distrib(0.25,mean=0,sd=1,type="q",lower.tail=FALSE) )
+( q6a <- distrib(0.05,mean=0,sd=1,type="q") )
+( q6b <- distrib(0.95,mean=0,sd=1,type="q") )
+```
+
+1. The percentage of X<0.11 is `r formatC(100*q1,format="f",digits=1)`.
+1. The percentage of X>-0.11 is `r formatC(100*q2,format="f",digits=1)`.
+1. The percentage of -1.45<X<1.11 is `r formatC(100*(q3ab-q3a),format="f",digits=1)`.
+1. The X that has 33% of Xs smaller is `r formatC(q4,format="f",digits=2)`.
+1. The X that has 25$ of Xs larger is `r formatC(q5,format="f",digits=2)`.
+1. The most common 90% of Xs are between `r formatC(q6a,format="f",digits=2)` and  is `r formatC(q6b,format="f",digits=2)`.
+
+### R Appendix
+```{r fig.show='hide', results='hide'}
+<<NormCalc1Sit1>>
+```
+
+----
+
+## Situation 2
+
+```{r NormCalc1Sit2, echo=FALSE, results='hide', fig.show='hide', message=FALSE}
+library(NCStats)
+( q1 <- distrib(75,mean=70,sd=6) )
+( q2 <- distrib(63,mean=70,sd=6,lower.tail=FALSE) )
+( q3a <- distrib(62.3,mean=70,sd=6) )
+( q3ab <- distrib(72.9,mean=70,sd=6) )
+q3ab-q3a
+
+( q4 <- distrib(0.3,mean=70,sd=6,type="q") )
+( q5 <- distrib(0.5,mean=70,sd=6,type="q",lower.tail=FALSE) )
+( q6a <- distrib(0.25,mean=70,sd=6,type="q") )
+( q6b <- distrib(0.75,mean=70,sd=6,type="q") )
+```
+
+1. The percentage of Y<75 is `r formatC(100*q1,format="f",digits=1)`.
+1. The percentage of Y>63 is `r formatC(100*q2,format="f",digits=1)`.
+1. The percentage of 62.3<Y<72.9 is `r formatC(100*(q3ab-q3a),format="f",digits=1)`.
+1. The Y that has 30% of Ys smaller is `r formatC(q4,format="f",digits=2)`.
+1. The Y that has 40$ of Ys larger is `r formatC(q5,format="f",digits=2)`.
+1. The most common 50% of Ys are between `r formatC(q6a,format="f",digits=2)` and  is `r formatC(q6b,format="f",digits=2)`.
+
+
+### R Appendix
+```{r fig.show='hide', results='hide'}
+<<NormCalc1Sit2>>
+```
+
+----
