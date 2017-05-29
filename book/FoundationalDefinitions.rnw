@@ -3,20 +3,9 @@ set_parent('IntroStats.Rnw')
 @
 
 \chapter{Foundational Definitions} \label{chap:FoundationalDefinitions}
-\begin{ChapObj}{\boxwidth}
-  \textbf{Objectives:}
-  \begin{Enumerate}
-    \item Describe what an individual is.
-    \item Describe what a population and a sample are and how they differ.
-    \item Describe what a parameter and a statistic are and how they differ.
-    \item Describe how a population, parameter, sample, and statistic are related.
-    \item Identify the individual, variable(s), population, parameter(s), sample, and statistic(s) (IVPPSS) in a given situation.
-    \item Identify variable types in context.
-  \end{Enumerate}
-\end{ChapObj}
 
 \minitoc
-\newpage
+\vspace{18pt}
 
 \lettrine{S}{tatistical inference is the process} of forming conclusions about a parameter of a population from statistics computed from individuals in a sample.\index{Inference!Definition}\footnote{Formal methods of inference are discussed beginning with \modref{chap:ProbIntro}.} Thus, understanding statistical inference requires understanding the difference between a population and a sample and a parameter and a statistic. And, to properly describe those items, the individual and variable(s) of interest must be identified. Understanding and identifying these six items is the focus of this module.
 
@@ -170,6 +159,7 @@ This example also illustrates that parameters are fixed values because populatio
 \warn{Parameters are fixed in value, while statistics vary in value.}
 
 
+\clearpage
 \section{Variable Types}\label{sect:VarTypes}
 The type of statistic that can be calculated is dictated by the type of variable recorded. For example, an average can only be calculated for quantitative variables (defined below). Thus, the type of variable should be identified immediately after performing an IVPPSS.
 

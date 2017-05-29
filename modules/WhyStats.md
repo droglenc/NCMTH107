@@ -20,7 +20,9 @@ Why is Statistics a required course for many majors at Northland College?  Why d
 <ol>
   <li>Describe the two major goals of statistics and why they are important.</li>
   <li>Define natural and sampling variability.</li>
-  <li>Explain why statistics is important to their field of study.</li>
+  <li>Describe "difficulties" in making conclusions about population caused by sampling variability.</li>
+  <li>Define "statistics" (as a field of study).</li>
+  <li>Explain why statistics is important to your field of study.</li>
 </ol>
       </div>
     </div>

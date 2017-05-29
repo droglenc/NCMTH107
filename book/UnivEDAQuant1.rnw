@@ -3,22 +3,14 @@ set_parent('IntroStats.Rnw')
 @
 
 \chapter[Summary One Quant Var]{Summaries for One Quantitative Variable)} \label{chap:UnivEDAQuant1}
-\begin{ChapObj}{\boxwidth}
-  \textbf{Objectives:}
-  \begin{Enumerate}
-    \item Calculate median, mean, and mode of a quantitative variable,
-    \item Calculate IQR, standard deviation, and range of a quantitative variable,
-    \item Construct a histogram for a quantitative variable, and
-    \item Construct a boxplot for a quantitative variable,
-  \end{Enumerate}
-\end{ChapObj}
 
+\vspace{-48pt}
 \minitoc
-\vspace{48pt}
+\vspace{12pt}
 
 \lettrine{S}{ummarizing large quantities of data with} few graphical or numerical summaries makes it is easier to identify meaning from data (discussed in \modref{chap:WhyStatsImportant}). Numeric and graphical summaries specific to a single quantitative variable are described in this module. Interpretations from these numeric and graphical summaries are described in the next module.
 
-Two data sets will be considered in this module when making calculations ``by hand'' (i.e., without using R). The first data set consists of the number of open pit mines in countries that have open pit mines \tabrefp{tab:MineData}.\footnote{These data were collected from \href{https://en.wikipedia.org/wiki/List_of_open-pit_mines}{this page}. See \sectref{sect:REnterData} for how to enter these data into R.} The second data set is Richter scale recordings for 15 major earthquakes \tabrefp{tab:EQData}. A third data set -- number of days of ice cover at ice gauge station 9004 in Lake Superior -- will be used to demonstrate calculations with R. These data are in \href{https://raw.githubusercontent.com/droglenc/NCData/master/LakeSuperiorIce.csv}{LakeSuperiorIce.csv} and are loaded into \R{LSI} below.\footnote{See \sectref{sect:RAltData} for a description of how to access these data. These data are originally from the \href{http://www.nsidc.org/}{National Snow and Ice Data Center}.}
+Two data sets will be considered in this module when making calculations ``by hand'' (i.e., without using R). The first data set consists of the number of open pit mines in countries that have open pit mines \tabrefp{tab:MineData}.\footnote{These data were collected from \href{https://en.wikipedia.org/wiki/List_of_open-pit_mines}{this page}. See \sectref{sect:REnterData} for how to enter these data into R.} The second data set is Richter scale recordings for 15 major earthquakes \tabrefp{tab:EQData}. A third data set -- number of days of ice cover at ice gauge station 9004 in Lake Superior -- will be used to demonstrate calculations with R. These data are in \href{https://raw.githubusercontent.com/droglenc/NCData/master/LakeSuperiorIce.csv}{LakeSuperiorIce.csv} and are loaded into \R{LSI} below.\footnote{See \sectref{sect:RAltData} for how to access these data. These data are originally from the \href{http://www.nsidc.org/}{National Snow and Ice Data Center}.}
 <<eval=FALSE>>=
 LSI <- read.csv("data/LakeSuperiorIce.csv")
 @

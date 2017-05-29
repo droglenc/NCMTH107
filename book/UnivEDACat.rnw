@@ -3,17 +3,10 @@ set_parent('IntroStats.Rnw')
 @
 
 \chapter{Univariate EDA - Categorical} \label{chap:UnivEDACat}
-\begin{ChapObj}{\boxwidth}
-  \textbf{Objectives:}
-  \begin{Enumerate}
-    \item Construct frequency and percentage tables with categorical data,
-    \item Construct bar-charts with categorical data, and
-    \item Use tables and graphs to describe the categorical data.
-  \end{Enumerate}
-\end{ChapObj}
 
+\vspace{-24pt}
 \minitoc
-\vspace{36pt}
+\vspace{12pt}
 
 \lettrine{I}{nterpreting summaries of a} single categorical variable is more intuitive and less defined than that for quantitative data. Specifically, one DOES NOT describe shape, center, dispersion, and outliers for categorical data. In this module, methods to construct tables and graphs for categorical data are described and the interpretation of the results demonstrated.
 
@@ -30,6 +23,7 @@ Individual  1  2  3  4  5  6  7  8
 Required    Y  N  N  Y  Y  Y  N  Y
   \end{Verbatim}
 \end{table}
+\vspace{-12pt}
 
 Second, the General Sociological Survey (GSS) is a very large survey that has been administered 25 times since 1972. The purpose of the GSS is to gather data on contemporary American society in order to monitor and explain trends in attitudes, behaviors, and attributes. One question that was asked in a recent GSS was ``How often do you make a special effort to sort glass or cans or plastic or papers and so on for recycling?''  These data are found in the \var{recycle} variable in \href{https://raw.githubusercontent.com/droglenc/NCData/master/GSSEnviroQues.csv}{GSSEnviroQues.csv}.
 
@@ -49,7 +43,7 @@ Required  Freq
   \end{Verbatim}
 \end{table}
 
-The remainder of this module will use the results from the entire class rather than the subset used above. For example, the frequency tables of individuals by sex and year-in-school for the entire class are in \tabref{tab:Mth107Freq}.
+The remainder of this module will use results from the entire class rather than the subset used above. For example, frequency tables of individuals by sex and year-in-school for the entire class are in \tabref{tab:Mth107Freq}.
 
 \begin{table}[htbp]
   \caption{Frequency tables for whether (Y) or not (N) MTH107 was required (Left) and year-in-school (Right) for all individuals in MTH107 in Winter 2010.}

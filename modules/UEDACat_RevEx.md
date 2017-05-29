@@ -12,7 +12,7 @@ css: "/css/modules.css"
 
 The Environmental Protection Agency (EPA) commissioned the Gallup Organization to conduct a nationwide telephone survey of 1000 households during August and September of 2002 regarding consumer knowledge and satisfaction with drinking water quality. Of the 1000 respondents surveyed, 751 knew that their drinking water came from a public or commercial water supplier. Of these 751 respondents, the following percentages knew precisely where that water was derived:
 
-| Source     | Groundwater | Lake/Reservoir | River | Multiple Sources | Don't Know | Refused to answer |
+| Source     | Groundwater | Lake/ Reservoir | River | Multiple Sources | Don't Know | Refused to answer |
 |------------|:-----------:|:--------------:|:-----:|:----------------:|:----------:|:-----------------:|
 | Percentage |     15.9    |      29.2      |  9.6  |        15.7      |    29.4    |        0.2        |
 

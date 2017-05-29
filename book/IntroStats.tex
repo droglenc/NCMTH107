@@ -77,19 +77,8 @@
 
 
 \chapter{Why Statistics is Important} \label{chap:WhyStatsImportant}
-\begin{ChapObj}{\boxwidth}
-  \textbf{Objectives:}
-  \begin{Enumerate}
-    \item Describe the two major reasons why statistics is important for understanding populations.
-    \item Define natural and sampling variability.
-    \item Describe ``difficulties'' in making conclusions about population caused by sampling variability.
-    \item Define ``statistics'' (as a field of study).
-    \item Appreciate the importance of statistics in scientific inquiry.
-  \end{Enumerate}
-\end{ChapObj}
 
 \minitoc
-\newpage
 
 \section{Realities}\label{sect:Realities}
 \lettrine{T}{he city of Ashland} performed an investigation in the area of Kreher Park \figrefp{fig:KreherParkMap} when considering the possible expansion of an existing wastewater treatment facility in 1989. The discovery of contamination from creosote waste in the subsoils and ground water at Kreher Park prompted the city to abandon the project. A subsequent assessment by the Wisconsin Department of Natural Resources (WDNR) indicated elevated levels of hazardous substances in soil borings, ground water samples, and in the sediments of Chequamegon Bay directly offshore of Kreher Park. In 1995 and 1999, the Northern States Power Company conducted investigations that further defined the area of contamination and confirmed the presence of specific contaminants associated with coal tar wastes. This site is now listed as a superfund site and is being given considerably more attention.\footnote{More information at the \href{https://cumulis.epa.gov/supercpad/cursites/csitinfo.cfm?id=0507952}{EPA} and the \href{http://dnr.wi.gov/topic/brownfields/ashland.html}{WDNR} websites.}
@@ -112,7 +101,7 @@ Suppose that the WDNR measured the concentration of lead at each of the 119 loca
   \caption{Lead concentration ($\mu g \cdot m^{-3}$) from 119 sites in Kreher Park superfund site.}
   \begin{center}
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sun May 28 18:37:52 2017
+% Sun May 28 23:04:21 2017
 \begin{tabular}{rrrrrrrrrrrrrrr}
   \hline
   \hline
@@ -130,7 +119,8 @@ Suppose that the WDNR measured the concentration of lead at each of the 119 loca
   \end{center}
 \end{table}
 
-Instead, suppose that the scientists brought a simple plot of the frequency of observed lead concentrations and brief numerical summaries \figrefp{fig:KreherParkPbhist} to the meeting. With these one can easily see that the measurements were fairly symmetric with no obviously ``weird'' values. The lead concentrations ranged from as low as 0.67 $\mu g \cdot m^{-3}$ to as high as 1.36 $\mu g \cdot m^{-3}$ with the measurements centered on approximately 1.0 $\mu g \cdot m^{-3}$. These summaries are discussed in detail in \modref{chap:UnivEDAQuant}. However, at this point, note that summarizing large quantities of data with few graphical or numerical summaries makes it is easier to identify meaning from the data.
+\vspace{-12pt}
+Instead, suppose that the scientists brought a simple plot of the frequency of observed lead concentrations and brief numerical summaries \figrefp{fig:KreherParkPbhist} to the meeting. With these one can easily see that the measurements were fairly symmetric with no obviously ``weird'' values. The lead concentrations ranged from as low as 0.67 $\mu g \cdot m^{-3}$ to as high as 1.36 $\mu g \cdot m^{-3}$ with the measurements centered on approximately 1.0 $\mu g \cdot m^{-3}$. These summaries are discussed in detail in \modref{chap:UnivEDAQuant}. However, at this point, note that summarizing large quantities of data with few graphical or numerical summaries makes it is easier to identify meaning from data.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{figure}[hbtp]
@@ -162,7 +152,6 @@ A critical question at this point is whether or not the results from the one sam
 
 \end{knitrout}
 
-\vspace{18pt}
 The results from two different samples do not perfectly agree because each sample contains different individuals (sites in this example), and no two individuals are exactly alike. The fact that no two individuals are exactly alike is \textbf{natural variability}\index{Natural Variability!Definition}, because of the ``natural'' differences that occur among individuals. The fact that the results from different samples are different is called \textbf{sampling variability}\index{Sampling Variability!Definition}. If there was no natural variability, then there would be no sampling variability. If there was no sampling variability, then the field of statistics would not be needed because a sample (even of one individual) would perfectly represent the larger group of individuals. Thus, understanding variability is at the core of statistical practice. Natural and sampling variability will be revisited continuously throughout this course.
 
 This may be unsettling! First, it was shown that an entire area or all of the individuals of interest cannot be examined. It was then shown that a sample of individuals from the larger whole did not perfectly represent the larger whole. Furthermore, each sample is unique and will likely lead to a (slightly) different conclusion. These are all real and difficult issues faced by the practicing scientist and considered by the informed consumer. However, the field of statistics is designed to ``deal with'' these issues such that the results from a relatively small subset of measurements can be used to make conclusions about the entire collection of measurements.
@@ -170,7 +159,7 @@ This may be unsettling! First, it was shown that an entire area or all of the in
 \warn{Statistics provides methods for overcoming the difficulties caused by the requirement of sampling and the presence of sampling variability.}
 
 
-\section{Major Goals or Purposes of Statistics}
+\section{Major Goals of Statistics}
 As seen in the Kreher Park example, the field of statistics has two primary purposes. First, statistics provides methods to summarize large quantities of data into concise and informative numerical or graphical summaries. For example, it was easier to discern the general underlying structure of the lead measurements from the statistics and histograms presented in Figures \ref{fig:KreherParkPbhist} and \ref{fig:KreherParkPbhist1}, than it was from the full list of lead measurements in \tabref{tab:KreherParkPbconc}. Second, statistical methods allow inferences to be made about all individuals (i.e., a population) from a few individuals (i.e., a sample).\footnote{Population and sample are defined more completely in \sectref{sect:IVPPSS}.}
 
 
@@ -190,20 +179,9 @@ The study and collection of data are important in the work of many professions, 
 
 
 \chapter{Foundational Definitions} \label{chap:FoundationalDefinitions}
-\begin{ChapObj}{\boxwidth}
-  \textbf{Objectives:}
-  \begin{Enumerate}
-    \item Describe what an individual is.
-    \item Describe what a population and a sample are and how they differ.
-    \item Describe what a parameter and a statistic are and how they differ.
-    \item Describe how a population, parameter, sample, and statistic are related.
-    \item Identify the individual, variable(s), population, parameter(s), sample, and statistic(s) (IVPPSS) in a given situation.
-    \item Identify variable types in context.
-  \end{Enumerate}
-\end{ChapObj}
 
 \minitoc
-\newpage
+\vspace{18pt}
 
 \lettrine{S}{tatistical inference is the process} of forming conclusions about a parameter of a population from statistics computed from individuals in a sample.\index{Inference!Definition}\footnote{Formal methods of inference are discussed beginning with \modref{chap:ProbIntro}.} Thus, understanding statistical inference requires understanding the difference between a population and a sample and a parameter and a statistic. And, to properly describe those items, the individual and variable(s) of interest must be identified. Understanding and identifying these six items is the focus of this module.
 
@@ -232,7 +210,7 @@ A \textbf{population} is ALL individuals of interest.\index{Population} In the S
 
 A \textbf{parameter} is a summary computed from ALL individuals in a population.\index{Parameter!Definition}  The term for the particular summary is usually preceded by the word ``population.'' For example, the population average length of all 1015 fish in Square Lake is 98.06 mm and the population standard deviation is 31.49 mm \tabrefp{tab:SquareLakePopn}.\footnote{We will discuss how to compute and interpret each of these values in later modules.} Parameters are ultimately what is of interest, because interest is in all individuals in the population. However, in practice, parameters cannot be computed because the entire population cannot usually be ``seen.''
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sun May 28 18:37:53 2017
+% Sun May 28 23:04:21 2017
 \begin{table}[ht]
 \centering
 \caption{Parameters for the total length of ALL 1015 fish in the Square Lake population.} 
@@ -267,7 +245,7 @@ Summaries computed from individuals in a sample are called \textbf{statistics}.\
 Some statistics computed from the sample from Square Lake are shown in \tabref{tab:SquareLakeSample1} and \figref{fig:SquareLakeSample1}. The sample mean of 100.04 mm is the best ``guess'' at the population mean. Not surprisingly from the discussion in \modref{chap:WhyStatsImportant}, the sample mean does not perfectly equal the population mean.
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sun May 28 18:37:53 2017
+% Sun May 28 23:04:22 2017
 \begin{table}[ht]
 \centering
 \caption{Summary statistics for the total length of a sample of 50 fish from the Square Lake population.} 
@@ -358,7 +336,7 @@ It is instructive to once again (see \modref{chap:WhyStatsImportant}) consider h
 \end{knitrout}
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sun May 28 18:37:53 2017
+% Sun May 28 23:04:22 2017
 \begin{table}[htbp]
 \centering
 \caption{Summary statistics for the total length in three samples of 50 fish from the Square Lake population.} 
@@ -381,6 +359,7 @@ This example also illustrates that parameters are fixed values because populatio
 \warn{Parameters are fixed in value, while statistics vary in value.}
 
 
+\clearpage
 \section{Variable Types}\label{sect:VarTypes}
 The type of statistic that can be calculated is dictated by the type of variable recorded. For example, an average can only be calculated for quantitative variables (defined below). Thus, the type of variable should be identified immediately after performing an IVPPSS.
 
@@ -432,20 +411,9 @@ The following are some issues to consider when identifying the type of a variabl
 
 
 \chapter{Data Production} \label{chap:DataProd}
-\begin{ChapObj}{\boxwidth}
-  \textbf{Objectives:}
-  \begin{Enumerate}
-    \item Identify major differences between data produced from experiments and observational studies.
-    \item Understand basic ideas of simple random experiments with one and two factors.
-    \item Describe the principles of experimental design.
-    \item Describe the principles of observational studies.
-    \item Understand basic ideas of designing simple observational studies, and
-    \item Explain the importance of randomization in both experiments and observational studies.
-  \end{Enumerate}
-\end{ChapObj}
 
 \minitoc
-\newpage
+\vspace{24pt}
 
 \lettrine{S}{tatistical inference is the process} of making conclusions about a population from the results of a single sample.\index{Inference!Definition} To make conclusions about the larger population, the sample must fairly represent the larger population. Thus, the proper collection (or production) of data is critical to statistics (and science in general). In this module, two ways of producing data -- (1) Experiments and (2) Observational Studies -- are described.
 
@@ -704,29 +672,13 @@ Finally, there are situations where conducting an experiment simply cannot be do
 
 
 \chapter{Getting Started with R} \label{chap:FoundationsR}
-\begin{ChapObj}{\boxwidth}
-  \textbf{Objectives:}
-  \begin{Enumerate}
-    \item Understand the difference between R expressions and assignments.
-    \item Understand the different types of data that can be stored in R.
-    \item Understand the different types of data structures used in R.
-    \item Be able to enter data into R data.frames.
-    \item Be able to isolate individual variables and individuals in R.
-    \item Be able to create data.frames that are subsets of larger data.frames.
-    \item Understand how homework assignments should be formatted.
-  \end{Enumerate}
-\end{ChapObj}
 
 \minitoc
-\newpage
 
 \section{Setting Up R and Helpers} \label{sect:RSetup}
-\vspace{-8pt}
 Detailed methods for downloading, installing, and configuring R, RStudio, and \R{NCStats} on your personal computer are given on the \href{http://derekogle.com/NCMTH107/resources/}{Resources page of the course website}.
 
-\vspace{-8pt}
 \section{Working With R Basics} \label{sect:RBasics}
-\vspace{-12pt}
 \subsection{Saving Results} \label{sect:RSaving}
 Results are not saved in R or RStudio.  Rather, ``scripts'' of successful R commands are saved and, then, if the analysis needs to be re-done, the entire set of commands is opened in RStudio and run again.  When writing a report, all tabular and graphical output should be copied from RStudio and pasted into your report document.  This document will serve as your analysis report and can be modified to include answers to questions, references to the tables and graphs, etc.\footnote{Specifics for how to format homework assignments is on the course syllabus}  All data that is not a simple vector (see \sectref{sect:RVectors}) should be entered into R through text files (see \sectref{sect:REnterData}).
 
@@ -734,9 +686,8 @@ R does allow one to save a ``workspace'', though I urge you not to do that.  Rat
 
 \warn{Do NOT save the workspace in R.}
 
-\vspace{-8pt}
+
 \subsection{Expressions and Assignments} \label{sect:RExprAssn}
-\vspace{-8pt}
 Expressions in R are mathematical ``equations'' that are evaluated by R with a result seen immediately.  An example of an expression in R is
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{kframe}
@@ -780,7 +731,7 @@ An object can be named whatever you want, with the exception that it cannot star
 \vspace{-12pt}
 \warn{Type the name of the object after making the assignment to confirm the results.}
 
-\vspace{-8pt}
+
 \begin{exsection}
   \item \label{revex:BasicsExpr1} \rhw{} Compute the value of $\frac{3}{7}+\frac{1}{2}$. \ansref{ans:BasicsExpr1}
   \item \label{revex:BasicsExpr2} \rhw{} Compute the value of $\pi*3.7^{2}$. \ansref{ans:BasicsExpr2}
@@ -789,9 +740,8 @@ An object can be named whatever you want, with the exception that it cannot star
   \item \label{revex:BasicsExpr5} \rhw{} \hspace{18pt} Assign the value 1.2 to \var{r} and then re-evaluate $\pi r^{2}$. \ansref{ans:BasicsExpr5}
 \end{exsection}
 
-\vspace{-18pt}
+
 \subsection{Functions and Arguments}  \label{sect:RFunctions}
-\vspace{-12pt}
 R contains many ``programs,'' or functions, to perform particular tasks.  A function is ``called'' by typing the function name followed by open and closed parentheses.  Arguments, which the function will use to perform its task, are contained within the parentheses.  The \R{log()} function, used in the previous section, is an example of a function.  The name of the function is \R{log} and the argument, the number for which to compute the natural log, is contained within the parentheses following the function name.  Many other functions will be described below and in subsequent modules.
 
 \defn{Function}{An R program that performs a particular task.}
@@ -804,16 +754,13 @@ R contains many ``programs,'' or functions, to perform particular tasks.  A func
 
 
 \section{Working With Data}
-\vspace{-12pt}
 \subsection{Data Types}  \label{sect:RDataTypes}
-\vspace{-12pt}
 Data in R will be designated as an integer (whole numbers), numeric (non-integer numerica values), character (strings), factor (group membershop), or logical (TRUE/FALSE).  The type of data largely dictates the type of analysis that can be performed.  Data types will be discussed in more detail as needed.  Note, however, that the \textbf{factor} data type is a special case of the character data type, where the specific items describe the group to which an individual belongs.  This description allows for certain analyses in later modules.
 
 \defn{Factor}{A special type of variable that identifies the group to which an individual belongs.}
 
-\vspace{-12pt}
+
 \subsection{Entering Data}  \label{sect:REnterData}
-\vspace{-12pt}
 For real data (i.e., several variables from many individuals) it is most efficient to enter data into a comma-separated values (CSV) file and then import that file into R.  Creating a CSV file with Microsoft Excel is described below, though there are other ways to create CSV files (see \href{http://derekogle.com/NCMTH107/resources/FAQ/}{FAQs on class webpage}).  This explanation assumes that you have a basic understanding of Excel (or other spreadsheet softwares).
 
 \warn{Realistic datasets are most efficiently entered into a comma-separated values (CSV) file in preparation for importing into R.}
@@ -874,7 +821,6 @@ To follow the ``one individual per row'' rule, these data are entered in stacked
 \warn{Data files are constructed with data from only one individual in each row.}
 
 \subsubsection*{Alternative Forms of Getting Data} \label{sect:RAltData}
-\vspace{-12pt}
 Some of the data files that you will use are provided on the \href{http://derekogle.com/NCMTH107/resources/data_107}{Data for MTH107} resource page of the class webpage.  In these cases, the data should be downloaded from the webpage and saved in the same directory or folder as your analysis script.  The downloaded file is then read into R in the same manner as described previously (i.e., set the working directory with \R{setwd()} and use \R{read.csv()}).
 
 A few data files used in this book are supplied with R or the NCStats package.  These files are loaded with \R{data()}.  For example, the \dfile{iris} data file is loaded into R with
@@ -888,9 +834,7 @@ A few data files used in this book are supplied with R or the NCStats package.  
 
 
 \subsection{Working With Data Frames}  \label{sect:RWorkdf}
-\vspace{-12pt}
 \subsubsection{Viewing a Data Frame}  \label{sect:RViewdf}
-\vspace{-12pt}
 Many users are disoriented in RStudio because they cannot ``see'' their data in the same way that they see it in a spreadsheet program.  There are, however, several options for viewing your data.  First, you can type the name of the data.frame object to see its entire contents.
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{kframe}
@@ -968,8 +912,6 @@ Levels: Ashland Bayfield Douglas
 \warn{A dollar sign is ONLY used in R to separate the name of a data.frame from the name of a variable within that data.frame.}
 
 \subsubsection{Selecting Individuals}  \label{sect:RSelectIndivs}
-\vspace{-12pt}
-
 In some instances, it may be important to select or exclude an individual from a data.frame.  Data.frames are two-dimensional objects that are indexed by a row and a column, in that order.  Positions within a data.frame are selected within paired square brackets.  For example, the item in the third row and second column of \R{bears} is selected below.
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{kframe}
@@ -1023,9 +965,8 @@ Finally, rows can be excluded by preceding the row indices with a negative sign.
 \end{kframe}
 \end{knitrout}
 
-\vspace{-12pt}
+
 \subsubsection{Filtering a data.frame}  \label{sect:RSubsetdf}
-\vspace{-12pt}
 It is common to create a new data.frame that contains only some of the individuals from an existing data.frame.  For example, a researcher may want a data.frame of only bears captured in Bayfield County or bears that weighed more than 100 kg.  The process of creating the newer, smaller data.frame is called filtering (or subsetting) and is accomplished with \R{filterD()}.  The \R{filterD()} function requires the original data.frame as the first argument and a condition statement as the second argument.  The condition statement is used to either include or exclude individuals from the original data.frame.  Condition statements consist of the name of a variable in the original data.frame, a comparison operator, and a comparison value \tabrefp{tab:RSubsetConditions}.  The result from \R{filterD()} should be assigned to an object, which is then the name of the new data.frame.
 
 \warn{\R{filterD()} is used to create a new data.frame that consists of individuals selected by some criterion from an existing data.frame.}
@@ -1133,10 +1074,8 @@ The following are examples of new data.frames created from \var{bears}.  The nam
   \end{Enumerate}
 \end{exsection}
 
-\vspace{-12pt}
-\subsection{Vectors}  \label{sect:RVectors}
-\vspace{-12pt}
 
+\subsection{Vectors}  \label{sect:RVectors}
 Data.frames are the primary structure in which to store real data.  However, much simpler situations that don't require a data.frame may arise.  In R, items of the same data type \sectrefp{sect:RDataTypes} are stored in a one-dimensional ``list'' called a \emph{vector}.  Vectors are usually displayed in one row (with many columns), but they may also be thought of as a single column (with many rows).  Items are entered into a vector with \R{c()}, where the individual arguments are specific numbers, characters, or logical values.\footnote{Note that \R{c} comes from the word ``concatenate.''}  Items for a vector of characters must be contained within paired quotes.
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{kframe}
@@ -1182,22 +1121,14 @@ Single variables from a data.frame are vectors.  Vectors that are not extracted 
 
 
 \chapter[Summary One Quant Var]{Summaries for One Quantitative Variable)} \label{chap:UnivEDAQuant1}
-\begin{ChapObj}{\boxwidth}
-  \textbf{Objectives:}
-  \begin{Enumerate}
-    \item Calculate median, mean, and mode of a quantitative variable,
-    \item Calculate IQR, standard deviation, and range of a quantitative variable,
-    \item Construct a histogram for a quantitative variable, and
-    \item Construct a boxplot for a quantitative variable,
-  \end{Enumerate}
-\end{ChapObj}
 
+\vspace{-48pt}
 \minitoc
-\vspace{48pt}
+\vspace{12pt}
 
 \lettrine{S}{ummarizing large quantities of data with} few graphical or numerical summaries makes it is easier to identify meaning from data (discussed in \modref{chap:WhyStatsImportant}). Numeric and graphical summaries specific to a single quantitative variable are described in this module. Interpretations from these numeric and graphical summaries are described in the next module.
 
-Two data sets will be considered in this module when making calculations ``by hand'' (i.e., without using R). The first data set consists of the number of open pit mines in countries that have open pit mines \tabrefp{tab:MineData}.\footnote{These data were collected from \href{https://en.wikipedia.org/wiki/List_of_open-pit_mines}{this page}. See \sectref{sect:REnterData} for how to enter these data into R.} The second data set is Richter scale recordings for 15 major earthquakes \tabrefp{tab:EQData}. A third data set -- number of days of ice cover at ice gauge station 9004 in Lake Superior -- will be used to demonstrate calculations with R. These data are in \href{https://raw.githubusercontent.com/droglenc/NCData/master/LakeSuperiorIce.csv}{LakeSuperiorIce.csv} and are loaded into \R{LSI} below.\footnote{See \sectref{sect:RAltData} for a description of how to access these data. These data are originally from the \href{http://www.nsidc.org/}{National Snow and Ice Data Center}.}
+Two data sets will be considered in this module when making calculations ``by hand'' (i.e., without using R). The first data set consists of the number of open pit mines in countries that have open pit mines \tabrefp{tab:MineData}.\footnote{These data were collected from \href{https://en.wikipedia.org/wiki/List_of_open-pit_mines}{this page}. See \sectref{sect:REnterData} for how to enter these data into R.} The second data set is Richter scale recordings for 15 major earthquakes \tabrefp{tab:EQData}. A third data set -- number of days of ice cover at ice gauge station 9004 in Lake Superior -- will be used to demonstrate calculations with R. These data are in \href{https://raw.githubusercontent.com/droglenc/NCData/master/LakeSuperiorIce.csv}{LakeSuperiorIce.csv} and are loaded into \R{LSI} below.\footnote{See \sectref{sect:RAltData} for how to access these data. These data are originally from the \href{http://www.nsidc.org/}{National Snow and Ice Data Center}.}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{kframe}
 \begin{verbatim}
@@ -1208,7 +1139,7 @@ Two data sets will be considered in this module when making calculations ``by ha
 
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sun May 28 18:37:54 2017
+% Sun May 28 23:04:23 2017
 \begin{table}[ht]
 \centering
 \caption{Number of open pit mines in countries that have open pit mines.} 
@@ -1223,7 +1154,7 @@ Two data sets will be considered in this module when making calculations ``by ha
 
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sun May 28 18:37:54 2017
+% Sun May 28 23:04:23 2017
 \begin{table}[ht]
 \centering
 \caption{Richter scale recordings for 15 major earthquakes.} 
@@ -1257,7 +1188,7 @@ The process for finding the median consists of three steps,\footnote{Most comput
 As an example, the open pit data from \tabref{tab:MineData} are,
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sun May 28 18:37:54 2017
+% Sun May 28 23:04:23 2017
 \begin{tabular}{rrrrrrrrrrrrr}
   1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 2 & 2 & 2 \\ 
   2 & 2 & 2 & 3 & 4 & 4 & 4 & 4 & 4 & 11 & 11 & 12 & 15 \\ 
@@ -1284,7 +1215,7 @@ Quartiles are the values for the three individuals that divide ordered data into
 These calculations are illustrated with the open pit mine data (the median was computed in \sectref{sec:Median}). Because $n=26$ is even, the halves of the data split naturally into two halves each with 13 individuals. Therefore, the $mp=\frac{13+1}{2}=7$ and the median of each half is the value of the individual in the seventh position. Thus, $Q1=1$ and $Q3=4$.
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sun May 28 18:37:54 2017
+% Sun May 28 23:04:23 2017
 \begin{tabular}{rrrrrrr}
   1 & 1 & 1 & 1 & 1 & 1 & 1 \\ 
   1 & 1 & 1 & 2 & 2 & 2 &  \\ 
@@ -1406,7 +1337,7 @@ Finally, you may be wondering why the sum of the squared differences in the stan
 The mode is the value that occurs most often in a data set. For example, one open pit mine is the mode in the open pit mine data \tabrefp{tab:MCmode}.
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sun May 28 18:37:54 2017
+% Sun May 28 23:04:23 2017
 \begin{table}[ht]
 \centering
 \caption{Frequency of countries by each number of open pit mines.} 
@@ -1423,7 +1354,7 @@ Number of Mines & 1 & 2 & 3 & 4 & 11 & 12 & 15 \\
 The mode for a continuous variable is the class or bin with the highest frequency of individuals. For example, if 0.5-unit class widths are used in the Richter scale data, then the modal class is 6.5-6.9 \tabrefp{tab:EQmode}.
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sun May 28 18:37:54 2017
+% Sun May 28 23:04:23 2017
 \begin{table}[ht]
 \centering
 \caption{Frequency of earthquakes by Richter Scale class.} 
@@ -1697,15 +1628,6 @@ In these cases, the variale needs to be explicitly converted to a factor variabl
 
 
 \chapter[Univ EDA Quantitative]{Univariate EDA - Quantitative} \label{chap:UnivEDAQuant2}
-\begin{ChapObj}{\boxwidth}
-  \textbf{Objectives:}
-  \begin{Enumerate}
-    \item Use graphs to describe the shape of a distribution,
-    \item Use graphs to describe outliers in a distribution,
-    \item Identify which summary statistics are appropriate in a given situation, and
-    \item Construct an appropriate overall summary.
-  \end{Enumerate}
-\end{ChapObj}
 
 \minitoc
 \vspace{40pt}
@@ -1888,7 +1810,7 @@ The graphical and numerical summaries from \modref{chap:UnivEDAQuant1} and the r
 The number of open pit mines in countries with open pit mines is strongly right-skewed with no outliers present \figrefp{fig:MineHist2}. [\textit{I did not call the group of four countries with 10 or more open pit mines outliers because there were more than one or two countries there.}] The center of the distribution is best measured by the median, which is 2 \tabrefp{tab:MineStats}. The range of open pit mines in the sample is from 1 to 15 while the dispersion as measured by the inter-quartile range (IQR) is from a Q1 of 1.0 to a Q3 of  4.0 \tabrefp{tab:MineStats}. I chose to use the median and IQR because the distribution was strongly skewed.
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sun May 28 18:37:55 2017
+% Sun May 28 23:04:23 2017
 \begin{table}[ht]
 \centering
 \caption{Descriptive statistics of number of open pit mines in countries with open pit mines.} 
@@ -1955,7 +1877,7 @@ The shape of number of days of ice cover at gauge 9004 in Lake Superior is appro
 \end{knitrout}
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sun May 28 18:37:55 2017
+% Sun May 28 23:04:23 2017
 \begin{table}[ht]
 \centering
 \caption{Descriptive statistics of number of days of ice cover at ice gauge 9004 in Lake Superior..} 
@@ -1991,7 +1913,7 @@ Summarize(~days,data=LSI,digits=1)
 \end{quote}
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sun May 28 18:37:55 2017
+% Sun May 28 23:04:23 2017
 \begin{tabular}{rrrrrrrrrrrrrrrr}
   30 & 26 & 26 & 26 & 25 & 25 & 25 & 25 & 25 & 24 & 24 & 24 & 24 & 24 & 24 & 23 \\ 
   23 & 23 & 23 & 22 & 22 & 22 & 22 & 21 & 21 & 21 & 20 & 20 & 19 & 19 & 18 & 16 \\ 
@@ -2014,7 +1936,7 @@ The shape of temperatures selected by the dominant crayfish is slightly left-ske
 \end{knitrout}
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sun May 28 18:37:55 2017
+% Sun May 28 23:04:23 2017
 \begin{table}[ht]
 \centering
 \caption{Descriptive statistics of crayfish temperature preferences.} 
@@ -2047,17 +1969,10 @@ Summarize(~temp,data=cray,digits=2)
 
 
 \chapter{Univariate EDA - Categorical} \label{chap:UnivEDACat}
-\begin{ChapObj}{\boxwidth}
-  \textbf{Objectives:}
-  \begin{Enumerate}
-    \item Construct frequency and percentage tables with categorical data,
-    \item Construct bar-charts with categorical data, and
-    \item Use tables and graphs to describe the categorical data.
-  \end{Enumerate}
-\end{ChapObj}
 
+\vspace{-24pt}
 \minitoc
-\vspace{36pt}
+\vspace{12pt}
 
 \lettrine{I}{nterpreting summaries of a} single categorical variable is more intuitive and less defined than that for quantitative data. Specifically, one DOES NOT describe shape, center, dispersion, and outliers for categorical data. In this module, methods to construct tables and graphs for categorical data are described and the interpretation of the results demonstrated.
 
@@ -2074,6 +1989,7 @@ Individual  1  2  3  4  5  6  7  8
 Required    Y  N  N  Y  Y  Y  N  Y
   \end{Verbatim}
 \end{table}
+\vspace{-12pt}
 
 Second, the General Sociological Survey (GSS) is a very large survey that has been administered 25 times since 1972. The purpose of the GSS is to gather data on contemporary American society in order to monitor and explain trends in attitudes, behaviors, and attributes. One question that was asked in a recent GSS was ``How often do you make a special effort to sort glass or cans or plastic or papers and so on for recycling?''  These data are found in the \var{recycle} variable in \href{https://raw.githubusercontent.com/droglenc/NCData/master/GSSEnviroQues.csv}{GSSEnviroQues.csv}.
 
@@ -2093,7 +2009,7 @@ Required  Freq
   \end{Verbatim}
 \end{table}
 
-The remainder of this module will use the results from the entire class rather than the subset used above. For example, the frequency tables of individuals by sex and year-in-school for the entire class are in \tabref{tab:Mth107Freq}.
+The remainder of this module will use results from the entire class rather than the subset used above. For example, frequency tables of individuals by sex and year-in-school for the entire class are in \tabref{tab:Mth107Freq}.
 
 \begin{table}[htbp]
   \caption{Frequency tables for whether (Y) or not (N) MTH107 was required (Left) and year-in-school (Right) for all individuals in MTH107 in Winter 2010.}
@@ -2242,7 +2158,7 @@ The majority of seeds were either sedge or grass with sedge being more than twic
 \end{knitrout}
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Sun May 28 18:37:55 2017
+% Sun May 28 23:04:24 2017
 \begin{table}[ht]
 \centering
 \caption{Percentage distribution of wetland seeds by type.} 
@@ -2272,6 +2188,390 @@ barplot(wptbl[-5],ylab="Percentage of Total Seeds",xlab="Seed Type")
 \end{knitrout}
 \end{minipage}
 
+
+
+\chapter{Normal Distribution}  \label{chap:NormDist}
+
+\vspace{-24pt}
+\minitoc
+\vspace{24pt}
+
+\lettrine{A}{ model for the distribution} of a single quantitative variable can be visualized by ``fitting'' a smooth curve to a histogram (\figref{fig:NormDensityEx}-Left), removing the histogram (\figref{fig:NormDensityEx}-Center), and using the remaining curve (\figref{fig:NormDensityEx}-Right) as a model for the distribution of the entire population of individuals. The smooth red curve drawn over the histogram serves as a model for the distribution of the \textbf{entire population}. If the smooth curve follows a known distribution, then certain calculations are greatly simplified.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{figure}[hbtp]
+
+{\centering \includegraphics[width=.95\linewidth]{Figs/NormDensityEx-1} 
+
+}
+
+\caption[Depiction of fitting a smooth curve to a histogram to serve as a model for the distribution]{Depiction of fitting a smooth curve to a histogram to serve as a model for the distribution.}\label{fig:NormDensityEx}
+\end{figure}
+
+
+\end{knitrout}
+
+The normal distribution is one of the most important distributions in statistics because it serves as a model for the distribution of individuals in many natural situations and the distribution of statistics from repeated samplings (i.e., sampling distributions).\footnote{See \modref{chap:SamplingDist}.}  The use of a normal distribution model to make certain calculations is demonstrated in this module.
+
+
+\section{Characteristics of a Normal Distribution}
+The normal distribution is the familiar bell-shaped curve (\figref{fig:NormDensityEx}-Right). Normal distributions have two parameters -- the population mean, $\mu$, and the population standard deviation, $\sigma$ -- that control the exact shape and position of the distribution. Specifically, the mean $\mu$ controls the center and the standard deviation $\sigma$ controls the dispersion of the distribution \figrefp{fig:NormMultDists}.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{figure}[hbtp]
+
+{\centering \includegraphics[width=.8\linewidth]{Figs/NormMultDists-1} 
+
+}
+
+\caption[Nine normal distributions]{Nine normal distributions. Distributions with the same line type have the same value of $\mu$ (solid is $\mu$=0, dashed is $\mu$=2, dotted is $\mu$=5). Distributions with the same color have the same value of $\sigma$ (black is $\sigma$=0.5, red is $\sigma$=1, and green is $\sigma$=2).}\label{fig:NormMultDists}
+\end{figure}
+
+
+\end{knitrout}
+
+There are an infinite number of normal distributions because there are an infinite number of combinations of $\mu$ and $\sigma$. However, each normal distribution will
+\begin{Enumerate}
+  \item be bell-shaped and symmetric,
+  \item centered at $\mu$,
+  \item have inflection points at $\mu \pm \sigma$, and
+  \item have a total area under the curve equal to 1.
+\end{Enumerate}
+
+If a generic variable $X$ follows a normal distribution with a mean of $\mu$ and a standard deviation of $\sigma$, then it is said that $X\sim N(\mu,\sigma)$. For example, if the heights of students ($H$) follows a normal distribution with a $\mu$ of 66 and a $\sigma$ of 3, then it is said that $H\sim N(66,3)$. As another example, $Z\sim N(0,1)$ means that the variable $Z$ follows a normal distribution with a mean of $\mu$=0 and a standard deviation of $\sigma$=1.
+
+
+\section{Simple Areas Under the Curve}
+A common problem is to determine the proportion of individuals with a value of the variable between two numbers. For example, you might be faced with determining the proportion of all sites that have lead concentrations between 1.2 and 1.5 $\mu g \cdot m^{-3}$, the proportion of students that scored higher than 700 on the SAT, or the proportion of Least Weasels that are shorter than 150 mm. Before considering these more realistic situations, we explore calculations for the generic variable $X$ shown in \figref{fig:NormDistShade}.
+
+Let's consider finding the proportion of individuals in a \textit{sample} with values between 0 and 2. A histogram can be used to answer this question because it is about the individuals in a sample (\figref{fig:NormDistShade}-Left). In this case, the proportion of individuals with values between 0 and 2 is computed by dividing the number of individuals in the red shaded bars by the total number of individuals in the histogram. The analogous computation on the superimposed smooth curve is to find the area under the curve between 0 and 2 (\figref{fig:NormDistShade}-Right). The area under the curve is a ``proportion of the total'' because, as stated above, the area under the entire curve is equal to 1. The actual calculations on the normal curve are shown in the following sections. However, at this point, note that the calculation of an area on a normal curve is analogous to summing the number of individuals in the appropriate classes of the histogram and dividing by $n$.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{figure}[hbtp]
+
+{\centering \includegraphics[width=.8\linewidth]{Figs/NormDistShade-1} 
+
+}
+
+\caption[Depiction of finding the proportion of individuals between 0 and 2 on a histogram (\textbf{Left}) and on a standard normal distribution (\textbf{Right})]{Depiction of finding the proportion of individuals between 0 and 2 on a histogram (\textbf{Left}) and on a standard normal distribution (\textbf{Right}).}\label{fig:NormDistShade}
+\end{figure}
+
+
+\end{knitrout}
+
+\warn{The proportion of individuals between two values of a variable that is normally distributed is the area under the normal distribution between those two values.}
+
+The 68-95-99.7 (or Empirical) Rule states that 68\% of individuals that follow a normal distribution have values between $\mu-1\sigma$ and $\mu+1\sigma$, 95\% have values between $\mu-2\sigma$ and $\mu+2\sigma$, and 99.7\% have values between $\mu-3\sigma$ and $\mu+3\sigma$ \figrefp{fig:NormEmpiricalRule}.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{figure}[hbtp]
+
+{\centering \includegraphics[width=.5\linewidth]{Figs/NormEmpiricalRule-1} 
+
+}
+
+\caption[Depiction of the 68-95-99.7 (or Empirical) Rule on a normal distribution]{Depiction of the 68-95-99.7 (or Empirical) Rule on a normal distribution.}\label{fig:NormEmpiricalRule}
+\end{figure}
+
+
+\end{knitrout}
+
+\vspace{12pt} % needed because spaced is gobbled up by LaTeX
+The 68-95-99.7 Rule is true no matter what $\mu$ and $\sigma$ are as long as the distribution is normal. For example, if $A\sim N(3,1)$, then 68\% of the individuals will fall between 2 (i.e., 3-1*1) and 4 (i.e., 3+1*1) and 99.7\% will fall between 0 (i.e., 3-3*1) and 6 (i.e., 3+3*1). Alternatively, if $B\sim N(9,3)$, then 68\% of the individuals will fall between 6 (i.e., 9-1*3) and 12 (i.e., 9+1*3) and 95\% will be between 3 (i.e., 9-2*3) and 15 (i.e., 9+2*3). Similar calculations can be made for any normal distribution.
+
+The 68-95-99.7 Rule is used to find areas under the normal curve as long as the value of interest is an \textbf{integer} number of standard deviations away from the mean. For example, the proportion of individuals that have a value of A greater than 5 \figrefp{fig:NormEmpiricalRuleCalc} is found by first realizing that 95\% of the individuals on this distribution fall between 1 and 5 (i.e., $\pm2\sigma$ from $\mu$). By subtraction this means that 5\% of the individuals must be less than 1 \textbf{AND} greater than 5. Finally, because normal distributions are symmetric, the same percentage of individuals must be less than 1 as are greater than 5. Thus, half of 5\%, or 2.5\%, of the individuals have a value of A greater than 5.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{figure}[hbtp]
+
+{\centering \includegraphics[width=.4\linewidth]{Figs/NormEmpiricalRuleCalc-1} 
+
+}
+
+\caption[The N(3,1) distribution depicting how the 68-95-99.7 Rule is used to compute the percentage of individuals with values greater than 5]{The N(3,1) distribution depicting how the 68-95-99.7 Rule is used to compute the percentage of individuals with values greater than 5.}\label{fig:NormEmpiricalRuleCalc}
+\end{figure}
+
+
+\end{knitrout}
+
+\warn{The 68-95-99.7 Rule can only be used for questions involving \textbf{integer} standard deviations away from the mean.}
+
+
+\section[Forward Calculations]{More Complex Areas (Forward Calculations)}
+Areas under the curve relative to non-integer numbers of standard deviations away from the mean can only be found with the help of special tables or computer software. In this course, we will use R.
+
+The area under a normal curve relative to a particular value is computed in R with \R{distrib()}. This function requires the \textit{particular value} as the first argument and the mean and standard deviation of the normal distribution in the \R{mean=} and \R{sd=} arguments, respectively. The \R{distrib()} function defaults to finding the area under the curve to the \textbf{left of} the particular value, but it can find the area under the curve to the right of the particular value by including \R{lower.tail=FALSE}.
+
+For example, suppose that the heights of a population of students is known to be $H\sim N(66,3)$. The proportion of students in this population that have a height less than 71 inches is computed below. Thus, approximately 95.2\% of students in this population have a height less than 71 inches \figrefp{fig:NormZCalc1}.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+> ( distrib(71,mean=66,sd=3) )
+[1] 0.9522096
+\end{verbatim}
+\end{kframe}\begin{figure}[hbtp]
+
+{\centering \includegraphics[width=.4\linewidth]{Figs/NormZCalc1-1} 
+
+}
+
+\caption[Calculation of the proportion of individuals on a $N(66,3)$ with a value less than 71]{Calculation of the proportion of individuals on a $N(66,3)$ with a value less than 71.}\label{fig:NormZCalc1}
+\end{figure}
+
+
+\end{knitrout}
+
+The proportion of students in this population that have a height \textit{greater} than 68 inches is computed below (note use of \R{lower.tail=FALSE}). Thus, approximately 25.2\% of students in this population have a height greater than 68 inches \figrefp{fig:NormZCalc2}.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+> ( distrib(68,mean=66,sd=3,lower.tail=FALSE) )
+[1] 0.2524925
+\end{verbatim}
+\end{kframe}\begin{figure}[hbtp]
+
+{\centering \includegraphics[width=.4\linewidth]{Figs/NormZCalc2-1} 
+
+}
+
+\caption[Calculation of the proportion of individuals on a $N(66,3)$ with a value greater than 68]{Calculation of the proportion of individuals on a $N(66,3)$ with a value greater than 68.}\label{fig:NormZCalc2}
+\end{figure}
+
+
+\end{knitrout}
+
+Finding the area between two particular values is a bit more work. To answer ``between''-type questions, the area less than the smaller of the two values is subtracted from the area less than the larger of the two values. This is illustrated by noting that two values split the area under the normal curve into three parts -- A, B, and C in \figref{fig:NormDistBetween}. The area between the two values is B. The area to the left of the larger value corresponds to the area A+B. The area to the left of the smaller value corresponds to the area A. Thus, subtracting the latter from the former leaves the ``in-between'' area B (i.e., (A+B)-A = B).
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{figure}[hbtp]
+
+{\centering \includegraphics[width=.4\linewidth]{Figs/NormDistBetween-1} 
+
+}
+
+\caption[Schematic representation of how to find the area between two $Z$ values]{Schematic representation of how to find the area between two $Z$ values.}\label{fig:NormDistBetween}
+\end{figure}
+
+
+\end{knitrout}
+\vspace{12pt} % because the spacing is gobbled by the R code.
+
+For example, the area between 62 and 70 inches of height is found below. Thus, 81.8\% of students in this population have a height between 62 and 70 inches.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+> ( AB <- distrib(70,mean=66,sd=3) )  # left-of 70
+[1] 0.9087888
+> ( A <- distrib(62,mean=66,sd=3) )   # left-of 62
+[1] 0.09121122
+> AB-A                                # between 62 and 70
+[1] 0.8175776
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\warn{The area between two values is found by subtracting the area less than the smaller value from the area less than the larger value.}
+
+
+
+\section[Reverse Calculations]{Values from Areas (Reverse Calculations)}
+Another important calculation with normal distributions is finding the value or values of $X$ with a given proportion of individuals less than, greater than, or between. For example, it may be necessary to find the test score such that 90\% (or 0.90 as a proportion) of the students scored lower. In contrast to the calculations in the previous section (where the value of $X$ was given and a proportion of individuals was asked for), the calculations in this section give a proportion and ask for a value of $X$. These types of questions are called \textbf{``reverse'' normal distribution questions} to contrast them with questions from the previous section.
+
+Reverse questions are also answered with \R{distrib()}, though the first argument is now the given proportion (or area) of interest. The calculation is treated as a ``reverse'' question when \R{type="q"} is given to \R{distrib()}.\footnote{``q'' stands for quantile.}  For example, the height that has 20\% of all students shorter is  63.5 inches, as computed below \figrefp{fig:NormZCalc4}.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+> ( distrib(0.20,mean=66,sd=3,type="q") )
+[1] 63.47514
+\end{verbatim}
+\end{kframe}\begin{figure}[hbtp]
+
+{\centering \includegraphics[width=.4\linewidth]{Figs/NormZCalc4-1} 
+
+}
+
+\caption[Calculation of the height with 20\% of all students shorter]{Calculation of the height with 20\% of all students shorter.}\label{fig:NormZCalc4}
+\end{figure}
+
+
+\end{knitrout}
+
+``Greater than'' reverse questions are computed by including \R{lower.tail=FALSE}. For example, 10\% of the population of students is taller than 69.8 inches, as computed below \figrefp{fig:NormZCalc5}.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+> ( distrib(0.10,mean=66,sd=3,type="q",lower.tail=FALSE) )
+[1] 69.84465
+\end{verbatim}
+\end{kframe}\begin{figure}[hbtp]
+
+{\centering \includegraphics[width=.4\linewidth]{Figs/NormZCalc5-1} 
+
+}
+
+\caption[Calculation of the height with 10\% of all students taller]{Calculation of the height with 10\% of all students taller.}\label{fig:NormZCalc5}
+\end{figure}
+
+
+\end{knitrout}
+
+``Between'' questions can only be easily handled if the question is looking for endpoint values that are symmetric about $\mu$. In other words, the question must ask for the two values that contain the ``most common'' proportion of individuals. For example, suppose that you were asked to find the most common 80\% of heights. This type of question is handled by converting this ``symmetric between'' question into two ``less than'' questions. For example, in \figref{fig:NormRevBetween} the area D is the symmetric area of interest. If D is 0.80, then C+E must be 0.20.\footnote{Because all three areas must sum to 1.}  Because D is symmetric about $mu$, C and E must both equal 0.10. Thus, the lower bound on D is the value that has 10\% of all values smaller. Similarly, because the combined area of C and D is 0.90, the upper bound on D is the value that has 90\% of all values smaller. This question has now been converted from a ``symmetric between'' to two ``less than'' questions that can be answered exactly as shown above. For example, the two heights that have a symmetric 80\% of individuals between them are 62.2 and 69.8 as computed below.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+> ( distrib(0.10,mean=66,sd=3,type="q") )
+[1] 62.15535
+> ( distrib(0.90,mean=66,sd=3,type="q") )
+[1] 69.84465
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{figure}[hbtp]
+
+{\centering \includegraphics[width=.4\linewidth]{Figs/NormRevBetween-1} 
+
+}
+
+\caption[Depiction of areas in a reverse between type normal distribution question]{Depiction of areas in a reverse between type normal distribution question.}\label{fig:NormRevBetween}
+\end{figure}
+
+
+\end{knitrout}
+
+
+\subsection{Distinguish Calculation Types}
+It is critical to be able to distinguish between the two main types of calculations made from normal distributions. The first type of calculation is a ``forward'' calculation where the area or proportion of individuals relative to a value of the variable must be found. The second type of calculation is a ``reverse'' calculation where the value of the variable relative to a particular area is calculated.
+
+Distinguishing between these two types of calculations is a matter of deciding if (i) the value of the variable is given and the proportion (or area) is to be found or (ii) if the proportion (or area) is given and the value of the variable is to be found. Therefore, distinguishing between the calculation types is as simple as identifying what is given (or known) and what must be found. If the value of the variable is given but not the proportion or area, then a forward calculation is used. If the area or proportion is given, then a reverse calculation to find the value of the variable is used.
+
+
+\section{Standardization and Z-Scores}\label{sect:Standardizing}
+An individual that is 59 inches tall is 7 inches shorter than average if heights are $N(66,3)$. Is this a large or a small difference?  Alternatively, this same individual is $\frac{-7}{3}$ = $-2.33$ standard deviations below the mean. Thus, a height of 59 inches is relatively rare in this population because few individuals are more than two standard deviations away from the mean.\footnote{From the 68-95-99.7\% Rule.} As seen here, the relative magnitude that an individual differs from the mean is better expressed as the number of standard deviations that the individual is away from the mean.
+
+Values are ``standardized'' by changing the original scale (inches in this example) to one that counts the number of standard deviations (i.e., $\sigma$) that the value is away from the mean (i.e., $\mu$). For example, with the height variable above, 69 inches is one standard deviation above the mean, which corresponds to +1 on the standardized scale. Similarly, 60 inches is two standard deviations below the mean, which corresponds to -2 on the standardized scale. Finally, 67.5 inches on the original scale is one half standard deviation above the mean or +0.5 on the standardized scale.
+
+The process of computing the number of standard deviations that an individual is away from the mean is called \textbf{standardizing}. Standardizing is accomplished with
+\begin{equation}
+  \label{eqn:Zgeneral}
+    Z = \frac{\text{``value''}-\text{``center''}}{\text{``dispersion''}}
+\end{equation}
+or, more specifically,
+\begin{equation}
+  \label{eqn:Zspecific}
+    Z = \frac{x-\mu}{\sigma}
+\end{equation}
+For example, the standardized value of an individual with a height of 59 inches is $z=\frac{59-66}{3}=-2.33$. Thus, this individual's height is 2.33 standard deviations below the average height in the population.
+
+Standardized values ($Z$) follow a $N(0,1)$. Thus, $N(0,1)$ is called the ``standard normal distribution.''  The relationship between $X$ and $Z$ is one-to-one meaning that each value of $X$ converts to one and only one value of $Z$. This means that the area to the left of $X$ on a $N(\mu,\sigma)$ is the same as the area to the left of $Z$ on a $N(0,1)$. This one-to-one relationship is illustrated in \figref{fig:NormStandardizingEx} using the individual with a height of 59 inches and $Z=-2.33$.
+
+\vspace{-6pt}
+\warn{The standardized scale (i.e., z-scores) represents the number of standard deviations that a value is from the mean.}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.922, 0.922, 0.922}\color{fgcolor}\begin{figure}[hbtp]
+
+{\centering \includegraphics[width=.4\linewidth]{Figs/NormStandardizingEx-1} 
+\includegraphics[width=.4\linewidth]{Figs/NormStandardizingEx-2} 
+
+}
+
+\caption{Plots depicting the area to the left of 59 on a $N(66,3)$ (\textbf{Left}) and the area to the right of the corresponding Z-score of $Z=-2.33$ on a $N(0,1)$ (\textbf{Right}). Not that the x-axis scales are different.}\label{fig:NormStandardizingEx}
+\end{figure}
+
+
+\end{knitrout}
+
+
+\clearpage
+\newpage
+
+\begin{exsection}
+  \item \label{revex:quNorm68} On any normal distribution, what percentage of the individuals is within $\pm1\sigma$ of $\mu$? \ansref{ans:quNorm68}
+  \item \label{revex:quNorm68gt} On any normal distribution, what percentage of the individuals are greater than $\mu+\sigma$? \ansref{ans:quNorm68gt}
+  \item \label{revex:quNorm95gt} On any normal distribution, what percentage of the individuals are greater than $\mu-2\sigma$? \ansref{ans:quNorm95gt}
+  \item \label{revex:quNormbt6895} On any normal distribution, what percentage of the individuals are between $\mu-2\sigma$ and $\mu+1\sigma$? \ansref{ans:quNormbt6895}
+  \item \label{revex:quNorm84} On a N(-1,1) distribution, what percentage of the individuals are negative? \ansref{ans:quNorm84}
+  \item \label{revex:quNorm16} On a N(100,20) distribution, what percentage of the individuals are less than 80? \ansref{ans:quNorm16}
+  \item \label{revex:quNorm16a} On a N(-20,100) distribution, what percentage of the individuals are greater than 80? \ansref{ans:quNorm16a}
+  \item \label{revex:quNormAB} Identify the mean and standard deviation for each population on the graph below (HINT: ``eyeball'' integers). \ansref{ans:quNormAB}
+
+    \begin{center}
+      \includegraphics[width=3in]{Figs/Guess-1}
+    \end{center}
+\end{exsection}
+
+
+\begin{exsection}
+  \item \label{revex:quNormZ0.11} If $X\sim N(0,1)$, then what is the percentage of $X<0.11$? \ansref{ans:quNormZ0.11}
+  \item \label{revex:quNormZm0.11} If $X\sim N(0,1)$, then what is the percentage of $X>-0.11$? \ansref{ans:quNormZm0.11}
+  \item \label{revex:quNormZbtwn} If $X\sim N(0,1)$, then what is the percentage of $-1.45<X<1.11$? \ansref{ans:quNormZbtwn}
+  \item \label{revex:quNormXgt75} If $Y\sim N(70,6)$, then what is the percentage of $Y>75$? \ansref{ans:quNormXgt75}
+  \item \label{revex:quNormXlt63} If $Y\sim N(70,6)$, then what is the percentage of $Y<63$? \ansref{ans:quNormXlt63}
+  \item \label{revex:quNormXbtwn} If $Y\sim N(70,6)$, then what is the percentage of $62.3<Y<72.9$? \ansref{ans:quNormXbtwn}
+\end{exsection}
+
+
+
+\begin{exsection}
+  \item \label{revex:quNormXrev03} If $Y\sim N(70,6)$, then what is Y such that the area to the left of it is 0.3? \ansref{ans:quNormXrev03}
+  \item \label{revex:quNormXrev04} If $Y\sim N(70,6)$, then what is Y such that the area to the right of it is 0.4? \ansref{ans:quNormXrev04}
+  \item \label{revex:quNormXrev05} If $Y\sim N(70,6)$, then what are the Ys such that the area between them is 0.5? \ansref{ans:quNormXrev05}
+\end{exsection}
+
+
+
+
+\begin{exsection}
+  \item \label{revex:quNormStudentAge} The age at which ``traditional'' students graduate from college is N(22.1, 1.1). Use this information to answer the questions below. \ansref{ans:quNormStudentAge}
+\begin{Enumerate}
+  \item What percentage of the students graduate by the age of 21?
+  \item What percentage of the students graduate after age 24?
+  \item What is the age range for the middle 95\% of the students?
+  \item What is the age at which 90\% of the students have graduated?
+\end{Enumerate}
+
+  \item \label{revex:quNormBlackBears} We know, from years of study of black bears, that the population distributions for head length is N(13.7,1.9), neck girth is N(20.9,4.8), and body length is N(60.0,10). All other variables measured on black bears cannot be described by a normal distribution. Use this information to answer the questions below. \ansref{ans:quNormBlackBears}
+\begin{Enumerate}
+  \item What is the percentage of bears between 45" and 65" in body length?
+  \item What is the percentage of bears that weighs more than 200 lbs?
+\end{Enumerate}
+
+  \item \label{revex:quNormShrews} The brain weights of short-tailed shrews (\textit{Blarina brevicauda}) is normally distributed with a mean of 0.14 grams and a standard deviation of 0.04 grams. Use this information to answer the questions below. \ansref{ans:quNormShrews}
+\begin{Enumerate}
+  \item What percentage of shrews have a brain weight less than 0.09 grams?
+  \item What percentage of shrews have a brain weight between 0.09 and 0.17 grams?
+  \item What is the brain weight such that 30\% of all shrews have a larger brain weight?
+\end{Enumerate}
+
+  \item \label{revex:quNormBart} The distribution of arrival times for the BART bus at Northland is normally distributed with a mean of 0 and standard deviation of 3, where negative values indicate early arrivals (i.e., before the scheduled time) and positive values indicate late arrivals. Use this information to answer the questions below. \ansref{ans:quNormBart}
+\begin{Enumerate}
+  \item What percentage of the arrivals are more than 5 minutes late?
+  \item What percentage of the arrivals are more than 4 minutes early?
+  \item What percentage of the arrivals are between 4 minutes early and 4 minutes late?
+  \item What is the arrival time such that 25\% of all arrival times are later than that time?
+  \item What are the most common 60\% of arrival times?
+  \item What kind of variable is arrival time?
+\end{Enumerate}
+
+  \item \label{revex:quNormRoeDeer} Researchers on Storfosna Is., Norway wanted to examine reproductive habits of roe deer \textit{Capreolus capreolus} in the northern extremities \citep{AndersenLinnell2000}. The researchers observed how many fawns were born to each of 149 female, sexually mature roe deer between the years 1991 and 1994. The mean number of fawns from each deer was 2.235 with a standard deviation of 0.460. Use this information to answer the questions below. \ansref{ans:quNormRoeDeer}
+\begin{Enumerate}
+  \item What percentage of does have less than 2 fawns.
+  \item What percentage of does have more than 3 fawns.
+  \item What percentage of does have between 1 and 3 fawns.
+  \item What is the number of fawns such that only 7.6\% of the does have fewer fawns?
+  \item What is the number of fawns such that only 4.2\% of the does have more fawns?
+  \item What is the most common 87\% of number of fawns born per doe?
+\end{Enumerate}
+
+  \item \label{revex:quNormCrayfish} I recently investigated the efficacy of becoming a commercial crayfisherman (crayfish = crawfish = crawdad) on the lake I live on. With carefully constructed samples I concluded that the size of crayfish was N(93,8). The market for crayfish resides in Sweden. Swedes prefer (hence, will only buy) crayfish that are between $90$ and $110$ mm long ($<90$ are too small to deal with and $>110$ taste bad). Use this information to answer the questions below. \ansref{ans:quNormCrayfish}
+\begin{Enumerate}
+  \item How many acceptably-sized crayfish could I send to market, if I could catch approximately 50,000 crayfish? [HINT: compute the proportion of preferably-sized crayfish first.]
+  \item If I could find an alternative market for the larger ($>110$) crayfish, how many could I send to it (again assume that I could catch 50,000 crayfish)?
+\end{Enumerate}
+\end{exsection}
 
 
 

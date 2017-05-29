@@ -18,6 +18,9 @@ It is important to understand the distribution of individuals for a single varia
 <p>After completing this module, you should be able to ...</p>
 
 <ol>
+  <li>Use graphs to describe the shape of a distribution.</li>
+  <li>Use graphs to describe outliers in a distribution.</li>
+  <li>Identify which summary statistics are appropriate in a given situation.</li>
   <li>Construct a succinct written summary that addresses the four key characteristics (shape, outliers, center, and dispersion) of the distribution of a quantitative variable.</li>
 </ol>
       </div>

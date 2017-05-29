@@ -3,19 +3,8 @@ set_parent('IntroStats.Rnw')
 @
 
 \chapter{Why Statistics is Important} \label{chap:WhyStatsImportant}
-\begin{ChapObj}{\boxwidth}
-  \textbf{Objectives:}
-  \begin{Enumerate}
-    \item Describe the two major reasons why statistics is important for understanding populations.
-    \item Define natural and sampling variability.
-    \item Describe ``difficulties'' in making conclusions about population caused by sampling variability.
-    \item Define ``statistics'' (as a field of study).
-    \item Appreciate the importance of statistics in scientific inquiry.
-  \end{Enumerate}
-\end{ChapObj}
 
 \minitoc
-\newpage
 
 \section{Realities}\label{sect:Realities}
 \lettrine{T}{he city of Ashland} performed an investigation in the area of Kreher Park \figrefp{fig:KreherParkMap} when considering the possible expansion of an existing wastewater treatment facility in 1989. The discovery of contamination from creosote waste in the subsoils and ground water at Kreher Park prompted the city to abandon the project. A subsequent assessment by the Wisconsin Department of Natural Resources (WDNR) indicated elevated levels of hazardous substances in soil borings, ground water samples, and in the sediments of Chequamegon Bay directly offshore of Kreher Park. In 1995 and 1999, the Northern States Power Company conducted investigations that further defined the area of contamination and confirmed the presence of specific contaminants associated with coal tar wastes. This site is now listed as a superfund site and is being given considerably more attention.\footnote{More information at the \href{https://cumulis.epa.gov/supercpad/cursites/csitinfo.cfm?id=0507952}{EPA} and the \href{http://dnr.wi.gov/topic/brownfields/ashland.html}{WDNR} websites.}
@@ -48,7 +37,8 @@ print(xtable(matrix(c(Pb,NA),nrow=8)),na.string="",
   \end{center}
 \end{table}
 
-Instead, suppose that the scientists brought a simple plot of the frequency of observed lead concentrations and brief numerical summaries \figrefp{fig:KreherParkPbhist} to the meeting. With these one can easily see that the measurements were fairly symmetric with no obviously ``weird'' values. The lead concentrations ranged from as low as \Sexpr{formatC(min(Pb),format="f",digits=2)} $\mu g \cdot m^{-3}$ to as high as \Sexpr{formatC(max(Pb),format="f",digits=2)} $\mu g \cdot m^{-3}$ with the measurements centered on approximately 1.0 $\mu g \cdot m^{-3}$. These summaries are discussed in detail in \modref{chap:UnivEDAQuant}. However, at this point, note that summarizing large quantities of data with few graphical or numerical summaries makes it is easier to identify meaning from the data.
+\vspace{-12pt}
+Instead, suppose that the scientists brought a simple plot of the frequency of observed lead concentrations and brief numerical summaries \figrefp{fig:KreherParkPbhist} to the meeting. With these one can easily see that the measurements were fairly symmetric with no obviously ``weird'' values. The lead concentrations ranged from as low as \Sexpr{formatC(min(Pb),format="f",digits=2)} $\mu g \cdot m^{-3}$ to as high as \Sexpr{formatC(max(Pb),format="f",digits=2)} $\mu g \cdot m^{-3}$ with the measurements centered on approximately 1.0 $\mu g \cdot m^{-3}$. These summaries are discussed in detail in \modref{chap:UnivEDAQuant}. However, at this point, note that summarizing large quantities of data with few graphical or numerical summaries makes it is easier to identify meaning from data.
 
 <<KreherParkPbhist, echo=FALSE, fig.cap="Histogram and summary statistics of lead concentration measurements ($\\mu g \\cdot m^{-3}$) at each of 119 sites in Kreher Park superfund site.">>=
 hist(~Pb,xlab="Pb Concentration",ylab="Frequency of Sites")
@@ -68,7 +58,6 @@ colnames(Pb1.sum)[1] <- "Pb"
 textplot(Pb1.sum)
 @
 
-\vspace{18pt}
 The results from two different samples do not perfectly agree because each sample contains different individuals (sites in this example), and no two individuals are exactly alike. The fact that no two individuals are exactly alike is \textbf{natural variability}\index{Natural Variability!Definition}, because of the ``natural'' differences that occur among individuals. The fact that the results from different samples are different is called \textbf{sampling variability}\index{Sampling Variability!Definition}. If there was no natural variability, then there would be no sampling variability. If there was no sampling variability, then the field of statistics would not be needed because a sample (even of one individual) would perfectly represent the larger group of individuals. Thus, understanding variability is at the core of statistical practice. Natural and sampling variability will be revisited continuously throughout this course.
 
 This may be unsettling! First, it was shown that an entire area or all of the individuals of interest cannot be examined. It was then shown that a sample of individuals from the larger whole did not perfectly represent the larger whole. Furthermore, each sample is unique and will likely lead to a (slightly) different conclusion. These are all real and difficult issues faced by the practicing scientist and considered by the informed consumer. However, the field of statistics is designed to ``deal with'' these issues such that the results from a relatively small subset of measurements can be used to make conclusions about the entire collection of measurements.
@@ -76,7 +65,7 @@ This may be unsettling! First, it was shown that an entire area or all of the in
 \warn{Statistics provides methods for overcoming the difficulties caused by the requirement of sampling and the presence of sampling variability.}
 
 
-\section{Major Goals or Purposes of Statistics}
+\section{Major Goals of Statistics}
 As seen in the Kreher Park example, the field of statistics has two primary purposes. First, statistics provides methods to summarize large quantities of data into concise and informative numerical or graphical summaries. For example, it was easier to discern the general underlying structure of the lead measurements from the statistics and histograms presented in Figures \ref{fig:KreherParkPbhist} and \ref{fig:KreherParkPbhist1}, than it was from the full list of lead measurements in \tabref{tab:KreherParkPbconc}. Second, statistical methods allow inferences to be made about all individuals (i.e., a population) from a few individuals (i.e., a sample).\footnote{Population and sample are defined more completely in \sectref{sect:IVPPSS}.}
 
 

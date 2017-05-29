@@ -3,29 +3,13 @@ set_parent('IntroStats.Rnw')
 @
 
 \chapter{Getting Started with R} \label{chap:FoundationsR}
-\begin{ChapObj}{\boxwidth}
-  \textbf{Objectives:}
-  \begin{Enumerate}
-    \item Understand the difference between R expressions and assignments.
-    \item Understand the different types of data that can be stored in R.
-    \item Understand the different types of data structures used in R.
-    \item Be able to enter data into R data.frames.
-    \item Be able to isolate individual variables and individuals in R.
-    \item Be able to create data.frames that are subsets of larger data.frames.
-    \item Understand how homework assignments should be formatted.
-  \end{Enumerate}
-\end{ChapObj}
 
 \minitoc
-\newpage
 
 \section{Setting Up R and Helpers} \label{sect:RSetup}
-\vspace{-8pt}
 Detailed methods for downloading, installing, and configuring R, RStudio, and \R{NCStats} on your personal computer are given on the \href{http://derekogle.com/NCMTH107/resources/}{Resources page of the course website}.
 
-\vspace{-8pt}
 \section{Working With R Basics} \label{sect:RBasics}
-\vspace{-12pt}
 \subsection{Saving Results} \label{sect:RSaving}
 Results are not saved in R or RStudio.  Rather, ``scripts'' of successful R commands are saved and, then, if the analysis needs to be re-done, the entire set of commands is opened in RStudio and run again.  When writing a report, all tabular and graphical output should be copied from RStudio and pasted into your report document.  This document will serve as your analysis report and can be modified to include answers to questions, references to the tables and graphs, etc.\footnote{Specifics for how to format homework assignments is on the course syllabus}  All data that is not a simple vector (see \sectref{sect:RVectors}) should be entered into R through text files (see \sectref{sect:REnterData}).
 
@@ -33,9 +17,8 @@ R does allow one to save a ``workspace'', though I urge you not to do that.  Rat
 
 \warn{Do NOT save the workspace in R.}
 
-\vspace{-8pt}
+
 \subsection{Expressions and Assignments} \label{sect:RExprAssn}
-\vspace{-8pt}
 Expressions in R are mathematical ``equations'' that are evaluated by R with a result seen immediately.  An example of an expression in R is
 <<>>=
 5+log(7)-pi
@@ -64,7 +47,7 @@ An object can be named whatever you want, with the exception that it cannot star
 \vspace{-12pt}
 \warn{Type the name of the object after making the assignment to confirm the results.}
 
-\vspace{-8pt}
+
 \begin{exsection}
   \item \label{revex:BasicsExpr1} \rhw{} Compute the value of $\frac{3}{7}+\frac{1}{2}$. \ansref{ans:BasicsExpr1}
   \item \label{revex:BasicsExpr2} \rhw{} Compute the value of $\pi*3.7^{2}$. \ansref{ans:BasicsExpr2}
@@ -73,9 +56,8 @@ An object can be named whatever you want, with the exception that it cannot star
   \item \label{revex:BasicsExpr5} \rhw{} \hspace{18pt} Assign the value 1.2 to \var{r} and then re-evaluate $\pi r^{2}$. \ansref{ans:BasicsExpr5}
 \end{exsection}
 
-\vspace{-18pt}
+
 \subsection{Functions and Arguments}  \label{sect:RFunctions}
-\vspace{-12pt}
 R contains many ``programs,'' or functions, to perform particular tasks.  A function is ``called'' by typing the function name followed by open and closed parentheses.  Arguments, which the function will use to perform its task, are contained within the parentheses.  The \R{log()} function, used in the previous section, is an example of a function.  The name of the function is \R{log} and the argument, the number for which to compute the natural log, is contained within the parentheses following the function name.  Many other functions will be described below and in subsequent modules.
 
 \defn{Function}{An R program that performs a particular task.}
@@ -88,16 +70,13 @@ R contains many ``programs,'' or functions, to perform particular tasks.  A func
 
 
 \section{Working With Data}
-\vspace{-12pt}
 \subsection{Data Types}  \label{sect:RDataTypes}
-\vspace{-12pt}
 Data in R will be designated as an integer (whole numbers), numeric (non-integer numerica values), character (strings), factor (group membershop), or logical (TRUE/FALSE).  The type of data largely dictates the type of analysis that can be performed.  Data types will be discussed in more detail as needed.  Note, however, that the \textbf{factor} data type is a special case of the character data type, where the specific items describe the group to which an individual belongs.  This description allows for certain analyses in later modules.
 
 \defn{Factor}{A special type of variable that identifies the group to which an individual belongs.}
 
-\vspace{-12pt}
+
 \subsection{Entering Data}  \label{sect:REnterData}
-\vspace{-12pt}
 For real data (i.e., several variables from many individuals) it is most efficient to enter data into a comma-separated values (CSV) file and then import that file into R.  Creating a CSV file with Microsoft Excel is described below, though there are other ways to create CSV files (see \href{http://derekogle.com/NCMTH107/resources/FAQ/}{FAQs on class webpage}).  This explanation assumes that you have a basic understanding of Excel (or other spreadsheet softwares).
 
 \warn{Realistic datasets are most efficiently entered into a comma-separated values (CSV) file in preparation for importing into R.}
@@ -160,7 +139,6 @@ To follow the ``one individual per row'' rule, these data are entered in stacked
 \warn{Data files are constructed with data from only one individual in each row.}
 
 \subsubsection*{Alternative Forms of Getting Data} \label{sect:RAltData}
-\vspace{-12pt}
 Some of the data files that you will use are provided on the \href{http://derekogle.com/NCMTH107/resources/data_107}{Data for MTH107} resource page of the class webpage.  In these cases, the data should be downloaded from the webpage and saved in the same directory or folder as your analysis script.  The downloaded file is then read into R in the same manner as described previously (i.e., set the working directory with \R{setwd()} and use \R{read.csv()}).
 
 A few data files used in this book are supplied with R or the NCStats package.  These files are loaded with \R{data()}.  For example, the \dfile{iris} data file is loaded into R with
@@ -170,9 +148,7 @@ data(iris)
 
 
 \subsection{Working With Data Frames}  \label{sect:RWorkdf}
-\vspace{-12pt}
 \subsubsection{Viewing a Data Frame}  \label{sect:RViewdf}
-\vspace{-12pt}
 Many users are disoriented in RStudio because they cannot ``see'' their data in the same way that they see it in a spreadsheet program.  There are, however, several options for viewing your data.  First, you can type the name of the data.frame object to see its entire contents.
 <<>>=
 bears
@@ -201,8 +177,6 @@ bears$loc
 \warn{A dollar sign is ONLY used in R to separate the name of a data.frame from the name of a variable within that data.frame.}
 
 \subsubsection{Selecting Individuals}  \label{sect:RSelectIndivs}
-\vspace{-12pt}
-
 In some instances, it may be important to select or exclude an individual from a data.frame.  Data.frames are two-dimensional objects that are indexed by a row and a column, in that order.  Positions within a data.frame are selected within paired square brackets.  For example, the item in the third row and second column of \R{bears} is selected below.
 <<>>=
 bears[3,2]
@@ -225,9 +199,8 @@ Finally, rows can be excluded by preceding the row indices with a negative sign.
 bears[-c(3,5,8,10,12),]
 @
 
-\vspace{-12pt}
+
 \subsubsection{Filtering a data.frame}  \label{sect:RSubsetdf}
-\vspace{-12pt}
 It is common to create a new data.frame that contains only some of the individuals from an existing data.frame.  For example, a researcher may want a data.frame of only bears captured in Bayfield County or bears that weighed more than 100 kg.  The process of creating the newer, smaller data.frame is called filtering (or subsetting) and is accomplished with \R{filterD()}.  The \R{filterD()} function requires the original data.frame as the first argument and a condition statement as the second argument.  The condition statement is used to either include or exclude individuals from the original data.frame.  Condition statements consist of the name of a variable in the original data.frame, a comparison operator, and a comparison value \tabrefp{tab:RSubsetConditions}.  The result from \R{filterD()} should be assigned to an object, which is then the name of the new data.frame.
 
 \warn{\R{filterD()} is used to create a new data.frame that consists of individuals selected by some criterion from an existing data.frame.}
@@ -297,10 +270,8 @@ do150
   \end{Enumerate}
 \end{exsection}
 
-\vspace{-12pt}
-\subsection{Vectors}  \label{sect:RVectors}
-\vspace{-12pt}
 
+\subsection{Vectors}  \label{sect:RVectors}
 Data.frames are the primary structure in which to store real data.  However, much simpler situations that don't require a data.frame may arise.  In R, items of the same data type \sectrefp{sect:RDataTypes} are stored in a one-dimensional ``list'' called a \emph{vector}.  Vectors are usually displayed in one row (with many columns), but they may also be thought of as a single column (with many rows).  Items are entered into a vector with \R{c()}, where the individual arguments are specific numbers, characters, or logical values.\footnote{Note that \R{c} comes from the word ``concatenate.''}  Items for a vector of characters must be contained within paired quotes.
 <<>>=
 ( v <- c(1,2,5) )

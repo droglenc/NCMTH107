@@ -18,8 +18,12 @@ As with most areas of study, Statistics requires an understanding of key foundat
 <p>After completing this module, you should be able to ...</p>
 
 <ol>
+  <li>Describe what an individual is.</li>
+  <li>Describe what a population and a sample are and how they differ.</li>
+  <li>Describe what a parameter and a statistic are and how they differ.</li>
+  <li>Describe how a population, parameter, sample, and statistic are related.</li>
   <li>Identify the components of an IVPPSS in a real-world situation.</li>
-  <li>Identify the type of variable for a variable.</li>
+  <li>Identify variable types in context.</li>
 </ol>
       </div>
     </div>

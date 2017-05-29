@@ -18,9 +18,10 @@ It is important to understand the distribution of individuals for a single varia
 <p>After completing this module, you should be able to ...</p>
 
 <ol>
-  <li>Construct histograms.</li>
   <li>Compute measures of center (mean and median) by hand and with R.</li>
   <li>Compute mesures of dispersion (standard deviation, IQR, and range) by hand and with R.</li>
+  <li>Construct a histogram.</li>
+  <li>Construct a boxplot.</li>
 </ol>
       </div>
     </div>
