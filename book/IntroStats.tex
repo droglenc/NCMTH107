@@ -72,7 +72,7 @@
     \include{FBMatter/FMatter}
 
   \mainmatter
-    \part{Beginnings}
+%    \part{Beginnings}
 
 
 
@@ -101,7 +101,7 @@ Suppose that the WDNR measured the concentration of lead at each of the 119 loca
   \caption{Lead concentration ($\mu g \cdot m^{-3}$) from 119 sites in Kreher Park superfund site.}
   \begin{center}
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Mon May 29 15:11:16 2017
+% Tue May 30 08:27:18 2017
 \begin{tabular}{rrrrrrrrrrrrrrr}
   \hline
   \hline
@@ -210,7 +210,7 @@ A \textbf{population} is ALL individuals of interest.\index{Population} In the S
 
 A \textbf{parameter} is a summary computed from ALL individuals in a population.\index{Parameter!Definition}  The term for the particular summary is usually preceded by the word ``population.'' For example, the population average length of all 1015 fish in Square Lake is 98.06 mm and the population standard deviation is 31.49 mm \tabrefp{tab:SquareLakePopn}.\footnote{We will discuss how to compute and interpret each of these values in later modules.} Parameters are ultimately what is of interest, because interest is in all individuals in the population. However, in practice, parameters cannot be computed because the entire population cannot usually be ``seen.''
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Mon May 29 15:11:17 2017
+% Tue May 30 08:27:19 2017
 \begin{table}[ht]
 \centering
 \caption{Parameters for the total length of ALL 1015 fish in the Square Lake population.} 
@@ -245,7 +245,7 @@ Summaries computed from individuals in a sample are called \textbf{statistics}.\
 Some statistics computed from the sample from Square Lake are shown in \tabref{tab:SquareLakeSample1} and \figref{fig:SquareLakeSample1}. The sample mean of 100.04 mm is the best ``guess'' at the population mean. Not surprisingly from the discussion in \modref{chap:WhyStatsImportant}, the sample mean does not perfectly equal the population mean.
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Mon May 29 15:11:17 2017
+% Tue May 30 08:27:19 2017
 \begin{table}[ht]
 \centering
 \caption{Summary statistics for the total length of a sample of 50 fish from the Square Lake population.} 
@@ -336,7 +336,7 @@ It is instructive to once again (see \modref{chap:WhyStatsImportant}) consider h
 \end{knitrout}
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Mon May 29 15:11:17 2017
+% Tue May 30 08:27:19 2017
 \begin{table}[htbp]
 \centering
 \caption{Summary statistics for the total length in three samples of 50 fish from the Square Lake population.} 
@@ -1116,7 +1116,7 @@ Single variables from a data.frame are vectors.  Vectors that are not extracted 
   \end{Enumerate}
 \end{exsection}
 
-    \part{Exploratory Data Analysis}
+%    \part{Exploratory Data Analysis}
 
 
 
@@ -1139,7 +1139,7 @@ Two data sets will be considered in this module when making calculations ``by ha
 
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Mon May 29 15:11:19 2017
+% Tue May 30 08:27:20 2017
 \begin{table}[ht]
 \centering
 \caption{Number of open pit mines in countries that have open pit mines.} 
@@ -1154,7 +1154,7 @@ Two data sets will be considered in this module when making calculations ``by ha
 
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Mon May 29 15:11:19 2017
+% Tue May 30 08:27:20 2017
 \begin{table}[ht]
 \centering
 \caption{Richter scale recordings for 15 major earthquakes.} 
@@ -1188,7 +1188,7 @@ The process for finding the median consists of three steps,\footnote{Most comput
 As an example, the open pit data from \tabref{tab:MineData} are,
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Mon May 29 15:11:19 2017
+% Tue May 30 08:27:20 2017
 \begin{tabular}{rrrrrrrrrrrrr}
   1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 2 & 2 & 2 \\ 
   2 & 2 & 2 & 3 & 4 & 4 & 4 & 4 & 4 & 11 & 11 & 12 & 15 \\ 
@@ -1215,7 +1215,7 @@ Quartiles are the values for the three individuals that divide ordered data into
 These calculations are illustrated with the open pit mine data (the median was computed in \sectref{sec:Median}). Because $n=26$ is even, the halves of the data split naturally into two halves each with 13 individuals. Therefore, the $mp=\frac{13+1}{2}=7$ and the median of each half is the value of the individual in the seventh position. Thus, $Q1=1$ and $Q3=4$.
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Mon May 29 15:11:19 2017
+% Tue May 30 08:27:20 2017
 \begin{tabular}{rrrrrrr}
   1 & 1 & 1 & 1 & 1 & 1 & 1 \\ 
   1 & 1 & 1 & 2 & 2 & 2 &  \\ 
@@ -1337,7 +1337,7 @@ Finally, you may be wondering why the sum of the squared differences in the stan
 The mode is the value that occurs most often in a data set. For example, one open pit mine is the mode in the open pit mine data \tabrefp{tab:MCmode}.
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Mon May 29 15:11:19 2017
+% Tue May 30 08:27:20 2017
 \begin{table}[ht]
 \centering
 \caption{Frequency of countries by each number of open pit mines.} 
@@ -1354,7 +1354,7 @@ Number of Mines & 1 & 2 & 3 & 4 & 11 & 12 & 15 \\
 The mode for a continuous variable is the class or bin with the highest frequency of individuals. For example, if 0.5-unit class widths are used in the Richter scale data, then the modal class is 6.5-6.9 \tabrefp{tab:EQmode}.
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Mon May 29 15:11:19 2017
+% Tue May 30 08:27:20 2017
 \begin{table}[ht]
 \centering
 \caption{Frequency of earthquakes by Richter Scale class.} 
@@ -1810,7 +1810,7 @@ The graphical and numerical summaries from \modref{chap:UnivEDAQuant1} and the r
 The number of open pit mines in countries with open pit mines is strongly right-skewed with no outliers present \figrefp{fig:MineHist2}. [\textit{I did not call the group of four countries with 10 or more open pit mines outliers because there were more than one or two countries there.}] The center of the distribution is best measured by the median, which is 2 \tabrefp{tab:MineStats}. The range of open pit mines in the sample is from 1 to 15 while the dispersion as measured by the inter-quartile range (IQR) is from a Q1 of 1.0 to a Q3 of  4.0 \tabrefp{tab:MineStats}. I chose to use the median and IQR because the distribution was strongly skewed.
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Mon May 29 15:11:20 2017
+% Tue May 30 08:27:21 2017
 \begin{table}[ht]
 \centering
 \caption{Descriptive statistics of number of open pit mines in countries with open pit mines.} 
@@ -1877,7 +1877,7 @@ The shape of number of days of ice cover at gauge 9004 in Lake Superior is appro
 \end{knitrout}
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Mon May 29 15:11:20 2017
+% Tue May 30 08:27:21 2017
 \begin{table}[ht]
 \centering
 \caption{Descriptive statistics of number of days of ice cover at ice gauge 9004 in Lake Superior..} 
@@ -1913,7 +1913,7 @@ Summarize(~days,data=LSI,digits=1)
 \end{quote}
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Mon May 29 15:11:20 2017
+% Tue May 30 08:27:21 2017
 \begin{tabular}{rrrrrrrrrrrrrrrr}
   30 & 26 & 26 & 26 & 25 & 25 & 25 & 25 & 25 & 24 & 24 & 24 & 24 & 24 & 24 & 23 \\ 
   23 & 23 & 23 & 22 & 22 & 22 & 22 & 21 & 21 & 21 & 20 & 20 & 19 & 19 & 18 & 16 \\ 
@@ -1936,7 +1936,7 @@ The shape of temperatures selected by the dominant crayfish is slightly left-ske
 \end{knitrout}
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Mon May 29 15:11:20 2017
+% Tue May 30 08:27:21 2017
 \begin{table}[ht]
 \centering
 \caption{Descriptive statistics of crayfish temperature preferences.} 
@@ -2158,7 +2158,7 @@ The majority of seeds were either sedge or grass with sedge being more than twic
 \end{knitrout}
 
 % latex table generated in R 3.4.0 by xtable 1.8-2 package
-% Mon May 29 15:11:20 2017
+% Tue May 30 08:27:21 2017
 \begin{table}[ht]
 \centering
 \caption{Percentage distribution of wetland seeds by type.} 
@@ -2442,7 +2442,7 @@ Reverse questions are also answered with \R{distrib()}, though the first argumen
 \end{knitrout}
 
 
-\subsection{Distinguish Calculation Types}
+\section{Distinguish Calculation Types}
 It is critical to be able to distinguish between the two main types of calculations made from normal distributions. The first type of calculation is a ``forward'' calculation where the area or proportion of individuals relative to a value of the variable must be found. The second type of calculation is a ``reverse'' calculation where the value of the variable relative to a particular area is calculated.
 
 Distinguishing between these two types of calculations is a matter of deciding if (i) the value of the variable is given and the proportion (or area) is to be found or (ii) if the proportion (or area) is given and the value of the variable is to be found. Therefore, distinguishing between the calculation types is as simple as identifying what is given (or known) and what must be found. If the value of the variable is given but not the proportion or area, then a forward calculation is used. If the area or proportion is given, then a reverse calculation to find the value of the variable is used.
@@ -2487,28 +2487,28 @@ Standardized values ($Z$) follow a $N(0,1)$. Thus, $N(0,1)$ is called the ``stan
 
 
 
-    \part{Inference Concepts}
+%    \part{Inference Concepts}
 
 
 
 
 
-    \part{Specific Hypothesis Tests}
+%    \part{Specific Hypothesis Tests}
 
 
 
 
 
 
-    \cleardoublepage
-    \phantomsection
-    \addcontentsline{toc}{part}{Appendix}
-    \chapter*{Appendices}
-    \appendix
+%    \cleardoublepage
+%    \phantomsection
+%    \addcontentsline{toc}{part}{Appendix}
+%    \chapter*{Appendices}
+%    \appendix
 
 
 
-  \backmatter
-    \input{FBMatter/BMatter}
+%  \backmatter
+%    \input{FBMatter/BMatter}
 
 \end{document}
