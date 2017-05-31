@@ -20,7 +20,7 @@ While studying the foraging ecology of northern elephant seals (*Mirounga angust
 1. Physically, what is a replicate in this experiment (i.e., not a number)?
 1. Describe how you would allocate individuals to treatments.  Show your R work.
 
-[See answer here](zRevExAns/DataProduction_ExpDSeals){:target="_blank"}
+[See answer here](zRevExAns/DataProduction_Experiments#elephant-seals)
 
 ----
 
@@ -37,7 +37,7 @@ An agronomist is interested in the effect of plowing depth (10 cm, 17 cm, and 25
 1. What is the response variable?
 1. Describe how you would allocate individuals to treatments.  Show your R work.
 
-[See answer here](zRevExAns/DataProduction_ExpDBeets){:target="_blank"}
+[See answer here](zRevExAns/DataProduction_Experiments#sugar-beets)
 
 ----
 
@@ -54,7 +54,7 @@ Translocation is an important tool in modern wildlife management. Current techni
 1. How many replicates are there?
 1. Describe how you would allocate individuals to treatments.  Show your R work.
 
-[See answer here](zRevExAns/DataProduction_ExpDTrans){:target="_blank"}
+[See answer here](zRevExAns/DataProduction_Experiments#translocating-rabbits)
 
 ----
 
@@ -71,7 +71,7 @@ In 1994, biologists studied the health of whitetail deer (*Odocoileus virginianu
 1. What is an individual in this experiment?
 1. Describe how you would allocate individuals to treatments.  Show your R work.
 
-[See answer here](zRevExAns/DataProduction_ExpDDeerDiet){:target="_blank"}
+[See answer here](zRevExAns/DataProduction_Experiments#eating-habits-of-deer)
 
 ----
 
@@ -88,7 +88,7 @@ A chemical engineer is designing the production process for a new product. The c
 1. Physically, what is a replicate (i.e., not a number)?
 1. Identify the individuals for each treatment.  Show your R work.
 
-[See answer here](zRevExAns/DataProduction_ExpDChemRxn){:target="_blank"}
+[See answer here](zRevExAns/DataProduction_Experiments#chemistry-reaction)
 
 ----
 
@@ -105,6 +105,6 @@ A student is designing an experiment to determine the simultaneous effects of ca
 1. Physically, what is a replicate (i.e., not a number)?
 1. Identify the individuals for each treatment.  Show your R work.
 
-[See answer here](zRevExAns/DataProduction_ExpDBP){:target="_blank"}
+[See answer here](zRevExAns/DataProduction_Experiments#diet,-exercise,-blood-pressure)
 
 ----
