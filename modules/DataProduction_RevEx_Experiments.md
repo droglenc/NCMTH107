@@ -105,6 +105,6 @@ A student is designing an experiment to determine the simultaneous effects of ca
 1. Physically, what is a replicate (i.e., not a number)?
 1. Identify the individuals for each treatment.  Show your R work.
 
-[See answer here](zRevExAns/DataProduction_Experiments#diet,-exercise,-blood-pressure)
+[See answer here](zRevExAns/DataProduction_Experiments#diet-exercise-blood-pressure)
 
 ----
