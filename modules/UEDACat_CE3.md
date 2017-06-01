@@ -23,9 +23,7 @@ diameter  20  23  34  20  17  20  15  34  18  24
 exposure med med low med med med med med med med
 </pre>
 
-Enter the data into Excel, save as a CSV, and load the data into R.  [**HINT:** *these are the same data that you entered in [a previous class exercise](DataIntoR_CE2.html).  Use that file and recycle the portion of that R script that you used to load the data.*]  Use this information to answer the following questions.
-
-1. Perform a univariate EDA for `exposure`.
+Enter the data into Excel, save as a CSV, and load the data into R.  [**HINT:** *these are the same data that you entered in [a previous class exercise](DataIntoR_CE2.html).  Use that file and recycle the portion of that R script that you used to load the data.*]  Use this information to perform a univariate EDA for `exposure`.
 
 ----
 

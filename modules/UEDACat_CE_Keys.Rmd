@@ -42,7 +42,7 @@ figs(name="KidsBar3",'Bar chart of percentage of grade school children by locati
 <li>Frequency Table</li>
 ```{r echo=FALSE}
 d <- read.csv("breeds.csv")
-( tbl <- xtabs(~breed,data=d) )
+( tbl <- xtabs(~group,data=d) )
 ```
 
 <li>Percentage Table</li>

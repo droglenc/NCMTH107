@@ -29,14 +29,17 @@ source("../rhelpers/knitr_setup.R")
 ```{r echo=FALSE, fig.width=5, fig.height=4, par1=TRUE}
 tbl <- c(Love=45,Money=1,Pregnancy=0,Other=4)
 barplot(tbl,xlab="Reaons to Marry",ylab="Frequency of Respondents",col="gray90",yaxt="n")
+abline(h=1:5,lty=2,col="gray90")
+barplot(tbl,col="gray90",yaxt="n",add=TRUE)
 axis(2,seq(0,45,5))
 axis(2,0:45,NA,tcl=-0.15)
+abline(h=0)
 ```
 
 1. What is an individual in this example?
 1. What type of variable is recorded?
 1. Construct a frequency table from this bar chart.
-1. Construct a percentage table from this bar chart.
+1. Construct a percentage table from your frequency table.
 
 ----
 

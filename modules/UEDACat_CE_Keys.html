@@ -15,32 +15,20 @@ css: "/css/modules.css"
 <li>
 Frequency Table
 </li>
-<pre><code>breed
-   Australian Shepherd         Bearded Collie       Belgian Tervuren 
-                     1                      2                      1 
-         Border Collie   Bouvier Des Flandres  Bouviers des Flandres 
-                     1                      2                      1 
-  Cardigan Welsh Corgi        German Shepherd    German Shepherd Dog 
-                     1                      1                      8 
-  Old English Sheepdog                   Puli      Shetland Sheepdog 
-                     5                      3                      4 
-Welsh Corgi (Pembroke) 
-                     4 </code></pre>
+<pre><code>group
+    Belgian Tervuren Bouvier Des Flandres               Collie                Corgi 
+                   1                    3                    3                    5 
+Old English Sheepdog                 Puli             Shepherd    Shetland Sheepdog 
+                   5                    3                   10                    4 </code></pre>
 <li>
 Percentage Table
 </li>
 <pre class="r"><code>&gt; percTable(tbl,digits=1)</code></pre>
-<pre><code>breed
-   Australian Shepherd         Bearded Collie       Belgian Tervuren 
-                   2.9                    5.9                    2.9 
-         Border Collie   Bouvier Des Flandres  Bouviers des Flandres 
-                   2.9                    5.9                    2.9 
-  Cardigan Welsh Corgi        German Shepherd    German Shepherd Dog 
-                   2.9                    2.9                   23.5 
-  Old English Sheepdog                   Puli      Shetland Sheepdog 
-                  14.7                    8.8                   11.8 
-Welsh Corgi (Pembroke) 
-                  11.8 </code></pre>
+<pre><code>group
+    Belgian Tervuren Bouvier Des Flandres               Collie                Corgi 
+                 2.9                  8.8                  8.8                 14.7 
+Old English Sheepdog                 Puli             Shepherd    Shetland Sheepdog 
+                14.7                  8.8                 29.4                 11.8 </code></pre>
 <li>
 Bar Chart
 </li>
@@ -168,7 +156,7 @@ $(document).ready(function () {
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>

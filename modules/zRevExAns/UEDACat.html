@@ -33,30 +33,14 @@ percTable(t.hi,digits=1)</code></pre>
 <hr />
 </div>
 </div>
-<div id="water-usage" class="section level2">
-<h2>Water Usage</h2>
-<p>Most students left the water on for between 6 and 15 minutes, with students approximately evenly split between 6-10 and 11-15 minutes (Table 2). Few students left the water on for less than 5 minutes before entering the shower.</p>
-<p>Table 2: Percentage table for how much time students at Rice University leave the water on before entering the shower. Note that A=0-5 mins, B=6-10 mins, C=11-15 mins, and D=more than 15 mins.</p>
-<pre><code>water
-   A    B    C    D 
- 5.4 37.7 40.0 16.9 </code></pre>
-<div id="r-code-appendix-1" class="section level3">
-<h3>R Code Appendix</h3>
-<pre><code>library(NCStats)
-df &lt;- read.csv(&quot;data/ShowerWater.csv&quot;)
-freq &lt;- xtabs(~water,data=df)
-percTable(freq,digits=1)</code></pre>
-<hr />
-</div>
-</div>
 <div id="zoo-animal-types" class="section level2">
 <h2>Zoo Animal Types</h2>
-<p>Animals were nearly evenly split among the three categories, with somewhat more birds and somewhat fewer amphibian/reptiles (Table 2).</p>
-<p>Table 3: Percentage table of animal types in a sample of several national zoos.</p>
+<p>Animals were nearly evenly split among the three categories, with somewhat more birds and somewhat fewer amphibian/reptiles (Table 3).</p>
+<p>Table 2: Percentage table of animal types in a sample of several national zoos.</p>
 <pre><code>type
 amph/rep     bird   mammal 
     26.2     39.0     34.8 </code></pre>
-<div id="r-code-appendix-2" class="section level3">
+<div id="r-code-appendix-1" class="section level3">
 <h3>R Code Appendix</h3>
 <pre><code>library(NCStats)
 df &lt;- read.csv(&quot;data/Zoo1.csv&quot;)

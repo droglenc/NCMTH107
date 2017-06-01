@@ -68,44 +68,6 @@ percTable(t.hi,digits=1)
 
 ----
 
-## Water Usage
-
-```{r echo=FALSE, results='hide'}
-water <- factor(c("D","C","B","B","C","C","B","B","C","C","C",
-                  "B","D","B","C","C","B","C","D","D","B","C",
-                  "C","A","B","C","C","A","C","C","D","A","C",
-                  "C","B","B","B","B","B","C","D","B","D","B",
-                  "C","B","C","C","D","C","B","B","D","C","B",
-                  "C","B","B","C","C","B","C","B","C","B","B",
-                  "C","D","B","C","D","C","B","C","D","C","C",
-                  "B","C","B","D","B","B","D","B","C","B","B",
-                  "C","B","C","D","D","C","D","B","B","C","B",
-                  "C","A","A","B","C","B","C","D","D","C","B",
-                  "D","C","C","C","C","A","C","D","B","C","B",
-                  "B","D","C","B","B","A","B","C","B"))
-df <- data.frame(water)
-freq <- xtabs(~water,data=df)
-perc <- percTable(freq,digits=1)
-tabs(name="Water","Percentage table for how much time students at Rice University leave the water on before entering the shower. Note that A=0-5 mins, B=6-10 mins, C=11-15 mins, and D=more than 15 mins.")
-```
-
-Most students left the water on for between 6 and 15 minutes, with students approximately evenly split between 6-10 and 11-15 minutes (`r tabs("Water",display="cite")`). Few students left the water on for less than 5 minutes before entering the shower.
-
-`r tabs("Water")`
-```{r Water, echo=FALSE, comment=""}
-perc
-```
-
-### R Code Appendix
-```
-library(NCStats)
-df <- read.csv("data/ShowerWater.csv")
-freq <- xtabs(~water,data=df)
-percTable(freq,digits=1)
-```
-
-----
-
 ## Zoo Animal Types
 ```{r echo=FALSE, results='hide'}
 df <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Zoo1.csv")
