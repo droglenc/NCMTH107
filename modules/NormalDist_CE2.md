@@ -9,16 +9,15 @@ css: "/css/modules.css"
 
 ## Hand Calculations I
 
-Answer each question below **without using R**.  Show your work with a careful drawing for each question.
+Answer each question below, **without using R**, assuming that X~N(75,10). Show your work with a careful drawing for each question.
 
-1. For X~N(75,10)
-    1. What percent of X values are less than 95?
-    1. What percent of X values are greater than 105?
-    1. What percent of X values are between 65 and 85?
-    1. What percent of X values are between 55 and 85?
-    1. What is the value X such that 2.5% of X values are lower?
-    1. What is the most common 95% of X values?
-    1. What is the largest 2.5% of X values?
+1. What percent of X values are less than 95?
+1. What percent of X values are greater than 105?
+1. What percent of X values are between 65 and 85?
+1. What percent of X values are between 55 and 85?
+1. What is the value X such that 2.5% of X values are lower?
+1. What is the most common 95% of X values?
+1. What is the largest 2.5% of X values?
 
 ----
 

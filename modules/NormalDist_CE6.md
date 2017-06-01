@@ -9,13 +9,12 @@ css: "/css/modules.css"
 
 ## Hand Calculations II
 
-Answer each question below **without using R**.  Show your work with a careful drawing for each question.
+Answer each question below, **without using R**, assuming that Z~N(0,1). Show your work with a careful drawing for each question.
 
-1. For Z~N(0,1)
-    1. What is the value of Z such that 16% of Z values are greater?
-    1. What percent of Z values are greater than 2?
-    1. What percent of Z values are less than 3?
-    1. What is the most common 99.7% of Z values?
+1. What is the value of Z such that 16% of Z values are greater?
+1. What percent of Z values are greater than 2?
+1. What percent of Z values are less than 3?
+1. What is the most common 99.7% of Z values?
 
 ----
 
