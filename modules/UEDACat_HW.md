@@ -41,6 +41,6 @@ B, C, B, C, B, B, C, D, B, C, D, C, B, C, D, C, C, B, C,
 D, B, B, D, B, C, B, B, C, B, C, D, D, C, D, B, B, C,
 A, A, B, C, B, C, D, D, C, B, D, C, C, C, C, A, C, D,
 B, B, D, C, B, B, A, B, C, B, D, C, C, B, C, C, B, B
-<\pre>
+</pre>
 
 ----
