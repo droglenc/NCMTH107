@@ -9,7 +9,7 @@ css: "/css/modules.css"
 
 ## Associations
 
-Identify whether you would expect to see a positive, negative, or no (neutral) association between each pair of variables below.  Explain your reasoning.
+For each situation below, identify (a) the response variable (if possible) and (b) whether you would expect a positive, negative, or no (neutral) association between the pair of variables.  Explain your reasoning for both answers.
 
 1. Weight and gas mileage of a car.
 1. Proportion of the population that was vaccinated and the proportion of the population that became ill.
@@ -19,7 +19,7 @@ Identify whether you would expect to see a positive, negative, or no (neutral) a
 1. Proportion of population with a post-secondary education and the proportion of the population that have been incarcerated.
 1. Temperature and sales of ice cream.
 1. Hours spent exercising and percent body fat.
-1. Average annual mount of snowfall and the proportion that support conceal-and-carry gun laws (recorded for states from across the U.S.)
+1. Average annual amount of snowfall and the proportion that support conceal-and-carry gun laws (recorded for states from across the U.S.)
 1. Husbands' and wife's ages.
 1. Golfers' putting success and the distance of the putt.
 
