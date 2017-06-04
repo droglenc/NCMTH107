@@ -3,189 +3,74 @@ set_parent('IntroStats.Rnw')
 @
 
 \chapter{Bivariate EDA - Quantitative} \label{chap:BivEDAQuant}
-\begin{ChapObj}{\boxwidth}
-  \textbf{Objectives:}
-  \begin{Enumerate}
-    \item Describe bivariate data.
-    \item Distinguish between response and explanatory variables.
-    \item Construct scatterplots of bivariate quantitative data.
-    \item Describe bivariate relationships with interpretations from scatterplots.
-    \item Describe how the correlation coefficient is calculated.
-    \item Use the correlation coefficient to describe the strength (and association) of the relationship between two quantitative variables.
-  \end{Enumerate}
-\end{ChapObj}
 
+\vspace{-30pt}
 \minitoc
-\vspace{24pt}
+\vspace{18pt}
 
-\lettrine{B}{ivariate data occurs when two} variables have been measured on the same individuals.\index{EDA!Bivariate!Quantitative}  For example, you may measure (i) the height and weight of students in class, (ii) depth and area of a lake, (iii) gender and age of welfare recipients, or (iv) number of mice and biomass of legumes in fields. This module is focused on describing the bivariate relationship between two quantitative variables. Bivariate relationships between two categorical variables is described in \modref{chap:BivEDACat}.
+\lettrine{B}{ivariate data occurs when two} variables are measured on the same individuals. For example, you may measure (i) the height and weight of students in class, (ii) depth and area of a lake, (iii) gender and age of welfare recipients, or (iv) number of mice and biomass of legumes in fields. This module is focused on describing the bivariate relationship between two quantitative variables. Bivariate relationships between two categorical variables is described in \modref{chap:BivEDACat}.
 
-\defn{Bivariate}{Data where two variables have been measured on the same individuals.}
-
-Data on the \var{weight} (lbs) and highway miles per gallon (stored as \var{HMPG}) for 93 cars from the 1993 model year will be used as an example throughout this section.\footnote{Data are from \cite{Lock1993}.}  Ultimately, the relationship between highway MPG and the weight of a car will be examined.  These are bivariate data because measurements of both variables are recorded for each individual (i.e., a car). The following commands read the data from \href{https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv}{93cars.csv} into R and lists the \var{HMPG} and \var{weight} values for the first and last three cars\footnote{The vector in the second argument to \R{headtail()} is used to show only the two variables of interest.}.
+Data on the \var{weight} (lbs) and highway miles per gallon (\var{HMPG}) for 93 cars from the 1993 model year will be used as an example throughout this module. Ultimately, the relationship between highway MPG and the weight of a car will be described. These data are read from \href{https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv}{93cars.csv} into R and several observations of \var{HMPG} and \var{weight} are shown below.\footnote{The vector in the second argument to \R{headtail()} is used to show only the two variables of interest.}
 <<>>=
 cars93 <- read.csv("data/93cars.csv")
 headtail(cars93,which=c("HMPG","Weight"))
 @
 
-\section{Response and Explanatory Variables} \label{sect:RespExplan1}
+
+
+\section[Response and Explanatory] {Response and Explanatory Variables} \label{sect:RespExplan1}
+\vspace{-3pt}
+The \textbf{response variable} is the variable that one is interested in explaining something (i.e., variability) or in making future predictions about. The \textbf{explanatory variable} is the variable that may help explain or allow one to predict the response variable. In general, the response variable is thought to depend on the explanatory variable. Thus, the response variable is often called the \textbf{dependent variable}, whereas the explanatory variable is often called the \textbf{independent variable}.
+
+One may identify the response variable by determining which of the two variables depends on the other. For example, in the car data, highway MPG is the response variable because gas mileage is most likely affected by the weight of the car (e.g., hypothesize that heavier cars get worse gas mileage), rather than vice versa.
+
+However, in other situations, it is not immediately clear which variable is the response. For example, does the number of mice in the field depend on the number of legumes (lots of feed=lots of mice) or the other way around (lots of mice= not much of their food left)? Similarly, does area depend on depth or does depth depend on area of the lake? In these situations, the context of the research question is needed to identify the response variable. For example, if the researcher hypothesized that number of mice will be greater if there is more biomass of legumes, then number of mice is the response variable. In many cases, the more difficult variable to measure will most likely be the response variable. For example, researchers likely wish to predict area of a lake (hard to measure) from depth of the lake (easy to measure).
+
+\vspace{-9pt}
+\warn{Which variable is the response may depend on the context of the research question.}
+
+
 \vspace{-12pt}
-The \textbf{response variable} is the variable that one is interested in explaining something about (i.e., variability) or in making future predictions about.\index{Response Variable!Bivariate EDA}  Synonyms for response are dependent and predicted.  The \textbf{explanatory variable} is the variable that may help explain or allow one to predict the response variable.\index{Explanatory Variable!Bivariate EDA}  Synonyms for explanatory are independent and predictor.
-
-\defn{Response Variable}{The variable that we are interested in explaining or predicting.  Synonyms are ``dependent'' or ``predicted'' variable.}
-
-\vspace{-12pt}
-\defn{Explanatory Variable}{The variable that we think may explain or allow us to predict the response variable. Synonyms are ``independent'' or ``predictor'' variable.}
-
-Deciding which variable is the response variable often depends on the context of the situation (as defined by the research question).  In the first example of bivariate data given in the introduction, the response variable may be weight if interest is in predicting weight from height or it may be height if interest is in predicting height from weight.\footnote{The latter is usually not the case, though.}  The response and explanatory variables for the three situations in the introduction with quantitative variables are as follows (followed by context notes):
-\begin{Itemize}
-  \item R = weight, E = height [want to predict weight (hard to measure) from height (easy to measure)].
-  \item R = area, E = depth [area is hard to measure, depth is easy].
-  \item R = number of mice in a field, E = biomass of legumes in the field [hypothesized that higher biomass leads to more mice].
-\end{Itemize}
-
-In the car data, the weight of the car may help explain the highway MPG of the car (e.g., a hypothesis might be that heavier cars get worse gas mileage).  Thus, highway MPG is the response variable because it is of primary interest and may depend on the weight of the car.  Weight is the explanatory variable as it will be used to explain the highway MPG.
-
-\warn{Which variable is the response variable depends on the context of the problem or the researcher's needs (i.e., which variable is being explained or predicted).}
-
+\section{Summaries}
 \vspace{-6pt}
-\section{Scatterplots} \index{Scatterplot!Construction}
-\vspace{-12pt}
-A scatterplot is a graph where each point simultaneously represents the values of both the quantiative response and quantitative explanatory variable.  The value of the explanatory variable gives the x-coordinate and the value of the response variable gives the y-coordinate of the point plotted for an individual.  For example, the first individual in the cars data is plotted at x (\var{Weight}) = \Sexpr{cars93$Weight[1]} and y (\var{HMPG}) = \Sexpr{cars93$HMPG[1]}, whereas the second individual is at x = \Sexpr{cars93$Weight[2]} and y = \Sexpr{cars93$HMPG[2]}.  The scatterplot for all individuals in the data file is shown in \figref{fig:carscat1}.
-<<carscat1, echo=FALSE, fig.cap="Scatterplot between the highway MPG and weight of cars manufactured in 1993.">>=
+\subsection{Scatterplots}
+\vspace{-3pt}
+A scatterplot is a graph where each point simultaneously represents the values of both the quantitative response and quantitative explanatory variable. The value of the explanatory variable gives the x-coordinate and the value of the response variable gives the y-coordinate of the point plotted for an individual. For example, the first individual in the cars data is plotted at x (\var{Weight}) = \Sexpr{cars93$Weight[1]} and y (\var{HMPG}) = \Sexpr{cars93$HMPG[1]}, whereas the second individual is at x = \Sexpr{cars93$Weight[2]} and y = \Sexpr{cars93$HMPG[2]} \figrefp{fig:carscat2}.
+<<carscat1, echo=FALSE, fig.show='hide'>>=
 plot(HMPG~Weight,data=cars93,pch=16,xlab="Weight (lbs)",ylab="Highway MPG")
 @
 
-\warn{Both variables must be quantitative to construct a scatterplot.}
-
-\vspace{-12pt}
-\warn{Response variables are plotted on the y-axis and explanatory variables are plotted on the x-axis.}
-
-\vspace{-6pt}
-\subsection{Scatterplots in R}
-\vspace{-12pt}
-Scatterplots are constructed in R with \R{plot()}.  This function requires a formula of the form \R{Y\TILDE X}, where \R{Y} and \R{X} are variables to be plotted on the y- and x-axes, as the first argument, and the corresponding dataframe name in \R{data=}.\footnote{This function can also take the vector of x-axis data as its first argument followed by a vector of y-axis data as its second argument.  The formula notation is preferred for ease of transferability to other functions.} The x- and y-axis labels may be modified with \R{xlab=} and \R{ylab=}.  The scatterplot of highway MPG versus car weight \figrefp{fig:Scatplot1} was created with the code below.
-<<Scatplot1, fig.cap="Scatterplot between the highway MPG and weight of cars manufactured in 1993 (using R default values)">>=
-plot(HMPG~Weight,data=cars93,ylab="Highway MPG",xlab="Weight (lbs)")
+<<carscat2, echo=FALSE, fig.cap="Scatterplot between the highway MPG and weight of cars manufactured in 1993. For reference to the main text, the first individual is red and the second individual is green.">>=
+<<carscat1>>
+points(HMPG~Weight,data=cars93[1:2,],pch=16,col=c("red","green"))
 @
 
-The character plotted at each point can be changed with the \R{pch=} argument.\footnote{This argument is short for ``plotting character''.}  This argument defaults to a value of 1, which is an open-circle.  Numerical values used to represent other plotting characters are shown in \figref{fig:Rpch}.  For example, the scatterplot shown in \figrefp{fig:carscat1} was created by including \R{pch=16} in \R{plot()}.
+Scatterplots are constructed in R with \R{plot()}. This function requires a formula of the form \R{Y\TILDE X}, where \R{Y} and \R{X} are variables to be plotted on the y- and x-axes, as the first argument, and the corresponding dataframe name in \R{data=}. The x- and y-axis labels may be modified with \R{xlab=} and \R{ylab=}. The character plotted at each point can be changed with the \R{pch=} argument.\footnote{This argument is short for ``plotting character''.} This argument defaults to a value of 1, which is an open-circle. Numerical values used to represent other plotting characters are shown in \figref{fig:Rpch}.
 
-<<Rpch, echo=FALSE, fig.cap="Plotting characters available in R and their numerical codes. Note that for values of 21-25 that \\R{bg='gray70'} is used to provide the background color.">>=
+<<Rpch, echo=FALSE, fig.width=4, fig.height=2, fig.cap="Plotting characters available in R and their numerical codes. Note that for values of 21-25 that \\R{bg='gray70'} is used to provide the background color.">>=
 par(mar=c(0,0,0,0))
-plot(1,xlim=c(0.5,5.5),ylim=c(0.5,5.5),type="n",ann=FALSE,xaxt="n",yaxt="n",bty="n",yaxs="i",xaxs="i")
-points(1:5,rep(5,5),pch=0:4,cex=1.5)
-text((1:5)+0.3,rep(5,5),0:4,cex=1.25)
-points(1:5,rep(4,5),pch=5:9,cex=1.5)
-text((1:5)+0.3,rep(4,5),5:9,cex=1.25)
-points(1:5,rep(3,5),pch=10:14,cex=1.5)
-text((1:5)+0.3,rep(3,5),10:14,cex=1.25)
-points(1:5,rep(2,5),pch=15:19,cex=1.5)
-text((1:5)+0.3,rep(2,5),15:19,cex=1.25)
-points((1:6)*0.8+0.2,rep(1,6),pch=20:25,cex=1.5,bg="gray70")
-text((1:6)*0.8+0.5,rep(1,6),20:25,cex=1.25)
+plot(1,xlim=c(0.5,7.75),ylim=c(0.5,3.5),type="n",ann=FALSE,
+     xaxt="n",yaxt="n",bty="n",yaxs="i",xaxs="i")
+pchs <- c(0:6,15:20,NA,21:25,NA,NA)
+xs <- rep(1:7,3)
+ys <- rep(3:1,each=7)
+points(xs,ys,pch=pchs,cex=1.5,bg="gray70")
+text(xs+0.4,ys,pchs,cex=1.2)
+box()
+@
+
+The scatterplot, excluding the two highlighted points, of highway MPG versus car weight \figrefp{fig:carscat2} was created with the code below.
+<<eval=FALSE>>=
+<<carscat1>>
 @
 
 
-\newpage
-\section{Items to Describe}
-\vspace{-12pt}
-Four characteristics should be described when exploring bivariate data with a scatterplot,\index{Scatterplot!Interpretation}
-\begin{Enumerate}
-  \item \textbf{Association} or \textbf{Direction} of the relationship.
-  \item \textbf{Form} of the relationship.
-  \item \textbf{Strength} of the relationship.
-  \item Presence or absence of \textbf{outliers}.
-\end{Enumerate}
-All four of these items can be described from the scatterplot.  It should be noted, though, that the strength of the relationship is best described with the correlation coefficient (see \sectref{sect:corr}).
-
-Three general statements of association are used -- positive, negative, and none.\index{Association!Definitions}\index{Direction!Definitions}  A positive association is when the scatterplot resembles an increasing function (i.e., increases from lower-left to upper-right; \figref{fig:corrassn}-Right).  For a positive association, most of the individuals are above average or below average for both of the variables.  A negative association is when the scatterplot looks like a decreasing function (i.e., decreases from upper-left to lower-right; \figref{fig:corrassn}-Left).  For a negative association, most of the individuals are above average for one variable and below average for the other variable.  No association is when the scatterplot looks like a flat horizontal line or a ``shotgun blast'' of points (\figref{fig:corrassn}-Middle).  For no association, there are no tendencies for individuals to be above or below average for one variable and above or below average for the other.
-
-<<corrassn, echo=FALSE, out.width='.3\\linewidth', fig.cap="Depiction of three types of association present in scatterplots.">>=
-par(mar=c(1,1,2,2),mgp=c(2.1,0.4,0))
-set.seed(1054)
-r <- c(-.7,0,0.7)
-covmat <- matrix(c(1,r[1],r[1],1),ncol=2)
-x <- rmvnorm(n=100,mean=c(0,0),sigma=covmat)
-plot(x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16)
-mtext("Negative",cex=1.5,line=0.5)
-covmat <- matrix(c(1,r[2],r[2],1),ncol=2)
-x <- rmvnorm(n=100,mean=c(0,0),sigma=covmat)
-plot(x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16)
-mtext("None",cex=1.5,line=0.5)
-covmat <- matrix(c(1,r[3],r[3],1),ncol=2)
-x <- rmvnorm(n=100,mean=c(0,0),sigma=covmat)
-plot(x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16)
-mtext("Positive",cex=1.5,line=0.5)
-@
-
-\defn{Positive Association}{Most of the individuals are either above average or below average for both variables.}
-
-\vspace{-12pt}
-\defn{Negative Association}{Most of the individuals are above average for one variable and below average for the other variable.}
-
-\vspace{-12pt}
-\defn{No Association}{There are no tendencies for individuals to be above or below average for one variable and above or below average for the other variable.}
-
-For the purposes of this introductory course, form will be defined as either linear or nonlinear.\index{Form!Definition} By default, scatterplots will be considered linear unless there is an OBVIOUS curvature in the points.  For example, all three scatterplots in \figref{fig:corrassn} are considered linear.
-
-Strength is a summary of how closely the points cluster about the general form of the relationship.\index{Strength!Definition}  For example, for linear forms strength is how closely the points cluster around the line.  Strength is difficult to define from a scatterplot because it is a relative term.  The general idea of strength is depicted in \figref{fig:corrstrength1}.  However, an objective numerical measure -- the correlation coefficient -- is defined in \sectref{sect:corr}.
-
-<<corrstrength1, echo=FALSE, fig.width=7, fig.height=7, out.width='.8\\linewidth', fig.cap="Scatterplots depicting four relatives types of strength.">>=
-par(mar=c(1,1,2,2),mgp=c(2.1,0.4,0),mfcol=c(2,2))
-set.seed(2648)
-r <- c(0,-0.4,-0.8,-1)
-covmat <- matrix(c(1,r[1],r[1],1),ncol=2)
-x <- rmvnorm(n=100,mean=c(0,0),sigma=covmat)
-plot(x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16)
-mtext("None",cex=1.5,line=0.5)
-covmat <- matrix(c(1,r[2],r[2],1),ncol=2)
-x <- rmvnorm(n=100,mean=c(0,0),sigma=covmat)
-plot(x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16)
-mtext("Weak",cex=1.5,line=0.5)
-covmat <- matrix(c(1,r[3],r[3],1),ncol=2)
-x <- rmvnorm(n=100,mean=c(0,0),sigma=covmat)
-plot(x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16)
-mtext("Moderate",cex=1.5,line=0.5)
-covmat <- matrix(c(1,r[4],r[4],1),ncol=2)
-x <- rmvnorm(n=30,mean=c(0,0),sigma=covmat)
-plot(x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16)
-mtext("Perfect",cex=1.5,line=0.5)
-@
-
-\defn{Strength}{How closely the points cluster about the general form of the relationship.}
-
-\vspace{-12pt}
-\warn{Strength can only be subjectively described from a scatterplot; use the correlation coefficient to be more objective.}
-
-Outliers are points that are far removed from the main cluster of points.\index{Outlier}  Keep in mind (as always) that just because a point is an outlier doesn't mean it is wrong.
-
-The relationship between highway MPG and the weight of cars \figrefp{fig:carscat1} appears to be negative, primarily linear (although I see a very slight concavity), and moderately strong.  The three points at (2400,46), (2500,27), and (1800,33) might be considered SLIGHT outliers (these are not far enough removed for me to consider them outliers, but some people may).
-
-A general conclusion that could be made from these results is that as the weight of the cars increases, the highway MPG attained by the car decreases in a linear fashion.  While this conclusion is correct, it is also very carefully worded.  We must be very careful to not state that increasing the weight of the car CAUSES a decrease in MPG.  We cannot attribute cause because these data come from an observational study and because several other important variables were not considered in the analysis.  For example, the scatterplot in \figref{fig:carscat2}, coded for different numbers of cylinders in the car's engine, indicates that the number of cylinders may be inversely related to the highway MPG and positively related to the weight of the car.  So, does the weight of the car, the number of cylinders, or both, explain the decrease in highway MPG?
-
-<<carscat2, echo=FALSE, fig.cap="Scatterplot between the highway MPG and weight of cars manufactured in 1993 separated by number of cylinders.">>=
-plot(HMPG~Weight,data=cars93,pch=Cyls-2,xlab="Weight (lbs)",ylab="Highway MPG")
-legend("topright",pch=1:5,legend=c("3-cyl","4-cyl","5-cyl","6-cyl","8-cyl"))
-@
-
-%\newpage
-\begin{exsection}
-  \item \label{revex:qbEDAScat} \rhw{}Researchers in Northern Wisconsin wanted to explain the role of the whitetail deer as a keystone herbivore \citep{WallerAlverson1997}.  As a part of their analysis, they examined the relationship between the mean number of hemlock saplings on 14 x 21 m sections of a woodlot and a browsing index (a complicated measurement that gives the amount of food a deer has been eating in a given area).  Use the data in the table below to make a scatterplot of the mean number of hemlock saplings versus the browsing index and describe the bivariate relationship from it. \ansref{ans:qbEDAScat}
-  \begin{Verbatim}
-mean no. hemlock saplings  0.95 2.89 2.97 3.94 4.74 5.10 6.64 7.13
-browse index               0.31 0.35 0.49 0.50 0.61 0.63 0.86 0.90
-  \end{Verbatim}
-\end{exsection}
-
-
-\vspace{-18pt}
-\section{Correlation}\label{sect:corr}\index{Correlation!Computation}\index{Strength!Measure}
+\subsection{Correlation}\label{sect:corr}
 The sample correlation coefficient, abbreviated as $r$, is calculated with
-\begin{equation}
+\begin{equation} \label{eqn:Correlation}
   r = \frac{\Sum_{i=1}^{n}\left[\left(\frac{x_{i}-\bar{x}}{s_{x}}\right)\left(\frac{y_{i}-\bar{y}}{s_{y}}\right)\right]}{n-1}
 \end{equation}
-where $s_{x}$ and $s_{y}$ are the sample standard deviations for the explanatory and response variable, respectively.\footnote{See \sectref{sect:StdDev} for a review of standard deviations.}  The formulas in the two sets of parentheses in the numerator are standardized values; thus, the value in each parenthesis is called the standardized x or standardized y, respectively.\footnote{See \sectref{sect:Standardizing} for a review of standardized values.}  Using this terminology, the formula for the correlation coefficient reduces to these steps:
+where $s_{x}$ and $s_{y}$ are the sample standard deviations for the explanatory and response variable, respectively.\footnote{See \sectref{sect:StdDev} for a review of standard deviations.} The formulae in the two sets of parentheses in the numerator are standardized values; thus, the value in each parenthesis is called the standardized x or standardized y, respectively.\footnote{See \sectref{sect:Standardizing} for a review of standardized values.} Using this terminology, Equation \eqref{eqn:Correlation} reduces to these steps:
 \begin{Enumerate}
   \item For each individual, standardize x and standardize y.
   \item For each individual, find the product of the standardized x and standardized y.
@@ -193,9 +78,7 @@ where $s_{x}$ and $s_{y}$ are the sample standard deviations for the explanatory
   \item Divide the sum from step 3 by n-1.
 \end{Enumerate}
 
-\warn{The sample correlation coefficient is abbreviated with $r$.  The population correlation coefficient is abbreviated with $\rho$.}
-
-The table below illustrates these calculations for the first five individuals in the cars data.\footnote{The five cars are treated as if they are the entire sample.}  In the table note that the ``i'' column is an index for each individual, the $x_{i}$ and $y_{i}$ columns are the observed values of the two variables for individual $i$, $\bar{x}$ was computed by dividing the sum of the $x_{i}$ column by $n$, $s_{x}$ was computed by dividing the sum of the $(x_{i}-\bar{x})^{2}$ column by $n-1$ and taking the square root, and the ``std x'' column is the standardized x values found by dividing the value in the $x_{i}-\bar{x}$ column by $s_{x}$.  Similar calculations were made for the y variable.  The final correlation coefficient is the sum of the last column divided by $n-1$.  Thus, the correlation between car weight and highway mpg for these five cars is -0.54.
+The table below illustrates these calculations for the first five individuals in the cars data.\footnote{The five cars are treated as if they are the entire sample.} Note that the ``i'' column is an index for each individual, the $x_{i}$ and $y_{i}$ columns are the observed values of the two variables for individual $i$, $\bar{x}$ was computed by dividing the sum of the $x_{i}$ column by $n$, $s_{x}$ was computed by dividing the sum of the $(x_{i}-\bar{x})^{2}$ column by $n-1$ and taking the square root, and the ``std x'' column is the standardized x values found by dividing the value in the $x_{i}-\bar{x}$ column by $s_{x}$. Similar calculations were made for the y variable. The final correlation coefficient is the sum of the last column divided by $n-1$. Thus, the correlation between car weight and highway mpg for these five cars is -0.54.
 
 \begin{center}
   \begin{tabular}{cccccccccc}
@@ -214,55 +97,134 @@ sum & 138 & 16685 & 0 & 0 & 29.2 & 547030 & 0 & 0 &  -2.17 \\
   \end{tabular}
 \end{center}
 
-There are easier formulae for calculating $r$ than that illustrated above.  However, the formula and method above illustrates some intuitive concepts about $r$. The correlation coefficient is a measure of both association and strength.\index{Association!Measure}\index{Correlation!Interpretation}  The sign of $r$ indicates the direction or association between the two variables.  A positive $r$ means a positive association and a negative $r$ means a negative association.  The absolute value of $r$ (i.e., the value ignoring the sign) is an indicator of the strength of relationship.  Absolute values nearer 1 are stronger relationships.  Each of these concepts is discussed further next.
+The meaning and interpretation of $r$ is discussed in more detail in \sectref{sect:BivEDAItems}.
 
-A positive association occurs when both variables measured on an individual tend to be above or below average together.  To illustrate this concept, examine the scatterplot in \figref{fig:corrdefn1}-Left that has lines superimposed at the means of both the x and y variables.  Standardized values for measurements larger than the mean are positive, because the difference between the larger observed value and the mean is positive.  With similar reasoning, standardized values for measurements smaller than the mean are negative.
+The correlation coefficient ($r$) between two quantitative variables is computed with \R{corr()}, with a formula of the form \R{Y\TILDE X} or \R{\TILDE Y+X}, where \R{Y} and \R{X} are the names of quantitative variables, as the first argument and the corresponding data.frame in \R{data=}. For example, the correlation coefficient between highway MPG and weight for the car data is \Sexpr{formatC(corr(HMPG~Weight,data=cars93),format="f",digits=2)}.
+<<>>=
+corr(HMPG~Weight,data=cars93)
+corr(~HMPG+Weight,data=cars93)  # alternative form
+@
 
-<<corrdefn1, echo=FALSE, fig.width=7, out.width='.8\\linewidth', fig.cap="Scatterplot with mean lines superimposed and the signs of standardized values for both x and y shown for a positive (\\textbf{Left}) and negative (\\textbf{Right}) association.">>=
-par(mar=c(2,2,1,1),mgp=c(2,0.5,0),mfcol=c(1,2))
-set.seed(16502)
-r <- c(0.8,-0.8)
+
+\subsection{Pairs of Multiple Variables}
+For efficiency, a matrix of scatterplots or correlation coefficients may be constructed for many pairs of variables. Each subplot in the scatterplot matrix \figrefp{fig:Scatplot4} is a scatterplot with the variable listed in the same column on the x-axis and the variable listed in the same row on the y-axis. For example, the scatterplot in the upper-right corner of \figref{fig:Scatplot4} has highway MPG on the y-axis and car weight on the x-axis. Similarly, the correlation between two variales is in the row and column of the correlation matrix that contains the names of the variables.
+
+A scatterplot matrix is constructed with \R{pairs()}, which takes a formula of the form \R{\TILDE X1+X2+X3} (and so on), where the \R{X1}, \R{X2}, etc. are all quantitative variables, and the corresponding data.frame in \R{data=}. Similarly, the correlation matrix is constructed by including the same two arguments in \R{corr()}.
+
+In some instances, the data.frame may contain missing values (i.e., data that were not recorded). The individuals with missing data are efficiently removed from the correlation matrix with \R{use="pairwise.complete.obs"} in \R{corr()}.\footnote{Missing data are automatically removed from the scatterplots.} The number of digits reported in the correlation matrix is controlled with \R{digits=}.
+
+<<echo=FALSE, results='hide'>>=
+carscorr <- corr(~HMPG+FuelTank+Length+Weight,data=cars93,
+                 use="pairwise.complete.obs")
+@
+
+For example, the scatterplot matrix \figrefp{fig:Scatplot4} and correlation matrix for all pairs of four variables in the cars data are computed below. Thus, the correlation between highway MPG and size of the fuel tank is \Sexpr{formatC(carscorr["HMPG","FuelTank"],format="f",digits=3)}, whereas the correlation between length and weight of the car is \Sexpr{formatC(carscorr["Length","Weight"],format="f",digits=3)}.
+<<Scatplot4, fig.width=6, fig.height=6, out.width='.7\\linewidth', fig.cap="Scatterplot matrix of the highway MPG, fuel tank size, length, and weight of cars.">>=
+pairs(~HMPG+FuelTank+Length+Weight,data=cars93)
+corr(~HMPG+FuelTank+Length+Weight,data=cars93,use="pairwise.complete.obs",digits=3)
+@
+
+
+\section{Items to Describe} \label{sect:BivEDAItems}
+Four characteristics should be described for a bivariate EDA with two quantitativariables:
+\vspace{-8pt}
+\begin{Enumerate}
+  \item \textbf{form} of the relationship,
+  \item presence (or absence) of \textbf{outliers}, and
+  \item \textbf{association} or \textbf{direction} of the relationship,
+  \item \textbf{strength} of the relationship.
+\end{Enumerate}
+\vspace{-4pt}
+All four of these items can be described from a scatterplot. However, for certain relationships (discussed below), strength is best described from the correlation coefficient.
+
+The form of a relationship is determined by whether the ``cloud'' of points on a scatterplot forms a line or some sort of curve \figrefp{fig:corrassn}. For the purposes of this introductory course, if the ``cloud'' appears linear then the form will said to be linear, whereas if the ``cloud'' is curved then the form will be nonlinear. Scatterplots should be considered \textbf{linear} unless there is an OBVIOUS curvature in the points.
+
+<<forms, echo=FALSE, out.width='.3\\linewidth', fig.cap="Depictions of two linear (Left and Center) and one nonlinear (Right) relationship.">>=
+par(mar=c(0.5,0.5,2,0.5),xaxt="n",yaxt="n")
+set.seed(1054)
+r <- c(-.9,0.4)
 for (i in 1:length(r)) {
-  covmat <- matrix(c(1,r[i],r[i],1),ncol=2)
-  x <- rmvnorm(n=100,mean=c(0,0),sigma=covmat)
-  y <- x[,2]; x <- x[,1]
-  plot(y~x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16,xlim=c(-3,3),ylim=c(-3,3))
-  xbar <- mean(x); ybar <- mean(y)
-  abline(v=xbar,lty=3,lwd=2); abline(h=ybar,lty=3,lwd=2)
-  axis(1,at=xbar,c(expression(bar(x))),cex=1.5)
-  axis(1,at=c(xbar-1.3*sd(x),xbar+1.3*sd(x)),c("Below (-)","Above (+)"),cex=2.5,tick=FALSE)
-  axis(2,at=c(ybar),c(expression(bar(y))),cex=1.5)
-  axis(2,at=c(ybar-1.3*sd(y),ybar+1.3*sd(y)),c("Below (-)","Above (+)"),cex=2.5,tick=FALSE)
-  points(x[(x>xbar & y<ybar)|(x<xbar & y>ybar)],y[(x>xbar & y<ybar)|(x<xbar & y>ybar)],pch=16,col="red")
+  plot(rmvnorm(n=100,mean=c(0,0),sigma=matrix(c(1,r[i],r[i],1),ncol=2)),
+       xlab="",ylab="",pch=21,bg="gray70")
+  mtext("Linear",cex=1.5,line=0.5)
+}
+x <- 3*runif(100)
+y <- 2.5*(x^2)-3*x + rnorm(100,sd=1.5)
+plot(y~x,xlab="",ylab="",pch=21,bg="gray70")
+mtext("Nonlinear",cex=1.5,line=0.5)
+@
+
+An outlier is a point that is far removed from the main cluster of points. Keep in mind (as always) that just because a point is an outlier doesn't mean it is wrong.
+
+A positive association is when the scatterplot resembles an increasing function (i.e., increases from lower-left to upper-right; \figref{fig:corrassn}-Left). For a positive association, most of the individuals are above average or below average for both of the variables. A negative association is when the scatterplot looks like a decreasing function (i.e., decreases from upper-left to lower-right; \figref{fig:corrassn}-Right). For a negative association, most of the individuals are above average for one variable and below average for the other variable. No association is when the scatterplot looks like a ``shotgun blast'' of points (\figref{fig:corrassn}-Center). For no association, there is no tendency for individuals to be above or below average for one variable and above or below average for the other.
+
+<<corrassn, echo=FALSE, out.width='.3\\linewidth', fig.cap="Depiction of three types of association present in scatterplots.">>=
+set.seed(1054)
+r <- c(.8,0,-.7)
+lbls <- c("Positive","None","Negative")
+par(mar=c(0.5,0.5,2,0.5),xaxt="n",yaxt="n")
+for (i in 1:length(r)) {
+  plot(rmvnorm(n=100,mean=c(0,0),sigma=matrix(c(1,r[i],r[i],1),ncol=2)),
+       xlab="",ylab="",pch=21,bg="gray70")
+  mtext(lbls[i],cex=1.5,line=0.5)
 }
 @
 
-Now consider the product of standardized x's and y's in each quadrant of \figref{fig:corrdefn1}-Left.  In the quadrant that corresponds to above average for both standardized values (i.e., both positive signs) the product is positive (denoted by black dots).  In the quadrant that corresponds to below average for both standardized values the product is also positive.  In the other two quadrants the product is negative (denoted by red dots).  From \figref{fig:corrdefn1}-Left it is seen that, for a positive association, the numerator of the correlation coefficient is the sum of many positive products of standardized x's and y's (black dots) and few negative products (red dots).  Thus, the numerator is positive.  The denominator (recall it is n-1) is always positive.  Thus, the correlation for a positive association is positive.
+Strength is a summary of how closely the points cluster about the general form of the relationship. For example, if a linear form exists, then strength is how closely the points cluster around the line. Strength is difficult to define from a scatterplot because it is a relative term. However, the correlation coefficient ($r$; \sectref{sect:corr}) is a measure of strength (and association) between two variables, \textit{if the form is linear}.
 
-A negative association is examined in the same manner with \figref{fig:corrdefn1}-Right.  The signs of the products in the quadrants are the same as described above.  With the negative association, the numerator is the sum of many negative products (red dots) and a few positive products (black dots).  Thus, the numerator is negative.  Therefore, the correlation for a negative association is negative.
+The sign of $r$ indicates the association between the two variables. A positive $r$ means a positive association and a negative $r$ means a negative association. The absolute value of $r$ (i.e., the value ignoring the sign) is an indicator of strength of relationship. Absolute values nearer 1 are stronger relationships.
 
-\warn{The correlation coefficient is positive for positive associations and negative for negative associations.}
+To better understand how $r$ is a measure of association and strength, reconsider the steps in calculation $r$ from \sectref{sect:corr}. The scatterplots in \figref{fig:corrdefn1} represent a positive (Left) and negative (Right) association. These scatterplots have dashed lines at the mean of both the x- and y-axis variables. Because the mean is substracted from observed values when standardizing, points that fall above the mean will have positive standardized values and points that fall below the mean will have negative standardized values. The sign for the standardized values are depicted along the axes.
 
-Correlations range from -1 to 1.  Absolute values of $r$ equal to 1 indicate a perfect correlation; i.e., all points fall exactly on a line.  A correlation of 0 indicates no association.  Thus, absolute values of $r$ near 1 indicate strong relationships and those near 0 are weak.  The range of correlation values and a few scatterplots illustrating how the strength and direction of the relationship changes along this scale is illustrated in \figref{fig:corrstrength2}.  The categorizations in \tabref{tab:StrengthCriteria} can be used as a rough guideline for categorizing the strength of a relationship between two variables.
+<<corrdefn1, echo=FALSE, fig.width=7, out.width='.8\\linewidth', fig.cap="Scatterplot with mean lines superimposed and the signs of standardized values for both x and y shown for a positive (\\textbf{Left}) and negative (\\textbf{Right}) association. Dark gray points have a positive product of standardized values, whereas red points have a negative product of standardized values.">>=
+set.seed(16502)
+r <- c(0.8,-0.8)
+par(mar=c(2,2,1,1),mgp=c(2,0.5,0),mfcol=c(1,2),xaxs="i",yaxs="i")
+for (i in 1:length(r)) {
+  x <- rmvnorm(n=100,mean=c(0,0),sigma=matrix(c(1,r[i],r[i],1),ncol=2))
+  y <- x[,2]; x <- x[,1]
+  xbar <- mean(x); ybar <- mean(y)
+  plot(-5,xlab="",ylab="",xlim=c(-3,3),ylim=c(-3,3),xaxt="n",yaxt="n")
+  axis(1,at=xbar,c(expression(bar(x))),cex=1.5)
+  axis(2,at=c(ybar),c(expression(bar(y))),cex=1.5)
+  abline(v=xbar,lty=2,lwd=2,col="gray60")
+  abline(h=ybar,lty=2,lwd=2,col="gray60")
+  axis(1,at=c(-2,2),c("Below (-)","Above (+)"),cex=2.5,tick=FALSE)
+  axis(2,at=c(-2,2),c("Below (-)","Above (+)"),cex=2.5,tick=FALSE)
+  points(x[(x>xbar & y<ybar)|(x<xbar & y>ybar)],
+         y[(x>xbar & y<ybar)|(x<xbar & y>ybar)],pch=21,bg="red")
+  points(x[(x>xbar & y>ybar)|(x<xbar & y<ybar)],
+         y[(x>xbar & y>ybar)|(x<xbar & y<ybar)],pch=21,bg="gray30")
+}
+@
+
+Now consider the product of standardized x's and y's in each quadrant of the scatterplots in \figref{fig:corrdefn1}. In the quadrant where both standardized values are above average (i.e., both positive signs) the product of standardized values is positive (dark gray points). In the quadrant where both standardized values are negative, the product of standardized values is also positive. In the other two quadrants, the product of standardized values is negative (red points).
+
+Thus, for a positive association (\figref{fig:corrdefn1}-Left) the numerator of the correlation coefficient is positive because it is the sum of many positive (dark gray points) and few negative (red points) products of standardized values. The denominator (recall that it is $n-1$) is always positive. Therefore, $r$ for a positive association is positive. Conversely, for a negative association (\figref{fig:corrdefn1}-Right) the numerator of the correlation coefficient is negative because it is the sum of few positive (dark gray points) and many negative (red points) products of standardized values. Therefore, $r$ for a negative association is negative.
+
+Correlations range from -1 to 1. Absolute values of $r$ equal to 1 indicate a perfect correlation; i.e., all points fall exactly on a line. A correlation of 0 indicates no association. Thus, absolute values of $r$ near 1 indicate strong relationships and those near 0 are weak. The range of correlation values and a few scatterplots illustrating how the strength and association of the relationship changes along this scale is illustrated in \figref{fig:corrstrength2}. The categorizations in \tabref{tab:StrengthCriteria} can be used as a rough guideline for categorizing the strength of a relationship between two variables.
 
 <<corrstrength2, echo=FALSE, fig.width=8, fig.height=1.5, out.width='.95\\linewidth', fig.cap="Scatterplots along the continuum of $r$ values.">>=
-par(mar=c(1.5,0.2,1.5,0.2),mgp=c(2,0.5,0),mfcol=c(1,7))
+par(mar=c(0.2,0.2,2.8,0.2),mfcol=c(1,7))
 set.seed(1909)
 r <- c(-1,-0.8,-0.4,0,0.4,0.8,1)
 for (i in 1:length(r)) {
   covmat <- matrix(c(1,r[i],r[i],1),ncol=2)
   x <- rmvnorm(n=100,mean=c(0,0),sigma=covmat)
   y <- x[,2]; x <- x[,1]
-  plot(y~x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16,xlim=c(-3,3),ylim=c(-3,3),cex=0.8)
   xbar <- mean(x); ybar <- mean(y)
-  abline(v=xbar,lty=3,lwd=2); abline(h=ybar,lty=3,lwd=2)
-  points(x[(x>xbar & y<ybar)|(x<xbar & y>ybar)],y[(x>xbar & y<ybar)|(x<xbar & y>ybar)],pch=16,col="red",cex=0.8)
+  plot(-5,xlab="",ylab="",xaxt="n",yaxt="n",xlim=c(-3,3),ylim=c(-3,3))
+  abline(v=xbar,lty=2,lwd=1); abline(h=ybar,lty=2,lwd=1)
+  points(x[(x>xbar & y<ybar)|(x<xbar & y>ybar)],
+         y[(x>xbar & y<ybar)|(x<xbar & y>ybar)],pch=21,bg="red",cex=0.8,lwd=0.5)
+  points(x[(x>xbar & y>ybar)|(x<xbar & y<ybar)],
+         y[(x>xbar & y>ybar)|(x<xbar & y<ybar)],pch=21,bg="gray30",cex=0.8,lwd=0.5)
   if (r[i]==-1 | r[i]==1) {
-    mtext("Strongest",line=0.4)
-    mtext(paste("r=",r[i]),1,line=0.4)
+    mtext("Strongest",line=1.6)
+    mtext(paste("r=",r[i]),line=0.2)
   } else if (r[i]==0) {
-    mtext("Weakest",line=0.4)
-    mtext(paste("r=",r[i]),1,line=0.4)
+    mtext("Weakest",line=1.6)
+    mtext(paste("r=",r[i]),line=0.2)
   }
 }
 @
@@ -283,76 +245,10 @@ for (i in 1:length(r)) {
   \end{tabular}
 \end{table}
 
-\warn{Absolute values of correlation coefficients nearer one are stronger.}
+\section{Synthetic Interpretations}
+When performing a bivariate EDA for two quantatitative variables, the form, presence (or absence) of outliers, association, and strength should be specifically addressed. In addition, you should state how you assessed strength. Specifically, you should use $r$ to assess strength (see ) IF the relationship is linear wihout any outliers. However, if the relationship is nonlinear, has outliers, or both, then strength should be subjectively assessed from the scatterplot.
 
-
-\begin{minipage}{\textwidth}
-The following are important characteristics of correlation coefficients:\index{Correlation!Characteristics}
-\begin{Itemize}
-  \item The variables must be quantitative (i.e., if you should not make a scatterplot, then don't calculate $r$).
-  \item The correlation coefficient only measures strength of LINEAR relationships (i.e., if the form of the relationship is not linear, then the $r$ is meaningless and should not be calculated).
-  \item The units that the variables are measured in do not matter (i.e., $r$ is the same between heights and weights measured in inches and lbs, inches and kg, m and kg, cm and kg, and cm and inches).  This is because of the standardization of the two variables in the calculation of $r$.
-  \item The distinction between response and explanatory variables is not needed.  That is, the correlation of GPA and ACT scores is the same as the correlation of ACT scores and GPA.
-  \item Correlation coefficients are between -1 and 1.
-  \item Correlation coefficients are strongly affected by outliers (simply, because both the mean and standard deviation, used in the calculation of $r$, are strongly affected by outliers).
-  \item Correlation is not causation -- just because a strong correlation is observed it doesn't mean that the explanatory variable caused the response variable (an exception may be in carefully designed experimental studies).
-\end{Itemize}
-\end{minipage}
-
-\warn{The word ``correlation'' is often mis-used in everyday language.  This word is used only when discussing the actual correlation coefficient (i.e., $r$).  When discussing the association between two variables, one should use the word ``relationship'' rather than ``correlation'' (e.g., ``What is the relationship between age and rate of cancer?'').}
-
-
-\subsection{Correlations in R}
-\vspace{-12pt}
- \label{sect:Correlation}\index{Correlation!Computation}\index{Correlation!Matrix}
-The correlation coefficient ($r$) between two quantitative variables is computed with \R{corr()}. With two quantitative variables \R{Y} and \R{X}, \R{corr()} can take a formula of the form \R{Y\TILDE X} as the first argument and the corresponding data.frame name in \R{data=}.\footnote{\R{corr()} can also use \R{\TILDE Y+X}.}
-<<>>=
-corr(HMPG~Weight,data=cars93)
-@
-
-The correlation coefficient can be simultaneously computed for all pairs of variables in a data.frame that contains ONLY quantitative variables. For example, to find the correlations between each pair of highway MPG, size of the fuel tank, length, and weight of cars in \R{cars93}, then these variables must first be isolated and assigned to a new data.frame.
-<<>>=
-cars93a <- cars93[,c("HMPG","FuelTank","Length","Weight")]
-str(cars93a)
-@
-
-In some instances, the data.frame may contain some missing values (i.e., data that was not recorded).  The individuals with missing data are efficiently removed when computing $r$ by including \R{use="pairwise.complete.obs"} in \R{corr()}.  Thus, the correlations between all pairs of these four variables is computed below (note use of \R{digits=} to control the number of decimal points returned).
-<<>>=
-corr(cars93a,use="pairwise.complete.obs",digits=3)
-@
-
-These results are called a correlation matrix where each cell in the matrix represents the $r$ between variables that label the corresponding row and column.  Thus, the correlation between highway MPG and size of the fuel tank is \Sexpr{formatC(corr(cars93a)["HMPG","FuelTank"],format="f",digits=3)}.  The correlation matrix has all \verb"1"s on the main diagonal because the correlation between a variable and itself is always 1 (i.e., a perfect relationship).  In addition, the matrix is symmetric about the main diagonal because the correlation between $X$ and $Y$ is the same as the correlation between $Y$ and $X$.
-
-\warn{If the vector submitted to \R{corr()} has missing data, then the individuals with missing data should be excluded by including the \R{use="pairwise.complete.obs"} argument in \R{corr()}.}
-
-A scatterplot matrix is a visual that corresponds o the correlation matrix \figrefp{fig:Scatplot4}.  Each subplot in the scatterplot matrix is a scatterplot with the variable listed in the same column on the x-axis and the variable listed in the same row on the y-axis.  For example, the scatterplot in the upper-right corner of \figref{fig:Scatplot4} has highway MPG on the y-axis and car weight on the x-axis.  A scatterplot matrix is constructed in R by submitting the ``reduced'' data frame to \R{pairs()}.
-
-\vspace{-6pt}
-<<Scatplot4, fig.width=6, fig.height=6, out.width='.7\\linewidth', fig.cap="Scatterplot matrix of the highway MPG, fuel tank size, length, and weight of cars.">>=
-pairs(cars93a)
-@
-
-
-\section{Example Interpretations}
-\vspace{-12pt}
-\subsection{Highway MPG and Weight}
-\vspace{-6pt}
-The following overall bivariate summary for the relationship between highway MPG and weight is made from the analyses in the previous sections.  The relationship between highway MPG and the weight of cars \figrefp{fig:carscat1} appears to be negative, primarily linear (although I see a very slight concavity), and moderately strong with a correlation of \Sexpr{formatC(cor(cars93a)["HMPG","FuelTank"],format="f",digits=2)}.  The three points at (2400,46), (2500,27), and (1800,33) might be considered SLIGHT outliers (these are not far enough removed for me to consider them outliers, but some people may).
-
-\subsection{State Energy Usage}
-\vspace{-6pt}
-\begin{quote}
-\textit{A 2001 report from the \href{http://www.eia.doe.gov/}{Energy Information Administration} of the Department of Energy details the total consumption of a variety of energy sources by state in 2001.  Construct a proper EDA for the relationship between total petroleum and coal consumption (in trillions of BTU).}
-\end{quote}
-<<scatNRG1, echo=FALSE, fig.cap="Scatterplot of the total consumption of petroleum versus the consumption of coal (in trillions of BTU) by all 50 states and the District of Columbia.  The points shown in the left with total petroleum values greater than 3000 trillion BTU are deleted in the right plot.">>=
-NRG <- read.csv("data/NRG_Consump_2001.csv")
-plot(TotalPet~Coal,data=NRG,pch=16,xlab="Coal",ylab="Total Petroleum (trillion BTU)")
-NRG1 <- NRG[-c(5,44),]
-plot(TotalPet~Coal,data=NRG1,pch=16,xlab="Coal",ylab="Total Petroleum (trillion BTU)")
-@
-The relationship between total petroleum and coal consumption is generally positive, linear, weak, with two outliers at total petroleum levels greater than 3000 trillions of BTU (\figref{fig:scatNRG1}-Left).  I did not compute a correlation coefficient because of the outliers.  The two outliers were Texas and California.  After removing them from the data set the relationship is clearly positive, linear, weak ($r=$\Sexpr{formatC(cor(NRG1$Coal,NRG1$TotalPet),format="f",digits=2)}), with no additional outliers (\figref{fig:scatNRG1}-Right).
-
-This example illustrates several key points in the description of a bivariate EDA.  First, the descriptions of association, strength, and form should not be influenced by the presence of outliers.  In other words, describe association, strength, and form ignoring any outliers present in the data.  If you don't have the ability to compute $r$ without the outliers (e.g., you are just given $r$ for the entire data set), then \textbf{DO NOT} report $r$ because it is too strongly influenced by the outliers.  Second, the form of weak relationships is difficult to describe because, by definition, there is very little clustering to a form.  As a rule-of-thumb, if the scatterplot does not have an obvious curvature to it, then it is described as linear by default.
+Two other points to consider when performing a bivariate EDA with quantitative variables. First, if outliers are present, do not let them completely influence your conclusions about form, association, and strength. In other words, try to assess these items while ignoring the outlier(s). If you have the raw data and the form excluding the outlier is linear, then compute $r$ with the outlier eliminated from the data. Second, the form of weak relationships is difficult to describe because, by definition, there is very little clustering to a form. As a rule-of-thumb, if the scatterplot does not have an obvious curvature to it, then it is described as linear by default.
 
 \warn{Outliers should not influence the descriptions of association, strength, and form.}
 
@@ -360,78 +256,80 @@ This example illustrates several key points in the description of a bivariate ED
 \warn{The form is linear unless there is an OBVIOUS curvature.}
 
 
-\begin{exsection}
-  \item \label{revex:qbEDAcorr} \rhw{} Calculate the correlation coefficient between the mean number of hemlock saplings and deer browse index given in Review Exercise \ref{revex:qbEDAScat}. \ansref{ans:qbEDAcorr}
+\subsection*{Highway MPG and Weight}
+The following overall bivariate summary for the relationship between highway MPG and weight is made using the calculations from the previous sections. The relationship between highway MPG and weight of cars \figrefp{fig:carscat2} appears to be primarily linear (although I see a very slight concavity), negative, and moderately strong with a correlation of \Sexpr{formatC(corr(HMPG~Weight,data=cars93),format="f",digits=2)}. The three points at (2400,46), (2500,27), and (1800,33) might be considered SLIGHT outliers (these are not far enough removed for me to consider them outliers, but some people may). The correlation coefficient was used to assess strength because the relationship was linear without any outliers.
 
-  \item \label{revex:qbEDASoil} The concentration of cadmium and copper in the topsoil of 115 15mX15m plots along the river Meuse in the village Stein in New Zealand was recorded by van Rijn and Rikken\footnote{These data are available in \R{data(meuse)} of the \R{sp} package.}.  Use the scatterplot below to describe the bivariate relationship between these two variables. \ansref{ans:qbEDASoil}
-<<ScatSoil, echo=FALSE, results='hide', include=FALSE, fig.width=3.5, fig.height=3.5, par1=TRUE>>=
-data(meuse,package="sp")
-plot(copper~cadmium,data=meuse,xlab="Cadmium (ppm)",ylab="Copper (ppm)",pch=16)
-legend("topleft",legend=paste("r=",round(cor(meuse$copper,meuse$cadmium),3),sep=""),bty="n",cex=1.25)
+
+\subsection*{State Energy Usage}
+\begin{quote}
+\textit{A 2001 report from the \href{http://www.eia.doe.gov/}{Energy Information Administration} of the Department of Energy details the total consumption of a variety of energy sources by state in 2001. Construct a proper EDA for the relationship between total petroleum and coal consumption (in trillions of BTU).}
+\end{quote}
+<<NRG1, echo=FALSE>>=
+NRG <- read.csv("data/NRG_Consump_2001.csv")
+NRG1 <- NRG[-c(5,44),]
 @
-  \begin{center}
-    \includegraphics[width=2.5in]{Figs/ScatSoil-1}
-  \end{center}
+The relationship between total petroleum and coal consumption is generally positive, linear, weak, with two outliers at total petroleum levels greater than 3000 trillions of BTU (\figref{fig:scatNRG1}-Left). I did not compute a correlation coefficient because of the outliers. The two outliers were Texas and California. After removing them from the data set the relationship is clearly positive, linear, weak ($r=$\Sexpr{formatC(corr(~Coal+TotalPet,data=NRG1),format="f",digits=2)}), with no additional outliers (\figref{fig:scatNRG1}-Right).
 
-  \item \label{revex:qbEDAVital} Ten variables were measured on 57 countries and reported in the International Vital Statistics (1996).  A scatterplot of the birth and death rates is shown below.  Write a brief description of this bivariate relationship.  \ansref{ans:qbEDAVital}
-  \begin{center}
-    \includegraphics[width=3in]{Figs/ScatVital1.png}
-  \end{center}
-
-  \item \label{revex:qbEDAAllen} \rhw{} \cite{Allenetal1997} investigated the impact of the density of red-imported fire ants (RIFA) on the recruitment of white-tailed deer fawns (an index of does to fawns).  A modified version of their data is recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/RIFA.csv}{RIFA.csv}.  Use this information to write a brief description of this bivariate relationship. \ansref{ans:qbEDAAllen}
-
-  \item \label{revex:qbEDAMPG} Researchers at Chevrolet attempted to determine the relationship between gas mileage (MPG) of Luminas in the city (CITY) and on the highway (HIGHWAY).  Their results are shown below.  Use this information to write a brief description of this bivariate relationship.\ansref{ans:qbEDAMPG}
-<<ScatLumina, echo=FALSE, results='hide', include=FALSE, fig.width=3.5, fig.height=3.5, par1=TRUE>>=
-lum <- read.csv("data/Lumina.csv")
-plot(CMPG~HMPG,data=lum,pch=16,xlab="Highway MPG",ylab="City MPG")
-legend("topleft",legend=paste("r=",round(cor(lum$CMPG,lum$HMPG),3),sep=""),bty="n")
+<<scatNRG1, echo=FALSE, fig.cap="Scatterplot of the total consumption of petroleum versus the consumption of coal (in trillions of BTU) by all 50 states and the District of Columbia. The points shown in the left with total petroleum values greater than 3000 trillion BTU are deleted in the right plot.">>=
+plot(TotalPet~Coal,data=NRG,pch=16,xlab="Coal Consumption (trillion BTU)",
+     ylab="Total Petroleum (trillion BTU)")
+plot(TotalPet~Coal,data=NRG1,pch=16,xlab="Coal Consumption (trillion BTU)",
+     ylab="Total Petroleum (trillion BTU)")
 @
-\begin{center}
-  \includegraphics[width=3in]{Figs/ScatLumina-1}
-\end{center}
 
-  \item \label{revex:qbEDAMlad} \rhw{} \cite{Mladenoffetal1997} estimated the territory size (km$^{2}$) of wolf (\textit{Canis lupus}) packs and the density of whitetail deer (number/km$^{2}$; \textit{Odocoileus virginianus}) in the same areas in northern Wisconsin.  Their data is recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Wolves2.csv}{Wolves2.csv}.  Load these data into R and generate results to write a brief description of this bivariate relationship. \ansref{ans:qbEDAMlad}
-
-  \item \label{revex:qbEDAPerch} \rhw{} The Park Management team of Kejimkujik National Park, Nova Scotia examined the relationship between the length and weight of yellow perch (\emph{Perca flavescens}) captured form Grafton Lake in the park in 2000 following the removal of a dam \citep{Brylinsky2001}.  Their data is stored in \href{https://raw.githubusercontent.com/droglenc/NCData/master/PerchGL.csv}{PerchGL.csv}.  Load these data into R, isolate just the results from 2000 (i.e., use \R{filterD()}), and generate results to describe this bivariate relationship.  \ansref{ans:qbEDAPerch}
-
-  \item \label{revex:qbEDACrckt} \rhw{} It has been said that you can roughly estimate the temperature from the number of cricket chirps heard.  To determine if this relationship existed, an entomologist recorded the number of chirps in a 15-second interval by crickets held at different temperatures.  The researcher's data is recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Chirps.csv}{Chirps.csv}.  Load these data into R and generate results to write a brief description of this bivariate relationship. \ansref{ans:qbEDACrckt}
-
-  \item \label{revex:qbEDArChos1} Five of the scatterplots below correspond to the following correlation coefficients --- 0.89, -0.48, -0.92, 0.56, 0.00. Identify the scatterplot that each correlation corresponds to. Some scatterplots will not be used. \ansref{ans:qbEDArChos1}
-\begin{center}
-  \includegraphics[width=3in]{Figs/r_chos1.png}
-\end{center}
-
-  \item \label{revex:qbEDArChos2} Order the following graphs from (i) lowest to highest value of r and (ii) weakest to strongest.  \ansref{ans:qbEDArChos2}
-<<RChoose1, echo=FALSE, results='hide', include=FALSE, fig.width=6, fig.height=1.5>>=
-par(mar=c(0.2,0.2,2,0.2),mgp=c(2,0.5,0),mfcol=c(1,4))
-set.seed(349)
-r <- c(-.7,-.9,-0.3,0.5)
-for (i in 1:length(r)) {
-  covmat <- matrix(c(1,r[i],r[i],1),ncol=2)
-  x <- rmvnorm(n=100,mean=c(0,0),sigma=covmat)
-  y <- x[,2]; x <- x[,1]
-  plot(y~x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16,xlim=c(-3,3),ylim=c(-3,3))
-  mtext(LETTERS[i],line=0.4)
-}
+\subsubsection*{R Appendix}
+<<eval=FALSE, prompt=FALSE>>=
+<<NRG1>>
+<<scatNRG1>>
+corr(~Coal+TotalPet,data=NRG1)
 @
-\begin{center}
-  \includegraphics[width=4in]{Figs/RChoose1-1}
-\end{center}
 
-  \item \label{revex:qbEDArChos3} Order the following graphs from (i) lowest to highest value of r and (ii) weakest to strongest. \ansref{ans:qbEDArChos3}
-<<RChoose2, echo=FALSE, results='hide', include=FALSE, fig.width=6, fig.height=1.5>>=
-par(mar=c(0.2,0.2,2,0.2),mgp=c(2,0.5,0),mfcol=c(1,4))
-set.seed(349)
-r <- c(0.6,-0.9,-0.5,0.9)
-for (i in 1:length(r)) {
-  covmat <- matrix(c(1,r[i],r[i],1),ncol=2)
-  x <- rmvnorm(n=100,mean=c(0,0),sigma=covmat)
-  y <- x[,2]; x <- x[,1]
-  plot(y~x,xlab="",ylab="",xaxt="n",yaxt="n",pch=16,xlim=c(-3,3),ylim=c(-3,3))
-  mtext(LETTERS[i],line=0.4)
-}
+\newpage
+\subsection*{Hatch Weight and Incubation Time of Geckos}
+\begin{quote}
+\textit{A hobbyist hypothesized that there would be a positie association between length of incubation (days) and hatchling weigth (grams) for Crested Geckos. To test this hypothesis she collected the incubation time and weight for 21 hatchlings (shown below). Construct a proper EDA for the relationship between incubation time and hatchling weight.}
+\end{quote}
+
+\begin{verbatim}
+Time  53  54  56  60  60  60  60  60  63  63  77  77  78  81  82  82  83  83  84  90  90
+Wt   1.5 1.7 1.4 1.0 1.4 1.5 1.7 1.8 1.4 1.5 1.1 1.6 1.5 1.9 1.4 1.5 1.3 1.7 1.6 1.4 1.8
+\end{verbatim}
+
+<<echo=FALSE>>=
+df <- data.frame(inctime=c(53,54,56,60,60,60,60,60,63,63,77,77,78,81,82,82,83,83,84,90,90),hatchwt=c(1.5,1.7,1.4,1.0,1.4,1.5,1.7,1.8,1.4,1.5,1.1,1.6,1.5,1.9,1.4,1.5,1.3,1.7,1.6,1.4,1.8))
 @
-\begin{center}
-  \includegraphics[width=4in]{Figs/RChoose2-1}
-\end{center}
-\end{exsection}
+
+The relationship between hatchling weight and incubation time for the Crested Geckos shows a linear form without outliers, no definitive and a weak ($r$=\Sexpr{formatC(corr(~inctime+hatchwt,data=df),format="f",digits=2)}) association \figrefp{fig:scatGecko}. I did compute $r$ because no outliers were present and the relationship was linear (or, at least, it was not nonlinear).
+
+<<scatGecko, echo=FALSE, fig.cap="Scatterplot of hatchling weight versus incubation time for Crested Geckos.">>=
+plot(hatchwt~inctime,data=df,pch=16,xlab="Incubation Time (days)",
+     ylab="Hatchling Weight (grams)")
+@
+
+\subsubsection*{R Appendix}
+<<eval=FALSE, prompt=FALSE>>=
+df <- read.csv("data/Gecko.csv")
+<<scatGecko>>
+corr(~inctime+hatchwt,data=df)
+@
+
+
+\section{Cautions About Correlation}
+Examning relationships between pairs of quantitative variables is common practice. Using the $r$ can be an important part of this analysis, as described above. However, $r$ can be abused through misapplication and misinterpretation. Thus, it is important to remember the following characteristics of correlation coefficients:
+\begin{Itemize}
+  \item Variables must be quantitative (i.e., if you cannot make a scatterplot, then you cannot calculate $r$).
+  \item The correlation coefficient only measures strength of \textbf{LINEAR} relationships (i.e., if the form of the relationship is not linear, then $r$ is meaningless and should not be calculated).
+  \item The units that the variables are measured in do not matter (i.e., $r$ is the same between heights and weights measured in inches and lbs, inches and kg, m and kg, cm and kg, and cm and inches). This is because the variables are standardized in the calculation of $r$.
+  \item The distinction between response and explanatory variables is not needed. That is, the correlation of GPA and ACT scores is the same as the correlation of ACT scores and GPA.
+  \item Correlation coefficients are between -1 and 1.
+  \item Correlation coefficients are strongly affected by outliers (simply, because both the mean and standard deviation, used in the calculation of $r$, are strongly affected by outliers).
+\end{Itemize}
+
+Additionally, correlation is not causation! In other words, just because a strong correlation is observed it doesn't mean that the explanatory variable caused the response variable (an exception may be in carefully designed experimental studies). For example, a negative relationship between a car's weight and highway gas mileage was found above. Thus, it appears that as the weight of the car increased, the highway gas mileage decreased linearly. While this conclusion is correct, it is also very carefully worded. One must be careful to not state that increasing the weight of the car CAUSES a decrease in MPG. We cannot attribute cause because these data come from an observational study and because several other important variables were not considered in the analysis. For example, the scatterplot in \figref{fig:carscat3}, coded for different numbers of cylinders in the car's engine, indicates that the number of cylinders may be inversely related to highway MPG and positively related to weight of the car. So, does the weight of the car, the number of cylinders, or both, explain the decrease in highway MPG?
+
+<<carscat3, echo=FALSE, fig.cap="Scatterplot between the highway MPG and weight of cars manufactured in 1993 separated by number of cylinders.">>=
+plot(HMPG~Weight,data=cars93,pch=Cyls-2,xlab="Weight (lbs)",ylab="Highway MPG")
+legend("topright",pch=1:5,legend=c("3-cyl","4-cyl","5-cyl","6-cyl","8-cyl"))
+@
+
+Finally, the word ``correlation'' is often mis-used in everyday language. This word should only be used when discussing the actual correlation coefficient (i.e., $r$). When discussing the association between two variables, one should use the word ``relationship'' rather than ``correlation.'' For example, one might ask ``What is the relationship between age and rate of cancer?'', but should not ask ``What is the correlation between age and rate of cancer?''.

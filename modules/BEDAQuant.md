@@ -13,11 +13,13 @@ css: /css/modules.css
     </div>
     <div id="ILOs" class="panel-collapse collapse">
       <div class="panel-body">
-It is important to understand the relationship between two variables.  With quantitative data, this primarily consists of using a scatterplot and the correlation coefficient to describe four key characteristics of the relationship.  This module describes how to construct a scatterplot, calculate a correlation coefficient, and how to use these results to prepare a synthetic description of the relationship between two quantitative variables.
+It is important to understand the relationship between two variables.  With quantitative data, this primarily consists of using a scatterplot and the correlation coefficient to describe four key characteristics of the relationship.  This module describes how to use a scatterplot and correlation coefficient to provide a synthetic description of the relationship between two quantitative variables.
 
 <p>After completing this module, you should be able to ...</p>
 
 <ol>
+  <li>Describe bivariate data.</li>
+  <li>Distinguish between response and explanatory variables.</li>
   <li>Construct a scatterplot with R.</li>
   <li>Know when it is appropriate to calculation a correlation coefficient.</li>
   <li>Calculate a correlation coefficient with R.</li>
@@ -34,7 +36,7 @@ It is important to understand the relationship between two variables.  With quan
 
 Use the materials below to answer the questions on [this preparation guide](BEDAQuant_Prep).
 
-* [Reading](../book/8_IntroStats.pdf)
+* [Reading](../book/9_IntroStats.pdf)
 * Video: [Construct a Scatterplot](https://www.youtube.com/v/yXmz922K9Ks?version=3&autoplay=1){:target="_blank"} [7 mins]
 * Video: [What is the Correlation?](https://www.youtube.com/v/PtYVrF_WT3A?version=3&start=32&autoplay=1){:target="_blank"} [8 mins]
 * Video: [Bivariate EDA (Quantitative) in R](https://vimeo.com/user45324800/biveda-quant){:target="_blank"} [8 mins] [![Web](../img/web.png)](BEDAQuant_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](BEDAQuant_RHO.pdf) [![MSWord](../img/word.png)](BEDAQuant_RHO.docx)  [![R](../img/Rlogo.png)](BEDAQuant_RHO.R){:target="_blank"}
@@ -44,6 +46,7 @@ Use the materials below to answer the questions on [this preparation guide](BEDA
 
 ## Practice
 
+* Review Exercises:
 * Class Exercises: [1](BEDAQuant_CE1) / [2](BEDAQuant_CE2) / [3](BEDAQuant_CE3) (*time permitting* ... [4](BEDAQuant_CE4))
 * [Homework Assignment](BEDAQuant_HW)
 
