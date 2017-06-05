@@ -46,7 +46,7 @@ Use the materials below to answer the questions on [this preparation guide](BEDA
 
 ## Practice
 
-* Review Exercises: [Definitions / Calculations](BEDAQuant_RevEx_Defns) / [EDA](BEDAQuant_RevEx_EDA)
+* Review Exercises: [Definitions and Calculations](BEDAQuant_RevEx_Defns) / [EDA](BEDAQuant_RevEx_EDA)
 * Class Exercises: [1](BEDAQuant_CE1) / [2](BEDAQuant_CE2) / [3](BEDAQuant_CE3) (*time permitting* ... [4](BEDAQuant_CE4))
 * [Homework Assignment](BEDAQuant_HW)
 
