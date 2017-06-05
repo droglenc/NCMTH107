@@ -11,6 +11,10 @@ css: "/css/modules.css"
 To prepare for this module, please answer the following questions from the preparation readings and videos. Please contact the professor if you have questions.
 </div>
 
-1. XXX
+1. What is bivariate data?
+1. What does the number in each cell of a frequency table tell you?
+1. How is a frequency table converted to row-, column-, and total-percentage tables?
+1. What does each cell in a row-, column-, and total-percentage table tell you?
+1. How can you tell which table should be used to answer a specific question?
 
 ----

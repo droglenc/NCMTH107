@@ -18,6 +18,8 @@ It is important to understand the relationship between two variables.  With cate
 <p>After completing this module, the student should be able to ...</p>
 
 <ol>
+  <li>Describe bivariate data.</li>
+  <li>Distinguish between response and explanatory variables.</li>
   <li>Construct two-way frequency tables by hand and with R.</li>
   <li>Constrcut row-, column-, and total-percent percentage tables by hand and with R.</li>
   <li>Construct a succinct written summary that addresses the relationship between two categorical variables.</li>
@@ -41,6 +43,7 @@ Use the materials below to answer the questions on [this preparation guide](BEDA
 
 ## Practice
 
+* [Review Exercises](BEDACat_RevEx.html)
 * Class Exercises: [1](BEDACat_CE1.html) / [2](BEDACat_CE2.html) (*time permitting* ... [3](BEDACat_CE3.html))
 * [Homework Assignment](BEDACat_HW)
 
