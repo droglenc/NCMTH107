@@ -30,6 +30,22 @@ knit_hooks$set(par1 = function(before, options, envir) {
 
 ----
 
+## Molting of Wood Thrush
+
+1. The explanatory variable is start date.
+1. The response variable is duration.
+1. The equation of the best-fit line is Duration = 70.296-0.445*Start Date.
+1. For each day later that the thrush starts molting the duration of the molt will be 0.445 days **shorter**, on average.
+1. If the start date equals zero (July 1st), then the duration of the molt will be 70.296, on average.
+1. This prediction should not be made because 71 days since July 1 is outside the domain of the data.
+1. The predicted molt duration is 51.161 d, on average (70.296-0.445*43).  Thus, the residual is -3.161 d (48-51.161).
+1. The correlation coefficient is $r$=0.863 (i.e., square root of $r^{2}$)
+1. The proportion of variability explained by knowing start date (regardless of start date) is $r^{2}$=0.744.
+1. The proportion of variability explained by knowing start date (regardless of start date) is $r^{2}$=0.744.
+1. The slope would get closer to zero as the outlier would pull the line towards it, thus flattening the line out.
+
+----
+
 ## Age and Systolic Blood Pressure
 
 1. The explanatory varible is age (`AGE`).
@@ -59,22 +75,6 @@ knit_hooks$set(par1 = function(before, options, envir) {
 
 ----
 
-## Molting of Wood Thrush
-
-1. The explanatory variable is start date.
-1. The response variable is duration.
-1. The equation of the best-fit line is Duration = 70.296-0.445*Start Date.
-1. For each day later that the thrush starts molting the duration of the molt will be 0.445 days **shorter**, on average.
-1. If the start date equals zero (July 1st), then the duration of the molt will be 70.296, on average.
-1. This prediction should not be made because 71 days since July 1 is outside the domain of the data.
-1. The predicted molt duration is 51.161 d, on average (70.296-0.445*43).  Thus, the residual is -3.161 d (48-51.161).
-1. The correlation coefficient is $r$=0.863 (i.e., square root of $r^{2}$)
-1. The proportion of variability explained by knowing start date (regardless of start date) is $r^{2}$=0.744.
-1. The proportion of variability explained by knowing start date (regardless of start date) is $r^{2}$=0.744.
-1. The slope would get closer to zero as the outlier would pull the line towards it, thus flattening the line out.
-
-----
-
 ## Deer Fawns
 
 1. The explanatory variable is body mass of does.
@@ -87,6 +87,37 @@ knit_hooks$set(par1 = function(before, options, envir) {
 1. The proportion of variability explained by knowing the doe's body mass is 0.002.
 1. If body mass increases by 5 kg, then the mean number of fawns born to the doe would increase by 0.044 (i.e., 5*0.0088).
 1. There does not appear to be a lack of linearity or heteroscedasticity in the fitted-line plot.  However, it is an extremely weak relationship to be basing predictions on.
+
+----
+
+## Fat Intake and Breast Cancer
+
+```{r echo=FALSE, results='hide'}
+cf <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/CancerFat.csv")
+figs(name="FLPCancerFat","Fitted line plot for the relationship between flycatcher wing length and the days since January 1.")
+```
+```{r RegCancerFat, echo=FALSE, results='hide'}
+( cf.lm <- lm(adjdeath~fatintake,data=cf) )
+14.5 - predict(cf.lm,data.frame(fatintake=90))
+rSquared(cf.lm)
+```
+
+1. The explanatory variable is the amount of animal fat ingested (`fatintake`).
+1. An individual is a country.
+1. The equation of the best-fit line is adjdeath = `r formatC(coef(cf.lm)[1],format="f",digits=3)` + `r formatC(coef(cf.lm)[2],format="f",digits=3)`*fatintake.
+1. The interpretation of the slope is that for every increase of 1 g/day consumption of animal fat the per capita death rate due to breast cancer will increase `r formatC(coef(cf.lm)[2],format="f",digits=3)` units, on average.
+1. Because of the interpretation of the slope, country A will have an age adjusted death rate due to breast cancer that is (-4)*`r formatC(coef(cf.lm)[2],format="f",digits=3)` = `r formatC(4*coef(cf.lm)[1],format="f",digits=3)` units **lower** than country B, on average.
+1. This question cannot be answered because 170 g/day is outside the range of the `fatintake` data used to construct the relationship.
+1.  The residual is `r formatC(14.5 - predict(cf.lm,data.frame(fatintake=90)),format="f",digits=1)`.
+1. The correlation coefficient is `r formatC(sqrt(rSquared(cf.lm)),format="f",digits=3)` and is found by taking the square root of $r^{2}$.
+1. This is simply a definition of $r^{2}$=`r formatC(rSquared(cf.lm),format="f",digits=3)`.
+1. No, you cannot say that the intake of animal fat is the CAUSE for the increase in age adjusted death rate because these data were not collected from an experiment. Causal statements cannot be made from observational studies (which this one obviously is) because many other unmonitored or lurking variables may explain the relationship.
+
+#### R Appendix
+```{r eval=FALSE}
+cf <- read.csv("data/CancerFat.csv")
+<<RegCancerFat>>
+```
 
 ----
 
@@ -124,37 +155,6 @@ fitPlot(fc.lm,xlab="Days Since Jan. 1",ylab="Wing Length (mm)")
 fc <- read.csv("data/Flycatcher.csv")
 <<RegFlycatcher>>
 <<FLPFlycatcher>>
-```
-
-----
-
-## Fat Intake and Breast Cancer
-
-```{r echo=FALSE, results='hide'}
-cf <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/CancerFat.csv")
-figs(name="FLPCancerFat","Fitted line plot for the relationship between flycatcher wing length and the days since January 1.")
-```
-```{r RegCancerFat, echo=FALSE, results='hide'}
-( cf.lm <- lm(adjdeath~fatintake,data=cf) )
-14.5 - predict(cf.lm,data.frame(fatintake=90))
-rSquared(cf.lm)
-```
-
-1. The explanatory variable is the amount of animal fat ingested (`fatintake`).
-1. An individual is a country.
-1. The equation of the best-fit line is adjdeath = `r formatC(coef(cf.lm)[1],format="f",digits=3)` + `r formatC(coef(cf.lm)[2],format="f",digits=3)`*fatintake.
-1. The interpretation of the slope is that for every increase of 1 g/day consumption of animal fat the per capita death rate due to breast cancer will increase `r formatC(coef(cf.lm)[2],format="f",digits=3)` units, on average.
-1. Because of the interpretation of the slope, country A will have an age adjusted death rate due to breast cancer that is (-4)*`r formatC(coef(cf.lm)[2],format="f",digits=3)` = `r formatC(4*coef(cf.lm)[1],format="f",digits=3)` units **lower** than country B, on average.
-1. This question cannot be answered because 170 g/day is outside the range of the `fatintake` data used to construct the relationship.
-1.  The residual is `r formatC(14.5 - predict(cf.lm,data.frame(fatintake=90)),format="f",digits=1)`.
-1. The correlation coefficient is `r formatC(sqrt(rSquared(cf.lm)),format="f",digits=3)` and is found by taking the square root of $r^{2}$.
-1. This is simply a definition of $r^{2}$=`r formatC(rSquared(cf.lm),format="f",digits=3)`.
-1. No, you cannot say that the intake of animal fat is the CAUSE for the increase in age adjusted death rate because these data were not collected from an experiment. Causal statements cannot be made from observational studies (which this one obviously is) because many other unmonitored or lurking variables may explain the relationship.
-
-#### R Appendix
-```{r eval=FALSE}
-cf <- read.csv("data/CancerFat.csv")
-<<RegCancerFat>>
 ```
 
 ----

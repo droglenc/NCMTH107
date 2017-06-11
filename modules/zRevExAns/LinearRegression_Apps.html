@@ -8,6 +8,23 @@ css: "/css/modules.css"
 
 
 <hr />
+<div id="molting-of-wood-thrush" class="section level2">
+<h2>Molting of Wood Thrush</h2>
+<ol>
+<li>The explanatory variable is start date.</li>
+<li>The response variable is duration.</li>
+<li>The equation of the best-fit line is Duration = 70.296-0.445*Start Date.</li>
+<li>For each day later that the thrush starts molting the duration of the molt will be 0.445 days <strong>shorter</strong>, on average.</li>
+<li>If the start date equals zero (July 1st), then the duration of the molt will be 70.296, on average.</li>
+<li>This prediction should not be made because 71 days since July 1 is outside the domain of the data.</li>
+<li>The predicted molt duration is 51.161 d, on average (70.296-0.445*43). Thus, the residual is -3.161 d (48-51.161).</li>
+<li>The correlation coefficient is <span class="math inline">\(r\)</span>=0.863 (i.e., square root of <span class="math inline">\(r^{2}\)</span>)</li>
+<li>The proportion of variability explained by knowing start date (regardless of start date) is <span class="math inline">\(r^{2}\)</span>=0.744.</li>
+<li>The proportion of variability explained by knowing start date (regardless of start date) is <span class="math inline">\(r^{2}\)</span>=0.744.</li>
+<li>The slope would get closer to zero as the outlier would pull the line towards it, thus flattening the line out.</li>
+</ol>
+<hr />
+</div>
 <div id="age-and-systolic-blood-pressure" class="section level2">
 <h2>Age and Systolic Blood Pressure</h2>
 <ol>
@@ -39,23 +56,6 @@ css: "/css/modules.css"
 </ol>
 <hr />
 </div>
-<div id="molting-of-wood-thrush" class="section level2">
-<h2>Molting of Wood Thrush</h2>
-<ol>
-<li>The explanatory variable is start date.</li>
-<li>The response variable is duration.</li>
-<li>The equation of the best-fit line is Duration = 70.296-0.445*Start Date.</li>
-<li>For each day later that the thrush starts molting the duration of the molt will be 0.445 days <strong>shorter</strong>, on average.</li>
-<li>If the start date equals zero (July 1st), then the duration of the molt will be 70.296, on average.</li>
-<li>This prediction should not be made because 71 days since July 1 is outside the domain of the data.</li>
-<li>The predicted molt duration is 51.161 d, on average (70.296-0.445*43). Thus, the residual is -3.161 d (48-51.161).</li>
-<li>The correlation coefficient is <span class="math inline">\(r\)</span>=0.863 (i.e., square root of <span class="math inline">\(r^{2}\)</span>)</li>
-<li>The proportion of variability explained by knowing start date (regardless of start date) is <span class="math inline">\(r^{2}\)</span>=0.744.</li>
-<li>The proportion of variability explained by knowing start date (regardless of start date) is <span class="math inline">\(r^{2}\)</span>=0.744.</li>
-<li>The slope would get closer to zero as the outlier would pull the line towards it, thus flattening the line out.</li>
-</ol>
-<hr />
-</div>
 <div id="deer-fawns" class="section level2">
 <h2>Deer Fawns</h2>
 <ol>
@@ -72,33 +72,6 @@ css: "/css/modules.css"
 </ol>
 <hr />
 </div>
-<div id="willow-flycatcher-migration" class="section level2">
-<h2>Willow Flycatcher Migration</h2>
-<ol>
-<li>The explanatory variable is the date (<code>date</code>).</li>
-<li>The response variable is the wing length (<code>winglen</code>).</li>
-<li>The equation of the best-fit line is winglen = 91.070-0.156date.</li>
-<li>When the date is 0 (January 1), then the wing length will be 91.070 mm, on average.</li>
-<li>For each day increase in the migration, the average wing length decreases by 0.156 mm.</li>
-<li>This is 10 times the unit change in length by day. Thus, 10*-0.156 = -1.56.</li>
-<li>This prediction should not be made as date=180 is outside the domain of the data.</li>
-<li>The residual is -1.1 as found with</li>
-<li>The proportion of variability explained by knowing the date is <span class="math inline">\(r^{2}\)</span> = 0.187.</li>
-<li>The correlation coefficient is <span class="math inline">\(r\)</span> = -0.432. [<span class="math inline">\(\sqrt{r^{2}}\)</span>, but don’t forget the negative sign because of negative association in the plot.]</li>
-<li>The data appear to be linear but there is a slight hint of heteroscedasticity, though this hint is largely due to the slight outlier in the lower-right corner of the fitted-line plot (Figure 1).</li>
-</ol>
-<p><img src="LinearRegression_Apps_files/figure-html/FLPFlycatcher-1.png" width="336" /></p>
-<p>Figure 1: Fitted line plot for the relationship between flycatcher wing length and the days since January 1.</p>
-<div id="r-appendix" class="section level4">
-<h4>R Appendix</h4>
-<pre class="r"><code>fc &lt;- read.csv(&quot;data/Flycatcher.csv&quot;)
-( fc.lm &lt;- lm(winglen~date,data=fc) )
-66.5 - predict(fc.lm,data.frame(date=151))
-rSquared(fc.lm)
-fitPlot(fc.lm,xlab=&quot;Days Since Jan. 1&quot;,ylab=&quot;Wing Length (mm)&quot;)</code></pre>
-<hr />
-</div>
-</div>
 <div id="fat-intake-and-breast-cancer" class="section level2">
 <h2>Fat Intake and Breast Cancer</h2>
 <ol>
@@ -113,12 +86,39 @@ fitPlot(fc.lm,xlab=&quot;Days Since Jan. 1&quot;,ylab=&quot;Wing Length (mm)&quo
 <li>This is simply a definition of <span class="math inline">\(r^{2}\)</span>=0.900.</li>
 <li>No, you cannot say that the intake of animal fat is the CAUSE for the increase in age adjusted death rate because these data were not collected from an experiment. Causal statements cannot be made from observational studies (which this one obviously is) because many other unmonitored or lurking variables may explain the relationship.</li>
 </ol>
-<div id="r-appendix-1" class="section level4">
+<div id="r-appendix" class="section level4">
 <h4>R Appendix</h4>
 <pre class="r"><code>cf &lt;- read.csv(&quot;data/CancerFat.csv&quot;)
 ( cf.lm &lt;- lm(adjdeath~fatintake,data=cf) )
 14.5 - predict(cf.lm,data.frame(fatintake=90))
 rSquared(cf.lm)</code></pre>
+<hr />
+</div>
+</div>
+<div id="willow-flycatcher-migration" class="section level2">
+<h2>Willow Flycatcher Migration</h2>
+<ol>
+<li>The explanatory variable is the date (<code>date</code>).</li>
+<li>The response variable is the wing length (<code>winglen</code>).</li>
+<li>The equation of the best-fit line is winglen = 91.070-0.156date.</li>
+<li>When the date is 0 (January 1), then the wing length will be 91.070 mm, on average.</li>
+<li>For each day increase in the migration, the average wing length decreases by 0.156 mm.</li>
+<li>This is 10 times the unit change in length by day. Thus, 10*-0.156 = -1.56.</li>
+<li>This prediction should not be made as date=180 is outside the domain of the data.</li>
+<li>The residual is -1.1 as found with</li>
+<li>The proportion of variability explained by knowing the date is <span class="math inline">\(r^{2}\)</span> = 0.187.</li>
+<li>The correlation coefficient is <span class="math inline">\(r\)</span> = -0.432. [<span class="math inline">\(\sqrt{r^{2}}\)</span>, but don’t forget the negative sign because of negative association in the plot.]</li>
+<li>The data appear to be linear but there is a slight hint of heteroscedasticity, though this hint is largely due to the slight outlier in the lower-right corner of the fitted-line plot (Figure 2).</li>
+</ol>
+<p><img src="LinearRegression_Apps_files/figure-html/FLPFlycatcher-1.png" width="336" /></p>
+<p>Figure 2: Fitted line plot for the relationship between flycatcher wing length and the days since January 1.</p>
+<div id="r-appendix-1" class="section level4">
+<h4>R Appendix</h4>
+<pre class="r"><code>fc &lt;- read.csv(&quot;data/Flycatcher.csv&quot;)
+( fc.lm &lt;- lm(winglen~date,data=fc) )
+66.5 - predict(fc.lm,data.frame(date=151))
+rSquared(fc.lm)
+fitPlot(fc.lm,xlab=&quot;Days Since Jan. 1&quot;,ylab=&quot;Wing Length (mm)&quot;)</code></pre>
 <hr />
 </div>
 </div>
