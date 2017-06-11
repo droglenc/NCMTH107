@@ -7,27 +7,6 @@ css: "/css/modules.css"
 
 ----
 
-## Willow Flycatcher Migration
-<img src="zimgs/willow_flycatcher.jpg" alt="Willow Flycatcher" class="img-right"<img>
-
-[Yong and Finch (1997)](https://www.fs.fed.us/rmrs/publications/migration-willow-flycatcher-along-middle-rio-grande) hypothesized that larger Willow Flycatchers (*Empidonax traillii*) migrated up the Middle Rio Grande River earlier than small willow flycatchers. To test this hypothesis they captured flycatchers on several days during their migration and measured the wing length (mm; an index of overall body size) of each bird. They recorded the date that the bird was captured as a Julian date (days since Jan. 1).  The results of their study are found in [Flycatcher.csv](https://raw.githubusercontent.com/droglenc/NCData/master/Flycatcher.csv). Load these data into R and produce results that can be used to answer the questions below.
-
-1. What is the explanatory variable?
-1. What is the response variable?
-1. In terms of the variables of this problem, what is the equation of the best-fit line?
-1. In terms of the variables of this problem, interpret the value of the intercept.
-1. In terms of the variables of this problem, interpret the value of the slope.
-1. How much different do you expect the wing length to be ten days later?
-1. What is the predicted wing length on day 180?
-1. What is the residual for a bird with wing length 66.5 on day 151?
-1. What proportion of the variability in wing length is explained by knowing the date?
-1. What is the correlation coefficient between wing length and date?
-1. Comment on the assumptions of the linear regression.
-
-[See answer here](zRevExAns/LinearRegression_Apps.html#willow-flycatcher-migration)
-
-----
-
 ## Fat Intake and Breast Cancer
 <img src="zimgs/fat_intake.jpg" alt="Fat Intake" class="img-right">
 
@@ -48,10 +27,31 @@ css: "/css/modules.css"
 
 ----
 
+## Willow Flycatcher Migration
+<img src="zimgs/willow_flycatcher.jpg" alt="Willow Flycatcher" class="img-right">
+
+[Yong and Finch (1997)](https://www.fs.fed.us/rmrs/publications/migration-willow-flycatcher-along-middle-rio-grande) hypothesized that larger Willow Flycatchers (*Empidonax traillii*) migrated up the Middle Rio Grande River earlier than small willow flycatchers. To test this hypothesis they captured flycatchers on several days during their migration and measured the wing length (mm; an index of overall body size) of each bird. They recorded the date that the bird was captured as a Julian date (days since Jan. 1).  The results of their study are found in [Flycatcher.csv](https://raw.githubusercontent.com/droglenc/NCData/master/Flycatcher.csv). Load these data into R and produce results that can be used to answer the questions below.
+
+1. What is the explanatory variable?
+1. What is the response variable?
+1. In terms of the variables of this problem, what is the equation of the best-fit line?
+1. In terms of the variables of this problem, interpret the value of the intercept.
+1. In terms of the variables of this problem, interpret the value of the slope.
+1. How much different do you expect the wing length to be ten days later?
+1. What is the predicted wing length on day 180?
+1. What is the residual for a bird with wing length 66.5 on day 151?
+1. What proportion of the variability in wing length is explained by knowing the date?
+1. What is the correlation coefficient between wing length and date?
+1. Comment on the assumptions of the linear regression.
+
+[See answer here](zRevExAns/LinearRegression_Apps.html#willow-flycatcher-migration)
+
+----
+
 ## Red-Imported Fire Ants and Deer Fawns
 <img src="zimgs/RIFA.jpg" alt="RIFA" class="img-right">
 
-[Allen *et al.* (1997)](http://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1047&amp;context=ncfwrustaff"> investigated the impact of the density of red-imported fire ants (*Solenopsis invicta*; RIFA) on the recruitment of white-tailed deer (*Odocoileus virginianus*) fawns (an index of does to fawns). A modified version of their results are found in [RIFA.csv](https://raw.githubusercontent.com/droglenc/NCData/master/RIFA.csv). Load these data into R and produce results that can be used to answer the questions below.
+[Allen *et al.* (1997)](http://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1047&amp;context=ncfwrustaff) investigated the impact of the density of red-imported fire ants (*Solenopsis invicta*; RIFA) on the recruitment of white-tailed deer (*Odocoileus virginianus*) fawns (an index of does to fawns). A modified version of their results are found in [RIFA.csv](https://raw.githubusercontent.com/droglenc/NCData/master/RIFA.csv). Load these data into R and produce results that can be used to answer the questions below.
 
 1. What is the response variable?
 1. What is the explanatory variable?
