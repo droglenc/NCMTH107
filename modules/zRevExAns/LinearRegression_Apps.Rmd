@@ -1,0 +1,336 @@
+---
+title: "Review Exercise Key"
+subtitle: "Linear Regression"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3
+    fig_width: 3.5
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/zRevExAns/")
+source("../../rhelpers/rhelpers.R")
+modHTML("LinearRegression_Apps")
+```
+```{r echo=FALSE, results='hide'}
+library(NCStats)
+library(captioner)
+tabs <- captioner(prefix="Table")
+figs <- captioner(prefix="Figure")
+library(knitr)
+knit_hooks$set(par1 = function(before, options, envir) {
+  if (before) par(mar=c(3.5,3.5,1,1),mgp=c(2.1,0.4,0),tcl=-0.2)
+})
+```
+
+----
+
+## Age and Systolic Blood Pressure
+
+1. The explanatory varible is age (`AGE`).
+1. The response variable is systolic blood pressure (`SBP`).
+1. The equation of the best-fit line is SBP=59.389+1.601AGE.
+1. If the age is 0, then the systolic blood pressure will be 59.389, on average.
+1. For each one year increase in AGE, SBP increases by 1.601 units, on average.
+1. Male A will have a SBP that is 4.803 lower than Male B (*i.e., 3 slopes*).
+1. This prediction should not be made as 70 is outside the domain of the data.
+1. The residual for this individual is -8.439 (i.e., 131 - (59.389+1.601*50)).
+1. The correlation coefficient is 0.775 (the square root of $r^{2}$=0.600).
+1. The proportion of variability explained is $r^{2}$=0.600.
+1. The predicted SBP for a 55-year-old male is 147.444 (i.e., 59.389+1.601*55).
+
+----
+
+## TV Ratings
+
+1. The response variable is the size of the audience.
+1. The equation of the best-fit line is Audience = -9610.463+982.541*Rating
+1. For each 1% increase in rating the audience size will increase 982.541 (1000s), on average.
+1. This prediction should not be made as 40.1% is outside the domain of the data.
+1. The residual in this case is -23650.22 (i.e., 40000 - (9610.463+982.541*55)).
+1. The proportion of varibility explained by knowing the rating value is $r^{2}$=0.331
+1. The correlation coefficient is $r$=0.575.
+1. I am concerned that the fitted-line plot exhibits a curvature and a funnel-shape suggesting that both the linearity and homoscedasticity assumptions have been violated.
+
+----
+
+## Molting of Wood Thrush
+
+1. The explanatory variable is start date.
+1. The response variable is duration.
+1. The equation of the best-fit line is Duration = 70.296-0.445*Start Date.
+1. For each day later that the thrush starts molting the duration of the molt will be 0.445 days **shorter**, on average.
+1. If the start date equals zero (July 1st), then the duration of the molt will be 70.296, on average.
+1. This prediction should not be made because 71 days since July 1 is outside the domain of the data.
+1. The predicted molt duration is 51.161 d, on average (70.296-0.445*43).  Thus, the residual is -3.161 d (48-51.161).
+1. The correlation coefficient is $r$=0.863 (i.e., square root of $r^{2}$)
+1. The proportion of variability explained by knowing start date (regardless of start date) is $r^{2}$=0.744.
+1. The proportion of variability explained by knowing start date (regardless of start date) is $r^{2}$=0.744.
+1. The slope would get closer to zero as the outlier would pull the line towards it, thus flattening the line out.
+
+----
+
+## Deer Fawns
+
+1. The explanatory variable is body mass of does.
+1. The response variable is mean fawns per doe.
+1. The equation of the best-fit line is Fawns = 1.960+0.0088Mass
+1. As the mass of the doe increases by 1 kg, then the number of fawns born will increase by 0.0088, on average.
+1. This prediction cannot be made because 45 kg is outside the range of observed body masses.
+1. The residual is -0.342 (i.e., 1.9-(1.960+0.0088*32))
+1. The correlation coefficient is 0.045.
+1. The proportion of variability explained by knowing the doe's body mass is 0.002.
+1. If body mass increases by 5 kg, then the mean number of fawns born to the doe would increase by 0.044 (i.e., 5*0.0088).
+1. There does not appear to be a lack of linearity or heteroscedasticity in the fitted-line plot.  However, it is an extremely weak relationship to be basing predictions on.
+
+----
+
+## Willow Flycatcher Migration
+```{r echo=FALSE, results='hide'}
+fc <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Flycatcher.csv")
+figs(name="FLPFlycatcher","Fitted line plot for the relationship between flycatcher wing length and the days since January 1.")
+```
+```{r RegFlycatcher, echo=FALSE, results='hide'}
+( fc.lm <- lm(winglen~date,data=fc) )
+66.5 - predict(fc.lm,data.frame(date=151))
+rSquared(fc.lm)
+```
+
+1. The explanatory variable is the date (`date`).
+1. The response variable is the wing length (`winglen`).
+1. The equation of the best-fit line is winglen = `r formatC(coef(fc.lm)[1],format="f",digits=3)``r formatC(coef(fc.lm)[2],format="f",digits=3)`date.
+1. When the date is 0 (January 1), then the wing length will be `r formatC(coef(fc.lm)[1],format="f",digits=3)` mm, on average.
+1. For each day increase in the migration, the average wing length decreases by `r formatC(-1*coef(fc.lm)[2],format="f",digits=3)` mm.
+1. This is 10 times the unit change in length by day. Thus, 10*`r formatC(coef(fc.lm)[2],format="f",digits=3)` = `r formatC(10*coef(fc.lm)[2],format="f",digits=2)`.
+1. This prediction should not be made as date=180 is outside the domain of the data.
+1. The residual is `r formatC(66.5 - predict(fc.lm,data.frame(date=151)),format="f",digits=1)` as found with
+1. The proportion of variability explained by knowing the date is $r^{2}$ = `r formatC(rSquared(fc.lm),format="f",digits=3)`.
+1. The correlation coefficient is $r$ = `r formatC(-1*sqrt(rSquared(fc.lm)),format="f",digits=3)`. [$\sqrt{r^{2}}$, but don't forget the negative sign because of negative association in the plot.]
+1. The data appear to be linear but there is a slight hint of heteroscedasticity, though this hint is largely due to the slight outlier in the lower-right corner of the fitted-line plot (`r figs("FLPFlycatcher",display="cite")`).
+
+```{r FLPFlycatcher, echo=FALSE, par1=TRUE}
+fitPlot(fc.lm,xlab="Days Since Jan. 1",ylab="Wing Length (mm)")
+```
+
+`r figs("FLPFlycatcher")`
+
+#### R Appendix
+```{r eval=FALSE}
+fc <- read.csv("data/Flycatcher.csv")
+<<RegFlycatcher>>
+<<FLPFlycatcher>>
+```
+
+----
+
+## Fat Intake and Breast Cancer
+
+```{r echo=FALSE, results='hide'}
+cf <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/CancerFat.csv")
+figs(name="FLPCancerFat","Fitted line plot for the relationship between flycatcher wing length and the days since January 1.")
+```
+```{r RegCancerFat, echo=FALSE, results='hide'}
+( cf.lm <- lm(adjdeath~fatintake,data=cf) )
+14.5 - predict(cf.lm,data.frame(fatintake=90))
+rSquared(cf.lm)
+```
+
+1. The explanatory variable is the amount of animal fat ingested (`fatintake`).
+1. An individual is a country.
+1. The equation of the best-fit line is adjdeath = `r formatC(coef(cf.lm)[1],format="f",digits=3)` + `r formatC(coef(cf.lm)[2],format="f",digits=3)`*fatintake.
+1. The interpretation of the slope is that for every increase of 1 g/day consumption of animal fat the per capita death rate due to breast cancer will increase `r formatC(coef(cf.lm)[2],format="f",digits=3)` units, on average.
+1. Because of the interpretation of the slope, country A will have an age adjusted death rate due to breast cancer that is (-4)*`r formatC(coef(cf.lm)[2],format="f",digits=3)` = `r formatC(4*coef(cf.lm)[1],format="f",digits=3)` units **lower** than country B, on average.
+1. This question cannot be answered because 170 g/day is outside the range of the `fatintake` data used to construct the relationship.
+1.  The residual is `r formatC(14.5 - predict(cf.lm,data.frame(fatintake=90)),format="f",digits=1)`.
+1. The correlation coefficient is `r formatC(sqrt(rSquared(cf.lm)),format="f",digits=3)` and is found by taking the square root of $r^{2}$.
+1. This is simply a definition of $r^{2}$=`r formatC(rSquared(cf.lm),format="f",digits=3)`.
+1. No, you cannot say that the intake of animal fat is the CAUSE for the increase in age adjusted death rate because these data were not collected from an experiment. Causal statements cannot be made from observational studies (which this one obviously is) because many other unmonitored or lurking variables may explain the relationship.
+
+#### R Appendix
+```{r eval=FALSE}
+cf <- read.csv("data/CancerFat.csv")
+<<RegCancerFat>>
+```
+
+----
+
+## Red-Imported Fire Ants and Deer Fawns
+
+```{r echo=FALSE, results='hide'}
+r <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/RIFA.csv")
+figs(name="FLPRIFA","Fitted line plot for the relationship between fawn recruitment and RIFA index.")
+```
+```{r RegRIFA, echo=FALSE, results='hide'}
+( r.lm <- lm(fawnrec~rifa,data=r) )
+predict(r.lm,data.frame(rifa=1700))
+rSquared(r.lm)
+```
+
+1. The response variable is fawn recruitment (`fawrec`).
+1. The explanatory varabiable is the density of ants (`rifa`).
+1. The equation of the best-fit line is fawnrec = `r formatC(coef(r.lm)[1],format="f",digits=3)``r formatC(coef(r.lm)[2],format="f",digits=6)`rifa.
+1. For every 1 unit increase in RIFA the fawn recruitment index **declines** by `r formatC(-1*coef(r.lm)[2],format="f",digits=6)` units, on average.
+1. If RIFA index increases by 500, then fawn recruitment will increase by 500 times the unit change (`r formatC(-1*coef(r.lm)[2],format="f",digits=6)`) or `r formatC(500*coef(r.lm)[2],format="f",digits=6)`.
+1. The predicted values is `r formatC(predict(r.lm,data.frame(rifa=1700)),format="f",digits=3)`.
+1. This prediction should not be made because 2700 is not within the domain of the data.
+1. This is $r$ which is found with the $\sqrt{r^{2}}$=`r formatC(-1*sqrt(rSquared(r.lm)),format="f",digits=3)` where $r^{2}$ is found in the next question.  Note that the sign is needed because there is a negative association.
+1. The proportion of variability explained by knowing the RIFA index is $r^{2}$ = `r formatC(rSquared(r.lm),format="f",digits=3)`.
+1. The assumptions appear to be met as the fitted-line plot (`r figs("FLPRIFA",display="cite")`) does not exhibit any curvature or funneling.
+
+```{r FLPRIFA, echo=FALSE, par1=TRUE}
+fitPlot(r.lm,xlab="RIFA Index",ylab="Fawn Recruitment")
+```
+
+`r figs("FLPRIFA")`
+
+#### R Appendix
+```{r eval=FALSE}
+r <- read.csv("data/rifa.csv")
+<<RegRIFA>>
+<<FLPRIFA>>
+```
+
+----
+
+## Math Assessments
+
+```{r echo=FALSE, results='hide'}
+ma <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/NCAssess.csv")
+figs(name="FLPAssessment","Fitted-line plot for the relationship between ACT score and math assessment score.")
+```
+```{r RegAssessment, echo=FALSE, results='hide'}
+( ma.lm <- lm(assess~act,data=ma) )
+predict(ma.lm,data.frame(act=19))
+15-predict(ma.lm,data.frame(act=19))
+rSquared(ma.lm)
+```
+
+1. The explanatory variables is ACT, the students score on the Math ACT.
+1. For each increase in ACT score of 1 point, the math assessment score will increase approximately `r formatC(coef(ma.lm)[2],format="f",digits=3)` points, on average.  The value of this coefficient was found with
+1. This prediction cannot be made becasue the value of the explanatory variable is outside the range of the data used to construct the regression.
+1. The ACT score of 19 is within the range of the data, so the prediction is `r formatC(predict(ma.lm,data.frame(act=19)),format="f",digits=1)`.
+1. The residual is `r formatC(15-predict(ma.lm,data.frame(act=19)),format="f",digits=1)`.
+1. The proportion of variability explained by knowing the ACT score is $r^{2}$ = `r formatC(rSquared(ma.lm),format="f",digits=3)`.
+1. Yes, predictions should be good because the assumptions have been met and the $r^{2}$ values is fairly high indicating good predictability.
+1. Neither the linearity or homoscedasticity assumption seems to be violated in this analysis because the fitted-linel plot does not show any curvature or funneling (`r figs("FLPAssessment",display="cite")`).
+
+```{r FLPAssessment, echo=FALSE, par1=TRUE}
+fitPlot(ma.lm,xlab="ACT Score",ylab="Math Assessment Score")
+```
+
+`r figs("FLPAssessment")`
+
+#### R Appendix
+```{r eval=FALSE}
+ma <- read.csv("data/NCAssess.csv")
+<<RegAssessment>>
+<<FLPAssessment>>
+```
+
+----
+
+## Archiving DNA Tissue
+
+```{r echo=FALSE, results='hide'}
+ff <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/DNA.csv")
+figs(name="FLPDNA","Fitted-line plot for the relationship between fresh and frozen DNA samples.")
+```
+```{r RegDNA, echo=FALSE, results='hide'}
+( ff.lm <- lm(fresh~frozen,data=ff) )
+2.1 - predict(ff.lm,data.frame(frozen=2.2))
+rSquared(ff.lm)
+```
+
+1. The response variable is the fresh tissue sample (`Fresh`).
+1. The equation of the best-fit line is Fresh = `r formatC(coef(ff.lm)[1],format="f",digits=3)` + `r formatC(coef(ff.lm)[2],format="f",digits=3)`*Frozen.
+1. For every unit increase of the frozen sample the fresh sample increases by `r formatC(coef(ff.lm)[2],format="f",digits=3)` units, on average.
+1. This prediction cannot be made because it would be an extrapolation
+1. The residual is `r formatC(2.1 - predict(ff.lm,data.frame(frozen=2.2)),format="f",digits=5)`.
+1. The proportion of variability explained by knowing the value of the frozen sample is $r^{2}$ = `r formatC(rSquared(ff.lm),format="f",digits=3)`.
+1. The correlation coefficient is $r$ = `r formatC(sqrt(rSquared(ff.lm)),format="f",digits=3)` (the square root of $r^{2}$ shown in the previous answer).
+1. The data generally appear to be linear and homoscedastic because there is no curvature or funneling inthe fitted line plot (`r figs("FLPDNA",display="cite")`).  There is, however, an outlier much below the line on the far right; the results of this regression may be suspect because of this outlier (`r figs("FLPDNA",display="cite")`).
+
+```{r FLPDNA, echo=FALSE, par1=TRUE}
+fitPlot(ff.lm,xlab="Frozen Tissue",ylab="Fresh Tissue")
+```
+
+`r figs("FLPDNA")`
+
+#### R Appendix
+```{r eval=FALSE}
+ff <- read.csv("data/DNA.csv")
+<<RegDNA>>
+<<FLPDNA>>
+```
+
+----
+
+## Fawn Recruitment and Precipitation
+
+```{r echo=FALSE, results='hide'}
+d <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Deer1.csv")
+figs(name="FLPFawns","Fitted-line plot for the relationship between fresh and frozen DNA samples.")
+```
+```{r RegFawns, echo=FALSE, results='hide'}
+( d.lm <- lm(fawns~precip,data=d) )
+37-predict(d.lm,data.frame(precip=1050))
+rSquared(d.lm)
+```
+
+1. The equation of the best-fit line is fawns = `r formatC(coef(d.lm)[2],format="f",digits=3)`*precip + `r formatC(coef(d.lm)[1],format="f",digits=3)`.
+1. The mean number of fawns per 100 does will **decrease** by `r formatC(coef(d.lm)[2],format="f",digits=3)` units for every 1 unit increase in mean precipitation, on average.
+1. This prediction cannot be made because 1500 mm is out of the range of observed precipations
+1. The residual is `r formatC(37-predict(d.lm,data.frame(precip=1050)),format="f",digits=3)`.
+1. The correlation coefficient is $r$ which is found with the $\sqrt{r^{2}}$=`r formatC(-1*sqrt(rSquared(d.lm)),format="f",digits=3)` where $r^{2}$ is found in the next question.
+1. The proportion of variability explained by knowing precipitation is $r^{2}$ = `r formatC(rSquared(d.lm),format="f",digits=3)`.
+1. If precipitation increases by 100 mm, then the number of fawns per 100 does decreases by `r formatC(-100*coef(d.lm)[2],format="f",digits=3)` (i.e., 100*`r formatC(coef(d.lm)[2],format="f",digits=3)`).
+
+#### R Appendix
+```{r eval=FALSE}
+d <- read.csv("data/Deer1.csv")
+<<RegFawns>>
+```
+
+----
+
+## Cricket Chirps and Temperature
+
+```{r echo=FALSE, results='hide'}
+ch <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Chirps.csv")
+figs(name="FLPChirps","Fitted-line plot for the relationship between temperature and the number of chirps.")
+```
+```{r RegChirps, echo=FALSE, results='hide'}
+( ch.lm <- lm(temp~chirps,data=ch) )
+rSquared(ch.lm)
+```
+
+1. The response variable is temperature (`temp`) because that is the variable to be predicted.
+1. The explanatory variable is the number of chirps (`chirps`).
+1. The equation of the best-fite line is temp = `r formatC(coef(ch.lm)[2],format="f",digits=3)`*chirps + `r formatC(coef(ch.lm)[1],format="f",digits=3)`.
+1. For every increase of one chirp the predicted temperature will increase by `r formatC(coef(ch.lm)[1],format="f",digits=3)`, on average.
+1. If the number of chirps increases by 5, then the predicted temperature should increase by five ``slopes'' or `r formatC(5*coef(ch.lm)[1],format="f",digits=3)`, on average.
+1. This is basically the same as the previous question -- the difference in predicted temperature should be three ``slopes'' or `r formatC(3*coef(ch.lm)[1],format="f",digits=3)`.  Thus, it will be `r formatC(3*coef(ch.lm)[1],format="f",digits=3)` degrees warmer during the day, on average.
+1. Twelve chirps is outside the domain of the chirps variable; thus, this question is an extrapolation that should not be answered.
+1. The correlation coefficient is $r$ which is found with the $\sqrt{r^{2}}$=`r formatC(sqrt(rSquared(ch.lm)),format="f",digits=3)` where $r^{2}$ is found in the next question.
+1. The proportion of variability explained by knowing the number of chirps is $r^{2}$ = `r formatC(rSquared(ch.lm),format="f",digits=3)`.
+1. The assumptions look largely met as the fitted-line plot (`r figs("FLPChirps",display="cite")`) is largely linear although there is a small hint of heteroscedasticity.
+
+```{r FLPChirps, echo=FALSE, par1=TRUE}
+fitPlot(ch.lm,xlab="Frozen Tissue",ylab="Fresh Tissue")
+```
+
+`r figs("FLPChirps")`
+
+#### R Appendix
+```{r eval=FALSE}
+ch <- read.csv("data/Chirps.csv")
+<<RegChirps>>
+<<FLPChirps>>
+```
+
+----

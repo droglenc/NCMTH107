@@ -24,7 +24,7 @@ css: "/css/modules.css"
 1. What is the correlation coefficient between wing length and date?
 1. Comment on the assumptions of the linear regression.
 
-[See answer here](zRevExAns/LinearRegression_AppsR#)
+[See answer here](zRevExAns/LinearRegression_Apps.html#willow-flycatcher-migration)
 
 ----
 
@@ -44,7 +44,7 @@ css: "/css/modules.css"
 1. How much of the variability in a country's age adjusted death rate due to breast cancer is explained by knowing the value of its animal fat intake?
 1. Can it be said that an increase in intake of animal fat is the cause for an increase in the age adjusted death rate due to breast cancer? Why or why not?
 
-[See answer here](zRevExAns/LinearRegression_AppsR#)
+[See answer here](zRevExAns/LinearRegression_Apps.html#fat-intake-and-breast-cancer)
 
 ----
 
@@ -64,7 +64,7 @@ css: "/css/modules.css"
 1. What proportion of the variability in fawn recruitment is explained by knowing the RIFA index?
 1. Comment on the assumptions in this regression.
 
-[See answer here](zRevExAns/LinearRegression_AppsR#)
+[See answer here](zRevExAns/LinearRegression_Apps.html#red-imported-fire-ants-and-deer-fawns)
 
 ----
 
@@ -79,10 +79,10 @@ All incoming freshmen are required to take a math assessment test to determine w
 1. John Tukey had an ACT score of 19. Predict his assessment score.
 1. John Tukey actually scored a 15 on his assessment test. Calculate his residual?
 1. What proportion of the variability in assessment score is explained by knowing the ACT score?
-1. What are the two most important assumptions in a regression analysis. Are these violated for this data set?  Why or why not?
 1. Do you think that these results provide a useful predictor of math assessment scores in cases where those scores are not available but ACT scores are? Explain.
+1. What are the two most important assumptions in a regression analysis. Are these violated for this data set?  Why or why not?
 
-[See answer here](zRevExAns/LinearRegression_AppsR#)
+[See answer here](zRevExAns/LinearRegression_Apps.html#math-assessments)
 
 ----
 
@@ -100,14 +100,14 @@ All incoming freshmen are required to take a math assessment test to determine w
 1. What is the correlation between the fresh and frozen indices?
 1. What are the two major assumptions of regression and do they look like they've been met with these data (be specific!)?
 
-[See answer here](zRevExAns/LinearRegression_AppsR#)
+[See answer here](zRevExAns/LinearRegression_Apps.html#archiving-dna-tissue)
 
 ----
 
 ## Fawn Recruitment and Precipitation
 <img src="zimgs/fawn.jpg" alt="Fawns" class="img-right">
 
-Wildlife ecologist in Texas wanted to determine if the amount of precipitation could explain some of the variability observed in the number of fawns born to each doe [(Ginnett and Young 2000)](http://www.jstor.org/stable/3802741?seq=1#page_scan_tab_contents). Because Texas has many different climatic regions, the state was broken down into eight precipitation zones, and the mean precipitation for each zone over a period of five years was calculated. Furthermore, the researchers measured the mean number of fawns born per 100 does for each of these five years. The data for their study are found in [deer1.csv](https://raw.githubusercontent.com/droglenc/NCData/master/Deer1.csv). Load these data into R and produce results that can be used to answer the questions below.
+Wildlife ecologist in Texas wanted to determine if the amount of precipitation could explain some of the variability observed in the number of fawns born to each doe [(Ginnett and Young 2000)](http://www.jstor.org/stable/3802741?seq=1#page_scan_tab_contents). Because Texas has many different climatic regions, the state was broken down into eight precipitation zones, and the mean precipitation for each zone over a period of five years was calculated. Furthermore, the researchers measured the mean number of fawns born per 100 does for each of these five years. The data for their study are found in [Deer1.csv](https://raw.githubusercontent.com/droglenc/NCData/master/Deer1.csv). Load these data into R and produce results that can be used to answer the questions below.
 
 1. Express the equation of the best-fit line in terms of the variables of the problem.
 1. Interpret the slope of the best-fit line in terms of the variables.
@@ -117,7 +117,7 @@ Wildlife ecologist in Texas wanted to determine if the amount of precipitation c
 1. What proportion of the variability in the mean number of fawns per 100 does is explained by knowing the mean precipitation?
 1. If the average amount of precipitation increases by 100 mm, how many more fawns per 100 does would you expect to be born?
 
-[See answer here](zRevExAns/LinearRegression_AppsR#)
+[See answer here](zRevExAns/LinearRegression_Apps.html#fawn-recruitment-and-precipitation)
 
 ----
 
@@ -137,6 +137,6 @@ It has been said that temperature can be estimated from the number of cricket ch
 1. What proportion of the variability in temperature is explained by knowing the number of chirps?
 1. Construct a residual plot and use it to interpret the validity of regression assumptions.
 
-[See answer here](zRevExAns/LinearRegression_AppsR#)
+[See answer here](zRevExAns/LinearRegression_Apps.html#cricket-chirps-and-temperature)
 
 ----
