@@ -49,8 +49,8 @@ figs(name="Cafe1","Fitted-line plot for the relatinoship between number of coffe
     1. Ask to predict costs for food mix amounts between 36.5 and 42 tons.  Example ... "What is the cost to make 40 tons of the mix?"  Answer ... 190*40+12075 = $19675.
     1. Ask to predict costs for food mix amounts not between 36.5 and 42 tons.  Example ... "What is the cost to make 70 tons of the mix?"
 1. **Grey Kangaroo Example**
-    1. response - Nasal width (x10)
-    1. explanatory - Nasal length (x10)
+    1. response - Nasal width (mm x10)
+    1. explanatory - Nasal length (mm x10)
     1. The slope is 0.2876.
     1. The intercept is 46.451.
     1. For every 1 unit (10 mm) increase in nasal length, the nasal width increases by 0.2876 units (i.e., 2.876 mm), on average.
@@ -75,6 +75,7 @@ rsq <- 0.912
 1. The residual for an observed median sand diamter of 0.2 mm and beach angle of 5 degrees is `r formatC(0.2-(b+m*5),format="f",digits=3)` mm.
 1. The correlation coefficient between median sand diameter and beach angle is `r formatC(sqrt(rsq),format="f",digits=3)`.
 1. The proportion of variabiilty in median sand diameter that is explained by knowing the angle of the beach is `r formatC(rsq,format="f",digits=3)`.
+1. I would expect the median sand diameter to increase by four slopes or `r formatC(4*m,format="f",digits=3)` mm, on average, if the beach angle increased by 4 degrees.
 1. The relationship betwen median sand diameter and beach angle appears to be nonlinear.
 
 ----
@@ -99,6 +100,7 @@ cfs <- coef(lm1)
 1. This questions is an extrapolation and should not be answered.
 1. The IBI score is predicted to be `r formatC(predict(lm1,data.frame(imp=20)),format="f",digits=1)` when the percent of impervious surface is 20%.
 1. The residual for an observed IBI score of 20 and a percent of impervious surface of 30% is `r formatC(20-predict(lm1,data.frame(imp=30)),format="f",digits=1)`.
+1. The IBI will change by -30 slopes or `r formatC(-30*cfs[2],format="f",digits=4)` if the percentage of impervious surface is decreased by 30%. In other words the IBI will increase by `r formatC(-30*cfs[2],format="f",digits=4)` units.
 1. The correlation coefficient between IBI score and percent of impervious surface is `r formatC(-sqrt(rSquared(lm1)),format="f",digits=2)`.
 1. The proportion of variability in IBI scores that is explained by knowing the percent of impervious surface is `r formatC(rSquared(lm1),format="f",digits=2)`.
 1. There appears to be homoscedasticity, but there is slight evidence of a curve suggesting that the relationship is nonlinear (`r figs("IBI1",display="cite")`).

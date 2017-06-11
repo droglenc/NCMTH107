@@ -24,6 +24,7 @@ Load these data into R to answer the questions below.  [*Note that these are the
 1. What is the predicted IBI for an impervious surface percentage of 80%?
 1. What is the predicted IBI for an impervious surface percentage of 20%?
 1. What is the residual if the impervious surface percentage is 30 and the IBI is 20?
+1. How much will the IBI change if the percentage of impervious surface is decreased by 30%?
 1. What is the correlation coefficient between IBI and the percentage of impervious surface?
 1. What proportion of the variability in IBI is explained by knowing the percentage of impervious surface?
 1. What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?
