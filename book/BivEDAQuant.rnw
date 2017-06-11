@@ -33,7 +33,7 @@ In some situations it is not obvious which variable is the response. For example
 \vspace{-12pt}
 \section{Summaries}
 \vspace{-6pt}
-\subsection{Scatterplots}
+\subsection{Scatterplots} \label{sect:ScatterplotsR}
 \vspace{-3pt}
 A scatterplot is a graph where each point simultaneously represents the values of both the quantitative response and quantitative explanatory variable. The value of the explanatory variable gives the x-coordinate and the value of the response variable gives the y-coordinate of the point plotted for an individual. For example, the first individual in the cars data is plotted at x (\var{Weight}) = \Sexpr{cars93$Weight[1]} and y (\var{HMPG}) = \Sexpr{cars93$HMPG[1]}, whereas the second individual is at x = \Sexpr{cars93$Weight[2]} and y = \Sexpr{cars93$HMPG[2]} \figrefp{fig:carscat2}.
 <<carscat1, echo=FALSE, fig.show='hide'>>=
