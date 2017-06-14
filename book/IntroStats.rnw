@@ -13,17 +13,10 @@
 
 \begin{document}
 <<echo=FALSE, eval=FALSE>>=
-## Run this manually (Ctrl-Alt-C) after compiling to make no_print version
+## Run this manually (Ctrl-Alt-C) after compiling to remove
+##   intermediate files from the directory ... just looks cleaner
 fn <- "IntroStats"
 dir <- "C:/aaaWork/Web/GitHub/NCMTH107/book/"
-eng <- paste0(dir,"pdftk.exe")
-inp <- paste0(dir,fn,".pdf")
-out <- paste0("output ",dir,fn,"_noPrint.pdf")
-pw <- paste("owner_pw mth107")
-( tmp <- paste(eng,inp,out,pw,"verbose") )
-system(tmp,show.output.on.console=TRUE)
-
-## Removes intermediate files from the directory ... just looks cleaner
 tmp <- list.files(dir)
 tmp <- tmp[grepl(fn,tmp)]
 tmp <- tmp[!grepl(".pdf",tmp) & !grepl(".rnw",tmp)]
@@ -46,7 +39,6 @@ for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
     \include{FBMatter/FMatter}
 
   \mainmatter
-%    \part{Beginnings}
 <<child-WhyStatsImportant, child='WhyStatsImportant.Rnw', eval=TRUE>>=
 @
 <<child-FoundationalDefinitions, child='FoundationalDefinitions.Rnw', eval=TRUE>>=
@@ -55,8 +47,6 @@ for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
 @
 <<child-FoundationR, child='FoundationR.Rnw', eval=TRUE>>=
 @
-
-%    \part{Exploratory Data Analysis}
 <<child-UnivEDAQuant1, child='UnivEDAQuant1.Rnw', eval=TRUE>>=
 @
 <<child-UnivEDAQuant2, child='UnivEDAQuant2.Rnw', eval=TRUE>>=
@@ -71,8 +61,6 @@ for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
 @
 <<child-LinearRegression, child='LinearRegression.Rnw', eval=TRUE>>=
 @
-
-%    \part{Inference Concepts}
 <<child-ProbIntro, child='ProbIntro.Rnw', eval=FALSE>>=
 @
 <<child-SamplingDist, child='SamplingDist.Rnw', eval=FALSE>>=
@@ -81,8 +69,6 @@ for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
 @
 <<child-ConfidenceRegions, child='ConfidenceRegions.Rnw', eval=FALSE>>=
 @
-
-%    \part{Specific Hypothesis Tests}
 <<child-ZTest, child='ZTest.Rnw', eval=FALSE>>=
 @
 <<child-tTest1, child='tTest1.Rnw', eval=FALSE>>=
