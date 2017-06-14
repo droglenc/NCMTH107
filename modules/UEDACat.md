@@ -34,7 +34,7 @@ It is important to understand the distribution of individuals for a single varia
 
 Use the materials below to answer the questions on [this preparation guide](UEDACat_Prep).
 
-* [Reading](../book/7_IntroStats.pdf)
+* [Reading](../book/Univariate EDA - Categorical.pdf)
 * Video: [Frequency Table](https://www.youtube.com/v/LVnzV1ZXdiY?version=3&autoplay=1){:target="_blank"} [2 mins]
 * Video: [Barplot](https://www.youtube.com/v/PM39_HA1qSc?version=3&autoplay=1){:target="_blank"} [3 mins]
 * Video: [Univariate EDA (Categorical) in R](https://vimeo.com/user45324800/ncstats-uedac){:target="_blank"} [4 mins]  [![Web](../img/web.png)](UEDACat_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](UEDACat_RHO.pdf) [![MSWord](../img/word.png)](UEDACat_RHO.docx)  [![R](../img/Rlogo.png)](UEDACat_RHO.R){:target="_blank"}

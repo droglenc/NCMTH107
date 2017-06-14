@@ -13,10 +13,22 @@
 
 \begin{document}
 <<echo=FALSE, eval=FALSE>>=
-## Run this manually (Ctrl-Alt-C) after compiling to remove
-##   intermediate files from the directory ... just looks cleaner
+## Run this manually (Ctrl-Alt-C) after compiling to split at bookmarks
 fn <- "IntroStats"
 dir <- "C:/aaaWork/Web/GitHub/NCMTH107/book/"
+# this uses the sejda-console program ... use sejda-console -h for help
+eng <- "c:/apps/sejda-console/bin/sejda-console splitbybookmarks"
+# set input filename
+inp <- paste0("-f ",dir,fn,".pdf")
+# sets bookmark level to split at
+ins <- "-l 1 --discardOutline"
+# set output directory and prefish for filenames to the name of the bookmark
+out <- paste("-o",dir,"-p [BOOKMARK_NAME] --overwrite")
+# put it all together and run
+( tmp <- paste(eng,inp,ins,out) )
+system(tmp,show.output.on.console=TRUE)
+
+##   intermediate files from the directory ... just looks cleaner
 tmp <- list.files(dir)
 tmp <- tmp[grepl(fn,tmp)]
 tmp <- tmp[!grepl(".pdf",tmp) & !grepl(".rnw",tmp)]

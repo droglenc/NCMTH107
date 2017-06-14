@@ -37,7 +37,7 @@ One of the most common things in statistics is to describe the linear relationsh
 
 Use the materials below to answer the questions on [this preparation guide](LinearRegression_Prep).
 
-* [Reading](../book/11_IntroStats.pdf)
+* [Reading](../book/Linear Regression.pdf)
 * Video: Response and Explanatory Variables -  [A](https://www.youtube.com/v/bokeTCH2aJY?version=3&autoplay=1&start=60&end=148){:target="_blank"} [2 mins] **and**  [B](https://www.youtube.com/v/bokeTCH2aJY?version=3&autoplay=1&start=378){:target="_blank"} [2 mins]
 * Video: [Introduction to Regression](https://www.youtube.com/v/k_OB1tWX9PM?version=3&autoplay=1){:target="_blank"} [14 mins]
 * Video: [R-Squared](https://vimeo.com/user45324800/slr-rsquared){:target="_blank"} [5 mins]  [![PowerPoint](../img/ppt.png)](LinearRegression_PPT2.pptx)
