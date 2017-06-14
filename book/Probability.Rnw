@@ -1,0 +1,42 @@
+<<echo=FALSE, cache=FALSE, results='hide'>>=
+set_parent('IntroStats.Rnw')
+@
+
+\chapter{Probability Introduction} \label{chap:ProbIntro}
+
+\lettrine{P}{robability} is the ``language'' used to describe the proportion of times that a random event will occur. The language of probability is at the center of statistical inference (see Modules \ref{chap:HypothesisTests} and \ref{chap:ConfidenceRegions}). Only a minimal understanding of probability is required to understand most basic inferential methods, including all of those in this course. Thus, only a short, example-based, introduction to probability is provided here.\footnote{A deeper understanding of probability is required to understand more complex inferential methods beyond those in this course.}
+
+The most basic forms of probability assume that items are selected randomly. In other words, simple probability calculations require that each item, whether that item is an individual or an entire sample, has the same chance of being selected. Thus, in simple intuitive examples it will be stated that the individuals were ``thoroughly mixed'' and more realistic examples will require randomization.\footnote{See \modref{chap:DataProd} for methods to randomly select or allocate individuals.}
+
+If every individual has the same chance of being selected, then the probability of an event is equal to the proportion of items in the event out of the entire population. In other words, the probability is the number of items in the event divided by the total number of items in the population.
+
+For example, the probability of selecting a red ball from a thoroughly mixed box containing 15 red and 10 blue balls is equal to $\frac{15}{25}=0.6$ (i.e., 15 individuals (``balls'') in the event (``red'') divided by the total number of individuals (``all balls in the box''); \figref{fig:ProbBox}-Left). Similarly, the probability of randomly selecting a woman from a room with 20 women and 30 men is 0.4 ($=\frac{20}{50}$; \figref{fig:ProbBox}-Right). In both examples, the calculation can be considered a probability because (i) individuals were randomly selected and (ii) a proportion of a total was computed.
+
+<<ProbBox, echo=FALSE, fig.show='hold', fig.cap="Depictions of a `box' with 15 red balls and 10 blue balls (Left) and a `room' with 30 men and 20 women (Right).", out.width='.3\\linewidth'>>=
+set.seed(34344)
+n <- 25
+succ <- 15
+clrs <- col2rgbt(c("red","blue"),.7)
+df <- data.frame(x=runif(n),y=runif(n),
+                 grp=sample(rep(clrs,times=c(succ,n-succ))),stringsAsFactors=FALSE)
+par(mar=c(0.2,0.2,0.2,0.2),xaxt="n",yaxt="n")
+plot(y~x,data=df,pch=21,bg=grp,cex=2,xlim=c(0,1),ylim=c(0,1),xlab="",ylab="")
+
+n <- 50
+succ <- 30
+symb <- c("\\MA","\\VE")
+df <- data.frame(x=runif(n),y=runif(n),
+                 grp=sample(rep(symb,times=c(succ,n-succ))),stringsAsFactors=FALSE)
+df$clrs <- mapvalues(df$grp,from=c("\\MA","\\VE"),to=clrs)
+plot(y~x,data=df,col="white",xlim=c(0,1),ylim=c(0,1),xlab="",ylab="")
+text(df$x,df$y,df$grp,vfont=c("sans serif symbol","plain"),col=df$clrs,cex=2)
+@
+
+\newpage
+The two previous examples are simple because the selection is from a small, discrete set of items. Probabilities may be computed for a continuous variable if the distribution of that variable is known for the entire population. For example, the probability that a random individual is greater than 71 inches tall can be calculated if the distribution of heights for all individuals in the population is known (or reasonably approximated). For example, as shown in \modref{chap:NormDist}, if it can be assumed that heights is $N(66,3)$, then the proportion of individuals in the population taller than 71 inches tall is \Sexpr{formatC(distrib(71,mean=66,sd=3,lower.tail=FALSE,plot=FALSE),format="f",digits=4)} \figrefp{fig:ProbNorm}.\footnote{As computed with \R{distrib(71,mean=66,sd=3,lower.tail=FALSE)}.} This result is a probability because (i) the individual was randomly selected and (ii) the proportion of all individuals of interest in the entire population was found.
+
+<<ProbNorm, echo=FALSE, par1a=TRUE, fig.cap="Calculation of the probability that a randomly selected individual from a $N(66,3)$ population will have a height greater than 71 inches.">>=
+distrib(71,mean=66,sd=3,lower.tail=FALSE)
+@
+
+A theory that explains the distribution of statistics computed from all possible samples from a population will be developed in \modref{chap:SamplingDist}. This distribution will be used to compute the probability of observing a particular range of statistics from random samples. This technique is the basis for making statistical inferences in Modules \ref{chap:HypothesisTests} and \ref{chap:ConfidenceRegions}.

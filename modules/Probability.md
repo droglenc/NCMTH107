@@ -33,12 +33,13 @@ Probability is the "language" used by statisticians to describe the proportion o
 
 Use the materials below to answer the questions on [this preparation guide](Probability_Prep).
 
-* [Reading](../book/11_IntroStats.pdf)
+* [Reading](../book/12_IntroStats.pdf)
 
 ----
 
 ## Practice
 
+* [Review Exercises](Probability_RevEx)
 * Class Exercises: [1](Probability_CE1) / [2](Probability_CE2)
 * [Homework Assignment](Probability_HW)
 

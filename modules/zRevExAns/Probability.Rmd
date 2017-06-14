@@ -1,0 +1,55 @@
+---
+title: "Review Exercise Key"
+subtitle: "Probability"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3
+    fig_width: 3.5
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/zRevExAns/")
+source("../../rhelpers/rhelpers.R")
+modHTML("Probability")
+```
+```{r echo=FALSE, message=FALSE}
+library(NCStats)
+```
+
+## Coin Purse
+
+1. The probability of randomly selecting a nickel from this purse is `r formatC(17/32,format="f",digits=3)` (i.e., $\frac{17}{32}$).
+1. The probability of randomly selecting a dime from this purse is `r formatC(15/32,format="f",digits=3)` (i.e., $\frac{15}{32}$).
+1. The probability of randomly selecting a dime if two nickels and three dimes had been removed is `r formatC(12/27,format="f",digits=3)` (i.e., $\frac{12}{27}$).
+
+## Greenhouse Plants
+
+1. The probability of randomly selected a tomato plant is `r formatC(10/30,format="f",digits=3)` (i.e., $\frac{10}{30}$).
+1. The probability of randomly selected a cauliflower plant is `r formatC(8/30,format="f",digits=3)` (i.e., $\frac{8}{30}$).
+1. The probability of randomly selected a pea plant assuming that all tomato plants were gone is `r formatC(12/20,format="f",digits=3)` (i.e., $\frac{12}{20}$).
+
+## Lengths of Pine Needles
+```{r ProbLPN, echo=FALSE, results='hide', fig.show='hide'}
+( q1ab <- distrib(80,mean=75,sd=8) )
+( q1a <- distrib(70,mean=75,sd=8) )
+q1ab-q1a
+( q2 <- distrib(90,mean=75,sd=8,lower.tail=FALSE) )
+( q3 <- distrib(50,mean=75,sd=8) )
+```
+
+1. The probability that a randomly selected needle is between 70 and 80 mm long is
+`r formatC(q1ab-q1a,digits=3,format="f")`.
+1. The probability that a randomly selected needle is longer than 90 mm is `r formatC(q2,digits=3,format="f")`.
+1. The probability that a randomly selected needle is less than 50 mm is `r formatC(q3,digits=4,format="f")`.
+
+### R Appendix
+```{r fig.show='hide', results='hide'}
+<<ProbLPN>>
+```
+
+----
