@@ -33,7 +33,7 @@ R is fast becoming the primary software for performing statistical analyses in m
 
 Use the materials below to answer the questions on [this preparation guide](DataIntoR_Prep).
 
-* [Reading](../book/Getting Started wih R.pdf)
+* [Reading](../book/Getting Started with R.pdf)
 * Video: [What is R?](https://www.youtube.com/v/TR2bHSJ_eck?version=3&autoplay=1){:target="_blank"} [2 mins] 
 * Video: [What's Up with R?](https://www.youtube.com/v/ZwYQPtU2Pa0?version=3&autoplay=1&start=1&end=111){:target="_blank"} [3 mins]
 * Video: [Retrieve Data from Webpage](https://vimeo.com/user45324800/ncstats-preparedatawebpage){:target="_blank"} [3 mins] **OUT-OF-DATE (will be updated in class)**

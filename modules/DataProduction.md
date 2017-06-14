@@ -37,7 +37,7 @@ Statistical analyses rely on data and that data must be properly produced (or co
 
 Use the materials below to answer the questions on [this preparation guide](DataProduction_Prep).
 
-* [Reading](../book/Data_Production.pdf)
+* [Reading](../book/Data Production.pdf)
 * Video: Types of Studies -- [A](https://www.youtube.com/v/qksFkFh2ezo?version=3&autoplay=1&start=456&end=958){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/KDPBD3SPTPY?version=3&autoplay=1){:target="_blank"} [8 mins]
 * Video: [Types of Conclusions](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=1597){:target="_blank"} [3 mins]
 * Video: [Types of Observational Studies](https://vimeo.com/user45324800/observationaltypes){:target="_blank"} [3 mins]  [![PowerPoint](../img/ppt.png)](DataProduction_PPT.pptx)

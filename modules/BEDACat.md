@@ -35,7 +35,7 @@ It is important to understand the relationship between two variables.  With cate
 
 Use the materials below to answer the questions on [this preparation guide](BEDACat_Prep).
 
-* [Reading](../book/Bivariate EDA - Categorial.pdf)
+* [Reading](../book/Bivariate EDA - Categorical.pdf)
 * Video: [Percentage Tables](https://www.youtube.com/v/k8xFH6fCIWs?version=3&autoplay=1){:target="_blank"} [6 mins]
 * Video: [Bivariate EDA (Categorical) in R](https://vimeo.com/user45324800/biveda-cat){:target="_blank"} [8 mins] [![Web](../img/web.png)](BEDACat_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](BEDACat_RHO.pdf) [![MSWord](../img/word.png)](BEDACat_RHO.docx)  [![R](../img/Rlogo.png)](BEDACat_RHO.R){:target="_blank"}
 

@@ -28,7 +28,7 @@ out <- paste("-o",dir,"-p [BOOKMARK_NAME] --overwrite")
 ( tmp <- paste(eng,inp,ins,out) )
 system(tmp,show.output.on.console=TRUE)
 
-##   intermediate files from the directory ... just looks cleaner
+## Removes intermediate files from the directory ... just looks cleaner
 tmp <- list.files(dir)
 tmp <- tmp[grepl(fn,tmp)]
 tmp <- tmp[!grepl(".pdf",tmp) & !grepl(".rnw",tmp)]
