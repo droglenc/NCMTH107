@@ -17,8 +17,13 @@ The General Sociological Survey (GSS) is a very large survey that has been admin
 \end{Itemize}
 
 These data, stored in \href{https://raw.githubusercontent.com/droglenc/NCData/master/GSSWill2Pay.csv}{GSSWill2Pay.csv}, are loaded into R and examined below.
-<<>>=
+<<echo=FALSE>>=
+gss <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/GSSWill2Pay.csv")
+@
+<<eval=FALSE>>=
 gss <- read.csv("data/GSSWill2Pay.csv")
+@
+<<>>=
 str(gss)
 headtail(gss)
 @

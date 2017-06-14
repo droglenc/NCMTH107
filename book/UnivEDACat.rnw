@@ -88,8 +88,13 @@ barplot(yis,ylim=c(0,30),xlab="Year-In-School",ylab="Frequency of Students")
 
 \subsection{Using in R}
 The General Sociological Survey (GSS) data are loaded, the structure of the data.frame is examined, and the levels of the \var{recycle} variable are shown below. These results show the five levels in the \var{recycle} factor variable, ordered alphabetically as is the default in R. However, the levels should be ``Always'', ``Often'', ``Sometimes'', ``Never'', and ``Not Avail'' to follow the natural order of this ordinal variable.
-<<>>=
+<<echo=FALSE>>=
+GSS <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/GSSEnviroQues.csv")
+@
+<<eval=FALSE>>=
 GSS <- read.csv("data/GSSEnviroQues.csv")
+@
+<<>>=
 str(GSS)
 levels(GSS$recycle)
 @
@@ -128,7 +133,7 @@ For categorical data, an appropriate EDA consists of identifying the major chara
 \end{quote}
 
 <<echo=FALSE, results='hide'>>=
-ws <- read.csv("data/WetlandSeeds.csv")
+ws <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/WetlandSeeds.csv")
 wtbl <- xtabs(~type,data=ws)
 wptbl <- percTable(wtbl)
 @

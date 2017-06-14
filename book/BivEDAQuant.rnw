@@ -11,8 +11,13 @@ set_parent('IntroStats.Rnw')
 \lettrine{B}{ivariate data occurs when two} variables are measured on the same individuals. For example, you may measure (i) the height and weight of students in class, (ii) depth and area of a lake, (iii) gender and age of welfare recipients, or (iv) number of mice and biomass of legumes in fields. This module is focused on describing the bivariate relationship between two quantitative variables. Bivariate relationships between two categorical variables is described in \modref{chap:BivEDACat}.
 
 Data on the \var{weight} (lbs) and highway miles per gallon (\var{HMPG}) for 93 cars from the 1993 model year are used as an example throughout this module. Ultimately, the relationship between highway MPG and the weight of a car is described. These data are read from \href{https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv}{93cars.csv} into R and several observations of \var{HMPG} and \var{weight} are shown below.\footnote{The vector in the second argument to \R{headtail()} is used to show only the two variables of interest.}
-<<>>=
+<<echo=FALSE>>=
+cars93 <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv")
+@
+<<eval=FALSE>>=
 cars93 <- read.csv("data/93cars.csv")
+@
+<<>>=
 headtail(cars93,which=c("HMPG","Weight"))
 @
 
@@ -305,7 +310,8 @@ Wt   1.5 1.7 1.4 1.0 1.4 1.5 1.7 1.8 1.4 1.5 1.1 1.6 1.5 1.9 1.4 1.5 1.3 1.7 1.6
 \end{verbatim}
 
 <<echo=FALSE>>=
-df <- data.frame(inctime=c(53,54,56,60,60,60,60,60,63,63,77,77,78,81,82,82,83,83,84,90,90),hatchwt=c(1.5,1.7,1.4,1.0,1.4,1.5,1.7,1.8,1.4,1.5,1.1,1.6,1.5,1.9,1.4,1.5,1.3,1.7,1.6,1.4,1.8))
+df <- data.frame(inctime=c(53,54,56,60,60,60,60,60,63,63,77,77,78,81,82,82,83,83,84,90,90),
+                 hatchwt=c(1.5,1.7,1.4,1.0,1.4,1.5,1.7,1.8,1.4,1.5,1.1,1.6,1.5,1.9,1.4,1.5,1.3,1.7,1.6,1.4,1.8))
 @
 
 The relationship between hatchling weight and incubation time for the Crested Geckos is linear, without obvious outliers (\textit{though some may consider the small hatchling at 60 days to be an outlier}), without a definitive association, and weak ($r$=\Sexpr{formatC(corr(~inctime+hatchwt,data=df),format="f",digits=2)}) \figrefp{fig:scatGecko}. I did compute $r$ because no outliers were present and the relationship was linear (or, at least, it was not nonlinear).

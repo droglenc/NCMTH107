@@ -467,8 +467,14 @@ rSquared(lm1,digits=3)
 \section{Examples II}
 \subsection*{Car Weight and MPG}
 In \modref{chap:BivEDAQuant}, an EDA for the relationship between \var{HMPG} (the highway miles per gallon) and \var{Weight} (lbs) of 93 cars from the 1993 model year was performed. This relationship will be explored further here as an example of a complete regression analysis. In this analysis, the regression output will be examined within the context of answering the twelve typical questions. These data are read into R below and the linear regression model is fit, coefficients extracted, fitted-line plot constructed, and coefficient of determination extracted.
-<<CarFit, fig.cap="Fitted line plot of the regression of highway MPG on weight of 93 cars from 1993.">>=
+<<echo=FALSE>>=
+cars93 <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv")
+@
+<<eval=FALSE>>=
 cars93 <- read.csv("data/93cars.csv")
+@
+\vspace{-12pt}
+<<CarFit, fig.cap="Fitted line plot of the regression of highway MPG on weight of 93 cars from 1993.">>=
 ( lm2 <- lm(HMPG~Weight,data=cars93) )
 fitPlot(lm2,ylab="Highway MPG")
 rSquared(lm2,digits=3)
