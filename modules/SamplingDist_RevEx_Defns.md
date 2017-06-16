@@ -95,7 +95,7 @@ Assume that the population distribution is ~N(100,20) and you take samples of n=
 1. What shape would you expect the sampling distribution of the sample means to be?
 1. What do you expect the center of the sampling distribution of the sample means to equal?
 1. What do you expect the standard deviation of the sampling distribution of the sample means to equal?
-1. What do you expect the standard error of $\bar{x}$ to equal?
+1. What do you expect the standard error of x&#772; to equal?
 
 [See answer here](zRevExAns/SamplingDist.html#sampling-distribution-characteristics-i)
 
@@ -129,7 +129,7 @@ Assume that the population distribution is slightly skewed to the right with &mu
 
 ## Accuracy and Precision
 
-Suppose that it is known that a population has $\mu$=10. Use this to answer the questions below.
+Suppose that it is known that a population has &mu;10. Use this to answer the questions below.
 
 1. Which is more accurate -- four samples with means of 9,10,11, and 9 or means of 6,8,7, and 9?
 1. Which is more accurate -- four samples with means of 6,14,8, and 12 or means of 8,7,9, and 8?

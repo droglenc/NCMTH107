@@ -350,22 +350,3 @@ The concepts of accuracy and precision are illustrated in \figref{fig:AccPrec}. 
 <<AccPrec, echo=FALSE, fig.width=3, fig.height=6, fig.scap="Accuracy and precision model", fig.cap="Model used to demonstrate accuracy, precision, and bias. The center of each target (i.e., the bullseye) and the point marked with a ``T'' (for ``truth'') represent the parameter of interest. Each dot on the target represents a statistic computed from a single sample and, thus, the many red dots on each target represent repeated samplings from the same population. The center of the samples (analogous to the center of the sampling distribution) is denoted by a blue plus-sign on the target and a blue vertical line on the histogram.">>=
 accuracyPrecision(pts.trans=1/3)
 @
-
-\clearpage
-\begin{exsection}
-  \item \label{revex:SamplingDistn3} Use the simple population of quiz scores from the previous section (i.e., 6, 6, 4, 5, 7, and 8) to answer the questions below. \ansref{ans:SamplingDistn3}
-    \begin{Enumerate}
-      \item Construct a table similar to \tabref{tab:SDistQuiz2} that shows the values and the mean of those values for all possible samples of size $n=4$. Note: there are 15 such samples.
-      \item Construct a histogram of the means from all possible samples. Describe its general shape.
-      \item Compute the mean of the means from all possible samples. How does this compare to the mean of all six individuals in the population?
-      \item Compute the standard error of the means from all possible samples. How does this compare to the standard deviation of all six individuals in the population?  How does this compare to the standard error of the means of all possible samples of $n=2$ shown in \tabref{tab:SDistQuiz2} and for all possible samples of $n=3$ shown in \tabref{tab:SDistQuiz3} (later in this module)?  Can you make a general statement about how the standard error of the means is related to the size of the sample used to construct the means?
-    \end{Enumerate}
-
-  \item \label{revex:SamplingDistp2} Suppose the individuals in a simple population have the following ``values'' for a simple binomial categorical variable -- Y, Y, N, Y, Y, N, and N. Use this to answer the questions below. \ansref{ans:SamplingDistp2}
-    \begin{Enumerate}
-      \item Construct a table similar to \tabref{tab:SDistQuiz2} that shows the ``values'' of the individuals and the proportion of ``yeses'' for all possible samples of size $n=3$. Note: there are 35 such samples.
-      \item Construct a histogram of the proportions from all possible samples. Describe its general shape.
-      \item Construct the mean of the proportions from all possible samples. How does this compare to the proportion of ``yeses'' for all seven individuals in the population?
-      \item Construct the standard error of the proportions from all possible samples.
-    \end{Enumerate}
-\end{exsection}
