@@ -75,7 +75,7 @@ deviation or a standard error?</a>
 <div class="panel panel-default">
 <div class="panel-heading">
 <div class="panel-title">
-<a data-toggle="collapse" href="#SESE2">On average, the number of litter items found along the Escarpment Trail in the Porcupine Mountains on
+<a data-toggle="collapse" href="#SDSE2">On average, the number of litter items found along the Escarpment Trail in the Porcupine Mountains on
 a single day is 12 items different than the overall mean. Is this a standard deviation or a standard error?</a>
 </div>
 </div>
@@ -129,7 +129,7 @@ Assume that the population distribution is slightly skewed to the right with &mu
 
 ## Accuracy and Precision
 
-Suppose that it is known that a population has &mu;10. Use this to answer the questions below.
+Suppose that it is known that a population has &mu;=10. Use this to answer the questions below.
 
 1. Which is more accurate -- four samples with means of 9,10,11, and 9 or means of 6,8,7, and 9?
 1. Which is more accurate -- four samples with means of 6,14,8, and 12 or means of 8,7,9, and 8?

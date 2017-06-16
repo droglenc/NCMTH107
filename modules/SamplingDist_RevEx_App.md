@@ -16,7 +16,7 @@ The WI Department of Natural Resources is examining the amount of domestic corn 
 1. What is the probability that a sample of 25 raccoons have a mean corn consumption of more than 10 kg per week?
 1. What is the probability that a sample of 60 raccoons have a TOTAL corn consumption of more than 510 kg per week?
 
-[See answer here](zRevExAns/SamplingDists#raccoons-consuming-corn)
+[See answer here](zRevExAns/SamplingDist.html#raccoons-consuming-corn)
 
 ----
 
@@ -32,7 +32,7 @@ Suppose that it is known that the number of yards gained per game for the primar
 1. What is the top 25% of yards gained by a running back in a single game?
 1. What is the top 5% of mean yards gained by a running back in a 16-game season?
 
-[See answer here](zRevExAns/SamplingDists#nfl-running-backs)
+[See answer here](zRevExAns/SamplingDist.html#nfl-running-backs)
 
 ----
 
@@ -47,7 +47,7 @@ Suppose that the average annual rate of return for a wide array of available sto
 1. The top 10% of stocks produce what rate of return?
 1. The top 10% of random samples of 10 stocks produce what average rate of return?
 
-[See answer here](zRevExAns/SamplingDists#stock-returns)
+[See answer here](zRevExAns/SamplingDist.html#stock-returns)
 
 ----
 
@@ -61,7 +61,7 @@ Renner (1970) examined the content of hydroxymethylfurfurol (HMF) in honey. HMF 
 1. What is the probability that 50 samples of one kg of honey have an average of less than 10 g of HMF?
 1. What are the 20% least common average amounts of HMF in 50 samples of one kg of honey?
 
-[See answer here](zRevExAns/SamplingDists#hmf-in-honey)
+[See answer here](zRevExAns/SamplingDist.html#hmf-in-honey)
 
 ----
 
@@ -75,7 +75,7 @@ Renner (1970) examined the content of hydroxymethylfurfurol (HMF) in honey. HMF 
 1. What is the probability that the average size of 60 farms from England is less than 50 ha?
 1. What is the probability that a farm from England is greater than 50 ha?
 
-[See answer here](zRevExAns/SamplingDists#size-of-farms-in-england)
+[See answer here](zRevExAns/SamplingDist.html#size-of-farms-in-england)
 
 ----
 
@@ -90,7 +90,7 @@ Renner (1970) examined the content of hydroxymethylfurfurol (HMF) in honey. HMF 
 1. What is the mean number of days until hatching such that 20% of samples of 50 turtles have a smaller mean?
 1. What are the most common 80% of times to hatching?
 
-[See answer here](zRevExAns/SamplingDists#painted-turtle-hatchling-size)
+[See answer here](zRevExAns/SamplingDist.html#painted-turtle-hatchling-size)
 
 ----
 
@@ -104,6 +104,6 @@ Assume that it is known that the distribution of time spent hunting (hours) by a
 1. What is the probability that a hunter will spend more than 55 hrs hunting moose?
 1. What is the probability that the average hours spent hunting by a sample of 25 hunters is greater than 48 hrs?
 
-[See answer here](zRevExAns/SamplingDists#moose-hunting)
+[See answer here](zRevExAns/SamplingDist.html#moose-hunting)
 
 ----

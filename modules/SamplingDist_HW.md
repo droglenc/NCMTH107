@@ -27,10 +27,10 @@ Researchers on Storfosna Island, Norway examined the reproductive habits of Roe 
 
 ----
 
-## Precision and Accuracy
+## Accuracy and Precision
 <img src="zimgs/archery_target.jpg" alt="Archery Target" class="img-right">
 
-Answer the questions below assuming that a population is known to have a mean of 60. [*[This review exercise](SamlingDist_RevEx_Defns.html#precision-and-accuracy) may be helpful.*]
+Answer the questions below assuming that a population is known to have a mean of 60. [*[This review exercise](SamplingDist_RevEx_Defns.html#accuracy-and-precision) may be helpful.*]
 
 1. Construct a hypothetical series of four numbers (that could represent sample means) that would be considered both precise and accurate.
 1. Construct a hypothetical series of four numbers that would be considered imprecise but accurate.
