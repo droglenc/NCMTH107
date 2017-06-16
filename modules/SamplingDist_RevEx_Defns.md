@@ -90,7 +90,7 @@ a single day is 12 items different than the overall mean. Is this a standard dev
 
 ## Sampling Distribution Characteristics I
 
-Assume that the population distribution is $\sim N(100,20)$ and you take samples of $n=50$.
+Assume that the population distribution is ~N(100,20) and you take samples of n=50.
   
 1. What shape would you expect the sampling distribution of the sample means to be?
 1. What do you expect the center of the sampling distribution of the sample means to equal?
@@ -103,12 +103,12 @@ Assume that the population distribution is $\sim N(100,20)$ and you take samples
 
 ## Sampling Distribution Characteristics II
 
-Assume that the population distribution is skewed to the right with $\mu=500$ and $\sigma=60$. Further suppose that samples of $n=100$ are taken.
+Assume that the population distribution is skewed to the right with &mu;500 and &sigma;60. Further suppose that samples of n=100 are taken.
   
 1. What shape would you expect the sampling distribution of the sample means to be?
 1. What do you expect the center of the sampling distribution of the sample means to equal?
 1. What do you expect the standard deviation of the sampling distribution of the means to equal?
-1. What do you expect the standard error of $\bar{x}$ to equal?
+1. What do you expect the standard error of x&#772; to equal?
 
 [See answer here](zRevExAns/SamplingDist.html#sampling-distribution-characteristics-ii)
 
@@ -116,12 +116,12 @@ Assume that the population distribution is skewed to the right with $\mu=500$ an
 
 ## Sampling Distribution Characteristics III
 
-Assume that the population distribution is slightly skewed to the right with $\mu=500$ and $\sigma=60$. Further suppose that samples of $n=20$ are taken.
+Assume that the population distribution is slightly skewed to the right with &mu;500 and &sigma;60. Further suppose that samples of n=20 are taken.
   
 1. What shape would you expect the sampling distribution of the sample means to be?
 1. What do you expect the center of the sampling distribution of the sample means to equal?
 1. What do you expect the standard deviation of the sampling distribution of the means to equal?
-1. What do you expect the standard error of $\bar{x}$ to equal?
+1. What do you expect the standard error of x&#772; to equal?
 
 [See answer here](zRevExAns/SamplingDist.html#sampling-distribution-characteristics-iii)
 
