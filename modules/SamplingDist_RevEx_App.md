@@ -7,20 +7,6 @@ css: "/css/modules.css"
 
 ----
 
-## Moose Hunting 
-<img src="zimgs/Moose_hunting.jpg" alt="Moose" class="img-right">
-
-Assume that it is known that the distribution of time spent hunting (hours) by an individual Minnesota moose (*Alces alces*) hunter is approximately symmetric in shape with a mean of 40 hours and a standard deviation of 15 hours. Use this information to answer the questions below.
-
-1. Describe what an individual is in this problem.
-1. List the variable or variables in this problem and identify the type of variable for each.
-1. What is the probability that a hunter will spend more than 55 hrs hunting moose?
-1. What is the probability that the average hours spent hunting by a sample of 25 hunters is greater than 48 hrs?
-
-[See answer here](zRevExAns/SamplingDists#moose-hunting)
-
-----
-
 ## Raccoons Consuming Corn
 <img src="zimgs/raccoon_corn.jpg" alt="Raccoon with Corn" class="img-right">
 
@@ -94,7 +80,7 @@ Renner (1970) examined the content of hydroxymethylfurfurol (HMF) in honey. HMF 
 ----
 
 ## Painted Turtle Hatchling Size
-<img src="zimgs/.jpg" alt="" class="img-right">
+<img src="zimgs/painted_turtle_hatching.jpg" alt="Hatching Painted Turtle" class="img-right">
 
 [Janzen and Morjan (2002)](https://www.researchgate.net/profile/Julian_Faivovich/publication/250071214_The_Identity_of_Hyla_ehrhardti_Muller_1924_Anura_Hylidae/links/00b7d5215272745f66000000.pdf) examined the size of male and female painted turtles (*Chrysemys picta*) at hatching. They found in a sample of 77 turtles that size at hatching was very slightly right-skewed with a mean of 4.46 g with a standard deviation of 0.13 g. Assume that the results of this sample extend to the population to answer the questions below.
 
@@ -105,5 +91,19 @@ Renner (1970) examined the content of hydroxymethylfurfurol (HMF) in honey. HMF 
 1. What are the most common 80% of times to hatching?
 
 [See answer here](zRevExAns/SamplingDists#painted-turtle-hatchling-size)
+
+----
+
+## Moose Hunting 
+<img src="zimgs/Moose_hunting.jpg" alt="Moose" class="img-right">
+
+Assume that it is known that the distribution of time spent hunting (hours) by an individual Minnesota moose (*Alces alces*) hunter is approximately symmetric in shape with a mean of 40 hours and a standard deviation of 15 hours. Use this information to answer the questions below.
+
+1. Describe what an individual is in this problem.
+1. List the variable or variables in this problem and identify the type of variable for each.
+1. What is the probability that a hunter will spend more than 55 hrs hunting moose?
+1. What is the probability that the average hours spent hunting by a sample of 25 hunters is greater than 48 hrs?
+
+[See answer here](zRevExAns/SamplingDists#moose-hunting)
 
 ----
