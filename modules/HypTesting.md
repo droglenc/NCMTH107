@@ -53,8 +53,8 @@ Use the materials below to answer the questions on [this preparation guide](HypT
 
 ## Practice
 
-* Review exercises: 
-* Class exercises: [1](HypTesting_CE1 / [2](HypTesting_CE2) / [3](HypTesting_CE3) /  [4](HypTesting_CE4) / [5](HypTesting_CE5)
+* [Review exercises](HypTesting_RevEx)
+* Class exercises: [1](HypTesting_CE1) / [2](HypTesting_CE2) / [3](HypTesting_CE3) /  [4](HypTesting_CE4) / [5](HypTesting_CE5)
 * [Homework Assignment](HypTesting_HW)
 
 ----
