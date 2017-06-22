@@ -32,12 +32,12 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](HypTesting_Prep1).
+Use the materials below to answer the questions on [this preparation guide](HypTesting_Prep.html#first-material).
 
 * [Reading **Sections 13.1-13.4**](../book/13_IntroStats.pdf).
 * Video: [Forming Statistical Hypothesis](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins; [![PowerPoint](../img/ppt.png)](HypTesting_PPT-hypotheses.pptx)].
 
-Use the materials below to answer the questions on [this preparation guide](HypTesting_Prep2).
+Use the materials below to answer the questions on [this preparation guide](HypTesting_Prep.html#first-material).
 
 * [Reading **Section 13.5**](../book/13_IntroStats.pdf).
 * Video: Statistical Error Types -- [here](https://www.youtube.com/v/7mE-K_w1v90?version=3&autoplay=1){:target="_blank"} [8 mins] and [here](https://www.youtube.com/v/OWn3Ko1WYTA?version=3&start=89&end=247&autoplay=1){:target="_blank"} [3 mins]
@@ -45,18 +45,16 @@ Use the materials below to answer the questions on [this preparation guide](HypT
 
 ----
 
-## In-Class
+## In-Class Lectures
 
-* [First Lecture](HypTesting_PPT-Lecture-1.pptx)
-* [Second Lecture](HypTesting_PPT-Lecture-2.pptx)
+* [First](HypTesting_PPT-Lecture-1.pptx) / [Second](HypTesting_PPT-Lecture-2.pptx)
 
 ----
 
 ## Practice
 
-* First class exercise: [1](HypTesting_CE1)
-* Second class exercises:  [2](HypTesting_CE2) / [3](HypTesting_CE3)
-* Third class exercises: [4](HypTesting_CE4) / [5](HypTesting_CE5)
+* Review exercises: 
+* Class exercises: [1](HypTesting_CE1 / [2](HypTesting_CE2) / [3](HypTesting_CE3) /  [4](HypTesting_CE4) / [5](HypTesting_CE5)
 * [Homework Assignment](HypTesting_HW)
 
 ----

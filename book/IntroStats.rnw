@@ -22,7 +22,7 @@ eng <- "c:/apps/sejda-console/bin/sejda-console splitbybookmarks"
 inp <- paste0("-f ",dir,fn,".pdf")
 # sets bookmark level to split at
 ins <- "-l 1 --discardOutline"
-# set output directory and prefish for filenames to the name of the bookmark
+# set output directory and prefix for filenames to the name of the bookmark
 out <- paste("-o",dir,"-p [BOOKMARK_NAME] --overwrite")
 # put it all together and run
 ( tmp <- paste(eng,inp,ins,out) )
@@ -77,7 +77,7 @@ for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
 @
 <<child-SamplingDist, child='SamplingDist.Rnw', eval=TRUE>>=
 @
-<<child-HypothesisTests, child='HypothesisTests.Rnw', eval=FALSE>>=
+<<child-HypothesisTests, child='HypothesisTests.Rnw', eval=TRUE>>=
 @
 <<child-ConfidenceRegions, child='ConfidenceRegions.Rnw', eval=FALSE>>=
 @
