@@ -68,10 +68,24 @@ You can click on each question to see an answer. Click on it again to close the 
 
 ## Computing P-Values
 
-1. Compute the p-value and make a decision about $H_{0}$ with the following information -- $\alpha=0.10$, $H_{0}:\mu=10$, $H_{A}:\mu>10$, $\sigma=5$, $n=25$, and $\bar{x}=12.1$. [See answer here](zRevExAns/HypTest.html#computing-p-values-1)
-1. Compute the p-value and make a decision about $H_{0}$ with the following information -- $\alpha=0.05$, $H_{0}:\mu=50$, $H_{A}:\mu<50$, $\sigma=20$, $n=50$, and $\bar{x}=43.8$. [See answer here](zRevExAns/HypTest.html#computing-p-values-2)
-1.Compute the p-value and make a decision about $H_{0}$ with the following information -- $\alpha=0.01$, $H_{0}:\mu=100$, $H_{A}:\mu\neq100$, $\sigma=15$, $n=100$, and $\bar{x}=98$. [See answer here](zRevExAns/HypTest.html#computing-p-values-3)
-1. Describe why we must formally go through the steps of a hypothesis test to conclude that $\mu>11$ when we observe $\bar{x}=12.1$. [See answer here](zRevExAns/HypTest.html#computing-p-values-4)
+1. Compute the p-value and make a decision about $H_{0}$ with the following information -- $\alpha=0.10$, $H_{0}:\mu=10$, $H_{A}:\mu>10$, $\sigma=5$, $n=25$, and $\bar{x}=12.1$. [See answer here](zRevExAns/HypTesting.html#computing-p-values-1)
+1. Compute the p-value and make a decision about $H_{0}$ with the following information -- $\alpha=0.05$, $H_{0}:\mu=50$, $H_{A}:\mu<50$, $\sigma=20$, $n=50$, and $\bar{x}=43.8$. [See answer here](zRevExAns/HypTesting.html#computing-p-values-2)
+1. Compute the p-value and make a decision about $H_{0}$ with the following information -- $\alpha=0.01$, $H_{0}:\mu=100$, $H_{A}:\mu\neq100$, $\sigma=15$, $n=100$, and $\bar{x}=98$. [See answer here](zRevExAns/HypTesting.html#computing-p-values-3)
+
+<div class="panel-group">
+
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="panel-title">
+<a data-toggle="collapse" href="#pvaluewhy">Describe why we must formally go through the steps of a hypothesis test to conclude that $\mu>11$ when we observe $\bar{x}=12.1$.</a>
+</div>
+</div>
+<div id="pvaluewhy" class="panel-collapse collapse">
+<div class="panel-body">In a nutshell, because of sampling variability. It is possible that the sample consisted of mostly individuals with large values even if the actual distribution was centered on the hypothesized value (i.e., 11). In other words, one must formally account for sampling variability, which is done by making the p-value calculation from a sampling distribution.</div>
+</div>
+</div>
+
+</div>
 
 ----
 
@@ -91,7 +105,7 @@ The managers of a wastewater treatment plant monitored the amount of biological 
 1. Use the p-value to make a decision about $H_{0}$.
 1. What does this mean for the managers of the plant (i.e., will they need to take action)? Explain!
 
-[See answer here](zRevExAns/HypTest.html#bod-in-effluent)
+[See answer here](zRevExAns/HypTesting.html#bod-in-effluent)
 
 ----
 
@@ -106,7 +120,7 @@ Admissions representatives at the University of Minnesota medical school were co
 1. Use the p-value to make a decision about $H_{0}$.
  1. Was the representatives concern about the average gpa of applicants warranted?  Explain!
 
-[See answer here](zRevExAns/HypTest.html#medical-school-admissions)
+[See answer here](zRevExAns/HypTesting.html#medical-school-admissions)
 
 ----
 
@@ -211,8 +225,8 @@ You can click on each question to see an answer. Click on it again to close the 
 
 ## Power Calculations
 
-1. Compute power given the following information: $\alpha=0.05$, $H_{0}:\mu=50$, $H_{A}:\mu<50$, $\sigma=20$, $n=50$, and $\mu_{A}=45$. [See answer here](zRevExAns/HypTest.html#power-calculations-1)
-1. Compute power given the following information: $\alpha=0.10$, $H_{0}:\mu=10$, $H_{A}:\mu>10$, $\sigma=5$, $n=25$, and $\mu_{A}=12$. [See answer here](zRevExAns/HypTest.html#power-calculations-2)
-1. Compute power given the following information: $\alpha=0.01$, $H_{0}:\mu=75$, $H_{A}:\mu>75$, $\sigma=15$, $n=30$, and $\mu_{A}=82$. [See answer here](zRevExAns/HypTest.html#power-calculations-3)
+1. Compute power given the following information: $\alpha=0.05$, $H_{0}:\mu=50$, $H_{A}:\mu<50$, $\sigma=20$, $n=50$, and $\mu_{A}=45$. [See answer here](zRevExAns/HypTesting.html#power-calculations-1)
+1. Compute power given the following information: $\alpha=0.10$, $H_{0}:\mu=10$, $H_{A}:\mu>10$, $\sigma=5$, $n=25$, and $\mu_{A}=12$. [See answer here](zRevExAns/HypTesting.html#power-calculations-2)
+1. Compute power given the following information: $\alpha=0.01$, $H_{0}:\mu=75$, $H_{A}:\mu>75$, $\sigma=15$, $n=30$, and $\mu_{A}=82$. [See answer here](zRevExAns/HypTesting.html#power-calculations-3)
 
 ----
