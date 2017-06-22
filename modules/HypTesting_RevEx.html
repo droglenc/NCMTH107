@@ -54,11 +54,24 @@ css: "/css/modules.css"
 <div id="computing-p-values" class="section level2">
 <h2>Computing P-Values</h2>
 <ol>
-<li>Compute the p-value and make a decision about <span class="math inline">\(H_{0}\)</span> with the following information – <span class="math inline">\(\alpha=0.10\)</span>, <span class="math inline">\(H_{0}:\mu=10\)</span>, <span class="math inline">\(H_{A}:\mu&gt;10\)</span>, <span class="math inline">\(\sigma=5\)</span>, <span class="math inline">\(n=25\)</span>, and <span class="math inline">\(\bar{x}=12.1\)</span>. <a href="zRevExAns/HypTest.html#computing-p-values-1">See answer here</a></li>
-<li>Compute the p-value and make a decision about <span class="math inline">\(H_{0}\)</span> with the following information – <span class="math inline">\(\alpha=0.05\)</span>, <span class="math inline">\(H_{0}:\mu=50\)</span>, <span class="math inline">\(H_{A}:\mu&lt;50\)</span>, <span class="math inline">\(\sigma=20\)</span>, <span class="math inline">\(n=50\)</span>, and <span class="math inline">\(\bar{x}=43.8\)</span>. <a href="zRevExAns/HypTest.html#computing-p-values-2">See answer here</a></li>
-<li>Compute the p-value and make a decision about <span class="math inline">\(H_{0}\)</span> with the following information – <span class="math inline">\(\alpha=0.01\)</span>, <span class="math inline">\(H_{0}:\mu=100\)</span>, <span class="math inline">\(H_{A}:\mu\neq100\)</span>, <span class="math inline">\(\sigma=15\)</span>, <span class="math inline">\(n=100\)</span>, and <span class="math inline">\(\bar{x}=98\)</span>. <a href="zRevExAns/HypTest.html#computing-p-values-3">See answer here</a></li>
-<li>Describe why we must formally go through the steps of a hypothesis test to conclude that <span class="math inline">\(\mu&gt;11\)</span> when we observe <span class="math inline">\(\bar{x}=12.1\)</span>. <a href="zRevExAns/HypTest.html#computing-p-values-4">See answer here</a></li>
+<li>Compute the p-value and make a decision about <span class="math inline">\(H_{0}\)</span> with the following information – <span class="math inline">\(\alpha=0.10\)</span>, <span class="math inline">\(H_{0}:\mu=10\)</span>, <span class="math inline">\(H_{A}:\mu&gt;10\)</span>, <span class="math inline">\(\sigma=5\)</span>, <span class="math inline">\(n=25\)</span>, and <span class="math inline">\(\bar{x}=12.1\)</span>. <a href="zRevExAns/HypTesting.html#computing-p-values-1">See answer here</a></li>
+<li>Compute the p-value and make a decision about <span class="math inline">\(H_{0}\)</span> with the following information – <span class="math inline">\(\alpha=0.05\)</span>, <span class="math inline">\(H_{0}:\mu=50\)</span>, <span class="math inline">\(H_{A}:\mu&lt;50\)</span>, <span class="math inline">\(\sigma=20\)</span>, <span class="math inline">\(n=50\)</span>, and <span class="math inline">\(\bar{x}=43.8\)</span>. <a href="zRevExAns/HypTesting.html#computing-p-values-2">See answer here</a></li>
+<li>Compute the p-value and make a decision about <span class="math inline">\(H_{0}\)</span> with the following information – <span class="math inline">\(\alpha=0.01\)</span>, <span class="math inline">\(H_{0}:\mu=100\)</span>, <span class="math inline">\(H_{A}:\mu\neq100\)</span>, <span class="math inline">\(\sigma=15\)</span>, <span class="math inline">\(n=100\)</span>, and <span class="math inline">\(\bar{x}=98\)</span>. <a href="zRevExAns/HypTesting.html#computing-p-values-3">See answer here</a></li>
 </ol>
+<div class="panel-group">
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="panel-title">
+<p><a data-toggle="collapse" href="#pvaluewhy">Describe why we must formally go through the steps of a hypothesis test to conclude that <span class="math inline">\(\mu&gt;11\)</span> when we observe <span class="math inline">\(\bar{x}=12.1\)</span>.</a></p>
+</div>
+</div>
+<div id="pvaluewhy" class="panel-collapse collapse">
+<div class="panel-body">
+In a nutshell, because of sampling variability. It is possible that the sample consisted of mostly individuals with large values even if the actual distribution was centered on the hypothesized value (i.e., 11). In other words, one must formally account for sampling variability, which is done by making the p-value calculation from a sampling distribution.
+</div>
+</div>
+</div>
+</div>
 <hr />
 </div>
 <div id="bod-in-effluent" class="section level2">
@@ -74,7 +87,7 @@ css: "/css/modules.css"
 <li>Use the p-value to make a decision about <span class="math inline">\(H_{0}\)</span>.</li>
 <li>What does this mean for the managers of the plant (i.e., will they need to take action)? Explain!</li>
 </ol>
-<p><a href="zRevExAns/HypTest.html#bod-in-effluent">See answer here</a></p>
+<p><a href="zRevExAns/HypTesting.html#bod-in-effluent">See answer here</a></p>
 <hr />
 </div>
 <div id="medical-school-admissions" class="section level2">
@@ -88,7 +101,7 @@ css: "/css/modules.css"
 <li>Use the p-value to make a decision about <span class="math inline">\(H_{0}\)</span>.</li>
 <li>Was the representatives concern about the average gpa of applicants warranted? Explain!</li>
 </ol>
-<p><a href="zRevExAns/HypTest.html#medical-school-admissions">See answer here</a></p>
+<p><a href="zRevExAns/HypTesting.html#medical-school-admissions">See answer here</a></p>
 <hr />
 </div>
 <div id="power-and-type-ii-error-relationships" class="section level2">
@@ -197,9 +210,9 @@ The classic example deals with the population dynamics of an animal. The null hy
 <div id="power-calculations" class="section level2">
 <h2>Power Calculations</h2>
 <ol>
-<li>Compute power given the following information: <span class="math inline">\(\alpha=0.05\)</span>, <span class="math inline">\(H_{0}:\mu=50\)</span>, <span class="math inline">\(H_{A}:\mu&lt;50\)</span>, <span class="math inline">\(\sigma=20\)</span>, <span class="math inline">\(n=50\)</span>, and <span class="math inline">\(\mu_{A}=45\)</span>. <a href="zRevExAns/HypTest.html#power-calculations-1">See answer here</a></li>
-<li>Compute power given the following information: <span class="math inline">\(\alpha=0.10\)</span>, <span class="math inline">\(H_{0}:\mu=10\)</span>, <span class="math inline">\(H_{A}:\mu&gt;10\)</span>, <span class="math inline">\(\sigma=5\)</span>, <span class="math inline">\(n=25\)</span>, and <span class="math inline">\(\mu_{A}=12\)</span>. <a href="zRevExAns/HypTest.html#power-calculations-2">See answer here</a></li>
-<li>Compute power given the following information: <span class="math inline">\(\alpha=0.01\)</span>, <span class="math inline">\(H_{0}:\mu=75\)</span>, <span class="math inline">\(H_{A}:\mu&gt;75\)</span>, <span class="math inline">\(\sigma=15\)</span>, <span class="math inline">\(n=30\)</span>, and <span class="math inline">\(\mu_{A}=82\)</span>. <a href="zRevExAns/HypTest.html#power-calculations-3">See answer here</a></li>
+<li>Compute power given the following information: <span class="math inline">\(\alpha=0.05\)</span>, <span class="math inline">\(H_{0}:\mu=50\)</span>, <span class="math inline">\(H_{A}:\mu&lt;50\)</span>, <span class="math inline">\(\sigma=20\)</span>, <span class="math inline">\(n=50\)</span>, and <span class="math inline">\(\mu_{A}=45\)</span>. <a href="zRevExAns/HypTesting.html#power-calculations-1">See answer here</a></li>
+<li>Compute power given the following information: <span class="math inline">\(\alpha=0.10\)</span>, <span class="math inline">\(H_{0}:\mu=10\)</span>, <span class="math inline">\(H_{A}:\mu&gt;10\)</span>, <span class="math inline">\(\sigma=5\)</span>, <span class="math inline">\(n=25\)</span>, and <span class="math inline">\(\mu_{A}=12\)</span>. <a href="zRevExAns/HypTesting.html#power-calculations-2">See answer here</a></li>
+<li>Compute power given the following information: <span class="math inline">\(\alpha=0.01\)</span>, <span class="math inline">\(H_{0}:\mu=75\)</span>, <span class="math inline">\(H_{A}:\mu&gt;75\)</span>, <span class="math inline">\(\sigma=15\)</span>, <span class="math inline">\(n=30\)</span>, and <span class="math inline">\(\mu_{A}=82\)</span>. <a href="zRevExAns/HypTesting.html#power-calculations-3">See answer here</a></li>
 </ol>
 <hr />
 </div>
