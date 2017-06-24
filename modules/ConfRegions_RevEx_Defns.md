@@ -16,11 +16,11 @@ You can click on each question to see an answer. Click on it again to close the 
 <div class="panel panel-default">
 <div class="panel-heading">
 <div class="panel-title">
-<a data-toggle="collapse" href="#CRConcept1">True or False -- A 95% confidence region can be constructed for $\bar{x}$?</a>
+<a data-toggle="collapse" href="#CRConcept1">True or False -- A 95% confidence region can be constructed for x&#772;?</a>
 </div>
 </div>
 <div id="CRConcept1" class="panel-collapse collapse">
-<div class="panel-body">FALSE, because $\bar{x}$ is a statistic and confidence regions are only constructed for parameters.</div>
+<div class="panel-body">FALSE, because x&#772; is a statistic and confidence regions are only constructed for parameters.</div>
 </div>
 </div>
 
@@ -38,11 +38,11 @@ You can click on each question to see an answer. Click on it again to close the 
 <div class="panel panel-default">
 <div class="panel-heading">
 <div class="panel-title">
-<a data-toggle="collapse" href="#CRConcept3">True or False -- A 95% confidence region can be constructed for $\sigma$?</a>
+<a data-toggle="collapse" href="#CRConcept3">True or False -- A 95% confidence region can be constructed for &sigma;?</a>
 </div>
 </div>
 <div id="CRConcept3" class="panel-collapse collapse">
-<div class="panel-body">TRUE, because $\sigma$ is a parameter, which confidence regions are computed for.</div>
+<div class="panel-body">TRUE, because &sigma; is a parameter, which confidence regions are computed for.</div>
 </div>
 </div>
 
@@ -86,7 +86,7 @@ You can click on each question to see an answer. Click on it again to close the 
 </div>
 </div>
 <div id="CRConcept7" class="panel-collapse collapse">
-<div class="panel-body">C, because the margin-of-error is smaller, and the confidence interval is narrower, for smaller values of $\sigma$.</div>
+<div class="panel-body">C, because the margin-of-error is smaller, and the confidence interval is narrower, for smaller values of &sigma;.</div>
 </div>
 </div>
 
@@ -97,7 +97,7 @@ You can click on each question to see an answer. Click on it again to close the 
 </div>
 </div>
 <div id="CRConcept8" class="panel-collapse collapse">
-<div class="panel-body">95%, because the $Z^{*}$ is smaller, the margin-of-error is smaller, and the confidence interval is narrower, for lower confidence values.</div>
+<div class="panel-body">95%, because the Z<sup>*</sup> is smaller, the margin-of-error is smaller, and the confidence interval is narrower, for lower confidence values.</div>
 </div>
 </div>
 
@@ -106,6 +106,7 @@ You can click on each question to see an answer. Click on it again to close the 
 ----
 
 ## Finding Z*
+
 You can click on each question to see an answer. Click on it again to close the answer.
 
 <div class="panel-group">
@@ -113,18 +114,18 @@ You can click on each question to see an answer. Click on it again to close the 
 <div class="panel panel-default">
 <div class="panel-heading">
 <div class="panel-title">
-<a data-toggle="collapse" href="#Zstar1">What is $Z^{*}$ for a 99% confidence interval?</a>
+<a data-toggle="collapse" href="#Zstar1">What is Z<sup>*</sup> for a 99% confidence interval?</a>
 </div>
 </div>
 <div id="Zstar1" class="panel-collapse collapse">
-<div class="panel-body">$\pm$2.576 as computed with distrib(0.995,type="q").</div>
+<div class="panel-body">&plusmn;2.576 as computed with distrib(0.995,type="q").</div>
 </div>
 </div>
 
 <div class="panel panel-default">
 <div class="panel-heading">
 <div class="panel-title">
-<a data-toggle="collapse" href="#Zstar2">What is $Z^{*}$ for a 92% lower confidence bound?</a>
+<a data-toggle="collapse" href="#Zstar2">What is Z<sup>*</sup> for a 92% lower confidence bound?</a>
 </div>
 </div>
 <div id="Zstar2" class="panel-collapse collapse">
@@ -135,7 +136,7 @@ You can click on each question to see an answer. Click on it again to close the 
 <div class="panel panel-default">
 <div class="panel-heading">
 <div class="panel-title">
-<a data-toggle="collapse" href="#Zstar3">What is $Z^{*}$ for a 90% upper confidence bound?</a>
+<a data-toggle="collapse" href="#Zstar3">What is Z<sup>*</sup> for a 90% upper confidence bound?</a>
 </div>
 </div>
 <div id="Zstar3" class="panel-collapse collapse">
@@ -146,18 +147,18 @@ You can click on each question to see an answer. Click on it again to close the 
 <div class="panel panel-default">
 <div class="panel-heading">
 <div class="panel-title">
-<a data-toggle="collapse" href="#Zstar4">What is $Z^{*}$ for a 98% confidence interval?</a>
+<a data-toggle="collapse" href="#Zstar4">What is Z<sup>*</sup> for a 98% confidence interval?</a>
 </div>
 </div>
 <div id="Zstar4" class="panel-collapse collapse">
-<div class="panel-body">$\pm$2.326 as computed with distrib(0.99,type="q").</div>
+<div class="panel-body">&plusmn;2.326 as computed with distrib(0.99,type="q").</div>
 </div>
 </div>
 
 <div class="panel panel-default">
 <div class="panel-heading">
 <div class="panel-title">
-<a data-toggle="collapse" href="#Zstar5">What is $Z^{*}$ for a 95% lower confidence bound?</a>
+<a data-toggle="collapse" href="#Zstar5">What is Z<sup>*</sup> for a 95% lower confidence bound?</a>
 </div>
 </div>
 <div id="Zstar5" class="panel-collapse collapse">
@@ -168,7 +169,7 @@ You can click on each question to see an answer. Click on it again to close the 
 <div class="panel panel-default">
 <div class="panel-heading">
 <div class="panel-title">
-<a data-toggle="collapse" href="#Zstar6">What is $Z^{*}$ for a 70% upper confidence bound?</a>
+<a data-toggle="collapse" href="#Zstar6">What is Z<sup>*</sup> for a 70% upper confidence bound?</a>
 </div>
 </div>
 <div id="Zstar6" class="panel-collapse collapse">
