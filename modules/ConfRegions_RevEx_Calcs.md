@@ -17,7 +17,7 @@ The managers of a wastewater treatment plant monitored the amount of biological 
   118   630    1600    2240   2504     3193    6023
 ```
 
- Use this information to construct and interpret (including describing what is meant by "confidence"") a proper confidence region for the mean BOD level.
+Use this information to construct and interpret (including describing what is meant by "confidence"") a proper confidence region for the mean BOD level.
 
 [See answer here](zRevExAns/ConfRegions_Calcs.html#bod-in-effluent)
 
@@ -26,7 +26,7 @@ The managers of a wastewater treatment plant monitored the amount of biological 
 ## Medical School Admissions
 <img src="zimgs/medschool_lecture.jpg" alt="Medical School Lecture" class="img-right">
 
-Admissions representatives at the University of Minnesota medical school were concerned that the average grade point average of applicants in non-science courses had dropped below 3.7. A sample of 40 of the most recent applicants indicated that the mean was 3.60. Information from the Association of American Medical Colleges suggested that the overall standard deviation was 0.35. Construct and interpret (including describing what is meant by "confidence"") a proper confidence region for the mean grade point average. Assume that $\alpha=0.05$.
+Admissions representatives at the University of Minnesota medical school were concerned that the average grade point average of applicants in non-science courses had dropped below 3.7. A sample of 40 of the most recent applicants indicated that the mean was 3.60. Information from the Association of American Medical Colleges suggested that the overall standard deviation was 0.35. Construct and interpret (including describing what is meant by "confidence") a proper confidence region for the mean grade point average. Assume that &alpha;=0.05.
 
 [See answer here](zRevExAns/ConfRegions_Calcs.html#medical-school-admissions)
 
@@ -35,7 +35,7 @@ Admissions representatives at the University of Minnesota medical school were co
 ## Banff Snow Depth
 <img src="zimgs/banff-snow.jpg" alt="Banff Snow" class="img-right">
 
-[Hebblewhite *et al.* (2000)](http://www.nrcresearchpress.com/doi/abs/10.1139/z02-058?journalCode=cjz#.WU7Rv1GQyDI) reported the mean snow pack height (in cm) for Banff (data are below). Assume that it is known that $\sigma$=15 cm.
+[Hebblewhite *et al.* (2000)](http://www.nrcresearchpress.com/doi/abs/10.1139/z02-058?journalCode=cjz#.WU7Rv1GQyDI) reported the mean snow pack height (in cm) for Banff (data are below). Assume that it is known that &sigma;=15 cm.
 
 ```
 29.00,45.51,30.18,45.83,39.54,80.39,32.64,32.89,
@@ -51,7 +51,7 @@ Compute a 99% confidence interval for the mean snow pack height. In addition, co
 ## Creatine Phosphate Concentrations
 <img src="zimgs/creatine_phosphate.jpg" alt="Creatine Phosphate" class="img-right">
 
-The table below contains the concentrations (International Units per liter) of creatine phosphokinase (an enzyme related to muscle and brain functions) in 36 male volunteers. Construct and interpret (including describing what is meant by "confidence") a proper confidence region for the population mean creatine phosphokinase assuming that the $H_{A}$ is a "greater than", $\alpha$=0.05, and $\sigma=40$.
+The table below contains the concentrations (International Units per liter) of creatine phosphokinase (an enzyme related to muscle and brain functions) in 36 male volunteers. Construct and interpret (including describing what is meant by "confidence") a proper confidence region for the population mean creatine phosphokinase assuming that the H<sub>A</sub> is a "greater than", &alpha;=0.05, and &sigma;=40.
 
 ```
 121  82 100 151  68  58  95 145  64
@@ -74,7 +74,7 @@ The following values are the maximum gauge heights of the Bois Brule River in Br
 1.99 2.11 1.98 1.76 1.69 1.99 1.86 1.53
 ```
 
-Construct and interpret (including describing what is meant by "confidence") a proper confidence region for the population mean creatine phosphokinase assuming that the $H_{A}$ is a "not equals", $\alpha$=0.05, and $\sigma=0.20$.
+Construct and interpret (including describing what is meant by "confidence") a proper confidence region for the population mean creatine phosphokinase assuming that the H<sub>A</sub> is a "not equals", &alpha;=0.05, and &sigma;=0.20.
  
 [See answer here](zRevExAns/ConfRegions_Calcs.html#brule-river-gauge-heights)
 
@@ -90,7 +90,7 @@ The following values are the population density (number of people per acre of la
 127.0  27.6  10.2  54.6  28.8  30.1  20.2
 ```
 
-Construct and interpret (including describing what is meant by "confidence") a proper confidence region for the population mean creatine phosphokinase assuming that the $H_{A}$ is a "less than", $\alpha$=0.10, and $\sigma=125$.
+Construct and interpret (including describing what is meant by "confidence") a proper confidence region for the population mean creatine phosphokinase assuming that the H<sub>A</sub> is a "less than", &alpha;=0.10, and &sigma;=125.
 [See answer here](zRevExAns/ConfRegions_Calcs.html#population-density-in-wisconsin-counties)
 
 ----
