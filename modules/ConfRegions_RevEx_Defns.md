@@ -1,25 +1,9 @@
 ---
 layout: page
-title: Review Exercise
+title: Review Exercises I
 subtitle: Confidence Regions
-author: Derek H. Ogle
 css: "/css/modules.css"
-output:
-  html_document:
-    self_contained: no
 ---
-
-```{r echo=FALSE, eval=FALSE}
-# Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
-source("../rhelpers/rhelpers.R")
-modHTML("ConfRegions_RevEx_Defns")
-```
-
-```{r echo=FALSE, results='hide', message=FALSE}
-library(NCStats)
-source("../rhelpers/knitr_setup.R")
-```
 
 ----
 

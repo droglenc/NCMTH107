@@ -33,7 +33,7 @@ A major goal of inferential statistics is to estimate the value of a parameter f
 
 Use the materials below to answer the questions on [this preparation guide](ConfRegions_Prep).
 
-* [Reading](../book/14_IntroStats.pdf)
+* [Reading](../book/Confidence Regions.pdf)
 * Video: [Introduction to Confidence Intervals](https://www.youtube.com/v/27iSnzss2wM?version=3&autoplay=1){:target="_blank"} [7 mins]
 * Video: [Interpreting Confidence Intervals](https://www.youtube.com/v/JYP6gc--sGQ?version=3&autoplay=1){:target="_blank"} [6 mins]
 * Video: [Constructing a Confidence Interval](https://www.youtube.com/v/KG921rfbTDw?version=3&autoplay=1){:target="_blank"} [10 mins] [**Skip from 7:49 to 8:28.**]

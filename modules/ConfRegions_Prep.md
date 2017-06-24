@@ -22,7 +22,7 @@ To prepare for this module, please answer the following questions from the prepa
 1. What decisions can a statistician make that will result in a narrower confidence interval? Which decision is "better"?
 1. What is the formula for computing a desired sample size? What do you need to know or be able to define to use this formula?
 1. What R code do you use to find the scaling factor used to construct a confidence region?
-1. Find $Z^{*}$ (to three decimals) for each situation in the table below.
+1. Find Z<sup>*</sup> (to three decimals) for each situation in the table below.
 
 |  C  |   Interval   | Lower Bound | Upper Bound |
 |:---:|:------------:|:-----------:|-------------|
