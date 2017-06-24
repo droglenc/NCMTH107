@@ -27,3 +27,10 @@ For each situation below, (a) identify the level of confidence; (b) whether a lo
 Researchers examined the size of two different species of beetles. They hypothesized that the thorax length of the *Halticus oleracea* species would be greater than 190 mm. The data for their study is in Beetles.csv ([file](https://github.com/droglenc/NCData/raw/master/Beetles.csv), [meta](https://github.com/droglenc/NCData/blob/master/Beetles_meta.txt)).  Use this information to (i) construct an appropriate confidence region assuming &sigma;=14 and &alpha;=0.05, and (ii) summarize your findings in terms of the beetle's thorax size.
 
 ----
+
+## Calf Growth
+<img src="zimgs/calf.jpg" alt="Calf" class="img-right">
+
+Calf growth early in life should be approximately 1000 g per day. Owners of a large cattle farm want to assure that their calves are growing at approximately this rate because slow growth might suggest a feeding problem and fast growth would suggest a future size problem (i.e., too many big animals in the available space). The owners want to sample enough of their calves so that they can estimate the growth rate to within 50 g per day, with 99% confidence, assuming that variabilty between individual calves is approximately 200 g per day. Calculate their required sample size.
+
+----
