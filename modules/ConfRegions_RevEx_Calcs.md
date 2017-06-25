@@ -64,10 +64,10 @@ The table below contains the concentrations (International Units per liter) of c
 
 ----
 
-## Brule River Gauge Heights
+## Brule River Gage Heights
 <img src="zimgs/BruleRiver.jpg" alt="Brule River" class="img-right">
 
-The following values are the maximum gauge heights of the Bois Brule River in Brule, WI from 10-25Feb05. 
+The following values are the maximum gage heights (feet) of the Bois Brule River in Brule, WI from 10-25Feb05. 
 
 ```
 1.56 1.54 1.54 1.57 1.58 1.61 1.60 1.69

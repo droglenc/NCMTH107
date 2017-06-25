@@ -1,0 +1,200 @@
+---
+title: "Review Exercise Key"
+subtitle: "Confidence Regions"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3
+    fig_width: 3.5
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/zRevExAns/")
+source("../../rhelpers/rhelpers.R")
+modHTML("ConfRegions_Calcs")
+```
+```{r echo=FALSE}
+library(NCStats)
+```
+
+----
+
+## BOD in Effluent
+```{r CIbod, echo=FALSE, results='hide', fig.show='hide'}
+zstar <- distrib(0.90,type="q",lower.tail=FALSE)
+```
+
+1. 90% (=100(1-0.10))
+1. Lower confidence bound (because $H_{A}$ is "greater than").
+1. $Z^{*}$=`r formatC(zstar,format="f",digits=3)`
+1. 2504`r formatC(zstar,format="f",digits=3)`$\frac{1200}{\sqrt(118)}$ = `r formatC(2504+zstar*1200/sqrt(118),format="f",digits=0)`.
+1. I am 90% confident that the population mean BOD is greater than `r formatC(2504+zstar*1200/sqrt(118),format="f",digits=0)`. By confident I mean that 90% of all 90% confidence regions will contain the true population mean.
+
+### R Appendix
+```{r eval=FALSE}
+library(NCStats)
+<<CIbod>>
+```
+
+----
+
+## Medical School Admissions
+```{r CImed, echo=FALSE, results='hide', fig.show='hide'}
+zstar <- distrib(0.95,type="q",lower.tail=FALSE)
+```
+
+1. 95% (=100(1-0.05))
+1. Upper confidence bound (because $H_{A}$ is "less than").
+1. $Z^{*}$=`r formatC(zstar,format="f",digits=3)`
+1. 3.60+`r formatC(zstar,format="f",digits=3)`$\frac{0.35}{\sqrt(40)}$ = `r formatC(3.6+zstar*0.35/sqrt(40),format="f",digits=2)`.
+1. I am 95% confident that the population mean GPA is less than `r formatC(3.6+zstar*0.35/sqrt(40),format="f",digits=2)`. By confident I mean that 95% of all 95% confidence regions will contain the true population mean.
+
+### R Appendix
+```{r eval=FALSE}
+library(NCStats)
+<<CImed>>
+```
+
+----
+
+## Banff Snow Depth
+```{r echo=FALSE}
+banff <- data.frame(snow=c(29.00,45.51,30.18,45.83,39.54,80.39,32.64,32.89,
+                           46.84,45.79,62.92,67.24,30.96,46.08,33.28))
+```
+```{r CIbanff, echo=FALSE, results='hide', fig.show='hide'}
+Summarize(~snow,data=banff,digits=2)
+zstar <- distrib(0.995,type="q")
+```
+
+1. 99%
+1. Confidence interval.
+1. $Z^{*}$=`r formatC(zstar,format="f",digits=3)`
+1. `r formatC(mean(banff$snow),format="f",digits=2)` $\pm$ `r formatC(zstar,format="f",digits=3)` $\frac{15}{\sqrt(15)}$ = (`r formatC(mean(banff$snow)-zstar*15/sqrt(15),format="f",digits=2)`,`r formatC(mean(banff$snow)+zstar*15/sqrt(15),format="f",digits=2)`).
+1. I am 95% confident that the population mean snowpack depth is between `r formatC(mean(banff$snow)-zstar*15/sqrt(15),format="f",digits=2)` and `r formatC(mean(banff$snow)+zstar*15/sqrt(15),format="f",digits=2)` cm. By confident I mean that 99% of all 99% confidence regions will contain the true population mean.
+
+### R Appendix
+```{r eval=FALSE}
+library(NCStats)
+banff <- read.csv("data/banff.csv")
+<<CIbanff>>
+```
+
+----
+
+## Creatine Phosphate Concentrations
+```{r echo=FALSE}
+cp <- data.frame(conc=c(121,82,100,151,68,58,95,145,64,
+                        119,104,110,113,118,203,62,83,67,
+                        201,101,163,84,57,139,60,78,94,
+                        93,92,110,25,123,70,48,95,42))
+```
+```{r CIcp, echo=FALSE, results='hide', fig.show='hide'}
+Summarize(~conc,data=cp,digits=1)
+zstar <- distrib(0.95,type="q",lower.tail=FALSE)
+```
+
+1. 95% (=100(1-0.05)).
+1. Lower confidence bound (because $H_{A}$ is a "greater than").
+1. $Z^{*}$=`r formatC(zstar,format="f",digits=3)`.
+1. `r formatC(mean(cp$conc),format="f",digits=1)``r formatC(zstar,format="f",digits=3)`$\frac{40}{\sqrt(36)}$ = `r formatC(mean(cp$conc)+zstar*40/sqrt(36),format="f",digits=1)`.
+1. I am 95% confident that the population mean creatine phosphate concentration is greater than `r formatC(mean(cp$conc)+zstar*40/sqrt(36),format="f",digits=1)`. By confident I mean that 95% of all 95% confidence regions will contain the true population mean.
+
+### R Appendix
+```{r eval=FALSE}
+library(NCStats)
+cp <- read.csv("data/creatine.csv")
+<<CIcp>>
+```
+
+----
+
+## Brule River Gauge Heights
+```{r echo=FALSE}
+br <- data.frame(hts=c(1.56,1.54,1.54,1.57,1.58,1.61,1.60,1.69,
+                       1.99,2.11,1.98,1.76,1.69,1.99,1.86,1.53))
+```
+```{r CIbr, echo=FALSE, results='hide', fig.show='hide'}
+Summarize(~hts,data=br,digits=2)
+zstar <- distrib(0.975,type="q")
+```
+
+1. 95% (=100(1-0.05)).
+1. Confidence interval (because $H_{A}$ is a "not equals").
+1. $Z^{*}$= $\pm$ `r formatC(zstar,format="f",digits=3)`.
+1. `r formatC(mean(br$hts),format="f",digits=2)` $\pm$ `r formatC(zstar,format="f",digits=3)`$\frac{0.2}{\sqrt(16)}$ = (`r formatC(mean(br$hts)-zstar*0.2/sqrt(16),format="f",digits=2)`,`r formatC(mean(br$hts)+zstar*0.2/sqrt(16),format="f",digits=2)`).
+1. I am 95% confident that the population mean gauge height is between `r formatC(mean(br$hts)-zstar*0.2/sqrt(16),format="f",digits=2)` and `r formatC(mean(br$hts)+zstar*0.2/sqrt(16),format="f",digits=2)` feet. By confident I mean that 95% of all 95% confidence regions will contain the true population mean.
+
+### R Appendix
+```{r eval=FALSE}
+library(NCStats)
+br <- read.csv("data/bruleriver.csv")
+<<CIbr>>
+```
+
+----
+
+## Population Density in Wisconsin Counties
+```{r echo=FALSE}
+wic <- data.frame(dens=c(429.0,67.8,52.1,97.4,57.9,354.9,16.2,19.1,
+                         127.0,27.6,10.2,54.6,28.8,30.1,20.2))
+```
+```{r CIwic, echo=FALSE, results='hide', fig.show='hide'}
+Summarize(~dens,data=wic,digits=2)
+zstar <- distrib(0.90,type="q")
+```
+
+1. 90% (=100(1-0.10)).
+1. Upper confidence bound (because $H_{A}$ is a "less than").
+1. $Z^{*}$=`r formatC(zstar,format="f",digits=3)`.
+1. `r formatC(mean(wic$dens),format="f",digits=1)`+`r formatC(zstar,format="f",digits=3)`$\frac{125}{\sqrt(15)}$ = `r formatC(mean(wic$dens)+zstar*125/sqrt(15),format="f",digits=1)`.
+1. I am 90% confident that the population mean density of people per county in Wisconsin is less than `r formatC(mean(wic$dens)+zstar*125/sqrt(15),format="f",digits=1)`. By confident I mean that 90% of all 90% confidence regions will contain the true population mean.
+
+### R Appendix
+```{r eval=FALSE}
+library(NCStats)
+cp <- read.csv("data/creatine.csv")
+<<CIcp>>
+```
+
+----
+
+## Pebble Size
+```{r npebble, echo=FALSE, results='hide', fig.show='hide'}
+zstar <- distrib(0.995,type="q")
+me <- 0.1
+sigma <- 4
+( n <- (zstar*sigma/me)^2 )
+```
+
+The required sample size is `r formatC(ceiling(n),format="f",digits=0,big.mark=",")` pebbles.
+
+### R Appendix
+```{r eval=FALSE}
+library(NCStats)
+<<npebble>>
+```
+
+----
+
+## Internet Usage
+```{r nisp, echo=FALSE, results='hide', fig.show='hide'}
+zstar <- distrib(0.975,type="q")
+me <- 1
+sigma <- 6.95
+( n <- (zstar*sigma/me)^2 )
+```
+
+The required sample size is `r ceiling(n)` households.
+
+### R Appendix
+```{r eval=FALSE}
+library(NCStats)
+<<nisp>>
+```
+
+----
