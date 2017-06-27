@@ -19,6 +19,7 @@ To prepare for this module, please answer the following questions from the prepa
 1. What is the formula to compute a confidence region in a 1-Sample Z-Test?
 1. What are the assumptions of a 1-Sample Z-Test?
 1. What characteristics define when a 1-Sample Z-Test will be used?
+1. What R function is used to perform a 1-Sample Z-Test with raw data?
 
 
 ----

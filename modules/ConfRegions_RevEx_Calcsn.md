@@ -24,3 +24,12 @@ An investment group wants to start an Internet Service Provider (ISP) and, for t
 [See answer here](zRevExAns/ConfRegions_Calcs.html#internet-usage)
 
 ----
+
+## Counting Plants in Plots
+<img src="zimgs/counting-plants.jpg" alt="Counting Plants" class="img-right">
+
+Suppose that a plant ecologist is to examine a very large tract of land that has been subdivided into 1400 plots of 10 m<sup>2</sup> (10 square meters). The researcher wants to determine, with 90% confidence, the mean density of plants per plot for the entire tract of land to within 10 plants per plot. A pilot study indicated that the standard deviation was approximately 50 plants per plot. Determine how many 10 m<sup>2</sup> plots the researcher should examine to reach her stated goals.
+
+[See answer here](zRevExAns/ConfRegions_Calcs.html#counting-plants-in-plots)
+
+----

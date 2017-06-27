@@ -198,3 +198,23 @@ library(NCStats)
 ```
 
 ----
+
+## Counting Plants in Plots
+
+
+\vspace{24pt}
+\section*{Counting Plants in Plots}
+```{r nplants, echo=FALSE,results="hide", fig.show="hide"}
+me <- 10
+sd <- 50
+( zstar <- distrib(0.95,type="q") )
+( n <- (zstar*sd/me)^2 )
+```
+
+A total of `r formatC(ceiling(n),format="f",digits=0)` plots would be required.
+
+### R Appendix
+```{r eval=FALSE}
+library(NCStats)
+<<nplants>>
+```

@@ -138,6 +138,19 @@ sigma &lt;- 6.95
 <hr />
 </div>
 </div>
+<div id="counting-plants-in-plots" class="section level2">
+<h2>Counting Plants in Plots</h2>
+
+<p>A total of 68 plots would be required.</p>
+<div id="r-appendix-8" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>library(NCStats)
+me &lt;- 10
+sd &lt;- 50
+( zstar &lt;- distrib(0.95,type=&quot;q&quot;) )
+( n &lt;- (zstar*sd/me)^2 )</code></pre>
+</div>
+</div>
 
 
 
