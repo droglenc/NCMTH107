@@ -1,20 +1,21 @@
 ---
 layout: page
 title: Review Exercises
-subtitle: 1-Sample Z-Test
+subtitle: 1-Sample t-Test
 css: "/css/modules.css"
 ---
 
 &nbsp;
 
 1. [General t Distribution Questions](#general-t-distribution-questions)
-1. [Achievement Test Scores](#achievement-test-scores)
-1. [Salaries of College Graduates](#salaries-of-college-graduates)
-1. [Fishing Line Strength](#fishing-line-strength)
-1. [Strawberries Produced](#strawberries-produced)
-1. [Putting Together Toys](#putting-together-toys)
-1. [Boat Traffic](#boat-traffic)
-1. [Golden Triangle in Beads?](#golden-triangle-in-beads)
+1. Application Questions
+    1. [Achievement Test Scores](#achievement-test-scores)
+    1. [Salaries of College Graduates](#salaries-of-college-graduates)
+    1. [Fishing Line Strength](#fishing-line-strength)
+    1. [Strawberries Produced](#strawberries-produced)
+    1. [Putting Together Toys](#putting-together-toys)
+    1. [Boat Traffic](#boat-traffic)
+    1. [Golden Triangle in Beads?](#golden-triangle-in-beads)
 
 &nbsp;
 
@@ -22,7 +23,6 @@ css: "/css/modules.css"
 
 &nbsp;
 
-&nbsp;
 
 ## General t Distribution Questions
 
