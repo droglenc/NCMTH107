@@ -43,7 +43,7 @@ Use the materials below to answer the questions on [this preparation guide](1Sam
 ## Practice
 
 * [Review Exercises](1Samplet_RevEx)
-* Class Exercises: [1](1Samplet_CE1) / [2](1Samplet_CE2) / [3](1Samplet_CE3) / [4](1Samplet_CE4)
+* Class Exercises: [1](1Samplet_CE1) / [2](1Samplet_CE2) (*time permiting* ... [3](1Samplet_CE3) / [4](1Samplet_CE4) )
 * [Homework Assignment](1Samplet_HW)
 
 ----
