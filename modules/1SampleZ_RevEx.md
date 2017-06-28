@@ -7,14 +7,19 @@ css: "/css/modules.css"
 
 ----
 
-1. [Cactus Growth](#cactus-growth)
-1. [Length of Northern Pike](#length-of-northern-pike)
-1. [Chronic Myofascial Pain Syndrome](#chronic-myofascial-pain-syndrome)
-1. [Cholesterol Levels](#cholesterol-levels)
+&nbsp;
+
+1. Application Questions
+    1. [Cactus Growth](#cactus-growth)
+    1. [Length of Northern Pike](#length-of-northern-pike)
+    1. [Chronic Myofascial Pain Syndrome](#chronic-myofascial-pain-syndrome)
+    1. [Cholesterol Levels](#cholesterol-levels)
+
+&nbsp;
 
 ----
-----
-----
+
+&nbsp;
 
 ## Cactus Growth
 <img src="zimgs/cactus.jpg" alt="Cactus" class="img-right">
