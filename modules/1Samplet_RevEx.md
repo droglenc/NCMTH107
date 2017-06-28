@@ -5,6 +5,8 @@ subtitle: 1-Sample Z-Test
 css: "/css/modules.css"
 ---
 
+&nbsp;
+
 1. [General t Distribution Questions](#general-t-distribution-questions)
 1. [Achievement Test Scores](#achievement-test-scores)
 1. [Salaries of College Graduates](#salaries-of-college-graduates)
@@ -14,13 +16,17 @@ css: "/css/modules.css"
 1. [Boat Traffic](#boat-traffic)
 1. [Golden Triangle in Beads?](#golden-triangle-in-beads)
 
-<hr size="10">
+&nbsp;
+
+<hr size="30">
 
 &nbsp;
 
 &nbsp;
 
 ## General t Distribution Questions
+
+Click on each question to see the answer, click on it again to close the answer.
 
 <div class="panel-group">
 
