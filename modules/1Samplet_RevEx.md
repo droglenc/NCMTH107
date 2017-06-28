@@ -5,20 +5,20 @@ subtitle: 1-Sample Z-Test
 css: "/css/modules.css"
 ---
 
-----
-
 1. [General t Distribution Questions](#general-t-distribution-questions)
 1. [Achievement Test Scores](#achievement-test-scores)
 1. [Salaries of College Graduates](#salaries-of-college-graduates)
 1. [Fishing Line Strength](#fishing-line-strength)
 1. [Strawberries Produced](#strawberries-produced)
 1. [Putting Together Toys](#putting-together-toys)
-1. [Boat Traffice](#boat-traffic)
-1. [Golden Triangle in Beads?](#golden-triangle-in-beads?)
+1. [Boat Traffic](#boat-traffic)
+1. [Golden Triangle in Beads?](#golden-triangle-in-beads)
 
-----
-----
-----
+<hr size="10">
+
+&nbsp;
+
+&nbsp;
 
 ## General t Distribution Questions
 
@@ -152,7 +152,7 @@ The toy industry rates toys regarding their ease for being put together in three
 ----
 
 
-## Boat Traffice
+## Boat Traffic
 <img src="zimgs/Yahara-boats.jpg" alt="Yahara Boats" class="img-right">
 
 One of the dominant uses of Madison area lakes is for boating. To develop a long-term data set on the temporal fluctuations and trends in such activity, the Long Term Ecological Research (LTER) project obtained records of boat traffic that passes through the locks at the head of the Yahara River on its stretch between Lake Mendota and Lake Monona. These data in [Yahara.csv](https://raw.githubusercontent.com/droglenc/NCData/master/Yahara.csv) have been collected nearly daily from April through October since 1976. Use these data to determine, at the 5\% level, if the mean total number of boats passing through the locks during the months of June, July, and August of 2005 is greater than 75. HINT: create a new data frame that contains just the data for this period (i.e., the data file contains more data than is needed for this question). I suggest that you do this in three separate steps -- isolate 2005 data, isolate data for months after May (5), and then isolate data for months before September (9).
@@ -167,6 +167,6 @@ One of the dominant uses of Madison area lakes is for boating. To develop a long
 
 The [golden rectangle](http://en.wikipedia.org/wiki/Golden_rectangle) is a rectangle with a length-to-width ratio of 1:1.618, or equivalently, a width-to-length ratio of 0.618:1. The golden rectangle is evident in several works by ancient Greeks and Egyptians. Anthropologists measured the width-to-length ratios of beaded rectangles used by the Shoshoni Indians of America to decorate their leather goods. Use their data in [Shoshoni.csv](https://raw.githubusercontent.com/droglenc/NCData/master/Shoshoni.csv) to determine, at the 5% level, if the golden rectangle is evident in the beadwork of the Shoshonis.
 
-[See answer here](zRevExAns/1Samplet.html#golden-triangle-in-beads?)
+[See answer here](zRevExAns/1Samplet.html#golden-triangle-in-beads)
 
 ----
