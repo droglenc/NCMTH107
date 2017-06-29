@@ -1,0 +1,241 @@
+---
+layout: page
+title: "Review Exercise Key"
+subtitle: "1-Sample t-Test"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="achievement-test-scores" class="section level2">
+<h2>Achievement Test Scores</h2>
+<ol>
+<li><span class="math inline">\(\alpha\)</span> = 0.05.</li>
+<li><span class="math inline">\(H_{O}:\mu\)</span>=80, <span class="math inline">\(H_{A}:\mu&gt;\)</span> 80 where <span class="math inline">\(\mu\)</span> is the average achievement test score for all students at the superintendent’s school.</li>
+<li>A one-sample t-test is required because a quantitative variable (achievement test score) was measured on individuals from one population (one school), the population mean is compare to a specific value in the null hypothesis, and <span class="math inline">\(\sigma\)</span> is UNknown.</li>
+<li>An observational study with randomly selected subjects was used.</li>
+<li>The <span class="math inline">\(\sigma\)</span> is unknown. The sample size is not greater than 40; however, it is greater than 15. Unfortunately the only clue that the sample distribution is not strongly skewed is the fact that the mean and median are approximately equal. I would prefer to have a histogram to look at.</li>
+<li>The statistic is <span class="math inline">\(\bar{x}\)</span> = 83.2.</li>
+<li>The test statistic is <span class="math inline">\(t=\frac{83.2-80}{\frac{5.5}{\sqrt{32}}}\)</span> = 3.29 with 32-1 = 31 df.</li>
+<li>The p-value is <span class="math inline">\(0.0013\)</span>.</li>
+<li>The <span class="math inline">\(H_{O}\)</span> is rejected because the p-value <span class="math inline">\(&lt; \alpha\)</span>.</li>
+<li>It appears that the mean achievement score of all students at the superintendent’s school is greater than 80 points.</li>
+<li>A 95% lower confidence bound is warranted in this situation. The <span class="math inline">\(t^{*}\)</span> = -1.696. Thus, 83.2-1.696 <span class="math inline">\(\frac{5.5}{\sqrt{32}}\)</span> or 83.2-1.65 = 81.455. One is 95% confident that the mean achievement score for all students at the superintendent’s school is greater than 81.46 points.</li>
+</ol>
+<div id="r-appendix" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>( pval &lt;- distrib(3.29,distrib=&quot;t&quot;,df=31,lower.tail=FALSE) )
+( tstar &lt;- distrib(0.95,distrib=&quot;t&quot;,type=&quot;q&quot;,df=31,lower.tail=FALSE) )</code></pre>
+<hr />
+</div>
+</div>
+<div id="salaries-of-college-graduates" class="section level2">
+<h2>Salaries of College Graduates</h2>
+<ol>
+<li><span class="math inline">\(\alpha\)</span> = 0.10.</li>
+<li><span class="math inline">\(H_{O}:\mu\)</span> = 32, <span class="math inline">\(H_{A}:\mu &gt;\)</span> 32 where <span class="math inline">\(\mu\)</span> is the mean salary in 1000s of dollars.</li>
+<li>A one-sample t-test is required because a quantitative variable (salary) was measured on individuals from one population (Northwestern University), the population mean is compared to a specific value in the null hypothesis, and <span class="math inline">\(\sigma\)</span> is UNknown.</li>
+<li>An observational study with apparent random selection of individuals (background says “random surveys”“) was used.</li>
+<li>The <span class="math inline">\(\sigma\)</span> is unknown. The sample size is greater than 40; thus, the sampling distribution of the test statistic should follow a t-distribution.</li>
+<li>The statistic is <span class="math inline">\(\bar{x}\)</span> = 32.511.</li>
+<li>The test statistic is <span class="math inline">\(t=\frac{32.511-32}{\frac{1.713}{\sqrt{42}}}\)</span> = 2.085 with 42-1 = 41 df.</li>
+<li>The p-value is <span class="math inline">\(0.0301\)</span>.</li>
+<li>The <span class="math inline">\(H_{O}\)</span> is rejected because the p-value <span class="math inline">\(&lt; \alpha\)</span>.</li>
+<li>It appears that the average salary for all recent graduates from the College of Liberal Arts is greater than $32,000; thus, the Dean’s statement is supported.</li>
+<li>A 90% lower confidence bound is warranted in this situation. The <span class="math inline">\(t^{*}\)</span> = -1.303 Thus, 32.511-1.303 <span class="math inline">\(\frac{1.713}{\sqrt{42}}\)</span> or 32.511-0.344 = 32.167. One is 90% confident that the mean salary for all recent graduates from the College of Liberal Arts is greater than $32,167.</li>
+</ol>
+<div id="r-appendix-1" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>( pval &lt;- distrib(2.085,distrib=&quot;t&quot;,df=41,lower.tail=FALSE) )
+( tstar &lt;- distrib(0.90,distrib=&quot;t&quot;,type=&quot;q&quot;,df=41,lower.tail=FALSE) )</code></pre>
+<hr />
+</div>
+</div>
+<div id="fishing-line-strength" class="section level2">
+<h2>Fishing Line Strength</h2>
+<ol>
+<li><span class="math inline">\(\alpha\)</span> = 0.10.</li>
+<li><span class="math inline">\(H_{O}:\mu\)</span> = 6, <span class="math inline">\(H_{A}:\mu &lt;\)</span> 6 where <span class="math inline">\(\mu\)</span> is the mean breaking weight of the fishing line.</li>
+<li>A one-sample t-test is required because a quantitative variable (breaking weight) was measured on individuals from one population (one type of line), the population mean is compared to a specific value in the null hypothesis, and <span class="math inline">\(\sigma\)</span> is UNknown.</li>
+<li>An experimental study with randomly selected pieces of line was used.</li>
+<li>The <span class="math inline">\(\sigma\)</span> is unknown. The sample size (=20) is not greater than 40, however, it is greater than 15. The histogram suggests that the sample distribution is roughly symmetric (Figure 1). Thus, the assumptions are adequately met and the sampling distribution of the test statistic should follow a t-distribution.</li>
+<li>The statistic is <span class="math inline">\(\bar{x}\)</span> = 5.89 (Table 1).</li>
+<li>The test statistic is t = -0.841 with 19 df (Table 1).</li>
+<li>The p-value is <span class="math inline">\(0.2054\)</span> (Table 1).</li>
+<li>The <span class="math inline">\(H_{O}\)</span> is not rejected because the p-value <span class="math inline">\(&gt; \alpha\)</span>.</li>
+<li>It does not appear that the line breaks at average pressures less than 6 lbs; the manufacturer’s claim is supported.</li>
+<li>A confidence region is not required because <span class="math inline">\(H_{0}\)</span> was not rejected.</li>
+</ol>
+<p><img src="1Samplet_files/figure-html/histFLS-1.png" width="336" /></p>
+<p>Figure 1: Histogram of the breaking strength (lbs) of 6-lb fishing line.</p>
+<p>Table 1: Results of 1-Sample t-Test for breaking strength (lbs) of 6-lb fishing line.</p>
+<pre><code>t = -0.8412, df = 19, p-value = 0.2054
+90 percent confidence interval:
+     -Inf 6.063623 
+sample estimates:
+mean of x 
+     5.89 </code></pre>
+<div id="r-appendix-2" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>fl &lt;- read.csv(&quot;data/FishingLine.csv&quot;)
+hist(~lbs,data=fl,xlab=&quot;Fishing Line Break Weight (lbs)&quot;)
+( fl.t &lt;- t.test(fl$lbs,mu=6,alt=&quot;less&quot;,conf.level=0.90) )</code></pre>
+<hr />
+</div>
+</div>
+<div id="strawberries-produced" class="section level2">
+<h2>Strawberries Produced</h2>
+<ol>
+<li><span class="math inline">\(\alpha\)</span> = 0.10.</li>
+<li><span class="math inline">\(H_{O}:\mu\)</span> = 12, <span class="math inline">\(H_{A}:\mu &lt;\)</span> 12 where <span class="math inline">\(\mu\)</span> is the mean number of strawberries produced per plant.</li>
+<li>A one-sample t-test is required because a quantitative variable (number of berries) was measured on individuals from one population (just my strawberries), the population mean is compared to a specific value in the null hypothesis, and <span class="math inline">\(\sigma\)</span> is UNknown.</li>
+<li>An observational study with randomly selected individuals was used.</li>
+<li>The <span class="math inline">\(\sigma\)</span> is unknown. The sample size (=50) is greater than 40. Thus, the sampling distribution of the test statistic should follow a t-distribution.</li>
+<li>The statistic is <span class="math inline">\(\bar{x}\)</span> = 10.20 (Table 2).</li>
+<li>The test statistic is t = -2.420 with 49 df (Table 2).</li>
+<li>The p-value is <span class="math inline">\(0.0096\)</span> (Table 2).</li>
+<li>The <span class="math inline">\(H_{O}\)</span> is rejected because the p-value <span class="math inline">\(&lt; \alpha\)</span>.</li>
+<li>It appears that the plants produce fewer than 12 berries per plant, on average. The companies claim does not seem to be supported.</li>
+<li>A 90% upper confidence bound is 11.17. Thus, one is 90% confident that the mean number of berries produces is less than 11.17 (Table 2).</li>
+</ol>
+<p>Table 2: Results of 1-Sample t-Test for number of strawberries produced.</p>
+<pre><code>t = -2.4195, df = 49, p-value = 0.009649
+90 percent confidence interval:
+     -Inf 11.16645 
+sample estimates:
+mean of x 
+     10.2 </code></pre>
+<div id="r-appendix-3" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>sb &lt;- read.csv(&quot;data/Strawberries.csv&quot;)
+( sb.t &lt;- t.test(sb$berries,mu=12,alt=&quot;less&quot;,conf.level=0.90) )</code></pre>
+<hr />
+</div>
+</div>
+<div id="putting-together-toys" class="section level2">
+<h2>Putting Together Toys</h2>
+<ol>
+<li><span class="math inline">\(\alpha\)</span> = 0.10.</li>
+<li><span class="math inline">\(H_{O}:\mu\)</span> = 20, <span class="math inline">\(H_{A}:\mu &gt;\)</span> 20 where <span class="math inline">\(\mu\)</span> is the mean time to put the toy together.</li>
+<li>A one-sample t-test is required because a quantitative variable was measured (time) on individuals from one population (this toy), the population mean is compared to a specific value in the null hypothesis, and <span class="math inline">\(\sigma\)</span> is UNknown.</li>
+<li>An observational study with randomly selected individuals was used.</li>
+<li>The <span class="math inline">\(\sigma\)</span> is unknown. The sample size (=34) is not greater than 40, however it is greater than 15. The histogram suggests that the sample distribution is roughly symmetric (Figure 2). Thus, the assumptions are adequately met and the sampling distribution of the test statistic should follow a t-distribution.</li>
+<li>The statistic is <span class="math inline">\(\bar{x}\)</span> = 20.94 (Table 3).</li>
+<li>The test statistic is t = 0.953 with 33 df (Table 3).</li>
+<li>The p-value is <span class="math inline">\(0.1737\)</span> (Table 3).</li>
+<li>The <span class="math inline">\(H_{O}\)</span> is not rejected because the p-value <span class="math inline">\(&gt; \alpha\)</span>.</li>
+<li>It appears that the toy does not take more than 20 minutes, on average, to assemble; thus, this toy should not be rated as “difficult” to assemble.</li>
+<li>No confidence region is required because <span class="math inline">\(H_{0}\)</span> was not rejected.</li>
+</ol>
+<p><img src="1Samplet_files/figure-html/histTT-1.png" width="336" /></p>
+<p>Figure 2: Histogram of the amount of time needed to put a toy together.</p>
+<p>Table 3: Results of 1-Sample t-Test for the amount of time needed to put a toy together.</p>
+<pre><code>t = 0.9532, df = 33, p-value = 0.1737
+90 percent confidence interval:
+ 19.64993      Inf 
+sample estimates:
+mean of x 
+ 20.94118 </code></pre>
+<div id="r-appendix-4" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>tt &lt;- read.csv(&quot;data/ToyTime.csv&quot;)
+hist(~time,data=tt,xlab=&quot;Time to Assemble Toy (mins)&quot;)
+( tt.t &lt;- t.test(tt$time,mu=20,alt=&quot;greater&quot;,conf.level=0.90) )</code></pre>
+<hr />
+</div>
+</div>
+<div id="boat-traffic" class="section level2">
+<h2>Boat Traffic</h2>
+<ol>
+<li><span class="math inline">\(\alpha\)</span> = 0.05.</li>
+<li><span class="math inline">\(H_{O}:\mu\)</span> = 75, <span class="math inline">\(H_{A}:\mu &gt;\)</span> 75 where <span class="math inline">\(\mu\)</span> is the mean number of boats through the locks.</li>
+<li>A one-sample t-test is required because a quantitative variable (number of boats) was measured on individuals from one population (Yahara locks), the population mean is compare to a specific value in the null hypothesis, and <span class="math inline">\(\sigma\)</span> is UNknown.</li>
+<li>An observational study that is very likely not random was used.</li>
+<li>The <span class="math inline">\(\sigma\)</span> is unknown. The sample size (=92) is greater than 40. Thus, the assumptions are met and the sampling distribution of the test statistic should follow a t-distribution.</li>
+<li>The statistic is <span class="math inline">\(\bar{x}\)</span> = 91.35 (Table 4).</li>
+<li>The test statistic is t = 1.835 with 91 df (Table 4).</li>
+<li>The p-value is <span class="math inline">\(0.0349\)</span> (Table 4).</li>
+<li>The <span class="math inline">\(H_{O}\)</span> is rejected because the p-value <span class="math inline">\(&lt; \alpha\)</span>.</li>
+<li>It appears that the mean number of boats through the locks per day during June, July, and August of 2005 is indeed greater than 75.</li>
+<li>In fact, one is 95% confident that the average number of boats through the locks per day during June, July, and August of 2005 is at least 76.54 (Table 4).</li>
+</ol>
+<p>Table 4: Results of 1-Sample t-Test for the number of boats on the Yahara locks.</p>
+<pre><code>t = 1.8351, df = 91, p-value = 0.03488
+95 percent confidence interval:
+ 76.54448      Inf 
+sample estimates:
+mean of x 
+ 91.34783 </code></pre>
+<div id="r-appendix-5" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>y &lt;- read.csv(&quot;data/Yahara.csv&quot;)
+y1 &lt;- filterD(y,year==2005 &amp; mon&gt;5 &amp; mon&lt;9)
+xtabs(~year+mon,data=y1)  # A check
+( y.t &lt;- t.test(y1$boats.total,mu=75,alt=&quot;greater&quot;,conf.level=0.95) )</code></pre>
+<hr />
+</div>
+</div>
+<div id="golden-triangle-in-beads" class="section level2">
+<h2>Golden Triangle in Beads?</h2>
+<ol>
+<li><span class="math inline">\(\alpha\)</span> = 0.05.</li>
+<li><span class="math inline">\(H_{O}:\mu\)</span> = 0.618, <span class="math inline">\(H_{A}:\mu \neq\)</span> 0.618 where <span class="math inline">\(\mu\)</span> is the mean width-to-length ratio of the Shoshoni beads.</li>
+<li>A one-sample t-test is required because a quantitative variable (width-to-length ratio) was measured on individuals from one population (Shoshoni), the population mean is compare to a specific value in the null hypothesis, and <span class="math inline">\(\sigma\)</span> is UNknown.</li>
+<li>An observational study that is very likely not random was used.</li>
+<li>The <span class="math inline">\(\sigma\)</span> is unknown. The sample size (=20) is greater than 15 and the sample distribution is somewhat right-skewed with minor outliers (Figure 3). The assumptions are marginally met and the sampling distribution of the test statistic will likely follow a t-distribution.</li>
+<li>The statistic is <span class="math inline">\(\bar{x}\)</span> = 0.66 (Table 5).</li>
+<li>The test statistic is t = 2.055 with 19 df (Table 5).</li>
+<li>The p-value is <span class="math inline">\(0.0539\)</span> (Table 5).</li>
+<li>The <span class="math inline">\(H_{O}\)</span> is not rejected because the p-value <span class="math inline">\(&gt; \alpha\)</span>.</li>
+<li>It appears that the mean width-to-length ratio of the Shoshoni beads is NOT different from 0.618. Thus, it appears that the Shoshoni beads do follow the golden rectangle.</li>
+<li>Confidence region not required by <span class="math inline">\(H_{0}\)</span> was not rejected.</li>
+</ol>
+<p><img src="1Samplet_files/figure-html/histBeads-1.png" width="336" /></p>
+<p>Figure 3: Histogram of the width-to-length ratio of Shoshoni beads.</p>
+<p>Table 5: Results of 1-Sample t-Test for the width-to-length ratio of Shoshoni beads</p>
+<pre><code>t = 2.0545, df = 19, p-value = 0.05394
+95 percent confidence interval:
+ 0.6172036 0.7037964 
+sample estimates:
+mean of x 
+   0.6605 </code></pre>
+<div id="r-appendix-6" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>d &lt;- read.csv(&quot;data/shoshoni.csv&quot;)
+hist(~ratios,data=d,xlab=&quot;Width-to-Length Ratio of Beads&quot;)
+( d.t &lt;- t.test(d$ratios,mu=0.618) )</code></pre>
+<hr />
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
