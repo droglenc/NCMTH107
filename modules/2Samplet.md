@@ -41,7 +41,7 @@ Use the materials below to answer the questions on [this preparation guide](2Sam
 ## Practice
 
 * [Class Example](2Samplet_CExmpl)
-* Review Exercises
+* [Review Exercises](2Samplet_RevEx)
 * Class Exercises: [1](2Samplet_CE1) / [2](2Samplet_CE2) / (time permitting ... [3](2Samplet_CE3))
 * [Homework Assignment](2Samplet_HW)
 

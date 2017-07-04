@@ -8,9 +8,10 @@ css: "/css/modules.css"
 &nbsp;
 
 1. [General t Distribution Questions](#general-t-distribution-questions)
-1. Application Questions
+1. Application Questions with Summarized Results
     1. [Achievement Test Scores](#achievement-test-scores)
     1. [Salaries of College Graduates](#salaries-of-college-graduates)
+1. Application Questions with Raw Data
     1. [Fishing Line Strength](#fishing-line-strength)
     1. [Strawberries Produced](#strawberries-produced)
     1. [Putting Together Toys](#putting-together-toys)

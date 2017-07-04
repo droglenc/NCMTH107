@@ -7,7 +7,7 @@ css: "/css/modules.css"
 
 &nbsp;
 
-1. Application Questions with Summarized Data
+1. Application Questions with Summarized Results
     1. [Popcorn](#popcorn)
     1. [Heating Systems](#heating-systems)
     1. [Pork Quality](#pork-quality)
@@ -66,7 +66,7 @@ A study examined the effectiveness of foil-lined milk cartons to reduce "leakage
 ----
 
 ## Low Grades
-<img src="zimgs/F-grade.jpg.jpg" alt="An F" class="img-right">
+<img src="zimgs/F-grade.jpg" alt="An F" class="img-right">
 
 The University of North Carolina math department is noted for "giving out" low grades. To examine this, the GPA from a random sample of 22 math classes and 29 "other" university classes (from the last year) are in [UNCGrades.csv](https://raw.githubusercontent.com/droglenc/NCData/master/UNCgrades.csv). Determine, at the 10% level, if grades are significantly lower in math than in other classes.
 
@@ -112,7 +112,7 @@ A pig diet manufacturer wants to determine if the backfat thickness differs betw
                 2 12  2.989  3.035  0.375  0.108   2.40 3.62
 ```
 
-<img src="zimgs/t2pigbft.png" alt=Boxplot of Backfat Thickness" class="img-right">
+<img src="zimgs/t2pigbft.png" alt="Boxplot of Backfat Thickness" class="img-right">
 
 [See answer here](zRevExAns/2Samplet.html#pork-quality)
 
