@@ -112,7 +112,9 @@ A pig diet manufacturer wants to determine if the backfat thickness differs betw
                 2 12  2.989  3.035  0.375  0.108   2.40 3.62
 ```
 
-<img src="zimgs/t2pigbft.png" alt="Boxplot of Backfat Thickness" class="img-right">
+
+<img src="zimgs/t2pigbft.png" alt="Boxplot of Backfat Thickness">
+
 
 [See answer here](zRevExAns/2Samplet.html#pork-quality)
 
