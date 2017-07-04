@@ -31,7 +31,7 @@ css: /css/modules.css
 
 Use the materials below to answer the questions on [this preparation guide](GOFTest_Prep).
 
-* [Reading](../book/19_IntroStats.pdf)
+* [Reading](../book/Goodness-of-Fit.pdf)
 * Video: [Goodness-of-Fit Test Example](https://vimeo.com/user45324800/goftest-ex1){:target="_blank"} [8 mins] [![PowerPoint](../img/ppt.png)](GOFTest_PPT.pptx)
 * Video: [Goodness-of-Fit Tests in R](https://vimeo.com/user45324800/rgoftest){:target="_blank"} [6 mins] [![Web](../img/web.png)](GOFTest_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](GOFTest_RHO.pdf) [![MSWord](../img/word.png)](GOFTest_RHO.docx)  [![R](../img/Rlogo.png)](GOFTest_RHO.R){:target="_blank"}
 
@@ -39,6 +39,7 @@ Use the materials below to answer the questions on [this preparation guide](GOFT
 
 ## In-Class Practice
 
+* Review Exercises
 * Class Exercises: [1](GOFTest_CE1) / [2](GOFTest_CE2) / [3](GOFTest_CE3)
 * [Homework Assignment](GOFTest_HW)
 

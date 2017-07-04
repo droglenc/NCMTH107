@@ -31,7 +31,7 @@ css: /css/modules.css
 
 Use the materials below to answer the questions on [this preparation guide](ChiSquare_Prep).
 
-* [Reading](../book/18_IntroStats.pdf)
+* [Reading](../book/Chi-Square Test.pdf)
 * Video: [Chi-Square Distribution](https://vimeo.com/user45324800/chisqdist){:target="_blank"} [4 mins] [![PowerPoint](../img/ppt.png)](ChiSquare_PPT1.pptx)
 * Video: [Chi-Square Distribution in R](https://vimeo.com/user45324800/chisqdistribution){:target="_blank"} [2 mins] [![Web](../img/web.png)](ChiSquare_RHO1.html){:target="_blank"}  [![PDF](../img/pdf.png)](ChiSquare_RHO1.pdf) [![MSWord](../img/word.png)](ChiSquare_RHO1.docx)  [![R](../img/Rlogo.png)](ChiSquare_RHO1.R){:target="_blank"}
 * Video: Chi-Square Test Example [x mins] [![PowerPoint](../img/ppt.png)](ChiSquare_PPT2.pptx)
@@ -44,6 +44,7 @@ Use the materials below to answer the questions on [this preparation guide](ChiS
 ## In-Class Practice
 
 * [Class Example](ChiSquare_CExmpl)
+* Review Exercises
 * Class Exercises: [1](ChiSquare_CE1) / [2](ChiSquare_CE2)
 * [Homework Assignment](ChiSquare_HW)
 
