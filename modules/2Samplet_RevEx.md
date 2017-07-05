@@ -8,16 +8,16 @@ css: "/css/modules.css"
 &nbsp;
 
 1. Application Questions with Summarized Results
-    1. [Popcorn](#popcorn)
-    1. [Heating Systems](#heating-systems)
+    1. [Popcorn Yield by Variety](#popcorn-yield-by-variety)
+    1. [Heating System Efficiency](#heating-system-efficiency)
     1. [Pork Quality](#pork-quality)
 
 1. Application Questions with Raw Data
     1. [Dioxins in Milk Cartons](#dioxins-in-milk-cartons)
-    1. [Low Grades](#low-grades)
+    1. [Low Grades in Math](#low-grades-in-math)
     1. [Hours Worked by Medical Interns](#hours-worked-by-medical-interns)
     1. [Corn Crop Yield](#corn-crop-yield)
-    1. [Death Anxiety](#death-anxiety)
+    1. [Death Anxiety and Organ Donation](#death-anxiety-and-organ-donation)
 
 &nbsp;
 
@@ -25,10 +25,10 @@ css: "/css/modules.css"
 
 ----
 
-## Popcorn
+## Popcorn Yield by Variety
 <img src="zimgs/popcorn.jpg" alt="" class="img-right">
 
-Erville Redenbacher wanted to see if the number of unpopped kernels differed between yellow and white varieties of his grandpa's famous popcorn. To test this, he would put 100 kernels of either white or yellow popcorn into a standard air popper, pop the corn until no "pops" were heard, and then count the number of unpopped kernels. He tested 30 randomly selected groups of 100 kernels for both white and yellow varieties (Erville is very thorough). Use the results below to test, at the 10% level, Erville's hypothesis.
+A student wanted to determine if the number of unpopped kernels differed between yellow and white varieties of a famous brand of popcorn. To test this, he put 100 kernels of either white or yellow popcorn into a standard air popper, popped the corn until no "pops" were heard, and then counted the number of unpopped kernels. He tested 30 randomly selected groups of 100 kernels for both white and yellow varieties. Use the results below to test, at the 10% level, the student's hypothesis.
 
 ```
          Variable  N  Mean  Median  StDev  SE Mean
@@ -38,11 +38,11 @@ Erville Redenbacher wanted to see if the number of unpopped kernels differed bet
          Levene's Test -- P-Value = 0.972
 ```
 
-[See answer here](zRevExAns/2Samplet.html#popcorn)
+[See answer here](zRevExAns/2Samplet.html#popcorn-yield-by-variety)
 
 ----
 
-## Heating Systems
+## Heating System Efficiency
 <img src="zimgs/gas-heating-system.jpg" alt="Gas Heasting System" class="img-right">
 
 A study was performed in order to evaluate the effectiveness of two devices for improving the efficiency of gas home-heating systems. Energy consumption in houses was measured after one of the two devices was installed. The two devices were an electric vent damper (DampVent=Electric) and a thermally activated vent damper (DampVent=ThermAct). Energy consumption (in BTUs) was measured for a variety of houses fitted with the two devices. Compare, at the 10% level, the effectiveness of these two devices by determining if a difference exists in energy consumption between houses fitted with the devices. Note that Levene's test p-value is 0.996.
@@ -53,7 +53,7 @@ Electric  40   9.908   9.590  3.020   0.477   4.000  18.260  7.885 11.555
 ThermAct  50  10.143  10.290  2.767   0.391   2.970  16.060  8.127 12.212
 ```
 
-[See answer here](zRevExAns/2Samplet.html#heating-systems)
+[See answer here](zRevExAns/2Samplet.html#heating-system-efficiency)
 
 ----
 ## Dioxins in Milk Cartons
@@ -65,12 +65,12 @@ A study examined the effectiveness of foil-lined milk cartons to reduce "leakage
 
 ----
 
-## Low Grades
+## Low Grades in Math
 <img src="zimgs/F-grade.jpg" alt="An F" class="img-right">
 
 The University of North Carolina math department is noted for "giving out" low grades. To examine this, the GPA from a random sample of 22 math classes and 29 "other" university classes (from the last year) are in [UNCGrades.csv](https://raw.githubusercontent.com/droglenc/NCData/master/UNCgrades.csv). Determine, at the 10% level, if grades are significantly lower in math than in other classes.
 
-[See answer here](zRevExAns/2Samplet.html#low-grades)
+[See answer here](zRevExAns/2Samplet.html#low-grades-in-math)
 
 ----
 
@@ -92,12 +92,12 @@ Agronomists are interested in determining conditions that increase crop yield. I
 
 ----
 
-## Death Anxiety
+## Death Anxiety and Organ Donation
 <img src="zimgs/organ-donor.png" alt="Organ Donor" class="img-right">
 
 Templer's Death Anxiety Scale (DAS) is a measure of an individual's anxiety concerning death. [Robbins (1990)](http://www.tandfonline.com/doi/abs/10.1080/07481189008252363) recorded the DAS score for 25 organ donors and 69 non-organ donors in [DeathAnxiety.csv](https://raw.githubusercontent.com/droglenc/NCData/master/DeathAnxiety.csv). Determine, at the 1% level, if there is a difference in anxiety levels concerning death between organ and non-organ donors.
 
-[See answer here](zRevExAns/2Samplet.html#death-anxiety)
+[See answer here](zRevExAns/2Samplet.html#death-anxiety-and-organ-donation)
 
 ----
 
