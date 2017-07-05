@@ -44,7 +44,7 @@ Use the materials below to answer the questions on [this preparation guide](ChiS
 ## In-Class Practice
 
 * [Class Example](ChiSquare_CExmpl)
-* Review Exercises
+* [Review Exercises](ChiSquare_RevEx)
 * Class Exercises: [1](ChiSquare_CE1) / [2](ChiSquare_CE2)
 * [Homework Assignment](ChiSquare_HW)
 
