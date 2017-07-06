@@ -1,0 +1,566 @@
+---
+title: "Review Exercise Key"
+subtitle: "Goodness-of-Fit"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3
+    fig_width: 3.5
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/zRevExAns/")
+source("../../rhelpers/rhelpers.R")
+modHTML("GOFTest")
+```
+```{r echo=FALSE, message=FALSE}
+library(NCStats)
+library(captioner)
+tabs <- captioner(prefix="Table")
+figs <- captioner(prefix="Figure")
+```
+
+----
+
+
+## Shrike Habitat Use
+```{r ShrikeGOF, echo=FALSE, results='hide'}
+obs <- c(settled=149,imp.past=944,og.past=192,crop=171)
+p.exp <- c(settled=0.205,imp.past=0.586,og.past=0.103,crop=0.106)
+( chi1 <- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+```
+```{r echo=FALSE, results='hide'}
+tabs("ShrikeOE","Observed and expected frequencies of shrike observations in different habitats.")
+tabs("ShrikeCI","Observed, 95% confidence intervals, and expected proportions of shrike observations in different habitats.")
+```
+
+1. $\alpha$ = 0.05.
+1. The $H_{0}$: "The proportion of sub-habitat used by shrikes is the same the proportion of habitat available" versus $H_{A}$: "The proportion of sub-habitat used by shrikes is NOT the same the proportion of habitat available."
+1. A goodness-of-fit test is required because (i) a categorical variable (habitat type) with four levels from (ii) a single population (these shrikes) was recorded and (iii) the frequency of individuals in each level is being compared to a theoretical distribution in the null hypothesis.
+1. The data appear to be part of an observational study where the individuals were not randomly selected but the location to look for the individuals was.
+1. The expected frequencies are equal to the total number of observations times the proportion of each habitat type available. For example, the expected number of shrikes in the settled sub-habitat is 1456 $\times$ 0.205 = 298.48. The expectations for the other habitats are computed similarly and are in `r tabs("ShrikeOE",display="cite")`. There is more than five individuals in each of the four levels of the expected table. Thus, the test statistic below should follow a $\chi^{2}$ distribution.
+1. The observed frequencies are in `r tabs("ShrikeOE",display="cite")`.
+1. The $\chi^{2}$ test statistic is $\frac{(149-298.48)^{2}}{298.48} + \frac{(944-853.216)^{2}}{853.216} + \frac{(192-149.968)^{2}}{149.968} + \frac{(171-154.336)^{2}}{154.336}$ = 74.860 + 9.660 + 11.780 + 1.799 = 98.099, with 4-1=3 df.
+1. The p-value is `r kPvalue(chi1$p.value,include.p=FALSE)`.
+1. The $H_{0}$ is rejected because the p-value $<\alpha$.
+1. The shrikes found in the open habitat do not use the sub-habitats in proportion to the availability of the sub-habitat. In particular, they appear to use the settled sub-habitat less and the two pasture sub-habitats more than expected (`r tabs("ShrikeCI",display="cite")`).
+
+`r tabs("ShrikeOE")`
+
+```{r ShrikeOE, echo=FALSE, background='white', comment=""}
+data.frame(obs=chi1$observed,exp=chi1$expected)
+```
+
+`r tabs("ShrikeCI")`
+
+```{r ShrikeCI, echo=FALSE, background='white', comment=""}
+gofCI(chi1,digits=3)
+```
+
+### R Appendix
+```{r eval=FALSE}
+<<ShrikeGOF>>
+<<ShrikeOE>>
+<<ShrikeCI>>
+```
+
+----
+
+## Media Treatment of President Clinton
+```{r ClintonGOF, echo=FALSE, results='hide'}
+obs <- c(unfair=433,fair=1006-433)
+p.exp <- c(unfair=0.45,fair=0.55)
+( chi1 <- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+```
+```{r echo=FALSE, results='hide'}
+tabs("ClintonOE","Observed and expected frequencies of respondents perceptions of whether President Clinton was treated fairly by the media.")
+tabs("ClintonCI","Observed, 90% confidence intervals, and expected proportions  of respondents perceptions of whether President Clinton was treated fairly by the media.")
+```
+
+1. $\alpha$ = 0.10.
+1. The $H_{0}$: "The proportion of people that think that President Clinton was unfairly criticized is 0.45" and the $H_{A}$: "The proportion of people that think that President Clinton was unfairly criticized is NOT 0.45".
+1. A goodness-of-fit test is required because (i) a categorical variable (opinion on fairness of treatment) with only two levels from (ii) a single population was recorded and (iii) the observed frequency of individuals is being compared to a theoretical distribution in the null hypothesis.
+1. Observational study was used but it not clear that the individuals were randomly selected.
+1. The expected number that think that Clinton was unfairly criticized is 1006 $\times$ 0.45 = 452.7. The expected number who do not think that Clinton was unfairly criticized is 1006 $\times$ 0.55 = 553.3. The test statistic computed below should reasonably follow a $\chi^{2}$-distribution because both of these expectations are greater than five.
+1. The table of observed frequencies is in `r tabs("ClintonOE",display="cite")`.
+1. The $\chi^{2}$ test statistic is $\frac{(433-452.7)^{2}}{452.7}$ + $\frac{(573-553.3)^{2}}{553.3}$ = 0.857 + 0.701 = 1.558, with 2-1=1 df.
+1. The p-value is `r kPvalue(chi1$p.value,include.p=FALSE)`.
+1. The $H_{O}$ is not rejected because the p-value $>\alpha$.
+1. It appears that the proportion of adults that feel that President Clinton has been unfairly criticized is not greater than 0.45. In fact it appears that between `r formatC(100*gofCI(chi1)["unfair","p.LCI"],format="f",digits=1)`% and `r formatC(100*gofCI(chi1)["unfair","p.UCI"],format="f",digits=1)`% feel that President Clinton was treated unfairly by the media (`r tabs("ClintonCI",display="cite")`).
+
+`r tabs("ClintonOE")`
+
+```{r ClintonOE, echo=FALSE, background='white', comment=""}
+data.frame(obs=chi1$observed,exp=chi1$expected)
+```
+
+`r tabs("ClintonCI")`
+
+```{r ClintonCI, echo=FALSE, background='white', comment=""}
+gofCI(chi1,conf.level=0.9,digits=3)
+```
+
+### R Appendix
+```{r eval=FALSE}
+<<ClintonGOF>>
+<<ClintonOE>>
+<<ClintonCI>>
+```
+
+----
+
+## Cola Taste Test
+```{r ColaGOF, echo=FALSE, results='hide'}
+obs <- c(pepsi=57,coke=63,generic=34)
+p.exp <- c(pepsi=1/3,coke=1/3,generic=1/3)
+( chi1 <- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+```
+```{r echo=FALSE, results='hide'}
+tabs("ColaOE","Observed and expected frequencies of respondents preference for three types of cola.")
+tabs("ColaCI","Observed, 95% confidence intervals, and expected proportions of respondents preference for three types of cola.")
+```
+
+1. $\alpha$ = 0.05.
+1. The $H_{0}:$ "The proportion of individuals in each category is the same (i.e., no preference; $\frac{1}{3}$)" versus $H_{A}:$ "The proportion of individuals in each category is NOT the same (i.e., a preference)".
+1. A goodness-of-fit test is required because a (i) categorical variable (preference) with three levels from (ii) a single population was recorded and (iii) the observed frequencies are being compared to a theoretical distribution in the null hypothesis.
+1. The data appear to be part of an observational study where the individuals were randomly selected.
+1. The expected frequencies are equal to the total number of observations times the expected proportions which is $\frac{1}{3}$ for each level (this is the same as dividing the total number of observations by three for each level; `r tabs("ColaOE",display="cite")`). The test statistic below should follow a $\chi^{2}$ distribution because there is more than five individuals expected in each of the three levels.
+1. The observed frequency table is in `r tabs("ColaOE",display="cite")`.
+1. The $\chi^{2}$ test statistic is $= \frac{(57-51.333)^{2}}{51.333} + \frac{(63-51.333)^{2}}{51.333} + \frac{(34-51.333)^{2}}{51.333}$ = 0.627 + 2.652 + 5.853 = 9.132, with 3-1=2 df.
+1. The p-value is `r kPvalue(chi1$p.value,include.p=FALSE)`
+1. The $H_{0}$ is rejected because the p-value $<\alpha$.
+1. There appears to be a preference exhibited among the consumers. It appears that the generic brand is generally not preferred (`r tabs("ColaCI",display="cite")`).
+
+`r tabs("ColaOE")`
+
+```{r ColaOE, echo=FALSE, background='white', comment=""}
+data.frame(obs=chi1$observed,exp=chi1$expected)
+```
+
+`r tabs("ColaCI")`
+
+```{r ColaCI, echo=FALSE, background='white', comment=""}
+gofCI(chi1,digits=3)
+```
+
+### R Appendix
+```{r eval=FALSE}
+<<ColaGOF>>
+<<ColaOE>>
+<<ColaCI>>
+```
+
+----
+
+## Corn Genetics
+```{r CornGOF, echo=FALSE, results='hide', warning=FALSE}
+obs <- c(ps=32,pw=14,ys=8,yw=4)
+p.exp <- c(ps=9/16,pw=3/16,ys=3/16,yw=1/16)
+( chi1 <- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+```
+```{r echo=FALSE, results='hide'}
+tabs("CornOE","Observed and expected frequencies of corn kernels by type.")
+tabs("CornCI","Observed, 95% confidence intervals, and expected proportions of corn kernels by type.")
+```
+
+1. $\alpha$ = 0.05.
+1. The $H_{0}$: The proportion of PS, PW, YS, and YW individuals will be $\frac{9}{16}$, $\frac{3}{16}$, $\frac{3}{16}$, and $\frac{1}{16}$, respectively" versus $H_{A}$ "The proportion of PS, PW, YS, and YW individuals will NOT be $\frac{9}{16}$, $\frac{3}{16}$, $\frac{3}{16}$, and $\frac{1}{16}$, respectively", where PS="purple, smooth", PW="purple, wrinkled", YS="yellow, smooth", and YW="yellow, wrinkled".
+1. A goodness-of-fit test is required because (i) a categorical variable (color and wrinkliness combination) with four levels from (ii) a single population (this ear of corn) was recorded and (iii) the observed frequency of individuals is being compared to a theoretical distribution in the null hypothesis.
+1. The data appear to be part of a quasi-experimental study where the individuals were not randomly selected but the location on the corn cob where the individuals were selected was randomly located.
+1. The expected frequencies are equal to the total number of observations times the expected proportion of each phenotype. For example, the expected number of purple-smooth kernels is $58\frac{9}{16}$ = 32.625. The expectations for the other phenotypes are in `r tabs("CornOE",display="cite")`. One of these expectations is less than five indicating that the test statistic below may not follow a $\chi^{2}$ distribution. However, it is only one level and the value is nearly four so it should be fairly close to a $\chi^{2}$ distribution.
+1. The observed frequencies are in `r tabs("CornOE",display="cite")`.
+1. The $\chi^{2}$ test statistic is $\frac{(32-32.625)^{2}}{32.625} + \frac{(14-10.875)^{2}}{10.875} + \frac{(8-10.875)^{2}}{10.875} + \frac{(4-3.625)^{2}}{3.625}$ = 0.012 + 0.898 + 0.760 + 0.039 = 1.709, with 4-1=3 df.
+1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE)`
+1. The $H_{0}$ is not rejected because the p-value $>\alpha$.
+1. The 9:3:3:1 ratio appears to be upheld for this ear of corn (`r tabs("CornCI",display="cite")`).
+
+`r tabs("CornOE")`
+
+```{r CornOE, echo=FALSE, background='white', comment=""}
+data.frame(obs=chi1$observed,exp=chi1$expected)
+```
+
+`r tabs("CornCI")`
+
+```{r CornCI, echo=FALSE, background='white', comment=""}
+gofCI(chi1,digits=3)
+```
+
+### R Appendix
+```{r eval=FALSE}
+<<CornGOF>>
+<<CornOE>>
+<<CornCI>>
+```
+
+----
+
+## Lake Association Survey
+```{r LakeGOF, echo=FALSE, results='hide', warning=FALSE}
+obs <- c(mail=47,email=63,phone=17,poster=73)
+p.exp <- c(mail=1/4,email=1/4,phone=1/4,poster=1/4)
+( chi1 <- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+```
+```{r echo=FALSE, results='hide'}
+tabs("LakeOE","Observed and expected frequencies of respondents preference for mode of communication.")
+tabs("LakeCI","Observed, 95% confidence intervals, and expected proportions of respondents preference for mode of communication.")
+```
+
+1. $\alpha$ = 0.05.
+1. The $H_{0}:$ "There is no preference for a communication method (i.e., equal proportions for each method)" versus $H_{A}:$ "There is a preference for a communication method (some unequal proportions)."
+1. A goodness-of-fit test is required because a (i) categorical variable (preference) with four levels from (ii) a single population (one lake association) was recorded and (iii) the frequencies in each level are being compared to a theoretical distribution in the null hypothesis.
+1. The data appear to be part of an observational study with no randomization as it is a voluntary response survey.
+1. Under the null hypothesis of no preference one would expect the same proportion of individuals in each category. Thus, the expected proportions are the total sample size divided by four (`r tabs("LakeOE",display="cite")`). Each expected frequency is greater than five individuals; thus, the test statistic below should follow a $\chi^{2}$ distribution.
+1. The observed frequencies are in `r tabs("LakeOE",display="cite")`.
+1. The $\chi^{2}$ test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
+1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE)`.
+1. The null hypothesis is rejected because the p-value $<\alpha$.
+1. There appears to be an uneven distribution among the communication methods indicating that the members have a preference for one or more methods.
+1. It appears that the members prefer to be contacted via e-mail or by poster and do not want to be contacted via phone (`r tabs("LakeCI",display="cite")`).
+
+`r tabs("LakeOE")`
+
+```{r LakeOE, echo=FALSE, background='white', comment=""}
+data.frame(obs=chi1$observed,exp=chi1$expected)
+```
+
+`r tabs("LakeCI")`
+
+```{r LakeCI, echo=FALSE, background='white', comment=""}
+gofCI(chi1,digits=3)
+```
+
+### R Appendix
+```{r eval=FALSE}
+<<LakeGOF>>
+<<LakeOE>>
+<<LakeCI>>
+```
+
+----
+
+## Fair Coin?
+```{r CoinGOF, echo=FALSE, results='hide', warning=FALSE}
+obs <- c(heads=5067,tails=10000-5067)
+p.exp <- c(heads=0.5,tails=0.5)
+( chi1 <- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+```
+```{r echo=FALSE, results='hide'}
+tabs("CoinOE","Observed and expected frequencies of coin flips.")
+tabs("CoinCI","Observed, 99% confidence intervals, and expected proportions of coin flips.")
+```
+  
+1. $\alpha$ = 0.01.
+1. $H_{0}$:"The proportion of heads is 0.50 (a 'fair' coins means even numbers of heads and tails)" versus $H_{A}$:"The proportion of heads is NOT 0.50 (an 'unfair' coins means uneven numbers of heads and tails)".
+1. A goodness-of-fit test is required because (i) a categorical variable (side of coin) with only two levels from (ii) a single population (Kerrich's tosses) was recorded and (iii) the frequency of results is being compared to a theoretical distribution in the null hypothesis.
+1. An observational study (we can't make a statement about randomization because that is essentially what this whole test is about).
+1. The expected proportions are 10000 flips divided by two (for heads and tails; `r tabs("CoinOE",display="cite")`). From this it is seen that each expected frequency is greater than five; thus, the test statitic should follow a $\chi^{2}$ distribution.
+1. The observed frequencies are in `r tabs("CoinOE",display="cite")`.
+1. The $\chi^{2}$ test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
+1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE)`.
+1. The $H_{O}$ is not rejected because the p-value $>\alpha$.
+1. The coin appears to be fair as a head appears in between `r formatC(100*gofCI(chi1)["heads","p.LCI"],format="f",digits=1)`% and `r formatC(100*gofCI(chi1)["heads","p.UCI"],format="f",digits=1)`% of the coin flips (`r tabs("CoinCI",display="cite")`).
+
+`r tabs("CoinOE")`
+
+```{r CoinOE, echo=FALSE, background='white', comment=""}
+data.frame(obs=chi1$observed,exp=chi1$expected)
+```
+
+`r tabs("CoinCI")`
+
+```{r CoinCI, echo=FALSE, background='white', comment=""}
+gofCI(chi1,conf.level=0.99,digits=3)
+```
+
+### R Appendix
+```{r eval=FALSE}
+<<CoinGOF>>
+<<CoinOE>>
+<<CoinCI>>
+```
+
+----
+
+## Distribution of Blood Types
+```{r BloodGOF, echo=FALSE, results='hide', warning=FALSE}
+obs <- c(A=83,B=29,O=67,AB=8)
+p.exp <- c(A=0.45,B=0.08,O=0.44,AB=0.03)
+( chi1 <- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+```
+```{r echo=FALSE, results='hide'}
+tabs("BloodOE","Observed and expected frequencies of blood types.")
+tabs("BloodCI","Observed, 95% confidence intervals, and expected proportions of blood types.")
+```
+
+1. $\alpha$ = 0.05.
+1. The $H_{0}$: "The current distribution of blood types is the same as the past distribution -- i.e., 0.45, 0.08, 0.44, and 0.03 for A, B, O, and AB, respectively" versus $H_{A}$: "The current distribution of blood types is different from the past distribution."
+1. A goodness-of-fit test is required because (ii) a categorical variable (blood type) with four levels from (ii) a single population (one hospital) was recorded and (iii) the frequency of results is being compared to a theoretical distribution in the null hypothesis.
+1. The data appear to be part of an observational study that is not random; rather it is a convenience sample.
+  1. Under the null hypothesis one would expect the current proportions to equal the past proportions. Thus, the expected proportions are the total sample size times the expected proportions (`r tabs("BloodOE",display="cite")`). From this it is seen that each expected frequency is greater than five. Thus, the test statistic below should follow a $\chi^{2}$ distribution.
+1. The observed frequencies are in `r tabs("BloodOE",display="cite")`.
+1. The $\chi^{2}$ test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
+1. The p-value is `r kPvalue(chi1$p.value,include.p=FALSE)`.
+1. The null hypothesis is rejected because the p-value $<\alpha$.
+1. There appears to be a difference in the distribution of current patient's blood type compared to the past distribution.
+1. It is apparent that there are slightly more patients with B blood and slightly fewer patients with O blood than there were in the past (`r tabs("BloodCI",display="cite")`).
+
+`r tabs("BloodOE")`
+
+```{r BloodOE, echo=FALSE, background='white', comment=""}
+data.frame(obs=chi1$observed,exp=chi1$expected)
+```
+
+`r tabs("BloodCI")`
+
+```{r BloodCI, echo=FALSE, background='white', comment=""}
+gofCI(chi1,digits=3)
+```
+
+### R Appendix
+```{r eval=FALSE}
+<<BloodGOF>>
+<<BloodOE>>
+<<BloodCI>>
+```
+
+----
+
+## Poll of Political Support
+```{r PollGOF, echo=FALSE, results='hide', warning=FALSE}
+obs <- c(support=660,dont=950-660)
+p.exp <- c(support=0.65,dont=0.35)
+( chi1 <- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+```
+```{r echo=FALSE, results='hide'}
+tabs("PollOE","Observed and expected frequencies of party constituents that support the district attorney.")
+tabs("PollCI","Observed, 95% confidence intervals, and expected proportions of party constituents that support the district attorney.")
+```
+
+1. $\alpha$ = 0.05.
+1. $H_{0}$: "The proportion of party constituents that support the district attorney is 0.65" versus $H_{A}$: "The proportion of party constituents that support the district attorney is NOT 0.65."
+1. A goodness-of-fit test is required because (i) a categorical variable (type of support) with only two levels from (ii) a single population (party constituents) was recorded and (iii) the frequency results are being compared to a theoretical distribution in the null hypothesis.
+1. An observational study of n=950 randomly selected party constituents was used.
+1. Under the null hypothesis the expected proportions are equal to 0.65 for support and 0.35 for don't support the district attorney. The expected frequencies are these expected proportions muliplied by the sample size (`r tabs("PollOE",display="cite")`).
+From this it is seen that each expected frequency is greater than five. Thus the test statistic below should follow a $\chi^{2}$ distribution.
+1. The observed frequencies are in `r tabs("PollOE",display="cite")`.
+1. The $\chi^{2}$ test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
+1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE)`.
+1. The $H_{O}$ is rejected because the p-value $<\alpha$.
+1. The district attorney appears to have more than 65% support among the party constituents.
+1. Specifically, one is 95% confident that the proportion of supporters among the party constituents is between `r formatC(gofCI(chi1)["support","p.LCI"],format="f",digits=3)` and `r formatC(gofCI(chi1)["support","p.UCI"],format="f",digits=3)` (`r tabs("PollCI",display="cite")`).
+
+`r tabs("PollOE")`
+
+```{r PollOE, echo=FALSE, background='white', comment=""}
+data.frame(obs=chi1$observed,exp=chi1$expected)
+```
+
+`r tabs("PollCI")`
+
+```{r PollCI, echo=FALSE, background='white', comment=""}
+gofCI(chi1,digits=3)
+```
+
+### R Appendix
+```{r eval=FALSE}
+<<PollGOF>>
+<<PollOE>>
+<<PollCI>>
+```
+
+----
+
+## Age Distribution of Deer
+```{r DeerGOF, echo=FALSE, results='hide', warning=FALSE}
+obs <- c("0-1"=134,"1-2"=66,"2-3"=30,"3-4"=13,"4-5"=4,"5-6"=6)
+p.exp <- c(1,0.5,0.5^2,0.5^3,0.5^4,0.5^5)
+( chi1 <- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+```
+```{r echo=FALSE, results='hide'}
+tabs("DeerOE","Observed and expected frequencies of deer by age category.")
+tabs("DeerCI","Observed, 90% confidence intervals, and expected proportions of deer by age category.")
+```
+
+1. $\alpha$ = 0.10.
+1. The $H_{0}:$ "The distribution of deer in the age-groups follows from a survival rate of 50%" versus $H_{A}:$ "The distribution of deer in the age-groups does NOT follow from a survival rate of 50%".
+1. A goodness-of-fit test is required because (i) a categorical variable (survived or not) with six levels from (ii) a single population (one population of deer) was recorded and (iii) the frequency of results is being compared to a theoretical distribution in the null hypothesis.
+1. The data appear to be part of an observational study where the individuals were apparently randomly selected.
+1. The expected frequency for the first group comes from solving for $X$ in $X+(0.5^{1}+0.5^{2}+0.5^{3}+0.5^{4}+0.5^{5})X = $ `r sum(obs)` or 1.96875X = `r sum(obs)` or X = 128.508. The remaining expected frequencies come from applying consecutive survival rates of 0.5 to the successive ages (`r tabs("DeerOE",display="cite")`). From this it is seen that each expected frequency does NOT contain more than five individuals. However, only one cell has a value less than five and that cell is only one individual short of the recommended value of five. Thus, the test statistic below will likely reasonably follow a $\chi^{2}$ distribution.
+1. The observed frequencies are in `r tabs("DeerOE",display="cite")`.
+1. The $\chi^{2}$ test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
+1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE)`.
+1. The null hypothesis is not rejected because the p-value $>\alpha$.
+1. The observed data appear to be consistent with a survival rate of 50%. This result may also be observed by noting that all expected frequencies are contained within all 95% confidence intervals in `r tabs("DeerCI",display="cite")`.
+
+`r tabs("DeerOE")`
+
+```{r DeerOE, echo=FALSE, background='white', comment=""}
+data.frame(obs=chi1$observed,exp=chi1$expected)
+```
+
+`r tabs("DeerCI")`
+
+```{r DeerCI, echo=FALSE, background='white', comment=""}
+gofCI(chi1,conf.level=0.90,digits=3)
+```
+
+### R Appendix
+```{r eval=FALSE}
+<<DeerGOF>>
+<<DeerOE>>
+<<DeerCI>>
+```
+
+----
+
+## Trawling Bycatch
+```{r TrawlGOF, echo=FALSE, results='hide', warning=FALSE}
+obs <- c(kings=145, other=1256-145)
+p.exp <- c(kings=0.10,other=0.90)
+( chi1 <- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+```
+```{r echo=FALSE, results='hide'}
+tabs("TrawlOE","Observed and expected frequencies of King Salmon in the trawl catch.")
+tabs("TrawlCI","Observed, 90% confidence intervals, and expected proportions of King Salmon in the trawl catch.")
+```
+
+1. $\alpha$ = 0.10.
+1. $H_{0}$: "The proportion of catch that is King Salmon is 0.10" versus $H_{A}$: "The proportion of catch that is King Salmon is NOT 0.10."
+1. A goodness-of-fit test is required because (i) a categorical variable (type of fish) with only two levels from (ii) a single population (the catch from that area) was recorded and (iii) the frequency results are being compared to a theoretical distribution in the null hypothesis.
+1. An observational study of n=1256 randomly selected fish was used.
+1. Under the null hypothesis the expected proportions are 0.10 for King Salmon and 0.90 for all other fishes (`r tabs("TrawlOE",display="cite")`). From this it is seen that each expected frequency is greater than five. Thus the test statistic below should follow a $\chi^{2}$ distribution.
+1. The observed frequencies are in `r tabs("TrawlOE",display="cite")`.
+1. The $\chi^{2}$ test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
+1. The p-value is `r kPvalue(chi1$p.value,include.p=FALSE)`.
+1. The $H_{O}$ is rejected because the p-value $<\alpha$.
+1. Trawling should be discontinued in this area because it appears that the catch consists of more than 10% king salmon. In fact, one is 90% confident that the proportion of king salmon in this catch is between `r formatC(gofCI(chi1,conf.level=0.90)["kings","p.LCI"],format="f",digits=3)` and `r formatC(gofCI(chi1,conf.level=0.90)["kings","p.UCI"],format="f",digits=3)` (`r tabs("TrawlCI",display="cite")`).
+
+`r tabs("TrawlOE")`
+
+```{r TrawlOE, echo=FALSE, background='white', comment=""}
+data.frame(obs=chi1$observed,exp=chi1$expected)
+```
+
+`r tabs("TrawlCI")`
+
+```{r TrawlCI, echo=FALSE, background='white', comment=""}
+gofCI(chi1,conf.level=0.90,digits=3)
+```
+
+### R Appendix
+```{r eval=FALSE}
+<<TrawlGOF>>
+<<TrawlOE>>
+<<TrawlCI>>
+```
+
+----
+
+## Otter Mortalities
+```{r echo=FALSE}
+om <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/OtterMort.csv")
+```
+```{r OtterGOF, echo=FALSE, results='hide', warning=FALSE}
+obs <- xtabs(~sex,data=om)
+p.exp <- c(female=0.5,male=0.5)
+( chi1 <- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+```
+```{r echo=FALSE, results='hide'}
+tabs("OtterOE","Observed and expected frequencies of road-killed otters by sex.")
+tabs("OtterCI","Observed, 99% confidence intervals, and expected proportions of road-killed otters by sex.")
+```
+
+1. $\alpha$ = 0.01.
+1. The $H_{0}$: "The proportion of females is 0.5 (equal proportions of males and females means no sex bias)" versus $H_{A}$: "The proportion of females is NOT 0.5 (unequal proportions of males and females means there is a sex bias)."
+1. A goodness-of-fit test is required because (i) a categorical variable (sex) with two levels from (ii) a single population (road-killed otters in Britain) was recorded and (iii) the frequency of individuals in each sex is being compared to a theoretical distribution.
+1. The data appear to be part of an observational study that is not random; rather it is a convenience collection.
+1. Under the null hypothesis of no sex-bias one would expect the same proportion of individuals in each level. Thus, the expected frequencies are the sample size divided by 2 (`r tabs("OtterOE",display="cite")`). From this it is seen that each expected frequency has more than five individuals. Thus, the test statistic below should follow a $\chi^{2}$ distribution.
+1. The observed frequencies are in `r tabs("OtterOE",display="cite")`.
+1. The $\chi^{2}$ test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
+1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE)`.
+1. The null hypothesis is rejected because the p-value $<\alpha$.
+1. There appears to be a sex bias among the road-killed otters.
+1. It appears that there are more male than female otters killed on the roads in Great Britain. (`r tabs("OtterCI",display="cite")`).
+
+`r tabs("OtterOE")`
+
+```{r OtterOE, echo=FALSE, background='white', comment=""}
+data.frame(obs=chi1$observed,exp=chi1$expected)[,-1]
+```
+
+`r tabs("OtterCI")`
+
+```{r OtterCI, echo=FALSE, background='white', comment=""}
+gofCI(chi1,conf.level=0.99,digits=3)
+```
+
+### R Appendix
+```{r eval=FALSE}
+om <- read.csv("data/OtterMort.csv")
+<<OtterGOF>>
+<<OtterOE>>
+<<OtterCI>>
+```
+
+----
+
+## Randomness of CD Player
+```{r echo=FALSE}
+cd <- data.frame(result=c("T","T","B","B","B","B","T","B","T","B",
+                          "T","B","B","B","T","B","T","B","B","B",
+                          "B","B","B","B","B","T","T","T","B","B",
+                          "T","B","T","T","B","T","B","B","T","B",
+                          "T","B","B","B","T","T","B","T","T","B",
+                          "T","B","B","T","B","B","B","T","B","B",
+                          "B","B","T","T","B","B","B","B","B","B",
+                          "B","B","T","T","B","B","T","T","B","B",
+                          "T","B","B","T","T","B","T","B","B","T",
+                          "B","T","B","B","B","B","T","B","T","B"))
+```
+```{r CDGOF, echo=FALSE, results='hide', warning=FALSE}
+obs <- xtabs(~result,data=cd)
+p.exp <- c(B=40/60,T=20/60)
+( chi1 <- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+```
+```{r echo=FALSE, results='hide'}
+tabs("CDOE","Observed and expected frequencies of CDs seleted by a CD disc player.")
+tabs("CDCI","Observed, 95% confidence intervals, and expected proportions of CDs seleted by a CD disc player.")
+```
+
+1. $\alpha$ = 0.05.
+1. The $H_{0}$: "The proportion of times Beethoven will be played is 0.67" (note that 40 of the 60 CDs are Beethoven) versus $H_{A}$: "The proportion of times Beethoven will be played is NOT 0.67."
+1. A goodness-of-fit test is required because (i) a categorical variable (which CD was played) with only two levels from (ii) a single population (this CD changer) was recorded and (iii) the frequency of results is being compared to a theoretical distribution in the null hypothesis.
+1. This is an experiment with random allocation of individuals (CDs to slots in the player).
+1. Under the null hypothesis the expected frequencies are 40 Beethoven and 20 Taj Mahal (`r tabs("CDOE",display="cite")`). Each of these expected frequencies are greater than five individuals. Thus, the test statistic computed below should reasonably follow a $\chi^{2}$-distribution.
+1. The observed frequencies are in `r tabs("CDOE",display="cite")`.
+1. The $\chi^{2}$ test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
+1. The p-value is `r kPvalue(chi1$p.value,include.p=FALSE)`.
+1. The $H_{O}$ is not rejected because the p-value $>\alpha$.
+1. The randomization function on the CD player appears to choose songs randomly  (`r tabs("CDCI",display="cite")`).
+
+`r tabs("CDOE")`
+
+```{r CDOE, echo=FALSE, background='white', comment=""}
+data.frame(obs=chi1$observed,exp=chi1$expected)[,-1]
+```
+
+`r tabs("CDCI")`
+
+```{r CDCI, echo=FALSE, background='white', comment=""}
+gofCI(chi1,digits=3)
+```
+
+### R Appendix
+```{r eval=FALSE}
+cd <- read.csv("data/CDPlayer.csv")
+<<CDGOF>>
+<<CDOE>>
+<<CDCI>>
+```
+
+----
