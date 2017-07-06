@@ -9,7 +9,7 @@ css: "/css/modules.css"
 
 
 1. Application Questions with Summarized Results
-    1. [Shrike Habitate Use](#shrike-habitat-use)
+    1. [Shrike Habitat Use](#shrike-habitat-use)
     1. [Media Treatment of President Clinton](#media-treatment-of-president-clinton)
     1. [Cola Taste Test](#cola-taste-test)
     1. [Corn Genetics](#corn-genetics)
@@ -26,16 +26,14 @@ css: "/css/modules.css"
 
 &nbsp;
 
-----
-
 &nbsp;
 
 ----
 
-## Shrike Habitate Use
+## Shrike Habitat Use
 <img src="zimgs/shrike.jpg" alt="Northern Shrike" class="img-right">
 
-In the same study used in the example of this module, Bohall and Wood (1987) more closely examined the habitat use of the shrikes observed in the open habitat by looking at four "sub-habitats" within these areas. Of the 1456 shrike observations in this habitat, 149 were in "settled" areas, 944 were in improved pastures, 192 were in overgrown pastures, and 171 were in crop fields. In addition, 20.5% of this habitat was considered to be "settled", 58.6% was improved pasture, 10.3% was overgrown pasture, and 10.6% was crop fields.   Use these results to determine, at the 5% level, if shrikes found in open areas use the sub-habitats in proportion to their availability.
+In the same study used in the example of this module, [Bohall and Wood (1987)](http://www.jstor.org/stable/4162345?seq=1#page_scan_tab_contents) more closely examined the habitat use of the shrikes observed in the open habitat by looking at four "sub-habitats" within these areas. Of the 1456 shrike observations in this habitat, 149 were in "settled" areas, 944 were in improved pastures, 192 were in overgrown pastures, and 171 were in crop fields. In addition, 20.5% of this habitat was considered to be "settled", 58.6% was improved pasture, 10.3% was overgrown pasture, and 10.6% was crop fields.   Use these results to determine, at the 5% level, if shrikes found in open areas use the sub-habitats in proportion to their availability.
 
 [See answer here](zRevExAns/GOFTest.html#shrike-habitat-use)
 
@@ -51,7 +49,7 @@ Between June 11 and 15, 1993, the Times Mirror Center for People and the Press i
 ----
 
 ## Cola Taste Test
-<img src="zimgs/cola-taste-test.jpg.jpg" alt="Cola Taste Test" class="img-right">
+<img src="zimgs/cola-taste-test.jpg" alt="Cola Taste Test" class="img-right">
 
 A random selection of consumers present at the Mall of America were allowed to taste three types of cola (Pepsi, Coke, and a generic brand). After tasting each type (which were supplied to each person in a random order) the person was to select which cola they preferred. The results indicated that 57 people preferred Pepsi, 63 preferred Coke, and 34 preferred the generic brand. Is there evidence, at the 5% level, that these customers prefer one brand over the others?
 
@@ -80,7 +78,7 @@ The leader of a local lake association conducted a survey of all members of the 
 ## Otter Mortalities
 <img src="zimgs/otter-on-road.jpg" alt="Otter on Road" class="img-right">
 
-Philcox *et al.* (1999) examined patterns in the road-related mortalities of otters (*Lutra lutra*) in Britain from 1971 to 1996. One aspect of their analysis was to examine the sex ratio of road-killed otters. The sex of all otters for which sex could be identified are recorded in [OtterMort.csv](https://raw.githubusercontent.com/droglenc/NCData/master/OtterMort.csv). Use these data to determine if there is a significant (at the 1% level) bias in the sex ratio of road-killed otters.
+[Philcox *et al.* (1999)](http://onlinelibrary.wiley.com/doi/10.1046/j.1365-2664.1999.00441.x/full) examined patterns in the road-related mortalities of otters (*Lutra lutra*) in Britain from 1971 to 1996. One aspect of their analysis was to examine the sex ratio of road-killed otters. The sex of all otters for which sex could be identified are recorded in [OtterMort.csv](https://raw.githubusercontent.com/droglenc/NCData/master/OtterMort.csv). Use these data to determine if there is a significant (at the 1% level) bias in the sex ratio of road-killed otters.
 
 [See answer here](zRevExAns/GOFTest.html#otter-mortalities)
 
@@ -89,7 +87,7 @@ Philcox *et al.* (1999) examined patterns in the road-related mortalities of ott
 ## Fair Coin?
 <img src="zimgs/coinflip.jpg" alt="Coin Flip" class="img-right">
 
-hile imprisoned by the Germans during World War II, the English mathematician John Kerrich tossed a coin 10000 times and obtained 5067 heads. Use his results to determine (at the 1% level) whether the coin was fair or not (i.e., equal chance of heads and tails).
+While imprisoned by the Germans during World War II, the English mathematician John Kerrich tossed a coin 10000 times and obtained 5067 heads. Use his results to determine (at the 1% level) whether the coin was fair or not (i.e., equal chance of heads and tails).
 
 [See answer here](zRevExAns/GOFTest.html#fair-coin)
 
