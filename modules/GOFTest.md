@@ -39,7 +39,7 @@ Use the materials below to answer the questions on [this preparation guide](GOFT
 
 ## In-Class Practice
 
-* Review Exercises
+* [Review Exercises](GOFTest_RevEx)
 * Class Exercises: [1](GOFTest_CE1) / [2](GOFTest_CE2) / [3](GOFTest_CE3)
 * [Homework Assignment](GOFTest_HW)
 
