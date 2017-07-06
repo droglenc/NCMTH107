@@ -9,7 +9,7 @@ css: "/css/modules.css"
 
 1. [General chi-square Distribution Questions](#general-chi-square-distribution-questions)
 1. Application Questions with Summarized Results
-    1. [Distribution of Cyprinids in Asia](#)
+    1. [Distribution of Cyprinids in Asia](#distribution-of-cyprinids-in-asia)
     1. [Working Environment for Nurses](#working-environment-for-nurses)
     1. [Sex Effect on Heart Attack Deaths](#sex-effect-on-heart-attack-deaths)
     1. [School Uniforms](#school-uniforms)
@@ -84,7 +84,7 @@ Researchers in Asia (Roberts, 2000) wanted to describe the distribution of the f
 |  Irrawaddy  |    25    |      53      |
 |   Salween   |    30    |      47      |
 
-[See answer here](zRevExAns/ChiSquare.html#distribution-of-Cyprinids-in-sia)
+[See answer here](zRevExAns/ChiSquare.html#distribution-of-cyprinids-in-asia)
 
 ----
 
@@ -159,7 +159,7 @@ USA Today presented two sets of data on why Americans don't exercise. One set wa
 ----
 
 ## Turtle Excluder Devices
-<img src="zimgs/turtle_escape_from_ted.jpg.jpg" alt="Escaping Turtle" class="img-right">
+<img src="zimgs/turtle_escape_from_ted.jpg" alt="Escaping Turtle" class="img-right">
 
 Shrimp trawlers are required to have turtle exclusion device (TED), that allows most Loggerhead Sea Turtles (*Caretta caretta*) to escape the net, thus reducing turtle mortality due to by-catch. In the Gulf of Mexico, the TEDs were originally required to be 32"x10" but a new law now requires to TEDs to be 71"x26" with the thought that turtle mortality would be further reduced by the larger opening. This thought was examined by recording the number of trawl tows that had at least one turtle mortality. In 75 tows with the original smaller opening there were 16 tows with at least one turtle mortality. In contrast, in 88 tows with the the newer larger opening there were 8 tows with at least one turtle mortality. Test at the 10% level if there is a significant difference in the proportion of trawl tows with at least one turtle mortality between trawls with the different sized openings.
 
