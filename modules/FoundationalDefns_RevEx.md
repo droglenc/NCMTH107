@@ -331,4 +331,4 @@ Determine the specific type of variable for each question below.
 
 </div>
 
-----
+<hr>
