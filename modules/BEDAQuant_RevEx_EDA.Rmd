@@ -25,6 +25,21 @@ source("../rhelpers/knitr_setup.R")
 
 ----
 
+&nbsp;
+
+1. [Metals in Topsoil](#metals-in-topsoil)
+1. [Highway and City MPG](#highway-and-city-mpg)
+1. [Red-Imported Fire Ants and Deer](#red-imported-fire-ants-and-deer)
+1. [Yellow Perch Length-Weight](#yellow-perch-length-weight)
+1. [Crickets and Temperature](#crickets-and-temperature)
+1. [Wolves and Whitetail Deer](#wolves-and-whitetail-deer)
+
+&nbsp;
+
+&nbsp;
+
+----
+
 ## Metals in Topsoil
 <img src="zimgs/topsoil.jpg" alt="Topsoil" class="img-right">
 
@@ -39,7 +54,7 @@ legend("topleft",legend=paste("r =",round(cor(meuse$copper,meuse$cadmium),3)),
        bty="n",cex=1.25)
 ```
 
-[See answer here](zRevExAns/BEDAQuant_EDA.html#metals-in-topsoil)
+[See answer here](zRevExAns/BEDAQuant.html#metals-in-topsoil)
 
 ----
 
@@ -57,7 +72,7 @@ legend("topleft",legend=paste("r =",round(cor(lum$CMPG,lum$HMPG),3)),
        bty="n",cex=1.25)
 ```
 
-[See answer here](zRevExAns/BEDAQuant_EDA.html#highway-and-city-mpg)
+[See answer here](zRevExAns/BEDAQuant.html#highway-and-city-mpg)
 
 ----
 
@@ -66,7 +81,7 @@ legend("topleft",legend=paste("r =",round(cor(lum$CMPG,lum$HMPG),3)),
 
 [Allen *et al.* (1997)](http://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1047&context=ncfwrustaff) investigated the impact of the density of Red-Imported Fire Ants (*Solenopsis invicta*) on the recruitment of Whitetailed Deer (*Odocoileus virginianus*) fawns (an index of does to fawns). A modified version of their data is recorded in [RIFA.csv](https://raw.githubusercontent.com/droglenc/NCData/master/RIFA.csv). Use this information to write a brief description of this bivariate relationship.
 
-[See answer here](zRevExAns/BEDAQuant_EDA.html#red-imported-fire-ants-and-deer)
+[See answer here](zRevExAns/BEDAQuant.html#red-imported-fire-ants-and-deer)
 
 ----
 
@@ -75,7 +90,7 @@ legend("topleft",legend=paste("r =",round(cor(lum$CMPG,lum$HMPG),3)),
 
 The Park Management team of Kejimkujik National Park, Nova Scotia examined the relationship between the length and weight of Yellow Perch (*Perca flavescens*) captured form Grafton Lake in the park in 2000 following the removal of a dam (Brylinsky 2001). Their data is stored in [PerchGL.csv](https://raw.githubusercontent.com/droglenc/NCData/master/PerchGL.csv). Load these data into R, isolate just the results from 2000 (i.e., use `filterD()`), and generate results to describe this bivariate relationship.
 
-[See answer here](zRevExAns/BEDAQuant_EDA.html#yellow-perch-length-weight)
+[See answer here](zRevExAns/BEDAQuant.html#yellow-perch-length-weight)
 
 ----
 
@@ -84,7 +99,7 @@ The Park Management team of Kejimkujik National Park, Nova Scotia examined the r
 
 It has been said that you can roughly estimate the temperature from the number of cricket chirps heard. To determine if this relationship existed, an entomologist recorded the number of chirps in a 15-second interval by crickets held at different temperatures. The researcher's data is recorded in [Chirps.csv](https://raw.githubusercontent.com/droglenc/NCData/master/Chirps.csv). Load these data into R and generate results to write a brief description of this bivariate relationship.
 
-[See answer here](zRevExAns/BEDAQuant_EDA.html#crickets-and-temperature)
+[See answer here](zRevExAns/BEDAQuant.html#crickets-and-temperature)
 
 ----
 
@@ -93,6 +108,7 @@ It has been said that you can roughly estimate the temperature from the number o
 
 [Mladenoff *et al.* (1997)](https://www.researchgate.net/profile/David_Mladenoff/publication/247843996_Causes_and_Implications_of_Species_Restoration_in_Altered_Ecosystems/links/5410594a0cf2f2b29a40f2ce.pdf) estimated the territory size (km$^{2}$) of Wolf (*Canis lupus*) packs and the density of Whitetail Deer (number/km$^{2}$; *Odocoileus virginianus*) in the same areas in northern Wisconsin. Their data is recorded in [Wolves2.csv](https://raw.githubusercontent.com/droglenc/NCData/master/Wolves2.csv). Load these data into R and generate results to write a brief description of this bivariate relationship.
 
-[See answer here](zRevExAns/BEDAQuant_EDA.html#wolves-and-whitetail-deer)
+[See answer here](zRevExAns/BEDAQuant.html#wolves-and-whitetail-deer)
 
 ----
+
