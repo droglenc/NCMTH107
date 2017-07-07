@@ -155,6 +155,8 @@ You can click on each question to see an answer. Click on it again to close the 
 
 ----
 
+&nbsp;
+
 ## Variable Types Questions
 
 Determine the specific type of variable for each question below.
