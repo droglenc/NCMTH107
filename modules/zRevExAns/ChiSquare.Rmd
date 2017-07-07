@@ -605,9 +605,9 @@ d <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Zoo1.csv
 ( chi1 <- chisq.test(obs,correct=FALSE) )
 ```
 ```{r echo=FALSE, results='hide'}
-tabs("Exp","Expected frequencies of animals by type in four zoos.")
-tabs("Obs","Observed frequencies of animals by type in four zoos.")
-tabs("Perc","The percentage of animals by type within four zoos.")
+tabs("ZooExp","Expected frequencies of animals by type in four zoos.")
+tabs("ZooObs","Observed frequencies of animals by type in four zoos.")
+tabs("ZooPerc","The percentage of animals by type within four zoos.")
 ```
 
 1. $\alpha$ = 0.05.

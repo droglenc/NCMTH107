@@ -30,7 +30,7 @@ css: "/css/modules.css"
 &nbsp;
 
 
-## General t Distribution Questions
+## General Chi-Square Distribution Questions
 
 Click on each question to see the answer, click on it again to close the answer.
 
