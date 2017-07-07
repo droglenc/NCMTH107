@@ -47,7 +47,7 @@ Use the materials below to answer the questions on [this preparation guide](Norm
 
 ## Practice
 
-* Review Exercises: [Simple Areas](NormalDist_RevEx_Simple) / [Forward & Reverse Calcs](NormalDist_RevEx_Calc1) / [In-Context Calculations](NormalDist_RevEx_Calc2)
+* Review Exercises: [Simple Areas](NormalDist_RevEx_Simple) / [Calculations](NormalDist_RevEx_Calc)
 * Class Exercises: [1](NormalDist_CE1) / [2](NormalDist_CE2) / [3](NormalDist_CE3) / [4](NormalDist_CE4) (*time permitting* ... [5](NormalDist_CE5) / [6](NormalDist_CE6))
 * [Homework Assignments](NormalDist_HW)
 

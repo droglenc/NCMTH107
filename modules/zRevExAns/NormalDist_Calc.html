@@ -7,21 +7,56 @@ css: "/css/modules.css"
 ---
 
 
-<div id="college-graduation" class="section level2">
-<h2>College Graduation</h2>
+<hr />
+<div id="situation-1" class="section level2">
+<h2>Situation 1</h2>
 <ol>
-<li>Approximately 15.9% of the students have graduated by age 21.</li>
-<li>Approximately 4.2% of the students graduated after age 24.</li>
-<li>The most common 95% of graduates are between 19.9 and is 24.3 years old.</li>
-<li>The age at which 90% of the students have graduated is 20.7</li>
+<li>The percentage of X&lt;0.11 is 54.4.</li>
+<li>The percentage of X&gt;-0.11 is 54.4.</li>
+<li>The percentage of -1.45&lt;X&lt;1.11 is 6.0.</li>
+<li>The X that has 33% of Xs smaller is -0.44.</li>
+<li>The X that has 25$ of Xs larger is 0.67.</li>
+<li>The most common 90% of Xs are between -1.64 and is 1.64.</li>
 </ol>
 <div id="r-appendix" class="section level3">
 <h3>R Appendix</h3>
-<pre class="r"><code>( q1 &lt;- distrib(21,mean=22.1,sd=1.1) )</code></pre>
-<pre class="r"><code>( q2 &lt;- distrib(24,mean=22.1,sd=1.1,lower.tail=FALSE) )</code></pre>
-<pre class="r"><code>( q3a &lt;- distrib(0.025,mean=22.1,sd=1.1,type=&quot;q&quot;) )</code></pre>
-<pre class="r"><code>( q3b &lt;- distrib(0.975,mean=22.1,sd=1.1,type=&quot;q&quot;) )</code></pre>
-<pre class="r"><code>( q4 &lt;- distrib(0.9,mean=22.1,sd=1.1,type=&quot;q&quot;,lower.tail=FALSE) )</code></pre>
+<pre class="r"><code>library(NCStats)
+( q1 &lt;- distrib(0.11,mean=0,sd=1) )</code></pre>
+<pre class="r"><code>( q2 &lt;- distrib(-0.11,mean=0,sd=1,lower.tail=FALSE) )</code></pre>
+<pre class="r"><code>( q3a &lt;- distrib(-1.45,mean=0,sd=1) )</code></pre>
+<pre class="r"><code>( q3ab &lt;- distrib(-1.11,mean=0,sd=1) )</code></pre>
+<pre class="r"><code>q3ab-q3a
+
+( q4 &lt;- distrib(0.33,mean=0,sd=1,type=&quot;q&quot;) )</code></pre>
+<pre class="r"><code>( q5 &lt;- distrib(0.25,mean=0,sd=1,type=&quot;q&quot;,lower.tail=FALSE) )</code></pre>
+<pre class="r"><code>( q6a &lt;- distrib(0.05,mean=0,sd=1,type=&quot;q&quot;) )</code></pre>
+<pre class="r"><code>( q6b &lt;- distrib(0.95,mean=0,sd=1,type=&quot;q&quot;) )</code></pre>
+<hr />
+</div>
+</div>
+<div id="situation-2" class="section level2">
+<h2>Situation 2</h2>
+<ol>
+<li>The percentage of Y&lt;75 is 79.8.</li>
+<li>The percentage of Y&gt;63 is 87.8.</li>
+<li>The percentage of 62.3&lt;Y&lt;72.9 is 58.6.</li>
+<li>The Y that has 30% of Ys smaller is 66.85.</li>
+<li>The Y that has 40$ of Ys larger is 70.00.</li>
+<li>The most common 50% of Ys are between 65.95 and is 74.05.</li>
+</ol>
+<div id="r-appendix-1" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>library(NCStats)
+( q1 &lt;- distrib(75,mean=70,sd=6) )</code></pre>
+<pre class="r"><code>( q2 &lt;- distrib(63,mean=70,sd=6,lower.tail=FALSE) )</code></pre>
+<pre class="r"><code>( q3a &lt;- distrib(62.3,mean=70,sd=6) )</code></pre>
+<pre class="r"><code>( q3ab &lt;- distrib(72.9,mean=70,sd=6) )</code></pre>
+<pre class="r"><code>q3ab-q3a
+
+( q4 &lt;- distrib(0.3,mean=70,sd=6,type=&quot;q&quot;) )</code></pre>
+<pre class="r"><code>( q5 &lt;- distrib(0.5,mean=70,sd=6,type=&quot;q&quot;,lower.tail=FALSE) )</code></pre>
+<pre class="r"><code>( q6a &lt;- distrib(0.25,mean=70,sd=6,type=&quot;q&quot;) )</code></pre>
+<pre class="r"><code>( q6b &lt;- distrib(0.75,mean=70,sd=6,type=&quot;q&quot;) )</code></pre>
 <hr />
 </div>
 </div>
@@ -33,7 +68,7 @@ css: "/css/modules.css"
 <li>The most common 50% of head lengths are between 12.42 and 14.98.</li>
 <li>This question cannot be answered because weight is not know to be normally distributed.</li>
 </ol>
-<div id="r-appendix-1" class="section level3">
+<div id="r-appendix-2" class="section level3">
 <h3>R Appendix</h3>
 <pre class="r"><code>library(NCStats)
 ( q1a &lt;- distrib(45,mean=60,sd=10) )</code></pre>
@@ -52,7 +87,7 @@ css: "/css/modules.css"
 <li>Approximately 66.8% of short-tailed shrews have a brain weight between 0.09 and 0.17 g.</li>
 <li>The largest 30% of short-tailed shrew brain weights are larger than 0.16 g.</li>
 </ol>
-<div id="r-appendix-2" class="section level3">
+<div id="r-appendix-3" class="section level3">
 <h3>R Appendix</h3>
 <pre class="r"><code>( q1 &lt;- distrib(0.09,mean=0.14,sd=0.04) )</code></pre>
 <pre class="r"><code>( q2 &lt;- distrib(0.17,mean=0.14,sd=0.04) )</code></pre>
@@ -71,7 +106,7 @@ css: "/css/modules.css"
 <li>The most common 60% of arrival times are between -2.5 and 2.5 minutes.</li>
 <li>The arrival time is a continuous quantitative variable.</li>
 </ol>
-<div id="r-appendix-3" class="section level3">
+<div id="r-appendix-4" class="section level3">
 <h3>R Appendix</h3>
 <pre class="r"><code>( q1 &lt;- distrib(5,mean=0,sd=3,lower.tail=FALSE) )</code></pre>
 <pre class="r"><code>( q2 &lt;- distrib(-4,mean=0,sd=3) )</code></pre>
@@ -93,7 +128,7 @@ css: "/css/modules.css"
 <li>The number of fawns such that 4.2% of does have more fawns is 3.0.</li>
 <li>The most common 87% of number of fawns per does are between 1.5 and 2.9.</li>
 </ol>
-<div id="r-appendix-4" class="section level3">
+<div id="r-appendix-5" class="section level3">
 <h3>R Appendix</h3>
 <pre class="r"><code>( q1 &lt;- distrib(2,mean=2.235,sd=0.460) )</code></pre>
 <pre class="r"><code>( q2 &lt;- distrib(3,mean=2.235,sd=0.460,lower.tail=FALSE) )</code></pre>
@@ -113,7 +148,7 @@ css: "/css/modules.css"
 <li>I could send the Swedish market approximately 31469 crayfish.</li>
 <li>I could send the alternative market approximately 840 crayfish.</li>
 </ol>
-<div id="r-appendix-5" class="section level3">
+<div id="r-appendix-6" class="section level3">
 <h3>R Appendix</h3>
 <pre class="r"><code>( q1ab &lt;- distrib(110,mean=93,sd=8) )</code></pre>
 <pre class="r"><code>( q1a &lt;- distrib(90,mean=93,sd=8) )</code></pre>

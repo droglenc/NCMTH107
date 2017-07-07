@@ -7,7 +7,58 @@ css: "/css/modules.css"
 
 ----
 
-## College Graduation
+&nbsp;
+
+1. Calculations Without a Context
+    1. [Situation 1](#situation-1)
+    1. [Situation 2](#situation-2)
+1. Applications With a Context
+    1. [Age of College Graduates](#age-of-college-graduates)
+    1. [Black Bear Size](#black-bear-size)
+    1. [Shrew Brain Weights](#shrew-brain-weights)
+    1. [Bus Arrival Times](#bus-arrival-times)
+    1. [Roe Deer Fawns](#roe-deer-fawns)
+    1. [Commercial Crayfishing](#commercial-crayfishing)
+
+&nbsp;
+
+&nbsp;
+
+----
+
+## Situation 1
+
+Use R and X~N(0,1) to answer the questions below.
+
+1. What percentage of X<0.11?
+1. What percentage of X>-0.11?
+1. What percentage of -1.45<X<1.11?
+1. What is the X that has 33% of Xs smaller?
+1. What is the X that has 25% of Xs larger?
+1. What are the most common 90% of Xs?
+
+[See answer here](zRevExAns/NormalDist_Calc.html#situation-1)
+
+----
+
+## Situation 2
+
+Use R and Y~N(70,6) to answer the questions below.
+
+1. What percentage of Y>75?
+1. What percentage of Y<63?
+1. What percentage of 62.3<Y<72.9?
+1. What is Y such that 30% of Ys are smaller?
+1. What is Y such that 40% of Ys are larger?
+1. What are the most common 50% of Ys?
+
+[See answer here](zRevExAns/NormalDist_Calc.html#situation-2)
+
+&nbsp;
+
+----
+
+## Age of College Graduates
 <img src="zimgs/graduation.jpg" alt="Graduation" class="img-right">
 
 The age at which "traditional" students graduate from college is N(22.1, 1.1). Use this information to answer the questions below.
@@ -17,7 +68,7 @@ The age at which "traditional" students graduate from college is N(22.1, 1.1). U
 1. What is the age range for the middle 95% of the students?
 1. What is the age at which 90% of the students have graduated?
 
-[See answer here](zRevExAns/NormalDist_Calc2.html#college-graduation)
+[See answer here](zRevExAns/NormalDist_Calc.html#age-of-college-graduates)
 
 ----
 
@@ -30,7 +81,7 @@ We know, from years of study of Black Bears, that the population distributions f
 1. What is the most common 50% of head lengths?
 1. What is the percentage of bears that weighs more than 200 lbs?
 
-[See answer here](zRevExAns/NormalDist_Calc2.html#black-bear-size)
+[See answer here](zRevExAns/NormalDist_Calc.html#black-bear-size)
 
 ----
 
@@ -43,7 +94,7 @@ The brain weights of short-tailed shrews (*Blarina brevicauda*) is normally dist
 1. What percentage of shrews have a brain weight between 0.09 and 0.17 grams?
 1. What is the brain weight such that 30% of all shrews have a larger brain weight?
 
-[See answer here](zRevExAns/NormalDist_Calc2.html#shrew-brain-weights)
+[See answer here](zRevExAns/NormalDist_Calc.html#shrew-brain-weights)
 
 ----
 
@@ -59,7 +110,7 @@ The distribution of arrival times for the BART bus at Northland is normally dist
 1. What are the most common 60% of arrival times?
 1. What kind of variable is arrival time?
 
-[See answer here](zRevExAns/NormalDist_Calc2.html#bus-arrival-times)
+[See answer here](zRevExAns/NormalDist_Calc.html#bus-arrival-times)
 
 ----
 
@@ -75,7 +126,7 @@ Researchers on Storfosna Is., Norway wanted to examine reproductive habits of ro
 1. What is the number of fawns such that only 4.2% of the does have more fawns?
 1. What is the most common 87% of number of fawns born per doe?
 
-[See answer here](zRevExAns/NormalDist_Calc2.html#roe-deer-fawns)
+[See answer here](zRevExAns/NormalDist_Calc.html#roe-deer-fawns)
 
 ----
 
@@ -87,6 +138,7 @@ I recently investigated the efficacy of becoming a commercial crayfisherman (cra
 1. How many acceptably-sized crayfish could I send to market, if I could catch approximately 50,000 crayfish? [HINT: compute the proportion of preferably-sized crayfish first.]
 1. If I could find an alternative market for the larger (>110) crayfish, how many could I send to it (again assume that I could catch 50,000 crayfish)?
 
-[See answer here](zRevExAns/NormalDist_Calc2.html#commercial-crayfishing)
+[See answer here](zRevExAns/NormalDist_Calc.html#commercial-crayfishing)
 
 ----
+
