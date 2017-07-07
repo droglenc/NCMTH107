@@ -45,7 +45,7 @@ Use the materials below to answer the questions on [this preparation guide](UEDA
 
 ## Practice
 
-* Review Exercises: [EDA](UEDACat_RevEx)
+* [Review Exercises](UEDACat_RevEx)
 * Class Exercises: [1](UEDACat_CE1) / [2](UEDACat_CE2) / [3](UEDACat_CE3) (*time permitting* ... [4](UEDACat_CE4) / [5](UEDACat_CE5))
 * [Homework Assignment](UEDACat_HW)
 

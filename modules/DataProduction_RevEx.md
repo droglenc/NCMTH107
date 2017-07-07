@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Review Exercises I
+title: Review Exercises
 subtitle: Data Production
 css: "/css/modules.css"
 ---
