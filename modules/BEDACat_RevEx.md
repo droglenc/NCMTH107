@@ -7,6 +7,21 @@ css: "/css/modules.css"
 
 ----
 
+&nbsp;
+
+1. [Religion and Genetic Counseling](#religion-and-genetic-counseling)
+1. [Herring Gulls](#herring-gulls)
+1. [Elephant Seals](#elephant-seals)
+1. [Greenhouse Effect Opinion](#greenhouse-effect-opinion)
+1. [Animal Types in Zoos](#animal-types-in-zoos)
+1. [Rainfall in West Africa](#rainfall-in-west-africa)
+
+&nbsp;
+
+&nbsp;
+
+----
+
 ## Religion and Genetic Counseling
 <img src="zimgs/genetic_counseling.jpg" alt="Genetic Counseling" class="img-right">
 
