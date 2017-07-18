@@ -49,7 +49,7 @@ Use the materials below to answer the questions on [this preparation guide](Line
 
 ## Practice
 
-* Review Exercises: [Applications](LinearRegression_RevEx_Apps) / [Applications with R](LinearRegression_RevEx_RApps)
+* [Review Exercises](LinearRegression_RevEx)
 * Class Exercises: [1](LinearRegression_CE1) / [2](LinearRegression_CE2) / [3](LinearRegression_CE3) (*time permitting* ... [4](LinearRegression_CE4))
 * [Homework Assignment](LinearRegression_HW)
 
