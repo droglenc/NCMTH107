@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Review Exercises II
-subtitle: Summaries for One Quantitative Variable
+title: Review Exercises
+subtitle: Summaries for One Categorical Variable
 css: "/css/modules.css"
 ---
 
