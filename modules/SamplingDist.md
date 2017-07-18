@@ -51,7 +51,7 @@ Use the materials below to answer the questions on [this preparation guide](Samp
 
 ## Practice
 
-* Review Exercises: [Definitions](SamplingDist_RevEx_Defns) / [Application](SamplingDist_RevEx_App)
+* [Review Exercises](SamplingDist_RevEx)
 * Class Exercises: [1](SamplingDist_CE1) / [2](SamplingDist_CE2) / [3](SamplingDist_CE3) (*time permitting* ... [4](SamplingDist_CE4))
 * [Homework Assignment](SamplingDist_HW)
 
