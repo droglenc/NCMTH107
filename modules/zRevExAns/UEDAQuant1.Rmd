@@ -15,7 +15,14 @@ output:
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/zRevExAns/")
 source("../../rhelpers/rhelpers.R")
-modHTML("UEDAQuant1_Numerical")
+modHTML("UEDAQuant1")
+```
+```{r echo=FALSE, results="hide"}
+library(NCStats)
+library(captioner)
+figs <- captioner(prefix="Figure")
+figs(name="CPHist","Histogram of the creatine phosphokinase concentrations in 36 male volunteers.")
+figs(name="POLLNHist","Histogram of the carbon monoxide levels arising from the oil refinery stack.")
 ```
 
 ## Number of States Visited
@@ -48,6 +55,51 @@ sdCalc(kang)
 
 ----
 
+## Brule River Gauge Heights
+
+The calculation of the median and IQR is shown below.
+```{r echo=FALSE, comment=""}
+hts <- c(1.56,1.54,1.54,1.57,1.58,1.61,1.60,1.69,
+         1.99,2.11,1.98,1.76,1.69,1.99,1.86,1.53)
+iqrCalc(hts)
+```
+
+The calculation of the mean and standard deviation is shown below.
+```{r echo=FALSE, comment=""}
+sdCalc(hts)
+```
+
+### R Code Appendix
+```
+library(NCStats)
+df <- read.csv("data/BruleRiver.csv")
+Summarize(~gauge,data=df)
+```
+
+----
+
+## Population Density in Wisconsin Counties
+
+The calculation of the median and IQR is shown below.
+```{r echo=FALSE, comment=""}
+dens <- c(429.0,67.8,52.1,97.4,57.9,354.9,16.2,19.1,127.0,27.6,10.2,54.6,28.8,30.1,20.2)
+iqrCalc(dens)
+```
+
+The calculation of the mean and standard deviation is shown below.
+```{r echo=FALSE, comment=""}
+sdCalc(dens)
+```
+
+### R Code Appendix
+```
+library(NCStats)
+df <- read.csv("data/WIDensity.csv")
+Summarize(~dens,data=df)
+```
+
+----
+
 ## Creatine Phosphate Concentrations
 
 The calculation of the median and IQR is shown below.
@@ -62,11 +114,20 @@ The calculation of the mean and standard deviation is shown below.
 sdCalc(cp)
 ```
 
+The histogram is in `r figs("CPHist",display="cite")`.
+
+```{r CPHist, echo=FALSE, comment=""}
+hist(~cp,xlab="Creatine Phosphate Concentration (ppm)")
+```
+
+`r figs("CPHist")`
+
 ### R Code Appendix
 ```
 library(NCStats)
 df <- read.csv("data/CreatinePhosphate.csv")
 Summarize(~cp,data=df)
+<<CPHist>>
 ```
 
 ----
@@ -84,11 +145,20 @@ The calculation of the mean and standard deviation is shown below.
 sdCalc(polln)
 ```
 
+The histogram is in `r figs("POLLNHist",display="cite")`.
+
+```{r POLLNHist, echo=FALSE, comment=""}
+hist(~polln,xlab="Carbon Monoxide Levels (ppm)")
+```
+
+`r figs("POLLNHist")`
+
 # R Code Appendix
 ```
 library(NCStats)
 df <- read.csv("data/Polln.csv")
 Summarize(~polln,data=df)
+<<POLLNHist>>
 ```
 
 ----

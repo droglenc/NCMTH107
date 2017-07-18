@@ -7,6 +7,10 @@ css: "/css/modules.css"
 ---
 
 
+<pre><code>## Loading required package: FSA</code></pre>
+<pre><code>## ## FSA v0.8.13. See citation(&#39;FSA&#39;) if used in publication.
+## ## Run fishR() for related website and fishR(&#39;IFAR&#39;) for related book.</code></pre>
+<pre><code>## ## NCStats v0.4.6 by Derek H. Ogle, Northland College.</code></pre>
 <div id="number-of-states-visited" class="section level2">
 <h2>Number of States Visited</h2>
 <p>The calculation of the median and IQR is shown below.</p>
@@ -68,6 +72,99 @@ Variance = s^2 = 67168 / 4 = 16792
 Std. Dev = s = sqrt(16792) = 129.5839</code></pre>
 <hr />
 </div>
+<div id="brule-river-gauge-heights" class="section level2">
+<h2>Brule River Gauge Heights</h2>
+<p>The calculation of the median and IQR is shown below.</p>
+<pre><code>Median (=1.65) is the average of values in positions 8 and 9.
+  1.53 1.54 1.54 1.56 1.57 1.58 1.6 [1.61 1.69] 1.69 1.76 1.86 1.98 1.99 1.99 2.11
+
+Q1 (=1.565) is average of values in positions 4 and 5 of the lower half.
+  1.53 1.54 1.54 [1.56 1.57] 1.58 1.6 1.61
+
+Q3 (=1.92) is average of values in positions 4 and 5 of the upper half.
+  1.69 1.69 1.76 [1.86 1.98] 1.99 1.99 2.11</code></pre>
+<p>The calculation of the mean and standard deviation is shown below.</p>
+<pre><code>Demonstration of parts of a std. dev. calculation.
+
+        x  diffs diffs.sq
+1    1.56 -0.165 0.027225
+2    1.54 -0.185 0.034225
+3    1.54 -0.185 0.034225
+4    1.57 -0.155 0.024025
+5    1.58 -0.145 0.021025
+6    1.61 -0.115 0.013225
+7    1.60 -0.125 0.015625
+8    1.69 -0.035 0.001225
+9    1.99  0.265 0.070225
+10   2.11  0.385 0.148225
+11   1.98  0.255 0.065025
+12   1.76  0.035 0.001225
+13   1.69 -0.035 0.001225
+14   1.99  0.265 0.070225
+15   1.86  0.135 0.018225
+16   1.53 -0.195 0.038025
+sum 27.60  0.000 0.583200
+
+Mean = x-bar = 27.6 / 16 = 1.725 
+
+Variance = s^2 = 0.5832 / 15 = 0.03888 
+
+Std. Dev = s = sqrt(0.03888) = 0.1971801</code></pre>
+<div id="r-code-appendix" class="section level3">
+<h3>R Code Appendix</h3>
+<pre><code>library(NCStats)
+df &lt;- read.csv(&quot;data/BruleRiver.csv&quot;)
+Summarize(~gauge,data=df)</code></pre>
+<hr />
+</div>
+</div>
+<div id="population-density-in-wisconsin-counties" class="section level2">
+<h2>Population Density in Wisconsin Counties</h2>
+<p>The calculation of the median and IQR is shown below.</p>
+<pre><code>Median (=52.1) is the value in position 8.
+  10.2 16.2 19.1 20.2 27.6 28.8 30.1 [52.1] 54.6 57.9 67.8 97.4 127 354.9 429
+
+Q1 (=20.2) is the value in position 4 of the lower half.
+  10.2 16.2 19.1 [20.2] 27.6 28.8 30.1
+
+Q3 (=97.4) is the value in position 4 of the upper half.
+  54.6 57.9 67.8 [97.4] 127 354.9 429
+
+**Note that the median (=52.1) is NOT in both halves.</code></pre>
+<p>The calculation of the mean and standard deviation is shown below.</p>
+<pre><code>Demonstration of parts of a std. dev. calculation.
+
+         x  diffs    diffs.sq
+1    429.0 336.14 112990.0996
+2     67.8 -25.06    628.0036
+3     52.1 -40.76   1661.3776
+4     97.4   4.54     20.6116
+5     57.9 -34.96   1222.2016
+6    354.9 262.04  68664.9616
+7     16.2 -76.66   5876.7556
+8     19.1 -73.76   5440.5376
+9    127.0  34.14   1165.5396
+10    27.6 -65.26   4258.8676
+11    10.2 -82.66   6832.6756
+12    54.6 -38.26   1463.8276
+13    28.8 -64.06   4103.6836
+14    30.1 -62.76   3938.8176
+15    20.2 -72.66   5279.4756
+sum 1392.9   0.00 223547.4360
+
+Mean = x-bar = 1392.9 / 15 = 92.86 
+
+Variance = s^2 = 223547.4 / 14 = 15967.67 
+
+Std. Dev = s = sqrt(15967.67) = 126.3633</code></pre>
+<div id="r-code-appendix-1" class="section level3">
+<h3>R Code Appendix</h3>
+<pre><code>library(NCStats)
+df &lt;- read.csv(&quot;data/WIDensity.csv&quot;)
+Summarize(~dens,data=df)</code></pre>
+<hr />
+</div>
+</div>
 <div id="creatine-phosphate-concentrations" class="section level2">
 <h2>Creatine Phosphate Concentrations</h2>
 <p>The calculation of the median and IQR is shown below.</p>
@@ -126,11 +223,15 @@ Mean = x-bar = 3538 / 36 = 98.27778
 Variance = s^2 = 57071.22 / 35 = 1630.606 
 
 Std. Dev = s = sqrt(1630.606) = 40.38077</code></pre>
-<div id="r-code-appendix" class="section level3">
+<p>The histogram is in Figure 1.</p>
+<p><img src="UEDAQuant1_files/figure-html/CPHist-1.png" width="336" /></p>
+<p>Figure 1: Histogram of the creatine phosphokinase concentrations in 36 male volunteers.</p>
+<div id="r-code-appendix-2" class="section level3">
 <h3>R Code Appendix</h3>
 <pre><code>library(NCStats)
 df &lt;- read.csv(&quot;data/CreatinePhosphate.csv&quot;)
-Summarize(~cp,data=df)</code></pre>
+Summarize(~cp,data=df)
+&lt;&lt;CPHist&gt;&gt;</code></pre>
 <hr />
 </div>
 </div>
@@ -189,12 +290,16 @@ Mean = x-bar = 2166 / 31 = 69.87097
 Variance = s^2 = 67195.48 / 30 = 2239.849 
 
 Std. Dev = s = sqrt(2239.849) = 47.32705</code></pre>
+<p>The histogram is in Figure 2.</p>
+<p><img src="UEDAQuant1_files/figure-html/POLLNHist-1.png" width="336" /></p>
+<p>Figure 2: Histogram of the carbon monoxide levels arising from the oil refinery stack.</p>
 </div>
-<div id="r-code-appendix-1" class="section level1">
+<div id="r-code-appendix-3" class="section level1">
 <h1>R Code Appendix</h1>
 <pre><code>library(NCStats)
 df &lt;- read.csv(&quot;data/Polln.csv&quot;)
-Summarize(~polln,data=df)</code></pre>
+Summarize(~polln,data=df)
+&lt;&lt;POLLNHist&gt;&gt;</code></pre>
 <hr />
 </div>
 
