@@ -1,9 +1,176 @@
 ---
 layout: page
-title: Review Exercises
-subtitle: Linear Regression -- R Applications
+title: Review Exercise
+subtitle: Linear Regression -- Applications
+author: Derek H. Ogle
 css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3.5
+    fig_width: 3.5
+    self_contained: no
 ---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+source("../rhelpers/rhelpers.R")
+modHTML("LinearRegression_RevEx")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+source("../rhelpers/knitr_setup.R")
+```
+
+----
+
+&nbsp;
+
+1. Applications Using Summarized Data
+    1. [Molting of Wood Thrush](#molting-of-wood-thrush)
+    1. [Age and Systolic Blood Pressure](#age-and-systolic-blood-pressure)
+    1. [TV Ratings](#tv-ratings)
+    1. [Deer Fawns](#deer-fawns)
+1. Applications Using R with Raw Data
+    1. [Fat Intake and Breast Cancer](#fat-intake-and-breast-cancer)
+    1. [Willow Flycatcher Migration](#willow-flycatcher-migration)
+    1. [Red-Imported Fire Ants and Deer Fawns](#red-imported-fire-ants-and-deer-fawns)
+    1. [Math Assessments](#math-assessments)
+    1. [Archiving DNA Tissue](#archiving-dna-tissue)
+    1. [Fawn Recruitment and Precipitation](#fawn-recruitment-and-precipitation)
+    1. [Cricket Chirps and Temperature](#cricket-chirps-and-temperature)
+
+&nbsp;
+
+&nbsp;
+
+----
+
+## Molting of Wood Thrush
+<img src="zimgs/thrush.jpg" alt="Wood Thrush" class="img-right">
+
+[Vega Rivera *et al.* (1998)](https://sora.unm.edu/sites/default/files/journals/wilson/v110n03/p0384-p0392.pdf) examined the relationship between the duration of molt and the date of molt start (measured in days since July 1) for wood thrush (*Hylocichla mustelina*). A recreation of their results is shown below (note that the outlier marked by a "+"" in the scatterplot was ignored in the calculation of the best-fit line). Use these results to answer the questions below.
+
+```{r FLPThrush, echo=FALSE}
+molt <- data.frame(date=c(61,60,58,53,53,51,51,49,48,46,46,47,45,43,43,42,41,41,39,38,37,35,38,35,34,33,34,30,28,30,30,21,24),
+                   duration=c(40,42,47,45,48,47,51,49,48,45,51,52,54,54,55,48,50,51,51,52,51,52,55,54,55,55,58,57,55,61,61,59,44))
+out <- molt[33,]
+molt1 <- molt[-33,]
+par(mar=c(3,3,1.5,0.5),mgp=c(1.9,0.4,0),tcl=-0.2)
+lm.molt <- lm(duration~date,data=molt1)
+fitPlot(lm.molt,pch=21,bg="gray70",
+        xlab="Start Date (d since July 1)",ylab="Duration (d))")
+points(out$date,out$duration,pch=3)
+r2 <- formatC(rSquared(lm.molt),format="f",digits=3)
+mtext(bquote(paste(Y==.(formatC(coef(lm.molt)[1],format="f",digits=3))-.(formatC(-1*coef(lm.molt)[2],format="f",digits=3))*X,"    ",r^2==.(r2))),line=0.2,cex=0.8)
+```
+
+1. What is the explanatory variable?
+1. What is the response variable?
+1. In terms of the variables of this problem, what is the equation of the best-fit line?
+1. In terms of the variables of this problem, interpret the value of the slope.
+1. In terms of the variables of this problem, interpret the value of the intercept.
+1. What is the predicted molt duration if the molt starts on September 10 (71 d since July 1)?
+1. What is the residual if molt duration is 48 d and the start date is Aug. 12 (43 d since July 1)?
+1. What is the correlation between molt duration and molt start date?
+1. What proportion of the variability in molt duration is explained when molt start date is 37?
+1. What proportion of the variability in molt duration is explained when molt start date is 57?
+1. What would happen to the value of the slope if the outlier was NOT ignored?
+
+[See answer here](zRevExAns/LinearRegression_Apps.html#molting-of-wood-thrush)
+
+----
+
+## Age and Systolic Blood Pressure
+<img src="zimgs/bloodpressure.jpg" alt="Blood Pressure" class="img-right">
+
+The age (in years) and systolic blood pressure were measured for 32 white males over the age of 40. The researchers wanted to determine if systolic blood pressure increased with increasing age. Thus, they computed the regression depicted in the fitted-line plot below. Use these results to answer the questions below.
+
+```{r FLPAgeSBP, echo=FALSE}
+sbp1 <- data.frame(age=c(43,41,43,44,45,46,47,48,49,50,50,49,48,51,53,52,54,54,54,57,56,56,56,58,59,60,62,64,63,65,63,64),
+                   sbp=c(120,122,126,144,135,142,129,133,130,132,134,145,160,138,137,149,149,146,141,135,138,142,150,144,166,162,152,152,161,164,170,180))
+par(mar=c(3,3,1.5,0.5),mgp=c(1.9,0.4,0),tcl=-0.2)
+lm.sbp <- lm(sbp~age,data=sbp1)
+fitPlot(lm.sbp,pch=21,bg="gray70",
+        xlab="Age (yrs)",ylab="Systolic Blood Pressure")
+r2 <- rSquared(lm.sbp)
+mtext(bquote(paste(Y==.(formatC(coef(lm.sbp)[1],format="f",digits=3))+.(formatC(coef(lm.sbp)[2],format="f",digits=3))*X,"    ",r^2==.(formatC(r2,format="f",digits=3)))),line=0.2,cex=0.8)
+```
+
+1. Which is the explanatory variable?
+1. Which is the response variable?
+1. In terms of the variables of this problem, what is the equation of the best-fit line?
+1. In terms of the variables of this problems, interpret the value of the intercept.
+1. In terms of the variables of this problems, interpret the value of the slope.
+1. If male A is 3 years younger than male B, how much difference do you expect to see in their systolic blood pressures?
+1. What is the predicted systolic blood pressure for a 70-year-old male?
+1. What is the residual for a a 50-year-old male with a SBP of 131?
+1. What is the correlation coefficient between Age and SBP?
+1. What proportion of the variability in SBP is explained by knowing the person's AGE?
+1. What is the predicted systolic blood pressure for a 55-year-old male?
+
+
+[See answer here](zRevExAns/LinearRegression_Apps.html#age-and-systolic-blood-pressure)
+
+----
+
+## TV Ratings
+<img src="zimgs/tv.jpg" alt="TV" class="img-right">
+
+There are at least two ways that special TV programs could be rated, and both are of interest to advertisers -- the estimated size of the audience and the percentage of TV-owning households that tuned into the program. Use the results below for the 20 all-time top-rated programs to determine if the estimated size of the audience can be predicted from the percentage of TV-owning households tuned into the program.
+
+```{r FLPTV, echo=FALSE}
+tv <- data.frame(rating=c(60.3,53.3,51.1,48.6,46,48.3,48.6,49.1,45.8,46.5,46.5,46,46.3,45.9,47,47.3,47.4,47.7,46.5,45.9),
+                 audience=c(50247,41481,36296,45679,44074,41605,40617,40000,40123,39506,38765,38642,35432,32716,35062,34444,33580,33827,27284,25679))
+par(mar=c(3,3,1.5,0.5),mgp=c(1.9,0.4,0),tcl=-0.2)
+lm.tv <- lm(audience~rating,data=tv)
+fitPlot(lm.tv,pch=21,bg="gray70",xlab="Rating (%)",ylab="Audience (1000s)")
+r2 <- formatC(rSquared(lm.tv),format="f",digits=3)
+mtext(bquote(paste(Y==.(formatC(coef(lm.tv)[1],format="f",digits=3))+.(formatC(coef(lm.tv)[2],format="f",digits=3))*X,"    ",r^2==.(r2))),line=0.2,cex=0.8)
+```
+
+1. What did the researchers consider the response variable to be?
+1. What is the equation of the best-fit line in terms of the variables of the problem?
+1. Interpret the value of the slope in terms of the variables of the problem.
+1. What is the predicted audience size for a show with a rating of 40.1%?
+1. What is the residual for a show with a rating of 55 and an audience size (1000s) of 40000?
+1. What proportion of the variability in audience size is explained by known the rating percentage?
+1. What is the correlation between audience size and rating percentage?
+1. What are two things that bother you about this analysis as it is presented here? Be specific!
+
+[See answer here](zRevExAns/LinearRegression_Apps.html#tv-ratings)
+
+----
+
+## Deer Fawns
+<img src="zimgs/fawn.jpg" alt="Fawn" class="img-right">
+
+Wildlife ecologists in Texas wanted to determine if the number of fawns born to each doe could be explained by the doe's body mass [(Ginnett and Young 2000)](http://www.jstor.org/stable/3802741?seq=1#page_scan_tab_contents). As part of their study, the researchers recorded the mean number of fawns born to a doe (over a period of time) and the body mass of the doe (kg). Use the results in the following graph to explain the relationship to answer the questions below.
+
+```{r FLPFawns, echo=FALSE}
+d2 <- data.frame(fawns=c(1.85,1.33,1.61,1.95,2.13,2.53,3.45,2.71,2.53,2.39,2.37,1.82,1.44,1.34,1.48,1.73,1.89,1.93,2.03,2.06,2,1.98,1.96,1.93,1.98,2.07,2.21,2.2,2.24,2.38,2.41,2.55,2.58,3.25,2.87,2.62,2.56,2.42,2.3,2.11,2.14,2.06,1.95,1.67,1.18,1.29,1.06,1.26,1.21,1.5,1.5,1.56,1.61,1.73,1.7,1.8,1.8,1.87,1.9,2.03,2.07,2.09,2.25,2.28,2.31,2.26,2.34,2.38,2.37,2.46,2.53,2.61,2.7,2.71,2.8,2.98,2.95,2.98,2.69,2.66,2.44,2.22,2.12,1.94,1.96,1.83,1.86,1.89,1.92,1.8,1.77,1.85,1.88,1.89,1.94,2.04,1.99,2.06,2.02,1.94,1.89,1.97,1.94,1.75,1.64,1.79,1.51,2.28,2.26,2.18,2.24,2.21,2.18,2.21,2.27,2.36,2.38,2.42,2.46,2.39,2.31,2.42,2.34,2.34,2.41,2.43,2.56,2.68,2.68,2.59,2.56,2.58,2.56,2.68,2.73,2.84,3.04,3.19,2.84,2.8,2.69,2.76,2.91,2.95,3.42,3.03),
+                 bodymass=c(21.7,23.4,23.4,22.9,23.4,23.1,24.1,24.5,24.3,24.5,24.5,24.7,25.1,26.3,26.4,25.9,25.2,25.2,25,25.2,25.4,25.4,25.7,25.9,26.1,26,25.4,25.1,25.1,25.1,25,25.2,25.5,26,26.7,26.1,26.8,27,25.9,26.3,26.8,26.9,26.4,27,27.7,27.8,28.9,28.7,30.2,29.7,28.4,27.9,27.5,27.8,28.2,28.4,28.1,27.8,27.4,27.5,27.9,28,27.9,28.1,28.3,27.3,27.6,27.6,28.3,28.3,28,27.3,27.6,27.5,27,27.1,28,28.1,28.3,28.5,28.7,28.4,28.5,28.6,28.8,29.1,29.3,29.3,29.1,29.7,29.9,30,29.8,29.6,29.5,29.9,30.1,30.1,30.5,30.7,30.9,31.3,32.4,32.4,32.5,33.1,34.7,33.6,31.9,31.4,30.9,30.7,29.1,29.1,28.9,29.1,29.1,29,29.3,29.5,30.4,30.4,30.9,31.1,31.1,31.8,31.6,30.9,30.7,30.5,30.2,30.1,29.2,29.2,29.1,29,29,29.1,29.4,29.6,29.8,30,29.7,29.9,30.1,33.6))
+par(mar=c(3,3,1.5,0.5),mgp=c(1.9,0.4,0),tcl=-0.2)
+lm.d2 <- lm(fawns~bodymass,data=d2)
+fitPlot(lm.d2,pch=21,bg="gray70",
+        xlab="Doe Body Mass (kg)",ylab="Mean Fawns per Doe",ylim=c(1,4))
+r2 <- formatC(rSquared(lm.d2),format="f",digits=3)
+mtext(bquote(paste(Y==.(formatC(coef(lm.d2)[1],format="f",digits=3))+.(formatC(coef(lm.d2)[2],format="f",digits=4))*X,"    ",r^2==.(r2))),line=0.2,cex=0.8)
+```
+
+1. Which is the explanatory variable?
+1. Which is the response variable?
+1. Express the equation of the best-fit line in terms of the variables of the problem.
+1. Interpret the slope of the best-fit line in terms of the variables of the problem.
+1. If a doe weighed 45 kg, how many fawns on average would you expect her to have?
+1. If a doe weighing 32 kg gave birth to an average of 1.9 fawns, what is the residual for this doe?
+1. What is the correlation coefficient between mean number of fawns born and doe body mass?
+1. How much of the variability in the mean number of fawns born is explained by knowing the body mass of does?
+1. If body mass increases by 5 kg, how many more fawns can you expect that doe have?
+1. Do you have any concerns about the strength of this relationship?
+
+[See answer here](zRevExAns/LinearRegression_Apps.html#deer-fawns)
 
 ----
 
