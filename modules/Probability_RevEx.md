@@ -1,9 +1,23 @@
 ---
 layout: page
 title: Review Exercises
-subtitle: Probabiliy
+subtitle: Probability
 css: "/css/modules.css"
 ---
+
+----
+
+&nbsp;
+
+1. General (Non-Normal Distribution) Questions
+    1. [Coin Purse](#coin-purse)
+    1. [Greenhouse Plants](#greenhouse-plants)
+1. Normal Distribution Questions
+    1. [Lengths of Pine Needles](#lengths-of-pine-needles)
+
+&nbsp;
+
+&nbsp;
 
 ----
 
