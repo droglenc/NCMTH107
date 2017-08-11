@@ -46,7 +46,7 @@ We will focus on the understanding of statistical concepts and proper interpreta
 <tr><th><a href="http://derekogle.com" target="_blank">Dr. Derek H. Ogle</a><br>Professor of Mathematical Sciences<br> & Natural Resources</th></tr>
 <tr><th><img src="../img/DerekOgle1.jpg"></th></tr>
 <tr style="vertical-align:top"><td>CSE228; 682-1300<br><a href="mailto:dogle@northland.edu">dogle@northland.edu</a><br>
-<a href="https://www.suggestionox.com/r/W17-107" target="_blank">Feedback / Suggestions</a></td></tr>
+<a href="http://freesuggestionbox.com/pub/esejafr" target="_blank">Feedback / Suggestions</a></td></tr>
 <tr style="vertical-align:top"><td>Office Hours:<br>
 XXX<br>By Appointment</td></tr>
 </table>
