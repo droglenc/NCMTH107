@@ -31,9 +31,9 @@ R is fast becoming the primary software for performing statistical analyses in m
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](DataIntoR_Prep).
+Use the materials below to answer the questions on [this preparation guide](GettingDataIntoR_Prep).
 
-* [Reading](../book/Getting Started with R.pdf)
+* [Reading](../book/Getting Data Into R.pdf)
 * Video: [What is R?](https://www.youtube.com/v/TR2bHSJ_eck?version=3&autoplay=1){:target="_blank"} [2 mins] 
 * Video: [What's Up with R?](https://www.youtube.com/v/ZwYQPtU2Pa0?version=3&autoplay=1&start=1&end=111){:target="_blank"} [3 mins]
 * Video: [Retrieve Data from Webpage](https://vimeo.com/user45324800/ncstats-preparedatawebpage){:target="_blank"} [3 mins] **OUT-OF-DATE (will be updated in class)**
@@ -45,9 +45,10 @@ Use the materials below to answer the questions on [this preparation guide](Data
 
 ## Practice
 
-* In-Class Demonstration -- [![Web](../img/web.png)](DataIntoR_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](DataIntoR_RHO.pdf) [![MSWord](../img/word.png)](DataIntoR_RHO.docx)  [![R](../img/Rlogo.png)](DataIntoR_RHO.R){:target="_blank"}
-* Class Exercises: [1](DataIntoR_CE1) / [2](DataIntoR_CE2) (*time permitting* ... [3](DataIntoR_CE3))
-* [Homework Assignment](DataIntoR_HW)
+* Review Exercises
+* In-Class Demonstration -- [![Web](../img/web.png)](GettingDataIntoR_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](GettingDataIntoR_RHO.pdf) [![MSWord](../img/word.png)](GettingDataIntoR_RHO.docx)  [![R](../img/Rlogo.png)](GettingDataIntoR_RHO.R){:target="_blank"}
+* Class Exercises: [1](GettingDataIntoR_CE1) / [2](GettingDataIntoR_CE2) (*time permitting* ... [3](GettingDataIntoR_CE3))
+* [Homework Assignment](GettingDataIntoR_HW)
 
 ----
 
