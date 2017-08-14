@@ -1,0 +1,77 @@
+---
+title: "Review Exercise Key"
+subtitle: "Getting Data Into R"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3
+    fig_width: 3.5
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/zRevExAns/")
+source("../../rhelpers/rhelpers.R")
+modHTML("GettingDataIntoR")
+```
+```{r echo=FALSE, message=FALSE}
+library(NCStats)
+```
+
+----
+
+## Biometric Measurements on Douglas Fir
+```{r echo=FALSE, results="hide"}
+df <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/DougFirBiometrics.csv")
+```
+```{r DougFir, echo=FALSE, results="hide"}
+df$height
+( dfIngrid <- filterD(df,observer=="Ingrid") )
+( dfDylan <- filterD(df,observer=="Dylan") )
+( dfLT10 <- filterD(df,height<10) )
+( df2 <- filterD(df,height>10,circ<1) )
+df[,3]
+df$height[5]
+```
+
+
+1. All estimated tree heights are below.
+```{r echo=FALSE}
+df$height
+```
+2. All measurements for all trees measured by "Ingrid" are below.
+```{r echo=FALSE}
+dfIngrid
+```
+1. All estimated tree heights for all trees measured by "Dylan" are below.
+```{r echo=FALSE}
+dfDylan$height
+```
+1. All measurements for tree heights less than 10 m are below.
+```{r echo=FALSE}
+dfLT10
+```
+1. All measurements for tree heights greater than 10 m and circumference less than 1 m are below.
+```{r echo=FALSE}
+df2
+```
+1. Show all measurements made on the third tree. are below.
+```{r echo=FALSE}
+df[3,]
+```
+1. Show the estimated tree height for the fifth tree. are below.
+```{r echo=FALSE}
+df$height[5]
+```
+
+### R Appendix
+```{r eval=FALSE}
+setwd("c:/data/")
+df <- read.csv("DougFirBiometrics.csv")
+<<DougFir>>
+```
+
+----

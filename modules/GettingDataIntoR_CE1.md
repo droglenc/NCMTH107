@@ -8,7 +8,7 @@ css: "/css/modules.css"
 ----
 
 ## Loading Data from Webpage
-For each data file below, download the data file from the class webpage and into your "R Directory", load the data into a data.frame in R, and identify (i) how many variables are in the data.frame, (ii) the names of the variables, and (iii) how many individuals are in the data.frame.
+Download each data file below from the class webpage and into your "R Directory", load the data into a data.frame in R, and identify (i) how many variables, (ii) the names of the variables, and (iii) how many individuals are in the data.frame.
 
 1. BrainHead.csv.
 1. PopularKids.csv
@@ -26,9 +26,9 @@ For each situation below, enter the data into a CSV file, load the data into a d
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="DataIntoR.html">^</a></li>
+  <li><a href="GettingDataIntoR.html">^</a></li>
   <li class="active"><a href="#">1</a></li>
-  <li><a href="DataIntoR_CE2.html">2</a></li>
-  <li><a href="DataIntoR_CE3.html">3</a></li>
+  <li><a href="GettingDataIntoR_CE2.html">2</a></li>
+  <li><a href="GettingDataIntoR_CE3.html">3</a></li>
 </ul>
 

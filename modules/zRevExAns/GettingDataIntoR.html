@@ -1,0 +1,114 @@
+---
+layout: page
+title: "Review Exercise Key"
+subtitle: "Getting Data Into R"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="biometric-measurements-on-douglas-fir" class="section level2">
+<h2>Biometric Measurements on Douglas Fir</h2>
+<ol>
+<li>All estimated tree heights are below.</li>
+</ol>
+<pre><code>##  [1] 70.33 72.92 65.76  5.39  5.12  8.83  9.76 12.08  5.19 13.50 10.90
+## [12]  6.79 10.66 11.71 10.50  2.67 16.07 28.94 37.13 40.92 38.59 36.21
+## [23] 38.92 42.48 78.01</code></pre>
+<ol>
+<li>All measurements for all trees measured by “Ingrid” are below.</li>
+</ol>
+<pre><code>##    tree observer circ eyeht horizdist angle height
+## 1     1   Ingrid 4.97  1.51     50.00  54.0  70.33
+## 2     2   Ingrid 6.65  1.51     50.00  55.0  72.92
+## 3     3   Ingrid 4.93  1.51     31.20  64.1  65.76
+## 4     5   Ingrid 0.19  1.51     11.80  17.0   5.12
+## 5     6   Ingrid 0.45  1.51      9.24  38.4   8.83
+## 6     7   Ingrid 0.62  1.51      6.42  52.1   9.76
+## 7     8   Ingrid 0.64  1.51      7.40  55.0  12.08
+## 8     9   Ingrid 0.18  1.51      7.17  27.2   5.19
+## 9    10   Ingrid 0.55  1.51     10.80  48.0  13.50
+## 10   11   Ingrid 0.40  1.51     11.15  40.1  10.90
+## 11   25   Ingrid 9.09  1.58     76.43  45.0  78.01</code></pre>
+<ol>
+<li>All estimated tree heights for all trees measured by “Dylan” are below.</li>
+</ol>
+<pre><code>##  [1]  5.39  6.79 10.66 11.71 10.50  2.67 16.07 28.94 37.13 40.92 38.59
+## [12] 36.21 38.92 42.48</code></pre>
+<ol>
+<li>All measurements for tree heights less than 10 m are below.</li>
+</ol>
+<pre><code>##   tree observer circ eyeht horizdist angle height
+## 1    4    Dylan 0.29  1.73     16.50  12.5   5.39
+## 2    5   Ingrid 0.19  1.51     11.80  17.0   5.12
+## 3    6   Ingrid 0.45  1.51      9.24  38.4   8.83
+## 4    7   Ingrid 0.62  1.51      6.42  52.1   9.76
+## 5    9   Ingrid 0.18  1.51      7.17  27.2   5.19
+## 6   12    Dylan 0.39  1.73     14.70  19.0   6.79
+## 7   16    Dylan 0.15  1.73      6.10   8.8   2.67</code></pre>
+<ol>
+<li>All measurements for tree heights greater than 10 m and circumference less than 1 m are below.</li>
+</ol>
+<pre><code>##   tree observer circ eyeht horizdist angle height
+## 1    8   Ingrid 0.64  1.51      7.40  55.0  12.08
+## 2   10   Ingrid 0.55  1.51     10.80  48.0  13.50
+## 3   11   Ingrid 0.40  1.51     11.15  40.1  10.90
+## 4   13    Dylan 0.62  1.73     16.80  28.0  10.66
+## 5   14    Dylan 0.27  1.73     14.80  34.0  11.71
+## 6   15    Dylan 0.41  1.73      7.90  48.0  10.50
+## 7   17    Dylan 0.86  1.73     16.50  41.0  16.07</code></pre>
+<ol>
+<li>Show all measurements made on the third tree. are below.</li>
+</ol>
+<pre><code>##   tree observer circ eyeht horizdist angle height
+## 3    3   Ingrid 4.93  1.51      31.2  64.1  65.76</code></pre>
+<ol>
+<li>Show the estimated tree height for the fifth tree. are below.</li>
+</ol>
+<pre><code>## [1] 5.12</code></pre>
+<div id="r-appendix" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>setwd(&quot;c:/data/&quot;)
+df &lt;- read.csv(&quot;DougFirBiometrics.csv&quot;)
+df$height
+( dfIngrid &lt;- filterD(df,observer==&quot;Ingrid&quot;) )
+( dfDylan &lt;- filterD(df,observer==&quot;Dylan&quot;) )
+( dfLT10 &lt;- filterD(df,height&lt;10) )
+( df2 &lt;- filterD(df,height&gt;10,circ&lt;1) )
+df[,3]
+df$height[5]</code></pre>
+<hr />
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

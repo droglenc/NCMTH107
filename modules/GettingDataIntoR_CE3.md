@@ -13,10 +13,10 @@ css: "/css/modules.css"
 [Locke (1993)](http://www.amstat.org/publications/jse/v1n1/datasets.lock.html) recorded data on a random sample of cars from the 1993 model year.  His data are in [93cars.csv](https://github.com/droglenc/NCData/raw/master/93cars.csv).  
 Use this information to answer the following questions (by using R).
 
-1. Download the data from the class webpage and load the data into RStudio.
+1. Download the data from the class webpage and load into R.
 1. How many variables are recorded in this data.frame?
 1. How many individuals are recorded in this data.frame?
-1. Isolate the following subsets of data (show the structure or a view of the resultant data.frame to verify your results).
+1. Isolate the following subsets of data (*show the structure or a view of the resultant data.frame to verify your results*).
     * Cars that were manufactured by Ford.
     * Cars that get more than 30 miles per gallon in the city.
     * Cars that had an automatic transmission and get more than 30 miles per gallon on the highway.
@@ -27,8 +27,8 @@ Use this information to answer the following questions (by using R).
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="DataIntoR.html">^</a></li>
-  <li><a href="DataIntoR_CE1.html">1</a></li>
-  <li><a href="DataIntoR_CE2.html">2</a></li>
+  <li><a href="GettingDataIntoR.html">^</a></li>
+  <li><a href="GettingDataIntoR_CE1.html">1</a></li>
+  <li><a href="GettingDataIntoR_CE2.html">2</a></li>
   <li class="active"><a href="#">3</a></li>
 </ul>
