@@ -20,11 +20,11 @@ output:
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules")
 source("../rhelpers/rhelpers.R")
-modHTML("DataIntoR_RHO")
+modHTML("GettingDataIntoR_RHO")
 ```
 ```{r echo=FALSE, results='hide', message=FALSE, warnings=FALSE}
 source("../rhelpers/knitr_setup.R")
-purl2("DataIntoR_RHO.Rmd",moreItems=c("Renders","source","modHTML","github.com","NCMTH107"))
+purl2("GettingDataIntoR_RHO.Rmd",moreItems=c("Renders","source","modHTML","github.com","NCMTH107"))
 ```
 
 ## Always First Command

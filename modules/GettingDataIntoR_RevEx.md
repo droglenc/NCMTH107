@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Review Exercises
-subtitle: Goodness-of-Fit
+subtitle: Getting Data Into R
 css: "/css/modules.css"
 ---
 

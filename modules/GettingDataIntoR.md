@@ -45,7 +45,7 @@ Use the materials below to answer the questions on [this preparation guide](Gett
 
 ## Practice
 
-* [Review Exercises](GetingDataIntoR_RevEx.html)
+* [Review Exercises](GettingDataIntoR_RevEx.html)
 * In-Class Demonstration -- [![Web](../img/web.png)](GettingDataIntoR_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](GettingDataIntoR_RHO.pdf) [![MSWord](../img/word.png)](GettingDataIntoR_RHO.docx)  [![R](../img/Rlogo.png)](GettingDataIntoR_RHO.R){:target="_blank"}
 * Class Exercises: [1](GettingDataIntoR_CE1) / [2](GettingDataIntoR_CE2) (*time permitting* ... [3](GettingDataIntoR_CE3))
 * [Homework Assignment](GettingDataIntoR_HW)

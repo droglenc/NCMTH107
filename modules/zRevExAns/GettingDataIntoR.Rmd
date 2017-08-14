@@ -39,31 +39,31 @@ df$height[5]
 
 
 1. All estimated tree heights are below.
-```{r echo=FALSE}
+```{r echo=FALSE, comment=""}
 df$height
 ```
 2. All measurements for all trees measured by "Ingrid" are below.
-```{r echo=FALSE}
+```{r echo=FALSE, comment=""}
 dfIngrid
 ```
 1. All estimated tree heights for all trees measured by "Dylan" are below.
-```{r echo=FALSE}
+```{r echo=FALSE, comment=""}
 dfDylan$height
 ```
 1. All measurements for tree heights less than 10 m are below.
-```{r echo=FALSE}
+```{r echo=FALSE, comment=""}
 dfLT10
 ```
 1. All measurements for tree heights greater than 10 m and circumference less than 1 m are below.
-```{r echo=FALSE}
+```{r echo=FALSE, comment=""}
 df2
 ```
 1. Show all measurements made on the third tree. are below.
-```{r echo=FALSE}
+```{r echo=FALSE, comment=""}
 df[3,]
 ```
 1. Show the estimated tree height for the fifth tree. are below.
-```{r echo=FALSE}
+```{r echo=FALSE, comment=""}
 df$height[5]
 ```
 
