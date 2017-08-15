@@ -17,7 +17,7 @@ css: "/css/modules.css"
 ----
 
 ## Biometric Measurements on Douglas Fir
-<img src="zimgs/shrike.jpg" alt="Douglas Fir" class="img-right">
+<img src="zimgs/douglasfir.jpg" alt="Douglas Fir" class="img-right">
 
 Two students at Seattle Community College made biometric measurements on 25 Douglas fir (*Pseudotsuga menziesii*) trees in the lowlands of western Washington. The variables recorded in the [DougFirBiometrics.csv](https://raw.githubusercontent.com/droglenc/NCData/master/DougFirBiometrics.csv) file are a unique tree identifier (`tree`), the observer's name (`observer`; either "Ingrid" or "Dylan"), the circumference at breast height (meters; `circ`), the height to the eye of the observer (meters; `eyeht`), the horizontal distance between observer and tree (meters; `horizdist`), the angle between observer and top of tree (degrees; `angle`), and the estimated height of tree (meters; `height`) using right-angle trigonometry. Read these data into an R object called `df` and examine the structure and a few lines of the data.frame. Answer the following questions.
 
