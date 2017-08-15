@@ -6,10 +6,11 @@ css: /css/syllabus.css
 
 ## Homework Due Dates
 <dl class="dl-horizontal">
+<dt>11-Sep</dt><dd><a href="../modules/Why_Statistics_is_Important/HW">Why Statistics is Important</a></dd>
+<dt>13-Sep</dt><dd><a href="../modules/Foundational_Definitions/HW">Foundational Definitions</a></dd>
+
 
 <!---
-<dt>18-Jan</dt><dd><a href="../modules/Why_Statistics_is_Important/HW">Why Statistics is Important</a></dd>
-<dt>18-Jan</dt><dd><a href="../modules/Foundational_Definitions/HW">Foundational Definitions</a></dd>
 <dt>23-Jan</dt><dd><a href="../modules/Data_Production/HW">Data Production</a></dd>
 <dt>25-Jan</dt><dd><a href="../modules/Getting_Data_Into_R/HW">Getting Data Into R</a></dd>
 <dt>30-Jan</dt><dd><a href="../modules/UnivEDA_Quantitative/HW">Univariate EDA - Quantitative</a></dd>
@@ -36,13 +37,13 @@ css: /css/syllabus.css
 
 ## Exam or Other Due Dates
 <dl class="dl-horizontal">
+<dt>11-Oct</dt><dd>First Exam</dd> 
+<dt>18-Oct</dt><dd>First Exam Reflection XC (Optional)</dd>
+<dt>17-Nov</dt><dd>Second Exam</dd>
+<dt>1-Dec</dt><dd>Second Exam Reflection XC (Optional)</dd>
+<dt>11-Dec</dt><dd>Extra Credit Reports (Optional)</dd>
+<dt>15-Dec</dt><dd>Final Exam</dd>
 <!---
-<dt>8-Feb</dt><dd>First Exam</dd> 
-<dt>17-Feb</dt><dd>First Exam XC Reflection (Optional)</dd>
-<dt>22-Mar</dt><dd>Second Exam</dd>
-<dt>31-Mar</dt><dd>Second Exam XC Reflection (Optional)</dd>
-<dt>14-Apr</dt><dd>"Stats-In-Use" and Project Extra Credit Reports (Optional)</dd>
-<dt>21-Apr</dt><dd>Final Exam</dd>
 -->
 </dl>
 
@@ -51,11 +52,12 @@ css: /css/syllabus.css
 
 ## Cancelled Classes
 <dl class="dl-horizontal">
+<dt>23-Oct</dt><dd>NO CLASS (College Reading Day)</dd>
+<dt>20-Nov</dt><dd>NO CLASS (Thanksgiving Break)</dd>
+<dt>22-Nov</dt><dd>NO CLASS (Thanksgiving Break)</dd>
+<dt>24-Nov</dt><dd>NO CLASS (Thanksgiving Break)</dd>
 <!---
-<dt>16-Jan</dt><dd>NO CLASS (Please participate in <a href="https://www.northland.edu/event/martin-luther-king-jr-day-2017/" target="_blank">Martin Luther King, Jr. Day Activities</a>)</dd>
-<dt>6-Mar</dt><dd>NO CLASS (Mid-Session Break)</dd>
-<dt>8-Mar</dt><dd>NO CLASS (Mid-Session Break)</dd>
-<dt>10-Mar</dt><dd>NO CLASS (Mid-Session Break)</dd>
-<dt>14-Apr</dt><dd>NO CLASS (Good Friday)</dd>
+<dt>22-Sep</dt><dd>NO CLASS (Prof. Ogle gone)</dd>
+<dt>15-Nov</dt><dd>NO CLASS (Prof. Ogle gone)</dd>
 --->
 </dl>
