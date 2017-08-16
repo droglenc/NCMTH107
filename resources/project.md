@@ -16,7 +16,7 @@ css: /css/modules.css
 ----
 
 ## Introduction
-The “term project” is a brief statistical study to answer a question of interest to you.  In this project, you will formulate a research question (and statistical hypotheses), develop a data production strategy, collect data, perform relevant analyses to answer the question, and produce a document that details your findings.  More specific information about the project is below.
+The "term project"" is a brief statistical study to answer a question of interest to you.  In this project, you will formulate a research question (and statistical hypotheses), develop a data production strategy, collect data, perform relevant analyses to answer the question, and produce a document that details your findings.  More specific information about the project is below.
 
 ## Extent
 <img class="img-right" src="../img/datacollection.jpg">
