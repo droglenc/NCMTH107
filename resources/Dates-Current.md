@@ -6,7 +6,7 @@ css: /css/syllabus.css
 
 ## Homework Due Dates
 <dl class="dl-horizontal">
-<dt>11-Sep</dt><dd><a href="../modules/Why_Stats_HW">Why Statistics is Important</a></dd>
+<dt>11-Sep</dt><dd><a href="../modules/WhyStats_HW">Why Statistics is Important</a></dd>
 <dt>13-Sep</dt><dd><a href="../modules/FoundationalDefns_HW">Foundational Definitions</a></dd>
 
 
