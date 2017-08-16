@@ -55,7 +55,7 @@ MWF 1300-1430<br>By Appointment</td></tr>
 ## Tutors
 
 <table class="tutors" width="90%">
-<tr><th width="50%"><th width="50%"><img src="../img/Adam_F16.jpg"></th><img src="../img/XXX_F17.jpg"></th></tr>
+<tr><th width="50%"><img src="../img/Adam_F16.jpg"></th><th width="50%"><img src="../img/XXX_F17.jpg"></th></tr>
 <tr><th>Adam Gunnelson</th><th>Emily Mader</th></tr>
 <tr style="vertical-align:top"><td>Adam is a chemistry major and math minor. He is a bowtie enthusiast, and enjoys helping people with math.</td><td>XXX</td></tr>
 <tr style="vertical-align:top"><td>XXX<br>XXX</td><td>XXX<br>XXX</td></tr>
