@@ -26,5 +26,4 @@ To prepare for this module, please answer the following questions from the prepa
 1. What R function is used to perform a 2-Sample t-Test with raw data?
 1. What R function is used to perform the test for equal variances?
 
-
 ----
