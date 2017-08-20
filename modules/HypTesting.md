@@ -34,12 +34,12 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
 
 Use the materials below to answer the questions on [this preparation guide](HypTesting_Prep.html#first-material).
 
-* [Reading **Sections 13.1-13.4**](../book/Hypothesis Tests.pdf).
+* [Reading **Sections 14.1-14.4**](../book/Hypothesis Tests.pdf).
 * Video: [Forming Statistical Hypothesis](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins; [![PowerPoint](../img/ppt.png)](HypTesting_PPT-hypotheses.pptx)].
 
-Use the materials below to answer the questions on [this preparation guide](HypTesting_Prep.html#first-material).
+Use the materials below to answer the questions on [this preparation guide](HypTesting_Prep.html#second-material).
 
-* [Reading **Section 13.5**](../book/Hypothesis Tests.pdf).
+* [Reading **Section 14.5**](../book/Hypothesis Tests.pdf).
 * Video: Statistical Error Types -- [here](https://www.youtube.com/v/7mE-K_w1v90?version=3&autoplay=1){:target="_blank"} [8 mins] and [here](https://www.youtube.com/v/OWn3Ko1WYTA?version=3&start=89&end=247&autoplay=1){:target="_blank"} [3 mins]
 * Video: [Computing &beta; &amp; power](https://www.youtube.com/v/BJZpx7Mdde4?version=3&autoplay=1){:target="_blank"} [12 mins].
 
