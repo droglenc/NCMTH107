@@ -30,6 +30,87 @@ figs(name="DeliveriesHist","Histograms of the delivery times for military suppli
 
 ----
 
+## Compost Type and Germination Rates
+```{r GerminationCalc, echo=FALSE, results='hide', fig.show='hide'}
+xbar1 <- 42.67; s1 <- 4.33; n1 <- 18
+xbar2 <- 28.90; s2 <- 3.21; n2 <- 10
+df <- n1+n2-2
+sp2 <- ((n1-1)*(s1^2)+(n2-1)*(s2^2))/df
+se <- sqrt(sp2*(1/n1+1/n2))
+stat <- xbar1-xbar2
+t <- stat/se
+pv <- distrib(t,distrib="t",df=df,lower.tail=FALSE)
+lcb <- stat+distrib(0.9,type="q",distrib="t",df=df,lower.tail=FALSE)*se
+```
+
+<ol>
+<li>&alpha; = 0.10.</li>
+<li>H<sub>A</sub>: &mu;<sub>b</sub>-&mu;<sub>h</sub> &gt; 0 and H<sub>0</sub>: &mu;<sub>b</sub>-&mu;<sub>h</sub> = 0, where &mu; is the mean number of germinated plants, b is the bought compost, and h is the homemade compost.</li>
+<li>2-sample t-test because (i) two populations/groups are considered (bought and homemade compost), (ii) a quantitative variable (number germinated) was recorded, and (iii) the samples are independent (there is no known connection between all pairs of bought and homemade individuals).</li>
+<li>An experimental study with some randomization (placement of containers in the greenhouse).</li>
+<li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>h</sub> = 18+10 = 28 &gt; 15 and the two sample distributions (shown on the handout) are not obviously strongly skewed, and (iii) the variances appear to be equal (Levene's p-value = 0.2414 &gt; &alpha;).</li>
+<li>x&#772;<sub>b</sub>-x&#772;<sub>h</sub> = `r xbar1`-`r xbar2` = `r stat`.</li>
+<li>t = `r formatC(t,format="f",digits=4)` with `r df` df.</li>
+<li>p-value`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
+<li>Reject H<sub>0</sub> because the p-value &lt; &alpha;.</li>
+<li>It appears that the the number of plants that germinate is significantly lower for the homemade than the bought compost.  Thus, the homemade compost "performs" worse than the store bought compost and may lead to increased costs for the greenhouse.</li>
+<li>I am 90% confident that the number of plants that germinated with the bought compost is at least `r formatC(lcb,format="f",digits=1)` plants greater than the number of plants that germinated with the homemade compost.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+<<GerminationCalc>>
+```
+
+----
+
+## Delivering Military Supplies
+```{r DeliveriesData, echo=FALSE, results='hide'}
+del <- data.frame(war=rep(c("Gulf","Bosnia"),each=9),
+                  time=c(28.0,20.0,26.5,10.6,9.1,35.2,29.1,41.2,27.5,
+                         15.1,6.4,5.0,11.4,6.5,6.5,3.0,7.0,3.5))
+```
+
+```{r DeliveriesCode, echo=FALSE, results='hide'}
+(del.lev <- levenesTest(time~war,data=del) )
+( del.t <- t.test(time~war,data=del,var.equal=TRUE,alt="less") )
+```
+
+<ol>
+<li>&alpha; = 0.05</li>
+<li>H<sub>A</sub>: &mu;<sub>b</sub>-&mu;<sub>g</sub> &lt; 0 and H<sub>0</sub>: &mu;<sub>b</sub>-&mu;<sub>g</sub> = 0, where &mu; is the mean time to deliver ALL shipments, b is for Bosnia, and g is for Persian Gulf War.</li>
+<li>2-sample t-test because (i) two populations/groups are considered (Bosnia and Persian Gulf), (ii) a quantitative variable (delivery time) was recorded, and (iii) the samples are independent (there is no known connection between all deliveries to the two wars).</li>
+<li>An observational study with clear randomization of the two samples.</li>
+<li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>g</sub> = 9+9 = 18 &gt; 15 and the two sample distributions () are not obviously strongly skewed (also told to assume that the distribution are not strongly skewed), and (iii) the variances appear to be equal (Levene's p-value = `r  kPvalue(del.lev$"Pr(>F)"[1],include.p=FALSE)` &gt; &alpha;).</li>
+```{r DeliveriesHist, fig.width=6, fig.height=3,echo=FALSE}
+hist(time~war,data=del)
+```
+
+`r figs("DeliveriesHist")`
+
+<li>x&#772;<sub>b</sub>-x&#772;<sub>g</sub> = `r formatC(del.t$estimate[1],format="f",digits=2)`-`r formatC(del.t$estimate[2],format="f",digits=2)` = `r formatC(del.t$estimate[1]-del.t$estimate[2],format="f",digits=2)` (`r tbls("Deliveries",display="cite")`).</li>
+
+`r tbls("Deliveries")`
+
+```{r echo=FALSE}
+kHtest(del.t)
+```
+<li>The test statistic is t = `r formatC(del.t$statistic,format="f",digits=3)` with `r formatC(del.t$parameter,format="f",digits=0)` df (`r tbls("Deliveries",display="cite")`).</li>
+<li>The p-value = `r kPvalue(del.t$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("Deliveries",display="cite")`).</li>
+<li>The H<sub>0</sub> is rejected because the p-value &lt; &alpha; (`r tbls("Deliveries",display="cite")`).</li>
+<li>The mean delivery time was significantly lower in Bosnia than in the Persian Gulf War.  Thus, the new "just-in-time" entality for deliveries appears to have resulted in quicker delivery times.</li>
+<li>I am 95% confident that the mean delivery time for Bosnia was more than `r formatC(-1*del.t$conf.int[2],format="f",digits=1)` days faster than for the Persian Gulf War (`r tbls("Deliveries",display="cite")`).</li>
+</ol>
+
+R Appendix
+```{r eval=FALSE, prompt=FALSE}
+del <- read.csv("Deliveries.csv")
+<<DeliveriesHist>>
+<<DeliveriesCode>>
+```
+
+----
+
 ## P-Value Calculations and Decisions
 
 <ol>
@@ -144,87 +225,5 @@ ci <- stat+c(-1,1)*tstar*se
 </ol>
 
 </ol>
-
-----
-
-## Compost Type and Germination Rates
-```{r GerminationCalc, echo=FALSE, results='hide', fig.show='hide'}
-xbar1 <- 42.67; s1 <- 4.33; n1 <- 18
-xbar2 <- 28.90; s2 <- 3.21; n2 <- 10
-df <- n1+n2-2
-sp2 <- ((n1-1)*(s1^2)+(n2-1)*(s2^2))/df
-se <- sqrt(sp2*(1/n1+1/n2))
-stat <- xbar1-xbar2
-t <- stat/se
-pv <- distrib(t,distrib="t",df=df,lower.tail=FALSE)
-lcb <- stat+distrib(0.9,type="q",distrib="t",df=df,lower.tail=FALSE)*se
-```
-
-<ol>
-<li>&alpha; = 0.10.</li>
-<li>H<sub>A</sub>: &mu;<sub>b</sub>-&mu;<sub>h</sub> &gt; 0 and H<sub>0</sub>: &mu;<sub>b</sub>-&mu;<sub>h</sub> = 0, where &mu; is the mean number of germinated plants, b is the bought compost, and h is the homemade compost.</li>
-<li>2-sample t-test because (i) two populations/groups are considered (bought and homemade compost), (ii) a quantitative variable (number germinated) was recorded, and (iii) the samples are independent (there is no known connection between all pairs of bought and homemade individuals).</li>
-<li>An experimental study with some randomization (placement of containers in the greenhouse).</li>
-<li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>h</sub> = 18+10 = 28 &gt; 15 and the two sample distributions (shown on the handout) are not obviously strongly skewed, and (iii) the variances appear to be equal (Levene's p-value = 0.2414 &gt; &alpha;).</li>
-<li>x&#772;<sub>b</sub>-x&#772;<sub>h</sub> = `r xbar1`-`r xbar2` = `r stat`.</li>
-<li>t = `r formatC(t,format="f",digits=4)` with `r df` df.</li>
-<li>p-value`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
-<li>Reject H<sub>0</sub> because the p-value &lt; &alpha;.</li>
-<li>It appears that the the number of plants that germinate is significantly lower for the homemade than the bought compost.  Thus, the homemade compost "performs" worse than the store bought compost and may lead to increased costs for the greenhouse.</li>
-<li>I am 90% confident that the number of plants that germinated with the bought compost is at least `r formatC(lcb,format="f",digits=1)` plants greater than the number of plants that germinated with the homemade compost.</li>
-</ol>
-
-R Appendix.
-```{r eval=FALSE, prompt=FALSE}
-<<GerminationCalc>>
-```
-
-
-----
-
-## Delivering Military Supplies
-```{r DeliveriesData, echo=FALSE, results='hide'}
-del <- data.frame(war=rep(c("Gulf","Bosnia"),each=9),
-                  time=c(28.0,20.0,26.5,10.6,9.1,35.2,29.1,41.2,27.5,
-                         15.1,6.4,5.0,11.4,6.5,6.5,3.0,7.0,3.5))
-```
-
-```{r DeliveriesCode, echo=FALSE, results='hide'}
-(del.lev <- levenesTest(time~war,data=del) )
-( del.t <- t.test(time~war,data=del,var.equal=TRUE,alt="less") )
-```
-
-<ol>
-<li>&alpha; = 0.05</li>
-<li>H<sub>A</sub>: &mu;<sub>b</sub>-&mu;<sub>g</sub> &lt; 0 and H<sub>0</sub>: &mu;<sub>b</sub>-&mu;<sub>g</sub> = 0, where &mu; is the mean time to deliver ALL shipments, b is for Bosnia, and g is for Persian Gulf War.</li>
-<li>2-sample t-test because (i) two populations/groups are considered (Bosnia and Persian Gulf), (ii) a quantitative variable (delivery time) was recorded, and (iii) the samples are independent (there is no known connection between all deliveries to the two wars).</li>
-<li>An observational study with clear randomization of the two samples.</li>
-<li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>g</sub> = 9+9 = 18 &gt; 15 and the two sample distributions () are not obviously strongly skewed (also told to assume that the distribution are not strongly skewed), and (iii) the variances appear to be equal (Levene's p-value = `r  kPvalue(del.lev$"Pr(>F)"[1],include.p=FALSE)` &gt; &alpha;).</li>
-```{r DeliveriesHist, fig.width=6, fig.height=3,echo=FALSE}
-hist(time~war,data=del)
-```
-
-`r figs("DeliveriesHist")`
-
-<li>x&#772;<sub>b</sub>-x&#772;<sub>g</sub> = `r formatC(del.t$estimate[1],format="f",digits=2)`-`r formatC(del.t$estimate[2],format="f",digits=2)` = `r formatC(del.t$estimate[1]-del.t$estimate[2],format="f",digits=2)` (`r tbls("Deliveries",display="cite")`).</li>
-
-`r tbls("Deliveries")`
-
-```{r echo=FALSE}
-kHtest(del.t)
-```
-<li>The test statistic is t = `r formatC(del.t$statistic,format="f",digits=3)` with `r formatC(del.t$parameter,format="f",digits=0)` df (`r tbls("Deliveries",display="cite")`).</li>
-<li>The p-value = `r kPvalue(del.t$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("Deliveries",display="cite")`).</li>
-<li>The H<sub>0</sub> is rejected because the p-value &lt; &alpha; (`r tbls("Deliveries",display="cite")`).</li>
-<li>The mean delivery time was significantly lower in Bosnia than in the Persian Gulf War.  Thus, the new "just-in-time" entality for deliveries appears to have resulted in quicker delivery times.</li>
-<li>I am 95% confident that the mean delivery time for Bosnia was more than `r formatC(-1*del.t$conf.int[2],format="f",digits=1)` days faster than for the Persian Gulf War (`r tbls("Deliveries",display="cite")`).</li>
-</ol>
-
-R Appendix
-```{r eval=FALSE, prompt=FALSE}
-del <- read.csv("Deliveries.csv")
-<<DeliveriesHist>>
-<<DeliveriesCode>>
-```
 
 ----

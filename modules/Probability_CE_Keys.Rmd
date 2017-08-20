@@ -23,7 +23,7 @@ source("../rhelpers/knitr_setup.R")
 
 ----
 
-## Banking Example
+## Banking
 
 1. `r formatC(distrib(800,mean=550,sd=150,lower.tail=FALSE),format="f",digits=4)` 
 1. `r formatC(distrib(200,mean=550,sd=150),format="f",digits=4)` 
@@ -43,7 +43,7 @@ ab-a
 
 ----
 
-## Acorn Production Example
+## Acorn Production
 
 1. `r formatC(distrib(1000,mean=875,sd=220,lower.tail=FALSE),format="f",digits=4)` 
 1. `r formatC(distrib(1000,mean=875,sd=220)-distrib(700,mean=875,sd=220),format="f",digits=4)` 
