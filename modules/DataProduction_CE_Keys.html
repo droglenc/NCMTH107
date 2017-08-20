@@ -1,0 +1,136 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Data Production CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="study-types-i" class="section level2">
+<h2>Study Types I</h2>
+<ol>
+<li>Experiment … the people were given a treatment (placebo or fish oil)</li>
+<li>Experiment … the men were given a treatment (training program) with before/after results recorded</li>
+<li>Observational … the women were “followed” over time, no treatment was imparted (the B12 deficiency or not was naturally induced)</li>
+<li>Observational … no treatment was imparted (the brain cancer factor was naturally induced)</li>
+<li>Experimental … a treatment (animations or not) was imparted</li>
+<li>Observational … no treatment was imparted (alcohol use was a choice of the women)</li>
+</ol>
+<hr />
+</div>
+<div id="types-of-observational-studies" class="section level2">
+<h2>Types of Observational Studies</h2>
+<ol>
+<li>Convenience sample.</li>
+<li>Voluntary response.</li>
+<li>Simple random sample (probability-based sample).</li>
+<li>Voluntary response.</li>
+<li>Convenience sample.</li>
+</ol>
+<hr />
+<div id="blood-pressure-study" class="section level4">
+<h4>Blood Pressure Study</h4>
+<ol>
+<li>Experimental … a treatment is imposed.</li>
+<li>A male subject.</li>
+<li>Below …
+<ol>
+<li>Response … blood pressure</li>
+<li>Factors … Calcium (pill or not) and Exercise (do or don’t)</li>
+<li>Levels … 2 for calcium and 2 for exercise</li>
+<li>Treatments … 4</li>
+<li>Replicates … 8</li>
+</ol></li>
+<li>Below</li>
+</ol>
+<pre class="r"><code>&gt; alloc &lt;- sample(32)
+&gt; alloc[1:8]    # first treatment</code></pre>
+<pre><code>[1] 20 13 23  7 21 11 24 26</code></pre>
+<pre class="r"><code>&gt; alloc[9:16]   # second treatment</code></pre>
+<pre><code>[1] 32 30 18  5 15 25  1 29</code></pre>
+<pre class="r"><code>&gt; alloc[17:24]  # third treatment</code></pre>
+<pre><code>[1]  9 12 27 14 31  8  4 19</code></pre>
+<pre class="r"><code>&gt; alloc[25:32]  # fourth treatment</code></pre>
+<pre><code>[1]  3 10 16 17 28  6  2 22</code></pre>
+<hr />
+</div>
+<div id="softball-bats-and-balls" class="section level4">
+<h4>Softball Bats and Balls</h4>
+<ol>
+<li>Experimental … imparting treatments (ball types and bats were chosen specifically)</li>
+<li>Individual .. a “hit”</li>
+<li>Below
+<ol>
+<li>Response … Distance the ball was hit.</li>
+<li>Factors … Brand of ball and type of bat</li>
+<li>Levels … 2 brands of ball and 3 types of bat</li>
+<li>Treatments … 6</li>
+<li>Replicates … 4 (balls of each brand by each type of bat)</li>
+</ol></li>
+<li>I would first randomly order the bats and then randomly order the two brands for each bat.</li>
+</ol>
+<pre class="r"><code>&gt; sample(3)  # random order of bats</code></pre>
+<pre><code>[1] 1 3 2</code></pre>
+<pre class="r"><code>&gt; sample(8)  # first order of balls ... 1-4 is first brand, 5-8 second</code></pre>
+<pre><code>[1] 4 8 2 6 5 7 3 1</code></pre>
+<pre class="r"><code>&gt; sample(8)  # second order of balls</code></pre>
+<pre><code>[1] 8 7 3 2 1 5 4 6</code></pre>
+<pre class="r"><code>&gt; sample(8)  # third order of balls</code></pre>
+<pre><code>[1] 3 8 2 4 1 5 6 7</code></pre>
+<hr />
+</div>
+</div>
+<div id="identify-response-and-explanatory-variables" class="section level2">
+<h2>Identify Response and Explanatory Variables</h2>
+<ol>
+<li>Response is “success rate”, explanatory is distance of putt.</li>
+<li>Response is “response time”, explanatory is amount of time awake.</li>
+<li>Response is growth, explanatory is amount of fertilizer.</li>
+<li>It is not obvious which is the response or expanatory … would depend on the researcher’s question.</li>
+<li>Response is sales of umbrellas, explanatory is amount of rainfall.</li>
+<li>Response is weight, explanatory is age.</li>
+</ol>
+<hr />
+</div>
+<div id="study-types-ii" class="section level2">
+<h2>Study Types II</h2>
+<ol>
+<li>Observational … no treatment was imparted (work at night was a “choice” of the women)</li>
+<li>Observational … no treatment was imparted (observation of church records)</li>
+<li>Experiment … a treatment (type of trap) was imparted.</li>
+</ol>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

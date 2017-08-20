@@ -10,7 +10,7 @@ title: Class Exercise Keys
 1. Why Statistics is Important
 1. [Foundational Definitions](../modules/FoundationalDefns_CE_Keys)
 1. [Data Production](../modules/DataProduction_CE_Keys.html)
-1. [Getting Data into RStudio](../modules/DataIntoR_CE_Keys.html)
+1. [Getting Data into RStudio](../modules/GettingDataIntoR_CE_Keys.html)
 1. [Univariate EDA - Quantitative I (Methods)](../modules/UEDAQuant1_CE_Keys.html)
 1. [Univariate EDA - Quantitative II (Intepretation)](../modules/UEDAQuant2_CE_Keys.html)
 1. [Univariate EDA - Categorical](../modules/UEDACat_CE_Keys.html)
