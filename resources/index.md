@@ -7,7 +7,7 @@ title: Resources
 1. [Daily Quiz](quizzes/)
 1. [Homework Answer Keys](homework-keys/)
 1. [Class Exercise Answer Keys](CE_Keys)
-1. [Anonymous Feedback / Suggestions for Dr. Ogle](https://www.suggestionox.com/r/W17-107){:target="_blank"}
+1. [Anonymous Feedback / Suggestions for Dr. Ogle](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}
 
 ## Learning Assistance
 1. [List of Symbols](symbols)
