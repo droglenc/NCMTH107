@@ -34,8 +34,9 @@ R is fast becoming the primary software for performing statistical analyses in m
 Use the materials below to answer the questions on [this preparation guide](GettingDataIntoR_Prep).
 
 * [Reading](../book/Getting Data Into R.pdf)
-* Video: [What is R?](https://www.youtube.com/v/TR2bHSJ_eck?rel=0){:target="_blank"} [2 mins] {*Problems with video? [See this FAQ](../resources/FAQ/FAQs/videos){:target="_blank"}.*}
+* Video: [What is R?](https://www.youtube.com/v/XcBLEVknqvY?rel=0){:target="_blank"} [2 mins] {*Problems with video? [See this FAQ](../resources/FAQ/FAQs/videos){:target="_blank"}.*}
 * Video: [What's Up with R?](https://www.youtube.com/v/ZwYQPtU2Pa0?rel=0&start=1&end=111){:target="_blank"} [3 mins]
+* Video: What is RStudio? [Part 1](https://www.youtube.com/v/riONFzJdXcs?rel=0&start=1&end=147){:target="_blank"} [3 mins] and [Part 2](https://www.youtube.com/v/riONFzJdXcs?rel=0&start=196&end=253){:target="_blank"} [1 min]
 * Video: [Retrieve Data from Webpage](https://vimeo.com/user45324800/ncstats-preparedatawebpage){:target="_blank"} [3 mins] **OUT-OF-DATE (will be updated in class)**
 * Video: [Enter Your Own Data (with Excel)](https://vimeo.com/user45324800/ncstats-preparedataexcel){:target="_blank"} [4 mins] or [Enter Your Own Data (without Excel)](https://vimeo.com/user45324800/ncstats-preparedatatextfile){:target="_blank"} [4 mins]
 * Video: [Load Data into RStudio](https://vimeo.com/user45324800/ncstats-loadcsvrstudio){:target="_blank"} [6 mins]

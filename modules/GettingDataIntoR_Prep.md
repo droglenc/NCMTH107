@@ -11,6 +11,7 @@ css: "/css/modules.css"
 To prepare for this module, please answer the following questions from the preparation readings and videos. Please contact the professor if you have questions.
 </div>
 
+1. What are the names of the scientists who developed R?
 1. What is the difference between R and RStudio.
 1. Should you save the "workspace" in R?
 1. How do you assign the result of an expression to an object (i.e., how do you use the assignment operator)?
