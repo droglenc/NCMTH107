@@ -35,7 +35,7 @@ It is important to understand the distribution of individuals for a single varia
 Use the materials below to answer the questions on [this preparation guide](UEDAQuant2_Prep).
 
 * [Reading](../book/Univ EDA Quantitative.pdf)
-* Video: [Describe Shape](https://www.youtube.com/v/H9ITfdaX2ZQ?version=3&autoplay=1){:target="_blank"} [13 mins]
+* Video: [Describe Shape](https://www.youtube.com/v/H9ITfdaX2ZQ?rel=0){:target="_blank"} [13 mins]
 * Video: [Interpreting a Univariate EDA (Quantitative)](https://vimeo.com/user45324800/ueda-quantsum){:target="_blank"} [11 mins] [![PowerPoint](../img/ppt.png)](UEDAQuant2_PPT.pptx)
 
 ----

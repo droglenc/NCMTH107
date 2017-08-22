@@ -37,8 +37,8 @@ It is important to understand the relationship between two variables.  With quan
 Use the materials below to answer the questions on [this preparation guide](BEDAQuant_Prep).
 
 * [Reading](../book/Bivariate EDA - Quantitative.pdf)
-* Video: [Construct a Scatterplot](https://www.youtube.com/v/yXmz922K9Ks?version=3&autoplay=1){:target="_blank"} [7 mins]
-* Video: [What is the Correlation?](https://www.youtube.com/v/PtYVrF_WT3A?version=3&start=32&autoplay=1){:target="_blank"} [8 mins]
+* Video: [Construct a Scatterplot](https://www.youtube.com/v/yXmz922K9Ks?rel=0){:target="_blank"} [7 mins]
+* Video: [What is the Correlation?](https://www.youtube.com/v/PtYVrF_WT3A?rel=0&start=32){:target="_blank"} [8 mins]
 * Video: [Bivariate EDA (Quantitative) in R](https://vimeo.com/user45324800/biveda-quant){:target="_blank"} [8 mins] [![Web](../img/web.png)](BEDAQuant_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](BEDAQuant_RHO.pdf) [![MSWord](../img/word.png)](BEDAQuant_RHO.docx)  [![R](../img/Rlogo.png)](BEDAQuant_RHO.R){:target="_blank"}
 * Video: [Interpeting a Bivariate EDA (Quantitative)](https://vimeo.com/user45324800/beda-quantsum){:target="_blank"} [10 mins]  [![PowerPoint](../img/ppt.png)](BEDAQuant_PPT.pptx)
 

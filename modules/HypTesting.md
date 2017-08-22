@@ -40,8 +40,8 @@ Use the materials below to answer the questions on [this preparation guide](HypT
 Use the materials below to answer the questions on [this preparation guide](HypTesting_Prep.html#second-material).
 
 * [Reading **Section 14.5**](../book/Hypothesis Tests.pdf).
-* Video: Statistical Error Types -- [here](https://www.youtube.com/v/7mE-K_w1v90?version=3&autoplay=1){:target="_blank"} [8 mins] and [here](https://www.youtube.com/v/OWn3Ko1WYTA?version=3&start=89&end=247&autoplay=1){:target="_blank"} [3 mins]
-* Video: [Computing &beta; &amp; power](https://www.youtube.com/v/BJZpx7Mdde4?version=3&autoplay=1){:target="_blank"} [12 mins].
+* Video: Statistical Error Types -- [here](https://www.youtube.com/v/7mE-K_w1v90?rel=0){:target="_blank"} [8 mins] and [here](https://www.youtube.com/v/OWn3Ko1WYTA?rel=0&start=89&end=247){:target="_blank"} [3 mins]
+* Video: [Computing &beta; &amp; power](https://www.youtube.com/v/BJZpx7Mdde4?rel=0){:target="_blank"} [12 mins].
 
 ----
 

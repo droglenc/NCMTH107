@@ -38,14 +38,14 @@ Statistical analyses rely on data and that data must be properly produced (or co
 Use the materials below to answer the questions on [this preparation guide](DataProduction_Prep).
 
 * [Reading](../book/Data Production.pdf)
-* Video: Types of Studies -- [A](https://www.youtube.com/v/qksFkFh2ezo?version=3&autoplay=1&start=456&end=958){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/KDPBD3SPTPY?version=3&autoplay=1){:target="_blank"} [8 mins]
-* Video: [Types of Conclusions](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=1597){:target="_blank"} [3 mins]
+* Video: Types of Studies -- [A](https://www.youtube.com/v/qksFkFh2ezo?rel=0&start=456&end=958){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/KDPBD3SPTPY?rel=0){:target="_blank"} [8 mins] {*Problems with video? [See this FAQ](../resources/FAQ/FAQs/videos){:target="_blank"}.*}
+* Video: [Types of Conclusions](https://www.youtube.com/v/5zkg1w5zoQ0?rel=0&start=1597){:target="_blank"} [3 mins]
 * Video: [Types of Observational Studies](https://vimeo.com/user45324800/observationaltypes){:target="_blank"} [3 mins]  [![PowerPoint](../img/ppt.png)](DataProduction_PPT.pptx)
-* Video: [Sample Design](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=20&end=580){:target="_blank"} [10 mins]
-* Video: Experimental Design --  [A](https://www.youtube.com/v/v-xnPVCi9wM?version=3&autoplay=1&start=81&end=527){:target="_blank"} [10 mins] **or** [B](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=754&end=1126){:target="_blank"} [6 mins]
+* Video: [Sample Design](https://www.youtube.com/v/5zkg1w5zoQ0?rel=0&start=20&end=580){:target="_blank"} [10 mins]
+* Video: Experimental Design --  [A](https://www.youtube.com/v/v-xnPVCi9wM?rel=0&start=81&end=527){:target="_blank"} [10 mins] **or** [B](https://www.youtube.com/v/5zkg1w5zoQ0?rel=0&start=754&end=1126){:target="_blank"} [6 mins]
 * Video: [Definitions in Experimental Design](https://vimeo.com/user45324800/experimentdefns){:target="_blank"} [4 mins]  [![PowerPoint](../img/ppt.png)](DataProduction_PPT.pptx)
 * Video: [Randomization in R](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins] [![Web](../img/web.png)](DataProduction_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](DataProduction_RHO.pdf) [![MSWord](../img/word.png)](DataProduction_RHO.docx)  [![R](../img/Rlogo.png)](DataProduction_RHO.R){:target="_blank"}
-* Video: Response/Explanatory Variables - [A](https://www.youtube.com/v/bokeTCH2aJY?version=3&autoplay=1&start=60&end=148){:target="_blank"} **and**  [B](https://www.youtube.com/v/bokeTCH2aJY?version=3&autoplay=1&start=378){:target="_blank"} [4 mins]
+* Video: Response/Explanatory Variables - [A](https://www.youtube.com/v/bokeTCH2aJY?rel=0&start=60&end=148){:target="_blank"} **and**  [B](https://www.youtube.com/v/bokeTCH2aJY?rel=0&start=378){:target="_blank"} [4 mins]
 
 ----
 
