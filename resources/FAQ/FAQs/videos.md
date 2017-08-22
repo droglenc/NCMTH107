@@ -7,10 +7,10 @@ subtitle: Watching class preparation videos?
 
 ----
 
-Many of the class modules have links to YouTube or Vimeo videos as part of the class preparation materials. Some students have reported some issues with watching these videos. Below are some hints that have helped others in the past. Please [let me know](mailto:derek@derekogle.com) if these solutions don't work for you or if you have found other solutions.
+Many of the class modules have links to YouTube or Vimeo videos as part of the class preparation materials. Some students have reported issues with watching these videos. Below are some hints that have helped with these issues. Please [let me know](mailto:derek@derekogle.com) if these solutions don't work for you or if you have found other solutions.
 
 ## Vimeo Videos
-The Vimeo videos are produced by me and will require you to use the password of "**NCStats**" (note capitalization and don't use the quotes) to view. These vidoes may also have PowerPoint or other icons following the link to the video. These icons links to materials that were used in the video. You may find it useful to see or print these materials (for taking notes on) as you watch the video.
+The Vimeo videos are produced by me and will require you to use the password of "**NCStats**" (note capitalization and don't use the quotes) to view. These vidoes may also have PowerPoint or other icons following the link to the video. These link to materials used in the video that you may find useful to see or print (for taking notes on) as you watch the video.
 
 Here is a sample:
 
