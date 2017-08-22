@@ -17,11 +17,15 @@ Here is a sample:
 * Video: [Randomization in R](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins] [![Web](../../../img/web.png)](../../../modules/DataProduction_RHO.html){:target="_blank"}  [![PDF](../../../img/pdf.png)](../../../modules/DataProduction_RHO.pdf) [![MSWord](../../../img/word.png)](../../../modules/DataProduction_RHO.docx)  [![R](../../../img/Rlogo.png)](../../../modules/DataProduction_RHO.R){:target="_blank"}
 
 
-## YouTube Videos
-It appears that the videos open without any issues in Internet Explorer. However, in Firefox and Chrome, the videos do not play automatically and may even appear to not exist. In all cases that I have tested, the videos will load if I put the cursor in the web address bar and press Enter. In Chrome, the videos will also play if I press the RELOAD button.
+## YouTube Videos (IE and Firefox)
+It appears that the videos open without issue in Internet Explorer. With Firefox, the videos may appear to not exist, but will appear if you put the cursor in the web address bar and press Enter.
 
 Here is a sample:
 
-* Video: [Types of Conclusions](https://www.youtube.com/v/5zkg1w5zoQ0?version=3&autoplay=1&start=1597){:target="_blank"} [3 mins]
+* Video: [Types of Conclusions](https://www.youtube.com/v/5zkg1w5zoQ0?rel=0&start=1597){:target="_blank"} [3 mins]
+
+
+## YouTube Videos (Chrome)
+In Chrome, the videos will NOT play the way that I have linked to them. If you insist on using Chrome, you can replace the "v/" portion of the URL in the address bar to "watch?v=". I would also change the "?" in front of "rel=0" to an "&". Thus, an address like "https://www.youtube.com/v/yxXsPc0bphQ?rel=0" would be changed to "https://www.youtube.com/watch?v=yxXsPc0bphQ&rel=0".
 
 ----
