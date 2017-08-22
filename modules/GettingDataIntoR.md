@@ -31,7 +31,7 @@ R is fast becoming the primary software for performing statistical analyses in m
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](GettingDataIntoR_Prep). [*Problems with video? [See this FAQ](../resources/FAQ/FAQs/videos){:target="_blank"}.*]
+Use the materials below to answer the questions on [this preparation guide](GettingDataIntoR_Prep). [*Problems with videos? [See this FAQ](../resources/FAQ/FAQs/videos){:target="_blank"}.*]
 
 * [Reading](../book/Getting Data Into R.pdf)
 * Video: [What is R?](https://www.youtube.com/v/XcBLEVknqvY?rel=0){:target="_blank"} [2 mins]

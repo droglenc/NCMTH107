@@ -35,10 +35,10 @@ Statistical analyses rely on data and that data must be properly produced (or co
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](DataProduction_Prep).
+Use the materials below to answer the questions on [this preparation guide](DataProduction_Prep). [*Problems with videos? [See this FAQ](../resources/FAQ/FAQs/videos){:target="_blank"}.*]
 
 * [Reading](../book/Data Production.pdf)
-* Video: Types of Studies -- [A](https://www.youtube.com/v/qksFkFh2ezo?rel=0&start=456&end=958){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/KDPBD3SPTPY?rel=0){:target="_blank"} [8 mins] {*Problems with video? [See this FAQ](../resources/FAQ/FAQs/videos){:target="_blank"}.*}
+* Video: Types of Studies -- [A](https://www.youtube.com/v/qksFkFh2ezo?rel=0&start=456&end=958){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/KDPBD3SPTPY?rel=0){:target="_blank"} [8 mins]
 * Video: [Types of Conclusions](https://www.youtube.com/v/5zkg1w5zoQ0?rel=0&start=1597){:target="_blank"} [3 mins]
 * Video: [Types of Observational Studies](https://vimeo.com/user45324800/observationaltypes){:target="_blank"} [3 mins]  [![PowerPoint](../img/ppt.png)](DataProduction_PPT.pptx)
 * Video: [Sample Design](https://www.youtube.com/v/5zkg1w5zoQ0?rel=0&start=20&end=580){:target="_blank"} [10 mins]
