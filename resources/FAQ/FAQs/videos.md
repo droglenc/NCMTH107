@@ -22,6 +22,6 @@ It appears that the videos open without issue in Internet Explorer. With Firefox
 
 
 ## YouTube Videos (Chrome)
-In Chrome, the videos will NOT play with the way that I have linked to them. If you want to use Chrome with the videos, then you can change the "v/" portion of the URL in the address bar to "watch?v=" and change the "?" in front of "rel=0" to "&". Thus, an address like "https://www.youtube.com/<span style="color:red">v/</span>yxXsPc0bphQ<span style="color:red">?<span>rel=0" would be changed to "https://www.youtube.com/<span style="color:red">watch?v=</span>yxXsPc0bphQ<span style="color:red">&</span>rel=0".
+In Chrome, the videos will NOT play with the way that I have linked to them. If you want to use Chrome with the videos, then you can change the "v/" portion of the URL in the address bar to "watch?v=" and change the "?" in front of "rel=0" to "&". Thus, an address like "https://www.youtube.com/<span style="color:red">v/</span>yxXsPc0bphQ<span style="color:red">?</span>rel=0" would be changed to "https://www.youtube.com/<span style="color:red">watch?v=</span>yxXsPc0bphQ<span style="color:red">&</span>rel=0".
 
 ----
