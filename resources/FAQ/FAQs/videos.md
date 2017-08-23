@@ -19,15 +19,19 @@ The Vimeo videos require you to use the password "**NCStats**" (note capitalizat
 ----
 
 ## YouTube Videos
-Here is a link to a sample YouTube video:
+Here is a link to a sample YouTube video: [Types of Conclusions](https://www.youtube.com/v/5zkg1w5zoQ0?rel=0&start=1597){:target="_blank"} [3 mins]
 
-* Video: [Types of Conclusions](https://www.youtube.com/v/5zkg1w5zoQ0?rel=0&start=1597){:target="_blank"} [3 mins]
+<br>
 
 #### Internet Explorer
 It appears that the videos open without issue, although I have experienced some delay in the videos starting.
 
+<br>
+
 #### Firefox
 The videos may appear to not exist, but will appear if you put the cursor in the web address bar and press Enter. 
+
+<br>
 
 #### Chrome
 The videos may NOT play with the way that I have linked to them. I believe that you have two choices here.
@@ -35,8 +39,12 @@ The videos may NOT play with the way that I have linked to them. I believe that 
 1. Configure Chrome to better handle Flash files. I did this by selecting the "three dots" (right side of address bar), then "Settings", then "Advanced" (scroll to bottom of screen), then "Content Settings", and then "Flash". In the ensuing dialog box, make sure "Allow sites to run Flash" is on and that "Ask first" is off. I also added "derekogle.com" and "www.youtube.com" to the "Allow" list. You can then close that tab. When you then try to watch a video from the class webpage it will say that it will first say that it can not find the video. However, the video will play if you press "Reload".
 1. When the page appears that says the video cannot be found, change the "v/" portion of the URL in the address bar to "watch?v=" and change the "?" in front of "rel=0" to "&". Thus, an address like "https://www.youtube.com/<span style="color:red">v/</span>yxXsPc0bphQ<span style="color:red">?</span>rel=0" would be changed to "https://www.youtube.com/<span style="color:red">watch?v=</span>yxXsPc0bphQ<span style="color:red">&</span>rel=0".
 
+<br>
+
 #### Opera
 I could NOT get the videos to open properly with Opera.
+
+<br>
 
 #### Safari (for Windows)
 The videos may appear to not exist, but will appear if you put the cursor in the web address bar and press Enter.

@@ -3,7 +3,7 @@ layout: page
 title: MTH107 FAQ
 ---
 
-The following are links to answers for frequently asked questions by Northland College students in the Statistical Concepts and Analysis course.  Other questions may be answered by reading the [class text](../../book/) or [e-mailing Derek Ogle](mailto:dogle@northland.edu).
+The following are links to answers for frequently asked questions by Northland College students in the Statistical Concepts and Analysis course. Other questions may be answered in the module readings or [e-mailing Derek Ogle](mailto:dogle@northland.edu).
 
 Related to: [R/RStudo](#rrstudio-related) / [Homework](#homework-format) / [Other](#other)
 
@@ -22,7 +22,7 @@ Related to: [R/RStudo](#rrstudio-related) / [Homework](#homework-format) / [Othe
 * [Why is the R prompt a "+" rather than a ">"?](FAQs/plus-prompt.html)
 * [How do I find the names of objects I have created?](FAQs/object-names.html)
 * [What do I do when R says that "a previously saved workspace has been restored"?](FAQs/saved-workspace.html)
-* [I accidentally saved the workspace image.  How do I remove it?](FAQs/removing-saved-workspace.html)
+* [I accidentally saved the workspace image. How do I remove it?](FAQs/removing-saved-workspace.html)
 * [Why can't R find the XXX function?](FAQs/cant-find-function.html)
 
 ### Reading Data Files
