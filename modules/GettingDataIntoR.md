@@ -37,7 +37,7 @@ Use the materials below to answer the questions on [this preparation guide](Gett
 * Video: [What is R?](https://www.youtube.com/v/XcBLEVknqvY?rel=0){:target="_blank"} [2 mins]
 * Video: [What's Up with R?](https://www.youtube.com/v/ZwYQPtU2Pa0?rel=0&start=1&end=111){:target="_blank"} [3 mins]
 * Video: What is RStudio? [Part 1](https://www.youtube.com/v/riONFzJdXcs?rel=0&start=1&end=147){:target="_blank"} [3 mins] and [Part 2](https://www.youtube.com/v/riONFzJdXcs?rel=0&start=196&end=253){:target="_blank"} [1 min]
-* Video: [Retrieve Data from Webpage](https://vimeo.com/user45324800/ncstats-preparedatawebpage){:target="_blank"} [3 mins] **OUT-OF-DATE (will be updated in class)**
+* Video: [Retrieve Data from Webpage](https://vimeo.com/user45324800/ncstats-preparedatawebpage){:target="_blank"} [3 mins]
 * Video: Enter Your Own Data [With Excel](https://vimeo.com/user45324800/ncstats-preparedataexcel){:target="_blank"} [4 mins] or [Without Excel](https://vimeo.com/user45324800/ncstats-preparedatatextfile){:target="_blank"} [4 mins]
 * Video: [Load Data into RStudio](https://vimeo.com/user45324800/ncstats-loadcsvrstudio){:target="_blank"} [6 mins]
 * Video: [Subset data.frame with filterD](https://vimeo.com/user45324800/filterd){:target="_blank"} [6 mins]
