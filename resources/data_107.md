@@ -4,7 +4,7 @@ title: Data for MTH107
 ---
 
 * AlcovaRes -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/AlcovaRes.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/AlcovaRes_meta.txt)
-* Alligator1 -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/Alligator1.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/Alligator1_meta.txt)
+* Alligators1 -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/Alligators1.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/Alligators1_meta.txt)
 * Arsenic -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/Arsenic.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/Arsenic_meta.txt)
 * Batmorph -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/Batmorph.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/Batmorph_meta.txt)
 * BOD -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/BOD.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/BOD_meta.txt)
