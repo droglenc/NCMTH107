@@ -19,7 +19,7 @@ Biologists at the Sigurd Olson Environmental Institute (SOEI) were interested in
 
 1. What is one of the individuals sampled in this scenario? [*Hint: Think about what the variable is and make sure that it makes sense to record that variable about your individual.*]
 1. Do you think it is reasonable to count the number of frogs on every lake in northern Wisconsin at the same time (say, in the same week)? Why or why not?
-1. Hypothetical visual and call counts for every lake in northern Wisconsin (i.e., the population) are recorded in the `Frogs` data.frame (make sure you have run `library(NCStats)`. The visual and call counts for a random sample of 10 lakes may be taken from this population by running `srsdf(Frogs,n=10)` in RStudio. Paste the output returned from this function into your report document.
+1. Hypothetical visual and call counts for every lake in northern Wisconsin (i.e., the population) are recorded in the *Frogs* data.frame. The visual and call counts for a random sample of 10 lakes may be taken from this population by running `srsdf(Frogs,n=10)` in RStudio (make sure you have run `library(NCStats)` first). Paste the output returned from this function into your report document.
 1. How do the **visual** counts of frogs recorded from the first three lakes in your sample compare? This is an example of what type of variability?
 1. Compute the average **visual** count of frogs in all lakes in your sample. Show your work! [*You may leave space in your document and hand write your work before handing it in*]
 1. Extract another sample of 10 lakes (run `srsdf(Frogs,n=10)` again). Paste the results into your report document.
