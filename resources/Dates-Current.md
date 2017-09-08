@@ -76,7 +76,7 @@ Note that some of the more distant dates may change.
     
 <tr><td></td><td></td><td></td></tr>
 <tr><td>M 23-Oct</td>
-    <td colspan="2"><span style="color:red">NO CLASS</span></td></tr>
+    <td colspan="2"><span style="color:red">NO CLASS (College Reading Day)</span></td></tr>
 <tr><td>W 25-Oct</td>
     <td></td>
     <td></td></tr>
@@ -118,11 +118,11 @@ Note that some of the more distant dates may change.
     
 <tr><td></td><td></td><td></td></tr>
 <tr><td>M 20-Nov</td>
-    <td colspan="2"><span style="color:red">NO CLASS</span></td></tr>
+    <td colspan="2"><span style="color:red">NO CLASS (Thanksgiving)</span></td></tr>
 <tr><td>W 22-Nov</td>
-    <td colspan="2"><span style="color:red">NO CLASS</span></td></tr>
+    <td colspan="2"><span style="color:red">NO CLASS (Thanksgiving)</span></td></tr>
 <tr><td>F 24-Nov</td>
-    <td colspan="2"><span style="color:red">NO CLASS</span></td></tr>
+    <td colspan="2"><span style="color:red">NO CLASS (Thanksgiving)</span></td></tr>
     
 <tr><td></td><td></td><td></td></tr>
 <tr><td>M 27-Nov</td>
