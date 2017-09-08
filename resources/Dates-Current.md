@@ -4,7 +4,9 @@ title: Important Dates
 css: /css/syllabus.css
 ---
 
-Important dates are shown below. Note that some of the more distant dates may change.
+<div class="alert alert-info">
+Note that some of the more distant dates may change.
+</div>
 
 <table width="90%">
 <tr><th width="20%">Date</th><th width="40%">Preparation</th><th width="40%">HW Due</th></tr>
@@ -20,22 +22,22 @@ Important dates are shown below. Note that some of the more distant dates may ch
     
 <tr><td></td><td></td><td></td></tr>
 <tr><td>M 18-Sep</td>
-    <td><a href="../modules/UEDA_Quant1">Summaries for One Quant ...</a></td>
+    <td><a href="../modules/UEDAQuant1">Summaries for One Q ...</a></td>
     <td>--</td></tr>
 <tr><td>W 20-Sep</td>
-    <td><a href="../modules/UEDA_Quant2">Univariate EDA - Quant</a></td>
+    <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant</a></td>
     <td><a href="../modules/GettingDataIntoR_HW">Getting Data Into R</a></td></tr>
 <tr><td>F 22-Sep</td>
-    <td><a href="../modules/UEDA_Quant2">Univariate EDA - Quant</a></td>
+    <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant</a></td>
     <td>--</td></tr>
     
 <tr><td></td><td></td><td></td></tr>
 <tr><td>M 25-Sep</td>
     <td><a href="../modules/NormalDist">Normal Distributions</a></td>
-    <td><a href="../modules/UEDA_Quant2_HW">Univariate EDA - Quant</a></td></tr>
+    <td>--</td></tr>
 <tr><td>W 27-Sep</td>
     <td><a href="../modules/NormalDist">Normal Distributions</a></td>
-    <td>--</td></tr>
+    <td><a href="../modules/UEDAQuant2_HW">Univariate EDA - Quant</a></td></tr>
 <tr><td>F 29-Sep</td>
     <td></td>
     <td>--</td></tr>
