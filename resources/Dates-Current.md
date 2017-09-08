@@ -4,10 +4,8 @@ title: Important Dates
 css: /css/syllabus.css
 ---
 
-## Near-Term Due Dates
-
 <table width="80%">
-<tr><th width="20%">Date</th><th width="40%">Preparation</th><th width="40%">Due</th></tr>
+<tr><th width="20%">Date</th><th width="40%">Preparation</th><th width="40%">HW Due</th></tr>
 <tr><td>M 11-Sep</td>
     <td><a href="../modules/DataProduction">DataProduction</a></td>
     <td><a href="../modules/WhyStats_HW">Why Statistics is Important</a></td></tr>
@@ -15,7 +13,7 @@ css: /css/syllabus.css
     <td><a href="../modules/GetDataIntoR">Getting Data Into R</a></td>
     <td><a href="../modules/FoundationalDefns_HW">Foundational Definitions</a></td></tr>
 <tr><td>F 15-Sep</td>
-    <td></td>
+    <td><a href="../modules/GetDataIntoR">Getting Data Into R</a></td>
     <td><a href="../modules/DataProduction_HW">Data Production</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td>M 18-Sep</td>
