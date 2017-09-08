@@ -4,14 +4,34 @@ title: Important Dates
 css: /css/syllabus.css
 ---
 
-## Homework Due Dates
-<dl class="dl-horizontal">
-<dt>11-Sep</dt><dd><a href="../modules/WhyStats_HW">Why Statistics is Important</a></dd>
-<dt>13-Sep</dt><dd><a href="../modules/FoundationalDefns_HW">Foundational Definitions</a></dd>
+## Near-Term Due Dates
+
+<table width="90%">
+<tr><th width="30%">Date</th><th width="35%">Preparation</th><th width="35%">Due</th></tr>
+<tr><td>11-Sep</td>
+    <td><a href="../modules/DataProduction">DataProduction</a></td>
+    <td><a href="../modules/WhyStats_HW">Why Statistics is Important</a></td><tr>
+<tr><td>13-Sep</td>
+    <td><a href="../modules/GetDataIntoR">Getting Data Into R</a></td>
+    <td><a href="../modules/FoundationalDefns_HW">Foundational Definitions</a></td><tr>
+<tr><td>15-Sep</td>
+    <td></td>
+    <td><a href="../modules/DataProduction_HW">Data Production</a></td><tr>
+<tr><td></td><td></td><td></td></tr>
+<tr><td>18-Sep</td>
+    <td></td>
+    <td></td><tr>
+<tr><td>20-Sep</td>
+    <td></td>
+    <td></td><tr>
+<tr><td>22-Sep</td>
+    <td></td>
+    <td></td><tr>
+</table>
 
 
 <!---
-<dt>23-Jan</dt><dd><a href="../modules/DataProduction_HW">Data Production</a></dd>
+<dt>23-Jan</dt><dd></dd>
 <dt>25-Jan</dt><dd><a href="../modules/GettingDataIntoR_HW">Getting Data Into R</a></dd>
 <dt>30-Jan</dt><dd><a href="../modules/UEDAQuant2_HW">Univariate EDA - Quantitative</a></dd>
 <dt>1-Feb</dt><dd><a href="../modules/UEDACat_HW">Univariate EDA - Categorical</a></dd>
