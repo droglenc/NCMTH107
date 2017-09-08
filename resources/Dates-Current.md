@@ -4,7 +4,7 @@ title: Important Dates
 css: /css/syllabus.css
 ---
 
-<table width="80%">
+<table width="90%">
 <tr><th width="20%">Date</th><th width="40%">Preparation</th><th width="40%">HW Due</th></tr>
 <tr><td>M 11-Sep</td>
     <td><a href="../modules/DataProduction">DataProduction</a></td>
@@ -15,6 +15,7 @@ css: /css/syllabus.css
 <tr><td>F 15-Sep</td>
     <td><a href="../modules/GetDataIntoR">Getting Data Into R</a></td>
     <td><a href="../modules/DataProduction_HW">Data Production</a></td></tr>
+    
 <tr><td></td><td></td><td></td></tr>
 <tr><td>M 18-Sep</td>
     <td></td>
@@ -25,6 +26,135 @@ css: /css/syllabus.css
 <tr><td>F 22-Sep</td>
     <td></td>
     <td></td></tr>
+    
+<tr><td></td><td></td><td></td></tr>
+<tr><td>M 25-Sep</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>W 27-Sep</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>F 29-Sep</td>
+    <td></td>
+    <td></td></tr>
+    
+<tr><td></td><td></td><td></td></tr>
+<tr><td>M 2-Oct</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>W 4-Oct</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>F 6-Oct</td>
+    <td></td>
+    <td></td></tr>
+    
+<tr><td></td><td></td><td></td></tr>
+<tr><td>M 9-Oct</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>W 11-Oct</td>
+    <td colspan=2>First Exam</td></tr>
+<tr><td>F 13-Oct</td>
+    <td></td>
+    <td></td></tr>
+    
+<tr><td></td><td></td><td></td></tr>
+<tr><td>M 16-Oct</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>W 18-Oct</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>F 20-Oct</td>
+    <td></td>
+    <td></td></tr>
+    
+<tr><td></td><td></td><td></td></tr>
+<tr><td>M 23-Oct</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>W 25-Oct</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>F 27-Oct</td>
+    <td></td>
+    <td></td></tr>
+    
+<tr><td></td><td></td><td></td></tr>
+<tr><td>M 30-Oct</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>W 1-Nov</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>F 3-Nov</td>
+    <td></td>
+    <td></td></tr>
+    
+<tr><td></td><td></td><td></td></tr>
+<tr><td>M 6-Nov</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>W 8-Nov</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>F 10-Nov</td>
+    <td></td>
+    <td></td></tr>
+    
+<tr><td></td><td></td><td></td></tr>
+<tr><td>M 13-Nov</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>W 15-Nov</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>F 17-Nov</td>
+    <td colspan=2>Second Exam</td></tr>
+    
+<tr><td></td><td></td><td></td></tr>
+<tr><td>M 20-Nov</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>W 22-Nov</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>F 24-Nov</td>
+    <td></td>
+    <td></td></tr>
+    
+<tr><td></td><td></td><td></td></tr>
+<tr><td>M 27-Nov</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>W 29-Nov</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>F 1-Dec</td>
+    <td></td>
+    <td></td></tr>
+    
+<tr><td></td><td></td><td></td></tr>
+<tr><td>M 4-Dec</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>W 6-Dec</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>F 8-Dec</td>
+    <td></td>
+    <td></td></tr>
+    
+<tr><td></td><td></td><td></td></tr>
+<tr><td>M 11-Dec</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>W 13-Dec</td>
+    <td></td>
+    <td></td></tr>
+<tr><td>F 15-Dec</td>
+    <td colspan=2>Final Exam</td></tr>
 </table>
 
 
