@@ -6,25 +6,25 @@ css: /css/syllabus.css
 
 ## Near-Term Due Dates
 
-<table width="90%">
-<tr><th width="30%">Date</th><th width="35%">Preparation</th><th width="35%">Due</th></tr>
-<tr><td>11-Sep</td>
+<table width="80%">
+<tr><th width="20%">Date</th><th width="40%">Preparation</th><th width="40%">Due</th></tr>
+<tr><td>M 11-Sep</td>
     <td><a href="../modules/DataProduction">DataProduction</a></td>
     <td><a href="../modules/WhyStats_HW">Why Statistics is Important</a></td></tr>
-<tr><td>13-Sep</td>
+<tr><td>W 13-Sep</td>
     <td><a href="../modules/GetDataIntoR">Getting Data Into R</a></td>
     <td><a href="../modules/FoundationalDefns_HW">Foundational Definitions</a></td></tr>
-<tr><td>15-Sep</td>
+<tr><td>F 15-Sep</td>
     <td></td>
     <td><a href="../modules/DataProduction_HW">Data Production</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td>18-Sep</td>
+<tr><td>M 18-Sep</td>
     <td></td>
     <td></td></tr>
-<tr><td>20-Sep</td>
+<tr><td>W 20-Sep</td>
     <td></td>
     <td></td></tr>
-<tr><td>22-Sep</td>
+<tr><td>F 22-Sep</td>
     <td></td>
     <td></td></tr>
 </table>
