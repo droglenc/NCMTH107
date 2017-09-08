@@ -9,7 +9,7 @@ Note that some of the more distant dates may change.
 </div>
 
 <table width="100%">
-<tr><th width="20%">Date</th><th width="40%">Preparation</th><th width="40%">HW Due</th></tr>
+<tr><th width="20%">Date</th><th width="40%">Quiz Preparation</th><th width="40%">HW Due</th></tr>
 <tr><td>M 11-Sep</td>
     <td><a href="../modules/DataProduction">DataProduction</a></td>
     <td><a href="../modules/WhyStats_HW">Why Statistics is Important</a></td></tr>
