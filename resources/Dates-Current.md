@@ -26,7 +26,7 @@ css: /css/syllabus.css
     <td></td><tr>
 <tr><td>22-Sep</td>
     <td></td>
-    <td></td><tr>
+    <td></td></tr>
 </table>
 
 
@@ -50,7 +50,6 @@ css: /css/syllabus.css
 
 <dt>XX-Jan</dt><dd><a href="../modules/GOFTest_HW">Goodness-of-Fit Test</a></dd>
 --->
-</dl>
 
 
 ---- 
