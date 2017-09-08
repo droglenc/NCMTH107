@@ -10,20 +10,20 @@ css: /css/syllabus.css
 <tr><th width="30%">Date</th><th width="35%">Preparation</th><th width="35%">Due</th></tr>
 <tr><td>11-Sep</td>
     <td><a href="../modules/DataProduction">DataProduction</a></td>
-    <td><a href="../modules/WhyStats_HW">Why Statistics is Important</a></td><tr>
+    <td><a href="../modules/WhyStats_HW">Why Statistics is Important</a></td></tr>
 <tr><td>13-Sep</td>
     <td><a href="../modules/GetDataIntoR">Getting Data Into R</a></td>
-    <td><a href="../modules/FoundationalDefns_HW">Foundational Definitions</a></td><tr>
+    <td><a href="../modules/FoundationalDefns_HW">Foundational Definitions</a></td></tr>
 <tr><td>15-Sep</td>
     <td></td>
-    <td><a href="../modules/DataProduction_HW">Data Production</a></td><tr>
+    <td><a href="../modules/DataProduction_HW">Data Production</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
 <tr><td>18-Sep</td>
     <td></td>
-    <td></td><tr>
+    <td></td></tr>
 <tr><td>20-Sep</td>
     <td></td>
-    <td></td><tr>
+    <td></td></tr>
 <tr><td>22-Sep</td>
     <td></td>
     <td></td></tr>
