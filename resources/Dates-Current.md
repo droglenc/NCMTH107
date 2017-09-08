@@ -4,44 +4,46 @@ title: Important Dates
 css: /css/syllabus.css
 ---
 
+Important dates are shown below. Note that some of the more distant dates may change.
+
 <table width="90%">
 <tr><th width="20%">Date</th><th width="40%">Preparation</th><th width="40%">HW Due</th></tr>
 <tr><td>M 11-Sep</td>
     <td><a href="../modules/DataProduction">DataProduction</a></td>
     <td><a href="../modules/WhyStats_HW">Why Statistics is Important</a></td></tr>
 <tr><td>W 13-Sep</td>
-    <td><a href="../modules/GetDataIntoR">Getting Data Into R</a></td>
+    <td><a href="../modules/GettingDataIntoR">Getting Data Into R</a></td>
     <td><a href="../modules/FoundationalDefns_HW">Foundational Definitions</a></td></tr>
 <tr><td>F 15-Sep</td>
-    <td><a href="../modules/GetDataIntoR">Getting Data Into R</a></td>
+    <td><a href="../modules/GettingDataIntoR">Getting Data Into R</a></td>
     <td><a href="../modules/DataProduction_HW">Data Production</a></td></tr>
     
 <tr><td></td><td></td><td></td></tr>
 <tr><td>M 18-Sep</td>
-    <td></td>
-    <td></td></tr>
+    <td><a href="../modules/UEDA_Quant1">Summaries for One Quant ...</a></td>
+    <td>--</td></tr>
 <tr><td>W 20-Sep</td>
-    <td></td>
-    <td></td></tr>
+    <td><a href="../modules/UEDA_Quant2">Univariate EDA - Quant</a></td>
+    <td><a href="../modules/GettingDataIntoR_HW">Getting Data Into R</a></td></tr>
 <tr><td>F 22-Sep</td>
-    <td></td>
-    <td></td></tr>
+    <td><a href="../modules/UEDA_Quant2">Univariate EDA - Quant</a></td>
+    <td>--</td></tr>
     
 <tr><td></td><td></td><td></td></tr>
 <tr><td>M 25-Sep</td>
-    <td></td>
-    <td></td></tr>
+    <td><a href="../modules/NormalDist">Normal Distributions</a></td>
+    <td><a href="../modules/UEDA_Quant2_HW">Univariate EDA - Quant</a></td></tr>
 <tr><td>W 27-Sep</td>
-    <td></td>
-    <td></td></tr>
+    <td><a href="../modules/NormalDist">Normal Distributions</a></td>
+    <td>--</td></tr>
 <tr><td>F 29-Sep</td>
     <td></td>
-    <td></td></tr>
+    <td>--</td></tr>
     
 <tr><td></td><td></td><td></td></tr>
 <tr><td>M 2-Oct</td>
     <td></td>
-    <td></td></tr>
+    <td><a href="../modules/NormalDist_HW">Normal Distributions</a></td></tr>
 <tr><td>W 4-Oct</td>
     <td></td>
     <td></td></tr>
