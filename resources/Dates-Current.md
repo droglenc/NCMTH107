@@ -54,7 +54,7 @@ css: /css/syllabus.css
     <td>--</td>
     <td></td></tr>
 <tr><td>W 11-Oct</td>
-    <td colspan="2">First Exam</td></tr>
+    <td colspan="2"><span style="color:red">First Exam</span></td></tr>
 <tr><td>F 13-Oct</td>
     <td></td>
     <td></td></tr>
@@ -72,7 +72,7 @@ css: /css/syllabus.css
     
 <tr><td></td><td></td><td></td></tr>
 <tr><td>M 23-Oct</td>
-    <td colspan="2">NO CLASS</td></tr>
+    <td colspan="2"><span style="color:red">NO CLASS</span></td></tr>
 <tr><td>W 25-Oct</td>
     <td></td>
     <td></td></tr>
@@ -110,15 +110,15 @@ css: /css/syllabus.css
     <td>--</td>
     <td></td></tr>
 <tr><td>F 17-Nov</td>
-    <td colspan="2">Second Exam</td></tr>
+    <td colspan="2"><span style="color:red">Second Exam</span></td></tr>
     
 <tr><td></td><td></td><td></td></tr>
 <tr><td>M 20-Nov</td>
-    <td colspan="2">NO CLASS</td></tr>
+    <td colspan="2"><span style="color:red">NO CLASS</span></td></tr>
 <tr><td>W 22-Nov</td>
-    <td colspan="2">NO CLASS</td></tr>
+    <td colspan="2"><span style="color:red">NO CLASS</span></td></tr>
 <tr><td>F 24-Nov</td>
-    <td colspan="2">NO CLASS</td></tr>
+    <td colspan="2"><span style="color:red">NO CLASS</span></td></tr>
     
 <tr><td></td><td></td><td></td></tr>
 <tr><td>M 27-Nov</td>
@@ -150,7 +150,7 @@ css: /css/syllabus.css
     <td></td>
     <td></td></tr>
 <tr><td>F 15-Dec</td>
-    <td colspan="2">Final Exam</td></tr>
+    <td colspan="2"><span style="color:red">Final Exam</span></td></tr>
 </table>
 
 
