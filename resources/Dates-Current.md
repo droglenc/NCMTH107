@@ -8,7 +8,7 @@ css: /css/syllabus.css
 Note that some of the more distant dates may change.
 </div>
 
-<table width="90%">
+<table width="100%">
 <tr><th width="20%">Date</th><th width="40%">Preparation</th><th width="40%">HW Due</th></tr>
 <tr><td>M 11-Sep</td>
     <td><a href="../modules/DataProduction">DataProduction</a></td>
@@ -22,7 +22,7 @@ Note that some of the more distant dates may change.
     
 <tr><td></td><td></td><td></td></tr>
 <tr><td>M 18-Sep</td>
-    <td><a href="../modules/UEDAQuant1">Summaries for One Q ...</a></td>
+    <td><a href="../modules/UEDAQuant1">Summaries for One Quant ...</a></td>
     <td>--</td></tr>
 <tr><td>W 20-Sep</td>
     <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant</a></td>
