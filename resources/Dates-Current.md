@@ -5,20 +5,24 @@ css: /css/syllabus.css
 ---
 
 <div class="alert alert-info">
-Note that some of the more distant dates may change.
+For each class period (date), the module to prepare for is shown under "Quiz Preparation." Any items that should be turned in on that date are under "Items Due." All of these dates will be announced in class.
+</div>
+
+<div class="alert alert-warn">
+Note that some of the more distant dates are subject to change.
 </div>
 
 <table width="100%">
-<tr><th width="20%">Date</th><th width="40%">Quiz Preparation</th><th width="40%">HW Due</th></tr>
+<tr><th width="18%">Date</th><th width="36%">Quiz Preparation</th><th width="46%">Items Due</th></tr>
 <tr><td>M 11-Sep</td>
     <td><a href="../modules/DataProduction">DataProduction</a></td>
-    <td><a href="../modules/WhyStats_HW">Why Statistics is Important</a></td></tr>
+    <td><a href="../modules/WhyStats_HW">Why Statistics is Important HW</a></td></tr>
 <tr><td>W 13-Sep</td>
     <td><a href="../modules/GettingDataIntoR">Getting Data Into R</a></td>
-    <td><a href="../modules/FoundationalDefns_HW">Foundational Definitions</a></td></tr>
+    <td><a href="../modules/FoundationalDefns_HW">Foundational Definitions HW</a></td></tr>
 <tr><td>F 15-Sep</td>
     <td><a href="../modules/GettingDataIntoR">Getting Data Into R</a></td>
-    <td><a href="../modules/DataProduction_HW">Data Production</a></td></tr>
+    <td><a href="../modules/DataProduction_HW">Data Production HW</a></td></tr>
     
 <tr><td></td><td></td><td></td></tr>
 <tr><td>M 18-Sep</td>
@@ -26,7 +30,7 @@ Note that some of the more distant dates may change.
     <td>--</td></tr>
 <tr><td>W 20-Sep</td>
     <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant</a></td>
-    <td><a href="../modules/GettingDataIntoR_HW">Getting Data Into R</a></td></tr>
+    <td><a href="../modules/GettingDataIntoR_HW">Getting Data Into R HW</a></td></tr>
 <tr><td>F 22-Sep</td>
     <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant</a></td>
     <td>--</td></tr>
@@ -37,7 +41,7 @@ Note that some of the more distant dates may change.
     <td>--</td></tr>
 <tr><td>W 27-Sep</td>
     <td><a href="../modules/NormalDist">Normal Distributions</a></td>
-    <td><a href="../modules/UEDAQuant2_HW">Univariate EDA - Quant</a></td></tr>
+    <td><a href="../modules/UEDAQuant2_HW">Univariate EDA - Quant HW</a></td></tr>
 <tr><td>F 29-Sep</td>
     <td></td>
     <td>--</td></tr>
@@ -45,7 +49,7 @@ Note that some of the more distant dates may change.
 <tr><td></td><td></td><td></td></tr>
 <tr><td>M 2-Oct</td>
     <td></td>
-    <td><a href="../modules/NormalDist_HW">Normal Distributions</a></td></tr>
+    <td><a href="../modules/NormalDist_HW">Normal Distributions HW</a></td></tr>
 <tr><td>W 4-Oct</td>
     <td></td>
     <td></td></tr>
