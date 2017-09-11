@@ -55,7 +55,7 @@ MWF 1300-1430<br>By Appointment</td></tr>
 <tr><th width="50%"><img src="../img/Adam_F16.jpg"></th><th width="50%"><img src="../img/Emily_F17.jpg"></th></tr>
 <tr><th>Adam Gunnelson</th><th>Emily Mader</th></tr>
 <tr style="vertical-align:top"><td>Adam is a chemistry major and math minor. He is a bowtie enthusiast, and enjoys helping people with math.</td><td>Emily is a math major and physics minor. She enjoys playing softball, being outdoors, and, of course, mathematics!</td></tr>
-<tr style="vertical-align:top"><td>XXX<br>XXX</td><td>M 6-8p<br>T 6-8p</td></tr>
+<tr style="vertical-align:top"><td>R 2-4p<br>R 7-9p</td><td>M 6-8p<br>T 6-8p</td></tr>
 </table>
 
 ----
