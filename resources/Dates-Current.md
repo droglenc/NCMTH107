@@ -8,7 +8,7 @@ css: /css/syllabus.css
 For each class period (date), the module to prepare for is shown under "Quiz Preparation." Any items that should be turned in on that date are under "Items Due." All of these dates will be announced in class.
 </div>
 
-<div class="alert alert-warn">
+<div class="alert alert-warning">
 Note that some of the more distant dates are subject to change.
 </div>
 
