@@ -35,8 +35,8 @@ Use the materials below to answer the questions on [this preparation guide](Gett
 
 * [Reading](../book/Getting Data Into R.pdf)
 * Video: [What is R?](https://www.youtube.com/v/XcBLEVknqvY?rel=0){:target="_blank"} [2 mins] [![YouTube Link](../img/youtube.png)](https://www.youtube.com/watch?v=XcBLEVknqvY)
-* Video: [What's Up with R?](https://www.youtube.com/v/ZwYQPtU2Pa0?rel=0&start=1&end=111){:target="_blank"} [3 mins]
-* Video: What is RStudio? [Part 1](https://www.youtube.com/v/riONFzJdXcs?rel=0&start=1&end=147){:target="_blank"} [3 mins] and [Part 2](https://www.youtube.com/v/riONFzJdXcs?rel=0&start=196&end=253){:target="_blank"} [1 min]
+* Video: [What's Up with R?](https://www.youtube.com/v/ZwYQPtU2Pa0?rel=0&start=1&end=111){:target="_blank"} [3 mins] [![YouTube Link](../img/youtube.png)](https://www.youtube.com/watch?v=ZwYQPtU2Pa0) (stop @1:51)
+* Video: What is RStudio? [Part 1](https://www.youtube.com/v/riONFzJdXcs?rel=0&start=1&end=147){:target="_blank"} [3 mins] [![YouTube Link](../img/youtube.png)](https://www.youtube.com/watch?v=riONFzJdXcs) (stop @2:27) and [Part 2](https://www.youtube.com/v/riONFzJdXcs?rel=0&start=196&end=253){:target="_blank"} [1 min] [![YouTube Link](../img/youtube.png)](https://www.youtube.com/watch?v=riONFzJdXcs) (from 3:16 to 4:13)
 * Videos: Getting Data
     * [Retrieve Data from Webpage](https://vimeo.com/user45324800/ncstats-getdatawebpage){:target="_blank"} [3 mins]
     * [Enter Your Own Data With Excel](https://vimeo.com/user45324800/ncstats-preparedataexcel){:target="_blank"} [4 mins]
