@@ -34,7 +34,7 @@ R is fast becoming the primary software for performing statistical analyses in m
 Use the materials below to answer the questions on [this preparation guide](GettingDataIntoR_Prep). [*Problems with videos? [See this FAQ](../resources/FAQ/FAQs/videos){:target="_blank"}.*]
 
 * [Reading](../book/Getting Data Into R.pdf)
-* Video: [What is R?](https://www.youtube.com/v/XcBLEVknqvY?rel=0){:target="_blank"} [2 mins]
+* Video: [What is R?](https://www.youtube.com/v/XcBLEVknqvY?rel=0){:target="_blank"} [2 mins] [![YouTube Link](../img/youtube.png)](https://www.youtube.com/watch?v=XcBLEVknqvY)
 * Video: [What's Up with R?](https://www.youtube.com/v/ZwYQPtU2Pa0?rel=0&start=1&end=111){:target="_blank"} [3 mins]
 * Video: What is RStudio? [Part 1](https://www.youtube.com/v/riONFzJdXcs?rel=0&start=1&end=147){:target="_blank"} [3 mins] and [Part 2](https://www.youtube.com/v/riONFzJdXcs?rel=0&start=196&end=253){:target="_blank"} [1 min]
 * Videos: Getting Data
