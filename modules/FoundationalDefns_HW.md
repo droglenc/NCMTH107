@@ -39,7 +39,7 @@ For each question below, identify the specific type of variable. Include a short
 
 1. The concentration (ppm) of lead at 119 sites in Chequamegon Bay.
 1. An actuary rates potential insurees as "low risk", "moderate risk", or "high risk".
-1. A Sociologist asked respondents from which medium they receive most of their information about wolves: "TV", "Newspaper", "Outdoor Magazines", "Public Policy Meetings", "Friends or Family", or "Other".
-1. The Koppen scheme of classifying "climates" contains five principal groups: "Tropical rainy", "dry", "temerate rainy", "Cold snowy forest", and "Polar".
+1. A sociologist asked respondents from which medium they receive most of their information about wolves: "TV", "Newspaper", "Outdoor Magazines", "Public Policy Meetings", "Friends or Family", or "Other".
+1. The [Koppen scheme of classifying "climates"](https://en.wikipedia.org/wiki/K%C3%B6ppen_climate_classification) contains five principal groups: "Tropical rainy", "dry", "temperate", "Continental", and "Polar".
 
 ----
