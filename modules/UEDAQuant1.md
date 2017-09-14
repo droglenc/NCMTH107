@@ -34,13 +34,13 @@ It is important to understand the distribution of individuals for a single varia
 
 Use the materials below to answer the questions on [this preparation guide](UEDAQuant1_Prep).
 
-* [Reading](../book/Summary One Quant Var.pdf)
-* ![YouTube](../img/youtube.png) [Calculate Median and IQR](https://www.youtube.com/watch?v=F3WcEAW-M80){:target="_blank"} [15 mins]
+* [![PDF](../img/pdf.png) Reading](../book/Summary One Quant Var.pdf)
+* [![YouTube](../img/youtube.png) Calculate Median and IQR](https://www.youtube.com/watch?v=F3WcEAW-M80){:target="_blank"} [15 mins]
     * Additional for calculating the median: [A](https://www.youtube.com/watch?v=0SYsi38XucI){:target="_blank"} [2 mins], [B](https://www.youtube.com/watch?v=hTYTaOaQUcw){:target="_blank"} [5 mins], **OR** [C](https://www.youtube.com/watch?v=9a8M_KfclBE){:target="_blank"} [3 mins]
     * [Additional for calculating the IQR](https://www.youtube.com/watch?v=R6VDj7pEG30){:target="_blank"} [3 mins] 
 * ![YouTube](../img/youtube.png) Calculate Standard Deviation: [A](https://www.youtube.com/watch?v=qqOyy_NjflU){:target="_blank"} [5 mins] **OR** [B](https://www.youtube.com/watch?v=atS4wX8I9H0){:target="_blank"} [13 mins]
-* ![YouTube Link](../img/youtube.png) [Construct a Histogram](https://www.youtube.com/watch?v=sC7gjg9g3JU){:target="_blank"} [13 mins]
-* ![Vimeo](../img/dhovid.png) [Univariate EDA (Quantitative) in R](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins]  [![Web](../img/web.png)](UEDAQuant1_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](UEDAQuant1_RHO.pdf) [![MSWord](../img/word.png)](UEDAQuant1_RHO.docx)  [![R](../img/Rlogo.png)](UEDAQuant1_RHO.R){:target="_blank"}
+* [![YouTube Link](../img/youtube.png) Construct a Histogram](https://www.youtube.com/watch?v=sC7gjg9g3JU){:target="_blank"} [13 mins]
+* [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative) in R](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins]  [![Web](../img/web.png)](UEDAQuant1_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](UEDAQuant1_RHO.pdf) [![MSWord](../img/word.png)](UEDAQuant1_RHO.docx)  [![R](../img/Rlogo.png)](UEDAQuant1_RHO.R){:target="_blank"}
 
 ----
 
