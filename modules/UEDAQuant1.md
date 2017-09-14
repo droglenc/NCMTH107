@@ -35,11 +35,18 @@ It is important to understand the distribution of individuals for a single varia
 Use the materials below to answer the questions on [this preparation guide](UEDAQuant1_Prep).
 
 * [Reading](../book/Summary One Quant Var.pdf)
-* Video: Calculate Median -- [A](https://www.youtube.com/v/0SYsi38XucI?rel=0){:target="_blank"} [2 mins], [B](https://www.youtube.com/v/hTYTaOaQUcw?rel=0){:target="_blank"} [5 mins], **or** [C](https://www.youtube.com/v/9a8M_KfclBE?rel=0){:target="_blank"} [3 mins]
-* Video: Calculate IQR -- [A](https://www.youtube.com/v/R6VDj7pEG30?rel=0){:target="_blank"} [3 mins] **or** [B](https://www.youtube.com/v/F3WcEAW-M80?rel=0&start=366){:target="_blank"} [9 mins]
-* Video: Calculate Standard Deviation -- [A](https://www.youtube.com/v/qqOyy_NjflU?rel=0){:target="_blank"} [5 mins] **or** [B](https://www.youtube.com/v/atS4wX8I9H0?rel=0){:target="_blank"} [13 mins]
-* Video: [Construct a Histogram](https://www.youtube.com/v/sC7gjg9g3JU?rel=0){:target="_blank"} [13 mins]
-* Video: [Univariate EDA (Quantitative) in R](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins]  [![Web](../img/web.png)](UEDAQuant1_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](UEDAQuant1_RHO.pdf) [![MSWord](../img/word.png)](UEDAQuant1_RHO.docx)  [![R](../img/Rlogo.png)](UEDAQuant1_RHO.R){:target="_blank"}
+* [![YouTube Link](../img/youtube.png)] Calculate Median (at least one of the following):
+    * [A](https://www.youtube.com/watch?v=0SYsi38XucI){:target="_blank"} [2 mins]
+    * [B](https://www.youtube.com/watch?v=hTYTaOaQUcw){:target="_blank"} [5 mins]
+    * [C](https://www.youtube.com/watch?v=9a8M_KfclBE){:target="_blank"} [3 mins]
+* [![YouTube Link](../img/youtube.png)] Calculate IQR (at least one of the following):
+    * [A](https://www.youtube.com/watch?v=R6VDj7pEG30){:target="_blank"} [3 mins]
+    * [B](https://www.youtube.com/watch?v=F3WcEAW-M80){:target="_blank"} [*stop at 6:06*]
+* [![YouTube Link](../img/youtube.png)] Calculate Standard Deviation (at least one of the following):
+    * [A](https://www.youtube.com/watch?v=qqOyy_NjflU){:target="_blank"} [5 mins]
+    * [B](https://www.youtube.com/watch?v=atS4wX8I9H0){:target="_blank"} [13 mins]
+* [![YouTube Link](../img/youtube.png)] [Construct a Histogram](https://www.youtube.com/watch?v=sC7gjg9g3JU){:target="_blank"} [13 mins]
+* [![Vimeo](../img/dhovid.png)] [Univariate EDA (Quantitative) in R](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins]  [![Web](../img/web.png)](UEDAQuant1_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](UEDAQuant1_RHO.pdf) [![MSWord](../img/word.png)](UEDAQuant1_RHO.docx)  [![R](../img/Rlogo.png)](UEDAQuant1_RHO.R){:target="_blank"}
 
 ----
 
