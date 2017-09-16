@@ -14,6 +14,7 @@ Note that some of the more distant dates are subject to change.
 
 <table width="100%">
 <tr><th width="18%">Date</th><th width="36%">Quiz Preparation</th><th width="46%">Items Due</th></tr>
+<!---
 <tr><td>M 11-Sep</td>
     <td><a href="../modules/DataProduction">DataProduction</a></td>
     <td><a href="../modules/WhyStats_HW">Why Statistics is Important HW</a></td></tr>
@@ -23,8 +24,8 @@ Note that some of the more distant dates are subject to change.
 <tr><td>F 15-Sep</td>
     <td><a href="../modules/GettingDataIntoR">Getting Data Into R</a></td>
     <td><a href="../modules/DataProduction_HW">Data Production HW</a></td></tr>
-    
 <tr><td></td><td></td><td></td></tr>
+--->
 <tr><td>M 18-Sep</td>
     <td><a href="../modules/UEDAQuant1">Summaries for One Quant ...</a></td>
     <td>--</td></tr>
