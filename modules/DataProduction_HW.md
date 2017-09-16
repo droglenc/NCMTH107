@@ -30,7 +30,7 @@ Use this information to answer the questions below.
 1. What is the response variable?
 1. What kind of variable is the response variable?
 1. Physically, what is a replicate (not a number)?
-1. Use a table to diagram the experimental setup. Put the unique number of each individual into respective treatments. [*Show your R work for how you placed these individuals.*]
+1. Diagram the experimental setup, include the unique number of each individual in the respective treatments. [*The table can be similar to the one just above section 3.1.5 in the reading. You can leave space in your document to handwrite the table (rather than typing it). However, show your R work for how you placed these individuals in the R appendix.*]
 
 ----
 
