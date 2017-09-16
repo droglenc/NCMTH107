@@ -46,16 +46,39 @@ css: "/css/modules.css"
 </ol></li>
 <li>Below</li>
 </ol>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>No Pill</th>
+<th></th>
+<th>CA Pill</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>No Exercise</td>
+<td>28, 9, 2, 25, 26, 13, 29, 17</td>
+<td> </td>
+<td>23, 21, 12, 14, 3, 20, 18, 19</td>
+</tr>
+<tr class="even">
+<td>Exercise</td>
+<td>11, 4, 15, 1, 5, 10, 31, 7</td>
+<td> </td>
+<td>30, 24, 32, 22, 27, 16, 6, 8</td>
+</tr>
+</tbody>
+</table>
+<div id="r-appendix" class="section level4">
+<h4>R Appendix</h4>
 <pre class="r"><code>&gt; alloc &lt;- sample(32)
-&gt; alloc[1:8]    # first treatment</code></pre>
-<pre><code>[1]  4 14 19  2  1 28 18 32</code></pre>
-<pre class="r"><code>&gt; alloc[9:16]   # second treatment</code></pre>
-<pre><code>[1] 24 17  3 21  8 12 11  5</code></pre>
-<pre class="r"><code>&gt; alloc[17:24]  # third treatment</code></pre>
-<pre><code>[1] 16 15 26 23 27 25 22  6</code></pre>
-<pre class="r"><code>&gt; alloc[25:32]  # fourth treatment</code></pre>
-<pre><code>[1]  9 30 13 20 31 29 10  7</code></pre>
+  alloc[1:8]    # first treatment
+  alloc[9:16]   # second treatment
+  alloc[17:24]  # third treatment
+  alloc[25:32]  # fourth treatment</code></pre>
 <hr />
+</div>
 </div>
 <div id="softball-bats-and-balls" class="section level2">
 <h2>Softball Bats and Balls</h2>
@@ -73,13 +96,13 @@ css: "/css/modules.css"
 <li>I would first randomly order the bats and then randomly order the two brands for each bat.</li>
 </ol>
 <pre class="r"><code>&gt; sample(3)  # random order of bats</code></pre>
-<pre><code>[1] 1 3 2</code></pre>
+<pre><code>[1] 3 2 1</code></pre>
 <pre class="r"><code>&gt; sample(8)  # first order of balls ... 1-4 is first brand, 5-8 second</code></pre>
-<pre><code>[1] 1 8 2 3 6 4 5 7</code></pre>
+<pre><code>[1] 8 7 3 4 6 2 5 1</code></pre>
 <pre class="r"><code>&gt; sample(8)  # second order of balls</code></pre>
-<pre><code>[1] 4 7 2 8 5 3 1 6</code></pre>
+<pre><code>[1] 7 4 8 3 1 2 5 6</code></pre>
 <pre class="r"><code>&gt; sample(8)  # third order of balls</code></pre>
-<pre><code>[1] 1 4 7 5 3 2 8 6</code></pre>
+<pre><code>[1] 6 5 2 8 7 3 1 4</code></pre>
 <hr />
 </div>
 <div id="identify-response-and-explanatory-variables" class="section level2">

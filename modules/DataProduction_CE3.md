@@ -14,7 +14,7 @@ A student is designing an experiment to determine the simultaneous effects of ca
 1. Explain why this is an observational or experimental study.
 1. What is an individual?
 1. Identify the response variable, factors, levels, treatments, and replicates.
-1. Using R, identify which specific individuals will be allocated to each treatment.
+1. Diagram the experimental setup, including placing the unique number of each replicate in the respective treatments.
 
 ----
 

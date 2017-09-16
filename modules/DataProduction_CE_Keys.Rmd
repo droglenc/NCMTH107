@@ -52,7 +52,7 @@ source("../rhelpers/knitr_setup.R")
     1. Treatments ... 4
     1. Replicates ... 8
 1. Below
-```{r}
+```{r CAalloc, echo=FALSE, results="hide"}
 alloc <- sample(32)
 alloc[1:8]    # first treatment
 alloc[9:16]   # second treatment
@@ -60,6 +60,15 @@ alloc[17:24]  # third treatment
 alloc[25:32]  # fourth treatment
 ```
 
+|             | No Pill | | CA Pill |
+|-------------|---------|-|---------|
+| No Exercise | `r alloc[1:8]` | &nbsp; | `r alloc[9:16]` |
+| Exercise    | `r alloc[17:24]` | &nbsp; | `r alloc[25:32]` |
+
+#### R Appendix
+```{r eval=FALSE}
+<<CAalloc>>
+```
 ----
 
 ## Softball Bats and Balls
