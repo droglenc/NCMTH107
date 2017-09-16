@@ -34,12 +34,12 @@ It is important to understand the distribution of individuals for a single varia
 
 Use the materials below to answer the questions on [this preparation guide](UEDACat_Prep).
 
-* [Reading](../book/Univariate EDA - Categorical.pdf)
-* Video: [Frequency Table](https://www.youtube.com/v/LVnzV1ZXdiY?rel=0){:target="_blank"} [2 mins]
-* Video: [Barplot](https://www.youtube.com/v/PM39_HA1qSc?rel=0){:target="_blank"} [3 mins]
-* Video: [Univariate EDA (Categorical) in R](https://vimeo.com/user45324800/ncstats-uedac){:target="_blank"} [4 mins]  [![Web](../img/web.png)](UEDACat_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](UEDACat_RHO.pdf) [![MSWord](../img/word.png)](UEDACat_RHO.docx)  [![R](../img/Rlogo.png)](UEDACat_RHO.R){:target="_blank"}
-* Video: [Interpreting a Univariate EDA (Categorical)](https://vimeo.com/user45324800/ueda-catsum){:target="_blank"} [2 mins]  [![PowerPoint](../img/ppt.png)](UEDACat_PPT.pptx)
-* Video: [Quick Rant about Pie and 3-D Charts](https://vimeo.com/user45324800/ueda-badplotrant){:target="_blank"} [3 mins]  [![PowerPoint](../img/ppt.png)](UEDACat_PPT2.pptx)
+* [![PDF](../img/pdf.png) Reading](../book/Univariate EDA - Categorical.pdf)
+* [![YouTube](../img/youtube.png) Frequency Table](https://www.youtube.com/watch?v=LVnzV1ZXdiY){:target="_blank"} [2 mins]
+* [![YouTube](../img/youtube.png) Barplot](https://www.youtube.com/watch?v=PM39_HA1qSc){:target="_blank"} [3 mins]
+* [![Vimeo](../img/dhovid.png) Univariate EDA (Categorical) in R](https://vimeo.com/user45324800/ncstats-uedac){:target="_blank"} [4 mins]  [![Web](../img/web.png)](UEDACat_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](UEDACat_RHO.pdf) [![MSWord](../img/word.png)](UEDACat_RHO.docx)  [![R](../img/Rlogo.png)](UEDACat_RHO.R){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) Interpreting a Univariate EDA (Categorical)](https://vimeo.com/user45324800/ueda-catsum){:target="_blank"} [2 mins]  [![PowerPoint](../img/ppt.png)](UEDACat_PPT.pptx)
+* [![Vimeo](../img/dhovid.png) Quick Rant about Pie and 3-D Charts](https://vimeo.com/user45324800/ueda-badplotrant){:target="_blank"} [3 mins]  [![PowerPoint](../img/ppt.png)](UEDACat_PPT2.pptx)
 
 ----
 
