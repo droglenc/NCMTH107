@@ -39,8 +39,8 @@ css: "/css/modules.css"
 <li>Below …
 <ol>
 <li>Response … blood pressure</li>
-<li>Factors … Calcium (pill or not) and Exercise (do or don’t)</li>
-<li>Levels … 2 for calcium and 2 for exercise</li>
+<li>Factors … Calcium and Exercise</li>
+<li>Levels … 2 for calcium (pill or not) and 2 for exercise (do or don’t)</li>
 <li>Treatments … 4</li>
 <li>Replicates … 8</li>
 </ol></li>
@@ -51,22 +51,19 @@ css: "/css/modules.css"
 <tr class="header">
 <th></th>
 <th>No Pill</th>
-<th></th>
 <th>CA Pill</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>No Exercise</td>
-<td>28, 9, 2, 25, 26, 13, 29, 17</td>
-<td> </td>
-<td>23, 21, 12, 14, 3, 20, 18, 19</td>
+<td>16, 5, 10, 29, 25, 30, 4, 2</td>
+<td>9, 17, 22, 28, 3, 21, 26, 8</td>
 </tr>
 <tr class="even">
 <td>Exercise</td>
-<td>11, 4, 15, 1, 5, 10, 31, 7</td>
-<td> </td>
-<td>30, 24, 32, 22, 27, 16, 6, 8</td>
+<td>31, 18, 13, 14, 6, 24, 7, 20</td>
+<td>19, 23, 32, 15, 11, 1, 27, 12</td>
 </tr>
 </tbody>
 </table>
@@ -96,13 +93,13 @@ css: "/css/modules.css"
 <li>I would first randomly order the bats and then randomly order the two brands for each bat.</li>
 </ol>
 <pre class="r"><code>&gt; sample(3)  # random order of bats</code></pre>
-<pre><code>[1] 3 2 1</code></pre>
+<pre><code>[1] 2 1 3</code></pre>
 <pre class="r"><code>&gt; sample(8)  # first order of balls ... 1-4 is first brand, 5-8 second</code></pre>
-<pre><code>[1] 8 7 3 4 6 2 5 1</code></pre>
+<pre><code>[1] 7 8 3 4 2 6 1 5</code></pre>
 <pre class="r"><code>&gt; sample(8)  # second order of balls</code></pre>
-<pre><code>[1] 7 4 8 3 1 2 5 6</code></pre>
+<pre><code>[1] 1 2 8 6 4 5 3 7</code></pre>
 <pre class="r"><code>&gt; sample(8)  # third order of balls</code></pre>
-<pre><code>[1] 6 5 2 8 7 3 1 4</code></pre>
+<pre><code>[1] 4 6 5 2 7 8 1 3</code></pre>
 <hr />
 </div>
 <div id="identify-response-and-explanatory-variables" class="section level2">

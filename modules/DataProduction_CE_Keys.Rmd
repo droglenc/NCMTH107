@@ -47,8 +47,8 @@ source("../rhelpers/knitr_setup.R")
 1. A male subject.
 1. Below ...
     1. Response ... blood pressure
-    1. Factors ... Calcium (pill or not) and Exercise (do or don't)
-    1. Levels ... 2 for calcium and 2 for exercise
+    1. Factors ... Calcium and Exercise
+    1. Levels ... 2 for calcium (pill or not) and 2 for exercise (do or don't)
     1. Treatments ... 4
     1. Replicates ... 8
 1. Below
@@ -60,10 +60,10 @@ alloc[17:24]  # third treatment
 alloc[25:32]  # fourth treatment
 ```
 
-|             | No Pill | | CA Pill |
-|-------------|---------|-|---------|
-| No Exercise | `r alloc[1:8]` | &nbsp; | `r alloc[9:16]` |
-| Exercise    | `r alloc[17:24]` | &nbsp; | `r alloc[25:32]` |
+|             | No Pill | CA Pill |
+|-------------|---------|---------|
+| No Exercise | `r alloc[1:8]` | `r alloc[9:16]` |
+| Exercise    | `r alloc[17:24]` | `r alloc[25:32]` |
 
 #### R Appendix
 ```{r eval=FALSE}
