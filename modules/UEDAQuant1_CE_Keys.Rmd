@@ -19,6 +19,13 @@ modHTML("UEDAQuant1_CE_Keys")
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
 source("../rhelpers/knitr_setup.R")
+library(captioner)
+tbls <- captioner(prefix="Table")
+figs <- captioner(prefix="Figure")
+tbls(name="Brain1","Summary statistics for brain weight (g).")
+tbls(name="Brain2","Summary statistics for brain weight (g) separated by age group.")
+figs(name="Brain1","Histogram of brain weight (g).")
+figs(name="Brain2","Histograms of brain weight (g) separated by age group.")
 ```
 
 ----
@@ -56,3 +63,53 @@ iqrCalc(c(93,81,34,5,54,84,54,13,1,35,79,63,97,71))
 1. 2
 1. 25
 1. 26-28
+
+----
+
+## Brain Weights
+```{r echo=FALSE}
+d <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/BrainHead.csv")
+```
+
+<ol>
+<li>The histogram of brain weights is in `r figs("Brain1",display="cite")`.</li>
+```{r BrainHist1, echo=FALSE, fig.width=3, fig.height=3, par1=TRUE}
+hist(~brain.weight,data=d,xlab="Brain Weight (g)")
+```
+
+`r figs("Brain1")`
+
+<li>The summary statistics for brain weights is in `r tbls("Brain1",display="cite")`.</li>
+
+`r tbls("Brain1")`
+
+```{r BrainSum1, echo=FALSE, background="white"}
+Summarize(~brain.weight,data=d,digits=1)
+```
+
+<li>The histogram of brain weights separated by age group is in `r figs("Brain2",display="cite")`.</li>
+```{r BrainHist2, echo=FALSE, fig.width=6, fig.height=3, par1=TRUE}
+hist(brain.weight~age.group,data=d,xlab="Brain Weight (g)")
+```
+
+`r figs("Brain2")`
+
+<li>The summary statistics of brain weights separate by age groups is in `r tbls("Brain2",display="cite")`.</li>
+
+`r tbls("Brain2")`
+
+```{r BrainSum2, echo=FALSE, background="white"}
+Summarize(brain.weight~age.group,data=d,digits=1)
+```
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+d <- read.csv("data/BrainHead.csv")
+<<BrainHist1>>
+<<BrainSum1>>
+<<BrainHist2>>
+<<BrainSum2>>
+```
+
+----
