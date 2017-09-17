@@ -36,12 +36,12 @@ Many natural phenomena can be closely approximated by simple statistical distrib
 
 Use the materials below to answer the questions on [this preparation guide](NormalDist_Prep).
 
-* [Reading](../book/Normal Distribution.pdf)
-* Video: [Characteristics of Normal Distributions](https://vimeo.com/user45324800/normcharacteristics){:target="_blank"} [7 mins]  [![PowerPoint](../img/ppt.png)](NormalDist_PPT.pptx)
-* Video: 68-95-99.7 Rule -- [A](https://www.youtube.com/v/PJPXFOK8F8E?rel=0){:target="_blank"} [9 mins] **or** [B](https://www.youtube.com/v/cgxPcdPbujI?rel=0){:target="_blank"} [8 mins]
-* Video: [Types of Calculations (Forward & Reverse)](https://vimeo.com/user45324800/normcalctypes){:target="_blank"} [4 mins]  [![PowerPoint](../img/ppt.png)](NormalDist_PPT2.pptx)
-* Video: [Forward Calculations in R](https://vimeo.com/user45324800/normdist-forward){:target="_blank"} [6 mins] [![Web](../img/web.png)](NormalDist_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](NormalDist_RHO.pdf) [![MSWord](../img/word.png)](NormalDist_RHO.docx)  [![R](../img/Rlogo.png)](NormalDist_RHO.R){:target="_blank"}
-* Video: [Reverse Calculations in R](https://vimeo.com/user45324800/normdist-reverse){:target="_blank"} [6 mins]
+* [![PDF](../img/pdf.png) Reading](../book/Normal Distribution.pdf)
+* [![Vimeo](../img/dhovid.png) Characteristics of Normal Distributions](https://vimeo.com/user45324800/normcharacteristics){:target="_blank"} [7 mins]  [![PowerPoint](../img/ppt.png)](NormalDist_PPT.pptx)
+* ![YouTube Link](../img/youtube.png) 68-95-99.7 Rule: [A](https://www.youtube.com/watch?v=PJPXFOK8F8E){:target="_blank"} [9 mins] **OR** [B](https://www.youtube.com/watch?v=cgxPcdPbujI){:target="_blank"} [8 mins]
+* [![Vimeo](../img/dhovid.png) Types of Calculations (Forward & Reverse)](https://vimeo.com/user45324800/normcalctypes){:target="_blank"} [4 mins]  [![PowerPoint](../img/ppt.png)](NormalDist_PPT2.pptx)
+* [![Vimeo](../img/dhovid.png) Forward Calculations in R](https://vimeo.com/user45324800/normdist-forward){:target="_blank"} [6 mins] [![Web](../img/web.png)](NormalDist_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](NormalDist_RHO.pdf) [![MSWord](../img/word.png)](NormalDist_RHO.docx)  [![R](../img/Rlogo.png)](NormalDist_RHO.R){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) Reverse Calculations in R](https://vimeo.com/user45324800/normdist-reverse){:target="_blank"} [6 mins]
 
 ----
 

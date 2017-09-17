@@ -37,13 +37,13 @@ One of the most common things in statistics is to describe the linear relationsh
 
 Use the materials below to answer the questions on [this preparation guide](LinearRegression_Prep).
 
-* [Reading](../book/Linear Regression.pdf)
-* Video: Response and Explanatory Variables -  [A](https://www.youtube.com/v/bokeTCH2aJY?rel=0&start=60&end=148){:target="_blank"} [2 mins] **and**  [B](https://www.youtube.com/v/bokeTCH2aJY?rel=0&start=378){:target="_blank"} [2 mins]
-* Video: [Introduction to Regression](https://www.youtube.com/v/k_OB1tWX9PM?rel=0){:target="_blank"} [14 mins]
-* Video: [R-Squared](https://vimeo.com/user45324800/slr-rsquared){:target="_blank"} [5 mins]  [![PowerPoint](../img/ppt.png)](LinearRegression_PPT2.pptx)
-* Video: [Linear Regression in R](https://vimeo.com/user45324800/regression1){:target="_blank"} [8 mins] [![Web](../img/web.png)](LinearRegression_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](LinearRegression_RHO.pdf) [![MSWord](../img/word.png)](LinearRegression_RHO.docx)  [![R](../img/Rlogo.png)](LinearRegression_RHO.R){:target="_blank"}
-* Video: [Regression Questions](https://vimeo.com/user45324800/slr-questions){:target="_blank"} [10 mins]  [![PowerPoint](../img/ppt.png)](LinearRegression_PPT3.pptx)
-* Video: [Assumptions](https://vimeo.com/user45324800/slr-assumptions){:target="_blank"} [3 mins]  [![PowerPoint](../img/ppt.png)](LinearRegression_PPT.pptx)
+* [![PDF](../img/pdf.png) Reading](../book/Linear Regression.pdf)
+* ![YouTube Link](../img/youtube.png) Response and Explanatory Variables:  [A](https://www.youtube.com/watch?v=bokeTCH2aJY){:target="_blank"} [*between 1:00 and 2:28*] **AND** [B](https://www.youtube.com/watch?v=bokeTCH2aJY?rel=0&start=378){:target="_blank"} [*stop at 6:18*]
+* [![YouTube Link](../img/youtube.png) Introduction to Regression](https://www.youtube.com/watch?v=k_OB1tWX9PM){:target="_blank"} [14 mins]
+* [![Vimeo](../img/dhovid.png) R-Squared](https://vimeo.com/user45324800/slr-rsquared){:target="_blank"} [5 mins]  [![PowerPoint](../img/ppt.png)](LinearRegression_PPT2.pptx)
+* [![Vimeo](../img/dhovid.png) Linear Regression in R](https://vimeo.com/user45324800/regression1){:target="_blank"} [8 mins] [![Web](../img/web.png)](LinearRegression_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](LinearRegression_RHO.pdf) [![MSWord](../img/word.png)](LinearRegression_RHO.docx)  [![R](../img/Rlogo.png)](LinearRegression_RHO.R){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) Regression Questions](https://vimeo.com/user45324800/slr-questions){:target="_blank"} [10 mins]  [![PowerPoint](../img/ppt.png)](LinearRegression_PPT3.pptx)
+* [![Vimeo](../img/dhovid.png) Assumptions](https://vimeo.com/user45324800/slr-assumptions){:target="_blank"} [3 mins]  [![PowerPoint](../img/ppt.png)](LinearRegression_PPT.pptx)
 
 ----
 

@@ -32,10 +32,10 @@ The simplest hypothesis test occurs when one is making a claim that the populati
 
 Use the materials below to answer the questions on [this preparation guide](1SampleZ_Prep).
 
-* [Reading](../book/1-Sample Z-Test.pdf)
+* [![PDF](../img/pdf.png) Reading](../book/1-Sample Z-Test.pdf)
 * Video: [11 Steps for Any Hypothesis Test](https://vimeo.com/user45324800/hotest-11steps){:target="_blank"} [5 mins] [![PowerPoint](../img/ppt.png)](1SampleZ_PPT1.pptx)
-* Video: [1-Sample Z-Test Example](https://vimeo.com/user45324800/ztest-ex1){:target="_blank"} [12 mins] [![PowerPoint](../img/ppt.png)](1SampleZ_PPT2.pptx)
-* Video: [1-Sample Z-test in R](https://vimeo.com/user45324800/ztest){:target="_blank"} [6 mins] [![Web](../img/web.png)](1SampleZ_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](1SampleZ_RHO.pdf) [![MSWord](../img/word.png)](1SampleZ_RHO.docx)  [![R](../img/Rlogo.png)](1SampleZ_RHO.R){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) 1-Sample Z-Test Example](https://vimeo.com/user45324800/ztest-ex1){:target="_blank"} [12 mins] [![PowerPoint](../img/ppt.png)](1SampleZ_PPT2.pptx)
+* [![Vimeo](../img/dhovid.png) 1-Sample Z-test in R](https://vimeo.com/user45324800/ztest){:target="_blank"} [6 mins] [![Web](../img/web.png)](1SampleZ_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](1SampleZ_RHO.pdf) [![MSWord](../img/word.png)](1SampleZ_RHO.docx)  [![R](../img/Rlogo.png)](1SampleZ_RHO.R){:target="_blank"}
 
 ----
 

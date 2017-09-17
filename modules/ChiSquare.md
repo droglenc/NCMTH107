@@ -31,13 +31,13 @@ css: /css/modules.css
 
 Use the materials below to answer the questions on [this preparation guide](ChiSquare_Prep).
 
-* [Reading](../book/Chi-Square Test.pdf)
-* Video: [Chi-Square Distribution](https://vimeo.com/user45324800/chisqdist){:target="_blank"} [4 mins] [![PowerPoint](../img/ppt.png)](ChiSquare_PPT1.pptx)
-* Video: [Chi-Square Distribution in R](https://vimeo.com/user45324800/chisqdistribution){:target="_blank"} [2 mins] [![Web](../img/web.png)](ChiSquare_RHO1.html){:target="_blank"}  [![PDF](../img/pdf.png)](ChiSquare_RHO1.pdf) [![MSWord](../img/word.png)](ChiSquare_RHO1.docx)  [![R](../img/Rlogo.png)](ChiSquare_RHO1.R){:target="_blank"}
+* [![PDF](../img/pdf.png) Reading](../book/Chi-Square Test.pdf)
+* [![Vimeo](../img/dhovid.png) Chi-Square Distribution](https://vimeo.com/user45324800/chisqdist){:target="_blank"} [4 mins] [![PowerPoint](../img/ppt.png)](ChiSquare_PPT1.pptx)
+* [![Vimeo](../img/dhovid.png) Chi-Square Distribution in R](https://vimeo.com/user45324800/chisqdistribution){:target="_blank"} [2 mins] [![Web](../img/web.png)](ChiSquare_RHO1.html){:target="_blank"}  [![PDF](../img/pdf.png)](ChiSquare_RHO1.pdf) [![MSWord](../img/word.png)](ChiSquare_RHO1.docx)  [![R](../img/Rlogo.png)](ChiSquare_RHO1.R){:target="_blank"}
 * Video: Chi-Square Test Example [x mins] [![PowerPoint](../img/ppt.png)](ChiSquare_PPT2.pptx)
-* Video: [Where Do Expected Values Come From?](https://vimeo.com/user45324800/chisqtest-expvals){:target="_blank"} [5 mins] [![PowerPoint](../img/ppt.png)](ChiSquare_PPT2.pptx)
-* Video: [Chi-Square Test (with Summarized Data) in R](https://vimeo.com/user45324800/chisqsmrzd-ex1){:target="_blank"} [8 mins] [![Web](../img/web.png)](ChiSquare_RHO2.html){:target="_blank"}  [![PDF](../img/pdf.png)](ChiSquare_RHO2.pdf) [![MSWord](../img/word.png)](ChiSquare_RHO2.docx)  [![R](../img/Rlogo.png)](ChiSquare_RHO2.R){:target="_blank"}
-* Video: [Chi-Square Test (with Raw Data) in R](https://vimeo.com/user45324800/chisqraw-ex1){:target="_blank"} [11 mins] [same handout]
+* [![Vimeo](../img/dhovid.png) Where Do Expected Values Come From?](https://vimeo.com/user45324800/chisqtest-expvals){:target="_blank"} [5 mins] [![PowerPoint](../img/ppt.png)](ChiSquare_PPT2.pptx)
+* [![Vimeo](../img/dhovid.png) Chi-Square Test (with Summarized Data) in R](https://vimeo.com/user45324800/chisqsmrzd-ex1){:target="_blank"} [8 mins] [![Web](../img/web.png)](ChiSquare_RHO2.html){:target="_blank"}  [![PDF](../img/pdf.png)](ChiSquare_RHO2.pdf) [![MSWord](../img/word.png)](ChiSquare_RHO2.docx)  [![R](../img/Rlogo.png)](ChiSquare_RHO2.R){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) Chi-Square Test (with Raw Data) in R](https://vimeo.com/user45324800/chisqraw-ex1){:target="_blank"} [11 mins] [same handout]
 
 ----
 
