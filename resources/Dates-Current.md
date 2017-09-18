@@ -38,22 +38,22 @@ Note that some of the more distant dates are subject to change.
     
 <tr><td></td><td></td><td></td></tr>
 <tr><td>M 25-Sep</td>
-    <td><a href="../modules/NormalDist">Normal Distributions</a></td>
+    <td><a href="../modules/UEDACat">Univariate EDA - Categorical</a></td>
     <td>--</td></tr>
 <tr><td>W 27-Sep</td>
     <td><a href="../modules/NormalDist">Normal Distributions</a></td>
     <td><a href="../modules/UEDAQuant2_HW">Univariate EDA - Quant HW</a></td></tr>
 <tr><td>F 29-Sep</td>
-    <td></td>
-    <td>--</td></tr>
+    <td><a href="../modules/NormalDist">Normal Distributions</a></td>
+    <td><a href="../modules/UEDACat_HW">Univariate EDA - Cat HW</a></td></tr>
     
 <tr><td></td><td></td><td></td></tr>
 <tr><td>M 2-Oct</td>
     <td></td>
-    <td><a href="../modules/NormalDist_HW">Normal Distributions HW</a></td></tr>
+    <td>--</td></tr>
 <tr><td>W 4-Oct</td>
     <td></td>
-    <td></td></tr>
+    <td><a href="../modules/NormalDist_HW">Normal Distributions HW</a></td></tr>
 <tr><td>F 6-Oct</td>
     <td></td>
     <td></td></tr>
