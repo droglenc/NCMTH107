@@ -78,8 +78,7 @@ These calculations are illustrated with the open pit mine data (the median was c
 
 <<results='asis', echo=FALSE>>=
 mco <- mc[order(mc)]
-mco <- c(mco[1:13],NA,mco[14:26],NA)
-mcx <- xtable(matrix(mco,nrow=4,byrow=TRUE),digits=0)
+mcx <- xtable(matrix(mco,nrow=2,byrow=TRUE),digits=0)
 print(mcx,floating=FALSE,include.rownames=FALSE,include.colnames=FALSE,hline.after=NULL)
 @
 

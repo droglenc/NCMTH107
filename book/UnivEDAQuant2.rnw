@@ -32,7 +32,7 @@ The same three data sets used in \modref{chap:UnivEDAQuant1} are used here.
 \section{Interpreting Shape}
 A distribution has two tails -- a left-tail of smaller or more negative values and a right-tail of larger or more positive values \figrefp{fig:ShapeExamples1}. The relative appearance of these two tails is used to identify three different shapes of distributions -- symmetric, left-skewed, and right-skewed. If the left- and right-tail of a distribution are approximately equal in shape (length and height), then the distribution is said to be \textbf{symmetric} (or more specifically \textbf{approximately symmetric}). If the left-tail is stretched out or is longer and flatter than the right-tail, then the distribution is negatively- or \textbf{left-skewed}. If the right-tail is stretched out or is longer and flatter than the left-tail, then the distribution is positively- or \textbf{right-skewed}. The type of skew is defined by the longer tail; a longer right-tail means the distribution is right-skewed and a longer left-tail means it is left-skewed.
 
-<<ShapeExamples1, echo=FALSE, fig.width=3*2.75, fig.height=2.75, out.width='.9\\linewidth', fig.cap="Examples of left-skewed (center), symmetric (left), and right-skewed (right) distributions.">>=
+<<ShapeExamples1, echo=FALSE, fig.width=3*2.75, fig.height=2.75, out.width='.9\\linewidth', fig.cap="Examples of left-skewed (left), symmetric (center), and right-skewed (right) distributions.">>=
 x <- seq(0,1,0.005)
 symy <- dbeta(x,shape1=7,shape2=7)
 righty <- dbeta(x,shape1=2,shape2=6)
