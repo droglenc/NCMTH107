@@ -60,7 +60,7 @@ Summarize(~time,data=df,digits=2)
 ## Dungeness Crabs
 <img src="zimgs/Dungeness.jpg" alt="Dungeness Crab" class="img-right">
 
-Scientists were concered about the overexploitation of Dungeness Crabs (**) in some California waters. To better manage this species they examined the post-molt carapace length from a large sample of crabs. Their results are displayed in `r figs("Crabs",display="cite")` and `r tbls("Crabs",display="cite")`. Perform a thorough EDA with these results.
+Scientists were concered about the overexploitation of [Dungeness Crabs (*Cancer magister*)](https://en.wikipedia.org/wiki/Dungeness_crab) in some California waters. To better manage this species they examined the post-molt carapace length from a large sample of crabs. Their results are displayed in `r figs("Crabs",display="cite")` and `r tbls("Crabs",display="cite")`. Perform a thorough EDA with these results.
 
 ```{r CrabsHist, echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
 df <- read.table("http://www.stat.berkeley.edu/~statlabs/data/crabs.data",header=TRUE)
