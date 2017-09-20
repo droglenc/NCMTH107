@@ -42,7 +42,7 @@ Note that some of the more distant dates are subject to change.
     <td>--</td></tr>
 <tr><td>W 27-Sep</td>
     <td><a href="../modules/NormalDist">Normal Distributions</a></td>
-    <td><a href="../modules/UEDAQuant2_HW">Univariate EDA - Quant HW</a></td></tr>
+    <td><a href="../modules/UEDAQuant2_HW2">Univariate EDA - Quant HW</a></td></tr>
 <tr><td>F 29-Sep</td>
     <td><a href="../modules/NormalDist">Normal Distributions</a></td>
     <td><a href="../modules/UEDACat_HW">Univariate EDA - Cat HW</a></td></tr>
