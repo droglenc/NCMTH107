@@ -25,7 +25,6 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/GettingDataIntoR">Getting Data Into R</a></td>
     <td><a href="../modules/DataProduction_HW">Data Production HW</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
 <tr><td>M 18-Sep</td>
     <td><a href="../modules/UEDAQuant1">Summaries for One Quant ...</a></td>
     <td>--</td></tr>
@@ -35,8 +34,8 @@ Note that some of the more distant dates are subject to change.
 <tr><td>F 22-Sep</td>
     <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant</a></td>
     <td>--</td></tr>
-    
 <tr><td></td><td></td><td></td></tr>
+--->
 <tr><td>M 25-Sep</td>
     <td><a href="../modules/UEDACat">Univariate EDA - Categorical</a></td>
     <td>--</td></tr>
