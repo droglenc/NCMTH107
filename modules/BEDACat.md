@@ -45,7 +45,7 @@ Use the materials below to answer the questions on [this preparation guide](BEDA
 
 * [Review Exercises](BEDACat_RevEx.html)
 * Class Exercises: [1](BEDACat_CE1.html) / [2](BEDACat_CE2.html) (*time permitting* ... [3](BEDACat_CE3.html))
-* [Homework Assignment](BEDACat_HW)
+* [Homework Assignment](BEDACat_HW2)
 
 ----
 
