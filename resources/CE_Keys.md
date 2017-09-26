@@ -4,7 +4,7 @@ title: Class Exercise Keys
 ---
 
 <div class="alert alert-danger">
-  Below are answers to nearly all class exercises. These are provided as a convenience so that you can check your work to identify if you have questions. Please <strong>DO NOT</strong> look at these answers before attempting the exercises. The exercises have no point values and are used only for practice and learning. There is no advantage to "peeking hear" first.
+  Below are answers to nearly all class exercises. These are provided as a convenience so that you can check your work to identify if you have questions. Please <strong>DO NOT</strong> look at these answers before attempting the exercises. The exercises have no point values and are used only for practice and learning. There is no advantage to "peeking here" first.
 </div>
 
 1. Why Statistics is Important
