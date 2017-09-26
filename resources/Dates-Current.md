@@ -48,19 +48,19 @@ Note that some of the more distant dates are subject to change.
     
 <tr><td></td><td></td><td></td></tr>
 <tr><td>M 2-Oct</td>
-    <td></td>
+    <td><a href="../modules/BEDACat">Bivariate EDA - Cat</a></td>
     <td>--</td></tr>
 <tr><td>W 4-Oct</td>
-    <td></td>
+    <td><a href="../modules/BEDAQuant">Bivariate EDA - Quant</a></td>
     <td><a href="../modules/NormalDist_HW2">Normal Distributions HW</a></td></tr>
 <tr><td>F 6-Oct</td>
     <td></td>
-    <td></td></tr>
+    <td><a href="../modules/BEDACat_HW2">Bivariate EDA - Cat</a></td></tr>
     
 <tr><td></td><td></td><td></td></tr>
 <tr><td>M 9-Oct</td>
     <td>--</td>
-    <td></td></tr>
+    <td><a href="../modules/BEDAQuant_HW2">Bivariate EDA - Quant</a></td></tr>
 <tr><td>W 11-Oct</td>
     <td colspan="2"><span style="color:red">First Exam</span></td></tr>
 <tr><td>F 13-Oct</td>
