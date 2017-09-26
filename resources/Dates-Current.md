@@ -45,8 +45,8 @@ Note that some of the more distant dates are subject to change.
 <tr><td>F 29-Sep</td>
     <td><a href="../modules/NormalDist">Normal Distributions</a></td>
     <td><a href="../modules/UEDACat_HW">Univariate EDA - Cat HW</a></td></tr>
-    
 <tr><td></td><td></td><td></td></tr>
+
 <tr><td>M 2-Oct</td>
     <td><a href="../modules/BEDACat">Bivariate EDA - Categorical</a></td>
     <td>--</td></tr>
@@ -56,8 +56,8 @@ Note that some of the more distant dates are subject to change.
 <tr><td>F 6-Oct</td>
     <td>Exam Prep</td>
     <td><a href="../modules/BEDACat_HW2">Bivariate EDA - Cat</a></td></tr>
-    
 <tr><td></td><td></td><td></td></tr>
+
 <tr><td>M 9-Oct</td>
     <td>Exam Prep</td>
     <td><a href="../modules/BEDAQuant_HW2">Bivariate EDA - Quant</a></td></tr>
@@ -66,19 +66,20 @@ Note that some of the more distant dates are subject to change.
 <tr><td>F 13-Oct</td>
     <td><a href="../modules/LinearRegression">Linear Regression</a></td>
     <td>--</td></tr>
-    
 <tr><td></td><td></td><td></td></tr>
+
 <tr><td>M 16-Oct</td>
-    <td></td>
-    <td></td></tr>
+    <td><a href="../modules/LinearRegression">Linear Regression</a></td>
+    <td>--</td></tr>
 <tr><td>W 18-Oct</td>
-    <td></td>
+    <td><a href="../modules/Probability">Probability</a></td>
     <td>Exam 1 Reflection (Optional)</td></tr>
 <tr><td>F 20-Oct</td>
-    <td></td>
-    <td></td></tr>
-    
+    <td><a href="../modules/SamplingDist">Sampling Distributions</a></td>
+    <td><a href="../modules/LinearRegression_HW2">Linear Regression HW</a><br>
+    <a href="../modules/Probability_HW2">Probability HW</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
+
 <tr><td>M 23-Oct</td>
     <td colspan="2"><span style="color:red">NO CLASS (College Reading Day)</span></td></tr>
 <tr><td>W 25-Oct</td>
@@ -87,8 +88,8 @@ Note that some of the more distant dates are subject to change.
 <tr><td>F 27-Oct</td>
     <td></td>
     <td></td></tr>
-    
 <tr><td></td><td></td><td></td></tr>
+
 <tr><td>M 30-Oct</td>
     <td></td>
     <td></td></tr>
@@ -98,8 +99,8 @@ Note that some of the more distant dates are subject to change.
 <tr><td>F 3-Nov</td>
     <td></td>
     <td></td></tr>
-    
 <tr><td></td><td></td><td></td></tr>
+
 <tr><td>M 6-Nov</td>
     <td></td>
     <td></td></tr>
@@ -109,8 +110,8 @@ Note that some of the more distant dates are subject to change.
 <tr><td>F 10-Nov</td>
     <td></td>
     <td></td></tr>
-    
 <tr><td></td><td></td><td></td></tr>
+
 <tr><td>M 13-Nov</td>
     <td></td>
     <td></td></tr>
@@ -119,16 +120,16 @@ Note that some of the more distant dates are subject to change.
     <td></td></tr>
 <tr><td>F 17-Nov</td>
     <td colspan="2"><span style="color:red">Second Exam</span></td></tr>
-    
 <tr><td></td><td></td><td></td></tr>
+
 <tr><td>M 20-Nov</td>
     <td colspan="2"><span style="color:red">NO CLASS (Thanksgiving)</span></td></tr>
 <tr><td>W 22-Nov</td>
     <td colspan="2"><span style="color:red">NO CLASS (Thanksgiving)</span></td></tr>
 <tr><td>F 24-Nov</td>
     <td colspan="2"><span style="color:red">NO CLASS (Thanksgiving)</span></td></tr>
-    
 <tr><td></td><td></td><td></td></tr>
+
 <tr><td>M 27-Nov</td>
     <td></td>
     <td></td></tr>
@@ -138,8 +139,8 @@ Note that some of the more distant dates are subject to change.
 <tr><td>F 1-Dec</td>
     <td></td>
     <td>Exam 2 Reflection (Optional)</td></tr>
-    
 <tr><td></td><td></td><td></td></tr>
+
 <tr><td>M 4-Dec</td>
     <td></td>
     <td></td></tr>
@@ -149,8 +150,8 @@ Note that some of the more distant dates are subject to change.
 <tr><td>F 8-Dec</td>
     <td></td>
     <td></td></tr>
-    
 <tr><td></td><td></td><td></td></tr>
+
 <tr><td>M 11-Dec</td>
     <td></td>
     <td>XC Reports (optional)</td></tr>
