@@ -52,7 +52,7 @@ Note that some of the more distant dates are subject to change.
     <td>--</td></tr>
 <tr><td>W 4-Oct</td>
     <td></td>
-    <td><a href="../modules/NormalDist_HW">Normal Distributions HW</a></td></tr>
+    <td><a href="../modules/NormalDist_HW2">Normal Distributions HW</a></td></tr>
 <tr><td>F 6-Oct</td>
     <td></td>
     <td></td></tr>
