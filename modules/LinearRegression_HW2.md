@@ -27,7 +27,7 @@ In a study of the legibility and visibility of highway signs, a Pennsylvania res
 1. What is the residual if the age of the driver is 50 and the maximum distance is 410 ft?
 1. What is the correlation coefficient between age and maximum distance to see the sign?
 1. What proportion of the variability in maximum distance to see the sign is explained by knowing the age of the driver?
-1. How much will the predicted maximum distance to see the sign change if the driver's age changes by ten years?
+1. How much will the predicted maximum distance to see the sign change if the driver's age increased by ten years?
 1. What aspect of this regression analysis concerns you? [*Hint: consider the regression assumptions*]?
 
 ----
