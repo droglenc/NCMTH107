@@ -51,7 +51,7 @@ Use the materials below to answer the questions on [this preparation guide](Line
 
 * [Review Exercises](LinearRegression_RevEx)
 * Class Exercises: [1](LinearRegression_CE1) / [2](LinearRegression_CE2) / [3](LinearRegression_CE3) (*time permitting* ... [4](LinearRegression_CE4))
-* [Homework Assignment](LinearRegression_HW)
+* [Homework Assignment](LinearRegression_HW2)
 
 ----
 
