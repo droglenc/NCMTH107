@@ -45,14 +45,13 @@ Use the materials below to answer the questions on [this preparation guide](Samp
 * [![Vimeo](../img/dhovid.png) Introduction to Sampling Distributions I](https://vimeo.com/user45324800/smplngd-intro){:target="_blank"} [9 mins] [![PowerPoint](../img/ppt.png)](SamplingDist_PPT.pptx)
 * [![YouTube Link](../img/youtube.png) Introduction to Sampling Distributions II](https://www.youtube.com/watch?v=Zbw-YvELsaM){:target="_blank"} [8 mins]
 * [![Vimeo](../img/dhovid.png) Central Limit Theorem](https://vimeo.com/user45324800/smplngd-clt){:target="_blank"} [4 mins] [![PowerPoint](../img/ppt.png)](SamplingDist_PPT2.pptx)
-* [![Vimeo](../img/dhovid.png) Types of Questions](https://vimeo.com/user45324800/smplngd-questions){:target="_blank"} [6 mins] [![PowerPoint](../img/ppt.png)](SamplingDist_PPT3.pptx)
 
 ----
 
 ## Practice
 
 * [Review Exercises](SamplingDist_RevEx)
-* Class Exercises: [1](SamplingDist_CE1) / [2](SamplingDist_CE2) / [3](SamplingDist_CE3) (*time permitting* ... [4](SamplingDist_CE4))
+* Class Exercises: [1](SamplingDist_CE1) / [2](SamplingDist_CE2)
 * [Homework Assignment](SamplingDist_HW)
 
 ----

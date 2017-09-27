@@ -24,13 +24,17 @@ An "arena" contains 8 acorns and 9 kernels of corn. Assume that a chipmunk place
 
 ----
 
-## Water Usage
-<img src="zimgs/faucet-water-usage.png" alt="Faucet" class="img-right">
+## Reproductive Habits of Roe Deer
+<img src="zimgs/roe-deer-fawn.jpg" alt="Roe Deer Fawn" class="img-right">
 
-Assume that it is known that the daily water usage for a household is normally distributed with a mean of 90 gallons and a standard deviation of 20 gallons. Use this information to answer the questions below.
+Researchers on Storfosna Island, Norway examined the reproductive habits of Roe Deer (*Capreolus pygargus*) in the northern extremities of the island ([Andersen and Linnell 2000](https://www.researchgate.net/publication/229194908_Irruptive_Potential_in_Roe_Deer_Density-Dependent_Effects_on_Body_Mass_and_Fertility)). The researchers found that the distribution of number of fawns born to a female between 1991 and 1994 was extremely right-skewed with a mean of 2.2 and a standard deviation of 0.46 fawns. Answer the questions below assuming that these values represent the entire population of Roe Deer. [*Note: if you decide that a question cannot be answered, then describe your reasoning very specifically.*]
 
-1. What is the probability that less than 60 gallons is used by this household on a random day?
-1. What is the probability that between 75 and 150 gallons is used by this household on a random day?
-1. What is the probability that more than 100 gallons is used by this household on a random day?
+1. What is the probability that a Roe Deer has more than 2 fawns?
+1. What is the probability that a sample of 10 Roe Deer will have an average of more than 2 fawns?
+1. What is the probability that a sample of 35 Roe Deer will have an average of more than 2 fawns?
+1. What is the probability that a sample of 35 Roe Deer will have a mean between 2.0 and 2.3 fawns?
+1. What is the most common 90% of sample means for n=35 Roe Deer?
+1. What is the mean such that 20% of all samples of n=35 Roe Deer have a smaller mean?
 
 ----
+
