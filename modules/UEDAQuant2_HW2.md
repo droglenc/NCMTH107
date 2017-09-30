@@ -19,6 +19,6 @@ css: "/css/modules.css"
 The University of North Carolina math department is noted for "giving out" low grades. To examine this, the GPA from a random sample of 22 math classes and 29 "other" university classes (from the last year) was collected and recorded in [UNCGrades.csv](https://raw.githubusercontent.com/droglenc/NCData/master/UNCgrades.csv). Use these data to answer the following questions.
 
 1. Separately, perform an appropriate EDA for each type of class. Refer to figures and tables as appropriate. [*HINT: You may construct a figure for each type of class with just one R command. One command may also be used to construct a table that contains results for each class type.*]
-1. What are two MAJOR differences in results between the two class types? [*HINT: Focus on EDA characteristics that you described in your answer to the previous question.*]
+1. What two MAJOR conclusions might you make about differences in GPA between the two class types based on your observations above. [*HINT: Focus on EDA characteristics that you described in your answer to the previous question.*]
 
 ----
