@@ -35,7 +35,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
+
 <tr><td>M 25-Sep</td>
     <td><a href="../modules/UEDACat">Univariate EDA - Categorical</a></td>
     <td>--</td></tr>
@@ -46,7 +46,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/NormalDist">Normal Distributions</a></td>
     <td><a href="../modules/UEDACat_HW">Univariate EDA - Cat HW</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
-
+--->
 <tr><td>M 2-Oct</td>
     <td><a href="../modules/BEDACat">Bivariate EDA - Categorical</a></td>
     <td>--</td></tr>
@@ -72,19 +72,19 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/LinearRegression">Linear Regression</a></td>
     <td>--</td></tr>
 <tr><td>W 18-Oct</td>
-    <td><a href="../modules/Probability">Probability</a></td>
+    <td><a href="../modules/SamplingDist">Sampling Distributions</a></td>
     <td>Exam 1 Reflection (Optional)</td></tr>
 <tr><td>F 20-Oct</td>
-    <td><a href="../modules/SamplingDist">Sampling Distributions</a></td>
-    <td><a href="../modules/LinearRegression_HW2">Linear Regression HW</a><br>
-    <a href="../modules/Probability_HW2">Probability HW</a></td></tr>
+    <td><a href="../modules/Probability">Probability</a></td>
+    <td><a href="../modules/LinearRegression_HW2">Linear Regression HW</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 23-Oct</td>
     <td colspan="2"><span style="color:red">NO CLASS (College Reading Day)</span></td></tr>
 <tr><td>W 25-Oct</td>
     <td></td>
-    <td></td></tr>
+    <td><a href="../modules/SamplingDist_HW">Sampling Distributions HW</a><br>
+    <a href="../modules/Probability_HW2">Probability HW</a></td></tr>
 <tr><td>F 27-Oct</td>
     <td></td>
     <td></td></tr>
