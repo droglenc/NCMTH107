@@ -84,7 +84,7 @@ Note that some of the more distant dates are subject to change.
 <tr><td>W 25-Oct</td>
     <td></td>
     <td><a href="../modules/SamplingDist_HW">Sampling Distributions HW</a><br>
-    <a href="../modules/Probability_HW2">Probability HW</a></td></tr>
+    <a href="../modules/Probability_HW">Probability HW</a></td></tr>
 <tr><td>F 27-Oct</td>
     <td></td>
     <td></td></tr>
