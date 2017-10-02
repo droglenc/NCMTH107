@@ -17,5 +17,6 @@ To prepare for this module, please answer the following questions from the prepa
 1. What is on the x- and y-axes of a bar plot?
 1. What characteristics are described in a univariate EDA for categorical data?
 1. What R function is used to construct a frequency table?
+1. What R function is used to convert a frequency table to a percentages table?
 
 ----
