@@ -3,9 +3,10 @@ layout: page
 title: Daily Quizzes
 ---
 
-* [Fri, 29-Sep](https://goo.gl/forms/jWmKTyc3I8RNX8Wy1){:target="_blank"}
+* [Mon, 2-Oct](https://goo.gl/forms/V6qJXErT3fTrvjVN2){:target="_blank"}
 
 <!--
+* [Wed, 4-Oct](https://goo.gl/forms/pRbxCavwgPQfhvzs2){:target="_blank"}
 
 -->
 
