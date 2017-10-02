@@ -9,7 +9,7 @@ css: "/css/modules.css"
 
 ## Hand Calculations
 
-Use the data for the two variables (`VAR1` and `VAR2`) below to construct a (i) two-way frequency table, (ii) a row-percentage table, (iii) a column-percentage table, and (iv) a total-percentage table.
+Use the data for the two variables (`VAR1` and `VAR2`) below to construct (by hand without R) a (i) two-way frequency table, (ii) a row-percentage table, (iii) a column-percentage table, and (iv) a total-percentage table.
 
 <pre>
 VAR1  D C A C A D C A D B A B B A C D A C A B B A D C A C B B
