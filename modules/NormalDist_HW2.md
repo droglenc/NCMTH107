@@ -16,13 +16,13 @@ css: "/css/modules.css"
 ## iPhone Battery Lifespan 
 <img src="zimgs/iphone.jpg" alt="iPhone" class="img-right">
 
-Apple suggests that the battery lifespan (i.e., how many charge cycles a battery will last) has a mean of 400 charges with a standard deviaion of 20 charges. A research group that tested battery lifespans rates an individual battery as "exceptional" if it gets more than 450 charges and "unacceptably poor" if it gets less than 375 charges. Answer the questions below assuming that the distribution of charges is normally distributed.
+Apple suggests that the battery lifespan (i.e., how many charge-cycles a battery will last -- note that every time a phone is plugged in it is considered a "charge-cycle," no matter how long it is plugged in) has a mean of 400 charge-cycles with a standard deviaion of 20 charge-cycles. A research group that tested battery lifespans, rates an individual battery as "exceptional" if it lasts for more than 450 charge-cycles and "unacceptably poor" if it lasts for less than 375 charge-cycles. Answer the questions below assuming that the distribution of charge-cycles is normally distributed.
 
-1. What type of variable is "number of charges"?
+1. What type of variable is "number of charge-cycles"?
 1. What proportion of iPhone batteries would be rated as "exceptional"?
 1. What percentage of iPhone batteries would be rated as better than "unacceptably poor," but not "exceptional"?
-1. Suppose that the research company wants to change the definition of "exceptional" to include only the top 10% of batteries. What number of charges would define this new "exceptional"?
-1. Similarly, suppose that the research company wants to change the definition of "unacceptably poor" to the include the worst 25% of batteries. What number of charges would define this new "unacceptably poor"?
+1. Suppose that the research company wants to change the definition of "exceptional" to include only the top 10% of batteries. What number of charge-cycles would define this new "exceptional"?
+1. Similarly, suppose that the research company wants to change the definition of "unacceptably poor" to the include the worst 25% of batteries. What number of charge-cycles would define this new "unacceptably poor"?
 
 ----
 
@@ -36,6 +36,6 @@ Male wild Turkeys (*Meleagris gallopavo*) have metatarsal spurs (i.e., bone grow
 1. What proportion of turkeys have a spur length greater than 30 mm?
 1. How big is the spur length such that 10% of turkeys have a smaller spur?
 1. What proportion of turkeys have a spur length less than 18 mm?
-1. What is the most common 80% of turkeys spur lengths?
+1. What is the most common 80% of turkey spur lengths?
 
 ----
