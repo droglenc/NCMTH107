@@ -17,6 +17,8 @@ To prepare for this module, please answer the following questions from the prepa
 1. Write the generic equation of the line and define each "letter" in that equation.
 1. Specifically define slope and intercept.
 1. What statistical word must be used when describing both the slope and the intercept? Why?
+1. What is the value of the slope in the equation G=3.73*K+14.4? What is the value of the intercept in the same equation.
+1. What is the value of the slope in the equation H=-13.56-8.93*V? What is the value of the intercept in the same equation.
 1. How does one predict the value of the response variable given the equation of a line and a value of the explanatory variable.
 1. What is an extrapolation?
 1. What is a residual (definitionally and visually) and how is it computed?
