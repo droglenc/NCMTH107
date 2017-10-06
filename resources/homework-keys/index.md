@@ -10,7 +10,7 @@ title: Homework Keys
 * [Univariate EDA - Categorical](UnivEDA_Cat_noPrint.pdf){:target="_blank"}
 * [Univariate EDA - Quantitative](UnivEDA_Quant_2_noPrint.pdf){:target="_blank"}
 * [Normal Distributions](Normal_Distributions_2_noPrint.pdf){:target="_blank"}
-* [Bivariate EDA - Categorical](BivEDA_Cat_noPrint.pdf){:target="_blank"}
+* [Bivariate EDA - Categorical](BivEDA_Cat_2_noPrint.pdf){:target="_blank"}
 * [Bivariate EDA - Quantitative](BivEDA_Quant_2_noPrint.pdf){:target="_blank"}
 * [Linear Regression](Linear_Regression_noPrint.pdf){:target="_blank"}
 * [Probability Introduction](Probability_Introduction_noPrint.pdf){:target="_blank"}
