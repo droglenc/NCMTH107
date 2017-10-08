@@ -46,7 +46,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/NormalDist">Normal Distributions</a></td>
     <td><a href="../modules/UEDACat_HW">Univariate EDA - Cat HW</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
+
 <tr><td>M 2-Oct</td>
     <td><a href="../modules/BEDACat">Bivariate EDA - Categorical</a></td>
     <td>--</td></tr>
@@ -57,7 +57,7 @@ Note that some of the more distant dates are subject to change.
     <td>Exam Prep</td>
     <td><a href="../modules/BEDACat_HW2">Bivariate EDA - Cat</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
-
+--->
 <tr><td>M 9-Oct</td>
     <td>Exam Prep</td>
     <td><a href="../modules/BEDAQuant_HW2">Bivariate EDA - Quant</a></td></tr>
