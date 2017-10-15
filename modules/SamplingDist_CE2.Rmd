@@ -32,9 +32,9 @@ In this exercise, you will be asked to identify what the CLT says the sampling d
 ----
 
 ## Situation 1
-Suppose that the population in this situation has the characteristics shown in the figure below.
+Suppose the population has the characteristics shown in the figure below.
 
-```{r Sit1, echo=FALSE, fig.width=3.5,fig.height=3,par2=TRUE}
+```{r Sit1, echo=FALSE, fig.width=3.25,fig.height=3,par2=TRUE}
 shape1 <- 1; shape2 <- 1
 x <- seq(0,0.95,0.05)
 y <- round(1000*stats::dbeta(x,shape1,shape2),0)
@@ -56,7 +56,7 @@ par(old.par)
 1. What is the shape, center, and dispersion of this population?
 2. What would you expect, based on the CLT, the sampling distribution of the sample means to look like for n=10, 25, and 50. Record your expectations in the appropriate cells of the table below.
 
-<table class="table table-bordered table-condensed">
+<table class="table table-bordered table-condensed" style="width:50%">
 <thead>
 <tr><th></th><th colspan=3 class="text-center">Expected from CLT</th></tr>
 <tr><th>n=</th><th class="text-center">Shape</th><th class="text-center">Center</th><th class="text-center">Dispersion</th></tr>
@@ -71,9 +71,9 @@ par(old.par)
 ----
 
 ## Situation 2
-Suppose that the population in this situation has the characteristics shown in the figure below.
+Suppose the population has the characteristics shown in the figure below.
 
-```{r Sit2, echo=FALSE, fig.width=3.5,fig.height=3,par2=TRUE}
+```{r Sit2, echo=FALSE, fig.width=3.25,fig.height=3,par2=TRUE}
 shape1 <- 1; shape2 <- 5
 x <- seq(0,0.95,0.05)
 y <- round(1000*stats::dbeta(x,shape1,shape2),0)
@@ -98,9 +98,9 @@ par(old.par)
 ----
 
 ## Situation 3
-Suppose that the population in this situation has the characteristics shown in the figure below.
+Suppose the population has the characteristics shown in the figure below.
 
-```{r Sit3, echo=FALSE, fig.width=3.5,fig.height=3,par2=TRUE}
+```{r Sit3, echo=FALSE, fig.width=3.25,fig.height=3,par2=TRUE}
 shape1 <- 5; shape2 <- 3
 x <- seq(0,0.95,0.05)
 y <- round(1000*stats::dbeta(x,shape1,shape2),0)
