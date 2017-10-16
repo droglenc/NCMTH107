@@ -17,10 +17,10 @@ To prepare for this module, please answer the following questions from the prepa
     1. a randomly selected individual is a Democrat?
     1. a randomly selected individual is an Independent?
     1. a randomly selected individual is a Democrat, given that all of the independents have left the room?
-1. Which distribution do you use to compute probability about individuals? about statistics from samples?
-1. How do you determine if a probability distribution is normal?
+1. Which distribution do you use to compute probabilities about individuals? about statistics from samples?
+1. How do you determine if a population distribution is normal?
 1. How do you determine if a sampling distribution is normal?
-1. What measure of dispersion is used with a population distribution? sampling distribution?
+1. What measure of dispersion is used with a population distribution? with a sampling distribution?
 1. What must be true to compute a probability (in this course)?
 
 ----
