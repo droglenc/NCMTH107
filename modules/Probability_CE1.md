@@ -1,40 +1,51 @@
 ---
 layout: page
 title: Class Exercise
-subtitle: Probability Introduction 1
+subtitle: Probability 1
 css: "/css/modules.css"
 ---
 
 ----
 
-## Banking
-<img src="zimgs/associated-bank.jpg" alt="Associated Bank" class="img-right">
-Associated Bank is reviewing its service charges and interest paying policies on checking accounts. The bank has found that the daily balance on personal checking accounts is normally distributed with an average of $550 and a standard deviation of $150. In the questions below, suppose that a customer is randomly selected.
+## Melatonin and Sleep
+<img src="zimgs/melatonin.png" alt="melatonin" class="img-right">
+MIT researchers examined the effect of [melatonin](http://www.webmd.com/sleep-disorders/tc/melatonin-overview) on sleep.  Suppose that we know that men given a placebo fell asleep according to a N(15,5) distribution.  For each question below identify (a) the distribution that would be used to answer the question, (b) whether the question can be answered or not, (c) specific characteristics of the required distribution, and (d) if appropriate, the answer to the question.
 
-1. What is the probability that a personal checking account customer has a daily balance in excess of $800?
-1. What is the probability that a personal checking account customer has a balance of $200 or lower?
-1. What is the probability that a personal checking account customer has a balance of $600 or lower?
-1. What is the probability that a personal checking account customer has a balance between $700 and $850?
+1. What is the probability, with 4 randomly selected men, of observing a mean of more than 12 mins?
+1. What is the probability that a randomly selected man will fall asleep in more than 12 mins?
+1. What is the probability that 25 randomly selected will have a mean time to fall asleep of more than 15.5 minutes?
 
 ----
 
-## Acorn Production
-<img src="zimgs/acorns.jpg" alt="Acorns" class="img-right">
-Suppose that the number of acorns that fall from a mature white oak tree in Bayfield County is normaly distributed with a mean 875 and a standard deviation of 220.
+## Pollutants in Auto Exhaust
+<img src="zimgs/exhaust.jpg" alt="Exhaust" class="img-right">
+The level of nitrogen oxides (NOX) in the exhaust of a particular car model is right-skewed with a mean of 0.9 grams per mile (g/mi) and a standard deviation of 0.15 g/mi.  For each question below identify (a) the distribution that would be used to answer the question, (b) whether the question can be answered or not, (c) specific characteristics of the required distribution, and (d) if appropriate, the answer to the question.
 
-1. What is the probability that an oak tree produces more than 1000 acorns?
-1. What is the probability that an oak tree will produce between 700 and 1000 acorns?
-1. What is the probability that four oak trees will produce fewer than 5000 acorns totals (assume for this example that all four trees produce the exact same number of acorns)?
-1. What must be true for the previous three answers to be considered as "probabilities."
-1. How many acorns are produced by the lowest producing 20% of trees?
+1. What is the probability that a car will have a NOX greater than 1 g/mi?
+1. What is the probability that a random sample of 15 cars will have a mean NOX greater than 1 g/mi?
+1. What is the probability that a random sample of 50 cars will have a mean NOX greater than 0.92 g/mi?
+1. What is the probability that a random sample of 50 cars will have a mean NOX less than 0.85 g/mi?
+1. What is the mean NOX such that only 1% of samples of 50 cars have a larger mean?
+
+----
+
+## People in Car
+<img src="zimgs/carpooling.jpg" alt="car pooling" class="img-right">
+A study of rush-hour traffic in San Francisco counted the number of people in a car entering a freeway at a suburban interchange.  Suppose that, in the population, this count has a mean of 1.5 people with a standard deviation of 0.75.
+
+1. Do you expect this count to follow a normal distribution?  What are two pieces of evidence to support your answer?
+1. What is the probability that a random sample of 40 cars will have a mean number of passengers of less than 1.2?
+1. What is the probability that a random sample of 50 cars will have a mean number of passengers of greater than 2.0?
+1. What is the probability that a random sample of 5 cars will have a mean number of passengers of greater than 2.0?
+1. Suppose that 700 cars pass through this intersection in one hour.  What is the probability that these 700 cars will carry more than 1075 people?
 
 ----
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
   <li><a href="Probability.html">^</a></li>
-  <li class="active"><a href="#">1</a></li>
-  <li><a href="Probability_CE2.html">2</a></li>
+  <li><a href="Probability_CE1.html">1</a></li>
+  <li class="active"><a href="#">2</a></li>
 </ul>
 </div>
 
