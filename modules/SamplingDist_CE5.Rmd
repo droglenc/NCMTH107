@@ -1,0 +1,56 @@
+---
+layout: page
+title: Class Exercise
+subtitle: Sampling Distributions 5 (OPTIONAL)
+author: Derek H. Ogle
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: no
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
+source("../rhelpers/rhelpers.R")
+modHTML("SamplingDist_CE5")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+source("../rhelpers/knitr_setup.R")
+```
+
+----
+
+## Checking the CLT
+<img src="http://derekogle.com/NCMTH107/modules/zimgs/computer-1.jpg" alt="Simulations" class="img-right">
+Repeat [Class Exercise 3](SamplingDist_CE3.html) for each situation below (which corresponds to the situations in the [previous exercise](SamplingDist_CE4.html)).
+
+----
+
+## Situation 2
+The population is constructed by using `shape1=1` and `shape2=5` in `cltSim()`.
+
+1. What did you observed about the sampling distribution of the sample means for each of n=10, 25, and 50. Record your observations in the appropriate cells of a table like that above.
+1. Did each of your observations match your expectations (from the previous exercise)? Does this give you confidence in the CLT?
+
+----
+
+## Situation 3
+The population is constructed by using `shape1=5` and `shape2=3` in `cltSim()`.
+
+1. What did you observed about the sampling distribution of the sample means for each of n=10, 25, and 50. Record your observations in the appropriate cells of a table like that above.
+1. Did each of your observations match your expectations (from the previous exercise)? Does this give you confidence in the CLT?
+
+----
+
+<div class="text-center">
+<ul class="pagination pagination-lg">
+  <li><a href="SamplingDist.html">^</a></li>
+  <li><a href="SamplingDist_CE1.html">1</a></li>
+  <li><a href="SamplingDist_CE2.html">2</a></li>
+  <li><a href="SamplingDist_CE3.html">3</a></li>
+  <li><a href="SamplingDist_CE4.html">4</a></li>
+  <li class="active"><a href="#">5</a></li>
+</ul>

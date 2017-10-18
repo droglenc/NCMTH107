@@ -70,65 +70,12 @@ par(old.par)
 
 ----
 
-## Situation 2
-Suppose the population has the characteristics shown in the figure below.
-
-```{r Sit2, echo=FALSE, fig.width=3.25,fig.height=3,par2=TRUE}
-shape1 <- 1; shape2 <- 5
-x <- seq(0,0.95,0.05)
-y <- round(1000*stats::dbeta(x,shape1,shape2),0)
-x <- rep(x, y)
-title.popn <- substitute(paste(mu,"=",muval,", ",sigma,"=",sigmaval),
-                         list(muval=formatC(shape1/(shape1+shape2),
-                                            format="f",digits=2),
-                              sigmaval=formatC(sqrt((shape1*      shape2)/(((shape1+shape2)^2)*(shape1+shape2+1))),
-                                               format="f",digits=3)))
-old.par <- par(mar=c(3,2,2.25,1),mgp=c(1.7,0.4,0),tcl=-0.2,yaxs="i")
-hist(x,freq=FALSE,breaks=seq(0,1,0.05),yaxt="n",xlab="Variable (X)",
-     ylab="",main="",right=FALSE,col="gray90")
-mtext("Population Distribution",3,line=1.3)
-mtext(title.popn,3,line=0.1)
-mtext("Frequency of Individuals",2,line=0.1)
-par(old.par)
-```
-
-1. What is the shape, center, and dispersion of this population?
-2. What would you expect, based on the CLT, the sampling distribution of the sample means to look like for n=10, 25, and 50. Record your expectations in the appropriate cells of a table like that above.
-
-----
-
-## Situation 3
-Suppose the population has the characteristics shown in the figure below.
-
-```{r Sit3, echo=FALSE, fig.width=3.25,fig.height=3,par2=TRUE}
-shape1 <- 5; shape2 <- 3
-x <- seq(0,0.95,0.05)
-y <- round(1000*stats::dbeta(x,shape1,shape2),0)
-x <- rep(x, y)
-title.popn <- substitute(paste(mu,"=",muval,", ",sigma,"=",sigmaval),
-                         list(muval=formatC(shape1/(shape1+shape2),
-                                            format="f",digits=2),
-                              sigmaval=formatC(sqrt((shape1*      shape2)/(((shape1+shape2)^2)*(shape1+shape2+1))),
-                                               format="f",digits=3)))
-old.par <- par(mar=c(3,2,2.25,1),mgp=c(1.7,0.4,0),tcl=-0.2,yaxs="i")
-hist(x,freq=FALSE,breaks=seq(0,1,0.05),yaxt="n",xlab="Variable (X)",
-     ylab="",main="",right=FALSE,col="gray90")
-mtext("Population Distribution",3,line=1.3)
-mtext(title.popn,3,line=0.1)
-mtext("Frequency of Individuals",2,line=0.1)
-par(old.par)
-```
-
-1. What is the shape, center, and dispersion of this population?
-2. What would you expect, based on the CLT, the sampling distribution of the sample means to look like for n=10, 25, and 50. Record your expectations in the appropriate cells of a table like that above.
-
-
-----
-
 <div class="text-center">
 <ul class="pagination pagination-lg">
   <li><a href="SamplingDist.html">^</a></li>
   <li><a href="SamplingDist_CE1.html">1</a></li>
   <li class="active"><a href="#">2</a></li>
   <li><a href="SamplingDist_CE3.html">3</a></li>
+  <li><a href="SamplingDist_CE4.html">4</a></li>
+  <li><a href="SamplingDist_CE5.html">5</a></li>
 </ul>
