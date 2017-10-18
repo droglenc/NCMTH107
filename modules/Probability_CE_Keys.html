@@ -8,58 +8,36 @@ css: "/css/modules.css"
 
 
 <hr />
-<div id="banking" class="section level2">
-<h2>Banking</h2>
+<div id="melatonin-and-sleep" class="section level2">
+<h2>Melatonin and Sleep</h2>
 <ol>
-<li>0.0478</li>
-<li>0.0098</li>
-<li>0.6306</li>
-<li>0.1359</li>
+<li>About a mean from n=4 …
+<ol>
+<li>Sampling.</li>
+<li>Can be answered.</li>
+<li>N(15,2.500)</li>
+<li>0.8849.</li>
+</ol></li>
+<li>About an individual …
+<ol>
+<li>Population.</li>
+<li>Can be answered.</li>
+<li>N(15,5)</li>
+<li>0.7257.</li>
+</ol></li>
+<li>About a mean from n=25 …
+<ol>
+<li>Sampling.</li>
+<li>Can be answered.</li>
+<li>N(15,1.000)</li>
+<li>0.3085.</li>
+</ol></li>
 </ol>
 <p>R Appendix.</p>
-<pre class="r"><code>distrib(800,mean=550,sd=150,lower.tail=FALSE)
-distrib(200,mean=550,sd=150)
-distrib(600,mean=550,sd=150)
-ab &lt;- distrib(850,mean=550,sd=150)
-a &lt;- distrib(700,mean=550,sd=150)
-ab-a</code></pre>
+<pre class="r"><code>distrib(12,mean=15,sd=5/sqrt(4),lower.tail=FALSE)
+distrib(12,mean=15,sd=5,lower.tail=FALSE)
+distrib(15.5,mean=15,sd=5/sqrt(25),lower.tail=FALSE)</code></pre>
 <hr />
-</div>
-<div id="acorn-production" class="section level2">
-<h2>Acorn Production</h2>
-<ol>
-<li>0.2850</li>
-<li>0.5019</li>
-<li>0.9559</li>
-<li>An Oak tree must be randomly selected.</li>
-<li>690 acorns.</li>
-</ol>
-<p>R Appendix.</p>
-<pre class="r"><code>distrib(1000,mean=875,sd=220,lower.tail=FALSE)
-ab &lt;- distrib(1000,mean=875,sd=220)
-a &lt;- distrib(700,mean=875,sd=220)
-ab-a
-distrib(5000/4,mean=875,sd=220)
-distrib(0.20,mean=875,sd=220,type=&quot;q&quot;)</code></pre>
-<table style="width:6%;">
-<colgroup>
-<col width="5%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>## Melatonin and Sleep</td>
-</tr>
-<tr class="even">
-<td>1. About a mean from n=4 … 1. Sampling. 1. Can be answered. 1. N(15,2.500) 1. 0.8849. 1. About an individual … 1. Population. 1. Can be answered. 1. N(15,5) 1. 0.7257. 1. About a mean from n=25 … 1. Sampling. 1. Can be answered. 1. N(15,1.000) 1. 0.3085.</td>
-</tr>
-<tr class="odd">
-<td>R Appendix.</td>
-</tr>
-<tr class="even">
-<td><code>r distrib(12,mean=15,sd=5/sqrt(4),lower.tail=FALSE) distrib(12,mean=15,sd=5,lower.tail=FALSE) distrib(15.5,mean=15,sd=5/sqrt(25),lower.tail=FALSE)</code></td>
-</tr>
-</tbody>
-</table>
 </div>
 <div id="pollutants-in-auto-exhaust" class="section level2">
 <h2>Pollutants in Auto Exhaust</h2>
@@ -104,6 +82,45 @@ distrib(0.20,mean=875,sd=220,type=&quot;q&quot;)</code></pre>
 <pre class="r"><code>distrib(0.92,mean=0.9,sd=0.15/sqrt(50),lower.tail=FALSE)
 distrib(0.85,mean=0.9,sd=0.15/sqrt(50))
 distrib(0.01,mean=0.9,sd=0.15/sqrt(50),lower.tail=FALSE,type=&quot;q&quot;)</code></pre>
+<hr />
+</div>
+<div id="people-in-car" class="section level2">
+<h2>People in Car</h2>
+<ol>
+<li>No. Left side will be truncated at 0 (i.e., more than 2 SD away from mean becomes negative, which is not possible). Discrete data with lots of ones and twos with few higher than that.</li>
+<li>About a mean from n=40 …
+<ol>
+<li>Sampling.</li>
+<li>Can be answered.</li>
+<li>N(1.5,0.1186)</li>
+<li>0.0057.</li>
+</ol></li>
+<li>About a mean from n=50 …
+<ol>
+<li>Sampling.</li>
+<li>Can be answered.</li>
+<li>N(1.5,0.1061)</li>
+<li>0.0000012.</li>
+</ol></li>
+<li>About a mean from n=5 …
+<ol>
+<li>Sampling.</li>
+<li>Can NOT be answered.</li>
+<li>Not normal.</li>
+<li>Can’t answer.</li>
+</ol></li>
+<li>About a mean from n=700 (through a total) …
+<ol>
+<li>Sampling.</li>
+<li>Can be answered.</li>
+<li>N(1.5,0.0283)</li>
+<li>0.1039.</li>
+</ol></li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(1.2,mean=1.5,sd=0.75/sqrt(40))
+distrib(2,mean=1.5,sd=0.75/sqrt(50),lower.tail=FALSE)
+distrib(1075/700,mean=1.5,sd=0.75/sqrt(700),lower.tail=FALSE)</code></pre>
 <hr />
 </div>
 <div id="acorn-length" class="section level2">
@@ -152,45 +169,6 @@ a &lt;- distrib(20,mean=21,sd=6/sqrt(50))
 ab-a</code></pre>
 <hr />
 </div>
-<div id="people-in-car" class="section level2">
-<h2>People in Car</h2>
-<ol>
-<li>No. Left side will be truncated at 0 (i.e., more than 2 SD away from mean becomes negative, which is not possible). Discrete data with lots of ones and twos with few higher than that.</li>
-<li>About a mean from n=40 …
-<ol>
-<li>Sampling.</li>
-<li>Can be answered.</li>
-<li>N(1.5,0.1186)</li>
-<li>0.0057.</li>
-</ol></li>
-<li>About a mean from n=50 …
-<ol>
-<li>Sampling.</li>
-<li>Can be answered.</li>
-<li>N(1.5,0.1061)</li>
-<li>0.0000012.</li>
-</ol></li>
-<li>About a mean from n=5 …
-<ol>
-<li>Sampling.</li>
-<li>Can NOT be answered.</li>
-<li>Not normal.</li>
-<li>Can’t answer.</li>
-</ol></li>
-<li>About a mean from n=700 (through a total) …
-<ol>
-<li>Sampling.</li>
-<li>Can be answered.</li>
-<li>N(1.5,0.0283)</li>
-<li>0.1039.</li>
-</ol></li>
-</ol>
-<p>R Appendix.</p>
-<pre class="r"><code>distrib(1.2,mean=1.5,sd=0.75/sqrt(40))
-distrib(2,mean=1.5,sd=0.75/sqrt(50),lower.tail=FALSE)
-distrib(1075/700,mean=1.5,sd=0.75/sqrt(700),lower.tail=FALSE)</code></pre>
-<hr />
-</div>
 <div id="plowing-snow" class="section level2">
 <h2>Plowing Snow</h2>
 <ol>
@@ -227,6 +205,59 @@ distrib(1075/700,mean=1.5,sd=0.75/sqrt(700),lower.tail=FALSE)</code></pre>
 <pre class="r"><code>ab &lt;- distrib(50,mean=45,sd=28/sqrt(40))
 a &lt;- distrib(40,mean=45,sd=28/sqrt(40))
 distrib(0.25,mean=45,sd=28/sqrt(40),type=&quot;q&quot;)</code></pre>
+<hr />
+</div>
+<div id="banking" class="section level2">
+<h2>Banking</h2>
+<ol>
+<li>About an individual …
+<ol>
+<li>Population.</li>
+<li>Can be answered (population is normal).</li>
+<li>N(550,150).</li>
+<li>0.0478</li>
+</ol></li>
+<li>About an individual …
+<ol>
+<li>Population.</li>
+<li>Can be answered (population is normal).</li>
+<li>N(550,150).</li>
+<li>0.0098</li>
+</ol></li>
+<li>About a mean from n=5 …
+<ol>
+<li>Sampling.</li>
+<li>Can be answered (because population is normal).</li>
+<li>N(550,67.0820)</li>
+<li>0.7720.</li>
+</ol></li>
+<li>About a mean from n=10 …
+<ol>
+<li>Sampling.</li>
+<li>Can be answered (because population is normal).</li>
+<li>N(550,47.4342)</li>
+<li>0.0008.</li>
+</ol></li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(800,mean=550,sd=150,lower.tail=FALSE)
+distrib(200,mean=550,sd=150)
+distrib(600,mean=550,sd=150/sqrt(5))
+ab &lt;- distrib(850,mean=550,sd=150/sqrt(10))
+a &lt;- distrib(700,mean=550,sd=150/sqrt(10))</code></pre>
+<ol>
+<li></li>
+<li>0.0098</li>
+<li>0.6306</li>
+<li>0.1359</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(800,mean=550,sd=150,lower.tail=FALSE)
+distrib(200,mean=550,sd=150)
+distrib(600,mean=550,sd=150)
+ab &lt;- distrib(850,mean=550,sd=150)
+a &lt;- distrib(700,mean=550,sd=150)
+ab-a</code></pre>
 <hr />
 </div>
 

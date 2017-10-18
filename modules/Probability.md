@@ -40,7 +40,7 @@ Use the materials below to answer the questions on [this preparation guide](Prob
 
 ## Practice
 
-* [Class Example] (Probability_CExmpl)
+* [Class Example](Probability_CExmpl)
 * [Review Exercises](Probability_RevEx)
 * Class Exercises: [1](Probability_CE1) (*Time permitting* ... [2](Probability_CE2))
 * [Homework Assignment](Probability_HW)
