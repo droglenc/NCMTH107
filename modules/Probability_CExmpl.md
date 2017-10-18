@@ -7,9 +7,6 @@ css: "/css/modules.css"
 
 ----
 
-
-----
-
 ## Acorn Production
 <img src="zimgs/acorns.jpg" alt="Acorns" class="img-right">
 Suppose that the number of acorns that fall from a mature white oak tree in Bayfield County is srongly right-skewed with a mean 875 and a standard deviation of 220.
