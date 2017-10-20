@@ -9,7 +9,7 @@ css: "/css/modules.css"
 
 ## Acorn Length
 <img src="zimgs/acorns2.jpg" alt="Acorns" class="img-right">
-Suppose that it is known that the distribution of lengths of acorns is slightly right-skewed with a mean of 21 mm and a standard deviation of 6 mm. For each question below identify (a) the distribution that would be used to answer the question, (b) whether the question can be answered or not, (c) specific characteristics of the required distribution, and (d) if appropriate, the answer to the question.
+Suppose that it is known that the distribution of lengths of acorns is slightly right-skewed with a mean of 21 mm and a standard deviation of 6 mm. For each question below identify (a) the distribution that would be used to answer the question, (b) specific characteristics of the required distribution, (c) whether the question can be answered or not, and (d) if appropriate, the answer to the question.
 
 1. What is the probability that an acorn will have a length greater than 25 mm?
 1. What is the probability that the mean length of a sample of 20 acorns will be greater than 25 mm?
@@ -21,7 +21,7 @@ Suppose that it is known that the distribution of lengths of acorns is slightly 
 
 ## Plowing Snow
 <img src="zimgs/snowplow.jpg" alt="Snow plowing" class="img-right">
-Suppose that it is know that the distribution of times spent plowing a single city block on snow days is right-skewed with a mean of 45 seconds and a standard deviation of 28 seconds. For each question below identify (a) the distribution that would be used to answer the question, (b) whether the question can be answered or not, (c) specific characteristics of the required distribution, and (d) if appropriate, the answer to the question.
+Suppose that it is know that the distribution of times spent plowing a single city block on snow days is right-skewed with a mean of 45 seconds and a standard deviation of 28 seconds. For each question below identify (a) the distribution that would be used to answer the question, (b) specific characteristics of the required distribution, (c) whether the question can be answered or not, and (d) if appropriate, the answer to the question.
 
 1. What is the probability that in a sample of 5 blocks that the mean is greater than 60 seconds?
 1. What is the probability that it will take longer than 60 seconds for one block?
@@ -32,7 +32,7 @@ Suppose that it is know that the distribution of times spent plowing a single ci
 
 ## Banking
 <img src="zimgs/associated-bank.jpg" alt="Associated Bank" class="img-right">
-Associated Bank is reviewing its service charges and interest paying policies on checking accounts. The bank has found that the daily balance on personal checking accounts is normally distributed with an average of $550 and a standard deviation of $150. For each question below identify (a) the distribution that would be used to answer the question, (b) whether the question can be answered or not, (c) specific characteristics of the required distribution, and (d) if appropriate, the answer to the question.
+Associated Bank is reviewing its service charges and interest paying policies on checking accounts. The bank has found that the daily balance on personal checking accounts is normally distributed with an average of $550 and a standard deviation of $150. For each question below identify (a) the distribution that would be used to answer the question, (b) specific characteristics of the required distribution, (c) whether the question can be answered or not, and (d) if appropriate, the answer to the question.
 
 1. What is the probability that a personal checking account customer has a daily balance in excess of $800?
 1. What is the probability that a personal checking account customer has a balance of $200 or lower?
