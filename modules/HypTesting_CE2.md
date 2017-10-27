@@ -11,11 +11,11 @@ css: "/css/modules.css"
 
 For each situation below, (i) write a sentence that defines the p-value specific to that situation (i.e., replace the generic terms in the definition of the p-value with specifics for the particular situation), (ii) compute the p-value (include a drawing to support your calculation), and (iii) make a decision about H<sub>0</sub> (i.e., reject or do not reject H<sub>0</sub> and explain why).
 
-1. &alpha;=0.10, H<sub>A</sub>: &mu;>75, n=50, &sigma;=12, x&#772;=79.5.
-1. &alpha;=0.05, H<sub>A</sub>: &mu;&#8800;14, n=25, &sigma;=6, x&#772;=11.2.
-1. &alpha;=0.01, H<sub>A</sub>: &mu;>880, n=80, &sigma;=90, x&#772;=918.
-1. &alpha;=0.10, H<sub>A</sub>: &mu;<15000, n=50, &sigma;=8000, x&#772;=13700.
-1. &alpha;=0.01, H<sub>A</sub>: &mu;&#8800;800, n=25, &sigma;=60, x&#772;=824.
+1. H<sub>A</sub>: &mu;&#8800;14, &sigma;=6, n=25, x&#772;=11.2, &alpha;=0.05.
+1. H<sub>A</sub>: &mu;>75, &sigma;=12, n=50, x&#772;=79.5, &alpha;=0.10.
+1. H<sub>A</sub>: &mu;>880, &sigma;=90, n=80, x&#772;=918, &alpha;=0.01.
+1. H<sub>A</sub>: &mu;<15000, &sigma;=8000, n=50, x&#772;=13700, &alpha;=0.10.
+1. H<sub>A</sub>: &mu;&#8800;800, &sigma;=60, n=25, x&#772;=824, &alpha;=0.01.
 
 ----
 

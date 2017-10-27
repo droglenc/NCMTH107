@@ -30,15 +30,15 @@ css: "/css/modules.css"
 <h2>P-Value Calculations and Decisions</h2>
 <ol>
 <li>
-The p-value is “the probabiity of observing a sample mean of 79.5 or greater if the population mean is 75.” Reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0040&lt;α (Figure 1).
-</li>
-<p><img src="HypTesting_CE_Keys_files/figure-html/P1-1.png" width="336" /></p>
-<p>Figure 1: Normal distribution representing the p-value calculation for the first example.</p>
-<li>
 The p-value is “the probabiity of observing a sample mean of 11.2 or ‘different’ if the population mean is 14.” Reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0196&lt;α (Figure 2).
 </li>
 <p><img src="HypTesting_CE_Keys_files/figure-html/P2-1.png" width="336" /></p>
 <p>Figure 2: Normal distribution representing the p-value calculation for the second example.</p>
+<li>
+The p-value is “the probabiity of observing a sample mean of 79.5 or greater if the population mean is 75.” Reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0040&lt;α (Figure 1).
+</li>
+<p><img src="HypTesting_CE_Keys_files/figure-html/P1-1.png" width="336" /></p>
+<p>Figure 1: Normal distribution representing the p-value calculation for the first example.</p>
 <li>
 The p-value is “the probabiity of observing a sample mean of 918 or greater if the population mean is 880.” Reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0001&lt;α (Figure 3).
 </li>
@@ -56,7 +56,9 @@ The p-value is “the probabiity of observing a sample mean of 824 or ‘differe
 <p>Figure 5: Normal distribution representing the p-value calculation for the fifth example.</p>
 </ol>
 <p>R Appendix.</p>
-<pre class="r"><code>distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE)
+<pre class="r"><code>2*distrib(11.2,mean=14,sd=6/sqrt(25))
+distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE)
+distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE)
 distrib(13700,mean=15000,sd=8000/sqrt(50))
 2*distrib(824,mean=800,sd=60/sqrt(25),lower.tail=FALSE)</code></pre>
 <hr />
@@ -181,7 +183,7 @@ $(document).ready(function () {
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>

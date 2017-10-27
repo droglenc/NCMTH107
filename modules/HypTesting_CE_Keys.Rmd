@@ -50,19 +50,19 @@ figs(name="Pwr2","ACTUAL normal distribution representing power in the power cal
 ## P-Value Calculations and Decisions
 
 <ol>
-<li>The p-value is "the probabiity of observing a sample mean of 79.5 or greater if the population mean is 75." Reject $H_{0}$ because p-value=`r formatC(distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE),format="f",digits=4)`<&alpha; (`r figs("P1",display="cite")`).</li>
-```{r P1, echo=FALSE}
-distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE)
-```
-
-`r figs("P1")`
-
 <li>The p-value is "the probabiity of observing a sample mean of 11.2 or 'different' if the population mean is 14." Reject $H_{0}$ because p-value=`r formatC(2*distrib(11.2,mean=14,sd=6/sqrt(25)),format="f",digits=4)`<&alpha; (`r figs("P2",display="cite")`).</li>
-```{r P2, echo=FALSE, results='hide'}
+```{r p2, echo=FALSE, results='hide'}
 2*distrib(11.2,mean=14,sd=6/sqrt(25))
 ```
 
 `r figs("P2")`
+
+<li>The p-value is "the probabiity of observing a sample mean of 79.5 or greater if the population mean is 75." Reject $H_{0}$ because p-value=`r formatC(distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE),format="f",digits=4)`<&alpha; (`r figs("P1",display="cite")`).</li>
+```{r p1, echo=FALSE}
+distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE)
+```
+
+`r figs("P1")`
 
 <li>The p-value is "the probabiity of observing a sample mean of 918 or greater if the population mean is 880." Reject $H_{0}$ because p-value=`r formatC(distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE),format="f",digits=4)`<&alpha; (`r figs("P3",display="cite")`).</li>
 
@@ -92,8 +92,8 @@ distrib(13700,mean=15000,sd=8000/sqrt(50))
 
 R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
-<<p1>>
 <<p2>>
+<<p1>>
 <<p3>>
 <<p4>>
 <<p5>>
