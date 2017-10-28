@@ -78,7 +78,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/Probability">Probability</a></td>
     <td><a href="../modules/LinearRegression_HW2">Linear Regression HW</a></td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
+
 <tr><td>M 23-Oct</td>
     <td colspan="2"><span style="color:red">NO CLASS (College Reading Day)</span></td></tr>
 <tr><td>W 25-Oct</td>
@@ -86,35 +86,35 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/SamplingDist_HW">Sampling Distributions HW</a><br>
     <a href="../modules/Probability_HW">Probability HW</a></td></tr>
 <tr><td>F 27-Oct</td>
-    <td><a href="../modules/HypTesting">Hypothesis Testing</a></td>
+    <td></td>
     <td></td></tr>
 <tr><td></td><td></td><td></td></tr>
-
+--->
 <tr><td>M 30-Oct</td>
-    <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
+    <td><a href="../modules/HypTesting">Hypothesis Testing</a></td>
     <td></td></tr>
 <tr><td>W 1-Nov</td>
     <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
     <td><a href="../modules/HypTesting_HW">Hypothesis Testing HW</a></td></tr>
 <tr><td>F 3-Nov</td>
-    <td></td>
+    <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
     <td></td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 6-Nov</td>
-    <td></td>
+    <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
     <td></td></tr>
 <tr><td>W 8-Nov</td>
-    <td></td>
-    <td></td></tr>
+    <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
+    <td><a href="../modules/ConfRegions_HW">Confidence Regions HW</a></td></tr>
 <tr><td>F 10-Nov</td>
-    <td></td>
+    <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
     <td></td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 13-Nov</td>
-    <td></td>
-    <td></td></tr>
+    <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
+    <td><a href="../modules/1SampleZ_HW">1-Sample Z-Test HW</a></td></tr>
 <tr><td>W 15-Nov</td>
     <td>--</td>
     <td></td></tr>
@@ -131,21 +131,21 @@ Note that some of the more distant dates are subject to change.
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 27-Nov</td>
-    <td></td>
-    <td></td></tr>
+    <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
+    <td><a href="../modules/1Samplet_HW">1-Sample t-Test HW</a></td></tr>
 <tr><td>W 29-Nov</td>
-    <td></td>
+    <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
     <td></td></tr>
 <tr><td>F 1-Dec</td>
-    <td></td>
+    <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
     <td>Exam 2 Reflection (Optional)</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 4-Dec</td>
-    <td></td>
+    <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
     <td></td></tr>
 <tr><td>W 6-Dec</td>
-    <td></td>
+    <td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td>
     <td></td></tr>
 <tr><td>F 8-Dec</td>
     <td></td>
