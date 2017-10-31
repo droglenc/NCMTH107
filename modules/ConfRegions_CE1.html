@@ -8,13 +8,16 @@ css: "/css/modules.css"
 
 
 <hr />
+<p class="bg-warn">
+Please work in <a href="ConfRegions_CE_Groups.html">these groups</a> on this and the next class exercise.
+</p>
 <div id="understanding-the-concept-of-confidence-intervals" class="section level2">
 <h2>Understanding the Concept of Confidence Intervals</h2>
-<p><img src="http://derekogle.com/NCMTH107/modules/zimgs/computer-1.jpg" alt="Simulations" class="img-right"> The concept of confidence in a confidence interval (CI) is subtle because it depends on thinking about taking all possible samples from a known population distribution, computing the CI for each sample, and then determining if the CI captures the parameter or not. This thought-process is complicated by the fact that the parameter is unknown and taking all possible samples is impossible (not to mention tedious). The <code>ciSim()</code> function (with no arguments) from <code>NCStats</code> provides an efficient method to simulate this process and provide a graphical result of the CIs relative to the parameter from many (but not all possible) samples.</p>
-<p>An example from <code>ciSim()</code> is shown in the plot below. In this plot, the known population mean is depicted by the solid vertical line (μ=100 in this example). Each horizontal line is one realization of a CI (the endpoints of the horizontal line is the CI and the point in the middle is the sample mean). The CIs that do not capture μ are in red. The percentage of CIs that capture μ is shown at the top along with the margin-of-error (m.e.), or half the width of the CI.</p>
+<p><img src="http://derekogle.com/NCMTH107/modules/zimgs/computer-1.jpg" alt="Simulations" class="img-right"> The concept of confidence in a confidence interval (CI) is subtle because it depends on thinking about taking all possible samples from a known population distribution, computing the CI for each sample, and then determining if the CI captures the parameter or not. This thought-process is complicated by the fact that the parameter is unknown and taking all possible samples is impossible. The <code>ciSim()</code> function (with no arguments) can simulate this process and provide a graphical result of the CIs relative to the parameter from many (but not all possible) samples.</p>
+<p>The plot below is an example from <code>ciSim()</code>. The known population mean is depicted by the solid vertical line (μ=100 in this example). Each horizontal line is one CI (the endpoints of the horizontal line is the CI and the point in the middle is the sample mean). The CIs that do not capture μ are in red. The percentage of CIs that capture μ is shown at the top along with the margin-of-error (m.e.), or half the width of the CI.</p>
 <p><img src="ConfRegions_CE1_files/figure-html/unnamed-chunk-3-1.png" width="384" /></p>
-<p>In RStudio, this plot will have a gear icon in the upper-left corner that will open a dialog box that allows you to modify n, the level of confidence, and the type of confidence region (which is based on the type of alternative hypothesis). In addition, a “rerandomize button” is provided to efficiently construct another set of CIs. The plot will update automatically when any of these items is changed.</p>
-<p>The table below can be used to efficiently record your results for different sample sizes and levels of confidence (<em>press “rerandomize” twenty times and mentally average the percentages to form a general conclusion.</em>).</p>
+<p>In RStudio, this plot will have a gear icon in the upper-left corner that will open a dialog box that allows you to modify n, the level of confidence, and the type of confidence region. Pressing the “rerandomize” button will construct another set of CIs. The plot updates automatically when any item is changed.</p>
+<p>The table below can be used to record your results from <code>ciSim()</code> for different sample sizes and levels of confidence (<em>press “rerandomize” twenty times and mentally average the percentages to form a general conclusion.</em>). Then answer the questions below the table.</p>
 <table class="table table-bordered table-condensed">
 <thead>
 <tr>
@@ -126,14 +129,12 @@ m.e.
 </tr>
 </tbody>
 </table>
-<p>Use <code>ciSim()</code> and the table above to answer the following questions.</p>
 <ol>
-<li>Compute the margin-of-error “by hand” for the 99% confidence and n=10 situation to determine if that computed by <code>ciSim()</code> is correct. Note that <code>ciSim()</code> assumes that σ=10.</li>
 <li>How did the percentage of CIs that captured μ change with increasing n.</li>
 <li>How did the percentage of CIs that captured μ change with increasing level of confidence.</li>
 <li>How did the margin-of-error change with increasing n.</li>
 <li>How did the margin-of-error change with increasing level of confidence.</li>
-<li>What two things can you, as a statistician, do to make a confidence interval narrower? Are there any negative consequences to these decisions?</li>
+<li>What two things can you, as a statistician, do to make a confidence interval narrower? Are there any negative consequences to either of decision?</li>
 </ol>
 <hr />
 <div class="text-center">
@@ -179,7 +180,7 @@ $(document).ready(function () {
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>
