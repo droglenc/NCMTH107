@@ -106,22 +106,6 @@ zstar <- distrib(0.9,type="q")
 <li>`r formatC(13700+zstar*8000/sqrt(50),format="f",digits=1)`.</li>
 <li>I am 90% confident that the true population mean is less than `r formatC(13700+zstar*8000/sqrt(50),format="f",digits=1)`.</li>
 </ol>
-<br>
-
-<li>See below.</li>
-<ol type="a">
-<li>C=0.99</li>
-<li>Interval</li>
-<li>Z*= $\pm$ `r formatC(distrib(0.005,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z5",display="cite")`).</li>
-```{r Z5, echo=FALSE}
-zstar <- distrib(0.005,type="q",lower.tail=FALSE)
-```
-
-`r figs("Z5")`
-
-<li>`r formatC(824-zstar*60/sqrt(25),format="f",digits=1)`-`r formatC(824+zstar*60/sqrt(25),format="f",digits=1)`.</li>
-<li>I am 99% confident that the true population mean is between `r formatC(824-zstar*60/sqrt(25),format="f",digits=1)` and `r formatC(824+zstar*60/sqrt(25),format="f",digits=1)`.</li>
-</ol>
 </ol>
 
 R Appendix
@@ -130,7 +114,6 @@ R Appendix
 <<Z2>>
 <<Z3>>
 <<Z4>>
-<<Z5>>
 ```
 
 ----
@@ -150,22 +133,6 @@ R Appendix.
 d <- read.csv("normtemp.csv")
 Summarize(d$bodytemp,digits=3)
 ( zstar <- distrib(0.025,type="q",lower.tail=FALSE) )
-```
-
-----
-
-## Radius of Jupiter
-<ol>
-```{r echo=FALSE,fig.show='hide'}
-cis <- 71492+c(-1,1)*distrib(0.005,type="q",lower.tail=FALSE)*28/sqrt(40)
-```
-<li>`r formatC(cis[1],format="f",digits=1)`-`r formatC(cis[2],format="f",digits=1)`.</li>
-<li>I am 99% confident that the true population mean equatorial radius of Jupiter is between `r formatC(cis[1],format="f",digits=0)` and `r formatC(cis[2],format="f",digits=0)` km.</li>
-</ol>
-
-R Appendix.
-```{r eval=FALSE,prompt=FALSE}
-distrib(0.005,type="q",lower.tail=FALSE)
 ```
 
 ----
@@ -200,6 +167,48 @@ R Appendix.
 <<ncalc1>>
 <<ncalc2>>
 <<ncalc3>>
+```
+
+----
+
+## Confidence Region Calculations II
+
+<ol>
+<li>See below.</li>
+<ol type="a">
+<li>C=0.99</li>
+<li>Interval</li>
+<li>Z*= $\pm$ `r formatC(distrib(0.005,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z5",display="cite")`).</li>
+```{r Z5, echo=FALSE}
+zstar <- distrib(0.005,type="q",lower.tail=FALSE)
+```
+
+`r figs("Z5")`
+
+<li>`r formatC(824-zstar*60/sqrt(25),format="f",digits=1)`-`r formatC(824+zstar*60/sqrt(25),format="f",digits=1)`.</li>
+<li>I am 99% confident that the true population mean is between `r formatC(824-zstar*60/sqrt(25),format="f",digits=1)` and `r formatC(824+zstar*60/sqrt(25),format="f",digits=1)`.</li>
+</ol>
+</ol>
+
+R Appendix
+```{r eval=FALSE,prompt=FALSE}
+<<Z5>>
+```
+
+----
+
+## Radius of Jupiter
+<ol>
+```{r echo=FALSE,fig.show='hide'}
+cis <- 71492+c(-1,1)*distrib(0.005,type="q",lower.tail=FALSE)*28/sqrt(40)
+```
+<li>`r formatC(cis[1],format="f",digits=1)`-`r formatC(cis[2],format="f",digits=1)`.</li>
+<li>I am 99% confident that the true population mean equatorial radius of Jupiter is between `r formatC(cis[1],format="f",digits=0)` and `r formatC(cis[2],format="f",digits=0)` km.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE,prompt=FALSE}
+distrib(0.005,type="q",lower.tail=FALSE)
 ```
 
 ----

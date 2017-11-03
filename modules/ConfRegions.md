@@ -45,7 +45,7 @@ Use the materials below to answer the questions on [this preparation guide](Conf
 ## Practice
 
 * [Review Exercises](ConfRegions_RevEx)
-* Class Exercises: [1](ConfRegions_CE1) / [2](ConfRegions_CE2) / [3](ConfRegions_CE3) / [4](ConfRegions_CE4).
+* Class Exercises: [1](ConfRegions_CE1) / [2](ConfRegions_CE2) / [3](ConfRegions_CE3) / [4](ConfRegions_CE4) (*time permitting* ... [5](ConfRegions_CE5)).
 * [Homework Assignment](ConfRegions_HW)
 
 ----

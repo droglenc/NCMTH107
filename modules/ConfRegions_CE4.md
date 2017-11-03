@@ -18,23 +18,14 @@ Suppose that you are starting a business and it is important for your business p
 
 ----
 
-## Blood Pressure in Children
-<img src="zimgs/bloodpressure2.jpg" alt="Blood Pressure" class="img-right">
-
-An investigator wants to estimate the mean systolic blood pressure in children with congenital heart disease who are between the ages of 3 and 5.  The investigator plans on using a 99% confidence interval and desires a margin of error of 5 units.  The standard deviation of systolic blood pressure is unknown, but the investigator conducted a literature review and found that the standard deviation of systolic blood pressures in children with other cardiac defects is between 15 and 20.[^2]
-
-1. Use this information to construct a "worst-case scenario" required sample size.
-1. How would the required sample size change for the "best-case scenario".
-
-----
-
 <div class="text-center">
 <ul class="pagination pagination-lg">
   <li><a href="index.html">^</a></li>
-  <li><a href="CE1.html">1</a></li>
-  <li><a href="CE2.html">2</a></li>
-  <li><a href="CE3.html">3</a></li>
+  <li><a href="ConfRegions_CE1.html">1</a></li>
+  <li><a href="ConfRegions_CE2.html">2</a></li>
+  <li><a href="ConfRegions_CE3.html">3</a></li>
   <li class="active"><a href="#">4</a></li>
+  <li><a href="ConfRegions_CE5.html">5</a></li>
 </ul>
 </div>
 

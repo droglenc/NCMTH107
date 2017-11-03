@@ -13,12 +13,6 @@ css: "/css/modules.css"
 
 ----
 
-## Radius of Jupiter
-<img src="zimgs/jupiter.jpg" alt="Jupiter" class="img-right">
-Researchers measured the equatorial radius of [Jupiter](https://en.wikipedia.org/wiki/Jupiter) 40 different times.  The method used is largely without bias but there is measurement-to-measurement variability.  In fact, &sigma; is assumed to be 28 km.  The mean of the 40 measurements was 71492 km.  From this, (i) construct an appropriate confidence **interval** assuming that &alpha;=0.01 and (ii) specifically interpret your findings.[^2]
-
-----
-
 <div class="text-center">
 <ul class="pagination pagination-lg">
   <li><a href="ConfRegions.html">^</a></li>
@@ -26,6 +20,7 @@ Researchers measured the equatorial radius of [Jupiter](https://en.wikipedia.org
   <li><a href="ConfRegions_CE2.html">2</a></li>
   <li class="active"><a href="#">3</a></li>
   <li><a href="ConfRegions_CE4.html">4</a></li>
+  <li><a href="ConfRegions_CE5.html">5</a></li>
 </ul>
 </div>
 
