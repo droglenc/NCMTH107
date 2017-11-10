@@ -100,7 +100,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
     <td></td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
+
 <tr><td>M 6-Nov</td>
     <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
     <td></td></tr>
@@ -111,7 +111,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
     <td></td></tr>
 <tr><td></td><td></td><td></td></tr>
-
+--->
 <tr><td>M 13-Nov</td>
     <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
     <td><a href="../modules/1SampleZ_HW">1-Sample Z-Test HW</a></td></tr>
