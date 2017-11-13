@@ -104,7 +104,7 @@ ucb <- 858+tstar*92/sqrt(80)
 ```{r echo=FALSE}
 distrib(0.99,df=79,type="q",distrib="t")
 ```
-<li>`r formatC(lcb,format="f",digits=1)`.</li>
+<li>`r formatC(ucb,format="f",digits=1)`.</li>
 <li>I am 99% confident that the true population mean is less than `r formatC(ucb,format="f",digits=1)`.</li>
 </ol>
 
