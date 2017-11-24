@@ -5,7 +5,7 @@ css: /css/syllabus.css
 ---
 
 <div class="alert alert-info">
-For each class period (date), the module to prepare for is shown under "Quiz Preparation." Any items that should be turned in on that date are under "Items Due." All of these dates will be announced in class.
+For each class period ("Date"), the module to prepare for is shown under "Quiz Preparation." Any items that should be turned in on that date are under "Items Due." All of these dates will be announced in class.
 </div>
 
 <div class="alert alert-warning">
@@ -111,7 +111,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
     <td></td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
+
 <tr><td>M 13-Nov</td>
     <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
     <td><a href="../modules/1SampleZ_HW">1-Sample Z-Test HW</a></td></tr>
@@ -129,7 +129,7 @@ Note that some of the more distant dates are subject to change.
 <tr><td>F 24-Nov</td>
     <td colspan="2"><span style="color:red">NO CLASS (Thanksgiving)</span></td></tr>
 <tr><td></td><td></td><td></td></tr>
-
+--->
 <tr><td>M 27-Nov</td>
     <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
     <td><a href="../modules/1Samplet_HW">1-Sample t-Test HW</a></td></tr>
