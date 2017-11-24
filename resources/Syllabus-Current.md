@@ -104,7 +104,7 @@ Letter grades will be assigned by comparing your overall percentage (rounded to 
 
 
 ### Quizzes
-A short quiz will be given in the **FIRST 5-10 minutes of EVERY** class period. The intent of the quizzes is to encourage you to complete the preparation required for that day's class. The quizzes are "open notes" (but **not** "open book" or "open computer") and will largely follow a module's preparation guide ([here's an example](../modules/FoundationalDefns_Prep.html){:target="_blank"}). I will tell you at the end of each class period about which module will form the next class period's quiz. **Missed quizzes cannot be made up and quizzes taken from outside of the classroom will not be accepted.**
+A short quiz will be given in the **FIRST 8 minutes of EVERY** class period. The intent of the quizzes is to encourage you to complete the preparation required for that day's class. The quizzes are "open notes" (but **not** "open book" or "open computer") and will largely follow a module's preparation guide ([here's an example](../modules/FoundationalDefns_Prep.html){:target="_blank"}). I will tell you at the end of each class period about which module will form the next class period's quiz. **Missed quizzes or quizzes not completed in the first 8 minutes of class cannot be made up. Quizzes taken from outside of the classroom will not be accepted.**
 
 
 ### Homework
