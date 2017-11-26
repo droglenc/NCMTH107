@@ -27,12 +27,13 @@ source("../rhelpers/knitr_setup.R")
 <img src="http://derekogle.com/NCMTH107/modules/zimgs/tagetes.jpg" alt="Tagetes" class="img-right">
 The owner of a greenhouse developed a methodology to produce sterilized compost for growing plants that was cheaper than the compost she could buy from her soil supplier and allowed her to reduce waste production.  However, these benefits could be offset by losses related to poor plant germination and growth.  Thus, the owner attempted to answer the queston about germination success by planting 50 seeds of [marigolds (*Tagetes* spp.)](https://en.wikipedia.org/wiki/Tagetes) into individual containers that were filled with either the home-made sterilized compost or compost purchased from the soil supplier.  The containers were randomly placed into a large greenhouse where environmental conditions were controlled (i.e., all containers received the same environmental conditions).  After five days, the number of (the 50) seeds in each container that had germinated was recorded.  The results are shown below.
 
-```{r echo=FALSE, fig.width=6, fig.height=3.5, par1=TRUE}
+```{r echo=FALSE, fig.width=6, fig.height=3.5}
 tmp <- data.frame(compost=factor(rep(c("bought","homemade"),c(18,10))),
                   germination=c(36,43,44,39,44,50,39,44,46,39,42,50,42,46,
                                 39,38,49,38,28,31,25,28,28,27,32,24,33,33))
 Summarize(germination~compost,data=tmp,digits=2)
 levenesTest(germination~compost,data=tmp)
+par(mar=c(3.05,3.05,1.3,0.65),mgp=c(1.9,0.3,0),tcl=-0.2,las=1,cex.lab=0.95,cex.axis=0.9)
 hist(germination~compost,data=tmp,xlab="Number Germinated")
 ```
 
