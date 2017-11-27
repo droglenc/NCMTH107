@@ -184,11 +184,12 @@ Under [Northland College policy](https://my.northland.edu/student-policies/acade
 Your conduct in class should revolve around the idea of being respectful of all others in the class. Adhering to the following behaviors should be considered the minimum requirements to being respectful of others:
 
 * Arrive to class on time. If you arrive late, then take the first available seat as quietly as possible. If you need to leave early, then please sit near the exit.
-* You are expected to attend the entire class period. Leaving class early defeats the purpose of the class period, does not take advantage of resources (i.e., the professor) that can significantly help your learning, and does not build statistical stamina.
-* Turn off and store out-of-sight cell phones and other electronic devices
+* You are expected to attend the entire class period. Leaving class early defeats the purpose of the class period, does not take advantage of resources (i.e., the professor) that can significantly help your learning, and does not build statistical stamina. Please take care of your personal needs (e.g., using the restroom) before class so that you can stay focused for the entire class period.
 * Turn your computer on immediately so that you can promptly begin the daily quiz.
 * Computer use is limited to class work.
-* If you choose to use your own computer, then please sit as far forward in class as possible.
+* You **may note use your own computer** unless you clear it with me first at the beginning of the semester.
+* Turn off and store out-of-sight cell phones and other electronic devices.
+* You **may not listen to music** (or otherwise wear ear buds) during class.
 * Do not engage in side discussions while I or others are speaking to the entire class.
 *	Do not sleep in class -- this behavior is rude and distracting to others (especially the professor).
 * Unpack before and pack after class -- opening and closing  backpacks, rustling of papers or jackets is disruptive and disrespectful to others.
