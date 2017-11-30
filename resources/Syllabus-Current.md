@@ -134,7 +134,7 @@ This course is taught using active learning, peer-instruction, and inquiry-based
     <tr class="info"><th>0 points</th><th>1 point</th><th>2 points</th></tr>
   </thead>
   <tbody>
-    <tr><td>Very little active participation in the day's activities.</td><td>Participated in many, but not all, of the day's activities</td><td>Fully participated in the day's activities.</td></tr>
+    <tr><td>Very little active participation in the day's activities. Left more than 30 mins early.</td><td>Participated in many, but not all, of the day's activities. Left between 1-30 mins early.</td><td>Fully (see below) participated in the day's activities.</td></tr>
   </tbody>
   </table>
 </div>
