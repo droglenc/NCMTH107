@@ -167,14 +167,14 @@ Three options for extra credit are:
 
 1. **Exam Reflection** -- For each midterm exam, **first** complete a correction for each question that you missed, along with *an explanation of why the answer you originally provided was not correct and why your corrected answer is correct.* You will not receive credit for simply correcting your answer, for providing another incorrect answer, or not providing the explanation. You must address every question you missed to receive full credit for this portion. Second, write *thoughtful* reflections to the following items about the exam
 
-    1. What did you do well on the exam (and why),
-    1. What did you do poorly on the exam (and why),
-    1. What did you do to prepare for the exam (be specific ... did you read your notes, read the module readings, watch videos, redo homework problems, redo class exercises, do review exercies, etc.),
-    1. What did you do to prepare for the exam that was helpful,
-    1. What did you do to prepare for the exam that was not helpful,
-    1. How will you change (if at all) your preparation strategy for the next exam,
-    1. Was the exam as you expected (why or why not), and
-    1. Any other comments or suggestions about the exam.
+    * What did you do well on the exam (and why),
+    * What did you do poorly on the exam (and why),
+    * What did you do to prepare for the exam (be specific ... did you read your notes, read the module readings, watch videos, redo homework problems, redo class exercises, do review exercies, etc.),
+    * What did you do to prepare for the exam that was helpful,
+    * What did you do to prepare for the exam that was not helpful,
+    * How will you change (if at all) your preparation strategy for the next exam,
+    * Was the exam as you expected (why or why not), and
+    * Any other comments or suggestions about the exam.
 
 Your answers to these two portions must be typed (though you can leave space to show your work by hand for calculations) and easy to read (e.g., neatly organize your corrections by question number) and *must include the original exam*. **Third**, use [this online form](https://goo.gl/forms/ifkr3HkO3zjvoaHi1){:target="_blank"} to further reflect on how you prepared for the exam (and, generally, your study habits prior to the exam). Please provide thoughtful explanations to each question on this form.<br/><br/>A perfect exam correction and reflection will add the lesser of 15% or the amount it would take for your exam score to be 100%, with three-quarters of the overall grade from the correction (first) portion. Corrections and reflections will be due within one week after the corrected exam is returned (exact date shown on the [dates](Dates-Current) page). **Late corrections and reflections will not be accepted**.
 
