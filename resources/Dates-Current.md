@@ -129,7 +129,7 @@ Note that some of the more distant dates are subject to change.
 <tr><td>F 24-Nov</td>
     <td colspan="2"><span style="color:red">NO CLASS (Thanksgiving)</span></td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
+
 <tr><td>M 27-Nov</td>
     <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
     <td><a href="../modules/1Samplet_HW">1-Sample t-Test HW</a></td></tr>
@@ -140,23 +140,23 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
     <td>Exam 2 Reflection (Optional)</td></tr>
 <tr><td></td><td></td><td></td></tr>
-
+--->
 <tr><td>M 4-Dec</td>
     <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
     <td><a href="../modules/2Samplet_HW">2-Sample t-Test HW</a></td></tr>
 <tr><td>W 6-Dec</td>
-    <td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td>
-    <td></td></tr>
+    <td>Final Exam Work</td>
+    <td>--</td></tr>
 <tr><td>F 8-Dec</td>
-    <td>--</td>
-    <td><a href="../modules/ChiSquare_HW">Chi-Square HW</a></td></tr>
+    <td>Final Exam Work</td>
+    <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 11-Dec</td>
-    <td>--</td>
+    <td>Final Exam Work</td>
     <td>XC Reports (optional)</td></tr>
 <tr><td>W 13-Dec</td>
-    <td>--</td>
+    <td>Final Exam Work</td>
     <td></td></tr>
 <tr><td>F 15-Dec</td>
     <td colspan="2"><span style="color:red">Final Exam</span></td></tr>
