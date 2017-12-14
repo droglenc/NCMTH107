@@ -41,7 +41,7 @@ tabs("CyprinidPerc","The percentage of Asian cyprinids by waterbody.")
 
 1. $\alpha$ = 0.05.
 1. The $H_{0}$: "The proportion of fish from the Cyprinidae family is the same for all three rivers" versus $H_{A}$: "The proportion of fish from the Cyprinidae family is NOT the same for all three rivers."
-1. A chi-square test is required because (i)a categorical variable with two levels (cyprinidae and other) was measured on (ii) three populations (rivers) (iii) (iii) and the distribution of responses is being compared among populations in the null hypothesis.
+1. A chi-square test is required because (i)a categorical variable with two levels (cyprinidae and other) was measured on (ii) three groups/populations (rivers) (iii) (iii) and the distribution of responses is being compared among groups/populations in the null hypothesis.
 1. The data appear to be part of an observational study. There is no indication that the fish were randomly selected (they likely were not, though hopefully the locations for collecting the fish were).
 1. The expected frequencies are in (`r tabs("CyprinidExp",display="cite")`). The test statistic below should follow a $\chi^{2}$ distribution because the expected number in each cell is greater than five.
 1. The appropriate statistic is the observed frequency table in (`r tabs("CyprinidObs",display="cite")`).
@@ -92,7 +92,7 @@ tabs("NursePerc","The percentage of  high emotional exhaustion (HEE) among nurse
 
 1. $\alpha$ = 0.05.
 1. The $H_{0}$: "The proportion of nurses with HEE is the same amoung the four types of hospitals" verus $H_{A}$: "The proportion of nurses with HEE is NOT the same amoung the four types of hospitals".
-1. A chi-square test is required because (i)a categorical variable with two levels (HEE and not HEE) was measured on (ii) four populations (iii) and the distribution of responses is being compared among populations in the null hypothesis.
+1. A chi-square test is required because (i)a categorical variable with two levels (HEE and not HEE) was measured on (ii) four groups/populations (iii) and the distribution of responses is being compared among groups/populations in the null hypothesis.
 1. The data appear to be part of an observational study. There is no indication that the individuals were randomly selected.
 1. The expected frequencies are in `r tabs("NurseExp",display="cite")`. The test statistic below should follow a $\chi^{2}$ distribution because the expected number in each cell is greater than five.
 1. The statistic is the observed frequency table in `r tabs("NurseObs",display="cite")`.
@@ -143,7 +143,7 @@ tabs("MIPerc","The percentage of men and women that died in the hospital followi
 
 1. $\alpha$ = 0.05.
 1. The $H_{0}$: "The proportion of patients that died in the hospital is the same for men and women" versus $H_{A}$: "The proportion of patients that died in the hospital is NOT the same for men and women"
-1. A chi-square test is required because (i)a categorical variable with two levels (died and survived) was measured on (ii) two populations (men and women) (iii) and the distribution of responses is being compared among populations in the null hypothesis.
+1. A chi-square test is required because (i)a categorical variable with two levels (died and survived) was measured on (ii) two groups/populations (men and women) (iii) and the distribution of responses is being compared among groups/populations in the null hypothesis.
 1. An observation study that is very likely not a simple random sample was used.
 1. The expected number of individuals in each cell is in `r tabs("MIExp",display="cite")`. The test statistic below should follow a $\chi^{2}$ distribution because expected number in each cell is greater than five.
 1. The table of observed values is in `r tabs("MIObs",display="cite")`
@@ -195,7 +195,7 @@ tabs("UniformPerc","The percentage of parents and students that favor and don't 
 
 1. $\alpha$ = 0.05.
 1. The $H_{0}$: "The proportion that favor uniforms is the same for parents and students" versus $H_{A}$: "The proportion that favor uniforms is NOT the same for parents and students."
-1. A chi-square test is required because (i)a categorical variable with two levels (favor or don't favor uniforms) was measured on (ii) two populations (students and parents) for comparison in the null hypothesis.
+1. A chi-square test is required because (i)a categorical variable with two levels (favor or don't favor uniforms) was measured on (ii) two groups/populations (students and parents) for comparison in the null hypothesis.
 1. An observation study that is obviously not a simple random sample (it is a convenience sample of both groups).
 1. The test statistic below should follow a $\chi^{2}$ distribution because the expected number in each cell of `r tabs("UniformExp",display="cite")` is greater than five.
 1. The table of observed values is in `r tabs("UniformObs",display="cite")`.
@@ -246,7 +246,7 @@ tabs("ArthritisPerc","The percentage of patients on three different drugs (A, B,
 
 1. $\alpha$ = 0.10.
 1. The $H_{0}$: "The proportion of patients that thought the medication was effective was the same among the three medications" versus $H_{A}$: "The proportion of patients that thought the medication was effective was NOT the same among the three medications."
-1. A chi-square test is needed because (i)a categorical variable with two levels (effective or not) was measured on (ii) three populations (medications) for comparison in the null hypothesis.
+1. A chi-square test is needed because (i)a categorical variable with two levels (effective or not) was measured on (ii) three groups/populations (medications) for comparison in the null hypothesis.
 1. The data appear to be part of an experimental study. The patients were likely not randomly selected but they were likely randomly allocated to the treatments.
 1. The test statistic below should follow a $\chi^{2}$ distribution because the expected number in each cell is greater than five (`r tabs("ArthritisExp",display="cite")`).
 1. The table of observed frequencies is in `r tabs("ArthritisObs",display="cite")`.
@@ -297,7 +297,7 @@ tabs("TEDSPerc","The percentage of trawl tows with at least one turtle mortality
 
 1. $\alpha$ = 0.10.
 1. The $H_{0}$: "The proportion of tows with at least one turtle mortality is the same between the two sizes of openings" versus $H_{A}$: "The proportion of tows with at least one turtle mortality is NOT the same between the two sizes of openings."
-1. A chi-square test is required because (i)a categorical variable with two levels (at least one turtle mortality or not) was measured on (ii) two populations (TED openings) for comparison in the null hypothesis.
+1. A chi-square test is required because (i)a categorical variable with two levels (at least one turtle mortality or not) was measured on (ii) two groups/populations (TED openings) for comparison in the null hypothesis.
 1. An observation study that is not obviously a random sample was used.
 1. The test statistic below should follow a $\chi^{2}$ distribution because the expected number in each cell is greater than five (`r tabs("TEDSExp",display="cite")`)
 1. The table of observed frequencies are in `r tabs("TEDSObs",display="cite")`.
@@ -399,7 +399,7 @@ tabs("HelloPerc","The percentage of people that responded to 'Hello' by group si
 
 1. $\alpha$ = 0.10.
 1. The $H_{0}$: "The proportion of groups that responded to the 'Hello' is the same for all three group sizes" versus $H_{0}$: "The proportion of groups that responded to the 'Hello' is NOT the same for all three group sizes."
-1. A chi-square test is required because (i)a categorical variable with two levels (response or not) was measured on (ii) three populations (group sizes) (iii) and the distribution of responses is being compared among populations in the null hypothesis.
+1. A chi-square test is required because (i)a categorical variable with two levels (response or not) was measured on (ii) three groups/populations (group sizes) (iii) and the distribution of responses is being compared among groups/populations in the null hypothesis.
 1. The data appear to be part of an observational study where the ``groups" were not randomly selected.
 1. The test statistic below should follow a $\chi^{2}$ distribution because the expected number in each cell is greater than five (`r tabs("HelloExp",display="cite")`).
 1. The observed frequency table is in `r tabs("HelloObs",display="cite")`.
@@ -452,7 +452,7 @@ tabs("WoodpPerc","The percentage of cavity holes damaged by trees with and witho
 
 1. $\alpha$ = 0.05.
 1. The $H_{0}$: "The proportion of cavity holes that were damaged does not differ between those holes with and without the restrictor plate" versus $H_{A}$: "The proportion of cavity holes that were damaged does differ between those holes with and without the restrictor plate."
-1. A chi-square test is required because (i)a categorical variable with two levels (damaged or not) was measured on (ii) two populations (fit with restrictor or not) for comparison in the null hypothesis.
+1. A chi-square test is required because (i)a categorical variable with two levels (damaged or not) was measured on (ii) two groups/populations (fit with restrictor or not) for comparison in the null hypothesis.
 1. An observation study (damage was observed) that is not obviously a simple random sample.
 1. The test statistic below should follow a $\chi^{2}$ distribution because the expected number in each cell is greater than five (`r tabs("WoodpExp",display="cite")`).
 1. The table of observed values is in `r tabs("WoodpObs",display="cite")`.
@@ -506,7 +506,7 @@ tabs("CervidsPerc","The percentage of infected animals by species.")
 
 1. $\alpha=0.01$.
 1. $H_{O}$: "The proportion of animals that are infected is the same for whitetail deer, mule deer, and elk" versus $H_{A}$: "The proportion of animals that are infected is NOT the same for whitetail deer, mule deer, and elk."
-1. A chi-square test is required because (i)a categorical variable with two levels (diseased or not) was measured on (ii) three populations (species) for comparison in the null hypothesis.
+1. A chi-square test is required because (i)a categorical variable with two levels (diseased or not) was measured on (ii) three groups/populations (species) for comparison in the null hypothesis.
 1. An observation study that is likely not a simple random sample.
 1. The test statistic below should follow a $\chi^{2}$ distribution because the expected number in each cell is greater than five (`r tabs("CervidsExp",display="cite")`).
 1. The table of observed values is in `r tabs("CervidsObs",display="cite")`.
@@ -559,8 +559,8 @@ tabs("ExercisePerc","The percentage of reasons to not exercise by men and women.
 
 1. $\alpha$ = 0.01.
 1. The $H_{0}$: "The distribution of individuals into reasons for not exercising is the same for men and women" versus $H_{A}$: "The distribution of individuals into reasons for not exercising is NOT the same for men and women."
-1. A chi-square test is required because (i)a categorical variable with six levels (reasons) was measured on (ii) two populations (men and women) for comparison in the null hypothesis.
-1. The data appear to be part of an observational study where the individuals in both populations were randomly selected.
+1. A chi-square test is required because (i)a categorical variable with six levels (reasons) was measured on (ii) two groups/populations (men and women) for comparison in the null hypothesis.
+1. The data appear to be part of an observational study where the individuals in both groups/populations were randomly selected.
 1. The test statistic below should follow a $\chi^{2}$ distribution because the expected number in each cell is greater than five (`r tabs("ExerciseExp",display="cite")`).
 1. The table of observed values is in `r tabs("ExerciseObs",display="cite")`.
 1. The $\chi^{2}$ test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
@@ -612,7 +612,7 @@ tabs("ZooPerc","The percentage of animals by type within four zoos.")
 
 1. $\alpha$ = 0.05.
 1. The $H_{0}$: "The proportion of animals in the broad animal types is the same for each zoo" versus $H_{A}$: "The proportion of animals in the broad animal types is NOT the same for each zoo."
-1. A chi-square test is required because categorical variable with three levels (broad animal type) was measured on (ii) four populations (zoos) for comparison in the null hypothesis.
+1. A chi-square test is required because categorical variable with three levels (broad animal type) was measured on (ii) four groups/populations (zoos) for comparison in the null hypothesis.
 1. An observational study that is not a simple random sample.
 1. The test statistic below should follow a $\chi^{2}$ distribution because the expected number in each cell is greater than five (`r tabs("ZooExp",display="cite")`).
 1. The table of observed values is in `r tabs("ZooObs",display="cite")`.

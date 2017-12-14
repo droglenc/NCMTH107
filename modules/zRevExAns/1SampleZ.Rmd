@@ -29,7 +29,7 @@ tabs <- captioner(prefix="Table")
 
 1. $\alpha$ = 0.05.
 1. $H_{O}:\mu$ = 4, $H_{A}:\mu<$ 4 where $\mu$ is the mean growth of all cacti.
-1. A one-sample Z-test is required because (i) a quantitative variable (growth) was measured, (ii) individuals from only one population were sampled (only one set of conditions considered), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) $\sigma$ is known (given in the background).
+1. A one-sample Z-test is required because (i) a quantitative variable (growth) was measured, (ii) individuals from only one group/population were sampled (only one set of conditions considered), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) $\sigma$ is known (given in the background).
 1. The data are part of an experiment in which cacti were randomly selected.
 1. $\sigma$ is known. In addition, because the population distribution is normal (stated in the background), we do not have to worry about the size of the sample.
 1. $\bar{x}$ = 3.26.
@@ -51,15 +51,15 @@ tabs <- captioner(prefix="Table")
 
 1. $\alpha$ = 0.05. (*Note that this is obtained from workin backwards from the 95% confidence statement.*)
 1. $H_{O}:\mu$ = 600, $H_{A}:\mu\neq$ 600 where $\mu$ is the mean length of all pike in Chivyrkui Bay, Lake Baikal.
-1. A one-sample Z-test is required because a (i) quantitative variable (length) was measured, (ii) individuals from only one population were sampled (Chivyrkui Bay, Lake Baikal), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) $\sigma$ is known (given in the background).
-1. Observational study with n = 30 pike.  No obvious randomization.
+1. A one-sample Z-test is required because a (i) quantitative variable (length) was measured, (ii) individuals from only one group/population were sampled (Chivyrkui Bay, Lake Baikal), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) $\sigma$ is known (given in the background).
+1. Observational study with n = 30 pike. No obvious randomization.
 1. n = 30 $\geq$ 15 and the population is not strongly skewed (background says "slightly"" right-skewed); $\sigma$ is known.
 1. $\bar{x}$ = 656.1.
 1. Z = $\frac{656.1-600}{\frac{130}{\sqrt{30}}}$ = 2.363.
 1. The p-value is `r kPvalue(2*distrib(656.1,mean=600,sd=130/sqrt(30),lower.tail=FALSE,plot=FALSE),include.p=FALSE)`.
 1. Reject $H_{O}$ because the p-value$<\alpha$.
 1. The true mean length of all pike in Lake Baikal appears to be different than 600 mm.
-1. A 95% confidence interval is warranted in this situation and will use a $Z^{*}$ = $\pm$ `r formatC(distrib(0.05/2,type="q",lower.tail=FALSE,plot=FALSE),format="f",digits=3)`. Thus, 656.1 $\pm$ 1.96*23.74, 656.1 $\pm$ 46.53, or (609.57, 702.63).  Therefore, one is 95% confident that true mean length of all pike in Lake Baikal is between 609.6 and 702.6 mm.
+1. A 95% confidence interval is warranted in this situation and will use a $Z^{*}$ = $\pm$ `r formatC(distrib(0.05/2,type="q",lower.tail=FALSE,plot=FALSE),format="f",digits=3)`. Thus, 656.1 $\pm$ 1.96*23.74, 656.1 $\pm$ 46.53, or (609.57, 702.63). Therefore, one is 95% confident that true mean length of all pike in Lake Baikal is between 609.6 and 702.6 mm.
 
 ### R Appendix
 ```{r eval=FALSE}
@@ -80,7 +80,7 @@ tabs(name="Pain","Results of 1-Sample Z-Test for duration of pain for patients w
 
 1. $\alpha$ = 0.10.
 1. $H_{O}:\mu$ = 2.5, $H_{A}:\mu>$ 2.5 where $\mu$ is the mean length of pain.
-1. A one-sample Z-test is required because (i) a quantitative variable (length of pain) was measured, (ii) individuals from only one population were sampled (patients with this syndrome), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) $\sigma$ is known (given in the background).
+1. A one-sample Z-test is required because (i) a quantitative variable (length of pain) was measured, (ii) individuals from only one group/population were sampled (patients with this syndrome), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) $\sigma$ is known (given in the background).
 1. An observational study that is not obviously random was used.
 1. The population is normally distributed (given in the background) and $\sigma$ is known (= 0.5). Thus, the test statistic below should follow a normal distribution.
 1. $\bar{x}$ = `r formatC(pain.z$estimate,format="f",digits=2)` years (`r tabs("Pain",display="cite")`).
@@ -115,7 +115,7 @@ tabs(name="Cholest","Results of 1-Sample Z-Test for cholesterol level of Asian W
 
 1. $\alpha$ = 0.10.
 1. $H_{O}:\mu$ = 190, $H_{A}:\mu\neq$ 190 where $\mu$ is the mean cholesterol level of Asian women.
-1. A one-sample Z-test is required because (i) a quantitative variable (cholesterol level) was measured, (ii) individuals from only one population were sampled (Asian women aged 21-40 that had recently immigrated to the U.S.), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) $\sigma$ is known (given in the background).
+1. A one-sample Z-test is required because (i) a quantitative variable (cholesterol level) was measured, (ii) individuals from only one group/population were sampled (Asian women aged 21-40 that had recently immigrated to the U.S.), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) $\sigma$ is known (given in the background).
 1. An observational study with randomly selected women was used.
 1. n = `r nrow(df)` $\geq$ 30 and $\sigma$ is known.
 1. $\bar{x}$ = `r formatC(ch.z$estimate,format="f",digits=2)` mg/dl (`r tabs("Cholest",display="cite")`).
