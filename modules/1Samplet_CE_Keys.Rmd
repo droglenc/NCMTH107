@@ -142,7 +142,7 @@ ci <- xbar+c(-1,1)*tstar*se
 <ol>
 <li>&alpha;=0.05.</li>
 <li>H<sub>A</sub>: &mu;&ne;178 and H<sub>0</sub>: &mu;=178, where &mu; is the mean number of CFU per 100 ml in ALL samples from this lake on this date.</li>
-<li>1-sample t-test because (i) one population (this lake) was sampled, (ii) a quantitative variable (number of CFU per 100 ml) was recorded, and (iii) &sigma; is not known.</li>
+<li>1-sample t-test because (i) one group or population (this lake) was sampled, (ii) a quantitative variable (number of CFU per 100 ml) was recorded, and (iii) &sigma; is not known.</li>
 <li>An observational study without clear randomization of 25 water samples.</li>
 <li>The assumptions are met because (i) &sigma; is not known and (ii) n=25>15 and the histogram (given in question) is not strongly skewed.</li>
 <li>x&#772;=`r xbar` CFU per 100 ml.</li>
@@ -180,7 +180,7 @@ df <- read.csv("FecalColiform.csv")
 <ol>
 <li>&alpha;=0.10.</li>
 <li>H<sub>A</sub>: &mu;>150 and H<sub>0</sub>: &mu;=150, where &mu; is the mean number of CFU per 100 ml in ALL samples from this lake on this date.</li>
-<li>1-sample t-test because (i) one population (this lake) was sampled, (ii) a quantitative variable (number of CFU per 100 ml) was recorded, and (iii) &sigma; is not known.</li>
+<li>1-sample t-test because (i) one group or population (this lake) was sampled, (ii) a quantitative variable (number of CFU per 100 ml) was recorded, and (iii) &sigma; is not known.</li>
 <li>An observational study without clear randomization of 25 water samples.</li>
 <li>The assumptions are met because (i) &sigma; is not known and (ii) n=25>15 and the histogram (`r figs("FChist",display="cite")`) is not strongly skewed.</li>
 ```{r CFU2Hist, echo=FALSE, fig.width=4, fig.height=4}
@@ -199,7 +199,7 @@ kHtest(fc.t)
 <li>The test statistic is t=`r formatC(fc.t$statistic,format="f",digits=3)` with `r formatC(fc.t$parameter,format="f",digits=0)` df (`r tbls("FC",display="cite")`).</li>
 <li>The p-value `r kPvalue(fc.t$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("FC",display="cite")`).</li>
 <li>The H<sub>0</sub> is rejected because the p-value<&alpha;.</li>
-<li>The mean CFU per ALL 100 ml samples of water from this lake at this time appears to be greater than 150 CFU per 100 ml.  Thus, it appears that the lake will need to be closed swimming.</li>
+<li>The mean CFU per ALL 100 ml samples of water from this lake at this time appears to be greater than 150 CFU per 100 ml. Thus, it appears that the lake will need to be closed swimming.</li>
 <li>I am 90\% confident that CFU per ALL 100 ml of water sampled from this lake on this date is greater than `r formatC(fc.t$conf.int[1],format="f",digits=1)` CFU per 100 ml (`r tbls("FC",display="cite")`).</li>
 </ol>
 
@@ -225,7 +225,7 @@ ucb <- xbar+distrib(0.95,type="q",distrib="t",df=df)*se
 <ol>
 <li>&alpha;=0.05.</li>
 <li>H<sub>A</sub>: &mu;<4104 and H<sub>0</sub>: &mu;=4104, where &mu; is the mean number of citizens killed by ALL nation-states.</li>
-<li>1-sample t-test because (i) one population (all nation-states) was sampled, (ii) a quantitative variable (number of killings) was recorded, and (iii) &sigma; is not known.</li>
+<li>1-sample t-test because (i) one group or population (all nation-states) was sampled, (ii) a quantitative variable (number of killings) was recorded, and (iii) &sigma; is not known.</li>
 <li>An observational study with clear randomization of 75 countries.</li>
 <li>The assumptions are met because (i) &sigma; is not known and (ii) n=75>40.</li>
 <li>x&#772;=`r xbar` killings.</li>
@@ -254,7 +254,7 @@ ozo <- read.csv("https://github.com/droglenc/NCData/raw/master/OzoneSWI.csv")
 <ol>
 <li>&alpha;=0.01</li>
 <li>H<sub>0</sub>:&mu;=300, H<sub>A</sub>: &mu;&ne;300, where &mu; is the mean thickness of the ozone layer from ALL locations.</li>
-<li>A one-sample t-test is required because (i) a quantitative variable (thickness) was measured, (ii)the individuals are from one population (the ozone layer over Arosa, SWI), and (iii) &sigma; is not known.  Thus, the population mean is being compared to a specific value in the null hypothesis.</li>
+<li>A one-sample t-test is required because (i) a quantitative variable (thickness) was measured, (ii)the individuals are from one group or population (the ozone layer over Arosa, SWI), and (iii) &sigma; is not known. Thus, the population mean is being compared to a specific value in the null hypothesis.</li>
 <li>An observational study of 45 random samples of ozone was conducted.</li>
 <li>The assumptions are met because n=45>40 and &sigma; is UNknown.</li>
 <li>x&#772;=`r formatC(ozo.t$estimate,format="f",digits=0)` (`r tbls("Ozone",display="cite")`).</li>

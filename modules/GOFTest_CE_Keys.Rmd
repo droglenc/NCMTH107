@@ -56,8 +56,8 @@ gofCI(w.chi,digits=3)
 <ol>
 <li>&alpha;=0.01.</li>
 <li>H<sub>A</sub>: "There is a preference among the water choices (i.e., the distribution of students will NOT follow a theoretical distribution of equal proportions among the water choices)" and H<sub>O</sub>: "There is no preference among the water choices (i.e., the distribution of students will follow a theoretical distribution of equal proportions among the water choices)".</li>
-<li>Goodness-of-fit test because (i) one population (students) were sampled and (ii) the response variable (water choice) is categorial.</li>
-<li>This is quasi-experimental as the students were given a choice of only certain waters.  The students were not obviously randomly selected (and were likely part of a voluntary response survey).</li>
+<li>Goodness-of-fit test because (i) one group or population (students) were sampled and (ii) the response variable (water choice) is categorial.</li>
+<li>This is quasi-experimental as the students were given a choice of only certain waters. The students were not obviously randomly selected (and were likely part of a voluntary response survey).</li>
 <li>All cells in the expected frequency table (`r tbls("WaterExpTable",display="cite")`) were greater than 5; the assumptions for a goodness-of-fit test have been met.</li>
 
 `r tbls("WaterExpTable")`
@@ -84,7 +84,7 @@ w.chi
 
 <li>p-value=`r kPvalue(w.chi$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("WaterResults",display="cite")`).</li>
 <li>Reject H<sub>0</sub> because the p-value&lt;&alpha;.</li>
-<li>It appears that there is a preference for water type by the students.  Further analysis (`r tbls("WaterSum",display="cite")`) suggests that the students preferred the tap water.</li>
+<li>It appears that there is a preference for water type by the students. Further analysis (`r tbls("WaterSum",display="cite")`) suggests that the students preferred the tap water.</li>
 
 `r tbls("WaterSum")`
 
@@ -115,8 +115,8 @@ gofCI(t.chi,digits=3)
 <ol>
 <li>&alpha;=0.05.</li>
 <li>H<sub>A</sub>: "There is a preference by the turkeys for habitat (i.e., the distribution of turkeys will NOT follow the distribution of available habitats)" and H<sub>O</sub>: "There is NOT a preference by the turkeys for habitat (i.e., the distribution of turkeys will follow the distribution of available habitats)".</li>
-<li>Goodness-of-fit test because (i) one population (South Dakota tukeys) were sampled and (ii) the response variable (habitat use) is categorial.</li>
-<li>This is observational as habitat use by the turkeys was simply recorded.  The turkey observations were not randomly selected (the researchers likely chose days to sample).</li>
+<li>Goodness-of-fit test because (i) one group or population (South Dakota turkeys) were sampled and (ii) the response variable (habitat use) is categorical.</li>
+<li>This is observational as habitat use by the turkeys was simply recorded. The turkey observations were not randomly selected (the researchers likely chose days to sample).</li>
 <li>All cells in the expected frequency table (`r tbls("TurkeyExpTable",display="cite")`) were greater than 5; the assumptions for a goodness-of-fit test have been met.</li>
 
 `r tbls("TurkeyExpTable")`
@@ -143,7 +143,7 @@ t.chi
 
 <li>p-value=`r kPvalue(t.chi$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("TurkeyResults",display="cite")`).</li>
 <li>Reject H<sub>0</sub> because the p-value&lt;&alpha;.</li>
-<li>It appears that the turkeys show a habitat preference in the spring.  Further analysis (`r tbls("TurkeySum",display="cite")`) suggests that the turkeys showed a strong avoidance of meadows, a moderate avoidance of Oak/Spruce habitats, and a moderate preference for aspen and pine habitats.</li>
+<li>It appears that the turkeys show a habitat preference in the spring. Further analysis (`r tbls("TurkeySum",display="cite")`) suggests that the turkeys showed a strong avoidance of meadows, a moderate avoidance of Oak/Spruce habitats, and a moderate preference for aspen and pine habitats.</li>
 
 `r tbls("TurkeySum")`
 
@@ -176,8 +176,8 @@ gofCI(j.chi,digits=3)
 <ol>
 <li>&alpha;=0.10.</li>
 <li>H<sub>A</sub>: "The age distribution of the actual jury is not the same as the age distribution in the district as a whole" and H<sub>O</sub>: "The age distribution of the actual jury is the same as the age distribution in the district as a whole".</li>
-<li>Goodness-of-fit test because (i) one population (the jury in this district) were sampled and (ii) the response variable (age category) is categorial.</li>
-<li>This is observational as the jurors were not allocated to ages.  In theory the jury was randomly selected from the district, but that is what is being tested.</li>
+<li>Goodness-of-fit test because (i) one group or population (the jury in this district) were sampled and (ii) the response variable (age category) is categorial.</li>
+<li>This is observational as the jurors were not allocated to ages. In theory the jury was randomly selected from the district, but that is what is being tested.</li>
 <li>All cells in the expected frequency table (`r tbls("JuryExpTable",display="cite")`) were greater than 5; the assumptions for a goodness-of-fit test have been met.</li>
 
 `r tbls("JuryExpTable")`
@@ -204,7 +204,7 @@ j.chi
 
 <li>p-value=`r kPvalue(j.chi$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("JuryResults",display="cite")`).</li>
 <li>Reject H<sub>0</sub> because the p-value&lt;&alpha;.</li>
-<li>It appears that the age distribution of the jury does not match the age distribution of the district as a whole.  Further analysis (`r tbls("JurySum",display="cite")`) suggests that the jury has a higher percentage of older jurors (ages "40-49" and "50-64") and a lower percentage of younger jurors (ages "18-19", "20-24", and "25-29") than expected as based on the age distribution in the district as a whole.</li>
+<li>It appears that the age distribution of the jury does not match the age distribution of the district as a whole. Further analysis (`r tbls("JurySum",display="cite")`) suggests that the jury has a higher percentage of older jurors (ages "40-49" and "50-64") and a lower percentage of younger jurors (ages "18-19", "20-24", and "25-29") than expected as based on the age distribution in the district as a whole.</li>
 
 `r tbls("JurySum")`
 

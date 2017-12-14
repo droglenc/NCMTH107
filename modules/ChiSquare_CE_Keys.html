@@ -18,7 +18,7 @@ css: "/css/modules.css"
 H<sub>A</sub>: “The distribution of students into the goals categories differs for at least one pair of grades” and H<sub>O</sub>: “The distribution of students into the goals categories DOES NOT differ among grades”.
 </li>
 <li>
-Chi-square test because (i) two or more populations (grades) were sampled and (ii) the response variable (goals category) is categorial.
+Chi-square test because (i) two or more groups or populations (grades) were sampled and (ii) the response variable (goals category) is categorial.
 </li>
 <li>
 This is an observational study because the students were not allocated to grades. The students were not obviously randomly selected (and were likely part of a voluntary response survey).
@@ -85,7 +85,7 @@ percTable(obs,margin=1,digits=1)</code></pre>
 H<sub>A</sub>: “The distribution of stands into the times since last fire differs for at least one pair of stand types” and H<sub>O</sub>: “The distribution of stands into the times since last fire DOES NOT differ among stand types”.
 </li>
 <li>
-Chi-square test because (i) two or more populations (stand types) were sampled and (ii) the response variable (time since last fire) is categorial (in the way it was recorded).
+Chi-square test because (i) two or more groups or populations (stand types) were sampled and (ii) the response variable (time since last fire) is categorial (in the way it was recorded).
 </li>
 <li>
 This is an observational study because the stand type was not set or manipulated by the researcher. The stands were not obviously randomly selected.
@@ -93,7 +93,7 @@ This is an observational study because the stand type was not set or manipulated
 <li>
 All cells in the expected frequency table (Table 5) were NOT greater than 5. The p-value calculation below is suspect.
 </li>
-<p>Table 5: Expected frequency of stands (assuming that Ho is true) by time since last fire in each of the four stand type populations.</p>
+<p>Table 5: Expected frequency of stands (assuming that Ho is true) by time since last fire in each of the four stand types.</p>
 <pre><code>      tslf
 sttype     0-100   100-200 200-300
     c  1.6041667  3.208333  2.1875
@@ -103,7 +103,7 @@ sttype     0-100   100-200 200-300
 <li>
 The observed frequency table is shown in Table 6.
 </li>
-<p>Table 6: Observed frequency of stands by time since last fire in each of the four stand type populations.</p>
+<p>Table 6: Observed frequency of stands by time since last fire in each of the four stand types.</p>
 <pre><code>      tslf
 sttype 0-100 100-200 200-300
     c      0       0       7
@@ -170,7 +170,7 @@ $(document).ready(function () {
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>

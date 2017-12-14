@@ -40,8 +40,8 @@ lcb <- xbar+distrib(0.95,lower.tail=FALSE,type="q")*se
 <ol>
 <li>&alpha;=0.05.</li>
 <li>H<sub>A</sub>: &mu;>5 and H<sub>0</sub>: &mu;=5, where &mu; is the mean weight gain for all women that followed the diet.</li>
-<li>1-sample Z-test because (i) one population (women that followed this diet) was sampled, (ii) a quantitative variable (weight gain) was recorded, and (iii) &sigma; is assumed to be known (=7.1).</li>
-<li>An observational study as the women chose to be on the diet.  There is clear randomization in this study.</li>
+<li>1-sample Z-test because (i) one group or population (women that followed this diet) was sampled, (ii) a quantitative variable (weight gain) was recorded, and (iii) &sigma; is assumed to be known (=7.1).</li>
+<li>An observational study as the women chose to be on the diet. There is clear randomization in this study.</li>
 <li>The assumptions are met because (i) &sigma; is known (=7.1) and (ii) n=35>30.</li>
 <li>x&#772;=`r xbar` pounds gained.</li>
 <li>Z=`r formatC(t,format="f",digits=4)`.</li>
@@ -68,7 +68,7 @@ hr <- read.csv("https://github.com/droglenc/NCData/raw/master/HawksRidge.csv")
 <ol>
 <li>&alpha;=0.01</li>
 <li>H<sub>O</sub>: &mu;=50000, H<sub>A</sub>: &mu;>50000, where &mu; is the mean number of raptors seen in ALL years at Hawk's Ridge.</li>
-<li>A one-sample Z-test is required because (i) a quantitative variable (number of raptors) was measured, (ii)the individuals are from one population (all years at Hawk's Ridge), and (iii) &sigma; is known (=37000).  Thus, the population mean is being compared to a specific value in the null hypothesis.</li>
+<li>A one-sample Z-test is required because (i) a quantitative variable (number of raptors) was measured, (ii)the individuals are from one group or population (all years at Hawk's Ridge), and (iii) &sigma; is known (=37000). Thus, the population mean is being compared to a specific value in the null hypothesis.</li>
 <li>An observational sample of years that was not random was taken.</li>
 <li>The assumptions are met because n=32>30 and &sigma; is known.</li>
 <li>x&#772;=`r formatC(hr.z$estimate,format="f",digits=0)` (`r tbls("HawksRidge",display="cite")`).</li>

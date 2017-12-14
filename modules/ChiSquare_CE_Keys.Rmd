@@ -29,8 +29,8 @@ tbls(name="PopObsTable","Observed frequency of students by stated goal for three
 tbls(name="PopResults","Chi-square test results for testing that the distribution of students by goals differs among grades.")
 tbls(name="PopPercTable","Row percentage table for goals by grade of the student.")
 
-tbls(name="ForestExpTable","Expected frequency of stands (assuming that Ho is true) by time since last fire in each of the four stand type populations.")
-tbls(name="ForestObsTable","Observed frequency of stands by time since last fire in each of the four stand type populations.")
+tbls(name="ForestExpTable","Expected frequency of stands (assuming that Ho is true) by time since last fire in each of the four stand types.")
+tbls(name="ForestObsTable","Observed frequency of stands by time since last fire in each of the four stand types.")
 tbls(name="ForestResults","Chi-square test results for testing that the distribution of stands by time since last fire differs among stand types.")
 tbls(name="ForestPercTable","Row percentage table for time since last fire by stand type.")
 ```
@@ -51,8 +51,8 @@ percTable(obs,margin=1,digits=1)
 <ol>
 <li>&alpha;=0.05.</li>
 <li>H<sub>A</sub>: "The distribution of students into the goals categories differs for at least one pair of grades" and H<sub>O</sub>: "The distribution of students into the goals categories DOES NOT differ among grades".</li>
-<li>Chi-square test because (i) two or more populations (grades) were sampled and (ii) the response variable (goals category) is categorial.</li>
-<li>This is an observational study because the students were not allocated to grades.  The students were not obviously randomly selected (and were likely part of a voluntary response survey).</li>
+<li>Chi-square test because (i) two or more groups or populations (grades) were sampled and (ii) the response variable (goals category) is categorial.</li>
+<li>This is an observational study because the students were not allocated to grades. The students were not obviously randomly selected (and were likely part of a voluntary response survey).</li>
 <li>All cells in the expected frequency table (`r tbls("PopExpTable",display="cite")`) were greater than 5; the assumptions for a chi-square test have been met.</li>
 
 `r tbls("PopExpTable")`
@@ -79,7 +79,7 @@ chi1
 
 <li>p-value=`r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("PopResults",display="cite")`).</li>
 <li>Do not reject H<sub>0</sub> because the p-value&gt;&alpha;.</li>
-<li>It appears that the distributions of goals by students does not differ by grade.  Analysis of the row percentage table (`r tbls("PopPercTable",display="cite")`) suggests that grades are the primary goal for each grade.</li>
+<li>It appears that the distributions of goals by students does not differ by grade. Analysis of the row percentage table (`r tbls("PopPercTable",display="cite")`) suggests that grades are the primary goal for each grade.</li>
 
 `r tbls("PopPercTable")`
 
@@ -112,9 +112,9 @@ percTable(obs,margin=1,digits=1)
 <ol>
 <li>&alpha;=0.05.</li>
 <li>H<sub>A</sub>: "The distribution of stands into the times since last fire differs for at least one pair of stand types" and H<sub>O</sub>: "The distribution of stands into the times since last fire DOES NOT differ among stand types".</li>
-<li>Chi-square test because (i) two or more populations (stand types) were sampled and (ii) the response variable (time since last fire) is categorial (in the way it was recorded).</li>
-<li>This is an observational study because the stand type was not set or manipulated by the researcher.  The stands were not obviously randomly selected.</li>
-<li>All cells in the expected frequency table (`r tbls("ForestExpTable",display="cite")`) were NOT greater than 5.  The p-value calculation below is suspect.</li>
+<li>Chi-square test because (i) two or more groups or populations (stand types) were sampled and (ii) the response variable (time since last fire) is categorial (in the way it was recorded).</li>
+<li>This is an observational study because the stand type was not set or manipulated by the researcher. The stands were not obviously randomly selected.</li>
+<li>All cells in the expected frequency table (`r tbls("ForestExpTable",display="cite")`) were NOT greater than 5. The p-value calculation below is suspect.</li>
 
 `r tbls("ForestExpTable")`
 
@@ -140,7 +140,7 @@ chi1
 
 <li>p-value=`r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("ForestResults",display="cite")`).</li>
 <li>Reject H<sub>0</sub> because the p-value&lt;&alpha;.</li>
-<li>It appears that the distribution of stands into the times since last fire differs among at least one pair of the stand types.  Analysis of the row percentage table (`r tbls("ForestPercTable",display="cite")`) suggests the time since last fire increases as one moves from primarily deciduous to primarily coniferous stands.</li>
+<li>It appears that the distribution of stands into the times since last fire differs among at least one pair of the stand types. Analysis of the row percentage table (`r tbls("ForestPercTable",display="cite")`) suggests the time since last fire increases as one moves from primarily deciduous to primarily coniferous stands.</li>
 
 `r tbls("ForestPercTable")`
 
