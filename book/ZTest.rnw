@@ -58,7 +58,7 @@ A 1-Sample Z-Test tests $H_{0}:\mu=\mu_{0}$, where $\mu_{0}$ represents a specif
           \item $\sigma$ is known
           \item $n\geq30$, $n\geq15$ and the \textbf{population} is not strongly skewed, OR the \textbf{population} is normally distributed.
         \end{Enumerate}
-      \item \textbf{When to Use:} Quantitative response, one population, $\sigma$ is known.
+      \item \textbf{Use with:} Quantitative response, one group (or population), $\sigma$ known.
   \end{Itemize}
 \end{minipage}}
 \end{table}
@@ -79,7 +79,7 @@ Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis t
 \begin{Enumerate}
   \item $\alpha$=0.10.
   \item $H_{0}:\mu=10$ mins vs. $H_{A}:\mu>10$ mins, where $\mu$ is the mean time for ALL intra-class travel events.
-  \item A 1-Sample Z-Test is required because (i) a quantitative variable (intra-class travel time) was measured, (ii) individuals from one population were sampled (students at the Dean's school), and (iii) $\sigma$ is thought to be known (=1.60 mins).
+  \item A 1-Sample Z-Test is required because (i) a quantitative variable (intra-class travel time) was measured, (ii) individuals from one group (or population) is considered (students at the Dean's school), and (iii) $\sigma$ is thought to be known (=1.60 mins).
   \item The data appear to be part of an observational study (the dean did not impart any conditions on the students) with a random selection of individuals.
   \item (i) $n=100\geq30$ and (ii) $\sigma$ is thought to be known (=1.60 mins).
   \item $\bar{x}$=10.12.
@@ -123,7 +123,7 @@ bt <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/BodyTem
 \begin{Enumerate}
   \item $\alpha$=0.01.
   \item $H_{0}:\mu=98.6^{o}$F vs. $H_{A}:\mu\neq98.6^{o}$F, where $\mu$ is the mean body temperature for ALL healthy humans. [\textit{Note that not equals was used because the researchers want to determine if the temperature is \textbf{different from} $98.6^{o}$F.}]
-  \item A 1-Sample Z-Test is required because (i) a quantitative variable (i.e., body temperature) was measured, (ii) individuals from one population were sampled (i.e., healthy humans), and (iii) $\sigma$ is thought to be known ($=0.63^{o}$F).
+  \item A 1-Sample Z-Test is required because (i) a quantitative variable (i.e., body temperature) was measured, (ii) individuals from one group (or population) is considered (i.e., healthy humans), and (iii) $\sigma$ is thought to be known ($=0.63^{o}$F).
   \item The data appear to be part of an observational study although this is not made clear in the background information. There is also no evidence that randomization was used.
   \item (i) $n=\Sexpr{round(bt.z$parameter["n"],0)}\geq30$ and (ii) $\sigma$ is thought to be known ($=0.63^{o}$F).
   \item $\bar{x}$ = \Sexpr{round(bt.z$estimate,2)}$^{o}$F \tabrefp{tab:1Zbtex}.

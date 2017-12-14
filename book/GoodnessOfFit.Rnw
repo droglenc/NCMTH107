@@ -8,7 +8,7 @@ set_parent('IntroStats.Rnw')
 \minitoc
 \vspace{36pt}
 
-\lettrine{I}{t is common to determine if the frequency} of individuals in the levels of a categorical response variable follow frequencies suggested by a particular theory or distribution. The simplest of these situations occurs when a researcher is making a hypothesis about the percentage or proportion of individuals in one of two categories. The ``distribution'' of individuals in two categories comes from the proportion in the hypothesis for one group and one minus the proportion in the hypothesis for the other group. In situations with more than two levels, the ``distribution'' of individuals into the categories likely comes from the hypothesis that a particular theoretical distribution holds true. For example, a researcher may want to determine if frequencies predicted from a certain genetic theory are upheld by the observed frequencies found in a breeding experiment, if the frequency that a certain animal uses habitats is in proportion to the availability of those habitats, or if the frequency of consumers that show a preference for a certain product (over other comparable products) is non-random.
+\lettrine{I}{t is common to determine if the frequency} of individuals in the levels of a categorical response variable follow frequencies suggested by a particular theory or distribution. The simplest of these situations occurs when a researcher is making a hypothesis about the percentage or proportion of individuals in one of two categories. The ``distribution'' of individuals in two categories comes from the proportion in the hypothesis for one category and one minus the proportion in the hypothesis for the other category. In situations with more than two levels, the ``distribution'' of individuals into the categories likely comes from the hypothesis that a particular theoretical distribution holds true. For example, a researcher may want to determine if frequencies predicted from a certain genetic theory are upheld by the observed frequencies found in a breeding experiment, if the frequency that a certain animal uses habitats is in proportion to the availability of those habitats, or if the frequency of consumers that show a preference for a certain product (over other comparable products) is non-random.
 
 In each of these cases, the theoretical distribution articulated in the research hypothesis must be converted to statistical hypotheses that will then be used to generate expected frequencies for each level. These expected frequencies will then be statistically compared to the observed frequencies to determine if the theoretical distribution represented in the null hypothesis is supported by the data. The method used for comparing the observed to expected frequencies, where the expected frequencies come from a hypothesized theoretical distribution, is a Goodness-of-Fit Test, the subject of this module.
 
@@ -116,7 +116,7 @@ The Goodness-of-Fit Test is characterized by a single categorical response varia
       \vspace{6pt}
       \item \textbf{Confidence Interval (for one level):} $\hat{p} \pm Z^{*}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$
       \vspace{6pt}
-      \item \textbf{When to Use:} Categorical response, one population, comparing to a theoretical distribution.
+      \item \textbf{Use with:} Categorical response, one group (or population), comparing to a theoretical distribution.
   \end{Itemize}
 \end{minipage}}
 \end{table}
@@ -145,7 +145,7 @@ Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis t
 \begin{Enumerate}
     \item $\alpha$=0.10.
     \item $H_{0}$: ``the proportion of Ashland residents that oppose replacing the \$1 bill with the \$1 coin is 0.77'' vs. $H_{A}$: ``The proportion of Ashland residents that oppose replacing the \$1 bill with the \$1 coin is NOT 0.77.''
-    \item A Goodness-of-Fit Test is required because (a) a single categorical variable was recorded (opinion about \$1 coin), (ii) a single population was sampled (Ashland residents), and (iii) the frequency of responses is being compared to a hypothesized distribution in the null hypothesis.
+    \item A Goodness-of-Fit Test is required because (a) a single categorical variable was recorded (opinion about \$1 coin), (ii) a single group (or population) was considered (Ashland residents), and (iii) the frequency of responses is being compared to a hypothesized distribution in the null hypothesis.
     \item The data appear to be part of an observational study with no clear indication of random selection of individuals.
     \item The expected number in the ``oppose'' level is $80*0.77$=$61.6$. The expected number in the ``do not oppose'' category is $80*0.23$=$18.4$. These expectations are shown in the table in the next step. The assumption of more than five individual in all cells of the expected table has been met.
     \item The observed table is shown below (along with the expected table).
@@ -228,7 +228,7 @@ gofCI(shrike.chi,digits=3)
 \begin{Enumerate}
   \item $\alpha$=0.05.
   \item $H_{0}$:``distribution of habitat use by shrikes is the same as the proportions of available habitat'' vs. $H_{A}$:``distribution of habitat use by shrikes is NOT the same as the proportions of available habitat.''
-  \item A Goodness-of-Fit Test is required because (i) a categorical variable was recorded (habitat use), (ii) a single population was sampled (shrikes in this area), and (iii) the observed distribution is compared to a theoretical distribution.
+  \item A Goodness-of-Fit Test is required because (i) a categorical variable was recorded (habitat use), (ii) a single group (or population) was considered (shrikes in this area), and (iii) the observed distribution is compared to a theoretical distribution.
   \item The data appear to be part of an observational study where the individuals were not randomly selected but the transects upon which they were observed were.
   \item There are more than five individuals expected in each habitat level \tabrefp{tab:GOFshrikesRes}.
   \item The statistic is the observed frequency table in \tabref{tab:GOFshrikesRes}.
@@ -295,7 +295,7 @@ gofCI(sf.chi,digits=3)
 \begin{Enumerate}
   \item $\alpha$=0.10.
   \item $H_{0}$:``The distribution will follow the proportions of $\frac{1}{3}$, $\frac{1}{3}$, $\frac{1}{6}$, and $\frac{1}{6}$ for private boat, charter boat, beach, and pier modes of fishing, respectively'' vs. $H_{A}$:``The distribution will NOT follow the proportions of $\frac{1}{3}$, $\frac{1}{3}$, $\frac{1}{6}$, and $\frac{1}{6}$ for private boat, charter boat, beach, and pier modes of fishing, respectively.''  [\textit{Thought process -- the two-thirds for ``boat'' fishing is split to one-third each for private and charter boats; the one-third, or two-sixths, for ``land'' fishing is split to one-sixth each for beach and pier fishing.}]
-  \item A Goodness-of-Fit Test is required because (i) a categorical variable was recorded (mode), (ii) a single population was sampled (Southern California Sportfishers), and (iii) the obseved distribution is compared to a theoretical distribution.
+  \item A Goodness-of-Fit Test is required because (i) a categorical variable was recorded (mode), (ii) a single group (or population) was considered (Southern California Sportfishers), and (iii) the obseved distribution is compared to a theoretical distribution.
   \item The data appear to be part of an observational study where the individuals were not obviously (probably were not) randomly selected.
   \item There are more than five individuals expected in each mode \tabrefp{tab:GOFfishRes}.
   \item The statistic is the observed frequency table in \tabref{tab:GOFfishRes}.
@@ -367,7 +367,7 @@ gofCI(m.chi,digits=3)
 \begin{Enumerate}
   \item $\alpha$=0.01.
   \item $H_{0}$:``The proportion of progeny with red eyes is 0.75'' vs. $H_{A}$:``The proportion of progeny with red eyes is NOT 0.75.''
-  \item A Goodness-of-Fit Test is required because (i) a categorical variable was recorded (red eye color or not), (ii) a single population was used in the experiment, and (iii) the observed distribution is compared to a theoretical distribution.
+  \item A Goodness-of-Fit Test is required because (i) a categorical variable was recorded (red eye color or not), (ii) a single group (or population) was considered in the experiment, and (iii) the observed distribution is compared to a theoretical distribution.
   \item The data appear to be experimental in that a specific cross was made and the environment in which they were raised was controlled. Progeny were randomly selected.
   \item There are more than five individuals expected in each eye level \tabrefp{tab:GOFgenRes}.
   \item The appropriate statistic is the observed frequency table in \tabref{tab:GOFgenRes}.

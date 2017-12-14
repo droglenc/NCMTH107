@@ -6,10 +6,11 @@ set_parent('IntroStats.Rnw')
 
 \minitoc
 
-\lettrine{S}{ituations where a categorical} response variable is recorded would be summarized with a frequency or percentage table (see Modules \ref{chap:UnivEDACat} and \ref{chap:BivEDACat}). The appropriate test statistic in these situations is a chi-square rather than a t. The Chi-Square Test test statistic follows a chi-square distribution, which is introduced below. The rest of this module is dedicated to the general Chi-Square Test where the distribution of a categorical response variable is compared between two or more populations. The related goodness-of-fit test for a categorical response recorded for only one population is introduced in \modref{chap:GOF}.
+\lettrine{S}{ituations where a categorical} response variable is recorded would be summarized with a frequency or percentage table (see Modules \ref{chap:UnivEDACat} and \ref{chap:BivEDACat}). The appropriate test statistic in these situations is a chi-square rather than a t. The Chi-Square Test test statistic follows a chi-square distribution, which is introduced below. The rest of this module is dedicated to the general Chi-Square Test where the distribution of a categorical response variable is compared between two or more groups (or populations). The related goodness-of-fit test for a categorical response recorded for only one group (or population) is introduced in \modref{chap:GOF}.
 
 
 \section{Chi-Square Distribution}\label{sect:ChiDist}
+\vspace{-6pt}
 A chi-square ($\chi^2$) distribution is generally right-skewed \figrefp{fig:chiDist}, with the exact shape dictated by the degrees-of-freedom (df; as df increase, the sharpness of the skew decreases; \figref{fig:chiDist}). In its simplest form, the $\chi^2$ distribution arises as a sampling distribution for the $\chi^2$ test statistic,
 
 \[ \chi^{2} = \Sum_{cells}\frac{(Observed-Expected)^{2}}{Expected} \]
@@ -38,10 +39,11 @@ Proportional areas on a $\chi^2$ distribution are computed with \R{disrib()},  s
 
 \section{Chi-Square Test Specifics}
 \vspace{-3pt}
-Researchers commonly want to compare the distribution of individuals into the levels of a categorical variable among two or more populations. For example, researchers may want to determine if the disribution of failing students differs between males and females, if the distribution of kids playing sports differs between kids from high- or low-income families, if the distribution of four major plant species differs between two locations, or if the distribution of responses to a five-choice question differs between respondents from neighboring counties. All of these questions have a categorical response variable (fail or not, play sport or not, plant species, answer to five-choice question) compared among two or more populations (gender, income category, two locations, neighboring counties). The Chi-Square Test, the subject of this module, can be used for each of these situations.\footnote{The Chi-Square Test is quite flexible and can be derived from different types of hypotheses than those described here.}
+Researchers commonly want to compare the distribution of individuals into the levels of a categorical variable among two or more groups (or populations). For example, researchers may want to determine if the disribution of failing students differs between males and females, if the distribution of kids playing sports differs between kids from high- or low-income families, if the distribution of four major plant species differs between two locations, or if the distribution of responses to a five-choice question differs between respondents from neighboring counties. All of these questions have a categorical response variable (fail or not, play sport or not, plant species, answer to five-choice question) compared among two or more groups (gender, income category, two locations, neighboring counties). The Chi-Square Test, the subject of this module, can be used for each of these situations.\footnote{The Chi-Square Test is quite flexible and can be derived from different types of hypotheses than those described here.}
 
 \subsection{Hypotheses}
-The statistical hypotheses for a Chi-Square Test are ``wordy.''  To explore this, let's first assume that a two-way frequency table (see \modref{chap:BivEDACat}) will summarize the data where the rows correspond to separate populations and the columns correspond to levels of the response variable. In this organization, the Chi-Square Test null hypothesis is that the row percentages are equal -- i.e., ``the percentage distribution of individuals into the levels of the response variable is the same for all populations.''  The alternative hypothesis states that there is some difference among the row percentages -- i.e., ``the percentage distribution of individuals into the levels of the response variable is NOT the same for all populations.''
+\vspace{-3pt}
+The statistical hypotheses for a Chi-Square Test are ``wordy.''  To explore this, let's first assume that a two-way frequency table (see \modref{chap:BivEDACat}) will summarize the data where the rows correspond to separate groups and the columns correspond to levels of the response variable. In this organization, the Chi-Square Test null hypothesis is that the row percentages are equal -- i.e., ``the percentage distribution of individuals into the levels of the response variable is the same for all groups.''  The alternative hypothesis states that there is some difference among the row percentages -- i.e., ``the percentage distribution of individuals into the levels of the response variable is NOT the same for all groups.''
 
 As one example (more are shown below), consider the following:
 \vspace{-6pt}
@@ -58,7 +60,8 @@ The hypotheses for this situation are,
 
 
 \subsection{Tables}
-As noted above, all two-way frequency tables used for a Chi-Square Test will be organized such that the response variable forms the columns and the populations form the rows. With this organization, the row-percentage table becomes the table of primary interest because it relates directly to the hypotheses described above. The question of a Chi-Square Test then becomes one of determining whether each row of the row-percentage table is equal, given sampling variability.
+\vspace{-6pt}
+As noted above, all two-way frequency tables used for a Chi-Square Test will be organized such that the response variable forms the columns and the groups to be compared form the rows. With this organization, the row-percentage table becomes the table of primary interest because it relates directly to the hypotheses described above. The question of a Chi-Square Test then becomes one of determining whether each row of the row-percentage table is equal, given sampling variability.
 
 The observed raw data must be organized into a two-way frequency table as described in \modref{chap:BivEDACat}. For example, the Christmas tree data is summarized as in \tabref{tab:ChiTreeObs}. The actual calculations for a Chi-Square Test are performed on this observed table. However, the hypothesis test, as described above, is best viewed as a method to determine if each row of the row-percentage table is statistically equivalent or not. Thus, the row-percentage table computed from the frequency table is useful when interpreting the results of a Chi-Square Test \tabrefp{tab:ChiTreeObsProp}.
 
@@ -96,7 +99,7 @@ The observed raw data must be organized into a two-way frequency table as descri
     \end{tabular}
 \end{table}
 
-The Chi-Square Test requires constructing a table of expected values that are derived from the null hypothesis. Specifically, the ``expected'' table contains the expected frequency of individuals in each level of the response variable for each population assuming that the distribution of responses does not differ among populations. These expected table are computed from the margins of the observed table, but are best explained with an illustrative example.
+The Chi-Square Test requires constructing a table of expected values that are derived from the null hypothesis. Specifically, the ``expected'' table contains the expected frequency of individuals in each level of the response variable for each group assuming that the distribution of responses does not differ among groups. These expected table are computed from the margins of the observed table, but are best explained with an illustrative example.
 
 In the Christmas tree example, the null hypothesis states that there is no difference in the distribution of households with a natural tree between the rural and urban areas. Thus, under this null hypothesis, one would expect the proportion (or percentage) of households with a natural tree to be the same in both groups. The proportion of households with a natural tree, regardless of location, is $\frac{153}{421}$=$0.363$. Thus, under the null hypothesis, the proportion of rural AND the proportion of urban households with a natural tree is $0.363$. Because there is a different number of urban and rural households in the study, the actual NUMBER (rather than proportion) of households expected to have a natural tree will differ. The NUMBER of urban households expected to HAVE a natural tree is found by multiplying the number of urban households by the common proportion computed above -- i.e., $261*0.363$=$94.743$. The remaining urban households would be expected to NOT have a natural tree -- i.e., $261-94.743$=$261(1-0.363)$=$166.257$. Similar calculations are made for the rural households (i.e., $160*0.363=58.080$ expected to have a natural tree and $160*(1-0.363)=101.920$ expected to NOT have a natural tree.
 
@@ -107,7 +110,7 @@ These expected frequencies are computed directly and easily from the marginal to
   \item $160*\frac{268}{421}=\frac{160*268}{421}=101.853$ rural households to NOT have a natural tree.
 \end{Itemize}
 
-Thust, all expected values in a Chi-Square Test are calculated by multiplying the row and column totals of the frequency table and dividing by the total number of individuals. These expected values are summarized in a two-way table, called the expected frequencies table \tabrefp{tab:ChiTreeExp}.
+Thus, all expected values in a Chi-Square Test are calculated by multiplying the row and column totals of the frequency table and dividing by the total number of individuals. These expected values are summarized in a two-way table, called the expected frequencies table \tabrefp{tab:ChiTreeExp}.
 
 \begin{table}[htbp]
   \centering
@@ -128,7 +131,7 @@ Thust, all expected values in a Chi-Square Test are calculated by multiplying th
 
 \subsection{Specifics}
 \vspace{-3pt}
-The Chi-Square Test is characterized by a categorical response variable recorded for two or more populations. The specifics of the Chi-Square Test are in \tabref{tab:Chispec}.
+The Chi-Square Test is characterized by a categorical response variable recorded for two or more groups (or populations). The specifics of the Chi-Square Test are in \tabref{tab:Chispec}.
 
 \begin{table}[h]
 \centering
@@ -138,13 +141,13 @@ The Chi-Square Test is characterized by a categorical response variable recorded
 	\caption{Characteristics of a Chi-Square Test.}\label{tab:Chispec}
 \vspace{-3pt}
   \begin{Itemize}
-      \item \textbf{Null Hypothesis:} ``The distribution of individuals into the levels of the response variable is the same for all populations''
-      \item \textbf{Alternative Hypothesis:} ``The distribution of individuals into the levels of the response variable is NOT the same for all populations.''
+      \item \textbf{Null Hypothesis:} ``The distribution of individuals into the levels of the response variable is the same for all groups''
+      \item \textbf{Alternative Hypothesis:} ``The distribution of individuals into the levels of the response variable is NOT the same for all groups.''
       \item \textbf{Statistic:} Observed frequency table.
       \item \textbf{Test Statistic:} $\chi^{2} = \Sum_{cells}\frac{(Observed-Expected)^{2}}{Expected}$
       \item \textbf{df:} $(r-1)(c-1)$ where $r=$ number of rows and $c=$ number of columns
       \item \textbf{Assumptions:} Expected value for each category is $\geq5$.
-      \item \textbf{When to Use:} Categorical response, two or more populations.
+      \item \textbf{Use with:} Categorical response, two or more groups (or populations).
   \end{Itemize}
 \end{minipage}}
 \end{table}
@@ -159,7 +162,7 @@ Below are the 11-steps \sectrefp{sec:11Steps} for a full hypothesis test for the
 \begin{Enumerate}
   \item $\alpha$=0.10.
   \item $H_{0}$: ``distribution of households by type of tree is the same for urban and rural households'' vs. $H_{A}$: ``distribution of households by type of tree is NOT the same for urban and rural households.''
-  \item A Chi-Square Test is required because (i) a categorical response variable was recorded (type of tree) and (ii) two populations were sampled (urban and rural households).
+  \item A Chi-Square Test is required because (i) a categorical response variable was recorded (type of tree) and (ii) two groups are being compared (urban and rural households).
   \item The data appear to be part of an observational study with no clear indication of randomization.
   \item The expected frequency in each of the four cells is greater than five \tabrefp{tab:ChiTreeExp}.
   \item The observed frequency table is in \tabref{tab:ChiTreeObs}.
@@ -183,7 +186,7 @@ Below are the 11-steps \sectrefp{sec:11Steps} for a full hypothesis test for the
 \section{Chi-Square test in R}
 \vspace{-3pt}
 \subsection{Data Format}
-The data for a Chi-Square Test may be entered from summarized data or computed from raw data on individuals. Raw data must be in stacked format where one column in the data.frame represents the response variable and another column represents the populations (see Sections \ref{sect:REnterData} and \ref{sect:2tData}). Raw data must be summarized into a two-way frequency table with \R{xtabs()} as described in \modref{chap:BivEDACat}. The two-way table must contain frequencies, not proportions or percentages (don't use \R{percTable()}), without marginal totals (don't use \R{addMargins()}).
+The data for a Chi-Square Test may be entered from summarized data or computed from raw data on individuals. Raw data must be in stacked format where one column in the data.frame represents the response variable and another column represents the groups (see Sections \ref{sect:REnterData} and \ref{sect:2tData}). Raw data must be summarized into a two-way frequency table with \R{xtabs()} as described in \modref{chap:BivEDACat}. The two-way table must contain frequencies, not proportions or percentages (don't use \R{percTable()}), without marginal totals (don't use \R{addMargins()}).
 
 Summarized data must be entered into a two-dimensional matrix. The frequencies must first be entered into a vector with the first row of values followed by the second row and so on. This vector is then the first argument to \R{matrix()}, which will also include the number of rows in the frequency table in \R{nrow=} and \R{byrow=TRUE} (which causes the values in the vector to be entered into the matrix in a row-wise manner). The process of entering summarized data into a matrix is better explained by example.
 
@@ -221,13 +224,13 @@ obstbl
 The Chi-Square Test is performed with \R{chisq.test()}, which takes an observed frequency table either entered through \R{matrix()} or summarized with \R{xtabs()} as the first argument. The only other argument needed is \R{correct=FALSE} so that the continuity correction is not used.\footnote{The continuity correction is not used here simply so that the results using R will match hand-calculations. The continuity correction should usually be used.} The results of \R{chisq.test()} should be assigned to an object. The Chi-Square test statistic and p-value are extracted by simply printing the saved object. The expected frequency table is returned by appending \R{\$expected} to the saved object.
 
 \subsection{Post-Hoc Analysis}
-Rejecting the null hypothesis in a Chi-Square Test indicates that there is some difference in the distribution of individuals into the levels of the response variable among some of the populations. However, rejecting the null hypothesis does not indicate which populations are different. In addition, as mentioned previously, confidence intervals are generally not performed with a Chi-Square Test. A post-hoc method for helping determine which populations differ is obtained by observing the Pearson residuals.
+Rejecting the null hypothesis in a Chi-Square Test indicates that there is some difference in the distribution of individuals into the levels of the response variable among some of the groups. However, rejecting the null hypothesis does not indicate which groups are different. In addition, as mentioned previously, confidence intervals are generally not performed with a Chi-Square Test. A post-hoc method for helping determine which groups differ is obtained by observing the Pearson residuals.
 
 A Pearson residual is computed for each cell in the table as,
 
 \[ \frac{Observed-Expected}{\sqrt{Expected}} \]
 
-which is the appropriately signed square root of the parts in the $\chi^2$ test statistic calculation. Therefore, cells that have Pearson residuals far from zero contributed substantially to the large $\chi^2$ test statistic that resulted in a small p-value and the ultimate rejection of $H_{0}$. Patterns in where the large Pearson residuals are found may allow one to qualitatively determine which populations differ and, thus, which levels of the response differ the most. This process will be illustrated more fully in the examples and review exercises. The Pearson residuals are obtained from the saved \R{chisq.test()} object by appending \R{\$residuals}.
+which is the appropriately signed square root of the parts in the $\chi^2$ test statistic calculation. Therefore, cells that have Pearson residuals far from zero contributed substantially to the large $\chi^2$ test statistic that resulted in a small p-value and the ultimate rejection of $H_{0}$. Patterns in where the large Pearson residuals are found may allow one to qualitatively determine which groups differ and, thus, which levels of the response differ the most. This process will be illustrated more fully in the examples and review exercises. The Pearson residuals are obtained from the saved \R{chisq.test()} object by appending \R{\$residuals}.
 
 \subsection{Example - Father Present at Birth}
 Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for the following situation:
@@ -241,7 +244,7 @@ fp <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/FatherP
 @
 <<ChiFP, echo=FALSE, results='hide', fig.show='hide'>>=
 ( fp.obs <- xtabs(~hospital+father,data=fp) )
-( fp.chi <- chisq.test(fp.obs) )
+( fp.chi <- chisq.test(fp.obs,correct=FALSE) )
 fp.chi$expected
 percTable(fp.obs,margin=1,digits=1)
 @
@@ -250,7 +253,7 @@ percTable(fp.obs,margin=1,digits=1)
 \begin{Enumerate}
   \item $\alpha$=0.05.
   \item $H_{0}$:``distribution of fathers presence (or not) during the birth of their child is the same for all four hospitals'' vs. $H_{A}:$ ``the distribution of fathers presence during the birth of their child is NOT the same for all four hospitals.''
-  \item A Chi-Square Test is required because (i) a categorical variable (present or absent) was recorded and (ii) four populations were sampled (the hospitals).
+  \item A Chi-Square Test is required because (i) a categorical variable (present or absent) was recorded and (ii) four groups are being compared (the hospitals).
   \item The data appear to be part of an observational study with no clear indication of randomization (likely a voluntary response survey).
   \item There are at least five individuals in each cell of the expected table \tabrefp{tab:ChiFPexp}.
   \item The statistic is the observed frequency table \tabrefp{tab:ChiFPobs}.
@@ -346,7 +349,7 @@ Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis t
   \begin{Enumerate}
     \item $\alpha$=0.05.
     \item $H_{0}$: ``the distribution of dominant plants species is the same between Devil's Island and the Bayfield Peninsula'' vs. $H_{A}$: ``the distribution of dominant plants species is NOT the same between Devil's Island and the Bayfield Peninsula.''
-    \item A Chi-Square Test is required because (i) a categorical variable with six levels (plant species) was recorded and (ii) two populations were sampled (Devil's Island and Bayfield Peninsula).
+    \item A Chi-Square Test is required because (i) a categorical variable with six levels (plant species) was recorded and (ii) two grouops are being compared (Devil's Island and Bayfield Peninsula).
     \item The data appear to be part of an observational study where the plots were randomly selected.
     \item There are more than five individuals in each cell of the expected table \tabrefp{tab:ChiAIexp}.
     \item The statistic is the observed frequency table given in the background.

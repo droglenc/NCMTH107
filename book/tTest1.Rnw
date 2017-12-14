@@ -61,7 +61,7 @@ A 1-Sample t-Test is similar to a 1-Sample Z-test in that both test the same $H_
           \item $\sigma$ is UNknown
           \item $n\geq40$, $n\geq15$ and the \textbf{sample} (i.e., histogram) is not strongly skewed, OR the \textbf{sample} is normally distributed.
         \end{Enumerate}
-      \item \textbf{When to Use:} Quantitative response, one population, $\sigma$ is UNknown.
+      \item \textbf{Use with:} Quantitative response, one group (or population), $\sigma$ UNknown.
   \end{Itemize}
 \end{minipage}}
 \end{table}
@@ -78,7 +78,7 @@ Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis t
 \begin{Enumerate}
     \item $\alpha$=0.05.
     \item $H_{0}:\mu=19.9$ lbs vs. $H_{A}:\mu >19.9$ lbs where $\mu$ is the mean weight of ALL salmon in the catch.
-    \item A 1-Sample t-Test is required because (1) a quantitative variable (weight) was measured, (ii) individuals from one population were sampled (this catch of salmon), and (iii) $\sigma$ is \textbf{UN}known.\footnote{If $\sigma$ is given, then it will appear in the background information to the question and will be in a sentence that uses the words ``population'', ``assume that'', or ``suppose that.''}
+    \item A 1-Sample t-Test is required because (1) a quantitative variable (weight) was measured, (ii) individuals from one group (or population) were considered (this catch of salmon), and (iii) $\sigma$ is \textbf{UN}known.\footnote{If $\sigma$ is given, then it will appear in the background information to the question and will be in a sentence that uses the words ``population'', ``assume that'', or ``suppose that.''}
     \item The data appear to be part of an observational study with random selection.
     \item (i) n=50 $\geq$ 40 and (ii) $\sigma$ is unknown.
     \item $\bar{x}$ = 20.1 lbs (and $s$ = 0.76 lbs).
@@ -133,7 +133,7 @@ hist(~ct,data=df,xlab="Crab Body Temp (C)")
 \begin{Enumerate}
     \item $\alpha$ = 0.05.
     \item $H_{0}:\mu$ = 24.3$^{o}$C vs. $H_{A}:\mu \neq$ 24.3$^{o}$C, where $\mu$ is the mean body temperature of ALL crabs.
-    \item A 1-Sample t-Test is required because (1) a quantitative variable (temperature) was measured, (ii) individuals from one population were sampled (an ill-defined population of crabs), and (iii) $\sigma$ is \textbf{UN}known.
+    \item A 1-Sample t-Test is required because (1) a quantitative variable (temperature) was measured, (ii) individuals from one group (or population) were considered (an ill-defined population of crabs), and (iii) $\sigma$ is \textbf{UN}known.
     \item The data appear to be part of an experimental study (the temperature was controlled) with no suggestion of random selection of individuals.
     \item (i) n = 25 $\geq$ 15 and the sample distribution of crab temperatures appears to be only slightly right-skewed \figrefp{fig:CrabTempHist} and (ii) $\sigma$ is \textbf{UN}known.
     \item $\bar{x}$ = \Sexpr{formatC(ct.t$estimate,format="f",digits=1)}$^{o}$C \tabrefp{tab:1tcrabs}.

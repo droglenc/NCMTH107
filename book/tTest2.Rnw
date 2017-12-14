@@ -8,7 +8,7 @@ set_parent('IntroStats.Rnw')
 \minitoc
 \vspace*{24pt}
 
-\lettrine{W}{hile it is often useful to test whether a population mean} differs from a specific value (i.e., with the 1-Sample t-Test of \modref{chap:tTest1}), there are many instances where interest is in whether means from two populations differ. For example, is there a difference in mean income between males and females, in mean test scores between students from high- and low-income families, in mean percent body fat between raccoons from southern and northern Wisconsin, or in mean amount of milk produced from cows provided with a hormone or a placebo. In all of these situations, interest is identifying if a difference in population means exists between two populations (males and females, students from high- and low-income families, raccoons from southern and northern Wisconsin, cows given a hormone or a placebo). A \textbf{2-Sample t-Test} is used in these situations and is the subject of this module.
+\lettrine{W}{hile it is often useful to test whether a population mean} differs from a specific value (i.e., with the 1-Sample t-Test of \modref{chap:tTest1}), there are many instances where interest is in whether means from two groups (or populations) differ. For example, is there a difference in mean income between males and females, in mean test scores between students from high- and low-income families, in mean percent body fat between raccoons from southern and northern Wisconsin, or in mean amount of milk produced from cows provided with a hormone or a placebo. In all of these situations, interest is identifying if a difference in population means exists between two groups (males and females, students from high- and low-income families, raccoons from southern and northern Wisconsin, cows given a hormone or a placebo). A \textbf{2-Sample t-Test} is used in these situations and is the subject of this module.
 
 
 \section{2-Sample t-Test Specifics}
@@ -25,7 +25,7 @@ it is apparent that the SE of $\bar{x}_{1}-\bar{x}_{2}$ (i.e., the statistic) is
 
 \[ SE_{\bar{x}_{1}-\bar{x}_{2}}= \sqrt{s_{p}^{2}\left(\frac{1}{n_{1}}+\frac{1}{n_{2}} \right)}  \]
 
-where $n_{1}$ and $n_{2}$ are the sample sizes for the two populations and $s_{p}^{2}$ is the ``pooled sample variance'' computed as a weighted average of the two sample variances ($s_{1}^{2}$ and $s_{2}^{2}$), or
+where $n_{1}$ and $n_{2}$ are the sample sizes for the two groups and $s_{p}^{2}$ is the ``pooled sample variance'' computed as a weighted average of the two sample variances ($s_{1}^{2}$ and $s_{2}^{2}$), or
 
 \[s_{p}^{2}=\frac{(n_{1}-1)s_{1}^{2}+(n_{2}-1)s_{2}^{2}}{n_{1}+n_{2}-2} \]
 
@@ -47,7 +47,7 @@ The degrees-of-freedom for the 2-Sample t-Test with equal variances come from th
       \vspace{6pt}
       \item \textbf{df:} $n_{1}+n_{2}-2$
       \item \textbf{Assumptions:} $n_{1}+n_{2}\geq40$, $n_{1}+n_{2}-2\geq15$ and \textbf{each sample} (i.e., histogram) is not strongly skewed, OR \textbf{each sample} is normally distributed.
-      \item \textbf{When to Use:} Quantitative response, two populations, individuals are independent between populations.
+      \item \textbf{Use with:} Quantitative response, two groups (or populations), individuals are independent between groups.
   \end{Itemize}
 \end{minipage}}
 \end{table}
@@ -55,7 +55,7 @@ The degrees-of-freedom for the 2-Sample t-Test with equal variances come from th
 
 \warn{The $s_{p}^{2}$ calculation can be ``checked'' by determining if the value of $s_{p}^{2}$ is between $s_{1}^{2}$ and $s_{2}^{2}$ or if the value of $\sqrt{s_{p}^{2}}$ is between $s_{1}$ and $s_{2}$.}
 
-A 2-Sample t-Test is often used to test an alternative hypothesis of simply finding a difference between the two populations. However, if the null hypothesis is rejected in these instances (thus, identifying a significant difference between the two populations), then care should be taken to specifically describe how the two populations differ. If the statistic is negative, then the mean of the first population is lower than the mean of the second population and, if the statistic is positive, then the mean of the first population is larger than the mean of the second population. The values of the confidence region should be used to identify how much larger or smaller the mean from one population is compared to the mean of the other population.
+A 2-Sample t-Test is often used to test an alternative hypothesis of simply finding a difference between the two groups. However, if the null hypothesis is rejected in these instances (thus, identifying a significant difference between the two groups), then care should be taken to specifically describe how the two groups differ. If the statistic is negative, then the mean of the first group is lower than the mean of the second group and, if the statistic is positive, then the mean of the first group is larger than the mean of the second group. The values of the confidence region should be used to identify how much larger or smaller the mean from one group is compared to the mean of the other group.
 
 
 \newpage
@@ -92,9 +92,9 @@ SD:       5.975     6.721          Levene's Test:  p=0.1341
 \begin{Enumerate}
   \item $\alpha$ = 0.05.
   \item $H_{0}:\mu_{s}-\mu_{o} = 0$ vs $H_{A}:\mu_{s}-\mu_{o} > 0$, where $\mu$ is the mean plant height, $s$ represents synthetic fertilizer, and $o$ represents organic fertilizer. [\textit{Note that positive differences represent larger values for synthetic fertilizer; thus, $H_{A}$ represents synthetic fertilizer producing taller plants.}]
-  \item A 2-Sample t-Test is required because (i) a quantitative variable (height) was measured, (ii) two populations were sampled (synthetic and organic fertilizers), and (iii) plants in the two populations were \textbf{IN}dependent as the plants were not paired, plants were not tested over time, etc.
+  \item A 2-Sample t-Test is required because (i) a quantitative variable (height) was measured, (ii) two groups are being compared (synthetic and organic fertilizers), and (iii) plants in the two groups were \textbf{IN}dependent as the plants were not paired, plants were not tested over time, etc.
   \item The data appear to be part of an experiment (the researcher imposed the treatments on the plants) with no clear indication of random selection of plants or random allocation of plants to the two treatments.
-  \item (i) $n_{s}+n_{o}$ = 50 $> 40$, (ii) individuals in the two populations are independent as discussed above, and (iii) the population variances appear to be equal because the Levene's Test p-value (0.1341) is $> \alpha$.
+  \item (i) $n_{s}+n_{o}$ = 50 $> 40$, (ii) individuals in the two groups are independent as discussed above, and (iii) the population variances appear to be equal because the Levene's Test p-value (0.1341) is $> \alpha$.
   \item $\bar{x}_{s}-\bar{x}_{0}$ = 51.46 $-$ 47.49 = 3.97. Additionally,
     \[s_{p}^{2}=\frac{(25-1)5.975^{2}+(25-1)6.721^{2}}{25+25-2} = 40.44 \]
 and
@@ -127,9 +127,9 @@ Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis t
 \begin{Enumerate}
   \item $\alpha$ = 0.05.
   \item $H_{0}:\mu_{w}-\mu_{wo} = 0$ vs $H_{A}:\mu_{w}-\mu_{wo}<0$, where $\mu$ is the mean anxiety level, $w$ represents patients ``with'', and $wo$ represents ``without'' music. [\textit{Note that negative numbers represent lower anxiety values in patients in the ``with music'' treatment. Thus, $H_{A}$ suggests lower anxiety in paients with music.}]
-  \item A 2-Sample t-Test is required because (i) a quantitative variable (anxiety level) was measured, (ii) two populations were sampled (music or no music), and (iii) individuals in the two populations are independent (i.e., they were not paired, were not otherwise related, etc.).
-  \item The data appear to be an experiment as the music treatment was imparted by the surgion, but there is no obvious random selection or allocation in this study.
-  \item (i) $n_{w}+n_{wo}$ = 68 $>$ 40, (ii) individuals in the two populations are independent as described above, and (iii)the two population variances appear to be equal because the Levene's Test p-value of 0.089 is greater than $\alpha$.
+  \item A 2-Sample t-Test is required because (i) a quantitative variable (anxiety level) was measured, (ii) two groups are being compared (music or no music), and (iii) individuals in the two groups are independent (i.e., they were not paired, were not otherwise related, etc.).
+  \item The data appear to be an experiment as the music treatment was imparted by the surgeon, but there is no obvious random selection or allocation in this study.
+  \item (i) $n_{w}+n_{wo}$ = 68 $>$ 40, (ii) individuals in the two groups are independent as described above, and (iii)the two population variances appear to be equal because the Levene's Test p-value of 0.089 is greater than $\alpha$.
   \item $\bar{x}_{w}-\bar{x}_{wo}$ = 4.2 $-$ 5.9 = -1.7. Additionally,
     \[s_{p}^{2}=\frac{(32-1)1.2^{2}+(36-1)1.9^{2}}{32+36-2} = 2.59 \]
 and
@@ -184,7 +184,7 @@ A 2-Sample t-Test is computed with \R{t.test()}, where the first argument is the
 \vspace*{-8pt}
 \warn{\R{var.equal=TRUE} must be in \R{t.test()} to assume equal variances. This is NOT the default.}
 
-R computes the difference among populations as the alphabetically ``first'' level minus the alphabetically ``second'' level. For example, if the two levels are \var{inlet} and \var{outlet}, then R will compute $\bar{x}_{outlet}-\bar{x}_{inlet}$. If this is not the order you want, then you need to change the order of the levels by using \R{levels=} in \R{factor()} (as described in Modules \ref{chap:UnivEDACat} and \ref{chap:BivEDACat}). For example, the order of the levels of \var{src} in the \var{aqua} data.frame is changed below.
+R computes the difference among groups as the alphabetically ``first'' level minus the alphabetically ``second'' level. For example, if the two levels are \var{inlet} and \var{outlet}, then R will compute $\bar{x}_{outlet}-\bar{x}_{inlet}$. If this is not the order you want, then you need to change the order of the levels by using \R{levels=} in \R{factor()} (as described in Modules \ref{chap:UnivEDACat} and \ref{chap:BivEDACat}). For example, the order of the levels of \var{src} in the \var{aqua} data.frame is changed below.
 <<>>=
 aqua$src <- factor(aqua$src,levels=c("outlet","inlet"))
 levels(aqua$src)
@@ -213,9 +213,9 @@ levenesTest(BOD~src,data=aqua)
 \begin{Enumerate}
   \item $\alpha$ = 0.10.
   \item $H_{0}:\mu_{outlet}-\mu_{inlet}=0$ vs $H_{A}:\mu_{outlet}-\mu_{inlet}>0$, where $\mu$ is the mean BOD, $outlet$ represents the outlet source, and $inlet$ represents the inlet source. [\textit{Positive differences represent larger values at the outlet, which implies that BOD is higher in the water released from the facility. Thus, $H_{A}$ represents the owner's concern. Further note that the order of subtraction could have been reversed such that the owner's concern would require a ``less than'' $H_{A}$. This is simply a matter of choice. However, note that the order of the levels has to be changed in R to use my choice of hypotheses.}]
-  \item A 2-Sample t-Test is required because (i) a quantitative variable (BOD level) was measured, (ii) two populations were sampled (outlet and inlet), and (ii) the sets of samples were \textbf{IN}dependent (note that it said that the outlet samples came from different times then the inlet samples).
+  \item A 2-Sample t-Test is required because (i) a quantitative variable (BOD level) was measured, (ii) two groups are being compared (outlet and inlet), and (ii) the individuals in the groups were \textbf{IN}dependent (note that it said that the outlet samples came from different times then the inlet samples).
   \item The data appear to be part of an observational study with no obvious randomization.
-  \item (i) n = \Sexpr{nrow(aqua)} $>$15 and the histograms \figrefp{fig:AquaHist} are inconclusive about the shape because of the small sample size in each group (it appears that the \var{inlet} data is not strongly skewed, whereas the \var{outlet} data is skewed, which may invalidate the results of this hypothesis test; however, I continued to make a complete example), (ii) individuals in the two samples are independent as discussed above, and (iii) the variances appear to be equal because the Levene's test p-value (=\Sexpr{kPvalue(levenesTest(BOD~src,data=aqua)[1,"Pr(>F)"],include.p=FALSE)}) is greater than $\alpha$.
+  \item (i) n = \Sexpr{nrow(aqua)} $>$15 and the histograms \figrefp{fig:AquaHist} are inconclusive about the shape because of the small sample size in each group (it appears that the \var{inlet} data is not strongly skewed, whereas the \var{outlet} data is skewed, which may invalidate the results of this hypothesis test; however, I continued to make a complete example), (ii) individuals in the two groups are independent as discussed above, and (iii) the variances appear to be equal because the Levene's test p-value (=\Sexpr{kPvalue(levenesTest(BOD~src,data=aqua)[1,"Pr(>F)"],include.p=FALSE)}) is greater than $\alpha$.
   \item $\bar{x}_{outlet}-\bar{x}_{inlet}$ = \Sexpr{formatC(aqua.t$estimate[1],format="f",digits=2)} $-$ \Sexpr{formatC(aqua.t$estimate[2],format="f",digits=2)} = \Sexpr{formatC(aqua.t$estimate[1]-aqua.t$estimate[2],format="f",digits=2)} \tabrefp{tab:2tBOD}.
   \item $t$ = \Sexpr{formatC(aqua.t$statistic,format="f",digits=3)} with \Sexpr{formatC(aqua.t$parameter,format="f",digits=0)} df \tabrefp{tab:2tBOD}.
   \item p-value \Sexpr{kPvalue(aqua.t$p.value,include.p=FALSE)} \tabrefp{tab:2tBOD}.
