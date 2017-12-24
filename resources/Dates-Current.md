@@ -17,17 +17,17 @@ Note that some of the more distant dates are subject to change.
 <!---
 --->
 <tr><td>W 10-Jan</td>
-    <td><a href="../modules/GettingDataIntoR">Syllabus</a></td>
+    <td><a href="Syllabus-Current">Syllabus</a><br><a href="../modules/WhyStats">Why Stats is Important?</a></td>
     <td>--</td></tr>
 <tr><td>F 12-Jan</td>
-    <td><a href="../modules/GettingDataIntoR">Getting Data Into R</a></td>
+    <td><a href="../modules/FoundationalDefns">Foundational Defitions</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 15-Jan</td>
     <td colspan="2"><span style="color:red">NO CLASS (Martin Luther King Jr. Day)</span></td></tr>
 <tr><td>W 17-Jan</td>
-    <td><a href="../modules/GettingDataIntoR">Getting Data Into R</a></td>
+    <td><a href="../modules/DataProduction">Data Production</a></td>
     <td>--</td></tr>
 <tr><td>F 19-Jan</td>
     <td><a href="../modules/GettingDataIntoR">Getting Data Into R</a></td>
@@ -35,10 +35,10 @@ Note that some of the more distant dates are subject to change.
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 22-Jan</td>
-    <td><a href="../modules/UEDAQuant1">Summaries for One Quant ...</a></td>
+    <td><a href="../modules/GettingDataIntoR">Getting Data Into R</a></td>
     <td>--</td></tr>
 <tr><td>W 24-Jan</td>
-    <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant</a></td>
+    <td><a href="../modules/UEDAQuant1">Summaries for One Quant ...</a></td>
     <td>--</td></tr>
 <tr><td>F 26-Jan</td>
     <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant</a></td>
@@ -46,31 +46,31 @@ Note that some of the more distant dates are subject to change.
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 29-Jan</td>
-    <td><a href="../modules/UEDACat">Univariate EDA - Categorical</a></td>
+    <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant</a></td>
     <td>--</td></tr>
 <tr><td>W 31-Jan</td>
     <td colspan="2"><span style="color:red">First Exam</span></td></tr>
 <tr><td>F 2-Feb</td>
-    <td><a href="../modules/NormalDist">Normal Distributions</a></td>
+    <td><a href="../modules/UEDACat">Univariate EDA - Categorical</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 5-Feb</td>
-    <td><a href="../modules/BEDACat">Bivariate EDA - Categorical</a></td>
+    <td><a href="../modules/NormalDist">Normal Distributions</a></td>
     <td>--</td></tr>
 <tr><td>W 7-Feb</td>
-    <td><a href="../modules/BEDAQuant">Bivariate EDA - Quantitative</a></td>
+    <td><a href="../modules/NormalDist">Normal Distributions</a></td>
     <td>Exam 1 Reflection (Optional)</td></tr>
 <tr><td>F 9-Feb</td>
-    <td>xx</td>
+    <td><a href="../modules/BEDACat">Bivariate EDA - Categorical</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 12-Feb</td>
-    <td>xx</td>
+        <td><a href="../modules/BEDAQuant">Bivariate EDA - Quantitative</a></td>
     <td>--</td></tr>
 <tr><td>W 14-Feb</td>
-    <td>--</td>
+    <td><a href="../modules/LinearRegression">Linear Regression</a></td>
     <td>--</td></tr>
 <tr><td>F 16-Feb</td>
     <td><a href="../modules/LinearRegression">Linear Regression</a></td>
@@ -78,7 +78,7 @@ Note that some of the more distant dates are subject to change.
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 19-Feb</td>
-    <td><a href="../modules/LinearRegression">Linear Regression</a></td>
+    <td><a href="../modules/SamplingDist">Sampling Distributions</a></td>
     <td>--</td></tr>
 <tr><td>W 21-Feb</td>
     <td colspan="2"><span style="color:red">Second Exam</span></td></tr>
@@ -88,14 +88,14 @@ Note that some of the more distant dates are subject to change.
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 26-Feb</td>
-    <td><a href="../modules/Probability">Probability</a></td>
+    <td><a href="../modules/HypTesting">Hypothesis Testing</a></td>
     <td>--</td></tr>
 <tr><td>W 28-Feb</td>
     <td><a href="../modules/HypTesting">Hypothesis Testing</a></td>
     <td>Exam 2 Reflection (Optional)</td></tr>
 <tr><td>F 2-Mar</td>
-    <td></td>
-    <td></td></tr>
+    <td><a href="../modules/HypTesting">Hypothesis Testing</a></td>
+    <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 5-Mar</td>
@@ -107,30 +107,30 @@ Note that some of the more distant dates are subject to change.
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 12-Mar</td>
-    <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
-    <td></td></tr>
+    <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
+    <td>--</td></tr>
 <tr><td>W 14-Mar</td>
-    <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
+    <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
     <td>--</td></tr>
 <tr><td>F 16-Mar</td>
-    <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
-    <td></td></tr>
+    <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
+    <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 19-Mar</td>
-    <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
+    <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
     <td>--</td></tr>
 <tr><td>W 21-Mar</td>
-    <td>--</td>
-    <td></td></tr>
+    <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
+    <td>--</td></tr>
 <tr><td>F 23-Mar</td>
-    <td><a href="../modules/SamplingDist">Sampling Distributions</a></td>
+    <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 26-Mar</td>
-    <td>--</td>
-    <td></td></tr>
+    <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
+    <td>--</td></tr>
 <tr><td>W 28-Mar</td>
     <td colspan="2"><span style="color:red">Third Exam</span></td></tr>
 <tr><td>F 30-Mar</td>
@@ -141,30 +141,30 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
     <td><a href="../modules/1Samplet_HW">1-Sample t-Test HW</a></td></tr>
 <tr><td>W 4-Apr</td>
-    <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
-    <td></td></tr>
+    <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
+    <td>--</td></tr>
 <tr><td>F 6-Apr</td>
     <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
     <td>Exam 3 Reflection (Optional)</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 9-Apr</td>
-    <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
+    <td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td>
     <td>--</td></tr>
 <tr><td>W 11-Apr</td>
-    <td>Final Exam Work</td>
+    <td>Course Review</td>
     <td>--</td></tr>
 <tr><td>F 13-Apr</td>
-    <td>Final Exam Work</td>
+    <td>Course Review</td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 16-Apr</td>
-    <td>Final Exam Work</td>
+    <td>Course Review</td>
     <td>XC Reports (optional)</td></tr>
 <tr><td>W 18-Apr</td>
-    <td>Final Exam Work</td>
-    <td></td></tr>
+    <td>Course Review</td>
+    <td>--</td></tr>
 <tr><td>F 20-Apr</td>
     <td colspan="2"><span style="color:red">Final Exam</span></td></tr>
 </table>
