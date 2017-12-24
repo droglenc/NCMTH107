@@ -5,7 +5,7 @@ css: /css/syllabus.css
 ---
 
 <div class="alert alert-info">
-For each class period ("Date"), the module to prepare for is shown under "Quiz Preparation." Any items that should be turned in on that date are under "Items Due." All of these dates will be announced in class.
+For each class period ("Date"), the module to prepare for is shown under "Reading." Any items that should be turned in on that date are under "Items Due." All of these dates will be announced in class.
 </div>
 
 <div class="alert alert-warning">
@@ -13,7 +13,7 @@ Note that some of the more distant dates are subject to change.
 </div>
 
 <table width="100%">
-<tr><th width="18%">Date</th><th width="36%">Quiz Preparation</th><th width="46%">Items Due</th></tr>
+<tr><th width="18%">Date</th><th width="36%">Reading</th><th width="46%">Items Due</th></tr>
 <!---
 --->
 <tr><td>W 10-Jan</td>
@@ -139,7 +139,7 @@ Note that some of the more distant dates are subject to change.
 
 <tr><td>M 2-Apr</td>
     <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
-    <td><a href="../modules/1Samplet_HW">1-Sample t-Test HW</a></td></tr>
+    <td>--</td></tr>
 <tr><td>W 4-Apr</td>
     <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
     <td>--</td></tr>
