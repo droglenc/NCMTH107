@@ -15,149 +15,156 @@ Note that some of the more distant dates are subject to change.
 <table width="100%">
 <tr><th width="18%">Date</th><th width="36%">Quiz Preparation</th><th width="46%">Items Due</th></tr>
 <!---
-<tr><td>M 11-Sep</td>
-    <td><a href="../modules/DataProduction">DataProduction</a></td>
-    <td><a href="../modules/WhyStats_HW">Why Statistics is Important HW</a></td></tr>
-<tr><td>W 13-Sep</td>
+--->
+<tr><td>W 10-Jan</td>
+    <td><a href="../modules/GettingDataIntoR">Syllabus</a></td>
+    <td>--</td></tr>
+<tr><td>F 12-Jan</td>
     <td><a href="../modules/GettingDataIntoR">Getting Data Into R</a></td>
-    <td><a href="../modules/FoundationalDefns_HW">Foundational Definitions HW</a></td></tr>
-<tr><td>F 15-Sep</td>
-    <td><a href="../modules/GettingDataIntoR">Getting Data Into R</a></td>
-    <td><a href="../modules/DataProduction_HW">Data Production HW</a></td></tr>
+    <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
-<tr><td>M 18-Sep</td>
+
+<tr><td>M 15-Jan</td>
+    <td colspan="2"><span style="color:red">NO CLASS (Martin Luther King Jr. Day)</span></td></tr>
+<tr><td>W 17-Jan</td>
+    <td><a href="../modules/GettingDataIntoR">Getting Data Into R</a></td>
+    <td>--</td></tr>
+<tr><td>F 19-Jan</td>
+    <td><a href="../modules/GettingDataIntoR">Getting Data Into R</a></td>
+    <td>--</td></tr>
+<tr><td></td><td></td><td></td></tr>
+
+<tr><td>M 22-Jan</td>
     <td><a href="../modules/UEDAQuant1">Summaries for One Quant ...</a></td>
     <td>--</td></tr>
-<tr><td>W 20-Sep</td>
+<tr><td>W 24-Jan</td>
     <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant</a></td>
-    <td><a href="../modules/GettingDataIntoR_HW">Getting Data Into R HW</a></td></tr>
-<tr><td>F 22-Sep</td>
+    <td>--</td></tr>
+<tr><td>F 26-Jan</td>
     <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
-<tr><td>M 25-Sep</td>
+<tr><td>M 29-Jan</td>
     <td><a href="../modules/UEDACat">Univariate EDA - Categorical</a></td>
     <td>--</td></tr>
-<tr><td>W 27-Sep</td>
+<tr><td>W 31-Jan</td>
     <td><a href="../modules/NormalDist">Normal Distributions</a></td>
-    <td><a href="../modules/UEDAQuant2_HW2">Univariate EDA - Quant HW</a></td></tr>
-<tr><td>F 29-Sep</td>
+    <td>--</td></tr>
+<tr><td>F 2-Feb</td>
     <td><a href="../modules/NormalDist">Normal Distributions</a></td>
-    <td><a href="../modules/UEDACat_HW">Univariate EDA - Cat HW</a></td></tr>
+    <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
-<tr><td>M 2-Oct</td>
+<tr><td>M 5-Feb</td>
     <td><a href="../modules/BEDACat">Bivariate EDA - Categorical</a></td>
     <td>--</td></tr>
-<tr><td>W 4-Oct</td>
+<tr><td>W 7-Febt</td>
     <td><a href="../modules/BEDAQuant">Bivariate EDA - Quantitative</a></td>
-    <td><a href="../modules/NormalDist_HW2">Normal Distributions HW</a></td></tr>
-<tr><td>F 6-Oct</td>
-    <td>Exam Prep</td>
-    <td><a href="../modules/BEDACat_HW2">Bivariate EDA - Cat</a></td></tr>
+    <td>--</td></tr>
+<tr><td>F 9-Feb</td>
+    <td>xx</td>
+    <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
-<tr><td>M 9-Oct</td>
-    <td>Exam Prep</td>
-    <td><a href="../modules/BEDAQuant_HW2">Bivariate EDA - Quant</a></td></tr>
-<tr><td>W 11-Oct</td>
+<tr><td>M 12-Feb</td>
+    <td>xx</td>
+    <td>--</td></tr>
+<tr><td>W 14-Feb</td>
     <td colspan="2"><span style="color:red">First Exam</span></td></tr>
-<tr><td>F 13-Oct</td>
+<tr><td>F 16-Feb</td>
     <td><a href="../modules/LinearRegression">Linear Regression</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
-<tr><td>M 16-Oct</td>
+<tr><td>M 19-Feb</td>
     <td><a href="../modules/LinearRegression">Linear Regression</a></td>
     <td>--</td></tr>
-<tr><td>W 18-Oct</td>
+<tr><td>W 21-Feb</td>
     <td><a href="../modules/SamplingDist">Sampling Distributions</a></td>
     <td>Exam 1 Reflection (Optional)</td></tr>
-<tr><td>F 20-Oct</td>
+<tr><td>F 23-Feb</td>
     <td><a href="../modules/Probability">Probability</a></td>
-    <td><a href="../modules/LinearRegression_HW2">Linear Regression HW</a></td></tr>
+    <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
-<tr><td>M 23-Oct</td>
+<tr><td>M 26-Feb</td>
     <td colspan="2"><span style="color:red">NO CLASS (College Reading Day)</span></td></tr>
-<tr><td>W 25-Oct</td>
+<tr><td>W 28-Feb</td>
     <td><a href="../modules/HypTesting">Hypothesis Testing</a></td>
-    <td><a href="../modules/SamplingDist_HW">Sampling Distributions HW</a><br>
-    <a href="../modules/Probability_HW">Probability HW</a></td></tr>
-<tr><td>F 27-Oct</td>
+    <td>--</td></tr>
+<tr><td>F 2-Mar</td>
     <td></td>
     <td></td></tr>
 <tr><td></td><td></td><td></td></tr>
 
-<tr><td>M 30-Oct</td>
-    <td><a href="../modules/HypTesting">Hypothesis Testing</a></td>
-    <td></td></tr>
-<tr><td>W 1-Nov</td>
-    <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
-    <td><a href="../modules/HypTesting_HW">Hypothesis Testing HW</a></td></tr>
-<tr><td>F 3-Nov</td>
-    <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
-    <td></td></tr>
+<tr><td>M 5-Mar</td>
+    <td colspan="2"><span style="color:red">NO CLASS (Mid-Session)</span></td></tr>
+<td>M 7-Mar</td>
+    <td colspan="2"><span style="color:red">NO CLASS (Mid-Session)</span></td></tr>
+<td>M 9-Mar</td>
+    <td colspan="2"><span style="color:red">NO CLASS (Mid-Session)</span></td></tr>
 <tr><td></td><td></td><td></td></tr>
 
-<tr><td>M 6-Nov</td>
+<tr><td>M 12-Mar</td>
     <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
     <td></td></tr>
-<tr><td>W 8-Nov</td>
+<tr><td>W 14-Mar</td>
     <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
-    <td><a href="../modules/ConfRegions_HW">Confidence Regions HW</a></td></tr>
-<tr><td>F 10-Nov</td>
+    <td>--</td></tr>
+<tr><td>F 16-Mar</td>
     <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
     <td></td></tr>
 <tr><td></td><td></td><td></td></tr>
 
-<tr><td>M 13-Nov</td>
+<tr><td>M 19-Mar</td>
     <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
-    <td><a href="../modules/1SampleZ_HW">1-Sample Z-Test HW</a></td></tr>
-<tr><td>W 15-Nov</td>
+    <td>--</td></tr>
+<tr><td>W 21-Mar</td>
     <td>--</td>
     <td></td></tr>
-<tr><td>F 17-Nov</td>
+<tr><td>F 23-Mar</td>
     <td colspan="2"><span style="color:red">Second Exam</span></td></tr>
 <tr><td></td><td></td><td></td></tr>
 
-<tr><td>M 20-Nov</td>
-    <td colspan="2"><span style="color:red">NO CLASS (Thanksgiving)</span></td></tr>
-<tr><td>W 22-Nov</td>
-    <td colspan="2"><span style="color:red">NO CLASS (Thanksgiving)</span></td></tr>
-<tr><td>F 24-Nov</td>
-    <td colspan="2"><span style="color:red">NO CLASS (Thanksgiving)</span></td></tr>
+<tr><td>M 26-Mar</td>
+    <td>--</td>
+    <td></td></tr>
+<tr><td>W 28-Mar</td>
+    <td>--</td>
+    <td></td></tr>
+<tr><td>F 30-Mar</td>
+    <td colspan="2"><span style="color:red">NO CLASS (Good Friday)</span></td></tr>
 <tr><td></td><td></td><td></td></tr>
 
-<tr><td>M 27-Nov</td>
+<tr><td>M 2-Apr</td>
     <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
     <td><a href="../modules/1Samplet_HW">1-Sample t-Test HW</a></td></tr>
-<tr><td>W 29-Nov</td>
+<tr><td>W 4-Apr</td>
     <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
     <td></td></tr>
-<tr><td>F 1-Dec</td>
+<tr><td>F 6-Apr</td>
     <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
     <td>Exam 2 Reflection (Optional)</td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
-<tr><td>M 4-Dec</td>
+
+<tr><td>M 9-Apr</td>
     <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
-    <td><a href="../modules/2Samplet_HW">2-Sample t-Test HW</a></td></tr>
-<tr><td>W 6-Dec</td>
+    <td>--></td></tr>
+<tr><td>W 11-Apr</td>
     <td>Final Exam Work</td>
     <td>--</td></tr>
-<tr><td>F 8-Dec</td>
+<tr><td>F 13-Apr</td>
     <td>Final Exam Work</td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
-<tr><td>M 11-Dec</td>
+<tr><td>M 16-Dec</td>
     <td>Final Exam Work</td>
     <td>XC Reports (optional)</td></tr>
-<tr><td>W 13-Dec</td>
+<tr><td>W 18-Dec</td>
     <td>Final Exam Work</td>
     <td></td></tr>
-<tr><td>F 15-Dec</td>
+<tr><td>F 20-Dec</td>
     <td colspan="2"><span style="color:red">Final Exam</span></td></tr>
 </table>
