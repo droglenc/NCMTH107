@@ -67,13 +67,12 @@ An overall score will be computed from the items and associated weights listed i
 
 <form name="GRADECALC">
 <table class="grader" width="90%">
-<tr><th width="14%"></th>
 <th width="20%"><a href="#reading-check">Reading<br>Check</a></th>
 <th width="20%"><a href="#participation">Participation</a></th>
 <th width="15%"><a href="#quizzes">Quiz 1</a></th>
 <th width="15%"><a href="#quizzes">Quiz 2</a></th>
 <th width="15%"><a href="#quizzes">Quiz 3</a></th>
-<th width="15%"><a href="#exams">Final</a></th>
+<th width="15%"><a href="#quizzes">Final</a></th>
 </tr>
 
 <tr><th>Weight</th>
