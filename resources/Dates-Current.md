@@ -100,9 +100,9 @@ Note that some of the more distant dates are subject to change.
 
 <tr><td>M 5-Mar</td>
     <td colspan="2"><span style="color:red">NO CLASS (Mid-Session)</span></td></tr>
-<td>M 7-Mar</td>
+<tr><td>M 7-Mar</td>
     <td colspan="2"><span style="color:red">NO CLASS (Mid-Session)</span></td></tr>
-<td>M 9-Mar</td>
+<tr><td>M 9-Mar</td>
     <td colspan="2"><span style="color:red">NO CLASS (Mid-Session)</span></td></tr>
 <tr><td></td><td></td><td></td></tr>
 
@@ -150,7 +150,7 @@ Note that some of the more distant dates are subject to change.
 
 <tr><td>M 9-Apr</td>
     <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
-    <td>--></td></tr>
+    <td>--</td></tr>
 <tr><td>W 11-Apr</td>
     <td>Final Exam Work</td>
     <td>--</td></tr>
