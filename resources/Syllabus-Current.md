@@ -104,11 +104,11 @@ Letter grades will be assigned by comparing your overall percentage (rounded to 
 
 
 ### Reading Check
-You should prepare for each class period by reading the module indicated on the [Dates page](Dates-Current) and announced at the end of the previous class period. A preparation guide is provided for each module to help you identify key concepts in the reading ([here's an example](../modules/FoundationalDefns_Prep.html){:target="_blank"}). You should prepare your own **hand-written**[^1] answers or notes to each question on the preparation guide. A "reading check survey" will be administered during the **FIRST 8 minutes of EVERY** class period. You may use **your hand-written notes**, but no other resources, for these reading checks. **Reading checks not completed in the first 8 minutes of class cannot be made up. Reading check surveys taken from outside of the classroom will not be accepted.**
+You should prepare for each class period by reading the module indicated on the [Dates page](Dates-Current) and announced at the end of the previous class period. A preparation guide is provided for each module to help you identify key concepts in the reading ([here's an example](../modules/FoundationalDefns_Prep.html){:target="_blank"}). You should prepare your own **hand-written**[^1] answers or notes to each question on the preparation guide. A "reading check survey" will be administered during the **FIRST 8 minutes of EVERY** class period. You may use your hand-written notes, but no other resources, for these reading checks. **Reading checks not completed in the first 8 minutes of class cannot be made up. Reading check surveys taken from outside of the classroom will not be accepted.**
 
 
 ### Participation
-This class is taught in an active learning format. Outside of class you will be asked to prepare answers to a reading for each class period (as described above) and completed exercises begun in class. Your preparation outside of class will be assessed by me periodically (*without prior notice*) collecting evidence for your preparation. Such evidence may include your written answers to the preparation guide (described above) or your written answers to exercises that were to be completed outside of class. These items will largely be graded on a "did you do it" basis, but I may deduct points for class exercises that are grossly incorrect.
+This class is taught in an active learning format. Outside of class you will be asked to prepare answers to a reading for each class period (as described above) and complete exercises begun in class. Your preparation outside of class will be assessed by me periodically (*without prior notice*) collecting evidence for your preparation. Such evidence may include your written answers to the preparation guide (described above) or your written answers to exercises that were to be completed outside of class. These items will largely be graded on a "did you do it" basis, but points may be deducted for class exercises that are grossly incorrect.
 
 In class you will be asked to actively participate (listen, take notes) in short lectures, work on in-class exercises, ask questions of other students and the instructor, and, occasionally, work in small groups. Our time during class is short and precious, thus you will need to be focused and attentive during the entire class period. To encourage your full participation, I will assess your level of participation at the end of each class period with the following rubric.
 
@@ -138,7 +138,7 @@ The following behaviors are indicative of full participation:
 As a general rule-of-thumb[^2], students are expected to spend between 2-3 hours of time outside of class for each hour in class. This course meets for 4.5 hours per week and, thus, you should dedicate between 9 and 13.5 hours of time outside of class preparing for class, completing homework and other assessments, and studying for exams. **The work required for this course can be completed within this expected amount of time, if that time is without distraction**. If you feel that you are spending an inordinate amount of time on some assignments because you are "stuck," then start your assignments early so that you can stop (and do other things) and make plans to see the [tutors](#tutors) or [me](#instructor) for help.
 
 
-### Quizzs
+### Quizzes
 Quiz dates are shown on the [Due Dates page](Dates-Current.html){:target="_blank"}. Make-up quizzes will be provided only if you have a fixed commitment of sufficient importance that was set before the beginning of the semester or a verifiable medical condition. **You will not be allowed to make up a quiz missed without my prior approval. The final quiz will NOT be given early.**
 
 
@@ -163,18 +163,17 @@ Under [Northland College policy](https://my.northland.edu/student-policies/acade
 
 <img class="img-right" src="../img/cell-cheat.jpg">
 
-Your conduct in class should revolve around the idea of being respectful of all others in the class. Adhering to the following behaviors should be considered the minimum requirements to being respectful of others:
+Your conduct in class should revolve around the ideas of full participation (see above) and being respectful of all others in the class. Adhering to the following behaviors should be considered the minimum requirements to meeting these dual expectations for conduct:
 
 * Arrive to class on time. If you arrive late, then take the first available seat as quietly as possible. If you need to leave early, then please sit near the exit.
 * You are expected to attend the entire class period. Leaving class early defeats the purpose of the class period, does not take advantage of resources (i.e., the professor) that can significantly help your learning, and does not build statistical stamina. Please take care of your personal needs (e.g., using the restroom) before class so that you can stay focused for the entire class period.
-* Turn your computer on immediately so that you can promptly begin the daily quiz.
+* Turn your computer on immediately so that you can promptly begin the daily reading check.
 * Computer use is limited to class work.
-* You **may note use your own computer** unless you clear it with me first at the beginning of the semester.
+* You **may not use your own computer** unless you clear it with me first at the beginning of the semester.
 * Turn off and store out-of-sight cell phones and other electronic devices.
 * You **may not listen to music** (or otherwise wear ear buds) during class.
 * Do not engage in side discussions while I or others are speaking to the entire class.
 *	Do not sleep in class -- this behavior is rude and distracting to others (especially the professor).
-* Unpack before and pack after class -- opening and closing  backpacks, rustling of papers or jackets is disruptive and disrespectful to others.
 * Do not use disrespectful language when addressing others.
 
 Finally, note that the [College's Academic Integrity Statement & Policy](https://my.northland.edu/student-policies/academic-policies/#academic-integrity){:target="_blank"} will be followed in this course. Please make sure that you are familiar with its content.
@@ -185,6 +184,8 @@ Finally, note that the [College's Academic Integrity Statement & Policy](https:/
 It is the policy and practice of Northland College to create inclusive and accessible learning environments consistent with federal and state law. *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course. *If you have not yet established services* through OAR, but have a condition that requires accommodations (e.g., attention, learning, vision, hearing, mental, physical, or other health related concern), you should contact OAR (Ponzio 231 or 715-682-1387) or [Donna Jones-Ilsley, Coordinator of Student Accessibility Resources](mailto:djones-ilsley@northland.edu).
 
 ---
+
+### Footnotes
 
 [^1]: I believe the research (e.g., [here](http://www.medicaldaily.com/why-using-pen-and-paper-not-laptops-boosts-memory-writing-notes-helps-recall-concepts-ability-268770){:target="_blank"}, [here](http://www.pbs.org/wgbh/nova/next/body/taking-notes-by-hand-could-improve-memory-wt/){:target="_blank"}, and [here](http://www.lifehack.org/articles/featured/writing-and-remembering-why-we-remember-what-we-write.html){:target="_blank"}) that suggests that you are more likely to remember concepts if you hand-write those concepts down, rather than copy-and-pasting or typing the text.
 
