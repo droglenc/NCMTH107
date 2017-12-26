@@ -51,9 +51,8 @@ Use the materials below to answer the questions on [this preparation guide](Data
 
 ## Practice
 
+* [Practice Exercises](DataProduction_CE1) ([*more*](DataProduction_CE2)
 * [Review Exercises](DataProduction_RevEx)
-* In-Class Exercises: [1](DataProduction_CE1) / [2](DataProduction_CE2) /  [3](DataProduction_CE3) / [4](DataProduction_CE4) (*time permitting* ... [5](DataProduction_CE5))
-* [Homework Assignment](DataProduction_HW)
 
 ----
 
