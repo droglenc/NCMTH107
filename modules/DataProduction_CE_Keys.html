@@ -8,6 +8,9 @@ css: "/css/modules.css"
 
 
 <hr />
+<div class="alert alert-warning">
+<p><strong>Note:</strong> The key distinction is to determine if a treatment was imparted by the research or not. If it was, then it is an experiment.</p>
+</div>
 <div id="study-types-i" class="section level2">
 <h2>Study Types I</h2>
 <div class="alert alert-warning">
@@ -55,13 +58,13 @@ css: "/css/modules.css"
 <tbody>
 <tr class="odd">
 <td>No Exercise</td>
-<td>7, 18, 30, 13, 14, 8, 26, 3</td>
-<td>19, 25, 9, 11, 24, 32, 16, 28</td>
+<td>13, 30, 6, 28, 31, 7, 4, 10</td>
+<td>20, 18, 14, 5, 26, 1, 9, 12</td>
 </tr>
 <tr class="even">
 <td>Exercise</td>
-<td>1, 23, 15, 22, 5, 4, 12, 17</td>
-<td>10, 6, 27, 29, 31, 21, 2, 20</td>
+<td>21, 2, 32, 19, 3, 29, 16, 8</td>
+<td>17, 23, 15, 22, 27, 25, 24, 11</td>
 </tr>
 </tbody>
 </table>
@@ -109,15 +112,15 @@ alloc[25:32]  # fourth treatment</code></pre>
 <tbody>
 <tr class="odd">
 <td>10% salt</td>
-<td>7, 18, 30, 13, 14, 8</td>
-<td>26, 3, 19, 25, 9, 11</td>
-<td>24, 32, 16, 28, 1, 23</td>
+<td>13, 30, 6, 28, 31, 7</td>
+<td>4, 10, 20, 18, 14, 5</td>
+<td>26, 1, 9, 12, 21, 2</td>
 </tr>
 <tr class="even">
 <td>15% salt</td>
-<td>15, 22, 5, 4, 12, 17</td>
-<td>10, 6, 27, 29, 31, 21</td>
-<td>2, 20, NA, NA, NA, NA</td>
+<td>32, 19, 3, 29, 16, 8</td>
+<td>17, 23, 15, 22, 27, 25</td>
+<td>24, 11, NA, NA, NA, NA</td>
 </tr>
 </tbody>
 </table>
@@ -170,11 +173,11 @@ alloc2[31:36]  # sixth treatment</code></pre>
 <pre class="r"><code>&gt; sample(3)  # random order of bats</code></pre>
 <pre><code>[1] 1 2 3</code></pre>
 <pre class="r"><code>&gt; sample(8)  # first order of balls ... 1-4 is first brand, 5-8 second</code></pre>
-<pre><code>[1] 2 7 6 8 4 1 3 5</code></pre>
+<pre><code>[1] 6 1 7 3 5 8 4 2</code></pre>
 <pre class="r"><code>&gt; sample(8)  # second order of balls</code></pre>
-<pre><code>[1] 7 3 1 5 2 4 8 6</code></pre>
+<pre><code>[1] 8 6 5 4 3 7 2 1</code></pre>
 <pre class="r"><code>&gt; sample(8)  # third order of balls</code></pre>
-<pre><code>[1] 8 2 4 6 3 1 5 7</code></pre>
+<pre><code>[1] 3 6 8 7 2 1 4 5</code></pre>
 <hr />
 </div>
 <div id="identify-response-and-explanatory-variables-ii" class="section level2">
