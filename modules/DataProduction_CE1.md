@@ -8,7 +8,7 @@ css: "/css/modules.css"
 ----
 
 ## Study Types I
-For each question below, identify (and explain why) whether it represents an observational or experimental study.
+For each question below, identify whether it represents an observational or experimental study. Explain your reasoning.
 
 1. [Stoll *et al.* (1999)](http://www.ncbi.nlm.nih.gov/pubmed/10232294) followed 30 people with bipolar disorder over a 4‐month period.  Patients who were given a high dose (10 g/day) of omega‐3 fats from fish oil improved more than those given a placebo. 
 1. [Phennix *et al.* (2000)](http://ajp.psychiatryonline.org/doi/abs/10.1176/appi.ajp.157.5.715) followed a group of disabled women aged 65 and older for several years.  Those women who had a vitamin B12 deficiency were twice as likely to suffer severe depression as those who did not. 
@@ -19,7 +19,7 @@ For each question below, identify (and explain why) whether it represents an obs
 ----
 
 ## Types of Observational Studies I
-For each question below, identify (and explain why) whether it represents a voluntary response, convenience, or random sample.
+For each question below, identify whether it represents a voluntary response, convenience, or random sample. Explain your reasoning.
 
 1. A researcher is interested in the makes of cars found in Ashland.  She sits at the corner of Ellis and Hwy 2 and records the makes of cars that are driven by.
 1. A researcher is interested in the makes of cars found in Ashland.  She collects a sample of car registrations for Ashland owners from a statewide database such that each registration had the same chance of being selected.
@@ -32,12 +32,13 @@ For each question below, identify (and explain why) whether it represents a volu
 A student is designing an experiment to determine the simultaneous effects of calcium in the diet and regular exercise on blood pressure.  Some subjects will be given a calcium supplement pill and some will be given a placebo pill.  In addition, some subjects will be required to perform aerobic exercises once a day, whereas others will not.  The researcher has 32 male subjects available that are as similar as possible (similar ages, weights, initial blood pressures, etc.).
 
 1. Explain why this is an observational or experimental study.
+1. What is the response variable?
+1. What kind of variable is the response variable?
 1. What are the factors? [*List all of them.*]
 1. How many levels are there? [*List in same order as factors in answer b.*]
 1. How many treatments are there?
-1. What is the response variable?
-1. What kind of variable is the response variable?
 1. Physically, what is a replicate (not a number)?
+1. How many replicates are there?
 1. Diagram the experimental setup, including placing the unique number of each replicate in the respective treatments. [*The table can be similar to the one just above section 3.1.5 in the reading. Show your R work for how you placed these individuals in the R appendix.*]
 
 ----

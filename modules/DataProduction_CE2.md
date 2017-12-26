@@ -6,7 +6,7 @@ css: "/css/modules.css"
 ---
 
 ## Study Types II
-For each question below, identify (and explain why) whether it represents an observational or experimental study.
+For each question below, identify whether it represents an observational or experimental study. Explain your reasoning.
 
 1. [Hagerman *et al.* (2000)](http://biomedgerontology.oxfordjournals.org/content/55/7/B336.abstract) found that the leg muscles of men aged 60 to 75 were 50% to 80% stronger after they participated in a 16‐week, high‐intensity resistance‐training program twice a week. 
 1. [Muscat *et al.* (2000)]() examined the relationship between cell phone usage and the risk of brain cancer.  They obtained a group of 469 people who had brain cancer and matched each cancer patient with a person of the same age, sex, and race who did not have brain cancer.  They then asked all individuals about their frequency of cell phone use.  Their final conclusion was that "*[o]ur data suggest that the use of hand-held cellular phones is not associated with risk of brain cancer.*"
@@ -17,7 +17,7 @@ For each question below, identify (and explain why) whether it represents an obs
 ----
 
 ## Types of Observational Studies II
-For each question below, identify (and explain why) whether it represents a voluntary response, convenience, or random sample.
+For each question below, identify whether it represents a voluntary response, convenience, or random sample. Explain your reasoning.
 
 1. A researcher is interested in the makes of cars found in Ashland.  She calls a random sample of Ashland phone numbers and asks the respondents if they will take her survey.  If they do, she records the make of car they own.
 1. The manager at Burger King is interested in customer satisfaction.  To get a handle on this he provides each customer with a short survey card to be completed and returned to a collection box on the front counter.
