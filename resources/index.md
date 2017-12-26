@@ -4,17 +4,17 @@ title: Resources
 ---
 
 ## Administrative
-1. [Daily Quiz](quizzes/)
-1. [Class Exercise Answer Keys](CE_Keys)
+1. [Daily Preparation Check](https://goo.gl/forms/P9v0TeRnLwX86LKT2){:target="_blank"}
+1. [Class Exercise Answer Keys](CE_Keys){:target="_blank"}
 1. [Anonymous Feedback / Suggestions for Dr. Ogle](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}
 
 ## Learning Assistance
 1. [List of Symbols](symbols)
 1. [Common Definitions](definitions)
-1. [11 Steps of Hypothesis Testing](../modules/11-steps)
-1. [Hypothesis Testing Fact Sheet](MTH107-HOcheatsheet.pdf){:target="_blank"} (or as [PPT](MTH107-HOcheatsheet.pptx))
-1. [FAQ](FAQ/)
 1. [R Cheat Sheet](MTH107-Rcheatsheet.pdf){:target="_blank"} (or as [PPT](MTH107-Rcheatsheet.pptx))
+1. [Hypothesis Testing Fact Sheet](MTH107-HOcheatsheet.pdf){:target="_blank"} (or as [PPT](MTH107-HOcheatsheet.pptx))
+1. [11 Steps of Hypothesis Testing](../modules/11-steps)
+1. [FAQ](FAQ/)
 
 ## Computer
 1. [Data Files](data_107)
