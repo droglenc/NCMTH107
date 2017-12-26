@@ -11,13 +11,13 @@ css: "/css/modules.css"
 <img src="zimgs/data-recording.jpg" alt="Recording Data" class="img-right">
 For each question below, identify the specific type of variable. Include a short sentence that explains your reasoning.
 
-1. miles driven per week
-1. type of vehicle (e.g., SUV, sedan, ...)
-1. signs of disease or not (Y/N)
-1. number of fleas found per rabbit
-1. relative health of a rabbit (poor, good, excellent)
-1. species of rabbit (Cottontail, Snowshoe, ...)
-1. number of correct answers
+1. Miles driven per week by a student.
+1. Type of vehicle (e.g., SUV, sedan, ...) driven by a student.
+1. Signs of disease or not (Y/N) on a rabbit.
+1. Number of fleas found per rabbit.
+1. Relative health of a rabbit (poor, good, excellent).
+1. Species of rabbit (Cottontail, Snowshoe, ...).
+1. Number of correct answers on an exam.
 1. The concentration (ppm) of lead at 119 sites in Chequamegon Bay.
 1. An actuary rates potential insurees as "low risk", "moderate risk", or "high risk".
 1. A sociologist asked respondents from which medium they receive most of their information about wolves: "TV", "Newspaper", "Outdoor Magazines", "Public Policy Meetings", "Friends or Family", or "Other".

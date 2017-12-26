@@ -8,15 +8,36 @@ css: "/css/modules.css"
 
 ----
 
+## Types of Variables I
+
+1. Type of vehicle is categorical, nominal because the types represent groups but there is no order among the groups.
+1. Signs of disease is categorical, nominal because "yes" and "no" are groups and a categorical variables with two levels is nominal by definition.
+1. Number of fleas is quantitative, discrete because another value can NOT be found between all pairs of numbers of fleas (e.g., there cannot be between 10 and 11 fleas).
+1. Relative health of a rabbit is categorical, ordinal because the health was organized by groups (e.g., excellent) and those groupings were ordered.
+1. Species of rabbit is categorical, nominal because species is a type of group, but there is no order among those groups.
+1. Number of correct answers is quantitative, discrete because a value cannot be found between all pairs of correct answers (e.g., there cannot be between 19 and 20 correct answers).
+1. Concentration of lead is quantitative, continuous because a value can be found between any pair of lead concentrations.
+1. Risk potential is categorical, ordinal because a grouping was created (e.g., "high rish") and those groupings have an order.
+1. Information medium is categorical, nominal because they are types, but those types do not have an ordering.
+1. The Koppen scheme is definitely categorical and I think it is nominal because I don't see an ordering in the given categories (i.e., they don't appear to range from wet to dry, cold to hot, north to south).
+
+----
+
+## Types of Variables II
+
+1. Answers will vary by student. See instructor if you have questions about your example.
+
+----
+
 ## Sustainability Survey
 
 * I - A Northland College Student in Fall, 2013
 * V - Number of miles driven per week
-* Po - All Northland College Students in Fall, 2013
+* Po - **ALL** Northland College Students in Fall, 2013
 * Pa - *Average* number of miles driven per week by **ALL** Northland College Students in Fall, 2013
 * Sa - 147 sampled Northland College students
 * St - *Average* number of miles driven per week by 147 sampled Northland College Students in Fall, 2013 
-* Variable Type - Quantitative, Continuous
+* Variable Type - Miles driven per week is quantitative, continuous because another value can be found been any two miles driven.
 
 ----
 
@@ -24,37 +45,47 @@ css: "/css/modules.css"
 
 * I - A December in Duluth, MN in recorded history
 * V - Total snowfall amount
-* Po - **All** December in Duluth, MN in recorded history
-* Pa -- *Average* total snowfall amount from ALL Decembers in Duluth, MN in recorded history
+* Po - **ALL** December in Duluth, MN in recorded history
+* Pa -- *Average* total snowfall amount from **ALL** Decembers in Duluth, MN in recorded history
 * Sa - 35 randomly sampled Decembers in Duluth, MN
 * St - *Average* total snowfall amount for the 35 sampled Decembers
-* Variable Type - Quantitative, Continuous
+* Variable Type - Total snowfall is quantitative, continuous because a value can be found between any two snowfall amounts.
 
 ----
 
-## Types of Variables
+## Crayfish and Bass
 
-1. Below
-    1. Quantitative, Continuous
-    1. Categorical, Nominal
-    1. Categorical, Nominal (by definition)
-    1. Quantitative, Discrete
-    1. Categorical, Ordinal
-    1. Categorical, Nominal
-    1. Quantitative, Discrete
-1. Answers will vary by student.
+* I - a Rusty Crayfish in the lake with Smallmouth Bass in 2012
+* V - carapace length of Rusty Crayfish
+* Po -**ALL** Rusty Crayfish in the lake with Smallmouth Bass in 2012
+* Pa - *mean* carapace length of **ALL** Rusty Crayfish in the lake with Smallmouth Bass
+* Sa - 235 Rusty Crayfish in the lake with Smallmouth Bass in 2012 that were actually examined
+* St - *mean* carapace length of 235 Rusty Crayfish in the lake with Smallmouth Bass in 2012
+* Variable Type - Carapace length is a continuous quantitative variable because a carapace length can be found between any two carapace lengths.
+  
+----
 
+## Transfer of Invasive Species
+
+* I - a ballast tank on an ocean-going vessel in 2001.
+* V - whether or not the tank contain any living organisms.
+* Po - **ALL** ballast tanks on ocean-going vessels in 2001.
+* Pa - *proportion* of **ALL** ballast tanks that contained living organisms.
+* Sa - 43 ballast tanks in 2001.
+* St - *proportion* of 43 ballast tanks that contained living organisms.
+* Variable Type - Whether or not the tank contains any living organisms is a nominal categorical variable.
+  
 ----
 
 ## Playing Time Among NHL Rookies
 
 * I - A NHL rookie drafted straight from college (... from professional league)
 * V - Playing time (mins) per game
-* Po - **All** NHL rookies drafted straight from college (... from professional league)
-* Pa -- *Average* playing time per game by ALL NHL rookies drafted straight from college (... from professional leagues)
+* Po - **ALL** NHL rookies drafted straight from college (... from professional league)
+* Pa -- *Average* playing time per game by **ALL** NHL rookies drafted straight from college (... from professional leagues)
 * Sa - 25 NHL rookies drafted straight from college (... from professional league)
 * St - *Average* playing time per game by 25 NHL rookies drafted straight from college (... from professional leagues)
-* Variable Type - Quantitative, Continuous (we could define time in smaller increments, we just choose not to)
+* Variable Type - Playing time is quantitative, continuous because an amount of playing time can be found between any two amounts of playing time (note that we could define time in smaller increments, we just choose not to).
 
 ----
 
@@ -62,10 +93,10 @@ css: "/css/modules.css"
 
 * I - A Wisconsin resident that had participated in the three previous surveys
 * V - Response ("Strongly Agree", "Agree", "Neutral", "Disagree", or "Strongly Disagree") to "In general, the DNR is responsive to the concerns of most Wisconsin citizens."
-* Po - **All** Wisconsin resident that had participated in the three previous surveys
-* Pa - *Percent* of ALL Wisconsin residents that had participated in the three previous surveys who either agreed or strongly agreed with the question
+* Po - **ALL** Wisconsin resident that had participated in the three previous surveys
+* Pa - *Percent* of **ALL** Wisconsin residents that had participated in the three previous surveys who either agreed or strongly agreed with the question
 * Sa - 773 sampled Wisconsin residents that had participated in the three previous surveys
 * St - *Percent* of 773 sampled Wisconsin residents that had participated in the three previous surveys who either agreed or strongly agreed with the question
-* Variable Type - Categorical, Ordinal
+* Variable Type - The response to the question is categorical, ordinal because a ranking is asked for and those rankings have an order.
 
 ----
