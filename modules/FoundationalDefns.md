@@ -44,9 +44,8 @@ Use the materials below to answer the questions on [this preparation guide](Foun
 
 ## Practice
 
+* [Practice Exercises](FoundationalDefns_CE)
 * [Review Exercises](FoundationalDefns_RevEx)
-* In-Class Exercises: [1](FoundationalDefns_CE1) / [2](FoundationalDefns_CE2) / [3](FoundationalDefns_CE3)
-* [Homework Assignment](FoundationalDefns_HW)
 
 ----
 
