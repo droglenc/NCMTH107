@@ -7,7 +7,9 @@ title: Class Exercise Keys
   Below are answers to nearly all class exercises. These are provided as a convenience so that you can check your work to identify if you have questions. Please <strong>DO NOT</strong> look at these answers before attempting the exercises. The exercises have no point values and are used only for practice and learning. There is no advantage to "peeking here" first.
 </div>
 
-1. Why Statistics is Important
+1. [Why Statistics is Important](../modules/WhyStats_CE_Keys)
+
+<!---
 1. [Foundational Definitions](../modules/FoundationalDefns_CE_Keys)
 1. [Data Production](../modules/DataProduction_CE_Keys.html)
 1. [Getting Data into RStudio](../modules/GettingDataIntoR_CE_Keys.html)
@@ -27,3 +29,4 @@ title: Class Exercise Keys
 1. [2-Sample t-Test](../modules/2Samplet_CE_Keys.html)
 1. [Chi-Square Test](../modules/ChiSquare_CE_Keys.html)
 1. [Goodness-of-Fit Test](../modules/GOFTest_CE_Keys.html)
+--->
