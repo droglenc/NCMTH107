@@ -23,14 +23,10 @@ source("../rhelpers/knitr_setup.R")
 
 ----
 
-<div class="alert alert-warning">
-  <strong>Note:</strong> The key distinction is to determine if a treatment was imparted by the research or not. If it was, then it is an experiment.
-</div>
-
 ## Study Types I
 
 <div class="alert alert-warning">
-  <strong>Note:</strong> The key distinction is to determine if a treatment was imparted by the research or not. If it was, then it is an experiment.
+<strong>Note:</strong> The key distinction is to determine if a treatment was imparted by the researcher or not. If it was, then it is an experiment.
 </div>
 
 1. Experiment ... the people were given a treatment (placebo or fish oil).
@@ -49,6 +45,12 @@ source("../rhelpers/knitr_setup.R")
 ----
 
 ## Blood Pressure Study
+
+<div class="alert alert-warning">
+<strong>Note:</strong> Make sure to list all of the factors, list levels seperately for each of the factors, and list the number of replicates as the number of individuals PER treatment (not all of the individuals in the experiment).
+</div>
+
+
 1. Experimental ... treatments (see below) were imposed.
 1. The response variable is blood pressure.
 1. Blood pressure is a quantitative, continuous variable because a blood pressure value can be found between any two blood pressure values.
@@ -79,6 +81,10 @@ alloc[25:32]  # fourth treatment
 ----
 
 ## Identify Response and Explanatory Variables I
+<div class="alert alert-warning">
+<strong>Note:</strong> The response variable is potentially responding to or depending on the explanatory variable. The response variable is potentially affected by the explanatory variable.
+</div>
+
 1. The response variable is "success rate" because the distance of the putt effects the success rate (i.e., longer putts likely result in a lower success rate). And success rate (on putts) does not effect the length of a putt.
 1. The response variable is "response time" because the amount of time awake effects the response time (i.e., the longer one is awake, to a point, they will likely show more dexterity). And dexterity (on the test) does not effect how long the subject was awake.
 1. The response variable is growth because growth is effected by the amount of fertilizer.
@@ -134,14 +140,14 @@ alloc2[31:36]  # sixth treatment
 ----
 
 ## Softball Bats and Balls
-1. Experimental ... imparting treatments (ball types and bats were chosen specifically)
-1. Individual .. a "hit"
-1. Below
-    1. Response ... Distance the ball was hit.
-    1. Factors ... Brand of ball and type of bat
-    1. Levels ... 2 brands of ball and 3 types of bat
-    1. Treatments ... 6
-    1. Replicates ... 4 (balls of each brand by each type of bat)
+1. This is an experiment because the researcher is imparting treatments (ball types and bats were chosen specifically).
+1. The response variable is the distance that the ball was hit.
+1. Distance is a quantitative, continuous variable because a distance can always be found between any two distances.
+1. The two factors are brand of ball and type of bat.
+1. There are two levels of ball brand and three levels of bat type.
+1. There are six treatments (unique combinations of two balls and three bats).
+1. There are four replicates (balls of each brand by each type of bat).
+1. A "replicate" (or "individual") in this experiment is a "hit."
 1. I would first randomly order the bats and then randomly order the two brands for each bat.
 ```{r}
 sample(3)  # random order of bats

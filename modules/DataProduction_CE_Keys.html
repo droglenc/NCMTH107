@@ -8,13 +8,10 @@ css: "/css/modules.css"
 
 
 <hr />
-<div class="alert alert-warning">
-<p><strong>Note:</strong> The key distinction is to determine if a treatment was imparted by the research or not. If it was, then it is an experiment.</p>
-</div>
 <div id="study-types-i" class="section level2">
 <h2>Study Types I</h2>
 <div class="alert alert-warning">
-<p><strong>Note:</strong> The key distinction is to determine if a treatment was imparted by the research or not. If it was, then it is an experiment.</p>
+<p><strong>Note:</strong> The key distinction is to determine if a treatment was imparted by the researcher or not. If it was, then it is an experiment.</p>
 </div>
 <ol>
 <li>Experiment … the people were given a treatment (placebo or fish oil).</li>
@@ -36,6 +33,9 @@ css: "/css/modules.css"
 </div>
 <div id="blood-pressure-study" class="section level2">
 <h2>Blood Pressure Study</h2>
+<div class="alert alert-warning">
+<p><strong>Note:</strong> Make sure to list all of the factors, list levels seperately for each of the factors, and list the number of replicates as the number of individuals PER treatment (not all of the individuals in the experiment).</p>
+</div>
 <ol>
 <li>Experimental … treatments (see below) were imposed.</li>
 <li>The response variable is blood pressure.</li>
@@ -58,13 +58,13 @@ css: "/css/modules.css"
 <tbody>
 <tr class="odd">
 <td>No Exercise</td>
-<td>13, 30, 6, 28, 31, 7, 4, 10</td>
-<td>20, 18, 14, 5, 26, 1, 9, 12</td>
+<td>28, 10, 32, 8, 19, 12, 9, 7</td>
+<td>30, 13, 2, 25, 4, 23, 29, 6</td>
 </tr>
 <tr class="even">
 <td>Exercise</td>
-<td>21, 2, 32, 19, 3, 29, 16, 8</td>
-<td>17, 23, 15, 22, 27, 25, 24, 11</td>
+<td>14, 5, 24, 3, 27, 26, 1, 21</td>
+<td>11, 31, 17, 22, 18, 15, 20, 16</td>
 </tr>
 </tbody>
 </table>
@@ -80,6 +80,9 @@ alloc[25:32]  # fourth treatment</code></pre>
 </div>
 <div id="identify-response-and-explanatory-variables-i" class="section level2">
 <h2>Identify Response and Explanatory Variables I</h2>
+<div class="alert alert-warning">
+<p><strong>Note:</strong> The response variable is potentially responding to or depending on the explanatory variable. The response variable is potentially affected by the explanatory variable.</p>
+</div>
 <ol>
 <li>The response variable is “success rate” because the distance of the putt effects the success rate (i.e., longer putts likely result in a lower success rate). And success rate (on putts) does not effect the length of a putt.</li>
 <li>The response variable is “response time” because the amount of time awake effects the response time (i.e., the longer one is awake, to a point, they will likely show more dexterity). And dexterity (on the test) does not effect how long the subject was awake.</li>
@@ -112,15 +115,15 @@ alloc[25:32]  # fourth treatment</code></pre>
 <tbody>
 <tr class="odd">
 <td>10% salt</td>
-<td>13, 30, 6, 28, 31, 7</td>
-<td>4, 10, 20, 18, 14, 5</td>
-<td>26, 1, 9, 12, 21, 2</td>
+<td>28, 10, 32, 8, 19, 12</td>
+<td>9, 7, 30, 13, 2, 25</td>
+<td>4, 23, 29, 6, 14, 5</td>
 </tr>
 <tr class="even">
 <td>15% salt</td>
-<td>32, 19, 3, 29, 16, 8</td>
-<td>17, 23, 15, 22, 27, 25</td>
-<td>24, 11, NA, NA, NA, NA</td>
+<td>24, 3, 27, 26, 1, 21</td>
+<td>11, 31, 17, 22, 18, 15</td>
+<td>20, 16, NA, NA, NA, NA</td>
 </tr>
 </tbody>
 </table>
@@ -158,26 +161,24 @@ alloc2[31:36]  # sixth treatment</code></pre>
 <div id="softball-bats-and-balls" class="section level2">
 <h2>Softball Bats and Balls</h2>
 <ol>
-<li>Experimental … imparting treatments (ball types and bats were chosen specifically)</li>
-<li>Individual .. a “hit”</li>
-<li>Below
-<ol>
-<li>Response … Distance the ball was hit.</li>
-<li>Factors … Brand of ball and type of bat</li>
-<li>Levels … 2 brands of ball and 3 types of bat</li>
-<li>Treatments … 6</li>
-<li>Replicates … 4 (balls of each brand by each type of bat)</li>
-</ol></li>
+<li>This is an experiment because the researcher is imparting treatments (ball types and bats were chosen specifically).</li>
+<li>The response variable is the distance that the ball was hit.</li>
+<li>Distance is a quantitative, continuous variable because a distance can always be found between any two distances.</li>
+<li>The two factors are brand of ball and type of bat.</li>
+<li>There are two levels of ball brand and three levels of bat type.</li>
+<li>There are six treatments (unique combinations of two balls and three bats).</li>
+<li>There are four replicates (balls of each brand by each type of bat).</li>
+<li>A “replicate” (or “individual”) in this experiment is a “hit.”</li>
 <li>I would first randomly order the bats and then randomly order the two brands for each bat.</li>
 </ol>
 <pre class="r"><code>&gt; sample(3)  # random order of bats</code></pre>
 <pre><code>[1] 1 2 3</code></pre>
 <pre class="r"><code>&gt; sample(8)  # first order of balls ... 1-4 is first brand, 5-8 second</code></pre>
-<pre><code>[1] 6 1 7 3 5 8 4 2</code></pre>
+<pre><code>[1] 5 6 8 3 2 1 4 7</code></pre>
 <pre class="r"><code>&gt; sample(8)  # second order of balls</code></pre>
-<pre><code>[1] 8 6 5 4 3 7 2 1</code></pre>
+<pre><code>[1] 3 8 1 2 6 5 7 4</code></pre>
 <pre class="r"><code>&gt; sample(8)  # third order of balls</code></pre>
-<pre><code>[1] 3 6 8 7 2 1 4 5</code></pre>
+<pre><code>[1] 5 8 1 4 7 3 6 2</code></pre>
 <hr />
 </div>
 <div id="identify-response-and-explanatory-variables-ii" class="section level2">

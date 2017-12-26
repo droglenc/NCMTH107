@@ -51,7 +51,7 @@ Use the materials below to answer the questions on [this preparation guide](Data
 
 ## Practice
 
-* [Practice Exercises](DataProduction_CE1) ([*more*](DataProduction_CE2))
+* [Practice Exercises](DataProduction_CE1) ([*more as time permits*](DataProduction_CE2))
 * [Review Exercises](DataProduction_RevEx)
 
 ----
