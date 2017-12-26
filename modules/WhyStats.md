@@ -48,7 +48,6 @@ Use the materials below to answer the questions on [this preparation guide](WhyS
 
 * [In-Class Example](WhyStats_CExmpl1)
 * [Practice Exercises](WhyStats_CE)
-* [Review Exercise](WhyStats_RevEx)
 
 ----
 

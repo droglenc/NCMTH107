@@ -5,7 +5,6 @@ title: Resources
 
 ## Administrative
 1. [Daily Quiz](quizzes/)
-1. [Homework Answer Keys](homework-keys/)
 1. [Class Exercise Answer Keys](CE_Keys)
 1. [Anonymous Feedback / Suggestions for Dr. Ogle](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}
 

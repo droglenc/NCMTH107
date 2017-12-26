@@ -55,6 +55,8 @@ smpl2 <- srsdf(named,n=50,vars=c("county","area"))
 1. The proportion of lakes in my second sample that were from Bayfield County was `r formatC(prop.table(xtabs(~county,data=smpl2))[["Bayfield"]],format="f",digits=3)`. These sample proportions differ, which is an example of sampling variability.
 1. My two sample proportions did not equal the population proportions. I was not surprized because samples do not perfectly represent the entire population. I would expect the statistics from the sample to be near (on average) the population parameter, but not always equal to it.
 
+<br>
+
 ----
 
 ## Frog Survey
