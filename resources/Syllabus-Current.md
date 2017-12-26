@@ -69,7 +69,7 @@ An overall score will be computed from the items and associated weights listed i
 <table class="grader" width="90%">
 <tr><th width="14%"></th>
 <th width="%"><a href="#preparation-check">Prep<br>Check</a></th>
-<th width="20%"><a href="#participation">Participation</a></th>
+<th width="20%"><a href="#participation">Partici-<br>pation</a></th>
 <th width="15%"><a href="#quizzes">Quiz 1</a></th>
 <th width="15%"><a href="#quizzes">Quiz 2</a></th>
 <th width="15%"><a href="#quizzes">Quiz 3</a></th>
