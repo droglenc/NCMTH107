@@ -7,6 +7,14 @@ css: "/css/modules.css"
 
 ----
 
+## Normal Distribution Characteristics II
+
+1. For each situation below, (i) identify &mu;, (ii) identify &sigma;, and (iii) draw the normal distribution with an approximately accurate scale on the x-axis.
+    1. Z~N(0,1)
+    1. Y~N(90,8)
+    
+----
+
 ## Hand Calculations II
 
 Answer each question below, **without using R**, assuming that Z~N(0,1). Show your work with a careful drawing for each question.

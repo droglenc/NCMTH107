@@ -28,7 +28,7 @@ source("../../../rhelpers/knitr_setup.R")
 
 ----
 
-## Normal Distribution Characteristics
+## Normal Distribution Characteristics I
 
 1. Using `snorm()`
     1. The whole distributions shifts to the right.
@@ -108,12 +108,12 @@ distrib(0.25,mean=550,sd=65,type="q",lower.tail=FALSE)
 
 ## Urban Deer Relocations
 
-1. The proportion of deer with home ranges between 0.2 and 0.4 km<sup>^2<\sup> is `r formatC(distrib(0.4,mean=0.3,sd=0.095,plot=FALSE)-distrib(0.2,mean=0.3,sd=0.095,plot=FALSE),format="f",digits=3)`.
-1. The proportion of deer with a home range greater than 0.32 km<sup>^2<\sup> is `r formatC(distrib(0.32,mean=0.3,sd=0.095,lower.tail=FALSE,plot=FALSE),format="f",digits=3)`.
-1. The home range such that 17\% of the deer have a larger home range is `r formatC(distrib(0.17,type="q",mean=0.3,sd=0.095,lower.tail=FALSE,plot=FALSE),format="f",digits=2)` km<sup>^2<\sup>.
-1. The home range such that 32\% of the deer have a smaller home range is `r formatC(distrib(0.32,type="q",mean=0.3,sd=0.095,plot=FALSE),format="f",digits=2)` km<sup>^2<\sup>.
-1. The proportion of deer with a home range less than 0.4 km<sup>^2<\sup> is `r formatC(distrib(0.4,mean=0.3,sd=0.095,plot=FALSE),format="f",digits=3)`.
-1. The most common 48\% of home ranges are between `r formatC(distrib(0.26,type="q",mean=0.3,sd=0.095,plot=FALSE),format="f",digits=2)` and `r formatC(distrib(0.26,type="q",mean=0.3,sd=0.095,lower.tail=FALSE,plot=FALSE),format="f",digits=2)` km<sup>^2<\sup>.
+1. The proportion of deer with home ranges between 0.2 and 0.4 km<sup>^2</sup> is `r formatC(distrib(0.4,mean=0.3,sd=0.095,plot=FALSE)-distrib(0.2,mean=0.3,sd=0.095,plot=FALSE),format="f",digits=3)`.
+1. The proportion of deer with a home range greater than 0.32 km<sup>^2</sup> is `r formatC(distrib(0.32,mean=0.3,sd=0.095,lower.tail=FALSE,plot=FALSE),format="f",digits=3)`.
+1. The home range such that 17% of the deer have a larger home range is `r formatC(distrib(0.17,type="q",mean=0.3,sd=0.095,lower.tail=FALSE,plot=FALSE),format="f",digits=2)` km<sup>^2</sup>.
+1. The home range such that 32% of the deer have a smaller home range is `r formatC(distrib(0.32,type="q",mean=0.3,sd=0.095,plot=FALSE),format="f",digits=2)` km<sup>^2</sup>.
+1. The proportion of deer with a home range less than 0.4 km<sup>^2</sup> is `r formatC(distrib(0.4,mean=0.3,sd=0.095,plot=FALSE),format="f",digits=3)`.
+1. The most common 48% of home ranges are between `r formatC(distrib(0.26,type="q",mean=0.3,sd=0.095,plot=FALSE),format="f",digits=2)` and `r formatC(distrib(0.26,type="q",mean=0.3,sd=0.095,lower.tail=FALSE,plot=FALSE),format="f",digits=2)` km<sup>2</sup>.
 
 R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
@@ -189,6 +189,14 @@ distrib(0.25,mean=2.5,sd=0.75,type="q",lower.tail=FALSE)
 distrib(7,mean=2.5,sd=0.75,lower.tail=FALSE)
 ```
 
+----
+
+## Normal Distribution Characteristics II
+
+1. Below
+    1. $\mu$=0, $\sigma$=1
+    1. $\mu$=90, $\sigma$=8
+    
 ----
 
 ## Hand Calculations II

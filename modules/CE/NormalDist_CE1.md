@@ -16,7 +16,6 @@ css: "/css/modules.css"
 1. For each situation below, (i) identify &mu;, (ii) identify &sigma;, and (iii) draw the normal distribution with an approximately accurate scale on the x-axis.
     1. X~N(75,10)
     1. Y~N(5500,600)
-    1. Z~N(0,1)
 
 ----
 
