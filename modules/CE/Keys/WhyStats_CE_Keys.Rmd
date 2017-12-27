@@ -8,19 +8,25 @@ output:
   html_document:
     fig_height: 3
     fig_width: 3.5
-    self_contained: no
+    self_contained: false
 ---
 
 ```{r echo=FALSE, eval=FALSE}
-# Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
-source("../rhelpers/rhelpers.R")
-modHTML("WhyStats_CE_Keys")
+## Renders an appropriate HTML file for the webpage
+fnm <- "WhyStats_CE_Keys"
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/Keys")
+source("../../../rhelpers/rhelpers.R")
+modHTML(fnm)
+## And moves it to make it available to students
+# Possibly delete existing files first (in parent directory)
+file.rename(from=paste0(fnm,".html"),to=paste0("../",fnm,".html"))
+dir.create(paste0("../",fnm,"_files"),showWarnings=FALSE)
+file.copy(from=paste0(fnm,"_files"),to=paste0("../"),recursive=TRUE)
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
-source("../rhelpers/knitr_setup.R")
+source("../../../rhelpers/knitr_setup.R")
 set.seed(388293)
 library(captioner)
 tbls <- captioner(prefix="Table")
