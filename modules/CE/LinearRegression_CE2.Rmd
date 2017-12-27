@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Class Exercise
-subtitle: Simple Linear Regression 2
+title: Exercises
+subtitle: Linear Regression
 author: Derek H. Ogle
 css: "/css/modules.css"
 output:
@@ -11,51 +11,59 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
-source("../rhelpers/rhelpers.R")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/")
+source("../../rhelpers/rhelpers.R")
 modHTML("LinearRegression_CE2")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
-source("../rhelpers/knitr_setup.R")
+source("../../rhelpers/knitr_setup.R")
 ```
 
 ----
 
-## Beach Sand
-<img src="http://derekogle.com/NCMTH107/modules/zimgs/beaches.jpg" alt="Beach Sand" class="img-right">
-Geologists examined the relationship between the median diameter (mm) of sand granules and the slope or angle (degrees) for nine ocean beaches.  Their primary interest was in determining if the variability in sand granule size could be explained by the angle of the beach.  The results of their analysis is shown in the scatterplot below.
+## Estimating Fishing Pressure
+<img src="zimgs/boat-launch.jpg" alt="Fishing Pressure" class="img-right">
 
-```{r echo=FALSE, fig.height=4, fig.width=4, par1=TRUE}
-d <- read.csv("Beaches.csv")
-lm1 <- lm(sand~angle,data=d)
-fitPlot(lm1,xlab="Beach Angle (Degrees)",ylab="Median Sand Diameter (mm)")
-legend("topleft",c(paste0("Y=",formatC(coef(lm1)[1],format="f",digits=3),"+",
-                          formatC(coef(lm1)[2],format="f",digits=3),"*X"),
-                   paste0("r^2=",formatC(rSquared(lm1),format="f",digits=3))),bty="n")
-```
+Wyoming Fish and Game researchers would like to be able to predict monthly fishing pressure (total number of angler-hours) with an index count of the number of vehicles in lake access parking lots because the latter is much cheaper to measure than the former. Towards this end they examined the relationship between pressure and index count on weekdays of Alcova Reservoir. Use the data in AlcovaRes.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/AlcovaRes.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/AlcovaRes_meta.txt)), **properly filtered to include only the data from the weekdays**, to construct results that can be used to answer the questions below.
 
-Use these results to answer the questions below.
+1. What is the response variable?
+1. What is the explanatory variable?
+1. In terms of the variables of this problem, what is the equation of the best-fit line?
+1. In terms of the variables of this problem, interpret the value of the slope.
+1. In terms of the variables of this problem, interpret the value of the intercept.
+1. What is the predicted pressure for an index count of 20 vehicles?
+1. What is the predicted pressure for an index count of 5 vehicles?
+1. What is the residual if the pressure is 5100 and the index count is 8 vehicles?
+1. What is the correlation coefficient between pressure and index count?
+1. What proportion of the variability in pressure is explained by knowing the index count?
+1. How much will the pressure estimate be under-predicted, on average, if the number of vehicles is accidentally under-counted by two vehicles?
+1. What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?
+
+----
+
+## Cafe Sales
+<img src="zimgs/cafe.jpg" alt="Cafe" class="img-right">
+[DePaolo and Robinson (2011)](http://www.amstat.org/publications/jse/v19n1/depaolo.pdf) reported on data collected from a cafe run by business students at Indiana State University.  The cafe was begun because a commercial vendor had closed a similar business.  The group of business students opened a replacement business and carefully monitored sales and costs over a ten-week period during the spring semester of 2010.  The students recorded extensive data in [cafedata.xls](http://www.amstat.org/publications/jse/v19n1/cafedata.xls) ([alt. link to data](http://www.sic.edu/files/uploads/global/Math_and_Science_Division/Math_141/Cafedata.xls)) that is described [in detail here](http://www.amstat.org/publications/jse/v19n1/cafedata_documentation.txt).  One aspect of their study was to record the total number of coffees and sodas sold per day and the maximum daily temperature (F).  For this exercise, determine how coffee sales are impacted by maximum daily temperature.
+
+Download these Excel data with the line from above, rename the variables (column headings) to include no spaces, add a variable that represents the days since start of the cafe, save the file in CSV format, load the data into R, **refactor** the day of the week variable to be in proper order ([see this FAQ](../resources/FAQ/FAQs/reorder-levels.html)), and answer the questions below.  [*Note that these are the same data that you entered in a [previous class exercise](BEDAQuant_CE4.html#cafe-sales).*]
 
 1. In terms of the variables of this problem, what is the equation of the best-fit line?
 1. In terms of the variables of this problem, INTERPRET the value of the slope?
 1. In terms of the variables of this problem, INTERPRET the value of the y-intercept?
-1. What is the predicted median sand diameter for a beach angle of 15<sup>o</sup>?
-1. What is the predicted median sand diameter for a beach angle of 4<sup>o</sup>?
-1. What is the residual if the beach angle is 5<sup>o</sup> and the median sand diameter is 0.2 mm?
-1. What is the correlation coefficient between median sand diameter and the beach angle?
-1. What proportion of the variability in median sand diameter is explained by knowing the beach angle?
-1. How much would you expect the median sand diameter to change if the beach angle increased by 4<sup>o</sup>?
+1. What is the predicted coffee sales when the maximum temperature is 40?
+1. What is the predicted coffee sales when the maximum temperature is 90?
+1. What is the residual if coffee sales were 30 and the maxmum temperature was 40?
+1. What is the correlation coefficient between coffee sales and maximum temperature?
+1. What proportion of the variability in coffee sales is explained by knowing the maximum temperature?
 1. What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?
 
 ----
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="LinearRegression.html">^</a></li>
+  <li><a href="../LinearRegression.html">^</a></li>
   <li><a href="LinearRegression_CE1.html">1</a></li>
   <li class="active"><a href="#">2</a></li>
-  <li><a href="LinearRegression_CE3.html">3</a></li>
-  <li><a href="LinearRegression_CE4.html">4</a></li>
 </ul>

@@ -1,0 +1,123 @@
+---
+layout: page
+title: Exercises
+subtitle: Linear Regression
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="equation-of-the-line" class="section level2">
+<h2>Equation of the Line</h2>
+<p>For each situation below, identify the (a) response variable, (b) explanatory variable, (c) slope, and (d) intercept; interpret the (e) slope and (f) intercept; (g) construct a valid prediction (and answer the question you construct); and (h) identify what an extrapolation would be.</p>
+<ol>
+<li>A student recorded the height of suds (mm) in a dishwasher for ten different amounts of soap (g). The resulting best-fit line was Y=-20.2+12.4*X for 24&lt;Y&lt;80 and 3.5&lt;X&lt;8.0.</li>
+<li>A farmer wants to predict the costs required to produce an amount (in tons) of daily livestock food mix. He recorded costs and amounts for a 20 day period. The resulting best-fit line was Y=190*X+12075 for 19000&lt;Y&lt;21000 and 36.5&lt;X&lt;42.</li>
+<li><a href="http://www.publish.csiro.au/?paper=ZO9800607">Poole and Carpenter (1980)</a> used nasal length (<em>mm multiplied by 10</em>) to predict nasal width (<em>mm multiplied by 10</em>) of Grey Kangaroos (<em>Macropus fuliginosus</em>). The resulting best fit line was Y=0.2876*X+46.451 for 450&lt;X&lt;900 and 180&lt;Y&lt;320.</li>
+</ol>
+<hr />
+</div>
+<div id="beach-sand" class="section level2">
+<h2>Beach Sand</h2>
+<p><img src="http://derekogle.com/NCMTH107/modules/zimgs/beaches.jpg" alt="Beach Sand" class="img-right"> Geologists examined the relationship between the median diameter (mm) of sand granules and the slope or angle (degrees) for nine ocean beaches. Their primary interest was in determining if the variability in sand granule size could be explained by the angle of the beach. The results of their analysis is shown in the scatterplot below.</p>
+<p><img src="LinearRegression_CE1_files/figure-html/unnamed-chunk-3-1.png" width="384" /></p>
+<p>Use these results to answer the questions below.</p>
+<ol>
+<li>In terms of the variables of this problem, what is the equation of the best-fit line?</li>
+<li>In terms of the variables of this problem, INTERPRET the value of the slope?</li>
+<li>In terms of the variables of this problem, INTERPRET the value of the y-intercept?</li>
+<li>What is the predicted median sand diameter for a beach angle of 15<sup>o</sup>?</li>
+<li>What is the predicted median sand diameter for a beach angle of 4<sup>o</sup>?</li>
+<li>What is the residual if the beach angle is 5<sup>o</sup> and the median sand diameter is 0.2 mm?</li>
+<li>What is the correlation coefficient between median sand diameter and the beach angle?</li>
+<li>What proportion of the variability in median sand diameter is explained by knowing the beach angle?</li>
+<li>How much would you expect the median sand diameter to change if the beach angle increased by 4<sup>o</sup>?</li>
+<li>What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?</li>
+</ol>
+<hr />
+</div>
+<div id="urban-runoff" class="section level2">
+<h2>Urban Runoff</h2>
+<p><img src="zimgs/runoff.jpg" alt="Grand Haven plume" class="img-right"> Urbanization poses a major threat to stream and watershed ecosystems. One aspect of urbanization is the conversion of natural areas to land with impervious surfaces, thus increasing runoff of rain and, likely, pollutants. A University of Washington researcher recorded the percent of impervious land and the benthic index of biotic integrity (IBI) for 14 areas in the state of Washington. The IBI has been described as a measure of “the capability of supporting and maintaining a balanced, integrated, adaptive community of organisms having a species composition and functional organization comparable to that of natural habitat in the region.” In this example, the researchers were attempting to identify how the percentage of impervious surfaces in the area effects the IBI. The data for this study are below (note that much more information can be obtained at the <a href="http://www.seattlecentral.edu/qelp/sets/077/077.html#About">QELP site</a>.</p>
+<pre>
+imperv   60 43 43 34 27 25 21 18 11  8  8  8  7  7  5  4  2
+IBI       9 11 13 23 31 31 21 23 27 37 39 29 31 43 33 35 37
+</pre>
+<p>Load these data into R to answer the questions below. [<em>Note that these are the same data that you entered in a <a href="BEDAQuant_CE3.html#urban-runoff">previous class exercise</a>.</em>]</p>
+<ol>
+<li>In terms of the variables of this problem, what is the equation of the best-fit line?</li>
+<li>In terms of the variables of this problem, INTERPRET the value of the slope?</li>
+<li>In terms of the variables of this problem, INTERPRET the value of the y-intercept?</li>
+<li>What is the predicted IBI for an impervious surface percentage of 80%?</li>
+<li>What is the predicted IBI for an impervious surface percentage of 20%?</li>
+<li>What is the residual if the impervious surface percentage is 30 and the IBI is 20?</li>
+<li>How much will the IBI change if the percentage of impervious surface is decreased by 30%?</li>
+<li>What is the correlation coefficient between IBI and the percentage of impervious surface?</li>
+<li>What proportion of the variability in IBI is explained by knowing the percentage of impervious surface?</li>
+<li>What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?</li>
+</ol>
+<hr />
+</div>
+<div id="sign-legibility-and-age" class="section level2">
+<h2>Sign Legibility and Age</h2>
+<p><img src="zimgs/blurredsign.jpg" alt="Blurred Sign" class="img-right"> In a study of the legibility and visibility of highway signs, a Pennsylvania research firm determined the maximum distance at which each of 30 drivers could read a newly designed sign. The participants in the study were from 18 to 82 years old. The government agency that funded the research hoped to improve highway safety for older drivers and wanted to examine the relationship between age and sign legibility distance. Use the data in vision.csv (<a href="https://raw.githubusercontent.com/droglenc/NCData/master/vision.csv">data</a>, <a href="https://raw.githubusercontent.com/droglenc/NCData/master/vision_meta.txt">meta</a>) to construct results that can be used to answer the questions below. [<em>Example from <a href="http://www.cengage.com/c/mind-on-statistics-5e-utts">Utts and Heckard, Mind on Statistics</a></em>].</p>
+<ol>
+<li>What is the response variable? [<em>Hint: Read the rest of the questions before answering this question.</em>]</li>
+<li>What is the explanatory variable?</li>
+<li>In terms of the variables of this problem, what is the equation of the best-fit line?</li>
+<li>In terms of the variables of this problem, interpret the value of the slope.</li>
+<li>In terms of the variables of this problem, interpret the value of the intercept.</li>
+<li>What is the predicted maximum distance to see the sign for a 40-year-old driver?</li>
+<li>What is the predicted maximum distance to see the sign for a 90-year-old driver</li>
+<li>What is the residual if the age of the driver is 50 and the maximum distance is 410 ft?</li>
+<li>What is the correlation coefficient between age and maximum distance to see the sign?</li>
+<li>What proportion of the variability in maximum distance to see the sign is explained by knowing the age of the driver?</li>
+<li>How much will the predicted maximum distance to see the sign change if the driver’s age increased by ten years?</li>
+<li>What aspect of this regression analysis concerns you? [<em>Hint: consider the regression assumptions</em>]?</li>
+</ol>
+<hr />
+<div class="text-center">
+<ul class="pagination pagination-lg">
+<li>
+<a href="../LinearRegression.html">^</a>
+</li>
+<li class="active">
+<a href="#">1</a>
+</li>
+<li>
+<a href="LinearRegression_CE2.html">2</a>
+</li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

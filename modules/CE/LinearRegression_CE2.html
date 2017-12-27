@@ -1,0 +1,90 @@
+---
+layout: page
+title: Exercises
+subtitle: Linear Regression
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="estimating-fishing-pressure" class="section level2">
+<h2>Estimating Fishing Pressure</h2>
+<p><img src="zimgs/boat-launch.jpg" alt="Fishing Pressure" class="img-right"></p>
+<p>Wyoming Fish and Game researchers would like to be able to predict monthly fishing pressure (total number of angler-hours) with an index count of the number of vehicles in lake access parking lots because the latter is much cheaper to measure than the former. Towards this end they examined the relationship between pressure and index count on weekdays of Alcova Reservoir. Use the data in AlcovaRes.csv (<a href="https://raw.githubusercontent.com/droglenc/NCData/master/AlcovaRes.csv">data</a>, <a href="https://raw.githubusercontent.com/droglenc/NCData/master/AlcovaRes_meta.txt">meta</a>), <strong>properly filtered to include only the data from the weekdays</strong>, to construct results that can be used to answer the questions below.</p>
+<ol>
+<li>What is the response variable?</li>
+<li>What is the explanatory variable?</li>
+<li>In terms of the variables of this problem, what is the equation of the best-fit line?</li>
+<li>In terms of the variables of this problem, interpret the value of the slope.</li>
+<li>In terms of the variables of this problem, interpret the value of the intercept.</li>
+<li>What is the predicted pressure for an index count of 20 vehicles?</li>
+<li>What is the predicted pressure for an index count of 5 vehicles?</li>
+<li>What is the residual if the pressure is 5100 and the index count is 8 vehicles?</li>
+<li>What is the correlation coefficient between pressure and index count?</li>
+<li>What proportion of the variability in pressure is explained by knowing the index count?</li>
+<li>How much will the pressure estimate be under-predicted, on average, if the number of vehicles is accidentally under-counted by two vehicles?</li>
+<li>What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?</li>
+</ol>
+<hr />
+</div>
+<div id="cafe-sales" class="section level2">
+<h2>Cafe Sales</h2>
+<p><img src="zimgs/cafe.jpg" alt="Cafe" class="img-right"> <a href="http://www.amstat.org/publications/jse/v19n1/depaolo.pdf">DePaolo and Robinson (2011)</a> reported on data collected from a cafe run by business students at Indiana State University. The cafe was begun because a commercial vendor had closed a similar business. The group of business students opened a replacement business and carefully monitored sales and costs over a ten-week period during the spring semester of 2010. The students recorded extensive data in <a href="http://www.amstat.org/publications/jse/v19n1/cafedata.xls">cafedata.xls</a> (<a href="http://www.sic.edu/files/uploads/global/Math_and_Science_Division/Math_141/Cafedata.xls">alt. link to data</a>) that is described <a href="http://www.amstat.org/publications/jse/v19n1/cafedata_documentation.txt">in detail here</a>. One aspect of their study was to record the total number of coffees and sodas sold per day and the maximum daily temperature (F). For this exercise, determine how coffee sales are impacted by maximum daily temperature.</p>
+<p>Download these Excel data with the line from above, rename the variables (column headings) to include no spaces, add a variable that represents the days since start of the cafe, save the file in CSV format, load the data into R, <strong>refactor</strong> the day of the week variable to be in proper order (<a href="../resources/FAQ/FAQs/reorder-levels.html">see this FAQ</a>), and answer the questions below. [<em>Note that these are the same data that you entered in a <a href="BEDAQuant_CE4.html#cafe-sales">previous class exercise</a>.</em>]</p>
+<ol>
+<li>In terms of the variables of this problem, what is the equation of the best-fit line?</li>
+<li>In terms of the variables of this problem, INTERPRET the value of the slope?</li>
+<li>In terms of the variables of this problem, INTERPRET the value of the y-intercept?</li>
+<li>What is the predicted coffee sales when the maximum temperature is 40?</li>
+<li>What is the predicted coffee sales when the maximum temperature is 90?</li>
+<li>What is the residual if coffee sales were 30 and the maxmum temperature was 40?</li>
+<li>What is the correlation coefficient between coffee sales and maximum temperature?</li>
+<li>What proportion of the variability in coffee sales is explained by knowing the maximum temperature?</li>
+<li>What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?</li>
+</ol>
+<hr />
+<div class="text-center">
+<ul class="pagination pagination-lg">
+<li>
+<a href="../LinearRegression.html">^</a>
+</li>
+<li>
+<a href="LinearRegression_CE1.html">1</a>
+</li>
+<li class="active">
+<a href="#">2</a>
+</li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
