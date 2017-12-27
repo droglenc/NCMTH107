@@ -44,7 +44,7 @@ Use the materials below to answer the questions on [this preparation guide](Foun
 
 ## Practice
 
-* [Practice Exercises](CE/FoundationalDefns_CE) ... [ANSWER KEY](CE/FoundationalDefns_CE_Key)
+* [Practice Exercises](CE/FoundationalDefns_CE) ... [ANSWER KEY](CE/FoundationalDefns_CE_Keys)
 * [Review Exercises](RE/FoundationalDefns_RevEx)
 
 ----
