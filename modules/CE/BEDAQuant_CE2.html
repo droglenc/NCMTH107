@@ -1,0 +1,87 @@
+---
+layout: page
+title: Exercises
+subtitle: Summarizing Two Quantitative Variables
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="associations-ii" class="section level2">
+<h2>Associations II</h2>
+<p>For each situation below, identify (a) the response variable (if possible) and (b) whether you would expect a positive, negative, or no (neutral) association between the pair of variables. Explain your reasoning for both answers.</p>
+<ol>
+<li>Proportion of population with a post-secondary education and proportion of the population that have been incarcerated.</li>
+<li>Temperature and sales of ice cream.</li>
+<li>Hours spent exercising and percent body fat.</li>
+<li>Average annual amount of snowfall and proportion that support conceal-and-carry gun laws (recorded for states from across the U.S.)</li>
+<li>Husbands’ and wife’s ages.</li>
+<li>Golfers’ putting success and distance of the putt.</li>
+</ol>
+<hr />
+</div>
+<div id="animal-fat-and-breast-cancer" class="section level2">
+<h2>Animal Fat and Breast Cancer</h2>
+<p><a href="https://www.ncbi.nlm.nih.gov/pubmed/1104150">Carroll (1975)</a> examined the relationship between per capita consumption of animal fat (g/day) and age-adjusted death rate from breast cancer for 39 countries. Use the following results from her data to describe the bivariate relationship between these two variables.</p>
+<p><img src="BEDAQuant_CE2_files/figure-html/unnamed-chunk-3-1.png" width="336" /></p>
+<hr />
+</div>
+<div id="animal-longevity-and-gestation" class="section level2">
+<h2>Animal Longevity and Gestation</h2>
+<p>The average gestation period (i.e., length of pregnancy) of an animal is closely related to its longevity (i.e., length of its lifespan). Scientists are interested in being able to predict the average longevity (difficult to measure) from average gestation period (relatively easy to measure) for a given animal. Towards this end, data on the average gestation period and longevity (in captivity) of 40 different species of animals was recorded in animals.csv (<a href="https://raw.githubusercontent.com/droglenc/NCData/master/animals.csv">data</a>, <a href="https://raw.githubusercontent.com/droglenc/NCData/master/animals_meta.txt">meta</a>). Describe the relationship between average longevity and average gestation period from these data. [<em>Think carefully about which variable should be on the y-axis.</em>]</p>
+<hr />
+</div>
+<div id="cafe-sales" class="section level2">
+<h2>Cafe Sales</h2>
+<p><img src="zimgs/cafe.jpg" alt="Cafe" class="img-right"> <a href="http://www.amstat.org/publications/jse/v19n1/depaolo.pdf">DePaolo and Robinson (2011)</a> reported on data collected from a cafe run by business students at Indiana State University. The cafe was begun because a commercial vendor had closed a similar business. The group of business students opened a replacement business and carefully monitored sales and costs over a ten-week period during the spring semester of 2010. The students recorded extensive data in <a href="http://www.amstat.org/publications/jse/v19n1/cafedata.xls">cafedata.xls</a> (<a href="http://www.sic.edu/files/uploads/global/Math_and_Science_Division/Math_141/Cafedata.xls">alt. link to data</a>) that is described <a href="http://www.amstat.org/publications/jse/v19n1/cafedata_documentation.txt">in detail here</a>. One aspect of their study was to record the total number of coffees and sodas sold per day and the maximum daily temperature (F). Download these Excel data with the line from above, rename the variables (column headings) to include no spaces, add a variable that represents the days since start of the cafe, replace all <code>na</code> values with <code>NA</code>, save the file in CSV format, load the data into R, <strong>refactor</strong> the day of the week variable to be in proper order (<a href="../resources/FAQ/FAQs/reorder-levels.html">see this FAQ</a>), and answer the questions below.</p>
+<ol>
+<li>Perform a bivariate EDA for the number of coffees sold and maximum temperature. [<em>Carefully consider which one should be on the y-axis.</em>]</li>
+<li>Describe the relationship between the number of cofees sold and the number of sodas sold.</li>
+<li>How is the number of coffees sold related to the number of days since the cafe opened?</li>
+</ol>
+<hr />
+<div class="text-center">
+<ul class="pagination pagination-lg">
+<li>
+<a href="../BEDAQuant.html">^</a>
+</li>
+<li>
+<a href="BEDAQuant_CE1.html">1</a>
+</li>
+<li class="active">
+<a href="#">2</a>
+</li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

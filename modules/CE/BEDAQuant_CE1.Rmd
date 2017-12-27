@@ -6,18 +6,19 @@ author: Derek H. Ogle
 css: "/css/modules.css"
 output:
   html_document:
-    self_contained: no
+    self_contained: false
+    lib_dir: zlibs
 ---
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
-source("../rhelpers/rhelpers.R")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/")
+source("../../rhelpers/rhelpers.R")
 modHTML("BEDAQuant_CE1")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
-source("../rhelpers/knitr_setup.R")
+source("../../rhelpers/knitr_setup.R")
 ```
 
 ----
@@ -45,11 +46,58 @@ Use this scatterplot to answer these questions.
 
 ----
 
+## Associations I
+
+For each situation below, identify (a) the response variable (if possible) and (b) whether you would expect a positive, negative, or no (neutral) association between the pair of variables.  Explain your reasoning for both answers.
+
+1. Weight and gas mileage of a car.
+1. Proportion of the population that was vaccinated and proportion of the population that became ill.
+1. The expected salary of an individual and how many years they invested in post-secondary education.
+1. Exam score and age of the student's mother.
+1. Mean summer temperature and proportion of households that have an air conditioner (recorded for communities from across the U.S.).
+
+----
+
+## Urban Runoff
+<img src="zimgs/no-dumping-drains-to-ocean.jpg" alt="No Dumping" class="img-right">
+Urbanization poses a major threat to stream and watershed ecosystems.  One aspect of urbanization is the conversion of natural areas to land with impervious surfaces, thus increasing runoff of rain and, likely, pollutants.  A University of Washington researcher recorded the percent of impervious land and the benthic index of biotic integrity (IBI) for 14 areas in the state of Washington.  The IBI has been described as a measure of "the capability of supporting and maintaining a balanced, integrated, adaptive community of organisms having a species composition and functional organization comparable to that of natural habitat in the region."  In this example, the researchers were attempting to identify how the percentage of impervious surfaces in the area affects the IBI.  The data for this study are below (*FYI, much more information can be obtained at the [QELP site](http://www.seattlecentral.edu/qelp/sets/077/077.html#About)*).
+
+<pre>
+imperv   60 43 43 34 27 25 21 18 11  8  8  8  7  7  5  4  2
+IBI       9 11 13 23 31 31 21 23 27 37 39 29 31 43 33 35 37
+</pre>
+
+Load these data into R and answer the questions below.
+
+1. What is the response variable?
+1. What is the explanatory variable?
+1. Describe the relationship between IBI and the percent of impervious area (i.e., perform a bivariate EDA).
+
+----
+
+## Animal Fat and Breast Cancer
+
+[Carroll (1975)](https://www.ncbi.nlm.nih.gov/pubmed/1104150) examined the relationship between per capita consumption of animal fat (g/day) and age-adjusted death rate from breast cancer for 39 countries. Use the following results from her data to describe the bivariate relationship between these two variables.
+
+```{r echo=FALSE, fig.width=3.5, fig.height=3.5, par1=TRUE}
+cf <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/CancerFat.csv")
+plot(adjdeath~fatintake,data=cf,pch=16,xlab="Fat Intake (g/day)",
+     ylab="Age-Adjusted Death Rate")
+r <- round(cor(cf$adjdeath,cf$fatintake),3)
+legend("topleft",legend=paste("r=",r,sep=" "),bty="n")
+```
+
+----
+
+## North Fish Creek Discharge
+
+The instantaneous discharge (cubic feet per second) and total suspended sediments (in milligrams per liter) were recorded on 28 dates for North Fish Creek near Ashland, WI.  These data are found in FishCrNWaterQuality.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/FishCrNWaterQuality.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/FishCrNWaterQuality_meta.txt)). Describe the relationship between instantaneous discharge and total suspended sediments from these data. [*Think carefully about which variable should be on the y-axis.*]
+
+----
+
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="BEDAQuant.html">^</a></li>
+  <li><a href="../BEDAQuant.html">^</a></li>
   <li class="active"><a href="#">1</a></li>
   <li><a href="BEDAQuant_CE2.html">2</a></li>
-  <li><a href="BEDAQuant_CE3.html">3</a></li>
-  <li><a href="BEDAQuant_CE4.html">4</a></li>
 </ul>

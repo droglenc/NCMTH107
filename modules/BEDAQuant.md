@@ -40,13 +40,13 @@ Use the materials below to answer the questions on [this preparation guide](BEDA
 * [![YouTube Link](../img/youtube.png) Construct a Scatterplot](https://www.youtube.com/watch?v=yXmz922K9Ks){:target="_blank"} [7 mins]
 * [![YouTube Link](../img/youtube.png) What is the Correlation?](https://www.youtube.com/watch?v=PtYVrF_WT3A){:target="_blank"} [8 mins; *start at 0:32*]
 * [![Vimeo](../img/dhovid.png) Bivariate EDA (Quantitative) in R](https://vimeo.com/user45324800/biveda-quant){:target="_blank"} [8 mins] [![Web](../img/web.png)](HO/BEDAQuant_RHO.html){:target="_blank"} [![R](../img/Rlogo.png)](HO/BEDAQuant_RHO.R){:target="_blank"}
-* [![Vimeo](../img/dhovid.png) Interpeting a Bivariate EDA (Quantitative)](https://vimeo.com/user45324800/beda-quantsum){:target="_blank"} [10 mins]  [![PowerPoint](../img/ppt.png)](PPT/BEDAQuant_PPT.pptx)
+* [![Vimeo](../img/dhovid.png) Interpeting a Bivariate EDA (Quantitative)](https://vimeo.com/user45324800/beda-quantsum){:target="_blank"} [10 mins] [![PowerPoint](../img/ppt.png)](PPT/BEDAQuant_PPT.pptx)
 
 ----
 
 ## Practice
 
-* Exercises: [1](BEDAQuant_CE1) / [2](BEDAQuant_CE2) / [3](BEDAQuant_CE3) (*time permitting* ... [4](BEDAQuant_CE4))
+* [Exercises](CE/BEDAQuant_CE1) ([*more as time permits*](CE/BEDAQuant_CE2)) ... [ANSWER KEY](CE/BEDAQuant_CE_Keys)
 * Review Exercises: [Definitions and Calculations](RE/BEDAQuant_RevEx_Defns) / [EDA](RE/BEDAQuant_RevEx_EDA)
 
 ----
