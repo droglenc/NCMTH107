@@ -8,19 +8,20 @@ output:
   html_document:
     fig_height: 3.5
     fig_width: 3.5
-    self_contained: no
+    self_contained: false
+    lib_dir: zlibs
 ---
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
-source("../rhelpers/rhelpers.R")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/RE/")
+source("../../rhelpers/rhelpers.R")
 modHTML("UEDAQuant2_RevEx_EDAs")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
-source("../rhelpers/knitr_setup.R")
+source("../../rhelpers/knitr_setup.R")
 ```
 
 ----
