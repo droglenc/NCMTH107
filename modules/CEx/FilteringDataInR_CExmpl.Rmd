@@ -19,29 +19,25 @@ fnm <- "FilteringDataInR_CExmpl"
 modHTML(fnm)
 purl2(paste0(fnm,".Rmd"))
 ```
-```{r echo=FALSE, results='hide', message=FALSE}
-fnm <- "FilteringDataInR"
-source("../../rhelpers/knitr_setup.R")
-```
 
 ----
 
 ## Load Data From Webpage
 
-Load **Iris.csv** into an R data.frame called `dfiris`. *Open your script and copy your code from last class period.*
+Load **Fire.csv** into an R data.frame called `firedf`. *Open your script and copy your code from last class period.*
 ```{r echo=FALSE}
-dfiris <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Iris.csv")
+firedf <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Fire.csv")
 ```
 ```{r message=FALSE}
 library(NCStats)
 ```
 ```{r eval=FALSE}
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CEx")
-dfiris <- read.csv("Iris.csv")
+firedf <- read.csv("Fire.csv")
 ```
 ```{r}
-str(dfiris)
-headtail(dfiris)
+str(firedf)
+headtail(firedf)
 ```
 
 <br>
@@ -50,14 +46,14 @@ headtail(dfiris)
 
 ## Examining Single Variables
 
-* Examine the sepal length variable.
+* Examine the stand type (i.e., `sttype`) variable.
 ```{r}
-dfiris$seplen
+firedf$sttype
 ```
 
-* Examine the species variable.
+* Examine the litter depth (i.e., `litdep`) variable.
 ```{r}
-dfiris$species
+firedf$litdep
 ```
 
 <br>
@@ -65,43 +61,37 @@ dfiris$species
 ----
 
 ## Filtering Data Frames
-* Isolate just the `setosa` species.
+* Isolate just the `deciduous` stand types.
 ```{r}
-set <- filterD(dfiris,species=="setosa")
-str(set)
-headtail(set)
+decid <- filterD(firedf,sttype=="d")
+str(decid)
+headtail(decid)
 ```
 
-* Isolate the irises with a sepal length greater than 5 cm.
+* Isolate the stands with a litter depth less than 2 cm.
 ```{r}
-gt5 <- filterD(dfiris,seplen>5)
-headtail(gt5)
+lt2 <- filterD(firedf,litdep<2)
+headtail(lt2)
 ```
 
-* Remove the `virginica` species or retain the `setosa` and `versicolor` species.
+* Isolate the stand types that are either coniferous or mixed-coniferous.
 ```{r}
-setver1 <- filterD(dfiris,species %in% c("setosa","versicolor"))
-str(setver1)
-headtail(setver1)
+conif <- filterD(firedf,sttype %in% c("c","mc"))
+str(conif)
+headtail(conif)
 ```
 
-* Same as above.
+* Isolate stands that were conferous (not including mixed-coniferous) and had a litter depth greater than 2 cm.
 ```{r}
-setver2 <- filterD(dfiris,species!="virginica")
-str(setver2)
-headtail(setver2)
+con_gt2 <- filterD(firedf,sttype=="c",litdep>2)
+str(con_gt2)
+con_gt2
 ```
 
-* Isolate the `versicolor` species that had sepal lengths greater than 5 cm.
+* Isolate all stands that had a litter depth between 1 and 2 cm.
 ```{r}
-ver_gt5 <- filterD(dfiris,species=="versicolor",seplen>5)
-headtail(ver_gt5)
-```
-
-* Isolate all irises that had a sepal length between 5 and 9 cm.
-```{r}
-ver_bw5n9 <- filterD(dfiris,seplen>5,seplen<9)
-headtail(ver_bw5n9)
+LDbw1n2 <- filterD(firedf,litdep>1,litdep<2)
+headtail(LDbw1n2)
 ```
 
 ----

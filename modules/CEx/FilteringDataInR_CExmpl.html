@@ -10,161 +10,135 @@ css: "/css/modules.css"
 <hr />
 <div id="load-data-from-webpage" class="section level2">
 <h2>Load Data From Webpage</h2>
-<p>Load <strong>Iris.csv</strong> into an R data.frame called <code>dfiris</code>. <em>Open your script and copy your code from last class period.</em></p>
-<pre class="r"><code>&gt; library(NCStats)</code></pre>
-<pre class="r"><code>&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules/CEx&quot;)
-&gt; dfiris &lt;- read.csv(&quot;Iris.csv&quot;)</code></pre>
-<pre class="r"><code>&gt; str(dfiris)</code></pre>
-<pre><code>&#39;data.frame&#39;:   150 obs. of  5 variables:
- $ seplen : int  50 46 46 51 55 48 52 49 44 50 ...
- $ sepwid : int  33 34 36 33 35 31 34 36 32 35 ...
- $ petlen : int  14 14 10 17 13 16 14 14 13 16 ...
- $ petwid : int  2 3 2 5 2 2 2 1 2 6 ...
- $ species: Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
-<pre class="r"><code>&gt; headtail(dfiris)</code></pre>
-<pre><code>    seplen sepwid petlen petwid   species
-1       50     33     14      2    setosa
-2       46     34     14      3    setosa
-3       46     36     10      2    setosa
-148     57     25     50     20 virginica
-149     58     28     51     24 virginica
-150     63     33     60     25 virginica</code></pre>
+<p>Load <strong>Fire.csv</strong> into an R data.frame called <code>firedf</code>. <em>Open your script and copy your code from last class period.</em></p>
+<pre class="r"><code>library(NCStats)</code></pre>
+<pre class="r"><code>setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules/CEx&quot;)
+firedf &lt;- read.csv(&quot;Fire.csv&quot;)</code></pre>
+<pre class="r"><code>str(firedf)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    48 obs. of  6 variables:
+##  $ sttype: Factor w/ 4 levels &quot;c&quot;,&quot;d&quot;,&quot;mc&quot;,&quot;md&quot;: 2 2 2 2 2 2 2 2 2 2 ...
+##  $ tslf  : Factor w/ 3 levels &quot;0-100&quot;,&quot;100-200&quot;,..: 1 1 1 1 1 2 2 1 1 2 ...
+##  $ tdw   : num  27.7 22.6 26.2 43.6 27 41.2 46.6 27.6 89.2 39.6 ...
+##  $ litdep: num  0.62 1.33 1.46 1.92 2.9 2.13 2.33 1.46 2.25 3.08 ...
+##  $ fuel1h: num  0.06 0.07 0.08 0.05 0.06 0.15 0.02 0.04 0.04 0.3 ...
+##  $ tltd  : int  2382 1978 1234 1478 1901 1111 748 1055 3422 1045 ...</code></pre>
+<pre class="r"><code>headtail(firedf)</code></pre>
+<pre><code>##    sttype    tslf  tdw litdep fuel1h tltd
+## 1       d   0-100 27.7   0.62   0.06 2382
+## 2       d   0-100 22.6   1.33   0.07 1978
+## 3       d   0-100 26.2   1.46   0.08 1234
+## 46      c 200-300 52.2   2.08   0.12 1136
+## 47      c 200-300 48.0   2.38   0.55 1288
+## 48      c 200-300 44.7   2.13   0.45 1086</code></pre>
 <p><br></p>
 <hr />
 </div>
 <div id="examining-single-variables" class="section level2">
 <h2>Examining Single Variables</h2>
 <ul>
-<li>Examine the sepal length variable.</li>
+<li>Examine the stand type (i.e., <code>sttype</code>) variable.</li>
 </ul>
-<pre class="r"><code>&gt; dfiris$seplen</code></pre>
-<pre><code>  [1] 50 46 46 51 55 48 52 49 44 50 44 47 48 51 48 50 50 43 58 51 49 51 50 46 57 50 54 52
- [29] 55 49 54 50 44 47 46 51 50 49 54 54 51 48 48 45 57 51 54 51 52 53 65 62 59 61 60 56
- [57] 57 63 70 64 61 55 54 58 55 50 67 56 58 60 57 57 49 56 57 66 52 60 50 55 58 62 59 60
- [85] 67 63 56 63 61 64 51 57 61 56 69 55 55 66 68 67 64 67 63 69 65 65 58 68 62 77 67 76
-[113] 49 67 59 63 64 79 67 77 63 72 61 61 64 62 77 63 58 72 71 64 60 63 77 60 69 74 56 73
-[141] 67 65 69 72 65 64 68 57 58 63</code></pre>
+<pre class="r"><code>firedf$sttype</code></pre>
+<pre><code>##  [1] d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d 
+## [24] d  md md md md md md md md md md md md md mc mc mc mc c  c  c  c  c 
+## [47] c  c 
+## Levels: c d mc md</code></pre>
 <ul>
-<li>Examine the species variable.</li>
+<li>Examine the litter depth (i.e., <code>litdep</code>) variable.</li>
 </ul>
-<pre class="r"><code>&gt; dfiris$species</code></pre>
-<pre><code>  [1] setosa     setosa     setosa     setosa     setosa     setosa     setosa    
-  [8] setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [15] setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [22] setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [29] setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [36] setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [43] setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [50] setosa     versicolor versicolor versicolor versicolor versicolor versicolor
- [57] versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [64] versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [71] versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [78] versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [85] versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [92] versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [99] versicolor versicolor virginica  virginica  virginica  virginica  virginica 
-[106] virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[113] virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[120] virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[127] virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[134] virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[141] virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[148] virginica  virginica  virginica 
-Levels: setosa versicolor virginica</code></pre>
+<pre class="r"><code>firedf$litdep</code></pre>
+<pre><code>##  [1] 0.62 1.33 1.46 1.92 2.90 2.13 2.33 1.46 2.25 3.08 2.07 1.83 2.63 2.58
+## [15] 2.38 2.75 2.92 2.46 1.96 1.63 2.13 2.71 3.08 2.42 1.75 2.75 2.00 1.25
+## [29] 2.38 2.08 3.13 2.38 3.00 2.29 1.90 2.71 1.83 2.04 2.90 3.13 2.00 2.08
+## [43] 2.92 0.75 1.75 2.08 2.38 2.13</code></pre>
 <p><br></p>
 <hr />
 </div>
 <div id="filtering-data-frames" class="section level2">
 <h2>Filtering Data Frames</h2>
 <ul>
-<li>Isolate just the <code>setosa</code> species.</li>
+<li>Isolate just the <code>deciduous</code> stand types.</li>
 </ul>
-<pre class="r"><code>&gt; set &lt;- filterD(dfiris,species==&quot;setosa&quot;)
-&gt; str(set)</code></pre>
-<pre><code>&#39;data.frame&#39;:   50 obs. of  5 variables:
- $ seplen : int  50 46 46 51 55 48 52 49 44 50 ...
- $ sepwid : int  33 34 36 33 35 31 34 36 32 35 ...
- $ petlen : int  14 14 10 17 13 16 14 14 13 16 ...
- $ petwid : int  2 3 2 5 2 2 2 1 2 6 ...
- $ species: Factor w/ 1 level &quot;setosa&quot;: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
-<pre class="r"><code>&gt; headtail(set)</code></pre>
-<pre><code>   seplen sepwid petlen petwid species
-1      50     33     14      2  setosa
-2      46     34     14      3  setosa
-3      46     36     10      2  setosa
-48     51     37     15      4  setosa
-49     52     35     15      2  setosa
-50     53     37     15      2  setosa</code></pre>
+<pre class="r"><code>decid &lt;- filterD(firedf,sttype==&quot;d&quot;)
+str(decid)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    24 obs. of  6 variables:
+##  $ sttype: Factor w/ 1 level &quot;d&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ tslf  : Factor w/ 2 levels &quot;0-100&quot;,&quot;100-200&quot;: 1 1 1 1 1 2 2 1 1 2 ...
+##  $ tdw   : num  27.7 22.6 26.2 43.6 27 41.2 46.6 27.6 89.2 39.6 ...
+##  $ litdep: num  0.62 1.33 1.46 1.92 2.9 2.13 2.33 1.46 2.25 3.08 ...
+##  $ fuel1h: num  0.06 0.07 0.08 0.05 0.06 0.15 0.02 0.04 0.04 0.3 ...
+##  $ tltd  : int  2382 1978 1234 1478 1901 1111 748 1055 3422 1045 ...</code></pre>
+<pre class="r"><code>headtail(decid)</code></pre>
+<pre><code>##    sttype    tslf   tdw litdep fuel1h tltd
+## 1       d   0-100  27.7   0.62   0.06 2382
+## 2       d   0-100  22.6   1.33   0.07 1978
+## 3       d   0-100  26.2   1.46   0.08 1234
+## 22      d 100-200  68.1   2.71   0.33 1646
+## 23      d   0-100 111.5   3.08   0.08 2309
+## 24      d 100-200  36.1   2.42   0.02  861</code></pre>
 <ul>
-<li>Isolate the irises with a sepal length greater than 5 cm.</li>
+<li>Isolate the stands with a litter depth less than 2 cm.</li>
 </ul>
-<pre class="r"><code>&gt; gt5 &lt;- filterD(dfiris,seplen&gt;5)
-&gt; headtail(gt5)</code></pre>
-<pre><code>    seplen sepwid petlen petwid   species
-1       50     33     14      2    setosa
-2       46     34     14      3    setosa
-3       46     36     10      2    setosa
-148     57     25     50     20 virginica
-149     58     28     51     24 virginica
-150     63     33     60     25 virginica</code></pre>
+<pre class="r"><code>lt2 &lt;- filterD(firedf,litdep&lt;2)
+headtail(lt2)</code></pre>
+<pre><code>##    sttype    tslf  tdw litdep fuel1h tltd
+## 1       d   0-100 27.7   0.62   0.06 2382
+## 2       d   0-100 22.6   1.33   0.07 1978
+## 3       d   0-100 26.2   1.46   0.08 1234
+## 12     md 100-200 95.6   1.83   0.24 1057
+## 13      c 200-300 34.9   0.75   0.16  961
+## 14      c 200-300 26.8   1.75   0.67  437</code></pre>
 <ul>
-<li>Remove the <code>virginica</code> species or retain the <code>setosa</code> and <code>versicolor</code> species.</li>
+<li>Isolate the stand types that are either coniferous or mixed-coniferous.</li>
 </ul>
-<pre class="r"><code>&gt; setver1 &lt;- filterD(dfiris,species %in% c(&quot;setosa&quot;,&quot;versicolor&quot;))
-&gt; str(setver1)</code></pre>
-<pre><code>&#39;data.frame&#39;:   100 obs. of  5 variables:
- $ seplen : int  50 46 46 51 55 48 52 49 44 50 ...
- $ sepwid : int  33 34 36 33 35 31 34 36 32 35 ...
- $ petlen : int  14 14 10 17 13 16 14 14 13 16 ...
- $ petwid : int  2 3 2 5 2 2 2 1 2 6 ...
- $ species: Factor w/ 2 levels &quot;setosa&quot;,&quot;versicolor&quot;: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
-<pre class="r"><code>&gt; headtail(setver1)</code></pre>
-<pre><code>    seplen sepwid petlen petwid    species
-1       50     33     14      2     setosa
-2       46     34     14      3     setosa
-3       46     36     10      2     setosa
-98      66     30     44     14 versicolor
-99      68     28     48     14 versicolor
-100     67     30     50     17 versicolor</code></pre>
+<pre class="r"><code>conif &lt;- filterD(firedf,sttype %in% c(&quot;c&quot;,&quot;mc&quot;))
+str(conif)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    11 obs. of  6 variables:
+##  $ sttype: Factor w/ 2 levels &quot;c&quot;,&quot;mc&quot;: 2 2 2 2 1 1 1 1 1 1 ...
+##  $ tslf  : Factor w/ 2 levels &quot;100-200&quot;,&quot;200-300&quot;: 2 1 2 1 2 2 2 2 2 2 ...
+##  $ tdw   : num  103.4 69.8 47.2 35.6 42 ...
+##  $ litdep: num  2.04 2.9 3.13 2 2.08 2.92 0.75 1.75 2.08 2.38 ...
+##  $ fuel1h: num  0.05 0.31 0.37 0.03 0.22 0.56 0.16 0.67 0.12 0.55 ...
+##  $ tltd  : int  775 1065 820 1650 578 999 961 437 1136 1288 ...</code></pre>
+<pre class="r"><code>headtail(conif)</code></pre>
+<pre><code>##    sttype    tslf   tdw litdep fuel1h tltd
+## 1      mc 200-300 103.4   2.04   0.05  775
+## 2      mc 100-200  69.8   2.90   0.31 1065
+## 3      mc 200-300  47.2   3.13   0.37  820
+## 9       c 200-300  52.2   2.08   0.12 1136
+## 10      c 200-300  48.0   2.38   0.55 1288
+## 11      c 200-300  44.7   2.13   0.45 1086</code></pre>
 <ul>
-<li>Same as above.</li>
+<li>Isolate stands that were conferous (not including mixed-coniferous) and had a litter depth greater than 2 cm.</li>
 </ul>
-<pre class="r"><code>&gt; setver2 &lt;- filterD(dfiris,species!=&quot;virginica&quot;)
-&gt; str(setver2)</code></pre>
-<pre><code>&#39;data.frame&#39;:   100 obs. of  5 variables:
- $ seplen : int  50 46 46 51 55 48 52 49 44 50 ...
- $ sepwid : int  33 34 36 33 35 31 34 36 32 35 ...
- $ petlen : int  14 14 10 17 13 16 14 14 13 16 ...
- $ petwid : int  2 3 2 5 2 2 2 1 2 6 ...
- $ species: Factor w/ 2 levels &quot;setosa&quot;,&quot;versicolor&quot;: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
-<pre class="r"><code>&gt; headtail(setver2)</code></pre>
-<pre><code>    seplen sepwid petlen petwid    species
-1       50     33     14      2     setosa
-2       46     34     14      3     setosa
-3       46     36     10      2     setosa
-98      66     30     44     14 versicolor
-99      68     28     48     14 versicolor
-100     67     30     50     17 versicolor</code></pre>
+<pre class="r"><code>con_gt2 &lt;- filterD(firedf,sttype==&quot;c&quot;,litdep&gt;2)
+str(con_gt2)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    5 obs. of  6 variables:
+##  $ sttype: Factor w/ 1 level &quot;c&quot;: 1 1 1 1 1
+##  $ tslf  : Factor w/ 1 level &quot;200-300&quot;: 1 1 1 1 1
+##  $ tdw   : num  42 46.9 52.2 48 44.7
+##  $ litdep: num  2.08 2.92 2.08 2.38 2.13
+##  $ fuel1h: num  0.22 0.56 0.12 0.55 0.45
+##  $ tltd  : int  578 999 1136 1288 1086</code></pre>
+<pre class="r"><code>con_gt2</code></pre>
+<pre><code>##   sttype    tslf  tdw litdep fuel1h tltd
+## 1      c 200-300 42.0   2.08   0.22  578
+## 2      c 200-300 46.9   2.92   0.56  999
+## 3      c 200-300 52.2   2.08   0.12 1136
+## 4      c 200-300 48.0   2.38   0.55 1288
+## 5      c 200-300 44.7   2.13   0.45 1086</code></pre>
 <ul>
-<li>Isolate the <code>versicolor</code> species that had sepal lengths greater than 5 cm.</li>
+<li>Isolate all stands that had a litter depth between 1 and 2 cm.</li>
 </ul>
-<pre class="r"><code>&gt; ver_gt5 &lt;- filterD(dfiris,species==&quot;versicolor&quot;,seplen&gt;5)
-&gt; headtail(ver_gt5)</code></pre>
-<pre><code>   seplen sepwid petlen petwid    species
-1      65     28     46     15 versicolor
-2      62     22     45     15 versicolor
-3      59     32     48     18 versicolor
-48     66     30     44     14 versicolor
-49     68     28     48     14 versicolor
-50     67     30     50     17 versicolor</code></pre>
-<ul>
-<li>Isolate all irises that had a sepal length between 5 and 9 cm.</li>
-</ul>
-<pre class="r"><code>&gt; ver_bw5n9 &lt;- filterD(dfiris,seplen&gt;5,seplen&lt;9)</code></pre>
-<pre><code>Warning: The resultant data.frame has 0 rows.  Try str() on the result.</code></pre>
-<pre class="r"><code>&gt; headtail(ver_bw5n9)</code></pre>
-<pre><code>[1] seplen  sepwid  petlen  petwid  species
-&lt;0 rows&gt; (or 0-length row.names)</code></pre>
+<pre class="r"><code>LDbw1n2 &lt;- filterD(firedf,litdep&gt;1,litdep&lt;2)
+headtail(LDbw1n2)</code></pre>
+<pre><code>##    sttype    tslf  tdw litdep fuel1h tltd
+## 1       d   0-100 22.6   1.33   0.07 1978
+## 2       d   0-100 26.2   1.46   0.08 1234
+## 3       d   0-100 43.6   1.92   0.05 1478
+## 10     md 200-300 41.1   1.90   0.04  570
+## 11     md 100-200 95.6   1.83   0.24 1057
+## 12      c 200-300 26.8   1.75   0.67  437</code></pre>
 <hr />
 </div>
 

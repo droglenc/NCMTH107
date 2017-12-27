@@ -1,37 +1,31 @@
-fnm <- "FilteringDataInR"
-source("../../rhelpers/knitr_setup.R")
-
-dfiris <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Iris.csv")
+firedf <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Fire.csv")
 
 library(NCStats)
 
-str(dfiris)
-headtail(dfiris)
+str(firedf)
+headtail(firedf)
 
-dfiris$seplen
+firedf$sttype
 
-dfiris$species
+firedf$litdep
 
-set <- filterD(dfiris,species=="setosa")
-str(set)
-headtail(set)
+decid <- filterD(firedf,sttype=="d")
+str(decid)
+headtail(decid)
 
-gt5 <- filterD(dfiris,seplen>5)
-headtail(gt5)
+lt2 <- filterD(firedf,litdep<2)
+headtail(lt2)
 
-setver1 <- filterD(dfiris,species %in% c("setosa","versicolor"))
-str(setver1)
-headtail(setver1)
+conif <- filterD(firedf,sttype %in% c("c","mc"))
+str(conif)
+headtail(conif)
 
-setver2 <- filterD(dfiris,species!="virginica")
-str(setver2)
-headtail(setver2)
+con_gt2 <- filterD(firedf,sttype=="c",litdep>2)
+str(con_gt2)
+con_gt2
 
-ver_gt5 <- filterD(dfiris,species=="versicolor",seplen>5)
-headtail(ver_gt5)
-
-ver_bw5n9 <- filterD(dfiris,seplen>5,seplen<9)
-headtail(ver_bw5n9)
+LDbw1n2 <- filterD(firedf,litdep>1,litdep<2)
+headtail(LDbw1n2)
 
 
-# Script created at 2017-12-27 09:20:38
+# Script created at 2017-12-27 10:00:55
