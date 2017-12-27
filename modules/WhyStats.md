@@ -46,13 +46,13 @@ Use the materials below to answer the questions on [this preparation guide](WhyS
 
 ## Practice
 
-* [In-Class Example](WhyStats_CExmpl1)
-* [Practice Exercises](WhyStats_CE)
+* [Class Example](CEx/WhyStats_CExmpl1)
+* [Practice Exercises](CE/WhyStats_CE) [KEY](CE/WhyStats_CE_Key)
 
 ----
 
 ## Archived Materials
 
-* [Class Lecture Slides](WhyStats_PPT.pptx)
+* [Class Lecture Slides](PPT/WhyStats_PPT.pptx)
 
 ----

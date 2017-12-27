@@ -44,13 +44,13 @@ Use the materials below to answer the questions on [this preparation guide](Foun
 
 ## Practice
 
-* [Practice Exercises](FoundationalDefns_CE)
-* [Review Exercises](FoundationalDefns_RevEx)
+* [Practice Exercises](CE/FoundationalDefns_CE) [KEY](CE/FoundationalDefns_CE_Key)
+* [Review Exercises](RE/FoundationalDefns_RevEx)
 
 ----
 
 ## Archived Materials
 
-* [Old Lecture Slides](FoundationalDefns_PPT_old.pptx)
+* [Old Lecture Slides](PPT/FoundationalDefns_PPT_old.pptx)
 
 ----

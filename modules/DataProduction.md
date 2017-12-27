@@ -51,13 +51,13 @@ Use the materials below to answer the questions on [this preparation guide](Data
 
 ## Practice
 
-* [Practice Exercises](DataProduction_CE1) ([*more as time permits*](DataProduction_CE2))
-* [Review Exercises](DataProduction_RevEx)
+* [Practice Exercises](CE/DataProduction_CE1) ([*more as time permits*](CE/DataProduction_CE2)) [KEY](CE/DataProduction_CE_Key)
+* [Review Exercises](RE/DataProduction_RevEx)
 
 ----
 
 ## Archived Materials
 
-* [Old Lecture Slides](DataProduction_PPT_old.pptx)
+* [Old Lecture Slides](PPT/DataProduction_PPT_old.pptx)
 
 ----
