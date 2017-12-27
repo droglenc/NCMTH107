@@ -8,4 +8,4 @@ percTable(tbl.drink,digits=1)
 barplot(tbl.drink,xlab="Rating of Use for Drinking",ylab="Frequency",col="gray90")
 
 
-# Script created at 2017-12-27 09:43:02
+# Script created at 2017-12-27 13:36:04

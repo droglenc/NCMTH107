@@ -27,11 +27,14 @@ source("../../../rhelpers/knitr_setup.R")
 library(captioner)
 tbls <- captioner(prefix="Table")
 tbls(name="CWDPerc",'Percentage of coarse woody debris sites by level of exposure (low or medium).')
+tbls(name="DispPerc","Percentages table for perceived choice of agency that disposes of chemical waste.  Abbreviations are: d=Department of Transportation, e=Environmental Protection Agency, n=National Institutes of Health, o=Occupational Safety and Health Administration, and u=unanswered.")
 tbls(name="KidsPerc1",'Percentage of grade school children by their stated goal.')
 tbls(name="KidsPerc2",'Percentage of grade school children by their rank of the impiortance of being good in sports (1=most important).')
 tbls(name="KidsPerc3",'Percentage of grade school children by location of their school.')
+tbls(name="WaterPerc","Percentage table for how much time students at Rice University leave the water on before entering the shower. Note that A=0-5 mins, B=6-10 mins, C=11-15 mins, and D=more than 15 mins.")
 
 figs <- captioner(prefix="Figure")
+figs(name="DispBar","Bar chart of percentages by perceived choice of agency that disposes of chemical waste. Abbreviations are in Table 2.")
 figs(name="KidsBar1",'Bar chart of percentage of grade school children by their stated goal.')
 figs(name="KidsBar2",'Bar chart of percentage of grade school children by their rank of the impiortance of being good in sports (1=most important).')
 figs(name="KidsBar3",'Bar chart of percentage of grade school children by location of their school.')
@@ -103,6 +106,40 @@ R Appendix.
 d <- read.csv("cwd.csv")
 <<CWDTable>>
 <<CWDPTable>>
+```
+
+----
+
+## Chemical Waste Disposal
+```{r echo=FALSE}
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/Keys/")
+d <- read.csv("4_51.csv")
+```
+```{r DispTables, echo=FALSE, results='hide'}
+( a.tbl <- xtabs(~agency,data=d) )
+( p.tbl <- percTable(a.tbl) )
+```
+
+Most respondents thought that the Environmental Protection Agency was the agency that disposed of chemical wastes followed by the Occupational Safety and Health Administration (`r tbls("DispPerc",display='cite')`; `r figs("DispBar",display='cite')`).  Relatively few people thought the Department of Transportation or National Institutes of Health disposed of chemical wastes.
+
+`r tbls("DispPerc")`
+
+```{r echo=FALSE}
+p.tbl
+```
+
+```{r DispBarPlot}
+barplot(p.tbl,xlab="Agency Abbreviation",ylab="Percentage",ylim=c(0,50))
+```
+
+`r figs("DispBar")`
+
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+d <- read.csv("4_51.csv")
+<<DispTables>>
+<<DispBarPlot>>
 ```
 
 ----
@@ -189,6 +226,40 @@ d <- read.csv("PopularKids.csv")
 <<KidsTbl3>>
 <<KidsPTbl3>>
 <<KidsBar3>>
+```
+
+----
+
+## Water Usage
+```{r echo=FALSE, results='hide'}
+water <- factor(c("D","C","B","B","C","C","B","B","C","C","C",
+                  "B","D","B","C","C","B","C","D","D","B","C",
+                  "C","A","B","C","C","A","C","C","D","A","C",
+                  "C","B","B","B","B","B","C","D","B","D","B",
+                  "C","B","C","C","D","C","B","B","D","C","B",
+                  "C","B","B","C","C","B","C","B","C","B","B",
+                  "C","D","B","C","D","C","B","C","D","C","C",
+                  "B","C","B","D","B","B","D","B","C","B","B",
+                  "C","B","C","D","D","C","D","B","B","C","B",
+                  "C","A","A","B","C","B","C","D","D","C","B",
+                  "D","C","C","C","C","A","C","D","B","C","B",
+                  "B","D","C","B","B","A","B","C","B"))
+df <- data.frame(water)
+```
+```{r WaterTables, echo=FALSE, results='hide'}
+freq <- xtabs(~water,data=df)
+perc <- percTable(freq,digits=1)
+```
+
+Most students left the water on for between 6 and 15 minutes, with students approximately evenly split between 6-10 and 11-15 minutes (`r tbls("WaterPerc",display="cite")`). Few students left the water on for less than 5 minutes before entering the shower.
+```{r echo=FALSE}
+perc
+```
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+setwd('C:/aaaWork/Books/IntroStats/HW/')
+df <- read.csv("WaterUsage.csv")
 ```
 
 ----

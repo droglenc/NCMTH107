@@ -6,40 +6,73 @@ author: Derek H. Ogle
 css: "/css/modules.css"
 output:
   html_document:
-    self_contained: no
+    self_contained: false
+    lib_dir: zlibs
 ---
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
-source("../rhelpers/rhelpers.R")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/")
+source("../../rhelpers/rhelpers.R")
 modHTML("UEDACat_CE2")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
-source("../rhelpers/knitr_setup.R")
+source("../../rhelpers/knitr_setup.R")
 ```
 
 ----
 
-## Bar Chart I
-<img src="http://derekogle.com/NCMTH107/modules/zimgs/weddingring.jpg" alt="Wedding Ring" class="img-right">
-[A Northland College student](../resources/past-projects/F07_Brilla.pdf) asked 50 of her peers "Why should people get married (Select Love, Money, Pregnancy, or Other)?"  Her results are shown in the bar chart below.  Use this information to answer the questions further below.
+## Bar Chart II
+<img src="http://derekogle.com/NCMTH107/modules/zimgs/brownpelican.jpg" alt="Brown Pelican" class="img-right">
+[King et al. (2013)](https://www.aphis.usda.gov/wildlife_damage/nwrc/publications/13pubs/king132.pdf) examined the habitat use of [Brown Pelicans (*Pelecanus
+occidentalis*)](https://en.wikipedia.org/wiki/Brown_pelican) in the Northern Gulf of Mexico. In one part of their study, they recorded the GPS location where each pelican was spotted. The bar chart below shows the percentages of those GPS locations in major habitats. Use this information to answer the questions further below. [Note that `Water`="shallow near-shore waters", `EEW`="estuarine emergent wetland", `Grassland`="shoreline grasslands", `UnShore`="unconsolidated shore", `DeepWater`="deeper offshore waters", and `Other`="all other habitats".]
 
-```{r echo=FALSE, fig.width=5, fig.height=4, par1=TRUE}
-tbl <- c(Love=45,Money=1,Pregnancy=0,Other=4)
-barplot(tbl,xlab="Reaons to Marry",ylab="Frequency of Respondents",col="gray90",yaxt="n")
-abline(h=1:5,lty=2,col="gray90")
+```{r echo=FALSE, fig.width=7, fig.height=4, par1=TRUE}
+tbl <- c(0.618,0.2551,0.0392,0.0271,0.0239)
+tbl <- c(tbl,1-sum(tbl))*100
+names(tbl) <- c("Water","EEW","Grassland","UnShore","DeepWater","other")
+barplot(tbl,xlab="Main Habitats",ylab="Percent of Recordings",col="gray90")
+abline(h=seq(5,60,5),lty=2,col="gray90")
 barplot(tbl,col="gray90",yaxt="n",add=TRUE)
-axis(2,seq(0,45,5))
-axis(2,0:45,NA,tcl=-0.15)
 abline(h=0)
+axis(2,1:59,NA,tcl=-0.1)
+axis(2,seq(0,60,5),NA,tcl=-0.2)
 ```
 
 1. What is an individual in this example?
 1. What type of variable is recorded?
-1. Construct a frequency table from this bar chart.
-1. Construct a percentage table from your frequency table.
+1. What (approximate) percentage of individuals used "shallow nearshore waters"?
+1. What (approximate) percentage of individuals used "estuarine emergent wetlands"?
+1. What (approximate) percentate of individuals were not in the two most common habitat types?
+1. What is the shape of this distribution?
+
+----
+
+## Popularity in Middle School
+<img src="zimgs/sports_kids_1.jpg" alt="Sports Kids" class="img-right">
+[Chase and Drummer (1992)](http://www.ncbi.nlm.nih.gov/pubmed/1439167) examined sports as a social status determinant for children. In their study, they surveyed 227 boys and 251 girls in grades 4, 5, and 6 from schools in Michigan to determine which criteria were most important in determining personal, female, and male popularity. In two parts of their study, students were asked what their personal goals were for school (options were "make good grades", "be popular", and "be good in sports"; `goals`) and to rank the importance that "being good in sports" is in defining popularity (1="most important"-4="least important"; `sports`). These data (and answers to several other questions) are in [PopularKids.csv](https://github.com/droglenc/NCData/raw/master/PopularKids.csv). Use these data to answer the following questions.
+
+1. Perform a univariate EDA for `goals`.
+1. Perform a univariate EDA for `sports`.
+1. Perform a univariate EDA for `type` of school. Does this suggest anything about the way that students were sampled?
+
+----
+
+## Water Usage
+<img src="zimgs/shower_water.jpg" alt="Shower Water" class="img-right">
+
+Students in a senior level environmental studies class at Rice University conducted a voluntary response survey regarding water usage by their peers. They received returned surveys from a total 130 students. One question on their survey was, "On average, for how many minutes do you let the water run each time you take a shower? 0-5, 6-10, 11-15, or over 15 minutes?" The individual responses for this survey are shown below with letters corresponding to the category choices offered (e.g., "A"=0-5, "B"=6-10, and so on). Enter these data into R and  write a brief conclusion about these data.
+
+<pre>
+D, C, B, B, C, C, B, B, C, C, C, B, D, B, C, C, B, C, D,
+B, C, C, A, B, C, C, A, C, C, D, A, C, C, B, B, B, B, B,
+D, B, D, B, C, B, C, C, D, C, B, B, D, C, B, C, B, B, C,
+B, C, B, C, B, B, C, D, B, C, D, C, B, C, D, C, C, B, C,
+D, B, B, D, B, C, B, B, C, B, C, D, D, C, D, B, B, C,
+A, A, B, C, B, C, D, D, C, B, D, C, C, C, C, A, C, D,
+B, B, D, C, B, B, A, B, C, B, D, C, C, B, C, C, B, B
+</pre>
 
 ----
 
@@ -48,7 +81,4 @@ abline(h=0)
   <li><a href="UEDACat.html">^</a></li>
   <li><a href="UEDACat_CE1.html">1</a></li>
   <li class="active"><a href="#">2</a></li>
-  <li><a href="UEDACat_CE3.html">3</a></li>
-  <li><a href="UEDACat_CE4.html">4</a></li>
-  <li><a href="UEDACat_CE5.html">5</a></li>
 </ul>

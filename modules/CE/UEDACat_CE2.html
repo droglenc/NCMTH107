@@ -1,0 +1,92 @@
+---
+layout: page
+title: Class Exercise
+subtitle: Univariate EDA - Categorical 2
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="bar-chart-ii" class="section level2">
+<h2>Bar Chart II</h2>
+<p><img src="http://derekogle.com/NCMTH107/modules/zimgs/brownpelican.jpg" alt="Brown Pelican" class="img-right"> <a href="https://www.aphis.usda.gov/wildlife_damage/nwrc/publications/13pubs/king132.pdf">King et al. (2013)</a> examined the habitat use of <a href="https://en.wikipedia.org/wiki/Brown_pelican">Brown Pelicans (<em>Pelecanus occidentalis</em>)</a> in the Northern Gulf of Mexico. In one part of their study, they recorded the GPS location where each pelican was spotted. The bar chart below shows the percentages of those GPS locations in major habitats. Use this information to answer the questions further below. [Note that <code>Water</code>=“shallow near-shore waters”, <code>EEW</code>=“estuarine emergent wetland”, <code>Grassland</code>=“shoreline grasslands”, <code>UnShore</code>=“unconsolidated shore”, <code>DeepWater</code>=“deeper offshore waters”, and <code>Other</code>=“all other habitats”.]</p>
+<p><img src="UEDACat_CE2_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<ol>
+<li>What is an individual in this example?</li>
+<li>What type of variable is recorded?</li>
+<li>What (approximate) percentage of individuals used “shallow nearshore waters”?</li>
+<li>What (approximate) percentage of individuals used “estuarine emergent wetlands”?</li>
+<li>What (approximate) percentate of individuals were not in the two most common habitat types?</li>
+<li>What is the shape of this distribution?</li>
+</ol>
+<hr />
+</div>
+<div id="popularity-in-middle-school" class="section level2">
+<h2>Popularity in Middle School</h2>
+<p><img src="zimgs/sports_kids_1.jpg" alt="Sports Kids" class="img-right"> <a href="http://www.ncbi.nlm.nih.gov/pubmed/1439167">Chase and Drummer (1992)</a> examined sports as a social status determinant for children. In their study, they surveyed 227 boys and 251 girls in grades 4, 5, and 6 from schools in Michigan to determine which criteria were most important in determining personal, female, and male popularity. In two parts of their study, students were asked what their personal goals were for school (options were “make good grades”, “be popular”, and “be good in sports”; <code>goals</code>) and to rank the importance that “being good in sports” is in defining popularity (1=“most important”-4=“least important”; <code>sports</code>). These data (and answers to several other questions) are in <a href="https://github.com/droglenc/NCData/raw/master/PopularKids.csv">PopularKids.csv</a>. Use these data to answer the following questions.</p>
+<ol>
+<li>Perform a univariate EDA for <code>goals</code>.</li>
+<li>Perform a univariate EDA for <code>sports</code>.</li>
+<li>Perform a univariate EDA for <code>type</code> of school. Does this suggest anything about the way that students were sampled?</li>
+</ol>
+<hr />
+</div>
+<div id="water-usage" class="section level2">
+<h2>Water Usage</h2>
+<p><img src="zimgs/shower_water.jpg" alt="Shower Water" class="img-right"></p>
+<p>Students in a senior level environmental studies class at Rice University conducted a voluntary response survey regarding water usage by their peers. They received returned surveys from a total 130 students. One question on their survey was, “On average, for how many minutes do you let the water run each time you take a shower? 0-5, 6-10, 11-15, or over 15 minutes?” The individual responses for this survey are shown below with letters corresponding to the category choices offered (e.g., “A”=0-5, “B”=6-10, and so on). Enter these data into R and write a brief conclusion about these data.</p>
+<pre>
+D, C, B, B, C, C, B, B, C, C, C, B, D, B, C, C, B, C, D,
+B, C, C, A, B, C, C, A, C, C, D, A, C, C, B, B, B, B, B,
+D, B, D, B, C, B, C, C, D, C, B, B, D, C, B, C, B, B, C,
+B, C, B, C, B, B, C, D, B, C, D, C, B, C, D, C, C, B, C,
+D, B, B, D, B, C, B, B, C, B, C, D, D, C, D, B, B, C,
+A, A, B, C, B, C, D, D, C, B, D, C, C, C, C, A, C, D,
+B, B, D, C, B, B, A, B, C, B, D, C, C, B, C, C, B, B
+</pre>
+<hr />
+<div class="text-center">
+<ul class="pagination pagination-lg">
+<li>
+<a href="UEDACat.html">^</a>
+</li>
+<li>
+<a href="UEDACat_CE1.html">1</a>
+</li>
+<li class="active">
+<a href="#">2</a>
+</li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
