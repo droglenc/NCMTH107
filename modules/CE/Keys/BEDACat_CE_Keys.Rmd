@@ -26,10 +26,21 @@ library(NCStats)
 source("../../../rhelpers/knitr_setup.R")
 library(captioner)
 tbls <- captioner(prefix="Table")
+tbls(name="BlightRaw","Frequency table for the fire-blight data. Note that A=no action (control), B=removal of the affected branches, C=spraying of foliage with an antibiotic and the removal of affected branches, 1=the tree died in the same year that the disease was noticed, 2=the tree died after 2-4 years, 3=the tree died after 4 years.")
+tbls(name="BlightRow","Percentages of outcomes within each tree treatment type. Abbreviations are given in Table 1.")
+tbls(name="BlightCol","Percentages of tree treatment type within each outcome. Abbreviations are given in Table 1.")
+tbls(name="BlightTot","Percentages of each tree treament type and outcome. Abbreviations are given in Table 1.")
+
+tbls(name="LightRaw","Frequency table for children by lighting conditions during sleep and whether they developed nearsightedness or not.")
+tbls(name="LightRow","Percentages of chidren by nearsightedness type within each sleeping condition.")
+tbls(name="LightCol","Percentage of children by sleeping conditions within each nearsightedness type.")
+tbls(name="LightTot","Percentages of all students in each sleeping condition and nearsightedness type.")
+
 tbls(name="TreesRaw",'Raw freuency table for stands by type ("sttype": c="coniferous",mc="mostly coniferous",md="mostly deciduous", and d="deciduous" and years since last fire category (tslf).')
 tbls(name="TreesRow",'Row percentages table for stands by type ("sttype": c="coniferous",mc="mostly coniferous",md="mostly deciduous", and d="deciduous" and years since last fire category (tslf).')
 tbls(name="TreesCol",'Column percentages table for stands by type ("sttype": c="coniferous",mc="mostly coniferous",md="mostly deciduous", and d="deciduous" and years since last fire category (tslf).')
 tbls(name="TreesTot",'Total percentages table for stands by type ("sttype": c="coniferous",mc="mostly coniferous",md="mostly deciduous", and d="deciduous" and years since last fire category (tslf).')
+
 tbls(name="KidsRaw",'Raw frequency table for grade school students by goals and grade.')
 tbls(name="KidsRow",'Row percentages table for grade school students by goals and grade.')
 tbls(name="KidsCol",'Column percentages table for grade school students by goals and grade.')
@@ -43,10 +54,12 @@ tbls(name="KidsTot",'Total percentages table for grade school students by goals 
 <ol>
 <li>Two-way frequency table is below.</li>
 ```{r echo=FALSE}
-d <- data.frame(VAR1 <- c("D","C","A","C","A","D","C","A","D","B","A","B",
-                          "B","A","C","D","A","C","A","B","B","A","D","C","A","C","B","B"),
-                VAR2 <- c("c","c","b","c","a","c","a","b","c","b","c","c","b","c","c",
-                          "c","c","c","b","b","a","b","c","b","a","b","a","b"))
+d <- data.frame(VAR1 <- c("D","C","A","C","A","D","C","A","D","B",
+                          "A","B","B","A","C","D","A","C","A","B",
+                          "B","A","D","C","A","C","B","B"),
+                VAR2 <- c("c","c","b","c","a","c","a","b","c","b",
+                          "c","c","b","c","c","c","c","c","b","b",
+                          "a","b","c","b","a","b","a","b"))
 ```
 ```{r eval=FALSE}
 d <- read.csv("BivEDA_CE1.csv")
@@ -70,6 +83,127 @@ percTable(tbl,margin=2,digits=1)
 percTable(tbl,digits=1)
 ```
 </ol>
+
+----
+
+## Fire Blight Disease
+```{r echo=FALSE}
+d <- data.frame(treat=c("A","A","A","A","A","B","B","B","C","C","A","A",
+                        "B","B","B","C","C","C","C","B","B","C","C","C"),
+                out=factor(c(1,1,1,1,1,1,1,1,1,1,2,2,
+                             2,2,2,2,2,2,2,3,3,3,3,3)))
+```
+```{r BlightTables, echo=FALSE, results='hide'}
+( tbl <- xtabs(~treat+out,data=d) )
+( row.tbl <- percTable(tbl,margin=1) )
+( col.tbl <- percTable(tbl,margin=2) )
+( perc.tbl <- percTable(tbl) )
+```
+
+<ol>
+  <li>The frequency table is in `r tbls("BlightRaw",display="cite")`.</li>
+  
+`r tbls("BlightRaw")`
+
+```{r echo=FALSE, background="white"}
+tbl
+```
+  <li>The row percentage table is shown in `r tbls("BlightRow",display="cite")`.</li>
+  
+`r tbls("BlightR0w")`
+
+```{r echo=FALSE, background="white"}
+row.tbl
+```
+
+  <li>The column percentage table is shown in `r tbls("BlightCol",display="cite")`.</li>
+  
+`r tbls("BlightCol")`
+
+```{r echo=FALSE, background="white"}
+col.tbl
+```
+
+  <li>The table percentage table is shown in `r tbls("BlightTot",display="cite")`.</li>
+  
+`r tbls("BlightTot")`
+
+```{r echo=FALSE, background="white"}
+perc.tbl
+```
+
+  <li>The percentage of all trees in Treatment A that were dead within the first year (i.e., outcome=1) is `r formatC(row.tbl["A","1"],format="f",digits=1)`% `r tbls("BlightRow",display="cite")`.</li>
+  <li>The percentage of ALL trees that were in Treatment A AND were dead within the first year (i.e., outcome=1) is `r formatC(perc.tbl["A","1"],format="f",digits=1)`% `r tbls("BlightTot",display="cite")`.</li>
+  <li>The percentage of the trees in the control treatment (treatment A) that died after four years (i.e., outcome=3) is `r formatC(row.tbl["A","3"],format="f",digits=1)`% `r tbls("BlightRow",display="cite")`.</li>
+  <li>The percentage of the trees that died after 2-4 years (outcome 2) that were in the control treatment (treatment A) is `r formatC(col.tbl["A","2"],format="f",digits=1)`% `r tbls("BlightCol",display="cite")`.</li>
+  <li>The percentage of all trees that were dead within the first year is `r formatC(perc.tbl["Sum","1"],format="f",digits=1)`% `r tbls("BlightTot",display="cite")`.</li>
+</ol>
+
+R Appendix
+```{r eval=FALSE, prompt=FALSE}
+setwd('C:/aaaWork/Books/IntroStats/HW/')
+d <- read.csv("FireBlight.csv")
+<<BlightTables>>
+```
+
+----
+
+## Lights and Nearsightedness
+```{r echo=FALSE}
+d <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/nightlight.csv")
+```
+```{r LightTables, echo=FALSE, results='hide'}
+( tbl <- xtabs(~Light+Nearsightedness,data=d) )
+addmargins(tbl)
+( row.tbl <- percTable(tbl,margin=1) )
+( col.tbl <- percTable(tbl,margin=2) )
+( perc.tbl <- percTable(tbl) )
+```
+
+<ol>
+  <li>A total of `r tbl["no light","Yes"]` children slept in "no light" conditions and developed nearsightedness `r tbls("LightRaw",display="cite")`.</li>
+
+`r tbls("LightRaw")`
+
+```{r echo=FALSE, background="white"}
+addmargins(tbl)
+```
+
+  <li>The percentage of children that slept in "no light" conditions that then developed nearsightedness is `r formatC(row.tbl["no light","Yes"],format="f",digits=1)`% `r tbls("LightRow",display="cite")`.</li>
+
+`r tbls("LightRow")`
+
+```{r echo=FALSE, background="white"}
+row.tbl
+```
+
+  <li>The percentage of all children that slept with a "lamp" and developed nearsightedness is `r formatC(perc.tbl["lamp","Yes"],format="f",digits=1)`% `r tbls("LightTot",display="cite")`.</li>
+
+`r tbls("LightTot")`
+
+```{r echo=FALSE, background="white"}
+perc.tbl
+```
+
+  <li>The percentage of children that slept with a "night light" that did not develop nearsightedness is `r formatC(row.tbl["night light","No"],format="f",digits=1)`% `r tbls("LightRow",display="cite")`.</li>
+  <li>The percentage of children that developed nearsightedness that slept with a "lamp" is `r formatC(col.tbl["lamp","Yes"],format="f",digits=1)`% `r tbls("LightCol",display="cite")`.</li>
+
+`r tbls("LightCol")`
+
+```{r echo=FALSE, background="white"}
+col.tbl
+```
+
+  <li>The percentage of children that developed nearsightedness is `r formatC(perc.tbl["Sum","Yes"],format="f",digits=1)`% `r tbls("LightTot",display="cite")`.</li>
+  <li>It appears that the percentage of children that developed nearsightedness is greater when the child slept with some sort of light (either a lamp or a night light), with a somewhat greater prevalence of nearsightedness with the lamp `r tbls("LightRow",display="cite")`.</li>
+</ol>
+
+R Appendix
+```{r eval=FALSE, prompt=FALSE}
+setwd('C:/aaaWork/Books/IntroStats/HW/')
+d <- read.csv("nightlight.csv")
+<<LightTables>>
+```
 
 ----
 
@@ -126,7 +260,6 @@ d <- read.csv("Fire.csv")
 <<treesCol>>
 <<treesTot>>
 ```
-
 
 ----
 

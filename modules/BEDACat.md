@@ -43,8 +43,8 @@ Use the materials below to answer the questions on [this preparation guide](BEDA
 
 ## Practice
 
-* Class Exercises: [1](BEDACat_CE1.html) / [2](BEDACat_CE2.html) (*time permitting* ... [3](BEDACat_CE3.html))
-* [Review Exercises](RE/BEDACat_RevEx.html)
+* [Exercises](CE/BEDACat_CE1) [*more as time permits*](CE/BEDACat_CE2) ... [ANSWER KEY](BEDACat_CE_Keys)
+* [Review Exercises](RE/BEDACat_RevEx)
 
 ----
 
