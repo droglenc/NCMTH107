@@ -41,7 +41,7 @@ Enter these data into R and construct a univariate EDA.
 ----
 
 ## Zoo Animal Types
-<img src="zimgs/shower_water.jpg" alt="Shower Water" class="img-right">
+<img src="zimgs/zoo2.jpg" alt="Zoo" class="img-right">
 
 The data in [Zoo1.csv](https://raw.githubusercontent.com/droglenc/NCData/master/Zoo1.csv) contains a list of animals found in several different zoos. In addition, each animal was classified into broad "type" categories ("mammal", "bird", and "amph/rep"). Perform a univariate EDA for the type of animals in the zoos.
 
