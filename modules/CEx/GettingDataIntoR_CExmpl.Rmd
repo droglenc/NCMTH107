@@ -1,0 +1,56 @@
+---
+layout: page
+title: "Class Example"
+subtitle: "Getting Data Into R"
+author: "Derek H. Ogle"
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_width: 3.5
+    fig_height: 3.5
+    self_contained: false
+    lib_dir: libs
+---
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CEx")
+source("../../rhelpers/rhelpers.R")
+fnm <- "GettingDataIntoR_CExmpl"
+modHTML(fnm)
+purl2(paste0(fnm,".Rmd"))
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+fnm <- "GettingDataIntoR"
+source("../../rhelpers/knitr_setup.R")
+```
+
+----
+
+## Always First Command
+**EVERY** RStudio session for this class should begin with the following code.
+```{r results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+```
+
+----
+
+## Load Data From Webpage
+
+1. Load **Iris.csv** into an R data.frame called `dfiris`. 
+
+```{r eval=FALSE, echo=FALSE}
+library(NCStats)
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CEx")
+dfiris <- read.csv("Iris.csv")
+str(dfiris)
+headtail(dfiris)
+```
+
+----
+
+## Enter Own Data
+
+1. Create an R data.frame (by first creating a CSV file) that contains the following three variables for each course you are taking this semester: name of your professor (e.g., "Ogle"), course abbreviation (e.g., "MTH107"), and number of credits (e.g., "4").
+
+----

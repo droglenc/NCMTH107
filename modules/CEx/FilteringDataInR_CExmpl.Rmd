@@ -1,0 +1,105 @@
+---
+layout: page
+title: "Class Example"
+subtitle: "Filtering Data In R"
+author: "Derek H. Ogle"
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_width: 3.5
+    fig_height: 3.5
+    self_contained: false
+    lib_dir: libs
+---
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CEx")
+source("../../rhelpers/rhelpers.R")
+fnm <- "FilteringDataInR_CExmpl"
+modHTML(fnm)
+purl2(paste0(fnm,".Rmd"))
+```
+```{r echo=FALSE, results='hide', message=FALSE}
+fnm <- "FilteringDataInR"
+source("../../rhelpers/knitr_setup.R")
+```
+
+----
+
+## Load Data From Webpage
+
+Load **Iris.csv** into an R data.frame called `dfiris`. *Open your script and copy your code from last class period.*
+```{r echo=FALSE}
+dfiris <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Iris.csv")
+```
+```{r message=FALSE}
+library(NCStats)
+```
+```{r eval=FALSE}
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CEx")
+dfiris <- read.csv("Iris.csv")
+```
+```{r}
+str(dfiris)
+headtail(dfiris)
+```
+
+
+
+
+
+----
+
+## Examining Single Variables
+
+* Examine the sepal length variable.
+```{r}
+dfiris$seplen
+```
+
+* Examine the species variable.
+```{r}
+dfiris$species
+```
+
+## Filtering Data Frames
+* Isolate just the `setosa` species.
+```{r}
+set <- filterD(dfiris,species=="setosa")
+str(set)
+headtail(set)
+```
+
+* Isolate the irises with a sepal length greater than 5 cm.
+```{r}
+gt5 <- filterD(dfiris,seplen>5)
+headtail(gt5)
+```
+
+* Remove the `virginica` species or retain the `setosa` and `versicolor` species.
+```{r}
+setver1 <- filterD(dfiris,species %in% c("setosa","versicolor"))
+str(setver1)
+headtail(setver1)
+```
+
+* Same as above.
+```{r}
+setver2 <- filterD(dfiris,species!="virginica")
+str(setver2)
+headtail(setver2)
+```
+
+* Isolate the `versicolor` species that had sepal lengths greater than 5 cm.
+```{r}
+ver_gt5 <- filterD(dfiris,species=="versicolor",seplen>5)
+headtail(ver_gt5)
+```
+
+* Isolate all irises that had a sepal length between 5 and 9 cm.
+```{r}
+ver_bw5n9 <- filterD(dfiris,seplen>5,seplen<9)
+headtail(ver_bw5n9)
+```
+
+----

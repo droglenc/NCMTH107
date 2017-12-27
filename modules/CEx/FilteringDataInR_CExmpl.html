@@ -1,0 +1,197 @@
+---
+layout: page
+title: "Class Example"
+subtitle: "Filtering Data In R"
+author: "Derek H. Ogle"
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="load-data-from-webpage" class="section level2">
+<h2>Load Data From Webpage</h2>
+<p>Load <strong>Iris.csv</strong> into an R data.frame called <code>dfiris</code>. <em>Open your script and copy your code from last class period.</em></p>
+<pre class="r"><code>&gt; library(NCStats)</code></pre>
+<pre class="r"><code>&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules/CEx&quot;)
+&gt; dfiris &lt;- read.csv(&quot;Iris.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; str(dfiris)</code></pre>
+<pre><code>&#39;data.frame&#39;:   150 obs. of  5 variables:
+ $ seplen : int  50 46 46 51 55 48 52 49 44 50 ...
+ $ sepwid : int  33 34 36 33 35 31 34 36 32 35 ...
+ $ petlen : int  14 14 10 17 13 16 14 14 13 16 ...
+ $ petwid : int  2 3 2 5 2 2 2 1 2 6 ...
+ $ species: Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<pre class="r"><code>&gt; headtail(dfiris)</code></pre>
+<pre><code>    seplen sepwid petlen petwid   species
+1       50     33     14      2    setosa
+2       46     34     14      3    setosa
+3       46     36     10      2    setosa
+148     57     25     50     20 virginica
+149     58     28     51     24 virginica
+150     63     33     60     25 virginica</code></pre>
+<hr />
+</div>
+<div id="examining-single-variables" class="section level2">
+<h2>Examining Single Variables</h2>
+<ul>
+<li>Examine the sepal length variable.</li>
+</ul>
+<pre class="r"><code>&gt; dfiris$seplen</code></pre>
+<pre><code>  [1] 50 46 46 51 55 48 52 49 44 50 44 47 48 51 48 50 50 43 58 51 49 51 50 46 57 50 54 52
+ [29] 55 49 54 50 44 47 46 51 50 49 54 54 51 48 48 45 57 51 54 51 52 53 65 62 59 61 60 56
+ [57] 57 63 70 64 61 55 54 58 55 50 67 56 58 60 57 57 49 56 57 66 52 60 50 55 58 62 59 60
+ [85] 67 63 56 63 61 64 51 57 61 56 69 55 55 66 68 67 64 67 63 69 65 65 58 68 62 77 67 76
+[113] 49 67 59 63 64 79 67 77 63 72 61 61 64 62 77 63 58 72 71 64 60 63 77 60 69 74 56 73
+[141] 67 65 69 72 65 64 68 57 58 63</code></pre>
+<ul>
+<li>Examine the species variable.</li>
+</ul>
+<pre class="r"><code>&gt; dfiris$species</code></pre>
+<pre><code>  [1] setosa     setosa     setosa     setosa     setosa     setosa     setosa    
+  [8] setosa     setosa     setosa     setosa     setosa     setosa     setosa    
+ [15] setosa     setosa     setosa     setosa     setosa     setosa     setosa    
+ [22] setosa     setosa     setosa     setosa     setosa     setosa     setosa    
+ [29] setosa     setosa     setosa     setosa     setosa     setosa     setosa    
+ [36] setosa     setosa     setosa     setosa     setosa     setosa     setosa    
+ [43] setosa     setosa     setosa     setosa     setosa     setosa     setosa    
+ [50] setosa     versicolor versicolor versicolor versicolor versicolor versicolor
+ [57] versicolor versicolor versicolor versicolor versicolor versicolor versicolor
+ [64] versicolor versicolor versicolor versicolor versicolor versicolor versicolor
+ [71] versicolor versicolor versicolor versicolor versicolor versicolor versicolor
+ [78] versicolor versicolor versicolor versicolor versicolor versicolor versicolor
+ [85] versicolor versicolor versicolor versicolor versicolor versicolor versicolor
+ [92] versicolor versicolor versicolor versicolor versicolor versicolor versicolor
+ [99] versicolor versicolor virginica  virginica  virginica  virginica  virginica 
+[106] virginica  virginica  virginica  virginica  virginica  virginica  virginica 
+[113] virginica  virginica  virginica  virginica  virginica  virginica  virginica 
+[120] virginica  virginica  virginica  virginica  virginica  virginica  virginica 
+[127] virginica  virginica  virginica  virginica  virginica  virginica  virginica 
+[134] virginica  virginica  virginica  virginica  virginica  virginica  virginica 
+[141] virginica  virginica  virginica  virginica  virginica  virginica  virginica 
+[148] virginica  virginica  virginica 
+Levels: setosa versicolor virginica</code></pre>
+</div>
+<div id="filtering-data-frames" class="section level2">
+<h2>Filtering Data Frames</h2>
+<ul>
+<li>Isolate just the <code>setosa</code> species.</li>
+</ul>
+<pre class="r"><code>&gt; set &lt;- filterD(dfiris,species==&quot;setosa&quot;)
+&gt; str(set)</code></pre>
+<pre><code>&#39;data.frame&#39;:   50 obs. of  5 variables:
+ $ seplen : int  50 46 46 51 55 48 52 49 44 50 ...
+ $ sepwid : int  33 34 36 33 35 31 34 36 32 35 ...
+ $ petlen : int  14 14 10 17 13 16 14 14 13 16 ...
+ $ petwid : int  2 3 2 5 2 2 2 1 2 6 ...
+ $ species: Factor w/ 1 level &quot;setosa&quot;: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<pre class="r"><code>&gt; headtail(set)</code></pre>
+<pre><code>   seplen sepwid petlen petwid species
+1      50     33     14      2  setosa
+2      46     34     14      3  setosa
+3      46     36     10      2  setosa
+48     51     37     15      4  setosa
+49     52     35     15      2  setosa
+50     53     37     15      2  setosa</code></pre>
+<ul>
+<li>Isolate the irises with a sepal length greater than 5 cm.</li>
+</ul>
+<pre class="r"><code>&gt; gt5 &lt;- filterD(dfiris,seplen&gt;5)
+&gt; headtail(gt5)</code></pre>
+<pre><code>    seplen sepwid petlen petwid   species
+1       50     33     14      2    setosa
+2       46     34     14      3    setosa
+3       46     36     10      2    setosa
+148     57     25     50     20 virginica
+149     58     28     51     24 virginica
+150     63     33     60     25 virginica</code></pre>
+<ul>
+<li>Remove the <code>virginica</code> species or retain the <code>setosa</code> and <code>versicolor</code> species.</li>
+</ul>
+<pre class="r"><code>&gt; setver1 &lt;- filterD(dfiris,species %in% c(&quot;setosa&quot;,&quot;versicolor&quot;))
+&gt; str(setver1)</code></pre>
+<pre><code>&#39;data.frame&#39;:   100 obs. of  5 variables:
+ $ seplen : int  50 46 46 51 55 48 52 49 44 50 ...
+ $ sepwid : int  33 34 36 33 35 31 34 36 32 35 ...
+ $ petlen : int  14 14 10 17 13 16 14 14 13 16 ...
+ $ petwid : int  2 3 2 5 2 2 2 1 2 6 ...
+ $ species: Factor w/ 2 levels &quot;setosa&quot;,&quot;versicolor&quot;: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<pre class="r"><code>&gt; headtail(setver1)</code></pre>
+<pre><code>    seplen sepwid petlen petwid    species
+1       50     33     14      2     setosa
+2       46     34     14      3     setosa
+3       46     36     10      2     setosa
+98      66     30     44     14 versicolor
+99      68     28     48     14 versicolor
+100     67     30     50     17 versicolor</code></pre>
+<ul>
+<li>Same as above.</li>
+</ul>
+<pre class="r"><code>&gt; setver2 &lt;- filterD(dfiris,species!=&quot;virginica&quot;)
+&gt; str(setver2)</code></pre>
+<pre><code>&#39;data.frame&#39;:   100 obs. of  5 variables:
+ $ seplen : int  50 46 46 51 55 48 52 49 44 50 ...
+ $ sepwid : int  33 34 36 33 35 31 34 36 32 35 ...
+ $ petlen : int  14 14 10 17 13 16 14 14 13 16 ...
+ $ petwid : int  2 3 2 5 2 2 2 1 2 6 ...
+ $ species: Factor w/ 2 levels &quot;setosa&quot;,&quot;versicolor&quot;: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<pre class="r"><code>&gt; headtail(setver2)</code></pre>
+<pre><code>    seplen sepwid petlen petwid    species
+1       50     33     14      2     setosa
+2       46     34     14      3     setosa
+3       46     36     10      2     setosa
+98      66     30     44     14 versicolor
+99      68     28     48     14 versicolor
+100     67     30     50     17 versicolor</code></pre>
+<ul>
+<li>Isolate the <code>versicolor</code> species that had sepal lengths greater than 5 cm.</li>
+</ul>
+<pre class="r"><code>&gt; ver_gt5 &lt;- filterD(dfiris,species==&quot;versicolor&quot;,seplen&gt;5)
+&gt; headtail(ver_gt5)</code></pre>
+<pre><code>   seplen sepwid petlen petwid    species
+1      65     28     46     15 versicolor
+2      62     22     45     15 versicolor
+3      59     32     48     18 versicolor
+48     66     30     44     14 versicolor
+49     68     28     48     14 versicolor
+50     67     30     50     17 versicolor</code></pre>
+<ul>
+<li>Isolate all irises that had a sepal length between 5 and 9 cm.</li>
+</ul>
+<pre class="r"><code>&gt; ver_bw5n9 &lt;- filterD(dfiris,seplen&gt;5,seplen&lt;9)</code></pre>
+<pre><code>Warning: The resultant data.frame has 0 rows.  Try str() on the result.</code></pre>
+<pre class="r"><code>&gt; headtail(ver_bw5n9)</code></pre>
+<pre><code>[1] seplen  sepwid  petlen  petwid  species
+&lt;0 rows&gt; (or 0-length row.names)</code></pre>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

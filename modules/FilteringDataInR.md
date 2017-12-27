@@ -36,7 +36,7 @@ Use the materials below to answer the questions on [this preparation guide](Filt
 
 ## Practice
 
-* [Class Example](CExmpl/FilteringDataInR_CExmpl)
+* [Class Example](CEx/FilteringDataInR_CExmpl)
 * [Practice Exercises](CE/FilteringDataInR_CE) ... [ANSWER KEY](CE/FilteringDataInR_CE_Keys)
 
 ----
