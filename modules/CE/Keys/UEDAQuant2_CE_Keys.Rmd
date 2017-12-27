@@ -28,6 +28,8 @@ library(captioner)
 tbls <- captioner(prefix="Table")
 tbls(name="CWD1","Summary statistics for the diameter (cm) of coarse woody debris in Allequash Lake, WI.")
 tbls(name="CWD2","Summary statistics for the diameter (cm) of coarse woody debris in Allequash Lake, WI separated by exposure category.")
+tbls(name="BODStats","Descriptive statistics for BOD measurements for the private and state labs.")
+tbls(name="GPAStats","Descriptive statistics for class gpa of math and other courses at the University of North Carolina")
 tbls(name="Cafe1","Summary statistics of the number of coffees sold in the college cafe.")
 tbls(name="Cafe2","Summary statistics of the number of coffees sold in the college cafe separated by day of the week.")
 tbls(name="Cafe3","Summary statistics of the number of sodas sold in the college cafe.")
@@ -36,6 +38,8 @@ tbls(name="Cafe4","Summary statistics of the number of sodas sold in the college
 figs <- captioner(prefix="Figure")
 figs(name="CWD1","Histogram of the diameter (cm) of coarse woody debris in Allequash Lake, WI.")
 figs(name="CWD2","Histogram of the diameter (cm) of coarse woody debris in Allequash Lake, WI separated by exposure category.")
+figs(name="BODhist","Histograms for BOD measurements for the private (left) and state (right) labs.")
+figs(name="GPAhist","Histograms of class gpa for math (left) and other (right) courses at the University of North Carolina.")
 figs(name="Cafe1","Histogram of the number of coffees sold in the college cafe.")
 figs(name="Cafe3","Histogram of the number of sodas sold in the college cafe.")
 ```
@@ -55,50 +59,12 @@ figs(name="Cafe3","Histogram of the number of sodas sold in the college cafe.")
 
 ----
 
-## Shape and Outliers II
-
-1. Approximately symmetric (possibly slightly right-skewed).
-1. No outliers.
-1. I would use the mean and standard deviation because the distribution is approximately symmetric with no outliers.
-
-----
-
-## Shape and Outliers III
-
-1. Strongly left-skewed.
-1. Outliers between 30-40 and between 50-60 mm.
-1. I would use the median and IQR because the distribution is strongly skewed and outliers are present.
-
-----
-
-## Mean vs Median
-1. Generally, (i) right-skewed, (ii) no outliers, and (iii) mean is less than median.
-1. Generally, (i) left-skewed, (ii) no outliers, and (iii) mean is greater than median.
-1. The mean is greater than the median for right-skewed distributions and less than the median for left-skewed distributions.
-1. The mean is equal to the median for perfectly symmetric distributions.
-1. Generally, (i) symmetric, (ii) outlier at minimum, and (iii) mean is less than median.
-1. Generally, (i) symmetric, (ii) outlier at maximum, and (iii) mean is greater than median.
-1. Outliers attract the mean but have little effect on the median. For example, if the outlier is at the maximum value then the mean will be greater than the median.
-1. See below.
-    1. Mean > Median
-    1. Mean < Median (only slightly)
-    1. Mean > Median
-    1. Mean = Median (approximately)
-    1. Mean = Median (approximately)
-    1. Mean < Median
-    1. Mean < Median
-    1. Mean = Median (approximately)
-1. The mean uses the actual values whereas the median is only concerned with relative positions.
-
-----
-
 ## Commute Time
 The distribution of commute times is approximately symmetric with no outliers (Figure 1). The center as measured by the mean is 23.75 mins and the disperision as measured by the standard deviation is 3.54 mins (Table 1). The mean and standard deviation were used because the distribution was symmetric and no outliers were present.
 
 ----
 
 ## Dungeness Crabs
-
 The distribution of post-molt carapace lengths for Dungeness Crabas is strongly left-skewed with two outliers between 38.8 and 60 mm (Figure 2). The center as measured by the median is 147.4 mm and the dispersion as measured by the IQR is from a Q1 of 138.0 to a Q3 of 153.4 mm (Table 2). The median and IQR were used because the distribution was strongly skewed and outliers were present.
 
 ----
@@ -140,6 +106,76 @@ R Appendix.
 <<CWDSum1>>
 <<CWDHist2>>
 <<CWDSum2>>
+```
+
+----
+
+## Effluent Sampling Labs
+```{r echo=FALSE}
+d <- read.csv("4_50.csv")
+```
+
+<ol>
+  <li>The distribution of BOD values for the private lab is approximately symmetric with no obvious outliers (`r figs("BODhist",display="cite")`). The mean of the private data is 34.64 mg/L with a standard deviation of 10.45 mg/L  (`r figs("BODStats",display="cite")`).  The mean and standard deviation were used because of the symmetry of the distribution and absence of outliers.
+
+  The distribution of BOD values for the state lab appears to be right-skewed with an outlier at 71 mg/L (`r figs("BODhist",display="cite")`).  The median of the state data is 20 mg/L with an IQR from 9.5 to 33.5 mg/L (`r figs("BODStats",display="cite")`).  The median and IQR were used because of the presence of the outlier.</li>
+  
+```{r BODhist, echo=FALSE, fig.width=7, fig.height=3.5}
+hist(bod~lab,data=d,xlab="BOD Measurements")
+```
+
+`r figs("BODhist")` 
+
+`r tbls("BODStats")`
+
+```{r BODStats, echo=FALSE, background="white"}
+Summarize(bod~lab,data=d,digits=1)
+```
+
+  <li>The two most outstanding differences between the private and state labs are that the state lab BOD values are generally lower (note lower means and medians) and more dispersed (note wider IQR and larger standard deviation).</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/Keys")
+d <- read.csv("4_50.csv")
+<<BODhist>>
+<<BODStats>>
+```
+
+----
+
+## Math Class Grades
+```{r echo=FALSE}
+d <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/UNCgrades.csv")
+```
+
+<ol>
+  <li>The distribution of GPA for the math classes is slightly right-skewed with no obvious outliers (`r figs("GPAhist",display="cite")`). The median for the math courses is 2.30 with an IQR from a Q1 of 2.165 to a Q3 of 2.445 (`r tbls("GPAStats",display="cite")`). The median and IQR were used because of the skewness in the data.
+
+The distribution of GPA for the other classes is left-skewed with no obvious outliers (`r figs("GPAhist",display="cite")`). The median for the other courses is 2.54 with an IQR from a Q1 of 2.440 to a Q3 of 2.620 (`r tbls("GPAStats",display="cite")`). The median and IQR were used because of the skewness in the data.
+
+```{r GPAhist, echo=FALSE, fig.width=7, fig.height=3.5}
+hist(gpa~class.type,data=d,xlab="Class GPA")
+```
+
+`r figs("GPAhist")`
+
+`r tbls("GPAStats")`
+
+```{r GPAStats, echo=FALSE, background="white"}
+Summarize(gpa~class.type,data=d,digits=3)
+```
+
+  <li>The two most outstanding differences between the GPA in math and other courses is that the GPA in the math courses is slighty lower (lower median GPA) and slighly more dispersed (more variable as shown by a greater IQR). Thus, the GPA in math courses is generally lower but more variable.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/Keys")
+d <- read.csv("UNCgrades.csv")
+<<GPAhist>>
+<<GPAStats>>
 ```
 
 ----

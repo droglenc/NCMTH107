@@ -14,32 +14,6 @@ css: "/css/modules.css"
 <p><img src="UEDAQuant2_CE1_files/figure-html/unnamed-chunk-3-1.png" width="288" /><img src="UEDAQuant2_CE1_files/figure-html/unnamed-chunk-3-2.png" width="288" /><img src="UEDAQuant2_CE1_files/figure-html/unnamed-chunk-3-3.png" width="288" /><img src="UEDAQuant2_CE1_files/figure-html/unnamed-chunk-3-4.png" width="288" /><img src="UEDAQuant2_CE1_files/figure-html/unnamed-chunk-3-5.png" width="288" /><img src="UEDAQuant2_CE1_files/figure-html/unnamed-chunk-3-6.png" width="288" /><img src="UEDAQuant2_CE1_files/figure-html/unnamed-chunk-3-7.png" width="288" /><img src="UEDAQuant2_CE1_files/figure-html/unnamed-chunk-3-8.png" width="288" /></p>
 <hr />
 </div>
-<div id="shape-and-outliers-ii" class="section level2">
-<h2>Shape and Outliers II</h2>
-<p><img src="zimgs/commuting.jpg" alt="Commuting" class="img-right"></p>
-<p>The <a href="http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map">U.S. Census</a> asked individuals 16 years old and older “How long in minutes is your one-way commute to work each day?”. The mean for individuals from each state was computed and is plotted in the histogram below.</p>
-<p><img src="UEDAQuant2_CE1_files/figure-html/unnamed-chunk-4-1.png" width="384" /></p>
-<p>Use this histogram to answer these questions.</p>
-<ol>
-<li>What is the shape of this distribution.</li>
-<li>Are there any outliers represented in this distribution?</li>
-<li>Which measures would you use to describe the center and dispersion of this distribution?</li>
-</ol>
-<hr />
-</div>
-<div id="shape-and-outliers-iii" class="section level2">
-<h2>Shape and Outliers III</h2>
-<p><img src="zimgs/Dungeness.jpg" alt="Dungeness Crab" class="img-right"></p>
-<p>Scientists were concered about the overexploitation of <a href="https://en.wikipedia.org/wiki/Dungeness_crab">Dungeness Crabs (<em>Cancer magister</em>)</a> in some California waters. To better manage this species they examined the post-molt carapace length from a large sample of crabs. Their results are displayed in the histogram below.</p>
-<p><img src="UEDAQuant2_CE1_files/figure-html/unnamed-chunk-5-1.png" width="384" /></p>
-<p>Use this histogram to answer these questions.</p>
-<ol>
-<li>What is the shape of this distribution.</li>
-<li>Are there any outliers represented in this distribution?</li>
-<li>Which measures would you use to describe the center and dispersion of this distribution?</li>
-</ol>
-<hr />
-</div>
 <div id="commute-times" class="section level2">
 <h2>Commute Times</h2>
 <p><img src="zimgs/commuting.jpg" alt="Commuting" class="img-right"></p>
@@ -75,22 +49,10 @@ exposure med med med med med med med med low med med med med low low med med med
 diameter  20  23  34  20  17  20  15  34  18  24
 exposure med med low med med med med med med med
 </pre>
-<p>Enter the data into Excel, save as a CSV, and load the data into R. [<strong>HINT:</strong> <em>these are the same data that you entered in <a href="DataIntoR_CE2">a previous class exercise</a>. Use that file and recycle the portion of that R script that you used to load the data.</em>] Use this information to answer the following questions.</p>
+<p>Enter the data into Excel, save as a CSV, and load the data into R. [<strong>HINT:</strong> <em>these are the same data that you entered in <a href="GettingDataIntoR_CE">a previous class exercise</a>. Use that file and recycle the portion of that R script that you used to load the data.</em>] Use this information to answer the following questions.</p>
 <ol>
 <li>Perform a univariate EDA for <code>diameter</code>.</li>
 <li>Perform a univariate EDA for <code>diameter</code> separately for the low- and medium-<code>exposure</code> sites.</li>
-</ol>
-<hr />
-</div>
-<div id="cafe-sales" class="section level2">
-<h2>Cafe Sales</h2>
-<p><img src="zimgs/cafe.jpg" alt="Cafe" class="img-right"> <a href="http://www.amstat.org/publications/jse/v19n1/depaolo.pdf">DePaolo and Robinson (2011)</a> reported on data collected from a cafe run by business students at Indiana State University. The cafe was begun because a commercial vendor had closed a similar business. The group of business students opened a replacement business and carefully monitored sales and costs over a ten-week period during the spring semester of 2010. The students recorded extensive data in <a href="http://www.amstat.org/publications/jse/v19n1/cafedata.xls">cafedata.xls</a> (<a href="http://www.sic.edu/files/uploads/global/Math_and_Science_Division/Math_141/Cafedata.xls">alt. link to data</a>) that is described <a href="http://www.amstat.org/publications/jse/v19n1/cafedata_documentation.txt">in detail here</a>. One aspect of their study was to record the total number of coffees and sodas sold per day and the maximum daily temperature (F). Download these Excel data with the line from above, rename the variables (column headings) to include no spaces, add a variable that represents the days since start of the cafe, replace all <code>na</code> values with <code>NA</code>, save the file in CSV format, load the data into R, <strong>refactor</strong> the day of the week variable to be in proper order (see section 4.2.2 in the book), and answer the questions below.</p>
-<ol>
-<li>Perform a univariate EDA for the number of coffees sold.</li>
-<li>Examine the effect of day of the week on the distribution of number of coffees sold.</li>
-<li>Perform a univariate EDA for the number of sodas sold.</li>
-<li>Examine the effect of day of the week on the distribution of number of sodas sold.</li>
-<li>Construct a “take home message” from your analyses.</li>
 </ol>
 <hr />
 </div>
@@ -105,16 +67,6 @@ Private -- 15,25,28,29,34,35,36,39,42,44,54
 <ol>
 <li>Perform separate appropriate EDAs for each lab. Refer to figures and tables as appropriate. [<em>HINT: You may construct a figure for each lab with just one R command. One command may also be used to construct a table that contains results for each lab.</em>]</li>
 <li>Comment on two MAJOR differences in the results from the two labs?</li>
-</ol>
-<hr />
-</div>
-<div id="math-class-grades" class="section level2">
-<h2>Math Class Grades</h2>
-<p><img src="zimgs/math_exam.jpg" alt="Math Grades" class="img-right"></p>
-<p>The University of North Carolina math department is noted for “giving out” low grades. To examine this, the GPA from a random sample of 22 math classes and 29 “other” university classes (from the last year) was collected and recorded in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/UNCgrades.csv">UNCGrades.csv</a>. Use these data to answer the following questions.</p>
-<ol>
-<li>Separately, perform an appropriate EDA for each type of class. Refer to figures and tables as appropriate. [<em>HINT: You may construct a figure for each type of class with just one R command. One command may also be used to construct a table that contains results for each class type.</em>]</li>
-<li>What two MAJOR conclusions might you make about differences in GPA between the two class types based on your observations above. [<em>HINT: Focus on EDA characteristics that you described in your answer to the previous question.</em>]</li>
 </ol>
 <hr />
 <div class="text-center">

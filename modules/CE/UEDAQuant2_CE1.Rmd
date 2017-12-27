@@ -54,51 +54,10 @@ hist(~c(rbeta(n/2,7,2),rbeta(n/2,2,7)),xlab=xlbl,main="#8",xaxt="n",yaxt="n")
 
 ----
 
-## Shape and Outliers II
-<img src="zimgs/commuting.jpg" alt="Commuting" class="img-right">
-
-The [U.S. Census](http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map) asked individuals 16 years old and older "How long in minutes is your one-way commute to work each day?".  The mean for individuals from each state was computed and is plotted in the histogram below.
-
-```{r echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
-df <- data.frame(time=c(24.2,18.8,24.6,21.3,27.2,24.5,24.8,24.8,29.7,25.9,27,
-                        26,20,28,23.2,18.8,19,22.8,24.9,23.3,32,28,24,22.9,
-                        23.9,23.1,18,18.1,23.8,26.3,30.4,21.6,31.6,23.6,16.9,
-                        23,21,22.5,25.9,23.6,23.5,16.9,24.3,25,21.4,22.2,27.7,
-                        25.7,25.5,21.7,18.3))
-hist(~time,data=df,breaks=seq(16,32,2),xaxt="n",xlab="Mean Commute Time (mins)")
-axis(1,seq(16,32,2))
-```
-
-Use this histogram to answer these questions.
-
-1. What is the shape of this distribution.
-1. Are there any outliers represented in this distribution?
-1. Which measures would you use to describe the center and dispersion of this distribution?
-
-----
-
-## Shape and Outliers III
-<img src="zimgs/Dungeness.jpg" alt="Dungeness Crab" class="img-right">
-
-Scientists were concered about the overexploitation of [Dungeness Crabs (*Cancer magister*)](https://en.wikipedia.org/wiki/Dungeness_crab) in some California waters. To better manage this species they examined the post-molt carapace length from a large sample of crabs. Their results are displayed in the histogram below.
-
-```{r echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
-df <- read.table("http://www.stat.berkeley.edu/~statlabs/data/crabs.data",header=TRUE)
-hist(~postsz,data=df,w=10,xlab="Post-Molt Carapace Size (mm)")
-```
-
-Use this histogram to answer these questions.
-
-1. What is the shape of this distribution.
-1. Are there any outliers represented in this distribution?
-1. Which measures would you use to describe the center and dispersion of this distribution?
-
-----
-
 ## Commute Times
 <img src="zimgs/commuting.jpg" alt="Commuting" class="img-right">
 
-The [U.S. Census](http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map) asked individuals 16 years old and older "How long in minutes is your one-way commute to work each day?".  The mean for individuals from each state was recorded with summary results shown in `r figs("Commute",display="cite")` and `r tbls("Commute",display="cite")`. Perform a thorough EDA with these results.
+The [U.S. Census](http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map) asked individuals 16 years old and older "How long in minutes is your one-way commute to work each day?". The mean for individuals from each state was recorded with summary results shown in `r figs("Commute",display="cite")` and `r tbls("Commute",display="cite")`. Perform a thorough EDA with these results.
 
 ```{r CommuteHist, echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
 df <- data.frame(time=c(24.2,18.8,24.6,21.3,27.2,24.5,24.8,24.8,29.7,25.9,27,
@@ -142,7 +101,7 @@ Summarize(~postsz,data=df,digits=1)
 
 ## Coarse Woody Debris
 <img src="zimgs/cwd2.jpg" alt="CWD" class="img-right">
-Coarse woody debris (CWD) in lakes is important for aquatic systems as it provides refuge for young fish and invertebrates as well as providing areas for periphyton to grow.  Coarse woody debris was studied in the north basin of Allequash Lake in northern Wisconsin.  Among other things, the researchers recorded the diameter (cm) of CWD found in the lake littoral zone and a qualitative measure of the degree to which the location where the CWD was found was exposed to winds (low or medium).  The data (sampled from information on the [North Temperate Lakes Long Term Ecological Research website](https://lter.limnology.wisc.edu/datacatalog/search)) they observed are shown below.
+Coarse woody debris (CWD) in lakes is important for aquatic systems as it provides refuge for young fish and invertebrates as well as providing areas for periphyton to grow. Coarse woody debris was studied in the north basin of Allequash Lake in northern Wisconsin. Among other things, the researchers recorded the diameter (cm) of CWD found in the lake littoral zone and a qualitative measure of the degree to which the location where the CWD was found was exposed to winds (low or medium). The data (sampled from information on the [North Temperate Lakes Long Term Ecological Research website](https://lter.limnology.wisc.edu/datacatalog/search)) they observed are shown below.
 
 <pre>
 diameter  21  15  18  23  18  17  19  17  15  22  16  20  16  17  18  15  16  24  24  23
@@ -155,22 +114,10 @@ diameter  20  23  34  20  17  20  15  34  18  24
 exposure med med low med med med med med med med
 </pre>
 
-Enter the data into Excel, save as a CSV, and load the data into R.  [**HINT:** *these are the same data that you entered in [a previous class exercise](DataIntoR_CE2).  Use that file and recycle the portion of that R script that you used to load the data.*]  Use this information to answer the following questions.
+Enter the data into Excel, save as a CSV, and load the data into R. [**HINT:** *these are the same data that you entered in [a previous class exercise](GettingDataIntoR_CE). Use that file and recycle the portion of that R script that you used to load the data.*]  Use this information to answer the following questions.
 
 1. Perform a univariate EDA for `diameter`.
 1. Perform a univariate EDA for `diameter` separately for the low- and medium-`exposure` sites.
-
-----
-
-## Cafe Sales
-<img src="zimgs/cafe.jpg" alt="Cafe" class="img-right">
-[DePaolo and Robinson (2011)](http://www.amstat.org/publications/jse/v19n1/depaolo.pdf) reported on data collected from a cafe run by business students at Indiana State University.  The cafe was begun because a commercial vendor had closed a similar business.  The group of business students opened a replacement business and carefully monitored sales and costs over a ten-week period during the spring semester of 2010.  The students recorded extensive data in [cafedata.xls](http://www.amstat.org/publications/jse/v19n1/cafedata.xls) ([alt. link to data](http://www.sic.edu/files/uploads/global/Math_and_Science_Division/Math_141/Cafedata.xls)) that is described [in detail here](http://www.amstat.org/publications/jse/v19n1/cafedata_documentation.txt).  One aspect of their study was to record the total number of coffees and sodas sold per day and the maximum daily temperature (F).  Download these Excel data with the line from above, rename the variables (column headings) to include no spaces, add a variable that represents the days since start of the cafe, replace all `na` values with `NA`, save the file in CSV format, load the data into R, **refactor** the day of the week variable to be in proper order (see section 4.2.2 in the book), and answer the questions below.
-
-1. Perform a univariate EDA for the number of coffees sold.
-1. Examine the effect of day of the week on the distribution of number of coffees sold.
-1. Perform a univariate EDA for the number of sodas sold.
-1. Examine the effect of day of the week on the distribution of number of sodas sold.
-1. Construct a "take home message" from your analyses.
 
 ----
 
@@ -188,26 +135,6 @@ Private -- 15,25,28,29,34,35,36,39,42,44,54
 1. Comment on two MAJOR differences in the results from the two labs?
 
 ----
-
-## Math Class Grades
-<img src="zimgs/math_exam.jpg" alt="Math Grades" class="img-right">
-
-The University of North Carolina math department is noted for "giving out" low grades. To examine this, the GPA from a random sample of 22 math classes and 29 "other" university classes (from the last year) was collected and recorded in [UNCGrades.csv](https://raw.githubusercontent.com/droglenc/NCData/master/UNCgrades.csv). Use these data to answer the following questions.
-
-1. Separately, perform an appropriate EDA for each type of class. Refer to figures and tables as appropriate. [*HINT: You may construct a figure for each type of class with just one R command. One command may also be used to construct a table that contains results for each class type.*]
-1. What two MAJOR conclusions might you make about differences in GPA between the two class types based on your observations above. [*HINT: Focus on EDA characteristics that you described in your answer to the previous question.*]
-
-----
-
-
-
-
-
-
-
-
-
-
 
 <div class="text-center">
 <ul class="pagination pagination-lg">

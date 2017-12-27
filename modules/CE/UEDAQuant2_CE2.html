@@ -1,0 +1,75 @@
+---
+layout: page
+title: Class Exercise
+subtitle: Univariate EDA - Quantitative II (Interpretation)
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="math-class-grades" class="section level2">
+<h2>Math Class Grades</h2>
+<p><img src="zimgs/math_exam.jpg" alt="Math Grades" class="img-right"></p>
+<p>The University of North Carolina math department is noted for “giving out” low grades. To examine this, the GPA from a random sample of 22 math classes and 29 “other” university classes (from the last year) was collected and recorded in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/UNCgrades.csv">UNCGrades.csv</a>. Use these data to answer the following questions.</p>
+<ol>
+<li>Separately, perform an appropriate EDA for each type of class. Refer to figures and tables as appropriate. [<em>HINT: You may construct a figure for each type of class with just one R command. One command may also be used to construct a table that contains results for each class type.</em>]</li>
+<li>What two MAJOR conclusions might you make about differences in GPA between the two class types based on your observations above. [<em>HINT: Focus on EDA characteristics that you described in your answer to the previous question.</em>]</li>
+</ol>
+<hr />
+</div>
+<div id="cafe-sales" class="section level2">
+<h2>Cafe Sales</h2>
+<p><img src="zimgs/cafe.jpg" alt="Cafe" class="img-right"> <a href="http://www.amstat.org/publications/jse/v19n1/depaolo.pdf">DePaolo and Robinson (2011)</a> reported on data collected from a cafe run by business students at Indiana State University. The cafe was begun because a commercial vendor had closed a similar business. The group of business students opened a replacement business and carefully monitored sales and costs over a ten-week period during the spring semester of 2010. The students recorded extensive data in <a href="http://www.amstat.org/publications/jse/v19n1/cafedata.xls">cafedata.xls</a> (<a href="http://www.sic.edu/files/uploads/global/Math_and_Science_Division/Math_141/Cafedata.xls">alt. link to data</a>) that is described <a href="http://www.amstat.org/publications/jse/v19n1/cafedata_documentation.txt">in detail here</a>. One aspect of their study was to record the total number of coffees and sodas sold per day and the maximum daily temperature (F). Download these Excel data with the line from above, rename the variables (column headings) to include no spaces, add a variable that represents the days since start of the cafe, replace all <code>na</code> values with <code>NA</code>, save the file in CSV format, load the data into R, <strong>refactor</strong> the day of the week variable to be in proper order (see section 4.2.2 in the book), and answer the questions below.</p>
+<ol>
+<li>Perform a univariate EDA for the number of coffees sold.</li>
+<li>Examine the effect of day of the week on the distribution of number of coffees sold.</li>
+<li>Perform a univariate EDA for the number of sodas sold.</li>
+<li>Examine the effect of day of the week on the distribution of number of sodas sold.</li>
+<li>Construct a “take home message” from your analyses.</li>
+</ol>
+<hr />
+<div class="text-center">
+<ul class="pagination pagination-lg">
+<li>
+<a href="UEDAQuant2.html">^</a>
+</li>
+<li>
+<a href="UEDAQuant2_CE1.html">1</a>
+</li>
+<li class="active">
+<a href="#">2</a>
+</li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
