@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Read/Viewing Guide
-subtitle: Getting Data Into R I
+subtitle: Getting Data Into R
 css: "/css/modules.css"
 ---
 
@@ -24,5 +24,7 @@ To prepare for this module, please answer the following questions from the prepa
 1. What should be entered into the first row when entering data into Excel to create a CSV file?
 1. What does the `read.csv()` function in R do?
 1. What does the `headtail()` function in R do?
+1. What is the difference in R between a data.frame and a vector?
+1. What function in R is used to create a vector of items that are all of the same data type?
 
 ----

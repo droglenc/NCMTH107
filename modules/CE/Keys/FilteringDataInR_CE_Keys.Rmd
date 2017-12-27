@@ -1,24 +1,29 @@
 ---
 title: "Answer Key"
-subtitle: "Getting Data Into R CE"
+subtitle: "Filtering Data In R CE"
 author: Derek H. Ogle
 layout: page
 css: "/css/modules.css"
 output:
   html_document:
-    self_contained: no
+    self_contained: false
 ---
 
 ```{r echo=FALSE, eval=FALSE}
-# Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules")
-source("../rhelpers/rhelpers.R")
-modHTML("GettingDataIntoR_CE_Keys")
+## Renders an appropriate HTML file for the webpage
+fnm <- "FilteringDataInR_CE_Keys"
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/Keys")
+source("../../../rhelpers/rhelpers.R")
+modHTML(fnm)
+## And moves it to make it available to students
+file.rename(from=paste0(fnm,".html"),to=paste0("../",fnm,".html"))
+dir.create(paste0("../",fnm,"_files"),showWarnings=FALSE)
+file.copy(from=paste0(fnm,"_files"),to=paste0("../"),recursive=TRUE)
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
-source("../rhelpers/knitr_setup.R")
+source("../../../rhelpers/knitr_setup.R")
 ```
 
 ----
@@ -29,60 +34,9 @@ library(NCStats)
 setwd("T:/Stats")
 ```
 
-
-## Loading Data from Webpage
-#### **BrainHead.csv**
-```{r echo=FALSE}
-bhobj <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/BrainHead.csv")
-```
-
-1. There are `r kCounts(ncol(bhobj))` variables in BrainHead.csv.
-1. The variables in Brainhead.csv are: `r paste(names(bhobj),collapse=", ")`.
-1. There are `r kCounts(nrow(bhobj))` individuals in BrainHead.csv.
-
-```{r eval=FALSE}
-bhobj <- read.csv("BrainHead.csv")
-str(bhobj)
-```
-
-#### **PopularKids.csv**
-```{r echo=FALSE}
-pkobj <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/PopularKids.csv")
-```
-
-1. There are `r kCounts(ncol(pkobj))` variables in PopularKids.csv.
-1. The variables in PopularKids.csv are: `r paste(names(pkobj),collapse=", ")`.
-1. There are `r kCounts(nrow(pkobj))` individuals in PopularKids.csv.
-
-```{r eval=FALSE}
-pkobj <- read.csv("PopularKids.csv")
-str(pkobj)
-```
-
-#### **Yahara.csv**
-```{r echo=FALSE}
-yobj <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Yahara.csv")
-```
-
-1. There are `r kCounts(ncol(yobj))` variables in Yahara.csv.
-1. The variables in Yahara.csv are: `r paste(names(yobj),collapse=", ")`.
-1. There are `r kCounts(nrow(yobj))` individuals in Yahara.csv.
-
-```{r eval=FALSE}
-yobj <- read.csv("Yahara.csv")
-str(yobj)
-```
-
-----
-
-## Loading Your Own Data
-
-* Answers will vary by student.
-
 ----
 
 ## Coarse Woody Debris
-
 ```{r}
 cwd <- read.csv("cwd.csv")
 ( cwd.low <- filterD(cwd,exposure=="low") )
@@ -94,14 +48,12 @@ cwd <- read.csv("cwd.csv")
 ----
 
 ## Cars
-
 ```{r echo=FALSE}
 car <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv")
 ```
 ```{r eval=FALSE}
 car <- read.csv("93cars.csv")
 ```
-
 ```{r}
 str(car)
 ( fords <- filterD(car,MFG=="Ford") )
@@ -112,3 +64,19 @@ anor <- filterD(car,Domestic=="Yes"|Cyls==4) # large, didn't show result
 ```
 
 ----
+
+## Purple Loosestrife Plants
+```{r echo=FALSE, results='hide'}
+df <- data.frame(
+lstrf=c(13,2,1,0,9,11,5,5,14,23,0,2,3,3,6,7,4,16,1),
+shade=c("O","S","S","S","O","O","S","P","O","O","S","S","P","P","P","P","S","O","S"))
+```
+```{r eval=-(1:2)}
+setwd('C:/aaaWork/Books/IntroStats/HW/')
+df <- read.csv("loostrife.csv")
+( shady <- filterD(df,shade=="S") )
+( open <- filterD(df,shade=="O") )
+( notshady <- filterD(df,shade!="S") )
+( gt10 <- filterD(df,lstrf>10) )
+( shadygt10 <- filterD(df,shade=="S",lstrf <5) )
+```

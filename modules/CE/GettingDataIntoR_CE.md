@@ -36,12 +36,3 @@ For each situation below, enter the data into a CSV file, load the data into a d
 1. Goto the [Global Energy Statistical Yearbook](https://yearbook.enerdata.net/){:target="_blank"} and record (for the most recent year reported) the production of crude oil, natural gas, coal, electricity, and renewables for the United States, Canada, Russia, and China. [*Note: Pick the product on the left-side until its window opens up, select "production" (make sure to do this), and then hover over the country to see the data.*]
 
 ----
-
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="GettingDataIntoR.html">^</a></li>
-  <li class="active"><a href="#">1</a></li>
-  <li><a href="GettingDataIntoR_CE2.html">2</a></li>
-  <li><a href="GettingDataIntoR_CE3.html">3</a></li>
-</ul>
-
