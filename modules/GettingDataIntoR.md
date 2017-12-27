@@ -46,9 +46,9 @@ Use the materials below to answer the questions on [this preparation guide](Gett
 
 ## Practice
 
-* [Class Example](GettingDataIntoR_CExmpl)
-* [Class Exercises](GettingDataIntoR_CE)
-* [Review Exercises](GettingDataIntoR_RevEx.html)
+* [Class Example](CExpl/GettingDataIntoR_CExmpl)
+* [Class Exercises](CE/GettingDataIntoR_CE) ... [ANSWER KEY](CE/GettingDataIntoR_CE_Keys)
+* [Review Exercises](RE/GettingDataIntoR_RevEx.html)
 
 ----
 
