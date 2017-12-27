@@ -50,7 +50,7 @@ Identify the response variable in each of the following situations. Explain your
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="DataProduction.html">^</a></li>
+  <li><a href="../DataProduction.html">^</a></li>
   <li><a href="DataProduction_CE1.html">1</a></li>
   <li class="active"><a href="#">2</a></li>
 </ul>
