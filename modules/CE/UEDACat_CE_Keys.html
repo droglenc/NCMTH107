@@ -152,12 +152,15 @@ barplot(ptbl3,xlab=&quot;School Type&quot;,ylab=&quot;Percentage&quot;)</code></
 <div id="water-usage" class="section level2">
 <h2>Water Usage</h2>
 <p>Most students left the water on for between 6 and 15 minutes, with students approximately evenly split between 6-10 and 11-15 minutes (Table 6). Few students left the water on for less than 5 minutes before entering the shower.</p>
+<p>Table 6: Percentage table for how much time students at Rice University leave the water on before entering the shower. Note that A=0-5 mins, B=6-10 mins, C=11-15 mins, and D=more than 15 mins.</p>
 <pre><code>water
    A    B    C    D 
  5.4 37.7 40.0 16.9 </code></pre>
 <p>R Appendix.</p>
 <pre class="r"><code>setwd(&#39;C:/aaaWork/Books/IntroStats/HW/&#39;)
-df &lt;- read.csv(&quot;WaterUsage.csv&quot;)</code></pre>
+df &lt;- read.csv(&quot;WaterUsage.csv&quot;)
+freq &lt;- xtabs(~water,data=df)
+perc &lt;- percTable(freq,digits=1)</code></pre>
 <hr />
 </div>
 

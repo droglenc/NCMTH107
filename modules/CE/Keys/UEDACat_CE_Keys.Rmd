@@ -252,6 +252,9 @@ perc <- percTable(freq,digits=1)
 ```
 
 Most students left the water on for between 6 and 15 minutes, with students approximately evenly split between 6-10 and 11-15 minutes (`r tbls("WaterPerc",display="cite")`). Few students left the water on for less than 5 minutes before entering the shower.
+
+`r tbls("WaterPerc")`
+
 ```{r echo=FALSE}
 perc
 ```
@@ -260,6 +263,7 @@ R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
 setwd('C:/aaaWork/Books/IntroStats/HW/')
 df <- read.csv("WaterUsage.csv")
+<<WaterTables>>
 ```
 
 ----
