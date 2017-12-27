@@ -141,64 +141,6 @@ bears$loc
 @
 
 
-\subsubsection{Filtering a data.frame}  \label{sect:RSubsetdf}
-It is common to create a new data.frame that contains only some of the individuals from an existing data.frame. For example, a researcher may want only bears captured in Bayfield County or bears that weighed more than 100 kg. The process of creating the newer, smaller data.frame is called filtering (or subsetting) and is accomplished with \R{filterD()}. The \R{filterD()} function requires the original data.frame as the first argument and a condition statement as the second argument. The condition statement is used to either include or exclude individuals from the original data.frame. Condition statements consist of the name of a variable in the original data.frame, a comparison operator, and a comparison value \tabrefp{tab:RSubsetConditions}. The result from \R{filterD()} should be assigned to an object, which is then the name of the new data.frame.
-\vspace{6pt}
-
-\begin{table}[htbp]
-  \caption{Condition operators used in \R{filterD()} and their results. Note that \emph{variable} generically represents a variable in the original data.frame and \emph{value} is a generic value or level. Both \emph{variable} and \emph{value} would be replaced with specific items (see examples in main text).}  \label{tab:RSubsetConditions}
-  \centering
-\begin{tabular}{cc}
-\hline\hline
-Condition Operator &  Individuals Returned from Original Data Frame \\
-\hline
-\widen{-1}{6}{\emph{variable}} $==$ \emph{value} & all individual that are \textbf{equal} to the given value \\
-\widen{-1}{5}{\emph{variable}} $!=$ \emph{value} & all individuals that are \textbf{NOT equal} to the given value \\
-\widen{-1}{5}{\emph{variable}} $>$ \emph{value} & all individuals that are \textbf{greater than} the given value \\
-\widen{-1}{5}{\emph{variable}} $>=$ \emph{value} & all individuals that are \textbf{greater than or equal} to the given value \\
-\widen{-1}{5}{\emph{variable}} $<$ \emph{value} & all individuals that are \textbf{less than} the given value \\
-\widen{-1}{5}{\emph{variable}} $<=$ \emph{value} & all individuals that are \textbf{less than or equal} to the given value \\
-\widen{-1}{5}{\emph{condition}}, \emph{condition} & all individuals that \textbf{meet both conditions} \\
-\widen{-2}{6}{\emph{condition}} $|$ \emph{condition} & all individuals that \textbf{meet one or both conditions}\footnote{Note that this ``or'' operator is a ``vertical line'' which is typed with the shift-backslash key.} \\
-\hline\hline
-\end{tabular}
-\end{table}
-
-\vspace{6pt}
-The following are examples of new data.frames created from \var{bears}. The name of the new data.frame (i.e., object left of the assignment operator) can be any valid object name. As demonstrated below, the new data.frame (or its structure) should be examined after each filtering to ensure that the data.frame actually contains the items that you desire.
-
-\vspace{-8pt}
-\begin{itemize}
-  \item Only individuals from \emph{Bayfield} county.
-\vspace{-4pt}
-<<>>=
-bf <- filterD(bears,loc=="Bayfield")
-bf
-@
-
-  \item Individuals from both \emph{Bayfield} and \emph{Ashland} counties.
-\vspace{-4pt}
-<<>>=
-bfash <- filterD(bears,loc %in% c("Bayfield","Ashland"))
-bfash
-@
-
-  \item Individuals with a weight greater than 100 kg.
-\vspace{-4pt}
-<<>>=
-gt100 <- filterD(bears,weight.kg>100)
-gt100
-@
-
-  \item Individuals from \emph{Douglas} County that weighed at least 150 kg.
-\vspace{-4pt}
-<<>>=
-do150 <- filterD(bears,loc=="Douglas",weight.kg>=150)
-do150
-@
-\end{itemize}
-
-
 \subsection{Vectors}  \label{sect:RVectors}
 \vspace{-4pt}
 Data.frames are the primary structure in which to store real data. However, much simpler situations that don't require a data.frame may arise. In R, items of the same data type \sectrefp{sect:RDataTypes} are stored in a one-dimensional \emph{vector}. Vectors are usually displayed in one row (with many columns), but they may also be thought of as a single column (with many rows). Items are entered into a vector with \R{c()}, where the individual arguments are specific numbers, characters, or logical values.\footnote{Note that \R{c} comes from the word ``concatenate.''}  Items for a vector of characters must be contained within paired quotes.
@@ -215,41 +157,3 @@ bears$length.cm
 @
 
 Vectors that are not extracted from a data.frame will only be used in this course for very simple lists of items, usually as arguments in a function.
-
-
-\subsubsection{Selecting Individuals}  \label{sect:RSelectIndivs}
-In some instances, you may need to select or exclude an individual from a data.frame or vector. Vectors are one-dimensional objects that are indexed simply by the position within the object. Positions within an object are identified with square brackets. For example, the second item from the \R{y} vector created above is extracted with
-\vspace{-4pt}
-<<>>=
-y[2]
-@
-
-Alternatively, the second item can be excluded by preceding the position number with a negative sign.
-\vspace{-4pt}
-<<>>=
-y[-2]
-@
-
-Data.frames are two-dimensional objects that are indexed by a row and a column, in that order. Again, positions within an object identified within square brackets. However, for data.frames, both a row and a column specification must be given. For example, the item in the third row and second column of \R{bears} is selected below.
-\vspace{-4pt}
-<<>>=
-bears[3,2]
-@
-
-An entire row or column may be selected by omitting the other dimension. For example, one could select the entire second column with \R{bears[,2]}, but this is also the \R{weight.kg} variable and is better selected, as shown above, with \R{bears\$weight.kg}. As a better example, the entire third row is selected below (note that the column designation was omitted).
-\vspace{-4pt}
-<<>>=
-bears[3,]
-@
-
-Multiple rows are selected by combining row indices together with \R{c()}. For example, the third, fifth, and eighth rows are selected below (again, the column index is omitted).
-\vspace{-4pt}
-<<>>=
-bears[c(3,5,8),]
-@
-
-Finally, rows can be excluded by preceding the row indices with a negative sign.
-\vspace{-4pt}
-<<>>=
-bears[-c(3,5,8,10,12),]
-@
