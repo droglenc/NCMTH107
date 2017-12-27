@@ -35,7 +35,7 @@ Note that some of the more distant dates are subject to change.
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 22-Jan</td>
-    <td><a href="../modules/GettingDataIntoR">Getting Data Into R</a></td>
+    <td><a href="../modules/FilteringDataInR">Filtering Data In R</a></td>
     <td>--</td></tr>
 <tr><td>W 24-Jan</td>
     <td><a href="../modules/UEDAQuant1">Summaries for One Quant ...</a></td>
