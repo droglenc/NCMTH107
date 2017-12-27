@@ -24,7 +24,7 @@ source("../../rhelpers/knitr_setup.R")
 ----
 
 ## Scatterplots
-<img src="http://derekogle.com/NCMTH107/modules/zimgs/kingfisher.jpg" alt="Kingfisher" class="img-right">
+<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/kingfisher.jpg" alt="Kingfisher" class="img-right">
 [Kelly (1998)](https://sora.unm.edu/sites/default/files/journals/jfo/v069n03/p0386-p0390.pdf) used data from the [Christmas Bird Count](https://en.wikipedia.org/wiki/Christmas_Bird_Count) (in 1994) to examine the latitudinal variation in the sex ratio of [Eastern Belted Kingfishers (*Ceryle alcyo*)](https://en.wikipedia.org/wiki/Belted_kingfisher).  The scatterplot below illustrates the relationship between the percent of female Kingfishers and the latitude of the survey.
 
 ```{r echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
@@ -58,23 +58,6 @@ For each situation below, identify (a) the response variable (if possible) and (
 
 ----
 
-## Urban Runoff
-<img src="zimgs/no-dumping-drains-to-ocean.jpg" alt="No Dumping" class="img-right">
-Urbanization poses a major threat to stream and watershed ecosystems.  One aspect of urbanization is the conversion of natural areas to land with impervious surfaces, thus increasing runoff of rain and, likely, pollutants.  A University of Washington researcher recorded the percent of impervious land and the benthic index of biotic integrity (IBI) for 14 areas in the state of Washington.  The IBI has been described as a measure of "the capability of supporting and maintaining a balanced, integrated, adaptive community of organisms having a species composition and functional organization comparable to that of natural habitat in the region."  In this example, the researchers were attempting to identify how the percentage of impervious surfaces in the area affects the IBI.  The data for this study are below (*FYI, much more information can be obtained at the [QELP site](http://www.seattlecentral.edu/qelp/sets/077/077.html#About)*).
-
-<pre>
-imperv   60 43 43 34 27 25 21 18 11  8  8  8  7  7  5  4  2
-IBI       9 11 13 23 31 31 21 23 27 37 39 29 31 43 33 35 37
-</pre>
-
-Load these data into R and answer the questions below.
-
-1. What is the response variable?
-1. What is the explanatory variable?
-1. Describe the relationship between IBI and the percent of impervious area (i.e., perform a bivariate EDA).
-
-----
-
 ## Animal Fat and Breast Cancer
 
 [Carroll (1975)](https://www.ncbi.nlm.nih.gov/pubmed/1104150) examined the relationship between per capita consumption of animal fat (g/day) and age-adjusted death rate from breast cancer for 39 countries. Use the following results from her data to describe the bivariate relationship between these two variables.
@@ -89,9 +72,20 @@ legend("topleft",legend=paste("r=",r,sep=" "),bty="n")
 
 ----
 
-## North Fish Creek Discharge
+## Urban Runoff
+<img src="zimgs/no-dumping-drains-to-ocean.jpg" alt="No Dumping" class="img-right">
+Urbanization poses a major threat to stream and watershed ecosystems.  One aspect of urbanization is the conversion of natural areas to land with impervious surfaces, thus increasing runoff of rain and, likely, pollutants.  A University of Washington researcher recorded the percent of impervious land and the benthic index of biotic integrity (IBI) for 14 areas in the state of Washington.  The IBI has been described as a measure of "the capability of supporting and maintaining a balanced, integrated, adaptive community of organisms having a species composition and functional organization comparable to that of natural habitat in the region."  In this example, the researchers were attempting to identify how the percentage of impervious surfaces in the area affects the IBI.  The data for this study are below (*FYI, much more information can be obtained at the [QELP site](http://www.seattlecentral.edu/qelp/sets/077/077.html#About)*).
 
-The instantaneous discharge (cubic feet per second) and total suspended sediments (in milligrams per liter) were recorded on 28 dates for North Fish Creek near Ashland, WI.  These data are found in FishCrNWaterQuality.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/FishCrNWaterQuality.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/FishCrNWaterQuality_meta.txt)). Describe the relationship between instantaneous discharge and total suspended sediments from these data. [*Think carefully about which variable should be on the y-axis.*]
+<pre>
+imperv   60 43 43 34 27 25 21 18 11  8  8  8  7  7  5  4  2
+IBI       9 11 13 23 31 31 21 23 27 37 39 29 31 43 33 35 37
+</pre>
+
+Load these data into R and answer the questions below.
+
+1. What is the response variable?
+1. What is the explanatory variable?
+1. Describe the relationship between IBI and the percent of impervious area (i.e., perform a bivariate EDA).
 
 ----
 

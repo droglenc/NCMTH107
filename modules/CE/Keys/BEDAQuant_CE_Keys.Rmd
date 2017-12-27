@@ -27,6 +27,8 @@ source("../../../rhelpers/knitr_setup.R")
 library(captioner)
 figs <- captioner(prefix="Figure")
 figs(name="IBI1","Scatterplot of IBI scores versus the percentage of impervious surface for 14 areas in Washington")
+figs(name="FishCrPlot","Scatterplot of total dissolved solids versus discharge in Fish Creek.")
+figs(name="GestPlot","Scatterplot of longevity versus gestation period for a sample of 40 animals.")
 figs(name="Cafe1","Scatterplot of number of coffees sold versus maximum daily temperature for the college cafe.")
 figs(name="Cafe2","Scatterplot of number of coffees sold versus number of sodas sold for the college cafe.")
 figs(name="Cafe3","Scatterplot of number of coffees sold versus number of days since opening for the college cafe.")
@@ -52,14 +54,14 @@ figs(name="Cafe3","Scatterplot of number of coffees sold versus number of days s
 1. (a) Gas mileage as I would expect gas mileage to depend on the weight of the car. (b) Negative as I would expect heavier cars to require more gas (and, thus, gas mileage would decrease).
 1. (a) Proportion that became ill as I would expect that to depend on the proportion that were vaccinated. (b) Negative as I would expect the number that became ill to decrease with an increasing proportion vaccinated.
 1. (a) Salary as I would expect it to depend on years of education. (b) Positive as I would expect expected salary to increase the more education an individual achieved.
-1. (a) Can't tell without more context. (b) Neutral as I would no expect exam score to depend on one's mother's age.
+1. (a) Can't tell without more context. (b) Neutral as I would not expect exam score to depend on one's mother's age.
 1. (a) Proportion of households that have an air conditioner. (b) Positive.
-1. (a) Proportion that have been incarcerated. (b) Negative.
-1. (a) Sales of ice cream. (b) Positive.
-1. (a) Percent body fat. (b) Negative.
-1. (a) Proportion that support conceal-and-carry?. (b) Neutral?
-1. (a) Can't tell. (b) Positive.
-1. (a) Putting success. (b) Negative.
+
+----
+
+## Animal Fat and Breast Cancer
+
+The relationship between age-adjusted death rate and animal fat intake is positive, linear, absent of outliers, and very strong (r=0.949; Figure on exercise). It was valid to assess strength with the correlation coefficient because of the linear form and lack of outliers.
 
 ----
 
@@ -73,7 +75,8 @@ d <- data.frame(imp=c(60,43,43,34,27,25,21,18,11,8,8,8,7,7,5,4,2),
                 IBI=c(9,11,13,23,31,31,21,23,27,37,39,29,31,43,33,35,37))
 ```
 ```{r IBIplot, echo=FALSE, fig.width=3, fig.height=3, par1=TRUE}
-plot(IBI~imp,data=d,pch=19,xlab="% Impervious Surface",ylab="IBI")
+plot(IBI~imp,data=d,pch=21,bg="gray70",
+     ylab="IBI",xlab="% Impervious Surface")
 ```
 
 `r figs("IBI1")`
@@ -82,6 +85,65 @@ R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
 d <- read.csv("IBI.csv")
 <<IBIplot>>
+```
+
+----
+
+## Associations II
+
+1. (a) Proportion that have been incarcerated. (b) Negative.
+1. (a) Sales of ice cream. (b) Positive.
+1. (a) Percent body fat. (b) Negative.
+1. (a) Proportion that support conceal-and-carry?. (b) Neutral?
+1. (a) Can't tell. (b) Positive.
+1. (a) Putting success. (b) Negative.
+
+----
+
+## North Fish Creek Discharge
+```{r}
+d <- read.csv("https://github.com/droglenc/NCData/raw/master/FishCrNWaterQuality.csv")
+```
+
+The relationship between total suspended solids and discharge in Fish Creek is mostly positive and mostly linear \figrefp{fig:FishCrPlot}.  Several outliers are apparent, with the two at a total suspended solids greater than 800 mg/L and discharge less than 600 cfs and the one with a total suspended solids of 0 mg/L and a discharge at approximately 250 cfs being most apparent (`r figs("FishCrPlot",display="cite")`). The strength, excluding the outliers, is moderately strong.  I did not compute a correlation coefficient because of the presence of the outliers.
+
+```{r FishCrPlot, echo=FALSE}
+plot(SuspSed~DschrgCFS,data=d,pch=21,bg="gray70",
+     ylab="Total Suspended Solids (mg/L)",xlab="Discharge (cfs)")
+```
+
+`r figs("FishCrPlot")`
+
+R Appendix
+```{reval=FALSE, prompt=FALSE}
+library(NCStats)
+setwd('C:/aaaWork/Books/IntroStats/HW/')
+d <- read.csv("FishCrNWaterQuality.csv")
+<<FishCrPlot>>
+```
+
+----
+
+## Animal Longevity and Gestation
+```{r echo=FALSE}
+d <- read.csv("https://github.com/droglenc/NCData/raw/master/animals.csv")
+```
+
+The relationship between longevity and gestation for captive anaimls is mostly positive, nonlinear, weak, with one outlier present at an approximate longevity of 40 years and gestation period of 600 days (`r figs("GestPlot",display="cite")`). I did not compute a correlation coefficient because of the nonlinear form and presence of an outlier.
+
+```{r GestPlot, echo=FALSE}
+plot(longevity~gestation,data=d,pch=21,bg="gray70",
+     ylab="Longevity (years)",xlab="Gestation Period (days)")
+```
+
+`r figs("GestPlot")`
+
+R Appendix
+```{r eval=FALSE, prompt=FALSE}
+library(NCStats)
+setwd('C:/aaaWork/Books/IntroStats/HW/')
+d <- read.csv("animals.csv")
+<<GestPlot>>
 ```
 
 ----
@@ -96,8 +158,8 @@ d <- read.csv("cafedata.csv")
 <li>The relationship between number of coffees sold at the cafe and maximum daily temperature is negative, nonlinear, and moderately strong with no obvious outliers (`r figs("Cafe1",display="cite")`).  I did not report the value of the correlation coefficient because of the nonlinear form.</li>
 
 ```{r CafePlot1, echo=FALSE, fig.width=3, fig.height=3, par1=TRUE}
-plot(coffee.sold~max.temp,data=d,pch=19,xlab="Maximum Daily Temperature",
-     ylab="Number of Coffees Sold")
+plot(coffee.sold~max.temp,data=d,pch=21,bg="gray70",
+     ylab="Number of Coffees Sold",xlab="Maximum Daily Temperature")
 ```
 
 `r figs("Cafe1")`
@@ -105,8 +167,8 @@ plot(coffee.sold~max.temp,data=d,pch=19,xlab="Maximum Daily Temperature",
 <li>The relationship between the number of coffees sold and the number of sodas sold at the cafe is negative, linear, and weak (r=`r formatC(corr(coffee.sold~sodas.sold,data=d,use="pairwise.complete.obs"),format="f",digits=2)`) with no obvious outliers (`r figs("Cafe2",display="cite")`).  I identified strength from the value of the correlation coefficient because of the linear form and lack of outliers.</li>
 
 ```{r CafePlot2, echo=FALSE, fig.width=3, fig.height=3, par1=TRUE}
-plot(coffee.sold~sodas.sold,data=d,pch=19,xlab="Number of Sodas Sold",
-     ylab="Number of Coffees Sold")
+plot(coffee.sold~sodas.sold,data=d,pch=21,bg="gray70",
+     ylab="Number of Coffees Sold",xlab="Number of Sodas Sold")
 ```
 
 `r figs("Cafe2")`
@@ -115,8 +177,8 @@ plot(coffee.sold~sodas.sold,data=d,pch=19,xlab="Number of Sodas Sold",
 
 ```{r CafePlot3, echo=FALSE, fig.width=3, fig.height=3, par1=TRUE}
 plot(coffee.sold~days.since.start,data=d,type="l",col="gray90",
-     xlab="Days Since the Cafe Opened",ylab="Number of Coffees Sold")
-points(coffee.sold~days.since.start,data=d,pch=19)
+     ylab="Number of Coffees Sold",xlab="Days Since the Cafe Opened")
+points(coffee.sold~days.since.start,data=d,pch=21,bg="gray70")
 ```
 
 `r figs("Cafe3")`
