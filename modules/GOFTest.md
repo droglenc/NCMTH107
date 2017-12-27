@@ -32,21 +32,20 @@ css: /css/modules.css
 Use the materials below to answer the questions on [this preparation guide](GOFTest_Prep).
 
 * [![PDF](../img/pdf.png) Reading](../book/Goodness-of-Fit.pdf)
-* [![Vimeo](../img/dhovid.png) Goodness-of-Fit Test Example](https://vimeo.com/user45324800/goftest-ex1){:target="_blank"} [8 mins] [![PowerPoint](../img/ppt.png)](GOFTest_PPT.pptx)
-* [![Vimeo](../img/dhovid.png) Goodness-of-Fit Tests in R](https://vimeo.com/user45324800/rgoftest){:target="_blank"} [6 mins] [![Web](../img/web.png)](GOFTest_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](GOFTest_RHO.pdf) [![MSWord](../img/word.png)](GOFTest_RHO.docx)  [![R](../img/Rlogo.png)](GOFTest_RHO.R){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) Goodness-of-Fit Test Example](https://vimeo.com/user45324800/goftest-ex1){:target="_blank"} [8 mins] [![PowerPoint](../img/ppt.png)](PPT/GOFTest_PPT.pptx)
+* [![Vimeo](../img/dhovid.png) Goodness-of-Fit Tests in R](https://vimeo.com/user45324800/rgoftest){:target="_blank"} [6 mins] [![Web](../img/web.png)](HO/GOFTest_RHO.html){:target="_blank"}  [![R](../img/Rlogo.png)](HO/GOFTest_RHO.R){:target="_blank"}
 
 ----
 
-## In-Class Practice
+## Practice
 
-* [Review Exercises](GOFTest_RevEx)
-* Class Exercises: [1](GOFTest_CE1) / [2](GOFTest_CE2) / [3](GOFTest_CE3)
-* [Homework Assignment](GOFTest_HW)
+* [Exercises](CE/GOFTest_CE)
+* [Review Exercises](RE/GOFTest_RevEx)
 
 ----
 
 ## Archived Materials
 
-* [Old Lecture Slides](GOFTest_PPT_old.pptx)
+* [Old Lecture Slides](PPT/GOFTest_PPT_old.pptx)
 
 ----

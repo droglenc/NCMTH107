@@ -40,15 +40,14 @@ Use the materials below to answer the questions on [this preparation guide](Prob
 
 ## Practice
 
-* [Class Example](Probability_CExmpl)
-* [Review Exercises](Probability_RevEx)
-* Class Exercises: [1](Probability_CE1) (*Time permitting* ... [2](Probability_CE2))
-* [Homework Assignment](Probability_HW)
+* [Class Example](CEx/Probability_CExmpl)
+* [Exercises](CE/Probability_CE)
+* [Review Exercises](RE/Probability_RevEx)
 
 ----
 
 ## Archived Materials
 
-* [Old Lecture Slides](Probability_PPT_old.pptx)
+* [Old Lecture Slides](PPT/Probability_PPT_old.pptx)
 
 ----

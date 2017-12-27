@@ -37,22 +37,21 @@ Use the materials below to answer the questions on [this preparation guide](UEDA
 * [![PDF](../img/pdf.png) Reading](../book/Univariate EDA - Categorical.pdf)
 * [![YouTube](../img/youtube.png) Frequency Table](https://www.youtube.com/watch?v=LVnzV1ZXdiY){:target="_blank"} [2 mins]
 * [![YouTube](../img/youtube.png) Barplot](https://www.youtube.com/watch?v=PM39_HA1qSc){:target="_blank"} [3 mins]
-* [![Vimeo](../img/dhovid.png) Univariate EDA (Categorical) in R](https://vimeo.com/user45324800/ncstats-uedac){:target="_blank"} [4 mins]  [![Web](../img/web.png)](UEDACat_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](UEDACat_RHO.pdf) [![MSWord](../img/word.png)](UEDACat_RHO.docx)  [![R](../img/Rlogo.png)](UEDACat_RHO.R){:target="_blank"}
-* [![Vimeo](../img/dhovid.png) Interpreting a Univariate EDA (Categorical)](https://vimeo.com/user45324800/ueda-catsum){:target="_blank"} [2 mins]  [![PowerPoint](../img/ppt.png)](UEDACat_PPT.pptx)
-* [![Vimeo](../img/dhovid.png) Quick Rant about Pie and 3-D Charts](https://vimeo.com/user45324800/ueda-badplotrant){:target="_blank"} [3 mins]  [![PowerPoint](../img/ppt.png)](UEDACat_PPT2.pptx)
+* [![Vimeo](../img/dhovid.png) Univariate EDA (Categorical) in R](https://vimeo.com/user45324800/ncstats-uedac){:target="_blank"} [4 mins]  [![Web](../img/web.png)](HO/UEDACat_RHO.html){:target="_blank"}  [![R](../img/Rlogo.png)](HO/UEDACat_RHO.R){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) Interpreting a Univariate EDA (Categorical)](https://vimeo.com/user45324800/ueda-catsum){:target="_blank"} [2 mins]  [![PowerPoint](../img/ppt.png)](PPT/UEDACat_PPT.pptx)
+* [![Vimeo](../img/dhovid.png) Quick Rant about Pie and 3-D Charts](https://vimeo.com/user45324800/ueda-badplotrant){:target="_blank"} [3 mins]  [![PowerPoint](../img/ppt.png)](PPT/UEDACat_PPT2.pptx)
 
 ----
 
 ## Practice
 
-* [Review Exercises](UEDACat_RevEx)
-* Class Exercises: [1](UEDACat_CE1) / [2](UEDACat_CE2) / [3](UEDACat_CE3) (*time permitting* ... [4](UEDACat_CE4) / [5](UEDACat_CE5))
-* [Homework Assignment](UEDACat_HW)
+* Exercises: [1](UEDACat_CE1) / [2](UEDACat_CE2) / [3](UEDACat_CE3) (*time permitting* ... [4](UEDACat_CE4) / [5](UEDACat_CE5))
+* [Review Exercises](RE/UEDACat_RevEx)
 
 ----
 
 ## Archived Materials
 
-* [Old Lecture Slides](UEDACat_PPT_old.pptx)
+* [Old Lecture Slides](PPT/UEDACat_PPT_old.pptx)
 
 ----

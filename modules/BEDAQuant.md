@@ -39,21 +39,20 @@ Use the materials below to answer the questions on [this preparation guide](BEDA
 * [![PDF](../img/pdf.png) Reading](../book/Bivariate EDA - Quantitative.pdf)
 * [![YouTube Link](../img/youtube.png) Construct a Scatterplot](https://www.youtube.com/watch?v=yXmz922K9Ks){:target="_blank"} [7 mins]
 * [![YouTube Link](../img/youtube.png) What is the Correlation?](https://www.youtube.com/watch?v=PtYVrF_WT3A){:target="_blank"} [8 mins; *start at 0:32*]
-* [![Vimeo](../img/dhovid.png) Bivariate EDA (Quantitative) in R](https://vimeo.com/user45324800/biveda-quant){:target="_blank"} [8 mins] [![Web](../img/web.png)](BEDAQuant_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](BEDAQuant_RHO.pdf) [![MSWord](../img/word.png)](BEDAQuant_RHO.docx)  [![R](../img/Rlogo.png)](BEDAQuant_RHO.R){:target="_blank"}
-* [![Vimeo](../img/dhovid.png) Interpeting a Bivariate EDA (Quantitative)](https://vimeo.com/user45324800/beda-quantsum){:target="_blank"} [10 mins]  [![PowerPoint](../img/ppt.png)](BEDAQuant_PPT.pptx)
+* [![Vimeo](../img/dhovid.png) Bivariate EDA (Quantitative) in R](https://vimeo.com/user45324800/biveda-quant){:target="_blank"} [8 mins] [![Web](../img/web.png)](HO/BEDAQuant_RHO.html){:target="_blank"} [![R](../img/Rlogo.png)](HO/BEDAQuant_RHO.R){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) Interpeting a Bivariate EDA (Quantitative)](https://vimeo.com/user45324800/beda-quantsum){:target="_blank"} [10 mins]  [![PowerPoint](../img/ppt.png)](PPT/BEDAQuant_PPT.pptx)
 
 ----
 
 ## Practice
 
-* Review Exercises: [Definitions and Calculations](BEDAQuant_RevEx_Defns) / [EDA](BEDAQuant_RevEx_EDA)
-* Class Exercises: [1](BEDAQuant_CE1) / [2](BEDAQuant_CE2) / [3](BEDAQuant_CE3) (*time permitting* ... [4](BEDAQuant_CE4))
-* [Homework Assignment](BEDAQuant_HW2)
+* Exercises: [1](BEDAQuant_CE1) / [2](BEDAQuant_CE2) / [3](BEDAQuant_CE3) (*time permitting* ... [4](BEDAQuant_CE4))
+* Review Exercises: [Definitions and Calculations](RE/BEDAQuant_RevEx_Defns) / [EDA](RE/BEDAQuant_RevEx_EDA)
 
 ----
 
 ## Archived Materials
 
-* [Old Lecture Slides](BEDAQuant_PPT_old.pptx)
+* [Old Lecture Slides](PPT/BEDAQuant_PPT_old.pptx)
 
 ----

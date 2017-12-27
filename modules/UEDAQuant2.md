@@ -36,20 +36,20 @@ Use the materials below to answer the questions on [this preparation guide](UEDA
 
 * [![PDF](../img/pdf.png) Reading](../book/Univ EDA Quantitative.pdf)
 * [![YouTube](../img/youtube.png) Describe Shape](https://www.youtube.com/watch?v=H9ITfdaX2ZQ){:target="_blank"} [13 mins]
-* [![Vimeo](../img/dhovid.png) Interpreting a Univariate EDA (Quantitative)](https://vimeo.com/user45324800/ueda-quantsum){:target="_blank"} [11 mins] [![PowerPoint](../img/ppt.png)](UEDAQuant2_PPT.pptx)
+* [![Vimeo](../img/dhovid.png) Interpreting a Univariate EDA (Quantitative)](https://vimeo.com/user45324800/ueda-quantsum){:target="_blank"} [11 mins] [![PowerPoint](../img/ppt.png)](PPT/UEDAQuant2_PPT.pptx)
 
 ----
 
 ## Practice
 
-* Review Exercises: [Definitions](UEDAQuant2_RevEx_Defns) / [Interpretations](UEDAQuant2_RevEx_EDAs)
-* Class Exercises: [1](UEDAQuant2_CE1) / [2](UEDAQuant2_CE2) / [3](UEDAQuant2_CE3) / [4](UEDAQuant2_CE4) / [5](UEDAQuant2_CE5) / (*time permitting* ... [6](UEDAQuant2_CE6))
+* Exercises: [1](UEDAQuant2_CE1) / [2](UEDAQuant2_CE2) / [3](UEDAQuant2_CE3) / [4](UEDAQuant2_CE4) / [5](UEDAQuant2_CE5) / (*time permitting* ... [6](UEDAQuant2_CE6))
 * [Homework Assignment](UEDAQuant2_HW2)
+* Review Exercises: [Definitions](RE/UEDAQuant2_RevEx_Defns) / [Interpretations](RE/UEDAQuant2_RevEx_EDAs)
 
 ----
 
 ## Archived Materials
 
-* [Old Lecture Slides](UEDAQuant_PPT_old.pptx)
+* [Old Lecture Slides](PPT/UEDAQuant_PPT_old.pptx)
 
 ----

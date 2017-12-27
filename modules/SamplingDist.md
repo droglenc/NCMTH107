@@ -42,22 +42,21 @@ Sampling distributions show the distribution of a statistic from all possible sa
 Use the materials below to answer the questions on [this preparation guide](SamplingDist_Prep).
 
 * [![PDF](../img/pdf.png) Reading](../book/Sampling Distributions.pdf)
-* [![Vimeo](../img/dhovid.png) Introduction to Sampling Distributions I](https://vimeo.com/user45324800/smplngd-intro){:target="_blank"} [9 mins] [![PowerPoint](../img/ppt.png)](SamplingDist_PPT.pptx)
+* [![Vimeo](../img/dhovid.png) Introduction to Sampling Distributions I](https://vimeo.com/user45324800/smplngd-intro){:target="_blank"} [9 mins] [![PowerPoint](../img/ppt.png)](PPT/SamplingDist_PPT.pptx)
 * [![YouTube Link](../img/youtube.png) Introduction to Sampling Distributions II](https://www.youtube.com/watch?v=Zbw-YvELsaM){:target="_blank"} [8 mins]
-* [![Vimeo](../img/dhovid.png) Central Limit Theorem](https://vimeo.com/user45324800/smplngd-clt){:target="_blank"} [4 mins] [![PowerPoint](../img/ppt.png)](SamplingDist_PPT2.pptx)
+* [![Vimeo](../img/dhovid.png) Central Limit Theorem](https://vimeo.com/user45324800/smplngd-clt){:target="_blank"} [4 mins] [![PowerPoint](../img/ppt.png)](PPT/SamplingDist_PPT2.pptx)
 
 ----
 
 ## Practice
 
-* [Review Exercises](SamplingDist_RevEx)
 * Class Exercises: [1](SamplingDist_CE1) / [2](SamplingDist_CE2) / [3](SamplingDist_CE3) (*time permitting* ... [4](NormalDist_CE4) / [5](NormalDist_CE5))
-* [Homework Assignment](SamplingDist_HW)
+* [Review Exercises](RE/SamplingDist_RevEx)
 
 ----
 
 ## Archived Materials
 
-* [Old Lecture Slides](SamplingDist_PPT_old.pptx)
+* [Old Lecture Slides](PPT/SamplingDist_PPT_old.pptx)
 
 ----

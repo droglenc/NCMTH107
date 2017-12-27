@@ -35,7 +35,7 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
 Use the materials below to answer the questions on [this preparation guide](HypTesting_Prep.html#first-material).
 
 * [![PDF](../img/pdf.png) Reading **Sections 14.1-14.4**](../book/Hypothesis Tests.pdf).
-* [![Vimeo](../img/dhovid.png) Forming Statistical Hypothesis](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins; [![PowerPoint](../img/ppt.png)](HypTesting_PPT-hypotheses.pptx)].
+* [![Vimeo](../img/dhovid.png) Forming Statistical Hypothesis](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins; [![PowerPoint](../img/ppt.png)](PPT/HypTesting_PPT-hypotheses.pptx)].
 
 Use the materials below to answer the questions on [this preparation guide](HypTesting_Prep.html#second-material).
 
@@ -47,20 +47,19 @@ Use the materials below to answer the questions on [this preparation guide](HypT
 
 ## In-Class Lectures
 
-* [First](HypTesting_PPT-Lecture-1.pptx) / [Second](HypTesting_PPT-Lecture-2.pptx)
+* [First](PPT/HypTesting_PPT-Lecture-1.pptx) / [Second](PPT/HypTesting_PPT-Lecture-2.pptx)
 
 ----
 
 ## Practice
 
-* [Review exercises](HypTesting_RevEx)
-* Class exercises: [1](HypTesting_CE1) / [2](HypTesting_CE2) / [3](HypTesting_CE3) /  [4](HypTesting_CE4) / [5](HypTesting_CE5)
-* [Homework Assignment](HypTesting_HW)
+* Exercises: [1](HypTesting_CE1) / [2](HypTesting_CE2) / [3](HypTesting_CE3) /  [4](HypTesting_CE4) / [5](HypTesting_CE5)
+* [Review exercises](RE/HypTesting_RevEx)
 
 ----
 
 ## Archived Materials
 
-* [Old Lecture Slides](HypTesting_PPT_old.pptx)
+* [Old Lecture Slides](PPT/HypTesting_PPT_old.pptx)
 
 ----

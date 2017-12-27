@@ -37,20 +37,19 @@ Use the materials below to answer the questions on [this preparation guide](BEDA
 
 * [![PDF](../img/pdf.png) Reading](../book/Bivariate EDA - Categorical.pdf)
 * [![YouTube Link](../img/youtube.png) Percentage Tables](https://www.youtube.com/watch?v=k8xFH6fCIWs){:target="_blank"} [6 mins]
-* [![Vimeo](../img/dhovid.png) Bivariate EDA (Categorical) in R](https://vimeo.com/user45324800/biveda-cat){:target="_blank"} [8 mins] [![Web](../img/web.png)](BEDACat_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](BEDACat_RHO.pdf) [![MSWord](../img/word.png)](BEDACat_RHO.docx)  [![R](../img/Rlogo.png)](BEDACat_RHO.R){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) Bivariate EDA (Categorical) in R](https://vimeo.com/user45324800/biveda-cat){:target="_blank"} [8 mins] [![Web](../img/web.png)](HO/BEDACat_RHO.html){:target="_blank"}  [![R](../img/Rlogo.png)](HO/BEDACat_RHO.R){:target="_blank"}
 
 ----
 
 ## Practice
 
-* [Review Exercises](BEDACat_RevEx.html)
 * Class Exercises: [1](BEDACat_CE1.html) / [2](BEDACat_CE2.html) (*time permitting* ... [3](BEDACat_CE3.html))
-* [Homework Assignment](BEDACat_HW2)
+* [Review Exercises](RE/BEDACat_RevEx.html)
 
 ----
 
 ## Archived Materials
 
-* [Old Lecture Slides](BEDACat_PPT_old.pptx)
+* [Old Lecture Slides](PPT/BEDACat_PPT_old.pptx)
 
 ----

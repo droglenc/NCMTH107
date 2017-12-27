@@ -33,23 +33,23 @@ css: /css/modules.css
 Use the materials below to answer the questions on [this preparation guide](1Samplet_Prep).
 
 * [![PDF](../img/pdf.png) Reading](../book/1-Sample t-Test.pdf)
-* [![Vimeo](../img/dhovid.png) t Distribution](https://vimeo.com/user45324800/tdist){:target="_blank"} [4 mins] [![PowerPoint](../img/ppt.png)](1Samplet_PPT1.pptx)
-* [![Vimeo](../img/dhovid.png) t Distributions in R](https://vimeo.com/user45324800/tdistribution){:target="_blank"} [8 mins] [![Web](../img/web.png)](1Samplet_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](1Samplet_RHO.pdf) [![MSWord](../img/word.png)](1Samplet_RHO.docx)  [![R](../img/Rlogo.png)](1Samplet_RHO.R){:target="_blank"}
-* [![Vimeo](../img/dhovid.png) 1-Sample t-Test Example](https://vimeo.com/user45324800/t1test-ex1){:target="_blank"} [12 mins] [![PowerPoint](../img/ppt.png)](1Samplet_PPT2.pptx)
+* [![Vimeo](../img/dhovid.png) t Distribution](https://vimeo.com/user45324800/tdist){:target="_blank"} [4 mins] [![PowerPoint](../img/ppt.png)](PPT/1Samplet_PPT1.pptx)
+* [![Vimeo](../img/dhovid.png) t Distributions in R](https://vimeo.com/user45324800/tdistribution){:target="_blank"} [8 mins] [![Web](../img/web.png)](HO/1Samplet_RHO.html){:target="_blank"}  [![R](../img/Rlogo.png)](HO/1Samplet_RHO.R){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) 1-Sample t-Test Example](https://vimeo.com/user45324800/t1test-ex1){:target="_blank"} [12 mins] [![PowerPoint](../img/ppt.png)](PPT/1Samplet_PPT2.pptx)
 * [![Vimeo](../img/dhovid.png) 1-Sample t-Test in R](https://vimeo.com/user45324800/1samplettest){:target="_blank"} [5 mins] [same handouts]
 
 ----
 
 ## Practice
 
-* [Review Exercises](1Samplet_RevEx)
-* Class Exercises: [1](1Samplet_CE1) / [2](1Samplet_CE2) (*time permiting* ... [3](1Samplet_CE3) / [4](1Samplet_CE4) )
+* Exercises: [1](1Samplet_CE1) / [2](1Samplet_CE2) (*time permiting* ... [3](1Samplet_CE3) / [4](1Samplet_CE4) )
 * [Homework Assignment](1Samplet_HW)
+* [Review Exercises](RE/1Samplet_RevEx)
 
 ----
 
 ## Archived Materials
 
-* [Old Lecture Slides](1Samplet_PPT_old.pptx)
+* [Old Lecture Slides](PPT/1Samplet_PPT_old.pptx)
 
 ----

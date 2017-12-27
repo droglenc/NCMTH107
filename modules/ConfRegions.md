@@ -44,14 +44,14 @@ Use the materials below to answer the questions on [this preparation guide](Conf
 
 ## Practice
 
-* [Review Exercises](ConfRegions_RevEx)
 * Class Exercises: [1](ConfRegions_CE1) / [2](ConfRegions_CE2) / [3](ConfRegions_CE3) / [4](ConfRegions_CE4) (*time permitting* ... [5](ConfRegions_CE5)).
+* [Review Exercises](RE/ConfRegions_RevEx)
 * [Homework Assignment](ConfRegions_HW)
 
 ----
 
 ## Archived Materials
 
-* [Old Lecture Slides](ConfRegions_PPT_old.pptx)
+* [Old Lecture Slides](PPT/ConfRegions_PPT_old.pptx)
 
 ----
