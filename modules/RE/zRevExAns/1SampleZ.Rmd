@@ -1,0 +1,140 @@
+---
+title: "Review Exercise Key"
+subtitle: "1-Sample Z-Test"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3
+    fig_width: 3.5
+    self_contained: false
+    lib_dir: zlibs
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/RE/zRevExAns/")
+source("../../../rhelpers/rhelpers.R")
+modHTML("1SampleZ")
+```
+```{r echo=FALSE, message=FALSE}
+library(NCStats)
+library(captioner)
+tabs <- captioner(prefix="Table")
+```
+
+----
+
+## Cactus Growth
+
+1. $\alpha$ = 0.05.
+1. $H_{O}:\mu$ = 4, $H_{A}:\mu<$ 4 where $\mu$ is the mean growth of all cacti.
+1. A one-sample Z-test is required because (i) a quantitative variable (growth) was measured, (ii) individuals from only one group/population were sampled (only one set of conditions considered), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) $\sigma$ is known (given in the background).
+1. The data are part of an experiment in which cacti were randomly selected.
+1. $\sigma$ is known. In addition, because the population distribution is normal (stated in the background), we do not have to worry about the size of the sample.
+1. $\bar{x}$ = 3.26.
+1. Z = $\frac{3.26-4}{\frac{1.40}{\sqrt{10}}}$ = $\frac{-0.74}{0.44}$ = -1.67.
+1. The p-value is `r kPvalue(distrib(3.26,mean=4,sd=1.40/sqrt(10),plot=FALSE),include.p=FALSE)`.
+1. $H_{O}$ is rejected in favor of $H_{A}$ because the p-value$<\alpha$.
+1. The mean growth rate of all cacti under the experimental conditions does appear to be less than 4 cm.
+1. A 95% upper confidence bound is warranted in this situation and will use a $Z^{*}$ = `r formatC(distrib(0.95,type="q",plot=FALSE),format="f",digits=3)`. Thus, 3.26+1.645*0.44 or 3.26+0.72 = 3.98. Thus, one is 95% confident that the mean growth of all cacti under the experimental conditions is less than 3.98 cm.
+
+### R Appendix
+```{r eval=FALSE}
+( pval <- distrib(3.26,mean=4,sd=1.40/sqrt(10)) )
+( zstar <- distrib(0.95,type="q") )
+```
+
+----
+
+## Length of Northern Pike
+
+1. $\alpha$ = 0.05. (*Note that this is obtained from workin backwards from the 95% confidence statement.*)
+1. $H_{O}:\mu$ = 600, $H_{A}:\mu\neq$ 600 where $\mu$ is the mean length of all pike in Chivyrkui Bay, Lake Baikal.
+1. A one-sample Z-test is required because a (i) quantitative variable (length) was measured, (ii) individuals from only one group/population were sampled (Chivyrkui Bay, Lake Baikal), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) $\sigma$ is known (given in the background).
+1. Observational study with n = 30 pike. No obvious randomization.
+1. n = 30 $\geq$ 15 and the population is not strongly skewed (background says "slightly"" right-skewed); $\sigma$ is known.
+1. $\bar{x}$ = 656.1.
+1. Z = $\frac{656.1-600}{\frac{130}{\sqrt{30}}}$ = 2.363.
+1. The p-value is `r kPvalue(2*distrib(656.1,mean=600,sd=130/sqrt(30),lower.tail=FALSE,plot=FALSE),include.p=FALSE)`.
+1. Reject $H_{O}$ because the p-value$<\alpha$.
+1. The true mean length of all pike in Lake Baikal appears to be different than 600 mm.
+1. A 95% confidence interval is warranted in this situation and will use a $Z^{*}$ = $\pm$ `r formatC(distrib(0.05/2,type="q",lower.tail=FALSE,plot=FALSE),format="f",digits=3)`. Thus, 656.1 $\pm$ 1.96*23.74, 656.1 $\pm$ 46.53, or (609.57, 702.63). Therefore, one is 95% confident that true mean length of all pike in Lake Baikal is between 609.6 and 702.6 mm.
+
+### R Appendix
+```{r eval=FALSE}
+( pval <- 2*distrib(656.1,mean=600,sd=130/sqrt(30),lower.tail=FALSE) )
+( zstar <- distrib(0.05/2,type="q",lower.tail=FALSE) )
+```
+
+----
+
+## Chronic Myofascial Pain Syndrome
+```{r echo=FALSE, results='hide'}
+df <- data.frame(pain=c(2.5,2.7,2.8,2.8,2.8,3.0))
+tabs(name="Pain","Results of 1-Sample Z-Test for duration of pain for patients with chronic myofascial pain syndrome.")
+```
+```{r 1ZPain, echo=FALSE, results='hide'}
+( pain.z <- z.test(df$pain,mu=2.5,alt="greater",sd=0.5,conf.level=0.90) )
+```
+
+1. $\alpha$ = 0.10.
+1. $H_{O}:\mu$ = 2.5, $H_{A}:\mu>$ 2.5 where $\mu$ is the mean length of pain.
+1. A one-sample Z-test is required because (i) a quantitative variable (length of pain) was measured, (ii) individuals from only one group/population were sampled (patients with this syndrome), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) $\sigma$ is known (given in the background).
+1. An observational study that is not obviously random was used.
+1. The population is normally distributed (given in the background) and $\sigma$ is known (= 0.5). Thus, the test statistic below should follow a normal distribution.
+1. $\bar{x}$ = `r formatC(pain.z$estimate,format="f",digits=2)` years (`r tabs("Pain",display="cite")`).
+1. $Z$ = `r formatC(pain.z$statistic,format="f",digits=2)` (`r tabs("Pain",display="cite")`).
+1. p-value = `r kPvalue(pain.z$p.value,include.p=FALSE)` (`r tabs("Pain",display="cite")`).
+1. Reject $H_{O}$ because the p-value$<\alpha$.
+1. It appears that the mean duration of pain for all patients may be longer than 2.5 years.
+1. A 90% lower confidence bound is used here. Thus, one is 90% confident that the mean duration of pain for all patients is more than `r formatC(pain.z$conf.int[1],format="f",digits=2)` years (`r tabs("Pain",display="cite")`).
+
+`r tabs("Pain")`
+
+```{r echo=FALSE, background='white', comment=""}
+kHtest(pain.z)
+```
+
+### R Appendix
+```{r eval=FALSE}
+df <- read.csv("data/Pain.csv")
+<<1ZPain>>
+```
+
+----
+
+## Cholesterol Levels
+```{r echo=FALSE, results='hide'}
+df <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Cholesterol.csv")
+tabs(name="Cholest","Results of 1-Sample Z-Test for cholesterol level of Asian Women.")
+```
+```{r 1ZCholest, echo=FALSE, results='hide'}
+( ch.z <- z.test(df$cholest,mu=190,sd=40,conf.level=0.90) )
+```
+
+1. $\alpha$ = 0.10.
+1. $H_{O}:\mu$ = 190, $H_{A}:\mu\neq$ 190 where $\mu$ is the mean cholesterol level of Asian women.
+1. A one-sample Z-test is required because (i) a quantitative variable (cholesterol level) was measured, (ii) individuals from only one group/population were sampled (Asian women aged 21-40 that had recently immigrated to the U.S.), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) $\sigma$ is known (given in the background).
+1. An observational study with randomly selected women was used.
+1. n = `r nrow(df)` $\geq$ 30 and $\sigma$ is known.
+1. $\bar{x}$ = `r formatC(ch.z$estimate,format="f",digits=2)` mg/dl (`r tabs("Cholest",display="cite")`).
+1. $Z$ = `r formatC(ch.z$statistic,format="f",digits=2)` (`r tabs("Cholest",display="cite")`).
+1. p-value = `r kPvalue(ch.z$p.value,include.p=FALSE)` (`r tabs("Cholest",display="cite")`).
+1. The $H_{O}$ is not rejected because the p-value$>\alpha$.
+1. The true mean cholesterol level for all Asian women aged 21-40 that recently immigrated to the U.S. does not appear to be different than 190 mg/dl.
+
+`r tabs("Cholest")`
+
+```{r echo=FALSE, background='white', comment=""}
+kHtest(ch.z)
+```
+
+### R Appendix
+```{r eval=FALSE}
+df <- read.csv("data/Cholest.csv")
+<<1ZCholest>>
+```
+
+----
