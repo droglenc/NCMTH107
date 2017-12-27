@@ -36,10 +36,10 @@ tbls(name="LightRow","Percentages of chidren by nearsightedness type within each
 tbls(name="LightCol","Percentage of children by sleeping conditions within each nearsightedness type.")
 tbls(name="LightTot","Percentages of all students in each sleeping condition and nearsightedness type.")
 
-tbls(name="TreesRaw",'Raw freuency table for stands by type ("sttype": c="coniferous",mc="mostly coniferous",md="mostly deciduous", and d="deciduous" and years since last fire category (tslf).')
-tbls(name="TreesRow",'Row percentages table for stands by type ("sttype": c="coniferous",mc="mostly coniferous",md="mostly deciduous", and d="deciduous" and years since last fire category (tslf).')
-tbls(name="TreesCol",'Column percentages table for stands by type ("sttype": c="coniferous",mc="mostly coniferous",md="mostly deciduous", and d="deciduous" and years since last fire category (tslf).')
-tbls(name="TreesTot",'Total percentages table for stands by type ("sttype": c="coniferous",mc="mostly coniferous",md="mostly deciduous", and d="deciduous" and years since last fire category (tslf).')
+tbls(name="TreesRaw",'Raw frequency table for stands by type ("sttype": c="coniferous",mc="mostly coniferous",md="mostly deciduous", and d="deciduous" and years since last fire category (tslf).')
+tbls(name="TreesRow",'Row percentages table for stands by type. Abbreviations are in Table 9.')
+tbls(name="TreesCol",'Column percentages table for stands by type. Abbreviations are in Table 9.')
+tbls(name="TreesTot",'Total percentages table for stands by type. Abbreviations are in Table 9.')
 
 tbls(name="KidsRaw",'Raw frequency table for grade school students by goals and grade.')
 tbls(name="KidsRow",'Row percentages table for grade school students by goals and grade.')
@@ -110,7 +110,7 @@ tbl
 ```
   <li>The row percentage table is shown in `r tbls("BlightRow",display="cite")`.</li>
   
-`r tbls("BlightR0w")`
+`r tbls("BlightRow")`
 
 ```{r echo=FALSE, background="white"}
 row.tbl
@@ -132,11 +132,11 @@ col.tbl
 perc.tbl
 ```
 
-  <li>The percentage of all trees in Treatment A that were dead within the first year (i.e., outcome=1) is `r formatC(row.tbl["A","1"],format="f",digits=1)`% `r tbls("BlightRow",display="cite")`.</li>
-  <li>The percentage of ALL trees that were in Treatment A AND were dead within the first year (i.e., outcome=1) is `r formatC(perc.tbl["A","1"],format="f",digits=1)`% `r tbls("BlightTot",display="cite")`.</li>
-  <li>The percentage of the trees in the control treatment (treatment A) that died after four years (i.e., outcome=3) is `r formatC(row.tbl["A","3"],format="f",digits=1)`% `r tbls("BlightRow",display="cite")`.</li>
-  <li>The percentage of the trees that died after 2-4 years (outcome 2) that were in the control treatment (treatment A) is `r formatC(col.tbl["A","2"],format="f",digits=1)`% `r tbls("BlightCol",display="cite")`.</li>
-  <li>The percentage of all trees that were dead within the first year is `r formatC(perc.tbl["Sum","1"],format="f",digits=1)`% `r tbls("BlightTot",display="cite")`.</li>
+  <li>The percentage of all trees in Treatment A that were dead within the first year (i.e., outcome=1) is `r formatC(row.tbl["A","1"],format="f",digits=1)`% (`r tbls("BlightRow",display="cite")`).</li>
+  <li>The percentage of ALL trees that were in Treatment A AND were dead within the first year (i.e., outcome=1) is `r formatC(perc.tbl["A","1"],format="f",digits=1)`% (`r tbls("BlightTot",display="cite")`).</li>
+  <li>The percentage of the trees in the control treatment (treatment A) that died after four years (i.e., outcome=3) is `r formatC(row.tbl["A","3"],format="f",digits=1)`% (`r tbls("BlightRow",display="cite")`).</li>
+  <li>The percentage of the trees that died after 2-4 years (outcome 2) that were in the control treatment (treatment A) is `r formatC(col.tbl["A","2"],format="f",digits=1)`% (`r tbls("BlightCol",display="cite")`).</li>
+  <li>The percentage of all trees that were dead within the first year is `r formatC(perc.tbl["Sum","1"],format="f",digits=1)`% (`r tbls("BlightTot",display="cite")`).</li>
 </ol>
 
 R Appendix
@@ -169,7 +169,7 @@ addmargins(tbl)
 addmargins(tbl)
 ```
 
-  <li>The percentage of children that slept in "no light" conditions that then developed nearsightedness is `r formatC(row.tbl["no light","Yes"],format="f",digits=1)`% `r tbls("LightRow",display="cite")`.</li>
+  <li>The percentage of children that slept in "no light" conditions that then developed nearsightedness is `r formatC(row.tbl["no light","Yes"],format="f",digits=1)`% (`r tbls("LightRow",display="cite")`).</li>
 
 `r tbls("LightRow")`
 
@@ -177,7 +177,7 @@ addmargins(tbl)
 row.tbl
 ```
 
-  <li>The percentage of all children that slept with a "lamp" and developed nearsightedness is `r formatC(perc.tbl["lamp","Yes"],format="f",digits=1)`% `r tbls("LightTot",display="cite")`.</li>
+  <li>The percentage of all children that slept with a "lamp" and developed nearsightedness is `r formatC(perc.tbl["lamp","Yes"],format="f",digits=1)`% (`r tbls("LightTot",display="cite")`).</li>
 
 `r tbls("LightTot")`
 
@@ -185,8 +185,8 @@ row.tbl
 perc.tbl
 ```
 
-  <li>The percentage of children that slept with a "night light" that did not develop nearsightedness is `r formatC(row.tbl["night light","No"],format="f",digits=1)`% `r tbls("LightRow",display="cite")`.</li>
-  <li>The percentage of children that developed nearsightedness that slept with a "lamp" is `r formatC(col.tbl["lamp","Yes"],format="f",digits=1)`% `r tbls("LightCol",display="cite")`.</li>
+  <li>The percentage of children that slept with a "night light" that did not develop nearsightedness is `r formatC(row.tbl["night light","No"],format="f",digits=1)`% (`r tbls("LightRow",display="cite")`).</li>
+  <li>The percentage of children that developed nearsightedness that slept with a "lamp" is `r formatC(col.tbl["lamp","Yes"],format="f",digits=1)`% (`r tbls("LightCol",display="cite")`).</li>
 
 `r tbls("LightCol")`
 
@@ -194,8 +194,8 @@ perc.tbl
 col.tbl
 ```
 
-  <li>The percentage of children that developed nearsightedness is `r formatC(perc.tbl["Sum","Yes"],format="f",digits=1)`% `r tbls("LightTot",display="cite")`.</li>
-  <li>It appears that the percentage of children that developed nearsightedness is greater when the child slept with some sort of light (either a lamp or a night light), with a somewhat greater prevalence of nearsightedness with the lamp `r tbls("LightRow",display="cite")`.</li>
+  <li>The percentage of children that developed nearsightedness is `r formatC(perc.tbl["Sum","Yes"],format="f",digits=1)`% (`r tbls("LightTot",display="cite")`).</li>
+  <li>It appears that the percentage of children that developed nearsightedness is greater when the child slept with some sort of light (either a lamp or a night light), with a somewhat greater prevalence of nearsightedness with the lamp (`r tbls("LightRow",display="cite")`).</li>
 </ol>
 
 R Appendix
