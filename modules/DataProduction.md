@@ -44,7 +44,7 @@ Use the materials below to answer the questions on [this preparation guide](Data
 * [![YouTube](../img/youtube.png) Sample Design](https://www.youtube.com/watch?v=5zkg1w5zoQ0){:target="_blank"} [*from 0:20 to 9:40*]
 * ![YouTube](../img/youtube.png) Experimental Design:  [A](https://www.youtube.com/watch?v=v-xnPVCi9wM){:target="_blank"} [*from 1:21 to 8:47*] **OR** [B](https://www.youtube.com/watch?v=5zkg1w5zoQ0){:target="_blank"} [*from 12:34 to 18:46*]
 * [![Vimeo](../img/dhovid.png) Definitions in Experimental Design](https://vimeo.com/user45324800/experimentdefns){:target="_blank"} [4 mins]  [![PowerPoint](../img/ppt.png)](DataProduction_PPT.pptx)
-* [![Vimeo](../img/dhovid.png) Randomization in R](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins] [![Web](../img/web.png)](DataProduction_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](DataProduction_RHO.pdf) [![MSWord](../img/word.png)](DataProduction_RHO.docx)  [![R](../img/Rlogo.png)](DataProduction_RHO.R){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) Randomization in R](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins] [![Web](../img/web.png)](HO/DataProduction_RHO.html){:target="_blank"}  [![R](../img/Rlogo.png)](HO/DataProduction_RHO.R){:target="_blank"}
 * ![YouTube](../img/youtube.png) Response/Explanatory Variables - [A](https://www.youtube.com/watch?v=bokeTCH2aJY){:target="_blank"} [*from 1:00 to 2:28*] **AND**  [B](https://www.youtube.com/watch?v=bokeTCH2aJY){:target="_blank"} [*stop at 6:18*]
 
 ----

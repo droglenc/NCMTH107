@@ -8,23 +8,15 @@ output:
   html_document:
     fig_width: 3.5
     fig_height: 3.5
-    self_contained: no
-  pdf_document:
-    fig_width: 3.5
-    fig_height: 3.5
-  word_document:
-    fig_width: 3.5
-    fig_height: 3.5
+    self_contained: false
+    lib_dir: libs
 ---
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules")
-source("../rhelpers/rhelpers.R")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/HO/")
+source("../../rhelpers/rhelpers.R")
 modHTML("DataProduction_RHO")
-```
-```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
-source("../rhelpers/knitr_setup.R")
 purl2("DataProduction_RHO.Rmd",moreItems=c("Renders","source","modHTML","github.com","NCMTH107","set.seed"))
 ```
 ```{r echo=FALSE, results='hide', message=FALSE}

@@ -34,4 +34,4 @@ ver_bw5n9 <- filterD(dfiris,seplen>5,seplen<9)
 headtail(ver_bw5n9)
 
 
-# Script created at 2017-12-27 09:15:39
+# Script created at 2017-12-27 09:20:38
