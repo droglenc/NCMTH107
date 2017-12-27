@@ -47,7 +47,7 @@ Use the materials below to answer the questions on [this preparation guide](WhyS
 ## Practice
 
 * [Class Example](CEx/WhyStats_CExmpl1)
-* [Practice Exercises](CE/WhyStats_CE) ... [ANSWER KEY](CE/WhyStats_CE_Keys)
+* [Exercises](CE/WhyStats_CE) ... [ANSWER KEY](CE/WhyStats_CE_Keys)
 
 ----
 
