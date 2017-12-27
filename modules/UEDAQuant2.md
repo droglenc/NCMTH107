@@ -42,7 +42,7 @@ Use the materials below to answer the questions on [this preparation guide](UEDA
 
 ## Practice
 
-* [Exercises](CE/UEDAQuant2_CE1) ([*more as time permits*](UEDAQuant2_CE2)) ... [ANSWER KEY](CE/UEDAQuant2_Keys)
+* [Exercises](CE/UEDAQuant2_CE1) ([*more as time permits*](CE/UEDAQuant2_CE2)) ... [ANSWER KEY](CE/UEDAQuant2_Keys)
 * Review Exercises: [Definitions](RE/UEDAQuant2_RevEx_Defns) / [Interpretations](RE/UEDAQuant2_RevEx_EDAs)
 
 ----
