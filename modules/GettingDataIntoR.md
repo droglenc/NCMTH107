@@ -20,7 +20,6 @@ R is fast becoming the primary software for performing statistical analyses in m
 <ol>
   <li>Describe what R and RStudio are.</li>
   <li>Enter data into R data.frames.</li>
-  <li>Create data.frames that are subsets of larger data.frames.</li>
 </ol>
       </div>
     </div>
@@ -31,9 +30,9 @@ R is fast becoming the primary software for performing statistical analyses in m
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](GettingDataIntoR_Prep1). [*Problems with videos? [See this FAQ](../resources/FAQ/FAQs/videos){:target="_blank"}.*]
+Use the materials below to answer the questions on [this preparation guide](GettingDataIntoR_Prep). [*Problems with videos? [See this FAQ](../resources/FAQ/FAQs/videos){:target="_blank"}.*]
 
-* [![PDF](../img/pdf.png) Reading](../book/Getting Data Into R.pdf) [*Up to "Filtering a data.frame"*]
+* [![PDF](../img/pdf.png) Reading](../book/Getting Data Into R.pdf)
 * [![YouTube](../img/youtube.png) What is R?](https://www.youtube.com/watch?v=XcBLEVknqvY){:target="_blank"} [2 mins]
 * [![YouTube](../img/youtube.png) What's Up with R?](https://www.youtube.com/watch?v=ZwYQPtU2Pa0){:target="_blank"} [*stop at 1:51*]
 * [![YouTube](../img/youtube.png) What is RStudio? Part 1](https://www.youtube.com/watch?v=riONFzJdXcs){:target="_blank"} [*stop at 2:27*]
@@ -43,20 +42,13 @@ Use the materials below to answer the questions on [this preparation guide](Gett
     * Alternatively: [Enter Your Own Data Without Excel](https://vimeo.com/user45324800/ncstats-preparedatatextfile){:target="_blank"} [4 mins]
 * [![Vimeo](../img/dhovid.png) Load Data into RStudio](https://vimeo.com/user45324800/ncstats-loadcsvrstudio){:target="_blank"} [6 mins]
 
-
-Use the materials below to answer the questions on [this preparation guide](GettingDataIntoR_Prep2).
-
-* [![PDF](../img/pdf.png) Reading](../book/Getting Data Into R.pdf) [*"Filtering a data.frame" and after*]
-* [![Vimeo](../img/dhovid.png) Subset data.frame with filterD](https://vimeo.com/user45324800/filterd){:target="_blank"} [6 mins]
-
 ----
 
 ## Practice
 
+* [Class Example](GettingDataIntoR_CExmpl)
+* [Class Exercises](GettingDataIntoR_CE)
 * [Review Exercises](GettingDataIntoR_RevEx.html)
-* In-Class Demonstration -- [![Web](../img/web.png)](GettingDataIntoR_RHO.html){:target="_blank"}  [![PDF](../img/pdf.png)](GettingDataIntoR_RHO.pdf) [![MSWord](../img/word.png)](GettingDataIntoR_RHO.docx)  [![R](../img/Rlogo.png)](GettingDataIntoR_RHO.R){:target="_blank"}
-* Class Exercises: [1](GettingDataIntoR_CE1) / [2](GettingDataIntoR_CE2) (*time permitting* ... [3](GettingDataIntoR_CE3))
-* [Homework Assignment](GettingDataIntoR_HW)
 
 ----
 
