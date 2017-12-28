@@ -29,6 +29,7 @@ source("../../../rhelpers/knitr_setup.R")
 library(captioner)
 tbls <- captioner(prefix="Table")
 tbls(name="HawksRidge","Results from the one-sample z-test for testing that the mean number of hawks observed at Hawk Ridge, MN is greater than 50000 per year.")
+tbls(name="ElkDensity","Results from the one-sample z-test for testing that the mean density of elk in ALL plots in Banff is greater than 8 per km$^{2}$.")
 ```
 
 ----
@@ -87,7 +88,7 @@ kHtest(hr.z)
 <li>The p-value is `r kPvalue(hr.z$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("HawksRidge",display="cite")`).</li>
 <li>The H<sub>O</sub> is rejected because the p-value<&alpha; (`r tbls("HawksRidge",display="cite")`).</li>
 <li>The mean number of raptors seen per year in ALL years appears to be greater than 50000.</li>
-<li>I am 99\% confident that the mean number of raptors seen per year in ALL years is more than `r formatC(hr.z$conf.int[1],format="f",digits=0)` (`r tbls("HawksRidge",display="cite")`).</li>
+<li>I am 99% confident that the mean number of raptors seen per year in ALL years is more than `r formatC(hr.z$conf.int[1],format="f",digits=0)` (`r tbls("HawksRidge",display="cite")`).</li>
 </ol>
 
 R Appendix
@@ -96,3 +97,65 @@ R Appendix
 ```
 
 ----
+
+\section*{Elk Density in Banff}
+```{r echo=FALSE}
+elk <- c(5.20,7.79,6.46,8.60,8.97,8.65,9.60,9.09,12.42,
+         10.70,11.59,10.68,10.61,9.04,10.89)
+```
+```{r ElkCalc, echo=FALSE, results='hide'}
+( elk.z <- z.test(elk,mu=8,sd=2,alt="greater",conf.level=0.90) )
+```
+
+<ol>
+  <li>$\alpha=0.10$
+  <li>$H_{O}:\mu=8$, $H_{A}:\mu>8$, where $\mu$ is the mean Elk density in Banff.
+  <li>A 1-sample Z-test is required because a quantitative variable (Elk density) was measured on individuals from one group or population (plots in Banff National Park) and $\sigma$ is known (given in background).
+  <li>An observational sample that is not obiously random was selected.
+  <li>The assumptions are met because $n=15$ and population is approximately normal (given in background) and $\sigma$ is known.
+  <li>The statistic is $\bar{x}=$ `r formatC(elk.z$estimate,format="f",digits=2)` Elk per km$^{2}$ (`r tbls("ElkDensity",display="cite")`).
+
+`r tbls("ElkDensity")`
+```{r}
+kHtest(elk.z)
+```
+
+  <li>The test statistic is $z=$`r formatC(elk.z$statistic,format="f",digits=3)` (`r tbls("ElkDensity",display="cite")`).
+  <li>The p-value is `r kPvalue(elk.z$p.value)` (`r tbls("ElkDensity",display="cite")`).
+  <li>The $H_{O}$ is rejected because the p-value$<\alpha$.
+  <li>The annual density of elk appears to be greater than 8 per km$^{2}$.
+  <li>A 90% lower confidence bound is required.  Thus, one is 90% confident that the mean annual density of elk is more than `r formatC(elk.z$conf.int[1],format="f",digits=2)` per km$^{2}$ (`r tbls("ElkDensity",display="cite")`).
+</ol>
+
+R Appendix
+```{r eval=FALSE, prompt=FALSE}
+library(NCStats)
+setwd('C:/aaaWork/Books/IntroStats/HW/')
+elk <- read.csv("Elk.csv")
+<<ElkCalc>>
+```
+
+
+## Credit Card Limits
+
+<ol>
+  <li>$\alpha=0.10$.
+  <li>$H_{O}:\mu=630$, $H_{A}:\mu>630$, where $\mu$ is the mean credit card limit for all companies.
+  <li>A one-sample Z-test is required because a quantitative variable (credit score) was measured on individuals from one group or population (all credit card companies) and $\sigma$ is known (given in background).
+  <li>An observational sample, with no evidence of randomness, was selected.
+  <li>The assumptions are met because $n\geq 30$ and $\sigma$ is known.
+  <li>The statistic is $\bar{x}=636.86$.
+  <li>The test statistic is $z=\frac{636.86-630}{\frac{5}{\sqrt{44}}}=9.11$
+  <li>The p-value is `r kPvalue(distrib(636.86,mean=630,sd=5/sqrt(44),lower.tail=FALSE,plot=FALSE),include.p=FALSE)`.
+  <li>The $H_{O}$ is rejected because the p-value$<\alpha$.
+  <li>It appears that the credit threshold is greater than 60. Thus, it appears that the credit card companies have increased the threshold for issuing a credit card.
+  <li>A 90% lower confidence bound with $Z^{*}=$`r formatC(distrib(0.90,type="q",lower.tail=FALSE,plot=FALSE),format="f",digits=3)}. Thus, $636.86-1.282\frac{5}{\sqrt{44}}$ or $636.86-0.97$ = $635.89$. Therefore, one is 90% confident that the mean cutoff score for ALL companies is greater than 635.89.
+</ol>
+
+R Appendix
+```{r eval=FALSE, prompt=FALSE}
+library(NCStats)
+setwd('C:/aaaWork/Books/IntroStats/HW/')
+( distrib(636.86,mean=630,sd=5/sqrt(44),lower.tail=FALSE) )
+( distrib(0.90,type="q",lower.tail=FALSE,lower.tail=FALSE) )
+```
