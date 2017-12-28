@@ -105,17 +105,17 @@ I am 99% confident that the mean number of raptors seen per year in ALL years is
 
 <ol>
 <li>
-<span class="math inline">\(\alpha=0.10\)</span>
+α=0.10
 <li>
-<span class="math inline">\(H_{O}:\mu=8\)</span>, <span class="math inline">\(H_{A}:\mu&gt;8\)</span>, where <span class="math inline">\(\mu\)</span> is the mean Elk density in Banff.
+H<sub>O</sub>: μ=8, H<sub>A</sub>: μ&gt;8, where μ is the mean Elk density in Banff.
 <li>
-A 1-sample Z-test is required because a quantitative variable (Elk density) was measured on individuals from one group or population (plots in Banff National Park) and <span class="math inline">\(\sigma\)</span> is known (given in background).
+A 1-sample Z-test is required because a quantitative variable (Elk density) was measured on individuals from one group or population (plots in Banff National Park) and σ is known (given in background).
 <li>
 An observational sample that is not obiously random was selected.
 <li>
-The assumptions are met because <span class="math inline">\(n=15\)</span> and population is approximately normal (given in background) and <span class="math inline">\(\sigma\)</span> is known.
+The assumptions are met because n=15 and population is approximately normal (given in background) and σ is known.
 <li>
-<p>The statistic is <span class="math inline">\(\bar{x}=\)</span> 9.35 Elk per km<span class="math inline">\(^{2}\)</span> (Table 2).</p>
+<p>The statistic is x̄=9.35 Elk per km<sup>2</sup> (Table 2).</p>
 <p>Table 2: Results from the one-sample z-test for testing that the mean density of elk in ALL plots in Banff is greater than 8 per km<span class="math inline">\(^{2}\)</span>.</p>
 <pre class="r"><code>&gt; kHtest(elk.z)</code></pre>
 <pre><code>z = 2.6194, n = 15.000, Std. Dev. = 2.000, Std. Dev. of the sample mean = 0.516,
@@ -126,11 +126,11 @@ sample estimates:
 mean of elk 
    9.352667 </code></pre>
 <li>
-The test statistic is $z=$2.619 (Table 2).
+The test statistic is Z=2.619 (Table 2).
 <li>
 The p-value is <span class="math inline">\(p=0.0044\)</span> (Table 2).
 <li>
-The <span class="math inline">\(H_{O}\)</span> is rejected because the p-value<span class="math inline">\(&lt;\alpha\)</span>.
+The H<sub>O</sub> is rejected because the p-value<span class="math inline">\(&lt;\alpha\)</span>.
 <li>
 The annual density of elk appears to be greater than 8 per km<span class="math inline">\(^{2}\)</span>.
 <li>
@@ -146,27 +146,27 @@ elk &lt;- read.csv(&quot;Elk.csv&quot;)
 <h2>Credit Card Limits</h2>
 <ol>
 <li>
-<span class="math inline">\(\alpha=0.10\)</span>.
+α=0.10.
 <li>
-<span class="math inline">\(H_{O}:\mu=630\)</span>, <span class="math inline">\(H_{A}:\mu&gt;630\)</span>, where <span class="math inline">\(\mu\)</span> is the mean credit card limit for all companies.
+H<sub>A</sub>: μ&gt;630 and H<sub>O</sub>: μ=630, where μ is the mean credit card limit for all companies.
 <li>
-A one-sample Z-test is required because a quantitative variable (credit score) was measured on individuals from one group or population (all credit card companies) and <span class="math inline">\(\sigma\)</span> is known (given in background).
+A one-sample Z-test is required because a quantitative variable (credit score) was measured on individuals from one group or population (all credit card companies) and σ is known (given in background).
 <li>
 An observational sample, with no evidence of randomness, was selected.
 <li>
-The assumptions are met because <span class="math inline">\(n\geq 30\)</span> and <span class="math inline">\(\sigma\)</span> is known.
+The assumptions are met because n<span class="math inline">\(\geq\)</span> 30 and σ is known.
 <li>
-The statistic is <span class="math inline">\(\bar{x}=636.86\)</span>.
+The statistic is x̄=636.86.
 <li>
-The test statistic is <span class="math inline">\(z=\frac{636.86-630}{\frac{5}{\sqrt{44}}}=9.11\)</span>
+The test statistic is Z=<span class="math inline">\(\frac{636.86-630}{\frac{5}{\sqrt{44}}}\)</span>=9.11
 <li>
 The p-value is <span class="math inline">\(&lt;0.00005\)</span>.
 <li>
-The <span class="math inline">\(H_{O}\)</span> is rejected because the p-value<span class="math inline">\(&lt;\alpha\)</span>.
+The H<sub>O</sub> is rejected because the p-value&lt;α.
 <li>
 It appears that the credit threshold is greater than 60. Thus, it appears that the credit card companies have increased the threshold for issuing a credit card.
 <li>
-A 90% lower confidence bound with <span class="math inline">\(Z^{*}=\)</span>`r formatC(distrib(0.90,type=“q”,lower.tail=FALSE,plot=FALSE),format=“f”,digits=3)}. Thus, <span class="math inline">\(636.86-1.282\frac{5}{\sqrt{44}}\)</span> or <span class="math inline">\(636.86-0.97\)</span> = <span class="math inline">\(635.89\)</span>. Therefore, one is 90% confident that the mean cutoff score for ALL companies is greater than 635.89.
+A 90% lower confidence bound with Z<sup>*</sup>=`r formatC(distrib(0.90,type=“q”,lower.tail=FALSE,plot=FALSE),format=“f”,digits=3)}. Thus, 636.86-1.282<span class="math inline">\(\frac{5}{\sqrt{44}}\)</span> or 636.86-0.97 = 635.89. Therefore, one is 90% confident that the mean cutoff score for ALL companies is greater than 635.89.
 </ol>
 <p>R Appendix</p>
 <pre class="r"><code>library(NCStats)
