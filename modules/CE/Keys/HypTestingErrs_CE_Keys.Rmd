@@ -1,0 +1,87 @@
+---
+title: "Answer Key"
+subtitle: "Hypothesis Testing ErrorsCE"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3
+    fig_width: 3.5
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file for the webpage
+fnm <- "HypTestingErrs_CE_Keys"
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/Keys")
+source("../../../rhelpers/rhelpers.R")
+modHTML(fnm)
+## And moves it to make it available to students
+file.rename(from=paste0(fnm,".html"),to=paste0("../",fnm,".html"))
+dir.create(paste0("../",fnm,"_files"),showWarnings=FALSE)
+file.copy(from=paste0(fnm,"_files"),to=paste0("../"),recursive=TRUE)
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+library(captioner)
+figs <- captioner(prefix="Figure")
+figs(name="Pwr1","NULL normal distribution representing the rejection region for the power calculation example.")
+figs(name="Pwr2","ACTUAL normal distribution representing power in the power calculation example.")
+```
+
+----
+
+## Identifying Type I and II Errors
+
+<ol>
+<li>The $H_{0}: \mu=15.4$ and $H_{A}: \mu>15.4$.  A Type I error would be saying that the chicken is contaminated when it really is not contaminated.  A Type II error would be saying that the chicken is not contaminated when it really is contaminated.  In my mind, a Type I error is more egregious as people would be eating contaminated chicken that they have been told is not contaminated.</li>
+<li>The $H_{0}$ is that the drug does not exceed specification whereas the $H_{A}$ is that the drug does exceed the specification.  A Type I error occurs if the drug does not exceed the specifications but it concluded that it does.  A Type II error occurs if the the drug does exceed the specifications but it is concluded that it does not.  In my mind, a Type II error is more egregious as people would be using a "bad" drug but would have been told that it was OK.</li>
+</ol>
+
+----
+
+## Understanding Power Relationships
+
+<ol>
+<li>See `r figs("Pwr1",display="cite")`.</li>
+```{r Pwr1,echo=FALSE}
+distrib(0.05,mean=100,sd=10/sqrt(30),type="q")
+```
+
+`r figs("Pwr1")`
+
+<li>See `r figs("Pwr2",display="cite")`.</li>
+```{r Pwr2,echo=FALSE}
+distrib(96.997,mean=95,sd=10/sqrt(30))
+```
+
+`r figs("Pwr2")`
+
+<li>Effects on &beta;</li>
+<ol>
+<li>Decrease &beta;</li>
+<li>Decrease &beta;</li>
+<li>Increase &beta;</li>
+<li>Decrease &beta;</li>
+</ol>
+<li>Effects on power</li>
+<ol>
+<li>Increase power</li>
+<li>Increase power</li>
+<li>Decrease power</li>
+<li>Increase power</li>
+</ol>
+<li>Increase n, increase &alpha;</li>
+<li>Increase n, increase &alpha;</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+<<Pwr1>>
+<<Pwr2>>
+```
+
+----

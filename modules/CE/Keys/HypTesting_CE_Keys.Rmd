@@ -28,15 +28,12 @@ library(NCStats)
 source("../../../rhelpers/knitr_setup.R")
 library(captioner)
 figs <- captioner(prefix="Figure")
-figs(name="P1","Normal distribution representing the p-value calculation for the first example.")
 figs(name="P2","Normal distribution representing the p-value calculation for the second example.")
-figs(name="P3","Normal distribution representing the p-value calculation for the third example.")
+figs(name="P1","Normal distribution representing the p-value calculation for the first example.")
 figs(name="P4","Normal distribution representing the p-value calculation for the fourth example.")
+
+figs(name="P3","Normal distribution representing the p-value calculation for the third example.")
 figs(name="P5","Normal distribution representing the p-value calculation for the fifth example.")
-figs(name="P6","Normal distribution representing the p-value calculation for the sixth example.")
-figs(name="P7","Normal distribution representing the p-value calculation for the seventh example.")
-figs(name="Pwr1","NULL normal distribution representing the rejection region for the power calculation example.")
-figs(name="Pwr2","ACTUAL normal distribution representing power in the power calculation example.")
 ```
 
 ----
@@ -44,40 +41,32 @@ figs(name="Pwr2","ACTUAL normal distribution representing power in the power cal
 ## Identifying Hypotheses
 
 <ol>
-<li>$H_{A}: \mu < 90$ vs. $H_{0}: \mu = 90$</li>
-<li>$H_{A}: \mu > 15$ vs. $H_{0}: \mu = 15$</li>
-<li>$H_{A}: \mu \neq 22500$ vs. $H_{0}: \mu = 22500$</li>
-<li>$H_{A}: p > 0.61$ vs. $H_{0}: p = 0.61$</li>
+<li>$H_{A}: \mu < 90$ vs. $H_{0}: \mu = 90$, where $\mu$ is the mean number of murders for all burroughs in 2010.</li>
+<li>$H_{A}: \mu > 15$ vs. $H_{0}: \mu = 15$, where $\mu$ is the mean length of all oil changes at the Toyota dealership.</li>
+<li>$H_{A}: \mu \neq 22500$ vs. $H_{0}: \mu = 22500$, where $\mu$ is the mean cost of all bariatric surgeries.</li>
+<li>$H_{A}: p > 0.61$ vs. $H_{0}: p = 0.61$, where $p$ is the proportion of all Washburn High School students taht are involved in at least one extracurricular activity.</li>
 </ol>
 
 ----
 
-## P-Value Calculations and Decisions
+## P-Value Calculations and Decisions I
 
 <ol>
-<li>The p-value is "the probabiity of observing a sample mean of 11.2 or 'different' if the population mean is 14." Reject $H_{0}$ because p-value=`r formatC(2*distrib(11.2,mean=14,sd=6/sqrt(25)),format="f",digits=4)`<&alpha; (`r figs("P2",display="cite")`).</li>
+<li>The p-value is "the probability of observing a sample mean of 11.2 or 'different' if the population mean is 14." Reject $H_{0}$ because p-value=`r formatC(2*distrib(11.2,mean=14,sd=6/sqrt(25)),format="f",digits=4)`<&alpha; (`r figs("P2",display="cite")`).</li>
 ```{r p2, echo=FALSE, results='hide'}
 2*distrib(11.2,mean=14,sd=6/sqrt(25))
 ```
 
 `r figs("P2")`
 
-<li>The p-value is "the probabiity of observing a sample mean of 79.5 or greater if the population mean is 75." Reject $H_{0}$ because p-value=`r formatC(distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE),format="f",digits=4)`<&alpha; (`r figs("P1",display="cite")`).</li>
+<li>The p-value is "the probability of observing a sample mean of 79.5 or greater if the population mean is 75." Reject $H_{0}$ because p-value=`r formatC(distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE),format="f",digits=4)`<&alpha; (`r figs("P1",display="cite")`).</li>
 ```{r p1, echo=FALSE}
 distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE)
 ```
 
 `r figs("P1")`
 
-<li>The p-value is "the probabiity of observing a sample mean of 918 or greater if the population mean is 880." Reject $H_{0}$ because p-value=`r formatC(distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE),format="f",digits=4)`<&alpha; (`r figs("P3",display="cite")`).</li>
-
-```{r p3, echo=FALSE}
-distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE)
-```
-
-`r figs("P3")`
-
-<li>The p-value is "the probabiity of observing a sample mean of 13700 or less if the population mean is 15000." Do not reject $H_{0}$ because p-value=`r formatC(distrib(13700,mean=15000,sd=8000/sqrt(50)),format="f",digits=4)`>&alpha; (`r figs("P4",display="cite")`).</li>
+<li>The p-value is "the probability of observing a sample mean of 13700 or less if the population mean is 15000." Do not reject $H_{0}$ because p-value=`r formatC(distrib(13700,mean=15000,sd=8000/sqrt(50)),format="f",digits=4)`>&alpha; (`r figs("P4",display="cite")`).</li>
 
 ```{r p4, echo=FALSE}
 distrib(13700,mean=15000,sd=8000/sqrt(50))
@@ -85,23 +74,13 @@ distrib(13700,mean=15000,sd=8000/sqrt(50))
 
 `r figs("P4")`
 
-<li>The p-value is "the probabiity of observing a sample mean of 824 or 'different' if the population mean is 800." Do not reject $H_{0}$ because p-value=`r formatC(2*distrib(824,mean=800,sd=60/sqrt(25),lower.tail=FALSE),format="f",digits=4)`>&alpha; (`r figs("P5",display="cite")`).</li>
-
-```{r p5, echo=FALSE, results='hide'}
-2*distrib(824,mean=800,sd=60/sqrt(25),lower.tail=FALSE)
-```
-
-`r figs("P5")`
-
 </ol>
 
 R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
 <<p2>>
 <<p1>>
-<<p3>>
 <<p4>>
-<<p5>>
 ```
 
 ----
@@ -128,54 +107,57 @@ Summarize(~bodytemp,data=d,digits=3)
 
 ----
 
-## Identifying Type I and II Errors
+## Beetle Size
+```{r echo=FALSE}
+d <- read.csv("https://github.com/droglenc/NCData/raw/master/Beetles.csv")
+d <- filterD(d,species=="Halticus.oleracea")
+```
 
-<ol>
-<li>The $H_{0}: \mu=15.4$ and $H_{A}: \mu>15.4$.  A Type I error would be saying that the chicken is contaminated when it really is not contaminated.  A Type II error would be saying that the chicken is not contaminated when it really is contaminated.  In my mind, a Type I error is more egregious as people would be eating contaminated chicken that they have been told is not contaminated.</li>
-<li>The $H_{0}$ is that the drug does not exceed specification whereas the $H_{A}$ is that the drug does exceed the specification.  A Type I error occurs if the drug does not exceed the specifications but it concluded that it does.  A Type II error occurs if the the drug does exceed the specifications but it is concluded that it does not.  In my mind, a Type II error is more egregious as people would be using a "bad" drug but would have been told that it was OK.</li>
-</ol>
+1. $H_{A}: \mu > 190$ vs. $H_{0}: \mu = 190$, where $\mu$ is the mean thorax length ($\mu$m) for all *Halticus oleracea* beetles in this population.
+1. $\bar{x}$=`r formatC(mean(d$thorax),format="f",digits=3)` $\mu$m.
+`. p-value=`formatC(distrib(round(mean(d$thorax),3),mean=190,sd=14/sqrt(nrow(d)),lower.tail=FALSE),format="f",digits=3)`.
+1. Do not reject $H_{0}$ because the p-value $> \alpha$.
+1. The average thorax length for all *Halticus oleracea* beetles in this population does not appear to be greater than 190 $\mu$m.
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+setwd("c:/stats")
+d <- read.csv("Beetles.csv")
+d <- filterD(d,species=="Halticus.oleracea")
+Summarize(~thorax,data=d,digits=3)
+distrib(194.167,mean=190,sd=14/sqrt(18),lower.tail=FALSE)
+```
 
 ----
 
-## Understanding Power Relationships
+## P-Value Calculations and Decisions II
 
 <ol>
-<li>See `r figs("Pwr1",display="cite")`.</li>
-```{r Pwr1,echo=FALSE}
-distrib(0.05,mean=100,sd=10/sqrt(30),type="q")
+<li>The p-value is "the probability of observing a sample mean of 918 or greater if the population mean is 880." Reject $H_{0}$ because p-value=`r formatC(distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE),format="f",digits=4)`<&alpha; (`r figs("P3",display="cite")`).</li>
+
+```{r p3, echo=FALSE}
+distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE)
 ```
 
-`r figs("Pwr1")`
+`r figs("P3")`
 
-<li>See `r figs("Pwr2",display="cite")`.</li>
-```{r Pwr2,echo=FALSE}
-distrib(96.997,mean=95,sd=10/sqrt(30))
+<li>The p-value is "the probability of observing a sample mean of 824 or 'different' if the population mean is 800." Do not reject $H_{0}$ because p-value=`r formatC(2*distrib(824,mean=800,sd=60/sqrt(25),lower.tail=FALSE),format="f",digits=4)`>&alpha; (`r figs("P5",display="cite")`).</li>
+
+```{r p5, echo=FALSE, results='hide'}
+2*distrib(824,mean=800,sd=60/sqrt(25),lower.tail=FALSE)
 ```
 
-`r figs("Pwr2")`
+`r figs("P5")`
 
-<li>Effects on &beta;</li>
-<ol>
-<li>Decrease &beta;</li>
-<li>Decrease &beta;</li>
-<li>Increase &beta;</li>
-<li>Decrease &beta;</li>
-</ol>
-<li>Effects on power</li>
-<ol>
-<li>Increase power</li>
-<li>Increase power</li>
-<li>Decrease power</li>
-<li>Increase power</li>
-</ol>
-<li>Increase n, increase &alpha;</li>
-<li>Increase n, increase &alpha;</li>
+<li>The p-value is "the probabiity of observing a sample mean of 73 or less if the population mean is 80." The null hypothesis is rejected because the p-value (=`r formatC(distrib(73,mean=80,sd=20/sqrt(30)),format="f",digits=4)`)$<\alpha$.</li>
+<li>The p-value is "the probabiity of observing a sample mean of 1370 or 'different' if the population mean is 1500." The null hypothesis is not rejected because the p-value (=`r formatC(2*distrib(1370,mean=1500,sd=800/sqrt(40)),format="f",digits=4)`)$>\alpha$.
 </ol>
 
 R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
-<<Pwr1>>
-<<Pwr2>>
+<<p3>>
+<<p5>>
+distrib(73,mean=80,sd=20/sqrt(30))
+2*distrib(1370,mean=1500,sd=800/sqrt(40))
 ```
-
 ----

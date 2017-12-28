@@ -1,0 +1,151 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Hypothesis Testing CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="identifying-hypotheses" class="section level2">
+<h2>Identifying Hypotheses</h2>
+<ol>
+<li>
+<span class="math inline">\(H_{A}: \mu &lt; 90\)</span> vs. <span class="math inline">\(H_{0}: \mu = 90\)</span>, where <span class="math inline">\(\mu\)</span> is the mean number of murders for all burroughs in 2010.
+</li>
+<li>
+<span class="math inline">\(H_{A}: \mu &gt; 15\)</span> vs. <span class="math inline">\(H_{0}: \mu = 15\)</span>, where <span class="math inline">\(\mu\)</span> is the mean length of all oil changes at the Toyota dealership.
+</li>
+<li>
+<span class="math inline">\(H_{A}: \mu \neq 22500\)</span> vs. <span class="math inline">\(H_{0}: \mu = 22500\)</span>, where <span class="math inline">\(\mu\)</span> is the mean cost of all bariatric surgeries.
+</li>
+<li>
+<span class="math inline">\(H_{A}: p &gt; 0.61\)</span> vs. <span class="math inline">\(H_{0}: p = 0.61\)</span>, where <span class="math inline">\(p\)</span> is the proportion of all Washburn High School students taht are involved in at least one extracurricular activity.
+</li>
+</ol>
+<hr />
+</div>
+<div id="p-value-calculations-and-decisions-i" class="section level2">
+<h2>P-Value Calculations and Decisions I</h2>
+<ol>
+<li>
+The p-value is “the probability of observing a sample mean of 11.2 or ‘different’ if the population mean is 14.” Reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0196&lt;α (Figure 1).
+</li>
+<p><img src="HypTesting_CE_Keys_files/figure-html/p2-1.png" width="336" /></p>
+<p>Figure 1: Normal distribution representing the p-value calculation for the second example.</p>
+<li>
+The p-value is “the probability of observing a sample mean of 79.5 or greater if the population mean is 75.” Reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0040&lt;α (Figure 2).
+</li>
+<p><img src="HypTesting_CE_Keys_files/figure-html/p1-1.png" width="336" /></p>
+<p>Figure 2: Normal distribution representing the p-value calculation for the first example.</p>
+<li>
+The p-value is “the probability of observing a sample mean of 13700 or less if the population mean is 15000.” Do not reject <span class="math inline">\(H_{0}\)</span> because p-value=0.1253&gt;α (Figure 3).
+</li>
+<p><img src="HypTesting_CE_Keys_files/figure-html/p4-1.png" width="336" /></p>
+<p>Figure 3: Normal distribution representing the p-value calculation for the fourth example.</p>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>2*distrib(11.2,mean=14,sd=6/sqrt(25))
+distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE)
+distrib(13700,mean=15000,sd=8000/sqrt(50))</code></pre>
+<hr />
+</div>
+<div id="body-temperature" class="section level2">
+<h2>Body Temperature</h2>
+<ol>
+<li>
+<span class="math inline">\(H_{A}: \mu \neq 37\)</span> vs. <span class="math inline">\(H_{0}: \mu = 37\)</span>
+</li>
+<li>
+x̄=36.808
+</li>
+<li>
+p-value=0.000000093
+</li>
+<li>
+Reject <span class="math inline">\(H_{0}\)</span> because p-value &lt; alpha;.
+</li>
+<li>
+Average body temperature is somewhat less (but significantly) less than 37C.
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>d &lt;- read.csv(&quot;NormTemp.csv&quot;)
+Summarize(~bodytemp,data=d,digits=3)
+2*distrib(36.808,mean=37,sd=0.41/sqrt(130))</code></pre>
+<hr />
+</div>
+<div id="beetle-size" class="section level2">
+<h2>Beetle Size</h2>
+<ol>
+<li><span class="math inline">\(H_{A}: \mu &gt; 190\)</span> vs. <span class="math inline">\(H_{0}: \mu = 190\)</span>, where <span class="math inline">\(\mu\)</span> is the mean thorax length (<span class="math inline">\(\mu\)</span>m) for all <em>Halticus oleracea</em> beetles in this population.</li>
+<li><span class="math inline">\(\bar{x}\)</span>=194.167 <span class="math inline">\(\mu\)</span>m. <code>. p-value=</code>formatC(distrib(round(mean(d$thorax),3),mean=190,sd=14/sqrt(nrow(d)),lower.tail=FALSE),format=“f”,digits=3)`.</li>
+<li>Do not reject <span class="math inline">\(H_{0}\)</span> because the p-value <span class="math inline">\(&gt; \alpha\)</span>.</li>
+<li>The average thorax length for all <em>Halticus oleracea</em> beetles in this population does not appear to be greater than 190 <span class="math inline">\(\mu\)</span>m.</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>setwd(&quot;c:/stats&quot;)
+d &lt;- read.csv(&quot;Beetles.csv&quot;)
+d &lt;- filterD(d,species==&quot;Halticus.oleracea&quot;)
+Summarize(~thorax,data=d,digits=3)
+distrib(194.167,mean=190,sd=14/sqrt(18),lower.tail=FALSE)</code></pre>
+<hr />
+</div>
+<div id="p-value-calculations-and-decisions-ii" class="section level2">
+<h2>P-Value Calculations and Decisions II</h2>
+<ol>
+<li>
+The p-value is “the probability of observing a sample mean of 918 or greater if the population mean is 880.” Reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0001&lt;α (Figure 4).
+</li>
+<p><img src="HypTesting_CE_Keys_files/figure-html/p3-1.png" width="336" /></p>
+<p>Figure 4: Normal distribution representing the p-value calculation for the third example.</p>
+<li>
+The p-value is “the probability of observing a sample mean of 824 or ‘different’ if the population mean is 800.” Do not reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0455&gt;α (Figure 5).
+</li>
+<p><img src="HypTesting_CE_Keys_files/figure-html/p5-1.png" width="336" /></p>
+<p>Figure 5: Normal distribution representing the p-value calculation for the fifth example.</p>
+<li>
+The p-value is “the probabiity of observing a sample mean of 73 or less if the population mean is 80.” The null hypothesis is rejected because the p-value (=0.0276)<span class="math inline">\(&lt;\alpha\)</span>.
+</li>
+<li>
+The p-value is “the probabiity of observing a sample mean of 1370 or ‘different’ if the population mean is 1500.” The null hypothesis is not rejected because the p-value (=0.3041)<span class="math inline">\(&gt;\alpha\)</span>.
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE)
+2*distrib(824,mean=800,sd=60/sqrt(25),lower.tail=FALSE)
+distrib(73,mean=80,sd=20/sqrt(30))
+2*distrib(1370,mean=1500,sd=800/sqrt(40))</code></pre>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
