@@ -137,7 +137,7 @@ Summarize(d$bodytemp,digits=3)
 ----
 
 ## Beetle Usage
-```{r echo=FALSE}
+```{r echo=FALSE, fig.show='hide'}
 d <- read.csv("https://github.com/droglenc/NCData/raw/master/Beetles.csv")
 d <- filterD(d,species=="Halticus.oleracea")
 ci <- mean(d$thorax)+distrib(0.95,type="q",lower.tail=FALSE)*14/sqrt(nrow(d))
