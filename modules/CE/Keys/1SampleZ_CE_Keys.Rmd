@@ -116,7 +116,7 @@ elk <- c(5.20,7.79,6.46,8.60,8.97,8.65,9.60,9.09,12.42,
   <li>The statistic is x&#772;=`r formatC(elk.z$estimate,format="f",digits=2)` Elk per km<sup>2</sup> (`r tbls("ElkDensity",display="cite")`).</li>
 
 `r tbls("ElkDensity")`
-```{r}
+```{r echo=FALSE}
 kHtest(elk.z)
 ```
 
