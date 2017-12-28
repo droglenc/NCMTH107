@@ -32,18 +32,18 @@ css: "/css/modules.css"
 <li>
 The p-value is “the probability of observing a sample mean of 11.2 or ‘different’ if the population mean is 14.” Reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0196&lt;α (Figure 1).
 </li>
-<p><img src="HypTesting_CE_Keys_files/figure-html/p2-1.png" width="336" /></p>
-<p>Figure 1: Normal distribution representing the p-value calculation for the second example.</p>
+<p><img src="HypTesting_CE_Keys_files/figure-html/p1-1.png" width="336" /></p>
+<p>Figure 1: Normal distribution representing the p-value calculation for the first example.</p>
 <li>
 The p-value is “the probability of observing a sample mean of 79.5 or greater if the population mean is 75.” Reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0040&lt;α (Figure 2).
 </li>
-<p><img src="HypTesting_CE_Keys_files/figure-html/p1-1.png" width="336" /></p>
-<p>Figure 2: Normal distribution representing the p-value calculation for the first example.</p>
+<p><img src="HypTesting_CE_Keys_files/figure-html/p2-1.png" width="336" /></p>
+<p>Figure 2: Normal distribution representing the p-value calculation for the second example.</p>
 <li>
 The p-value is “the probability of observing a sample mean of 13700 or less if the population mean is 15000.” Do not reject <span class="math inline">\(H_{0}\)</span> because p-value=0.1253&gt;α (Figure 3).
 </li>
-<p><img src="HypTesting_CE_Keys_files/figure-html/p4-1.png" width="336" /></p>
-<p>Figure 3: Normal distribution representing the p-value calculation for the fourth example.</p>
+<p><img src="HypTesting_CE_Keys_files/figure-html/p3-1.png" width="336" /></p>
+<p>Figure 3: Normal distribution representing the p-value calculation for the third example.</p>
 </ol>
 <p>R Appendix.</p>
 <pre class="r"><code>2*distrib(11.2,mean=14,sd=6/sqrt(25))
@@ -80,7 +80,7 @@ Summarize(~bodytemp,data=d,digits=3)
 <h2>Beetle Size</h2>
 <ol>
 <li><span class="math inline">\(H_{A}: \mu &gt; 190\)</span> vs. <span class="math inline">\(H_{0}: \mu = 190\)</span>, where <span class="math inline">\(\mu\)</span> is the mean thorax length (<span class="math inline">\(\mu\)</span>m) for all <em>Halticus oleracea</em> beetles in this population.</li>
-<li><span class="math inline">\(\bar{x}\)</span>=194.167 <span class="math inline">\(\mu\)</span>m. <code>. p-value=</code>formatC(distrib(round(mean(d$thorax),3),mean=190,sd=14/sqrt(nrow(d)),lower.tail=FALSE),format=“f”,digits=3)`.</li>
+<li><span class="math inline">\(\bar{x}\)</span>=194.167 <span class="math inline">\(\mu\)</span>m. `. p-value=0.103.</li>
 <li>Do not reject <span class="math inline">\(H_{0}\)</span> because the p-value <span class="math inline">\(&gt; \alpha\)</span>.</li>
 <li>The average thorax length for all <em>Halticus oleracea</em> beetles in this population does not appear to be greater than 190 <span class="math inline">\(\mu\)</span>m.</li>
 </ol>
@@ -98,8 +98,8 @@ distrib(194.167,mean=190,sd=14/sqrt(18),lower.tail=FALSE)</code></pre>
 <li>
 The p-value is “the probability of observing a sample mean of 918 or greater if the population mean is 880.” Reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0001&lt;α (Figure 4).
 </li>
-<p><img src="HypTesting_CE_Keys_files/figure-html/p3-1.png" width="336" /></p>
-<p>Figure 4: Normal distribution representing the p-value calculation for the third example.</p>
+<p><img src="HypTesting_CE_Keys_files/figure-html/p4-1.png" width="336" /></p>
+<p>Figure 4: Normal distribution representing the p-value calculation for the fourth example.</p>
 <li>
 The p-value is “the probability of observing a sample mean of 824 or ‘different’ if the population mean is 800.” Do not reject <span class="math inline">\(H_{0}\)</span> because p-value=0.0455&gt;α (Figure 5).
 </li>

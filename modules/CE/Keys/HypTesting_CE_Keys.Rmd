@@ -28,11 +28,11 @@ library(NCStats)
 source("../../../rhelpers/knitr_setup.R")
 library(captioner)
 figs <- captioner(prefix="Figure")
-figs(name="P2","Normal distribution representing the p-value calculation for the second example.")
 figs(name="P1","Normal distribution representing the p-value calculation for the first example.")
-figs(name="P4","Normal distribution representing the p-value calculation for the fourth example.")
-
+figs(name="P2","Normal distribution representing the p-value calculation for the second example.")
 figs(name="P3","Normal distribution representing the p-value calculation for the third example.")
+
+figs(name="P4","Normal distribution representing the p-value calculation for the fourth example.")
 figs(name="P5","Normal distribution representing the p-value calculation for the fifth example.")
 ```
 
@@ -52,35 +52,35 @@ figs(name="P5","Normal distribution representing the p-value calculation for the
 ## P-Value Calculations and Decisions I
 
 <ol>
-<li>The p-value is "the probability of observing a sample mean of 11.2 or 'different' if the population mean is 14." Reject $H_{0}$ because p-value=`r formatC(2*distrib(11.2,mean=14,sd=6/sqrt(25)),format="f",digits=4)`<&alpha; (`r figs("P2",display="cite")`).</li>
-```{r p2, echo=FALSE, results='hide'}
+<li>The p-value is "the probability of observing a sample mean of 11.2 or 'different' if the population mean is 14." Reject $H_{0}$ because p-value=`r formatC(2*distrib(11.2,mean=14,sd=6/sqrt(25)),format="f",digits=4)`<&alpha; (`r figs("P1",display="cite")`).</li>
+```{r p1, echo=FALSE, results='hide'}
 2*distrib(11.2,mean=14,sd=6/sqrt(25))
-```
-
-`r figs("P2")`
-
-<li>The p-value is "the probability of observing a sample mean of 79.5 or greater if the population mean is 75." Reject $H_{0}$ because p-value=`r formatC(distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE),format="f",digits=4)`<&alpha; (`r figs("P1",display="cite")`).</li>
-```{r p1, echo=FALSE}
-distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE)
 ```
 
 `r figs("P1")`
 
-<li>The p-value is "the probability of observing a sample mean of 13700 or less if the population mean is 15000." Do not reject $H_{0}$ because p-value=`r formatC(distrib(13700,mean=15000,sd=8000/sqrt(50)),format="f",digits=4)`>&alpha; (`r figs("P4",display="cite")`).</li>
+<li>The p-value is "the probability of observing a sample mean of 79.5 or greater if the population mean is 75." Reject $H_{0}$ because p-value=`r formatC(distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE),format="f",digits=4)`<&alpha; (`r figs("P2",display="cite")`).</li>
+```{r p2, echo=FALSE}
+distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE)
+```
 
-```{r p4, echo=FALSE}
+`r figs("P2")`
+
+<li>The p-value is "the probability of observing a sample mean of 13700 or less if the population mean is 15000." Do not reject $H_{0}$ because p-value=`r formatC(distrib(13700,mean=15000,sd=8000/sqrt(50)),format="f",digits=4)`>&alpha; (`r figs("P3",display="cite")`).</li>
+
+```{r p3, echo=FALSE}
 distrib(13700,mean=15000,sd=8000/sqrt(50))
 ```
 
-`r figs("P4")`
+`r figs("P3")`
 
 </ol>
 
 R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
-<<p2>>
 <<p1>>
-<<p4>>
+<<p2>>
+<<p3>>
 ```
 
 ----
@@ -115,7 +115,7 @@ d <- filterD(d,species=="Halticus.oleracea")
 
 1. $H_{A}: \mu > 190$ vs. $H_{0}: \mu = 190$, where $\mu$ is the mean thorax length ($\mu$m) for all *Halticus oleracea* beetles in this population.
 1. $\bar{x}$=`r formatC(mean(d$thorax),format="f",digits=3)` $\mu$m.
-`. p-value=`formatC(distrib(round(mean(d$thorax),3),mean=190,sd=14/sqrt(nrow(d)),lower.tail=FALSE),format="f",digits=3)`.
+`. p-value=`r formatC(distrib(round(mean(d$thorax),3),mean=190,sd=14/sqrt(nrow(d)),lower.tail=FALSE),format="f",digits=3)`.
 1. Do not reject $H_{0}$ because the p-value $> \alpha$.
 1. The average thorax length for all *Halticus oleracea* beetles in this population does not appear to be greater than 190 $\mu$m.
 
@@ -133,13 +133,13 @@ distrib(194.167,mean=190,sd=14/sqrt(18),lower.tail=FALSE)
 ## P-Value Calculations and Decisions II
 
 <ol>
-<li>The p-value is "the probability of observing a sample mean of 918 or greater if the population mean is 880." Reject $H_{0}$ because p-value=`r formatC(distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE),format="f",digits=4)`<&alpha; (`r figs("P3",display="cite")`).</li>
+<li>The p-value is "the probability of observing a sample mean of 918 or greater if the population mean is 880." Reject $H_{0}$ because p-value=`r formatC(distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE),format="f",digits=4)`<&alpha; (`r figs("P4",display="cite")`).</li>
 
-```{r p3, echo=FALSE}
+```{r p4, echo=FALSE}
 distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE)
 ```
 
-`r figs("P3")`
+`r figs("P4")`
 
 <li>The p-value is "the probability of observing a sample mean of 824 or 'different' if the population mean is 800." Do not reject $H_{0}$ because p-value=`r formatC(2*distrib(824,mean=800,sd=60/sqrt(25),lower.tail=FALSE),format="f",digits=4)`>&alpha; (`r figs("P5",display="cite")`).</li>
 
@@ -155,7 +155,7 @@ distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE)
 
 R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
-<<p3>>
+<<p4>>
 <<p5>>
 distrib(73,mean=80,sd=20/sqrt(30))
 2*distrib(1370,mean=1500,sd=800/sqrt(40))
