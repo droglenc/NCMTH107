@@ -31,6 +31,7 @@ library(captioner)
 tbls <- captioner(prefix="Table")
 figs <- captioner(prefix="Figure")
 tbls(name="FC","Results from the one-sample t-test for testing that the mean CFU per 100 ml of lake water is greater than 150 CFU per 100 ml.")
+tbls(name="pH","Results from the one-sample t-test for testing that the pH is less than 5.6.")
 tbls(name="Ozone","Results from the one-sample t-test for testing that the mean thickness of the ozone layer is different than 300 Dobson units.")
 figs(name="FChist","Histogram of the CFU per 100 ml in samples of lake water.")
 ```
@@ -134,7 +135,40 @@ t.test(df$CFU,mu=178,alt="two.sided",conf.level=0.95)
 ----
 
 ## Acid Rain in Shenandoah National Park
+```{r echo=FALSE}
+ph <- read.csv("https://github.com/droglenc/NCData/raw/master/pHlevels.csv",header=TRUE)
+```
+```{r pHCalc, echo=FALSE, results='hide'}
+( ph.t <- t.test(ph$pH,mu=5.6,alt="less",conf.level=0.99) )
+```
 
+<ol>
+  <li> &alpha;=0.01.
+  <li> H<sub>A</sub>:&mu;<5.6 and H<sub>O</sub>:&mu;=5.6, where &mu; is the mean pH for all rainwater collections at the Big Meadows Station in the Shenandoah National Park, VA.
+  <li> A one-sample t-test is required because quantitative variable (pH) was measured on individuals from one group or population (all rainwater collections at Big Meadows Station), &sigma; is UNknown, and the population mean is being compared to a specific value in the hull hypothesis.
+  <li> An observational study without obvious randomization was used.
+  <li> The assumptions are met because &sigma; is unknown and the sample size (`r formatC(ph.t$parameter+1,format="f",digits=0)`) is greater than 40. Thus, the sampling distribution of the test statistic should follow a t-distribution.
+  <li> The statistic is x&#772;=`r formatC(ph.t$estimate,format="f",digits=3)` (`r tbls("pH",display="cite")`).
+
+`r tbls("pH")`
+
+```{r echo=FALSE,background="white"}
+kHtest(ph.t)
+```
+
+  <li> The test statistic is t=`r formatC(ph.t$statistic,format="f",digits=3)` with `r formatC(ph.t$parameter,format="f",digits=0)` df (`r tbls("pH",display="cite")`).
+  <li> The p-value is `r kPvalue(ph.t$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("pH",display="cite")`).
+  <li> The H<sup>O</sup> is rejected because the p-value<&alpha;.
+  <li> The mean pH appears to be significantly lower than 5.6 and, thus, indicates acid rain at this site.
+  <li> A 99% upper confidence bound is required. Thus, one is 99% confident that the mean pH level is less than `r formatC(ph.t$conf.int[2],format="f",digits=2)` (`r tbls("pH",display="cite")`).
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+setwd('C:/aaaWork/Books/IntroStats/HW/')
+ph <- read.csv("pHlevels.csv")
+<<pHCalc>>
+```
 
 ----
 
@@ -225,6 +259,24 @@ R Appendix.
 
 ## Sea Level Rise Rate
 
+<ol>
+  <li> &alpha;=0.01.
+  <li> H<sub>A</sub>: &mu;>0 and H<sub>O</sub>:%mu;=0, where &mu; is the mean sea level rise rate for all ecosystems. [Note that a mean of 0 means no change.]
+  <li> A one-sample t-test is required because a quantitative variable (sea level rise rate) was measured on individuals from one group or population (ecosystems), &sigma; is UNknown, and the population mean is being compared to a specific value in the null hypothsis.
+  <li> An observational study without obvious randomization was used.
+  <li> The assumptions are met because &sigma; is unknown, the sample size is greater than 15 and the background suggests that the distribution is not strongly skewed. Thus, the sampling distribution of the test statistic should follow a t-distribution.
+  <li> The statistic is x&#772;==0.059.
+  <li> The test statistic is  t=$\frac{0.059-0}{\frac{0.135}{\sqrt{23}}}$ = 2.107 with 23-1=22 df.
+  <li> The p-value is `r kPvalue(distrib(2.107,distrib="t",df=22,lower.tail=FALSE,plot=FALSE),include.p=FALSE,latex=FALSE)}.
+  <li> The H<sup>O</sup> is not rejected because the p-value>&alpha;.
+  <li> The mean sea level rise rate does not appear to be greater than 0, indicating that the sea level has not increased significantly over the period of study.
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+library(NCStats)
+( distrib(2.107,distrib="t",df=22,lower.tail=FALSE) )
+```
 
 ----
 
