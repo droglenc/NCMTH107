@@ -5,7 +5,6 @@ title: Resources
 
 ## Administrative
 1. [Daily Preparation Check](https://goo.gl/forms/P9v0TeRnLwX86LKT2){:target="_blank"}
-1. [Class Exercise Answer Keys](CE_Keys){:target="_blank"}
 1. [Anonymous Feedback / Suggestions for Dr. Ogle](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}
 
 ## Learning Assistance
