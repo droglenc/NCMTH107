@@ -58,7 +58,7 @@ css: "/css/modules.css"
 <li>The equation of the best-fit line is IBI=37.8242-0.5136*imp.</li>
 <li>If the percent of impervious surface increases by 1%, then the IBI score decreases by 0.51, on average.</li>
 <li>If the percent of impervious surface is 0, then the IBI score is 37.8, on average.</li>
-<li>This questions is an extrapolation and should not be answered.</li>
+<li>This question is an extrapolation and should not be answered (Figure 1).</li>
 <li>The IBI score is predicted to be 27.6 when the percent of impervious surface is 20%.</li>
 <li>The residual for an observed IBI score of 20 and a percent of impervious surface of 30% is -2.4.</li>
 <li>The IBI will change by -30 slopes or 15.4088 if the percentage of impervious surface is decreased by 30%. In other words the IBI will increase by 15.4088 units.</li>
@@ -84,12 +84,12 @@ fitPlot(lm1,pch=21,bg=&quot;gray70&quot;,xlab=&quot;Percentage of Impervious Sur
 <li>The slope indicates that for every increase of one year in age the maximum distance to see the sign will decrease by 3.01 ft, on average.</li>
 <li>The intercept indicates that if the age of the driver was zero, then the maximum distance to see the sign would be 576.7 ft, on average.</li>
 <li>The predicted maximum distance to see the sign for a 40-year-old driver is 456.4 ft.</li>
-<li>This prediction should not be made as an age of 90 is outside the observed results for this variable (Figure 2: Fitted line plot for the relationship between maximum distance to see a sign and the age of a driver.) and is, thus, an extrapolation.</li>
+<li>This prediction should not be made as an age of 90 is outside the observed results for this variable (Figure 2) and is, thus, an extrapolation.</li>
 <li>The residual for an individual that is 50-years-old and had a maximum distance to see the sign of 410 ft is -16.3 ft. Thus, this individual would have a shorter maximum distance to see the sign than an average 50-year-old.</li>
 <li>The correlation coefficient between age of the driver and maximum distance to see the sign is -0.80.</li>
 <li>The proportion of variability in maximum distance to see the sign that is explained by knowing the age of the driver is 0.64.</li>
 <li>If the age of the driver increased by ten years then the predicted maximum distance to see the sign would decrease by ten slopes or 30.07 ft.</li>
-<li>I don’t have any strong concerns, though the data look very slightly nonlinear and very slightly heteroscedastic (Figure 2: Fitted line plot for the relationship between maximum distance to see a sign and the age of a driver.).</li>
+<li>I don’t have any strong concerns, though the data look very slightly nonlinear and very slightly heteroscedastic (Figure 2).</li>
 </ol>
 <p><img src="LinearRegression_CE_Keys_files/figure-html/VisionFitPlot-1.png" width="336" /></p>
 <p>R Appendix</p>
@@ -102,7 +102,7 @@ predict(lm1,data.frame(age=40))
 rSquared(lm1)
 corr(~distance+age,data=d)
 fitPlot(lm1,pch=21,bg=&quot;gray70&quot;,
-        ylab=&quot;Maximum Distance to See the Sign (ft)&quot;,
+        ylab=&quot;Max. Distance to See Sign (ft)&quot;,
         xlab=&quot;Age of the Driver&quot;)</code></pre>
 <hr />
 </div>
@@ -131,13 +131,13 @@ fitPlot(lm1,pch=21,bg=&quot;gray70&quot;,
 <li>The best-fit line is pressure=764.3*index+2337.3.</li>
 <li>The slope indicates that for every increase of one vehicle in the index count the pressure will increase by 764.3 angler-hours, on average.</li>
 <li>The intercept indicates that if the index count was zero, then the pressure would be 2337.3 angler-hours, on average.</li>
-<li>This prediction should not be made as an index count of 20 is outside the observed results for this variable (Figure 3: Fitted line plot for the relationship between fishing pressure and number of counted cars on Wyoming resrvoirs.) and is, thus, an extrapolation.</li>
+<li>This prediction should not be made as an index count of 20 is outside the observed results for this variable (Figure 3) and is, thus, an extrapolation.</li>
 <li>The predicted amount of fishing pressure for an index count of five vehicles is 6158.6 angler-hours.</li>
 <li>The residual for an individual with a fishing pressure of 5100 and an index count of eight vehicles is -3351.3 angler-hours.</li>
 <li>The correlation between fishing pressure and index count is 0.72.</li>
 <li>The proportion of variability in fishing pressure that is explained by knowing index count is 0.51.</li>
 <li>If the index count is under-estimated by two vehicles, then the pressure value will be under-predicted by two slopes or 1528.5 angler-hours</li>
-<li>The data appears to be roughly linear but this is difficult to tell based on the wide scatter of points. My concern, though, is that the data appear to be somewhat heteroscedastic (Figure 3: Fitted line plot for the relationship between fishing pressure and number of counted cars on Wyoming resrvoirs.).</li>
+<li>The data appears to be roughly linear but this is difficult to tell based on the wide scatter of points. My concern, though, is that the data appear to be somewhat heteroscedastic (Figure 3).</li>
 </ol>
 <p><img src="LinearRegression_CE_Keys_files/figure-html/FishingFitPlot-1.png" width="336" /></p>
 <p>R Appendix</p>

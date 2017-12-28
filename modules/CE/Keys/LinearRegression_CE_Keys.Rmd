@@ -96,7 +96,7 @@ cfs <- coef(lm1)
 1. The equation of the best-fit line is IBI=`r formatC(cfs[1],format="f",digits=4)`-`r formatC(-cfs[2],format="f",digits=4)`*imp.
 1. If the percent of impervious surface increases by 1%, then the IBI score decreases by `r formatC(-cfs[2],format="f",digits=2)`, on average.
 1. If the percent of impervious surface is 0, then the IBI score is `r formatC(cfs[1],format="f",digits=1)`, on average.
-1. This questions is an extrapolation and should not be answered.
+1. This question is an extrapolation and should not be answered (`r figs("IBI1",display="cite")`).
 1. The IBI score is predicted to be `r formatC(predict(lm1,data.frame(imp=20)),format="f",digits=1)` when the percent of impervious surface is 20%.
 1. The residual for an observed IBI score of 20 and a percent of impervious surface of 30% is `r formatC(20-predict(lm1,data.frame(imp=30)),format="f",digits=1)`.
 1. The IBI will change by -30 slopes or `r formatC(-30*cfs[2],format="f",digits=4)` if the percentage of impervious surface is decreased by 30%. In other words the IBI will increase by `r formatC(-30*cfs[2],format="f",digits=4)` units.
@@ -104,7 +104,7 @@ cfs <- coef(lm1)
 1. The proportion of variability in IBI scores that is explained by knowing the percent of impervious surface is `r formatC(rSquared(lm1),format="f",digits=2)`.
 1. There appears to be homoscedasticity, but there is slight evidence of a curve suggesting that the relationship is nonlinear (`r figs("IBI1",display="cite")`).
 
-```{r IBIPlot,echo=FALSE,par1=TRUE}
+```{r IBIPlot, echo=FALSE, par1=TRUE}
 fitPlot(lm1,pch=21,bg="gray70",xlab="Percentage of Impervious Surface")
 ```
 
@@ -137,16 +137,16 @@ corr(~distance+age,data=d)
 1. The slope indicates that for every increase of one year in age the maximum distance to see the sign will decrease by `r formatC(-1*coef(lm1)[2],format="f",digits=2)` ft, on average.
 1. The intercept indicates that if the age of the driver was zero, then the maximum distance to see the sign would be `r formatC(coef(lm1)[1],format="f",digits=1)` ft, on average.
 1. The predicted maximum distance to see the sign for a 40-year-old driver is `r formatC(predict(lm1,data.frame(age=40)),format="f",digits=1)` ft.
-1. This prediction should not be made as an age of 90 is outside the observed results for this variable (`r figs("VisionFitPlot")`) and is, thus, an extrapolation.
+1. This prediction should not be made as an age of 90 is outside the observed results for this variable (`r figs("VisionFitPlot",display="cite")`) and is, thus, an extrapolation.
 1. The residual for an individual that is 50-years-old and had a maximum distance to see the sign of 410 ft is `r formatC(410-predict(lm1,data.frame(age=50)),format="f",digits=1)` ft. Thus, this individual would have a shorter maximum distance to see the sign than an average 50-year-old.
 1. The correlation coefficient between age of the driver and maximum distance to see the sign is `r formatC(corr(~age+distance,data=d),format="f",digits=2)`.
 1. The proportion of variability in maximum distance to see the sign that is explained by knowing the age of the driver is `r formatC(rSquared(lm1),format="f",digits=2)`.
 1. If the age of the driver increased by ten years then the predicted maximum distance to see the sign would decrease by ten slopes or `r formatC(-10*coef(lm1)[2],format="f",digits=2)` ft.
-1. I don't have any strong concerns, though the data look very slightly nonlinear and very slightly heteroscedastic (`r figs("VisionFitPlot")`).
+1. I don't have any strong concerns, though the data look very slightly nonlinear and very slightly heteroscedastic (`r figs("VisionFitPlot",display="cite")`).
 
-```{r VisionFitPlot, echo=FALSE}
+```{r VisionFitPlot, echo=FALSE, par1=TRUE}
 fitPlot(lm1,pch=21,bg="gray70",
-        ylab="Maximum Distance to See the Sign (ft)",
+        ylab="Max. Distance to See Sign (ft)",
         xlab="Age of the Driver")
 ```
 
@@ -193,15 +193,15 @@ corr(~pressure+index,data=wd)
 1. The best-fit line is pressure=`r formatC(coef(lm1)[2],format="f",digits=1)`*index+`r formatC(coef(lm1)[1],format="f",digits=1)`.
 1. The slope indicates that for every increase of one vehicle in the index count the pressure will increase by `r formatC(coef(lm1)[2],format="f",digits=1)` angler-hours, on average.
 1. The intercept indicates that if the index count was zero, then the pressure would be `r formatC(coef(lm1)[1],format="f",digits=1)` angler-hours, on average.
-1. This prediction should not be made as an index count of 20 is outside the observed results for this variable (`r figs("FishingFitPlot")`) and is, thus, an extrapolation.
+1. This prediction should not be made as an index count of 20 is outside the observed results for this variable (`r figs("FishingFitPlot",display="cite")`) and is, thus, an extrapolation.
 1. The predicted amount of fishing pressure for an index count of five vehicles is `r formatC(predict(lm1,data.frame(index=5)),format="f",digits=1)` angler-hours.
 1. The residual for an individual with a fishing pressure of 5100 and an index count of eight vehicles is `r formatC(5100-predict(lm1,data.frame(index=8)),format="f",digits=1)` angler-hours.
 1. The correlation between fishing pressure and index count is `r formatC(corr(~pressure+index,data=wd),format="f",digits=2)`.
 1. The proportion of variability in fishing pressure that is explained by knowing index count is `r formatC(rSquared(lm1),format="f",digits=2)`.
 1. If the index count is under-estimated by two vehicles, then the pressure value will be under-predicted by two slopes or `r formatC(2*coef(lm1)[2],format="f",digits=1)` angler-hours
-1. The data appears to be roughly linear but this is difficult to tell based on the wide scatter of points.  My concern, though, is that the data appear to be somewhat heteroscedastic (`r figs("FishingFitPlot")`).
+1. The data appears to be roughly linear but this is difficult to tell based on the wide scatter of points.  My concern, though, is that the data appear to be somewhat heteroscedastic (`r figs("FishingFitPlot",display="cite")`).
 
-```{r FishingFitPlot, echo=FALSE}
+```{r FishingFitPlot, echo=FALSE, par1=TRUE}
 fitPlot(lm1,pch=21,bg="gray70",
         ylab="Fishing Pressure",xlab="Index Count")
 ```
