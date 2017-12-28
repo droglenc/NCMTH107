@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Exercise
-subtitle: Sampling Distributions 3
+subtitle: Sampling Distributions
 author: Derek H. Ogle
 css: "/css/modules.css"
 output:
@@ -24,48 +24,27 @@ source("../../rhelpers/knitr_setup.R")
 
 ----
 
-## Checking the CLT
-<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/computer-1.jpg" alt="Simulations" class="img-right">
-You can develop evidence to support (or not) the Central Limit Theorem (CLT) by (i) creating a known population, (ii) stating your expectations for the sampling distribution of the means from the CLT, (iii) repeatedly sampling from the population to construct a simulated sampling distribution of the means, (iv) recording results from the repeated samplings, and (v) comparing the observed results to what you expected from the CLT.
+## Constructing a Sampling Distribution
+<img src="zimgs/population-sampled.jpg" alt="Sampling a Population" class="img-right">
 
-The `cltSim()` function (with no arguments) from `NCStats` provides an efficient method to create a known population, repeatedly sample from that population, and summarize the resulting simulated sampling distribution. For example, `cltSim()` produced the plots shown below. The histogram on the left is a known population distribution with the parameters (&mu; &amp; &sigma;) shown. The histogram on the right is a simulated sampling distribution; i.e., the distribution of means from 5000 samples of size n from the known population. In RStudio, this plot will have a gear icon in the upper-left corner that will open a dialog box that allows you to modify n. Additionally, you can control two shape parameters that will alter the known population distribution.
+Suppose that a population consists of eight individuals with the following "values": 2, 3, 4, 5, 6, 7, 8, and 9. Use this information to answer the questions below.
 
-```{r echo=FALSE, fig.width=7,fig.height=3,par2=TRUE}
-cltSim()
-```
-
-Each situation below corresponds to the situation on the [previous exercise](SamplingDist_CE2.html). Here you will first use `cltSim()` to take samples from the given population, use those samples to create a sampling distribution along with its summary statistics (shown to the right on the plot above), and record your observations about the shape (normal or not), center (a specific value), and dispersions (a specific value) of the sampling distribution. You will then be asked to compare your observations (here) to what you expected based on the CLT (on the previous exercise).
-
-----
-
-## Situation 1
-The population is constructed by using `shape1=1` and `shape2=1` in `cltSim()`. [*Note that this creates the population that you examined on the previous exercise.*]
-
-<ol>
-  <li>Record what you observed about the sampling distribution of sample means for each of n=10, 25, and 50 in the appropriate cells of the table below.</li>
-  
-<table class="table table-bordered table-condensed" style="width:65%">
-<thead>
-<tr><th></th><th colspan=3 class="text-center">Observed from <code>cltSim()</code></th></tr>
-<tr><th>n=</th><th class="text-center">Normal?</th><th class="text-center">Center</th><th class="text-center">Dispersion</th></tr>
-</thead>
-<tbody>
-<tr><td>10</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>25</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>50</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-</tbody>
-</table>
-  
-  <li>Did each of your observations match your expectations (from the previous exercise)? Does this give you confidence in the CLT?</li>
-</ol>
+1. Construct a table of values for all possible samples of n=2. [*Hints: There are 28 such samples. See footnote related to Table 13.1 in the reading. Just copy the output from R rather than attempting to format the table like that in Table 13.1.*]
+1. Construct a table of means for all possible samples of n=2. [*Hint: See footnote related to Table 13.1 in the reading.*]
+1. Describe the general shape of the histogram of the sample means from all 28 samples. [*Hint: See footnote related to Figure 13.1 in the reading.*]
+1. How does the average of the 28 sample means compare to the mean of all eight individuals in the population? What statistical definition does this illustrate about the sample mean as an estimator of the population mean? [*Hint: Use Summarize() in R.*]
+1. What is the correct name for the standard deviation of the 28 sample means? How do you expect this value to change if means from samples of n=3 were used instead from n=2?
 
 ----
 
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="../SamplingDist.html">^</a></li>
-  <li><a href="SamplingDist_CE1.html">1</a></li>
-  <li><a href="SamplingDist_CE2.html">2</a></li>
-  <li class="active"><a href="#">3</a></li>
-  <li><a href="SamplingDist_CE4.html">4</a></li>
-</ul>
+## Accuracy and Precision
+<img src="zimgs/archery_target.jpg" alt="Archery Target" class="img-right">
+
+Answer the questions below assuming that a population is known to have a mean of 60. [*[This review exercise](../RE/SamplingDist_RevEx.html#accuracy-and-precision) may be helpful.*]
+
+1. Construct a hypothetical series of four numbers (that could represent sample means) that would be considered both precise and accurate.
+1. Construct a hypothetical series of four numbers that would be considered imprecise but accurate.
+1. Construct a hypothetical series of four numbers that would be considered precise but inaccurate.
+1. Construct a hypothetical series of four numbers that would be considered imprecise and inaccurate.
+
+----

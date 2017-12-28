@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Exercise
-subtitle: Sampling Distributions 2
+title: Activity
+subtitle: Sampling Distributions
 author: Derek H. Ogle
 css: "/css/modules.css"
 ---
@@ -11,16 +11,15 @@ css: "/css/modules.css"
 <div id="expectations-based-on-the-clt" class="section level2">
 <h2>Expectations Based on the CLT</h2>
 <p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/computer-1.jpg" alt="Simulations" class="img-right"> The Central Limit Theorem (CLT) provides a mechanism for understanding what the sampling distribution of the sample means will look like. The specifics of the CLT are in the module reading (and should be in your module preparation notes).</p>
-<p>In this exercise, you will be asked to identify what the CLT says the sampling distribution of sample means should look like for different shapes of the population distribution and sample sizes (n). Specifically, you will describe the shape (normal or not), center (with a specific value), and dispersion (with a specific value) for each situation.</p>
-<hr />
-</div>
-<div id="situation-1" class="section level2">
-<h2>Situation 1</h2>
-<p>Suppose the population has the characteristics shown in the figure below.</p>
-<p><img src="SamplingDist_CE2_files/figure-html/Sit1-1.png" width="312" /></p>
+<p>In this exercise, you will be asked to identify what the CLT says the sampling distribution of sample means should look like for different sample sizes (n). Specifically, you will describe the shape (normal or not), center (with a specific value), and dispersion (with a specific value) for each situation.</p>
 <ol>
-<li>What is the shape, center (a specific value), and dispersion (a specific value) of this population?</li>
-<li>What would you expect, based on the CLT, the sampling distribution of the sample means to look like for n=10, 25, and 50. Record your expectations in the appropriate cells of the table below.</li>
+<li>
+What is the shape, center (a specific value), and dispersion (a specific value) of the population shown in the plot below?
+</li>
+<p><img src="SamplingDist_CE2_files/figure-html/Sit1-1.png" width="312" /></p>
+<li>
+What would you expect, based on the CLT, the sampling distribution of the sample means to look like for n=10, 25, and 50. Record your expectations in the appropriate cells of the table below.
+</li>
 </ol>
 <table class="table table-bordered table-condensed" style="width:65%">
 <thead>
@@ -91,6 +90,95 @@ Dispersion
 </tr>
 </tbody>
 </table>
+<p><br> <br></p>
+<hr />
+</div>
+<div id="checking-the-clt" class="section level2">
+<h2>Checking the CLT</h2>
+<p>You can develop evidence to support (or not) the Central Limit Theorem (CLT) by (i) creating a known population, (ii) stating your expectations for the sampling distribution of the means from the CLT, (iii) repeatedly sampling from the population to construct a simulated sampling distribution of the means, (iv) recording results from the repeated samplings, and (v) comparing the observed results to what you expected from the CLT.</p>
+<p>The <code>cltSim()</code> function (with no arguments) efficiently perform steps (i)-(iii). For example, <code>cltSim()</code> produced the plots shown below. The histogram on the left is a known population distribution with the parameters (μ &amp; σ) shown. The histogram on the right is a simulated sampling distribution; i.e., the distribution of means from 5000 samples of size n from the known population. In RStudio, this plot will have a gear icon in the upper-left corner that will open a dialog box that allows you to change two shape parameters to alter the known population distribution and to modify n.</p>
+<p><img src="SamplingDist_CE2_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>The population shown above may be constructed by using <code>shape1=2</code> and <code>shape2=6</code> in <code>cltSim()</code>. You should set those two sliders to those values and make sure that the population distribution (left plot) matches the population you used above.</p>
+<ol>
+<li>
+Record what you observed about the sampling distribution of sample means (right plot) for each of n=10, 25, and 50 in the appropriate cells of the table below.
+</li>
+<table class="table table-bordered table-condensed" style="width:65%">
+<thead>
+<tr>
+<th>
+</th>
+<th colspan="3" class="text-center">
+Observed from <code>cltSim()</code>
+</th>
+</tr>
+<tr>
+<th>
+n=
+</th>
+<th class="text-center">
+Normal?
+</th>
+<th class="text-center">
+Center
+</th>
+<th class="text-center">
+Dispersion
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+10
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+</tr>
+</tbody>
+</table>
+<li>
+Did each of your observations (in this table) match your expectations (from the table further above)?
+</li>
+<li>
+Do your observations on this exercise give you confidence in the CLT? Why or why not?
+</li>
+</ol>
 <hr />
 <div class="text-center">
 <ul class="pagination pagination-lg">
@@ -102,12 +190,6 @@ Dispersion
 </li>
 <li class="active">
 <a href="#">2</a>
-</li>
-<li>
-<a href="SamplingDist_CE3.html">3</a>
-</li>
-<li>
-<a href="SamplingDist_CE4.html">4</a>
 </li>
 </ul>
 </div>

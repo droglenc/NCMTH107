@@ -24,6 +24,12 @@ file.copy(from=paste0(fnm,"_files"),to=paste0("../"),recursive=TRUE)
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
 source("../../../rhelpers/knitr_setup.R")
+library(captioner)
+tbls <- captioner("Table")
+figs <- captioner("Figure")
+tbls("Samples2","All possible samples of n=2 from the numbers 2 through 9. Each column represents the two values in a possible sample.")
+tbls("Means2","All possible means from samples of n=2 from the numbers 2 through 9.")
+figs("Means2","Histogram of all means from samples of n=2 from the numbers 2 through 9.")
 ```
 
 ----
@@ -69,7 +75,7 @@ d2
 d2mns
 ```
   <li> The mean of all sample means from n=2 is `r formatC(d2m,format="f",digits=0)`.</li>
-  <li> The standard deviation of all sample means from n=2 is `r formatC(d2se,format="f",digits=3)`.  This is really a standard error.</li>
+  <li> The standard deviation of all sample means from n=2 is `r formatC(d2se,format="f",digits=3)`. This is really a standard error.</li>
   <li> The above for n=3 are below.</li>
 ```{r echo=FALSE}
 d3
@@ -103,3 +109,57 @@ R Appendix.
 **NOT AVAILABLE**
 
 ----
+
+## Constructing a Sampling Distribution II
+```{r Calc, echo=FALSE, results="hide"}
+( smpls2 <- combn(2:9,2) )
+( mns2 <- as.numeric(combn(2:9,2,mean)) )
+```
+
+<ol>
+  <li>Results for the samples are in `r tbls("Samples2",display="cite")`.</li>
+
+`r tbls("Samples2")`
+
+```{r echo=FALSE,background="white"}
+smpls2
+```
+
+  <li>Results for the means are in `r tbls("Means2",display="cite")`.</li>
+
+`r tbls("Means2")`
+
+```{r echo=FALSE,background="white"}
+mns2
+```
+
+  <li>The histogram of means is shown in `r figs("Means2",display="cite")`. The distribution is perfectly symmetric.</li>
+  
+```{r xbarHist, echo=FALSE}
+hist(~mns2,w=0.5,xlab="Sample Means",ylab="Frequency of Samples")
+```
+
+`r figs("Means2")`
+
+  <li>Both the mean of the 28 sample means and the mean of the original set of numbers (the population) are 5.5. This observation is a demonstration of the definition of an unbiased statistic.</li>
+  <li>The standard deviation of the 28 sample means is `r formatC(sd(mns2),format="f",digits=2)`. This standard deviation is called a standard error. The standard error would be smaller if samples of n=3 had been taken rather than n=2.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+library(NCStats)
+<<Calc>>
+mean(mns2)
+mean(2:9)
+sd(mns2)
+<<xbarHist>>
+```
+
+----
+
+## Precision and Accuracy
+
+1. The numbers 59, 60, 60, 61 represent values that are accurate and precise (i.e., values are close together and centered on (average out to be) 60).
+1. The numbers 45, 55, 65, 70 represent values that are accurate but imprecise (i.e., values are far apart and centered on 60).
+1. The numbers 69, 70, 71, 72 represent values that are inaccurate but precise (i.e., values are close together and NOT centered on 60).
+1. The numbers 75, 85, 95, 105 represent values that are inaccurate and imprecise (i.e., values are far apart and NOT centered on 60).
