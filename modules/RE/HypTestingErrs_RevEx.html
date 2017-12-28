@@ -1,0 +1,161 @@
+---
+layout: page
+title: Review Exercise
+subtitle: Hypothesis Testing Errors
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<p> </p>
+<ol>
+<li><a href="#power-and-type-ii-error-relationships">Power and Type II Error Relationships</a></li>
+<li><a href="#power-calculations">Power Calculations (Without Context)</a></li>
+</ol>
+<p> </p>
+<p> </p>
+<hr />
+<div id="power-and-type-ii-error-relationships" class="section level2">
+<h2>Power and Type II Error Relationships</h2>
+<p>You can click on each question to see an answer. Click on it again to close the answer.</p>
+<div class="panel-group">
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="panel-title">
+<p><a data-toggle="collapse" href="#PowerBeta">What is <span class="math inline">\(\beta\)</span> if power=0.875?</a></p>
+</div>
+</div>
+<div id="PowerBeta" class="panel-collapse collapse">
+<div class="panel-body">
+<span class="math inline">\(\beta\)</span>=1-power = 1-0.875 = 0.125.
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="panel-title">
+<p><a data-toggle="collapse" href="#poweralpha">For a constant sample size, <span class="math inline">\(\sigma\)</span>, and difference between the hypothesized and actual means, what happens to power, if <span class="math inline">\(\alpha\)</span> is INcreased?</a></p>
+</div>
+</div>
+<div id="poweralpha" class="panel-collapse collapse">
+<div class="panel-body">
+Power INcreases.
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="panel-title">
+<p><a data-toggle="collapse" href="#powern">For a constant <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\sigma\)</span>, and difference between the hypothesized and actual means, what happens to power, if the sample size INcreases?</a></p>
+</div>
+</div>
+<div id="powern" class="panel-collapse collapse">
+<div class="panel-body">
+Power INcreases.
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="panel-title">
+<p><a data-toggle="collapse" href="#powermu">For a constant <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\sigma\)</span>, and sample size, what happens to power if the difference between the hypothesized and actual means increases?</a></p>
+</div>
+</div>
+<div id="powermu" class="panel-collapse collapse">
+<div class="panel-body">
+Power INcreases.
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="panel-title">
+<p><a data-toggle="collapse" href="#betalpha">For a constant sample size, <span class="math inline">\(\sigma\)</span>, and difference between the hypothesized and actual means, what happens to <span class="math inline">\(\beta\)</span>, if <span class="math inline">\(\alpha\)</span> is INcreased?</a></p>
+</div>
+</div>
+<div id="betalapha" class="panel-collapse collapse">
+<div class="panel-body">
+<span class="math inline">\(\beta\)</span> DEcreases.
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="panel-title">
+<p><a data-toggle="collapse" href="#betan">For a constant <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\sigma\)</span>, and difference between the hypothesized and actual means, what happens to <span class="math inline">\(\beta\)</span>, if the sample size is increased?</a></p>
+</div>
+</div>
+<div id="betan" class="panel-collapse collapse">
+<div class="panel-body">
+<span class="math inline">\(\beta\)</span> DEcreases.
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="panel-title">
+<p><a data-toggle="collapse" href="#betamu">For a constant <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\sigma\)</span>, and sample size, what happens to <span class="math inline">\(\beta\)</span> if the difference between the hypothesized and actual means INcreases?</a></p>
+</div>
+</div>
+<div id="betamu" class="panel-collapse collapse">
+<div class="panel-body">
+<span class="math inline">\(\beta\)</span> DEcreases.
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="panel-title">
+<p><a data-toggle="collapse" href="#reallife">Describe a real-life situation where you think that making a Type II error would be much more ``costly’’ than making a Type I error. Completely describe the situation at hand and what Type I and a Type II errors mean in terms of the situation you describe.</a></p>
+</div>
+</div>
+<div id="reallife" class="panel-collapse collapse">
+<div class="panel-body">
+The classic example deals with the population dynamics of an animal. The null hypothesis says that the animal’s population size is not declining, it is remaining stable over time. The alternative hypothesis is that the animal’s population is declining. If the null hypothesis is true and you reject it (i.e., you say the population is declining when it really isn’t) you have made a type I error. This will likely lead resource managers to take actions to protect the animal. This is not necessarily a bad thing for the animal, although it may be costly. Conversely, if the null hypothesis is false and you fail to reject it (i.e., the animal is really declining but you say that it isn’t), then you have made a type II error. This is much more egregious mistake because now you will take no action to protect the animal; it may go extinct. To me, losing an animal is much more costly (important) than overprotecting the animal.
+</div>
+</div>
+</div>
+</div>
+<hr />
+</div>
+<div id="power-calculations" class="section level2">
+<h2>Power Calculations</h2>
+<ol>
+<li>Compute power given the following information: <span class="math inline">\(\alpha=0.05\)</span>, <span class="math inline">\(H_{0}:\mu=50\)</span>, <span class="math inline">\(H_{A}:\mu&lt;50\)</span>, <span class="math inline">\(\sigma=20\)</span>, <span class="math inline">\(n=50\)</span>, and <span class="math inline">\(\mu_{A}=45\)</span>. <a href="zRevExAns/HypTestingErrs.html#power-calculations-1">See answer here</a></li>
+<li>Compute power given the following information: <span class="math inline">\(\alpha=0.10\)</span>, <span class="math inline">\(H_{0}:\mu=10\)</span>, <span class="math inline">\(H_{A}:\mu&gt;10\)</span>, <span class="math inline">\(\sigma=5\)</span>, <span class="math inline">\(n=25\)</span>, and <span class="math inline">\(\mu_{A}=12\)</span>. <a href="zRevExAns/HypTestingErrs.html#power-calculations-2">See answer here</a></li>
+<li>Compute power given the following information: <span class="math inline">\(\alpha=0.01\)</span>, <span class="math inline">\(H_{0}:\mu=75\)</span>, <span class="math inline">\(H_{A}:\mu&gt;75\)</span>, <span class="math inline">\(\sigma=15\)</span>, <span class="math inline">\(n=30\)</span>, and <span class="math inline">\(\mu_{A}=82\)</span>. <a href="zRevExAns/HypTestingErrs.html#power-calculations-3">See answer here</a></li>
+</ol>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

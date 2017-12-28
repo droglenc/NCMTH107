@@ -38,7 +38,7 @@ Use the materials below to answer the questions on [this preparation guide](HypT
 
 ----
 
-## [In-Class Lectures](PPT/HypTesting_PPT-Lecture.pptx)
+## [In-Class Lecture](PPT/HypTesting_PPT-Lecture.pptx)
 
 ----
 

@@ -7,6 +7,7 @@ css: "/css/modules.css"
 ---
 
 
+<hr />
 <div id="computing-p-values-1" class="section level2">
 <h2>Computing P-Values 1</h2>
 <p>The p-value is <span class="math inline">\(p=0.0179\)</span>, reject <span class="math inline">\(H_{O}\)</span>.</p>
@@ -52,36 +53,6 @@ css: "/css/modules.css"
 <div id="r-appendix-1" class="section level3">
 <h3>R Appendix</h3>
 <pre class="r"><code>( pval &lt;- distrib(3.6,mean=3.7,sd=0.35/sqrt(40)) )</code></pre>
-<hr />
-</div>
-</div>
-<div id="power-calculations-1" class="section level2">
-<h2>Power Calculations 1</h2>
-<p>The statistical power for this situation is 0.5489.</p>
-<div id="r-appendix-2" class="section level3">
-<h3>R Appendix</h3>
-<pre class="r"><code>( rejreg &lt;- distrib(0.05,mean=50,sd=20/sqrt(50),type=&quot;q&quot;) )
-( pwr &lt;- distrib(rejreg,mean=45,sd=20/sqrt(50)) )</code></pre>
-<hr />
-</div>
-</div>
-<div id="power-calculations-2" class="section level2">
-<h2>Power Calculations 2</h2>
-<p>The statistical power for this situation is 0.7638.</p>
-<div id="r-appendix-3" class="section level3">
-<h3>R Appendix</h3>
-<pre class="r"><code>( rejreg &lt;- distrib(0.10,mean=10,sd=5/sqrt(25),type=&quot;q&quot;,lower.tail=FALSE) )
-( pwr &lt;- distrib(rejreg,mean=12,sd=5/sqrt(25),lower.tail=FALSE) )</code></pre>
-<hr />
-</div>
-</div>
-<div id="power-calculations-3" class="section level2">
-<h2>Power Calculations 3</h2>
-<p>The statistical power for this situation is 0.5908.</p>
-<div id="r-appendix-4" class="section level3">
-<h3>R Appendix</h3>
-<pre class="r"><code>( rejreg &lt;- distrib(0.01,mean=75,sd=15/sqrt(30),type=&quot;q&quot;,lower.tail=FALSE) )
-( pwr &lt;- distrib(rejreg,mean=82,sd=15/sqrt(30),lower.tail=FALSE) )</code></pre>
 <hr />
 </div>
 </div>
