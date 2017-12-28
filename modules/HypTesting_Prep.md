@@ -7,8 +7,6 @@ css: "/css/modules.css"
 
 ----
 
-## First Material
-
 <div class="alert alert-warning">
 To prepare for this module, please answer the following questions from the preparation readings and videos. Please contact the professor if you have questions.
 </div>
@@ -26,18 +24,5 @@ To prepare for this module, please answer the following questions from the prepa
 1. How are the p-value and &alpha; used to make a decision about the null hypothesis? What decisions can be made and why?
 1. What does a test statistic measure?
 1. Why do statisticians "not reject" rather than "accept" the null hypothesis.
-
-----
-
-## Second Material
-
-<div class="alert alert-warning">
-To prepare for this module, please answer the following questions from the preparation readings and videos. Please contact the professor if you have questions.
-</div>
-
-1. Define the two types of errors that can be made in hypothesis testing.
-1. Define statistical power?
-1. What decisions can you make (as a statistician) to increase power? Which decision is "better"?
-1. What decisions can you make (as a statistician) to decrease &beta;? Which decision is "better"?
 
 ----

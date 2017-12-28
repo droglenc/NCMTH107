@@ -13,7 +13,7 @@ css: /css/modules.css
     </div>
     <div id="ILOs" class="panel-collapse collapse">
       <div class="panel-body">
-A researcher may form an *a priori* hypothesis about a parameter and then use information from a sample to judge the "correctness" of the hypothesis.  This judgment is complicated by sampling variability.  Thus, an elaborate procedure is used to make sure that the final conclusion acknowledges the imperfect representation of the parameter by the statistic.  This procedure is called hypothesis testing and is the focus of this module.
+A researcher may form an *a priori* hypothesis about a parameter and then use information from a sample to judge the "correctness" of the hypothesis. This judgment is complicated by sampling variability. Thus, an elaborate procedure is used to make sure that the final conclusion acknowledges the imperfect representation of the parameter by the statistic. This procedure is called hypothesis testing and is the focus of this module.
 
 <p>After completing this module, you should be able to ...</p>
 
@@ -21,7 +21,6 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
   <li>Describe the relationship between the scientific method and statistical hypothesis testing.</li>
   <li>Properly construct statistical hypotheses.</li>
   <li>Describe the concept underlying significance testing.</li>
-  <li>Describe possible errors in statistical decision making.</li>
 </ol>
       </div>
     </div>
@@ -32,22 +31,14 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](HypTesting_Prep.html#first-material).
+Use the materials below to answer the questions on [this preparation guide](HypTesting_Prep).
 
-* [![PDF](../img/pdf.png) Reading **Sections 14.1-14.4**](../book/Hypothesis Tests.pdf).
-* [![Vimeo](../img/dhovid.png) Forming Statistical Hypothesis](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins; [![PowerPoint](../img/ppt.png)](PPT/HypTesting_PPT-hypotheses.pptx)].
-
-Use the materials below to answer the questions on [this preparation guide](HypTesting_Prep.html#second-material).
-
-* [![PDF](../img/pdf.png) Reading **Section 14.5**](../book/Hypothesis Tests.pdf).
-* ![YouTube Link](../img/youtube.png) Statistical Error Types: [A](https://www.youtube.com/watch?v=7mE-K_w1v90){:target="_blank"} [8 mins] **AND** [B](https://www.youtube.com/watch?v=OWn3Ko1WYTA){:target="_blank"} [*between 1:29 and 4:07*]
-* [![YouTube Link](../img/youtube.png) Computing &beta; &amp; power](https://www.youtube.com/watch?v=BJZpx7Mdde4){:target="_blank"} [12 mins].
+* [![PDF](../img/pdf.png) Reading](../book/Hypothesis Tests.pdf).
+* [![Vimeo](../img/dhovid.png) Forming Statistical Hypothesis](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins] [![PowerPoint](../img/ppt.png)](PPT/HypTesting_PPT-hypotheses.pptx).
 
 ----
 
-## In-Class Lectures
-
-* [First](PPT/HypTesting_PPT-Lecture-1.pptx) / [Second](PPT/HypTesting_PPT-Lecture-2.pptx)
+## [In-Class Lectures](PPT/HypTesting_PPT-Lecture.pptx)
 
 ----
 

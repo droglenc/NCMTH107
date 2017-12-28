@@ -1,0 +1,106 @@
+<<echo=FALSE, cache=FALSE, results='hide'>>=
+set_parent('IntroStats.Rnw')
+@
+
+\chapter{Hypothesis Test Errors} \label{chap:HypothesisTestsErrors}
+
+\vspace*{-12pt}
+\minitoc
+\vspace*{36pt}
+
+\lettrine{D}{ecisions about hypotheses based on statistics} may, at times, be incorrect. In this module, two types of errors that can be made are described and the probability of making these errors is described. The concepts in \modref{chap:HypothesisTests} should be understood before proceeding here.
+
+\section{Errors}
+The goal of hypothesis testing is to make a decision about $H_{0}$. Unfortunately, because of sampling variability, there is always a risk of making an incorrect decision. Two types of incorrect decisions can be made \tabrefp{tab:DMerrs}. A Type I error occurs when a true $H_{0}$ is falsely rejected. In other words, even if $H_{0}$ is true, there is a chance that a rare sample will occur and $H_{0}$ will be deemed incorrect. The probability of making a Type I error is set when $\alpha$ is chosen. A Type II error occurs when a false $H_{0}$ is not rejected. The probability of a Type II error is denoted by $\beta$.
+
+\begin{table}[htbp]
+  \caption{Types of decisions that can be made from a hypothesis test.}
+  \label{tab:DMerrs}
+  \centering
+  \begin{tabular}{cc|c|c|}
+    \multicolumn{1}{c}{\widen{-2}{7}{}} & \multicolumn{1}{c}{} & \multicolumn{2}{c}{Decision from Data} \\
+    \cline{3-4}
+    \multicolumn{1}{c}{\widen{-2}{7}{}} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{Reject} & \multicolumn{1}{c|}{Not Reject} \\
+    \cline{2-4}
+    \multicolumn{1}{c|}{\widen{-2}{7}{Truth About}} & \multicolumn{1}{c|}{$H_{0}$} & \multicolumn{1}{c|}{Type I} & \multicolumn{1}{c|}{Correct} \\
+    \cline{2-4}
+    \multicolumn{1}{c|}{\widen{-2}{7}{Population}} & \multicolumn{1}{c|}{$H_{A}$} & \multicolumn{1}{c|}{Correct} & \multicolumn{1}{c|}{Type II} \\
+    \cline{2-4}
+  \end{tabular}
+\end{table}
+
+The decision in the Square Lake example of \modref{chap:HypothesisTests} produced a Type II error because $H_{0}:\mu=105$ was not rejected even though we know that $\mu=98.06$ \tabrefp{tab:SquareLakePopn}. Unfortunately, in real life, it will never be known exactly when a Type I or a Type II error has been made because the true $\mu$ is not known. However, it is known that a Type I error will be made $100\alpha$\% of the time. The probability of a type II error ($\beta$), though, is never known because this probability depends on the true but unknown $\mu$. Decisions can be made, however, that affect the magnitude of $\beta$ (discussed below with power).
+
+\section{Statistical Power}
+A concept that is very closely related to decision-making errors is the idea of statistical power, or just \textbf{power} for short. Power is the probability of correctly rejecting a false $H_{0}$. In other words, it is the probability of detecting a difference from the hypothesized value if a difference really exists. Power is used to demonstrate how sensitive a hypothesis test is for identifying a difference. High power related to a $H_{0}$ that is not rejected implies that the $H_{0}$ really should not have been rejected. Conversely, low power related to a $H_{0}$ that was not rejected implies that the test was very unlikely to detect a difference, so not rejecting $H_{0}$ is not surprising nor particularly conclusive.
+
+Power is equal to $1-\beta$ and, thus, like $\beta$ it cannot be computed directly because the actual mean ($\mu_{A}$) is not known. However, in the Square Lake example, $\mu_{A}$ is known and power can be calculated in four steps:
+\begin{Enumerate}
+ \item Draw the sampling distribution assuming the $H_{0}$ is true (called the null distribution).
+ \begin{itemize}
+   \item The null distribution is $N(105,\frac{31.49}{\sqrt{50}})$ because $H_{0}:\mu=105$, $\sigma=31.49$, and $n=50$.
+ \end{itemize}
+ \item Find the rejection region borders (based on $\alpha$ and $H_{A}$) in terms of the value of the statistic (a ``reverse'' calculation on the null distribution).
+ \begin{itemize}
+   \item The rejection region is delineated by the $\bar{x}$ that has $\alpha=0.10$ to the left (because $H_{A}$ is a ``less than''). This reverse calculation on the null distribution gives $\bar{x}$=\Sexpr{formatC(distrib(0.10,mean=105,sd=31.49/sqrt(50),type="q",plot=FALSE),format="f",digits=4)}.
+<<fig.show='hide'>>=
+( rejreg <- distrib(0.10,mean=105,sd=31.49/sqrt(50),type="q") )
+@
+ \end{itemize}
+ \item Draw the sampling distribution corresponding to the ``actual'' parameter value (SE is the same as that for the null distribution).
+ \begin{itemize}
+   \item The actual $\mu$ is 98.06. Thus, the actual sampling distribution is $N(98.06,\frac{31.49}{\sqrt{50}})$.
+ \end{itemize}
+ \item Compute the portion of the ``actual'' sampling distribution in the REJECTION region of the null distribution (i.e., a ``forward'' calculation on the actual distribution).
+ \begin{itemize}
+   \item This computation is to find the area to the left of $\bar{x}$=\Sexpr{formatC(rejreg,format="f",digits=4)} on $N(98.06,\frac{31.49}{\sqrt{50}})$. The area to the left of this Z is \Sexpr{formatC(distrib(rejreg,mean=98.06,sd=31.49/sqrt(50)),format="f",digits=4)}.
+<<fig.show='hide'>>=
+( distrib(rejreg,mean=98.06,sd=31.49/sqrt(50)) )
+@
+ \end{itemize}
+\end{Enumerate}
+
+Thus, the power to detect a $\mu_{A}=98.06$ was \Sexpr{formatC(distrib(rejreg,mean=98.06,sd=31.49/sqrt(50)),format="f",digits=4)}. This means that in only about \Sexpr{formatC(100*distrib(rejreg,mean=98.06,sd=31.49/sqrt(50)),format="f",digits=0)}\% of the samples will the false $H_{0}:\mu=105$ be correctly rejected. Thus, it is not too surprising that $H_{0}$ was not rejected in this example.
+
+Even though power can usually not be calculated, a researcher can make decisions that will positively affect power \figrefp{fig:SLPowerRelations}. For example, a researcher can increase power by increasing $\alpha$ or $n$. Increasing $n$ is more beneficial because it does not result in an increase in Type I errors as would occur with increasing $\alpha$.
+
+In addition, power decreases as the difference between the hypothesized mean ($\mu_{0}$) and the actual mean ($\mu_{A}$) decreases \figrefp{fig:SLPowerRelations}. This means that the ability to detect increasingly smaller differences decreases. In addition, power decreases with an increasing amount of natural variability (i.e., $\sigma$; \figref{fig:SLPowerRelations}). In other words, the ability to detect a difference decreases with increasing amounts of variability among individuals. A researcher cannot control the difference between $\mu_{0}$ and $\mu_{A}$ or the value of $\sigma$. However, it is important to know that if a situation with a ``large'' amount of variability is encountered or the difference to be detected is small, the researcher will need to increase $n$ to gain power. For example, if $n$ could be doubled in the Square Lake example to 100, then the power to correctly reject $H_{0}:\mu=105$ would increase to approximately 0.82 \figrefp{fig:SLPowerRelations}.
+
+<<SLPowerRelations, echo=FALSE, fig.width=6.5, fig.height=6.5, out.width='.55\\linewidth', fig.cap="The relationship between one-tailed (lower) power and $\\alpha$, $n$, actual mean ($\\mu_{A}$), and $\\sigma$. In all situations where the variable does not vary, $\\mu_{0}=105$, $\\mu_{A}=98.06$, $\\sigma=31.49$, $n=50$, and $\\alpha=0.05$. ">>=
+par(mfcol=c(2,2),mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),tcl=-0.2,cex.lab=1.5,las=1)
+power <- function(mu0,mua,sigma,n,alpha,uptail=FALSE){
+  SE <- sigma/sqrt(n)
+  if (uptail) 1-pnorm(qnorm(1-alpha,mu0,SE),mua,SE)
+  else pnorm(qnorm(alpha,mu0,SE),mua,SE)
+}
+
+# Set the Square Lake values
+mu0 <- 105
+muA <- 98.06
+sigma <- 31.49
+n <- 50
+alpha <- 0.05
+ylmts <- c(0,1)
+cex <- 1.2
+# Cycle through alphas
+alphas <- seq(0.002,0.1,by=0.002)
+palpha <- power(mu0,muA,sigma,n,alphas,FALSE)
+plot(alphas,palpha,type="l",xlab=expression(alpha),ylab="Power",
+     lwd=3,xlim=c(0,0.1),ylim=ylmts,cex=1.5)
+text(0.04,0.8,"Power INcreases with\nINcreasing alpha",col="blue3",cex=cex)
+# Cycle through muas
+muas <- seq(85,105,by=1)
+pmua <- power(mu0,muas,sigma,n,alpha,FALSE)
+plot(muas,pmua,type="l",xlab=expression(mu[A]),ylab="Power",
+     lwd=3,ylim=ylmts)
+# Cycle through sample sizes
+ns <- seq(2,250)
+pn <- power(mu0,muA,sigma,ns,alpha,FALSE)
+plot(ns,pn,type="l",xlab="n",ylab="Power",lwd=3,xlim=c(0,max(ns)),ylim=ylmts)
+text(145,0.3,"Power INcreases with\nINcreasing n",col="blue3",cex=cex)
+# Cycle through sigmas
+sigmas <- seq(1,60,by=0.5)
+psigma <- power(mu0,muA,sigmas,n,alpha,FALSE)
+plot(sigmas,psigma,type="l",xlab=expression(sigma),ylab="Power",lwd=3,xlim=c(0,max(sigmas)),ylim=ylmts)
+text(41,0.9,"Power DEcreases with\nINcreasing sigma",col="blue3",cex=cex)
+@

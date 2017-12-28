@@ -94,7 +94,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/HypTesting">Hypothesis Testing</a></td>
     <td>Quiz 2 Reflection (Optional)</td></tr>
 <tr><td>F 2-Mar</td>
-    <td><a href="../modules/HypTesting">Hypothesis Testing</a></td>
+    <td><a href="../modules/HypTestingErrs">Hypothesis Testing Errors</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 

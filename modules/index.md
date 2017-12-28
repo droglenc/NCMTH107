@@ -18,6 +18,7 @@ title: Learning Modules
 1. [Sampling Distributions](SamplingDist)
 1. [Probability Introduction](Probability)
 1. [Hypothesis Testing](HypTesting)
+1. [Hypothesis Testing Errors](HypTestingErrs)
 1. [Confidence Regions](ConfRegions)
 1. [1-Sample Z-Test](1SampleZ)
 1. [1-Sample t-Test](1Samplet)
