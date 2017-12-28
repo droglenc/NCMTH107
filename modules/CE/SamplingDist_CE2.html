@@ -90,7 +90,7 @@ Dispersion
 </tr>
 </tbody>
 </table>
-<p><br> <br></p>
+<p><br> <br> <br> <br></p>
 <hr />
 </div>
 <div id="checking-the-clt" class="section level2">
@@ -98,7 +98,7 @@ Dispersion
 <p>You can develop evidence to support (or not) the Central Limit Theorem (CLT) by (i) creating a known population, (ii) stating your expectations for the sampling distribution of the means from the CLT, (iii) repeatedly sampling from the population to construct a simulated sampling distribution of the means, (iv) recording results from the repeated samplings, and (v) comparing the observed results to what you expected from the CLT.</p>
 <p>The <code>cltSim()</code> function (with no arguments) efficiently perform steps (i)-(iii). For example, <code>cltSim()</code> produced the plots shown below. The histogram on the left is a known population distribution with the parameters (μ &amp; σ) shown. The histogram on the right is a simulated sampling distribution; i.e., the distribution of means from 5000 samples of size n from the known population. In RStudio, this plot will have a gear icon in the upper-left corner that will open a dialog box that allows you to change two shape parameters to alter the known population distribution and to modify n.</p>
 <p><img src="SamplingDist_CE2_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<p>The population shown above may be constructed by using <code>shape1=2</code> and <code>shape2=6</code> in <code>cltSim()</code>. You should set those two sliders to those values and make sure that the population distribution (left plot) matches the population you used above.</p>
+<p>The population shown above may be constructed by using <code>shape1=6</code> and <code>shape2=2</code> in <code>cltSim()</code>. You should set those two sliders to those values and make sure that the population distribution (left plot) matches the population you used above.</p>
 <ol>
 <li>
 Record what you observed about the sampling distribution of sample means (right plot) for each of n=10, 25, and 50 in the appropriate cells of the table below.
