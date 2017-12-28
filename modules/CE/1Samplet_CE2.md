@@ -56,8 +56,6 @@ Use the data in [FecalColiform.csv](FecalColiform.csv) to determine, at the 10% 
 
 ----
 
-----
-
 ## Footnotes
 
 [^1]: This example was modified [from here](http://www.shortell.org/book/chap12.html).
