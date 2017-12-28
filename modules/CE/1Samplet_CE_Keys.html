@@ -133,6 +133,41 @@ mean of x
 </div>
 <div id="acid-rain-in-shenandoah-national-park" class="section level2">
 <h2>Acid Rain in Shenandoah National Park</h2>
+<ol>
+<li>
+α=0.01.
+<li>
+H<sub>A</sub>:μ&lt;5.6 and H<sub>O</sub>:μ=5.6, where μ is the mean pH for all rainwater collections at the Big Meadows Station in the Shenandoah National Park, VA.
+<li>
+A one-sample t-test is required because quantitative variable (pH) was measured on individuals from one group or population (all rainwater collections at Big Meadows Station), σ is UNknown, and the population mean is being compared to a specific value in the hull hypothesis.
+<li>
+An observational study without obvious randomization was used.
+<li>
+The assumptions are met because σ is unknown and the sample size (90) is greater than 40. Thus, the sampling distribution of the test statistic should follow a t-distribution.
+<li>
+<p>The statistic is x̄=4.578 (Table 2).</p>
+<p>Table 2: Results from the one-sample t-test for testing that the pH is less than 5.6.</p>
+<pre><code>t = -33.5303, df = 89, p-value &lt; 2.2e-16
+99 percent confidence interval:
+     -Inf 4.650103 
+sample estimates:
+mean of x 
+ 4.577889 </code></pre>
+<li>
+The test statistic is t=-33.530 with 89 df (Table 2).
+<li>
+The p-value is &lt;0.00005 (Table 2).
+<li>
+The H<sup>O</sup> is rejected because the p-value&lt;α.
+<li>
+The mean pH appears to be significantly lower than 5.6 and, thus, indicates acid rain at this site.
+<li>
+A 99% upper confidence bound is required. Thus, one is 99% confident that the mean pH level is less than 4.65 (Table 2).
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>setwd(&#39;C:/aaaWork/Books/IntroStats/HW/&#39;)
+ph &lt;- read.csv(&quot;pHlevels.csv&quot;)
+( ph.t &lt;- t.test(ph$pH,mu=5.6,alt=&quot;less&quot;,conf.level=0.99) )</code></pre>
 <hr />
 </div>
 <div id="p-value-calculations-and-decisions-ii" class="section level2">
@@ -141,11 +176,11 @@ mean of x
 <li>
 Do Not Reject H<sub>0</sub> because p-value=0.0178&gt;α.
 </li>
-<p><img src="1Samplet_CE_Keys_files/figure-html/unnamed-chunk-11-1.png" width="336" /></p>
+<p><img src="1Samplet_CE_Keys_files/figure-html/unnamed-chunk-14-1.png" width="336" /></p>
 <li>
 Do Not Reject H<sub>0</sub> because p-value=0.0732&gt;α.
 </li>
-<img src="1Samplet_CE_Keys_files/figure-html/unnamed-chunk-12-1.png" width="336" />
+<img src="1Samplet_CE_Keys_files/figure-html/unnamed-chunk-15-1.png" width="336" />
 </ol>
 <hr />
 </div>
@@ -165,7 +200,7 @@ Upper bound
 <li>
 t*=2.374.
 </li>
-<img src="1Samplet_CE_Keys_files/figure-html/unnamed-chunk-14-1.png" width="336" />
+<img src="1Samplet_CE_Keys_files/figure-html/unnamed-chunk-17-1.png" width="336" />
 <li>
 882.4.
 </li>
@@ -186,7 +221,7 @@ Interval
 <li>
 t*=±2.023.
 </li>
-<img src="1Samplet_CE_Keys_files/figure-html/unnamed-chunk-16-1.png" width="336" />
+<img src="1Samplet_CE_Keys_files/figure-html/unnamed-chunk-19-1.png" width="336" />
 <li>
 (1477.3,1982.7).
 </li>
@@ -245,6 +280,31 @@ ucb &lt;- xbar+distrib(0.95,type=&quot;q&quot;,distrib=&quot;t&quot;,df=df)*se</
 </div>
 <div id="sea-level-rise-rate" class="section level2">
 <h2>Sea Level Rise Rate</h2>
+<ol>
+<li>
+α=0.01.
+<li>
+H<sub>A</sub>: μ&gt;0 and H<sub>O</sub>:%mu;=0, where μ is the mean sea level rise rate for all ecosystems. [Note that a mean of 0 means no change.]
+<li>
+A one-sample t-test is required because a quantitative variable (sea level rise rate) was measured on individuals from one group or population (ecosystems), σ is UNknown, and the population mean is being compared to a specific value in the null hypothsis.
+<li>
+An observational study without obvious randomization was used.
+<li>
+The assumptions are met because σ is unknown, the sample size is greater than 15 and the background suggests that the distribution is not strongly skewed. Thus, the sampling distribution of the test statistic should follow a t-distribution.
+<li>
+The statistic is x̄==0.059.
+<li>
+The test statistic is t=<span class="math inline">\(\frac{0.059-0}{\frac{0.135}{\sqrt{23}}}\)</span> = 2.107 with 23-1=22 df.
+<li>
+The p-value is `r kPvalue(distrib(2.107,distrib=“t”,df=22,lower.tail=FALSE,plot=FALSE),include.p=FALSE,latex=FALSE)}.
+<li>
+The H<sup>O</sup> is not rejected because the p-value&gt;α.
+<li>
+The mean sea level rise rate does not appear to be greater than 0, indicating that the sea level has not increased significantly over the period of study.
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>library(NCStats)
+( distrib(2.107,distrib=&quot;t&quot;,df=22,lower.tail=FALSE) )</code></pre>
 <hr />
 </div>
 <div id="thickness-of-the-ozone-layer" class="section level2">
@@ -266,9 +326,9 @@ An observational study of 45 random samples of ozone was conducted.
 The assumptions are met because n=45&gt;40 and σ is UNknown.
 </li>
 <li>
-x̄=345 (Table 2).
+x̄=345 (Table 3).
 </li>
-<p>Table 2: Results from the one-sample t-test for testing that the mean thickness of the ozone layer is different than 300 Dobson units.</p>
+<p>Table 3: Results from the one-sample t-test for testing that the mean thickness of the ozone layer is different than 300 Dobson units.</p>
 <pre><code>t = 13.9234, df = 44, p-value &lt; 2.2e-16
 99 percent confidence interval:
  336.5675 354.0992 
@@ -276,19 +336,19 @@ sample estimates:
 mean of x 
  345.3333 </code></pre>
 <li>
-The test statistic is Z=13.923 with 44 df (Table 2).
+The test statistic is Z=13.923 with 44 df (Table 3).
 </li>
 <li>
-The p-value &lt;0.00005 (Table 2).
+The p-value &lt;0.00005 (Table 3).
 </li>
 <li>
-The H<sub>0</sub> is rejected because the p-value&lt;α (Table 2).
+The H<sub>0</sub> is rejected because the p-value&lt;α (Table 3).
 </li>
 <li>
 The mean thickness of the ozone layer at ALL areas abova Arosa, SWI appears to be different (specifically greater) than 300 Dobson units.
 </li>
 <li>
-I am 99% confident that the mean thickness of the ozone layer in ALL areas above Arosa, SWI is between 337 and 354 Dobson Units (Table 2).
+I am 99% confident that the mean thickness of the ozone layer in ALL areas above Arosa, SWI is between 337 and 354 Dobson Units (Table 3).
 </li>
 </ol>
 <p>R Appendix</p>
