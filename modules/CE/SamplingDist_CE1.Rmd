@@ -6,19 +6,20 @@ author: Derek H. Ogle
 css: "/css/modules.css"
 output:
   html_document:
-    self_contained: no
+    self_contained: false
+    lib_dir: zlibs
 ---
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
-source("../rhelpers/rhelpers.R")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/")
+source("../../rhelpers/rhelpers.R")
 modHTML("SamplingDist_CE1")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
-source("../rhelpers/knitr_setup.R")
+source("../../rhelpers/knitr_setup.R")
 ```
 
 ----
@@ -26,7 +27,7 @@ source("../rhelpers/knitr_setup.R")
 <p class="bg-warn">Please work in <a href="SamplingDist_CE_Groups.html">these groups</a> on this and the next class exercise.</p>
 
 ## Constructing a Sampling Distribution
-<img src="http://derekogle.com/NCMTH107/modules/zimgs/calculator-1.jpg" alt="Calculations" class="img-right">
+<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/calculator-1.jpg" alt="Calculations" class="img-right">
 Use the very simple population of five individuals with the following values -- 12, 14, 16, 18, 20 -- to answer the following questions.
 
 1. Compute the center and dispersion (to three decimals) of this population. [*See the hint further below*] Label your results with appropriate symbols.
@@ -52,10 +53,9 @@ Summarize(nums,digits=3)
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="SamplingDist.html">^</a></li>
+  <li><a href="../SamplingDist.html">^</a></li>
   <li class="active"><a href="#">1</a></li>
   <li><a href="SamplingDist_CE2.html">2</a></li>
   <li><a href="SamplingDist_CE3.html">3</a></li>
   <li><a href="SamplingDist_CE4.html">4</a></li>
-  <li><a href="SamplingDist_CE5.html">5</a></li>
 </ul>

@@ -6,90 +6,54 @@ author: Derek H. Ogle
 css: "/css/modules.css"
 output:
   html_document:
-    self_contained: no
+    self_contained: false
+    lib_dir: zlibs
 ---
 
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
-source("../rhelpers/rhelpers.R")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/")
+source("../../rhelpers/rhelpers.R")
 modHTML("SamplingDist_CE4")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
-source("../rhelpers/knitr_setup.R")
+source("../../rhelpers/knitr_setup.R")
 ```
 
 ----
 
-## Expectations Based on the CLT
-<img src="http://derekogle.com/NCMTH107/modules/zimgs/computer-1.jpg" alt="Simulations" class="img-right">
+## Simulating a Sampling Distribution
+<img src="zimgs/population-sampled.jpg" alt="Sampling a Population" class="img-right">
 
-Repeat [Class Exercise 2](SamplingDist_CE2.html) for the two additional situations below.
+Suppose that a population consists of eight individuals with the following "values": 2, 3, 4, 5, 6, 7, 8, and 9. Use this information to answer the questions below.
 
-----
-
-## Situation 2
-Suppose the population has the characteristics shown in the figure below.
-
-```{r Sit2, echo=FALSE, fig.width=3.25,fig.height=3,par2=TRUE}
-shape1 <- 1; shape2 <- 5
-x <- seq(0,0.95,0.05)
-y <- round(1000*stats::dbeta(x,shape1,shape2),0)
-x <- rep(x, y)
-title.popn <- substitute(paste(mu,"=",muval,", ",sigma,"=",sigmaval),
-                         list(muval=formatC(shape1/(shape1+shape2),
-                                            format="f",digits=2),
-                              sigmaval=formatC(sqrt((shape1*      shape2)/(((shape1+shape2)^2)*(shape1+shape2+1))),
-                                               format="f",digits=3)))
-old.par <- par(mar=c(3,2,2.25,1),mgp=c(1.7,0.4,0),tcl=-0.2,yaxs="i")
-hist(x,freq=FALSE,breaks=seq(0,1,0.05),yaxt="n",xlab="Variable (X)",
-     ylab="",main="",right=FALSE,col="gray90")
-mtext("Population Distribution",3,line=1.3)
-mtext(title.popn,3,line=0.1)
-mtext("Frequency of Individuals",2,line=0.1)
-par(old.par)
-```
-
-1. What is the shape, center, and dispersion of this population?
-2. What would you expect, based on the CLT, the sampling distribution of the sample means to look like for n=10, 25, and 50. Record your expectations in the appropriate cells of a table like that above.
+1. Construct a table of values for all possible samples of n=2. [*Hints: There are 28 such samples. See footnote related to Table 12.1 in the reading. Just copy the output from R rather than attempting to format the table like that in Table 12.1.*]
+1. Construct a table of means for all possible samples of n=2. [*Hint: See footnote related to Table 12.1 in the reading.*]
+1. Describe the general shape of the histogram of the sample means from all 28 samples. [*Hint: See footnote related to Figure 12.1 in the reading.*]
+1. How does the average of the 28 sample means compare to the mean of all eight individuals in the population? What statistical definition does this illustrate about the sample mean as an estimator of the population mean? [*Hint: Use Summarize() in R.*]
+1. What is the correct name for the standard deviation of the 28 sample means? How do you expect this value to change if means from samples of n=3 were used instead from n=2?
 
 ----
 
-## Situation 3
-Suppose the population has the characteristics shown in the figure below.
+## Accuracy and Precision
+<img src="zimgs/archery_target.jpg" alt="Archery Target" class="img-right">
 
-```{r Sit3, echo=FALSE, fig.width=3.25,fig.height=3,par2=TRUE}
-shape1 <- 5; shape2 <- 3
-x <- seq(0,0.95,0.05)
-y <- round(1000*stats::dbeta(x,shape1,shape2),0)
-x <- rep(x, y)
-title.popn <- substitute(paste(mu,"=",muval,", ",sigma,"=",sigmaval),
-                         list(muval=formatC(shape1/(shape1+shape2),
-                                            format="f",digits=2),
-                              sigmaval=formatC(sqrt((shape1*      shape2)/(((shape1+shape2)^2)*(shape1+shape2+1))),
-                                               format="f",digits=3)))
-old.par <- par(mar=c(3,2,2.25,1),mgp=c(1.7,0.4,0),tcl=-0.2,yaxs="i")
-hist(x,freq=FALSE,breaks=seq(0,1,0.05),yaxt="n",xlab="Variable (X)",
-     ylab="",main="",right=FALSE,col="gray90")
-mtext("Population Distribution",3,line=1.3)
-mtext(title.popn,3,line=0.1)
-mtext("Frequency of Individuals",2,line=0.1)
-par(old.par)
-```
+Answer the questions below assuming that a population is known to have a mean of 60. [*[This review exercise](SamplingDist_RevEx.html#accuracy-and-precision) may be helpful.*]
 
-1. What is the shape, center, and dispersion of this population?
-2. What would you expect, based on the CLT, the sampling distribution of the sample means to look like for n=10, 25, and 50. Record your expectations in the appropriate cells of a table like that above.
+1. Construct a hypothetical series of four numbers (that could represent sample means) that would be considered both precise and accurate.
+1. Construct a hypothetical series of four numbers that would be considered imprecise but accurate.
+1. Construct a hypothetical series of four numbers that would be considered precise but inaccurate.
+1. Construct a hypothetical series of four numbers that would be considered imprecise and inaccurate.
 
 ----
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="SamplingDist.html">^</a></li>
+  <li><a href="../SamplingDist.html">^</a></li>
   <li><a href="SamplingDist_CE1.html">1</a></li>
   <li><a href="SamplingDist_CE2.html">2</a></li>
   <li><a href="SamplingDist_CE3.html">3</a></li>
   <li class="active"><a href="#">4</a></li>
-  <li><a href="SamplingDist_CE5.html">5</a></li>
 </ul>
