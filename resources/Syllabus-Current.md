@@ -1,7 +1,7 @@
 ---
 title: "Statistical Concepts and Analysis"
 layout: page
-subtitle: MTH107 -- Winter, 2017
+subtitle: MTH107 -- Winter, 2018
 css: /css/syllabus.css
 ---
 
