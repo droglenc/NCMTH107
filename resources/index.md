@@ -8,8 +8,7 @@ title: Resources
 1. [Anonymous Feedback / Suggestions for Dr. Ogle](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}
 
 ## Learning Assistance
-1. [List of Symbols](symbols)
-1. [Common Definitions](definitions)
+1. Glossary -- [Symbols](symbols), [Key Words](definitions)
 1. [R Cheat Sheet](MTH107-Rcheatsheet.pdf){:target="_blank"} (or as [PPT](MTH107-Rcheatsheet.pptx))
 1. [Hypothesis Testing Fact Sheet](MTH107-HOcheatsheet.pdf){:target="_blank"} (or as [PPT](MTH107-HOcheatsheet.pptx))
 1. [11 Steps of Hypothesis Testing](../modules/11-steps)
