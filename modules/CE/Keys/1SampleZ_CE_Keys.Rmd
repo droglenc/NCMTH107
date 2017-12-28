@@ -108,23 +108,23 @@ elk <- c(5.20,7.79,6.46,8.60,8.97,8.65,9.60,9.09,12.42,
 ```
 
 <ol>
-  <li>&alpha;=0.10
-  <li>H<sub>O</sub>: &mu;=8, H<sub>A</sub>: &mu;>8, where &mu; is the mean Elk density in Banff.
-  <li>A 1-sample Z-test is required because a quantitative variable (Elk density) was measured on individuals from one group or population (plots in Banff National Park) and &sigma; is known (given in background).
-  <li>An observational sample that is not obiously random was selected.
-  <li>The assumptions are met because n=15 and population is approximately normal (given in background) and &sigma; is known.
-  <li>The statistic is x&#772;=`r formatC(elk.z$estimate,format="f",digits=2)` Elk per km<sup>2</sup> (`r tbls("ElkDensity",display="cite")`).
+  <li>&alpha;=0.10</li>
+  <li>H<sub>O</sub>: &mu;=8, H<sub>A</sub>: &mu;>8, where &mu; is the mean Elk density in Banff.</li>
+  <li>A 1-sample Z-test is required because a quantitative variable (Elk density) was measured on individuals from one group or population (plots in Banff National Park) and &sigma; is known (given in background).</li>
+  <li>An observational sample that is not obiously random was selected.</li>
+  <li>The assumptions are met because n=15 and population is approximately normal (given in background) and &sigma; is known.</li>
+  <li>The statistic is x&#772;=`r formatC(elk.z$estimate,format="f",digits=2)` Elk per km<sup>2</sup> (`r tbls("ElkDensity",display="cite")`).</li>
 
 `r tbls("ElkDensity")`
 ```{r}
 kHtest(elk.z)
 ```
 
-  <li>The test statistic is Z=`r formatC(elk.z$statistic,format="f",digits=3)` (`r tbls("ElkDensity",display="cite")`).
-  <li>The p-value is `r kPvalue(elk.z$p.value)` (`r tbls("ElkDensity",display="cite")`).
-  <li>The H<sub>O</sub> is rejected because the p-value$<\alpha$.
-  <li>The annual density of elk appears to be greater than 8 per km$^{2}$.
-  <li>A 90% lower confidence bound is required.  Thus, one is 90% confident that the mean annual density of elk is more than `r formatC(elk.z$conf.int[1],format="f",digits=2)` per km$^{2}$ (`r tbls("ElkDensity",display="cite")`).
+  <li>The test statistic is Z=`r formatC(elk.z$statistic,format="f",digits=3)` (`r tbls("ElkDensity",display="cite")`).</li>
+  <li>The p-value is `r kPvalue(elk.z$p.value,latex=FALSE,include.p=FALSE)` (`r tbls("ElkDensity",display="cite")`).</li>
+  <li>The H<sub>O</sub> is rejected because the p-value$<\alpha$.</li>
+  <li>The annual density of elk appears to be greater than 8 per km$^{2}$.</li>
+  <li>A 90% lower confidence bound is required.  Thus, one is 90% confident that the mean annual density of elk is more than `r formatC(elk.z$conf.int[1],format="f",digits=2)` per km$^{2}$ (`r tbls("ElkDensity",display="cite")`).</li>
 </ol>
 
 R Appendix
@@ -139,17 +139,17 @@ elk <- read.csv("Elk.csv")
 ## Credit Card Limits
 
 <ol>
-  <li>&alpha;=0.10.
-  <li>H<sub>A</sub>: &mu;>630 and H<sub>O</sub>: &mu;=630, where &mu; is the mean credit card limit for all companies.
-  <li>A one-sample Z-test is required because a quantitative variable (credit score) was measured on individuals from one group or population (all credit card companies) and &sigma; is known (given in background).
-  <li>An observational sample, with no evidence of randomness, was selected.
-  <li>The assumptions are met because n$\geq$ 30 and &sigma; is known.
-  <li>The statistic is x&#772;=636.86.
-  <li>The test statistic is Z=$\frac{636.86-630}{\frac{5}{\sqrt{44}}}$=9.11
-  <li>The p-value is `r kPvalue(distrib(636.86,mean=630,sd=5/sqrt(44),lower.tail=FALSE,plot=FALSE),include.p=FALSE)`.
-  <li>The H<sub>O</sub> is rejected because the p-value<&alpha;.
-  <li>It appears that the credit threshold is greater than 60. Thus, it appears that the credit card companies have increased the threshold for issuing a credit card.
-  <li>A 90% lower confidence bound with Z<sup>*</sup>=`r formatC(distrib(0.90,type="q",lower.tail=FALSE,plot=FALSE),format="f",digits=3)}. Thus, 636.86-1.282$\frac{5}{\sqrt{44}}$ or 636.86-0.97 = 635.89. Therefore, one is 90% confident that the mean cutoff score for ALL companies is greater than 635.89.
+  <li>&alpha;=0.10.</li>
+  <li>H<sub>A</sub>: &mu;>630 and H<sub>O</sub>: &mu;=630, where &mu; is the mean credit card limit for all companies.</li>
+  <li>A one-sample Z-test is required because a quantitative variable (credit score) was measured on individuals from one group or population (all credit card companies) and &sigma; is known (given in background).</li>
+  <li>An observational sample, with no evidence of randomness, was selected.</li>
+  <li>The assumptions are met because n$\geq$ 30 and &sigma; is known.</li>
+  <li>The statistic is x&#772;=636.86.</li>
+  <li>The test statistic is Z=$\frac{636.86-630}{\frac{5}{\sqrt{44}}}$=9.11.</li>
+  <li>The p-value is `r kPvalue(distrib(636.86,mean=630,sd=5/sqrt(44),lower.tail=FALSE,plot=FALSE),include.p=FALSE,latex=FALSE)`.</li>
+  <li>The H<sub>O</sub> is rejected because the p-value<&alpha;.</li>
+  <li>It appears that the credit threshold is greater than 60. Thus, it appears that the credit card companies have increased the threshold for issuing a credit card.</li>
+  <li>A 90% lower confidence bound with Z<sup>*</sup>=`r formatC(distrib(0.90,type="q",lower.tail=FALSE,plot=FALSE),format="f",digits=3)`. Thus, 636.86-1.282$\frac{5}{\sqrt{44}}$ or 636.86-0.97 = 635.89. Therefore, one is 90% confident that the mean cutoff score for ALL companies is greater than 635.89.</li>
 </ol>
 
 R Appendix
