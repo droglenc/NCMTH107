@@ -28,6 +28,14 @@ source("../../../rhelpers/knitr_setup.R")
 
 ----
 
+## Food Choice by Chipmunks
+
+1. The probability that a chipmunk eats an acorn is $0.47$ ($=\frac{8}{17}$).
+1. The probability that a chipmunk eats a kernel of corns is $0.53$. ($=\frac{9}{17}$)
+1. The probability that a chipmunk eats a kernel of corn assuming that it has already eaten six kernels of corn and no acorns is $0.27$ ($=\frac{3}{11}$).
+
+----
+
 ## Melatonin and Sleep
 
 1. About a mean from n=4 ...
@@ -121,6 +129,29 @@ R Appendix.
 distrib(1.2,mean=1.5,sd=0.75/sqrt(40))
 distrib(2,mean=1.5,sd=0.75/sqrt(50),lower.tail=FALSE)
 distrib(1075/700,mean=1.5,sd=0.75/sqrt(700),lower.tail=FALSE)
+```
+
+----
+
+## Reproductive Habits of Roe Deer
+
+1. This question cannot be answered because the population distribution is not known to be normal (background says that it is right-skewed).
+1. This question cannot be answered because the sampling distribution is not known to be normal because the sample size is not greater than 30, nor greater than 15, nor is the population normally distributed.
+1. The probability that a sample of 35 roe deer will have an average of more than 2 fawns is `r formatC(distrib(2,mean=2.2,sd=0.46/sqrt(35),lower.tail=FALSE,plot=FALSE),format="f",digits=2)`.
+1. The probability that a sample of 35 roe deer will have an average of between 2 and 2.3 fawns is `r formatC(distrib(2.3,mean=2.2,sd=0.46/sqrt(35),plot=FALSE)-distrib(2,mean=2.2,sd=0.46/sqrt(35),plot=FALSE),format="f",digits=2)`.
+1. The most common 90% of sample means in samples of n=35 are between `r formatC(distrib(0.05,mean=2.2,sd=0.46/sqrt(35),type="q",plot=FALSE),format="f",digits=2)` and `r formatC(distrib(0.05,mean=2.2,sd=0.46/sqrt(35),type="q",lower.tail=FALSE,plot=FALSE),format="f",digits=2)`.
+1. The lowest 20% of sample means in samples of n=35 are below `r formatC(distrib(0.20,mean=2.2,sd=0.46/sqrt(35),type="q",plot=FALSE),format="f",digits=2)`.
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+library(NCStats)
+( distrib(2,mean=2.2,sd=0.46/sqrt(35),lower.tail=FALSE) )
+ab <- distrib(2.3,mean=2.2,sd=0.46/sqrt(35))
+a <- distrib(2,mean=2.2,sd=0.46/sqrt(35))
+ab-a
+( distrib(0.05,mean=2.2,sd=0.46/sqrt(35),type="q") )
+( distrib(0.05,mean=2.2,sd=0.46/sqrt(35),type="q",lower.tail=FALSE) )
+( distrib(0.20,mean=2.2,sd=0.46/sqrt(35),type="q") )
 ```
 
 ----

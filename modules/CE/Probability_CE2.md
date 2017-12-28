@@ -1,9 +1,23 @@
 ---
 layout: page
-title: Class Exercise
-subtitle: Probability 2 (Optional)
+title: Exercises
+subtitle: Probability 2
 css: "/css/modules.css"
 ---
+
+----
+
+## Reproductive Habits of Roe Deer
+<img src="zimgs/roe-deer-fawn.jpg" alt="Roe Deer Fawn" class="img-right">
+
+Researchers on Storfosna Island, Norway examined the reproductive habits of Roe Deer (*Capreolus pygargus*) in the northern extremities of the island ([Andersen and Linnell 2000](https://www.researchgate.net/publication/229194908_Irruptive_Potential_in_Roe_Deer_Density-Dependent_Effects_on_Body_Mass_and_Fertility)). The researchers found that the distribution of number of fawns born to a female between 1991 and 1994 was extremely right-skewed with a mean of 2.2 and a standard deviation of 0.46 fawns. Answer the questions below assuming that these values represent the entire population of Roe Deer. [*Note: if you decide that a question cannot be answered, then describe your reasoning very specifically.*]
+
+1. What is the probability that a Roe Deer has more than 2 fawns?
+1. What is the probability that a sample of 10 Roe Deer will have an average of more than 2 fawns?
+1. What is the probability that a sample of 35 Roe Deer will have an average of more than 2 fawns?
+1. What is the probability that a sample of 35 Roe Deer will have a mean between 2.0 and 2.3 fawns?
+1. What is the most common 90% of sample means for n=35 Roe Deer?
+1. What is the mean such that 20% of all samples of n=35 Roe Deer have a smaller mean?
 
 ----
 
@@ -43,7 +57,7 @@ Associated Bank is reviewing its service charges and interest paying policies on
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="Probability.html">^</a></li>
+  <li><a href="../Probability.html">^</a></li>
   <li><a href="Probability_CE1.html">1</a></li>
   <li class="active"><a href="#">2</a></li>
 </ul>

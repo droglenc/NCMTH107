@@ -1,9 +1,20 @@
 ---
 layout: page
-title: Class Exercise
-subtitle: Probability 1
+title: Exercises
+subtitle: Probability
 css: "/css/modules.css"
 ---
+
+----
+
+## Food Choice by Chipmunks
+<img src="zimgs/urn.png" alt="Urn" class="img-right">
+
+An "arena" contains 8 acorns and 9 kernels of corn. Assume that a chipmunk placed in the arena chooses items to eat at random. Use this information to answer the questions below.
+
+1. What is the probability that the chipmunk eats an acorn?
+1. What is the probability that the chipmunk eats a kernel of corn?
+1. What is the probability that the chipmunk eats a kernel of corn assuming that it has already eaten six kernels of corn and no acorns?
 
 ----
 
@@ -43,7 +54,7 @@ A study of rush-hour traffic in San Francisco counted the number of people in a 
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="Probability.html">^</a></li>
+  <li><a href="../Probability.html">^</a></li>
   <li class="active"><a href="#">1</a></li>
   <li><a href="Probability_CE2.html">2</a></li>
 </ul>

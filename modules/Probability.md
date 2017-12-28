@@ -34,14 +34,14 @@ Probability is the "language" used by statisticians to describe the proportion o
 Use the materials below to answer the questions on [this preparation guide](Probability_Prep).
 
 * [![PDF](../img/pdf.png) Reading](../book/Probability Introduction.pdf)
-* [![Vimeo](../img/dhovid.png) Types of Questions](https://vimeo.com/user45324800/smplngd-questions){:target="_blank"} [6 mins] [![PowerPoint](../img/ppt.png)](SamplingDist_PPT3.pptx)
+* [![Vimeo](../img/dhovid.png) Types of Questions](https://vimeo.com/user45324800/smplngd-questions){:target="_blank"} [6 mins] [![PowerPoint](../img/ppt.png)](PPT/SamplingDist_PPT3.pptx)
 
 ----
 
 ## Practice
 
 * [Class Example](CEx/Probability_CExmpl)
-* [Exercises](CE/Probability_CE)
+* [Exercises](CE/Probability_CE1) ([*more as time permits*](CE/Probability_CE2)) ... [ANSWER KEY](CE/Probability_CE_Keys)
 * [Review Exercises](RE/Probability_RevEx)
 
 ----
