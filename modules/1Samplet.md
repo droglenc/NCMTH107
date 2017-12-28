@@ -42,8 +42,7 @@ Use the materials below to answer the questions on [this preparation guide](1Sam
 
 ## Practice
 
-* Exercises: [1](1Samplet_CE1) / [2](1Samplet_CE2) (*time permiting* ... [3](1Samplet_CE3) / [4](1Samplet_CE4) )
-* [Homework Assignment](1Samplet_HW)
+* [Exercises](1Samplet_CE1) ([*more as time permits*](CE/1Samplet_CE2)) ... [ANSWER KEY](CE/1Samplet_CE_Keys)
 * [Review Exercises](RE/1Samplet_RevEx)
 
 ----
