@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Class Exercise
-subtitle: Confidence Regions 5
+title: Exercises
+subtitle: Confidence Regions
 css: "/css/modules.css"
 ---
 
@@ -26,7 +26,7 @@ Researchers measured the equatorial radius of [Jupiter](https://en.wikipedia.org
 ## Blood Pressure in Children
 <img src="zimgs/bloodpressure2.jpg" alt="Blood Pressure" class="img-right">
 
-An investigator wants to estimate the mean systolic blood pressure in children with congenital heart disease who are between the ages of 3 and 5.  The investigator plans on using a 99% confidence interval and desires a margin of error of 5 units.  The standard deviation of systolic blood pressure is unknown, but the investigator conducted a literature review and found that the standard deviation of systolic blood pressures in children with other cardiac defects is between 15 and 20.[^2]
+An investigator wants to estimate the mean systolic blood pressure in children with congenital heart disease who are between the ages of 3 and 5.  The investigator plans on using a 99% confidence interval and desires a margin of error of 5 units.  The standard deviation of systolic blood pressure is unknown, but the investigator conducted a literature review and found that the standard deviation of systolic blood pressures in children with other cardiac defects is between 15 and 20.[^1]
 
 1. Use this information to construct a "worst-case scenario" required sample size.
 1. How would the required sample size change for the "best-case scenario".
@@ -52,4 +52,4 @@ Calf growth early in life should be approximately 1000 g per day. Owners of a la
 
 ### Footnotes
 
-[^1]: This question was adapted from [iSixSigma](http://www.isixsigma.com/tools-templates/sampling-data/how-determine-sample-size-determining-sample-size/).
+[^1]: This was modified from [here](http://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Power/BS704_Power3.html).

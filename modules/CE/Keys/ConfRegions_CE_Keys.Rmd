@@ -40,12 +40,6 @@ figs(name="Z7","Normal distribution representing the Z* the seventh confidence r
 
 ----
 
-## Understanding the Concept of Confidence Intervals
-
-Not done.
-
-----
-
 ## Confidence Region Calculations
 
 <ol>
@@ -142,6 +136,24 @@ Summarize(d$bodytemp,digits=3)
 
 ----
 
+## Beetle Usage
+```{r echo=FALSE}
+d <- read.csv("https://github.com/droglenc/NCData/raw/master/Beetles.csv")
+d <- filterD(d,species=="Halticus.oleracea")
+ci <- mean(d$thorax)+distrib(0.95,type="q",lower.tail=FALSE)*14/sqrt(nrow(d))
+```
+
+1. `r formatC(ci,format="f",digits=1)`
+1. I am 95% confident that the true population mean thorax length is greater than `r formatC(ci,format="f",digits=1)` mm (i.e., a lower bound).
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+library(NCStats)
+distrib(0.95,type="q",lower.tail=FALSE)
+```
+
+----
+
 ## Internet Usage
 
 <ol>
@@ -193,11 +205,43 @@ zstar <- distrib(0.005,type="q",lower.tail=FALSE)
 <li>`r formatC(824-zstar*60/sqrt(25),format="f",digits=1)`-`r formatC(824+zstar*60/sqrt(25),format="f",digits=1)`.</li>
 <li>I am 99% confident that the true population mean is between `r formatC(824-zstar*60/sqrt(25),format="f",digits=1)` and `r formatC(824+zstar*60/sqrt(25),format="f",digits=1)`.</li>
 </ol>
+
+<li>See below.</li>
+<ol type="a">
+<li>C=0.95</li>
+<li>Upper bound</li>
+<li>Z*=`r formatC(distrib(0.95,type="q"),format="f",digits=3)` (`r figs("Z6",display="cite")`).</li>
+```{r Z6, echo=FALSE}
+zstar <- distrib(0.95,type="q")
+```
+
+`r figs("Z6")`
+
+<li>`r formatC(73+zstar*20/sqrt(30),format="f",digits=1)`.</li>
+<li>I am 95\% confident that the true population mean is less than `r formatC(73+zstar*20/sqrt(30),format="f",digits=1)`.</li>
+</ol>
+
+<li>See below.</li>
+<ol type="a">
+<li>C=0.95</li>
+<li>Interval</li>
+<li>Z*= $\pm$ `r formatC(distrib(0.025,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z7",display="cite")`).</li>
+```{r Z7, echo=FALSE}
+zstar <- distrib(0.025,type="q",lower.tail=FALSE)
+```
+
+`r figs("Z7")`
+
+<li>`r formatC(1370-zstar*800/sqrt(40),format="f",digits=1)`-`r formatC(1370+zstar*800/sqrt(40),format="f",digits=1)`.</li>
+<li>I am 95% confident that the true population mean is between `r formatC(1370-zstar*800/sqrt(40),format="f",digits=1)` and `r formatC(1370+zstar*800/sqrt(40),format="f",digits=1)`.</li>
+</ol>
 </ol>
 
 R Appendix
 ```{r eval=FALSE,prompt=FALSE}
 <<Z5>>
+<<Z6>>
+<<Z7>>
 ```
 
 ----
@@ -241,6 +285,23 @@ R Appendix.
 ```{r eval=FALSE,prompt=FALSE}
 <<ncalc4>>
 <<ncalc5>>
+```
+
+----
+
+## Calf Growth
+```{r calcn6, echo=FALSE, results='hide', fig.show="hide"}
+me <- 50
+sigma <- 200
+zstar <- distrib(0.995,type="q")
+( n <- (zstar*sigma/me)^2 )
+```
+
+The required sample size to estimate the growth of the calves within `r me` g per day with 99% confidence assuming that $\sigma$=`r sigma` is `r formatC(ceiling(n),format="f",digits=0)`.
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+<<calcn6>>
 ```
 
 ----
