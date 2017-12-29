@@ -44,7 +44,7 @@ Use the materials below to answer the questions on [this preparation guide](HypT
 
 ## Practice
 
-* [Exercises](CE/HypTesting_CE) ... [ANSWER KEY](CE/HypTesting_CE_Keys)
+* [Exercises](CE/HypTesting_CE) ... [ANSWER KEY](CE/KEY_HypTesting_CE)
 * [Review exercises](RE/HypTesting_RevEx)
 
 ----

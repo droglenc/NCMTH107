@@ -1,0 +1,196 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Univariate EDA - Categorical CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="hand-calculations" class="section level2">
+<h2>Hand Calculations</h2>
+<p><em>Should be performed by hand to match results below</em></p>
+<ol>
+<li>
+Frequency Table
+</li>
+<pre><code>group
+    Belgian Tervuren Bouvier Des Flandres               Collie                Corgi 
+                   1                    3                    3                    5 
+Old English Sheepdog                 Puli             Shepherd    Shetland Sheepdog 
+                   5                    3                   10                    4 </code></pre>
+<li>
+Percentage Table
+</li>
+<pre class="r"><code>&gt; percTable(tbl,digits=1)</code></pre>
+<pre><code>group
+    Belgian Tervuren Bouvier Des Flandres               Collie                Corgi 
+                 2.9                  8.8                  8.8                 14.7 
+Old English Sheepdog                 Puli             Shepherd    Shetland Sheepdog 
+                14.7                  8.8                 29.4                 11.8 </code></pre>
+<li>
+Bar Chart
+</li>
+<p><img src="KEY_UEDACat_CE_files/figure-html/unnamed-chunk-5-1.png" width="576" /></p>
+<li>
+<i>Can not Bring Myself to Make One</i>
+</li>
+</ol>
+<hr />
+</div>
+<div id="bar-chart-i" class="section level2">
+<h2>Bar Chart I</h2>
+<ol>
+<li>
+A Northland College student.
+</li>
+<li>
+Categorical, nominal.
+</li>
+<li>
+Frequency table is below.
+</li>
+<pre><code>     Love     Money Pregnancy     Other 
+       45         1         0         4 </code></pre>
+<li>
+Percentage table is below.
+</li>
+<pre><code>     Love     Money Pregnancy     Other 
+       90         2         0         8 </code></pre>
+</ol>
+<hr />
+</div>
+<div id="coarse-woody-debris" class="section level2">
+<h2>Coarse Woody Debris</h2>
+<ol>
+<li>The vast majority (82%) of the sites had medium exposure (Table 1).</li>
+</ol>
+<p>Table 1: Percentage of coarse woody debris sites by level of exposure (low or medium).</p>
+<pre><code>exposure
+low med 
+ 18  82 </code></pre>
+<p>R Appendix.</p>
+<pre class="r"><code>d &lt;- read.csv(&quot;cwd.csv&quot;)
+tbl &lt;- xtabs(~exposure,data=d)
+percTable(tbl,digits=1,addMargins=FALSE)</code></pre>
+<hr />
+</div>
+<div id="chemical-waste-disposal" class="section level2">
+<h2>Chemical Waste Disposal</h2>
+<p>Most respondents thought that the Environmental Protection Agency was the agency that disposed of chemical wastes followed by the Occupational Safety and Health Administration (Table 2; Figure 1). Relatively few people thought the Department of Transportation or National Institutes of Health disposed of chemical wastes.</p>
+<p>Table 2: Percentages table for perceived choice of agency that disposes of chemical waste. Abbreviations are: d=Department of Transportation, e=Environmental Protection Agency, n=National Institutes of Health, o=Occupational Safety and Health Administration, and u=unanswered.</p>
+<pre><code>agency
+   d    e    n    o    u 
+10.2 47.7 12.5 28.4  1.1 </code></pre>
+<pre class="r"><code>&gt; barplot(p.tbl,xlab=&quot;Agency Abbreviation&quot;,ylab=&quot;Percentage&quot;,ylim=c(0,50))</code></pre>
+<p><img src="KEY_UEDACat_CE_files/figure-html/DispBarPlot-1.png" width="672" /></p>
+<p>Figure 1: Bar chart of percentages by perceived choice of agency that disposes of chemical waste. Abbreviations are in Table 2.</p>
+<p>R Appendix.</p>
+<pre class="r"><code>d &lt;- read.csv(&quot;4_51.csv&quot;)
+( a.tbl &lt;- xtabs(~agency,data=d) )
+( p.tbl &lt;- percTable(a.tbl) )
+barplot(p.tbl,xlab=&quot;Agency Abbreviation&quot;,ylab=&quot;Percentage&quot;,ylim=c(0,50))</code></pre>
+<hr />
+</div>
+<div id="bar-chart-ii" class="section level2">
+<h2>Bar Chart II</h2>
+<ol>
+<li>A Brown Pelican in the Northern Gulf of Mexico.</li>
+<li>The habitat used is categorical, nominal.</li>
+<li>62%</li>
+<li>26%</li>
+<li>12% (100-62-26)</li>
+<li>Cannot address shape of bar charts.</li>
+</ol>
+<hr />
+</div>
+<div id="popularity-in-middle-school" class="section level2">
+<h2>Popularity in Middle School</h2>
+<ol>
+<li>
+The goal for most kids was getting good grades, followed by being popular, and then being good in sports (Table 3; Figure 2).
+</li>
+<p>Table 3: Percentage of grade school children by their stated goal.</p>
+<pre><code>goals
+ Grades Popular  Sports 
+   51.7    29.5    18.8 </code></pre>
+<p><img src="KEY_UEDACat_CE_files/figure-html/KidsBar1-1.png" width="384" /></p>
+<p>Figure 2: Bar chart of percentage of grade school children by their stated goal.</p>
+<li>
+Students feel that “being good in sports” is an important contributor to popularity as approximately 2/3rds of studens ranked this as either “most important” or “somewhat important” to being popular (Table 4; Figure 3).
+</li>
+<p>Table 4: Percentage of grade school children by their rank of the impiortance of being good in sports (1=most important).</p>
+<pre><code>sports
+   1    2    3    4 
+34.5 32.2 23.4  9.8 </code></pre>
+<p><img src="KEY_UEDACat_CE_files/figure-html/KidsBar2-1.png" width="384" /></p>
+<p>Figure 3: Bar chart of percentage of grade school children by their rank of the impiortance of being good in sports (1=most important).</p>
+<li>
+Students were nearly evenly distributed among rural, suburban, and urban schools. Students were likely sampled nearly equally from each type of school (Table 5; Figure 4).
+</li>
+<p>Table 5: Percentage of grade school children by location of their school.</p>
+<pre><code>type
+   Rural Suburban    Urban 
+    31.2     31.6     37.2 </code></pre>
+<p><img src="KEY_UEDACat_CE_files/figure-html/KidsBar3-1.png" width="384" /></p>
+<p>Figure 4: Bar chart of percentage of grade school children by location of their school.</p>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>d &lt;- read.csv(&quot;PopularKids.csv&quot;)
+tbl1 &lt;- xtabs(~goals,data=d)
+( ptbl1 &lt;- percTable(tbl1,digits=1,addMargins=FALSE) )
+barplot(ptbl1,xlab=&quot;Student&#39;s Goal&quot;,ylab=&quot;Percentage&quot;)
+tbl2 &lt;- xtabs(~sports,data=d)
+( ptbl2 &lt;- percTable(tbl2,digits=1,addMargins=FALSE) )
+barplot(ptbl2,xlab=&quot;Rank of Sports in Popularity&quot;,ylab=&quot;Percentage&quot;)
+tbl3 &lt;- xtabs(~type,data=d)
+( ptbl3 &lt;- percTable(tbl3,digits=1,addMargins=FALSE) )
+barplot(ptbl3,xlab=&quot;School Type&quot;,ylab=&quot;Percentage&quot;)</code></pre>
+<hr />
+</div>
+<div id="water-usage" class="section level2">
+<h2>Water Usage</h2>
+<p>Most students left the water on for between 6 and 15 minutes, with students approximately evenly split between 6-10 and 11-15 minutes (Table 6). Few students left the water on for less than 5 minutes before entering the shower.</p>
+<p>Table 6: Percentage table for how much time students at Rice University leave the water on before entering the shower. Note that A=0-5 mins, B=6-10 mins, C=11-15 mins, and D=more than 15 mins.</p>
+<pre><code>water
+   A    B    C    D 
+ 5.4 37.7 40.0 16.9 </code></pre>
+<p>R Appendix.</p>
+<pre class="r"><code>setwd(&#39;C:/aaaWork/Books/IntroStats/HW/&#39;)
+df &lt;- read.csv(&quot;WaterUsage.csv&quot;)
+freq &lt;- xtabs(~water,data=df)
+perc &lt;- percTable(freq,digits=1)</code></pre>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

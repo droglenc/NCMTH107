@@ -44,7 +44,7 @@ Use the materials below to answer the questions on [this preparation guide](ChiS
 ## Practice
 
 * [Class Example](CEx/ChiSquare_CExmpl)
-* [Exercises](CE/ChiSquare_CE) ... [ANSWER KEY](CE/ChiSquare_CE_Keys)
+* [Exercises](CE/ChiSquare_CE) ... [ANSWER KEY](CE/KEY_ChiSquare_CE)
 * [Review Exercises](RE/ChiSquare_RevEx)
 
 ----

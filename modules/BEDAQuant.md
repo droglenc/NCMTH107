@@ -46,7 +46,7 @@ Use the materials below to answer the questions on [this preparation guide](BEDA
 
 ## Practice
 
-* [Exercises](CE/BEDAQuant_CE1) ([*more as time permits*](CE/BEDAQuant_CE2)) ... [ANSWER KEY](CE/BEDAQuant_CE_Keys)
+* [Exercises](CE/BEDAQuant_CE1) ([*more as time permits*](CE/BEDAQuant_CE2)) ... [ANSWER KEY](CE/KEY_BEDAQuant_CE)
 * Review Exercises: [Definitions and Calculations](RE/BEDAQuant_RevEx_Defns) / [EDA](RE/BEDAQuant_RevEx_EDA)
 
 ----

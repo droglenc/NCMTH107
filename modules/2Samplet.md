@@ -41,7 +41,7 @@ Use the materials below to answer the questions on [this preparation guide](2Sam
 ## Practice
 
 * [Class Example](CEx/2Samplet_CExmpl)
-* [Exercises](CE/2Samplet_CE1) ([*more as time permits*](CE/2Samplet_CE2)) ... [ANSWER KEY](CE/2Samplet_CE_Keys)
+* [Exercises](CE/2Samplet_CE1) ([*more as time permits*](CE/2Samplet_CE2)) ... [ANSWER KEY](CE/KEY_2Samplet_CE)
 * [Review Exercises](RE/2Samplet_RevEx)
 
 ----

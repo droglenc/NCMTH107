@@ -41,7 +41,7 @@ Use the materials below to answer the questions on [this preparation guide](Prob
 ## Practice
 
 * [Class Example](CEx/Probability_CExmpl)
-* [Exercises](CE/Probability_CE1) ([*more as time permits*](CE/Probability_CE2)) ... [ANSWER KEY](CE/Probability_CE_Keys)
+* [Exercises](CE/Probability_CE1) ([*more as time permits*](CE/Probability_CE2)) ... [ANSWER KEY](CE/KEY_Probability_CE)
 * [Review Exercises](RE/Probability_RevEx)
 
 ----

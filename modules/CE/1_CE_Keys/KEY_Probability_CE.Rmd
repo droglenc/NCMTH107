@@ -10,15 +10,9 @@ output:
 ---
 
 ```{r echo=FALSE, eval=FALSE}
-## Renders an appropriate HTML file for the webpage
-fnm <- "Probability_CE_Keys"
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/Keys")
-source("../../../rhelpers/rhelpers.R")
-modHTML(fnm)
-## And moves it to make it available to students
-file.rename(from=paste0(fnm,".html"),to=paste0("../",fnm,".html"))
-dir.create(paste0("../",fnm,"_files"),showWarnings=FALSE)
-file.copy(from=paste0(fnm,"_files"),to=paste0("../"),recursive=TRUE)
+## Renders an appropriate HTML file and moves to CE directory
+source("zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_Probability_CE")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}

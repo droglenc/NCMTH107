@@ -51,7 +51,7 @@ Use the materials below to answer the questions on [this preparation guide](Samp
 ## Practice
 
 * Group Activities: [1](CE/SamplingDist_CE1) and [2](CE/SamplingDist_CE2)
-* [Exercises](CE/SamplingDist_CE3) ... [ANSWER KEY](CE/SamplingDist_CE_Keys)
+* [Exercises](CE/SamplingDist_CE3) ... [ANSWER KEY](CE/KEY_SamplingDist_CE)
 * [Review Exercises](RE/SamplingDist_RevEx)
 
 ----

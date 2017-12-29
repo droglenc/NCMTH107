@@ -46,7 +46,7 @@ Use the materials below to answer the questions on [this preparation guide](UEDA
 
 ## Practice
 
-* [Exercises](CE/UEDAQuant1_CE) ... [ANSWER KEY](CE/UEDAQuant1_CE_Keys)
+* [Exercises](CE/UEDAQuant1_CE) ... [ANSWER KEY](CE/KEY_UEDAQuant1_CE)
 * [Review Exercises](RE/UEDAQuant1_RevEx)
 
 ----

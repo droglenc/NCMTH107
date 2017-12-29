@@ -1,0 +1,153 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Summaries for One Quantitative Variable CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="hand-calculations" class="section level2">
+<h2>Hand Calculations</h2>
+<ol>
+<li>
+Shown below
+</li>
+<pre class="r"><code>&gt; sdCalc(c(18,28,25,21,16,24))</code></pre>
+<pre><code>Demonstration of parts of a std. dev. calculation.
+
+      x diffs diffs.sq
+1    18    -4       16
+2    28     6       36
+3    25     3        9
+4    21    -1        1
+5    16    -6       36
+6    24     2        4
+sum 132     0      102
+
+Mean = x-bar = 132 / 6 = 22 
+
+Variance = s^2 = 102 / 5 = 20.4 
+
+Std. Dev = s = sqrt(20.4) = 4.516636</code></pre>
+<li>
+Shown above
+</li>
+<li>
+Shown below
+</li>
+<pre class="r"><code>&gt; iqrCalc(c(4,54,16,85,52,29,24,71,61,60,2))</code></pre>
+<pre><code>Median (=52) is the value in position 6.
+  2 4 16 24 29 [52] 54 60 61 71 85
+
+Q1 (=16) is the value in position 3 of the lower half.
+  2 4 [16] 24 29
+
+Q3 (=61) is the value in position 3 of the upper half.
+  54 60 [61] 71 85
+
+**Note that the median (=52) is NOT in both halves.</code></pre>
+<li>
+Shown above
+</li>
+<li>
+Shown below
+</li>
+<pre class="r"><code>&gt; iqrCalc(c(93,81,34,5,54,84,54,13,1,35,79,63,97,71))</code></pre>
+<pre><code>Median (=58.5) is the average of values in positions 7 and 8.
+  1 5 13 34 35 54 [54 63] 71 79 81 84 93 97
+
+Q1 (=34) is the value in position 4 of the lower half.
+  1 5 13 [34] 35 54 54
+
+Q3 (=81) is the value in position 4 of the upper half.
+  63 71 79 [81] 84 93 97</code></pre>
+<li>
+Shown above
+</li>
+<li>
+Range is 1 to 97.
+</li>
+</ol>
+<hr />
+</div>
+<div id="histograms-i" class="section level2">
+<h2>Histograms I</h2>
+<ol>
+<li>An individual is a state.</li>
+<li>The variable is the mean commute time for indivuals 16-years and older in states of the U.S.</li>
+<li>Mean Commute time (mins) is a quantitative, continuous variable.</li>
+<li>51</li>
+<li>2</li>
+<li>25</li>
+<li>26-28</li>
+</ol>
+<hr />
+</div>
+<div id="brain-weights" class="section level2">
+<h2>Brain Weights</h2>
+<ol>
+<li>
+The histogram of brain weights is in Figure 1.
+</li>
+<p><img src="KEY_UEDAQuant1_CE_files/figure-html/BrainHist1-1.png" width="288" /></p>
+<p>Figure 1: Histogram of brain weight (g).</p>
+<li>
+The summary statistics for brain weights is in Table 1.
+</li>
+<p>Table 1: Summary statistics for brain weight (g).</p>
+<pre><code>     n   mean     sd    min     Q1 median     Q3    max 
+ 237.0 1282.9  120.3  955.0 1207.0 1280.0 1350.0 1635.0 </code></pre>
+<li>
+The histogram of brain weights separated by age group is in Figure 2.
+</li>
+<p><img src="KEY_UEDAQuant1_CE_files/figure-html/BrainHist2-1.png" width="576" /></p>
+<p>Figure 2: Histograms of brain weight (g) separated by age group.</p>
+<li>
+The summary statistics of brain weights separate by age groups is in Table 2.
+</li>
+<p>Table 2: Summary statistics for brain weight (g) separated by age group.</p>
+<pre><code>  age.group   n   mean    sd  min     Q1 median     Q3  max
+1     20-46 110 1304.7 116.4 1027 1227.5   1301 1370.8 1635
+2       46+ 127 1263.9 120.9  955 1180.0   1250 1332.5 1620</code></pre>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>d &lt;- read.csv(&quot;data/BrainHead.csv&quot;)
+hist(~brain.weight,data=d,xlab=&quot;Brain Weight (g)&quot;)
+Summarize(~brain.weight,data=d,digits=1)
+hist(brain.weight~age.group,data=d,xlab=&quot;Brain Weight (g)&quot;)
+Summarize(brain.weight~age.group,data=d,digits=1)</code></pre>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
