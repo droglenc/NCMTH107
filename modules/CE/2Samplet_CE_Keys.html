@@ -75,7 +75,7 @@ An observational study with clear randomization of the two samples.
 <li>
 The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>g</sub> = 9+9 = 18 &gt; 15 and the two sample distributions () are not obviously strongly skewed (also told to assume that the distribution are not strongly skewed), and (iii) the variances appear to be equal (Levene’s p-value = <span class="math inline">\(0.0736\)</span> &gt; α).
 </li>
-<p><img src="2Samplet_CE_Keys_files/figure-html/DeliveriesHist-1.png" width="576" /></p>
+<p><img src="2Samplet_CE_Keys_files/figure-html/DeliveriesHist-1.png" width="672" /></p>
 <p>Figure 1: Histograms of the delivery times for military supplies in the Bosnian and Persian Gulf war.</p>
 <li>
 x̄<sub>b</sub>-x̄<sub>g</sub> = 7.16-25.24 = -18.09 (Table 1).
@@ -114,27 +114,37 @@ hist(time~war,data=del)
 <h2>Commitment to Adult Animals</h2>
 <ol>
 <li>
-α=0.01$.
+α=0.01.
+</li>
 <li>
-H<sub>O</sub>:μ<sub>did</sub>=μ<sub>didnot</sub> (or μ<sub>did</sub>-μ<sub>didnot</sub>=0) and H<sub>A</sub> is μ<sub>did</sub> &gt;μ<sub>didnot</sub> (or μ<sub>did</sub>-μ<sub>didnot</sub> &gt;0), where μ is the mean commitment level, did corresponds to the “did evacuate” group, and didnot corresponds to the “did not evacuate” group.
+H<sub>O</sub>:μ<sub>did</sub>=μ<sub>didnot</sub> (or μ<sub>did</sub>-μ<sub>didnot</sub>=0) and H<sub>A</sub> is μ<sub>did</sub>&gt;μ<sub>didnot</sub> (or μ<sub>did</sub>-μ<sub>didnot</sub>&gt;0), where μ is the mean commitment level, “did” corresponds to the “did evacuate” group, and “didnot” corresponds to the “did not evacuate” group.
+</li>
 <li>
 A two-sample t-test is required because a quantitative variable (commitment level score) was measured on two groups (“did evacuate” and “did not evacuate”) that were <strong>IN</strong>dependent (no connection between individuals that did and those that did not evacuate their pets).
+</li>
 <li>
 The data appear to be part of a voluntary response observational study without clear randomization.
+</li>
 <li>
 The assumptions are met because the two groups appear to be independent, the sample size (n<sub>did</sub>+n<sub>didnot</sub>=241) is &gt;40 and we were told that the p-value for Levene’s test of the homogeneity of variance test is “large” (i.e., &gt;0.01) so that it appears that the variances between groups are equal. Therefore, the test statistic computed below should reasonably follow a t-distribution with n<sub>did</sub>+n<sub>didnot</sub>-2=239 df.
+</li>
 <li>
 The statistic is x̄<sub>did</sub>-x̄<sub>didnot</sub> = 7.694-6.640 = 1.054. The pooled sample variance is, <span class="math display">\[s_{p}^{2}=\frac{(116-1)3.410^{2}+(125-1)3.102^{2}}{116+125-2} = 10.58749 \]</span> The standard error of the statistic is, <span class="math display">\[ SE_{\bar{x}_{did}-\bar{x}_{didnot}}=\sqrt{10.58749\left(\frac{1}{116}+\frac{1}{125} \right)} = 0.4194894  \]</span>
 <li>
 The t test statistic is <span class="math inline">\(\frac{1.054-0}{0.4194894}\)</span> = 2.513 with 116+125-2 = 239 df.
+</li>
 <li>
 The p-value is 0.0063.
+</li>
 <li>
 The H<sub>O</sub> is rejected because the p-value &lt; α.
+</li>
 <li>
 The average commitment to animals was significantly greater for those people that did evacuate their pets as compared to those people that did not evacuate their pets.
+</li>
 <li>
 The 99% lower bound is 1.054-2.342051*0.419 = 0.073. One is 99% confident that the mean level of commitment for those that evacuated their pets is at least 0.073 greater than those that did not evacuate their pets.
+</li>
 </ol>
 <p>R Appendix.</p>
 <pre class="r"><code>library(NCStats)
@@ -146,22 +156,28 @@ The 99% lower bound is 1.054-2.342051*0.419 = 0.073. One is 99% confident that t
 <h2>Methyl Mercury in Mussels</h2>
 <ol>
 <li>
-α=0.05$.
+α=0.05.
+</li>
 <li>
 H<sub>O</sub>:μ<sub>i</sub>=μ<sub>r</sub> (or μ<sub>i</sub>-μ<sub>r</sub>=0) and H<sub>A</sub> is μ<sub>i</sub>≠μ<sub>r</sub> (or μ<sub>i</sub>-μ<sub>r</sub>≠0), where μ is the mean methyl mercury level, i corresponds to the “impacted” group, and r corresponds to the “reference” group.
+</li>
 <li>
 A two-sample t-test is required because quantitative variable (methyl mercury level) was measured on two groups (“impacted” and “reference” sites) that were <strong>IN</strong>dependent (no connection between sites at the two locations).
+</li>
 <li>
 The data appear to be part of an observational study without clear randomization.
+</li>
 <li>
-<p>The assumptions are not quite met but we will continue anyway. The two groups appear to be independent. The variances appear to be equal because the p-value from the Levene’s test is “large” (i.e., p=0.3595&gt;0.05; Table 4). The sample size (n<sub>i</sub>+n<sub>r</sub>=13) is not &gt;15 and there is not enough data to make useful histograms. Therefore, the test statistic computed below may not follow a t-distribution with n<sub>i</sub>+n<sub>r</sub>-2=11 df.</p>
-<p>Table 4: )</p>
+The assumptions are not quite met but we will continue anyway. The two groups appear to be independent. The variances appear to be equal because the p-value from the Levene’s test is “large” (i.e., p=0.3595&gt;0.05; Table 2). The sample size (n<sub>i</sub>+n<sub>r</sub>=13) is not &gt;15 and there is not enough data to make useful histograms. Therefore, the test statistic computed below may not follow a t-distribution with n<sub>i</sub>+n<sub>r</sub>-2=11 df.
+</li>
+<p>Table 2: Levene’s test results for testing equal variances among impacted and reference groups.</p>
 <pre><code>      Df F value Pr(&gt;F)
 group  1  0.9144 0.3595
       11               </code></pre>
 <li>
-<p>The statistic is x̄<sub>i</sub>-x̄<sub>r</sub> = 0.0573 - 0.0386 = 0.0188 Table 5).</p>
-<p>Table 5:</p>
+The statistic is x̄<sub>i</sub>-x̄<sub>r</sub> = 0.0573 - 0.0386 = 0.0188 (Table 3).
+</li>
+<p>Table 3: Two-sample t-test results for testing that the mean mercury levels in mussels differed between the impacted and reference sites.</p>
 <pre><code>t = 1.5259, df = 11, p-value = 0.1553
 95 percent confidence interval:
  -0.008301233  0.045825042 
@@ -169,13 +185,17 @@ sample estimates:
  mean in group impacted mean in group reference 
              0.05733333              0.03857143 </code></pre>
 <li>
-The t test statistic is 1.5259 with 11 df Table 5).
+The t test statistic is 1.5259 with 11 df (Table 3).
+</li>
 <li>
-The p-value is 0.1553 Table 5).
+The p-value is 0.1553 (Table 3).
+</li>
 <li>
 The H<sub>O</sub> is not rejected because the p-value &gt; α.
+</li>
 <li>
 Mean methyl mercury levels do not appear to differ between mussels from the impacted and reference sites.
+</li>
 </ol>
 <p>R Appendix.</p>
 <pre class="r"><code>setwd(&#39;C:/aaaWork/Books/IntroStats/HW/&#39;)

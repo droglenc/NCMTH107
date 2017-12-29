@@ -6,7 +6,7 @@ layout: page
 css: "/css/modules.css"
 output:
   html_document:
-    fig_height: 3
+    fig_height: 3.5
     fig_width: 3.5
     self_contained: false
 ---
@@ -31,8 +31,8 @@ tbls <- captioner(prefix="Table")
 figs <- captioner(prefix="Figure")
 tbls(name="Deliveries","Results from the two-sample t-test for testing that the mean delivery time was lower for the Bosnian than the Persian Gulf war.")
 figs(name="DeliveriesHist","Histograms of the delivery times for military supplies in the Bosnian and Persian Gulf war.")
-tbls(name="Mussels1","Levene's test results for testing equal variances among impacted and reference groups.")
-tbls(name="Mussels2","Two-sample t-test results for testing that the mean mercury levels in mussels differed between the impacted and reference sites.")
+tbls(name="mussels1","Levene's test results for testing equal variances among impacted and reference groups.")
+tbls(name="mussels2","Two-sample t-test results for testing that the mean mercury levels in mussels differed between the impacted and reference sites.")
 ```
 
 ----
@@ -89,7 +89,7 @@ del <- data.frame(war=rep(c("Gulf","Bosnia"),each=9),
 <li>2-sample t-test because (i) two groups/populations are considered (Bosnia and Persian Gulf), (ii) a quantitative variable (delivery time) was recorded, and (iii) the indivduals in the groups are independent (there is no known connection between all deliveries to the two wars).</li>
 <li>An observational study with clear randomization of the two samples.</li>
 <li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>g</sub> = 9+9 = 18 &gt; 15 and the two sample distributions () are not obviously strongly skewed (also told to assume that the distribution are not strongly skewed), and (iii) the variances appear to be equal (Levene's p-value = `r  kPvalue(del.lev$"Pr(>F)"[1],include.p=FALSE)` &gt; &alpha;).</li>
-```{r DeliveriesHist, fig.width=6, fig.height=3,echo=FALSE}
+```{r DeliveriesHist, fig.width=7, fig.height=3.5, echo=FALSE}
 hist(time~war,data=del)
 ```
 
@@ -121,20 +121,20 @@ del <- read.csv("Deliveries.csv")
 ## Commitment to Adult Animals
 
 <ol>
-  <li>&alpha;=0.01$.
-  <li>H<sub>O</sub>:&mu;<sub>did</sub>=&mu;<sub>didnot</sub> (or &mu;<sub>did</sub>-&mu;<sub>didnot</sub>=0) and H<sub>A</sub> is &mu;<sub>did</sub> >&mu;<sub>didnot</sub> (or &mu;<sub>did</sub>-&mu;<sub>didnot</sub> >0), where &mu; is the mean commitment level, did corresponds to the "did evacuate" group, and didnot corresponds to the "did not evacuate" group.
-  <li>A two-sample t-test is required because a quantitative variable (commitment level score) was measured on two groups ("did evacuate" and "did not evacuate") that were **IN**dependent (no connection between individuals that did and those that did not evacuate their pets).
-  <li>The data appear to be part of a voluntary response observational study without clear randomization.
-  <li>The assumptions are met because the two groups appear to be independent, the sample size (n<sub>did</sub>+n<sub>didnot</sub>=241) is >40 and we were told that the p-value for Levene's test of the homogeneity of variance test is "large" (i.e., >0.01) so that it appears that the variances between groups are equal. Therefore, the test statistic computed below should reasonably follow a t-distribution with n<sub>did</sub>+n<sub>didnot</sub>-2=239 df.
+  <li>&alpha;=0.01.</li>
+  <li>H<sub>O</sub>:&mu;<sub>did</sub>=&mu;<sub>didnot</sub> (or &mu;<sub>did</sub>-&mu;<sub>didnot</sub>=0) and H<sub>A</sub> is &mu;<sub>did</sub>>&mu;<sub>didnot</sub> (or &mu;<sub>did</sub>-&mu;<sub>didnot</sub>>0), where &mu; is the mean commitment level, "did" corresponds to the "did evacuate" group, and "didnot" corresponds to the "did not evacuate" group.</li>
+  <li>A two-sample t-test is required because a quantitative variable (commitment level score) was measured on two groups ("did evacuate" and "did not evacuate") that were **IN**dependent (no connection between individuals that did and those that did not evacuate their pets).</li>
+  <li>The data appear to be part of a voluntary response observational study without clear randomization.</li>
+  <li>The assumptions are met because the two groups appear to be independent, the sample size (n<sub>did</sub>+n<sub>didnot</sub>=241) is >40 and we were told that the p-value for Levene's test of the homogeneity of variance test is "large" (i.e., >0.01) so that it appears that the variances between groups are equal. Therefore, the test statistic computed below should reasonably follow a t-distribution with n<sub>did</sub>+n<sub>didnot</sub>-2=239 df.</li>
   <li>The statistic is x&#772;<sub>did</sub>-x&#772;<sub>didnot</sub> = 7.694-6.640 = 1.054. The pooled sample variance is,
       \[s_{p}^{2}=\frac{(116-1)3.410^{2}+(125-1)3.102^{2}}{116+125-2} = 10.58749 \]
        The standard error of the statistic is,
        \[ SE_{\bar{x}_{did}-\bar{x}_{didnot}}=\sqrt{10.58749\left(\frac{1}{116}+\frac{1}{125} \right)} = 0.4194894  \]
-  <li>The t test statistic is $\frac{1.054-0}{0.4194894}$ = 2.513 with 116+125-2 = 239 df.
-  <li>The p-value is `r kPvalue(distrib(2.512578,distrib="t",df=239,lower.tail=FALSE,plot=FALSE),include.p=FALSE,latex=FALSE)`.
-  <li>The H<sub>O</sub> is rejected because the p-value < &alpha;.
-  <li>The average commitment to animals was significantly greater for those people that did evacuate their pets as compared to those people that did not evacuate their pets.
-  <li>The 99% lower bound is 1.054-2.342051*0.419 = 0.073. One is 99% confident that the mean level of commitment for those that evacuated their pets is at least 0.073 greater than those that did not evacuate their pets.
+  <li>The t test statistic is $\frac{1.054-0}{0.4194894}$ = 2.513 with 116+125-2 = 239 df.</li>
+  <li>The p-value is `r kPvalue(distrib(2.512578,distrib="t",df=239,lower.tail=FALSE,plot=FALSE),include.p=FALSE,latex=FALSE)`.</li>
+  <li>The H<sub>O</sub> is rejected because the p-value < &alpha;.</li>
+  <li>The average commitment to animals was significantly greater for those people that did evacuate their pets as compared to those people that did not evacuate their pets.</li>
+  <li>The 99% lower bound is 1.054-2.342051*0.419 = 0.073. One is 99% confident that the mean level of commitment for those that evacuated their pets is at least 0.073 greater than those that did not evacuate their pets.</li>
 </ol>
 
 R Appendix.
@@ -161,20 +161,20 @@ df <- data.frame(mhg=c(impacted,reference),
 ```
 
 <ol>
-  <li>&alpha;=0.05$.
-  <li>H<sub>O</sub>:&mu;<sub>i</sub>=&mu;<sub>r</sub> (or &mu;<sub>i</sub>-&mu;<sub>r</sub>=0) and H<sub>A</sub> is &mu;<sub>i</sub>&ne;&mu;<sub>r</sub> (or &mu;<sub>i</sub>-&mu;<sub>r</sub>&ne;0), where &mu; is the mean methyl mercury level, i corresponds to the "impacted" group, and r corresponds to the "reference" group.
-  <li>A two-sample t-test is required because quantitative variable (methyl mercury level) was measured on two groups ("impacted" and "reference" sites) that were **IN**dependent (no connection between sites at the two locations).
-  <li>The data appear to be part of an observational study without clear randomization.
-  <li>The assumptions are not quite met but we will continue anyway. The two groups appear to be independent. The variances appear to be equal because the p-value from the Levene's test is "large" (i.e., `r kPvalue(m.lt[1,3],latex=FALSE)`>0.05; `r tbls("mussels1",display="cite")`). The sample size (n<sub>i</sub>+n<sub>r</sub>=`r formatC(m.t$parameter+2,format="f",digits=0)`) is not >15 and there is not enough data to make useful histograms. Therefore, the test statistic computed below may not follow a t-distribution with n<sub>i</sub>+n<sub>r</sub>-2=`r formatC(m.t$parameter,format="f",digits=0)` df.
+  <li>&alpha;=0.05.</li>
+  <li>H<sub>O</sub>:&mu;<sub>i</sub>=&mu;<sub>r</sub> (or &mu;<sub>i</sub>-&mu;<sub>r</sub>=0) and H<sub>A</sub> is &mu;<sub>i</sub>&ne;&mu;<sub>r</sub> (or &mu;<sub>i</sub>-&mu;<sub>r</sub>&ne;0), where &mu; is the mean methyl mercury level, i corresponds to the "impacted" group, and r corresponds to the "reference" group.</li>
+  <li>A two-sample t-test is required because quantitative variable (methyl mercury level) was measured on two groups ("impacted" and "reference" sites) that were **IN**dependent (no connection between sites at the two locations).</li>
+  <li>The data appear to be part of an observational study without clear randomization.</li>
+  <li>The assumptions are not quite met but we will continue anyway. The two groups appear to be independent. The variances appear to be equal because the p-value from the Levene's test is "large" (i.e., `r kPvalue(m.lt[1,3],latex=FALSE)`>0.05; `r tbls("mussels1",display="cite")`). The sample size (n<sub>i</sub>+n<sub>r</sub>=`r formatC(m.t$parameter+2,format="f",digits=0)`) is not >15 and there is not enough data to make useful histograms. Therefore, the test statistic computed below may not follow a t-distribution with n<sub>i</sub>+n<sub>r</sub>-2=`r formatC(m.t$parameter,format="f",digits=0)` df.</li>
 
- `r tbls("mussels1")`)
+`r tbls("mussels1")`
 
 ```{r echo=FALSE,background="white"}
 attr(m.lt,"heading") <- NULL
 m.lt
 ```
 
-  <li>The statistic is x&#772;<sub>i</sub>-x&#772;<sub>r</sub> = `r formatC(m.t$estimate[1],format="f",digits=4)` - `r formatC(m.t$estimate[2],format="f",digits=4)` = `r formatC(m.t$estimate[1]-m.t$estimate[2],format="f",digits=4)` `r tbls("mussels2",display="cite")`).
+  <li>The statistic is x&#772;<sub>i</sub>-x&#772;<sub>r</sub> = `r formatC(m.t$estimate[1],format="f",digits=4)` - `r formatC(m.t$estimate[2],format="f",digits=4)` = `r formatC(m.t$estimate[1]-m.t$estimate[2],format="f",digits=4)` (`r tbls("mussels2",display="cite")`).</li>
 
 `r tbls("mussels2")`
 
@@ -182,10 +182,10 @@ m.lt
 kHtest(m.t)
 ```
 
-  <li>The t test statistic is `r formatC(m.t$statistic,format="f",digits=4)` with `r formatC(m.t$parameter,format="f",digits=0)` df  `r tbls("mussels2",display="cite")`).
-  <li>The p-value is `r kPvalue(m.t$p.value,include.p=FALSE,latex=FALSE)` `r tbls("mussels2",display="cite")`).
-  <li>The H<sub>O</sub> is not rejected because the p-value > &alpha;.
-  <li>Mean methyl mercury levels do not appear to differ between mussels from the impacted and reference sites.
+  <li>The t test statistic is `r formatC(m.t$statistic,format="f",digits=4)` with `r formatC(m.t$parameter,format="f",digits=0)` df (`r tbls("mussels2",display="cite")`).</li>
+  <li>The p-value is `r kPvalue(m.t$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("mussels2",display="cite")`).</li>
+  <li>The H<sub>O</sub> is not rejected because the p-value > &alpha;.</li>
+  <li>Mean methyl mercury levels do not appear to differ between mussels from the impacted and reference sites.</li>
 </ol>
 
 R Appendix.
