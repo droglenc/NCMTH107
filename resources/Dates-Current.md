@@ -121,18 +121,18 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
     <td>--</td></tr>
 <tr><td>W 21-Mar</td>
-    <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
-    <td>--</td></tr>
+    <td colspan="2"><span style="color:red">Third Quiz</span></td></tr>
 <tr><td>F 23-Mar</td>
     <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 26-Mar</td>
-    <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
+    <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
     <td>--</td></tr>
 <tr><td>W 28-Mar</td>
-    <td colspan="2"><span style="color:red">Third Quiz</span></td></tr>
+    <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
+    <td>Quiz 3 Reflection (Optional)</td></tr>
 <tr><td>F 30-Mar</td>
     <td colspan="2"><span style="color:red">NO CLASS (Good Friday)</span></td></tr>
 <tr><td></td><td></td><td></td></tr>
@@ -145,18 +145,17 @@ Note that some of the more distant dates are subject to change.
     <td>--</td></tr>
 <tr><td>F 6-Apr</td>
     <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
-    <td>Quiz 3 Reflection (Optional)</td></tr>
+    <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 9-Apr</td>
-    <td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td>
-    <td>--</td></tr>
+    <td colspan="2"><span style="color:red">Third Quiz</span></td></tr>
 <tr><td>W 11-Apr</td>
-    <td>Course Review</td>
+    <td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td>
     <td>--</td></tr>
 <tr><td>F 13-Apr</td>
     <td>Course Review</td>
-    <td>--</td></tr>
+    <td>Quiz 4 Reflection (Optional)</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 16-Apr</td>
