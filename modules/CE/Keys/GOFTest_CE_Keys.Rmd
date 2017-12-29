@@ -243,35 +243,19 @@ R Appendix.
   
 `r tbls("bear")`
 
-\begin{table}[!h]
-  \begin{center}
-      \begin{tabular}{ccc}
-        \hline\hline
-        & Obs & Exp \\
-        Habitat & Freq & Freq \\
-        \hline
-        Lowland Conifer  & 47 & 34 \\
-        Aspen            & 12 & 17 \\
-        Open Areas       & 10 & 12 \\
-        Upland Hardwoods & 21 & 25 \\
-        Mixed Upland     & 10 & 12 \\
-        \hline
-        Total & 100 & 100 \\
-        \hline\hline
-      \end{tabular}
-    \end{center}
-  \end{table}
+Habitat | Obs Freq | Exp Freq
+------- | -------- | --------
+Lowland Conifer  | 47 | 34
+Aspen            | 12 | 17
+Open Areas       | 10 | 12
+Upland Hardwoods | 21 | 25
+Mixed Upland     | 10 | 12
+
   
   <li>The table of observed frequencies is shown in `r tbls("bear",display="cite")`.</li>
   <li>The &chi;<sup>2</sup> test statistic is thus,
-    \begin{center}
-      \[  \begin{split}
-        \chi^{2} &= \frac{(47-34)^{2}}{34} + \frac{(12-17)^{2}}{17} + \frac{(10-12)^{2}}{12} + \frac{(21-25)^{2}}{25}  + \frac{(10-12)^{2}}{12} \\
-          &= 4.971 + 1.471 + 0.333 + 0.640 + 0.333 \\
-          &= 7.7478 \\
-      \end{split}  \]
-    \end{center}
-    with 5-1=4 df.</li>
+$$\frac{(47-34)^{2}}{34} + \frac{(12-17)^{2}}{17} + \frac{(10-12)^{2}}{12} + \frac{(21-25)^{2}}{25}  + \frac{(10-12)^{2}}{12} $$
+4.971 + 1.471 + 0.333 + 0.640 + 0.333 = 7.7478 with 5-1=4 df.</li>
   <li>The p-value is `r kPvalue(distrib(7.7478,distrib="chisq",df=4,lower.tail=FALSE,plot=FALSE),include.p=FALSE,latex=FALSE)`.</li>
   <li>The H<sub>O</sub> is not rejected because the p-value>&alpha;.</li>
   <li>The bear appears to use the habitats in proportion to the availability of the habitat.</li>
