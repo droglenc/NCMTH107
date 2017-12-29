@@ -248,11 +248,12 @@ The expected number of observations in each habitat is in proportion to the GIS 
 </tr>
 </tbody>
 </table>
+<p><br></p>
 <li>
 The table of observed frequencies is shown in Table 13.
 </li>
 <li>
-The χ<sup>2</sup> test statistic is thus, <span class="math display">\[\frac{(47-34)^{2}}{34} + \frac{(12-17)^{2}}{17} + \frac{(10-12)^{2}}{12} + \frac{(21-25)^{2}}{25}  + \frac{(10-12)^{2}}{12} \]</span> 4.971 + 1.471 + 0.333 + 0.640 + 0.333 = 7.7478 with 5-1=4 df.
+The χ<sup>2</sup> test statistic is <span class="math inline">\(\frac{(47-34)^{2}}{34}\)</span> + <span class="math inline">\(\frac{(12-17)^{2}}{17}\)</span> + <span class="math inline">\(\frac{(10-12)^{2}}{12}\)</span> + <span class="math inline">\(\frac{(21-25)^{2}}{25}\)</span> + <span class="math inline">\(\frac{(10-12)^{2}}{12}\)</span> = 4.971 + 1.471 + 0.333 + 0.640 + 0.333 = 7.7478 with 5-1=4 df.
 </li>
 <li>
 The p-value is 0.1013.
@@ -290,7 +291,28 @@ The expected number of consumed plants is 73×0.33=24.09. The expected number of
 The table of observed frequencies is in Table 14 (along with the expected frequencies from the previous step).
 </li>
 <p>Table 14: Observed and expected frequencies for browsing by deer on ginseng plants.</p>
-
+<table>
+<thead>
+<tr class="header">
+<th>Habitat</th>
+<th>Obs Freq</th>
+<th>Exp Freq</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Yes</td>
+<td>33</td>
+<td>24.09</td>
+</tr>
+<tr class="even">
+<td>No</td>
+<td>40</td>
+<td>48.91</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
 <li>
 The χ<sup>2</sup> test statistic is 4.919 with 1 df (Table 15).
 </li>
@@ -321,32 +343,43 @@ exp &lt;- c(consumed=0.33,not.consumed=1-0.33)
 <ol>
 <li>
 α =0.05.
+</li>
 <li>
 H<sub>O</sub>:“The proportion of road rage incidents is the same on each day of the week” versus H<sub>A</sub>:“The proportion of road rage incidents is NOT the same on each day of the week”.
+</li>
 <li>
 A goodness-of-fit test is required because a categorical response variable with seven levels (days of the week) from a single group or population was recorded and the frequency of responses is being compared to a theoretical distribution in the null hypothesis.
+</li>
 <li>
 This is an observational study without obvious randomization.
+</li>
 <li>
 The expected number of road rage incidents on each day is <span class="math inline">\(\frac{69}{7}\)</span> = 9.9 which are all greater than five. Thus, the test statistic computed below should reasonably follow a chi-square distribution.
+</li>
 <li>
-<p>The table of observed frequencies is shown in Table 16</p>
-<p>Table 19:</p>
+The table of observed frequencies is shown in Table 16.
+</li>
+<p>Table 16: Observed frequencies of road rage by day of the week.</p>
 <pre><code>
  M Tu  W Th  F Sa Su 
  4 11 12 10 18  7  5 </code></pre>
 <li>
-<p>The χ<sup>2</sup> test statistic is 14.388 with 6 df (Table 17).</p>
+The χ<sup>2</sup> test statistic is 14.388 with 6 df (Table 17).
+</li>
 <p>Table 17: Results from the goodness-of-fit test for testing that the frequencies of road rage differed among days of the week.</p>
 <pre><code>X-squared = 14.3881, df = 6, p-value = 0.02559</code></pre>
 <li>
 The p-value is 0.0256 (Table 17).
+</li>
 <li>
 The H<sub>O</sub> is rejected because the p-value&lt;α.
+</li>
 <li>
 It appears that the proportion of incidences of road rage differs among the days of the week.
+</li>
 <li>
-<p>An examination of the confidence interval results (Table 18) suggests that there are more incidences of road rage on Fridays and possibly fewer on Mondays than would be expected.</p>
+An examination of the confidence interval results (Table 18) suggests that there are more incidences of road rage on Fridays and possibly fewer on Mondays than would be expected.
+</li>
 <p>Table 18: Confidence intervals (95%) for the proportion of observations of road rage by day of the week.</p>
 <pre><code>   p.obs p.LCI p.UCI p.exp
 M   0.06  0.02  0.14  0.14

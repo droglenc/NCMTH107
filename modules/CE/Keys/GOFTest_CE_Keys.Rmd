@@ -6,8 +6,6 @@ layout: page
 css: "/css/modules.css"
 output:
   html_document:
-    fig_height: 3
-    fig_width: 3.5
     self_contained: false
 ---
 
@@ -250,12 +248,10 @@ Aspen            | 12 | 17
 Open Areas       | 10 | 12
 Upland Hardwoods | 21 | 25
 Mixed Upland     | 10 | 12
-
+<br>
   
   <li>The table of observed frequencies is shown in `r tbls("bear",display="cite")`.</li>
-  <li>The &chi;<sup>2</sup> test statistic is thus,
-$$\frac{(47-34)^{2}}{34} + \frac{(12-17)^{2}}{17} + \frac{(10-12)^{2}}{12} + \frac{(21-25)^{2}}{25}  + \frac{(10-12)^{2}}{12} $$
-4.971 + 1.471 + 0.333 + 0.640 + 0.333 = 7.7478 with 5-1=4 df.</li>
+  <li>The &chi;<sup>2</sup> test statistic is $\frac{(47-34)^{2}}{34}$ + $\frac{(12-17)^{2}}{17}$ + $\frac{(10-12)^{2}}{12}$ + $\frac{(21-25)^{2}}{25}$  + $\frac{(10-12)^{2}}{12}$ = 4.971 + 1.471 + 0.333 + 0.640 + 0.333 = 7.7478 with 5-1=4 df.</li>
   <li>The p-value is `r kPvalue(distrib(7.7478,distrib="chisq",df=4,lower.tail=FALSE,plot=FALSE),include.p=FALSE,latex=FALSE)`.</li>
   <li>The H<sub>O</sub> is not rejected because the p-value>&alpha;.</li>
   <li>The bear appears to use the habitats in proportion to the availability of the habitat.</li>
@@ -286,21 +282,11 @@ exp <- c(consumed=0.33,not.consumed=1-0.33)
 
 `r tbls("ginseng")`
 
-  \begin{table}[!h]
-    \begin{center}
-        \begin{tabular}{ccc}
-          \hline\hline
-          & Obs & Exp \\
-          Consumed & Freq & Freq \\
-          \hline
-          Yes & 33 & `r formatC(gin.chi$expected[1],format="f",digits=2)` \\
-          No  & 40 & `r formatC(gin.chi$expected[2],format="f",digits=2)` \\
-          \hline
-          Total & 73 & 73 \\
-          \hline\hline
-        \end{tabular}
-      \end{center}
-    \end{table}
+Habitat | Obs Freq | Exp Freq
+------- | -------- | --------
+Yes | 33 | `r formatC(gin.chi$expected[1],format="f",digits=2)`
+No  | 40 | `r formatC(gin.chi$expected[2],format="f",digits=2)`
+<br>
 
   <li>The &chi;<sup>2</sup> test statistic is `r formatC(gin.chi$statistic,format="f",digits=3)` with `r formatC(gin.chi$parameter,format="f",digits=0)` df (`r tbls("ginseng2",display="cite")`).</li>
 
@@ -335,20 +321,20 @@ exp <- rep(69/7,7)
 ```
 
 <ol>
-  <li>&alpha; =0.05.
-  <li>H<sub>O</sub>:"The proportion of road rage incidents is the same on each day of the week" versus H<sub>A</sub>:"The proportion of road rage incidents is NOT the same on each day of the week".
-  <li>A goodness-of-fit test is required because a categorical response variable with seven levels (days of the week) from a single group or population was recorded and the frequency of responses is being compared to a theoretical distribution in the null hypothesis.
-  <li>This is an observational study without obvious randomization.
-  <li> The expected number of road rage incidents on each day is $\frac{69}{7}$ = `r formatC(69/7,format="f",digits=1)` which are all greater than five. Thus, the test statistic computed below should reasonably follow a chi-square distribution.
-  <li>The table of observed frequencies is shown in `r tbls("roadrage",display="cite")`
+  <li>&alpha; =0.05.</li>
+  <li>H<sub>O</sub>:"The proportion of road rage incidents is the same on each day of the week" versus H<sub>A</sub>:"The proportion of road rage incidents is NOT the same on each day of the week".</li>
+  <li>A goodness-of-fit test is required because a categorical response variable with seven levels (days of the week) from a single group or population was recorded and the frequency of responses is being compared to a theoretical distribution in the null hypothesis.</li>
+  <li>This is an observational study without obvious randomization.</li>
+  <li> The expected number of road rage incidents on each day is $\frac{69}{7}$ = `r formatC(69/7,format="f",digits=1)` which are all greater than five. Thus, the test statistic computed below should reasonably follow a chi-square distribution.</li>
+  <li>The table of observed frequencies is shown in `r tbls("roadrage",display="cite")`.</li>
   
-`r tbls("roadrage1")`
+`r tbls("roadrage")`
 
 ```{r echo=FALSE,background="white"}
 obs
 ```
 
-  <li>The &chi;<sup>2</sup> test statistic is `r formatC(rr.chi$statistic,format="f",digits=3)` with `r formatC(rr.chi$parameter,format="f",digits=0)` df (`r tbls("roadrage2",display="cite")`).
+  <li>The &chi;<sup>2</sup> test statistic is `r formatC(rr.chi$statistic,format="f",digits=3)` with `r formatC(rr.chi$parameter,format="f",digits=0)` df (`r tbls("roadrage2",display="cite")`).</li>
   
 `r tbls("roadrage2")`
 
@@ -356,11 +342,11 @@ obs
 kHtest(rr.chi)
 ```
 
-  <li>The p-value is `r kPvalue(rr.chi$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("roadrage2",display="cite")`).
-  <li>The H<sub>O</sub> is rejected because the p-value<&alpha;.
-  <li>It appears that the proportion of incidences of road rage differs among the days of the week.
-  <li>An examination of the confidence interval results (`r tbls("roadrage3",display="cite")`) suggests that there are more incidences of road rage on Fridays and possibly fewer on Mondays than would be expected.
-  
+  <li>The p-value is `r kPvalue(rr.chi$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("roadrage2",display="cite")`).</li>
+  <li>The H<sub>O</sub> is rejected because the p-value<&alpha;.</li>
+  <li>It appears that the proportion of incidences of road rage differs among the days of the week.</li>
+  <li>An examination of the confidence interval results (`r tbls("roadrage3",display="cite")`) suggests that there are more incidences of road rage on Fridays and possibly fewer on Mondays than would be expected.</li>
+
 `r tbls("roadrage3")`
 
 ```{r RRCI, echo=FALSE,background="white"}
