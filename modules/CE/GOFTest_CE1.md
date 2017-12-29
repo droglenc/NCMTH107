@@ -15,8 +15,6 @@ output:
 <img src="zimgs/bottled-water-waste.jpg" alt="Bottled water waste" class="img-right">
 Students in an Introduction to Environmental Studies course conducted a study to determine preferences (or not) for types of drinking water. In one part of their study, a sample of students was given four types of drinking water in clear unmarked cups. The water was either from the local water source (tap water) or bottled water from Aquafina, Fiji, or Sam's Choice. Each subject tried each sample of water, without knowing which type they were trying, and then recorded their "preference ranking." They found that 51, 18, 17, and 21 subjects rated tap water, Aquafina, Fiji, and Sam's Choice options, respectively, as their least-preferred choice. Use these results to determine, at the 1% level, if there is any differences in the least-preferred choice of drinking water.  Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](11-steps).[^1]
 
-[^1]: This example is modified from [Lumsford and Fink (2010)](http://www.amstat.org/publications/jse/v18n1/lunsford.pdf)
-
 ----
 
 ## Habitat Use by Wild Turkeys
@@ -38,7 +36,7 @@ Use these results to determine, at the 5% level, if the turkey's exhibited a hab
 
 ## Random Jury Pool?
 <img src="zimgs/jury-box.jpg" alt="Jury Box" class="img-right">
-A defense attorney claimed that a jury pool is not representative of the larger population in the court's district.  In particular, she was concerned that the jury pool contained fewer "young people" than would be expected based on district demographics.  To test her claim, she created seven age categories, counted the number of individuals from the jury pool in each age category, and found the percentage of the district in each age category from the most recent census data.  Her findings are below.[^1]
+A defense attorney claimed that a jury pool is not representative of the larger population in the court's district.  In particular, she was concerned that the jury pool contained fewer "young people" than would be expected based on district demographics.  To test her claim, she created seven age categories, counted the number of individuals from the jury pool in each age category, and found the percentage of the district in each age category from the most recent census data.  Her findings are below.[^2]
 
 <pre>
 Ages         18-19    20-24    25-29    30-39    40-49    50-64      65+
@@ -46,7 +44,7 @@ Jury Pool       23       96      134      293      297      380      113
 District      6.1%    15.0%    13.5%    21.7%    15.3%    18.2%    10.2%
 </pre>
 
-Use these results to determine, at the 10% level, if the age distribution in the jury pool accurately represents the age distriction of the district as a whole.  Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](11-steps).  Also comment on whether the attorney's specific concern was warranted.
+Use these results to determine, at the 10% level, if the age distribution in the jury pool accurately represents the age distriction of the district as a whole.  Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../11-steps).  Also comment on whether the attorney's specific concern was warranted.
 
 ----
 
@@ -62,4 +60,6 @@ Use these results to determine, at the 10% level, if the age distribution in the
 
 <h3>Footnotes</h3>
 
-[^1]: This example is modified from [these materials](http://www.unc.edu/~nielsen/soci708/mod9/soci708mod9_stata.pdf).
+[^1]: This example is modified from [Lumsford and Fink (2010)](http://www.amstat.org/publications/jse/v18n1/lunsford.pdf)
+
+[^2]: This example is modified from [these materials](http://www.unc.edu/~nielsen/soci708/mod9/soci708mod9_stata.pdf).
