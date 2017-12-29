@@ -68,16 +68,17 @@ An overall score will be computed from the items and associated weights listed i
 <form name="GRADECALC">
 <table class="grader" width="90%">
 <tr><th width="14%"></th>
-<th width="%"><a href="#preparation-check">Prep<br>Check</a></th>
-<th width="20%"><a href="#participation">Partici-<br>pation</a></th>
-<th width="15%"><a href="#quizzes">Quiz 1</a></th>
-<th width="15%"><a href="#quizzes">Quiz 2</a></th>
-<th width="15%"><a href="#quizzes">Quiz 3</a></th>
-<th width="15%"><a href="#quizzes">Final</a></th>
+<th width="13%"><a href="#preparation-check">Prep<br>Check</a></th>
+<th width="13%"><a href="#participation">Partici-<br>pation</a></th>
+<th width="12%"><a href="#quizzes">Quiz 1</a></th>
+<th width="12%"><a href="#quizzes">Quiz 2</a></th>
+<th width="12%"><a href="#quizzes">Quiz 3</a></th>
+<th width="12%"><a href="#quizzes">Quiz 4</a></th>
+<th width="12%"><a href="#quizzes">Final</a></th>
 </tr>
 
 <tr><th>Weight</th>
-<th>10%</th><th>10%</th><th>15%</th><th>15%</th><th>15%</th><th>35%</th></tr>
+<th>10%</th><th>10%</th><th>12.5%</th><th>12.5%</th><th>12.5%</th><th>12.5%</th><th>30%</th></tr>
 
 <tr><th>Percent</th>
 <td><input type="text" name="READ_SC" size="3" tabindex="1" onchange="calc_grade(this.form)"></td>
@@ -85,11 +86,12 @@ An overall score will be computed from the items and associated weights listed i
 <td><input type="text" name="Q1_SC" size="3" tabindex="3" onchange="calc_grade(this.form)"></td>
 <td><input type="text" name="Q2_SC" size="3" tabindex="4" onchange="calc_grade(this.form)"></td>
 <td><input type="text" name="Q3_SC" size="3" tabindex="5" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="FNL_SC" size="3" tabindex="6" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="Q4_SC" size="3" tabindex="6" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="FNL_SC" size="3" tabindex="7" onchange="calc_grade(this.form)"></td>
 </tr>
 
 <tr><th colspan="4">Overall Percentage: <input type="text" name="SCORE" size="4"></th>
-<th colspan="3">Projected Grade: <input type="text" name="GRADE" size="2"></th></tr>
+<th colspan="4">Projected Grade: <input type="text" name="GRADE" size="2"></th></tr>
 </table>
 </form>
 
