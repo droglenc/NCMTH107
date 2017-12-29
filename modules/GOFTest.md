@@ -39,7 +39,7 @@ Use the materials below to answer the questions on [this preparation guide](GOFT
 
 ## Practice
 
-* [Exercises](CE/GOFTest_CE)
+* [Exercises](CE/GOFTest_CE1) ([*more as time permits*](CE/GOFTest_CE2)) ... [ANSWER KEY](CE/GOFTest_CE_Keys)
 * [Review Exercises](RE/GOFTest_RevEx)
 
 ----

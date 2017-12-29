@@ -8,19 +8,24 @@ output:
   html_document:
     fig_height: 3
     fig_width: 3.5
-    self_contained: no
+    self_contained: false
 ---
 
 ```{r echo=FALSE, eval=FALSE}
-# Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/")
-source("../rhelpers/rhelpers.R")
-modHTML("GOFTest_CE_Keys")
+## Renders an appropriate HTML file for the webpage
+fnm <- "GOFTest_CE_Keys"
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/Keys")
+source("../../../rhelpers/rhelpers.R")
+modHTML(fnm)
+## And moves it to make it available to students
+file.rename(from=paste0(fnm,".html"),to=paste0("../",fnm,".html"))
+dir.create(paste0("../",fnm,"_files"),showWarnings=FALSE)
+file.copy(from=paste0(fnm,"_files"),to=paste0("../"),recursive=TRUE)
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
-source("../rhelpers/knitr_setup.R")
+source("../../../rhelpers/knitr_setup.R")
 library(captioner)
 tbls <- captioner(prefix="Table")
 
@@ -39,6 +44,12 @@ tbls(name="JuryObsTable","Observed frequency of jurors by age category.")
 tbls(name="JuryResults","Goodness-of-fit test results for testing that the distribution of jurors by age category matched the distribution in the district as a whole.")
 tbls(name="JurySum","Summary table of the proportion of jurors in each habitat type, with 95% confidence intervals and expected proportions from the goodness-of-fit test.")
 
+tbls(name="bear","Observed and expected frequencies for habitat use by a bear.")
+tbls(name="ginseng","Observed and expected frequencies for browsing by deer on ginseng plants.")
+tbls(name="ginseng2","Results from the goodness-of-fit test for testing that more than one-third of ginseng plants were browsed by deer.")
+tbls(name="roadrage","Observed frequencies of road rage by day of the week.")
+tbls(name="roadrage2","Results from the goodness-of-fit test for testing that the frequencies of road rage differed among days of the week.")
+tbls(name="roadrage3","Confidence intervals (95%) for the proportion of observations of road rage by day of the week.")
 ```
 
 ----
@@ -221,3 +232,163 @@ R Appendix.
 ```
 
 ----
+
+## Bear Habitat Use
+<ol>
+  <li>&alpha; =0.10.</li>
+  <li>H<sub>O</sub>:"The proportion of habitats used by the bear is the same as the proportions of available habitat" versus H<sub>A</sub>:"The proportion of habitats used by the bear is the same as the proportions of available habitat."</li>
+  <li>A goodness-of-fit test is required because a single categorical variable (habitat use) from a single group or population (this bear) was measured and the proportions are being compared to a theoretical distribution in the null hypothesis.</li>
+  <li>This is an observational study with randomly selected times for observation.</li>
+  <li>The expected number of observations in each habitat is in proportion to the GIS analysis of habitat availability. Thus, the expected number in each habitat is shown in `r tbls("bear",display="cite")` (along with the observed frequencies). Note that these percentages did not need to be adjusted to the number of observations because 100 observations were made. The test statistic computed below should reasonably follow a chi-square distribution because all of the expected values are greater than five.</li>
+  
+`r tbls("bear")`
+
+\begin{table}[!h]
+  \begin{center}
+      \begin{tabular}{ccc}
+        \hline\hline
+        & Obs & Exp \\
+        Habitat & Freq & Freq \\
+        \hline
+        Lowland Conifer  & 47 & 34 \\
+        Aspen            & 12 & 17 \\
+        Open Areas       & 10 & 12 \\
+        Upland Hardwoods & 21 & 25 \\
+        Mixed Upland     & 10 & 12 \\
+        \hline
+        Total & 100 & 100 \\
+        \hline\hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  
+  <li>The table of observed frequencies is shown in `r tbls("bear",display="cite")`.</li>
+  <li>The &chi;<sup>2</sup> test statistic is thus,
+    \begin{center}
+      \[  \begin{split}
+        \chi^{2} &= \frac{(47-34)^{2}}{34} + \frac{(12-17)^{2}}{17} + \frac{(10-12)^{2}}{12} + \frac{(21-25)^{2}}{25}  + \frac{(10-12)^{2}}{12} \\
+          &= 4.971 + 1.471 + 0.333 + 0.640 + 0.333 \\
+          &= 7.7478 \\
+      \end{split}  \]
+    \end{center}
+    with 5-1=4 df.</li>
+  <li>The p-value is `r kPvalue(distrib(7.7478,distrib="chisq",df=4,lower.tail=FALSE,plot=FALSE),include.p=FALSE,latex=FALSE)`.</li>
+  <li>The H<sub>O</sub> is not rejected because the p-value>&alpha;.</li>
+  <li>The bear appears to use the habitats in proportion to the availability of the habitat.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+library(NCStats)
+( distrib(7.7478,distrib="chisq",df=4,lower.tail=FALSE) )
+```
+
+
+## Ginseng Consumption by Deer
+```{r GINCalc,echo=FALSE, results='hide'}
+obs <- c(consumed=33,not.consumed=40)
+exp <- c(consumed=0.33,not.consumed=1-0.33)
+( gin.chi <- chisq.test(obs,p=exp,correct=FALSE) )
+( gin.p <- gofCI(gin.chi) )
+```
+
+<ol>
+  <li>&alpha; =0.05.</li>
+  <li>H<sub>O</sub>:"The proportion of ginseng plants consumed by deer is 0.33" versus H<sub>A</sub>:"The proportion of ginseng plants consumed by deer is NOT 0.33".</li>
+  <li>A goodness-of-fit test is required because a categorical variable (consumed or not) from a single group or population was recorded and the frequency of responses is being compared to a theoretical distribution in the null hypothesis.</li>
+  <li>An observational study with randomly selected plants was used.</li>
+  <li>The expected number of consumed plants is 73&times;0.33=`r formatC(gin.chi$expected[1],format="f",digits=2)`. The expected number of plants not consumed by deer is 73&times;(1-0.33)=`r formatC(gin.chi$expected[2],format="f",digits=2)`. the test statistic computed below should reasonably follow a chi-square distribution because both of these expected values is greater than five.</li>
+  <li>The table of observed frequencies is in `r tbls("ginseng",display="cite")` (along with the expected frequencies from the previous step).</li>
+
+`r tbls("ginseng")`
+
+  \begin{table}[!h]
+    \begin{center}
+        \begin{tabular}{ccc}
+          \hline\hline
+          & Obs & Exp \\
+          Consumed & Freq & Freq \\
+          \hline
+          Yes & 33 & `r formatC(gin.chi$expected[1],format="f",digits=2)` \\
+          No  & 40 & `r formatC(gin.chi$expected[2],format="f",digits=2)` \\
+          \hline
+          Total & 73 & 73 \\
+          \hline\hline
+        \end{tabular}
+      \end{center}
+    \end{table}
+
+  <li>The &chi;<sup>2</sup> test statistic is `r formatC(gin.chi$statistic,format="f",digits=3)` with `r formatC(gin.chi$parameter,format="f",digits=0)` df (`r tbls("ginseng2",display="cite")`).</li>
+
+`r tbls("ginseng2")`
+
+```{r echo=FALSE,background="white"}
+kHtest(gin.chi)
+```
+
+  <li>The p-value is `r kPvalue(gin.chi$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("ginseng2",display="cite")`).</li>
+  <li>The H<sub>O</sub> is rejected because the p-value<&alpha;.</li>
+  <li>It appears that more than 33% of the ginseng plants at this site and year were consumed by deer.</li>
+  <li>One is 95% confident that the proportion of ginseng plants consumed by deer is between `r formatC(gin.p["consumed","p.LCI"],format="f",digits=3)` and `r formatC(gin.p["consumed","p.UCI"],format="f",digits=3)`.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+library(NCStats)
+<<GINCalc>>
+```
+
+## Road Rage
+```{r echo=FALSE}
+rr <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/RoadRage.csv")
+```
+```{r RRCalc, echo=FALSE, results='hide'}
+rr$Day1 <- factor(rr$Day,levels=c("M","Tu","W","Th","F","Sa","Su"))
+obs <- table(rr$Day1)
+exp <- rep(69/7,7)
+( rr.chi <- chisq.test(obs,p=exp,correct=FALSE,rescale=TRUE) )
+( rr.ci <- gofCI(rr.chi) )
+```
+
+<ol>
+  <li>&alpha; =0.05.
+  <li>H<sub>O</sub>:"The proportion of road rage incidents is the same on each day of the week" versus H<sub>A</sub>:"The proportion of road rage incidents is NOT the same on each day of the week".
+  <li>A goodness-of-fit test is required because a categorical response variable with seven levels (days of the week) from a single group or population was recorded and the frequency of responses is being compared to a theoretical distribution in the null hypothesis.
+  <li>This is an observational study without obvious randomization.
+  <li> The expected number of road rage incidents on each day is $\frac{69}{7}$ = `r formatC(69/7,format="f",digits=1)` which are all greater than five. Thus, the test statistic computed below should reasonably follow a chi-square distribution.
+  <li>The table of observed frequencies is shown in `r tbls("roadrage",display="cite")`
+  
+`r tbls("roadrage1")`
+
+```{r echo=FALSE,background="white"}
+obs
+```
+
+  <li>The &chi;<sup>2</sup> test statistic is `r formatC(rr.chi$statistic,format="f",digits=3)` with `r formatC(rr.chi$parameter,format="f",digits=0)` df (`r tbls("roadrage2",display="cite")`).
+  
+`r tbls("roadrage2")`
+
+```{r echo=FALSE,background="white"}
+kHtest(rr.chi)
+```
+
+  <li>The p-value is `r kPvalue(rr.chi$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("roadrage2",display="cite")`).
+  <li>The H<sub>O</sub> is rejected because the p-value<&alpha;.
+  <li>It appears that the proportion of incidences of road rage differs among the days of the week.
+  <li>An examination of the confidence interval results (`r tbls("roadrage3",display="cite")`) suggests that there are more incidences of road rage on Fridays and possibly fewer on Mondays than would be expected.
+  
+`r tbls("roadrage3")`
+
+```{r RRCI, echo=FALSE,background="white"}
+round(rr.ci,2)
+```
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+library(NCStats)
+setwd('C:/aaaWork/Books/IntroStats/HW/')
+rr <- read.csv("RoadRage.csv")
+<<RRCalc>>
+<<RRCI>>
+```

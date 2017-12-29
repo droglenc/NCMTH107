@@ -1,30 +1,34 @@
 ---
 layout: page
-title: Class Exercise
-subtitle: Goodness-of-Fit Test 2
+title: Exercises
+subtitle: Goodness-of-Fit Test
 author: Derek H. Ogle
 css: "/css/modules.css"
 output:
   html_document:
-    self_contained: no
+    self_contained: false
 ---
 
 ----
 
-## Habitat Use by Wild Turkeys
-<img src="zimgs/merriam-turkey.jpg" alt="Merriam's Turkey" class="img-right">
-[Rumble and Anderson (1992)](http://www.fs.fed.us/rm/pubs_other/rmrs_1992_rumble_m002.pdf) examined habitat use by [Merriam's Wild Turkey (*Meleagris gallopavo merriami*)](http://wildturkeyzone.com/wildturkey/merriams.htm) in South Dakota.  In one part of their study they identified the major vegetative type (called Habitat below) in 4-32 hectare sampling units.  They then computed the proportions of total area available to turkeys by major vegetation type (first row below).  Turkeys' were trapped and fit with radio transmitters.  Each bird was then located three times per week with the location of the bird being recorded.  The frequency of locations by each major vegatation type was computed for each of four seasons.  The area available and the seasonal frequency of turkey locations in each habitat are shown below.
+## Bear Habitat Use
+<img src="zimgs/black-bear-in-tree.jpg" alt="Black Bear in Tree" class="img-right">
 
-<pre>
-Habitat             Aspen    Meadow     Pine    Oak/Spruce
-Area Avaialable    0.0516    0.1016    0.8371    0.0100
-Winter Use             4        11       186         4         
-Spring Use            61         9       807         1
-Summer Use            17         5       100         4
-Fall Use              14         7       195         2
-</pre>
+A researcher for the Wisconsin Department of Natural Resources has radio-collared several Black Bears in northern Wisconsin. At randomly selected times the researcher attempts to locate the bears and record what type of habitat they are in. For one particular bear the researcher recorded the following data: 47 observations in lowland conifer habitat, 12 in aspen, 10 in open areas, 21 in upland hardwood, and 10 in mixed upland. In addition, through GIS analysis of vegetation cover layers the researcher has determined that 34% of the available habitat is lowland conifer, 17% is in aspen, 12% is in open areas, 25% is in upland hardwoods, and 12% is in mixed upland. Use these results to determine, at the 10% level, if this bear uses these habitats in proportion to their availability.
 
-Use these results to determine, at the 5% level, if the turkey's exhibited a habitat preference in the **Spring**.  Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](11-steps).
+----
+
+## Ginseng Consumption by Deer
+<img src="zimgs/deer-eating-ginseng.jpg" alt="Deer Eating Ginseng" class="img-right">
+
+[Furedi and McGraw (2004)](https://www.researchgate.net/publication/228788782_White-tailed_Deer_Dispersers_or_Predators_of_American_Ginseng_Seeds) examined predation of American Ginseng (*Panax quinquefolius* L.) by Whitetail Deer (*Odocoileus virginianus* Z.). At one location and year in their study (P5, 2003) they found that 33 of 73 randomly selected reproductive ginseng plants had been consumed by deer. Use this information to determine, at the 5% significance level, if more than 33% of all plants at this location and year were consumed by deer.
+
+----
+
+## Road Rage
+<img src="zimgs/road-rage.jpg" alt="Road Rage" class="img-right">
+
+Road rage was defined as "an incident in which an angry or impatient motorist or passenger intentionally injures or kills another motorist, passenger, or pedestrian, or attempts or threatens to injure or kill another motorist, passenger, or pedestrian." [Rathbone and Huckabee (1999)](https://www.aaafoundation.org/sites/default/files/RoadRageFinal.pdf) reported the day of the week that 69 incidents of road rage occurred. The results of the study are in the **RoadRage.csv** ([data](https://raw.githubusercontent.com/droglenc/NCData/master/RoadRage.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/RoadRage_meta.txt)) data file. Use this information to determine, at the 5% level, if incidents of road rage occur more often on certain days of the week.
 
 ----
 
@@ -33,7 +37,6 @@ Use these results to determine, at the 5% level, if the turkey's exhibited a hab
   <li><a href="GOFTest.html">^</a></li>
   <li><a href="GOFTest_CE1.html">1</a></li>
   <li class="active"><a href="#">2</a></li>
-  <li><a href="GOFTest_CE3.html">3</a></li>
 </ul>
 </div>
 
