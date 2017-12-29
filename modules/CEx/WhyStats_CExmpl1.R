@@ -28,4 +28,4 @@ hist(~tmp,xlab="Percent Male",w=2)
 abline(v=percTable(xtabs(~sex,data=ABCens90))[["male"]],lwd=2,lty=2)
 
 
-# Script created at 2017-12-27 08:39:26
+# Script created at 2017-12-29 10:29:46
