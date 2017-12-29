@@ -4,11 +4,12 @@ set_parent('IntroStats.Rnw')
 
 \chapter[Chi-Square Test]{Chi-Square Test} \label{chap:ChiSquare}
 
+\vspace{-12pt}
 \minitoc
 
 \lettrine{S}{ituations where a categorical} response variable is recorded would be summarized with a frequency or percentage table (see Modules \ref{chap:UnivEDACat} and \ref{chap:BivEDACat}). The appropriate test statistic in these situations is a chi-square rather than a t. The Chi-Square Test test statistic follows a chi-square distribution, which is introduced below. The rest of this module is dedicated to the general Chi-Square Test where the distribution of a categorical response variable is compared between two or more groups (or populations). The related goodness-of-fit test for a categorical response recorded for only one group (or population) is introduced in \modref{chap:GOF}.
 
-
+\vspace{-12pt}
 \section{Chi-Square Distribution}\label{sect:ChiDist}
 \vspace{-6pt}
 A chi-square ($\chi^2$) distribution is generally right-skewed \figrefp{fig:chiDist}, with the exact shape dictated by the degrees-of-freedom (df; as df increase, the sharpness of the skew decreases; \figref{fig:chiDist}). In its simplest form, the $\chi^2$ distribution arises as a sampling distribution for the $\chi^2$ test statistic,
@@ -152,7 +153,7 @@ The Chi-Square Test is characterized by a categorical response variable recorded
 \end{minipage}}
 \end{table}
 
-In general, a confidence region is not constructed for a Chi-Square Test because of the complexity of the parameter (i.e., same size as the observed table). Thus, in this course, Step 11 for a hypothesis test will not be computed for a Chi-Square Test.
+In general, a confidence region is not constructed for a Chi-Square Test because of the complexity of the statistics and parameter. Thus, in this course, Step 11 for a hypothesis test will not be computed for a Chi-Square Test.
 
 \vspace{-3pt}
 \subsection{Example -- Christmas Trees}
@@ -182,48 +183,13 @@ Below are the 11-steps \sectrefp{sec:11Steps} for a full hypothesis test for the
 \end{minipage}
 
 
-\vspace{6pt}
-\section{Chi-Square test in R}
+\vspace{12pt}
+\section{Chi-Square test in R (Raw Data)}
 \vspace{-3pt}
-\subsection{Data Format}
-The data for a Chi-Square Test may be entered from summarized data or computed from raw data on individuals. Raw data must be in stacked format where one column in the data.frame represents the response variable and another column represents the groups (see Sections \ref{sect:REnterData} and \ref{sect:2tData}). Raw data must be summarized into a two-way frequency table with \R{xtabs()} as described in \modref{chap:BivEDACat}. The two-way table must contain frequencies, not proportions or percentages (don't use \R{percTable()}), without marginal totals (don't use \R{addMargins()}).
+The data for a Chi-Square Test may be computed from raw data on individuals (this section) or entered from summarized data (see \sectref{sect:chiRSmrzd}). Raw data must be in stacked format where one column in the data.frame represents the response variable and another column represents the groups (see Sections \ref{sect:REnterData} and \ref{sect:2tData}). Raw data must be summarized into a two-way frequency table with \R{xtabs()} as described in \modref{chap:BivEDACat}. The two-way table must contain frequencies, not proportions or percentages (don't use \R{percTable()}), without marginal totals (don't use \R{addMargins()}).
 
-Summarized data must be entered into a two-dimensional matrix. The frequencies must first be entered into a vector with the first row of values followed by the second row and so on. This vector is then the first argument to \R{matrix()}, which will also include the number of rows in the frequency table in \R{nrow=} and \R{byrow=TRUE} (which causes the values in the vector to be entered into the matrix in a row-wise manner). The process of entering summarized data into a matrix is better explained by example.
-
-Suppose that you are given this observed frequency table.
-
-\begin{center}
-  \begin{tabular}{c|c|c|c|c|c|c|c|}
-    \multicolumn{1}{c}{} & \multicolumn{6}{c}{Species} & \multicolumn{1}{c}{} \\
-    \cline{2-7}
-    Location & A & B & C & D & E & F & \multicolumn{1}{c}{} \\
-    \hline
-    \multicolumn{1}{|c|}{DI} & 34 & 22 & 14 & 13 & 12 & 5 & \textbf{100} \\
-    \hline
-    \multicolumn{1}{|c|}{BP} & 62 & 12 & 8 & 7 & 6 & 5 & \textbf{100} \\
-    \hline
-    & \textbf{96} & \textbf{34} & \textbf{22} & \textbf{20} & \textbf{18} & \textbf{10} & \textbf{200} \\
-    \cline{2-8}
-  \end{tabular}
-\end{center}
-
-The observed frequencies, ignoring the marginal sums, are first entered into a vector called \R{freq} below, which is then transformed into a two-row matrix called \R{obstbl}.
-<<>>=
-( freq <- c(34,22,14,13,12,5,62,12,8,7,6,5) )
-( obstbl <- matrix(freq,nrow=2,byrow=TRUE) )
-@
-
-The matrix is more informative if the rows and columns are named with \R{rownames()} and \R{colnames()} as shown below.
-<<>>=
-rownames(obstbl) <- c("DI","BP")
-colnames(obstbl) <- c("A","B","C","D","E","F")
-obstbl
-@
-
-\subsection{Chi-Square Test}
 The Chi-Square Test is performed with \R{chisq.test()}, which takes an observed frequency table either entered through \R{matrix()} or summarized with \R{xtabs()} as the first argument. The only other argument needed is \R{correct=FALSE} so that the continuity correction is not used.\footnote{The continuity correction is not used here simply so that the results using R will match hand-calculations. The continuity correction should usually be used.} The results of \R{chisq.test()} should be assigned to an object. The Chi-Square test statistic and p-value are extracted by simply printing the saved object. The expected frequency table is returned by appending \R{\$expected} to the saved object.
 
-\subsection{Post-Hoc Analysis}
 Rejecting the null hypothesis in a Chi-Square Test indicates that there is some difference in the distribution of individuals into the levels of the response variable among some of the groups. However, rejecting the null hypothesis does not indicate which groups are different. In addition, as mentioned previously, confidence intervals are generally not performed with a Chi-Square Test. A post-hoc method for helping determine which groups differ is obtained by observing the Pearson residuals.
 
 A Pearson residual is computed for each cell in the table as,
@@ -310,19 +276,42 @@ percTable(fp.obs,margin=1,digits=1)
 \end{table}
 
 
-<<ChiAI, echo=FALSE, results='hide', fig.show='hide', warning=FALSE>>=
-freq <- c(34,22,14,13,12,5,62,12,8,7,6,5)
-ai.obs <- matrix(freq,nrow=2,byrow=TRUE)
-rownames(ai.obs) <- c("DI","BP")
-colnames(ai.obs) <- c("A","B","C","D","E","F")
-( ai.chi <- chisq.test(ai.obs) )
-ai.chi$expected
-ai.chi$residuals
-percTable(ai.obs,margin=1,digits=1)
-ai.obs1 <- ai.obs[,-1]
-( ai.chi1 <- chisq.test(ai.obs1) )
+\vspace{6pt}
+\section{Chi-Square test in R (Summarized Data)} \label{sect:chiRSmrzd}
+\vspace{-3pt}
+Two-way frequency datat that has already been summarized (outside of R) must be entered into a two-dimensional matrix. The frequencies must first be entered into a vector with the first row of values followed by the second row and so on. This vector is then the first argument to \R{matrix()}, which will also include the number of rows in the frequency table in \R{nrow=} and \R{byrow=TRUE} (which causes the values in the vector to be entered into the matrix in a row-wise manner). The process of entering summarized data into a matrix is better explained by example.
+
+Suppose that you are given this observed frequency table.
+
+\begin{center}
+  \begin{tabular}{c|c|c|c|c|c|c|c|}
+    \multicolumn{1}{c}{} & \multicolumn{6}{c}{Species} & \multicolumn{1}{c}{} \\
+    \cline{2-7}
+    Location & A & B & C & D & E & F & \multicolumn{1}{c}{} \\
+    \hline
+    \multicolumn{1}{|c|}{DI} & 34 & 22 & 14 & 13 & 12 & 5 & \textbf{100} \\
+    \hline
+    \multicolumn{1}{|c|}{BP} & 62 & 12 & 8 & 7 & 6 & 5 & \textbf{100} \\
+    \hline
+    & \textbf{96} & \textbf{34} & \textbf{22} & \textbf{20} & \textbf{18} & \textbf{10} & \textbf{200} \\
+    \cline{2-8}
+  \end{tabular}
+\end{center}
+
+The observed frequencies, ignoring the marginal sums, are first entered into a vector called \R{freq} below, which is then transformed into a two-row matrix called \R{obstbl}.
+<<>>=
+( freq <- c(34,22,14,13,12,5,62,12,8,7,6,5) )
+( obstbl <- matrix(freq,nrow=2,byrow=TRUE) )
 @
 
+The matrix is more informative if the rows and columns are named with \R{rownames()} and \R{colnames()} as shown below.
+<<>>=
+rownames(obstbl) <- c("DI","BP")
+colnames(obstbl) <- c("A","B","C","D","E","F")
+obstbl
+@
+
+Once this observed table is constructed, the chi-square tests is performed exactly as described in the previous sections (i.e., starting with \R{chisq.test()}).
 
 \subsection{Example - Apostle Islands Plants}
 Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for the following situation:
@@ -345,6 +334,19 @@ Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis t
     \cline{2-8}
   \end{tabular}
 \end{center}
+
+<<ChiAI, echo=FALSE, results='hide', fig.show='hide', warning=FALSE>>=
+freq <- c(34,22,14,13,12,5,62,12,8,7,6,5)
+ai.obs <- matrix(freq,nrow=2,byrow=TRUE)
+rownames(ai.obs) <- c("DI","BP")
+colnames(ai.obs) <- c("A","B","C","D","E","F")
+( ai.chi <- chisq.test(ai.obs) )
+ai.chi$expected
+ai.chi$residuals
+percTable(ai.obs,margin=1,digits=1)
+ai.obs1 <- ai.obs[,-1]
+( ai.chi1 <- chisq.test(ai.obs1) )
+@
 
   \begin{Enumerate}
     \item $\alpha$=0.05.
