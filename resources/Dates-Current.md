@@ -25,7 +25,7 @@ Note that some of the more distant dates are subject to change.
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 15-Jan</td>
-    <td colspan="2"><span style="color:red">NO CLASS (Martin Luther King Jr. Day)</span></td></tr>
+    <td colspan="2"><span style="color:coral">NO CLASS (Martin Luther King Jr. Day)</span></td></tr>
 <tr><td>W 17-Jan</td>
     <td><a href="../modules/DataProduction">Data Production</a></td>
     <td>--</td></tr>
@@ -99,11 +99,11 @@ Note that some of the more distant dates are subject to change.
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 5-Mar</td>
-    <td colspan="2"><span style="color:red">NO CLASS (Mid-Session)</span></td></tr>
+    <td colspan="2"><span style="color:coral">NO CLASS (Mid-Session)</span></td></tr>
 <tr><td>M 7-Mar</td>
-    <td colspan="2"><span style="color:red">NO CLASS (Mid-Session)</span></td></tr>
+    <td colspan="2"><span style="color:coral">NO CLASS (Mid-Session)</span></td></tr>
 <tr><td>M 9-Mar</td>
-    <td colspan="2"><span style="color:red">NO CLASS (Mid-Session)</span></td></tr>
+    <td colspan="2"><span style="color:coral">NO CLASS (Mid-Session)</span></td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 12-Mar</td>
@@ -134,7 +134,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
     <td>Quiz 3 Reflection (Optional)</td></tr>
 <tr><td>F 30-Mar</td>
-    <td colspan="2"><span style="color:red">NO CLASS (Good Friday)</span></td></tr>
+    <td colspan="2"><span style="color:coral">NO CLASS (Good Friday)</span></td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 2-Apr</td>
@@ -149,18 +149,18 @@ Note that some of the more distant dates are subject to change.
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 9-Apr</td>
-    <td colspan="2"><span style="color:red">Third Quiz</span></td></tr>
-<tr><td>W 11-Apr</td>
     <td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td>
     <td>--</td></tr>
+<tr><td>W 11-Apr</td>
+    <td colspan="2"><span style="color:red">Fourth Quiz</span></td></tr>
 <tr><td>F 13-Apr</td>
     <td>Course Review</td>
-    <td>Quiz 4 Reflection (Optional)</td></tr>
+    <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 16-Apr</td>
     <td>Course Review</td>
-    <td>XC Reports (optional)</td></tr>
+    <td>Quiz 4 Reflection (Optional)<br>XC Reports (optional)</td></tr>
 <tr><td>W 18-Apr</td>
     <td>Course Review</td>
     <td>--</td></tr>
