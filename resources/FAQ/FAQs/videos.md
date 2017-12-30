@@ -14,12 +14,12 @@ Some students have reported issues with watching the class preparation videos. B
 ## Vimeo Videos
 The Vimeo videos require you to use the password "**NCStats**" (note capitalization and don't use the quotes). These vidoes may also have PowerPoint or other icons following the video link (see below), which lead to materials (slides, handouts, etc.) used in the video. Here is an example Vimeo video link:
 
-* Video: [Randomization in R](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins] [![Web](../../../img/web.png)](../../../modules/DataProduction_RHO.html){:target="_blank"}  [![PDF](../../../img/pdf.png)](../../../modules/DataProduction_RHO.pdf) [![MSWord](../../../img/word.png)](../../../modules/DataProduction_RHO.docx)  [![R](../../../img/Rlogo.png)](../../../modules/DataProduction_RHO.R){:target="_blank"}
+* Video: [Randomization in R](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins] [![Web](../../../img/web.png)](../../../modules/HO/DataProduction_RHO.html){:target="_blank"} [![R](../../../img/Rlogo.png)](../../../modules/HO/DataProduction_RHO.R){:target="_blank"}
 
 ----
 
 ## YouTube Videos
-These solutions depend on the type of brower you use and are categorized below. Here is a link to a sample YouTube video: [Types of Conclusions](https://www.youtube.com/v/5zkg1w5zoQ0?rel=0&start=1597){:target="_blank"} [3 mins]
+These solutions depend on the type of brower you use and are categorized below. Here is a link to a sample YouTube video: [Types of Conclusions](https://www.youtube.com/watch?v=5zkg1w5zoQ0){:target="_blank"} [3 mins; *start at 26:37*]
 
 
 #### Internet Explorer
