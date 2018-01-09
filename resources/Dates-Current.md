@@ -20,7 +20,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="Syllabus-Current">Syllabus</a><br><a href="../modules/WhyStats">Why Stats is Important?</a></td>
     <td>--</td></tr>
 <tr><td>F 12-Jan</td>
-    <td><a href="../modules/FoundationalDefns">Foundational Defitions</a></td>
+    <td><a href="../modules/FoundationalDefns">Foundational Definitions</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
