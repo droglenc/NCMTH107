@@ -29,7 +29,7 @@ source("../../rhelpers/knitr_setup.R")
 ## Scenario
 <img src="zimgs/cheesehead.jpg" alt="Cheesehead" class="img-right">
 
-Suppose that you have been hired to work for a company that makes "cheesheads" and that your first task is to market cheesheads to residents of Ashland and Bayfield counties (WI). Further suppose that to effectively market cheeseheads you need to know the mean age and percentage of males in all of Ashland and Bayfield counties.
+Suppose that you have been hired to work for a company that makes "cheesheads" and that your first task is to market cheesheads to residents of Ashland and Bayfield counties (WI). Further suppose that to effectively market cheeseheads you need to know the mean age and percentage of males **for everybody** in Ashland and Bayfield counties.
 
 * Is it possible to know these two values? Explain why or why not?
 * If you said that it was "not possible," is it reasonable to know these two values? Explain wny or why not?
@@ -61,6 +61,9 @@ library(NCStats)
 
 \ 
 
+<div class="alert alert-danger">Please don't go on to the next section until we have discussed the questions as a class.
+</div>
+
 \ 
 
 ## Summarize Your Sample
@@ -77,6 +80,9 @@ percTable(xtabs(~sex,data=samA),digits=1)
 
 \ 
 
+<div class="alert alert-danger">Please don't go on to the next section until we have discussed the questions as a class.
+</div>
+
 \ 
 
 ## Obtain a Second Random Sample
@@ -92,6 +98,9 @@ percTable(xtabs(~sex,data=samB),digits=1)
 
 \ 
 
+<div class="alert alert-danger">Please don't go on to the next section until we have discussed the questions as a class.
+</div>
+
 \ 
 
 ## Compare Your Results to the Truth
@@ -105,6 +114,9 @@ percTable(xtabs(~sex,data=ABCens90),digits=1)
 * Are your results (about whether the summaries from your sample matched the summary from the population) typical or expected?  Why or why not?
 
 \ 
+
+<div class="alert alert-danger">Please don't go on to the next section until we have discussed the questions as a class.
+</div>
 
 \ 
 
