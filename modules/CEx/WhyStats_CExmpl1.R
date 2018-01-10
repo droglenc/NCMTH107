@@ -1,12 +1,3 @@
-# Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CEx")
-source("../../rhelpers/rhelpers.R")
-fnm <- "WhyStats_CExmpl1"
-modHTML(fnm)
-
-fnm <- "WhyStats_CExmpl1"
-source("../../rhelpers/knitr_setup.R")
-
 library(NCStats)
 ( samA <- srsdf(ABCens90,n=100) )
 
@@ -28,4 +19,4 @@ hist(~tmp,xlab="Percent Male",w=2)
 abline(v=percTable(xtabs(~sex,data=ABCens90))[["male"]],lwd=2,lty=2)
 
 
-# Script created at 2017-12-29 10:29:46
+# Script created at 2018-01-10 08:29:59

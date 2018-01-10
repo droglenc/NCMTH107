@@ -12,7 +12,7 @@ output:
     lib_dir: zlibs
 ---
 ```{r echo=FALSE, eval=FALSE}
-# Renders an appropriate HTML file for the webpage
+## Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CEx")
 source("../../rhelpers/rhelpers.R")
 fnm <- "WhyStats_CExmpl1"
@@ -119,5 +119,5 @@ abline(v=percTable(xtabs(~sex,data=ABCens90))[["male"]],lwd=2,lty=2)
 ```
 
 ```{r echo=FALSE, results="hide", message=FALSE, warnings=FALSE}
-purl2(paste0(fnm,".Rmd"))
+purl2(paste0(fnm,".Rmd"),moreItems=c("source","setwd","fnm"))
 ```
