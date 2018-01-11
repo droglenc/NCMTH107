@@ -9,7 +9,7 @@ css: /css/syllabus.css
 
 * Class [Description](#description) and [Learning Outcomes](#learning-outcomes)
 * [Instructors](#instructor) and [Tutors](#tutors)
-* [Grading](#grading) -- [Preparatoin Check](#preparation-check), [Participation](#participation), [Quizzes](#quizzes), [Extra Credit](#extra-credit)
+* [Grading](#grading) -- [Preparation Check](#preparation-check), [Participation](#participation), [Quizzes](#quizzes), [Extra Credit](#extra-credit)
 * [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
 * [Accommodations](#accommodations)
 
