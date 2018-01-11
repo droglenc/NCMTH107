@@ -37,8 +37,8 @@ As with most areas of study, Statistics requires an understanding of key foundat
 Use the materials below to answer the questions on [this preparation guide](FoundationalDefns_Prep). [*Problems with videos? [See this FAQ](../resources/FAQ/FAQs/videos){:target="_blank"}.*]
 
 * [![PDF](../img/pdf.png) Reading](../book/Foundational Definitions.pdf)
-* [![Vimeo](../img/dhovid.png) IVPPSS](https://vimeo.com/user45324800/ncstats-ivppss){:target="_blank"} [7 mins] [![PowerPoint](../img/ppt.png)](FoundationalDefns_PPT1.pptx)
-* [![Vimeo](../img/dhovid.png) Variable Types](https://vimeo.com/user45324800/ncstats-vartypes){:target="_blank"} [5 mins] [![PowerPoint](../img/ppt.png)](FoundationalDefns_PPT2.pptx)
+* [![Vimeo](../img/dhovid.png) IVPPSS](https://vimeo.com/user45324800/ncstats-ivppss){:target="_blank"} [7 mins] [![PowerPoint](../img/ppt.png)](PPT/FoundationalDefns_PPT1.pptx)
+* [![Vimeo](../img/dhovid.png) Variable Types](https://vimeo.com/user45324800/ncstats-vartypes){:target="_blank"} [5 mins] [![PowerPoint](../img/ppt.png)](PPT/FoundationalDefns_PPT2.pptx)
 
 ----
 
