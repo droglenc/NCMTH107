@@ -49,10 +49,10 @@ smpl1 <- srsdf(named,n=50,vars=c("county","area"))
 smpl2 <- srsdf(named,n=50,vars=c("county","area"))
 ```
 
-1. The sample of 50 lakes is now shown (to save space). The area of the first three lakes were all different, which is an example of natural variability.
+1. The sample of 50 lakes is not shown (to save space). The area of the first three lakes were all different, which is an example of natural variability.
 1. The proportion of lakes in my first sample that were from Bayfield County was `r formatC(prop.table(xtabs(~county,data=smpl1))[["Bayfield"]],format="f",digits=3)`.
 1. The proportion of lakes in my second sample that were from Bayfield County was `r formatC(prop.table(xtabs(~county,data=smpl2))[["Bayfield"]],format="f",digits=3)`. These sample proportions differ, which is an example of sampling variability.
-1. My two sample proportions did not equal the population proportions. I was not surprized because samples do not perfectly represent the entire population. I would expect the statistics from the sample to be near (on average) the population parameter, but not always equal to it.
+1. My two sample proportions did not equal the population proportions. I was not surprised because samples do not perfectly represent the entire population. I would expect the statistics from the sample to be near (on average) the population parameter, but not always equal to it.
 
 <br>
 
@@ -88,7 +88,7 @@ print(sampB,row.names=FALSE)
 
 1. The average number of frogs in my first sample is `r formatC(mean(sampB$visual),format="f",digits=1)`.
 1. The average number of frogs per lake differed between the two samples. This is an example of sampling variability.
-1. Neither average number of frogs per lake equalled the known population average number of frogs per lake. I was not surprised by this result because a sample is representative but not perfectly representative of the entire population.
+1. Neither average number of frogs per lake equaled the known population average number of frogs per lake. I was not surprised by this result because a sample is representative but not perfectly representative of the entire population.
 
 ----
 
