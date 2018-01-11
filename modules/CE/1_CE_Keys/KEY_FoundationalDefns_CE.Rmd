@@ -21,16 +21,19 @@ source("../../../rhelpers/knitr_setup.R")
 
 ----
 
+<p class="bg-warn">In the next two sections of answers please note that the variable type must be one of continuous, discrete, nominal, or ordinal (saying quantitative or categorical is not specific enough).</p>
+
 ## Types of Variables I
 
+1. Miles driven per week is quantitative, continuous because another value CAN be found between any two miles driven values (e.g., a student can drive between 10 and 10.1 miles per week, between 10 and 10.01 miles per week, and so on).
 1. Type of vehicle is categorical, nominal because the types represent groups but there is no order among the groups.
 1. Signs of disease is categorical, nominal because "yes" and "no" are groups and a categorical variables with two levels is nominal by definition.
 1. Number of fleas is quantitative, discrete because another value can NOT be found between all pairs of numbers of fleas (e.g., there cannot be between 10 and 11 fleas).
 1. Relative health of a rabbit is categorical, ordinal because the health was organized by groups (e.g., excellent) and those groupings were ordered.
 1. Species of rabbit is categorical, nominal because species is a type of group, but there is no order among those groups.
-1. Number of correct answers is quantitative, discrete because a value cannot be found between all pairs of correct answers (e.g., there cannot be between 19 and 20 correct answers).
-1. Concentration of lead is quantitative, continuous because a value can be found between any pair of lead concentrations.
-1. Risk potential is categorical, ordinal because a grouping was created (e.g., "high rish") and those groupings have an order.
+1. Number of correct answers is quantitative, discrete because a value can NOT be found between all pairs of correct answers (e.g., there cannot be between 19 and 20 correct answers).
+1. Concentration of lead is quantitative, continuous because a value CAN be found between any pair of lead concentrations.
+1. Risk potential is categorical, ordinal because a grouping was created (e.g., "high risk") and those groupings have an order.
 1. Information medium is categorical, nominal because they are types, but those types do not have an ordering.
 1. The Koppen scheme is definitely categorical and I think it is nominal because I don't see an ordering in the given categories (i.e., they don't appear to range from wet to dry, cold to hot, north to south).
 
@@ -41,6 +44,18 @@ source("../../../rhelpers/knitr_setup.R")
 1. Answers will vary by student. See instructor if you have questions about your example.
 
 ----
+
+<p class="bg-warn">In the answers that follow please note the following things:
+<ul>
+<li>The specificity in the description for the individual (usually specific about "when" and "where").</li>
+<li>The use of "ALL" when describing the population and parameter.</li>
+<li>The list of a specific number of individuals when describing the sample and statistic.</li>
+<li>The use of a specific type of summary (almost always the mean/average or percentage/proportion) when describing the parameter and statistic. Further note that the same summary word is used for both the parameter and statistic.</li>
+<li>A summary word usually does not appear in the description of the variable.</li>
+<li>The variable type must be one of continuous, discrete, nominal, or ordinal (saying quantitative or categorical is not specific enough).</li>
+</ul>
+</p>
+
 
 ## Sustainability Survey
 
@@ -58,7 +73,7 @@ source("../../../rhelpers/knitr_setup.R")
 
 * I - A December in Duluth, MN in recorded history
 * V - Total snowfall amount
-* Po - **ALL** December in Duluth, MN in recorded history
+* Po - **ALL** Decembers in Duluth, MN in recorded history
 * Pa -- *Average* total snowfall amount from **ALL** Decembers in Duluth, MN in recorded history
 * Sa - 35 randomly sampled Decembers in Duluth, MN
 * St - *Average* total snowfall amount for the 35 sampled Decembers
@@ -81,7 +96,7 @@ source("../../../rhelpers/knitr_setup.R")
 ## Transfer of Invasive Species
 
 * I - a ballast tank on an ocean-going vessel in 2001.
-* V - whether or not the tank contain any living organisms.
+* V - whether or not the tank contained any living organisms.
 * Po - **ALL** ballast tanks on ocean-going vessels in 2001.
 * Pa - *proportion* of **ALL** ballast tanks that contained living organisms.
 * Sa - 43 ballast tanks in 2001.
@@ -98,7 +113,7 @@ source("../../../rhelpers/knitr_setup.R")
 * Pa -- *Average* playing time per game by **ALL** NHL rookies drafted straight from college (... from professional leagues)
 * Sa - 25 NHL rookies drafted straight from college (... from professional league)
 * St - *Average* playing time per game by 25 NHL rookies drafted straight from college (... from professional leagues)
-* Variable Type - Playing time is quantitative, continuous because an amount of playing time can be found between any two amounts of playing time (note that we could define time in smaller increments, we just choose not to).
+* Variable Type - Playing time is quantitative, continuous because an amount of playing time can be found between any two amounts of playing time (we could define time in smaller and smaller increments, we just choose not to).
 
 ----
 
