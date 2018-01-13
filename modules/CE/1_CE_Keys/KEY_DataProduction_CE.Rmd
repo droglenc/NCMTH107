@@ -45,12 +45,12 @@ source("../../../rhelpers/knitr_setup.R")
 
 ## Identify Response and Explanatory Variables I
 <div class="alert alert-warning">
-<strong>Note:</strong> The response variable is potentially responding to or depending on the explanatory variable. The response variable is potentially affected by the explanatory variable.
+<strong>Note:</strong> The response variable is potentially responding to, depending on, or affected by the explanatory variable.
 </div>
 
-1. The response variable is "success rate" because the distance of the putt effects the success rate (i.e., longer putts likely result in a lower success rate). And success rate (on putts) does not effect the length of a putt.
-1. The response variable is "response time" because the amount of time awake effects the response time (i.e., the longer one is awake, to a point, they will likely show more dexterity). And dexterity (on the test) does not effect how long the subject was awake.
-1. The response variable is growth because growth is effected by the amount of fertilizer.
+1. The response variable is "success rate" because the distance of the putt affects the success rate (i.e., longer putts likely result in a lower success rate). And success rate (on putts) does not affect the length of a putt.
+1. The response variable is "response time" because the amount of time awake affects the response time (i.e., the longer one is awake, to a point, they will likely show more dexterity). And dexterity (on the test) does not affect how long the subject was awake.
+1. The response variable is growth because growth is affected by the amount of fertilizer.
 1. It is not obvious which is the response variable. Thus, the response variable would depend on the researcher's question (i.e., if they were trying to predict shoe sales from hat sales, then shoe sales would be the response variable).
 
 ----
@@ -58,7 +58,7 @@ source("../../../rhelpers/knitr_setup.R")
 ## Blood Pressure Study
 
 <div class="alert alert-warning">
-<strong>Note:</strong> Make sure to list all of the factors, list levels seperately for each of the factors, and list the number of replicates as the number of individuals PER treatment (not all of the individuals in the experiment).
+<strong>Note:</strong> Here and in the next question, make sure to list all of the factors, list levels seperately for each of the factors, and list the number of replicates as the number of individuals PER treatment (not all of the individuals in the experiment). For the R work you don't need to use the code with the square brackets, just split the random numbers up into as many groups as you have treatments.
 </div>
 
 
@@ -143,7 +143,13 @@ alloc2[31:36]  # sixth treatment
 1. The response variable is weight as the child does not get older as it weights more (but it could weigh more as it got older).
 
 ----
+
 ## Softball Bats and Balls
+
+<div class="alert alert-warning">
+<strong>Note:</strong> The randomization in this example is fairly non-typical and is completely dependent on the way the researchers set up this experiment. In other words, focus on the previous examples for a more general method of randomizing individuals for the treatments.
+</div>
+
 1. This is an experiment because the researcher is imparting treatments (ball types and bats were chosen specifically).
 1. The response variable is the distance that the ball was hit.
 1. Distance is a quantitative, continuous variable because a distance can always be found between any two distances.
