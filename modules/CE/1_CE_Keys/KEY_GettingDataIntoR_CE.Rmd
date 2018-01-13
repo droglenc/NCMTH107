@@ -28,6 +28,9 @@ library(NCStats)
 setwd("T:/Stats")
 ```
 
+<div class="alert alert-warning">
+<strong>Note:</strong> The object name to the left of each assignment operator (i.e., `<-`) can largely be whatever you want. In the examples below, I tried to uses names that made sense for the data being imported.
+</div>
 ----
 
 ## Loading Data from Webpage I
@@ -45,6 +48,16 @@ bhobj <- read.csv("BrainHead.csv")
 str(bhobj)
 ```
 
+----
+
+## Loading Your Own Data I
+
+* Answers will vary by student.
+
+----
+
+## Loading Data from Webpage II
+
 #### **PopularKids.csv**
 ```{r echo=FALSE}
 pkobj <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/PopularKids.csv")
@@ -58,16 +71,6 @@ pkobj <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Popu
 pkobj <- read.csv("PopularKids.csv")
 str(pkobj)
 ```
-
-----
-
-## Loading Your Own Data I
-
-* Answers will vary by student.
-
-----
-
-## Loading Data from Webpage II
 
 #### **Yahara.csv**
 ```{r echo=FALSE}
