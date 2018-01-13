@@ -24,6 +24,14 @@ For each question below, identify whether it represents a voluntary response, co
 
 ----
 
+## Identify Response and Explanatory Variables II
+Identify the response variable in each of the following situations. Explain your reasoning.
+
+1. Amount of rainfall and sales of umbrellas (in New York City).
+1. The age and weight of a child (measured over time).
+
+----
+
 ## Softball Bats and Balls
 <img src="zimgs/pitchingmachine.jpg" alt="Pitching Machine" class="img-right">
 A student wanted to see how far she could hit two brands of softballs with three types of bats.  The three bats were all 34 inches long, weighed 34 ounces, and looked similar.  Four new balls of each brand were placed into a pitching machine in a random order (the student did not know which brand of ball was being pitched).  The student picked one brand of bat at random to hit each of the eight pitched balls (for simplicity, assume that each ball was hit the first time it was pitched).  The student measured and recorded the distance (in feet) that each ball was hit.  This process was repeated for each bat.
@@ -37,14 +45,6 @@ A student wanted to see how far she could hit two brands of softballs with three
 1. Physically, what is a replicate (not a number)?
 1. How many replicates are there?
 1. Describe how you would use randomization in this experiment. Use R to construct a specific randomization using your randomization strategy.
-
-----
-
-## Identify Response and Explanatory Variables II
-Identify the response variable in each of the following situations. Explain your reasoning.
-
-1. Amount of rainfall and sales of umbrellas (in New York City).
-1. The age and weight of a child (measured over time).
 
 ----
 

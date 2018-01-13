@@ -43,6 +43,18 @@ source("../../../rhelpers/knitr_setup.R")
 
 ----
 
+## Identify Response and Explanatory Variables I
+<div class="alert alert-warning">
+<strong>Note:</strong> The response variable is potentially responding to or depending on the explanatory variable. The response variable is potentially affected by the explanatory variable.
+</div>
+
+1. The response variable is "success rate" because the distance of the putt effects the success rate (i.e., longer putts likely result in a lower success rate). And success rate (on putts) does not effect the length of a putt.
+1. The response variable is "response time" because the amount of time awake effects the response time (i.e., the longer one is awake, to a point, they will likely show more dexterity). And dexterity (on the test) does not effect how long the subject was awake.
+1. The response variable is growth because growth is effected by the amount of fertilizer.
+1. It is not obvious which is the response variable. Thus, the response variable would depend on the researcher's question (i.e., if they were trying to predict shoe sales from hat sales, then shoe sales would be the response variable).
+
+----
+
 ## Blood Pressure Study
 
 <div class="alert alert-warning">
@@ -76,18 +88,6 @@ alloc[25:32]  # fourth treatment
 ```{r eval=FALSE, prompt=FALSE}
 <<CAalloc>>
 ```
-
-----
-
-## Identify Response and Explanatory Variables I
-<div class="alert alert-warning">
-<strong>Note:</strong> The response variable is potentially responding to or depending on the explanatory variable. The response variable is potentially affected by the explanatory variable.
-</div>
-
-1. The response variable is "success rate" because the distance of the putt effects the success rate (i.e., longer putts likely result in a lower success rate). And success rate (on putts) does not effect the length of a putt.
-1. The response variable is "response time" because the amount of time awake effects the response time (i.e., the longer one is awake, to a point, they will likely show more dexterity). And dexterity (on the test) does not effect how long the subject was awake.
-1. The response variable is growth because growth is effected by the amount of fertilizer.
-1. It is not obvious which is the response variable. Thus, the response variable would depend on the researcher's question (i.e., if they were trying to predict shoe sales from hat sales, then shoe sales would be the response variable).
 
 ----
 
@@ -138,6 +138,11 @@ alloc2[31:36]  # sixth treatment
 
 ----
 
+## Identify Response and Explanatory Variables II
+1. The response variable is sales of umbrellas because umbrella sales are effected by the amount of rainfall. And the amount of rainfall does not depend on umbrella sales.
+1. The response variable is weight as the child does not get older as it weights more (but it could weigh more as it got older).
+
+----
 ## Softball Bats and Balls
 1. This is an experiment because the researcher is imparting treatments (ball types and bats were chosen specifically).
 1. The response variable is the distance that the ball was hit.
@@ -157,8 +162,3 @@ sample(8)  # third order of balls
 
 ----
 
-## Identify Response and Explanatory Variables II
-1. The response variable is sales of umbrellas because umbrella sales are effected by the amount of rainfall. And the amount of rainfall does not depend on umbrella sales.
-1. The response variable is weight as the child does not get older as it weights more (but it could weigh more as it got older).
-
-----

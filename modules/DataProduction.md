@@ -40,10 +40,10 @@ Use the materials below to answer the questions on [this preparation guide](Data
 * [![PDF](../img/pdf.png) Reading](../book/Data Production.pdf)
 * ![YouTube](../img/youtube.png) Types of Studies: [A](https://www.youtube.com/watch?v=qksFkFh2ezo){:target="_blank"} [*from 7:36 to 15:58*] **OR** [B](https://www.youtube.com/watch?v=KDPBD3SPTPY){:target="_blank"} [8 mins]
 * [![YouTube](../img/youtube.png) Types of Conclusions](https://www.youtube.com/watch?v=5zkg1w5zoQ0){:target="_blank"} [*start at 26:37*]
-* [![Vimeo](../img/dhovid.png) Types of Observational Studies](https://vimeo.com/user45324800/observationaltypes){:target="_blank"} [3 mins]  [![PowerPoint](../img/ppt.png)](DataProduction_PPT.pptx)
+* [![Vimeo](../img/dhovid.png) Types of Observational Studies](https://vimeo.com/user45324800/observationaltypes){:target="_blank"} [3 mins]  [![PowerPoint](../img/ppt.png)](PPT/DataProduction_PPT.pptx)
 * [![YouTube](../img/youtube.png) Sample Design](https://www.youtube.com/watch?v=5zkg1w5zoQ0){:target="_blank"} [*from 0:20 to 9:40*]
 * ![YouTube](../img/youtube.png) Experimental Design:  [A](https://www.youtube.com/watch?v=v-xnPVCi9wM){:target="_blank"} [*from 1:21 to 8:47*] **OR** [B](https://www.youtube.com/watch?v=5zkg1w5zoQ0){:target="_blank"} [*from 12:34 to 18:46*]
-* [![Vimeo](../img/dhovid.png) Definitions in Experimental Design](https://vimeo.com/user45324800/experimentdefns){:target="_blank"} [4 mins]  [![PowerPoint](../img/ppt.png)](DataProduction_PPT.pptx)
+* [![Vimeo](../img/dhovid.png) Definitions in Experimental Design](https://vimeo.com/user45324800/experimentdefns){:target="_blank"} [4 mins]  [![PowerPoint](../img/ppt.png)](PPT/DataProduction_PPT.pptx)
 * [![Vimeo](../img/dhovid.png) Randomization in R](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins] [![Web](../img/web.png)](HO/DataProduction_RHO.html){:target="_blank"}  [![R](../img/Rlogo.png)](HO/DataProduction_RHO.R){:target="_blank"}
 * ![YouTube](../img/youtube.png) Response/Explanatory Variables - [A](https://www.youtube.com/watch?v=bokeTCH2aJY){:target="_blank"} [*from 1:00 to 2:28*] **AND**  [B](https://www.youtube.com/watch?v=bokeTCH2aJY){:target="_blank"} [*stop at 6:18*]
 
