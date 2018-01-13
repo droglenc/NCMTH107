@@ -36,109 +36,21 @@ firedf &lt;- read.csv(&quot;Fire.csv&quot;)</code></pre>
 <div id="examining-single-variables" class="section level2">
 <h2>Examining Single Variables</h2>
 <ul>
-<li>Examine the stand type (i.e., <code>sttype</code>) variable.</li>
+<li><p>Examine the stand type (i.e., <code>sttype</code>) variable.</p></li>
+<li><p>Examine the litter depth (i.e., <code>litdep</code>) variable.</p></li>
 </ul>
-<pre class="r"><code>firedf$sttype</code></pre>
-<pre><code>##  [1] d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d  d 
-## [24] d  md md md md md md md md md md md md md mc mc mc mc c  c  c  c  c 
-## [47] c  c 
-## Levels: c d mc md</code></pre>
-<ul>
-<li>Examine the litter depth (i.e., <code>litdep</code>) variable.</li>
-</ul>
-<pre class="r"><code>firedf$litdep</code></pre>
-<pre><code>##  [1] 0.62 1.33 1.46 1.92 2.90 2.13 2.33 1.46 2.25 3.08 2.07 1.83 2.63 2.58
-## [15] 2.38 2.75 2.92 2.46 1.96 1.63 2.13 2.71 3.08 2.42 1.75 2.75 2.00 1.25
-## [29] 2.38 2.08 3.13 2.38 3.00 2.29 1.90 2.71 1.83 2.04 2.90 3.13 2.00 2.08
-## [43] 2.92 0.75 1.75 2.08 2.38 2.13</code></pre>
 <p><br></p>
 <hr />
 </div>
 <div id="filtering-data-frames" class="section level2">
 <h2>Filtering Data Frames</h2>
 <ul>
-<li>Isolate just the <code>deciduous</code> stand types.</li>
+<li><p>Isolate just the <code>deciduous</code> stand types.</p></li>
+<li><p>Isolate the stands with a litter depth less than 2 cm.</p></li>
+<li><p>Isolate the stand types that are either coniferous or mixed-coniferous.</p></li>
+<li><p>Isolate stands that were conferous (not including mixed-coniferous) and had a litter depth greater than 2 cm.</p></li>
+<li><p>Isolate all stands that had a litter depth between 1 and 2 cm.</p></li>
 </ul>
-<pre class="r"><code>decid &lt;- filterD(firedf,sttype==&quot;d&quot;)
-str(decid)</code></pre>
-<pre><code>## &#39;data.frame&#39;:    24 obs. of  6 variables:
-##  $ sttype: Factor w/ 1 level &quot;d&quot;: 1 1 1 1 1 1 1 1 1 1 ...
-##  $ tslf  : Factor w/ 2 levels &quot;0-100&quot;,&quot;100-200&quot;: 1 1 1 1 1 2 2 1 1 2 ...
-##  $ tdw   : num  27.7 22.6 26.2 43.6 27 41.2 46.6 27.6 89.2 39.6 ...
-##  $ litdep: num  0.62 1.33 1.46 1.92 2.9 2.13 2.33 1.46 2.25 3.08 ...
-##  $ fuel1h: num  0.06 0.07 0.08 0.05 0.06 0.15 0.02 0.04 0.04 0.3 ...
-##  $ tltd  : int  2382 1978 1234 1478 1901 1111 748 1055 3422 1045 ...</code></pre>
-<pre class="r"><code>headtail(decid)</code></pre>
-<pre><code>##    sttype    tslf   tdw litdep fuel1h tltd
-## 1       d   0-100  27.7   0.62   0.06 2382
-## 2       d   0-100  22.6   1.33   0.07 1978
-## 3       d   0-100  26.2   1.46   0.08 1234
-## 22      d 100-200  68.1   2.71   0.33 1646
-## 23      d   0-100 111.5   3.08   0.08 2309
-## 24      d 100-200  36.1   2.42   0.02  861</code></pre>
-<ul>
-<li>Isolate the stands with a litter depth less than 2 cm.</li>
-</ul>
-<pre class="r"><code>lt2 &lt;- filterD(firedf,litdep&lt;2)
-headtail(lt2)</code></pre>
-<pre><code>##    sttype    tslf  tdw litdep fuel1h tltd
-## 1       d   0-100 27.7   0.62   0.06 2382
-## 2       d   0-100 22.6   1.33   0.07 1978
-## 3       d   0-100 26.2   1.46   0.08 1234
-## 12     md 100-200 95.6   1.83   0.24 1057
-## 13      c 200-300 34.9   0.75   0.16  961
-## 14      c 200-300 26.8   1.75   0.67  437</code></pre>
-<ul>
-<li>Isolate the stand types that are either coniferous or mixed-coniferous.</li>
-</ul>
-<pre class="r"><code>conif &lt;- filterD(firedf,sttype %in% c(&quot;c&quot;,&quot;mc&quot;))
-str(conif)</code></pre>
-<pre><code>## &#39;data.frame&#39;:    11 obs. of  6 variables:
-##  $ sttype: Factor w/ 2 levels &quot;c&quot;,&quot;mc&quot;: 2 2 2 2 1 1 1 1 1 1 ...
-##  $ tslf  : Factor w/ 2 levels &quot;100-200&quot;,&quot;200-300&quot;: 2 1 2 1 2 2 2 2 2 2 ...
-##  $ tdw   : num  103.4 69.8 47.2 35.6 42 ...
-##  $ litdep: num  2.04 2.9 3.13 2 2.08 2.92 0.75 1.75 2.08 2.38 ...
-##  $ fuel1h: num  0.05 0.31 0.37 0.03 0.22 0.56 0.16 0.67 0.12 0.55 ...
-##  $ tltd  : int  775 1065 820 1650 578 999 961 437 1136 1288 ...</code></pre>
-<pre class="r"><code>headtail(conif)</code></pre>
-<pre><code>##    sttype    tslf   tdw litdep fuel1h tltd
-## 1      mc 200-300 103.4   2.04   0.05  775
-## 2      mc 100-200  69.8   2.90   0.31 1065
-## 3      mc 200-300  47.2   3.13   0.37  820
-## 9       c 200-300  52.2   2.08   0.12 1136
-## 10      c 200-300  48.0   2.38   0.55 1288
-## 11      c 200-300  44.7   2.13   0.45 1086</code></pre>
-<ul>
-<li>Isolate stands that were conferous (not including mixed-coniferous) and had a litter depth greater than 2 cm.</li>
-</ul>
-<pre class="r"><code>con_gt2 &lt;- filterD(firedf,sttype==&quot;c&quot;,litdep&gt;2)
-str(con_gt2)</code></pre>
-<pre><code>## &#39;data.frame&#39;:    5 obs. of  6 variables:
-##  $ sttype: Factor w/ 1 level &quot;c&quot;: 1 1 1 1 1
-##  $ tslf  : Factor w/ 1 level &quot;200-300&quot;: 1 1 1 1 1
-##  $ tdw   : num  42 46.9 52.2 48 44.7
-##  $ litdep: num  2.08 2.92 2.08 2.38 2.13
-##  $ fuel1h: num  0.22 0.56 0.12 0.55 0.45
-##  $ tltd  : int  578 999 1136 1288 1086</code></pre>
-<pre class="r"><code>con_gt2</code></pre>
-<pre><code>##   sttype    tslf  tdw litdep fuel1h tltd
-## 1      c 200-300 42.0   2.08   0.22  578
-## 2      c 200-300 46.9   2.92   0.56  999
-## 3      c 200-300 52.2   2.08   0.12 1136
-## 4      c 200-300 48.0   2.38   0.55 1288
-## 5      c 200-300 44.7   2.13   0.45 1086</code></pre>
-<ul>
-<li>Isolate all stands that had a litter depth between 1 and 2 cm.</li>
-</ul>
-<pre class="r"><code>LDbw1n2 &lt;- filterD(firedf,litdep&gt;1,litdep&lt;2)
-headtail(LDbw1n2)</code></pre>
-<pre><code>##    sttype    tslf  tdw litdep fuel1h tltd
-## 1       d   0-100 22.6   1.33   0.07 1978
-## 2       d   0-100 26.2   1.46   0.08 1234
-## 3       d   0-100 43.6   1.92   0.05 1478
-## 10     md 200-300 41.1   1.90   0.04  570
-## 11     md 100-200 95.6   1.83   0.24 1057
-## 12      c 200-300 26.8   1.75   0.67  437</code></pre>
 <hr />
 </div>
 
