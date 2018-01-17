@@ -14,7 +14,7 @@ Identify whether each situation below is an observational or experimental study.
 1. [Phennix *et al.* (2000)](http://ajp.psychiatryonline.org/doi/abs/10.1176/appi.ajp.157.5.715) followed a group of disabled women aged 65 and older for several years.  Those women who had a vitamin B12 deficiency were twice as likely to suffer severe depression as those who did not. 
 1. An educational software company wants to compare the effectiveness of its computer animation for teaching biology with that of a textbook presentation.  The company gives a biology pretest to each of a group of high school juniors, and then divides them into two groups.  One group uses the animation, and the other studies the text.  The company retests all students and compares the increase in biology test scores in the two groups.
 1. [Helle *et al.* (2002)](http://www.sciencemag.org/content/296/5570/1085.full?ijkey=4842612ad61bcf9386845ff5a129be9ae15c158f&keytype2=tf_ipsecsha) reported on a study of women in Finland that indicated that having sons shortened the lifespan of mothers by about 34 weeks per son, but that daughters helped to lengthen the mothers’ lives. The data came from church records from the period 1640 to 1870.
-1. Some gardeners prefer to use nonchemical methods to control insect pests in their gardens. Researchers have designed two kinds of traps and want to know which design will be more effective. They randomly choose 10 locations in a large garden and place one of each kind of trap at each location. After a week, they count the number of bugs in each trap.
+1. Some gardeners prefer to use nonchemical methods to control insect pests in their gardens. Researchers have designed two kinds of traps and want to know which design will be more effective. They randomly chose 10 locations in a large garden and placed one of each kind of trap at each location. After a week, they counted the number of bugs in each trap.
 
 ----
 
@@ -46,7 +46,7 @@ A student is designing an experiment to determine the simultaneous effects of ca
 1. What is the response variable?
 1. What kind of variable is the response variable?
 1. What are the factors? [*List all of them.*]
-1. How many levels are there? [*List in same order as factors in answer b.*]
+1. How many levels are there? [*List in same order as your factors.*]
 1. How many treatments are there?
 1. Physically, what is a replicate (not a number)?
 1. How many replicates are there?
@@ -66,7 +66,7 @@ Use this information to answer the questions below.
 
 1. Explain why the described setup is consistent with an experimental study.
 1. What are the factors? [*List all of them.*]
-1. How many levels are there? [*List in same order as factors in answer b.*]
+1. How many levels are there? [*List in same order as your factors.*]
 1. How many treatments are there?
 1. What is the response variable?
 1. What kind of variable is the response variable?
