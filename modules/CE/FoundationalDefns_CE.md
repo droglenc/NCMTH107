@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Practice Exercises
+title: Exercises
 subtitle: Foundational Definitions
 css: "/css/modules.css"
 ---

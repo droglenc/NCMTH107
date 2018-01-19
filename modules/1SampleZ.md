@@ -42,7 +42,7 @@ Use the materials below to answer the questions on [this preparation guide](1Sam
 ## Practice
 
 * [Class Example](CEx/1SampleZ_CExmpl)
-* [Class Exercises](CE/1SampleZ_CE1) ([*more as time permits*](CE/1SampleZ_CE2)) ... [ANSWER KEY](CE/KEY_1SampleZ_CE)
+* [Exercises](CE/1SampleZ_CE1) ([*more as time permits*](CE/1SampleZ_CE2)) ... [ANSWER KEY](CE/KEY_1SampleZ_CE)
 * [Review Exercises](RE/1SampleZ_RevEx)
 
 ----
