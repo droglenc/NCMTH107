@@ -32,12 +32,12 @@ setwd("T:/Stats")
 
 <div class="alert alert-warning">
 <strong>Note:</strong>
-<ol>
+<ul>
   <li>If the variable in the condition statement is a character or factor then the comparison value must be in quotes. If the variable is quantitative then the comparision value should not be in quotes.</li>
   <li>Use two equals signs (i.e., `==`) when testing whether something "is equal".</li>
   <li>Two condition statements in `filterD()` are treated as being combined with an "and".</li>
   <li>If the object name to the left of the assignment operator (i.e., `<-`) is the same as the data.frame in `filterD()` then the data.frame in `filterD()` will be over-written and your original data will be lost (until you read it in again). In other words, be very careful if the new data.frame name is the same as the name for an old data.frame.</li>
-</ol>
+</ul>
 </div>
 
 
