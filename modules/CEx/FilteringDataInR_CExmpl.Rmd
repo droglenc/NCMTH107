@@ -81,7 +81,7 @@ str(conif)
 headtail(conif)
 ```
 
-* Isolate stands that were conferous (not including mixed-coniferous) and had a litter depth greater than 2 cm.
+* Isolate stands that were coniferous (not including mixed-coniferous) and had a litter depth greater than 2 cm.
 ```{r include=FALSE}
 con_gt2 <- filterD(firedf,sttype=="c",litdep>2)
 str(con_gt2)

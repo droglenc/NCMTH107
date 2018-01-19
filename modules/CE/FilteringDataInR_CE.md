@@ -9,7 +9,7 @@ css: "/css/modules.css"
 
 ## Coarse Woody Debris
 <img src="zimgs/cwd1-bony-lake.jpg" alt="CWD Bony Lake" class="img-right">
-Coarse woody debris (CWD) in lakes is important for aquatic systems as it provides refuge for young fish and invertebrates as well as providing areas for periphyton to grow.  Coarse woody debris was studied in the north basin of Allequash Lake in northern Wisconsin.  Among other things, the researchers recorded the diameter (cm) of CWD found in the lake littoral zone and a qualitative measure of the degree to which the location where the CWD was found was exposed to winds (low or medium).  The observed data (sampled from information on the [North Temperate Lakes Long Term Ecological Research website](https://lter.limnology.wisc.edu/datacatalog/search)) are below.
+Coarse woody debris (CWD) in lakes is important for aquatic systems as it provides refuge for young fish and invertebrates as well as providing areas for periphyton to grow. Coarse woody debris was studied in the north basin of Allequash Lake in northern Wisconsin. Among other things, the researchers recorded the diameter (cm) of CWD found in the lake littoral zone and a qualitative measure of the degree to which the location where the CWD was found was exposed to winds (low or medium). The observed data (sampled from information on the [North Temperate Lakes Long Term Ecological Research website](https://lter.limnology.wisc.edu/datacatalog/search)) are below.
 
 <pre>
 diameter  21  15  18  23  18  17  19  17  15  22  16  20  16  17  18  15  16  24  24  23
@@ -22,7 +22,7 @@ diameter  20  23  34  20  17  20  15  34  18  24
 exposure med med low med med med med med med med
 </pre>
 
-Use this information to answer the following questions.  Use R to answer all questions even though most questions can be answered by observing these simple data from the table above.
+Use this information to answer the following questions. Use R to answer all questions even though most questions can be answered by observing these simple data from the table above.
 
 1. Enter the data into Excel, save as a CSV file, and load into R.
 1. Isolate the following subsets of data (*show the structure or a view of the resultant data.frame to verify your results*).
@@ -35,8 +35,7 @@ Use this information to answer the following questions.  Use R to answer all que
 ## Cars
 
 <img src="zimgs/cars93.jpg" alt="1993 Nissan Skyline" class="img-right">
-[Locke (1993)](http://www.amstat.org/publications/jse/v1n1/datasets.lock.html) recorded data on a random sample of cars from the 1993 model year.  His data are in [93cars.csv](https://github.com/droglenc/NCData/raw/master/93cars.csv).  
-Use this information to answer the following questions (by using R).
+[Locke (1993)](http://www.amstat.org/publications/jse/v1n1/datasets.lock.html) recorded data on a random sample of cars from the 1993 model year. His data are in [93cars.csv](https://github.com/droglenc/NCData/raw/master/93cars.csv). Use this information to answer the following questions (by using R).
 
 1. Download the data from the class webpage and load into R.
 1. How many variables are recorded in this data.frame?
