@@ -4,7 +4,7 @@ title: Resources
 ---
 
 ## Administrative
-1. [Daily Preparation Check](https://goo.gl/forms/PIakj3deQ4K6Jwor2){:target="_blank"}
+1. [Daily Preparation Check](https://goo.gl/forms/fcjAQLSGTn2VwHLQ2){:target="_blank"}
 1. [Anonymous Message to Dr. Ogle](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}
 1. [Data Files](data_107)
 
