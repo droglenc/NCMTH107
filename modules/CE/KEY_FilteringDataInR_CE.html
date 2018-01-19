@@ -13,9 +13,21 @@ css: "/css/modules.css"
 &gt; setwd(&quot;T:/Stats&quot;)</code></pre>
 <hr />
 <div class="alert alert-warning">
-<p>
-<strong>Note:</strong> The object name to the left of each assignment operator (i.e., <code>&lt;-</code>) can largely be whatever you want. In the examples below, I tried to uses names that made sense for the data being imported.
-</p>
+<strong>Note:</strong>
+<ol>
+<li>
+If the variable in the condition statement is a character or factor then the comparison value must be in quotes. If the variable is quantitative then the comparision value should not be in quotes.
+</li>
+<li>
+Use two equals signs (i.e., <code>==</code>) when testing whether something “is equal”.
+</li>
+<li>
+Two condition statements in <code>filterD()</code> are treated as being combined with an “and”.
+</li>
+<li>
+If the object name to the left of the assignment operator (i.e., <code>&lt;-</code>) is the same as the data.frame in <code>filterD()</code> then the data.frame in <code>filterD()</code> will be over-written and your original data will be lost (until you read it in again). In other words, be very careful if the new data.frame name is the same as the name for an old data.frame.
+</li>
+</ol>
 </div>
 <div id="coarse-woody-debris" class="section level2">
 <h2>Coarse Woody Debris</h2>
