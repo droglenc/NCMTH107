@@ -40,6 +40,13 @@ figs(name="Cafe3","Histogram of the number of sodas sold in the college cafe.")
 
 ----
 
+<div class="alert alert-warning">
+<strong>Note:</strong> 
+<ul>
+<li>The use of qualifiers such as "strongly" or "slightly" when describing shape. The use of these qualifiers is important for deciding which measures of center and dispersion should be used (see below). However, also note that you will get some "leeway" in grading relative to their use (i.e., you and I may disagree whether something is slightly or moderately skewed, though we should not disagree on whether a distribution is slightly or strongly skewed).</li>
+</ul>
+</div>
+
 ## Shape and Outliers I
 
 1. (Strongly) Right skewed, possible outlier at maximum.
@@ -53,6 +60,16 @@ figs(name="Cafe3","Histogram of the number of sodas sold in the college cafe.")
 
 ----
 
+<div class="alert alert-warning">
+<strong>Note (for all of these EDA questions):</strong> 
+<ul>
+<li>That all four items (Shape, Outliers, Center, and Dispersion) are addressed for each question. Many students may omit outliers if no outliers exist; however, you should explicity say "no outliers were present" (or similar) as shown below.</li>
+<li>Center is always described by the mean or the median, never both and never neither one. Which one you choose depends on whether outliers are present (use median), the distriution is more than slightly skewed (use median), or the distribution is no more than slighly skewed and no outliers are present (use mean).</li>
+<li>Dispersion is always described by the standard deviation or IQR, never both and never neither one. Additionally, you can use the range but never by itself (i.e., it should be used in conjunction with the standard deviation or IQR). Whether you use the standard deviation or IQR depends on whether you used the mean (then use the standard deviation) or median (then use the IQR).</li>
+<li>Include a sentence in each description that describes why you used the mean and standard deviation or used the median and IQR to describe center and dispersion. See answers below for examples.
+</ul>
+</div>
+
 ## Commute Time
 The distribution of commute times is approximately symmetric with no outliers (Figure 1). The center as measured by the mean is 23.75 mins and the disperision as measured by the standard deviation is 3.54 mins (Table 1). The mean and standard deviation were used because the distribution was symmetric and no outliers were present.
 
@@ -65,7 +82,7 @@ The distribution of post-molt carapace lengths for Dungeness Crabas is strongly 
 
 ## Coarse Woody Debris
 <ol>
-<li>The diameter of CWD is largely right-skewed with a separate group of four individuals at higher diameters (`r figs("CWD1",display="cite")`).  With this definition of shape, there are no outliers.  The center as measured by the median is 18 cm and the IQR is from a Q1 of 16.25 to a Q3 of 20.75 cm (`r tbls("CWD1",display="cite")`).  I chose to use the median and IQR because of the right-skewed shape.</li>
+<li>The diameter of CWD is largely right-skewed with a separate group of four individuals at higher diameters (`r figs("CWD1",display="cite")`). With this definition of shape, there are no outliers. The center as measured by the median is 18 cm and the IQR is from a Q1 of 16.25 to a Q3 of 20.75 cm (`r tbls("CWD1",display="cite")`). I chose to use the median and IQR because of the right-skewed shape.</li>
 ```{r CWDHist1, echo=FALSE, fig.width=3, fig.height=3, par1=TRUE}
 d <- read.csv("cwd.csv")
 hist(~diameter,data=d,xlab="Diameter of CWD")
@@ -79,7 +96,7 @@ hist(~diameter,data=d,xlab="Diameter of CWD")
 Summarize(~diameter,data=d,digits=2)
 ```
 
-<li>The diameter of CWD is largely right-skewed for both low- and medium-exposure sites (`r figs("CWD2",display="cite")`).  There are no obvious outliers.  [<i>Note that it is difficult to describe shape and outliers in this case because the sample sizes in the two groups are so small.</i>]  The medians are 19 and 18, respectively, for the low- and medium-exposure sites (`r tbls("CWD2",display="cite")`).  The IQR is from a Q1 of 16 to a Q3 of 24 for the low-exposure sites and from a Q1 of 17 to a Q3 of 20 for the medium-exposure sites (`r tbls("CWD2",display="cite")`).  The median and IQR were used because of the skewed shape for both distributions.</li>
+<li>The diameter of CWD is largely right-skewed for both low- and medium-exposure sites (`r figs("CWD2",display="cite")`). There are no obvious outliers. [<i>Note that it is difficult to describe shape and outliers in this case because the sample sizes in the two groups are so small.</i>]  The medians are 19 and 18, respectively, for the low- and medium-exposure sites (`r tbls("CWD2",display="cite")`). The IQR is from a Q1 of 16 to a Q3 of 24 for the low-exposure sites and from a Q1 of 17 to a Q3 of 20 for the medium-exposure sites (`r tbls("CWD2",display="cite")`). The median and IQR were used because of the skewed shape for both distributions.</li>
 
 ```{r CWDHist2, echo=FALSE, fig.width=6, fig.height=3, par1=TRUE}
 hist(diameter~exposure,data=d,xlab="Diameter of CWD")
@@ -110,9 +127,9 @@ d <- read.csv("4_50.csv")
 ```
 
 <ol>
-  <li>The distribution of BOD values for the private lab is approximately symmetric with no obvious outliers (`r figs("BODhist",display="cite")`). The mean of the private data is 34.64 mg/L with a standard deviation of 10.45 mg/L  (`r figs("BODStats",display="cite")`).  The mean and standard deviation were used because of the symmetry of the distribution and absence of outliers.
+  <li>The distribution of BOD values for the private lab is approximately symmetric with no obvious outliers (`r figs("BODhist",display="cite")`). The mean of the private data is 34.64 mg/L with a standard deviation of 10.45 mg/L  (`r figs("BODStats",display="cite")`). The mean and standard deviation were used because of the symmetry of the distribution and absence of outliers.
 
-  The distribution of BOD values for the state lab appears to be right-skewed with an outlier at 71 mg/L (`r figs("BODhist",display="cite")`).  The median of the state data is 20 mg/L with an IQR from 9.5 to 33.5 mg/L (`r figs("BODStats",display="cite")`).  The median and IQR were used because of the presence of the outlier.</li>
+  The distribution of BOD values for the state lab appears to be right-skewed with an outlier at 71 mg/L (`r figs("BODhist",display="cite")`). The median of the state data is 20 mg/L with an IQR from 9.5 to 33.5 mg/L (`r figs("BODStats",display="cite")`). The median and IQR were used because of the presence of the outlier.</li>
   
 ```{r BODhist, echo=FALSE, fig.width=7, fig.height=3.5}
 hist(bod~lab,data=d,xlab="BOD Measurements")
@@ -176,7 +193,7 @@ d <- read.csv("UNCgrades.csv")
 
 ## Cafe Sales
 <ol>
-<li>The distribution of coffees sold was right-skewed with a hint of bimodality (a small peak near 10 coffees sold and a taller peak near 30 coffees sold), but no obvious outliers (`r figs("Cafe1",display="cite")`).  The center as measured by the median was 23 coffees sold and the IQR was from a Q1 of 12 to a Q3 of 30 coffees sold (`r tbls("Cafe1",display="cite")`).  I chose to use the median and IQR to measure center and dispersion because of the skewed shape.</li>
+<li>The distribution of coffees sold was right-skewed with a hint of bimodality (a small peak near 10 coffees sold and a taller peak near 30 coffees sold), but no obvious outliers (`r figs("Cafe1",display="cite")`). The center as measured by the median was 23 coffees sold and the IQR was from a Q1 of 12 to a Q3 of 30 coffees sold (`r tbls("Cafe1",display="cite")`). I chose to use the median and IQR to measure center and dispersion because of the skewed shape.</li>
 
 ```{r CafeHist1, echo=FALSE, fig.width=3, fig.height=3, par1=TRUE}
 d <- read.csv("cafedata.csv")
@@ -192,7 +209,7 @@ hist(~coffee.sold,data=d,xlab="Number of Coffees Sold",ylim=c(0,10))
 Summarize(~coffee.sold,data=d,digits=2)
 ```
 
-<li>In general, slightly more coffees were sold in the middle of the week (`r tbls("Cafe2",display="cite")`).  There was slightly less variability on Mondays (`r tbls("Cafe2",display="cite")`). [<i>I did not make histograms for each different day of the week because the sample sizes for each day were small (<=10).</i>]</li>
+<li>In general, slightly more coffees were sold in the middle of the week (`r tbls("Cafe2",display="cite")`). There was slightly less variability on Mondays (`r tbls("Cafe2",display="cite")`). [<i>I did not make histograms for each different day of the week because the sample sizes for each day were small (<=10).</i>]</li>
 
 `r tbls("Cafe2")`
 
@@ -200,7 +217,7 @@ Summarize(~coffee.sold,data=d,digits=2)
 Summarize(coffee.sold~dow,data=d,digits=2)
 ```
 
-<li>The distribution of sodas sold was primarily symmetric with no obvious outliers (`r figs("Cafe3",display="cite")`).  The center as measured by the mean was 29.6 sodas sold and the dispersion as measured by the standard deviation was 11.9 sodas sold (`r tbls("Cafe3",display="cite")`).  I chose to use the mean and standard deviation to measure center and dispersion because of the symmetric shape and lack of outliers.</li>
+<li>The distribution of sodas sold was primarily symmetric with no obvious outliers (`r figs("Cafe3",display="cite")`). The center as measured by the mean was 29.6 sodas sold and the dispersion as measured by the standard deviation was 11.9 sodas sold (`r tbls("Cafe3",display="cite")`). I chose to use the mean and standard deviation to measure center and dispersion because of the symmetric shape and lack of outliers.</li>
 
 ```{r CafeHist3, echo=FALSE, fig.width=3, fig.height=3, par1=TRUE}
 hist(~sodas.sold,data=d,xlab="Number of Sodas Sold",ylim=c(0,10))
@@ -214,7 +231,7 @@ hist(~sodas.sold,data=d,xlab="Number of Sodas Sold",ylim=c(0,10))
 Summarize(~sodas.sold,data=d,digits=2)
 ```
 
-<li>In general, slightly more coffees were sold in the middle of the week (`r tbls("Cafe4",display="cite")`).  There was slightly less variability on Mondays (`r tbls("Cafe4",display="cite")`).</li>
+<li>In general, slightly more coffees were sold in the middle of the week (`r tbls("Cafe4",display="cite")`). There was slightly less variability on Mondays (`r tbls("Cafe4",display="cite")`).</li>
 
 `r tbls("Cafe4")`
 
