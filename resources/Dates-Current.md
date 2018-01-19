@@ -23,7 +23,6 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/FoundationalDefns">Foundational Definitions</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
 
 <tr><td>M 15-Jan</td>
     <td colspan="2"><span style="color:coral">NO CLASS (Martin Luther King Jr. Day)</span></td></tr>
@@ -34,6 +33,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/GettingDataIntoR">Getting Data Into R</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
+--->
 
 <tr><td>M 22-Jan</td>
     <td><a href="../modules/FilteringDataInR">Filtering Data In R</a></td>
