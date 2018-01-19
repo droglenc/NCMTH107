@@ -25,7 +25,10 @@ source("../../../rhelpers/knitr_setup.R")
 ## Study Types I
 
 <div class="alert alert-warning">
-<strong>Note:</strong> The key distinction is to determine if a treatment was imparted by the researcher or not. If it was, then it is an experiment.
+<strong>Note:</strong>
+<ul>
+<li>The key distinction is to determine if a treatment was imparted by the researcher or not. If it was, then it is an experiment.</li>
+</ul>
 </div>
 
 1. Experiment ... the people were given a treatment (placebo or fish oil).
@@ -45,7 +48,10 @@ source("../../../rhelpers/knitr_setup.R")
 
 ## Identify Response and Explanatory Variables I
 <div class="alert alert-warning">
-<strong>Note:</strong> The response variable is potentially responding to, depending on, or affected by the explanatory variable.
+<strong>Note:</strong>
+<ul>
+<li>The response variable is potentially responding to, depending on, or affected by the explanatory variable.</li>
+</ul>
 </div>
 
 1. The response variable is "success rate" because the distance of the putt affects the success rate (i.e., longer putts likely result in a lower success rate). And success rate (on putts) does not affect the length of a putt.
@@ -58,9 +64,11 @@ source("../../../rhelpers/knitr_setup.R")
 ## Blood Pressure Study
 
 <div class="alert alert-warning">
-<strong>Note:</strong> Here and in the next question, make sure to list all of the factors, list levels seperately for each of the factors, and list the number of replicates as the number of individuals PER treatment (not all of the individuals in the experiment). For the R work you don't need to use the code with the square brackets, just split the random numbers up into as many groups as you have treatments.
+<strong>Note:</strong>
+<ul>
+<li>Here and in the next question, make sure to list all of the factors, list levels seperately for each of the factors, and list the number of replicates as the number of individuals PER treatment (not all of the individuals in the experiment). For the R work you don't need to use the code with the square brackets, just split the random numbers up into as many groups as you have treatments.</li>
+</ul>
 </div>
-
 
 1. Experimental ... treatments (see below) were imposed.
 1. The response variable is blood pressure.
@@ -147,7 +155,10 @@ alloc2[31:36]  # sixth treatment
 ## Softball Bats and Balls
 
 <div class="alert alert-warning">
-<strong>Note:</strong> The randomization in this example is fairly non-typical and is completely dependent on the way the researchers set up this experiment. In other words, focus on the previous examples for a more general method of randomizing individuals for the treatments.
+<strong>Note:</strong>
+<ul>
+<li>The randomization in this example is fairly non-typical and is completely dependent on the way the researchers set up this experiment. In other words, focus on the previous examples for a more general method of randomizing individuals for the treatments.</li>
+</ul>
 </div>
 
 1. This is an experiment because the researcher is imparting treatments (ball types and bats were chosen specifically).
