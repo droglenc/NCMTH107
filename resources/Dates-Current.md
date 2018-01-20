@@ -50,7 +50,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant</a></td>
     <td>--</td></tr>
 <tr><td>W 31-Jan</td>
-    <td colspan="2"><span style="color:red">First Quiz</span></td></tr>
+    <td colspan="2"><span style="color:red">First Quiz</span> (<a href="QuizGuide/quiz1.html">Preparation Guide</a>)</td></tr>
 <tr><td>F 2-Feb</td>
     <td><a href="../modules/UEDACat">Univariate EDA - Categorical</a></td>
     <td>--</td></tr>
