@@ -24,7 +24,6 @@ To prepare for this module, please answer the following questions from the prepa
 1. List the six steps for computing the standard deviation.
 1. Approximate the standard deviation of these five numbers -- 3,5,6,5,6.
 1. Calculate the standard deviation of the five numbers in the previous item.
-1. Which measure of dispersion is used with the mean? With the median? Why?
 1. What is plotted on the x- and y-axes of a histogram?
 1. How many bins or bars is ideal in a histogram?
 1. What numbers make up a boxplot?
