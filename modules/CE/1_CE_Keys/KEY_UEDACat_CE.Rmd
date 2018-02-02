@@ -83,8 +83,8 @@ round(d/sum(d)*100,1)
 <div class="alert alert-warning">
 <strong>Note:</strong> 
 <ul>
-<li>In the EDA questions below, you only need to comment about the most dominant characteristics evident in the table or bar chart. There is nothing specific to describe here as there was with quantitative data. Furthermore, don't just repeat all of the values in the table or graph; you should be summarizing and interpreting. Keep this in mind when reviewing the answers below.<li>
-<li>There is probably no good reason to produce both a table and bar chart, when the data are simple as those shown below. I showed both below to assure that the one that you used could be seen.</li>
+<li>In the EDA questions below, you only need to comment about the most dominant characteristics evident in the table or bar chart. There is nothing specific to describe here as there was with quantitative data. Furthermore, don't just repeat all of the values in the table or graph; you should be summarizing and interpreting. Keep this in mind when reviewing the answers below.</li>
+<li>There is probably no good reason to produce both a table and bar chart when the data are simple as those shown below. I showed both in some instances below just to assure that you could see both.</li>
 </ul>
 </div>
 
@@ -131,7 +131,7 @@ Most respondents thought that the Environmental Protection Agency was the agency
 p.tbl
 ```
 
-```{r DispBarPlot}
+```{r DispBarPlot, echo=FALSE}
 barplot(p.tbl,xlab="Agency Abbreviation",ylab="Percentage",ylim=c(0,50))
 ```
 
