@@ -55,7 +55,7 @@ MWF 900-950; WF 1500-1600<br>By Appointment</td></tr>
 <tr><th width="50%"><img src="../img/Adam_F16.jpg"></th><th width="50%"><img src="../img/Emily_F17.jpg"></th></tr>
 <tr><th>Adam Gunnelson</th><th>Emily Mader</th></tr>
 <tr style="vertical-align:top"><td>Adam is a chemistry major and math minor. He is a bow-tie enthusiast, and enjoys helping people with math.</td><td>Emily is a math major and physics minor. She enjoys playing softball, being outdoors, and, of course, mathematics!</td></tr>
-<tr style="vertical-align:top"><td>Tu 7-9p<br>Th 3-5p</td><td>Su 1-3p<br>W 6-8p</td></tr>
+<tr style="vertical-align:top"><td>Tu 7-9p<br>Th 3-5p</td><td>M 1-3p<br>W 6-8p</td></tr>
 </table>
 
 ----
