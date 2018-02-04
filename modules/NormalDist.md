@@ -47,7 +47,8 @@ Use the materials below to answer the questions on [this preparation guide](Norm
 
 ## Practice
 
-* [Exercises](CE/NormalDist_CE1) ([*more as time permits*](CE/NormalDist_CE2)) ... [ANSWER KEY](CE/KEY_NormalDist_CE)
+* [Exercises](CE/NormalDist_CE1) ... [ANSWER KEY](CE/KEY_NormalDist_CE1)
+* [More Exercises (*as time permits*)](CE/NormalDist_CE2)) ... [ANSWER KEY](CE/KEY_NormalDist_CE2)
 * Review Exercises: [Simple Areas](RE/NormalDist_RevEx_Simple) / [Calculations](RE/NormalDist_RevEx_Calc)
 
 ----
