@@ -24,7 +24,7 @@ I strongly believe that the best way to prepare for this quiz is by ...
 1. Reviewing what you did on the exercises. I would carefully compare your answers to the answer keys that are now available. Also pay close attention to the "notes" that I have placed in yellow boxes in the answer keys.
 1. Practice more exercises, either in the "more as time permits" links for some modules or in the review exercises (many of these are old test questions) for all modules. Focus on questions that are similar to the ones linked to in the list above.
 1. Study your module preparation guide notes carefully. Augment them by rereading portions of the reading where your notes are poor.
-1. Start practicing early so that if you have questions you can get help from me or from [the tutors](Syllabus-Current.html#tutors) (who have tutor hours on the Sunday and the Tuesday before the quiz).
+1. Start practicing early so that if you have questions you can get help from me or from [the tutors](../Syllabus-Current.html#tutors) (who have tutor hours on the Sunday and the Tuesday before the quiz).
 
 The quiz is closed book, closed notes, etc. You should bring a calculator and you MUST use a pencil. Quizzes written in red ink will not be accepted and will earn a zero. The quiz will begin promptly at 1000 and must be turned in by 1150.
 
