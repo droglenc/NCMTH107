@@ -82,7 +82,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/SamplingDist">Sampling Distributions</a></td>
     <td>--</td></tr>
 <tr><td>W 21-Feb</td>
-    <td colspan="2"><span style="color:red">Second Quiz</span></td></tr>
+    <td colspan="2"><span style="color:red">Second Quiz</span> (<a href="QuizGuide/quiz2.html">Study Guide</a>)</td></tr>
 <tr><td>F 23-Feb</td>
     <td><a href="../modules/Probability">Probability</a></td>
     <td>--</td></tr>
