@@ -20,8 +20,7 @@ library(NCStats)
 source("../../../rhelpers/knitr_setup.R")
 library(captioner)
 tbls <- captioner(prefix="Table")
-tbls(name="BlightRaw","Frequency table for the fire-blight data. Note that A=no action (control), B=removal of the affected branches, C=spraying of foliage with an antibiotic and the removal of affected branches, 1=the tree died in the same year that the disease was noticed, 2=the tree died after 2-4 years, 3=the tree died after 4 years.")
-tbls(name="BlightRow","Percentages of outcomes within each tree treatment type. Abbreviations are given in Table 1.")
+tbls(name="BlightRow","Percentages of outcomes within each tree treatment type. Note that A=no action (control), B=removal of the affected branches, C=spraying of foliage with an antibiotic and the removal of affected branches, 1=the tree died in the same year that the disease was noticed, 2=the tree died after 2-4 years, 3=the tree died after 4 years.")
 tbls(name="BlightCol","Percentages of tree treatment type within each outcome. Abbreviations are given in Table 1.")
 tbls(name="BlightTot","Percentages of each tree treament type and outcome. Abbreviations are given in Table 1.")
 
@@ -80,6 +79,13 @@ percTable(tbl,digits=1)
 
 ----
 
+<div class="alert alert-warning">
+<strong>Note:</strong> 
+<ul>
+<li>In the remaining questions, the "trick" to making the computation is to determine if the question is restricted to only a portion of the data. If the question is restricted to one of the levels that corresponds to a row then compute a row percentage (i.e., divide the raw frequency by the total of its row).  If the question is restricted to one of the levels that corresponds to a column then compute a column percentage (i.e., divide the raw frequency by the total of its column). If the question does not restrict to a level in either a row or column, then compute a table or total percentage (i.e., divide the raw frequency by the total number of individuals in the table.</li>
+</ul>
+</div>
+
 ## Fire Blight Disease
 ```{r echo=FALSE}
 d <- data.frame(treat=c("A","A","A","A","A","B","B","B","C","C","A","A",
@@ -95,13 +101,7 @@ d <- data.frame(treat=c("A","A","A","A","A","B","B","B","C","C","A","A",
 ```
 
 <ol>
-  <li>The frequency table is in `r tbls("BlightRaw",display="cite")`.</li>
-  
-`r tbls("BlightRaw")`
-
-```{r echo=FALSE, background="white"}
-tbl
-```
+  <li>The response variable is the outcome (i.e., time of death of the tree).</li>
   <li>The row percentage table is shown in `r tbls("BlightRow",display="cite")`.</li>
   
 `r tbls("BlightRow")`
