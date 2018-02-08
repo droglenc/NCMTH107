@@ -26,7 +26,7 @@ I strongly believe that the best way to prepare for this quiz is by ...
 1. Study your module preparation guide notes carefully. Augment them by rereading portions of the reading where your notes are poor.
 1. Start practicing early so that if you have questions you can get help from me or from [the tutors](../Syllabus-Current.html#tutors) (who have tutor hours on the Sunday and the Tuesday before the quiz).
 
-The quiz is closed book, closed notes, etc. You should bring a calculator and you MUST use a pencil. Quizzes written in red ink will not be accepted and will earn a zero. The quiz will begin promptly at 1000 and must be turned in by 1150.
+The quiz is closed book, closed notes, etc. You should bring a calculator and you MUST use a pencil. Quizzes written in red ink will not be accepted and will earn a zero. The quiz will begin promptly at 1000 and must be turned in by 1150. Please take care of your personal needs before the quiz so that you do not need to leave class during the quiz (if, for some reason, you do need to leave the room, make sure to leave your phone and other devices in the room and let me know that you are leaving the room).
 
 Please let me know if you have any questions about this quiz.
 
