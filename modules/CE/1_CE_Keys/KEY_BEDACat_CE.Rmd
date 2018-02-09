@@ -101,8 +101,7 @@ d <- data.frame(treat=c("A","A","A","A","A","B","B","B","C","C","A","A",
 ```
 
 <ol>
-  <li>The response variable is the outcome (i.e., time of death of the tree).</li>
-  <li>The row percentage table is shown in `r tbls("BlightRow",display="cite")`.</li>
+  <li>The response variable is the outcome (i.e., time of death of the tree). Note that the row percentage table is in `r tbls("BlightRow",display="cite")`, the  column percentage table is in `r tbls("BlightCol",display="cite")`, and the table percentage table is shown in `r tbls("BlightTot",display="cite")`.</li>
   
 `r tbls("BlightRow")`
 
@@ -110,16 +109,12 @@ d <- data.frame(treat=c("A","A","A","A","A","B","B","B","C","C","A","A",
 row.tbl
 ```
 
-  <li>The column percentage table is shown in `r tbls("BlightCol",display="cite")`.</li>
-  
 `r tbls("BlightCol")`
 
 ```{r echo=FALSE, background="white"}
 col.tbl
 ```
 
-  <li>The table percentage table is shown in `r tbls("BlightTot",display="cite")`.</li>
-  
 `r tbls("BlightTot")`
 
 ```{r echo=FALSE, background="white"}
