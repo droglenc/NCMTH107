@@ -24,7 +24,7 @@ To prepare for this module, please answer the following questions from the prepa
 1. What does the relative magnitude of the absolute value of the correlation coefficient tell you?
 1. What kind of values can the correlation coefficient be?
 1. When should you NOT use the correlation coefficient?
-1. How do you use the correlation coefficient to make a qualitative (i.e., wordy) statement about strength for observation (or uncontrolled) studies? For experimental (or controlled) studies?
+1. How do you use the correlation coefficient to make a qualitative (i.e., wordy) statement about strength for observational (or uncontrolled) studies? For experimental (or controlled) studies?
 1. Explain what is meant by "correlation is not causation."
 
 
