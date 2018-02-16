@@ -65,7 +65,6 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/BEDACat">Bivariate EDA - Categorical</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
 
 <tr><td>M 12-Feb</td>
         <td><a href="../modules/BEDAQuant">Bivariate EDA - Quantitative</a></td>
@@ -77,6 +76,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/LinearRegression">Linear Regression</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
+--->
 
 <tr><td>M 19-Feb</td>
     <td><a href="../modules/SamplingDist">Sampling Distributions</a></td>
