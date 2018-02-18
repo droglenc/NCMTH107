@@ -47,6 +47,15 @@ For X~N(75,10)
 
 ----
 
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>If it is a reverse question (given a proportion and asked to find a value of the variable) then you must include <code>type="q"</code> in <code>distrib()</code>.</li>
+<li>If it is a "right-of" question then you must include <code>lower.tail=FALSE</code> in <code>distrib()<code>.</li>
+<li>All "questions" require a three-step process with <code>distrib()</code> to answer. If it is a forward question then <code>distrib()</code> is used to find the areas to the left of the two given values and then those two areas are subtracted. If it is a forward question then the area between must be converted to a left-of area and a right-of area which are then separately put into <code>distrib()</code> to compute two values (which are the final answer).</li>
+</ul>
+</div>
+
 ## Carpenter Ants
 #### Top questions
 1. A nest
@@ -98,6 +107,13 @@ distrib(0.25,mean=550,sd=65,type="q",lower.tail=FALSE)
 ```
 
 ----
+
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>I strongly urge you to continue to identify whether the question is a "forward" or "reverse" question (which will identify whether you need to use <code>type="q"</code> in <code>distrib()</code> or not) and a "left-of", "right-of", or "between" question (which will identify whether you need to use <code>lower.tail=FALSE</code> in <code>distrib()</code> or not and whether the answer is a three-step process to calculate).</li>
+</ul>
+</div>
 
 ## Urban Deer Relocations
 
