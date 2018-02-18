@@ -37,10 +37,10 @@ figs(name="Cafe1","Fitted-line plot for the relatinoship between number of coffe
     1. explanatory - Amount of soap (g)
     1. slope is 12.4
     1. intercept is -20.2
-    1. For each additional gram of soap, the height of sudes increases by 12.4 mm, on average.
+    1. For each additional gram of soap, the height of suds increases by 12.4 mm, on average.
     1. For 0 grams of soap, the height of suds is -20.2 mm, on average.  [*This is an extrapolation.*]
     1. Ask to predict height of suds for an amount of soap between 3.5 and 8.0 grams.  Example ... "What is the predicted height of suds for 5 g of soap?"  Answer ... -20.2+12.4*5=41.8 mm.
-    1. Ask to predict height of sudes for an amount of soap not between 3.5 and 8.0 grams.  Example ... "What is the predicted height of suds for 10 g of soap?"
+    1. Ask to predict height of suds for an amount of soap not between 3.5 and 8.0 grams.  Example ... "What is the predicted height of suds for 10 g of soap?"
 1. **Livestock Food Example**
     1. response - Costs
     1. explanatory - Livestock food mix in tons
@@ -57,9 +57,9 @@ figs(name="Cafe1","Fitted-line plot for the relatinoship between number of coffe
 <strong>Note:</strong> In the applied questions below ...
 <ul>
 <li>The words "response", "explanatory", "y", and "x" are not used at all. These words should be replaced with the actual variable names used in the problem.</li>
-<li>The x-axis (explanatory) variable is <strong>increased</strong> by 1 unit when describing the slope. If the slope is positive then the y-axis (response) variable increases by the slope amount. If the slope is negative then the y-axis (response) varible decreases by the slope amount (with the negative sign removed).</li>
+<li>The x-axis (explanatory) variable is <strong>increased</strong> by 1 unit when describing the slope. If the slope is positive then the y-axis (response) variable increases by the slope amount for each 1 unit increase of the explanatory variable. If the slope is negative then the y-axis (response) variable decreases by the slope amount (with the negative sign removed) for each 1 unit increase of the explanatory variable.</li>
 <li>Interpret the y-intercept value even if it does not make sense, which will happen often as the y-intercept is often an extreme extrapolation.</li>
-<li>When computing the residual, make sure to do the observed y-axis (response) variale minus the predicted y-axis (response) variale. About half the time this will results in a negative value. That is okay, it just means that the observed value was less than the predicted value (i.e., the observed point was below the best-fit line).</li>
+<li>When computing the residual, make sure to do the observed y-axis (response) value minus the predicted y-axis (response) value. About half the time this will result in a negative value. That is okay, it just means that the observed value was less than the predicted value (i.e., the observed point was below the best-fit line).</li>
 <li>The words "proportion of variability explained" <strong>always</strong> imply using r<sup>2</sup> as the answer.</li>
 <li>The correlation coefficient is always the value of r. If you compute r by taking the square root of r<sup>2</sup> then remember to put a negative sign on it if the slope (i.e., direction or association) is negative (your calculator will always return a positive value).</li>
 <li>When assessing whether anything "concerns" you about the regression then you should address whether the form looks linear and if there is homoscedasticty. Non-linear forms will look obviously curved, heteroscedastic forms will look like a funnel (usually from narrow on the left to wider on the right). If you do not see a curve or a funnel, then explicitly say that you do not have any concerns about the lack of linearity or homoscedasticity.</li>
@@ -79,11 +79,11 @@ rsq <- 0.912
 1. If there is 0 beach angle, then the median sand diameter is `r b` mm, on average.
 1. This prediction should not be computed, because 15 degrees of beach angle is outside of the domain of the data used to define the relationship (i.e., this is an extrapolation).
 1. The predicted median sand diameter for a beach angle of 4 degrees is `r formatC(b+m*4,format="f",digits=3)` mm.
-1. The residual for an observed median sand diamter of 0.2 mm and beach angle of 5 degrees is `r formatC(0.2-(b+m*5),format="f",digits=3)` mm.
+1. The residual for an observed median sand diameter of 0.2 mm and beach angle of 5 degrees is `r formatC(0.2-(b+m*5),format="f",digits=3)` mm.
 1. The correlation coefficient between median sand diameter and beach angle is `r formatC(sqrt(rsq),format="f",digits=3)`.
-1. The proportion of variabiilty in median sand diameter that is explained by knowing the angle of the beach is `r formatC(rsq,format="f",digits=3)`.
+1. The proportion of variability in median sand diameter that is explained by knowing the angle of the beach is `r formatC(rsq,format="f",digits=3)`.
 1. I would expect the median sand diameter to increase by four slopes or `r formatC(4*m,format="f",digits=3)` mm, on average, if the beach angle increased by 4 degrees.
-1. The relationship betwen median sand diameter and beach angle appears to be nonlinear.
+1. The relationship between median sand diameter and beach angle appears to be nonlinear.
 
 ----
 
@@ -244,7 +244,7 @@ cfs <- coef(lm1)
 1. The predicted number of coffees sold if the maximum temperature if 40F is `r formatC(predict(lm1,data.frame(max.temp=40)),format="f",digits=1)`.
 1. This question is an extrapolation and should not be answered.
 1. The residual for an observation of 30 coffees sold when the maximum temperature was 40F is `r formatC(30-predict(lm1,data.frame(max.temp=40)),format="f",digits=1)`.
-1. The correlation coefficient between the number of coffees sold and the maximum temperature is `r formatC(-sqrt(rSquared(lm1)),format="f",digits=2)` (this should be interpreted cautiously as the relationship is slighly nonlinear; `r figs("Cafe1",display="cite")`).
+1. The correlation coefficient between the number of coffees sold and the maximum temperature is `r formatC(-sqrt(rSquared(lm1)),format="f",digits=2)` (this should be interpreted cautiously as the relationship is slightly nonlinear; `r figs("Cafe1",display="cite")`).
 1. The proportion of variability in number of coffees sold explained by knowing the maximum temperature is `r formatC(rSquared(lm1),format="f",digits=2)`.
 1. The relationship appears to be homoscedastic, but nonlinear (`r figs("Cafe1",display="cite")`).
 
