@@ -53,6 +53,20 @@ figs(name="Cafe1","Fitted-line plot for the relatinoship between number of coffe
 
 ----
 
+<div class="alert alert-warning">
+<strong>Note:</strong> In the applied questions below ...
+<ul>
+<li>The words "response", "explanatory", "y", and "x" are not used at all. These words should be replaced with the actual variable names used in the problem.</li>
+<li>The x-axis (explanatory) variable is <strong>increased</strong> by 1 unit when describing the slope. If the slope is positive then the y-axis (response) variable increases by the slope amount. If the slope is negative then the y-axis (response) varible decreases by the slope amount (with the negative sign removed).</li>
+<li>Interpret the y-intercept value even if it does not make sense, which will happen often as the y-intercept is often an extreme extrapolation.</li>
+<li>When computing the residual, make sure to do the observed y-axis (response) variale minus the predicted y-axis (response) variale. About half the time this will results in a negative value. That is okay, it just means that the observed value was less than the predicted value (i.e., the observed point was below the best-fit line).</li>
+<li>The words "proportion of variability explained" <strong>always</strong> imply using r<sup>2</sup> as the answer.</li>
+<li>The correlation coefficient is always the value of r. If you compute r by taking the square root of r<sup>2</sup> then remember to put a negative sign on it if the slope (i.e., direction or association) is negative (your calculator will always return a positive value).</li>
+<li>When assessing whether anything "concerns" you about the regression then you should address whether the form looks linear and if there is homoscedasticty. Non-linear forms will look obviously curved, heteroscedastic forms will look like a funnel (usually from narrow on the left to wider on the right). If you do not see a curve or a funnel, then explicitly say that you do not have any concerns about the lack of linearity or homoscedasticity.</li>
+</ul>
+</div>
+
+
 ## Beach Sand
 ```{r echo=FALSE}
 m <- 0.053
