@@ -76,7 +76,6 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/LinearRegression">Linear Regression</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
 
 <tr><td>M 19-Feb</td>
     <td><a href="../modules/SamplingDist">Sampling Distributions</a></td>
@@ -87,6 +86,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/Probability">Probability</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
+--->
 
 <tr><td>M 26-Feb</td>
     <td><a href="../modules/HypTesting">Hypothesis Testing</a></td>
