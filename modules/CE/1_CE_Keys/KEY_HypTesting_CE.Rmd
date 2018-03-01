@@ -37,7 +37,7 @@ figs(name="P5","Normal distribution representing the p-value calculation for the
 <div class="alert alert-warning">
 <strong>When identifying the hypotheses note:</strong> 
 <ul>
-  <li>Each statistical hypothesis must contain a parameter -- either &mu; or p. That paramter must be defined (note the "where ..." constructions below).</li>
+  <li>Each statistical hypothesis must contain a parameter -- either &mu; or p. That parameter must be defined (note the "where ..." constructions below).</li>
   <li>Each statistical hypothesis must contain a specific value that the parameter is compared to.</li>
   <li>The null hypothesis (i.e., H<sub>0</sub>) must contain the equals sign. No other mathematical sign is allowed.</li>
   <li>The alternative hypothesis (i.e., H<sub>A</sub> must contain either the less than (<), greater than (>), or not equals (&ne;) sign. No other mathematical sign is allowed.</li>
@@ -171,8 +171,8 @@ distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE)
 
 `r figs("P5")`
 
-<li>The p-value is "the probabiity of observing a sample mean of 73 or less if the population mean is 80." The null hypothesis is rejected because the p-value (=`r formatC(distrib(73,mean=80,sd=20/sqrt(30)),format="f",digits=4)`)$&alpha;.</li>
-<li>The p-value is "the probabiity of observing a sample mean of 1370 or 'different' if the population mean is 1500." The null hypothesis is not rejected because the p-value (=`r formatC(2*distrib(1370,mean=1500,sd=800/sqrt(40)),format="f",digits=4)`)>&alpha;.
+<li>The p-value is "the probability of observing a sample mean of 73 or less if the population mean is 80." The null hypothesis is rejected because the p-value (=`r formatC(distrib(73,mean=80,sd=20/sqrt(30)),format="f",digits=4)`)<&alpha;.</li>
+<li>The p-value is "the probability of observing a sample mean of 1370 or 'different' if the population mean is 1500." The null hypothesis is not rejected because the p-value (=`r formatC(2*distrib(1370,mean=1500,sd=800/sqrt(40)),format="f",digits=4)`)>&alpha;.</li>
 </ol>
 
 R Appendix.

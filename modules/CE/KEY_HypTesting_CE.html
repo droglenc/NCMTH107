@@ -14,7 +14,7 @@ css: "/css/modules.css"
 <strong>When identifying the hypotheses note:</strong>
 <ul>
 <li>
-Each statistical hypothesis must contain a parameter – either μ or p. That paramter must be defined (note the “where …” constructions below).
+Each statistical hypothesis must contain a parameter – either μ or p. That parameter must be defined (note the “where …” constructions below).
 </li>
 <li>
 Each statistical hypothesis must contain a specific value that the parameter is compared to.
@@ -149,10 +149,11 @@ The p-value is “the probability of observing a sample mean of 824 or ‘differ
 <p><img src="KEY_HypTesting_CE_files/figure-html/p5-1.png" width="336" /></p>
 <p>Figure 5: Normal distribution representing the p-value calculation for the fifth example.</p>
 <li>
-The p-value is “the probabiity of observing a sample mean of 73 or less if the population mean is 80.” The null hypothesis is rejected because the p-value (=0.0276)$α.
+The p-value is “the probability of observing a sample mean of 73 or less if the population mean is 80.” The null hypothesis is rejected because the p-value (=0.0276)&lt;α.
 </li>
 <li>
-The p-value is “the probabiity of observing a sample mean of 1370 or ‘different’ if the population mean is 1500.” The null hypothesis is not rejected because the p-value (=0.3041)&gt;α.
+The p-value is “the probability of observing a sample mean of 1370 or ‘different’ if the population mean is 1500.” The null hypothesis is not rejected because the p-value (=0.3041)&gt;α.
+</li>
 </ol>
 <p>R Appendix.</p>
 <pre class="r"><code>distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE)
