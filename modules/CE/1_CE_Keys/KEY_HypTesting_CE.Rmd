@@ -34,16 +34,33 @@ figs(name="P5","Normal distribution representing the p-value calculation for the
 
 ## Identifying Hypotheses
 
+<div class="alert alert-warning">
+<strong>When identifying the hypotheses note:</strong> 
+<ul>
+  <li>Each statistical hypothesis must contain a parameter -- either &mu; or p. That paramter must be defined (note the "where ..." constructions below).</li>
+  <li>Each statistical hypothesis must contain a specific value that the parameter is compared to.</li>
+  <li>The null hypothesis (i.e., H<sub>0</sub>) must contain the equals sign. No other mathematical sign is allowed.</li>
+  <li>The alternative hypothesis (i.e., H<sub>A</sub> must contain either the less than (<), greater than (>), or not equals (&neq;) sign. No other mathematical sign is allowed.</li>
+</ul>
+</div>
+
 <ol>
 <li>$H_{A}: \mu < 90$ vs. $H_{0}: \mu = 90$, where $\mu$ is the mean number of murders for all burroughs in 2010.</li>
 <li>$H_{A}: \mu > 15$ vs. $H_{0}: \mu = 15$, where $\mu$ is the mean length of all oil changes at the Toyota dealership.</li>
 <li>$H_{A}: \mu \neq 22500$ vs. $H_{0}: \mu = 22500$, where $\mu$ is the mean cost of all bariatric surgeries.</li>
-<li>$H_{A}: p > 0.61$ vs. $H_{0}: p = 0.61$, where $p$ is the proportion of all Washburn High School students taht are involved in at least one extracurricular activity.</li>
+<li>$H_{A}: p > 0.61$ vs. $H_{0}: p = 0.61$, where $p$ is the proportion of all Washburn High School students that are involved in at least one extracurricular activity.</li>
 </ol>
 
 ----
 
 ## P-Value Calculations and Decisions I
+
+<div class="alert alert-warning">
+<strong>When identifying the hypotheses note:</strong> 
+<ul>
+<li>Each statistical hypothesis must contain a parameter</li>
+</ul>
+</div>
 
 <ol>
 <li>The p-value is "the probability of observing a sample mean of 11.2 or 'different' if the population mean is 14." Reject $H_{0}$ because p-value=`r formatC(2*distrib(11.2,mean=14,sd=6/sqrt(25)),format="f",digits=4)`<&alpha; (`r figs("P1",display="cite")`).</li>
