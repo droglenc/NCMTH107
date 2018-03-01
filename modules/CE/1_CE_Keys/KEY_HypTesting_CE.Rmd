@@ -40,15 +40,15 @@ figs(name="P5","Normal distribution representing the p-value calculation for the
   <li>Each statistical hypothesis must contain a parameter -- either &mu; or p. That paramter must be defined (note the "where ..." constructions below).</li>
   <li>Each statistical hypothesis must contain a specific value that the parameter is compared to.</li>
   <li>The null hypothesis (i.e., H<sub>0</sub>) must contain the equals sign. No other mathematical sign is allowed.</li>
-  <li>The alternative hypothesis (i.e., H<sub>A</sub> must contain either the less than (<), greater than (>), or not equals (&neq;) sign. No other mathematical sign is allowed.</li>
+  <li>The alternative hypothesis (i.e., H<sub>A</sub> must contain either the less than (<), greater than (>), or not equals (&ne;) sign. No other mathematical sign is allowed.</li>
 </ul>
 </div>
 
 <ol>
-<li>$H_{A}: \mu < 90$ vs. $H_{0}: \mu = 90$, where $\mu$ is the mean number of murders for all burroughs in 2010.</li>
-<li>$H_{A}: \mu > 15$ vs. $H_{0}: \mu = 15$, where $\mu$ is the mean length of all oil changes at the Toyota dealership.</li>
-<li>$H_{A}: \mu \neq 22500$ vs. $H_{0}: \mu = 22500$, where $\mu$ is the mean cost of all bariatric surgeries.</li>
-<li>$H_{A}: p > 0.61$ vs. $H_{0}: p = 0.61$, where $p$ is the proportion of all Washburn High School students that are involved in at least one extracurricular activity.</li>
+<li>H<sub>A</sub> &mu; < 90 vs. H<sub>0</sub> &mu; = 90, where &mu; is the mean number of murders for all burroughs in 2010.</li>
+<li>H<sub>A</sub> &mu; > 15 vs. H<sub>0</sub> &mu; = 15, where &mu; is the mean length of all oil changes at the Toyota dealership.</li>
+<li>H<sub>A</sub> &mu; &ne; 22500 vs. H<sub>0</sub> &mu; = 22500, where &mu; is the mean cost of all bariatric surgeries.</li>
+<li>H<sub>A</sub> p > 0.61 vs. H<sub>0</sub> p = 0.61, where p is the proportion of all Washburn High School students that are involved in at least one extracurricular activity.</li>
 </ol>
 
 ----
@@ -63,21 +63,21 @@ figs(name="P5","Normal distribution representing the p-value calculation for the
 </div>
 
 <ol>
-<li>The p-value is "the probability of observing a sample mean of 11.2 or 'different' if the population mean is 14." Reject $H_{0}$ because p-value=`r formatC(2*distrib(11.2,mean=14,sd=6/sqrt(25)),format="f",digits=4)`<&alpha; (`r figs("P1",display="cite")`).</li>
+<li>The p-value is "the probability of observing a sample mean of 11.2 or 'different' if the population mean is 14." Reject H<sub>0</sub> because p-value=`r formatC(2*distrib(11.2,mean=14,sd=6/sqrt(25)),format="f",digits=4)`<&alpha; (`r figs("P1",display="cite")`).</li>
 ```{r p1, echo=FALSE, results='hide'}
 2*distrib(11.2,mean=14,sd=6/sqrt(25))
 ```
 
 `r figs("P1")`
 
-<li>The p-value is "the probability of observing a sample mean of 79.5 or greater if the population mean is 75." Reject $H_{0}$ because p-value=`r formatC(distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE),format="f",digits=4)`<&alpha; (`r figs("P2",display="cite")`).</li>
+<li>The p-value is "the probability of observing a sample mean of 79.5 or greater if the population mean is 75." Reject H<sub>0</sub> because p-value=`r formatC(distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE),format="f",digits=4)`<&alpha; (`r figs("P2",display="cite")`).</li>
 ```{r p2, echo=FALSE}
 distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE)
 ```
 
 `r figs("P2")`
 
-<li>The p-value is "the probability of observing a sample mean of 13700 or less if the population mean is 15000." Do not reject $H_{0}$ because p-value=`r formatC(distrib(13700,mean=15000,sd=8000/sqrt(50)),format="f",digits=4)`>&alpha; (`r figs("P3",display="cite")`).</li>
+<li>The p-value is "the probability of observing a sample mean of 13700 or less if the population mean is 15000." Do not reject H<sub>0</sub> because p-value=`r formatC(distrib(13700,mean=15000,sd=8000/sqrt(50)),format="f",digits=4)`>&alpha; (`r figs("P3",display="cite")`).</li>
 
 ```{r p3, echo=FALSE}
 distrib(13700,mean=15000,sd=8000/sqrt(50))
