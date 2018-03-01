@@ -56,9 +56,9 @@ figs(name="P5","Normal distribution representing the p-value calculation for the
 ## P-Value Calculations and Decisions I
 
 <div class="alert alert-warning">
-<strong>When identifying the hypotheses note:</strong> 
+<strong>Note:</strong> 
 <ul>
-<li>Each statistical hypothesis must contain a parameter</li>
+<li>When writing the definition of the p-value in the context of the problem you are replacing "the observed statistic" with the value of x&#772;; "more extreme" with "less", "greater", or "different" depending on the sign in H<sub>A</sub>; and the "null hypothesis is true" with the value of &mu; in "the probability of the observed statistic or a value more extreme assuming the null hypothesis is true."</li>
 </ul>
 </div>
 
@@ -98,14 +98,14 @@ R Appendix.
 
 ## Body Temperature
 <ol>
-<li>$H_{A}: \mu \neq 37$ vs. $H_{0}: \mu = 37$</li>
+<li>H<sub>A</sub> &mu; &ne; 37 vs. H<sub>0</sub> &mu; = 37</li>
 ```{r echo=FALSE}
 d <- read.csv("https://github.com/droglenc/NCData/raw/master/NormTemp.csv")
 ```
 
 <li>x&#772;=`r formatC(mean(d$bodytemp),format="f",digits=3)`</li>
 <li>p-value=`r formatC(2*distrib(round(mean(d$bodytemp),3),mean=37,sd=0.41/sqrt(nrow(d))),format="f",digits=9)`</li>
-<li>Reject $H_{0}$ because p-value < alpha;.</li>
+<li>Reject H<sub>0</sub> because p-value < alpha;.</li>
 <li>Average body temperature is somewhat less (but significantly) less than 37C.</li>
 </ol>
 
@@ -124,11 +124,11 @@ d <- read.csv("https://github.com/droglenc/NCData/raw/master/Beetles.csv")
 d <- filterD(d,species=="Halticus.oleracea")
 ```
 
-1. $H_{A}: \mu > 190$ vs. $H_{0}: \mu = 190$, where $\mu$ is the mean thorax length ($\mu$m) for all *Halticus oleracea* beetles in this population.
-1. $\bar{x}$=`r formatC(mean(d$thorax),format="f",digits=3)` $\mu$m.
+1. H<sub>A</sub> &mu; > 190 vs. H<sub>0</sub> &mu; = 190, where &mu; is the mean thorax length (&mu;m) for all *Halticus oleracea* beetles in this population.
+1. x&#772;=`r formatC(mean(d$thorax),format="f",digits=3)` &mu;m.
 `. p-value=`r formatC(distrib(round(mean(d$thorax),3),mean=190,sd=14/sqrt(nrow(d)),lower.tail=FALSE),format="f",digits=3)`.
-1. Do not reject $H_{0}$ because the p-value $> \alpha$.
-1. The average thorax length for all *Halticus oleracea* beetles in this population does not appear to be greater than 190 $\mu$m.
+1. Do not reject H<sub>0</sub> because the p-value > &alpha;.
+1. The average thorax length for all *Halticus oleracea* beetles in this population does not appear to be greater than 190 &mu;m.
 
 R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
@@ -144,7 +144,7 @@ distrib(194.167,mean=190,sd=14/sqrt(18),lower.tail=FALSE)
 ## P-Value Calculations and Decisions II
 
 <ol>
-<li>The p-value is "the probability of observing a sample mean of 918 or greater if the population mean is 880." Reject $H_{0}$ because p-value=`r formatC(distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE),format="f",digits=4)`<&alpha; (`r figs("P4",display="cite")`).</li>
+<li>The p-value is "the probability of observing a sample mean of 918 or greater if the population mean is 880." Reject H<sub>0</sub> because p-value=`r formatC(distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE),format="f",digits=4)`<&alpha; (`r figs("P4",display="cite")`).</li>
 
 ```{r p4, echo=FALSE}
 distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE)
@@ -152,7 +152,7 @@ distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE)
 
 `r figs("P4")`
 
-<li>The p-value is "the probability of observing a sample mean of 824 or 'different' if the population mean is 800." Do not reject $H_{0}$ because p-value=`r formatC(2*distrib(824,mean=800,sd=60/sqrt(25),lower.tail=FALSE),format="f",digits=4)`>&alpha; (`r figs("P5",display="cite")`).</li>
+<li>The p-value is "the probability of observing a sample mean of 824 or 'different' if the population mean is 800." Do not reject H<sub>0</sub> because p-value=`r formatC(2*distrib(824,mean=800,sd=60/sqrt(25),lower.tail=FALSE),format="f",digits=4)`>&alpha; (`r figs("P5",display="cite")`).</li>
 
 ```{r p5, echo=FALSE, results='hide'}
 2*distrib(824,mean=800,sd=60/sqrt(25),lower.tail=FALSE)
@@ -160,8 +160,8 @@ distrib(918,mean=880,sd=90/sqrt(80),lower.tail=FALSE)
 
 `r figs("P5")`
 
-<li>The p-value is "the probabiity of observing a sample mean of 73 or less if the population mean is 80." The null hypothesis is rejected because the p-value (=`r formatC(distrib(73,mean=80,sd=20/sqrt(30)),format="f",digits=4)`)$<\alpha$.</li>
-<li>The p-value is "the probabiity of observing a sample mean of 1370 or 'different' if the population mean is 1500." The null hypothesis is not rejected because the p-value (=`r formatC(2*distrib(1370,mean=1500,sd=800/sqrt(40)),format="f",digits=4)`)$>\alpha$.
+<li>The p-value is "the probabiity of observing a sample mean of 73 or less if the population mean is 80." The null hypothesis is rejected because the p-value (=`r formatC(distrib(73,mean=80,sd=20/sqrt(30)),format="f",digits=4)`)$&alpha;.</li>
+<li>The p-value is "the probabiity of observing a sample mean of 1370 or 'different' if the population mean is 1500." The null hypothesis is not rejected because the p-value (=`r formatC(2*distrib(1370,mean=1500,sd=800/sqrt(40)),format="f",digits=4)`)>&alpha;.
 </ol>
 
 R Appendix.
