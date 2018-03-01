@@ -27,6 +27,20 @@ Probabilities are not “odds” so don’t say, for example in the first questi
 <li>The probability that a chipmunk eats a kernel of corn assuming that it has already eaten six kernels of corn and no acorns is 0.27 (<span class="math inline">\(=\frac{3}{11}\)</span>).</li>
 </ol>
 <hr />
+<div class="alert alert-warning">
+<strong>In the questions below note that you must:</strong>
+<ul>
+<li>
+Explicitly state which distribution (population or sampling) is to be used to answer the question and why that distribution is used (question is about an individual or a statistic from a sample).
+</li>
+<li>
+Explicitly state whether the distribution is normal or not and how you know whether it is or is not normal. For population distributions you will be told in the background if it is normal or not. For sampling distributions you will have to determine if one of the three criteria of the Central Limit Theorem has been met.
+</li>
+<li>
+Explicitly state whether you can answer the question or not. Simply, the question can be answered if the required distribution is normal (as determined as described above). If the distribution is not normal then you should say that you “cannot answer the question” because the PARTICULAR distribution is not normal. You should explicitly state which distribution it is that is not normal. See the answers below for examples.
+</li>
+</ul>
+</div>
 </div>
 <div id="melatonin-and-sleep" class="section level2">
 <h2>Melatonin and Sleep</h2>
@@ -86,7 +100,7 @@ distrib(15.5,mean=15,sd=5/sqrt(25),lower.tail=FALSE)</code></pre>
 <li>About a mean from n=50 …
 <ol>
 <li>Sampling (because about a statistic from a sample).</li>
-<li>x̄~N(0.9,<span class="math inline">\(\frac{0.15}{\sqrt{50}}\)</span>=0.0212) becasue n≥30.</li>
+<li>x̄~N(0.9,<span class="math inline">\(\frac{0.15}{\sqrt{50}}\)</span>=0.0212) because n≥30.</li>
 <li>Can be answered (because sampling distribution is normal).</li>
 <li>0.0092.</li>
 </ol></li>
@@ -118,7 +132,7 @@ distrib(0.01,mean=0.9,sd=0.15/sqrt(50),lower.tail=FALSE,type=&quot;q&quot;)</cod
 <li>About a mean from n=50 …
 <ol>
 <li>Sampling (because about a statistic from a sample).</li>
-<li>x̄~N(1.5,<span class="math inline">\(\frac{0.75}{\sqrt{40}}\)</span>=0.1061) because n≥30.</li>
+<li>x̄~N(1.5,<span class="math inline">\(\frac{0.75}{\sqrt{50}}\)</span>=0.1061) because n≥30.</li>
 <li>Can be answered (because sampling distribution is normal).</li>
 <li>0.0000012.</li>
 </ol></li>
@@ -177,14 +191,14 @@ ab-a
 <li>About a mean from n=20 …
 <ol>
 <li>Sampling (because about a statistic from a sample).</li>
-<li>x̄~N(21,$$1.3416) because n≥15 and the population distribution is only slightly skewed.</li>
+<li>x̄~N(21,<span class="math inline">\(\frac{6}{\sqrt{20}}\)</span>=1.3416) because n≥15 and the population distribution is only slightly skewed.</li>
 <li>Can be answered (because sampling distribution is normal).</li>
 <li>0.0014.</li>
 </ol></li>
 <li>About a mean from n=50 …
 <ol>
 <li>Sampling (because about a statistic from a sample).</li>
-<li>x̄~N(21,$$0.8485) because n≥30.</li>
+<li>x̄~N(21,<span class="math inline">\(\frac{6}{\sqrt{50}}\)</span>=0.8485) because n≥30.</li>
 <li>Can be answered (because sampling distribution is normal).</li>
 <li>0.8807.</li>
 </ol></li>
@@ -198,7 +212,7 @@ ab-a
 <li>About an individual …
 <ol>
 <li>Population (because about an individual).</li>
-<li>Slighly right-skewed (not normal) as given in the background.</li>
+<li>Slightly right-skewed (not normal) as given in the background.</li>
 <li>Can NOT be answered (because population distribution is not normal).</li>
 <li>Can’t answer.</li>
 </ol></li>
@@ -230,14 +244,14 @@ ab-a</code></pre>
 <li>About a mean from n=40 …
 <ol>
 <li>Sampling (because about a statistic from a sample).</li>
-<li>x̄~N(45,$$4.4272) because n≥30.</li>
+<li>x̄~N(45,<span class="math inline">\(\frac{28}{\sqrt{40}}\)</span>=4.4272) because n≥30.</li>
 <li>Can be answered.</li>
 <li>0.7413.</li>
 </ol></li>
 <li>About a mean from n=40 …
 <ol>
 <li>Sampling (because about a statistic from a sample).</li>
-<li>x̄~N(45,$$4.4272) because n≥30.</li>
+<li>x̄~N(45,<span class="math inline">\(\frac{28}{\sqrt{40}}\)</span>=4.4272) because n≥30.</li>
 <li>Can be answered (because sampling distribution is normal).</li>
 <li>42.0 secs.</li>
 </ol></li>
@@ -268,14 +282,14 @@ distrib(0.25,mean=45,sd=28/sqrt(40),type=&quot;q&quot;)</code></pre>
 <li>About a mean from n=5 …
 <ol>
 <li>Sampling (because about a statistic from a sample).</li>
-<li>x̄~N(550,$$67.0820) because the population distribution is normal.</li>
+<li>x̄~N(550,<span class="math inline">\(\frac{150}{\sqrt{5}}\)</span>=67.0820) because the population distribution is normal.</li>
 <li>Can be answered (because sampling distribution is normal).</li>
 <li>0.7720.</li>
 </ol></li>
 <li>About a mean from n=10 …
 <ol>
 <li>Sampling (because about a statistic from a sample).</li>
-<li>x̄~N(550,$$47.4342) because the population distribution is normal.</li>
+<li>x̄~N(550,<span class="math inline">\(\frac{150}{\sqrt{10}}\)</span>=47.4342) because the population distribution is normal.</li>
 <li>Can be answered (because sampling distribution is normal).</li>
 <li>0.0008.</li>
 </ol></li>
