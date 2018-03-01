@@ -78,6 +78,23 @@ distrib(13700,mean=15000,sd=8000/sqrt(50))</code></pre>
 </div>
 <div id="body-temperature" class="section level2">
 <h2>Body Temperature</h2>
+<div class="alert alert-warning">
+<strong>In the following two applied questions note:</strong>
+<ul>
+<li>
+The hypotheses must be defined as noted in the first class exercise above.
+</li>
+<li>
+The x̄ is computed with <code>Summarize()</code> with the data file loaded into R.
+</li>
+<li>
+The summary statement (question 5 in each) is your answer to the research hypothesis/question based on your p-value results. Generally, this is a restatement about whether you believe (i.e., rejected H<sub>0</sub>) or don’t believe (i.e., did not reject H<sub>0</sub>) the H<sub>A</sub> because the H<sub>A</sub> is generally formed from the research hypothesis. This statement should be in the context of the problem and should be made clear that it is about the parameter (see “mean” in each statement below) in the population (see “all” in each statement below).
+</li>
+<li>
+Your p-value may be slightly (though not dramatically) different if you rounded your x̄ and SE differently that I did.
+</li>
+</ul>
+</div>
 <ol>
 <li>
 H<sub>A</sub> μ ≠ 37 vs. H<sub>0</sub> μ = 37
@@ -92,7 +109,7 @@ p-value=0.000000093
 Reject H<sub>0</sub> because p-value &lt; alpha;.
 </li>
 <li>
-Average body temperature is somewhat less (but significantly) less than 37C.
+Average body temperature is somewhat less (but significantly) less than 37<sup>o</sup>C for all individuals in this population.
 </li>
 </ol>
 <p>R Appendix.</p>
@@ -105,7 +122,8 @@ Summarize(~bodytemp,data=d,digits=3)
 <h2>Beetle Size</h2>
 <ol>
 <li>H<sub>A</sub> μ &gt; 190 vs. H<sub>0</sub> μ = 190, where μ is the mean thorax length (μm) for all <em>Halticus oleracea</em> beetles in this population.</li>
-<li>x̄=194.167 μm. `. p-value=0.103.</li>
+<li>x̄=194.167 μm.</li>
+<li>p-value=0.103.</li>
 <li>Do not reject H<sub>0</sub> because the p-value &gt; α.</li>
 <li>The average thorax length for all <em>Halticus oleracea</em> beetles in this population does not appear to be greater than 190 μm.</li>
 </ol>
