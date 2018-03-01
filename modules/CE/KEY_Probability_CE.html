@@ -8,12 +8,23 @@ css: "/css/modules.css"
 
 
 <hr />
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+Probabilities are ALWAYS written as decimal value between 0 and 1. Do not convert to a percentage or leave as a fraction.
+</li>
+<li>
+Probabilities are not “odds” so don’t say, for example in the first question below, that “the odds of a chipmunk eating an acorn is 0.47.” Odds are the probability an event divided by the probability of not that event.
+</li>
+</ul>
+</div>
 <div id="food-choice-by-chipmunks" class="section level2">
 <h2>Food Choice by Chipmunks</h2>
 <ol>
-<li>The probability that a chipmunk eats an acorn is <span class="math inline">\(0.47\)</span> (<span class="math inline">\(=\frac{8}{17}\)</span>).</li>
-<li>The probability that a chipmunk eats a kernel of corns is <span class="math inline">\(0.53\)</span>. (<span class="math inline">\(=\frac{9}{17}\)</span>)</li>
-<li>The probability that a chipmunk eats a kernel of corn assuming that it has already eaten six kernels of corn and no acorns is <span class="math inline">\(0.27\)</span> (<span class="math inline">\(=\frac{3}{11}\)</span>).</li>
+<li>The probability that a chipmunk eats an acorn is 0.47 (<span class="math inline">\(=\frac{8}{17}\)</span>).</li>
+<li>The probability that a chipmunk eats a kernel of corns is 0.53. (<span class="math inline">\(=\frac{9}{17}\)</span>)</li>
+<li>The probability that a chipmunk eats a kernel of corn assuming that it has already eaten six kernels of corn and no acorns is 0.27 (<span class="math inline">\(=\frac{3}{11}\)</span>).</li>
 </ol>
 <hr />
 </div>
@@ -22,23 +33,23 @@ css: "/css/modules.css"
 <ol>
 <li>About a mean from n=4 …
 <ol>
-<li>Sampling.</li>
-<li>N(15,2.500)</li>
-<li>Can be answered.</li>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(15,<span class="math inline">\(\frac{5}{\sqrt{4}}\)</span>=2.500) because the population distribution was known to be normal.</li>
+<li>Can be answered (because sampling distribution is normal).</li>
 <li>0.8849.</li>
 </ol></li>
 <li>About an individual …
 <ol>
-<li>Population.</li>
-<li>N(15,5)</li>
-<li>Can be answered.</li>
+<li>Population (because about an individual).</li>
+<li>x~N(15,5) because the population distribution was known to be normal.</li>
+<li>Can be answered (because population distribution is normal).</li>
 <li>0.7257.</li>
 </ol></li>
 <li>About a mean from n=25 …
 <ol>
-<li>Sampling.</li>
-<li>N(15,1.000)</li>
-<li>Can be answered.</li>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(15,<span class="math inline">\(\frac{5}{\sqrt{25}}\)</span>=1.000) because the population distribution was known to be normal.</li>
+<li>Can be answered (because sampling distribution is normal).</li>
 <li>0.3085.</li>
 </ol></li>
 </ol>
@@ -53,37 +64,37 @@ distrib(15.5,mean=15,sd=5/sqrt(25),lower.tail=FALSE)</code></pre>
 <ol>
 <li>About an individual …
 <ol>
-<li>Population.</li>
+<li>Population (because about an individual).</li>
 <li>Right-skewed (not normal).</li>
-<li>Can NOT be answered.</li>
+<li>Can NOT be answered (because population distribution is not normal).</li>
 <li>Can’t answer.</li>
 </ol></li>
 <li>About a mean from n=15 …
 <ol>
-<li>Sampling.</li>
-<li>Not normal.</li>
-<li>Can NOT be answered.</li>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>Not normal because n is not greater than 30 and the population distribution is not just slightly skewed or normal.</li>
+<li>Can NOT be answered (because sampling distribution is not normal).</li>
 <li>Can’t answer.</li>
 </ol></li>
 <li>About a mean from n=50 …
 <ol>
-<li>Sampling.</li>
-<li>N(0.9,0.0212)</li>
-<li>Can be answered.</li>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(0.9,<span class="math inline">\(\frac{0.15}{\sqrt{50}}\)</span>=0.0212) because n≥30.</li>
+<li>Can be answered (because sampling distribution is normal).</li>
 <li>0.1729.</li>
 </ol></li>
 <li>About a mean from n=50 …
 <ol>
-<li>Sampling.</li>
-<li>N(0.9,0.0212)</li>
-<li>Can be answered.</li>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(0.9,<span class="math inline">\(\frac{0.15}{\sqrt{50}}\)</span>=0.0212) becasue n≥30.</li>
+<li>Can be answered (because sampling distribution is normal).</li>
 <li>0.0092.</li>
 </ol></li>
 <li>About a mean from n=50 …
 <ol>
-<li>Sampling.</li>
-<li>N(0.9,0.0212)</li>
-<li>Can be answered.</li>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(0.9,<span class="math inline">\(\frac{0.15}{\sqrt{50}}\)</span>=0.0212) because n≥30.</li>
+<li>Can be answered (because sampling distribution is normal).</li>
 <li>0.949 g/mi.</li>
 </ol></li>
 </ol>
@@ -99,30 +110,30 @@ distrib(0.01,mean=0.9,sd=0.15/sqrt(50),lower.tail=FALSE,type=&quot;q&quot;)</cod
 <li>No. Left side will be truncated at 0 (i.e., more than 2 SD away from mean becomes negative, which is not possible). Discrete data with lots of ones and twos with few higher than that.</li>
 <li>About a mean from n=40 …
 <ol>
-<li>Sampling.</li>
-<li>N(1.5,0.1186)</li>
-<li>Can be answered.</li>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(1.5,<span class="math inline">\(\frac{0.75}{\sqrt{40}}\)</span>=0.1186) because n≥30.</li>
+<li>Can be answered (because sampling distribution is normal).</li>
 <li>0.0057.</li>
 </ol></li>
 <li>About a mean from n=50 …
 <ol>
-<li>Sampling.</li>
-<li>N(1.5,0.1061)</li>
-<li>Can be answered.</li>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(1.5,<span class="math inline">\(\frac{0.75}{\sqrt{40}}\)</span>=0.1061) because n≥30.</li>
+<li>Can be answered (because sampling distribution is normal).</li>
 <li>0.0000012.</li>
 </ol></li>
 <li>About a mean from n=5 …
 <ol>
-<li>Sampling.</li>
-<li>Not normal.</li>
-<li>Can NOT be answered.</li>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>Not normal because n&lt;15 and the population distribution is not normal.</li>
+<li>Can NOT be answered (because sampling distribution is not normal).</li>
 <li>Can’t answer.</li>
 </ol></li>
 <li>About a mean from n=700 (through a total) …
 <ol>
-<li>Sampling.</li>
-<li>N(1.5,0.0283)</li>
-<li>Can be answered.</li>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(1.5,<span class="math inline">\(\frac{0.75}{\sqrt{700}}\)</span>=0.0283) because n≥30.</li>
+<li>Can be answered (because sampling distribution is normal).</li>
 <li>0.1039.</li>
 </ol></li>
 </ol>
@@ -158,37 +169,37 @@ ab-a
 <ol>
 <li>About an individual …
 <ol>
-<li>Population.</li>
-<li>Right-skewed (not normal).</li>
-<li>Can NOT be answered.</li>
+<li>Population (because about an individual).</li>
+<li>Slightly right-skewed (not normal) as given in the background.</li>
+<li>Can NOT be answered (because population distribution is not normal).</li>
 <li>Can’t answer.</li>
 </ol></li>
 <li>About a mean from n=20 …
 <ol>
-<li>Sampling.</li>
-<li>N(21,1.3416)</li>
-<li>Can be answered.</li>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(21,$$1.3416) because n≥15 and the population distribution is only slightly skewed.</li>
+<li>Can be answered (because sampling distribution is normal).</li>
 <li>0.0014.</li>
 </ol></li>
 <li>About a mean from n=50 …
 <ol>
-<li>Sampling.</li>
-<li>N(21,0.8485)</li>
-<li>Can be answered.</li>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(21,$$0.8485) because n≥30.</li>
+<li>Can be answered (because sampling distribution is normal).</li>
 <li>0.8807.</li>
 </ol></li>
 <li>About a mean from n=6 …
 <ol>
-<li>Sampling.</li>
-<li>Not normal.</li>
-<li>Can NOT be answered.</li>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>Not normal because n&lt;15 and the population distribution is not normal.</li>
+<li>Can NOT be answered (because sampling distribution is not normal).</li>
 <li>Can’t answer.</li>
 </ol></li>
 <li>About an individual …
 <ol>
-<li>Population.</li>
-<li>Right-skewed (not normal).</li>
-<li>Can NOT be answered.</li>
+<li>Population (because about an individual).</li>
+<li>Slighly right-skewed (not normal) as given in the background.</li>
+<li>Can NOT be answered (because population distribution is not normal).</li>
 <li>Can’t answer.</li>
 </ol></li>
 </ol>
@@ -204,30 +215,30 @@ ab-a</code></pre>
 <ol>
 <li>About a mean from n=5 …
 <ol>
-<li>Sampling.</li>
-<li>Not normal.</li>
-<li>Can NOT be answered.</li>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>Not normal because n&lt;15 and the population distribution is not normal.</li>
+<li>Can NOT be answered (because sampling distribution is not normal).</li>
 <li>Can’t answer.</li>
 </ol></li>
 <li>About an individual …
 <ol>
-<li>Population.</li>
-<li>Right-skewed (not normal).</li>
-<li>Can NOT be answered.</li>
+<li>Population (because about an individual).</li>
+<li>Right-skewed (not normal) as given in the background.</li>
+<li>Can NOT be answered (because population distribution is not normal).</li>
 <li>Can’t answer.</li>
 </ol></li>
 <li>About a mean from n=40 …
 <ol>
-<li>Sampling.</li>
-<li>N(45,4.4272)</li>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(45,$$4.4272) because n≥30.</li>
 <li>Can be answered.</li>
 <li>0.7413.</li>
 </ol></li>
 <li>About a mean from n=40 …
 <ol>
-<li>Sampling.</li>
-<li>N(45,4.4272)</li>
-<li>Can be answered.</li>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(45,$$4.4272) because n≥30.</li>
+<li>Can be answered (because sampling distribution is normal).</li>
 <li>42.0 secs.</li>
 </ol></li>
 </ol>
@@ -242,30 +253,30 @@ distrib(0.25,mean=45,sd=28/sqrt(40),type=&quot;q&quot;)</code></pre>
 <ol>
 <li>About an individual …
 <ol>
-<li>Population.</li>
-<li>N(550,150).</li>
-<li>Can be answered (population is normal).</li>
+<li>Population (because about an individual).</li>
+<li>x~N(550,150) as given in the background.</li>
+<li>Can be answered (because population distribution is normal).</li>
 <li>0.0478</li>
 </ol></li>
 <li>About an individual …
 <ol>
-<li>Population.</li>
-<li>N(550,150).</li>
-<li>Can be answered (population is normal).</li>
+<li>Population (because about an individual).</li>
+<li>x~N(550,150) as given in the background.</li>
+<li>Can be answered (because population distribution is normal).</li>
 <li>0.0098</li>
 </ol></li>
 <li>About a mean from n=5 …
 <ol>
-<li>Sampling.</li>
-<li>N(550,67.0820)</li>
-<li>Can be answered (because population is normal).</li>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(550,$$67.0820) because the population distribution is normal.</li>
+<li>Can be answered (because sampling distribution is normal).</li>
 <li>0.7720.</li>
 </ol></li>
 <li>About a mean from n=10 …
 <ol>
-<li>Sampling.</li>
-<li>N(550,47.4342)</li>
-<li>Can be answered (because population is normal).</li>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(550,$$47.4342) because the population distribution is normal.</li>
+<li>Can be answered (because sampling distribution is normal).</li>
 <li>0.0008.</li>
 </ol></li>
 </ol>
