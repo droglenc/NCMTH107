@@ -44,7 +44,7 @@ Use the materials below to answer the questions on [this preparation guide](Conf
 
 ## Practice
 
-* [Group Activity](CE/ConfRegions_GA)
+* [Activity](CE/ConfRegions_GA)
 * [Exercises](CE/ConfRegions_CE1) ([*more as time permits*](CE/ConfRegions_CE2)) ... [ANSWER KEY](CE/KEY_ConfRegions_CE)
 * [Review Exercises](RE/ConfRegions_RevEx)
 
