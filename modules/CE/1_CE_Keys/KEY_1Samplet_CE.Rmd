@@ -102,7 +102,7 @@ ci <- xbar+c(-1,1)*tstar*se
 <li>H<sub>A</sub>: &mu;&ne;178 and H<sub>0</sub>: &mu;=178, where &mu; is the mean number of CFU per 100 ml in ALL samples from this lake on this date.</li>
 <li>1-sample t-test because (i) one group or population (this lake) was sampled, (ii) a quantitative variable (number of CFU per 100 ml) was recorded, and (iii) &sigma; is not known.</li>
 <li>An observational study without clear randomization of 25 water samples.</li>
-<li>The assumptions are met because (i) &sigma; is not known and (ii) n=25>15 and the histogram (given in question) is not strongly skewed.</li>
+<li>The assumptions are met because (i) &sigma; is not known and (ii) n=25&ge;15 and the histogram (given in question) is not strongly skewed.</li>
 <li>x&#772;=`r xbar` CFU per 100 ml.</li>
 <li>t=`r formatC(t,format="f",digits=4)` with `r df` df.</li>
 <li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
@@ -129,7 +129,7 @@ t.test(df$CFU,mu=178,alt="two.sided",conf.level=0.95)
 
 ## Acid Rain in Shenandoah National Park
 ```{r echo=FALSE}
-ph <- read.csv("https://github.com/droglenc/NCData/raw/master/pHlevels.csv",header=TRUE)
+ph <- read.csv("https://github.com/droglenc/NCData/raw/master/pHlevels.csv")
 ```
 ```{r pHCalc, echo=FALSE, results='hide'}
 ( ph.t <- t.test(ph$pH,mu=5.6,alt="less",conf.level=0.99) )
@@ -140,7 +140,7 @@ ph <- read.csv("https://github.com/droglenc/NCData/raw/master/pHlevels.csv",head
   <li> H<sub>A</sub>:&mu;<5.6 and H<sub>O</sub>:&mu;=5.6, where &mu; is the mean pH for all rainwater collections at the Big Meadows Station in the Shenandoah National Park, VA.</li>
   <li> A one-sample t-test is required because quantitative variable (pH) was measured on individuals from one group or population (all rainwater collections at Big Meadows Station), &sigma; is UNknown, and the population mean is being compared to a specific value in the hull hypothesis.</li>
   <li> An observational study without obvious randomization was used.</li>
-  <li> The assumptions are met because &sigma; is unknown and the sample size (`r formatC(ph.t$parameter+1,format="f",digits=0)`) is greater than 40. Thus, the sampling distribution of the test statistic should follow a t-distribution.</li>
+  <li> The assumptions are met because &sigma; is unknown and m=`r formatC(ph.t$parameter+1,format="f",digits=0)`&ge;40. Thus, the sampling distribution of the test statistic should follow a t-distribution.</li>
   <li> The statistic is x&#772;=`r formatC(ph.t$estimate,format="f",digits=3)` (`r tbls("pH",display="cite")`).</li>
 
 `r tbls("pH")`
@@ -234,7 +234,7 @@ ucb <- xbar+distrib(0.95,type="q",distrib="t",df=df)*se
 <li>H<sub>A</sub>: &mu;<4104 and H<sub>0</sub>: &mu;=4104, where &mu; is the mean number of citizens killed by ALL nation-states.</li>
 <li>1-sample t-test because (i) one group or population (all nation-states) was sampled, (ii) a quantitative variable (number of killings) was recorded, and (iii) &sigma; is not known.</li>
 <li>An observational study with clear randomization of 75 countries.</li>
-<li>The assumptions are met because (i) &sigma; is not known and (ii) n=75>40.</li>
+<li>The assumptions are met because (i) &sigma; is not known and (ii) n=75&ge;40.</li>
 <li>x&#772;=`r xbar` killings.</li>
 <li>t=`r formatC(t,format="f",digits=4)` with `r df` df.</li>
 <li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
@@ -257,7 +257,7 @@ R Appendix.
   <li> H<sub>A</sub>: &mu;>0 and H<sub>O</sub>:&mu;=0, where &mu; is the mean sea level rise rate for all ecosystems. [Note that a mean of 0 means no change.]</li>
   <li> A one-sample t-test is required because a quantitative variable (sea level rise rate) was measured on individuals from one group or population (ecosystems), &sigma; is UNknown, and the population mean is being compared to a specific value in the null hypothsis.</li>
   <li> An observational study without obvious randomization was used.</li>
-  <li> The assumptions are met because &sigma; is unknown, the sample size is greater than 15 and the background suggests that the distribution is not strongly skewed. Thus, the sampling distribution of the test statistic should follow a t-distribution.</li>
+  <li> The assumptions are met because &sigma; is unknown, n=23&ge;15 and the background suggests that the distribution is not strongly skewed. Thus, the sampling distribution of the test statistic should follow a t-distribution.</li>
   <li> The statistic is x&#772;=0.059.</li>
   <li> The test statistic is  t=$\frac{0.059-0}{\frac{0.135}{\sqrt{23}}}$ = 2.107 with 23-1=22 df.</li>
   <li> The p-value is `r kPvalue(distrib(2.107,distrib="t",df=22,lower.tail=FALSE,plot=FALSE),include.p=FALSE,latex=FALSE)`.</li>
@@ -285,7 +285,7 @@ ozo <- read.csv("https://github.com/droglenc/NCData/raw/master/OzoneSWI.csv")
 <li>H<sub>0</sub>:&mu;=300, H<sub>A</sub>: &mu;&ne;300, where &mu; is the mean thickness of the ozone layer from ALL locations.</li>
 <li>A one-sample t-test is required because (i) a quantitative variable (thickness) was measured, (ii)the individuals are from one group or population (the ozone layer over Arosa, SWI), and (iii) &sigma; is not known. Thus, the population mean is being compared to a specific value in the null hypothesis.</li>
 <li>An observational study of 45 random samples of ozone was conducted.</li>
-<li>The assumptions are met because n=45>40 and &sigma; is UNknown.</li>
+<li>The assumptions are met because n=45&ge;40 and &sigma; is UNknown.</li>
 <li>x&#772;=`r formatC(ozo.t$estimate,format="f",digits=0)` (`r tbls("Ozone",display="cite")`).</li>
 
 `r tbls("Ozone")`
@@ -297,7 +297,7 @@ kHtest(ozo.t)
 <li>The p-value `r kPvalue(ozo.t$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("Ozone",display="cite")`).</li>
 <li>The H<sub>0</sub> is rejected because the p-value<&alpha; (`r tbls("Ozone",display="cite")`).</li>
 <li>The mean thickness of the ozone layer at ALL areas abova Arosa, SWI appears to be different (specifically greater) than 300 Dobson units.</li>
-<li>I am 99\% confident that the mean thickness of the ozone layer in ALL areas above Arosa, SWI is between `r formatC(ozo.t$conf.int[1],format="f",digits=0)` and  `r formatC(ozo.t$conf.int[2],format="f",digits=0)` Dobson Units (`r tbls("Ozone",display="cite")`).</li>
+<li>I am 99% confident that the mean thickness of the ozone layer in ALL areas above Arosa, SWI is between `r formatC(ozo.t$conf.int[1],format="f",digits=0)` and  `r formatC(ozo.t$conf.int[2],format="f",digits=0)` Dobson Units (`r tbls("Ozone",display="cite")`).</li>
 </ol>
 
 R Appendix
@@ -318,7 +318,7 @@ df <- read.csv("../FecalColiform.csv")
 <li>H<sub>A</sub>: &mu;>150 and H<sub>0</sub>: &mu;=150, where &mu; is the mean number of CFU per 100 ml in ALL samples from this lake on this date.</li>
 <li>1-sample t-test because (i) one group or population (this lake) was sampled, (ii) a quantitative variable (number of CFU per 100 ml) was recorded, and (iii) &sigma; is not known.</li>
 <li>An observational study without clear randomization of 25 water samples.</li>
-<li>The assumptions are met because (i) &sigma; is not known and (ii) n=25>15 and the histogram (`r figs("FChist",display="cite")`) is not strongly skewed.</li>
+<li>The assumptions are met because (i) &sigma; is not known and (ii) n=25&ge;15 and the histogram (`r figs("FChist",display="cite")`) is not strongly skewed.</li>
 ```{r CFU2Hist, echo=FALSE, fig.width=4, fig.height=4}
 hist(~CFU,data=df,xlab="Colony Forming Units per 100 ml")
 ```
@@ -336,7 +336,7 @@ kHtest(fc.t)
 <li>The p-value `r kPvalue(fc.t$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("FC",display="cite")`).</li>
 <li>The H<sub>0</sub> is rejected because the p-value<&alpha;.</li>
 <li>The mean CFU per ALL 100 ml samples of water from this lake at this time appears to be greater than 150 CFU per 100 ml. Thus, it appears that the lake will need to be closed swimming.</li>
-<li>I am 90\% confident that CFU per ALL 100 ml of water sampled from this lake on this date is greater than `r formatC(fc.t$conf.int[1],format="f",digits=1)` CFU per 100 ml (`r tbls("FC",display="cite")`).</li>
+<li>I am 90% confident that CFU per ALL 100 ml of water sampled from this lake on this date is greater than `r formatC(fc.t$conf.int[1],format="f",digits=1)` CFU per 100 ml (`r tbls("FC",display="cite")`).</li>
 </ol>
 
 R Appendix
