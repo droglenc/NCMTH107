@@ -51,7 +51,7 @@ figs(name="Z7","Normal distribution representing the Z* the seventh confidence r
 <ol type="a">
 <li>C=0.90</li>
 <li>Lower bound</li>
-<li>Z*=`r formatC(distrib(0.9,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z1",display="cite")`).</li>
+<li>Z<sup>*</sup>=`r formatC(distrib(0.9,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z1",display="cite")`).</li>
 ```{r Z1, echo=FALSE}
 zstar <- distrib(0.9,type="q",lower.tail=FALSE)
 ```
@@ -67,7 +67,7 @@ zstar <- distrib(0.9,type="q",lower.tail=FALSE)
 <ol type="a">
 <li>C=0.95</li>
 <li>Interval</li>
-<li>Z*= $\pm$ `r formatC(distrib(0.025,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z2",display="cite")`).</li>
+<li>Z<sup>*</sup>= &plusmn; `r formatC(distrib(0.025,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z2",display="cite")`).</li>
 ```{r Z2, echo=FALSE}
 zstar <- distrib(0.025,type="q",lower.tail=FALSE)
 ```
@@ -83,7 +83,7 @@ zstar <- distrib(0.025,type="q",lower.tail=FALSE)
 <ol type="a">
 <li>C=0.99</li>
 <li>Lower bound</li>
-<li>Z*=`r formatC(distrib(0.99,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z3",display="cite")`).</li>
+<li>Z<sup>*</sup>=`r formatC(distrib(0.99,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z3",display="cite")`).</li>
 ```{r Z3, echo=FALSE}
 zstar <- distrib(0.99,type="q",lower.tail=FALSE)
 ```
@@ -99,7 +99,7 @@ zstar <- distrib(0.99,type="q",lower.tail=FALSE)
 <ol type="a">
 <li>C=0.90</li>
 <li>Upper bound</li>
-<li>Z*=`r formatC(distrib(0.9,type="q"),format="f",digits=3)` (`r figs("Z4",display="cite")`).</li>
+<li>Z<sup>*</sup>=`r formatC(distrib(0.9,type="q"),format="f",digits=3)` (`r figs("Z4",display="cite")`).</li>
 ```{r Z4, echo=FALSE}
 zstar <- distrib(0.9,type="q")
 ```
@@ -206,7 +206,7 @@ R Appendix.
 <ol type="a">
 <li>C=0.99</li>
 <li>Interval</li>
-<li>Z*= $\pm$ `r formatC(distrib(0.005,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z5",display="cite")`).</li>
+<li>Z<sup>*</sup>= &plusmn; `r formatC(distrib(0.005,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z5",display="cite")`).</li>
 ```{r Z5, echo=FALSE}
 zstar <- distrib(0.005,type="q",lower.tail=FALSE)
 ```
@@ -221,7 +221,7 @@ zstar <- distrib(0.005,type="q",lower.tail=FALSE)
 <ol type="a">
 <li>C=0.95</li>
 <li>Upper bound</li>
-<li>Z*=`r formatC(distrib(0.95,type="q"),format="f",digits=3)` (`r figs("Z6",display="cite")`).</li>
+<li>Z<sup>*</sup>=`r formatC(distrib(0.95,type="q"),format="f",digits=3)` (`r figs("Z6",display="cite")`).</li>
 ```{r Z6, echo=FALSE}
 zstar <- distrib(0.95,type="q")
 ```
@@ -229,14 +229,14 @@ zstar <- distrib(0.95,type="q")
 `r figs("Z6")`
 
 <li>`r formatC(73+zstar*20/sqrt(30),format="f",digits=1)`.</li>
-<li>I am 95\% confident that the true population mean is less than `r formatC(73+zstar*20/sqrt(30),format="f",digits=1)`.</li>
+<li>I am 95% confident that the true population mean is less than `r formatC(73+zstar*20/sqrt(30),format="f",digits=1)`.</li>
 </ol>
 
 <li>See below.</li>
 <ol type="a">
 <li>C=0.95</li>
 <li>Interval</li>
-<li>Z*= $\pm$ `r formatC(distrib(0.025,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z7",display="cite")`).</li>
+<li>Z<sup>*</sup>= &plusmn; `r formatC(distrib(0.025,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z7",display="cite")`).</li>
 ```{r Z7, echo=FALSE}
 zstar <- distrib(0.025,type="q",lower.tail=FALSE)
 ```
@@ -308,7 +308,7 @@ zstar <- distrib(0.995,type="q")
 ( n <- (zstar*sigma/me)^2 )
 ```
 
-The required sample size to estimate the growth of the calves within `r me` g per day with 99% confidence assuming that $\sigma$=`r sigma` is `r formatC(ceiling(n),format="f",digits=0)`.
+The required sample size to estimate the growth of the calves within `r me` g per day with 99% confidence assuming that &sigma;=`r sigma` is `r formatC(ceiling(n),format="f",digits=0)`.
 
 R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
