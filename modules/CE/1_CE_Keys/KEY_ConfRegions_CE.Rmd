@@ -36,6 +36,16 @@ figs(name="Z7","Normal distribution representing the Z* the seventh confidence r
 
 ## Confidence Region Calculations
 
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>The level of confidence comes from 1-&alpha;</li>
+<li>The type of confidence region comes from the H<sub>A</sub>: a "less than" H<sub>A</sub> is an upper bound, a "greater than" H<sub>A</sub> is a lower bound, and a "not equals" H<sub>A</sub> is an interval.</li>
+<li>The Z<sup>*</sup> uses the level of confidence in `distrib()` for the bounds but the "tail area" must be used for the intervals. Look closely at the R Appendices, especially for the interval questions.</li>
+</ul>
+</div>
+
+
 <ol>
 <li>See below.</li>
 <ol type="a">
@@ -149,6 +159,13 @@ distrib(0.95,type="q",lower.tail=FALSE)
 ----
 
 ## Internet Usage
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>These questions are "sample size" and not "confidence region" calculations.</li>
+<li>Note that all sample size calculations should be rounded <strong>UP</strong> to a whole number. For example, in the third question below, note how 742.2 was rounded up to 743.</li>
+</ul>
+</div>
 
 <ol>
 ```{r ncalc1, echo=FALSE, results='hide', fig.show='hide'}
