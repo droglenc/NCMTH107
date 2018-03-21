@@ -30,8 +30,8 @@ zstar <- distrib(0.90,type="q",lower.tail=FALSE)
 ```
 
 1. 90% (=100(1-0.10))
-1. Lower confidence bound (because $H_{A}$ is "greater than").
-1. $Z^{*}$=`r formatC(zstar,format="f",digits=3)`
+1. Lower confidence bound (because H<sub>A</sub> is "greater than").
+1. Z<sup>*</sup>=`r formatC(zstar,format="f",digits=3)`
 1. 2504`r formatC(zstar,format="f",digits=3)`$\frac{1200}{\sqrt(118)}$ = `r formatC(2504+zstar*1200/sqrt(118),format="f",digits=0)`.
 1. I am 90% confident that the population mean BOD is greater than `r formatC(2504+zstar*1200/sqrt(118),format="f",digits=0)`. By confident I mean that 90% of all 90% confidence regions will contain the true population mean.
 
@@ -45,12 +45,12 @@ library(NCStats)
 
 ## Medical School Admissions
 ```{r CImed, echo=FALSE, results='hide', fig.show='hide'}
-zstar <- distrib(0.95,type="q",lower.tail=FALSE)
+zstar <- distrib(0.95,type="q")
 ```
 
 1. 95% (=100(1-0.05))
-1. Upper confidence bound (because $H_{A}$ is "less than").
-1. $Z^{*}$=`r formatC(zstar,format="f",digits=3)`
+1. Upper confidence bound (because H<sub>A</sub> is "less than").
+1. Z<sup>*</sup>=`r formatC(zstar,format="f",digits=3)`
 1. 3.60+`r formatC(zstar,format="f",digits=3)`$\frac{0.35}{\sqrt(40)}$ = `r formatC(3.6+zstar*0.35/sqrt(40),format="f",digits=2)`.
 1. I am 95% confident that the population mean GPA is less than `r formatC(3.6+zstar*0.35/sqrt(40),format="f",digits=2)`. By confident I mean that 95% of all 95% confidence regions will contain the true population mean.
 
@@ -74,8 +74,8 @@ zstar <- distrib(0.995,type="q")
 
 1. 99%
 1. Confidence interval.
-1. $Z^{*}$=`r formatC(zstar,format="f",digits=3)`
-1. `r formatC(mean(banff$snow),format="f",digits=2)` $\pm$ `r formatC(zstar,format="f",digits=3)` $\frac{15}{\sqrt(15)}$ = (`r formatC(mean(banff$snow)-zstar*15/sqrt(15),format="f",digits=2)`,`r formatC(mean(banff$snow)+zstar*15/sqrt(15),format="f",digits=2)`).
+1. Z<sup>*</sup>=`r formatC(zstar,format="f",digits=3)`
+1. `r formatC(mean(banff$snow),format="f",digits=2)` &plusmn; `r formatC(zstar,format="f",digits=3)` $\frac{15}{\sqrt(15)}$ = (`r formatC(mean(banff$snow)-zstar*15/sqrt(15),format="f",digits=2)`,`r formatC(mean(banff$snow)+zstar*15/sqrt(15),format="f",digits=2)`).
 1. I am 95% confident that the population mean snowpack depth is between `r formatC(mean(banff$snow)-zstar*15/sqrt(15),format="f",digits=2)` and `r formatC(mean(banff$snow)+zstar*15/sqrt(15),format="f",digits=2)` cm. By confident I mean that 99% of all 99% confidence regions will contain the true population mean.
 
 ### R Appendix
@@ -100,8 +100,8 @@ zstar <- distrib(0.95,type="q",lower.tail=FALSE)
 ```
 
 1. 95% (=100(1-0.05)).
-1. Lower confidence bound (because $H_{A}$ is a "greater than").
-1. $Z^{*}$=`r formatC(zstar,format="f",digits=3)`.
+1. Lower confidence bound (because H<sub>A</sub> is a "greater than").
+1. Z<sup>*</sup>=`r formatC(zstar,format="f",digits=3)`.
 1. `r formatC(mean(cp$conc),format="f",digits=1)``r formatC(zstar,format="f",digits=3)`$\frac{40}{\sqrt(36)}$ = `r formatC(mean(cp$conc)+zstar*40/sqrt(36),format="f",digits=1)`.
 1. I am 95% confident that the population mean creatine phosphate concentration is greater than `r formatC(mean(cp$conc)+zstar*40/sqrt(36),format="f",digits=1)`. By confident I mean that 95% of all 95% confidence regions will contain the true population mean.
 
@@ -125,9 +125,9 @@ zstar <- distrib(0.975,type="q")
 ```
 
 1. 95% (=100(1-0.05)).
-1. Confidence interval (because $H_{A}$ is a "not equals").
-1. $Z^{*}$= $\pm$ `r formatC(zstar,format="f",digits=3)`.
-1. `r formatC(mean(br$hts),format="f",digits=2)` $\pm$ `r formatC(zstar,format="f",digits=3)`$\frac{0.2}{\sqrt(16)}$ = (`r formatC(mean(br$hts)-zstar*0.2/sqrt(16),format="f",digits=2)`,`r formatC(mean(br$hts)+zstar*0.2/sqrt(16),format="f",digits=2)`).
+1. Confidence interval (because H<sub>A</sub> is a "not equals").
+1. Z<sup>*</sup>= &plusmn; `r formatC(zstar,format="f",digits=3)`.
+1. `r formatC(mean(br$hts),format="f",digits=2)` &plusmn; `r formatC(zstar,format="f",digits=3)`$\frac{0.2}{\sqrt(16)}$ = (`r formatC(mean(br$hts)-zstar*0.2/sqrt(16),format="f",digits=2)`,`r formatC(mean(br$hts)+zstar*0.2/sqrt(16),format="f",digits=2)`).
 1. I am 95% confident that the population mean gauge height is between `r formatC(mean(br$hts)-zstar*0.2/sqrt(16),format="f",digits=2)` and `r formatC(mean(br$hts)+zstar*0.2/sqrt(16),format="f",digits=2)` feet. By confident I mean that 95% of all 95% confidence regions will contain the true population mean.
 
 ### R Appendix
@@ -150,8 +150,8 @@ zstar <- distrib(0.90,type="q")
 ```
 
 1. 90% (=100(1-0.10)).
-1. Upper confidence bound (because $H_{A}$ is a "less than").
-1. $Z^{*}$=`r formatC(zstar,format="f",digits=3)`.
+1. Upper confidence bound (because H<sub>A</sub> is a "less than").
+1. Z<sup>*</sup>=`r formatC(zstar,format="f",digits=3)`.
 1. `r formatC(mean(wic$dens),format="f",digits=1)`+`r formatC(zstar,format="f",digits=3)`$\frac{125}{\sqrt(15)}$ = `r formatC(mean(wic$dens)+zstar*125/sqrt(15),format="f",digits=1)`.
 1. I am 90% confident that the population mean density of people per county in Wisconsin is less than `r formatC(mean(wic$dens)+zstar*125/sqrt(15),format="f",digits=1)`. By confident I mean that 90% of all 90% confidence regions will contain the true population mean.
 

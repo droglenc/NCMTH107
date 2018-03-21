@@ -7,13 +7,17 @@ css: "/css/modules.css"
 ---
 
 
+<pre><code>## Loading required package: FSA</code></pre>
+<pre><code>## ## FSA v0.8.18. See citation(&#39;FSA&#39;) if used in publication.
+## ## Run fishR() for related website and fishR(&#39;IFAR&#39;) for related book.</code></pre>
+<pre><code>## ## NCStats v0.4.6 by Derek H. Ogle, Northland College.</code></pre>
 <hr />
 <div id="bod-in-effluent" class="section level2">
 <h2>BOD in Effluent</h2>
 <ol>
 <li>90% (=100(1-0.10))</li>
-<li>Lower confidence bound (because <span class="math inline">\(H_{A}\)</span> is “greater than”).</li>
-<li><span class="math inline">\(Z^{*}\)</span>=-1.282</li>
+<li>Lower confidence bound (because H<sub>A</sub> is “greater than”).</li>
+<li>Z<sup>*</sup>=-1.282</li>
 <li>2504-1.282<span class="math inline">\(\frac{1200}{\sqrt(118)}\)</span> = 2362.</li>
 <li>I am 90% confident that the population mean BOD is greater than 2362. By confident I mean that 90% of all 90% confidence regions will contain the true population mean.</li>
 </ol>
@@ -28,15 +32,15 @@ zstar &lt;- distrib(0.90,type=&quot;q&quot;,lower.tail=FALSE)</code></pre>
 <h2>Medical School Admissions</h2>
 <ol>
 <li>95% (=100(1-0.05))</li>
-<li>Upper confidence bound (because <span class="math inline">\(H_{A}\)</span> is “less than”).</li>
-<li><span class="math inline">\(Z^{*}\)</span>=-1.645</li>
-<li>3.60+-1.645<span class="math inline">\(\frac{0.35}{\sqrt(40)}\)</span> = 3.51.</li>
-<li>I am 95% confident that the population mean GPA is less than 3.51. By confident I mean that 95% of all 95% confidence regions will contain the true population mean.</li>
+<li>Upper confidence bound (because H<sub>A</sub> is “less than”).</li>
+<li>Z<sup>*</sup>=1.645</li>
+<li>3.60+1.645<span class="math inline">\(\frac{0.35}{\sqrt(40)}\)</span> = 3.69.</li>
+<li>I am 95% confident that the population mean GPA is less than 3.69. By confident I mean that 95% of all 95% confidence regions will contain the true population mean.</li>
 </ol>
 <div id="r-appendix-1" class="section level3">
 <h3>R Appendix</h3>
 <pre class="r"><code>library(NCStats)
-zstar &lt;- distrib(0.95,type=&quot;q&quot;,lower.tail=FALSE)</code></pre>
+zstar &lt;- distrib(0.95,type=&quot;q&quot;)</code></pre>
 <hr />
 </div>
 </div>
@@ -45,8 +49,8 @@ zstar &lt;- distrib(0.95,type=&quot;q&quot;,lower.tail=FALSE)</code></pre>
 <ol>
 <li>99%</li>
 <li>Confidence interval.</li>
-<li><span class="math inline">\(Z^{*}\)</span>=2.576</li>
-<li>44.61 <span class="math inline">\(\pm\)</span> 2.576 <span class="math inline">\(\frac{15}{\sqrt(15)}\)</span> = (34.63,54.58).</li>
+<li>Z<sup>*</sup>=2.576</li>
+<li>44.61 ± 2.576 <span class="math inline">\(\frac{15}{\sqrt(15)}\)</span> = (34.63,54.58).</li>
 <li>I am 95% confident that the population mean snowpack depth is between 34.63 and 54.58 cm. By confident I mean that 99% of all 99% confidence regions will contain the true population mean.</li>
 </ol>
 <div id="r-appendix-2" class="section level3">
@@ -62,8 +66,8 @@ zstar &lt;- distrib(0.995,type=&quot;q&quot;)</code></pre>
 <h2>Creatine Phosphate Concentrations</h2>
 <ol>
 <li>95% (=100(1-0.05)).</li>
-<li>Lower confidence bound (because <span class="math inline">\(H_{A}\)</span> is a “greater than”).</li>
-<li><span class="math inline">\(Z^{*}\)</span>=-1.645.</li>
+<li>Lower confidence bound (because H<sub>A</sub> is a “greater than”).</li>
+<li>Z<sup>*</sup>=-1.645.</li>
 <li>98.3-1.645<span class="math inline">\(\frac{40}{\sqrt(36)}\)</span> = 87.3.</li>
 <li>I am 95% confident that the population mean creatine phosphate concentration is greater than 87.3. By confident I mean that 95% of all 95% confidence regions will contain the true population mean.</li>
 </ol>
@@ -80,9 +84,9 @@ zstar &lt;- distrib(0.95,type=&quot;q&quot;,lower.tail=FALSE)</code></pre>
 <h2>Brule River Gauge Heights</h2>
 <ol>
 <li>95% (=100(1-0.05)).</li>
-<li>Confidence interval (because <span class="math inline">\(H_{A}\)</span> is a “not equals”).</li>
-<li><span class="math inline">\(Z^{*}\)</span>= <span class="math inline">\(\pm\)</span> 1.960.</li>
-<li>1.73 <span class="math inline">\(\pm\)</span> 1.960<span class="math inline">\(\frac{0.2}{\sqrt(16)}\)</span> = (1.63,1.82).</li>
+<li>Confidence interval (because H<sub>A</sub> is a “not equals”).</li>
+<li>Z<sup>*</sup>= ± 1.960.</li>
+<li>1.73 ± 1.960<span class="math inline">\(\frac{0.2}{\sqrt(16)}\)</span> = (1.63,1.82).</li>
 <li>I am 95% confident that the population mean gauge height is between 1.63 and 1.82 feet. By confident I mean that 95% of all 95% confidence regions will contain the true population mean.</li>
 </ol>
 <div id="r-appendix-4" class="section level3">
@@ -98,8 +102,8 @@ zstar &lt;- distrib(0.975,type=&quot;q&quot;)</code></pre>
 <h2>Population Density in Wisconsin Counties</h2>
 <ol>
 <li>90% (=100(1-0.10)).</li>
-<li>Upper confidence bound (because <span class="math inline">\(H_{A}\)</span> is a “less than”).</li>
-<li><span class="math inline">\(Z^{*}\)</span>=1.282.</li>
+<li>Upper confidence bound (because H<sub>A</sub> is a “less than”).</li>
+<li>Z<sup>*</sup>=1.282.</li>
 <li>92.9+1.282<span class="math inline">\(\frac{125}{\sqrt(15)}\)</span> = 134.2.</li>
 <li>I am 90% confident that the population mean density of people per county in Wisconsin is less than 134.2. By confident I mean that 90% of all 90% confidence regions will contain the true population mean.</li>
 </ol>
