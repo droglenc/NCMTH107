@@ -10,7 +10,7 @@ The fourth Quiz (see [dates page](../Dates-Current)) will cover material from Mo
 
 * 1-Sample t-Test. -- [Here](../../modules/CE/1Samplet_CE1.html#fecal-coliform-counts-i), [Here](../../modules/CE/1Samplet_CE2.html#increased-civility-in-nation-states), and [Here](../../modules/CE/1Samplet_CE2.html#sea-level-rise-rate).
 * 2-Sample t-Test. -- [Here](../../modules/CE/2Samplet_CE1.html#compost-type-and-germination-rates), [Here](../../modules/CE/2Samplet_CE2.html#commitment-to-adult-animals), and [Here](../../modules/RE/2Samplet_RevEx.html#popcorn-yield-by-variety).
-* Chi-Square Test. -- [Here](../../modules/CE/ChiSquare_CE1.html#aids-cases), [Here](../../modules/RE/ChiSquare_RevEx.html#distribution-of-cyprinids-in-asia), and [Here](../../modules/RE/ChiSquare_RevEx.html#working-environment-for-nurses).
+* Chi-Square Test. -- [Here](../../modules/CE/ChiSquare_CE.html#aids-cases), [Here](../../modules/RE/ChiSquare_RevEx.html#distribution-of-cyprinids-in-asia), and [Here](../../modules/RE/ChiSquare_RevEx.html#working-environment-for-nurses).
 
 I strongly believe that the best way to prepare for this quiz is by ...
 
