@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Quiz 3 Study Guide
+title: Quiz 4 Study Guide
 css: /css/modules.css
 ---
 
 ----
 
-The fourth Quiz (see [dates page](../Dates-Current)) will cover material from Module 19 (*1-Sample t-Test*), Module 20 (*2-Sample t-Test*), and Module 21 (*Chi-Square Test*). The exam consists of three 11-Step hypothesis tests that will require no R work, with the exception of using `distrib()` to calculate p-values and critical values for confidence regions. The portion of the [R cheat sheet](../MTH107-Rcheatsheet.pdf) related to `distrib()` and the [11 Steps of a Hypothesis Test](../../modules/11-steps) will be provided on the quiz. The following are links to examples for each of the questions.
+The fourth Quiz (see [dates page](../Dates-Current)) will cover material from Module 19 (*1-Sample t-Test*), Module 20 (*2-Sample t-Test*), and Module 21 (*Chi-Square Test*). The exam consists of three 11-Step hypothesis tests that will require no R work, with the exception of using `distrib()` to calculate p-values and critical values for confidence regions. The portion of the [R cheat sheet](../MTH107-Rcheatsheet.pdf) related to `distrib()`, the [11 Steps of a Hypothesis Test](../../modules/11-steps), and formulae for the test statistics for each hypothesis test will be provided for you on the quiz. The following are links to examples for each of the questions.
 
 * 1-Sample t-Test. -- [Here](../../modules/CE/1Samplet_CE1.html#fecal-coliform-counts-i), [Here](../../modules/CE/1Samplet_CE2.html#increased-civility-in-nation-states), and [Here](../../modules/CE/1Samplet_CE2.html#sea-level-rise-rate).
 * 2-Sample t-Test. -- [Here](../../modules/CE/2Samplet_CE1.html#compost-type-and-germination-rates), [Here](../../modules/CE/2Samplet_CE2.html#commitment-to-adult-animals), and [Here](../../modules/RE/2Samplet_RevEx.html#popcorn-yield-by-variety).
