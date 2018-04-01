@@ -126,7 +126,6 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
 
 <tr><td>M 26-Mar</td>
     <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
@@ -137,6 +136,7 @@ Note that some of the more distant dates are subject to change.
 <tr><td>F 30-Mar</td>
     <td colspan="2"><span style="color:coral">NO CLASS (Good Friday)</span></td></tr>
 <tr><td></td><td></td><td></td></tr>
+--->
 
 <tr><td>M 2-Apr</td>
     <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
