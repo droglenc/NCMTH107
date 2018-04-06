@@ -106,7 +106,7 @@ ci <- xbar+c(-1,1)*tstar*se
 <li>x&#772;=`r xbar` CFU per 100 ml.</li>
 <li>t=`r formatC(t,format="f",digits=4)` with `r df` df.</li>
 <li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
-<li>Reject H<sub>0</sub> because the p-value>&alpha;.</li>
+<li>Reject H<sub>0</sub> because the p-value<&alpha;.</li>
 <li>It appears that the mean CFU per ALL 100 ml of water sampled from this lake on this date is less than what the computer model predicted.</li>
 <li>One can be 95% confident that the mean CFU per ALL 100 ml of water sampled from this lake on this date is between `r formatC(ci[1],format="f",digits=0)` and  `r formatC(ci[2],format="f",digits=0)`.</li>
 </ol>
