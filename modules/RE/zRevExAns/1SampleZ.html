@@ -11,17 +11,17 @@ css: "/css/modules.css"
 <div id="cactus-growth" class="section level2">
 <h2>Cactus Growth</h2>
 <ol>
-<li><span class="math inline">\(\alpha\)</span> = 0.05.</li>
-<li><span class="math inline">\(H_{O}:\mu\)</span> = 4, <span class="math inline">\(H_{A}:\mu&lt;\)</span> 4 where <span class="math inline">\(\mu\)</span> is the mean growth of all cacti.</li>
-<li>A one-sample Z-test is required because (i) a quantitative variable (growth) was measured, (ii) individuals from only one group/population were sampled (only one set of conditions considered), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) <span class="math inline">\(\sigma\)</span> is known (given in the background).</li>
+<li>α = 0.05.</li>
+<li>H<sub>0</sub>: μ = 4, H<sub>A</sub>: μ &lt; 4 where μ is the mean growth of all cacti.</li>
+<li>A one-sample Z-test is required because (i) a quantitative variable (growth) was measured, (ii) individuals from only one group/population were sampled (only one set of conditions considered), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) σ is known (given in the background).</li>
 <li>The data are part of an experiment in which cacti were randomly selected.</li>
-<li><span class="math inline">\(\sigma\)</span> is known. In addition, because the population distribution is normal (stated in the background), we do not have to worry about the size of the sample.</li>
-<li><span class="math inline">\(\bar{x}\)</span> = 3.26.</li>
+<li>σ is known. In addition, because the population distribution is normal (stated in the background), we do not have to worry about the size of the sample.</li>
+<li>x¯ = 3.26.</li>
 <li>Z = <span class="math inline">\(\frac{3.26-4}{\frac{1.40}{\sqrt{10}}}\)</span> = <span class="math inline">\(\frac{-0.74}{0.44}\)</span> = -1.67.</li>
 <li>The p-value is <span class="math inline">\(0.0473\)</span>.</li>
-<li><span class="math inline">\(H_{O}\)</span> is rejected in favor of <span class="math inline">\(H_{A}\)</span> because the p-value<span class="math inline">\(&lt;\alpha\)</span>.</li>
+<li>H<sub>0</sub> is rejected because the p-value&lt;α.</li>
 <li>The mean growth rate of all cacti under the experimental conditions does appear to be less than 4 cm.</li>
-<li>A 95% upper confidence bound is warranted in this situation and will use a <span class="math inline">\(Z^{*}\)</span> = 1.645. Thus, 3.26+1.645*0.44 or 3.26+0.72 = 3.98. Thus, one is 95% confident that the mean growth of all cacti under the experimental conditions is less than 3.98 cm.</li>
+<li>A 95% upper confidence bound is warranted in this situation and will use a Z<sup>∗</sup> = 1.645. Thus, 3.26+1.645*0.44 or 3.26+0.72 = 3.98. Thus, one is 95% confident that the mean growth of all cacti under the experimental conditions is less than 3.98 cm.</li>
 </ol>
 <div id="r-appendix" class="section level3">
 <h3>R Appendix</h3>
@@ -33,17 +33,17 @@ css: "/css/modules.css"
 <div id="length-of-northern-pike" class="section level2">
 <h2>Length of Northern Pike</h2>
 <ol>
-<li><span class="math inline">\(\alpha\)</span> = 0.05. (<em>Note that this is obtained from workin backwards from the 95% confidence statement.</em>)</li>
-<li><span class="math inline">\(H_{O}:\mu\)</span> = 600, <span class="math inline">\(H_{A}:\mu\neq\)</span> 600 where <span class="math inline">\(\mu\)</span> is the mean length of all pike in Chivyrkui Bay, Lake Baikal.</li>
-<li>A one-sample Z-test is required because a (i) quantitative variable (length) was measured, (ii) individuals from only one group/population were sampled (Chivyrkui Bay, Lake Baikal), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) <span class="math inline">\(\sigma\)</span> is known (given in the background).</li>
+<li>α = 0.05. (<em>Note that this is obtained from working backwards from the 95% confidence statement.</em>)</li>
+<li>H<sub>0</sub>: μ = 600, H<sub>A</sub>: μ &amp;neq; 600 where μ is the mean length of all pike in Chivyrkui Bay, Lake Baikal.</li>
+<li>A one-sample Z-test is required because a (i) quantitative variable (length) was measured, (ii) individuals from only one group/population were sampled (Chivyrkui Bay, Lake Baikal), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) σ is known (given in the background).</li>
 <li>Observational study with n = 30 pike. No obvious randomization.</li>
-<li>n = 30 <span class="math inline">\(\geq\)</span> 15 and the population is not strongly skewed (background says “slightly”&quot; right-skewed); <span class="math inline">\(\sigma\)</span> is known.</li>
-<li><span class="math inline">\(\bar{x}\)</span> = 656.1.</li>
+<li>n = 30 ≥ 15 and the population is not strongly skewed (background says “slightly”&quot; right-skewed); σ is known.</li>
+<li>x¯ = 656.1.</li>
 <li>Z = <span class="math inline">\(\frac{656.1-600}{\frac{130}{\sqrt{30}}}\)</span> = 2.363.</li>
 <li>The p-value is <span class="math inline">\(0.0181\)</span>.</li>
-<li>Reject <span class="math inline">\(H_{O}\)</span> because the p-value<span class="math inline">\(&lt;\alpha\)</span>.</li>
+<li>Reject H<sub>0</sub> because the p-value&lt;α.</li>
 <li>The true mean length of all pike in Lake Baikal appears to be different than 600 mm.</li>
-<li>A 95% confidence interval is warranted in this situation and will use a <span class="math inline">\(Z^{*}\)</span> = <span class="math inline">\(\pm\)</span> 1.960. Thus, 656.1 <span class="math inline">\(\pm\)</span> 1.96*23.74, 656.1 <span class="math inline">\(\pm\)</span> 46.53, or (609.57, 702.63). Therefore, one is 95% confident that true mean length of all pike in Lake Baikal is between 609.6 and 702.6 mm.</li>
+<li>A 95% confidence interval is warranted in this situation and will use a Z<sup>∗</sup> = ± 1.960. Thus, 656.1 ± 1.96*23.74, 656.1 ± 46.53, or (609.57, 702.63). Therefore, one is 95% confident that true mean length of all pike in Lake Baikal is between 609.6 and 702.6 mm.</li>
 </ol>
 <div id="r-appendix-1" class="section level3">
 <h3>R Appendix</h3>
@@ -55,15 +55,15 @@ css: "/css/modules.css"
 <div id="chronic-myofascial-pain-syndrome" class="section level2">
 <h2>Chronic Myofascial Pain Syndrome</h2>
 <ol>
-<li><span class="math inline">\(\alpha\)</span> = 0.10.</li>
-<li><span class="math inline">\(H_{O}:\mu\)</span> = 2.5, <span class="math inline">\(H_{A}:\mu&gt;\)</span> 2.5 where <span class="math inline">\(\mu\)</span> is the mean length of pain.</li>
-<li>A one-sample Z-test is required because (i) a quantitative variable (length of pain) was measured, (ii) individuals from only one group/population were sampled (patients with this syndrome), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) <span class="math inline">\(\sigma\)</span> is known (given in the background).</li>
+<li>α = 0.10.</li>
+<li>H<sub>0</sub>: μ = 2.5, H<sub>A</sub>: μ &gt; 2.5 where μ is the mean length of pain.</li>
+<li>A one-sample Z-test is required because (i) a quantitative variable (length of pain) was measured, (ii) individuals from only one group/population were sampled (patients with this syndrome), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) σ is known (given in the background).</li>
 <li>An observational study that is not obviously random was used.</li>
-<li>The population is normally distributed (given in the background) and <span class="math inline">\(\sigma\)</span> is known (= 0.5). Thus, the test statistic below should follow a normal distribution.</li>
-<li><span class="math inline">\(\bar{x}\)</span> = 2.77 years (Table 1).</li>
-<li><span class="math inline">\(Z\)</span> = 1.31 (Table 1).</li>
+<li>The population is normally distributed (given in the background) and σ is known (= 0.5). Thus, the test statistic below should follow a normal distribution.</li>
+<li>x¯ = 2.77 years (Table 1).</li>
+<li>Z = 1.31 (Table 1).</li>
 <li>p-value = <span class="math inline">\(0.0957\)</span> (Table 1).</li>
-<li>Reject <span class="math inline">\(H_{O}\)</span> because the p-value<span class="math inline">\(&lt;\alpha\)</span>.</li>
+<li>Reject H<sub>0</sub> because the p-value&lt;α.</li>
 <li>It appears that the mean duration of pain for all patients may be longer than 2.5 years.</li>
 <li>A 90% lower confidence bound is used here. Thus, one is 90% confident that the mean duration of pain for all patients is more than 2.51 years (Table 1).</li>
 </ol>
@@ -85,15 +85,15 @@ mean of df$pain
 <div id="cholesterol-levels" class="section level2">
 <h2>Cholesterol Levels</h2>
 <ol>
-<li><span class="math inline">\(\alpha\)</span> = 0.10.</li>
-<li><span class="math inline">\(H_{O}:\mu\)</span> = 190, <span class="math inline">\(H_{A}:\mu\neq\)</span> 190 where <span class="math inline">\(\mu\)</span> is the mean cholesterol level of Asian women.</li>
-<li>A one-sample Z-test is required because (i) a quantitative variable (cholesterol level) was measured, (ii) individuals from only one group/population were sampled (Asian women aged 21-40 that had recently immigrated to the U.S.), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) <span class="math inline">\(\sigma\)</span> is known (given in the background).</li>
+<li>α = 0.10.</li>
+<li>H<sub>0</sub>: μ = 190, H<sub>A</sub>: μ &amp;neq; 190 where μ is the mean cholesterol level of Asian women.</li>
+<li>A one-sample Z-test is required because (i) a quantitative variable (cholesterol level) was measured, (ii) individuals from only one group/population were sampled (Asian women aged 21-40 that had recently immigrated to the U.S.), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) σ is known (given in the background).</li>
 <li>An observational study with randomly selected women was used.</li>
-<li>n = 40 <span class="math inline">\(\geq\)</span> 30 and <span class="math inline">\(\sigma\)</span> is known.</li>
-<li><span class="math inline">\(\bar{x}\)</span> = 180.55 mg/dl (Table 2).</li>
-<li><span class="math inline">\(Z\)</span> = -1.49 (Table 2).</li>
+<li>n = 40 ≥ 30 and σ is known.</li>
+<li>x¯ = 180.55 mg/dl (Table 2).</li>
+<li>Z = -1.49 (Table 2).</li>
 <li>p-value = <span class="math inline">\(0.1352\)</span> (Table 2).</li>
-<li>The <span class="math inline">\(H_{O}\)</span> is not rejected because the p-value<span class="math inline">\(&gt;\alpha\)</span>.</li>
+<li>The H<sub>0</sub> is not rejected because the p-value&gt;α.</li>
 <li>The true mean cholesterol level for all Asian women aged 21-40 that recently immigrated to the U.S. does not appear to be different than 190 mg/dl.</li>
 </ol>
 <p>Table 2: Results of 1-Sample Z-Test for cholesterol level of Asian Women.</p>
