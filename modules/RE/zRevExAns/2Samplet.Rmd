@@ -267,7 +267,7 @@ das <- read.csv("dta/DeathAnxiety.csv")
 1. The p-value is `r kPvalue(2*pt(3.13,df=22,lower.tail=FALSE),include.p=FALSE,latex=FALSE)`.
 1. The H<sub>0</sub> is rejected because the p-value < &alpha;.
 1. There does appear to be a difference in average backfat thickness between pigs fed the two diets.
-1. A 95% confidence interval is warranted in this situation with a t<sup>*</sup> of &plusmn; `r formatC(qt(0.025,df=22,lower.tail=FALSE),format="f",digits=3)`. Thus, 0.431 &plusmn; 2.074*0.1377, 0.431 &plusmn; 0.286, and (0.145,0.717). One is 95% confident that the difference in mean backfat thickness is between 0.145 and 0.717 cm. Thus, the mean backfat thickness on all pigs fed diet 1 is between 0.145 and 0.717 cm greater than the mean backfat thickness of all pigs fed diet 2. Thus, diet 2 produces higher quality pork.
+1. A 95% confidence interval is warranted in this situation with a t<sup>&#42;</sup> of &plusmn; `r formatC(qt(0.025,df=22,lower.tail=FALSE),format="f",digits=3)`. Thus, 0.431 &plusmn; 2.074*0.1377, 0.431 &plusmn; 0.286, and (0.145,0.717). One is 95% confident that the difference in mean backfat thickness is between 0.145 and 0.717 cm. Thus, the mean backfat thickness on all pigs fed diet 1 is between 0.145 and 0.717 cm greater than the mean backfat thickness of all pigs fed diet 2. Thus, diet 2 produces higher quality pork.
 
 ### R Appendix
 ```{r eval=FALSE}
