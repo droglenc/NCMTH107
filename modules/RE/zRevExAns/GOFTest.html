@@ -12,14 +12,14 @@ css: "/css/modules.css"
 <h2>Shrike Habitat Use</h2>
 <ol>
 <li>α = 0.05.</li>
-<li>The H<sup>0</sup>: “The proportion of sub-habitat used by shrikes is the same the proportion of habitat available” versus H<sup>A</sup>: “The proportion of sub-habitat used by shrikes is NOT the same the proportion of habitat available.”</li>
+<li>The H<sub>0</sub>: “The proportion of sub-habitat used by shrikes is the same the proportion of habitat available” versus H<sub>A</sub>: “The proportion of sub-habitat used by shrikes is NOT the same the proportion of habitat available.”</li>
 <li>A goodness-of-fit test is required because (i) a categorical variable (habitat type) with four levels from (ii) a single group/population (these shrikes) was recorded and (iii) the frequency of individuals in each level is being compared to a theoretical distribution in the null hypothesis.</li>
 <li>The data appear to be part of an observational study where the individuals were not randomly selected but the location to look for the individuals was.</li>
 <li>The expected frequencies are equal to the total number of observations times the proportion of each habitat type available. For example, the expected number of shrikes in the settled sub-habitat is 1456 × 0.205 = 298.48. The expectations for the other habitats are computed similarly and are in Table 1. There is more than five individuals in each of the four levels of the expected table. Thus, the test statistic below should follow a χ<sup>2</sup> distribution.</li>
 <li>The observed frequencies are in Table 1.</li>
 <li>The χ<sup>2</sup> test statistic is <span class="math inline">\(\frac{(149-298.48)^{2}}{298.48} + \frac{(944-853.216)^{2}}{853.216} + \frac{(192-149.968)^{2}}{149.968} + \frac{(171-154.336)^{2}}{154.336}\)</span> = 74.860 + 9.660 + 11.780 + 1.799 = 98.099, with 4-1=3 df.</li>
 <li>The p-value is &lt;0.00005.</li>
-<li>The H<sup>0</sup> is rejected because the p-value &lt; α.</li>
+<li>The H<sub>0</sub> is rejected because the p-value &lt; α.</li>
 <li>The shrikes found in the open habitat do not use the sub-habitats in proportion to the availability of the sub-habitat. In particular, they appear to use the settled sub-habitat less and the two pasture sub-habitats more than expected (Table 2).</li>
 </ol>
 <p>Table 1: Observed and expected frequencies of shrike observations in different habitats.</p>
@@ -48,14 +48,14 @@ gofCI(chi1,digits=3)</code></pre>
 <h2>Media Treatment of President Clinton</h2>
 <ol>
 <li>α = 0.10.</li>
-<li>The H<sup>0</sup>: “The proportion of people that think that President Clinton was unfairly criticized is 0.45” and the H<sup>A</sup>: “The proportion of people that think that President Clinton was unfairly criticized is NOT 0.45”.</li>
+<li>The H<sub>0</sub>: “The proportion of people that think that President Clinton was unfairly criticized is 0.45” and the H<sub>A</sub>: “The proportion of people that think that President Clinton was unfairly criticized is NOT 0.45”.</li>
 <li>A goodness-of-fit test is required because (i) a categorical variable (opinion on fairness of treatment) with only two levels from (ii) a single group/population was recorded and (iii) the observed frequency of individuals is being compared to a theoretical distribution in the null hypothesis.</li>
 <li>Observational study was used but it not clear that the individuals were randomly selected.</li>
 <li>The expected number that think that Clinton was unfairly criticized is 1006 × 0.45 = 452.7. The expected number who do not think that Clinton was unfairly criticized is 1006 × 0.55 = 553.3. The test statistic computed below should reasonably follow a χ<sup>2</sup>-distribution because both of these expectations are greater than five.</li>
 <li>The table of observed frequencies is in Table 3.</li>
 <li>The χ<sup>2</sup> test statistic is <span class="math inline">\(\frac{(433-452.7)^{2}}{452.7}\)</span> + <span class="math inline">\(\frac{(573-553.3)^{2}}{553.3}\)</span> = 0.857 + 0.701 = 1.558, with 2-1=1 df.</li>
 <li>The p-value is 0.2119.</li>
-<li>The H<sup>0</sup> is not rejected because the p-value &gt; α.</li>
+<li>The H<sub>0</sub> is not rejected because the p-value &gt; α.</li>
 <li>It appears that the proportion of adults that feel that President Clinton has been unfairly criticized is not greater than 0.45. In fact it appears that between 40.0% and 46.1% feel that President Clinton was treated unfairly by the media (Table 4).</li>
 </ol>
 <p>Table 3: Observed and expected frequencies of respondents perceptions of whether President Clinton was treated fairly by the media.</p>
@@ -87,7 +87,7 @@ gofCI(chi1,conf.level=0.9,digits=3)</code></pre>
 <li>The observed frequency table is in Table 5.</li>
 <li>The χ<sup>2</sup> test statistic is =<span class="math inline">\(\frac{(57-51.333)^{2}}{51.333} + \frac{(63-51.333)^{2}}{51.333} + \frac{(34-51.333)^{2}}{51.333}\)</span> = 0.627 + 2.652 + 5.853 = 9.132, with 3-1=2 df.</li>
 <li>The p-value is 0.0104</li>
-<li>The H<sup>0</sup> is rejected because the p-value &lt; α.</li>
+<li>The H<sub>0</sub> is rejected because the p-value &lt; α.</li>
 <li>There appears to be a preference exhibited among the consumers. It appears that the generic brand is generally not preferred (Table 6).</li>
 </ol>
 <p>Table 5: Observed and expected frequencies of respondents preference for three types of cola.</p>
@@ -114,14 +114,14 @@ gofCI(chi1,digits=3)</code></pre>
 <h2>Corn Genetics</h2>
 <ol>
 <li>α = 0.05.</li>
-<li>The H<sup>0</sup>: The proportion of PS, PW, YS, and YW individuals will be <span class="math inline">\(\frac{9}{16}\)</span>, <span class="math inline">\(\frac{3}{16}\)</span>, <span class="math inline">\(\frac{3}{16}\)</span>, and <span class="math inline">\(\frac{1}{16}\)</span>, respectively&quot; versus H<sup>A</sup> “The proportion of PS, PW, YS, and YW individuals will NOT be <span class="math inline">\(\frac{9}{16}\)</span>, <span class="math inline">\(\frac{3}{16}\)</span>, <span class="math inline">\(\frac{3}{16}\)</span>, and <span class="math inline">\(\frac{1}{16}\)</span>, respectively”, where PS=“purple, smooth”, PW=“purple, wrinkled”, YS=“yellow, smooth”, and YW=“yellow, wrinkled”.</li>
+<li>The H<sub>0</sub>: The proportion of PS, PW, YS, and YW individuals will be <span class="math inline">\(\frac{9}{16}\)</span>, <span class="math inline">\(\frac{3}{16}\)</span>, <span class="math inline">\(\frac{3}{16}\)</span>, and <span class="math inline">\(\frac{1}{16}\)</span>, respectively&quot; versus H<sub>A</sub> “The proportion of PS, PW, YS, and YW individuals will NOT be <span class="math inline">\(\frac{9}{16}\)</span>, <span class="math inline">\(\frac{3}{16}\)</span>, <span class="math inline">\(\frac{3}{16}\)</span>, and <span class="math inline">\(\frac{1}{16}\)</span>, respectively”, where PS=“purple, smooth”, PW=“purple, wrinkled”, YS=“yellow, smooth”, and YW=“yellow, wrinkled”.</li>
 <li>A goodness-of-fit test is required because (i) a categorical variable (color and wrinkliness combination) with four levels from (ii) a single group/population (this ear of corn) was recorded and (iii) the observed frequency of individuals is being compared to a theoretical distribution in the null hypothesis.</li>
 <li>The data appear to be part of a quasi-experimental study where the individuals were not randomly selected but the location on the corn cob where the individuals were selected was randomly located.</li>
 <li>The expected frequencies are equal to the total number of observations times the expected proportion of each phenotype. For example, the expected number of purple-smooth kernels is <span class="math inline">\(58\frac{9}{16}\)</span> = 32.625. The expectations for the other phenotypes are in Table 7. One of these expectations is less than five indicating that the test statistic below may not follow a χ<sup>2</sup> distribution. However, it is only one level and the value is nearly four so it should be fairly close to a χ<sup>2</sup> distribution.</li>
 <li>The observed frequencies are in Table 7.</li>
 <li>The χ<sup>2</sup> test statistic is <span class="math inline">\(\frac{(32-32.625)^{2}}{32.625} + \frac{(14-10.875)^{2}}{10.875} + \frac{(8-10.875)^{2}}{10.875} + \frac{(4-3.625)^{2}}{3.625}\)</span> = 0.012 + 0.898 + 0.760 + 0.039 = 1.709, with 4-1=3 df.</li>
 <li>The p-value for this test statistic is 0.6350</li>
-<li>The H<sup>0</sup> is not rejected because the p-value &gt; α.</li>
+<li>The H<sub>0</sub> is not rejected because the p-value &gt; α.</li>
 <li>The 9:3:3:1 ratio appears to be upheld for this ear of corn (Table 8).</li>
 </ol>
 <p>Table 7: Observed and expected frequencies of corn kernels by type.</p>
@@ -187,14 +187,14 @@ gofCI(chi1,digits=3)</code></pre>
 <h2>Fair Coin?</h2>
 <ol>
 <li>α = 0.01.</li>
-<li>H<sup>0</sup>:“The proportion of heads is 0.50 (a ‘fair’ coins means even numbers of heads and tails)” versus H<sup>A</sup>:“The proportion of heads is NOT 0.50 (an ‘unfair’ coins means uneven numbers of heads and tails)”.</li>
+<li>H<sub>0</sub>:“The proportion of heads is 0.50 (a ‘fair’ coins means even numbers of heads and tails)” versus H<sub>A</sub>:“The proportion of heads is NOT 0.50 (an ‘unfair’ coins means uneven numbers of heads and tails)”.</li>
 <li>A goodness-of-fit test is required because (i) a categorical variable (side of coin) with only two levels from (ii) a single group/population (Kerrich’s tosses) was recorded and (iii) the frequency of results is being compared to a theoretical distribution in the null hypothesis.</li>
 <li>An observational study (we can’t make a statement about randomization because that is essentially what this whole test is about).</li>
 <li>The expected proportions are 10000 flips divided by two (for heads and tails; Table 11). From this it is seen that each expected frequency is greater than five; thus, the test statitic should follow a χ<sup>2</sup> distribution.</li>
 <li>The observed frequencies are in Table 11.</li>
 <li>The χ<sup>2</sup> test statistic is 1.796 with 1 df.</li>
 <li>The p-value for this test statistic is 0.1802.</li>
-<li>The H<sup>0</sup> is not rejected because the p-value &gt; α.</li>
+<li>The H<sub>0</sub> is not rejected because the p-value &gt; α.</li>
 <li>The coin appears to be fair as a head appears in between 49.7% and 51.6% of the coin flips (Table 12).</li>
 </ol>
 <p>Table 11: Observed and expected frequencies of coin flips.</p>
@@ -219,7 +219,7 @@ gofCI(chi1,conf.level=0.99,digits=3)</code></pre>
 <h2>Distribution of Blood Types</h2>
 <ol>
 <li>α = 0.05.</li>
-<li>The H<sup>0</sup>: “The current distribution of blood types is the same as the past distribution – i.e., 0.45, 0.08, 0.44, and 0.03 for A, B, O, and AB, respectively” versus H<sup>A</sup>: “The current distribution of blood types is different from the past distribution.”</li>
+<li>The H<sub>0</sub>: “The current distribution of blood types is the same as the past distribution – i.e., 0.45, 0.08, 0.44, and 0.03 for A, B, O, and AB, respectively” versus H<sub>A</sub>: “The current distribution of blood types is different from the past distribution.”</li>
 <li>A goodness-of-fit test is required because (ii) a categorical variable (blood type) with four levels from (ii) a single group/population (one hospital) was recorded and (iii) the frequency of results is being compared to a theoretical distribution in the null hypothesis.</li>
 <li>The data appear to be part of an observational study that is not random; rather it is a convenience sample.</li>
 <li>Under the null hypothesis one would expect the current proportions to equal the past proportions. Thus, the expected proportions are the total sample size times the expected proportions (Table 13). From this it is seen that each expected frequency is greater than five. Thus, the test statistic below should follow a χ<sup>2</sup> distribution.</li>
@@ -256,14 +256,14 @@ gofCI(chi1,digits=3)</code></pre>
 <h2>Poll of Political Support</h2>
 <ol>
 <li>α = 0.05.</li>
-<li>H<sup>0</sup>: “The proportion of party constituents that support the district attorney is 0.65” versus H<sup>A</sup>: “The proportion of party constituents that support the district attorney is NOT 0.65.”</li>
+<li>H<sub>0</sub>: “The proportion of party constituents that support the district attorney is 0.65” versus H<sub>A</sub>: “The proportion of party constituents that support the district attorney is NOT 0.65.”</li>
 <li>A goodness-of-fit test is required because (i) a categorical variable (type of support) with only two levels from (ii) a single group/population (party constituents) was recorded and (iii) the frequency results are being compared to a theoretical distribution in the null hypothesis.</li>
 <li>An observational study of n=950 randomly selected party constituents was used.</li>
 <li>Under the null hypothesis the expected proportions are equal to 0.65 for support and 0.35 for don’t support the district attorney. The expected frequencies are these expected proportions muliplied by the sample size (Table 15). From this it is seen that each expected frequency is greater than five. Thus the test statistic below should follow a χ<sup>2</sup> distribution.</li>
 <li>The observed frequencies are in Table 15.</li>
 <li>The χ<sup>2</sup> test statistic is 8.357 with 1 df.</li>
 <li>The p-value for this test statistic is 0.0038.</li>
-<li>The H<sup>0</sup> is rejected because the p-value &lt; α.</li>
+<li>The H<sub>0</sub> is rejected because the p-value &lt; α.</li>
 <li>The district attorney appears to have more than 65% support among the party constituents.</li>
 <li>Specifically, one is 95% confident that the proportion of supporters among the party constituents is between 0.665 and 0.723 (Table 16).</li>
 </ol>
@@ -329,14 +329,14 @@ gofCI(chi1,conf.level=0.90,digits=3)</code></pre>
 <h2>Trawling Bycatch</h2>
 <ol>
 <li>α = 0.10.</li>
-<li>H<sup>0</sup>: “The proportion of catch that is King Salmon is 0.10” versus H<sup>A</sup>: “The proportion of catch that is King Salmon is NOT 0.10.”</li>
+<li>H<sub>0</sub>: “The proportion of catch that is King Salmon is 0.10” versus H<sub>A</sub>: “The proportion of catch that is King Salmon is NOT 0.10.”</li>
 <li>A goodness-of-fit test is required because (i) a categorical variable (type of fish) with only two levels from (ii) a single group/population (the catch from that area) was recorded and (iii) the frequency results are being compared to a theoretical distribution in the null hypothesis.</li>
 <li>An observational study of n=1256 randomly selected fish was used.</li>
 <li>Under the null hypothesis the expected proportions are 0.10 for King Salmon and 0.90 for all other fishes (Table 19). From this it is seen that each expected frequency is greater than five. Thus the test statistic below should follow a χ<sup>2</sup> distribution.</li>
 <li>The observed frequencies are in Table 19.</li>
 <li>The χ<sup>2</sup> test statistic is 3.329 with 1 df.</li>
 <li>The p-value is 0.0681.</li>
-<li>The H<sup>0</sup> is rejected because the p-value &lt; α.</li>
+<li>The H<sub>0</sub> is rejected because the p-value &lt; α.</li>
 <li>Trawling should be discontinued in this area because it appears that the catch consists of more than 10% king salmon. In fact, one is 90% confident that the proportion of king salmon in this catch is between 0.101 and 0.131 (Table 20).</li>
 </ol>
 <p>Table 19: Observed and expected frequencies of King Salmon in the trawl catch.</p>
@@ -361,7 +361,7 @@ gofCI(chi1,conf.level=0.90,digits=3)</code></pre>
 <h2>Otter Mortalities</h2>
 <ol>
 <li>α = 0.01.</li>
-<li>The H<sup>0</sup>: “The proportion of females is 0.5 (equal proportions of males and females means no sex bias)” versus H<sup>A</sup>: “The proportion of females is NOT 0.5 (unequal proportions of males and females means there is a sex bias).”</li>
+<li>The H<sub>0</sub>: “The proportion of females is 0.5 (equal proportions of males and females means no sex bias)” versus H<sub>A</sub>: “The proportion of females is NOT 0.5 (unequal proportions of males and females means there is a sex bias).”</li>
 <li>A goodness-of-fit test is required because (i) a categorical variable (sex) with two levels from (ii) a single group/population (road-killed otters in Britain) was recorded and (iii) the frequency of individuals in each sex is being compared to a theoretical distribution.</li>
 <li>The data appear to be part of an observational study that is not random; rather it is a convenience collection.</li>
 <li>Under the null hypothesis of no sex-bias one would expect the same proportion of individuals in each level. Thus, the expected frequencies are the sample size divided by 2 (Table 21). From this it is seen that each expected frequency has more than five individuals. Thus, the test statistic below should follow a χ<sup>2</sup> distribution.</li>
@@ -395,14 +395,14 @@ gofCI(chi1,conf.level=0.99,digits=3)</code></pre>
 <h2>Randomness of CD Player</h2>
 <ol>
 <li>α = 0.05.</li>
-<li>The H<sup>0</sup>: “The proportion of times Beethoven will be played is 0.67” (note that 40 of the 60 CDs are Beethoven) versus H<sup>A</sup>: “The proportion of times Beethoven will be played is NOT 0.67.”</li>
+<li>The H<sub>0</sub>: “The proportion of times Beethoven will be played is 0.67” (note that 40 of the 60 CDs are Beethoven) versus H<sub>A</sub>: “The proportion of times Beethoven will be played is NOT 0.67.”</li>
 <li>A goodness-of-fit test is required because (i) a categorical variable (which CD was played) with only two levels from (ii) a single group/population (this CD changer) was recorded and (iii) the frequency of results is being compared to a theoretical distribution in the null hypothesis.</li>
 <li>This is an experiment with random allocation of individuals (CDs to slots in the player).</li>
 <li>Under the null hypothesis the expected frequencies are 40 Beethoven and 20 Taj Mahal (Table 23). Each of these expected frequencies are greater than five individuals. Thus, the test statistic computed below should reasonably follow a χ<sup>2</sup>-distribution.</li>
 <li>The observed frequencies are in Table 23.</li>
 <li>The χ<sup>2</sup> test statistic is 0.605 with 1 df.</li>
 <li>The p-value is 0.4367.</li>
-<li>The H<sup>0</sup> is not rejected because the p-value &gt; α.</li>
+<li>The H<sub>0</sub> is not rejected because the p-value &gt; α.</li>
 <li>The randomization function on the CD player appears to choose songs randomly (Table 24).</li>
 </ol>
 <p>Table 23: Observed and expected frequencies of CDs seleted by a CD disc player.</p>
