@@ -51,7 +51,7 @@ tabs <- captioner(prefix="Table")
 ## Length of Northern Pike
 
 1. &alpha; = 0.05. (*Note that this is obtained from working backwards from the 95% confidence statement.*)
-1. H<sub>0</sub>: &mu; = 600, H<sub>A</sub>: &mu; &neq; 600 where &mu; is the mean length of all pike in Chivyrkui Bay, Lake Baikal.
+1. H<sub>0</sub>: &mu; = 600, H<sub>A</sub>: &mu; &ne; 600 where &mu; is the mean length of all pike in Chivyrkui Bay, Lake Baikal.
 1. A one-sample Z-test is required because a (i) quantitative variable (length) was measured, (ii) individuals from only one group/population were sampled (Chivyrkui Bay, Lake Baikal), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) &sigma; is known (given in the background).
 1. Observational study with n = 30 pike. No obvious randomization.
 1. n = 30 &geq; 15 and the population is not strongly skewed (background says "slightly"" right-skewed); &sigma; is known.
@@ -115,7 +115,7 @@ tabs(name="Cholest","Results of 1-Sample Z-Test for cholesterol level of Asian W
 ```
 
 1. &alpha; = 0.10.
-1. H<sub>0</sub>: &mu; = 190, H<sub>A</sub>: &mu; &neq; 190 where &mu; is the mean cholesterol level of Asian women.
+1. H<sub>0</sub>: &mu; = 190, H<sub>A</sub>: &mu; &ne; 190 where &mu; is the mean cholesterol level of Asian women.
 1. A one-sample Z-test is required because (i) a quantitative variable (cholesterol level) was measured, (ii) individuals from only one group/population were sampled (Asian women aged 21-40 that had recently immigrated to the U.S.), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) &sigma; is known (given in the background).
 1. An observational study with randomly selected women was used.
 1. n = `r nrow(df)` &geq; 30 and &sigma; is known.
