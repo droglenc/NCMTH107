@@ -35,10 +35,10 @@ tabs <- captioner(prefix="Table")
 1. &sigma; is known. In addition, because the population distribution is normal (stated in the background), we do not have to worry about the size of the sample.
 1. x&macr; = 3.26.
 1. Z = $\frac{3.26-4}{\frac{1.40}{\sqrt{10}}}$ = $\frac{-0.74}{0.44}$ = -1.67.
-1. The p-value is `r kPvalue(distrib(3.26,mean=4,sd=1.40/sqrt(10),plot=FALSE),include.p=FALSE)`.
+1. The p-value is `r kPvalue(distrib(3.26,mean=4,sd=1.40/sqrt(10)),include.p=FALSE,latex=FALSE)`.
 1. H<sub>0</sub> is rejected because the p-value<&alpha;.
 1. The mean growth rate of all cacti under the experimental conditions does appear to be less than 4 cm.
-1. A 95% upper confidence bound is warranted in this situation and will use a Z<sup>&lowast;</sup> = `r formatC(distrib(0.95,type="q",plot=FALSE),format="f",digits=3)`. Thus, 3.26+1.645*0.44 or 3.26+0.72 = 3.98. Thus, one is 95% confident that the mean growth of all cacti under the experimental conditions is less than 3.98 cm.
+1. A 95% upper confidence bound is warranted in this situation and will use a Z<sup>&lowast;</sup> = `r formatC(distrib(0.95,type="q"),format="f",digits=3)`. Thus, 3.26+1.645*0.44 or 3.26+0.72 = 3.98. Thus, one is 95% confident that the mean growth of all cacti under the experimental conditions is less than 3.98 cm.
 
 ### R Appendix
 ```{r eval=FALSE}
@@ -57,10 +57,10 @@ tabs <- captioner(prefix="Table")
 1. n = 30 &geq; 15 and the population is not strongly skewed (background says "slightly"" right-skewed); &sigma; is known.
 1. x&macr; = 656.1.
 1. Z = $\frac{656.1-600}{\frac{130}{\sqrt{30}}}$ = 2.363.
-1. The p-value is `r kPvalue(2*distrib(656.1,mean=600,sd=130/sqrt(30),lower.tail=FALSE,plot=FALSE),include.p=FALSE)`.
+1. The p-value is `r kPvalue(2*distrib(656.1,mean=600,sd=130/sqrt(30),lower.tail=FALSE),include.p=FALSE,latex=FALSE)`.
 1. Reject H<sub>0</sub> because the p-value<&alpha;.
 1. The true mean length of all pike in Lake Baikal appears to be different than 600 mm.
-1. A 95% confidence interval is warranted in this situation and will use a Z<sup>&lowast;</sup> = &plusmn; `r formatC(distrib(0.05/2,type="q",lower.tail=FALSE,plot=FALSE),format="f",digits=3)`. Thus, 656.1 &plusmn; 1.96*23.74, 656.1 &plusmn; 46.53, or (609.57, 702.63). Therefore, one is 95% confident that true mean length of all pike in Lake Baikal is between 609.6 and 702.6 mm.
+1. A 95% confidence interval is warranted in this situation and will use a Z<sup>&lowast;</sup> = &plusmn; `r formatC(distrib(0.05/2,type="q",lower.tail=FALSE),format="f",digits=3)`. Thus, 656.1 &plusmn; 1.96*23.74, 656.1 &plusmn; 46.53, or (609.57, 702.63). Therefore, one is 95% confident that true mean length of all pike in Lake Baikal is between 609.6 and 702.6 mm.
 
 ### R Appendix
 ```{r eval=FALSE}
@@ -86,7 +86,7 @@ tabs(name="Pain","Results of 1-Sample Z-Test for duration of pain for patients w
 1. The population is normally distributed (given in the background) and &sigma; is known (= 0.5). Thus, the test statistic below should follow a normal distribution.
 1. x&macr; = `r formatC(pain.z$estimate,format="f",digits=2)` years (`r tabs("Pain",display="cite")`).
 1. Z = `r formatC(pain.z$statistic,format="f",digits=2)` (`r tabs("Pain",display="cite")`).
-1. p-value = `r kPvalue(pain.z$p.value,include.p=FALSE)` (`r tabs("Pain",display="cite")`).
+1. p-value = `r kPvalue(pain.z$p.value,include.p=FALSE,latex=FALSE)` (`r tabs("Pain",display="cite")`).
 1. Reject H<sub>0</sub> because the p-value<&alpha;.
 1. It appears that the mean duration of pain for all patients may be longer than 2.5 years.
 1. A 90% lower confidence bound is used here. Thus, one is 90% confident that the mean duration of pain for all patients is more than `r formatC(pain.z$conf.int[1],format="f",digits=2)` years (`r tabs("Pain",display="cite")`).
@@ -121,7 +121,7 @@ tabs(name="Cholest","Results of 1-Sample Z-Test for cholesterol level of Asian W
 1. n = `r nrow(df)` &geq; 30 and &sigma; is known.
 1. x&macr; = `r formatC(ch.z$estimate,format="f",digits=2)` mg/dl (`r tabs("Cholest",display="cite")`).
 1. Z = `r formatC(ch.z$statistic,format="f",digits=2)` (`r tabs("Cholest",display="cite")`).
-1. p-value = `r kPvalue(ch.z$p.value,include.p=FALSE)` (`r tabs("Cholest",display="cite")`).
+1. p-value = `r kPvalue(ch.z$p.value,include.p=FALSE,latex=FALSE)` (`r tabs("Cholest",display="cite")`).
 1. The H<sub>0</sub> is not rejected because the p-value>&alpha;.
 1. The true mean cholesterol level for all Asian women aged 21-40 that recently immigrated to the U.S. does not appear to be different than 190 mg/dl.
 
