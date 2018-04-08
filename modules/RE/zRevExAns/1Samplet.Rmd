@@ -198,7 +198,7 @@ tt <- read.csv("data/ToyTime.csv")
 y <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Yahara.csv")
 tabs(name="Boats","Results of 1-Sample t-Test for the number of boats on the Yahara locks.")
 ```
-```{r prepYahara, echo=FALSE, results='hide'}
+```{r prepYahara, echo=FALSE, results='hide', warning=FALSE}
 y1 <- filterD(y,year==2005 & mon>5 & mon<9)
 xtabs(~year+mon,data=y1)  # A check
 ```
