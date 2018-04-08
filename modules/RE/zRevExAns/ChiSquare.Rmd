@@ -40,15 +40,15 @@ tabs("CyprinidObs","Observed frequencies of Asian cyprinids by waterbody.")
 tabs("CyprinidPerc","The percentage of Asian cyprinids by waterbody.")
 ```
 
-1. $\alpha$ = 0.05.
-1. The $H_{0}$: "The proportion of fish from the Cyprinidae family is the same for all three rivers" versus $H_{A}$: "The proportion of fish from the Cyprinidae family is NOT the same for all three rivers."
+1. &alpha; = 0.05.
+1. The H<sub>0</sub>: "The proportion of fish from the Cyprinidae family is the same for all three rivers" versus H<sub>A</sub>: "The proportion of fish from the Cyprinidae family is NOT the same for all three rivers."
 1. A chi-square test is required because (i)a categorical variable with two levels (cyprinidae and other) was measured on (ii) three groups/populations (rivers) (iii) (iii) and the distribution of responses is being compared among groups/populations in the null hypothesis.
 1. The data appear to be part of an observational study. There is no indication that the fish were randomly selected (they likely were not, though hopefully the locations for collecting the fish were).
-1. The expected frequencies are in (`r tabs("CyprinidExp",display="cite")`). The test statistic below should follow a $\chi^{2}$ distribution because the expected number in each cell is greater than five.
+1. The expected frequencies are in (`r tabs("CyprinidExp",display="cite")`). The test statistic below should follow a &chi;<sup>2</sup> distribution because the expected number in each cell is greater than five.
 1. The appropriate statistic is the observed frequency table in (`r tabs("CyprinidObs",display="cite")`).
-1. The $\chi^{2}$ test statistic is $\frac{(22-24.65351)^{2}}{24.65351}$ + $\frac{(51-48.34649)^{2}}{48.34649}$ + $\frac{(25-26.34211)^{2}}{26.34211}$ + $\frac{(53-51.65789)^{2}}{51.65789}$ + $\frac{(30-26.00439)^{2}}{26.00439}$ + $\frac{(47-50.99561)^{2}}{50.99561}$ = 0.2856027 + 0.06837899 + 0.6139323 + 0.1456385 + 0.03486876 + 0.3130648 = 1.4615 with (2-1) $\times$ (3-1) = 2 df.
-1. The p-value is `r kPvalue(chi1$p.value)`.
-1. The null hypothesis is not rejected because the p-value $>\alpha$.
+1. The &chi;<sup>2</sup> test statistic is $\frac{(22-24.65351)^{2}}{24.65351}$ + $\frac{(51-48.34649)^{2}}{48.34649}$ + $\frac{(25-26.34211)^{2}}{26.34211}$ + $\frac{(53-51.65789)^{2}}{51.65789}$ + $\frac{(30-26.00439)^{2}}{26.00439}$ + $\frac{(47-50.99561)^{2}}{50.99561}$ = 0.2856027 + 0.06837899 + 0.6139323 + 0.1456385 + 0.03486876 + 0.3130648 = 1.4615 with (2-1) &times; (3-1) = 2 df.
+1. The p-value is `r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)`.
+1. The null hypothesis is not rejected because the p-value > &alpha;.
 1. There is no apparent difference in the proportion of fish from Cyprinidae family among the three rivers (`r tabs("CyprinidPerc",display="cite")`).
 
 `r tabs("CyprinidExp")`
@@ -91,15 +91,15 @@ tabs("NurseObs","Observed frequencies of  high emotional exhaustion (HEE) among 
 tabs("NursePerc","The percentage of  high emotional exhaustion (HEE) among nurses by four types of clinics.")
 ```
 
-1. $\alpha$ = 0.05.
-1. The $H_{0}$: "The proportion of nurses with HEE is the same amoung the four types of hospitals" verus $H_{A}$: "The proportion of nurses with HEE is NOT the same amoung the four types of hospitals".
+1. &alpha; = 0.05.
+1. The H<sub>0</sub>: "The proportion of nurses with HEE is the same amoung the four types of hospitals" verus H<sub>A</sub>: "The proportion of nurses with HEE is NOT the same amoung the four types of hospitals".
 1. A chi-square test is required because (i)a categorical variable with two levels (HEE and not HEE) was measured on (ii) four groups/populations (iii) and the distribution of responses is being compared among groups/populations in the null hypothesis.
 1. The data appear to be part of an observational study. There is no indication that the individuals were randomly selected.
-1. The expected frequencies are in `r tabs("NurseExp",display="cite")`. The test statistic below should follow a $\chi^{2}$ distribution because the expected number in each cell is greater than five.
+1. The expected frequencies are in `r tabs("NurseExp",display="cite")`. The test statistic below should follow a &chi;<sup>2</sup> distribution because the expected number in each cell is greater than five.
 1. The statistic is the observed frequency table in `r tabs("NurseObs",display="cite")`.
-1. The $\chi^{2}$ test statistic is $\frac{(362-296.3763)^{2}}{296.3763}$ + $\frac{(534-599.6237)^{2}}{599.6237}$ + $\frac{(58-49.6166)^{2}}{49.6166}$ + $\frac{(92-100.3834)^{2}}{100.3834}$ + $\frac{(197-249.7367)^{2}}{249.7367}$ + $\frac{(558-505.2633)^{2}}{505.2633}$ + $\frac{(30-51.2705)^{2}}{51.2705}$ + $\frac{(125-103.7296)^{2}}{103.7296}$ = 14.530424+ 1.4165026+ 11.136370+ 8.824421+ 7.181959+ 0.7001354+ 5.504378+ 4.361650 = 53.65584 with (2-1) $\times$ (4-1) = 3 df.
-1. The p-value is `r kPvalue(chi1$p.value,include.p=FALSE)`.
-1. The $H_{0}$ is rejected because the p-value $<\alpha$.
+1. The &chi;<sup>2</sup> test statistic is $\frac{(362-296.3763)^{2}}{296.3763}$ + $\frac{(534-599.6237)^{2}}{599.6237}$ + $\frac{(58-49.6166)^{2}}{49.6166}$ + $\frac{(92-100.3834)^{2}}{100.3834}$ + $\frac{(197-249.7367)^{2}}{249.7367}$ + $\frac{(558-505.2633)^{2}}{505.2633}$ + $\frac{(30-51.2705)^{2}}{51.2705}$ + $\frac{(125-103.7296)^{2}}{103.7296}$ = 14.530424+ 1.4165026+ 11.136370+ 8.824421+ 7.181959+ 0.7001354+ 5.504378+ 4.361650 = 53.65584 with (2-1) &times; (4-1) = 3 df.
+1. The p-value is `r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)`.
+1. The H<sub>0</sub> is rejected because the p-value < &alpha;.
 1. There is a significant difference in the proportion of nurses experiencing HEE among the four hospitals. The prevalance of HEE appears to be greater in the non-ANCC clinics `r tabs("NursePerc",display="cite")`.
 
 `r tabs("NurseExp")`
@@ -142,15 +142,15 @@ tabs("MIObs","Observed frequencies of men and women that died in the hospital fo
 tabs("MIPerc","The percentage of men and women that died in the hospital following a myocardial infarction.")
 ```
 
-1. $\alpha$ = 0.05.
-1. The $H_{0}$: "The proportion of patients that died in the hospital is the same for men and women" versus $H_{A}$: "The proportion of patients that died in the hospital is NOT the same for men and women"
+1. &alpha; = 0.05.
+1. The H<sub>0</sub>: "The proportion of patients that died in the hospital is the same for men and women" versus H<sub>A</sub>: "The proportion of patients that died in the hospital is NOT the same for men and women"
 1. A chi-square test is required because (i)a categorical variable with two levels (died and survived) was measured on (ii) two groups/populations (men and women) (iii) and the distribution of responses is being compared among groups/populations in the null hypothesis.
 1. An observation study that is very likely not a simple random sample was used.
-1. The expected number of individuals in each cell is in `r tabs("MIExp",display="cite")`. The test statistic below should follow a $\chi^{2}$ distribution because expected number in each cell is greater than five.
+1. The expected number of individuals in each cell is in `r tabs("MIExp",display="cite")`. The test statistic below should follow a &chi;<sup>2</sup> distribution because expected number in each cell is greater than five.
 1. The table of observed values is in `r tabs("MIObs",display="cite")`
-1. The $\chi^{2}$ test statistics is $\frac{(70-82.37968)^{2}}{82.37968}$ + $\frac{(720-707.6203)^{2}}{707.6203}$ + $\frac{(47-34.62032)^{2}}{34.62032}$ + $\frac{(285-297.3797^{2}}{297.3797}$ = 1.860367 + 0.2165801 + 4.426777 + 0.5153562 = 7.01908 with (2-1)(2-1) = 1 df.
-1. The p-value is `r kPvalue(chi1$p.value,include.p=FALSE)`.
-1. The $H_{0}$ is rejected because the p-value $<\alpha$.
+1. The &chi;<sup>2</sup> test statistics is $\frac{(70-82.37968)^{2}}{82.37968}$ + $\frac{(720-707.6203)^{2}}{707.6203}$ + $\frac{(47-34.62032)^{2}}{34.62032}$ + $\frac{(285-297.3797^{2}}{297.3797}$ = 1.860367 + 0.2165801 + 4.426777 + 0.5153562 = 7.01908 with (2-1)(2-1) = 1 df.
+1. The p-value is `r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)`.
+1. The H<sub>0</sub> is rejected because the p-value < &alpha;.
 1. There appears to be a difference between men and women in proportion dying during hospitalization following a myocardial infarction. In fact, it appears that more men die than women (`r tabs("MIPerc",display="cite")`).
 
 `r tabs("MIExp")`
@@ -194,15 +194,15 @@ tabs("UniformObs","Observed frequencies of parents and students that favor and d
 tabs("UniformPerc","The percentage of parents and students that favor and don't favor school uniforms.")
 ```
 
-1. $\alpha$ = 0.05.
-1. The $H_{0}$: "The proportion that favor uniforms is the same for parents and students" versus $H_{A}$: "The proportion that favor uniforms is NOT the same for parents and students."
+1. &alpha; = 0.05.
+1. The H<sub>0</sub>: "The proportion that favor uniforms is the same for parents and students" versus H<sub>A</sub>: "The proportion that favor uniforms is NOT the same for parents and students."
 1. A chi-square test is required because (i)a categorical variable with two levels (favor or don't favor uniforms) was measured on (ii) two groups/populations (students and parents) for comparison in the null hypothesis.
 1. An observation study that is obviously not a simple random sample (it is a convenience sample of both groups).
-1. The test statistic below should follow a $\chi^{2}$ distribution because the expected number in each cell of `r tabs("UniformExp",display="cite")` is greater than five.
+1. The test statistic below should follow a &chi;<sup>2</sup> distribution because the expected number in each cell of `r tabs("UniformExp",display="cite")` is greater than five.
 1. The table of observed values is in `r tabs("UniformObs",display="cite")`.
-1. The $\chi^{2}$ test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
-1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE)`.
-1. The $H_{0}$ is rejected because the p-value $<\alpha$.
+1. The &chi;<sup>2</sup> test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
+1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)`.
+1. The H<sub>0</sub> is rejected because the p-value < &alpha;.
 1. There appears to be a difference in the frequency distribution of parents and students favoring (and not favoring) the use of uniforms. In fact, it appears that significantly more parents favored the wearing of uniforms than students (`r tabs("UniformPerc",display="cite")`).
 
 `r tabs("UniformExp")`
@@ -245,15 +245,15 @@ tabs("ArthritisObs","Observed frequencies of patients on three different drugs (
 tabs("ArthritisPerc","The percentage of patients on three different drugs (A, B, and C) that felt the drug was effective at relieving arthritis pain.")
 ```
 
-1. $\alpha$ = 0.10.
-1. The $H_{0}$: "The proportion of patients that thought the medication was effective was the same among the three medications" versus $H_{A}$: "The proportion of patients that thought the medication was effective was NOT the same among the three medications."
+1. &alpha; = 0.10.
+1. The H<sub>0</sub>: "The proportion of patients that thought the medication was effective was the same among the three medications" versus H<sub>A</sub>: "The proportion of patients that thought the medication was effective was NOT the same among the three medications."
 1. A chi-square test is needed because (i)a categorical variable with two levels (effective or not) was measured on (ii) three groups/populations (medications) for comparison in the null hypothesis.
 1. The data appear to be part of an experimental study. The patients were likely not randomly selected but they were likely randomly allocated to the treatments.
-1. The test statistic below should follow a $\chi^{2}$ distribution because the expected number in each cell is greater than five (`r tabs("ArthritisExp",display="cite")`).
+1. The test statistic below should follow a &chi;<sup>2</sup> distribution because the expected number in each cell is greater than five (`r tabs("ArthritisExp",display="cite")`).
 1. The table of observed frequencies is in `r tabs("ArthritisObs",display="cite")`.
-1. The $\chi^{2}$ test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
-1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE)`.
-1. The $H_{0}$ is rejected because the p-value $<\alpha$.
+1. The &chi;<sup>2</sup> test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
+1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)`.
+1. The H<sub>0</sub> is rejected because the p-value < &alpha;.
 1. There is clearly a difference in the perceived effectiveness of the medications. It appears that medication B is perceived to be least effective and medication C is perceived as most effective (`r tabs("ArthritisPerc",display="cite")`).
 
 `r tabs("ArthritisExp")`
@@ -296,15 +296,15 @@ tabs("TEDSObs","Observed frequencies of trawl tows with at least one turtle mort
 tabs("TEDSPerc","The percentage of trawl tows with at least one turtle mortality by two sizes of openings.")
 ```
 
-1. $\alpha$ = 0.10.
-1. The $H_{0}$: "The proportion of tows with at least one turtle mortality is the same between the two sizes of openings" versus $H_{A}$: "The proportion of tows with at least one turtle mortality is NOT the same between the two sizes of openings."
+1. &alpha; = 0.10.
+1. The H<sub>0</sub>: "The proportion of tows with at least one turtle mortality is the same between the two sizes of openings" versus H<sub>A</sub>: "The proportion of tows with at least one turtle mortality is NOT the same between the two sizes of openings."
 1. A chi-square test is required because (i)a categorical variable with two levels (at least one turtle mortality or not) was measured on (ii) two groups/populations (TED openings) for comparison in the null hypothesis.
 1. An observation study that is not obviously a random sample was used.
-1. The test statistic below should follow a $\chi^{2}$ distribution because the expected number in each cell is greater than five (`r tabs("TEDSExp",display="cite")`)
+1. The test statistic below should follow a &chi;<sup>2</sup> distribution because the expected number in each cell is greater than five (`r tabs("TEDSExp",display="cite")`)
 1. The table of observed frequencies are in `r tabs("TEDSObs",display="cite")`.
-1. The $\chi^{2}$ test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
-1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE)`.
-1. The $H_{0}$ is rejected because the p-value $<\alpha$.
+1. The &chi;<sup>2</sup> test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
+1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)`.
+1. The H<sub>0</sub> is rejected because the p-value < &alpha;.
 1. There appears to be a difference in the proportion of tows with at least one turtle mortality between the two opening sizes. In fact, it appears that significantly fewer tows with the new, larger opening had at least one turtle mortality (`r tabs("TEDSPerc",display="cite")`).
 
 `r tabs("TEDSExp")`
@@ -347,15 +347,15 @@ tabs("DolphinObs","Observed frequencies of dolphin observations in each activity
 tabs("DolphinPerc","The percentage of dolphin observations in each activity type by time of day.")
 ```
 
-1. $\alpha$ = 0.05.
-1. The $H_{0}$: "The proportion of dolphin groups in each activity type is the same among the times of day" versus $H_{A}$: "The proportion of dolphin groups in each activity type is NOT the same among the times of day."
+1. &alpha; = 0.05.
+1. The H<sub>0</sub>: "The proportion of dolphin groups in each activity type is the same among the times of day" versus H<sub>A</sub>: "The proportion of dolphin groups in each activity type is NOT the same among the times of day."
 1. A chi-square test is required because (i)a categorical variable with three levels (activity type) was measured on (ii) four groups (times of day) for comparison in the null hypothesis.
 1. An observational study that is not obviously a random sample was used.
-1. The test statistic below may not follow a $\chi^{2}$ distribution because the expected number in each cell is NOT greater than five (). However, only one of twelve cells is less than five when rounded to whole numbers so this is likely not a major problem.
+1. The test statistic below may not follow a &chi;<sup>2</sup> distribution because the expected number in each cell is NOT greater than five (`r tabs("DolphinExp",display="cite")`). However, only one of twelve cells is less than five when rounded to whole numbers so this is likely not a major problem.
 1. The table of observed values is in .
-1. The $\chi^{2}$ test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
-1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE)`.
-1. The $H_{0}$ is rejected because the p-value $<\alpha$.
+1. The &chi;<sup>2</sup> test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
+1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)`.
+1. The H<sub>0</sub> is rejected because the p-value < &alpha;.
 1. There appears to be a difference in the proportion of dolphin groups in each activity type among the four times of day. In fact, it appears that dolphins tend to socialize more in the mornings, travel during the noon and afternoon periods, and feed in the evenings (`r tabs("DolphinPerc",display="cite")`).
 
 `r tabs("DolphinExp")`
@@ -398,15 +398,15 @@ tabs("HelloObs","Observed frequencies of people that responded to 'Hello' and gr
 tabs("HelloPerc","The percentage of people that responded to 'Hello' by group size.")
 ```
 
-1. $\alpha$ = 0.10.
-1. The $H_{0}$: "The proportion of groups that responded to the 'Hello' is the same for all three group sizes" versus $H_{0}$: "The proportion of groups that responded to the 'Hello' is NOT the same for all three group sizes."
+1. &alpha; = 0.10.
+1. The H<sub>0</sub>: "The proportion of groups that responded to the 'Hello' is the same for all three group sizes" versus H<sub>0</sub>: "The proportion of groups that responded to the 'Hello' is NOT the same for all three group sizes."
 1. A chi-square test is required because (i)a categorical variable with two levels (response or not) was measured on (ii) three groups/populations (group sizes) (iii) and the distribution of responses is being compared among groups/populations in the null hypothesis.
 1. The data appear to be part of an observational study where the ``groups" were not randomly selected.
-1. The test statistic below should follow a $\chi^{2}$ distribution because the expected number in each cell is greater than five (`r tabs("HelloExp",display="cite")`).
+1. The test statistic below should follow a &chi;<sup>2</sup> distribution because the expected number in each cell is greater than five (`r tabs("HelloExp",display="cite")`).
 1. The observed frequency table is in `r tabs("HelloObs",display="cite")`.
-1. The $\chi^{2}$ test statistic is $\frac{(92-84.29167)^{2}}{84.29167}$ + $\frac{(27-34.70833)^{2}}{34.70833}$ +$\frac{(65-66.58333)^{2}}{66.58333}$ +$\frac{(29-27.41667)^{2}}{27.41667}$ +$\frac{(13-19.125)^{2}}{19.125}$ +$\frac{(14-7.875)^{2}}{7.875}$ = 0.705+ 0.038+ 1.962+ 1.712+ 0.091+ 4.764= 9.271 with (3-1)(2-1)=2 df.
-1. The p-value is `r kPvalue(chi1$p.value,include.p=FALSE)`.
-1. The $H_{0}$ is rejected because the p-value $<\alpha$.
+1. The &chi;<sup>2</sup> test statistic is $\frac{(92-84.29167)^{2}}{84.29167}$ + $\frac{(27-34.70833)^{2}}{34.70833}$ +$\frac{(65-66.58333)^{2}}{66.58333}$ +$\frac{(29-27.41667)^{2}}{27.41667}$ +$\frac{(13-19.125)^{2}}{19.125}$ +$\frac{(14-7.875)^{2}}{7.875}$ = 0.705+ 0.038+ 1.962+ 1.712+ 0.091+ 4.764= 9.271 with (3-1)(2-1)=2 df.
+1. The p-value is `r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)`.
+1. The H<sub>0</sub> is rejected because the p-value < &alpha;.
 1. There is a difference in the responsiveness among the three sizes of groups. It appears that the groups with 4,5,6 individuals responded less frequently than the individuals and groups of 2 and 3 (`r tabs("HelloPerc",display="cite")`).
 
 `r tabs("HelloExp")`
@@ -451,15 +451,15 @@ tabs("WoodpObs","Observed frequencies of cavity holes damaged for trees with and
 tabs("WoodpPerc","The percentage of cavity holes damaged by trees with and without the restrictor plate.")
 ```
 
-1. $\alpha$ = 0.05.
-1. The $H_{0}$: "The proportion of cavity holes that were damaged does not differ between those holes with and without the restrictor plate" versus $H_{A}$: "The proportion of cavity holes that were damaged does differ between those holes with and without the restrictor plate."
+1. &alpha; = 0.05.
+1. The H<sub>0</sub>: "The proportion of cavity holes that were damaged does not differ between those holes with and without the restrictor plate" versus H<sub>A</sub>: "The proportion of cavity holes that were damaged does differ between those holes with and without the restrictor plate."
 1. A chi-square test is required because (i)a categorical variable with two levels (damaged or not) was measured on (ii) two groups/populations (fit with restrictor or not) for comparison in the null hypothesis.
 1. An observation study (damage was observed) that is not obviously a simple random sample.
-1. The test statistic below should follow a $\chi^{2}$ distribution because the expected number in each cell is greater than five (`r tabs("WoodpExp",display="cite")`).
+1. The test statistic below should follow a &chi;<sup>2</sup> distribution because the expected number in each cell is greater than five (`r tabs("WoodpExp",display="cite")`).
 1. The table of observed values is in `r tabs("WoodpObs",display="cite")`.
-1. The $\chi^{2}$ test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
-1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE)`.
-1. The $H_{0}$ is rejected because the p-value $<\alpha$.
+1. The &chi;<sup>2</sup> test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
+1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)`.
+1. The H<sub>0</sub> is rejected because the p-value < &alpha;.
 1. There is very strong evidence that the restrictor plates were effective in reducing the damage done by pileated woodpeckers to red-cockaded woodpeckers cavity holes (`r tabs("WoodpPerc",display="cite")`).
 
 `r tabs("WoodpExp")`
@@ -505,15 +505,15 @@ tabs("CervidsObs","Observed frequencies of infected animals by species.")
 tabs("CervidsPerc","The percentage of infected animals by species.")
 ```
 
-1. $\alpha=0.01$.
-1. $H_{O}$: "The proportion of animals that are infected is the same for whitetail deer, mule deer, and elk" versus $H_{A}$: "The proportion of animals that are infected is NOT the same for whitetail deer, mule deer, and elk."
+1. &alpha;=0.01.
+1. H<sub>0</sub>: "The proportion of animals that are infected is the same for whitetail deer, mule deer, and elk" versus H<sub>A</sub>: "The proportion of animals that are infected is NOT the same for whitetail deer, mule deer, and elk."
 1. A chi-square test is required because (i)a categorical variable with two levels (diseased or not) was measured on (ii) three groups/populations (species) for comparison in the null hypothesis.
 1. An observation study that is likely not a simple random sample.
-1. The test statistic below should follow a $\chi^{2}$ distribution because the expected number in each cell is greater than five (`r tabs("CervidsExp",display="cite")`).
+1. The test statistic below should follow a &chi;<sup>2</sup> distribution because the expected number in each cell is greater than five (`r tabs("CervidsExp",display="cite")`).
 1. The table of observed values is in `r tabs("CervidsObs",display="cite")`.
-1. The $\chi^{2}$ test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
-1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE)`.
-1. The $H_{0}$ is rejected because the because p-value $<\alpha$.
+1. The &chi;<sup>2</sup> test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
+1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)`.
+1. The H<sub>0</sub> is rejected because the because p-value < &alpha;.
 1. There is very strong evidence of a difference in the disease rate among the three species. There is evidence that elk are more diseased than the other two species (`r tabs("CervidsPerc",display="cite")`).
 
 `r tabs("CervidsExp")`
@@ -558,15 +558,15 @@ tabs("ExerciseObs","Observed frequencies of reasons to not exercise by men and w
 tabs("ExercisePerc","The percentage of reasons to not exercise by men and women.")
 ```
 
-1. $\alpha$ = 0.01.
-1. The $H_{0}$: "The distribution of individuals into reasons for not exercising is the same for men and women" versus $H_{A}$: "The distribution of individuals into reasons for not exercising is NOT the same for men and women."
+1. &alpha; = 0.01.
+1. The H<sub>0</sub>: "The distribution of individuals into reasons for not exercising is the same for men and women" versus H<sub>A</sub>: "The distribution of individuals into reasons for not exercising is NOT the same for men and women."
 1. A chi-square test is required because (i)a categorical variable with six levels (reasons) was measured on (ii) two groups/populations (men and women) for comparison in the null hypothesis.
 1. The data appear to be part of an observational study where the individuals in both groups/populations were randomly selected.
-1. The test statistic below should follow a $\chi^{2}$ distribution because the expected number in each cell is greater than five (`r tabs("ExerciseExp",display="cite")`).
+1. The test statistic below should follow a &chi;<sup>2</sup> distribution because the expected number in each cell is greater than five (`r tabs("ExerciseExp",display="cite")`).
 1. The table of observed values is in `r tabs("ExerciseObs",display="cite")`.
-1. The $\chi^{2}$ test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
-1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE)`.
-1. The null hypothesis is rejected because the p-value $<\alpha$.
+1. The &chi;<sup>2</sup> test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
+1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)`.
+1. The null hypothesis is rejected because the p-value < &alpha;.
 1. There appears to be a significant difference in the reasons why men and women don't exercise. The major differences appears to be in the "in good health" and "too lazy" categories where men are more likely to cite "in good health" as a reason and women are more likely to cite "too lazy" (`r tabs("ExercisePerc",display="cite")`).
 
 `r tabs("ExerciseExp")`
@@ -611,15 +611,15 @@ tabs("ZooObs","Observed frequencies of animals by type in four zoos.")
 tabs("ZooPerc","The percentage of animals by type within four zoos.")
 ```
 
-1. $\alpha$ = 0.05.
-1. The $H_{0}$: "The proportion of animals in the broad animal types is the same for each zoo" versus $H_{A}$: "The proportion of animals in the broad animal types is NOT the same for each zoo."
+1. &alpha; = 0.05.
+1. The H<sub>0</sub>: "The proportion of animals in the broad animal types is the same for each zoo" versus H<sub>A</sub>: "The proportion of animals in the broad animal types is NOT the same for each zoo."
 1. A chi-square test is required because categorical variable with three levels (broad animal type) was measured on (ii) four groups/populations (zoos) for comparison in the null hypothesis.
 1. An observational study that is not a simple random sample.
-1. The test statistic below should follow a $\chi^{2}$ distribution because the expected number in each cell is greater than five (`r tabs("ZooExp",display="cite")`).
+1. The test statistic below should follow a &chi;<sup>2</sup> distribution because the expected number in each cell is greater than five (`r tabs("ZooExp",display="cite")`).
 1. The table of observed values is in `r tabs("ZooObs",display="cite")`.
-1. The $\chi^{2}$ test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
-1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE)`.
-1. The $H_{0}$ is rejected because the p-value $<\alpha$.
+1. The &chi;<sup>2</sup> test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.
+1. The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)`.
+1. The H<sub>0</sub> is rejected because the p-value < &alpha;.
 1. There appears to be a difference in the proportion of animals in the animal types among the zoos. It appears that the major differences are that the San Antonio zoo has more amphibians/reptiles and fewer mammals than would be expected and the Minnesota and San Diego zoos have more mammals than would be expected (`r tabs("ZooPerc",display="cite")`).
 
 `r tabs("ZooExp")`
