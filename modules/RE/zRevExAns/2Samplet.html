@@ -11,15 +11,15 @@ css: "/css/modules.css"
 <div id="popcorn-yield-by-variety" class="section level2">
 <h2>Popcorn Yield by Variety</h2>
 <ol>
-<li><span class="math inline">\(\alpha\)</span> = 0.10.</li>
-<li>The <span class="math inline">\(H_{0}:\mu_{w}-\mu_{y}=0\)</span> where <span class="math inline">\(\mu\)</span> is the mean number of unpopped kernels, <span class="math inline">\(w\)</span> represents white kernels, and <span class="math inline">\(y\)</span> represents yellow kernels (thus, positive numbers represent more unpopped white kernels). The <span class="math inline">\(H_{A}:\mu_{w}-\mu_{y}\neq0\)</span>.</li>
+<li>α = 0.10.</li>
+<li>The H<sub>0</sub>:μ<sub>w</sub>-μ<sub>y</sub>=0 where μ is the mean number of unpopped kernels, w represents white kernels, and y represents yellow kernels (thus, positive numbers represent more unpopped white kernels). The H<sub>A</sub>:μ<sub>w</sub>-μ<sub>y}≠0.</li>
 <li>A two-sample t-test is required quantitative variable (kernels unpopped) was measured on two groups/populations (yellow and white) that were INdependent (there is no connection between any of the individuals of white corn and those of yellow corn) and two population means are being compared in the null hypothesis.</li>
 <li>The data appear to be part of an observational study with the individuals randomly selected.</li>
-<li>Individuals in the groups/populations are independent (there is no connection between any of the white and yellow kernels). The sample size (<span class="math inline">\(n_{w}+n_{y}\)</span>=60) is <span class="math inline">\(\geq\)</span> 40. Therefore, the test statistic computed below should reasonably follow a t-distribution with <span class="math inline">\(n_{w}+n_{y}-2\)</span> = 58 df. The population variances appear to be equal because the p-value for Levene’s test of the homogeneity of variance test (given as 0.972) is “large” (i.e., <span class="math inline">\(&gt;\alpha\)</span>).</li>
-<li>The statistic is <span class="math inline">\(\bar{x}_{w}-\bar{x}_{y}\)</span> = 4.267-3.567 = 0.70. The pooled sample variance is <span class="math inline">\(s_{p}^{2}=\frac{(30-1)4.456^{2}+(30-1)4.485^{2}}{30+30-2}\)</span> = 19.99. The standard error of the statistic is <span class="math inline">\(SE_{\bar{x}_{w}-\bar{x}_{y}}=\sqrt{19.99\left(\frac{1}{30}+\frac{1}{30} \right)}\)</span> = 1.154.</li>
+<li>Individuals in the groups/populations are independent (there is no connection between any of the white and yellow kernels). The sample size (n<sub>w</sub>+n<sub>y</sub>=60) is ≥ 40. Therefore, the test statistic computed below should reasonably follow a t-distribution with n<sub>w</sub>+n<sub>y</sub>-2 = 58 df. The population variances appear to be equal because the p-value for Levene’s test of the homogeneity of variance test (given as 0.972) is “large” (i.e., &gt; α).</li>
+<li>The statistic is x̄<sub>w</sub>-x̄<sub>y</sub> = 4.267-3.567 = 0.70. The pooled sample variance is <span class="math inline">\(s_{p}^{2}=\frac{(30-1)4.456^{2}+(30-1)4.485^{2}}{30+30-2}\)</span> = 19.99. The standard error of the statistic is <span class="math inline">\(SE_{\bar{x}_{w}-\bar{x}_{y}}=\sqrt{19.99\left(\frac{1}{30}+\frac{1}{30} \right)}\)</span> = 1.154.</li>
 <li>The test statistic is t = <span class="math inline">\(\frac{0.70-0}{1.154}\)</span> = 0.606 with 58 df.</li>
-<li>The p-value is <span class="math inline">\(0.5508\)</span>.</li>
-<li>The <span class="math inline">\(H_{0}\)</span> is not rejected because p-value <span class="math inline">\(&gt;\alpha\)</span>.</li>
+<li>The p-value is 0.5508.</li>
+<li>The H<sub>0</sub> is not rejected because p-value &gt; α.</li>
 <li>There does not appear to be a difference in the mean number of unpopped kernels between the white and yellow varieties.</li>
 </ol>
 <div id="r-appendix" class="section level3">
@@ -31,15 +31,15 @@ css: "/css/modules.css"
 <div id="heating-system-efficiency" class="section level2">
 <h2>Heating System Efficiency</h2>
 <ol>
-<li><span class="math inline">\(\alpha\)</span> = 0.10.</li>
-<li>The <span class="math inline">\(H_{0}:\mu_{e}-\mu_{t}=0\)</span> where <span class="math inline">\(\mu\)</span> is the mean BTUs and the subscripts represent the two types of vents (positive numbers represent more BTUs used for houses fit with electric vent). The <span class="math inline">\(H_{A}:\mu_{e}-\mu_{t}\neq0\)</span>.</li>
+<li>α = 0.10.</li>
+<li>The H<sub>0</sub>:μ<sub>e</sub>-μ<sub>t</sub>=0 where μ is the mean BTUs and the subscripts represent the two types of vents (positive numbers represent more BTUs used for houses fit with electric vent). The H<sub>A</sub>:μ<sub>e</sub>-μ<sub>t}≠0.</li>
 <li>A two-sample t-test is required because a quantitative variable (BTUs) was measured on two groups/populations (electric and thermal vents) that were INdependent (the two types of vents are not connected at all) and two population means are compared in the null hypothesis.</li>
 <li>The data are part of an observational study where it is not obvious that the devices were randomly allocated to houses.</li>
-<li>The individuals in the two groups are independent (no vent was placed in the same house). The sample size (<span class="math inline">\(n_{e}+n_{t}\)</span> = 90) is <span class="math inline">\(\geq\)</span> 40. Therefore, the test statistic computed below should reasonably follow a t-distribution with <span class="math inline">\(n_{e}+n_{t}-2\)</span> = 88 df. The population variances appear to be equal because the p-value for Levene’s test of the homogeneity of variance test (given as 0.996) is “large” (i.e., <span class="math inline">\(&gt;\alpha\)</span>).</li>
-<li>The statistic is <span class="math inline">\(\bar{x}_{e}-\bar{x}_{t}\)</span> = 9.908 <span class="math inline">\(-\)</span> 10.143 = -0.235. The pooled sample variance is <span class="math inline">\(s_{p}^{2}=\frac{(40-1)3.020^{2}+(50-1)2.767^{2}}{40+50-2}\)</span> = 8.305. The standard error of the statistic is <span class="math inline">\(SE_{\bar{x}_{e}-\bar{x}_{t}}=\sqrt{8.305\left(\frac{1}{40}+\frac{1}{50} \right)}\)</span> = 0.6113.</li>
+<li>The individuals in the two groups are independent (no vent was placed in the same house). The sample size (n<sub>e</sub>+n<sub>t</sub> = 90) is ≥ 40. Therefore, the test statistic computed below should reasonably follow a t-distribution with n<sub>e</sub>+n<sub>t</sub>-2 = 88 df. The population variances appear to be equal because the p-value for Levene’s test of the homogeneity of variance test (given as 0.996) is “large” (i.e., &gt; α).</li>
+<li>The statistic is x̄<sub>e</sub>-x̄<sub>t</sub> = 9.908 - 10.143 = -0.235. The pooled sample variance is <span class="math inline">\(s_{p}^{2}=\frac{(40-1)3.020^{2}+(50-1)2.767^{2}}{40+50-2}\)</span> = 8.305. The standard error of the statistic is <span class="math inline">\(SE_{\bar{x}_{e}-\bar{x}_{t}}=\sqrt{8.305\left(\frac{1}{40}+\frac{1}{50} \right)}\)</span> = 0.6113.</li>
 <li>The test statistic is t = <span class="math inline">\(\frac{-0.235-0}{0.6113}\)</span> = 0.384 with 88 df.</li>
-<li>The p-value is <span class="math inline">\(0.7019\)</span>.</li>
-<li>The <span class="math inline">\(H_{0}\)</span> is not rejected because the p-value <span class="math inline">\(&gt;\alpha\)</span>.</li>
+<li>The p-value is 0.7019.</li>
+<li>The H<sub>0</sub> is not rejected because the p-value &gt; α.</li>
 <li>There does not appear to be a difference in average BTUs between houses equipped with the electrically and the thermally activated vent.</li>
 </ol>
 <div id="r-appendix-1" class="section level3">
@@ -51,15 +51,15 @@ css: "/css/modules.css"
 <div id="dioxins-in-milk-cartons" class="section level2">
 <h2>Dioxins in Milk Cartons</h2>
 <ol>
-<li><span class="math inline">\(\alpha\)</span> = 0.01.</li>
-<li>The <span class="math inline">\(H_{0}:\mu_{L}-\mu_{UL}=0\)</span> where <span class="math inline">\(\mu\)</span> is the mean dioxin level, <span class="math inline">\(L\)</span> represents lined, and <span class="math inline">\(UL\)</span> represents unlined cartons (thus, negative numbers represent lower dioxin levels in the lined cartons). The <span class="math inline">\(H_{A}:\mu_{L}-\mu_{UL}&lt;0\)</span> (representing that the lined cartons will reduce the dioxin level).</li>
+<li>α = 0.01.</li>
+<li>The H<sub>0</sub>:μ<sub>L</sub>-μ<sub>UL</sub>=0 where μ is the mean dioxin level, L represents lined, and UL represents unlined cartons (thus, negative numbers represent lower dioxin levels in the lined cartons). The H<sub>A</sub>:μ<sub>L</sub>-μ<sub>UL</sub>&lt;0 (representing that the lined cartons will reduce the dioxin level).</li>
 <li>A two-sample t-test is required because quantitative variable (dioxin level) was measured on two groups/populations (cartons with and without foil) that were INdependent (the lined and unlined cartons are not connected at all) and two population means are being compared in the null hypothesis.</li>
 <li>The data appear to be part of an observational study; however there is no mention of randomization in this study although it would have been easy to randomly select cartons.</li>
-<li>The individuals in the two groups are independent (cartons could not be both linead and unlined). The sample size (<span class="math inline">\(n_{L}+n_{UL}\)</span>=100) is <span class="math inline">\(\geq\)</span> 40. Therefore, the test statistic computed below should reasonably follow a t-distribution with <span class="math inline">\(n_{L}+n_{UL}-2\)</span> = 98 df. The variances appear to be UNequal because the Levene’s test p-value (<span class="math inline">\(&lt;0.00005\)</span>) is less than <span class="math inline">\(\alpha\)</span>. Even though the assumptions are not fully met in this case, I am going to continue with the analysis.</li>
-<li>The statistic is <span class="math inline">\(\bar{x}_{L}-\bar{x}_{UL}\)</span> = 0.006 - 0.029 = -0.023 (Table 1).</li>
+<li>The individuals in the two groups are independent (cartons could not be both linead and unlined). The sample size (n<sub>L</sub>+n<sub>UL</sub>=100) is ≥ 40. Therefore, the test statistic computed below should reasonably follow a t-distribution with n<sub>L</sub>+n<sub>UL</sub>-2 = 98 df. The variances appear to be UNequal because the Levene’s test p-value (&lt;0.00005) is less than α. Even though the assumptions are not fully met in this case, I am going to continue with the analysis.</li>
+<li>The statistic is x̄<sub>L</sub>-x̄<sub>UL</sub> = 0.006 - 0.029 = -0.023 (Table 1).</li>
 <li>The test statistic is t = -17.541 with 98 df (Table 1).</li>
-<li>The p-value is <span class="math inline">\(&lt;0.00005\)</span> (Table 1).</li>
-<li>The <span class="math inline">\(H_{0}\)</span> is rejected because the p-value <span class="math inline">\(&lt;\alpha\)</span>.</li>
+<li>The p-value is &lt;0.00005 (Table 1).</li>
+<li>The H<sub>0</sub> is rejected because the p-value &lt; α.</li>
 <li>The lined milk cartons have lower levels of dioxin, on average, than the unlined cartons.</li>
 <li>A 99% upper confidence bound is -0.02 (Table 1). One is 99% confident that the mean dioxin levels is more than 0.02 MORE in the unlined than in the lined cartons.</li>
 </ol>
@@ -82,15 +82,15 @@ levenesTest(dioxin~type,data=mc)
 <div id="low-grades-in-math" class="section level2">
 <h2>Low Grades in Math</h2>
 <ol>
-<li><span class="math inline">\(\alpha\)</span> = 0.10.</li>
-<li>The <span class="math inline">\(H_{0}:\mu_{m}-\mu_{o}=0\)</span> where <span class="math inline">\(\mu\)</span> is the mean gpa, <span class="math inline">\(m\)</span> represents math class, and <span class="math inline">\(o\)</span> represents other classes (thus, negative numbers represent lower grades in math classes). The <span class="math inline">\(H_{A}:\mu_{m}-\mu_{o}&lt;0\)</span> (representing that the mean gpa is lower in the math classes).</li>
+<li>α = 0.10.</li>
+<li>The H<sub>0</sub>:μ<sub>m</sub>-μ<sub>o</sub>=0 where μ is the mean gpa, m represents math class, and o represents other classes (thus, negative numbers represent lower grades in math classes). The H<sub>A</sub>:μ<sub>m</sub>-μ<sub>o</sub>&lt;0 (representing that the mean gpa is lower in the math classes).</li>
 <li>A two-sample t-test is required because a quantitative variable (gpa) was measured on two groups/populations (math class and other class) that were INdependent (the two types of classes are not connected at all) and two population means are being compared in the null hypothesis.</li>
 <li>The data appear to be part of an observational study, probably without randomization as the students were not “forced” to take the certain classes.</li>
-<li>The individuals in the two groups are independent (no classes consisted of all the same students). The sample size (<span class="math inline">\(n_{m}+n_{o}\)</span> = 51) is <span class="math inline">\(\geq\)</span> 40. Therefore, the test statistic computed below should reasonably follow a t-distribution with <span class="math inline">\(n_{m}+n_{o}-2\)</span> = 49 df. The population variances appear to be equal because the Levene’s test p-value (<span class="math inline">\(0.4384\)</span>) is larger than <span class="math inline">\(\alpha\)</span>.</li>
-<li>The statistic is <span class="math inline">\(\bar{x}_{m}-\bar{x}_{o}\)</span> = 2.353 - 2.353 = -0.155 (Table 3).</li>
+<li>The individuals in the two groups are independent (no classes consisted of all the same students). The sample size (n<sub>m</sub>+n<sub>o</sub> = 51) is ≥ 40. Therefore, the test statistic computed below should reasonably follow a t-distribution with n<sub>m</sub>+n<sub>o</sub>-2 = 49 df. The population variances appear to be equal because the Levene’s test p-value (0.4384) is larger than α.</li>
+<li>The statistic is x̄<sub>m</sub>-x̄<sub>o</sub> = 2.353 - 2.353 = -0.155 (Table 3).</li>
 <li>The test statistic is t = -2.064 with 49 df (Table 3).</li>
-<li>The p-value is <span class="math inline">\(0.0222\)</span> (Table 3).</li>
-<li>The <span class="math inline">\(H_{0}\)</span> is rejected because the p-value <span class="math inline">\(&lt;\alpha\)</span>.</li>
+<li>The p-value is 0.0222 (Table 3).</li>
+<li>The H<sub>0</sub> is rejected because the p-value &lt; α.</li>
 <li>The mean gpa is lower in math classes than it is in the other classes.</li>
 <li>A 90% upper confidence bound is -0.057 (Table 3). Thus, one is 90% confident that the mean gpa of students in the math class is more than 0.057 LOWER than the gpa of students in the other classes.</li>
 </ol>
@@ -112,15 +112,15 @@ levenesTest(gpa~class.type,data=mg)
 <div id="hours-worked-by-medical-interns" class="section level2">
 <h2>Hours Worked by Medical Interns</h2>
 <ol>
-<li><span class="math inline">\(\alpha\)</span> = 0.10.</li>
-<li>The <span class="math inline">\(H_{0}:\mu_{1}-\mu_{2}=0\)</span> where <span class="math inline">\(\mu\)</span> is the mean number of hours worked, <span class="math inline">\(1\)</span> represents the first city, and <span class="math inline">\(2\)</span> represents the second city (thus, positive numbers represent a larger mean for the first city). The <span class="math inline">\(H_{A}:\mu_{1}-\mu_{2}\neq0\)</span>.</li>
+<li>α = 0.10.</li>
+<li>The H<sub>0</sub>:μ<sub>1</sub>-μ<sub>2</sub>=0 where μ is the mean number of hours worked, 1 represents the first city, and 2 represents the second city (thus, positive numbers represent a larger mean for the first city). The H<sub>A</sub>:μ<sub>1</sub>-μ<sub>2</sub>≠0.</li>
 <li>A two-sample t-test is required because a quantitative variable (hours worked) was measured on two groups/populations (two cities) that were INdependent (there is no connection among individuals betwen the two cities) and two population means are being compared in the null hypothesis.</li>
 <li>The data appear to be part of an observational study with the individuals randomly selected.</li>
-<li>The individuals in the two groups are independent (all interns were not in both cities). The sample size (<span class="math inline">\(n_{1}+n_{2}\)</span>=29) is <span class="math inline">\(&lt;\)</span> 40 but <span class="math inline">\(\geq\)</span> 15. Histograms constructed for both groups (Figure 1) suggested a right-skewness but not an overly strong skew (this is very difficult to ascertain because of the small sample size). Therefore, the test statistic computed below should reasonably follow a t-distribution with <span class="math inline">\(n_{1}+n_{2}-2\)</span> = 29-2 = 27 df. The population variances appear to be equal because the Levene’s test p-value (<span class="math inline">\(0.9195\)</span>) is larger than <span class="math inline">\(\alpha\)</span>.</li>
-<li>The statistic is <span class="math inline">\(\bar{x}_{1}-\bar{x}_{2}\)</span> = 92.96 - 92.96 = -4.78 (Table 4).</li>
+<li>The individuals in the two groups are independent (all interns were not in both cities). The sample size (n<sub>1</sub>+n<sub>2</sub>=29) is &lt; 40 but ≥ 15. Histograms constructed for both groups (Figure 1) suggested a right-skewness but not an overly strong skew (this is very difficult to ascertain because of the small sample size). Therefore, the test statistic computed below should reasonably follow a t-distribution with n<sub>1</sub>+n<sub>2</sub>-2 = 29-2 = 27 df. The population variances appear to be equal because the Levene’s test p-value (0.9195) is larger than α.</li>
+<li>The statistic is x̄<sub>1</sub>-x̄<sub>2</sub> = 92.96 - 92.96 = -4.78 (Table 4).</li>
 <li>The test statistic is t =-2.657 with 27 df (Table 4).</li>
-<li>The p-value is <span class="math inline">\(0.0131\)</span> (Table 4).</li>
-<li>The <span class="math inline">\(H_{0}\)</span> is rejected because the p-value <span class="math inline">\(&lt;\alpha\)</span>.</li>
+<li>The p-value is 0.0131 (Table 4).</li>
+<li>The H<sub>0</sub> is rejected because the p-value &lt; α.</li>
 <li>It appears that interns in the second city work more hours, on average, than interns in the first city.</li>
 <li>A 90% confidence interval is from -7.85 to -1.72 (Table 4). Thus, one is 90% confident that the interns in the second city work between 1.72 and 7.85 hours more than interns in the first city.</li>
 </ol>
@@ -145,15 +145,15 @@ hist(hrs.worked~city,data=med,xlab=&quot;Hours Worked&quot;)</code></pre>
 <div id="corn-crop-yield" class="section level2">
 <h2>Corn Crop Yield</h2>
 <ol>
-<li><span class="math inline">\(\alpha\)</span> = 0.10.</li>
-<li>The <span class="math inline">\(H_{0}:\mu_{i}-\mu_{s}=0\)</span> where <span class="math inline">\(\mu\)</span> represents the mean yield, <span class="math inline">\(i\)</span> represents the insecticide plots, and <span class="math inline">\(s\)</span> represents the sterile male plots (thus, positive numbers represent a larger yield in the insecticide treatments). The <span class="math inline">\(H_{A}:\mu_{i}-\mu_{s}\neq0\)</span>.</li>
+<li>α = 0.10.</li>
+<li>The H<sub>0</sub>:μ<sub>i</sub>-μ<sub>s</sub>=0 where μ represents the mean yield, i represents the insecticide plots, and s represents the sterile male plots (thus, positive numbers represent a larger yield in the insecticide treatments). The H<sub>A</sub>:μ<sub>i</sub>-μ<sub>s</sub>≠0.</li>
 <li>A two-sample t-test is required because a quantitative variable (yield) was measured on two groups/populations (insecticide and sterile male plots) that were INdependent (there is no connection between plots that received the insecticide and those that received the sterile males) and two population means are being compared in the null hypothesis.</li>
 <li>The data appear to be part of an experimental study with two treatments and 40 replicates. Plots were randomly allocated to treatments.</li>
-<li>The individuals in the two groups are independent as there is no connection between the two types of plots. The sample size (<span class="math inline">\(n_{i}+n_{s}\)</span>=80) is <span class="math inline">\(\geq\)</span> 40. Therefore, the test statistic computed below should reasonably follow a t-distribution with <span class="math inline">\(n_{i}+n_{s}-2\)</span> = 80-2 = 78 df. The variances appear to be equal because the Levene’s test p-value (<span class="math inline">\(0.8862\)</span>) is larger than <span class="math inline">\(\alpha\)</span>.</li>
-<li>The statistic is <span class="math inline">\(\bar{x}_{i}-\bar{x}_{s}\)</span> = 100.150-100.150 = -9.375 (Table 5).</li>
+<li>The individuals in the two groups are independent as there is no connection between the two types of plots. The sample size (n<sub>i</sub>+n<sub>s</sub>=80) is ≥ 40. Therefore, the test statistic computed below should reasonably follow a t-distribution with n<sub>i</sub>+n<sub>s</sub>-2 = 80-2 = 78 df. The variances appear to be equal because the Levene’s test p-value (0.8862) is larger than α.</li>
+<li>The statistic is x̄<sub>i</sub>-x̄<sub>s</sub> = 100.150-100.150 = -9.375 (Table 5).</li>
 <li>The test statistic is t = -7.112 with 78 df (Table 5).</li>
-<li>The p-value is <span class="math inline">\(&lt;0.00005\)</span> (Table 5).</li>
-<li>The <span class="math inline">\(H_{0}\)</span> is rejected because the p-value <span class="math inline">\(&lt;\alpha\)</span>.</li>
+<li>The p-value is &lt;0.00005 (Table 5).</li>
+<li>The H<sub>0</sub> is rejected because the p-value &lt; α.</li>
 <li>It appears that yield is greater, on average, in the plots with the sterile males as compared to the plots with the insecticide.</li>
 <li>A 90% confidence interval is -11.57 to -7.18 (Table 5). Thus,one is 90% confident that the mean yield in plots with sterile males is between 7.18 and 11.57 bushels HIGHER than in plots with the insecticide.</li>
 </ol>
@@ -175,15 +175,15 @@ levenesTest(yield~group,data=yld)
 <div id="death-anxiety-and-organ-donation" class="section level2">
 <h2>Death Anxiety and Organ Donation</h2>
 <ol>
-<li><span class="math inline">\(\alpha\)</span> = 0.01.</li>
-<li>The <span class="math inline">\(H_{0}:\mu_{o}-\mu_{n}=0\)</span> where <span class="math inline">\(\mu\)</span> is the mean DAS, <span class="math inline">\(o\)</span> represents the organ donors, and <span class="math inline">\(n\)</span> represents the non-organ donors (thus, positive numbers represent a higher anxiety among organ donors). The <span class="math inline">\(H_{A}:\mu_{o}-\mu_{n}\neq0\)</span>.</li>
+<li>α = 0.01.</li>
+<li>The H<sub>0</sub>:μ<sub>o</sub>-μ<sub>n</sub>=0 where μ is the mean DAS, o represents the organ donors, and n represents the non-organ donors (thus, positive numbers represent a higher anxiety among organ donors). The H<sub>A</sub>:μ<sub>o</sub>-μ<sub>n</sub>≠0.</li>
 <li>A two-sample t-test is required because a quantitative variable (DAS) was measured on two groups/populations (donor or not) that were INdependent and two population means are being compared in the null hypothesis.</li>
 <li>The data appear to be part of an observational study where it is not clear if random samples were taken or not.</li>
-<li>The individuals in the two groups are independent because the individual cannot both be a donor and a non donor. The sample size (<span class="math inline">\(n_{o}+n_{n}\)</span> = 94) is <span class="math inline">\(\geq\)</span> 40. Therefore, the test statistic computed below should reasonably follow a t-distribution with <span class="math inline">\(n_{o}+n_{n}-2\)</span> = 94-2 = 92 df. The variances appear to be equal because the Levene’s test p-value (<span class="math inline">\(0.0206\)</span>) is larger than <span class="math inline">\(\alpha\)</span>.</li>
-<li>The statistic is <span class="math inline">\(\bar{x}_{o}-\bar{x}_{n}\)</span> = 5.52-7.42 = -1.91 (Table 6).</li>
+<li>The individuals in the two groups are independent because the individual cannot both be a donor and a non donor. The sample size (n<sub>o</sub>+n<sub>n</sub> = 94) is ≥ 40. Therefore, the test statistic computed below should reasonably follow a t-distribution with n<sub>o</sub>+n<sub>n</sub>-2 = 94-2 = 92 df. The variances appear to be equal because the Levene’s test p-value (0.0206) is larger than α.</li>
+<li>The statistic is x̄<sub>o</sub>-x̄<sub>n</sub> = 5.52-7.42 = -1.91 (Table 6).</li>
 <li>The test statistic is t = -2.622 with 92 df (Table 6).</li>
-<li>The p-value is <span class="math inline">\(0.0102\)</span> (Table 6).</li>
-<li>The <span class="math inline">\(H_{0}\)</span> is not rejected because the p-value <span class="math inline">\(&gt;\alpha\)</span>.</li>
+<li>The p-value is 0.0102 (Table 6).</li>
+<li>The H<sub>0</sub> is not rejected because the p-value &gt; α.</li>
 <li>There does not appear to be a significant difference in average anxiety about death between organ donors and non-organ donors, at least at the 1% level.</li>
 </ol>
 <p>Table 6: Results of 2-Sample t-Test for death anxiety score between organ and nonorgan donors.</p>
@@ -205,17 +205,17 @@ levenesTest(DAS~donor1,data=das)
 <div id="pork-quality" class="section level2">
 <h2>Pork Quality</h2>
 <ol>
-<li><span class="math inline">\(\alpha\)</span> = 0.05.</li>
-<li>The <span class="math inline">\(H_{0}:\mu_{1}-\mu_{2}=0\)</span> where <span class="math inline">\(\mu\)</span> is the mean backfat thickness and the subscripts represent the two diets (thus, positive numbers represent more backfat thickness for pigs fed diet 1). The <span class="math inline">\(H_{A}:\mu_{1}-\mu_{2}\neq0\)</span>.</li>
+<li>α = 0.05.</li>
+<li>The H<sub>0</sub>:μ<sub>1</sub>-μ<sub>2</sub>=0 where μ is the mean backfat thickness and the subscripts represent the two diets (thus, positive numbers represent more backfat thickness for pigs fed diet 1). The H<sub>A</sub>:μ<sub>1</sub>-μ<sub>2</sub>≠0.</li>
 <li>A two-sample t-test is required quantitative variable (backfat thickness) was measured on two groups/populations (different diets) that were INdependent and two population means are compared in the null hypothesis.</li>
 <li>The data are part of an experimental study where the pigs were randomly allocated to treatments.</li>
-<li>The individuals in the two groups are independent (no pig was fed both diets). The sample size (<span class="math inline">\(n_{1}+n_{2}\)</span>=25) is <span class="math inline">\(&lt;\)</span> 40 but <span class="math inline">\(\geq\)</span> 15 and the sample distributions (i.e., histograms) are not strongly skewed. Therefore, the test statistic computed below should reasonably follow a t-distribution with <span class="math inline">\(n_{1}+n_{2}-2\)</span> = 22 df. The population variances appear to be equal because the p-value for Levene’s test of the homogeneity of variance test (given as 0.532) is “large” (i.e., <span class="math inline">\(&gt;\alpha\)</span>).</li>
-<li>The statistic is <span class="math inline">\(\bar{x}_{1}-\bar{x}_{2}\)</span> = 3.420-2.989 = 0.431. The pooled sample variance is <span class="math inline">\(s_{p}^{2}=\frac{(12-1)0.295^{2}+(12-1)0.375^{2}}{12+12-2}\)</span> = <span class="math inline">\(0.1138\)</span>. The standard error of the statistic is <span class="math inline">\(SE_{\bar{x}_{1}-\bar{x}_{2}}=\sqrt{0.1138\left(\frac{1}{12}+\frac{1}{12} \right)}\)</span> = 0.1377.</li>
+<li>The individuals in the two groups are independent (no pig was fed both diets). The sample size (n<sub>1</sub>+n<sub>2</sub>=25) is &lt; 40 but ≥ 15 and the sample distributions (i.e., histograms) are not strongly skewed. Therefore, the test statistic computed below should reasonably follow a t-distribution with n<sub>1</sub>+n<sub>2</sub>-2 = 22 df. The population variances appear to be equal because the p-value for Levene’s test of the homogeneity of variance test (given as 0.532) is “large” (i.e., &gt; α).</li>
+<li>The statistic is x̄<sub>1</sub>-x̄<sub>2</sub> = 3.420-2.989 = 0.431. The pooled sample variance is <span class="math inline">\(s_{p}^{2}=\frac{(12-1)0.295^{2}+(12-1)0.375^{2}}{12+12-2}\)</span> = 0.1138. The standard error of the statistic is <span class="math inline">\(SE_{\bar{x}_{1}-\bar{x}_{2}}=\sqrt{0.1138\left(\frac{1}{12}+\frac{1}{12} \right)}\)</span> = 0.1377.</li>
 <li>The test statistic is t = <span class="math inline">\(\frac{0.431-0}{0.1377}\)</span> = 3.13 with 22 df.</li>
 <li>The p-value is <span class="math inline">\(p=0.0049\)</span>.</li>
-<li>The <span class="math inline">\(H_{0}\)</span> is rejected because the p-value <span class="math inline">\(&lt;\alpha\)</span>.</li>
+<li>The H<sub>0</sub> is rejected because the p-value &lt; α.</li>
 <li>There does appear to be a difference in average backfat thickness between pigs fed the two diets.</li>
-<li>A 95% confidence interval is warranted in this situation with a <span class="math inline">\(t^{*}\)</span> of <span class="math inline">\(\pm\)</span> 2.074. Thus, 0.431 <span class="math inline">\(\pm\)</span> 2.074*0.1377, 0.431 <span class="math inline">\(\pm\)</span> 0.286, and (0.145,0.717). One is 95% confident that the difference in mean backfat thickness is between 0.145 and 0.717 cm. Thus, the mean backfat thickness on all pigs fed diet 1 is between 0.145 and 0.717 cm greater than the mean backfat thickness of all pigs fed diet 2. Thus, diet 2 produces higher quality pork.</li>
+<li>A 95% confidence interval is warranted in this situation with a t<sup><em></sup> of ± 2.074. Thus, 0.431 ± 2.074</em>0.1377, 0.431 ± 0.286, and (0.145,0.717). One is 95% confident that the difference in mean backfat thickness is between 0.145 and 0.717 cm. Thus, the mean backfat thickness on all pigs fed diet 1 is between 0.145 and 0.717 cm greater than the mean backfat thickness of all pigs fed diet 2. Thus, diet 2 produces higher quality pork.</li>
 </ol>
 <div id="r-appendix-7" class="section level3">
 <h3>R Appendix</h3>
