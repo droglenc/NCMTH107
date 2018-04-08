@@ -30,7 +30,7 @@ figs <- captioner(prefix="Figure")
 ## Popcorn Yield by Variety
 
 1. &alpha; = 0.10.
-1. The H<sub>0</sub>:&mu;<sub>w</sub>-&mu;<sub>y</sub>=0 where &mu; is the mean number of unpopped kernels, w represents white kernels, and y represents yellow kernels (thus, positive numbers represent more unpopped white kernels). The H<sub>A</sub>:&mu;<sub>w</sub>-&mu;<sub>y}&ne;0.
+1. The H<sub>0</sub>:&mu;<sub>w</sub>-&mu;<sub>y</sub>=0 where &mu; is the mean number of unpopped kernels, w represents white kernels, and y represents yellow kernels (thus, positive numbers represent more unpopped white kernels). The H<sub>A</sub>:&mu;<sub>w</sub>-&mu;<sub>y</sub>&ne;0.
 1. A two-sample t-test is required quantitative variable (kernels unpopped) was measured on two groups/populations (yellow and white) that were INdependent (there is no connection between any of the individuals of white corn and those of yellow corn) and two population means are being compared in the null hypothesis.
 1. The data appear to be part of an observational study with the individuals randomly selected.
 1. Individuals in the groups/populations are independent (there is no connection between any of the white and yellow kernels). The sample size (n<sub>w</sub>+n<sub>y</sub>=60) is &ge; 40. Therefore, the test statistic computed below should reasonably follow a t-distribution with n<sub>w</sub>+n<sub>y</sub>-2 = 58 df. The population variances appear to be equal because the p-value for Levene's test of the homogeneity of variance test (given as 0.972) is "large" (i.e., > &alpha;).
@@ -50,7 +50,7 @@ figs <- captioner(prefix="Figure")
 ## Heating System Efficiency
 
 1. &alpha; = 0.10.
-1. The H<sub>0</sub>:&mu;<sub>e</sub>-&mu;<sub>t</sub>=0 where &mu; is the mean BTUs and the subscripts represent the two types of vents (positive numbers represent more BTUs used for houses fit with electric vent). The H<sub>A</sub>:&mu;<sub>e</sub>-&mu;<sub>t}&ne;0.
+1. The H<sub>0</sub>:&mu;<sub>e</sub>-&mu;<sub>t</sub>=0 where &mu; is the mean BTUs and the subscripts represent the two types of vents (positive numbers represent more BTUs used for houses fit with electric vent). The H<sub>A</sub>:&mu;<sub>e</sub>-&mu;<sub>t</sub>&ne;0.
 1. A two-sample t-test is required because a quantitative variable (BTUs) was measured on two groups/populations (electric and thermal vents) that were INdependent (the two types of vents are not connected at all) and two population means are compared in the null hypothesis.
 1. The data are part of an observational study where it is not obvious that the devices were randomly allocated to houses.
 1. The individuals in the two groups are independent (no vent was placed in the same house). The sample size (n<sub>e</sub>+n<sub>t</sub> = 90) is &ge; 40. Therefore, the test statistic computed below should reasonably follow a t-distribution with n<sub>e</sub>+n<sub>t</sub>-2 = 88 df. The population variances appear to be equal because the p-value for Levene's test of the homogeneity of variance test (given as 0.996) is "large" (i.e., > &alpha;).
@@ -99,7 +99,6 @@ kHtest(mc.t)
 ```{r eval=FALSE}
 mc <- read.csv("data/MilkCartons.csv")
 <<2tMilk>>
-@
 ```
 
 ----
@@ -265,7 +264,7 @@ das <- read.csv("dta/DeathAnxiety.csv")
 1. The individuals in the two groups are independent (no pig was fed both diets). The sample size (n<sub>1</sub>+n<sub>2</sub>=25) is < 40 but &ge; 15 and the sample distributions (i.e., histograms) are not strongly skewed. Therefore, the test statistic computed below should reasonably follow a t-distribution with n<sub>1</sub>+n<sub>2</sub>-2 = 22 df. The population variances appear to be equal because the p-value for Levene's test of the homogeneity of variance test (given as 0.532) is "large" (i.e., > &alpha;).
 1. The statistic is x&#772;<sub>1</sub>-x&#772;<sub>2</sub> = 3.420-2.989 = 0.431. The pooled sample variance is $s_{p}^{2}=\frac{(12-1)0.295^{2}+(12-1)0.375^{2}}{12+12-2}$ = 0.1138. The standard error of the statistic is $SE_{\bar{x}_{1}-\bar{x}_{2}}=\sqrt{0.1138\left(\frac{1}{12}+\frac{1}{12} \right)}$ = 0.1377.
 1. The test statistic is t = $\frac{0.431-0}{0.1377}$ = 3.13 with 22 df.
-1. The p-value is `r kPvalue(2*pt(3.13,df=22,lower.tail=FALSE))`.
+1. The p-value is `r kPvalue(2*pt(3.13,df=22,lower.tail=FALSE),include.p=FALSE,latex=FALSE)`.
 1. The H<sub>0</sub> is rejected because the p-value < &alpha;.
 1. There does appear to be a difference in average backfat thickness between pigs fed the two diets.
 1. A 95% confidence interval is warranted in this situation with a t<sup>*</sup> of &plusmn; `r formatC(qt(0.025,df=22,lower.tail=FALSE),format="f",digits=3)`. Thus, 0.431 &plusmn; 2.074*0.1377, 0.431 &plusmn; 0.286, and (0.145,0.717). One is 95% confident that the difference in mean backfat thickness is between 0.145 and 0.717 cm. Thus, the mean backfat thickness on all pigs fed diet 1 is between 0.145 and 0.717 cm greater than the mean backfat thickness of all pigs fed diet 2. Thus, diet 2 produces higher quality pork.
