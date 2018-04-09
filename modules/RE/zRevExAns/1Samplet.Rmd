@@ -57,7 +57,7 @@ figs <- captioner(prefix="Figure")
 1. An observational study with apparent random selection of individuals (background says "random surveys") was used.
 1. The &sigma; is unknown. The sample size is greater than 40; thus, the sampling distribution of the test statistic should follow a t-distribution.
 1. The statistic is x&#772; = 32.511.
-1. The test statistic is t=$\frac{32.511-32}{\frac{1.713}{\sqrt{42}}}$ = 2.085 with 42-1 = 41 df.
+1. The test statistic is t=$\frac{32.511-32}{\frac{1.713}{\sqrt{42}}}$ = 1.933 with 42-1 = 41 df.
 1. The p-value is `r kPvalue(pt(1.933251,df=41,lower.tail=FALSE),include.p=FALSE,latex=FALSE)`.
 1. The H<sub>0</sub> is rejected because the p-value < &alpha;.
 1. It appears that the average salary for all recent graduates from the College of Liberal Arts is greater than $32,000; thus, the Dean's statement is supported.
