@@ -40,6 +40,7 @@ tbls(name="aids4","Row percentage table for the observations of race by sex cate
 ```
 
 ----
+
 <div class="alert alert-warning">
 <strong>Note:</strong> 
 <ul>
@@ -48,6 +49,8 @@ tbls(name="aids4","Row percentage table for the observations of race by sex cate
 <li>In hand-calculation questions (e.g., AIDS cases) make sure to put `lower.tail=FALSE` in `distrib()` when calculation the p-value (Step 8) in a chi-square problem. This is true for EVERY chi-square problem.</li>
 </ul>
 </div>
+
+----
 
 ## AIDS Cases
 ```{r AIDSCalc, echo=FALSE, results='hide'}
