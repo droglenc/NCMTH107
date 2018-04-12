@@ -61,7 +61,7 @@ MWF 900-950; WF 1500-1600<br>By Appointment</td></tr>
 ----
 
 ## Grading
-An overall score will be computed from the items and associated weights listed in the table below. To compute your current grade, enter your percentage scores in the boxes for completed assessments. To project your future grade, also include percentages for future assessments. [*It is your responsibility to track your scores on the individual assessments.*]
+An overall score will be computed from the items and associated weights listed in the table below. To compute your current grade, enter your percentage scores in the boxes for completed assessments. Enter your highest quiz score as the first quiz and your lowest quiz score as the last quiz. To project your future grade, also include percentages for future assessments. [*It is your responsibility to track your scores on the individual assessments.*]
 
 <!-- if the assessment weights change then you must change the values in get_wghts() in the grader.js file -->
 
@@ -78,7 +78,7 @@ An overall score will be computed from the items and associated weights listed i
 </tr>
 
 <tr><th>Weight</th>
-<th>10%</th><th>10%</th><th>12.5%</th><th>12.5%</th><th>12.5%</th><th>12.5%</th><th>30%</th></tr>
+<th>10%</th><th>10%</th><th>15%</th><th>12.5%</th><th>12.5%</th><th>10%</th><th>30%</th></tr>
 
 <tr><th>Percent</th>
 <td><input type="text" name="READ_SC" size="3" tabindex="1" onchange="calc_grade(this.form)"></td>
@@ -143,6 +143,7 @@ As a general rule-of-thumb[^2], students are expected to spend between 2-3 hours
 ### Quizzes
 Quiz dates are shown on the [Due Dates page](Dates-Current.html){:target="_blank"}. Make-up quizzes will be provided only if you have a fixed commitment of sufficient importance that was set before the beginning of the semester or a verifiable medical condition. **You will not be allowed to make up a quiz missed without my prior approval. The final quiz will NOT be given early.**
 
+Note that your highest quiz score will count for more and your lowest quiz score will count for less in the calculation of your final grade (see [grade weights above](#grading)).
 
 ### Adjustments
 **If you meet with me in my office before the end of the second week of class**, your lowest four preparation check and four participation grades will be excluded when computing your final grade.
