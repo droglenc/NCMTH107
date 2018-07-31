@@ -43,7 +43,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant</a></td>
     <td>--</td></tr>
 <tr><td>F 21-Sep</td>
-    <td colspan="2"><span style="color:red">First Quiz</span> (<a href="QuizGuide/quiz1.html">Study Guide</a>)</td></tr>
+    <td colspan="2"><span style="color:red">First Quiz</span> (<a href="QuizGuide/quiz.html">Study Guide</a>)</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 24-Sep</td>
@@ -75,7 +75,7 @@ Note that some of the more distant dates are subject to change.
     <td>--</td>
     <td>--</td></tr>
 <tr><td>F 12-Oct</td>
-    <td colspan="2"><span style="color:red">Second Quiz</span> (<a href="QuizGuide/quiz2.html">Study Guide</a>)</td></tr>
+    <td colspan="2"><span style="color:red">Second Quiz</span> (<a href="QuizGuide/quiz.html">Study Guide</a>)</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 15-Oct</td>
@@ -117,7 +117,7 @@ Note that some of the more distant dates are subject to change.
     <td>--</td>
     <td>--</td></tr>
 <tr><td>F 9-Nov</td>
-    <td colspan="2"><span style="color:red">Third Quiz</span> (<a href="QuizGuide/quiz3.html">Study Guide</a>)</td></tr>
+    <td colspan="2"><span style="color:red">Third Quiz</span> (<a href="QuizGuide/quiz.html">Study Guide</a>)</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 12-Nov</td>
@@ -154,7 +154,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td>
     <td>--</td></tr>
 <tr><td>W 5-Dec</td>
-    <td colspan="2"><span style="color:red">Fourth Quiz</span> (<a href="QuizGuide/quiz4.html">Study Guide</a>)</td></tr>
+    <td colspan="2"><span style="color:red">Fourth Quiz</span> (<a href="QuizGuide/quiz.html">Study Guide</a>)</td></tr>
 <tr><td>F 7-Dec</td>
     <td>Course Review</td>
     <td>--</td></tr>
