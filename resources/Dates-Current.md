@@ -54,12 +54,12 @@ Note that some of the more distant dates are subject to change.
     <td>--</td></tr>
 <tr><td>F 28-Sep</td>
     <td><a href="../modules/NormalDist">Normal Distributions</a></td>
-    <td>--</td></tr>
+    <td>Quiz 1 Reflection (Optional)</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 1-Oct</td>
     <td><a href="../modules/BEDACat">Bivariate EDA - Categorical</a></td>
-    <td>Quiz 1 Reflection (Optional)</td></tr>
+    <td>--</td></tr>
 <tr><td>W 3-Oct</td>
     <td><a href="../modules/BEDAQuant">Bivariate EDA - Quantitative</a></td>
     <td>--</td></tr>
@@ -93,7 +93,7 @@ Note that some of the more distant dates are subject to change.
     <td colspan="2"><span style="color:coral">NO CLASS (Reading Day)</span></td></tr>
 <tr><td>W 24-Oct</td>
     <td><a href="../modules/HypTesting">Hypothesis Testing</a></td>
-    <td>Quiz 2 Reflection (Optional)</td></tr>
+    <td>--</td></tr>
 <tr><td>F 26-Oct</td>
     <td><a href="../modules/HypTestingErrs">Hypothesis Testing Errors</a></td>
     <td>--</td></tr>
@@ -118,7 +118,6 @@ Note that some of the more distant dates are subject to change.
     <td>--</td></tr>
 <tr><td>F 9-Nov</td>
     <td colspan="2"><span style="color:red">Third Quiz</span> (<a href="QuizGuide/quiz3.html">Study Guide</a>)</td></tr>
-    <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 12-Nov</td>
@@ -129,7 +128,7 @@ Note that some of the more distant dates are subject to change.
     <td>--</td></tr>
 <tr><td>F 16-Nov</td>
     <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
-    <td>--</td></tr>
+    <td>Quiz 3 Reflection (Optional)</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 19-Nov</td>
