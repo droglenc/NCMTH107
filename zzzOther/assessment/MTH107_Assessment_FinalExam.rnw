@@ -19,8 +19,9 @@ source("c:/aaaWork/zGnrlLatex/knitr_setup.R")
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/zzzOther/assessment")
 
 ## Modified violin plot
-vioplot107 <- function(x,data=df,horizontal=TRUE,col="gray60",ylim=c(0,1),range=0,wex=1,
-                       cex.axis=0.9,xlab="Proportion of Total Points") {
+vioplot107 <- function(x,data=df,horizontal=TRUE,col="gray60",ylim=c(0,1),
+                       range=0,wex=1,cex.axis=0.9,
+                       xlab="Proportion of Total Points") {
   x <- model.frame(x,data)
   tmp <- split(x[,1],x[,2])
   ylbls <- names(tmp)
@@ -40,11 +41,12 @@ grade.lvls1 <- c("A","A-","B+","B","B-","C+","C","C-","D+","D","F","W","S","U","
 grade.lvls2 <- c("A","B","C","D","F")
 section.lvls <- c("F10.1","W11.1","W11.2","F11.1","W12.1","F12.1","F12.2",
                   "W13.1","F13.1","F13.2","W14.1","F14.1","F14.2","W16.2",
-                  "F16.1","F16.2","W17.2")
+                  "F16.1","F16.2","W17.2","F17.1","F17.2","W18.1")
 
 gd <- read_excel("Ogle_Grade_Distribution.xlsx") %>%
   mutate(course=paste0(CRS_AREA,CRS_NUM),
-         Sem1=mapvalues(TRM_CDE,from=c("10","20","30","40"),to=c("F","W","Sp","Su")),
+         Sem1=mapvalues(TRM_CDE,from=c("10","20","30","40"),
+                        to=c("F","W","Sp","Su")),
          CYr=as.numeric(YR_CDE)-2000,
          CYr=ifelse(Sem1=="F",CYr,CYr+1),
          section=paste0(Sem1,CYr,".",CRS_SEC),
@@ -99,9 +101,7 @@ algn <- "llrrrrrrrrr"
 \subsubsection{Background}
 \emph{Statistical Concepts and Analysis (MTH107)} is the entry-level statistics course at Northland College. Taught by instructors in the Mathematical Sciences program, the course is required by several majors in the Natural Resources, Environmental Sciences, and Social Responsibility departments and can also fulfill the ``quantitative reasoning'' requirement for the College's Connections program.
 
-I have taught MTH107 since 1996, including \Sexpr{kCounts(length(section.lvls))} sections of MTH107 since 2010, the period for which this assessment document covers. Before the Winter 2016 term (listed as W16 in this analysis), my sections of MTH107 were lecture-based with a minimal (approx. 25\%) of class time devoted to ``hands-on'' in-class activities or experiences. Beginning in Winter 2016, the course was ``flipped'' such that the vast majority of class time was used for in-class activities and work, with minimal ``planned'' lectures for concepts that students typically struggled with and other ``lectures'' as questions warranted. For the ``flipped'' courses, student were asked to read a short amount of material (usually less than ten pages) and watch short videos (usually less than 30 minutes) to prepare for class. In class, students completed a short quiz (less than 10 minutes) to assess their preparedness of the material and then worked on a variety of exercises related to the material. Planned lectures usually used about half of the class period, with the remaining half devoted to in-class exercises.
-
-The pedagogical change in Winter, 2016 was partially a response to previous assessment findings which suggested that students would benefit from more practice with the material. As such, many more ``hands-on'' experiences were incorporated into the course.
+I have taught MTH107 since 1996, including \Sexpr{kCounts(length(section.lvls))} sections of MTH107 since 2010, the period for which this assessment document covers. Before the Winter 2016 term (listed as W16 in this analysis), my sections of MTH107 were lecture-based with minimal (approx. 25\%) class time devoted to ``hands-on'' in-class activities or experiences. Beginning in Winter 2016, the course was ``flipped'' such that the vast majority of class time was used for in-class activities and work, with minimal ``planned'' lectures for concepts that students typically struggled with and other ``lectures'' as questions warranted. For the ``flipped'' courses, student were asked to read a short amount of material (usually less than ten pages) and watch short videos (usually less than 30 minutes) to prepare for class. In class, students completed a short quiz (less than 10 minutes) to assess their preparedness of the material and then worked on a variety of exercises related to the material. Planned lectures usually used about half of the class period, with the remaining half devoted to in-class exercises. The flipped structure has been maintained through the most recent academic year, though several changes in the structure of the course content were implemented in Winter, 2018. The pedagogical change in Winter, 2016 was partially a response to previous assessment findings which suggested that students would benefit from more practice with the material.
 
 \subsubsection{Intended Learning Outcomes}
 I modified the intended learning outcomes (ILO) for MTH107 in preparation for teaching the course in the Fall of 2012. This list of ILOs has stayed the same (except for minor wording differences) since then. The ILOs as they have appeared on the course syllabi are:
@@ -121,7 +121,7 @@ I modified the intended learning outcomes (ILO) for MTH107 in preparation for te
 Some of these ILOs are ``double-barreled'' (i.e., represent more than one outcome) to save space on the syllabi. For example, ILO \#8 represents at least four specific methods in statistics (1-sample t-test, 2-sample t-test, goodness-of-fit test, and chi-square test) for which I will assess student achievement. For assessment purposes, the ``double-barreled'' ILOs are unpacked to single outcomes for analysis.
 
 \section{Assessment Methodology}
-As a coarse metric of overall academic achievement, I computed the mean GPA and percentage of students that earned an ``A'', earned a failing grade (i.e., lower than a ``C''), and withdrew from the course.
+As a coarse metric of overall academic achievement, I computed the mean GPA and percentage of students that earned an ``A'', earned a ``failing'' grade (i.e., lower than a ``C''), and withdrew from the course.
 
 Beginning in Fall, 2012, the final exam for the course consisted of questions that were specific assessments of most of the course ILOs. Scores for individual questions were recorded separately for each student. Scores were summed across individual questions for each student to provide an overall grade on the exam for that student. However, scores on individual questions were summarized across all students to provide a measure of student achievement for each ILO. These summaries are used in this assessment report.
 
@@ -149,9 +149,9 @@ lm.DF <- lm(rowSums(gperc[,c("C-","D+","D","F")])~xtmp)
 aov.DF <- anova(lm.DF)
 @
 
-From Fall 2010 through Winter 2017, the mean (standard deviation) enrollment was \Sexpr{formatC(mean(sumgpa$n),format="f",digits=1)} (\Sexpr{formatC(sd(sumgpa$n),format="f",digits=2)}) students, \Sexpr{formatC(mean(gperc[,"W"]),format="f",digits=1)}\% (\Sexpr{formatC(sd(gperc[,"W"]),format="f",digits=2)}) of the students dropped the course (after the initial add-drop period), and the mean course gpa was \Sexpr{formatC(mean(sumgpa$mean),format="f",digits=2)} (\Sexpr{formatC(sd(sumgpa$mean),format="f",digits=2)}). Over this time, there was a slight decrease (as a linear trend) in mean course GPA (\Sexpr{kPvalue(aov.gpa[1,"Pr(>F)"])}) and slight increase in the percentage of students that earned a ``failing grade'' (\Sexpr{kPvalue(aov.DF[1,"Pr(>F)"])}; \figref{fig:GradeSummary}). In contrast, no linear trend was detected for the percentage of students dropping the course (\Sexpr{kPvalue(aov.W[1,"Pr(>F)"])}) or percentage of students that earned an A (\Sexpr{kPvalue(aov.A[1,"Pr(>F)"])}).
+From Fall 2010 through Winter 2018, the mean (standard deviation) enrollment was \Sexpr{formatC(mean(sumgpa$n),format="f",digits=1)} (\Sexpr{formatC(sd(sumgpa$n),format="f",digits=2)}) students, \Sexpr{formatC(mean(gperc[,"W"]),format="f",digits=1)}\% (\Sexpr{formatC(sd(gperc[,"W"]),format="f",digits=2)}) of the students dropped the course (after the initial add-drop period), and the mean course gpa was \Sexpr{formatC(mean(sumgpa$mean),format="f",digits=2)} (\Sexpr{formatC(sd(sumgpa$mean),format="f",digits=2)}). Over this time, mean course GPA was relatively constant until AY2012, generally declined (but was more variable) until AY2017, and increase for one section F17 and the only section in W18 \figrefp{fig:GradeSummary}). These observations for course GPA are largely driven by the percentage of students with a failing grade \figrefp{fig:GradeSummary}). No linear trend was detected for the percentage of students dropping the course (\Sexpr{kPvalue(aov.W[1,"Pr(>F)"])}) or percentage of students that earned an A (\Sexpr{kPvalue(aov.A[1,"Pr(>F)"])}).
 
-<<GradeSummary, echo=FALSE, fig.cap="Mean course GPA (with 95\\% confidence intervals; Left) and the percentage of students (Right) that earned better than an A (labeled as an ``A''), worse than a D+ (``D/F''), or withdrew (``W'') from the course by section (abbreviated with semester (F=Fall, W=Winter), last two digits of the calendar year, and, following the period, the section number (1 or 2)). The vertical dashed line before 'W16.2' marks the shift in pedagogical approach.">>=
+<<GradeSummary, echo=FALSE, fig.cap="Mean course GPA (with 95\\% confidence intervals; Left) and the percentage of students (Right) that earned better than an A (labeled as an ``A''), worse than a C (``< C''), or withdrew (``W'') from the course by section (abbreviated with semester (F=Fall, W=Winter), last two digits of the calendar year, and, following the period, the section number (1 or 2)). The vertical dashed line before 'W16.2' marks the shift in pedagogical approach.">>=
 par(mar=c(4.5,3,0.5,0.5))
 with(sumgpa,plot(xtmp,mean,type="l",lwd=2,col="gray50",xlab="",ylab="Mean GPA",ylim=c(0,4),xaxt="n",panel.first=grid(col="gray95",lty=1)))
 with(sumgpa,plotCI(xtmp,mean,li=lci,ui=uci,pch=16,add=TRUE))
@@ -190,11 +190,11 @@ Whyobjs <- c(0.5,0.9)
 ( WhyObj2 <- sum(WhySum$Q3>=Whyobjs[2]) )
 @
 
-Student achievement on this question varied substantially among sections (\tabref{tab:sumWhy}; \figref{fig:WhyBar}). The first goal was met in \Sexpr{kCounts(WhyObj1)} of \Sexpr{kCounts(sects)} sections, including seven of the last eight sections. The second goal was met for only \Sexpr{kCounts(WhyObj2)} of \Sexpr{kCounts(sects)} sections, including the most recent section.
+Student achievement on this question varied substantially among sections (\tabref{tab:sumWhy}; \figref{fig:WhyBar}). The first goal was met in \Sexpr{kCounts(WhyObj1)} of \Sexpr{kCounts(sects)} sections, including eight of the last ten sections. The second goal was met for only \Sexpr{kCounts(WhyObj2)} of \Sexpr{kCounts(sects)} sections, though it was met or nearly met in the last four sections.
 
 \subsubsection{Actions}
 \vspace{-12pt}
-The course material related to this ILO was presented throughout each section, but was only explicitly discussed in the first module during the first week of each semester. While this appears to be adequate coverage to reach the lesser of the two objectives, it does not appear adequate to meet the higher objective. It should be noted that in the last year (``F16'' and ``W17''), I provided the prompt to this question before the final exam. This did not result in appreciably higher achievement. Perhaps the prompt needs to be reconsidered. In addition, I never did develop a short mid-term assignment where students would revisit the core principles related to this ILO by finding, summarizing, and reflecting on a ``piece'' (newspaper article, journal paper, etc.) that demonstrates the importance of statistics in the student's chosen field. I did not implement this assignment as students already suggest that there is ``too much work'' in this course. Nevertheless, I will consider such an assignment for the future.
+The course material related to this ILO was presented throughout each section, but was only explicitly discussed in the first module during the first week of each semester. While this appears to be adequate coverage to reach the lesser of the two objectives, it does not appear adequate to meet the higher objective. It should be noted that in the last two years, I provided the prompt to this question before the final exam. This did not result in appreciably higher achievement. Perhaps the prompt needs to be reconsidered. In addition, I never did develop a short mid-term assignment where students would revisit the core principles related to this ILO by finding, summarizing, and reflecting on a ``piece'' (newspaper article, journal paper, etc.) that demonstrates the importance of statistics in the student's chosen field. I did not implement this assignment as students already suggest that there is ``too much work'' in this course. Nevertheless, I will consider such an assignment for the future.
 \vspace{12pt}
 
 <<echo=FALSE, results='asis'>>=
@@ -211,7 +211,7 @@ print(WhyTbl,NA.string="-",table.placement="h",caption.placement="top",include.r
 par(mar=c(3,3.5,0.5,0.5),mgp=c(1.75,0.5,0),tcl=-0.2,las=1)
 vioplot107(pWhy~section2,data=df)
 abline(v=Whyobjs,col=c("red","blue"),lty=2,lwd=3)
-abline(h=4.5,col="gray60",lty=2)
+abline(h=7.5,col="gray60",lty=2)
 @
 
 
@@ -237,11 +237,11 @@ T2objs <- c(0.5,0.8)
 ( T2Obj2 <- sum(T2Sum$median>=T2objs[2]) )
 @
 
-The first goal was met in all but \Sexpr{kCounts(sects-T2Obj1)} section (\tabref{tab:sumT2}; \figref{fig:T2Bar}). However, the second goal was met in only \Sexpr{kCounts(T2Obj2)} sections, though it was nearly met in several other sections. Interestingly the top quarter (Q3) of students in the last two sections earned at least 90\% of the points for this question, which suggests very good achievement by a good number of students.
+The first goal was met in all but \Sexpr{kCounts(sects-T2Obj1)} section (\tabref{tab:sumT2}; \figref{fig:T2Bar}). However, the second goal was met in only \Sexpr{kCounts(T2Obj2)} sections.
 
 \subsubsection{Actions}
 \vspace{-12pt}
-This ILO was largely met. An anecdotal content analysis suggests that many of the students are missing points on this question primarily related to properly assessing the assumptions of the method. I plan to rewrite the course reading material to better emphasize this portion of the method. Other than that, I will not make any drastic changes to the curriculum regarding this ILO.
+This ILO was not met. A previous anecdotal content analysis suggests that many of the students are missing points on this question primarily related to properly assessing the assumptions of the method. I rewrote some of the course reading material to better emphasize this portion of the method. That does not seem to have made an appreciable difference in student achievement.
 \vspace{12pt}
 
 <<echo=FALSE,results='asis',error=FALSE>>=
@@ -283,11 +283,11 @@ Chiobjs <- c(0.5,0.8)
 ( ChiObj2 <- sum(ChiSum$median>=Chiobjs[2]) )
 @
 
-Student achievement on this question has varied substantially among sections (\tabref{tab:sumChi}; \figref{fig:ChiBar}). The first goal was met in \Sexpr{kCounts(ChiObj1)} of the \Sexpr{kCounts(sects)} sections, though there was a dip in achievement for this objective during the first two semesters of the ``flipped'' class. The second goal has only been met in \Sexpr{kCounts(ChiObj2)} of the \Sexpr{kCounts(sects)} sections. The relatively poor response for the second goal in W17 was largely due to a number of students confusing the computer code for conducting a chi-square test with that for conducting the similar goodness-of-fit test.
+Student achievement on this question has varied substantially among sections (\tabref{tab:sumChi}; \figref{fig:ChiBar}). The first goal was met in \Sexpr{kCounts(ChiObj1)} of the \Sexpr{kCounts(sects)} sections, though there was a dip in achievement for this objective during the first two semesters of the ``flipped'' class. The second goal has only been met in \Sexpr{kCounts(ChiObj2)} of the \Sexpr{kCounts(sects)} sections.
 
 \subsubsection{Actions}
 \vspace{-12pt}
-The objectives for this ILO have largely been met. In recent years, I have implemented the changes that I suggested on the last assessment report (collected homeworks from this module, adjusted the course schedule to allow more time for this module, and moved the final exam back so students would have more time on practice exercises at the end of the semester). While these changes are not reflected in higher achievement scores, I do think they have benefited most students. I plan to rewrite the reading material for this module and will make a better distinction between the chi-square and goodness-of-fit tests (and related computer code).
+The objectives for this ILO have not been met. In recent years, I have implemented the changes that I suggested on previous assessment reports (adjusted the course schedule to allow more time for this module and moved the final exam back so students would have more time on practice exercises at the end of the semester). While these changes are not reflected in higher achievement scores, I do think they have benefited most students. I also rewrote the reading material for this module ro make a better distinction between the chi-square and goodness-of-fit tests (and related computer code). These changes do not appear to have affected any real change in student achievement.
 \vspace{12pt}
 
 <<echo=FALSE,results='asis',error=FALSE>>=
@@ -333,13 +333,13 @@ BEDAQobjs <- c(0.7,0.9)
 ( BEDAQObj1 <- sum(BEDAQSum$Q1>=BEDAQobjs[1]) )
 ( BEDAQObj2 <- sum(BEDAQSum$median>=BEDAQobjs[2]) )
 @
-The first goal for the univariate EDA was met in only \Sexpr{kCounts(UEDAQObj1)} of \Sexpr{kCounts(sects)} sections, with less success and considerable variability in recent sections (\tabref{tab:sumUEDAQ}; \figref{fig:UEDAQBar}). The second goal was met more often, having been met in \Sexpr{kCounts(UEDAQObj2)} of \Sexpr{kCounts(sects)} sections. This suggests many students perform well on this question, but those that do not really do not do well. Anecdotal content analysis suggests that many students forget to identify why they chose to use the median and IQR or mean and SD as their measures of center and dispersion. Failing to do this results in a loss of 20\% for this question. If most students were to do this (and do it correctly), the results in \tabref{tab:sumUEDAQ} suggest that the objectives would then be me.
+The first goal for the univariate EDA was met in only \Sexpr{kCounts(UEDAQObj1)} of \Sexpr{kCounts(sects)} sections, with less success and considerable variability in recent sections (\tabref{tab:sumUEDAQ}; \figref{fig:UEDAQBar}). The second goal was met more often, having been met in \Sexpr{kCounts(UEDAQObj2)} of \Sexpr{kCounts(sects)} sections. This suggests many students perform well on this question, but those that do not really do not do well. Anecdotal content analysis suggests that many students forget to identify why they chose to use the median and IQR or mean and SD as their measures of center and dispersion. Failing to do this results in a loss of 20\% for this question. If most students were to do this (and do it correctly), the results in \tabref{tab:sumUEDAQ} suggest that the objectives would then be met.
 
-The first goal for the bivariate EDA was met in only \Sexpr{kCounts(BEDAQObj1)} of \Sexpr{kCounts(sects)} sections, with less success and considerable variability in recent sections (\tabref{tab:sumBEDAQ}; \figref{fig:BEDAQBar}). The second goal was met even less frequently, having been met in only \Sexpr{kCounts(BEDAQObj2)} of \Sexpr{kCounts(sects)} sections. Anecdotal content analysis suggests that many students forget to identify whether or not (and why) they used the correlation coefficient to assess the strength of relationship. Failing to do this results in a loss of 20\% for this question. If most students were to do this (and do it correctly), the results in \tabref{tab:sumBEDAQ} suggest that the objectives would then be me.
+The first goal for the bivariate EDA was met in only \Sexpr{kCounts(BEDAQObj1)} of \Sexpr{kCounts(sects)} sections, with less success and considerable variability in recent sections (\tabref{tab:sumBEDAQ}; \figref{fig:BEDAQBar}). The second goal was met even less frequently, having been met in only \Sexpr{kCounts(BEDAQObj2)} of \Sexpr{kCounts(sects)} sections. Anecdotal content analysis suggests that many students forget to identify whether or not (and why) they used the correlation coefficient to assess the strength of relationship. Failing to do this results in a loss of 20\% for this question. If most students were to do this (and do it correctly), the results in \tabref{tab:sumBEDAQ} suggest that the objectives would then be met.
 
 \subsubsection{Actions}
 \vspace{-12pt}
-The objectives for these two portions of this ILO were largely not met. However, anecdotal content analysis suggests that students perform fairly well on the main components of this question (i.e., describing four aspects of the EDA), but often fail to explain why they did or did not use certain statistics in their descriptions. As I prepare to rewrite the readings for these sections I will reemphasize the importance of these items in performing the EDA.
+The objectives for these two portions of this ILO were largely not met. However, anecdotal content analysis suggests that students perform fairly well on the main components of this question (i.e., describing four aspects of the EDA), but often fail to explain why they did or did not use certain statistics in their descriptions. When I rewrote the readings for these sections last year, I emphasized the importance of these items in performing the EDA. These changes do not appear to have affected any realy change in student achievement.
 \vspace{12pt}
 
 <<echo=FALSE,results='asis',error=FALSE>>=
@@ -399,11 +399,11 @@ Regobjs <- c(0.5,0.9)
 ( RegObj2 <- sum(RegSum$median>=Regobjs[2]) )
 @
 
-Student achievement on the univariate EDA question varied substantially \figrefp{fig:RegBar} and neither goal was met by any section. In fact, the first goal was NOT met at the median (rather than Q1) and the second goal was NOT met at Q3 (rather than the median) in many sections. Furthermore, many sections had more than 10\%, with some sections approaching 25\%, of the students that did not earn any points on this question. These results suggest very poor overall achievement on this ILO.
+Student achievement on the univariate EDA question varied substantially \figrefp{fig:RegBar} and only the first goal was met by only one section. In fact, the first goal was NOT met at the median (rather than Q1) and the second goal was NOT met at Q3 (rather than the median) in many sections. Furthermore, many sections had more than 10\%, with some sections approaching 25\%, of the students that did not earn any points on this question. These results suggest very poor overall achievement on this ILO.
 
 \subsubsection{Actions}
 \vspace{-12pt}
-In the previous assessment, I noted that students need more practice with this material. In the ``flipped'' class, they did get more practice so, perhaps, the quality of that practice, rather than the quantity, is the problem. I will reconsider the class exercises, review questions in the reading, and the homework problems to potentially address this finding. In the previous assessment, I also questioned whether these three questions are and adequate assessment of the students' understanding of this material. While that may be an issue, these three questions are consistent with questions asked on the class exercises, review exercises, and homework problems.
+In previous assessments, I noted that students need more practice with this material. In the ``flipped'' class, they did get more practice so, perhaps, the quality of that practice, rather than the quantity, is the problem. I will reconsider the class exercises, review questions in the reading, and the homework problems to potentially address this finding. In the previous assessment, I also questioned whether these three questions are an adequate assessment of the students' understanding of this material. While that may be an issue, these three questions are consistent with questions asked on the class exercises, review exercises, and homework problems.
 \vspace{12pt}
 
 <<echo=FALSE,results='asis'>>=
@@ -427,17 +427,17 @@ abline(h=4.5,col="gray60",lty=2)
 
 \clearpage
 \section{Overall Thoughts}
-Overall, it does not appear that any pedagogical changes that I make to this class results in any sort of sustained improvement in student achievement or learning. For the last two academic years I have taught this course as a ``flipped'' course where students largely prepare outside of class and then work on class exercises and ask me questions during class periods. There is no evidence that this approach has led to an increase (or a decrease) in student learning (at least on the ILOs that I have assessed).
+Overall, it does not appear that any pedagogical changes that I make to this class results in any sort of sustained improvement in student achievement or learning. For the last three academic years I have taught this course as a ``flipped'' course where students largely prepare outside of class and then work on class exercises and ask me questions during class periods. There is no evidence that this approach has led to an increase (or a decrease) in student learning (at least on the ILOs that I have assessed).
 
-I think that there are a variety of possible reasons for this finding. First, it appears to me that many students do not fully engage outside of the class with the material provided to prepare for class. View counters on the videos that I control (I have videos on Vimeo that I have made, but I also use videos on YouTube that I have not made) suggest that very few students have watched these videos (and ever fewer have watched them in their entirety). There is some evidence that students have engaged with the reading material (i.e., they can use their reading notes on the daily quizzes), but anecdotal observations suggest that that interaction is superficial at best for most students.
+I think that there are a variety of possible reasons for this finding. First, it appears to me that many students do not fully engage outside of the class with the material provided to prepare for class. View counters on the videos that I control (I have videos on Vimeo that I have made, but I also use videos on YouTube that I have not made) suggest that very few students have watched these videos (and even fewer have watched them in their entirety). There is some evidence that students have engaged with the reading material (i.e., they can use their reading notes on the daily quizzes), but anecdotal observations suggest that that interaction is superficial at best for most students.
 
-Second, many students do not seem to take full advantage of the opportunity to ask me questions during the class period. This may be due in part to their lack of preparation for the class period (see previous paragraph). However, this may also be because students find me intimidating. I attempted to address the ``intimidation'' problem in W17 but requiring students to come visit with me during office hours during the first two weeks of the course. While I think that this is a good idea, it did not seem to open channels of communication in general. Finally, some students did not take the class time seriously. In other words, without a professor ``lecturing'' they would often distract themselves with their phones, the computers, or other things, or would simple leave class early. I attempted to address some of these issues in W17 by banning ``devices'' and implementing a participation portion to their grade that was primarily based on staying focused during class. I believe that these policy changes helped with the class, but they did not seem to increase student achievement or learning.
+Second, many students do not seem to take full advantage of the opportunity to ask me questions during the class period. This may be due in part to their lack of preparation for the class period (see previous paragraph). However, this may also be because students find me intimidating. I attempted to address the ``intimidation'' problem in W17 (and after) by requiring students to come visit with me during office hours during the first two weeks of the course. While I think that this is a good idea, it did not seem to open channels of communication in general. Finally, some students did not take the class time seriously. In other words, without a professor ``lecturing'' they would often distract themselves with their phones, the computers, or other things, or would simple leave class early. I attempted to address some of these issues in W17 by banning ``devices'' and implementing a participation portion to their grade that was primarily based on staying focused during class. I believe that these policy changes helped with the class, but they did not seem to increase student achievement or learning.
 
 Third, many students did not take advantage of out-of-class resources such as my office hours or tutoring sessions. Students in F16 used the tutors more (by my recollection) than in any other recent semester. However, students in W17 were exactly opposite. In addition, very few students sought help from me during my office hours.
 
 I do believe that the ``flipped'' structure is appropriate for this type of class (i.e., the basic concepts can be learned from readings and videos and then augmented and cemented by practicing and extending what was learned with access to the professor). Thus, I plan to continue this structure for at least the next year.
 
-My primary changes for the future revolve around the reading materials used to prepare for class periods. This summer I plan to rewrite those materials. Besides content changes (many suggested in the analysis above), I plan to remove some of the items in the readings that make it easy for students to skim over the material (e.g., definitions and important concepts in highlighted boxes). Instead, I will prepare a ``Preparation Guide'' for each module that will require (hopefully) students to actually read the readings and watch the videos to answer the questions on the guide. Daily quiz questions will come directly from the guide.
+For Fall 2018, I made the changes in the reading materials that I suggested in my last assessment report (I removed some of the items in the readings that make it easy for students to skim over the material and prepared a ``Preparation Guide'' for each module that required students to actually read the readings and watch the videos to answer the questions on the guide).
 
 Future assessments will continue to monitor student achievement on these five ILOs. In addition, I will develop analyses to assess student achievement on other ILOs.
 
@@ -445,6 +445,5 @@ Future assessments will continue to monitor student achievement on these five IL
 et <- proc.time()-st
 reproInfo("latex",rqrdPkgs=rqrd,elapsed=et["user.self"]+et["sys.self"],newpage=TRUE)
 @
-
 
 \end{document}
