@@ -1,0 +1,33 @@
+---
+layout: page
+title: Exercises
+subtitle: Why Statistics is Important
+author: Derek H. Ogle
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: false
+    lib_dir: zlibs
+---
+
+
+
+
+
+----
+
+## Frog Survey
+<img src="zimgs/frog-croaking.jpg" alt="Frog Croaking" class="img-right">
+Biologists at the Sigurd Olson Environmental Institute (SOEI) were interested in estimating the total number of frogs on all (*many thousands*) lakes in northern Wisconsin (defined as north of Highway 8) in 2010. Towards this end, they used two methods to estimate the number of frogs on each of several randomly selected lakes in northern Wisconsin. The two methods they used were to count the number of frogs seen as they walked the shoreline of the lake (called a *visual* count) and to count the number of individual mating calls heard (called a *call* count). Here, we will only use **visual** count data.
+
+1. What is one of the individuals sampled in this scenario? [*Hint: Think about what the variable is and make sure that it makes sense to record that variable about your individual. You may want to look at the [Foundational Definitions](http://derekogle.com/NCMTH107/modules/FoundationalDefns) module for a definition of "individual".*]
+1. Do you think it is reasonable to count the number of frogs on every lake in northern Wisconsin at the same time (say, in the same week)? Why or why not?
+1. Hypothetical visual and call counts for every lake in northern Wisconsin (i.e., the population) are recorded in the *Frogs* data.frame. The visual and call counts for a random sample of 10 lakes may be taken from this population by running `srsdf(Frogs,n=10)` in RStudio (make sure you have run `library(NCStats)` first). Paste the output returned from this function into your report document.
+1. How do the **visual** counts of frogs recorded from the first three lakes in your sample compare? What type of variability is evident with this comparison?
+1. Compute the average **visual** count of frogs in all lakes in your sample. Show your work! [*You may leave space in your document and hand write your work before handing it in*]
+1. Extract another sample of 10 lakes (run `srsdf(Frogs,n=10)` again). Paste the results into your report document.
+1. Compute the average **visual** count of frogs in all lakes in your second sample. Show your work!
+1. How do the average **visual** count of frogs in your two samples compare? What type of variability is evident from this comparison?
+1. Suppose that the average **visual** counts of frogs on all lakes in northern Wisconsin (the population) is 225. Was the average visual counts from both of your samples equal to this population value? Why or why not?
+
+----
