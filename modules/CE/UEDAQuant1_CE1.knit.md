@@ -10,17 +10,9 @@ output:
     lib_dir: zlibs
 ---
 
-```{r echo=FALSE, eval=FALSE}
-# Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/")
-source("../../rhelpers/rhelpers.R")
-modHTML("UEDAQuant1_CE")
-```
 
-```{r echo=FALSE, results='hide', message=FALSE}
-library(NCStats)
-source("../../rhelpers/knitr_setup.R")
-```
+
+
 
 ----
 
@@ -48,12 +40,46 @@ Data Set 3
 1. Hand calculate the range of Data Set 3.
 
 You can check your work with `sdCalc()` and `iqrCalc()`. For example,
-```{r}
-# Enter (example) data into d vector
-d <- c(16,23,47,13,18,12)
-# Check calculations for data in d
-sdCalc(d)
-iqrCalc(d)
+
+```r
+> # Enter (example) data into d vector
+> d <- c(16,23,47,13,18,12)
+> # Check calculations for data in d
+> sdCalc(d)
+```
+
+```
+Demonstration of parts of a std. dev. calculation.
+
+      x diffs diffs.sq
+1    16  -5.5    30.25
+2    23   1.5     2.25
+3    47  25.5   650.25
+4    13  -8.5    72.25
+5    18  -3.5    12.25
+6    12  -9.5    90.25
+sum 129   0.0   857.50
+
+Mean = x-bar = 129 / 6 = 21.5 
+
+Variance = s^2 = 857.5 / 5 = 171.5 
+
+Std. Dev = s = sqrt(171.5) = 13.0958
+```
+
+```r
+> iqrCalc(d)
+```
+
+```
+Median (=17) is the average of values in positions 3 and 4.
+  12 13 [16 18] 23 47
+
+Q1 (=13) is the value in position 2 of the lower half.
+  12 [13] 16
+
+Q3 (=23) is the value in position 2 of the upper half.
+  18 [23] 47
 ```
 
 ----
@@ -62,17 +88,7 @@ iqrCalc(d)
 
 The [U.S. Census](http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map) asked individuals 16 years old and older "How long in minutes is your one-way commute to work each day?".  The mean for individuals from each state was computed and is plotted in the histogram below.
 
-```{r echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
-df <- data.frame(time=c(24.2,18.8,24.6,21.3,27.2,24.5,24.8,24.8,
-                        29.7,25.9,27,26,20,28,23.2,18.8,19,22.8,
-                        24.9,23.3,32,28,24,22.9,23.9,23.1,18,
-                        18.1,23.8,26.3,30.4,21.6,31.6,23.6,16.9,
-                        23,21,22.5,25.9,23.6,23.5,16.9,24.3,
-                        25,21.4,22.2,27.7,25.7,25.5,21.7,18.3))
-hist(~time,data=df,breaks=seq(16,32,2),xaxt="n",
-     xlab="Mean Commute Time (mins)")
-axis(1,seq(16,32,2))
-```
+<img src="UEDAQuant1_CE1_files/figure-html/unnamed-chunk-4-1.png" width="384" />
 
 Use this histogram to answer these questions.
 
@@ -85,7 +101,6 @@ Use this histogram to answer these questions.
 1. What was the range of mean commute times for the bin with exactly five states?
 
 ----
-
 
 ## Brain Weight
 <img src="zimgs/brain.jpg" alt="Brain" class="img-right">

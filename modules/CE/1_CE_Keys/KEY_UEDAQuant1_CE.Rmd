@@ -11,6 +11,7 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 ## Renders an appropriate HTML file and moves to CE directory
+setwd(here::here())
 source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
 modHTML_CEKeys("KEY_UEDAQuant1_CE")
 ```
@@ -25,6 +26,10 @@ tbls(name="Brain1","Summary statistics for brain weight (g).")
 tbls(name="Brain2","Summary statistics for brain weight (g) separated by age group.")
 figs(name="Brain1","Histogram of brain weight (g).")
 figs(name="Brain2","Histograms of brain weight (g) separated by age group.")
+tbls(name="gpa1","Summary statistics for gpa in all classes.")
+tbls(name="gpa2","Summary statistics for gpa separated by class type.")
+figs(name="gpa1","Histogram of gpa in all classes.")
+figs(name="gpa2","Histograms of gpa separated by class type.")
 ```
 
 ----
@@ -122,3 +127,71 @@ d <- read.csv("data/BrainHead.csv")
 ```
 
 ----
+
+## Histograms II
+
+1. An individual is a litter.
+1. The variable is the sex ratio of pups in the litter.
+1. Litter sex ratio is a quantitative, continuous variable.
+1. 94
+1. 32
+1. 0-0.1
+1. 0.3-0.4
+1. More litters have more males (50 in bars from 0.5-1.0) than litters that have more females (44 in bars from 0.0-0.5).
+
+----
+
+## Math Class Grades
+```{r echo=FALSE}
+d2 <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/UNCgrades.csv")
+```
+
+<ol>
+<li>The histogram of gpa is in `r figs("gpa1",display="cite")`.</li>
+```{r gpaHist1, echo=FALSE, fig.width=3, fig.height=3, par1=TRUE}
+hist(~gpa,data=d2,xlab="GPA")
+```
+
+`r figs("gpa1")`
+
+<li>The summary statistics for gpa weights is in `r tbls("gpa1",display="cite")`.</li>
+
+`r tbls("gpa1")`
+
+```{r gpaSum1, echo=FALSE, background="white"}
+Summarize(~gpa,data=d2,digits=1)
+```
+
+<li>The histogram of gpas separated by class type is in `r figs("gpa2",display="cite")`.</li>
+```{r gpaHist2, echo=FALSE, fig.width=6, fig.height=3, par1=TRUE}
+hist(gpa~class.type,data=d2,xlab="GPA")
+```
+
+`r figs("gpa2")`
+
+<li>The summary statistics of gpas separated by class types is in `r tbls("gpa2",display="cite")`.</li>
+
+`r tbls("gpa2")`
+
+```{r gpaSum2, echo=FALSE, background="white"}
+Summarize(gpa~class.type,data=d2,digits=1)
+```
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+d2 <- read.csv("data/UNCGrades.csv")
+<<gpaHist1>>
+<<gpaSum1>>
+<<gpaHist2>>
+<<gpaSum2>>
+```
+
+----
+
+## Hand Calculations II
+
+1. Answers will vary based on your choice of numbers. Use `sdCalc()` to verify your answer.
+1. Answers will vary based on your choice of numbers. Use `sdCalc()` to verify your answer.
+1. Answers will vary based on your choice of numbers. Use `iqrCalc()` to verify your answer. However, note that, with this $n$, the median is the average of the two numbers in the middle positions (i.e., 7th and 8th positions) and Q1 and Q3 will be the value in the middle position (4th) of the first (positions 1-7) and second halves (positions 8-14) of the data, respectively.
+1. Answers will vary based on your choice of numbers. Use `iqrCalc()` to verify your answer. However, note that, with this $n$, the median is the average of the two numbers in the middle positions (i.e., 8th and 8th positions) and Q1 and Q3 will be the average of the values in the middle positions (4th and 5th) of the first (positions 1-8) and second halves (positions 9-16) of the data, respectively. Compare this to your calculations on the previous question.
