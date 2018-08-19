@@ -32,10 +32,9 @@ What you learn in <strong>Statistical Concepts and Analysis</strong> will help y
 ## Syllabus Contents
 
 * [Catalog Description](#description) and [Learning Outcomes](#learning-outcomes)
-* [Instructors](#instructor) and [Tutors](#tutors)
+* Assistance: [Instructor](#instructor), [Tutors](#tutors), and [Accommodations](#accommodations)
 * [Grading](#grading) -- [Preparation Check](#preparation-check), [Participation](#participation), [Quizzes](#quizzes), [Extra Credit](#extra-credit)
 * [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
-* [Accommodations](#accommodations)
 
 
 ----
@@ -46,35 +45,36 @@ Introduction to the concepts and interpretation of statistics. Summary graphs an
 
 ## Learning Outcomes
 
-At the end of this class you will be able to ...
+Throughout this class, you will have the opportunity to learn the following:
 
-1. describe why statistics is central to scientific inquiry (& your field of interest); 
-1. define basic statistical words and symbols; 
-1. design simple experiments and sampling strategies; 
-1. perform appropriate exploratory data analyses (univariate and bivariate); 
-1. identify the purposes of and conduct and interpret the results of a linear regression; 
-1. construct and interpret confidence intervals for one and two-sample mean and proportion problems;
-1. identify the appropriate hypothesis test to perform in one- and two-sample quantitative and categorical data situations; 
-1. construct and interpret the results from a hypothesis test for one- and two-sample quantitative and categorical data situations; and 
-1. communicate statistical results and ideas in a succinct and informative manner. 
+1. Describe why statistics is central to scientific inquiry (& your field of interest); 
+1. Define basic statistical words and symbols; 
+1. Design simple experiments and sampling strategies; 
+1. Perform appropriate exploratory data analyses (univariate and bivariate); 
+1. Identify the purposes of and conduct and interpret the results of a linear regression; 
+1. Construct and interpret confidence intervals for one and two-sample mean and proportion problems;
+1. Identify the appropriate hypothesis test to perform in one- and two-sample quantitative and categorical data situations; 
+1. Construct and interpret the results from a hypothesis test for one- and two-sample quantitative and categorical data situations; and 
+1. Communicate statistical results and ideas in a succinct and informative manner. 
 
-We will focus on the understanding of statistical concepts and proper interpretation of statistical results.
+While you will get plenty of opportunities to summarize raw data with statistics and graphs, our focus will be on the proper interpretation of statistical results. These interpretations will arise from your solid understanding of statistical concepts.
 
 ----
 
 ## Instructor
 
+I am committed to your doing well in this course and see it as my responsibility to help you as much as possible both in and out of the designated class period. Thus, you may call (715-682-1300), e-mail (<a href="mailto:dogle@northland.edu">dogle@northland.edu</a>), or visit me in my office (CSE228) for help. I will make every effort to be available in my office (CSE228) during the office hours listed below, but I am also available any time that my door is open. You may also send me <a href="https://www.surveymonkey.com/r/KC87PJW" target="_blank">anonymous feedback, suggestions, or questions</a>. Please don't hesitate to see me if you have any questions regarding this course.
+
 <table class="tutors" width="60%">
-<tr><th><a href="http://derekogle.com" target="_blank">Dr. Derek H. Ogle</a><br>Professor of Mathematical Sciences<br> & Natural Resources</th></tr>
+<tr><th><a href="http://derekogle.com" target="_blank">Dr. Derek H. Ogle</a><br>Professor of Mathematical Sciences</th></tr>
 <tr><th><img src="../img/DerekOgle1.jpg"></th></tr>
-<tr style="vertical-align:top"><td>CSE228; 682-1300<br><a href="mailto:dogle@northland.edu">dogle@northland.edu</a><br>
-<a href="https://www.surveymonkey.com/r/KC87PJW" target="_blank">Anonymous Feedback / Suggestions</a></td></tr>
-<tr style="vertical-align:top"><td>Office Hours:<br>
-MWF 1230-230<br>By Appointment</td></tr>
+<tr style="vertical-align:top"><td>CSE228; 682-1300<br><a href="mailto:dogle@northland.edu">Email</a> or <a href="https://www.surveymonkey.com/r/KC87PJW" target="_blank">Anonymous Feedback / Suggestions</a></td></tr>
+<tr style="vertical-align:top"><td>Office Hours: MWF 1230-230</td></tr>
 </table>
 
 
 ## Tutors
+Two experienced tutors -- Adam Gunnelson and Emily Mader -- are also available (in eithe CSE236 or CSE229) durnig their hours listed below to help you succeed in this course. In addition to their tutor hours, please don't forget my availability as described above.
 
 <table class="tutors" width="90%">
 <tr><th width="50%"><img src="../img/Adam_F16.jpg"></th><th width="50%"><img src="../img/Emily_F17.jpg"></th></tr>
@@ -82,6 +82,11 @@ MWF 1230-230<br>By Appointment</td></tr>
 <tr style="vertical-align:top"><td>Adam is a chemistry major and math minor. He is a bow-tie enthusiast, and enjoys helping people with math.</td><td>Emily is a math major and physics minor. She enjoys playing softball, being outdoors, and, of course, mathematics!</td></tr>
 <tr style="vertical-align:top"><td>XXX<br>XXX</td><td>XXX<br>XXX</td></tr>
 </table>
+
+
+## Accommodations
+I want to create an inclusive and accessible learning environment for those of you that have a condition that may require special accomodations (e.g., attention, learning, vision, hearing, mental, physical, or other health-related concern). *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course. If you have a condition that requires accommodations but *you have not yet established services* through OAR, then you should contact OAR as soon as possible (Ponzio 231 or 715-682-1387).
+
 
 ----
 
@@ -207,11 +212,6 @@ Your conduct in class should revolve around the ideas of full participation (see
 Finally, note that the [College's Academic Integrity Statement & Policy](https://my.northland.edu/student-policies/academic-policies/#academic-integrity){:target="_blank"} will be followed in this course. Please make sure that you are familiar with its content.
 
 ----
-
-## Accommodations
-It is the policy and practice of Northland College to create inclusive and accessible learning environments consistent with federal and state law. *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course. *If you have not yet established services* through OAR, but have a condition that requires accommodations (e.g., attention, learning, vision, hearing, mental, physical, or other health related concern), you should contact OAR (Ponzio 231 or 715-682-1387) or XXX.
-
----
 
 ### Footnotes
 
