@@ -15,10 +15,10 @@ css: /css/syllabus.css
 </ul>
 
 <br>
-<br>
 
 What you learn in <strong>Statistical Concepts and Analysis</strong> will help you answer these questions.
 
+<br>
 <br>
 <br>
 
@@ -33,6 +33,8 @@ What you learn in <strong>Statistical Concepts and Analysis</strong> will help y
 * [Grading](#grading) -- [Preparation Check](#preparation-check), [Participation](#participation), [Quizzes](#quizzes), [Extra Credit](#extra-credit)
 * [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
 * [Accommodations](#accommodations)
+
+\  
 
 ----
 
