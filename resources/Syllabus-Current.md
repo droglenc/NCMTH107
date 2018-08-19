@@ -1,11 +1,22 @@
 ---
-title: "Statistical Concepts and Analysis"
+title: 
 layout: page
-subtitle: MTH107 -- Winter, 2018
+subtitle: 
 css: /css/syllabus.css
 ---
 
 <SCRIPT SRC="../js/grader.js"></SCRIPT>
+
+----
+
+<ol class="BigQuestions">
+  <li>Hellow</li>
+</ol>
+
+
+----
+
+## Contents
 
 * Class [Description](#description) and [Learning Outcomes](#learning-outcomes)
 * [Instructors](#instructor) and [Tutors](#tutors)
@@ -15,7 +26,7 @@ css: /css/syllabus.css
 
 ----
 
-## Description
+## Catalog Description
 
 Introduction to the concepts and interpretation of statistics. Summary graphs and statistics; data production (sampling and experiments); random variables and sampling distributions; inference - introduction, for distributions, for proportions; correlation and regression. Prerequisite: MTH103, ACT math > 17, or SAT math > 470. 4 Credits.
 
