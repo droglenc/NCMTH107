@@ -16,30 +16,27 @@ css: /css/syllabus.css
 
 <figure>
   <img src="../img/dt080508.gif" alt="Dilbert about made-up numbers">
-  <figcaption><span style="font-size:33%;">From <a href="http://dilbert.com/strip/2008-05-08">Dilbert.com</a></span></figcaption>
+  <figcaption><span style="font-size:65%;">From <a href="http://dilbert.com/strip/2008-05-08">Dilbert.com</a></span></figcaption>
 </figure>
 
 <br>
 
 What you learn in <strong>Statistical Concepts and Analysis</strong> will help you answer these questions.
 
-<br>
-<br>
-<br>
+<p style="margin-bottom:2cm;"></p>
 
 </div>
 
 ----
 
-## Contents
+## Syllabus Contents
 
-* Class [Description](#description) and [Learning Outcomes](#learning-outcomes)
+* [Catalog Description](#description) and [Learning Outcomes](#learning-outcomes)
 * [Instructors](#instructor) and [Tutors](#tutors)
 * [Grading](#grading) -- [Preparation Check](#preparation-check), [Participation](#participation), [Quizzes](#quizzes), [Extra Credit](#extra-credit)
 * [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
 * [Accommodations](#accommodations)
 
-\  
 
 ----
 
