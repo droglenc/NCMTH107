@@ -33,7 +33,7 @@ What you learn in <strong>Statistical Concepts and Analysis</strong> will help y
 
 * [Catalog Description](#description) and [Learning Outcomes](#learning-outcomes)
 * Assistance: [Instructor](#instructor), [Tutors](#tutors), and [Accommodations](#accommodations)
-* [Grading](#grading) -- [Preparation Check](#preparation-check), [Participation](#participation), [Quizzes](#quizzes), [Extra Credit](#extra-credit)
+* [Grading](#grading) -- [Preparation Check](#preparation-check), [Participation](#participation), [Quizzes](#quizzes), [Extra Credit](#extra-credit), [Overall Grade](#overall-grade)
 * [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
 
 
@@ -86,25 +86,25 @@ I want to create an inclusive and accessible learning environment for those of y
 
 ## Grading
 
-You will have several opportunities, each described below, to show what you have learned in this course. An overall grade will be computed from these items as shown in the <a href="">Overall Grade section</a> further below.
+You will have several opportunities, each described below, to show what you have learned in this course. An overall grade will be computed from these items as shown in the <a href="#overall-grade">Overall Grade section</a> further below.
 
 ### Preparation Checks
-You will be asked to prepare for each class period by reading the reading and watching the videos for the module indicated on the [Dates page](Dates-Current) and announced at the end of the previous class period. A preparation guide is provided for each module to help you identify key concepts in the reading and videos ([here's an example](../modules/FoundationalDefns_Prep.html){:target="_blank"}). You should prepare your own **hand-written**[^1] answers or notes to each question on the preparation guide. A "preparation check" will be administered during the **FIRST 8 minutes of EVERY** class period. You may use your hand-written notes, but no other resources, for these checks. **Preparation checks not completed in the first 8 minutes of class cannot be made up. Preparation checks taken from outside of the classroom will not be accepted.**
+You will be asked to prepare for each class period by reading the reading and watching the videos for the module indicated on the [Dates page](Dates-Current) and announced at the end of the previous class period. A preparation guide is provided for each module to help you identify key concepts in the reading and videos ([here's an example](../modules/FoundationalDefns_Prep.html){:target="_blank"}). You should prepare your own **hand-written**[^1] answers or notes to each question on the preparation guide. A "preparation check", for which you can use your hand-written notes but no other resources, will be administered during the first 8 minutes of every class period. **Preparation checks not completed in the first 8 minutes of class cannot be made up. Preparation checks taken from outside of the classroom will not be accepted.**
 
 **If you meet with me in my office before the end of the second week of class**, your lowest four preparation check grades will be excluded when computing your final grade.
 
 ### Participation
-This class is taught in an active learning format. Outside of class you will be asked to prepare a module for each class period (as described above) and complete exercises begun in class. Your preparation outside of class will be assessed by me periodically (*without prior notice*) collecting evidence for your preparation. Such evidence may include your written answers to the preparation guide (described above) or your written answers to exercises that were to be completed outside of class. You will earn full points for these assessments largely by preparing your written notes or doing the class exercise at least mostly correctly.
+This class is taught in an active learning format. Outside of class you will be asked to prepare a module for each class period (as described above) and complete exercises begun in class. Your preparation outside of class will be assessed by me periodically collecting evidence for your preparation (*without prior notice*). Such evidence may include your written answers to the preparation guide (described above) or your written answers to exercises that were to be completed outside of class (which I will have announced at the end of the previous class period). You will earn full points for these assessments by simply preparing your written notes or doing the class exercise at least mostly correctly.
 
 In class you will be asked to actively participate (listen, take notes) in short lectures, work on in-class exercises, ask questions of other students and the instructor, and, occasionally, work in small groups. Our time during class is short and precious, thus you should be focused and attentive during the entire class period. I will assess your level of participation at the end of each class period with the following rubric.
 
 <div class="container-fluid">
   <table class="table table-bordered">
   <thead>
-    <tr class="info"><th>0 points</th><th>1 point</th><th>2 points</th></tr>
+    <tr class="info"><th>2 points</th><th>1 point</th><th>0 points</th></tr>
   </thead>
   <tbody>
-    <tr><td>Very little active participation in the day's activities. Lacked focus. Left more than 30 mins early.</td><td>Participated in many, but not all, of the day's activities. Focus waned or was inconsistent. Left between 1-30 mins early.</td><td>Fully (see below) participated in the day's activities. Properly focused at all times.</td></tr>
+    <tr><td>Fully (see below) participated in the day's activities. Properly focused at all times.</td><td>Participated in many, but not all, of the day's activities. Focus waned or was inconsistent. Left between 1-30 mins early.</td><td>Very little active participation in the day's activities. Lacked focus. Left more than 30 mins early.</td></tr>
   </tbody>
   </table>
 </div>
@@ -121,15 +121,15 @@ The following behaviors are indicative of full participation:
 
 <img class="img-right" src="../img/studying.jpg">
 
-As a general rule-of-thumb[^2], you are expected to spend between 2-3 hours of time outside of class for each hour in class. This course meets for 4.5 hours per week and, thus, you should dedicate between 9 and 13.5 hours of time outside of class preparing for class, completing review and class exercises, and studying for exams. **The work required for this course can be completed within this expected amount of time, if that time is without distraction**. If you feel that you are spending an inordinate amount of time on some exercises or preparations because you are "stuck," then start your work earlier so that you can stop (and do other things) and make plans to see [me](#instructor) or the [tutors](#tutors) for help.
-
 **If you meet with me in my office before the end of the second week of class**, your lowest four participation grades will be excluded when computing your final grade.
+
+As a general rule-of-thumb[^2], you are expected to spend 2-3 hours of time outside of class for each hour in class. This course meets for 4.5 hours per week and, thus, you should dedicate between 9 and 13.5 hours of time outside of class preparing for class, completing review and class exercises, and studying for exams. **The work required for this course can be completed within this expected amount of time, if that time is without distraction**. If you feel that you are spending an inordinate amount of time on some exercises or preparations because you are "stuck," then start your work earlier so that you can stop (and do other things) and make plans to see [me](#instructor) or the [tutors](#tutors) for help.
 
 
 ### Quizzes
-You will show what you have learned on four mid-term quizzes. With this number of quizzes, the material on each quiz will be focused on fewer modules and, thus, easier to prepare for. The quizzes are largely meant to assess your understanding of the most recent material. Additionally, a cumulative final exam will give you an opportunity to show that you have a synthetic understanding of all material from throughout the course. The final exam, while cumulative, is focused on the larger concepts, applications, and interpretations, and less on the specific details, from throughout the semester. I will provide you with an explicity study guide approximately one week before each quiz and the final exam.
+You will have an opportunity on four mid-term quizzes to demonstrate what you have learned about the most recent material. With this number of quizzes, the material on each quiz will be focused on fewer modules and, thus, more manageable to prepare for. Additionally, a final exam will give you an opportunity to show that you have a synthetic understanding of all material from throughout the course. The final exam will be focused on the larger concepts, applications, and interpretations, and less on the specific details, from throughout the semester. I will provide you with an explicit study guide approximately one week before each quiz and the final exam.
 
-Dates for quizzes and the final exam are shown on the [Due Dates page](Dates-Current.html){:target="_blank"}. Make-up quizzes will be provided only if you have a fixed commitment of sufficient importance that was set before the beginning of the semester or a verifiable medical condition. Please see me immeidately if you miss a quiz without my prior approval, but note that you may not be allowed to make up that quiz. **The final quiz will NOT be given early.**
+Dates for quizzes and the final exam are shown on the [Due Dates page](Dates-Current.html){:target="_blank"}. Make-up quizzes will be provided only if you have a fixed commitment of sufficient importance that was set before the beginning of the semester or a verifiable medical condition. Please see me immediately if you miss a quiz without my prior approval, but note that you may not be allowed to make up that quiz. **The final exam will NOT be given early.**
 
 Note that your highest quiz score will count for more and your lowest quiz score will count for less in the calculation of your final grade (see [grade weights](#grading) below).
 
@@ -137,7 +137,7 @@ Note that your highest quiz score will count for more and your lowest quiz score
 ### Extra Credit
 Two options for extra credit are:
 
-1. **Quiz Reflection** -- For each quiz, **first** complete a correction for each question that you missed, along with *an explanation of why this answer is correct.* You will not receive credit for simply correcting your answer, for providing another incorrect answer, or not providing the explanation. You must address every question you missed to receive full credit for this portion. **Second**, write *thoughtful* reflections to the following items about the quiz (i) what you did well on the quiz (and why), (ii) what you did poorly on the quiz (and why), (iii) what you did to prepare for the quiz (be specific ... did you read your notes, read the module readings, watch videos, redo class exercises, do review exercises, etc.), (iv) what you did to prepare for the quiz that was helpful, (v) what did you do to prepare for the quiz that was not helpful, (vi) how will you change (if at all) your preparation strategy for the next quiz, (vii) was the quiz as you expected (why or why not), and (viii) any other comments or suggestions about the quiz. Please provide **thoughtful** explanations to each question on this portion. Your answers to these two portions must be typed (though you can leave space to show your work by hand for calculations) and easy to read (e.g., neatly organize your corrections by question number) and *must include the original quiz*.<br/><br/>A perfect exam correction and reflection will add the lesser of 15% or the amount it would take for your exam score to be 100%, with two-thirds of the overall grade from the correction (first) portion. Corrections and reflections will be due within one week after the corrected exam is returned (exact date shown on the [dates](Dates-Current) page). **Late corrections and reflections will not be accepted**.
+1. **Quiz Reflection** -- For each quiz, **first** complete a correction for each question that you missed, along with *an explanation of why this answer is correct.* You will not receive credit for simply correcting your answer, for providing another incorrect answer, or not providing the explanation. You must address every question you missed to receive full credit for this portion. **Second**, write *thoughtful* reflections to the following items about the quiz (i) what you did well on the quiz (and why), (ii) what you did poorly on the quiz (and why), (iii) what you did to prepare for the quiz (be specific ... did you read your notes, read the module readings, watch videos, redo class exercises, do review exercises, etc.), (iv) what you did to prepare for the quiz that was helpful, (v) what did you do to prepare for the quiz that was not helpful, (vi) how will you change (if at all) your preparation strategy for the next quiz, (vii) was the quiz as you expected (why or why not), and (viii) any other comments or suggestions about the quiz. Your answers to these two portions must be typed (though you can leave space to show your work by hand for calculations) and easy to read (e.g., neatly organize your corrections by question number) and *must include the original quiz*.<br/><br/>A perfect exam correction and reflection will add the lesser of 15% or the amount it would take for your exam score to be 100%, with two-thirds of the overall grade from the correction (first) portion. Corrections and reflections will be due within one week after the corrected exam is returned (exact date shown on the [dates](Dates-Current) page). **Late corrections and reflections will not be accepted**.
 
 1. **"Statistics in Use" Reports** - Report on the use of statistics in your life -- e.g., from the news, your other classes, or other work that you have done. If you report on a news item, then you should discuss the background of the information in the report, the use of statistics, how the statistics relate to what you have learned in class, how the statistics were presented, how you feel about that presentation, and any questions that you may have. If you report on statistics used in another class, then you should discuss the background of the project where you used statistics, what the statistics were used for (i.e., purpose), a presentation of your statistical work in the report (i.e., findings), how the statistics relate to what you've learned in this class, and any questions that you may have. The FOCUS of your report should be on the statistics used in the news item or class (not just the news item or the topic in the other class). Each report should be typed, at least one page (single-spaced), and include the item being reported on. Your report will be graded on how well it is written and how well you relate the item to class. You may complete up to two reports for as much as 3% extra credit on your final grade. Note that you may not use the same type of news item for more than one report (e.g., you cannot report on presidential race polls more than once). These reports are due before the last day of class before finals week. **Late reports will not be accepted.**
 
@@ -193,18 +193,18 @@ An incomplete grade will be given ONLY under extreme circumstances beyond your c
 
 <img class="img-right" src="../img/cell-cheat.jpg">
 
-Your conduct in class should revolve around the ideas of full participation (see above) and being respectful of all others in the class. Adhering to the following behaviors should be considered the minimum requirements to meeting these dual expectations for conduct:
+My intent is to create a classroom environment where solid learning of Statistics can occur. One part of this environment is a well-organized course structure built upon relevant learning resources and interesting realistic exercises. Another part is my availability to assist you in learning from these resources and exercises. A third part in creating that environment is your conduct within it. My expectations of you are that you will fully participate in the course (see above) and be respectful of all others in the class. At a minimum, I expect you to adhere to the following behaviors:
 
-* Arrive to class on time. If you arrive late, then take the first available seat as quietly as possible. If you need to leave early, then please sit near the exit.
-* You are expected to attend the entire class period. Leaving class early defeats the purpose of the class period, does not take advantage of resources (i.e., the professor) that can significantly help your learning, and does not build statistical stamina. Please take care of your personal needs (e.g., using the restroom) before class so that you can stay focused for the entire class period.
-* Turn your computer on immediately so that you can promptly begin the daily preparation check.
-* Computer use is limited to class work.
-* You **may not use your own computer** unless you clear it with me first at the beginning of the semester.
-* Turn off and store out-of-sight cell phones and other electronic devices.
-* You **may not listen to music** (or otherwise wear ear buds) during class.
-* Do not engage in side discussions while I or others are speaking to the entire class.
-*	Do not sleep in class -- this behavior is rude and distracting to others (especially the professor).
-* Do not use disrespectful language when addressing others.
+* Please arrive to class on time. If you arrive late, then take the first available seat as quietly as possible. If you need to leave early, then please sit near the exit.
+* Please attend the entire class period. Leaving class early defeats the purpose of the class period, does not take advantage of resources (i.e., the professor) that can significantly help your learning, and does not build statistical stamina. Please take care of your personal needs (e.g., using the restroom) before class so that you can stay focused for the entire class period.
+* Please turn your computer on immediately so that you can promptly begin the daily preparation check.
+* Please limit computer use to class work.
+* Please **do not use your own computer** during class unless you clear it with me at the beginning of the semester.
+* Please turn off and store out-of-sight cell phones and other electronic devices.
+* Please **do not listen to music** (or otherwise wear ear buds) during class.
+* Please do not engage in side discussions while I or others are speaking to the entire class.
+*	Please do not sleep in class -- this behavior is rude and distracting to others (especially the professor).
+* Please do not use disrespectful language when addressing others.
 
 Finally, note that the [College's Academic Integrity Statement & Policy](https://my.northland.edu/student-policies/academic-policies/#academic-integrity){:target="_blank"} will be followed in this course. Please make sure that you are familiar with its content.
 
