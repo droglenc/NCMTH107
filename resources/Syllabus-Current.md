@@ -79,7 +79,7 @@ Two experienced tutors -- Adam Gunnelson and Emily Mader -- are also available (
 
 
 ## Accommodations
-I want to create an inclusive and accessible learning environment for those of you that have a condition that may require special accomodations (e.g., attention, learning, vision, hearing, mental, physical, or other health-related concern). *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course. If you have a condition that requires accommodations but *you have not yet established services* through OAR, then you should contact OAR as soon as possible (Ponzio 231 or 715-682-1387).
+I want to create an inclusive and accessible learning environment for those of you that have a condition that may require special accommodations (e.g., attention, learning, vision, hearing, mental, physical, or other health-related concern). *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course. If you have a condition that requires accommodations but *you have not yet established services* through OAR, then you should contact OAR as soon as possible (Ponzio 231 or 715-682-1387).
 
 
 ----
