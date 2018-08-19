@@ -16,7 +16,7 @@ css: /css/syllabus.css
 
 <figure>
   <img src="../img/dt080508.gif" alt="Dilbert about made-up numbers">
-  <figcaption><span style="font-size:75%">From <a href="http://dilbert.com/strip/2008-05-08"></a></span></figcaption>
+  <figcaption><span style="font-size:33%;">From <a href="http://dilbert.com/strip/2008-05-08">Dilbert.com</a></span></figcaption>
 </figure>
 
 <br>
