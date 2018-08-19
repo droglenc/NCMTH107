@@ -14,13 +14,15 @@ css: /css/syllabus.css
   <li>How do I not get fooled by other people's numbers?</li>
 </ul>
 
-What you learn in **Statistical Concepts and Analysis** will help you answer these questions.
+<br>
+<br>
+
+What you learn in <strong>Statistical Concepts and Analysis</strong> will help you answer these questions.
+
+<br>
+<br>
 
 </div>
-
-\  
-
-\  
 
 ----
 
