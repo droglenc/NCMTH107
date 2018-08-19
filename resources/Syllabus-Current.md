@@ -7,15 +7,20 @@ css: /css/syllabus.css
 
 <SCRIPT SRC="../js/grader.js"></SCRIPT>
 
-----
-
-<ul class="BigQuestions">
+<div class="BigQuestions">
+<ul>
   <li>How do we learn from raw data?</li>
   <li>How does statistics further science?</li>
   <li>How do I not get fooled by other people's numbers?</li>
 </ul>
 
 What you learn in **Statistical Concepts and Analysis** will help you answer these questions.
+
+</div>
+
+\  
+
+\  
 
 ----
 
