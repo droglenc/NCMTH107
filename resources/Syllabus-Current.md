@@ -61,16 +61,10 @@ While you will get plenty of opportunities to summarize raw data with statistics
 
 ----
 
-## Instructor
+## Instructor -- Derek Ogle
 
-I am committed to your doing well in this course and see it as my responsibility to help you as much as possible both in and out of the designated class period. Thus, you may call (715-682-1300), e-mail (<a href="mailto:dogle@northland.edu">dogle@northland.edu</a>), or visit me in my office (CSE228) for help. I will make every effort to be available in my office (CSE228) during the office hours listed below, but I am also available any time that my door is open. You may also send me <a href="https://www.surveymonkey.com/r/KC87PJW" target="_blank">anonymous feedback, suggestions, or questions</a>. Please don't hesitate to see me if you have any questions regarding this course.
-
-<table class="tutors" width="60%">
-<tr><th><a href="http://derekogle.com" target="_blank">Dr. Derek H. Ogle</a><br>Professor of Mathematical Sciences</th></tr>
-<tr><th><img src="../img/DerekOgle1.jpg"></th></tr>
-<tr style="vertical-align:top"><td>CSE228; 682-1300<br><a href="mailto:dogle@northland.edu">Email</a> or <a href="https://www.surveymonkey.com/r/KC87PJW" target="_blank">Anonymous Feedback / Suggestions</a></td></tr>
-<tr style="vertical-align:top"><td>Office Hours: MWF 1230-230</td></tr>
-</table>
+<img class="img-right" src="../img/DerekOgle1.jpg">
+I am committed to your doing well in this course and see it as my responsibility to help you as much as possible both in and out of the designated class period. Thus, you may call (715-682-1300), e-mail (<a href="mailto:dogle@northland.edu">dogle@northland.edu</a>), or visit me in my office (CSE228) for help. I will make every effort to be available during office hours from 1230-230 on Monday, Wednesday, and Friday. I will also be available any time that my door is open. Finally, you may also send me <a href="https://www.surveymonkey.com/r/KC87PJW" target="_blank">anonymous feedback, suggestions, or questions</a>. Please don't hesitate to see or contact me if you have any questions regarding this course.
 
 
 ## Tutors
