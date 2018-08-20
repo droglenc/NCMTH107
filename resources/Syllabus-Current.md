@@ -21,7 +21,7 @@ css: /css/syllabus.css
 
 <br>
 
-What you learn in <strong>Statistical Concepts and Analysis</strong> will help you answer these questions.
+What you learn in this <strong>Statistical Concepts and Analysis</strong> class will help you answer these questions.
 
 <p style="margin-bottom:2cm;"></p>
 
