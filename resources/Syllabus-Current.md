@@ -66,14 +66,12 @@ While you will get plenty of opportunities to summarize raw data with statistics
 <img class="img-right" src="../img/help.jpg">
 A variety of opportunities for out-of-class assistance and in-class accomodations are provided. Please read about these opportunities below and use them throughout the semester as appropriate. Here are some quotes about asking for help (from [BurnishedChaos.com](https://burnishedchaos.com/quotes-about-asking-for-help/)).
 
-* *The only mistake you can make is not asking for help.* - Sandeep Jauhar
-* *Sometimes the only answer people are looking for when they ask for help is that they won't have to face the problem alone.* - Mark Amend
-* *You don't have to do it all by yourself.* - Elizabeth Dehn 
-* *Sometimes it takes more courage to ask for help than to act alone.* - Ken Petti 
-* *I think the hardest part to get to is asking for help or reaching out to other people and being honest with yourself.* - Mary-Kate Olsen
-* *Asking for other's guidance helps you see what you may not be able to see. It's always important to check your ego and ask for help.* - Ken Blanchard
 * *Never apologise for asking for what you need, if you don't ask - the answer will always be no.* - Rachel Wolchin
-
+* *Asking for other's guidance helps you see what you may not be able to see. It's always important to check your ego and ask for help.* - Ken Blanchard
+* *The only mistake you can make is not asking for help.* - Sandeep Jauhar
+* *You don't have to do it all by yourself.* - Elizabeth Dehn 
+* *Sometimes the only answer people are looking for when they ask for help is that they won't have to face the problem alone.* - Mark Amend
+* *I think the hardest part to get to is asking for help or reaching out to other people and being honest with yourself.* - Mary-Kate Olsen
 
 
 ### Instructor -- Derek Ogle
@@ -110,6 +108,8 @@ You will be asked to prepare for each class period by reading the reading and wa
 **If you meet with me in my office before the end of the second week of class**, your lowest four preparation check grades will be excluded when computing your final grade.
 
 ### Participation
+
+<img class="img-right" src="../img/participation.jpg">
 This class is taught in an active learning format. Outside of class you will be asked to prepare a module for each class period (as described above) and complete exercises begun in class. Your preparation outside of class will be assessed by me periodically collecting evidence for your preparation (*without prior notice*). Such evidence may include your written answers to the preparation guide (described above) or your written answers to exercises that were to be completed outside of class (which I will have announced at the end of the previous class period). You will earn full points for these assessments by simply preparing your written notes or doing the class exercise at least mostly correctly.
 
 In class you will be asked to actively participate (listen, take notes) in short lectures, work on in-class exercises, ask questions of other students and the instructor, and, occasionally, work in small groups. Our time during class is short and precious, thus you should be focused and attentive during the entire class period. I will assess your level of participation at the end of each class period with the following rubric.
@@ -135,9 +135,9 @@ The following behaviors are indicative of full participation:
 - Paid attention during lectures.
 - Followed the [class conduct guidelines](#classroom-conduct-and-academic-integrity).
 
-<img class="img-right" src="../img/studying.jpg">
-
 **If you meet with me in my office before the end of the second week of class**, your lowest four participation grades will be excluded when computing your final grade.
+
+<img class="img-right" src="../img/studying.jpg">
 
 As a general rule-of-thumb[^2], you are expected to spend 2-3 hours of time outside of class for each hour in class. This course meets for 4.5 hours per week and, thus, you should dedicate between 9 and 13.5 hours of time outside of class preparing for class, completing review and class exercises, and studying for exams. **The work required for this course can be completed within this expected amount of time, if that time is without distraction**. If you feel that you are spending an inordinate amount of time on some exercises or preparations because you are "stuck," then start your work earlier so that you can stop (and do other things) and make plans to see [me](#instructor--derek-ogle) or the [tutors](#tutors) for help.
 
