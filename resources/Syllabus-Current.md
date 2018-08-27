@@ -45,6 +45,8 @@ Introduction to the concepts and interpretation of statistics. Summary graphs an
 
 ## Learning Outcomes
 
+<img class="img-right" src="../img/outcomes.gif">
+
 Throughout this class, you will have the opportunity to learn the following:
 
 1. Describe why statistics is central to scientific inquiry (& your field of interest); 
