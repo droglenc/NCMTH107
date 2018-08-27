@@ -62,7 +62,19 @@ While you will get plenty of opportunities to summarize raw data with statistics
 ----
 
 ## Assistance
-We provide a variety of opportunities for out-of-class assistance and in-class accomodations. Please read about these opportunities below and use them as appropriate.
+
+<img class="img-right" src="../img/help.jpg">
+A variety of opportunities for out-of-class assistance and in-class accomodations are provided. Please read about these opportunities below and use them throughout the semester as appropriate. Here are some quotes about asking for help (from [BurnishedChaos.com](https://burnishedchaos.com/quotes-about-asking-for-help/)).
+
+* *The only mistake you can make is not asking for help.* - Sandeep Jauhar
+* *Sometimes the only answer people are looking for when they ask for help is that they won't have to face the problem alone.* - Mark Amend
+* *You don't have to do it all by yourself.* - Elizabeth Dehn 
+* *Sometimes it takes more courage to ask for help than to act alone.* - Ken Petti 
+* *I think the hardest part to get to is asking for help or reaching out to other people and being honest with yourself.* - Mary-Kate Olsen
+* *Asking for other's guidance helps you see what you may not be able to see. It's always important to check your ego and ask for help.* - Ken Blanchard
+* *Never apologise for asking for what you need, if you don't ask - the answer will always be no.* - Rachel Wolchin
+
+
 
 ### Instructor -- Derek Ogle
 
@@ -89,6 +101,7 @@ I want to create an inclusive and accessible learning environment for those of y
 
 ## Grading
 
+<img class="img-right" src="../img/grading.jpg">
 You will have several opportunities, each described below, to show what you have learned in this course. An overall grade will be computed from these items as shown in the <a href="#overall-grade">Overall Grade section</a> further below.
 
 ### Preparation Checks
