@@ -15,7 +15,7 @@ css: /css/syllabus.css
 </ul>
 
 <figure>
-  <img src="../img/dt080508.gif" alt="Dilbert about made-up numbers">
+  <img src="../img/dt080508.gif" alt="Dilbert about made-up numbers" alt="Dilbert cartoon">
   <figcaption><span style="font-size:50%;">From <a href="http://dilbert.com/strip/2008-05-08">Dilbert.com</a></span></figcaption>
 </figure>
 
@@ -45,7 +45,7 @@ Introduction to the concepts and interpretation of statistics. Summary graphs an
 
 ## Learning Outcomes
 
-<img class="img-right" src="../img/outcomes.gif">
+<img class="img-right" src="../img/outcomes.jpg" alt="Outcomes">
 
 Throughout this class, you will have the opportunity to learn the following:
 
@@ -111,7 +111,7 @@ You will be asked to prepare for each class period by reading the reading and wa
 
 ### Participation
 
-<img class="img-right" src="../img/participation.jpg">
+<img class="img-right" src="../img/participation.jpg" alt="Participation">
 This class is taught in an active learning format. Outside of class you will be asked to prepare a module for each class period (as described above) and complete exercises begun in class. Your preparation outside of class will be assessed by me periodically collecting evidence for your preparation (*without prior notice*). Such evidence may include your written answers to the preparation guide (described above) or your written answers to exercises that were to be completed outside of class (which I will have announced at the end of the previous class period). You will earn full points for these assessments by simply preparing your written notes or doing the class exercise at least mostly correctly.
 
 In class you will be asked to actively participate (listen, take notes) in short lectures, work on in-class exercises, ask questions of other students and the instructor, and, occasionally, work in small groups. Our time during class is short and precious, thus you should be focused and attentive during the entire class period. I will assess your level of participation at the end of each class period with the following rubric.
@@ -139,7 +139,7 @@ The following behaviors are indicative of full participation:
 
 **If you meet with me in my office before the end of the second week of class**, your lowest four participation grades will be excluded when computing your final grade.
 
-<img class="img-right" src="../img/studying.jpg">
+<img class="img-right" src="../img/studying.jpg" alt="Studying Hours">
 
 As a general rule-of-thumb[^2], you are expected to spend 2-3 hours of time outside of class for each hour in class. This course meets for 4.5 hours per week and, thus, you should dedicate between 9 and 13.5 hours of time outside of class preparing for class, completing review and class exercises, and studying for exams. **The work required for this course can be completed within this expected amount of time, if that time is without distraction**. If you feel that you are spending an inordinate amount of time on some exercises or preparations because you are "stuck," then start your work earlier so that you can stop (and do other things) and make plans to see [me](#instructor--derek-ogle) or the [tutors](#tutors) for help.
 
@@ -209,7 +209,7 @@ An incomplete grade will be given ONLY under extreme circumstances beyond your c
 
 ## Classroom Conduct and Academic Integrity
 
-<img class="img-right" src="../img/cell-cheat.jpg">
+<img class="img-right" src="../img/cell-cheat.jpg" alt="Conduct and Integrity">
 
 My intent is to create a classroom environment where solid learning of Statistics can occur. One part of this environment is a well-organized course structure built upon relevant learning resources and interesting realistic exercises. Another part is my availability to assist you in learning from these resources and exercises. A third part in creating that environment is your conduct within it. My expectations of you are that you will fully participate in the course (see above) and be respectful of all others in the class. At a minimum, I expect you to adhere to the following behaviors:
 
