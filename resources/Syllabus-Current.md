@@ -32,7 +32,7 @@ What you learn in this <strong>Statistical Concepts and Analysis</strong> class 
 ## Syllabus Contents
 
 * [Catalog Description](#description) and [Learning Outcomes](#learning-outcomes)
-* [Assistance](#assistance) -- [Instructor](#instructor--Derek-Ogle), [Tutors](#tutors), and [Accommodations](#accommodations)
+* [Assistance](#assistance) -- [Instructor](#instructor--Derek-Ogle), [Tutors](#tutors), [Accommodations](#accommodations), and [Academic Alerts](#academic-alerts)
 * [Grading](#grading) -- [Preparation Checks](#preparation-checks), [Participation](#participation), [Quizzes](#quizzes), [Extra Credit](#extra-credit), [Overall Grade](#overall-grade)
 * [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
 
@@ -96,6 +96,9 @@ Two experienced tutors -- Adam Gunnelson and Emily Mader -- are also available (
 ### Accommodations
 I want to create an inclusive and accessible learning environment for those of you that have a condition that may require special accommodations (e.g., attention, learning, vision, hearing, mental, physical, or other health-related concern). *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course. If you have a condition that requires accommodations but *you have not yet established services* through OAR, then you should contact Jennifer Newago as soon as possible (Ponzio 230 or <a href="mailto:accomodations@northland.edu">accomodations@northland.edu</a>). Reasonable accommodations are established through an interactive process between you, me, and OAR. It is the policy and practice of Northland College to create inclusive and accessible learning environments consistent with federal and state law.
 
+
+### Academic Alert
+As some of you adjust to the rigors of college life, you may struggle a bit in your classes and benefit from working with a professional on organization, motivation, and stress-reducing measures. If I observe that you are struggling with this course early in the semester then I may file an "Academic Alert Form" about you. If this happens, you will receive an e-mail from me that explains steps that you can take to improve in the class. We can certainly also meet to further discuss these steps. In addition, our Student Success Coordinator, Gina Kirsten, will receive the form and will likely reach out to you to set up a time to further discuss ways to improve in the class. Academic Alerts are not punitive, they are simply an attempt to help you get back on track in this class as soon as possible.
 
 ----
 
