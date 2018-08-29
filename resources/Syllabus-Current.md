@@ -98,7 +98,7 @@ I want to create an inclusive and accessible learning environment for those of y
 
 
 ### Academic Alerts
-As some of you adjust to the rigors of college life, you may struggle a bit in your classes and benefit from working with a professional on your organization, motivation, and stress level. If I observe that you are struggling with this course early in the semester then I may file an "Academic Alert" about you. If this happens, you will receive an e-mail from me that explains steps that you can take to improve your performance in the class. We can certainly also meet to further discuss these steps. In addition, our Student Success Coordinator, Gina Kirsten, will receive the alert and will likely reach out to you to set up a time to further discuss ways to improve in the class. Academic Alerts are not punitive, they are simply an attempt to help you get back on track in this class as soon as possible.
+As you adjust to the rigors of college life, you may struggle a bit in your classes and benefit from working with a professional on your organization, motivation, and stress level. If I observe that you are struggling with this course early in the semester then I may file an "Academic Alert" about you. If this happens, you will receive an e-mail from me that explains steps that you can take to improve your performance in the class. We can certainly also meet to further discuss these steps. In addition, our Academic Success Coordinator, Gina Kirsten, will receive the alert and will likely reach out to you to set up a time to further discuss ways to improve in the class. Academic Alerts are not punitive, they are simply an attempt to help you get back on track in this class as soon as possible.
 
 ----
 
