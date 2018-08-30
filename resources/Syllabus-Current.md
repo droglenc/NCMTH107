@@ -61,6 +61,13 @@ Throughout this class, you will have the opportunity to learn the following:
 
 While you will get plenty of opportunities to summarize raw data with statistics and graphs, our focus will be on the proper interpretation of statistical results. These interpretations will arise from your solid understanding of statistical concepts.
 
+Some of you are taking this course to fullfill the Quantitative Reasoning requirement in the Connections curriculum. This course fullfills that requirement because you will get the opportunity to learn the following Connections curriculum outcomes:
+
+* communicate mathematical information symbolically, visually, numerically, and verbally;
+* use statistical or mathematical models in solving problems; and
+* think critically about the validity of conclusions that are based on statistical or mathematical models.
+
+
 ----
 
 ## Assistance
@@ -207,6 +214,9 @@ Your letter grade will be assigned from your overall percentage (rounded to a wh
 </table>
 
 An incomplete grade will be given ONLY under extreme circumstances beyond your control, such as a major illness, and will ONLY be given if you have successfully completed the entire course except for the final exam. This is in accordance with [Northland College policy](https://my.northland.edu/student-policies/academic-policies/#grades){:target="_blank"} (scroll down to "Incomplete Grades").
+
+#### Note About Midterm Grades
+I will submit a "midterm grade" for you approximately half-way through the semester. It is important to note that this grade will include only about 1/3rd of the items that will be included in your overall final grade. You should also know that I will assign the "worst possible" letter grade that I can for your midterm grade. I do this for two reasons. First, I believe that it is better to know the worst rather than the best-case scenario at that point of the semester. Second, the material at the end of the semester is a little more difficult than the material at the beginning of the semester. So, if your midterm grade is lower than you would like, you will have ample opportunity to improve it. Of course, see me if you have questions about how you can do that.
 
 ----
 
