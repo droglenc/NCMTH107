@@ -16,7 +16,7 @@ css: /css/syllabus.css
 
 <figure>
   <img src="../img/dt080508.gif" alt="Dilbert about made-up numbers" alt="Dilbert cartoon">
-  <figcaption><span style="font-size:50%;">From <a href="http://dilbert.com/strip/2008-05-08">Dilbert.com</a></span></figcaption>
+  <figcaption><span style="font-size:50%;">From <a href="http://dilbert.com/strip/2008-05-08" target="_blank">Dilbert.com</a></span></figcaption>
 </figure>
 
 <br>
@@ -61,7 +61,7 @@ Throughout this class, you will have the opportunity to learn the following:
 
 While you will get plenty of opportunities to summarize raw data with statistics and graphs, our focus will be on the proper interpretation of statistical results. These interpretations will arise from your solid understanding of statistical concepts.
 
-Some of you are taking this course to fullfill the Quantitative Reasoning requirement in the Connections curriculum. This course fullfills that requirement because you will get the opportunity to learn the following Connections curriculum outcomes:
+Some of you are taking this course to fullfill the Quantitative Reasoning requirement in the [General Education Program](https://my.northland.edu/faculty/fac-academic-programs/){:target="_blank"}. This course fullfills that requirement because you will get the opportunity to learn the following general education outcomes:
 
 * communicate mathematical information symbolically, visually, numerically, and verbally;
 * use statistical or mathematical models in solving problems; and
@@ -73,7 +73,7 @@ Some of you are taking this course to fullfill the Quantitative Reasoning requir
 ## Assistance
 
 <img class="img-right" src="../img/help.jpg">
-A variety of opportunities for out-of-class assistance and in-class accomodations are provided. Please read about these opportunities below and use them throughout the semester as appropriate. Here are some quotes about asking for help (from [BurnishedChaos.com](https://burnishedchaos.com/quotes-about-asking-for-help/)).
+A variety of opportunities for out-of-class assistance and in-class accomodations are provided. Please read about these opportunities below and use them throughout the semester as appropriate. Here are some quotes about asking for help (from [BurnishedChaos.com](https://burnishedchaos.com/quotes-about-asking-for-help/){:target="_blank"}).
 
 * *Never apologise for asking for what you need, if you don't ask - the answer will always be no.* - Rachel Wolchin
 * *Asking for other's guidance helps you see what you may not be able to see. It's always important to check your ego and ask for help.* - Ken Blanchard
