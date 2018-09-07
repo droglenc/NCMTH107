@@ -15,7 +15,6 @@ Note that some of the more distant dates are subject to change.
 <table width="100%">
 <tr><th width="18%">Date</th><th width="36%">Preparation</th><th width="46%">Items Due</th></tr>
 <!---
---->
 
 <tr><td>W 5-Sep</td>
     <td><a href="Syllabus-Current">Syllabus</a><br><a href="../modules/WhyStats">Why Stats is Important?</a></td>
@@ -24,6 +23,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/FoundationalDefns">Foundational Definitions</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
+--->
 
 <tr><td>M 10-Sep</td>
     <td><a href="../modules/DataProduction">Data Production</a></td>
