@@ -32,15 +32,15 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/GettingDataIntoR">Getting Data Into R</a></td>
     <td>--</td></tr>
 <tr><td>F 14-Sep</td>
-    <td><a href="../modules/FilteringDataInR">Filtering Data In R</a></td>
+    <td><a href="../modules/UEDAQuant1">Summaries for One Quant ...</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 17-Sep</td>
-    <td><a href="../modules/UEDAQuant1">Summaries for One Quant ...</a></td>
+    <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant ...</a></td>
     <td>--</td></tr>
 <tr><td>W 19-Sep</td>
-    <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant</a></td>
+    <td><a href="../modules/FilteringDataInR">Filtering Data In R</a></td>
     <td>--</td></tr>
 <tr><td>F 21-Sep</td>
     <td colspan="2"><span style="color:red">First Quiz</span> (<a href="QuizGuide/quiz.html">Study Guide</a>)</td></tr>
