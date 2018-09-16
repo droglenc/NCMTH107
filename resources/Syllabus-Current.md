@@ -90,7 +90,7 @@ I am committed to your doing well in this course and see it as my responsibility
 
 
 ### Tutors
-Two experienced tutors -- Adam Gunnelson and Emily Mader -- are also available (in either CSE236 or CSE229) during their hours listed below to help you succeed in this course. In addition to their tutor hours, please don't forget my availability as described above.
+Two experienced tutors -- Adam Gunnelson and Emily Mader -- are also available (in Dexter Library) during their hours listed below to help you succeed in this course. In addition to their tutor hours, please don't forget my availability as described above.
 
 <table class="tutors" width="90%">
 <tr><th width="50%"><img src="../img/Adam_F16.jpg"></th><th width="50%"><img src="../img/Emily_F17.jpg"></th></tr>
