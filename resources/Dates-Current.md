@@ -23,7 +23,6 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/FoundationalDefns">Foundational Definitions</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
 
 <tr><td>M 10-Sep</td>
     <td><a href="../modules/DataProduction">Data Production</a></td>
@@ -35,6 +34,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/UEDAQuant1">Summaries for One Quant ...</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
+--->
 
 <tr><td>M 17-Sep</td>
     <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant ...</a></td>
