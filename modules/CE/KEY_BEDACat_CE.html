@@ -1,0 +1,299 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Bivariate EDA Categorical CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="hand-and-r-calculations" class="section level2">
+<h2>Hand and R Calculations</h2>
+<ol>
+<li>
+Two-way frequency table is below.
+</li>
+<pre class="r"><code>&gt; d &lt;- read.csv(&quot;BivEDA_CE1.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; ( tbl &lt;- xtabs(~VAR2+VAR1,data=d))</code></pre>
+<pre><code>    VAR1
+VAR2 A B C D
+   a 2 2 1 0
+   b 4 4 2 0
+   c 3 1 4 5</code></pre>
+<li>
+Row Percentages Table
+</li>
+<pre class="r"><code>&gt; percTable(tbl,margin=1,digits=1)</code></pre>
+<pre><code>    VAR1
+VAR2     A     B     C     D   Sum
+   a  40.0  40.0  20.0   0.0 100.0
+   b  40.0  40.0  20.0   0.0 100.0
+   c  23.1   7.7  30.8  38.5 100.1</code></pre>
+<li>
+Column Percentages Table
+</li>
+<pre class="r"><code>&gt; percTable(tbl,margin=2,digits=1)</code></pre>
+<pre><code>     VAR1
+VAR2      A     B     C     D
+  a    22.2  28.6  14.3   0.0
+  b    44.4  57.1  28.6   0.0
+  c    33.3  14.3  57.1 100.0
+  Sum  99.9 100.0 100.0 100.0</code></pre>
+<li>
+Total Percentages Table
+</li>
+<pre class="r"><code>&gt; percTable(tbl,digits=1)</code></pre>
+<pre><code>     VAR1
+VAR2      A     B     C     D   Sum
+  a     7.1   7.1   3.6   0.0  17.8
+  b    14.3  14.3   7.1   0.0  35.7
+  c    10.7   3.6  14.3  17.9  46.5
+  Sum  32.1  25.0  25.0  17.9 100.0</code></pre>
+</ol>
+<hr />
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+In the remaining questions, the “trick” to making the computation is to determine if the question is restricted to only a portion of the data. If the question is restricted to one of the levels that corresponds to a row then compute a row percentage (i.e., divide the raw frequency by the total of its row). If the question is restricted to one of the levels that corresponds to a column then compute a column percentage (i.e., divide the raw frequency by the total of its column). If the question does not restrict to a level in either a row or column, then compute a table or total percentage (i.e., divide the raw frequency by the total number of individuals in the table.
+</li>
+</ul>
+</div>
+</div>
+<div id="fire-blight-disease" class="section level2">
+<h2>Fire Blight Disease</h2>
+<ol>
+<li>
+The response variable is the outcome (i.e., time of death of the tree). Note that the row percentage table is in Table 1, the column percentage table is in Table 2, and the table percentage table is shown in Table 3.
+</li>
+<p>Table 1: Percentages of outcomes within each tree treatment type. Note that A=no action (control), B=removal of the affected branches, C=spraying of foliage with an antibiotic and the removal of affected branches, 1=the tree died in the same year that the disease was noticed, 2=the tree died after 2-4 years, 3=the tree died after 4 years.</p>
+<pre><code>     out
+treat     1     2     3   Sum
+    A  71.4  28.6   0.0 100.0
+    B  37.5  37.5  25.0 100.0
+    C  22.2  44.4  33.3  99.9</code></pre>
+<p>Table 2: Percentages of tree treatment type within each outcome. Abbreviations are given in Table 1.</p>
+<pre><code>     out
+treat     1     2     3
+  A    50.0  22.2   0.0
+  B    30.0  33.3  40.0
+  C    20.0  44.4  60.0
+  Sum 100.0  99.9 100.0</code></pre>
+<p>Table 3: Percentages of each tree treament type and outcome. Abbreviations are given in Table 1.</p>
+<pre><code>     out
+treat    1    2    3  Sum
+  A   20.8  8.3  0.0 29.1
+  B   12.5 12.5  8.3 33.3
+  C    8.3 16.7 12.5 37.5
+  Sum 41.6 37.5 20.8 99.9</code></pre>
+<li>
+The percentage of all trees in Treatment A that were dead within the first year (i.e., outcome=1) is 71.4% (Table 1).
+</li>
+<li>
+The percentage of ALL trees that were in Treatment A AND were dead within the first year (i.e., outcome=1) is 20.8% (Table 3).
+</li>
+<li>
+The percentage of the trees in the control treatment (treatment A) that died after four years (i.e., outcome=3) is 0.0% (Table 1).
+</li>
+<li>
+The percentage of the trees that died after 2-4 years (outcome 2) that were in the control treatment (treatment A) is 22.2% (Table 2).
+</li>
+<li>
+The percentage of all trees that were dead within the first year is 41.6% (Table 3).
+</li>
+</ol>
+<p>R Appendix</p>
+<pre class="r"><code>setwd(&#39;C:/aaaWork/Books/IntroStats/HW/&#39;)
+d &lt;- read.csv(&quot;FireBlight.csv&quot;)
+( tbl &lt;- xtabs(~treat+out,data=d) )
+( row.tbl &lt;- percTable(tbl,margin=1) )
+( col.tbl &lt;- percTable(tbl,margin=2) )
+( perc.tbl &lt;- percTable(tbl) )</code></pre>
+<hr />
+</div>
+<div id="lights-and-nearsightedness" class="section level2">
+<h2>Lights and Nearsightedness</h2>
+<ol>
+<li>
+A total of 17 children slept in “no light” conditions and developed nearsightedness Table 4.
+</li>
+<p>Table 4: Frequency table for children by lighting conditions during sleep and whether they developed nearsightedness or not.</p>
+<pre><code>             Nearsightedness
+Light          No Yes Sum
+  lamp         34  41  75
+  night light 153  79 232
+  no light    155  17 172
+  Sum         342 137 479</code></pre>
+<li>
+The percentage of children that slept in “no light” conditions that then developed nearsightedness is 9.9% (Table 5).
+</li>
+<p>Table 5: Percentages of chidren by nearsightedness type within each sleeping condition.</p>
+<pre><code>             Nearsightedness
+Light            No   Yes   Sum
+  lamp         45.3  54.7 100.0
+  night light  65.9  34.1 100.0
+  no light     90.1   9.9 100.0</code></pre>
+<li>
+The percentage of all children that slept with a “lamp” and developed nearsightedness is 8.6% (Table 7).
+</li>
+<p>Table 7: Percentages of all students in each sleeping condition and nearsightedness type.</p>
+<pre><code>             Nearsightedness
+Light            No   Yes   Sum
+  lamp          7.1   8.6  15.7
+  night light  31.9  16.5  48.4
+  no light     32.4   3.5  35.9
+  Sum          71.4  28.6 100.0</code></pre>
+<li>
+The percentage of children that slept with a “night light” that did not develop nearsightedness is 65.9% (Table 5).
+</li>
+<li>
+The percentage of children that developed nearsightedness that slept with a “lamp” is 29.9% (Table 6).
+</li>
+<p>Table 6: Percentage of children by sleeping conditions within each nearsightedness type.</p>
+<pre><code>             Nearsightedness
+Light            No   Yes
+  lamp          9.9  29.9
+  night light  44.7  57.7
+  no light     45.3  12.4
+  Sum          99.9 100.0</code></pre>
+<li>
+The percentage of children that developed nearsightedness is 28.6% (Table 7).
+</li>
+<li>
+It appears that the percentage of children that developed nearsightedness is greater when the child slept with some sort of light (either a lamp or a night light), with a somewhat greater prevalence of nearsightedness with the lamp (Table 5).
+</li>
+</ol>
+<p>R Appendix</p>
+<pre class="r"><code>setwd(&#39;C:/aaaWork/Books/IntroStats/HW/&#39;)
+d &lt;- read.csv(&quot;nightlight.csv&quot;)
+( tbl &lt;- xtabs(~Light+Nearsightedness,data=d) )
+addmargins(tbl)
+( row.tbl &lt;- percTable(tbl,margin=1) )
+( col.tbl &lt;- percTable(tbl,margin=2) )
+( perc.tbl &lt;- percTable(tbl) )</code></pre>
+<hr />
+</div>
+<div id="forest-composition" class="section level2">
+<h2>Forest Composition</h2>
+<ol>
+<li>There were 15 stands that last had a fire between 200 and 300 years ago (Table 8).</li>
+<li>The percentage of deciduous tree stands with a fire in the last 100 years is 37.5% (Table 10).</li>
+<li>The percentage of mixed-coniferous tree stands with a fire between 200 and 300 years ago is 50.0% (Table 10).</li>
+<li>The percentage of all stands that were coniferous with a fire between 200 and 300 years ago is 14.6% (Table 11).</li>
+<li>The percentage of tree stands that had a fire between 200 and 300 years ago that were coniferous is 46.7% (Table 9).</li>
+<li>The percentage of all stands that were deciduous with a fire between 100 and 200 years ago is 31.2% (Table 11).</li>
+<li>The percentage of mixed-deciduous stands that had a fire within the last 100 years is 15.4% (Table 10).</li>
+<li>Those with more recent fires tended to be deciduous, those without recent fires tended to be coniferous.</li>
+</ol>
+<p>Table 8: Raw frequency table for stands by type (“sttype”: c=“coniferous”,mc=“mostly coniferous”,md=“mostly deciduous”, and d=“deciduous” and years since last fire category (tslf).</p>
+<pre><code>         sttype
+tslf       c mc md  d
+  0-100    0  0  2  9
+  100-200  0  2  5 15
+  200-300  7  2  6  0</code></pre>
+<p>Table 9: Row percentages table for stands by type. Abbreviations are in Table 9.</p>
+<pre><code>         sttype
+tslf          c    mc    md     d   Sum
+  0-100     0.0   0.0  18.2  81.8 100.0
+  100-200   0.0   9.1  22.7  68.2 100.0
+  200-300  46.7  13.3  40.0   0.0 100.0</code></pre>
+<p>Table 10: Column percentages table for stands by type. Abbreviations are in Table 9.</p>
+<pre><code>         sttype
+tslf          c    mc    md     d
+  0-100     0.0   0.0  15.4  37.5
+  100-200   0.0  50.0  38.5  62.5
+  200-300 100.0  50.0  46.2   0.0
+  Sum     100.0 100.0 100.1 100.0</code></pre>
+<p>Table 11: Total percentages table for stands by type. Abbreviations are in Table 9.</p>
+<pre><code>         sttype
+tslf          c    mc    md     d   Sum
+  0-100     0.0   0.0   4.2  18.8  23.0
+  100-200   0.0   4.2  10.4  31.2  45.8
+  200-300  14.6   4.2  12.5   0.0  31.3
+  Sum      14.6   8.4  27.1  50.0 100.1</code></pre>
+<p>R Appendix:</p>
+<pre class="r"><code>d &lt;- read.csv(&quot;Fire.csv&quot;)
+d$sttype &lt;- factor(d$sttype,levels=c(&quot;c&quot;,&quot;mc&quot;,&quot;md&quot;,&quot;d&quot;))
+( tbl &lt;- xtabs(~tslf+sttype,data=d) )
+percTable(tbl,margin=1,digits=1)
+percTable(tbl,margin=2,digits=1)
+percTable(tbl,digits=1)</code></pre>
+<hr />
+</div>
+<div id="popularity-in-middle-school" class="section level2">
+<h2>Popularity in Middle School</h2>
+<p>The questions below use the following tables.</p>
+<ol>
+<li>There were 119 students from the fourth grade in the sample.</li>
+<li>The percentage of All students in the fifth grade with the goal “to be popular’ was 11.5% (Table 15).</li>
+<li>The percentage of fourth grade students with the goal “to be good in sports” was 21.0% (Table 13).</li>
+<li>The percentage of fifth grade students with the goal “to make good grades” was 50.0% (Table 13).</li>
+<li>The percentage of all students with the goal to “make good grades” was 51.7% (Table 15).</li>
+<li>The percentage of students with the goal “to be popular” that were in the sixth grade was 39.0% (Table 14).</li>
+<li>Fairly even distribution of students into the goals categories among the grades. Thus, there is no real difference in goals by grade in school.</li>
+</ol>
+<p>Table 12: Raw frequency table for grade school students by goals and grade.</p>
+<pre><code>     goals
+grade Grades Popular Sports
+    4     63      31     25
+    5     88      55     33
+    6     96      55     32</code></pre>
+<p>Table 13: Row percentages table for grade school students by goals and grade.</p>
+<pre><code>     goals
+grade Grades Popular Sports   Sum
+    4   52.9    26.1   21.0 100.0
+    5   50.0    31.2   18.8 100.0
+    6   52.5    30.1   17.5 100.1</code></pre>
+<p>Table 14: Column percentages table for grade school students by goals and grade.</p>
+<pre><code>     goals
+grade Grades Popular Sports
+  4     25.5    22.0   27.8
+  5     35.6    39.0   36.7
+  6     38.9    39.0   35.6
+  Sum  100.0   100.0  100.1</code></pre>
+<p>Table 15: Total percentages table for grade school students by goals and grade.</p>
+<pre><code>     goals
+grade Grades Popular Sports   Sum
+  4     13.2     6.5    5.2  24.9
+  5     18.4    11.5    6.9  36.8
+  6     20.1    11.5    6.7  38.3
+  Sum   51.7    29.5   18.8 100.0</code></pre>
+<p>R Appendix.</p>
+<pre class="r"><code>d &lt;- read.csv(&quot;PopularKids.csv&quot;)
+( tbl &lt;- xtabs(~grade+goals,data=d) )
+percTable(tbl,margin=1,digits=1)
+percTable(tbl,margin=2,digits=1)
+percTable(tbl,digits=1)</code></pre>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
