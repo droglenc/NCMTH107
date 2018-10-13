@@ -100,13 +100,13 @@ Note that some of the more distant dates are subject to change.
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 29-Oct</td>
-    <td>><a href="../modules/HypTestingErrs">Hypothesis Testing Errors</a></td>
+    <td><a href="../modules/HypTestingErrs">Hypothesis Testing Errors</a></td>
     <td>--</td></tr>
 <tr><td>M 31-Oct</td>
     <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
     <td>--</td></tr>
 <tr><td>M 2-Nov</td>
-    <td><a href="../modules/ConfRegions">Confidence Regions</a</td>
+    <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 

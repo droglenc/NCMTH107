@@ -7,14 +7,23 @@ css: "/css/modules.css"
 
 ----
 
+# Section 2 (0820--950)
+
+1. Allex, Gill, Ryan, Montano
+1. Barnhard-LaBrosse, Jackson, Strehlow, Vandervort
+1. Bethel, Eastburn, Meadows, O'Connell 
+1. Chang, Dodge A., Dolence, Redfern-Hall
+1. Curtiss, Dodge T., Kruzan, Smith
+1. Eklund, Haddock, Lojas, Rothe
+1. Doolittle, Lyons, Tabat 
+1. Lant, McNeil, Shaver
+
 # Section 2 (1000-1130)
 
-1. Adair, Bajenske, Shively
-1. Baez-Ortiz, Matula, Zachmeier
-1. Barton, Crenshaw, Franke
-1. Bremer, Castetter, Sandoval
-1. Gaskov, Reilly A., Trefry
-1. Hirth, Holtan, Reilly N.
-1. Jensen, Routheau, Smith 
-1. Litheland, Paulson, Stampfli
-1. Maleze, Olson, Rosch
+1. Farrell, Keiser, Shields, Walters
+1. Gallagan, Haeg, Kellen
+1. Hirsch, McLemore, Suhr
+1. Hoffman, Pysarenko, Voldberg, Vidales
+1. Holt, Manus, Swagel, Thiry
+1. Htoo, Jones T., Knapp, Taylor
+1. Jones A., Reihe, Shreve, Skenandore
