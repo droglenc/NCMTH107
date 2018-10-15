@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Homework Assignment
+title: CE Groups
 subtitle: Sampling Distributions
 css: "/css/modules.css"
 ---
