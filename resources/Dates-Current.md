@@ -76,7 +76,6 @@ Note that some of the more distant dates are subject to change.
 <tr><td>F 12-Oct</td>
     <td colspan="2"><span style="color:red">Second Quiz</span> (<a href="QuizGuide/quiz2.html">Study Guide</a>)</td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
 
 <tr><td>M 15-Oct</td>
     <td><a href="../modules/SamplingDist">Sampling Distributions</a></td>
@@ -88,6 +87,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/Probability">Probability</a></td>
     <td>Quiz 2 Reflection (Optional)</td></tr>
 <tr><td></td><td></td><td></td></tr>
+--->
 
 <tr><td>M 22-Oct</td>
     <td colspan="2"><span style="color:coral">NO CLASS (Reading Day)</span></td></tr>
