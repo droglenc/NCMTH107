@@ -95,18 +95,18 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/HypTesting">Hypothesis Testing</a></td>
     <td>--</td></tr>
 <tr><td>F 26-Oct</td>
-    <td><a href="../modules/HypTesting">Hypothesis Testing</a></td>
+    <td><a href="../modules/HypTestingErrs">Hypothesis Testing Errors</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 29-Oct</td>
-    <td><a href="../modules/HypTestingErrs">Hypothesis Testing Errors</a></td>
-    <td>--</td></tr>
-<tr><td>M 31-Oct</td>
     <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
     <td>--</td></tr>
-<tr><td>M 2-Nov</td>
+<tr><td>W 31-Oct</td>
     <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
+    <td>--</td></tr>
+<tr><td>F 2-Nov</td>
+    <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
@@ -114,7 +114,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
     <td>--</td></tr>
 <tr><td>W 7-Nov</td>
-    <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
+    <td>--</td>
     <td>--</td></tr>
 <tr><td>F 9-Nov</td>
     <td colspan="2"><span style="color:red">Third Quiz</span> (<a href="QuizGuide/quiz.html">Study Guide</a>)</td></tr>
