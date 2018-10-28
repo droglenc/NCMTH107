@@ -117,7 +117,7 @@ Note that some of the more distant dates are subject to change.
     <td>--</td>
     <td>--</td></tr>
 <tr><td>F 9-Nov</td>
-    <td colspan="2"><span style="color:red">Third Quiz</span> (<a href="QuizGuide/quiz.html">Study Guide</a>)</td></tr>
+    <td colspan="2"><span style="color:red">Third Quiz</span> (<a href="QuizGuide/quiz3.html">Study Guide</a>)</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 12-Nov</td>
