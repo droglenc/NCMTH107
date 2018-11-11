@@ -124,7 +124,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
     <td>--</td></tr>
 <tr><td>W 14-Nov</td>
-    <td><a href="../modules/2Samplet"2-Sample t-Test</a></td>
+    <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
     <td>--</td></tr>
 <tr><td>F 16-Nov</td>
     <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
