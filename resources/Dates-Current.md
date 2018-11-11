@@ -108,7 +108,6 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
 
 <tr><td>M 5-Nov</td>
     <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
@@ -119,12 +118,13 @@ Note that some of the more distant dates are subject to change.
 <tr><td>F 9-Nov</td>
     <td colspan="2"><span style="color:red">Third Quiz</span> (<a href="QuizGuide/quiz3.html">Study Guide</a>)</td></tr>
 <tr><td></td><td></td><td></td></tr>
+--->
 
 <tr><td>M 12-Nov</td>
     <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
     <td>--</td></tr>
 <tr><td>W 14-Nov</td>
-    <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
+    <td><a href="../modules/2Samplet"2-Sample t-Test</a></td>
     <td>--</td></tr>
 <tr><td>F 16-Nov</td>
     <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
@@ -140,18 +140,18 @@ Note that some of the more distant dates are subject to change.
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 26-Nov</td>
-    <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
+    <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
     <td>--</td></tr>
 <tr><td>W 28-Nov</td>
     <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
     <td>--</td></tr>
 <tr><td>F 30-Nov</td>
-    <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
+    <td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 3-Dec</td>
-    <td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td>
+    <td></td>
     <td>--</td></tr>
 <tr><td>W 5-Dec</td>
     <td colspan="2"><span style="color:red">Fourth Quiz</span> (<a href="QuizGuide/quiz.html">Study Guide</a>)</td></tr>
