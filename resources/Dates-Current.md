@@ -154,7 +154,7 @@ Note that some of the more distant dates are subject to change.
     <td>--</td>
     <td>--</td></tr>
 <tr><td>W 5-Dec</td>
-    <td colspan="2"><span style="color:red">Fourth Quiz</span> (<a href="QuizGuide/quiz.html">Study Guide</a>)</td></tr>
+    <td colspan="2"><span style="color:red">Fourth Quiz</span> (<a href="QuizGuide/quiz4.html">Study Guide</a>)</td></tr>
 <tr><td>F 7-Dec</td>
     <td>Course Review</td>
     <td>--</td></tr>
