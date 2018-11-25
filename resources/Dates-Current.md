@@ -129,7 +129,6 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
     <td>Quiz 3 Reflection (Optional)</td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
 
 <tr><td>M 19-Nov</td>
     <td colspan="2"><span style="color:coral">NO CLASS (Thanksgiving)</span></td></tr>
@@ -138,6 +137,7 @@ Note that some of the more distant dates are subject to change.
 <tr><td>F 23-Nov</td>
     <td colspan="2"><span style="color:coral">NO CLASS (Thanksgiving)</span></td></tr>
 <tr><td></td><td></td><td></td></tr>
+--->
 
 <tr><td>M 26-Nov</td>
     <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
