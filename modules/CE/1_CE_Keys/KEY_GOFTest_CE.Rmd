@@ -24,7 +24,7 @@ tbls <- captioner(prefix="Table")
 tbls(name="WaterExpTable","Expected frequency of students (assuming that Ho is true) by water type choice.")
 tbls(name="WaterObsTable","Observed frequency of students by water type choice.")
 tbls(name="WaterResults","Goodness-of-fit test results for testing that the distribution of students was the same among water type choices.")
-tbls(name="WaterSum","Summary table of the proportion of students in each water type choice, with 95% confidence intervals and expected proportions from the goodness-of-fit test.")
+tbls(name="WaterSum","Summary table of the proportion of students in each water type choice, with 99% confidence intervals and expected proportions from the goodness-of-fit test.")
 
 tbls(name="TurkeyExpTable","Expected frequency of turkeys (assuming that Ho is true) by habitat in the spring.")
 tbls(name="TurkeyObsTable","Observed frequency of turkeys by habitat in the spring.")
@@ -53,7 +53,7 @@ w.obs <- c(tap=51,Aquafina=18,Fiji=17,Sams=21)
 w.exp <- c(tap=1,Aquafina=1,Fiji=1,Sams=1)/4
 w.chi <- chisq.test(w.obs,p=w.exp,rescale.p=TRUE,correct=FALSE)
 w.chi
-gofCI(w.chi,digits=3)
+gofCI(w.chi,digits=3,conf.level=0.99)
 ```
 
 <ol>
@@ -92,7 +92,7 @@ w.chi
 `r tbls("WaterSum")`
 
 ```{r echo=FALSE}
-gofCI(w.chi,digits=3)
+gofCI(w.chi,digits=3,conf.level=0.99)
 ```
 
 <li>From `r tbls("WaterSum",display="cite")`, one can conclude that between `r formatC(gofCI(w.chi)["tap","p.LCI"]*100,format="f",digits=1)` and  `r formatC(gofCI(w.chi)["tap","p.UCI"]*100,format="f",digits=1)`% of the students chose the tapwater.</li>

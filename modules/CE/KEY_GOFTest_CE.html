@@ -50,12 +50,12 @@ Reject H<sub>0</sub> because the p-value&lt;α.
 <li>
 It appears that there is a preference for water type by the students. Further analysis (Table 4) suggests that the students preferred the tap water.
 </li>
-<p>Table 4: Summary table of the proportion of students in each water type choice, with 95% confidence intervals and expected proportions from the goodness-of-fit test.</p>
+<p>Table 4: Summary table of the proportion of students in each water type choice, with 99% confidence intervals and expected proportions from the goodness-of-fit test.</p>
 <pre><code>         p.obs p.LCI p.UCI p.exp
-tap      0.477 0.384 0.570  0.25
-Aquafina 0.168 0.109 0.250  0.25
-Fiji     0.159 0.102 0.240  0.25
-Sams     0.196 0.132 0.281  0.25</code></pre>
+tap      0.477 0.357 0.599  0.25
+Aquafina 0.168 0.095 0.280  0.25
+Fiji     0.159 0.088 0.269  0.25
+Sams     0.196 0.116 0.312  0.25</code></pre>
 <li>
 From Table 4, one can conclude that between 38.4 and 57.0% of the students chose the tapwater.
 </li>
@@ -65,7 +65,7 @@ From Table 4, one can conclude that between 38.4 and 57.0% of the students chose
 w.exp &lt;- c(tap=1,Aquafina=1,Fiji=1,Sams=1)/4
 w.chi &lt;- chisq.test(w.obs,p=w.exp,rescale.p=TRUE,correct=FALSE)
 w.chi
-gofCI(w.chi,digits=3)</code></pre>
+gofCI(w.chi,digits=3,conf.level=0.99)</code></pre>
 <hr />
 </div>
 <div id="habitat-use-by-wild-turkeys" class="section level2">
