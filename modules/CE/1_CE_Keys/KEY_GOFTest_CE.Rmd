@@ -95,7 +95,7 @@ w.chi
 gofCI(w.chi,digits=3,conf.level=0.99)
 ```
 
-<li>From `r tbls("WaterSum",display="cite")`, one can conclude that between `r formatC(gofCI(w.chi)["tap","p.LCI"]*100,format="f",digits=1)` and  `r formatC(gofCI(w.chi)["tap","p.UCI"]*100,format="f",digits=1)`% of the students chose the tapwater.</li>
+<li>From `r tbls("WaterSum",display="cite")`, one can conclude that between `r formatC(gofCI(w.chi,conf.level=0.99)["tap","p.LCI"]*100,format="f",digits=1)` and  `r formatC(gofCI(w.chi,conf.level=0.99)["tap","p.UCI"]*100,format="f",digits=1)`% of the students chose the tapwater.</li>
 </ol>
 
 R Appendix.
