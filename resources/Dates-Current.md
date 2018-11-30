@@ -137,7 +137,6 @@ Note that some of the more distant dates are subject to change.
 <tr><td>F 23-Nov</td>
     <td colspan="2"><span style="color:coral">NO CLASS (Thanksgiving)</span></td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
 
 <tr><td>M 26-Nov</td>
     <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
@@ -149,6 +148,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
+--->
 
 <tr><td>M 3-Dec</td>
     <td>--</td>
