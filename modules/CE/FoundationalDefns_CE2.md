@@ -51,5 +51,3 @@ Two Northland students were interested in whether the average amount of playing 
   <li class="active"><a href="#">2</a></li>
 </ul>
 </div>
-
-----

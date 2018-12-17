@@ -56,5 +56,3 @@ Describe a variable that is of interest to you for each of the four variable typ
   <li><a href="FoundationalDefns_CE2.html">2</a></li>
 </ul>
 </div>
-
-----

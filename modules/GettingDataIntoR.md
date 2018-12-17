@@ -47,7 +47,7 @@ Use the materials below to answer the questions on [this preparation guide](Gett
 ## Practice
 
 * [Class Example](CEx/GettingDataIntoR_CExmpl)
-* [Exercises](CE/GettingDataIntoR_CE) ... [ANSWER KEY](CE/KEY_GettingDataIntoR_CE)
+* [Exercises](CE/GettingDataIntoR_CE1) [[*more as time permits*](CE/GettingDataIntoR_CE2)] ... [ANSWER KEY](CE/KEY_GettingDataIntoR_CE)
 * [Review Exercises](RE/GettingDataIntoR_RevEx.html)
 
 ----
