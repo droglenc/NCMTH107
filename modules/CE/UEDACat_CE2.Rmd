@@ -49,6 +49,21 @@ axis(2,seq(0,60,5),NA,tcl=-0.2)
 
 ----
 
+## Chemical Waste Disposal
+<img src="zimgs/waste-disposal.jpg" alt="Chemical Waste Disposal" class="img-right">
+
+In June 2000, facilities management at the University of Massachusetts-Boston surveyed lab managers at the University regarding chemical waste disposal. One question that they asked the survey participants was, "Which federal agency regulates the disposal of chemical wastes: Occupational Safety and Health Administration, Environmental Protection Agency, Department of Transportation, or National Institutes of Health?" The individual responses for this survey are shown below by showing the first letter corresponding to each participant's category choice. Note that one participant did not answer this question and is labeled with a "U" for "unanswered." Enter these data into a CSV file, load into R, and write a brief conclusion regarding the beliefs of lab managers derived from summaries of these data.
+
+<pre>
+O, E, E, O, E, E, E, O, D, O, E, O, E, D, E, O, N, O, E, D,
+N, E, D, E, D, O, E, O, E, O, E, E, D, O, E, E, E, E, O, E,
+N, O, N, O, E, N, E, O, E, E, E, D, N, E, O, E, N, E, E, N,
+E, E, E, N, E, E, N, D, D, E, O, O, E, E, E, N, O, O, O, E,
+O, O, E, E, U, O, E, O
+</pre>
+
+----
+
 ## Popularity in Middle School
 <img src="zimgs/sports_kids_1.jpg" alt="Sports Kids" class="img-right">
 [Chase and Drummer (1992)](http://www.ncbi.nlm.nih.gov/pubmed/1439167) examined sports as a social status determinant for children. In their study, they surveyed 227 boys and 251 girls in grades 4, 5, and 6 from schools in Michigan to determine which criteria were most important in determining personal, female, and male popularity. In two parts of their study, students were asked what their personal goals were for school (options were "make good grades", "be popular", and "be good in sports"; `goals`) and to rank the importance that "being good in sports" is in defining popularity (1="most important"-4="least important"; `sports`). These data (and answers to several other questions) are in [PopularKids.csv](https://github.com/droglenc/NCData/raw/master/PopularKids.csv). Use these data to answer the following questions.
