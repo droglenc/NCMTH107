@@ -36,20 +36,19 @@ Note that some of the more distant dates are subject to change.
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 21-Jan</td>
+    <td colspan="2"><span style="color:coral">NO CLASS (MLK Jr Day)</span></td></tr>
+<tr><td>W 23-Jan</td>
     <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant ...</a></td>
     <td>--</td></tr>
-<tr><td>W 23-Jan</td>
+<tr><td>F 25-Jan</td>
     <td><a href="../modules/FilteringDataInR">Filtering Data In R</a></td>
     <td>--</td></tr>
-<tr><td>F 25-Jan</td>
-    <td colspan="2"><span style="color:red">First Quiz</span> (<a href="QuizGuide/quiz1.html">Study Guide</a>)</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 28-Jan</td>
-    <td><a href="../modules/UEDACat">Univariate EDA - Categorical</a></td>
-    <td>--</td></tr>
+    <td colspan="2"><span style="color:red">First Quiz</span> (<a href="QuizGuide/quiz1.html">Study Guide</a>)</td></tr>
 <tr><td>W 30-Jan</td>
-    <td><a href="../modules/NormalDist">Normal Distributions</a></td>
+    <td><a href="../modules/UEDACat">Univariate EDA - Categorical</a></td>
     <td>--</td></tr>
 <tr><td>F 1-Feb</td>
     <td><a href="../modules/NormalDist">Normal Distributions</a></td>
@@ -57,13 +56,13 @@ Note that some of the more distant dates are subject to change.
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 4-Feb</td>
-    <td><a href="../modules/BEDACat">Bivariate EDA - Categorical</a></td>
+    <td><a href="../modules/NormalDist">Normal Distributions</a></td>
     <td>--</td></tr>
 <tr><td>W 6-Feb</td>
-    <td><a href="../modules/BEDAQuant">Bivariate EDA - Quantitative</a></td>
+    <td><a href="../modules/BEDACat">Bivariate EDA - Categorical</a></td>
     <td>--</td></tr>
 <tr><td>F 8-Feb</td>
-    <td><a href="../modules/LinearRegression">Linear Regression</a></td>
+    <td><a href="../modules/BEDAQuant">Bivariate EDA - Quantitative</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
@@ -71,7 +70,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/LinearRegression">Linear Regression</a></td>
     <td>--</td></tr>
 <tr><td>W 13-Feb</td>
-    <td>--</td>
+    <td><a href="../modules/LinearRegression">Linear Regression</a></td>
     <td>--</td></tr>
 <tr><td>F 15-Feb</td>
     <td colspan="2"><span style="color:red">Second Quiz</span> (<a href="QuizGuide/quiz2.html">Study Guide</a>)</td></tr>
