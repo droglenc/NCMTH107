@@ -160,7 +160,7 @@ Note that some of the more distant dates are subject to change.
 
 <tr><td>M 15-Apr</td>
     <td>Course Review</td>
-    <td>>XC Reports (optional)</td></tr>
+    <td>XC Reports (optional)</td></tr>
 <tr><td>W 17-Apr</td>
     <td colspan="2"><span style="color:red">Final Quiz</span></td></tr>
 <tr><td>F 18-Apr</td>
