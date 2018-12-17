@@ -42,23 +42,3 @@ source("../../rhelpers/knitr_setup.R")
 <br>
 
 ----
-
-## Wisconsin Lakes
-<img src="zimgs/wisconsin-lakes.jpg" alt="Wisconsin Lakes" class="img-right">
-
-There are `r formatC(nrow(ABDLakes),format="f",digits=0)` lakes in Ashland, Bayfield, and Douglas counties of Wisconsin. However, only `r formatC(nrow(filterD(ABDLakes,named)),format="f",digits=0)` of these are named. A random sample of named lakes from this population is extracted with the following R code:
-
-```{r eval=FALSE, prompt=FALSE}
-library(NCStats)
-named <- filterD(ABDLakes,named)
-srsdf(named,n=50,vars=c("county","area"))
-```
-
-Use this code and some hand (or calculator) calculations to answer the questions below.
-
-1. Extract a sample of n=50 lakes with the (last line of) code above. Compare the sizes (area in acres) of the first three lakes. This is an example of what type of variability?
-1. Compute the proportion of lakes in your sample that are from Bayfield County.
-1. Extract another sample of n=50 lakes and compute the proportion of lakes that are from Bayfield County? Compare your two proportions. This is an example of what type of variability?
-1. Of the 605 named lakes in the three counties, `r formatC(xtabs(~county,data=filterD(ABDLakes,named))[2],format="f",digits=0)` are from Bayfield County. Was the proportion of named lakes from Bayfield County in either of your samples equal to the proportion of all named lakes that were from Bayfield County?  Were you surprised?  Why or why not?
-
-----
