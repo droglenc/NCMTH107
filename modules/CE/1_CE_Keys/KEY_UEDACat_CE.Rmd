@@ -57,7 +57,7 @@ percTable(tbl,digits=1)
 barplot(tbl,xlab="Breed of Dog",ylab="Frequency of Wins")
 ```
 
-<li><i>Can not Bring Myself to Make One</i></li>
+<li>Shepherds were the most common herding group winners in the Westminster Kennel Club championships winning `r formatC(tbl[["Shepherd"]]/sum(tbl)*100,format="f",digits=1)`% of the time over the last 36 years</li>
 </ol>
 
 ----
@@ -75,6 +75,7 @@ barplot(tbl,xlab="Breed of Dog",ylab="Frequency of Wins")
 ```{r echo=FALSE}
 round(d/sum(d)*100,1)
 ```
+<li>"Love" was by far (90.0%) the most common response by Northland students for "Why should people get married?"</li>
 </ol>
  
 ----
