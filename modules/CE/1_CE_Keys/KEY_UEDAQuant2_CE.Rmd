@@ -123,41 +123,6 @@ R Appendix.
 
 ----
 
-## Effluent Sampling Labs
-```{r echo=FALSE}
-d <- read.csv("4_50.csv")
-```
-
-<ol>
-  <li>The distribution of BOD values for the private lab is approximately symmetric with no obvious outliers (`r figs("BODhist",display="cite")`). The mean of the private data is 34.64 mg/L with a standard deviation of 10.45 mg/L  (`r figs("BODStats",display="cite")`). The mean and standard deviation were used because of the symmetry of the distribution and absence of outliers.
-
-  The distribution of BOD values for the state lab appears to be right-skewed with an outlier at 71 mg/L (`r figs("BODhist",display="cite")`). The median of the state data is 20 mg/L with an IQR from 9.5 to 33.5 mg/L (`r figs("BODStats",display="cite")`). The median and IQR were used because of the presence of the outlier.</li>
-  
-```{r BODhist, echo=FALSE, fig.width=7, fig.height=3.5}
-hist(bod~lab,data=d,xlab="BOD Measurements")
-```
-
-`r figs("BODhist")` 
-
-`r tbls("BODStats")`
-
-```{r BODStats, echo=FALSE, background="white"}
-Summarize(bod~lab,data=d,digits=1)
-```
-
-  <li>The two most outstanding differences between the private and state labs are that the state lab BOD values are generally lower (note lower means and medians) and more dispersed (note wider IQR and larger standard deviation).</li>
-</ol>
-
-R Appendix.
-```{r eval=FALSE, prompt=FALSE}
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/Keys")
-d <- read.csv("4_50.csv")
-<<BODhist>>
-<<BODStats>>
-```
-
-----
-
 ## Math Class Grades
 ```{r echo=FALSE}
 d <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/UNCgrades.csv")
@@ -189,6 +154,41 @@ setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/Keys")
 d <- read.csv("UNCgrades.csv")
 <<GPAhist>>
 <<GPAStats>>
+```
+
+----
+
+## Effluent Sampling Labs
+```{r echo=FALSE}
+d <- read.csv("4_50.csv")
+```
+
+<ol>
+  <li>The distribution of BOD values for the private lab is approximately symmetric with no obvious outliers (`r figs("BODhist",display="cite")`). The mean of the private data is 34.64 mg/L with a standard deviation of 10.45 mg/L  (`r figs("BODStats",display="cite")`). The mean and standard deviation were used because of the symmetry of the distribution and absence of outliers.
+
+  The distribution of BOD values for the state lab appears to be right-skewed with an outlier at 71 mg/L (`r figs("BODhist",display="cite")`). The median of the state data is 20 mg/L with an IQR from 9.5 to 33.5 mg/L (`r figs("BODStats",display="cite")`). The median and IQR were used because of the presence of the outlier.</li>
+  
+```{r BODhist, echo=FALSE, fig.width=7, fig.height=3.5}
+hist(bod~lab,data=d,xlab="BOD Measurements")
+```
+
+`r figs("BODhist")` 
+
+`r tbls("BODStats")`
+
+```{r BODStats, echo=FALSE, background="white"}
+Summarize(bod~lab,data=d,digits=1)
+```
+
+  <li>The two most outstanding differences between the private and state labs are that the state lab BOD values are generally lower (note lower means and medians) and more dispersed (note wider IQR and larger standard deviation).</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/Keys")
+d <- read.csv("4_50.csv")
+<<BODhist>>
+<<BODStats>>
 ```
 
 ----

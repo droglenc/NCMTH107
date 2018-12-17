@@ -85,7 +85,7 @@ Use R to answer the following questions for the data in [BrainHead.csv](https://
 
 ----
 
-#### Hints
+## Hints
 
 You can check your work with `sdCalc()` and `iqrCalc()`. For example,
 

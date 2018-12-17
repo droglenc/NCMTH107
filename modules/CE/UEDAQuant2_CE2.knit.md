@@ -12,12 +12,7 @@ output:
     lib_dir: zlibs
 ---
 
-```{r echo=FALSE, eval=FALSE}
-# Renders an appropriate HTML file for the webpage
-setwd(here::here())
-source("rhelpers/rhelpers.R")
-modHTML("modules/CE/UEDAQuant2_CE2")
-```
+
 
 ----
 
