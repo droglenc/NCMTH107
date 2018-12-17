@@ -54,47 +54,13 @@ The University of North Carolina math department is noted for â€œgiving out�
 1. Hand calculate the median and IQR for 14 numbers that you make up.
 1. Hand calculate the median and IQR for 16 numbers that you make up.
 
-You can check your work with `sdCalc()` and `iqrCalc()`. For example,
-
-```r
-> # Enter (example) data into d vector
-> d <- c(16,23,47,13,18,12)
-> # Check calculations for data in d
-> sdCalc(d)
-```
-
-```
-Demonstration of parts of a std. dev. calculation.
-
-      x diffs diffs.sq
-1    16  -5.5    30.25
-2    23   1.5     2.25
-3    47  25.5   650.25
-4    13  -8.5    72.25
-5    18  -3.5    12.25
-6    12  -9.5    90.25
-sum 129   0.0   857.50
-
-Mean = x-bar = 129 / 6 = 21.5 
-
-Variance = s^2 = 857.5 / 5 = 171.5 
-
-Std. Dev = s = sqrt(171.5) = 13.0958
-```
-
-```r
-> iqrCalc(d)
-```
-
-```
-Median (=17) is the average of values in positions 3 and 4.
-  12 13 [16 18] 23 47
-
-Q1 (=13) is the value in position 2 of the lower half.
-  12 [13] 16
-
-Q3 (=23) is the value in position 2 of the upper half.
-  18 [23] 47
-```
+See this [hint](UEDAQuant1_CE1.html#hints) for how to check your answers with R.
 
 ----
+
+<div class="text-center">
+<ul class="pagination pagination-lg">
+  <li><a href="../UEDAQuant1.html">^</a></li>
+  <li><a href="UEDAQuant1_CE1.html">1</a></li>
+  <li class="active"><a href="#">2</a></li>
+</ul>

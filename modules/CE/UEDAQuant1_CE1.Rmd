@@ -26,7 +26,7 @@ source("../../rhelpers/knitr_setup.R")
 
 ## Hand Calculations
 
-Consider the following three data sets for questions below. Show your work for all questions.
+Consider the following three data sets for questions below. Show your work for all questions. [[See hints at bottom.](#hints)]
 
 <pre>
 Data Set 1
@@ -46,15 +46,6 @@ Data Set 3
 1. Hand calculate the median of Dat Set 3.
 1. Hand calculate the IQR of Dat Set 3.
 1. Hand calculate the range of Data Set 3.
-
-You can check your work with `sdCalc()` and `iqrCalc()`. For example,
-```{r}
-# Enter (example) data into d vector
-d <- c(16,23,47,13,18,12)
-# Check calculations for data in d
-sdCalc(d)
-iqrCalc(d)
-```
 
 ----
 
@@ -97,4 +88,30 @@ Use R to answer the following questions for the data in [BrainHead.csv](https://
 1. Construct histograms of `brain.weight` for each age group.
 1. Compute summary statistics of `brain.weight` for each age group.
 
+<br>
+
 ----
+
+<div class="text-center">
+<ul class="pagination pagination-lg">
+  <li><a href="../UEDAQuant1.html">^</a></li>
+  <li class="active"><a href="#">1</a></li>
+  <li><a href="UEDAQuant1_CE2.html">2</a></li>
+</ul>
+
+<br>
+
+----
+
+----
+
+#### Hints
+
+You can check your work with `sdCalc()` and `iqrCalc()`. For example,
+```{r}
+# Enter (example) data into d vector
+d <- c(16,23,47,13,18,12)
+# Check calculations for data in d
+sdCalc(d)
+iqrCalc(d)
+```

@@ -10,16 +10,9 @@ output:
     lib_dir: zlibs
 ---
 
-```{r echo=FALSE, eval=FALSE}
-# Renders an appropriate HTML file for the webpage
-setwd(here::here())
-source("rhelpers/rhelpers.R")
-modHTML("modules/CE/UEDACat_CE2")
-```
 
-```{r echo=FALSE, results='hide', message=FALSE}
-source("../../rhelpers/knitr_setup.R")
-```
+
+
 
 ----
 
@@ -28,17 +21,7 @@ source("../../rhelpers/knitr_setup.R")
 [King et al. (2013)](https://www.aphis.usda.gov/wildlife_damage/nwrc/publications/13pubs/king132.pdf) examined the habitat use of [Brown Pelicans (*Pelecanus
 occidentalis*)](https://en.wikipedia.org/wiki/Brown_pelican) in the Northern Gulf of Mexico. In one part of their study, they recorded the GPS location where each pelican was spotted. The bar chart below shows the percentages of those GPS locations in major habitats. Use this information to answer the questions further below. [Note that `Water`="shallow near-shore waters", `EEW`="estuarine emergent wetland", `Grassland`="shoreline grasslands", `UnShore`="unconsolidated shore", `DeepWater`="deeper offshore waters", and `Other`="all other habitats".]
 
-```{r echo=FALSE, fig.width=7, fig.height=4, par1=TRUE}
-tbl <- c(0.618,0.2551,0.0392,0.0271,0.0239)
-tbl <- c(tbl,1-sum(tbl))*100
-names(tbl) <- c("Water","EEW","Grassland","UnShore","DeepWater","other")
-barplot(tbl,xlab="Main Habitats",ylab="Percent of Recordings",col="gray90")
-abline(h=seq(5,60,5),lty=2,col="gray90")
-barplot(tbl,col="gray90",yaxt="n",add=TRUE)
-abline(h=0)
-axis(2,1:59,NA,tcl=-0.1)
-axis(2,seq(0,60,5),NA,tcl=-0.2)
-```
+<img src="UEDACat_CE2_files/figure-html/unnamed-chunk-3-1.png" width="672" />
 
 1. What is an individual in this example?
 1. What type of variable is recorded?

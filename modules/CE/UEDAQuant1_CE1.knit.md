@@ -18,7 +18,7 @@ output:
 
 ## Hand Calculations
 
-Consider the following three data sets for questions below. Show your work for all questions.
+Consider the following three data sets for questions below. Show your work for all questions. [[See hints at bottom.](#hints)]
 
 <pre>
 Data Set 1
@@ -38,6 +38,54 @@ Data Set 3
 1. Hand calculate the median of Dat Set 3.
 1. Hand calculate the IQR of Dat Set 3.
 1. Hand calculate the range of Data Set 3.
+
+----
+
+## Histograms
+
+The [U.S. Census](http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map) asked individuals 16 years old and older "How long in minutes is your one-way commute to work each day?".  The mean for individuals from each state was computed and is plotted in the histogram below.
+
+<img src="UEDAQuant1_CE1_files/figure-html/unnamed-chunk-3-1.png" width="384" />
+
+Use this histogram to answer these questions.
+
+1. What is an individual in this example?
+1. What is the variable in this example?
+1. What type of variable is recorded?
+1. How many individuals are represented in this histogram?
+1. How many individuals had a mean commute time between 16 and 18 minutes?
+1. How many states had a mean commute time between 18 and 24 minutes?
+1. What was the range of mean commute times for the bin with exactly five states?
+
+----
+
+## Brain Weight
+<img src="zimgs/brain.jpg" alt="Brain" class="img-right">
+Use R to answer the following questions for the data in [BrainHead.csv](https://raw.githubusercontent.com/droglenc/NCData/master/BrainHead.csv).
+
+1. Construct a histogram of `brain.weight`.
+1. Compute summary statistics for `brain.weight`.
+1. Construct histograms of `brain.weight` for each age group.
+1. Compute summary statistics of `brain.weight` for each age group.
+
+<br>
+
+----
+
+<div class="text-center">
+<ul class="pagination pagination-lg">
+  <li><a href="../UEDAQuant1.html">^</a></li>
+  <li class="active"><a href="#">1</a></li>
+  <li><a href="UEDAQuant1_CE2.html">2</a></li>
+</ul>
+
+<br>
+
+----
+
+----
+
+#### Hints
 
 You can check your work with `sdCalc()` and `iqrCalc()`. For example,
 
@@ -81,34 +129,3 @@ Q1 (=13) is the value in position 2 of the lower half.
 Q3 (=23) is the value in position 2 of the upper half.
   18 [23] 47
 ```
-
-----
-
-## Histograms
-
-The [U.S. Census](http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map) asked individuals 16 years old and older "How long in minutes is your one-way commute to work each day?".  The mean for individuals from each state was computed and is plotted in the histogram below.
-
-<img src="UEDAQuant1_CE1_files/figure-html/unnamed-chunk-4-1.png" width="384" />
-
-Use this histogram to answer these questions.
-
-1. What is an individual in this example?
-1. What is the variable in this example?
-1. What type of variable is recorded?
-1. How many individuals are represented in this histogram?
-1. How many individuals had a mean commute time between 16 and 18 minutes?
-1. How many states had a mean commute time between 18 and 24 minutes?
-1. What was the range of mean commute times for the bin with exactly five states?
-
-----
-
-## Brain Weight
-<img src="zimgs/brain.jpg" alt="Brain" class="img-right">
-Use R to answer the following questions for the data in [BrainHead.csv](https://raw.githubusercontent.com/droglenc/NCData/master/BrainHead.csv).
-
-1. Construct a histogram of `brain.weight`.
-1. Compute summary statistics for `brain.weight`.
-1. Construct histograms of `brain.weight` for each age group.
-1. Compute summary statistics of `brain.weight` for each age group.
-
-----

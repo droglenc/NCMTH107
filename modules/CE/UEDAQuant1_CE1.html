@@ -10,7 +10,7 @@ css: "/css/modules.css"
 <hr />
 <div id="hand-calculations" class="section level2">
 <h2>Hand Calculations</h2>
-<p>Consider the following three data sets for questions below. Show your work for all questions.</p>
+<p>Consider the following three data sets for questions below. Show your work for all questions. [<a href="#hints">See hints at bottom.</a>]</p>
 <pre>
 Data Set 1
 18 28 25 21 16 24
@@ -30,6 +30,52 @@ Data Set 3
 <li>Hand calculate the IQR of Dat Set 3.</li>
 <li>Hand calculate the range of Data Set 3.</li>
 </ol>
+<hr />
+</div>
+<div id="histograms" class="section level2">
+<h2>Histograms</h2>
+<p>The <a href="http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map">U.S. Census</a> asked individuals 16 years old and older “How long in minutes is your one-way commute to work each day?”. The mean for individuals from each state was computed and is plotted in the histogram below.</p>
+<p><img src="UEDAQuant1_CE1_files/figure-html/unnamed-chunk-3-1.png" width="384" /></p>
+<p>Use this histogram to answer these questions.</p>
+<ol>
+<li>What is an individual in this example?</li>
+<li>What is the variable in this example?</li>
+<li>What type of variable is recorded?</li>
+<li>How many individuals are represented in this histogram?</li>
+<li>How many individuals had a mean commute time between 16 and 18 minutes?</li>
+<li>How many states had a mean commute time between 18 and 24 minutes?</li>
+<li>What was the range of mean commute times for the bin with exactly five states?</li>
+</ol>
+<hr />
+</div>
+<div id="brain-weight" class="section level2">
+<h2>Brain Weight</h2>
+<p><img src="zimgs/brain.jpg" alt="Brain" class="img-right"> Use R to answer the following questions for the data in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/BrainHead.csv">BrainHead.csv</a>.</p>
+<ol>
+<li>Construct a histogram of <code>brain.weight</code>.</li>
+<li>Compute summary statistics for <code>brain.weight</code>.</li>
+<li>Construct histograms of <code>brain.weight</code> for each age group.</li>
+<li>Compute summary statistics of <code>brain.weight</code> for each age group.</li>
+</ol>
+<p><br></p>
+<hr />
+<div class="text-center">
+<ul class="pagination pagination-lg">
+<li>
+<a href="../UEDAQuant1.html">^</a>
+</li>
+<li class="active">
+<a href="#">1</a>
+</li>
+<li>
+<a href="UEDAQuant1_CE2.html">2</a>
+</li>
+</ul>
+<p><br></p>
+<hr />
+<hr />
+<div id="hints" class="section level4">
+<h4>Hints</h4>
 <p>You can check your work with <code>sdCalc()</code> and <code>iqrCalc()</code>. For example,</p>
 <pre class="r"><code>&gt; # Enter (example) data into d vector
 &gt; d &lt;- c(16,23,47,13,18,12)
@@ -60,34 +106,7 @@ Q1 (=13) is the value in position 2 of the lower half.
 
 Q3 (=23) is the value in position 2 of the upper half.
   18 [23] 47</code></pre>
-<hr />
 </div>
-<div id="histograms" class="section level2">
-<h2>Histograms</h2>
-<p>The <a href="http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map">U.S. Census</a> asked individuals 16 years old and older “How long in minutes is your one-way commute to work each day?”. The mean for individuals from each state was computed and is plotted in the histogram below.</p>
-<p><img src="UEDAQuant1_CE1_files/figure-html/unnamed-chunk-4-1.png" width="384" /></p>
-<p>Use this histogram to answer these questions.</p>
-<ol>
-<li>What is an individual in this example?</li>
-<li>What is the variable in this example?</li>
-<li>What type of variable is recorded?</li>
-<li>How many individuals are represented in this histogram?</li>
-<li>How many individuals had a mean commute time between 16 and 18 minutes?</li>
-<li>How many states had a mean commute time between 18 and 24 minutes?</li>
-<li>What was the range of mean commute times for the bin with exactly five states?</li>
-</ol>
-<hr />
-</div>
-<div id="brain-weight" class="section level2">
-<h2>Brain Weight</h2>
-<p><img src="zimgs/brain.jpg" alt="Brain" class="img-right"> Use R to answer the following questions for the data in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/BrainHead.csv">BrainHead.csv</a>.</p>
-<ol>
-<li>Construct a histogram of <code>brain.weight</code>.</li>
-<li>Compute summary statistics for <code>brain.weight</code>.</li>
-<li>Construct histograms of <code>brain.weight</code> for each age group.</li>
-<li>Compute summary statistics of <code>brain.weight</code> for each age group.</li>
-</ol>
-<hr />
 </div>
 
 

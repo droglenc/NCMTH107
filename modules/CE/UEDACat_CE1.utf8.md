@@ -10,16 +10,9 @@ output:
     lib_dir: zlibs
 ---
 
-```{r echo=FALSE, eval=FALSE}
-# Renders an appropriate HTML file for the webpage
-setwd(here::here())
-source("rhelpers/rhelpers.R")
-modHTML("modules/CE/UEDACat_CE1")
-```
 
-```{r echo=FALSE, results='hide', message=FALSE}
-source("../../rhelpers/knitr_setup.R")
-```
+
+
 
 ----
 
@@ -38,15 +31,7 @@ The breeds that won the "Herding Group" at the Westminster Kennel Club champions
 <img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/weddingring.jpg" alt="Wedding Ring" class="img-right">
 [A Northland College student](../resources/past-projects/F07_Brilla.pdf) asked 50 of her peers "Why should people get married (Select Love, Money, Pregnancy, or Other)?"  Her results are shown in the bar chart below. Use this information to answer the questions further below.
 
-```{r echo=FALSE, fig.width=5, fig.height=4, par1=TRUE}
-tbl <- c(Love=45,Money=1,Pregnancy=0,Other=4)
-barplot(tbl,xlab="Reaons to Marry",ylab="Frequency of Respondents",col="gray90",yaxt="n")
-abline(h=1:5,lty=2,col="gray90")
-barplot(tbl,col="gray90",yaxt="n",add=TRUE)
-axis(2,seq(0,45,5))
-axis(2,0:45,NA,tcl=-0.15)
-abline(h=0)
-```
+<img src="UEDACat_CE1_files/figure-html/unnamed-chunk-3-1.png" width="480" />
 
 1. What is an individual in this example?
 1. What type of variable is recorded?
