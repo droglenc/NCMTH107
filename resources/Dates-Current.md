@@ -112,7 +112,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
     <td>--</td></tr>
 <tr><td>F 15-Mar</td>
-    <td><a href="../modules/ConfRegions">XXX</a></td>
+    <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
@@ -120,39 +120,39 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
     <td>--</td></tr>
 <tr><td>W 20-Mar</td>
-    <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
-    <td>--</td></tr>
-<tr><td>F 22-Mar</td>
     <td colspan="2"><span style="color:red">Third Quiz</span> (<a href="QuizGuide/quiz3.html">Study Guide</a>)</td></tr>
+<tr><td>F 22-Mar</td>
+    <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
+    <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 25-Mar</td>
-    <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
-    <td>--</td></tr>
+    <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
+    <td>Quiz 3 Reflection (Optional)</td></tr>
 <tr><td>W 27-Mar</td>
     <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
     <td>--</td></tr>
 <tr><td>F 29-Mar</td>
-    <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
-    <td>Quiz 3 Reflection (Optional)</td></tr>
+    <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
+    <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 1-Apr</td>
     <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
     <td>--</td></tr>
 <tr><td>W 3-Apr</td>
-    <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
-    <td>--</td></tr>
-<tr><td>F 5-Apr</td>
     <td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td>
     <td>--</td></tr>
+<tr><td>F 5-Apr</td>
+    <td colspan="2"><span style="color:red">Fourth Quiz</span> (<a href="QuizGuide/quiz4.html">Study Guide</a>)</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 8-Apr</td>
-    <td>--</td>
+    <td>Course Review</td>
     <td>--</td></tr>
 <tr><td>W 10-Apr</td>
-    <td colspan="2"><span style="color:red">Fourth Quiz</span> (<a href="QuizGuide/quiz4.html">Study Guide</a>)</td></tr>
+    <td><a href="../modules/FilteringDataInR">Filtering Data In R</a></td>
+    <td>Quiz 4 Reflection (Optional)</td></tr>
 <tr><td>F 12-Apr</td>
     <td>Course Review</td>
     <td>--</td></tr>
@@ -160,7 +160,7 @@ Note that some of the more distant dates are subject to change.
 
 <tr><td>M 15-Apr</td>
     <td>Course Review</td>
-    <td>Quiz 4 Reflection (Optional)<br>XC Reports (optional)</td></tr>
+    <td>>XC Reports (optional)</td></tr>
 <tr><td>W 17-Apr</td>
     <td colspan="2"><span style="color:red">Final Quiz</span></td></tr>
 <tr><td>F 18-Apr</td>
