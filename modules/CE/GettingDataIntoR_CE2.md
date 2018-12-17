@@ -22,7 +22,7 @@ Goto the [Global Energy Statistical Yearbook](https://yearbook.enerdata.net/){:t
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="GettingDataIntoR.html">^</a></li>
+  <li><a href="../GettingDataIntoR.html">^</a></li>
   <li><a href="GettingDataIntoR_CE1.html">1</a></li>
   <li class="active"><a href="#">2</a></li>
 </ul>

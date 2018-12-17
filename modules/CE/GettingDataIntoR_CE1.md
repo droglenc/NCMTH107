@@ -19,8 +19,8 @@ Record three variables (at least one quantitative and one categorical) about at 
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="GettingDataIntoR.html">^</a></li>
-  <li class="active"><a href="#">2</a></li>
+  <li><a href="../GettingDataIntoR.html">^</a></li>
+  <li class="active"><a href="#">1</a></li>
   <li><a href="GettingDataIntoR_CE2.html">2</a></li>
 </ul>
 </div>
