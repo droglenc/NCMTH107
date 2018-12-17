@@ -6,7 +6,7 @@ title: Resources
 ## Administrative
 1. [Daily Preparation Check](https://goo.gl/forms/3bBX8yCryiUDG4qH3){:target="_blank"}
 1. [Anonymous Message to Dr. Ogle](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}
-1. Student Opinion Surveys -- [Section 1](https://northland.iasystem.org/survey/4187) and [Section 2](https://northland.iasystem.org/survey/4186)
+1. Student Opinion Surveys -- [Section 1]() and [Section 2]()
 1. [Data Files](data_107)
 
 ## Learning Assistance
