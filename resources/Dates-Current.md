@@ -158,7 +158,6 @@ Note that some of the more distant dates are subject to change.
     <td>Course Review</td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
 
 <tr><td>M 10-Dec</td>
     <td>Course Review</td>
@@ -168,4 +167,5 @@ Note that some of the more distant dates are subject to change.
     <td>--</td></tr>
 <tr><td>F 14-Dec</td>
     <td colspan="2"><span style="color:red">Final Quiz</span></td></tr>
+--->
 </table>
