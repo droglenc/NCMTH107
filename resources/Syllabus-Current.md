@@ -124,8 +124,21 @@ You will be asked to prepare for each class period by reading the reading and wa
 
 ### Homework
 
-<img class="img-right" src="../img/homework.gif">
-Blak-hladk,dfdjfkdfadf fd fmd fkd fdfkdf
+<img class="img-right" src="../img/homework.png">
+Each day you will be required to turn in the work you completed on the exercises from the previous class period. Most of these exercises will likely be completed in class by most of you, as long as you remained focused and ask for help in class. However, some of you may need to work outside of class to complete all of the work. The homework you turn in will largely be graded based on "completenese" according to the following rubric.
+
+<div class="container-fluid">
+  <table class="table table-bordered">
+  <thead>
+    <tr class="info"><th>4 points</th><th>2 point2</th><th>0 points</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>All parts of the exercise were completed in full. Work was neat and orderly.</td><td>Some parts of the exerces were either not attempted or were incomplete. Work was as neat and orderly as it should be.</td><td>Very little of the exercise was completed.</td></tr>
+  </tbody>
+  </table>
+</div>
+
+You are allowed to work together on exercises in and out of class but substantial copying of the work of others does not lead to learning. If I suspect that you are substantially copying someone else's work I will address this with you once. After that you, and the person you copied from, will earn zeroes on the homework that was copied.
 
 ### Participation
 
@@ -137,10 +150,10 @@ In class you will be asked to actively participate (listen, take notes) in short
 <div class="container-fluid">
   <table class="table table-bordered">
   <thead>
-    <tr class="info"><th>2 points</th><th>1 point</th><th>0 points</th></tr>
+    <tr class="info"><th>4 points</th><th>2 point</th><th>0 points</th></tr>
   </thead>
   <tbody>
-    <tr><td>Fully (see below) participated in the day's activities. Properly focused at all times.</td><td>Participated in many, but not all, of the day's activities. Focus waned or was inconsistent. Left between 1-30 mins early.</td><td>Very little active participation in the day's activities. Lacked focus. Left more than 30 mins early.</td></tr>
+    <tr><td>Fully (see below) participated in the day's activities. Properly focused at all times.</td><td>Participated in many, but not all, of the day's activities. Focus waned or was inconsistent. Left between 1-15 mins early.</td><td>Very little active participation in the day's activities. Lacked focus. Left more than 15 mins early.</td></tr>
   </tbody>
   </table>
 </div>
