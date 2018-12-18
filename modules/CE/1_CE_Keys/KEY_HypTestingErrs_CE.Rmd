@@ -37,7 +37,7 @@ figs(name="Pwr2","ACTUAL normal distribution representing power in the power cal
 
 ----
 
-## Understanding Power Relationships
+## UHow to Reduce &beta;
 
 <ol>
 <li>See `r figs("Pwr1",display="cite")`.</li>
@@ -49,27 +49,20 @@ distrib(0.05,mean=100,sd=10/sqrt(30),type="q")
 
 <li>See `r figs("Pwr2",display="cite")`.</li>
 ```{r Pwr2,echo=FALSE}
-distrib(96.997,mean=95,sd=10/sqrt(30))
+distrib(96.997,mean=95,sd=10/sqrt(30),lower.tail=FALSE)
 ```
 
 `r figs("Pwr2")`
 
-<li>Effects on power</li>
-<ol>
-<li>Increasing &alpha; will INcrease power</li>
-<li>Increasing n will INcrease power</li>
-<li>Increasing &sigma; will DEcrease power</li>
-<li>Increasing how wrong the H<sub>0</sub> is will INcrease power</li>
-</ol>
 <li>Effects on &beta;</li>
 <ol>
-<li>Increasing &alpha; will DEecrease &beta;</li>
+<li>Increasing &alpha; will DEcrease &beta;</li>
 <li>Increasing n will DEcrease &beta;</li>
 <li>Increasing &sigma; will INcrease &beta;</li>
 <li>Increasing how wrong the H<sub>0</sub> is will DEcrease &beta;</li>
 </ol>
-<li>Power may be INcreased by INcreasing n or INcreasing &alpha;.</li>
 <li>&beta; my be DEcreased by INcreasing n or INcreasing &alpha;.</li>
+<li>Power may be INcreased by INcreasing n or INcreasing &alpha;.</li>
 </ol>
 
 R Appendix.
