@@ -20,7 +20,7 @@ css: "/css/modules.css"
 </div>
 <div id="how-to-reduce-" class="section level2">
 <h2>How to Reduce β</h2>
-<p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/computer-1.jpg" alt="Simulations" class="img-right">The probability of a type II error (β)<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> cannot be computed because the true population mean (μ<sub>a</sub>) is not known. However, β is affected by α, n, σ, and “how wrong” the null hypothesized value is. Simulations with known populations can be used to understand the relationships between β and these other values. Because α and n are chosen by the statistician, decisions can be made that will affect β (though we will never know the actual value of β).</p>
+<p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/computer-1.jpg" alt="Simulations" class="img-right">The probability of a type II error (β) cannot be computed because the true population mean (μ<sub>a</sub>) is not known. However, β is affected by α, n, σ, and “how wrong” the null hypothesized value is. Simulations with known populations can be used to understand the relationships between β and these other values. Because α and n are chosen by the statistician, decisions can be made that will affect β (though we will never know the actual value of β).</p>
 <p>The <code>powerSim()</code> function (with no arguments) provides an efficient method to perform these simulations. For example, <code>powerSim()</code> produced the plots shown below. The top plot is the “null distribution” or the sampling distribution of the sample means assuming that H<sub>0</sub>: μ=100 is true (and σ=10 and n=30). The rejection region that is defined by α=0.05 and assuming that H<sub>A</sub>: μ&lt;100 (i.e., lower-tailed) is shown on the null distribution as the red shaded area bound by the vertical red line. Thus, any sample mean in this shaded area would result in a decision to reject H<sub>0</sub>.</p>
 <p><img src="HypTestingErrs_CE_files/figure-html/unnamed-chunk-3-1.png" width="480" /></p>
 <p>The lower plot is the “actual distribtion” or the sampling distribution that would result if μ=95 (in this example) and σ=10 and n=30. The rejection region is projected onto this plot with the red vertical line. Because μ=95 is different than μ<sub>0</sub>=100, these graphs represent the situation where the H<sub>0</sub> is incorrect. Not rejecting H<sub>0</sub> in this situation is an incorrect decision and the probability of making that decision is β. The probability of making this error (β) is shown by the off-red shaded area on the actual distribution and is equal to the value in the upper-right corner (in this case).</p>
@@ -36,8 +36,9 @@ css: "/css/modules.css"
 <li>Increasing “how wrong” the H<sub>0</sub> is.</li>
 </ol></li>
 <li>What decisions can you, as a statistician, make to decrease β.</li>
-<li>What decisions can you, as a statistician, make to increase power.<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a></li>
+<li>What decisions can you, as a statistician, make to increase power.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></li>
 </ol>
+<p><br> <br></p>
 <hr />
 </div>
 <div id="footnotes" class="section level2">
@@ -47,7 +48,6 @@ css: "/css/modules.css"
 <hr />
 <ol>
 <li id="fn1"><p>Power and β sum to 1 such that Power=1-β. Thus, as β is made smaller, power is made larger. Therefore, all relationships identified in this exercise between &amp;beta and each of α n, σ, and how “wrong” the H<sub>0</sub> is will be opposite for power.<a href="#fnref1">↩</a></p></li>
-<li id="fn2"><p>Power and β sum to 1 such that Power=1-β. Thus, as β is made smaller, power is made larger. Therefore, all relationships identified in this exercise between &amp;beta and each of α n, σ, and how “wrong” the H<sub>0</sub> is will be opposite for power.<a href="#fnref2">↩</a></p></li>
 </ol>
 </div>
 

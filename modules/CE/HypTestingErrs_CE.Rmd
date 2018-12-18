@@ -36,7 +36,7 @@ In each situation below, describe what a Type I and a Type II error is and make 
 ----
 
 ## How to Reduce &beta;
-<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/computer-1.jpg" alt="Simulations" class="img-right">The probability of a type II error (&beta;)[^power] cannot be computed because the true population mean (&mu;<sub>a</sub>) is not known. However, &beta; is affected by &alpha;, n, &sigma;, and "how wrong" the null hypothesized value is. Simulations with known populations can be used to understand the relationships between &beta; and these other values. Because &alpha; and n are chosen by the statistician, decisions can be made that will affect &beta; (though we will never know the actual value of &beta;).
+<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/computer-1.jpg" alt="Simulations" class="img-right">The probability of a type II error (&beta;) cannot be computed because the true population mean (&mu;<sub>a</sub>) is not known. However, &beta; is affected by &alpha;, n, &sigma;, and "how wrong" the null hypothesized value is. Simulations with known populations can be used to understand the relationships between &beta; and these other values. Because &alpha; and n are chosen by the statistician, decisions can be made that will affect &beta; (though we will never know the actual value of &beta;).
 
 The `powerSim()` function (with no arguments) provides an efficient method to perform these simulations. For example, `powerSim()` produced the plots shown below. The top plot is the "null distribution" or the sampling distribution of the sample means assuming that H<sub>0</sub>: &mu;=100 is true (and &sigma;=10 and n=30). The rejection region that is defined by &alpha;=0.05 and assuming that H<sub>A</sub>: &mu;<100 (i.e., lower-tailed) is shown on the null distribution as the red shaded area bound by the vertical red line. Thus, any sample mean in this shaded area would result in a decision to reject H<sub>0</sub>.
 
@@ -57,6 +57,9 @@ In RStudio, these plots will have a gear icon in the upper-left corner that will
     1. Increasing "how wrong" the H<sub>0</sub> is.
 1. What decisions can you, as a statistician, make to decrease &beta;.
 1. What decisions can you, as a statistician, make to increase power.[^power]
+
+<br>
+<br>
 
 ----
 
