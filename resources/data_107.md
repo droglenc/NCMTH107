@@ -11,6 +11,7 @@ title: Data for MTH107
 * BOD -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/BOD.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/BOD_meta.txt)
 * BodyTemp -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/BodyTemp.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/BodyTemp_meta.txt)
 * BrainHead -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/BrainHead.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/BrainHead_meta.txt)
+* CafeData -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/CafeData.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/CafeData_meta.txt)
 * CancerFat -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/CancerFat.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/CancerFat_meta.txt)
 * CervidDisease -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/CervidDisease.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/CervidDisease_meta.txt)
 * Chimp -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/Chimp.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/Chimp_meta.txt)
@@ -66,4 +67,3 @@ title: Data for MTH107
 * Zoo1 -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/Zoo1.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/Zoo1_meta.txt)
 * Zoo2 -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/Zoo2.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/Zoo2_meta.txt)
 * 93cars -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/93cars_meta.txt)
-
