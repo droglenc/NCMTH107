@@ -7,6 +7,16 @@ css: "/css/modules.css"
 
 ----
 
+## Melatonin and Sleep
+<img src="zimgs/melatonin.png" alt="melatonin" class="img-right">
+MIT researchers examined the effect of [melatonin](http://www.webmd.com/sleep-disorders/tc/melatonin-overview) on sleep.  Suppose that we know that men given a placebo fell asleep according to a N(15,5) distribution. For each question below identify (a) the distribution that would be used to answer the question, (b) specific characteristics of the required distribution, (c) whether the question can be answered or not, and (d) if appropriate, the answer to the question.
+
+1. What is the probability, with 4 randomly selected men, of observing a mean of more than 12 mins?
+1. What is the probability that a randomly selected man will fall asleep in more than 12 mins?
+1. What is the probability that 25 randomly selected will have a mean time to fall asleep of more than 15.5 minutes?
+
+----
+
 ## Reproductive Habits of Roe Deer
 <img src="zimgs/roe-deer-fawn.jpg" alt="Roe Deer Fawn" class="img-right">
 
