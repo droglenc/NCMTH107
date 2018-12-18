@@ -8,11 +8,8 @@ css: "/css/modules.css"
 
 
 <hr />
-<p class="bg-warn">
-Please work in <a href="SamplingDist_CE_Groups.html">these groups</a> on this and the next class exercise.
-</p>
-<div id="constructing-a-sampling-distribution" class="section level2">
-<h2>Constructing a Sampling Distribution</h2>
+<div id="construct-sampling-distributions" class="section level2">
+<h2>Construct Sampling Distributions</h2>
 <p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/calculator-1.jpg" alt="Calculations" class="img-right"> Use the very simple population of five individuals with the following values – 12, 14, 16, 18, 20 – to answer the following questions. [<em>See the hints further below for how to efficiently make these calculations using R (rather than your calculator).</em>]</p>
 <ol>
 <li>Compute the center and dispersion (to three decimals) of this population. Label each result with appropriate symbols.</li>
@@ -30,22 +27,14 @@ Please work in <a href="SamplingDist_CE_Groups.html">these groups</a> on this an
 <p class="bg-info">
 <strong>Hint:</strong> the mean and standard deviation of a small set of numbers can be efficiently computed by entering the numbers into a vector in R (using <code>c()</code>) and submitting that vector to <code>Summarize()</code> from <code>NCStats</code>.
 </p>
-<pre class="r"><code>&gt; popn &lt;- c(1,2,3,4,5)           # dummy data as an example
+<pre class="r"><code>&gt; popn &lt;- c(12,14,16,18,20)      # dummy data as an example
 &gt; Summarize(popn,digits=3)       # population summaries</code></pre>
-<pre><code>     n   mean     sd    min     Q1 median     Q3    max 
- 5.000  3.000  1.581  1.000  2.000  3.000  4.000  5.000 </code></pre>
 <p class="bg-info">
 <strong>Hint:</strong> The samples, means of each sample, and the summaries of those means can be efficiently computed from the population values entered in <code>popn</code> as shown below.
 </p>
-<pre class="r"><code>&gt; ( nums2 &lt;- combn(popn,2) )     # all combos of n=2 from popn</code></pre>
-<pre><code>     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
-[1,]    1    1    1    1    2    2    2    3    3     4
-[2,]    2    3    4    5    3    4    5    4    5     5</code></pre>
-<pre class="r"><code>&gt; ( mns2 &lt;- combn(popn,2,mean) ) # mean of above (all combos of n=2)</code></pre>
-<pre><code> [1] 1.5 2.0 2.5 3.0 2.5 3.0 3.5 3.5 4.0 4.5</code></pre>
-<pre class="r"><code>&gt; Summarize(mns2,digits=2)       # summarized mean/sd of means</code></pre>
-<pre><code>     n   mean     sd    min     Q1 median     Q3    max 
- 10.00   3.00   0.91   1.50   2.50   3.00   3.50   4.50 </code></pre>
+<pre class="r"><code>&gt; ( nums2 &lt;- combn(popn,2) )     # all combos of n=2 from popn
+&gt; ( mns2 &lt;- combn(popn,2,mean) ) # mean of above (all combos of n=2)
+&gt; Summarize(mns2,digits=2)       # summarized mean/sd of means</code></pre>
 <hr />
 <div class="text-center">
 <ul class="pagination pagination-lg">

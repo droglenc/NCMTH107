@@ -24,9 +24,7 @@ source("../../rhelpers/knitr_setup.R")
 
 ----
 
-<p class="bg-warn">Please work in <a href="SamplingDist_CE_Groups.html">these groups</a> on this and the next class exercise.</p>
-
-## Constructing a Sampling Distribution
+## Construct Sampling Distributions
 <img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/calculator-1.jpg" alt="Calculations" class="img-right">
 Use the very simple population of five individuals with the following values -- 12, 14, 16, 18, 20 -- to answer the following questions. [*See the hints further below for how to efficiently make these calculations using R (rather than your calculator).*]
 
@@ -44,14 +42,14 @@ Use the very simple population of five individuals with the following values -- 
 
 <p class="bg-info"><strong>Hint:</strong> the mean and standard deviation of a small set of numbers can be efficiently computed by entering the numbers into a vector in R (using <code>c()</code>) and submitting that vector to <code>Summarize()</code> from <code>NCStats</code>.</p>
 
-```{r}
-popn <- c(1,2,3,4,5)           # dummy data as an example
+```{r results='hide'}
+popn <- c(12,14,16,18,20)      # dummy data as an example
 Summarize(popn,digits=3)       # population summaries
 ```
 
 <p class="bg-info"><strong>Hint:</strong> The samples, means of each sample, and the summaries of those means can be efficiently computed from the population values entered in <code>popn</code> as shown below.</p>
 
-```{r}
+```{r results='hide'}
 ( nums2 <- combn(popn,2) )     # all combos of n=2 from popn
 ( mns2 <- combn(popn,2,mean) ) # mean of above (all combos of n=2)
 Summarize(mns2,digits=2)       # summarized mean/sd of means
