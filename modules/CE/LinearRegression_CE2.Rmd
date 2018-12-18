@@ -1,11 +1,14 @@
 ---
 layout: page
 title: Exercises
-subtitle: Linear Regression
+subtitle: Linear Regression 2
 author: Derek H. Ogle
 css: "/css/modules.css"
 output:
   html_document:
+    fig_height: 3.5
+    fig_width: 3.5
+    lib_dir: zlibs
     self_contained: no
 ---
 
@@ -23,55 +26,53 @@ source("../../rhelpers/knitr_setup.R")
 
 ----
 
-## Equation of the Line II
+## Urban Runoff
+<img src="zimgs/runoff.jpg" alt="Grand Haven plume" class="img-right">
+Urbanization poses a major threat to stream and watershed ecosystems.  One aspect of urbanization is the conversion of natural areas to land with impervious surfaces, thus increasing runoff of rain and, likely, pollutants.  A University of Washington researcher recorded the percent of impervious land and the benthic index of biotic integrity (IBI) for 14 areas in the state of Washington.  The IBI has been described as a measure of "the capability of supporting and maintaining a balanced, integrated, adaptive community of organisms having a species composition and functional organization comparable to that of natural habitat in the region."  In this example, the researchers were attempting to identify how the percentage of impervious surfaces in the area effects the IBI.  The data for this study are below (note that much more information can be obtained at the [QELP site](http://www.seattlecentral.edu/qelp/sets/077/077.html#About).
 
-For each situation below, identify the (a) response variable, (b) explanatory variable, (c) slope, and (d) intercept; interpret the (e) slope and (f) intercept; (g) construct a valid prediction (and answer the question you construct); and (h) identify what an extrapolation would be.
+<pre>
+imperv   60 43 43 34 27 25 21 18 11  8  8  8  7  7  5  4  2
+IBI       9 11 13 23 31 31 21 23 27 37 39 29 31 43 33 35 37
+</pre>
 
-1. [Poole and Carpenter (1980)](http://www.publish.csiro.au/?paper=ZO9800607) used nasal length (*mm multiplied by 10*) to predict nasal width (*mm multiplied by 10*) of Grey Kangaroos (*Macropus fuliginosus*). The resulting best fit line was Y=0.2876*X+46.451 for 450<X<900 and 180<Y<320.
-
-----
-
-## Estimating Fishing Pressure
-<img src="zimgs/boat-launch.jpg" alt="Fishing Pressure" class="img-right">
-
-Wyoming Fish and Game researchers would like to be able to predict monthly fishing pressure (total number of angler-hours) with an index count of the number of vehicles in lake access parking lots because the latter is much cheaper to measure than the former. Towards this end they examined the relationship between pressure and index count on weekdays of Alcova Reservoir. Use the data in AlcovaRes.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/AlcovaRes.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/AlcovaRes_meta.txt)), **properly filtered to include only the data from the weekdays**, to construct results that can be used to answer the questions below.
-
-1. What is the response variable?
-1. What is the explanatory variable?
-1. In terms of the variables of this problem, what is the equation of the best-fit line?
-1. In terms of the variables of this problem, interpret the value of the slope.
-1. In terms of the variables of this problem, interpret the value of the intercept.
-1. What is the predicted pressure for an index count of 20 vehicles?
-1. What is the predicted pressure for an index count of 5 vehicles?
-1. What is the residual if the pressure is 5100 and the index count is 8 vehicles?
-1. What is the correlation coefficient between pressure and index count?
-1. What proportion of the variability in pressure is explained by knowing the index count?
-1. How much will the pressure estimate be under-predicted, on average, if the number of vehicles is accidentally under-counted by two vehicles?
-1. What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?
-
-----
-
-## Cafe Sales
-<img src="zimgs/cafe.jpg" alt="Cafe" class="img-right">
-[DePaolo and Robinson (2011)](http://www.amstat.org/publications/jse/v19n1/depaolo.pdf) reported on data collected from a cafe run by business students at Indiana State University.  The cafe was begun because a commercial vendor had closed a similar business.  The group of business students opened a replacement business and carefully monitored sales and costs over a ten-week period during the spring semester of 2010.  The students recorded extensive data in [cafedata.xls](http://www.amstat.org/publications/jse/v19n1/cafedata.xls) ([alt. link to data](http://www.sic.edu/files/uploads/global/Math_and_Science_Division/Math_141/Cafedata.xls)) that is described [in detail here](http://www.amstat.org/publications/jse/v19n1/cafedata_documentation.txt).  One aspect of their study was to record the total number of coffees and sodas sold per day and the maximum daily temperature (F).  For this exercise, determine how coffee sales are impacted by maximum daily temperature.
-
-Download these Excel data with the line from above, rename the variables (column headings) to include no spaces, add a variable that represents the days since start of the cafe, save the file in CSV format, load the data into R, **refactor** the day of the week variable to be in proper order ([see this FAQ](../resources/FAQ/FAQs/reorder-levels.html)), and answer the questions below.  [*Note that these are the same data that you entered in a [previous class exercise](BEDAQuant_CE4.html#cafe-sales).*]
+Load these data into R to answer the questions below.  [*Note that these are the same data that you entered in a [previous class exercise](BEDAQuant_CE1.html#urban-runoff).*]
 
 1. In terms of the variables of this problem, what is the equation of the best-fit line?
 1. In terms of the variables of this problem, INTERPRET the value of the slope?
 1. In terms of the variables of this problem, INTERPRET the value of the y-intercept?
-1. What is the predicted coffee sales when the maximum temperature is 40?
-1. What is the predicted coffee sales when the maximum temperature is 90?
-1. What is the residual if coffee sales were 30 and the maxmum temperature was 40?
-1. What is the correlation coefficient between coffee sales and maximum temperature?
-1. What proportion of the variability in coffee sales is explained by knowing the maximum temperature?
+1. What is the predicted IBI for an impervious surface percentage of 80%?
+1. What is the predicted IBI for an impervious surface percentage of 20%?
+1. What is the residual if the impervious surface percentage is 30 and the IBI is 20?
+1. How much will the IBI change if the percentage of impervious surface is decreased by 30%?
+1. What is the correlation coefficient between IBI and the percentage of impervious surface?
+1. What proportion of the variability in IBI is explained by knowing the percentage of impervious surface?
 1. What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?
+
+----
+
+## Sign Legibility and Age
+<img src="zimgs/blurredsign.jpg" alt="Blurred Sign" class="img-right">
+In a study of the legibility and visibility of highway signs, a Pennsylvania research firm determined the maximum distance at which each of 30 drivers could read a newly designed sign. The participants in the study were from 18 to 82 years old. The government agency that funded the research hoped to improve highway safety for older drivers and wanted to examine the relationship between age and sign legibility distance. Use the data in vision.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/vision.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/vision_meta.txt)) to construct results that can be used to answer the questions below. [*Example from [Utts and Heckard, Mind on Statistics](http://www.cengage.com/c/mind-on-statistics-5e-utts)*].
+
+1. What is the response variable? [*Hint: Read the rest of the questions before answering this question.*]
+1. What is the explanatory variable?
+1. In terms of the variables of this problem, what is the equation of the best-fit line?
+1. In terms of the variables of this problem, interpret the value of the slope.
+1. In terms of the variables of this problem, interpret the value of the intercept.
+1. What is the predicted maximum distance to see the sign for a 40-year-old driver?
+1. What is the predicted maximum distance to see the sign for a 90-year-old driver
+1. What is the residual if the age of the driver is 50 and the maximum distance is 410 ft?
+1. What is the correlation coefficient between age and maximum distance to see the sign?
+1. What proportion of the variability in maximum distance to see the sign is explained by knowing the age of the driver?
+1. How much will the predicted maximum distance to see the sign change if the driver's age increased by ten years?
+1. What aspect of this regression analysis concerns you? [*Hint: consider the regression assumptions*]?
 
 ----
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="../LinearRegression.html">^</a></li>
   <li><a href="LinearRegression_CE1.html">1</a></li>
+  <li><a href="../LinearRegression.html">^</a></li>
   <li class="active"><a href="#">2</a></li>
+  <li><a href="LinearRegression_CE3.html">3</a></li>
 </ul>
