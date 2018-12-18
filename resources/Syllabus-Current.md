@@ -33,7 +33,7 @@ What you learn in this <strong>Statistical Concepts and Analysis</strong> class 
 
 * [Catalog Description](#description) and [Learning Outcomes](#learning-outcomes)
 * [Assistance](#assistance) -- [Instructor](#instructor--Derek-Ogle), [Tutors](#tutors), [Accommodations](#accommodations), and [Academic Alerts](#academic-alerts)
-* [Grading](#grading) -- [Preparation Checks](#preparation-checks), [Participation](#participation), [Quizzes](#quizzes), [Extra Credit](#extra-credit), [Overall Grade](#overall-grade)
+* [Grading](#grading) -- [Preparation Checks](#preparation-checks), [Homework](#homework), [Participation](#participation), [Quizzes](#quizzes), [Extra Credit](#extra-credit), [Overall Grade](#overall-grade)
 * [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
 
 
