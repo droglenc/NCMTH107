@@ -28,4 +28,4 @@ LDbw1n2 <- filterD(firedf,litdep>1,litdep<2)
 headtail(LDbw1n2)
 
 
-# Script created at 2018-01-19 16:19:27
+# Script created at 2018-12-17 20:49:53
