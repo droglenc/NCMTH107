@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Exercises
-subtitle: 2-Sample t-test
+subtitle: 2-Sample t-test 3
 css: "/css/modules.css"
 ---
 
@@ -52,6 +52,7 @@ For the same situations above, (a) identify the level of confidence; (b) whether
 <ul class="pagination pagination-lg">
   <li><a href="../2Samplet.html">^</a></li>
   <li><a href="2Samplet_CE1.html">1</a></li>
-  <li class="active"><a href="#">2</a></li>
+  <li><a href="2Samplet_CE2.html">2</a></li>
+  <li class="active"><a href="#">3</a></li>
 </ul>
 </div>
