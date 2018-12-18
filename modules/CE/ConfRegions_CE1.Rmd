@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Activity
-subtitle: Confidence Regions
+title: Exercise
+subtitle: Confidence Regions 1
 author: Derek H. Ogle
 css: "/css/modules.css"
 output:
@@ -14,7 +14,7 @@ output:
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/")
 source("../../rhelpers/rhelpers.R")
-modHTML("ConfRegions_GA")
+modHTML("ConfRegions_CE1")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
@@ -25,9 +25,9 @@ set.seed(101)
 
 ----
 
-## Understanding the Concept of Confidence Intervals
+## The Concept of Confidence Intervals
 <img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/computer-1.jpg" alt="Simulations" class="img-right">
-The concept of confidence in a confidence interval (CI) is subtle because it depends on thinking about taking all possible samples from a known population distribution, computing the CI for each sample, and then determining if the CI captures the parameter or not. This thought-process is complicated by the fact that the parameter is unknown and taking all possible samples is impossible. The `ciSim()` function (with no arguments) can simulate this process and provide a graphical result of the CIs relative to the parameter from many (but not all possible) samples.
+The concept of confidence in a confidence interval (CI) is subtle because it depends on thinking about taking all possible samples from a known population distribution, computing the CI for each sample, and then determining if the CI captures the parameter or not. This thought process is complicated by the fact that the parameter is unknown, and taking all possible samples is impossible. The `ciSim()` function (with no arguments) can simulate this process and provide a graphical result of the CIs relative to the parameter from many (but not all possible) samples.
 
 The plot below is an example from `ciSim()`. The known population mean is depicted by the solid vertical line (&mu;=100 in this example). Each horizontal line is one CI (the endpoints of the horizontal line is the CI and the point in the middle is the sample mean). The CIs that do not capture &mu; are in red. The percentage of CIs that capture &mu; is shown at the top along with the margin-of-error (m.e.), or half the width of the CI.
 
@@ -41,7 +41,7 @@ The table below can be used to record your results from `ciSim()` for different 
 
 <table class="table table-bordered table-condensed">
 <thead>
-<tr><th></th><th colspan=2 class="text-center">99% Confidence</th><th colspan=2 class="text-center">95% Confidence</th><th colspan=2 class="text-center">90% Confidence</th></tr>
+<tr><th></th><th colspan=2 class="text-center">90% Confidence</th><th colspan=2 class="text-center">95% Confidence</th><th colspan=2 class="text-center">99% Confidence</th></tr>
 <tr><th>n=</th><th class="text-center">% contain &mu;</th><th class="text-center">m.e.</th><th class="text-center">% contain &mu;</th><th class="text-center">m.e.</th><th class="text-center">% contain &mu;</th><th class="text-center">m.e.</th></tr>
 </thead>
 <tbody>
@@ -58,3 +58,12 @@ The table below can be used to record your results from `ciSim()` for different 
 1. What two things can you, as a statistician, do to make a confidence interval narrower (i.e., reduce the margin-of-error)? Are there any negative consequences to either of decision?
 
 ----
+
+<div class="text-center">
+<ul class="pagination pagination-lg">
+  <li><a href="../ConfRegions.html">^</a></li>
+  <li class="active"><a href="#">1</a></li>
+  <li><a href="ConfRegions_CE2.html">2</a></li>
+  <li><a href="ConfRegions_CE3.html">3</a></li>
+</ul>
+</div>
