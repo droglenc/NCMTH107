@@ -51,8 +51,8 @@ Enter these data into a CSV file with columns labeled as `lstrf` and `shade`. Re
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="../FilteringDatainR.html">^</a></li>
-  <li><a href="FilteringDatainR_CE1.html">1</a></li>
+  <li><a href="../FilteringDataInR.html">^</a></li>
+  <li><a href="FilteringDataInR_CE1.html">1</a></li>
   <li class="active"><a href="#">2</a></li>
 </ul>
 </div>

@@ -35,8 +35,8 @@ exposure med med low med med med med med med med
 
 <div class="text-center">
 <ul class="pagination pagination-lg">
-  <li><a href="../FilteringDatainR.html">^</a></li>
+  <li><a href="../FilteringDataInR.html">^</a></li>
   <li class="active"><a href="#">1</a></li>
-  <li><a href="FilteringDatainR_CE2.html">2</a></li>
+  <li><a href="FilteringDataInR_CE2.html">2</a></li>
 </ul>
 </div>
