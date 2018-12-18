@@ -125,7 +125,7 @@ You will be asked to prepare for each class period by reading the reading and wa
 ### Homework
 
 <img class="img-right" src="../img/homework.png">
-Each day you will be required to turn in the work you completed on the exercises from the previous class period. Most of these exercises will likely be completed in class by most of you, as long as you remained focused and ask for help in class. However, some of you may need to work outside of class to complete all of the work. The homework you turn in will largely be graded based on "completenese" according to the following rubric.
+Each day you will be required to turn in work on the exercises from the previous class period. Most of this work will likely be completed in class by most of you, as long as you remained focused and ask for help in class. However, some of you may need to work outside of class or seek additional help from me or the tutors to complete all of this work. The homework you turn in will be graded based on "completeness" according to the following rubric.
 
 <div class="container-fluid">
   <table class="table table-bordered">
@@ -133,12 +133,14 @@ Each day you will be required to turn in the work you completed on the exercises
     <tr class="info"><th>4 points</th><th>2 point2</th><th>0 points</th></tr>
   </thead>
   <tbody>
-    <tr><td>All parts of the exercise were completed in full. Work was neat and orderly.</td><td>Some parts of the exerces were either not attempted or were incomplete. Work was as neat and orderly as it should be.</td><td>Very little of the exercise was completed.</td></tr>
+    <tr><td>All parts of the exercise were completed in full. Work was neat and orderly.</td><td>Some parts of the exercise were either not attempted or were incomplete. Work was not as neat and orderly as it should have been.</td><td>Very little of the exercise was completed.</td></tr>
   </tbody>
   </table>
 </div>
 
-You are allowed to work together on exercises in and out of class but substantial copying of the work of others does not lead to learning. If I suspect that you are substantially copying someone else's work I will address this with you once. After that you, and the person you copied from, will earn zeroes on the homework that was copied.
+You are allowed to work with other students on exercises in and out of class but substantial copying of the work of others does not lead to learning. If I suspect that you are substantially copying someone else's work I will address this with you once. After that, you and the person you copied from will earn zeroes on the homework that was copied.
+
+**If you meet with me in my office before the end of the second week of class**, your lowest four homework grades will be excluded when computing your final grade.
 
 ### Participation
 
@@ -198,29 +200,31 @@ An overall score will be computed from the items and associated weights listed i
 <form name="GRADECALC">
 <table class="grader" width="90%">
 <tr><th width="14%"></th>
-<th width="13%"><a href="#preparation-checks">Prep<br>Check</a></th>
-<th width="13%"><a href="#participation">Partici-<br>pation</a></th>
-<th width="12%"><a href="#quizzes">Quiz 1</a></th>
-<th width="12%"><a href="#quizzes">Quiz 2</a></th>
-<th width="12%"><a href="#quizzes">Quiz 3</a></th>
-<th width="12%"><a href="#quizzes">Quiz 4</a></th>
-<th width="12%"><a href="#quizzes">Final</a></th>
+<th width="12%"><a href="#preparation-checks">Prep<br>Check</a></th>
+<th width="12%"><a href="#participation">Home-<br>work</a></th>
+<th width="12%"><a href="#participation">Partici-<br>pation</a></th>
+<th width="10%"><a href="#quizzes">Quiz 1</a></th>
+<th width="10%"><a href="#quizzes">Quiz 2</a></th>
+<th width="10%"><a href="#quizzes">Quiz 3</a></th>
+<th width="10%"><a href="#quizzes">Quiz 4</a></th>
+<th width="10%"><a href="#quizzes">Final</a></th>
 </tr>
 
 <tr><th>Weight</th>
-<th>10%</th><th>10%</th><th>15%</th><th>12.5%</th><th>12.5%</th><th>10%</th><th>30%</th></tr>
+<th>8%</th><th>8%</th><th>8%</th><th>15%</th><th>13%</th><th>13%</th><th>10%</th><th>25%</th></tr>
 
 <tr><th>Percent</th>
-<td><input type="text" name="READ_SC" size="3" tabindex="1" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="PREP_SC" size="3" tabindex="1" onchange="calc_grade(this.form)"></td>
 <td><input type="text" name="PART_SC" size="3" tabindex="2" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="Q1_SC" size="3" tabindex="3" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="Q2_SC" size="3" tabindex="4" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="Q3_SC" size="3" tabindex="5" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="Q4_SC" size="3" tabindex="6" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="FNL_SC" size="3" tabindex="7" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="HW_SC" size="3" tabindex="3" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="Q1_SC" size="3" tabindex="4" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="Q2_SC" size="3" tabindex="5" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="Q3_SC" size="3" tabindex="6" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="Q4_SC" size="3" tabindex="7" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="FNL_SC" size="3" tabindex="8" onchange="calc_grade(this.form)"></td>
 </tr>
 
-<tr><th colspan="4">Overall Percentage: <input type="text" name="SCORE" size="4"></th>
+<tr><th colspan="5">Overall Percentage: <input type="text" name="SCORE" size="4"></th>
 <th colspan="4">Projected Grade: <input type="text" name="GRADE" size="2"></th></tr>
 </table>
 </form>

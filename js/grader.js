@@ -12,8 +12,8 @@ function roundDec(x, dcml)  {
 //**  Sets weights for assessment components                          **
 //**********************************************************************
 function get_wghts() {
-  READ_WT = 0.10; PART_WT = 0.10; Q1_WT = 0.15; Q2_WT = 0.125;
-  Q3_WT = 0.125;	Q4_WT = 0.10;	FNL_WT = 0.3;
+  PREP_WT = 0.08; HW_WT = 0.08; PART_WT = 0.08; Q1_WT = 0.15;
+  Q2_WT = 0.13; Q3_WT = 0.13;	Q4_WT = 0.10;	FNL_WT = 0.25;
 }
 
 //**********************************************************************
@@ -37,10 +37,15 @@ function find_grade(form, pts, outof) {
 function calc_grade(form) {
 	get_wghts();
 	pts = 0; outof=0;
-	temp = form.READ_SC.value;
+	temp = form.PREP_SC.value;
 	if (temp!=="") {
 		if (temp > 1) {temp=temp/100};
-		pts += READ_WT*temp;	outof += READ_WT;
+		pts += PREP_WT*temp;	outof += PREP_WT;
+	}
+	temp = form.HW_SC.value;
+	if (temp!=="") {
+		if (temp > 1) {temp=temp/100};
+		pts += HW_WT*temp;	outof += HW_WT;
 	}
 	temp = form.PART_SC.value;
 	if (temp!=="") {
