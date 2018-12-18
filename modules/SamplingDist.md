@@ -50,8 +50,7 @@ Use the materials below to answer the questions on [this preparation guide](Samp
 
 ## Practice
 
-* Group Activities: [1](CE/SamplingDist_CE1) and [2](CE/SamplingDist_CE2)
-* [Exercises](CE/SamplingDist_CE3) ... [ANSWER KEY](CE/KEY_SamplingDist_CE)
+* [Exercises I](CE/SamplingDist_CE1) / [Exercises II](CE/SamplingDist_CE2) / [Exercises III](CE/SamplingDist_CE3) ... [ANSWER KEY](CE/KEY_SamplingDist_CE)
 * [Review Exercises](RE/SamplingDist_RevEx)
 
 ----
