@@ -41,7 +41,7 @@ z.test(dfobj$HMPG,mu=26,alt="greater",conf.level=0.95,sd=6)
 
 t.test(dfobj$HMPG,mu=26,alt="two.sided",conf.level=0.99)
 
-levenesTest(HMPG~Domestic,data=dfobj)
+levenesTest(HMPG~Manual,data=dfobj)
 t.test(HMPG~Manual,data=dfobj,alt="less",conf.level=0.99,var.equal=TRUE)
 
 exp <- c(1,1,1,1,1,1)/6
