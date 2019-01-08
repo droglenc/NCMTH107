@@ -125,12 +125,12 @@ You will be asked to prepare for each class period by reading the reading and wa
 ### Homework
 
 <img class="img-right" src="../img/homework.png">
-Each day you will be required to turn in work on the exercises from the previous class period. Most of this work will likely be completed in class by most of you, as long as you remained focused and ask for help in class. However, some of you may need to work outside of class or seek additional help from me or the tutors to complete all of this work. The homework you turn in will be graded based on "completeness" according to the following rubric.
+Each day you will be required to turn in work on the exercises from the previous class period. Most of this work will likely be completed in class by most of you, as long as you remained focused and asked for help in class. However, some of you may need to work outside of class or seek additional help from me or the tutors to complete all of this work. The homework you turn in will be graded based on "completeness" according to the following rubric.
 
 <div class="container-fluid">
   <table class="table table-bordered">
   <thead>
-    <tr class="info"><th>4 points</th><th>2 point2</th><th>0 points</th></tr>
+    <tr class="info"><th>4 points</th><th>3-1 points</th><th>0 points</th></tr>
   </thead>
   <tbody>
     <tr><td>All parts of the exercise were completed in full. Work was neat and orderly.</td><td>Some parts of the exercise were either not attempted or were incomplete. Work was not as neat and orderly as it should have been.</td><td>Very little of the exercise was completed.</td></tr>
@@ -145,17 +145,15 @@ You are allowed to work with other students on exercises in and out of class but
 ### Participation
 
 <img class="img-right" src="../img/participation.jpg" alt="Participation">
-This class is taught in an active learning format. Outside of class you will be asked to prepare a module for each class period (as described above) and complete exercises begun in class. Your preparation outside of class will be assessed by me periodically collecting evidence for your preparation (*without prior notice*). Such evidence may include your written answers to the preparation guide (described above) or your written answers to exercises that were to be completed outside of class (which I will have announced at the end of the previous class period). You will earn full points for these assessments by simply preparing your written notes or doing the class exercise at least mostly correctly.
-
-In class you will be asked to actively participate (listen, take notes) in short lectures, work on in-class exercises, ask questions of other students and the instructor, and, occasionally, work in small groups. Our time during class is short and precious, thus you should be focused and attentive during the entire class period. I will assess your level of participation at the end of each class period with the following rubric.
+This class is taught in an active learning format. Outside of class you will be asked to prepare a module for each class period (as described above) and complete exercises begun in class. Your preparation outside of class will be assessed by the daily preparation checks and homeworks assignments. In class you will be asked to actively participate (listen, take notes) in short lectures, work on in-class exercises, ask questions of other students and the instructor, and, occasionally, work in small groups. Our time during class is short and precious, thus you should be focused and attentive during the entire class period. I will assess your level of participation at the end of each class period with the following rubric.
 
 <div class="container-fluid">
   <table class="table table-bordered">
   <thead>
-    <tr class="info"><th>4 points</th><th>2 point</th><th>0 points</th></tr>
+    <tr class="info"><th>4 points</th><th>3-1 points</th><th>0 points</th></tr>
   </thead>
   <tbody>
-    <tr><td>Fully (see below) participated in the day's activities. Properly focused at all times.</td><td>Participated in many, but not all, of the day's activities. Focus waned or was inconsistent. Left between 1-15 mins early.</td><td>Very little active participation in the day's activities. Lacked focus. Left more than 15 mins early.</td></tr>
+    <tr><td>Fully (see below) participated in the day's activities. Properly focused at all times.</td><td>Participated in many, but not all, of the day's activities. Focus waned or was inconsistent. Left early or arrived late by between 1-15 mins.</td><td>Very little active participation in the day's activities. Lacked focus. Left early or arrived late by more than 15 mins.</td></tr>
   </tbody>
   </table>
 </div>
@@ -178,7 +176,7 @@ As a general rule-of-thumb[^2], you are expected to spend 2-3 hours of time outs
 
 
 ### Quizzes
-You will have an opportunity on four mid-term quizzes to demonstrate what you have learned about the most recent material. With this number of quizzes, the material on each quiz will be focused on fewer modules and, thus, more manageable to prepare for. Additionally, a final exam will give you an opportunity to show that you have a synthetic understanding of all material from throughout the course. The final exam will be focused on the larger concepts, applications, and interpretations, and less on the specific details, from throughout the semester. I will provide you with an explicit study guide approximately one week before each quiz and the final exam.
+Four mid-term quizzes will give you an opportunity to demonstrate what you have learned about the most recent material. With this number of quizzes, the material on each quiz will be focused on fewer modules and, thus, more manageable to prepare for. Additionally, a final exam will give you an opportunity to show that you have a synthetic understanding of all material from throughout the course. The final exam will be focused on the larger concepts, applications, and interpretations, and less on specific details, from throughout the semester. I will provide you with an explicit study guide approximately one week before each quiz and the final exam.
 
 Dates for quizzes and the final exam are shown on the [Dates page](Dates-Current.html){:target="_blank"}. Make-up quizzes will be provided only if you have a fixed commitment of sufficient importance that was set before the beginning of the semester or a verifiable medical condition. Please see me immediately if you miss a quiz without my prior approval, but note that you may not be allowed to make up that quiz. **The final exam will NOT be given early.**
 
@@ -249,7 +247,7 @@ I will submit a "midterm grade" for you approximately half-way through the semes
 
 <img class="img-right" src="../img/cell-cheat.jpg" alt="Conduct and Integrity">
 
-My intent is to create a classroom environment where solid learning of Statistics can occur. One part of this environment is a well-organized course structure built upon relevant learning resources and interesting realistic exercises. Another part is my availability to assist you in learning from these resources and exercises. A third part in creating that environment is your conduct within it. My expectations of you are that you will fully participate in the course (see above) and be respectful of all others in the class. At a minimum, I expect you to adhere to the following behaviors:
+My intent is to create a classroom environment where solid learning of statistics can occur. One part of this environment is a well-organized course structure built upon relevant learning resources and interesting realistic exercises. Another part is my availability to assist you in learning from these resources and exercises. A third part in creating that environment is your conduct within it. My expectations of you are that you will fully participate in the course (see above) and be respectful of all others in the class. At a minimum, I expect you to adhere to the following behaviors:
 
 * Please arrive to class on time. If you arrive late, then take the first available seat as quietly as possible. If you need to leave early, then please sit near the exit.
 * Please attend the entire class period. Leaving class early defeats the purpose of the class period, does not take advantage of resources (i.e., the professor) that can significantly help your learning, and does not build statistical stamina. Please take care of your personal needs (e.g., using the restroom) before class so that you can stay focused for the entire class period.
