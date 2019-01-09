@@ -35,7 +35,6 @@ css: "/css/modules.css"
 <ul>
 <li>Are the individuals in your sample identical? Why or why not?</li>
 <li>Write a one or two sentence conclusion about the age of individuals in your sample.</li>
-<li>Write a one or two sentence conclusion about the sex of individuals in your sample.</li>
 <li>Were your conclusions “easy” or “hard” to write? Why? What could you do to make writing your conclusions easier?</li>
 </ul>
 <p> </p>
@@ -46,13 +45,11 @@ css: "/css/modules.css"
 </div>
 <div id="summarize-your-sample" class="section level2">
 <h2>Summarize Your Sample</h2>
-<pre class="r"><code>Summarize(~age,data=samA,digits=1)
-percTable(xtabs(~sex,data=samA),digits=1)</code></pre>
+<pre class="r"><code>Summarize(~age,data=samA,digits=1)</code></pre>
 <ul>
 <li>How was the “mean” age calculated?</li>
 <li>How was the percentage of males calculated?</li>
 <li>Write a one or two sentence conclusion about the age of individuals in your sample.</li>
-<li>Write a one or two sentence conclusion about the sex of individuals in your sample.</li>
 <li>Was it easier to write your conclusions here then previously? Why or why not?</li>
 </ul>
 <p> </p>
@@ -64,11 +61,9 @@ percTable(xtabs(~sex,data=samA),digits=1)</code></pre>
 <div id="obtain-a-second-random-sample" class="section level2">
 <h2>Obtain a Second Random Sample</h2>
 <pre class="r"><code>( samB &lt;- srsdf(ABCens90,n=100) )
-Summarize(~age,data=samB,digits=1)
 percTable(xtabs(~sex,data=samB),digits=1)</code></pre>
 <ul>
 <li>Were the mean ages from the two samples identical?</li>
-<li>Were the percentage of females from the two samples identical?</li>
 <li>Are your results (about whether the mean or percentage between samples were identical) typical or expected? Why or why not?</li>
 </ul>
 <p> </p>
@@ -79,11 +74,9 @@ percTable(xtabs(~sex,data=samB),digits=1)</code></pre>
 </div>
 <div id="compare-your-results-to-the-truth" class="section level2">
 <h2>Compare Your Results to the Truth</h2>
-<pre class="r"><code>Summarize(~age,data=ABCens90,digits=1)
-percTable(xtabs(~sex,data=ABCens90),digits=1)</code></pre>
+<pre class="r"><code>Summarize(~age,data=ABCens90,digits=1)</code></pre>
 <ul>
 <li>Did your sample mean ages exactly equal this true value for the population?</li>
-<li>Did your sample percentages of females exactly equal this true percentage of females in the population?</li>
 <li>Are your results (about whether the summaries from your sample matched the summary from the population) typical or expected? Why or why not?</li>
 </ul>
 <p> </p>
@@ -94,7 +87,7 @@ percTable(xtabs(~sex,data=ABCens90),digits=1)</code></pre>
 </div>
 <div id="examine-many-random-samples-of-residents-from-ashland-bayfield-counties" class="section level2">
 <h2>Examine Many Random Samples of Residents from Ashland-Bayfield Counties</h2>
-<p><img src="WhyStats_CExmpl1_files/figure-html/unnamed-chunk-7-1.png" width="336" /><img src="WhyStats_CExmpl1_files/figure-html/unnamed-chunk-7-2.png" width="336" /></p>
+<p><img src="WhyStats_CExmpl1_files/figure-html/unnamed-chunk-7-1.png" width="336" /></p>
 </div>
 
 

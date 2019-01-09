@@ -58,7 +58,6 @@ library(NCStats)
 
 * Are the individuals in your sample identical? Why or why not?
 * Write a one or two sentence conclusion about the age of individuals in your sample.
-* Write a one or two sentence conclusion about the sex of individuals in your sample.
 * Were your conclusions "easy" or "hard" to write? Why? What could you do to make writing your conclusions easier?
 
 \ 
@@ -69,7 +68,7 @@ library(NCStats)
 \ 
 
 ## Summarize Your Sample
-```{r results='hide', prompt=FALSE}
+```{r echo=-2, results='hide', prompt=FALSE}
 Summarize(~age,data=samA,digits=1)
 percTable(xtabs(~sex,data=samA),digits=1)
 ```
@@ -77,7 +76,6 @@ percTable(xtabs(~sex,data=samA),digits=1)
 * How was the "mean" age calculated?
 * How was the percentage of males calculated?
 * Write a one or two sentence conclusion about the age of individuals in your sample.
-* Write a one or two sentence conclusion about the sex of individuals in your sample.
 * Was it easier to write your conclusions here then previously? Why or why not?
 
 \ 
@@ -88,14 +86,13 @@ percTable(xtabs(~sex,data=samA),digits=1)
 \ 
 
 ## Obtain a Second Random Sample
-```{r results='hide', prompt=FALSE}
+```{r echo=-2, results='hide', prompt=FALSE}
 ( samB <- srsdf(ABCens90,n=100) )
 Summarize(~age,data=samB,digits=1)
 percTable(xtabs(~sex,data=samB),digits=1)
 ```
 
 * Were the mean ages from the two samples identical?
-* Were the percentage of females from the two samples identical?
 * Are your results (about whether the mean or percentage between samples were identical) typical or expected?  Why or why not?
 
 \ 
@@ -106,13 +103,12 @@ percTable(xtabs(~sex,data=samB),digits=1)
 \ 
 
 ## Compare Your Results to the Truth
-```{r, results='hide', prompt=FALSE}
+```{r, echo=-2, results='hide', prompt=FALSE}
 Summarize(~age,data=ABCens90,digits=1)
 percTable(xtabs(~sex,data=ABCens90),digits=1)
 ```
 
 * Did your sample mean ages exactly equal this true value for the population?
-* Did your sample percentages of females exactly equal this true percentage of females in the population?
 * Are your results (about whether the summaries from your sample matched the summary from the population) typical or expected?  Why or why not?
 
 \ 
@@ -123,7 +119,7 @@ percTable(xtabs(~sex,data=ABCens90),digits=1)
 \ 
 
 ## Examine Many Random Samples of Residents from Ashland-Bayfield Counties
-```{r echo=FALSE, results='hide', par1=TRUE}
+```{r echo=FALSE, eval=-c(3:5), results='hide', par1=TRUE}
 set.seed(14787834)
 hist(~replicate(1000,mean(srsdf(ABCens90,100)$age)),xlab="Mean Age",breaks=15)
 abline(v=mean(ABCens90$age),lwd=2,lty=2)
