@@ -49,10 +49,6 @@ Describe a variable that is of interest to you for each of the four variable typ
 
 ----
 
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="../FoundationalDefns.html">^</a></li>
-  <li class="active"><a href="#">1</a></li>
-  <li><a href="FoundationalDefns_CE2.html">2</a></li>
-</ul>
-</div>
+[Additional exercises for more practice if time permits.](Foundational_Defns_CE2)
+
+----

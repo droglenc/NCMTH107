@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Exercises
-subtitle: Foundational Definitions II
+title: Additional Exercises
+subtitle: Foundational Definitions
 css: "/css/modules.css"
 ---
 
@@ -43,11 +43,3 @@ Two Northland students were interested in whether the average amount of playing 
 1. What type of variable is the variable? [*Be specific*]
 
 ----
-
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="../FoundationalDefns.html">^</a></li>
-  <li><a href="FoundationalDefns_CE1.html">1</a></li>
-  <li class="active"><a href="#">2</a></li>
-</ul>
-</div>
