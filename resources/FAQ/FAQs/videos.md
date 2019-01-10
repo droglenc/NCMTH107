@@ -16,6 +16,8 @@ The Vimeo videos require you to use the password "**NCStats**" (note capitalizat
 
 * [![Vimeo](../../../img/dhovid.png) Randomization in R](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins] [![Web](../../../img/web.png)](../../../modules/HO/DataProduction_RHO.html){:target="_blank"} [![R](../../../img/Rlogo.png)](../../../modules/HO/DataProduction_RHO.R){:target="_blank"}
 
+&nbsp;
+
 ----
 
 ## YouTube Videos
