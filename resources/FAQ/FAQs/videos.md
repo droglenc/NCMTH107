@@ -23,8 +23,9 @@ These solutions depend on the type of browser you use and are categorized below.
 
 * [![YouTube Link](../../../img/youtube.png) Types of Conclusions](https://www.youtube.com/watch?v=5zkg1w5zoQ0){:target="_blank"} [3 mins; *start at 26:37*]
 
+&nbsp;
 
-#### Internet Explorer
+#### Internet Explorer / Edge
 It appears that the videos open without issue, although I have experienced some delay in the videos starting.
 
 
