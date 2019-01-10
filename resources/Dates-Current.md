@@ -46,7 +46,7 @@ Note that some of the more distant dates are subject to change.
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 28-Jan</td>
-    <td colspan="2"><span style="color:red">First Quiz</span> (<a href="QuizGuide/quiz1.html">Study Guide</a>)</td></tr>
+    <td colspan="2"><span style="color:red">First Quiz</span> (<a href="QuizGuide/quiz.html">Study Guide</a>)</td></tr>
 <tr><td>W 30-Jan</td>
     <td><a href="../modules/NormalDist">Normal Distributions</a></td>
     <td>--</td></tr>
@@ -70,7 +70,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/LinearRegression">Linear Regression</a></td>
     <td>--</td></tr>
 <tr><td>W 13-Feb</td>
-    <td colspan="2"><span style="color:red">Second Quiz</span> (<a href="QuizGuide/quiz2.html">Study Guide</a>)</td></tr>
+    <td colspan="2"><span style="color:red">Second Quiz</span> (<a href="QuizGuide/quiz.html">Study Guide</a>)</td></tr>
 <tr><td>F 15-Feb</td>
     <td><a href="../modules/SamplingDist">Sampling Distributions</a></td>
     <td>--</td></tr>
@@ -120,7 +120,7 @@ Note that some of the more distant dates are subject to change.
     <td>--</td>
     <td>--</td></tr>
 <tr><td>W 20-Mar</td>
-    <td colspan="2"><span style="color:red">Third Quiz</span> (<a href="QuizGuide/quiz3.html">Study Guide</a>)</td></tr>
+    <td colspan="2"><span style="color:red">Third Quiz</span> (<a href="QuizGuide/quiz.html">Study Guide</a>)</td></tr>
 <tr><td>F 22-Mar</td>
     <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
     <td>--</td></tr>
@@ -144,7 +144,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td>
     <td>--</td></tr>
 <tr><td>F 5-Apr</td>
-    <td colspan="2"><span style="color:red">Fourth Quiz</span> (<a href="QuizGuide/quiz4.html">Study Guide</a>)</td></tr>
+    <td colspan="2"><span style="color:red">Fourth Quiz</span> (<a href="QuizGuide/quiz.html">Study Guide</a>)</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 8-Apr</td>
