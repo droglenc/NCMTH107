@@ -53,6 +53,6 @@ Describe a variable that is of interest to you for each of the four variable typ
 
 ## Additional Practice
 
-[Here are more exercises for practice if time permits.](Foundational_Defns_CE2)
+[Here are more exercises for practice if time permits.](FoundationalDefns_CE2)
 
 ----
