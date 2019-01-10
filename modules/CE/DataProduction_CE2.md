@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Class Exercise
+title: Additional Exercises
 subtitle: Data Production
 css: "/css/modules.css"
 ---
@@ -47,10 +47,3 @@ A student wanted to see how far she could hit two brands of softballs with three
 1. Describe how you would use randomization in this experiment. Use R to construct a specific randomization using your randomization strategy.
 
 ----
-
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="../DataProduction.html">^</a></li>
-  <li><a href="DataProduction_CE1.html">1</a></li>
-  <li class="active"><a href="#">2</a></li>
-</ul>

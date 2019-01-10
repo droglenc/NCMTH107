@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Class Exercise
-subtitle: Normal Distributions 2
+title: Additional Exercises
+subtitle: Normal Distributions
 css: "/css/modules.css"
 ---
 
@@ -50,7 +50,6 @@ Apple suggests that the battery lifespan (i.e., how many charge-cycles a battery
 <div class="text-center">
 <ul class="pagination pagination-lg">
   <li><a href="../NormalDist.html">^</a></li>
-  <li><a href="NormalDist_CE1.html">1</a></li>
-  <li class="active"><a href="#">2</a></li>
-  <li><a href="NormalDist_CE3.html">3</a></li>
+  <li class="active"><a href="#">1</a></li>
+  <li><a href="NormalDist_CE3.html">2</a></li>
 </ul>

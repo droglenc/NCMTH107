@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Class Exercise
-subtitle: Normal Distributions 3
+title: Additional Exercises
+subtitle: Normal Distributions
 css: "/css/modules.css"
 ---
 
@@ -89,7 +89,6 @@ Male wild Turkeys (*Meleagris gallopavo*) have metatarsal spurs (i.e., bone grow
 <div class="text-center">
 <ul class="pagination pagination-lg">
   <li><a href="../NormalDist.html">^</a></li>
-  <li><a href="NormalDist_CE1.html">1</a></li>
-  <li><a href="NormalDist_CE2.html">2</a></li>
-  <li class="active"><a href="#">3</a></li>
+  <li><a href="NormalDist_CE2.html">1</a></li>
+  <li class="active"><a href="#">2</a></li>
 </ul>

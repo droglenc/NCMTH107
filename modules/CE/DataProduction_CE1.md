@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Class Exercise
+title: Exercises
 subtitle: Data Production
 css: "/css/modules.css"
 ---
@@ -73,11 +73,12 @@ Use this information to answer the questions below.
 1. Physically, what is a replicate (not a number)?
 1. Diagram the experimental setup, including placing the unique number of each replicate in the respective treatments. [*The table can be similar to the one just above section 3.1.5 in the reading. Show your R work for how you placed these individuals in the R appendix.*]
 
+&nbsp;
+
 ----
 
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="../DataProduction.html">^</a></li>
-  <li class="active"><a href="#">1</a></li>
-  <li><a href="DataProduction_CE2.html">2</a></li>
-</ul>
+## Additional Practice
+
+[Here are more exercises for practice if time permits.](DataProduction_CE2)
+
+----
