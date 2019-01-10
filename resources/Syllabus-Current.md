@@ -96,7 +96,7 @@ Two experienced tutors -- Adam Gunnelson and Emily Mader -- are also available (
 <tr><th width="50%"><img src="../img/Adam_F16.jpg"></th><th width="50%"><img src="../img/Emily_F17.jpg"></th></tr>
 <tr><th>Adam Gunnelson</th><th>Emily Mader</th></tr>
 <tr style="vertical-align:top"><td>A chemistry major and math minor, Adam is a bow-tie enthusiast who enjoys helping people with math.</td><td>A math major and physics minor, Emily enjoys playing softball, being outdoors, and, of course, mathematics!</td></tr>
-<tr style="vertical-align:top"><td>Tue 7-9p; Thu 3-5p</td><td>Mon 3-5p<br>Wed 6-8p</td></tr>
+<tr style="vertical-align:top"><td>Tue 7-9p; Thu 3-5p</td><td>Mon 3-5p; Wed 6-8p</td></tr>
 </table>
 
 
