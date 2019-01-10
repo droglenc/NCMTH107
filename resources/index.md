@@ -17,7 +17,7 @@ title: Resources
 1. [FAQ](FAQ/)
 
 ## Software Installation Links
-1. R -- [Windows](http://derekogle.com/IFAR/supplements/installations/InstallRWin.html){:target="_blank"} / [Mac OS](http://derekogle.com/IFAR/supplements/installations/InstallRMac.html){:target="_blank"}
-1. RStudio -- [Windows](http://derekogle.com/IFAR/supplements/installations/InstallRStudioWin.html){:target="_blank"} / [Mac OS](http://derekogle.com/IFAR/supplements/installations/InstallRStudioMac.html){:target="_blank"}
+1. R -- [Windows](http://derekogle.com/IFAR/supplements/installations/InstallRWin.html){:target="_blank"} / [Mac OS](http://derekogle.com/IFAR/supplements/installations/InstallRMac.html){:target="_blank"} / [ChromeBook](FAQ/FAQs/ChromeBook){:target="_blank"}
+1. RStudio -- [Windows](http://derekogle.com/IFAR/supplements/installations/InstallRStudioWin.html){:target="_blank"} / [Mac OS](http://derekogle.com/IFAR/supplements/installations/InstallRStudioMac.html){:target="_blank"} / [ChromeBook](FAQ/FAQs/ChromeBook){:target="_blank"}
 1. [NCStats](https://github.com/droglenc/NCStats#installation){:target="_blank"}
 1. [Installing Other Packages](http://derekogle.com/IFAR/supplements/installations/InstallPackagesRStudio.html){:target="_blank"} [*You will only need to follow these directions if there was an error when installing NCStats in the previous bullet*]
