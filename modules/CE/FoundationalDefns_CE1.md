@@ -47,8 +47,12 @@ As part of their Biology Capstone research, a Northland College student wanted t
 
 Describe a variable that is of interest to you for each of the four variable types (i.e., make up your own variable for each variable type).
 
+&nbsp;
+
 ----
 
-[Additional exercises for more practice if time permits.](Foundational_Defns_CE2)
+## Additional Practice
+
+[Here are more exercises for practice if time permits.](Foundational_Defns_CE2)
 
 ----
