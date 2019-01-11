@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Exercises
+title: Additional Exercises
 subtitle: 1-Sample t-test
 css: "/css/modules.css"
 ---
@@ -50,16 +50,6 @@ The typical thickness of the ozone layer over the Earth's surface is 300 [Dobson
 
 ## Fecal Coliform Counts III
 Use the data in [FecalColiform.csv](FecalColiform.csv) to determine, at the 10% level, if the mean CFU from this event exceeds the 150 CFU/100ml threshold value that would require closing the lake to swimming.  Again, make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../11-steps).
-
-----
-
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="../1Samplet.html">^</a></li>
-  <li><a href="1Samplet_CE1.html">1</a></li>
-  <li class="active"><a href="#">2</a></li>
-</ul>
-</div>
 
 ----
 

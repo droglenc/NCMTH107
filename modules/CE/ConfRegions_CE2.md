@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Exercises
-subtitle: Confidence Regions 2
+subtitle: Confidence Regions II
 css: "/css/modules.css"
 ---
 
@@ -39,16 +39,13 @@ Suppose that you are starting a business and it is important for your business p
 1. How many households must you randomly select to be 90% sure that the sample mean is within 1 minute of the population mean.
 1. How many households must you randomly select to be 95% sure that the sample mean is within 0.5 minutes of the population mean.
 
+&nbsp;
+
 ----
 
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="../ConfRegions.html">^</a></li>
-  <li><a href="ConfRegions_CE1.html">1</a></li>
-  <li class="active"><a href="#">2</a></li>
-  <li><a href="ConfRegions_CE3.html">3</a></li>
-</ul>
-</div>
+## Additional Practice
+
+[Here are more exercises for practice if time permits.](ConfRegions_CE3)
 
 ----
 

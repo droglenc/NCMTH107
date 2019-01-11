@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Exercises
-subtitle: Probability 2
+title: Additional Exercises
+subtitle: Probability
 css: "/css/modules.css"
 ---
 
@@ -62,15 +62,5 @@ Associated Bank is reviewing its service charges and interest paying policies on
 1. What is the probability that a personal checking account customer has a balance of $200 or lower?
 1. What is the probability that a sample of 5 personal checking account customers has a mean balance of $600 or lower?
 1. What is the probability that a sample of 10 personal checking account customers has a mean balance between $700 and $850?
-
-----
-
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="../Probability.html">^</a></li>
-  <li><a href="Probability_CE1.html">1</a></li>
-  <li class="active"><a href="#">2</a></li>
-</ul>
-</div>
 
 ----

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Class Exercise
-subtitle: Bivariate EDA - Categorical 2
+title: Additional Exercises
+subtitle: Bivariate EDA - Categorical
 css: "/css/modules.css"
 ---
 
@@ -35,10 +35,3 @@ css: "/css/modules.css"
 1. Comment on how the distribution of students into `goal` categories differs (or not) among grades.
 
 ----
-
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="../BEDACat.html">^</a></li>
-  <li><a href="BEDACat_CE1.html">1</a></li>
-  <li class="active"><a href="#">2</a></li>
-</ul>

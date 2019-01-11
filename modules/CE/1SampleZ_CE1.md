@@ -30,14 +30,12 @@ Assuming that the standard deviation for all 1500 women was 7.1, test, at the 5%
 12.42,10.70,11.59,10.68,10.61,9.04,10.89
 </pre>
 
+&nbsp;
+
 ----
 
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="../1SampleZ.html">^</a></li>
-  <li class="active"><a href="#">1</a></li>
-  <li><a href="1SampleZ_CE2.html">2</a></li>
-</ul>
-</div>
+## Additional Practice
+
+[Here are more exercises for practice if time permits.](1SampleZ_CE2)
 
 ----

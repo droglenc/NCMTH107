@@ -40,14 +40,12 @@ A study of rush-hour traffic in San Francisco counted the number of people in a 
 1. What is the probability that a random sample of 5 cars will have a mean number of passengers of greater than 2.0?
 1. Suppose that 700 cars pass through this intersection in one hour.  What is the probability that these 700 cars will carry more than 1075 people?
 
+&nbsp;
+
 ----
 
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="../Probability.html">^</a></li>
-  <li class="active"><a href="#">1</a></li>
-  <li><a href="Probability_CE2.html">2</a></li>
-</ul>
-</div>
+## Additional Practice
+
+[Here are more exercises for practice if time permits.](Probability_CE2)
 
 ----

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Exercises
-subtitle: Confidence Regions 3
+title: Additional Exercises
+subtitle: Confidence Regions
 css: "/css/modules.css"
 ---
 
@@ -37,17 +37,6 @@ An investigator wants to estimate the mean systolic blood pressure in children w
 <img src="zimgs/calf.jpg" alt="Calf" class="img-right">
 
 Calf growth early in life should be approximately 1000 g per day. Owners of a large cattle farm want to assure that their calves are growing at approximately this rate because slow growth might suggest a feeding problem and fast growth would suggest a future size problem (i.e., too many big animals in the available space). The owners want to sample enough of their calves so that they can estimate the growth rate to within 50 g per day, with 99% confidence, assuming that variabilty between individual calves is approximately 200 g per day. Calculate their required sample size.
-
-----
-
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="../ConfRegions.html">^</a></li>
-  <li><a href="ConfRegions_CE1.html">1</a></li>
-  <li><a href="ConfRegions_CE2.html">2</a></li>
-  <li class="active"><a href="#">3</a></li>
-</ul>
-</div>
 
 ----
 
