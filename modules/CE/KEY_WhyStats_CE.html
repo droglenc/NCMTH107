@@ -1,0 +1,137 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Why Statistics CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="realities" class="section level2">
+<h2>Realities</h2>
+<ol>
+<li>The three “realities” that, if they did not exist, would eliminate the need for the field of statistics are that (i) you cannot “see” the entire population and must, therefore, take a sample, (ii) variability exists among individuals and among statistics, and (iii) conclusions about the population are uncertain.</li>
+</ol>
+<p><br></p>
+<hr />
+</div>
+<div id="variability" class="section level2">
+<h2>Variability</h2>
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+The answer for the second question is just one example. Your situation will likely differ.
+</li>
+<li>
+In the second question, it is important when describing sampling variability to make sure that describe <strong>repeated</strong> samples from the <strong>same</strong> population. For example, it would be incorrect to say that sampling variability is illustrated by the fact that Bluegill sampled from Lake A had a different mean length than Bluegill sampled from Lake B because Lake A and Lake B are not repeated samples from the same popolation; rather they are two different populations.
+</li>
+</ul>
+</div>
+<ol>
+<li>Natural variability is the realization that no two individuals are exactly identical. Sampling variability is the realization that the results (statistics) from any two samples are not exactly identical.</li>
+<li>Consider a situation where a biologist is sampling Bluegill from a particular lake. Natural variability is the realization that no two Bluegill from this population will be exactly identical; i.e., their lengths, weights, number of scales, etc. will be different. Sampling variability is the realization that the results from any two samples of Bluegill from this population will not be identical. For example, the mean lengths from two samples of Bluegill from this population may differ, or the mean weights, or the mean number of scales, or the mean percentage of sexually mature fish.</li>
+</ol>
+<p><br></p>
+<hr />
+</div>
+<div id="wisconsin-lakes" class="section level2">
+<h2>Wisconsin Lakes</h2>
+<ol>
+<li>The sample of 50 lakes is not shown (to save space). The area of the first three lakes were all different, which is an example of natural variability.</li>
+<li>The proportion of lakes in my first sample that were from Bayfield County was 0.580.</li>
+<li>The proportion of lakes in my second sample that were from Bayfield County was 0.480. These sample proportions differ, which is an example of sampling variability.</li>
+<li>My two sample proportions did not equal the population proportions. I was not surprised because samples do not perfectly represent the entire population. I would expect the statistics from the sample to be near (on average) the population parameter, but not always equal to it.</li>
+</ol>
+<p><br></p>
+<hr />
+</div>
+<div id="frog-survey" class="section level2">
+<h2>Frog Survey</h2>
+<ol>
+<li>An individual is a lake in northern Wisconsin (north of Highway 8) in 2010.</li>
+<li>No, it is not reasonable to count frogs on every lake in northern Wisconsin because there is no reasonable way to get to every lake in the northern Wisconsin in a week.</li>
+<li>My first sample of ten lakes is in Table 1.</li>
+</ol>
+<p>Table 1: Visual and call counts of frogs on the first sample of 10 lakes from northern Wisconsin.</p>
+<pre><code> call visual
+  121    217
+  120    225
+  124    218
+  120    227
+  117    219
+  115    217
+  120    213
+  117    234
+  113    206
+  129    234</code></pre>
+<ol>
+<li>The number of frogs differs between the first three lakes Table 1. This is an example of natural variability.</li>
+<li>The average number of frogs in my first sample is 221.0.</li>
+<li>My second sample of ten lakes is in Table 2.</li>
+</ol>
+<p>Table 2: Visual and call counts of frogs on the second sample of 10 lakes from northern Wisconsin.</p>
+<pre><code> call visual
+  119    220
+  121    220
+  122    227
+  124    222
+  120    227
+  116    217
+  118    218
+  118    220
+  116    221
+  122    225</code></pre>
+<ol>
+<li>The average number of frogs in my first sample is 221.7.</li>
+<li>The average number of frogs per lake differed between the two samples. This is an example of sampling variability.</li>
+<li>Neither average number of frogs per lake equaled the known population average number of frogs per lake. I was not surprised by this result because a sample is representative but not perfectly representative of the entire population.</li>
+</ol>
+<hr />
+<p>R Appendix</p>
+<pre class="r"><code>library(NCStats)
+
+## Lakes Exercise
+named &lt;- filterD(ABDLakes,named)
+smpl1 &lt;- srsdf(named,n=50,vars=c(&quot;county&quot;,&quot;area&quot;))
+smpl2 &lt;- srsdf(named,n=50,vars=c(&quot;county&quot;,&quot;area&quot;))
+
+## Frog Exercise
+( sampA &lt;- srsdf(Frogs,n=10) )
+Summarize(~visual,data=sampA,digits=1)
+( sampB &lt;- srsdf(Frogs,n=10) )
+Summarize(~visual,data=sampB,digits=1)</code></pre>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
