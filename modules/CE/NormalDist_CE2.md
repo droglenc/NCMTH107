@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Additional Exercises
+title: Exercises II
 subtitle: Normal Distributions
 css: "/css/modules.css"
 ---
@@ -45,11 +45,12 @@ Apple suggests that the battery lifespan (i.e., how many charge-cycles a battery
 1. Suppose that the research company wants to change the definition of "exceptional" to include only the top 10% of batteries. What number of charge-cycles would define this new "exceptional"?
 1. Similarly, suppose that the research company wants to change the definition of "unacceptably poor" to the include the worst 25% of batteries. What number of charge-cycles would define this new "unacceptably poor"?
 
+&nbsp;
+
 ----
 
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="../NormalDist.html">^</a></li>
-  <li class="active"><a href="#">1</a></li>
-  <li><a href="NormalDist_CE3.html">2</a></li>
-</ul>
+## Additional Practice
+
+[Here are more exercises for practice if time permits.](NormalDist_CE3)
+
+----

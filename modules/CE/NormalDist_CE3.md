@@ -85,10 +85,3 @@ Male wild Turkeys (*Meleagris gallopavo*) have metatarsal spurs (i.e., bone grow
 1. What is the most common 80% of turkey spur lengths?
 
 ----
-
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="../NormalDist.html">^</a></li>
-  <li><a href="NormalDist_CE2.html">1</a></li>
-  <li class="active"><a href="#">2</a></li>
-</ul>
