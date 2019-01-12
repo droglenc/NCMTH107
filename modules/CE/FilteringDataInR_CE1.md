@@ -37,7 +37,7 @@ exposure med med low med med med med med med med
 
 ## Additional Practice
 
-[Here are more exercises for practice if time permits.](FilteringDatainR_CE2)
+[Here are more exercises for practice if time permits.](FilteringDataInR_CE2)
 
 ----
 

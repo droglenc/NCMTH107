@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Exercises
-subtitle: Confidence Regions II
+title: Exercises II
+subtitle: Confidence Regions
 css: "/css/modules.css"
 ---
 

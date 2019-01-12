@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Exercises
-subtitle: Hypothesis Testing I
+title: Exercises I
+subtitle: Hypothesis Testing
 css: "/css/modules.css"
 ---
 
