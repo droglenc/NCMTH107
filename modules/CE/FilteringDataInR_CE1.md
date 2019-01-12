@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Practice Exercise
-subtitle: Filtering Data In R 1
+title: Exercises
+subtitle: Filtering Data In R
 css: "/css/modules.css"
 ---
 
@@ -31,12 +31,13 @@ exposure med med low med med med med med med med
     * Only where the CWD diameter was greater than 20 cm and from low-exposure sites.
     * Only where the CWD diameter was between 20 and 30 cm.
 
+&nbsp;
+
 ----
 
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="../FilteringDataInR.html">^</a></li>
-  <li class="active"><a href="#">1</a></li>
-  <li><a href="FilteringDataInR_CE2.html">2</a></li>
-</ul>
-</div>
+## Additional Practice
+
+[Here are more exercises for practice if time permits.](FilteringDatainR_CE2)
+
+----
+

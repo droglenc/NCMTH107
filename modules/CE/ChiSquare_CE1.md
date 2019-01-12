@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Exercises
-subtitle: Chi-Square Test 1
+subtitle: Chi-Square Test I
 css: "/css/modules.css"
 ---
 
@@ -24,6 +24,5 @@ Female  |  1924 |  6784 | 1948 | 103
   <li><a href="../ChiSquare.html">^</a></li>
   <li class="active"><a href="#">1</a></li>
   <li><a href="ChiSquare_CE2.html">2</a></li>
-  <li><a href="ChiSquare_CE3.html">3</a></li>
 </ul>
 </div>

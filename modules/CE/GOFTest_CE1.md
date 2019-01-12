@@ -2,11 +2,7 @@
 layout: page
 title: Exercises
 subtitle: Goodness-of-Fit Test
-author: Derek H. Ogle
 css: "/css/modules.css"
-output:
-  html_document:
-    self_contained: false
 ---
 
 ----
@@ -46,15 +42,15 @@ District      6.1%    15.0%    13.5%    21.7%    15.3%    18.2%    10.2%
 
 Use these results to determine, at the 10% level, if the age distribution in the jury pool accurately represents the age distriction of the district as a whole.  Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../11-steps).  Also comment on whether the attorney's specific concern was warranted.
 
+&nbsp;
+
 ----
 
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="../GOFTest.html">^</a></li>
-  <li class="active"><a href="#">1</a></li>
-  <li><a href="GOFTest_CE2.html">2</a></li>
-</ul>
-</div>
+## Additional Practice
+
+[Here are more exercises for practice if time permits.](GOFTest_CE2)
+
+&nbsp;
 
 ----
 

@@ -1,12 +1,8 @@
 ---
 layout: page
-title: Exercises
+title: Additional Exercises
 subtitle: Goodness-of-Fit Test
-author: Derek H. Ogle
 css: "/css/modules.css"
-output:
-  html_document:
-    self_contained: false
 ---
 
 ----
@@ -29,15 +25,5 @@ A researcher for the Wisconsin Department of Natural Resources has radio-collare
 <img src="zimgs/road-rage.jpg" alt="Road Rage" class="img-right">
 
 Road rage was defined as "an incident in which an angry or impatient motorist or passenger intentionally injures or kills another motorist, passenger, or pedestrian, or attempts or threatens to injure or kill another motorist, passenger, or pedestrian." [Rathbone and Huckabee (1999)](https://www.aaafoundation.org/sites/default/files/RoadRageFinal.pdf) reported the day of the week that 69 incidents of road rage occurred. The results of the study are in the **RoadRage.csv** ([data](https://raw.githubusercontent.com/droglenc/NCData/master/RoadRage.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/RoadRage_meta.txt)) data file. Use this information to determine, at the 5% level, if incidents of road rage occur more often on certain days of the week.
-
-----
-
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="GOFTest.html">^</a></li>
-  <li><a href="GOFTest_CE1.html">1</a></li>
-  <li class="active"><a href="#">2</a></li>
-</ul>
-</div>
 
 ----

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Practice Exercise
-subtitle: Filtering Data In R 2
+title: Additional Exercises
+subtitle: Filtering Data In R
 css: "/css/modules.css"
 ---
 
@@ -48,11 +48,3 @@ Enter these data into a CSV file with columns labeled as `lstrf` and `shade`. Re
 1. List the data for all plots with less than 5 purple loosestrife plants and that are completely shaded (*use only one command in R*).
 
 ----
-
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="../FilteringDataInR.html">^</a></li>
-  <li><a href="FilteringDataInR_CE1.html">1</a></li>
-  <li class="active"><a href="#">2</a></li>
-</ul>
-</div>
