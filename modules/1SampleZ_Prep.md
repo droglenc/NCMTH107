@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Read/Viewing Guide
+title: Preparation Guide
 subtitle: 1-Sample Z-test
 css: "/css/modules.css"
 ---

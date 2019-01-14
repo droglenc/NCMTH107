@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Read/Viewing Guide
+title: Preparation Guide
 subtitle: Confidence Regions
 css: "/css/modules.css"
 ---

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Read/Viewing Guide
+title: Preparation Guide
 subtitle: 2-Sample t-test
 css: "/css/modules.css"
 ---

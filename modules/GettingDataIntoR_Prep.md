@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Read/Viewing Guide
+title: Preparation Guide
 subtitle: Getting Data Into R
 css: "/css/modules.css"
 ---

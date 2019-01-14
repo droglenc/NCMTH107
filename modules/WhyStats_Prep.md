@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Read/Viewing Guide
+title: Preparation Guide
 subtitle: Why Statistics Is Important
 css: "/css/modules.css"
 ---

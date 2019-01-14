@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Read/Viewing Guide
+title: Preparation Guide
 subtitle: Bivariate EDA - Quantitative
 css: "/css/modules.css"
 ---

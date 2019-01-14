@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Read/Viewing Guide
+title: Preparation Guide
 subtitle: Summaries for One Quantitative Variable
 css: "/css/modules.css"
 ---

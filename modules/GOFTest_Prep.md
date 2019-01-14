@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Read/Viewing Guide
+title: Preparation Guide
 subtitle: Goodness-of-Fit Test
 css: "/css/modules.css"
 ---

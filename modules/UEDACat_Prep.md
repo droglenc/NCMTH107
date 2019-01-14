@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Read/Viewing Guide
+title: Preparation Guide
 subtitle: Univariate EDA - Categorical
 css: "/css/modules.css"
 ---
