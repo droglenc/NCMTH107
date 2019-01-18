@@ -37,7 +37,15 @@ The object name to the left of each assignment operator (i.e., <code>&lt;-</code
 <div id="loading-your-own-data-i" class="section level2">
 <h2>Loading Your Own Data I</h2>
 <div class="alert alert-warning">
-<p><strong>Note:</strong> When entering your own data into R, make sure that variables are organized by columns (so that individuals are organized by row) and that each column has a useful name. Also make sure that your variable names and your data do not have any spaces in them as this can cause some issues with how the data are loaded into R. So, if your variable is the professor’s name don’t label that column as <code>Professors Name</code>; rather call it <code>Prof</code>, <code>Professor</code>, <code>ProfName</code>, <code>Prof.Name</code>, or something similar. Similarly, for the data don’t write <code>Derek Ogle</code>; rather use <code>DerekOgle</code>, <code>Derek.Ogle</code>, <code>Derek_Ogle</code>, <code>Ogle</code>, <code>ProfessorDoctorOgleSir</code>, or something similar.</p>
+<strong>Note:</strong>
+<ul>
+<li>
+When entering your own data into R, make sure that variables are organized by columns (so that individuals are organized by row) and that each column has a useful name. Also make sure that your variable names and your data do not have any spaces in them as this can cause some issues with how the data are loaded into R. So, if your variable is the professor’s name don’t label that column as <code>Professors Name</code>; rather call it <code>Prof</code>, <code>Professor</code>, <code>ProfName</code>, <code>Prof.Name</code>, or something similar. Similarly, for the data don’t write <code>Derek Ogle</code>; rather use <code>DerekOgle</code>, <code>Derek.Ogle</code>, <code>Derek_Ogle</code>, <code>Ogle</code>, <code>ProfessorDoctorOgleSir</code>, or something similar.
+</li>
+<li>
+Don’t use <code>headtail()</code> for data.frames that are very small. Just type the name of hte data.frame to show all of the individuals in that data.frame.
+</li>
+</ul>
 </div>
 <ul>
 <li>Answers will vary by student.</li>
