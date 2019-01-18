@@ -1,0 +1,108 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Getting Data Into R CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<p>The following two commands were run before the code run below because I saved all of my files in the same directory.</p>
+<pre class="r"><code>&gt; library(NCStats)
+&gt; setwd(&quot;T:/Stats&quot;)</code></pre>
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+The object name to the left of each assignment operator (i.e., <code>&lt;-</code>) can largely be whatever you want. In the examples below, I tried to uses names that made sense for the data being imported.
+</li>
+</ul>
+</div>
+<hr />
+<div id="loading-data-from-webpage-i" class="section level2">
+<h2>Loading Data from Webpage I</h2>
+<div id="brainhead.csv" class="section level4">
+<h4><strong>BrainHead.csv</strong></h4>
+<ol>
+<li>There are four variables in BrainHead.csv.</li>
+<li>The variables in Brainhead.csv are: head.size, brain.weight, gender, age.group.</li>
+<li>There are 237 individuals in BrainHead.csv.</li>
+</ol>
+<pre class="r"><code>&gt; bhobj &lt;- read.csv(&quot;BrainHead.csv&quot;)
+&gt; str(bhobj)</code></pre>
+<hr />
+</div>
+</div>
+<div id="loading-your-own-data-i" class="section level2">
+<h2>Loading Your Own Data I</h2>
+<div class="alert alert-warning">
+<p><strong>Note:</strong> When entering your own data into R, make sure that variables are organized by columns (so that individuals are organized by row) and that each column has a useful name. Also make sure that your variable names and your data do not have any spaces in them as this can cause some issues with how the data are loaded into R. So, if your variable is the professor’s name don’t label that column as <code>Professors Name</code>; rather call it <code>Prof</code>, <code>Professor</code>, <code>ProfName</code>, <code>Prof.Name</code>, or something similar. Similarly, for the data don’t write <code>Derek Ogle</code>; rather use <code>DerekOgle</code>, <code>Derek.Ogle</code>, <code>Derek_Ogle</code>, <code>Ogle</code>, <code>ProfessorDoctorOgleSir</code>, or something similar.</p>
+</div>
+<ul>
+<li>Answers will vary by student.</li>
+</ul>
+<hr />
+</div>
+<div id="loading-data-from-webpage-ii" class="section level2">
+<h2>Loading Data from Webpage II</h2>
+<div id="popularkids.csv" class="section level4">
+<h4><strong>PopularKids.csv</strong></h4>
+<ol>
+<li>There are 11 variables in PopularKids.csv.</li>
+<li>The variables in PopularKids.csv are: gender, grade, age, race, type, school, goals, grades, sports, looks, money.</li>
+<li>There are 478 individuals in PopularKids.csv.</li>
+</ol>
+<pre class="r"><code>&gt; pkobj &lt;- read.csv(&quot;PopularKids.csv&quot;)
+&gt; str(pkobj)</code></pre>
+</div>
+<div id="yahara.csv" class="section level4">
+<h4><strong>Yahara.csv</strong></h4>
+<ol>
+<li>There are eight variables in Yahara.csv.</li>
+<li>The variables in Yahara.csv are: year, mon, day, boats.up, boats.down, boats.total, lockings, remarks.</li>
+<li>There are 4970 individuals in Yahara.csv.</li>
+</ol>
+<pre class="r"><code>&gt; yobj &lt;- read.csv(&quot;Yahara.csv&quot;)
+&gt; str(yobj)</code></pre>
+<hr />
+</div>
+</div>
+<div id="loading-your-own-data-ii" class="section level2">
+<h2>Loading Your Own Data II</h2>
+<ul>
+<li>Answers will vary by student.</li>
+</ul>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
