@@ -31,3 +31,7 @@ library(NCStats)
 ```
 
 When you compile this report the document should be a little more concise then the default would have been.
+
+A video demonstrating this process is embedded below (or at [this link](https://vimeo.com/313195664)).
+
+<iframe width="640" height="564" src="https://player.vimeo.com/video/313195664" frameborder="0" allowFullScreen mozallowfullscreen webkitAllowFullScreen></iframe>
