@@ -46,14 +46,7 @@ Related to: [R/RStudo](#rrstudio-related) / [Homework](#homework-format) / [Othe
 * [Why does the df for my two-sample t-test contain decimals?](FAQs/t2test-df-decimals.html)
 * [Why does R say the alternative hypothesis is true, even though the p-value>alpha?](FAQs/alt-hyp-misinterp.html)
 * [What does the warning from `chisq.test()` mean?](FAQs/chisq-warning.html)
-
-----
-
-## Homework format
-* [How should my homework assignments be formatted?](../hwformat)
-* [How do I make Word single space my document?](FAQs/Word_SingleSpace)
-* [How do I easily make my tabular results from R line-up in MSWord?](FAQs/Word_RLineup)
-* [How do I make Greek symbols in MSWord?](FAQs/Word_GreekLetters)
+* [How can I compile a more succinct report of my R script?](FAQs/compileScript)
 
 ----
 
@@ -61,6 +54,13 @@ Related to: [R/RStudo](#rrstudio-related) / [Homework](#homework-format) / [Othe
 * [Watching class preparation videos](FAQs/videos)
 * [Can I get the "full" MS Office products for my own computer?](FAQs/getMSOffice)
 * [Is it possible to print to college printers from my own computer?](FAQs/printOwnComputer)
-* [How can I compile a more succinct report of my R script?](FAQs/compileScript)
+
+----
+
+## Old
+* [How should my homework assignments be formatted?](../hwformat)
+* [How do I make Word single space my document?](FAQs/Word_SingleSpace)
+* [How do I easily make my tabular results from R line-up in MSWord?](FAQs/Word_RLineup)
+* [How do I make Greek symbols in MSWord?](FAQs/Word_GreekLetters)
 
 ----
