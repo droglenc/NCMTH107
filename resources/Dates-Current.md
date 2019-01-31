@@ -78,12 +78,12 @@ Note that some of the more distant dates are subject to change.
 
 <tr><td>M 18-Feb</td>
     <td><a href="../modules/SamplingDist">Sampling Distributions</a></td>
-    <td>Quiz 2 Reflection (Optional)</td></tr>
+    <td>--</td></tr>
 <tr><td>W 20-Feb</td>
     <td colspan="2"><span style="color:coral">NO CLASS (Ogle Gone)</span></td></tr>
 <tr><td>F 22-Feb</td>
     <td><a href="../modules/SamplingDist">Sampling Distributions</a></td>
-    <td>--</td></tr>
+    <td>Quiz 2 Reflection (Optional)</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 25-Feb</td>
