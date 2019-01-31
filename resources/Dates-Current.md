@@ -48,21 +48,21 @@ Note that some of the more distant dates are subject to change.
 <tr><td>M 28-Jan</td>
     <td colspan="2"><span style="color:red">First Quiz</span> (<a href="QuizGuide/quiz1.html">Study Guide</a>)</td></tr>
 <tr><td>W 30-Jan</td>
-    <td><a href="../modules/NormalDist">Normal Distributions</a></td>
+    <td>Polar Vortex Day</td>
     <td>--</td></tr>
 <tr><td>F 1-Feb</td>
     <td><a href="../modules/NormalDist">Normal Distributions</a></td>
-    <td>Quiz 1 Reflection (Optional)</td></tr>
+    <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 4-Feb</td>
+    <td><a href="../modules/NormalDist">Normal Distributions</a></td>
+    <td>Quiz 1 Reflection (Optional)</td></tr>
+<tr><td>W 6-Feb</td>
     <td><a href="../modules/BEDACat">Bivariate EDA - Categorical</a></td>
     <td>--</td></tr>
-<tr><td>W 6-Feb</td>
-    <td><a href="../modules/BEDAQuant">Bivariate EDA - Quantitative</a></td>
-    <td>--</td></tr>
 <tr><td>F 8-Feb</td>
-    <td><a href="../modules/LinearRegression">Linear Regression</a></td>
+    <td><a href="../modules/BEDAQuant">Bivariate EDA - Quantitative</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
@@ -70,10 +70,10 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/LinearRegression">Linear Regression</a></td>
     <td>--</td></tr>
 <tr><td>W 13-Feb</td>
-    <td colspan="2"><span style="color:red">Second Quiz</span> (<a href="QuizGuide/quiz.html">Study Guide</a>)</td></tr>
-<tr><td>F 15-Feb</td>
-    <td><a href="../modules/SamplingDist">Sampling Distributions</a></td>
+    <td><a href="../modules/LinearRegression">Linear Regression</a></td>
     <td>--</td></tr>
+<tr><td>F 15-Feb</td>
+    <td colspan="2"><span style="color:red">Second Quiz</span> (<a href="QuizGuide/quiz.html">Study Guide</a>)</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 18-Feb</td>
@@ -82,18 +82,18 @@ Note that some of the more distant dates are subject to change.
 <tr><td>W 20-Feb</td>
     <td colspan="2"><span style="color:coral">NO CLASS (Ogle Gone)</span></td></tr>
 <tr><td>F 22-Feb</td>
-    <td><a href="../modules/Probability">Probability</a></td>
+    <td><a href="../modules/SamplingDist">Sampling Distributions</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 25-Feb</td>
-    <td><a href="../modules/HypTesting">Hypothesis Testing</a></td>
+    <td><a href="../modules/Probability">Probability</a></td>
     <td>--</td></tr>
 <tr><td>W 27-Feb</td>
-    <td><a href="../modules/HypTestingErrs">Hypothesis Testing Errors</a></td>
+    <td><a href="../modules/HypTesting">Hypothesis Testing</a></td>
     <td>--</td></tr>
 <tr><td>F 1-Mar</td>
-    <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
+    <td><a href="../modules/HypTestingErrs">Hypothesis Testing Errors</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
@@ -109,7 +109,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
     <td>--</td></tr>
 <tr><td>W 13-Mar</td>
-    <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
+    <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
     <td>--</td></tr>
 <tr><td>F 15-Mar</td>
     <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
@@ -117,7 +117,7 @@ Note that some of the more distant dates are subject to change.
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 18-Mar</td>
-    <td>--</td>
+    <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
     <td>--</td></tr>
 <tr><td>W 20-Mar</td>
     <td colspan="2"><span style="color:red">Third Quiz</span> (<a href="QuizGuide/quiz.html">Study Guide</a>)</td></tr>
