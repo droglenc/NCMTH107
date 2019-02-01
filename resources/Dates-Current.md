@@ -43,7 +43,6 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant ...</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
 
 <tr><td>M 28-Jan</td>
     <td colspan="2"><span style="color:red">First Quiz</span> (<a href="QuizGuide/quiz1.html">Study Guide</a>)</td></tr>
@@ -54,6 +53,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/NormalDist">Normal Distributions</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
+--->
 
 <tr><td>M 4-Feb</td>
     <td><a href="../modules/NormalDist">Normal Distributions</a></td>
