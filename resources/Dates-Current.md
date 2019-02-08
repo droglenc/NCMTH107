@@ -53,7 +53,6 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/NormalDist">Normal Distributions</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
 
 <tr><td>M 4-Feb</td>
     <td><a href="../modules/NormalDist">Normal Distributions</a></td>
@@ -65,6 +64,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/BEDAQuant">Bivariate EDA - Quantitative</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
+--->
 
 <tr><td>M 11-Feb</td>
     <td><a href="../modules/LinearRegression">Linear Regression</a></td>
