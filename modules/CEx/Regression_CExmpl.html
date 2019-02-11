@@ -1,0 +1,63 @@
+---
+layout: page
+title: Class Example
+subtitle: Linear Regression
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="climate-change-data" class="section level2">
+<h2>Climate Change Data</h2>
+<p>The temperature data is the Global Land-Ocean Temperature Index from the Goddard Institute of Space Studies (GISTEMP). It is reported in units of 1/100 of a degree centigrade increase above the 1950-1980 mean and is often referred to as the global surface temperature anomaly. The NASA Goddard Institute for Space Studies (GISS) is a laboratory in the NASA’s Goddard Space Flight Center’s Earth Sciences Division, which is part of Goddard Space Flight Center’s Sciences and Exploration Directorate.</p>
+<p>The CO2 data are from The Earth System Research Laboratory of the National Oceanic and Atmospheric Administration (NOAA). Specifically, these CO2 data are a record of annual mean atmospheric CO2 concentration at Mauna Loa Observatory, Hawaii, and constitute the longest continuous record of atmospheric CO2 concentration. This remote location at high altitude in Hawaii was chosen because it is relatively unaffected by any local emissions and so is representative of the global concentration of a well-mixed gas like CO2.These observations were started by C. David Keeling of the Scripps Institution of Oceanography in March of 1958 at a NOAA facility and are often referred to as the Keeling Curve. Data are reported as a dry mole fraction defined as the number of molecules of carbon dioxide divided by the number of molecules of dry air multiplied by one million (ppm).</p>
+<p>Is the temperature anomaly related to CO2 amount.</p>
+<p><img src="Regression_CExmpl_files/figure-html/unnamed-chunk-2-1.png" width="384" /></p>
+<ol>
+<li>What is the response variable? [<em>Hint: Read the rest of the questions before answering this question.</em>]</li>
+<li>What is the explanatory variable?</li>
+<li>In terms of the variables of this problem, what is the equation of the best-fit line?</li>
+<li>In terms of the variables of this problem, interpret the value of the slope.</li>
+<li>In terms of the variables of this problem, interpret the value of the intercept.</li>
+<li>What is the predicted temperature anomoly if the CO2 is 360 ppm?</li>
+<li>What is the predicted temperature anomoly if the CO2 is 250 ppm?</li>
+<li>What is the residual if the temperature anomoly is 40 and the CO2 is 380 ppm?</li>
+<li>What proportion of the variability in temperature anomaly is explained by knowing the CO2 amount?</li>
+<li>What is the correlation coefficient between temperature anomaly and CO2 amount?</li>
+<li>How much will the predicted temperature anomaly change if the CO2 amount increased by 20 ppm?</li>
+<li>What aspect of this regression analysis concerns you? [<em>Hint: consider the regression assumptions</em>]?</li>
+</ol>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

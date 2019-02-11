@@ -1,0 +1,53 @@
+---
+layout: page
+title: Class Example
+subtitle: Linear Regression
+author: Derek H. Ogle
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: false
+    lib_dir: zlibs
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CEx/")
+source("../../rhelpers/rhelpers.R")
+modHTML("Regression_CExmpl")
+```
+
+----
+
+## Climate Change Data
+
+The temperature data is the Global Land-Ocean Temperature Index from the Goddard Institute of Space Studies (GISTEMP). It is reported in units of 1/100 of a degree centigrade increase above the 1950-1980 mean and is often referred to as the global surface temperature anomaly. The NASA Goddard Institute for Space Studies (GISS) is a laboratory in the NASA's Goddard Space Flight Center's Earth Sciences Division, which is part of Goddard Space Flight Center's Sciences and Exploration Directorate.
+
+The CO2 data are from The Earth System Research Laboratory of the National Oceanic and Atmospheric Administration (NOAA). Specifically, these CO2 data are a record of annual mean atmospheric CO2 concentration at Mauna Loa Observatory, Hawaii, and constitute the longest continuous record of atmospheric CO2 concentration. This remote location at high altitude in Hawaii was chosen because it is relatively unaffected by any local emissions and so is representative of the global concentration of a well-mixed gas like CO2.These observations were started by C. David Keeling of the Scripps Institution of Oceanography in March of 1958 at a NOAA facility and are often referred to as the Keeling Curve. Data are reported as a dry mole fraction defined as the number of molecules of carbon dioxide divided by the number of molecules of dry air multiplied by one million (ppm).
+
+Is the temperature anomaly related to CO2 amount.
+
+```{r echo=FALSE, results="hide", fig.height=4, fig.width=4}
+library(NCStats)
+df <- read.csv("GSI_data.csv")
+lm1 <- lm(Temp~CO2,data=df)
+lm1
+par(mar=c(3,3,0.5,0.5),mgp=c(1.9,0.5,0),tcl=-0.2)
+fitPlot(lm1,xlab="CO2 in Atmosphere (ppm)",ylab="Temperature Anomaly (1/100C)")
+legend("topleft",legend="Y=-338.25+1.03*X\nr^2=0.741",bty="n",cex=1.25)
+```
+
+1. What is the response variable? [*Hint: Read the rest of the questions before answering this question.*]
+1. What is the explanatory variable?
+1. In terms of the variables of this problem, what is the equation of the best-fit line?
+1. In terms of the variables of this problem, interpret the value of the slope.
+1. In terms of the variables of this problem, interpret the value of the intercept.
+1. What is the predicted temperature anomoly if the CO2 is 360 ppm?
+1. What is the predicted temperature anomoly if the CO2 is 250 ppm?
+1. What is the residual if the temperature anomoly is 40 and the CO2 is 380 ppm?
+1. What proportion of the variability in temperature anomaly is explained by knowing the CO2 amount?
+1. What is the correlation coefficient between temperature anomaly and CO2 amount?
+1. How much will the predicted temperature anomaly change if the CO2 amount increased by 20 ppm?
+1. What aspect of this regression analysis concerns you? [*Hint: consider the regression assumptions*]?
+
+----
