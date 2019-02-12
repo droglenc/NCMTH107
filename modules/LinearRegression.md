@@ -49,6 +49,7 @@ Use the materials below to answer the questions on [this preparation guide](Line
 
 ## Practice
 
+* [Class Example](CEx/LinearRegression_CExmpl)
 * [Exercises I](CE/LinearRegression_CE1) / [Exercises II](CE/LinearRegression_CE2) ([*more as time permits*](CE/LinearRegression_CE3)) ... [ANSWER KEY](CE/KEY_LinearRegression_CE)
 * [Review Exercises](RE/LinearRegression_RevEx)
 
