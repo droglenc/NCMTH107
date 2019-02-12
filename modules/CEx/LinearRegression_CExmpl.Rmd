@@ -21,7 +21,7 @@ modHTML("LinearRegression_CExmpl")
 
 ## Climate Change Data
 
-Climate researchers examined the relationship between global temperature anomaly and the concentration of CO<sub>2</sub> in the atmosphere. Temperature anomaly data was recorded as the Global Land-Ocean Temperature Index from the Goddard Institute of Space Studies (GISTEMP). It is reported in units of 1/100 of a degree centigrade increase above the 1950-1980 mean. The CO<sub>2</sub> data are from The Earth System Research Laboratory of the National Oceanic and Atmospheric Administration (NOAA). Specifically, these data are a record of annual mean atmospheric <sub>2</sub> concentration at Mauna Loa Observatory, Hawaii, and constitute the longest continuous record of atmospheric <sub>2</sub> concentration. This remote location at high altitude in Hawaii was chosen because it is relatively unaffected by any local emissions and so is representative of the global concentration of a well-mixed gas like <sub>2</sub>. These observations were started by C. David Keeling of the Scripps Institution of Oceanography in March of 1958 and are often referred to as the Keeling Curve. Data are reported as a dry mole fraction defined as the number of molecules of carbon dioxide divided by the number of molecules of dry air multiplied by one million (ppm). Our goal here is to determine if the variability in the temperature anomaly records can be reasonably explained by the CO<sub>2</sub> values in the same year.
+Climate researchers examined the relationship between global temperature anomaly and the concentration of CO<sub>2</sub> in the atmosphere. Temperature anomaly data was recorded as the Global Land-Ocean Temperature Index from the Goddard Institute of Space Studies (GISTEMP). It is reported in units of 1/100 of a degree centigrade increase above the 1950-1980 mean. The CO<sub>2</sub> data are from The Earth System Research Laboratory of the National Oceanic and Atmospheric Administration (NOAA). Specifically, these data are a record of annual mean atmospheric CO<sub>2</sub> concentration at Mauna Loa Observatory, Hawaii, and constitute the longest continuous record of atmospheric CO<sub>2</sub> concentration. This remote location at high altitude in Hawaii was chosen because it is relatively unaffected by any local emissions and so is representative of the global concentration of a well-mixed gas like CO<sub>2</sub>. These observations were started by C. David Keeling of the Scripps Institution of Oceanography in March of 1958 and are often referred to as the Keeling Curve. Data are reported as a dry mole fraction defined as the number of molecules of carbon dioxide divided by the number of molecules of dry air multiplied by one million (ppm). Our goal here is to determine if the variability in the temperature anomaly records can be reasonably explained by the CO<sub>2</sub> values in the same year.
 
 ```{r echo=FALSE, results="hide", fig.height=3.5, fig.width=3.5, fig.show="hold"}
 library(NCStats)
@@ -49,12 +49,12 @@ legend("topleft",legend=res2,bty="n")
 1. In terms of the variables of this problem, what is the equation of the best-fit line?
 1. In terms of the variables of this problem, interpret the value of the slope.
 1. In terms of the variables of this problem, interpret the value of the intercept.
-1. What is the predicted temperature anomoly if the CO2 is 360 ppm?
-1. What is the predicted temperature anomoly if the CO2 is 250 ppm?
-1. What is the residual if the temperature anomoly is 40 and the CO2 is 380 ppm?
-1. What proportion of the variability in temperature anomaly is explained by knowing the CO2 amount?
-1. What is the correlation coefficient between temperature anomaly and CO2 amount?
-1. How much will the predicted temperature anomaly change if the CO2 amount increased by 20 ppm?
+1. What is the predicted temperature anomoly if the CO<sub>2</sub> is 360 ppm?
+1. What is the predicted temperature anomoly if the CO<sub>2</sub> is 250 ppm?
+1. What is the residual if the temperature anomoly is 40 and the CO<sub>2</sub> is 380 ppm?
+1. What proportion of the variability in temperature anomaly is explained by knowing the CO<sub>2</sub> amount?
+1. What is the correlation coefficient between temperature anomaly and CO<sub>2</sub> amount?
+1. How much will the predicted temperature anomaly change if the CO<sub>2</sub> amount increased by 20 ppm?
 1. What aspect of this regression analysis concerns you? [*Hint: consider the regression assumptions*]?
 
 ----
