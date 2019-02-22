@@ -44,6 +44,17 @@ A study of rush-hour traffic in San Francisco counted the number of people in a 
 
 ----
 
+## Banking
+<img src="zimgs/associated-bank.jpg" alt="Associated Bank" class="img-right">
+Associated Bank is reviewing its service charges and interest paying policies on checking accounts. The bank has found that the daily balance on personal checking accounts is normally distributed with an average of $550 and a standard deviation of $150. For each question below identify (a) the distribution that would be used to answer the question, (b) specific characteristics of the required distribution, (c) whether the question can be answered or not, and (d) if appropriate, the answer to the question.
+
+1. What is the probability that a personal checking account customer has a daily balance in excess of $800?
+1. What is the probability that a personal checking account customer has a balance of $200 or lower?
+1. What is the probability that a sample of 5 personal checking account customers has a mean balance of $600 or lower?
+1. What is the probability that a sample of 10 personal checking account customers has a mean balance between $700 and $850?
+
+----
+
 ## Additional Practice
 
 [Here are more exercises for practice if time permits.](Probability_CE2)
