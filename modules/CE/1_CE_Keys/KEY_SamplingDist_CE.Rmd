@@ -100,6 +100,24 @@ R Appendix.
 
 ----
 
+## Precision and Accuracy
+
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>Accuracy is determined by whether the mean of the means (values) equals the true mean (i.e., the parameter) or not. Thus, to determine accuracy you must compute the mean of the provided values and determine whether that equals the true mean given in the background (60 in the examples below).</li>
+<li>Precision (as defined here) is related to how close the values are to each other NOT how many decimals are recorded. Thus, the values 45,46,47,48 are more precise than the values 1.01,9.19,55.65,87.49.</li>
+</ul>
+</div>
+
+
+1. The numbers 59, 60, 60, 61 represent values that are accurate and precise (i.e., values are close together and centered on (average out to be) 60).
+1. The numbers 45, 55, 65, 70 represent values that are accurate but imprecise (i.e., values are far apart and centered on 60).
+1. The numbers 69, 70, 71, 72 represent values that are inaccurate but precise (i.e., values are close together and NOT centered on 60).
+1. The numbers 75, 85, 95, 105 represent values that are inaccurate and imprecise (i.e., values are far apart and NOT centered on 60).
+
+----
+
 ## Checking the CLT
 
 **NOT AVAILABLE**
@@ -150,21 +168,3 @@ mean(2:9)
 sd(mns2)
 <<xbarHist>>
 ```
-
-----
-
-## Precision and Accuracy
-
-<div class="alert alert-warning">
-<strong>Note:</strong>
-<ul>
-<li>Accuracy is determined by whether the mean of the means (values) equals the true mean (i.e., the parameter) or not. Thus, to determine accuracy you must compute the mean of the provided values and determine whether that equals the true mean given in the background (60 in the examples below).</li>
-<li>Precision (as defined here) is related to how close the values are to each other NOT how many decimals are recorded. Thus, the values 45,46,47,48 are more precise than the values 1.01,9.19,55.65,87.49.</li>
-</ul>
-</div>
-
-
-1. The numbers 59, 60, 60, 61 represent values that are accurate and precise (i.e., values are close together and centered on (average out to be) 60).
-1. The numbers 45, 55, 65, 70 represent values that are accurate but imprecise (i.e., values are far apart and centered on 60).
-1. The numbers 69, 70, 71, 72 represent values that are inaccurate but precise (i.e., values are close together and NOT centered on 60).
-1. The numbers 75, 85, 95, 105 represent values that are inaccurate and imprecise (i.e., values are far apart and NOT centered on 60).
