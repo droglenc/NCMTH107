@@ -19,7 +19,7 @@ author: Derek H. Ogle
  $ species: Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
 <pre class="r"><code>&gt; levels(df$species)</code></pre>
 <pre><code>[1] &quot;setosa&quot;     &quot;versicolor&quot; &quot;virginica&quot; </code></pre>
-<p>One can select just the <code>versicolor</code> species with the following code.</p>
+<p>One can select just one group with <code>filterD()</code> where the first argument is the original data frame and the second argument is a condition statement that uses the grouping (or factor) variable followed by <code>==</code> (note the two equals signs), and the name of single group contained in quotes. For example, one can select the <code>versicolor</code> species from the <code>species</code> variable in the <code>df</code> data frame with the following code.</p>
 <pre class="r"><code>&gt; df2 &lt;- filterD(df,species==&quot;versicolor&quot;)
 &gt; levels(df2$species)</code></pre>
 <pre><code>[1] &quot;versicolor&quot;</code></pre>

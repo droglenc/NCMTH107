@@ -20,15 +20,15 @@ source("../../../rhelpers/knitr_setup.R")
 ----
 
 In some instances you may want to create a smaller data.frame that contains only those individuals that belong in two groups.  The smaller data frame can be constructed using `filterD()` from `FSA` (which is loaded with `NCStats`) with the `%in%` operator.  For example, the following data.frame contains measurements on petals and sepals from three species of iris.
-```{r}
+```{r message=FALSE}
+library(NCStats)
 df <- read.csv("data/Iris.csv")
 str(df)
 levels(df$species)
 ```
 
-One can select the `versicolor` and `virginica` species with the following code.
-```{r message=FALSE}
-library(NCStats)
+One can select two (or more) groups with `filterD()` where the first argument is the original data frame and the second argument is a condition statement that uses the grouping (or factor) variable followed by `%in%` and the names of the groups in quotes within `c()`. For example, one can select the `versicolor` and `virginica` species with the following code.
+```{r}
 df2 <- filterD(df,species %in% c("virginica","versicolor"))
 levels(df2$species)
 ```

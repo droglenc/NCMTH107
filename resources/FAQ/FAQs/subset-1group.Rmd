@@ -27,7 +27,7 @@ str(df)
 levels(df$species)
 ```
 
-One can select just the `versicolor` species with the following code.
+One can select just one group with `filterD()` where the first argument is the original data frame and the second argument is a condition statement that uses the grouping (or factor) variable followed by `==` (note the two equals signs), and the name of single group contained in quotes. For example, one can select the `versicolor` species from the `species` variable in the `df` data frame with the following code.
 ```{r}
 df2 <- filterD(df,species=="versicolor")
 levels(df2$species)
