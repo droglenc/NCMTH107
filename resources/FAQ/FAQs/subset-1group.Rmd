@@ -1,0 +1,58 @@
+---
+layout: page
+author: Derek H. Ogle
+title: MTH107 FAQ
+subtitle: How do I select one group of a factor variable?
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/FAQ/FAQs")
+source("../../../rhelpers/rhelpers.R")
+fnm <- "subset-1group"
+modHTML(fnm)
+```
+
+```{r echo=FALSE, results='hide', message='FALSE'}
+source("../../../rhelpers/knitr_setup.R")
+```
+
+----
+
+In some instances you may want to create a smaller data frame that contains only those individuals that belong in one group. The smaller data frame can be constructed using `filterD()` from `FSA` (which is loaded with `NCStats`) with the `==` operator. For example, the following data frame contains measurements on petals and sepals from three species of iris.
+```{r message=FALSE}
+library(NCStats)
+df <- read.csv("data/Iris.csv")
+str(df)
+levels(df$species)
+```
+
+One can select just the `versicolor` species with the following code.
+```{r}
+df2 <- filterD(df,species=="versicolor")
+levels(df2$species)
+```
+
+Similar, one could select just the `virginica` species with the following code.
+```{r}
+df3 <- filterD(df,species=="virginica")
+levels(df3$species)
+```
+
+One would use whichever data frame contains the specific information in all ensuing analyses. For example, one could do the following to compute summary statistics of petal length for the `versicolor` irises.
+```{r}
+Summarize(~petlen,data=df2,digits=1)
+```
+
+However, the following is the summary statistics of petal length for ALL three species (i.e., uses the original data frame).
+```{r}
+Summarize(~petlen,data=df,digits=1)
+```
+
+And for comparisons purposes.
+```{r}
+Summarize(petlen~species,data=df,digits=1)
+```
+
+
+This type of filtering or subsetting is also described in [this R Tutorial video](https://vimeo.com/user45324800/filterd).

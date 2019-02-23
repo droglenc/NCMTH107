@@ -1,14 +1,15 @@
 ---
 layout: page
 title: MTH107 FAQ
-subtitle: How do I select two groups of a factor variable?
+subtitle: How do I select one group of a factor variable?
 author: Derek H. Ogle
 ---
 
 
 <hr />
-<p>In some instances you may want to create a smaller data.frame that contains only those individuals that belong in two groups. The smaller data frame can be constructed using <code>filterD()</code> from <code>FSA</code> (which is loaded with <code>NCStats</code>) with the <code>%in%</code> operator. For example, the following data.frame contains measurements on petals and sepals from three species of iris.</p>
-<pre class="r"><code>&gt; df &lt;- read.csv(&quot;data/Iris.csv&quot;)
+<p>In some instances you may want to create a smaller data frame that contains only those individuals that belong in one group. The smaller data frame can be constructed using <code>filterD()</code> from <code>FSA</code> (which is loaded with <code>NCStats</code>) with the <code>==</code> operator. For example, the following data frame contains measurements on petals and sepals from three species of iris.</p>
+<pre class="r"><code>&gt; library(NCStats)
+&gt; df &lt;- read.csv(&quot;data/Iris.csv&quot;)
 &gt; str(df)</code></pre>
 <pre><code>'data.frame':   150 obs. of  5 variables:
  $ seplen : int  50 46 46 51 55 48 52 49 44 50 ...
@@ -18,19 +19,28 @@ author: Derek H. Ogle
  $ species: Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
 <pre class="r"><code>&gt; levels(df$species)</code></pre>
 <pre><code>[1] &quot;setosa&quot;     &quot;versicolor&quot; &quot;virginica&quot; </code></pre>
-<p>One can select the <code>versicolor</code> and <code>virginica</code> species with the following code.</p>
-<pre class="r"><code>&gt; library(NCStats)
-&gt; df2 &lt;- filterD(df,species %in% c(&quot;virginica&quot;,&quot;versicolor&quot;))
+<p>One can select just the <code>versicolor</code> species with the following code.</p>
+<pre class="r"><code>&gt; df2 &lt;- filterD(df,species==&quot;versicolor&quot;)
 &gt; levels(df2$species)</code></pre>
-<pre><code>[1] &quot;versicolor&quot; &quot;virginica&quot; </code></pre>
-<p>One would use whichever data frame contains the specific information in all ensuing analyses. For example, one could do the following to compute summary statistics of petal length for the <code>versicolor</code> and <code>viriginica</code> irises.</p>
+<pre><code>[1] &quot;versicolor&quot;</code></pre>
+<p>Similar, one could select just the <code>virginica</code> species with the following code.</p>
+<pre class="r"><code>&gt; df3 &lt;- filterD(df,species==&quot;virginica&quot;)
+&gt; levels(df3$species)</code></pre>
+<pre><code>[1] &quot;virginica&quot;</code></pre>
+<p>One would use whichever data frame contains the specific information in all ensuing analyses. For example, one could do the following to compute summary statistics of petal length for the <code>versicolor</code> irises.</p>
 <pre class="r"><code>&gt; Summarize(~petlen,data=df2,digits=1)</code></pre>
 <pre><code>     n   mean     sd    min     Q1 median     Q3    max 
- 100.0   49.1    8.3   30.0   43.8   49.0   55.2   69.0 </code></pre>
+  50.0   42.6    4.7   30.0   40.0   43.5   46.0   51.0 </code></pre>
 <p>However, the following is the summary statistics of petal length for ALL three species (i.e., uses the original data frame).</p>
 <pre class="r"><code>&gt; Summarize(~petlen,data=df,digits=1)</code></pre>
 <pre><code>     n   mean     sd    min     Q1 median     Q3    max 
  150.0   37.6   17.7   10.0   16.0   43.5   51.0   69.0 </code></pre>
+<p>And for comparisons purposes.</p>
+<pre class="r"><code>&gt; Summarize(petlen~species,data=df,digits=1)</code></pre>
+<pre><code>     species  n mean  sd min Q1 median   Q3 max
+1     setosa 50 14.6 1.7  10 14   15.0 15.8  19
+2 versicolor 50 42.6 4.7  30 40   43.5 46.0  51
+3  virginica 50 55.5 5.5  45 51   55.5 58.8  69</code></pre>
 <p>This type of filtering or subsetting is also described in <a href="https://vimeo.com/user45324800/filterd">this R Tutorial video</a>.</p>
 
 

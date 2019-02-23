@@ -36,6 +36,7 @@ Related to: [R/RStudo](#rrstudio-related) / [Other](#other) / [Old](#old)
 * [How should data from two groups be entered?](FAQs/stacked-data.html)
 
 ### Using Data Frames and Subsetting
+* [How do I select one group of a factor variable?](FAQs/subset-1group.html)
 * [How do I select two groups of a factor variable?](FAQs/subset-2groups.html)
 * [Why do unwanted groups still appear after I have subsetted a data.frame?](FAQs/unwanted-groups.html)
 

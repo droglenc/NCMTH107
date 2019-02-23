@@ -29,8 +29,19 @@ levels(df$species)
 One can select the `versicolor` and `virginica` species with the following code.
 ```{r message=FALSE}
 library(NCStats)
-tmp <- filterD(df,species %in% c("virginica","versicolor"))
-levels(tmp$species)
+df2 <- filterD(df,species %in% c("virginica","versicolor"))
+levels(df2$species)
 ```
+
+One would use whichever data frame contains the specific information in all ensuing analyses. For example, one could do the following to compute summary statistics of petal length for the `versicolor` and `viriginica` irises.
+```{r}
+Summarize(~petlen,data=df2,digits=1)
+```
+
+However, the following is the summary statistics of petal length for ALL three species (i.e., uses the original data frame).
+```{r}
+Summarize(~petlen,data=df,digits=1)
+```
+
 
 This type of filtering or subsetting is also described in [this R Tutorial video](https://vimeo.com/user45324800/filterd).
