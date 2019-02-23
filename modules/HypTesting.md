@@ -33,8 +33,8 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
 
 Use the materials below to answer the questions on [this preparation guide](HypTesting_Prep).
 
-* [![PDF](../img/pdf.png) Reading](../book/Hypothesis Tests.pdf).
-* [![Vimeo](../img/dhovid.png) Forming Statistical Hypothesis](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins] [![PowerPoint](../img/ppt.png)](PPT/HypTesting_PPT-hypotheses.pptx).
+* [![PDF](../img/pdf.png) Reading](../book/Hypothesis Tests.pdf)
+* [![Vimeo](../img/dhovid.png) Forming Statistical Hypothesis](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins] [![PowerPoint](../img/ppt.png)](PPT/HypTesting_PPT-hypotheses.pptx)
 
 ----
 
@@ -44,7 +44,7 @@ Use the materials below to answer the questions on [this preparation guide](HypT
 
 ## Practice
 
-* [Exercises I](CE/HypTesting_CE1) / [Exercises II](CE/HypTesting_CE2) ... [ANSWER KEY](CE/KEY_HypTesting_CE)
+* [Exercises I](CE/HypTesting_CE1) (*[more as time permits](CE/HypTesting_CE2)*) ... [ANSWER KEY](CE/KEY_HypTesting_CE)
 * [Review exercises](RE/HypTesting_RevEx)
 
 ----
