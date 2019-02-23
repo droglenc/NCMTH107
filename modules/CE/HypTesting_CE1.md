@@ -33,8 +33,8 @@ For each situation below, (i) write a sentence that defines the p-value specific
 [Machowiak *et al.* (1992)](http://www.ncbi.nlm.nih.gov/pubmed/1302471)[^1] provided a critical examination of whether normal body temperature was 37<sup>o</sup>C. They recorded the orally-determined body temperatures of 65 male and 65 female subjects. Their data is found in NormTemp.csv ([file](https://github.com/droglenc/NCData/raw/master/NormTemp.csv), [meta](https://github.com/droglenc/NCData/blob/master/NormTemp_meta.txt)). Use this information to
 
 1. construct statistical hypotheses, 
-1. compute the sample mean, 
-1. compute the p-value assuming that &sigma;=0.41, 
+1. compute the sample mean (use `Summarize()`), 
+1. compute the p-value assuming that &sigma;=0.41 (use `distrib()`), 
 1. make a decision about the hypotheses using &alpha;=0.05, and 
 1. summarize your findings in terms of body temperatures.
 
