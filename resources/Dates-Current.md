@@ -87,13 +87,12 @@ Note that some of the more distant dates are subject to change.
 --->
 
 <tr><td>M 25-Feb</td>
+    <td colspan="2"><span style="color:coral">CLASS CANCELLED</span></td></tr>
+<tr><td>W 27-Feb</td>
     <td><a href="../modules/HypTesting">Hypothesis Testing</a></td>
     <td>--</td></tr>
-<tr><td>W 27-Feb</td>
-    <td><a href="../modules/HypTestingErrs">Hypothesis Testing Errors</a></td>
-    <td>--</td></tr>
 <tr><td>F 1-Mar</td>
-    <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
+    <td><a href="../modules/HypTestingErrs">Hypothesis Testing Errors</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
@@ -109,7 +108,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
     <td>--</td></tr>
 <tr><td>W 13-Mar</td>
-    <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
+    <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
     <td>--</td></tr>
 <tr><td>F 15-Mar</td>
     <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
@@ -117,7 +116,7 @@ Note that some of the more distant dates are subject to change.
 <tr><td></td><td></td><td></td></tr>
 
 <tr><td>M 18-Mar</td>
-    <td>TBD</td>
+    <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
     <td>--</td></tr>
 <tr><td>W 20-Mar</td>
     <td colspan="2"><span style="color:red">Third Quiz</span> (<a href="QuizGuide/quiz.html">Study Guide</a>)</td></tr>
