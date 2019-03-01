@@ -84,7 +84,6 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/Probability">Probability</a></td>
     <td>Quiz 2 Reflection (Optional)</td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
 
 <tr><td>M 25-Feb</td>
     <td colspan="2"><span style="color:coral">CLASS CANCELLED</span></td></tr>
@@ -95,6 +94,7 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/HypTestingErrs">Hypothesis Testing Errors</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
+--->
 
 <tr><td>M 4-Mar</td>
     <td colspan="2"><span style="color:coral">NO CLASS (Midterm Break)</span></td></tr>
