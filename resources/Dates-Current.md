@@ -94,7 +94,6 @@ Note that some of the more distant dates are subject to change.
     <td><a href="../modules/HypTestingErrs">Hypothesis Testing Errors</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
---->
 
 <tr><td>M 4-Mar</td>
     <td colspan="2"><span style="color:coral">NO CLASS (Midterm Break)</span></td></tr>
@@ -103,6 +102,7 @@ Note that some of the more distant dates are subject to change.
 <tr><td>F 8-Mar</td>
     <td colspan="2"><span style="color:coral">NO CLASS (Midterm Break)</span></td></tr>
 <tr><td></td><td></td><td></td></tr>
+--->
 
 <tr><td>M 11-Mar</td>
     <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
