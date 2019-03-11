@@ -1,0 +1,95 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Hypothesis Testing Errors CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="identifying-type-i-and-ii-errors" class="section level2">
+<h2>Identifying Type I and II Errors</h2>
+<ol>
+<li>
+The H<sub>0</sub>: μ=15.4 and H<sub>A</sub>: μ&gt;15.4. A Type I error would be saying that the chicken is contaminated when it really is not contaminated. A Type II error would be saying that the chicken is not contaminated when it really is contaminated. In my mind, a Type II error is more egregious as people would be eating contaminated chicken that they have been told is not contaminated.
+</li>
+<li>
+The H<sub>0</sub> is that the drug does not exceed specification whereas the H<sub>A</sub> is that the drug does exceed the specification. A Type I error occurs if the drug does not exceed the specifications but it is concluded that it does. A Type II error occurs if the the drug does exceed the specifications but it is concluded that it does not. In my mind, a Type II error is more egregious as people would be using a “bad” drug but would have been told that it was OK.
+</li>
+</ol>
+<hr />
+</div>
+<div id="uhow-to-reduce-" class="section level2">
+<h2>UHow to Reduce β</h2>
+<ol>
+<li>
+See Figure 1.
+</li>
+<p><img src="KEY_HypTestingErrs_CE_files/figure-html/Pwr1-1.png" width="336" /></p>
+<p>Figure 1: NULL normal distribution representing the rejection region for the power calculation example.</p>
+<li>
+See Figure 2.
+</li>
+<p><img src="KEY_HypTestingErrs_CE_files/figure-html/Pwr2-1.png" width="336" /></p>
+<p>Figure 2: ACTUAL normal distribution representing power in the power calculation example.</p>
+<li>
+Effects on β
+</li>
+<ol>
+<li>
+Increasing α will DEcrease β
+</li>
+<li>
+Increasing n will DEcrease β
+</li>
+<li>
+Increasing σ will INcrease β
+</li>
+<li>
+Increasing how wrong the H<sub>0</sub> is will DEcrease β
+</li>
+</ol>
+<li>
+β my be DEcreased by INcreasing n or INcreasing α.
+</li>
+<li>
+Power may be INcreased by INcreasing n or INcreasing α.
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(0.05,mean=100,sd=10/sqrt(30),type=&quot;q&quot;)
+distrib(96.997,mean=95,sd=10/sqrt(30),lower.tail=FALSE)</code></pre>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
