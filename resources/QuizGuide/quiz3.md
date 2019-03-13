@@ -10,14 +10,14 @@ The third Quiz (see [dates page](../Dates-Current)) will cover material from Mod
 
 * [**5%**] Five multiple choice questions. These are primarily definitions or symbols.
 * [**20%**] Compute probabilities (with a focus on using normal distributions) ... like these [exercises](../../modules/CE/Probability_CE1.html) and [review exercises (section 2)](../../modules/RE/Probability_RevEx.html).
-* [**6%**] Identify statistical (null and alternative) hypotheses from a research hypothesis ... [like this exercise](../../modules/CE/HypTesting_CE.html#identifying-hypotheses).
-* [**7%**] Calculate a p-value and make a decision ... [like this](../../modules/CE/HypTesting_CE.html#p-value-calculations-and-decisions-i) and [this exercise](../../modules/CE/HypTesting_CE.html#p-value-calculations-and-decisions-ii).
-* [**8%**] Calculate a p-value and make a decision within the context of a problem ... [like this](../../modules/CE/HypTesting_CE.html#body-temperature) and [this exercise](../../modules/CE/HypTesting_CE.html#beetle-size) (*but the sample mean will be given to you*).
+* [**6%**] Identify statistical (null and alternative) hypotheses from a research hypothesis ... [like this exercise](../../modules/CE/HypTesting_CE1.html#identifying-hypotheses).
+* [**7%**] Calculate a p-value and make a decision ... [like this](../../modules/CE/HypTesting_CE1.html#p-value-calculations-and-decisions-i) and [this exercise](../../modules/CE/HypTesting_CE2.html#p-value-calculations-and-decisions-ii).
+* [**8%**] Calculate a p-value and make a decision within the context of a problem ... [like this](../../modules/CE/HypTesting_CE1.html#body-temperature) and [this exercise](../../modules/CE/HypTesting_CE1.html#beetle-size) (*but the sample mean will be given to you*).
 * [**4%**] Identify type I and II errors within the context of a problem ... [like this exercise](../../modules/CE/HypTestingErrs_CE.html#identifying-type-i-and-ii-errors).
 * [**4%**] Calculate &beta; or power (like we did in class and [demonstrated in this video](https://www.youtube.com/watch?v=BJZpx7Mdde4)).
-* [**7%**] Calculate and interpret confidence regions ... [like this exercise](../../modules/CE/ConfRegions_CE1.html#confidence-region-calculations).
-* [**8%**] Calculate and interpret confidence regions within the context of a problem ... [like this](../../modules/CE/ConfRegions_CE1.html#body-temperature) and [this exercise](../../modules/CE/ConfRegions_CE1.html#beetle-size) (*but the sample mean will be given to you*).
-* [**5%**] Compute the required sample size ... [like this exercise](../../modules/CE/ConfRegions_CE1.html#internet-usage).
+* [**7%**] Calculate and interpret confidence regions ... [like this exercise](../../modules/CE/ConfRegions_CE2.html#confidence-region-calculations).
+* [**8%**] Calculate and interpret confidence regions within the context of a problem ... [like this](../../modules/CE/ConfRegions_CE2.html#body-temperature) and [this exercise](../../modules/CE/ConfRegions_CE2.html#beetle-size) (*but the sample mean will be given to you*).
+* [**5%**] Compute the required sample size ... [like this exercise](../../modules/CE/ConfRegions_CE2.html#internet-usage).
 * [**6%**] Construct numbers (groups of means) that illustrate accuracy and precision ... [like this exercise](../../modules/CE/SamplingDist_CE3.html#accuracy-and-precision).
 * [**20%**] There are four short answer questions from the [Sampling Distributions](../../modules/SamplingDist) [Hypothesis Testing](../../modules/HypTesting), [Hypothesis Testing Errors](../../modules/HypTestingErrs), and [Confidence Regions](../../modules/ConfRegions) modules.
 
