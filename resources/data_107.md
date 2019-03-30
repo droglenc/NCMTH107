@@ -44,6 +44,7 @@ title: Data for MTH107
 * nightlight -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/nightlight.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/nightlight_meta.txt)
 * NormTemp -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/NormTemp.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/NormTemp_meta.txt)
 * OtterMort -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/OtterMort.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/OtterMort_meta.txt)
+* Panther -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/Panther.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/Panther_meta.txt)
 * PerchGL -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/PerchGL.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/PerchGL_meta.txt)
 * pHlevels -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/pHlevels.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/pHlevels_meta.txt)
 * PopularKids -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/PopularKids.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/PopularKids_meta.txt)
