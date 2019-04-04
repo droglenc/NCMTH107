@@ -104,7 +104,7 @@ Templer's Death Anxiety Scale (DAS) is a measure of an individual's anxiety conc
 ## Pork Quality
 <img src="zimgs/pork-stamp.jpg" alt="Pork" class="img-right">
 
-A pig diet manufacturer wants to determine if the backfat thickness differs between pigs raised on two different diets. Backfat thickness is an indicator of pork quality; smaller thicknesses mean better quality. A group of 24 pigs was randomly allocated to two groups which differed only in the diet received. Test the results from this experiment to see if a difference in backfat thickness is evident at the 5% level. Note that Levene's test p-value is 0.532.
+A pig diet manufacturer wants to determine if the backfat thickness differs between pigs raised on two different diets. Backfat thickness is an indicator of pork quality; smaller thicknesses mean better quality. A group of 24 pigs was randomly allocated to two groups which differed only in the diet received. Test the results from this experiment to see if a difference in backfat thickness (cm) is evident at the 5% level. Note that Levene's test p-value is 0.532.
 
 ```
          Var Diet  N   Mean Median  StDev SE Mean  Min  Max
