@@ -14,7 +14,6 @@ Note that some of the more distant dates are subject to change.
 
 <table width="100%">
 <tr><th width="18%">Date</th><th width="36%">Preparation</th><th width="46%">Items Due</th></tr>
-<!---
 <tr><td>W 9-Jan</td>
     <td><a href="Syllabus-Current">Syllabus</a><br><a href="../modules/WhyStats">Why Stats is Important?</a></td>
     <td>--</td></tr>
@@ -163,6 +162,7 @@ Note that some of the more distant dates are subject to change.
     <td colspan="2"><span style="color:red">Final Quiz</span></td></tr>
 <tr><td>F 18-Apr</td>
     <td colspan="2"><span style="color:coral">NO CLASS (Good Friday)</span></td></tr>
+<!---
 --->
 
 </table>
