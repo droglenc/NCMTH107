@@ -14,155 +14,158 @@ Note that some of the more distant dates are subject to change.
 
 <table width="100%">
 <tr><th width="18%">Date</th><th width="36%">Preparation</th><th width="46%">Items Due</th></tr>
-<tr><td>W 9-Jan</td>
+
+<tr><td>W 4-Sep</td>
     <td><a href="Syllabus-Current">Syllabus</a><br><a href="../modules/WhyStats">Why Stats is Important?</a></td>
     <td>--</td></tr>
-<tr><td>F 11-Jan</td>
+<tr><td>F 6-Sep</td>
     <td><a href="../modules/FoundationalDefns">Foundational Definitions</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
-<tr><td>M 14-Jan</td>
+<tr><td>M 9-Sep</td>
     <td><a href="../modules/DataProduction">Data Production</a></td>
     <td>--</td></tr>
-<tr><td>W 16-Jan</td>
+<tr><td>W 11-Sep</td>
     <td><a href="../modules/GettingDataIntoR">Getting Data Into R</a></td>
     <td>--</td></tr>
-<tr><td>F 18-Jan</td>
+<tr><td>F 13-Sep</td>
     <td><a href="../modules/UEDACat">Univariate EDA - Categorical</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
-<tr><td>M 21-Jan</td>
-    <td colspan="2"><span style="color:coral">NO CLASS (MLK Jr Day)</span></td></tr>
-<tr><td>W 23-Jan</td>
+<tr><td>M 16-Sep</td>
     <td><a href="../modules/UEDAQuant1">Summaries for One Quant ...</a></td>
     <td>--</td></tr>
-<tr><td>F 25-Jan</td>
+<tr><td>W 18-Sep</td>
     <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant ...</a></td>
     <td>--</td></tr>
+<tr><td>F 20-Sep</td>
+    <td colspan="2"><span style="color:red">First Quiz</span> (<a href="QuizGuide/quiz">Study Guide</a>)</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
-<tr><td>M 28-Jan</td>
-    <td colspan="2"><span style="color:red">First Quiz</span> (<a href="QuizGuide/quiz1.html">Study Guide</a>)</td></tr>
-<tr><td>W 30-Jan</td>
-    <td>Polar Vortex Day</td>
-    <td>--</td></tr>
-<tr><td>F 1-Feb</td>
+<tr><td>M 23-Sep</td>
     <td><a href="../modules/NormalDist">Normal Distributions</a></td>
     <td>--</td></tr>
-<tr><td></td><td></td><td></td></tr>
-
-<tr><td>M 4-Feb</td>
+<tr><td>W 25-Sep</td>
     <td><a href="../modules/NormalDist">Normal Distributions</a></td>
-    <td>Quiz 1 Reflection (Optional)</td></tr>
-<tr><td>W 6-Feb</td>
+    <td>--</td></tr>
+<tr><td>F 27-Sep</td>
     <td><a href="../modules/BEDACat">Bivariate EDA - Categorical</a></td>
-    <td>--</td></tr>
-<tr><td>F 8-Feb</td>
+    <td>Quiz 1 Reflection (Optional)</td></tr>
+<tr><td></td><td></td><td></td></tr>
+
+<tr><td>M 30-Sep</td>
     <td><a href="../modules/BEDAQuant">Bivariate EDA - Quantitative</a></td>
     <td>--</td></tr>
-<tr><td></td><td></td><td></td></tr>
-
-<tr><td>M 11-Feb</td>
+<tr><td>W 2-Oct</td>
     <td><a href="../modules/LinearRegression">Linear Regression</a></td>
     <td>--</td></tr>
-<tr><td>W 13-Feb</td>
+<tr><td>F 4-Oct</td>
     <td><a href="../modules/LinearRegression">Linear Regression</a></td>
     <td>--</td></tr>
-<tr><td>F 15-Feb</td>
-    <td colspan="2"><span style="color:red">Second Quiz</span> (<a href="QuizGuide/quiz2.html">Study Guide</a>)</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
-<tr><td>M 18-Feb</td>
+<tr><td>M 7-Oct</td>
+    <td>TBD</td>
+    <td>--</td></tr>
+<tr><td>W 9-Oct</td>
+    <td colspan="2"><span style="color:red">Second Quiz</span> (<a href="QuizGuide/quiz">Study Guide</a>)</td></tr>
+<tr><td>F 11-Oct</td>
     <td><a href="../modules/SamplingDist">Sampling Distributions</a></td>
     <td>--</td></tr>
-<tr><td>W 20-Feb</td>
-    <td colspan="2"><span style="color:coral">NO CLASS (Ogle Gone)</span></td></tr>
-<tr><td>F 22-Feb</td>
+<tr><td></td><td></td><td></td></tr>
+
+<tr><td>M 14-Oct</td>
+    <td><a href="../modules/SamplingDist">Sampling Distributions</a></td>
+    <td>--</td></tr>
+<tr><td>W 16-Oct</td>
     <td><a href="../modules/Probability">Probability</a></td>
+    <td>--</td></tr>
+<tr><td>F 18-Oct</td>
+    <td><a href="../modules/FilteringDataInR">Filtering Data In R</a></td>
     <td>Quiz 2 Reflection (Optional)</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
-<tr><td>M 25-Feb</td>
-    <td colspan="2"><span style="color:coral">CLASS CANCELLED</span></td></tr>
-<tr><td>W 27-Feb</td>
+<tr><td>M 21-Oct</td>
+    <td colspan="2"><span style="color:coral">NO CLASS (Reading Day)</span></td></tr>
+<tr><td>W 23-Oct</td>
     <td><a href="../modules/HypTesting">Hypothesis Testing</a></td>
     <td>--</td></tr>
-<tr><td>F 1-Mar</td>
+<tr><td>F 25-Oct</td>
     <td><a href="../modules/HypTestingErrs">Hypothesis Testing Errors</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
-<tr><td>M 4-Mar</td>
-    <td colspan="2"><span style="color:coral">NO CLASS (Midterm Break)</span></td></tr>
-<tr><td>W 6-Mar</td>
-    <td colspan="2"><span style="color:coral">NO CLASS (Midterm Break)</span></td></tr>
-<tr><td>F 8-Mar</td>
-    <td colspan="2"><span style="color:coral">NO CLASS (Midterm Break)</span></td></tr>
-<tr><td></td><td></td><td></td></tr>
-
-<tr><td>M 11-Mar</td>
+<tr><td>M 28-Oct</td>
     <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
     <td>--</td></tr>
-<tr><td>W 13-Mar</td>
+<tr><td>W 30-Oct</td>
     <td><a href="../modules/ConfRegions">Confidence Regions</a></td>
     <td>--</td></tr>
-<tr><td>F 15-Mar</td>
+<tr><td>F 1-Nov</td>
     <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
-<tr><td>M 18-Mar</td>
+<tr><td>M 4-Nov</td>
     <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td>
     <td>--</td></tr>
-<tr><td>W 20-Mar</td>
-    <td colspan="2"><span style="color:red">Third Quiz</span> (<a href="QuizGuide/quiz3.html">Study Guide</a>)</td></tr>
-<tr><td>F 22-Mar</td>
-    <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
+<tr><td>W 6-Nov</td>
+    <td>TBD</td>
     <td>--</td></tr>
+<tr><td>F 8-Nov</td>
+    <td colspan="2"><span style="color:red">Third Quiz</span> (<a href="QuizGuide/quiz">Study Guide</a>)</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
-<tr><td>M 25-Mar</td>
+<tr><td>M 11-Nov</td>
     <td><a href="../modules/1Samplet">1-Sample t-Test</a></td>
+    <td>--</td></tr>
+<tr><td>W 13-Nov</td>
+    <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
+    <td>--</td></tr>
+<tr><td>F 15-Nov</td>
+    <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
     <td>Quiz 3 Reflection (Optional)</td></tr>
-<tr><td>W 27-Mar</td>
-    <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
-    <td>--</td></tr>
-<tr><td>F 29-Mar</td>
+<tr><td></td><td></td><td></td></tr>
+
+<tr><td>M 18-Nov</td>
+    <td colspan="2"><span style="color:coral">NO CLASS (Thanksgiving)</span></td></tr>
+<tr><td>W 20-Nov</td>
+    <td colspan="2"><span style="color:coral">NO CLASS (Thanksgiving)</span></td></tr>
+<tr><td>F 22-Nov</td>
+    <td colspan="2"><span style="color:coral">NO CLASS (Thanksgiving)</span></td></tr>
+<tr><td></td><td></td><td></td></tr>
+
+<tr><td>M 25-Nov</td>
     <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
     <td>--</td></tr>
-<tr><td></td><td></td><td></td></tr>
-
-<tr><td>M 1-Apr</td>
-    <td><a href="../modules/2Samplet">2-Sample t-Test</a></td>
-    <td>--</td></tr>
-<tr><td>W 3-Apr</td>
+<tr><td>W 27-Nov</td>
     <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
     <td>--</td></tr>
-<tr><td>F 5-Apr</td>
-    <td colspan="2"><span style="color:red">Fourth Quiz</span> (<a href="QuizGuide/quiz4.html">Study Guide</a>)</td></tr>
-<tr><td></td><td></td><td></td></tr>
-
-<tr><td>M 8-Apr</td>
-    <td>Course Review</td>
-    <td>--</td></tr>
-<tr><td>W 10-Apr</td>
-    <td><a href="../modules/FilteringDataInR">Filtering Data In R</a></td>
-    <td>Quiz 4 Reflection (Optional)</td></tr>
-<tr><td>F 12-Apr</td>
-    <td>Course Review</td>
+<tr><td>F 29-Nov</td>
+    <td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td>
     <td>--</td></tr>
 <tr><td></td><td></td><td></td></tr>
 
-<tr><td>M 15-Apr</td>
+<tr><td>M 2-Dec</td>
+    <td colspan="2"><span style="color:red">Fourth Quiz</span> (<a href="QuizGuide/quiz">Study Guide</a>)</td></tr>
+<tr><td>W 4-Dec</td>
     <td>Course Review</td>
-    <td>XC Reports (optional)</td></tr>
-<tr><td>W 17-Apr</td>
+    <td>--</td></tr>
+<tr><td>F 6-Dec</td>
+    <td>Course Review</td>
+    <td>--</td></tr>
+<tr><td></td><td></td><td></td></tr>
+
+<tr><td>M 9-Dec</td>
+    <td>Course Review</td>
+    <td>Quiz 4 Reflection (Optional)<br>XC Reports (optional)</td></tr>
+<tr><td>W 11-Dec</td>
+    <td>Course Review</td>
+    <td>--</td></tr>
+<tr><td>F 13-Dec</td>
     <td colspan="2"><span style="color:red">Final Quiz</span></td></tr>
-<tr><td>F 18-Apr</td>
-    <td colspan="2"><span style="color:coral">NO CLASS (Good Friday)</span></td></tr>
 <!---
 --->
-
 </table>
