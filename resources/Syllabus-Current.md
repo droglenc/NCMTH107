@@ -86,22 +86,22 @@ A variety of opportunities for out-of-class assistance and in-class accomodation
 ### Instructor -- Derek Ogle
 
 <img class="img-right" src="../img/DerekOgle1.jpg">
-I am committed to your doing well in this course and see it as my responsibility to help you as much as possible both in and out of the designated class period. Thus, you may call (715-682-1300), e-mail (<a href="mailto:dogle@northland.edu">dogle@northland.edu</a>)[^email], or visit me in my office (CSE228) for help. I will make every effort to be available during office hours from 1-2p on Monday and Wednesday and 12n-1p on Tuesday. I will also be available any time that my door is open. Finally, you may also send me <a href="https://www.surveymonkey.com/r/KC87PJW" target="_blank">anonymous feedback, suggestions, or questions</a>. Please don't hesitate to see or contact me if you have any questions regarding this course.
+I am committed to your doing well in this course and see it as my responsibility to help you as much as possible both in and out of the designated class period. Thus, you may call (715-682-1300), e-mail (<a href="mailto:dogle@northland.edu">dogle@northland.edu</a>)[^email], or visit me in my office (CSE228) for help. I will make every effort to be available during office hours from 1-3p on Monday, Wednesday, and Friday. I will also be available any time that my door is open. Finally, you may also send me <a href="https://www.surveymonkey.com/r/KC87PJW" target="_blank">anonymous feedback, suggestions, or questions</a>. Please don't hesitate to see or contact me if you have any questions regarding this course.
 
 
 ### Tutors
-Two experienced tutors -- Adam Gunnelson and Emily Mader -- are also available (in Dexter Library) during their hours listed below to help you succeed in this course. In addition to their tutor hours, please don't forget my availability as described above.
+Two experienced tutors -- Emily Mader and XXX -- are also available (in Dexter Library) during their hours listed below to help you succeed in this course. In addition to their tutor hours, please don't forget my availability as described above.
 
 <table class="tutors" width="90%">
-<tr><th width="50%"><img src="../img/Adam_F16.jpg"></th><th width="50%"><img src="../img/Emily_F17.jpg"></th></tr>
-<tr><th>Adam Gunnelson</th><th>Emily Mader</th></tr>
-<tr style="vertical-align:top"><td>A chemistry major and math minor, Adam is a bow-tie enthusiast who enjoys helping people with math.</td><td>A math major and physics minor, Emily enjoys playing softball, being outdoors, and, of course, mathematics!</td></tr>
-<tr style="vertical-align:top"><td>Tue 7-9p; Thu 3-5p</td><td>Mon 3-5p; Wed 6-8p</td></tr>
+<tr><th width="50%"><img src="../img/Emily_F17.jpg"></th><th width="50%"><img src="../img/XXX.jpg"></th></tr>
+<tr><th>Emily Mader</th><th>XXX</th></tr>
+<tr style="vertical-align:top"><td>A math major and physics minor, Emily enjoys playing softball, being outdoors, and, of course, mathematics!</td><td>XXX.</td></tr>
+<tr style="vertical-align:top"><td>XXX</td><td>XXX</td></tr>
 </table>
 
 
 ### Accommodations
-I want to create an inclusive and accessible learning environment for those of you that have a condition that may require special accommodations (e.g., attention, learning, vision, hearing, mental, physical, or other health-related concern). *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course. If you have a condition that requires accommodations but *you have not yet established services* through OAR, then you should contact Jennifer Newago as soon as possible (Ponzio 230, x1387, or <a href="mailto:accomodations@northland.edu">accomodations@northland.edu</a>). Reasonable accommodations are established through an interactive process between you, me, and OAR. It is the policy and practice of Northland College to create inclusive and accessible learning environments consistent with federal and state law. <a href="https://my.northland.edu/life/be-healthy/accommodations/">More information is available here.</a>
+I want to create an inclusive and accessible learning environment for those of you that have a condition that may require special accommodations (e.g., attention, learning, vision, hearing, mental, physical, or other health-related concern). *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course. If you have a condition that requires accommodations but *you have not yet established services* through OAR, then you should contact XXX as soon as possible (Ponzio 230, x1387, or <a href="mailto:accomodations@northland.edu">accomodations@northland.edu</a>). Reasonable accommodations are established through an interactive process between you, me, and the OAR. It is the policy and practice of Northland College to create inclusive and accessible learning environments consistent with federal and state law. <a href="https://my.northland.edu/life/be-healthy/accommodations/">More information is available here.</a>
 
 
 ### Academic Alerts
