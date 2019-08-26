@@ -223,6 +223,7 @@ Your letter grade will be assigned from your overall percentage (rounded to a wh
 
 **If you meet with me in my office before the end of the second week of class**, your lowest four preparation check, homework, **AND** participation grades will be excluded when computing your final grade.
 
+#### Note About Incomplete Grades
 An incomplete grade will be given ONLY under extreme circumstances beyond your control, such as a major illness, and will ONLY be given if you have successfully completed the entire course except for the final exam. This is in accordance with [Northland College policy](https://my.northland.edu/student-policies/academic-policies/#grades){:target="_blank"} (scroll down to "Incomplete Grades").
 
 #### Note About Midterm Grades
