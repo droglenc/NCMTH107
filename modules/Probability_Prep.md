@@ -8,7 +8,7 @@ css: "/css/modules.css"
 ----
 
 <div class="alert alert-warning">
-To prepare for this module, please answer the following questions from the preparation readings and videos. Please contact the professor if you have questions.
+Use the preparation readings and videos to prepare WRITTEN answers (to bring to class) for the following questions. Please contact <a href="mailto:dogle@northland.edu">Dr. Ogle</a> if you have questions.
 </div>
 
 1. What does the most basic form of probability calculations require?
