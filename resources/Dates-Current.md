@@ -27,7 +27,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 
 <tr><td>M 23-Sep</td><td><a href="../modules/NormalDist">Normal Distributions</a></td></tr>
 <tr><td>W 25-Sep</td><td><a href="../modules/NormalDist">Normal Distributions</a></td></tr>
-<tr><td>F 27-Sep</td><td><a href="../modules/BEDACat">Bivariate EDA - Categorical</a><br><span style="color:indigo">DUE:</span>: Quiz 1 Reflection (Optional)</td></tr>
+<tr><td>F 27-Sep</td><td><a href="../modules/BEDACat">Bivariate EDA - Categorical</a><br><span style="color:teal">DUE:</span> Quiz 1 Reflection (Optional)</td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 30-Sep</td><td><a href="../modules/BEDAQuant">Bivariate EDA - Quantitative</a></td></tr>
@@ -42,7 +42,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 
 <tr><td>M 14-Oct</td><td><a href="../modules/SamplingDist">Sampling Distributions</a></td></tr>
 <tr><td>W 16-Oct</td><td><a href="../modules/Probability">Probability</a></td></tr>
-<tr><td>F 18-Oct</td><td><a href="../modules/FilteringDataInR">Filtering Data In R</a><br><span style="color:indigo">DUE:</span> Quiz 2 Reflection (Optional)</td></tr>
+<tr><td>F 18-Oct</td><td><a href="../modules/FilteringDataInR">Filtering Data In R</a><br><span style="color:teal">DUE:</span> Quiz 2 Reflection (Optional)</td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 21-Oct</td><td><span style="color:coral">NO CLASS (Reading Day)</span></td></tr>
@@ -62,7 +62,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 
 <tr><td>M 11-Nov</td><td><a href="../modules/1Samplet">1-Sample t-Test</a></td></tr>
 <tr><td>W 13-Nov</td><td><a href="../modules/2Samplet">2-Sample t-Test</a></td></tr>
-<tr><td>F 15-Nov</td><td><a href="../modules/2Samplet">2-Sample t-Test</a><br><span style="color:indigo">DUE:</span>: Quiz 3 Reflection (Optional)</td></tr>
+<tr><td>F 15-Nov</td><td><a href="../modules/2Samplet">2-Sample t-Test</a><br><span style="color:teal">DUE:</span>: Quiz 3 Reflection (Optional)</td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 18-Nov</td><td><span style="color:coral">NO CLASS (Thanksgiving)</span></td></tr>
@@ -81,7 +81,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td></td><td></td></tr>
 
 <tr><td>M 9-Dec</td>
-    <td>Course Review<br><span style="color:indigo">DUE:</span>: Quiz 4 Reflection (Optional) and XC Reports (optional)</td></tr>
+    <td>Course Review<br><span style="color:teal">DUE:</span>: Quiz 4 Reflection (Optional) and XC Reports (optional)</td></tr>
 <tr><td>W 11-Dec</td><td>Course Review</td></tr>
 <tr><td>F 13-Dec</td>
     <td colspan="2"><span style="color:red">Final Quiz</span></td></tr>
