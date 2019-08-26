@@ -55,7 +55,7 @@ In this class, you will have the opportunity to:
 1. Construct and interpret the results from a hypothesis test for one- and two-sample quantitative and categorical data situations; and 
 1. Communicate statistical results and ideas in a succinct and informative manner. 
 
-This course fullfills that Quantitative Reasoning requirement in the [General Education Program](https://my.northland.edu/faculty/fac-academic-programs/){:target="_blank"} because you will:
+This course fulfills that Quantitative Reasoning requirement in the [General Education Program](https://my.northland.edu/faculty/fac-academic-programs/){:target="_blank"} because you will:
 
 * Communicate mathematical information symbolically, visually, numerically, and verbally;
 * Use statistical or mathematical models in solving problems; and
@@ -67,9 +67,9 @@ This course fullfills that Quantitative Reasoning requirement in the [General Ed
 ## Assistance
 
 <img class="img-right" src="../img/help.jpg">
-A variety of opportunities for out-of-class assistance and in-class accomodations are provided. Please read about these opportunities below and use them throughout the semester as appropriate.[^help]
+A variety of opportunities for out-of-class assistance and in-class accommodations are provided. Please read about these opportunities below and use them throughout the semester as appropriate.[^help]
 
-* *Never apologise for asking for what you need, if you don't ask - the answer will always be no.* - Rachel Wolchin
+* *Never apologize for asking for what you need, if you don't ask - the answer will always be no.* - Rachel Wolchin
 * *Asking for other's guidance helps you see what you may not be able to see. It's always important to check your ego and ask for help.* - Ken Blanchard
 * *The only mistake you can make is not asking for help.* - Sandeep Jauhar
 * *You don't have to do it all by yourself.* - Elizabeth Dehn 
@@ -100,24 +100,24 @@ I want to create an inclusive and accessible learning environment for those of y
 
 <img class="img-right" src="../img/alert.jpg">
 
-As you adjust to the rigors of college life, you may struggle a bit in your classes and benefit from working with a professional on your organization, motivation, and stress level. If I observe that you are struggling with this course early in the semester then I may file an "Academic Alert" about you. If this happens, you will receive an e-mail from me that explains steps that you can take to improve your performance in the class. We can certainly also meet to further discuss these steps. In addition, our Academic Success Coordinator, Gina Kirsten, will receive the alert and will likely reach out to you to set up a time to further discuss ways to improve in the class. Academic Alerts are not punitive, they are simply an attempt to help you get back on track in this class as soon as possible.
+As you adjust to the rigors of college life, you may struggle a bit in your classes and benefit from working with a professional on your organization, motivation, and stress level. If I observe early in the semester that you are struggling with this course then I may file an "Academic Alert" about you. If this happens, you will receive an e-mail from me that explains steps that you can take to improve your performance in the class. Our Academic Success Coordinator, Gina Kirsten, will receive the alert and will likely also reach out to you to set up a time to further discuss ways to improve in the class. **Academic Alerts are not punitive**, they are simply an attempt to help you get back on track in this class as soon as possible.
 
 ----
 
 ## Grading
 
 <img class="img-right" src="../img/grading.jpg">
-You will have several opportunities, each described below, to show what you have learned in this course. An overall grade will be computed from these items as shown in the <a href="#overall-grade">Overall Grade section</a> further below.
+You will have the opportunities described below to show what you have learned in this course. An overall grade will be computed from these items as shown in the <a href="#overall-grade">Overall Grade section</a> further below.
 
 ### Preparation Checks
-You will be asked to prepare for each class period by reading the reading and watching the videos for the module indicated on the [Dates page](Dates-Current){:target="_blank"} and announced at the end of the previous class period. A preparation guide is provided for each module to help you identify key concepts in the reading and videos ([here's an example](../modules/FoundationalDefns_Prep.html){:target="_blank"}). You should prepare your own **hand-written**[^1] answers or notes to each question on the preparation guide. A "preparation check", for which you can use your hand-written notes but no other resources, will be administered during the first 8 minutes of every class period. **Preparation checks not completed in the first 8 minutes of class cannot be made up. Preparation checks taken from outside of the classroom will not be accepted.**
+You should prepare for each class period by reading the reading and watching the videos for the module indicated on the [Dates page](Dates-Current){:target="_blank"} and announced at the end of the previous class period. A preparation guide is provided for each module to help you identify key concepts in the reading and videos ([here's an example](../modules/FoundationalDefns_Prep.html){:target="_blank"}). You should prepare your own **hand-written**[^1] answers or notes to each question on the preparation guide. A "preparation check", for which you can use your hand-written notes but no other resources, will be administered during the first 8 minutes of every class period. **Preparation checks not completed in the first 8 minutes of class cannot be made up. Preparation checks taken from outside of the classroom will not be accepted.**
 
 **If you meet with me in my office before the end of the second week of class**, your lowest four preparation check grades will be excluded when computing your final grade.
 
 ### Homework
 
 <img class="img-right" src="../img/homework.png">
-Each day you will be required to turn in work on the exercises from the previous class period. Most of this work will likely be completed in class by most of you, as long as you remained focused and asked for help in class. However, some of you may need to work outside of class or seek additional help from me or the tutors to complete all of this work. The homework you turn in will be graded based on "completeness" according to the following rubric.
+Each day you will be required to turn in work on the exercises from the previous class period. As long as you are focused and ask for help then most of this work will be completed during class. However, you may need to work outside of class or seek additional help from me or the tutors to complete all of this work. You are allowed to work with other students on exercises, but substantial copying of the work of others does not lead to learning and will not be accepted. The homework you turn in will be graded based on "completeness" according to the following rubric.
 
 <div class="container-fluid">
   <table class="table table-bordered">
@@ -125,19 +125,28 @@ Each day you will be required to turn in work on the exercises from the previous
     <tr class="info"><th>4 points</th><th>3-1 points</th><th>0 points</th></tr>
   </thead>
   <tbody>
-    <tr><td>All parts of the exercise were completed in full. Work was neat and orderly.</td><td>Some parts of the exercise were either not attempted or were incomplete. Work was not as neat and orderly as it should have been.</td><td>Very little of the exercise was completed.</td></tr>
+    <tr><td>All parts of the exercise were completed in full. Work was neat and orderly.</td><td>Some parts of the exercise were either not attempted or were incomplete. Work was not as neat and orderly as it should have been.</td><td>Very little of the exercise was completed or substantial amounts of the work was copied from someone else.</td></tr>
   </tbody>
   </table>
 </div>
-
-You are allowed to work with other students on exercises in and out of class but substantial copying of the work of others does not lead to learning. If I suspect that you are substantially copying someone else's work I will address this with you once. After that, you and the person you copied from will earn zeroes on the homework that was copied.
 
 **If you meet with me in my office before the end of the second week of class**, your lowest four homework grades will be excluded when computing your final grade.
 
 ### Participation
 
 <img class="img-right" src="../img/participation.jpg" alt="Participation">
-This class is taught in an active learning format. Outside of class you will be asked to prepare a module for each class period (as described above) and complete exercises begun in class. Your preparation outside of class will be assessed by the daily preparation checks and homeworks assignments. In class you will be asked to actively participate (listen, take notes) in short lectures, work on in-class exercises, ask questions of other students and the instructor, and, occasionally, work in small groups. Our time during class is short and precious, thus you should be focused and attentive during the entire class period. I will assess your level of participation at the end of each class period with the following rubric.
+This class is taught in an active learning format and, thus, our time during class is short and precious. The following behaviors are indicative of an active fully participating student:
+
+- Attended the entire class period (including showing up on time).
+- Came to class having fully completed the required preparation materials (see above).
+- Diligently worked on the homework exercises.
+- Asked pertinent questions.
+- Collaboratively worked with others on class material.
+- Took notes during short lectures.
+- Paid attention during short lectures.
+- Followed the [class conduct guidelines](#classroom-conduct-and-academic-integrity).
+
+I will assess your level of participation at the end of each class period with the following rubric.
 
 <div class="container-fluid">
   <table class="table table-bordered">
@@ -145,20 +154,10 @@ This class is taught in an active learning format. Outside of class you will be 
     <tr class="info"><th>4 points</th><th>3-1 points</th><th>0 points</th></tr>
   </thead>
   <tbody>
-    <tr><td>Fully (see below) participated in the day's activities. Properly focused at all times.</td><td>Participated in many, but not all, of the day's activities. Focus waned or was inconsistent. Left early or arrived late by between 1-15 mins.</td><td>Very little active participation in the day's activities. Lacked focus. Left early or arrived late by more than 15 mins.</td></tr>
+    <tr><td>Fully (see above) participated in the day's activities. Properly focused at all times.</td><td>Participated in many, but not all, of the day's activities. Focus waned or was inconsistent. Left early or arrived late by between 1-15 mins.</td><td>Very little active participation in the day's activities. Lacked focus. Left early or arrived late by more than 15 mins.</td></tr>
   </tbody>
   </table>
 </div>
-
-The following behaviors are indicative of full participation:
-
-- Attended the entire class period (including showing up on time).
-- Diligently worked on the exercises.
-- Asked pertinent questions.
-- Worked with others on class material.
-- Took notes during lectures.
-- Paid attention during lectures.
-- Followed the [class conduct guidelines](#classroom-conduct-and-academic-integrity).
 
 **If you meet with me in my office before the end of the second week of class**, your lowest four participation grades will be excluded when computing your final grade.
 
