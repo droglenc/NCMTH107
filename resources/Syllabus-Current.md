@@ -112,8 +112,6 @@ You will have the opportunities described below to show what you have learned in
 ### Preparation Checks
 You should prepare for each class period by reading the reading and watching the videos for the module indicated on the [Dates page](Dates-Current){:target="_blank"} and announced at the end of the previous class period. A preparation guide is provided for each module to help you identify key concepts in the reading and videos ([here's an example](../modules/FoundationalDefns_Prep.html){:target="_blank"}). You should prepare your own **hand-written**[^1] answers or notes to each question on the preparation guide. A "preparation check", for which you can use your hand-written notes but no other resources, will be administered during the first 8 minutes of every class period. **Preparation checks not completed in the first 8 minutes of class cannot be made up. Preparation checks taken from outside of the classroom will not be accepted.**
 
-**If you meet with me in my office before the end of the second week of class**, your lowest four preparation check grades will be excluded when computing your final grade.
-
 ### Homework
 
 <img class="img-right" src="../img/homework.png">
@@ -129,8 +127,6 @@ Each day you will be required to turn in work on the exercises from the previous
   </tbody>
   </table>
 </div>
-
-**If you meet with me in my office before the end of the second week of class**, your lowest four homework grades will be excluded when computing your final grade.
 
 ### Participation
 
@@ -159,8 +155,6 @@ I will assess your level of participation at the end of each class period with t
   </table>
 </div>
 
-**If you meet with me in my office before the end of the second week of class**, your lowest four participation grades will be excluded when computing your final grade.
-
 <img class="img-right" src="../img/studying.jpg" alt="Studying Hours">
 
 As a general rule-of-thumb[^2], you are expected to spend 2-3 hours of time outside of class for each hour in class. This course meets for 4.5 hours per week and, thus, you should dedicate between 9 and 13.5 hours of time outside of class preparing for class, completing review and class exercises, and studying for exams. **The work required for this course can be completed within this expected amount of time, if that time is without distraction**. If you feel that you are spending an inordinate amount of time on some exercises or preparations because you are "stuck," then start your work earlier so that you can stop (and do other things) and make plans to see [me](#instructor--derek-ogle) or the [tutors](#tutors) for help.
@@ -169,7 +163,7 @@ As a general rule-of-thumb[^2], you are expected to spend 2-3 hours of time outs
 ### Quizzes
 Four mid-term quizzes will give you an opportunity to demonstrate what you have learned about the most recent material. With this number of quizzes, the material on each quiz will be focused on fewer modules and, thus, more manageable to prepare for. Additionally, a final exam will give you an opportunity to show that you have a synthetic understanding of all material from throughout the course. The final exam will be focused on the larger concepts, applications, and interpretations, and less on specific details, from throughout the semester. I will provide you with an explicit study guide approximately one week before each quiz and the final exam.
 
-Dates for quizzes and the final exam are shown on the [Dates page](Dates-Current.html){:target="_blank"}. Make-up quizzes will be provided only if you have a fixed commitment of sufficient importance that was set before the beginning of the semester or a verifiable medical condition. Please see me immediately if you miss a quiz without my prior approval, but note that you may not be allowed to make up that quiz. **The final exam will NOT be given early.**
+Dates for quizzes and the final exam are shown on the [Dates page](Dates-Current.html){:target="_blank"}. Make-up quizzes will be provided only if you have a fixed commitment of sufficient importance that was set before the beginning of the semester, or a verifiable medical condition. Please see me immediately if you miss a quiz without my prior approval, but note that you may not be allowed to make up that quiz. **The final exam will NOT be given early.**
 
 Note that your highest quiz score will count for more and your lowest quiz score will count for less in the calculation of your final grade (see [grade weights](#overall-grade) below).
 
@@ -177,7 +171,7 @@ Note that your highest quiz score will count for more and your lowest quiz score
 ### Extra Credit
 Two options for extra credit are:
 
-1. **Quiz Corrections and Reflections** -- For each quiz, **first** complete a correction for each question that you missed, along with *an explanation of why this answer is correct.* You will not receive credit for simply correcting your answer, for providing another incorrect answer, or not providing the explanation. You must address every question you missed to receive full credit for this portion. **Second**, write *thoughtful* reflections to the following items about the quiz (i) what you did well on the quiz (and why), (ii) what you did poorly on the quiz (and why), (iii) what you did to prepare for the quiz (be specific ... did you read your notes, read the module readings, watch videos, redo class exercises, do review exercises, etc.), (iv) what you did to prepare for the quiz that was helpful, (v) what did you do to prepare for the quiz that was not helpful, (vi) what you will change (if anything) in your preparation strategy for the next quiz, (vii) was the quiz as you expected (why or why not), and (viii) any other comments or suggestions about the quiz. Your answers to these two portions must be typed (though you can leave space to show your work by hand for calculations) and easy to read (e.g., neatly organize your corrections by question number) and *must include the original quiz*.<br/><br/>A perfect exam correction and reflection will add the lesser of 15% or the amount it would take for your exam score to be 100%, with two-thirds of the overall grade from the correction (first) portion. Corrections and reflections will be due as announced in class and shown on the [dates](Dates-Current){:target="_blank"} page. **Late corrections and reflections will not be accepted**.
+1. **Quiz Corrections and Reflections** -- For each quiz, **first** complete a correction for each question that you missed, along with *an explanation of why this answer is correct.* You will not receive credit for simply correcting your answer, for providing another incorrect answer, or not providing the explanation. You must address every question you missed to receive full credit for this portion. **Second**, write *thoughtful* reflections to the following items about the quiz (i) what you did well on the quiz (and why), (ii) what you did poorly on the quiz (and why), (iii) what you did to prepare for the quiz (be specific ... did you read your notes, read the module readings, watch videos, redo class exercises, do review exercises, etc.), (iv) what you did to prepare for the quiz that was helpful, (v) what did you do to prepare for the quiz that was not helpful, (vi) what you will change (if anything) in your preparation strategy for the next quiz, (vii) was the quiz as you expected (why or why not), and (viii) any other comments or suggestions about the quiz. Your answers to these two portions must be typed (though you can leave space to show your work "by hand" for calculations). easy to read (e.g., neatly organize your corrections by question number), and *must include the original quiz*.<br/><br/>A perfect exam correction and reflection will add the lesser of 15% or the amount it would take for your exam score to be 100%, with two-thirds of the overall grade from the correction (first) portion. Corrections and reflections will be due as announced in class and shown on the [dates](Dates-Current){:target="_blank"} page. **Late corrections and reflections will not be accepted**.
 
 1. **"Statistics in Use" Reports** - Report on the use of statistics in your life -- e.g., from the news, your other classes, or other work that you have done. If you report on a news item, then you should discuss the background of the information in the report, the use of statistics, how the statistics relate to what you have learned in class, how the statistics were presented, how you feel about that presentation, and any questions that you may have. If you report on statistics used in another class, then you should discuss the background of the project where you used statistics, what the statistics were used for (i.e., purpose), a presentation of your statistical work in the report (i.e., findings), how the statistics relate to what you've learned in this class, and any questions that you may have. The FOCUS of your report should be on the statistics used in the news item or class (not just the news item or the topic in the other class) and **specifically how it relates to a topic in this class**. Each report should be typed, at least one page (single-spaced), and include the item being reported on. Your report will be graded on how well it is written **and how well you relate the item to class**. You may complete up to two reports for as much as 3% extra credit on your final grade. Note that you may not use the same type of news item for more than one report (e.g., you cannot report on presidential race polls more than once). These reports are due as shown on the [dates](Dates-Current){:target="_blank"} page. **Late reports will not be accepted.**
 
@@ -226,6 +220,8 @@ Your letter grade will be assigned from your overall percentage (rounded to a wh
   <tr><td>C+ 77-79</td><td>C  70-76</td><td></td></tr>
   <tr><td>D+ 67-69</td><td>D  60-66</td><td>F   0-59</td></tr>
 </table>
+
+**If you meet with me in my office before the end of the second week of class**, your lowest four preparation check, homework, **AND** participation grades will be excluded when computing your final grade.
 
 An incomplete grade will be given ONLY under extreme circumstances beyond your control, such as a major illness, and will ONLY be given if you have successfully completed the entire course except for the final exam. This is in accordance with [Northland College policy](https://my.northland.edu/student-policies/academic-policies/#grades){:target="_blank"} (scroll down to "Incomplete Grades").
 
