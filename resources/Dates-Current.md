@@ -22,7 +22,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 
 <tr><td>M 16-Sep</td><td><a href="../modules/UEDAQuant1">Summaries for One Quantitative Variable</a></td></tr>
 <tr><td>W 18-Sep</td><td><a href="../modules/UEDAQuant2">Univariate EDA - Quantitative Variable</a></td></tr>
-<tr><td>F 20-Sep</td><td><span style="color:red">First Quiz</span> (<a href="QuizGuide/quiz">Study Guide</a>)</td></tr>
+<tr><td>F 20-Sep</td><td><span style="color:red;font-weight:bold">First Quiz</span> (<a href="QuizGuide/quiz">Study Guide</a>)</td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 23-Sep</td><td><a href="../modules/NormalDist">Normal Distributions</a></td></tr>
@@ -36,7 +36,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td></td><td></td></tr>
 
 <tr><td>M 7-Oct</td><td>TBD</td></tr>
-<tr><td>W 9-Oct</td><td><span style="color:red">Second Quiz</span> (<a href="QuizGuide/quiz">Study Guide</a>)</td></tr>
+<tr><td>W 9-Oct</td><td><span style="color:red;font-weight:bold">Second Quiz</span> (<a href="QuizGuide/quiz">Study Guide</a>)</td></tr>
 <tr><td>F 11-Oct</td><td><a href="../modules/SamplingDist">Sampling Distributions</a></td></tr>
 <tr><td></td><td></td></tr>
 
@@ -57,7 +57,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 
 <tr><td>M 4-Nov</td><td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td></tr>
 <tr><td>W 6-Nov</td><td>TBD</td></tr>
-<tr><td>F 8-Nov</td><td><span style="color:red">Third Quiz</span> (<a href="QuizGuide/quiz">Study Guide</a>)</td></tr>
+<tr><td>F 8-Nov</td><td><span style="color:red;font-weight:bold">Third Quiz</span> (<a href="QuizGuide/quiz">Study Guide</a>)</td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 11-Nov</td><td><a href="../modules/1Samplet">1-Sample t-Test</a></td></tr>
@@ -75,7 +75,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>F 29-Nov</td><td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td></tr>
 <tr><td></td><td></td></tr>
 
-<tr><td>M 2-Dec</td><td><span style="color:red">Fourth Quiz</span> (<a href="QuizGuide/quiz">Study Guide</a>)</td></tr>
+<tr><td>M 2-Dec</td><td><span style="color:red;font-weight:bold">Fourth Quiz</span> (<a href="QuizGuide/quiz">Study Guide</a>)</td></tr>
 <tr><td>W 4-Dec</td><td>Course Review</td></tr>
 <tr><td>F 6-Dec</td><td>Course Review</td></tr>
 <tr><td></td><td></td></tr>
@@ -84,7 +84,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
     <td>Course Review<br><span style="color:teal;font-weight:bold">DUE: Quiz 4 Reflection (Optional) and XC Reports (optional)</span></td></tr>
 <tr><td>W 11-Dec</td><td>Course Review</td></tr>
 <tr><td>F 13-Dec</td>
-    <td colspan="2"><span style="color:red">Final Quiz</span></td></tr>
+    <td colspan="2"><span style="color:red;font-weight:bold">FINAL QUIZ</span></td></tr>
 <!---
 --->
 </table>
