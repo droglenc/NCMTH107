@@ -31,7 +31,7 @@ What you learn in this <strong>Statistical Concepts and Analysis</strong> class 
 
 ## Syllabus Contents
 
-* [Catalog Description](#description) and [Learning Outcomes](#learning-outcomes)
+* [Catalog Description](http://catalog.northland.edu/content.php?catoid=19&catoid=19&navoid=914&filter%5Bitem_type%5D=3&filter%5Bonly_active%5D=1&filter%5B3%5D=1&filter%5Bcpage%5D=3#) and [Learning Outcomes](#learning-outcomes)
 * [Assistance](#assistance) -- [Instructor](#instructor--Derek-Ogle), [Tutors](#tutors), [Accommodations](#accommodations), and [Academic Alerts](#academic-alerts)
 * [Grading](#grading) -- [Preparation Checks](#preparation-checks), [Homework](#homework), [Participation](#participation), [Quizzes](#quizzes), [Extra Credit](#extra-credit), [Overall Grade](#overall-grade)
 * [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
@@ -39,15 +39,11 @@ What you learn in this <strong>Statistical Concepts and Analysis</strong> class 
 
 ----
 
-## Catalog Description
-
-Introduction to the concepts and interpretation of statistics. Summary graphs and statistics; data production (sampling and experiments); random variables and sampling distributions; inference - introduction, for distributions, for proportions; correlation and regression. Prerequisite: MTH103, ACT math > 17, or SAT math > 470. 4 Credits.
-
 ## Learning Outcomes
 
 <img class="img-right" src="../img/outcomes.jpg" alt="Outcomes">
 
-Throughout this class, you will have the opportunity to learn the following:
+In this class, you will have the opportunity to:
 
 1. Describe why statistics is central to scientific inquiry (& your field of interest); 
 1. Define basic statistical words and symbols; 
@@ -59,13 +55,11 @@ Throughout this class, you will have the opportunity to learn the following:
 1. Construct and interpret the results from a hypothesis test for one- and two-sample quantitative and categorical data situations; and 
 1. Communicate statistical results and ideas in a succinct and informative manner. 
 
-While you will get plenty of opportunities to summarize raw data with statistics and graphs, our focus will be on the proper interpretation of statistical results. These interpretations will arise from your solid understanding of statistical concepts.
+This course fullfills that Quantitative Reasoning requirement in the [General Education Program](https://my.northland.edu/faculty/fac-academic-programs/){:target="_blank"} because you will:
 
-Some of you are taking this course to fullfill the Quantitative Reasoning requirement in the [General Education Program](https://my.northland.edu/faculty/fac-academic-programs/){:target="_blank"}. This course fullfills that requirement because you will get the opportunity to learn the following general education outcomes:
-
-* communicate mathematical information symbolically, visually, numerically, and verbally;
-* use statistical or mathematical models in solving problems; and
-* think critically about the validity of conclusions that are based on statistical or mathematical models.
+* Communicate mathematical information symbolically, visually, numerically, and verbally;
+* Use statistical or mathematical models in solving problems; and
+* Think critically about the validity of conclusions that are based on statistical or mathematical models.
 
 
 ----
@@ -73,14 +67,12 @@ Some of you are taking this course to fullfill the Quantitative Reasoning requir
 ## Assistance
 
 <img class="img-right" src="../img/help.jpg">
-A variety of opportunities for out-of-class assistance and in-class accomodations are provided. Please read about these opportunities below and use them throughout the semester as appropriate. Here are some quotes about asking for help (from [BurnishedChaos.com](https://burnishedchaos.com/quotes-about-asking-for-help/){:target="_blank"}).
+A variety of opportunities for out-of-class assistance and in-class accomodations are provided. Please read about these opportunities below and use them throughout the semester as appropriate.[^help]
 
 * *Never apologise for asking for what you need, if you don't ask - the answer will always be no.* - Rachel Wolchin
 * *Asking for other's guidance helps you see what you may not be able to see. It's always important to check your ego and ask for help.* - Ken Blanchard
 * *The only mistake you can make is not asking for help.* - Sandeep Jauhar
 * *You don't have to do it all by yourself.* - Elizabeth Dehn 
-* *Sometimes the only answer people are looking for when they ask for help is that they won't have to face the problem alone.* - Mark Amend
-* *I think the hardest part to get to is asking for help or reaching out to other people and being honest with yourself.* - Mary-Kate Olsen
 
 
 ### Instructor -- Derek Ogle
@@ -90,7 +82,7 @@ I am committed to your doing well in this course and see it as my responsibility
 
 
 ### Tutors
-Two experienced tutors -- Emily Mader and XXX -- are also available (in Dexter Library) during their hours listed below to help you succeed in this course. In addition to their tutor hours, please don't forget my availability as described above.
+Two experienced tutors -- Emily Mader and XXX -- are also available (in Dexter Library) during their hours listed below to help you succeed in this course.
 
 <table class="tutors" width="90%">
 <tr><th width="50%"><img src="../img/Emily_F17.jpg"></th><th width="50%"><img src="../img/XXX.jpg"></th></tr>
@@ -101,7 +93,7 @@ Two experienced tutors -- Emily Mader and XXX -- are also available (in Dexter L
 
 
 ### Accommodations
-I want to create an inclusive and accessible learning environment for those of you that have a condition that may require special accommodations (e.g., attention, learning, vision, hearing, mental, physical, or other health-related concern). *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course. If you have a condition that requires accommodations but *you have not yet established services* through OAR, then you should contact XXX as soon as possible (Ponzio 230, x1387, or <a href="mailto:accomodations@northland.edu">accomodations@northland.edu</a>). Reasonable accommodations are established through an interactive process between you, me, and the OAR. It is the policy and practice of Northland College to create inclusive and accessible learning environments consistent with federal and state law. <a href="https://my.northland.edu/life/be-healthy/accommodations/">More information is available here.</a>
+I want to create an inclusive and accessible learning environment for those of you that have a condition (e.g., attention, learning, vision, hearing, mental, physical, or other health-related concern) that may require special accommodations. *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course. If you have a condition that requires accommodations but *you have not yet established services* through OAR, then you should contact XXX as soon as possible (Ponzio 230, x1387, or <a href="mailto:accomodations@northland.edu">accomodations@northland.edu</a>). It is the policy and practice of Northland College to create inclusive and accessible learning environments consistent with federal and state law. <a href="https://my.northland.edu/life/be-healthy/accommodations/">More information is available here.</a>
 
 
 ### Academic Alerts
@@ -265,6 +257,8 @@ Finally, note that the [College's Academic Integrity Statement & Policy](https:/
 ----
 
 ### Footnotes
+
+[^help]: Quotes from [BurnishedChaos.com](https://burnishedchaos.com/quotes-about-asking-for-help/){:target="_blank"}.
 
 [^email]: While I am pretty open-minded and not much of a stickler when it comes to e-mail etiquette, some professors are. And it is always better to send an appropriate rather than an inappropriate e-mail. [Here](https://www.scribendi.com/advice/how_to_email_a_professor.en.html) and [here](https://www.insidehighered.com/views/2015/04/16/advice-students-so-they-dont-sound-silly-emails-essay) are some good suggestions for e-mailing professors.
 
