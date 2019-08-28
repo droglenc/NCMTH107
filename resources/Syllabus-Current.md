@@ -86,7 +86,7 @@ Two experienced tutors -- Emily Mader and XXX -- are also available (in Dexter L
 
 <table class="tutors" width="90%">
 <tr><th width="50%"><img src="../img/Emily_F17.jpg"></th><th width="50%"><img src="../img/XXX.jpg"></th></tr>
-<tr><th>Emily Mader</th><th>XXX</th></tr>
+<tr><th>Emily Mader</th><th>AnnaSage Rothe</th></tr>
 <tr style="vertical-align:top"><td>A math major and physics minor, Emily enjoys playing softball, being outdoors, and, of course, mathematics!</td><td>XXX.</td></tr>
 <tr style="vertical-align:top"><td>XXX</td><td>XXX</td></tr>
 </table>
