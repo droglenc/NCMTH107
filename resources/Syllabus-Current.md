@@ -85,9 +85,9 @@ I am committed to your doing well in this course and see it as my responsibility
 Two experienced tutors -- Emily Mader and XXX -- are also available (in Dexter Library) during their hours listed below to help you succeed in this course.
 
 <table class="tutors" width="90%">
-<tr><th width="50%"><img src="../img/Emily_F17.jpg"></th><th width="50%"><img src="../img/XXX.jpg"></th></tr>
+<tr><th width="50%"><img src="../img/Emily_F17.jpg"></th><th width="50%"><img src="../img/smily.jpg"></th></tr>
 <tr><th>Emily Mader</th><th>AnnaSage Rothe</th></tr>
-<tr style="vertical-align:top"><td>A math major and physics minor, Emily enjoys playing softball, being outdoors, and, of course, mathematics!</td><td>XXX.</td></tr>
+<tr style="vertical-align:top"><td>A math major and physics minor, Emily enjoys playing softball, being outdoors, and, of course, mathematics!</td><td>AnnaSage is a double major in Sociology and Gender and Women’s Studies with a minor in Psychology, but she loves math! She also enjoys various outdoor activities, especially snowboarding and paddle boarding.</td></tr>
 <tr style="vertical-align:top"><td>XXX</td><td>XXX</td></tr>
 </table>
 
