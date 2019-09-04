@@ -33,7 +33,7 @@ What you learn in this <strong>Statistical Concepts and Analysis</strong> course
 
 * [Catalog Description](http://catalog.northland.edu/content.php?catoid=19&catoid=19&navoid=914&filter%5Bitem_type%5D=3&filter%5Bonly_active%5D=1&filter%5B3%5D=1&filter%5Bcpage%5D=3#) and [Learning Outcomes](#learning-outcomes)
 * [Assistance](#assistance) -- [Instructor](#instructor--Derek-Ogle), [Tutors](#tutors), [Accommodations](#accommodations), and [Academic Alerts](#academic-alerts)
-* [Grading](#grading) -- [Preparation Checks](#preparation-checks), [Homework](#homework), [Participation](#participation), [Quizzes](#quizzes), [Extra Credit](#extra-credit), [Overall Grade](#overall-grade)
+* [Grading](#grading) -- [Preparation Checks](#preparation-checks), [Homework](#homework), [Engagement](#engagement), [Quizzes](#quizzes), [Extra Credit](#extra-credit), [Overall Grade](#overall-grade)
 * [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
 
 
@@ -107,15 +107,15 @@ As you adjust to the rigors of college life, you may struggle a bit in your cour
 ## Grading
 
 <img class="img-right" src="../img/grading.jpg">
-You will have the opportunities described below to show what you have learned in this course. An overall grade will be computed from these items as shown in the <a href="#overall-grade">Overall Grade section</a> further below.
+You will have the opportunities described below to demonstrate what you have learned in this course. An overall grade will be computed from these items as shown in the <a href="#overall-grade">Overall Grade section</a> further below.
 
 ### Preparation Checks
-You should prepare for each class period by reading the reading and watching the videos for the module indicated on the [Dates page](Dates-Current){:target="_blank"} and announced at the end of the previous class period. A preparation guide is provided for each module to help you identify key concepts in the reading and videos ([here's an example](../modules/FoundationalDefns_Prep.html){:target="_blank"}). You should prepare your own **hand-written**[^1] answers or notes to each question on the preparation guide. A "preparation check", for which you can use your hand-written notes but no other resources, will be administered during the first 8 minutes of every class period. **Preparation checks not completed in the first 8 minutes of class cannot be made up. Preparation checks taken from outside of the classroom will not be accepted.**
+You should prepare for each class period by reading the reading and watching the videos for the module indicated on the [Dates page](Dates-Current){:target="_blank"} and announced at the end of the previous class period. A preparation guide is provided for each module to help you identify key concepts in the reading and videos ([here's an example](../modules/FoundationalDefns_Prep.html){:target="_blank"}). You should prepare your own **hand-written**[^1] answers or notes to each question on the preparation guide. A "preparation check," for which you can use your notes, but no other resources, will be administered during the first 8 minutes of every class period. **Preparation checks not completed in the first 8 minutes of class cannot be made up. Preparation checks taken from outside of the classroom will not be accepted.**
 
 ### Homework
 
 <img class="img-right" src="../img/homework.png">
-Each day you will be required to turn in work on the exercises from the previous class period. As long as you are focused and ask for help then most of this work will be completed during class. However, you may need to work outside of class or seek additional help from me or the tutors to complete all of this work. You are allowed to work with other students on exercises, but substantial copying of the work of others does not lead to learning and will not be accepted. The homework you turn in will be graded based on "completeness" according to the following rubric.
+Each day you will be required to turn in work on the exercises from the previous class period. If you are focused and ask for help during class then most of this work will be completed during class. However, you may need to work outside of class or seek additional help from me or the tutors to complete all of this work. You are allowed to work with other students on exercises, but substantial copying of the work of others does not lead to learning and will not be accepted. The homework you turn in will be graded based on "completeness" according to the following rubric.
 
 <div class="container-fluid">
   <table class="table table-bordered">
@@ -128,12 +128,12 @@ Each day you will be required to turn in work on the exercises from the previous
   </table>
 </div>
 
-### Participation
+### Engagement
 
-<img class="img-right" src="../img/participation.jpg" alt="Participation">
-This course is taught in an active learning format and, thus, our time during class is short and precious. The following behaviors are indicative of an active fully participating student:
+<img class="img-right" src="../img/participation.jpg" alt="Engagement">
+This course is taught in an active learning format and, thus, our time during class is short and precious. The following behaviors are indicative of a fully engaged student:
 
-- Attended the entire class period (including showing up on time).
+- Attended the entire class period (including being on time).
 - Came to class having fully completed the required preparation materials (see above).
 - Diligently worked on the homework exercises.
 - Asked pertinent questions.
@@ -142,7 +142,7 @@ This course is taught in an active learning format and, thus, our time during cl
 - Paid attention during short lectures.
 - Followed the [class conduct guidelines](#classroom-conduct-and-academic-integrity).
 
-I will assess your level of participation at the end of each class period with the following rubric.
+I will assess your engagement at the end of each class period with the following rubric.
 
 <div class="container-fluid">
   <table class="table table-bordered">
@@ -150,7 +150,7 @@ I will assess your level of participation at the end of each class period with t
     <tr class="info"><th>4 points</th><th>3-1 points</th><th>0 points</th></tr>
   </thead>
   <tbody>
-    <tr><td>Fully (see above) participated in the day's activities. Properly focused at all times.</td><td>Participated in many, but not all, of the day's activities. Focus waned or was inconsistent. Left early or arrived late by between 1-15 mins.</td><td>Very little active participation in the day's activities. Lacked focus. Left early or arrived late by more than 15 mins.</td></tr>
+    <tr><td>Fully (see above) engaged in the day's activities. Properly focused at all times.</td><td>Engaged in many, but not all, of the day's activities. Focus waned or was inconsistent. Left early or arrived late by between 1-15 mins.</td><td>Very little active engagement in the day's activities. Lacked focus. Left early or arrived late by more than 15 mins.</td></tr>
   </tbody>
   </table>
 </div>
@@ -184,8 +184,8 @@ An overall score will be computed from the items and associated weights listed i
 <table class="grader" width="90%">
 <tr><th width="14%"></th>
 <th width="12%"><a href="#preparation-checks">Prep<br>Check</a></th>
-<th width="12%"><a href="#participation">Home-<br>work</a></th>
-<th width="12%"><a href="#participation">Partici-<br>pation</a></th>
+<th width="12%"><a href="#homework">Home-<br>work</a></th>
+<th width="12%"><a href="#engagement">Partici-<br>pation</a></th>
 <th width="10%"><a href="#quizzes">Quiz<br>1</a></th>
 <th width="10%"><a href="#quizzes">Quiz<br>2</a></th>
 <th width="10%"><a href="#quizzes">Quiz<br>3</a></th>
@@ -221,7 +221,7 @@ Your letter grade will be assigned from your overall percentage (rounded to a wh
   <tr><td>D+ 67-69</td><td>D  60-66</td><td>F   0-59</td></tr>
 </table>
 
-**If you meet with me in my office before the end of the second week of classes**, your lowest four preparation check, homework, **AND** participation grades will be excluded when computing your final grade.
+**If you meet with me in my office before the end of the second week of classes**, your lowest four preparation check, homework, **AND** engagement grades will be excluded when computing your final grade.
 
 #### Note About Incomplete Grades
 An incomplete grade will be given ONLY under extreme circumstances beyond your control, such as a major illness, and will ONLY be given if you have successfully completed the entire course except for the final exam. This is in accordance with [Northland College policy](https://my.northland.edu/student-policies/academic-policies/#grades){:target="_blank"} (scroll down to "Incomplete Grades").
@@ -235,7 +235,7 @@ I will submit a "midterm grade" for you approximately half-way through the semes
 
 <img class="img-right" src="../img/cell-cheat.jpg" alt="Conduct and Integrity">
 
-My intent is to create a classroom environment where solid learning of statistics can occur. One part of this environment is a well-organized course structure built upon relevant learning resources and interesting realistic exercises. Another part is my availability to assist you in learning from these resources and exercises. A third part in creating that environment is your conduct within it. My expectations of you are that you will fully participate in the course (see above) and be respectful of all others in the class. At a minimum, I expect you to adhere to the following behaviors:
+My intent is to create a classroom environment where solid learning of statistics can occur. One part of this environment is a well-organized course structure built upon relevant learning resources and interesting realistic exercises. Another part is my availability to assist you in learning from these resources and exercises. A third part in creating that environment is your conduct within it. My expectations of you are that you will fully engage in the course (see above) and be respectful of all others in the class. At a minimum, I expect you to adhere to the following behaviors:
 
 * Please arrive to class on time. If you arrive late, then take the first available seat as quietly as possible. If you need to leave early, then please sit near the exit.
 * Please attend the entire class period. Leaving class early defeats the purpose of the class period, does not take advantage of resources (i.e., the professor) that can significantly help your learning, and does not build statistical stamina. Please take care of your personal needs (e.g., using the restroom) before class so that you can stay focused for the entire class period.
