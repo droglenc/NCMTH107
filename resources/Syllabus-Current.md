@@ -82,7 +82,7 @@ I am committed to your doing well in this course and see it as my responsibility
 
 
 ### Tutors
-Two experienced tutors -- Emily Mader and AnnaSage Rother -- are available (in Dexter Library) during their hours listed below to help you succeed in this course.
+Two experienced tutors -- Emily Mader and AnnaSage Rothe -- are available (in Dexter Library) during their hours listed below to help you succeed in this course.
 
 <table class="tutors" width="90%">
 <tr><th width="50%"><img src="../img/Emily_F17.jpg"></th><th width="50%"><img src="../img/smily.jpg"></th></tr>
