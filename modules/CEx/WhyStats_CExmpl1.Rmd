@@ -32,7 +32,7 @@ source("../../rhelpers/knitr_setup.R")
 Suppose that you have been hired to work for a company that makes "cheesheads" and that your first task is to market cheesheads to residents of Ashland and Bayfield counties (WI). Further suppose that to effectively market cheeseheads you need to know the mean age and percentage of males for everybody in Ashland and Bayfield counties.
 
 * Is it possible to know the mean age and percentage of males **for everybody** in Ashland and Bayfield counties? Explain why or why not?
-* If you said that it was "not possible," is it reasonable to know these two values? Explain why or why not?
+* If you said that it was "possible," is it reasonable to know these two values? Explain why or why not?
 * If you said that it was "not possible" and it also was "not reasonable," then what do you suggest should be done to get some sort of understanding of these two values? How would you go about doing that?
 
 \ 
@@ -86,7 +86,7 @@ percTable(xtabs(~sex,data=samA),digits=1)
 \ 
 
 ## Obtain a Second Random Sample
-```{r echo=-2, results='hide', prompt=FALSE}
+```{r echo=-3, results='hide', prompt=FALSE}
 ( samB <- srsdf(ABCens90,n=100) )
 Summarize(~age,data=samB,digits=1)
 percTable(xtabs(~sex,data=samB),digits=1)
