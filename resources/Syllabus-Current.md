@@ -21,7 +21,7 @@ css: /css/syllabus.css
 
 <br>
 
-What you learn in this <strong>Statistical Concepts and Analysis</strong> class will help you answer these questions.
+What you learn in this <strong>Statistical Concepts and Analysis</strong> course will help you answer these questions.
 
 <p style="margin-bottom:2cm;"></p>
 
@@ -43,7 +43,7 @@ What you learn in this <strong>Statistical Concepts and Analysis</strong> class 
 
 <img class="img-right" src="../img/outcomes.jpg" alt="Outcomes">
 
-In this class, you will have the opportunity to:
+In this course, you will have the opportunity to:
 
 1. Describe why statistics is central to scientific inquiry (& your field of interest); 
 1. Define basic statistical words and symbols; 
@@ -67,7 +67,7 @@ This course fulfills that Quantitative Reasoning requirement in the [General Edu
 ## Assistance
 
 <img class="img-right" src="../img/help.jpg">
-A variety of opportunities for out-of-class assistance and in-class accommodations are provided. Please read about these opportunities below and use them throughout the semester as appropriate.[^help]
+Sources for out-of-class assistance and opportunities for in-class accommodations are described further below. Please use these throughout the semester as appropriate.[^help]
 
 * *Never apologize for asking for what you need, if you don't ask - the answer will always be no.* - Rachel Wolchin
 * *Asking for other's guidance helps you see what you may not be able to see. It's always important to check your ego and ask for help.* - Ken Blanchard
@@ -78,11 +78,11 @@ A variety of opportunities for out-of-class assistance and in-class accommodatio
 ### Instructor -- Derek Ogle
 
 <img class="img-right" src="../img/DerekOgle1.jpg">
-I am committed to your doing well in this course and see it as my responsibility to help you as much as possible both in and out of the designated class period. Thus, you may call (715-682-1300), e-mail (<a href="mailto:dogle@northland.edu">dogle@northland.edu</a>)[^email], or visit me in my office (CSE228) for help. I will make every effort to be available during office hours from 1-3p on Monday, Wednesday, and Friday. I will also be available any time that my door is open. Finally, you may also send me <a href="https://www.surveymonkey.com/r/KC87PJW" target="_blank">anonymous feedback, suggestions, or questions</a>. Please don't hesitate to see or contact me if you have any questions regarding this course.
+I am committed to your doing well in this course and see it as my responsibility to help you as much as possible both in and out of the designated class period. Thus, you may call (715-682-1300), e-mail (<a href="mailto:dogle@northland.edu">dogle@northland.edu</a>)[^email], or visit me in my office (CSE228) for help. I will make every effort to be available during office hours from 1-3p on Monday, Wednesday, and Friday. I will also be available any time that my door is open. Finally, you may send me <a href="https://www.surveymonkey.com/r/KC87PJW" target="_blank">anonymous feedback, suggestions, or questions</a>. Please don't hesitate to see or contact me if you have any questions regarding this course.
 
 
 ### Tutors
-Two experienced tutors -- Emily Mader and XXX -- are also available (in Dexter Library) during their hours listed below to help you succeed in this course.
+Two experienced tutors -- Emily Mader and AnnaSage Rother -- are available (in Dexter Library) during their hours listed below to help you succeed in this course.
 
 <table class="tutors" width="90%">
 <tr><th width="50%"><img src="../img/Emily_F17.jpg"></th><th width="50%"><img src="../img/smily.jpg"></th></tr>
@@ -100,7 +100,7 @@ I want to create an inclusive and accessible learning environment for those of y
 
 <img class="img-right" src="../img/alert.jpg">
 
-As you adjust to the rigors of college life, you may struggle a bit in your classes and benefit from working with a professional on your organization, motivation, and stress level. If I observe early in the semester that you are struggling with this course then I may file an "Academic Alert" about you. If this happens, you will receive an e-mail from me that explains steps that you can take to improve your performance in the class. Our Academic Success Coordinator, Gina Kirsten, will receive the alert and will likely also reach out to you to set up a time to further discuss ways to improve in the class. **Academic Alerts are not punitive**, they are simply an attempt to help you get back on track in this class as soon as possible.
+As you adjust to the rigors of college life, you may struggle a bit in your courses and benefit from working with a professional on your organization, motivation, and stress level. If I observe early in the semester that you are struggling with this course then I may file an "Academic Alert" about you. If this happens, you will receive an e-mail from me that explains steps that you can take to improve your performance in the course. Our Academic Success Coordinator, Gina Kirsten, will receive the alert and will likely also reach out to you to set up a time to further discuss ways to improve in the course. **Academic Alerts are not punitive**, they are simply an attempt to help you get back on track in this course as soon as possible.
 
 ----
 
@@ -131,13 +131,13 @@ Each day you will be required to turn in work on the exercises from the previous
 ### Participation
 
 <img class="img-right" src="../img/participation.jpg" alt="Participation">
-This class is taught in an active learning format and, thus, our time during class is short and precious. The following behaviors are indicative of an active fully participating student:
+This course is taught in an active learning format and, thus, our time during class is short and precious. The following behaviors are indicative of an active fully participating student:
 
 - Attended the entire class period (including showing up on time).
 - Came to class having fully completed the required preparation materials (see above).
 - Diligently worked on the homework exercises.
 - Asked pertinent questions.
-- Collaboratively worked with others on class material.
+- Collaboratively worked with others on course material.
 - Took notes during short lectures.
 - Paid attention during short lectures.
 - Followed the [class conduct guidelines](#classroom-conduct-and-academic-integrity).
@@ -173,7 +173,7 @@ Two options for extra credit are:
 
 1. **Quiz Corrections and Reflections** -- For each quiz, **first** complete a correction for each question that you missed, along with *an explanation of why this answer is correct.* You will not receive credit for simply correcting your answer, for providing another incorrect answer, or not providing the explanation. You must address every question you missed to receive full credit for this portion. **Second**, write *thoughtful* reflections to the following items about the quiz (i) what you did well on the quiz (and why), (ii) what you did poorly on the quiz (and why), (iii) what you did to prepare for the quiz (be specific ... did you read your notes, read the module readings, watch videos, redo class exercises, do review exercises, etc.), (iv) what you did to prepare for the quiz that was helpful, (v) what did you do to prepare for the quiz that was not helpful, (vi) what you will change (if anything) in your preparation strategy for the next quiz, (vii) was the quiz as you expected (why or why not), and (viii) any other comments or suggestions about the quiz. Your answers to these two portions must be typed (though you can leave space to show your work "by hand" for calculations). easy to read (e.g., neatly organize your corrections by question number), and *must include the original quiz*.<br/><br/>A perfect exam correction and reflection will add the lesser of 15% or the amount it would take for your exam score to be 100%, with two-thirds of the overall grade from the correction (first) portion. Corrections and reflections will be due as announced in class and shown on the [dates](Dates-Current){:target="_blank"} page. **Late corrections and reflections will not be accepted**.
 
-1. **"Statistics in Use" Reports** - Report on the use of statistics in your life -- e.g., from the news, your other classes, or other work that you have done. If you report on a news item, then you should discuss the background of the information in the report, the use of statistics, how the statistics relate to what you have learned in class, how the statistics were presented, how you feel about that presentation, and any questions that you may have. If you report on statistics used in another class, then you should discuss the background of the project where you used statistics, what the statistics were used for (i.e., purpose), a presentation of your statistical work in the report (i.e., findings), how the statistics relate to what you've learned in this class, and any questions that you may have. The FOCUS of your report should be on the statistics used in the news item or class (not just the news item or the topic in the other class) and **specifically how it relates to a topic in this class**. Each report should be typed, at least one page (single-spaced), and include the item being reported on. Your report will be graded on how well it is written **and how well you relate the item to class**. You may complete up to two reports for as much as 3% extra credit on your final grade. Note that you may not use the same type of news item for more than one report (e.g., you cannot report on presidential race polls more than once). These reports are due as shown on the [dates](Dates-Current){:target="_blank"} page. **Late reports will not be accepted.**
+1. **"Statistics in Use" Reports** - Report on the use of statistics in your life -- e.g., from the news, your other courses, or other work that you have done. If you report on a news item, then you should discuss the background of the information in the report, the use of statistics, how the statistics relate to what you have learned in class, how the statistics were presented, how you feel about that presentation, and any questions that you may have. If you report on statistics used in another course, then you should discuss the background of the project where you used statistics, what the statistics were used for (i.e., purpose), a presentation of your statistical work in the report (i.e., findings), how the statistics relate to what you've learned in this course, and any questions that you may have. The FOCUS of your report should be on the statistics used in the news item or course (not just the news item or the topic in the other course) and **specifically how it relates to a topic in this course**. Each report should be typed, at least one page (single-spaced), and include the item being reported on. Your report will be graded on how well it is written **and how well you relate the item to this course**. You may complete up to two reports for as much as 3% extra credit on your final grade. Note that you may not use the same type of news item for more than one report (e.g., you cannot report on presidential race polls more than once). These reports are due as shown on the [dates](Dates-Current){:target="_blank"} page. **Late reports will not be accepted.**
 
 ### Overall Grade
 An overall score will be computed from the items and associated weights listed in the table below. To compute your current grade, enter your percentage scores in the boxes for completed assessments. Enter your highest quiz score as the first quiz and your lowest quiz score as the last quiz. To project your future grade, also include percentages for future assessments.
@@ -221,7 +221,7 @@ Your letter grade will be assigned from your overall percentage (rounded to a wh
   <tr><td>D+ 67-69</td><td>D  60-66</td><td>F   0-59</td></tr>
 </table>
 
-**If you meet with me in my office before the end of the second week of class**, your lowest four preparation check, homework, **AND** participation grades will be excluded when computing your final grade.
+**If you meet with me in my office before the end of the second week of classes**, your lowest four preparation check, homework, **AND** participation grades will be excluded when computing your final grade.
 
 #### Note About Incomplete Grades
 An incomplete grade will be given ONLY under extreme circumstances beyond your control, such as a major illness, and will ONLY be given if you have successfully completed the entire course except for the final exam. This is in accordance with [Northland College policy](https://my.northland.edu/student-policies/academic-policies/#grades){:target="_blank"} (scroll down to "Incomplete Grades").
