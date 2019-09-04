@@ -157,11 +157,11 @@ I will assess your engagement at the end of each class period with the following
 
 <img class="img-right" src="../img/studying.jpg" alt="Studying Hours">
 
-As a general rule-of-thumb[^2], you are expected to spend 2-3 hours of time outside of class for each hour in class. This course meets for 4.5 hours per week and, thus, you should dedicate between 9 and 13.5 hours of time outside of class preparing for class, completing review and class exercises, and studying for exams. **The work required for this course can be completed within this expected amount of time, if that time is without distraction**. If you feel that you are spending an inordinate amount of time on some exercises or preparations because you are "stuck," then start your work earlier so that you can stop (and do other things) and make plans to see [me](#instructor--derek-ogle) or the [tutors](#tutors) for help.
+As a general rule-of-thumb[^2], you are expected to spend 2-3 hours of time outside of class for each hour in class. This course meets for 4.5 hours per week and, thus, you should dedicate between 9 and 13.5 hours of time outside of class preparing for class, completing review and class exercises, and studying for quizzes. **The work required for this course can be completed within this expected amount of time, if that time is without distraction**. If you feel that you are spending an inordinate amount of time on some exercises or preparations because you are "stuck," then start your work earlier so that you can stop (and do other things) and make plans to see [me](#instructor--derek-ogle) or the [tutors](#tutors) for help.
 
 
 ### Quizzes
-Four mid-term quizzes will give you an opportunity to demonstrate what you have learned about the most recent material. With this number of quizzes, the material on each quiz will be focused on fewer modules and, thus, more manageable to prepare for. Additionally, a final exam will give you an opportunity to show that you have a synthetic understanding of all material from throughout the course. The final exam will be focused on the larger concepts, applications, and interpretations, and less on specific details, from throughout the semester. I will provide you with an explicit study guide approximately one week before each quiz and the final exam.
+Four mid-term quizzes will allow you to demonstrate what you have learned about the most recent material. With this number of quizzes, the material on each quiz will be focused on fewer modules and, thus, more manageable to prepare for. Additionally, a final exam will give you an opportunity to show that you have a synthetic understanding of all material from throughout the course. The final exam will be focused on the larger concepts, applications, and interpretations, and less on specific details, from throughout the semester. I will provide you with an explicit study guide approximately one week before each quiz and the final exam.
 
 Dates for quizzes and the final exam are shown on the [Dates page](Dates-Current.html){:target="_blank"}. Make-up quizzes will be provided only if you have a fixed commitment of sufficient importance that was set before the beginning of the semester, or a verifiable medical condition. Please see me immediately if you miss a quiz without my prior approval, but note that you may not be allowed to make up that quiz. **The final exam will NOT be given early.**
 
@@ -176,7 +176,7 @@ Two options for extra credit are:
 1. **"Statistics in Use" Reports** - Report on the use of statistics in your life -- e.g., from the news, your other courses, or other work that you have done. If you report on a news item, then you should discuss the background of the information in the report, the use of statistics, how the statistics relate to what you have learned in class, how the statistics were presented, how you feel about that presentation, and any questions that you may have. If you report on statistics used in another course, then you should discuss the background of the project where you used statistics, what the statistics were used for (i.e., purpose), a presentation of your statistical work in the report (i.e., findings), how the statistics relate to what you've learned in this course, and any questions that you may have. The FOCUS of your report should be on the statistics used in the news item or course (not just the news item or the topic in the other course) and **specifically how it relates to a topic in this course**. Each report should be typed, at least one page (single-spaced), and include the item being reported on. Your report will be graded on how well it is written **and how well you relate the item to this course**. You may complete up to two reports for as much as 3% extra credit on your final grade. Note that you may not use the same type of news item for more than one report (e.g., you cannot report on presidential race polls more than once). These reports are due as shown on the [dates](Dates-Current){:target="_blank"} page. **Late reports will not be accepted.**
 
 ### Overall Grade
-An overall score will be computed from the items and associated weights listed in the table below. To compute your current grade, enter your percentage scores in the boxes for completed assessments. Enter your highest quiz score as the first quiz and your lowest quiz score as the last quiz. To project your future grade, also include percentages for future assessments.
+An overall score will be computed from the items and associated weights listed in the table below (and described above). To compute your current grade, enter your percentage scores in the boxes for completed assessments. Enter your highest quiz score as the first quiz and your lowest quiz score as the last quiz. To project your future grade, also include percentages for future assessments.
 
 <!-- if the assessment weights change then you must change the values in get_wghts() in the grader.js file -->
 
@@ -185,7 +185,7 @@ An overall score will be computed from the items and associated weights listed i
 <tr><th width="14%"></th>
 <th width="12%"><a href="#preparation-checks">Prep<br>Check</a></th>
 <th width="12%"><a href="#homework">Home-<br>work</a></th>
-<th width="12%"><a href="#engagement">Partici-<br>pation</a></th>
+<th width="12%"><a href="#engagement">Engage-<br>ment</a></th>
 <th width="10%"><a href="#quizzes">Quiz<br>1</a></th>
 <th width="10%"><a href="#quizzes">Quiz<br>2</a></th>
 <th width="10%"><a href="#quizzes">Quiz<br>3</a></th>
@@ -221,13 +221,13 @@ Your letter grade will be assigned from your overall percentage (rounded to a wh
   <tr><td>D+ 67-69</td><td>D  60-66</td><td>F   0-59</td></tr>
 </table>
 
-**If you meet with me in my office before the end of the second week of classes**, your lowest four preparation check, homework, **AND** engagement grades will be excluded when computing your final grade.
+**If you meet with me in my office before the end of the second week of classes**, your lowest four preparation check, homework, **AND** engagement grades will be excluded when computing your overall percentage.
 
 #### Note About Incomplete Grades
-An incomplete grade will be given ONLY under extreme circumstances beyond your control, such as a major illness, and will ONLY be given if you have successfully completed the entire course except for the final exam. This is in accordance with [Northland College policy](https://my.northland.edu/student-policies/academic-policies/#grades){:target="_blank"} (scroll down to "Incomplete Grades").
+An incomplete grade will be given ONLY in extreme circumstances that are beyond your control, such as a major illness, and will ONLY be given if you have successfully completed the entire course except for the final exam. This is in accordance with [Northland College policy](https://my.northland.edu/student-policies/academic-policies/#grades){:target="_blank"} (scroll down to "Incomplete Grades").
 
 #### Note About Midterm Grades
-I will submit a "midterm grade" for you approximately half-way through the semester. It is important to note that this grade will include only about 1/3rd of the items that will be included in your overall final grade. You should also know that I will assign the "worst possible" letter grade that I can for your midterm grade. I do this for two reasons. First, I believe that it is better to know the worst rather than the best-case scenario at that point of the semester. Second, the material at the end of the semester is a little more difficult than the material at the beginning of the semester. Of course, see me if you have questions about how you can do that.
+I will submit a "midterm grade" for you approximately half-way through the semester. It is important to note that this grade will include only about 1/3rd of the items that will be included in your overall final grade and that. Also note that I will assign the "worst possible" letter grade that I can for your midterm grade. I do this for two reasons. First, I believe that it is better to know the worst rather than the best-case scenario at that point of the semester. Second, the material at the end of the semester is a little more difficult than the material at the beginning of the semester. Of course, see me if you have questions about your midterm grade.
 
 ----
 
@@ -235,7 +235,7 @@ I will submit a "midterm grade" for you approximately half-way through the semes
 
 <img class="img-right" src="../img/cell-cheat.jpg" alt="Conduct and Integrity">
 
-My intent is to create a classroom environment where solid learning of statistics can occur. One part of this environment is a well-organized course structure built upon relevant learning resources and interesting realistic exercises. Another part is my availability to assist you in learning from these resources and exercises. A third part in creating that environment is your conduct within it. My expectations of you are that you will fully engage in the course (see above) and be respectful of all others in the class. At a minimum, I expect you to adhere to the following behaviors:
+My intent is to create a classroom environment where solid learning of statistics can occur. One part of this environment is a well-organized course structure built upon relevant learning resources and interesting realistic exercises. Another part is my availability to assist you in learning from these resources and exercises. A third part is your conduct within the classroom. My expectations of you are that you will fully engage in the course (see above) and be respectful of all others in the class. At a minimum, I expect you to adhere to the following behaviors:
 
 * Please arrive to class on time. If you arrive late, then take the first available seat as quietly as possible. If you need to leave early, then please sit near the exit.
 * Please attend the entire class period. Leaving class early defeats the purpose of the class period, does not take advantage of resources (i.e., the professor) that can significantly help your learning, and does not build statistical stamina. Please take care of your personal needs (e.g., using the restroom) before class so that you can stay focused for the entire class period.
@@ -244,8 +244,8 @@ My intent is to create a classroom environment where solid learning of statistic
 * Please **do not use your own computer** during class unless you clear it with me at the beginning of the semester.
 * Please turn off and store out-of-sight cell phones and other electronic devices.
 * Please **do not listen to music** (or otherwise wear ear buds) during class.
-* Please do not engage in side discussions while I or others are speaking to the entire class.
-*	Please do not sleep in class -- this behavior is rude and distracting to others (especially the professor).
+* Please do not have side discussions while I or others are speaking to the entire class.
+*	Please do not sleep in class -- this is rude and distracting to others.
 * Please do not use disrespectful language when addressing others.
 
 Finally, note that the [College's Academic Integrity Statement & Policy](https://my.northland.edu/student-policies/academic-policies/#academic-integrity){:target="_blank"} will be followed in this course. Please make sure that you are familiar with its content.
