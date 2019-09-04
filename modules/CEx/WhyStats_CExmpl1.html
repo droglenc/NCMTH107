@@ -1,25 +1,204 @@
----
-layout: page
-title: "Class Example"
-subtitle: "Why Statistics Is Important"
-author: "Derek H. Ogle"
-css: "/css/modules.css"
----
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Derek H. Ogle" />
+
+
+<title>Class Example</title>
+
+<script src="zlibs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="zlibs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="zlibs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="zlibs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="zlibs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="zlibs/navigation-1.1/tabsets.js"></script>
+<link href="zlibs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="zlibs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="/css/modules.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Class Example</h1>
+<h3 class="subtitle">Why Statistics Is Important</h3>
+<h4 class="author">Derek H. Ogle</h4>
+
+</div>
 
 
 <hr />
 <div id="scenario" class="section level2">
 <h2>Scenario</h2>
 <p><img src="zimgs/cheesehead.jpg" alt="Cheesehead" class="img-right"></p>
-<p>Suppose that you have been hired to work for a company that makes “cheesheads” and that your first task is to market cheesheads to residents of Ashland and Bayfield counties (WI). Further suppose that to effectively market cheeseheads you need to know the mean age and percentage of males <strong>for everybody</strong> in Ashland and Bayfield counties.</p>
+<p>Suppose that you have been hired to work for a company that makes “cheesheads” and that your first task is to market cheesheads to residents of Ashland and Bayfield counties (WI). Further suppose that to effectively market cheeseheads you need to know the mean age and percentage of males for everybody in Ashland and Bayfield counties.</p>
 <ul>
-<li>Is it possible to know these two values? Explain why or why not?</li>
+<li>Is it possible to know the mean age and percentage of males <strong>for everybody</strong> in Ashland and Bayfield counties? Explain why or why not?</li>
 <li>If you said that it was “not possible,” is it reasonable to know these two values? Explain why or why not?</li>
-<li>If you said that it was “not possible” and it was also “not reasonable,” then what do you suggest should be done to get some sort of understanding of these two values? How would you go about doing that?</li>
+<li>If you said that it was “not possible” and it also was “not reasonable,” then what do you suggest should be done to get some sort of understanding of these two values? How would you go about doing that?</li>
 </ul>
 <p> </p>
 <div class="alert alert-danger">
-<p>Please don’t go on to the next section until we have discussed the questions as a class.</p>
+<p>Please don’t go on until we have discussed these questions as a class.</p>
 </div>
 <p> </p>
 <hr />
@@ -33,13 +212,13 @@ css: "/css/modules.css"
 <pre class="r"><code>library(NCStats)
 ( samA &lt;- srsdf(ABCens90,n=100) )</code></pre>
 <ul>
-<li>Are the individuals in your sample identical? Why or why not?</li>
-<li>Write a one or two sentence conclusion about the age of individuals in your sample.</li>
-<li>Were your conclusions “easy” or “hard” to write? Why? What could you do to make writing your conclusions easier?</li>
+<li>Are the individuals (i.e., each row) in your sample identical? Why or why not?</li>
+<li>Write a brief conclusion about the ages of individuals in your sample.</li>
+<li>Was your conclusion(s) “easy” or “hard” to write? Why? What could you do to make writing your conclusions easier?</li>
 </ul>
 <p> </p>
 <div class="alert alert-danger">
-<p>Please don’t go on to the next section until we have discussed the questions as a class.</p>
+<p>Please don’t go on until we have discussed these questions as a class.</p>
 </div>
 <p> </p>
 </div>
@@ -49,12 +228,12 @@ css: "/css/modules.css"
 <ul>
 <li>How was the “mean” age calculated?</li>
 <li>How was the percentage of males calculated?</li>
-<li>Write a one or two sentence conclusion about the age of individuals in your sample.</li>
-<li>Was it easier to write your conclusions here then previously? Why or why not?</li>
+<li>Write a brief conclusion about the ages of individuals in your sample.</li>
+<li>Was it easier to write your conclusions here than previously? Why or why not?</li>
 </ul>
 <p> </p>
 <div class="alert alert-danger">
-<p>Please don’t go on to the next section until we have discussed the questions as a class.</p>
+<p>Please don’t go on until we have discussed these questions as a class.</p>
 </div>
 <p> </p>
 </div>
@@ -64,11 +243,11 @@ css: "/css/modules.css"
 percTable(xtabs(~sex,data=samB),digits=1)</code></pre>
 <ul>
 <li>Were the mean ages from the two samples identical?</li>
-<li>Are your results (about whether the mean or percentage between samples were identical) typical or expected? Why or why not?</li>
+<li>Are your results (about whether the mean ages were identical between samples) typical or expected? Why or why not?</li>
 </ul>
 <p> </p>
 <div class="alert alert-danger">
-<p>Please don’t go on to the next section until we have discussed the questions as a class.</p>
+<p>Please don’t go on until we have discussed these questions as a class.</p>
 </div>
 <p> </p>
 </div>
@@ -76,12 +255,12 @@ percTable(xtabs(~sex,data=samB),digits=1)</code></pre>
 <h2>Compare Your Results to the Truth</h2>
 <pre class="r"><code>Summarize(~age,data=ABCens90,digits=1)</code></pre>
 <ul>
-<li>Did your sample mean ages exactly equal this true value for the population?</li>
-<li>Are your results (about whether the summaries from your sample matched the summary from the population) typical or expected? Why or why not?</li>
+<li>Did your sample mean ages exactly equal this true value for the entire population?</li>
+<li>Are your results (about whether the summaries from your samples matched the summary from the population) typical or expected? Why or why not?</li>
 </ul>
 <p> </p>
 <div class="alert alert-danger">
-<p>Please don’t go on to the next section until we have discussed the questions as a class.</p>
+<p>Please don’t go on until we have discussed these questions as a class.</p>
 </div>
 <p> </p>
 </div>
@@ -107,6 +286,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
