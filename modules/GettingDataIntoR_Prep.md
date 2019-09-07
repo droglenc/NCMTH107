@@ -19,13 +19,11 @@ Use the preparation readings and videos to prepare WRITTEN answers (to bring to 
 1. How can you both assign the results of an expression to an object and see the results of that expression at the same time?
 1. What is a function in R?
 1. What are contained in the parentheses that follow a function name? What is the purpose of these items?
-1. How does a factor data type differ from a character data type?
-1. When entering data into Excel to create a CSV file, what type of information is organized into rows and what type is organized into columns?
+1. When entering data into Excel to create a CSV file, what type of information is organized into rows and what type of information is organized into columns?
 1. What should be entered into the first row when entering data into Excel to create a CSV file?
 1. What does the `read.csv()` function in R do?
 1. What does the `headtail()` function in R do?
 1. When is a `$` used in R?
-1. What is the difference in R between a data.frame and a vector?
 1. What function in R is used to create a vector of items that are all of the same data type?
 
 ----
