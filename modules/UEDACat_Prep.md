@@ -14,7 +14,9 @@ Use the preparation readings and videos to prepare WRITTEN answers (to bring to 
 1. What is a frequency table? [Hint: What values are in a frequency table?]
 1. What is a percentage table?
 1. How is a percentage table constructed from a frequency table?
+1. How are a percentage and a proportion related? [Hint: How do you turn a proportion into a percentage and a percentage into a proportion?]
 1. What is on the x- and y-axes of a bar plot?
+1. What does the height of a bar in a bar plot tell you?
 1. What is wrong with a pie chart?
 1. What characteristics are described in a univariate EDA for categorical data?
 1. What R function is used to construct a frequency table?
