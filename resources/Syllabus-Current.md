@@ -76,30 +76,20 @@ Sources for out-of-class assistance and opportunities for in-class accommodation
 
 
 ### Instructor -- Derek Ogle
-
 <img class="img-right" src="../img/DerekOgle1.jpg">
 I am committed to your doing well in this course and see it as my responsibility to help you as much as possible both in and out of the designated class period. Thus, you may call (715-682-1300), e-mail (<a href="mailto:dogle@northland.edu">dogle@northland.edu</a>)[^email], or visit me in my office (CSE228) for help. I will make every effort to be available during office hours from 1-3p on Monday, Wednesday, and Friday. I will also be available any time that my door is open. Finally, you may send me <a href="https://www.surveymonkey.com/r/KC87PJW" target="_blank">anonymous feedback, suggestions, or questions</a>. Please don't hesitate to see or contact me if you have any questions regarding this course.
 
 
 ### Tutors
-Two experienced tutors -- Emily Mader and AnnaSage Rothe -- are available (in Dexter Library) during their hours listed below to help you succeed in this course.
-
-<table class="tutors" width="90%">
-<tr><th width="50%"><img src="../img/Emily_F17.jpg"></th><th width="50%"><img src="../img/smily.jpg"></th></tr>
-<tr><th>Emily Mader</th><th>AnnaSage Rothe</th></tr>
-<tr style="vertical-align:top"><td>A math major and physics minor, Emily enjoys playing softball, being outdoors, and, of course, mathematics!</td><td>AnnaSage is a double major in Sociology and Gender and Women’s Studies with a minor in Psychology, but she loves math! She also enjoys various outdoor activities, especially snowboarding and paddle boarding.</td></tr>
-<tr style="vertical-align:top"><td>XXX</td><td>XXX</td></tr>
-</table>
-
+<img class="img-right" src="../img/AnnaSage_F19.jpg">
+AnnaSage Rothe will also be available to help you succeed in this course. AnnaSage is a double major in Sociology and Gender and Women’s Studies with a minor in Psychology, but she loves math! She also enjoys various outdoor activities, especially snowboarding and paddle boarding. AnnaSage is available on Thursdays from 6-8 pm in the XXX. In addition, you may e-mail her at her Northland e-mail address to possibly arrange other times for help.
 
 ### Accommodations
 I want to create an inclusive and accessible learning environment for those of you that have a condition (e.g., attention, learning, vision, hearing, mental, physical, or other health-related concern) that may require special accommodations. *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course. If you have a condition that requires accommodations but *you have not yet established services* through OAR, then you should contact Jennifer Newago as soon as possible (Ponzio 230, x1387, or <a href="mailto:accomodations@northland.edu">accomodations@northland.edu</a>). It is the policy and practice of Northland College to create inclusive and accessible learning environments consistent with federal and state law. <a href="https://my.northland.edu/life/be-healthy/accommodations/">More information is available here.</a>
 
 
 ### Academic Alerts
-
 <img class="img-right" src="../img/alert.jpg">
-
 As you adjust to the rigors of college life, you may struggle a bit in your courses and benefit from working with a professional on your organization, motivation, and stress level. If I observe early in the semester that you are struggling with this course then I may file an "Academic Alert" about you. If this happens, you will receive an e-mail from me that explains steps that you can take to improve your performance in the course. Our Academic Success Coordinator, Gina Kirsten, will receive the alert and will likely also reach out to you to set up a time to further discuss ways to improve in the course. **Academic Alerts are not punitive**, they are simply an attempt to help you get back on track in this course as soon as possible.
 
 ----
