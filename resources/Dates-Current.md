@@ -11,8 +11,8 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <table width="100%">
 <tr><th width="18%">Date</th><th width="82%">Topic</th></tr>
 
-<tr><td>W 4-Sep</td><td><span style="color:lightskyblue;font-weight:bold">PREP:</span> <a href="Syllabus-Current">Syllabus</a> and <a href="../modules/WhyStats">Why Stats is Important?</a></td></tr>
-<tr><td>F 6-Sep</td><td><span style="color:skyblue;font-weight:bold">PREP:</span> <a href="../modules/FoundationalDefns">Foundational Definitions</a><br>
+<tr><td>W 4-Sep</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="Syllabus-Current">Syllabus</a> and <a href="../modules/WhyStats">Why Stats is Important?</a></td></tr>
+<tr><td>F 6-Sep</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/FoundationalDefns">Foundational Definitions</a><br>
 <span style="color:teal;font-weight:bold">EX DUE:</span> <a href="../modules/WhyStats">Why Stats is Important?</a></td></tr>
 <tr><td></td><td></td></tr>
 
