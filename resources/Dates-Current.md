@@ -11,8 +11,10 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <table width="100%">
 <tr><th width="18%">Date</th><th width="82%">Topic</th></tr>
 
-<tr><td>W 4-Sep</td><td><a href="Syllabus-Current">Syllabus</a><br><a href="../modules/WhyStats">Why Stats is Important?</a></td></tr>
-<tr><td>F 6-Sep</td><td><a href="../modules/FoundationalDefns">Foundational Definitions</a></td></tr>
+<tr><td>W 4-Sep</td><td><span style="color:blue;font-weight:bold">PREP:</span><a href="Syllabus-Current">Syllabus</a><br>
+<span style="color:blue;font-weight:bold">PREP:</span><a href="../modules/WhyStats">Why Stats is Important?</a></td></tr>
+<tr><td>F 6-Sep</td><td><span style="color:blue;font-weight:bold">PREP:</span><a href="../modules/FoundationalDefns">Foundational Definitions</a><br>
+<span style="color:blue;font-weight:bold">EX DUE:</span><a href="../modules/WhyStats">Why Stats is Important?</a></td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 9-Sep</td><td><a href="../modules/DataProduction">Data Production</a></td></tr>
@@ -27,7 +29,8 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 
 <tr><td>M 23-Sep</td><td><a href="../modules/NormalDist">Normal Distributions</a></td></tr>
 <tr><td>W 25-Sep</td><td><a href="../modules/NormalDist">Normal Distributions</a></td></tr>
-<tr><td>F 27-Sep</td><td><a href="../modules/BEDACat">Bivariate EDA - Categorical</a><br><span style="color:teal;font-weight:bold">DUE: Quiz 1 Reflection (Optional)</span></td></tr>
+<tr><td>F 27-Sep</td><td><a href="../modules/BEDACat">Bivariate EDA - Categorical</a><br>
+<span style="color:teal;font-weight:bold">DUE: Quiz 1 Reflection (Optional)</span></td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 30-Sep</td><td><a href="../modules/BEDAQuant">Bivariate EDA - Quantitative</a></td></tr>
