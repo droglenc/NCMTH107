@@ -10,11 +10,12 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 
 <table width="100%">
 <tr><th width="18%">Date</th><th width="82%">Topic</th></tr>
-
+<!---
 <tr><td>W 4-Sep</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="Syllabus-Current">Syllabus</a> and <a href="../modules/WhyStats">Why Stats is Important?</a></td></tr>
 <tr><td>F 6-Sep</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/FoundationalDefns">Foundational Definitions</a><br>
 <span style="color:teal;font-weight:bold">EX DUE:</span> <a href="../modules/WhyStats">Why Stats is Important?</a></td></tr>
 <tr><td></td><td></td></tr>
+--->
 
 <tr><td>M 9-Sep</td><td><a href="../modules/DataProduction">Data Production</a></td></tr>
 <tr><td>W 11-Sep</td><td><a href="../modules/GettingDataIntoR">Getting Data Into R</a></td></tr>
@@ -87,6 +88,4 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>W 11-Dec</td><td>Course Review</td></tr>
 <tr><td>F 13-Dec</td>
     <td colspan="2"><span style="color:red;font-weight:bold">FINAL QUIZ</span></td></tr>
-<!---
---->
 </table>
