@@ -37,6 +37,14 @@ library(NCStats)
 
 ----
 
+## Enter Own Data
+
+1. Create an R data.frame (by first creating a CSV file) that contains the following three variables for each course you are taking this semester: name of your professor (e.g., "Ogle"), course abbreviation (e.g., "MTH107"), and number of credits (e.g., "4").
+
+<br>
+
+----
+
 ## Load Data From Webpage
 
 1. Load **fire.csv** into an R data.frame called `firedf`. 
@@ -48,13 +56,5 @@ firedf <- read.csv("Iris.csv")
 str(firedf)
 headtail(firedf)
 ```
-
-<br>
-
-----
-
-## Enter Own Data
-
-1. Create an R data.frame (by first creating a CSV file) that contains the following three variables for each course you are taking this semester: name of your professor (e.g., "Ogle"), course abbreviation (e.g., "MTH107"), and number of credits (e.g., "4").
 
 ----

@@ -15,18 +15,18 @@ css: "/css/modules.css"
 <p><br></p>
 <hr />
 </div>
-<div id="load-data-from-webpage" class="section level2">
-<h2>Load Data From Webpage</h2>
-<ol>
-<li>Load <strong>fire.csv</strong> into an R data.frame called <code>firedf</code>.</li>
-</ol>
-<p><br></p>
-<hr />
-</div>
 <div id="enter-own-data" class="section level2">
 <h2>Enter Own Data</h2>
 <ol>
 <li>Create an R data.frame (by first creating a CSV file) that contains the following three variables for each course you are taking this semester: name of your professor (e.g., “Ogle”), course abbreviation (e.g., “MTH107”), and number of credits (e.g., “4”).</li>
+</ol>
+<p><br></p>
+<hr />
+</div>
+<div id="load-data-from-webpage" class="section level2">
+<h2>Load Data From Webpage</h2>
+<ol>
+<li>Load <strong>fire.csv</strong> into an R data.frame called <code>firedf</code>.</li>
 </ol>
 <hr />
 </div>
@@ -48,6 +48,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
