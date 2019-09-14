@@ -25,19 +25,24 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td></td><td></td></tr>
 --->
 
-<tr><td>M 16-Sep</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/UEDAQuant1">Summaries for One Quantitative Variable</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> Univariate EDA - Categorical</span></td></tr>
-<tr><td>W 18-Sep</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/UEDAQuant2">Univariate EDA - Quantitative Variable</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> Summaries for One Quantitative Variable</span></td></tr>
+<tr><td>M 16-Sep</td><td>
+<span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/UEDAQuant1">Summaries for One Quantitative Variable</a><br>
+<span style="color:teal;font-weight:bold">EX DUE:</span> Univariate EDA - Categorical</td></tr>
+<tr><td>W 18-Sep</td><td>
+<span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/UEDAQuant2">Univariate EDA - Quantitative Variable</a><br>
+<span style="color:teal;font-weight:bold">EX DUE:</span> Summaries for One Quantitative Variable</td></tr>
 <tr><td>F 20-Sep</td><td><span style="color:red;font-weight:bold">First Quiz</span> (<a href="QuizGuide/quiz1">Study Guide</a>)</td></tr>
 <tr><td></td><td></td></tr>
 
-<tr><td>M 23-Sep</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/NormalDist">Normal Distributions</a></td></tr>
-<tr><td>W 25-Sep</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/NormalDist">Normal Distributions</a><br>
+<tr><td>M 23-Sep</td><td>
+<span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/NormalDist">Normal Distributions</a></td></tr>
+<tr><td>W 25-Sep</td><td>
+<span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/NormalDist">Normal Distributions</a><br>
 <span style="color:teal;font-weight:bold">EX DUE:</span> Normal Distributions I</td></tr>
-<tr><td>F 27-Sep</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/BEDACat">Bivariate EDA - Categorical</a><br>
+<tr><td>F 27-Sep</td><td>
+<span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/BEDACat">Bivariate EDA - Categorical</a><br>
 <span style="color:teal;font-weight:bold">EX DUE:</span> Normal Distributions II<br>
-<span style="color:teal;font-weight:bold">DUE: Quiz 1 Reflection (Optional)</span></td></tr>
+<span style="color:teal;font-weight:bold">DUE:</span> Quiz 1 Reflection (Optional)</td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 30-Sep</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/BEDAQuant">Bivariate EDA - Quantitative</a><br>
