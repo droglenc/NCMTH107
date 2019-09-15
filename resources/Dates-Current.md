@@ -11,90 +11,65 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <table width="100%">
 <tr><th width="18%">Date</th><th width="82%">Topic</th></tr>
 <!---
-<tr><td>W 4-Sep</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="Syllabus-Current">Syllabus</a> and <a href="../modules/WhyStats">Why Stats is Important?</a></td></tr>
-<tr><td>F 6-Sep</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/FoundationalDefns">Foundational Definitions</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> <a href="../modules/WhyStats">Why Stats is Important?</a></td></tr>
+<tr><td>W 4-Sep</td><td><a href="Syllabus-Current">Syllabus</a> and <a href="../modules/WhyStats">Why Stats is Important?</a></td></tr>
+<tr><td>F 6-Sep</td><td><a href="../modules/FoundationalDefns">Foundational Definitions</a></td></tr>
 <tr><td></td><td></td></tr>
 
-<tr><td>M 9-Sep</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/DataProduction">Data Production</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> </td></tr>
-<tr><td>W 11-Sep</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/GettingDataIntoR">Getting Data Into R</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> </td></tr>
-<tr><td>F 13-Sep</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/UEDACat">Univariate EDA - Categorical</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> </td></tr>
+<tr><td>M 9-Sep</td><td><a href="../modules/DataProduction">Data Production</a></td></tr>
+<tr><td>W 11-Sep</td><td><a href="../modules/GettingDataIntoR">Getting Data Into R</a></td></tr>
+<tr><td>F 13-Sep</td><td><a href="../modules/UEDACat">Univariate EDA - Categorical</a></td></tr>
 <tr><td></td><td></td></tr>
 --->
 
 <tr><td>M 16-Sep</td><td>
-<span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/UEDAQuant1">Summaries for One Quantitative Variable</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> Univariate EDA - Categorical</td></tr>
+<a href="../modules/UEDAQuant1">Summaries for One Quantitative Variable</a></td></tr>
 <tr><td>W 18-Sep</td><td>
-<span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/UEDAQuant2">Univariate EDA - Quantitative Variable</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> Summaries for One Quantitative Variable</td></tr>
+<a href="../modules/UEDAQuant2">Univariate EDA - Quantitative Variable</a></td></tr>
 <tr><td>F 20-Sep</td><td><span style="color:red;font-weight:bold">First Quiz</span> (<a href="QuizGuide/quiz1">Study Guide</a>)</td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 23-Sep</td><td>
-<span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/NormalDist">Normal Distributions</a></td></tr>
+<a href="../modules/NormalDist">Normal Distributions</a></td></tr>
 <tr><td>W 25-Sep</td><td>
-<span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/NormalDist">Normal Distributions</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> Normal Distributions I</td></tr>
+<a href="../modules/NormalDist">Normal Distributions</a></td></tr>
 <tr><td>F 27-Sep</td><td>
-<span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/BEDACat">Bivariate EDA - Categorical</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> Normal Distributions II<br>
+<a href="../modules/BEDACat">Bivariate EDA - Categorical</a><br>
 <span style="color:teal;font-weight:bold">DUE:</span> Quiz 1 Reflection (Optional)</td></tr>
 <tr><td></td><td></td></tr>
 
-<tr><td>M 30-Sep</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/BEDAQuant">Bivariate EDA - Quantitative</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> </td></tr>
-<tr><td>W 2-Oct</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/LinearRegression">Linear Regression</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> </td></tr>
-<tr><td>F 4-Oct</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/LinearRegression">Linear Regression</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> </td></tr>
+<tr><td>M 30-Sep</td><td><a href="../modules/BEDAQuant">Bivariate EDA - Quantitative</a></td></tr>
+<tr><td>W 2-Oct</td><td><a href="../modules/LinearRegression">Linear Regression</a></td></tr>
+<tr><td>F 4-Oct</td><td><a href="../modules/LinearRegression">Linear Regression</a></td></tr>
 <tr><td></td><td></td></tr>
 
-<tr><td>M 7-Oct</td><td>TBD<br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> </td></tr>
+<tr><td>M 7-Oct</td><td>TBD</td></tr>
 <tr><td>W 9-Oct</td><td><span style="color:red;font-weight:bold">Second Quiz</span> (<a href="QuizGuide/quiz">Study Guide</a>)</td></tr>
-<tr><td>F 11-Oct</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/SamplingDist">Sampling Distributions</a></td></tr>
+<tr><td>F 11-Oct</td><td><a href="../modules/SamplingDist">Sampling Distributions</a></td></tr>
 <tr><td></td><td></td></tr>
 
-<tr><td>M 14-Oct</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/SamplingDist">Sampling Distributions</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> </td></tr>
-<tr><td>W 16-Oct</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/Probability">Probability</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> </td></tr>
-<tr><td>F 18-Oct</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/FilteringDataInR">Filtering Data In R</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> <br><span style="color:teal;font-weight:bold">DUE: Quiz 2 Reflection (Optional)</span></td></tr>
+<tr><td>M 14-Oct</td><td><a href="../modules/SamplingDist">Sampling Distributions</a></td></tr>
+<tr><td>W 16-Oct</td><td><a href="../modules/Probability">Probability</a></td></tr>
+<tr><td>F 18-Oct</td><td><a href="../modules/FilteringDataInR">Filtering Data In R</a><br><span style="color:teal;font-weight:bold">DUE: Quiz 2 Reflection (Optional)</span></td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 21-Oct</td><td><span style="color:coral">NO CLASS (Reading Day)</span></td></tr>
-<tr><td>W 23-Oct</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/HypTesting">Hypothesis Testing</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> </td></tr>
-<tr><td>F 25-Oct</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/HypTestingErrs">Hypothesis Testing Errors</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> </td></tr>
+<tr><td>W 23-Oct</td><td><a href="../modules/HypTesting">Hypothesis Testing</a></td></tr>
+<tr><td>F 25-Oct</td><td><a href="../modules/HypTestingErrs">Hypothesis Testing Errors</a></td></tr>
 <tr><td></td><td></td></tr>
 
-<tr><td>M 28-Oct</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/ConfRegions">Confidence Regions</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> </td></tr>
-<tr><td>W 30-Oct</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/ConfRegions">Confidence Regions</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> </td></tr>
-<tr><td>F 1-Nov</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/1SampleZ">1-Sample Z-Test</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> </td></tr>
+<tr><td>M 28-Oct</td><td><a href="../modules/ConfRegions">Confidence Regions</a></td></tr>
+<tr><td>W 30-Oct</td><td><a href="../modules/ConfRegions">Confidence Regions</a></td></tr>
+<tr><td>F 1-Nov</td><td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td></tr>
 <tr><td></td><td></td></tr>
 
-<tr><td>M 4-Nov</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/1SampleZ">1-Sample Z-Test</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> </td></tr>
-<tr><td>W 6-Nov</td><td>TBD<br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> </td></tr>
+<tr><td>M 4-Nov</td><td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td></tr>
+<tr><td>W 6-Nov</td><td>TBD</td></tr>
 <tr><td>F 8-Nov</td><td><span style="color:red;font-weight:bold">Third Quiz</span> (<a href="QuizGuide/quiz">Study Guide</a>)</td></tr>
 <tr><td></td><td></td></tr>
 
-<tr><td>M 11-Nov</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/1Samplet">1-Sample t-Test</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> </td></tr>
-<tr><td>W 13-Nov</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/2Samplet">2-Sample t-Test</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> </td></tr>
-<tr><td>F 15-Nov</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/2Samplet">2-Sample t-Test</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> <br><span style="color:teal;font-weight:bold">DUE: Quiz 3 Reflection (Optional)</span></td></tr>
+<tr><td>M 11-Nov</td><td><a href="../modules/1Samplet">1-Sample t-Test</a></td></tr>
+<tr><td>W 13-Nov</td><td><a href="../modules/2Samplet">2-Sample t-Test</a></td></tr>
+<tr><td>F 15-Nov</td><td><a href="../modules/2Samplet">2-Sample t-Test</a><br><span style="color:teal;font-weight:bold">DUE: Quiz 3 Reflection (Optional)</span></td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 18-Nov</td><td><span style="color:coral">NO CLASS (Thanksgiving)</span></td></tr>
@@ -102,12 +77,9 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>F 22-Nov</td><td><span style="color:coral">NO CLASS (Thanksgiving)</span></td></tr>
 <tr><td></td><td></td></tr>
 
-<tr><td>M 25-Nov</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/ChiSquare">Chi-Square Test</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> </td></tr>
-<tr><td>W 27-Nov</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/ChiSquare">Chi-Square Test</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> </td></tr>
-<tr><td>F 29-Nov</td><td><span style="color:steelblue;font-weight:bold">PREP:</span> <a href="../modules/GOFTest">Goodness-of-Fit Test</a><br>
-<span style="color:teal;font-weight:bold">EX DUE:</span> </td></tr>
+<tr><td>M 25-Nov</td><td><a href="../modules/ChiSquare">Chi-Square Test</a></td></tr>
+<tr><td>W 27-Nov</td><td><a href="../modules/ChiSquare">Chi-Square Test</a></td></tr>
+<tr><td>F 29-Nov</td><td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 2-Dec</td><td><span style="color:red;font-weight:bold">Fourth Quiz</span> (<a href="QuizGuide/quiz">Study Guide</a>)</td></tr>
