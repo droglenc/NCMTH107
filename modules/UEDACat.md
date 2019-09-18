@@ -45,7 +45,7 @@ Use the materials below to answer the questions on [this preparation guide](UEDA
 
 ## Practice
 
-* [Exercises](CE/UEDACat_CE1) ([*more as time permits*](CE/UEDACat_CE2)) ... [ANSWER KEY](CE/KEY_UEDACat_CE)
+* [Exercises](CE/UEDACat_CE1) ([*more as time permits*](CE/UEDACat_CE2)) ... [ANSWER KEY](CE/KEY_UEDACat_CE.html)
 * [Review Exercises](RE/UEDACat_RevEx)
 
 ----
