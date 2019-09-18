@@ -1,0 +1,236 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Univ EDA - Quantitative II CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+The use of qualifiers such as “strongly” or “slightly” when describing shape. The use of these qualifiers is important for deciding which measures of center and dispersion should be used (see below). However, also note that you will get some “leeway” in grading relative to their use (i.e., you and I may disagree whether something is slightly or moderately skewed, though we should not disagree on whether a distribution is slightly or strongly skewed).
+</li>
+</ul>
+</div>
+<div id="shape-and-outliers-i" class="section level2">
+<h2>Shape and Outliers I</h2>
+<ol>
+<li>(Strongly) Right skewed, possible outlier at maximum.</li>
+<li>Left skewed, no outliers.</li>
+<li>Right skewed, outlier at maximum.</li>
+<li>Approximately symmetric, no outliers.</li>
+<li>Approximately symmetric, no outliers.</li>
+<li>(Srongly) Left skewed, no outliers.</li>
+<li>Left skewed, outlier at minimum.</li>
+<li>Bimodal (symmetric), no outliers.</li>
+</ol>
+<hr />
+<p><br></p>
+<div class="alert alert-warning">
+<strong>Note (for all of the EDA questions below):</strong>
+<ul>
+<li>
+That all four items (Shape, Outliers, Center, and Dispersion) are addressed for each question. Many students may omit outliers if no outliers exist; however, you should explicitly say “no outliers were present” (or similar) as shown below.
+</li>
+<li>
+Center is always described by the mean or the median, never both and never neither one. Which one you choose depends on whether outliers are present (use median), the distriution is more than slightly skewed (use median), or the distribution is no more than slighly skewed and no outliers are present (use mean).
+</li>
+<li>
+Dispersion is always described by the standard deviation or IQR, never both and never neither one. Additionally, you can use the range but never by itself (i.e., it should be used in conjunction with the standard deviation or IQR). Whether you use the standard deviation or IQR depends on whether you used the mean (then use the standard deviation) or median (then use the IQR).
+</li>
+<li>
+Include a sentence in each description that describes why you used the mean and standard deviation or used the median and IQR to describe center and dispersion. See answers below for examples.
+</ul>
+</div>
+</div>
+<div id="commute-time" class="section level2">
+<h2>Commute Time</h2>
+<p>The distribution of commute times is approximately symmetric with no outliers (Figure 1). The center as measured by the mean is 23.75 mins and the disperision as measured by the standard deviation is 3.54 mins (Table 1). The mean and standard deviation were used because the distribution was symmetric and no outliers were present.</p>
+<hr />
+</div>
+<div id="dungeness-crabs" class="section level2">
+<h2>Dungeness Crabs</h2>
+<p>The distribution of post-molt carapace lengths for Dungeness Crabas is strongly left-skewed with two outliers between 38.8 and 60 mm (Figure 2). The center as measured by the median is 147.4 mm and the dispersion as measured by the IQR is from a Q1 of 138.0 to a Q3 of 153.4 mm (Table 2). The median and IQR were used because the distribution was strongly skewed and outliers were present.</p>
+<hr />
+</div>
+<div id="coarse-woody-debris" class="section level2">
+<h2>Coarse Woody Debris</h2>
+<ol>
+<li>
+The diameter of CWD is largely right-skewed with a separate group of four individuals at higher diameters (Figure 1). With this definition of shape, there are no outliers. The center as measured by the median is 18 cm and the IQR is from a Q1 of 16.25 to a Q3 of 20.75 cm (Table 1). I chose to use the median and IQR because of the right-skewed shape.
+</li>
+<p><img src="KEY_UEDAQuant2_CE_files/figure-html/CWDHist1-1.png" width="288" /></p>
+<p>Figure 1: Histogram of the diameter (cm) of coarse woody debris in Allequash Lake, WI.</p>
+<p>Table 1: Summary statistics for the diameter (cm) of coarse woody debris in Allequash Lake, WI.</p>
+<pre><code>     n   mean     sd    min     Q1 median     Q3    max 
+ 50.00  19.54   4.94  15.00  16.25  18.00  20.75  34.00 </code></pre>
+<li>
+The diameter of CWD is largely right-skewed for both low- and medium-exposure sites (Figure 2). There are no obvious outliers. [<i>Note that it is difficult to describe shape and outliers in this case because the sample sizes in the two groups are so small.</i>] The medians are 19 and 18, respectively, for the low- and medium-exposure sites (Table 2). The IQR is from a Q1 of 16 to a Q3 of 24 for the low-exposure sites and from a Q1 of 17 to a Q3 of 20 for the medium-exposure sites (Table 2). The median and IQR were used because of the skewed shape for both distributions.
+</li>
+<p><img src="KEY_UEDAQuant2_CE_files/figure-html/CWDHist2-1.png" width="576" /></p>
+<p>Figure 2: Histogram of the diameter (cm) of coarse woody debris in Allequash Lake, WI separated by exposure category.</p>
+<p>Table 2: Summary statistics for the diameter (cm) of coarse woody debris in Allequash Lake, WI separated by exposure category.</p>
+<pre><code>  exposure  n  mean   sd min Q1 median Q3 max
+1      low  9 22.11 7.37  16 16     19 24  34
+2      med 41 18.98 4.15  15 17     18 20  34</code></pre>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>d &lt;- read.csv(&quot;cwd.csv&quot;)
+hist(~diameter,data=d,xlab=&quot;Diameter of CWD&quot;)
+Summarize(~diameter,data=d,digits=2)
+hist(diameter~exposure,data=d,xlab=&quot;Diameter of CWD&quot;)
+Summarize(diameter~exposure,data=d,digits=2)</code></pre>
+<hr />
+</div>
+<div id="math-class-grades" class="section level2">
+<h2>Math Class Grades</h2>
+<ol>
+<li>
+<p>The distribution of GPA for the math classes is slightly right-skewed with no obvious outliers (Figure 4). The median for the math courses is 2.30 with an IQR from a Q1 of 2.165 to a Q3 of 2.445 (Table 4). The median and IQR were used because of the skewness in the data.</p>
+<p>The distribution of GPA for the other classes is left-skewed with no obvious outliers (Figure 4). The median for the other courses is 2.54 with an IQR from a Q1 of 2.440 to a Q3 of 2.620 (Table 4). The median and IQR were used because of the skewness in the data.</p>
+<p><img src="KEY_UEDAQuant2_CE_files/figure-html/GPAhist-1.png" width="672" /></p>
+<p>Figure 4: Histograms of class gpa for math (left) and other (right) courses at the University of North Carolina.</p>
+<p>Table 4: Descriptive statistics for class gpa of math and other courses at the University of North Carolina</p>
+<pre><code>  class.type  n  mean    sd  min    Q1 median    Q3  max
+1       math 22 2.353 0.301 1.90 2.165   2.30 2.445 3.02
+2      other 29 2.508 0.235 1.96 2.440   2.54 2.620 2.95</code></pre>
+<li>
+The two most outstanding differences between the GPA in math and other courses is that the GPA in the math courses is slighty lower (lower median GPA) and slighly more dispersed (more variable as shown by a greater IQR). Thus, the GPA in math courses is generally lower but more variable.
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/Keys&quot;)
+d &lt;- read.csv(&quot;UNCgrades.csv&quot;)
+hist(gpa~class.type,data=d,xlab=&quot;Class GPA&quot;)
+Summarize(gpa~class.type,data=d,digits=3)</code></pre>
+<hr />
+</div>
+<div id="effluent-sampling-labs" class="section level2">
+<h2>Effluent Sampling Labs</h2>
+<ol>
+<li>
+<p>The distribution of BOD values for the private lab is approximately symmetric with no obvious outliers (Figure 3). The mean of the private data is 34.64 mg/L with a standard deviation of 10.45 mg/L (Figure 7). The mean and standard deviation were used because of the symmetry of the distribution and absence of outliers.</p>
+The distribution of BOD values for the state lab appears to be right-skewed with an outlier at 71 mg/L (Figure 3). The median of the state data is 20 mg/L with an IQR from 9.5 to 33.5 mg/L (Figure 7). The median and IQR were used because of the presence of the outlier.
+</li>
+<p><img src="KEY_UEDAQuant2_CE_files/figure-html/BODhist-1.png" width="672" /></p>
+<p>Figure 3: Histograms for BOD measurements for the private (left) and state (right) labs.</p>
+<p>Table 3: Descriptive statistics for BOD measurements for the private and state labs.</p>
+<pre><code>      lab  n mean   sd min   Q1 median   Q3 max
+1 private 11 34.6 10.5  15 28.5     35 40.5  54
+2   state 11 25.3 19.7   6  9.5     20 33.5  71</code></pre>
+<li>
+The two most outstanding differences between the private and state labs are that the state lab BOD values are generally lower (note lower means and medians) and more dispersed (note wider IQR and larger standard deviation).
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/Keys&quot;)
+d &lt;- read.csv(&quot;4_50.csv&quot;)
+hist(bod~lab,data=d,xlab=&quot;BOD Measurements&quot;)
+Summarize(bod~lab,data=d,digits=1)</code></pre>
+<hr />
+</div>
+<div id="cafe-sales" class="section level2">
+<h2>Cafe Sales</h2>
+<ol>
+<li>
+The distribution of coffees sold was right-skewed with a hint of bimodality (a small peak near 10 coffees sold and a taller peak near 30 coffees sold), but no obvious outliers (Figure 5). The center as measured by the median was 23 coffees sold and the IQR was from a Q1 of 12 to a Q3 of 30 coffees sold (Table 5). I chose to use the median and IQR to measure center and dispersion because of the skewed shape.
+</li>
+<p><img src="KEY_UEDAQuant2_CE_files/figure-html/CafeHist1-1.png" width="288" /></p>
+<p>Figure 5: Histogram of the number of coffees sold in the college cafe.</p>
+<p>Table 5: Summary statistics of the number of coffees sold in the college cafe.</p>
+<pre><code>     n nvalid   mean     sd    min     Q1 median     Q3    max 
+ 48.00  47.00  21.51  11.08   3.00  12.00  23.00  30.00  48.00 </code></pre>
+<li>
+In general, slightly more coffees were sold in the middle of the week (Table 6). There was slightly less variability on Mondays (Table 6). [<i>I did not make histograms for each different day of the week because the sample sizes for each day were small (&lt;=10).</i>]
+</li>
+<p>Table 6: Summary statistics of the number of coffees sold in the college cafe separated by day of the week.</p>
+<pre><code>  dow  n nvalid  mean    sd min    Q1 median    Q3 max
+1 Mon  9      9 19.33  8.63   5 16.00   20.0 25.00  31
+2 Tue 10     10 22.80 11.34   6 15.50   22.5 29.75  41
+3 Wed 10     10 22.30 14.74   4 10.25   24.0 32.75  48
+4 Thu 10     10 22.80 10.41   4 15.00   25.5 30.25  35
+5 Fri  9      8 19.75 11.06   3 13.00   23.5 27.75  31</code></pre>
+<li>
+The distribution of sodas sold was primarily symmetric with no obvious outliers (Figure 6). The center as measured by the mean was 29.6 sodas sold and the dispersion as measured by the standard deviation was 11.9 sodas sold (Table 7). I chose to use the mean and standard deviation to measure center and dispersion because of the symmetric shape and lack of outliers.
+</li>
+<p><img src="KEY_UEDAQuant2_CE_files/figure-html/CafeHist3-1.png" width="288" /></p>
+<p>Figure 6: Histogram of the number of sodas sold in the college cafe.</p>
+<p>Table 7: Summary statistics of the number of sodas sold in the college cafe.</p>
+<pre><code>     n nvalid   mean     sd    min     Q1 median     Q3    max 
+ 48.00  47.00  29.57  11.86  11.00  21.00  29.00  36.00  55.00 </code></pre>
+<li>
+In general, slightly more coffees were sold in the middle of the week (Table 8). There was slightly less variability on Mondays (Table 8).
+</li>
+<p>Table 8: Summary statistics of the number of sodas sold in the college cafe separated by day of the week.</p>
+<pre><code>  dow  n nvalid  mean    sd min    Q1 median    Q3 max
+1 Mon  9      9 24.00  6.93  13 19.00   25.0 26.00  36
+2 Tue 10     10 39.90 11.45  20 33.00   37.5 49.50  55
+3 Wed 10     10 28.50 10.97  13 21.00   28.5 34.75  45
+4 Thu 10     10 35.30  8.54  23 29.50   34.0 41.50  50
+5 Fri  9      8 17.12  5.91  11 12.75   14.5 22.50  26</code></pre>
+<li>
+There was likely a smaller “population” of potential customers on Mondays and Fridays then during the middle of the week.
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>d &lt;- read.csv(&quot;cafedata.csv&quot;)
+d$dow &lt;- factor(d$dow,levels=c(&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;))
+hist(~coffee.sold,data=d,xlab=&quot;Number of Coffees Sold&quot;,ylim=c(0,10))
+Summarize(~coffee.sold,data=d,digits=2)
+Summarize(coffee.sold~dow,data=d,digits=2)
+hist(~sodas.sold,data=d,xlab=&quot;Number of Sodas Sold&quot;,ylim=c(0,10))
+Summarize(~sodas.sold,data=d,digits=2)
+Summarize(sodas.sold~dow,data=d,digits=2)</code></pre>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
