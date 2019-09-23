@@ -19,7 +19,6 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>W 11-Sep</td><td><a href="../modules/GettingDataIntoR">Getting Data Into R</a></td></tr>
 <tr><td>F 13-Sep</td><td><a href="../modules/UEDACat">Univariate EDA - Categorical</a></td></tr>
 <tr><td></td><td></td></tr>
---->
 
 <tr><td>M 16-Sep</td><td>
 <a href="../modules/UEDAQuant1">Summaries for One Quantitative Variable</a></td></tr>
@@ -27,6 +26,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <a href="../modules/UEDAQuant2">Univariate EDA - Quantitative Variable</a></td></tr>
 <tr><td>F 20-Sep</td><td><span style="color:red;font-weight:bold">First Quiz</span> (<a href="QuizGuide/quiz1">Study Guide</a>)</td></tr>
 <tr><td></td><td></td></tr>
+--->
 
 <tr><td>M 23-Sep</td><td>
 <a href="../modules/NormalDist">Normal Distributions</a></td></tr>
