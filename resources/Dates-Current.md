@@ -43,7 +43,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td></td><td></td></tr>
 
 <tr><td>M 7-Oct</td><td>TBD</td></tr>
-<tr><td>W 9-Oct</td><td><span style="color:red;font-weight:bold">Second Quiz</span> (<a href="QuizGuide/quiz">Study Guide</a>)</td></tr>
+<tr><td>W 9-Oct</td><td><span style="color:red;font-weight:bold">Second Quiz</span> (<a href="QuizGuide/quiz2">Study Guide</a>)</td></tr>
 <tr><td>F 11-Oct</td><td><a href="../modules/SamplingDist">Sampling Distributions</a></td></tr>
 <tr><td></td><td></td></tr>
 
