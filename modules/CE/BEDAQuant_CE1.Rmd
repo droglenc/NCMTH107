@@ -29,7 +29,8 @@ source("../../rhelpers/knitr_setup.R")
 
 ```{r echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
 tmp <- read.csv("Kingfishers.csv")
-plot(perc.female~latitude,data=tmp,xlab="Latitude (N)",ylab="Percent Female",pch=19)
+plot(perc.female~latitude,data=tmp,pch=21,bg="gray50",
+     xlab="Latitude (N)",ylab="Percent Female")
 grid()
 ```
 
@@ -60,14 +61,14 @@ For each situation below, identify (a) the response variable (if possible) and (
 
 ## Animal Fat and Breast Cancer
 
-[Carroll (1975)](https://www.ncbi.nlm.nih.gov/pubmed/1104150) examined the relationship between per capita consumption of animal fat (g/day) and age-adjusted death rate from breast cancer for 39 countries. Use the following results from her data to describe the bivariate relationship between these two variables.
+[Carroll (1975)](https://www.ncbi.nlm.nih.gov/pubmed/1104150) examined the relationship between per capita consumption of animal fat (g/day) and age-adjusted death rate from breast cancer for 39 countries. Use the following results from her data to describe the bivariate relationship between these two variables (i.e., perform a bivariate EDA).
 
 ```{r echo=FALSE, fig.width=3.5, fig.height=3.5, par1=TRUE}
 cf <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/CancerFat.csv")
-plot(adjdeath~fatintake,data=cf,pch=16,xlab="Fat Intake (g/day)",
-     ylab="Age-Adjusted Death Rate")
+plot(adjdeath~fatintake,data=cf,pch=21,bg="gray50",
+     xlab="Fat Intake (g/day)",ylab="Age-Adjusted Death Rate")
 r <- round(cor(cf$adjdeath,cf$fatintake),3)
-legend("topleft",legend=paste("r=",r,sep=" "),bty="n")
+legend("topleft",legend=paste("r =",r,sep=" "),bty="n")
 ```
 
 ----
