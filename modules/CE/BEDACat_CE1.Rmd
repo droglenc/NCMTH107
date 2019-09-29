@@ -54,9 +54,9 @@ d <- data.frame(treat=c("A","A","A","A","A","B","B","B","C","C","A","A",
                                           "Sprayed and Removed")),
                 outcome=FSA::mapvalues(outcome,
                                        from=1:3,
-                                       to=c("Within 1 Year",
-                                            "2-4 Years Later",
-                                            "4+ Years Later")))
+                                       to=c(" Within 1 Year",
+                                            "   2-4 Years Later",
+                                            "   4+ Years Later")))
 xtabs(~treat+outcome,data=d)
 ```
 
