@@ -39,30 +39,41 @@ VAR2  z z y z x z x y z y z z y z z z z z y y x y z y x y x y
 ## Fire Blight Disease
 <img src="zimgs/fire-blight.jpg" alt="Fire Blight Disease" class="img-right">
 
-Researchers conducted an experiment on 24 trees subject to a fire blight disease.  Each tree was treated with one of several treatments (`A`=no action (control), `B`=removal of the affected branches, `C`=sprayed foliage with an antibiotic and removal of the affected branches).  Each tree was then recorded according to one of three outcomes (`1`=tree died in the same year, `2`=tree died 2-4 years after, `3`=tree died more than 4 years after the disease was noticed). The data below are the treatment and outcomes for each of the 24 trees. The frequency table of their results is shown below. Use these results that can be used to answer the questions below.
+Researchers conducted an experiment on 24 trees subject to a fire blight disease.  Each tree was treated with one of several treatments (no action (control), removal of the affected branches, sprayed foliage with an antibiotic and removal of the affected branches). Each tree was then recorded according to one of three outcomes (tree died in the same year, tree died 2-4 years after, or tree died more than 4 years after the disease was noticed). The frequency table below show the treatment and outcome results for each of the 24 trees. Use these results to answer the questions below.
 
 ```{r BlightTables, echo=FALSE}
+library(dplyr)
 d <- data.frame(treat=c("A","A","A","A","A","B","B","B","C","C","A","A",
                         "B","B","B","C","C","C","C","B","B","C","C","C"),
-                out=factor(c(1,1,1,1,1,1,1,1,1,1,2,2,
-                             2,2,2,2,2,2,2,3,3,3,3,3)))
-xtabs(~treat+out,data=d)
+                outcome=factor(c(1,1,1,1,1,1,1,1,1,1,2,2,
+                             2,2,2,2,2,2,2,3,3,3,3,3))) %>%
+  mutate(treat=FSA::mapvalues(treat,
+                                     from=c("A","B","C"),
+                                     to=c("No Action (Control)",
+                                          "Removed Branches",
+                                          "Sprayed and Removed")),
+                outcome=FSA::mapvalues(outcome,
+                                       from=1:3,
+                                       to=c("Within 1 Year",
+                                            "2-4 Years Later",
+                                            "4+ Years Later")))
+xtabs(~treat+outcome,data=d)
 ```
 
 1. What is the response variable?
-1. What percentage of the trees in Treatment A died within the first year after the disease was noticed?
-1. What percentage of all trees were in Treatment A and died within the first year after the disease was noticed?
-1. What percentage of the trees in the control Treatment died more than four years after the disease was noticed?
-1. What percentage of the trees that died 2-4 years after the disease was noticed were in the control treatment?
+1. What percentage of trees in the control treatment died within the first year after the disease was noticed?
+1. What percentage of all trees were in the control treatment and died within the first year after the disease was noticed?
+1. What percentage of trees in the control treatment died more than four years after the disease was noticed?
+1. What percentage of trees that died 2-4 years after the disease was noticed were in the control treatment?
 1. What percentage of all trees died within the first year after the disease was noticed?
-1. Make an overall conclusion about how the different treatments affected survival of the trees.
-    
+1. Make an overall conclusion about how the different treatments affected survival of the trees. [*Hint: You may want to construct a specific type of percentage table.*]
+
 ----
 
 ## Lights and Nearsightedness
 <img src="zimgs/nightlight.jpg" alt="Nightlight" class="img-right">
 
-An Associated Press article captured the attention of readers with the headline "Night lights bad for kids?" The article was based on [a 1999 study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1115762/) at the University of Pennsylvania and Children's Hospital of Philadelphia, in which parents were surveyed about the lighting conditions under which their children slept between birth and age-2 (lamp, night-light, or no light) and whether or not their children developed nearsightedness (myopia). The purpose of their study was to explore the effect of a young child’s nighttime exposure to light on later nearsightedness. The results from 479 children were recorded in nightlight.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/nightlight.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/nightlight_meta.txt)). Use these data to answer the following questions. [*Make sure to refer to properly labeled tables for each question.*]
+An Associated Press article captured the attention of readers with the headline "Night lights bad for kids?" The article was based on [a 1999 study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1115762/) at the University of Pennsylvania and Children's Hospital of Philadelphia, in which parents were surveyed about the lighting conditions under which their children slept between birth and age-2 (lamp, night-light, or no light) and whether or not their children developed nearsightedness (myopia). The purpose of their study was to explore the effect of a young child's nighttime exposure to light on later nearsightedness. The results from 479 children were recorded in nightlight.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/nightlight.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/nightlight_meta.txt)). Use these data to create a frequency table and each of the three types of percentage tables. Use your results to answer the following questions. [*Make sure to refer to properly labeled tables for each question.*]
 
 1. How many children in the sample slept in "no light" conditions and developed nearsightedness?
 1. What percentage of children that slept in "no light" conditions developed nearsightedness?
