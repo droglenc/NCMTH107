@@ -29,7 +29,7 @@ source("../../rhelpers/knitr_setup.R")
 
 ```{r echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
 tmp <- read.csv("Kingfishers.csv")
-plot(perc.female~latitude,data=tmp,pch=21,bg="gray50",
+plot(perc.female~latitude,data=tmp,pch=21,bg="gray70",
      xlab="Latitude (N)",ylab="Percent Female")
 grid()
 ```
@@ -65,7 +65,7 @@ For each situation below, identify (a) the response variable (if possible) and (
 
 ```{r echo=FALSE, fig.width=3.5, fig.height=3.5, par1=TRUE}
 cf <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/CancerFat.csv")
-plot(adjdeath~fatintake,data=cf,pch=21,bg="gray50",
+plot(adjdeath~fatintake,data=cf,pch=21,bg="gray70",
      xlab="Fat Intake (g/day)",ylab="Age-Adjusted Death Rate")
 r <- round(cor(cf$adjdeath,cf$fatintake),3)
 legend("topleft",legend=paste("r =",r,sep=" "),bty="n")
