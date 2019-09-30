@@ -226,7 +226,7 @@ percTable(tbl,digits=1)</code></pre>
 <p>The questions below use the following tables.</p>
 <ol>
 <li>There were 119 students from the fourth grade in the sample.</li>
-<li>The percentage of All students in the fifth grade with the goal “to be popular’ was 11.5% (Table 15).</li>
+<li>The percentage of All students in the fifth grade with the goal "to be popular’ was 11.5% (Table 15).</li>
 <li>The percentage of fourth grade students with the goal “to be good in sports” was 21.0% (Table 13).</li>
 <li>The percentage of fifth grade students with the goal “to make good grades” was 50.0% (Table 13).</li>
 <li>The percentage of all students with the goal to “make good grades” was 51.7% (Table 15).</li>
@@ -284,6 +284,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
