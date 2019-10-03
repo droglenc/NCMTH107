@@ -54,25 +54,25 @@ d <- data.frame(VAR1 <- c("D","C","A","C","A","D","C","A","D","B",
                           "z","z","y","z","z","z","z","z","y","y",
                           "x","y","z","y","x","y","x","y"))
 ```
-```{r eval=FALSE}
+```{r eval=FALSE, echo=FALSE}
 d <- read.csv("BivEDA_CE1.csv")
 ```
-```{r}
+```{r echo=FALSE}
 ( tbl <- xtabs(~VAR2+VAR1,data=d))
 ```
 
 <li>Row Percentages Table</li>
-```{r}
+```{r echo=FALSE}
 percTable(tbl,margin=1,digits=1)
 ```
 
 <li>Column Percentages Table</li>
-```{r}
+```{r echo=FALSE}
 percTable(tbl,margin=2,digits=1)
 ```
 
 <li>Total Percentages Table</li>
-```{r}
+```{r echo=FALSE}
 percTable(tbl,digits=1)
 ```
 </ol>
