@@ -35,14 +35,14 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <a href="../modules/BEDACat">Bivariate EDA - Categorical</a><br>
 <span style="color:teal;font-weight:bold">DUE: Quiz 1 Reflection (Optional)</span></td></tr>
 <tr><td></td><td></td></tr>
---->
 
 <tr><td>M 30-Sep</td><td><a href="../modules/BEDAQuant">Bivariate EDA - Quantitative</a></td></tr>
 <tr><td>W 2-Oct</td><td><a href="../modules/LinearRegression">Linear Regression</a></td></tr>
 <tr><td>F 4-Oct</td><td><a href="../modules/LinearRegression">Linear Regression</a></td></tr>
 <tr><td></td><td></td></tr>
+--->
 
-<tr><td>M 7-Oct</td><td>TBD</td></tr>
+<tr><td>M 7-Oct</td><td>Quiz Prep</td></tr>
 <tr><td>W 9-Oct</td><td><span style="color:red;font-weight:bold">Second Quiz</span> (<a href="QuizGuide/quiz2">Study Guide</a>)</td></tr>
 <tr><td>F 11-Oct</td><td><a href="../modules/SamplingDist">Sampling Distributions</a></td></tr>
 <tr><td></td><td></td></tr>
