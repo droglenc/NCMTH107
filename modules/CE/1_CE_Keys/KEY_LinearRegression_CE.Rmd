@@ -158,6 +158,8 @@ fitPlot(lm1,pch=21,bg="gray70",
         xlab="Age of the Driver")
 ```
 
+`r figs("VisionFitPlot")`
+
 R Appendix
 ```{r eval=FALSE, prompt=FALSE}
 library(NCStats)
@@ -213,6 +215,8 @@ corr(~pressure+index,data=wd)
 fitPlot(lm1,pch=21,bg="gray70",
         ylab="Fishing Pressure",xlab="Index Count")
 ```
+
+`r figs("FishingFitPlot")`
 
 R Appendix
 ```{r eval=FALSE, prompt=FALSE}
