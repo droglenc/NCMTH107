@@ -10,7 +10,7 @@ css: "/css/modules.css"
 <hr />
 <div id="construct-sampling-distributions" class="section level2">
 <h2>Construct Sampling Distributions</h2>
-<p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/calculator-1.jpg" alt="Calculations" class="img-right"> Use the very simple population of five individuals with the following values – 12, 14, 16, 18, 20 – to answer the following questions.</p>
+<p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/calculator-1.jpg" alt="Calculations" class="img-right"> In this exercise, you will construct actual sampling distributions for different size samples from a very simple population. The very simple population use here is five individuals with the following values – 12, 14, 16, 18, 20. Perform the bulleted steps below and then answer the questions further below.</p>
 <ul>
 <li>Compute the center and dispersion (to three decimals) of this population. Write results in table further below.</li>
 </ul>
@@ -19,7 +19,7 @@ css: "/css/modules.css"
 <ul>
 <li>Identify all possible samples of n=2 from this population. [<em>Look at these to make sure that they make sense to you.</em>]</li>
 </ul>
-<pre class="r"><code>&gt; ( nums2 &lt;- combn(popn,2) )     # all combos of n=2 from popn</code></pre>
+<pre class="r"><code>&gt; ( nums2 &lt;- combn(popn,2) )     # all combos of n=2 from popn (look at verticals)</code></pre>
 <ul>
 <li>Compute the mean for each sample. [<em>Look at these to make sure that they make sense to you.</em>]</li>
 </ul>
@@ -27,7 +27,7 @@ css: "/css/modules.css"
 <ul>
 <li>Compute the mean and standard deviation of all 10 sample means. Write the results in the table further below.</li>
 </ul>
-<pre class="r"><code>&gt; Summarize(mns2,digits=2)       # summarized mean/sd of means</code></pre>
+<pre class="r"><code>&gt; Summarize(mns2,digits=3)       # summarized mean/sd of means</code></pre>
 <ul>
 <li>Repeat the previous four calculations for samples of n=3. [<em>Copy-and-paste your code for n=2 but change the names to</em> <code>num2</code> <em>and</em> <code>mns2</code><em>.</em>]</li>
 <li>Repeat the previous calculations for samples of n=4. [<em>Copy-and-paste and use</em> <code>num3</code> <em>and</em> <code>mns3</code><em>.</em>]</li>
@@ -36,7 +36,7 @@ css: "/css/modules.css"
 <thead>
 <tr>
 <th>
-n=
+ 
 </th>
 <th class="text-center">
 Mean
@@ -60,7 +60,7 @@ POPN
 </tr>
 <tr>
 <td>
-2
+n=2
 </td>
 <td>
  
@@ -71,7 +71,7 @@ POPN
 </tr>
 <tr>
 <td>
-3
+n=3
 </td>
 <td>
  
@@ -82,7 +82,7 @@ POPN
 </tr>
 <tr>
 <td>
-4
+n=4
 </td>
 <td>
  

@@ -26,7 +26,7 @@ source("../../rhelpers/knitr_setup.R")
 
 ## Construct Sampling Distributions
 <img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/calculator-1.jpg" alt="Calculations" class="img-right">
-Use the very simple population of five individuals with the following values -- 12, 14, 16, 18, 20 -- to answer the following questions.
+In this exercise, you will construct actual sampling distributions for different size samples from a very simple population. The very simple population use here is five individuals with the following values -- 12, 14, 16, 18, 20. Perform the bulleted steps below and then answer the questions further below.
 
 * Compute the center and dispersion (to three decimals) of this population. Write results in table further below.
 
@@ -38,7 +38,7 @@ Summarize(popn,digits=3)       # population summaries
 * Identify all possible samples of n=2 from this population. [*Look at these to make sure that they make sense to you.*]
 
 ```{r results='hide'}
-( nums2 <- combn(popn,2) )     # all combos of n=2 from popn
+( nums2 <- combn(popn,2) )     # all combos of n=2 from popn (look at verticals)
 ```
 
 * Compute the mean for each sample. [*Look at these to make sure that they make sense to you.*]
@@ -50,7 +50,7 @@ Summarize(popn,digits=3)       # population summaries
 * Compute the mean and standard deviation of all 10 sample means. Write the results in the table further below.
 
 ```{r results='hide'}
-Summarize(mns2,digits=2)       # summarized mean/sd of means
+Summarize(mns2,digits=3)       # summarized mean/sd of means
 ```
 
 * Repeat the previous four calculations for samples of n=3. [*Copy-and-paste your code for n=2 but change the names to* `num2` *and* `mns2`*.*]
@@ -59,13 +59,13 @@ Summarize(mns2,digits=2)       # summarized mean/sd of means
 
 <table class="table table-bordered table-condensed" style="width:65%">
 <thead>
-<tr><th>n=</th><th class="text-center">Mean</th><th class="text-center">St. Dev.</th></tr>
+<tr><th>&nbsp;</th><th class="text-center">Mean</th><th class="text-center">St. Dev.</th></tr>
 </thead>
 <tbody>
 <tr><td>POPN</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>2</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>3</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr><td>4</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>n=2</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>n=3</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>n=4</td><td>&nbsp;</td><td>&nbsp;</td></tr>
 </tbody>
 </table>
 
