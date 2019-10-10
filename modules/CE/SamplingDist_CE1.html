@@ -12,13 +12,13 @@ css: "/css/modules.css"
 <h2>Construct Sampling Distributions</h2>
 <p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/calculator-1.jpg" alt="Calculations" class="img-right"> Use the very simple population of five individuals with the following values – 12, 14, 16, 18, 20 – to answer the following questions. [<em>See the hints further below for how to efficiently make these calculations using R (rather than your calculator).</em>]</p>
 <ol>
-<li>Compute the center and dispersion (to three decimals) of this population. Label each result with appropriate symbols.</li>
-<li>Identify all possible samples of n=2 from this population. [<em>Note that there are 10 such samples.</em>]</li>
-<li>Compute the mean for each sample.</li>
-<li>Compute the mean of all 10 sample means.</li>
-<li>Compute the standard deviation of all 10 sample means. What should this result be called?</li>
-<li>Repeat the previous four questions for samples of n=3. [<em>Note that there is again 10 samples.</em>]</li>
-<li>Repeat the previous question for samples of n=4. [<em>Note that there are 5 such samples</em>]</li>
+<li>Compute the center and dispersion (to three decimals) of this population. Label each result with appropriate symbols. [<strong>See first hint below.</strong>]</li>
+<li>Identify all possible samples of n=2 from this population. [<em>Note that there are 10 such samples.</em> <strong>See second hint below.</strong>]</li>
+<li>Compute the mean for each sample. [<strong>See third hint below.</strong>]</li>
+<li>Compute the mean and standard deviation of all 10 sample means. [<strong>See fourth hint below.</strong>]</li>
+<li>What should the standard deviation just calculated be called?</li>
+<li>Repeat the previous four questions for samples of n=3. [<em>Copy-and-paste the code for n=2 but change the names to <code>num2</code> and <code>mns2</code>.</em>]</li>
+<li>Repeat the previous question for samples of n=4. [<em>Copy-and-paste and use <code>num3</code> and <code>mns3</code>.</em>] <br></li>
 <li>How did the means of the sample means change with increasing n?</li>
 <li>How did the three means of sample means (i.e., from n=2, 3, and 4) compare to the population mean?</li>
 <li>How did the three standard deviations of sample means compare to the population standard deviation?</li>
@@ -27,14 +27,20 @@ css: "/css/modules.css"
 <p class="bg-info">
 <strong>Hint:</strong> the mean and standard deviation of a small set of numbers can be efficiently computed by entering the numbers into a vector in R (using <code>c()</code>) and submitting that vector to <code>Summarize()</code> from <code>NCStats</code>.
 </p>
-<pre class="r"><code>&gt; popn &lt;- c(12,14,16,18,20)      # dummy data as an example
+<pre class="r"><code>&gt; popn &lt;- c(12,14,16,18,20)      # creates population
 &gt; Summarize(popn,digits=3)       # population summaries</code></pre>
 <p class="bg-info">
-<strong>Hint:</strong> The samples, means of each sample, and the summaries of those means can be efficiently computed from the population values entered in <code>popn</code> as shown below.
+<strong>Hint:</strong> The samples from the population in <code>popn</code> may be found and stored in <code>nums2</code> as shown below.
 </p>
-<pre class="r"><code>&gt; ( nums2 &lt;- combn(popn,2) )     # all combos of n=2 from popn
-&gt; ( mns2 &lt;- combn(popn,2,mean) ) # mean of above (all combos of n=2)
-&gt; Summarize(mns2,digits=2)       # summarized mean/sd of means</code></pre>
+<pre class="r"><code>&gt; ( nums2 &lt;- combn(popn,2) )     # all combos of n=2 from popn</code></pre>
+<p class="bg-info">
+<strong>Hint:</strong> The mean of each sample stored in <code>nums</code> may be computed and stored in <code>mns2</code> as shown below.
+</p>
+<pre class="r"><code>&gt; ( mns2 &lt;- combn(popn,2,mean) ) # mean of all combos of n=2</code></pre>
+<p class="bg-info">
+<strong>Hint:</strong> The mean and standard deviation of the means stored in <code>mns2</code> may be computed as shown below.
+</p>
+<pre class="r"><code>&gt; Summarize(mns2,digits=2)       # summarized mean/sd of means</code></pre>
 <hr />
 <div class="text-center">
 <ul class="pagination pagination-lg">
@@ -70,6 +76,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
