@@ -12,37 +12,95 @@ css: "/css/modules.css"
 <h2>Construct Sampling Distributions</h2>
 <p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/calculator-1.jpg" alt="Calculations" class="img-right"> Use the very simple population of five individuals with the following values – 12, 14, 16, 18, 20 – to answer the following questions.</p>
 <ul>
-<li>Compute the center and dispersion (to three decimals) of this population. Label each result with appropriate symbols. [<strong>See first hint below.</strong>]</li>
-<li>Identify all possible samples of n=2 from this population. [<em>Note that there are 10 such samples.</em> <strong>See second hint below.</strong>]</li>
-<li>Compute the mean for each sample. [<strong>See third hint below.</strong>]</li>
-<li>Compute the mean and standard deviation of all 10 sample means. [<strong>See fourth hint below.</strong>]</li>
-<li>Repeat the previous four questions for samples of n=3. [<em>Copy-and-paste your code for n=2 but change the names to</em> <code>num2</code> <em>and</em> <code>mns2</code><em>.</em>]</li>
-<li>Repeat the previous question for samples of n=4. [<em>Copy-and-paste and use</em> <code>num3</code> <em>and</em> <code>mns3</code><em>.</em>]</li>
+<li>Compute the center and dispersion (to three decimals) of this population. Write results in table further below.</li>
 </ul>
+<pre class="r"><code>&gt; popn &lt;- c(12,14,16,18,20)      # creates population
+&gt; Summarize(popn,digits=3)       # population summaries</code></pre>
+<ul>
+<li>Identify all possible samples of n=2 from this population. [<em>Look at these to make sure that they make sense to you.</em>]</li>
+</ul>
+<pre class="r"><code>&gt; ( nums2 &lt;- combn(popn,2) )     # all combos of n=2 from popn</code></pre>
+<ul>
+<li>Compute the mean for each sample. [<em>Look at these to make sure that they make sense to you.</em>]</li>
+</ul>
+<pre class="r"><code>&gt; ( mns2 &lt;- combn(popn,2,mean) ) # mean of all combos of n=2</code></pre>
+<ul>
+<li>Compute the mean and standard deviation of all 10 sample means. Write the results in the table further below.</li>
+</ul>
+<pre class="r"><code>&gt; Summarize(mns2,digits=2)       # summarized mean/sd of means</code></pre>
+<ul>
+<li>Repeat the previous four calculations for samples of n=3. [<em>Copy-and-paste your code for n=2 but change the names to</em> <code>num2</code> <em>and</em> <code>mns2</code><em>.</em>]</li>
+<li>Repeat the previous calculations for samples of n=4. [<em>Copy-and-paste and use</em> <code>num3</code> <em>and</em> <code>mns3</code><em>.</em>]</li>
+</ul>
+<table class="table table-bordered table-condensed" style="width:65%">
+<thead>
+<tr>
+<th>
+n=
+</th>
+<th class="text-center">
+Mean
+</th>
+<th class="text-center">
+St. Dev.
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+POPN
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+ 
+</td>
+<td>
+ 
+</td>
+</tr>
+</tbody>
+</table>
 <ol>
+<li>What symbols should be placed on the mean and standard deviation of the population shown in the fist row of your table.</li>
 <li>How did the means of the sample means change with increasing n?</li>
 <li>How did the three means of sample means (i.e., from n=2, 3, and 4) compare to the population mean?</li>
 <li>What should the standard deviation of the sample means calculated above be called?</li>
 <li>How did the three standard deviations of sample means compare to the population standard deviation?</li>
 <li>How did the standard deviations of the sample means change with increasing n?</li>
 </ol>
-<p class="bg-info">
-<strong>Hint #1:</strong> the mean and standard deviation of a small set of numbers can be efficiently computed by entering the numbers into a vector in R (using <code>c()</code>) and submitting that vector to <code>Summarize()</code> from <code>NCStats</code>.
-</p>
-<pre class="r"><code>&gt; popn &lt;- c(12,14,16,18,20)      # creates population
-&gt; Summarize(popn,digits=3)       # population summaries</code></pre>
-<p class="bg-info">
-<strong>Hint #2:</strong> The samples from the population in <code>popn</code> may be found and stored in <code>nums2</code> as shown below.
-</p>
-<pre class="r"><code>&gt; ( nums2 &lt;- combn(popn,2) )     # all combos of n=2 from popn</code></pre>
-<p class="bg-info">
-<strong>Hint #3:</strong> The mean of each sample stored in <code>nums</code> may be computed and stored in <code>mns2</code> as shown below.
-</p>
-<pre class="r"><code>&gt; ( mns2 &lt;- combn(popn,2,mean) ) # mean of all combos of n=2</code></pre>
-<p class="bg-info">
-<strong>Hint #4:</strong> The mean and standard deviation of the means stored in <code>mns2</code> may be computed as shown below.
-</p>
-<pre class="r"><code>&gt; Summarize(mns2,digits=2)       # summarized mean/sd of means</code></pre>
 <hr />
 <div class="text-center">
 <ul class="pagination pagination-lg">
