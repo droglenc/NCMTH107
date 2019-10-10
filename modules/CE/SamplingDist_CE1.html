@@ -10,35 +10,37 @@ css: "/css/modules.css"
 <hr />
 <div id="construct-sampling-distributions" class="section level2">
 <h2>Construct Sampling Distributions</h2>
-<p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/calculator-1.jpg" alt="Calculations" class="img-right"> Use the very simple population of five individuals with the following values – 12, 14, 16, 18, 20 – to answer the following questions. [<em>See the hints further below for how to efficiently make these calculations using R (rather than your calculator).</em>]</p>
-<ol>
+<p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/calculator-1.jpg" alt="Calculations" class="img-right"> Use the very simple population of five individuals with the following values – 12, 14, 16, 18, 20 – to answer the following questions.</p>
+<ul>
 <li>Compute the center and dispersion (to three decimals) of this population. Label each result with appropriate symbols. [<strong>See first hint below.</strong>]</li>
 <li>Identify all possible samples of n=2 from this population. [<em>Note that there are 10 such samples.</em> <strong>See second hint below.</strong>]</li>
 <li>Compute the mean for each sample. [<strong>See third hint below.</strong>]</li>
 <li>Compute the mean and standard deviation of all 10 sample means. [<strong>See fourth hint below.</strong>]</li>
-<li>What should the standard deviation just calculated be called?</li>
-<li>Repeat the previous four questions for samples of n=3. [<em>Copy-and-paste the code for n=2 but change the names to <code>num2</code> and <code>mns2</code>.</em>]</li>
-<li>Repeat the previous question for samples of n=4. [<em>Copy-and-paste and use <code>num3</code> and <code>mns3</code>.</em>] <br></li>
+<li>Repeat the previous four questions for samples of n=3. [<em>Copy-and-paste your code for n=2 but change the names to</em> <code>num2</code> <em>and</em> <code>mns2</code><em>.</em>]</li>
+<li>Repeat the previous question for samples of n=4. [<em>Copy-and-paste and use</em> <code>num3</code> <em>and</em> <code>mns3</code><em>.</em>]</li>
+</ul>
+<ol>
 <li>How did the means of the sample means change with increasing n?</li>
 <li>How did the three means of sample means (i.e., from n=2, 3, and 4) compare to the population mean?</li>
+<li>What should the standard deviation of the sample means calculated above be called?</li>
 <li>How did the three standard deviations of sample means compare to the population standard deviation?</li>
 <li>How did the standard deviations of the sample means change with increasing n?</li>
 </ol>
 <p class="bg-info">
-<strong>Hint:</strong> the mean and standard deviation of a small set of numbers can be efficiently computed by entering the numbers into a vector in R (using <code>c()</code>) and submitting that vector to <code>Summarize()</code> from <code>NCStats</code>.
+<strong>Hint #1:</strong> the mean and standard deviation of a small set of numbers can be efficiently computed by entering the numbers into a vector in R (using <code>c()</code>) and submitting that vector to <code>Summarize()</code> from <code>NCStats</code>.
 </p>
 <pre class="r"><code>&gt; popn &lt;- c(12,14,16,18,20)      # creates population
 &gt; Summarize(popn,digits=3)       # population summaries</code></pre>
 <p class="bg-info">
-<strong>Hint:</strong> The samples from the population in <code>popn</code> may be found and stored in <code>nums2</code> as shown below.
+<strong>Hint #2:</strong> The samples from the population in <code>popn</code> may be found and stored in <code>nums2</code> as shown below.
 </p>
 <pre class="r"><code>&gt; ( nums2 &lt;- combn(popn,2) )     # all combos of n=2 from popn</code></pre>
 <p class="bg-info">
-<strong>Hint:</strong> The mean of each sample stored in <code>nums</code> may be computed and stored in <code>mns2</code> as shown below.
+<strong>Hint #3:</strong> The mean of each sample stored in <code>nums</code> may be computed and stored in <code>mns2</code> as shown below.
 </p>
 <pre class="r"><code>&gt; ( mns2 &lt;- combn(popn,2,mean) ) # mean of all combos of n=2</code></pre>
 <p class="bg-info">
-<strong>Hint:</strong> The mean and standard deviation of the means stored in <code>mns2</code> may be computed as shown below.
+<strong>Hint #4:</strong> The mean and standard deviation of the means stored in <code>mns2</code> may be computed as shown below.
 </p>
 <pre class="r"><code>&gt; Summarize(mns2,digits=2)       # summarized mean/sd of means</code></pre>
 <hr />
