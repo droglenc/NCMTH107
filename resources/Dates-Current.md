@@ -48,8 +48,8 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td></td><td></td></tr>
 
 <tr><td>M 14-Oct</td><td><a href="../modules/Probability">Probability</a></td></tr>
-<tr><td>W 16-Oct</td><td><a href="../modules/HypTesting">Hypothesis Testing</a></td></tr>
-<tr><td>F 18-Oct</td><td><a href="../modules/HypTestingErrs">Hypothesis Testing Errors</a><br><span style="color:teal;font-weight:bold">DUE: Quiz 2 Reflection (Optional)</span></td></tr>
+<tr><td>W 16-Oct</td><td><a href="../modules/HypTesting">Hypothesis Testing</a><br><span style="color:teal;font-weight:bold">DUE: Quiz 2 Reflection (Optional)</span></td></tr>
+<tr><td>F 18-Oct</td><td><a href="../modules/HypTestingErrs">Hypothesis Testing Errors</a></td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 21-Oct</td><td><span style="color:coral">NO CLASS (Reading Day)</span></td></tr>
