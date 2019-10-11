@@ -40,12 +40,12 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>W 2-Oct</td><td><a href="../modules/LinearRegression">Linear Regression</a></td></tr>
 <tr><td>F 4-Oct</td><td><a href="../modules/LinearRegression">Linear Regression</a></td></tr>
 <tr><td></td><td></td></tr>
---->
 
 <tr><td>M 7-Oct</td><td>Quiz Prep</td></tr>
 <tr><td>W 9-Oct</td><td><span style="color:red;font-weight:bold">Second Quiz</span> (<a href="QuizGuide/quiz2">Study Guide</a>)</td></tr>
 <tr><td>F 11-Oct</td><td><a href="../modules/SamplingDist">Sampling Distributions</a></td></tr>
 <tr><td></td><td></td></tr>
+--->
 
 <tr><td>M 14-Oct</td><td><a href="../modules/Probability">Probability</a></td></tr>
 <tr><td>W 16-Oct</td><td><a href="../modules/HypTesting">Hypothesis Testing</a><br><span style="color:teal;font-weight:bold">DUE: Quiz 2 Reflection (Optional)</span></td></tr>
@@ -58,7 +58,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td></td><td></td></tr>
 
 <tr><td>M 28-Oct</td><td><a href="../modules/ConfRegions">Confidence Regions</a></td></tr>
-<tr><td>W 30-Oct</td><td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td></td></tr>
+<tr><td>W 30-Oct</td><td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td></tr>
 <tr><td>F 1-Nov</td><td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td></tr>
 <tr><td></td><td></td></tr>
 
@@ -78,7 +78,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td></td><td></td></tr>
 
 <tr><td>M 25-Nov</td><td><a href="../modules/ChiSquare">Chi-Square Test</a></td></tr>
-<tr><td>W 27-Nov</td><td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td></td></tr>
+<tr><td>W 27-Nov</td><td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td></tr>
 <tr><td>F 29-Nov</td><td>TBD</td></tr>
 <tr><td></td><td></td></tr>
 
