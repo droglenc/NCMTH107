@@ -47,29 +47,29 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>F 11-Oct</td><td><a href="../modules/SamplingDist">Sampling Distributions</a></td></tr>
 <tr><td></td><td></td></tr>
 
-<tr><td>M 14-Oct</td><td><a href="../modules/SamplingDist">Sampling Distributions</a></td></tr>
-<tr><td>W 16-Oct</td><td><a href="../modules/Probability">Probability</a></td></tr>
-<tr><td>F 18-Oct</td><td><a href="../modules/FilteringDataInR">Filtering Data In R</a><br><span style="color:teal;font-weight:bold">DUE: Quiz 2 Reflection (Optional)</span></td></tr>
+<tr><td>M 14-Oct</td><td><a href="../modules/Probability">Probability</a></td></tr>
+<tr><td>W 16-Oct</td><td><a href="../modules/HypTesting">Hypothesis Testing</a></td></tr>
+<tr><td>F 18-Oct</td><td><a href="../modules/HypTestingErrs">Hypothesis Testing Errors</a><br><span style="color:teal;font-weight:bold">DUE: Quiz 2 Reflection (Optional)</span></td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 21-Oct</td><td><span style="color:coral">NO CLASS (Reading Day)</span></td></tr>
-<tr><td>W 23-Oct</td><td><a href="../modules/HypTesting">Hypothesis Testing</a></td></tr>
-<tr><td>F 25-Oct</td><td><a href="../modules/HypTestingErrs">Hypothesis Testing Errors</a></td></tr>
+<tr><td>W 23-Oct</td><td><a href="../modules/FilteringDataInR">Filtering Data In R</a></td></tr>
+<tr><td>F 25-Oct</td><td><a href="../modules/ConfRegions">Confidence Regions</a></td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 28-Oct</td><td><a href="../modules/ConfRegions">Confidence Regions</a></td></tr>
-<tr><td>W 30-Oct</td><td><a href="../modules/ConfRegions">Confidence Regions</a></td></tr>
+<tr><td>W 30-Oct</td><td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td></td></tr>
 <tr><td>F 1-Nov</td><td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td></tr>
 <tr><td></td><td></td></tr>
 
-<tr><td>M 4-Nov</td><td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td></tr>
+<tr><td>M 4-Nov</td><a href="../modules/1Samplet">1-Sample t-Test</a><td></tr>
 <tr><td>W 6-Nov</td><td>TBD</td></tr>
 <tr><td>F 8-Nov</td><td><span style="color:red;font-weight:bold">Third Quiz</span> (<a href="QuizGuide/quiz">Study Guide</a>)</td></tr>
 <tr><td></td><td></td></tr>
 
-<tr><td>M 11-Nov</td><td><a href="../modules/1Samplet">1-Sample t-Test</a></td></tr>
+<tr><td>M 11-Nov</td><td><a href="../modules/2Samplet">2-Sample t-Test</a></td></tr>
 <tr><td>W 13-Nov</td><td><a href="../modules/2Samplet">2-Sample t-Test</a></td></tr>
-<tr><td>F 15-Nov</td><td><a href="../modules/2Samplet">2-Sample t-Test</a><br><span style="color:teal;font-weight:bold">DUE: Quiz 3 Reflection (Optional)</span></td></tr>
+<tr><td>F 15-Nov</td><td><a href="../modules/ChiSquare">Chi-Square Test</a><br><span style="color:teal;font-weight:bold">DUE: Quiz 3 Reflection (Optional)</span></td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 18-Nov</td><td><span style="color:coral">NO CLASS (Thanksgiving)</span></td></tr>
@@ -78,8 +78,8 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td></td><td></td></tr>
 
 <tr><td>M 25-Nov</td><td><a href="../modules/ChiSquare">Chi-Square Test</a></td></tr>
-<tr><td>W 27-Nov</td><td><a href="../modules/ChiSquare">Chi-Square Test</a></td></tr>
-<tr><td>F 29-Nov</td><td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td></tr>
+<tr><td>W 27-Nov</td><td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td></td></tr>
+<tr><td>F 29-Nov</td><td>TBD</tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 2-Dec</td><td><span style="color:red;font-weight:bold">Fourth Quiz</span> (<a href="QuizGuide/quiz">Study Guide</a>)</td></tr>
