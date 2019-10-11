@@ -8,11 +8,11 @@ css: "/css/modules.css"
 
 
 <hr />
-<p>The Central Limit Theorem (CLT), the specifics of which in your module preparation notes, provides a mechanism for understanding what the sampling distribution of the sample means looks like. In this exercise, you will first identify what the CLT says the shape (normal or not), center (with a specific value), and dispersion (with a specific value) of the sampling distribution of sample means should look like for different sample sizes (n) from he known population shown below.</p>
+<p>The Central Limit Theorem (CLT), the specifics of which in your module preparation notes, provides a mechanism for understanding what the sampling distribution of the sample means looks like. In this exercise, you will first identify what the CLT says the shape, center, and dispersion of the sampling distribution of sample means should look like for different sample sizes (n) from he known population shown below.</p>
 <p><img src="SamplingDist_CE2_files/figure-html/Sit1-1.png" width="312" /></p>
 <ol>
 <li>
-What is the shape, center (a specific value), and dispersion (a specific value) of the population shown in the plot below? [Note: Put specific symbols on the values for center and disperions.]
+What is the shape (normal or not), center (a specific value), and dispersion (a specific value) of the population shown in the plot below? [Note: Put specific symbols on the values for center and disperions.]
 </li>
 <br>
 <li>
@@ -30,7 +30,7 @@ Expected from CLT
 </tr>
 <tr>
 <th>
-n=
+ 
 </th>
 <th class="text-center">
 Normal?
@@ -46,7 +46,7 @@ Dispersion
 <tbody>
 <tr>
 <td>
-10
+n=10
 </td>
 <td>
  
@@ -60,7 +60,7 @@ Dispersion
 </tr>
 <tr>
 <td>
-25
+n=25
 </td>
 <td>
  
@@ -74,7 +74,7 @@ Dispersion
 </tr>
 <tr>
 <td>
-50
+n=50
 </td>
 <td>
  
@@ -90,7 +90,7 @@ Dispersion
 </table>
 <p><br> <br></p>
 <p>The sampling distribution of the sample means can be simulated by computing the means from many repeated samples from a population. The <code>cltSim()</code> function (with no arguments) efficiently computes sample means from many samples taken from a known population. The plots below were created with <code>cltSim()</code>. The histogram on the left below is the known population distribution (with μ &amp; &amp;sigma as shown). The histogram on the right is the distribution of sample means from 5000 samples of size n from the known population (i.e., a simulated sampling distribution). <img src="SamplingDist_CE2_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<p>In RStudio, a gear icon will be in the upper-left corner of this plot that will open a dialog box that allows you to change two shape parameters to alter the known population distribution and to modify n. The population shown above uses <code>shape1=6</code> and <code>shape2=2</code>. You should set those two sliders to those values and make sure that the population distribution (left plot) matches the population further above.</p>
+<p>In RStudio, a gear icon will be in the upper-left corner of this plot that will open a dialog box that allows you to change two shape parameters to alter the known population distribution and to modify n. The population shown above uses <code>shape1=6</code> and <code>shape2=2</code>. You should set those two sliders to those values and make sure that the population distribution (left plot) matches the population further above.</p>
 <ol start="3">
 <li>
 Record what you observed about the sampling distribution of sample means (right plot) for each of n=10, 25, and 50 in the appropriate cells of the table below.
@@ -107,7 +107,7 @@ Observed from <code>cltSim()</code>
 </tr>
 <tr>
 <th>
-n=
+ 
 </th>
 <th class="text-center">
 Normal?
@@ -123,7 +123,7 @@ Dispersion
 <tbody>
 <tr>
 <td>
-10
+n=10
 </td>
 <td>
  
@@ -137,7 +137,7 @@ Dispersion
 </tr>
 <tr>
 <td>
-25
+n=25
 </td>
 <td>
  
@@ -151,7 +151,7 @@ Dispersion
 </tr>
 <tr>
 <td>
-50
+n=50
 </td>
 <td>
  
@@ -209,6 +209,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
