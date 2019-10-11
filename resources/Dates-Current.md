@@ -62,7 +62,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>F 1-Nov</td><td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td></tr>
 <tr><td></td><td></td></tr>
 
-<tr><td>M 4-Nov</td><a href="../modules/1Samplet">1-Sample t-Test</a><td></tr>
+<tr><td>M 4-Nov</td><td><a href="../modules/1Samplet">1-Sample t-Test</a></td></tr>
 <tr><td>W 6-Nov</td><td>TBD</td></tr>
 <tr><td>F 8-Nov</td><td><span style="color:red;font-weight:bold">Third Quiz</span> (<a href="QuizGuide/quiz">Study Guide</a>)</td></tr>
 <tr><td></td><td></td></tr>
