@@ -1,0 +1,201 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Sampling Distributions CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="constructing-a-sampling-distribution" class="section level2">
+<h2>Constructing a Sampling Distribution</h2>
+<ol>
+<li>
+<span class="math inline">\(\mu\)</span>=16, <span class="math inline">\(\sigma\)</span>=3.162.
+</li>
+<li>
+All samples of n=2 are shown in columns below.
+</li>
+<pre><code>     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
+[1,]   12   12   12   12   14   14   14   16   16    18
+[2,]   14   16   18   20   16   18   20   18   20    20</code></pre>
+<li>
+Means from all samples of n=2 are shown below.
+</li>
+<pre><code> [1] 13 14 15 16 15 16 17 17 18 19</code></pre>
+<li>
+The mean of all sample means from n=2 is 16.
+</li>
+<li>
+The standard deviation of all sample means from n=2 is 1.826. This is really a standard error.
+</li>
+<li>
+The above for n=3 are below.
+</li>
+<pre><code>     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
+[1,]   12   12   12   12   12   12   14   14   14    16
+[2,]   14   14   14   16   16   18   16   16   18    18
+[3,]   16   18   20   18   20   20   18   20   20    20</code></pre>
+<pre><code> [1] 14.000 14.667 15.333 15.333 16.000 16.667 16.000 16.667 17.333 18.000</code></pre>
+<pre><code>[1] 16</code></pre>
+<pre><code>[1] 1.217</code></pre>
+<li>
+The above for n=4 are below.
+</li>
+<pre><code>     [,1] [,2] [,3] [,4] [,5]
+[1,]   12   12   12   12   14
+[2,]   14   14   14   16   16
+[3,]   16   16   18   18   18
+[4,]   18   20   20   20   20</code></pre>
+<pre><code>[1] 15.0 15.5 16.0 16.5 17.0</code></pre>
+<pre><code>[1] 16</code></pre>
+<pre><code>[1] 0.791</code></pre>
+<li>
+Same.
+</li>
+<li>
+Did not change (were not affected by n).
+</li>
+<li>
+All smaller.
+</li>
+<li>
+Decreased with increasing n.
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>d &lt;- c(12,14,16,18,20)
+mu &lt;- mean(d)
+sigma &lt;- sd(d)
+
+d2 &lt;- combn(d,2)
+d2mns &lt;- combn(d,2,FUN=mean)
+d2m &lt;- mean(d2mns)
+d2se &lt;- sd(d2mns)
+
+d3 &lt;- combn(d,3)
+d3mns &lt;- combn(d,3,FUN=mean)
+d3m &lt;- mean(d3mns)
+d3se &lt;- sd(d3mns)
+
+d4 &lt;- combn(d,4)
+d4mns &lt;- combn(d,4,FUN=mean)
+d4m &lt;- mean(d4mns)
+d4se &lt;- sd(d4mns)</code></pre>
+<hr />
+</div>
+<div id="checking-the-clt" class="section level2">
+<h2>Checking the CLT</h2>
+<p><strong>NOT AVAILABLE</strong></p>
+<hr />
+</div>
+<div id="precision-and-accuracy" class="section level2">
+<h2>Precision and Accuracy</h2>
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+Accuracy is determined by whether the mean of the means (values) equals the true mean (i.e., the parameter) or not. Thus, to determine accuracy you must compute the mean of the provided values and determine whether that equals the true mean given in the background (60 in the examples below).
+</li>
+<li>
+Precision (as defined here) is related to how close the values are to each other NOT how many decimals are recorded. Thus, the values 45,46,47,48 are more precise than the values 1.01,9.19,55.65,87.49.
+</li>
+</ul>
+</div>
+<ol>
+<li>The numbers 59, 60, 60, 61 represent values that are accurate and precise (i.e., values are close together and centered on (average out to be) 60).</li>
+<li>The numbers 45, 55, 65, 70 represent values that are accurate but imprecise (i.e., values are far apart and centered on 60).</li>
+<li>The numbers 69, 70, 71, 72 represent values that are inaccurate but precise (i.e., values are close together and NOT centered on 60).</li>
+<li>The numbers 75, 85, 95, 105 represent values that are inaccurate and imprecise (i.e., values are far apart and NOT centered on 60).</li>
+</ol>
+<hr />
+</div>
+<div id="constructing-a-sampling-distribution-ii" class="section level2">
+<h2>Constructing a Sampling Distribution II</h2>
+<ol>
+<li>
+Results for the samples are in Table 1.
+</li>
+<p>Table 1: All possible samples of n=2 from the numbers 2 through 9. Each column represents the two values in a possible sample.</p>
+<pre><code>     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12] [,13] [,14] [,15]
+[1,]    2    2    2    2    2    2    2    3    3     3     3     3     3     4     4
+[2,]    3    4    5    6    7    8    9    4    5     6     7     8     9     5     6
+     [,16] [,17] [,18] [,19] [,20] [,21] [,22] [,23] [,24] [,25] [,26] [,27] [,28]
+[1,]     4     4     4     5     5     5     5     6     6     6     7     7     8
+[2,]     7     8     9     6     7     8     9     7     8     9     8     9     9</code></pre>
+<li>
+Results for the means are in Table 2.
+</li>
+<p>Table 2: All possible means from samples of n=2 from the numbers 2 through 9.</p>
+<pre><code> [1] 2.5 3.0 3.5 4.0 4.5 5.0 5.5 3.5 4.0 4.5 5.0 5.5 6.0 4.5 5.0 5.5 6.0 6.5 5.5 6.0 6.5
+[22] 7.0 6.5 7.0 7.5 7.5 8.0 8.5</code></pre>
+<li>
+The histogram of means is shown in Figure 1. The distribution is perfectly symmetric.
+</li>
+<p><img src="KEY_SamplingDist_CE_files/figure-html/xbarHist-1.png" width="336" /></p>
+<p>Figure 1: Histogram of all means from samples of n=2 from the numbers 2 through 9.</p>
+<li>
+Both the mean of the 28 sample means and the mean of the original set of numbers (the population) are 5.5. This observation is a demonstration of the definition of an unbiased statistic.
+</li>
+<li>
+The standard deviation of the 28 sample means is 1.53. This standard deviation is called a standard error. The standard error would be smaller if samples of n=3 had been taken rather than n=2.
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>library(NCStats)
+( smpls2 &lt;- combn(2:9,2) )
+( mns2 &lt;- as.numeric(combn(2:9,2,mean)) )
+mean(mns2)
+mean(2:9)
+sd(mns2)
+hist(~mns2,w=0.5,xlab=&quot;Sample Means&quot;,ylab=&quot;Frequency of Samples&quot;)</code></pre>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
