@@ -9,7 +9,7 @@ css: "/css/modules.css"
 
 ## Melatonin and Sleep
 <img src="zimgs/melatonin.png" alt="melatonin" class="img-right">
-MIT researchers examined the effect of [melatonin](http://www.webmd.com/sleep-disorders/tc/melatonin-overview) on sleep.  Suppose that we know that men given a placebo fell asleep according to a N(15,5) distribution. For each question below identify (a) the distribution that would be used to answer the question, (b) specific characteristics of the required distribution, (c) whether the question can be answered or not, and (d) if appropriate, the answer to the question.
+MIT researchers examined the effect of [melatonin](http://www.webmd.com/sleep-disorders/tc/melatonin-overview) on sleep. Suppose that we know that men given a placebo fell asleep according to a N(15,5) distribution. For each question below identify (a) the distribution that would be used to answer the question, (b) specific characteristics of the required distribution, (c) whether the question can be answered or not, and (d) if appropriate, the answer to the question.
 
 1. What is the probability, with 4 randomly selected men, of observing a mean of more than 12 mins?
 1. What is the probability that a randomly selected man will fall asleep in more than 12 mins?
@@ -45,7 +45,7 @@ Suppose that it is known that the distribution of lengths of acorns is slightly 
 
 ## Plowing Snow
 <img src="zimgs/snowplow.jpg" alt="Snow plowing" class="img-right">
-Suppose that it is know that the distribution of times spent plowing a single city block on snow days is right-skewed with a mean of 45 seconds and a standard deviation of 28 seconds. For each question below identify (a) the distribution that would be used to answer the question, (b) specific characteristics of the required distribution, (c) whether the question can be answered or not, and (d) if appropriate, the answer to the question.
+Suppose that it is known that the distribution of times spent plowing a single city block on snow days is right-skewed with a mean of 45 seconds and a standard deviation of 28 seconds. For each question below identify (a) the distribution that would be used to answer the question, (b) specific characteristics of the required distribution, (c) whether the question can be answered or not, and (d) if appropriate, the answer to the question.
 
 1. What is the probability that in a sample of 5 blocks that the mean is greater than 60 seconds?
 1. What is the probability that it will take longer than 60 seconds for one block?

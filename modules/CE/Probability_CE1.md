@@ -20,7 +20,7 @@ An "arena" contains 8 acorns and 9 kernels of corn. Assume that a chipmunk place
 
 ## Pollutants in Auto Exhaust
 <img src="zimgs/exhaust.jpg" alt="Exhaust" class="img-right">
-The level of nitrogen oxides (NOX) in the exhaust of a particular car model is right-skewed with a mean of 0.9 grams per mile (g/mi) and a standard deviation of 0.15 g/mi. For each question below identify (a) the distribution that would be used to answer the question, (b) specific characteristics of the required distribution, (c) whether the question can be answered or not, and (d) if appropriate, the answer to the question.
+Suppose that the level of nitrogen oxides (NOX) in the exhaust of a particular car model is right-skewed with a mean of 0.9 grams per mile (g/mi) and a standard deviation of 0.15 g/mi. For each question below identify (a) the distribution that would be used to answer the question, (b) specific characteristics of the required distribution (i.e., shape, center, dispersion), (c) whether the question can be answered or not, and (d) if appropriate, the answer to the question.
 
 1. What is the probability that a car will have a NOX greater than 1 g/mi?
 1. What is the probability that a random sample of 15 cars will have a mean NOX greater than 1 g/mi?
@@ -32,19 +32,19 @@ The level of nitrogen oxides (NOX) in the exhaust of a particular car model is r
 
 ## People in Car
 <img src="zimgs/carpooling.jpg" alt="car pooling" class="img-right">
-A study of rush-hour traffic in San Francisco counted the number of people in a car entering a freeway at a suburban interchange. Suppose that, in the population, this count has a mean of 1.5 people with a standard deviation of 0.75. For each question below identify (a) the distribution that would be used to answer the question, (b) specific characteristics of the required distribution, (c) whether the question can be answered or not, and (d) if appropriate, the answer to the question.
+A study of rush-hour traffic in San Francisco counted the number of people in a car entering a freeway at a suburban interchange. Suppose that this count has a mean of 1.5 people with a standard deviation of 0.75. For each question below identify (a) the distribution that would be used to answer the question, (b) specific characteristics of the required distribution, (c) whether the question can be answered or not, and (d) if appropriate, the answer to the question.
 
-1. Do you expect this count to follow a normal distribution?  What are two pieces of evidence to support your answer?
+1. Information about the population distibution was not given in the background to this question. So, would you expect this count to follow a normal distribution? What are two pieces of evidence to support your answer?
 1. What is the probability that a random sample of 40 cars will have a mean number of passengers of less than 1.2?
 1. What is the probability that a random sample of 50 cars will have a mean number of passengers of greater than 2.0?
 1. What is the probability that a random sample of 5 cars will have a mean number of passengers of greater than 2.0?
-1. Suppose that 700 cars pass through this intersection in one hour.  What is the probability that these 700 cars will carry more than 1075 people?
+1. Suppose that 700 cars pass through this intersection in one hour. What is the probability that these 700 cars will carry more than 1075 people?
 
 ----
 
 ## Banking
 <img src="zimgs/associated-bank.jpg" alt="Associated Bank" class="img-right">
-Associated Bank is reviewing its service charges and interest paying policies on checking accounts. The bank has found that the daily balance on personal checking accounts is normally distributed with an average of $550 and a standard deviation of $150. For each question below identify (a) the distribution that would be used to answer the question, (b) specific characteristics of the required distribution, (c) whether the question can be answered or not, and (d) if appropriate, the answer to the question.
+Associated Bank is reviewing its service charges and interest paying policies on checking accounts. Assume that the bank has found that the daily balance on personal checking accounts is normally distributed with an average of $550 and a standard deviation of $150. For each question below identify (a) the distribution that would be used to answer the question, (b) specific characteristics of the required distribution, (c) whether the question can be answered or not, and (d) if appropriate, the answer to the question.
 
 1. What is the probability that a personal checking account customer has a daily balance in excess of $800?
 1. What is the probability that a personal checking account customer has a balance of $200 or lower?
