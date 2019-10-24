@@ -13,11 +13,11 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 ## Renders an appropriate HTML file and moves to CE directory
-source("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
+source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
 modHTML_CEKeys("KEY_HypTestingErrs_CE")
 ```
 
-```{r echo=FALSE, results='hide', message=FALSE}
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
 library(NCStats)
 source("../../../rhelpers/knitr_setup.R")
 library(captioner)
@@ -30,14 +30,29 @@ figs(name="Pwr2","ACTUAL normal distribution representing power in the power cal
 
 ## Identifying Type I and II Errors
 
+<div class="alert alert-warning">
+<strong>Note:</strong> 
+<ul>
+<li>In these two questions, I would first write the H<sub>0</sub> and H<sub>A</sub> as in the last module. I would then write these hypothesis in words relative to the research hypothesis. For example, in the first question, H<sub>0</sub> is that the chicken is not contaminated whereas H<sub>A</sub> is that the chicken is contaminated. I then write the definitions of Type I (H<sub>0</sub> is true, but it is rejected) and Type II (H<sub>0</sub> is false, but is not rejected) errors, but with the wordy meanings of the hypotheses substituted in appropriately.</li>
+</ul>
+</div>
+
 <ol>
-<li>The H<sub>0</sub>: &mu;=15.4 and H<sub>A</sub>: &mu;>15.4. A Type I error would be saying that the chicken is contaminated when it really is not contaminated. A Type II error would be saying that the chicken is not contaminated when it really is contaminated. In my mind, a Type II error is more egregious as people would be eating contaminated chicken that they have been told is not contaminated.</li>
-<li>The H<sub>0</sub> is that the drug does not exceed specification whereas the H<sub>A</sub> is that the drug does exceed the specification. A Type I error occurs if the drug does not exceed the specifications but it is concluded that it does. A Type II error occurs if the the drug does exceed the specifications but it is concluded that it does not. In my mind, a Type II error is more egregious as people would be using a "bad" drug but would have been told that it was OK.</li>
+<li>The H<sub>0</sub>: &mu;=15.4 and H<sub>A</sub>: &mu;>15.4. A Type I error is saying that the chicken is contaminated (rejecting H<sub>0</sub>) when it really is not contaminated (H<sub>0</sub> is true). A Type II error is saying that the chicken is not contaminated (not rejecting H<sub>0</sub>) when it really is contaminated (H<sub>0</sub> is false). In my mind, a Type II error is more egregious as people would be eating contaminated chicken that they have been told is not contaminated.</li>
+<li>The H<sub>0</sub> is that the drug does not exceed the specification whereas the H<sub>A</sub> is that the drug does exceed the specification. A Type I error occurs if the drug is not bad (H<sub>0</sub> is true) but it is concluded that is bad (rejecting H<sub>0</sub>). A Type II error occurs if the drug is bad (H<sub>0</sub> is false) but it is concluded that the drug is not bad (not rejecting H<sub>0</sub>). In my mind, a Type II error is more egregious as people would be using a "bad" drug that they were told was not bad.</li>
 </ol>
 
 ----
 
 ## How to Reduce &beta;
+
+<div class="alert alert-warning">
+<strong>Note:</strong> 
+<ul>
+<li>In question 1 below you are asked to prove that the rejection wall is at 97 (within rounding). This requires finding the value of the sample mean that has &alpha; "more extreme" (as dictated by the H<sub>A</sub>) on the "null distribution" (sampling distribution assuming that H<sub>O</sub> is true). This is always a reverse calculation and, given this H<sub>A</sub>, is a reverse-left calculation.</li>
+<li>In question 2 below you are asked to prove that &beta; is 0.137 (within rounding). This requires finding the area in the "Do Not Reject H<sub>0</sub>" region of "actual distribution" (sampling distribution assuming that &mu; equals the actual mean provided). This is always a forward calculation and always in the opposite direction of the reverse calculation in quation 1; thus, a forward-right calculation in this instance.</li>
+</ul>
+</div>
 
 <ol>
 <li>See `r figs("Pwr1",display="cite")`.</li>
