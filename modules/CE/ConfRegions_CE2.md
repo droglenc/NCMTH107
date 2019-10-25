@@ -26,7 +26,7 @@ For each situation below, (a) identify the level of confidence; (b) whether a lo
 
 ## Beetle Size
 <img src="zimgs/beetle.jpg" alt="Beetle" class="img-right">
-Researchers examined the size of two different species of beetles. They hypothesized that the mean thorax length of the *Halticus oleracea* species would be greater than 190 &mu;m. The data for their study is in Beetles.csv ([file](https://github.com/droglenc/NCData/raw/master/Beetles.csv), [meta](https://github.com/droglenc/NCData/blob/master/Beetles_meta.txt)). Use this information to (i) construct an appropriate confidence region for the population mean assuming &sigma;=14 and &alpha;=0.05, and (ii) summarize your findings in terms of the beetle's mean thorax length. [*Note that you will need to filter the data set to just the Halticus oleracea species of beetle as you did in the previous module.*]
+Researchers examined the size of two different species of beetles. They hypothesized that the mean thorax length of the *Halticus oleracea* species would be greater than 190 &mu;m. The data for their study is in Beetles.csv ([file](https://github.com/droglenc/NCData/raw/master/Beetles.csv), [meta](https://github.com/droglenc/NCData/blob/master/Beetles_meta.txt)). Use this information to (i) construct an appropriate confidence region for the population mean assuming &sigma;=14 and &alpha;=0.05, and (ii) summarize your findings in terms of the beetle's mean thorax length. [*Note that you will need to either filter the data set to just the Halticus oleracea species of beetle or summarize by group as you did in the previous module.*]
 
 ----
 
