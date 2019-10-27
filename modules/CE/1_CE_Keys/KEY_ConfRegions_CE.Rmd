@@ -13,11 +13,11 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 ## Renders an appropriate HTML file and moves to CE directory
-source("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
+source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
 modHTML_CEKeys("KEY_ConfRegions_CE")
 ```
 
-```{r echo=FALSE, results='hide', message=FALSE}
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
 library(NCStats)
 source("../../../rhelpers/knitr_setup.R")
 library(captioner)
@@ -61,8 +61,10 @@ zstar <- distrib(0.9,type="q",lower.tail=FALSE)
 <li>`r formatC(79.5+zstar*12/sqrt(50),format="f",digits=1)`.</li>
 <li>I am 90% confident that the true population mean is greater than `r formatC(79.5+zstar*12/sqrt(50),format="f",digits=1)`.</li>
 </ol>
+</ol>
 <br>
 
+<ol start=2>
 <li>See below.</li>
 <ol type="a">
 <li>C=0.95</li>
@@ -77,8 +79,10 @@ zstar <- distrib(0.025,type="q",lower.tail=FALSE)
 <li>`r formatC(11.2-zstar*6/sqrt(25),format="f",digits=1)`-`r formatC(11.2+zstar*6/sqrt(25),format="f",digits=1)`.</li>
 <li>I am 95% confident that the true population mean is between `r formatC(11.2-zstar*6/sqrt(25),format="f",digits=1)` and `r formatC(11.2+zstar*6/sqrt(25),format="f",digits=1)`.</li>
 </ol>
+</ol>
 <br>
 
+<ol start=3>
 <li>See below.</li>
 <ol type="a">
 <li>C=0.99</li>
@@ -93,8 +97,10 @@ zstar <- distrib(0.99,type="q",lower.tail=FALSE)
 <li>`r formatC(918+zstar*90/sqrt(80),format="f",digits=1)`.</li>
 <li>I am 99% confident that the true population mean is greater than `r formatC(918+zstar*90/sqrt(80),format="f",digits=1)`.</li>
 </ol>
+</ol>
 <br>
 
+<ol start=4>
 <li>See below.</li>
 <ol type="a">
 <li>C=0.90</li>
@@ -128,7 +134,7 @@ d <- read.csv("https://github.com/droglenc/NCData/raw/master/NormTemp.csv")
 cis <- mean(d$bodytemp)+c(-1,1)*distrib(0.025,type="q",lower.tail=FALSE)*0.41/sqrt(nrow(d))
 ```
 <li>`r formatC(cis[1],format="f",digits=1)`-`r formatC(cis[2],format="f",digits=1)`.</li>
-<li>I am 95% confident that the true population mean body temperature is between `r formatC(cis[1],format="f",digits=1)` and `r formatC(cis[2],format="f",digits=1)`C.</li>
+<li>I am 95% confident that the true population mean body temperature is between `r formatC(cis[1],format="f",digits=1)` and `r formatC(cis[2],format="f",digits=1)`<sup>o</sup>C.</li>
 </ol>
 
 R Appendix.
