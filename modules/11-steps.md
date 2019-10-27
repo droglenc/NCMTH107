@@ -23,9 +23,9 @@ css: /css/modules.css
 All hypothesis tests follow the same basic structure.  However, other resources may label the steps somewhat differently.  Below are examples from other resources.
 
 * [Stan Brown's 7-Steps](http://brownmath.com/swt/ht7.htm)
-* [Penn State University's 7-Steps](https://onlinecourses.science.psu.edu/stat502/node/139)
+* [Penn State University's 7-Steps](https://onlinecourses.science.psu.edu/stat502/lesson/1/1.2)
 * [David Lane's 7-Steps](http://davidmlane.com/hyperstat/B35642.html)
-* [University of Massachusett's 6-Steps](http://people.umass.edu/resec312/handouts/Six%20Steps%20for%20Hypothesis%20Tests.pdf)
-* [University of North Florida's 6-Steps](http://davidmlane.com/hyperstat/B35642.html)
-* [Boston University's 5-Steps](https://learn.bu.edu/bbcswebdav/pid-826908-dt-content-rid-2073693_1/courses/13sprgmetcj702_ol/week04/metcj702_W04S01T05_fivesteps.html)
+* [Florida State College Jacksonville's 4-Steps](https://guides.fscj.edu/Statistics/hypothesis)
+* [NEDARC's 5-Steps](http://www.nedarc.org/statisticalHelp/advancedStatisticalTopics/hypothesisTesting.html)
 * [University of Florida's 4-Steps](http://bolt.mph.ufl.edu/6050-6052/unit-4/module-12/steps-in-hypothesis-testing/)
+* [University of Massachusett's 5-Steps](https://www.umass.edu/resec/sites/default/files/env-professional-stats-0505_0.pdf)
