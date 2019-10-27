@@ -127,6 +127,13 @@ R Appendix
 
 ----
 
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>In the second part of each question below you MUST not say &mu; -- rather you should say what &mu; represents (e.g., "true population mean body temperature" in the first question).</li>
+</ul>
+</div>
+
 ## Body Temperatures
 <ol>
 ```{r echo=FALSE, fig.show='hide'}
@@ -175,7 +182,8 @@ distrib(0.95,type="q",lower.tail=FALSE)
 
 <ol>
 ```{r ncalc1, echo=FALSE, results='hide', fig.show='hide'}
-sigma <- 6.95; me <- 1
+sigma <- 6.95
+me <- 1
 (zstar <- distrib(0.025,type="q",lower.tail=FALSE))
 (zstar*sigma/me)^2
 ```

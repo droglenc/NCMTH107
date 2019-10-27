@@ -129,6 +129,14 @@ zstar &lt;- distrib(0.025,type=&quot;q&quot;,lower.tail=FALSE)
 zstar &lt;- distrib(0.99,type=&quot;q&quot;,lower.tail=FALSE)
 zstar &lt;- distrib(0.9,type=&quot;q&quot;)</code></pre>
 <hr />
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+In the second part of each question below you MUST not say μ – rather you should say what μ represents (e.g., “true population mean body temperature” in the first question).
+</li>
+</ul>
+</div>
 </div>
 <div id="body-temperatures" class="section level2">
 <h2>Body Temperatures</h2>
@@ -182,7 +190,8 @@ One should take a sample size of 743 household to achieve the desired level of c
 </li>
 </ol>
 <p>R Appendix.</p>
-<pre class="r"><code>sigma &lt;- 6.95; me &lt;- 1
+<pre class="r"><code>sigma &lt;- 6.95
+me &lt;- 1
 (zstar &lt;- distrib(0.025,type=&quot;q&quot;,lower.tail=FALSE))
 (zstar*sigma/me)^2
 (zstar &lt;- distrib(0.05,type=&quot;q&quot;,lower.tail=FALSE))
