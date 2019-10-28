@@ -26,28 +26,6 @@ tabs <- captioner(prefix="Table")
 
 ----
 
-## Cactus Growth
-
-1. &alpha; = 0.05.
-1. H<sub>0</sub>: &mu; = 4, H<sub>A</sub>: &mu; < 4 where &mu; is the mean growth of all cacti.
-1. A one-sample Z-test is required because (i) a quantitative variable (growth) was measured, (ii) individuals from only one group/population were sampled (only one set of conditions considered), (iii) the population mean is compared to a specific value in the null hypothesis, and (iv) &sigma; is known (given in the background).
-1. The data are part of an experiment in which cacti were randomly selected.
-1. &sigma; is known. In addition, because the population distribution is normal (stated in the background), we do not have to worry about the size of the sample.
-1. x&macr; = 3.26.
-1. Z = $\frac{3.26-4}{\frac{1.40}{\sqrt{10}}}$ = $\frac{-0.74}{0.44}$ = -1.67.
-1. The p-value is `r kPvalue(distrib(3.26,mean=4,sd=1.40/sqrt(10)),include.p=FALSE,latex=FALSE)`.
-1. H<sub>0</sub> is rejected because the p-value<&alpha;.
-1. The mean growth rate of all cacti under the experimental conditions does appear to be less than 4 cm.
-1. A 95% upper confidence bound is warranted in this situation and will use a Z<sup>&lowast;</sup> = `r formatC(distrib(0.95,type="q"),format="f",digits=3)`. Thus, 3.26+1.645*0.44 or 3.26+0.72 = 3.98. Thus, one is 95% confident that the mean growth of all cacti under the experimental conditions is less than 3.98 cm.
-
-### R Appendix
-```{r eval=FALSE}
-( pval <- distrib(3.26,mean=4,sd=1.40/sqrt(10)) )
-( zstar <- distrib(0.95,type="q") )
-```
-
-----
-
 ## Length of Northern Pike
 
 1. &alpha; = 0.05. (*Note that this is obtained from working backwards from the 95% confidence statement.*)

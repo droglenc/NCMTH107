@@ -68,6 +68,38 @@ R Appendix.
 
 ----
 
+## Cactus Growth
+
+```{r Cactus, echo=FALSE, results='hide', fig.show='hide'}
+xbar <- 6.7; sigma <- 7.1; n <- 35
+se <- sigma/sqrt(n)
+t <- (xbar-5)/se
+pv <- distrib(t,lower.tail=FALSE)
+lcb <- xbar+distrib(0.95,lower.tail=FALSE,type="q")*se
+```
+
+<ol>
+<li>&alpha;=0.05.</li>
+<li>1. H<sub>0</sub>: &mu; = 4, H<sub>A</sub>: &mu; < 4 where &mu; is the mean growth of all cacti.</li>
+<li>A one-sample Z-test is required because (i) a quantitative variable (growth) was measured, (ii) individuals from only one group/population were sampled (only one set of conditions considered), and (iii) &sigma; is known (given in the background).</li>
+<li>The data are part of an experiment in which cacti were randomly selected.</li>
+<li>&sigma; is known. In addition, because the population distribution is normal (stated in the background), we do not have to worry about the size of the sample.</li>
+<li>x&macr; = 3.26.</li>
+<li>Z = $\frac{3.26-4}{\frac{1.40}{\sqrt{10}}}$ = $\frac{-0.74}{0.44}$ = -1.67.</li>
+<li>The p-value is `r kPvalue(distrib(3.26,mean=4,sd=1.40/sqrt(10)),include.p=FALSE,latex=FALSE)`.</li>
+<li>H<sub>0</sub> is rejected because the p-value<&alpha;.</li>
+<li>The mean growth rate of all cacti under the experimental conditions does appear to be less than 4 cm.</li>
+<li>One is 95% confident that the mean growth of all cacti under the experimental conditions is less than 3.98 cm.</li>
+</ol>
+
+### R Appendix
+```{r eval=FALSE}
+( pval <- distrib(3.26,mean=4,sd=1.40/sqrt(10)) )
+( zstar <- distrib(0.95,type="q") )
+```
+
+----
+
 ## Elk Density in Banff
 
 ```{r echo=FALSE}

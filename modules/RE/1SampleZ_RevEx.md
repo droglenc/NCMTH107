@@ -10,7 +10,6 @@ css: "/css/modules.css"
 &nbsp;
 
 1. Application Questions
-    1. [Cactus Growth](#cactus-growth)
     1. [Length of Northern Pike](#length-of-northern-pike)
     1. [Chronic Myofascial Pain Syndrome](#chronic-myofascial-pain-syndrome)
     1. [Cholesterol Levels](#cholesterol-levels)
@@ -20,15 +19,6 @@ css: "/css/modules.css"
 ----
 
 &nbsp;
-
-## Cactus Growth
-<img src="zimgs/cactus.jpg" alt="Cactus" class="img-right">
-
-A researcher is investigating the growth of a certain cactus under a variety of environmental conditions. He knows from previous research that the growth of this particular type of cactus is approximately normally distributed with a standard deviation of 1.40 cm. Under the current environmental conditions that he is investigating, however, he does not know the mean. He does hypothesize that it is no more than 4 cm. To test this hypothesis he used a preliminary sample of 10 randomly-selected cacti. He found the sample mean for these cacti to be 3.26 cm. Use this information to test his hypothesis with &alpha;=0.05.
-
-[See answer here](zRevExAns/1SampleZ.html#cactus-growth)
-
-----
 
 ## Length of Northern Pike
 <img src="zimgs/northern_pike.jpg" alt="Northern Pike" class="img-right">
