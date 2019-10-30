@@ -48,7 +48,7 @@ library(NCStats)
 ```
 
 1. This question is about an individual and requires the population distribution. It CANNOT BE COMPUTED because the population distribution is not normally distributed.
-1. This question is about a statistic and requires the sampling distribution.  The sampling distribution of  $\bar{x}\sim N(8,\frac{2}{\sqrt{25}})$ because $n=25 \geq 15$ and the population distribution is not strongly skewed.  Thus, the probability is `r kPvalue(q2,include.p=FALSE,latex=FALSE)`.
+1. This question is about a statistic and requires the sampling distribution.  The sampling distribution of  $\bar{x}\sim N(8,\frac{2}{\sqrt{25}})$ because $n=25 \geq 15$ and the population distribution is not strongly skewed.  Thus, the probability is `r formatC(q2,digits=3,format="fg")`.
 1. This question is ultimately about a statistic as the total of 510 should be converted an $\bar{x}$ of $\frac{510}{60}=8.5$ kg.  The sampling distribution of $\bar{x}\sim N(8,\frac{2}{\sqrt{60}})$ or $\bar{x}\sim N(8,0.2582)$ because $n=60 \geq 30$.  Thus, the probability is `r formatC(q3,digits=4,format="f")`.
 
 ### R Appendix

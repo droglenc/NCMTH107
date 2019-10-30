@@ -30,7 +30,7 @@ css: "/css/modules.css"
 <h2>Raccoons Consuming Corn</h2>
 <ol>
 <li>This question is about an individual and requires the population distribution. It CANNOT BE COMPUTED because the population distribution is not normally distributed.</li>
-<li>This question is about a statistic and requires the sampling distribution. The sampling distribution of <span class="math inline">\(\bar{x}\sim N(8,\frac{2}{\sqrt{25}})\)</span> because <span class="math inline">\(n=25 \geq 15\)</span> and the population distribution is not strongly skewed. Thus, the probability is &lt;0.00005.</li>
+<li>This question is about a statistic and requires the sampling distribution. The sampling distribution of <span class="math inline">\(\bar{x}\sim N(8,\frac{2}{\sqrt{25}})\)</span> because <span class="math inline">\(n=25 \geq 15\)</span> and the population distribution is not strongly skewed. Thus, the probability is 0.000000287.</li>
 <li>This question is ultimately about a statistic as the total of 510 should be converted an <span class="math inline">\(\bar{x}\)</span> of <span class="math inline">\(\frac{510}{60}=8.5\)</span> kg. The sampling distribution of <span class="math inline">\(\bar{x}\sim N(8,\frac{2}{\sqrt{60}})\)</span> or <span class="math inline">\(\bar{x}\sim N(8,0.2582)\)</span> because <span class="math inline">\(n=60 \geq 30\)</span>. Thus, the probability is 0.0264.</li>
 </ol>
 <div id="r-appendix" class="section level3">
@@ -177,6 +177,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
