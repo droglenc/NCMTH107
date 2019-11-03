@@ -74,7 +74,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 
 <tr><td>M 18-Nov</td><td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td></tr>
 <tr><td>W 20-Nov</td><td>TBD</td></tr>
-<tr><td>F 22-Nov</td><td><span style="color:red;font-weight:bold">Fourth Quiz</span> (<a href="QuizGuide/quiz">Study Guide</a>)</td></tr>
+<tr><td>F 22-Nov</td><td><span style="color:red;font-weight:bold">Fourth Quiz</span> (<a href="QuizGuide/quiz4">Study Guide</a>)</td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 25-Nov</td><td><span style="color:coral">NO CLASS (Thanksgiving)</span></td></tr>

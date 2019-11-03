@@ -6,7 +6,7 @@ css: /css/modules.css
 
 ----
 
-The fourth quiz (see [dates page](../Dates-Current)) will cover material from Module 18 (*1-Sample t-Test*), Module 19 (*2-Sample t-Test*), and Module 20 (*Chi-Square Test*). The quiz consists of three 11-Step hypothesis tests that will require no R work, with the exception of using `distrib()` to calculate p-values and critical values for confidence regions. The [Hypothesis Testing Guide](../MTH107-HOGuide.pdf) will be provided for you to use on the quiz. The following are links to examples for each of the questions.
+The fourth quiz (see [dates page](../Dates-Current)) will cover material from Module 18 (*1-Sample t-Test*), Module 19 (*2-Sample t-Test*), and Module 20 (*Chi-Square Test*). The quiz consists of three 11-Step hypothesis tests that will require no R work, with the exception of using `distrib()` to calculate p-values and critical values for confidence regions. [This information](Quiz4_InfoGiven.pdf) will be provided for you to use on the quiz. The following are links to examples for each type of question.
 
 * 1-Sample t-Test. -- [Here](../../modules/CE/1Samplet_CE1.html#fecal-coliform-counts-i), [Here](../../modules/CE/1Samplet_CE2.html#increased-civility-in-nation-states), and [Here](../../modules/CE/1Samplet_CE2.html#sea-level-rise-rate).
 * 2-Sample t-Test. -- [Here](../../modules/CE/2Samplet_CE1.html#compost-type-and-germination-rates), [Here](../../modules/CE/2Samplet_CE3.html#commitment-to-adult-animals), and [Here](../../modules/RE/2Samplet_RevEx.html#popcorn-yield-by-variety).
