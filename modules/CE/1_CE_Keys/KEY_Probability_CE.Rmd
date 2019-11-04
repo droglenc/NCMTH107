@@ -78,6 +78,7 @@ source("../../../rhelpers/knitr_setup.R")
 
 R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
+distrib(1,mean=0.9,sd=0.15/sqrt(15),lower.tail=FALSE)
 distrib(0.92,mean=0.9,sd=0.15/sqrt(50),lower.tail=FALSE)
 distrib(0.85,mean=0.9,sd=0.15/sqrt(50))
 distrib(0.01,mean=0.9,sd=0.15/sqrt(50),lower.tail=FALSE,type="q")
