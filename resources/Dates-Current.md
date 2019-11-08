@@ -69,8 +69,8 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 --->
 
 <tr><td>M 11-Nov</td><td><a href="../modules/2Samplet">2-Sample t-Test</a></td></tr>
-<tr><td>W 13-Nov</td><a href="../modules/2Samplet">2-Sample t-Test</a><br><span style="color:teal;font-weight:bold">DUE: Quiz 3 Reflection (Optional)</span></td></tr>
-<tr><td>F 15-Nov</td><td><td><a href="../modules/ChiSquare">Chi-Square Test</a></td></tr>
+<tr><td>W 13-Nov</td><td><a href="../modules/2Samplet">2-Sample t-Test</a><br><span style="color:teal;font-weight:bold">DUE: Quiz 3 Reflection (Optional)</span></td></tr>
+<tr><td>F 15-Nov</td><td><a href="../modules/ChiSquare">Chi-Square Test</a></td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 18-Nov</td><td><a href="../modules/ChiSquare">Chi-Square Test</a></td></tr>
