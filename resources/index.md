@@ -4,7 +4,7 @@ title: Resources
 ---
 
 ## Administrative
-1. [Daily Preparation Check](https://forms.gle/ybgvSaSAN9qBMhwP7){:target="_blank"} 
+1. [Daily Preparation Check](https://forms.gle/cMbDmuCaQkUWEnK59){:target="_blank"} 
 1. [Anonymous Message to Dr. Ogle](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}
 1. Student Opinion Surveys -- [Section 1](https://northland.iasystem.org/survey/4418) and [Section 2](https://northland.iasystem.org/survey/4419)
 1. [Data Files](data_107)

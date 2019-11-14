@@ -5,7 +5,7 @@ author: "Derek H. Ogle"
 ---
 
 
-<p>These are the symbols that will be used in this course. They are ordered approximately related to order of modules where the symbol was introduced.</p>
+<p>The following symbols (ordered approximately as they were introduced) will be used often during the course and will be parts of multiple choice questions on quizzes. You will need to know these symbols to do well in this course.</p>
 <div class="panel panel-info">
 <div class="panel-heading">
 Symbol <span class="pull-right">Definition</span>
@@ -13,22 +13,10 @@ Symbol <span class="pull-right">Definition</span>
 <div class="panel-body">
 <dl class="dl-horizontal">
 <dt>
-N
-</dt>
-<dd>
-Population size. [<emph>generally unknown</emph>]
-</dd>
-<dt>
 n
 </dt>
 <dd>
 Sample size.
-</dd>
-<dt>
-x<sub>i</sub>
-</dt>
-<dd>
-Value of the X variable for the ith individual.
 </dd>
 <dt>
 <span class="math inline">\(\bar{\textrm{x}}\)</span>
@@ -41,18 +29,6 @@ s
 </dt>
 <dd>
 Sample standard deviation.
-</dd>
-<dt>
-s<sup>2</sup>
-</dt>
-<dd>
-Sample variance.
-</dd>
-<dt>
-M
-</dt>
-<dd>
-The sample median. [<emph>rarely used</emph>]
 </dd>
 <dt>
 Q1
@@ -97,36 +73,6 @@ N(0,1)
 Standard normal distribution.
 </dd>
 <dt>
-c
-</dt>
-<dd>
-The number of columns in a two-way frequency table.
-</dd>
-<dt>
-r
-</dt>
-<dd>
-The sample correlation coefficient OR number of rows in a two-way frequency table.
-</dd>
-<dt>
-r<sup>2</sup>
-</dt>
-<dd>
-The coefficient of determination.
-</dd>
-<dt>
-<span class="math inline">\(\hat{\textrm{y}}_{\textrm{i}}\)</span>
-</dt>
-<dd>
-Predicted value of the response variable (in regression).
-</dd>
-<dt>
-RSS
-</dt>
-<dd>
-Residual sum-of-squares.
-</dd>
-<dt>
 H<sub>0</sub>
 </dt>
 <dd>
@@ -163,12 +109,6 @@ Z
 A variable that follows a N(0,1) OR the test statistic in a one-sample Z-test.
 </dd>
 <dt>
-μ<sub>0</sub>
-</dt>
-<dd>
-Specific value of μ in the H<sub>0</sub> of 1-Sample Z- and t-Tests.
-</dd>
-<dt>
 t
 </dt>
 <dd>
@@ -197,6 +137,77 @@ Degrees-of-freedom.
 </dt>
 <dd>
 A variable that follows a chi-square distribution OR the test statistic in chi-square tests.
+</dd>
+</dl>
+</div>
+</div>
+<hr />
+<p>The following symbols will be used in the course, but less often than those above and will not be parts of multiple choice questions on quizzes.</p>
+<div class="panel panel-info">
+<div class="panel-heading">
+Symbol <span class="pull-right">Definition</span>
+</div>
+<div class="panel-body">
+<dl class="dl-horizontal">
+<dt>
+N
+</dt>
+<dd>
+Population size. [<emph>generally unknown</emph>]
+</dd>
+<dt>
+x<sub>i</sub>
+</dt>
+<dd>
+Value of the X variable for the ith individual.
+</dd>
+<dt>
+s<sup>2</sup>
+</dt>
+<dd>
+Sample variance.
+</dd>
+<dt>
+M
+</dt>
+<dd>
+The sample median. [<emph>rarely used</emph>]
+</dd>
+<dt>
+c
+</dt>
+<dd>
+The number of columns in a two-way frequency table.
+</dd>
+<dt>
+r
+</dt>
+<dd>
+The sample correlation coefficient OR number of rows in a two-way frequency table.
+</dd>
+<dt>
+r<sup>2</sup>
+</dt>
+<dd>
+The coefficient of determination.
+</dd>
+<dt>
+<span class="math inline">\(\hat{\textrm{y}}_{\textrm{i}}\)</span>
+</dt>
+<dd>
+Predicted value of the response variable (in regression).
+</dd>
+<dt>
+RSS
+</dt>
+<dd>
+Residual sum-of-squares.
+</dd>
+<dt>
+μ<sub>0</sub>
+</dt>
+<dd>
+Specific value of μ in the H<sub>0</sub> of 1-Sample Z- and t-Tests.
 </dd>
 <dt>
 p
@@ -244,6 +255,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
