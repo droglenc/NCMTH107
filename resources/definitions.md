@@ -3,24 +3,23 @@ layout: page
 title: Definitions
 ---
 
+## Statistical Definitions
+The following are definitions for general statistical words. See further below for R-specific definitions.
+
 <div class="panel panel-info">
   <div class="panel-heading">Word <span class="pull-right">Definition</span></div>
   <div class="panel-body">
     <dl class="dl-horizontal">
-
 <dt>Accuracy</dt><dd>The tendency of a statistic to come close to the parameter it was intended to estimate.</dd>
 <dt>Alternative Hypothesis</dt><dd>A statistical hypothesis that states that there is a difference between a parameter and a specific value or between two parameters.</dd>
-<dt>Argument</dt><dd>In R, A "directive" provided within the parentheses of a function.</dd>
 <dt>Bimodal</dt><dd>The shape of a distribution with two peaks or "humps."</dd>
 <dt>Bivariate</dt><dd>Examining two variables.</dd>
 <dt>Coefficient of Determination</dt><dd>The proportion of the total variability in the response variable that is explained away by knowing the explanatory variable and the best-fit model.</dd>
 <dt>Continuous</dt><dd>A quantitative variable that can assume an uncountable number of values.</dd>
 <dt>Convenience</dt><dd>A sample of individuals who are easiest to reach for the researcher.</dd>
-<dt>data.frame</dt><dd>In R, a two-dimensional organization of variables (as columns, possibly of different data types) recorded on multiple individuals (as rows).</dd>
 <dt>Dependent</dt><dd>See response variable.</dd>
 <dt>Discrete</dt><dd>A quantitative variable that can assume a countable number of values.</dd>
-<dt>Factor(s)</dt><dd>In an experiment, the variable(s) that is (are) deliberately manipulated to determine its effect on the response variable.  In R, a special type of variable that identifies the group to which an individual belongs.</dd>
-<dt>Function</dt><dd>In R, a program that performs a particular task.</dd>
+<dt>Factor(s)</dt><dd>In an experiment, the variable(s) that is (are) deliberately manipulated to determine its effect on the response variable.</dd>
 <dt>Independent</dt><dd>See explanatory variable.</dd>
 <dt>Individual</dt><dd>One of the items examined by the researcher.</dd>
 <dt>Inference</dt><dd>The process of forming conclusions about the unknown parameters of a population by computing statistics from the individuals in a sample.</dd>
@@ -63,12 +62,31 @@ collecting, organizing, and interpreting numerical information or data.</dd>
 <dt>Unbiased</dt><dd>For statistics, a statistic in which the center of its sampling distribution equals the parameter it is intended to estimate. For samples, a sample that does not systematicall over- or under-represent portions of the population.</dd>
 <dt>Univariate</dt><dd>Examining one variable.</dd>
 <dt>Variable</dt><dd>The characteristic of interest recorded about each individual.</dd>
-<dt> Vector</dt><dd>In R, a one-dimensional list of items of the same data type.</dd>
 <dt>Voluntary Response</dt><dd>A sample of individuals that choose themselves for the sample by responding to a general appeal.</dd>
 </dl>
 
   </div>
 </div>
+
+
+## R Definitions
+The following definitions are related to R.
+
+<div class="panel panel-info">
+  <div class="panel-heading">Word <span class="pull-right">Definition</span></div>
+  <div class="panel-body">
+    <dl class="dl-horizontal">
+<dt>Argument</dt><dd>A "directive" provided within the parentheses of a function.</dd>
+<dt>data.frame</dt><dd>A two-dimensional organization of variables (as columns, possibly of different data types) recorded on multiple individuals (as rows).</dd>
+<dt>Factor(s)</dt><dd>A special type of variable that identifies the group to which an individual belongs.</dd>
+<dt>Function</dt><dd>In R, a program that performs a particular task.</dd>
+<dt> Vector</dt><dd>A one-dimensional list of items of the same data type.</dd>
+   </dl>
+  </div>
+</div>
+
+
+
 
 <style>
 .panel .dl-horizontal dt {
