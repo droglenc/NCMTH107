@@ -12,6 +12,9 @@ css: "/css/modules.css"
 <strong>Note:</strong>
 <ul>
 <li>
+Make sure to define your parameters in Step 2.
+</li>
+<li>
 Make sure to describe your evidence in Step 3 for why you are performing a 2-sample t-test. It is not adequate to simply say “because there is a quantitative response variable, two groups are being tested, and the groups are independent.” At least say what the response variable is and what the two groups are and provide some discussion for why you think the groups are independent.
 </li>
 <li>
@@ -19,6 +22,9 @@ Also make sure to describe your evidence in Step 5 for why the assumptions are m
 </li>
 <li>
 In hand calculations, note that the test statistic (t in Step 7) is NOT the critical value (i.e., t<sup>*</sup>) needed for the confidence region (in Step 11).
+</li>
+<li>
+Note the use of “mean” in both Steps 10 and 11. The test is for mean number of plants that germinated, not number of plants that germinated.
 </li>
 </ul>
 </div>
@@ -33,10 +39,10 @@ In hand calculations, note that the test statistic (t in Step 7) is NOT the crit
 H<sub>A</sub>: μ<sub>b</sub>-μ<sub>h</sub> &gt; 0 and H<sub>0</sub>: μ<sub>b</sub>-μ<sub>h</sub> = 0, where μ is the mean number of germinated plants, b is the bought compost, and h is the homemade compost.
 </li>
 <li>
-2-sample t-test because (i) two groups/populations are considered (bought and homemade compost), (ii) a quantitative variable (number germinated) was recorded, and (iii) individuals in the groups are independent (there is no known connection between all pairs of bought and homemade individuals).
+2-sample t-test because (i) two groups/populations are considered (bought and homemade compost), (ii) a quantitative variable (number germinated) was recorded, and (iii) individuals in the groups are independent (there is no known connection between all pairs of containers with bought and homemade compost).
 </li>
 <li>
-An experimental study with some randomization (placement of containers in the greenhouse).
+An experimental study was conducted without obvious random selection of the containers wtih soil, but with randomization allocation (placement of containers in the greenhouse).
 </li>
 <li>
 The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>h</sub> = 18+10 = 28 &gt; 15 and the two sample distributions (shown on the handout) are not obviously strongly skewed, and (iii) the variances appear to be equal (Levene’s p-value = 0.2414 &gt; α).
@@ -45,19 +51,19 @@ The assumptions are met because (i) the samples are independent (as described ab
 x̄<sub>b</sub>-x̄<sub>h</sub> = 42.67-28.9 = 13.77.
 </li>
 <li>
-t = 8.7763 with 26 df.
+t = 8.7763 with 26 df. Note that <span class="math inline">\(s_p^2\)</span>=15.826 and the SE is 1.569.
 </li>
 <li>
-p-value&lt;0.00005.
+p-value&lt;0.00005 (more specifically 1.492e-09).
 </li>
 <li>
 Reject H<sub>0</sub> because the p-value &lt; α.
 </li>
 <li>
-It appears that the the number of plants that germinate is significantly lower for the homemade than the bought compost. Thus, the homemade compost “performs” worse than the store bought compost and may lead to increased costs for the greenhouse.
+It appears that the the mean number of plants that germinate is significantly lower for the homemade than the bought compost. Thus, the homemade compost “performs” worse than the store bought compost and may lead to increased costs for the greenhouse.
 </li>
 <li>
-I am 90% confident that the number of plants that germinated with the bought compost is at least 11.7 plants greater than the number of plants that germinated with the homemade compost.
+I am 90% confident that the mean number of plants that germinated with the bought compost is at least 11.7 plants greater than the mean number of plants that germinated with the homemade compost.
 </li>
 </ol>
 <p>R Appendix.</p>
@@ -85,10 +91,10 @@ H<sub>A</sub>: μ<sub>b</sub>-μ<sub>g</sub> &lt; 0 and H<sub>0</sub>: μ<sub>b<
 2-sample t-test because (i) two groups/populations are considered (Bosnia and Persian Gulf), (ii) a quantitative variable (delivery time) was recorded, and (iii) the indivduals in the groups are independent (there is no known connection between all deliveries to the two wars).
 </li>
 <li>
-An observational study with clear randomization of the two samples.
+An observational study without clear randomization of the two samples.
 </li>
 <li>
-The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>g</sub> = 9+9 = 18 &gt; 15 and the two sample distributions () are not obviously strongly skewed (also told to assume that the distribution are not strongly skewed), and (iii) the variances appear to be equal (Levene’s p-value = <span class="math inline">\(0.0736\)</span> &gt; α).
+The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>g</sub> = 9+9 = 18 &gt; 15 and the two sample distributions (Figure 1) are not obviously strongly skewed (also told to assume that the distribution are not strongly skewed), and (iii) the variances appear to be equal (Levene’s p-value = <span class="math inline">\(0.0736\)</span> &gt; α).
 </li>
 <p><img src="KEY_2Samplet_CE_files/figure-html/DeliveriesHist-1.png" width="672" /></p>
 <p>Figure 1: Histograms of the delivery times for military supplies in the Bosnian and Persian Gulf war.</p>
@@ -112,7 +118,7 @@ The p-value = 0.0001 (Table 1).
 The H<sub>0</sub> is rejected because the p-value &lt; α (Table 1).
 </li>
 <li>
-The mean delivery time was significantly lower in Bosnia than in the Persian Gulf War. Thus, the new “just-in-time” entality for deliveries appears to have resulted in quicker delivery times.
+The mean delivery time was significantly lower in Bosnia than in the Persian Gulf War. Thus, the new “just-in-time” mentality for deliveries appears to have resulted in quicker delivery times.
 </li>
 <li>
 I am 95% confident that the mean delivery time for Bosnia was more than 11.6 days faster than for the Persian Gulf War (Table 1).
@@ -351,6 +357,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

@@ -17,7 +17,7 @@ source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
 modHTML_CEKeys("KEY_2Samplet_CE")
 ```
 
-```{r echo=FALSE, results='hide', message=FALSE}
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
 library(NCStats)
 source("../../../rhelpers/knitr_setup.R")
 library(captioner)
@@ -34,9 +34,11 @@ tbls(name="mussels2","Two-sample t-test results for testing that the mean mercur
 <div class="alert alert-warning">
 <strong>Note:</strong> 
 <ul>
+<li>Make sure to define your parameters in Step 2.</li>
 <li>Make sure to describe your evidence in Step 3 for why you are performing a 2-sample t-test. It is not adequate to simply say "because there is a quantitative response variable, two groups are being tested, and the groups are independent." At least say what the response variable is and what the two groups are and provide some discussion for why you think the groups are independent.</li>
 <li>Also make sure to describe your evidence in Step 5 for why the assumptions are met. It is not adequate to simply say "n<sub>1</sub>+n<sub>2</sub>&ge;40" or "n<sub>1</sub>+n<sub>2</sub>&ge;15 and the sample distributions are not strongly skewed." You should state the actual n<sub>1</sub>+n<sub>2</sub> value and direct the reader to how you know the distributions are not strongly skewed (i.e., likely to histograms).</li>
 <li>In hand calculations, note that the test statistic (t in Step 7) is NOT the critical value (i.e., t<sup>*</sup>) needed for the confidence region (in Step 11).</li>
+<li>Note the use of "mean" in both Steps 10 and 11. The test is for mean number of plants that germinated, not number of plants that germinated.</li>
 </ul>
 </div>
 
@@ -58,15 +60,15 @@ lcb <- stat+distrib(0.9,type="q",distrib="t",df=df,lower.tail=FALSE)*se
 <ol>
 <li>&alpha; = 0.10.</li>
 <li>H<sub>A</sub>: &mu;<sub>b</sub>-&mu;<sub>h</sub> &gt; 0 and H<sub>0</sub>: &mu;<sub>b</sub>-&mu;<sub>h</sub> = 0, where &mu; is the mean number of germinated plants, b is the bought compost, and h is the homemade compost.</li>
-<li>2-sample t-test because (i) two groups/populations are considered (bought and homemade compost), (ii) a quantitative variable (number germinated) was recorded, and (iii) individuals in the groups are independent (there is no known connection between all pairs of bought and homemade individuals).</li>
-<li>An experimental study with some randomization (placement of containers in the greenhouse).</li>
+<li>2-sample t-test because (i) two groups/populations are considered (bought and homemade compost), (ii) a quantitative variable (number germinated) was recorded, and (iii) individuals in the groups are independent (there is no known connection between all pairs of containers with bought and homemade compost).</li>
+<li>An experimental study was conducted without obvious random selection of the containers wtih soil, but with randomization allocation (placement of containers in the greenhouse).</li>
 <li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>h</sub> = 18+10 = 28 &gt; 15 and the two sample distributions (shown on the handout) are not obviously strongly skewed, and (iii) the variances appear to be equal (Levene's p-value = 0.2414 &gt; &alpha;).</li>
 <li>x&#772;<sub>b</sub>-x&#772;<sub>h</sub> = `r xbar1`-`r xbar2` = `r stat`.</li>
-<li>t = `r formatC(t,format="f",digits=4)` with `r df` df.</li>
-<li>p-value`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
+<li>t = `r formatC(t,format="f",digits=4)` with `r df` df. Note that $s_p^2$=`r formatC(sp2,format="f",digits=3)` and the SE is `r formatC(se,format="f",digits=3)`.</li>
+<li>p-value`r kPvalue(pv,include.p=FALSE,latex=FALSE)` (more specifically `r formatC(pv,digits=4)`).</li>
 <li>Reject H<sub>0</sub> because the p-value &lt; &alpha;.</li>
-<li>It appears that the the number of plants that germinate is significantly lower for the homemade than the bought compost. Thus, the homemade compost "performs" worse than the store bought compost and may lead to increased costs for the greenhouse.</li>
-<li>I am 90% confident that the number of plants that germinated with the bought compost is at least `r formatC(lcb,format="f",digits=1)` plants greater than the number of plants that germinated with the homemade compost.</li>
+<li>It appears that the the mean number of plants that germinate is significantly lower for the homemade than the bought compost. Thus, the homemade compost "performs" worse than the store bought compost and may lead to increased costs for the greenhouse.</li>
+<li>I am 90% confident that the mean number of plants that germinated with the bought compost is at least `r formatC(lcb,format="f",digits=1)` plants greater than the mean number of plants that germinated with the homemade compost.</li>
 </ol>
 
 R Appendix.
@@ -92,8 +94,8 @@ del <- data.frame(war=rep(c("Gulf","Bosnia"),each=9),
 <li>&alpha; = 0.05</li>
 <li>H<sub>A</sub>: &mu;<sub>b</sub>-&mu;<sub>g</sub> &lt; 0 and H<sub>0</sub>: &mu;<sub>b</sub>-&mu;<sub>g</sub> = 0, where &mu; is the mean time to deliver ALL shipments, b is for Bosnia, and g is for Persian Gulf War.</li>
 <li>2-sample t-test because (i) two groups/populations are considered (Bosnia and Persian Gulf), (ii) a quantitative variable (delivery time) was recorded, and (iii) the indivduals in the groups are independent (there is no known connection between all deliveries to the two wars).</li>
-<li>An observational study with clear randomization of the two samples.</li>
-<li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>g</sub> = 9+9 = 18 &gt; 15 and the two sample distributions () are not obviously strongly skewed (also told to assume that the distribution are not strongly skewed), and (iii) the variances appear to be equal (Levene's p-value = `r  kPvalue(del.lev$"Pr(>F)"[1],include.p=FALSE)` &gt; &alpha;).</li>
+<li>An observational study without clear randomization of the two samples.</li>
+<li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>g</sub> = 9+9 = 18 &gt; 15 and the two sample distributions (`r figs("DeliveriesHist",display="cite")`) are not obviously strongly skewed (also told to assume that the distribution are not strongly skewed), and (iii) the variances appear to be equal (Levene's p-value = `r  kPvalue(del.lev$"Pr(>F)"[1],include.p=FALSE)` &gt; &alpha;).</li>
 ```{r DeliveriesHist, fig.width=7, fig.height=3.5, echo=FALSE}
 hist(time~war,data=del)
 ```
@@ -110,7 +112,7 @@ kHtest(del.t)
 <li>The test statistic is t = `r formatC(del.t$statistic,format="f",digits=3)` with `r formatC(del.t$parameter,format="f",digits=0)` df (`r tbls("Deliveries",display="cite")`).</li>
 <li>The p-value = `r kPvalue(del.t$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("Deliveries",display="cite")`).</li>
 <li>The H<sub>0</sub> is rejected because the p-value &lt; &alpha; (`r tbls("Deliveries",display="cite")`).</li>
-<li>The mean delivery time was significantly lower in Bosnia than in the Persian Gulf War. Thus, the new "just-in-time" entality for deliveries appears to have resulted in quicker delivery times.</li>
+<li>The mean delivery time was significantly lower in Bosnia than in the Persian Gulf War. Thus, the new "just-in-time" mentality for deliveries appears to have resulted in quicker delivery times.</li>
 <li>I am 95% confident that the mean delivery time for Bosnia was more than `r formatC(-1*del.t$conf.int[2],format="f",digits=1)` days faster than for the Persian Gulf War (`r tbls("Deliveries",display="cite")`).</li>
 </ol>
 
