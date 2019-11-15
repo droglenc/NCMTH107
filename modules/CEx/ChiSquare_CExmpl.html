@@ -7,23 +7,8 @@ css: "/css/modules.css"
 ---
 
 
-<hr />
-<div id="lake-superior-predator-diets" class="section level2">
-<h2>Lake Superior Predator Diets</h2>
-<p><img src="http://derekogle.com/NCMTH107/modules/CEx/zimgs/BellyFull72.jpg" alt="Lake Trout Diet" class="img-right"></p>
-<p>When <a href="https://dnr.wi.gov/topic/fishing/documents/species/chinooksalmon.pdf">Chinook Salmon (<em>Oncorhynchus tshawytscha</em>)</a> were first introduced to Lake Superior there was concern that they would compete with native <a href="https://dnr.wi.gov/topic/fishing/documents/species/laketrout.pdf">Lake Trout (<em>Salvelinus namaycush</em>)</a> for <a href="https://dnr.wi.gov/topic/EndangeredResources/Animals.asp?mode=detail&amp;SpecCode=AFCHA01020">Cisco (<em>Coregonus artedi</em>)</a>. Preliminarily, fisheries biologists classified the diets of 50 Lake Trout and 40 Chinook Salmon as containing Cisco or not. They found 36 Lake Trout and 24 Chinook Salmon contained Cisco. Test, at the 10% level, if there is a difference in the proportion of Lake Trout and Chinook Salmon that had Cisco. Make sure to provide explicit answers with your work shown for all <a href="../Hypothesis_Testing/11-steps.html">11 steps of a hypothesis test</a>.</p>
-<hr />
-</div>
-<div id="lake-superior-predator-diets-ii" class="section level2">
-<h2>Lake Superior Predator Diets II</h2>
-<p>The results from the previous study were recorded in LSPredDiet.csv (<a href="https://raw.githubusercontent.com/droglenc/NCData/master/LSPredDiet.csv">file</a>, <a href="https://github.com/droglenc/NCData/blob/master/LSPredDiet_meta.txt">meta</a>). Use these data and <code>chisq.test()</code> to confirm your calculations in the previous exercise.</p>
-<hr />
-</div>
 
 
-
-
-</div>
 
 <script>
 
@@ -37,6 +22,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
