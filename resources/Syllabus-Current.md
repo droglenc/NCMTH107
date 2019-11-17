@@ -230,7 +230,18 @@ I will submit a "midterm grade" for you approximately half-way through the semes
 
 ## Expectations
 
+### Ownership of Learning
 
+<img class="img-right" src="../img/student-reflection-and-ownership_orig.png" alt="Ownership of Learning">
+
+This course is designed in a way that you will have to actively, rather than passively, engage in the course content. In this way, it may differ from some of your other courses. In particular, in this course you will need to:
+
+* Interact with the course material on a near daily basis (i.e., you will not be able to ignore the class for several days in a row).
+* Multi-task material from multiple modules (i.e., you may be finishing exercises for one module while preparing for class on another module).
+* Prepare for some course content on your own prior to class.
+* Assess your own performance on daily exercises by comparing your answers to an answer key (which will also contain hints related to common mistakes).
+* Ask for help from me (the professor) both during and outside of class.
+* Maintain focus for an extended period of time (1.5 h for each class, 2 h for quizzes).
 
 ### Work Outside of Class
 
