@@ -105,7 +105,9 @@ You should prepare for each class period with the module reading and videos indi
 ### Homework
 
 <img class="img-right" src="../img/homework.png">
-Each day you will be required to turn in work on exercises from the previous class period. If you are focused and ask for help during class then most of this work will be completed during class. However, you may need to work outside of class or seek additional help from me or the tutors to complete all of this work. You may work with other students on exercises, but substantial copying of others' work does not lead to learning and will not be accepted. Exercises you turn in will be graded based on the following rubric.
+Each day you will be required to turn in work on exercises from the previous class period. If you are focused and ask for help during class then most of this work will be completed during class. However, you may need to work outside of class or seek additional help from me or the tutors to complete all of this work. You may work with other students on exercises, but substantial copying of others' work does not lead to learning and will not be accepted. **Late exercises will not be accepted after I have posted the answer key.**
+
+Exercises you turn in will be graded based on the following rubric.
 
 <div class="container-fluid">
   <table class="table table-bordered">
