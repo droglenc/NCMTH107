@@ -15,8 +15,8 @@ css: /css/syllabus.css
 </ul>
 
 <figure>
-  <img src="../img/dt080508.gif" alt="Dilbert about made-up numbers" alt="Dilbert cartoon">
-  <figcaption><span style="font-size:50%;">From <a href="http://dilbert.com/strip/2008-05-08" target="_blank">Dilbert.com</a></span></figcaption>
+  <img src="../img/phd012010s.gif" alt="News Media Polls">
+  <figcaption><span style="font-size:50%;">From <a href="http://phdcomics.com/comics/archive.php?comicid=1271" target="_blank">phdcomics.com</a></span></figcaption>
 </figure>
 
 <br>
@@ -238,9 +238,9 @@ This course is designed in a way that you will have to actively, rather than pas
 
 * Interact with the course material on a near daily basis (i.e., you will not be able to ignore the class for several days in a row).
 * Multi-task material from multiple modules (i.e., you may be finishing exercises for one module while preparing for class on another module).
-* Prepare for some course content on your own prior to class.
+* Prepare for some course content on your own prior to class. See [Preparation Checks](#preparation-checks) section above and [Work Outside of Class](#work-outside-of-class) section below.
 * Assess your own performance on daily exercises by comparing your answers to an answer key (which will also contain hints related to common mistakes).
-* Ask for help from me (the professor) both during and outside of class.
+* Ask for help from me (the professor) both during and outside of class. See [Assistance](#assisstance) section above.
 * Maintain focus for an extended period of time (1.5 h for each class, 2 h for quizzes).
 
 ### Work Outside of Class
