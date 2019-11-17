@@ -34,7 +34,7 @@ What you learn in this <strong>Statistical Concepts and Analysis</strong> course
 * [Catalog Description](http://catalog.northland.edu/content.php?catoid=19&catoid=19&navoid=914&filter%5Bitem_type%5D=3&filter%5Bonly_active%5D=1&filter%5B3%5D=1&filter%5Bcpage%5D=3#) and [Learning Outcomes](#learning-outcomes)
 * [Assistance](#assistance) -- [Instructor](#instructor--Derek-Ogle), [Tutors](#tutors), [Accommodations](#accommodations), and [Academic Alerts](#academic-alerts)
 * [Grading](#grading) -- [Preparation Checks](#preparation-checks), [Homework](#homework), [Engagement](#engagement), [Quizzes](#quizzes), [Extra Credit](#extra-credit), [Overall Grade](#overall-grade)
-* [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
+* [Expectations](#expectations) -- [Work Outside of Class](#work-outside-of-class), [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
 
 
 ----
@@ -97,15 +97,15 @@ As you adjust to the rigors of college life, you may struggle a bit in your cour
 ## Grading
 
 <img class="img-right" src="../img/grading.jpg">
-You will have the opportunities described below to demonstrate what you have learned in this course. An overall grade will be computed from these items as shown in the <a href="#overall-grade">Overall Grade section</a> further below.
+An overall grade will be computed from the items described below and in the <a href="#overall-grade">Overall Grade section</a> further below.
 
 ### Preparation Checks
-You should prepare for each class period by reading the reading and watching the videos for the module indicated on the [Dates page](Dates-Current){:target="_blank"} and announced at the end of the previous class period. A preparation guide is provided for each module to help you identify key concepts in the reading and videos ([here's an example](../modules/FoundationalDefns_Prep.html){:target="_blank"}). You should prepare your own **hand-written**[^1] answers or notes to each question on the preparation guide. A "preparation check," for which you can use your notes, but no other resources, will be administered during the first 8 minutes of every class period. **Preparation checks not completed in the first 8 minutes of class cannot be made up. Preparation checks taken from outside of the classroom will not be accepted.**
+You should prepare for each class period with the module reading and videos indicated on the [Dates page](Dates-Current){:target="_blank"} and announced at the end of the previous class period. A preparation guide is provided for each module to help you identify key concepts in the reading and videos ([here's an example](../modules/FoundationalDefns_Prep.html){:target="_blank"}). You should prepare your own **hand-written**[^1] notes for each item on the preparation guide. A "preparation check," for which you can use your notes, but no other resources, will be administered during the first 7 minutes of every class period. **Preparation checks not completed in the first 7 minutes of class cannot be made up. Preparation checks taken from outside of the classroom will not be accepted.**
 
 ### Homework
 
 <img class="img-right" src="../img/homework.png">
-Each day you will be required to turn in work on the exercises from the previous class period. If you are focused and ask for help during class then most of this work will be completed during class. However, you may need to work outside of class or seek additional help from me or the tutors to complete all of this work. You are allowed to work with other students on exercises, but substantial copying of the work of others does not lead to learning and will not be accepted. The homework you turn in will be graded based on "completeness" according to the following rubric.
+Each day you will be required to turn in work on exercises from the previous class period. If you are focused and ask for help during class then most of this work will be completed during class. However, you may need to work outside of class or seek additional help from me or the tutors to complete all of this work. You may work with other students on exercises, but substantial copying of others' work does not lead to learning and will not be accepted. Exercises you turn in will be graded based on the following rubric.
 
 <div class="container-fluid">
   <table class="table table-bordered">
@@ -119,9 +119,20 @@ Each day you will be required to turn in work on the exercises from the previous
 </div>
 
 ### Engagement
+This course is taught in an active learning format that will require your full engagement to maximiz learning. To encourage active engagement, I will assess your engagement at the end of each class period with the following rubric.
 
-<img class="img-right" src="../img/participation.jpg" alt="Engagement">
-This course is taught in an active learning format and, thus, our time during class is short and precious. The following behaviors are indicative of a fully engaged student:
+<div class="container-fluid">
+  <table class="table table-bordered">
+  <thead>
+    <tr class="info"><th>4 points</th><th>3-1 points</th><th>0 points</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Fully (see below) engaged in the day's activities. Properly focused at all times.</td><td>Engaged in many, but not all, of the day's activities. Focus waned or was inconsistent. Left early or arrived late by between 1-15 mins.</td><td>Very little active engagement in the day's activities. Lacked focus. Left early or arrived late by more than 15 mins.</td></tr>
+  </tbody>
+  </table>
+</div>
+
+The following behaviors are indicative of a fully engaged student:
 
 - Attended the entire class period (including being on time).
 - Came to class having fully completed the required preparation materials (see above).
@@ -131,24 +142,6 @@ This course is taught in an active learning format and, thus, our time during cl
 - Took notes during short lectures.
 - Paid attention during short lectures.
 - Followed the [class conduct guidelines](#classroom-conduct-and-academic-integrity).
-
-I will assess your engagement at the end of each class period with the following rubric.
-
-<div class="container-fluid">
-  <table class="table table-bordered">
-  <thead>
-    <tr class="info"><th>4 points</th><th>3-1 points</th><th>0 points</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Fully (see above) engaged in the day's activities. Properly focused at all times.</td><td>Engaged in many, but not all, of the day's activities. Focus waned or was inconsistent. Left early or arrived late by between 1-15 mins.</td><td>Very little active engagement in the day's activities. Lacked focus. Left early or arrived late by more than 15 mins.</td></tr>
-  </tbody>
-  </table>
-</div>
-
-<img class="img-right" src="../img/studying.jpg" alt="Studying Hours">
-
-As a general rule-of-thumb[^2], you are expected to spend 2-3 hours of time outside of class for each hour in class. This course meets for 4.5 hours per week and, thus, you should dedicate between 9 and 13.5 hours of time outside of class preparing for class, completing review and class exercises, and studying for quizzes. **The work required for this course can be completed within this expected amount of time, if that time is without distraction**. If you feel that you are spending an inordinate amount of time on some exercises or preparations because you are "stuck," then start your work earlier so that you can stop (and do other things) and make plans to see [me](#instructor--derek-ogle) or the [tutors](#tutors) for help.
-
 
 ### Quizzes
 Four mid-term quizzes will allow you to demonstrate what you have learned about the most recent material. With this number of quizzes, the material on each quiz will be focused on fewer modules and, thus, more manageable to prepare for. Additionally, a final exam will give you an opportunity to show that you have a synthetic understanding of all material from throughout the course. The final exam will be focused on the larger concepts, applications, and interpretations, and less on specific details, from throughout the semester. I will provide you with an explicit study guide approximately one week before each quiz and the final exam.
@@ -235,7 +228,18 @@ I will submit a "midterm grade" for you approximately half-way through the semes
 
 ----
 
-## Classroom Conduct and Academic Integrity
+## Expectations
+
+
+
+### Work Outside of Class
+
+<img class="img-right" src="../img/studying.jpg" alt="Studying Hours">
+
+As a general rule-of-thumb[^2], you are expected to spend 2-3 hours of time outside of class for each hour in class. This course meets for 4.5 hours per week and, thus, you should dedicate between 9 and 13.5 hours of time outside of class preparing for class, completing review and class exercises, and studying for quizzes. **The work required for this course can be completed within this expected amount of time, if that time is without distraction**. If you feel that you are spending an inordinate amount of time on some exercises or preparations because you are "stuck," then start your work earlier so that you can stop (and do other things) and make plans to see [me](#instructor--derek-ogle) or the [tutors](#tutors) for help.
+
+
+### Classroom Conduct and Academic Integrity
 
 <img class="img-right" src="../img/cell-cheat.jpg" alt="Conduct and Integrity">
 
