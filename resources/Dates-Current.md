@@ -66,12 +66,12 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>W 6-Nov</td><td><span style="color:red;font-weight:bold">Third Quiz</span> (<a href="QuizGuide/quiz3">Study Guide</a>)</td></tr>
 <tr><td>F 8-Nov</td><td>Quiz Clean-Up</td></tr>
 <tr><td></td><td></td></tr>
---->
 
 <tr><td>M 11-Nov</td><td><a href="../modules/2Samplet">2-Sample t-Test</a></td></tr>
 <tr><td>W 13-Nov</td><td><a href="../modules/2Samplet">2-Sample t-Test</a><br><span style="color:teal;font-weight:bold">DUE: Quiz 3 Reflection (Optional)</span></td></tr>
 <tr><td>F 15-Nov</td><td><a href="../modules/ChiSquare">Chi-Square Test</a></td></tr>
 <tr><td></td><td></td></tr>
+--->
 
 <tr><td>M 18-Nov</td><td><a href="../modules/ChiSquare">Chi-Square Test</a></td></tr>
 <tr><td>W 20-Nov</td><td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td></tr>
