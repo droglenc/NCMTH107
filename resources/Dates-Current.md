@@ -71,7 +71,6 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>W 13-Nov</td><td><a href="../modules/2Samplet">2-Sample t-Test</a><br><span style="color:teal;font-weight:bold">DUE: Quiz 3 Reflection (Optional)</span></td></tr>
 <tr><td>F 15-Nov</td><td><a href="../modules/ChiSquare">Chi-Square Test</a></td></tr>
 <tr><td></td><td></td></tr>
---->
 
 <tr><td>M 18-Nov</td><td><a href="../modules/ChiSquare">Chi-Square Test</a></td></tr>
 <tr><td>W 20-Nov</td><td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td></tr>
@@ -82,6 +81,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>W 27-Nov</td><td><span style="color:coral">NO CLASS (Thanksgiving)</span></td></tr>
 <tr><td>F 29-Nov</td><td><span style="color:coral">NO CLASS (Thanksgiving)</span></td></tr>
 <tr><td></td><td></td></tr>
+--->
 
 <tr><td>M 2-Dec</td><td><a href="../modules/FilteringDataInR">Filtering Data In R</a></td></tr>
 <tr><td>W 4-Dec</td><td>Course Review</td></tr>
