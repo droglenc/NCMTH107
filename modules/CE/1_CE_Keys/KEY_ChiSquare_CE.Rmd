@@ -32,6 +32,11 @@ tbls(name="PopObsTable","Observed frequency of students by stated goal for three
 tbls(name="PopResults","Chi-square test results for testing that the distribution of students by goals differs among grades.")
 tbls(name="PopPercTable","Row percentage table for goals by grade of the student.")
 
+tbls(name="EdmExpTable","Expected frequency of respondents (assuming that Ho is true) by level of agreement for the two parties.")
+tbls(name="EdmObsTable","Observed frequency of respondents by level of agreement for the two parties.")
+tbls(name="EdmResults","Chi-square test results for testing that the distribution of respondents by level of agreement for the two parties.")
+tbls(name="EdmPercTable","Row percentage table for level of agreement by party of the respondents.")
+
 tbls(name="aids1","Expected frequency table for distribution of individuals into race and sex categories.")
 tbls(name="aids2","Observed frequency table for distribution of individuals into race and sex categories.")
 tbls(name="aids4","Row percentage table for the observations of race by sex categories.")
@@ -162,6 +167,66 @@ percTable(obs,margin=1,digits=1)
 R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
 <<PopCalc>>
+```
+
+----
+
+## Political Opinion
+
+```{r EdmCalc, echo=FALSE, results='hide', fig.show='hide', warning=FALSE}
+d <- read.csv("https://github.com/droglenc/NCData/raw/master/EdmontonPoll.csv")
+obs <- xtabs(~party+agreement,data=d)
+chi1 <- chisq.test(obs,correct=FALSE)
+chi1$expected
+chi1
+percTable(obs,margin=1,digits=1)
+```
+
+<ol>
+<li>&alpha;=0.01.</li>
+<li>H<sub>A</sub>: "The distribution of respondents into the levels of agreements differs between political party affiliations" and H<sub>O</sub>: "The distribution of respondents into the levels of agreements does not differ between political party affiliations".</li>
+<li>Chi-square test because (i) the response variable (levels of agreement) is categorial and (ii) two or more groups or populations (political party affiliation) were sampled.</li>
+<li>This is an observational study because the respondents were not allocated to political party affiliations. The respondents were not obviously randomly selected (and were likely part of a voluntary response survey).</li>
+<li>All cells in the expected frequency table (`r tbls("EdmExpTable",display="cite")`) were greater than 5; the assumptions for a chi-square test have been met.</li>
+
+`r tbls("EdmExpTable")`
+
+```{r echo=FALSE}
+chi1$expected
+```
+
+<li>The observed frequency table is shown in `r tbls("EdmObsTable",display="cite")`.</li>
+
+`r tbls("EdmObsTable")`
+
+```{r echo=FALSE}
+chi1$observed
+```
+
+<li>&chi;<sup>2</sup>=`r formatC(chi1$statistic,format="f",digits=4)` with `r chi1$parameter` df (`r tbls("EdmResults",display="cite")`).</li>
+
+`r tbls("EdmResults")`
+
+```{r echo=FALSE}
+chi1
+```
+
+<li>p-value=`r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("EdmResults",display="cite")`).</li>
+<li>Do not reject H<sub>0</sub> because the p-value&gt;&alpha;.</li>
+<li>It appears that the distributions of levels of agreement does differ by political party affiliation. Analysis of the row percentage table (`r tbls("EdmPercTable",display="cite")`) suggests that respondents affiliated with the Progressive Conservative party generally more strongly agreed with the statement about unions and unemployment.</li>
+
+`r tbls("EdmPercTable")`
+
+```{r echo=FALSE}
+percTable(obs,margin=1,digits=1)
+```
+
+<li>Not necessary with a chi-square test.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+<<EdmCalc>>
 ```
 
 ----
