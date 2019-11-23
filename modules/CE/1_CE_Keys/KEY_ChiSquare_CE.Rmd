@@ -25,7 +25,6 @@ tbls <- captioner(prefix="Table")
 
 tbls(name="hurr1","Expected frequency table for distribution of hurricanes into the strength and time period categories.")
 tbls(name="hurr2","Observed frequency table for distribution of hurricanes into the strength and time period categories.")
-tbls(name="hurr3","Results from the chi-square test for examining the distribution of hurricanes by strength and time period categories.")
 tbls(name="hurr4","Row percentage table for the observations of hurricane strengths by time period.")
 
 tbls(name="PopExpTable","Expected frequency of students (assuming that Ho is true) by stated goal for three grades.")
@@ -35,7 +34,6 @@ tbls(name="PopPercTable","Row percentage table for goals by grade of the student
 
 tbls(name="aids1","Expected frequency table for distribution of individuals into race and sex categories.")
 tbls(name="aids2","Observed frequency table for distribution of individuals into race and sex categories.")
-tbls(name="aids3","Results from the chi-square test for examining the distribution of races by male and female.")
 tbls(name="aids4","Row percentage table for the observations of race by sex categories.")
 
 tbls(name="ForestExpTable","Expected frequency of stands (assuming that Ho is true) by time since last fire in each of the four stand types.")
@@ -51,7 +49,8 @@ tbls(name="ForestPercTable","Row percentage table for time since last fire by st
 <ul>
 <li>Make sure to describe your evidence in Step 3 for why you are performing a chi-square test. It is not adequate to simply say "because there is a categorical response variable and two or more groups are being tests." At least say what the response variable is and what the groups are.</li>
 <li>When testing the assumptions (Step 5), make sure to explicitly say that there are more than five in each cell of the expected table. It is not adequate to simply make the expected table.</li>
-<li>In hand-calculation questions (e.g., AIDS cases) make sure to put `lower.tail=FALSE` in `distrib()` when calculating the p-value (Step 8) in a chi-square problem. This is true for EVERY chi-square problem.</li>
+<li>In hand-calculation questions (e.g., hurricanes) make sure to put `lower.tail=FALSE` in `distrib()` when calculating the p-value (Step 8) in a chi-square problem. This is true for EVERY chi-square problem.</li>
+<li>You values may differ slightly from mine as I calculate everything in R that holds many decimal places on intermediate values.</li>
 </ul>
 </div>
 
@@ -197,13 +196,6 @@ aids.chi$observed
 ```
 
   <li>The &chi;<sup>2</sup> test statistic is `r formatC(aids.chi$statistic,format="f",digits=1)` with `r formatC(aids.chi$parameter,format="f",digits=0)` df (`r tbls("aids3",display="cite")`).</li>
-  
-`r tbls("aids3")`
-
-```{r echo=FALSE,background="white"}
-kHtest(aids.chi)
-```
-
   <li>The p-value is `r kPvalue(aids.chi$p.value,include.p=FALSE,latex=FALSE)`.</li>
   <li>The H<sub>O</sub> is rejected because the p-value<&alpha;.</li>
   <li>It appears that the distribution of the individuals into the races/ethnicities differs between the sexes. An analysis of the row percentages table (`r tbls("aids4",display="cite")`) shows that there are many more white males and black females than would be expected.</li>
@@ -219,9 +211,7 @@ percTable(obs,margin=1,digits=1)
 R Appendix.
 ```{r eval=FALSE,prompt=FALSE}
 library(NCStats)
-<<AIDSCalc>>
-<<AIDSExpTable>>
-<<AIDSResids>>
+distrib(1650.8,distrib="chisq",df=3,lower.tail=FALSE)
 ```
 
 ----
