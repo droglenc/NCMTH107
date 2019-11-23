@@ -1,6 +1,6 @@
 ---
 layout: page
-title: R Method Explanation Videos
+title: R Method Videos
 css: /css/modules.css
 ---
 
