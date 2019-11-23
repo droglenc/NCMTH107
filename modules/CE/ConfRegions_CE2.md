@@ -34,7 +34,7 @@ For each situation below, calculate and interpret the confidence region.
 
 ## Body Temperature
 <img src="zimgs/body-temperature-2.png" alt="Body Temperature" class="img-right">
-[Machowiak (1992)](http://www.ncbi.nlm.nih.gov/pubmed/1302471)[^1] provided a critical examination of whether normal mean body temperature was 37<sup>o</sup>C (or not). They recorded the orally-determined body temperatures of 65 male and 65 female subjects. Their data are found in NormTemp.csv ([file](https://github.com/droglenc/NCData/raw/master/NormTemp.csv), [meta](https://github.com/droglenc/NCData/blob/master/NormTemp_meta.txt)). Assume that &alpha;=0.05 and &sigma;=0.41. Use this information to construct and interpret a confidence region for the population mean body temperature.
+[Machowiak (1992)](http://www.ncbi.nlm.nih.gov/pubmed/1302471) provided a critical examination of whether normal mean body temperature was 37<sup>o</sup>C (or not). They recorded the orally-determined body temperatures of 65 male and 65 female subjects. Their data are found in NormTemp.csv ([file](https://github.com/droglenc/NCData/raw/master/NormTemp.csv), [meta](https://github.com/droglenc/NCData/blob/master/NormTemp_meta.txt)). Assume that &alpha;=0.05 and &sigma;=0.41. Use this information to construct and interpret a confidence region for the population mean body temperature.[^1]
 
 ----
 
@@ -53,7 +53,7 @@ This is not a confidence region question, rather it is asking you to compute a s
 ## Internet Usage
 <img src="zimgs/internet.jpg" alt="Internet" class="img-right">
 
-Suppose that you are starting a business and it is important for your business plan to have an estimate of the mean weekly Internet usage of households in your city. Assume that you know from previous surveys that the standard deviation of weekly Internet usage is 6.95 minutes.[^1]
+Suppose that you are starting a business and it is important for your business plan to have an estimate of the mean weekly Internet usage of households in your city. Assume that you know from previous surveys that the standard deviation of weekly Internet usage is 6.95 minutes.[^2]
 
 1. How many households must you randomly select to be 95% sure that the sample mean is within 1 minute of the population mean.
 1. How many households must you randomly select to be 90% sure that the sample mean is within 1 minute of the population mean.
@@ -65,6 +65,8 @@ Suppose that you are starting a business and it is important for your business p
 
 ### Footnotes
 
-[^1]: This question was adapted from [iSixSigma](http://www.isixsigma.com/tools-templates/sampling-data/how-determine-sample-size-determining-sample-size/).
+[^1]: This question was adapted [from here](http://jse.amstat.org/v4n2/datasets.shoemaker.html).
+
+[^2]: This question was adapted [from here](http://www.isixsigma.com/tools-templates/sampling-data/how-determine-sample-size-determining-sample-size/).
 
 ----
