@@ -7,6 +7,11 @@ css: "/css/modules.css"
 
 ----
 
+<div class="alert alert-success">For all "hypothesis testing" questions, make sure to provide explicit answers with your work shown for all <a href="../11-steps,html">11 steps of a hypothesis test</a>.
+</div>
+
+----
+
 ## Commitment to Adult Animals
 <img src="zimgs/animal-commitment.png" alt="Commitment to Animals" class="img-right">
 
@@ -44,6 +49,6 @@ For each situation below, (a) compute the t test statistic, (b) compute the p-va
 
 ## Confidence Interval Calculations
 
-For the same situations above, (a) identify the level of confidence; (b) whether a lower confidence bound, upper confidence bound, or confidence interval should be constructed; (c) find t<sup>*</sup> (include a drawing that illustrates your calculation); (d) construct the confidence region; and (e) specifically interpret the confidence region.
+Compute and interpret confidence regions for the two situations above. You should use the same "steps" as you did in the [confidence regions module](ConfRegions_CE2).
 
 ----
