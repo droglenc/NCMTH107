@@ -7,7 +7,7 @@ css: /css/modules.css
 ----
 
 <div class="alert alert-success">
-The following is a list of videos that demonstrate how to perform various tasks in R. See <a href="http://derekogle.com/NCMTH107/resources/FAQ/FAQs/videos">this FAQ</a> for how to access these videos.
+The following is a list of videos that demonstrate how to perform various tasks in R. See <a href="http://derekogle.com/NCMTH107/resources/FAQ/FAQs/videos#vimeo-videos" target="_blank">this FAQ</a> for how to access these videos.
 </div>
 
 * **Data Entry and Manipulation**
