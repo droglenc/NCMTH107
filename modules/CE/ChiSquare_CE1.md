@@ -18,7 +18,7 @@ css: "/css/modules.css"
 Atmospheric scientists have hypothesized that the strengths of hurricanes has increased in recent years due to changes in the climate. The [Saffir-Simpson Hurricane Wind Scale](https://www.nhc.noaa.gov/aboutsshws.php) categorizes the strength of hurricanes based on the sustained wind speed. Higher numbers on this scale indicate a strong hurricane, with categories 3, 4, and 5 considered "major hurricanes." Researchers recorded the number of hurricanes in each category (note that categories 1 and 2 were combined as were categories 4 and 5) from the fist and second half of the 20th century in the table below.
 
 &nbsp;     | Cat 1 & 2 | Cat 3 | Cat 4 & 5
----------- | --------- | ----- | --------
+:--------: | :-------: | :---: | :------:
 1901-1950  |     51    |   26  |    8
 1951-2000  |     44    |   21  |    7
 
