@@ -7,6 +7,19 @@ css: "/css/modules.css"
 
 ----
 
+<div class="alert alert-success">
+In all of the following questions, I urge you to follow these steps when answering probability questions:
+<ol type="a">
+  <li>Identify the distribution that would be used to answer the question (population or sampling).</li>
+  <li>Identify characteristics of the required distribution; i.e., whether normal or not and, if normal, the center and dispersion (SD or SE).</li>
+  <li>Identify whether the question can be answered or not (can be if normal, cannot be if not normal).</li>
+  <li>Answer to the question; use <code>distrib()</code> if the probability can be computed (i.e., normal distribution) or explain why the probability cannot be computed (note specifically which distribution is not normal).</li>
+</ol>
+A reminder to use these steps will <strong>NOT</strong> be provided on future quizzes, but you should get in the habit of following them.
+</div>
+
+&nbsp;
+
 ## Melatonin and Sleep
 <img src="zimgs/melatonin.png" alt="melatonin" class="img-right">
 MIT researchers examined the effect of [melatonin](http://www.webmd.com/sleep-disorders/tc/melatonin-overview) on sleep. Suppose that we know that men given a placebo fell asleep according to a N(15,5) distribution.
