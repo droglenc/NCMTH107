@@ -18,19 +18,18 @@ An "arena" contains 8 acorns and 9 kernels of corn. Assume that a chipmunk place
 
 ----
 
-<div class="alert alert-info">
-<strong>Note:</strong> 
-<ul>
-<li>In the following questions, I strongly urge you to follow these steps when answering the probability questions.
+<div class="alert alert-success">
+In all of the following questions, I urge you to follow these steps when answering probability questions:
 <ol type="a">
   <li>Identify the distribution that would be used to answer the question (population or sampling).</li>
   <li>Identify characteristics of the required distribution; i.e., whether normal or not and, if normal, the center and dispersion (SD or SE).</li>
   <li>Identify whether the question can be answered or not (can be if normal, cannot be if not normal).</li>
   <li>Answer to the question; use <code>distrib()</code> if the probability can be computed (i.e., normal distribution) or explain why the probability cannot be computed (note specifically which distribution is not normal).</li>
 </ol>
-A reminder to use these steps will not be provided on future quizzes, but you should get in the habit of following them.</li>
-</ul>
+A reminder to use these steps will <strong>NOT</strong> be provided on future quizzes, but you should get in the habit of following them.
 </div>
+
+&nbsp;
 
 ## Pollutants in Auto Exhaust
 <img src="zimgs/exhaust.jpg" alt="Exhaust" class="img-right">
