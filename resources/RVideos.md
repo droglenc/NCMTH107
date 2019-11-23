@@ -6,7 +6,7 @@ css: /css/modules.css
 
 ----
 
-The following is a list of videos that demonstrate how to perform various tasks in R.
+The following is a list of videos that demonstrate how to perform various tasks in R.[^pwd]
 
 * Data Entry and Manipulation
     1. Getting Data
@@ -32,3 +32,11 @@ The following is a list of videos that demonstrate how to perform various tasks 
     1. [2-Sample t-test](https://vimeo.com/user45324800/2samplettest){:target="_blank"}
     1. Chi-square test -- with [raw data](https://vimeo.com/user45324800/chisqraw-ex1){:target="_blank"} or [summarized data](https://vimeo.com/user45324800/chisqsmrzd-ex1){:target="_blank"}
     1. [Goodness-of-Fit test](https://vimeo.com/user45324800/rgoftest){:target="_blank"}
+    
+----
+
+## Footnotes
+
+[^pwd]: All of these videos require the password that I gave you at the beginning of the semester.
+
+----
