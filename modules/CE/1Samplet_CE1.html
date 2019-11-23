@@ -19,8 +19,13 @@ css: "/css/modules.css"
 </div>
 <div id="confidence-interval-calculations-i" class="section level2">
 <h2>Confidence Interval Calculations I</h2>
-<p>For the same situations above, (a) identify the level of confidence; (b) whether a lower confidence bound, upper confidence bound, or confidence interval should be constructed; (c) find t<sup>*</sup> (include a drawing that illustrates your calculation); (d) construct the confidence region; and (e) specifically interpret the confidence region.</p>
+<p>Compute and interpret confidence regions for the two situations above. You should use the same “steps” as you did in the <a href="ConfRegions_CE2">confidence regions module</a>.</p>
 <hr />
+<p> </p>
+<div class="alert alert-success">
+<p>For this and all other “hypothesis testing” questions, make sure to provide explicit answers with your work shown for all <a href="../11-steps">11 steps of a hypothesis test</a>.</p>
+</div>
+<p> </p>
 </div>
 <div id="fecal-coliform-counts-i" class="section level2">
 <h2>Fecal Coliform Counts I</h2>
@@ -29,12 +34,12 @@ css: "/css/modules.css"
 <pre><code>     n   mean     sd    min     Q1 median     Q3    max 
  25.00 168.19  22.20 112.55 151.37 170.48 179.19 208.82 </code></pre>
 <p><img src="1Samplet_CE1_files/figure-html/unnamed-chunk-3-1.png" width="336" /></p>
-<p>Test, at the 5% level, if these results differ from the mean of 178 CFU/100ml predicted by a computer model. Make sure to provide explicit answers with your work shown for all <a href="../11-steps">11 steps of a hypothesis test</a>.</p>
+<p>Test, at the 5% level, if these results differ from the mean of 178 CFU/100ml predicted by a computer model.</p>
 <hr />
 </div>
 <div id="fecal-coliform-counts-ii" class="section level2">
 <h2>Fecal Coliform Counts II</h2>
-<p>The students’ fecal coliform data was recorded in <a href="FecalColiform.csv" class="uri">FecalColiform.csv</a>. Use these data and <code>t.test()</code> to confirm your calculations from the previous exercise.</p>
+<p>The students’ fecal coliform data was recorded in <a href="FecalColiform.csv">FecalColiform.csv</a>. Use these data and <code>t.test()</code> to confirm your calculations for Steps 6, 7, 8, and 11 from the previous exercise.</p>
 <p> </p>
 <hr />
 </div>
@@ -61,6 +66,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
