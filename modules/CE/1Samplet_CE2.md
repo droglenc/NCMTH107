@@ -7,6 +7,11 @@ css: "/css/modules.css"
 
 ----
 
+<div class="alert alert-success">For all "hypothesis testing" questions, make sure to provide explicit answers with your work shown for all <a href="../11-steps,html">11 steps of a hypothesis test</a>.
+</div>
+
+----
+
 ## Acid Rain in Shenandoah National Park
 <img src="zimgs/rose-river-falls.jpg" alt="Shenandoah National Park" class="img-right">
 
