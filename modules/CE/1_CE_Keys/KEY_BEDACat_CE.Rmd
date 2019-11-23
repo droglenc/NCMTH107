@@ -47,12 +47,12 @@ tbls(name="KidsTot",'Total percentages table for grade school students by goals 
 <ol>
 <li>Two-way frequency table is below.</li>
 ```{r echo=FALSE}
-d <- data.frame(VAR1 <- c("D","C","A","C","A","D","C","A","D","B",
-                          "A","B","B","A","C","D","A","C","A","B",
-                          "B","A","D","C","A","C","B","B"),
-                VAR2 <- c("z","z","y","z","x","z","x","y","z","y",
-                          "z","z","y","z","z","z","z","z","y","y",
-                          "x","y","z","y","x","y","x","y"))
+d <- data.frame(VAR1 <- c("C","C","A","C","A","B","C","A","A","B",
+                          "A","B","B","A","C","C","A","C","A","B",
+                          "B","A","A","C","A","C","B","B"),
+                VAR2 <- c("x","x","y","x","x","y","x","y","y","y",
+                          "x","x","y","y","y","x","x","x","y","y",
+                          "x","y","x","y","x","y","x","y"))
 ```
 ```{r eval=FALSE, echo=FALSE}
 d <- read.csv("BivEDA_CE1.csv")
