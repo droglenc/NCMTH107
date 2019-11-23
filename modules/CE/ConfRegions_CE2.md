@@ -19,8 +19,6 @@ I urge you to follow these steps when answering all confidence region questions:
 A reminder to use these steps will <strong>NOT</strong> be provided on future quizzes, but you should get in the habit of following them.
 </div>
 
-&nbsp;
-
 ## Confidence Region Calculations
 
 For each situation below, calculate and interpret the confidence region.
@@ -34,6 +32,7 @@ For each situation below, calculate and interpret the confidence region.
 
 ## Body Temperature
 <img src="zimgs/body-temperature-2.png" alt="Body Temperature" class="img-right">
+
 [Machowiak (1992)](http://www.ncbi.nlm.nih.gov/pubmed/1302471) provided a critical examination of whether normal mean body temperature was 37<sup>o</sup>C (or not). They recorded the orally-determined body temperatures of 65 male and 65 female subjects. Their data are found in NormTemp.csv ([file](https://github.com/droglenc/NCData/raw/master/NormTemp.csv), [meta](https://github.com/droglenc/NCData/blob/master/NormTemp_meta.txt)). Assume that &alpha;=0.05 and &sigma;=0.41. Use this information to construct and interpret a confidence region for the population mean body temperature.[^1]
 
 ----
