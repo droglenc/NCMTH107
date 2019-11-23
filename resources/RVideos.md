@@ -7,7 +7,7 @@ css: /css/modules.css
 ----
 
 <div class="alert alert-success">
-The following is a list of videos that demonstrate how to perform various tasks in R. To access these videos you will need the password that I gave you at the beginning of the semester.
+The following is a list of videos that demonstrate how to perform various tasks in R. See <a href="http://derekogle.com/NCMTH107/resources/FAQ/FAQs/videos">this FAQ</a> for how to access these videos.
 </div>
 
 * **Data Entry and Manipulation**
