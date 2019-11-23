@@ -38,4 +38,4 @@ Use this information to determine, at the 10% level, if the distribution of hurr
 
 ## Footnotes
 
-[^1]: This question was adapted [from here*](https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Book%3A_Foundations_in_Statistical_Reasoning_(Kaslik)/8%3A_Chi_Square).
+[^1]: This question was adapted [from here](https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Book%3A_Foundations_in_Statistical_Reasoning_(Kaslik)/8%3A_Chi_Square).
