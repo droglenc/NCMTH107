@@ -196,7 +196,7 @@ aids.chi$observed
 ```
 
   <li>The &chi;<sup>2</sup> test statistic is `r formatC(aids.chi$statistic,format="f",digits=1)` with `r formatC(aids.chi$parameter,format="f",digits=0)` df (`r tbls("aids3",display="cite")`).</li>
-  <li>The p-value is `r kPvalue(aids.chi$p.value,include.p=FALSE,latex=FALSE)`.</li>
+  <li>The p-value is `r kPvalue(aids.chi$p.value,include.p=FALSE,latex=FALSE)`. [*R suggests that the p-value is zero, but it cannot be zero and is just much smaller than the computer can show.*]</li>
   <li>The H<sub>O</sub> is rejected because the p-value<&alpha;.</li>
   <li>It appears that the distribution of the individuals into the races/ethnicities differs between the sexes. An analysis of the row percentages table (`r tbls("aids4",display="cite")`) shows that there are many more white males and black females than would be expected.</li>
 
