@@ -39,24 +39,22 @@ A chi-square test is required because a categorical response variable with three
 This is an observational study without obvious randomization.
 </li>
 <li>
-The test statistic computed below should reasonably follow a chi-square distribution because all cells in the expected table (Table 13) have values greater than five.
+The test statistic computed below should reasonably follow a chi-square distribution because all cells in the expected table (Table 1) have values greater than five.
 </li>
-<p>`r tbls(“hurr1”)</p>
-<pre><code>           1&amp;2    3 4&amp;5
-1901-1950 51.4 25.4 8.1
-1951-2000 43.6 21.6 6.9</code></pre>
+<p>Table 1: Expected frequency table for distribution of hurricanes into the strength and time period categories.</p>
+<pre><code>          Cat 1&amp;2 Cat 3 Cat 4&amp;5
+1901-1950    51.4  25.4     8.1
+1951-2000    43.6  21.6     6.9</code></pre>
 <li>
-The table of observed frequencies were given as in Table 14.
+The table of observed frequencies were given as in Table 2.
 </li>
-<p>Table 14: Observed frequency table for distribution of hurricanes into the strength and time period categories.</p>
-<pre><code>          1&amp;2  3 4&amp;5
-1901-1950  51 26   8
-1951-2000  44 21   7</code></pre>
+<p>Table 2: Observed frequency table for distribution of hurricanes into the strength and time period categories.</p>
+<pre><code>          Cat 1&amp;2 Cat 3 Cat 4&amp;5
+1901-1950      51    26       8
+1951-2000      44    21       7</code></pre>
 <li>
-The χ<sup>2</sup> test statistic is 0.0 with 2 df (Table 15).
+The χ<sup>2</sup> test statistic is 0.0382 with 2 df (Table 3).
 </li>
-<p>Table 15: Results from the chi-square test for examining the distribution of hurricanes by strength and time period categories.</p>
-<pre><code>X-squared = 0.0382, df = 2, p-value = 0.9811</code></pre>
 <li>
 The p-value is 0.9811.
 </li>
@@ -64,21 +62,16 @@ The p-value is 0.9811.
 The H<sub>O</sub> is rejected because the p-value&lt;α.
 </li>
 <li>
-It appears that the distribution of hurricanes into the strength categories is the same for both time periods (Table 16).
+It appears that the distribution of hurricanes into the strength categories is the same for both time periods (Table 4).
 </li>
-<p>Table 16: Row percentage table for the observations of hurricane strengths by time period.</p>
-<pre><code>           1&amp;2    3 4&amp;5 Sum
-1901-1950 60.0 30.6 9.4 100
-1951-2000 61.1 29.2 9.7 100</code></pre>
+<p>Table 4: Row percentage table for the observations of hurricane strengths by time period.</p>
+<pre><code>          Cat 1&amp;2 Cat 3 Cat 4&amp;5 Sum
+1901-1950    60.0  30.6     9.4 100
+1951-2000    61.1  29.2     9.7 100</code></pre>
 </ol>
 <p>R Appendix.</p>
 <pre class="r"><code>library(NCStats)
-obs &lt;- matrix(c(51,26,8,44,21,7),nrow=2,byrow=TRUE)
-rownames(obs) &lt;- c(&quot;1901-1950&quot;,&quot;1951-2000&quot;)
-colnames(obs) &lt;- c(&quot;1&amp;2&quot;,&quot;3&quot;,&quot;4&amp;5&quot;)
-( hurr.chi &lt;- chisq.test(obs,correct=FALSE) )
-round(hurr.chi$expected,1)
-percTable(obs,margin=1,digits=1)</code></pre>
+distrib(0.0382,distrib=&quot;chisq&quot;,df=2,lower.tail=FALSE)</code></pre>
 <hr />
 </div>
 <div id="popularity-in-middle-school" class="section level2">
@@ -97,39 +90,39 @@ Chi-square test because (i) the response variable (goals category) is categorial
 This is an observational study because the students were not allocated to grades. The students were not obviously randomly selected (and were likely part of a voluntary response survey).
 </li>
 <li>
-All cells in the expected frequency table (Table 1) were greater than 5; the assumptions for a chi-square test have been met.
+All cells in the expected frequency table (Table 5) were greater than 5; the assumptions for a chi-square test have been met.
 </li>
-<p>Table 1: Expected frequency of students (assuming that Ho is true) by stated goal for three grades.</p>
+<p>Table 5: Expected frequency of students (assuming that Ho is true) by stated goal for three grades.</p>
 <pre><code>     goals
 grade   Grades  Popular   Sports
     4 61.49163 35.10251 22.40586
     5 90.94561 51.91632 33.13808
     6 94.56276 53.98117 34.45607</code></pre>
 <li>
-The observed frequency table is shown in Table 2.
+The observed frequency table is shown in Table 6.
 </li>
-<p>Table 2: Observed frequency of students by stated goal for three grades.</p>
+<p>Table 6: Observed frequency of students by stated goal for three grades.</p>
 <pre><code>     goals
 grade Grades Popular Sports
     4     63      31     25
     5     88      55     33
     6     96      55     32</code></pre>
 <li>
-χ<sup>2</sup>=1.3121 with 4 df (Table 3).
+χ<sup>2</sup>=1.3121 with 4 df (Table 7).
 </li>
-<p>Table 3: Chi-square test results for testing that the distribution of students by goals differs among grades.</p>
+<p>Table 7: Chi-square test results for testing that the distribution of students by goals differs among grades.</p>
 <pre><code>Pearson&#39;s Chi-squared test with obs 
 X-squared = 1.3121, df = 4, p-value = 0.8593</code></pre>
 <li>
-p-value=0.8593 (Table 3).
+p-value=0.8593 (Table 7).
 </li>
 <li>
 Do not reject H<sub>0</sub> because the p-value&gt;α.
 </li>
 <li>
-It appears that the distributions of goals by students does not differ by grade. Analysis of the row percentage table (Table 4) suggests that grades are the primary goal for each grade.
+It appears that the distributions of goals by students does not differ by grade. Analysis of the row percentage table (Table 8) suggests that grades are the primary goal for each grade.
 </li>
-<p>Table 4: Row percentage table for goals by grade of the student.</p>
+<p>Table 8: Row percentage table for goals by grade of the student.</p>
 <pre><code>     goals
 grade Grades Popular Sports   Sum
     4   52.9    26.1   21.0 100.0
@@ -222,9 +215,9 @@ Chi-square test because (i) the response variable (time since last fire) is cate
 This is an observational study because the stand type was not set or manipulated by the researcher. The stands were not obviously randomly selected.
 </li>
 <li>
-All cells in the expected frequency table (Table 5) were NOT greater than 5. The p-value calculation below is suspect.
+All cells in the expected frequency table (Table 13) were NOT greater than 5. The p-value calculation below is suspect.
 </li>
-<p>Table 5: Expected frequency of stands (assuming that Ho is true) by time since last fire in each of the four stand types.</p>
+<p>Table 13: Expected frequency of stands (assuming that Ho is true) by time since last fire in each of the four stand types.</p>
 <pre><code>      tslf
 sttype     0-100   100-200 200-300
     c  1.6041667  3.208333  2.1875
@@ -232,9 +225,9 @@ sttype     0-100   100-200 200-300
     md 2.9791667  5.958333  4.0625
     d  5.5000000 11.000000  7.5000</code></pre>
 <li>
-The observed frequency table is shown in Table 6.
+The observed frequency table is shown in Table 14.
 </li>
-<p>Table 6: Observed frequency of stands by time since last fire in each of the four stand types.</p>
+<p>Table 14: Observed frequency of stands by time since last fire in each of the four stand types.</p>
 <pre><code>      tslf
 sttype 0-100 100-200 200-300
     c      0       0       7
@@ -242,21 +235,21 @@ sttype 0-100 100-200 200-300
     md     2       5       6
     d      9      15       0</code></pre>
 <li>
-χ<sup>2</sup>=29.3636 with 6 df (Table 7).
+χ<sup>2</sup>=29.3636 with 6 df (Table 15).
 </li>
-<p>Table 7: Chi-square test results for testing that the distribution of stands by time since last fire differs among stand types.</p>
+<p>Table 15: Chi-square test results for testing that the distribution of stands by time since last fire differs among stand types.</p>
 <pre><code>Pearson&#39;s Chi-squared test with obs 
 X-squared = 29.3636, df = 6, p-value = 5.191e-05</code></pre>
 <li>
-p-value=0.0001 (Table 7).
+p-value=0.0001 (Table 15).
 </li>
 <li>
 Reject H<sub>0</sub> because the p-value&lt;α.
 </li>
 <li>
-It appears that the distribution of stands into the times since last fire differs among at least one pair of the stand types. Analysis of the row percentage table (Table 8) suggests the time since last fire increases as one moves from primarily deciduous to primarily coniferous stands.
+It appears that the distribution of stands into the times since last fire differs among at least one pair of the stand types. Analysis of the row percentage table (Table 16) suggests the time since last fire increases as one moves from primarily deciduous to primarily coniferous stands.
 </li>
-<p>Table 8: Row percentage table for time since last fire by stand type.</p>
+<p>Table 16: Row percentage table for time since last fire by stand type.</p>
 <pre><code>      tslf
 sttype 0-100 100-200 200-300   Sum
     c    0.0     0.0   100.0 100.0

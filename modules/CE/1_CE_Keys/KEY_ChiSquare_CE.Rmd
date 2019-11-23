@@ -23,25 +23,25 @@ source("../../../rhelpers/knitr_setup.R")
 library(captioner)
 tbls <- captioner(prefix="Table")
 
+tbls(name="hurr1","Expected frequency table for distribution of hurricanes into the strength and time period categories.")
+tbls(name="hurr2","Observed frequency table for distribution of hurricanes into the strength and time period categories.")
+tbls(name="hurr3","Results from the chi-square test for examining the distribution of hurricanes by strength and time period categories.")
+tbls(name="hurr4","Row percentage table for the observations of hurricane strengths by time period.")
+
 tbls(name="PopExpTable","Expected frequency of students (assuming that Ho is true) by stated goal for three grades.")
 tbls(name="PopObsTable","Observed frequency of students by stated goal for three grades.")
 tbls(name="PopResults","Chi-square test results for testing that the distribution of students by goals differs among grades.")
 tbls(name="PopPercTable","Row percentage table for goals by grade of the student.")
-
-tbls(name="ForestExpTable","Expected frequency of stands (assuming that Ho is true) by time since last fire in each of the four stand types.")
-tbls(name="ForestObsTable","Observed frequency of stands by time since last fire in each of the four stand types.")
-tbls(name="ForestResults","Chi-square test results for testing that the distribution of stands by time since last fire differs among stand types.")
-tbls(name="ForestPercTable","Row percentage table for time since last fire by stand type.")
 
 tbls(name="aids1","Expected frequency table for distribution of individuals into race and sex categories.")
 tbls(name="aids2","Observed frequency table for distribution of individuals into race and sex categories.")
 tbls(name="aids3","Results from the chi-square test for examining the distribution of races by male and female.")
 tbls(name="aids4","Row percentage table for the observations of race by sex categories.")
 
-tbls(name="hurr1","Expected frequency table for distribution of hurricanes into the strength and time period categories.")
-tbls(name="hurr2","Observed frequency table for distribution of hurricanes into the strength and time period categories.")
-tbls(name="hurr3","Results from the chi-square test for examining the distribution of hurricanes by strength and time period categories.")
-tbls(name="hurr4","Row percentage table for the observations of hurricane strengths by time period.")
+tbls(name="ForestExpTable","Expected frequency of stands (assuming that Ho is true) by time since last fire in each of the four stand types.")
+tbls(name="ForestObsTable","Observed frequency of stands by time since last fire in each of the four stand types.")
+tbls(name="ForestResults","Chi-square test results for testing that the distribution of stands by time since last fire differs among stand types.")
+tbls(name="ForestPercTable","Row percentage table for time since last fire by stand type.")
 ```
 
 ----
@@ -61,7 +61,7 @@ tbls(name="hurr4","Row percentage table for the observations of hurricane streng
 ```{r HurrCalc, echo=FALSE, results='hide'}
 obs <- matrix(c(51,26,8,44,21,7),nrow=2,byrow=TRUE)
 rownames(obs) <- c("1901-1950","1951-2000")
-colnames(obs) <- c("1&2","3","4&5")
+colnames(obs) <- c("Cat 1&2","Cat 3","Cat 4&5")
 ( hurr.chi <- chisq.test(obs,correct=FALSE) )
 ```
 
@@ -72,7 +72,7 @@ colnames(obs) <- c("1&2","3","4&5")
   <li>This is an observational study without obvious randomization.</li>
   <li>The test statistic computed below should reasonably follow a chi-square distribution because all cells in the expected table (`r tbls("hurr1",display="cite")`) have values greater than five.</li>
 
-`r tbls("hurr1")
+`r tbls("hurr1")`
 
 ```{r HurrExpTable,echo=FALSE,background="white"}
 round(hurr.chi$expected,1)
@@ -86,14 +86,7 @@ round(hurr.chi$expected,1)
 hurr.chi$observed
 ```
 
-  <li>The &chi;<sup>2</sup> test statistic is `r formatC(hurr.chi$statistic,format="f",digits=1)` with `r formatC(hurr.chi$parameter,format="f",digits=0)` df (`r tbls("hurr3",display="cite")`).</li>
-  
-`r tbls("hurr3")`
-
-```{r echo=FALSE,background="white"}
-kHtest(hurr.chi)
-```
-
+  <li>The &chi;<sup>2</sup> test statistic is `r formatC(hurr.chi$statistic,format="f",digits=4)` with `r formatC(hurr.chi$parameter,format="f",digits=0)` df (`r tbls("hurr3",display="cite")`).</li>
   <li>The p-value is `r kPvalue(hurr.chi$p.value,include.p=FALSE,latex=FALSE)`.</li>
   <li>The H<sub>O</sub> is rejected because the p-value<&alpha;.</li>
   <li>It appears that the distribution of hurricanes into the strength categories is the same for both time periods (`r tbls("hurr4",display="cite")`).</li>
@@ -109,9 +102,7 @@ percTable(obs,margin=1,digits=1)
 R Appendix.
 ```{r eval=FALSE,prompt=FALSE}
 library(NCStats)
-<<HurrCalc>>
-<<HurrExpTable>>
-<<HurrResids>>
+distrib(0.0382,distrib="chisq",df=2,lower.tail=FALSE)
 ```
 
 ----
