@@ -11,8 +11,9 @@ title: Resources
 
 ## Learning Assistance
 1. Glossary -- [Symbols](symbols), [Key Words](definitions)
-1. [R Function Guide](MTH107-RGuide.pdf){:target="_blank"} (or as [PPT](MTH107-RGuide.pptx))
-1. [Hypothesis Testing Fact Sheet](MTH107-HOGuide.pdf){:target="_blank"} (or as [PPT](MTH107-HOGuide.pptx))
+1. [R Function Guide](MTH107-RGuide.pdf){:target="_blank"}
+1. [R Method Explanation Videos](RVideos)
+1. [Hypothesis Testing Fact Sheet](MTH107-HOGuide.pdf){:target="_blank"}
 1. [11 Steps of Hypothesis Testing](../modules/11-steps)
 1. [FAQ](FAQ/)
 
