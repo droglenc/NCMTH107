@@ -37,11 +37,12 @@ Researchers measured the equatorial radius of [Jupiter](https://en.wikipedia.org
 
 ----
 
+&nbsp;
+
 <div class="alert alert-success">
 The next two questions are not confidence region questions, rather they are asking you to compute a sample size given &sigma;, a margin-of-error tolerance, and a level of confidence (which, ultimately, is turned into a Z<sup>*</sup>). See the appropriate section in the reading for the formula and example calculations.
 </div>
 
-&nbsp;
 
 ## Blood Pressure in Children
 <img src="zimgs/bloodpressure2.jpg" alt="Blood Pressure" class="img-right">
@@ -59,7 +60,3 @@ An investigator wants to estimate the mean systolic blood pressure in children w
 Calf growth early in life should be approximately 1000 g per day. Owners of a large cattle farm want to assure that their calves are growing at approximately this rate because slow growth might suggest a feeding problem and fast growth would suggest a future size problem (i.e., too many big animals in the available space). The owners want to sample enough of their calves so that they can estimate the growth rate to within 50 g per day, with 99% confidence, assuming that variabilty between individual calves is approximately 200 g per day. Calculate their required sample size.
 
 ----
-
-### Footnotes
-
-[^1]: This was modified from [here](http://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Power/BS704_Power3.html).
