@@ -42,7 +42,7 @@ For each situation below, (i) write a sentence that defines the p-value specific
 
 ## Beetle Size
 <img src="zimgs/beetle.jpg" alt="Beetle" class="img-right">
-Researchers examined the size of two different species of beetles. They hypothesized that the thorax length of the *Halticus oleracea* species would be greater than 190 &mu;m. The data for their study is in Beetles.csv ([file](https://github.com/droglenc/NCData/raw/master/Beetles.csv), [meta](https://github.com/droglenc/NCData/blob/master/Beetles_meta.txt)). Use this information to answer the questions below. [*Either summarize these quantitative data by group (i.e., species) or filter the data to just the Halticus oleracea species. See your R fact sheet or [this FAQ](../../resources/FAQ/FAQs/subset-1group.html)).*]
+Researchers examined the size of two different species of beetles. They hypothesized that the thorax length of the *Halticus oleracea* species would be greater than 190 &mu;m. The data for their study is in Beetles.csv ([file](https://github.com/droglenc/NCData/raw/master/Beetles.csv), [meta](https://github.com/droglenc/NCData/blob/master/Beetles_meta.txt)). Use this information to answer the questions below. [*NOTE: Either summarize these quantitative data by group (i.e., species) or filter the data to just the Halticus oleracea species. See your R fact sheet or [this FAQ](../../resources/FAQ/FAQs/subset-1group.html)).*]
 
 1. construct statistical hypotheses, 
 1. compute the sample mean, 

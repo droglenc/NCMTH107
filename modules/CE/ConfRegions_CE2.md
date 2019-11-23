@@ -10,7 +10,7 @@ css: "/css/modules.css"
 <div class="alert alert-success">
 I urge you to follow these steps when answering all confidence region questions:
 <ol type="a">
-  <li>Identify the level of confidence (100(1-&alpha;).</li>
+  <li>Identify the level of confidence (i.e., 100(1-&alpha;)%).</li>
   <li>Identify whether a lower confidence bound (greater than H<sub>A</sub>), upper confidence bound (less than H<sub>A</sub>), or confidence interval (not equals H<sub>A</sub>) should be constructed.</li>
   <li>Find Z<sup>*</sup> (I suggest including a drawing to illustrate your calculation).</li>
   <li>Calculate the confidence region values (i.e., x&#772;+Z<sup>*</sup>SE).</li>
@@ -44,11 +44,11 @@ Researchers examined the size of two different species of beetles. They hypothes
 
 ----
 
+&nbsp;
+
 <div class="alert alert-success">
 This is not a confidence region question, rather it is asking you to compute a sample size given &sigma;, a margin-of-error tolerance, and a level of confidence (which, ultimately, is turned into a Z<sup>*</sup>). See the appropriate section in the reading for the formula and example calculations.
 </div>
-
-&nbsp;
 
 ## Internet Usage
 <img src="zimgs/internet.jpg" alt="Internet" class="img-right">
