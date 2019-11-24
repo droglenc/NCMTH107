@@ -9,7 +9,7 @@ css: /css/modules.css
 The first Quiz (see [dates page](../Dates-Current)) will cover material from Module 1 (*Why Statistics Is Important*), Module 2 (*Foundational Definitions*), Module 3 (*Data Production*), Module 5 (*Univariate EDA - Categorical*), Module 6 (*Summaries for One Quantitative Variable*), and Module 7 (*Univariate EDA - Quantitative*). There will be **no** questions regarding R or that will use R. Any material in the module readings and videos (specifically questions on the preparation guides), exercises, additional exercises, or review exercises may be on the quiz.
 
 * [**5%**] Five multiple choice questions. These are primarily definitions or symbols.
-* [**16%**] Four short answer (1-4 sentences) questions. Three of these are from Module 1 (*Why Statistics Is Important*) and one is from Module 3 (*Data Production*). All of these questions were either part of the exercises or on a module preparation guide.
+* [**16%**] Four short answer (2-4 sentences) questions (see [this resource](../ShortAnswerQuestions)).
 * [**8%**] Identify types of variables ... [like this](../../modules/CE/FoundationalDefns_CE1.html#types-of-variables-i) in Module 2 (*Foundational Definitions*).
 * [**12%**] Perform an IVPPSS analysis ... [like this](../../modules/CE/FoundationalDefns_CE1.html#sustainability-survey) (and many others in the exercises and review exercises) in Module 2 (*Foundational Definitions*).
 * [**6%**] Determine if a situation represents an experiment or an observational study ... [like this](../../modules/CE/DataProduction_CE1.html#study-types-i) and [this](../../modules/CE/DataProduction_CE2.html#study-types-ii) in Module 3 (*Data Production*).

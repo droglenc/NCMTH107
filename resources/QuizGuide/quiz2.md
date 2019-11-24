@@ -9,7 +9,7 @@ css: /css/modules.css
 The second Quiz (see [dates page](../Dates-Current)) will cover material from Module 8 (*Normal Distributions*), Module 9 (*Bivariate EDA -- Categorical*), Module 10 (*Bivariate EDA -- Quantitative*), and Module 11 (*Linear Regression*). The only R work that you will do is related to using `distrib()` for normal distribution calculations. The portion of the [R Guide](../MTH107-RGuide.pdf) related to `distrib()` will be provided on the quiz. Any material in the module readings and videos (specifically questions on the preparation guides), exercises, or review exercises may be on the quiz.
 
 * [**5%**] Five multiple choice questions. These are primarily definitions or symbols.
-* [**8%**] Two short answer essay (2-4 sentences) questions all from the Module 11 (*Linear Regression*) preparation guide.
+* [**8%**] Two short answer essay (2-4 sentences) questions (see [this resource](../ShortAnswerQuestions)).
 * [**22%**] Normal distribution calculation questions (will use `distrib()`) ... [like this](../../modules/CE/NormalDist_CE1.html#carpenter-ants) (among many others) in Module 8 (*Normal Distributions*).
 * [**16%**] Calculations from a two-way frequency table (row-, column-, and table-percentages as necessary) ... [like this](../../modules/CE/BEDACat_CE1.html#fire-blight-disease) (and others, but you won't have to do the R work) in Module 9 (*Bivariate EDA -- Categorical*).
 * [**20%**] Perform a bivariate EDA for quantitative data ... [like this](../../modules/CE/BEDAQuant_CE1.html#animal-fat-and-breast-cancer) (and others, but you won't have to do the R work) in Module 10 (*Bivariate EDA -- Quantitative*).
