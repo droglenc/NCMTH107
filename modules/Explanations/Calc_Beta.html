@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Derek H. Ogle" />
+
+
+<title>Calculate Beta</title>
+
+<script src="zlibs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="zlibs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="zlibs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="zlibs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="zlibs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="zlibs/navigation-1.1/tabsets.js"></script>
+<link href="zlibs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="zlibs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="/css/modules.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Calculate Beta</h1>
+<h4 class="author">Derek H. Ogle</h4>
+
+</div>
+
+
+<hr />
+<p>A Type II error is defined as not rejecting a false H<sub>0</sub>. The probability of making a Type II error is β, which cannot usually be calculated because one would have to know the true population mean. We calculated β in class, however, to demonstrate its concept and to see what types of things can change the relative size of β.</p>
+<div id="first-example" class="section level2">
+<h2>First Example</h2>
+<p>Calculating β requires knowing α, n, σ, the H<sub>A</sub> (and, thus, the H<sub>0</sub>), and the actual or true population mean. This example, defines these items as:</p>
+<ul>
+<li>α = 0.10</li>
+<li>n = 50</li>
+<li>σ = 40</li>
+<li>H<sub>A</sub>: μ&gt;300</li>
+<li>actual population mean is 310</li>
+</ul>
+<p>Calculating β is a four-step process. The <strong>first step</strong> is to identify the null distribution, or the sampling distribution assuming that H<sub>0</sub> is true. In this case, the null distribution is normal (because n=40&gt;30) with a mean of 300 (from assuming that H<sub>0</sub> is true) and a standard ERROR of <span class="math inline">\(\frac{40}{\sqrt{50}}\)</span>=5.657.</p>
+<p>The <strong>second step</strong> is to identify the “rejection wall” on the null distribution. The rejection wall is the sample mean such that values “more extreme” represent rejecting H<sub>0</sub>. In this case, this would be the sample mean that has an area of α “greater” (because H<sub>A</sub> is a “greater than”). This REVERSE calculation on the null distribution is as follows:</p>
+<pre class="r"><code>&gt; distrib(0.10,mean=300,sd=40/sqrt(50),type=&quot;q&quot;,lower.tail=FALSE)</code></pre>
+<pre><code>[1] 307.2496</code></pre>
+<p>Thus, sample means greater than 307.25 will result in H<sub>0</sub> being rejected, whereas smaller values will lead to H<sub>0</sub> not being rejected. This rejection wall looks like the following on the null distribution.</p>
+<p><img src="Calc_Beta_files/figure-html/unnamed-chunk-5-1.png" width="432" /></p>
+<p>The <strong>third step</strong> is to identify the ACTUAL distribution, or the sampling distribution centered on the true population mean. In this case, the actual distribution is also normal (because n=40&gt;30) with a mean of 310 (from the actual population mean given above) and the same standard error of 5.657.</p>
+<p>The <strong>fourth step</strong> is to compute the proportion of sample means in the “do not reject H<sub>0</sub>” region of the ACTUAL distribution. This FORWARD calculation is shown below and illustrated in the figure below.</p>
+<pre class="r"><code>&gt; distrib(307.25,mean=310,sd=40/sqrt(50))</code></pre>
+<pre><code>[1] 0.3134354</code></pre>
+<p><img src="Calc_Beta_files/figure-html/unnamed-chunk-8-1.png" width="432" /></p>
+<p>Thus, β for this situation is 0.3134.</p>
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+The second step is always a REVERSE calculation with α more extreme as defined by H<sub>A</sub>.
+</li>
+<li>
+The fourth step is always a FORWARD calculation in the OPPOSITE direction of α in the second step.
+</li>
+</ul>
+</div>
+<hr />
+</div>
+<div id="second-example" class="section level2">
+<h2>Second Example</h2>
+<p>This example, defines these items as:</p>
+<ul>
+<li>α = 0.05</li>
+<li>n = 80</li>
+<li>σ = 100</li>
+<li>H<sub>A</sub>: μ&lt;550</li>
+<li>actual population mean is 520</li>
+</ul>
+<p>The null distribution in the <strong>first step</strong> is normal (because n=80&gt;30) with a mean of 550 (from assuming that H<sub>0</sub> is true) and a standard ERROR of <span class="math inline">\(\frac{100}{\sqrt{80}}\)</span>=11.180. The “rejection wall” in the <strong>second step</strong> is 568.39, which has α “less” (because of H<sub>A</sub>).</p>
+<pre class="r"><code>&gt; distrib(0.05,mean=550,sd=100/sqrt(80),type=&quot;q&quot;)</code></pre>
+<pre><code>[1] 531.61</code></pre>
+<p><img src="Calc_Beta_files/figure-html/unnamed-chunk-11-1.png" width="432" /></p>
+<p>The actual distributioin in the <strong>third step</strong> is normal with a mean of 520 and standard error of 11.180. The proportion of sample means in the “do not reject H<sub>0</sub>” region of the actual distribution for the <strong>fourth step</strong> is shown below and illustrated in the figure below. Thus, β is 0.1495.</p>
+<pre class="r"><code>&gt; distrib(531.61,mean=520,sd=100/sqrt(80),lower.tail=FALSE)</code></pre>
+<pre><code>[1] 0.149535</code></pre>
+<p><img src="Calc_Beta_files/figure-html/unnamed-chunk-14-1.png" width="432" /></p>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

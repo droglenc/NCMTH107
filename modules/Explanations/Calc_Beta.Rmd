@@ -1,0 +1,158 @@
+---
+layout: page
+title: Calculate Beta
+author: Derek H. Ogle
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 4
+    fig_width: 4.5
+    self_contained: false
+    lib_dir: zlibs
+---
+
+```{r echo=FALSE, eval=FALSE, warning=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Explanations/")
+source("../../rhelpers/rhelpers.R")
+modHTML("Calc_Beta")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+source("../../rhelpers/knitr_setup.R")
+```
+
+----
+
+A Type II error is defined as not rejecting a false H<sub>0</sub>. The probability of making a Type II error is &beta;, which cannot usually be calculated because one would have to know the true population mean. We calculated &beta; in class, however, to demonstrate its concept and to see what types of things can change the relative size of &beta;.
+
+## First Example
+Calculating &beta; requires knowing &alpha;, n, &sigma;, the H<sub>A</sub> (and, thus, the H<sub>0</sub>), and the actual or true population mean. This example, defines these items as:
+
+* &alpha; = 0.10
+* n = 50
+* &sigma; = 40
+* H<sub>A</sub>: &mu;&gt;300
+* actual population mean is 310
+
+Calculating &beta; is a four-step process. The **first step** is to identify the null distribution, or the sampling distribution assuming that H<sub>0</sub> is true. In this case, the null distribution is normal (because n=40&gt;30) with a mean of 300 (from assuming that H<sub>0</sub> is true) and a standard ERROR of $\frac{40}{\sqrt{50}}$=`r formatC(40/sqrt(50),format="f",digits=3)`.
+
+The **second step** is to identify the "rejection wall" on the null distribution. The rejection wall is the sample mean such that values "more extreme" represent rejecting H<sub>0</sub>. In this case, this would be the sample mean that has an area of &alpha; "greater" (because H<sub>A</sub> is a "greater than"). This REVERSE calculation on the null distribution is as follows:
+
+```{r eval=FALSE}
+distrib(0.10,mean=300,sd=40/sqrt(50),type="q",lower.tail=FALSE)
+```
+```{r echo=FALSE}
+( distrib(0.10,mean=300,sd=40/sqrt(50),type="q",lower.tail=FALSE,plot=FALSE) )
+```
+
+Thus, sample means greater than `r formatC(distrib(0.10,mean=300,sd=40/sqrt(50),type="q",lower.tail=FALSE),format="f",digits=2)` will result in H<sub>0</sub> being rejected, whereas smaller values will lead to H<sub>0</sub> not being rejected. This rejection wall looks like the following on the null distribution.
+
+```{r echo=FALSE}
+par(mar=c(3.5,1,1,1),mgp=c(1.5,0.6,0))
+mu0 <- 300
+se <- 40/sqrt(50)
+x <- seq(mu0-6*se,mu0+10*se,length.out=1000)
+fx <- dnorm(x,mean=mu0,sd=se)
+NCStats:::c.region(307.25,x,fx,lower.tail=FALSE,plot=TRUE,
+                   show.lbl=TRUE,lbl.col="red",shade.col="red",
+                   show.ans=FALSE,yaxt="n",ylab="",xlab="",xlim=c(275,335))
+abline(v=307.25,col="red")
+text(323,0.07,"Reject Ho",pos=2,col="red")
+text(275,0.07,"Do Not Reject Ho",pos=4,col="green4")
+```
+
+The **third step** is to identify the ACTUAL distribution, or the sampling distribution centered on the true population mean. In this case, the actual distribution is also normal (because n=40&gt;30) with a mean of 310 (from the actual population mean given above) and the same standard error of `r formatC(40/sqrt(50),format="f",digits=3)`.
+
+The **fourth step** is to compute the proportion of sample means in the "do not reject H<sub>0</sub>" region of the ACTUAL distribution. This FORWARD calculation is shown below and illustrated in the figure below.
+
+```{r eval=FALSE}
+distrib(307.25,mean=310,sd=40/sqrt(50))
+```
+```{r echo=FALSE}
+( distrib(307.25,mean=310,sd=40/sqrt(50),plot=FALSE) )
+```
+```{r echo=FALSE}
+par(mar=c(3.5,1,1,1),mgp=c(1.5,0.6,0))
+mua <- 310
+x <- c(seq(mua-9*se,mua+9*se,length.out=1000),307.25)
+x <- x[order(x)]
+fx <- dnorm(x,mean=mua,sd=se)
+NCStats:::c.region(307.25,x,fx,lower.tail=TRUE,plot=TRUE,
+                   show.lbl=TRUE,lbl.col="red",shade.col="green4",
+                   show.ans=FALSE,yaxt="n",ylab="",xlab="",xlim=c(275,335))
+abline(v=307.25,col="red")
+text(325,0.07,"Reject Ho",pos=2,col="red")
+text(278,0.07,"Do Not Reject Ho",pos=4,col="green4")
+```
+
+Thus, &beta; for this situation is `r formatC(distrib(307.25,mean=310,sd=40/sqrt(50),plot=FALSE),format="f",digits=4)`.
+
+<div class="alert alert-warning">
+<strong>Note:</strong> 
+<ul>
+<li>The second step is always a REVERSE calculation with &alpha; more extreme as defined by H<sub>A</sub>.</li>
+<li>The fourth step is always a FORWARD calculation in the OPPOSITE direction of &alpha; in the second step.</li>
+</ul>
+</div>
+
+----
+
+## Second Example
+This example, defines these items as:
+
+* &alpha; = 0.05
+* n = 80
+* &sigma; = 100
+* H<sub>A</sub>: &mu;&lt;550
+* actual population mean is 520
+
+The null distribution in the **first step** is normal (because n=80&gt;30) with a mean of 550 (from assuming that H<sub>0</sub> is true) and a standard ERROR of $\frac{100}{\sqrt{80}}$=`r formatC(100/sqrt(80),format="f",digits=3)`. The "rejection wall" in the **second step** is `r formatC(distrib(0.05,mean=550,sd=100/sqrt(80),type="q",lower.tail=FALSE),format="f",digits=2)`, which has &alpha; "less" (because of H<sub>A</sub>).
+
+```{r eval=FALSE}
+distrib(0.05,mean=550,sd=100/sqrt(80),type="q")
+```
+```{r echo=FALSE}
+( distrib(0.05,mean=550,sd=100/sqrt(80),type="q",plot=FALSE) )
+```
+
+```{r echo=FALSE}
+par(mar=c(3.5,1,1,1),mgp=c(1.5,0.6,0))
+mu0 <- 550
+se <- 100/sqrt(80)
+x <- c(seq(mu0-9*se,mu0+9*se,length.out=1000),531.61)
+x <- x[order(x)]
+fx <- dnorm(x,mean=mu0,sd=se)
+NCStats:::c.region(531.61,x,fx,lower.tail=TRUE,plot=TRUE,
+                   show.lbl=TRUE,lbl.col="red",shade.col="red",
+                   show.ans=FALSE,yaxt="n",ylab="",xlab="",xlim=c(470,600))
+abline(v=531.61,col="red")
+text(510,0.035,"Reject Ho",pos=2,col="red")
+text(545,0.035,"Do Not Reject Ho",pos=4,col="green4")
+```
+
+The actual distributioin in the **third step** is normal with a mean of 520 and standard error of `r formatC(100/sqrt(80),format="f",digits=3)`. The proportion of sample means in the "do not reject H<sub>0</sub>" region of the actual distribution for the **fourth step** is shown below and illustrated in the figure below. Thus, &beta; is `r formatC(distrib(531.61,mean=520,sd=100/sqrt(80),lower.tail=FALSE,plot=FALSE),format="f",digits=4)`.
+
+```{r eval=FALSE}
+distrib(531.61,mean=520,sd=100/sqrt(80),lower.tail=FALSE)
+```
+```{r echo=FALSE}
+( distrib(531.61,mean=520,sd=100/sqrt(80),lower.tail=FALSE,plot=FALSE) )
+```
+```{r echo=FALSE}
+par(mar=c(3.5,1,1,1),mgp=c(1.5,0.6,0))
+mua <- 520
+x <- c(seq(mua-9*se,mua+9*se,length.out=1000),531.61)
+x <- x[order(x)]
+fx <- dnorm(x,mean=mua,sd=se)
+NCStats:::c.region(531.61,x,fx,lower.tail=FALSE,plot=TRUE,
+                   show.lbl=TRUE,lbl.col="red",shade.col="green4",
+                   show.ans=FALSE,yaxt="n",ylab="",xlab="",xlim=c(470,600))
+abline(v=531.61,col="red")
+text(510,0.035,"Reject Ho",pos=2,col="red")
+text(545,0.035,"Do Not Reject Ho",pos=4,col="green4")
+```
+
+
+----
