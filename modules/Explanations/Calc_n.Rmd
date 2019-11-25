@@ -25,14 +25,28 @@ source("../../rhelpers/knitr_setup.R")
 
 ----
 
-The required sample size to estimate a population mean within a prescribed margin-of-error (ME) and level of confidence with a given value of &sigma; (the population standard deviation) can be computed with $(\frac{Z^{*}\sigma}{ME})^2$. Here, Z<sup>*</sup> will always come from assuming a confidence interval (rather than a lower or upper bound) because of the use of "within."
+The required sample size to estimate a population mean within a prescribed margin-of-error (ME) and level of confidence with a given value of &sigma; (the population standard deviation) can be computed with $(\frac{Z^{*}\sigma}{ME})^2$.
 
-For example, suppose that a research wanted to determine the sample size required to estimated the population mean within 10 "units" with 90% confidence assuming that &sigma'=500. In this case, ME=10 (the margin-of-error comes from the prescribed "within" amount) and &sigma; is obviously 500. To find Z<sup>*</sup>, assume a 90% confidence INTERVAL such that 90% is in the "middle" of a standard normal distribution and 5% is in either tail. Thus, Z<sup>*</sup> is either -1.645 or +1.645 (does not make a difference as it will be squared in the sample size calculation) as computed with
+<div class="alert alert-warning">
+<strong>Note:</strong> 
+<ul>
+<li>Z<sup>*</sup> will always come from assuming a confidence interval (rather than a lower or upper bound) because of the use of "within."</li>
+</ul>
+</div>
+
+For example, suppose that a researcher wanted to determine the sample size required to estimated the population mean within 10 "units" with 90% confidence assuming that &sigma;=500. In this case, ME=10 (which comes from the prescribed "within" amount) and &sigma; is obviously 500. Assuming a 90% confidence INTERVAL (i.e., 90% is in the "middle" of a standard normal distribution and 5% is in either tail) Z<sup>*</sup> is either -1.645 or +1.645 (does not make a difference as it will be squared in the sample size calculation) as computed with
 
 ```{r}
 distrib(0.05,type="q")
 ```
 
-Therefore, the required sample size is $\frac{1.645*50}{10}$=`r formatC(1.645*500/10,format="f",digits=2)`. It is, of course, not possible to take a fraction of a sample size but note that sample size calculations are **ALWAYS** rounded up. Thus, in this example, one would take a sample size of `r ceiling(1.645*500/10)` to meet the prescribed requirements.
+Therefore, the required sample size is $(\frac{1.645*50}{10})^2$=`r formatC(1.645*500/10,format="f",digits=2)`. It is, of course, not possible to take a fraction of a sample size but note that sample size calculations are **ALWAYS** rounded up. Thus, in this example, one would take a sample size of `r ceiling(1.645*500/10)` to meet the prescribed requirements.
+
+<div class="alert alert-warning">
+<strong>Note:</strong> 
+<ul>
+<li>Sample size calculations are always rounded up to a whole number.</li>
+</ul>
+</div>
 
 ----
