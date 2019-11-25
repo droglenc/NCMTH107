@@ -34,8 +34,8 @@ Use the materials below to answer the questions on [this preparation guide](HypT
 
 * [![PDF](../img/pdf.png) Reading](../book/Hypothesis Test Errors.pdf).
 * ![YouTube Link](../img/youtube.png) Statistical Error Types: [A](https://www.youtube.com/watch?v=7mE-K_w1v90){:target="_blank"} [8 mins] **AND** [B](https://www.youtube.com/watch?v=OWn3Ko1WYTA){:target="_blank"} [*between 1:29 and 4:07*]
-* [![Web](../img/web.png) Compute &beta; explanation](Explanations/Calc_Beta)
-    * alternatively, [![YouTube Link](../img/youtube.png) Computing &beta; &amp; power](https://www.youtube.com/watch?v=BJZpx7Mdde4){:target="_blank"} [12 mins]
+* [![Web](../img/web.png) Calculate &beta; explanation](Explanations/Calc_Beta)
+    * alternatively, [![YouTube Link](../img/youtube.png) Calculate &beta; &amp; power](https://www.youtube.com/watch?v=BJZpx7Mdde4){:target="_blank"} [12 mins]
 
 ----
 

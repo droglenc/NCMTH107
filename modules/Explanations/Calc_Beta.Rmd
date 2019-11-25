@@ -13,8 +13,9 @@ output:
 
 ```{r echo=FALSE, eval=FALSE, warning=FALSE}
 # Renders an appropriate HTML file for the webpage
-source("rhelpers/rhelpers.R")
-modHTML("modules/Explanations/Calc_Beta")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/Explanations/")
+source("../../rhelpers/rhelpers.R")
+modHTML("Calc_Beta")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
