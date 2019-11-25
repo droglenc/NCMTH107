@@ -16,7 +16,7 @@ I urge you to follow these steps when answering all confidence region questions:
   <li>Calculate the confidence region values (i.e., x&#772;+Z<sup>*</sup>SE).</li>
   <li>Specifically interpret the confidence region with a complete sentence.</li>
 </ol>
-A reminder to use these steps will <strong>NOT</strong> be provided on future quizzes, but you should get in the habit of following them. See [here](../Explanations/Calc_CI_Z)) for a demonstration of the steps.
+A reminder to use these steps will <strong>NOT</strong> be provided on future quizzes, but you should get in the habit of following them. See <a href="../Explanations/Calc_CI_Z.html">here</a> for a demonstration of the steps.
 </div>
 
 &nbsp;
@@ -40,7 +40,7 @@ Researchers measured the equatorial radius of [Jupiter](https://en.wikipedia.org
 &nbsp;
 
 <div class="alert alert-success">
-The next two questions are not confidence region questions, rather they are asking you to compute a sample size given &sigma;, a margin-of-error tolerance, and a level of confidence (which, ultimately, is turned into a Z<sup>*</sup>). See [here](../Explanations/Calc_n)) or the appropriate section in the reading for the formula and example calculations.
+The next two questions are not confidence region questions, rather they are asking you to compute a sample size given &sigma;, a margin-of-error tolerance, and a level of confidence (which, ultimately, is turned into a Z<sup>*</sup>). See <a href="../Explanations/Calc_n.html">here</a> or the appropriate section in the reading for the formula and example calculations.
 </div>
 
 
