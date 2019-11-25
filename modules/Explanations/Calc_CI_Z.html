@@ -21,7 +21,7 @@ css: "/css/modules.css"
 <li>If H<sub>A</sub> is a “greater than” then construct an “lower confidence bound.”</li>
 <li>If H<sub>A</sub> is a “not equals” then construct an “confidence interval.”</li>
 </ul></li>
-<li><strong>Determine Z<sup>*</sup> by shading on the standard normal distribution (mean=0,SD/SE=1) an area of C according to H<sup>A</sup>.</strong>
+<li><strong>Determine Z<sup>*</sup> by shading on the standard normal distribution (mean=0,SD/SE=1) an area of C according to H<sub>A</sub>.</strong>
 <ul>
 <li>If H<sub>A</sub> is a “less than” then shade C to the left and Z<sup>*</sup> is positive.</li>
 <li>If H<sub>A</sub> is a “greater than” then shade C to the right and Z<sup>*</sup> is negative.</li>
@@ -44,7 +44,7 @@ css: "/css/modules.css"
 <li>C=100(1-0.10)=90%</li>
 <li>An upper confidence bound because H<sub>A</sub> is a “greater than.”</li>
 <li>Z<sup>*</sup>=1.282 as shown below.</li>
-<li>The confidence region value is thus 95.2+1.282<span class="math inline">\(\frac{20}{\sqrt{30}\)</span> = 95.2+4.7=99.9.</li>
+<li>The confidence region value is thus 95.2+1.282<span class="math inline">\(\frac{20}{\sqrt{30}}\)</span> = 95.2+4.7=99.9.</li>
 <li>I am 90% confident that the mean time for all students to take the quiz is less than 99.9 minutes.</li>
 </ol>
 <pre class="r"><code>&gt; distrib(0.9,type=&quot;q&quot;)</code></pre>
@@ -58,7 +58,7 @@ css: "/css/modules.css"
 <li>C=100(1-0.05)=95%</li>
 <li>A lower confidence bound because H<sub>A</sub> is a “less than.”</li>
 <li>Z<sup>*</sup>=-1.282 as shown below.</li>
-<li>The confidence region value is thus 8.3-1.645<span class="math inline">\(\frac{1.3}{\sqrt{50}\)</span> = 8.3+0.30=8.60.</li>
+<li>The confidence region value is thus 8.3-1.645<span class="math inline">\(\frac{1.3}{\sqrt{50}}\)</span> = 8.3+0.30=8.60.</li>
 <li>I am 90% confident that the mean time for all students to walk between the Science Center and the Ponzio Center is more than 8.60 minutes.</li>
 </ol>
 <pre class="r"><code>&gt; distrib(0.95,type=&quot;q&quot;,lower.tail=FALSE)</code></pre>
@@ -72,7 +72,7 @@ css: "/css/modules.css"
 <li>C=100(1-0.01)=99%</li>
 <li>A confidence interval because H<sub>A</sub> is a “not equals.”</li>
 <li>Z<sup>*</sup>=±2.576 as shown below.</li>
-<li>The confidence region value is thus 37.8±2.576<span class="math inline">\(\frac{9.7}{\sqrt{40}\)</span> = 37.8±3.95=(34.27,41.33).</li>
+<li>The confidence region value is thus 37.8±2.576<span class="math inline">\(\frac{9.7}{\sqrt{40}}\)</span> = 37.8±3.95=(34.27,41.33).</li>
 <li>I am 99% confident that the mean time that all students spend preparing for the prep checks is between 34.27 and 41.33 minutes.</li>
 </ol>
 <pre class="r"><code>&gt; distrib(0.005,type=&quot;q&quot;)</code></pre>

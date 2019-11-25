@@ -35,7 +35,7 @@ Constructing a confidence region is a five-step process as described below.
     * If H<sub>A</sub> is a "less than" then construct an "upper confidence bound."
     * If H<sub>A</sub> is a "greater than" then construct an "lower confidence bound."
     * If H<sub>A</sub> is a "not equals" then construct an "confidence interval."
-1. <strong>Determine Z<sup>*</sup> by shading on the standard normal distribution (mean=0,SD/SE=1) an area of C according to H<sup>A</sup>.</strong>
+1. <strong>Determine Z<sup>*</sup> by shading on the standard normal distribution (mean=0,SD/SE=1) an area of C according to H<sub>A</sub>.</strong>
     * If H<sub>A</sub> is a "less than" then shade C to the left and Z<sup>*</sup> is positive.
     * If H<sub>A</sub> is a "greater than" then shade C to the right and Z<sup>*</sup> is negative.
     * If H<sub>A</sub> is a "not equals" then shade C in the middle to get two Z<sup>*</sup>s that are positive and negative. (To use `distrib()` here you will need to put half of the area outside of C into each tail of the distribution.)
@@ -53,7 +53,7 @@ Suppose that I hypothesized that the mean time to take a quiz is less than 100 m
 1. C=100(1-0.10)=90%
 1. An upper confidence bound because H<sub>A</sub> is a "greater than."
 1. Z<sup>*</sup>=`r formatC(distrib(0.9,type="q"),format="f",digits=3)` as shown below.
-1. The confidence region value is thus 95.2+`r formatC(distrib(0.9,type="q"),format="f",digits=3)`$\frac{20}{\sqrt{30}$ = 95.2+`r formatC(distrib(0.9,type="q")*20/sqrt(30),format="f",digits=1)`=`r formatC(95.2+distrib(0.9,type="q")*20/sqrt(30),format="f",digits=1)`.
+1. The confidence region value is thus 95.2+`r formatC(distrib(0.9,type="q"),format="f",digits=3)`$\frac{20}{\sqrt{30}}$ = 95.2+`r formatC(distrib(0.9,type="q")*20/sqrt(30),format="f",digits=1)`=`r formatC(95.2+distrib(0.9,type="q")*20/sqrt(30),format="f",digits=1)`.
 1. I am 90% confident that the mean time for all students to take the quiz is less than `r formatC(95.2+distrib(0.9,type="q")*20/sqrt(30),format="f",digits=1)` minutes.
 
 ```{r}
@@ -68,7 +68,7 @@ Suppose that I hypothesized that the mean time to walk between the Science Cente
 1. C=100(1-0.05)=95%
 1. A lower confidence bound because H<sub>A</sub> is a "less than."
 1. Z<sup>*</sup>=`r formatC(distrib(0.9,type="q",lower.tail=FALSE),format="f",digits=3)` as shown below.
-1. The confidence region value is thus 8.3-`r formatC(distrib(0.95,type="q"),format="f",digits=3)`$\frac{1.3}{\sqrt{50}$ = 8.3+`r formatC(distrib(0.95,type="q")*1.3/sqrt(50),format="f",digits=2)`=`r formatC(8.3+distrib(0.95,type="q")*1.3/sqrt(50),format="f",digits=2)`.
+1. The confidence region value is thus 8.3-`r formatC(distrib(0.95,type="q"),format="f",digits=3)`$\frac{1.3}{\sqrt{50}}$ = 8.3+`r formatC(distrib(0.95,type="q")*1.3/sqrt(50),format="f",digits=2)`=`r formatC(8.3+distrib(0.95,type="q")*1.3/sqrt(50),format="f",digits=2)`.
 1. I am 90% confident that the mean time for all students to walk between the Science Center and the Ponzio Center is more than `r formatC(8.3+distrib(0.95,type="q")*1.3/sqrt(50),format="f",digits=2)` minutes.
 
 ```{r}
@@ -84,7 +84,7 @@ Suppose that I hypothesized that the mean time students spend preparing for the 
 1. C=100(1-0.01)=99%
 1. A confidence interval because H<sub>A</sub> is a "not equals."
 1. Z<sup>*</sup>=&plusmn;`r formatC(distrib(0.995,type="q"),format="f",digits=3)` as shown below.
-1. The confidence region value is thus 37.8&plusmn;`r formatC(distrib(0.995,type="q"),format="f",digits=3)`$\frac{9.7}{\sqrt{40}$ = 37.8&plusmn;`r formatC(distrib(0.995,type="q")*9.7/sqrt(40),format="f",digits=2)`=(`r formatC(37.8-distrib(0.995,type="q")*9.7/sqrt(50),format="f",digits=2)`,`r formatC(37.8+distrib(0.995,type="q")*9.7/sqrt(50),format="f",digits=2)`).
+1. The confidence region value is thus 37.8&plusmn;`r formatC(distrib(0.995,type="q"),format="f",digits=3)`$\frac{9.7}{\sqrt{40}}$ = 37.8&plusmn;`r formatC(distrib(0.995,type="q")*9.7/sqrt(40),format="f",digits=2)`=(`r formatC(37.8-distrib(0.995,type="q")*9.7/sqrt(50),format="f",digits=2)`,`r formatC(37.8+distrib(0.995,type="q")*9.7/sqrt(50),format="f",digits=2)`).
 1. I am 99% confident that the mean time that all students spend preparing for the prep checks is between `r formatC(37.8-distrib(0.995,type="q")*9.7/sqrt(50),format="f",digits=2)` and `r formatC(37.8+distrib(0.995,type="q")*9.7/sqrt(50),format="f",digits=2)` minutes.
 
 ```{r}
