@@ -1,0 +1,129 @@
+---
+layout: page
+title: Confidence Regions (Z)
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="steps-to-follow" class="section level2">
+<h2>Steps to Follow</h2>
+<p>Constructing a confidence region is a five-step process as described below.</p>
+<ol>
+<li>Determine the level of confidence (C) with 100(1-α)%.
+<ul>
+<li>For example, if α=0.05 then C=100(1-0.95)=95%.</li>
+</ul></li>
+<li>Determine the type of confidence region.
+<ul>
+<li>If H<sub>A</sub> is a “less than” then construct an “upper confidence bound.”</li>
+<li>If H<sub>A</sub> is a “greater than” then construct an “lower confidence bound.”</li>
+<li>If H<sub>A</sub> is a “not equals” then construct an “confidence interval.”</li>
+</ul></li>
+<li>Determine Z<sup>*</sup> by shading on the standard normal distribution (mean=0,SD/SE=1) an area of C according to H<sup>A</sup>.
+<ul>
+<li>If H<sub>A</sub> is a “less than” then shade C to the left and Z<sup>*</sup> is positive.</li>
+<li>If H<sub>A</sub> is a “greater than” then shade C to the right and Z<sup>*</sup> is negative.</li>
+<li>If H<sub>A</sub> is a “not equals” then shade C in the middle to get two Z<sup><em></sup>s that are positive and negative. (</em>Note to use <code>distrib()</code> here you will need to put half of the area outside of C into each tail of the distribution.*)</li>
+</ul></li>
+<li>Construct the confidence region value(s) with <span class="math inline">\(\bar{x}+Z^{*}\frac{\sigma}{\sqrt{n}}\)</span>.</li>
+<li>Interpret the confidence region. <em>If the question has a context then the parameter should be stated within the context of the question.</em>
+<ul>
+<li>If H<sub>A</sub> is a “less than” then the parameter (i.e., population mean) is said to be less than the confidence region value.</li>
+<li>If H<sub>A</sub> is a “greater than” then the parameter (i.e., population mean) is said to be greater than the confidence region value</li>
+<li>If H<sub>A</sub> is a “not equals” then the parameter (i.e., population mean) is said to be between the two confidence region values.</li>
+</ul></li>
+</ol>
+<hr />
+</div>
+<div id="first-example" class="section level2">
+<h2>First Example</h2>
+<p>Suppose that I hypothesized that the mean time to take a quiz is less than 100 minutes and that, in a sample of 30 students, the mean time to take the quiz was 95.2 minutes. Further, suppose that σ=20 and α=0.10.</p>
+<ol>
+<li>C=100(1-0.10)=90%</li>
+<li>An upper confidence bound because H<sub>A</sub> is a “greater than.”</li>
+<li>Z<sup>*</sup>=1.282 as shown below.</li>
+<li>The confidence region value is thus 95.2+1.282<span class="math inline">\(\frac{20}{\sqrt(30)}\)</span> = 95.2+4.7=99.9.</li>
+<li>I am 90% confident that the mean time for all students to take the quiz is less than 99.9 minutes.</li>
+</ol>
+<pre class="r"><code>&gt; distrib(0.9,type=&quot;q&quot;)</code></pre>
+<p><img src="Calc_CI_Z_files/figure-html/unnamed-chunk-3-1.png" width="336" /></p>
+<hr />
+</div>
+<div id="second-example" class="section level2">
+<h2>Second Example</h2>
+<p>Suppose that I hypothesized that the mean time to walk between the Science Center and the Ponzio Center is more than 7 minutes and that, in a sample of 50 students, the mean time to make this walk was 8.3 minutes. Further, suppose that σ=1.3 and α=0.05.</p>
+<ol>
+<li>C=100(1-0.05)=95%</li>
+<li>A lower confidence bound because H<sub>A</sub> is a “less than.”</li>
+<li>Z<sup>*</sup>=-1.282 as shown below.</li>
+<li>The confidence region value is thus 8.3-1.645<span class="math inline">\(\frac{1.3}{\sqrt(50)}\)</span> = 8.3+0.30=8.60.</li>
+<li>I am 90% confident that the mean time for all students to walk between the Science Center and the Ponzio Center is more than 8.60 minutes.</li>
+</ol>
+<pre class="r"><code>&gt; distrib(0.95,type=&quot;q&quot;,lower.tail=FALSE)</code></pre>
+<p><img src="Calc_CI_Z_files/figure-html/unnamed-chunk-4-1.png" width="336" /></p>
+<hr />
+</div>
+<div id="third-example" class="section level2">
+<h2>Third Example</h2>
+<p>Suppose that I hypothesized that the mean time students spend preparing for the prep check is different than 30 minutes and that, in a sample of 40 students, the mean preparation time was 37.8 minutes. Further, suppose that σ=9.7 and α=0.01.</p>
+<ol>
+<li>C=100(1-0.01)=99%</li>
+<li>A confidence interval because H<sub>A</sub> is a “not equals.”</li>
+<li>Z<sup>*</sup>=±2.576 as shown below.</li>
+<li>The confidence region value is thus 37.8±2.576<span class="math inline">\(\frac{9.7}{\sqrt(40)}\)</span> = 37.8±3.95=(34.27,41.33).</li>
+<li>I am 99% confident that the mean time that all students spend preparing for the prep checks is between 34.27 and 41.33 minutes.</li>
+</ol>
+<pre class="r"><code>&gt; distrib(0.005,type=&quot;q&quot;)</code></pre>
+<p><img src="Calc_CI_Z_files/figure-html/unnamed-chunk-5-1.png" width="336" /></p>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

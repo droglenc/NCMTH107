@@ -36,9 +36,10 @@ Use the materials below to answer the questions on [this preparation guide](Conf
 * [![PDF](../img/pdf.png) Reading](../book/Confidence Regions.pdf)
 * [![YouTube Link](../img/youtube.png) Introduction to Confidence Intervals](https://www.youtube.com/watch?v=27iSnzss2wM){:target="_blank"} [7 mins]
 * [![YouTube Link](../img/youtube.png) Interpreting Confidence Intervals](https://www.youtube.com/watch?v=JYP6gc--sGQ){:target="_blank"} [6 mins]
-* [![YouTube Link](../img/youtube.png) Constructing a Confidence Interval](https://www.youtube.com/watch?v=KG921rfbTDw){:target="_blank"} [10 mins] [**Skip from 7:49 to 8:28.**]
+* [![Web](../img/web.png) Construct a Confidence Region](Explanations/Calc_n)
+    * Alternatively [![YouTube Link](../img/youtube.png) Construct a Confidence Interval](https://www.youtube.com/watch?v=KG921rfbTDw){:target="_blank"} [10 mins] [**Skip from 7:49 to 8:28.**]
 * [![YouTube Link](../img/youtube.png) Confidence Interval Overview](https://www.youtube.com/watch?v=FUaXoKdCre4){:target="_blank"} [6 mins]
-* [![Web](../img/web.png) Calculate n explanation](Explanations/Calc_n)
+* [![Web](../img/web.png) Calculate n Explanation](Explanations/Calc_n)
     * alternatively [![YouTube Link](../img/youtube.png) Calculate n](https://www.youtube.com/watch?v=4-5pFrqJz9w){:target="_blank"} [2 mins]
 
 ----
