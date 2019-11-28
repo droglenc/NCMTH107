@@ -26,11 +26,11 @@ Hypothesis testing is a rigorous and formal procedure for making inferences abou
   \item Calculate the p-value.
   \item State your rejection decision about $H_{0}$.
   \item Summarize your findings in terms of the problem.
-  \item \textbf{If $H_{0}$ was rejected}, compute and interpret an appropriate confidence region for the parameter.
+  \item Compute and interpret an appropriate confidence region for the parameter.
 \end{Enumerate}
 \vspace*{-6pt}
 
-The order of some of these steps is arbitrary. However Steps 1-3 \textbf{MUST} be completed before collecting data (Step 4). Further note that Step 11 will be completed only to provide a more definitive statement about the value of the parameter when the $H_{0}$ was rejected (i.e., if the parameter differs from the hypothesized value, then provide a range for which the actual parameter may exist).
+The order of some of these steps is arbitrary. However Steps 1-3 \textbf{MUST} be completed before collecting data (Step 4). Further note that Step 11 is completed to provide a more definitive statement about the value of the parameter when $H_{0}$ was rejected (i.e., if the parameter differs from the hypothesized value, then provide a range for which the actual parameter may exist).
 
 
 \section{1-Sample Z-Test Specifics} \label{sect:ZTest}
@@ -66,16 +66,16 @@ A 1-Sample Z-Test tests $H_{0}:\mu=\mu_{0}$, where $\mu_{0}$ represents a specif
 
 The only test that can possibly be confused with a 1-Sample Z-Test is a 1-Sample t-Test \modrefp{chap:tTest1}, which tests the same null hypothesis but when $\sigma$ is unknown.
 
-\vspace*{-4pt}
+\vspace*{-8pt}
 \subsection{Example - Intra-class Travel}
-\vspace{-2pt}
+\vspace{-6pt}
 Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for the following situation:
-\vspace{-4pt}
+\vspace{-6pt}
 \begin{quote}
-\textsl{A dean is interested in the average amount of time it takes for students to get from one class to another. In particular, she wants to determine if it takes more than 10 minutes, on average, to go between classes. In an effort to test this hypothesis, she collected a random sample of 100 intra-class travel times and found the mean to be 10.12 mins. Assume that it is known from previous studies that the distribution of intra-class times is symmetric with a standard deviation of 1.60 mins. Test the dean's hypothesis with $\alpha=0.10$.}
+\textsl{A dean wants to determine if it takes more than 10 minutes, on average, to go between classes. To test this hypothesis, she collected a random sample of 100 intra-class travel times and found a mean of 10.12 mins. Assume from previous studies that the distribution of intra-class times is symmetric with a standard deviation of 1.60 mins. Test the dean's hypothesis with $\alpha=0.10$.}
 \end{quote}
 
-\vspace{-12pt}
+\vspace{-18pt}
 \begin{Enumerate}
   \item $\alpha$=0.10.
   \item $H_{0}:\mu=10$ mins vs. $H_{A}:\mu>10$ mins, where $\mu$ is the mean time for ALL intra-class travel events.
@@ -87,21 +87,22 @@ Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis t
   \item p-value=\Sexpr{kPvalue(pnorm(10.12,mean=10,sd=0.16,lower.tail=FALSE),include.p=FALSE)}.
   \item $H_{0}$ is not rejected because the p-value $>\alpha$=0.10.
   \item It appears that the mean time for \textbf{all} intra-class travel events is not more than 10 minutes.
-  \item The confidence region is not computed when $H_{0}$ is not rejected.
+  \item A 90\% lower confidence bound will use $Z{*}$=\Sexpr{formatC(qnorm(0.90,lower.tail=FALSE),format="f",digits=3)}. The lower confidence bound is thus $10.12-1.282*\frac{1.60}{\sqrt{100}}$=\Sexpr{formatC(10.12-1.282*1.60/sqrt(100),format="f",digits=2)}. Thus, I am 90\% confident that the mean intra-class travel time is more than \Sexpr{formatC(10.12-1.282*1.60/sqrt(100),format="f",digits=2)} minutes; further evidence that the mean intra-class travel time is not greater than 10 minutes.
 \end{Enumerate}
 
 \begin{minipage}{\textwidth}
 \textbf{R Appendix:}
-\vspace*{-6pt}
+\vspace*{-8pt}
 <<eval=FALSE, prompt=FALSE>>=
-( distrib(10.12,mean=10,sd=1.60/sqrt(100),lower.tail=FALSE) )
+( z <- distrib(10.12,mean=10,sd=1.60/sqrt(100),lower.tail=FALSE) )
+( zstar <- distrib(0.90,lower.tail=FALSE,type="q") )
 @
 \end{minipage}
 
 
 \section{1-Sample Z-Test in R}
-\vspace*{-4pt}
-If raw data exist, the calculations for a 1-Sample Z-test can be efficiently computed with \R{z.test()}. This function requires the vector of quantitative data as the first argument, the hypothesized value for $\mu$ in \R{mu=}, and the known $\sigma$ in \R{sd=}. Additionally, the type of alternative hypothesis may be declared in \R{alt=}, where \R{alt="two.sided"} (the default), \R{alt="less"}, and \R{alt="greater"} correspond to the ``not equals'', ``less than'', and ``greater than'' hypotheses, respectively. Finally, the level of confidence may be given as a proportion (between 0 and 1) in \R{conf.level=} (which defaults to 0.95). The \R{z.test()} results may be assigned to an object and submitted to \R{plot()} to visualize the test statistic and p-value.
+\vspace*{-6pt}
+If raw data exist, the calculations for a 1-Sample Z-test can be efficiently computed with \R{z.test()}. This function requires the vector of quantitative data as the first argument, the hypothesized value for $\mu$ in \R{mu=}, and the known $\sigma$ in \R{sd=}. Additionally, the type of alternative hypothesis may be declared in \R{alt=}, where \R{alt="two.sided"} (the default), \R{alt="less"}, and \R{alt="greater"} correspond to the ``not equals'', ``less than'', and ``greater than'' hypotheses, respectively. Finally, the level of confidence may be given as a proportion (between 0 and 1) in \R{conf.level=} (which defaults to 0.95).
 
 \vspace*{-4pt}
 \subsection{Body Temperature}
@@ -109,7 +110,7 @@ If raw data exist, the calculations for a 1-Sample Z-test can be efficiently com
 Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for the following situation:
 \vspace*{-8pt}
 \begin{quote}
-\textsl{Machowiak et al. (1992) critically examined the belief that the mean body temperature is 98.6$^{o}$F by measuring the body temperatures in a sample of healthy humans. Use their data in \href{https://raw.githubusercontent.com/droglenc/NCData/master/BodyTemp.csv}{BodyTemp.csv}, with a supposedly known $\sigma=0.63^{o}$F and $\alpha=0.01$ to determine if the mean body temperature differs from 98.6$^{o}$F.}
+\textsl{Machowiak et al. (1992) critically examined the belief that the mean body temperature is 98.6$^{o}$F by measuring body temperatures in a sample of healthy humans. Use their data in \href{https://raw.githubusercontent.com/droglenc/NCData/master/BodyTemp.csv}{BodyTemp.csv}, with $\sigma=0.63^{o}$F and $\alpha=0.01$ to determine if the mean body temperature differs from 98.6$^{o}$F.}
 \end{quote}
 
 <<echo=FALSE>>=
