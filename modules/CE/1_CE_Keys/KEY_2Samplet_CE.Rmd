@@ -50,26 +50,30 @@ tbls(name="mussels2","Two-sample t-test results for testing that the mean mercur
 xbar1 <- 42.67; s1 <- 4.33; n1 <- 18
 xbar2 <- 28.90; s2 <- 3.21; n2 <- 10
 df <- n1+n2-2
-sp2 <- ((n1-1)*(s1^2)+(n2-1)*(s2^2))/df
-se <- sqrt(sp2*(1/n1+1/n2))
-stat <- xbar1-xbar2
-t <- stat/se
-pv <- distrib(t,distrib="t",df=df,lower.tail=FALSE)
-lcb <- stat+distrib(0.9,type="q",distrib="t",df=df,lower.tail=FALSE)*se
+( sp2 <- ((n1-1)*(s1^2)+(n2-1)*(s2^2))/df )
+( se <- sqrt(sp2*(1/n1+1/n2)) )
+( stat <- xbar1-xbar2 )
+( t <- stat/se )
+( pv <- distrib(t,distrib="t",df=df,lower.tail=FALSE) )
+( tstar <- distrib(0.9,type="q",distrib="t",df=df,lower.tail=FALSE) )
+( lcb <- stat+tstar*se )
 ```
 
 <ol>
 <li>&alpha; = 0.10.</li>
 <li>H<sub>A</sub>: &mu;<sub>b</sub>-&mu;<sub>h</sub> &gt; 0 and H<sub>0</sub>: &mu;<sub>b</sub>-&mu;<sub>h</sub> = 0, where &mu; is the mean number of germinated plants, b is the bought compost, and h is the homemade compost.</li>
 <li>2-sample t-test because (i) two groups/populations are considered (bought and homemade compost), (ii) a quantitative variable (number germinated) was recorded, and (iii) individuals in the groups are independent (there is no known connection between all pairs of containers with bought and homemade compost).</li>
-<li>An experimental study was conducted without obvious random selection of the containers wtih soil, but with randomization allocation (placement of containers in the greenhouse).</li>
+<li>An experimental study was conducted without obvious random selection of the containers with soil, but with randomization allocation (placement of containers in the greenhouse).</li>
 <li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>h</sub> = 18+10 = 28 &gt; 15 and the two sample distributions (shown on the handout) are not obviously strongly skewed, and (iii) the variances appear to be equal (Levene's p-value = 0.2414 &gt; &alpha;).</li>
-<li>x&#772;<sub>b</sub>-x&#772;<sub>h</sub> = `r xbar1`-`r xbar2` = `r stat`.</li>
-<li>t = `r formatC(t,format="f",digits=4)` with `r df` df. Note that $s_p^2$=`r formatC(sp2,format="f",digits=3)` and the SE is `r formatC(se,format="f",digits=3)`.</li>
+<li>x&#772;<sub>b</sub>-x&#772;<sub>h</sub> = `r xbar1`-`r xbar2` = `r stat`. The pooled sample variance is,
+      \[s_{p}^{2}=\frac{(18-1)4.33^{2}+(10-1)3.21^{2}}{18+10-2} = 15.826 \]
+       The standard error of the statistic is,
+       \[ SE_{\bar{x}_{did}-\bar{x}_{didnot}}=\sqrt{15.826\left(\frac{1}{18}+\frac{1}{105} \right)} = 1.569  \]</li>
+<li>t = $\frac{13.77}{1.569}$=`r formatC(t,format="f",digits=3)` with `r df` df.</li>
 <li>p-value`r kPvalue(pv,include.p=FALSE,latex=FALSE)` (more specifically `r formatC(pv,digits=4)`).</li>
 <li>Reject H<sub>0</sub> because the p-value &lt; &alpha;.</li>
 <li>It appears that the the mean number of plants that germinate is significantly lower for the homemade than the bought compost. Thus, the homemade compost "performs" worse than the store bought compost and may lead to increased costs for the greenhouse.</li>
-<li>I am 90% confident that the mean number of plants that germinated with the bought compost is at least `r formatC(lcb,format="f",digits=1)` plants greater than the mean number of plants that germinated with the homemade compost.</li>
+<li>I am 90% confident that the mean number of plants that germinated with the bought compost is at least 13.77`r formatC(tstar,format="f",digits=3)`*1.569=`r formatC(lcb,format="f",digits=2)` plants greater than the mean number of plants that germinated with the homemade compost. This further supports that the mean number of plants that germinated is greater in the store bought compost.</li>
 </ol>
 
 R Appendix.
@@ -88,15 +92,15 @@ del <- data.frame(war=rep(c("Gulf","Bosnia"),each=9),
 
 ```{r DeliveriesCode, echo=FALSE, results='hide'}
 (del.lev <- levenesTest(time~war,data=del) )
-( del.t <- t.test(time~war,data=del,var.equal=TRUE,alt="less") )
+( del.t <- t.test(time~war,data=del,var.equal=TRUE,alt="less") ) # mu=0 is a default
 ```
 
 <ol>
 <li>&alpha; = 0.05</li>
 <li>H<sub>A</sub>: &mu;<sub>b</sub>-&mu;<sub>g</sub> &lt; 0 and H<sub>0</sub>: &mu;<sub>b</sub>-&mu;<sub>g</sub> = 0, where &mu; is the mean time to deliver ALL shipments, b is for Bosnia, and g is for Persian Gulf War.</li>
-<li>2-sample t-test because (i) two groups/populations are considered (Bosnia and Persian Gulf), (ii) a quantitative variable (delivery time) was recorded, and (iii) the indivduals in the groups are independent (there is no known connection between all deliveries to the two wars).</li>
+<li>2-sample t-test because (i) two groups/populations are considered (Bosnia and Persian Gulf), (ii) a quantitative variable (delivery time) was recorded, and (iii) the individuals in the groups are independent (there is no known connection between all deliveries to the two wars).</li>
 <li>An observational study without clear randomization of the two samples.</li>
-<li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>g</sub> = 9+9 = 18 &gt; 15 and the two sample distributions (`r figs("DeliveriesHist",display="cite")`) are not obviously strongly skewed (also told to assume that the distribution are not strongly skewed), and (iii) the variances appear to be equal (Levene's p-value = `r  kPvalue(del.lev$"Pr(>F)"[1],include.p=FALSE)` &gt; &alpha;).</li>
+<li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>g</sub> = 9+9 = 18 &gt; 15 and the two sample distributions (`r figs("DeliveriesHist",display="cite")`) are not obviously strongly skewed (also told to assume that the distributions are not strongly skewed), and (iii) the variances appear to be equal (Levene's p-value = `r  kPvalue(del.lev$"Pr(>F)"[1],include.p=FALSE)` &gt; &alpha;).</li>
 ```{r DeliveriesHist, fig.width=7, fig.height=3.5, echo=FALSE}
 hist(time~war,data=del)
 ```
@@ -114,7 +118,7 @@ kHtest(del.t)
 <li>The p-value = `r kPvalue(del.t$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("Deliveries",display="cite")`).</li>
 <li>The H<sub>0</sub> is rejected because the p-value &lt; &alpha; (`r tbls("Deliveries",display="cite")`).</li>
 <li>The mean delivery time was significantly lower in Bosnia than in the Persian Gulf War. Thus, the new "just-in-time" mentality for deliveries appears to have resulted in quicker delivery times.</li>
-<li>I am 95% confident that the mean delivery time for Bosnia was more than `r formatC(-1*del.t$conf.int[2],format="f",digits=1)` days faster than for the Persian Gulf War (`r tbls("Deliveries",display="cite")`).</li>
+<li>I am 95% confident that the mean delivery time for Bosnia was more than `r formatC(-1*del.t$conf.int[2],format="f",digits=1)` days faster than for the Persian Gulf War (`r tbls("Deliveries",display="cite")`). This further supports that the mean delivery time was faster with the new system.</li>
 </ol>
 
 R Appendix
@@ -127,22 +131,34 @@ del <- read.csv("Deliveries.csv")
 ----
 
 ## Commitment to Adult Animals
+```{r CommitmentCalc, echo=FALSE, results='hide', fig.show='hide'}
+xbar1 <- 7.694; s1 <- 3.410; n1 <- 116
+xbar2 <- 6.640; s2 <- 3.102; n2 <- 125
+df <- n1+n2-2
+( sp2 <- ((n1-1)*(s1^2)+(n2-1)*(s2^2))/df )
+( se <- sqrt(sp2*(1/n1+1/n2)) )
+( stat <- xbar1-xbar2 )
+( t <- stat/se )
+( pv <- distrib(t,distrib="t",df=df,lower.tail=FALSE) )
+( tstar <- distrib(0.99,type="q",distrib="t",df=df,lower.tail=FALSE) )
+( lcb <- stat+tstar*se )
+```
 
 <ol>
   <li>&alpha;=0.01.</li>
-  <li>H<sub>O</sub>:&mu;<sub>did</sub>=&mu;<sub>didnot</sub> (or &mu;<sub>did</sub>-&mu;<sub>didnot</sub>=0) and H<sub>A</sub> is &mu;<sub>did</sub>>&mu;<sub>didnot</sub> (or &mu;<sub>did</sub>-&mu;<sub>didnot</sub>>0), where &mu; is the mean commitment level, "did" corresponds to the "did evacuate" group, and "didnot" corresponds to the "did not evacuate" group.</li>
-  <li>A two-sample t-test is required because a quantitative variable (commitment level score) was measured on two groups ("did evacuate" and "did not evacuate") that were **IN**dependent (no connection between individuals that did and those that did not evacuate their pets).</li>
+  <li>H<sub>0</sub>:&mu;<sub>did</sub>=&mu;<sub>didnot</sub> (or &mu;<sub>did</sub>-&mu;<sub>didnot</sub>=0) and H<sub>A</sub> is &mu;<sub>did</sub>>&mu;<sub>didnot</sub> (or &mu;<sub>did</sub>-&mu;<sub>didnot</sub>>0), where &mu; is the mean commitment level, "did" corresponds to the "did evacuate" group, and "didnot" corresponds to the "did not evacuate" group.</li>
+  <li>A two-sample t-test is required because a quantitative response variable (commitment level score) was measured on two groups ("did evacuate" and "did not evacuate") that were independent (no connection between individuals that did and those that did not evacuate their pets).</li>
   <li>The data appear to be part of a voluntary response observational study without clear randomization.</li>
-  <li>The assumptions are met because the two groups appear to be independent, the sample size (n<sub>did</sub>+n<sub>didnot</sub>=241) is >40 and we were told that the p-value for Levene's test of the homogeneity of variance test is "large" (i.e., >0.01) so that it appears that the variances between groups are equal. Therefore, the test statistic computed below should reasonably follow a t-distribution with n<sub>did</sub>+n<sub>didnot</sub>-2=239 df.</li>
+  <li>The assumptions are met because the two groups appear to be independent (as stated above), the sample size (n<sub>did</sub>+n<sub>didnot</sub>=241) is &ge;40 and we were told that the p-value for Levene's test of the homogeneity of variance test is "large" (i.e., >0.01) so that it appears that the variances between groups are equal. Therefore, the test statistic computed below should reasonably follow a t-distribution with n<sub>did</sub>+n<sub>didnot</sub>-2=239 df.</li>
   <li>The statistic is x&#772;<sub>did</sub>-x&#772;<sub>didnot</sub> = 7.694-6.640 = 1.054. The pooled sample variance is,
       \[s_{p}^{2}=\frac{(116-1)3.410^{2}+(125-1)3.102^{2}}{116+125-2} = 10.58749 \]
        The standard error of the statistic is,
        \[ SE_{\bar{x}_{did}-\bar{x}_{didnot}}=\sqrt{10.58749\left(\frac{1}{116}+\frac{1}{125} \right)} = 0.4194894  \]
-  <li>The t test statistic is $\frac{1.054-0}{0.4194894}$ = 2.513 with 116+125-2 = 239 df.</li>
-  <li>The p-value is `r kPvalue(distrib(2.512578,distrib="t",df=239,lower.tail=FALSE,plot=FALSE),include.p=FALSE,latex=FALSE)`.</li>
-  <li>The H<sub>O</sub> is rejected because the p-value < &alpha;.</li>
+  <li>The t test statistic is $\frac{1.054-0}{0.4194894}$=`r formatC(t,format="f",digits=3)` 2.513 with 116+125-2=239 df.</li>
+  <li>The p-value is `r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
+  <li>The H<sub>0</sub> is rejected because the p-value < &alpha;.</li>
   <li>The average commitment to animals was significantly greater for those people that did evacuate their pets as compared to those people that did not evacuate their pets.</li>
-  <li>The 99% lower bound is 1.054-2.342051*0.419 = 0.073. One is 99% confident that the mean level of commitment for those that evacuated their pets is at least 0.073 greater than those that did not evacuate their pets.</li>
+  <li>One is 99% confident that the mean level of commitment for those that evacuated their pets is at least 1.054`r formatC(tstar,format="f",digits=3)`*0.419=`r formatC(lcb,format="f",digits=3)` greater than those that did not evacuate their pets. This which further supports that average commitment to animals was significantly greater for those people that did evacuate their pets as compared to those people that did not evacuate their pets.</li>
 </ol>
 
 R Appendix.
@@ -165,15 +181,15 @@ df <- data.frame(mhg=c(impacted,reference),
 ```
 ```{r Calc2, echo=FALSE, results='hide'}
 ( m.lt <- levenesTest(mhg~grp,data=df) )
-( m.t <- t.test(mhg~grp,data=df,var.equal=TRUE) )
+( m.t <- t.test(mhg~grp,data=df,var.equal=TRUE) ) # mu=0, alt="two-sided" are defaults
 ```
 
 <ol>
   <li>&alpha;=0.05.</li>
-  <li>H<sub>O</sub>:&mu;<sub>i</sub>=&mu;<sub>r</sub> (or &mu;<sub>i</sub>-&mu;<sub>r</sub>=0) and H<sub>A</sub> is &mu;<sub>i</sub>&ne;&mu;<sub>r</sub> (or &mu;<sub>i</sub>-&mu;<sub>r</sub>&ne;0), where &mu; is the mean methyl mercury level, i corresponds to the "impacted" group, and r corresponds to the "reference" group.</li>
-  <li>A two-sample t-test is required because quantitative variable (methyl mercury level) was measured on two groups ("impacted" and "reference" sites) that were **IN**dependent (no connection between sites at the two locations).</li>
+  <li>H<sub>0</sub>:&mu;<sub>i</sub>=&mu;<sub>r</sub> (or &mu;<sub>i</sub>-&mu;<sub>r</sub>=0) and H<sub>A</sub> is &mu;<sub>i</sub>&ne;&mu;<sub>r</sub> (or &mu;<sub>i</sub>-&mu;<sub>r</sub>&ne;0), where &mu; is the mean methyl mercury level, i corresponds to the "impacted" group, and r corresponds to the "reference" group.</li>
+  <li>A two-sample t-test is required because a quantitative response variable (methyl mercury level) was measured on two groups ("impacted" and "reference" sites) that were independent (no connection between sites at the two locations).</li>
   <li>The data appear to be part of an observational study without clear randomization.</li>
-  <li>The assumptions are not quite met but we will continue anyway. The two groups appear to be independent. The variances appear to be equal because the p-value from the Levene's test is "large" (i.e., `r kPvalue(m.lt[1,3],latex=FALSE)`>0.05; `r tbls("mussels1",display="cite")`). The sample size (n<sub>i</sub>+n<sub>r</sub>=`r formatC(m.t$parameter+2,format="f",digits=0)`) is not >15 and there is not enough data to make useful histograms. Therefore, the test statistic computed below may not follow a t-distribution with n<sub>i</sub>+n<sub>r</sub>-2=`r formatC(m.t$parameter,format="f",digits=0)` df.</li>
+  <li>The assumptions are not quite met but we will continue anyway. The two groups appear to be independent. The variances appear to be equal because the p-value from the Levene's test is "large" (i.e., `r kPvalue(m.lt[1,3],latex=FALSE)`>0.05; `r tbls("mussels1",display="cite")`). The sample size (n<sub>i</sub>+n<sub>r</sub>=`r formatC(m.t$parameter+2,format="f",digits=0)`) is not &ge;15 and there is not enough data to make useful histograms. Therefore, the test statistic computed below may not follow a t-distribution with n<sub>i</sub>+n<sub>r</sub>-2=`r formatC(m.t$parameter,format="f",digits=0)` df.</li>
 
 `r tbls("mussels1")`
 
@@ -182,7 +198,7 @@ attr(m.lt,"heading") <- NULL
 m.lt
 ```
 
-  <li>The statistic is x&#772;<sub>i</sub>-x&#772;<sub>r</sub> = `r formatC(m.t$estimate[1],format="f",digits=4)` - `r formatC(m.t$estimate[2],format="f",digits=4)` = `r formatC(m.t$estimate[1]-m.t$estimate[2],format="f",digits=4)` (`r tbls("mussels2",display="cite")`).</li>
+  <li>The statistic is x&#772;<sub>i</sub>-x&#772;<sub>r</sub> = `r formatC(m.t$estimate[1],format="f",digits=3)` - `r formatC(m.t$estimate[2],format="f",digits=3)` = `r formatC(m.t$estimate[1]-m.t$estimate[2],format="f",digits=3)` (`r tbls("mussels2",display="cite")`).</li>
 
 `r tbls("mussels2")`
 
@@ -190,10 +206,11 @@ m.lt
 kHtest(m.t)
 ```
 
-  <li>The t test statistic is `r formatC(m.t$statistic,format="f",digits=4)` with `r formatC(m.t$parameter,format="f",digits=0)` df (`r tbls("mussels2",display="cite")`).</li>
+  <li>The t test statistic is `r formatC(m.t$statistic,format="f",digits=3)` with `r formatC(m.t$parameter,format="f",digits=0)` df (`r tbls("mussels2",display="cite")`).</li>
   <li>The p-value is `r kPvalue(m.t$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("mussels2",display="cite")`).</li>
-  <li>The H<sub>O</sub> is not rejected because the p-value > &alpha;.</li>
+  <li>The H<sub>0</sub> is not rejected because the p-value > &alpha;.</li>
   <li>Mean methyl mercury levels do not appear to differ between mussels from the impacted and reference sites.</li>
+  <li>I am 95% confident that the difference in mean methyl mercury between mussels from the impacted and reference sites is between `r formatC(m.t$conf.int[1],format="f",digits=3)` and  `r formatC(m.t$conf.int[2],format="f",digits=3)`. This further supports (because 0 is in the confidence region) that the mean methyl mercury does not differ between mussels from the two sites.</li>
 </ol>
 
 R Appendix.
