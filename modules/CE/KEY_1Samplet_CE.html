@@ -110,7 +110,7 @@ The assumptions are met because (i) σ is not known and (ii) n=25≥15 and the h
 x̄=168.19 CFU per 100 ml.
 </li>
 <li>
-t=-2.2095 with 24 df.
+t=<span class="math inline">\(\frac{168.19-178}{\frac{22.20}{\sqrt{25}}}\)</span>=-2.209 with 24 df.
 </li>
 <li>
 p-value=0.0369.
@@ -122,17 +122,18 @@ Reject H<sub>0</sub> because the p-value&lt;α.
 It appears that the mean CFU per ALL 100 ml of water sampled from this lake on this date is less than what the computer model predicted.
 </li>
 <li>
-One can be 95% confident that the mean CFU per ALL 100 ml of water sampled from this lake on this date is between 159 and 177.
+One can be 95% confident that the mean CFU per ALL 100 ml of water sampled from this lake on this date is between <span class="math inline">\(168.19-2.064\frac{22.20}{\sqrt{25}}\)</span>=159 and <span class="math inline">\(168.19+2.064\frac{22.20}{\sqrt{25}}\)</span>=177, which further indicates that the mean CFU is less than 178.
 </li>
 </ol>
 <p>R Appendix.</p>
 <pre class="r"><code>xbar &lt;- 168.19; s &lt;- 22.20; n &lt;- 25
 se &lt;- s/sqrt(n)
-t &lt;- (xbar-178)/se
-df &lt;- n-1
-pv &lt;- 2*distrib(t,distrib=&quot;t&quot;,df=df)
-tstar &lt;- distrib(0.975,type=&quot;q&quot;,distrib=&quot;t&quot;,df=df)
-ci &lt;- xbar+c(-1,1)*tstar*se</code></pre>
+( t &lt;- (xbar-178)/se )
+( df &lt;- n-1 )
+( pv &lt;- 2*distrib(t,distrib=&quot;t&quot;,df=df) )
+( tstar &lt;- distrib(0.975,type=&quot;q&quot;,distrib=&quot;t&quot;,df=df) )
+( tstar &lt;- c(-1,1)*tstar )
+( ci &lt;- xbar+tstar*se )</code></pre>
 <hr />
 </div>
 <div id="fecal-coliform-counts-ii" class="section level2">
@@ -156,7 +157,7 @@ mean of x
 α=0.01.
 </li>
 <li>
-H<sub>A</sub>:μ&lt;5.6 and H<sub>O</sub>:μ=5.6, where μ is the mean pH for all rainwater collections at the Big Meadows Station in the Shenandoah National Park, VA.
+H<sub>A</sub>:μ&lt;5.6 and H<sub>0</sub>:μ=5.6, where μ is the mean pH for all rainwater collections at the Big Meadows Station in the Shenandoah National Park, VA.
 </li>
 <li>
 A one-sample t-test is required because quantitative variable (pH) was measured on individuals from one group or population (all rainwater collections at Big Meadows Station), σ is UNknown, and the population mean is being compared to a specific value in the hull hypothesis.
@@ -184,81 +185,19 @@ The test statistic is t=-33.530 with 89 df (Table 1).
 The p-value is &lt;0.00005 (Table 1).
 </li>
 <li>
-The H<sub>O</sub> is rejected because the p-value&lt;α.
+The H<sub>0</sub> is rejected because the p-value&lt;α.
 </li>
 <li>
 The mean pH appears to be significantly lower than 5.6 and, thus, indicates acid rain at this site.
 </li>
 <li>
-A 99% upper confidence bound is required. Thus, one is 99% confident that the mean pH level is less than 4.65 (Table 1).
+One is 99% confident that the mean pH level is less than 4.65 (Table 1), which further indicates acid rain at this site.
 </li>
 </ol>
 <p>R Appendix.</p>
 <pre class="r"><code>setwd(&#39;C:/aaaWork/Books/IntroStats/HW/&#39;)
 ph &lt;- read.csv(&quot;pHlevels.csv&quot;)
 ( ph.t &lt;- t.test(ph$pH,mu=5.6,alt=&quot;less&quot;,conf.level=0.99) )</code></pre>
-<hr />
-</div>
-<div id="p-value-calculations-and-decisions-ii" class="section level2">
-<h2>P-Value Calculations and Decisions II</h2>
-<ol>
-<li>
-Do Not Reject H<sub>0</sub> because p-value=0.0178&gt;α.
-</li>
-<p><img src="KEY_1Samplet_CE_files/figure-html/unnamed-chunk-14-1.png" width="336" /></p>
-<li>
-Do Not Reject H<sub>0</sub> because p-value=0.0732&gt;α.
-</li>
-<img src="KEY_1Samplet_CE_files/figure-html/unnamed-chunk-15-1.png" width="336" />
-</ol>
-<hr />
-</div>
-<div id="confidence-interval-calculations-ii" class="section level2">
-<h2>Confidence Interval Calculations II</h2>
-<ol>
-<li>
-See below.
-</li>
-<ol type="a">
-<li>
-C=0.99
-</li>
-<li>
-Upper bound
-</li>
-<li>
-t*=2.374.
-</li>
-<img src="KEY_1Samplet_CE_files/figure-html/unnamed-chunk-17-1.png" width="336" />
-<li>
-882.4.
-</li>
-<li>
-I am 99% confident that the true population mean is less than 882.4.
-</li>
-</ol>
-<li>
-See below.
-</li>
-<ol type="a">
-<li>
-C=0.95
-</li>
-<li>
-Interval
-</li>
-<li>
-t*=±2.023.
-</li>
-<img src="KEY_1Samplet_CE_files/figure-html/unnamed-chunk-19-1.png" width="336" />
-<li>
-(1477.3,1982.7).
-</li>
-<li>
-I am 95% confident that the true population mean is between 1477.3 and 1982.7.
-</li>
-</ol>
-</ol>
 <hr />
 </div>
 <div id="increased-civility-in-nation-states" class="section level2">
@@ -283,7 +222,7 @@ The assumptions are met because (i) σ is not known and (ii) n=75≥40.
 x̄=3292.8 killings.
 </li>
 <li>
-t=-1.4592 with 74 df.
+t=<span class="math inline">\(\frac{3292.8-4104}{\frac{4814.5}{\sqrt{75}}}\)</span>=-1.459 with 74 df.
 </li>
 <li>
 p-value=0.0744.
@@ -292,19 +231,20 @@ p-value=0.0744.
 Do not reject H<sub>0</sub> because the p-value&gt;α.
 </li>
 <li>
-It appears that the number of killings for recent times is NOT significanlty lower than it was as determined from 19th century history books.
+It appears that the mean number of killings for recent times is NOT significanlty lower than it was as determined from 19th century history books.
 </li>
 <li>
-Strictly not needed, but one could say that they were 95% confident that the number of killings in recent years for ALL nation-states is less than 4219 (which contains the value in the H<sub>0</sub>).
+One is 95% confident that the number of killings in recent years for ALL nation-states is less than <span class="math inline">\(3292.8+1.666\frac{4814.5}{\sqrt{75}}\)</span>=4219, which further indicates that the mean number of killings is not less than 4104.
 </li>
 </ol>
 <p>R Appendix.</p>
 <pre class="r"><code>xbar &lt;- 3292.8; s &lt;- 4814.5; n &lt;- 75
-se &lt;- s/sqrt(n)
-t &lt;- (xbar-4104)/se
-df &lt;- n-1
-pv &lt;- distrib(t,distrib=&quot;t&quot;,df=df)
-ucb &lt;- xbar+distrib(0.95,type=&quot;q&quot;,distrib=&quot;t&quot;,df=df)*se</code></pre>
+( se &lt;- s/sqrt(n) )
+( t &lt;- (xbar-4104)/se )
+( df &lt;- n-1 )
+( pv &lt;- distrib(t,distrib=&quot;t&quot;,df=df) )
+( tstar &lt;- distrib(0.95,type=&quot;q&quot;,distrib=&quot;t&quot;,df=df) )
+( ucb &lt;- xbar+tstar*se )</code></pre>
 <hr />
 </div>
 <div id="sea-level-rise-rate" class="section level2">
@@ -314,7 +254,7 @@ ucb &lt;- xbar+distrib(0.95,type=&quot;q&quot;,distrib=&quot;t&quot;,df=df)*se</
 α=0.01.
 </li>
 <li>
-H<sub>A</sub>: μ&gt;0 and H<sub>O</sub>:μ=0, where μ is the mean sea level rise rate for all ecosystems. [Note that a mean of 0 means no change.]
+H<sub>A</sub>: μ&gt;0 and H<sub>0</sub>:μ=0, where μ is the mean sea level rise rate for all ecosystems. [Note that a mean of 0 means no change.]
 </li>
 <li>
 A one-sample t-test is required because a quantitative variable (sea level rise rate) was measured on individuals from one group or population (ecosystems), σ is UNknown, and the population mean is being compared to a specific value in the null hypothsis.
@@ -329,21 +269,29 @@ The assumptions are met because σ is unknown, n=23≥15 and the background sugg
 The statistic is x̄=0.059.
 </li>
 <li>
-The test statistic is t=<span class="math inline">\(\frac{0.059-0}{\frac{0.135}{\sqrt{23}}}\)</span> = 2.107 with 23-1=22 df.
+t=<span class="math inline">\(\frac{0.059-0}{\frac{0.135}{\sqrt{23}}}\)</span>=2.096 with 22 df.
 </li>
 <li>
-The p-value is 0.0234.
+p-value=0.0239.
 </li>
 <li>
-The H<sub>O</sub> is not rejected because the p-value&gt;α.
+The H<sub>0</sub> is not rejected because the p-value&gt;α.
 </li>
 <li>
 The mean sea level rise rate does not appear to be greater than 0, indicating that the sea level has not increased significantly over the period of study.
 </li>
+<li>
+One is 95% confident that the mean sea level rise rate is greater than <span class="math inline">\(0.059-2.508\frac{0.135}{\sqrt{23}}\)</span>=-0.012, which further indicates that the mean rise rate is not greater than 0 and the sea level has not risen significantly over the study period.
+</li>
 </ol>
 <p>R Appendix.</p>
-<pre class="r"><code>library(NCStats)
-( distrib(2.107,distrib=&quot;t&quot;,df=22,lower.tail=FALSE) )</code></pre>
+<pre class="r"><code>xbar &lt;- 0.059; s &lt;- 0.135; n &lt;- 23
+( se &lt;- s/sqrt(n) )
+( t &lt;- (xbar-0)/se )
+( df &lt;- n-1 )
+( pv &lt;- distrib(t,distrib=&quot;t&quot;,df=df,lower.tail=FALSE) )
+( tstar &lt;- distrib(0.99,type=&quot;q&quot;,distrib=&quot;t&quot;,df=df,lower.tail=FALSE) )
+( lcb &lt;- xbar+tstar*se )</code></pre>
 <hr />
 </div>
 <div id="thickness-of-the-ozone-layer" class="section level2">
@@ -445,6 +393,68 @@ I am 90% confident that CFU per ALL 100 ml of water sampled from this lake on th
 <pre class="r"><code>df &lt;- read.csv(&quot;../FecalColiform.csv&quot;)
 ( fc.t &lt;- t.test(df$CFU,mu=150,alt=&quot;greater&quot;,conf.level=0.9) )
 hist(~CFU,data=df,xlab=&quot;Colony Forming Units per 100 ml&quot;)</code></pre>
+<hr />
+</div>
+<div id="p-value-calculations-and-decisions-ii" class="section level2">
+<h2>P-Value Calculations and Decisions II</h2>
+<ol>
+<li>
+Do Not Reject H<sub>0</sub> because p-value=0.0178&gt;α.
+</li>
+<p><img src="KEY_1Samplet_CE_files/figure-html/unnamed-chunk-20-1.png" width="336" /></p>
+<li>
+Do Not Reject H<sub>0</sub> because p-value=0.0732&gt;α.
+</li>
+<img src="KEY_1Samplet_CE_files/figure-html/unnamed-chunk-21-1.png" width="336" />
+</ol>
+<hr />
+</div>
+<div id="confidence-interval-calculations-ii" class="section level2">
+<h2>Confidence Interval Calculations II</h2>
+<ol>
+<li>
+See below.
+</li>
+<ol type="a">
+<li>
+C=0.99
+</li>
+<li>
+Upper bound
+</li>
+<li>
+t*=2.374.
+</li>
+<img src="KEY_1Samplet_CE_files/figure-html/unnamed-chunk-23-1.png" width="336" />
+<li>
+882.4.
+</li>
+<li>
+I am 99% confident that the true population mean is less than 882.4.
+</li>
+</ol>
+<li>
+See below.
+</li>
+<ol type="a">
+<li>
+C=0.95
+</li>
+<li>
+Interval
+</li>
+<li>
+t*=±2.023.
+</li>
+<img src="KEY_1Samplet_CE_files/figure-html/unnamed-chunk-25-1.png" width="336" />
+<li>
+(1477.3,1982.7).
+</li>
+<li>
+I am 95% confident that the true population mean is between 1477.3 and 1982.7.
+</li>
+</ol>
+</ol>
 <hr />
 </div>
 
