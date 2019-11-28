@@ -62,7 +62,7 @@ se <- sigma/sqrt(n)
 <li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
 <li>Do not reject H<sub>0</sub> because the p-value>&alpha;.</li>
 <li>There is not enough evidence to conclude that the mean weight gain for ALL women on this diet is greater than 5 pounds.</li>
-<li>I am 95% confident that the mean weight gain for ALL women is greater than `r formatC(lcb,format="f",digits=2)`, which further indicates that the mean weight gain is not greater than 5 pounds.</li>
+<li>I am 95% confident that the mean weight gain for ALL women is greater than $6.7-1.645\frac{7.1}{\sqrt{35}}$=`r formatC(lcb,format="f",digits=2)`, which further indicates that the mean weight gain is not greater than 5 pounds.</li>
 </ol>
 
 R Appendix.
@@ -95,7 +95,7 @@ se <- sigma/sqrt(n)
 <li>The p-value is `r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
 <li>H<sub>0</sub> is rejected because the p-value<&alpha;.</li>
 <li>The mean growth rate of all cacti under the experimental conditions does appear to be less than 4 cm.</li>
-<li>One is 95% confident that the mean growth of all cacti under the experimental conditions is less than `r formatC(ucb,format="f",digits=3)` cm, which further indicates that mean growth is less than 4 cm.</li>
+<li>One is 95% confident that the mean growth of all cacti under the experimental conditions is less than $3.26+1.645\frac{1.40}{\sqrt{10}}$=`r formatC(ucb,format="f",digits=3)` cm, which further indicates that mean growth is less than 4 cm.</li>
 </ol>
 
 ### R Appendix
@@ -166,7 +166,7 @@ se <- sigma/sqrt(n)
   <li>The p-value is `r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
   <li>The H<sub>0</sub> is rejected because the p-value<&alpha;.</li>
   <li>It appears that the credit threshold is greater than 630. Thus, it appears that the credit card companies have increased the threshold for issuing a credit card.</li>
-  <li>One is 90% confident that the mean cutoff score for ALL companies is greater than `r formatC(lcb,format="f",digits=2)`, which is further evidence that the threshold has been raised from 630.</li>
+  <li>One is 90% confident that the mean cutoff score for ALL companies is greater than $636.86-1.645{\frac{5}{\sqrt{44}}}$=`r formatC(lcb,format="f",digits=2)`, which is further evidence that the threshold has been raised from 630.</li>
 </ol>
 
 R Appendix
