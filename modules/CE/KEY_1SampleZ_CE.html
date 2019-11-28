@@ -18,10 +18,13 @@ Define the parameter μ in Step 2.
 Provide some evidence for the characteristics of the test in Step 3 (note the items in parentheses).
 </li>
 <li>
-Note that the decision is about H<sub>0</sub> in Step 9. However, in Step 10 you will likely be describing what you decided about H<sub>A</sub>. For example, in the first example below, Step 10 is saying that H<sub>A</sub> is not supported. However, the opposite is true in the second example. This happens because the researcher’s hypothesis (what they are tyring to see if there is evidence for) is almost always in H<sub>A</sub>. Therefore, answering the researcher’s question requires you to say whether H<sub>A</sub> was supported or not.
+The decision is about H<sub>0</sub> in Step 9. However, in Step 10 you will likely be describing what you decided about H<sub>A</sub>. For example, in the first example below, Step 10 is saying that H<sub>A</sub> is not supported. However, the opposite is true in the second example. This happens because the researcher’s hypothesis (what they are tyring to see if there is evidence for) is almost always in H<sub>A</sub>. Therefore, answering the researcher’s question requires you to say whether H<sub>A</sub> was supported or not.
 </li>
 <li>
-You values may differ slightly from mine as I calculate everything in R that holds many decimal places on intermediate values.
+In situations where the p-value is VERY small (as in the credit card example below), I will often show the p-value as “&lt;0.00005” (i.e., I round p-values to four decimals so if it is not 0.0001 then it must be less than 0.00005) rather than showing the scientific notation or the many decimal places.
+</li>
+<li>
+You values may differ slightly from mine as I calculated everything in R that holds many decimal places on intermediate values. Note that you do not need to use R as a calculator as I did for the hand calculations, but you do need it for <code>distrib()</code>.
 </li>
 </ul>
 </div>
@@ -47,7 +50,7 @@ The assumptions are met because (i) σ is known (=7.1) and (ii) n=35≥30.
 x̄=6.7 pounds gained.
 </li>
 <li>
-Z=1.4165.
+Z=<span class="math inline">\(\frac{6.7-5}{\frac{7.1}{\sqrt{35}}}\)</span>=1.417.
 </li>
 <li>
 p-value=0.0783.
@@ -59,15 +62,17 @@ Do not reject H<sub>0</sub> because the p-value&gt;α.
 There is not enough evidence to conclude that the mean weight gain for ALL women on this diet is greater than 5 pounds.
 </li>
 <li>
-Not required
+I am 95% confident that the mean weight gain for ALL women is greater than 4.73, which further indicates that the mean weight gain is not greater than 5 pounds.
 </li>
 </ol>
 <p>R Appendix.</p>
 <pre class="r"><code>xbar &lt;- 6.7; sigma &lt;- 7.1; n &lt;- 35
 se &lt;- sigma/sqrt(n)
-t &lt;- (xbar-5)/se
-pv &lt;- distrib(t,lower.tail=FALSE)
-lcb &lt;- xbar+distrib(0.95,lower.tail=FALSE,type=&quot;q&quot;)*se</code></pre>
+( Z &lt;- (xbar-5)/se )
+( pv &lt;- distrib(xbar,mean=5,sd=sigma/sqrt(n),lower.tail=FALSE) )
+( pv &lt;- distrib(Z,lower.tail=FALSE) )  # same as above (but uses test stat)
+( Zstar &lt;- distrib(0.95,lower.tail=FALSE,type=&quot;q&quot;) )
+( lcb &lt;- xbar+Zstar*se )</code></pre>
 <hr />
 </div>
 <div id="cactus-growth" class="section level2">
@@ -92,7 +97,7 @@ The data are part of an experiment in which cacti were randomly selected.
 x¯ = 3.26.
 </li>
 <li>
-Z = <span class="math inline">\(\frac{3.26-4}{\frac{1.40}{\sqrt{10}}}\)</span> = <span class="math inline">\(\frac{-0.74}{0.44}\)</span> = -1.67.
+Z = <span class="math inline">\(\frac{3.26-4}{\frac{1.40}{\sqrt{10}}}\)</span> = <span class="math inline">\(\frac{-0.74}{0.44}\)</span> = -1.671.
 </li>
 <li>
 The p-value is 0.0473.
@@ -104,13 +109,18 @@ H<sub>0</sub> is rejected because the p-value&lt;α.
 The mean growth rate of all cacti under the experimental conditions does appear to be less than 4 cm.
 </li>
 <li>
-One is 95% confident that the mean growth of all cacti under the experimental conditions is less than 3.98 cm.
+One is 95% confident that the mean growth of all cacti under the experimental conditions is less than 3.988 cm, which further indicates that mean growth is less than 4 cm.
 </li>
 </ol>
 <div id="r-appendix" class="section level3">
 <h3>R Appendix</h3>
-<pre class="r"><code>&gt; ( pval &lt;- distrib(3.26,mean=4,sd=1.40/sqrt(10)) )
-&gt; ( zstar &lt;- distrib(0.95,type=&quot;q&quot;) )</code></pre>
+<pre class="r"><code>&gt; xbar &lt;- 3.26; sigma &lt;- 1.40; n &lt;- 10
+&gt; se &lt;- sigma/sqrt(n)
+&gt; ( Z &lt;- (xbar-4)/se )
+&gt; ( pv &lt;- distrib(xbar,mean=4,sd=sigma/sqrt(n)) )
+&gt; ( pv &lt;- distrib(Z) )  # same as above (but uses test stat)
+&gt; ( Zstar &lt;- distrib(0.95,type=&quot;q&quot;) )
+&gt; ( ucb &lt;- xbar+Zstar*se )</code></pre>
 <hr />
 </div>
 </div>
@@ -121,7 +131,7 @@ One is 95% confident that the mean growth of all cacti under the experimental co
 α=0.10
 </li>
 <li>
-H<sub>O</sub>: μ=8, H<sub>A</sub>: μ&gt;8, where μ is the mean Elk density in Banff.
+H<sub>0</sub>: μ=8, H<sub>A</sub>: μ&gt;8, where μ is the mean Elk density in Banff.
 </li>
 <li>
 A 1-sample Z-test is required because a quantitative variable (Elk density) was measured on individuals from one group or population (plots in Banff National Park) and σ is known (given in background).
@@ -150,18 +160,17 @@ The test statistic is Z=2.619 (Table 1).
 The p-value is 0.0044 (Table 1).
 </li>
 <li>
-The H<sub>O</sub> is rejected because the p-value&lt;α.
+The H<sub>0</sub> is rejected because the p-value&lt;α.
 </li>
 <li>
 The annual density of elk appears to be greater than 8 per km<sup>2</sup>.
 </li>
 <li>
-A 90% lower confidence bound is required. Thus, one is 90% confident that the mean annual density of elk is more than 8.69 per km<sup>2</sup> (Table 1).
+One is 90% confident that the mean annual density of elk is more than 8.69 per km<sup>2</sup> (Table 1), which further indicates that the mean density of Elk is greater than 8 per km<sup>2</sup>.
 </li>
 </ol>
 <p>R Appendix</p>
-<pre class="r"><code>library(NCStats)
-setwd(&#39;C:/aaaWork/Books/IntroStats/HW/&#39;)
+<pre class="r"><code>setwd(&#39;C:/aaaWork/Books/IntroStats/HW/&#39;)
 elk &lt;- read.csv(&quot;Elk.csv&quot;)
 ( elk.z &lt;- z.test(elk,mu=8,sd=2,alt=&quot;greater&quot;,conf.level=0.90) )</code></pre>
 <hr />
@@ -173,7 +182,7 @@ elk &lt;- read.csv(&quot;Elk.csv&quot;)
 α=0.10.
 </li>
 <li>
-H<sub>A</sub>: μ&gt;630 and H<sub>O</sub>: μ=630, where μ is the mean credit card limit for all companies.
+H<sub>A</sub>: μ&gt;630 and H<sub>0</sub>: μ=630, where μ is the mean credit card limit for all companies.
 </li>
 <li>
 A one-sample Z-test is required because a quantitative variable (credit score) was measured on individuals from one group or population (all credit card companies) and σ is known (given in background).
@@ -188,26 +197,29 @@ The assumptions are met because n=44≥30 and σ is known.
 The statistic is x̄=636.86.
 </li>
 <li>
-The test statistic is Z=<span class="math inline">\(\frac{636.86-630}{\frac{5}{\sqrt{44}}}\)</span>=9.11.
+The test statistic is Z=<span class="math inline">\(\frac{636.86-630}{\frac{5}{\sqrt{44}}}\)</span>=9.101.
 </li>
 <li>
 The p-value is &lt;0.00005.
 </li>
 <li>
-The H<sub>O</sub> is rejected because the p-value&lt;α.
+The H<sub>0</sub> is rejected because the p-value&lt;α.
 </li>
 <li>
 It appears that the credit threshold is greater than 630. Thus, it appears that the credit card companies have increased the threshold for issuing a credit card.
 </li>
 <li>
-A 90% lower confidence bound with Z<sup>*</sup>=-1.282. Thus, 636.86-1.282<span class="math inline">\(\frac{5}{\sqrt{44}}\)</span> or 636.86-0.97 = 635.89. Therefore, one is 90% confident that the mean cutoff score for ALL companies is greater than 635.89.
+One is 90% confident that the mean cutoff score for ALL companies is greater than 635.89, which is further evidence that the threshold has been raised from 630.
 </li>
 </ol>
 <p>R Appendix</p>
-<pre class="r"><code>library(NCStats)
-setwd(&#39;C:/aaaWork/Books/IntroStats/HW/&#39;)
-( distrib(636.86,mean=630,sd=5/sqrt(44),lower.tail=FALSE) )
-( distrib(0.90,type=&quot;q&quot;,lower.tail=FALSE,lower.tail=FALSE) )</code></pre>
+<pre class="r"><code>xbar &lt;- 636.86; sigma &lt;- 5; n &lt;- 44
+se &lt;- sigma/sqrt(n)
+( Z &lt;- (xbar-630)/se )
+( pv &lt;- distrib(xbar,mean=530,sd=sigma/sqrt(n),lower.tail=FALSE) )
+( pv &lt;- distrib(Z,lower.tail=FALSE) )  # same as above (but uses test stat)
+( Zstar &lt;- distrib(0.90,lower.tail=FALSE,type=&quot;q&quot;) )
+( lcb &lt;- xbar+Zstar*se )</code></pre>
 <hr />
 </div>
 <div id="raptors-at-hawks-ridge" class="section level2">
@@ -217,7 +229,7 @@ setwd(&#39;C:/aaaWork/Books/IntroStats/HW/&#39;)
 α=0.01
 </li>
 <li>
-H<sub>O</sub>: μ=50000, H<sub>A</sub>: μ&gt;50000, where μ is the mean number of raptors seen in ALL years at Hawk’s Ridge.
+H<sub>0</sub>: μ=50000, H<sub>A</sub>: μ&gt;50000, where μ is the mean number of raptors seen in ALL years at Hawk’s Ridge.
 </li>
 <li>
 A one-sample Z-test is required because (i) a quantitative variable (number of raptors) was measured, (ii)the individuals are from one group or population (all years at Hawk’s Ridge), and (iii) σ is known (=37000). Thus, the population mean is being compared to a specific value in the null hypothesis.
@@ -246,13 +258,13 @@ The test statistic is Z=2.780 (Table 2).
 The p-value is 0.0027 (Table 2).
 </li>
 <li>
-The H<sub>O</sub> is rejected because the p-value&lt;α (Table 2).
+The H<sub>0</sub> is rejected because the p-value&lt;α (Table 2).
 </li>
 <li>
 The mean number of raptors seen per year in ALL years appears to be greater than 50000.
 </li>
 <li>
-I am 99% confident that the mean number of raptors seen per year in ALL years is more than 52967 (Table 2).
+I am 99% confident that the mean number of raptors seen per year in ALL years is more than 52967 (Table 2), which is further evidence that the mean number of raptors is greater than 50000.
 </li>
 </ol>
 <p>R Appendix</p>
