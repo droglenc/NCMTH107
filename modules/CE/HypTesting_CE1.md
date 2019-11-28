@@ -18,6 +18,18 @@ For each research hypothesis or statement below, construct the null and alternat
 
 ----
 
+<div class="alert alert-success">
+I urge you to follow these steps when answering all p-value-related questions:
+<ol type="a">
+  <li>Identify H<sub>0</sub> and H<sub>A</sub></li>
+  <li>Define the p-value specific to the situation.</li>
+  <li>Draw the null distribution.</li>
+  <li>Compute the p-value.</li>
+  <li>Make a decision about H<sub>0</sub>. If the question has a context then the parameter should be stated within the context of the question.</li>
+</ol>
+A reminder to use these steps will <strong>NOT</strong> be provided on future quizzes, but you should get in the habit of following them. See <a href="../Explanations/Calc_pvalue_Z.html">here</a> for a demonstration of the steps.
+</div>
+
 ## P-Value Calculations and Decisions I
 
 For each situation below, (i) write a sentence that defines the p-value specific to that situation (i.e., replace the generic terms in the definition of the p-value with specifics for the particular situation), (ii) compute the p-value (include a drawing to support your calculation), and (iii) make a decision about H<sub>0</sub> (i.e., reject or do not reject H<sub>0</sub> and explain why).

@@ -35,6 +35,8 @@ Use the materials below to answer the questions on [this preparation guide](HypT
 
 * [![PDF](../img/pdf.png) Reading](../book/Hypothesis Tests.pdf)
 * [![Vimeo](../img/dhovid.png) Forming Statistical Hypothesis](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins] [![PowerPoint](../img/ppt.png)](PPT/HypTesting_PPT-hypotheses.pptx)
+* [![Web](../img/web.png) Calculating p-values](Explanations/Calc_pvalue_Z)
+
 
 ----
 
