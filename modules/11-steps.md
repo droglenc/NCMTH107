@@ -14,7 +14,7 @@ css: /css/modules.css
 1. Calculate the p-value
 1. State your rejection decision
 1. Summarize your findings in terms of the problem 
-1. **If rejected H<sub>0</sub>**, compute a 100(1-&alpha;)% confidence region for  parameter
+1. Compute a 100(1-&alpha;)% confidence region for  parameter
 
 [Video description of these steps](https://vimeo.com/user45324800/hotest-11steps).
 
