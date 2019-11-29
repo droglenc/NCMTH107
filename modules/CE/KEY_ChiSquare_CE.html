@@ -33,10 +33,10 @@ You values may differ slightly from mine as I calculate everything in R that hol
 α=0.10.
 </li>
 <li>
-H<sub>0</sub>: “The distribution of hurricantes into the strength categories is the same for both time periods” versus H<sub>A</sub>: “The distribution of hurricantes into the strength categories is NOT the same for both time periods”
+H<sub>0</sub>: “The distribution of hurricanes into the strength categories is the same for both time periods” versus H<sub>A</sub>: “The distribution of hurricanes into the strength categories is NOT the same for both time periods”
 </li>
 <li>
-A chi-square test is required because a categorical response variable with three levels (strength category) from two groups or populations (time periods) was recorded.
+A chi-square test is required because (i) a categorical response variable with three levels (strength category) from (ii) two groups or populations (time periods) was recorded.
 </li>
 <li>
 This is an observational study without obvious randomization.
@@ -71,6 +71,9 @@ It appears that the distribution of hurricanes into the strength categories is t
 <pre><code>          Cat 1&amp;2 Cat 3 Cat 4&amp;5 Sum
 1901-1950    60.0  30.6     9.4 100
 1951-2000    61.1  29.2     9.7 100</code></pre>
+<li>
+Not required for a chi-square test.
+</li>
 </ol>
 <p>R Appendix.</p>
 <pre class="r"><code>library(NCStats)
@@ -218,7 +221,7 @@ percTable(obs,margin=1,digits=1)</code></pre>
 H<sub>0</sub>: “The distribution of people in the race categories is the same for males and females” versus H<sub>A</sub>: “The distribution of people in the race categories is NOT the same for males and females.”
 </li>
 <li>
-A chi-square test is required because a categorical response variable with four levels (race/ethnicity) from two groups or populations (sex) was recorded.
+A chi-square test is required because (i) a categorical response variable with four levels (race/ethnicity) from (ii) two groups or populations (sex) was recorded.
 </li>
 <li>
 This is an observational study without obvious randomization.
@@ -253,6 +256,9 @@ It appears that the distribution of the individuals into the races/ethnicities d
 <pre><code>       White Black Hispanic Other   Sum
 Male    36.5  42.4     19.9   1.2 100.0
 Female  17.9  63.1     18.1   1.0 100.1</code></pre>
+<li>
+Not required for a chi-square test.
+</li>
 </ol>
 <p>R Appendix.</p>
 <pre class="r"><code>library(NCStats)

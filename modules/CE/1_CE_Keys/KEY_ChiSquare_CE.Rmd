@@ -71,8 +71,8 @@ colnames(obs) <- c("Cat 1&2","Cat 3","Cat 4&5")
 
 <ol>
   <li>&alpha;=0.10.</li>
-  <li>H<sub>0</sub>: "The distribution of hurricantes into the strength categories is the same for both time periods" versus H<sub>A</sub>: "The distribution of hurricantes into the strength categories is NOT the same for both time periods"</li>
-  <li>A chi-square test is required because a categorical response variable with three levels (strength category) from two groups or populations (time periods) was recorded.</li>
+  <li>H<sub>0</sub>: "The distribution of hurricanes into the strength categories is the same for both time periods" versus H<sub>A</sub>: "The distribution of hurricanes into the strength categories is NOT the same for both time periods"</li>
+  <li>A chi-square test is required because (i) a categorical response variable with three levels (strength category) from (ii) two groups or populations (time periods) was recorded.</li>
   <li>This is an observational study without obvious randomization.</li>
   <li>The test statistic computed below should reasonably follow a chi-square distribution because all cells in the expected table (`r tbls("hurr1",display="cite")`) have values greater than five.</li>
 
@@ -101,6 +101,7 @@ hurr.chi$observed
 percTable(obs,margin=1,digits=1)
 ```
 
+  <li>Not required for a chi-square test.</li>
 </ol>
 
 R Appendix.
@@ -242,7 +243,7 @@ colnames(obs) <- c("White","Black","Hispanic","Other")
 <ol>
   <li>&alpha;=0.01.</li>
   <li>H<sub>0</sub>: "The distribution of people in the race categories is the same for males and females" versus H<sub>A</sub>: "The distribution of people in the race categories is NOT the same for males and females."</li>
-  <li>A chi-square test is required because a categorical response variable with four levels (race/ethnicity) from two groups or populations (sex) was recorded.</li>
+  <li>A chi-square test is required because (i) a categorical response variable with four levels (race/ethnicity) from (ii) two groups or populations (sex) was recorded.</li>
   <li>This is an observational study without obvious randomization.</li>
   <li>The test statistic computed below should reasonably follow a chi-square distribution because all cells in the expected table (`r tbls("aids1",display="cite")`) have values greater than five.</li>
 
@@ -271,6 +272,7 @@ aids.chi$observed
 percTable(obs,margin=1,digits=1)
 ```
 
+  <li>Not required for a chi-square test.</li>
 </ol>
 
 R Appendix.
