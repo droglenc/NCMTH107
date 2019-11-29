@@ -33,8 +33,8 @@ What you learn in this <strong>Statistical Concepts and Analysis</strong> course
 
 * [Catalog Description](http://catalog.northland.edu/content.php?catoid=19&catoid=19&navoid=914&filter%5Bitem_type%5D=3&filter%5Bonly_active%5D=1&filter%5B3%5D=1&filter%5Bcpage%5D=3#) and [Learning Outcomes](#learning-outcomes)
 * [Assistance](#assistance) -- [Instructor](#instructor--Derek-Ogle), [Tutors](#tutors), [Accommodations](#accommodations), and [Academic Alerts](#academic-alerts)
-* [Grading](#grading) -- [Preparation Checks](#preparation-checks), [Homework](#homework), [Engagement](#engagement), [Quizzes](#quizzes), [Extra Credit](#extra-credit), [Overall Grade](#overall-grade)
-* [Expectations](#expectations) -- [Work Outside of Class](#work-outside-of-class), [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
+* [Grading](#grading) -- [Preparation Checks](#preparation-checks), [Homework](#homework), [Engagement](#engagement), [Quizzes](#quizzes), [Overall Grade](#overall-grade)
+* [Expectations](#expectations) -- [Ownership of Lerning](#ownership-of-learning) [Work Outside of Class](#work-outside-of-class), [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
 
 
 ----
@@ -152,11 +152,8 @@ Dates for quizzes and the final exam are shown on the [Dates page](Dates-Current
 
 Note that your highest quiz score will count for more and your lowest quiz score will count for less in the calculation of your final grade (see [grade weights](#overall-grade) below).
 
-
-### Extra Credit
-Two options for extra credit are:
-
-1. **Quiz Corrections and Reflections** -- For each quiz, **first** complete a correction for each question that you missed, along with *a specific resource that supports your answer* (e.g., a specific page in the reading, a specific video, a specific exercise). You will not receive credit for simply correcting your answer, for providing another incorrect answer, or not providing the resource. You must address every question you missed to receive full credit for this portion.
+#### Quiz Corrections and Reflections
+For each quiz, you may complete an OPTIONAL two-part correction/reflection to earn bonus points to add to your earned grade. For the **first** part, complete a correction for each question that you missed, along with *a specific resource that supports your answer* (e.g., a specific page in the reading, a specific video, a specific exercise). You will not receive credit for simply correcting your answer, for providing another incorrect answer, or not providing the resource. You must address every question you missed to receive full credit for this portion.
 
     **Second**, write at least 300 words (one double-spaced page) of *thoughtful* reflections to the following items about the quiz
     * what you did well on the quiz (and why),
@@ -170,9 +167,7 @@ Two options for extra credit are:
 
     Your corrections and reflection *must be typed* (though you can leave space to show your work "by hand" for calculations), easy to read (e.g., neatly organize your corrections by question number), and *must include the original quiz*.
     
-    A perfect exam correction and reflection will add the lesser of 15% or the amount it would take for your exam score to be 95%, with two-thirds of the overall grade from the correction (first) portion. Corrections and reflections will be due as announced in class and shown on the [dates](Dates-Current){:target="_blank"} page. **Late corrections and reflections will not be accepted**.
-
-1. **"Statistics in Use" Reports** - Report on the use of statistics in your life -- e.g., from the news, your other courses, or other work that you have done. If you report on a news item, then you should discuss the background of the information in the report, the use of statistics, how the statistics relate to what you have learned in class, how the statistics were presented, how you feel about that presentation, and any questions that you may have. If you report on statistics used in another course, then you should discuss the background of the project where you used statistics, what the statistics were used for (i.e., purpose), a presentation of your statistical work in the report (i.e., findings), how the statistics relate to what you've learned in this course, and any questions that you may have. The FOCUS of your report should be on the statistics used in the news item or course (not just the news item or the topic in the other course) and **specifically how it relates to a topic in this course**. Each report should be typed, at least one page (single-spaced), and include the item being reported on. Your report will be graded on how well it is written **and how well you relate the item to this course**. You may complete up to two reports for as much as 3% extra credit on your final grade. Note that you may not use the same type of news item for more than one report (e.g., you cannot report on presidential race polls more than once). These reports are due as shown on the [dates](Dates-Current){:target="_blank"} page. **Late reports will not be accepted.**
+    A perfect exam correction and reflection will add the lesser of 12% or the amount it would take for your exam score to be 95%, with two-thirds of the overall grade from the correction (first) portion. Corrections and reflections will be due as announced in class and shown on the [dates](Dates-Current){:target="_blank"} page. **Late corrections and reflections will not be accepted**.
 
 ### Overall Grade
 An overall score will be computed from the items and associated weights listed in the table below (and described above). To compute your current grade, enter your percentage scores in the boxes for completed assessments. Enter your highest quiz score as the first quiz and your lowest quiz score as the last quiz. To project your future grade, also include percentages for future assessments.
@@ -242,6 +237,7 @@ This course is designed in a way that you will have to actively, rather than pas
 * Multi-task material from multiple modules (i.e., you may be finishing exercises for one module while preparing for class on another module).
 * Prepare for some course content on your own prior to class. See [Preparation Checks](#preparation-checks) section above and [Work Outside of Class](#work-outside-of-class) section below.
 * Assess your own performance on daily exercises by comparing your answers to an answer key (which will also contain hints related to common mistakes).
+* Do more that what is required to be turned in for a grade (i.e., you will likely need more practice than the few exercises that are turned in for a grade; thus, many more exercises are provided in most modules).
 * Ask for help from me (the professor) both during and outside of class. See [Assistance](#assisstance) section above.
 * Maintain focus for an extended period of time (1.5 h for each class, 2 h for quizzes).
 
