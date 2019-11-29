@@ -33,7 +33,7 @@ You values may differ slightly from mine as I calculate everything in R that hol
 α=0.10.
 </li>
 <li>
-H<sub>O</sub>: “The distribution of hurricantes into the strength categories is the same for both time periods” versus H<sub>A</sub>: “The distribution of hurricantes into the strength categories is NOT the same for both time periods”
+H<sub>0</sub>: “The distribution of hurricantes into the strength categories is the same for both time periods” versus H<sub>A</sub>: “The distribution of hurricantes into the strength categories is NOT the same for both time periods”
 </li>
 <li>
 A chi-square test is required because a categorical response variable with three levels (strength category) from two groups or populations (time periods) was recorded.
@@ -62,7 +62,7 @@ The χ<sup>2</sup> test statistic is 0.0382 with 2 df (Table 19).
 The p-value is 0.9811.
 </li>
 <li>
-The H<sub>O</sub> is rejected because the p-value&lt;α.
+The H<sub>0</sub> is rejected because the p-value&lt;α.
 </li>
 <li>
 It appears that the distribution of hurricanes into the strength categories is the same for both time periods (Table 3).
@@ -84,7 +84,7 @@ distrib(0.0382,distrib=&quot;chisq&quot;,df=2,lower.tail=FALSE)</code></pre>
 α=0.05.
 </li>
 <li>
-H<sub>A</sub>: “The distribution of students into the goals categories differs among grades” and H<sub>O</sub>: “The distribution of students into the goals categories DOES NOT differ among grades”.
+H<sub>A</sub>: “The distribution of students into the goals categories differs among grades” and H<sub>0</sub>: “The distribution of students into the goals categories DOES NOT differ among grades”.
 </li>
 <li>
 Chi-square test because (i) the response variable (goals category) is categorial and (ii) two or more groups or populations (grades) were sampled.
@@ -151,7 +151,7 @@ percTable(obs,margin=1,digits=1)</code></pre>
 α=0.01.
 </li>
 <li>
-H<sub>A</sub>: “The distribution of respondents into the levels of agreements differs between political party affiliations” and H<sub>O</sub>: “The distribution of respondents into the levels of agreements does not differ between political party affiliations”.
+H<sub>A</sub>: “The distribution of respondents into the levels of agreements differs between political party affiliations” and H<sub>0</sub>: “The distribution of respondents into the levels of agreements does not differ between political party affiliations”.
 </li>
 <li>
 Chi-square test because (i) the response variable (levels of agreement) is categorial and (ii) two or more groups or populations (political party affiliation) were sampled.
@@ -215,7 +215,7 @@ percTable(obs,margin=1,digits=1)</code></pre>
 α=0.01.
 </li>
 <li>
-H<sub>O</sub>: “The distribution of people in the race categories is the same for males and females” versus H<sub>A</sub>: “The distribution of people in the race categories is NOT the same for males and females.”
+H<sub>0</sub>: “The distribution of people in the race categories is the same for males and females” versus H<sub>A</sub>: “The distribution of people in the race categories is NOT the same for males and females.”
 </li>
 <li>
 A chi-square test is required because a categorical response variable with four levels (race/ethnicity) from two groups or populations (sex) was recorded.
@@ -244,7 +244,7 @@ The χ<sup>2</sup> test statistic is 1650.8 with 3 df (Table 20).
 The p-value is &lt;0.00005. [<em>R suggests that the p-value is zero, but it cannot be zero and is just much smaller than the computer can show.</em>]
 </li>
 <li>
-The H<sub>O</sub> is rejected because the p-value&lt;α.
+The H<sub>0</sub> is rejected because the p-value&lt;α.
 </li>
 <li>
 It appears that the distribution of the individuals into the races/ethnicities differs between the sexes. An analysis of the row percentages table (Table 14) shows that there are many more white males and black females than would be expected.
@@ -266,7 +266,7 @@ distrib(1650.8,distrib=&quot;chisq&quot;,df=3,lower.tail=FALSE)</code></pre>
 α=0.05.
 </li>
 <li>
-H<sub>A</sub>: “The distribution of stands into the times since last fire differs among stand types” and H<sub>O</sub>: “The distribution of stands into the times since last fire DOES NOT differ among stand types”.
+H<sub>A</sub>: “The distribution of stands into the times since last fire differs among stand types” and H<sub>0</sub>: “The distribution of stands into the times since last fire DOES NOT differ among stand types”.
 </li>
 <li>
 Chi-square test because (i) the response variable (time since last fire) is categorial (in the way it was recorded) and (ii) two or more groups or populations (stand types) were sampled.
