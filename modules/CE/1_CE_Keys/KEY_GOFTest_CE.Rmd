@@ -85,7 +85,7 @@ w.chi$observed
 w.chi
 ```
 
-<li>p-value=`r kPvalue(w.chi$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("WaterResults",display="cite")`).</li>
+<li>p-value`r kPvalue(w.chi$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("WaterResults",display="cite")`).</li>
 <li>Reject H<sub>0</sub> because the p-value&lt;&alpha;.</li>
 <li>It appears that there is a preference for water type by the students. Further analysis (`r tbls("WaterSum",display="cite")`) suggests that the students preferred the tap water.</li>
 
@@ -144,7 +144,7 @@ t.chi$observed
 t.chi
 ```
 
-<li>p-value=`r kPvalue(t.chi$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("TurkeyResults",display="cite")`).</li>
+<li>p-value`r kPvalue(t.chi$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("TurkeyResults",display="cite")`).</li>
 <li>Reject H<sub>0</sub> because the p-value&lt;&alpha;.</li>
 <li>It appears that the turkeys show a habitat preference in the spring. Further analysis (`r tbls("TurkeySum",display="cite")`) suggests that the turkeys showed a strong avoidance of meadows, a moderate avoidance of Oak/Spruce habitats, and a moderate preference for aspen and pine habitats.</li>
 
@@ -205,7 +205,7 @@ j.chi$observed
 j.chi
 ```
 
-<li>p-value=`r kPvalue(j.chi$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("JuryResults",display="cite")`).</li>
+<li>p-value`r kPvalue(j.chi$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("JuryResults",display="cite")`).</li>
 <li>Reject H<sub>0</sub> because the p-value&lt;&alpha;.</li>
 <li>It appears that the age distribution of the jury does not match the age distribution of the district as a whole. Further analysis (`r tbls("JurySum",display="cite")`) suggests that the jury has a higher percentage of older jurors (ages "40-49" and "50-64") and a lower percentage of younger jurors (ages "18-19", "20-24", and "25-29") than expected as based on the age distribution in the district as a whole.</li>
 
