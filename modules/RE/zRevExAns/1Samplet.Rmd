@@ -31,19 +31,19 @@ figs <- captioner(prefix="Figure")
 
 1. &alpha; = 0.05.
 1. H<sub>0</sub> &mu;=80, H<sub>A</sub> &mu;>80 where &mu; is the average achievement test score for all students at the superintendent's school.
-1. A one-sample t-test is required because a quantitative variable (achievement test score) was measured on individuals from one group/population (one school), the population mean is compare to a specific value in the null hypothesis, and &sigma; is UNknown.
+1. A one-sample t-test is required because (i) a quantitative variable (achievement test score), (ii) individuals are from one group/population (one school), and (iii) &sigma; is UNknown.
 1. An observational study with randomly selected subjects was used.
-1. The &sigma; is unknown. The sample size is not greater than 40; however, it is greater than 15. Unfortunately the only clue that the sample distribution is not strongly skewed is the fact that the mean and median are approximately equal. I would prefer to have a histogram to look at.
+1. The &sigma; is unknown and n=32&ge15 and the sample distribution is not strongly skewed as suggested by the mean and median being approximately equal (Note that I would have preferred to have a histogram to look at).
 1. The statistic is x&#772; = 83.2.
-1. The test statistic is t=$\frac{83.2-80}{\frac{5.5}{\sqrt{32}}}$ = 3.29 with 32-1 = 31 df.
-1. The p-value is `r kPvalue(pt(3.29,df=31,lower.tail=FALSE),include.p=FALSE,latex=FALSE)`.
+1. The test statistic is t=$\frac{83.2-80}{\frac{5.5}{\sqrt{32}}}$ = 3.291 with 32-1 = 31 df.
+1. The p-value is `r kPvalue(pt(3.291,df=31,lower.tail=FALSE),include.p=FALSE,latex=FALSE)`.
 1. The H<sub>0</sub> is rejected because the p-value < &alpha;.
 1. It appears that the mean achievement score of all students at the superintendent's school is greater than 80 points.
-1. A 95% lower confidence bound is warranted in this situation. The t<sup>*</sup> = `r formatC(qt(0.95,df=31,lower.tail=FALSE),format="f",digits=3)`. Thus, 83.2-1.696 $\frac{5.5}{\sqrt{32}}$ or 83.2-1.65 = 81.455. One is 95% confident that the mean achievement score for all students at the superintendent's school is greater than 81.46 points.
+1. One is 95% confident that the mean achievement score for all students at the superintendent's school is greater than 83.2-1.696 $\frac{5.5}{\sqrt{32}}$=81.46 points, which further supports that the mean achievement score is greater than 80.
 
 ### R Appendix
 ```{r eval=FALSE}
-( pval <- distrib(3.29,distrib="t",df=31,lower.tail=FALSE) )
+( pval <- distrib(3.291,distrib="t",df=31,lower.tail=FALSE) )
 ( tstar <- distrib(0.95,distrib="t",type="q",df=31,lower.tail=FALSE) )
 ```
 
@@ -53,20 +53,19 @@ figs <- captioner(prefix="Figure")
 
 1. &alpha; = 0.10.
 1. H<sub>0</sub> &mu; = 32, H<sub>A</sub> &mu; > 32 where &mu; is the mean salary in 1000s of dollars.
-1. A one-sample t-test is required because a quantitative variable (salary) was measured on individuals from one group/population (Northwestern University), the population mean is compared to a specific value in the null hypothesis, and &sigma; is UNknown.
+1. A one-sample t-test is required because (i) a quantitative variable (salary) was measured, (ii) individuals are from one group/population (Northwestern University), and (iii) &sigma; is UNknown.
 1. An observational study with apparent random selection of individuals (background says "random surveys") was used.
-1. The &sigma; is unknown. The sample size is greater than 40; thus, the sampling distribution of the test statistic should follow a t-distribution.
+1. The &sigma; is unknown and n=42&ge;40; thus, the sampling distribution of the test statistic should follow a t-distribution.
 1. The statistic is x&#772; = 32.511.
 1. The test statistic is t=$\frac{32.511-32}{\frac{1.713}{\sqrt{42}}}$ = 1.933 with 42-1 = 41 df.
-1. The p-value is `r kPvalue(pt(1.933251,df=41,lower.tail=FALSE),include.p=FALSE,latex=FALSE)`.
+1. The p-value is `r kPvalue(pt(1.933,df=41,lower.tail=FALSE),include.p=FALSE,latex=FALSE)`.
 1. The H<sub>0</sub> is rejected because the p-value < &alpha;.
 1. It appears that the average salary for all recent graduates from the College of Liberal Arts is greater than $32,000; thus, the Dean's statement is supported.
-1. A 90% lower confidence bound is warranted in this situation. The t<sup>*</sup> = `r formatC(qt(0.90,df=41,lower.tail=FALSE),format="f",digits=3)`
-Thus, 32.511-1.303 $\frac{1.713}{\sqrt{42}}$ or 32.511-0.344 = 32.167. One is 90% confident that the mean salary for all recent graduates from the College of Liberal Arts is greater than $32,167.
+1. One is 90% confident that the mean salary for all recent graduates from the College of Liberal Arts is greater than 32.511-1.303 $\frac{1.713}{\sqrt{42}}$=$32,167, which further supports that the mean is greater than $32000.
 
 ### R Appendix
 ```{r eval=FALSE}
-( pval <- distrib(2.085,distrib="t",df=41,lower.tail=FALSE) )
+( pval <- distrib(1.933,distrib="t",df=41,lower.tail=FALSE) )
 ( tstar <- distrib(0.90,distrib="t",type="q",df=41,lower.tail=FALSE) )
 ```
 
@@ -84,15 +83,15 @@ tabs(name="FishingLine","Results of 1-Sample t-Test for breaking strength (lbs) 
 
 1. &alpha; = 0.10.
 1. H<sub>0</sub> &mu; = 6, H<sub>A</sub> &mu; < 6 where &mu; is the mean breaking weight of the  fishing line.
-1. A one-sample t-test is required because a quantitative variable (breaking weight) was measured on individuals from one group/population (one type of line), the population mean is compared to a specific value in the null hypothesis, and &sigma; is UNknown.
+1. A one-sample t-test is required because (i) a quantitative variable (breaking weight) was measured, (ii) individuals are from one group/population (one type of line), and (iii) &sigma; is UNknown.
 1. An experimental study with randomly selected pieces of line was used.
-1. The &sigma; is unknown. The sample size (=`r nrow(fl)`) is not greater than 40, however, it is greater than 15. The histogram suggests that the sample distribution is roughly symmetric (`r figs("FishingLine",display="cite")`). Thus, the assumptions are adequately met and the sampling distribution of the test statistic should follow a t-distribution.
+1. The &sigma; is unknown. The sample size (=`r nrow(fl)`)&ge;15 and the histogram suggests that the sample distribution is roughly symmetric (`r figs("FishingLine",display="cite")`). Thus, the assumptions are adequately met and the sampling distribution of the test statistic should follow a t-distribution.
 1. The statistic is x&#772; = `r formatC(fl.t$estimate,format="f",digits=2)` (`r tabs("FishingLine",display="cite")`).
 1. The test statistic is t = `r formatC(fl.t$statistic,format="f",digits=3)` with `r fl.t$parameter` df (`r tabs("FishingLine",display="cite")`).
 1. The p-value is `r kPvalue(fl.t$p.value,include.p=FALSE,latex=FALSE)` (`r tabs("FishingLine",display="cite")`).
 1. The H<sub>0</sub> is not rejected because the p-value > &alpha;.
 1. It does not appear that the line breaks at average pressures less than 6 lbs; the manufacturer's claim is supported.
-1. A confidence region is not required because H<sub>0</sub> was not rejected.
+1. One is 90% confident that the average pressure that the line breaks is less than `r formatC(fl.t$conf.int[2],format="f",digits=2)`lbs, which further supports that the average pressure to break the line is not less than 6 lbs (`r tabs("FishingLine",display="cite")`).
 
 ```{r histFLS, echo=FALSE}
 hist(~lbs,data=fl,xlab="Fishing Line Break Weight (lbs)")
@@ -126,15 +125,15 @@ tabs(name="Strawberries","Results of 1-Sample t-Test for number of strawberries 
 
 1. &alpha; = 0.10.
 1. H<sub>0</sub> &mu; = 12, H<sub>A</sub> &mu; < 12 where &mu; is the mean number of strawberries produced per plant.
-1. A one-sample t-test is required because a quantitative variable (number of berries) was measured on individuals from one group/population (just my strawberries), the population mean is compared to a specific value in the null hypothesis, and &sigma; is UNknown.
+1. A one-sample t-test is required because (i) a quantitative variable (number of berries) was measured, (ii) individuals are from one group/population (just my strawberries), and (iii) &sigma; is UNknown.
 1. An observational study with randomly selected individuals was used.
-1. The &sigma; is unknown. The sample size (=`r nrow(sb)`) is greater than 40. Thus, the sampling distribution of the test statistic should follow a t-distribution.
+1. The &sigma; is unknown and n=`r nrow(sb)`&ge;40; thus, the sampling distribution of the test statistic should follow a t-distribution.
 1. The statistic is x&#772; = `r formatC(sb.t$estimate,format="f",digits=2)` (`r tabs("Strawberries",display="cite")`).
 1. The test statistic is t = `r formatC(sb.t$statistic,format="f",digits=3)` with `r sb.t$parameter` df (`r tabs("Strawberries",display="cite")`).
 1. The p-value is `r kPvalue(sb.t$p.value,include.p=FALSE,latex=FALSE)` (`r tabs("Strawberries",display="cite")`).
 1. The H<sub>0</sub> is rejected because the p-value < &alpha;.
 1. It appears that the plants produce fewer than 12 berries per plant, on average. The companies claim does not seem to be supported.
-1. A 90% upper confidence bound is `r formatC(sb.t$conf.int[2],format="f",digits=2)`. Thus, one is 90% confident that the mean number of berries produces is less than `r formatC(sb.t$conf.int[2],format="f",digits=2)` (`r tabs("Strawberries",display="cite")`).
+1. One is 90% confident that the mean number of berries produces is less than `r formatC(sb.t$conf.int[2],format="f",digits=2)` (`r tabs("Strawberries",display="cite")`), which further supports that fewer than 12 berries are produced per plant on average.
 
 `r tabs("Strawberries")`
 
@@ -162,15 +161,15 @@ tabs(name="Toys","Results of 1-Sample t-Test for the amount of time needed to pu
 
 1. &alpha; = 0.10.
 1. H<sub>0</sub> &mu; = 20, H<sub>A</sub> &mu; > 20 where &mu; is the mean time to put the toy together.
-1. A one-sample t-test is required because a quantitative variable was measured (time) on individuals from one group/population (this toy), the population mean is compared to a specific value in the null hypothesis, and &sigma; is UNknown.
+1. A one-sample t-test is required because (i) a quantitative variable was measured (time), (ii) individuals are from one group/population (this toy), and (iii) &sigma; is UNknown.
 1. An observational study with randomly selected individuals was used.
-1. The &sigma; is unknown. The sample size (=`r nrow(tt)`) is not greater than 40, however it is greater than 15. The histogram suggests that the sample distribution is roughly symmetric (`r figs("Toys",display="cite")`). Thus, the assumptions are adequately met and the sampling distribution of the test statistic should follow a t-distribution.
+1. The &sigma; is unknown and n=`r nrow(tt)`&ge;15 and the histogram suggests that the sample distribution is roughly symmetric (`r figs("Toys",display="cite")`). Thus, the assumptions are adequately met and the sampling distribution of the test statistic should follow a t-distribution.
 1. The statistic is x&#772; = `r formatC(tt.t$estimate,format="f",digits=2)` (`r tabs("Toys",display="cite")`).
 1. The test statistic is t = `r formatC(tt.t$statistic,format="f",digits=3)` with `r tt.t$parameter` df (`r tabs("Toys",display="cite")`).
 1. The p-value is `r kPvalue(tt.t$p.value,include.p=FALSE,latex=FALSE)` (`r tabs("Toys",display="cite")`).
 1. The H<sub>0</sub> is not rejected because the p-value > &alpha;.
 1. It appears that the toy does not take more than 20 minutes, on average, to assemble; thus, this toy should not be rated as "difficult" to assemble.
-1. No confidence region is required because H<sub>0</sub> was not rejected.
+1. One is 90% confident that the mean time to put the toy together is greater than `r formatC(tt.t$conf.int[1],format="f",digits=2)` minutes (`r tabs("Toys",display="cite")`), further supporting that it does not take more than 20 minutes to put the toy together.
 
 ```{r histTT, echo=FALSE}
 hist(~time,data=tt,xlab="Time to Assemble Toy (mins)")
@@ -208,9 +207,9 @@ xtabs(~year+mon,data=y1)  # A check
 
 1. &alpha; = 0.05.
 1. H<sub>0</sub> &mu; = 75, H<sub>A</sub> &mu; > 75 where &mu; is the mean number of boats through the locks.
-1. A one-sample t-test is required because a quantitative variable (number of boats) was measured on individuals from one group/population (Yahara locks), the population mean is compare to a specific value in the null hypothesis, and &sigma; is UNknown.
+1. A one-sample t-test is required because (i) a quantitative variable (number of boats) was measured, (ii)individuals are from one group/population (Yahara locks), and (iii) &sigma; is UNknown.
 1. An observational study that is very likely not random was used.
-1. The &sigma; is unknown. The sample size (=`r nrow(y1)`) is greater than 40. Thus, the assumptions are met and the sampling distribution of the test statistic should follow a t-distribution.
+1. The &sigma; is unknown and n=`r nrow(y1)`&ge;40; thus, the assumptions are met and the sampling distribution of the test statistic should follow a t-distribution.
 1. The statistic is x&#772; = `r formatC(y.t$estimate,format="f",digits=2)` (`r tabs("Boats",display="cite")`).
 1. The test statistic is t = `r formatC(y.t$statistic,format="f",digits=3)` with `r y.t$parameter` df (`r tabs("Boats",display="cite")`).
 1. The p-value is `r kPvalue(y.t$p.value,include.p=FALSE,latex=FALSE)` (`r tabs("Boats",display="cite")`).
@@ -246,15 +245,15 @@ tabs(name="Beads","Results of 1-Sample t-Test for the width-to-length ratio of S
 
 1. &alpha; = 0.05.
 1. H<sub>0</sub> &mu; = 0.618, H<sub>A</sub> &mu; &ne; 0.618 where &mu; is the mean width-to-length ratio of the Shoshoni beads.
-1. A one-sample t-test is required because a quantitative variable (width-to-length ratio) was measured on individuals from one group/population (Shoshoni), the population mean is compare to a specific value in the null hypothesis, and &sigma; is UNknown.
+1. A one-sample t-test is required because (i) a quantitative variable (width-to-length ratio) was measured, (ii) individuals from one group/population (Shoshoni), and (iii) &sigma; is UNknown.
 1. An observational study that is very likely not random was used.
-1. The &sigma; is unknown. The sample size (=`r nrow(d)`) is greater than 15 and the sample distribution is somewhat right-skewed with minor outliers (`r figs("Beads",display="cite")`). The assumptions are marginally met and the sampling distribution of the test statistic will likely follow a t-distribution.
+1. The &sigma; is unknown and n=`r nrow(d)`&ge;15 and the sample distribution is somewhat right-skewed with minor outliers (`r figs("Beads",display="cite")`). The assumptions are marginally met and the sampling distribution of the test statistic will likely follow a t-distribution.
 1. The statistic is x&#772; = `r formatC(d.t$estimate,format="f",digits=2)` (`r tabs("Beads",display="cite")`).
 1. The test statistic is t = `r formatC(d.t$statistic,format="f",digits=3)` with `r d.t$parameter` df (`r tabs("Beads",display="cite")`).
 1. The p-value is `r kPvalue(d.t$p.value,include.p=FALSE,latex=FALSE)` (`r tabs("Beads",display="cite")`).
 1. The H<sub>0</sub> is not rejected because the p-value > &alpha;.
 1. It appears that the mean width-to-length ratio of the Shoshoni beads is NOT different from 0.618. Thus, it appears that the Shoshoni beads do follow the golden rectangle.
-1. Confidence region not required by H<sub>0</sub> was not rejected.
+1. One is 95% confident that the mean width-to-length ratio of the Shoshoni beads is between `r formatC(d.t$conf.int[1],format="f",digits=2)` and `r formatC(d.t$conf.int[2],format="f",digits=2)` (`r tabs("Beads",display="cite")`). This further supports`that the mean width-to-length ratio of the Shoshoni beads is NOT different from 0.618.
 
 ```{r histBeads, echo=FALSE}
 hist(~ratios,data=d,xlab="Width-to-Length Ratio of Beads")
