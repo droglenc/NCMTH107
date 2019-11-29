@@ -1,0 +1,162 @@
+<<echo=FALSE, cache=FALSE, results='hide'>>=
+set_parent('IntroStatRnw')
+opts_knit$set(eval.after='fig.cap')
+@
+
+\chapter{Animations}
+\vspace{-60pt}
+This appendix contains animations referred to throughout the book.
+
+\newpage
+\section{Central Limit Theorem Animation}  \label{app:CLTAnim}
+<<CLTanim, cache=TRUE, echo=FALSE, fig.width=4, fig.height=4, fig.show='animate', fig.cap="An animation illustrating a simulation of the sampling distribution of the sample mean total lengths for various size samples taken from the Square Lake population.  The vertical lines represent means and the horizontal lines represent standard error.  The green lines are what would be expected from the CLT and the blue lines are what was observed in the simulation.", aniopts="controls,loop,autoplay">>=
+SDhist <- function(x,n,mu,sigma,xlab='Sample Mean',ylab="Frequency of Samples",xlim=NULL,ylim=NULL,...) {
+  hist(x,main="",ylab=ylab,xlab=xlab,xlim=xlim,ylim=ylim,col="gray95",...)
+  mn <- mean(x)
+  s <- sd(x)
+  lines(c(mu,mu),c(0,0.95*ylim[2]),lwd=4,col="green")
+  lines(c(mn,mn),c(0,0.95*ylim[2]),lwd=2,col="blue")
+  lines(c(mu-sigma/sqrt(n),mu+sigma/sqrt(n)),rep(0.7*ylim[2],2),lwd=4,col="green")
+  lines(c(mn-s,mn+s),rep(0.7*ylim[2],2),lwd=2,col="blue")
+  mtext(paste("n=",n))
+  text(xlim[1],0.85*ylim[2],paste("Expected\nmean=",formatC(mu,format="f",digits=2),"\nSE=",formatC(sigma/sqrt(n),format="f",digits=2)),pos=4)
+  text(xlim[1]+(xlim[2]-xlim[1])/1.7,0.85*ylim[2],paste("Observed\nmean=",formatC(mn,format="f",digits=2),"\nSE=",formatC(s,format="f",digits=2)),pos=4)
+}
+
+par(mar=c(5,4,1.5,1),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+set.seed(10)
+data(SquareLakePopn)
+sigma <- sd(SquareLakePopn$tl)
+mu <- mean(SquareLakePopn$tl)
+resamples <- 5000
+ns <- 5:50
+reavg <- matrix(0,nrow=resamples,ncol=length(ns))
+for (i in 1:length(ns)) {
+ reavg[,i] <- replicate(resamples,mean(sample(SquareLakePopn$tl,ns[i])))
+}
+ylim <- c(0,1500)  # make graph then come back and change this
+brks <- seq(55,165,3)
+xlim <- c(60,145)
+for (i in 1:length(ns)) {
+  SDhist(reavg[,i],ns[i],mu,sigma,ylim=ylim,xlim=xlim,breaks=brks)
+}
+@
+
+\newpage
+\section{Power Concept Animations}  \label{app:PowerAnim}
+<<echo=FALSE>>=
+## this is directly from NCStats (because it is not exported)
+cPDF.plot <- function(x,fx,show.mnsd=TRUE,...) {
+  plot(x,fx,type="l",lwd=2,...)
+  if (show.mnsd) {
+    x.vals <- rep(x,round(10000*fx,0)); mu <- mean(x.vals); sigma <- sd(x.vals)
+    mtext(paste("Mean = ",round(mu,1),", SD = ",round(sigma,1)),line=0.25,col="blue")
+    d.max <- max(fx)
+    lines(rep(mu,2),c(0,d.max),col="blue",lwd=2)
+    lines(c(mu-sigma,mu+sigma),rep(0.6*d.max,2),col="blue",lwd=2)
+  }
+}
+
+## this is directly from NCStats (because it is not exported)
+c.region <- function(xval,x,fx,lower.tail,area,plot,show.ans,shade.col,lbl.col,show.lbl,cex.ans=1,...) {
+  if (lower.tail) {
+    x.shade <- x[x<=xval];                  y.shade <- fx[x<=xval]
+    x.shade <- c(x.shade,xval,xval,min(x)); y.shade <- c(y.shade,fx[x==xval],0,0)
+  } else {
+    x.shade <- x[x>=xval];                  y.shade <- fx[x>=xval]
+    x.shade <- c(xval,x.shade,max(x),xval); y.shade <- c(fx[x==xval],y.shade,0,0)
+  }
+  if (plot) {
+    cPDF.plot(x,fx,show.mnsd=FALSE,...)
+    if (show.lbl) axis(1,at=xval,labels=round(xval,3),line=0.9,tcl=1.5,fg=lbl.col,col.axis=lbl.col)
+    polygon(x.shade,y.shade,col=shade.col,border=shade.col)
+    lines(x,fx)
+    if(show.ans) mtext(paste("Value =",round(xval,5),"; Area =",round(area,5)),line=0.2,col="red",cex=cex.ans)
+  }
+  invisible(list(x=x,fx=fx,x.shade=x.shade,y.shade=y.shade))
+}
+
+## This is basically straight from powerSim in NCStats (the refresh code)
+simPower <- function(mu0=100,mua=95,sigma=10,n=30,alpha=0.05,lower.tail=TRUE,title.show=c("all","mu","sigma","n","alpha"),xlmts=NULL,digits=0) {
+  SE <- sigma/sqrt(n)
+  if (is.null(xlmts)) xlmts <- c(min(mu0,mua)-1*sigma,max(mu0,mua)+1*sigma)
+  ylmts <- c(0,dnorm(0,0,sigma/sqrt(2*n)))
+  ifelse(lower.tail, cv <- qnorm(alpha,mu0,SE), cv <- qnorm(1-alpha,mu0,SE))   # Find critical value
+  cv <- round(cv,2)
+  x0 <- sort(c(cv,seq(-4*SE+mu0,4*SE+mu0,by=0.01)))                            # Create the null dist values
+  norm0 <- dnorm(x0,mu0,SE)
+  xa <- sort(c(cv,seq(-4*SE+mua,4*SE+mua,by=0.01)))                            # create the actual dist values
+  norma <- dnorm(xa,mua,SE)
+  par(mar=c(2,1,2,3),mgp=c(2,0.75,0),mfrow=c(2,1))
+  c.region(cv,x0,norm0,lower.tail,area=NULL,plot=TRUE,show.ans=FALSE,shade.col="red",lbl.col="red",show.lbl=TRUE,xlim=xlmts,ylim=ylmts,yaxt="n",ylab="")
+  mtext("Null Dist.",4,cex=1.5,line=1)
+  lines(c(mu0,mu0),c(0,max(norm0)),lty=3,lwd=2,col="blue")
+  abline(v=cv,lty=2,lwd=2,col="red")
+  ifelse(lower.tail,pos <- 2, pos <- 4)
+  text(cv,0.9*ylmts[2],"Reject Ho",pos=pos,col="red")
+  title.show <- match.arg(title.show)
+  if (title.show=="all") ttl <- paste("mu=",mua,", sigma=",sigma,", n=",n,", alpha=",formatC(alpha,format="f",digits=3),sep="")
+   else if (title.show=="mu") ttl <- paste("mu=",formatC(mua,format="f",digits=digits),sep="")
+     else if (title.show=="sigma") ttl <- paste("sigma=",formatC(sigma,format="f",digits=digits),sep="")
+       else if (title.show=="n") ttl <- paste("n=",n,sep="")
+         else ttl <- paste("alpha=",formatC(alpha,format="f",digits=digits),sep="")
+  mtext(ttl,3,line=0.5,cex=1.25)
+
+  par(mar=c(3,1,1,3))
+  c.region(cv,xa,norma,lower.tail,area=NULL,plot=TRUE,show.ans=FALSE,shade.col="green",lbl.col="green",show.lbl=FALSE,xlab="",xlim=xlmts,ylim=ylmts,yaxt="n",ylab="")
+  mtext("means",1,line=1.5,cex=1.25)
+  mtext("Actual Dist.",4,cex=1.5,line=1)
+  lines(c(mua,mua),c(0,max(norma)),lty=3,lwd=2,col="blue")
+  abline(v=cv,lty=2,lwd=2,col="red")
+  abline(v=mu0,lty=3,lwd=2,col="gray")
+
+  pwr <- round(pnorm(cv,mua,SE),3)
+  ifelse(lower.tail, pos <- "topleft", pos <- "topright")
+  legend(pos,legend=paste("power=",format(pwr,nsmall=3)),bty="n",cex=1.25)
+  ifelse(lower.tail, pos <- "topright", pos <- "topleft")
+  legend(pos,legend=paste("beta=",format(1-pwr,nsmall=3)),bty="n",cex=1.25)
+}
+@
+
+\subsection{Effect of Sample Size on Power}
+<<pwrAnimN, cache=TRUE, echo=FALSE, fig.width=4, fig.height=5.5, fig.show='animate', fig.cap=paste0("An animation illustrating the effect of changing sample size ($n$; in steps of 5) on statistical power ($1-\\beta$).  The top graph in each figure below is the null distribution of means assuming that $Ho:\\mu=$",formatC(mu0,format='f',digits=0)," is true.  The red shaded area on this graph depicts the rejection region defined by $\\alpha=$",formatC(alpha,format='f',digits=2),".  The lower graph is the actual distribution assuming that $\\mu=$",formatC(muA,format='f',digits=2),".  The green shaded area on this graph represents power and is defined by extending the rejection criterion cutoff value down from the null distribution graph.  The standard deviation ($\\sigma=$",formatC(sigma,format='f',digits=2),") and rejection region were kept constant."), aniopts="controls,palindrome,autoplay">>=
+mu0 <- 105
+muA <- 98.06
+sigma <- 31.49
+alpha <- 0.05
+ns <- seq(10,200,5)             # List of ns to try
+for(i in 1:length(ns)) { simPower(mu0,muA,sigma,n=ns[i],alpha,TRUE,title.show="n") }
+@
+
+\newpage
+\subsection{Effect of $\alpha$ on Power}
+<<pwrAnimA, cache=TRUE, echo=FALSE, fig.width=4, fig.height=5.5, fig.show='animate', fig.cap=paste0("An animation illustrating the effect of changing $\\alpha$ on statistical power ($1-\\beta$).  The top graph in each figure below is the null distribution of means assuming that $Ho:\\mu=$",formatC(mu0,format='f',digits=0)," is true.  The red shaded area on this graph depicts the rejection region defined by $\\alpha$.  The lower graph is the actual distribution assuming that $\\mu=$",formatC(muA,format='f',digits=2),".  The green shaded area on this graph represents power and is defined by extending the rejection criterion cutoff value down from the null distribution graph.  The standard deviation ($\\sigma=$",formatC(sigma,format='f',digits=2),") and sample size ($n=$",formatC(n,format='f',digits=0),") were kept constant."), aniopts="controls,palindrome,autoplay">>=
+mu0 <- 105
+muA <- 98.06
+sigma <- 31.49
+alphas <- seq(0.002,0.1,by=0.004)   # List of alphas to try
+n <- 50
+for(i in 1:length(alphas)) { simPower(mu0,muA,sigma,n,alphas[i],TRUE,title.show="alpha",digits=3) }
+@
+
+\newpage
+\subsection{Effect of $\sigma$ on Power}
+<<pwrAnimS, cache=TRUE, echo=FALSE, fig.width=4, fig.height=5.5, fig.show='animate', fig.cap=paste0("An animation illustrating the effect of changing $\\sigma$ on statistical power ($1-\\beta$).  The top graph in each figure below is the null distribution of means assuming that $Ho:\\mu=$",formatC(mu0,format='f',digits=0)," is true.  The red shaded area on this graph depicts the rejection region defined by $\\alpha=$",formatC(alpha,format='f',digits=2),".  The lower graph is the actual distribution assuming that $\\mu=$",formatC(muA,format='f',digits=2),".  The green shaded area on this graph represents power and is defined by extending the rejection criterion cutoff value down from the null distribution graph.  The sample size ($n=$",formatC(n,format='f',digits=0),") was kept constant."), aniopts="controls,palindrome,autoplay">>=
+mu0 <- 105
+muA <- 98.06
+sigmas <- seq(10,100,5)    # List of sigmas to try
+alpha <- 0.05
+n <- 50
+for(i in 1:length(sigmas)) { simPower(mu0,muA,sigmas[i],n,alpha,TRUE,title.show="sigma",xlmts=c(65,135)) }
+@
+
+\newpage
+\subsection{Effect of Effect Size on Power}
+<<pwrAnimM, cache=TRUE, echo=FALSE, fig.width=4, fig.height=5.5, fig.show='animate', fig.cap=paste0("An animation illustrating the effect of changing effect size (i.e., the difference between the hypothesized and actual $\\mu$) on statistical power ($1-\\beta$).  The top graph in each figure below is the null distribution of means assuming that $H0:\\mu=$",formatC(mu0,format='f',digits=0)," is true.  The red shaded area on this graph depicts the rejection region defined by $\\alpha=$",formatC(alpha,format='f',digits=2),".  The lower graph is the actual distribution assuming a changing value of the true $\\mu$.  The green shaded area on this graph represents power and is defined by extending the rejection criterion cutoff value down from the null distribution graph.  The standard deviation ($\\sigma=$",formatC(sigma,format='f',digits=2),") and sample size ($n=$",formatC(n,format='f',digits=0),") were kept constant."), aniopts="controls,palindrome,autoplay">>=
+mu0 <- 105
+muAs <- seq(85,105,1)  # List of muAs to try
+sigma <- 31.49
+alpha <- 0.05
+n <- 50
+for(i in 1:length(muAs)) { simPower(mu0,muAs[i],sigma,n,alpha,TRUE,title.show="mu",xlmts=c(65,125)) }
+@

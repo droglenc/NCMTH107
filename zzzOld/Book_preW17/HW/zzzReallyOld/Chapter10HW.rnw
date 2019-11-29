@@ -1,0 +1,127 @@
+%===============================================================================
+% swv2PDF("Chapter10HW.Rnw",createScript=FALSE)
+%===============================================================================
+% Overall Sweave and R options
+%-------------------------------------------------------------------------------
+\SweaveOpts{engine=R,eps=FALSE,pdf=TRUE,strip.white=true,keep.source=TRUE,prefix.string=Figs/ansHW}
+<<echo=false,results=hide>>=
+options(width=80,show.signif.stars=FALSE,continue=" ")
+options(SweaveHooks = list(fig = function() par(mar=c(3.5,3.5,1,1),mgp=c(2,0.75,0))))
+loadNeeded(c("NCStats","xtable"))
+@
+%===============================================================================
+
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\renewcommand{\theenumi}{\alph{enumi}}    % changes enumerates from numbers to letters
+
+\begin{document}
+\section*{Question 10.45}
+<<echo=FALSE,results=hide>>=
+hr <- read.table("http://www.ncfaculty.net/dogle/R/Data_Master/R/HawksRidge.txt",header=TRUE)
+hr.z <- z.test(hr$Total,mu=50000,sd=37000,alt="greater",conf.level=0.99)
+@
+  \begin{Enumerate}
+    \item $\alpha=0.01$
+    \item $H_{O}:\mu=50000$, $H_{A}:\mu>50000$.
+    \item A one-sample Z-test is required because a quantitative variable (number of raptors) was measured on individuals from one population (all years at Hawk's Ridge), $\sigma$ is known (given in background), and the population mean is being compared to a specific value in the null hypothesis.
+    \item An observational sample that was not random was taken.
+    \item The assumptions are met because $n>30$ and $\sigma$ is known.
+    \item $\bar{x}=$ \Sexpr{formatC(hr.z$estimate,format="f",digits=1)} \tabrefp{tab:HawkRidge}.
+\begin{table}[!h]
+  \begin{center}
+    \caption{Results from the one-sample z-test for testing that the mean number of hawks observed at Hawk Ridge, MN is greater than 50000 per year.}  \label{tab:HawkRidge}
+<<echo=FALSE>>=
+swvHtest(hr.z)
+@
+  \end{center}
+\end{table}
+    \item The test statistic is $z=$\Sexpr{formatC(hr.z$statistic,format="f",digits=3)} \tabrefp{tab:HawkRidge}.
+    \item The p-value is \Sexpr{swvPvalue(hr.z$p.value)} \tabrefp{tab:HawkRidge}.
+    \item The $H_{O}$ is rejected because the $p-value<\alpha$.
+    \item The number of raptors seen per year appears to be greater than 50000.
+    \item A 99\% lower confidence bound is required.  Thus, one is 99\% confident that the mean number of raptors seen per year is more than \Sexpr{formatC(hr.z$conf.int[1],format="f",digits=0)} \tabrefp{tab:HawkRidge}.
+  \end{Enumerate}
+
+\section*{Question 10.46}
+  \begin{Enumerate}
+    \item $\alpha=0.10$.
+    \item $H_{O}:\mu=630$, $H_{A}:\mu>630$.
+    \item A one-sample Z-test is required because a quantitative variable (credit score) was measured on individuals from one population (all credit cards), $\sigma$ is known (given in background), and the population mean is being compared to a specific value in the null hypothesis.
+    \item An observational sample, with no evidence of randomness, was selected.
+    \item The assumptions are met because $n>30$ and $\sigma$ is known.
+    \item The statistic is $\bar{x}=636.86$.
+    \item The test statistic is $z=\frac{636.86-630}{\frac{5}{\sqrt{44}}}=9.11$
+    \item The p-value is \Sexpr{swvPvalue(distrib(636.86,mean=630,sd=5/sqrt(44),lower.tail=FALSE,plot=FALSE))}.
+    \item The $H_{O}$ is rejected because the $p-value<\alpha$.
+    \item It appears that the credit card companies have increased the threshold for issuing a credit card.
+    \item A 90\% lower confidence bound with $Z^{*}=$\Sexpr{formatC(distrib(0.90,type="q",lower.tail=FALSE,plot=FALSE),format="f",digits=3)}.  Thus, $636.86-1.282\frac{5}{\sqrt{44}}$ or $636.86-0.97$ = $635.89$.  Therefore, one is 90\% confident that the mean cutoff score is greater than 635.89.
+  \end{Enumerate}
+
+\newpage
+\section*{Question 10.47}
+<<echo=FALSE,results=hide>>=
+elkdens <- c(5.20,7.79,6.46,8.60,8.97,8.65,9.60,9.09,12.42,10.70,11.59,10.68,10.61,9.04,10.89)
+ed.z <- z.test(elkdens,mu=8,sd=2,alt="greater",conf.level=0.90)
+@
+  \begin{Enumerate}
+    \item $\alpha=0.10$
+    \item $H_{O}:\mu=8$, $H_{A}:\mu>8$.
+    \item A 1-sample Z-test is required because a quantitative variable (elk density) was measured on individuals from one population, $\sigma$ is known (given in background), and the population mean is being compared to a specific value in the null hypothesis.
+    \item An observational sample that is not random was selected.
+    \item The assumptions are met because $n=15$ and population is approximately normal and $\sigma$ is known.
+    \item The statistic is $\bar{x}=$ \Sexpr{formatC(ed.z$estimate,format="f",digits=2)} \tabrefp{tab:ElkDensity}.
+\begin{table}[!h]
+  \begin{center}
+    \caption{Results from the one-sample z-test for testing that the mean density of elk is greater than 8 per km$^{2}$.}  \label{tab:ElkDensity}
+<<echo=FALSE>>=
+swvHtest(ed.z)
+@
+  \end{center}
+\end{table}
+    \item The test statistic is $z=$\Sexpr{formatC(ed.z$statistic,format="f",digits=3)} \tabrefp{tab:ElkDensity}.
+    \item The p-value is \Sexpr{swvPvalue(ed.z$p.value)} \tabrefp{tab:ElkDensity}.
+    \item The $H_{O}$ is rejected because the $p-value<\alpha$.
+    \item The annual density of elk appears to be greater than 8 per square km.
+    \item A 90\% confidence lower bound is required.  Thus, one is 90\% confident that the mean annual density of elk is more than \Sexpr{formatC(ed.z$conf.int[1],format="f",digits=2)} per square km \tabrefp{tab:ElkDensity}.
+  \end{Enumerate}
+
+\section*{Question 10.48}
+ \textbf{[2 pts]} A total of \textbf{68 plots} would be required.  We were given a m.e.=10, $\sigma$=50, and z*=\Sexpr{formatC(distrib(0.95,type="q",plot=FALSE),format="f",digits=3)}.  With this, the sample size is calculated with $n=\left(\frac{1.645*50}{10}\right)^{2}$ = $67.65$.  In sample size calculations we always round up.
+    
+\section*{Appendix -- R Commands}
+\vspace{-20pt}
+<<eval=FALSE>>=
+hr <- read.table("http://www.ncfaculty.net/dogle/R/Data_Master/R/HawksRidge.txt",header=TRUE)
+( z.test(hr$Total,mu=50000,sd=37000,alt="greater",conf.level=0.99) )
+@
+
+\vspace{-18pt}
+<<eval=FALSE>>=
+( distrib(636.86,mean=630,sd=5/sqrt(44),lower.tail=FALSE) )
+( distrib(0.90,type="q",lower.tail=FALSE,lower.tail=FALSE) )
+@      
+
+\vspace{-18pt}
+<<eval=FALSE>>=
+elkdens <- c(5.20,7.79,6.46,8.60,8.97,8.65,9.60,9.09,12.42,10.70,11.59,10.68,10.61,9.04,10.89)
+( ed.z <- z.test(elkdens,mu=8,sd=2,alt="greater",conf.level=0.90) )
+@
+
+\vspace{-18pt}
+<<eval=FALSE>>=
+( distrib(0.95,type="q") )
+@
+
+\vspace{-12pt}
+\section*{Notes From Professor}
+\begin{itemize}
+  \item There must be a table of output from \R{z.test()} for the problems that require R.  You must then label this table and refer to it directly for steps 6, 7, 8, and 11.
+  \item Note that, in step 11, one must refer to the values of the confidence interval, lower bound, or upper bound.  One does not refer to the specific value from the null hypothesis when interpreting the confidence region.
+  \item Make sure to provide evidence for your statements.  Don't just say ``the sample is large'', rather say `` the sample is large because n=32>30.''  In addition, don't just say ``... because a quantitative variable was measured on one population'', rather say `` a quantitative variable (number of hawks) was measured on one population (`Hawk's Ridge').''
+  \item It is not possible for the p-value to be zero.  If the p-value is very small (i.e., less than a rounded 0.0001) then we write ``p<0.00005.''
+  \item Sample size calculations must be rounded UP, no matter the value of the first decimal.
+  \item Do not say ``sample population'' as there is no such thing.  There is a ``sample'' (of the population) and there is a ``population'' but there is no ``sample population.''
+\end{itemize}
+
+\end{document}

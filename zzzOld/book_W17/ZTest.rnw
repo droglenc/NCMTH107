@@ -1,0 +1,167 @@
+<<echo=FALSE, cache=FALSE, results='hide'>>=
+set_parent('IntroStats.Rnw')
+@
+
+\chapter{1-Sample Z-Test} \label{chap:ZTest}
+\begin{ChapObj}{\boxwidth}
+  \textbf{Objectives:}
+  \begin{Enumerate}
+    \item Properly construct statistical hypotheses.
+    \item Understand the specifics of a 1-Sample Z-Test.
+    \item Perform the 11-steps of a significance test in a 1-Sample Z-Test situation.
+  \end{Enumerate}
+\end{ChapObj}
+
+\minitoc
+\vspace{36pt}
+
+\lettrine{A}{ foundation for making statistical inferences} was provided in Modules \ref{chap:SamplingDist}-\ref{chap:ConfidenceRegions}. Most of the material in Modules \ref{chap:HypothesisTests} and \ref{chap:ConfidenceRegions} is related to a 1-Sample Z-test, which is specifically formalized in this module. Other specific hypothesis tests are in Modules \ref{chap:tTest1}-\ref{chap:GOF}.
+
+\newpage
+\section{11-Steps of Hypothesis Testing}\index{Hypothesis Testing!Steps}  \label{sec:11Steps}
+\vspace{-12pt}
+Hypothesis testing is a rigorous and formal procedure for making inferences about a parameter from a statistic. The 11 steps listed below will help make sure that all aspects important to hypothesis testing are completed.  These steps should be used for all hypothesis tests in this and ensuing modules.
+\vspace{-12pt}
+\begin{Enumerate}
+  \item State the rejection criterion ($\alpha$).
+  \item State the null and alternative hypotheses to be tested and define the parameter(s).
+  \item Identify (and explain why!) the hypothesis test to use (e.g., 1-Sample t, 2-sample t, etc.).
+  \item Collect the data (address study type and if randomization occurred).
+  \item Check all necessary assumptions (describe how you tested the validity).
+  \item Calculate the appropriate statistic(s).
+  \item Calculate the appropriate test statistic.
+  \item Calculate the p-value.
+  \item State your rejection decision about $H_{0}$.
+  \item Summarize your findings in terms of the problem.
+  \item \textbf{If $H_{0}$ was rejected}, compute and interpret an appropriate confidence region for the parameter.
+\end{Enumerate}
+\vspace{-12pt}
+
+The order of some of these steps is arbitrary, however Steps 1-3 \textbf{MUST} be completed before collecting the data (Step 4). Further note that we will perform Step 11 only to provide a more definitive statement about the value of the parameter when the $H_{0}$ as been rejected (i.e., if the parameter differs from the hypothesized value, then provide a range for which the actual parameter may exist).
+
+\warn{A confidence region for a parameter articulates the direction and magnitude of the difference when $H_{0}$ is rejected.}
+
+
+\section{1-Sample Z-Test Specifics} \label{sect:ZTest}\index{Z-Test}
+\vspace{-12pt}
+A 1-Sample Z-Test tests $H_{0}:\mu=\mu_{0}$, where $\mu_{0}$ represents a specific value of $\mu$, when $\sigma$ is known. Other specifics of this test were discussed in the previous modules and are summarized in \tabref{tab:1Zspec}.  The only test that can possibly be confused with a 1-Sample Z-Test is a 1-Sample t-Test \modrefp{chap:tTest1}, which tests the same null hypothesis but when $\sigma$ is unknown.
+
+\begin{table}[h]
+\centering
+\colorbox{ltgray}{
+\begin{minipage}{.8\textwidth}
+  \centering
+	\caption{Characteristics of a 1-Sample Z-Test.}\label{tab:1Zspec}
+  \begin{Itemize}
+      \item \textbf{Hypothesis:} $H_{0}:\mu=\mu_{0}$
+      \item \textbf{Statistic:} $\bar{x}$
+      \vspace{6pt}
+      \item \textbf{Test Statistic:} $Z=\frac{\bar{x}-\mu_{0}}{\frac{\sigma}{\sqrt{n}}}$
+      \vspace{6pt}
+      \item \textbf{Confidence Region:} $\bar{x}+Z^{*}\frac{\sigma}{\sqrt{n}}$
+      \vspace{6pt}
+      \item \textbf{Assumptions:}
+        \begin{Enumerate}
+          \item $\sigma$ is known
+          \item $n>30$, $n>15$ and the \textbf{population} is not strongly skewed, OR the \textbf{population} is normally distributed.
+        \end{Enumerate}
+      \item \textbf{When to Use:} Quantitative response, one population, $\sigma$ is known.
+  \end{Itemize}
+\end{minipage}}
+\end{table}
+
+\subsection{Example - Intra-class Travel}
+\vspace{-8pt}
+Consider the following situation,
+\begin{quote}
+\vspace{-8pt}
+\textsl{A dean is interested in the average amount of time it takes for students to get from one class to another.  In particular, she wants to determine if it takes more than 10 minutes, on average, to go between classes.  In an effort to test this hypothesis, she collected a random sample of 100 intra-class travel times and found the mean to be 10.12 mins.  Assume that it is known from previous studies that the distribution of intra-class times is symmetric with a standard deviation of 1.60 mins.  Test the dean's hypothesis with $\alpha=0.10$.}
+\end{quote}
+
+The 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for this example are as follows:
+\vspace{-12pt}
+\begin{Enumerate}
+  \item $\alpha$=0.10.
+  \item $H_{0}:\mu=10$ mins vs. $H_{A}:\mu>10$ mins, where $\mu$ is the mean time for ALL intra-class travel events.
+  \item A 1-Sample Z-Test is required because (i) a quantitative variable (intra-class travel time) was measured, (ii) individuals from one population were sampled (students at the Dean's school), and (iii) $\sigma$ is thought to be known (=1.60 mins).
+  \item The data appear to be part of an observational study (the dean did not impart any conditions on the students) with a random selection of individuals.
+  \item (i) $n=100>30$ and (ii) $\sigma$ is thought to be known (=1.60 mins).
+  \item $\bar{x}$=10.12.
+  \item $Z=\frac{10.12-10}{\frac{1.60}{\sqrt{100}}}$=$\frac{0.12}{0.16}$=$0.75$.
+  \item p-value=\Sexpr{kPvalue(pnorm(10.12,mean=10,sd=0.16,lower.tail=FALSE),include.p=FALSE)}.
+  \item $H_{0}$ is not rejected because the $p-value >\alpha=0.10$.
+  \item It appears that the mean for \textbf{all} intra-class travel events is not more than 10 minutes.
+  \item The confidence region is not computed when $H_{0}$ is not rejected.
+\end{Enumerate}
+
+\vspace{-8pt}
+\begin{minipage}{\textwidth}
+\textbf{R Appendix:}
+<<eval=FALSE, prompt=FALSE>>=
+( distrib(10.12,mean=10,sd=1.60/sqrt(100),lower.tail=FALSE) )
+@
+\end{minipage}
+
+\vspace{-8pt}
+\begin{exsection}
+\vspace{-8pt}
+  \item \label{revex:HypTestZCactus} A researcher is investigating the growth of a certain cactus under a variety of environmental conditions.  He knows from previous research that the growth of this particular type of cactus is approximately normally distributed with a standard deviation of 1.40 cm.  Under the current environmental conditions that he is investigating, however, he does not know the mean.  He does hypothesize that it is no more than 4 cm.  To test this hypothesis he used a preliminary sample of 10 randomly-selected cacti.  He found the sample mean for these cacti to be 3.26 cm.  Use this information to test his hypothesis with $\alpha=0.05$. \ansref{ans:HypTestZCactus}
+  \item \label{revex:HypTestZPike} \cite{OwensPronin2000} studied the age and growth of pike in Chivyrkui Bay on Lake Baikal.  They found that the length of the sample of 30 pike in Lake Baikal was slightly right-skewed with a mean of 656.1 mm.  Suppose that a recent article in an outdoor magazine reported the average length of all pike in this lake to be 600 mm long.  It is known from previous studies that the standard deviation of pike length is about 130 mm.  Perform a test, using a 95\% confidence level, to determine if the mean length of pike reported by the researchers significantly differs from that reported in the outdoor magazine.  \ansref{ans:HypTestZPike}
+\end{exsection}
+
+\section{1-Sample Z-Test in R}
+\vspace{-12pt}
+If raw data exist, the calculations for a 1-Sample Z-test can be efficiently computed with \R{z.test()}.  This function requires the vector of quantitative data as the first argument, the hypothesized value for $\mu$ in \R{mu=}, and the known $\sigma$ in \R{sd=}. Additionally, the type of alternative hypothesis may be declared in \R{alt=}, where \R{alt="two.sided"} (the default), \R{alt="less"}, and \R{alt="greater"} correspond to the ``not equals'', ``less than'', and ``greater than'' hypotheses, respectively. Finally, the level of confidence may be given as a proportion (between 0 and 1) in \R{conf.level=} (which defaults to 0.95). The results of \R{z.test()} mayd be assigned to an object and submitted to \R{plot()} to visualize the test statistic and p-value. Use of \R{z.test()} is illustrated in the following example.
+
+\subsection{Body Temperature}
+\vspace{-12pt}
+Consider the following situation,\footnote{There is an interesting discussion of studies of body temperature at \href{http://hypertextbook.com/facts/LenaWong.shtml}{The Physics Factbook}.}
+\vspace{-8pt}
+\begin{quote}
+\textsl{\cite{Machowiaketal1992} critically examined the belief that the mean body temperature is 98.6$^{0}$F by measuring the body temperatures in a sample of healthy humans.  Their data are found in \href{https://raw.githubusercontent.com/droglenc/NCData/master/BodyTemp.csv}{BodyTemp.csv}.  Use these data, with a supposedly known $\sigma=0.63^{0}$F, and an $\alpha=0.01$ to determine if the mean body temperature differs from 98.6$^{0}$F.}
+\end{quote}
+
+<<1Zbtex, echo=FALSE, results='hide', fig.show='hide'>>=
+bt <- read.csv("data/BodyTemp.csv")
+headtail(bt)
+( bt.z <- z.test(bt$temp,mu=98.6,sd=0.63,conf.level=0.99) )
+plot(bt.z)
+@
+
+The 11-steps \sectrefp{sec:11Steps} for a hypothesis test for this example are as follows:
+\vspace{-8pt}
+\begin{Enumerate}
+  \item $\alpha$=0.01.
+  \item $H_{0}:\mu=98.6^{0}$F vs. $H_{A}:\mu\neq98.6^{0}$F, where $\mu$ is the mean body temperature for ALL healthy humans. [\textit{Note that not equals was used because the researchers want to determine if the temperature is \textbf{different from} $98.6^{0}$F.}]
+  \item A 1-Sample Z-Test is required because (i) a quantitative variable (i.e., body temperature) was measured, (ii) individuals from one population were sampled (i.e., healthy humans), and (iii) $\sigma$ is thought to be known ($=0.63^{0}$F).
+  \item The data appear to be part of an observational study although this is not made clear in the background information.  There is also no evidence that randomization was used.
+  \item (i) $n=\Sexpr{round(bt.z$parameter["n"],0)}>30$ and (ii) $\sigma$ is thought to be known ($=0.63^{0}$F).
+  \item $\bar{x}$=\Sexpr{round(bt.z$estimate,2)}$^{0}$F \tabrefp{tab:1Zbtex}.
+  \item $Z=\Sexpr{round(bt.z$statistic,2)}$ \tabrefp{tab:1Zbtex}.
+  \item p-value=\Sexpr{kPvalue(bt.z$p.value,include.p=FALSE)} \tabrefp{tab:1Zbtex}.
+  \item Reject $H_{0}$ because $p-value<\alpha=0.01$.
+  \item It appears that the mean body temperature of ALL healthy humans is less than 98.6$^{0}$F. [\textit{Note that the test was for a difference but because $\bar{x}<98.6$ this more specific conclusion can be made.}]
+  \item I am 99\% confident that the mean body temperature ($\mu$) for ALL healthy humans is between \Sexpr{round(bt.z$conf.int[1],2)} and \Sexpr{round(bt.z$conf.int[2],2)}$^{0}$F \tabrefp{tab:1Zbtex}.
+\end{Enumerate}
+
+\begin{minipage}{\textwidth}
+\textbf{R Appendix:}
+<<eval=FALSE, results='hide',fig.show='hide', prompt=FALSE>>=
+<<1Zbtex>>
+@
+\end{minipage}
+
+\begin{table}[htbp]
+  \caption{Results from 1-Sample Z-Test for mean body temperature.}
+  \label{tab:1Zbtex}
+<<echo=FALSE, background='white'>>=
+kHtest(bt.z)
+@
+\end{table}
+
+
+\begin{exsection}
+  \item \label{revex:HypTestZPain} \rhw{} A study by \cite{Cheshireetal1994} reported on six patients with chronic myofascial pain syndrome (introduced in Review Exercise \ref{revex:HypTPain}).  The researchers determined the duration of pain for the six patients were 2.5, 2.7, 2.8, 2.8, 2.8, and 3.0.  Test the hypothesis that the mean pain length was greater than 2.5 years at the 10\% significance level.  Assume that it is known that the distribution of duration of pain is normal with a standard deviation of 0.5 years. \ansref{ans:HypTestZPain}
+
+  \item \label{revex:HypTestAsianCholest} \rhw{} Suppose that it is known that cholesterol levels in women aged 21-40 in the U.S. has a mean of 190 mg/dl and standard deviation of 40 mg/dl.  Suppose that we want to determine, at the 10\% significance level, if the cholesterol level of Asian women is different from U.S. women as determined from 40 randomly selected Asian women aged 21-40 who had recently immigrated to the U.S.  Assume that the Asian women have the same standard deviation as the U.S. women population.  The data from this sample are found in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Cholesterol.csv}{Cholesterol.csv}.  \ansref{ans:HypTestZAsianCholest}
+\end{exsection}

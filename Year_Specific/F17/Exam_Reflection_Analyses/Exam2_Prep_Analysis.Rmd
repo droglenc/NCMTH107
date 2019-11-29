@@ -1,0 +1,87 @@
+---
+title: "Exam 2 Preparation F17"
+author: "Derek H. Ogle"
+date: "December 1, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(dplyr)
+library(FSA)
+library(likert)
+
+## Load and prepare data
+# Read the googlesheet
+# Rename a couple of variables to be more succinct
+# Get just the first exam reflections
+# Delete timestamp, names, and exam variables
+d <- read_csv("Exam2_PrepSurvey.csv") %>%
+  as.data.frame() %>%
+  rename(exam="Which was the most recent exam?",
+         score="What was your score on the exam (as a percentage).") %>%
+  filter(exam=="Second exam") %>%
+  select(-Timestamp,-contains("[OPTIONAL]"),-exam)
+
+# Rename variables to be less lengthy (and remove brackets)
+names(d) <- gsub("Please mark how much effort you expended on each of the following when preparing for the exam.","EFFORT:",names(d))
+names(d) <- gsub("Please mark your level of agreement with each statement below.","AGREE:",names(d))
+names(d) <- gsub("\\[","",names(d))
+names(d) <- gsub("\\]","",names(d))
+# Get rid of some irritating attributes
+attr(d,"spec") <- NULL
+
+## Split data.frames
+# Get scores, create a grade category
+dfScores <- select(d,score) %>%
+  mutate(intval=cut(score,breaks=c(0,65,80,100)),
+         grade=mapvalues(intval,from=c("(0,65]","(65,80]","(80,100]"),
+                         to=c("<65","65-80",">80")))
+
+# Get comments
+dfComment <- select(d,starts_with("Please describe"),
+                    contains("other comments"))
+
+# Get agreement questions
+#   simplify variable name
+#   convert to factor and control levels
+dfAgree <- select(d,contains("AGREE:"))
+names(dfAgree) <- gsub("AGREE: ","",names(dfAgree))
+dfAgree[] <- lapply(dfAgree,mapvalues,from=c("Disagree","Somewhat Disagree","Neither","Somewhat Agree","Agree"),to=c("Dis","Some Dis","Neith","Some Agr","Agree"))
+dfAgree[] <- lapply(dfAgree,factor,levels=c("Dis","Some Dis","Neith","Some Agr","Agree"))
+# Separate by before exam prep and exam prep
+tmp <- which(names(dfAgree)=="I read the exam guide provided by the professor.")
+dfAgreePre <- select(dfAgree,1:(tmp-1))
+dfAgreeExam <- select(dfAgree,tmp:ncol(dfAgree))
+
+# Get effort questions
+#   simplify variable name
+#   convert to factor and control levels
+dfEffort <- select(d,contains("EFFORT:"))
+names(dfEffort) <- gsub("EFFORT: ","",names(dfEffort))
+dfEffort[] <- lapply(dfEffort,factor,levels=c("Not at all","Very little","Some","Much","Lots"))
+```
+
+## Preparation Before the Exam
+```{r echo=FALSE, fig.show='asis', fig.height=1.5}
+for (i in 1:ncol(dfAgreePre)) {
+  tmp <- likert(dfAgreePre[,i,drop=FALSE],grouping=dfScores$grade)
+  print(plot(tmp,plot.percent.neutral=FALSE,legend="",wrap=80))
+}
+```
+
+## Preparation For the Exam
+```{r echo=FALSE, fig.show='asis', fig.height=1.5}
+for (i in 1:ncol(dfAgreeExam)) {
+  tmp <- likert(dfAgreeExam[,i,drop=FALSE],grouping=dfScores$grade)
+  print(plot(tmp,plot.percent.neutral=FALSE,legend="",wrap=80))
+}
+```
+
+```{r echo=FALSE, fig.show='asis', fig.height=1.5}
+for (i in 1:ncol(dfEffort)) {
+  tmp <- likert(dfEffort[,i,drop=FALSE],grouping=dfScores$grade)
+  print(plot(tmp,plot.percent.neutral=FALSE,legend="",wrap=80))
+}
+```

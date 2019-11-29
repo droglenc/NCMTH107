@@ -1,0 +1,52 @@
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\input{c:/aaaWork/zGnrlLatex/justRPreamble}
+\hypersetup{pdftitle = Final Exam Key -- Loon1}
+
+\begin{document}
+\section*{Final Exam Key -- Loon1}
+
+<<setup,echo=FALSE,include=FALSE>>=
+source("c:/aaaWork/zGnrlLatex/knitr_setup.R")
+library(NCStats)
+cl <- read.table("Loon1.txt", header=TRUE)
+@
+
+<<echo=FALSE>>=
+Summarize(~weight,data=cl,digit=3)
+hist(~weight,data=cl,xlab="Weight")
+@
+<<echo=FALSE>>=
+percTable(table(cl$reg),digit=1)
+@
+<<echo=FALSE>>=
+plot(tarsus~weight,data=cl,pch=16)
+cat("The correlation is",round(cor(cl$tarsus,cl$weight),3))
+@
+<<echo=FALSE>>=
+lml <- lm(weight~bill.len,data=cl)
+coef(lml)
+cat("The predicted value at a median of",round(median(cl$bill.len,na.rm=TRUE),3),"is",
+    round(predict(lml,data.frame(bill.len=median(cl$bill.len))),3))
+cat("The residual is 3000 -",round(predict(lml,data.frame(bill.len=80)),3),"=",round(3000-predict(lml,data.frame(bill.len=80)),3))
+cat("The r-squared value is",round(rSquared(lml),3))
+@
+
+\clearpage
+<<echo=FALSE>>=
+cl1 <- filterD(cl,sex!="Unknown")
+chi.l <- chisq.test(table(cl1$sex,cl1$reg),correct=FALSE)
+chi.l$observed
+chi.l$expected
+@
+<<echo=FALSE>>=
+chi.l
+@
+<<echo=FALSE>>=
+levenesTest(weight~sex,data=cl1)
+@
+<<echo=FALSE>>=
+t.test(weight~sex,data=cl1,var.equal=TRUE)
+@
+
+\end{document}

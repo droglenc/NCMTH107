@@ -1,0 +1,94 @@
+%===============================================================================
+% swv2PDF("Chapter4HW.Rnw",createScript=FALSE)
+%===============================================================================
+%===============================================================================
+% Overall Sweave and R options
+%-------------------------------------------------------------------------------
+\SweaveOpts{engine=R,eps=FALSE,pdf=TRUE,strip.white=TRUE,keep.source=TRUE,prefix.string=Figs/ansHW}
+<<echo=false,results=hide>>=
+options(width=80,show.signif.stars=FALSE,continue=" ")
+options(SweaveHooks = list(fig = function() par(mar=c(3.5,3.5,1,1),mgp=c(2,0.75,0))))
+loadNeeded(c("NCStats","xtable"))
+@
+%===============================================================================
+
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\renewcommand{\theenumi}{\alph{enumi}}    % changes enumerates from numbers to letters
+
+\begin{document}
+\section*{Question 12.38}
+<<echo=FALSE,results=hide>>=
+obs <- matrix(c(12855,14946,7019,439,1924,6784,1948,103),nrow=2,byrow=TRUE)
+rownames(obs) <- c("Male","Female")
+colnames(obs) <- c("White","Black","Hispanic","Other")
+aids.chi <- chisq.test(obs,correct=FALSE)
+@
+
+  \begin{Enumerate}
+    \item $\alpha=0.01$.
+    \item $H_{O}$:``The distribution of people in the race categories is the same for male and females'' versus $H_{A}$:``The distribution of people in the race categories is NOT the same for male and females''.
+    \item A chi-square test is required because a categorical response variable with four levels (race/ethnicity) from two populations (sex) was recorded and the proportions in the response variable are being compared among populations in the null hypothesis.
+    \item This is an observational study without obvious randomization.
+    \item The test statistic computed below should reasonably follow a $\chi^{2}$-distribution because all cells in the expected table \tabrefp{tab:aids1} have values greater than five.
+\begin{table}[!h]
+  \begin{center}
+    \caption{Expected frequency table for distribution of individuals into race and sex categories.}  \label{tab:aids1}
+<<echo=FALSE>>=
+round(aids.chi$expected,1)
+@
+  \end{center}
+\end{table}      
+    \item The table of observed frequencies were given but are shown again in \tabref{tab:aids2}.
+\begin{table}[!h]
+  \begin{center}
+    \caption{Observed frequency table for distribution of individuals into race and sex categories.}  \label{tab:aids2}
+<<echo=FALSE>>=
+aids.chi$observed
+@
+  \end{center}
+\end{table}
+    \item The $\chi^{2}$ test statistic is \Sexpr{formatC(aids.chi$statistic,format="f",digits=2)} with \Sexpr{formatC(aids.chi$parameter,format="f",digits=0)} df \tabrefp{tab:aids3}.
+\begin{table}[!h]
+  \begin{center}
+    \caption{Results from the chi-square test for examining the distribution of races by male and female.}  \label{tab:aids3}
+<<echo=FALSE>>=
+swvHtest(aids.chi)
+@
+  \end{center}
+\end{table}      
+    \item The p-value is \Sexpr{swvPvalue(aids.chi$p.value)}.
+    \item The $H_{O}$ is rejected because the $p-value<\alpha$.
+    \item It appears that the distribution of the individuals into the races/ethnicities differs between the sexes.  An analysis of the residuals \tabrefp{tab:aids4} shows that there are many more white male and black females than would be expected.
+\begin{table}[!h]
+  \begin{center}
+    \caption{Residuals (observed-expected frequencies) for the observations of race by sex categories.}  \label{tab:aids4}
+<<echo=FALSE>>=
+round(aids.chi$residuals,digits=2)
+@
+  \end{center}
+\end{table}      
+
+  \end{Enumerate}
+
+    
+\section*{Appendix -- R Commands}
+\vspace{-20pt}
+<<eval=FALSE>>=
+freq <- c(12855,14946,7019,439,1924,6784,1948,103)
+obs <- matrix(freq,nrow=2,byrow=TRUE)
+rownames(obs) <- c("Male","Female")
+colnames(obs) <- c("White","Black","Hispanic","Other")
+aids.chi <- chisq.test(obs,correct=FALSE)
+aids.chi$expected
+aids.chi$observed
+aids.chi$residuals
+@
+
+\vspace{-12pt}
+\section*{Notes From Professor}
+\begin{itemize}
+  \item 
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,132 @@
+# Possum1.txt
+#
+# Source: Lindenmayer, D. B., Viggers, K. L., Cunningham, R. B., and Donnelly, C. F. 1995.
+#   Morphological variation among columns of the mountain brushtail possum, Trichosurus
+#   caninus gilby (Phalangeridae: Marsupiala). Australian Journal of Zoology 43:449-458.
+#   [obtained from the DAAG package]
+#
+# Morphological measurements on mountain bushytail possums from Australia
+#
+#  site: one of seven trapping locations
+#  pop: a location factor (Vic=Victoria, Other=New South Wales or Queensland)
+#  age: age of possum
+#  totlen: total length (cm)
+#  chest: chest girth (cm)
+#  belly: belly girth (cm)
+#  taillen: tail length (cm)
+#  footlen: foot length (mm)
+#  miss: logical for whether individual contains any missing data
+#  out: logical for whether individual contains any outlier data
+#
+# If the data are read into an object called P then use the following commands to obtain a
+#   "clean" data set -- i.e., this removes individuals with missing data or erroneous outliers
+#
+#      P <- Subset(P,!miss & !out)
+#
+# The site variable should be converted to a factor variable ==>  P$fsite <- factor(P$site)
+#
+site	pop	sex	age	totlen	chest	belly	taillen	footlen	miss	out
+1	Vic	m	8	89.0	28.0	36.0	36.0	74.5	FALSE	FALSE
+1	Vic	f	6	91.5	28.5	33.0	36.5	72.5	FALSE	FALSE
+1	Vic	f	6	95.5	30.0	34.0	39.0	75.4	FALSE	FALSE
+1	Vic	f	6	92.0	28.0	34.0	38.0	76.1	FALSE	FALSE
+1	Vic	f	2	85.5	28.5	33.0	36.0	71.0	FALSE	FALSE
+1	Vic	f	1	90.5	30.0	32.0	35.5	73.2	FALSE	FALSE
+1	Vic	m	2	89.5	30.0	34.5	36.0	71.5	FALSE	FALSE
+1	Vic	f	6	91.0	29.0	34.0	37.0	72.7	FALSE	FALSE
+1	Vic	f	9	91.5	28.0	33.0	37.0	72.4	FALSE	FALSE
+1	Vic	f	6	89.5	27.5	32.0	37.5	70.9	FALSE	FALSE
+1	Vic	f	9	89.5	31.0	34.0	39.0	77.2	FALSE	FALSE
+1	Vic	f	5	92.0	28.0	33.0	35.5	71.7	FALSE	FALSE
+1	Vic	m	5	89.5	27.0	32.0	36.0	71.0	FALSE	FALSE
+1	Vic	m	3	91.5	28.0	31.5	36.0	74.3	FALSE	FALSE
+1	Vic	m	5	85.5	28.0	35.0	34.0	69.7	FALSE	FALSE
+1	Vic	m	4	86.0	28.0	32.0	34.5	73.0	FALSE	FALSE
+1	Vic	f	1	89.5	29.0	31.0	36.5	73.2	FALSE	TRUE
+1	Vic	m	2	90.0	28.0	32.0	36.0	73.7	FALSE	FALSE
+1	Vic	f	5	90.5	28.0	32.0	35.0	73.4	FALSE	FALSE
+1	Vic	f	4	89.0	27.0	36.0	38.0	73.8	FALSE	FALSE
+1	Vic	f	3	96.5	30.0	40.0	39.5	77.9	FALSE	FALSE
+1	Vic	m	3	91.0	28.0	36.0	39.5	73.5	FALSE	FALSE
+1	Vic	f	4	89.0	28.0	35.0	36.0	72.8	FALSE	FALSE
+1	Vic	m	2	84.0	27.0	32.0	34.0	75.0	FALSE	FALSE
+1	Vic	m	3	91.5	31.0	35.0	35.5	72.3	FALSE	FALSE
+1	Vic	m	7	90.0	29.0	38.0	36.0	73.6	FALSE	FALSE
+1	Vic	f	2	85.0	23.0	28.0	35.0	70.3	FALSE	FALSE
+1	Vic	m	4	87.0	27.0	30.0	34.5	73.2	FALSE	FALSE
+1	Vic	f	3	88.0	24.0	32.0	35.0	74.9	FALSE	FALSE
+1	Vic	f	2	84.0	24.5	33.0	33.5	70.6	FALSE	FALSE
+1	Vic	m	3	93.0	27.0	31.0	37.0	68.0	FALSE	FALSE
+1	Vic	f	4	94.0	28.0	34.0	39.0	74.8	FALSE	FALSE
+1	Vic	m	3	89.0	24.0	30.0	37.0	70.8	FALSE	FALSE
+2	Vic	m	2	85.5	26.0	28.5	36.5	73.1	FALSE	FALSE
+2	Vic	m	4	85.0	28.0	35.5	35.5	71.2	FALSE	FALSE
+2	Vic	m	7	88.0	25.5	36.0	35.0	74.3	FALSE	FALSE
+2	Vic	f	2	82.5	28.0	31.5	35.0	71.2	FALSE	FALSE
+2	Vic	m	7	80.5	27.0	30.0	35.5	68.4	FALSE	FALSE
+2	Vic	f	1	75.0	25.0	25.0	34.0	68.7	FALSE	FALSE
+2	Vic	f	3	84.5	27.0	30.0	36.0	72.8	FALSE	FALSE
+2	Vic	f	5	83.0	27.0	30.5	36.5	NA	TRUE	FALSE
+2	Vic	m	3	77.0	25.5	33.0	32.0	62.7	FALSE	FALSE
+2	Vic	f	2	81.0	29.0	31.0	32.0	72.0	FALSE	FALSE
+2	Vic	m	NA	76.0	23.0	27.0	35.5	70.3	TRUE	FALSE
+2	Vic	m	3	81.0	27.0	31.5	34.0	71.5	FALSE	FALSE
+2	Vic	m	NA	84.0	24.5	35.0	35.0	72.8	TRUE	FALSE
+3	other	m	2	89.0	25.0	33.0	37.5	66.0	FALSE	FALSE
+3	other	m	5	85.0	28.0	35.0	34.0	66.9	FALSE	FALSE
+3	other	m	4	85.0	29.5	35.5	37.0	69.0	FALSE	FALSE
+3	other	f	5	88.0	28.0	36.0	38.0	65.0	FALSE	FALSE
+3	other	f	5	85.0	28.0	38.5	36.0	64.0	FALSE	FALSE
+3	other	m	6	93.5	28.5	32.5	40.0	67.9	FALSE	FALSE
+3	other	f	3	91.0	26.0	33.5	38.0	67.4	FALSE	FALSE
+4	other	m	7	91.5	30.0	36.5	43.0	71.3	FALSE	FALSE
+4	other	m	2	92.5	30.5	36.0	38.0	72.5	FALSE	FALSE
+4	other	m	3	93.7	27.5	31.5	38.0	68.7	FALSE	FALSE
+4	other	f	4	93.0	31.0	39.0	41.0	67.2	FALSE	FALSE
+4	other	m	3	91.0	30.5	33.0	39.0	66.5	FALSE	TRUE
+4	other	m	2	96.0	32.0	36.0	40.0	73.2	FALSE	FALSE
+4	other	f	2	88.0	26.0	30.0	39.0	63.1	FALSE	FALSE
+5	other	m	7	86.0	26.5	31.0	38.0	63.1	FALSE	FALSE
+5	other	f	3	90.5	27.0	32.0	39.0	65.5	FALSE	FALSE
+5	other	f	6	88.5	25.5	28.5	38.0	64.1	FALSE	FALSE
+5	other	f	3	89.5	25.5	33.0	38.5	63.0	FALSE	FALSE
+5	other	f	5	88.5	29.0	38.5	38.0	68.2	FALSE	FALSE
+5	other	f	3	86.0	26.5	34.0	36.5	63.2	FALSE	FALSE
+5	other	m	4	85.0	27.5	29.5	36.5	64.7	FALSE	FALSE
+5	other	m	5	88.5	27.0	30.0	38.0	65.9	FALSE	FALSE
+5	other	m	5	88.0	28.5	34.0	37.5	65.0	FALSE	FALSE
+5	other	f	7	87.0	27.0	34.0	38.0	65.4	FALSE	FALSE
+5	other	m	6	90.0	27.5	34.0	40.0	65.7	FALSE	FALSE
+5	other	m	1	80.5	25.5	30.0	35.0	62.0	FALSE	FALSE
+5	other	m	1	82.0	23.5	28.0	36.5	65.7	FALSE	FALSE
+6	other	f	4	83.0	26.0	34.0	38.0	61.5	FALSE	FALSE
+6	other	m	6	89.0	26.0	33.5	38.0	66.2	FALSE	FALSE
+6	other	m	5	89.0	26.0	33.0	41.0	64.5	FALSE	FALSE
+6	other	m	6	84.0	25.0	35.0	36.0	62.8	FALSE	FALSE
+6	other	m	1	81.0	23.0	28.0	36.5	63.0	FALSE	FALSE
+6	other	m	1	81.0	22.0	28.5	36.5	62.8	FALSE	FALSE
+6	other	m	1	84.0	23.5	30.5	38.0	62.3	FALSE	FALSE
+6	other	m	3	85.5	27.5	35.0	38.0	65.6	FALSE	FALSE
+6	other	f	4	82.0	26.0	32.0	36.5	60.7	FALSE	FALSE
+6	other	f	3	81.5	25.0	29.0	36.0	62.0	FALSE	FALSE
+6	other	m	3	80.5	25.0	28.5	36.0	62.6	FALSE	FALSE
+6	other	m	3	92.0	27.0	31.5	40.5	65.6	FALSE	FALSE
+6	other	f	3	86.5	26.0	31.0	38.5	60.3	FALSE	FALSE
+7	other	m	2	93.0	26.0	36.0	41.5	71.7	FALSE	FALSE
+7	other	f	2	87.5	25.5	31.5	38.0	66.7	FALSE	FALSE
+7	other	m	6	84.5	29.0	30.5	35.0	64.4	FALSE	FALSE
+7	other	m	3	85.0	25.5	32.5	38.5	69.8	FALSE	FALSE
+7	other	m	3	89.0	26.0	32.0	38.0	65.5	FALSE	FALSE
+7	other	m	2	85.0	25.5	31.0	37.0	67.6	FALSE	FALSE
+7	other	m	3	82.0	24.0	31.0	38.0	63.8	FALSE	FALSE
+7	other	m	7	84.0	29.0	35.0	35.5	64.2	FALSE	FALSE
+7	other	m	4	88.5	27.0	31.0	37.5	64.5	FALSE	FALSE
+7	other	m	4	83.0	25.0	33.0	38.0	66.5	FALSE	FALSE
+7	other	m	3	86.0	25.0	31.5	38.0	63.8	FALSE	FALSE
+7	other	m	5	84.0	28.5	32.0	35.0	65.6	FALSE	TRUE
+7	other	f	3	86.5	28.0	35.0	38.5	64.8	FALSE	FALSE
+7	other	m	1	81.5	23.0	27.0	36.5	66.0	FALSE	FALSE
+7	other	m	1	82.5	25.0	33.0	39.0	64.4	FALSE	FALSE
+7	other	f	6	89.0	25.0	30.0	38.0	63.5	FALSE	FALSE
+7	other	m	4	82.5	25.0	29.0	36.5	62.9	FALSE	FALSE
+7	other	f	3	89.0	28.5	33.5	40.0	67.6	FALSE	FALSE

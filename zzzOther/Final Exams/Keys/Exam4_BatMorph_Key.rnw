@@ -1,0 +1,49 @@
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\input{c:/aaaWork/zGnrlLatex/justRPreamble}
+\hypersetup{pdftitle = Final Exam Key -- BatMorph}
+
+\begin{document}
+\section*{Final Exam Key -- BatMorph}
+
+<<setup,echo=FALSE,include=FALSE>>=
+source("c:/aaaWork/zGnrlLatex/knitr_setup.R")
+library(NCStats)
+b <- read.table("BatMorph.txt", header=TRUE)
+@
+
+<<echo=FALSE>>=
+Summarize(~wingspan,data=b,digit=3)
+hist(~wingspan,data=b,xlab="Wingspan")
+@
+<<echo=FALSE>>=
+percTable(table(b$hab),digit=1)
+@
+<<echo=FALSE>>=
+plot(skulllength~wingspan,xlab="Wingspan",ylab="Skull Length",data=b,pch=16)
+@
+<<echo=FALSE>>=
+lmb <- lm(coronoid~canine,data=b)
+coef(lmb)
+cat("The predicted value is",round(predict(lmb,data.frame(canine=median(b$canine))),3))
+cat("The residual is 0.27 -",round(predict(lmb,data.frame(canine=0.3)),3),"=",round(0.27-predict(lmb,data.frame(canine=0.3)),3))
+cat("The r-squared value is",round(rSquared(lmb),3))
+@
+
+\clearpage
+<<echo=FALSE>>=
+chi.b <- chisq.test(table(b$subsp,b$hab),correct=FALSE)
+chi.b$observed
+chi.b$expected
+@
+<<echo=FALSE>>=
+chi.b
+@
+<<echo=FALSE>>=
+levenesTest(canine~subsp,data=b)
+@
+<<echo=FALSE>>=
+t.test(canine~subsp,data=b,var.equal=TRUE)
+@
+
+\end{document}

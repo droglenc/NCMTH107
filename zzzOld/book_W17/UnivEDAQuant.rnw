@@ -1,0 +1,741 @@
+<<echo=FALSE, cache=FALSE, results='hide'>>=
+set_parent('IntroStats.Rnw')
+@
+
+\chapter{Univariate EDA - Quantitative} \label{chap:UnivEDAQuant}
+\begin{ChapObj}{\boxwidth}
+  \textbf{Objectives:}
+  \begin{Enumerate}
+    \item Construct histograms with quantitative data,
+    \item Use graphs to describe the shape of a distribution, and
+    \item Use graphs to describe outliers in a distribution.
+    \item Calculate summary statistics for measuring the center of quantitative data,
+    \item Calculate summary statistics for measuring the dispersion of quantitative data,
+    \item Describe the underlying differences in how the different statistics measure center and dispersion,
+    \item Identify which summary statistics are appropriate in a given situation, and
+    \item Construct an appropriate overall numerical summary.
+  \end{Enumerate}
+\end{ChapObj}
+
+\minitoc
+\newpage
+
+\lettrine{O}{nce data have been collected} \modrefp{chap:DataProd}, it is important to develop a ``feel'' for the data, to identify what types of values each variable takes, and to determine if there are any ``issues'' in the data.  This first step in a statistical analysis is called \textsc{Exploratory Data Analysis} (EDA).  We will begin by examining the distribution of each variable by itself, called a univariate EDA, and then examine pairs of variables, called a bivariate EDA (see Modules \ref{chap:BivEDAQuant} and \ref{chap:BivEDACat}). Additionally, the methods employed differ for quantitative and categorical variables. Quantitative variables are the focus of this module, whereas categorical variables are the focus of \modref{chap:UnivEDACat}.
+
+\vspace{-6pt}
+\section{Items to Describe}
+\vspace{-12pt}
+A univariate EDA for a quantitative variable is concerned with describing the distribution of the values for that variable; i.e., describing what values occurred and how often those values occurred.\index{EDA!Univariate!Quantitative}  Specifically, the distribution is described by four specific attributes:
+
+\vspace{-12pt}
+\begin{Enumerate}
+  \item \textbf{shape} of the distribution,
+  \item presence of \textbf{outliers},
+  \item \textbf{center} of the distribution, and
+  \item \textbf{dispersion} or spread of the distribution.
+\end{Enumerate}
+\vspace{-8pt}
+
+Graphs are used to identify shape and the presence of outliers and to get a general feel for center and dispersion.  However, numerical summaries are used to specifically describe center and dispersion of the data.
+
+\vspace{-6pt}
+\warn{Shape, center, dispersion, and outliers are described for each quantitative variable.}
+
+\vspace{-12pt}
+\warn{Shape and outliers are described from graphs; center and dispersion are describe with numerical summaries.}
+
+Three primary data sets will be explored throughout this module.
+
+\vspace{-12pt}
+\begin{Itemize}
+  \item Measurements of water consumption in one hour by mice \tabrefp{tab:MouseData}.\footnote{See \sectref{sect:REnterData} for how to enter these data into R.}
+  \item Richter scale recordings for 15 major earthquakes \tabrefp{tab:EQData}.
+  \item The number of days of ice cover at ice gauge station 9004 in Lake Superior (data in \href{https://raw.githubusercontent.com/droglenc/NCData/master/LakeSuperiorIce.csv}{LakeSuperiorIce.csv}).\footnote{See \sectref{sect:RAltData} for a description of how to access these data. These datat are originally from the \href{http://www.nsidc.org/}{National Snow and Ice Data Center}.}  The \var{days} variable is the total number of days of ice cover at this site for nearly every ice season from 1955-56 to 1996-97 (three years were missing).  These data are loaded into \R{LSI} below.
+\vspace{-6pt}
+<<echo=-2>>=
+LSI <- read.csv("data/LakeSuperiorIce.csv")
+sumLSI <- Summarize(~days,data=LSI)
+@
+\end{Itemize}
+
+<<MouseData, results='asis', echo=FALSE>>=
+mc <- c(10.6,14.1,13.7,15.2,15.4,12.5,12.9,14.3,13.0,16.6,11.5, 9.4,16.5,13.7,14.7,12.6,12.0,14.0,10.0,18.2,18.4,17.4,11.1,15.8,15.8,16.6,11.4,17.0,13.6,13.5)
+mcx <- xtable(matrix(mc,nrow=2,byrow=TRUE),digits=1,caption="Amount of water consumed (in ml) in one hour by a sample of mice.","tab:MouseData")
+print(mcx,caption.placement="top",hline.after=c(0,nrow(mcx)),include.rownames=FALSE,include.colnames=FALSE)
+@
+
+<<EQData, results='asis', echo=FALSE>>=
+EQ <- c(5.5,6.3,6.5,6.5,6.8,6.8,6.9,7.1,7.3,7.3,7.7,7.7,7.7,7.8,8.1)
+EQx <- xtable(matrix(EQ,nrow=1,byrow=TRUE),digits=1,caption="Richter scale recordings for 15 major earthquakes.","tab:EQData")
+print(EQx,caption.placement="top",hline.after=c(0,nrow(EQx)),include.rownames=FALSE,include.colnames=FALSE)
+@
+
+\section{Histograms}\index{Histogram!Construction}\index{Sample Distribution!Histogram}
+\vspace{-8pt}
+\subsection{General Construction}
+\vspace{-8pt}
+A histogram is a plot of the frequency of occurrence of individuals (y-axis) in classes of values of the variable (x-axis).  The steps for constructing a histogram from raw data are:
+\vspace{-6pt}
+\begin{Enumerate}
+  \item Create categorical classes of values for the variable of interest,
+  \item Count the frequency of individuals in each class,
+  \item Construct a graph template with values of the variable on the x-axis and frequency of individuals on the y-axis, and
+  \item Draw bars on the graph that are as wide as the class of values and as tall as the frequency of individuals.
+\end{Enumerate}
+
+These steps are illustrated with the mouse water consumption data. The easiest way to create a list of classes is to divide the difference between the maximum and minimum values in the data by a ``nice'' number near eight to ten, and then round up to make classes that are easy to work with. The ``nice'' number between eight and ten is chosen to make the division easy and will be the number of classes.  In this example, the range of values is 18.4-9.4 = 9.0.  A ``nice'' value between eight and ten to divide this range by is nine.  Thus, the classes of data should be one unit wide and, for ease, will begin at 9 mm \tabrefp{tab:MouseFreqTable}.
+
+\begin{table}[htbp]
+  \caption{Frequency table of mouse consumption values in one-unit classes.}
+  \label{tab:MouseFreqTable}
+    \begin{Verbatim}[xleftmargin=25mm]
+Class     Frequency
+ 9.0- 9.9      1
+10.0-10.9      2
+11.0-11.9      3
+12.0-12.9      4
+13.0-13.9      5
+14.0-14.9      4
+15.0-15.9      4
+16.0-16.9      3
+17.0-17.9      2
+18.0-18.9      2
+    \end{Verbatim}
+\end{table}
+
+The number of individuals with a value of the variable in each class is called a frequency and are shown in the second column of \tabref{tab:MouseFreqTable}. The plot is prepared with values of the classes forming the x-axis and frequencies forming the y-axis (\figref{fig:MouseHist1}-Left).  The first bar added to this skeleton plot has the bottom-left corner at 9 and the bottom-right corner at 10 on the x-axis, and a height equal to the frequency of individuals in the 9 to 9.9 class (\figref{fig:MouseHist1}-Center).  A second bar is then added with the bottom-left corner at 10 and the bottom-right corner at 11 on the x-axis, and a height equal to the frequency of individuals in the 10 to 10.9 class (\figref{fig:MouseHist1}-Right).  This process is continued with the remaining classes until the full histogram is constructed \figrefp{fig:MouseHist2}.
+
+<<MouseHist1, echo=FALSE, fig.width=10.5, out.width='.95\\linewidth', fig.cap="Steps illustrating the development of a histogram.">>=
+par(mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),mfcol=c(1,3),las=1,tcl=-0.2)
+tmp <- data.frame(mc)
+xlbl <- "Water Consumption (mm)"
+hist(~c(0),w=1,xlab=xlbl,xlim=c(9,19),ylim=c(0,5),col="white")
+hist(~mc,data=filterD(tmp,mc<10),w=1,xlab=xlbl,xlim=c(9,19),ylim=c(0,5))
+hist(~mc,data=filterD(tmp,mc<11),w=1,xlab=xlbl,xlim=c(9,19),ylim=c(0,5))
+@
+
+\vspace{24pt}  % handles an overlapping problem with the floats
+
+<<MouseHist2, echo=FALSE, fig.cap="Histogram of water consumption (mm) by mice.">>=
+hist(~mc,data=tmp,w=1,xlab=xlbl,xlim=c(9,19),ylim=c(0,5))
+@
+
+Ideally eight to ten classes (i.e., bars) are used to construct a histogram.  Too many or too few bars make it difficult to identify the shape and may lead to different interpretations.  A dramatic example of the effect of changing the number of classes is seen in histograms of the length of eruptions for the Old Faithful geyser \figrefp{fig:histOF}.
+
+<<histOF, echo=FALSE, cache=TRUE, fig.show='animate', fig.cap='Histogram of length (minutes) of eruptions for Old Faitfhul geyser with varying number of classes.', aniopts='controls,palindrome,autoplay'>>=
+brksw <- c(seq(0.02,1,0.02),1.5,2)
+for (i in brksw) hist(~eruptions,data=faithful,breaks=seq(1.5,6,i),xlim=c(1.5,6),xlab="Duration of Eruption (mins)")
+@
+
+\subsection{Histograms in R}
+A simple (by default) histogram is constructed with \R{hist()} using a one-sided formula of the form \R{\TILDE quant}, where \R{quant} generically represents the quantitative variable, and the corresponding data frame in \R{data=}.  The x-axis label may be improved from the default value by including a label in \R{xlab=}.\footnote{\R{xlab=} is for the ``x-axis label.''}  The width of the classes may be controlled by including a class width in \R{w=}.\footnote{The endpoints for the classes may also be set by giving a vector of endpoints to \R{breaks=}.}
+
+<<Histogram1, fig.cap="Histograms of the duration of ice cover at ice gauge 9004 in Lake Superior using the default class widths (Left) and widths of 20 days (Right).">>=
+hist(~days,data=LSI,xlab="Days of Ice Cover")      # Fig 5.4-Left
+hist(~days,data=LSI,xlab="Days of Ice Cover",w=20) # Fig 5.4-Right
+@
+
+\warn{The default histogram should be modified by properly labeling the x-axis and possibly changing the class width.}
+
+\begin{exsection}
+  \item \label{revex:quEDAHistVar} Histograms are constructed from what type of variables? \ansref{ans:quEDAHistVar}
+  \item \label{revex:quEDAHistX} What type of values are plotted on the x-axis of a histogram? \ansref{ans:quEDAHistX}
+  \item \label{revex:quEDAHistY} What type of values are plotted on the y-axis of a histogram? \ansref{ans:quEDAHistY}
+  \item \label{revex:quEDAHistBins} What is the ideal number of bars on a histogram? \ansref{ans:quEDAHistBins}
+  \item \label{revex:quEDACreatPhosph} \rhw{} The table below contains the concentrations (International Units per liter) of creatine phosphokinase (an enzyme related to muscle and brain functions) in 36 male volunteers.  Construct a histogram from these data.  [HINT: Load data from a CSV file as in \sectref{sect:REnterData}.]\ansref{ans:quEDACreatPhosph}
+    \begin{Verbatim}[xleftmargin=5mm]
+121  82 100 151  68  58  95 145  64 119 104 110 113 118 203  62  83  67
+201 101 163  84  57 139  60  78  94  93  92 110  25 123  70  48  95  42
+    \end{Verbatim}
+  \item \label{revex:quEDAAirPolln} \rhw{} The table below contains the carbon monoxide levels (ppm) arising from one of the stacks for an oil refinery northeast of San Francisco between April 16 and May 16, 1993. The measurements were submitted as evidence for establishing a baseline to the Bay Area Air Quality Management District (BAAQMD).\footnote{BAAQMD personnel had also made nine independent measurements of the carbon monoxide from this same stack over the period from September 11, 1990, to March 30, 1993, (which are not shown).}  Construct a histogram from these data.  [HINT: Load data from a CSV file as in \sectref{sect:REnterData}.]\ansref{ans:quEDAAirPolln}
+    \begin{Verbatim}[xleftmargin=5mm]
+30 30 34 36 37 38 40 42 43  43  45  52  55  58 58 58
+59 63 63 71 75 85 86 86 99 102 102 141 153 261 21
+    \end{Verbatim}
+\end{exsection}
+
+\vspace{-24pt}
+\section{Interpreting Shape}\index{Histogram!Interpretation}
+\vspace{-12pt}
+A histogram has two tails -- a left-tail for smaller or more negative values and a right-tail for larger or more positive values.  The relative appearance of these two tails is used to identify three different shapes of distributions -- symmetric, left-skewed, and right-skewed.\index{Shape}\index{Symmetric}\index{Skewed}  If the left- and right-tail of a histogram are equal in shape (length and height), then the distribution is said to be \textbf{symmetric}.  Perfectly symmetric distributions rarely occur in ``real-life.''  Therefore, if the left- and right-tail are approximately equal in shape, then the distribution is \textbf{approximately symmetric}.  If the left-tail of the histogram is stretched out or, alternatively, the left-tail is longer and flatter than the right-tail, then the distribution is negatively- or \textbf{left-skewed}.  If the right-tail of the histogram is stretched out or, alternatively, the right-tail is longer and flatter than the left-tail, then the distribution is positively- or \textbf{right-skewed}.  The type of skew is defined by the longer tail; a longer right-tail means the distribution is right-skewed and a longer left-tail means it is left-skewed.  Examples of each shape are shown in \figref{fig:ShapeExamples}.
+
+<<ShapeExamples, echo=FALSE, fig.width=10.5, fig.height=10.5, out.width='.7\\linewidth', fig.cap="Examples of approximately symmetric (top, red), left-skewed (middle, blue), and right-skewed (bottom, green) histograms.  Note that the axes labels were removed to focus attention on the shape of the histograms.  Each histogram was constructed from n=1000 individuals and the x-axis range is from 0 to 1.">>=
+par(mar=c(1,1,1,1),mgp=c(2.1,0.4,0),mfrow=c(3,3),las=1,tcl=-0.2)
+set.seed(1256)
+n <- 1000
+brks <- seq(0,1,0.1)
+s1 <- rbeta(n,1,1)
+s2 <- rbeta(n,3,3)
+s3 <- rbeta(n,9,9)
+l1 <- rbeta(n,3,1)
+l2 <- rbeta(n,4,2)
+l3 <- rbeta(n,9,3)
+r1 <- rbeta(n,1,3)
+r2 <- rbeta(n,2,4)
+r3 <- rbeta(n,3,9)
+hist(s1,xlim=c(0,1),main="",xaxt="n",yaxt="n",breaks=brks,col="lightsalmon")
+hist(s2,xlim=c(0,1),main="",xaxt="n",yaxt="n",breaks=brks,col="lightsalmon")
+hist(s3,xlim=c(0,1),main="",xaxt="n",yaxt="n",breaks=brks,col="lightsalmon")
+hist(l1,xlim=c(0,1),main="",xaxt="n",yaxt="n",breaks=brks,col="lightblue1")
+hist(l2,xlim=c(0,1),main="",xaxt="n",yaxt="n",breaks=brks,col="lightblue1")
+hist(l3,xlim=c(0,1),main="",xaxt="n",yaxt="n",breaks=brks,col="lightblue1")
+hist(r1,xlim=c(0,1),main="",xaxt="n",yaxt="n",breaks=brks,col="lightgreen")
+hist(r2,xlim=c(0,1),main="",xaxt="n",yaxt="n",breaks=brks,col="lightgreen")
+hist(r3,xlim=c(0,1),main="",xaxt="n",yaxt="n",breaks=brks,col="lightgreen")
+@
+
+\defn{Symmetric}{The left- and right-tail of a distribution are nearly the same in length and height.}
+
+\vspace{-12pt}
+\defn{Left-skewed}{The left-tail of a distribution is longer or more drawn out than the right-tail.}
+
+\vspace{-12pt}
+\defn{Right-skewed}{The right-tail of a distribution is longer or more drawn out than the left-tail.}
+
+\vspace{-12pt}
+\warn{The longer tail defines the type of skew.}
+
+In practice, these labels form a continuum.  For example, a perfectly symmetric distribution is rare.  However, in the many cases of an asymmetric distribution, it is a fine line between calling the shape approximately symmetric or one of the skewed distributions.
+
+\vspace{-12pt}
+\warn{Symmetric, left-skewed, and right-skewed descriptors are guides; many ``real'' distributions will not fall neatly into these categories.}
+
+
+\section{Interpreting Outliers}\index{Outlier}\index{Histogram!Interpretation}
+\vspace{-12pt}
+An outlier is an individual whose value is widely separated from the main cluster of values in the sample.  On histograms, outliers appear as bars that are separated from the main cluster of bars by ``white space'' or areas with no bars \figrefp{fig:OutlierExHist}.  In general, outliers must be on the margins of the histogram, should be separated by one or two missing bars, and should only be one or two individuals.
+
+<<OutlierExHist, echo=FALSE, fig.cap="Example histogram with an outlier to the right.">>=
+par(mar=c(0.5,0.5,0.5,0.5),mgp=c(0,0.0,0),las=1,tcl=-0.2)
+hist(c(rbeta(100,9,9),1.2),main="",xlab="",xaxt="n",ylab="",yaxt="n",col="gray90")
+@
+
+\defn{Outlier}{An individual whose value is widely separated from the main cluster of values in the sample.}
+
+An outlier may occur as a result of human error in the sampling process.  If this is the case, then the value should be corrected or removed.  Other times an outlier may be an individual that was not part of the population of interest -- e.g., an adult animal that was sampled when only immature animals were being considered.  In this case, the individual's value should be removed from the sample.  Still other times, an outlier is part of the population and should generally not be removed from the sample. In fact you may wish to highlight an outlier as an interesting observation! Regardless, it is important that you construct a histogram to determine if outliers are present or not.
+
+Don't let outliers completely influence how you define the shape of a distribution.  For example, if the main cluster of values is approximately symmetric and there is one outlier to the right of the main cluster (as illustrated in \figref{fig:OutlierExHist}), \textbf{DON'T} call the distribution right-skewed.  You should describe this distribution as approximately symmetric with an outlier to the right.
+
+\warn{Not all outliers warrant removal from your sample.}
+
+\vspace{-12pt}
+\warn{Don't let outliers completely influence how you define the shape of a distribution.}
+
+\vspace{24pt}
+\begin{exsection}
+  \item \label{revex:quEDALSkew} What is a distribution with a long left-tail called? \ansref{ans:quEDALSkew}
+  \item \label{revex:quEDARSkew} What is a distribution with a long right-tail called? \ansref{ans:quEDARSkew}
+  \item \label{revex:quEDALSkewg} What is the shape of the distribution on the left below? \ansref{ans:quEDALSkewg}
+
+<<HistQuest, echo=FALSE, results='hide', include=FALSE, fig.width=10.5, fig.height=3.5, fig.keep='last'>>=
+par(mar=c(1,1,1,1),mgp=c(2.1,0.4,0),mfrow=c(1,3),las=1,tcl=-0.2)
+set.seed(12489)
+hist(rbeta(100,6,1),main="",xlab="",ylab="",xaxt="n",yaxt="n",col="gray90")
+hist(rbeta(100,1,6),main="",xlab="",ylab="",xaxt="n",yaxt="n",col="gray90")
+hist(rbeta(100,6,5),main="",xlab="",ylab="",xaxt="n",yaxt="n",col="gray90")
+@
+\begin{center}
+  \includegraphics[width=5in]{Figs/HistQuest-1}
+\end{center}
+  \item \label{revex:quEDASymg} What is the shape of the distribution in the center above? \ansref{ans:quEDASymg}
+  \item \label{revex:quEDARSkewg} What is the shape of the distribution on the right above? \ansref{ans:quEDARSkewg}
+  \item \label{revex:quEDAlead} Comment on the shape and presence of outliers in \figref{fig:KreherParkPbhist}. \ansref{ans:quEDAlead}
+\end{exsection}
+
+
+\section{Measures of Center} \label{sec:quEDACenter}
+There are three common methods to measure the center of a distribution: the mode, median, and mean.\index{Center}  The median and mean are the most widely used methods.  The choice of which method to use depends, in part, on the shape of the distribution, the presence of outliers, and your purpose.
+
+The modes, medians, and means computed in this section are summary statistics -- i.e., they are computations from individuals in a sample.  Thus, they should specifically be called the sample mode, sample median, and sample mean.  The mode, median, and mean can also be computed from every individual in the population, if it is known.  The computed values would then be parameters and would be called the population mode, population median, and population mean.  See \sectref{sect:IVPPSS} for clarification on the differences between populations and samples and parameters and statistics.
+
+\warn{Three measures of the center of a distribution are the mode, median, and mean.}
+
+\vspace{-12pt}
+\warn{Measures of center computed from individuals in a sample are preceded by ``sample''; those computed from all individuals in a population are preceded by ``population.''}
+
+\subsection{Mode}
+The mode is the value that occurs most often in a data set.\index{Mode}  If the variable is continuous, then the modal class is the class of values that occurs most often in a data set.  In other words, it is the class that forms the peak of a distribution.  For example, in the mouse water consumption data \figrefp{fig:MouseHist2} the modal class is 13.0-13.9.  Some data sets may have two ``humps,'' where each ``hump'' is considered a mode and the distribution is said to be \textbf{bimodal}.
+
+\defn{Mode}{The value or class of values that occurs most often in a data set.}
+
+\vspace{-12pt}
+\defn{Bimodal}{The shape of a distribution with two peaks or ``humps.''}
+
+\subsection{Median} \label{sec:Median}
+The median is the value of the individual in the position that splits the \textbf{ordered} list of individuals into two equal-\textbf{sized} halves.\index{Median!Calculation}  In other words, if the data are ordered, half the values will be smaller than the median and half will be larger.
+
+The process for finding the median consists of three steps,\footnote{Most computer programs use a more sophisticated algorithm for computing the median and, thus, will produce different results than what will result from applying these steps.}
+\begin{Enumerate}
+  \item Order the data from smallest to largest.
+  \item Find the ``middle \textbf{position}'' ($mp$) with $mp=\frac{n+1}{2}$.
+  \item If $mp$ is an integer (i.e., no decimal), then the median is the value of the individual in that position.  If $mp$ is not an integer, then the median is the average of the value immediately below and the value immediately above the $mp$.
+\end{Enumerate}
+
+As an example, the ordered mouse water consumption data from \tabref{tab:MouseData} are,
+
+<<results='asis', echo=FALSE>>=
+mcx <- xtable(matrix(mc[order(mc)],nrow=2,byrow=TRUE),digits=1)
+print(mcx,floating=FALSE,include.rownames=FALSE,include.colnames=FALSE,hline.after=NULL)
+@
+
+Because $n=30$, the $mp=\frac{30+1}{2}=15.5$.  The $mp$ is not an integer so the median is the average of the values in the 15th and 16th ordered positions (i.e., the two positions closest to $mp$).  Thus, the median water consumption in this sample of mice is $\frac{13.7+14.0}{2}=13.85$ mm.
+
+As another example, consider finding the median of the Richter Scale magnitude recorded for fifteen major earthquakes (ordered data in \tabref{tab:EQData}).  Because $n=15$, the $mp=\frac{15+1}{2}=8$.  The $mp$ is an integer so the median is the value of the individual in the 8th ordered position, which is 7.1.
+
+\defn{Median}{The midpoint of the data, i.e., the value of the individual in the position that splits the ordered list of individuals into two equal-sized halves.}
+
+\subsection{Mean}
+The mean is the arithmetic average of the data.\index{Mean!Calculation}  The sample mean is denoted by $\bar{x}$ and the population mean by $\mu$.\index{Mean!Sample Symbol}\index{Mean!Population Symbol}  If the measurement of the generic variable $x$ on the $i$th individual is denoted as $x_{i}$, then the sample mean is computed with these two steps,
+\begin{Enumerate}
+  \item Sum (i.e., add together) all of the values -- $\Sum_{i=1}^{n}x_{i}$.
+  \item Divide by the number of individuals in the sample -- $n$.
+\end{Enumerate}
+or more succinctly summarized with this equation,
+
+\begin{equation} \label{eqn:SampleMean}
+     \bar{x} = \frac{\Sum_{i=1}^{n}x_{i}}{n}
+\end{equation}
+
+For example, the sample mean of the mouse consumption data is computed as follows:
+
+\[ \bar{x} = \frac{9.4+10.0+10.6+11.1+11.4+11.5+ ... +16.6+16.6+17.0+17.4+18.2}{30} = \frac{421.2}{30} = 14.04  \]
+
+\defn{Mean}{The center of gravity or balance point of the data, i.e., the sum of the data divided by the number of individuals.}
+
+
+\subsection{Measures of Center in R} \label{sect:DescStatsCenter}\index{Mean!Calculation}\index{Median!Calculation}
+\vspace{-12pt}
+The mean and median (along with other measures) are calculated in R with \R{Summarize()} using a one-side formula of the form \R{\TILDE quant}, where \R{quant} generically represents the quantitative variable, and the \R{data=} argument.  The number of digits after the decimal place may be controlled with \R{digits=}.
+<<>>=
+Summarize(~days,data=LSI,digits=2)
+@
+
+From this it is seen that the sample mean is \Sexpr{formatC(sumLSI["mean"],format="f",digits=2)} days and the sample median is \Sexpr{formatC(sumLSI["median"],format="f",digits=2)} days.
+
+\begin{exsection}
+  \item \label{revex:quEDABrule} \rhw{} The following values are the maximum gauge heights of the Bois Brule River in Brule, WI from 10-25Feb05.\footnote{Data collected from \href{http://waterdata.usgs.gov/wi/nwis/uv?04025500}{USGS}.}  Compute the mean and median of these data both ``by hand'' and with R.  [HINT: Load data from a CSV file as in \sectref{sect:REnterData}.] \ansref{ans:quEDABrule}
+  \begin{Verbatim}[xleftmargin=5mm]
+1.56 1.54 1.54 1.57 1.58 1.61 1.60 1.69 1.99 2.11 1.98 1.76 1.69 1.99 1.86 1.53
+  \end{Verbatim}
+
+  \item \label{revex:quEDAWIc} \rhw{} The following values are the population density (number of people per acre of land) for 15 randomly selected Wisconsin counties.\footnote{Data collected from \href{http://factfinder.census.gov/}{U.S. census}.}  Compute the mean and median of these data both ``by hand'' and with R.  [HINT: Load data from a CSV file as in \sectref{sect:REnterData}.] \ansref{ans:quEDAWIC}
+  \begin{Verbatim}[xleftmargin=5mm]
+429.0  67.8  52.1  97.4  57.9 354.9  16.2  19.1
+127.0  27.6  10.2  54.6  28.8  30.1  20.2
+  \end{Verbatim}
+
+  \item \label{revex:quEDACreatPhosph2} \rhw{} Compute the mean and median of the creatine phosphate data in Exercise \ref{revex:quEDACreatPhosph}. \ansref{ans:quEDACreatPhosph2}
+
+    \item \label{revex:quEDAAirPolln2} \rhw{} \hspace{12pt} Compute the mean and median of the carbon monoxide data in Exercise \ref{revex:quEDAAirPolln}. \ansref{ans:quEDAAirPolln2}
+\end{exsection}
+
+\subsection{Comparing the Median and Mean} \label{sect:MeanMedian}
+The mean and median measure center in different ways.\index{Median!Compared to mean}\index{Mean!Compared to median}\index{Mean!How measures center}\index{Median!How measures center}  The median is concerned with the \textbf{position} of the value rather than the value itself (recall how it is calculated).  The mean, on the other hand, is the value such that the sum of the distances from it to all points smaller than it is the same as the sum of the distances from it to all points greater than it.  The mean is very much concerned about the \textbf{values} for each individual, as the values are used to find the ``distance'' from the mean.
+
+\warn{The actual values of the data (beyond ordering the data) are not considered when calculating the median; whereas the actual values are very much considered when calculating the mean.}
+
+A plot of the Richter scale data against the corresponding ordered individual number is shown in \figref{fig:MeanMedianComp1}-Left.\footnote{This is a rather non-standard graph but it is useful for comparing how the mean and median measure the center of the data.}  The median (blue line) is found by locating the middle position on the individual number axis and then finding the corresponding Richter scale value (move right until the point is intercepted and then move down to the x-axis).  The vertical blue line represents the median, and it can be seen that it has the same \textbf{number} of individuals (i.e., points) below it as above it.  In contrast, the mean finds the Richter scale value that has the same total distance to values below it as total distance to values above it.  In other words, the mean is the vertical red line so that the total \textbf{length} of the horizontal dashed red lines is the same to the left as it is to the right.  Thus, the median balances the number of individuals above and below the median, whereas the mean balances the difference in values above and below the mean.
+
+<<MeanMedianComp1, echo=FALSE, out.width='.45\\linewidth', fig.cap="Plot of the individual number versus Richter scale values for the original earthquake data (\\textbf{Left}) and the earthquake data with an extreme outlier (\\textbf{Right}).  The median value is shown as a blue vertical line and the mean value is shown as a red vertical line.  Differences between each individual value and the mean value are shown with horizontal red lines.">>=
+plot(EQ,1:length(EQ),pch=16,ylab="Individual Number",xlab="Richter Scale Value",xaxt="n",yaxt="n",ylim=c(0,16))
+axis(1,c(5.5,6.0,8.0))
+axis(2,seq(0,15,5))
+text(5.15,8.7,"MP=",col="blue",xpd=TRUE)
+text(5.15,7.5,"8",col="blue",xpd=TRUE)
+lines(c(0,EQ[8]),c(8,8),lwd=2,lty=2,col="blue")
+lines(c(EQ[8],EQ[8]),c(8,-1),lwd=2,lty=2,col="blue")
+text(EQ[8],-1.3,"Median=7.10",xpd=TRUE,col="blue")
+avg <- mean(EQ)
+abline(v=avg,lwd=2,lty=2,col="red")
+text(avg,-2.7,"Mean=7.07",xpd=TRUE,col="red")
+for (i in 1:length(EQ)) {
+  lines(c(EQ[i],avg),c(i,i),lwd=1.5,lty=3,col="red")
+}
+
+EQ1 <- c(EQ,19)
+plot(EQ1,1:length(EQ1),pch=19,ylab="Individual Number",xlab="Richter Scale Value",xaxt="n",ylim=c(0,16))
+axis(1,c(12,14,16,18))
+axis(2,seq(0,15,5))
+med<-7.2
+text(3.5,8.7,"MP=",col="blue",xpd=TRUE)
+text(3.5,7.5,"8.5",col="blue",xpd=TRUE)
+lines(c(0,med),c(8.5,8.5),lwd=2,lty=2,col="blue")
+lines(c(med,med),c(8.5,-1),lwd=2,lty=2,col="blue")
+text(med,-1.3,"Median=7.20",xpd=TRUE,col="blue")
+avg <- mean(EQ1)
+abline(v=avg,lwd=2,lty=2,col="red")
+text(avg,-2.7,"Mean=7.81",xpd=TRUE,col="red")
+for (i in 1:length(EQ1)) {
+  lines(c(EQ1[i],avg),c(i,i),lwd=1.5,lty=3,col="red")
+}
+@
+
+\warn{The mean balances the distance to individuals above and below the mean. The median balances the number of individuals above and below the median.}
+
+\vspace{-12pt}
+\warn{The sum of all differences between individual values and the mean (as properly calculated) equals zero.}
+
+The mean and median differ in their sensitivity to outliers (\figref{fig:MeanMedianComp1}-Right).\index{Mean!Sensitivity to outliers}\index{Median!Sensitivity to outliers}  For example, suppose that an incredible earthquake with a Richter Scale value of 19.0 was added to the earthquake data set.  With this additional individual, the median increases from 7.1 to 7.2, but the mean increases from 7.1 to 7.8.  The outlier affects the value of the mean more than it affects the value of the median because of the way that each statistic measures center.  The mean will be pulled towards an outlier because it must ``put'' many values on the ``side'' of the mean away from the outlier so that the sum of the differences to the larger values and the sum of the differences to the smaller values will be equal.  Thus, the outlier in this example creates a large difference to the right of the mean so the mean has to ``move'' to the right to make this difference smaller, move more individuals to the left side of the mean, and increase the differences of individuals to the left of the mean to balance this one large individual.  The median on the other hand will simply ``put'' one more individual on the side opposite of the outlier because it balances the number of individuals on each side of it.  Thus, the median has to move very little to the right to accomplish this balance.
+
+\warn{The mean is more sensitive (i.e., changes more) to outliers than the median; it will be ``pulled'' towards the outlier more than the median.}
+
+The shape of the distribution, even if outliers are not present, also has an effect on the values of the mean and median as depicted in \figref{fig:MeanMedianShape}.  If a distribution is perfectly symmetric, then the median and mean (along with the mode) will be identical.  If the distribution is approximately symmetric, then the median and mean will be approximately equal.  If the distribution is right-skewed, then the mean will be greater than the median.  Finally, if the distribution is left-skewed, then the mean will be less than the median.
+
+<<MeanMedianShape, echo=FALSE, out.width='.3\\linewidth', fig.cap="Three differently shaped histograms with vertical lines superimposed at the median (M; blue lines) and the mean ($\\bar{x}$; red lines).">>=
+par(mar=c(4,1,1,1),mgp=c(3,0.4,0),yaxs="i",las=1,tcl=-0.2)
+brks <- seq(0,1,0.1)
+hist(s2,main="",xlab="X",xaxt="n",yaxt="n",breaks=brks,col="gray90")
+s.avg <- mean(s2)
+s.med <- median(s2)
+abline(v=s.avg,lwd=2,lty=3,col="red")
+abline(v=s.med,lwd=2,lty=3,col="blue")
+text(s.med,-7,"M",col="blue",xpd=TRUE,cex=1.5)
+text(s.avg,-18,expression(bar(x)),col="red",xpd=TRUE,cex=1.5)
+
+hist(r1,xlim=c(0,0.9),main="",xlab="X",xaxt="n",yaxt="n",breaks=brks,col="gray90")
+r.avg <- mean(r1)
+r.med<-median(r1)
+abline(v=r.avg,lwd=2,lty=3,col="red")
+abline(v=r.med,lwd=2,lty=3,col="blue")
+text(r.med,-10,"M",col="blue",xpd=TRUE,cex=1.5)
+text(r.avg,-24,expression(bar(x)),col="red",xpd=TRUE,cex=1.5)
+
+hist(l1,xlim=c(0.1,1),main="",xlab="X",xaxt="n",yaxt="n",breaks=brks,col="gray90")
+l.avg <- mean(l1)
+l.med<-median(l1)
+abline(v=l.avg,lwd=2,lty=3,col="red")
+abline(v=l.med,lwd=2,lty=3,col="blue")
+text(l.med,-9,"M",col="blue",xpd=TRUE,cex=1.5)
+text(l.avg,-23,expression(bar(x)),col="red",xpd=TRUE,cex=1.5)
+@
+
+\warn{The mean and median are equal for symmetric distributions.}
+
+\vspace{-12pt}
+\warn{The mean is pulled towards the long tail of a skewed distribution. Thus, the mean is greater than the median for right-skewed distributions and the mean is less than the median for left-skewed distributions.}
+
+As shown above, the mean and median measure center in different ways.  The question now becomes ``which measure of center is better?''  The median is a ``better'' measure of center when outliers are present.  In addition, the median gives a better measure of a typical individual when the data are skewed.  Thus, in this course, the median is used when outliers are present or the distribution of the data is skewed.\index{Median!When to use}  If the distribution is symmetric, then the purpose of the analysis will dictate which measure of center is ``better.''  However, in this course, use the mean when the data are symmetric or, at least, not strongly skewed.\index{Mean!When to use}
+
+\warn{Describe center with the median if outliers are present or the data are skewed; use the mean if the data are symmetric and no outliers are present.}
+
+\vspace{-12pt}
+\begin{exsection}
+  \item \label{revex:quEDALSkewMM}Is the mean less than, approximately equal to, or greater than the median for the distribution shown in Exercise \ref{revex:quEDALSkewg}? \ansref{ans:quEDALSkewMM}
+  \item \label{revex:quEDAAsymMM}Is the mean less than, approximately equal to, or greater than the median for the distribution shown in Exercise \ref{revex:quEDASymg}? \ansref{ans:quEDAAsymMM}
+  \item \label{revex:quEDARSkewMM}Is the mean less than, approximately equal to, or greater than the median for the distribution shown in Exercise \ref{revex:quEDARSkewg}? \ansref{ans:quEDARSkewMM}
+  \item \label{revex:quEDARatio} Is the mean divided by the median less than 1, equal to 1, or greater than 1 for a symmetric distribution? \ansref{ans:quEDARatio}
+  \item \label{revex:quEDABruleMM} From your calculation of the mean and median in Review Exercise  \ref{revex:quEDABrule} do you expect the histogram to be left-skewed, approximately symmetric, or right-skewed? \ansref{ans:quEDABruleMM}
+  \item \label{revex:quEDAWIcMM} From your calculation of the mean and median in Review Exercise \ref{revex:quEDAWIc} do you expect the histogram to be left-skewed, approximately symmetric, or right-skewed? \ansref{ans:quEDAWIcMM}
+\end{exsection}
+
+
+\vspace{-18pt}
+\section{Measures of Dispersion}
+\vspace{-12pt}
+There are three common measures of the dispersion of a distribution: the range, inter-quartile range (IQR), and standard deviation.\index{Dispersion}  The standard deviation is the most widely used.  The choice of which method to use depends, however, on what statistic you chose as the measure of center (which, as described in \sectref{sect:MeanMedian}, depends on the shape of the distribution, presence of outliers, and your purpose).
+
+The range, IQR, and standard deviation computed in this section are summary statistics -- i.e., they are computations from individuals in a sample.  Thus, they should all be preceded with ``sample.''  See \sectref{sect:IVPPSS} for clarification on the differences between populations and samples and parameters and statistics.
+
+\warn{Three measures of the dispersion of a distribution are the range, inter-quartile range (IQR), and standard deviation.}
+
+\vspace{-12pt}
+\warn{Measures of dispersion computed from individuals in a sample are preceded by ``sample''; those computed from all individuals in a population are preceded by ``population.''}
+
+\subsection{Range}
+The range is the difference between the maximum and minimum values in the data and measures the ultimate dispersion or spread of the data.\index{Range} The range in the mouse consumption data \tabrefp{tab:MouseData} is \Sexpr{formatC(max(mc),format="f",digits=1)}-\Sexpr{formatC(min(mc),format="f",digits=1)} = \Sexpr{formatC(max(mc)-min(mc),format="f",digits=1)}.
+
+The range should never be used by itself as a measure of dispersion.  The range is extremely sensitive to outliers and is best used only to show all possible values present in the data.  The range (as strictly defined) also suffers from a lack of information.  For example, what does a range of 9 mean?  It can have a completely different interpretation if it came from values of 1 to 10 or if it came from values of 1000 to 1009.  Thus, the range is more instructive if presented as both the maximum and minimum value rather than the difference.
+
+\defn{Range}{The difference between the maximum and minimum value in a data set.}
+
+\vspace{-12pt}
+\warn{Never use the range by itself as a measure of dispersion.}
+
+\subsection{IQR}
+Quartiles are the values for the three individuals that divide ordered data into four (approximately) equal parts.\index{Quartile}  Finding the three quartiles consists of finding the median, splitting the data into two equal parts at the median, and then finding the medians of the two halves.\footnote{You should review how a median is computed before proceeding with this section.}  A concern in this process is that the median is NOT part of either half if there is an odd number of individuals.  These steps are summarized as,
+\begin{Enumerate}
+  \item Order the data from smallest to largest.
+  \item Find the median -- this is the second quartile (Q2).
+  \item Split the data into two halves at the median.  If $n$ is odd (so that the median is one of the observed values), then the median is not part of either half.\footnote{Some authors put the median into both halves when $n$ is odd.  The difference between the two methods is minimal for large $n$.}
+  \item Find the median of the lower half of data -- this is the 1st quartile (Q1).
+  \item Find the median of the upper half of data -- this is the third quartile (Q3).
+\end{Enumerate}
+
+These calculations are illustrated with the earthquake data \tabrefp{tab:EQData}.  Recall from above \sectrefp{sec:Median} that the median (=7.1) is in the eighth position of the ordered data.  The value in the eighth position will not be included in either half.  Thus, the two halves of the data are \Sexpr{paste(EQ[1:7],collapse=" ")} and \Sexpr{paste(EQ[9:15],collapse=" ")}.  Each half contains seven individuals, so the middle position for each half is $mp=\frac{7+1}{2}=4$.  Thus, the median for each half is the individual in the fourth position.  Therefore, the median of the first half is $Q1=6.5$ and the median of the second half is $Q3=7.7$.
+
+As another example, consider the quartiles of the mouse consumption data (the median was computed in \sectref{sec:Median}).  Because $n=30$ is even, the halves of the data split naturally with 15 individuals in each half.  Therefore, the $mp=\frac{15+1}{2}=8$ and the median of each half is the value of the individual in the eighth position.  Thus, $Q1=12.5$ and $Q3=15.8$.  In summary, the first, second, and third quartiles for the mouse water consumption data are 12.5, 13.85, and 15.8, respectively.  These three values separate the ordered individuals into approximately four equally-sized groups -- those with values less than 12.5, with values between 12.5 and 13.85, with values between 13.85 and 15.8, and with values greater than 15.8.
+
+\defn{Quartiles}{The values that divide the ordered data into quarters.}
+
+The interquartile range is the difference between the third quartile (Q3) and the first quartile (Q1), namely Q3-Q1.\index{IQR!Calculation}  The IQR for the mouse consumption data is, thus, 15.8-12.5 = 3.3.  Intuitively, the IQR can be thought of as the ``range of the middle half of the data.''  The IQR is favored over the range because it is not sensitive to outliers (\textit{you should convince yourself that this is true}).  As with the range, however, the IQR suffers from a lack of information.  Thus, you should always present the IQR by presenting both Q1 and Q3 rather than the difference between the two.  Finally, the IQR should be chosen as the measure of dispersion when the median is used as the measure of center because they are conceptually related (both rely on position rather than actual value).  Thus, the IQR is used if outliers are present or the data are skewed.\index{IQR!When to use}
+
+\defn{Inter-Quartile Range (IQR)}{The difference between the  third (Q3) and first (Q1) quartiles.}
+
+\vspace{-12pt}
+\warn{The IQR should be used as the measure of dispersion only if the median is chosen as the measure of center.}
+
+\subsection{Standard Deviation}\label{sect:StdDev}
+The sample standard deviation, denoted by $s$, can be thought of as ``the average difference between the observed values and the mean.''\footnote{This statement is not strictly correct as will become obvious.  However, this is an acceptable general interpretation of $s$.}\index{Standard Deviation!Sample symbol}\index{Standard Deviation!Interpretation}\index{Standard Deviation!Calculation}\index{Variance!Calculation}  The standard deviation is computed with these six steps:
+\begin{Enumerate}
+  \item Compute the sample mean (i.e., $\bar{x}$).
+  \item For each value ($x_{i}$), find the difference between the value and the mean, namely $x_{i}-\bar{x}$.
+  \item Square each difference, namely $(x_{i}-\bar{x})^{2}$.
+  \item Add together all the squared differences.
+  \item Divide this sum by $n-1$.  [\textit{Stopping here gives the sample variance, $s^{2}$.}]
+  \item Square root the result from the previous step to get $s$.
+\end{Enumerate}
+These steps are neatly summarized with
+\begin{equation}
+  \label{eqn:SampleSD}
+     s = \sqrt{\frac{\Sum_{i=1}^{n}(x_{i}-\bar{x})^{2}}{n-1}}
+\end{equation}
+
+The calculation of the standard deviation of the earthquake data \tabrefp{tab:EQData} is facilitated with the calculations shown in \tabref{tab:SDCalc}.  In \tabref{tab:SDCalc}, note that $\bar{x}$ is equal to the sum of the ``Value'' column divided by $n=15$ (i.e., $\bar{x}=7.07$).  The ``Diff'' column which contains each observed value minus the calculated $\bar{x}$ (i.e., Step 2).  The ``Diff$^2$'' column contains the square of the previously calculated differences (i.e., Step 3).  The sum of the ``Diff$^2$'' column is Step 4.  The sample variance (i.e., Step 5) is equal to this sum divided by $n-1=14$ or $\frac{6.773}{14}=0.484$.  Finally, the sample standard deviation is the square root of the sample variance or $s=\sqrt{0.484}=0.696$.  Thus, on average, each earthquake is approximately 0.7 Richter Scale units different than the average earthquake in these data.
+
+\begin{table}[htbp]
+  \caption{Table showing an efficient calculation of the standard deviation of the earthquake data.}
+  \label{tab:SDCalc}
+    \centering
+    \begin{tabular}{cccc}
+\hline\hline
+Indiv & Value & Diff & Diff$^2$ \\
+i & $x_{i}$ & $x_{i}-\bar{x}$ & $(x_{i}-\bar{x})^{2}$ \\
+\hline
+1 & 5.5 & -1.57 & 2.454 \\
+2 & 6.3 & -0.77 & 0.588 \\
+3 & 6.5 & -0.57 & 0.321 \\
+4 & 6.5 & -0.57 & 0.321 \\
+5 & 6.8 & -0.27 & 0.071 \\
+6 & 6.8 & -0.27 & 0.071 \\
+7 & 6.9 & -0.17 & 0.028 \\
+8 & 7.1 & 0.03 & 0.001 \\
+9 & 7.3 & 0.23 & 0.054 \\
+10 & 7.3 & 0.23 & 0.054 \\
+11 & 7.7 & 0.63 & 0.401 \\
+12 & 7.7 & 0.63 & 0.401 \\
+13 & 7.7 & 0.63 & 0.401 \\
+14 & 7,8 & 0.73 & 0.538 \\
+15 & 8.1 & 1.03 & 1.068 \\
+\hline
+Sum & 106 & 0 & 6.773 \\
+\hline\hline
+    \end{tabular}
+\end{table}
+
+\defn{Standard Deviation}{``Essentially'' the average deviation or difference of individuals from the mean.}
+
+\vspace{-12pt}
+\warn{In the standard deviation calculations don't forget to take the square root of the variance.}
+
+There are three characteristics of the standard deviation that you should be aware of:\index{Standard Deviation!Characteristics}
+\vspace{-12pt}
+\begin{Enumerate}
+  \item $s \geq$ 0 ($s$=0 only if there is no dispersion; i.e., all values are the same).
+  \item $s$ is strongly influenced by outliers.
+  \item $s$ is inflated for skewed distributions (similar to the mean).
+\end{Enumerate}
+\vspace{-12pt}
+The final two characteristics are a result of the standard deviation being computed from the \textbf{values}, rather than the position, of the individuals (as is the mean).  The argument here is the same as it was for the mean.  In fact, it should be obvious that the mean and standard deviation are conceptually linked (i.e., they both require the actual values and the mean is within the standard deviation calculation).
+
+\warn{The standard deviation should be used as the measure of dispersion only if the mean is chosen as the measure of center.}
+
+At the beginning of this section, the standard deviation was defined as ``essentially the average difference between the values and the mean.''\index{Standard Deviation!Interpretation} \textbf{Essentially} was emphasized because the formula for the standard deviation does not simply add together the differences and divide by $n$ as this definition would imply.  Notice in \tabref{tab:SDCalc} that the sum of the differences from the mean is 0.  This will be the case for all standard deviation calculations using the correct mean, because the mean balances the distance to individuals below the mean with the distance of individuals above the mean (review \sectref{sect:MeanMedian}).  Thus, the mean difference will always be zero.  This ``problem'' is corrected by squaring the differences before summing them.  To get back to the original units, the squaring is later ``reversed'' by the square root.  So, more accurately, the standard deviation is the square root of the average squared difference between the values and the mean.  Therefore, the original definition of the standard deviation is strictly incorrect; however, it works well as a practical definition of the meaning of the standard deviation.
+
+\warn{Use the fact that the sum of all differences from the mean equals zero as a check of your standard deviation calculation.}
+
+Further note that the mean is the value that minimizes the value of the standard deviation calculation -- i.e., putting any other value besides the mean into the standard deviation equation will result in a larger value.
+
+Finally, why is the sum of the squared differences divided by $n-1$, rather than $n$, in the standard deviation calculation?  Recall (from \sectref{sect:IVPPSS}) that statistics are meant to estimate parameters.  The sample standard deviation is supposed to estimate the population standard deviation ($\sigma$).  Theorists have shown that if we divide by $n$, $s$ will consistently underestimate $\sigma$.  Thus, $s$ calculated in this way would be a biased estimator of $\sigma$.  Theorists have found, though, that dividing by $n-1$ will cause $s$ to be an unbiased estimator of $\sigma$.  Being unbiased is generally good -- it means that on average our statistic estimates our parameter (this concept is discussed in more detail in \modref{chap:SamplingDist}).
+
+\vspace{-6pt}
+\subsection{Measures of Dispersion in R} \label{sect:DescStatsDispersion}\index{Standard Deviation!Calculation}\index{IQR!Calculation}\index{Quartile!Calculation}\index{Range!Calculation}
+\vspace{-10pt}
+The minimum, maximum, Q1, Q3, and standard deviation are calculated with \R{Summarize()} as described previously for the mean and median. Thus, $s=$\Sexpr{formatC(sumLSI["sd"],format="f",digits=2)}, the IQR is from $Q1=$\Sexpr{formatC(sumLSI["Q1"],format="f",digits=2)} to $Q3=$\Sexpr{formatC(sumLSI["Q3"],format="f",digits=2)}, and the range is from \Sexpr{formatC(sumLSI["min"],format="f",digits=2)} to \Sexpr{formatC(sumLSI["max"],format="f",digits=2)}.
+<<>>=
+Summarize(~days,data=LSI,digits=2)
+@
+
+\vspace{-8pt}
+\begin{exsection}
+  \item \label{revex:quEDABruleDisp} \rhw{} Compute the range, IQR, and standard deviation for the maximum gauge heights of the Bois Brule River in Brule, WI from Exercise \ref{revex:quEDABrule} both ``by hand'' and with R. \ansref{ans:quEDABruleDisp}
+
+  \item \label{revex:quEDAWIDisp} \rhw{} Compute the range, IQR, and standard deviation for the population density of Wisconsin counties from Exercise \ref{revex:quEDAWIc} both ``by hand'' and with R. \ansref{ans:quEDAWIDisp}
+
+  \item \label{revex:quEDACreatPhosph3} \rhw{} Compute the range, IQR, and standard deviation of the creatine phosphate data in Exercise \ref{revex:quEDACreatPhosph}. \ansref{ans:quEDACreatPhosph3}
+
+  \item \label{revex:quEDAAirPolln3} \rhw{} \hspace{12pt} Compute the range, IQR, and standard deviation of the CO data in Exercise \ref{revex:quEDAAirPolln}. \ansref{ans:quEDAAirPolln3}
+\end{exsection}
+
+
+\section{Overall Summaries}
+Overall numerical summaries come from considering the relationship between measures of center and dispersion.  From the previous section it was seen that the standard deviation and mean are conceptually linked, as are the median and IQR.  Indeed, the linked measure of center must be computed first in both dispersion calculations.  Thus, if the mean is used to measure center, then the standard deviation must be used to measure dispersion.\index{Standard Deviation!When to use}  Similarly, if the median is used to measure center, then the IQR must be used to measure dispersion.\footnote{Recall that the range will never be used by itself.}\index{IQR!When to use}
+
+\subsection{Boxplots}
+The median, range, and IQR form the \textbf{five-number summary}.\index{Five Number Summary}  Specifically, the five-number summary consists of the minimum value, Q1, median, Q3, and maximum value.  The five-number summary for the mouse consumption data is \Sexpr{formatC(sumLSI["min"],format="f",digits=1)}, \Sexpr{formatC(sumLSI["Q1"],format="f",digits=1)}, \Sexpr{formatC(sumLSI["median"],format="f",digits=1)}, \Sexpr{formatC(sumLSI["Q3"],format="f",digits=1)}, and \Sexpr{formatC(sumLSI["max"],format="f",digits=1)} (all values computed in the previous section).
+
+The five-number summary may be displayed as a \textbf{boxplot}.\index{Boxplot!Construction}  A traditional boxplot \figrefp{fig:MouseBoxplot} consists of a horizontal line at the median, horizontal lines at Q1 and Q3 that are connected with vertical lines to form a box, and vertical lines from Q1 to the minimum value and from Q3 to the maximum value.  The vertical lines have been modified on modern boxplots to allow easier detection of outliers. Specifically, the upper line extends from Q3 to the last observed value that is within 1.5 IQRs of Q3 and the lower line extends from Q1 to the last observed value that is within 1.5 IQRs of Q1.  Observed values outside of the whiskers are termed ``outliers'' by this algorithm and are typically plotted with circles or asterisks.  If no individuals are deemed ``outliers'' by this algorithm, then the two traditional and modern boxplots will be the same.
+
+<<MouseBoxplot, echo=FALSE, fig.cap="Boxplot of the mouse consumption data.">>=
+boxplot(mc,ylab="Water Consumption (mm)")
+@
+
+\defn{Boxplot}{Generally, a graphical depiction of the five-number summary.}
+
+The relative length from the median to Q1 and the median to Q3 (i.e., the position of the median line in the box) indicates the shape of the distribution.\index{Boxplot!Interpretation}  If the distribution is left-skewed (i.e., lesser-valued individuals are ``spread out''; \figref{fig:BoxplotShape}-Right), then median-Q1 will be greater than Q3-median.  In contrast, if the distribution is right-skewed (i.e., larger-valued individuals are spread out; \figref{fig:BoxplotShape}-Middle), then Q3-median will be greater than median-Q1.  Thus, if the distribution is right-skewed then the median will be closer to Q1 than to Q3, if the distribution is left-skewed then the median will be closer to Q3 than to Q1, and if the distribution is approximately symmetric (\figref{fig:BoxplotShape}-Left) then the median will be in the middle of the box.
+
+<<BoxplotShape, echo=FALSE, out.width='.3\\linewidth', fig.cap="Histograms and boxplots for several different shapes of distributions.">>=
+par(mar=c(3,1,1,1),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+brks<-seq(-0.1,1.1,0.1)
+hist(s2,main="",xlab="",xaxt="n",ylab="",yaxt="n",breaks=brks,col="lightsalmon")
+hist(r1,xlim=c(0,0.9),main="",xlab="",xaxt="n",ylab="",yaxt="n",breaks=brks,col="lightblue")
+hist(l1,xlim=c(0.1,1),main="",xlab="",xaxt="n",ylab="",yaxt="n",breaks=brks,col="lightgreen")
+boxplot(s2,yaxt="n")
+boxplot(r1,yaxt="n")
+boxplot(l1,yaxt="n")
+@
+
+\warn{If a distribution is right-skewed, then the median will be closer to Q1 than to Q3. If the distribution is left-skewed, then the median will be closer to Q3 than to Q1.}
+
+\vspace{-12pt}
+\warn{Even though shape can be described from a boxplot, it is always easier to describe shape from a histogram.}
+
+A boxplot is constructed in R with \R{boxplot()}.  This function requires only the name of the quantitative variable as the first argument although the x- and y-axes are labeled with \R{xlab=} and \R{ylab=}, respectively.
+
+\newpage
+\begin{exsection}
+  \item \label{revex:quEDABrule5N} What is the five-number summary for the maximum gauge heights of the Bois Brule River in Brule, WI from Exercise \ref{revex:quEDABrule}. \ansref{ans:quEDABrule5N}
+  \item \label{revex:quEDAWI5N} \rhw{} Construct a boxplot for the population density of Wisconsin counties from Exercise \ref{revex:quEDAWIc}. \ansref{ans:quEDAWI5N}
+  \item \label{revex:quEDABoxLeft} What is the shape of the left boxplot below? \ansref{ans:quEDABoxLeft}
+<<BoxplotQuest, echo=FALSE, results='hide', include=FALSE, fig.width=10.5, fig.height=3.5, fig.keep='last'>>=
+par(mar=c(1,1,1,1),mgp=c(2.1,0.4,0),las=1,tcl=-0.2)
+set.seed(12489)
+d1 <- rbeta(100,10,1)
+d2 <- rbeta(100,1,10)
+d3 <- rbeta(100,16,15)
+d1 <- d1-mean(d1)
+d2 <- d2-mean(d2)
+d3 <- d3-mean(d3)
+bp <- data.frame(d=c(d1,d2,d3),g=factor(rep(c("A","B","C"),each=100)))
+boxplot(d~g,data=bp,main="",xlab="",ylab="",xaxt="n",yaxt="n")
+@
+\begin{center}
+  \includegraphics[width=4in]{Figs/BoxplotQuest-1}
+\end{center}
+
+  \item \label{revex:quEDABoxRight} What is the shape of the middle boxplot above? \ansref{ans:quEDABoxRight}
+  \item \label{revex:quEDABoxSym} What is the shape of the right boxplot above? \ansref{ans:quEDABoxSym}
+  \item \label{revex:quEDALSkewCtr} If the distribution is skewed left, which measure should you generally use to measure center? \ansref{ans:quEDALSkewCtr}
+  \item \label{revex:quEDARSkewCtr} Which measure of center should you generally use for a right-skewed distribution? \ansref{ans:quEDARSkewCtr}
+  \item \label{revex:quEDASymCtr} Which measure of center should you generally use for a symmetric distribution? \ansref{ans:quEDASymCtr}
+  \item \label{revex:quEDASymDisp} Which measure of dispersion should you generally use for a symmetric distribution? \ansref{ans:quEDASymDisp}
+  \item \label{revex:quEDALSkewDisp} Which measure of dispersion should you generally use for a left-skewed distribution? \ansref{ans:quEDALSkewDisp}
+  \item \label{revex:quEDARSkewDisp} Which measure of dispersion should you generally use for a right-skewed distribution? \ansref{ans:quEDARSkewDisp}
+  \item \label{revex:quEDAQShape1} Is Q3-Q2 less than, approximately equal to, or greater than Q2-Q1 if the data are left-skewed? \ansref{ans:quEDAQShape1}
+  \item \label{revex:quEDAQShape2} What is the shape of the distribution if Q3-Q2 is greater than Q2-Q1? \ansref{ans:quEDAQShape2}
+\end{exsection}
+
+\section{Multiple Groups} \label{sect:MultGroups}
+It is common to conduct a univariate EDA for a quantitative variable separately for groups of individuals.  In these cases it is beneficial to have a function that will efficiently construct a histogram and compute summary statistics for the quantitative variable separated by the levels of a factor variable.  Separate histograms are constructed with \R{hist()} if the first argument is a ``formula'' of the type \R{quant\TILDE group} where \R{quant} represents the quantitative response variable of interest and \R{group} represents the factor variable that indicates to which group the individual belongs.\index{Histogram!Multiple}  The data frame that contains \R{quant} and \R{group} is given to \R{data=}.  Summary statistics are separated by group by supplying the same formula and \R{data=} arguments to \R{Summarize()}.
+
+As an example, suppose that you want to examine the average annual days of ice for each decade (using the \R{LSI} data).  One might expect to use the \R{days\TILDE decade} formula except that the \R{decade} variable is not a factor.\footnote{It was not a factor because the data in \R{decade} looks numeric to R.}  This can be connverted to a factor by including the variable to the left of the assignment operator and in \R{factor()}. The desired grouping variable may already be a factor in many data.frames and, thus, will not require modification with \R{factor()}.
+<<>>=
+LSI$decade <- factor(LSI$decade)
+str(LSI)
+@
+
+Histograms \figrefp{fig:mhist1} and summary statistics separated by decade are then constructed as below.
+<<mhist1, fig.width=7, fig.height=7, out.width='.8\\linewidth', fig.cap="Histograms of the duration of ice cover at ice gauge 9004 in Lake Superior by each decade.">>=
+hist(days~decade,data=LSI,ylab="Days of Ice Cover",w=20)
+Summarize(days~decade,data=LSI,digits=2)
+@
+
+Side-by-side boxplots \figrefp{fig:Boxplot1} are an alternative to separated histograms and are constructed by including the same formula and \R{data=} arguments to \R{boxplot()}.
+<<Boxplot1, fig.cap="Boxplot of the duration of ice cover at ice gauge 9004 in Lake Superior by each decade.">>=
+boxplot(days~decade,data=LSI,ylab="Days of Ice Cover",xlab="Decade")
+@
+
+\clearpage
+\begin{exsection}
+  \item \label{revex:EDAArsenic1} \rhw{} Arsenic concentrations were measured in the well water and in the toe nails of 21 people with home wells.  Also recorded were the person's age, sex, and qualitative measurements of usage for drinking and cooking.  The data are found in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Arsenic.csv}{Arsenic.csv}.  Load these data into R to answer the questions below. \ansref{ans:EDAArsenic1}
+  \begin{Enumerate}
+    \item Construct a univariate EDA for the well water measurements.
+    \item Construct a univariate EDA for the measurements of arsenic in the toe nails.
+    \item Construct a univariate EDA for the toe nail arsenic levels separated by levels of drinking water usage.
+  \end{Enumerate}
+\end{exsection}
+
+
+\section{Example Interpretations}\index{EDA!Univariate!Quantitative}
+\vspace{-12pt}
+While most of the previous sections focused on how to construct various graphs and numerical summaries, the most important aspect of this module is that you can make appropriate interpretations for an EDA from the summary results.  For quantitative data, an appropriate EDA consists of identifying the shape, center, dispersion, and outliers for the variable.  For categorical data, an appropriate EDA consists of identifying the major characteristics among the categories.  Below, I model properly constructed EDAs for the mouse consumption data and two new data sets.
+
+\subsubsection{Mouse Consumption Example}
+\vspace{-12pt}
+\begin{quote}
+\textit{Construct a proper EDA for the following situation and data -- `The  following measurements \tabrefp{tab:MouseData} are of the consumption of water in one hour by mice in a laboratory setting.'}
+\end{quote}
+\vspace{-12pt}
+
+<<echo=FALSE, results='hide'>>=
+mstat <- Summarize(mc,digits=2)
+@
+Mouse water consumption is approximately symmetric without any outliers present \figrefp{fig:MouseHist2}.  The center of the distribution is best measured by the mean, which is \Sexpr{formatC(mstat["mean"],format="f",digits=2)} ml \tabrefp{tab:MouseStats}.  The range of water consumption by the mice in the sample is from \Sexpr{formatC(mstat["min"],format="f",digits=1)} to \Sexpr{formatC(mstat["max"],format="f",digits=1)} ml while the dispersion as measured by the standard deviation is \Sexpr{formatC(mstat["sd"],format="f",digits=2)} ml \tabrefp{tab:MouseStats}.  I chose to use the mean and standard deviation because the data were symmetric with no outliers.  [\textit{NOTE: 1) use of units, 2) reference to the figure and table, 3) labeling of the figure and table, 4) median and IQR were not discussed as I chose to use the mean and standard deviation, 5) the range was not used alone as a measure of dispersion, 6) the explanation for why the mean and standard deviation were used rather than the median and IQR, and 7) R code was provided.}]
+
+<<MouseStats, results='asis', echo=FALSE>>=
+mstat1 <- matrix(mstat,nrow=1)
+colnames(mstat1) <- names(mstat)
+print(xtable(mstat1,digits=2,caption="Descriptive statistics of mouse water consumption.","tab:MouseStats"),caption.placement="top",include.rownames=FALSE)
+@
+
+\begin{minipage}{\textwidth}
+R Appendix:
+<<eval=FALSE, prompt=FALSE>>=
+setwd("c:/data/")
+mc <- read.csv("MouseData.csv")
+str(mc)
+Summarize(~consump,data=mc,digits=2)
+hist(~consump,data=mc,xlab="Water Consumption (mm)")
+@
+\end{minipage}
+
+\subsubsection{Crayfish Temperature Selection}
+\begin{quote}
+\textit{\cite{Peck1985} examined the temperature selection of dominant and subdominant crayfish (\textit{Orconectes virilis}) together in an artificial stream.  The temperature ($^{o}$C) selection by the dominant crayfish in the presence of subdominant crayfish in these experiments was recorded below.  Thoroughly describe all aspects of the distribution of selected temperatures.}
+\end{quote}
+
+<<results='asis', echo=FALSE>>=
+CT <- c(30,26,26,26,25,25,25,25,25,24,24,24,24,24,24,23,23,23,23,22,22,22,22,21,21,21,20,20,19,19,18,16)
+CTx <- xtable(matrix(CT,nrow=2,byrow=TRUE),digits=0)
+print(CTx,floating=FALSE,include.rownames=FALSE,include.colnames=FALSE,hline.after=NULL)
+cstat <- Summarize(CT,digits=2)
+@
+
+The shape of temperatures selected by the dominant crayfish is slightly left-skewed \figrefp{fig:CrayfishTempHist} with a possible weak outlier at the maximum value of \Sexpr{formatC(cstat["max"],format="f",digits=0)}$^{o}$C \tabrefp{tab:CrayfishTempStats}.  The center is best measured by the median, which is \Sexpr{formatC(cstat["median"],format="f",digits=0)}$^{o}$C \tabrefp{tab:CrayfishTempStats} and the dispersion is best measured by the IQR, which is from \Sexpr{formatC(cstat["Q1"],format="f",digits=0)} to \Sexpr{formatC(cstat["Q3"],format="f",digits=0)}$^{o}$C \tabrefp{tab:CrayfishTempStats}.  I used the median and IQR because of the (combined) skewed shape and outlier present.
+
+<<CrayfishTempHist, echo=FALSE, fig.cap="Histogram of crayfish temperature preferences.">>=
+hist(~CT,xlab="Preferred Temperature",ylab="Frequency of Crayfish",w=2)
+@
+
+<<CrayfishStats, results='asis', echo=FALSE>>=
+cstat1 <- matrix(cstat,nrow=1)
+colnames(cstat1) <- names(cstat)
+print(xtable(cstat1,digits=2,caption="Descriptive statistics of crayfish temperature preferences.","tab:CrayfishTempStats"),caption.placement="top",include.rownames=FALSE)
+@
+
+\begin{minipage}{\textwidth}
+R Appendix:
+<<eval=FALSE, prompt=FALSE>>=
+setwd("c:/data/")
+cray <- read.csv("Crayfish.csv")
+str(cray)
+hist(~temp,data=cray,xlab="Preferred Temperature",ylab="Frequency of Crayfish",w=2)
+Summarize(~temp,data=cray,digits=2)
+@
+\end{minipage}
+
+\newpage
+\begin{exsection}
+  \item \label{revex:quEDACP} \rhw{} Construct a proper EDA for the creatine phosphokinase data presented in Exercise \ref{revex:quEDACreatPhosph}.  Make sure to defend your choice of numerical summaries.  \ansref{ans:quEDACP}
+  \item \label{revex:quEDADJTI} \rhw{} \hspace{12pt} The Dow Jones Travel Index tracks the cost of hotel and car-rental rates in 20 major cities.  For its May 7, 1996, survey the following rates were given for the 20 cities: 152, 180, 167, 119, 115, 113, 119, 135, 140, 126, 114, 133, 205, 104, 149, 124, 127, 161, 106, and 179.  Thoroughly describe the distribution of these data.  [\textit{Note: You can use fewer than the ideal number of bars on your histogram because the sample size is so small in this situation.}] \ansref{ans:quEDADJTI}
+  \item \label{revex:quEDAZoo2} \rhw{} The data in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Zoo2.csv}{Zoo2.csv} contains the physical size (in acres) of a sample of zoos from around the United States.  Perform a univariate EDA on the \var{size} variable. \ansref{ans:quEDAZoo2}
+\end{exsection}

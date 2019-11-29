@@ -1,0 +1,109 @@
+\documentclass[10pt,openany]{book}
+
+<<echo=FALSE,results='hide'>>=
+## Set this to TRUE to include answers to review exercises
+inclRevEx <- TRUE
+@
+
+%\input{c:/aaaWork/zGnrlLatex/BookPreamble_HC}   % use for the hard-copy version
+\input{c:/aaaWork/zGnrlLatex/BookPreamble}
+\hypersetup{pdftitle = MTH107 Notes}
+\input{c:/aaaWork/zGnrlLatex/JustRPreamble}
+\usepackage{animate}
+\renewcommand{\chaptername}{Module}
+
+\begin{document}
+<<echo=FALSE, eval=FALSE>>=
+## Run this manually (Ctrl-Alt-C) after compiling to make no_print version
+fn <- "IntroStats"
+dir <- "C:/aaaWork/Web/GitHub/NCMTH107/book/"
+eng <- paste0(dir,"pdftk.exe")
+inp <- paste0(dir,fn,".pdf")
+out <- paste0("output ",dir,fn,"_noPrint.pdf")
+pw <- paste("owner_pw mth107")
+( tmp <- paste(eng,inp,out,pw,"verbose") )
+system(tmp,show.output.on.console=TRUE)
+
+## Removes intermediate files from the directory ... just looks cleaner
+tmp <- list.files(dir)
+tmp <- tmp[grepl(fn,tmp)]
+tmp <- tmp[!grepl(".pdf",tmp) & !grepl(".rnw",tmp)]
+file.remove(paste0(dir,tmp))
+@
+
+<<setup,echo=FALSE,include=FALSE>>=
+## load knitr helper materials
+source("c:/aaaWork/zGnrlLatex/knitr_setup.R")
+## more knitr options -- force use of include for child documents
+opts_knit$set(child.command='input')
+## Turn off highlighting and darken box a bit
+opts_chunk$set(highlight=FALSE,background=c(235,235,235)/255)
+## Make sure that the required packages are loaded
+rqrd <- c("NCStats","FSAdata","gplots","mvtnorm","TeachingDemos","xtable")
+for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
+@
+
+  \frontmatter
+    \include{FBMatter/FMatter}
+
+  \mainmatter
+    \part{Beginnings}
+<<child-WhyStatsImportant, child='WhyStatsImportant.Rnw', eval=TRUE>>=
+@
+<<child-FoundationalDefinitions, child='FoundationalDefinitions.Rnw', eval=TRUE>>=
+@
+<<child-DataProd, child='DataProd.Rnw', eval=TRUE>>=
+@
+<<child-FoundationR, child='FoundationR.Rnw', eval=TRUE>>=
+@
+
+    \part{Exploratory Data Analysis}
+<<child-UnivEDAQuant, child='UnivEDAQuant.Rnw', eval=TRUE>>=
+@
+<<child-UnivEDACat, child='UnivEDACat.Rnw', eval=TRUE>>=
+@
+<<child-NormDist, child='NormDist.Rnw', eval=TRUE>>=
+@
+<<child-BivEDAQuant, child='BivEDAQuant.Rnw', eval=TRUE>>=
+@
+<<child-BivEDACat, child='BivEDACat.Rnw', eval=TRUE>>=
+@
+<<child-Regress, child='Regress.Rnw', eval=TRUE>>=
+@
+
+    \part{Inference Concepts}
+<<child-ProbIntro, child='ProbIntro.Rnw', eval=TRUE>>=
+@
+<<child-SamplingDist, child='SamplingDist.Rnw', eval=TRUE>>=
+@
+<<child-HypothesisTests, child='HypothesisTests.Rnw', eval=TRUE>>=
+@
+<<child-ConfidenceRegions, child='ConfidenceRegions.Rnw', eval=TRUE>>=
+@
+
+    \part{Specific Hypothesis Tests}
+<<child-ZTest, child='ZTest.Rnw', eval=TRUE>>=
+@
+<<child-tTest1, child='tTest1.Rnw', eval=TRUE>>=
+@
+<<child-tTest2, child='tTest2.Rnw', eval=TRUE>>=
+@
+<<child-ChiSquare, child='chiSquare.Rnw', eval=TRUE>>=
+@
+<<child-GOF, child='GoodnessOfFit.Rnw', eval=TRUE>>=
+@
+
+    \cleardoublepage
+    \phantomsection
+    \addcontentsline{toc}{part}{Appendix}
+    \chapter*{Appendices}
+    \appendix
+<<child-Animations, child='animations.Rnw', eval=FALSE>>=
+@
+<<child-AnsRevEx, child='AnsRevEx.Rnw', eval=inclRevEx>>=
+@
+
+  \backmatter
+    \input{FBMatter/BMatter}
+
+\end{document}

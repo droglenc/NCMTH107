@@ -1,0 +1,51 @@
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\input{c:/aaaWork/zGnrlLatex/justRPreamble}
+\hypersetup{pdftitle = Final Exam Key -- LaysanFinch}
+
+\begin{document}
+\section*{Final Exam Key -- LaysanFinch}
+
+<<setup,echo=FALSE,include=FALSE>>=
+source("c:/aaaWork/zGnrlLatex/knitr_setup.R")
+library(NCStats)
+lf <- read.table("LaysanFinch.txt", header=TRUE)
+@
+
+<<echo=FALSE>>=
+Summarize(~stern,data=lf,digit=3)
+hist(~stern,data=lf,xlab="Stern Length")
+@
+<<echo=FALSE>>=
+percTable(table(lf$loc),digit=1)
+@
+<<echo=FALSE>>=
+plot(tarsus~lowwid,xlab="Lower Mandible Length",ylab="Tarsus Length",data=lf,pch=16)
+cat("The correlation is",round(cor(lf$tarsus,lf$lowwid),3))
+@
+<<echo=FALSE>>=
+lmf <- lm(weight~bklen,data=lf)
+coef(lmf)
+cat("The predicted value at a median of",round(median(lf$bklen,na.rm=TRUE),3),"is",
+    round(predict(lmf,data.frame(bklen=median(lf$bklen))),3))
+cat("The residual is 25 -",round(predict(lmf,data.frame(bklen=1.2)),3),"=",round(25-predict(lmf,data.frame(bklen=1.2)),3))
+cat("The r-squared value is",round(rSquared(lmf),3))
+@
+
+\clearpage
+<<echo=FALSE>>=
+chi.f <- chisq.test(table(lf$sex,lf$loc),correct=FALSE)
+chi.f$observed
+chi.f$expected
+@
+<<echo=FALSE>>=
+chi.f
+@
+<<echo=FALSE>>=
+levenesTest(stern~sex,data=lf)
+@
+<<echo=FALSE>>=
+t.test(stern~sex,data=lf,var.equal=TRUE)
+@
+
+\end{document}

@@ -1,0 +1,74 @@
+---
+title: "Exam 2 Question Reflection F17"
+author: "Derek H. Ogle"
+date: "December 1, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(dplyr)
+library(tidyr)
+library(FSA)
+
+## Load and prepare data
+# Read the googlesheet
+# Rename a couple of variables to be more succinct
+# Get just the first exam reflections
+# Delete timestamp, names, and "continuation"" variables
+d <- read_csv("Exam2_Reflection_QUESTIONS.csv") %>%
+  as.data.frame() %>%
+  rename(last="What is your LAST name?",
+         first="What is your FIRST name?",
+         exam="Which exam are you reflecting on?") %>%
+#  mutate(name=paste(first,last,sep=" ")) %>%
+  mutate(name=last) %>%
+# removed Kropp because her answers are scred up
+  filter(name!="Kropp") %>%
+  filter(exam=="Second exam") %>%
+  select(-Timestamp,-exam,-last,-first,
+         -starts_with("Do you have more questions to reflect on"))
+
+# Rename variables to be less lengthy (and remove brackets)
+names(d) <- gsub("Which question are you reflecting on below\\? \\(e.g., enter as 4a or 11\\)","Q",names(d))
+names(d) <- gsub("Choose the option that best describes why you made your error.","E",names(d))
+names(d) <- gsub("Explain your \"other\" answer from the previous question.","Other",names(d))
+
+# Get rid of some irritating attributes
+attr(d,"spec") <- NULL
+
+## Create a long data.frame
+# separate the parts and then gather them
+Qs <- select(d,name,starts_with("Q"))
+Qs <- gather(Qs,quest,starts_with("Q"),-name) %>%
+  select(-quest) %>%
+  rename(quest='starts_with("Q")')
+Es <- select(d,name,starts_with("E"))
+Es <- gather(Es,explanation,starts_with("E"),-name) %>%
+  select(-explanation) %>%
+  rename(explanation='starts_with("E")')
+Os <- select(d,name,starts_with("Other"))
+Os <- gather(Os,other,starts_with("Other"),-name) %>%
+  select(-other) %>%
+  rename(other='starts_with("Other")')
+# put them back together
+#   remove rows with NAs
+#   simplified the explanations
+d <- cbind(Qs,explanation=Es$explanation,other=Os$other) %>%
+  filter(!is.na(quest),!is.na(explanation)) %>%
+  mutate(explanation=mapvalues(explanation,from=levels(explanation),
+                               to=c("Blanked","Changed answer","Misunderstood material",
+                                    "Did not study material","Did not understand question",
+                                    "Did not follow directions","Misread the question",
+                                    "Studied main but not details","Studied but could not remember",
+                                    "Answer is incomplete","Other","Material not in notes")))
+```
+
+```{r echo=FALSE,comment=""}
+round(100*prop.table(xtabs(~explanation+name,data=d),margin=2),0)
+```
+
+```{r echo=FALSE,comment=""}
+round(100*prop.table(xtabs(~explanation+quest,data=d),margin=2),0)
+```

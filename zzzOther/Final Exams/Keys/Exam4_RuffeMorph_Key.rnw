@@ -1,0 +1,51 @@
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\input{c:/aaaWork/zGnrlLatex/justRPreamble}
+\hypersetup{pdftitle = Final Exam Key -- RuffeMorph}
+
+\begin{document}
+\section*{Final Exam Key -- RuffeMorph}
+
+<<setup,echo=FALSE,include=FALSE>>=
+source("c:/aaaWork/zGnrlLatex/knitr_setup.R")
+library(NCStats)
+rm <- read.table("RuffeMorph.txt", header=TRUE)
+rm <- Subset(rm,!miss & !out)
+@
+
+<<echo=FALSE>>=
+Summarize(~w,data=rm,digit=3)
+hist(~w,data=rm,main="",xlab="Weight",col="gray80")
+@
+<<echo=FALSE>>=
+percTable(table(rm$sex),digit=1)
+@
+<<echo=FALSE>>=
+plot(w~tl,data=rm,pch=16)
+cat("The correlation is",round(cor(rm$w,rm$tl),3))
+@
+<<echo=FALSE>>=
+lml <- lm(bg~tl,data=rm)
+coef(lml)
+cat("The predicted value at a median of",round(median(rm$tl,na.rm=TRUE),3),"is",round(predict(lml,data.frame(tl=median(rm$tl))),3))
+cat("The residual is 70 -",round(predict(lml,data.frame(tl=120)),3),"=",round(70-predict(lml,data.frame(tl=120)),3))
+cat("The r-squared value is",round(rSquared(lml),3))
+@
+
+\clearpage
+<<echo=FALSE>>=
+chi1 <- chisq.test(table(rm$loc,rm$sex),correct=FALSE)
+chi1$observed
+chi1$expected
+@
+<<echo=FALSE>>=
+chi1
+@
+<<echo=FALSE>>=
+levenesTest(bg~sex,data=rm)
+@
+<<echo=FALSE>>=
+t.test(bg~sex,data=rm,var.equal=TRUE,alt="less")
+@
+
+\end{document}

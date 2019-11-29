@@ -1,0 +1,103 @@
+%===============================================================================
+% swv2PDF("Chapter3HW.Rnw",createScript=FALSE)
+%===============================================================================
+%===============================================================================
+% Overall Sweave and R options
+%-------------------------------------------------------------------------------
+\SweaveOpts{engine=R,eps=FALSE,pdf=TRUE,strip.white=TRUE,keep.source=TRUE,prefix.string=Figs/ansHW}
+<<echo=false,results=hide>>=
+options(width=80,show.signif.stars=FALSE,continue=" ")
+options(SweaveHooks = list(fig = function() par(mar=c(3.5,3.5,1,1),mgp=c(2,0.75,0))))
+loadNeeded(c("NCStats","xtable"))
+@
+%===============================================================================
+\SweaveOpts{width=7,height=3.5}
+<<echo=FALSE,label=BODhist,fig=TRUE,include=FALSE,results=hide>>=
+d <- read.table("3_50.txt",header=TRUE)
+str(d)
+state <- Subset(d,lab=="state")
+hist(bod~lab,data=d,xlab="BOD Measurements")
+@
+
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\renewcommand{\theenumi}{\alph{enumi}}    % changes enumerates from numbers to letters
+
+\begin{document}
+\section*{Question 3.50}
+  \begin{Enumerate}
+    \item \textbf{[1 pt]} All measurement for the state lab are shown below.
+<<echo=FALSE>>=
+state
+@
+    \item \textbf{[1 pt]} The eighth BOD measurement for the state lab is \Sexpr{state$bod[8]} mg/L.
+    \item \textbf{[14 pts]} The distribution of BOD values for the state lab appears to be right-skewed with an outlier at 71 mg/L \figrefp{fig:BODhist}.  The median of the state data is 20 mg/L with an IQR from 9.5 to 33.5 mg/L \tabrefp{tab:BODStats}.  The median and IQR were used because of the presence of the outlier.  The distribution of BOD values for the private lab is approximately symmetric with no obvious outliers \figrefp{fig:BODhist}.  The mean of the private data is 34.64 mg/L with a standard deviation of 10.45 mg/L \tabrefp{tab:BODStats}.  The mean and standard deviation were used because of the symmetry of the distribution and absence of outliers.
+    
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=5.5in]{Figs/ansHW-BODhist.pdf}
+  \caption{Histograms for BOD measurements for the private (left) and state (right) labs.}
+  \label{fig:BODhist}
+\end{figure}
+
+<<label=BODStats,results=tex,echo=false>>=
+mstat <- Summarize(bod~lab,data=d,digits=1)
+print(xtable(mstat,digits=1,caption="Descriptive statistics for BOD measurements for the private and state labs.",label="tab:BODStats"),caption.placement="top")
+@
+   
+    \item \textbf{[2 pts]} The two most outstanding differences between the private and state labs is that the state lab BOD values are generally lower (note lower means and medians) and more dispersed (note wider IQR and larger standard deviation).
+  \end{Enumerate}
+
+
+\clearpage
+\section*{Question 3.51}
+<<echo=FALSE,results=hide>>=
+d2 <- read.table("3_51.txt",header=TRUE)
+str(d2)
+a.tbl <- table(d2$agency)
+@
+
+  \begin{Enumerate}
+    \item \textbf{[2 pts]} The frequency table is shown in \tabref{tab:FreqTbl}.
+<<label=FreqTbl,results=tex,echo=false>>=
+a.tbl2 <- matrix(a.tbl,nrow=1)
+colnames(a.tbl2) <- names(a.tbl)
+print(xtable(a.tbl2,digits=0,caption="Frequency table for perceived choice of agency that disposes of chemical waste.  Note that 'o'=Occupational Safety and Health Administration, 'e'=Environmental Protection Agency, 'd'=Department of Transportation, 'n'=National Institutes of Health, and 'u'=unsure.",label="tab:FreqTbl"),caption.placement="top",include.rownames=FALSE)
+@
+    \item \textbf{[2 pts]} The percentage table is shown in \tabref{tab:PercTbl}.
+<<label=PercTbl,results=tex,echo=false>>=
+print(xtable(percTable(a.tbl2),digits=1,caption="Percentages table for perceived choice of agency that disposes of chemical waste.  Abbreviations are given in \\tabref{tab:FreqTbl}.",label="tab:PercTbl"),caption.placement="top",include.rownames=FALSE)
+@
+    \item \textbf{[2 pts]} Most respondents thought that the Environmental Protection Agency was the agency that disposed of chemical wastes followed by the Occupational Safety and Health Administration.  Relatively few people thought the Department of Transportation or National Institutes of Health disposed of chemical wastes.
+  \end{Enumerate}
+
+
+\section*{Appendix -- R Commands}
+\vspace{-24pt}
+<<eval=FALSE>>=
+library(NCStats)
+setwd('C:/aaaWork/Books/IntroStats/HW/')
+
+d <- read.table("3_50.txt",header=TRUE)
+str(d)
+( state <- Subset(d,lab=="state") )
+state$bod[8]
+Summarize(bod~lab,data=d,digits=1)
+hist(bod~lab,data=d,xlab="BOD Measurements")
+
+d2 <- read.table("3_51.txt",header=TRUE)
+str(d2)
+a.tbl <- table(d2$agency)
+( p.tbl <- percTable(a.tbl) )
+@
+
+\section*{Notes From Professor}
+\vspace{-18pt}
+\begin{itemize}
+  \item Question 3.50c asks for a ``univariate EDA'' -- Note that this does not mean to just make a histogram and summary statistics.  Performing a univariate EDA means addressing shape, outliers, center, and dispersion from looking at a histogram (or boxplot) and summary statistics.
+  \item Note that in question 3.50c that shape, outliers, center, and dispersion are specifically listed, even if there are no outliers, for both the private and state labs.  Also note that I clearly indicated why I chose to use the mean/sd (because of symmetry and no outliers) or median/IQR (occurrence of outliers).
+  \item Note that it would be reasonable to use the median and IQR for both state and private labs in question 3.50c because of the outlier in the state lab.  This would allow a more appropriate comparison between labs.
+  \item Note that in question 3.51c that I noted what I considered to be the major characteristics of the results.  Your major characteristics may differ from mine.  However, note that you should NOT just re-list all of the information in the tables.
+  \item Note how each table and figure is labeled and referred to in the answers.
+\end{itemize}
+\end{document}

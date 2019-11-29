@@ -1,0 +1,86 @@
+# RuffeMorph.txt
+# Source: Dr. Derek H. Ogle, Northland College, Ashland, WI
+#
+# Morphological measurements on a sample of ruffe (Gymnocephalus cernuus)
+#  captured at various locations in the St. Louis River Harbor, Lake Superior.
+#
+#  loc: location of collection: Allouez Bay, Interstate Island, Whaleback Bay
+#  sex: sex of the fish: m=male, f=female
+#  tl: total length (mm)
+#  w: weight (g)
+#  bg: body girth (mm)
+#  ujl: upper jaw length (mm)
+#  slla: scale along the lateral line
+#  miss: logical is TRUE if some data is missing
+#  out: Logical is TRUE if some data appears erroneous
+#
+# If data are read into an object called RM then use the following code to obtain
+#   a "clean" data set -- i.e., remove missing data and erroneous outliers
+#
+#       RM <- Subset(RM,!miss & !out)
+#
+loc	sex	tl	w	bg	ujl	slla	miss	out
+Allouez	m	128.0	21.0	69.8	7.5	39	FALSE	FALSE
+Interstate	m	135.7	34.8	89.0	11.0	36	FALSE	FALSE
+Allouez	f	139.7	33.3	82.7	9.6	36	FALSE	FALSE
+Allouez	m	143.1	36.5	90.2	9.3	39	FALSE	FALSE
+Whaleback	m	167.0	47.6	94.5	11.9	38	FALSE	FALSE
+Whaleback	m	145.5	36.3	89.3	10.3	37	FALSE	FALSE
+Whaleback	f	132.8	28.3	NA	8.4	39	TRUE	FALSE
+Interstate	m	126.6	23.8	78.4	8.4	38	FALSE	FALSE
+Interstate	f	139.8	35.3	91.0	9.9	39	FALSE	FALSE
+Whaleback	m	164.0	54.6	106.1	11.8	38	FALSE	FALSE
+Interstate	f	168.0	62.5	114.9	13.7	39	FALSE	FALSE
+Allouez	f	134.5	29.5	83.9	10.4	37	FALSE	FALSE
+Allouez	f	171.0	55.4	105.2	12.3	37	FALSE	FALSE
+Allouez	f	165.0	48.2	105.8	12.3	38	FALSE	FALSE
+Whaleback	m	138.0	33.5	89.6	10.3	38	FALSE	FALSE
+Interstate	f	143.4	36.8	91.8	10.8	38	FALSE	FALSE
+Whaleback	f	129.8	28.2	83.1	9.5	38	FALSE	FALSE
+Interstate	f	127.5	24.8	81.1	10.4	39	FALSE	FALSE
+Allouez	m	137.5	30.1	86.9	10.0	38	FALSE	FALSE
+Interstate	m	133.6	27.9	84.6	11.2	37	FALSE	FALSE
+Allouez	m	133.3	25.5	81.5	10.1	37	FALSE	FALSE
+Interstate	f	130.9	27.8	84.7	9.6	39	FALSE	FALSE
+Allouez	f	119.5	24.0	93.2	9.6	39	FALSE	FALSE
+Whaleback	f	125.0	22.1	78.3	9.4	38	FALSE	FALSE
+Whaleback	f	125.8	22.1	61.6	9.6	38	FALSE	FALSE
+Interstate	f	118.3	20.1	73.5	9.3	37	FALSE	FALSE
+Allouez	f	122.7	20.9	76.5	9.4	37	FALSE	FALSE
+Allouez	f	118.8	23.2	79.9	9.4	37	FALSE	FALSE
+Allouez	f	152.5	39.9	92.6	11.8	38	FALSE	FALSE
+Interstate	f	138.0	32.1	86.0	11.6	38	FALSE	FALSE
+Whaleback	f	149.9	34.3	87.3	11.3	37	FALSE	FALSE
+Whaleback	f	111.5	17.4	73.7	8.4	37	FALSE	FALSE
+Whaleback	f	174.0	52.9	103.2	12.8	38	FALSE	FALSE
+Interstate	m	150.1	40.6	94.4	11.2	37	FALSE	FALSE
+Allouez	f	146.7	37.0	94.6	9.8	38	FALSE	FALSE
+Allouez	f	125.9	27.4	84.1	9.8	38	FALSE	FALSE
+Allouez	m	152.5	39.7	93.2	11.5	39	FALSE	FALSE
+Whaleback	f	116.3	20.2	76.5	7.1	38	FALSE	FALSE
+Interstate	f	116.1	20.0	75.6	9.6	37	FALSE	FALSE
+Interstate	f	138.6	36.7	90.3	10.5	36	FALSE	FALSE
+Interstate	f	129.5	24.9	20.5	9.6	39	FALSE	TRUE
+Interstate	m	114.3	19.0	54.2	9.1	38	FALSE	FALSE
+Interstate	f	120.5	20.7	74.9	9.6	38	FALSE	FALSE
+Allouez	f	108.8	15.7	69.3	8.8	37	FALSE	FALSE
+Interstate	f	122.5	23.9	77.1	9.8	36	FALSE	FALSE
+Allouez	m	105.7	16.1	69.7	7.8	37	FALSE	FALSE
+Whaleback	f	111.7	16.2	66.8	8.7	38	FALSE	FALSE
+Whaleback	f	107.3	14.7	65.1	7.6	35	FALSE	FALSE
+Whaleback	f	109.7	15.9	70.7	8.3	38	FALSE	FALSE
+Interstate	f	105.5	13.6	62.7	8.5	38	FALSE	FALSE
+Allouez	f	98.3	11.8	61.8	6.6	37	FALSE	FALSE
+Interstate	m	105.1	14.0	64.4	8.8	38	FALSE	FALSE
+Allouez	f	100.8	12.3	NA	7.5	38	TRUE	FALSE
+Interstate	f	96.6	11.0	61.8	7.6	37	FALSE	FALSE
+Whaleback	f	104.4	13.1	63.9	8.0	38	FALSE	FALSE
+Allouez	f	92.9	11.1	63.6	8.2	37	FALSE	FALSE
+Whaleback	f	103.0	14.8	70.9	8.4	37	FALSE	FALSE
+Whaleback	f	102.6	13.0	61.8	7.6	37	FALSE	FALSE
+Allouez	f	93.0	10.2	57.9	6.3	37	FALSE	FALSE
+Allouez	f	98.9	11.7	61.8	8.0	37	FALSE	FALSE
+Interstate	f	96.2	11.3	58.3	7.7	26	FALSE	TRUE
+Whaleback	f	92.1	8.8	54.8	7.1	37	FALSE	FALSE
+Interstate	m	91.1	8.8	54.7	7.0	38	FALSE	FALSE
+Whaleback	m	86.7	7.9	53.0	6.7	36	FALSE	FALSE

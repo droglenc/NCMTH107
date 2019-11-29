@@ -1,0 +1,105 @@
+%===============================================================================
+% swv2PDF("Chapter9HW.Rnw",createScript=FALSE)
+%===============================================================================
+% Overall Sweave and R options
+%-------------------------------------------------------------------------------
+\SweaveOpts{engine=R,eps=FALSE,pdf=TRUE,strip.white=TRUE,keep.source=TRUE,prefix.string=Figs/ansHW}
+<<echo=false,results=hide>>=
+options(width=80,show.signif.stars=FALSE,continue=" ")
+options(SweaveHooks = list(fig = function() par(mar=c(3.5,3.5,1,1),mgp=c(2,0.75,0))))
+loadNeeded(c("NCStats","xtable"))
+@
+%===============================================================================
+
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\renewcommand{\theenumi}{\alph{enumi}}    % changes enumerates from numbers to letters
+
+\begin{document}
+\section*{Question 9.22}
+  \begin{Enumerate}
+    \item \textbf{[2 pts]} Results for the samples are shown in \tabref{tab:Samples}.
+\begin{table}[!h]
+  \begin{center}
+    \caption{All possible samples of n=2 from the numbers 2 through 9.  Each column represents the two values in a possible sample.}  \label{tab:Samples}
+<<echo=FALSE>>=
+( smpls <- combn(2:9,2) )
+@
+  \end{center}
+\end{table}
+    \item \textbf{[2 pts]} Results for the means are shown in \tabref{tab:Means}.
+\begin{table}[!h]
+  \begin{center}
+    \caption{All possible means from samples of n=2 from the numbers 2 through 9.}  \label{tab:Means}
+<<echo=FALSE>>=
+( mns <- combn(2:9,2,mean) )
+@
+  \end{center}
+\end{table}    
+    \item \textbf{[2 pts]} The histogram of means is shown in \figref{fig:HistMeans}.  The distribution is perfectly symmetric.
+\SweaveOpts{width=5,height=5}
+<<echo=FALSE,label=xbarHist,fig=TRUE,include=FALSE,results=hide>>=
+hist(mns,breaks=seq(2,9,0.5),right=FALSE,xlab="Sample Means",ylab="Frequency of Samples",main="")
+@
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=4in]{Figs/ansHW-xbarHist.pdf}
+  \caption{Histogram of all means from samples of n=2 from the numbers 2 through 9.}
+  \label{fig:HistMeans}
+\end{figure}
+
+    \item \textbf{[2 pts]} Both the mean of the 28 sample means and the mean of the original set of numbers (the population) are 5.5.  This observation is a demonstration of the definition of an unbiased statistic.
+    \item \textbf{[2 pts]} The standard deviation of the 28 sample means is \Sexpr{formatC(sd(mns),format="f",digits=2)}.  This standard deviation is called a standard error.  The standard error would be smaller if samples of n=3 had been taken rather than n=2.    
+  \end{Enumerate}
+    
+   
+\section*{Question 9.23}
+  \begin{Enumerate}
+    \item \textbf{[1 pt]} The numbers 59, 60, 60, 61 represent values that are accurate and precise (i.e., values are close together and centered on (average out to be) 60).
+    \item \textbf{[1 pt]} The numbers 45, 55, 65, 70 represent values that are accurate but imprecise (i.e., values are be far apart and centered on 60).
+    \item \textbf{[1 pt]} The numbers 69, 70, 71, 72 represent values that are inaccurate but precise (i.e., values are close together and NOT centered on 60).
+    \item \textbf{[1 pt]} The numbers 75, 85, 95, 105 represent values that are inaccurate and imprecise (i.e., values are far apart and NOT centered on 60).
+  \end{Enumerate}    
+    
+    
+\section*{Question 9.24}
+  \begin{Enumerate}
+    \item \textbf{[2 pts]} This question cannot be answered because the population distribution is not known to be normal (background says that it is right-skewed).
+    \item \textbf{[2 pts]} This question cannot be answered because the sampling distribution is not known to be normal because the sample size is not greater than 30, nor greater than 15, nor is the population normally distributed.
+    \item \textbf{[2 pts]} The probability that a sample of 35 roe deer will have an average of more than 2 fawns is \Sexpr{formatC(distrib(2,mean=2.2,sd=0.46/sqrt(35),lower.tail=FALSE,plot=FALSE),format="f",digits=2)}.
+    \item \textbf{[2 pts]} The probability that a sample of 35 roe deer will have an average of between 2 and 2.3 fawns is \Sexpr{formatC(distrib(2.3,mean=2.2,sd=0.46/sqrt(35),plot=FALSE)-distrib(2,mean=2.2,sd=0.46/sqrt(35),plot=FALSE),format="f",digits=2)}.
+    \item \textbf{[2 pts]} The most common 90\% of sample means in sammples of n=35 are between \Sexpr{formatC(distrib(0.05,mean=2.2,sd=0.46/sqrt(35),type="q",plot=FALSE),format="f",digits=2)} and \Sexpr{formatC(distrib(0.05,mean=2.2,sd=0.46/sqrt(35),type="q",lower.tail=FALSE,plot=FALSE),format="f",digits=2)}.    
+    \item \textbf{[2 pts]} The lowest 20\% of sample means in samples of n=35 are below \Sexpr{formatC(distrib(0.20,mean=2.2,sd=0.46/sqrt(35),type="q",plot=FALSE),format="f",digits=2)}.
+  \end{Enumerate}
+    
+\section*{Appendix -- R Commands}
+\vspace{-20pt}
+<<eval=FALSE>>=
+( smpls <- combn(2:9,2) )
+( mns <- combn(2:9,2,mean) )
+mean(mns)
+mean(2:9)
+sd(mns)
+hist(mns,breaks=seq(2,9,0.5),right=FALSE,xlab="Sample Means",ylab="Frequency of Samples",main="")
+@
+
+\vspace{-16pt}
+<<eval=FALSE>>=
+( distrib(2,mean=2.2,sd=0.46/sqrt(35),lower.tail=FALSE) )
+ab <- distrib(2.3,mean=2.2,sd=0.46/sqrt(35))
+a <- distrib(2,mean=2.2,sd=0.46/sqrt(35))
+ab-a
+( distrib(0.05,mean=2.2,sd=0.46/sqrt(35),type="q") )
+( distrib(0.05,mean=2.2,sd=0.46/sqrt(35),type="q",lower.tail=FALSE) )
+( distrib(0.20,mean=2.2,sd=0.46/sqrt(35),type="q") )
+@      
+
+\vspace{-12pt}
+\section*{Notes From Professor}
+\begin{itemize}
+  \item Note the explicit description for why a question cannot be answered.  Especially, note the explicit statement of which distribution is not normal and the providing of a reason or reasons for why the distribution is known not to be normal.
+  \item Note that probabilities are never expressed as percentages; they are always expressed as proportions.
+  \item I did not show graphics of the probability calculations just to save space.
+\end{itemize}
+
+\end{document}

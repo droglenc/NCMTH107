@@ -1,0 +1,43 @@
+---
+title: "MTH107 Grades"
+author: "Derek H. Ogle"
+date: "December 28, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(NCStats)
+library(readxl)
+library(dplyr)
+```
+
+```{r prep_grade_data, echo=FALSE, results='hide', warning=FALSE}
+## Some orders for ordered variables
+grade.lvls1 <- c("A","A-","B+","B","B-","C+","C","C-","D+","D","F")
+grade.lvls2 <- c("A","A","B","B","B","C","C","C","D","D","F")
+section.lvls <- c("pre-F12","F12","W13","F13","W14","W16","F16","W17","F17")
+
+## Read data
+gd <- read_excel("F17/MTH107_Grades_F17.xlsx",sheet="PastGrades") %>%
+  mutate(Sem=factor(Sem,levels=section.lvls),
+         Grade=factor(Grade,levels=grade.lvls1),
+         Grade2=mapvalues(Grade,from=grade.lvls1,to=grade.lvls2))
+```
+
+## Grade Distributions
+```{r echo=FALSE}
+distrib <- xtabs(~Sem+Grade,data=gd) %>%
+  percTable(margin=1,digits=0)
+
+distrib2 <- xtabs(~Sem+Grade2,data=gd) %>%
+  percTable(margin=1,digits=0)
+distrib2
+```
+
+## Min-Max Percentage Scores by Grade and Year
+```{r echo=FALSE}
+sumTable(Final~Sem+Grade,data=gd,FUN=min,digits=2)
+sumTable(Final~Sem+Grade,data=gd,FUN=max,digits=2)
+```
+

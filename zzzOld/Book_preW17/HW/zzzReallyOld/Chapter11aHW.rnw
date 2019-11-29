@@ -1,0 +1,82 @@
+%===============================================================================
+% swv2PDF("Chapter11aHW.Rnw",createScript=FALSE)
+%===============================================================================
+% Overall Sweave and R options
+%-------------------------------------------------------------------------------
+\SweaveOpts{engine=R,eps=FALSE,pdf=TRUE,strip.white=true,keep.source=TRUE,prefix.string=Figs/ansHW}
+<<echo=false,results=hide>>=
+options(width=80,show.signif.stars=FALSE,continue=" ")
+options(SweaveHooks = list(fig = function() par(mar=c(3.5,3.5,1,1),mgp=c(2,0.75,0))))
+loadNeeded(c("NCStats","xtable"))
+@
+%===============================================================================
+
+\documentclass{article}
+\input{c:/aaaWork/zGnrlLatex/GnrlPreamble}
+\renewcommand{\theenumi}{\alph{enumi}}    % changes enumerates from numbers to letters
+
+\begin{document}
+\section*{Question 11.22}
+  \begin{Enumerate}
+    \item $\alpha=0.01$.
+    \item $H_{O}:\mu=0$, $H_{A}:\mu>0$.  [Note a mean of 0 means no change.]
+    \item A one-sample t-test is required because a quantitative variable (sea level rise rate) was measured on individuals from one population (ecosystems), $\sigma$ is UNknown, and the population mean is being compared to a specific value in the null hypothsis.
+    \item An observational study without obvious randomization was used.
+    \item The assumptions are met because $\sigma$ is unknown, the sample size is greater than 15 and the background suggests that the distribution is not strongly skewed.  Thus, the sampling distribution of the test statistic should follow a t-distribution.
+    \item The statistic is $\bar{x}=0.059$.
+    \item The test statistic is  $t=\frac{0.059-0}{\frac{0.135}{\sqrt{23}}}$ = $2.107$ with $23-1=22$ df.
+    \item The p-value is \Sexpr{swvPvalue(distrib(2.107,distrib="t",df=22,lower.tail=FALSE,plot=FALSE))}.
+    \item The $H_{O}$ is not rejected because the $p-value>\alpha$.
+    \item The mean sea level rise rate does not appear to be greater than 0, indicating that the sea level has not increased significantly over the period of study.
+  \end{Enumerate}
+
+\section*{Question 11.23}
+<<echo=FALSE,results=hide>>=
+ph <- read.table("http://www.ncfaculty.net/dogle/R/Data_Master/R/pHlevels.txt",header=TRUE)
+ph.t <- t.test(ph$pH,mu=5.6,alt="less",conf.level=0.99)
+@
+  \begin{Enumerate}
+    \item $\alpha=0.01$.
+    \item $H_{O}:\mu=5.6$, $H_{A}:\mu<5.6$.
+    \item A one-sample t-test is required because quantitative variable (pH) was measured on individuals from one population, $\sigma$ is UNknown, and the population mean is being compared to a specific value in the hull hypothesis.
+    \item An observational study without obvious randomization was used.
+    \item The assumptions are met because $\sigma$ is unknown and the sample size (\Sexpr{formatC(ph.t$parameter+1,format="f",digits=0)}) is greater than 40.  Thus, the sampling distribution of the test statistic should follow a t-distribution.
+    \item The statistic is $\bar{x}=$\Sexpr{formatC(ph.t$estimate,format="f",digits=3)} \tabrefp{tab:pH}.
+\begin{table}[!h]
+  \begin{center}
+    \caption{Results from the one-sample t-test for testing that the pH is less than 5.6.}  \label{tab:pH}
+<<echo=FALSE>>=
+swvHtest(ph.t)
+@
+  \end{center}
+\end{table}
+    \item The test statistic is $t=$\Sexpr{formatC(ph.t$statistic,format="f",digits=3)} with \Sexpr{formatC(ph.t$parameter,format="f",digits=0)} df \tabrefp{tab:pH}.
+    \item The p-value is \Sexpr{swvPvalue(ph.t$p.value)} \tabrefp{tab:pH}.
+    \item The $H_{O}$ is rejected because the $p-value<\alpha$.
+    \item The mean pH appears to be significantly lower than 5.6 and, thus, indicates acid rain at this site.
+    \item A 99\% upper confidence bound is required.  Thus, one is 99\% confident that the mean pH level is less than \Sexpr{formatC(ph.t$conf.int[2],format="f",digits=2)} \tabrefp{tab:pH}.
+  \end{Enumerate}
+    
+\section*{Appendix -- R Commands}
+\vspace{-20pt}
+<<eval=FALSE>>=
+( distrib(2.107,distrib="t",df=22,lower.tail=FALSE) )
+@
+
+\vspace{-18pt}
+<<eval=FALSE>>=
+ph <- read.table("http://www.ncfaculty.net/dogle/R/Data_Master/R/pHlevels.txt",header=TRUE)
+( ph.t <- t.test(ph$pH,mu=5.6,alt="less",conf.level=0.99) )
+@      
+
+\vspace{-12pt}
+\section*{Notes From Professor}
+\begin{itemize}
+  \item Make sure you provide some statement of evidence for the fact that a quantitative variable was measured and that only one population was sampled in step 3.
+  \item Make sure to include, and refer to, a table of results from \R{t.test()}.
+  \item Make sure to answer the overall question of the study in step 10.  For example, in 11.23, make sure to say that there was evidence for acid rain, not just saying that the mean pH was less than 5.6.
+  \item Make sure to show your work in hand calculation problems.
+  \item It is not possible for the p-value to be zero.  If the p-value is very small (i.e., less than a rounded 0.0001) then we write ``p<0.00005.''
+\end{itemize}
+
+\end{document}

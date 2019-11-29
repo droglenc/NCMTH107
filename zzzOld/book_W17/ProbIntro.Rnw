@@ -1,0 +1,54 @@
+<<echo=FALSE, cache=FALSE, results='hide'>>=
+set_parent('IntroStats.Rnw')
+@
+
+\chapter{Probability Introduction} \label{chap:ProbIntro}
+
+\begin{ChapObj}{\boxwidth}
+  \textbf{Objectives:}
+  \begin{Enumerate}
+    \item Identify the two major assumptions for computing basic probabilities.
+    \item Calculate basic probabilities in discrete item cases.
+    \item Calculate basic probabilities for continuous variables that follow a normal distribution.
+  \end{Enumerate}
+\end{ChapObj}
+
+
+\lettrine{P}{robability} is the ``language'' used by statisticians to describe the proportion of times that a random event will occur.  The language of probability is at the center of statistical inference (see Modules \ref{chap:HypothesisTests} and \ref{chap:ConfidenceRegions}). Only a minimal understanding of probability is required to understand most basic inferential methods, including all of those in this course.  Thus, only a very short, example-based, introduction to probability is provided here.\footnote{A deeper understanding of probability will be required to understand more complex inferential methods beyond those in this course.}
+
+The most basic forms of probability assume that items are selected randomly.  In other words, simple probability calculations require that each item, whether that item is an individual or an entire sample, has the same chance of being selected.  Thus, in simple intuitive examples it will be stated that the ``box of balls was thoroughly mixed'' and more realistic examples will require randomization.\footnote{See sections in \modref{chap:DataProd} for methods of selecting or allocating random individuals.}
+
+\warn{Individuals must be randomly selected from the population or samples must be produced randomly for the concept of probability to work accurately.}
+
+If every individual has the same chance of being selected, then the probability of an event is equal to the proportion of items in the event out of the entire population.  In other words, the probability is the number of items in the event divided by the total number of items in the population.  For example, the probability of selecting a red ball from a thoroughly mixed box containing 15 red and 10 blue balls is equal to $\frac{15}{25}=0.6$ (i.e., 15 individuals (``balls'') in the event (``red'') divided by the total number of individuals (``all balls in the box'').  Similarly, the probability of randomly selecting a woman from a room containing 20 women and 30 men is 0.4 ($=\frac{20}{50}$).  In both of these examples, the calculation can be considered a probability because (i) individuals were randomly selected and (ii) a proportion of a total was computed.
+
+\warn{If every item has the same chance of being selected, then the probability of observing an item with a certain characteristic is the proportion of items in the entire population that have that characteristic.}
+
+The two previous examples are rather simple examples where the selection is made from a small, discrete number of items.  Probabilities can also be computed for continuous variables if the distribution of that variable for the entire population is known.  For example, the probability that a random individual is greater than 71 inches tall can be calculated if the distribution of heights for all individuals in the population is known.  Of course, information about the population is typically difficult to know.  However, in many situations, a normal distribution may be used as a model of a population distribution.  For example, as shown in an example in \modref{chap:NormDist}, if it can be assumed that heights is $N(66,3)$, then the proportion of individuals in the population taller than 71 inches tall is \Sexpr{formatC(distrib(71,mean=66,sd=3,lower.tail=FALSE,plot=FALSE),format="f",digits=4)}.\footnote{This value is computed with \R{distrib(71,mean=66,sd=3,lower.tail=FALSE)}.}  This result can be considered a probability because the proportion of all individuals of interest in the entire population was found and the individual was randomly selected.
+
+\warn{The calculations from the normal distribution made in \modref{chap:NormDist} are probability calculations as long as the individuals are randomly selected.}
+
+A theory that explains the distribution of statistics computed from all possible samples from a population will be developed in \modref{chap:SamplingDist}.  This distribution will be used to compute the probability of observing a particular range of statistics in a random sample of individuals.  This technique is the basis for making statistical inferences in Modules \ref{chap:HypothesisTests} and \ref{chap:ConfidenceRegions}.
+
+\begin{exsection}
+  \item \label{revex:ProbCoin} A coin purse contains 17 nickels and 15 dimes.  Use this to answer the questions below. \ansref{ans:ProbCoin}
+  \begin{Enumerate}
+    \item What is the probability of randomly selecting a nickel from this purse?
+    \item What is the probability of randomly selecting a dime from this purse?
+    \item What is the probability of randomly selecting a dime from this purse assuming that two nickels and three dimes have already been removed?
+  \end{Enumerate}
+
+  \item \label{revex:ProbGHouse} A very small green house contains 10 tomato, 12 pea, and 8 cauliflower plants.  Use this to answer the questions below. \ansref{ans:ProbGHouse}
+  \begin{Enumerate}
+    \item What is the probability of randomly selecting a tomato plant from this greenhouse?
+    \item What is the probability of randomly selecting a cauliflower plant from this greenhouse?
+    \item What is the probability of randomly selecting a pea plant from this greenhouse assuming that all tomato plants had died and were removed from the greenhouse?
+  \end{Enumerate}
+
+  \item \label{revex:ProbPine} \rhw{} Suppose that the length of all needles on a particularly large pine tree is known to be normally distributed with a mean of 75 mm and a standard deviation of 8 mm.  Use this to answer the questions below. \ansref{ans:ProbPine}
+  \begin{Enumerate}
+    \item What is the probability that a randomly selected needle is between 70 and 80 mm long?
+    \item What is the probability that a randomly selected needle is longer than 90 mm?
+    \item What is the probability that a randomly selected needle is less than 50 mm long?
+  \end{Enumerate}
+\end{exsection}

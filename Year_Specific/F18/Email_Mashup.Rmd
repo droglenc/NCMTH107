@@ -1,0 +1,35 @@
+---
+title: "Email Mashup"
+author: "Derek Ogle"
+date: "December 2, 2018"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(dplyr)
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/Year_Specific/F18")
+d <- readxl::read_excel("MTH107_F18_emails.xlsx") %>%
+  filter(Example=="yes") %>%
+  rename(sender=`From: (Name)`,body=Body) %>%
+  select(-Subject,-Example)
+
+nms <- unique(d$sender)
+
+d <- mutate(d,sender=plyr::mapvalues(sender,from=nms,
+                     to=paste0("Student #",1:length(nms))))
+d$body <- gsub("[\r\r]","",d$body)
+d$body <- gsub(" [\n]","\n",d$body)
+```
+
+```{r echo=FALSE}
+out <- NULL
+for (i in 1:nrow(d)) {
+  out <- paste(out,"---\n\n")
+  out <- paste(out,"From",d$sender[i],"\n\n")
+  out <- paste(out,d$body[i],"\n\n")
+}
+```
+
+`r out`

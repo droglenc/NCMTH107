@@ -1,0 +1,55 @@
+---
+title: "Exam 2 Analysis"
+output: pdf_document
+---
+
+```{r echo=FALSE, message=FALSE, results='hide'}
+library(NCStats)
+library(readxl)
+library(dplyr)
+library(knitr)
+source("../../../rhelpers/knitr_setup.R")
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/Year_Specific/F17")
+d1 <- read_excel("MTH107_Grades_F17.xlsx",sheet="MT2",skip=2) %>%
+  filterD(Total>0)
+str(d1)
+d2 <- read_excel("MTH107_Grades_F17.xlsx",sheet="Overall",skip=2) %>%
+  filterD(Curr==1,MT2>0)
+str(d2)
+```
+
+----
+
+# Overall Score
+
+```{r echo=FALSE, fig.width=5, fig.height=4, par1=TRUE}
+hist(~Perc,data=d1,xlab="Proportional Score",w=0.05,ylim=c(0,9))
+abline(v=c(0.6,0.7,0.8,0.9),lwd=2,col="red",lty=2)
+text(c(0.5,0.65,0.75,0.85,0.95),8.75,c("F","D","C","B","A"))
+Summarize(~Perc,data=d1,digits=2)
+```
+
+----
+
+# Relationship with Overall Score and Quiz/HW/MT1 Scores
+
+```{r echo=FALSE, fig.width=3, fig.height=3, par1=TRUE}
+plot(MT2~Quiz,data=d2,ylab="Second Exam Score",xlab="Quiz Scores Prior to Second Exam",pch=16,col=col2rgbt("black",0.75))
+plot(MT2~HW,data=d2,ylab="Second Exam Score",xlab="Homework Scores Prior to Second Exam",pch=16,col=col2rgbt("black",0.75))
+plot(MT2~MT1,data=d2,ylab="Second Exam Score",xlab="First Exam Score",pch=16,col=col2rgbt("black",0.75),xlim=c(0.1,1),ylim=c(0.1,1))
+abline(a=0,b=1,col="gray80",lwd=2)
+abline(a=-0.1,b=1,col="gray80",lwd=1,lty=2)
+plot(I(MT2-MT1)~MT1,data=d2,ylab="Second - First Exam Score",xlab="First Exam Score",pch=16,col=col2rgbt("black",0.75))
+abline(h=0,col="gray80",lwd=2)
+grid(nx=NA,ny=NULL,col="gray80")
+```
+
+----
+
+# Individual proportions
+
+```{r echo=FALSE}
+tmp <- select(d1,starts_with("p."))
+lapply(as.list(tmp),Summarize,digits=2)
+```
+
