@@ -102,11 +102,12 @@ distrib(0.9,df=49,type="q",lower.tail=FALSE,distrib="t")
 ```{r CFU1Calc, echo=FALSE, results='hide', fig.show='hide'}
 xbar <- 168.19; s <- 22.20; n <- 25
 se <- s/sqrt(n)
-t <- (xbar-178)/se
-df <- n-1
-pv <- 2*distrib(t,distrib="t",df=df)
-tstar <- distrib(0.975,type="q",distrib="t",df=df)
-ci <- xbar+c(-1,1)*tstar*se
+( t <- (xbar-178)/se )
+( df <- n-1 )
+( pv <- 2*distrib(t,distrib="t",df=df) )
+( tstar <- distrib(0.975,type="q",distrib="t",df=df) )
+( tstar <- c(-1,1)*tstar )
+( ci <- xbar+tstar*se )
 ```
 
 <ol>
@@ -116,11 +117,11 @@ ci <- xbar+c(-1,1)*tstar*se
 <li>An observational study without clear randomization of 25 water samples.</li>
 <li>The assumptions are met because (i) &sigma; is not known and (ii) n=25&ge;15 and the histogram (given in question) is not strongly skewed.</li>
 <li>x&#772;=`r xbar` CFU per 100 ml.</li>
-<li>t=`r formatC(t,format="f",digits=4)` with `r df` df.</li>
+<li>t=$\frac{168.19-178}{\frac{22.20}{\sqrt{25}}}$=`r formatC(t,format="f",digits=3)` with `r df` df.</li>
 <li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
 <li>Reject H<sub>0</sub> because the p-value<&alpha;.</li>
 <li>It appears that the mean CFU per ALL 100 ml of water sampled from this lake on this date is less than what the computer model predicted.</li>
-<li>One can be 95% confident that the mean CFU per ALL 100 ml of water sampled from this lake on this date is between `r formatC(ci[1],format="f",digits=0)` and  `r formatC(ci[2],format="f",digits=0)`.</li>
+<li>One can be 95% confident that the mean CFU per ALL 100 ml of water sampled from this lake on this date is between $168.19-2.064\frac{22.20}{\sqrt{25}}$=`r formatC(ci[1],format="f",digits=0)` and $168.19+2.064\frac{22.20}{\sqrt{25}}$=`r formatC(ci[2],format="f",digits=0)`, which further indicates that the mean CFU is less than 178.</li>
 </ol>
 
 R Appendix.
@@ -148,12 +149,12 @@ ph <- read.csv("https://github.com/droglenc/NCData/raw/master/pHlevels.csv")
 ```
 
 <ol>
-  <li> &alpha;=0.01.</li>
-  <li> H<sub>A</sub>:&mu;<5.6 and H<sub>O</sub>:&mu;=5.6, where &mu; is the mean pH for all rainwater collections at the Big Meadows Station in the Shenandoah National Park, VA.</li>
-  <li> A one-sample t-test is required because quantitative variable (pH) was measured on individuals from one group or population (all rainwater collections at Big Meadows Station), &sigma; is UNknown, and the population mean is being compared to a specific value in the hull hypothesis.</li>
-  <li> An observational study without obvious randomization was used.</li>
-  <li> The assumptions are met because &sigma; is unknown and m=`r formatC(ph.t$parameter+1,format="f",digits=0)`&ge;40. Thus, the sampling distribution of the test statistic should follow a t-distribution.</li>
-  <li> The statistic is x&#772;=`r formatC(ph.t$estimate,format="f",digits=3)` (`r tbls("pH",display="cite")`).</li>
+  <li>&alpha;=0.01.</li>
+  <li>H<sub>A</sub>:&mu;<5.6 and H<sub>0</sub>:&mu;=5.6, where &mu; is the mean pH for all rainwater collections at the Big Meadows Station in the Shenandoah National Park, VA.</li>
+  <li>A one-sample t-test is required because quantitative variable (pH) was measured on individuals from one group or population (all rainwater collections at Big Meadows Station), &sigma; is UNknown, and the population mean is being compared to a specific value in the hull hypothesis.</li>
+  <li>An observational study without obvious randomization was used.</li>
+  <li>The assumptions are met because &sigma; is unknown and m=`r formatC(ph.t$parameter+1,format="f",digits=0)`&ge;40. Thus, the sampling distribution of the test statistic should follow a t-distribution.</li>
+  <li>The statistic is x&#772;=`r formatC(ph.t$estimate,format="f",digits=3)` (`r tbls("pH",display="cite")`).</li>
 
 `r tbls("pH")`
 
@@ -161,11 +162,11 @@ ph <- read.csv("https://github.com/droglenc/NCData/raw/master/pHlevels.csv")
 kHtest(ph.t)
 ```
 
-  <li> The test statistic is t=`r formatC(ph.t$statistic,format="f",digits=3)` with `r formatC(ph.t$parameter,format="f",digits=0)` df (`r tbls("pH",display="cite")`).</li>
-  <li> The p-value is `r kPvalue(ph.t$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("pH",display="cite")`).</li>
-  <li> The H<sub>O</sub> is rejected because the p-value<&alpha;.</li>
-  <li> The mean pH appears to be significantly lower than 5.6 and, thus, indicates acid rain at this site.</li>
-  <li> A 99% upper confidence bound is required. Thus, one is 99% confident that the mean pH level is less than `r formatC(ph.t$conf.int[2],format="f",digits=2)` (`r tbls("pH",display="cite")`).</li>
+  <li>The test statistic is t=`r formatC(ph.t$statistic,format="f",digits=3)` with `r formatC(ph.t$parameter,format="f",digits=0)` df (`r tbls("pH",display="cite")`).</li>
+  <li>The p-value is `r kPvalue(ph.t$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("pH",display="cite")`).</li>
+  <li>The H<sub>0</sub> is rejected because the p-value<&alpha;.</li>
+  <li>The mean pH appears to be significantly lower than 5.6 and, thus, indicates acid rain at this site.</li>
+  <li>One is 99% confident that the mean pH level is less than `r formatC(ph.t$conf.int[2],format="f",digits=2)` (`r tbls("pH",display="cite")`), which further indicates acid rain at this site.</li>
 </ol>
 
 R Appendix.
@@ -177,68 +178,15 @@ ph <- read.csv("pHlevels.csv")
 
 ----
 
-## P-Value Calculations and Decisions II
-
-<ol>
-<li>Do Not Reject H<sub>0</sub> because p-value=`r formatC(distrib((858-880)/(92/sqrt(80)),df=79,distrib="t"),format="f",digits=4)`>&alpha;.</li>
-```{r echo=FALSE, par1a=TRUE}
-distrib((858-880)/(92/sqrt(80)),df=79,distrib="t")
-```
-
-<li>Do Not Reject H<sub>0</sub> because p-value=`r formatC(2*distrib((1730-1500)/(790/sqrt(40)),df=39,lower.tail=FALSE,distrib="t"),format="f",digits=4)`>&alpha;.</li>
-```{r echo=FALSE, par1a=TRUE}
-distrib((1730-1500)/(790/sqrt(40)),df=39,lower.tail=FALSE,distrib="t")
-```
-</ol>
-
-----
-
-## Confidence Interval Calculations II
-
-<ol>
-<li>See below.</li>
-<ol type="a">
-<li>C=0.99</li>
-<li>Upper bound</li>
-```{r echo=FALSE, results='hide', fig.show='hide'}
-tstar <- distrib(0.99,df=79,type="q",distrib="t")
-ucb <- 858+tstar*92/sqrt(80)
-```
-<li>t*=`r formatC(tstar,format="f",digits=3)`.</li>
-```{r echo=FALSE, par1a=TRUE}
-distrib(0.99,df=79,type="q",distrib="t")
-```
-<li>`r formatC(ucb,format="f",digits=1)`.</li>
-<li>I am 99% confident that the true population mean is less than `r formatC(ucb,format="f",digits=1)`.</li>
-</ol>
-
-<li>See below.</li>
-<ol type="a">
-<li>C=0.95</li>
-<li>Interval</li>
-```{r echo=FALSE, results='hide', fig.show='hide'}
-tstar <- distrib(0.975,df=39,type="q",distrib="t")
-ci <- 1730+c(-1,1)*tstar*790/sqrt(40)
-```
-<li>t*=&plusmn;`r formatC(tstar,format="f",digits=3)`.</li>
-```{r echo=FALSE, par1a=TRUE}
-distrib(0.975,df=39,type="q",distrib="t")
-```
-<li>(`r formatC(ci[1],format="f",digits=1)`,`r formatC(ci[2],format="f",digits=1)`).</li>
-<li>I am 95% confident that the true population mean is between `r formatC(ci[1],format="f",digits=1)` and `r formatC(ci[2],format="f",digits=1)`.</li>
-</ol>
-</ol>
-
-----
-
 ## Increased Civility in Nation-States?
 ```{r KillingsCalc, echo=FALSE, results='hide', fig.show='hide'}
 xbar <- 3292.8; s <- 4814.5; n <- 75
-se <- s/sqrt(n)
-t <- (xbar-4104)/se
-df <- n-1
-pv <- distrib(t,distrib="t",df=df)
-ucb <- xbar+distrib(0.95,type="q",distrib="t",df=df)*se
+( se <- s/sqrt(n) )
+( t <- (xbar-4104)/se )
+( df <- n-1 )
+( pv <- distrib(t,distrib="t",df=df) )
+( tstar <- distrib(0.95,type="q",distrib="t",df=df) )
+( ucb <- xbar+tstar*se )
 ```
 
 <ol>
@@ -248,11 +196,11 @@ ucb <- xbar+distrib(0.95,type="q",distrib="t",df=df)*se
 <li>An observational study with clear randomization of 75 countries.</li>
 <li>The assumptions are met because (i) &sigma; is not known and (ii) n=75&ge;40.</li>
 <li>x&#772;=`r xbar` killings.</li>
-<li>t=`r formatC(t,format="f",digits=4)` with `r df` df.</li>
+<li>t=$\frac{3292.8-4104}{\frac{4814.5}{\sqrt{75}}}$=`r formatC(t,format="f",digits=3)` with `r df` df.</li>
 <li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
 <li>Do not reject H<sub>0</sub> because the p-value>&alpha;.</li>
-<li>It appears that the number of killings for recent times is NOT significanlty lower than it was as determined from 19th century history books.</li>
-<li>Strictly not needed, but one could say that they were 95% confident that the number of killings in recent years for ALL nation-states is less than `r formatC(ucb,format="f",digits=0)` (which contains the value in the H<sub>0</sub>).</li>
+<li>It appears that the mean number of killings for recent times is NOT significanlty lower than it was as determined from 19th century history books.</li>
+<li>One is 95% confident that the number of killings in recent years for ALL nation-states is less than $3292.8+1.666\frac{4814.5}{\sqrt{75}}$=`r formatC(ucb,format="f",digits=0)`, which further indicates that the mean number of killings is not less than 4104.</li>
 </ol>
 
 R Appendix.
@@ -263,24 +211,33 @@ R Appendix.
 ----
 
 ## Sea Level Rise Rate
+```{r SeaLevelCalc, echo=FALSE, results='hide', fig.show='hide'}
+xbar <- 0.059; s <- 0.135; n <- 23
+( se <- s/sqrt(n) )
+( t <- (xbar-0)/se )
+( df <- n-1 )
+( pv <- distrib(t,distrib="t",df=df,lower.tail=FALSE) )
+( tstar <- distrib(0.99,type="q",distrib="t",df=df,lower.tail=FALSE) )
+( lcb <- xbar+tstar*se )
+```
 
 <ol>
-  <li> &alpha;=0.01.</li>
-  <li> H<sub>A</sub>: &mu;>0 and H<sub>O</sub>:&mu;=0, where &mu; is the mean sea level rise rate for all ecosystems. [Note that a mean of 0 means no change.]</li>
-  <li> A one-sample t-test is required because a quantitative variable (sea level rise rate) was measured on individuals from one group or population (ecosystems), &sigma; is UNknown, and the population mean is being compared to a specific value in the null hypothsis.</li>
-  <li> An observational study without obvious randomization was used.</li>
-  <li> The assumptions are met because &sigma; is unknown, n=23&ge;15 and the background suggests that the distribution is not strongly skewed. Thus, the sampling distribution of the test statistic should follow a t-distribution.</li>
-  <li> The statistic is x&#772;=0.059.</li>
-  <li> The test statistic is  t=$\frac{0.059-0}{\frac{0.135}{\sqrt{23}}}$ = 2.107 with 23-1=22 df.</li>
-  <li> The p-value is `r kPvalue(distrib(2.107,distrib="t",df=22,lower.tail=FALSE,plot=FALSE),include.p=FALSE,latex=FALSE)`.</li>
-  <li> The H<sub>O</sub> is not rejected because the p-value>&alpha;.</li>
-  <li> The mean sea level rise rate does not appear to be greater than 0, indicating that the sea level has not increased significantly over the period of study.</li>
+  <li>&alpha;=0.01.</li>
+  <li>H<sub>A</sub>: &mu;>0 and H<sub>0</sub>:&mu;=0, where &mu; is the mean sea level rise rate for all ecosystems. [Note that a mean of 0 means no change.]</li>
+  <li>A one-sample t-test is required because a quantitative variable (sea level rise rate) was measured on individuals from one group or population (ecosystems), &sigma; is UNknown, and the population mean is being compared to a specific value in the null hypothsis.</li>
+  <li>An observational study without obvious randomization was used.</li>
+  <li>The assumptions are met because &sigma; is unknown, n=23&ge;15 and the background suggests that the distribution is not strongly skewed. Thus, the sampling distribution of the test statistic should follow a t-distribution.</li>
+  <li>The statistic is x&#772;=0.059.</li>
+  <li>t=$\frac{0.059-0}{\frac{0.135}{\sqrt{23}}}$=`r formatC(t,format="f",digits=3)` with `r df` df.</li>
+  <li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
+  <li>The H<sub>0</sub> is not rejected because the p-value>&alpha;.</li>
+  <li>The mean sea level rise rate does not appear to be greater than 0, indicating that the sea level has not increased significantly over the period of study.</li>
+  <li>One is 95% confident that the mean sea level rise rate is greater than $0.059-2.508\frac{0.135}{\sqrt{23}}$=`r formatC(lcb,format="f",digits=3)`, which further indicates that the mean rise rate is not greater than 0 and the sea level has not risen significantly over the study period.</li>
 </ol>
 
 R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
-library(NCStats)
-( distrib(2.107,distrib="t",df=22,lower.tail=FALSE) )
+<<SeaLevelCalc>>
 ```
 
 ----
@@ -356,5 +313,59 @@ R Appendix
 <<CFU2Calc>>
 <<CFU2Hist>>
 ```
+
+----
+
+## P-Value Calculations and Decisions II
+
+<ol>
+<li>Do Not Reject H<sub>0</sub> because p-value=`r formatC(distrib((858-880)/(92/sqrt(80)),df=79,distrib="t"),format="f",digits=4)`>&alpha;.</li>
+```{r echo=FALSE, par1a=TRUE}
+distrib((858-880)/(92/sqrt(80)),df=79,distrib="t")
+```
+
+<li>Do Not Reject H<sub>0</sub> because p-value=`r formatC(2*distrib((1730-1500)/(790/sqrt(40)),df=39,lower.tail=FALSE,distrib="t"),format="f",digits=4)`>&alpha;.</li>
+```{r echo=FALSE, par1a=TRUE}
+distrib((1730-1500)/(790/sqrt(40)),df=39,lower.tail=FALSE,distrib="t")
+```
+</ol>
+
+----
+
+## Confidence Interval Calculations II
+
+<ol>
+<li>See below.</li>
+<ol type="a">
+<li>C=0.99</li>
+<li>Upper bound</li>
+```{r echo=FALSE, results='hide', fig.show='hide'}
+tstar <- distrib(0.99,df=79,type="q",distrib="t")
+ucb <- 858+tstar*92/sqrt(80)
+```
+<li>t*=`r formatC(tstar,format="f",digits=3)`.</li>
+```{r echo=FALSE, par1a=TRUE}
+distrib(0.99,df=79,type="q",distrib="t")
+```
+<li>`r formatC(ucb,format="f",digits=1)`.</li>
+<li>I am 99% confident that the true population mean is less than `r formatC(ucb,format="f",digits=1)`.</li>
+</ol>
+
+<li>See below.</li>
+<ol type="a">
+<li>C=0.95</li>
+<li>Interval</li>
+```{r echo=FALSE, results='hide', fig.show='hide'}
+tstar <- distrib(0.975,df=39,type="q",distrib="t")
+ci <- 1730+c(-1,1)*tstar*790/sqrt(40)
+```
+<li>t*=&plusmn;`r formatC(tstar,format="f",digits=3)`.</li>
+```{r echo=FALSE, par1a=TRUE}
+distrib(0.975,df=39,type="q",distrib="t")
+```
+<li>(`r formatC(ci[1],format="f",digits=1)`,`r formatC(ci[2],format="f",digits=1)`).</li>
+<li>I am 95% confident that the true population mean is between `r formatC(ci[1],format="f",digits=1)` and `r formatC(ci[2],format="f",digits=1)`.</li>
+</ol>
+</ol>
 
 ----

@@ -58,7 +58,7 @@ gofCI(w.chi,digits=3,conf.level=0.99)
 
 <ol>
 <li>&alpha;=0.01.</li>
-<li>H<sub>A</sub>: "There is a preference among the water choices (i.e., the distribution of students will NOT follow a theoretical distribution of equal proportions among the water choices)" and H<sub>O</sub>: "There is no preference among the water choices (i.e., the distribution of students will follow a theoretical distribution of equal proportions among the water choices)".</li>
+<li>H<sub>A</sub>: "There is a preference among the water choices (i.e., the distribution of students will NOT follow a theoretical distribution of equal proportions among the water choices)" and H<sub>0</sub>: "There is no preference among the water choices (i.e., the distribution of students will follow a theoretical distribution of equal proportions among the water choices)".</li>
 <li>Goodness-of-fit test because (i) one group or population (students) were sampled and (ii) the response variable (water choice) is categorial.</li>
 <li>This is quasi-experimental as the students were given a choice of only certain waters. The students were not obviously randomly selected (and were likely part of a voluntary response survey).</li>
 <li>All cells in the expected frequency table (`r tbls("WaterExpTable",display="cite")`) were greater than 5; the assumptions for a goodness-of-fit test have been met.</li>
@@ -117,7 +117,7 @@ gofCI(t.chi,digits=3)
 
 <ol>
 <li>&alpha;=0.05.</li>
-<li>H<sub>A</sub>: "There is a preference by the turkeys for habitat (i.e., the distribution of turkeys will NOT follow the distribution of available habitats)" and H<sub>O</sub>: "There is NOT a preference by the turkeys for habitat (i.e., the distribution of turkeys will follow the distribution of available habitats)".</li>
+<li>H<sub>A</sub>: "There is a preference by the turkeys for habitat (i.e., the distribution of turkeys will NOT follow the distribution of available habitats)" and H<sub>0</sub>: "There is NOT a preference by the turkeys for habitat (i.e., the distribution of turkeys will follow the distribution of available habitats)".</li>
 <li>Goodness-of-fit test because (i) one group or population (South Dakota turkeys) were sampled and (ii) the response variable (habitat use) is categorical.</li>
 <li>This is observational as habitat use by the turkeys was simply recorded. The turkey observations were not randomly selected (the researchers likely chose days to sample).</li>
 <li>All cells in the expected frequency table (`r tbls("TurkeyExpTable",display="cite")`) were greater than 5; the assumptions for a goodness-of-fit test have been met.</li>
@@ -178,7 +178,7 @@ gofCI(j.chi,digits=3)
 
 <ol>
 <li>&alpha;=0.10.</li>
-<li>H<sub>A</sub>: "The age distribution of the actual jury is not the same as the age distribution in the district as a whole" and H<sub>O</sub>: "The age distribution of the actual jury is the same as the age distribution in the district as a whole".</li>
+<li>H<sub>A</sub>: "The age distribution of the actual jury is not the same as the age distribution in the district as a whole" and H<sub>0</sub>: "The age distribution of the actual jury is the same as the age distribution in the district as a whole".</li>
 <li>Goodness-of-fit test because (i) one group or population (the jury in this district) were sampled and (ii) the response variable (age category) is categorial.</li>
 <li>This is observational as the jurors were not allocated to ages. In theory the jury was randomly selected from the district, but that is what is being tested.</li>
 <li>All cells in the expected frequency table (`r tbls("JuryExpTable",display="cite")`) were greater than 5; the assumptions for a goodness-of-fit test have been met.</li>
@@ -228,7 +228,7 @@ R Appendix.
 ## Bear Habitat Use
 <ol>
   <li>&alpha; =0.10.</li>
-  <li>H<sub>O</sub>:"The proportion of habitats used by the bear is the same as the proportions of available habitat" versus H<sub>A</sub>:"The proportion of habitats used by the bear is the same as the proportions of available habitat."</li>
+  <li>H<sub>0</sub>:"The proportion of habitats used by the bear is the same as the proportions of available habitat" versus H<sub>A</sub>:"The proportion of habitats used by the bear is the same as the proportions of available habitat."</li>
   <li>A goodness-of-fit test is required because a single categorical variable (habitat use) from a single group or population (this bear) was measured and the proportions are being compared to a theoretical distribution in the null hypothesis.</li>
   <li>This is an observational study with randomly selected times for observation.</li>
   <li>The expected number of observations in each habitat is in proportion to the GIS analysis of habitat availability. Thus, the expected number in each habitat is shown in `r tbls("bear",display="cite")` (along with the observed frequencies). Note that these percentages did not need to be adjusted to the number of observations because 100 observations were made. The test statistic computed below should reasonably follow a chi-square distribution because all of the expected values are greater than five.</li>
@@ -247,7 +247,7 @@ Mixed Upland     | 10 | 12
   <li>The table of observed frequencies is shown in `r tbls("bear",display="cite")`.</li>
   <li>The &chi;<sup>2</sup> test statistic is $\frac{(47-34)^{2}}{34}$ + $\frac{(12-17)^{2}}{17}$ + $\frac{(10-12)^{2}}{12}$ + $\frac{(21-25)^{2}}{25}$  + $\frac{(10-12)^{2}}{12}$ = 4.971 + 1.471 + 0.333 + 0.640 + 0.333 = 7.7478 with 5-1=4 df.</li>
   <li>The p-value is `r kPvalue(distrib(7.7478,distrib="chisq",df=4,lower.tail=FALSE,plot=FALSE),include.p=FALSE,latex=FALSE)`.</li>
-  <li>The H<sub>O</sub> is not rejected because the p-value>&alpha;.</li>
+  <li>The H<sub>0</sub> is not rejected because the p-value>&alpha;.</li>
   <li>The bear appears to use the habitats in proportion to the availability of the habitat.</li>
 </ol>
 
@@ -268,7 +268,7 @@ exp <- c(consumed=0.33,not.consumed=1-0.33)
 
 <ol>
   <li>&alpha; =0.05.</li>
-  <li>H<sub>O</sub>:"The proportion of ginseng plants consumed by deer is 0.33" versus H<sub>A</sub>:"The proportion of ginseng plants consumed by deer is NOT 0.33".</li>
+  <li>H<sub>0</sub>:"The proportion of ginseng plants consumed by deer is 0.33" versus H<sub>A</sub>:"The proportion of ginseng plants consumed by deer is NOT 0.33".</li>
   <li>A goodness-of-fit test is required because a categorical variable (consumed or not) from a single group or population was recorded and the frequency of responses is being compared to a theoretical distribution in the null hypothesis.</li>
   <li>An observational study with randomly selected plants was used.</li>
   <li>The expected number of consumed plants is 73&times;0.33=`r formatC(gin.chi$expected[1],format="f",digits=2)`. The expected number of plants not consumed by deer is 73&times;(1-0.33)=`r formatC(gin.chi$expected[2],format="f",digits=2)`. the test statistic computed below should reasonably follow a chi-square distribution because both of these expected values is greater than five.</li>
@@ -291,7 +291,7 @@ kHtest(gin.chi)
 ```
 
   <li>The p-value is `r kPvalue(gin.chi$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("ginseng2",display="cite")`).</li>
-  <li>The H<sub>O</sub> is rejected because the p-value<&alpha;.</li>
+  <li>The H<sub>0</sub> is rejected because the p-value<&alpha;.</li>
   <li>It appears that more than 33% of the ginseng plants at this site and year were consumed by deer.</li>
   <li>One is 95% confident that the proportion of ginseng plants consumed by deer is between `r formatC(gin.p["consumed","p.LCI"],format="f",digits=3)` and `r formatC(gin.p["consumed","p.UCI"],format="f",digits=3)`.</li>
 </ol>
@@ -316,7 +316,7 @@ exp <- rep(69/7,7)
 
 <ol>
   <li>&alpha; =0.05.</li>
-  <li>H<sub>O</sub>:"The proportion of road rage incidents is the same on each day of the week" versus H<sub>A</sub>:"The proportion of road rage incidents is NOT the same on each day of the week".</li>
+  <li>H<sub>0</sub>:"The proportion of road rage incidents is the same on each day of the week" versus H<sub>A</sub>:"The proportion of road rage incidents is NOT the same on each day of the week".</li>
   <li>A goodness-of-fit test is required because a categorical response variable with seven levels (days of the week) from a single group or population was recorded and the frequency of responses is being compared to a theoretical distribution in the null hypothesis.</li>
   <li>This is an observational study without obvious randomization.</li>
   <li> The expected number of road rage incidents on each day is $\frac{69}{7}$ = `r formatC(69/7,format="f",digits=1)` which are all greater than five. Thus, the test statistic computed below should reasonably follow a chi-square distribution.</li>
@@ -337,7 +337,7 @@ kHtest(rr.chi)
 ```
 
   <li>The p-value is `r kPvalue(rr.chi$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("roadrage2",display="cite")`).</li>
-  <li>The H<sub>O</sub> is rejected because the p-value<&alpha;.</li>
+  <li>The H<sub>0</sub> is rejected because the p-value<&alpha;.</li>
   <li>It appears that the proportion of incidences of road rage differs among the days of the week.</li>
   <li>An examination of the confidence interval results (`r tbls("roadrage3",display="cite")`) suggests that there are more incidences of road rage on Fridays and possibly fewer on Mondays than would be expected.</li>
 

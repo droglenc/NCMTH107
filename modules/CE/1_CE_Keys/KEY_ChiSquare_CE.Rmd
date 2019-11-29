@@ -71,8 +71,8 @@ colnames(obs) <- c("Cat 1&2","Cat 3","Cat 4&5")
 
 <ol>
   <li>&alpha;=0.10.</li>
-  <li>H<sub>O</sub>: "The distribution of hurricantes into the strength categories is the same for both time periods" versus H<sub>A</sub>: "The distribution of hurricantes into the strength categories is NOT the same for both time periods"</li>
-  <li>A chi-square test is required because a categorical response variable with three levels (strength category) from two groups or populations (time periods) was recorded.</li>
+  <li>H<sub>0</sub>: "The distribution of hurricanes into the strength categories is the same for both time periods" versus H<sub>A</sub>: "The distribution of hurricanes into the strength categories is NOT the same for both time periods"</li>
+  <li>A chi-square test is required because (i) a categorical response variable with three levels (strength category) from (ii) two groups or populations (time periods) was recorded.</li>
   <li>This is an observational study without obvious randomization.</li>
   <li>The test statistic computed below should reasonably follow a chi-square distribution because all cells in the expected table (`r tbls("hurr1",display="cite")`) have values greater than five.</li>
 
@@ -92,7 +92,7 @@ hurr.chi$observed
 
   <li>The &chi;<sup>2</sup> test statistic is `r formatC(hurr.chi$statistic,format="f",digits=4)` with `r formatC(hurr.chi$parameter,format="f",digits=0)` df (`r tbls("hurr3",display="cite")`).</li>
   <li>The p-value is `r kPvalue(hurr.chi$p.value,include.p=FALSE,latex=FALSE)`.</li>
-  <li>The H<sub>O</sub> is rejected because the p-value<&alpha;.</li>
+  <li>The H<sub>0</sub> is rejected because the p-value<&alpha;.</li>
   <li>It appears that the distribution of hurricanes into the strength categories is the same for both time periods (`r tbls("hurr4",display="cite")`).</li>
 
 `r tbls("hurr4")`
@@ -101,6 +101,7 @@ hurr.chi$observed
 percTable(obs,margin=1,digits=1)
 ```
 
+  <li>Not required for a chi-square test.</li>
 </ol>
 
 R Appendix.
@@ -124,7 +125,7 @@ percTable(obs,margin=1,digits=1)
 
 <ol>
 <li>&alpha;=0.05.</li>
-<li>H<sub>A</sub>: "The distribution of students into the goals categories differs among grades" and H<sub>O</sub>: "The distribution of students into the goals categories DOES NOT differ among grades".</li>
+<li>H<sub>A</sub>: "The distribution of students into the goals categories differs among grades" and H<sub>0</sub>: "The distribution of students into the goals categories DOES NOT differ among grades".</li>
 <li>Chi-square test because (i) the response variable (goals category) is categorial and (ii) two or more groups or populations (grades) were sampled.</li>
 <li>This is an observational study because the students were not allocated to grades. The students were not obviously randomly selected (and were likely part of a voluntary response survey).</li>
 <li>All cells in the expected frequency table (`r tbls("PopExpTable",display="cite")`) were greater than 5; the assumptions for a chi-square test have been met.</li>
@@ -184,7 +185,7 @@ percTable(obs,margin=1,digits=1)
 
 <ol>
 <li>&alpha;=0.01.</li>
-<li>H<sub>A</sub>: "The distribution of respondents into the levels of agreements differs between political party affiliations" and H<sub>O</sub>: "The distribution of respondents into the levels of agreements does not differ between political party affiliations".</li>
+<li>H<sub>A</sub>: "The distribution of respondents into the levels of agreements differs between political party affiliations" and H<sub>0</sub>: "The distribution of respondents into the levels of agreements does not differ between political party affiliations".</li>
 <li>Chi-square test because (i) the response variable (levels of agreement) is categorial and (ii) two or more groups or populations (political party affiliation) were sampled.</li>
 <li>This is an observational study because the respondents were not allocated to political party affiliations. The respondents were not obviously randomly selected (and were likely part of a voluntary response survey).</li>
 <li>All cells in the expected frequency table (`r tbls("EdmExpTable",display="cite")`) were greater than 5; the assumptions for a chi-square test have been met.</li>
@@ -241,8 +242,8 @@ colnames(obs) <- c("White","Black","Hispanic","Other")
 
 <ol>
   <li>&alpha;=0.01.</li>
-  <li>H<sub>O</sub>: "The distribution of people in the race categories is the same for males and females" versus H<sub>A</sub>: "The distribution of people in the race categories is NOT the same for males and females."</li>
-  <li>A chi-square test is required because a categorical response variable with four levels (race/ethnicity) from two groups or populations (sex) was recorded.</li>
+  <li>H<sub>0</sub>: "The distribution of people in the race categories is the same for males and females" versus H<sub>A</sub>: "The distribution of people in the race categories is NOT the same for males and females."</li>
+  <li>A chi-square test is required because (i) a categorical response variable with four levels (race/ethnicity) from (ii) two groups or populations (sex) was recorded.</li>
   <li>This is an observational study without obvious randomization.</li>
   <li>The test statistic computed below should reasonably follow a chi-square distribution because all cells in the expected table (`r tbls("aids1",display="cite")`) have values greater than five.</li>
 
@@ -262,7 +263,7 @@ aids.chi$observed
 
   <li>The &chi;<sup>2</sup> test statistic is `r formatC(aids.chi$statistic,format="f",digits=1)` with `r formatC(aids.chi$parameter,format="f",digits=0)` df (`r tbls("aids3",display="cite")`).</li>
   <li>The p-value is `r kPvalue(aids.chi$p.value,include.p=FALSE,latex=FALSE)`. [*R suggests that the p-value is zero, but it cannot be zero and is just much smaller than the computer can show.*]</li>
-  <li>The H<sub>O</sub> is rejected because the p-value<&alpha;.</li>
+  <li>The H<sub>0</sub> is rejected because the p-value<&alpha;.</li>
   <li>It appears that the distribution of the individuals into the races/ethnicities differs between the sexes. An analysis of the row percentages table (`r tbls("aids4",display="cite")`) shows that there are many more white males and black females than would be expected.</li>
 
 `r tbls("aids4")`
@@ -271,6 +272,7 @@ aids.chi$observed
 percTable(obs,margin=1,digits=1)
 ```
 
+  <li>Not required for a chi-square test.</li>
 </ol>
 
 R Appendix.
@@ -295,7 +297,7 @@ percTable(obs,margin=1,digits=1)
 
 <ol>
 <li>&alpha;=0.05.</li>
-<li>H<sub>A</sub>: "The distribution of stands into the times since last fire differs among stand types" and H<sub>O</sub>: "The distribution of stands into the times since last fire DOES NOT differ among stand types".</li>
+<li>H<sub>A</sub>: "The distribution of stands into the times since last fire differs among stand types" and H<sub>0</sub>: "The distribution of stands into the times since last fire DOES NOT differ among stand types".</li>
 <li>Chi-square test because (i) the response variable (time since last fire) is categorial (in the way it was recorded) and (ii) two or more groups or populations (stand types) were sampled.</li>
 <li>This is an observational study because the stand type was not set or manipulated by the researcher. The stands were not obviously randomly selected.</li>
 <li>All cells in the expected frequency table (`r tbls("ForestExpTable",display="cite")`) were NOT greater than 5. The p-value calculation below is suspect.</li>
