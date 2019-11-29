@@ -8,6 +8,11 @@ css: "/css/modules.css"
 
 ----
 
+<div class="alert alert-success">For all "hypothesis testing" questions, make sure to provide explicit answers with your work shown for all <a href="../11-steps">11 steps of a hypothesis test</a>.
+</div>
+
+----
+
 ## Diet and Weight Gain
 <img src="zimgs/taking-weight.jpg" alt="Cancer Cells" class="img-right">
 Suppose that 1500 women followed a popular diet for a month.  A random sample of 35 of these women was taken and the results for weight gained are shown below.
@@ -16,7 +21,7 @@ Suppose that 1500 women followed a popular diet for a month.  A random sample of
  n   mean    sd    min    Q1  median     Q3    max
 35    6.7   7.3   -2.8   0.7     4.2   10.5   17.2 </code></pre>
 
-Assuming that the standard deviation for all 1500 women was 7.1, test, at the 5% level, that the average weight gain per woman for the month was over 5 pounds.  Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../11-steps).
+Assuming that the standard deviation for all 1500 women was 7.1, test, at the 5% level, that the average weight gain per woman for the month was over 5 pounds.
 
 ----
 

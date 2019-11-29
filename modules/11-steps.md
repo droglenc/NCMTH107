@@ -17,7 +17,7 @@ css: /css/modules.css
 1. Compute a 100(1-&alpha;)% confidence region for  parameter
 
 [Video description of these steps](https://vimeo.com/user45324800/hotest-11steps).
-
+ 
 ----
 
 All hypothesis tests follow the same basic structure.  However, other resources may label the steps somewhat differently.  Below are examples from other resources.
