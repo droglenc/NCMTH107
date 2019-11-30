@@ -87,7 +87,7 @@ When assessing whether anything “concerns” you about the regression then you
 <li>The predicted mean air temperature for an altitude lapse rate of 4000 <sup>o</sup>C/km is 6.19<sup>o</sup>C.</li>
 <li>The residual for an observed mean air temperature of 0<sup>o</sup>C and altitude lapse rate of 3500<sup>o</sup>C/km is -9.14<sup>o</sup>C.</li>
 <li>The correlation coefficient between mean air temperature and altitude lapse rate is 0.961.</li>
-<li>I would expect the mean air temperature to decrease by 1000 slopes or 5.900 mm, on average, if the altitude lapse rate increased by 10000<sup>o</sup>C/km.</li>
+<li>I would expect the mean air temperature to decrease by 1000 slopes or 5.900 mm, on average, if the altitude lapse rate increased by 1000<sup>o</sup>C/km.</li>
 <li>This prediction should not be computed, because 1000<sup>o</sup>C/km of altitude lapse rate is outside of the domain of the data used to define the relationship (i.e., this is an extrapolation).</li>
 <li>The proportion of variability in mean air temperature that is explained by knowing the altitude lapse rate is 0.923.</li>
 <li>I have no concerns as the relationship between mean air temperature and altitude lapse rate appears to be linear and homoscedastic.</li>
@@ -136,8 +136,7 @@ fitPlot(lm1,pch=21,bg=&quot;gray70&quot;,xlab=&quot;Percentage of Impervious Sur
 <p><img src="KEY_LinearRegression_CE_files/figure-html/VisionFitPlot-1.png" width="336" /></p>
 <p>Figure 2: Fitted line plot for the relationship between maximum distance to see a sign and the age of a driver.</p>
 <p>R Appendix</p>
-<pre class="r"><code>library(NCStats)
-setwd(&#39;C:/aaaWork/Books/IntroStats/HW/&#39;)
+<pre class="r"><code>setwd(&#39;C:/aaaWork/Books/IntroStats/HW/&#39;)
 d &lt;- read.csv(&quot;vision.csv&quot;)
 ( lm1 &lt;- lm(distance~age,data=d) )
 predict(lm1,data.frame(age=40))
@@ -185,8 +184,7 @@ fitPlot(lm1,pch=21,bg=&quot;gray70&quot;,
 <p><img src="KEY_LinearRegression_CE_files/figure-html/FishingFitPlot-1.png" width="336" /></p>
 <p>Figure 3: Fitted line plot for the relationship between fishing pressure and number of counted cars on Wyoming resrvoirs.</p>
 <p>R Appendix</p>
-<pre class="r"><code>library(NCStats)
-setwd(&#39;C:/aaaWork/Books/IntroStats/HW/&#39;)
+<pre class="r"><code>setwd(&#39;C:/aaaWork/Books/IntroStats/HW/&#39;)
 d &lt;- read.csv(&quot;AlcovaRes.csv&quot;)
 wd &lt;- filterD(d,day.type==&quot;wday&quot;)
 ( lm1 &lt;- lm(pressure~index,data=wd) )
