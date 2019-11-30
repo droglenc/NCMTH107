@@ -68,6 +68,7 @@ collecting, organizing, and interpreting numerical information or data.</dd>
   </div>
 </div>
 
+---
 
 ## R Definitions
 The following definitions are related to R.
