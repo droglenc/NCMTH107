@@ -155,7 +155,7 @@ Note that your highest quiz score will count for more and your lowest quiz score
 #### Quiz Corrections and Reflections
 For each quiz, you may complete an OPTIONAL two-part correction/reflection to earn bonus points to add to your earned grade. For the **first** part, complete a correction for each question that you missed, along with *a specific resource that supports your answer* (e.g., a specific page in the reading, a specific video, a specific exercise). You will not receive credit for simply correcting your answer, for providing another incorrect answer, or not providing the resource. You must address every question you missed to receive full credit for this portion.
 
-    **Second**, write at least 300 words (one double-spaced page) of *thoughtful* reflections to the following items about the quiz
+**Second**, write at least 300 words (one double-spaced page) of *thoughtful* reflections to the following items about the quiz
     * what you did well on the quiz (and why),
     * what you did poorly on the quiz (and why),
     * what you did to prepare for the quiz (be specific ... did you read your notes, read the module readings, watch videos, redo class exercises, do review exercises, etc.)
@@ -165,9 +165,9 @@ For each quiz, you may complete an OPTIONAL two-part correction/reflection to ea
     * was the quiz as you expected (why or why not), and
     * any other comments or suggestions about the quiz.
 
-    Your corrections and reflection *must be typed* (though you can leave space to show your work "by hand" for calculations), easy to read (e.g., neatly organize your corrections by question number), and *must include the original quiz*.
+Your corrections and reflection *must be typed* (though you can leave space to show your work "by hand" for calculations), easy to read (e.g., neatly organize your corrections by question number), and *must include the original quiz*.
     
-    A perfect exam correction and reflection will add the lesser of 12% or the amount it would take for your exam score to be 95%, with two-thirds of the overall grade from the correction (first) portion. Corrections and reflections will be due as announced in class and shown on the [dates](Dates-Current){:target="_blank"} page. **Late corrections and reflections will not be accepted**.
+A perfect exam correction and reflection will add the lesser of 12% or the amount it would take for your exam score to be 95%, with two-thirds of the overall grade from the correction (first) portion. Corrections and reflections will be due as announced in class and shown on the [dates](Dates-Current){:target="_blank"} page. **Late corrections and reflections will not be accepted**.
 
 ### Overall Grade
 An overall score will be computed from the items and associated weights listed in the table below (and described above). To compute your current grade, enter your percentage scores in the boxes for completed assessments. Enter your highest quiz score as the first quiz and your lowest quiz score as the last quiz. To project your future grade, also include percentages for future assessments.
@@ -215,7 +215,7 @@ Your letter grade will be assigned from your overall percentage (rounded to a wh
   <tr><td>D+ 67-69</td><td>D  60-66</td><td>F   0-59</td></tr>
 </table>
 
-**If you meet with me in my office before the end of the second week of classes**, your lowest four preparation check, homework, **AND** engagement grades will be excluded when computing your overall percentage.
+If you meet with me in my office **before the end of the second week of classes** AND **at least two other times in my office (i.e,. outside of class) with legitimate questions** then your lowest four preparation check, homework, **AND** engagement grades will be excluded when computing your overall percentage.
 
 #### Note About Incomplete Grades
 An incomplete grade will be given ONLY in extreme circumstances that are beyond your control, such as a major illness, and will ONLY be given if you have successfully completed the entire course except for the final exam. This is in accordance with [Northland College policy](https://my.northland.edu/student-policies/academic-policies/#grades){:target="_blank"} (scroll down to "Incomplete Grades").
