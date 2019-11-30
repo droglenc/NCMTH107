@@ -156,14 +156,15 @@ Note that your highest quiz score will count for more and your lowest quiz score
 For each quiz, you may complete an OPTIONAL two-part correction/reflection to earn bonus points to add to your earned grade. For the **first** part, complete a correction for each question that you missed, along with *a specific resource that supports your answer* (e.g., a specific page in the reading, a specific video, a specific exercise). You will not receive credit for simply correcting your answer, for providing another incorrect answer, or not providing the resource. You must address every question you missed to receive full credit for this portion.
 
 **Second**, write at least 300 words (one double-spaced page) of *thoughtful* reflections to the following items about the quiz
-    * what you did well on the quiz (and why),
-    * what you did poorly on the quiz (and why),
-    * what you did to prepare for the quiz (be specific ... did you read your notes, read the module readings, watch videos, redo class exercises, do review exercises, etc.)
-    * what you did to prepare for the quiz that was helpful,
-    * what did you do to prepare for the quiz that was not helpful,
-    * what you will change (if anything) in your preparation strategy for the next quiz,
-    * was the quiz as you expected (why or why not), and
-    * any other comments or suggestions about the quiz.
+
+* what you did well on the quiz (and why),
+* what you did poorly on the quiz (and why),
+* what you did to prepare for the quiz (be specific ... did you read your notes, read the module readings, watch videos, redo class exercises, do review exercises, etc.)
+* what you did to prepare for the quiz that was helpful,
+* what did you do to prepare for the quiz that was not helpful,
+* what you will change (if anything) in your preparation strategy for the next quiz,
+* was the quiz as you expected (why or why not), and
+* any other comments or suggestions about the quiz.
 
 Your corrections and reflection *must be typed* (though you can leave space to show your work "by hand" for calculations), easy to read (e.g., neatly organize your corrections by question number), and *must include the original quiz*.
     
