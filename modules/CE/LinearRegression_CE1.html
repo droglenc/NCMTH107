@@ -35,6 +35,25 @@ css: "/css/modules.css"
 <li>What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?</li>
 </ol>
 <hr />
+</div>
+<div id="everest-temperatures" class="section level2">
+<h2>Everest Temperatures</h2>
+<p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/MtEverest.jpg" alt="Mt. Everest" class="img-right"> Climatologists examined the relationship between actual mean air temperatures and an index that is designed to predict temperature adjusted for altitutde (called “altitude lapse rate”) for eleven locations at various elevations on Mount Everest during both the winter and monsoon seasons. The researchers wanted to determine if the altitude lapse rate could be used to predict actual air temperatures. The results of their analysis is shown in the scatterplot below.</p>
+<p><img src="LinearRegression_CE1_files/figure-html/unnamed-chunk-4-1.png" width="336" /></p>
+<p>Use these results to answer the questions below using <strong>only the monsoon results</strong>.</p>
+<ol>
+<li>In terms of the variables of this problem, what is the equation of the best-fit line?</li>
+<li>In terms of the variables of this problem, INTERPRET the value of the y-intercept?</li>
+<li>In terms of the variables of this problem, INTERPRET the value of the slope?</li>
+<li>What is the predicted mean air temperature if the altitude lapse rate is 4000 <sup>o</sup>C/km?</li>
+<li>What is the residual if the mean air temperature is 0<sup>o</sup>C and the altitude lapse rate is 3500<sup>o</sup>C/km?</li>
+<li>What is the correlation coefficient between mean air temperature and altitude lapse rate?</li>
+<li>How much would you expect the mean air temperature to change if the altitude lapse rate increased by 1000<sup>o</sup>C/km?</li>
+<li>What is the predicted mean air temperature if the altitude lapse rate is 1000 <sup>o</sup>C/km?</li>
+<li>What proportion of the variability in mean air temperature is explained by knowing the altitude lapse rate?</li>
+<li>What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?</li>
+</ol>
+<hr />
 <div class="text-center">
 <ul class="pagination pagination-lg">
 <li>
@@ -66,6 +85,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

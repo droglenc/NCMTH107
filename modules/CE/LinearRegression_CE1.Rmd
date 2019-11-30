@@ -65,6 +65,44 @@ Use these results to answer the questions below.
 
 ----
 
+## Everest Temperatures
+<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/MtEverest.jpg" alt="Mt. Everest" class="img-right">
+Climatologists examined the relationship between actual mean air temperatures and an index that is designed to predict temperature adjusted for altitutde (called "altitude lapse rate") for eleven locations at various elevations on Mount Everest during both the winter and monsoon seasons. The researchers wanted to determine if the altitude lapse rate could be used to predict actual air temperatures. The results of their analysis is shown in the scatterplot below.
+
+```{r echo=FALSE, par1=TRUE}
+d <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/EverestTemps.csv")
+lm1 <- lm(MeanAirTemp~Altitude*Season,data=d)
+lm1m <- lm(MeanAirTemp~Altitude,data=dplyr::filter(d,Season=="Monsoon"))
+lm1w <- lm(MeanAirTemp~Altitude,data=dplyr::filter(d,Season=="Winter"))
+FSA::fitPlot(lm1,pch=c(21,24),bg="gray70",legend=FALSE,
+             ylab="Mean Air Temperature (C)",xlab="Altitude Lapse Rate (C/km)")
+legend("topright",c("Monsoon",
+                    paste0("Y=",formatC(coef(lm1m)[1],format="f",digits=2),"+",
+                           formatC(coef(lm1m)[2],format="f",digits=4),"*X"),
+                    paste0("r^2=",formatC(FSA::rSquared(lm1m),format="f",digits=3))),
+       pch=c(21,NA,NA),lty=c(1,NA,NA),col="gray70",bty="n")
+legend("bottomleft",c("Winter",
+                      paste0("Y=",formatC(coef(lm1w)[1],format="f",digits=2),"+",
+                             formatC(coef(lm1w)[2],format="f",digits=4),"*X"),
+                      paste0("r^2=",formatC(FSA::rSquared(lm1w),format="f",digits=3))),
+       pch=c(24,NA,NA),lty=c(2,NA,NA),col="gray70",bty="n")
+```
+
+Use these results to answer the questions below using **only the monsoon results**.
+
+1. In terms of the variables of this problem, what is the equation of the best-fit line?
+1. In terms of the variables of this problem, INTERPRET the value of the y-intercept?
+1. In terms of the variables of this problem, INTERPRET the value of the slope?
+1. What is the predicted mean air temperature if the altitude lapse rate is 4000 <sup>o</sup>C/km?
+1. What is the residual if the mean air temperature is 0<sup>o</sup>C and the altitude lapse rate is 3500<sup>o</sup>C/km?
+1. What is the correlation coefficient between mean air temperature and altitude lapse rate?
+1. How much would you expect the mean air temperature to change if the altitude lapse rate increased by 1000<sup>o</sup>C/km?
+1. What is the predicted mean air temperature if the altitude lapse rate is 1000 <sup>o</sup>C/km?
+1. What proportion of the variability in mean air temperature is explained by knowing the altitude lapse rate?
+1. What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?
+
+----
+
 <div class="text-center">
 <ul class="pagination pagination-lg">
   <li><a href="../LinearRegression.html">^</a></li>
