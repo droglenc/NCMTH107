@@ -87,6 +87,27 @@ rsq <- 0.912
 
 ----
 
+
+## Everest Temperatures
+```{r echo=FALSE}
+m <- -0.0059
+b <- 29.79
+rsq <- 0.923
+```
+
+1. The equation of the best-fit line is AIRTEMP = `r b`+`r m`*ALTLAPSERATE
+1. If the altitude lapse rate is 0, then the mean air temperature is `r b`<sup>o</sup>C, on average.
+1. For each 1 degree increase in altitude lapse rate, the mean air temperature decreases by `r -1*m`<sup>o</sup>C, on average.
+1. The predicted mean air temperature for an altitude lapse rate of 4000 <sup>o</sup>C/km is `r formatC(b+m*4000,format="f",digits=2)`<sup>o</sup>C.
+1. The residual for an observed mean air temperature of 0<sup>o</sup>C and altitude lapse rate of 3500<sup>o</sup>C/km is `r formatC(0-(b+m*3500),format="f",digits=2)`<sup>o</sup>C.
+1. The correlation coefficient between mean air temperature and altitude lapse rate is `r formatC(sqrt(rsq),format="f",digits=3)`.
+1. I would expect the mean air temperature to decrease by 1000 slopes or `r formatC(-1000*m,format="f",digits=3)` mm, on average, if the altitude lapse rate increased by 10000<sup>o</sup>C/km.
+1. This prediction should not be computed, because 1000<sup>o</sup>C/km of altitude lapse rate is outside of the domain of the data used to define the relationship (i.e., this is an extrapolation).
+1. The proportion of variability in mean air temperature that is explained by knowing the altitude lapse rate is `r formatC(rsq,format="f",digits=3)`.
+1. I have no concerns as the relationship between mean air temperature and altitude lapse rate appears to be linear and homoscedastic.
+
+----
+
 ## Urban Runoff
 
 ```{r echo=FALSE}
