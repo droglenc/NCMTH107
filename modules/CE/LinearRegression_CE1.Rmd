@@ -80,12 +80,12 @@ legend("topright",c("Monsoon",
                     paste0("Y=",formatC(coef(lm1m)[1],format="f",digits=2),
                            formatC(coef(lm1m)[2],format="f",digits=4),"*X"),
                     paste0("r^2=",formatC(FSA::rSquared(lm1m),format="f",digits=3))),
-       pch=c(21,NA,NA),lty=c(1,NA,NA),col="gray70",bty="n",cex=0.8)
+       pch=c(21,NA,NA),lty=c(1,NA,NA),bg="gray70",bty="n",cex=0.8)
 legend("bottomleft",c("Winter",
                       paste0("Y=",formatC(coef(lm1w)[1],format="f",digits=2),
                              formatC(coef(lm1w)[2],format="f",digits=4),"*X"),
                       paste0("r^2=",formatC(FSA::rSquared(lm1w),format="f",digits=3))),
-       pch=c(24,NA,NA),lty=c(2,NA,NA),col="gray70",bty="n",cex=0.8)
+       pch=c(24,NA,NA),lty=c(2,NA,NA),bg="gray70",bty="n",cex=0.8)
 ```
 
 Use these results to answer the questions below using **only the monsoon results**.
