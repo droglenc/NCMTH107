@@ -77,12 +77,12 @@ lm1w <- lm(MeanAirTemp~Altitude,data=dplyr::filter(d,Season=="Winter"))
 FSA::fitPlot(lm1,pch=c(21,24),bg="gray70",legend=FALSE,
              ylab="Mean Air Temperature (C)",xlab="Altitude Lapse Rate (C/km)")
 legend("topright",c("Monsoon",
-                    paste0("Y=",formatC(coef(lm1m)[1],format="f",digits=2),"+",
+                    paste0("Y=",formatC(coef(lm1m)[1],format="f",digits=2),
                            formatC(coef(lm1m)[2],format="f",digits=4),"*X"),
                     paste0("r^2=",formatC(FSA::rSquared(lm1m),format="f",digits=3))),
        pch=c(21,NA,NA),lty=c(1,NA,NA),col="gray70",bty="n",cex=0.8)
 legend("bottomleft",c("Winter",
-                      paste0("Y=",formatC(coef(lm1w)[1],format="f",digits=2),"+",
+                      paste0("Y=",formatC(coef(lm1w)[1],format="f",digits=2),
                              formatC(coef(lm1w)[2],format="f",digits=4),"*X"),
                       paste0("r^2=",formatC(FSA::rSquared(lm1w),format="f",digits=3))),
        pch=c(24,NA,NA),lty=c(2,NA,NA),col="gray70",bty="n",cex=0.8)
