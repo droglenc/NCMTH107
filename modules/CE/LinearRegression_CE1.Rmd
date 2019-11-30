@@ -67,7 +67,7 @@ Use these results to answer the questions below.
 
 ## Everest Temperatures
 <img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/MtEverest.jpg" alt="Mt. Everest" class="img-right">
-Climatologists examined the relationship between actual mean air temperatures and an index that is designed to predict temperature adjusted for altitutde (called "altitude lapse rate") for eleven locations at various elevations on Mount Everest during both the winter and monsoon seasons. The researchers wanted to determine if the altitude lapse rate could be used to predict actual air temperatures. The results of their analysis is shown in the scatterplot below.
+Climatologists examined the relationship between actual mean air temperatures and an index designed to be related to air temperature adjusted for altitude (called "altitude lapse rate") for eleven locations at various elevations on Mount Everest during both the winter and monsoon seasons. The researchers wanted to determine if the altitude lapse rate could be used to predict actual air temperatures. The results of their analysis is shown in the scatterplot below.
 
 ```{r echo=FALSE, par1=TRUE}
 d <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/EverestTemps.csv")
@@ -80,12 +80,12 @@ legend("topright",c("Monsoon",
                     paste0("Y=",formatC(coef(lm1m)[1],format="f",digits=2),"+",
                            formatC(coef(lm1m)[2],format="f",digits=4),"*X"),
                     paste0("r^2=",formatC(FSA::rSquared(lm1m),format="f",digits=3))),
-       pch=c(21,NA,NA),lty=c(1,NA,NA),col="gray70",bty="n")
+       pch=c(21,NA,NA),lty=c(1,NA,NA),col="gray70",bty="n",cex=0.8)
 legend("bottomleft",c("Winter",
                       paste0("Y=",formatC(coef(lm1w)[1],format="f",digits=2),"+",
                              formatC(coef(lm1w)[2],format="f",digits=4),"*X"),
                       paste0("r^2=",formatC(FSA::rSquared(lm1w),format="f",digits=3))),
-       pch=c(24,NA,NA),lty=c(2,NA,NA),col="gray70",bty="n")
+       pch=c(24,NA,NA),lty=c(2,NA,NA),col="gray70",bty="n",cex=0.8)
 ```
 
 Use these results to answer the questions below using **only the monsoon results**.
