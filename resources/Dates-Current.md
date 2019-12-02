@@ -85,11 +85,11 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 
 <tr><td>M 2-Dec</td><td><span style="color:coral">NO CLASS (Snow Day)</span></td></tr>
 <tr><td>W 4-Dec</td><td><a href="../modules/FilteringDataInR">Filtering Data In R</a></td></tr>
-<tr><td>F 6-Dec</td><td>Course Review</td></tr>
+<tr><td>F 6-Dec</td><td>Course Review<br><span style="color:teal;font-weight:bold">DUE: Quiz 4 Reflection (Optional)</span></td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 9-Dec</td>
-    <td>Course Review<br><span style="color:teal;font-weight:bold">DUE: Quiz 4 Reflection (Optional)</span><br><span style="color:teal;font-weight:bold">DUE: XC Reports (optional)</span></td></tr>
+    <td>Course Review<br><span style="color:teal;font-weight:bold">DUE: XC Reports (optional)</span></td></tr>
 <tr><td>W 11-Dec</td><td>Course Review </td></tr>
 <tr><td>F 13-Dec</td>
     <td colspan="2"><span style="color:red;font-weight:bold">FINAL QUIZ</span></td></tr>
