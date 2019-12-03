@@ -40,9 +40,7 @@ What you learn in this <strong>Statistical Concepts and Analysis</strong> course
 ----
 
 ## Learning Outcomes
-
 <img class="img-right" src="../img/outcomes.jpg" alt="Outcomes">
-
 In this course, you will have the opportunity to:
 
 1. Describe why statistics is central to scientific inquiry (& your field of interest); 
@@ -65,7 +63,6 @@ This course fulfills that Quantitative Reasoning requirement in the [General Edu
 ----
 
 ## Assistance
-
 <img class="img-right" src="../img/help.jpg">
 Sources for out-of-class assistance and opportunities for in-class accommodations are described further below. Please use these throughout the semester as appropriate.[^help]
 
@@ -95,7 +92,6 @@ As you adjust to the rigors of college life, you may struggle a bit in your cour
 ----
 
 ## Grading
-
 <img class="img-right" src="../img/grading.jpg">
 An overall grade will be computed from the items described below and in the <a href="#overall-grade">Overall Grade section</a> further below.
 
@@ -103,7 +99,6 @@ An overall grade will be computed from the items described below and in the <a h
 You should prepare for each class period with the module reading and videos indicated on the [Dates page](Dates-Current){:target="_blank"} and announced at the end of the previous class period. A preparation guide is provided for each module to help you identify key concepts in the reading and videos ([here's an example](../modules/FoundationalDefns_Prep.html){:target="_blank"}). You should prepare your own **hand-written**[^1] notes for each item on the preparation guide. A "preparation check," for which you can use your notes, but no other resources, will be administered during the first 7 minutes of every class period. **Preparation checks not completed in the first 7 minutes of class cannot be made up. Preparation checks taken from outside of the classroom will not be accepted.**
 
 ### Homework
-
 <img class="img-right" src="../img/homework.png">
 Each day you will be required to turn in work on exercises from the previous class period. If you are focused and ask for help during class then most of this work will be completed during class. However, you may need to work outside of class or seek additional help from me or the tutors to complete all of this work. You may work with other students on exercises, but substantial copying of others' work does not lead to learning and will not be accepted. **Late exercises will not be accepted after I have posted the answer key.**
 
@@ -229,9 +224,7 @@ I will submit a "midterm grade" for you approximately half-way through the semes
 ## Expectations
 
 ### Ownership of Learning
-
 <img class="img-right" src="../img/student-reflection-and-ownership_orig.png" alt="Ownership of Learning">
-
 This course is designed in a way that you will have to actively, rather than passively, engage in the course content. In this way, it may differ from some of your other courses. In particular, in this course you will need to:
 
 * Interact with the course material on a near daily basis (i.e., you will not be able to ignore the class for several days in a row).
@@ -239,22 +232,18 @@ This course is designed in a way that you will have to actively, rather than pas
 * Prepare for some course content on your own prior to class. See [Preparation Checks](#preparation-checks) section above and [Work Outside of Class](#work-outside-of-class) section below.
 * Assess your own performance on daily exercises by comparing your answers to an answer key (which will also contain hints related to common mistakes).
 * Do more that what is required to be turned in for a grade (i.e., you will likely need more practice than the few exercises that are turned in for a grade; thus, many more exercises are provided in most modules).
-* Ask for help from me (the professor) both during and outside of class. See [Assistance](#assisstance) section above.
+* Ask for help from me (the professor) both during and outside of class. See [Assistance](#assistance) section above.
 * Maintain focus for an extended period of time (1.5 h for each class, 2 h for quizzes).
 
 ### Work Outside of Class
-
 <img class="img-right" src="../img/studying.jpg" alt="Studying Hours">
-
 As a general rule-of-thumb[^2], you are expected to spend 2-3 hours of time outside of class for each hour in class. This course meets for 4.5 hours per week and, thus, you should dedicate between 9 and 13.5 hours of time outside of class preparing for class, completing review and class exercises, and studying for quizzes. **The work required for this course can be completed within this expected amount of time, if that time is without distraction**. If monitoring your phone/device is distracting you from getting your work done then you may consider enlisting the aid of apps (e.g., [Forest](https://www.forestapp.cc/)) designed to reduce distractions from devices ... see [here](https://georgehalachev.com/2019/01/15/7-apps-that-will-help-you-beat-procrastination/), [here](https://www.careercontessa.com/advice/best-apps-chronic-procrastinator/), [here](https://highschoolhints.com/6-apps-that-will-stop-your-procrastinating/), or [here](https://remotebliss.com/procrastination-apps/).  
 
 If you feel that you are spending too much time on some exercises or preparations because you are "stuck," then start your work earlier so that you can stop (and do other things) and make plans to see [me](#instructor--derek-ogle) or the [tutors](#tutors) for help.
 
 
 ### Classroom Conduct and Academic Integrity
-
 <img class="img-right" src="../img/cell-cheat.jpg" alt="Conduct and Integrity">
-
 My intent is to create a classroom environment where solid learning of statistics can occur. One part of this environment is a well-organized course structure built upon relevant learning resources and interesting realistic exercises. Another part is my availability to assist you in learning from these resources and exercises. A third part is your conduct within the classroom. My expectations of you are that you will fully engage in the course (see above) and be respectful of all others in the class. At a minimum, I expect you to adhere to the following behaviors:
 
 * Please arrive to class on time. If you arrive late, then take the first available seat as quietly as possible. If you need to leave early, then please sit near the exit.
