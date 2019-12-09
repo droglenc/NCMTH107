@@ -35,3 +35,12 @@ When you compile this report the document should be a little more concise then t
 A video demonstrating this process is embedded below (or at [this link](https://vimeo.com/313195664)).
 
 <iframe width="640" height="564" src="https://player.vimeo.com/video/313195664" frameborder="0" allowFullScreen mozallowfullscreen webkitAllowFullScreen></iframe>
+
+
+## Additional controls
+
+In some instances you may want more fine control over the width of the outputted figures. For example, you may have two side-by-side plots in one figure and thus need the figure to be twice as wide or you just want a bigger figure to see more details. You can control the width and height of the figure by include the following line RIGHT BEFORE where the plot is made.
+
+```
+#+ fig.width=4, fig.height=4
+```
