@@ -44,3 +44,9 @@ In some instances you may want more fine control over the width of the outputted
 ```
 #+ fig.width=4, fig.height=4
 ```
+
+This will, however, change the overall settings, so you will need to repeat what we did in the header to bring back the original settings. Therefore, you may want to include this line RIGHT AFTER where the plot was made.
+
+```
+#+ message=FALSE, warning=FALSE, prompt=TRUE, comment="", fig.width=3
+```
