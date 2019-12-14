@@ -78,8 +78,17 @@ I am committed to your doing well in this course and see it as my responsibility
 
 
 ### Tutors
+<img class="img-right" src="../img/Emily_F17.jpg">
+Emily Mader and Markia Smith will also be available to help you succeed in this course. Emily is a Math major, is getting ready to graduate in May, and has tutored for this class for a number of years. Emily is available on XXX from XXX pm in CSE227 (the computer lab next to my office).
+
+&nbsp;
+&nbsp;
+
 <img class="img-right" src="../img/AnnaSage_F19.jpg">
-AnnaSage Rothe will also be available to help you succeed in this course. AnnaSage is a double major in Sociology and Gender and Women’s Studies with a minor in Psychology, but she loves math! She also enjoys various outdoor activities, especially snowboarding and paddle boarding. AnnaSage is available on Tuesdays and Thursdays from 6-8 pm in CSE227 (the computer lab next to my office). You may just show up at the tutor sessions but if you know in advance that you will be attending, please send her a quick e-mail saying that you will be there.
+Markia is a Math and Education major who took this class last year and will be tutoring for the first time this year. Markia is available on XXX from XXX pm in CSE227 (the computer lab next to my office).
+
+&nbsp;
+&nbsp;
 
 ### Accommodations
 I want to create an inclusive and accessible learning environment for those of you that have a condition (e.g., attention, learning, vision, hearing, mental, physical, or other health-related concern) that may require special accommodations. *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course. If you have a condition that requires accommodations but *you have not yet established services* through OAR, then you should contact Jennifer Newago as soon as possible (Ponzio 230, x1387, or <a href="mailto:accomodations@northland.edu">accomodations@northland.edu</a>). It is the policy and practice of Northland College to create inclusive and accessible learning environments consistent with federal and state law. <a href="https://my.northland.edu/life/be-healthy/accommodations/">More information is available here.</a>
