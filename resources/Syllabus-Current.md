@@ -82,12 +82,16 @@ I am committed to your doing well in this course and see it as my responsibility
 Emily Mader and Markia Smith will also be available to help you succeed in this course. Emily is a Math major, is getting ready to graduate in May, and has tutored for this class for a number of years. Emily is available on XXX from XXX pm in CSE227 (the computer lab next to my office).
 
 &nbsp;
-&nbsp;
 
 <img class="img-left" src="../img/AnnaSage_F19.jpg">
 Markia is a Math and Education major who took this class last year and will be tutoring for the first time this year. Markia is available on XXX from XXX pm in CSE227 (the computer lab next to my office).
 
 &nbsp;
+
+&nbsp;
+
+&nbsp;
+
 &nbsp;
 
 ### Accommodations
