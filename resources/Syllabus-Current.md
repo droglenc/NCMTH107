@@ -84,7 +84,7 @@ Emily Mader and Markia Smith will also be available to help you succeed in this 
 &nbsp;
 &nbsp;
 
-<img class="img-right" src="../img/AnnaSage_F19.jpg">
+<img class="img-left" src="../img/AnnaSage_F19.jpg">
 Markia is a Math and Education major who took this class last year and will be tutoring for the first time this year. Markia is available on XXX from XXX pm in CSE227 (the computer lab next to my office).
 
 &nbsp;
