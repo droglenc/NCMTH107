@@ -4,9 +4,9 @@ title: Resources
 ---
 
 ## Administrative
-1. [Daily Preparation Check](https://forms.gle/acxn4cdc2bCj2yCHA){:target="_blank"} 
+1. [Daily Preparation Check](https://forms.gle/acxn4cdc2bCj2yCHA){:target="_blank"}
+1. [Piazza Class Discussion Site](https://piazza.com/northland/spring2020/mth107/home){:target="_blank"}
 1. [Anonymous Message to Dr. Ogle](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}
-1. Student Opinion Surveys -- [Section 1](https://northland.iasystem.org/survey/4418) and [Section 2](https://northland.iasystem.org/survey/4419)
 1. [Data Files](data_107)
 
 ## Learning Assistance

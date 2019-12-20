@@ -74,7 +74,7 @@ Sources for out-of-class assistance and opportunities for in-class accommodation
 
 ### Instructor -- Derek Ogle
 <img class="img-right" src="../img/DerekOgle1.jpg">
-I am committed to your doing well in this course and see it as my responsibility to help you as much as possible both in and out of the designated class period. I will be available in CSE228 whenever my door is open, but also specifically for office hours from 1-3p on Monday, Wednesday, and Friday. You can also anonymously ask me and other students questions on <a href="piazza.com/northland/spring2020/mth107/home" target="_blank">this Piazza class discussion page</a>, which I will monitor regularly. Finally, you may send me <a href="https://www.surveymonkey.com/r/KC87PJW" target="_blank">anonymous feedback, suggestions, or questions</a>. Please don't hesitate to see or contact me if you have any questions regarding this course.
+I am committed to your doing well in this course and see it as my responsibility to help you as much as possible both in and out of the designated class period. I will be available in CSE228 whenever my door is open, but also specifically for office hours from 1-3p on Monday, Wednesday, and Friday. You can also anonymously ask me and other students questions on [Piazza Class Discussion Site](https://piazza.com/northland/spring2020/mth107/home){:target="_blank"}, which I will monitor regularly. Finally, you may send me [anonymous feedback, suggestions, or questions](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}. Please don't hesitate to see or contact me if you have any questions regarding this course.
 
 ### Tutors
 <img class="img-right" src="../img/Emily_F17.jpg">
