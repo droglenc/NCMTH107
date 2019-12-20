@@ -66,16 +66,15 @@ This course fulfills that Quantitative Reasoning requirement in the [General Edu
 <img class="img-right" src="../img/help.jpg">
 Sources for out-of-class assistance and opportunities for in-class accommodations are described further below. Please use these throughout the semester as appropriate.[^help]
 
+* *Questions don’t expose the lack of knowledge of the asker, but rather expose opportunities for clarification for the original communicator* - [Julia Steward Lowndes](https://blogs.scientificamerican.com/observations/open-software-means-kinder-science/)
 * *Never apologize for asking for what you need, if you don't ask - the answer will always be no.* - Rachel Wolchin
 * *Asking for other's guidance helps you see what you may not be able to see. It's always important to check your ego and ask for help.* - Ken Blanchard
 * *The only mistake you can make is not asking for help.* - Sandeep Jauhar
-* *You don't have to do it all by yourself.* - Elizabeth Dehn 
 
 
 ### Instructor -- Derek Ogle
 <img class="img-right" src="../img/DerekOgle1.jpg">
-I am committed to your doing well in this course and see it as my responsibility to help you as much as possible both in and out of the designated class period. Thus, you may call (715-682-1300), e-mail (<a href="mailto:dogle@northland.edu">dogle@northland.edu</a>)[^email], or visit me in my office (CSE228) for help. I will make every effort to be available during office hours from 1-3p on Monday, Wednesday, and Friday. I will also be available any time that my door is open. Finally, you may send me <a href="https://www.surveymonkey.com/r/KC87PJW" target="_blank">anonymous feedback, suggestions, or questions</a>. Please don't hesitate to see or contact me if you have any questions regarding this course.
-
+I am committed to your doing well in this course and see it as my responsibility to help you as much as possible both in and out of the designated class period. I will be available in CSE228 whenever my door is open, but also specifically for office hours from 1-3p on Monday, Wednesday, and Friday. You can also anonymously ask me and other students questions on <a href="piazza.com/northland/spring2020/mth107/home" target="_blank">this Piazza class discussion page</a>, which I will monitor regularly. Finally, you may send me <a href="https://www.surveymonkey.com/r/KC87PJW" target="_blank">anonymous feedback, suggestions, or questions</a>. Please don't hesitate to see or contact me if you have any questions regarding this course.
 
 ### Tutors
 <img class="img-right" src="../img/Emily_F17.jpg">
