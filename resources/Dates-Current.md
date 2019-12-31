@@ -75,11 +75,11 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td></td><td></td></tr>
 
 <tr><td>M 2-Mar</td>
-    <td colspan="2"><span style="color:coral">NO CLASS (Midterm Break)</span></td></tr>
+    <td><span style="color:coral">NO CLASS (Midterm Break)</span></td></tr>
 <tr><td>W 4-Mar</td>
-    <td colspan="2"><span style="color:coral">NO CLASS (Midterm Break)</span></td></tr>
+    <td><span style="color:coral">NO CLASS (Midterm Break)</span></td></tr>
 <tr><td>F 6-Mar</td>
-    <td colspan="2"><span style="color:coral">NO CLASS (Midterm Break)</span></td></tr>
+    <td><span style="color:coral">NO CLASS (Midterm Break)</span></td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 9-Mar</td>
@@ -127,8 +127,8 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>M 13-Apr</td>
     <td>Course Review</td></tr>
 <tr><td>W 15-Apr</td>
-    <td>Course Review</td></tr>
+    <td><span style="color:red;font-weight:bold">FINAL QUIZ</span></td></td></tr>
 <tr><td>F 17-Apr</td>
-    <td><span style="color:red;font-weight:bold">FINAL QUIZ</span></td></tr>
+    <td><span style="color:coral">NO CLASS</span></tr>
     
 </table>
