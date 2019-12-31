@@ -15,7 +15,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>W 8-Jan</td>
     <td><a href="Syllabus-Current">Syllabus</a><br><a href="../modules/WhyStats">Why Stats is Important?</a></td></tr>
 <tr><td>F 10-Jan</td>
-    <td><a href="../modules/FoundationalDefns">Foundational Definitions</td></tr>
+    <td><a href="../modules/FoundationalDefns">Foundational Definitions</a></td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 13-Jan</td>
