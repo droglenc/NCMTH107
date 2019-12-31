@@ -61,9 +61,9 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>M 17-Feb</td>
     <td><a href="../modules/SamplingDist">Sampling Distributions</a></td></tr>
 <tr><td>W 19-Feb</td>
-    <td><a href="../modules/Probability">Probability</a><br><span style="color:teal;font-weight:bold">DUE: Quiz 2 Reflection (Optional)</span></td></tr>
+    <td><a href="../modules/Probability">Probability</a></td></tr>
 <tr><td>F 21-Feb</td>
-    <td><a href="../modules/HypTesting">Hypothesis Testing</a></td></tr>
+    <td><a href="../modules/HypTesting">Hypothesis Testing</a><br><span style="color:teal;font-weight:bold">DUE: Quiz 2 Reflection (Optional)</span></td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 24-Feb</td>
@@ -91,31 +91,31 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td></td><td></td></tr>
 
 <tr><td>M 16-Mar</td>
-    <td>TBD</td></tr>
+    <td><a href="../modules/1Samplet">1-Sample t-Test</a></td></tr>
 <tr><td>W 18-Mar</td>
     <td><a href="../modules/1Samplet">1-Sample t-Test</a></td></tr>
 <tr><td>F 20-Mar</td>
-    <td><a href="../modules/1Samplet">1-Sample t-Test</a><br><span style="color:teal;font-weight:bold">DUE: Quiz 3 Reflection (Optional)</span></td></tr>
+    <td><a href="../modules/2Samplet">2-Sample t-Test</a><br><span style="color:teal;font-weight:bold">DUE: Quiz 3 Reflection (Optional)</span></td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 23-Mar</td>
     <td><a href="../modules/2Samplet">2-Sample t-Test</a></td></tr>
 <tr><td>W 25-Mar</td>
-    <td><a href="../modules/2Samplet">2-Sample t-Test</a></td></tr>
+    <td><a href="../modules/ChiSquare">Chi-Square Test</a></td></tr>
 <tr><td>F 27-Mar</td>
     <td><a href="../modules/ChiSquare">Chi-Square Test</a></td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 30-Mar</td>
-    <td><a href="../modules/ChiSquare">Chi-Square Test</a></td></tr>
-<tr><td>W 1-Apr</td>
     <td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td></tr>
+<tr><td>W 1-Apr</td>
+    <td><a href="../modules/FilteringDataInR">Filtering Data In R</a></td></tr>
 <tr><td>F 3-Apr</td>
     <td><span style="color:red;font-weight:bold">Fourth Quiz</span> (<a href="QuizGuide/quiz4">Study Guide</a>)</td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 6-Apr</td>
-    <td><a href="../modules/FilteringDataInR">Filtering Data In R</a></td></tr>
+    <td>Course Review</td></tr>
 <tr><td>W 8-Apr</td>
     <td>Course Review</td></tr>
 <tr><td>F 10-Apr</td>
@@ -125,7 +125,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>M 13-Apr</td>
     <td>Course Review</td></tr>
 <tr><td>W 15-Apr</td>
-    <td><span style="color:red;font-weight:bold">FINAL QUIZ</span></td></td></tr>
+    <td><span style="color:red;font-weight:bold">FINAL QUIZ</span></td></tr>
 <tr><td>F 17-Apr</td>
     <td><span style="color:coral">NO CLASS</span></td></tr>
     
