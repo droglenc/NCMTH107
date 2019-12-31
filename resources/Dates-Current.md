@@ -87,8 +87,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>W 11-Mar</td>
     <td><a href="../modules/1SampleZ">1-Sample Z-Test</a></td></tr>
 <tr><td>F 13-Mar</td>
-    <td><span style="color:red;font-weight:bold">Third Quiz</span> (<a href="QuizGuide/quiz3">Study Guide</a>)</td>
-    <td>--</td></tr>
+    <td><span style="color:red;font-weight:bold">Third Quiz</span> (<a href="QuizGuide/quiz3">Study Guide</a>)</td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 16-Mar</td>
@@ -104,14 +103,13 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>W 25-Mar</td>
     <td><a href="../modules/2Samplet">2-Sample t-Test</a></td></tr>
 <tr><td>F 27-Mar</td>
-    <td><a href="../modules/ChiSquare">Chi-Square Test</a></td>
-    <td>--</td></tr>
+    <td><a href="../modules/ChiSquare">Chi-Square Test</a></td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 30-Mar</td>
-    <td><a href="../modules/ChiSquare">Chi-Square Test</a></tr>
+    <td><a href="../modules/ChiSquare">Chi-Square Test</a></td></tr>
 <tr><td>W 1-Apr</td>
-    <td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></tr>
+    <td><a href="../modules/GOFTest">Goodness-of-Fit Test</a></td></tr>
 <tr><td>F 3-Apr</td>
     <td><span style="color:red;font-weight:bold">Fourth Quiz</span> (<a href="QuizGuide/quiz4">Study Guide</a>)</td></tr>
 <tr><td></td><td></td></tr>
@@ -129,6 +127,6 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>W 15-Apr</td>
     <td><span style="color:red;font-weight:bold">FINAL QUIZ</span></td></td></tr>
 <tr><td>F 17-Apr</td>
-    <td><span style="color:coral">NO CLASS</span></tr>
+    <td><span style="color:coral">NO CLASS</span></td></tr>
     
 </table>
