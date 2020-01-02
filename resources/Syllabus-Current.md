@@ -74,11 +74,11 @@ Sources for out-of-class assistance and opportunities for in-class accommodation
 
 ### Instructor -- Derek Ogle
 <img class="img-right" src="../img/DerekOgle1.jpg">
-I am committed to your doing well in this course and see it as my responsibility to help you as much as possible both in and out of the designated class period. I will be available in CSE228 whenever my door is open, but also specifically for office hours from 1-3p on Monday, Wednesday, and Friday. You can also anonymously ask me and other students questions on [Piazza Class Discussion Site](https://piazza.com/northland/spring2020/mth107/home){:target="_blank"}, which I will monitor regularly. Finally, you may send me [anonymous feedback, suggestions, or questions](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}. Please don't hesitate to see or contact me if you have any questions regarding this course.
+I am committed to your doing well in this course and see it as my responsibility to help you both in and out of the designated class period. I will be available in CSE228 whenever my door is open, but also specifically for office hours from 1-3p on Monday, Wednesday, and Friday. You can also anonymously ask me and other students questions on the [Piazza Class Discussion Site](https://piazza.com/northland/spring2020/mth107/home){:target="_blank"}, which I will monitor regularly. Finally, you may send me [anonymous feedback, suggestions, or questions](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}. Please see or contact me if you have questions regarding this course.
 
 ### Tutors
 <img class="img-right" src="../img/Emily_F17.jpg">
-Emily Mader and Markia Smith will also be available to help you succeed in this course. Emily is a Math major, is getting ready to graduate in May, and has tutored for this class for a number of years. Emily is available on XXX from XXX pm in CSE227 (the computer lab next to my office).
+Emily Mader and Markia Smith will also be available to help you succeed in this course. Emily is a Math major, is getting ready to graduate in May, and has tutored this class for a number of years. Emily is available on XXX from XXX pm in CSE227 (the computer lab next to my office).
 
 <img class="img-left" src="../img/Markia_W20.jpg">
 Markia is a Math and Education major who took this class last year and will be tutoring for the first time this year. Markia is available on XXX from XXX pm in CSE227 (the computer lab next to my office).
@@ -95,7 +95,7 @@ I want to create an inclusive and accessible learning environment for those of y
 
 ### Academic Alerts
 <img class="img-right" src="../img/alert.jpg">
-As you adjust to the rigors of college life, you may struggle a bit in your courses and benefit from working with a professional on your organization, motivation, and stress level. If I observe early in the semester that you are struggling with this course then I may file an "Academic Alert" about you. If this happens, you will receive an e-mail from me that explains steps that you can take to improve your performance in the course. Our Academic Success Coordinator, Gina Kirsten, will receive the alert and will likely also reach out to you to set up a time to further discuss ways to improve in the course. **Academic Alerts are not punitive**, they are simply an attempt to help you get back on track in this course as soon as possible.
+As you adjust to college, you may benefit from working with a professional on your organization, motivation, and stress level. If I observe you struggling with th course early in the semester then I may file an "Academic Alert" about you. If this happens, you will receive an e-mail from me that explains steps you can take to improve your performance in the course. Our Academic Success Coordinator, Gina Kirsten, will receive the alert and will likely also reach out to you to set up a time to further discuss ways to improve in the course. **Academic Alerts are not punitive**, they are simply an attempt to help you get back on track in this course as soon as possible.
 
 ----
 
@@ -108,9 +108,9 @@ You should prepare for each class period with the module reading and videos indi
 
 ### Homework
 <img class="img-right" src="../img/homework.png">
-Each day you will be required to turn in work on exercises from the previous class period. If you are focused and ask for help during class then most of this work will be completed during class. However, you may need to work outside of class or seek additional help from me or the tutors to complete all of this work. You may work with other students on exercises, but substantial copying of others' work does not lead to learning and will not be accepted. **Late exercises will not be accepted after I have posted the answer key.**
+Each day you will be required to turn in work on exercises started (and possibly finished) in the previous class period. You may work with other students on exercises, but substantial copying of others' work does not lead to learning and will not be accepted. **Late exercises will not be accepted after I have posted the answer key.**
 
-Exercises you turn in will be graded based on the following rubric.
+Exercises you turn in will be graded with the following rubric.
 
 <div class="container-fluid">
   <table class="table table-bordered">
@@ -118,13 +118,13 @@ Exercises you turn in will be graded based on the following rubric.
     <tr class="info"><th>4 points</th><th>3-1 points</th><th>0 points</th></tr>
   </thead>
   <tbody>
-    <tr><td>All parts of the exercise were completed in full. All steps of the work (e.g., intermediate calculations, R code) are provided. Work was neat and orderly.</td><td>Some parts of the exercise were either not attempted or were incomplete. All steps not shown. Work was not as neat and orderly as it should have been.</td><td>Very little of the exercise was completed, many steps not shown, substantial amounts of the work was copied from someone else, or work was very messy and unorganized.</td></tr>
+    <tr><td>All parts of the exercise were completed in full. All steps of the work (e.g., intermediate calculations, R code) were provided. Work was neat and orderly.</td><td>Some parts of the exercise were either not attempted or were incomplete. All steps not shown. Work was not as neat and orderly as it should have been.</td><td>Very little of the exercise was completed, many steps not shown, substantial amounts of the work was copied from someone else, or work was very messy and unorganized.</td></tr>
   </tbody>
   </table>
 </div>
 
 ### Engagement
-This course is taught in an active learning format that will require your full engagement to maximiz learning. To encourage active engagement, I will assess your engagement at the end of each class period with the following rubric.
+This course is taught in an active learning format that will require your full engagement to maximize learning. To encourage your active participation in learning, I will assess your engagement at the end of each class period with the following rubric.
 
 <div class="container-fluid">
   <table class="table table-bordered">
@@ -141,7 +141,7 @@ The following behaviors are indicative of a fully engaged student:
 
 - Attended the entire class period (including being on time).
 - Came to class having fully completed the required preparation materials (see above).
-- Diligently worked on the homework exercises.
+- Diligently worked on the exercises.
 - Asked pertinent questions.
 - Collaboratively worked with others on course material.
 - Took notes during short lectures.
@@ -149,7 +149,7 @@ The following behaviors are indicative of a fully engaged student:
 - Followed the [class conduct guidelines](#classroom-conduct-and-academic-integrity).
 
 ### Quizzes
-Four mid-term quizzes will allow you to demonstrate what you have learned about the most recent material. With this number of quizzes, the material on each quiz will be focused on fewer modules and, thus, more manageable to prepare for. Additionally, a final exam will give you an opportunity to show that you have a synthetic understanding of all material from throughout the course. The final exam will be focused on the larger concepts, applications, and interpretations, and less on specific details, from throughout the semester. I will provide you with an explicit study guide approximately one week before each quiz and the final exam.
+Four mid-term quizzes will allow you to demonstrate what you have learned about the most recent material. With this number of quizzes, the material on each quiz will be focused on fewer modules and, thus, more manageable to prepare for. Additionally, a final exam will give you an opportunity to show that you have a synthetic understanding of all material from throughout the course. The final exam will be focused on larger concepts, applications, and interpretations (rather than specific details) from throughout the semester. I will provide you with an explicit study guide approximately one week before each quiz and the final exam.
 
 Dates for quizzes and the final exam are shown on the [Dates page](Dates-Current.html){:target="_blank"}. Make-up quizzes will be provided only if you have a fixed commitment of sufficient importance that was set before the beginning of the semester, or a verifiable medical condition. Please see me immediately if you miss a quiz without my prior approval, but note that you may not be allowed to make up that quiz. **The final exam will NOT be given early.**
 
@@ -219,13 +219,13 @@ Your letter grade will be assigned from your overall percentage (rounded to a wh
   <tr><td>D+ 67-69</td><td>D  60-66</td><td>F   0-59</td></tr>
 </table>
 
-If you meet with me in my office **before the end of the second week of classes** AND **at least two other times in my office (i.e,. outside of class) with legitimate questions** then your lowest four preparation check, homework, **AND** engagement grades will be excluded when computing your overall percentage.
+If you meet with me in my office **before the end of the second week of classes** AND **at least two other times in my office (i.e., outside of class) with legitimate questions** then your lowest four preparation check, homework, **AND** engagement grades will be excluded when computing your overall percentage.
 
 #### Note About Incomplete Grades
 An incomplete grade will be given ONLY in extreme circumstances that are beyond your control, such as a major illness, and will ONLY be given if you have successfully completed the entire course except for the final exam. This is in accordance with [Northland College policy](https://my.northland.edu/student-policies/academic-policies/#grades){:target="_blank"} (scroll down to "Incomplete Grades").
 
 #### Note About Midterm Grades
-I will submit a "midterm grade" for you approximately half-way through the semester. It is important to note that this grade will include only about 1/3rd of the items that will be included in your overall final grade and that. Also note that I will assign the "worst possible" letter grade that I can for your midterm grade. I do this for two reasons. First, I believe that it is better to know the worst rather than the best-case scenario at that point of the semester. Second, the material at the end of the semester is a little more difficult than the material at the beginning of the semester. Of course, see me if you have questions about your midterm grade.
+I will submit a "midterm grade" for you approximately half-way through the semester. This grade will include only about 1/3rd of the items that will be included in your overall final grade. Also note that I will assign the "worst possible" letter grade for your midterm grade. I will do this for two reasons because I believe that it is better to know the worst rather than the best-case scenario at that point of the semester and the material at the end of the semester is a little more difficult than the material at the beginning of the semester. Of course, see me if you have questions about your midterm grade.
 
 ----
 
@@ -235,17 +235,17 @@ I will submit a "midterm grade" for you approximately half-way through the semes
 <img class="img-right" src="../img/student-reflection-and-ownership_orig.png" alt="Ownership of Learning">
 This course is designed in a way that you will have to actively, rather than passively, engage in the course content. In this way, it may differ from some of your other courses. In particular, in this course you will need to:
 
-* Interact with the course material on a near daily basis (i.e., you will not be able to ignore the class for several days in a row).
+* Interact with the course material on a near daily basis (i.e., you will not be able to ignore the class for several days).
 * Multi-task material from multiple modules (i.e., you may be finishing exercises for one module while preparing for class on another module).
 * Prepare for some course content on your own prior to class. See [Preparation Checks](#preparation-checks) section above and [Work Outside of Class](#work-outside-of-class) section below.
 * Assess your own performance on daily exercises by comparing your answers to an answer key (which will also contain hints related to common mistakes).
-* Do more that what is required to be turned in for a grade (i.e., you will likely need more practice than the few exercises that are turned in for a grade; thus, many more exercises are provided in most modules).
+* Do more than what is required to be turned in for a grade (i.e., you will likely need more practice than the few exercises that are turned in for a grade; thus, more exercises are provided in most modules).
 * Ask for help from me (the professor) both during and outside of class. See [Assistance](#assistance) section above.
 * Maintain focus for an extended period of time (1.5 h for each class, 2 h for quizzes).
 
 ### Work Outside of Class
 <img class="img-right" src="../img/studying.jpg" alt="Studying Hours">
-As a general rule-of-thumb[^2], you are expected to spend 2-3 hours of time outside of class for each hour in class. This course meets for 4.5 hours per week and, thus, you should dedicate between 9 and 13.5 hours of time outside of class preparing for class, completing review and class exercises, and studying for quizzes. **The work required for this course can be completed within this expected amount of time, if that time is without distraction**. If monitoring your phone/device is distracting you from getting your work done then you may consider enlisting the aid of apps (e.g., [Forest](https://www.forestapp.cc/)) designed to reduce distractions from devices ... see [here](https://georgehalachev.com/2019/01/15/7-apps-that-will-help-you-beat-procrastination/), [here](https://www.careercontessa.com/advice/best-apps-chronic-procrastinator/), [here](https://highschoolhints.com/6-apps-that-will-stop-your-procrastinating/), or [here](https://remotebliss.com/procrastination-apps/).  
+As a general rule-of-thumb[^2], you are expected to spend 2-3 hours of time outside of class for each hour in class. This course meets for 4.5 hours per week and, thus, you should dedicate between 9 and 13.5 hours of time outside of class preparing for class, completing review and class exercises, and studying for quizzes. **The work required for this course can be completed within this expected amount of time, if that time is without distraction**. If monitoring your phone/device is distracting you from getting your work done then you may consider the aid of apps (e.g., [Forest](https://www.forestapp.cc/)) designed to reduce distractions from devices.[^DistractionAids]  
 
 If you feel that you are spending too much time on some exercises or preparations because you are "stuck," then start your work earlier so that you can stop (and do other things) and make plans to see [me](#instructor--derek-ogle) or the [tutors](#tutors) for help.
 
@@ -278,3 +278,5 @@ Finally, note that the [College's Academic Integrity Statement & Policy](https:/
 [^1]: I believe the research (e.g., [here](http://www.medicaldaily.com/why-using-pen-and-paper-not-laptops-boosts-memory-writing-notes-helps-recall-concepts-ability-268770){:target="_blank"}, [here](http://www.pbs.org/wgbh/nova/next/body/taking-notes-by-hand-could-improve-memory-wt/){:target="_blank"}, and [here](http://www.lifehack.org/articles/featured/writing-and-remembering-why-we-remember-what-we-write.html){:target="_blank"}) that suggests that you are more likely to remember concepts if you hand-write those concepts down, rather than copy-and-pasting or typing the text.
 
 [^2]: General advice for how much time should be spent outside of class for each hour inside of class can be found, among many, [here](https://www.collegeparentcentral.com/2010/02/is-your-college-student-investing-enough-time-studying/){:target="_blank"}, [here](http://classroom.synonym.com/ratio-studying-class-time-college-1075.html){:target="_blank"}, [here](https://www.usu.edu/asc/studysmart/pdf/estimating_study_hours.pdf){:target="_blank"}, and [here](http://collegelife.about.com/od/academiclife/f/How-Much-Time-Should-I-Spend-Studying-In-College.htm){:target="_blank"}.
+
+[^DistractionAids]: Also see the following resources for other apps that may help you eliminate distractions from your devices ... [here](https://georgehalachev.com/2019/01/15/7-apps-that-will-help-you-beat-procrastination/), [here](https://www.careercontessa.com/advice/best-apps-chronic-procrastinator/), [here](https://highschoolhints.com/6-apps-that-will-stop-your-procrastinating/), or [here](https://remotebliss.com/procrastination-apps/).
