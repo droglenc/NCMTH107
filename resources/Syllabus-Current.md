@@ -31,7 +31,7 @@ What you learn in this <strong>Statistical Concepts and Analysis</strong> course
 
 ## Syllabus Contents
 
-* [Catalog Description](http://catalog.northland.edu/content.php?catoid=19&catoid=19&navoid=914&filter%5Bitem_type%5D=3&filter%5Bonly_active%5D=1&filter%5B3%5D=1&filter%5Bcpage%5D=3#){:target="_blank"} and [Learning Outcomes](#learning-outcomes)
+* [Catalog Description](http://catalog.northland.edu/preview_course_nopop.php?catoid=19&coid=13534){:target="_blank"} and [Learning Outcomes](#learning-outcomes)
 * [Assistance](#assistance) -- [Instructor](#instructor--derek-ogle), [Tutors](#tutors), [Accommodations](#accommodations), and [Academic Alerts](#academic-alerts)
 * [Grading](#grading) -- [Preparation Checks](#preparation-checks), [Homework](#homework), [Engagement](#engagement), [Quizzes](#quizzes), [Overall Grade](#overall-grade)
 * [Expectations](#expectations) -- [Ownership of Learning](#ownership-of-learning), [Work Outside of Class](#work-outside-of-class), [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
