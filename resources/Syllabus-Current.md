@@ -31,10 +31,10 @@ What you learn in this <strong>Statistical Concepts and Analysis</strong> course
 
 ## Syllabus Contents
 
-* [Catalog Description](http://catalog.northland.edu/content.php?catoid=19&catoid=19&navoid=914&filter%5Bitem_type%5D=3&filter%5Bonly_active%5D=1&filter%5B3%5D=1&filter%5Bcpage%5D=3#) and [Learning Outcomes](#learning-outcomes)
-* [Assistance](#assistance) -- [Instructor](#instructor--Derek-Ogle), [Tutors](#tutors), [Accommodations](#accommodations), and [Academic Alerts](#academic-alerts)
+* [Catalog Description](http://catalog.northland.edu/content.php?catoid=19&catoid=19&navoid=914&filter%5Bitem_type%5D=3&filter%5Bonly_active%5D=1&filter%5B3%5D=1&filter%5Bcpage%5D=3#){:target="_blank"} and [Learning Outcomes](#learning-outcomes)
+* [Assistance](#assistance) -- [Instructor](#instructor--derek-ogle), [Tutors](#tutors), [Accommodations](#accommodations), and [Academic Alerts](#academic-alerts)
 * [Grading](#grading) -- [Preparation Checks](#preparation-checks), [Homework](#homework), [Engagement](#engagement), [Quizzes](#quizzes), [Overall Grade](#overall-grade)
-* [Expectations](#expectations) -- [Ownership of Lerning](#ownership-of-learning) [Work Outside of Class](#work-outside-of-class), [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
+* [Expectations](#expectations) -- [Ownership of Learning](#ownership-of-learning), [Work Outside of Class](#work-outside-of-class), [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
 
 
 ----
@@ -279,4 +279,4 @@ Finally, note that the [College's Academic Integrity Statement & Policy](https:/
 
 [^2]: General advice for how much time should be spent outside of class for each hour inside of class can be found, among many, [here](https://www.collegeparentcentral.com/2010/02/is-your-college-student-investing-enough-time-studying/){:target="_blank"}, [here](http://classroom.synonym.com/ratio-studying-class-time-college-1075.html){:target="_blank"}, [here](https://www.usu.edu/asc/studysmart/pdf/estimating_study_hours.pdf){:target="_blank"}, and [here](http://collegelife.about.com/od/academiclife/f/How-Much-Time-Should-I-Spend-Studying-In-College.htm){:target="_blank"}.
 
-[^DistractionAids]: Also see the following resources for other apps that may help you eliminate distractions from your devices ... [here](https://georgehalachev.com/2019/01/15/7-apps-that-will-help-you-beat-procrastination/), [here](https://www.careercontessa.com/advice/best-apps-chronic-procrastinator/), [here](https://highschoolhints.com/6-apps-that-will-stop-your-procrastinating/), or [here](https://remotebliss.com/procrastination-apps/).
+[^DistractionAids]: Also see the following resources for other apps that may help you eliminate distractions from your devices ... [here](https://georgehalachev.com/2019/01/15/7-apps-that-will-help-you-beat-procrastination/){:target="_blank"}, [here](https://www.careercontessa.com/advice/best-apps-chronic-procrastinator/){:target="_blank"}, [here](https://highschoolhints.com/6-apps-that-will-stop-your-procrastinating/){:target="_blank"}, or [here](https://remotebliss.com/procrastination-apps/){:target="_blank"}.
