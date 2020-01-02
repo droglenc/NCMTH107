@@ -119,7 +119,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>W 8-Apr</td>
     <td>Course Review</td></tr>
 <tr><td>F 10-Apr</td>
-    <td>Course Review<br><span style="color:teal;font-weight:bold">DUE: Quiz 4 Reflection (Optional)</span></td></tr>
+    <td><span style="color:coral">NO CLASS (Good Friday)</span><br>Course Review<br><span style="color:teal;font-weight:bold">DUE: Quiz 4 Reflection (Optional)</span></td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 13-Apr</td>
