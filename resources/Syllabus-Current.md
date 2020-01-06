@@ -77,11 +77,8 @@ Sources for out-of-class assistance and opportunities for in-class accommodation
 I am committed to your doing well in this course and see it as my responsibility to help you both in and out of the designated class period. I will be available in CSE228 whenever my door is open, but also specifically for office hours from 1-3p on Monday, Wednesday, and Friday. You can also anonymously ask me and other students questions on the [Piazza Class Discussion Site](https://piazza.com/northland/spring2020/mth107/home){:target="_blank"}, which I will monitor regularly. Finally, you may send me [anonymous feedback, suggestions, or questions](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}. Please see or contact me if you have questions regarding this course.
 
 ### Tutors
-<img class="img-right" src="../img/Emily_F17.jpg">
-Emily Mader and Markia Smith will also be available to help you succeed in this course. Emily is a Math major, is getting ready to graduate in May, and has tutored this class for a number of years. Emily is available on XXX from XXX pm in CSE227 (the computer lab next to my office).
-
-<img class="img-left" src="../img/Markia_W20.jpg">
-Markia is a Math and Education major who took this class last year and will be tutoring for the first time this year. Markia is available on XXX from XXX pm in CSE227 (the computer lab next to my office).
+<img class="img-right" src="../img/Markia_W20.jpg">
+Markia Smith will also be available to help you succeed in this course. Markia is a Math and Education major who took this class last year and will be tutoring for the first time this year. Markia is available on XXX from XXX pm in CSE227 (the computer lab next to my office).
 
 &nbsp;
 
