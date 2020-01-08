@@ -78,7 +78,7 @@ I am committed to your doing well in this course and see it as my responsibility
 
 ### Tutors
 <img class="img-right" src="../img/Markia_W20.jpg">
-Markia Smith will also be available to help you succeed in this course. Markia is a Math and Education major who took this class last year and will be tutoring for the first time this year. Markia is available on XXX from XXX pm in CSE227 (the computer lab next to my office).
+Markia Smith will also be available to help you succeed in this course. Markia is a Math and Education major who took this class last year and will be tutoring for the first time this year. Markia is available on Thursdays from 6-8pm in CSE227 (the computer lab next to my office).
 
 &nbsp;
 
