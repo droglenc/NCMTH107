@@ -55,7 +55,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>W 12-Feb</td>
     <td><a href="../modules/LinearRegression">Linear Regression</a></td></tr>
 <tr><td>F 14-Feb</td>
-    <td><span style="color:red;font-weight:bold>Second Quiz</span> (<a href="QuizGuide/quiz2.html">Study Guide</a>)</td></tr>
+    <td><span style="color:red;font-weight:bold">Second Quiz</span> (<a href="QuizGuide/quiz2.html">Study Guide</a>)</td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>M 17-Feb</td>
