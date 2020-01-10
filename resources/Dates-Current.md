@@ -11,12 +11,12 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <table width="100%">
 <tr><th width="18%">Date</th><th width="82%">Topic</th></tr>
 <!---
---->
 <tr><td>W 8-Jan</td>
     <td><a href="Syllabus-Current">Syllabus</a><br><a href="../modules/WhyStats">Why Stats is Important?</a></td></tr>
 <tr><td>F 10-Jan</td>
     <td><a href="../modules/FoundationalDefns">Foundational Definitions</a></td></tr>
 <tr><td></td><td></td></tr>
+--->
 
 <tr><td>M 13-Jan</td>
     <td><a href="../modules/DataProduction">Data Production</a></td></tr>
