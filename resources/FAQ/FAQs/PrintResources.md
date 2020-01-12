@@ -13,12 +13,12 @@ All materials for this course on the class webpage and, thus, you may spend a go
 * Got to [https://www.printfriendly.com/](https://www.printfriendly.com/).
 * Paste the URL in the box under "Make any web page Print Friendly & PDF" (like below).
 
-<img src="Figs/printer_friendly_1.jpg" alt="Printer friendly URL box" width="80%">
+<img src="Figs/printer_friendly_1.jpg" alt="Printer friendly URL box" width="60%">
 
 * Press the Preview button.
 * A separate window will appear with a printer friendly version of the webpage (like below).
 
-<img src="Figs/printer_friendly_2.jpg" alt="Printer friendly result example" width="80%">
+<img src="Figs/printer_friendly_2.JPG" alt="Printer friendly result example" width="80%">
 
 * You may edit this document by clicking on a line or paragraph and selecting the trash can that will appear. You may delete images by clicking on the image. You may also save paper by selecting a smaller font in the font size box at the top of the new window.
 * Once you are happy with the document you may print it by selecting the printer icon or save it to a PDF by seclecting the PDF icon at the top of the new window.
