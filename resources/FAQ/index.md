@@ -55,6 +55,7 @@ Related to: [R/RStudo](#rrstudio-related) / [Other](#other) / [Old](#old)
 * [Watching class preparation videos](FAQs/videos)
 * [Can I get the "full" MS Office products for my own computer?](FAQs/getMSOffice)
 * [Is it possible to print to college printers from my own computer?](FAQs/printOwnComputer)
+* [How Can I Print Class Materials?](FAQs/PrintResources)
 
 ----
 
