@@ -8,12 +8,13 @@ css: "/css/modules.css"
 ----
 
 <div class="alert alert-info">
-Show your R work (both your input and your output) for each question below. You may find [this FAQ](http://derekogle.com/NCMTH107/resources/FAQ/FAQs/compileScript){:target="_blank"} useful.
+Show your R work (both your input and your output) for each question below. You may find
+<a href="http://derekogle.com/NCMTH107/resources/FAQ/FAQs/compileScript" target="_blank">this FAQ</a> useful.
 </div>
 
 
 ## Loading Data from Webpage I
-Download the BrainHead.csv([file](https://raw.githubusercontent.com/droglenc/NCData/master/BrainHead.csv){:target="_blank"}/[meta](https://raw.githubusercontent.com/droglenc/NCData/master/BrainHead_meta.txt){:target="_blank"}) data file from the class webpage into your "R Directory", load the data into a data.frame in R, and show the `str()`ucture of the data.frame. From the structure, identify (i) how many variables, (ii) the names of the variables, and (iii) how many individuals are in the data.frame.
+Download the BrainHead.csv ([file](https://raw.githubusercontent.com/droglenc/NCData/master/BrainHead.csv){:target="_blank"}/[meta](https://raw.githubusercontent.com/droglenc/NCData/master/BrainHead_meta.txt){:target="_blank"}) data file from the class webpage into your "R Directory", load the data into a data.frame in R, and show the `str()`ucture of the data.frame. From the structure, identify (i) how many variables, (ii) the names of the variables, and (iii) how many individuals are in the data.frame.
 
 ----
 
