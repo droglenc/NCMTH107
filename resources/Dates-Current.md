@@ -16,7 +16,6 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>F 10-Jan</td>
     <td><a href="../modules/FoundationalDefns">Foundational Definitions</a></td></tr>
 <tr><td></td><td></td></tr>
---->
 
 <tr><td>M 13-Jan</td>
     <td><a href="../modules/DataProduction">Data Production</a></td></tr>
@@ -25,6 +24,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>F 17-Jan</td>
     <td><a href="../modules/UEDACat">Univariate EDA - Categorical</a></td></tr>
 <tr><td></td><td></td></tr>
+--->
 
 <tr><td>M 20-Jan</td>
     <td><span style="color:coral">NO CLASS (MLK Jr Day)</span></td></tr>
