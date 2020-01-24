@@ -11,7 +11,6 @@ output:
 
 ```{r echo=FALSE, eval=FALSE}
 ## Renders an appropriate HTML file and moves to CE directory
-setwd(here::here())
 source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
 modHTML_CEKeys("KEY_UEDAQuant1_CE")
 ```
@@ -41,8 +40,8 @@ figs(name="gpa2","Histograms of gpa separated by class type.")
 <ul>
 <li>Make sure to show your work when calculating the standard deviation. The method shown below is one way to show your work that produces consistent results. On assessments, not showing your work will result in a zero for the question.</li>
 <li>Don't forget to arrange the values from smallest to largest when computing the median. Count the original and your arranged data to make sure you have the same number of values in both.</li>
-<li>The median will be one of the observed values if n is odd, but it will be the average of two observed values if n is even.<\li>
-<li>If n is odd such that the median is one of the observed values, then that value is not included in either "half" of the data when computing the IQR. In other words, the "lower half" of the data will end right before the median and the "upper half" of the data will end right after the median. See Data Set 2 below.<\li>
+<li>The median will be one of the observed values if n is odd, but it will be the average of two observed values if n is even.</li>
+<li>If n is odd such that the median is one of the observed values, then that value is NOT included in either "half" of the data when computing the IQR. In other words, the "lower half" of the data will end right before the median and the "upper half" of the data will end right after the median. See Data Set 2 below.</li>
 </ul>
 </div>
 
