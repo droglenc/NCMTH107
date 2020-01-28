@@ -24,7 +24,6 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>F 17-Jan</td>
     <td><a href="../modules/UEDACat">Univariate EDA - Categorical</a></td></tr>
 <tr><td></td><td></td></tr>
---->
 
 <tr><td>M 20-Jan</td>
     <td><span style="color:coral">NO CLASS (MLK Jr Day)</span></td></tr>
@@ -33,6 +32,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>F 24-Jan</td>
     <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant ...</a></td></tr>
 <tr><td></td><td></td></tr>
+--->
 
 <tr><td>M 27-Jan</td>
     <td><span style="color:red;font-weight:bold">First Quiz</span> (<a href="QuizGuide/quiz1">Study Guide</a>)</td></tr>
