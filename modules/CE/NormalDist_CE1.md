@@ -52,12 +52,3 @@ Additionally, for each question below (a) identify the type of question (e.g., "
 1. What percentage of nests have fewer than 300 ants?
 1. What is the number of ants such that 5% of nests have more ants?
 1. The most common 80% of nests have between what two numbers of ants?
-
-----
-
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="../NormalDist.html">^</a></li>
-  <li class="active"><a href="#">1</a></li>
-  <li><a href="NormalDist_CE2.html">2</a></li>
-</ul>
