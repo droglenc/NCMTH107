@@ -32,7 +32,6 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>F 24-Jan</td>
     <td><a href="../modules/UEDAQuant2">Univariate EDA - Quant ...</a></td></tr>
 <tr><td></td><td></td></tr>
---->
 
 <tr><td>M 27-Jan</td>
     <td><span style="color:red;font-weight:bold">First Quiz</span> (<a href="QuizGuide/quiz1">Study Guide</a>)</td></tr>
@@ -41,6 +40,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>F 31-Jan</td>
     <td><a href="../modules/NormalDist">Normal Distributions</a></td></tr>
 <tr><td></td><td></td></tr>
+--->
 
 <tr><td>M 3-Feb</td>
     <td><a href="../modules/BEDACat">Bivariate EDA - Categorical</a><br><span style="color:teal;font-weight:bold">DUE: Quiz 1 Reflection (Optional)</span></td></tr>
