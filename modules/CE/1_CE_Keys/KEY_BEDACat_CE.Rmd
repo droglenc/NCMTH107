@@ -15,7 +15,7 @@ source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
 modHTML_CEKeys("KEY_BEDACat_CE")
 ```
 
-```{r echo=FALSE, results='hide', message=FALSE}
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
 library(NCStats)
 source("../../../rhelpers/knitr_setup.R")
 library(captioner)
@@ -82,7 +82,8 @@ percTable(tbl,digits=1)
 <div class="alert alert-warning">
 <strong>Note:</strong> 
 <ul>
-<li>In the remaining questions, the "trick" to making the computation is to determine if the question is restricted to only a portion of the data. If the question is restricted to one of the levels that corresponds to a row then compute a row percentage (i.e., divide the raw frequency by the total of its row).  If the question is restricted to one of the levels that corresponds to a column then compute a column percentage (i.e., divide the raw frequency by the total of its column). If the question does not restrict to a level in either a row or column, then compute a table or total percentage (i.e., divide the raw frequency by the total number of individuals in the table.</li>
+<li>In the remaining questions, the "trick" to making the computation is to determine if the question is restricted to only a portion of the data. If the question is restricted to one of the levels that corresponds to a row then compute a row percentage (i.e., divide the raw frequency by the total of its row). If the question is restricted to one of the levels that corresponds to a column then compute a column percentage (i.e., divide the raw frequency by the total of its column). If the question does not restrict to a level in either a row or column, then compute a table or total percentage (i.e., divide the raw frequency by the total number of individuals in the table.</li>
+<li>Generally speaking, percentages should be rounded to one decimal place (as illustrated below).</li>
 </ul>
 </div>
 
@@ -151,6 +152,13 @@ addmargins(tbl)
 
 <ol>
   <li>A total of `r tbl["no light","Yes"]` children slept in "no light" conditions and developed nearsightedness `r tbls("LightRaw",display="cite")`.</li>
+  <li>The percentage of children that slept in "no light" conditions that then developed nearsightedness is `r formatC(row.tbl["no light","Yes"],format="f",digits=1)`% (`r tbls("LightRow",display="cite")`).</li>
+  <li>The percentage of all children that slept with a "lamp" and developed nearsightedness is `r formatC(perc.tbl["lamp","Yes"],format="f",digits=1)`% (`r tbls("LightTot",display="cite")`).</li>
+  <li>The percentage of children that slept with a "night light" that did not develop nearsightedness is `r formatC(row.tbl["night light","No"],format="f",digits=1)`% (`r tbls("LightRow",display="cite")`).</li>
+  <li>The percentage of children that developed nearsightedness that slept with a "lamp" is `r formatC(col.tbl["lamp","Yes"],format="f",digits=1)`% (`r tbls("LightCol",display="cite")`).</li>
+  <li>The percentage of children that developed nearsightedness is `r formatC(perc.tbl["Sum","Yes"],format="f",digits=1)`% (`r tbls("LightTot",display="cite")`).</li>
+  <li>It appears that the percentage of children that developed nearsightedness is greater when the child slept with some sort of light (either a lamp or a night light), with a somewhat greater prevalence of nearsightedness with the lamp (`r tbls("LightRow",display="cite")`).</li>
+</ol>
 
 `r tbls("LightRaw")`
 
@@ -158,24 +166,11 @@ addmargins(tbl)
 addmargins(tbl)
 ```
 
-  <li>The percentage of children that slept in "no light" conditions that then developed nearsightedness is `r formatC(row.tbl["no light","Yes"],format="f",digits=1)`% (`r tbls("LightRow",display="cite")`).</li>
-
 `r tbls("LightRow")`
 
 ```{r echo=FALSE, background="white"}
 row.tbl
 ```
-
-  <li>The percentage of all children that slept with a "lamp" and developed nearsightedness is `r formatC(perc.tbl["lamp","Yes"],format="f",digits=1)`% (`r tbls("LightTot",display="cite")`).</li>
-
-`r tbls("LightTot")`
-
-```{r echo=FALSE, background="white"}
-perc.tbl
-```
-
-  <li>The percentage of children that slept with a "night light" that did not develop nearsightedness is `r formatC(row.tbl["night light","No"],format="f",digits=1)`% (`r tbls("LightRow",display="cite")`).</li>
-  <li>The percentage of children that developed nearsightedness that slept with a "lamp" is `r formatC(col.tbl["lamp","Yes"],format="f",digits=1)`% (`r tbls("LightCol",display="cite")`).</li>
 
 `r tbls("LightCol")`
 
@@ -183,9 +178,11 @@ perc.tbl
 col.tbl
 ```
 
-  <li>The percentage of children that developed nearsightedness is `r formatC(perc.tbl["Sum","Yes"],format="f",digits=1)`% (`r tbls("LightTot",display="cite")`).</li>
-  <li>It appears that the percentage of children that developed nearsightedness is greater when the child slept with some sort of light (either a lamp or a night light), with a somewhat greater prevalence of nearsightedness with the lamp (`r tbls("LightRow",display="cite")`).</li>
-</ol>
+`r tbls("LightTot")`
+
+```{r echo=FALSE, background="white"}
+perc.tbl
+```
 
 R Appendix
 ```{r eval=FALSE, prompt=FALSE}
