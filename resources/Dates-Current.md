@@ -40,7 +40,6 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>F 31-Jan</td>
     <td><a href="../modules/NormalDist">Normal Distributions</a></td></tr>
 <tr><td></td><td></td></tr>
---->
 
 <tr><td>M 3-Feb</td>
     <td><a href="../modules/BEDACat">Bivariate EDA - Categorical</a><br><span style="color:teal;font-weight:bold">DUE: Quiz 1 Reflection (Optional)</span></td></tr>
@@ -49,6 +48,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>F 7-Feb</td>
     <td><a href="../modules/BEDAQuant">Bivariate EDA - Quantitative</a></td></tr>
 <tr><td></td><td></td></tr>
+--->
 
 <tr><td>M 10-Feb</td>
     <td><a href="../modules/LinearRegression">Linear Regression</a></td></tr>
