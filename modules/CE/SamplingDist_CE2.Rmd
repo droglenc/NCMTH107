@@ -24,7 +24,7 @@ source("../../rhelpers/knitr_setup.R")
 
 ----
 
-The Central Limit Theorem (CLT), the specifics of which in your module preparation notes, provides a mechanism for understanding what the sampling distribution of the sample means looks like. In this exercise, you will first identify what the CLT says the shape, center, and dispersion of the sampling distribution of sample means should look like for different sample sizes (n) from he  known population shown below.
+The Central Limit Theorem (CLT), the specifics of which in your module preparation notes, provides a mechanism for understanding what the sampling distribution of the sample means looks like. In this exercise, you will first identify what the CLT says the shape, center, and dispersion of the sampling distribution of sample means should look like for different sample sizes (n) from the known population shown below.
 
 ```{r Sit1, echo=FALSE, fig.width=3.25, fig.height=3, par2=TRUE}
 shape1 <- 6; shape2 <- 2
@@ -46,7 +46,7 @@ par(old.par)
 ```
 
 <ol>
-  <li>What is the shape (normal or not), center (a specific value), and dispersion (a specific value) of the population shown in the plot below? [Note: Put specific symbols on the values for center and disperions.]</li>
+  <li>What is the shape (normal or not), center (a specific value), and dispersion (a specific value) of the population shown in the plot above? [Note: Put specific symbols on the values for center and disperions.]</li>
 <br>
   <li>Now record (in the table below) what would you expect, based on the CLT, the sampling distribution of the sample means to look like for samples of n=10, 25, and 50 taken from this population.</li>
 </ol>
@@ -94,7 +94,7 @@ In RStudio, a gear icon will be in the upper-left corner of this plot that will 
 
 Evidence to support (or not) the CLT can be obtained by comparing what you expected to see (based on the CLT) for the sampling distribution of sample means to what you actually observed in the simulated disributions.
 
-<ol start="4">  
+<ol start="4">
   <li>Did each of your observations (second table) match your expectations (first table)?</li>
   <li>Do your observations on this exercise give you confidence in the CLT? Why or why not?</li>
 </ol>
