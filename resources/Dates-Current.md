@@ -56,7 +56,6 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>F 14-Feb</td>
     <td><span style="color:red;font-weight:bold">Second Quiz</span> (<a href="QuizGuide/quiz2.html">Study Guide</a>)</td></tr>
 <tr><td></td><td></td></tr>
---->
 
 <tr><td>M 17-Feb</td>
     <td><a href="../modules/SamplingDist">Sampling Distributions</a></td></tr>
@@ -65,6 +64,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td>F 21-Feb</td>
     <td><a href="../modules/HypTesting">Hypothesis Testing</a><br><span style="color:teal;font-weight:bold">DUE: Quiz 2 Reflection (Optional)</span></td></tr>
 <tr><td></td><td></td></tr>
+--->
 
 <tr><td>M 24-Feb</td>
     <td><a href="../modules/HypTestingErrs">Hypothesis Testing Errors</a></td></tr>
