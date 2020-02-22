@@ -9,8 +9,8 @@ css: /css/modules.css
 The third Quiz (see [dates page](../Dates-Current)) will cover material from Module 12 (*Sampling Distributions*), Module 13 (*Probability Introduction*), Module 14 (*Hypothesis Testing*), Module 15 (*Hypothesis Testing Errors*), and Module 16 (*Confidence Regions*). Module 17 (*1-Sample Z-Test*) will not be specifically on the quiz (though its concepts will be because it is largely a summary of previous modules). The only R  work that you will need to do is related to using `distrib()` for normal distribution calculations. The portion of the [R Guide](../MTH107-RGuide.pdf) related to `distrib()` will be provided on the quiz. Any material in the module readings and videos (specifically questions on the preparation guides), exercises, or review exercises may be on the quiz.
 
 * [**5%**] Five multiple choice questions. These are primarily definitions or symbols.
-* [**20%**] Four short answer questions (see [this resource](../ShortAnswerQuestions)).
-* [**20%**] Compute probabilities (with a focus on using normal distributions) ... like these [exercises](../../modules/CE/Probability_CE1.html) and [review exercises (section 2)](../../modules/RE/Probability_RevEx.html).
+* [**20%**] Four short answer questions (see 14-21 on [this resource](../ShortAnswerQuestions)).
+* [**20%**] Compute probabilities (with a focus on using normal distributions) ... like these [exercises](../../modules/CE/Probability_CE1.html#pollutants-in-auto-exhaust) and [review exercises (section 2)](../../modules/RE/Probability_RevEx.html).
 * [**6%**] Identify statistical (null and alternative) hypotheses from a research hypothesis ... [like this exercise](../../modules/CE/HypTesting_CE1.html#identifying-hypotheses).
 * [**7%**] Calculate a p-value and make a decision ... [like this](../../modules/CE/HypTesting_CE1.html#p-value-calculations-and-decisions-i) and [this exercise](../../modules/CE/HypTesting_CE2.html#p-value-calculations-and-decisions-ii).
 * [**8%**] Calculate a p-value and make a decision within the context of a problem ... [like this](../../modules/CE/HypTesting_CE1.html#body-temperature) and [this exercise](../../modules/CE/HypTesting_CE1.html#beetle-size) (*but the sample mean will be given to you*).
@@ -28,6 +28,7 @@ The best way to prepare for this quiz is by ...
 1. Reviewing your work on the module exercises. Carefully compare your answers to the answer keys available on each module page, paying close attention to the "notes" in yellow boxes.
 1. Practice more exercises, either in the "more as time permits" links or in the review exercises (many of these are old test questions) for all modules. Focus on questions that are similar to those linked to above.
 1. Study your module preparation guide notes carefully. Augment them by rereading portions of the reading where your notes are poor.
+1. Practice answering the short answer questions on the resource linked to above.
 1. Start practicing early so that if you have questions you can get help from me or from [the tutors](../Syllabus-Current.html#tutors).
 
 Please let me know if you have any questions about this quiz.

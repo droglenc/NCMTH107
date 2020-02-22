@@ -28,7 +28,7 @@ The following is a list of short answer questions that may appear on mid-term qu
 1. Describe each step of the scientific method.
 1. What is the definition of a p-value and how is it used to make a decision about H<sub>0</sub>?
 1. Describe choices that you, as a researcher, can make to decrease the probability of making a Type II error. Which is the best choice to make (statistically) and why?
-1. Describe choices that you, as a researcher, can make to decrease power. Which is the best choice to make (statistically) and why?
+1. Describe choices that you, as a researcher, can make to increase power. Which is the best choice to make (statistically) and why?
 1. Describe choices that you, as a researcher, can make to reduce the margin-of-error. Which is the best choice to make (statistically) and why?
 1. Describe choices that you, as a researcher, can make to make a narrower confidence interval. Which is the best choice to make (statistically) and why?
 1. Specifically describe how you would choose between performing a 1-sample Z-test, 1-sample t-test, 2-sample t-test, chi-square test, and a goodness-of-fit test.

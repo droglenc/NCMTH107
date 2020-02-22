@@ -28,6 +28,7 @@ The best way to prepare for this quiz is by ...
 1. Reviewing your work on the module exercises. Carefully compare your answers to the answer keys available on each module page, paying close attention to the "notes" in yellow boxes.
 1. Practice more exercises, either in the "more as time permits" links or in the review exercises (many of these are old test questions) for all modules. Focus on questions that are similar to those linked to above.
 1. Study your module preparation guide notes carefully. Augment them by rereading portions of the reading where your notes are poor.
+1. Practice answering the short answer questions on the resource linked to above.
 1. Start practicing early so that if you have questions you can get help from me or from [the tutors](../Syllabus-Current.html#tutors).
 
 Please let me know if you have any questions about this quiz.
