@@ -17,7 +17,7 @@ source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
 modHTML_CEKeys("KEY_HypTesting_CE")
 ```
 
-```{r echo=FALSE, results='hide', message=FALSE}
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
 library(NCStats)
 source("../../../rhelpers/knitr_setup.R")
 library(captioner)
@@ -104,7 +104,7 @@ R Appendix.
 <li>The hypotheses must be defined as noted in the first class exercise above.</li>
 <li>The x&#772; is computed with `Summarize()` with the data file loaded into R.</li>
 <li>The summary statement (question 5 in each) is your answer to the research hypothesis/question based on your p-value results. Generally, this is a restatement about whether you believe (i.e., rejected H<sub>0</sub>) or don't believe (i.e., did not reject H<sub>0</sub>) the H<sub>A</sub> because the H<sub>A</sub> is generally formed from the research hypothesis. This statement should be in the context of the problem and should be made clear that it is about the parameter (see "mean" in each statement below) in the population (see "all" in each statement below). </li>
-<li>Your p-value may be slightly (though not dramatically) different if you rounded your x&#772; and SE differently that I did.</li>
+<li>Your p-value may be slightly (though not dramatically) different if you rounded your x&#772; and SE differently than I did.</li>
 </ul>
 </div>
 
