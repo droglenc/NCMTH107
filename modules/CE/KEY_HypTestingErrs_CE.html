@@ -1,0 +1,131 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Hypothesis Testing Errors CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="identifying-type-i-and-ii-errors" class="section level2">
+<h2>Identifying Type I and II Errors</h2>
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+In these two questions, I would first write the H<sub>0</sub> and H<sub>A</sub> as in the last module. I would then write these hypothesis in words relative to the research hypothesis. For example, in the first question, H<sub>0</sub> is that the chicken is not contaminated whereas H<sub>A</sub> is that the chicken is contaminated. I then write the definitions of Type I (H<sub>0</sub> is true, but it is rejected) and Type II (H<sub>0</sub> is false, but is not rejected) errors, but with the wordy meanings of the hypotheses substituted in appropriately.
+</li>
+</ul>
+</div>
+<ol>
+<li>
+The H<sub>0</sub>: μ=15.4 and H<sub>A</sub>: μ&gt;15.4. A Type I error is saying that the chicken is contaminated (rejecting H<sub>0</sub>) when it really is not contaminated (H<sub>0</sub> is true). A Type II error is saying that the chicken is not contaminated (not rejecting H<sub>0</sub>) when it really is contaminated (H<sub>0</sub> is false). In my mind, a Type II error is more egregious as people would be eating contaminated chicken that they have been told is not contaminated.
+</li>
+<li>
+The H<sub>0</sub> is that the drug does not exceed the specification whereas the H<sub>A</sub> is that the drug does exceed the specification. A Type I error occurs if the drug is not bad (H<sub>0</sub> is true) but it is concluded that is bad (rejecting H<sub>0</sub>). A Type II error occurs if the drug is bad (H<sub>0</sub> is false) but it is concluded that the drug is not bad (not rejecting H<sub>0</sub>). In my mind, a Type II error is more egregious as people would be using a “bad” drug that they were told was not bad.
+</li>
+</ol>
+<hr />
+</div>
+<div id="how-to-reduce-β" class="section level2">
+<h2>How to Reduce β</h2>
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+In question 1 below you are asked to prove that the rejection wall is at 97 (within rounding). This requires finding the value of the sample mean that has α “more extreme” (as dictated by the H<sub>A</sub>) on the “null distribution” (sampling distribution assuming that H<sub>0</sub> is true). This is always a reverse calculation and, given this H<sub>A</sub>, is a reverse-left calculation.
+</li>
+<li>
+In question 2 below you are asked to prove that β is 0.137 (within rounding). This requires finding the area in the “Do Not Reject H<sub>0</sub>” region of “actual distribution” (sampling distribution assuming that μ equals the actual mean provided). This is always a forward calculation and always in the opposite direction of the reverse calculation in quation 1; thus, a forward-right calculation in this instance.
+</li>
+</ul>
+</div>
+<ol>
+<li>
+See Figure 1.
+</li>
+<p><img src="KEY_HypTestingErrs_CE_files/figure-html/Pwr1-1.png" width="336" /></p>
+<p>Figure 1: NULL normal distribution representing the rejection region for the power calculation example.</p>
+<li>
+See Figure 2.
+</li>
+<p><img src="KEY_HypTestingErrs_CE_files/figure-html/Pwr2-1.png" width="336" /></p>
+<p>Figure 2: ACTUAL normal distribution representing power in the power calculation example.</p>
+<li>
+Effects on β
+</li>
+<ol>
+<li>
+Increasing α will DEcrease β
+</li>
+<li>
+Increasing n will DEcrease β
+</li>
+<li>
+Increasing σ will INcrease β
+</li>
+<li>
+Increasing how wrong the H<sub>0</sub> is will DEcrease β
+</li>
+</ol>
+<li>
+β may be DEcreased by INcreasing n or INcreasing α.
+</li>
+<li>
+Power may be INcreased by INcreasing n or INcreasing α.
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(0.05,mean=100,sd=10/sqrt(30),type=&quot;q&quot;)
+distrib(96.997,mean=95,sd=10/sqrt(30),lower.tail=FALSE)</code></pre>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
