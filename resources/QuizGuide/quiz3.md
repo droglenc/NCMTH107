@@ -17,7 +17,7 @@ The third Quiz (see [dates page](../Dates-Current)) will cover material from Mod
 * [**4%**] Identify type I and II errors within the context of a problem ... [like this exercise](../../modules/CE/HypTestingErrs_CE.html#identifying-type-i-and-ii-errors).
 * [**4%**] Calculate &beta; or power (like we did in class and [demonstrated on this page](../../modules/Explanations/Calc_Beta)).
 * [**7%**] Calculate and interpret confidence regions ... [like this exercise](../../modules/CE/ConfRegions_CE2.html#confidence-region-calculations).
-* [**8%**] Calculate and interpret confidence regions within the context of a problem ... [like this](../../modules/CE/ConfRegions_CE2.html#body-temperature) and [this exercise](../../modules/CE/ConfRegions_CE2.html#beetle-size) (*but the sample mean will be given to you*). Also make note of [this explanation](../../modules/Explanations/Calc_CI_Z)).
+* [**8%**] Calculate and interpret confidence regions within the context of a problem ... [like this](../../modules/CE/ConfRegions_CE2.html#body-temperature) and [this exercise](../../modules/CE/ConfRegions_CE2.html#beetle-size) (*but the sample mean will be given to you*). Also make note of [this explanation](../../modules/Explanations/Calc_CI_Z).
 * [**5%**] Compute the required sample size ... [like this exercise](../../modules/CE/ConfRegions_CE2.html#internet-usage) and [this explanation](../../modules/Explanations/Calc_n).
 * [**6%**] Construct numbers (groups of means) that illustrate accuracy and precision ... [like this exercise](../../modules/CE/SamplingDist_CE3.html#accuracy-and-precision).
 
