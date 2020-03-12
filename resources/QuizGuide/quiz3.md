@@ -21,7 +21,7 @@ The third Quiz (see [dates page](../Dates-Current)) will cover material from Mod
 * [**5%**] Compute the required sample size ... [like this exercise](../../modules/CE/ConfRegions_CE2.html#internet-usage) and [this explanation](../../modules/Explanations/Calc_n).
 * [**6%**] Construct numbers (groups of means) that illustrate accuracy and precision ... [like this exercise](../../modules/CE/SamplingDist_CE3.html#accuracy-and-precision).
 
-You will need to remember the formulae for computing a confidence region (formula is in Step 4 of [this explanation](../../modules/Explanations/Calc_CI_Z)) and sample size (formula is at the bottom of the first paragraph in [this explanation](../../modules/Explanations/Calc_n)). 
+You will need to remember the formulae for computing a confidence region (formula is in Step 4 of [this explanation](../../modules/Explanations/Calc_CI_Z)) and sample size (formula is at the bottom of the first paragraph in [this explanation](../../modules/Explanations/Calc_n)).
 
 The quiz is closed book, closed notes, etc. **You WILL need a calculator** (you may NOT use the calculator on your phone or the computer) and **you MUST use a pencil** (quizzes written in red ink will not be accepted and will earn a zero). The quiz will begin promptly at 0800 for the first section and 1000 for the second section and must be completed within 1 hour and 50 minutes. Please take care of your personal needs before the quiz so that you do not need to leave the classroom during the quiz (if, for some reason, you do need to leave the classroom, make sure to leave your phone and other devices in the room and let me know that you are leaving the room; failing to do so will earn a zero).
 
