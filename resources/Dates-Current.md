@@ -99,11 +99,11 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td></td><td></td></tr>
 
 <tr><td>23-Mar --<br>27-Mar</td>
-    <td>TBA</tr>
+    <td>TBA</td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>30-Mar<br>3-Apr</td>
-     <td>TBA</tr>
+     <td>TBA</td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>6-Apr<br>10-Apr</td>
