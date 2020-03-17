@@ -14,9 +14,11 @@ Related to: [R/RStudo](#rrstudio-related) / [Other](#other) / [Old](#old)
 ### Installing R and RStudio
 * [How do I install R?](FAQs/installR.html)
 * [How do I install RStudio?](FAQs/installRStudio.html)
+* [How do I install `NCStats`?](FAQs/install-NCStats.html)
+* [How Can I use R/RStudio on the Cloud?](FAQs/RStudioCloud.html)
+* [How Can I use R/RStudio with a ChromeBook?](FAQs/ChromeBook.html)
 
 ### Running R
-* [How do I install `NCStats`?](FAQs/install-NCStats.html)
 * [When I load `NCStats`, R cannot find some other packages.](FAQs/install-other-packages.html)
 * [Why can't R find `NCStats`?](FAQs/cant-find-NCStats.html)
 * [Why is the R prompt a "+" rather than a ">"?](FAQs/plus-prompt.html)
