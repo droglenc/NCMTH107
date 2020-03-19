@@ -99,19 +99,27 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 <tr><td></td><td></td></tr>
 
 <tr><td>23-Mar --<br>27-Mar</td>
-    <td>TBA</td></tr>
+    <td>2-Sample t-Test Prep Check 1 due Tues 11:55pm<br>
+    2-Sample t-Test Prep Check 1 due Fri 11:55pm<br>
+    2-Sample t-Test Exercises due Sun 11:55pm<br>
+    Prep Chi-Square Test for next week<br>
+    See this for more details.</td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>30-Mar<br>3-Apr</td>
-     <td>TBA</td></tr>
+     <td>Chi-Square Test Prep Check 1 due Tues 11:55pm<br>
+    Chi-Square Test Prep Check 1 due Fri 11:55pm<br>
+    Chi-Square Test Exercises due Sun 11:55pm<br>
+    See this for more details.</td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>6-Apr<br>10-Apr</td>
-    <td>TBA</td></tr>
+    <td>Final Take Home Quiz Distributed on Monday<br>
+    Work on Final Quiz</td></tr>
 <tr><td></td><td></td></tr>
 
 <tr><td>13-Apr--<br>15-Apr</td>
-    <td>TBA</td></tr>
+    <td>Work on Final Quiz</td></tr>
 <tr><td>F 17-Apr</td>
     <td><span style="color:red;font-weight:bold">FINAL QUIZ DUE</span></td></tr>
 </table>
