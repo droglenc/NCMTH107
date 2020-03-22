@@ -102,21 +102,23 @@ df <- n1+n2-2
 
 <ol start="6">
   <li>x&#772;<sub>bf</sub>-x&#772;<sub>lp</sub> = `r xbar1`-`r xbar2` = `r stat`.</li>
-  <li>The values for each mean are from the summary table given in <a href="../CEx/2Samplet_CExmpl">the background</a>.
 </ol>
 
 <div class="alert alert-warning">
   <ul>
+  <li>The values for each mean are from the summary table given in <a href="../CEx/2Samplet_CExmpl">the background</a>.</li>
     <li>The "statistic" in a 2-sample t-test will always be the difference in the sample means, calculated in the same way that the difference in population means is shown in the hypotheses (i.e., alphabetically if you used that).</li>
     <li>This statistic will be negative about half the time. That just means that the mean of the first group is less than the mean of the second group.</li>
   </ul>
 </div>
 
+<br>
+
 <div class="alert alert-info">
   <p>The next step requires two intermediate calculations with the following values given in <a href="../CEx/2Samplet_CExmpl">the background</a>.
   <ul>
   <li>n<sub>bf</sub> = `r n1`; n<sub>lp</sub> = `r n2`</li>
-  <li>s<sub>bf</sub> = `r s1`; s<sub>lp</sub> = `r s1`.</li>
+  <li>s<sub>bf</sub> = `r s1`; s<sub>lp</sub> = `r s2`.</li>
   </ul>  
   <p>The intermediate calculations are computed below.</p>
   <ul>
