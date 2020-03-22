@@ -40,7 +40,7 @@ Use the materials below to answer the questions on [this preparation guide](2Sam
 
 ## Practice
 
-* [Class Example](CEx/2Samplet_CExmpl)
+* [Class Example](CEx/2Samplet_CExmpl) ... [ANNOTATED KEY](CE/KEY_2Samplet_CEx) 
 * [Exercise I](CE/2Samplet_CE1) / [Exercise II](CE/2Samplet_CE2) ([*more as time permits*](CE/2Samplet_CE3)) ... [ANSWER KEY](CE/KEY_2Samplet_CE)
 * [Review Exercises](RE/2Samplet_RevEx)
 
