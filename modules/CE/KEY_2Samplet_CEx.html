@@ -18,7 +18,7 @@ css: "/css/modules.css"
 H<sub>A</sub>: μ<sub>bf</sub> - μ<sub>lp</sub> ≠ 0 and H<sub>0</sub>: μ<sub>bf</sub> - μ<sub>lp</sub> = 0, where μ is the mean reduction in LDL, bf is befizal, and lp is lipanthyl.
 </li>
 </ol>
-<div class="alert alert-dark">
+<div class="alert alert-warning">
 <ul>
 <li>
 The hypotheses can also be written as – H<sub>A</sub>: μ<sub>bf</sub> ≠ μ<sub>lp</sub> and H<sub>0</sub>: μ<sub>bf</sub> = μ<sub>lp</sub> – because if two values are thought to be equal then the difference between those values would be equal to 0 and if they are thought to differ than the difference between the two would be diffrent from zero.
@@ -50,7 +50,7 @@ individuals in the groups are independent (there is no known connection between 
 </li>
 </ol>
 </ol>
-<div class="alert alert-dark">
+<div class="alert alert-warning">
 <ul>
 <li>
 These are the three characteristics that separate a 2-sample t-test from other tests we will see this semester.
@@ -71,7 +71,7 @@ If the two groups have different sample sizes (as is the case here) then you aut
 This study is largely experimental because the experimenter decided which individuals received which drug treatment. The subjects were randomly allocated to treatments but were not randomly selected from a larger population.
 </li>
 </ol>
-<div class="alert alert-dark">
+<div class="alert alert-warning">
 <ul>
 <li>
 You will start seeing more “experiments” in the 2-sample tests.
@@ -86,7 +86,7 @@ With experiments (as compared to observational studies) you need to address two 
 The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>bf</sub>+n<sub>lp</sub> = 13+12 = 25 ≥ 15 and the two sample distributions (histograms shown on the handout) are not obviously strongly skewed, and (iii) the variances appear to be equal (Levene’s p-value = 0.8315 &gt; α).
 </li>
 </ol>
-<div class="alert alert-dark">
+<div class="alert alert-warning">
 <ul>
 <li>
 If the combined sample size is less than 30 then you need to assess the skewness of the histograms. As with the 1-sample t-test, this assumption no longer refers to the population distributions.
@@ -99,7 +99,7 @@ In “hand-calculation” questions like this one, you will always be given the 
 </li>
 </ul>
 </div>
-<div class="alert alert-dark">
+<div class="alert alert-warning">
 <p>
 The following steps perform a number of calculations using summary statistics from the table provided on the handout. I have placed those values with their corresponding symbols in the bullets below for convenience. Note that the subscripts correspond to the drug treatments as defined in the hypotheses above.
 </p>
@@ -123,7 +123,7 @@ s<sup>2</sup><sub>bf</sub>=0.134<sup>2</sup>=0.0180; s<sup>2</sup><sub>lp</sub>=
 x̄<sub>bf</sub>-x̄<sub>lp</sub> = 0.278-0.356 = -0.078.
 </li>
 </ol>
-<div class="alert alert-dark">
+<div class="alert alert-warning">
 <ul>
 <li>
 The “statistic” in a 2-sample t-test will always be the difference in the sample means, calculated in the same way that the difference in population means is shown in the hypotheses (i.e., alphabetically if you used that).
@@ -133,7 +133,7 @@ This statistic will be negative about half the time. That just means that the me
 </li>
 </ul>
 </div>
-<div class="alert alert-dark">
+<div class="alert alert-warning">
 <p>
 The next step requires two intermediate calculations as shown below. Note that the values used in these equations were identified above.
 </p>
@@ -164,14 +164,14 @@ Reject H<sub>0</sub> because the p-value &lt; α.
 It appears that the the mean reduction in LDL does NOT differ between subjects given Befizal and those given Lipanthyl. Thus, neither drug should be preferred with respect to reducing the LDL in patients.
 </li>
 </ol>
-<div class="alert alert-dark">
+<div class="alert alert-warning">
 <ul>
 <li>
 For the sake of learning for other examples, if we had rejected the null hypothesis (because the p-values&lt;α) then the initial conclusion would be that the mean LDL did differ between the two drugs. However, we would be able to say more than that because the Lipanthyl drug had a greater mean reduction than the Befizal in the sample. Thus, we would conclude that Lipanthyl works better because it reduced the mean LDL more. Again, this was not the case with this sample, I just put this here to think about might happen in a different example.
 </li>
 </ul>
 </div>
-<div class="alert alert-dark">
+<div class="alert alert-warning">
 <p>
 I performed the following steps or calculations in preparation for the next step.
 </p>
@@ -191,7 +191,7 @@ t<sup>*</sup>=±-2.069 as computed with `distrib(0.025,distrib=“t”,df=23,typ
 <li>
 I am 95% confident that the DIFFERENCE in the mean reduction in LDL from those given befizal to those given lipanthyl is between -0.187 and 0.031. Thus, the mean reduction in LDL for befizal patients could be between -0.031 greater and -0.187 lower than the mean reduction in LDL for lipanthyl patients.
 </ol>
-<div class="alert alert-dark">
+<div class="alert alert-warning">
 <ul>
 <li>
 This step requires the most care in the 2-sample t-test because the confidence region is for the DIFFERENCE in means. This confidence region is NOT about either mean. So please take note of the wording above.
