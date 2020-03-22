@@ -50,7 +50,7 @@ df <- n1+n2-2
 <li>H<sub>A</sub>: &mu;<sub>bf</sub> - &mu;<sub>lp</sub> &ne; 0 and H<sub>0</sub>: &mu;<sub>bf</sub> - &mu;<sub>lp</sub> = 0, where &mu; is the mean reduction in LDL, bf is befizal, and lp is lipanthyl.</li>
 </ol>
 
-<div class="alert alert-info">
+<div class="alert alert-dark">
 <ul>
   <li>The hypotheses can also be written as -- H<sub>A</sub>: &mu;<sub>bf</sub> &ne; &mu;<sub>lp</sub> and H<sub>0</sub>: &mu;<sub>bf</sub> = &mu;<sub>lp</sub> -- because if two values are thought to be equal then the difference between those values would be equal to 0 and if they are thought to differ than the difference between the two would be diffrent from zero.</li>
   <li>I like the subscripts to be meaningful; hence, I used bf and lp here rather than 1 and 2, for example.</li>
@@ -68,7 +68,7 @@ df <- n1+n2-2
   </ol>
 </ol>
 
-<div class="alert alert-info">
+<div class="alert alert-dark">
 <ul>
   <li>These are the three characteristics that separate a 2-sample t-test from other tests we will see this semester.</li>
   <li>Please include some sort of description that shows that the characteristics are met and that you are not just listing the characteristics -- in other words, include the parts in parentheses.</li>
@@ -81,7 +81,7 @@ df <- n1+n2-2
   <li>This study is largely experimental because the experimenter decided which individuals received which drug treatment. The subjects were randomly allocated to treatments but were not randomly selected from a larger population.</li>
 </ol>
 
-<div class="alert alert-info">
+<div class="alert alert-dark">
 <ul>
   <li>You will start seeing more "experiments" in the 2-sample tests.</li>
   <li>With experiments (as compared to observational studies) you need to address two levels of randomization. First, were the individuals randomly selected from a larger popuation. If they were then you CAN make inferences to the larger population; however, if they were not then you cannot. Second, were the individuals randomly allocated to treatments. If they were then you can make cause-and-effect conclusions; however, if not they you cannot. So, in this example the research may draw cause-and-effect conclusions (because of random allocation) but those conclusions may not generalize to the larger population of men (because there was no random selection).</li>
@@ -92,7 +92,7 @@ df <- n1+n2-2
   <li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>bf</sub>+n<sub>lp</sub> = 13+12 = 25 &ge; 15 and the two sample distributions (histograms shown on the handout) are not obviously strongly skewed, and (iii) the variances appear to be equal (Levene's p-value = 0.8315 &gt; &alpha;).</li>
 </ol>  
   
-<div class="alert alert-info">
+<div class="alert alert-dark">
 <ul>
   <li>If the combined sample size is less than 30 then you need to assess the skewness of the histograms. As with the 1-sample t-test, this assumption no longer refers to the population distributions.</li>
   <li>The "equal variances" assumption is assessed with a Levene's Test. The hypotheses for the Levene's test are H<sub>0</sub>: &sigma;<sup>2</sup><sub>bf</sub> = &sigma;<sup>2</sup><sub>lp</sub> (i.e., variances are equal) and H<sub>A</sub>: &sigma;<sup>2</sup><sub>bf</sub> &ne; &sigma;<sup>2</sup><sub>lp</sub> (i.e., variances are unequal). Thus, if the p-value from the Levene's test is greater than &alpha; the variances are considered equal, the assumption is met, and you can continue with the 2-sample t-test.</li>
@@ -100,7 +100,7 @@ df <- n1+n2-2
 </ul>
 </div>
 
-<div class="alert alert-info">
+<div class="alert alert-dark">
 <p>The following steps perform a number of calculations using summary statistics from the table provided on the handout. I have placed those values with their corresponding symbols in the bullets below for convenience. Note that the subscripts correspond to the drug treatments as defined in the hypotheses above.</p>
 <ul>
   <li>n<sub>bf</sub>=`r n1`; n<sub>lp</sub>=`r n2`</li>
@@ -114,14 +114,14 @@ df <- n1+n2-2
   <li>x&#772;<sub>bf</sub>-x&#772;<sub>lp</sub> = `r xbar1`-`r xbar2` = `r stat`.</li>
 </ol>
 
-<div class="alert alert-info">
+<div class="alert alert-dark">
   <ul>
     <li>The "statistic" in a 2-sample t-test will always be the difference in the sample means, calculated in the same way that the difference in population means is shown in the hypotheses (i.e., alphabetically if you used that).</li>
     <li>This statistic will be negative about half the time. That just means that the mean of the first group is less than the mean of the second group.</li>
   </ul>
 </div>
 
-<div class="alert alert-info">
+<div class="alert alert-dark">
   <p>The next step requires two intermediate calculations as shown below. Note that the values used in these equations were identified above.</p>
   <ul>
   <li>The pooled sample variance is `r formatC(sp2,format="f",digits=4)` as computed below.</li>
@@ -146,13 +146,13 @@ df <- n1+n2-2
 <li>It appears that the the mean reduction in LDL does NOT differ between subjects given Befizal and those given Lipanthyl. Thus, neither drug should be preferred with respect to reducing the LDL in patients.</li>
 </ol>
 
-<div class="alert alert-info">
+<div class="alert alert-dark">
   <ul>
     <li>For the sake of learning for other examples, if we had rejected the null hypothesis (because the p-values<&alpha;) then the initial conclusion would be that the mean LDL did differ between the two drugs. However, we would be able to say more than that because the Lipanthyl drug had a greater mean reduction than the Befizal in the sample. Thus, we would conclude that Lipanthyl works better because it reduced the mean LDL more. Again, this was not the case with this sample, I just put this here to think about might happen in a different example.</li>
   </ul>
 </div>
 
-<div class="alert alert-info">
+<div class="alert alert-dark">
 <p>I performed the following steps or calculations in preparation for the next step.</p>
   <ul>
     <li>95% confidence (because &alpha;=0.05)</li>
@@ -166,7 +166,7 @@ df <- n1+n2-2
 <li>I am 95% confident that the DIFFERENCE in the mean reduction in LDL from those given befizal to those given lipanthyl is between `r formatC(ci[1],format="f",digits=3)` and `r formatC(ci[2],format="f",digits=3)`. Thus, the mean reduction in LDL for befizal patients could be between `r formatC(-1*ci[2],format="f",digits=3)` greater and `r formatC(ci[1],format="f",digits=3)` lower than the mean reduction in LDL for lipanthyl patients.
 </ol>
 
-<div class="alert alert-info">
+<div class="alert alert-dark">
 <ul>
   <li>This step requires the most care in the 2-sample t-test because the confidence region is for the DIFFERENCE in means. This confidence region is NOT about either mean. So please take note of the wording above.</li>
   <li>Note that if confidence region contains zero then that means you will not have rejected H<sub>0</sub> as this suggests that it is possible that the DIFFERENCE in means is zero, whih suggests no difference. This will lead to awkward statements like that above where you say that one group be more or it could be less than the other group.</li>
