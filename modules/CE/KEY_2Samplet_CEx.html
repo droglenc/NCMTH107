@@ -15,13 +15,13 @@ css: "/css/modules.css"
 α = 0.05.
 </li>
 <li>
-H<sub>A</sub>: μ<sub>bf</sub>-μ<sub>lp</sub> &amp;neq; 0 and H<sub>0</sub>: μ<sub>bf</sub>-μ<sub>lp</sub> = 0, where μ is the mean reduction in LDL, bf is befizal, and lp is lipanthyl.
+H<sub>A</sub>: μ<sub>bf</sub> - μ<sub>lp</sub> ≠ 0 and H<sub>0</sub>: μ<sub>bf</sub> - μ<sub>lp</sub> = 0, where μ is the mean reduction in LDL, bf is befizal, and lp is lipanthyl.
 </li>
 </ol>
 <div class="alert alert-info">
 <ul>
 <li>
-The hypotheses can also be written as – H<sub>A</sub>: μ<sub>bf</sub>&amp;neq;μ<sub>lp</sub> and H<sub>0</sub>: μ<sub>bf</sub>=μ<sub>lp</sub> – because if two values are thought to be equal then the difference between those values would be equal to 0 and if they are thought to differ than the difference between the two would be diffrent from zero.
+The hypotheses can also be written as – H<sub>A</sub>: μ<sub>bf</sub> ≠ μ<sub>lp</sub> and H<sub>0</sub>: μ<sub>bf</sub> = μ<sub>lp</sub> – because if two values are thought to be equal then the difference between those values would be equal to 0 and if they are thought to differ than the difference between the two would be diffrent from zero.
 </li>
 <li>
 I like the subscripts to be meaningful; hence, I used bf and lp here rather than 1 and 2, for example.
@@ -59,37 +59,40 @@ These are the three characteristics that separate a 2-sample t-test from other t
 Please include some sort of description that shows that the characteristics are met and that you are not just listing the characteristics – in other words, include the parts in parentheses.
 </li>
 <li>
-The independence characteristics is the most difficult to write in my opinion. Basically what you have to describe is that there is not direct connection between individuals in one group and indviduals in the other group. A lack of independence in this example could be that the same people were in both drug groups (think of a before-after study) or that siblings were split into the two groups (so one sibling was always “connected” genetically to their sibling in the other group).
+The independence characteristic is the most difficult to write in my opinion. Basically what you have to describe is that there is no direct connection between individuals in one group and indviduals in the other group. A lack of independence in this example could be that the same people were in both drug groups (think of a before-after study) or that siblings were split into the two groups (so one sibling was always “connected” genetically to their sibling in the other group).
 </li>
 <li>
-If the two groups have different sample sizes (as is the case here) the you automatically know that there is independence because for individuals to be connected there would have to be the same number per group.
+If the two groups have different sample sizes (as is the case here) then you automatically know that there is independence because for individuals to be connected there would have to be the same number per group.
 </li>
 </ul>
 </div>
 <ol start="4">
 <li>
-This study is largely experimental because the experimenter decided which individuals received which drug treatment.
+This study is largely experimental because the experimenter decided which individuals received which drug treatment. The subjects were randomly allocated to treatments but were not randomly selected from a larger population.
 </li>
 </ol>
 <div class="alert alert-info">
 <ul>
 <li>
-This is the same as what you did for the 1-sample tests. However, you will start seeing more “experiments” in the 2-sample tests.
+You will start seeing more “experiments” in the 2-sample tests.
+</li>
+<li>
+With experiments (as compared to observational studies) you need to address two levels of randomization. First, were the individuals randomly selected from a larger popuation. If they were then you CAN make inferences to the larger population; however, if they were not then you cannot. Second, were the individuals randomly allocated to treatments. If they were then you can make cause-and-effect conclusions; however, if not they you cannot. So, in this example the research may draw cause-and-effect conclusions (because of random allocation) but those conclusions may not generalize to the larger population of men (because there was no random selection).
 </li>
 </ul>
 </div>
 <ol start="5">
 <li>
-The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>bf</sub>+n<sub>lp</sub> = 13+12 = 25 &gt; 15 and the two sample distributions (histograms shown on the handout) are not obviously strongly skewed, and (iii) the variances appear to be equal (Levene’s p-value = 0.2414 &gt; α).
+The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>bf</sub>+n<sub>lp</sub> = 13+12 = 25 ≥ 15 and the two sample distributions (histograms shown on the handout) are not obviously strongly skewed, and (iii) the variances appear to be equal (Levene’s p-value = 0.8315 &gt; α).
 </li>
 </ol>
 <div class="alert alert-info">
 <ul>
 <li>
-If the combined sample size is less than 30 then you need to assess the skewness of the histograms. As with the 1-sample t-test, this assumption is no longer refers to the population distributions.
+If the combined sample size is less than 30 then you need to assess the skewness of the histograms. As with the 1-sample t-test, this assumption no longer refers to the population distributions.
 </li>
 <li>
-The “equal variances” assumption is assessed with a Levene’s Test. The hypotheses for the Levene’s test are H<sub>0</sub>: σ<sup>2</sup><sub>bf</sub>=σ<sup>2</sup><sub>lp</sub> (i.e., variances are equal) and H<sub>A</sub>: σ<sup>2</sup><sub>bf</sub>=&amp;neq;σ<sup>2</sup><sub>lp</sub> (i.e., variances are unequal). Thus, if the p-value from the Levene’s test is greater than α the variances are considered equal, the assumption is met, and you can continue with the 2-sample t-test.
+The “equal variances” assumption is assessed with a Levene’s Test. The hypotheses for the Levene’s test are H<sub>0</sub>: σ<sup>2</sup><sub>bf</sub> = σ<sup>2</sup><sub>lp</sub> (i.e., variances are equal) and H<sub>A</sub>: σ<sup>2</sup><sub>bf</sub> ≠ σ<sup>2</sup><sub>lp</sub> (i.e., variances are unequal). Thus, if the p-value from the Levene’s test is greater than α the variances are considered equal, the assumption is met, and you can continue with the 2-sample t-test.
 </li>
 <li>
 In “hand-calculation” questions like this one, you will always be given the Levene’s test p-value (as was done here). You will compute the p-value using R when you have the raw data available (this will be discussed later).
