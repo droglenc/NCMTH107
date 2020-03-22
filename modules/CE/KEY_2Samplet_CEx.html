@@ -8,8 +8,8 @@ css: "/css/modules.css"
 
 
 <hr />
-<div id="compost-type-and-germination-rates" class="section level2">
-<h2>Compost Type and Germination Rates</h2>
+<div id="cholesterol-drug-treatments-i" class="section level2">
+<h2>Cholesterol Drug Treatments I</h2>
 <ol>
 <li>
 α = 0.05.
@@ -136,37 +136,38 @@ The intermediate calculations are computed below.
 <li>
 The pooled sample variance is 0.0172 as computed below.
 </li>
-<p><span class="math display">\[s_{p}^{2}=\frac{(n_{1}-1)s_{1}^{2}+(n_{2}-1)s_{2}^{2}}{n_{1}+n_{1}-2} \]</span></p>
+<p><span class="math display">\[s_{p}^{2}=\frac{(n_{bf}-1)s_{bf}^{2}+(n_{lp}-1)s_{lp}^{2}}{n_{bf}+n_{lp}-2} \]</span></p>
 <p><span class="math display">\[s_{p}^{2}=\frac{(13-1)0.134^{2}+(12-1)0.128^{2}}{13+12-2} \]</span></p>
 <li>
 The standard error of the statistic is 0.053 as computed below.
 </li>
-<p><span class="math display">\[ SE_{\bar{x}_{1}-\bar{x}_{2}}=\sqrt{s_{p}^{2}\left(\frac{1}{n_{1}}+\frac{1}{n_{2}} \right)}  \]</span></p>
+<p><span class="math display">\[ SE_{\bar{x}_{bf}-\bar{x}_{lp}}=\sqrt{s_{p}^{2}\left(\frac{1}{n_{bf}}+\frac{1}{n_{lp}} \right)}  \]</span></p>
 <span class="math display">\[ SE_{\bar{x}_{bf}-\bar{x}_{lp}}=\sqrt{0.0172\left(\frac{1}{13}+\frac{1}{12} \right)}  \]</span>
 </ul>
 </div>
 <ol start="7">
 <li>
-With the intermediate calculations from above t = <span class="math inline">\(\frac{(\bar{x}_{bf}-\bar{x}_{lp})-0}{SE_{\bar{x}_{bf}-\bar{x}_{lp}}}\)</span> = <span class="math inline">\(\frac{-0.078-0}{0.053}\)</span>=-1.485 with n<sub>bf</sub>+n<sub>lp</sub>-2 = 13+12-2 = 23 df.
+With the intermediate calculations from above t = <span class="math inline">\(\frac{(\bar{x}_{bf} - \bar{x}_{lp})-0}{SE_{\bar{x}_{bf}-\bar{x}_{lp}}}\)</span> = <span class="math inline">\(\frac{-0.078 - 0}{0.053}\)</span> = -1.485 with n<sub>bf</sub>+n<sub>lp</sub>-2 = 13+12-2 = 23 df.
 </li>
 <li>
-p-value0.0756 (more specifically 0.07556) as computed with <code>2*distrib(-1.485,distrib="t",df=23)</code>.
+p-value=0.1511 as computed with <code>2*distrib(-1.485,distrib="t",df=23)</code>.
 </li>
 <li>
 Reject H<sub>0</sub> because the p-value &lt; α.
 </li>
 <li>
-It appears that the the mean reduction in LDL does NOT differ between subjects given Befizal and those given Lipanthyl. Thus, neither drug should be preferred with respect to reducing the LDL in patients.
+It appears that the mean reduction in LDL does NOT differ between subjects given Befizal and those given Lipanthyl. Thus, neither drug should be preferred with respect to reducing the LDL in patients.
 </li>
 </ol>
 <div class="alert alert-warning">
 <ul>
 <li>
-For the sake of learning for other examples, if we had rejected the null hypothesis (because the p-values&lt;α) then the initial conclusion would be that the mean LDL did differ between the two drugs. However, we would be able to say more than that because the Lipanthyl drug had a greater mean reduction than the Befizal in the sample. Thus, we would conclude that Lipanthyl works better because it reduced the mean LDL more. Again, this was not the case with this sample, I just put this here to think about might happen in a different example.
+For the sake of learning for other examples, if we had rejected the null hypothesis (because the p-value&lt;α) then the initial conclusion would be that the mean LDL did differ between the two drugs. However, we would be able to say more than that because the lipanthyl drug had a greater mean reduction than the befizal in the sample. Thus, we would conclude that lipanthyl works better because it reduced the mean LDL more. Again, this was not the case with this sample, I just put this here to think about might happen in a different example.
 </li>
 </ul>
 </div>
-<div class="alert alert-warning">
+<p><br></p>
+<div class="alert alert-info">
 <p>
 I performed the following steps or calculations in preparation for the next step.
 </p>
@@ -177,14 +178,14 @@ I performed the following steps or calculations in preparation for the next step
 <li>
 Confidence interval because H<sub>A</sub> was “not equals.”
 <li>
-t<sup>*</sup>=±-2.069 as computed with `distrib(0.025,distrib=“t”,df=23,type=“q”).
+t<sup>*</sup>=±2.069 as computed with <code>distrib(0.025,distrib="t",df=23,type="q")</code>.
 <li>
--0.078±-2.069*0.053 (where -0.078 is from Step 6 and 0.053 is the SE computed for Step 7).
+-0.078±2.069*0.053 (where -0.078 is from Step 6 and 0.053 is the SE computed for Step 7).
 </ul>
 </div>
 <ol start="11">
 <li>
-I am 95% confident that the DIFFERENCE in the mean reduction in LDL from those given befizal to those given lipanthyl is between -0.187 and 0.031. Thus, the mean reduction in LDL for befizal patients could be between -0.031 greater and -0.187 lower than the mean reduction in LDL for lipanthyl patients.
+I am 95% confident that the DIFFERENCE in the mean reduction in LDL from those given befizal to those given lipanthyl is between -0.187 and 0.031. Thus, the mean reduction in LDL for befizal patients could be between 0.031 greater and 0.187 lower than the mean reduction in LDL for lipanthyl patients.
 </ol>
 <div class="alert alert-warning">
 <ul>
@@ -199,6 +200,49 @@ Make sure you are careful about how the DIFFERENCE was calculated. In this case 
 </li>
 </ul>
 </div>
+<hr />
+</div>
+<div id="cholesterol-drug-treatments-ii" class="section level2">
+<h2>Cholesterol Drug Treatments II</h2>
+<p>All of the calculations required for Steps 5, 6, 7, and 11 may be computed in R if the raw data are available. The raw data for this example were linked to in the backgroud. Note, however, that the data only had the before and after the drug LDL levels for each patient and not the reduction in LDL. Thus, a reduction in LDL variable had to be computed at shown below. This will not be done for most situations.</p>
+<pre class="r"><code>&gt; dfobj &lt;- read.csv(&quot;https://raw.githubusercontent.com/droglenc/NCData/master/Cholesterol2.csv&quot;)
+&gt; dfobj$redux &lt;- dfobj$before-dfobj$after
+&gt; str(dfobj)</code></pre>
+<pre><code>&#39;data.frame&#39;:   25 obs. of  4 variables:
+ $ before: num  2.98 2.7 2.6 2.94 2.55 2.92 2.94 2.94 2.5 3.41 ...
+ $ after : num  2.63 2.43 2.34 2.41 2.28 2.44 2.45 2.44 2.26 2.96 ...
+ $ tx    : Factor w/ 2 levels &quot;Befizal&quot;,&quot;Lipanthyl&quot;: 2 2 2 2 2 2 2 2 2 2 ...
+ $ redux : num  0.35 0.27 0.26 0.53 0.27 ...</code></pre>
+<p>Another important note is that the data must be “stacked” in order to perform the analyses in R. This means that the data for one group must be stacked below the data for the other group, which will require a variable to explain which group the values correspond to. Fortunately this conforms to our mantra that each row must contain data from only one individual. The first three and last three rows for these data illustrate the stacked format.</p>
+<pre class="r"><code>&gt; headtail(dfobj)</code></pre>
+<pre><code>   before after        tx redux
+1    2.98  2.63 Lipanthyl  0.35
+2    2.70  2.43 Lipanthyl  0.27
+3    2.60  2.34 Lipanthyl  0.26
+23   2.62  2.43   Befizal  0.19
+24   2.99  2.64   Befizal  0.35
+25   2.63  2.45   Befizal  0.18</code></pre>
+<p>The Levene’s test result is computed with <code>levenesTest()</code> with a formula of the form <code>qvar~cvar</code>, where <code>qvar</code> is the quantitative response variable and <code>cvar</code> is the categoral variable that describes the groups. Of course, the <code>data=</code> argument is also needed. The p-value is shown under the <code>Pr(&gt;F)</code> heading. See how this matches the result in Step 5 of the 11 steps above.</p>
+<pre class="r"><code>&gt; levenesTest(redux~tx,data=dfobj)</code></pre>
+<pre><code>Levene&#39;s Test for Homogeneity of Variance (center = median)
+      Df F value Pr(&gt;F)
+group  1  0.0463 0.8315
+      23               </code></pre>
+<p>The histogram of the response variable for each group may be needed for Step 4 (as above) and is easily computed as below (which you have done before).</p>
+<pre class="r"><code>&gt; hist(redux~tx,data=dfobj,xlab=&quot;Reduction in LDL&quot;)</code></pre>
+<p><img src="KEY_2Samplet_CEx_files/figure-html/unnamed-chunk-6-1.png" width="576" /></p>
+<p>Finally, most of the calculations for Steps 6, 7, 8, and 11 are computed with <code>t.test()</code> using the same formula and <code>data=</code> argument as for <code>levenesTest()</code>. If the variances are found to be equal then you MUST also include <code>var.equal=TRUE</code>. Finally, you should include the null hypothesized value in <code>mu=</code> (will always be zero for 2-sample t-test), the alternative hypotheseis sign in <code>alt=</code>, and the confidence level in <code>conf.level=</code> as you have done with the 1-sample Z- and t-tests.</p>
+<pre class="r"><code>&gt; t.test(redux~tx,data=dfobj,mu=0,alt=&quot;two.sided&quot;,conf.level=0.95,var.equal=TRUE)</code></pre>
+<pre><code> Two Sample t-test with redux by tx 
+t = -1.4885, df = 23, p-value = 0.1502
+alternative hypothesis: true difference in means is not equal to 0 
+95 percent confidence interval:
+ -0.18673806  0.03045601 
+sample estimates:
+  mean in group Befizal mean in group Lipanthyl 
+              0.2776923               0.3558333 </code></pre>
+<p>From this output one can see * The two sample means for Step 6 at the very bottom of the output. * The t test statistics for Step 7 after “t=”, with the corresponding degrees-of-freedom after “df=”. Note that when you use <code>t.test()</code> like this you do not need to worry about computing the pooled sample variance or the standard error like was done before Step 7 above. * The p-value is after “p-value=” (and, thus, you do not need to use <code>distrib()</code>). * The confidence region values are under “XX percent confidence interval”. Note that you do not need to find t<sup>*</sup> nor perform the calculations as they are done here for you. You simply need to write the interpretation.</p>
+<p>Note that you will complete all 11 steps when you have the raw data, but you should use <code>t.test()</code> as shown here to perform all of the hard calculations for you.</p>
 <hr />
 </div>
 
