@@ -100,18 +100,9 @@ df <- n1+n2-2
 </ul>
 </div>
 
-<div class="alert alert-warning">
-<p>The following steps perform a number of calculations using summary statistics from the table provided on the handout. I have placed those values with their corresponding symbols in the bullets below for convenience. Note that the subscripts correspond to the drug treatments as defined in the hypotheses above.</p>
-<ul>
-  <li>n<sub>bf</sub>=`r n1`; n<sub>lp</sub>=`r n2`</li>
-  <li>x&#772;<sub>bf</sub>=`r xbar1`; x&#772;<sub>lp</sub>=`r xbar2`</li>
-  <li>s<sub>bf</sub>=`r s1`; s<sub>lp</sub>=`r s1`.</li>
-  <li>s<sup>2</sup><sub>bf</sub>=`r s1`<sup>2</sup>=`r formatC(s1^2,format="f",digits=4)`; s<sup>2</sup><sub>lp</sub>=`r s1`<sup>2</sup>=`r formatC(s2^2,format="f",digits=4)`</li>
-</ul>
-</div>
-
 <ol start="6">
   <li>x&#772;<sub>bf</sub>-x&#772;<sub>lp</sub> = `r xbar1`-`r xbar2` = `r stat`.</li>
+  <li>The values for each mean are from the summary table given in <a href="../CEx/2Samplet_CExmpl">the background</a>.
 </ol>
 
 <div class="alert alert-warning">
@@ -121,8 +112,13 @@ df <- n1+n2-2
   </ul>
 </div>
 
-<div class="alert alert-warning">
-  <p>The next step requires two intermediate calculations as shown below. Note that the values used in these equations were identified above.</p>
+<div class="alert alert-info">
+  <p>The next step requires two intermediate calculations with the following values given in <a href="../CEx/2Samplet_CExmpl">the background</a>.
+  <ul>
+  <li>n<sub>bf</sub> = `r n1`; n<sub>lp</sub> = `r n2`</li>
+  <li>s<sub>bf</sub> = `r s1`; s<sub>lp</sub> = `r s1`.</li>
+  </ul>  
+  <p>The intermediate calculations are computed below.</p>
   <ul>
   <li>The pooled sample variance is `r formatC(sp2,format="f",digits=4)` as computed below.</li>
 
@@ -137,7 +133,6 @@ df <- n1+n2-2
 \[ SE_{\bar{x}_{bf}-\bar{x}_{lp}}=\sqrt{0.0172\left(\frac{1}{13}+\frac{1}{12} \right)}  \]
   </ul>
 </div>
-
 
 <ol start="7">
   <li>With the intermediate calculations from above t = $\frac{(\bar{x}_{bf}-\bar{x}_{lp})-0}{SE_{\bar{x}_{bf}-\bar{x}_{lp}}}$ = $\frac{-0.078-0}{0.053}$=`r formatC(t,format="f",digits=3)` with n<sub>bf</sub>+n<sub>lp</sub>-2 = 13+12-2 = `r df` df.</li>
