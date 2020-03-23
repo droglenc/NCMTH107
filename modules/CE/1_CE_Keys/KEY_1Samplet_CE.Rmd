@@ -94,6 +94,7 @@ distrib(0.9,df=49,type="q",lower.tail=FALSE,distrib="t")
 <li>When computing the t in Step 7, the numerator is always x&#772; minus the specific value in H<sub>0</sub> from Step 2.</li>
 <li>The p-value in this example is shaded to the left of the t from Step 7 and the result from `distrib()` is multiplied by 2 because the H<sub>A</sub> is a not equals. If the t had been positive you would have shaded to the right and then muliplied by 2. When the H<sub>A</sub> is a not equals you always shaded into the tail nearest t and multiply the `distrib()` result by 2.</li>
 <li>In Steps 10 and 11 don't say &mu;. Rather replace it with &mu; means. See how those steps below say "mean CFU for ALL 100 ml of water" rather than just &mu;.</li>
+<li>Also in Step 10 you can be more specific then saying that the mean CFL differs from 178. Because the x&#772; is less than what was hypothesized you can say that the mean CFL differs from 178 by being less than 178. So, even though you strictly only tested for a difference in this not equal situation, you can be more specific with your statement in Step 10.</li>
 <li>You values may differ slightly from mine as I calculate everything in R that holds many decimal places on intermediate values.</li>
 </ul>
 </div>
@@ -135,7 +136,7 @@ R Appendix.
 <div class="alert alert-warning">
 <strong>Note:</strong> 
 <ul>
-<li>The value in the `mu=` argument is the specific value that appears in H<sub>0</sub> in Step 2. It is NOT the value of x&#772; from Step 6..</li>
+<li>The value in the `mu=` argument is the specific value that appears in H<sub>0</sub> in Step 2. It is NOT the value of x&#772; from Step 6.</li>
 </ul>
 </div>
 
