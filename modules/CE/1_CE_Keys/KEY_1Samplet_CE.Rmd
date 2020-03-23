@@ -90,12 +90,13 @@ distrib(0.9,df=49,type="q",lower.tail=FALSE,distrib="t")
 <ul>
 <li>Make sure to describe your evidence in Step 3 for why you are performing a 1-sample t-test. It is not adequate to simply say "because there is a quantitative response variable, only one group is being tested, and sigma is unknown." At least say what the response variable is and what the one groups is.</li>
 <li>Also make sure to describe your evidence in Step 5 for why the assumptions are met. It is not adequate to simply say "n&ge;40" or "n&ge;15 and the sample distribution is not strongly skewed." You should state the actual n and direct the reader to how you know the distribution is not strongly skewed (i.e., likely a histogram).</li>
-<li>In hand calculations, note that the test statistic (t in Step 7) is NOT the critical value (i.e., t<sup>*</sup>) needed for the confidence region (in Step 11).</li>
+<li>In hand calculations, note that the test statistic (t in Step 7) is NOT the critical value (i.e., t<sup>*</sup>) needed for the confidence region (in Step 11). The t you calculate in Step 7 has nothing to do with the t<sup>*</sup> you will find in Step 11.</li>
+<li>When computing the t in Step 7, the numerator is always x&#772; minus the specific value in H<sub>0</sub> from Step 2.</li>
+<li>The p-value in this example is shaded to the left of the t from Step 7 and the result from `distrib()` is multiplied by 2 because the H<sub>A</sub> is a not equals. If the t had been positive you would have shaded to the right and then muliplied by 2. When the H<sub>A</sub> is a not equals you always shaded into the tail nearest t and multiply the `distrib()` result by 2.</li>
+<li>In Steps 10 and 11 don't say &mu;. Rather replace it with &mu; means. See how those steps below say "mean CFU for ALL 100 ml of water" rather than just &mu;.</li>
 <li>You values may differ slightly from mine as I calculate everything in R that holds many decimal places on intermediate values.</li>
 </ul>
 </div>
-
-----
 
 ## Fecal Coliform Counts I
 
@@ -121,7 +122,7 @@ se <- s/sqrt(n)
 <li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
 <li>Reject H<sub>0</sub> because the p-value<&alpha;.</li>
 <li>It appears that the mean CFU per ALL 100 ml of water sampled from this lake on this date is less than what the computer model predicted.</li>
-<li>One can be 95% confident that the mean CFU per ALL 100 ml of water sampled from this lake on this date is between $168.19-2.064\frac{22.20}{\sqrt{25}}$=`r formatC(ci[1],format="f",digits=0)` and $168.19+2.064\frac{22.20}{\sqrt{25}}$=`r formatC(ci[2],format="f",digits=0)`, which further indicates that the mean CFU is less than 178.</li>
+<li>One can be 95% confident that the mean CFU per ALL 100 ml of water sampled from this lake on this date is between 168.19-2.064$\frac{22.20}{\sqrt{25}}$=`r formatC(ci[1],format="f",digits=0)` and 168.19+2.064$\frac{22.20}{\sqrt{25}}$=`r formatC(ci[2],format="f",digits=0)`, which further indicates that the mean CFU per ALL 100 ml of water is less than 178.</li>
 </ol>
 
 R Appendix.
@@ -130,6 +131,13 @@ R Appendix.
 ```
 
 ----
+
+<div class="alert alert-warning">
+<strong>Note:</strong> 
+<ul>
+<li>The value in the `mu=` argument is the specific value that appears in H<sub>0</sub> in Step 2. It is NOT the value of x&#772; from Step 6..</li>
+</ul>
+</div>
 
 ## Fecal Coliform Counts II
 
