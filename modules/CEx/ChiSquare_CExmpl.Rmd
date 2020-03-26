@@ -19,21 +19,28 @@ modHTML("ChiSquare_CExmpl")
 
 ----
 
-## Lake Superior Predator Diets
-<img src="http://derekogle.com/NCMTH107/modules/CEx/zimgs/BellyFull72.jpg" alt="Lake Trout Diet" class="img-right">
+## Recycling in Two Communities I
+<img src="http://derekogle.com/NCMTH107/modules/CEx/zimgs/recycling.jpg" alt="Recycling Bottles" class="img-right">
 
-When [Chinook Salmon (*Oncorhynchus tshawytscha*)](https://dnr.wi.gov/topic/fishing/documents/species/chinooksalmon.pdf) were first introduced to Lake Superior there was concern that they would compete with native [Lake Trout (*Salvelinus namaycush*)](https://dnr.wi.gov/topic/fishing/documents/species/laketrout.pdf) for [Cisco (*Coregonus artedi*)](https://dnr.wi.gov/topic/EndangeredResources/Animals.asp?mode=detail&SpecCode=AFCHA01020). Preliminarily, fisheries biologists classified the diets of 50 Lake Trout and 40 Chinook Salmon as containing Cisco or not. They found 36 Lake Trout and 24 Chinook Salmon contained Cisco. Test, at the 10% level, if there is a difference in the proportion of Lake Trout and Chinook Salmon that had Cisco. Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../11-steps.html).
+In the early 1990s, recycling of household waste was not a prevalent as it is today and the availability of infrastructure for recycling varied substantially among communities. At this time, Minneapolis, MN had provided extensive opportunities for residents to recycle household waste, whereas Des Moines (IA) had not yet provided many of these opportunities. [Augustinack (1992)](https://lib.dr.iastate.edu/cgi/viewcontent.cgi?article=17920&context=rtd) examined differences in behavior and attitudes towards recycling among residents from these two cities. In one part of her study, she wanted to determine if methods for disposing of "plastic containers" differed between the two cities. She considered three broad categories of disposal -- "recycle", "reuse", or "throw-away." The results of her study are shown below.
+
+| City        | Recycle | Reuse | Throw-away |
+|-------------|:-------:|:-----:|:----------:|
+| Des Moines  |    26   |   37  |     19     |
+| Minneapolis |    81   |   10  |      6     |
+
+Use these results to test at the 1% level that the distribution of residents into the disposal categories differs between the two cities. Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../11-steps.html).
 
 ----
 
-## Lake Superior Predator Diets II
+## Recycling in Two Communities II
 
-The results from the previous study were recorded in LSPredDiet.csv ([file](https://raw.githubusercontent.com/droglenc/NCData/master/LSPredDiet.csv), [meta](https://github.com/droglenc/NCData/blob/master/LSPredDiet_meta.txt)). Use these data and `chisq.test()` to confirm your calculations in the previous exercise. 
+The results from the previous study were recorded in PlasticRecycling.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/PlasticRecycling.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/PlasticRecycling_meta.txt)). Use these data and `chisq.test()` to confirm your calculations in the previous exercise. 
 
 ```{r echo=FALSE, results='hide'}
 library(NCStats)
-d <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/LSPredDiet.csv")
-obs <- xtabs(~cisco+pred,data=d)
+d <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/PlasticRecycling.csv")
+( obs <- xtabs(~city+method2,data=d) )
 chi1 <- chisq.test(obs,correct=FALSE)
 chi1$expected
 chi1
