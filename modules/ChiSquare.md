@@ -43,7 +43,7 @@ Use the materials below to answer the questions on [this preparation guide](ChiS
 
 ## Practice
 
-* [Class Example](CEx/ChiSquare_CExmpl) ../[Annotated Key](CE/KEY_ChiSquare_CEx)
+* [Class Example](CEx/ChiSquare_CExmpl) ... [Annotated Key](CE/KEY_ChiSquare_CEx)
 * [Exercise I](CE/ChiSquare_CE1) / [Exercise II](CE/ChiSquare_CE2) ([*more as time permits*](CE/ChiSquare_CE3)) ... [ANSWER KEY](CE/KEY_ChiSquare_CE)
 * [Review Exercises](RE/ChiSquare_RevEx)
 
