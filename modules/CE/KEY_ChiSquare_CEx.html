@@ -184,7 +184,7 @@ The df is the number of rows (2) minus 1 times the number of columns (3) minus 1
 </div>
 <ol start="8">
 <li>
-p-value=&lt;0.00005 (more specifically 1.668e-11) as computed with <code>distrib(49.634,distrib="chisq",df=2,lower.tail=FALSE)</code>.
+p-value&lt;0.00005 (more specifically 1.668e-11) as computed with <code>distrib(49.634,distrib="chisq",df=2,lower.tail=FALSE)</code>.
 </li>
 </ol>
 <div class="alert alert-warning">
@@ -199,7 +199,7 @@ When computing the p-value on a chi-square distribution it will always be a “r
 Reject H<sub>0</sub> because the p-value &lt; α.
 </li>
 <li>
-It appears that there is a difference between cities in the distribution of residents into the disposal categories. A comparison of the observed and expected tables suggests that a higher percentage of residents in Minneapolis recycled than residents in Des Moines.
+It appears that there is a difference between cities in the distribution of residents into the disposal categories. A comparison of the observed and expected tables suggests that a higher percentage of residents in Minneapolis recycled than did residents in Des Moines.
 </li>
 </ol>
 <div class="alert alert-warning">
@@ -232,7 +232,7 @@ There is not usually a Step 11 for a Chi-square test. We will not ever do a Step
 177 Minneapolis    reuse   reuse
 178 Minneapolis    reuse   reuse
 179 Minneapolis    reuse   reuse</code></pre>
-<p>The primary R function for this analysis is <code>chisq.test()</code>. However, it requires an observed frequenc table as its first argument, which must then be calclated first with <code>xtabs()</code> as you did in the Bivariate EDA - Categorical module (remember that the row variale comes first). The <code>chisq.test()</code> also requires the <code>correct=FALSE</code> so that an unneeded correction factor is not applied.</p>
+<p>The primary R function for this analysis is <code>chisq.test()</code>. However, it requires an observed frequency table as its first argument, which must be calculated first with <code>xtabs()</code> as you did in the Bivariate EDA - Categorical module (remember that the row variable comes first). The <code>chisq.test()</code> also requires <code>correct=FALSE</code> so that an unneeded correction factor is not applied.</p>
 <pre class="r"><code>&gt; ( obs &lt;- xtabs(~city+method2,data=dfobj) )</code></pre>
 <pre><code>             method2
 city          recycle reuse throw-away

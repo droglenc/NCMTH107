@@ -128,7 +128,7 @@ chi1$residuals^2
 </div>
 
 <ol start="8">
-  <li>p-value=`r kPvalue(distrib(49.634,distrib="chisq",df=2,lower.tail=FALSE),include.p=FALSE,latex=FALSE)` (more specifically `r formatC(pchisq(49.634,lower.tail=FALSE,df=2),digits=3,format="e")`) as computed with `distrib(49.634,distrib="chisq",df=2,lower.tail=FALSE)`.</li>
+  <li>p-value`r kPvalue(distrib(49.634,distrib="chisq",df=2,lower.tail=FALSE),include.p=FALSE,latex=FALSE)` (more specifically `r formatC(pchisq(49.634,lower.tail=FALSE,df=2),digits=3,format="e")`) as computed with `distrib(49.634,distrib="chisq",df=2,lower.tail=FALSE)`.</li>
 </ol>
 
 <div class="alert alert-warning">
@@ -139,7 +139,7 @@ chi1$residuals^2
 
 <ol start="8">
 <li>Reject H<sub>0</sub> because the p-value &lt; &alpha;.</li>
-<li>It appears that there is a difference between cities in the distribution of residents into the disposal categories. A comparison of the observed and expected tables suggests that a higher percentage of residents in Minneapolis recycled than residents in Des Moines.</li>
+<li>It appears that there is a difference between cities in the distribution of residents into the disposal categories. A comparison of the observed and expected tables suggests that a higher percentage of residents in Minneapolis recycled than did residents in Des Moines.</li>
 </ol>
 
 <div class="alert alert-warning">
@@ -162,7 +162,7 @@ str(dfobj)
 headtail(dfobj)
 ```
 
-The primary R function for this analysis is `chisq.test()`. However, it requires an observed frequenc table as its first argument, which must then be calclated first with `xtabs()` as you did in the Bivariate EDA - Categorical module (remember that the row variale comes first). The `chisq.test()` also requires the `correct=FALSE` so that an unneeded correction factor is not applied.
+The primary R function for this analysis is `chisq.test()`. However, it requires an observed frequency table as its first argument, which must be calculated first with `xtabs()` as you did in the Bivariate EDA - Categorical module (remember that the row variable comes first). The `chisq.test()` also requires `correct=FALSE` so that an unneeded correction factor is not applied.
 
 ```{r}
 ( obs <- xtabs(~city+method2,data=dfobj) )
