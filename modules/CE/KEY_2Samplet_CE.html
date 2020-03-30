@@ -30,6 +30,9 @@ Also make sure to describe your evidence in Step 5 for why the assumptions are m
 In hand calculations, note that the test statistic (t in Step 7) is NOT the critical value (i.e., t<sup>*</sup>) needed for the confidence region (in Step 11).
 </li>
 <li>
+If your p-value is greater that about 0.7, especially if it is very close to 1, then it very likely is NOT correct. The most common reason for this is that you shaded the wrong way (e.g., you included <code>lower.tail=FALSE</code> when you should not have, or vice versa). The only exception to this general rule is for Levene’s Test, which often has fairly large p-values.
+</li>
+<li>
 Note the use of “mean” in both Steps 10 and 11. The test is for mean number of plants that germinated, not number of plants that germinated.
 </li>
 <li>
