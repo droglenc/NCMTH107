@@ -56,6 +56,8 @@ tbls(name="ForestPercTable","Row percentage table for time since last fire by st
 <li>When testing the assumptions (Step 5), make sure to explicitly say that there are more than five in each cell of the expected table. It is not adequate to simply make the expected table.</li>
 <li>In hand-calculation questions (e.g., hurricanes) make sure to put `lower.tail=FALSE` in `distrib()` when calculating the p-value (Step 8) in a chi-square problem. This is true for EVERY chi-square problem.</li>
 <li>You values may differ slightly from mine as I calculate everything in R that holds many decimal places on intermediate values.</li>
+<li>If you have raw data (as in the pupularity and polls exercises, then use `chisq.test()` to perform all of the required calculations. There should not be any need to do extra work outside of R when you have the raw data.</li>
+<li>When using `xtabs()` to prepare the observed table for `chisq.test()`, you don't need to worry about using `factor()` with `levels=` unless you want to change the order of the levels. In fact, that is never needed as the chi-square values will be the same no matter the order of the levels.</li>
 </ul>
 </div>
 
