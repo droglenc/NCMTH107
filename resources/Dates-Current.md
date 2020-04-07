@@ -104,7 +104,6 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
     Prep Chi-Square Test for next week<br>
     <a href="https://piazza.com/class/k4e7p1e4tbw3k6?cid=50" target="_blank">See this for more details</a>.</td></tr>
 <tr><td></td><td></td></tr>
---->
 
 <tr><td>30-Mar<br>3-Apr</td>
      <td>Chi-Square Test Prep Check 1 due Tues 11:55pm<br>
@@ -112,6 +111,7 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
     Chi-Square Test Exercises due Sunday 11:59pm<br>
     <a href="https://piazza.com/class/k4e7p1e4tbw3k6?cid=60" target="_blank">See this for more details</a></td></tr>
 <tr><td></td><td></td></tr>
+--->
 
 <tr><td>6-Apr<br>10-Apr</td>
     <td>Final Take Home Quiz distributed on Monday<br>
