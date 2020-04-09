@@ -215,7 +215,7 @@ chi1
 ```
 
 <li>p-value=`r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("EdmResults",display="cite")`).</li>
-<li>Do not reject H<sub>0</sub> because the p-value&gt;&alpha;.</li>
+<li>Reject H<sub>0</sub> because the p-value&lt;&alpha;.</li>
 <li>It appears that the distributions of levels of agreement does differ by political party affiliation. Analysis of the row percentage table (`r tbls("EdmPercTable",display="cite")`) suggests that respondents affiliated with the Progressive Conservative party generally more strongly agreed with the statement about unions and unemployment.</li>
 
 `r tbls("EdmPercTable")`
