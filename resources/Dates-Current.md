@@ -111,13 +111,13 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
     Chi-Square Test Exercises due Sunday 11:59pm<br>
     <a href="https://piazza.com/class/k4e7p1e4tbw3k6?cid=60" target="_blank">See this for more details</a></td></tr>
 <tr><td></td><td></td></tr>
---->
 
 <tr><td>6-Apr<br>10-Apr</td>
     <td>Final Take Home Quiz distributed on Monday<br>
     Work on Final Quiz<br>
     <a href="https://piazza.com/class/k4e7p1e4tbw3k6?cid=69" target="_blank">See this for more details</a></td></tr>
 <tr><td></td><td></td></tr>
+--->
 
 <tr><td>13-Apr--<br>15-Apr</td>
     <td>Work on Final Quiz</td></tr>
