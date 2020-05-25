@@ -3,14 +3,14 @@ layout: page
 title: Learning Modules
 ---
 
-<ol type="A">
-  <li>Foundations</li>
+<ul style="list-style-type= none;">
+  <li><b>Foundations</b></li>
     <ol type="1" start="1">
       <li><a href="WhyStats.html">Why Statistics is Important</a></li>
       <li><a href="FoundationalDefns.html">Foundational Definitions</a></li>
       <li><a href="DataProduction.html">Data Production</a></li>
     </ol>
-  <li>Exploratory Data Analysis</li>
+  <li><b>Exploratory Data Analysis</b></li>
     <ol type="1" start="4">
       <li><a href="SumVar1.html">Summaries for One Variable</a></li>
       <li><a href="UnivEda.html">Univariate EDA</a></li>
@@ -19,7 +19,7 @@ title: Learning Modules
       <li><a href="BEDAQuant.html">Bivariate EDA - Quantitative</a></li>
       <li><a href="LinearRegression.html">Linear Regression</a></li>
     </ol>
-  <li>Inference Theory</li>
+  <li><b>Inference Theory</b></li>
     <ol type="1" start="10">
       <li><a href="SamplingDist.html">Sampling Distributions</a></li>
       <li><a href="Probability.html">Probability Introduction</a></li>
@@ -27,7 +27,7 @@ title: Learning Modules
       <li><a href="HypTestingErrs.html">Hypothesis Testing Errors</a></li>
       <li><a href="ConfRegions.html">Confidence Regions</a></li>
     </ol>
-  <li>Inference Methods</li>
+  <li><b>Inference Methods</b></li>
     <ol type="1" start="15">
       <li><a href="1SampleZ.html">1-Sample Z-Test</a></li>
       <li><a href="1Samplet.html">1-Sample t-Test</a></li>
@@ -35,7 +35,7 @@ title: Learning Modules
       <li><a href="ChiSquare.html">Chi-Square Test</a></li>
       <li><a href="GOFTest.html">Goodness-of-Fit Test</a></li>
     </ol>
-  <li>Using R</li>
+  <li><b>Using R</b></li>
     <ol type="1" start="20">
       <li><a href="RData.html">Getting Data Into R</a></li>
       <li><a href="RFilter.html">Filtering Data In R</a></li>
