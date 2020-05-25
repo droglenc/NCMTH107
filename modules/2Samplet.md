@@ -30,7 +30,7 @@ css: /css/modules.css
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](2Samplet_Prep).
+Use the materials below to answer the questions on [this preparation guide](Prep/2Samplet).
 
 * [![PDF](../img/pdf.png) Reading](../book/2-Sample t-Test.pdf)
 * [![Vimeo](../img/dhovid.png) 2-Sample t-Test Example](https://vimeo.com/user45324800/t2test-ex1){:target="_blank"} [22 mins] [![PowerPoint](../img/ppt.png)](PPT/2Samplet_PPT.pptx)

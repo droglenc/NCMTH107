@@ -1,0 +1,58 @@
+---
+layout: page
+title: Bivariate EDA - Quantitative
+css: /css/modules.css
+---
+
+<div class="panel-group-ILOs">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">
+        <a data-toggle="collapse" href="#ILOs">Learning Outcomes <small>(click to see)</small></a>
+      </h2>
+    </div>
+    <div id="ILOs" class="panel-collapse collapse">
+      <div class="panel-body">
+It is important to understand the relationship between two variables.  With quantitative data, this primarily consists of using a scatterplot and the correlation coefficient to describe four key characteristics of the relationship.  This module describes how to use a scatterplot and correlation coefficient to provide a synthetic description of the relationship between two quantitative variables.
+
+<p>After completing this module, you should be able to ...</p>
+
+<ol>
+  <li>Describe bivariate data.</li>
+  <li>Distinguish between response and explanatory variables.</li>
+  <li>Construct a scatterplot with R.</li>
+  <li>Know when it is appropriate to calculation a correlation coefficient.</li>
+  <li>Calculate a correlation coefficient with R.</li>
+  <li>Construct a succinct written summary that addresses the four key characteristics (form, direction, outliers, and strength) of the relationship between two quantitative variables.</li>
+</ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+----
+
+## Preparation for Class
+
+Use the materials below to answer the questions on [this preparation guide](BEDAQuant_Prep).
+
+* [![PDF](../img/pdf.png) Reading](../book/Bivariate EDA - Quantitative.pdf)
+* [![YouTube Link](../img/youtube.png) Construct a Scatterplot](https://www.youtube.com/watch?v=yXmz922K9Ks){:target="_blank"} [7 mins]
+* [![YouTube Link](../img/youtube.png) What is the Correlation?](https://www.youtube.com/watch?v=PtYVrF_WT3A){:target="_blank"} [8 mins; *start at 0:32*]
+* [![Vimeo](../img/dhovid.png) Bivariate EDA (Quantitative) in R](https://vimeo.com/user45324800/biveda-quant){:target="_blank"} [8 mins] [![Web](../img/web.png)](HO/BEDAQuant_RHO.html){:target="_blank"} [![R](../img/Rlogo.png)](HO/BEDAQuant_RHO.R){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) Interpeting a Bivariate EDA (Quantitative)](https://vimeo.com/user45324800/beda-quantsum){:target="_blank"} [10 mins] [![PowerPoint](../img/ppt.png)](PPT/BEDAQuant_PPT.pptx)
+
+----
+
+## Practice
+
+* [Exercises](CE/BEDAQuant_CE1) ([*more as time permits*](CE/BEDAQuant_CE2)) ... [ANSWER KEY](CE/KEY_BEDAQuant_CE)
+* Review Exercises: [Definitions and Calculations](RE/BEDAQuant_RevEx_Defns) / [EDA](RE/BEDAQuant_RevEx_EDA)
+
+----
+
+## Archived Materials
+
+* [Old Lecture Slides](PPT/BEDAQuant_PPT_old.pptx)
+
+----

@@ -35,7 +35,7 @@ One of the most common things in statistics is to describe the linear relationsh
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](LinearRegression_Prep).
+Use the materials below to answer the questions on [this preparation guide](Prep/LinearRegression).
 
 * [![PDF](../img/pdf.png) Reading](../book/Linear Regression.pdf)
 * ![YouTube Link](../img/youtube.png) Response and Explanatory Variables:  [A](https://www.youtube.com/watch?v=bokeTCH2aJY){:target="_blank"} [*between 1:00 and 2:28*] **AND** [B](https://www.youtube.com/watch?v=bokeTCH2aJY?rel=0&start=378){:target="_blank"} [*stop at 6:18*]

@@ -30,7 +30,7 @@ Decisions about statistical hypotheses are subject to being incorrect because of
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](HypTestingErrs_Prep.html).
+Use the materials below to answer the questions on [this preparation guide](Prep/HypTestingErrs).
 
 * [![PDF](../img/pdf.png) Reading](../book/Hypothesis Test Errors.pdf).
 * ![YouTube Link](../img/youtube.png) Statistical Error Types: [A](https://www.youtube.com/watch?v=7mE-K_w1v90){:target="_blank"} [8 mins] **AND** [B](https://www.youtube.com/watch?v=OWn3Ko1WYTA){:target="_blank"} [*between 1:29 and 4:07*]

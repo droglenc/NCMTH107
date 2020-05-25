@@ -30,7 +30,7 @@ The simplest hypothesis test occurs when one is making a claim that the populati
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](1SampleZ_Prep).
+Use the materials below to answer the questions on [this preparation guide](Prep/1SampleZ).
 
 * [![PDF](../img/pdf.png) Reading](../book/1-Sample Z-Test.pdf)
 * [![Vimeo](../img/dhovid.png) 11 Steps for Any Hypothesis Test](https://vimeo.com/user45324800/hotest-11steps){:target="_blank"} [5 mins] [![PowerPoint](../img/ppt.png)](PPT/1SampleZ_PPT1.pptx)

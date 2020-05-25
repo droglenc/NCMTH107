@@ -29,7 +29,7 @@ css: /css/modules.css
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](ChiSquare_Prep).
+Use the materials below to answer the questions on [this preparation guide](Prep/ChiSquare).
 
 * [![PDF](../img/pdf.png) Reading](../book/Chi-Square Test.pdf)
 * [![Vimeo](../img/dhovid.png) Chi-Square Distribution](https://vimeo.com/user45324800/chisqdist){:target="_blank"} [4 mins] [![PowerPoint](../img/ppt.png)](PPT/ChiSquare_PPT1.pptx)

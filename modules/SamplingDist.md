@@ -39,7 +39,7 @@ Sampling distributions show the distribution of a statistic from all possible sa
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](SamplingDist_Prep).
+Use the materials below to answer the questions on [this preparation guide](Prep/SamplingDist).
 
 * [![PDF](../img/pdf.png) Reading](../book/Sampling Distributions.pdf)
 * [![Vimeo](../img/dhovid.png) Introduction to Sampling Distributions I](https://vimeo.com/user45324800/smplngd-intro){:target="_blank"} [9 mins] [![PowerPoint](../img/ppt.png)](PPT/SamplingDist_PPT.pptx)

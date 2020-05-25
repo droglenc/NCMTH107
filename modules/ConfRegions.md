@@ -31,7 +31,7 @@ A major goal of inferential statistics is to estimate the value of a parameter f
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](ConfRegions_Prep).
+Use the materials below to answer the questions on [this preparation guide](Prep/ConfRegions).
 
 * [![PDF](../img/pdf.png) Reading](../book/Confidence Regions.pdf)
 * [![YouTube Link](../img/youtube.png) Introduction to Confidence Intervals](https://www.youtube.com/watch?v=27iSnzss2wM){:target="_blank"} [7 mins]

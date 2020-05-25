@@ -29,7 +29,7 @@ css: /css/modules.css
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](GOFTest_Prep).
+Use the materials below to answer the questions on [this preparation guide](Prep/GOFTest).
 
 * [![PDF](../img/pdf.png) Reading](../book/Goodness-of-Fit.pdf)
 * [![Vimeo](../img/dhovid.png) Goodness-of-Fit Test Example](https://vimeo.com/user45324800/goftest-ex1){:target="_blank"} [8 mins] [![PowerPoint](../img/ppt.png)](PPT/GOFTest_PPT.pptx)
