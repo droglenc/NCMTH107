@@ -88,34 +88,33 @@ The tabel below was modified from the previous section to show the number of rep
 
 The key to examining the benefits of the multi-factor experiment is to determine the number of individuals that give ``information'' about (i.e., are exposed to) each factor. From the last table it is seen that all 120 individuals were exposed to one of the temperature levels with 60 individuals exposed to each level. In contrast, only 30 individuals were exposed to these levels in the single-factor experiment. In addition, all 120 individuals were exposed to one of the relative humidity levels with 30 individuals exposed to each level. Again, this is in contrast to the single-factor experiment where only 15 individuals were exposed to these levels. Thus, the first advantage of multi-factor experiments is that the available individuals are used more efficiently. In other words, more ``information'' (i.e., the responses of more individuals) is obtained from a multi-factor experiment than from combinations of single-factor experiments.\footnote{The real importance of this advantage will become apparent when statistical power is introduced in \modref{chap:HypothesisTests}.}
 
-A properly designed multi-factor experiment also allows researchers to determine if multiple factors interact to impact an individual's response.\index{Interaction effect} For example, consider the hypothetical results from this experiment in \figref{fig:ExpDInt}.\footnote{The means of each treatment are plotted and connected with lines in this plot.} The effect of relative humidity is to increase the growth rate for those individuals at $10^{o}$C (black line) but to decrease the growth rate for those individuals at $15^{o}$C (blue line). That is, the effect of relative humidity differs depending on the level of temperature. When the effect of one factor differs depending on the level of the other factor, then the two factors are said to \textit{interact}. Interactions cannot be determined from the two single-factor experiments because the same individuals are not exposed to levels of the two factors at the same time.
+A properly designed multi-factor experiment also allows researchers to determine if multiple factors interact to impact an individual's response.\index{Interaction effect} For example, consider the hypothetical results from this experiment in \figref{fig:ExpDInt}-Left.\footnote{The means of each treatment are plotted and connected with lines in this plot.} The effect of relative humidity is to increase the growth rate for those individuals at $10^{o}$C (black line) but to decrease the growth rate for those individuals at $15^{o}$C (blue line). That is, the effect of relative humidity differs depending on the level of temperature. When the effect of one factor differs depending on the level of the other factor, then the two factors are said to \textit{interact}. Interactions cannot be determined from the two single-factor experiments because the same individuals are not exposed to levels of the two factors at the same time.
 
-<<ExpDInt, echo=FALSE, fig.cap="Mean growth rates in a two-factor experiment that depict an interaction effect.">>=
-par(mar=c(3.5,2.5,1,1),mgp=c(2,0.75,0))
-growth <- c(0.2,0.35,0.75,1.0,1,0.8,0.4,0.25)
-temp <- factor(c(10,10,10,10,15,15,15,15))
-relhum <- factor(c(20,40,60,80,20,40,60,80))
-plot(growth[1:4]~as.numeric(levels(relhum[1:4])),type="b",xlab="Relative Humidity (%)",ylab="",xaxt="n",yaxt="n",lwd=2,pch=19,ylim=c(0.1,1))
-points(growth[5:8]~as.numeric(levels(relhum[5:8])),type="b",lwd=2,pch=19,col="blue")
-mtext("Growth Rate",2,line=1)
-axis(1,at=as.numeric(levels(relhum)),labels=levels(relhum))
-legend("right",legend=c("10C","15C"),col=c("black","blue"),pch=19,lwd=2,cex=0.9,bty="n")
+<<ExpDInt, echo=FALSE, fig.width=7,fig.height=3.5,out.width='.8\\linewidth', fig.cap="Mean growth rates in a two-factor experiment that depict an interaction effect (left) and no interaction effect (right).">>=
+df <- data.frame(interaction=factor(rep(c("Interaction","No Interaction"),each=8)),
+                 growth=c(0.2,0.35,0.75,1.0,1,0.8,0.4,0.25,
+                          0.2,0.35,0.75,1.0,0.15,0.3,0.65,0.95),
+                 temp=factor(paste0(rep(c(10,10,10,10,15,15,15,15),2),"C")),
+                 relhum=factor(paste0(rep(c(20,40,60,80,20,40,60,80),2),"%"))
+)
+ggplot(data=df,mapping=aes(x=relhum,y=growth,color=temp)) +
+  geom_line(aes(group=temp),size=1.5) +
+  geom_point(pch=21,fill="gray90",size=2) +
+  scale_color_manual(values=c("black","blue")) +
+  facet_wrap(vars(interaction)) +
+  labs(x="Relative Humidity",
+       y="Growth Rate",
+       color=NULL) +
+  theme_bw() +
+  theme(panel.grid=element_blank(),
+        strip.text=element_text(face="bold"),
+        axis.title.x=element_text(margin=margin(t=3,unit="mm")),
+        axis.title.y=element_text(margin=margin(r=3,unit="mm")),
+        legend.position=c(0.9,0.2))
 @
-\vspace{9pt} % added because of paragraph compressions following R code
+\vspace{9pt} % added because of paragraph compression following R code
 
-Multi-factor experiments are used to detect the presence or absence of interaction, not just the presence of it. The hypothetical results in \figref{fig:ExpDNoInt} show that the growth rate increases with increasing relative humidity at about the same rate for both temperatures. Thus, because the effect of relative humidity is the same for each temperature (and vice versa), there does not appear to be an interaction between the two factors. Again, this could not be determined from the separate single-factor experiments.
-
-<<ExpDNoInt, echo=FALSE, fig.cap="Mean growth rates in a two-factor experiment that depict no interaction effect.">>=
-par(mar=c(3.5,2.5,1,1),mgp=c(2,0.75,0))
-growth <- c(0.2,0.35,0.75,1.0,0.15,0.3,0.65,0.95)
-temp <- factor(c(10,10,10,10,15,15,15,15))
-relhum <- factor(c(20,40,60,80,20,40,60,80))
-plot(growth[1:4]~as.numeric(levels(relhum[1:4])),type="b",xlab="Relative Humidity (%)",ylab="",xaxt="n",yaxt="n",lwd=2,pch=19,ylim=c(0.1,1))
-points(growth[5:8]~as.numeric(levels(relhum[5:8])),type="b",lwd=2,pch=19,col="blue")
-mtext("Growth Rate",2,line=1)
-axis(1,at=as.numeric(levels(relhum)),labels=levels(relhum))
-legend("right",legend=c("10C","15C"),col=c("black","blue"),pch=19,lwd=2,cex=0.9,bty="n")
-@
+Multi-factor experiments are used to detect the presence or absence of interaction, not just the presence of it. The hypothetical results in \figref{fig:ExpDInt}-Right show that the growth rate increases with increasing relative humidity at about the same rate for both temperatures. Thus, because the effect of relative humidity is the same for each temperature (and vice versa), there does not appear to be an interaction between the two factors. Again, this could not be determined from the separate single-factor experiments.
 
 
 \subsection{Allocating Individuals}
@@ -131,21 +130,26 @@ ragars1 <- sample(120)
 <<eval=FALSE>>=
 sample(120)
 @
-\vspace{-12pt}
+\vspace{-13pt}
 <<echo=FALSE>>=
 ragars1
 @
 
-Thus, the first five (of 60) agars in the 10$^{o}$C treatment are \Sexpr{ragars1[1]}, \Sexpr{ragars1[2]}, \Sexpr{ragars1[3]}, \Sexpr{ragars1[4]}, and \Sexpr{ragars1[5]}. The first five (of 60) agars in the 15$^{o}$C treatment are \Sexpr{ragars1[61]}, \Sexpr{ragars1[62]}, \Sexpr{ragars1[63]}, \Sexpr{ragars1[64]}, and \Sexpr{ragars1[65]}.
-
-In the modified experiment with two factors -- temperature and relative humidity -- with eight treatments containing 15 agars each, it is more efficient to save the random numbers into an object and then select the numbers in the first 15 positions, then the second 15 positions, etc. Positions are selected from an object by putting the position numbers in square brackets following the object name. Additionally, a colon is used to make a sequence of integers from the number before to the number after the colon.\footnote{For example, \R{1:4} will make an object with the numbers 1, 2, 3, and 4 in it.}
-<<>>=
+Thus, the first five (of 60) agars in the 10$^{o}$C treatment are \Sexpr{ragars1[1]}, \Sexpr{ragars1[2]}, \Sexpr{ragars1[3]}, \Sexpr{ragars1[4]}, and \Sexpr{ragars1[5]}. The first five (of 60) agars in the 15$^{o}$C treatment are \Sexpr{ragars1[61]}, \Sexpr{ragars1[62]}, \Sexpr{ragars1[63]}, \Sexpr{ragars1[64]}, and \Sexpr{ragars1[65]}. In the modified experiment with two factors -- temperature and relative humidity -- with eight treatments containing 15 agars each, the random numbers would be divided into 8 groups each with 15 numbers.
+<<echo=FALSE>>=
 ragars2 <- sample(120)
-ragars2[1:15]     # "grab" the first 15 numbers
-ragars2[16:30]    # "grab" the second 15 numbers, and so on
+@
+<<eval=FALSE>>=
+sample(120)
+@
+\vspace{-13pt}
+<<echo=FALSE>>=
+ragars2
 @
 
-This design might be shown with the following table, where the numbers in each cell represent the first two agars selected to receive that treatment.\footnote{Only the first two numbers are shown because of space constraints.}
+This design might be shown with the following table, where the numbers in each cell represent the first two agars selected to receive that treatment (only the first two are shown because of space constraints).
+
+\vspace{-9pt}
 
 \begin{center}
 \begin{tabular}{cc|c|c|c}

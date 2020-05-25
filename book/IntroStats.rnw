@@ -43,7 +43,7 @@ opts_knit$set(child.command='input')
 ## Turn off highlighting and darken box a bit
 opts_chunk$set(highlight=FALSE,background=c(235,235,235)/255)
 ## Make sure that the required packages are loaded
-rqrd <- c("NCStats","FSAdata","dplyr","gplots","mvtnorm","TeachingDemos","xtable")
+rqrd <- c("NCStats","FSAdata","dplyr","gplots","mvtnorm","TeachingDemos","xtable","ggplot2","patchwork")
 for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
 @
 
@@ -57,43 +57,43 @@ for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
 @
 <<child-DataProd, child='DataProd.Rnw', eval=TRUE>>=
 @
-<<child-GettingDataIntoR, child='GettingDataIntoR.Rnw', eval=TRUE>>=
+<<child-UnivEDACat, child='UnivEDACat.Rnw', eval=FALSE>>=
 @
-<<child-UnivEDACat, child='UnivEDACat.Rnw', eval=TRUE>>=
+<<child-UnivEDAQuant1, child='UnivEDAQuant1.Rnw', eval=FALSE>>=
 @
-<<child-UnivEDAQuant1, child='UnivEDAQuant1.Rnw', eval=TRUE>>=
+<<child-UnivEDAQuant2, child='UnivEDAQuant2.Rnw', eval=FALSE>>=
 @
-<<child-UnivEDAQuant2, child='UnivEDAQuant2.Rnw', eval=TRUE>>=
+<<child-NormDist, child='NormDist.Rnw', eval=FALSE>>=
 @
-<<child-NormDist, child='NormDist.Rnw', eval=TRUE>>=
+<<child-BivEDACat, child='BivEDACat.Rnw', eval=FALSE>>=
 @
-<<child-BivEDACat, child='BivEDACat.Rnw', eval=TRUE>>=
+<<child-BivEDAQuant, child='BivEDAQuant.Rnw', eval=FALSE>>=
 @
-<<child-BivEDAQuant, child='BivEDAQuant.Rnw', eval=TRUE>>=
+<<child-LinearRegression, child='LinearRegression.Rnw', eval=FALSE>>=
 @
-<<child-LinearRegression, child='LinearRegression.Rnw', eval=TRUE>>=
+<<child-SamplingDist, child='SamplingDist.Rnw', eval=FALSE>>=
 @
-<<child-SamplingDist, child='SamplingDist.Rnw', eval=TRUE>>=
+<<child-Probability, child='Probability.Rnw', eval=FALSE>>=
 @
-<<child-Probability, child='Probability.Rnw', eval=TRUE>>=
+<<child-HypothesisTests, child='HypothesisTests.Rnw', eval=FALSE>>=
 @
-<<child-HypothesisTests, child='HypothesisTests.Rnw', eval=TRUE>>=
+<<child-HypothesisTestsErrors, child='HypothesisTestsErrors.Rnw', eval=FALSE>>=
 @
-<<child-HypothesisTestsErrors, child='HypothesisTestsErrors.Rnw', eval=TRUE>>=
+<<child-ConfidenceRegions, child='ConfidenceRegions.Rnw', eval=FALSE>>=
 @
-<<child-ConfidenceRegions, child='ConfidenceRegions.Rnw', eval=TRUE>>=
+<<child-ZTest, child='ZTest.Rnw', eval=FALSE>>=
 @
-<<child-ZTest, child='ZTest.Rnw', eval=TRUE>>=
+<<child-tTest1, child='tTest1.Rnw', eval=FALSE>>=
 @
-<<child-tTest1, child='tTest1.Rnw', eval=TRUE>>=
+<<child-tTest2, child='tTest2.Rnw', eval=FALSE>>=
 @
-<<child-tTest2, child='tTest2.Rnw', eval=TRUE>>=
+<<child-ChiSquare, child='chiSquare.Rnw', eval=FALSE>>=
 @
-<<child-ChiSquare, child='chiSquare.Rnw', eval=TRUE>>=
+<<child-GOF, child='GoodnessOfFit.Rnw', eval=FALSE>>=
 @
-<<child-GOF, child='GoodnessOfFit.Rnw', eval=TRUE>>=
+<<child-GettingDataIntoR, child='GettingDataIntoR.Rnw', eval=FALSE>>=
 @
-<<child-FilteringDataInR, child='FilteringDataInR.Rnw', eval=TRUE>>=
+<<child-FilteringDataInR, child='FilteringDataInR.Rnw', eval=FALSE>>=
 @
 
 %    \cleardoublepage

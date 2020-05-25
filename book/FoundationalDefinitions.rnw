@@ -11,18 +11,36 @@ set_parent('IntroStats.Rnw')
 
 The following hypothetical example is used throughout this module. Assume that we are interested in the average length of 1015 fish in Square Lake. To illustrate important concepts in this module, assume that all information for all 1015 fish in this lake is known \figrefp{fig:SquareLakePopn}. In ``real life'' this complete information would not be known.
 
-<<SquareLakePopn, echo=FALSE, fig.cap="Schematic representation of individual fish (i.e., dots; \\textbf{Left}) and histogram (\\textbf{Right}) of the total length of the 1015 fish in Square Lake.">>=
+<<SquareLakePopn, echo=FALSE, fig.width=7,fig.height=3.5,out.width='.8\\linewidth', fig.cap="Schematic representation of individual fish (i.e., dots; \\textbf{Left}) and histogram (\\textbf{Right}) of the total length of the 1015 fish in Square Lake.">>=
 data(SquareLakePopn)
 N <- nrow(SquareLakePopn)
-xlbl <- "Total Length"
-ylbl <- "Frequency of Fish"
 clr1 <- "gray20"
 clr2 <- col2rgbt(clr1,1/7)
 hwid <- 20
 xlmt <- c(40,220)
 SL <- mutate(SquareLakePopn,i=1:N,x=runif(N),y=runif(N))
-plot(y~x,data=SL,pch=21,col=clr1,bg=clr2,xlab="",ylab="",xaxt="n",yaxt="n")
-hist(~tl,data=SL,xlab=xlbl,ylab=ylbl,w=hwid,xlim=xlmt)
+
+SLpop <- ggplot(data=SL,mapping=aes(x=x,y=y)) +
+  geom_point(pch=21,col=clr1,fill=clr2) +
+  scale_x_continuous(expand=expansion(mult=0.005)) +
+  scale_y_continuous(expand=expansion(mult=0.005)) +
+  labs(x=NULL,y=NULL) +
+  theme_bw() +
+  theme(panel.grid=element_blank(),
+        axis.text=element_blank(),
+        axis.ticks=element_blank())
+
+SLhist <- ggplot(data=data.frame(SL),mapping=aes(x=tl)) +
+  geom_histogram(color="gray10",fill="gray80",
+                 closed="left",boundary=0,binwidth=hwid) +
+  scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
+  scale_x_continuous(expand=expansion(mult=0.02)) +
+  coord_cartesian(xlim=xlmt) +
+  labs(x="Total Length",y="Frequency of Fish") +
+  theme_bw() +
+  theme(panel.grid=element_blank())
+
+SLpop+SLhist
 @
 
 \section{Definitions} \label{sect:IVPPSS}
@@ -43,12 +61,16 @@ print(sl.x,caption.placement="top",hline.after=c(0,nrow(sl.x)),include.rownames=
 
 The entire population cannot be ``seen'' in real life. Thus, to learn something about the population, a subset of the population is usually examined. This subset is called a \textbf{sample}.\index{Sample!Definition} The red dots in \figref{fig:SquareLakeSample1} represent a random sample of n=50 fish from Square Lake (note that the sample size is usually denoted by n).
 
-<<SquareLakeSample1, echo=FALSE, fig.cap="Schematic representation (\\textbf{Left}) of a sample of 50 fish (i.e., red dots) from Square Lake and histogram (\\textbf{Right}) of the total length of the 50 fish in this sample.">>=
+<<SquareLakeSample1, echo=FALSE, fig.width=7,fig.height=3.5,out.width='.8\\linewidth', fig.cap="Schematic representation (\\textbf{Left}) of a sample of 50 fish (i.e., red dots) from Square Lake and histogram (\\textbf{Right}) of the total length of the 50 fish in this sample.">>=
 set.seed(1)
 SL1 <- srsdf(SL,n=50)
-plot(y~x,data=SL,pch=21,col=clr1,bg=clr2,xlab="",ylab="",xaxt="n",yaxt="n")
-points(y~x,data=SL1,pch=21,col=clr1,bg="red")
-hist(~tl,data=SL1,xlab=xlbl,ylab=ylbl,w=hwid,col=col2rgbt("red",0.5),xlim=xlmt)
+
+SLpop1 <- SLpop + geom_point(data=SL1,color="red")
+SLhist1 <- SLhist %+% SL1 +
+    geom_histogram(color="gray10",fill="red",alpha=0.65,
+                   closed="left",boundary=0,binwidth=hwid)
+
+SLpop1+SLhist1
 @
 
 Summaries computed from individuals in a sample are called \textbf{statistics}.\index{Statistic!Definition}  Specific names of statistics are preceded by ``sample.''  The statistic of interest is always the same as the parameter of interest; i.e., the statistic describes the sample in the same way that the parameter describes the population. For example, if interest is in the population mean, then the sample mean would be computed.
@@ -126,20 +148,19 @@ Again, note that the individual is very carefully defined (including stating a s
 \subsection{Sampling Variability (Revisited)}
 It is instructive to once again (see \modref{chap:WhyStatsImportant}) consider how statistics differ among samples. \tabref{tab:SquareLakeSample234} and \figref{fig:SquareLakeSample234} show results from three more samples of n=50 fish from the Square Lake population. The means from all four samples (including the sample in \tabref{tab:SquareLakeSample1} and \figref{fig:SquareLakeSample1}) were quite different from the known population mean of 98.06 mm. Similarly, all four histograms were similar in appearance but slightly different in actual values. These results illustrate that a statistic (or sample) will only approximate the parameter (or population) and that statistics vary among samples. This \textbf{sampling variability} is one of the most important concepts in statistics and is discussed in great detail beginning in \modref{chap:SamplingDist}.\index{Sampling Variability!Definition}
 
-<<SquareLakeSample234, echo=FALSE, fig.width=5, fig.height=7.5, out.width='.7\\linewidth', fig.cap="Schematic representation (\\textbf{Left}) of three samples of 50 fish (i.e., red dots) from Square Lake and histograms (\\textbf{Right}) of the total length of the 50 fish in each sample.">>=
+<<SquareLakeSample234, echo=FALSE, fig.width=7, fig.height=10.5, out.width='.8\\linewidth', fig.cap="Schematic representation (\\textbf{Left}) of three samples of 50 fish (i.e., red dots) from Square Lake and histograms (\\textbf{Right}) of the total length of the 50 fish in each sample.">>=
 set.seed(2); SL2 <- SL[sample(SL$i,50),]
 set.seed(3); SL3 <- SL[sample(SL$i,50),]
 set.seed(4); SL4 <- SL[sample(SL$i,50),]
-par(mar=c(3.5,3.5,0.5,0.5),mgp=c(2.1,0.4,0),mfcol=c(3,2))
-plot(y~x,data=SL,pch=21,col=clr1,bg=clr2,xlab="",ylab="",xaxt="n",yaxt="n")
-points(y~x,data=SL2,pch=21,col=clr1,bg="red")
-plot(y~x,data=SL,pch=21,col=clr1,bg=clr2,xlab="",ylab="",xaxt="n",yaxt="n")
-points(y~x,data=SL3,pch=21,col=clr1,bg="red")
-plot(y~x,data=SL,pch=21,col=clr1,bg=clr2,xlab="",ylab="",xaxt="n",yaxt="n")
-points(y~x,data=SL4,pch=21,col=clr1,bg="red")
-hist(~tl,data=SL2,xlab=xlbl,ylab=ylbl,w=hwid,col=col2rgbt("red",0.5),xlim=xlmt)
-hist(~tl,data=SL3,xlab=xlbl,ylab=ylbl,w=hwid,col=col2rgbt("red",0.5),xlim=xlmt)
-hist(~tl,data=SL4,xlab=xlbl,ylab=ylbl,w=hwid,col=col2rgbt("red",0.5),xlim=xlmt)
+
+SLpop2 <- SLpop + geom_point(data=SL2,color="red")
+SLhist2 <- SLhist1 %+% SL2
+SLpop3 <- SLpop + geom_point(data=SL3,color="red")
+SLhist3 <- SLhist1 %+% SL3
+SLpop4 <- SLpop + geom_point(data=SL4,color="red")
+SLhist4 <- SLhist1 %+% SL4
+
+(SLpop2+SLhist2) / (SLpop3+SLhist3) / (SLpop4+SLhist4)
 @
 
 <<SquareLakeSample234s, results="asis", echo=FALSE >>=
@@ -167,22 +188,27 @@ The type of statistic that can be calculated is dictated by the type of variable
 There are two main groups of variable types -- quantitative and categorical \figrefp{fig:VarTypes}. \textbf{Quantitative} variables are variables with numerical values for which it makes sense to do arithmetic operations (like adding or averaging).\index{Quantitative Variable}  Synonyms for quantitative are measurement or numerical. \textbf{Categorical} variables are variables that record which group or category an individual belongs.\index{Categorical Variable}  Synonyms for categorical are qualitative or attribute. Within each main type of variable are two subgroups \figrefp{fig:VarTypes}.
 
 <<VarTypes, echo=FALSE, fig.width=5, fig.height=2.5, out.width='.5\\linewidth', fig.cap="Schematic representation of the four types of variables.">>=
-par(mar=c(0,0,0,0),cex=1.5)
-plot(NA,xlim=c(0,5),ylim=c(-1.,1.),xaxt="n",yaxt="n",xlab="",ylab="",bty="n")
-text(-0.25,0,"Variable",pos=4)
-text(1.3,-0.65,"Quantitative",pos=4,col="blue")
-text(3.6,-0.25,"Continuous",pos=4,col="blue")
-text(3.6,-0.95,"Discrete",pos=4,col="blue")
-arrows(0.95,0,1.45,-0.55,lwd=3,length=0.1,col="blue")
-arrows(2.95,-0.65,3.7,-0.25,lwd=3,length=0.1,col="blue")
-arrows(2.95,-0.65,3.7,-0.95,lwd=3,length=0.1,col="blue")
+vrbls <- data.frame(x=c(0,1.30, 1.30,3.20,3.20,3.20,3.20),
+                    y=c(0,0.65,-0.65,0.95,0.35,-0.35,-0.95),
+                    lbls=c("Variable","Quantitative","Categorical",
+                           "Continuous","Discrete","Ordinal","Nominal"),
+                    fclr=c("gray10","red4","blue4","red2","red2","blue2","blue2"))
 
-text(1.3,0.65,"Categorical",pos=4,col="red")
-text(3.6,0.95,"Nominal",pos=4,col="red")
-text(3.6,0.25,"Ordinal",pos=4,col="red")
-arrows(0.95,0,1.45,0.55,lwd=3,length=0.1,col="red")
-arrows(2.9,0.65,3.7,0.95,lwd=3,length=0.1,col="red")
-arrows(2.9,0.65,3.7,0.25,lwd=3,length=0.1,col="red")
+arrtype <- arrow(angle=15,length=unit(5,"mm"),type="closed")
+
+ggplot(data=vrbls,mapping=aes(x=x,y=y,label=lbls,fill=fclr,color=tclr)) +
+  geom_label(color="white",size=5,hjust="left",label.padding=unit(0.5,"lines")) +
+  scale_fill_manual(values=c("gray10"="gray10","red4"="red4","blue4"="blue4",
+                             "red2"="red2","blue2"="blue2")) +
+  scale_x_continuous(expand=expansion(mult=0.01)) +
+  coord_cartesian(xlim=c(0,4.5),ylim=c(-1.2,1.2)) +
+  annotate(geom="segment",x=0.82,y=0,xend=1.28,yend=0.6,arrow=arrtype,color="red4") +
+  annotate(geom="segment",x=0.82,y=0,xend=1.28,yend=-0.6,arrow=arrtype,color="blue4") +
+  annotate(geom="segment",x=2.43,y=0.65,xend=3.15,yend=0.92,arrow=arrtype,color="red2") +
+  annotate(geom="segment",x=2.43,y=0.65,xend=3.15,yend=0.38,arrow=arrtype,color="red2") +
+  annotate(geom="segment",x=2.4,y=-0.65,xend=3.15,yend=-0.38,arrow=arrtype,color="blue2") +
+  annotate(geom="segment",x=2.4,y=-0.65,xend=3.15,yend=-0.92,arrow=arrtype,color="blue2") +
+  theme_void() + theme(legend.position="none")
 @
 \vspace{9pt} % added because of paragraph compressions following R code
 

@@ -40,22 +40,38 @@ print(xtable(matrix(c(Pb,NA),nrow=8)),na.string="",
 \vspace{-12pt}
 Instead, suppose that the scientists brought a simple plot of the frequency of observed lead concentrations and brief numerical summaries \figrefp{fig:KreherParkPbhist} to the meeting. With these one can easily see that the measurements were fairly symmetric with no obviously ``weird'' values. The lead concentrations ranged from as low as \Sexpr{formatC(min(Pb),format="f",digits=2)} $\mu g \cdot m^{-3}$ to as high as \Sexpr{formatC(max(Pb),format="f",digits=2)} $\mu g \cdot m^{-3}$ with the measurements centered on approximately 1.0 $\mu g \cdot m^{-3}$. These summaries are discussed in detail in \modref{chap:UnivEDAQuant1}. However, at this point, note that summarizing large quantities of data with few graphical or numerical summaries makes it is easier to identify meaning from data.
 
-<<KreherParkPbhist, echo=FALSE, fig.cap="Histogram and summary statistics of lead concentration measurements ($\\mu g \\cdot m^{-3}$) at each of 119 sites in Kreher Park superfund site.">>=
-hist(~Pb,xlab="Pb Concentration",ylab="Frequency of Sites")
+<<KreherParkPbhist, echo=FALSE, fig.width=3.5/0.75,fig.height=3.5,out.width='.55\\linewidth', fig.cap="Histogram and summary statistics of lead concentration measurements ($\\mu g \\cdot m^{-3}$) at each of 119 sites in Kreher Park superfund site.">>=
+h <- ggplot(data=data.frame(Pb),mapping=aes(x=Pb)) +
+  geom_histogram(color="gray10",fill="gray80",closed="left",boundary=0,binwidth=0.1) +
+  scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
+  scale_x_continuous(expand=expansion(mult=0.02)) +
+  labs(x="Pb Concentration",y="Frequency of Sites") +
+  theme_bw() +
+  theme(panel.grid=element_blank())
+
 Pb.sum <- as.matrix(formatC(summary(Pb),format="f",digits=2))
-colnames(Pb.sum)[1] <- "Pb"
-textplot(Pb.sum)
+colnames(Pb.sum) <- "Pb"
+h + gridExtra::tableGrob(Pb.sum) +
+  plot_layout(widths=c(0.75,0.25))
 @
 
 A critical question at this point is whether or not the results from the one sample of 119 sites perfectly represents the results for the entire area. One way to consider this question is to examine the results obtained from another sample of 119 sites. The results from this second sample \figrefp{fig:KreherParkPbhist1} are clearly, though not radically, different from the results of the first sample. Thus, it is seen that any one sample from a larger whole will not perfectly represent the large whole. This will lead to some uncertainty in our summaries of the larger whole.
 
-<<KreherParkPbhist1, echo=FALSE, fig.scap="Kreher Park 1", fig.cap="Histogram and summary statistics of lead concentration measurements ($\\mu g \\cdot m^{-3}$) at each of 119 sites (different from the sites shown in \\figref{fig:KreherParkPbhist}) in Kreher Park superfund site.">>=
+<<KreherParkPbhist1, echo=FALSE, fig.width=3.5/0.75,fig.height=3.5,out.width='.55\\linewidth', fig.scap="Kreher Park 1", fig.cap="Histogram and summary statistics of lead concentration measurements ($\\mu g \\cdot m^{-3}$) at each of 119 sites (different from the sites shown in \\figref{fig:KreherParkPbhist}) in Kreher Park superfund site.">>=
 set.seed(6)
 Pb1 <- round(rnorm(119,1,0.15),2)
-hist(~Pb1,xlab="Pb Concentration",ylab="Frequency of Sites")
+h <- ggplot(data=data.frame(Pb1),mapping=aes(x=Pb1)) +
+  geom_histogram(color="gray10",fill="gray80",closed="left",boundary=0,binwidth=0.1) +
+  scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
+  scale_x_continuous(expand=expansion(mult=0.02)) +
+  labs(x="Pb Concentration",y="Frequency of Sites") +
+  theme_bw() +
+  theme(panel.grid=element_blank())
+
 Pb1.sum <- as.matrix(formatC(summary(Pb1),format="f",digits=2))
-colnames(Pb1.sum)[1] <- "Pb"
-textplot(Pb1.sum)
+colnames(Pb1.sum) <- "Pb"
+h + gridExtra::tableGrob(Pb1.sum) +
+  plot_layout(widths=c(0.75,0.25))
 @
 
 The results from two different samples do not perfectly agree because each sample contains different individuals (sites in this example), and no two individuals are exactly alike. The fact that no two individuals are exactly alike is \textbf{natural variability}\index{Natural Variability!Definition}, because of the ``natural'' differences that occur among individuals. The fact that the results from different samples are different is called \textbf{sampling variability}\index{Sampling Variability!Definition}. If there was no natural variability, then there would be no sampling variability. If there was no sampling variability, then the field of statistics would not be needed because a sample (even of one individual) would perfectly represent the larger group of individuals. Thus, understanding variability is at the core of statistical practice. Natural and sampling variability will be revisited continuously throughout this course.
