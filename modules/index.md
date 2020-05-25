@@ -3,7 +3,7 @@ layout: page
 title: Learning Modules
 ---
 
-<ul style="list-style-type= none;">
+<ul style="list-style-type: none;">
   <li><b>Foundations</b></li>
     <ol type="1" start="1">
       <li><a href="WhyStats.html">Why Statistics is Important</a></li>
