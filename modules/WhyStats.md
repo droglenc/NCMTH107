@@ -56,5 +56,3 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 ## Archived Materials
 
 * [Class Lecture Slides](PPT/WhyStats_PPT.pptx)
-
-----
