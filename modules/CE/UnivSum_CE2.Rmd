@@ -32,11 +32,16 @@ source("../../rhelpers/knitr_setup.R")
 ```{r echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
 set.seed(34329034)
 df <- data.frame(lsr=rep(seq(0.1,0.91,0.09),c(1,4,19,13,18,16,9,10,3,1))+runif(94,0,0.09))
-hist(~lsr,data=df,breaks=seq(0,1,0.1),xaxt="n",ylim=c(0,25),
-     xlab="Litter Sex Ratio")
-axis(1,seq(0,1,0.1))
-abline(h=seq(1,25,1),col="lightgray",lty="dotted")
-hist(~lsr,data=df,add=TRUE)
+
+ggplot(data=df,mapping=aes(lsr)) +
+  geom_histogram(boundary=0,binwidth=0.1,closed="left",
+                 fill="gray60",color="black",alpha=0.75) +
+  scale_x_continuous(name="Litter Sex Ratio",expand=expansion(mult=0.02)) +
+  scale_y_continuous(name="Frequency",expand=expansion(mult=c(0,0.05)),
+                     breaks=seq(0,20,5),minor_breaks=seq(0,21,1)) +
+  theme_NCStats() +
+  theme(panel.grid.major.y=element_line(linetype="dashed",color="gray60"),
+        panel.grid.minor.y=element_line(linetype="dashed",color="gray80"))
 ```
 
 Use this histogram to answer these questions.
@@ -71,13 +76,18 @@ occidentalis*)](https://en.wikipedia.org/wiki/Brown_pelican) in the Northern Gul
 ```{r echo=FALSE, fig.width=7, fig.height=4, par1=TRUE}
 tbl <- c(0.618,0.2551,0.0392,0.0271,0.0239)
 tbl <- c(tbl,1-sum(tbl))*100
-names(tbl) <- c("Water","EEW","Grassland","UnShore","DeepWater","other")
-barplot(tbl,xlab="Main Habitats",ylab="Percent of Recordings",col="gray90")
-abline(h=seq(5,60,5),lty=2,col="gray90")
-barplot(tbl,col="gray90",yaxt="n",add=TRUE)
-abline(h=0)
-axis(2,1:59,NA,tcl=-0.1)
-axis(2,seq(0,60,5),NA,tcl=-0.2)
+tbl <- data.frame(cats=factor(c("Water","EEW","Grassland","UnShore","DeepWater","other"),levels=c("Water","EEW","Grassland","UnShore","DeepWater","other")),
+                  perc=tbl)
+
+ggplot(data=tbl,mapping=aes(x=cats,y=perc)) +
+  geom_col(fill="gray80",color="black",alpha=0.8) +
+  scale_y_continuous(name="Percent of Recordings",expand=expansion(mult=c(0,0.05)),
+                     breaks=seq(0,65,5),
+                     minor_breaks=c(seq(0,5,1),seq(25,30,1),seq(60,65,1))) +
+  scale_x_discrete(name="Main Habitats") +
+  theme_NCStats() +
+  theme(panel.grid.major.y=element_line(linetype="dashed",color="gray60"),
+        panel.grid.minor.y=element_line(linetype="dashed",color="gray80"))
 ```
 
 1. What is an individual in this example?
