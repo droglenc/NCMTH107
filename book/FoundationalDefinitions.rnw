@@ -25,10 +25,8 @@ SLpop <- ggplot(data=SL,mapping=aes(x=x,y=y)) +
   scale_x_continuous(expand=expansion(mult=0.005)) +
   scale_y_continuous(expand=expansion(mult=0.005)) +
   labs(x=NULL,y=NULL) +
-  theme_bw() +
-  theme(panel.grid=element_blank(),
-        axis.text=element_blank(),
-        axis.ticks=element_blank())
+  theme_NCStats() +
+  theme(axis.text=element_blank(),axis.ticks=element_blank())
 
 SLhist <- ggplot(data=data.frame(SL),mapping=aes(x=tl)) +
   geom_histogram(color="gray10",fill="gray80",
@@ -37,8 +35,7 @@ SLhist <- ggplot(data=data.frame(SL),mapping=aes(x=tl)) +
   scale_x_continuous(expand=expansion(mult=0.02)) +
   coord_cartesian(xlim=xlmt) +
   labs(x="Total Length",y="Frequency of Fish") +
-  theme_bw() +
-  theme(panel.grid=element_blank())
+  theme_NCStats()
 
 SLpop+SLhist
 @

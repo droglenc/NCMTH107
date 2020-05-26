@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Summaries for One Variable
+title: Univariate Summaries
 css: /css/modules.css
 ---
 
@@ -18,12 +18,12 @@ It is important to understand the distribution of individuals for a single varia
 <p>After completing this module, you should be able to ...</p>
 
 <ol>
-  <li>Compute measures of center (mean and median) by hand and with R.</li>
-  <li>Compute mesures of dispersion (standard deviation, IQR, and range) by hand and with R.</li>
+  <li>Compute measures of center (mean and median) by hand.</li>
+  <li>Compute mesures of dispersion (standard deviation, IQR, and range) by hand.</li>
   <li>Construct a histogram.</li>
   <li>Construct a boxplot.</li>
-  <li>Construct frequency tables by hand and with R.</li>
-  <li>Construct percentage tables by hand and with R.</li>
+  <li>Construct frequency tables by hand.</li>
+  <li>Construct percentage tables by hand.</li>
   <li>Construct a bar chart.</li>
 </ol>
       </div>
@@ -35,7 +35,7 @@ It is important to understand the distribution of individuals for a single varia
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](Prep/SumVar1).
+Use the materials below to answer the questions on [this preparation guide](Prep/UnivSum).
 
 * [![PDF](../img/pdf.png) Reading](../book/Summary One Quant Var.pdf)
 * [![YouTube](../img/youtube.png) Calculate Median and IQR](https://www.youtube.com/watch?v=F3WcEAW-M80){:target="_blank"} [15 mins]
@@ -45,21 +45,20 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 * [![YouTube Link](../img/youtube.png) Construct a Histogram](https://www.youtube.com/watch?v=sC7gjg9g3JU){:target="_blank"} [13 mins]
 * [![YouTube](../img/youtube.png) Frequency Table](https://www.youtube.com/watch?v=LVnzV1ZXdiY){:target="_blank"} [2 mins]
 * [![YouTube](../img/youtube.png) Barplot](https://www.youtube.com/watch?v=PM39_HA1qSc){:target="_blank"} [3 mins]
-* [![Vimeo](../img/dhovid.png) Interpreting a Univariate EDA (Categorical)](https://vimeo.com/user45324800/ueda-catsum){:target="_blank"} [2 mins]  [![PowerPoint](../img/ppt.png)](PPT/UEDACat_PPT.pptx)
-* [![Vimeo](../img/dhovid.png) Quick Rant about Pie and 3-D Charts](https://vimeo.com/user45324800/ueda-badplotrant){:target="_blank"} [3 mins]  [![PowerPoint](../img/ppt.png)](PPT/UEDACat_PPT2.pptx)
+* [![Vimeo](../img/dhovid.png) Quick Rant about Pie and 3-D Charts](https://vimeo.com/user45324800/ueda-badplotrant){:target="_blank"} [3 mins] ...  [corresponding slides](PPT/UEDACat_PPT2.pptx)
 
 ----
 
 ## Practice
 
-* [Exercises](CE/SumVar1_CE1) ([*more as time permits*](CE/SumVar1_CE2)) ... [ANSWER KEY](CE/KEY_SumVar1_CE)
-* [Review Exercises](RE/SumVar1_RevEx)
+* [Exercises](CE/UnivSum_CE1) ([*more as time permits*](CE/UnivSum_CE2)) ... [ANSWER KEY](CE/KEY_UnivSum_CE)
+* [Review Exercises](RE/UnivSum_RevEx)
 
 ----
 
 ## Archived Materials
 
-* [Old Lecture Slides](PPT/UEDAQuant_PPT_old.pptx)
-* [Old Lecture Slides](PPT/UEDACat_PPT_old.pptx)
+* [Old Lecture Slides - Quantitative](PPT/UEDAQuant_PPT_old.pptx)
+* [Old Lecture Slides - Categorical](PPT/UEDACat_PPT_old.pptx)
 
 ----

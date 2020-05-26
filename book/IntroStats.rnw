@@ -51,18 +51,17 @@ for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
     \include{FBMatter/FMatter}
 
   \mainmatter
-<<child-WhyStatsImportant, child='WhyStatsImportant.Rnw', eval=TRUE>>=
+<<child-WhyStatsImportant, child='WhyStatsImportant.Rnw', eval=FALSE>>=
 @
-<<child-FoundationalDefinitions, child='FoundationalDefinitions.Rnw', eval=TRUE>>=
+<<child-FoundationalDefinitions, child='FoundationalDefinitions.Rnw', eval=FALSE>>=
 @
-<<child-DataProd, child='DataProd.Rnw', eval=TRUE>>=
+<<child-DataProd, child='DataProd.Rnw', eval=FALSE>>=
 @
-<<child-UnivEDACat, child='UnivEDACat.Rnw', eval=FALSE>>=
+<<child-UnivSum, child='UnivSum.Rnw', eval=TRUE>>=
 @
-<<child-UnivEDAQuant1, child='UnivEDAQuant1.Rnw', eval=FALSE>>=
+<<child-UnivEDA, child='UnivEDA.Rnw', eval=TRUE>>=
 @
-<<child-UnivEDAQuant2, child='UnivEDAQuant2.Rnw', eval=FALSE>>=
-@
+
 <<child-NormDist, child='NormDist.Rnw', eval=FALSE>>=
 @
 <<child-BivEDACat, child='BivEDACat.Rnw', eval=FALSE>>=
@@ -91,6 +90,10 @@ for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
 @
 <<child-GOF, child='GoodnessOfFit.Rnw', eval=FALSE>>=
 @
+
+<<child-RUnivSum, child='RUnivSum.Rnw', eval=FALSE>>=
+@
+
 <<child-GettingDataIntoR, child='GettingDataIntoR.Rnw', eval=FALSE>>=
 @
 <<child-FilteringDataInR, child='FilteringDataInR.Rnw', eval=FALSE>>=

@@ -1,0 +1,388 @@
+<<echo=FALSE, cache=FALSE, results='hide'>>=
+set_parent('IntroStats.Rnw')
+@
+
+\chapter[Univariate EDA]{Univariate EDA} \label{chap:UnivEDA}
+
+\minitoc
+\vspace{40pt}
+
+\section{Quantitative Variable}
+A univariate EDA for a quantitative variable} is concerned with describing the distribution of values for that variable; i.e., describing what values occurred and how often those values occurred. Specifically, the distribution is described by four specific attributes:
+
+\vspace{-12pt}
+\begin{Enumerate}
+  \item \textbf{shape} of the distribution,
+  \item presence of \textbf{outliers},
+  \item \textbf{center} of the distribution, and
+  \item \textbf{dispersion} or spread of the distribution.
+\end{Enumerate}
+\vspace{-8pt}
+
+Graphs are used to identify shape and the presence of outliers and to get a general feel for center and dispersion. Numerical summaries, however, are used to specifically describe center and dispersion of the variable. Computing and constructing the required numerical and graphical summaries was described in \modref{chap:UnivEDAQuant1}. Those summaries are interpreted here to provide an overall description of the distribution of the quantitative variable.
+
+The same three data sets used in \modref{chap:UnivSum} are used here.
+
+\vspace{-12pt}
+\begin{Itemize}
+  \item Number of open pit mines in countries with open pit mines \tabrefp{tab:MineData}.
+  \item Richter scale recordings for 15 major earthquakes \tabrefp{tab:EQData}.
+  \item The number of days of ice cover at ice gauge station 9004 in Lake Superior.
+\end{Itemize}
+
+\subsection{Interpreting Shape}
+A distribution has two tails -- a left-tail of smaller or more negative values and a right-tail of larger or more positive values \figrefp{fig:ShapeExamples1}. The relative appearance of these two tails is used to identify three different shapes of distributions -- symmetric, left-skewed, and right-skewed. If the left- and right-tail of a distribution are approximately equal in shape (length and height), then the distribution is said to be \textbf{symmetric} (or more specifically \textbf{approximately symmetric}). If the left-tail is stretched out or is longer and flatter than the right-tail, then the distribution is negatively- or \textbf{left-skewed}. If the right-tail is stretched out or is longer and flatter than the left-tail, then the distribution is positively- or \textbf{right-skewed}. The type of skew is defined by the longer tail; a longer right-tail means the distribution is right-skewed and a longer left-tail means it is left-skewed.
+
+<<ShapeExamples1, echo=FALSE, fig.width=3*2.75, fig.height=2.75, out.width='.9\\linewidth', fig.cap="Examples of left-skewed (left), symmetric (center), and right-skewed (right) distributions.">>=
+x <- seq(0,1,0.005)
+symy <- dbeta(x,shape1=7,shape2=7)
+righty <- dbeta(x,shape1=2,shape2=6)
+lefty <- dbeta(x,shape1=6,shape2=2)
+
+par(mfrow=c(1,3),mar=c(1.5,1.5,1.2,0.5),mgp=c(0.4,0,0),xaxt="n",yaxt="n",
+    bty="l",yaxs="i",cex=1.05)
+xlbl <- "Quantitative Variable"
+ylbl <- "Frequency"
+tclr <- "darkblue"
+plot(lefty~x,type="l",xlab=xlbl,ylab=ylbl,main="Left-Skewed",
+     ylim=c(-0.02,1.1*max(lefty)),lwd=2)
+text(-0.05,0.3*max(lefty),"Left-tail is\nflatter, more\nspread out.",
+     col=tclr,pos=4)
+plot(symy~x,type="l",xlab=xlbl,ylab=ylbl,main="Symmetric",
+     ylim=c(-0.02,1.1*max(symy)),lwd=2)
+text(0.5,0.25*max(symy),"Left- and\n Right-tails\n look similar",col=tclr)
+plot(righty~x,type="l",xlab=xlbl,ylab=ylbl,main="Right-Skewed",
+     ylim=c(-0.02,1.1*max(righty)),lwd=2)
+text(0.5,0.3*max(righty),"Right-tail is\nflatter, more\n spread out.",
+     col=tclr,pos=4)
+@
+
+\warn{The longer tail defines the type of skew.}
+
+In practice, these labels form a continuum. For example, it may be difficult to discern whether the shape approximately symmetric or one of the skewed distributions. To partially address this issue, ``slightly'' or ``strongly'' may be used with ``skewed'' to distinguish whether the distribution is obviously skewed (i.e., ``strongly skewed'') or nearly symmetric (i.e., ``slightly skewed'').
+
+\warn{Symmetric, left-skewed, and right-skewed descriptors are guides; many ``real'' distributions will not fall neatly into these categories.}
+
+The shape of a distribution is most easily identified from a histogram. Histograms that are examples of each shape are in \figref{fig:ShapeExamples2}. For the sets of skewed distributions, the distributions are less strongly skewed from left-to-right.
+
+<<ShapeExamples2, echo=FALSE, fig.width=10.5, fig.height=10.5, out.width='.7\\linewidth', fig.cap="Examples of approximately symmetric (top, red), left-skewed (middle, blue), and right-skewed (bottom, green) histograms. Note that the axes labels were removed to focus on the shape of the histograms.">>=
+set.seed(1256)
+n <- 1000
+brks <- seq(0,1,0.1)
+s1 <- rbeta(n,1,1)
+s2 <- rbeta(n,3,3)
+s3 <- rbeta(n,9,9)
+l1 <- rbeta(n,3,1)
+l2 <- rbeta(n,4,2)
+l3 <- rbeta(n,9,3)
+r1 <- rbeta(n,1,3)
+r2 <- rbeta(n,2,4)
+r3 <- rbeta(n,3,9)
+par(mar=c(1,1,1,1),mgp=c(0.1,0,0),mfrow=c(3,3),xaxt="n",yaxt="n",cex=1.7)
+hist(s1,xlim=c(0,1),ylab="Approx. Symmetric",xlab="",main="",breaks=brks,col="lightsalmon")
+hist(s2,xlim=c(0,1),ylab="",xlab="",main="",breaks=brks,col="lightsalmon")
+hist(s3,xlim=c(0,1),ylab="",xlab="",main="",breaks=brks,col="lightsalmon")
+hist(l1,xlim=c(0,1),ylab="Left-Skewed",xlab="",main="",breaks=brks,col="lightblue1")
+hist(l2,xlim=c(0,1),ylab="",xlab="",main="",breaks=brks,col="lightblue1")
+hist(l3,xlim=c(0,1),ylab="",xlab="",main="",breaks=brks,col="lightblue1")
+hist(r1,xlim=c(0,1),ylab="Right-Skewed",xlab="",main="",breaks=brks,col="lightgreen")
+hist(r2,xlim=c(0,1),ylab="",xlab="",main="",breaks=brks,col="lightgreen")
+hist(r3,xlim=c(0,1),ylab="",xlab="",main="",breaks=brks,col="lightgreen")
+@
+
+The shape of a distribution can also be determined from a boxplot. The relative length from the median to Q1 and the median to Q3 (i.e., the relative position of the median line in the box) indicates the shape of the distribution. If the distribution is left-skewed (i.e., lesser-valued individuals are ``spread out''; \figref{fig:BoxplotShape}-Right), then median-Q1 will be greater than Q3-median. In contrast, if the distribution is right-skewed (i.e., larger-valued individuals are spread out; \figref{fig:BoxplotShape}-Middle), then Q3-median will be greater than median-Q1. Thus, the median is nearer the top of the box for a left-skewed distribution, nearer the bottom of the box for a right-skewed distribution, and nearer the center of the box for a symmetric distribution \figrefp{fig:BoxplotShape}.
+
+<<BoxplotShape, echo=FALSE, out.width='.25\\linewidth', fig.cap="Histograms and boxplots for several different shapes of distributions.">>=
+par(mar=c(1,0.5,1,0.5),mgp=c(2.1,0.4,0),xaxt="n",yaxt="n",cex=1.2)
+tclr <- "darkblue"
+brks<-seq(-0.1,1.1,0.1)
+hist(l1,xlim=c(0.1,1),main="Left-Skewed",xlab="",ylab="",breaks=brks,col="lightblue")
+text(0.3,125,"Left-tail flatter\n more spread out",col=tclr)
+hist(s2,main="Approx. Symmetric",xlab="",ylab="",breaks=brks,col="lightsalmon")
+hist(r1,xlim=c(0,0.9),main="Right-Skewed",xlab="",ylab="",breaks=brks,col="lightgreen")
+text(0.7,125,"Right-tail flatter\n more spread out",col=tclr)
+boxplot(l1,range=0)
+text(1.2,median(l1),"Median",pos=4,col=tclr)
+text(1.2,quantile(l1,0.25),"Q1",pos=4,col=tclr)
+text(0.7,0.25,"Median-Q1\n greater than\n Q3-Median",pos=3,col=tclr)
+boxplot(s2,range=0)
+boxplot(r1,range=0)
+text(1.2,median(r1),"Median",pos=4,col=tclr)
+text(1.2,quantile(r1,0.75),"Q3",pos=4,col=tclr)
+text(0.7,0.5,"Q3-Median\n greater than\n Median-Q1",pos=3,col=tclr)
+@
+
+\warn{Even though shape can be described from a boxplot, it is always easier to describe shape from a histogram.}
+
+\subsection{Interpreting Outliers}
+An outlier is an individual whose value is widely separated from the main cluster of values in the sample. On histograms, outliers appear as bars that are separated from the main cluster of bars by ``white space'' or areas with no bars \figrefp{fig:OutlierExHist}. In general, outliers must be \textbf{on the margins of the histogram, should be separated by one or two missing bars, and should only be one or two individuals.}
+
+<<OutlierExHist, echo=FALSE, fig.cap="Example histogram with an outlier to the right.">>=
+par(mar=c(0.5,0.5,0.5,0.5),mgp=c(0,0.0,0),las=1,tcl=-0.2)
+hist(c(rbeta(100,9,9),1.2),main="",xlab="",xaxt="n",ylab="",yaxt="n",col="gray90")
+@
+
+An outlier may be a result of human error in the sampling process. If this is the case, then the value should be corrected or removed. Other times an outlier may be an individual that was not part of the population of interest -- e.g., an adult animal that was sampled when only immature animals were being considered. In this case, the individual should be removed from the sample. Still other times, an outlier is part of the population and should generally not be removed from the sample. In fact you may wish to highlight an outlier as an interesting observation! Regardless, it is important that you construct a histogram to determine if outliers are present or not.
+
+Don't let outliers completely influence how you define the shape of a distribution. For example, if the main cluster of values is approximately symmetric and there is one outlier to the right of the main cluster (as illustrated in \figref{fig:OutlierExHist}), \textbf{DON'T} call the distribution right-skewed. You should describe this distribution as approximately symmetric with an outlier to the right.
+
+\warn{Not all outliers warrant removal from your sample.}
+
+\vspace{-12pt}
+\warn{Don't let outliers completely influence how you define the shape of a distribution.}
+
+
+
+\subsection{Comparing the Median and Mean} \label{sect:MeanMedian}
+As mentioned previously, numerical measures will be used to describe the center and dispersion of a distribution. However, which values should be used? Should one use the mean or the median as a measure of center? Should one use the IQR or the standard deviation as a measure of dispersion? Which measures are used depends on how the measures respond to skew and the presence of outliers. Thus, before stating a rule for which measures should be used, a fundamental difference among the measures discussed in \modref{chap:UnivEDAQuant1} is explored here.
+
+The following discussion is focused on comparing the mean and the median. However, note that the IQR is fundamentally linked to the median (i.e., to find the IQR, the median must first be found) and the standard deviation is fundamentally linked to the mean (i.e., to find the standard deviation, the mean must first be found). Thus, \textbf{the median and IQR will always be used together to measure center and dispersion, as will the mean and standard deviation.}
+
+The mean and median measure center in different ways. The median balances the number of individuals smaller and larger than it. The mean, on the other hand, balances the sum of the distances from it to all points smaller than it and the sum of the distances from it to all points greater than it. Thus, the median is primarily concerned with the \textbf{position} of the value rather than the value itself, whereas the mean is very much concerned about the \textbf{values} for each individual (i.e., the values are used to find the ``distance'' from the mean).
+
+\warn{The actual values of the data (beyond ordering the data) are not considered when calculating the median; whereas the actual values are very much considered when calculating the mean.}
+
+A plot of the Richter scale data against the corresponding ordered individual number is shown in \figref{fig:MeanMedianComp1}-Left.\footnote{This is a rather non-standard graph but it is useful for comparing how the mean and median measure the center of the data.}  The median (blue line) is found by locating the middle position on the individual number axis and then finding the corresponding Richter scale value (move right until the point is intercepted and then move down to the x-axis). The vertical blue line represents the median; i.e., it has the same \textbf{number} of individuals (i.e., points) above and below it. In contrast, the mean finds the Richter scale value that has the same total distance to values below it as total distance to values above it. In other words, the mean is the vertical red line placed such that the total \textbf{length} of the horizontal dashed red lines is the same to the left as it is to the right. Thus, the median balances the number of individuals above and below the median, whereas the mean balances the total difference in values above and below the mean.
+
+<<MeanMedianComp1, echo=FALSE, out.width='.45\\linewidth', fig.cap="Plot of the individual number versus Richter scale values for the original earthquake data (\\textbf{Left}) and the earthquake data with an extreme outlier (\\textbf{Right}). The median value is shown as a blue vertical line and the mean value is shown as a red vertical line. Differences between each individual value and the mean value are shown with horizontal red lines.">>=
+plot(EQ,1:length(EQ),pch=16,ylab="Individual Number",xlab="Richter Scale Value",xaxt="n",yaxt="n",ylim=c(0,16))
+axis(1,c(5.5,6.0,8.0))
+axis(2,seq(0,15,5))
+text(5.15,8.7,"MP=",col="blue",xpd=TRUE)
+text(5.15,7.5,"8",col="blue",xpd=TRUE)
+lines(c(0,EQ[8]),c(8,8),lwd=2,lty=2,col="blue")
+lines(c(EQ[8],EQ[8]),c(8,-1),lwd=2,lty=2,col="blue")
+text(EQ[8],-1.3,"Median=7.10",xpd=TRUE,col="blue")
+avg <- mean(EQ)
+abline(v=avg,lwd=2,lty=2,col="red")
+text(avg,-2.7,"Mean=7.07",xpd=TRUE,col="red")
+for (i in 1:length(EQ)) {
+  lines(c(EQ[i],avg),c(i,i),lwd=1.5,lty=3,col="red")
+}
+
+EQ1 <- c(EQ,19)
+plot(EQ1,1:length(EQ1),pch=19,ylab="Individual Number",xlab="Richter Scale Value",xaxt="n",ylim=c(0,16))
+axis(1,c(12,14,16,18))
+axis(2,seq(0,15,5))
+med<-7.2
+text(3.5,8.7,"MP=",col="blue",xpd=TRUE)
+text(3.5,7.5,"8.5",col="blue",xpd=TRUE)
+lines(c(0,med),c(8.5,8.5),lwd=2,lty=2,col="blue")
+lines(c(med,med),c(8.5,-1),lwd=2,lty=2,col="blue")
+text(med,-1.3,"Median=7.20",xpd=TRUE,col="blue")
+avg <- mean(EQ1)
+abline(v=avg,lwd=2,lty=2,col="red")
+text(avg,-2.7,"Mean=7.81",xpd=TRUE,col="red")
+for (i in 1:length(EQ1)) {
+  lines(c(EQ1[i],avg),c(i,i),lwd=1.5,lty=3,col="red")
+}
+@
+
+\warn{The mean balances the distance to individuals above and below the mean. The median balances the number of individuals above and below the median.}
+
+\vspace{-12pt}
+\warn{The sum of all differences between individual values and the mean (as properly calculated) equals zero.}
+
+The mean and median differ in their sensitivity to outliers (\figref{fig:MeanMedianComp1}-Right). For example, suppose that an incredible earthquake with a Richter Scale value of 19.0 was added to the earthquake data set. With this additional individual, the median increases from 7.1 to 7.2, but the mean increases from 7.1 to 7.8. The outlier impacts the value of the mean more than the value of the median because of the way that each statistic measures center. The mean will be pulled towards an outlier because it must ``put'' many values on the ``side'' of the mean away from the outlier so that the sum of the differences to the larger values and the sum of the differences to the smaller values will be equal. In this example, the outlier creates a large difference to the right of the mean such that the mean has to ``move'' to the right to make this difference smaller, move more individuals to the left side of the mean, and increase the differences of individuals to the left of the mean to balance this one large individual. The median on the other hand will simply ``put'' one more individual on the side opposite of the outlier because it balances the number of individuals on each side of it. Thus, the median has to move very little to the right to accomplish this balance.
+
+\warn{The mean is more sensitive (i.e., changes more) to outliers than the median; it will be ``pulled'' towards the outlier more than the median.}
+
+The shape of the distribution, even if outliers are not present, also has an impact on the mean and median \figrefp{fig:MeanMedianShape}. If a distribution is approximately symmetric, then the median and mean (along with the mode) will be nearly identical. If the distribution is left-skewed, then the mean will be less than the median. Finally, if the distribution is right-skewed, then the mean will be greater than the median.
+
+<<MeanMedianShape, echo=FALSE, out.width='.3\\linewidth', fig.cap="Three differently shaped histograms with vertical lines superimposed at the median (M; blue lines) and the mean ($\\bar{x}$; red lines).">>=
+par(mar=c(4,1,1,1),mgp=c(3,0.4,0),yaxs="i",las=1,tcl=-0.2)
+brks <- seq(0,1,0.1)
+
+hist(l1,xlim=c(0.1,1),main="",xlab="X",xaxt="n",yaxt="n",breaks=brks,col="gray90")
+l.avg <- mean(l1)
+l.med<-median(l1)
+abline(v=l.avg,lwd=2,lty=2,col="red")
+abline(v=l.med,lwd=2,lty=2,col="blue")
+text(l.med,-9,"M",col="blue",xpd=TRUE,cex=1.5)
+text(l.avg,-23,expression(bar(x)),col="red",xpd=TRUE,cex=1.5)
+
+hist(s2,main="",xlab="X",xaxt="n",yaxt="n",breaks=brks,col="gray90")
+s.avg <- mean(s2)
+s.med <- median(s2)
+abline(v=s.avg,lwd=2,lty=2,col="red")
+abline(v=s.med,lwd=2,lty=2,col="blue")
+text(s.med,-7,"M",col="blue",xpd=TRUE,cex=1.5)
+text(s.avg,-18,expression(bar(x)),col="red",xpd=TRUE,cex=1.5)
+
+hist(r1,xlim=c(0,0.9),main="",xlab="X",xaxt="n",yaxt="n",breaks=brks,col="gray90")
+r.avg <- mean(r1)
+r.med<-median(r1)
+abline(v=r.avg,lwd=2,lty=2,col="red")
+abline(v=r.med,lwd=2,lty=2,col="blue")
+text(r.med,-10,"M",col="blue",xpd=TRUE,cex=1.5)
+text(r.avg,-24,expression(bar(x)),col="red",xpd=TRUE,cex=1.5)
+@
+
+\warn{The mean is pulled towards the long tail of a skewed distribution. Thus, the mean is greater than the median for right-skewed distributions and the mean is less than the median for left-skewed distributions.}
+
+As shown above, the mean and median measure center in different ways. The question now becomes ``which measure of center is better?''  The median is a ``better'' measure of center when outliers are present. In addition, the median gives a better measure of a typical individual when the data are skewed. Thus, in this course, the median is used when outliers are present or the distribution of the data is skewed. If the distribution is symmetric, then the purpose of the analysis will dictate which measure of center is ``better.''  However, in this course, use the mean when the data are symmetric or, at least, not strongly skewed.
+
+As note above, the IQR and standard deviation behave similarly to the median and mean, respectively, in the face of outliers and skews. Specifically, the IQR is less sensitive to outliers than the standard deviation.
+
+
+\subsection{Synthetic Interpretations}
+The graphical and numerical summaries from \modref{chap:UnivEDAQuant1} and the rationale described above can be used to construct a synthetic description of the shape, outliers, center, and dispersion of the distribution of a quantitative variable. In the examples below specifically note the 1) reference to figures and tables, 2) labeling of the figures and tables, 3) that only the mean and standard deviation or the median and IQR are discussed, 4) the range was not used alone as a measure of dispersion, 5) the explanation for why either the median and IQR or the mean and standard deviation were used, and 6) an appendix of R code used was provided.
+
+\subsubsection{Number of Open Pit Mines}
+\begin{quote}
+\textit{Construct a proper EDA for the following situation and data -- ``The number of open pit mines in countries that have open pit mines \tabrefp{tab:MineData}.''}
+\end{quote}
+\vspace{-12pt}
+<<echo=FALSE, results='hide'>>=
+mstat <- Summarize(mc,digits=2)
+@
+The number of open pit mines in countries with open pit mines is strongly right-skewed with no outliers present \figrefp{fig:MineHist2}. [\textit{I did not call the group of four countries with 10 or more open pit mines outliers because there were more than one or two countries there.}] The center of the distribution is best measured by the median, which is \Sexpr{formatC(mstat["median"],format="f",digits=0)} \tabrefp{tab:MineStats}. The range of open pit mines in the sample is from \Sexpr{formatC(mstat["min"],format="f",digits=0)} to \Sexpr{formatC(mstat["max"],format="f",digits=0)} while the dispersion as measured by the inter-quartile range (IQR) is from a Q1 of \Sexpr{formatC(mstat["Q1"],format="f",digits=1)} to a Q3 of  \Sexpr{formatC(mstat["Q3"],format="f",digits=1)} \tabrefp{tab:MineStats}. I chose to use the median and IQR because the distribution was strongly skewed.
+
+<<MineStats, results='asis', echo=FALSE>>=
+mstat1 <- matrix(mstat,nrow=1)
+colnames(mstat1) <- names(mstat)
+print(xtable(mstat1,digits=1,caption="Descriptive statistics of number of open pit mines in countries with open pit mines.","tab:MineStats"),caption.placement="top",include.rownames=FALSE)
+@
+
+<<MineHist2, echo=FALSE, fig.cap="Histogram of number of open pit mines in countries with open pit mines.">>=
+hist(~mc,w=2,xlab="Number of Open Pit Mines")
+@
+
+\begin{minipage}{\textwidth}
+R Code Appendix:
+<<eval=FALSE, prompt=FALSE>>=
+setwd("c:/data/")
+mc <- read.csv("MineData.csv")
+str(mc)
+Summarize(~mines,data=mc,digits=1)
+hist(~mines,data=mc,w=2,xlab="Number of open pit mines")
+@
+\end{minipage}
+
+
+\subsubsection{Lake Superior Ice Cover}
+\begin{quote}
+\textit{Thoroughly describe the distribution of number of days of ice cover at ice gauge station 9004 in Lake Superior (data are in \href{https://raw.githubusercontent.com/droglenc/NCData/master/LakeSuperiorIce.csv}{LakeSuperiorIce.csv}).}
+\end{quote}
+
+<<echo=FALSE>>=
+LSI <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/LakeSuperiorIce.csv")
+sumLSI <- Summarize(~days,data=LSI)
+@
+
+The shape of number of days of ice cover at gauge 9004 in Lake Superior is approximately symmetric with no obvious outliers \figrefp{fig:LSIHist}. The center is at a mean of \Sexpr{formatC(sumLSI["mean"],format="f",digits=1)} days and the dispersion is a standard deviation of \Sexpr{formatC(sumLSI["sd"],format="f",digits=1)} days \tabrefp{tab:LSIStats}. The mean and standard deviation were used because the distribution was not strongly skewed and no outlier was present.
+
+<<LSIHist, echo=FALSE, fig.cap="Histogram of number of days of ice cover at ice gauge 9004 in Lake Superior.">>=
+hist(~days,data=LSI,xlab="Day of Ice Cover",ylab="Frequency of Years",w=20)
+@
+
+<<LSIStats, results='asis', echo=FALSE>>=
+sumLSI1 <- matrix(sumLSI,nrow=1)
+colnames(sumLSI1) <- names(sumLSI)
+print(xtable(sumLSI1,digits=1,caption="Descriptive statistics of number of days of ice cover at ice gauge 9004 in Lake Superior..","tab:LSIStats"),caption.placement="top",include.rownames=FALSE)
+@
+
+\begin{minipage}{\textwidth}
+R Appendix:
+<<eval=FALSE, prompt=FALSE>>=
+setwd("c:/data/")
+LSI <- read.csv("LakeSuperiorIce.csv")
+str(LSI)
+hist(~days,data=LSI,xlab="Day of Ice Cover",ylab="Frequency of Years",w=20)
+Summarize(~days,data=LSI,digits=1)
+@
+\end{minipage}
+
+\subsubsection{Crayfish Temperature Selection}
+\begin{quote}
+\textit{Peck (1985) examined the temperature selection of dominant and subdominant crayfish (\textit{Orconectes virilis}) together in an artificial stream. The temperature ($^{o}$C) selection by the dominant crayfish in the presence of subdominant crayfish in these experiments was recorded below. Thoroughly describe all aspects of the distribution of selected temperatures.}
+\end{quote}
+
+<<results='asis', echo=FALSE>>=
+CT <- c(30,26,26,26,25,25,25,25,25,24,24,24,24,24,24,23,23,23,23,22,22,22,22,21,21,21,20,20,19,19,18,16)
+CTx <- xtable(matrix(CT,nrow=2,byrow=TRUE),digits=0)
+print(CTx,floating=FALSE,include.rownames=FALSE,include.colnames=FALSE,hline.after=NULL)
+cstat <- Summarize(CT,digits=2)
+@
+
+The shape of temperatures selected by the dominant crayfish is slightly left-skewed \figrefp{fig:CrayfishTempHist} with a possible weak outlier at the maximum value of \Sexpr{formatC(cstat["max"],format="f",digits=0)}$^{o}$C \tabrefp{tab:CrayfishTempStats}. The center is best measured by the median, which is \Sexpr{formatC(cstat["median"],format="f",digits=0)}$^{o}$C \tabrefp{tab:CrayfishTempStats} and the dispersion is best measured by the IQR, which is from \Sexpr{formatC(cstat["Q1"],format="f",digits=0)} to \Sexpr{formatC(cstat["Q3"],format="f",digits=0)}$^{o}$C \tabrefp{tab:CrayfishTempStats}. I used the median and IQR because of the (combined) skewed shape and outlier present.
+
+<<CrayfishTempHist, echo=FALSE, fig.cap="Histogram of crayfish temperature preferences.">>=
+hist(~CT,xlab="Preferred Temperature",ylab="Frequency of Crayfish",w=2)
+@
+
+<<CrayfishStats, results='asis', echo=FALSE>>=
+cstat1 <- matrix(cstat,nrow=1)
+colnames(cstat1) <- names(cstat)
+print(xtable(cstat1,digits=2,caption="Descriptive statistics of crayfish temperature preferences.","tab:CrayfishTempStats"),caption.placement="top",include.rownames=FALSE)
+@
+
+\begin{minipage}{\textwidth}
+R Appendix:
+<<eval=FALSE, prompt=FALSE>>=
+setwd("c:/data/")
+cray <- read.csv("Crayfish.csv")
+str(cray)
+hist(~temp,data=cray,xlab="Preferred Temperature",ylab="Frequency of Crayfish",w=2)
+Summarize(~temp,data=cray,digits=2)
+@
+\end{minipage}
+
+
+\section{Categorical Variable}
+Interpreting summaries of a single categorical variable is more intuitive and less defined than that for quantitative data. Specifically, one DOES NOT describe shape, center, dispersion, and outliers for categorical data. In this module, methods to construct tables and graphs for categorical data are described and the interpretation of the results demonstrated.
+
+\warn{Do not describe shape, center, dispersion, and outliers for a categorical variable.}
+
+These concepts are illustrated with three data sets. First, data recorded about MTH107 students in the Winter 2010 semester will be used. Specifically, whether or not a student was required to take the courses and the student's year-in-school will be summarized. Whether or not a student was required to take the course for a subset of individuals is shown in \tabref{tab:MTH107Subset}.
+
+\begin{table}[htbp]
+  \caption{Whether (Y) or not (N) MTH107 was required for eight individuals in MTH107 in Winter 2010.}
+  \label{tab:MTH107Subset}
+  \centering
+  \begin{Verbatim}[xleftmargin=10mm]
+Individual  1  2  3  4  5  6  7  8
+Required    Y  N  N  Y  Y  Y  N  Y
+  \end{Verbatim}
+\end{table}
+\vspace{-12pt}
+
+Second, the General Sociological Survey (GSS) is a very large survey that has been administered 25 times since 1972. The purpose of the GSS is to gather data on contemporary American society in order to monitor and explain trends in attitudes, behaviors, and attributes. One question that was asked in a recent GSS was ``How often do you make a special effort to sort glass or cans or plastic or papers and so on for recycling?''  These data are found in the \var{recycle} variable in \href{https://raw.githubusercontent.com/droglenc/NCData/master/GSSEnviroQues.csv}{GSSEnviroQues.csv}.
+
+
+\subsection{Example Interpretations}
+For categorical data, an appropriate EDA consists of identifying the major characteristics among the categories. Shape, center, dispersion, and outliers are NOT described for categorical data because the data is not numerical and, if nominal, no order exists. In general, the major characteristics of the table or graph are described from an intuitive basis. For example, there were more males than females in the Winter 2010 MTH107 class and mostly juniors and Freshmen. Other examples are below.
+
+\subsubsection{Mixture Seed Count}
+\begin{quote}
+\textit{A bag of seeds was purchased for seeding a recently constructed wetland. The purchaser wanted to determine if the percentage of seeds in four broad categories -- ``grasses'', ``sedges'', ``wildflowers'', and ``legumes'' -- was similar to what the seed manufacturer advertised. The purchaser examined a 0.25-lb sample of seeds from the bag and recorded the results in \href{https://raw.githubusercontent.com/droglenc/NCData/master/WetlandSeeds.csv}{WetlandSeeds.csv}. Use these data to describe the distribution of seed counts into the four broad categories.}
+\end{quote}
+
+<<echo=FALSE, results='hide'>>=
+ws <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/WetlandSeeds.csv")
+wtbl <- xtabs(~type,data=ws)
+wptbl <- percTable(wtbl)
+@
+
+The majority of seeds were either sedge or grass with sedge being more than twice as abundant as grass (\tabref{tab:SeedTable}; \figref{fig:SeedBarplot}). Very few legumes or wildflowers were found in the sample.
+
+<<SeedBarplot, echo=FALSE, fig.width=5, out.width='.5\\linewidth', fig.cap="Barplot of the percentage of wetland seeds by type.">>=
+barplot(wptbl[-5],ylab="Percentage of Total Seeds",xlab="Seed Type")
+@
+
+<<SeedStats, results='asis', echo=FALSE>>=
+wptbl2 <- matrix(wptbl,ncol=length(wptbl))
+colnames(wptbl2) <- names(wptbl)
+print(xtable(wptbl2,digits=1,caption="Percentage distribution of wetland seeds by type.","tab:SeedTable"),caption.placement="top",include.rownames=FALSE)
+@
+
+\begin{minipage}{\textwidth}
+R Appendix:
+<<eval=FALSE, prompt=FALSE>>=
+ws <- read.csv("data/WetlandSeeds.csv")
+str(ws)
+wtbl <- xtabs(~type,data=ws)
+percTable(wtbl,digits=1)
+barplot(wptbl[-5],ylab="Percentage of Total Seeds",xlab="Seed Type")
+@
+\end{minipage}

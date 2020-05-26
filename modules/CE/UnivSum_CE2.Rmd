@@ -1,0 +1,90 @@
+---
+layout: page
+title: Additional Exercises
+subtitle: Univariate Summaries
+author: Derek H. Ogle
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: false
+    lib_dir: zlibs
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE")
+source("../../rhelpers/rhelpers.R")
+modHTML("UnivSum_CE2")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+source("../../rhelpers/knitr_setup.R")
+```
+
+----
+
+
+## Histograms II
+<img src="zimgs/wild-dog-pups.jpg" alt="Wild Dog Pups" class="img-right">
+[McNutt and Silk (2007)](https://www.semanticscholar.org/paper/Pup-production%2C-sex-ratios%2C-and-survivorship-in-McNutt-Silk/8bec71d9a4a6ced4896c346dff72df143a10a651) examined pup production, sex ratios and survivorship of African wild dogs (*Lycaon pictus*). In one part of their study, they computed the sex ratio of pups in each litter by dividing the number of males in the litter by the total number of pups in the litter (thus, 1.0 means all males and 0.7 means 70% were males). The results from making this calculations on their sample of litters is shown in the histogram below.
+
+```{r echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
+set.seed(34329034)
+df <- data.frame(lsr=rep(seq(0.1,0.91,0.09),c(1,4,19,13,18,16,9,10,3,1))+runif(94,0,0.09))
+hist(~lsr,data=df,breaks=seq(0,1,0.1),xaxt="n",ylim=c(0,25),
+     xlab="Litter Sex Ratio")
+axis(1,seq(0,1,0.1))
+abline(h=seq(1,25,1),col="lightgray",lty="dotted")
+hist(~lsr,data=df,add=TRUE)
+```
+
+Use this histogram to answer these questions.
+
+1. What is an individual in this example?
+1. What is the variable in this example?
+1. What type of variable is recorded?
+1. How many individuals are represented in this histogram?
+1. How many litters had a litter sex ratio between 0.6 and 1.0?
+1. How many litters had a litter sex ratio between 0.0 and 0.1?
+1. Which litter sex ratios range had the most litters observed?
+1. Did most litters (the majority) have mostly male or mostly female pups?
+
+----
+
+## Calculate Summary Statistics II
+
+1. Hand calculate the mean and standard deviation for six numbers that you make up.
+1. Hand calculate the mean and standard deviation for seven numbers that you make up.
+1. Hand calculate the median and IQR for 14 numbers that you make up.
+1. Hand calculate the median and IQR for 16 numbers that you make up.
+
+See this [hint](UnivSum_CE1.html#hints) for how to check your answers with R.
+
+----
+
+## Bar Chart II
+<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/brownpelican.jpg" alt="Brown Pelican" class="img-right">
+[King et al. (2013)](https://www.aphis.usda.gov/wildlife_damage/nwrc/publications/13pubs/king132.pdf) examined the habitat use of [Brown Pelicans (*Pelecanus
+occidentalis*)](https://en.wikipedia.org/wiki/Brown_pelican) in the Northern Gulf of Mexico. In one part of their study, they recorded the GPS location where each pelican was spotted. The bar chart below shows the percentages of those GPS locations in major habitats. Use this information to answer the questions further below. [Note that `Water`="shallow near-shore waters", `EEW`="estuarine emergent wetland", `Grassland`="shoreline grasslands", `UnShore`="unconsolidated shore", `DeepWater`="deeper offshore waters", and `Other`="all other habitats".]
+
+```{r echo=FALSE, fig.width=7, fig.height=4, par1=TRUE}
+tbl <- c(0.618,0.2551,0.0392,0.0271,0.0239)
+tbl <- c(tbl,1-sum(tbl))*100
+names(tbl) <- c("Water","EEW","Grassland","UnShore","DeepWater","other")
+barplot(tbl,xlab="Main Habitats",ylab="Percent of Recordings",col="gray90")
+abline(h=seq(5,60,5),lty=2,col="gray90")
+barplot(tbl,col="gray90",yaxt="n",add=TRUE)
+abline(h=0)
+axis(2,1:59,NA,tcl=-0.1)
+axis(2,seq(0,60,5),NA,tcl=-0.2)
+```
+
+1. What is an individual in this example?
+1. What type of variable is recorded?
+1. What (approximate) percentage of individuals used "shallow nearshore waters"?
+1. What (approximate) percentage of individuals used "estuarine emergent wetlands"?
+1. What (approximate) percentate of individuals were not in the two most common habitat types?
+1. What is the shape of this distribution?
+
+----

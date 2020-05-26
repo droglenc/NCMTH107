@@ -46,8 +46,7 @@ h <- ggplot(data=data.frame(Pb),mapping=aes(x=Pb)) +
   scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
   scale_x_continuous(expand=expansion(mult=0.02)) +
   labs(x="Pb Concentration",y="Frequency of Sites") +
-  theme_bw() +
-  theme(panel.grid=element_blank())
+  theme_NCStats())
 
 Pb.sum <- as.matrix(formatC(summary(Pb),format="f",digits=2))
 colnames(Pb.sum) <- "Pb"
@@ -65,8 +64,7 @@ h <- ggplot(data=data.frame(Pb1),mapping=aes(x=Pb1)) +
   scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
   scale_x_continuous(expand=expansion(mult=0.02)) +
   labs(x="Pb Concentration",y="Frequency of Sites") +
-  theme_bw() +
-  theme(panel.grid=element_blank())
+  theme_NCStats()
 
 Pb1.sum <- as.matrix(formatC(summary(Pb1),format="f",digits=2))
 colnames(Pb1.sum) <- "Pb"

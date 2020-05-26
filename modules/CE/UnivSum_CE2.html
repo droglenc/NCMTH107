@@ -1,0 +1,100 @@
+---
+layout: page
+title: Additional Exercises
+subtitle: Univariate Summaries
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="histograms-ii" class="section level2">
+<h2>Histograms II</h2>
+<p><img src="zimgs/wild-dog-pups.jpg" alt="Wild Dog Pups" class="img-right"> <a href="https://www.semanticscholar.org/paper/Pup-production%2C-sex-ratios%2C-and-survivorship-in-McNutt-Silk/8bec71d9a4a6ced4896c346dff72df143a10a651">McNutt and Silk (2007)</a> examined pup production, sex ratios and survivorship of African wild dogs (<em>Lycaon pictus</em>). In one part of their study, they computed the sex ratio of pups in each litter by dividing the number of males in the litter by the total number of pups in the litter (thus, 1.0 means all males and 0.7 means 70% were males). The results from making this calculations on their sample of litters is shown in the histogram below.</p>
+<p><img src="UnivSum_CE2_files/figure-html/unnamed-chunk-3-1.png" width="384" /></p>
+<p>Use this histogram to answer these questions.</p>
+<ol>
+<li>What is an individual in this example?</li>
+<li>What is the variable in this example?</li>
+<li>What type of variable is recorded?</li>
+<li>How many individuals are represented in this histogram?</li>
+<li>How many litters had a litter sex ratio between 0.6 and 1.0?</li>
+<li>How many litters had a litter sex ratio between 0.0 and 0.1?</li>
+<li>Which litter sex ratios range had the most litters observed?</li>
+<li>Did most litters (the majority) have mostly male or mostly female pups?</li>
+</ol>
+<hr />
+</div>
+<div id="calculate-summary-statistics-ii" class="section level2">
+<h2>Calculate Summary Statistics II</h2>
+<ol>
+<li>Hand calculate the mean and standard deviation for six numbers that you make up.</li>
+<li>Hand calculate the mean and standard deviation for seven numbers that you make up.</li>
+<li>Hand calculate the median and IQR for 14 numbers that you make up.</li>
+<li>Hand calculate the median and IQR for 16 numbers that you make up.</li>
+</ol>
+<p>See this <a href="UnivSum_CE1.html#hints">hint</a> for how to check your answers with R.</p>
+<hr />
+</div>
+<div id="bar-chart-ii" class="section level2">
+<h2>Bar Chart II</h2>
+<p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/brownpelican.jpg" alt="Brown Pelican" class="img-right"> <a href="https://www.aphis.usda.gov/wildlife_damage/nwrc/publications/13pubs/king132.pdf">King et al. (2013)</a> examined the habitat use of <a href="https://en.wikipedia.org/wiki/Brown_pelican">Brown Pelicans (<em>Pelecanus occidentalis</em>)</a> in the Northern Gulf of Mexico. In one part of their study, they recorded the GPS location where each pelican was spotted. The bar chart below shows the percentages of those GPS locations in major habitats. Use this information to answer the questions further below. [Note that <code>Water</code>=“shallow near-shore waters”, <code>EEW</code>=“estuarine emergent wetland”, <code>Grassland</code>=“shoreline grasslands”, <code>UnShore</code>=“unconsolidated shore”, <code>DeepWater</code>=“deeper offshore waters”, and <code>Other</code>=“all other habitats”.]</p>
+<p><img src="UnivSum_CE2_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<ol>
+<li>What is an individual in this example?</li>
+<li>What type of variable is recorded?</li>
+<li>What (approximate) percentage of individuals used “shallow nearshore waters”?</li>
+<li>What (approximate) percentage of individuals used “estuarine emergent wetlands”?</li>
+<li>What (approximate) percentate of individuals were not in the two most common habitat types?</li>
+<li>What is the shape of this distribution?</li>
+</ol>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

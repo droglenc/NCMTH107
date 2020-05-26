@@ -1,0 +1,114 @@
+<<echo=FALSE, cache=FALSE, results='hide'>>=
+set_parent('IntroStats.Rnw')
+@
+
+\chapter[Univariate Summaries]{Univariate Summaries in R)} \label{chap:RUnivSum}
+
+\vspace{-48pt}
+\minitoc
+\vspace{12pt}
+
+
+
+
+ A third data set -- number of days of ice cover at ice gauge station 9004 in Lake Superior -- will be used to demonstrate calculations with R. These data are in \href{https://raw.githubusercontent.com/droglenc/NCData/master/LakeSuperiorIce.csv}{LakeSuperiorIce.csv} and are loaded into \R{LSI} below.\footnote{See \sectref{sect:RAltData} for how to access these data. These data are originally from the \href{http://www.nsidc.org/}{National Snow and Ice Data Center}.}
+<<eval=FALSE>>=
+LSI <- read.csv("data/LakeSuperiorIce.csv")
+@
+<<echo=FALSE>>=
+LSI <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/LakeSuperiorIce.csv")
+sumLSI <- Summarize(~days,data=LSI)
+@
+
+
+
+\subsection{Computation of Summaries in R} \label{sect:DescStats}
+All summary statistics described above, with the exception of the mode, is  calculated in R with \R{Summarize()}. To summarize a single variable a one-sided formula of the form \R{\TILDE quant} is used, where \R{quant} generically represents the quantitative variable, along with the \R{data=} argument. The number of digits after the decimal place is controlled with \R{digits=}.
+<<>>=
+Summarize(~days,data=LSI,digits=2)
+@
+
+From this it is seen that the sample median is \Sexpr{formatC(sumLSI["median"],format="f",digits=0)} days, sample mean is \Sexpr{formatC(sumLSI["mean"],format="f",digits=1)} days, sample IQR is from \Sexpr{formatC(sumLSI["Q1"],format="f",digits=0)} to \Sexpr{formatC(sumLSI["Q3"],format="f",digits=0)} days, the sample standard deviation is \Sexpr{formatC(sumLSI["sd"],format="f",digits=2)} days, and the range is from \Sexpr{formatC(sumLSI["min"],format="f",digits=0)} to \Sexpr{formatC(sumLSI["max"],format="f",digits=0)}.
+
+
+
+\subsection{Construction of Graphs in R}
+A simple (by default) histogram is constructed in R with \R{hist()} using a one-sided formula of the form \R{\TILDE quant}, where \R{quant} generically represents the quantitative variable, and the corresponding data frame in \R{data=}.\footnote{Note that this is the same formula used in \R{Summarize()}.} The x-axis label may be improved from the default value by including a label in \R{xlab=}. The width of the classes may be controlled with a positive integer in \R{w=}.\footnote{The endpoints for the classes may also be set by giving a vector of endpoints to \R{breaks=}.}
+
+<<Histogram1, fig.cap="Histograms of the duration of ice cover at ice gauge 9004 in Lake Superior using the default class widths (Left) and widths of 20 days (Right).", out.width='.34\\linewidth'>>=
+hist(~days,data=LSI,xlab="Days of Ice Cover")      # Fig 5.4-Left
+hist(~days,data=LSI,xlab="Days of Ice Cover",w=20) # Fig 5.4-Right
+@
+
+A modern boxplot of a single variable is constructed in R with \R{boxplot()}, where the first argument is usually a specific variable in a data.frame. Additionally, the y-axis may be properly labeled with \R{ylab=}.
+
+<<BoxplotLSI, fig.cap="Boxplot of the duration of ice cover at ice gauge 9004 in Lake Superior.", out.width='.3\\linewidth'>>=
+boxplot(LSI$days,ylab="Days of Ice Cover")
+@
+
+\warn{The default histogram and boxplot should be modified by properly labeling the axes.}
+
+
+\section{Multiple Groups} \label{sect:MultGroups}
+It is common to need to compute numerical or construct graphical summaries of a quantitative variable separately for groups of individuals. In these cases it is beneficial to have a function that will efficiently construct a histogram and compute summary statistics for the quantitative variable separated by the levels of a factor variable. Separate histograms are constructed with \R{hist()}, if the first argument is a ``formula'' of the type \R{quant\TILDE group} where \R{quant} represents the quantitative response variable of interest and \R{group} represents the factor variable that indicates to which group the individual belongs. The data.frame that contains \R{quant} and \R{group} is given to \R{data=}. Summary statistics are separated by group by supplying the same formula and \R{data=} arguments to \R{Summarize()}.
+
+As an example, the LSI data.frame contains a \R{period} variable that indicates whether the ice season was ``pre-1975'' or ``post-1975'' (which included 1975). Thus, one may be interested in examining the distribution of annual days of ice for each of these periods period. Histograms \figrefp{fig:mhist1} and summary statistics separated by period are constructed below.
+<<mhist1, fig.width=7, fig.height=3.5, out.width='.8\\linewidth', fig.cap="Histograms of the duration of ice cover at ice gauge 9004 in Lake Superior by period.">>=
+hist(days~period,data=LSI,ylab="Days of Ice Cover",w=20)
+Summarize(days~period,data=LSI,digits=2)
+@
+
+Side-by-side boxplots \figrefp{fig:Boxplot1} are an alternative to separated histograms and are constructed by including the same formula and \R{data=} arguments to \R{boxplot()}.
+<<Boxplot1, fig.cap="Boxplot of the duration of ice cover at ice gauge 9004 in Lake Superior by period.">>=
+boxplot(days~period,data=LSI,ylab="Days of Ice Cover",xlab="Period")
+@
+
+Note that the formulae above required the grouping variable to be a factor. In some instances, a grouping variable may appear as an integer variable to R. For example, one may want to explore days of ice by decade, but the decade variable is not a factor variable.
+<<>>=
+str(LSI)
+@
+
+In these cases, the variale needs to be explicitly converted to a factor variable using \R{factor()}, as shown below. The use of \R{factor()} is not needed if R already recognizes the variable as a factor variable.
+<<>>=
+LSI$decade <- factor(LSI$decade)
+str(LSI)
+@
+
+
+\subsection{Using in R}
+The General Sociological Survey (GSS) data are loaded, the structure of the data.frame is examined, and the levels of the \var{recycle} variable are shown below. These results show the five levels in the \var{recycle} factor variable, ordered alphabetically as is the default in R. However, the levels should be ``Always'', ``Often'', ``Sometimes'', ``Never'', and ``Not Avail'' to follow the natural order of this ordinal variable.
+<<echo=FALSE>>=
+GSS <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/GSSEnviroQues.csv")
+@
+<<eval=FALSE>>=
+GSS <- read.csv("data/GSSEnviroQues.csv")
+@
+<<>>=
+str(GSS)
+levels(GSS$recycle)
+@
+
+The order of a factor variable is controlled by including the ordered level names within a vector given to \R{levels=} in \R{factor()}. The names of the levels in this vector must be exactly as they appear in the original variable and they must be contained within quotes. The levels of \var{recycle} were reordered below. The advantage of correcting this order is that when the summary table is made, the order will follow the natural order of the variable rather than the alphabetical order.
+<<>>=
+lvls <- c("Always","Often","Sometimes","Never","Not Avail")
+GSS$recycle <- factor(GSS$recycle,levels=lvls)
+levels(GSS$recycle)
+@
+
+\warn{When changing the order of the levels with the \R{levels=} argument, the level names must be contained within quotes and they must be spelled exactly as they were spelled in the original variable.}
+
+A frequency table of a single categorical variable is computed with \R{xtabs()}, where the first argument is a one-sided formula of the form \R{\TILDE var} and the corresponding data.frame is in \R{data=}. The result from \R{xtabs()} should be assigned to an object for further use. For example, the frequency table is produced, stored in \R{tabRecycle}, and displayed below. Thus, \Sexpr{xtabs(~recycle,data=GSS)["Always"]} respondents answered ``Always'' to the recycling question.
+<<>>=
+( tabRecycle <- xtabs(~recycle,data=GSS) )
+@
+
+A percentage table is computed by including the saved frequency table as the first argument to \R{percTable()}.\footnote{Thus, \R{xtabs()} must be completed and saved to an object before \R{percTable()}.} The number of digits of output is controlled with \R{digits=}. Thus, \Sexpr{formatC(percTable(tabRecycle)["Always"],format="f",digits=1)}\% of respondents answered ``Always'' to the recycling question.
+<<>>=
+percTable(tabRecycle,digits=1)
+@
+
+A bar plot is produced by giving the saved \R{xtabs()} object as the first argument to \R{barplot()}. The x- and y-axes may be explicitly labeled with \R{xlab=} and \R{ylab=}, respectively. For example, the bar plot for the recycling data \figrefp{fig:Barchart1} is produced below.
+<<Barchart1, fig.cap="Bar chart of the frequency of responses to the recycling question on the GSS.",fig.width=5,out.width='.55\\linewidth'>>=
+barplot(tabRecycle,ylab="Frequency",xlab="Recycle Response")
+@
+

@@ -1,0 +1,163 @@
+---
+layout: page
+title: Exercises
+subtitle: Univariate Summaries
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="calculate-summary-statistics-i" class="section level2">
+<h2>Calculate Summary Statistics I</h2>
+<p>Consider the following three data sets for questions below. Show your work for all questions. [<a href="#hints">See hints at bottom.</a>]</p>
+<pre>
+Data Set 1
+18 28 25 21 16 24
+
+Data Set 2
+4 54 16 85 52 29 24 71 61 60 2
+
+Data Set 3
+93 81 34 5 54 84 54 13 1 35 79 63 97 71
+</pre>
+<ol>
+<li>Hand calculate the mean of Data Set 1.</li>
+<li>Hand calculate the standard deviation of Data Set 1.</li>
+<li>Hand calculate the median of Data Set 2.</li>
+<li>Hand calculate the IQR of Data Set 2.</li>
+<li>Hand calculate the median of Data Set 3.</li>
+<li>Hand calculate the IQR of Data Set 3.</li>
+<li>Hand calculate the range of Data Set 3.</li>
+</ol>
+<hr />
+</div>
+<div id="histograms" class="section level2">
+<h2>Histograms</h2>
+<p>The <a href="http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map">U.S. Census</a> asked individuals 16 years old and older “How long in minutes is your one-way commute to work each day?”. The mean for individuals from each state was computed and is plotted in the histogram below.</p>
+<p><img src="UnivSum_CE1_files/figure-html/unnamed-chunk-3-1.png" width="384" /></p>
+<p>Use this histogram to answer these questions.</p>
+<ol>
+<li>What is an individual in this example?</li>
+<li>What is the variable in this example?</li>
+<li>What type of variable is recorded?</li>
+<li>How many individuals are represented in this histogram?</li>
+<li>How many individuals had a mean commute time between 16 and 18 minutes?</li>
+<li>How many states had a mean commute time between 18 and 24 minutes?</li>
+<li>What was the range of mean commute times for the bin with exactly five states?</li>
+</ol>
+<hr />
+</div>
+<div id="frequency-and-percentages-tables" class="section level2">
+<h2>Frequency and Percentages Tables</h2>
+<p><img src="zimgs/sheltie-herding.jpg" alt="Sheltie Herding" class="img-right"> The breeds that won the “Herding Group” at the Westminster Kennel Club championships are <a href="http://www.westminsterkennelclub.org/about-sensation/history/herding-group-winners/">listed here</a>. Perform the following tasks with those data “by hand” (i.e., without using R or other software).</p>
+<ol>
+<li>Construct a table that shows the frequency of breeds that won the group. [<em>For simplicity, lump all of the “shepherd”s together, all of the “collie”s together, and all of the “corgi”s together. Keep other breeds as separate categories. Ignore minor spelling differences throughout.</em>]</li>
+<li>Construct a table that shows the percentage by breed that won the group.</li>
+<li>Hand draw (roughly) a bar chart of your results.</li>
+<li>Write a brief conclusion from these results. [<em>This is performing a univariate EDA for these categorical data.</em>]</li>
+</ol>
+<hr />
+</div>
+<div id="bar-chart-i" class="section level2">
+<h2>Bar Chart I</h2>
+<p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/weddingring.jpg" alt="Wedding Ring" class="img-right"> <a href="../resources/past-projects/F07_Brilla.pdf">A Northland College student</a> asked 50 of her peers “Why should people get married (Select Love, Money, Pregnancy, or Other)?” Her results are shown in the bar chart below. Use this information to answer the questions further below.</p>
+<p><img src="UnivSum_CE1_files/figure-html/unnamed-chunk-4-1.png" width="480" /></p>
+<ol>
+<li>What is an individual in this example?</li>
+<li>What type of variable is recorded?</li>
+<li>Construct a frequency table from this bar chart.</li>
+<li>Construct a percentage table from your frequency table.</li>
+<li>Write a brief conclusion from these results.</li>
+</ol>
+<hr />
+<p> </p>
+<hr />
+</div>
+<div id="additional-practice" class="section level2">
+<h2>Additional Practice</h2>
+<p><a href="UnivSum_CE2">Here are more exercises for practice if time permits.</a></p>
+<p> </p>
+<hr />
+</div>
+<div id="hints" class="section level2">
+<h2>Hints</h2>
+<p>You can check your work with <code>sdCalc()</code> and <code>iqrCalc()</code> in R. For example,</p>
+<pre class="r"><code>&gt; # Enter (example) data into d vector
+&gt; d &lt;- c(16,23,47,13,18,12)
+&gt; # Check calculations for data in d
+&gt; sdCalc(d)</code></pre>
+<pre><code>Demonstration of parts of a std. dev. calculation.
+
+      x diffs diffs.sq
+1    16  -5.5    30.25
+2    23   1.5     2.25
+3    47  25.5   650.25
+4    13  -8.5    72.25
+5    18  -3.5    12.25
+6    12  -9.5    90.25
+sum 129   0.0   857.50
+
+Mean = x-bar = 129 / 6 = 21.5 
+
+Variance = s^2 = 857.5 / 5 = 171.5 
+
+Std. Dev = s = sqrt(171.5) = 13.0958</code></pre>
+<pre class="r"><code>&gt; iqrCalc(d)</code></pre>
+<pre><code>Median (=17) is the average of values in positions 3 and 4.
+  12 13 [16 18] 23 47
+
+Q1 (=13) is the value in position 2 of the lower half.
+  12 [13] 16
+
+Q3 (=23) is the value in position 2 of the upper half.
+  18 [23] 47</code></pre>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

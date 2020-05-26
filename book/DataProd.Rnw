@@ -105,11 +105,8 @@ ggplot(data=df,mapping=aes(x=relhum,y=growth,color=temp)) +
   labs(x="Relative Humidity",
        y="Growth Rate",
        color=NULL) +
-  theme_bw() +
-  theme(panel.grid=element_blank(),
-        strip.text=element_text(face="bold"),
-        axis.title.x=element_text(margin=margin(t=3,unit="mm")),
-        axis.title.y=element_text(margin=margin(r=3,unit="mm")),
+  theme_NCStats() +
+  theme(strip.text=element_text(face="bold"),
         legend.position=c(0.9,0.2))
 @
 \vspace{9pt} % added because of paragraph compression following R code
