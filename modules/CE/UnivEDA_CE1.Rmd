@@ -30,7 +30,7 @@ tbls(name="Crabs","Summary statistics for post-smolt carapace length (mm) of Dun
 figs <- captioner(prefix="Figure")
 figs(name="Commute","Histogram for the mean commute time (mins) for each state.")
 figs(name="Crabs","Histogram for post-smolt carapace length (mm) of Dungeness crab collected in California.")
-figs(name="fires","Bar chart of frequency of forest fires in Montesinho Natural Part from 2000-2003.")
+figs(name="fires","Bar chart of frequency of forest fires in Montesinho Natural Park from 2000-2003.")
 figs(name="plastic","Bar chart of the percentage of worldwide plastic waste by fate in 1995 and 2015.")
 ```
 
@@ -88,7 +88,7 @@ Summarize(~time,data=df,digits=2)
 ## Dungeness Crabs
 <img src="zimgs/Dungeness.jpg" alt="Dungeness Crab" class="img-right">
 
-Scientists were concered about the overexploitation of [Dungeness Crabs (*Cancer magister*)](https://en.wikipedia.org/wiki/Dungeness_crab) in some California waters. To better manage this species they examined the post-molt carapace length from a large sample of crabs. Their results are displayed in `r figs("Crabs",display="cite")` and `r tbls("Crabs",display="cite")`. Perform a thorough EDA with these results.
+Scientists were concerned about the overexploitation of [Dungeness Crabs (*Cancer magister*)](https://en.wikipedia.org/wiki/Dungeness_crab) in some California waters. To better manage this species they examined the post-molt carapace length from a large sample of crabs. Their results are displayed in `r figs("Crabs",display="cite")` and `r tbls("Crabs",display="cite")`. Perform a thorough EDA with these results.
 
 ```{r CrabsHist, echo=FALSE, fig.width=4, fig.height=4, par1=TRUE}
 df <- read.table("http://www.stat.berkeley.edu/~statlabs/data/crabs.data",header=TRUE)
@@ -113,7 +113,7 @@ Summarize(~postsz,data=df,digits=1)
 <img src="zimgs/wildfire.jpg" alt="Wildfire" class="img-right">
 [Cortex and Morais (2007)](http://www3.dsi.uminho.pt/pcortez/fires.pdf) describe attributes of forest fires in Montesinho Natural Park in Portugal. The number of forest fires by month from 2000-2003 are displayed in `r figs("fires",display="cite")`
 
-```{r ffBar, echo=FALSE, fig.width=4, fig.height=4}
+```{r ffBar, echo=FALSE, fig.width=5, fig.height=4}
 ff <- read.csv("http://www.dsi.uminho.pt/~pcortez/forestfires/forestfires.csv",
                stringsAsFactors=FALSE) %>%
   mutate(month=FSA::capFirst(month),month=factor(month,levels=month.abb))
@@ -130,7 +130,7 @@ ggplot(data=ff,mapping=aes(x=month)) +
 
 
 ## Fate of Plastics
-<img src="zimgs/plastic_bales.jpg" alt="Plastic Bales" class="img-right">
+<img src="zimgs/plastic_bales.jpeg" alt="Plastic Bales" class="img-right">
 [Geyer et al. (2017)](http://advances.sciencemag.org/content/3/7/e1700782.full) estimated the fate of all plastic waste produced worldwide (their data [is available here](https://ourworldindata.org/grapher/global-plastic-fate)). Their results for two years are displayed in `r figs("plastic",display="cite")`. Use these results to perform a univariate EDA for the fate of plastic waste in 2015. Also describe how the fate of plastic waste has changed from 1995 to 2015.
 
 ```{r plasticBar, echo=FALSE, fig.width=6, fig.height=4}
@@ -144,11 +144,7 @@ ggplot(data=pl,mapping=aes(x=Entity,y=Estimated.historic.plastic.fate....)) +
   facet_wrap(vars(Year))
 ```
 
-`r figs("pastic")`
-
-
-
-blob:https://ourworldindata.org/5464671c-bcee-46eb-adf5-1d8cdaa883d6
+`r figs("plastic")`
 
 &nbsp;
 

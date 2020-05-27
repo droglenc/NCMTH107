@@ -30,7 +30,7 @@ It is important to understand the distribution of individuals for a single varia
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](UnivEDA_Prep).
+Use the materials below to answer the questions on [this preparation guide](Prep/UnivEDA).
 
 * [![PDF](../img/pdf.png) Reading](../book/UnivEDA.pdf)
 * [![Vimeo](../img/dhovid.png) Interpreting a Univariate EDA (Quantitative)](https://vimeo.com/user45324800/ueda-quantsum){:target="_blank"} [11 mins] ... [corresponding slides](PPT/UEDAQuant_PPT.pptx)
