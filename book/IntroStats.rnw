@@ -51,11 +51,11 @@ for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
     \include{FBMatter/FMatter}
 
   \mainmatter
-<<child-WhyStatsImportant, child='WhyStatsImportant.Rnw', eval=FALSE>>=
+<<child-WhyStatsImportant, child='WhyStatsImportant.Rnw', eval=TRUE>>=
 @
-<<child-FoundationalDefinitions, child='FoundationalDefinitions.Rnw', eval=FALSE>>=
+<<child-FoundationalDefinitions, child='FoundationalDefinitions.Rnw', eval=TRUE>>=
 @
-<<child-DataProd, child='DataProd.Rnw', eval=FALSE>>=
+<<child-DataProd, child='DataProd.Rnw', eval=TRUE>>=
 @
 <<child-UnivSum, child='UnivSum.Rnw', eval=TRUE>>=
 @

@@ -38,7 +38,7 @@ print(xtable(matrix(c(Pb,NA),nrow=8)),na.string="",
 \end{table}
 
 \vspace{-12pt}
-Instead, suppose that the scientists brought a simple plot of the frequency of observed lead concentrations and brief numerical summaries \figrefp{fig:KreherParkPbhist} to the meeting. With these one can easily see that the measurements were fairly symmetric with no obviously ``weird'' values. The lead concentrations ranged from as low as \Sexpr{formatC(min(Pb),format="f",digits=2)} $\mu g \cdot m^{-3}$ to as high as \Sexpr{formatC(max(Pb),format="f",digits=2)} $\mu g \cdot m^{-3}$ with the measurements centered on approximately 1.0 $\mu g \cdot m^{-3}$. These summaries are discussed in detail in \modref{chap:UnivEDAQuant1}. However, at this point, note that summarizing large quantities of data with few graphical or numerical summaries makes it is easier to identify meaning from data.
+Instead, suppose that the scientists brought a simple plot of the frequency of observed lead concentrations and brief numerical summaries \figrefp{fig:KreherParkPbhist} to the meeting. With these one can easily see that the measurements were fairly symmetric with no obviously ``weird'' values. The lead concentrations ranged from as low as \Sexpr{formatC(min(Pb),format="f",digits=2)} $\mu g \cdot m^{-3}$ to as high as \Sexpr{formatC(max(Pb),format="f",digits=2)} $\mu g \cdot m^{-3}$ with the measurements centered on approximately 1.0 $\mu g \cdot m^{-3}$. These summaries are discussed in detail in \modref{chap:UnivSum}. However, at this point, note that summarizing large quantities of data with few graphical or numerical summaries makes it is easier to identify meaning from data.
 
 <<KreherParkPbhist, echo=FALSE, fig.width=3.5/0.75,fig.height=3.5,out.width='.55\\linewidth', fig.cap="Histogram and summary statistics of lead concentration measurements ($\\mu g \\cdot m^{-3}$) at each of 119 sites in Kreher Park superfund site.">>=
 h <- ggplot(data=data.frame(Pb),mapping=aes(x=Pb)) +
@@ -46,7 +46,7 @@ h <- ggplot(data=data.frame(Pb),mapping=aes(x=Pb)) +
   scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
   scale_x_continuous(expand=expansion(mult=0.02)) +
   labs(x="Pb Concentration",y="Frequency of Sites") +
-  theme_NCStats())
+  theme_NCStats()
 
 Pb.sum <- as.matrix(formatC(summary(Pb),format="f",digits=2))
 colnames(Pb.sum) <- "Pb"
