@@ -15,9 +15,9 @@ title: Learning Modules
       <li><a href="UnivSum.html">Univariates Summaries</a></li>
       <li><a href="UnivEDA.html">Univariate EDA</a></li>
       <li><a href="NormalDist.html">Normal Distributions</a></li>
-      <li><a href="BEDACat.html">Bivariate EDA - Categorical</a></li>
       <li><a href="BEDAQuant.html">Bivariate EDA - Quantitative</a></li>
       <li><a href="LinearRegression.html">Linear Regression</a></li>
+      <li><a href="BEDACat.html">Bivariate EDA - Categorical</a></li>
     </ol>
   <li><b>Inference Theory</b></li>
     <ol type="1" start="10">
@@ -39,8 +39,8 @@ title: Learning Modules
     <ol type="1" start="20">
       <li><a href="RData.html">Getting Data Into R</a></li>
       <li><a href="RFilter.html">Filtering Data In R</a></li>
-      <li><a href="RUniv.html">Univariate Summaries</a></li>
-      <li><a href="RBiv.html">Bivariate Summaries</a></li>
+      <li><a href="RUnivEDA.html">Univariate EDA</a></li>
+      <li><a href="RBivEDA.html">Bivariate EDA</a></li>
       <li><a href="RRegression.html">Linear Regresion</a></li>
       <li><a href="Rt1.html">1-Sample t</a></li>
       <li><a href="Rt2.html">2-Sample t</a></li>

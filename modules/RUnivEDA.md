@@ -1,6 +1,6 @@
 ---
 layout: page
-title: R - Univariate Summaries
+title: R - Univariate EDA
 css: /css/modules.css
 ---
 
@@ -33,18 +33,18 @@ css: /css/modules.css
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](Prep/RUniv).
+Use the materials below to answer the questions on [this preparation guide](Prep/RUnivEDA).
 
 * [![PDF](../img/pdf.png) Reading](../book/Summary One Quant Var.pdf)
-* [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative) in R](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins]  [![Web](../img/web.png)](HO/UEDAQuant1_RHO.html){:target="_blank"}  [![R](../img/Rlogo.png)](HO/UEDAQuant1_RHO.R){:target="_blank"}
-* [![Vimeo](../img/dhovid.png) Univariate EDA (Categorical) in R](https://vimeo.com/user45324800/ncstats-uedac){:target="_blank"} [4 mins]  [![Web](../img/web.png)](HO/UEDACat_RHO.html){:target="_blank"}  [![R](../img/Rlogo.png)](HO/UEDACat_RHO.R){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative) in R](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins] ... [corresponding script](HO/UEDAQuant1_RHO.html){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) Univariate EDA (Categorical) in R](https://vimeo.com/user45324800/ncstats-uedac){:target="_blank"} [4 mins] ... [corresponding script](HO/UEDACat_RHO.html){:target="_blank"}
 
 ----
 
 ## Practice
 
-* [Exercises](CE/RUniv_CE1) ([*more as time permits*](CE/RUniv_CE2)) ... [ANSWER KEY](CE/KEY_RUniv_CE)
-* [Review Exercises](RE/RUniv_RevEx)
+* [Exercises](CE/RUnivEDA_CE1) ([*more as time permits*](CE/RUnivEDA_CE2)) ... [ANSWER KEY](CE/KEY_RUnivEDA_CE)
+* [Review Exercises](RE/RUnivEDA_RevEx)
 
 ----
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Preparation Guide
-subtitle: Filtering Data In R
+subtitle: R - Filtering Data
 css: "/css/modules.css"
 ---
 

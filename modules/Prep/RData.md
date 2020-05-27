@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Preparation Guide
-subtitle: Getting Data Into R
+subtitle: R - Getting Data
 css: "/css/modules.css"
 ---
 
