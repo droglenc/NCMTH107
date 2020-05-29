@@ -17,7 +17,7 @@
 ## Then run the following ...
 rqrd <- c("remotes","tidyverse","multcomp","manipulate")
 deps <- c("Depends","Imports")
-for (i in seq_along(rqrd)) utils::install.packages(rqrd[i],lib=p,dependencies=deps)
+for (i in seq_along(rqrd)) utils::install.packages(rqrd[i],lib=p,dependencies=deps,type="binary")
 remotes::install_github('droglenc/NCStats',lib=p,dependencies=deps)
 
 ## See if this runs without error ...
