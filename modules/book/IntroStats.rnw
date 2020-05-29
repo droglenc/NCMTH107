@@ -1,0 +1,125 @@
+\documentclass[10pt,openany]{book}
+
+%\input{c:/aaaWork/zGnrlLatex/BookPreamble_HC}   % use for the hard-copy version
+\input{c:/aaaWork/zGnrlLatex/BookPreamble}
+\hypersetup{pdftitle = MTH107 Notes,bookmarksdepth=0}
+\input{c:/aaaWork/zGnrlLatex/JustRPreamble}
+\usepackage{animate}
+\usepackage{titlesec}
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsection{-3pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{-3pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\renewcommand{\chaptername}{Module}
+
+\begin{document}
+<<echo=FALSE, eval=FALSE>>=
+## Run this manually (Ctrl-Alt-C) after compiling to split at bookmarks
+fn <- "IntroStats"
+dir <- "C:/aaaWork/Web/GitHub/NCMTH107/modules/book/"
+# this uses the sejda-console program ... use sejda-console -h for help
+eng <- "c:/apps/sejda-console-3.2.47/bin/sejda-console splitbybookmarks"
+# set input filename
+inp <- paste0("-f ",dir,fn,".pdf")
+# sets bookmark level to split at
+ins <- "-l 1 --discardOutline"
+# set output directory and prefix for filenames to the name of the bookmark
+out <- paste("-o",dir,"-p [BOOKMARK_NAME] --overwrite")
+# put it all together and run
+( tmp <- paste(eng,inp,ins,out) )
+system(tmp,show.output.on.console=TRUE)
+
+## Removes intermediate files from the directory ... just looks cleaner
+tmp <- list.files(dir)
+tmp <- tmp[grepl(fn,tmp)]
+tmp <- tmp[!grepl(".pdf",tmp) & !grepl(".rnw",tmp)]
+file.remove(paste0(dir,tmp))
+@
+
+<<setup,echo=FALSE,include=FALSE>>=
+## load knitr helper materials
+source("c:/aaaWork/zGnrlLatex/knitr_setup.R")
+## more knitr options -- force use of include for child documents
+opts_knit$set(child.command='input')
+## Turn off highlighting and darken box a bit
+opts_chunk$set(highlight=FALSE,background=c(235,235,235)/255)
+## Make sure that the required packages are loaded
+rqrd <- c("NCStats","FSAdata","dplyr","gplots","mvtnorm","TeachingDemos","xtable","ggplot2","patchwork")
+for (i in 1:length(rqrd)) library(rqrd[i],character.only=TRUE)
+@
+
+  \frontmatter
+    \include{FBMatter/FMatter}
+
+  \mainmatter
+<<child-WhyStatsImportant, child='WhyStatsImportant.Rnw', eval=TRUE>>=
+@
+<<child-FoundationalDefinitions, child='FoundationalDefinitions.Rnw', eval=TRUE>>=
+@
+<<child-DataProd, child='DataProd.Rnw', eval=TRUE>>=
+@
+<<child-UnivSum, child='UnivSum.Rnw', eval=TRUE>>=
+@
+<<child-UnivEDA, child='UnivEDA.Rnw', eval=TRUE>>=
+@
+<<child-NormDist, child='NormDist.Rnw', eval=TRUE>>=
+@
+<<child-BivEDAQuant, child='BivEDAQuant.Rnw', eval=TRUE>>=
+@
+
+<<child-LinearRegression, child='LinearRegression.Rnw', eval=FALSE>>=
+@
+<<child-BivEDACat, child='BivEDACat.Rnw', eval=FALSE>>=
+@
+<<child-SamplingDist, child='SamplingDist.Rnw', eval=FALSE>>=
+@
+<<child-Probability, child='Probability.Rnw', eval=FALSE>>=
+@
+<<child-HypothesisTests, child='HypothesisTests.Rnw', eval=FALSE>>=
+@
+<<child-HypothesisTestsErrors, child='HypothesisTestsErrors.Rnw', eval=FALSE>>=
+@
+<<child-ConfidenceRegions, child='ConfidenceRegions.Rnw', eval=FALSE>>=
+@
+<<child-ZTest, child='ZTest.Rnw', eval=FALSE>>=
+@
+<<child-tTest1, child='tTest1.Rnw', eval=FALSE>>=
+@
+<<child-tTest2, child='tTest2.Rnw', eval=FALSE>>=
+@
+<<child-ChiSquare, child='chiSquare.Rnw', eval=FALSE>>=
+@
+<<child-GOF, child='GoodnessOfFit.Rnw', eval=FALSE>>=
+@
+
+<<child-RData, child='RData.Rnw', eval=FALSE>>=
+@
+<<child-RFilterData, child='RFilterData.Rnw', eval=FALSE>>=
+@
+<<child-RUnivEDA, child='RUnivEDA.Rnw', eval=FALSE>>=
+@
+<<child-RBivEDA, child='RBivEDA.Rnw', eval=FALSE>>=
+@
+<<child-RRegression, child='RRegression.Rnw', eval=FALSE>>=
+@
+<<child-Rt1, child='Rt1.Rnw', eval=FALSE>>=
+@
+<<child-Rt2, child='Rt2.Rnw', eval=FALSE>>=
+@
+<<child-RChi, child='RChi.Rnw', eval=FALSE>>=
+@
+
+
+
+
+%    \cleardoublepage
+%    \phantomsection
+%    \addcontentsline{toc}{part}{Appendix}
+%    \chapter*{Appendices}
+%    \appendix
+<<child-Animations, child='animations.Rnw', eval=FALSE>>=
+@
+
+%  \backmatter
+%    \input{FBMatter/BMatter}
+
+\end{document}
