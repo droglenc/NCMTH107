@@ -32,7 +32,7 @@ R is fast becoming the primary software for performing statistical analyses in m
 
 Use the materials below to answer the questions on [this preparation guide](Prep/RData). [*Problems with videos? [See this FAQ](../resources/FAQ/FAQs/videos){:target="_blank"}.*]
 
-* [Reading](../bookR/RData.html)
+* [Reading](bookR/RData.html)
 * [![Vimeo](../img/dhovid.png) Retrieve Data from Webpage](https://vimeo.com/user45324800/ncstats-getdatawebpage){:target="_blank"} [3 mins]
 * ![Vimeo](../img/dhovid.png) Enter Your Own Data ... [With Excel](https://vimeo.com/user45324800/ncstats-preparedataexcel){:target="_blank"} [4 mins] **OR** [Without Excel](https://vimeo.com/user45324800/ncstats-preparedatatextfile){:target="_blank"} [4 mins]
 * [![Vimeo](../img/dhovid.png) Load CSV File into RStudio](https://vimeo.com/user45324800/ncstats-loadcsvrstudio){:target="_blank"} [6 mins]

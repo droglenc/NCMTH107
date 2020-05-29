@@ -47,4 +47,4 @@ title: Learning Modules
       <li><a href="Rt2.html">2-Sample t</a></li>
       <li><a href="RChi.html">Chi-square</a></li>
     </ol>
-</ol>
+</ul>
