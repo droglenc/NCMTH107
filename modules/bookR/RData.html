@@ -1952,6 +1952,7 @@ distill-header .nav a {
 <li><a href="#entering-data">Entering Data</a></li>
 <li><a href="#viewing-a-data-frame">Viewing a Data Frame</a></li>
 <li><a href="#vectors">Vectors</a></li>
+<li><a href="#corrections">Corrections</a></li>
 </ul>
 </nav>
 <hr class="d-toc-separator" />
@@ -2029,19 +2030,19 @@ data(iris)</code></pre>
 <pre class="r"><code>
 bears</code></pre>
 <pre><code>
-   length.cm weight.kg      loc
-1      139.0       110 Bayfield
-2      138.0        60 Bayfield
-3      139.0        90 Bayfield
-4      120.5        60 Bayfield
-5      149.0        85 Bayfield
-6      141.0       100  Ashland
-7      141.0        95  Ashland
-8      150.0        85  Douglas
-9      166.0       155  Douglas
-10     151.5       140  Douglas
-11     129.5       105  Douglas
-12     150.0       110  Douglas</code></pre>
+#R&gt;      length.cm weight.kg      loc
+#R&gt;   1      139.0       110 Bayfield
+#R&gt;   2      138.0        60 Bayfield
+#R&gt;   3      139.0        90 Bayfield
+#R&gt;   4      120.5        60 Bayfield
+#R&gt;   5      149.0        85 Bayfield
+#R&gt;   6      141.0       100  Ashland
+#R&gt;   7      141.0        95  Ashland
+#R&gt;   8      150.0        85  Douglas
+#R&gt;   9      166.0       155  Douglas
+#R&gt;   10     151.5       140  Douglas
+#R&gt;   11     129.5       105  Douglas
+#R&gt;   12     150.0       110  Douglas</code></pre>
 </div>
 <p>Typing the name is adequate for small data.frames, but not useful for large data.frames. The entire data.frame is opened in a separate window by double-clicking on the name of the data.frame in the “Environment” tab of RStudio (in upper-right pane). Alternatively, the first and last three rows of a data frame are viewed by including the data frame object in <code>headtail()</code>.</p>
 <aside>
@@ -2051,13 +2052,13 @@ Use <code>headtail()</code> from <code>NCStats</code> to see the first and last 
 <pre class="r"><code>
 headtail(bears)</code></pre>
 <pre><code>
-   length.cm weight.kg      loc
-1      139.0       110 Bayfield
-2      138.0        60 Bayfield
-3      139.0        90 Bayfield
-10     151.5       140  Douglas
-11     129.5       105  Douglas
-12     150.0       110  Douglas</code></pre>
+#R&gt;      length.cm weight.kg      loc
+#R&gt;   1      139.0       110 Bayfield
+#R&gt;   2      138.0        60 Bayfield
+#R&gt;   3      139.0        90 Bayfield
+#R&gt;   10     151.5       140  Douglas
+#R&gt;   11     129.5       105  Douglas
+#R&gt;   12     150.0       110  Douglas</code></pre>
 </div>
 <p>In addition to viewing the contents, it is useful to examine the structure of the data frame as returned from <code>str()</code>.</p>
 <aside>
@@ -2067,10 +2068,10 @@ Use <code>str()</code> to examine the structure of the data frame.
 <pre class="r"><code>
 str(bears)</code></pre>
 <pre><code>
-&#39;data.frame&#39;:   12 obs. of  3 variables:
- $ length.cm: num  139 138 139 120 149 ...
- $ weight.kg: int  110 60 90 60 85 100 95 85 155 140 ...
- $ loc      : Factor w/ 3 levels &quot;Ashland&quot;,&quot;Bayfield&quot;,..: 2 2 2 2 2 1 1 3 3 3 ...</code></pre>
+#R&gt;   &#39;data.frame&#39;: 12 obs. of  3 variables:
+#R&gt;    $ length.cm: num  139 138 139 120 149 ...
+#R&gt;    $ weight.kg: int  110 60 90 60 85 100 95 85 155 140 ...
+#R&gt;    $ loc      : Factor w/ 3 levels &quot;Ashland&quot;,&quot;Bayfield&quot;,..: 2 2 2 2 2 1 1 3 3 3 ...</code></pre>
 </div>
 <p>In this example, it is seen that three variables were recorded on 12 individuals. The first two variables – length.cm and weight.kg – are numerical measurements made on the bears. The last variable – loc – is a factor variable that records the capture location for each bear. The levels of the loc variable may be seen by including this variable (with the data.frame name) as the argument to <code>levels()</code>.</p>
 <aside>
@@ -2080,7 +2081,7 @@ Use <code>levels()</code> to see the names of the groups in a factor variable.
 <pre class="r"><code>
 levels(bears$loc)</code></pre>
 <pre><code>
-[1] &quot;Ashland&quot;  &quot;Bayfield&quot; &quot;Douglas&quot; </code></pre>
+#R&gt;   [1] &quot;Ashland&quot;  &quot;Bayfield&quot; &quot;Douglas&quot;</code></pre>
 </div>
 <p>In the previous example, the <code>$</code> notation was used to identify a particular variable (i.e., <code>loc</code>) within a data.frame (<code>bears</code>). Think of variables as being nested inside data.frames and, thus, to access the variable you must first identify the data.frame in which it exists and then the name of the variable. The <code>$</code> simply separates the data.frame from the variable.</p>
 <aside>
@@ -2090,14 +2091,14 @@ levels(bears$loc)</code></pre>
 <pre class="r"><code>
 bears$length.cm</code></pre>
 <pre><code>
- [1] 139.0 138.0 139.0 120.5 149.0 141.0 141.0 150.0 166.0 151.5 129.5
-[12] 150.0</code></pre>
+#R&gt;    [1] 139.0 138.0 139.0 120.5 149.0 141.0 141.0 150.0 166.0 151.5 129.5
+#R&gt;   [12] 150.0</code></pre>
 <pre class="r"><code>
 bears$loc</code></pre>
 <pre><code>
- [1] Bayfield Bayfield Bayfield Bayfield Bayfield Ashland  Ashland 
- [8] Douglas  Douglas  Douglas  Douglas  Douglas 
-Levels: Ashland Bayfield Douglas</code></pre>
+#R&gt;    [1] Bayfield Bayfield Bayfield Bayfield Bayfield Ashland  Ashland 
+#R&gt;    [8] Douglas  Douglas  Douglas  Douglas  Douglas 
+#R&gt;   Levels: Ashland Bayfield Douglas</code></pre>
 </div>
 <p> </p>
 <h1 id="vectors">Vectors</h1>
@@ -2106,21 +2107,23 @@ Levels: Ashland Bayfield Douglas</code></pre>
 <pre class="r"><code>
 ( v &lt;- c(1,2,5) )</code></pre>
 <pre><code>
-[1] 1 2 5</code></pre>
+#R&gt;   [1] 1 2 5</code></pre>
 <pre class="r"><code>
 ( y &lt;- c(&quot;Iowa&quot;,&quot;Minnesota&quot;,&quot;Wisconsin&quot;) )</code></pre>
 <pre><code>
-[1] &quot;Iowa&quot;      &quot;Minnesota&quot; &quot;Wisconsin&quot;</code></pre>
+#R&gt;   [1] &quot;Iowa&quot;      &quot;Minnesota&quot; &quot;Wisconsin&quot;</code></pre>
 </div>
 <p>Single variables from a data.frame are vectors.</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 bears$length.cm</code></pre>
 <pre><code>
- [1] 139.0 138.0 139.0 120.5 149.0 141.0 141.0 150.0 166.0 151.5 129.5
-[12] 150.0</code></pre>
+#R&gt;    [1] 139.0 138.0 139.0 120.5 149.0 141.0 141.0 150.0 166.0 151.5 129.5
+#R&gt;   [12] 150.0</code></pre>
 </div>
 <p>Vectors that are not extracted from a data.frame will only be used in this course for very simple lists of items, usually as arguments in a function.</p>
+<h1 id="corrections" class="appendix">Corrections</h1>
+<p>If you see any errors (code, typographical, or logical) please bring these to <a href="mailto:dogle@northland.edu">my attention</a>.</p>
 <section class="footnotes" role="doc-endnotes">
 <hr />
 <ol>

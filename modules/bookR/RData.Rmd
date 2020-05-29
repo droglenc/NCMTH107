@@ -9,7 +9,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo=TRUE,fig.align='center')
+knitr::opts_chunk$set(echo=TRUE,fig.align='center',comment="#R>  ")
 ```
 
 R, RStudio, the `NCStats` package, and very basic usage of R were [introduced here](RStart.html). This module explains how to enter data into R. Subsequent modules will explain how to use R to create the graphics and compute statistics and test results from these data.
@@ -174,3 +174,9 @@ bears$length.cm
 ```
 
 Vectors that are not extracted from a data.frame will only be used in this course for very simple lists of items, usually as arguments in a function.
+
+
+
+
+# Corrections {.appendix}
+If you see any errors (code, typographical, or logical) please bring these to [my attention](mailto:dogle@northland.edu).

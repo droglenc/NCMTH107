@@ -29,8 +29,8 @@ css: /css/modules.css
 
 Use the materials below to answer the questions on [this preparation guide](Prep/RFilter). [*Problems with videos? [See this FAQ](../resources/FAQ/FAQs/videos){:target="_blank"}.*]
 
-* [![PDF](../img/pdf.png) Reading](../book/Filtering Data In R.pdf)
-* [![Vimeo](../img/dhovid.png) Subset data.frame with filterD](https://vimeo.com/user45324800/filterd){:target="_blank"} [6 mins] [![Web](../img/web.png)](HO/FilteringDataInR_RHO.html){:target="_blank"}  [![R](../img/Rlogo.png)](HO/FilteringDataInR_RHO.R){:target="_blank"}
+* [Reading](bookR/RFilter.html)
+* [![Vimeo](../img/dhovid.png) Subset data.frame with filterD](https://vimeo.com/user45324800/filterd){:target="_blank"} [6 mins] ... [corresponding script](HO/FilteringDataInR_RHO.html){:target="_blank"}
 
 ----
 
