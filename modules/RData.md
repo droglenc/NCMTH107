@@ -32,15 +32,10 @@ R is fast becoming the primary software for performing statistical analyses in m
 
 Use the materials below to answer the questions on [this preparation guide](Prep/RData). [*Problems with videos? [See this FAQ](../resources/FAQ/FAQs/videos){:target="_blank"}.*]
 
-* [![PDF](../img/pdf.png) Reading](../book/Getting Data Into R.pdf)
-* [![YouTube](../img/youtube.png) What is R?](https://www.youtube.com/watch?v=XcBLEVknqvY){:target="_blank"} [2 mins]
-* [![YouTube](../img/youtube.png) What's Up with R?](https://www.youtube.com/watch?v=ZwYQPtU2Pa0){:target="_blank"} [*stop at 1:51*]
-* [![YouTube](../img/youtube.png) What is RStudio? Part 1](https://www.youtube.com/watch?v=riONFzJdXcs){:target="_blank"} [*stop at 2:27*]
-* [![YouTube](../img/youtube.png) What is RStudio? Part 2](https://www.youtube.com/watch?v=riONFzJdXcs){:target="_blank"} [*from 3:16 to 4:13*]
+* [Reading](../bookR/RData.html)
 * [![Vimeo](../img/dhovid.png) Retrieve Data from Webpage](https://vimeo.com/user45324800/ncstats-getdatawebpage){:target="_blank"} [3 mins]
-* [![Vimeo](../img/dhovid.png) Enter Your Own Data With Excel](https://vimeo.com/user45324800/ncstats-preparedataexcel){:target="_blank"} [4 mins]
-    * Alternatively: [Enter Your Own Data Without Excel](https://vimeo.com/user45324800/ncstats-preparedatatextfile){:target="_blank"} [4 mins]
-* [![Vimeo](../img/dhovid.png) Load Data into RStudio](https://vimeo.com/user45324800/ncstats-loadcsvrstudio){:target="_blank"} [6 mins]
+* ![Vimeo](../img/dhovid.png) Enter Your Own Data ... [With Excel](https://vimeo.com/user45324800/ncstats-preparedataexcel){:target="_blank"} [4 mins] **OR** [Without Excel](https://vimeo.com/user45324800/ncstats-preparedatatextfile){:target="_blank"} [4 mins]
+* [![Vimeo](../img/dhovid.png) Load CSV File into RStudio](https://vimeo.com/user45324800/ncstats-loadcsvrstudio){:target="_blank"} [6 mins]
 
 ----
 
@@ -49,11 +44,5 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 * [Class Example](CEx/GettingDataIntoR_CExmpl)
 * [Exercises](CE/GettingDataIntoR_CE1) [[*more as time permits*](CE/GettingDataIntoR_CE2)] ... [ANSWER KEY](CE/KEY_GettingDataIntoR_CE)
 * [Review Exercises](RE/GettingDataIntoR_RevEx.html)
-
-----
-
-## Archived Materials
-
-* none
 
 ----

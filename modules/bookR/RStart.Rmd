@@ -9,14 +9,48 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo=TRUE)
+knitr::opts_chunk$set(echo=TRUE,fig.align='center')
 ```
 
 
-# Setting Up R
-R is a software environment for performing statistical analyses. RStudio is a helper program that makes it easier to use R. Herein, I will refer to R but you will interact with R through RStudio.
+# What is R and RStudio
+R is a software environment for performing statistical analyses. RStudio is a helper program that makes it easier to use R. Below are four videos to introduce you to R and RStudio.
+
+<aside>
+I will refer to R, but you will interact with RStudio.
+</aside>
+
+* [What is R?](https://www.youtube.com/watch?v=XcBLEVknqvY)
+* [What's Up With R?](https://www.youtube.com/watch?v=ZwYQPtU2Pa0) [*stop at 1:51*]
+* [What is RStudio (part 1)](https://www.youtube.com/watch?v=riONFzJdXcs) [*stop at 2:27*]
+* [What is RStudio (part 2)](https://www.youtube.com/watch?v=riONFzJdXcs) [*only from 3:26 to 4:13*]
 
 Detailed methods for downloading, installing, and configuring R, RStudio, and `NCStats` on your personal computer are given on the [Resources page of the course website](http://derekogle.com/NCMTH107/resources#computer).
+
+
+&nbsp;
+
+# Installing R and RStudio
+## Windows
+To install R on a Windows machine, downloaded the installer from [this site](https://cloud.r-project.org/bin/windows/base/) by selecting the “Download R X.X.X for Windows” link at the top. Locate the installer on your computer and run it. Using all of the default choices will perform an acceptable install for this class.
+
+To install RStudio on a Windows machine, download the installer from [this link](https://rstudio.com/products/rstudio/download/#download) by selecting the “DOWNLOAD RSTUDIO FOR WINDOWS” button. Locate the installer on your computer and run it. Using all of the default choices will perform an acceptable install for this class.
+
+## Mac
+To install R on a Mac, downloaded the installer from [this site](https://cloud.r-project.org/bin/macosx/) by selecting one of the “R-X.X.X.pkg” links appropriate for your operating system under the “Latest Release” section. Locate the “.pkg” file on your computer and install it per usual. Using all of the default choices will perform an acceptable install for this class.1
+
+To install RStudio on aMac, download the installer from [this link](https://rstudio.com/products/rstudio/download/#download) by selecting the “DOWNLOAD RSTUDIO FOR MACOS” button (you can also select the MacOS option under the “All Installers” section). Locate the “.dmg” file on your computer and install it per usual. Using all of the default choices will perform an acceptable install for this class.
+
+## RStudio-in-the-Cloud
+Analyses with R and RStudio can be run through a web browser on “the cloud”, thus eliminating the need to install these softwares and the associated packages on your computer. Follow the directions below if you would like to try using R/RStudio in the cloud.
+
+You must create a free RStudio Cloud account to use this service. Go to [the RStudio Cloud website](https://rstudio.cloud/) and select “Get Started.” In the ensuing dialog box enter your e-mail adddress, a password, and your first and last names. Press “Sign up.” In a subsequent screen you will be asked to provide a name for the account with prompts to use your first and last name. Just press “Create Account” here.
+
+Once you have created your account, follow [this link to the “MTH107” project](https://rstudio.cloud/project/1331782), which should open a project that looks like that below. Currently this project is in my “workspace.” Click on the red “Save a Permanent Copy” item in the top bar to save the project to your workspace (see below). When you return in the future this project will appear in the left-hand menu, open it to begin your work.
+
+```{r echo=FALSE, layout="l-body-outset"}
+knitr::include_graphics("zimg/RCloud.jpg")
+```
 
 
 &nbsp;
