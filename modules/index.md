@@ -39,12 +39,12 @@ title: Learning Modules
   <li><b>Using R</b></li>
     <ol type="1" start="20">
       <li><a href="RData.html">Getting Data Into R</a></li>
-      <li><a href="RFilter.html">Filtering Data In R</a></li>
-      <li><a href="RUnivEDA.html">Univariate EDA</a></li>
-      <li><a href="RBivEDA.html">Bivariate EDA</a></li>
-      <li><a href="RRegression.html">Linear Regresion</a></li>
-      <li><a href="Rt1.html">1-Sample t</a></li>
-      <li><a href="Rt2.html">2-Sample t</a></li>
-      <li><a href="RChi.html">Chi-square</a></li>
+      <li><a href="RFilter.html">Filtering Data in R</a></li>
+      <li><a href="RUnivEDA.html">Univariate EDA in R</a></li>
+      <li><a href="RBivEDA.html">Bivariate EDA in R</a></li>
+      <li><a href="RRegression.html">Linear Regresion in R</a></li>
+      <li><a href="Rt1.html">1-Sample t in R</a></li>
+      <li><a href="Rt2.html">2-Sample t in R</a></li>
+      <li><a href="RChi.html">Chi-square in R</a></li>
     </ol>
 </ul>
