@@ -2118,8 +2118,8 @@ Convert categorical data to a factor variable before summarizing.
 str(GSS)</code></pre>
 <pre><code>
 #R&gt;   &#39;data.frame&#39;: 3539 obs. of  2 variables:
-#R&gt;    $ recycle: Factor w/ 5 levels &quot;Always&quot;,&quot;Never&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
-#R&gt;    $ tempgen: Factor w/ 5 levels &quot;Extremely&quot;,&quot;Not&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+#R&gt;    $ recycle: chr  &quot;Always&quot; &quot;Always&quot; &quot;Always&quot; &quot;Always&quot; ...
+#R&gt;    $ tempgen: chr  &quot;Extremely&quot; &quot;Extremely&quot; &quot;Extremely&quot; &quot;Extremely&quot; ...</code></pre>
 </div>
 <p>Categorical data can be forced to be a factor data type with <code>factor()</code>. The order of the levels, most importantly for ordinal data, can be controlled by including the ordered level names within a vector given to <code>levels=</code> in <code>factor()</code>. For example, the <code>recycle</code> variable in <code>GSS</code> is forced to be a factor below and its levels are controlled to follow their natural order.</p>
 <aside>
@@ -2133,7 +2133,7 @@ str(GSS)</code></pre>
 <pre><code>
 #R&gt;   &#39;data.frame&#39;: 3539 obs. of  2 variables:
 #R&gt;    $ recycle: Factor w/ 5 levels &quot;Always&quot;,&quot;Often&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
-#R&gt;    $ tempgen: Factor w/ 5 levels &quot;Extremely&quot;,&quot;Not&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+#R&gt;    $ tempgen: chr  &quot;Extremely&quot; &quot;Extremely&quot; &quot;Extremely&quot; &quot;Extremely&quot; ...</code></pre>
 <pre class="r"><code>
 levels(GSS$recycle)</code></pre>
 <pre><code>

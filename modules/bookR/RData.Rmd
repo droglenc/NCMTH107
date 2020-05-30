@@ -136,17 +136,24 @@ Use `str()` to examine the structure of the data frame.
 str(bears)
 ```
 
-In this example, it is seen that `r kCounts(ncol(bears))` variables were recorded on `r nrow(bears)` individuals. The first two variables -- `r names(bears)[1]` and `r names(bears)[2]` -- are numerical measurements made on the bears. The last variable -- `r names(bears)[3]` -- is a factor variable that records the capture location for each bear. The levels of the `r names(bears)[3]` variable may be seen by including this variable (with the data.frame name) as the argument to `levels()`.
+In this example, it is seen that `r kCounts(ncol(bears))` variables were recorded on `r nrow(bears)` individuals. The first two variables -- `r names(bears)[1]` and `r names(bears)[2]` -- are numerical measurements made on the bears. The last variable -- `r names(bears)[3]` -- is a character variable that records the capture location for each bear. The unique values in a character variable may be seen with `unique()`.
+
+```{r}
+unique(bears$loc)
+```
+
+A character variable may be converted to a factor variable with `factor()`. The levels of the `r names(bears)[3]` factor variable may be seen with `levels()`. Note that the levels are ordered alphabetically by default. Methods to change the order will be shown in subsequent modules.
 
 <aside>
 Use `levels()` to see the names of the groups in a factor variable.
 </aside>
 
 ```{r}
+bears$loc <- factor(bears$loc)
 levels(bears$loc)
 ```
 
-In the previous example, the `$` notation was used to identify a particular variable (i.e., `loc`) within a data.frame (`bears`). Think of variables as being nested inside data.frames and, thus, to access the variable you must first identify the data.frame in which it exists and then the name of the variable. The `$` simply separates the data.frame from the variable.
+In the previous examples, the `$` notation was used to identify a particular variable (i.e., `loc`) within a data.frame (`bears`). Think of variables as being nested inside data.frames and, thus, to access the variable you must first identify the data.frame in which it exists and then the name of the variable. The `$` simply separates the data.frame from the variable.
 
 <aside>
 `$` separates a data frame name and a variable name.
