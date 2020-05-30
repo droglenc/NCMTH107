@@ -9,10 +9,220 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo=TRUE,fig.align='center',comment="#R>  ")
+knitr::opts_chunk$set(echo=TRUE,fig.align='center',comment="#R>  ",fig.width=3.5,fig.height=3.5)
+```
+
+In the [Univariate EDA module](../UnivEDA.html) you practiced performing an EDA for quantitative or categorical data using summary statistics and graphics that you practiced calculating by hand in the [Univariate Summaries module](../UnivSum.html). In this module, you will learn how to construct those summary statistics and graphics from data using R. You will also be asked to perform the EDA from these results.
+
+Methods in this module require the `NCStats` package (as always) and the `ggplot2` package (for making graphs).
+
+```{r}
+library(NCStats)
+library(ggplot2)
 ```
 
 
+&nbsp;
+
+# Data Sets
+Summaries for quantitative data will be demonstrated with a dataset of the  number of days of ice cover at ice gauge station 9004 in Lake Superior. These data are in [LakeSuperiorIce.csv](https://raw.githubusercontent.com/droglenc/NCData/master/LakeSuperiorIce.csv) and are loaded into `LSI` below with the methods described in the [Getting Data into R module](RData.html#alternative-forms-of-getting-data).^[Data originally from the [National Snow and Ice Data Center](http://www.nsidc.org/).]
+
+```{r eval=FALSE}
+setwd("c:/data")
+LSI <- read.csv("data/LakeSuperiorIce.csv")
+head(LSI)
+```
+```{r echo=FALSE}
+LSI <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/LakeSuperiorIce.csv")
+head(LSI)
+sumLSI <- Summarize(~days,data=LSI)  ## for later
+```
+
+Methods for categorical data will use data collected as part of the General Sociological Survey (GSS), which was described in the reading for the [Univariate EDA module](../UnivEDA.html). One question that was asked in a recent GSS was "How often do you make a special effort to sort glass or cans or plastic or papers and so on for recycling?" Respondents answered either with "Always", "Often", "Sometimes", "Never", or "Not Avail." These data are in [GSSEnviroQues.csv](https://raw.githubusercontent.com/droglenc/NCData/master/GSSEnviroQue.csv) and are loaded into `GSS` below.
+
+```{r eval=FALSE}
+GSS <- read.csv("data/GSSEnviroQues.csv")
+head(GSS)
+```
+```{r echo=FALSE}
+GSS <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/GSSEnviroQues.csv")
+head(GSS)
+```
+
+&nbsp;
+
+# Quantitative
+## Summary Statistics
+The main summary statistics for quantitative data are the mean, median, standard deviation, IQR, and range, as described in the [Univariate EDA module](../UnivEDA.html). These statistics can be computed in R with `Summarize()`,^[`Summarize()` is from `NCStats`.] using a one-sided formula of the form `~qvar`, where `qvar` generically represents the quantitative variable. The data frame that contains `qvar` is included in `data=`. The number of digits after the decimal place may be controlled with `digits=`.
+
+<aside>
+Use `Summarize()` to compute summary statistics for a quntatitive variable.
+
+Remember the "tilde" (`~`) when using `Summarize()`.
+</aside>
+
+```{r}
+Summarize(~days,data=LSI,digits=1)
+```
+
+From this it is seen that the sample median is `r formatC(sumLSI["median"],format="f",digits=0)` days, sample mean is `r formatC(sumLSI["mean"],format="f",digits=1)` days, sample IQR is from `r formatC(sumLSI["Q1"],format="f",digits=0)` to `r formatC(sumLSI["Q3"],format="f",digits=0)` days, the sample standard deviation is `r formatC(sumLSI["sd"],format="f",digits=1)` days, and the range is from `r formatC(sumLSI["min"],format="f",digits=0)` to `r formatC(sumLSI["max"],format="f",digits=0)` days. Also note that the overall sample size is `r formatC(sumLSI["n"],format="f",digits=0)`, though three individuals must have been missing as the "valid n" is only `r formatC(sumLSI["nvalid"],format="f",digits=0)`.
+
+
+
+## Histograms
+All graphs made with `ggplot2` begin with `ggplot()` using a `data=` argument that defines the data frame to be used for the graphic. Variables for the x- and y-axes are then declared within `aes()` as the second argument. A histogram requires only the variable for the x-axis. To this base information, `geom_histogram()` is "added" to produce a simple default histogram.
+
+<aside>
+Only define the x variable for a histogram.
+</aside>
+
+```{r}
+ggplot(data=LSI,aes(x=days)) +
+  geom_histogram()
+```
+
+This base histogram is rather ugly. Fortunately it can be improved fairly easily. Most importantly, set `bins=` to the desired number of bins.^[Generally near 8-10 bins, depending on n.] Additionally, the bin bars can be made more readable by outlining them in black with `color="black"` and filling then with a light gray with `fill="lightgray"`.
+
+```{r}
+ggplot(data=LSI,aes(x=days)) +
+  geom_histogram(bins=10,color="black",fill="lightgray")
+```
+
+While this histogram is great improved it will look better if the bars are set on the x-axis with `scale_y_continuous()` shown below,^[A full description of this code is beyond this class, but this exact code should be used for all histograms constructed for this class.] the x- and y-axes are labeled more appropriately using `x=` and `y=` in `labs()` as shown below, and we use `theme_NCStats()`,^[This theme mostly removes the background grid and color.] which was created especially for this class.
+
+<aside>
+When making your own histogram, copy the code below and change `data=`, `x=`, `bins=`, `x=`, and `y=`.
+</aside>
+
+```{r}
+ggplot(data=LSI,aes(x=days)) +
+  geom_histogram(bins=10,color="black",fill="lightgray") +
+  scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
+  labs(x="Number of Days of Ice Cover",y="Frequency of Years") +
+  theme_NCStats()
+```
+
+
+&nbsp;
+
+# Quantitative for Multiple Groups
+It is common to need to compute numerical or construct graphical summaries of a quantitative variable separately for groups of individuals. In these cases it is beneficial to have a function that will efficiently compute summary statistics and construct a histogram for the quantitative variable separated by the levels of a factor variable.
+
+As an example, the LSI data.frame contains a `period` variable that indicates whether the ice season was `pre-1975` or `post-1975` (which included 1975). Thus, one may be interested in examining the distribution of annual days of ice for each of these periods. As `period` is a categorical variable it is first converted to a `factor` data type, with the levels controlled to their proper order.
+
+```{r}
+LSI$period <- factor(LSI$period,levels=c("pre-1975","post-1975"))
+str(LSI)
+```
+
+## Summary Statistics
+Summary statistics are separated by group by giving `Summarize()` a "formula" of the form `qvar~cvar`, where `cvar` generically represents the factor variable that indicates to which group the individuals belong.
+
+```{r}
+Summarize(days~period,data=LSI,digits=1)
+```
+
+
+## Histograms
+A histogram can be separated by levels in the `cvar` variable by "adding" `facet_wrap()` with `~cvar` as its only argument to the general histogram code (as shown above).
+
+```{r fig.width=7}
+ggplot(data=LSI,aes(x=days)) +
+  geom_histogram(binwidth=15,boundary=0,color="black",fill="gray80") +
+  scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
+  labs(x="Number of Days of Ice Cover",y="Frequency of Years") +
+  theme_NCStats() +
+  facet_wrap(~period)
+```
+
+
+## Boxplots
+Side-by-side modern boxplots can be constructed by first declaring the quantitative variable as `y=` and the grouping variable as `x=` in `aes()` in `ggplot()` and then adding `geom_boxplot()`. As shown below, the boxplots may be outlined and filled, proper labels should be added, and course them should be added.
+
+<aside>
+Must declare both `x=` and `y=` for a boxplot.
+</aside>
+
+```{r}
+ggplot(data=LSI,aes(x=period,y=days)) +
+  geom_boxplot(color="black",fill="gray80") +
+  labs(x="Period",y="Number of Days of Ice Cover") +
+  theme_NCStats()
+```
+
+&nbsp;
+
+# Categorical Data
+## Data Manipulation
+Methods for summarizing categorical data work best if the categorical variable is recorded as a "factor" variable in R (data types discussed in the [Getting Data into R module](RData.html#data-types)). Most often the variable will need to be coerced into being a factor variable. For example, the `recycle` variable in `GSS` is a character variable by default.
+
+<aside>
+Convert categorical data to a factor variable before summarizing.
+</aside>
+
+```{r}
+str(GSS)
+```
+
+Categorical data can be forced to be a factor data type with `factor()`. The order of the levels, most importantly for ordinal data, can be controlled by including the ordered level names within a vector given to `levels=` in `factor()`. For example, the `recycle` variable in `GSS` is forced to be a factor below and its levels are controlled to follow their natural order.
+
+<aside>
+Use `factor()` to convert categorical data to a factor variable.
+</aside>
+
+```{r}
+GSS$recycle <- factor(GSS$recycle,
+                      levels=c("Always","Often","Sometimes","Never","Not Avail"))
+str(GSS)
+levels(GSS$recycle)
+```
+
+The names of the levels in the vector given to `levels=` must be **exactly** as they appear in the original variable and they must be contained within quotes. Prior to using `factor()`, include the variable in `unique()` to see what the names of the levels are.
+
+<aside>
+Check the spelling of levels when changing their order.
+</aside>
+
+```{r eval=FALSE}
+unique(GSS$recycle)
+```
+```{r echo=FALSE}
+as.character(unique(GSS$recycle))
+```
+
+
+&nbsp;
+
+## Frequency and Percentage Tables
+A frequency table of a single categorical variable is computed with `xtabs()`, where the first argument is a one-sided formula of the form `~cvar` and the corresponding data frame is in `data=`. The result from `xtabs()` should be assigned to an object for further use. For example, the frequency table is produced, stored in `tabRecycle`, and displayed below.
+
+```{r}
+( tabRecycle <- xtabs(~recycle,data=GSS) )
+```
+
+A percentage table is computed by including the saved frequency table as the first argument to `percTable()`.^[Thus, `xtabs()` must be completed and saved to an object before `percTable()`.] The number of digits of output is controlled with `digits=`, though this defaults to 1 which is adequate for most percentages.
+
+```{r}
+percTable(tabRecycle)
+```
+
+
+&nbsp;
+
+## Bar Charts
+A bar chart is constructed by declaring only the categorical variable as `x=` within `aes()` of `ggplot()` and then adding `geom_bar()`. As shown below, the outline and fill colors of the bars may be set, the bars should be set on the x-axis as with the histograms, the axes should be properly labeled, and the course theme should be used.
+
+<aside>
+When making your own bar chart, copy the code below and change `data=`, `x=`, and `y=`.
+</aside>
+
+```{r}
+ggplot(data=GSS,aes(x=recycle)) +
+  geom_bar(color="black",fill="lightgray") +
+  scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
+  labs(x="Respondent's Response",y="Frequency of Respondents") +
+  theme_NCStats()
+```
 
 
 

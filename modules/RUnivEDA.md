@@ -35,7 +35,7 @@ css: /css/modules.css
 
 Use the materials below to answer the questions on [this preparation guide](Prep/RUnivEDA).
 
-* [![PDF](../img/pdf.png) Reading](../book/Summary One Quant Var.pdf)
+* [Reading](bookR/RUnivEDA.html)
 * [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative) in R](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins] ... [corresponding script](HO/UEDAQuant1_RHO.html){:target="_blank"}
 * [![Vimeo](../img/dhovid.png) Univariate EDA (Categorical) in R](https://vimeo.com/user45324800/ncstats-uedac){:target="_blank"} [4 mins] ... [corresponding script](HO/UEDACat_RHO.html){:target="_blank"}
 
