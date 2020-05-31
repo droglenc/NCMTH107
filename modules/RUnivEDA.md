@@ -50,7 +50,6 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 ## Archived Materials
 
-* [Old Lecture Slides](PPT/UEDAQuant_PPT_old.pptx)
-* [Old Lecture Slides](PPT/UEDACat_PPT_old.pptx)
+* [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative) in R](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins]
 
 ----

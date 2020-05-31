@@ -50,23 +50,6 @@ plot(HMPG~Weight,data=cars93,xlab="Weight (lbs)",ylab="Highway MPG",pch=16)
 points(HMPG~Weight,data=cars93[1:2,],pch=16,col=c("red","green"))
 @
 
-Scatterplots are constructed in R with \R{plot()} with a formula of the form \R{Y\TILDE X}, where \R{Y} and \R{X} are variables to be plotted on the y- and x-axes, as the first argument, and the corresponding data.frame in \R{data=}. The x- and y-axis labels may be modified with \R{xlab=} and \R{ylab=}. The character plotted at each point can be changed with \R{pch=},\footnote{This argument is short for ``plotting character''.} which defaults to 1 or an open-circle \figrefp{fig:Rpch}. The scatterplot, excluding the two highlighted points, of highway MPG versus car weight \figrefp{fig:carscat2} was created with the code below.
-<<eval=FALSE>>=
-<<carscat1>>
-@
-
-<<Rpch, echo=FALSE, fig.width=4, fig.height=2, fig.cap="Plotting characters available in R and their numerical codes. Note that for values of 21-25 that \\R{bg='gray70'} is used to provide the background color.">>=
-par(mar=c(0,0,0,0))
-plot(1,xlim=c(0.5,7.75),ylim=c(0.5,3.5),type="n",ann=FALSE,
-     xaxt="n",yaxt="n",bty="n",yaxs="i",xaxs="i")
-pchs <- c(0:6,15:20,NA,21:25,NA,NA)
-xs <- rep(1:7,3)
-ys <- rep(3:1,each=7)
-points(xs,ys,pch=pchs,cex=1.5,bg="gray70")
-text(xs+0.4,ys,pchs,cex=1.2)
-box()
-@
-
 
 \subsection{Correlation Coefficient}\label{sect:corr}
 The sample correlation coefficient, abbreviated as $r$, is calculated with
@@ -101,30 +84,6 @@ sum & 138 & 16685 & 0 & 0 & 29.2 & 547030 & 0 & 0 &  -2.17 \\
 \end{center}
 
 The meaning and interpretation of $r$ is discussed in more detail in \sectref{sect:BivEDAItems}.
-
-The correlation coefficient ($r$) between two quantitative variables is computed with \R{corr()} using a formula of the form \R{Y\TILDE X} or \R{\TILDE Y+X}, where \R{Y} and \R{X} are the names of quantitative variables, as the first argument and the corresponding data.frame in \R{data=}. For example, the correlation coefficient between highway MPG and weight for all cars in the car data is \Sexpr{formatC(corr(HMPG~Weight,data=cars93),format="f",digits=2)}.
-<<>>=
-corr(HMPG~Weight,data=cars93)
-corr(~HMPG+Weight,data=cars93)  # alternative form
-@
-
-
-\subsection{Pairs of Multiple Variables}
-\vspace{-3pt}
-<<echo=FALSE, results='hide'>>=
-carscorr <- corr(~HMPG+FuelTank+Length+Weight,data=cars93,
-                 use="pairwise.complete.obs")
-@
-Correlation coefficients can be computed or scatterplots can be constructed simultaneously for all pairs of many quantitative variables. A matrix of correlation coefficients is constructed with \R{corr()} as above using a formula of the form \R{\TILDE X1+X2+X3} (and so on), where the \R{X1}, \R{X2}, etc. are all quantitative variables to be used. In some instances, the data.frame may contain missing values (i.e., data that were not recorded). The individuals with missing data are efficiently removed from the correlation matrix with \R{use="pairwise.complete.obs"} in \R{corr()}.\footnote{Missing data are automatically removed from the scatterplots.} The number of digits reported in the correlation matrix is controlled with \R{digits=}. For example, the correlation between highway MPG and size of the fuel tank is \Sexpr{formatC(carscorr["HMPG","FuelTank"],format="f",digits=3)}, whereas the correlation between length and weight of the car is \Sexpr{formatC(carscorr["Length","Weight"],format="f",digits=3)}.
-<<>>=
-corr(~HMPG+FuelTank+Length+Weight,data=cars93,use="pairwise.complete.obs",digits=3)
-@
-
-A matrix of scatterplots is constructed with \R{pairs()} using the same formula notation as in \R{corr()}. The plotting character can be changed, as with \R{plot()}, with \R{pch=}. Each subplot in the resulting scatterplot matrix \figrefp{fig:Scatplot4} is a scatterplot with the variable listed in the same column on the x-axis and the variable listed in the same row on the y-axis. For example, the scatterplot in the upper-right corner of \figref{fig:Scatplot4} has highway MPG on the y-axis and car weight on the x-axis.
-
-<<Scatplot4, fig.width=6, fig.height=6, out.width='.7\\linewidth', fig.cap="Scatterplot matrix of the highway MPG, fuel tank size, length, and weight of cars.">>=
-pairs(~HMPG+FuelTank+Length+Weight,data=cars93,pch=21,bg="gray70")
-@
 
 
 \section{Items to Describe} \label{sect:BivEDAItems}

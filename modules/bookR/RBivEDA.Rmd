@@ -9,10 +9,180 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo=TRUE,fig.align='center')
+knitr::opts_chunk$set(echo=TRUE,fig.align='center',comment="#R>  ",fig.width=3.5,fig.height=3.5)
+```
+
+In the [Bivariate EDA module](../BivEDA.html) you practiced performing an EDA for pairs of quantitative or categorical data using summary statistics and graphics. In this module, you will learn how to construct those summary statistics and graphics from data using R. You will also be asked to perform the EDA from these results.
+
+Methods in this module require the `NCStats` package (as always) and the `ggplot2` package (for making graphs).
+
+```{r}
+library(NCStats)
+library(ggplot2)
 ```
 
 
+&nbsp;
+
+# Data Sets
+The quantitative summaries and graphics will use the `weight` (lbs) and highway miles per gallon (`HMPG`) for 93 cars from the 1993 model year. Ultimately the relationship between highway MPG and the weight of a car is described. These data are in [93cars.csv](https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv) and are loaded into R below with the methods described in the [Getting Data into R module](RData.html#alternative-forms-of-getting-data).^[The `which=` argument in `headtail()` is used to show only a few variables of `cars93`, just to save space.]
+
+```{r eval=FALSE}
+setwd("c:/data")
+cars93 <- read.csv("93cars.csv")
+headtail(cars93,which=c("MFG","Model","Type","Weight","HMPG"))
+```
+```{r echo=FALSE}
+cars93 <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv")
+headtail(cars93,which=c("MFG","Model","Type","Weight","HMPG"))
+```
+
+Methods for categorical data will be demonstrated with two questions from from the General Sociological Survey (GSS).
+
+* What is your highest degree earned? [choices -- "less than high school diploma", "high school diploma", "junior college", "bachelors", or "graduate"; labeled as `degree`]
+* How willing would you be to accept cuts in your standard of living in order to protect the environment? [choices -- "very willing", "fairly willing", "neither willing nor unwilling", "not very willing", or "not at all willing"; labeled as `grnsol`]
+
+These data, stored in [GSSWill2Pay.csv](https://raw.githubusercontent.com/droglenc/NCData/master/GSSWill2Pay.csv), are loaded into R and examined below.
+
+```{r eval=FALSE}
+gss <- read.csv("GSSWill2Pay.csv")
+str(gss)
+```
+```{r echo=FALSE}
+gss <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/GSSWill2Pay.csv")
+str(gss)
+```
+
+As is typical, the categorical variables are recorded as characters and should be converted to factor variables in R. Further note that `degree` and `grnsol` are both **ordinal** categorical variables so we should be careful to explicitly set the order of the levels. To assist with this, use `unique()` to see the exact spelling of each of the levels.
+
+<aside>
+Categorical variables should be converted to factor variables in R.
+
+Levels should be controlled for ordinal variables.
+</aside>
+
+```{r}
+unique(gss$degree)
+unique(gss$grnsol)
+```
+
+The variables are then converted to factors below with `factor()` using `levels=` to control the order of the variables.^[Recall from the previous module that these levels must be spelled **exactly** as they appear in the data frame.]
+
+```{r}
+gss$degree <- factor(gss$degree,levels=c("ltHS","HS","JC","BS","grad"))
+gss$grnsol <- factor(gss$grnsol,levels=c("vwill","will","neither","un","vun"))
+```
+
+The levels are checked with `levels()` below to make sure that the order is correct and that none are missing (which would imply that the level was mis-spelled above).
+
+```{r}
+levels(gss$degree)
+levels(gss$grnsol)
+```
+
+
+
+
+&nbsp;
+
+# Quantitative
+## Scatterplots
+Scatterplots are constructed by giving the x- and y-axis variables to `x=` and `y=` in `aes()` in `ggplot()`^[The use of `ggplot()` was introduced in the previous module.] and then adding `geom_point()`.
+
+<aside>
+Define both x and y variables for a scatterplot.
+</aside>
+
+```{r}
+ggplot(data=cars93,aes(x=Weight,y=HMPG)) +
+  geom_point()
+```
+
+&nbsp;
+
+The axis labels can be properly labeled with `labs()` and the theme used in the course applied with `theme_NCStats()`.^[Both `labs()` and `theme_NCStats()` were introduced in the previous module.]
+
+```{r}
+ggplot(data=cars93,aes(x=Weight,y=HMPG)) +
+  geom_point() +
+  labs(x="Car Weight (lbs)",y="Miles per Gallon on the Highway") +
+  theme_NCStats()
+```
+
+&nbsp;
+
+There may be times where you want to change the shape of symbol that is plotted by including a numeric code to `shape=` in `geom_point()`. Shape codes are shown in Figure \@ref(fig:Rpchs).
+
+&nbsp;
+
+```{r Rpchs, echo=FALSE, fig.cap="Point shapes available in R and their numerical codes. For shapes 0-20 that `color=` controls the shapes color, but for shapes 21-25 `color=` controls the outline color and `fill` controls the inside color of the shape.",fig.width=3,fig.height=3}
+ggpubr::show_point_shapes() + theme_void() + labs(title=NULL)
+```
+
+&nbsp;
+
+My typical choice for plotting points are shown below.^[The `size=` is used to make the points larger.]
+
+<aside>
+When making your own scatterplot, copy this code and change `data=`, `x=`, `y=`.
+</aside>
+
+```{r}
+ggplot(data=cars93,aes(x=Weight,y=HMPG)) +
+  geom_point(shape=21,color="black",fill="darkgray",size=2) +
+  labs(x="Car Weight (lbs)",y="Miles per Gallon on the Highway") +
+  theme_NCStats()
+```
+
+## Correlation Coefficient
+The correlation coefficient ($r$) between two quantitative variables is computed with `corr()` using a formula of the form `qvarY~qvarX` or `~qvarY+qvarX`, where `qvarY` and `qvarX` are the names of quantitative variables, as the first argument and the corresponding data frame in `data=`.^[`corr()` is from `NCStats`.] For example, the correlation coefficient between highway MPG and weight for all cars in the car data is `r formatC(corr(HMPG~Weight,data=cars93),format="f",digits=2)`.
+
+```{r}
+corr(HMPG~Weight,data=cars93)
+corr(~HMPG+Weight,data=cars93)  # alternative form
+```
+
+The correlation coefficients can be computed for pairs of multiple variables using the alternative formula described above. Note that `use="pairwise.complete.obs"` is used to make sure that missing data is removed when calculating the correlation coefficient for each pair of variables.
+
+```{r}
+corr(~HMPG+FuelTank+Length+Weight,data=cars93,use="pairwise.complete.obs",digits=2)
+```
+
+
+&nbsp;
+
+# Categorical
+## Frequency Tables
+Two-way frequency tables are constructed in R with `xtabs()`, where the first argument is a formula of the form `~cvarRow+cvarCol`, where `cvarRow` and `cvarCol` are categorical variables to form the rows and columns of the table, in the first agument and the corresponding data frame in `data=`. The result of `xtabs()` should be assigned to an object for further use.
+
+```{r}
+( tbl1 <- xtabs(~degree+grnsol,data=gss) )
+```
+
+Totals may be added to the margins of a saved table with `addMargins()`.
+
+```{r}
+addMargins(tbl1)
+```
+
+## Percentage Tables
+Percentage tables are constructed in R by submitting the saved `xtabs()` object to `percTable()`.^[`percTable()` is from `NCStats`.] The number of decimals to display is controlled with `digits=`. A total- or table-percentage table is constructed by default.
+
+```{r}
+percTable(tbl1)
+```
+
+A row-percentage table is constructed by including `margin=1` in `percTable()`.
+
+```{r}
+percTable(tbl1,margin=1)
+```
+
+A column-percentage table is constructed by including `margin=2` in `percTable()`.
+
+```{r}
+percTable(tbl1,margin=2)
+```
 
 
 

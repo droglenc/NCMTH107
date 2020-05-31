@@ -62,21 +62,6 @@ The margins of a two-way frequency table may be augmented with row and column to
 
 If one variables can be considered as the response, then this variable should form the columns of the frequency table. For example, ``willingness to cut'' could be considered the response variable and it was, appropriately, placed as the column variable in \tabref{tab:EnvFreq}.
 
-\vspace{-6pt}
-\subsection*{Frequency Tables in R}
-\vspace{-6pt}
-Two-way frequency tables are constructed in R with \R{xtabs()}, where the first argument is a formula of the form \R{\TILDE rowvar+colvar} and the corresponding data.frame is in \R{data=}. The result of \R{xtabs()} should be assigned to an object for further use.
-\vspace{-4pt}
-<<>>=
-( tbl1 <- xtabs(~degree+grnsol,data=gss) )
-@
-\vspace{-4pt}
-Totals may be added to the margins of a saved table with \R{addMargins()}. For example, \R{addMargins()} was used to construct \tabref{tab:EnvFreq} from \R{tbl1}.
-\vspace{-4pt}
-<<eval=FALSE>>=
-addMargins(tbl1)
-@
-
 
 \section{Percentage Tables}
 Two-way frequency tables may be converted to percentage tables for ease of comparison between levels of the variables and also between populations. For example, it is difficult to determine from \tabref{tab:EnvFreq} if respondents with a high school degree are more likely to be very willing to cut their standard of living than respondents with a graduate degree, because there are approximately seven times as many respondents with a high school degree. However, if the frequencies are converted to percentages, then this comparison is easily made. Three types of percentage tables may be constructed from a frequency table.
@@ -94,12 +79,6 @@ The value in each cell of a row-percentage table is the percentage OF ALL indivi
 
 If the response variable formed the columns, then the row-percentage table  allows one to compare percentages in levels of the response (i.e., columns) across groups (i.e., rows). For example, one can see that there is a general decrease in the percentage of respondents that were ``very unwilling'' to cut their standard of living to protect the environment as the level of education increased \tabrefp{tab:EnvRowP}.
 
-\subsubsection*{Row-Percentage Table in R}
-Percentage tables are constructed in R by submitting the saved \R{xtabs()} object to \R{percTable()}. The number of decimals to display is controlled with \R{digits=}. A row-percentage table is constructed by including \R{margin=1}. For example, the code below produced \tabref{tab:EnvRowP}.
-<<eval=FALSE>>=
-percTable(tbl1,margin=1,digits=1)
-@
-
 \subsection{Column-Percentage Table}
 A \textbf{column-percentage table} is computed by dividing each cell of the frequency table by the total in the same column of the frequency table and multiplying by 100 \tabrefp{tab:EnvColP}. For example, the value in the ``vwill'' column and ``ltHS'' row on the column-percentage table is computed by dividing the value in the ``vwill'' column and ``ltHS'' row of the frequency table (i.e., \Sexpr{tbl2["ltHS","vwill"]}; \tabref{tab:EnvFreq}) by the ``Sum'' of the ``vwill'' column of the frequency table (i.e., \Sexpr{tbl2["Sum","vwill"]}) and multiplying by 100.
 
@@ -111,12 +90,6 @@ print(xtbl.c,caption.placement="top")
 
 The value in each cell of a column-percentage table is the percentage OF ALL individuals in that column that have the characteristic of that row. For example, \Sexpr{formatC(tbl1.c["ltHS","vwill"],format="f",digits=1)}\% of respondents who were very willing to cut their standard of living had less than a high school degree. Again, this is a very literal statement. OF THE RESPONDENTS WHO WERE VERY WILLING TO CUT THEIR STANDARD OF LIVING, not of all respondents, \Sexpr{formatC(tbl1.c["ltHS","vwill"],format="f",digits=1)}\% had less than a high school degree.
 
-\subsubsection*{Column-Percentage Table in R}
-A column-percentage table is constructed by submitting the saved \R{xtabs()} object to \R{percTable()} with \R{margin=2}. For example, the code below produced \tabref{tab:EnvColP}.
-<<eval=FALSE>>=
-percTable(tbl1,margin=2,digits=1)
-@
-
 \subsection{Total-Percentage Table}
 Each value in a \textbf{total-percentage table} is computed by dividing each cell of the frequency table by the total number of ALL individuals in the frequency table and multiplying by 100. For example, the value in the ``vwill'' column and ``ltHS'' row of the table-percentage table \tabrefp{tab:EnvTblP} is computed by dividing the value in the ``vwill'' column and ``ltHS'' row of the frequency table (i.e., \Sexpr{tbl2["ltHS","vwill"]}; \tabref{tab:EnvFreq}) by the ``Sum'' of the entire frequency table (i.e., \Sexpr{tbl2["Sum","Sum"]}) and multiplying by 100.
 
@@ -127,12 +100,6 @@ print(xtbl.t,caption.placement="top")
 @
 
 The value in each cell of a table-percentage table is the percentage OF ALL individuals that have the characteristic of that column AND that row. For example, \Sexpr{formatC(tbl1.t["ltHS","vwill"],format="f",digits=1)}\% of ALL respondents had less than a high school degree AND were very willing to cut their standard of living to protect the environment. Compare this interpretation to the interpretations from the row and column-percentage tables above. This interpretation DOES refer to all respondents.
-
-\subsubsection*{Total-Percentage Table in R}
-A table-percentage table is constructed by submitting the saved \R{xtabs()} object to \R{percTable()} and omitting \R{margin=}. For example, the code below produced \tabref{tab:EnvTblP}.
-<<eval=FALSE>>=
-percTable(tbl1,digits=1)
-@
 
 
 \section{Which Table to Use?}

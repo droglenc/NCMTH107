@@ -20,8 +20,6 @@ It is important to understand the relationship between two variables.  With cate
 <ol>
   <li>Describe bivariate data.</li>
   <li>Distinguish between response and explanatory variables.</li>
-  <li>Construct two-way frequency tables by hand and with R.</li>
-  <li>Constrcut row-, column-, and total-percent percentage tables by hand and with R.</li>
   <li>Construct a succinct written summary that addresses the relationship between two categorical variables.</li>
 </ol>
       </div>
@@ -37,7 +35,6 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 * [![PDF](../img/pdf.png) Reading](../book/Bivariate EDA - Categorical.pdf)
 * [![YouTube Link](../img/youtube.png) Percentage Tables](https://www.youtube.com/watch?v=k8xFH6fCIWs){:target="_blank"} [6 mins]
-* [![Vimeo](../img/dhovid.png) Bivariate EDA (Categorical) in R](https://vimeo.com/user45324800/biveda-cat){:target="_blank"} [8 mins] [![Web](../img/web.png)](HO/BEDACat_RHO.html){:target="_blank"}  [![R](../img/Rlogo.png)](HO/BEDACat_RHO.R){:target="_blank"}
 
 ----
 
