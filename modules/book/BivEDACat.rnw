@@ -4,47 +4,30 @@ set_parent('IntroStats.Rnw')
 
 \chapter{Bivariate EDA - Categorical} \label{chap:BivEDACat}
 
+\vspace{-24pt}
+
 \minitoc
-\vspace{60pt}
 
 \lettrine{T}{wo-way frequency tables} summarize two categorical variables recorded on the same individual by displaying levels of the first variable as rows and levels of the second variable as columns. Each cell in this table contains the frequency of individuals that were in the corresponding levels of each variable. These frequency tables are often converted to percentage tables for ease of summarization and comparison among populations. This module explores the construction and interpretation of frequency and percentage tables.
 
 The General Sociological Survey (GSS) is a very large survey that has been administered 25 times since 1972. The purpose of the GSS is to gather data on contemporary American society in order to monitor and explain trends in attitudes, behaviors, and attributes. Data from the following two questions on the GSS are used throughout this module.
 
+\vspace{-8pt}
 \begin{Itemize}
   \item What is your highest degree earned? [choices -- ``less than high school diploma'', ``high school diploma'', ``junior college'', ``bachelors'', or ``graduate''; labeled as \var{degree}]
   \item How willing would you be to accept cuts in your standard of living in order to protect the environment? [choices -- ``very willing'', ``fairly willing'', ``neither willing nor unwilling'', ``not very willing'', or ``not at all willing''; labeled as \var{grnsol}]
 \end{Itemize}
+\vspace{-8pt}
 
-These data, stored in \href{https://raw.githubusercontent.com/droglenc/NCData/master/GSSWill2Pay.csv}{GSSWill2Pay.csv}, are loaded into R and examined below.
-<<echo=FALSE>>=
-gss <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/GSSWill2Pay.csv")
+An example of these data are shown below below.
+<<echo=FALSE, background="white">>=
+gss <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/GSSWill2Pay.csv") %>%
+  mutate(degree=factor(degree,levels=c("ltHS","HS","JC","BS","grad")),
+         grnsol=factor(grnsol,levels=c("vwill","will","neither","un","vun")))
+tmp <- headtail(gss)
+print(tmp,row.names=FALSE)
 @
-<<eval=FALSE>>=
-gss <- read.csv("data/GSSWill2Pay.csv")
-@
-<<>>=
-str(gss)
-headtail(gss)
-@
-The \var{degree} and \var{grnsol} variables are both \emph{ordinal} categorical variables. By default the levels of factor variables are ordered alphabetically in R (as seen below with \R{levels()}).
-<<>>=
-levels(gss$degree)
-levels(gss$grnsol)
-@
-The order of levels can be specified using \R{factor()}. The variable to be reordered is the first argument to \R{factor()}, as well as the object to the left of the assignment operator. The desired order of the levels is listed in a vector that is given to \R{levels=}. It is important that the levels in this vector are ``spelled'' exactly as they appeared originally. Correct orders for \var{degree} and \var{grnsol} in the \R{gss} data.frame are created below.
-<<>>=
-gss$degree <- factor(gss$degree,levels=c("ltHS","HS","JC","BS","grad"))
-gss$grnsol <- factor(gss$grnsol,levels=c("vwill","will","neither","un","vun"))
-levels(gss$degree)
-levels(gss$grnsol)
-@
-If the natural order of levels is alphabetical or the variable is nominal, then \R{factor()} is not needed.
 
-\warn{Levels for a factor variable are ordered alphabetically by default in R. If the factor variable is ordinal, then \R{factor()} with \R{levels=} may be needed to specify the correct order of levels.}
-
-
-\newpage
 \section{Frequency Tables}
 \vspace{-6pt}
 <<echo=FALSE, results='hide'>>=
@@ -58,37 +41,13 @@ xtbl <- xtable(tbl2,digits=0,caption="Frequency table of respondent's highest co
 print(xtbl,caption.placement="top")
 @
 
-The margins of a two-way frequency table may be augmented with row and column totals (as in \tabref{tab:EnvFreq}). Each marginal total represents the distribution of one of the, while ignoring the other, categorical variable. The total column represents the distribution of the row variable; in this case, the highest degree completed. The total row represents the distribution of the column variable; in this case, willingness to cut their standard of living to protect the environment. Thus, for example there were \Sexpr{tbl2["JC","Sum"]} respondents whose highest completed degree was junior college and there were \Sexpr{tbl2["Sum","vun"]} respondents who were very unwilling to cut their standard of living to protect the environment.
+The margins of a two-way frequency table may be augmented with row and column totals (as in \tabref{tab:EnvFreq}). Each marginal total represents the distribution of one of the categorical variables, while ignoring the other. The total column represents the distribution of the row variable; in this case, the highest degree completed. The total row represents the distribution of the column variable; in this case, willingness to cut their standard of living to protect the environment. Thus, for example there were \Sexpr{tbl2["JC","Sum"]} respondents whose highest completed degree was junior college and there were \Sexpr{tbl2["Sum","vun"]} respondents who were very unwilling to cut their standard of living to protect the environment.
 
 If one variables can be considered as the response, then this variable should form the columns of the frequency table. For example, ``willingness to cut'' could be considered the response variable and it was, appropriately, placed as the column variable in \tabref{tab:EnvFreq}.
 
 
 \section{Percentage Tables}
 Two-way frequency tables may be converted to percentage tables for ease of comparison between levels of the variables and also between populations. For example, it is difficult to determine from \tabref{tab:EnvFreq} if respondents with a high school degree are more likely to be very willing to cut their standard of living than respondents with a graduate degree, because there are approximately seven times as many respondents with a high school degree. However, if the frequencies are converted to percentages, then this comparison is easily made. Three types of percentage tables may be constructed from a frequency table.
-
-\subsection{Row-Percentage Table}
-A \textbf{row-percentage table} is computed by dividing each cell of the frequency table by the total in the same row of the frequency table and multiplying by 100 \tabrefp{tab:EnvRowP}. For example, the value in the ``vwill'' column and ``ltHS'' row of the row-percentage table is computed by dividing the value in the ``vwill'' column and ``ltHS'' row of the frequency table (i.e., \Sexpr{tbl2["ltHS","vwill"]}; \tabref{tab:EnvFreq}) by the ``Sum'' of the ``ltHS'' row of the frequency table (i.e., \Sexpr{tbl2["ltHS","Sum"]}) and multiplying by 100.
-
-<<echo=FALSE, results='asis'>>=
-tbl1.r <- percTable(tbl1,margin=1)
-xtbl.r <- xtable(tbl1.r,digits=1,caption="Row-percentage table of respondent's highest completed degree and willingness to cut their standard of living to protect the environment.","tab:EnvRowP")
-print(xtbl.r,caption.placement="top")
-@
-
-The value in each cell of a row-percentage table is the percentage OF ALL individuals in that row that have the characteristic of that column. For example, \Sexpr{formatC(tbl1.r["ltHS","vwill"],format="f",digits=1)}\% of the respondents with less than a high school degree are very willing to cut their standard of living to protect the environment. This statement must be read carefully. OF THE RESPONDENTS WITH LESS THAN A HIGH SCHOOL DEGREE, not of all respondents, \Sexpr{formatC(tbl1.r["ltHS","vwill"],format="f",digits=1)}\% were very willing to cut their standard of living.
-
-If the response variable formed the columns, then the row-percentage table  allows one to compare percentages in levels of the response (i.e., columns) across groups (i.e., rows). For example, one can see that there is a general decrease in the percentage of respondents that were ``very unwilling'' to cut their standard of living to protect the environment as the level of education increased \tabrefp{tab:EnvRowP}.
-
-\subsection{Column-Percentage Table}
-A \textbf{column-percentage table} is computed by dividing each cell of the frequency table by the total in the same column of the frequency table and multiplying by 100 \tabrefp{tab:EnvColP}. For example, the value in the ``vwill'' column and ``ltHS'' row on the column-percentage table is computed by dividing the value in the ``vwill'' column and ``ltHS'' row of the frequency table (i.e., \Sexpr{tbl2["ltHS","vwill"]}; \tabref{tab:EnvFreq}) by the ``Sum'' of the ``vwill'' column of the frequency table (i.e., \Sexpr{tbl2["Sum","vwill"]}) and multiplying by 100.
-
-<<echo=FALSE, results='asis'>>=
-tbl1.c <- percTable(tbl1,margin=2)
-xtbl.c <- xtable(tbl1.c,digits=1,caption="Column-percentage table of respondent's highest completed degree and willingness to cut their standard of living to protect the environment.","tab:EnvColP")
-print(xtbl.c,caption.placement="top")
-@
-
-The value in each cell of a column-percentage table is the percentage OF ALL individuals in that column that have the characteristic of that row. For example, \Sexpr{formatC(tbl1.c["ltHS","vwill"],format="f",digits=1)}\% of respondents who were very willing to cut their standard of living had less than a high school degree. Again, this is a very literal statement. OF THE RESPONDENTS WHO WERE VERY WILLING TO CUT THEIR STANDARD OF LIVING, not of all respondents, \Sexpr{formatC(tbl1.c["ltHS","vwill"],format="f",digits=1)}\% had less than a high school degree.
 
 \subsection{Total-Percentage Table}
 Each value in a \textbf{total-percentage table} is computed by dividing each cell of the frequency table by the total number of ALL individuals in the frequency table and multiplying by 100. For example, the value in the ``vwill'' column and ``ltHS'' row of the table-percentage table \tabrefp{tab:EnvTblP} is computed by dividing the value in the ``vwill'' column and ``ltHS'' row of the frequency table (i.e., \Sexpr{tbl2["ltHS","vwill"]}; \tabref{tab:EnvFreq}) by the ``Sum'' of the entire frequency table (i.e., \Sexpr{tbl2["Sum","Sum"]}) and multiplying by 100.
@@ -99,7 +58,31 @@ xtbl.t <- xtable(tbl1.t,digits=1,caption="Table-percentage table of respondent's
 print(xtbl.t,caption.placement="top")
 @
 
-The value in each cell of a table-percentage table is the percentage OF ALL individuals that have the characteristic of that column AND that row. For example, \Sexpr{formatC(tbl1.t["ltHS","vwill"],format="f",digits=1)}\% of ALL respondents had less than a high school degree AND were very willing to cut their standard of living to protect the environment. Compare this interpretation to the interpretations from the row and column-percentage tables above. This interpretation DOES refer to all respondents.
+The value in each cell of a total-percentage table is the percentage OF ALL individuals that have the characteristic of that column AND that row. For example, \Sexpr{formatC(tbl1.t["ltHS","vwill"],format="f",digits=1)}\% of ALL respondents had less than a high school degree AND were very willing to cut their standard of living to protect the environment. In contrast to the interpretations of the row and column-percentage tables below, interpretations from the table-percentages table DOES refer to ALL respondents.
+
+\subsection{Row-Percentage Table}
+A \textbf{row-percentage table} is computed by dividing each cell of the frequency table by the total in the same row of the frequency table and multiplying by 100 \tabrefp{tab:EnvRowP}. For example, the value in the ``vwill'' column and ``ltHS'' row of the row-percentage table is computed by dividing the value in the ``vwill'' column and ``ltHS'' row of the frequency table (i.e., \Sexpr{tbl2["ltHS","vwill"]}; \tabref{tab:EnvFreq}) by the ``Sum'' of the ``ltHS'' row of the frequency table (i.e., \Sexpr{tbl2["ltHS","Sum"]}) and multiplying by 100.
+
+<<echo=FALSE, results='asis'>>=
+tbl1.r <- percTable(tbl1,margin=1)
+xtbl.r <- xtable(tbl1.r,digits=1,caption="Row-percentage table of respondent's highest completed degree and willingness to cut their standard of living to protect the environment.","tab:EnvRowP")
+print(xtbl.r,caption.placement="top")
+@
+
+The value in each cell of a row-percentage table is the percentage of individuals in that ROW that have the characteristic of that column. For example, \Sexpr{formatC(tbl1.r["ltHS","vwill"],format="f",digits=1)}\% of the respondents with less than a high school degree are very willing to cut their standard of living to protect the environment. This statement must be read carefully. OF THE RESPONDENTS WITH LESS THAN A HIGH SCHOOL DEGREE, not of all respondents, \Sexpr{formatC(tbl1.r["ltHS","vwill"],format="f",digits=1)}\% were very willing to cut their standard of living.
+
+If the response variable formed the columns, then the row-percentage table allows one to compare percentages in levels of the response (i.e., columns) across groups (i.e., rows). For example, one can see that there is a general decrease in the percentage of respondents that were ``very unwilling'' to cut their standard of living to protect the environment as the level of education increased \tabrefp{tab:EnvRowP}.
+
+\subsection{Column-Percentage Table}
+A \textbf{column-percentage table} is computed by dividing each cell of the frequency table by the total in the same column of the frequency table and multiplying by 100 \tabrefp{tab:EnvColP}. For example, the value in the ``vwill'' column and ``ltHS'' row on the column-percentage table is computed by dividing the value in the ``vwill'' column and ``ltHS'' row of the frequency table (i.e., \Sexpr{tbl2["ltHS","vwill"]}; \tabref{tab:EnvFreq}) by the ``Sum'' of the ``vwill'' column of the frequency table (i.e., \Sexpr{tbl2["Sum","vwill"]}) and multiplying by 100.
+
+<<echo=FALSE, results='asis'>>=
+tbl1.c <- percTable(tbl1,margin=2)
+xtbl.c <- xtable(tbl1.c,digits=1,caption="Column-percentage table of respondent's highest completed degree and willingness to cut their standard of living to protect the environment.","tab:EnvColP")
+print(xtbl.c,caption.placement="top")
+@
+
+The value in each cell of a column-percentage table is the percentage of all individuals in that COLUMN that have the characteristic of that row. For example, \Sexpr{formatC(tbl1.c["ltHS","vwill"],format="f",digits=1)}\% of respondents who were very willing to cut their standard of living had less than a high school degree. Again, this is a very literal statement. OF THE RESPONDENTS WHO WERE VERY WILLING TO CUT THEIR STANDARD OF LIVING, not of all respondents, \Sexpr{formatC(tbl1.c["ltHS","vwill"],format="f",digits=1)}\% had less than a high school degree.
 
 
 \section{Which Table to Use?}
@@ -107,7 +90,7 @@ Determining which table to use comes from applying one simple rule and practicin
 
 For example, consider the question -- ``What percentage of respondents with a bachelor's degree were very unwilling to cut their standard of living to protect the environment?''  This question refers to only respondents with bachelor's degrees (i.e., ``... of respondents with a bachelor's degree ...''). Thus, the answer is restricted to the ``BS'' row of the frequency table. The ROW-percentage table restricts the original table to the row levels and would be used to answer this question. Therefore, \Sexpr{formatC(tbl1.r["BS","vun"],format="f",digits=1)}\% of respondents with bachelor's degrees were very unwilling to cut their standard of living to protect the environment \tabrefp{tab:EnvRowP}.
 
-Now consider the question -- ``What percentage of all respondents had a high school degree and were very willing to cut their standard of living?''  This question does not restrict the frame of reference because it refers to ``... of all respondents ...''. Therefore, from the total-percentage table \tabrefp{tab:EnvTblP}, \Sexpr{formatC(tbl1.t["HS","vwill"],format="f",digits=1)}\% of respondents had a high school degree and were very willing to cut their standard of living.
+Now consider the question -- ``What percentage of all respondents had a high school degree and were very willing to cut their standard of living?''  This question does not restrict the frame of reference because it refers to ``... of all respondents ...''. Therefore, from the TOTAL-percentage table \tabrefp{tab:EnvTblP}, \Sexpr{formatC(tbl1.t["HS","vwill"],format="f",digits=1)}\% of respondents had a high school degree and were very willing to cut their standard of living.
 
 Also consider this question -- ``What percentage of respondents who were neither willing nor unwilling to cut their standard of living had graduate degrees?''  This question refers only to respondents who were neither willing nor unwilling to cut their standard of living and, thus, restricts the question to the ``neither'' column of the frequency table. Thus, the answer will come from the COLUMN-percentage table. Therefore, \Sexpr{formatC(tbl1.c["grad","neither"],format="f",digits=1)}\% of respondents who were neither willing nor unwilling to cut their standard of living had graduate degrees \tabrefp{tab:EnvColP}.
 

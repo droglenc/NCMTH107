@@ -10,18 +10,12 @@ set_parent('IntroStats.Rnw')
 
 \lettrine{B}{ivariate data occurs when two} variables are measured on the same individuals. For example, you may measure (i) the height and weight of students in class, (ii) depth and area of a lake, (iii) gender and age of welfare recipients, or (iv) number of mice and biomass of legumes in fields. This module is focused on describing the bivariate relationship between two quantitative variables. Bivariate relationships between two categorical variables is described in \modref{chap:BivEDACat}.
 
-Data on the \var{weight} (lbs) and highway miles per gallon (\var{HMPG}) for 93 cars from the 1993 model year are used as an example throughout this module. Ultimately, the relationship between highway MPG and the weight of a car is described. These data are read from \href{https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv}{93cars.csv} into R and several observations of \var{HMPG} and \var{weight} are shown below.\footnote{The vector in the second argument to \R{headtail()} is used to show only the two variables of interest.}
-<<echo=FALSE>>=
+Data on the \var{weight} (lbs) and highway miles per gallon (\var{HMPG}) for 93 cars from the 1993 model year are used as an example throughout this module. Ultimately, the relationship between highway MPG and the weight of a car is described. A sample of these data are shown below
+<<echo=FALSE, background="white">>=
 cars93 <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv")
+tmp <- headtail(cars93,which=c("MFG","Model","Type","CMPG","HMPG","Weight","Cyls"))
+print(tmp,row.names=FALSE)
 @
-<<eval=FALSE>>=
-cars93 <- read.csv("data/93cars.csv")
-@
-<<>>=
-headtail(cars93,which=c("HMPG","Weight"))
-@
-
-
 
 \section[Response and Explanatory] {Response and Explanatory Variables} \label{sect:RespExplan1}
 \vspace{-3pt}
@@ -41,13 +35,14 @@ In some situations it is not obvious which variable is the response. For example
 \subsection{Scatterplots} \label{sect:ScatterplotsR}
 \vspace{-3pt}
 A scatterplot is a graph where each point simultaneously represents the values of both the quantitative response and quantitative explanatory variable. The value of the explanatory variable gives the x-coordinate and the value of the response variable gives the y-coordinate of the point plotted for an individual. For example, the first individual in the cars data is plotted at x (\var{Weight}) = \Sexpr{cars93$Weight[1]} and y (\var{HMPG}) = \Sexpr{cars93$HMPG[1]}, whereas the second individual is at x = \Sexpr{cars93$Weight[2]} and y = \Sexpr{cars93$HMPG[2]} \figrefp{fig:carscat2}.
-<<carscat1, echo=FALSE, fig.show='hide'>>=
-plot(HMPG~Weight,data=cars93,xlab="Weight (lbs)",ylab="Highway MPG",pch=16)
-@
 
 <<carscat2, echo=FALSE, fig.cap="Scatterplot between the highway MPG and weight of cars manufactured in 1993. For reference to the main text, the first individual is red and the second individual is green.">>=
-<<carscat1>>
-points(HMPG~Weight,data=cars93[1:2,],pch=16,col=c("red","green"))
+ggplot(data=cars93,mapping=aes(x=Weight,y=HMPG)) +
+  geom_point(color="gray50",size=2) +
+  geom_point(data=cars93[1,],color="red",size=2) +
+  geom_point(data=cars93[2,],color="green",size=2) +
+  labs(x="Weight (lbs)",y="Highway MPG") +
+  theme_NCStats()
 @
 
 
@@ -96,106 +91,160 @@ Four characteristics should be described for a bivariate EDA with two quantitati
   \item \textbf{strength} of the relationship.
 \end{Enumerate}
 \vspace{-8pt}
-All four of these items can be described from a scatterplot. However, for certain relationships (discussed below), strength is best described from the correlation coefficient.
+All four of these items can be described from a scatterplot. However, for \textbf{linear} relationships, strength is best described from the correlation coefficient.
 
 \subsection{Form and Outliers}
-The form of a relationship is determined by whether the ``cloud'' of points on a scatterplot forms a line or some sort of curve \figrefp{fig:corrassn}. For the purposes of this introductory course, if the ``cloud'' appears linear then the form will said to be linear, whereas if the ``cloud'' is curved then the form will be nonlinear. Scatterplots should be considered \textbf{linear} unless there is an OBVIOUS curvature in the points.
+The form of a relationship is determined by whether the ``cloud'' of points on a scatterplot forms a line or some sort of curve \figrefp{fig:corrassn}. For the purposes of this introductory course, if the ``cloud'' appears linear then the form will be said to be linear, whereas if the ``cloud'' is curved then the form will be nonlinear. Scatterplots should be considered \textbf{linear} unless there is an OBVIOUS curvature in the points.
 
-<<forms, echo=FALSE, out.width='.3\\linewidth', fig.cap="Depictions of two linear (Left and Center) and one nonlinear (Right) relationship.">>=
-par(mar=c(0.5,0.5,2,0.5),xaxt="n",yaxt="n")
+<<forms, echo=FALSE, fig.width=6,fig.height=2,out.width='.9\\linewidth', fig.cap="Depictions of two linear and one nonlinear relationship.">>=
 set.seed(1054)
-r <- c(-.9,0.4)
-for (i in 1:length(r)) {
-  plot(rmvnorm(n=100,mean=c(0,0),sigma=matrix(c(1,r[i],r[i],1),ncol=2)),
-       xlab="",ylab="",pch=21,bg="gray70")
-  mtext("Linear",cex=1.5,line=0.5)
-}
-x <- 3*runif(100)
-y <- 2.5*(x^2)-3*x + rnorm(100,sd=1.5)
-plot(y~x,xlab="",ylab="",pch=21,bg="gray70")
-mtext("Nonlinear",cex=1.5,line=0.5)
+tmp1 <- data.frame(mvtnorm::rmvnorm(n=100,mean=c(0,0),
+                                    sigma=matrix(c(1,-0.9,-0.9,1),ncol=2)),
+                   grp="Linear1")
+tmp2 <- data.frame(mvtnorm::rmvnorm(n=100,mean=c(0,0),
+                                    sigma=matrix(c(1,0.4,0.4,1),ncol=2)),
+                   grp="Linear2")
+tmp3 <- tibble::tibble(X1=3*runif(100),
+                       X2=2.5*(X1^2)-3*X1+rnorm(100,sd=1.5),
+                       grp="Non-Linear")
+tmp <- rbind(tmp1,tmp2,tmp3) %>%
+  rename(x=X1,y=X2) %>%
+  mutate(grp=factor(grp))
+
+ggplot(data=tmp,mapping=aes(x=x,y=y)) +
+  geom_point(shape=21,color="black",fill="darkgrey",size=2) +
+  theme_NCStats() +
+  theme(axis.title.x=element_blank(),axis.title.y=element_blank(),
+        axis.text=element_blank(),
+        axis.ticks=element_blank(),
+        aspect.ratio=1) +
+  facet_wrap(vars(grp),scale="free",
+             labeller=labeller(grp=c("Linear1"="Linear","Linear2"="Linear",
+                                   "Non-Linear"="Non-Linear")))
 @
 
 \vspace{12pt} % because it got gobbled up
-An outlier is a point that is far removed from the main cluster of points. Keep in mind (as always) that just because a point is an outlier doesn't mean it is wrong.
+An outlier is a point that is far removed from the main cluster of points \figrefp{fig:outlier}. Keep in mind (as always) that just because a point is an outlier doesn't mean it is wrong.
+
+<<outlier, echo=FALSE, fig.width=2,fig.height=2,out.width='.3\\linewidth', fig.cap="Depiction of an outlier (red point) in an otherwise linear scatterplot.">>=
+tmp1a <- rbind(tmp1[,1:2],c(X1=1.5,X2=3))
+ggplot(data=tmp1a,mapping=aes(x=X1,y=X2)) +
+  geom_point(shape=21,color="black",fill="darkgrey",size=2) +
+  annotate(geom="point",x=1.5,y=3,pch=21,color="black",fill="red",size=2) +
+  theme_NCStats() +
+  theme(axis.title.x=element_blank(),axis.title.y=element_blank(),
+        axis.text=element_blank(),
+        axis.ticks=element_blank(),
+        aspect.ratio=1)
+@
 
 \subsection{Association or Direction}
-A positive association is when the scatterplot resembles an increasing function (i.e., increases from lower-left to upper-right; \figref{fig:corrassn}-Left). For a positive association, most of the individuals are above average or below average for both of the variables. A negative association is when the scatterplot looks like a decreasing function (i.e., decreases from upper-left to lower-right; \figref{fig:corrassn}-Right). For a negative association, most of the individuals are above average for one variable and below average for the other variable. No association is when the scatterplot looks like a ``shotgun blast'' of points (\figref{fig:corrassn}-Center). For no association, there is no tendency for individuals to be above or below average for one variable and above or below average for the other.
+A positive association is when the scatterplot resembles an increasing function (i.e., increases from lower-left to upper-right; \figref{fig:corrassn}-Left). For a positive association, most of the individuals are above average or below average for both of the variables. A negative association is when the scatterplot looks like a decreasing function (i.e., decreases from upper-left to lower-right; \figref{fig:corrassn}-Right). For a negative association, most of the individuals are above average for one variable and below average for the other variable. No association is when the scatterplot looks like a ``shotgun blast'' of points (\figref{fig:corrassn}-Center). For no association, there is no tendency for individuals to be above or below average for one variable and above or below average for the other variable.
 
-<<corrassn, echo=FALSE, out.width='.3\\linewidth', fig.cap="Depiction of three types of association present in scatterplots. Dashed vertical lines are at the means of each variable.">>=
+<<corrassn, echo=FALSE, fig.width=6,fig.height=2,out.width='.9\\linewidth', fig.cap="Depiction of three types of association present in scatterplots. Dashed vertical lines are at the means of each variable.">>=
 set.seed(1055)
-r <- c(.8,0,-.7)
-lbls <- c("Positive","None","Negative")
-par(mar=c(0.5,0.5,2,0.5),xaxt="n",yaxt="n")
-for (i in 1:length(r)) {
-  dat <- rmvnorm(n=100,mean=c(0,0),sigma=matrix(c(1,r[i],r[i],1),ncol=2))
-  plot(dat,xlab="",ylab="",pch=21,bg="gray70")
-  mtext(lbls[i],cex=1.5,line=0.5)
-  abline(v=mean(dat[,1]),lty=2,col="gray80")
-  abline(h=mean(dat[,2]),lty=2,col="gray80")
-}
+tmp1 <- data.frame(mvtnorm::rmvnorm(n=100,mean=c(0,0),
+                                    sigma=matrix(c(1,0.8,0.8,1),ncol=2)),
+                   grp="Positive")
+tmp2 <- data.frame(mvtnorm::rmvnorm(n=100,mean=c(0,0),
+                                    sigma=matrix(c(1,0,0,1),ncol=2)),
+                   grp="None")
+tmp3 <- data.frame(mvtnorm::rmvnorm(n=100,mean=c(0,0),
+                                    sigma=matrix(c(1,-0.7,-0.7,1),ncol=2)),
+                   grp="Negative")
+tmp <- rbind(tmp1,tmp2,tmp3) %>%
+  rename(x=X1,y=X2) %>%
+  mutate(grp=factor(grp,levels=c("Positive","None","Negative")),
+         stdx=scale(x),stdy=scale(y),prod=stdx*stdy)
+
+ggplot(data=tmp,mapping=aes(x=stdx,y=stdy)) +
+  geom_vline(xintercept=0,color="gray80",linetype="dashed") +
+  geom_hline(yintercept=0,color="gray80",linetype="dashed") +
+  geom_point(shape=21,color="black",fill="darkgrey",size=2) +
+  theme_NCStats() +
+  theme(axis.title.x=element_blank(),axis.title.y=element_blank(),
+        axis.text=element_blank(),
+        axis.ticks=element_blank(),
+        aspect.ratio=1) +
+  facet_wrap(vars(grp),scale="free")
 @
 
 \subsection{Strength (and Association, Again)} \label{sect:CorrStrength}
-Strength is a summary of how closely the points cluster about the general form of the relationship. For example, if a linear form exists, then strength is how closely the points cluster around the line. Strength is difficult to define from a scatterplot because it is a relative term. However, the correlation coefficient ($r$; \sectref{sect:corr}) is a measure of strength (and association) between two variables, \textit{if the form is linear}.
+Strength is a summary of how closely the points cluster about the general form of the relationship. For example, if a linear form exists, then strength is how closely the points cluster around the line. Strength is difficult to define from a scatterplot because it is a relative term. However, the correlation coefficient ($r$; \sectref{sect:corr}) is a measure of strength and association between two variables, \textit{if the form is linear}.
 
-The sign of $r$ indicates the association between the two variables. A positive $r$ means a positive association and a negative $r$ means a negative association. The absolute value of $r$ (i.e., the value ignoring the sign) is an indicator of strength of relationship. Absolute values nearer 1 are stronger relationships.
+To better understand how $r$ is a measure of association and strength, reconsider the steps in calculating $r$ from \sectref{sect:corr}. The scatterplots in \figref{fig:corrdefn1} represent different associations. These scatterplots have dashed lines at the mean of both the x- and y-axis variables. Because the mean is subtracted from observed values when standardizing, points that fall above the mean will have positive standardized values and points that fall below the mean will have negative standardized values. The sign for the standardized values are depicted along the axes.
 
-To better understand how $r$ is a measure of association and strength, reconsider the steps in calculating $r$ from \sectref{sect:corr}. The scatterplots in \figref{fig:corrdefn1} represent a positive (Left) and negative (Right) association. These scatterplots have dashed lines at the mean of both the x- and y-axis variables. Because the mean is subtracted from observed values when standardizing, points that fall above the mean will have positive standardized values and points that fall below the mean will have negative standardized values. The sign for the standardized values are depicted along the axes.
-
-<<corrdefn1, echo=FALSE, fig.width=7, out.width='.65\\linewidth', fig.cap="Scatterplot with mean lines superimposed and the signs of standardized values for both x and y shown for a positive (\\textbf{Left}) and negative (\\textbf{Right}) association. Blue points have a positive product of standardized values, whereas red points have a negative product of standardized values.">>=
-set.seed(16502)
-r <- c(0.8,-0.8)
-par(mar=c(2,2,1,1),mgp=c(2,0.5,0),mfcol=c(1,2),xaxs="i",yaxs="i")
-for (i in 1:length(r)) {
-  x <- rmvnorm(n=100,mean=c(0,0),sigma=matrix(c(1,r[i],r[i],1),ncol=2))
-  y <- x[,2]; x <- x[,1]
-  xbar <- mean(x); ybar <- mean(y)
-  plot(-5,xlab="",ylab="",xlim=c(-3,3),ylim=c(-3,3),xaxt="n",yaxt="n")
-  axis(1,at=xbar,c(expression(bar(x))),cex=1.5)
-  axis(2,at=c(ybar),c(expression(bar(y))),cex=1.5)
-  abline(v=xbar,lty=2,lwd=2,col="gray60")
-  abline(h=ybar,lty=2,lwd=2,col="gray60")
-  axis(1,at=c(-2,2),c("Below (-)","Above (+)"),cex=2.5,tick=FALSE)
-  axis(2,at=c(-2,2),c("Below (-)","Above (+)"),cex=2.5,tick=FALSE)
-  points(x[(x>xbar & y<ybar)|(x<xbar & y>ybar)],
-         y[(x>xbar & y<ybar)|(x<xbar & y>ybar)],pch=21,bg="red")
-  points(x[(x>xbar & y>ybar)|(x<xbar & y<ybar)],
-         y[(x>xbar & y>ybar)|(x<xbar & y<ybar)],pch=21,bg="blue")
-}
+<<corrdefn1, echo=FALSE, fig.width=6,fig.height=2,,out.width='1\\linewidth', fig.cap="Scatterplot with mean lines (dashed lines) and the signs of standardized values for both x and y shown for different associations. Blue points have a positive product of standardized values, whereas red points have a negative product of standardized values.">>=
+ggplot(data=tmp,mapping=aes(x=stdx,y=stdy)) +
+  geom_vline(xintercept=0,color="gray80",linetype="dashed") +
+  geom_hline(yintercept=0,color="gray80",linetype="dashed") +
+  geom_point(aes(fill=prod>0),shape=21,color="black",size=2) +
+  scale_fill_manual(values=c("red","blue")) +
+  scale_y_continuous(breaks=c(-1.5,1.5),labels=c("Below (-)","Above (+)")) +
+  scale_x_continuous(breaks=c(-1.5,1.5),labels=c("Below (-)","Above (+)")) +
+  theme_NCStats() +
+  theme(axis.title.x=element_blank(),axis.title.y=element_blank(),
+        axis.text.y=element_text(angle=90,hjust=0.5),
+        axis.ticks=element_blank(),
+        legend.position="none",
+        aspect.ratio=1) +
+  facet_wrap(vars(grp))
 @
 
 \vspace{-6pt}
 Now consider the product of standardized x's and y's in each quadrant of the scatterplots in \figref{fig:corrdefn1}. The product of standardized values is positive (blue points) in the quadrant where both standardized values are above average (i.e., both positive signs) and both are below average. The product of standardized values is negative (red points) in the other two quadrants.
 
-Thus, for a positive association (\figref{fig:corrdefn1}-Left) the numerator of the correlation coefficient is positive because it is the sum of many positive (blue points) and few negative (red points) products of standardized values. The denominator (recall that it is $n-1$) is always positive. Therefore, $r$ for a positive association is positive. Conversely, for a negative association (\figref{fig:corrdefn1}-Right) the numerator of the correlation coefficient is negative because it is the sum of few positive (blue points) and many negative (red points) products of standardized values. Therefore, $r$ for a negative association is negative.
+Thus, for a positive association (\figref{fig:corrdefn1}-Left) the numerator of the correlation coefficient is positive because it is the sum of many positive (blue points) and few negative (red points) products of standardized values. Therefore, $r$ for a positive association is positive (because the denominator of $n-1$ is always positive).  Conversely, for a negative association (\figref{fig:corrdefn1}-Right) the numerator of the correlation coefficient is negative because it is the sum of few positive (blue points) and many negative (red points) products of standardized values. Therefore, $r$ for a negative association is negative.
 
-Correlations range from -1 to 1. Absolute values of $r$ equal to 1 indicate a perfect association (i.e., all points exactly on a line). A correlation of 0 indicates no association. Thus, absolute values of $r$ near 1 indicate strong relationships and those near 0 are weak. How strength and association of the relationship changes along the range of $r$ values is illustrated in \figref{fig:corrstrength2}. Categorizations in \tabref{tab:StrengthCriteria} can be used as a guideline for describing the strength of relationship between two variables.
+Correlations range from -1 to 1. Absolute values of $r$ equal to 1 indicate a perfect association (i.e., all points exactly on a line). A correlation of 0 indicates no association. Thus, absolute values of $r$ near 1 indicate strong relationships and those near 0 are weak. How strength and association of the relationship change along the range of $r$ values is illustrated in \figref{fig:corrstrength2}. Guidelines in \tabref{tab:StrengthCriteria} can be used to describe the strength of relationship between two variables.
 
-<<corrstrength2, echo=FALSE, fig.width=8, fig.height=1.5, out.width='.95\\linewidth', fig.cap="Scatterplots along the continuum of $r$ values.", fig.pos="h">>=
-par(mar=c(0.2,0.2,2.8,0.2),mfcol=c(1,7))
+<<corrstrength2, echo=FALSE, fig.width=6, fig.height=4, out.width='0.75\\linewidth', fig.cap="Scatterplots along the continuum of $r$ values.", fig.pos="h">>=
 set.seed(1909)
-r <- c(-1,-0.8,-0.4,0,0.4,0.8,1)
-for (i in 1:length(r)) {
-  covmat <- matrix(c(1,r[i],r[i],1),ncol=2)
-  x <- rmvnorm(n=100,mean=c(0,0),sigma=covmat)
-  y <- x[,2]; x <- x[,1]
-  xbar <- mean(x); ybar <- mean(y)
-  plot(-5,xlab="",ylab="",xaxt="n",yaxt="n",xlim=c(-3,3),ylim=c(-3,3))
-  abline(v=xbar,lty=2,lwd=1); abline(h=ybar,lty=2,lwd=1)
-  points(x[(x>xbar & y<ybar)|(x<xbar & y>ybar)],
-         y[(x>xbar & y<ybar)|(x<xbar & y>ybar)],pch=21,bg="red",cex=0.8,lwd=0.5)
-  points(x[(x>xbar & y>ybar)|(x<xbar & y<ybar)],
-         y[(x>xbar & y>ybar)|(x<xbar & y<ybar)],pch=21,bg="blue",cex=0.8,lwd=0.5)
-  if (r[i]==-1 | r[i]==1) {
-    mtext("Strongest",line=1.6)
-    mtext(paste("r=",r[i]),line=0.2)
-  } else if (r[i]==0) {
-    mtext("Weakest",line=1.6)
-    mtext(paste("r=",r[i]),line=0.2)
-  }
-}
+tmp1 <- data.frame(mvtnorm::rmvnorm(n=100,mean=c(0,0),
+                                    sigma=matrix(c(1,1,1,1),ncol=2)),
+                   dir="Positive",str="Strongest\n|r|=1")
+tmp2 <- data.frame(mvtnorm::rmvnorm(n=100,mean=c(0,0),
+                                    sigma=matrix(c(1,0.8,0.8,1),ncol=2)),
+                   dir="Positive",str="|r|=0.8")
+tmp3 <- data.frame(mvtnorm::rmvnorm(n=100,mean=c(0,0),
+                                    sigma=matrix(c(1,0.4,0.4,1),ncol=2)),
+                   dir="Positive",str="|r|=0.4")
+tmp4 <- data.frame(mvtnorm::rmvnorm(n=100,mean=c(0,0),
+                                    sigma=matrix(c(1,0,0,1),ncol=2)),
+                   dir="Positive",str="Weakest\nr=0")
+tmp5 <- data.frame(mvtnorm::rmvnorm(n=100,mean=c(0,0),
+                                    sigma=matrix(c(1,-1,-1,1),ncol=2)),
+                   dir="Negative",str="Strongest\n|r|=1")
+tmp6 <- data.frame(mvtnorm::rmvnorm(n=100,mean=c(0,0),
+                                    sigma=matrix(c(1,-0.8,-0.8,1),ncol=2)),
+                   dir="Negative",str="|r|=0.8")
+tmp7 <- data.frame(mvtnorm::rmvnorm(n=100,mean=c(0,0),
+                                    sigma=matrix(c(1,-0.4,-0.4,1),ncol=2)),
+                   dir="Negative",str="|r|=0.4")
+tmp8 <- data.frame(mvtnorm::rmvnorm(n=100,mean=c(0,0),
+                                    sigma=matrix(c(1,0,0,1),ncol=2)),
+                   dir="Negative",str="Weakest\nr=0")
+tmp <- rbind(tmp1,tmp2,tmp3,tmp4,tmp5,tmp6,tmp7,tmp8) %>%
+  rename(x=X1,y=X2) %>%
+  mutate(dir=factor(dir,levels=c("Positive","Negative")),
+         str=factor(str,levels=c("Strongest\n|r|=1","|r|=0.8",
+                                 "|r|=0.4","Weakest\nr=0")),
+         stdx=scale(x),stdy=scale(y),prod=stdx*stdy)
+
+ggplot(data=tmp,mapping=aes(x=stdx,y=stdy)) +
+  geom_point(aes(fill=prod>0),shape=21,color="black",size=2) +
+  scale_fill_manual(values=c("red","blue")) +
+  geom_vline(xintercept=0,color="gray80",linetype="dashed") +
+  geom_hline(yintercept=0,color="gray80",linetype="dashed") +
+  theme_NCStats() +
+  theme(axis.title.x=element_blank(),axis.title.y=element_blank(),
+        axis.text=element_blank(),
+        axis.ticks=element_blank(),
+        legend.position="none",
+        aspect.ratio=1) +
+  facet_grid(rows=vars(dir),cols=vars(str))
 @
+
 
 \begin{table}[htbp]
   \caption{Classifications of strength of relationship for absolute values of $r$ by type of study.}
@@ -219,20 +268,21 @@ for (i in 1:length(r)) {
 \section{Example Interpretations}
 When performing a bivariate EDA for two quantitative variables, the form, presence (or absence) of outliers, association, and strength should be specifically addressed. In addition, you should state how you assessed strength. Specifically, you should use $r$ to assess strength (see \sectref{sect:CorrStrength}) \textbf{IF} the relationship is linear without any outliers. However, if the relationship is nonlinear, has outliers, or both, then strength should be subjectively assessed from the scatterplot.
 
-Two other points to consider when performing a bivariate EDA with quantitative variables. First, if outliers are present, do not let them completely influence your conclusions about form, association, and strength. In other words, assess these items ignoring the outlier(s). If you have raw data and the form excluding the outlier is linear, then compute $r$ with the outlier eliminated from the data. Second, the form of weak relationships is difficult to describe because, by definition, there is very little clustering to a form. As a rule-of-thumb, if the scatterplot is not obviously curved, then it is described as linear by default.
+Two other points should be considered when performing a bivariate EDA with quantitative variables. First, if outliers are present, do not let them completely influence your conclusions about form, association, and strength. In other words, assess these items ignoring the outlier(s). If you have raw data and the form excluding the outlier is linear, then compute $r$ with the outlier eliminated from the data. Second, the form of weak relationships is difficult to describe because, by definition, there is very little clustering to a form. As a rule-of-thumb, if the scatterplot is not obviously curved, then it is described as linear by default.
 
 \warn{Outliers should not influence the descriptions of association, strength, and form.}
 
 \vspace{-12pt}
 \warn{The form is linear unless there is an OBVIOUS curvature.}
 
+Finally, in the examples below note that 1) form, outliers, association, and strength are specifically assessed in each; 2) strength is assess from the correlation coefficient and \tabrefp{tab:StrengthCriteria} \textb{only if the form is linear and there are no outliers}, 3) the position of outliers is specifically identified, and 4) how strength was assessed was described.
+
 \vspace{12pt}
 \subsection*{Highway MPG and Weight}
-\textit{The following overall bivariate summary for the relationship between highway MPG and weight is made using the calculations from the previous sections.}
+\textit{The following overall bivariate summary for the relationship between highway MPG and weight is made using the scatterplot and correlation coefficient from the previous sections.}
 
 The relationship between highway MPG and weight of cars \figrefp{fig:carscat2} appears to be primarily linear (although I see a very slight concavity), negative, and moderately strong with a correlation of \Sexpr{formatC(corr(HMPG~Weight,data=cars93),format="f",digits=2)}. The three points at (2400,46), (2500,27), and (1800,33) might be considered SLIGHT outliers (these are not far enough removed for me to consider them outliers, but some people may). The correlation coefficient was used to assess strength because I deemed the relationship to be linear without any outliers.
 
-\newpage
 \subsection*{State Energy Usage}
 \begin{quote}
 \textit{A 2001 report from the \href{http://www.eia.doe.gov/}{Energy Information Administration} of the Department of Energy details the total consumption of a variety of energy sources by state in 2001. Construct a proper EDA for the relationship between total petroleum and coal consumption (in trillions of BTU).}
@@ -243,51 +293,34 @@ NRG1 <- NRG[-c(5,44),]
 @
 The relationship between total petroleum and coal consumption is generally linear, with two outliers at total petroleum levels greater than 3000 trillions of BTU, positive, and weak (\figref{fig:scatNRG1}-Left). I did not use the correlation coefficient because of the outliers. If the two outliers (Texas and California) are removed then the relationship is linear, with no additional outliers, positive, and weak ($r=$\Sexpr{formatC(corr(~Coal+TotalPet,data=NRG1),format="f",digits=2)}) (\figref{fig:scatNRG1}-Right).
 
-<<scatNRG1, echo=FALSE, fig.cap="Scatterplot of the total consumption of petroleum versus the consumption of coal (in trillions of BTU) by all 50 states and the District of Columbia. The points shown in the left with total petroleum values greater than 3000 trillion BTU are deleted in the right plot.">>=
-plot(TotalPet~Coal,data=NRG,pch=21,bg="gray70",xlab="Coal Consumption (trillion BTU)",
-     ylab="Total Petroleum (trillion BTU)")
-plot(TotalPet~Coal,data=NRG1,pch=21,bg="gray70",xlab="Coal Consumption (trillion BTU)",
-     ylab="Total Petroleum (trillion BTU)")
+<<scatNRG1, echo=FALSE, fig.width=7, fig.height=3.5, out.width='0.8\\linewidth', fig.cap="Scatterplot of the total consumption of petroleum versus the consumption of coal (in trillions of BTU) by all 50 states and the District of Columbia. The points shown in the left with total petroleum values greater than 3000 trillion BTU are deleted in the right plot.">>=
+p1 <- ggplot(data=NRG,mapping=aes(x=Coal,y=TotalPet)) +
+  geom_point(pch=21,color="black",fill="darkgray",size=2) +
+  labs(x="Coal Consumption (trillion BTU)",y="Total Petroleum (trillion BTU)") +
+  theme_NCStats()
+p2 <- p1 %+% NRG1
+p1 + p2
 @
 
-\subsubsection*{R Appendix}
-<<eval=FALSE, prompt=FALSE>>=
-<<NRG1>>
-<<scatNRG1>>
-corr(~Coal+TotalPet,data=NRG1)
-@
-
-\newpage
 \subsection*{Hatch Weight and Incubation Time of Geckos}
 \begin{quote}
-\textit{A \href{http://www.moonvalleyreptiles.com/breeding/incubation-length-and-hatch-weight}{hobbyist} hypothesized that there would be a positive association between length of incubation (days) and hatchling weight (grams) for Crested Geckos (Rhacodactylus ciliatus). To test this hypothesis she collected the incubation time and weight for 21 hatchlings (shown below). Construct a proper EDA for the relationship between incubation time and hatchling weight.}
+\textit{A \href{http://www.moonvalleyreptiles.com/breeding/incubation-length-and-hatch-weight}{hobbyist} hypothesized that there would be a positive association between length of incubation (days) and hatchling weight (grams) for Crested Geckos (Rhacodactylus ciliatus). To test this hypothesis she collected the incubation time and weight for 21 hatchlings with the results shown below. Construct a proper EDA for the relationship between incubation time and hatchling weight.}
 \end{quote}
 
-\begin{verbatim}
-Time  53  54  56  60  60  60  60  60  63  63  77  77  78  81  82  82  83  83  84  90  90
-Wt   1.5 1.7 1.4 1.0 1.4 1.5 1.7 1.8 1.4 1.5 1.1 1.6 1.5 1.9 1.4 1.5 1.3 1.7 1.6 1.4 1.8
-\end{verbatim}
-
-<<echo=FALSE>>=
-df <- data.frame(inctime=c(53,54,56,60,60,60,60,60,63,63,77,77,78,81,82,82,83,83,84,90,90),
-                 hatchwt=c(1.5,1.7,1.4,1.0,1.4,1.5,1.7,1.8,1.4,1.5,1.1,1.6,1.5,1.9,1.4,1.5,1.3,1.7,1.6,1.4,1.8))
+<<scatGecko, echo=FALSE, fig.cap="Scatterplot of hatchling weight versus incubation time for Crested Geckos.">>=
+df <- data.frame(inctime=c(53,54,56,60,60,60,60,60,63,63,77,
+                           77,78,81,82,82,83,83,84,90,90),
+                 hatchwt=c(1.5,1.7,1.4,1.0,1.4,1.5,1.7,1.8,
+                           1.4,1.5,1.1,1.6,1.5,1.9,1.4,1.5,
+                           1.3,1.7,1.6,1.4,1.8))
+ggplot(data=df,mapping=aes(x=inctime,y=hatchwt)) +
+  geom_point(pch=21,color="black",fill="darkgray",size=2) +
+  labs(x="Incubation Time (days)",y="Hatchling Weight (grams)") +
+  theme_NCStats()
 @
 
 The relationship between hatchling weight and incubation time for the Crested Geckos is linear, without obvious outliers (\textit{though some may consider the small hatchling at 60 days to be an outlier}), without a definitive association, and weak ($r$=\Sexpr{formatC(corr(~inctime+hatchwt,data=df),format="f",digits=2)}) \figrefp{fig:scatGecko}. I did compute $r$ because no outliers were present and the relationship was linear (or, at least, it was not nonlinear).
 
-<<scatGecko, echo=FALSE, fig.cap="Scatterplot of hatchling weight versus incubation time for Crested Geckos.">>=
-plot(hatchwt~inctime,data=df,pch=21,bg="gray70",xlab="Incubation Time (days)",
-     ylab="Hatchling Weight (grams)")
-@
-
-\vspace{-18pt}
-\subsubsection*{R Appendix}
-\vspace{-6pt}
-<<eval=FALSE, prompt=FALSE>>=
-df <- read.csv("data/Gecko.csv")
-<<scatGecko>>
-corr(~inctime+hatchwt,data=df)
-@
 
 
 \section{Cautions About Correlation}
@@ -306,8 +339,13 @@ Examining relationships between pairs of quantitative variables is common practi
 Additionally, correlation is not causation! In other words, just because a strong correlation is observed it does not mean that the explanatory variable caused the response variable (an exception may be in carefully designed experiments). For example, it was found above that highway gas mileage decreased linearly as the weight of the car increased. One must be careful here to not state that increasing the weight of the car CAUSED a decrease in MPG because these data are part of an observational study and several other important variables were not considered in the analysis. For example, the scatterplot in \figref{fig:carscat3}, coded for different numbers of cylinders in the car's engine, indicates that the number of cylinders may be inversely related to highway MPG and positively related to weight of the car. So, does the weight of the car, the number of cylinders, or both, explain the decrease in highway MPG?
 
 <<carscat3, echo=FALSE, fig.cap="Scatterplot between the highway MPG and weight of cars manufactured in 1993 separated by number of cylinders.">>=
-plot(HMPG~Weight,data=cars93,pch=Cyls-2,xlab="Weight (lbs)",ylab="Highway MPG")
-legend("topright",pch=1:5,legend=c("3-cyl","4-cyl","5-cyl","6-cyl","8-cyl"))
+ggplot(data=filterD(cars93,!is.na(Cyls)),
+                    mapping=aes(x=Weight,y=HMPG,fill=factor(Cyls))) +
+  geom_point(pch=21,color="black",size=2) +
+  labs(x="Weight (lbs)",y="Highway MPG",fill="# Cylinders") +
+  theme_NCStats() +
+  theme(legend.position=c(0.99,0.99),legend.justification=c(1,1),
+        legend.key.size=unit(4,"mm"))
 @
 
 More interesting examples (e.g., high correlation between number of people who drowned by falling into a pool and the annual number of films that Nicolas Cage appeared in) that further demonstrate that ``correlation is not causation'' can be found on the \href{http://www.tylervigen.com/spurious-correlations}{Spurious Correlations website.}
