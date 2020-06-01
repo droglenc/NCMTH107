@@ -42,7 +42,7 @@ title: Learning Modules
       <li><a href="RFilter.html">Filtering Data in R</a></li>
       <li><a href="RUnivEDA.html">Univariate EDA in R</a></li>
       <li><a href="RBivEDA.html">Bivariate EDA in R</a></li>
-      <li><a href="RRegression.html">Linear Regresion in R</a></li>
+      <li><a href="RRegression.html">Linear Regression in R</a></li>
       <li><a href="Rt1.html">1-Sample t in R</a></li>
       <li><a href="Rt2.html">2-Sample t in R</a></li>
       <li><a href="RChi.html">Chi-square in R</a></li>

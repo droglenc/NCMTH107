@@ -40,7 +40,7 @@ headtail(cars93,which=c("MFG","Model","Type","Weight","HMPG"))
 &nbsp;
 
 # Fitted Line Plot
-The linear fitted line can be added to a scatterplot (see the [Bivariate EDA in R module](../RBivEDA.html#scatterplots)) with `geom_smooth()`. The `geom_smooth()` function requires `method="lm"` to show the linear regression line and `se=FALSE` to remove the underlying confidence band.^[This is an advanced topic for a future course.]
+The linear fitted line can be added to a scatterplot (see the [Bivariate EDA in R module](RBivEDA.html#scatterplots)) with `geom_smooth()`. The `geom_smooth()` function requires `method="lm"` to show the linear regression line and `se=FALSE` to remove the underlying confidence band.^[This is an advanced topic for a future course.]
 
 ```{r}
 ggplot(data=cars93,mapping=aes(x=Weight,y=HMPG)) +
