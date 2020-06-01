@@ -9,8 +9,62 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo=TRUE,fig.align='center',comment="#R>  ")
+knitr::opts_chunk$set(echo=TRUE,fig.align='center',comment="#R>  ",fig.width=3.5,fig.height=3.5)
 ```
+
+In the [Linear Regression module](../LinearRegression.html) you learned about the theory underlying linear regression and answered application questions related to the results of a linear regression. In this module, you will learn how to perform a linear regression, visualize the results, and make predictions from a linear regression. You also be asked to answer the same series of questions you answered in the [Linear Regression module](../LinearRegression.html).
+
+Methods in this module require the `NCStats` package (as always) and the `ggplot2` package (for making graphs).
+
+```{r}
+library(NCStats)
+library(ggplot2)
+```
+
+
+&nbsp;
+
+# Data Sets
+
+
+\section{Regression in R}
+The mercury intake and amount in the blood data is loaded below to be used as an example for finding a regression line with R.
+<<eval=FALSE>>=
+setwd('c:/data/')
+merc <- read.csv("Mercury.csv")
+@
+\vspace{-14pt}
+<<>>=
+str(merc)
+@
+
+The linear regression model is fit to two quantitative variables with \R{lm()}. The first argument is a formula of the form \R{response\TILDE explanatory}, where \R{response} contains the response variable and \R{explanatory} contains the explanatory variable, and the corresponding data.frame is in \R{data=}. The results of \R{lm()} should be assigned to an object so that specific results can be extracted.
+
+\warn{The same formula used to make a scatterplot with \R{plot()} is used in \R{lm()} to find the best-fit line.}
+<<echo=FALSE>>=
+lm1 <- lm(blood~intake,data=merc)
+@
+
+The regression was fit to the mercury data below. From this it is seen that the intercept is \Sexpr{formatC(coef(lm1)[1],format="f",digits=3)} and the slope is \Sexpr{formatC(coef(lm1)[2],format="f",digits=3)}.
+<<>>=
+( lm1 <- lm(blood~intake,data=merc) )
+@
+
+A fitted-line plot \figrefp{fig:HGFLP} is constructed by submitting the \R{lm()} object to \R{fitPlot()}. Aspects of this plot can be adjusted using the same arguments as described for \R{plot()} in \sectref{sect:ScatterplotsR}.
+<<HGFLP, fig.cap="Fitted-line plots for the regression of mercury in the blood on mercury intake.">>=
+fitPlot(lm1,pch=21,bg="gray70",xlab="Mercury Intake",ylab="Mercury in the Blood")
+@
+
+Predicted values from the linear regression are obtained with \R{predict()}. The \R{predict()} function requires the saved \R{lm()} object as its first argument. The second argument is a data.frame constructed with \R{data.frame()} that contains the \textbf{EXACT} name of the explanatory variable as it appeared in \R{lm()} set equal to the value of the explanatory at which the prediction should be made. For example, the predicted amount of mercury in the blood for an intake of 240 $\mu$g per day is \Sexpr{formatC(predict(lm1,data.frame(intake=240)),format="f",digits=1)}, as obtained below.
+<<>>=
+predict(lm1,data.frame(intake=240))
+@
+
+The coefficient of determination is computed by submitting the saved \R{lm()} object to \R{rSquared()}. For example, \Sexpr{formatC(rSquared(lm1,percent=TRUE),format="f",digits=1)}\% of the variability in mercury in the blood is explained by knowing the amount of mercury at intake. [Note the use of \R{digits=} to control the number of decimals.]
+<<>>=
+rSquared(lm1,digits=3)
+@
+
 
 
 

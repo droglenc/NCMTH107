@@ -9,16 +9,7 @@ set_parent('IntroStats.Rnw')
 
 \lettrine{L}{inear regression analysis is used to model the relationship} between two quantitative variables for two related purposes -- (i) explaining variability in the response variable and (ii) predicting future values of the response variable. Examples include predicting future sales of a product from its price, family expenditures on recreation from family income, an animal's food consumption in relation to ambient temperature, and a person's score on a German assessment test based on how many years the person studied German.
 
-Exact predictions cannot be made because of natural variability. For example, two people with the same intake of mercury (from consumption of fish) will not have the same level of mercury in their blood stream (e.g., observe the two individuals in \figref{fig:HGscat} that had intakes of 580 ug HG/day). Thus, the best that can be accomplished is to predict the average or expected value for a person with a particular intake value. This is accomplished by finding the line that best ``fits'' the points on a scatterplot of the data and using that line to make predictions. Finding and using the ``best-fit'' line is the topic of this module.
-
-<<HGscat, echo=FALSE, fig.cap="Scatterplot of intake of mercury in fish and the mercury in the blood stream. The two individuals mentioned in the main text are shown as red points.">>=
-merc <- data.frame(intake=c(180,200,230,410,600,550,275,580,580,105,250,60,650),
-                   blood=c(90,120,125,290,310,290,170,275,350,70,105,75,480))
-plot(blood~intake,data=merc,pch=21,bg="gray70",
-     xlab="Intake (ug Hg/day)",ylab="Blood (ng/g)")
-points(blood~intake,data=filterD(merc,intake==580),pch=21,bg="red")
-axis(1,at=c(200,400,600))
-@
+Exact predictions cannot be made because of natural variability. For example, two people with the same intake of mercury (from consumption of fish) will likely not have the same level of mercury in their blood stream. Thus, the best that can be accomplished is to predict the average or expected value for a person with a particular intake value. This is accomplished by finding the line that best ``fits'' the points on a scatterplot of the data and using that line to make predictions. Finding and using the ``best-fit'' line is the topic of this module.
 
 
 \section{Response and Explanatory Variables}
@@ -28,32 +19,44 @@ Recall from \sectref{sect:RespExplan1} that the response (or dependent) variable
 \section{Slope and Intercept}
 The equation of a line is commonly expressed as,
   \[ y = mx + b  \]
-where both $x$ and $y$ are variables, $m$ represents the slope of the line, and $b$ represents the y-intercept.\footnote{Hereafter, simply called the ``intercept.''}  It is important that you can look at the equation of a line and identify the response variable, explanatory variable, slope, and intercept. The response variable will always appear on one side of the equation (usually the left) by itself.  The value or symbol that is multiplied by the explanatory variable (e.g., $x$) is the slope, and the value or symbol by itself is the intercept. For example, in
-\[ blood = 3.501 + 0.579*intake \]
-\var{blood} is the response variable, \var{intake} is the explanatory variable, $0.579$ is the slope (it is multiplied by the explanatory variable), and $3.501$ is the intercept (it is not multiplied by anything in the equation). The same conclusions would be made if the equation had been written as
-  \[ blood = 0.579*intake+3.501 \]
+where both $x$ and $y$ are variables, $m$ represents the slope of the line, and $b$ represents the y-intercept.\footnote{Hereafter, simply called the ``intercept.''}  It is important that you can look at the equation of a line and identify the response variable, explanatory variable, slope, and intercept. The response variable will always appear on the left side of the equation by itself. The explanatory variable (e.g., $x$) will be on the right side of the equation and will be multiplied by the slope. The value or symbol by itself on the right side of the equation is the intercept. For example, in
+\[ blood = 3.501 + 0.579intake \]
+\var{blood} is the response variable, \var{intake} is the explanatory variable, $0.579$ is the slope (it is multiplied by the explanatory variable), and $3.501$ is the intercept (it is on the right side and not multiplied by anything). The same conclusions would be made if the equation had been written as
+  \[ blood = 0.579intake+3.501 \]
 
 \warn{In the equation of a line, the slope is always multiplied by the explanatory variable and the intercept is always by itself.}
 
 In addition to being able to identify the slope and intercept of a line you also need to be able to interpret these values. Most students define the slope as ``rise over run'' and the intercept as ``where the line crosses the y-axis.''  These ``definitions'' are loose geometric representations. For our purposes, the slope and intercept must be more strictly defined.
 
-To define the slope, first think of ``plugging'' two values of intake into the equation discussed above. For example, if $intake=100$, then $blood=3.501+0.579*100$=\Sexpr{formatC(3.501+0.579*100,format="f",digits=2)} and if $intake$ is one unit larger at $101$), then $blood=3.501+0.579*101$=\Sexpr{formatC(3.501+0.579*101,format="f",digits=2)}.\footnote{For simplicity of exposition, the actual units are not used in this discussion. However, ``units'' would usually be replaced with the actual units used for the measurements.} The difference between these two values is \Sexpr{formatC(3.501+0.579*101,format="f",digits=2)}-\Sexpr{formatC(3.501+0.579*100,format="f",digits=2)}=$0.579$. Thus, the slope is the change in value of the response variable for a single unit change in the value of the explanatory variable \figrefp{fig:SlopeInt}. That is, mercury in the blood changes 0.579 units for a single unit change in mercury intake. So, if an individual increases mercury intake by one unit, then mercury in the blood will increase by 0.579 units, ON AVERAGE. Alternatively, if one individual has one more unit of mercury intake than another individual, then the first individual will have, ON AVERAGE, 0.579 more units of mercury in the blood.
+To define the slope, first think of ``plugging'' two values of intake into the equation discussed above. For example, if $intake=100$, then $blood=3.501+0.579*100$=\Sexpr{formatC(3.501+0.579*100,format="f",digits=2)} and if $intake$ is one unit larger at $101$, then $blood=3.501+0.579*101$=\Sexpr{formatC(3.501+0.579*101,format="f",digits=2)}.\footnote{For simplicity of exposition, the actual units are not used in this discussion. However, ``units'' would usually be replaced with the actual units used for the measurements.} The difference between these two values is \Sexpr{formatC(3.501+0.579*101,format="f",digits=2)}-\Sexpr{formatC(3.501+0.579*100,format="f",digits=2)}=$0.579$, which is the same as the slope. Thus, the slope is the change in value of the response variable FOR A SINGLE UNIT CHANGE in the value of the explanatory variable \figrefp{fig:SlopeInt}. That is, mercury in the blood changes 0.579 units FOR A SINGLE UNIT CHANGE in mercury intake. So, if an individual increases mercury intake by one unit, then mercury in the blood will increase by 0.579 units, ON AVERAGE. Alternatively, if one individual has one more unit of mercury intake than another individual, then the first individual will have 0.579 more units of mercury in their blood, ON AVERAGE.
 
-<<SlopeInt, echo=FALSE, fig.cap="Schematic representation of the meaning of the intercept and slope in a linear equation.">>=
-par(mar=c(4.5,4.5,0,0),mgp=c(2,0.75,0))
+<<SlopeInt, echo=FALSE,fig.width=4,fig.height=4, fig.cap="Schematic representation of the meaning of the intercept and slope in a linear equation.">>=
 int <- 1.5
 slope <- 0.9
-plot(-10,-10,xlim=c(0,10),ylim=c(0,10),xaxt="n",yaxt="n",xaxs="i",yaxs="i",xlab="Explanatory Variable",ylab="Response Variable")
-axis(1,at=0,col="red")
-axis(2,at=int,"",las=1,col="red")
-text(0,int,"intercept",col="red",pos=2,xpd=NA)
-abline(a=int,b=slope,lwd=3,col="black")
-lines(c(2,3,3),int+slope*c(2,2,3),lwd=2,col="red")
-text(2.5,int+slope*2,"1",pos=1,col="red")
-text(3,int+slope*2.5,"slope",pos=4,col="red")
-lines(c(6,7,7),int+slope*c(6,6,7),lwd=2,col="red")
-text(6.5,int+slope*6,"1",pos=1,col="red")
-text(7,int+slope*6.5,"slope",pos=4,col="red")
+ggplot() +
+  geom_abline(intercept=int,slope=slope,size=1.5) +
+  scale_x_continuous(limits=c(0,10),breaks=0,expand=expansion(mult=c(0,0))) +
+  scale_y_continuous(limits=c(0,10),breaks=c(0,int),labels=c(0,"intercept"),
+                     expand=expansion(mult=c(0,0))) +
+  labs(x="Explanatory Variable",y="Response Variable") +
+  annotate(geom="segment",x=2,xend=3,y=int+slope*2,yend=int+slope*2,
+           color="red",size=1,lineend="square") +
+  annotate(geom="segment",x=3,xend=3,y=int+slope*2,yend=int+slope*3,
+           color="red",size=1,lineend="square") +
+  annotate(geom="text",x=2.5,y=int+slope*2,label="1",vjust=1.2,
+           color="red",size=4) +
+  annotate(geom="text",x=3,y=int+slope*2.5,label="slope",hjust=-0.2,vjust=0.4,
+           color="red",size=4) +
+  annotate(geom="segment",x=6,xend=7,y=int+slope*6,yend=int+slope*6,
+           color="red",size=1,lineend="square") +
+  annotate(geom="segment",x=7,xend=7,y=int+slope*6,yend=int+slope*7,
+           color="red",size=1,lineend="square") +
+  annotate(geom="text",x=6.5,y=int+slope*6,label="1",vjust=1.2,
+           color="red",size=4) +
+  annotate(geom="text",x=7,y=int+slope*6.5,label="slope",hjust=-0.2,vjust=0.4,
+           color="red",size=4) +
+  theme_NCStats() +
+  theme(aspect.ratio=1)
 @
 
 To define the intercept, first ``plug'' $intake=0$ into the equation discussed above; i.e., $blood=3.501+0.579*0$ = $3.501$. Thus, the intercept is the value of the response variable when the explanatory variable is equal to zero \figrefp{fig:SlopeInt}. In this example, the AVERAGE mercury in the blood for an individual with no mercury intake is 3.501. Many times, as is true with this example, the interpretation of the intercept will be nonsensical. This is because $x=0$ will likely be outside the range of the data collected and, perhaps, outside the range of possible data that could be collected.
@@ -70,20 +73,30 @@ Similarly, the predicted average level of mercury in the blood for an individual
   \[ blood = 3.501 + 0.579*575 = 336.426 \]
 A prediction may be visualized by finding the value of the explanatory variable on the x-axis, drawing a vertical line until the best-fit line is reached, and then drawing a horizontal line over to the y-axis where the value of the response variable is read \figrefp{fig:HGpredict}.
 
-<<HGpredict, echo=FALSE, fig.cap="Scatterplot between the intake of mercury in fish and the mercury in the blood stream of individuals with superimposed best-fit regression line illustrating predictions for two values of mercury intake.">>=
-par(mar=c(4,4,0.5,0.5),mgp=c(2.5,0.75,0))
-plot(blood~intake,data=merc,pch=21,bg="gray70",
-     xlab="Intake (ug Hg/day)",ylab="Blood (ng/g)")
-abline(a=-3.501,b=0.579,col="red",lwd=2)
+<<HGpredict, echo=FALSE, message=FALSE, fig.cap="Scatterplot between the intake of mercury in fish and the mercury in the blood stream of individuals with superimposed best-fit regression line illustrating predictions for two values of mercury intake.">>=
+merc <- data.frame(intake=c(180,200,230,410,600,550,275,580,580,105,250,60,650),
+                   blood=c(90,120,125,290,310,290,170,275,350,70,105,75,480))
+lm1 <- lm(blood~intake,data=merc)
 df1 <- c(240,575)
-p1 <- 3.501+0.579*df1
-text(df1[1],30,df1[1],xpd=TRUE,col="red")
-text(df1[2],30,df1[2],xpd=TRUE,col="red")
-lines(c(df1[1],df1[1],0),c(0,p1[1],p1[1]),col="red",lwd=2,lty=3)
-lines(c(df1[2],df1[2],0),c(0,p1[2],p1[2]),col="red",lwd=2,lty=3)
-text(-20,p1,formatC(p1,format="f",digits=1),col="red",xpd=TRUE)
+p1 <- predict(lm1,data.frame(intake=df1))
+p1l <- formatC(p1,format="f",digits=1)
+tmp <- data.frame(x=rep(df1,each=2),xend=c(rbind(df1,c(-Inf,-Inf))),
+                  y=c(rbind(c(-Inf,-Inf),p1)),yend=rep(p1,each=2))
+
+ggplot(data=merc,mapping=aes(x=intake,y=blood)) +
+  geom_point(pch=21,color="black",fill="darkgray",size=2) +
+  geom_smooth(method="lm",se=FALSE,color="red",size=1) +
+  labs(x="Intake (ug Hg/day)",y="Blood (ng/g)") +
+  scale_x_continuous(breaks=c(100,200,df1[1],300,400,500,df1[2],600),
+                     labels=c(100,"",df1[1],"",400,500,df1[2],"")) +
+  scale_y_continuous(breaks=c(100,p1[1],200,300,p1[2],400,500),
+                     labels=c(100,p1l[1],200,300,p1l[2],400,500)) +
+  geom_segment(data=tmp,mapping=aes(x=x,xend=xend,y=y,yend=yend),
+               color="red",linetype="dashed") +
+  theme_NCStats()
 @
 
+\vspace{12pt} %because it was gobbled up
 When predicting values of the response variable, it is important to not extrapolate beyond the range of the data. In other words, predictions with values outside the range of observed values of the explanatory variable should be made cautiously (if at all). An excellent example would be to consider height ``data'' collected during the early parts of a human's life (say the first ten years). During these early years there is likely a good fit between height (the response variable) and age. However, using this relationship to predict an individual's height at age 40 would likely result in a ridiculous answer (e.g., over ten feet). The problem here is that the linear relationship only holds for the observed data (i.e., the first ten years of life); it is not known if the same linear relationship exists outside that range of years. In fact, with human heights, it is generally known that growth first slows, eventually quits, and may, at very old ages, actually decline. Thus, the linear relationship found early in life does not hold for later years. Critical mistakes can be made when using a linear relationship to extrapolate outside the range of the data.
 
 \section{Residuals}
@@ -93,22 +106,29 @@ The predicted value is a ``best-guess'' for an individual based on the best-fit 
 For example, consider an individual that has an observed intake of 650 and an observed level of mercury in the blood of 480. As shown in the previous section, the predicted level of mercury in the blood for this individual is
   \[ blood = 3.501 + 0.579*650 = 379.851 \]
 
-The residual for this individual is then $480-379.851$ = $100.149$. This positive residual indicates that the observed value is approximately 100 units greater than the average for individuals with an intake of 650.\footnote{In other words, the observed value is ``above'' the line.}  As a second example, consider an individual with an observed intake of 250 and an observed level of mercury in the blood of 105. The predicted value for this individual is
+The residual for this individual is then $480-379.851$ = $100.149$. This positive residual indicates that the observed value is approximately 100 units GREATER than the average for individuals with an intake of 650.\footnote{In other words, the observed value is ``above'' the line.}  As a second example, consider an individual with an observed intake of 250 and an observed level of mercury in the blood of 105. The predicted value for this individual is
   \[ blood = 3.501 + 0.579*250 = 148.251 \]
 
-and the residual is $105-148.251$ = $-43.251$. This negative residual indicates that the observed value is approximately 43 units less than the average for individuals with an intake of 250.
+and the residual is $105-148.251$ = $-43.251$. This negative residual indicates that the observed value is approximately 43 units LESS than the average for individuals with an intake of 250.
 
 Visually, a residual is the vertical distance between an individual's point and the best-fit line \figrefp{fig:HGresidual}.
 
-<<HGresidual, echo=FALSE, fig.cap="Scatterplot between the intake of mercury in fish and the mercury in the blood stream of individuals with superimposed best-fit regression line illustrating the residuals for the two individuals discussed in the main text.">>=
-plot(blood~intake,data=merc,pch=21,bg="gray70",
-     xlab="Intake (ug Hg/day)",ylab="Blood (ng/g)")
-lm1 <- lm(blood~intake,data=merc)
-abline(lm1,col="red",lwd=2)
-df2 <- data.frame(intake=c(250,650))
-p2 <- predict(lm1,df2)
-lines(c(df2[1,1],df2[1,1]),c(105,p2[1]),lwd=2,lty=2,col="blue")
-lines(c(df2[2,1],df2[2,1]),c(480,p2[2]),lwd=2,lty=2,col="red")
+<<HGresidual, echo=FALSE, message=FALSE, fig.cap="Scatterplot between the intake of mercury in fish and the mercury in the blood stream of individuals with superimposed best-fit regression line illustrating the residuals for the two individuals discussed in the main text.">>=
+tmp <- merc[c(11,13),] %>%
+  mutate(xend=intake,yend=predict(lm1,data.frame(intake=intake)),
+         resid=c("Neg","Pos"))
+
+ggplot(data=merc,mapping=aes(x=intake,y=blood)) +
+  geom_point(pch=21,color="black",fill="darkgray",size=2) +
+  geom_smooth(method="lm",se=FALSE,color="red",size=1) +
+  labs(x="Intake (ug Hg/day)",y="Blood (ng/g)") +
+  scale_x_continuous(breaks=seq(100,600,100)) +
+  scale_y_continuous(breaks=seq(100,500,100)) +
+  geom_segment(data=tmp,mapping=aes(x=intake,xend=xend,y=blood,yend=yend,color=resid),
+               linetype="dotted",size=1) +
+  scale_color_manual(values=c("blue","red")) +
+  theme_NCStats() +
+  theme(legend.position="none")
 @
 
 \section{Best-fit Criteria}\label{sect:BestFitLine}
@@ -197,6 +217,8 @@ for(i in 1:nrow(params)) {
 }
 @
 
+\vspace{12pt} %because it got gobbled up
+
 The discussion thusfar implies that all possible lines must be ``fit'' to the data and the one with the minimum RSS is chosen as the ``best-fit'' line. As there are an infinite number of possible lines, this would be impossible to do. Theoretical statisticians have shown that the application of the least-squares criterion always produces a best-fit line with a slope given by
   \[ slope = r\frac{s_{y}}{s_{x}}  \]
 
@@ -225,7 +247,7 @@ The homoscedasticity assumption states that the variability about the line is th
 
 Violations of these assumptions are often evident on a ``fitted-line plot'', which is a scatterplot with the best-fit line superimposed \figrefp{fig:ResidPlotEx}.\footnote{Residual plots, not discussed in this text, are another plot that often times is used to better assess assumption violations.} If the points look more-or-less like random scatter around the best-fit line, then neither the linearity nor the homoscedasticity assumption has been violated. A violation of one of these assumptions should be obvious on the scatterplot. In other words, there should be a clear curvature or funneling on the plot.
 
-<<ResidPlotEx, echo=FALSE, fig.width=6, fig.height=6, out.width='.8\\linewidth', fig.cap="Fitted-line plots illustrating when the regression assumptions are met (upper-left) and three common assumption violations.">>=
+<<ResidPlotEx, echo=FALSE, fig.width=6, fig.height=6, out.width='.75\\linewidth', fig.cap="Fitted-line plots illustrating when the regression assumptions are met (upper-left) and three common assumption violations.">>=
 par(mar=c(2,3,3,2),mgp=c(0.5,0,0),mfrow=c(2,2),xaxt="n",yaxt="n")
 set.seed(101)
 n <- 100
@@ -260,14 +282,12 @@ lm4 <- lm(y4~x1)
 fitPlot(lm4,xlab="Explanatory",ylab="Response",pch=21,bg="gray70")
 mtext("Non-linear & Heteroscedastic",line=0.25,col="red")
 @
-\vspace{12pt}  %fixes spaces gobbled up by R code
 
-In this text, if an assumption has been violated, then one should not continue to interpret the linear regression. However, in many instances, an assumption violation can be ``corrected'' by transforming one or both variables to a different scale. Transformations are not discussed in this book.
+In this course, if an assumption has been violated, then one should not continue to interpret the linear regression. However, in many instances, an assumption violation can be ``corrected'' by transforming one or both variables to a different scale. Transformations are not discussed in this course.
 
 \warn{If the regression assumptions are not met, then the regression results should not be interpreted.}
 
 
-\newpage
 \section{Coefficient of Determination}
 The coefficient of determination ($r^{2}$) is the proportion of the total variability in the response variable that is explained away by knowing the value of the explanatory variable and the best-fit model. In simple linear regression, $r^{2}$ is literally the square of $r$, the correlation coefficient.\footnote{Simple linear regression is the fitting of a model with a single explanatory variable and is the only model considered in this module and this course. See \sectref{sect:corr} for a review of the correlation coefficient.} Values of $r^{2}$ are between 0 and 1.\footnote{It is common for $r^{2}$ to be presented as a percentage.}
 
@@ -336,7 +356,7 @@ If the variability explained away (green box) approaches the total variability i
 \warn{A value of $r^{2}$ near 1 represents a strong relationship between the response and explanatory variables that will lead to accurate predictions.}
 
 
-\section{Examples I}
+\section{Examples}
 There are twelve questions that are commonly asked about linear regression results. These twelve questions are listed below with some hints about things to remember when answering some of the questions. An example of these questions in context is then provided.
 
 \begin{enumerate}
@@ -356,19 +376,28 @@ There are twelve questions that are commonly asked about linear regression resul
 
 All answers should refer to the variables of the problem -- thus, ``y'', ``x'', ``response'', or ``explanatory'' should not be in any part of any answer. The questions about the slope, intercept, and predictions need to explicitly identify that the answer is an ``average'' or ``on average.''
 
-\newpage
+\warn{All interpretations should be ``in terms of the variables of the problem'' rather than the generic terms of x, y, response variable, and explanatory variable.}
+
+
+\vspace{24pt}
 \subsection*{Chimp Hunting Parties}
 \begin{quote}
-\textit{Stanford (1996) gathered data to determine if the size of the hunting party (number of individuals hunting together) affected the hunting success of the party (number of hunts that resulted in a kill) for wild chimpanzees (Pan troglodytes) at Gombe. The results of their analysis for 17 hunting parties is shown in the figure below.\footnote{These data are in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Chimp.csv}{Chimp.csv}.}  Use these results to answer the questions below.}
+\textit{Stanford (1996) gathered data to determine if the size of the hunting party (number of individuals hunting together) affected the hunting success of the party (percent of hunts that resulted in a kill) for wild chimpanzees (Pan troglodytes) at Gombe. The results of their analysis for 17 hunting parties is shown in the figure below.\footnote{These data are in \href{https://raw.githubusercontent.com/droglenc/NCData/master/Chimp.csv}{Chimp.csv}.}  Use these results to answer the questions below.}
 \end{quote}
 
-<<ChimpFLP, echo=FALSE>>=
+<<ChimpFLP, echo=FALSE, message=FALSE>>=
 chimp <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Chimp.csv")
 lm.chimp <- lm(percsucc~huntparty,data=chimp)
-fitPlot(lm.chimp,pch=21,bg="gray70",
-        xlab="Number of Hunting Party Members",ylab="% Successful Hunts")
-r2 <- formatC(rSquared(lm.chimp),format="f",digits=3)
-mtext(bquote(paste(Y==.(formatC(coef(lm.chimp)[1],format="f",digits=3))+.(formatC(coef(lm.chimp)[2],format="f",digits=3))*X,"    ",r^2==.(r2))),line=0,cex=0.8)
+slp <- formatC(coef(lm.chimp)[2],format="f",digits=2)
+int <- formatC(coef(lm.chimp)[1],format="f",digits=1)
+r2 <- formatC(rSquared(lm.chimp),format="f",digits=2)
+ttl <- bquote(paste(Y==.(slp)*X+.(int),"    ",r^2==.(r2)))
+ggplot(data=chimp,mapping=aes(x=huntparty,y=percsucc)) +
+  geom_point(pch=21,color="black",fill="darkgray",size=2) +
+  geom_smooth(method="lm",se=FALSE,color="red",size=1) +
+  labs(x="Number of Hunting Party Members",y="% Successful Hunts",title=ttl) +
+  theme_NCStats() +
+  theme(aspect.ratio=1,plot.title=element_text(size=12))
 @
 
 \begin{QAlist}
@@ -380,17 +409,21 @@ mtext(bquote(paste(Y==.(formatC(coef(lm.chimp)[1],format="f",digits=3))+.(format
   \begin{QAlist}
     \item The explanatory variable is the size of the hunting party.
   \end{QAlist}
+  \item Does any aspect of this regression concern you (i.e., consider the regression assumptions)?
+  \begin{QAlist}
+    \item The data appear to be very slightly curved but there is no evidence of a funnel-shape. Thus, the data may be slightly non-linear but they appear homoscedastic.
+  \end{QAlist}
   \item In terms of the variables of the problem, what is the equation of the best-fit line?
   \begin{QAlist}
-    \item The equation of the best-fit line is \% Success of Hunt = \Sexpr{formatC(coef(lm.chimp)[1],format="f",digits=3)} + \Sexpr{formatC(coef(lm.chimp)[2],format="f",digits=3)}*Number of Hunting Party Members.
+    \item The equation of the best-fit line is \% Success of Hunt = \Sexpr{int} + \Sexpr{slp}*Number of Hunting Party Members.
   \end{QAlist}
   \item Interpret the value of the slope in terms of the variables of the problem.
   \begin{QAlist}
-    \item The slope indicates that the percent of successful hunts increases by \Sexpr{formatC(coef(lm.chimp)[2],format="f",digits=3)}, on average, for every increase of one member to the hunting party.
+    \item The slope indicates that the percent of successful hunts increases by \Sexpr{slp}, on average, for every increase of one member to the hunting party.
   \end{QAlist}
   \item Interpret the value of the intercept in terms of the variables of the problem.
   \begin{QAlist}
-    \item The intercept indicates that the percent of successful hunts is \Sexpr{formatC(coef(lm.chimp)[1],format="f",digits=3)}, on average, for hunting parties with no members.
+    \item The intercept indicates that the percent of successful hunts is \Sexpr{int}, on average, for hunting parties with no members. This is nonsensical because 0 hunting members is an extrapolation.
   \end{QAlist}
   \item What is the predicted hunt success if the hunting party consists of 20 chimpanzees?
   \begin{QAlist}
@@ -398,89 +431,44 @@ mtext(bquote(paste(Y==.(formatC(coef(lm.chimp)[1],format="f",digits=3))+.(format
   \end{QAlist}
   \item What is the predicted hunt success if the hunting party consists of 12 chimpanzees?
   \begin{QAlist}
-    \item The predicted hunt success for parties with 12 individuals is \Sexpr{formatC(coef(lm.chimp)[1],format="f",digits=3)} + \Sexpr{formatC(coef(lm.chimp)[2],format="f",digits=3)}*12 = \Sexpr{formatC(coef(lm.chimp)[1]+coef(lm.chimp)[2]*12,format="f",digits=1)}\%.
+    \item The predicted hunt success for parties with 12 individuals is \Sexpr{int} + \Sexpr{slp}*12 = \Sexpr{formatC(coef(lm.chimp)[1]+coef(lm.chimp)[2]*12,format="f",digits=1)}\%.
   \end{QAlist}
   \item What is the residual if the hunt success for 10 individuals is 50\%?
   \begin{QAlist}
-    \item The residual in this case is $50$-(\Sexpr{formatC(coef(lm.chimp)[1],format="f",digits=3)} + \Sexpr{formatC(coef(lm.chimp)[2],format="f",digits=3)}*10) = $50$-\Sexpr{formatC(coef(lm.chimp)[1]+coef(lm.chimp)[2]*10,format="f",digits=1)} = \Sexpr{formatC(50-(coef(lm.chimp)[1]+coef(lm.chimp)[2]*10),format="f",digits=1)}. Therefore, it appears that the success of this hunting party is \Sexpr{formatC(-1*(50-(coef(lm.chimp)[1]+coef(lm.chimp)[2]*10)),format="f",digits=1)}\% lower than average for this size of hunting party.
+    \item The residual in this case is $50$-(\Sexpr{int} + \Sexpr{slp}*10) = $50$-\Sexpr{formatC(coef(lm.chimp)[1]+coef(lm.chimp)[2]*10,format="f",digits=1)} = \Sexpr{formatC(50-(coef(lm.chimp)[1]+coef(lm.chimp)[2]*10),format="f",digits=1)}. Therefore, it appears that the success of this hunting party is \Sexpr{formatC(-1*(50-(coef(lm.chimp)[1]+coef(lm.chimp)[2]*10)),format="f",digits=1)}\% lower than average for this size of hunting party.
   \end{QAlist}
   \item What proportion of the variability in hunting success is explained by knowing the size of the hunting party?
   \begin{QAlist}
-    \item The proportion of the variability in hunting success that is explained by knowing the size of the hunting party is $r^{2}$=\Sexpr{formatC(rSquared(lm.chimp),format="f",digits=2)}.
+    \item The proportion of the variability in hunting success that is explained by knowing the size of the hunting party is $r^{2}$=\Sexpr{r2}.
   \end{QAlist}
   \item What is the correlation between hunting success and size of hunting party?
   \begin{QAlist}
-    \item The correlation between hunting success and size of hunting party is $r=$\Sexpr{formatC(sqrt(rSquared(lm.chimp)),format="f",digits=2)}.
+    \item The correlation between hunting success and size of hunting party is $r=$\Sexpr{formatC(sqrt(rSquared(lm.chimp)),format="f",digits=2)}. [\emph{Note that this is the square root of $r^{2}$.}]
   \end{QAlist}
   \item How much does hunt success decrease, on average, if there are two fewer individuals in the party?
   \begin{QAlist}
-    \item If the hunting party has two fewer members, then the hunting success would decrease by \Sexpr{formatC(2*coef(lm.chimp)[2],format="f",digits=1)}\% (i.e., $-2$*\Sexpr{formatC(coef(lm.chimp)[2],format="f",digits=3)}), on average.
-  \end{QAlist}
-  \item Does any aspect of this regression concern you (i.e., consider the regression assumptions)?
-  \begin{QAlist}
-    \item The data appear to be very slightly curved but there is no evidence of a funnel-shape. Thus, the data may be slightly non-linear but they appear homoscedastic.
+    \item If the hunting party has two fewer members, then the hunting success would decrease by \Sexpr{formatC(2*coef(lm.chimp)[2],format="f",digits=1)}\% (i.e., $-2$*\Sexpr{slp}), on average. [\emph{Note that this is two times the slope, with a negative as it asks about ``fewer'' members.}]
   \end{QAlist}
 \end{QAlist}
 
-\warn{All interpretations should be ``in terms of the variables of the problem'' rather than the generic terms of x, y, response variable, and explanatory variable.}
 
-
-\section{Regression in R}
-The mercury intake and amount in the blood data is loaded below to be used as an example for finding a regression line with R.
-<<eval=FALSE>>=
-setwd('c:/data/')
-merc <- read.csv("Mercury.csv")
-@
-\vspace{-14pt}
-<<>>=
-str(merc)
-@
-
-The linear regression model is fit to two quantitative variables with \R{lm()}. The first argument is a formula of the form \R{response\TILDE explanatory}, where \R{response} contains the response variable and \R{explanatory} contains the explanatory variable, and the corresponding data.frame is in \R{data=}. The results of \R{lm()} should be assigned to an object so that specific results can be extracted.
-
-\warn{The same formula used to make a scatterplot with \R{plot()} is used in \R{lm()} to find the best-fit line.}
-<<echo=FALSE>>=
-lm1 <- lm(blood~intake,data=merc)
-@
-
-The regression was fit to the mercury data below. From this it is seen that the intercept is \Sexpr{formatC(coef(lm1)[1],format="f",digits=3)} and the slope is \Sexpr{formatC(coef(lm1)[2],format="f",digits=3)}.
-<<>>=
-( lm1 <- lm(blood~intake,data=merc) )
-@
-
-A fitted-line plot \figrefp{fig:HGFLP} is constructed by submitting the \R{lm()} object to \R{fitPlot()}. Aspects of this plot can be adjusted using the same arguments as described for \R{plot()} in \sectref{sect:ScatterplotsR}.
-<<HGFLP, fig.cap="Fitted-line plots for the regression of mercury in the blood on mercury intake.">>=
-fitPlot(lm1,pch=21,bg="gray70",xlab="Mercury Intake",ylab="Mercury in the Blood")
-@
-
-Predicted values from the linear regression are obtained with \R{predict()}. The \R{predict()} function requires the saved \R{lm()} object as its first argument. The second argument is a data.frame constructed with \R{data.frame()} that contains the \textbf{EXACT} name of the explanatory variable as it appeared in \R{lm()} set equal to the value of the explanatory at which the prediction should be made. For example, the predicted amount of mercury in the blood for an intake of 240 $\mu$g per day is \Sexpr{formatC(predict(lm1,data.frame(intake=240)),format="f",digits=1)}, as obtained below.
-<<>>=
-predict(lm1,data.frame(intake=240))
-@
-
-The coefficient of determination is computed by submitting the saved \R{lm()} object to \R{rSquared()}. For example, \Sexpr{formatC(rSquared(lm1,percent=TRUE),format="f",digits=1)}\% of the variability in mercury in the blood is explained by knowing the amount of mercury at intake. [Note the use of \R{digits=} to control the number of decimals.]
-<<>>=
-rSquared(lm1,digits=3)
-@
-
-
-\section{Examples II}
 \subsection*{Car Weight and MPG}
-In \modref{chap:BivEDAQuant}, an EDA for the relationship between \var{HMPG} (the highway miles per gallon) and \var{Weight} (lbs) of 93 cars from the 1993 model year was performed. This relationship will be explored further here as an example of a complete regression analysis. In this analysis, the regression output will be examined within the context of answering the twelve typical questions. These data are read into R below and the linear regression model is fit, coefficients extracted, fitted-line plot constructed, and coefficient of determination extracted.
-<<echo=FALSE>>=
-cars93 <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv")
-@
-<<eval=FALSE>>=
-cars93 <- read.csv("data/93cars.csv")
-@
-\vspace{-12pt}
-<<CarFit, fig.cap="Fitted line plot of the regression of highway MPG on weight of 93 cars from 1993.">>=
-( lm2 <- lm(HMPG~Weight,data=cars93) )
-fitPlot(lm2,ylab="Highway MPG")
-rSquared(lm2,digits=3)
-@
+In \modref{chap:BivEDAQuant}, an EDA for the relationship between \var{HMPG} (the highway miles per gallon) and \var{Weight} (lbs) of 93 cars from the 1993 model year was performed. This relationship will be explored further here as an example of a complete regression analysis. In this analysis, the regression output will be examined within the context of answering the twelve typical questions. The results are shown in \figref{fig:CarFit}.
 
-The simple linear regression model appears to fit the data moderately well as the fitted-line plot \figrefp{fig:CarFit} shows only a very slight curvature and only very slight heteroscedasticity.\footnote{In advanced statistics books, objective measures for determining whether there is significant curvature or heteroscedasticity in the data are used. In this book, we will only be concerned with whether there is strong evidence of curvature or heteroscedasticity. There does not seem to be either here.}  The sample slope is \Sexpr{formatC(coef(lm2)[2],format="f",digits=4)}, the sample intercept is \Sexpr{formatC(coef(lm2)[1],format="f",digits=1)}, and the coefficient of determination is \Sexpr{formatC(rSquared(lm2),format="f",digits=3)}.
+<<CarFit, echo=FALSE, message=FALSE, fig.cap="Fitted line plot of the regression of highway MPG on weight of 93 cars from 1993.", fig.pos="h">>=
+cars93 <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv")
+lm2 <- lm(HMPG~Weight,data=cars93)
+slp <- formatC(-1*coef(lm2)[2],format="f",digits=4)
+int <- formatC(coef(lm2)[1],format="f",digits=1)
+r2 <- formatC(rSquared(lm2),format="f",digits=2)
+ttl <- bquote(paste(Y==.(int)-.(slp)*X,"    ",r^2==.(r2)))
+ggplot(data=cars93,mapping=aes(x=Weight,y=HMPG)) +
+  geom_point(pch=21,color="black",fill="darkgray",size=2) +
+  geom_smooth(method="lm",se=FALSE,color="red",size=1) +
+  labs(x="Weight (lbs)",y="Highway MPG",title=ttl) +
+  theme_NCStats() +
+  theme(aspect.ratio=1,plot.title=element_text(size=12))
+@
 
 \begin{QAlist}
   \item What is the response variable?
@@ -491,24 +479,25 @@ The simple linear regression model appears to fit the data moderately well as th
   \begin{QAlist}
     \item The explanatory variable in this analysis is the weight of the car (by process of elimination).
   \end{QAlist}
+  \item Do any aspects of this regression fit concern you?
+  \begin{QAlist}
+    \item The simple linear regression model appears to fit the data moderately well as the fitted-line plot \figrefp{fig:CarFit} shows only a very slight curvature and only very slight heteroscedasticity.\footnote{In advanced statistics books, objective measures for determining whether there is significant curvature or heteroscedasticity in the data are used. In this book, we will only be concerned with whether there is strong evidence of curvature or heteroscedasticity. There does not seem to be either here.}.
+  \end{QAlist}
   \item In terms of the variables of the problem, what is the equation of the best-fit line?
   \begin{QAlist}
-    \item The equation of the best-fit line for this problem is HMPG = \Sexpr{formatC(coef(lm2)[1],format="f",digits=1)} - \Sexpr{formatC(-1*coef(lm2)[2],format="f",digits=4)}Weight.
+    \item The equation of the best-fit line for this problem is HMPG = \Sexpr{int} - \Sexpr{slp}Weight.
   \end{QAlist}
   \item Interpret the value of the slope in terms of the variables of the problem.
   \begin{QAlist}
-    \item The slope indicates that for every increase of one pound of car weight the highway MPG decreases by \Sexpr{formatC(coef(lm2)[2],format="f",digits=4)}, on average.
+    \item The slope indicates that for every increase of one pound of car weight the highway MPG decreases by \Sexpr{slp}, on average.
   \end{QAlist}
   \item Interpret the value of the intercept in terms of the variables of the problem.
   \begin{QAlist}
-    \item The intercept indicates that a car with 0 weight will have a highway MPG value of \Sexpr{formatC(coef(lm2)[1],format="f",digits=1)}, on average.\footnote{This is the correct interpretation of the intercept. However, it is nonsensical because it is an extrapolation; i.e., no car will weigh 0 pounds.}
+    \item The intercept indicates that a car with 0 weight will have a highway MPG value of \Sexpr{int}, on average. [\emph{Note that this is the correct interpretation of the intercept. However, it is nonsensical because it is an extrapolation; i.e., no car will weigh 0 pounds.}]
   \end{QAlist}
   \item What is the predicted highway MPG for a car that weighs 3100 lbs?
   \begin{QAlist}
-    \item The predicted highway MPG for a car that weighs 3100 lbs is \Sexpr{formatC(coef(lm2)[1],format="f",digits=5)} - \Sexpr{formatC(-1*coef(lm2)[2],format="f",digits=5)}(3100) = \Sexpr{formatC(predict(lm2,data.frame(Weight=3100)),format="f",digits=1)} MPG. Alternatively, this value is computed with
-<<>>=
-predict(lm2,data.frame(Weight=3100))
-@
+    \item The predicted highway MPG for a car that weighs 3100 lbs is \Sexpr{int} - \Sexpr{slp}(3100) = \Sexpr{formatC(predict(lm2,data.frame(Weight=3100)),format="f",digits=1)} MPG.
   \end{QAlist}
   \item What is the predicted highway MPG for a car that weighs 5100 lbs?
   \begin{QAlist}
@@ -516,22 +505,18 @@ predict(lm2,data.frame(Weight=3100))
   \end{QAlist}
   \item What is the residual for a car that weights 3500 lbs and has a highway MPG of 24?
   \begin{QAlist}
-    \item The predicted highway MPG for a car that weighs 3500 lbs is \Sexpr{formatC(coef(lm2)[1],format="f",digits=5)} - \Sexpr{formatC(-1*coef(lm2)[2],format="f",digits=5)}(3500) = \Sexpr{formatC(predict(lm2,data.frame(Weight=3500)),format="f",digits=1)}. Thus, the residual for this car is 24 - \Sexpr{formatC(predict(lm2,data.frame(Weight=3500)),format="f",digits=1)} = \Sexpr{formatC(24-predict(lm2,data.frame(Weight=3500)),format="f",digits=1)}. Alternatively, this is computed in R with
-<<>>=
-24-predict(lm2,data.frame(Weight=3500))
-@
-Therefore, it appears that this car gets \Sexpr{formatC(-1*(24-predict(lm2,data.frame(Weight=3500))),format="f",digits=1)} MPG less than an average car with the same weight.
+    \item The predicted highway MPG for a car that weighs 3500 lbs is \Sexpr{int} - \Sexpr{slp}(3500) = \Sexpr{formatC(predict(lm2,data.frame(Weight=3500)),format="f",digits=1)}. Thus, the residual for this car is 24 - \Sexpr{formatC(predict(lm2,data.frame(Weight=3500)),format="f",digits=1)} = \Sexpr{formatC(24-predict(lm2,data.frame(Weight=3500)),format="f",digits=1)}. Therefore, it appears that this car gets \Sexpr{formatC(-1*(24-predict(lm2,data.frame(Weight=3500))),format="f",digits=1)} MPG less than an average car with the same weight.
   \end{QAlist}
   \item What proportion of the variability in highway MPG is explained by knowing the weight of the car?
   \begin{QAlist}
-    \item The proportion of the variability in highway MPG that is explained by knowing the weight of the car is $r^{2}$=\Sexpr{formatC(rSquared(lm2),format="f",digits=2)}.
+    \item The proportion of the variability in highway MPG that is explained by knowing the weight of the car is $r^{2}$=\Sexpr{r2}.
   \end{QAlist}
   \item What is the correlation between highway MPG and car weight?
   \begin{QAlist}
-    \item The correlation between highway MPG and car weight is $r=$\Sexpr{formatC(-1*sqrt(rSquared(lm2)),format="f",digits=2)}.\footnote{Put a negative sign in front of your result from taking the square root of $r^2$, because the relationship between highway MPG and weight is negative.}
+    \item The correlation between highway MPG and car weight is $r=$\Sexpr{formatC(-1*sqrt(rSquared(lm2)),format="f",digits=2)}. [\emph{Not that this is the square root of $r^{2}$, but as a negative because form of the relationship between highway MPG and weight is negative.}
   \end{QAlist}
   \item How much is the highway MPG expected to change if a car is 1000 lbs heavier?
   \begin{QAlist}
-    \item If the car was 1000 lbs heavier, you would expect the car's highway MPG to decrease by \Sexpr{formatC(-1000*coef(lm2)[2],format="f",digits=2)} (i.e., 1000 slopes).
+    \item If the car was 1000 lbs heavier, you would expect the car's highway MPG to decrease by \Sexpr{formatC(-1000*coef(lm2)[2],format="f",digits=2)}. [\emph{Note that this is 1000 slopes.}]
   \end{QAlist}
 \end{QAlist}
