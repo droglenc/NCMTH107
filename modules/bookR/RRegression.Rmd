@@ -25,50 +25,60 @@ library(ggplot2)
 &nbsp;
 
 # Data Sets
+The descriptions below will use the same `weight` (lbs) and highway miles per gallon (`HMPG`) data for 93 cars from the 1993 model year that were used in the second example in the [Linear Regression module](../LinearRegression.html). These data are in [93cars.csv](https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv) and are loaded into R below with the methods described in the [Getting Data into R module](RData.html#alternative-forms-of-getting-data).^[The `which=` argument in `headtail()` is used to show only a few variables of `cars93`, just to save space.]
 
+```{r eval=FALSE}
+setwd("c:/data")
+cars93 <- read.csv("93cars.csv")
+headtail(cars93,which=c("MFG","Model","Type","Weight","HMPG"))
+```
+```{r echo=FALSE}
+cars93 <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv")
+headtail(cars93,which=c("MFG","Model","Type","Weight","HMPG"))
+```
 
-\section{Regression in R}
-The mercury intake and amount in the blood data is loaded below to be used as an example for finding a regression line with R.
-<<eval=FALSE>>=
-setwd('c:/data/')
-merc <- read.csv("Mercury.csv")
-@
-\vspace{-14pt}
-<<>>=
-str(merc)
-@
+&nbsp;
 
-The linear regression model is fit to two quantitative variables with \R{lm()}. The first argument is a formula of the form \R{response\TILDE explanatory}, where \R{response} contains the response variable and \R{explanatory} contains the explanatory variable, and the corresponding data.frame is in \R{data=}. The results of \R{lm()} should be assigned to an object so that specific results can be extracted.
+# Fitted Line Plot
+The linear fitted line can be added to a scatterplot (see the [Bivariate EDA in R module](../RBivEDA.html#scatterplots)) with `geom_smooth()`. The `geom_smooth()` function requires `method="lm"` to show the linear regression line and `se=FALSE` to remove the underlying confidence band.^[This is an advanced topic for a future course.]
 
-\warn{The same formula used to make a scatterplot with \R{plot()} is used in \R{lm()} to find the best-fit line.}
-<<echo=FALSE>>=
-lm1 <- lm(blood~intake,data=merc)
-@
+```{r}
+ggplot(data=cars93,mapping=aes(x=Weight,y=HMPG)) +
+  geom_point(pch=21,color="black",fill="darkgray",size=2) +
+  labs(x="Weight (lbs)",y="Highway MPG") +
+  theme_NCStats() +
+  geom_smooth(method="lm",se=FALSE)
+```
 
-The regression was fit to the mercury data below. From this it is seen that the intercept is \Sexpr{formatC(coef(lm1)[1],format="f",digits=3)} and the slope is \Sexpr{formatC(coef(lm1)[2],format="f",digits=3)}.
-<<>>=
-( lm1 <- lm(blood~intake,data=merc) )
-@
+&nbsp;
 
-A fitted-line plot \figrefp{fig:HGFLP} is constructed by submitting the \R{lm()} object to \R{fitPlot()}. Aspects of this plot can be adjusted using the same arguments as described for \R{plot()} in \sectref{sect:ScatterplotsR}.
-<<HGFLP, fig.cap="Fitted-line plots for the regression of mercury in the blood on mercury intake.">>=
-fitPlot(lm1,pch=21,bg="gray70",xlab="Mercury Intake",ylab="Mercury in the Blood")
-@
+# Fitting the Regression Model in R
+The linear regression model is fit to two quantitative variables with `lm()`. The first argument is a formula of the form `response~explanatory`, where `response` contains the response variable and `explanatory` contains the explanatory variable. The corresponding data frame is given in `data=`. The results of `lm()` may be assigned to an object so that specific results can be extracted.
 
-Predicted values from the linear regression are obtained with \R{predict()}. The \R{predict()} function requires the saved \R{lm()} object as its first argument. The second argument is a data.frame constructed with \R{data.frame()} that contains the \textbf{EXACT} name of the explanatory variable as it appeared in \R{lm()} set equal to the value of the explanatory at which the prediction should be made. For example, the predicted amount of mercury in the blood for an intake of 240 $\mu$g per day is \Sexpr{formatC(predict(lm1,data.frame(intake=240)),format="f",digits=1)}, as obtained below.
-<<>>=
-predict(lm1,data.frame(intake=240))
-@
+```{r}
+( lm1 <- lm(HMPG~Weight,data=cars93) )
+```
 
-The coefficient of determination is computed by submitting the saved \R{lm()} object to \R{rSquared()}. For example, \Sexpr{formatC(rSquared(lm1,percent=TRUE),format="f",digits=1)}\% of the variability in mercury in the blood is explained by knowing the amount of mercury at intake. [Note the use of \R{digits=} to control the number of decimals.]
-<<>>=
+The regression results above show that the intercept is `r formatC(coef(lm1)[1],format="f",digits=1)` and the slope is `r formatC(coef(lm1)[2],format="f",digits=4)`.
+
+&nbsp;
+
+# Coefficient of Determination
+The coefficient of determination is computed by submitting the saved `lm()` object to `rSquared()`. For example, `r formatC(rSquared(lm1,percent=TRUE),format="f",digits=1)`\% of the variability in highway MPG for a car is explained by knowing its weight. [*Note the use of `digits=` to control the number of decimals.*]
+
+```{r}
 rSquared(lm1,digits=3)
-@
+```
 
 
+&nbsp;
 
+# Predicted Values
+Predicted values from the linear regression are obtained with `predict()`, which requires the saved `lm()` object as its first argument. The second argument is a data frame constructed with `data.frame()` that contains the **EXACT** name of the explanatory variable as it appeared in `lm()` set equal to the value of the explanatory at which the prediction should be made. For example, the predicted highway MPG for a car that weights 2500 lbs is `r formatC(predict(lm1,data.frame(Weight=2500)),format="f",digits=1)`, as obtained below.
 
-
+```{r}
+predict(lm1,data.frame(Weight=2500))
+```
 
 
 # Corrections {.appendix}
