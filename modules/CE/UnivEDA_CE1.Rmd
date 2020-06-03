@@ -111,7 +111,7 @@ Summarize(~postsz,data=df,digits=1)
 
 ## Forest Fires
 <img src="zimgs/wildfire.jpg" alt="Wildfire" class="img-right">
-[Cortex and Morais (2007)](http://www3.dsi.uminho.pt/pcortez/fires.pdf) describe attributes of forest fires in Montesinho Natural Park in Portugal. The number of forest fires by month from 2000-2003 are displayed in `r figs("fires",display="cite")`
+[Cortex and Morais (2007)](http://www3.dsi.uminho.pt/pcortez/fires.pdf) describe attributes of forest fires in Montesinho Natural Park in Portugal. The number of forest fires by month from 2000-2003 are displayed in `r figs("fires",display="cite")`. Perform a thorough EDA with these results.
 
 ```{r ffBar, echo=FALSE, fig.width=5, fig.height=4}
 ff <- read.csv("http://www.dsi.uminho.pt/~pcortez/forestfires/forestfires.csv",

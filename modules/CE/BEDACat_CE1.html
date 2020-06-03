@@ -1,0 +1,109 @@
+---
+layout: page
+title: Exercises
+subtitle: Bivariate EDA - Categorical
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="hand-calculations" class="section level2">
+<h2>Hand Calculations</h2>
+<p>Use the data for the two variables (<code>VAR1</code> and <code>VAR2</code>) below to construct (by hand without R) a (i) two-way frequency table, (ii) a row-percentage table, (iii) a column-percentage table, and (iv) a total-percentage table. [<em>Hint: use <code>VAR1</code> as the columns.</em>]</p>
+<pre>
+VAR1  C C A C A B C A A B A B B A C C A C A B B A A C A C B B
+VAR2  x x y x x y x y y y x x y y y x x x y y x y x y x y x y
+</pre>
+<p><br></p>
+<hr />
+</div>
+<div id="fire-blight-disease" class="section level2">
+<h2>Fire Blight Disease</h2>
+<p><img src="zimgs/fire-blight.jpg" alt="Fire Blight Disease" class="img-right"></p>
+<p>Researchers conducted an experiment on 24 trees subject to a fire blight disease. Each tree was treated with one of several treatments (no action (control), removal of the affected branches, sprayed foliage with an antibiotic and removal of the affected branches). Each tree was then recorded according to one of three outcomes (tree died in the same year, tree died 2-4 years after, or tree died more than 4 years after the disease was noticed). The frequency table below show the treatment and outcome results for each of the 24 trees. Use these results to answer the questions below.</p>
+<pre><code>                     outcome
+treat                  Within 1 Year    2-4 Years Later    4+ Years Later
+  No Action (Control)              5                  2                 0
+  Removed Branches                 3                  3                 2
+  Sprayed and Removed              2                  4                 3</code></pre>
+<ol>
+<li>What is the response variable?</li>
+<li>What percentage of trees in the control treatment died within the first year after the disease was noticed?</li>
+<li>What percentage of all trees were in the control treatment and died within the first year after the disease was noticed?</li>
+<li>What percentage of trees in the control treatment died more than four years after the disease was noticed?</li>
+<li>What percentage of trees that died 2-4 years after the disease was noticed were in the control treatment?</li>
+<li>What percentage of all trees died within the first year after the disease was noticed?</li>
+<li>Make an overall conclusion about how the different treatments affected survival of the trees. [<em>Hint: You may want to construct a specific type of percentage table.</em>]</li>
+</ol>
+<hr />
+</div>
+<div id="lights-and-nearsightedness" class="section level2">
+<h2>Lights and Nearsightedness</h2>
+<p><img src="zimgs/nightlight.jpg" alt="Nightlight" class="img-right"></p>
+<p>An Associated Press article captured the attention of readers with the headline “Night lights bad for kids?” The article was based on <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1115762/">a 1999 study</a> at the University of Pennsylvania and Children’s Hospital of Philadelphia, in which parents were surveyed about the lighting conditions under which their children slept between birth and age-2 (lamp, night-light, or no light) and whether or not their children developed nearsightedness (myopia). The purpose of their study was to explore the effect of a young child’s nighttime exposure to light on later nearsightedness. The results from 479 children were recorded in nightlight.csv (<a href="https://raw.githubusercontent.com/droglenc/NCData/master/nightlight.csv">data</a>, <a href="https://raw.githubusercontent.com/droglenc/NCData/master/nightlight_meta.txt">meta</a>). Use these data to create a frequency table and each of the three types of percentage tables. Use your results to answer the following questions. [<em>Make sure to refer to properly labeled tables for each question.</em>]</p>
+<ol>
+<li>How many children in the sample slept in “no light” conditions and developed nearsightedness?</li>
+<li>What percentage of children that slept in “no light” conditions developed nearsightedness?</li>
+<li>What percentage of all children slept with a “lamp” and developed nearsightedness?</li>
+<li>What percentage of children that slept with a “night light” did not develop nearsightedness?</li>
+<li>What percentage of children that developed nearsightedness had slept with a “lamp”?</li>
+<li>What percentage of children developed nearsightedness?</li>
+<li>Make an overall conclusion about how the different light conditions affected the development of nearsightedness in the children.</li>
+</ol>
+<p> </p>
+<hr />
+</div>
+<div id="additional-practice" class="section level2">
+<h2>Additional Practice</h2>
+<p><a href="BEDACat_CE2">Here are more exercises for practice if time permits.</a></p>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
