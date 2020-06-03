@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Exercises I
+title: Exercises
 subtitle: Linear Regression
 author: Derek H. Ogle
 css: "/css/modules.css"
@@ -41,13 +41,16 @@ Geologists examined the relationship between the median diameter (mm) of sand gr
 
 ```{r echo=FALSE, par1=TRUE}
 d <- read.csv("Beaches.csv")
-lm1 <- lm(sand~angle,data=d)
-fitPlot(lm1,pch=21,bg="gray70",
-        ylab="Median Sand Diameter (mm)",xlab="Beach Angle (Degrees)")
-legend("topleft",c(paste0("Y=",formatC(coef(lm1)[1],format="f",digits=3),"+",
-                          formatC(coef(lm1)[2],format="f",digits=3),"*X"),
-                   paste0("r^2=",formatC(rSquared(lm1),format="f",digits=3))),
-       bty="n")
+ggplot(data=d,mapping=aes(x=angle,y=sand)) +
+  geom_point(pch=21,color="black",fill="darkgray",size=2) +
+  geom_smooth(method="lm",se=FALSE,color="red",size=1) +
+  ggpubr::stat_regline_equation(aes(label=..eq.label..),
+                                label.x.npc=0,label.y.npc=1) +
+  ggpubr::stat_regline_equation(aes(label=..rr.label..),
+                                label.x.npc=0,label.y.npc=0.90) +
+  labs(x="Beach Angle (Degrees)",y="Median Sand Diameter (mm)") +
+  theme_NCStats() +
+  theme(aspect.ratio=1,plot.title=element_text(size=12))
 ```
 
 Use these results to answer the questions below.
@@ -71,21 +74,17 @@ Climatologists examined the relationship between actual mean air temperatures an
 
 ```{r echo=FALSE, par1=TRUE}
 d <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/EverestTemps.csv")
-lm1 <- lm(MeanAirTemp~Altitude*Season,data=d)
-lm1m <- lm(MeanAirTemp~Altitude,data=dplyr::filter(d,Season=="Monsoon"))
-lm1w <- lm(MeanAirTemp~Altitude,data=dplyr::filter(d,Season=="Winter"))
-FSA::fitPlot(lm1,pch=c(21,24),bg="gray70",legend=FALSE,
-             ylab="Mean Air Temperature (C)",xlab="Altitude Lapse Rate (C/km)")
-legend("topright",c("Monsoon",
-                    paste0("Y=",formatC(coef(lm1m)[1],format="f",digits=2),
-                           formatC(coef(lm1m)[2],format="f",digits=4),"*X"),
-                    paste0("r^2=",formatC(FSA::rSquared(lm1m),format="f",digits=3))),
-       pch=c(21,NA,NA),lty=c(1,NA,NA),bg="gray70",bty="n",cex=0.8)
-legend("bottomleft",c("Winter",
-                      paste0("Y=",formatC(coef(lm1w)[1],format="f",digits=2),
-                             formatC(coef(lm1w)[2],format="f",digits=4),"*X"),
-                      paste0("r^2=",formatC(FSA::rSquared(lm1w),format="f",digits=3))),
-       pch=c(24,NA,NA),lty=c(2,NA,NA),bg="gray70",bty="n",cex=0.8)
+ggplot(data=d,mapping=aes(x=Altitude,y=MeanAirTemp)) +
+  geom_point(pch=21,color="black",fill="darkgray",size=2) +
+  geom_smooth(method="lm",se=FALSE,color="red",size=1) +
+  ggpubr::stat_regline_equation(aes(label=..eq.label..),
+                                label.x.npc=0,label.y.npc=0.15) +
+  ggpubr::stat_regline_equation(aes(label=..rr.label..),
+                                label.x.npc=0,label.y.npc=0.05) +
+  labs(x="Altitude Lapse Rate (C/km)",y="Mean Air Temperature (C)") +
+  theme_NCStats() +
+  theme(aspect.ratio=1,plot.title=element_text(size=12)) +
+  facet_wrap(vars(Season))
 ```
 
 Use these results to answer the questions below using **only the monsoon results**.
@@ -102,10 +101,3 @@ Use these results to answer the questions below using **only the monsoon results
 1. What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?
 
 ----
-
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="../LinearRegression.html">^</a></li>
-  <li class="active"><a href="#">1</a></li>
-  <li><a href="LinearRegression_CE2.html">2</a></li>
-</ul>

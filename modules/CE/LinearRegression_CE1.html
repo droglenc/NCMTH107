@@ -1,0 +1,107 @@
+---
+layout: page
+title: Exercises
+subtitle: Linear Regression
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="equation-of-the-line-i" class="section level2">
+<h2>Equation of the Line I</h2>
+<p>For each situation below, identify the (a) response variable, (b) explanatory variable, (c) slope, and (d) intercept; interpret the (e) slope and (f) intercept; and write a question that would be (g) a valid prediction (and answer this questions) and (h) be an extrapolation.</p>
+<ol>
+<li>A student recorded the height of suds (mm) in a dishwasher for ten different amounts of soap (g). The resulting best-fit line was Y=-20.2+12.4*X for 24&lt;Y&lt;80 and 3.5&lt;X&lt;8.0.</li>
+<li>A farmer wants to predict the costs required to produce an amount (in tons) of daily livestock food mix. He recorded costs and amounts for a 20 day period. The resulting best-fit line was Y=190*X+12075 for 19000&lt;Y&lt;21000 and 36.5&lt;X&lt;42.</li>
+</ol>
+<hr />
+</div>
+<div id="beach-sand" class="section level2">
+<h2>Beach Sand</h2>
+<p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/beaches.jpg" alt="Beach Sand" class="img-right"> Geologists examined the relationship between the median diameter (mm) of sand granules and the slope or angle (degrees) for nine ocean beaches. Their primary interest was in determining if the variability in sand granule size could be explained by the angle of the beach. The results of their analysis is shown in the scatterplot below.</p>
+<pre><code>`geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="LinearRegression_CE1_files/figure-html/unnamed-chunk-3-1.png" width="336" /></p>
+<p>Use these results to answer the questions below.</p>
+<ol>
+<li>In terms of the variables of this problem, what is the equation of the best-fit line?</li>
+<li>In terms of the variables of this problem, INTERPRET the value of the slope?</li>
+<li>In terms of the variables of this problem, INTERPRET the value of the y-intercept?</li>
+<li>What is the predicted median sand diameter for a beach angle of 15<sup>o</sup>?</li>
+<li>What is the predicted median sand diameter for a beach angle of 4<sup>o</sup>?</li>
+<li>What is the residual if the beach angle is 5<sup>o</sup> and the median sand diameter is 0.2 mm?</li>
+<li>What is the correlation coefficient between median sand diameter and the beach angle?</li>
+<li>What proportion of the variability in median sand diameter is explained by knowing the beach angle?</li>
+<li>How much would you expect the median sand diameter to change if the beach angle increased by 4<sup>o</sup>?</li>
+<li>What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?</li>
+</ol>
+<hr />
+</div>
+<div id="everest-temperatures" class="section level2">
+<h2>Everest Temperatures</h2>
+<p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/MtEverest.jpg" alt="Mt. Everest" class="img-right"> Climatologists examined the relationship between actual mean air temperatures and an index designed to be related to air temperature adjusted for altitude (called “altitude lapse rate”) for eleven locations at various elevations on Mount Everest during both the winter and monsoon seasons. The researchers wanted to determine if the altitude lapse rate could be used to predict actual air temperatures. The results of their analysis is shown in the scatterplot below.</p>
+<pre><code>`geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="LinearRegression_CE1_files/figure-html/unnamed-chunk-4-1.png" width="336" /></p>
+<p>Use these results to answer the questions below using <strong>only the monsoon results</strong>.</p>
+<ol>
+<li>In terms of the variables of this problem, what is the equation of the best-fit line?</li>
+<li>In terms of the variables of this problem, INTERPRET the value of the y-intercept?</li>
+<li>In terms of the variables of this problem, INTERPRET the value of the slope?</li>
+<li>What is the predicted mean air temperature if the altitude lapse rate is 4000<sup>o</sup>C/km?</li>
+<li>What is the residual if the mean air temperature is 0<sup>o</sup>C and the altitude lapse rate is 3500<sup>o</sup>C/km?</li>
+<li>What is the correlation coefficient between mean air temperature and altitude lapse rate?</li>
+<li>How much would you expect the mean air temperature to change if the altitude lapse rate increased by 1000<sup>o</sup>C/km?</li>
+<li>What is the predicted mean air temperature if the altitude lapse rate is 1000<sup>o</sup>C/km?</li>
+<li>What proportion of the variability in mean air temperature is explained by knowing the altitude lapse rate?</li>
+<li>What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?</li>
+</ol>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
