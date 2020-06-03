@@ -11,18 +11,26 @@ set_parent('IntroStats.Rnw')
 
 \vspace*{12pt}
 \section{t-distribution}\label{sect:tDist}
-A t-distribution is similar to a standard normal distribution (i.e., N(0,1)) in that it is centered on 0 and is bell shaped \figrefp{fig:tvsZ}. The t-distribution differs from the standard normal distribution in that it is heavier in the tails, flatter near the center, and its exact dispersion is dictated by a quantity called the degrees-of-freedom (df). The t-distribution is ``flatter and fatter'' because of the uncertainty surrounding the use of $s$ rather than $\sigma$ in the standard error calculation.\footnote{Recall that the sample standard deviation is a statistic and is thus subject to sampling variability.}  The degrees-of-freedom are related to $n$ and generally come from the denominator in the standard deviation calculation. As the degrees-of-freedom increase, the t-distribution becomes narrower, taller, and approaches the standard normal distribution \figrefp{fig:tvsZ}.
+A t-distribution is similar to a standard normal distribution (i.e., N(0,1)) in that it is centered on 0 and is bell shaped \figrefp{fig:tvsZ}. The t-distribution differs from the standard normal distribution in that it is heavier in the tails, flatter near the center, and its exact dispersion is dictated by a quantity called the degrees-of-freedom (df). The t-distribution is ``flatter and fatter'' because of the uncertainty surrounding the use of $s$ rather than $\sigma$ in the standard error calculation.\footnote{Recall that the sample standard deviation is a statistic and is thus subject to sampling variability.} The degrees-of-freedom are related to $n$ and generally come from the denominator in the standard deviation calculation. As the degrees-of-freedom increase, the t-distribution becomes narrower, taller, and approaches the standard normal distribution \figrefp{fig:tvsZ}.
 
-<<tvsZ, echo=FALSE, cache=TRUE, fig.show='animate', fig.cap="Standard normal (black) and t-distributions (red) with varying degrees-of-freedom.", aniopts="controls,loop,autoplay">>=
-par(mar=c(3,0.5,0.5,0.5),mgp=c(1.9,0.4,0),las=1,tcl=-0.2)
-x <- seq(-4,4,by=0.001)
-n1 <- dnorm(x,0,1)
-for (i in 1:30) {
-  plot(x,n1,type="l",lwd=3,xlab="t",ylab="",yaxt="n")
-  t1 <- dt(x,i)
-  lines(x,t1,lwd=3,col="darkred")
-  text(2.3,0.8*max(n1),paste("df=",i,sep=""),cex=1.5,col="darkred")
-}
+<<tvsZ, echo=FALSE, fig.cap="Standard normal (black) and t-distributions with varying degrees-of-freedom.">>=
+dfs <- c(1,2,4,10,20,40,80)
+x <- seq(-4,4,length.out=100)
+ts <- NULL
+for (i in seq_along(dfs)) ts <- c(ts,dt(x,dfs[i]))
+tmp <- data.frame(x=rep(x,length(dfs)),
+                  ts=ts,
+                  dfs=factor(rep(dfs,each=length(x))))
+tmp2 <- data.frame(x=x,z=dnorm(x))
+
+ggplot(data=tmp,mapping=aes(x=x,y=ts,color=dfs)) +
+  geom_line(data=tmp2,mapping=aes(x=x,y=z),color="black",size=2) +
+  geom_line(size=1) +
+  scale_color_brewer(direction=-1,palette="Oranges") +
+  theme_NCStats() +
+  labs(x="t",y=NULL) +
+  theme(axis.text.y=element_blank(),
+        legend.position=c(1,1),legend.justification=c(1.1,1.1))
 @
 
 \newpage
@@ -66,10 +74,10 @@ A 1-Sample t-Test is similar to a 1-Sample Z-test in that both test the same $H_
 \end{minipage}}
 \end{table}
 
-\subsection{Example - Purchase Catch of Salmon?}
-\vspace*{-2pt}
+\section{Examples}
+\vspace{-8pt}
+\subsection{Purchase Catch of Salmon?}
 Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for the following situation:
-\vspace*{-14pt}
 \begin{quote}
 \textsl{A prospective buyer will buy a catch of several thousand salmon if the mean weight of all salmon in the catch is at least 19.9 lbs. A random selection of 50 salmon had a mean of 20.1 and a standard deviation of 0.76 lbs. Should the buyer accept the catch at the 5\% level?}
 \end{quote}
@@ -83,10 +91,10 @@ Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis t
     \item (i) n=50 $\geq$ 40 and (ii) $\sigma$ is unknown.
     \item $\bar{x}$ = 20.1 lbs (and $s$ = 0.76 lbs).
     \item $t$ = $\frac{20.1-19.9}{\frac{0.76}{\sqrt{50}}}$ = $\frac{0.2}{0.107}$ = 1.87 with df = 50-1 = 49.
-    \item p-value = \Sexpr{kPvalue(pt(1.87,df=49,lower.tail=FALSE),include.p=FALSE)}.
+    \item p-value = \Sexpr{kPvalue(pt(1.87,df=49,lower.tail=FALSE),include.p=FALSE)}. [\textit{See R code in appendix.}]
     \item $H_{0}$ is rejected because the p-value $< \alpha$.
     \item The average weight of ALL salmon in this catch appears to be greater than 19.9 lbs; thus, the buyer should accept this catch of salmon.
-    \item I am 95\% confident that the mean weight of ALL salmon in the catch is greater than 19.92 lbs (i.e., $20.1-1.677\frac{0.76}{\sqrt{50}}$ = $20.1-0.18$ = $19.92$).
+    \item I am 95\% confident that the mean weight of ALL salmon in the catch is greater than 19.92 lbs (i.e., $20.1-1.677\frac{0.76}{\sqrt{50}}$ = $20.1-0.18$ = $19.92$). [\textit{See R code in appendix.}]
 \end{Enumerate}
 
 \vspace{-6pt}
@@ -100,70 +108,46 @@ Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis t
 \end{minipage}
 
 
-\section{1-Sample t-Test in R}
-\vspace*{-3pt}
-If raw data exist, the calculations for a 1-Sample t-test can be efficiently computed with \R{t.test()}. The arguments to \R{t.test()} are the same as those for \R{z.test()}, with the exception that \R{sd=} is not used with \R{t.test()}. Thus, \R{t.test()} requires the vector of quantitative data as the first argument, the null hypothesized value for $\mu$ in \R{mu=}, the type of alternative hypothesis in \R{alt=} (again, can be \R{alt="two.sided"} (the default), \R{alt="less"}, or \R{alt="greater"}), and the level of confidence as a proportion in \R{conf.level=} (defaults to 0.95). The use of \R{t.test()} is illustrated in the following example.
-
-\subsection{Example - Crab Body Temperature}
-\vspace*{-6pt}
+\subsection{Body Temperature}
+\vspace*{-4pt}
 Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for the following situation:
-
-\vspace*{-12pt}
+\vspace*{-8pt}
 \begin{quote}
-\textsl{A marine biologist wants to determine if the body temperature of crabs exposed to ambient air temperature is different than the ambient air temperature. The biologist exposed a sample of 25 crabs to an air temperature of 24.3$^{o}$C for several minutes and then measured the body temperature of each crab (shown below). Test the biologist's question at the 5\% level.}
+\textsl{Machowiak et al. (1992) critically examined the belief that the mean body temperature is 98.6$^{o}$F by measuring body temperatures in a sample of healthy humans. Use their results in \tabref{tab:1ttemp} to determine at the 1\% level if the mean body temperature differs from 98.6$^{o}$F.}
 \end{quote}
-
-\vspace*{-18pt}
-\begin{Verbatim}[xleftmargin=15mm]
-22.9,22.9,23.3,23.5,23.9,23.9,24.0,24.3,24.5,24.6,24.6,24.8,24.8,
-25.1,25.4,25.4,25.5,25.5,25.8,26.1,26.2,26.3,27.0,27.3,28.1
-\end{Verbatim}
-\vspace*{-18pt}
-
-<<echo=FALSE>>=
-df <- data.frame(ct=c(22.9,22.9,23.3,23.5,23.9,23.9,24.0,24.3,24.5,
-                      24.6,24.6,24.8,24.8,25.1,25.4,25.4,25.5,25.5,
-                      25.8,26.1,26.2,26.3,27.0,27.3,28.1))
-@
-<<1tcrabs, echo=FALSE,results='hide',fig.show='hide'>>=
-hist(~ct,data=df,xlab="Crab Body Temp (C)")
-( ct.t <- t.test(df$ct,mu=24.3,conf.level=0.95) )
-@
-
-\begin{Enumerate}
-    \item $\alpha$ = 0.05.
-    \item $H_{0}:\mu$ = 24.3$^{o}$C vs. $H_{A}:\mu \neq$ 24.3$^{o}$C, where $\mu$ is the mean body temperature of ALL crabs.
-    \item A 1-Sample t-Test is required because (1) a quantitative variable (temperature) was measured, (ii) individuals from one group (or population) were considered (an ill-defined population of crabs), and (iii) $\sigma$ is \textbf{UN}known.
-    \item The data appear to be part of an experimental study (the temperature was controlled) with no suggestion of random selection of individuals.
-    \item (i) n = 25 $\geq$ 15 and the sample distribution of crab temperatures appears to be only slightly right-skewed \figrefp{fig:CrabTempHist} and (ii) $\sigma$ is \textbf{UN}known.
-    \item $\bar{x}$ = \Sexpr{formatC(ct.t$estimate,format="f",digits=1)}$^{o}$C \tabrefp{tab:1tcrabs}.
-    \item $t$ = \Sexpr{formatC(ct.t$statistic,format="f",digits=3)} with \Sexpr{formatC(ct.t$parameter,format="f",digits=0)} df \tabrefp{tab:1tcrabs}.
-    \item p-value = \Sexpr{kPvalue(ct.t$p.value,include.p=FALSE)} \tabrefp{tab:1tcrabs}.
-    \item $H_{0}$ is rejected because the p-value $<\alpha$.
-    \item It appears that the average body temperature of ALL crabs is greater than the ambient temperature of 24.3$^{o}$C.
-    \item I am 95\% confident that the mean body temperature of ALL crabs is between \Sexpr{formatC(ct.t$conf.int[1],format="f",digits=1)}$^{o}$C and \Sexpr{formatC(ct.t$conf.int[2],format="f",digits=1)}$^{o}$C \tabrefp{tab:1tcrabs}.
-\end{Enumerate}
 
 \vspace*{-4pt}
 \begin{table}[h]
-  \caption{Results from 1-Sample t-Test for body temperature of crabs.}
-  \label{tab:1tcrabs}
+  \caption{Results from measuring the body temperature of a sample of healthy humans.}
+  \label{tab:1ttemp}
   \vspace*{-12pt}
-<<echo=FALSE, background='white'>>=
-kHtest(ct.t)
+<<echo=FALSE, background="white">>=
+bt <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/BodyTemp.csv")
+sum <- Summarize(~temp,data=bt,digits=2)
+print(sum,row.names=FALSE)
 @
 \end{table}
 
-<<CrabTempHist, echo=FALSE, fig.cap="Histogram of the body temperatures of crabs exposed to an ambient temperature of $24.3^{o}$C.">>=
-hist(~ct,data=df,xlab="Crab Body Temperature (C)")
-@
 
-\vspace*{-4pt}
+\begin{Enumerate}
+  \item $\alpha$=0.01.
+  \item $H_{0}:\mu=98.6^{o}$F vs. $H_{A}:\mu\neq98.6^{o}$F, where $\mu$ is the mean body temperature for ALL healthy humans. [\textit{Note that not equals was used because the researchers want to determine if the temperature is \textbf{different from} $98.6^{o}$F.}]
+  \item A 1-Sample t-Test is required because (i) a quantitative variable (i.e., body temperature) was measured, (ii) individuals from one group (or population) is considered (i.e., healthy humans), and (iii) $\sigma$ is unknown (i.e., not given in the background).
+  \item The data appear to be part of an observational study although this is not made clear in the background information. There is also no evidence that randomization was used.
+  \item (i) $n=\Sexpr{nrow(bt)}\geq40$ and (ii) $\sigma$ is unknown.
+  \item $\bar{x}$ = \Sexpr{formatC(sum[["mean"]],format="f",digits=2)}$^{o}$F.
+  \item $t$ = $\frac{98.25-98.6}{\frac{0.73}{\sqrt{130}}}$ = $\frac{-0.35}{0.064}$ = -5.469 with df = 130-1 = 129.
+  \item p-value=\Sexpr{kPvalue(2*pt(-5.469,df=129),digits=7,include.p=FALSE)}. [\textit{See R code in appendix. Note that the result of \r{distrib()} is multiplied by 2 because of the not equals $H_{A}$.}]
+  \item Reject $H_{0}$ because p-value$<\alpha=0.01$.
+  \item It appears that the mean body temperature of ALL healthy humans is less than 98.6$^{o}$F. [\textit{Note that the test was for a difference but because $\bar{x}<98.6$ this more specific conclusion can be made.}]
+  \item I am 99\% confident that the mean body temperature ($\mu$) for ALL healthy humans is between 98.08$^{o}$C (=98.25-2.614*0.064) and 98.42$^{o}$C (=98.25+2.614*0.064). [\textit{See R code in appendix. Note that the area in \r{distrib()} is $1-\frac{\alpha}{2}$ because of the not equals $H_{A}$.}]
+\end{Enumerate}
+
 \begin{minipage}{\textwidth}
 \textbf{R Appendix:}
 \vspace*{-6pt}
-<<eval=FALSE, results='hide', fig.show='hide', prompt=FALSE>>=
-df <- read.csv("data/CrabTemps.csv")
-<<1tcrabs>>
+<<eval=FALSE, results='hide',fig.show='hide', prompt=FALSE>>=
+( pval <- 2*distrib(-5.469,distrib="t",df=130) )
+(tstar <- distrib(0.995,distrib="t",df=130) )
 @
 \end{minipage}
