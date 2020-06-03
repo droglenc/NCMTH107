@@ -9,84 +9,72 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo=TRUE,fig.align='center',comment="#R>  ")
+knitr::opts_chunk$set(echo=TRUE,fig.align='center',comment="#R>  ",fig.width=3.5,fig.height=3.5)
 ```
 
+In the [1-Sample t-test module](../tTest1.html) you learned about the theory underlying a 1-sample t-test and how to perform the calculations required to complete the [11-steps](../11-steps) of a hypothesis test. In this module, you will learn how to perform the required calculations from raw data using R. You will also be asked to complete the full 11-steps for a 1-sample t-test.
 
-\section{1-Sample t-Test in R}
-\vspace*{-3pt}
-If raw data exist, the calculations for a 1-Sample t-test can be efficiently computed with \R{t.test()}. The arguments to \R{t.test()} are the same as those for \R{z.test()}, with the exception that \R{sd=} is not used with \R{t.test()}. Thus, \R{t.test()} requires the vector of quantitative data as the first argument, the null hypothesized value for $\mu$ in \R{mu=}, the type of alternative hypothesis in \R{alt=} (again, can be \R{alt="two.sided"} (the default), \R{alt="less"}, or \R{alt="greater"}), and the level of confidence as a proportion in \R{conf.level=} (defaults to 0.95). The use of \R{t.test()} is illustrated in the following example.
+Methods in this module require the `NCStats` package (as always) and the `ggplot2` package (for making graphs).
 
-\subsection{Example - Crab Body Temperature}
-\vspace*{-6pt}
-Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for the following situation:
+```{r}
+library(NCStats)
+library(ggplot2)
+```
 
-\vspace*{-12pt}
-\begin{quote}
-\textsl{A marine biologist wants to determine if the body temperature of crabs exposed to ambient air temperature is different than the ambient air temperature. The biologist exposed a sample of 25 crabs to an air temperature of 24.3$^{o}$C for several minutes and then measured the body temperature of each crab (shown below). Test the biologist's question at the 5\% level.}
-\end{quote}
+# 1-Sample t-Test in R
+If raw data exist, the calculations for a 1-Sample t-test can be efficiently computed with `t.test()`. `t.test()` requires the vector of quantitative data as the first argument, the null hypothesized value for $\mu$ in `mu=`, the type of alternative hypothesis in `alt=` (can be `alt="two.sided"` (the default), `alt="less"`, or `alt="greater"`), and the level of confidence as a proportion in `conf.level=` (defaults to 0.95). If the sample size is less than 40 then you may also need to construct a histogram as described in the [Univariate EDA in R module](RUnivEDA.html) to assess the shape of the distribution.
 
-\vspace*{-18pt}
-\begin{Verbatim}[xleftmargin=15mm]
+&nbsp;
+
+# Example - Crab Body Temperature
+Below are the [11-steps](../11-steps) for completing a full hypothesis test for the following situation:
+
+> A marine biologist wants to determine if the body temperature of crabs exposed to ambient air temperature is different than the ambient air temperature. The biologist exposed a sample of 25 crabs to an air temperature of 24.3<sup>o</sup>C for several minutes and then measured the body temperature of each crab (shown below). Test the biologist's question at the 5% level.
+
+```
 22.9,22.9,23.3,23.5,23.9,23.9,24.0,24.3,24.5,24.6,24.6,24.8,24.8,
 25.1,25.4,25.4,25.5,25.5,25.8,26.1,26.2,26.3,27.0,27.3,28.1
-\end{Verbatim}
-\vspace*{-18pt}
+```
 
-<<echo=FALSE>>=
+```{r echo=FALSE}
 df <- data.frame(ct=c(22.9,22.9,23.3,23.5,23.9,23.9,24.0,24.3,24.5,
                       24.6,24.6,24.8,24.8,25.1,25.4,25.4,25.5,25.5,
                       25.8,26.1,26.2,26.3,27.0,27.3,28.1))
-@
-<<1tcrabs, echo=FALSE,results='hide',fig.show='hide'>>=
-hist(~ct,data=df,xlab="Crab Body Temp (C)")
+```
+```{r 1tcrabs, echo=FALSE,results='hide',fig.show='hide'}
 ( ct.t <- t.test(df$ct,mu=24.3,conf.level=0.95) )
-@
+```
+1. &alpha; = 0.05.
+1. H<sub>0</sub>:&mu; = 24.3<sup>o</sup>C vs. H<sub>A</sub>:&mu; &ne; 24.3<sup>o</sup>C, where &mu; is the mean body temperature of ALL crabs.
+1. A 1-Sample t-Test is required because (1) a quantitative variable (temperature) was measured, (ii) individuals from one group (or population) were considered (an ill-defined population of crabs), and (iii) &sigma; is **UN**known.
+1. The data appear to be part of an experimental study (the temperature was controlled) with no suggestion of random selection of individuals.
+1. i. n = 25 &geq; 15 and the sample distribution of crab temperatures appears to be only slightly right-skewed (Figure \@ref(fig:CrabTempHist)) and ii. &sigma; is **UN**known.
+1. x&#772; = `r formatC(ct.t$estimate,format="f",digits=1)`<sup>o</sup>C (Table \@ref(tab:1tcrabs)).
+1. t = `r formatC(ct.t$statistic,format="f",digits=3)` with `r formatC(ct.t$parameter,format="f",digits=0)` df (Table \@ref(tab:1tcrabs)).
+1. p-value = `r kPvalue(ct.t$p.value,include.p=FALSE,latex=FALSE)` (Table \@ref(tab:1tcrabs)).
+1. Reject H<sub>0</sub> because the p-value &alpha;.
+1. It appears that the average body temperature of ALL crabs is greater than the ambient temperature of 24.3<sup>o</sup>C.
+1. I am 95% confident that the mean body temperature of ALL crabs is between `r formatC(ct.t$conf.int[1],format="f",digits=1)`<sup>o</sup>C and `r formatC(ct.t$conf.int[2],format="f",digits=1)`<sup>o</sup>C (Table \@ref(tab:1tcrabs)).
 
-\begin{Enumerate}
-    \item $\alpha$ = 0.05.
-    \item $H_{0}:\mu$ = 24.3$^{o}$C vs. $H_{A}:\mu \neq$ 24.3$^{o}$C, where $\mu$ is the mean body temperature of ALL crabs.
-    \item A 1-Sample t-Test is required because (1) a quantitative variable (temperature) was measured, (ii) individuals from one group (or population) were considered (an ill-defined population of crabs), and (iii) $\sigma$ is \textbf{UN}known.
-    \item The data appear to be part of an experimental study (the temperature was controlled) with no suggestion of random selection of individuals.
-    \item (i) n = 25 $\geq$ 15 and the sample distribution of crab temperatures appears to be only slightly right-skewed \figrefp{fig:CrabTempHist} and (ii) $\sigma$ is \textbf{UN}known.
-    \item $\bar{x}$ = \Sexpr{formatC(ct.t$estimate,format="f",digits=1)}$^{o}$C \tabrefp{tab:1tcrabs}.
-    \item $t$ = \Sexpr{formatC(ct.t$statistic,format="f",digits=3)} with \Sexpr{formatC(ct.t$parameter,format="f",digits=0)} df \tabrefp{tab:1tcrabs}.
-    \item p-value = \Sexpr{kPvalue(ct.t$p.value,include.p=FALSE)} \tabrefp{tab:1tcrabs}.
-    \item $H_{0}$ is rejected because the p-value $<\alpha$.
-    \item It appears that the average body temperature of ALL crabs is greater than the ambient temperature of 24.3$^{o}$C.
-    \item I am 95\% confident that the mean body temperature of ALL crabs is between \Sexpr{formatC(ct.t$conf.int[1],format="f",digits=1)}$^{o}$C and \Sexpr{formatC(ct.t$conf.int[2],format="f",digits=1)}$^{o}$C \tabrefp{tab:1tcrabs}.
-\end{Enumerate}
+```{r CrabTempHist, echo=FALSE, fig.cap="Histogram of the body temperatures of crabs exposed to an ambient temperature of $24.3^{o}$C."}
+ggplot(data=df,mapping=aes(x=ct)) +
+  geom_histogram(boundary=0,binwidth=1,color="black",fill="darkgray") +
+  labs(y="Frequency of Crabs",x="Body Temperature (C)") +
+  scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
+  theme_NCStats()
+```
 
-\vspace*{-4pt}
-\begin{table}[h]
-  \caption{Results from 1-Sample t-Test for body temperature of crabs.}
-  \label{tab:1tcrabs}
-  \vspace*{-12pt}
-<<echo=FALSE, background='white'>>=
-kHtest(ct.t)
-@
-\end{table}
+```{r echo=FALSE, background='white',warning=FALSE}
+knitr::kable(capture.output(kHtest(ct.t)),col.names=NULL,label="1tcrabs",caption="Results from 1-Sample t-Test for body temperature of crabs.")
+```
 
-<<CrabTempHist, echo=FALSE, fig.cap="Histogram of the body temperatures of crabs exposed to an ambient temperature of $24.3^{o}$C.">>=
-hist(~ct,data=df,xlab="Crab Body Temperature (C)")
-@
-
-\vspace*{-4pt}
-\begin{minipage}{\textwidth}
-\textbf{R Appendix:}
-\vspace*{-6pt}
-<<eval=FALSE, results='hide', fig.show='hide', prompt=FALSE>>=
-df <- read.csv("data/CrabTemps.csv")
+**R Appendix:**
+```{r eval=FALSE}
+setwd("c:/data")
+df <- read.csv("CrabTemps.csv")
+<<CrabTempHist>>
 <<1tcrabs>>
-@
-\end{minipage}
-
-
-
-
-
-
-
+```
 
 
 # Corrections {.appendix}
