@@ -40,7 +40,7 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 ## Practice
 
-* [Exercises](CE/BivEDA_CE1) ([*more as time permits*](CE/BivEDA_CE2)) ... [ANSWER KEY](CE/KEY_RBivEDA_CE)
+* [Exercises](CE/RBivEDA_CE1) ([*more as time permits*](CE/RBivEDA_CE2)) ... [ANSWER KEY](CE/KEY_RBivEDA_CE)
 * [Review Exercises](RE/RBivEDA_RevEx)
 
 ----
