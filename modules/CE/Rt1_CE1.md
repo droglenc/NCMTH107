@@ -25,8 +25,11 @@ The typical thickness of the ozone layer over the Earth's surface is 300 [Dobson
 
 ----
 
-## Fecal Coliform Counts III
-Use the data in [FecalColiform.csv](FecalColiform.csv) to determine, at the 10% level, if the mean CFU from this event exceeds the 150 CFU/100ml threshold value that would require closing the lake to swimming.
+## Fecal Coliform Counts II
+<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/warning_sign.jpg" alt="Checking out" class="img-right">
+[Fecal coliform](https://en.wikipedia.org/wiki/Fecal_coliform) is a bacterium that originates in the intestines of warm-blooded animals and, thus, may be found in their feces.  Organic matter containing fecal coliform may be washed into lakes and streams in runoff following large rain events.  In lakes and streams, the fecal coliform may lead to the growth of pathogens that are dangerous to the health of humans, or reduce oxygen available to fish and other aquatic life.  Thus, fecal coliform levels are routinely monitored in many waterbodies in the United States.
+
+Students recorded fecal coliform counts (number of colony forming units (CFU) per 100 ml) in water samples from a nearby lake following a rainstorm that resulted in considerable runoff. Use the data in [FecalColiform.csv](FecalColiform.csv) to determine, at the 10% level, if the mean CFU from this event exceeds the 150 CFU/100ml threshold value that would require closing the lake to swimming.
 
 &nbsp;
 
