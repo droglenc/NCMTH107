@@ -1,6 +1,6 @@
 ---
 layout: page
-title: R - 1-Sample t-test
+title: R - 2-Sample t-test
 css: /css/modules.css
 ---
 
