@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Additional Exercises
+title: Exercises
 subtitle: 1-Sample t-test in R
 css: "/css/modules.css"
 ---
@@ -23,15 +23,13 @@ The pH scales falls between 0 and 14 with values <7 considered acidic and values
 <img src="zimgs/ozone-hole.jpg" alt="Ozone Hole" class="img-right">
 The typical thickness of the ozone layer over the Earth's surface is 300 [Dobson units](http://ozonewatch.gsfc.nasa.gov/facts/dobson_SH.html).  Researchers at the Laboratorium für Atmospharensphysic in Switzerland recorded the thickness of the ozone layer over [Arosa, Switzerland](https://en.wikipedia.org/wiki/Arosa) from 1926 to the present.  The data in OzoneSWI.csv ([file](https://github.com/droglenc/NCData/raw/master/OzoneSWI.csv), [meta](https://github.com/droglenc/NCData/blob/master/OzoneSWI_meta.txt)) contains the measurements from a random sample of 45 years between 1926 and the mid 1990s.  Use these data to determine, at the 1% level, if the thickness of the ozone layer over Arosa is different than that which is typical for the Earth's surface.[^3]
 
+&nbsp;
+
 ----
 
-## Fecal Coliform Counts II
-<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/warning_sign.jpg" alt="Checking out" class="img-right">
-[Fecal coliform](https://en.wikipedia.org/wiki/Fecal_coliform) is a bacterium that originates in the intestines of warm-blooded animals and, thus, may be found in their feces.  Organic matter containing fecal coliform may be washed into lakes and streams in runoff following large rain events.  In lakes and streams, the fecal coliform may lead to the growth of pathogens that are dangerous to the health of humans, or reduce oxygen available to fish and other aquatic life.  Thus, fecal coliform levels are routinely monitored in many waterbodies in the United States.
+## Additional Practice
 
-Students recorded fecal coliform counts (number of colony forming units (CFU) per 100 ml) in water samples from a nearby lake following a rainstorm that resulted in considerable runoff. Use the data in [FecalColiform.csv](FecalColiform.csv) to determine, at the 10% level, if the mean CFU from this event exceeds the 150 CFU/100ml threshold value that would require closing the lake to swimming.
-
-&nbsp;
+[Here are more exercises for practice if time permits.](Rt1_CE2)
 
 ----
 
