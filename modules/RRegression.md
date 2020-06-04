@@ -34,7 +34,7 @@ One of the most common things in statistics is to describe the linear relationsh
 Use the materials below to answer the questions on [this preparation guide](Prep/RRegression).
 
 * [Reading](bookR/RRegression.html)
-* [![Vimeo](../img/dhovid.png) Linear Regression in R](https://vimeo.com/user45324800/regression1){:target="_blank"} [8 mins] [![Web](../img/web.png)](HO/LinearRegression_RHO.html){:target="_blank"}  [![R](../img/Rlogo.png)](HO/LinearRegression_RHO.R){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) Linear Regression in R](https://vimeo.com/user45324800/regression1){:target="_blank"} [8 mins] ... [corresponding script](HO/LinearRegression_RHO.html){:target="_blank"}
 
 ----
 

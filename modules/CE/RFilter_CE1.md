@@ -22,7 +22,7 @@ diameter  20  23  34  20  17  20  15  34  18  24
 exposure med med low med med med med med med med
 </pre>
 
-[**HINT:** *these are the same data that you entered in [a previous class exercise](UEDACat_CE1.html#coarse-woody-debris); use that file and R script here.*] Use this information to answer the following questions. Use R to answer all questions even though most questions can be answered by observing these simple data from the table above.
+Use this information to answer the following questions. Use R to answer all questions even though most questions can be answered by observing these simple data from the table above.
 
 1. Enter the data into Excel, save as a CSV file, and load into R.
 1. Isolate the following subsets of data (*show the structure or a view of the resultant data.frame to verify your results*).
