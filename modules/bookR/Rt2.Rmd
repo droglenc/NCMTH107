@@ -9,10 +9,128 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo=TRUE,fig.align='center',comment="#R>  ")
+knitr::opts_chunk$set(echo=TRUE,fig.align='center',comment="#R>  ",fig.width=3.5,fig.height=3.5)
+```
+
+In the [2-Sample t-test module](../tTest2.html) you learned about the theory underlying a 2-sample t-test and how to perform the calculations required to complete the [11-steps](../11-steps) of a hypothesis test. In this module, you will learn how to perform the required calculations from raw data using R. You will also be asked to complete the full 11-steps for a 2-sample t-test.
+
+Methods in this module require the `NCStats` package (as always) and the `ggplot2` package (for making graphs).
+
+```{r}
+library(NCStats)
+library(ggplot2)
+```
+
+# Data Format
+The data used in this reading are the biological oxygen demand (BOD) measurements from either the inlet or outlet to an aquaculture facility. These data are in [BOD.csv](https://raw.githubusercontent.com/droglenc/NCData/master/BOD.csv) and loaded into R below.
+
+```{r echo=FALSE}
+aqua <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/BOD.csv")
+```
+```{r eval=FALSE}
+setwd("c:/stats")
+aqua <- read.csv("BOD.csv")
+str(aqua)
+```
+
+The `src` variable must be converted to a factor variable for properly computing the 2-sample t-test results below.
+
+```{r}
+aqua$src <- factor(aqua$src)
+levels(aqua$src)
+```
+
+Data must be in stacked format (as described in the [Getting Data into R module](RData.html#entering-data)) for a 2-Sample t-Test. Stacked data has measurements in one column and group labels for the measurement in another column. Thus, each row corresponds to a measurement and the group for one individual. The BOD data are stacked because each row corresponds to one individual (a water sample) with one column of (BOD) measurements and another column for which group the individual belongs.
+
+```{r}
+headtail(aqua)
+```
+
+&nbsp;
+
+# Levene's Test
+Before conducting a 2-Sample t-Test, the assumption of equal population variances must be tested with Levene's test. The Levene's test is computed with `levenesTest()`, where the first argument is a formula of the form `qvar~cvar`, where `qvar` represents the quantitative response variable and `cvar` represents the group factor variable.^[This is the same model formula introduced in the [Univariated EDA in R module](RUnivEDA.html#summary-statistics-1) for summarizing multiple groups of data.] The data.frame containing `qvar` and `cvar` is given in `data=`. The results of the following code are shown in Table \@ref(tab:LevBOD) and interpreted in the example analysis below.
+
+```{r aquaLevenes, results="hide"}
+levenesTest(BOD~src,data=aqua)
+```
+
+# Histograms
+If the combined sample size for the two groups is less than 40 than histograms for both groups must be made to address the assumptions of normality before continuing with a 2-sample t-test. Separating histograms by groups was discussed in the [Univariate EDA in R module](RUnivEDA.html#summary-statistics-1). The results of the following code are shown in Figure \@ref(fig:aquaHist2) and interpreted in the example analysis below.
+
+```{r aquaHist1, fig.show="hide"}
+ggplot(data=aqua,aes(x=BOD)) +
+  geom_histogram(binwidth=0.5,boundary=0,color="black",fill="lightgray") +
+  scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
+  labs(x="Biological Oxygen Demand",y="Frequency of Sites") +
+  theme_NCStats() +
+  facet_wrap(~src)
+```
+
+&nbsp;
+
+# 2-Sample t-Test
+A 2-Sample t-Test is computed with `t.test()`, where the first argument is the same formula as in `levenesTest()` (and, thus, same `data=`). Additionally, the following arguments may need to be specified.
+
+* `mu=`: The specific value in H<sub>0</sub>. For a 2-Sample t-Test this is usually 0, which is the default.
+* `alt=`: A string that indicates the type of H<sub>A</sub> (i.e., `"two.sided"` (default), `"greater"`, or `"less"`).
+* `conf.level=`: The level of confidence (default is `0.95`) used for the confidence region of &mu;<sub>1</sub>-&mu;<sub>2</sub>.
+* `var.equal=`: A logical value that indicates whether the two population variances should be considered equal or not. If `TRUE`, then the pooled sample variance is calculated and used in the standard error. The default `FALSE`, to assume UNequal variances.
+
+R computes the difference among groups as the alphabetically "first" level minus the alphabetically "second" level. For example, if the two levels are `inlet` and `outlet`, then R will compute x&#772;<sub>inlet</sub>-x&#772;<sub>outlet</sub>. You should consider this when you are constructing your hypotheses. However, you can change the order of the levels by using `levels=` in `factor()` (as described in the [Univariae EDA in R module](RUnivEDA.html#data-manipulation).
+
+ The results of the following code are shown in Table \@ref(tab:2tBOD) and interpreted in the example analysis below.
+ 
+```{r aqua.t, results="hide"}
+t.test(BOD~src,data=aqua,var.equal=TRUE,alt="less",conf.level=0.90)
 ```
 
 
+&nbsp;
+
+# Example - BOD in Aquaculture Water
+Below are the 11-steps [11-steps](../11-steps) for completing a full hypothesis test for the following situation (which follows from above):
+
+> An aquaculture farm takes water from a stream and returns it to the stream after it has circulated through the fish tanks. The owner has taken steps to reduce the level of organic matter in the water released back into the stream. However, he is still concerned that water returned to the stream may contain heightened levels of organic matter. To determine if this is true, he took samples of water at the intake and, at other times, downstream from the outlet and recorded the biological oxygen demand (BOD) as a measure of the organics in the effluent (a higher BOD at the outlet would imply heightened levels of organics are being released to the stream). The owner's data are recorded in [BOD.csv](https://raw.githubusercontent.com/droglenc/NCData/master/BOD.csv). Test for any evidence (i.e., at the 10% level) to support the owner's concern.
+
+```{r echo=FALSE, results="hide"}
+( aqua.lev <- levenesTest(BOD~src,data=aqua))
+( aqua.t <- t.test(BOD~src,data=aqua,var.equal=TRUE,alt="less",conf.level=0.90) )
+```
+
+1. &alpha; = 0.10.
+1. H<sub>0</sub>:&mu;<sub>inlet</sub>-&mu;<sub>outlet</sub>=0 vs H<sub>A</sub>:&mu;<sub>inlet</sub>-&mu;<sub>outlet</sub><0, where &mu; is the mean BOD. [*Negative differences represent larger values at the outlet, which implies that BOD is higher in the water released from the facility. Thus, H<sub>A</sub> represents the owner's concern.*]
+1. A 2-Sample t-Test is required because (i) a quantitative variable (BOD level) was measured, (ii) two groups are being compared (outlet and inlet), and (ii) the individuals in the groups were **IN**dependent (note that it said that the outlet samples came from different times then the inlet samples).
+1. The data appear to be part of an observational study with no obvious randomization.
+1. i. n = `r nrow(aqua)`>15 and the histograms (Figure \@ref(fig:aquaHist2)) are inconclusive about the shape because of the small sample size in each group (it appears that the `inlet` data is not strongly skewed, whereas the `outlet` data is skewed, which may invalidate the results of this hypothesis test; however, I continued to make a complete example), ii. individuals in the two groups are independent as discussed above, and iii. the variances appear to be equal because the Levene's test p-value (=`r kPvalue(aqua.lev[1,"Pr(>F)"],include.p=FALSE,latex=FALSE)`) is greater than &alpha;.
+1. x&#772;<sub>inlet</sub>-x&#772;<sub>outlet</sub> = `r formatC(aqua.t$estimate[1],format="f",digits=2)` - `r formatC(aqua.t$estimate[2],format="f",digits=2)` = `r formatC(aqua.t$estimate[1]-aqua.t$estimate[2],format="f",digits=2)` (Table \@ref(tab:2tBOD)).
+1. t = `r formatC(aqua.t$statistic,format="f",digits=3)` with `r formatC(aqua.t$parameter,format="f",digits=0)` df (Table \@ref(tab:2tBOD)).
+1. p-value `r kPvalue(aqua.t$p.value,digits=8,include.p=FALSE,latex=FALSE)` (Table \@ref(tab:2tBOD)).
+1. H<sub>0</sub> is rejected because the p-value &alpha;.
+1. The average BOD is greater at the outlet than at the inlet to the aquaculture facility. Thus, the aquaculture facility appears to add to the biological oxygen demand of the water and the farmer's concern is warranted.
+1. I am 90% confident that the mean BOD measurement at the outlet is AT LEAST `r formatC(aqua.t$conf.int[2],format="f",digits=2)` GREATER than the mean BOD measurement at the inlet (Table \@ref(tab:2tBOD)).
+
+```{r echo=FALSE, background='white',warning=FALSE}
+options(knitr.kable.NA = '')
+knitr::kable(aqua.lev,label="LevBOD",caption="Results from the Levene's Test for differences in BOD between the inlet and outlet of an aquaculture facility.")
+```
+
+```{r echo=FALSE, background='white',warning=FALSE}
+knitr::kable(capture.output(kHtest(aqua.t)),col.names=NULL,label="2tBOD",caption="Results from the 2-Sample t-Test for differences in BOD between the inlet and outlet of an aquaculture facility.")
+```
+
+```{r aquaHist2, echo=FALSE, fig.width=7, fig.height=3.5, fig.cap="Histogram of the BOD measurements at the outlet and inlet of the aquaculture facility."}
+<<aquaHist1>>
+```
+
+**R Appendix**
+```{r eval=FALSE, results='hide', fig.show='hide', prompt=FALSE}
+setwd("c:/stats")
+aqua <- read.csv("BOD.csv")
+<<aquaHist1>>
+<<aquaLevenes>>
+<<aqua.t>>
+```
 
 
 

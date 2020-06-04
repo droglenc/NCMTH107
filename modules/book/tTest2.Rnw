@@ -13,7 +13,7 @@ set_parent('IntroStats.Rnw')
 
 \section{2-Sample t-Test Specifics}
 \vspace*{-3pt}
-In a 2-Sample t-Test, $H_{0}:\mu_{1}=\mu_{2}$ states that the two population means are equal. This can be rewritten as $H_{0}:\mu_{1}-\mu_{2}=0$, because the difference between two population means should be zero if the two population means are equal. With this $H_{0}$, the ``parameter'' is $\mu_{1}-\mu_{2}$ and the corresponding statistic is $\bar{x}_{1}-\bar{x}_{2}$. Thus, a 2-Sample t-Test is focused on the difference in population means.
+In a 2-Sample t-Test, $H_{0}:\mu_{1}=\mu_{2}$ states that the two population means are equal. This can be rewritten as $H_{0}:\mu_{1}-\mu_{2}=0$, because the difference between two population means is zero if the two population means are equal. With this $H_{0}$, the ``parameter'' is $\mu_{1}-\mu_{2}$ and the corresponding statistic is $\bar{x}_{1}-\bar{x}_{2}$. Thus, a 2-Sample t-Test is focused on the difference in population means.
 
 When looking at the ``general'' test statistic formula (i.e., Equation \eqref{eqn:zTestStatGeneral}) of
 
@@ -148,99 +148,5 @@ and
 <<eval=FALSE, prompt=FALSE>>=
 ( pval <- distrib(-4.348,distrib="t",df=66) )
 ( tstar <- distrib(0.95,distrib="t",df=66,type="q") )
-@
-\end{minipage}
-
-
-\vspace*{12pt}
-\section{2-Sample t-Tests in R}\label{sect:2tData}
-\vspace*{-6pt}
-\subsection{Data Format}
-\vspace*{-4pt}
-Data must be in stacked format (as described in \sectref{sect:REnterData}) for a 2-Sample t-Test. Stacked data has measurements in one column and group labels for the measurement in another column. Thus, each row corresponds to a measurement and the group for a single individual. As an example, BOD measurements from either the inlet or outlet to an aquaculture facility are shown below. These data are stacked because each row corresponds to one individual (a water sample) with one column of (BOD) measurements and another column for which group the individual belongs.
-\vspace*{-4pt}
-<<echo=FALSE, background='white'>>=
-aqua <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/BOD.csv")
-print(headtail(aqua,n=2),row.names=FALSE)
-@
-
-\vspace*{-8pt}
-\subsection{Levene's Test}
-\vspace*{-4pt}
-Before conducting a 2-Sample t-Test, the assumption of equal population variances must be tested with Levene's test. The Levene's test is computed with \R{levenesTest()}, where the first argument is a model formula of the form \R{response\TILDE group}, where \R{response} represents the quantitative measurements and \R{group} represents the group factor variable.\footnote{This is the same model formula introduced in \sectref{sect:MultGroups} for summarizing multiple groups of data.} The data.frame containing \R{response} and \R{group} is given in \R{data=}.
-
-\vspace*{-8pt}
-\subsection{2-Sample t-Test}
-\vspace*{-4pt}
-A 2-Sample t-Test is computed with \R{t.test()}, where the first argument is the same formula as in \R{levenesTest()} (and, thus, same \R{data=}). Additionally, the following arguments may need to be specified.
-\vspace*{-8pt}
-\begin{Itemize}
-  \item \R{mu=}: The specific value in $H_{0}$. For a 2-Sample t-Test this is usually 0, which is the default.
-  \item \R{alt=}: A string that indicates the type of $H_{A}$ (i.e., \R{"two.sided"} (default), \R{"greater"}, or \R{"less"}).
-  \item \R{conf.level=}: The level of confidence (default is \R{0.95}) used for the confidence region of $\mu_{1}-\mu_{2}$.
-  \item \R{var.equal=}: A logical value that indicates whether the two population variances should be considered equal or not. If \R{TRUE}, then the pooled sample variance is calculated and used in the standard error. The default \R{FALSE}, to assume UNequal variances.
-\end{Itemize}
-
-\vspace*{-8pt}
-\warn{\R{var.equal=TRUE} must be in \R{t.test()} to assume equal variances. This is NOT the default.}
-
-R computes the difference among groups as the alphabetically ``first'' level minus the alphabetically ``second'' level. For example, if the two levels are \var{inlet} and \var{outlet}, then R will compute $\bar{x}_{outlet}-\bar{x}_{inlet}$. If this is not the order you want, then you need to change the order of the levels by using \R{levels=} in \R{factor()} (as described in Modules \ref{chap:UnivEDACat} and \ref{chap:BivEDACat}). For example, the order of the levels of \var{src} in the \var{aqua} data.frame is changed below.
-<<>>=
-aqua$src <- factor(aqua$src,levels=c("outlet","inlet"))
-levels(aqua$src)
-@
-
-
-\vspace*{12pt}
-\subsection{Example - BOD in Aquaculture Water}
-Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for the following situation:
-\vspace*{-6pt}
-\begin{quote}
-\textsl{An aquaculture farm takes water from a stream and returns it to the stream after it has circulated through the fish tanks. The owner has taken steps to reduce the level of organic matter in the water released back into the stream. However, he is still concerned that water returned to the stream may contain heightened levels of organic matter. To determine if this is true, he took samples of water at the intake and, at other times, downstream from the outlet and recorded the biological oxygen demand (BOD) as a measure of the organics in the effluent (a higher BOD at the outlet would imply heightened levels of organics are being released to the stream). The owner's data are recorded in \href{https://raw.githubusercontent.com/droglenc/NCData/master/BOD.csv}{BOD.csv}}. Test for any evidence (i.e., at the 10\% level) to support the owner's concern.
-\end{quote}
-\vspace*{-12pt}
-
-<<echo=FALSE>>=
-aqua <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/BOD.csv")
-@
-<<2tBOD, echo=FALSE, results='hide', fig.show='hide'>>=
-aqua$src <- factor(aqua$src,levels=c("outlet","inlet"))
-hist(BOD~src,data=aqua,xlab="BOD Measurement")
-levenesTest(BOD~src,data=aqua)
-( aqua.t <- t.test(BOD~src,data=aqua,var.equal=TRUE,alt="greater",conf.level=0.90) )
-@
-
-\begin{Enumerate}
-  \item $\alpha$ = 0.10.
-  \item $H_{0}:\mu_{outlet}-\mu_{inlet}=0$ vs $H_{A}:\mu_{outlet}-\mu_{inlet}>0$, where $\mu$ is the mean BOD, $outlet$ represents the outlet source, and $inlet$ represents the inlet source. [\textit{Positive differences represent larger values at the outlet, which implies that BOD is higher in the water released from the facility. Thus, $H_{A}$ represents the owner's concern. Further note that the order of subtraction could have been reversed such that the owner's concern would require a ``less than'' $H_{A}$. This is simply a matter of choice. However, note that the order of the levels has to be changed in R to use my choice of hypotheses.}]
-  \item A 2-Sample t-Test is required because (i) a quantitative variable (BOD level) was measured, (ii) two groups are being compared (outlet and inlet), and (ii) the individuals in the groups were \textbf{IN}dependent (note that it said that the outlet samples came from different times then the inlet samples).
-  \item The data appear to be part of an observational study with no obvious randomization.
-  \item (i) n = \Sexpr{nrow(aqua)} $>$15 and the histograms \figrefp{fig:AquaHist} are inconclusive about the shape because of the small sample size in each group (it appears that the \var{inlet} data is not strongly skewed, whereas the \var{outlet} data is skewed, which may invalidate the results of this hypothesis test; however, I continued to make a complete example), (ii) individuals in the two groups are independent as discussed above, and (iii) the variances appear to be equal because the Levene's test p-value (=\Sexpr{kPvalue(levenesTest(BOD~src,data=aqua)[1,"Pr(>F)"],include.p=FALSE)}) is greater than $\alpha$.
-  \item $\bar{x}_{outlet}-\bar{x}_{inlet}$ = \Sexpr{formatC(aqua.t$estimate[1],format="f",digits=2)} $-$ \Sexpr{formatC(aqua.t$estimate[2],format="f",digits=2)} = \Sexpr{formatC(aqua.t$estimate[1]-aqua.t$estimate[2],format="f",digits=2)} \tabrefp{tab:2tBOD}.
-  \item $t$ = \Sexpr{formatC(aqua.t$statistic,format="f",digits=3)} with \Sexpr{formatC(aqua.t$parameter,format="f",digits=0)} df \tabrefp{tab:2tBOD}.
-  \item p-value \Sexpr{kPvalue(aqua.t$p.value,include.p=FALSE)} \tabrefp{tab:2tBOD}.
-  \item $H_{0}$ is rejected because the p-value $<\alpha$.
-  \item The average BOD is greater at the outlet than at the inlet to the aquaculture facility. Thus, the aquaculture facility appears to add to the biological oxygen demand of the water and the farmer's concern is warranted.
-  \item I am 90\% confident that the mean BOD measurement at the outlet is AT LEAST \Sexpr{formatC(aqua.t$conf.int[1],format="f",digits=2)} GREATER than the mean BOD measurement at the inlet \tabrefp{tab:2tBOD}.
-\end{Enumerate}
-
-\begin{table}[h]
-  \caption{Results from the 2-Sample t-Test for differences in BOD between the inlet and outlet of an aquaculture facility.}
-  \label{tab:2tBOD}
-\vspace*{-8pt}
-<<echo=FALSE, background='white'>>=
-kHtest(aqua.t)
-@
-\end{table}
-
-<<AquaHist, echo=FALSE, fig.width=7, out.width='.7\\linewidth', fig.cap="Histogram of the BOD measurements at the outlet and inlet of the aquaculture facility.">>=
-hist(BOD~src,data=aqua,main="",xlab="BOD Measurement")
-@
-
-\begin{minipage}{\textwidth}
-\textbf{R Appendix:}
-<<eval=FALSE, results='hide', fig.show='hide', prompt=FALSE>>=
-aqua <- read.csv("data/BOD.csv")
-<<2tBOD>>
 @
 \end{minipage}

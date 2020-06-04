@@ -22,7 +22,7 @@ library(ggplot2)
 ```
 
 # 1-Sample t-Test in R
-If raw data exist, the calculations for a 1-Sample t-test can be efficiently computed with `t.test()`. `t.test()` requires the vector of quantitative data as the first argument, the null hypothesized value for $\mu$ in `mu=`, the type of alternative hypothesis in `alt=` (can be `alt="two.sided"` (the default), `alt="less"`, or `alt="greater"`), and the level of confidence as a proportion in `conf.level=` (defaults to 0.95). If the sample size is less than 40 then you may also need to construct a histogram as described in the [Univariate EDA in R module](RUnivEDA.html) to assess the shape of the distribution.
+If raw data exist, the calculations for a 1-Sample t-test can be efficiently computed with `t.test()`. `t.test()` requires the vector of quantitative data as the first argument, the null hypothesized value for &mu; in `mu=`, the type of alternative hypothesis in `alt=` (can be `alt="two.sided"` (the default), `alt="less"`, or `alt="greater"`), and the level of confidence as a proportion in `conf.level=` (defaults to 0.95). If the sample size is less than 40 then you may also need to construct a histogram as described in the [Univariate EDA in R module](RUnivEDA.html) to assess the shape of the distribution.
 
 &nbsp;
 
