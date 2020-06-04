@@ -34,7 +34,6 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 * [![PDF](../img/pdf.png) Reading](../book/2-Sample t-Test.pdf)
 * [![Vimeo](../img/dhovid.png) 2-Sample t-Test Example](https://vimeo.com/user45324800/t2test-ex1){:target="_blank"} [22 mins] [![PowerPoint](../img/ppt.png)](PPT/2Samplet_PPT.pptx)
-* [![Vimeo](../img/dhovid.png) 2-Sample t-Test in R](https://vimeo.com/user45324800/2samplettest){:target="_blank"} [8 mins] [![Web](../img/web.png)](HO/2Samplet_RHO.html){:target="_blank"}  [![R](../img/Rlogo.png)](HO/2Samplet_RHO.R){:target="_blank"}
 
 ----
 
