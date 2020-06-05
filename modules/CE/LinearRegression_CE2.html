@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Exercises II
+title: Additional Exercises
 subtitle: Linear Regression
 author: Derek H. Ogle
 css: "/css/modules.css"
@@ -8,52 +8,38 @@ css: "/css/modules.css"
 
 
 <hr />
-<div id="urban-runoff" class="section level2">
-<h2>Urban Runoff</h2>
-<p><img src="zimgs/runoff.jpg" alt="Grand Haven plume" class="img-right"> Urbanization poses a major threat to stream and watershed ecosystems. One aspect of urbanization is the conversion of natural areas to land with impervious surfaces, thus increasing runoff of rain and, likely, pollutants. A University of Washington researcher recorded the percent of impervious land and the benthic index of biotic integrity (IBI) for 14 areas in the state of Washington. The IBI has been described as a measure of “the capability of supporting and maintaining a balanced, integrated, adaptive community of organisms having a species composition and functional organization comparable to that of natural habitat in the region.” In this example, the researchers were attempting to identify how the percentage of impervious surfaces in the area effects the IBI. The data for this study are below (note that much more information can be obtained at the <a href="http://www.seattlecentral.edu/qelp/sets/077/077.html#About">QELP site</a>).</p>
-<pre>
-imperv   60 43 43 34 27 25 21 18 11  8  8  8  7  7  5  4  2
-IBI       9 11 13 23 31 31 21 23 27 37 39 29 31 43 33 35 37
-</pre>
-<p>Load these data into R to answer the questions below. [<em>Note that these are the same data that you entered in a <a href="BEDAQuant_CE1.html#urban-runoff">previous class exercise</a>.</em>]</p>
+<div id="beach-sand" class="section level2">
+<h2>Beach Sand</h2>
+<p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/beaches.jpg" alt="Beach Sand" class="img-right"> Kirsten Gorman examined various aspects of three species of penguins (Adelie, Chinstrap, and Gentoo) on Palmer Island, Antarctica.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> In one part of her research she examined the relationship between flipper length (mm) and body mass (g) with the hope of being able to predice body mass from flipper length. The results of her analysis are shown below.</p>
+<pre><code>Warning: Removed 2 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>Warning: Removed 2 rows containing non-finite values (stat_regline_equation).
+
+Warning: Removed 2 rows containing non-finite values (stat_regline_equation).</code></pre>
+<pre><code>Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
+<p><img src="LinearRegression_CE2_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Use the results for <strong>CHINSTRAP</strong> penguins to answer the questions below.</p>
 <ol>
 <li>In terms of the variables of this problem, what is the equation of the best-fit line?</li>
 <li>In terms of the variables of this problem, INTERPRET the value of the slope?</li>
 <li>In terms of the variables of this problem, INTERPRET the value of the y-intercept?</li>
-<li>What is the predicted IBI for an impervious surface percentage of 80%?</li>
-<li>What is the predicted IBI for an impervious surface percentage of 20%?</li>
-<li>What is the residual if the impervious surface percentage is 30% and the IBI is 20?</li>
-<li>How much will the IBI change if the percentage of impervious surface is decreased by 30%?</li>
-<li>What is the correlation coefficient between IBI and the percentage of impervious surface?</li>
-<li>What proportion of the variability in IBI is explained by knowing the percentage of impervious surface?</li>
+<li>What is the predicted body mass for a flipper length of 200 mm?</li>
+<li>What is the predicted body mass for a flipper length of 160 mm??</li>
+<li>What is the residual if the body mass is 3000 g and the flipper length is 190 mm?</li>
+<li>What is the correlation coefficient between flipper length and body mass?</li>
+<li>What proportion of the variability in body mass is explained by knowing the flipper length?</li>
+<li>How much would you expect the body mass to change if the flipper length decreased by 25 mm?</li>
 <li>What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?</li>
 </ol>
 <hr />
 </div>
-<div id="sign-legibility-and-age" class="section level2">
-<h2>Sign Legibility and Age</h2>
-<p><img src="zimgs/blurredsign.jpg" alt="Blurred Sign" class="img-right"> In a study of the legibility and visibility of highway signs, a Pennsylvania research firm determined the maximum distance at which each of 30 drivers could read a newly designed sign. The participants in the study were from 18 to 82 years old. The government agency that funded the research hoped to improve highway safety for older drivers and wanted to examine the relationship between age and sign legibility distance. Use the data in vision.csv (<a href="https://raw.githubusercontent.com/droglenc/NCData/master/vision.csv">data</a>, <a href="https://raw.githubusercontent.com/droglenc/NCData/master/vision_meta.txt">meta</a>) to construct results that can be used to answer the questions below. [<em>Example from <a href="http://www.cengage.com/c/mind-on-statistics-5e-utts">Utts and Heckard, Mind on Statistics</a></em>].</p>
-<ol>
-<li>What is the response variable? [<em>Hint: Read the rest of the questions before answering this question.</em>]</li>
-<li>What is the explanatory variable?</li>
-<li>In terms of the variables of this problem, what is the equation of the best-fit line?</li>
-<li>In terms of the variables of this problem, interpret the value of the slope.</li>
-<li>In terms of the variables of this problem, interpret the value of the intercept.</li>
-<li>What is the predicted maximum distance to see the sign for a 40-year-old driver?</li>
-<li>What is the predicted maximum distance to see the sign for a 90-year-old driver</li>
-<li>What is the residual if the age of the driver is 50 and the maximum distance is 410 ft?</li>
-<li>What is the correlation coefficient between age and maximum distance to see the sign?</li>
-<li>What proportion of the variability in maximum distance to see the sign is explained by knowing the age of the driver?</li>
-<li>How much will the predicted maximum distance to see the sign change if the driver’s age increased by ten years?</li>
-<li>What aspect of this regression analysis concerns you? [<em>Hint: consider the regression assumptions</em>]?</li>
-</ol>
-<p> </p>
-<hr />
+<div id="footnotes" class="section level2">
+<h2>Footnotes</h2>
 </div>
-<div id="additional-practice" class="section level2">
-<h2>Additional Practice</h2>
-<p><a href="LinearRegression_CE3">Here are more exercises for practice if time permits.</a></p>
+<div class="footnotes">
 <hr />
+<ol>
+<li id="fn1"><p>PengData<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
 
 
