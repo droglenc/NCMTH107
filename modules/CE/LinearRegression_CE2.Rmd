@@ -21,13 +21,51 @@ modHTML("LinearRegression_CE2")
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
+library(tidyverse)
 source("../../rhelpers/knitr_setup.R")
 ```
 
 ----
 
+## Avocado Sales
+Marketers examined the relationship between the price of a single *organic* avocado and the number of bags of those avocados sold in markets in the Great Lakes region from 2015-2017. The results are shown below.
 
-## Beach Sand
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.width=7, fig.height=3.1}
+avoc <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Avocados.csv",quote="") %>%
+  filter(region=="GreatLakes",type=="organic",year<2018) %>%
+  mutate(type=factor(type),year=factor(year)) %>%
+  select(year,region,Total.Volume,AveragePrice)
+
+ggplot(data=avoc,mapping=aes(x=AveragePrice,y=Total.Volume)) +
+  geom_point(pch=21,color="black",fill="lightgrey",size=2) +
+  geom_smooth(method="lm",se=FALSE,color="black",size=1) +
+  stat_SLR_equation(aes(label=..eq.label..),
+                    label.x.npc=1,label.y.npc=1,hjust=1,cf.digits=0) +
+  stat_SLR_equation(aes(label=..rr.label..),label.x.npc=1,label.y.npc=0.90,hjust=1) +
+  scale_x_continuous(labels=scales::dollar) +
+  scale_y_continuous(labels=scales::comma) +
+  labs(y="Number of Bags Sold",x="Average Price") +
+  theme_NCStats() +
+  theme(aspect.ratio=1,plot.title=element_text(size=12)) +
+  facet_wrap(~year,nrow=1)
+```
+
+Use the results for **2015** to answer the questions below.
+
+1. In terms of the variables of this problem, what is the equation of the best-fit line?
+1. In terms of the variables of this problem, INTERPRET the value of the slope?
+1. In terms of the variables of this problem, INTERPRET the value of the y-intercept?
+1. What is the predicted number of bags sold if the price was $1.50?
+1. What is the predicted body mass for a flipper length of $2.00 mm??
+1. What is the residual if the price was $1.60 and 105,000 bags were sold?
+1. What proportion of the variability in bags sold is explained by knowing the price of an avocado?
+1. What is the correlation coefficient between the price of avocado and the number of bags sold?
+1. How much would you expect the number of bags sold to change if the average price increased by $0.10?
+1. What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?
+
+----
+
+## Penguin Size
 <img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/beaches.jpg" alt="Beach Sand" class="img-right">
 Kirsten Gorman examined various aspects of three species of penguins (Adelie, Chinstrap, and Gentoo) on Palmer Island, Antarctica.^[PengData] In one part of her research she examined the relationship between flipper length (mm) and body mass (g) with the hope of being able to predice body mass from flipper length. The results of her analysis are shown below.
 
@@ -64,4 +102,4 @@ Use the results for **CHINSTRAP** penguins to answer the questions below.
 ----
 
 ## Footnotes
-[^PengData]: These data from the Palmer LTER data repository were supported by Office of Polar Programs, NSF Grants OPP-9011927, OPP-9632763 and OPP-0217282. These data were made available by [Allison Horst in this repository](https://github.com/allisonhorst/penguins).
+^[PengData]: These data from the Palmer LTER data repository were supported by Office of Polar Programs, NSF Grants OPP-9011927, OPP-9632763 and OPP-0217282. These data were made available by [Allison Horst in this repository](https://github.com/allisonhorst/penguins).
