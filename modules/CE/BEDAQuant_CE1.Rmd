@@ -32,7 +32,7 @@ source("../../rhelpers/knitr_setup.R")
 ```{r echo=FALSE, fig.width=4, fig.height=4}
 tmp <- read.csv("Kingfishers.csv")
 ggplot(data=tmp,mapping=aes(x=latitude,y=perc.female)) +
-  geom_point(pch=21,color="black",fill="lightgray") +
+  geom_point(pch=21,color="black",fill="lightgray",size=2) +
   labs(x="Latitude (N)",y="Percent Female") +
   theme_NCStats() +
   theme(panel.grid.major=element_line(linetype="dashed",color="lightgray"))
@@ -70,7 +70,7 @@ For each situation below, identify (a) the response variable (if possible) and (
 ```{r echo=FALSE, fig.width=3.5, fig.height=3.5}
 cf <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/CancerFat.csv")
 ggplot(data=cf,mapping=aes(x=fatintake,y=adjdeath)) +
-  geom_point(pch=21,color="black",fill="lightgray") +
+  geom_point(pch=21,color="black",fill="lightgray",size=2) +
   ggpubr::stat_cor(aes(label=..r.label..),r.digits=3,cor.coef.name="r") +
   labs(x="Fat Intake (g/day)",y="Age-Adjusted Death Rate") +
   theme_NCStats()
@@ -89,7 +89,7 @@ rel <- read.csv("religiosity.csv") %>%
          religious=as.numeric(sub("%","",x_religious))) %>%
   slice(1:50)
 ggplot(data=rel,mapping=aes(x=life_expectancy_at_birth,y=religion_important)) +
-  geom_point(pch=21,color="black",fill="lightgray") +
+  geom_point(pch=21,color="black",fill="lightgray",size=2) +
   scale_y_continuous(labels=scales::percent_format(accuracy=1,scale=1)) +
   ggpubr::stat_cor(aes(label=..r.label..),r.digits=3,
                    label.y.npc=0.1,cor.coef.name="r") +
