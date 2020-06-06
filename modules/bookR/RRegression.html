@@ -1985,6 +1985,9 @@ headtail(cars93,which=c(&quot;MFG&quot;,&quot;Model&quot;,&quot;Type&quot;,&quot
 <p> </p>
 <h1 id="fitted-line-plot">Fitted Line Plot</h1>
 <p>The linear fitted line can be added to a scatterplot (see the <a href="RBivEDA.html#scatterplots">Bivariate EDA in R module</a>) with <code>geom_smooth()</code>. The <code>geom_smooth()</code> function requires <code>method=&quot;lm&quot;</code> to show the linear regression line and <code>se=FALSE</code> to remove the underlying confidence band.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<aside>
+Use <code>method=&quot;lm&quot;</code> in <code>geom_smooth()</code> to add the regression line to the scatterplot.
+</aside>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 ggplot(data=cars93,mapping=aes(x=Weight,y=HMPG)) +
@@ -1997,6 +2000,9 @@ ggplot(data=cars93,mapping=aes(x=Weight,y=HMPG)) +
 <p> </p>
 <h1 id="fitting-the-regression-model-in-r">Fitting the Regression Model in R</h1>
 <p>The linear regression model is fit to two quantitative variables with <code>lm()</code>. The first argument is a formula of the form <code>response~explanatory</code>, where <code>response</code> contains the response variable and <code>explanatory</code> contains the explanatory variable. The corresponding data frame is given in <code>data=</code>. The results of <code>lm()</code> may be assigned to an object so that specific results can be extracted.</p>
+<aside>
+The slope is under the name of the explanatory variable and the intercept is under “(Intercept)” in the <code>lm()</code> results.
+</aside>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 ( lm1 &lt;- lm(HMPG~Weight,data=cars93) )</code></pre>

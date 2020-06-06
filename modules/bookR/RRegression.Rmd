@@ -42,6 +42,10 @@ headtail(cars93,which=c("MFG","Model","Type","Weight","HMPG"))
 # Fitted Line Plot
 The linear fitted line can be added to a scatterplot (see the [Bivariate EDA in R module](RBivEDA.html#scatterplots)) with `geom_smooth()`. The `geom_smooth()` function requires `method="lm"` to show the linear regression line and `se=FALSE` to remove the underlying confidence band.^[This is an advanced topic for a future course.]
 
+<aside>
+Use `method="lm"` in `geom_smooth()` to add the regression line to the scatterplot.
+</aside>
+
 ```{r}
 ggplot(data=cars93,mapping=aes(x=Weight,y=HMPG)) +
   geom_point(pch=21,color="black",fill="darkgray",size=2) +
@@ -54,6 +58,10 @@ ggplot(data=cars93,mapping=aes(x=Weight,y=HMPG)) +
 
 # Fitting the Regression Model in R
 The linear regression model is fit to two quantitative variables with `lm()`. The first argument is a formula of the form `response~explanatory`, where `response` contains the response variable and `explanatory` contains the explanatory variable. The corresponding data frame is given in `data=`. The results of `lm()` may be assigned to an object so that specific results can be extracted.
+
+<aside>
+The slope is under the name of the explanatory variable and the intercept is under "(Intercept)" in the `lm()` results.
+</aside>
 
 ```{r}
 ( lm1 <- lm(HMPG~Weight,data=cars93) )
