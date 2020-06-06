@@ -33,9 +33,11 @@ source("../../rhelpers/knitr_setup.R")
 tmp <- read.csv("Kingfishers.csv")
 ggplot(data=tmp,mapping=aes(x=latitude,y=perc.female)) +
   geom_point(pch=21,color="black",fill="lightgray",size=2) +
+  scale_y_continuous(minor_breaks = seq(10,70,20)) +
   labs(x="Latitude (N)",y="Percent Female") +
   theme_NCStats() +
-  theme(panel.grid.major=element_line(linetype="dashed",color="lightgray"))
+  theme(panel.grid.major=element_line(linetype="dashed",color="lightgray"),
+        panel.grid.minor.y=element_line(linetype="dashed",color="lightgray"))
 ```
 
 Use this scatterplot to answer these questions.
