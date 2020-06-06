@@ -18,6 +18,7 @@ In an attempt to study rainfall patterns in West Africa caused by El Nino weathe
 |  July  |   11   |    9   |
 | August |   20   |   10   |
 
+&nbsp;
 
 1. How many days did it rain in July?
 1. In the months of June and August, how many days did it rain more than 1 inch?
@@ -38,6 +39,7 @@ The two-way table below depicts the results of an observational study concerned 
 | Netherlands |   4  |   28   |    130    |   150   |    61    |    32    |
 |   England   |  10  |   60   |     89    |    39   |    31    |    12    |
 
+&nbsp;
 
 1. What percentage of the gulls that died in New Jersey died in July?
 1. What percentage of all gulls died in July?
