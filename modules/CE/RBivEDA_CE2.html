@@ -23,6 +23,7 @@ css: "/css/modules.css"
 <div id="north-fish-creek-discharge" class="section level2">
 <h2>North Fish Creek Discharge</h2>
 <p><img src="zimgs/fish-creek.jpg" alt="Fish Creek" class="img-right"> The instantaneous discharge (cubic feet per second) and total suspended sediments (in milligrams per liter) were recorded on 28 dates for North Fish Creek near Ashland, WI. These data are found in FishCrNWaterQuality.csv (<a href="https://raw.githubusercontent.com/droglenc/NCData/master/FishCrNWaterQuality.csv">data</a>, <a href="https://raw.githubusercontent.com/droglenc/NCData/master/FishCrNWaterQuality_meta.txt">meta</a>). Describe the relationship between instantaneous discharge and total suspended sediments from these data. [<em>Think carefully about which variable should be on the y-axis.</em>]</p>
+<p> </p>
 <hr />
 </div>
 <div id="animal-longevity-and-gestation" class="section level2">
@@ -46,33 +47,40 @@ css: "/css/modules.css"
 <div id="wolves-and-whitetail-deer" class="section level2">
 <h2>Wolves and Whitetail Deer</h2>
 <p><img src="zimgs/wolf.jpg" alt="Wolf" class="img-right"> <a href="https://www.researchgate.net/profile/David_Mladenoff/publication/247843996_Causes_and_Implications_of_Species_Restoration_in_Altered_Ecosystems/links/5410594a0cf2f2b29a40f2ce.pdf">Mladenoff <em>et al.</em> (1997)</a> estimated the territory size (km<sup>2</sup>) of Wolf (<em>Canis lupus</em>) packs and the density of Whitetail Deer (number/km<sup>2</sup>; <em>Odocoileus virginianus</em>) in the same areas in northern Wisconsin. Their data is recorded in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/Wolves2.csv">Wolves2.csv</a>. Load these data into R and generate results to write a brief description of this bivariate relationship.</p>
+<p> </p>
 <hr />
 </div>
 <div id="crickets-and-temperature" class="section level2">
 <h2>Crickets and Temperature</h2>
 <p><img src="zimgs/cricket.jpg" alt="Cricket" class="img-right"> It has been said that you can roughly estimate the temperature from the number of cricket chirps heard. To determine if this relationship existed, an entomologist recorded the number of chirps in a 15-second interval by crickets held at different temperatures. The researcher’s data is recorded in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/Chirps.csv">Chirps.csv</a>. Load these data into R and generate results to write a brief description of this bivariate relationship.</p>
-<table style="width:7%;">
-<colgroup>
-<col width="6%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>## Elephant Seals <img src="zimgs/ElephantSeals.jpg" alt="Elephant Seal" class="img-right"> Marine biologists studied the foraging ecology of Northern Elephant Seals off the California coast (LeBoeuf <em>et al.</em> 2000). Part of their analysis required that they record, for each observed seal, the month that it was observed and the sex of the seal. Their results from 47 seals are listed below. Use the data to answer the questions further below.</td>
-</tr>
-<tr class="even">
-<td>``` indiv 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 Mon Jun Jun Jun Jun Jun Jun Jun Jun Jul Jul Jul Jul Jul Jul Jul Aug Sex M M M M M M M M M M M M M M M M</td>
-</tr>
-<tr class="odd">
-<td>indiv 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 Mon Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug Jun Jun Jun Jun Jun Sex M M M M M M M M M M M F F F F F</td>
-</tr>
-<tr class="even">
-<td>indiv 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 Mon Jul Jul Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug Sex F F F F F F F F F F F F F F F ```</td>
-</tr>
-<tr class="odd">
-<td>1. Construct a two-way frequency table, with marginal totals. 1. Construct a row-percentage table from the frequency table. 1. Construct a column-percentage table from the frequency table. 1. Construct a total-percentage table from the frequency table. 1. What percentage of elephant seals were male? 1. What percentage of male elephant seals were observed in July? 1. What percentage of elephant seals were observed in August? 1. What percentage of elephant seals were females observed in July?</td>
-</tr>
-</tbody>
-</table>
+<p> </p>
+<hr />
+</div>
+<div id="elephant-seals" class="section level2">
+<h2>Elephant Seals</h2>
+<p><img src="zimgs/ElephantSeals.jpg" alt="Elephant Seal" class="img-right"> Marine biologists studied the foraging ecology of Northern Elephant Seals off the California coast (LeBoeuf <em>et al.</em> 2000). Part of their analysis required that they record, for each observed seal, the month that it was observed and the sex of the seal. Their results from 47 seals are listed below. Use the data to answer the questions further below.</p>
+<pre><code>indiv  1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16
+Mon   Jun Jun Jun Jun Jun Jun Jun Jun Jul Jul Jul Jul Jul Jul Jul Aug
+Sex    M   M   M   M   M   M   M   M   M   M   M   M   M   M   M   M
+
+indiv  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32
+Mon   Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug Jun Jun Jun Jun Jun
+Sex    M   M   M   M   M   M   M   M   M   M   M   F   F   F   F   F
+
+indiv  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47
+Mon   Jul Jul Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug Aug
+Sex    F   F   F   F   F   F   F   F   F   F   F   F   F   F   F</code></pre>
+<ol>
+<li>Construct a two-way frequency table, with marginal totals.</li>
+<li>Construct a row-percentage table from the frequency table.</li>
+<li>Construct a column-percentage table from the frequency table.</li>
+<li>Construct a total-percentage table from the frequency table.</li>
+<li>What percentage of elephant seals were male?</li>
+<li>What percentage of male elephant seals were observed in July?</li>
+<li>What percentage of elephant seals were observed in August?</li>
+<li>What percentage of elephant seals were females observed in July?</li>
+</ol>
+<hr />
 </div>
 <div id="cafe-sales" class="section level2">
 <h2>Cafe Sales</h2>
