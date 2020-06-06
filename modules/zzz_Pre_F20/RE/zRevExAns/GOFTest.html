@@ -1,0 +1,457 @@
+---
+layout: page
+title: "Review Exercise Key"
+subtitle: "Goodness-of-Fit"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="shrike-habitat-use" class="section level2">
+<h2>Shrike Habitat Use</h2>
+<ol>
+<li>α = 0.05.</li>
+<li>The H<sub>0</sub>: “The proportion of sub-habitat used by shrikes is the same the proportion of habitat available” versus H<sub>A</sub>: “The proportion of sub-habitat used by shrikes is NOT the same the proportion of habitat available.”</li>
+<li>A goodness-of-fit test is required because (i) a categorical variable (habitat type) with four levels from (ii) a single group/population (these shrikes) was recorded and (iii) the frequency of individuals in each level is being compared to a theoretical distribution in the null hypothesis.</li>
+<li>The data appear to be part of an observational study where the individuals were not randomly selected but the location to look for the individuals was.</li>
+<li>The expected frequencies are equal to the total number of observations times the proportion of each habitat type available. For example, the expected number of shrikes in the settled sub-habitat is 1456 × 0.205 = 298.48. The expectations for the other habitats are computed similarly and are in Table 1. There is more than five individuals in each of the four levels of the expected table. Thus, the test statistic below should follow a χ<sup>2</sup> distribution.</li>
+<li>The observed frequencies are in Table 1.</li>
+<li>The χ<sup>2</sup> test statistic is <span class="math inline">\(\frac{(149-298.48)^{2}}{298.48} + \frac{(944-853.216)^{2}}{853.216} + \frac{(192-149.968)^{2}}{149.968} + \frac{(171-154.336)^{2}}{154.336}\)</span> = 74.860 + 9.660 + 11.780 + 1.799 = 98.099, with 4-1=3 df.</li>
+<li>The p-value is &lt;0.00005.</li>
+<li>The H<sub>0</sub> is rejected because the p-value &lt; α.</li>
+<li>The shrikes found in the open habitat do not use the sub-habitats in proportion to the availability of the sub-habitat. In particular, they appear to use the settled sub-habitat less and the two pasture sub-habitats more than expected (Table 2).</li>
+</ol>
+<p>Table 1: Observed and expected frequencies of shrike observations in different habitats.</p>
+<pre><code>         obs     exp
+settled  149 298.480
+imp.past 944 853.216
+og.past  192 149.968
+crop     171 154.336</code></pre>
+<p>Table 2: Observed, 95% confidence intervals, and expected proportions of shrike observations in different habitats.</p>
+<pre><code>         p.obs p.LCI p.UCI p.exp
+settled  0.102 0.088 0.119 0.205
+imp.past 0.648 0.623 0.672 0.586
+og.past  0.132 0.115 0.150 0.103
+crop     0.117 0.102 0.135 0.106</code></pre>
+<div id="r-appendix" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>obs &lt;- c(settled=149,imp.past=944,og.past=192,crop=171)
+p.exp &lt;- c(settled=0.205,imp.past=0.586,og.past=0.103,crop=0.106)
+( chi1 &lt;- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+data.frame(obs=chi1$observed,exp=chi1$expected)
+gofCI(chi1,digits=3)</code></pre>
+<hr />
+</div>
+</div>
+<div id="media-treatment-of-president-clinton" class="section level2">
+<h2>Media Treatment of President Clinton</h2>
+<ol>
+<li>α = 0.10.</li>
+<li>The H<sub>0</sub>: “The proportion of people that think that President Clinton was unfairly criticized is 0.45” and the H<sub>A</sub>: “The proportion of people that think that President Clinton was unfairly criticized is NOT 0.45”.</li>
+<li>A goodness-of-fit test is required because (i) a categorical variable (opinion on fairness of treatment) with only two levels from (ii) a single group/population was recorded and (iii) the observed frequency of individuals is being compared to a theoretical distribution in the null hypothesis.</li>
+<li>Observational study was used but it not clear that the individuals were randomly selected.</li>
+<li>The expected number that think that Clinton was unfairly criticized is 1006 × 0.45 = 452.7. The expected number who do not think that Clinton was unfairly criticized is 1006 × 0.55 = 553.3. The test statistic computed below should reasonably follow a χ<sup>2</sup>-distribution because both of these expectations are greater than five.</li>
+<li>The table of observed frequencies is in Table 3.</li>
+<li>The χ<sup>2</sup> test statistic is <span class="math inline">\(\frac{(433-452.7)^{2}}{452.7}\)</span> + <span class="math inline">\(\frac{(573-553.3)^{2}}{553.3}\)</span> = 0.857 + 0.701 = 1.558, with 2-1=1 df.</li>
+<li>The p-value is 0.2119.</li>
+<li>The H<sub>0</sub> is not rejected because the p-value &gt; α.</li>
+<li>It appears that the proportion of adults that feel that President Clinton has been unfairly criticized is not greater than 0.45. In fact it appears that between 40.0% and 46.1% feel that President Clinton was treated unfairly by the media (Table 4).</li>
+</ol>
+<p>Table 3: Observed and expected frequencies of respondents perceptions of whether President Clinton was treated fairly by the media.</p>
+<pre><code>       obs   exp
+unfair 433 452.7
+fair   573 553.3</code></pre>
+<p>Table 4: Observed, 90% confidence intervals, and expected proportions of respondents perceptions of whether President Clinton was treated fairly by the media.</p>
+<pre><code>       p.obs p.LCI p.UCI p.exp
+unfair  0.43 0.405 0.456  0.45
+fair    0.57 0.544 0.595  0.55</code></pre>
+<div id="r-appendix-1" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>obs &lt;- c(unfair=433,fair=1006-433)
+p.exp &lt;- c(unfair=0.45,fair=0.55)
+( chi1 &lt;- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+data.frame(obs=chi1$observed,exp=chi1$expected)
+gofCI(chi1,conf.level=0.9,digits=3)</code></pre>
+<hr />
+</div>
+</div>
+<div id="cola-taste-test" class="section level2">
+<h2>Cola Taste Test</h2>
+<ol>
+<li>α = 0.05.</li>
+<li>The H<sub>0</sub>: “The proportion of individuals in each category is the same (i.e., no preference; <span class="math inline">\(\frac{1}{3}\)</span>)” versus H<sub>A</sub>: “The proportion of individuals in each category is NOT the same (i.e., a preference)”.</li>
+<li>A goodness-of-fit test is required because a (i) categorical variable (preference) with three levels from (ii) a single group/population was recorded and (iii) the observed frequencies are being compared to a theoretical distribution in the null hypothesis.</li>
+<li>The data appear to be part of an observational study where the individuals were randomly selected.</li>
+<li>The expected frequencies are equal to the total number of observations times the expected proportions which is <span class="math inline">\(\frac{1}{3}\)</span> for each level (this is the same as dividing the total number of observations by three for each level; Table 5). The test statistic below should follow a χ<sup>2</sup> distribution because there is more than five individuals expected in each of the three levels.</li>
+<li>The observed frequency table is in Table 5.</li>
+<li>The χ<sup>2</sup> test statistic is =<span class="math inline">\(\frac{(57-51.333)^{2}}{51.333} + \frac{(63-51.333)^{2}}{51.333} + \frac{(34-51.333)^{2}}{51.333}\)</span> = 0.627 + 2.652 + 5.853 = 9.132, with 3-1=2 df.</li>
+<li>The p-value is 0.0104</li>
+<li>The H<sub>0</sub> is rejected because the p-value &lt; α.</li>
+<li>There appears to be a preference exhibited among the consumers. It appears that the generic brand is generally not preferred (Table 6).</li>
+</ol>
+<p>Table 5: Observed and expected frequencies of respondents preference for three types of cola.</p>
+<pre><code>        obs      exp
+pepsi    57 51.33333
+coke     63 51.33333
+generic  34 51.33333</code></pre>
+<p>Table 6: Observed, 95% confidence intervals, and expected proportions of respondents preference for three types of cola.</p>
+<pre><code>        p.obs p.LCI p.UCI p.exp
+pepsi   0.370 0.298 0.449 0.333
+coke    0.409 0.335 0.488 0.333
+generic 0.221 0.163 0.293 0.333</code></pre>
+<div id="r-appendix-2" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>obs &lt;- c(pepsi=57,coke=63,generic=34)
+p.exp &lt;- c(pepsi=1/3,coke=1/3,generic=1/3)
+( chi1 &lt;- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+data.frame(obs=chi1$observed,exp=chi1$expected)
+gofCI(chi1,digits=3)</code></pre>
+<hr />
+</div>
+</div>
+<div id="corn-genetics" class="section level2">
+<h2>Corn Genetics</h2>
+<ol>
+<li>α = 0.05.</li>
+<li>The H<sub>0</sub>: The proportion of PS, PW, YS, and YW individuals will be <span class="math inline">\(\frac{9}{16}\)</span>, <span class="math inline">\(\frac{3}{16}\)</span>, <span class="math inline">\(\frac{3}{16}\)</span>, and <span class="math inline">\(\frac{1}{16}\)</span>, respectively&quot; versus H<sub>A</sub> “The proportion of PS, PW, YS, and YW individuals will NOT be <span class="math inline">\(\frac{9}{16}\)</span>, <span class="math inline">\(\frac{3}{16}\)</span>, <span class="math inline">\(\frac{3}{16}\)</span>, and <span class="math inline">\(\frac{1}{16}\)</span>, respectively”, where PS=“purple, smooth”, PW=“purple, wrinkled”, YS=“yellow, smooth”, and YW=“yellow, wrinkled”.</li>
+<li>A goodness-of-fit test is required because (i) a categorical variable (color and wrinkliness combination) with four levels from (ii) a single group/population (this ear of corn) was recorded and (iii) the observed frequency of individuals is being compared to a theoretical distribution in the null hypothesis.</li>
+<li>The data appear to be part of a quasi-experimental study where the individuals were not randomly selected but the location on the corn cob where the individuals were selected was randomly located.</li>
+<li>The expected frequencies are equal to the total number of observations times the expected proportion of each phenotype. For example, the expected number of purple-smooth kernels is <span class="math inline">\(58\frac{9}{16}\)</span> = 32.625. The expectations for the other phenotypes are in Table 7. One of these expectations is less than five indicating that the test statistic below may not follow a χ<sup>2</sup> distribution. However, it is only one level and the value is nearly four so it should be fairly close to a χ<sup>2</sup> distribution.</li>
+<li>The observed frequencies are in Table 7.</li>
+<li>The χ<sup>2</sup> test statistic is <span class="math inline">\(\frac{(32-32.625)^{2}}{32.625} + \frac{(14-10.875)^{2}}{10.875} + \frac{(8-10.875)^{2}}{10.875} + \frac{(4-3.625)^{2}}{3.625}\)</span> = 0.012 + 0.898 + 0.760 + 0.039 = 1.709, with 4-1=3 df.</li>
+<li>The p-value for this test statistic is 0.6350</li>
+<li>The H<sub>0</sub> is not rejected because the p-value &gt; α.</li>
+<li>The 9:3:3:1 ratio appears to be upheld for this ear of corn (Table 8).</li>
+</ol>
+<p>Table 7: Observed and expected frequencies of corn kernels by type.</p>
+<pre><code>   obs    exp
+ps  32 32.625
+pw  14 10.875
+ys   8 10.875
+yw   4  3.625</code></pre>
+<p>Table 8: Observed, 95% confidence intervals, and expected proportions of corn kernels by type.</p>
+<pre><code>   p.obs p.LCI p.UCI p.exp
+ps 0.552 0.425 0.673 0.562
+pw 0.241 0.150 0.365 0.188
+ys 0.138 0.072 0.249 0.188
+yw 0.069 0.027 0.164 0.062</code></pre>
+<div id="r-appendix-3" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>obs &lt;- c(ps=32,pw=14,ys=8,yw=4)
+p.exp &lt;- c(ps=9/16,pw=3/16,ys=3/16,yw=1/16)
+( chi1 &lt;- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+data.frame(obs=chi1$observed,exp=chi1$expected)
+gofCI(chi1,digits=3)</code></pre>
+<hr />
+</div>
+</div>
+<div id="lake-association-survey" class="section level2">
+<h2>Lake Association Survey</h2>
+<ol>
+<li>α = 0.05.</li>
+<li>The H<sub>0</sub>: “There is no preference for a communication method (i.e., equal proportions for each method)” versus H<sub>A</sub>: “There is a preference for a communication method (some unequal proportions).”</li>
+<li>A goodness-of-fit test is required because a (i) categorical variable (preference) with four levels from (ii) a single group/population (one lake association) was recorded and (iii) the frequencies in each level are being compared to a theoretical distribution in the null hypothesis.</li>
+<li>The data appear to be part of an observational study with no randomization as it is a voluntary response survey.</li>
+<li>Under the null hypothesis of no preference one would expect the same proportion of individuals in each category. Thus, the expected proportions are the total sample size divided by four (Table 9). Each expected frequency is greater than five individuals; thus, the test statistic below should follow a χ<sup>2</sup> distribution.</li>
+<li>The observed frequencies are in Table 9.</li>
+<li>The χ<sup>2</sup> test statistic is 35.920 with 3 df.</li>
+<li>The p-value for this test statistic is &lt;0.00005.</li>
+<li>The null hypothesis is rejected because the p-value &lt; α.</li>
+<li>There appears to be an uneven distribution among the communication methods indicating that the members have a preference for one or more methods.</li>
+<li>It appears that the members prefer to be contacted via e-mail or by poster and do not want to be contacted via phone (Table 10).</li>
+</ol>
+<p>Table 9: Observed and expected frequencies of respondents preference for mode of communication.</p>
+<pre><code>       obs exp
+mail    47  50
+email   63  50
+phone   17  50
+poster  73  50</code></pre>
+<p>Table 10: Observed, 95% confidence intervals, and expected proportions of respondents preference for mode of communication.</p>
+<pre><code>       p.obs p.LCI p.UCI p.exp
+mail   0.235 0.182 0.298  0.25
+email  0.315 0.255 0.382  0.25
+phone  0.085 0.054 0.132  0.25
+poster 0.365 0.301 0.434  0.25</code></pre>
+<div id="r-appendix-4" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>obs &lt;- c(mail=47,email=63,phone=17,poster=73)
+p.exp &lt;- c(mail=1/4,email=1/4,phone=1/4,poster=1/4)
+( chi1 &lt;- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+data.frame(obs=chi1$observed,exp=chi1$expected)
+gofCI(chi1,digits=3)</code></pre>
+<hr />
+</div>
+</div>
+<div id="fair-coin" class="section level2">
+<h2>Fair Coin?</h2>
+<ol>
+<li>α = 0.01.</li>
+<li>H<sub>0</sub>:“The proportion of heads is 0.50 (a ‘fair’ coins means even numbers of heads and tails)” versus H<sub>A</sub>:“The proportion of heads is NOT 0.50 (an ‘unfair’ coins means uneven numbers of heads and tails)”.</li>
+<li>A goodness-of-fit test is required because (i) a categorical variable (side of coin) with only two levels from (ii) a single group/population (Kerrich’s tosses) was recorded and (iii) the frequency of results is being compared to a theoretical distribution in the null hypothesis.</li>
+<li>An observational study (we can’t make a statement about randomization because that is essentially what this whole test is about).</li>
+<li>The expected proportions are 10000 flips divided by two (for heads and tails; Table 11). From this it is seen that each expected frequency is greater than five; thus, the test statitic should follow a χ<sup>2</sup> distribution.</li>
+<li>The observed frequencies are in Table 11.</li>
+<li>The χ<sup>2</sup> test statistic is 1.796 with 1 df.</li>
+<li>The p-value for this test statistic is 0.1802.</li>
+<li>The H<sub>0</sub> is not rejected because the p-value &gt; α.</li>
+<li>The coin appears to be fair as a head appears in between 49.7% and 51.6% of the coin flips (Table 12).</li>
+</ol>
+<p>Table 11: Observed and expected frequencies of coin flips.</p>
+<pre><code>       obs  exp
+heads 5067 5000
+tails 4933 5000</code></pre>
+<p>Table 12: Observed, 99% confidence intervals, and expected proportions of coin flips.</p>
+<pre><code>      p.obs p.LCI p.UCI p.exp
+heads 0.507 0.494 0.520   0.5
+tails 0.493 0.480 0.506   0.5</code></pre>
+<div id="r-appendix-5" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>obs &lt;- c(heads=5067,tails=10000-5067)
+p.exp &lt;- c(heads=0.5,tails=0.5)
+( chi1 &lt;- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+data.frame(obs=chi1$observed,exp=chi1$expected)
+gofCI(chi1,conf.level=0.99,digits=3)</code></pre>
+<hr />
+</div>
+</div>
+<div id="distribution-of-blood-types" class="section level2">
+<h2>Distribution of Blood Types</h2>
+<ol>
+<li>α = 0.05.</li>
+<li>The H<sub>0</sub>: “The current distribution of blood types is the same as the past distribution – i.e., 0.45, 0.08, 0.44, and 0.03 for A, B, O, and AB, respectively” versus H<sub>A</sub>: “The current distribution of blood types is different from the past distribution.”</li>
+<li>A goodness-of-fit test is required because (ii) a categorical variable (blood type) with four levels from (ii) a single group/population (one hospital) was recorded and (iii) the frequency of results is being compared to a theoretical distribution in the null hypothesis.</li>
+<li>The data appear to be part of an observational study that is not random; rather it is a convenience sample.</li>
+<li>Under the null hypothesis one would expect the current proportions to equal the past proportions. Thus, the expected proportions are the total sample size times the expected proportions (Table 13). From this it is seen that each expected frequency is greater than five. Thus, the test statistic below should follow a χ<sup>2</sup> distribution.</li>
+<li>The observed frequencies are in Table 13.</li>
+<li>The χ<sup>2</sup> test statistic is 17.048 with 3 df.</li>
+<li>The p-value is 0.0007.</li>
+<li>The null hypothesis is rejected because the p-value &lt; α.</li>
+<li>There appears to be a difference in the distribution of current patient’s blood type compared to the past distribution.</li>
+<li>It is apparent that there are slightly more patients with B blood and slightly fewer patients with O blood than there were in the past (Table 14).</li>
+</ol>
+<p>Table 13: Observed and expected frequencies of blood types.</p>
+<pre><code>   obs   exp
+A   83 84.15
+B   29 14.96
+O   67 82.28
+AB   8  5.61</code></pre>
+<p>Table 14: Observed, 95% confidence intervals, and expected proportions of blood types.</p>
+<pre><code>   p.obs p.LCI p.UCI p.exp
+A  0.444 0.374 0.515  0.45
+B  0.155 0.110 0.214  0.08
+O  0.358 0.293 0.429  0.44
+AB 0.043 0.022 0.082  0.03</code></pre>
+<div id="r-appendix-6" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>obs &lt;- c(A=83,B=29,O=67,AB=8)
+p.exp &lt;- c(A=0.45,B=0.08,O=0.44,AB=0.03)
+( chi1 &lt;- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+data.frame(obs=chi1$observed,exp=chi1$expected)
+gofCI(chi1,digits=3)</code></pre>
+<hr />
+</div>
+</div>
+<div id="poll-of-political-support" class="section level2">
+<h2>Poll of Political Support</h2>
+<ol>
+<li>α = 0.05.</li>
+<li>H<sub>0</sub>: “The proportion of party constituents that support the district attorney is 0.65” versus H<sub>A</sub>: “The proportion of party constituents that support the district attorney is NOT 0.65.”</li>
+<li>A goodness-of-fit test is required because (i) a categorical variable (type of support) with only two levels from (ii) a single group/population (party constituents) was recorded and (iii) the frequency results are being compared to a theoretical distribution in the null hypothesis.</li>
+<li>An observational study of n=950 randomly selected party constituents was used.</li>
+<li>Under the null hypothesis the expected proportions are equal to 0.65 for support and 0.35 for don’t support the district attorney. The expected frequencies are these expected proportions muliplied by the sample size (Table 15). From this it is seen that each expected frequency is greater than five. Thus the test statistic below should follow a χ<sup>2</sup> distribution.</li>
+<li>The observed frequencies are in Table 15.</li>
+<li>The χ<sup>2</sup> test statistic is 8.357 with 1 df.</li>
+<li>The p-value for this test statistic is 0.0038.</li>
+<li>The H<sub>0</sub> is rejected because the p-value &lt; α.</li>
+<li>The district attorney appears to have more than 65% support among the party constituents.</li>
+<li>Specifically, one is 95% confident that the proportion of supporters among the party constituents is between 0.665 and 0.723 (Table 16).</li>
+</ol>
+<p>Table 15: Observed and expected frequencies of party constituents that support the district attorney.</p>
+<pre><code>        obs   exp
+support 660 617.5
+dont    290 332.5</code></pre>
+<p>Table 16: Observed, 95% confidence intervals, and expected proportions of party constituents that support the district attorney.</p>
+<pre><code>        p.obs p.LCI p.UCI p.exp
+support 0.695 0.665 0.723  0.65
+dont    0.305 0.277 0.335  0.35</code></pre>
+<div id="r-appendix-7" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>obs &lt;- c(support=660,dont=950-660)
+p.exp &lt;- c(support=0.65,dont=0.35)
+( chi1 &lt;- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+data.frame(obs=chi1$observed,exp=chi1$expected)
+gofCI(chi1,digits=3)</code></pre>
+<hr />
+</div>
+</div>
+<div id="age-distribution-of-deer" class="section level2">
+<h2>Age Distribution of Deer</h2>
+<ol>
+<li>α = 0.10.</li>
+<li>The H<sub>0</sub>: “The distribution of deer in the age-groups follows from a survival rate of 50%” versus H<sub>A</sub>: “The distribution of deer in the age-groups does NOT follow from a survival rate of 50%”.</li>
+<li>A goodness-of-fit test is required because (i) a categorical variable (survived or not) with six levels from (ii) a single group/population (one population of deer) was recorded and (iii) the frequency of results is being compared to a theoretical distribution in the null hypothesis.</li>
+<li>The data appear to be part of an observational study where the individuals were apparently randomly selected.</li>
+<li>The expected frequency for the first group comes from solving for <span class="math inline">\(X\)</span> in $X+(0.5<sup>{1}+0.5</sup>{2}+0.5<sup>{3}+0.5</sup>{4}+0.5^{5})X = $ 253 or 1.96875X = 253 or X = 128.508. The remaining expected frequencies come from applying consecutive survival rates of 0.5 to the successive ages (Table 17). From this it is seen that each expected frequency does NOT contain more than five individuals. However, only one cell has a value less than five and that cell is only one individual short of the recommended value of five. Thus, the test statistic below will likely reasonably follow a χ<sup>2</sup> distribution.</li>
+<li>The observed frequencies are in Table 17.</li>
+<li>The χ<sup>2</sup> test statistic is 4.011 with 5 df.</li>
+<li>The p-value for this test statistic is 0.5478.</li>
+<li>The null hypothesis is not rejected because the p-value &gt; α.</li>
+<li>The observed data appear to be consistent with a survival rate of 50%. This result may also be observed by noting that all expected frequencies are contained within all 95% confidence intervals in Table 18.</li>
+</ol>
+<p>Table 17: Observed and expected frequencies of deer by age category.</p>
+<pre><code>    obs        exp
+0-1 134 128.507937
+1-2  66  64.253968
+2-3  30  32.126984
+3-4  13  16.063492
+4-5   4   8.031746
+5-6   6   4.015873</code></pre>
+<p>Table 18: Observed, 90% confidence intervals, and expected proportions of deer by age category.</p>
+<pre><code>    p.obs p.LCI p.UCI p.exp
+0-1 0.530 0.478 0.581 0.508
+1-2 0.261 0.218 0.309 0.254
+2-3 0.119 0.089 0.156 0.127
+3-4 0.051 0.033 0.079 0.063
+4-5 0.016 0.007 0.035 0.032
+5-6 0.024 0.012 0.045 0.016</code></pre>
+<div id="r-appendix-8" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>obs &lt;- c(&quot;0-1&quot;=134,&quot;1-2&quot;=66,&quot;2-3&quot;=30,&quot;3-4&quot;=13,&quot;4-5&quot;=4,&quot;5-6&quot;=6)
+p.exp &lt;- c(1,0.5,0.5^2,0.5^3,0.5^4,0.5^5)
+( chi1 &lt;- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+data.frame(obs=chi1$observed,exp=chi1$expected)
+gofCI(chi1,conf.level=0.90,digits=3)</code></pre>
+<hr />
+</div>
+</div>
+<div id="trawling-bycatch" class="section level2">
+<h2>Trawling Bycatch</h2>
+<ol>
+<li>α = 0.10.</li>
+<li>H<sub>0</sub>: “The proportion of catch that is King Salmon is 0.10” versus H<sub>A</sub>: “The proportion of catch that is King Salmon is NOT 0.10.”</li>
+<li>A goodness-of-fit test is required because (i) a categorical variable (type of fish) with only two levels from (ii) a single group/population (the catch from that area) was recorded and (iii) the frequency results are being compared to a theoretical distribution in the null hypothesis.</li>
+<li>An observational study of n=1256 randomly selected fish was used.</li>
+<li>Under the null hypothesis the expected proportions are 0.10 for King Salmon and 0.90 for all other fishes (Table 19). From this it is seen that each expected frequency is greater than five. Thus the test statistic below should follow a χ<sup>2</sup> distribution.</li>
+<li>The observed frequencies are in Table 19.</li>
+<li>The χ<sup>2</sup> test statistic is 3.329 with 1 df.</li>
+<li>The p-value is 0.0681.</li>
+<li>The H<sub>0</sub> is rejected because the p-value &lt; α.</li>
+<li>Trawling should be discontinued in this area because it appears that the catch consists of more than 10% king salmon. In fact, one is 90% confident that the proportion of king salmon in this catch is between 0.101 and 0.131 (Table 20).</li>
+</ol>
+<p>Table 19: Observed and expected frequencies of King Salmon in the trawl catch.</p>
+<pre><code>       obs    exp
+kings  145  125.6
+other 1111 1130.4</code></pre>
+<p>Table 20: Observed, 90% confidence intervals, and expected proportions of King Salmon in the trawl catch.</p>
+<pre><code>      p.obs p.LCI p.UCI p.exp
+kings 0.115 0.101 0.131   0.1
+other 0.885 0.869 0.899   0.9</code></pre>
+<div id="r-appendix-9" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>obs &lt;- c(kings=145, other=1256-145)
+p.exp &lt;- c(kings=0.10,other=0.90)
+( chi1 &lt;- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+data.frame(obs=chi1$observed,exp=chi1$expected)
+gofCI(chi1,conf.level=0.90,digits=3)</code></pre>
+<hr />
+</div>
+</div>
+<div id="otter-mortalities" class="section level2">
+<h2>Otter Mortalities</h2>
+<ol>
+<li>α = 0.01.</li>
+<li>The H<sub>0</sub>: “The proportion of females is 0.5 (equal proportions of males and females means no sex bias)” versus H<sub>A</sub>: “The proportion of females is NOT 0.5 (unequal proportions of males and females means there is a sex bias).”</li>
+<li>A goodness-of-fit test is required because (i) a categorical variable (sex) with two levels from (ii) a single group/population (road-killed otters in Britain) was recorded and (iii) the frequency of individuals in each sex is being compared to a theoretical distribution.</li>
+<li>The data appear to be part of an observational study that is not random; rather it is a convenience collection.</li>
+<li>Under the null hypothesis of no sex-bias one would expect the same proportion of individuals in each level. Thus, the expected frequencies are the sample size divided by 2 (Table 21). From this it is seen that each expected frequency has more than five individuals. Thus, the test statistic below should follow a χ<sup>2</sup> distribution.</li>
+<li>The observed frequencies are in Table 21.</li>
+<li>The χ<sup>2</sup> test statistic is 9.749 with 1 df.</li>
+<li>The p-value for this test statistic is 0.0018.</li>
+<li>The null hypothesis is rejected because the p-value &lt; α.</li>
+<li>There appears to be a sex bias among the road-killed otters.</li>
+<li>It appears that there are more male than female otters killed on the roads in Great Britain. (Table 22).</li>
+</ol>
+<p>Table 21: Observed and expected frequencies of road-killed otters by sex.</p>
+<pre><code>       obs.Freq   exp
+female      296 336.5
+male        377 336.5</code></pre>
+<p>Table 22: Observed, 99% confidence intervals, and expected proportions of road-killed otters by sex.</p>
+<pre><code>       p.obs p.LCI p.UCI p.exp
+female  0.44 0.391 0.489   0.5
+male    0.56 0.511 0.609   0.5</code></pre>
+<div id="r-appendix-10" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>om &lt;- read.csv(&quot;data/OtterMort.csv&quot;)
+obs &lt;- xtabs(~sex,data=om)
+p.exp &lt;- c(female=0.5,male=0.5)
+( chi1 &lt;- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+data.frame(obs=chi1$observed,exp=chi1$expected)[,-1]
+gofCI(chi1,conf.level=0.99,digits=3)</code></pre>
+<hr />
+</div>
+</div>
+<div id="randomness-of-cd-player" class="section level2">
+<h2>Randomness of CD Player</h2>
+<ol>
+<li>α = 0.05.</li>
+<li>The H<sub>0</sub>: “The proportion of times Beethoven will be played is 0.67” (note that 40 of the 60 CDs are Beethoven) versus H<sub>A</sub>: “The proportion of times Beethoven will be played is NOT 0.67.”</li>
+<li>A goodness-of-fit test is required because (i) a categorical variable (which CD was played) with only two levels from (ii) a single group/population (this CD changer) was recorded and (iii) the frequency of results is being compared to a theoretical distribution in the null hypothesis.</li>
+<li>This is an experiment with random allocation of individuals (CDs to slots in the player).</li>
+<li>Under the null hypothesis the expected frequencies are 40 Beethoven and 20 Taj Mahal (Table 23). Each of these expected frequencies are greater than five individuals. Thus, the test statistic computed below should reasonably follow a χ<sup>2</sup>-distribution.</li>
+<li>The observed frequencies are in Table 23.</li>
+<li>The χ<sup>2</sup> test statistic is 0.605 with 1 df.</li>
+<li>The p-value is 0.4367.</li>
+<li>The H<sub>0</sub> is not rejected because the p-value &gt; α.</li>
+<li>The randomization function on the CD player appears to choose songs randomly (Table 24).</li>
+</ol>
+<p>Table 23: Observed and expected frequencies of CDs seleted by a CD disc player.</p>
+<pre><code>  obs.Freq      exp
+B       63 66.66667
+T       37 33.33333</code></pre>
+<p>Table 24: Observed, 95% confidence intervals, and expected proportions of CDs seleted by a CD disc player.</p>
+<pre><code>  p.obs p.LCI p.UCI p.exp
+B  0.63 0.532 0.718 0.667
+T  0.37 0.282 0.468 0.333</code></pre>
+<div id="r-appendix-11" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>cd &lt;- read.csv(&quot;data/CDPlayer.csv&quot;)
+obs &lt;- xtabs(~result,data=cd)
+p.exp &lt;- c(B=40/60,T=20/60)
+( chi1 &lt;- chisq.test(obs,p=p.exp,rescale.p=TRUE,correct=FALSE) )
+data.frame(obs=chi1$observed,exp=chi1$expected)[,-1]
+gofCI(chi1,digits=3)</code></pre>
+<hr />
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

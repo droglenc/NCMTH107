@@ -1,0 +1,140 @@
+---
+layout: page
+title: "Review Exercise Key"
+subtitle: "1-Sample Z-Test"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="length-of-northern-pike" class="section level2">
+<h2>Length of Northern Pike</h2>
+<ol>
+<li>α = 0.05. (<em>Note that this is obtained from working backwards from the 95% confidence statement.</em>)</li>
+<li>H<sub>0</sub>: μ = 600, H<sub>A</sub>: μ ≠ 600 where μ is the mean length of all pike in Chivyrkui Bay, Lake Baikal.</li>
+<li>A one-sample Z-test is required because a (i) quantitative variable (length) was measured, (ii) individuals from only one group/population were sampled (Chivyrkui Bay, Lake Baikal), and (iii) σ is known (given in the background).</li>
+<li>Observational study with n = 30 pike. No obvious randomization.</li>
+<li>n = 30 ≥ 15 and the population is not strongly skewed (background says “slightly”" right-skewed); σ is known.</li>
+<li>x¯ = 656.1.</li>
+<li>Z = <span class="math inline">\(\frac{656.1-600}{\frac{130}{\sqrt{30}}}\)</span> = 2.363.</li>
+<li>The p-value is 0.0181.</li>
+<li>Reject H<sub>0</sub> because the p-value&lt;α.</li>
+<li>The true mean length of all pike in Lake Baikal appears to be greater than 600 mm. (<em>You strictly tested for a difference, but the x¯ clearly shows that the mean length is greater than 600 mm.</em>)</li>
+<li>One is 95% confident that the true mean length of all pike in Lake Baikal is between 609.6 and 702.6 mm (from 656.1 ± 1.96*23.74, 656.1 ± 46.53). This further supports that the mean length of Lake Baikal pike is greater than 600 mm.</li>
+</ol>
+<div id="r-appendix" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>( pval &lt;- 2*distrib(656.1,mean=600,sd=130/sqrt(30),lower.tail=FALSE) )
+( zstar &lt;- distrib(0.05/2,type=&quot;q&quot;,lower.tail=FALSE) )</code></pre>
+<hr />
+</div>
+</div>
+<div id="chronic-myofascial-pain-syndrome" class="section level2">
+<h2>Chronic Myofascial Pain Syndrome</h2>
+<ol>
+<li>α = 0.10.</li>
+<li>H<sub>0</sub>: μ = 2.5, H<sub>A</sub>: μ &gt; 2.5 where μ is the mean length of pain.</li>
+<li>A one-sample Z-test is required because (i) a quantitative variable (length of pain) was measured, (ii) individuals from only one group/population were sampled (patients with this syndrome), and (iii) σ is known (given in the background).</li>
+<li>An observational study that is not obviously random was used.</li>
+<li>The population is normally distributed (given in the background) and σ is known (= 0.5). Thus, the test statistic below should follow a normal distribution.</li>
+<li>x¯ = 2.77 years (Table 1).</li>
+<li>Z = 1.31 (Table 1).</li>
+<li>p-value = 0.0957 (Table 1).</li>
+<li>Reject H<sub>0</sub> because the p-value&lt;α.</li>
+<li>It appears that the mean duration of pain for all patients may be longer than 2.5 years.</li>
+<li>One is 90% confident that the mean duration of pain for all patients is more than 2.51 years (Table 1), which further supports (just barely) that the mean is greater than 2.5.</li>
+</ol>
+<p>Table 1: Results of 1-Sample Z-Test for duration of pain for patients with chronic myofascial pain syndrome.</p>
+<pre><code>z = 1.3064, n = 6.000, Std. Dev. = 0.500, Std. Dev. of the sample mean = 0.204,
+p-value = 0.09571
+90 percent confidence interval:
+ 2.505071      Inf 
+sample estimates:
+mean of df$pain 
+       2.766667 </code></pre>
+<div id="r-appendix-1" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>df &lt;- read.csv(&quot;data/Pain.csv&quot;)
+( pain.z &lt;- z.test(df$pain,mu=2.5,alt=&quot;greater&quot;,sd=0.5,conf.level=0.90) )</code></pre>
+<hr />
+</div>
+</div>
+<div id="cholesterol-levels" class="section level2">
+<h2>Cholesterol Levels</h2>
+<ol>
+<li>α = 0.10.</li>
+<li>H<sub>0</sub>: μ = 190, H<sub>A</sub>: μ ≠ 190 where μ is the mean cholesterol level of Asian women.</li>
+<li>A one-sample Z-test is required because (i) a quantitative variable (cholesterol level) was measured, (ii) individuals from only one group/population were sampled (Asian women aged 21-40 that had recently immigrated to the U.S.), and (iii) σ is known (given in the background).</li>
+<li>An observational study with randomly selected women was used.</li>
+<li>n = 40 ≥ 30 and σ is known.</li>
+<li>x¯ = 180.55 mg/dl (Table 2).</li>
+<li>Z = -1.49 (Table 2).</li>
+<li>p-value = 0.1352 (Table 2).</li>
+<li>The H<sub>0</sub> is not rejected because the p-value&gt;α.</li>
+<li>The true mean cholesterol level for all Asian women aged 21-40 that recently immigrated to the U.S. does not appear to be different than 190 mg/dl.</li>
+<li>One is 90% confident that the mean cholesterol level for all Asian women aged 21-40 that recently immigrated to the U.S. is between 170.15 and 190.96 mg/dl (Table 2), which further supports (just barely) that the mean is not different from 190 mg/dl.</li>
+</ol>
+<p>Table 2: Results of 1-Sample Z-Test for cholesterol level of Asian Women.</p>
+<pre><code>z = -1.4938, n = 40.000, Std. Dev. = 40.000, Std. Dev. of the sample mean =
+6.325, p-value = 0.1352
+90 percent confidence interval:
+ 170.1495 190.9555 
+sample estimates:
+mean of df$cholest 
+          180.5525 </code></pre>
+<div id="r-appendix-2" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>df &lt;- read.csv(&quot;data/Cholest.csv&quot;)
+( ch.z &lt;- z.test(df$cholest,mu=190,sd=40,conf.level=0.90) )</code></pre>
+<hr />
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

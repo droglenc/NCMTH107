@@ -1,0 +1,181 @@
+---
+title: "Review Exercise Key"
+subtitle: "Data Production"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3
+    fig_width: 3.5
+    self_contained: false
+    lib_dir: zlibs
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/RE/zRevExAns/")
+source("../../../rhelpers/rhelpers.R")
+modHTML("DataProduction")
+```
+
+----
+
+## Elephant Seals
+
+1. The health of the seals is the response variable.
+1. The two factors are water temperature and seal origin (i.e., wild or domestic).
+1. There are two levels of water temperature and two levels of seal origin.
+1. There are four total treatments.
+1. There are ten seals per treatment.
+1. A seal is an individual/replicate.
+1. I would randomly select ten of the wild seals for the <47F treatment (with the other ten put in the >47F treatment) and then do the same for the domestic seals. Thus, I would generate two random selections of ten numbers from twenty numbers.
+```{r prompt=TRUE, comment=""}
+wseals <- sample(20)
+wseals[1:10]  # wild <47F
+wseals[11:20] # wild >47F
+dseals <- sample(20)
+dseals[1:10]  # domestic <47F
+dseals[11:20] # domestic >47F
+```
+
+This allocation could be visualized in the following table (note that the "X" columns are simply counters for individuals allocated to that treatment).
+```{r echo=FALSE, prompt=TRUE, comment=""}
+data.frame(Treatment=1:4,
+           Seal=rep(c("Wild","Domestic"),each=2),
+           Temperature=rep(c("<47",">47"),2),
+           rbind(wseals[1:10],wseals[11:20],dseals[1:10],dseals[11:20]))
+```
+
+----
+
+## Sugar Beets
+
+1. The two factors are plowing depth and amount of fertilizer.
+1. There are three levels of plowing depth and two levels of fertilizer amount.
+1. There are six total treatments.
+1. There would be six plots in each treatment.
+1. A plot or field is the individual or replicate in this experiment.
+1. The response variable is the "harvest" of sugar beets.
+1. I would allocate plots by assigning each plot a unique number from between 1 and 36 and then randomly ordering the numbers between 1 and 36. Plots corresponding to the first six numbers would go in the first treatment, the next six in the second treatment, and so on. The random numbers would be drawn in R with
+```{r prompt=TRUE, comment=""}
+rplots <- sample(36)
+rplots[1:6]  # 10cm, no fert
+rplots[7:12] # 10cm, 3kg fert
+# etc. see below
+```
+
+This allocation could be visualized in the following table (note that the "X" columns are simply counters for individuals allocated to that treatment).
+```{r echo=FALSE, prompt=TRUE, comment=""}
+data.frame(Treatment=1:6,
+           Depth=rep(c("10 cm","17 cm","25 cm"),each=2),
+           Temperature=rep(c("No fert","3kg fert"),3),
+           rbind(rplots[1:6],rplots[7:12],rplots[13:18],
+                 rplots[19:24],rplots[25:30],rplots[31:36]))
+```
+
+----
+
+## Translocating Rabbits
+
+1. The response variable is whether the rabbit survives or not.
+1. The two factors are tranquilization and acclimatization.
+1. There are two levels for tranquilization (tranquilized, not tranquilized) and two levels for acclimatization (allowed to acclimate, not allowed to acclimate).
+1. There are four treatments.
+1. A rabbit is a replicate or individual in this experiment.
+1. There are 16 rabbits in each treatment.
+1. I would allocate rabbits by assigning each rabbit a unique number from between 1 and 64 and then randomly ordering the numbers between 1 and 64. Rabbits corresponding to the first sixteen numbers would go in the first treatment, the next sixteen in the second treatment, and so on. The random numbers would be drawn in R with
+```{r prompt=TRUE, comment=""}
+rabbits <- sample(64)
+rabbits[1:16]  # tranquilized, allowed
+rabbits[17:32] # tranquilized, not allowed
+# etc. see below
+```
+
+This allocation could be visualized in the following table (note that the "X" columns are simply counters for individuals allocated to that treatment).
+```{r echo=FALSE, prompt=TRUE, comment=""}
+data.frame(Treatment=1:4,
+           Tranquilized=rep(c("Yes","No"),each=2),
+           Acclimated=rep(c("Yes","No"),2),
+           rbind(rabbits[1:16],rabbits[17:32],rabbits[33:48],rabbits[49:64]))
+```
+
+----
+
+## Eating Habits of Deer
+
+1. The response variable is the health of the deer.
+1. The factor is location and what the deer ate (*combined together as one factor as there is not a complete crossing of levels for two factors*).
+1. There are four levels for the one factor.
+1. There are four treatments.
+1. There are 16 deer per treatment.
+1. A deer is the individual or replicate in this experiment.
+1. I would allocate deer by assigning each deer a unique number from between 1 and 64 and then randomly ordering the numbers between 1 and 64. Deer corresponding to the first sixteen numbers would go in the first treatment, the next sixteen in the second treatment, and so on. The random numbers would be drawn in R with
+```{r prompt=TRUE, comment=""}
+deer <- sample(64)
+deer[1:16]  # farm w/ strict diet
+deer[17:32] # island in prairies
+# etc. see below
+```
+
+This allocation could be visualized in the following table (note that the "X" columns are simply counters for individuals allocated to that treatment).
+```{r echo=FALSE, prompt=TRUE, comment=""}
+data.frame(Treatment=1:4,
+           Group=c("Farm, strict","Island, prairie","Island, hardwood","Island, strict"),
+           rbind(deer[1:16],deer[17:32],deer[33:48],deer[49:64]))
+```
+
+----
+
+## Chemistry Reaction
+
+1. The response variable is the yield of the new product.
+1. The two factors are temperature and stirring rate.
+1. There are two levels of temperature and three levels of stirring rates.
+1. There are six treatments in this experiment.
+1. There are five vessels allocated to each treatment.
+1. An individual or replicate is a vessel.
+1. I would allocate vessels by assigning each a unique number from between 1 and 30 and then randomly ordering the numbers between 1 and 30. Vessles corresponding to the first five numbers would go in the first treatment, the next five in the second treatment, and so on. The random numbers would be drawn in R with
+```{r prompt=TRUE, comment=""}
+vessels <- sample(30)
+vessels[1:5]  # 50C, 60rpm
+vessels[6:10] # 50C, 90rpm
+# etc. see below
+```
+
+This allocation could be visualized in the following table (note that the "X" columns are simply counters for individuals allocated to that treatment).
+```{r echo=FALSE, prompt=TRUE, comment=""}
+data.frame(Treatment=1:6,
+           Temp=rep(c("50C","60C"),each=3),
+           Stir=rep(c("60 rpm","90 rpm","120 prm"),2),
+           rbind(vessels[1:5],vessels[6:10],vessels[11:15],
+                 vessels[16:20],vessels[21:25],vessels[26:30]))
+```
+
+----
+
+## Diet, Exercise, Blood Pressure
+
+1. The two factors are calcium and exercise.
+1. There are two levels of calcium and two levels of exercise.
+1. There are four treatments.
+1. The response variable is the blood pressure reading.
+1. There are eight male subjects per treatment.
+1. A male subject is the individual or replicate in this experiment.
+1. I would allocate mean by assigning each a unique number from between 1 and 32 and then randomly ordering the numbers between 1 and 32. Men corresponding to the first eight numbers would go in the first treatment, the next eight in the second treatment, and so on. The random numbers would be drawn in R with
+```{r prompt=TRUE, comment=""}
+rmales <- sample(32)
+rmales[1:8]  # Calcium, exercise
+rmales[9:16] # Calcium, no exercise
+# etc. see below
+```
+
+This allocation could be visualized in the following table (note that the "X" columns are simply counters for individuals allocated to that treatment).
+```{r echo=FALSE, prompt=TRUE, comment=""}
+data.frame(Treatment=1:4,
+           Pill=rep(c("Calcium","Placebo"),each=2),
+           Exercise=rep(c("Yes","No"),2),
+           rbind(rmales[1:8],rmales[9:16],rmales[17:24],rmales[25:32]))
+```
+
+----

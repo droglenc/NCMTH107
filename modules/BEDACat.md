@@ -41,7 +41,6 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 ## Practice
 
 * [Exercises](CE/BEDACat_CE1) ([*more as time permits*](CE/BEDACat_CE2)) ... [ANSWER KEY](CE/KEY_BEDACat_CE)
-* [Review Exercises](RE/BEDACat_RevEx)
 
 ----
 

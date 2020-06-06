@@ -1,0 +1,89 @@
+---
+layout: page
+title: "Review Exercise Key"
+subtitle: "Hypothesis Testing"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="computing-p-values-1" class="section level2">
+<h2>Computing P-Values 1</h2>
+<p>The p-value is <span class="math inline">\(p=0.0179\)</span>, reject <span class="math inline">\(H_{O}\)</span>.</p>
+<pre class="r"><code>( distrib(12.1,mean=10,sd=5/sqrt(25),lower.tail=FALSE) )</code></pre>
+<hr />
+</div>
+<div id="computing-p-values-2" class="section level2">
+<h2>Computing P-Values 2</h2>
+<p>The p-value is <span class="math inline">\(p=0.0142\)</span>, reject <span class="math inline">\(H_{O}\)</span>.</p>
+<pre class="r"><code>( distrib(43.8,mean=50,sd=20/sqrt(50),lower.tail=TRUE) )</code></pre>
+<hr />
+</div>
+<div id="computing-p-values-3" class="section level2">
+<h2>Computing P-Values 3</h2>
+<p>The p-value is <span class="math inline">\(p=0.1824\)</span>, DNR <span class="math inline">\(H_{O}\)</span>.</p>
+<pre class="r"><code>( 2*distrib(98,mean=100,sd=15/sqrt(100),lower.tail=TRUE) )</code></pre>
+<hr />
+</div>
+<div id="bod-in-effluent" class="section level2">
+<h2>BOD in Effluent</h2>
+<ol>
+<li><span class="math inline">\(H_{O}:\mu=2200\)</span> vs. <span class="math inline">\(H_{O}:\mu&gt;2200\)</span>.</li>
+<li><span class="math inline">\(z=\frac{2504-2200}{\frac{1200}{\sqrt{118}}}=2.75\)</span>.</li>
+<li>The p-value is .</li>
+<li>The p-value is less than <span class="math inline">\(\alpha\)</span>, therefore <span class="math inline">\(H_{O}\)</span> is rejected.</li>
+<li>There is evidence that the mean BOD level is greater than 2200 lbs/day. Thus, the plant managers will need to make corrective actions.</li>
+</ol>
+<div id="r-appendix" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>( pval &lt;- distrib(2504,mean=2200,sd=1200/sqrt(118),lower.tail=FALSE) )</code></pre>
+<hr />
+</div>
+</div>
+<div id="medical-school-admissions" class="section level2">
+<h2>Medical School Admissions</h2>
+<ol>
+<li><span class="math inline">\(H_{O}:\mu=3.7\)</span> vs. <span class="math inline">\(H_{A}:\mu&lt;3.7\)</span>.</li>
+<li><span class="math inline">\(z=\frac{3.6-3.7}{\frac{0.35}{\sqrt{40}}}=-1.807016\)</span>.</li>
+<li>The p-value is .</li>
+<li>The p-value is less than <span class="math inline">\(\alpha\)</span>, therefore <span class="math inline">\(H_{O}\)</span> is rejected.</li>
+<li>It appears that the mean gpa in non-science courses is less than 3.7. Thus, the administrator’s concern was warranted.</li>
+</ol>
+<div id="r-appendix-1" class="section level3">
+<h3>R Appendix</h3>
+<pre class="r"><code>( pval &lt;- distrib(3.6,mean=3.7,sd=0.35/sqrt(40)) )</code></pre>
+<hr />
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
