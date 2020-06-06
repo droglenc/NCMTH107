@@ -24,7 +24,6 @@ source("../../rhelpers/knitr_setup.R")
 ----
 
 ## Associations II
-
 For each situation below, identify (a) the response variable (if possible) and (b) whether you would expect a positive, negative, or no (neutral) association between the pair of variables.  Explain your reasoning for both answers.
 
 1. Proportion of population with a post-secondary education and proportion of the population that have been incarcerated.
@@ -36,4 +35,62 @@ For each situation below, identify (a) the response variable (if possible) and (
 
 ----
 
-## MORE EXERCISES HERE
+## Plastic Waste and GDP
+<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/plastic_bales.jpeg" alt="Plastic Waste" class="img-right">
+Use the figure below to perform a bivariate EDA between the per capita plastic waste generation rate (kg of plastic waste per person per day) and gross domestic product (GDP) per capita (in 2011 international dollars) measured for 148 countries in 2010.[^plasticsdata]
+
+```{r echo=FALSE,fig.width=3.5,fig.height=4.5}
+plastics <- read.csv("plastics1.csv") %>%
+  janitor::clean_names() %>%
+  mutate(year=as.numeric(year)) %>%
+  rename(waste=4,gdp=5) %>%
+  filter(year==2010,!is.na(waste),!is.na(gdp))
+contcodes <- read.csv("https://datahub.io/JohnSnowLabs/country-and-continent-codes-list/r/country-and-continent-codes-list-csv.csv")
+plastics <- left_join(plastics,contcodes,by=c("code"="Three_Letter_Country_Code"))
+
+ggplot(data=plastics,mapping=aes(x=gdp,y=waste)) +
+  geom_point(aes(fill=Continent_Name),pch=21,color="black",size=2) +
+  scale_x_continuous(labels=scales::dollar) +
+  ggpubr::stat_cor(aes(label=..r.label..),r.digits=3,cor.coef.name="r",
+                   label.x.npc=0.8) +
+  labs(x="GDP per Capita",y="Plastic Waste (kg per person per day)",
+       fill="") +
+  theme_NCStats() +
+  theme(legend.position="bottom",aspect.ratio=1)
+```
+
+----
+
+## Rates of Drinking Alcohol
+<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/alcohol.jpg" alt="Alcohol Drinks" class="img-right">
+Use the figure below to perform a bivariate EDA between the percents of men and women who drank alcohol in the last year as recorded for 148 countries in 2010.[^plasticsdata]
+
+```{r echo=FALSE,fig.width=3.5,fig.height=4.5}
+drink <- read.csv("drinking.csv") %>%
+  janitor::clean_names() %>%
+  mutate(year=as.numeric(year)) %>%
+  rename(males=4,females=5) %>%
+  filter(year==2010,!is.na(males),!is.na(females)) %>%
+  left_join(contcodes,by=c("code"="Three_Letter_Country_Code"))
+
+ggplot(data=drink,mapping=aes(x=females,y=males)) +
+  geom_point(aes(fill=Continent_Name),pch=21,color="black",size=2) +
+  scale_x_continuous(labels=scales::percent_format(scale=1)) +
+  scale_y_continuous(labels=scales::percent_format(scale=1)) +
+  coord_cartesian(xlim=c(0,100),ylim=c(0,100)) +
+  geom_abline(slope=1,intercept=0,color="lightgray",linetype="dashed") +
+  ggpubr::stat_cor(aes(label=..r.label..),r.digits=3,cor.coef.name="r") +
+  labs(x="% Females Drank Alcohol in Last Year",
+       y="% Males Drank Alcohol in Last Year)",
+       fill="") +
+  theme_NCStats() +
+  theme(legend.position="bottom",aspect.ratio=1)
+```
+
+----
+
+### Footnotes
+
+[^plasticsdata]: These data are originally from [this website](https://ourworldindata.org/grapher/per-capita-plastic-waste-vs-gdp-per-capita).
+
+[^drinkingdata]: These data are originally from [this website](https://ourworldindata.org/grapher/males-vs-females-who-drank-alcohol-in-last-year).
