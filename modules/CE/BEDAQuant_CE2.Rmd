@@ -87,6 +87,8 @@ ggplot(data=drink,mapping=aes(x=females,y=males)) +
   theme(legend.position="bottom",aspect.ratio=1)
 ```
 
+----
+
 ## Metals in Topsoil
 <img src="zimgs/topsoil.jpg" alt="Topsoil" class="img-right">
 The concentration of cadmium and copper in the topsoil of 115 15mX15m plots along the river Meuse in the village Stein in New Zealand was recorded by van Rijn and Rikken. Use the scatterplot below to describe the bivariate relationship between these two variables.
@@ -107,7 +109,7 @@ ggplot(data=meuse,mapping=aes(x=cadmium,y=copper)) +
 
 Researchers at Chevrolet attempted to determine the relationship between gas mileage (MPG) of Luminas in the city (CITY) and on the highway (HIGHWAY). Their results are shown below. Use this information to write a brief description of this bivariate relationship.
 
-```{r ScatLumina, echo=FALSE}
+```{r ScatLumina, echo=FALSE,fig.height=3.5,fig.width=3.5}
 lum <- data.frame(HMPG=c(30,29,29,29,28,28,27,27,27,26,26,26,26,26,25,25,25,24,24,24,24,23,23,23,22,22,22,22,21,21,21,20,20,20),
                   CMPG=c(26,26,25,22,23,25,24,23,21,23,22,21,20,19,19,20,21,22,21,19,17,18,19,20,19,18,17,16,17,18,19,18,17,16))
 ggplot(data=lum,mapping=aes(x=HMPG,y=CMPG)) +
