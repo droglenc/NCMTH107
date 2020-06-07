@@ -44,6 +44,117 @@ css: "/css/modules.css"
 </ol>
 <hr />
 </div>
+<div id="fat-intake-and-breast-cancer" class="section level2">
+<h2>Fat Intake and Breast Cancer</h2>
+<p><img src="zimgs/fat_intake.jpg" alt="Fat Intake" class="img-right"> <a href="http://cancerres.aacrjournals.org/content/canres/35/11_Part_2/3374.full.pdf">Carroll (1975)</a> examined the relationship between per capita consumption of animal fat (g/day; <code>AnimFatI</code>) and age-adjusted death rate from breast cancer (<code>AgeAdjDe</code>) for 39 countries. Her goal was to determine if variability in the breast cancer death rate could be explained by the amount of fat consumed. The data for their study are found in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/CancerFat.csv">CancerFat.csv</a>. Load these data into R and produce results that can be used to answer the questions below.</p>
+<ol>
+<li>Which variable is the response variable?</li>
+<li>What is an individual in this study?</li>
+<li>In terms of the variables of this problem, what is the equation of the best-fit line?</li>
+<li>In terms of the variables of this problems, interpret the value of the slope.</li>
+<li>If country A consumes 4 g/day less animal fat than country B, how much different will the predicted age adjusted death rate due to breast cancer be for country A?</li>
+<li>What is the predicted age adjusted death rate due to breast cancer for a country that consumes 170 g/day of animal fat?</li>
+<li>What is the residual for a country that consumes 90 g/d of animal fat and has an age adjusted death rate due to breast cancer of 14.5?</li>
+<li>What is the correlation coefficient between the age adjusted death rate and the intake of animal fat?</li>
+<li>How much of the variability in a country’s age adjusted death rate due to breast cancer is explained by knowing the value of its animal fat intake?</li>
+<li>Can it be said that an increase in intake of animal fat is the cause for an increase in the age adjusted death rate due to breast cancer? Why or why not?</li>
+</ol>
+<hr />
+</div>
+<div id="willow-flycatcher-migration" class="section level2">
+<h2>Willow Flycatcher Migration</h2>
+<p><img src="zimgs/willow_flycatcher.jpg" alt="Willow Flycatcher" class="img-right"> <a href="https://www.fs.fed.us/rmrs/publications/migration-willow-flycatcher-along-middle-rio-grande">Yong and Finch (1997)</a> hypothesized that larger Willow Flycatchers (<em>Empidonax traillii</em>) migrated up the Middle Rio Grande River earlier than small willow flycatchers. To test this hypothesis they captured flycatchers on several days during their migration and measured the wing length (mm; an index of overall body size) of each bird. They recorded the date that the bird was captured as a Julian date (days since Jan. 1). The results of their study are found in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/Flycatcher.csv">Flycatcher.csv</a>. Load these data into R and produce results that can be used to answer the questions below.</p>
+<ol>
+<li>What is the explanatory variable?</li>
+<li>What is the response variable?</li>
+<li>In terms of the variables of this problem, what is the equation of the best-fit line?</li>
+<li>In terms of the variables of this problem, interpret the value of the intercept.</li>
+<li>In terms of the variables of this problem, interpret the value of the slope.</li>
+<li>How much different do you expect the wing length to be ten days later?</li>
+<li>What is the predicted wing length on day 180?</li>
+<li>What is the residual for a bird with wing length 66.5 on day 151?</li>
+<li>What proportion of the variability in wing length is explained by knowing the date?</li>
+<li>What is the correlation coefficient between wing length and date?</li>
+<li>Comment on the assumptions of the linear regression.</li>
+</ol>
+<hr />
+</div>
+<div id="red-imported-fire-ants-and-deer-fawns" class="section level2">
+<h2>Red-Imported Fire Ants and Deer Fawns</h2>
+<p><img src="zimgs/RIFA.jpg" alt="RIFA" class="img-right"> <a href="http://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1047&amp;context=ncfwrustaff">Allen <em>et al.</em> (1997)</a> investigated the impact of the density of red-imported fire ants (<em>Solenopsis invicta</em>; RIFA) on the recruitment of white-tailed deer (<em>Odocoileus virginianus</em>) fawns (an index of does to fawns). A modified version of their results are found in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/RIFA.csv">RIFA.csv</a>. Load these data into R and produce results that can be used to answer the questions below.</p>
+<ol>
+<li>What is the response variable?</li>
+<li>What is the explanatory variable?</li>
+<li>In terms of the variables of this problem, what is the equation of the best-fit line?</li>
+<li>In terms of the variables of this problem, interpret the value of the slope.</li>
+<li>If the RIFA index increases by 500, how much different do you expect fawn recruitment to be?</li>
+<li>What is the predicted fawn recruitment when the RIFA index is 1700?</li>
+<li>What is the residual when the RIFA index is 2700 and fawn recruitment is 0.3?</li>
+<li>What is the correlation coefficient between RIFA and fawn recruitment?</li>
+<li>What proportion of the variability in fawn recruitment is explained by knowing the RIFA index?</li>
+<li>Comment on the assumptions in this regression.</li>
+</ol>
+<hr />
+</div>
+<div id="math-assessments" class="section level2">
+<h2>Math Assessments</h2>
+<p><img src="zimgs/math_exam.jpg" alt="Math Exam" class="img-right"> All incoming freshmen are required to take a math assessment test to determine which math classes they should take. Sometimes pre-registering students will register before taking the assessment. To make the best possible course choices for these students, the adviser would like to predict their assessment score (<code>ASSESS</code>) based on their math ACT scores (<code>ACT</code>). The ACT score and assessment score from 72 freshmen from 2003 are stored in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/NCAssess.csv">NCAssess.csv</a>. Load these data into R and produce results that can be used to answer the questions below.</p>
+<ol>
+<li>What is the explanatory variable?</li>
+<li>In terms of ACT and Assessment test scores, what does the value of the slope mean?</li>
+<li>Mary Lamb had an ACT score of 40. Predict her assessment score.</li>
+<li>John Tukey had an ACT score of 19. Predict his assessment score.</li>
+<li>John Tukey actually scored a 15 on his assessment test. Calculate his residual?</li>
+<li>What proportion of the variability in assessment score is explained by knowing the ACT score?</li>
+<li>Do you think that these results provide a useful predictor of math assessment scores in cases where those scores are not available but ACT scores are? Explain.</li>
+<li>What are the two most important assumptions in a regression analysis. Are these violated for this data set? Why or why not?</li>
+</ol>
+<hr />
+</div>
+<div id="archiving-dna-tissue" class="section level2">
+<h2>Archiving DNA Tissue</h2>
+<p><img src="zimgs/DNA.jpg" alt="DNA" class="img-right"> <a href="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/ajcp/94/1/10.1093/ajcp/94.1.49/2/ajcpath94-0049.pdf?Expires=1497290123&amp;Signature=d6mTV1kk347TuG~YpH5RH8BhoBxFngQ7HzeoXVSXAMRXS4g8EWV7-IpnWVEDbhSZC1e4pi8tvl2CVtyAcW4fIkf7vWqeN7PdKOeuZaiW9xL6Qn-Vv4ne1aQHfv~~duVdSiNKU6GXRQJJMBp4FAmFyk9mYfZcdj855McVJBcrIOwcVCrrKOqHKwE~5~uEzZTIXmdBNWhuthrFV~kHo~Lu9xvWxngmtw1x8UsCJwGJHQc5NAbK9bZf5~qaGRUliBETjGTyV7CiD2kQ6Ig7FcnCqJmt7YU7MgpTczi9wFd~uez0ko-0Vx1Bdlrf620aIbXOFaZDne2iRfr55bEByROGYQ__&amp;Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q">Suit and Bauer (1990)</a> examined DNA indices obtained from fresh and frozen tissue samples with the goal of determining if fresh values could be predicted from frozen values. The data for their study are found in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/DNA.csv">DNA.csv</a>. Load these data into R and produce results that can be used to answer the questions below. Note that one outlier should be excluded from the analysis.</p>
+<ol>
+<li>What did the researchers consider as the response variable?</li>
+<li>What is the equation of the best-fit line in terms of the variables of the problem?</li>
+<li>Interpret the value of the slope in terms of the variables of the problem.</li>
+<li>What is the predicted fresh index if the frozen index is 4.05?</li>
+<li>What is the residual for a fresh index of 2.1 and a frozen index of 2.2?</li>
+<li>What proportion of the variability in the fresh index is explained by knowing the frozen index?</li>
+<li>What is the correlation between the fresh and frozen indices?</li>
+<li>What are the two major assumptions of regression and do they look like they’ve been met with these data (be specific!)?</li>
+</ol>
+<hr />
+</div>
+<div id="fawn-recruitment-and-precipitation" class="section level2">
+<h2>Fawn Recruitment and Precipitation</h2>
+<p><img src="zimgs/fawn.jpg" alt="Fawns" class="img-right"> Wildlife ecologist in Texas wanted to determine if the amount of precipitation could explain some of the variability observed in the number of fawns born to each doe <a href="http://www.jstor.org/stable/3802741?seq=1#page_scan_tab_contents">(Ginnett and Young 2000)</a>. Because Texas has many different climatic regions, the state was broken down into eight precipitation zones, and the mean precipitation for each zone over a period of five years was calculated. Furthermore, the researchers measured the mean number of fawns born per 100 does for each of these five years. The data for their study are found in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/Deer1.csv">Deer1.csv</a>. Load these data into R and produce results that can be used to answer the questions below.</p>
+<ol>
+<li>Express the equation of the best-fit line in terms of the variables of the problem.</li>
+<li>Interpret the slope of the best-fit line in terms of the variables.</li>
+<li>If the mean precipitation in an area were 1500 mm, how many fawns per 100 does would you expect?</li>
+<li>If a precipitation zone has a mean precipitation of 1050 mm and an average of 37 fawns per 100 does, what is the residual of this zone?</li>
+<li>What is the correlation coefficient between mean no. of fawns per 100 does and mean precipitation?</li>
+<li>What proportion of the variability in the mean number of fawns per 100 does is explained by knowing the mean precipitation?</li>
+<li>If the average amount of precipitation increases by 100 mm, how many more fawns per 100 does would you expect to be born?</li>
+</ol>
+<hr />
+</div>
+<div id="cricket-chirps-and-temperature" class="section level2">
+<h2>Cricket Chirps and Temperature</h2>
+<p><img src="zimgs/cricket.jpg" alt="Cricket" class="img-right"> It has been said that temperature can be estimated from the number of cricket chirps heard. To determine if this relationship existed, an entomologist recorded the number of chirps in a 15-second interval by crickets held at different temperatures. The data for their study are found in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/Chirps.csv">Chirps.csv</a>. Load these data into R and produce results that can be used to answer the questions below.</p>
+<ol>
+<li>What is the response variable?</li>
+<li>What is the explanatory variable?</li>
+<li>In terms of the variables of this problem, what is the equation of the best-fit line?</li>
+<li>In terms of the variables of this problem, interpret the value of the slope.</li>
+<li>If the number of chirps increases by 5, then how much different do you expect temperature to be?</li>
+<li>If you hear 18 chirps during the day and 15 chirps at night, then how much different is the temperature, on average?</li>
+<li>What is the residual when you hear 12 chirps and the temperature is 65 F?</li>
+<li>What is the correlation coefficient between temperature and the number of chirps?</li>
+<li>What proportion of the variability in temperature is explained by knowing the number of chirps?</li>
+</ol>
+</div>
 
 
 

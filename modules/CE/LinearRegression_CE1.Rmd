@@ -49,7 +49,7 @@ ggplot(data=d,mapping=aes(x=angle,y=sand)) +
   stat_SLR_equation(aes(label=..rr.label..),label.x.npc=0,label.y.npc=0.90) +
   labs(x="Beach Angle (Degrees)",y="Median Sand Diameter (mm)") +
   theme_NCStats() +
-  theme(aspect.ratio=1,plot.title=element_text(size=12))
+  theme(aspect.ratio=1)
 ```
 
 Use these results to answer the questions below.
@@ -81,7 +81,7 @@ ggplot(data=d,mapping=aes(x=Altitude,y=MeanAirTemp)) +
   stat_SLR_equation(aes(label=..rr.label..),label.x.npc=0,label.y.npc=0.05) +
   labs(x="Altitude Lapse Rate (C/km)",y="Mean Air Temperature (C)") +
   theme_NCStats() +
-  theme(aspect.ratio=1,plot.title=element_text(size=12)) +
+  theme(aspect.ratio=1) +
   facet_wrap(vars(Season))
 ```
 
@@ -105,5 +105,3 @@ Use these results to answer the questions below using **only the monsoon results
 ## Additional Practice
 
 [Here are more exercises for practice if time permits.](LinearRegression_CE2)
-
-----
