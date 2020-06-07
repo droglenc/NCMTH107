@@ -74,6 +74,8 @@ A student wanted to see how far she could hit two brands of softballs with three
 1. How many replicates are there?
 1. Describe how you would use randomization in this experiment. Use R to construct a specific randomization using your randomization strategy.
 
+----
+
 ## Elephant Seals
 <img src="zimgs/ElephantSeals.jpg" alt="Elephant Seal" class="img-right">
 While studying the foraging ecology of northern elephant seals (*Mirounga angustirostris*), marine biologists from California observed the health of wild seals in fenced enclosures of two different water temperatures (<47F and >47F) and compared these results to the health of domestic seals in two pools, with water temperatures analogous to the wild seals.  The wild seals were allowed to eat what they wanted, but the domestic seals were fed a known diet.  There were 20 wild seals and 20 domestic seals, each of which was randomly allocated to the two water temperatures (enclosures for the wild seals).  Use this information to answer the questions below.
