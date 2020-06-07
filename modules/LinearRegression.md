@@ -50,7 +50,6 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 * [Class Example](CEx/LinearRegression_CExmpl)
 * [Exercises](CE/LinearRegression_CE1) ([*more as time permits*](CE/LinearRegression_CE2)) ... [ANSWER KEY](CE/KEY_LinearRegression_CE)
-* [Review Exercises](RE/LinearRegression_RevEx)
 
 ----
 
