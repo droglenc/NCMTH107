@@ -71,5 +71,3 @@ Associated Bank is reviewing its service charges and interest paying policies on
 ## Additional Practice
 
 [Here are more exercises for practice if time permits.](Probability_CE2)
-
-----
