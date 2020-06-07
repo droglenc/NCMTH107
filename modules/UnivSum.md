@@ -52,7 +52,6 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 ## Practice
 
 * [Exercises](CE/UnivSum_CE1) ([*more as time permits*](CE/UnivSum_CE2)) ... [ANSWER KEY](CE/KEY_UnivSum_CE)
-* [Review Exercises](RE/UnivSum_RevEx)
 
 ----
 
