@@ -8,8 +8,86 @@ css: "/css/modules.css"
 
 
 <hr />
-<div id="histograms-ii" class="section level2">
-<h2>Histograms II</h2>
+<ol>
+<li><strong>Calculate Summary Statistics</strong>
+<ol>
+<li><a href="#number-of-states-visited">Number of States Visited</a></li>
+<li><a href="#home-range-of-red-kangaroos">Home Range of Red Kangaroos</a></li>
+<li><a href="#brule-river-gauge-heights">Brule River Gauge Heights</a></li>
+<li><a href="#population-density-in-wisconsin-counties">Population Density in Wisconsin Counties</a></li>
+<li><a href="#creatine-phosphate-concentrations">Creatine Phosphate Concentrations</a></li>
+<li><a href="#air-pollution">Air Pollution</a></li>
+<li><a href="#your-own-numbers">Your Own Numbers</a></li>
+</ol></li>
+<li><strong>Histograms</strong>
+<ol>
+<li><a href="#wild-dog-pups">Wild Dog Pups</a></li>
+</ol></li>
+<li><strong>Bar Charts</strong>
+<ol>
+<li><a href="#brown-pelican-habitats">Brown Pelican Habitats</a></li>
+</ol></li>
+</ol>
+<p> </p>
+<p> </p>
+<hr />
+<div id="number-of-states-visited" class="section level2">
+<h2>Number of States Visited</h2>
+<p><img src="zimgs/travel.jpg" alt="Traveling" class="img-right"> A student asked six of her friends how many states they had visited in their lifetime. Their answers 8, 3, 17, 15, 4, and 19. Compute the median, mean, standard deviation, and range of these data “by hand.”</p>
+<hr />
+</div>
+<div id="home-range-of-red-kangaroos" class="section level2">
+<h2>Home Range of Red Kangaroos</h2>
+<p><img src="zimgs/red_kangaroo.jpg" alt="Red Kangaroo" class="img-right"> In a preliminary study, a researcher recorded the weekly home range of five Red Kangaroos (<em>Macropus rufus</em>) in New South Wales. The five home ranges were 258, 310, 560, 470, and 502 hectares. Compute the median, mean, standard deviation, and range of these data “by hand.”</p>
+<hr />
+</div>
+<div id="brule-river-gauge-heights" class="section level2">
+<h2>Brule River Gauge Heights</h2>
+<p><img src="zimgs/BruleRiver.jpg" alt="Brule River" class="img-right"> The following values are the maximum gauge heights of the Bois Brule River in Brule, WI from 10-25Feb05. Compute the median, IQR, and range.</p>
+<pre><code>1.56 1.54 1.54 1.57 1.58 1.61 1.60 1.69
+1.99 2.11 1.98 1.76 1.69 1.99 1.86 1.53</code></pre>
+<hr />
+</div>
+<div id="population-density-in-wisconsin-counties" class="section level2">
+<h2>Population Density in Wisconsin Counties</h2>
+<p><img src="zimgs/Janesville.jpg" alt="Brule River" class="img-right"> The following values are the population density (number of people per acre of land) for 15 randomly selected Wisconsin counties. Compute the median, IQR, and range.</p>
+<pre><code>429.0  67.8  52.1  97.4  57.9 354.9  16.2  19.1
+127.0  27.6  10.2  54.6  28.8  30.1  20.2</code></pre>
+<hr />
+</div>
+<div id="creatine-phosphate-concentrations" class="section level2">
+<h2>Creatine Phosphate Concentrations</h2>
+<p><img src="zimgs/creatine_phosphate.jpg" alt="Creatine Phosphate" class="img-right"> The table below contains the concentrations (International Units per liter) of creatine phosphokinase (an enzyme related to muscle and brain functions) in 36 male volunteers. Compute the median, IQR, and range.</p>
+<pre><code>121  82 100 151  68  58  95 145  64
+119 104 110 113 118 203  62  83  67
+201 101 163  84  57 139  60  78  94
+ 93  92 110  25 123  70  48  95  42</code></pre>
+<hr />
+</div>
+<div id="air-pollution" class="section level2">
+<h2>Air Pollution</h2>
+<p><img src="zimgs/oil_refinery.jpg" alt="Oil Refinery Pollution" class="img-right"> The table below contains the carbon monoxide levels (ppm) arising from one of the stacks for an oil refinery northeast of San Francisco between April 16 and May 16, 1993. The measurements were submitted as evidence for establishing a baseline to the Bay Area Air Quality Management District (BAAQMD). Compute the median, IQR, and range.</p>
+<pre><code>30 30 34  36  37  38  40  42 43 43 45
+52 55 58  58  58  59  63  63 71 75 85
+86 86 99 102 102 141 153 261 21</code></pre>
+<hr />
+</div>
+<div id="your-own-numbers" class="section level2">
+<h2>Your Own Numbers</h2>
+<ol>
+<li>Hand calculate the mean and standard deviation for six numbers that you make up.</li>
+<li>Hand calculate the mean and standard deviation for seven numbers that you make up.</li>
+<li>Hand calculate the median and IQR for 14 numbers that you make up.</li>
+<li>Hand calculate the median and IQR for 16 numbers that you make up.</li>
+</ol>
+<p>See this <a href="UnivSum_CE1.html#hints">hint</a> for how to check your answers with R.</p>
+<hr />
+<p> </p>
+</div>
+<div id="histograms" class="section level1">
+<h1>Histograms</h1>
+<div id="wild-dog-pups" class="section level2">
+<h2>Wild Dog Pups</h2>
 <p><img src="zimgs/wild-dog-pups.jpg" alt="Wild Dog Pups" class="img-right"> <a href="https://www.semanticscholar.org/paper/Pup-production%2C-sex-ratios%2C-and-survivorship-in-McNutt-Silk/8bec71d9a4a6ced4896c346dff72df143a10a651">McNutt and Silk (2007)</a> examined pup production, sex ratios and survivorship of African wild dogs (<em>Lycaon pictus</em>). In one part of their study, they computed the sex ratio of pups in each litter by dividing the number of males in the litter by the total number of pups in the litter (thus, 1.0 means all males and 0.7 means 70% were males). The results from making this calculations on their sample of litters is shown in the histogram below.</p>
 <p><img src="UnivSum_CE2_files/figure-html/unnamed-chunk-3-1.png" width="384" /></p>
 <p>Use this histogram to answer these questions.</p>
@@ -24,20 +102,13 @@ css: "/css/modules.css"
 <li>Did most litters (the majority) have mostly male or mostly female pups?</li>
 </ol>
 <hr />
+<p> </p>
 </div>
-<div id="calculate-summary-statistics-ii" class="section level2">
-<h2>Calculate Summary Statistics II</h2>
-<ol>
-<li>Hand calculate the mean and standard deviation for six numbers that you make up.</li>
-<li>Hand calculate the mean and standard deviation for seven numbers that you make up.</li>
-<li>Hand calculate the median and IQR for 14 numbers that you make up.</li>
-<li>Hand calculate the median and IQR for 16 numbers that you make up.</li>
-</ol>
-<p>See this <a href="UnivSum_CE1.html#hints">hint</a> for how to check your answers with R.</p>
-<hr />
 </div>
-<div id="bar-chart-ii" class="section level2">
-<h2>Bar Chart II</h2>
+<div id="bar-chart" class="section level1">
+<h1>Bar Chart</h1>
+<div id="brown-pelican-habitats" class="section level2">
+<h2>Brown Pelican Habitats</h2>
 <p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/brownpelican.jpg" alt="Brown Pelican" class="img-right"> <a href="https://www.aphis.usda.gov/wildlife_damage/nwrc/publications/13pubs/king132.pdf">King et al. (2013)</a> examined the habitat use of <a href="https://en.wikipedia.org/wiki/Brown_pelican">Brown Pelicans (<em>Pelecanus occidentalis</em>)</a> in the Northern Gulf of Mexico. In one part of their study, they recorded the GPS location where each pelican was spotted. The bar chart below shows the percentages of those GPS locations in major habitats. Use this information to answer the questions further below. [Note that <code>Water</code>=“shallow near-shore waters”, <code>EEW</code>=“estuarine emergent wetland”, <code>Grassland</code>=“shoreline grasslands”, <code>UnShore</code>=“unconsolidated shore”, <code>DeepWater</code>=“deeper offshore waters”, and <code>Other</code>=“all other habitats”.]</p>
 <p><img src="UnivSum_CE2_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <ol>
@@ -49,6 +120,7 @@ css: "/css/modules.css"
 <li>What is the shape of this distribution?</li>
 </ol>
 <hr />
+</div>
 </div>
 
 

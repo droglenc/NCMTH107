@@ -18,12 +18,89 @@ setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE")
 source("../../rhelpers/rhelpers.R")
 modHTML("UnivEDA_CE2")
 ```
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+library(captioner)
+source("../../rhelpers/knitr_setup.R")
+tbls <- captioner(prefix="Table")
+tbls(name="VideoSum","Summary statistics for the time playing video games (mins) by sampled students.")
+tbls(name="BankSum","Summary statistics for the time (hrs) to complete a transactin for an Australian bank.")
+
+figs <- captioner(prefix="Figure")
+figs(name="VideoFig","Histogram for the time playing video games (mins) by sampled students.")
+figs(name="BankFig","Histogram for the time (hrs) to complete a transactin for an Australian bank.")
+```
 
 ----
 
-## XXX
-<img src="zimgs/XXX.jpg" alt="XXX" class="img-right">
+1. **Quantitative**
+    1. [Time Spent Playing Video Games](#time-spent-playing-video-games)
+    1. [Bank Transaction Times](#bank-transaction-times)
+1. **Categorical**
+    1. [Drinking Water Source](#drinking-water-source)
 
+&nbsp;
 
+&nbsp;
 
 ----
+
+# Quantitative
+## Time Spent Playing Video Games 
+<img src="zimgs/videogame.jpg" alt="Video Game" class="img-right">
+For a class project, a student asked 91 students how much time they had spent playing video games in the last two days. Use the results in `r figs("VideoFig",display="cite")` and `r tbls("VideoSum",display="cite")` to construct a univariate EDA for these data.
+
+```{r VideoFig, echo=FALSE, fig.height=3.5, fig.width=3.5}
+vg <- read.table("http://www.stat.berkeley.edu/~statlabs/data/video.data",header=TRUE)
+ggplot(data=vg,mapping=aes(x=time)) +
+  geom_histogram(boundary=0,binwidth=1,closed="left",fill="gray80",color="black") +
+  scale_x_continuous(name="Time Playing Video Games (mins)",
+                     expand=expansion(mult=0.01)) +
+  scale_y_continuous(name="Frequency",expand=expansion(mult=c(0,0.05))) +
+  theme_NCStats()
+```
+`r figs("VideoFig")`
+
+`r tbls("VideoSum")`
+
+```{r VideoSum, echo=FALSE, background="white"}
+Summarize(~time,data=vg,digits=2)
+```
+
+----
+
+## Bank Transaction Times
+<img src="zimgs/bank.jpg" alt="Bank Transaction" class="img-right">
+Cunningham and Heathcote (1989) recorded the total transaction time (in hours) for a large number of transactions at a branch office of a large Australian bank. Describe the distribution of these data from `r figs("BankFig",display="cite")` and `r tbls("BankSum",display="cite")`.
+
+```{r BankFig, echo=FALSE, fig.height=3.5, fig.width=3.5}
+data(Transact,package="carData")
+Transact$time <- Transact$time/60/60
+ggplot(data=Transact,mapping=aes(x=time)) +
+  geom_histogram(boundary=0,binwidth=0.25,closed="left",fill="gray80",color="black") +
+  scale_x_continuous(name="Time to Complete Transaction",
+                     expand=expansion(mult=0.01)) +
+  scale_y_continuous(name="Frequency",expand=expansion(mult=c(0,0.05))) +
+  theme_NCStats()
+```
+`r figs("BankFig")`
+
+`r tbls("BankSum")`
+
+```{r BankSum, echo=FALSE, background="white"}
+Summarize(~time,data=Transact,digits=2)
+```
+
+----
+
+# Categorical
+## Drinking Water Source
+<img src="zimgs/drinking_water.jpg" alt="" class="img-right">
+The Environmental Protection Agency (EPA) commissioned the Gallup Organization to conduct a nationwide telephone survey of 1000 households during August and September of 2002 regarding consumer knowledge and satisfaction with drinking water quality. Of the 1000 respondents surveyed, 751 knew that their drinking water came from a public or commercial water supplier. Of these 751 respondents, the following percentages knew precisely where that water was derived:
+
+| Source     | Groundwater | Lake/ Reservoir | River | Multiple Sources | Don't Know | Refused to answer |
+|------------|:-----------:|:--------------:|:-----:|:----------------:|:----------:|:-----------------:|
+| Percentage |     15.9    |      29.2      |  9.6  |        15.7      |    29.4    |        0.2        |
+
+1. Construct a frequency table of these data (note percentages above were rounded).
+1. Write a brief conclusion derived from these data.

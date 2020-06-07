@@ -59,7 +59,6 @@ hist(~c(rbeta(n/2,7,2),rbeta(n/2,2,7)),xlab=xlbl,main="#8",xaxt="n",yaxt="n")
 
 ## Commute Times
 <img src="zimgs/commuting.jpg" alt="Commuting" class="img-right">
-
 The [U.S. Census](http://www.indexmundi.com/facts/united-states/quick-facts/all-states/average-commute-time#map) asked individuals 16 years old and older "How long in minutes is your one-way commute to work each day?". The mean for individuals from each state was recorded with summary results shown in `r figs("Commute",display="cite")` and `r tbls("Commute",display="cite")`. Perform a thorough EDA with these results.
 
 ```{r CommuteHist, echo=FALSE, fig.width=4, fig.height=4}
@@ -153,5 +152,3 @@ ggplot(data=pl,mapping=aes(x=Entity,y=Estimated.historic.plastic.fate....)) +
 ## Additional Practice
 
 [Here are more exercises for practice if time permits.](UnivEDA_CE2)
-
-----
