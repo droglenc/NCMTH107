@@ -59,6 +59,7 @@ ggplot(data=vg,mapping=aes(x=time)) +
   scale_y_continuous(name="Frequency",expand=expansion(mult=c(0,0.05))) +
   theme_NCStats()
 ```
+
 `r figs("VideoFig")`
 
 `r tbls("VideoSum")`
@@ -83,6 +84,7 @@ ggplot(data=Transact,mapping=aes(x=time)) +
   scale_y_continuous(name="Frequency",expand=expansion(mult=c(0,0.05))) +
   theme_NCStats()
 ```
+
 `r figs("BankFig")`
 
 `r tbls("BankSum")`
@@ -93,6 +95,8 @@ Summarize(~time,data=Transact,digits=2)
 
 ----
 
+&nbsp;
+
 # Categorical
 ## Drinking Water Source
 <img src="zimgs/drinking_water.jpg" alt="" class="img-right">
@@ -101,6 +105,8 @@ The Environmental Protection Agency (EPA) commissioned the Gallup Organization t
 | Source     | Groundwater | Lake/ Reservoir | River | Multiple Sources | Don't Know | Refused to answer |
 |------------|:-----------:|:--------------:|:-----:|:----------------:|:----------:|:-----------------:|
 | Percentage |     15.9    |      29.2      |  9.6  |        15.7      |    29.4    |        0.2        |
+
+<br>
 
 1. Construct a frequency table of these data (note percentages above were rounded).
 1. Write a brief conclusion derived from these data.
