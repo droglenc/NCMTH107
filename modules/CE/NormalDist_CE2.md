@@ -52,5 +52,3 @@ Apple suggests that the battery lifespan (i.e., how many charge-cycles a battery
 ## Additional Practice
 
 [Here are more exercises for practice if time permits.](NormalDist_CE3)
-
-----
