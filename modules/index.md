@@ -13,7 +13,7 @@ title: Learning Modules
     </ol>
   <li><b>Exploratory Data Analysis</b></li>
     <ol type="1" start="4">
-      <li><a href="UnivSum.html">Univariates Summaries</a></li>
+      <li><a href="UnivSum.html">Univariate Summaries</a></li>
       <li><a href="UnivEDA.html">Univariate EDA</a></li>
       <li><a href="NormalDist.html">Normal Distributions</a></li>
       <li><a href="BEDAQuant.html">Bivariate EDA - Quantitative</a></li>
