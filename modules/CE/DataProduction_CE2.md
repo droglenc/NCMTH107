@@ -6,11 +6,11 @@ css: "/css/modules.css"
 ---
 
 
-1. General
+1. **General**
     1. [Study Types II](#study-types-ii)
     1. [Types of Observational Studies II](#types-of-observational-studies-ii)
     1. [Identify Response and Explanatory Variables II](#identify-response-and-explanatory-variables-ii)
-1. Experimental Design
+1. **Experimental Design**
     1. [Softball Bats and Balls](#softball-bats-and-balls)
     1. [Elephant Seals](#elephant-seals)
     1. [Sugar Beets](#sugar-beets)
@@ -18,7 +18,7 @@ css: "/css/modules.css"
     1. [Eating Habits of Deer](#eating-habits-of-deer)
     1. [Chemistry Reaction](#chemistry-reaction)
     1. [Diet, Exercise, Blood Pressure](#diet-exercise-blood-pressure)
-1. Observational Studies
+1. **Observational Studies**
     1. [Women's Health Initiative](#womens-health-initiative)
     1. [Driving After OWI](#driving-after-owi)
     1. [Pine Needles](#pine-needles)
@@ -56,6 +56,8 @@ Identify the response variable in each of the following situations. Explain your
 1. The age and weight of a child (measured over time).
 
 ----
+
+&nbsp;
 
 # Experimental Design
 ## Softball Bats and Balls

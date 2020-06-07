@@ -80,5 +80,3 @@ Use this information to answer the questions below.
 ## Additional Practice
 
 [Here are more exercises for practice if time permits.](DataProduction_CE2)
-
-----
