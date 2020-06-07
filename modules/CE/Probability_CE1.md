@@ -18,6 +18,8 @@ An "arena" contains 8 acorns and 9 kernels of corn. Assume that a chipmunk place
 
 ----
 
+&nbsp;
+
 <div class="alert alert-success">
 In all of the following questions, I urge you to follow these steps when answering probability questions:
 <ol type="a">
