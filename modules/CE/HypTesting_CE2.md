@@ -10,7 +10,7 @@ css: "/css/modules.css"
 &nbsp;
 
 1. [Identifying Hypotheses](#identifying-hypotheses)
-1. [Computing P-Values (Without Context)](#computing-p-values-(without-context))
+1. [Computing P-Values (Without Context)](#computing-p-values-without-context)
 1. [Conceptual Question](#conceptual-question)
 1. **Computing P-Values (With Context)**
     1. [BOD in Effluent](#bod-in-effluent)
@@ -45,6 +45,8 @@ I urge you to follow these steps when answering all p-value-related questions:
 A reminder to use these steps will <strong>NOT</strong> be provided on future quizzes, but you should get in the habit of following them. See <a href="../Explanations/Calc_pvalue_Z.html">here</a> for a demonstration of the steps.
 </div>
 
+&nbsp;
+
 # Computing P-Values (without context)
 Compute the p-value (see the steps suggested above) For each situation below.
 
@@ -59,7 +61,7 @@ Compute the p-value (see the steps suggested above) For each situation below.
 ----
 
 # Conceptual Question
-Describe why we must formally go through the steps of a hypothesis test to conclude that &mu;>11 when we observe x&#772;=12.1.</a>
+Describe why we must formally go through the steps of a hypothesis test to conclude that &mu;>11 when we observe x&#772;=12.1.
 
 ----
 
