@@ -26,7 +26,6 @@ tbls(name="banffsnow","Summary statistics for the depth of snow in Banff.")
 tbls(name="cpsum","Summary statistics for the creatine phosphate concentrations in 36 male volunteers.")
 tbls(name="brsum","Summary statistics for the gage height on the Brule River.")
 tbls(name="pdsum","Summary statistics for the population density of Wisconsin Counties.")
-
 ```
 
 1. **Foundational Questions**
@@ -121,7 +120,7 @@ Summarize(~depth,data=d,digits=2)
 
 ## Creatine Phosphate Concentrations
 <img src="zimgs/creatine_phosphate.jpg" alt="Creatine Phosphate" class="img-right">
-The table below contains the concentrations (International Units per liter) of creatine phosphokinase (an enzyme related to muscle and brain functions) in 36 male volunteers. Their results are in `r tbls("cpsum", display="cite")`. Construct a proper confidence region for the population mean creatine phosphokinase assuming that the H<sub>A</sub> is a "greater than", &alpha;=0.05, and &sigma;=40.
+The concentrations (International Units per liter) of creatine phosphokinase (an enzyme related to muscle and brain functions) in 36 male volunteers was recorded and the results are in `r tbls("cpsum", display="cite")`. Construct a proper confidence region for the population mean creatine phosphokinase assuming that the H<sub>A</sub> is a "greater than", &alpha;=0.05, and &sigma;=40.
 
 `r tbls("cpsum")`
 
@@ -187,6 +186,7 @@ An investigator wants to estimate the mean systolic blood pressure in children w
 Calf growth early in life should be approximately 1000 g per day. Owners of a large cattle farm want to assure that their calves are growing at approximately this rate because slow growth might suggest a feeding problem and fast growth would suggest a future size problem (i.e., too many big animals in the available space). The owners want to sample enough of their calves so that they can estimate the growth rate to within 50 g per day, with 99% confidence, assuming that variabilty between individual calves is approximately 200 g per day. Calculate their required sample size.
 
 ----
+
 ## Pebble Size
 <img src="zimgs/pebbles.jpg" alt="Pebbles" class="img-right">
 Geologists measure the longest axis of pebbles to determine "grain" sizes. If the standard deviation of pebble long-axis length for a particular site is known to be 4 mm, how many pebbles must be measured in order to determine the average pebble length within 0.1 mm with 99% confidence?
