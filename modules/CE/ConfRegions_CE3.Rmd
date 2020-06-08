@@ -2,8 +2,32 @@
 layout: page
 title: Additional Exercises
 subtitle: Confidence Regions
+author: Derek H. Ogle
 css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: false
+    lib_dir: zlibs
 ---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/")
+source("../../rhelpers/rhelpers.R")
+modHTML("ConfRegions_CE3")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+source("../../rhelpers/knitr_setup.R")
+library(NCStats)
+library(captioner)
+tbls <- captioner(prefix="Table")
+tbls(name="banffsnow","Summary statistics for the depth of snow in Banff.")
+tbls(name="cpsum","Summary statistics for the creatine phosphate concentrations in 36 male volunteers.")
+tbls(name="brsum","Summary statistics for the gage height on the Brule River.")
+tbls(name="pdsum","Summary statistics for the population density of Wisconsin Counties.")
+
+```
 
 1. **Foundational Questions**
     1. [Confidence Regions Calculations III](#confidence-regions-calculations-iii)
@@ -58,78 +82,83 @@ For each situation below, construct and interpret the confidence region.
 # Calculations in Context
 ## Radius of Jupiter
 <img src="zimgs/jupiter.jpg" alt="Jupiter" class="img-right">
-Researchers measured the equatorial radius of [Jupiter](https://en.wikipedia.org/wiki/Jupiter) 40 different times. The method used is largely without bias but there is measurement-to-measurement variability. In fact, &sigma; is assumed to be 28 km. The mean of the 40 measurements was 71492 km. From this, construct and interpret a confidence **interval** assuming that &alpha;=0.01.[^2]
+Researchers measured the equatorial radius of [Jupiter](https://en.wikipedia.org/wiki/Jupiter) 40 different times. The method used is largely without bias but there is measurement-to-measurement variability. In fact, &sigma; is assumed to be 28 km. The mean of the 40 measurements was 71492 km. From this, construct and interpret a confidence **interval** assuming that &alpha;=0.01.
+
+&nbsp;
 
 ----
 
 ## BOD in Effluent
 <img src="zimgs/BOD_test_bottles.jpg" alt="BOD Test Bottles" class="img-right">
-The managers of a wastewater treatment plant monitored the amount of biological oxygen demand (BOD; lbs/day) in the effluent of the plant each month from January 1991 to October 2000. The managers would need to take corrective actions if the average BOD over this time period was significantly greater than 2200 lbs/day at a 10% rejection level. Previous studies indicated that the standard deviation was 1200 lbs/day. Summary statistics from their sample of days is given below.
+The managers of a wastewater treatment plant monitored the amount of biological oxygen demand (BOD; lbs/day) in the effluent of the plant each month from January 1991 to October 2000. The managers would need to take corrective actions if the average BOD over this time period was significantly greater than 2200 lbs/day at a 10% rejection level. Previous studies indicated that the standard deviation was 1200 lbs/day. Summary statistics from their sample of days is given below. From this construct a proper confidence region.
 
 ```
     n  Min. 1st Qu. Median   Mean  3rd Qu.   Max.
   118   630    1600    2240   2504     3193    6023
 ```
 
-Use this information to construct and interpret (including describing what is meant by "confidence"") a proper confidence region for the mean BOD level.
-
 ----
 
 ## Medical School Admissions
 <img src="zimgs/medschool_lecture.jpg" alt="Medical School Lecture" class="img-right">
-Admissions representatives at the University of Minnesota medical school were concerned that the average grade point average of applicants in non-science courses had dropped below 3.7. A sample of 40 of the most recent applicants indicated that the mean was 3.60. Information from the Association of American Medical Colleges suggested that the overall standard deviation was 0.35. Construct and interpret (including describing what is meant by "confidence") a proper confidence region for the mean grade point average. Assume that &alpha;=0.05.
+Admissions representatives at the University of Minnesota medical school were concerned that the average grade point average of applicants in non-science courses had dropped below 3.7. A sample of 40 of the most recent applicants indicated that the mean was 3.60. Information from the Association of American Medical Colleges suggested that the overall standard deviation was 0.35. From this construct a proper confidence region for the mean grade point average assuming that &alpha;=0.05.
 
 ----
 
 ## Banff Snow Depth
 <img src="zimgs/banff-snow.jpg" alt="Banff Snow" class="img-right">
-[Hebblewhite *et al.* (2000)](http://www.nrcresearchpress.com/doi/abs/10.1139/z02-058?journalCode=cjz#.WU7Rv1GQyDI) reported the mean snow pack height (in cm) for Banff (data are below). Assume that it is known that &sigma;=15 cm.
+[Hebblewhite *et al.* (2000)](http://www.nrcresearchpress.com/doi/abs/10.1139/z02-058?journalCode=cjz#.WU7Rv1GQyDI) reported the mean snow pack height (in cm) for Banff (data are below). Their results are shown in `r tbls("banffsnow",display="cite")`. Use these results to compute a 99% confidence interval for the mean snow pack height assuming that &sigma;=15 cm.
 
-```
-29.00,45.51,30.18,45.83,39.54,80.39,32.64,32.89,
-46.84,45.79,62.92,67.24,30.96,46.08,33.28
-```
+`r tbls("banffsnow")`
 
-Compute a 99% confidence interval for the mean snow pack height. In addition, comment on whether or not a confidence interval should be computed for these data (note: compute the CI in (A) regardless of your answer here).
+```{r echo=FALSE, background="white"}
+d <- data.frame(depth=c(29.00,45.51,30.18,45.83,39.54,80.39,32.64,32.89,
+                        46.84,45.79,62.92,67.24,30.96,46.08,33.28))
+Summarize(~depth,data=d,digits=2)
+```
 
 ----
 
 ## Creatine Phosphate Concentrations
 <img src="zimgs/creatine_phosphate.jpg" alt="Creatine Phosphate" class="img-right">
-The table below contains the concentrations (International Units per liter) of creatine phosphokinase (an enzyme related to muscle and brain functions) in 36 male volunteers. Construct and interpret (including describing what is meant by "confidence") a proper confidence region for the population mean creatine phosphokinase assuming that the H<sub>A</sub> is a "greater than", &alpha;=0.05, and &sigma;=40.
+The table below contains the concentrations (International Units per liter) of creatine phosphokinase (an enzyme related to muscle and brain functions) in 36 male volunteers. Their results are in `r tbls("cpsum", display="cite")`. Construct a proper confidence region for the population mean creatine phosphokinase assuming that the H<sub>A</sub> is a "greater than", &alpha;=0.05, and &sigma;=40.
 
-```
-121  82 100 151  68  58  95 145  64
-119 104 110 113 118 203  62  83  67
-201 101 163  84  57 139  60  78  94
- 93  92 110  25 123  70  48  95  42
+`r tbls("cpsum")`
+
+```{r echo=FALSE, background="white"}
+d <- data.frame(cp=c(121,82,100,151,68,58,95,145,64,119,104,110,113,118,203,
+                     62,83,67,201,101,163,84,57,139,60,78,94,93,92,
+                     110,25,123,70,48,95,42))
+Summarize(~cp,data=d,digits=2)
 ```
 
 ----
 
 ## Brule River Gage Heights
 <img src="zimgs/BruleRiver.jpg" alt="Brule River" class="img-right">
-The following values are the maximum gage heights (feet) of the Bois Brule River in Brule, WI from 10-25Feb05. 
+The maximum gage heights (feet) of the Bois Brule River in Brule, WI from 10-25Feb05 were recorded and summarized in `r tbls("brsum",display="cite")`. Use these results to construct a proper confidence region for the population mean gage height assuming that the H<sub>A</sub> is a "not equals", &alpha;=0.05, and &sigma;=0.20.
 
-```
-1.56 1.54 1.54 1.57 1.58 1.61 1.60 1.69
-1.99 2.11 1.98 1.76 1.69 1.99 1.86 1.53
-```
+`r tbls("brsum")`
 
-Construct and interpret (including describing what is meant by "confidence") a proper confidence region for the population mean creatine phosphokinase assuming that the H<sub>A</sub> is a "not equals", &alpha;=0.05, and &sigma;=0.20.
+```{r echo=FALSE, background="white"}
+d <- data.frame(ht=c(1.56,1.54,1.54,1.57,1.58,1.61,1.60,1.69,1.99,2.11,1.98,
+                     1.76,1.69,1.99,1.86,1.53))
+Summarize(~ht,data=d,digits=2)
+```
 
 ----
 
 ## Population Density in Wisconsin Counties
 <img src="zimgs/Janesville.jpg" alt="Brule River" class="img-right">
-The following values are the population density (number of people per acre of land) for 15 randomly selected Wisconsin counties.
+The population density (number of people per acre of land) for 15 randomly selected Wisconsin counties was recorded and is summarized in `r tbls("pdsum",display="cite")`. Construct a proper confidence region for the population mean density assuming that the H<sub>A</sub> is a "less than", &alpha;=0.10, and &sigma;=125.
 
-```
-429.0  67.8  52.1  97.4  57.9 354.9  16.2  19.1
-127.0  27.6  10.2  54.6  28.8  30.1  20.2
-```
+`r tbls("pdsum")`
 
-Construct and interpret (including describing what is meant by "confidence") a proper confidence region for the population mean creatine phosphokinase assuming that the H<sub>A</sub> is a "less than", &alpha;=0.10, and &sigma;=125.
+```{r echo=FALSE, background="white"}
+d <- data.frame(pd=c(429.0,67.8,52.1,97.4,57.9,354.9,16.2,19.1,
+                     127.0,27.6,10.2,54.6,28.8,30.1,20.2))
+Summarize(~pd,data=d,digits=2)
+```
 
 ----
 
@@ -173,3 +202,5 @@ An investment group wants to start an Internet Service Provider (ISP) and, for t
 ## Counting Plants in Plots
 <img src="zimgs/counting-plants.jpg" alt="Counting Plants" class="img-right">
 Suppose that a plant ecologist is to examine a very large tract of land that has been subdivided into 1400 plots of 10 m<sup>2</sup> (10 square meters). The researcher wants to determine, with 90% confidence, the mean density of plants per plot for the entire tract of land to within 10 plants per plot. A pilot study indicated that the standard deviation was approximately 50 plants per plot. Determine how many 10 m<sup>2</sup> plots the researcher should examine to reach her stated goals.
+
+
