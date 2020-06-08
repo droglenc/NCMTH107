@@ -14,7 +14,7 @@ output:
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/")
 source("../../rhelpers/rhelpers.R")
-modHTML("HypTestingErrs_CE")
+modHTML("HypTestingErrs_CE1")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
@@ -60,9 +60,5 @@ In RStudio, these plots will have a gear icon in the upper-left corner that will
 
 <br>
 <br>
-
-----
-
-## Footnotes
 
 [^power]: Power and &beta; sum to 1 such that Power=1-&beta;. Thus, as &beta; is made smaller, power is made larger. Therefore, all relationships identified in this exercise between &beta and each of &alpha; n, &sigma;, and how "wrong" the H<sub>0</sub> is will be opposite for power.
