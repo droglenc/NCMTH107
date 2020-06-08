@@ -62,10 +62,14 @@ Suppose that you are starting a business and it is important for your business p
 
 ----
 
-### Footnotes
+## Additional Practice
+
+[Here are more exercises for practice if time permits.](ConfRegions_CE3)
+
+&nbsp;
+
+----
 
 [^1]: This question was adapted [from here](http://jse.amstat.org/v4n2/datasets.shoemaker.html).
 
 [^2]: This question was adapted [from here](http://www.isixsigma.com/tools-templates/sampling-data/how-determine-sample-size-determining-sample-size/).
-
-----

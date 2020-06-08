@@ -26,6 +26,8 @@ Compute power[^powerbeta] given the information in each situation below.
 
 ----
 
+&nbsp;
+
 ## Conceptual Questions
 
 1. What is &beta; if power=0.875?
