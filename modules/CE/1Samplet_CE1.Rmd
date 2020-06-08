@@ -59,10 +59,9 @@ Students recorded fecal coliform counts (number of colony forming units (CFU) pe
 
 `r tbls("fecal")`
 
-```{r echo=FALSE, par1=TRUE}
+```{r echo=FALSE}
 df <- read.csv("FecalColiform.csv")
 Summarize(~CFU,data=df,digits=2)
-hist(~CFU,data=df,xlab="")
 ```
 
 ```{r echo=FALSE, fig.height=3.5, fig.width=3.5}
@@ -77,3 +76,11 @@ ggplot(data=df,mapping=aes(x=CFU)) +
 `r figs("fecal")`
 
 Test, at the 5% level, if these results differ from the mean of 178 CFU/100ml predicted by a computer model.
+
+&nbsp;
+
+----
+
+## Additional Practice
+
+[Here are more exercises for practice if time permits.](1Samplet_CE2)

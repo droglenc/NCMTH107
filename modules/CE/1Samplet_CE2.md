@@ -5,7 +5,7 @@ subtitle: 1-Sample t-test
 css: "/css/modules.css"
 ---
 
-1. **Application Questions with Summarized Results**
+1. **Application Questions**
     1. [Achievement Test Scores](#achievement-test-scores)
     1. [Salaries of College Graduates](#salaries-of-college-graduates)
     1. [Increased Civility in Nation-States?](#increased-civility-in-nation-states)
@@ -18,7 +18,7 @@ css: "/css/modules.css"
 
 ----
 
-# Application Questions with Summarized Results
+# Application Questions
 
 <div class="alert alert-success">For all "hypothesis testing" questions, make sure to provide explicit answers with your work shown for all <a href="../11-steps">11 steps of a hypothesis test</a>.
 </div>
