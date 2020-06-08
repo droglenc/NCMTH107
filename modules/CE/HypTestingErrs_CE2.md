@@ -6,18 +6,6 @@ author: Derek H. Ogle
 css: "/css/modules.css"
 ---
 
-```{r echo=FALSE, eval=FALSE}
-# Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/RE/")
-source("../../rhelpers/rhelpers.R")
-modHTML("HypTestingErrs_CE2")
-```
-
-```{r echo=FALSE, results='hide', message=FALSE}
-library(NCStats)
-source("../../rhelpers/knitr_setup.R")
-```
-
 ----
 
 1. [Power Calculations (Without Context)](#power-calculations-without-context)
@@ -51,4 +39,6 @@ Compute power[^powerbeta] given the information in each situation below.
 
 &nbsp;
 
-[^powerbeta]: Power and &beta; sum to 1 such that Power=1-&beta;&beta;=1-power.
+----
+
+[^powerbeta]: Power and &beta; sum to 1 such that Power=1-&beta; and &beta;=1-power.
