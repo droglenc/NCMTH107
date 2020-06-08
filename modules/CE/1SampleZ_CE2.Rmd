@@ -34,6 +34,8 @@ tbls(name="chol","Summary statistics for the cholesterol level of Asian women ag
     1. [Chronic Myofascial Pain Syndrome](#chronic-myofascial-pain-syndrome)
     1. [Cholesterol Levels](#cholesterol-levels)
 
+<br>
+
 <div class="alert alert-success">For all "hypothesis testing" questions, make sure to provide explicit answers with your work shown for all <a href="../11-steps">11 steps of a hypothesis test</a>.
 </div>
 
@@ -66,7 +68,7 @@ A study by [Cheshire *et al.* (1994)](https://www.ncbi.nlm.nih.gov/pubmed/785480
 
 `r tbls("cmps")`
 
-```{r echo=FALSE, results='hide', message=FALSE}
+```{r echo=FALSE}
 d <- c(2.5, 2.7, 2.8, 2.8, 2.8, 3.0)
 Summarize(~d,digits=2)
 ```
@@ -79,7 +81,7 @@ Suppose that it is known that cholesterol levels in women aged 21-40 in the U.S.
 
 `r tbls("chol")`
 
-```{r echo=FALSE, results='hide', message=FALSE}
+```{r echo=FALSE}
 d <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Cholesterol.csv")
 Summarize(~cholest,data=d,digits=2)
 ```
