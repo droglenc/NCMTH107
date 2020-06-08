@@ -27,7 +27,6 @@ Assuming that the standard deviation for all 1500 women was 7.1, test, at the 5%
 
 ## Cactus Growth
 <img src="zimgs/cactus.jpg" alt="Cactus" class="img-right">
-
 A researcher is investigating the growth of a certain cactus under a variety of environmental conditions. He knows from previous research that the growth of this particular type of cactus is approximately normally distributed with a standard deviation of 1.40 cm. Under the current environmental conditions that he is investigating, however, he does not know the mean. He does hypothesize that it is no more than 4 cm. To test this hypothesis he used a preliminary sample of 10 randomly-selected cacti. He found the sample mean for these cacti to be 3.26 cm. Use this information to test his hypothesis with &alpha;=0.05.
 
 &nbsp;
@@ -37,5 +36,3 @@ A researcher is investigating the growth of a certain cactus under a variety of 
 ## Additional Practice
 
 [Here are more exercises for practice if time permits.](1SampleZ_CE2)
-
-----
