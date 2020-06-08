@@ -1,0 +1,143 @@
+---
+layout: page
+title: Exercises
+subtitle: Hypothesis Testing
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="identifying-hypotheses" class="section level2">
+<h2>Identifying Hypotheses</h2>
+<p>For each research hypothesis or statement below, construct the null and alternative hypotheses (use their respective symbols) and explicitly define the parameter in the hypotheses.</p>
+<ol>
+<li>The mean number of murders per burrough in New York City in 2010 was less than 90.</li>
+<li>The Toyota dealership has advertised that oil changes will be completed in 15 minutes or less. Test whether their advertisement is incorrect, on average.</li>
+<li>The National Institute of Diabetes and Digestive and Kidney Diseases reports that the average cost of bariatric (weight loss) surgery is $22,500. You think that this information is incorrect.</li>
+<li>Washburn High School publicizes that 61% of its students are involved in at least one extracurricular activity. A parent organization believes that the percentage is higher.</li>
+</ol>
+<hr />
+<p> </p>
+<div class="alert alert-success">
+I urge you to follow these steps when answering all p-value-related questions:
+<ol type="a">
+<li>
+Identify H<sub>0</sub> and H<sub>A</sub>. If the question has a context then the parameter should be stated within that context.
+</li>
+<li>
+Define the p-value specific to the situation.
+</li>
+<li>
+Draw the null distribution.
+</li>
+<li>
+Compute the p-value.
+</li>
+<li>
+Make a decision about H<sub>0</sub>. If the question has a context then the conclusion should be stated within that context.
+</li>
+</ol>
+<p>A reminder to use these steps will <strong>NOT</strong> be provided on future quizzes, but you should get in the habit of following them. See <a href="../Explanations/Calc_pvalue_Z.html">here</a> for a demonstration of the steps.</p>
+</div>
+</div>
+<div id="p-value-calculations-and-decisions-i" class="section level2">
+<h2>P-Value Calculations and Decisions I</h2>
+<p>Compute the p-value (see the steps suggested above) For each situation below.</p>
+<ol>
+<li>H<sub>A</sub>: μ≠14, σ=6, n=25, x̄=11.2, α=0.05.</li>
+<li>H<sub>A</sub>: μ&gt;75, σ=12, n=50, x̄=79.5, α=0.10.</li>
+<li>H<sub>A</sub>: μ&lt;15000, σ=8000, n=50, x̄=13700, α=0.10.</li>
+</ol>
+<hr />
+</div>
+<div id="body-temperature" class="section level2">
+<h2>Body Temperature</h2>
+<p><img src="zimgs/body-temperature-1.jpg" alt="Body Temperature" class="img-right"> <a href="http://www.ncbi.nlm.nih.gov/pubmed/1302471">Machowiak <em>et al.</em> (1992)</a><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> provided a critical examination of whether normal body temperature was 37<sup>o</sup>C. They recorded the orally-determined body temperatures of 65 male and 65 female subjects. Use their results in Table 1 to answer the questions further below.</p>
+<p>Table 1: Summary statistics for the body temperature of a sample of men and women.</p>
+<pre><code>     n   mean     sd    min     Q1 median     Q3    max 
+130.00  36.81   0.41  35.70  36.60  36.80  37.10  38.20 </code></pre>
+<ol>
+<li>construct statistical hypotheses,</li>
+<li>compute the sample mean (use <code>Summarize()</code>),</li>
+<li>compute the p-value assuming that σ=0.41 (use <code>distrib()</code>),</li>
+<li>make a decision about the hypotheses using α=0.05, and</li>
+<li>summarize your findings in terms of body temperatures.</li>
+</ol>
+<hr />
+</div>
+<div id="beetle-size" class="section level2">
+<h2>Beetle Size</h2>
+<p><img src="zimgs/beetle.jpg" alt="Beetle" class="img-right"> Researchers examined the size of two different species of beetles. They hypothesized that the thorax length of the <em>Halticus oleracea</em> species would be greater than 190 μm. Use their results for the <em>Halticus oleracea</em> species in Table 2 to answer the questions further below.</p>
+<p>Table 2: Summary statistics for the thorax length for two species of beetles.</p>
+<pre><code>             species  n   mean    sd min     Q1 median     Q3 max
+1 Halticus.carduorum 20 179.55 10.09 158 175.75  180.5 181.75 198
+2  Halticus.oleracea 18 194.17 14.03 170 189.75  192.0 200.75 221</code></pre>
+<ol>
+<li>construct statistical hypotheses,</li>
+<li>compute the p-value assuming that σ=14,</li>
+<li>make a decision about the hypotheses using α=0.05, and</li>
+<li>summarize your findings in terms of the beetle’s thorax size.</li>
+</ol>
+<p> </p>
+<hr />
+</div>
+<div id="additional-practice" class="section level2">
+<h2>Additional Practice</h2>
+<p><a href="HypTesting_CE2">Here are more exercises for practice if time permits.</a></p>
+<p> </p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>This question was adapted from <a href="http://www.amstat.org/publications/jse/v4n2/datasets.shoemaker.html">Shoemaker (1996)</a>.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

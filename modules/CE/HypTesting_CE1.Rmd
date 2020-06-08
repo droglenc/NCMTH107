@@ -2,8 +2,30 @@
 layout: page
 title: Exercises
 subtitle: Hypothesis Testing
+author: Derek H. Ogle
 css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: false
+    lib_dir: zlibs
 ---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/")
+source("../../rhelpers/rhelpers.R")
+modHTML("HypTesting_CE1")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+source("../../rhelpers/knitr_setup.R")
+library(NCStats)
+library(captioner)
+source("../../rhelpers/knitr_setup.R")
+tbls <- captioner(prefix="Table")
+tbls(name="bodytemp","Summary statistics for the body temperature of a sample of men and women.")
+tbls(name="beetles","Summary statistics for the thorax length for two species of beetles.")
+```
 
 ----
 
@@ -18,6 +40,8 @@ For each research hypothesis or statement below, construct the null and alternat
 
 ----
 
+&nbsp;
+
 <div class="alert alert-success">
 I urge you to follow these steps when answering all p-value-related questions:
 <ol type="a">
@@ -31,7 +55,6 @@ A reminder to use these steps will <strong>NOT</strong> be provided on future qu
 </div>
 
 ## P-Value Calculations and Decisions I
-
 Compute the p-value (see the steps suggested above) For each situation below.
 
 1. H<sub>A</sub>: &mu;&#8800;14, &sigma;=6, n=25, x&#772;=11.2, &alpha;=0.05.
@@ -42,7 +65,14 @@ Compute the p-value (see the steps suggested above) For each situation below.
 
 ## Body Temperature
 <img src="zimgs/body-temperature-1.jpg" alt="Body Temperature" class="img-right">
-[Machowiak *et al.* (1992)](http://www.ncbi.nlm.nih.gov/pubmed/1302471)[^1] provided a critical examination of whether normal body temperature was 37<sup>o</sup>C. They recorded the orally-determined body temperatures of 65 male and 65 female subjects. Their data is found in NormTemp.csv ([file](https://github.com/droglenc/NCData/raw/master/NormTemp.csv), [meta](https://github.com/droglenc/NCData/blob/master/NormTemp_meta.txt)). Use this information to
+[Machowiak *et al.* (1992)](http://www.ncbi.nlm.nih.gov/pubmed/1302471)[^1] provided a critical examination of whether normal body temperature was 37<sup>o</sup>C. They recorded the orally-determined body temperatures of 65 male and 65 female subjects. Use their results in `r tbls("bodytemp",display="cite")` to answer the questions further below.
+
+`r tbls("bodytemp")`
+
+```{r echo=FALSE, background="white"}
+d <- read.csv("https://github.com/droglenc/NCData/raw/master/NormTemp.csv")
+Summarize(~bodytemp,data=d,digits=2)
+```
 
 1. construct statistical hypotheses, 
 1. compute the sample mean (use `Summarize()`), 
@@ -54,16 +84,28 @@ Compute the p-value (see the steps suggested above) For each situation below.
 
 ## Beetle Size
 <img src="zimgs/beetle.jpg" alt="Beetle" class="img-right">
-Researchers examined the size of two different species of beetles. They hypothesized that the thorax length of the *Halticus oleracea* species would be greater than 190 &mu;m. The data for their study is in Beetles.csv ([file](https://github.com/droglenc/NCData/raw/master/Beetles.csv), [meta](https://github.com/droglenc/NCData/blob/master/Beetles_meta.txt)). Use this information to answer the questions below.
+Researchers examined the size of two different species of beetles. They hypothesized that the thorax length of the *Halticus oleracea* species would be greater than 190 &mu;m. Use their results for the *Halticus oleracea* species in `r tbls("beetles",display="cite")` to answer the questions further below.
+
+`r tbls("beetles")`
+
+```{r echo=FALSE, background="white"}
+d <- read.csv("https://github.com/droglenc/NCData/raw/master/Beetles.csv")
+Summarize(thorax~species,data=d,digits=2)
+```
 
 1. construct statistical hypotheses, 
-1. compute the sample mean,  [*HINT: Summarize these quantitative data by group (i.e., species) and then use only the results for the Halticus oleracea species.*]
 1. compute the p-value assuming that &sigma;=14, 
 1. make a decision about the hypotheses using &alpha;=0.05, and 
 1. summarize your findings in terms of the beetle's thorax size.
 
+&nbsp;
+
 ----
 
-### Footnotes
+## Additional Practice
+
+[Here are more exercises for practice if time permits.](HypTesting_CE2)
+
+&nbsp;
 
 [^1]: This question was adapted from [Shoemaker (1996)](http://www.amstat.org/publications/jse/v4n2/datasets.shoemaker.html).

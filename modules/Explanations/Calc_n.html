@@ -1,0 +1,79 @@
+---
+layout: page
+title: Calculate Sample Size
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<p>The required sample size to estimate a population mean within a prescribed margin-of-error (ME) and level of confidence with a given value of σ (the population standard deviation) can be computed with <span class="math inline">\(\big(\frac{Z^{*}\sigma}{ME}\big)^2\)</span>.</p>
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+Z<sup>*</sup> will always come from assuming a confidence interval (rather than a lower or upper bound) because of the use of “within.”
+</li>
+</ul>
+</div>
+<p>For example, suppose that a researcher wanted to determine the sample size required to estimated the population mean within 10 “units” with 90% confidence assuming that σ=500. In this case, ME=10 (which comes from the prescribed “within” amount) and σ is obviously 500. Assuming a 90% confidence INTERVAL (i.e., 90% is in the “middle” of a standard normal distribution and 5% is in either tail) Z<sup>*</sup> is either -1.645 or +1.645 (does not make a difference as it will be squared in the sample size calculation) as computed with</p>
+<pre class="r"><code>&gt; distrib(0.05,type=&quot;q&quot;)</code></pre>
+<p><img src="Calc_n_files/figure-html/unnamed-chunk-3-1.png" width="336" /></p>
+<p>Therefore, the required sample size is <span class="math inline">\(\big(\frac{1.645*50}{10}\big)^2\)</span>=82.25. It is, of course, not possible to take a fraction of a sample size but note that sample size calculations are <strong>ALWAYS</strong> rounded up. Thus, in this example, one would take a sample size of 83 to meet the prescribed requirements.</p>
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+Sample size calculations are always rounded up to a whole number.
+</li>
+</ul>
+</div>
+<hr />
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
