@@ -20,8 +20,13 @@ modHTML("1Samplet_CE1")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
-library(NCStats)
 source("../../rhelpers/knitr_setup.R")
+library(NCStats)
+library(captioner)
+tbls <- captioner(prefix="Table")
+tbls(name="fecal","Summary statistics for the fecal coliform counts in water samples from a nearby lake following a rainstorm.")
+figs <- captioner(prefix="Table")
+figs(name="fecal","Histogram for the fecal coliform counts in water samples from a nearby lake following a rainstorm.")
 ```
 
 ----
@@ -48,18 +53,27 @@ Compute and interpret confidence regions for the two situations above. You shoul
 
 ## Fecal Coliform Counts I
 <img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/warning_sign.jpg" alt="Checking out" class="img-right">
-[Fecal coliform](https://en.wikipedia.org/wiki/Fecal_coliform) is a bacterium that originates in the intestines of warm-blooded animals and, thus, may be found in their feces.  Organic matter containing fecal coliform may be washed into lakes and streams in runoff following large rain events.  In lakes and streams, the fecal coliform may lead to the growth of pathogens that are dangerous to the health of humans, or reduce oxygen available to fish and other aquatic life.  Thus, fecal coliform levels are routinely monitored in many waterbodies in the United States.
+[Fecal coliform](https://en.wikipedia.org/wiki/Fecal_coliform) is a bacterium that originates in the intestines of warm-blooded animals and, thus, may be found in their feces. Organic matter containing fecal coliform may be washed into lakes and streams in runoff following large rain events. In lakes and streams, the fecal coliform may lead to the growth of pathogens that are dangerous to the health of humans, or reduce oxygen available to fish and other aquatic life. Thus, fecal coliform levels are routinely monitored in many waterbodies in the United States.
 
-Students recorded fecal coliform counts (number of colony forming units (CFU) per 100 ml) in water samples from a nearby lake following a rainstorm that resulted in considerable runoff.  The results from their samples are shown below.
+Students recorded fecal coliform counts (number of colony forming units (CFU) per 100 ml) in water samples from a nearby lake following a rainstorm that resulted in considerable runoff. The results from their samples are in `r tbls("fecal",display="cite")` and `r figs("fecal",display="cite")`.
+
+`r tbls("fecal")`
 
 ```{r echo=FALSE, par1=TRUE}
 df <- read.csv("FecalColiform.csv")
 Summarize(~CFU,data=df,digits=2)
-hist(~CFU,data=df,xlab="Colony Forming Units per 100 ml")
+hist(~CFU,data=df,xlab="")
 ```
 
+```{r echo=FALSE, fig.height=3.5, fig.width=3.5}
+ggplot(data=df,mapping=aes(x=CFU)) +
+  geom_histogram(boundary=0,binwidth=20,closed="left",fill="gray80",color="black") +
+  scale_x_continuous(name="Colony Forming Units per 100 ml",
+                     expand=expansion(mult=0.01),breaks=seq(100,220,20)) +
+  scale_y_continuous(name="Frequency",expand=expansion(mult=c(0,0.05))) +
+  theme_NCStats()
+```
+
+`r figs("fecal")`
+
 Test, at the 5% level, if these results differ from the mean of 178 CFU/100ml predicted by a computer model.
-
-&nbsp;
-
-----

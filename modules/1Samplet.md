@@ -43,7 +43,6 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 ## Practice
 
 * [Exercises](CE/1Samplet_CE1) ([*more as time permits*](CE/1Samplet_CE2)) ... [ANSWER KEY](CE/KEY_1Samplet_CE)
-* [Review Exercises](RE/1Samplet_RevEx)
 
 ----
 
