@@ -37,7 +37,6 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 ## Practice
 
 * [Exercises](CE/Rt1_CE1) ([*more as time permits*](CE/Rt1_CE2)) ... [ANSWER KEY](CE/KEY_Rt1_CE)
-* [Review Exercises](RE/Rt1_RevEx)
 
 ----
 
