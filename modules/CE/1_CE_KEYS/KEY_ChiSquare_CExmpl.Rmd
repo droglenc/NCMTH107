@@ -25,14 +25,6 @@ source("../../../rhelpers/knitr_setup.R")
 ----
 
 ## Recycling in Two Communities I
-```{r RecyclingCalc, echo=FALSE, results='hide', fig.show='hide'}
-d <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/PlasticRecycling.csv")
-( obs <- xtabs(~city+method2,data=d) )
-chi1 <- chisq.test(obs,correct=FALSE)
-chi1$expected
-chi1
-chi1$residuals^2
-```
 
 <ol>
 <li>&alpha; = 0.01.</li>
@@ -148,44 +140,3 @@ chi1$residuals^2
     <li>There is not usually a Step 11 for a Chi-square test. We will not ever do a Step 11 in this class.</li>
   </ul>
 </div>
-
-<br>
-
-----
-
-## Recycling in Two Communities II
-
-All of the calculations required for Steps 5, 6, 7, 8, and 11 may be computed in R if the raw data are available. The raw data for this example were linked to in the backgroud. They are loaded below. Note how the data are stacked as in the two-sample t-test example. Also note that the variable of interest here is `method2` (`method1` provided a more detailed method).
-```{r}
-dfobj <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/PlasticRecycling.csv")
-str(dfobj)
-headtail(dfobj)
-```
-
-The primary R function for this analysis is `chisq.test()`. However, it requires an observed frequency table as its first argument, which must be calculated first with `xtabs()` as you did in the Bivariate EDA - Categorical module (remember that the row variable comes first). The `chisq.test()` also requires `correct=FALSE` so that an unneeded correction factor is not applied.
-
-```{r}
-( obs <- xtabs(~city+method2,data=dfobj) )
-( chi1 <- chisq.test(obs,correct=FALSE) )
-```
-
-From this output one can see
-
-* The observed table needed for Step 6.
-* The chi-square test statistic (and df) for Step 7.
-* The p-value for Step 8.
-
-The expected table for Step 5 can be shown by appending `$expected` to the object saved from `chisq.test()`.
-
-```{r}
-chi1$expected
-```
-
-And, while it is not needed, you can see the parts that went into the chi-square test statistic calculation with
-```{r}
-chi1$residuals^2
-```
-
-Note that you will complete all 11 steps when you have the raw data, but you should use `chisq.test()` as shown here to perform all of the calculations for you.
-
-----

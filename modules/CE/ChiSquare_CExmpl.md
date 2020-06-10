@@ -4,24 +4,12 @@ title: Class Example
 subtitle: Chi-square Test
 author: Derek H. Ogle
 css: "/css/modules.css"
-output:
-  html_document:
-    self_contained: false
-    lib_dir: zlibs
 ---
-
-```{r echo=FALSE, eval=FALSE}
-# Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CEx/")
-source("../../rhelpers/rhelpers.R")
-modHTML("ChiSquare_CExmpl")
-```
 
 ----
 
 ## Recycling in Two Communities I
 <img src="http://derekogle.com/NCMTH107/modules/CEx/zimgs/recycling.jpg" alt="Recycling Bottles" class="img-right">
-
 In the early 1990s, recycling of household waste was not a prevalent as it is today and the availability of infrastructure for recycling varied substantially among communities. At this time, Minneapolis, MN had provided extensive opportunities for residents to recycle household waste, whereas Des Moines (IA) had not yet provided many of these opportunities. [Augustinack (1992)](https://lib.dr.iastate.edu/cgi/viewcontent.cgi?article=17920&context=rtd) examined differences in behavior and attitudes towards recycling among residents from these two cities. In one part of her study, she wanted to determine if methods for disposing of "plastic containers" differed between the two cities. She considered three broad categories of disposal -- "recycle", "reuse", or "throw-away." She administered writtern surveys to a random sample of residents and the results for those that chose to return the survey are shown below.
 
 | City        | Recycle | Reuse | Throw-away |
@@ -30,21 +18,3 @@ In the early 1990s, recycling of household waste was not a prevalent as it is to
 | Minneapolis |    81   |   10  |      6     |
 
 Use these results to test at the 1% level that the distribution of residents into the disposal categories differs between the two cities. Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../11-steps.html).
-
-----
-
-## Recycling in Two Communities II
-
-The results from the previous study were recorded in PlasticRecycling.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/PlasticRecycling.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/PlasticRecycling_meta.txt)). Use these data and `chisq.test()` to confirm your calculations in the previous exercise. 
-
-```{r echo=FALSE, results='hide'}
-library(NCStats)
-d <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/PlasticRecycling.csv")
-( obs <- xtabs(~city+method2,data=d) )
-chi1 <- chisq.test(obs,correct=FALSE)
-chi1$expected
-chi1
-chi1$residuals^2
-```
-
-----
