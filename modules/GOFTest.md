@@ -32,8 +32,7 @@ css: /css/modules.css
 Use the materials below to answer the questions on [this preparation guide](Prep/GOFTest).
 
 * [![PDF](../img/pdf.png) Reading](../book/Goodness-of-Fit.pdf)
-* [![Vimeo](../img/dhovid.png) Goodness-of-Fit Test Example](https://vimeo.com/user45324800/goftest-ex1){:target="_blank"} [8 mins] [![PowerPoint](../img/ppt.png)](PPT/GOFTest_PPT.pptx)
-* [![Vimeo](../img/dhovid.png) Goodness-of-Fit Tests in R](https://vimeo.com/user45324800/rgoftest){:target="_blank"} [6 mins] [![Web](../img/web.png)](HO/GOFTest_RHO.html){:target="_blank"}  [![R](../img/Rlogo.png)](HO/GOFTest_RHO.R){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) Goodness-of-Fit Test Example](https://vimeo.com/user45324800/goftest-ex1){:target="_blank"} [8 mins] ... [corresonding slides](PPT/GOFTest_PPT.pptx)
 
 ----
 
@@ -41,7 +40,6 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 * [Class Example](CEx/GOFTest_CExmpl)
 * [Exercises](CE/GOFTest_CE1) ([*more as time permits*](CE/GOFTest_CE2)) ... [ANSWER KEY](CE/KEY_GOFTest_CE)
-* [Review Exercises](RE/GOFTest_RevEx)
 
 ----
 

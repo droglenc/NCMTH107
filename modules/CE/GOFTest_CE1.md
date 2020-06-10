@@ -51,6 +51,12 @@ Use these results to determine, at the 10% level, if the age distribution in the
 
 ----
 
-<h3>Footnotes</h3>
+## Additional Practice
+
+[Here are more exercises for practice if time permits.](GOFTest_CE2)
+
+&nbsp;
+
+----
 
 [^1]: This example is modified from [Lumsford and Fink (2010)](http://www.amstat.org/publications/jse/v18n1/lunsford.pdf)

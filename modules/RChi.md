@@ -17,7 +17,8 @@ css: /css/modules.css
 <p>After completing this module, you should be able to ...</p>
 
 <ol>
-  <li> Perform the 11 steps of a significance test in a chi-square test situation using results from R.</li>
+  <li>Perform the 11 steps of a significance test in a chi-square test situation using results from R.</li>
+  <li>Perform the 11 steps of a significance test in a goodness-of-fit test situation using results from R.</li>
 </ol>
       </div>
     </div>
@@ -33,7 +34,7 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 * [Reading](bookR/RChi.html)
 * [![Vimeo](../img/dhovid.png) Chi-Square Test (with Raw Data) in R](https://vimeo.com/user45324800/chisqraw-ex1){:target="_blank"} [11 mins]
 * [![Vimeo](../img/dhovid.png) Chi-Square Test (with Summarized Data) in R](https://vimeo.com/user45324800/chisqsmrzd-ex1){:target="_blank"} [8 mins] [![Web](../img/web.png)](HO/ChiSquare_RHO2.html){:target="_blank"}  [![R](../img/Rlogo.png)](HO/ChiSquare_RHO2.R){:target="_blank"} [same handout]
-
+* [![Vimeo](../img/dhovid.png) Goodness-of-Fit Tests in R](https://vimeo.com/user45324800/rgoftest){:target="_blank"} [6 mins] ... [corresponding script](HO/GOFTest_RHO.html){:target="_blank"} 
 ----
 
 ## Practice

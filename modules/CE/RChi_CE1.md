@@ -18,9 +18,9 @@ css: "/css/modules.css"
 
 ----
 
-## Political Opinion
-<img src="zimgs/unemployment.jpg" alt="Unemployment" class="img-right">
-Canadian pollsters polled 642 supporters of Progressive Concervative (PC) party and 159 supporters of the Liberal party in Edmonton, Alberta and asked them to rank how strongly they agreed with the statement that "Unemployment is high because trade unions have priced their members out of a job." Ratings of agreement were on a seven point scale where 1 means "strongly disagree" and 7 means "strongly agree." The results of their poll are recorded in EdmontonPoll.csv ([data](https://github.com/droglenc/NCData/raw/master/EdmontonPoll.csv)/[meta](https://github.com/droglenc/NCData/raw/master/EdmontonPoll_meta.txt)). Use these data to determine, at the 1% level, if the respondent's level of agreement differed between which party the responded supported.[^1]
+## Bear Habitat Use
+<img src="zimgs/black-bear-in-tree.jpg" alt="Black Bear in Tree" class="img-right">
+A researcher for the Wisconsin Department of Natural Resources has radio-collared several Black Bears in northern Wisconsin. At randomly selected times the researcher attempts to locate the bears and record what type of habitat they are in. For one particular bear the researcher recorded the following data: 47 observations in lowland conifer habitat, 12 in aspen, 10 in open areas, 21 in upland hardwood, and 10 in mixed upland. In addition, through GIS analysis of vegetation cover layers the researcher has determined that 34% of the available habitat is lowland conifer, 17% is in aspen, 12% is in open areas, 25% is in upland hardwoods, and 12% is in mixed upland. Use these results to determine, at the 10% level, if this bear uses these habitats in proportion to their availability.
 
 &nbsp;
 
