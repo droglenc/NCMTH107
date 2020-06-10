@@ -5,6 +5,8 @@ subtitle: 1-Sample t-test in R
 css: "/css/modules.css"
 ---
 
+&nbsp;
+
 1. **Application Questions**
     1. [Fecal Coliform Counts II](#fecal-coliform-counts-ii)
     1. [Elk Density in Banff](#elk-density-in-banff)
@@ -28,7 +30,7 @@ css: "/css/modules.css"
 <img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/warning_sign.jpg" alt="Checking out" class="img-right">
 [Fecal coliform](https://en.wikipedia.org/wiki/Fecal_coliform) is a bacterium that originates in the intestines of warm-blooded animals and, thus, may be found in their feces.  Organic matter containing fecal coliform may be washed into lakes and streams in runoff following large rain events.  In lakes and streams, the fecal coliform may lead to the growth of pathogens that are dangerous to the health of humans, or reduce oxygen available to fish and other aquatic life.  Thus, fecal coliform levels are routinely monitored in many waterbodies in the United States.
 
-Students recorded fecal coliform counts (number of colony forming units (CFU) per 100 ml) in water samples from a nearby lake following a rainstorm that resulted in considerable runoff. Use the data in [FecalColiform.csv](FecalColiform.csv) to determine, at the 10% level, if the mean CFU from this event exceeds the 150 CFU/100ml threshold value that would require closing the lake to swimming.
+Students recorded fecal coliform counts (number of colony forming units (CFU) per 100 ml) in water samples from a nearby lake following a rainstorm that resulted in considerable runoff. Use the data in FecalColiform.csv ([data)](FecalColiform.csv)) to determine, at the 10% level, if the mean CFU from this event exceeds the 150 CFU/100ml threshold value that would require closing the lake to swimming.
 
 ----
 
@@ -45,7 +47,7 @@ Students recorded fecal coliform counts (number of colony forming units (CFU) pe
 
 ## Raptors at Hawk Ridge
 <img src="zimgs/hawk_ridge.jpg" alt="Hawk Ridge" class="img-right">
-The Duluth, MN Tourism Board would like to advertise that, on average, more than 50,000 raptors are seen at [Hawk Ridge](http://www.hawkridge.org/) per year. The numbers of various raptor species was observed from 1971-2003 and recorded in HawksRidge.csv ([file](https://github.com/droglenc/NCData/raw/master/HawksRidge.csv), [meta](https://github.com/droglenc/NCData/blob/master/HawksRidge_meta.txt)). Note that the `Total` variable should be used here as the Board is focused on the total number of raptors seen in a year. The board wants there to be strong, if any, evidence to support their claim (i.e., test at the 1% level). Determine if these data support the Board's claim.
+The Duluth, MN Tourism Board would like to advertise that, on average, more than 50,000 raptors are seen at [Hawk Ridge](http://www.hawkridge.org/) per year. The numbers of various raptor species was observed from 1971-2003 and recorded in HawksRidge.csv ([data](https://github.com/droglenc/NCData/raw/master/HawksRidge.csv), [meta](https://github.com/droglenc/NCData/blob/master/HawksRidge_meta.txt)). Note that the `Total` variable should be used here as the Board is focused on the total number of raptors seen in a year. The board wants there to be strong, if any, evidence to support their claim (i.e., test at the 1% level). Determine if these data support the Board's claim.
 
 ----
 
@@ -62,22 +64,22 @@ Fishing line is graded by the pounds (lbs) of pressure that it can withstand bef
 
 ## Strawberries Produced
 <img src="zimgs/strawberries.jpg" alt="Strawberries" class="img-right">
-Last year I planted 400 everbearing strawberry plants in my garden. The company I bought the plants from claimed that in the year following planting, each plant would produce an average of 12 berries. I was surprised by this claim and hypothesized that the plants would actually produce less than what the company said, on average. To test this claim, I counted the number of ripe berries produced for the entire season on 50 randomly selected plants. Use the data in [Strawberries.csv](https://raw.githubusercontent.com/droglenc/NCData/master/Strawberries.csv) to test the company's claim at the 10% level.
+Last year I planted 400 everbearing strawberry plants in my garden. The company I bought the plants from claimed that in the year following planting, each plant would produce an average of 12 berries. I was surprised by this claim and hypothesized that the plants would actually produce less than what the company said, on average. To test this claim, I counted the number of ripe berries produced for the entire season on 50 randomly selected plants. Use the data in Strawberries.csv ([data](https://github.com/droglenc/NCData/raw/master/Strawberries.csv), [meta](https://github.com/droglenc/NCData/blob/master/Strawberries_meta.txt)) to test the company's claim at the 10% level.
 
 ----
 
 ## Putting Together Toys
 <img src="zimgs/toy-assembly.jpg" alt="Toy Assembly" class="img-right">
-The toy industry rates toys regarding their ease for being put together in three categories: easy, moderate, and difficult. A toy is placed into the easy category if it takes 10 minutes or less to put the toy together, in the moderate category if it takes 20 minutes or less (and more than 10 minutes), and in the difficult category if it takes more than 20 minutes. A randomly selected group of 34 adults were asked to put together a new toy to determine which rating the toy should receive. The results from these 34 individuals are in [ToyTime.csv](https://raw.githubusercontent.com/droglenc/NCData/master/ToyTime.csv). Conduct a hypothesis test, at the 10% level, to determine whether the toy should receive the difficult rating.
+The toy industry rates toys regarding their ease for being put together in three categories: easy, moderate, and difficult. A toy is placed into the easy category if it takes 10 minutes or less to put the toy together, in the moderate category if it takes 20 minutes or less (and more than 10 minutes), and in the difficult category if it takes more than 20 minutes. A randomly selected group of 34 adults were asked to put together a new toy to determine which rating the toy should receive. The results from these 34 individuals are in ToyTime.csv ([data](https://github.com/droglenc/NCData/raw/master/ToyTime.csv), [meta](https://github.com/droglenc/NCData/blob/master/ToyTime_meta.txt)). Conduct a hypothesis test, at the 10% level, to determine whether the toy should receive the difficult rating.
 
 ----
 
 ## Boat Traffic
 <img src="zimgs/Yahara-boats.jpg" alt="Yahara Boats" class="img-right">
-One of the dominant uses of Madison area lakes is for boating. To develop a long-term data set on the temporal fluctuations and trends in such activity, the Long Term Ecological Research (LTER) project obtained records of boat traffic that passes through the locks at the head of the Yahara River on its stretch between Lake Mendota and Lake Monona. These data in [Yahara.csv](https://raw.githubusercontent.com/droglenc/NCData/master/Yahara.csv) have been collected nearly daily from April through October since 1976. Use these data to determine, at the 5% level, if the mean total number of boats passing through the locks during the months of June, July, and August of 2005 is greater than 75. HINT: create a new data frame that contains just the data for this period (i.e., the data file contains more data than is needed for this question). I suggest that you do this in three separate steps -- isolate 2005 data, isolate data for months after May (5), and then isolate data for months before September (9).
+One of the dominant uses of Madison area lakes is for boating. To develop a long-term data set on the temporal fluctuations and trends in such activity, the Long Term Ecological Research (LTER) project obtained records of boat traffic that passes through the locks at the head of the Yahara River on its stretch between Lake Mendota and Lake Monona. These data in Yahara.csv ([data](https://github.com/droglenc/NCData/raw/master/Yahara.csv), [meta](https://github.com/droglenc/NCData/blob/master/Yahara_meta.txt)) have been collected nearly daily from April through October since 1976. Use these data to determine, at the 5% level, if the mean total number of boats passing through the locks during the months of June, July, and August of 2005 is greater than 75. HINT: create a new data frame that contains just the data for this period (i.e., the data file contains more data than is needed for this question). I suggest that you do this in three separate steps -- isolate 2005 data, isolate data for months after May (5), and then isolate data for months before September (9).
 
 ----
 
 ## Golden Triangle in Beads?
 <img src="zimgs/golden-triangle.jpg" alt="Golden Triangle" class="img-right">
-The [golden rectangle](http://en.wikipedia.org/wiki/Golden_rectangle) is a rectangle with a length-to-width ratio of 1:1.618, or equivalently, a width-to-length ratio of 0.618:1. The golden rectangle is evident in several works by ancient Greeks and Egyptians. Anthropologists measured the width-to-length ratios of beaded rectangles used by the Shoshoni Indians of America to decorate their leather goods. Use their data in [Shoshoni.csv](https://raw.githubusercontent.com/droglenc/NCData/master/Shoshoni.csv) to determine, at the 5% level, if the golden rectangle is evident in the beadwork of the Shoshonis.
+The [golden rectangle](http://en.wikipedia.org/wiki/Golden_rectangle) is a rectangle with a length-to-width ratio of 1:1.618, or equivalently, a width-to-length ratio of 0.618:1. The golden rectangle is evident in several works by ancient Greeks and Egyptians. Anthropologists measured the width-to-length ratios of beaded rectangles used by the Shoshoni Indians of America to decorate their leather goods. Use their data in Shoshoni.csv ([data](https://github.com/droglenc/NCData/raw/master/Shoshoni.csv), [meta](https://github.com/droglenc/NCData/blob/master/Shoshoni_meta.txt)) to determine, at the 5% level, if the golden rectangle is evident in the beadwork of the Shoshonis.

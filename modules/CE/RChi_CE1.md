@@ -29,8 +29,3 @@ A researcher for the Wisconsin Department of Natural Resources has radio-collare
 ## Additional Practice
 
 [Here are more exercises for practice if time permits.](RChi_CE2)
-
-----
-
-[^1]: This question was adapted [from here](http://uregina.ca/~gingrich/ch10.pdf).
-
