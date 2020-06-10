@@ -39,11 +39,15 @@ In the same study used in the example of this module, [Bohall and Wood (1987)](h
 <img src="zimgs/clinton-news.jpg" alt="Clinton Newspaper" class="img-right">
 Between June 11 and 15, 1993, the Times Mirror Center for People and the Press interviewed 1006 adults concerning their views on media treatment of the then newly inaugurated President Clinton. They found 433 of those sampled felt that news organizations were "criticizing Clinton unfairly." Test the hypothesis (with &alpha; = 0.10) that more than 45% of all adults feel that Clinton has been criticized unfairly.
 
+&nbsp;
+
 ----
 
 ## Cola Taste Test
 <img src="zimgs/cola-taste-test.jpg" alt="Cola Taste Test" class="img-right">
 A random selection of consumers present at the Mall of America were allowed to taste three types of cola (Pepsi, Coke, and a generic brand). After tasting each type (which were supplied to each person in a random order) the person was to select which cola they preferred. The results indicated that 57 people preferred Pepsi, 63 preferred Coke, and 34 preferred the generic brand. Is there evidence, at the 5% level, that these customers prefer one brand over the others?
+
+&nbsp;
 
 ----
 
@@ -63,17 +67,25 @@ The leader of a local lake association conducted a survey of all members of the 
 <img src="zimgs/coinflip.jpg" alt="Coin Flip" class="img-right">
 While imprisoned by the Germans during World War II, the English mathematician John Kerrich tossed a coin 10000 times and obtained 5067 heads. Use his results to determine (at the 1% level) whether the coin was fair or not (i.e., equal chance of heads and tails).
 
+&nbsp;
+
+&nbsp;
+
 ----
 
 ## Distribution of Blood Types
 <img src="zimgs/blood-type.jpg" alt="Blood Type" class="img-right">
 Past data suggest that of the patients that a hospital serves 44% have type O, 45% have type A, 8% have type B, and 3% have type AB blood. In a more recent survey they found that 67 patients had type O, 83 had type A, 29 had type B, and 8 had type AB. Use the more recent results to determine, at the 5% level, if the past results still hold.
 
+&nbsp;
+
 ----
 
 ## Poll of Political Support
 <img src="zimgs/political-poll.jpg" alt="Political Poll" class="img-right">
 A county district attorney would like to run for the office of state district attorney. She has decided that she will give up her county office and run for state office if more than 65% of her party constituents support her. As her campaign manager, you collected data on 950 randomly selected party members and find that 660 party members support the candidate. Test at the 5% significance level whether she should give up her county office and run for the state office.
+
+&nbsp;
 
 ----
 

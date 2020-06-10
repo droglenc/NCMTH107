@@ -67,6 +67,8 @@ The data in [Zoo1.csv](https://raw.githubusercontent.com/droglenc/NCData/master/
 
 &nbsp;
 
+&nbsp;
+
 ----
 
 # Goodness-of-Fit Test Application Questions
