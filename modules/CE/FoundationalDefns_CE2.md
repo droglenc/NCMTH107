@@ -5,11 +5,17 @@ subtitle: Foundational Definitions
 css: "/css/modules.css"
 ---
 
+1. [Transfer of Invasive Species](#transfer-of-invasive-species)
+1. [Snow in Duluth](#snow-in-duluth)
+1. [Playing Time Among NHL Rookies](#playing-time-among-nhl-rookies)
+1. [Public Attitudes Towards Wolves in Wisconsin](#public-attitudes-towards-wolves-in-wisconsin)
+
+&nbsp;
+
 ----
 
 ## Transfer of Invasive Species
 <img src="zimgs/ballast-water.jpg" alt="Ballast Water Discharge" class="img-right">
-
 Many invasive aquatic organisms have been transferred to the Great Lakes in the ballast water of trans-oceanic ships. In an effort to minimize the number of new invading species, ships are now required to release their ballast water before entering the St. Lawrence Seaway. Ships laden with cargo generally do not contain ballast. However, their ballast tanks often contain some residual amount of water and, thus, may harbor invasive organisms. Researchers with Michigan Sea Grant ([more information on page 9 here](http://www.miseagrant.umich.edu/downloads/upwellings/sum02.pdf)) examined the water found in 43 ballast tanks from 22 cargo-laden boats entering the Seaway in 2001. They were interested in determining the proportion of ballast tanks that contained living organisms.
 
 1. Identify the individual, variable, population, parameter, sample, and statistic.
@@ -41,5 +47,3 @@ Two Northland students were interested in whether the average amount of playing 
 
 1. Identify the individual, variable, population, parameter, sample, and statistic.
 1. What type of variable is the variable? [*Be specific*]
-
-----

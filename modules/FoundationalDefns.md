@@ -45,7 +45,6 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 ## Practice
 
 * [Exercises](CE/FoundationalDefns_CE1) ([*more as time permits*](CE/FoundationalDefns_CE2)) ... [ANSWER KEY](CE/KEY_FoundationalDefns_CE)
-* [Review Exercises](RE/FoundationalDefns_RevEx)
 
 &nbsp;
 
@@ -53,4 +52,5 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 ## Archived Materials
 
+* [Review Exercises](RE/FoundationalDefns_RevEx)
 * [Old Lecture Slides](PPT/FoundationalDefns_PPT_old.pptx)
