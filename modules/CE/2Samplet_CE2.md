@@ -5,7 +5,9 @@ subtitle: 2-Sample t-test
 css: "/css/modules.css"
 ---
 
-1. **Application Questions**
+&nbsp;
+
+1. **Applications**
     1. [Commitment to Adult Animals](#commitment-to-adult-animals)
     1. [Methyl Mercury in Mussels](#methyl-mercury-in-mussels)
     1. [Popcorn Yield by Variety](#popcorn-yield-by-variety)
@@ -27,6 +29,7 @@ css: "/css/modules.css"
 
 ----
 
+#Applications
 ## Commitment to Adult Animals
 <img src="zimgs/animal-commitment.png" alt="Commitment to Animals" class="img-right">
 A researcher has constructed a "survey" to determine an individual person's "commitment to adult animals." Each individual survey leads to a single number that measures that individual's "commitment." This number is larger for "greater commitments." The researcher wanted to determine if the mean "commitment" according to this measure was greater for people who evacuated all or some of their pets versus those who did not evacuate any pets during a propane tanker derailment in Weyauwega, Wisconsin in 1996. The table below shows the results for the "commitment" measure for 116 individuals that evacuated all or some of their pets (i.e., `DidEvac`) and for 125 individuals that evacuated none of their pets (i.e., `NoEvac`). Also note that the Levene's p-value for these data is 0.678. Use these results to examine the researcher's hypothesis at the 1% significance level.

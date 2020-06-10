@@ -5,7 +5,9 @@ subtitle: Chi-Square Test
 css: "/css/modules.css"
 ---
 
-1. **Application Questions**
+&nbsp;
+
+1. **Applications**
     1. [AIDS Cases](#aids-cases)
     1. [Distribution of Cyprinids in Asia](#distribution-of-cyprinids-in-asia)
     1. [Working Environment for Nurses](#working-environment-for-nurses)

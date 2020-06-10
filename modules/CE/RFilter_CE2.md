@@ -5,10 +5,17 @@ subtitle: Filtering Data In R
 css: "/css/modules.css"
 ---
 
+&nbsp;
+
+1. **Applications**
+    1. [Cars](#cars)
+    1. [Purple Loosestrife Plants](#purple-loosestrife-plants)
+
+&nbsp;
+
 ----
 
 ## Cars
-
 <img src="zimgs/cars93.jpg" alt="1993 Nissan Skyline" class="img-right">
 [Locke (1993)](http://www.amstat.org/publications/jse/v1n1/datasets.lock.html) recorded data on a random sample of cars from the 1993 model year. His data are in [93cars.csv](https://github.com/droglenc/NCData/raw/master/93cars.csv). Use this information to answer the following questions (by using R).
 
@@ -26,7 +33,6 @@ css: "/css/modules.css"
 
 ## Purple Loosestrife Plants
 <img src="zimgs/purple-loosestrife.jpg" alt="Purple Loosestrife" class="img-right">
-
 The data below are the number of Purple Loosestrife (*Lythrum salicaria*) plants found in each of 19 randomly selected plots in Green Gables Creek Slough.
 
 <pre>

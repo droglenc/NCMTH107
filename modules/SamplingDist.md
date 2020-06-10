@@ -51,12 +51,12 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 ## Practice
 
 * [Exercises I](CE/SamplingDist_CE1) / [Exercises II](CE/SamplingDist_CE2) / [Exercises III](CE/SamplingDist_CE3) ... [ANSWER KEY](CE/KEY_SamplingDist_CE)
-* [Review Exercises](RE/SamplingDist_RevEx)
 
 ----
 
 ## Archived Materials
 
+* [Review Exercises](RE/SamplingDist_RevEx)
 * [Old Lecture Slides](PPT/SamplingDist_PPT_old.pptx)
 
 ----

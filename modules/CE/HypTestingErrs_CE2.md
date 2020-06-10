@@ -6,17 +6,14 @@ author: Derek H. Ogle
 css: "/css/modules.css"
 ---
 
-----
+&nbsp;
 
 1. [Power Calculations (Without Context)](#power-calculations-without-context)
 1. [Conceptual Questions](#conceptual-questions)
 
 &nbsp;
 
-&nbsp;
-
 ----
-
 
 ## Power Calculations (Without Context)
 Compute power[^powerbeta] given the information in each situation below. 

@@ -5,7 +5,9 @@ subtitle: Goodness-of-Fit Test
 css: "/css/modules.css"
 ---
 
-1. **Application Questions**
+&nbsp;
+
+1. **Applications**
     1. [Shrike Habitat Use](#shrike-habitat-use)
     1. [Media Treatment of President Clinton](#media-treatment-of-president-clinton)
     1. [Cola Taste Test](#cola-taste-test)

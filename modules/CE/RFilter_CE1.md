@@ -37,7 +37,4 @@ Use this information to answer the following questions. Use R to answer all ques
 
 ## Additional Practice
 
-[Here are more exercises for practice if time permits.](FilteringDataInR_CE2)
-
-----
-
+[Here are more exercises for practice if time permits.](RFilter_CE2)
