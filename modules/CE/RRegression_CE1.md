@@ -4,25 +4,7 @@ title: Exercises
 subtitle: Linear Regression in R
 author: Derek H. Ogle
 css: "/css/modules.css"
-output:
-  html_document:
-    fig_height: 3.5
-    fig_width: 3.5
-    lib_dir: zlibs
-    self_contained: no
 ---
-
-```{r echo=FALSE, eval=FALSE}
-# Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/")
-source("../../rhelpers/rhelpers.R")
-modHTML("RRegression_CE1")
-```
-
-```{r echo=FALSE, results='hide', message=FALSE}
-library(NCStats)
-source("../../rhelpers/knitr_setup.R")
-```
 
 ----
 
@@ -35,7 +17,7 @@ imperv   60 43 43 34 27 25 21 18 11  8  8  8  7  7  5  4  2
 IBI       9 11 13 23 31 31 21 23 27 37 39 29 31 43 33 35 37
 </pre>
 
-Load these data into R to answer the questions below.  [*Note that these are the same data that you entered in a [previous class exercise](BEDAQuant_CE1.html#urban-runoff).*]
+Load these data into R to answer the questions below.  [*Note that these are the same data that you entered in a [previous class exercise](RBivEDA_CE1.html#urban-runoff).*]
 
 1. In terms of the variables of this problem, what is the equation of the best-fit line?
 1. In terms of the variables of this problem, INTERPRET the value of the slope?
@@ -47,6 +29,8 @@ Load these data into R to answer the questions below.  [*Note that these are the
 1. What is the correlation coefficient between IBI and the percentage of impervious surface?
 1. What proportion of the variability in IBI is explained by knowing the percentage of impervious surface?
 1. What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?
+
+&nbsp;
 
 ----
 
