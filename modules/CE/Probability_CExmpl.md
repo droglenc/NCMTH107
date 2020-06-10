@@ -21,5 +21,3 @@ Suppose that the number of acorns that fall from a mature white oak tree in Bayf
 1. What is the probability that an oak tree produces more than 1000 acorns?
 1. What is the probability that a sample of 20 oak trees will produce a mean with fewer than 1000 acorns?
 1. What is the mean number of acorns for a sample of 35 oak trees that has a 15% probability of the mean being greater.
-
-----

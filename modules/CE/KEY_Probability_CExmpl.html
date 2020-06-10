@@ -1,0 +1,205 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Probability Class Example"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="acorn-production" class="section level2">
+<h2>Acorn Production</h2>
+<ul>
+<li>
+An individual is a “mature white oak tree in Bayfield County.”
+</li>
+<div class="alert alert-warning">
+<ul>
+<li>
+The individual is not an “acorn” because, as you will see in the next question, the variable is “number of acorns.” It does not make sense to record the “number of acorns” about an individual “acorn.” Always ask yourself if it makes sense to record the variable about the individual you have identified. If not, you likely do not have the correct individual.
+</li>
+</ul>
+</div>
+<li>
+The variable is “number of acorns”, which is discrete (quantitative).
+</li>
+<li>
+μ=875 and σ=220.
+</li>
+<li>
+The population distribution is right-skewed.
+</li>
+<div class="alert alert-warning">
+<ul>
+<li>
+This is evident because it is about the oak trees (i.e., the individuals) and is given in the background with a “suppose” preface (i.e., we suppose or assume about things, like characteristics about a population, that cannot be known.)
+</li>
+</ul>
+</div>
+</ul>
+<div class="alert alert-success">
+In all of the following questions, I urge you to follow these steps when answering probability questions:
+<ol type="a">
+<li>
+Identify the distribution that would be used to answer the question (population or sampling).
+</li>
+<li>
+Identify characteristics of the required distribution; i.e., whether normal or not and, if normal, the center and dispersion (SD or SE).
+</li>
+<li>
+Identify whether the question can be answered or not (can be if normal, cannot be if not normal).
+</li>
+<li>
+Answer to the question; use <code>distrib()</code> if the probability can be computed (i.e., normal distribution) or explain why the probability cannot be computed (i.e., specifically note which distribution is not normal).
+</li>
+</ol>
+<p>Keep this in mind as you consider the answers below.</p>
+</div>
+<ol>
+<li>
+The probability that a sample of 50 oak trees will produce a mean greater than 900 acorns is 0.211.
+</li>
+<ol type="a">
+<li>
+Sampling distribution because “sample of 50” and “a mean of”.
+</li>
+<li>
+N(875,<span class="math inline">\(\frac{220}{\sqrt{50}}\)</span>) because n=50&gt;30.
+</li>
+<li>
+Can be answered because sampling distribution IS normal.
+</li>
+<li>
+Used code below for this forward (given value of “x”) right-of (“more than”) question.
+</li>
+<pre class="r"><code>&gt; distrib(900,mean=875,sd=220/sqrt(50),lower.tail=FALSE)</code></pre>
+<img src="KEY_Probability_CExmpl_files/figure-html/unnamed-chunk-3-1.png" width="336" />
+</ol>
+<p><br></p>
+<li>
+The probability that a sample of 35 oak trees will produce a mean between 850 than 900 acorns is 0.499.
+</li>
+<ol type="a">
+<li>
+Sampling distribution because “sample of 35” and “a mean of”.
+</li>
+<li>
+N(875,<span class="math inline">\(\frac{220}{\sqrt{35}}\)</span>) because n=35&gt;30.
+</li>
+<li>
+Can be answered because sampling distribution IS normal.
+</li>
+<li>
+Used code below for this forward (given value of “x”) between question (I suppressed the plots).
+</li>
+<pre class="r"><code>&gt; ab &lt;- distrib(900,mean=875,sd=220/sqrt(35))</code></pre>
+<pre class="r"><code>&gt; a &lt;- distrib(850,mean=875,sd=220/sqrt(35))</code></pre>
+<pre class="r"><code>&gt; ab-a</code></pre>
+<pre><code>[1] 0.4985957</code></pre>
+</ol>
+<p><br></p>
+<li>
+The probability that an oak tree will produce more than 1000 acorns cannot be answered because the population distribution is not normal.
+</li>
+<ol type="a">
+<li>
+Population distribution because about “an oak tree.”
+</li>
+<li>
+The population distribution is not normal as stated in the background.
+</li>
+<li>
+Cannot answer this question because the population distribution is not normal.
+</li>
+<li>
+NA
+</li>
+</ol>
+<p><br></p>
+<li>
+The probability that a sample of 20 oak trees will produce a mean with fewer than 1000 acorns cannot be answered because the sampling distribution is not normal.
+</li>
+<ol type="a">
+<li>
+Sampling distribution because “sample of 20” and “a mean of”.
+</li>
+<li>
+Not normal because n&lt;30 and population is strongly skewed (as stated in the background)
+</li>
+<li>
+Cannot answer this question because the sampling distribution is not normal according to the Central Limit Theorem.
+</li>
+<li>
+NA
+</li>
+</ol>
+<p><br></p>
+<li>
+There is a 15% probability that a sample of 35 oak trees will have a mean number of acorns produced greater than 836.5.
+</li>
+<ol type="a">
+<li>
+Sampling distribution because “sample of 35” and “a mean of”.
+</li>
+<li>
+N(875,<span class="math inline">\(\frac{220}{\sqrt{35}}\)</span>) because n=35&gt;30.
+</li>
+<li>
+Can be answered because sampling distribution IS normal.
+</li>
+<li>
+Used code below for this reverse (given percent) “greater than” question.
+</li>
+<pre class="r"><code>&gt; distrib(0.15,mean=875,sd=220/sqrt(35),type=&quot;q&quot;)</code></pre>
+</ol>
+</ol>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
