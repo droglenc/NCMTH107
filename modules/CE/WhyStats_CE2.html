@@ -7,6 +7,12 @@ css: "/css/modules.css"
 ---
 
 
+<p> </p>
+<ol>
+<li><a href="#wisconsin_lakes">Wisconsin Lakes</a></li>
+<li><a href="#frog-survey">Frog Survey</a></li>
+</ol>
+<p> </p>
 <hr />
 <div id="wisconsin-lakes" class="section level2">
 <h2>Wisconsin Lakes</h2>
@@ -22,6 +28,7 @@ srsdf(named,n=50,vars=c(&quot;county&quot;,&quot;area&quot;))</code></pre>
 <li>Extract another sample of n=50 lakes and compute the proportion of lakes that are from Bayfield County? Compare your two proportions. This is an example of what type of variability?</li>
 <li>Of the 605 named lakes in the three counties, 346 are from Bayfield County. Was the proportion of named lakes from Bayfield County in either of your samples equal to the proportion of all named lakes that were from Bayfield County? Were you surprised? Why or why not?</li>
 </ol>
+<p> </p>
 <hr />
 </div>
 <div id="frog-survey" class="section level2">
@@ -38,7 +45,6 @@ srsdf(named,n=50,vars=c(&quot;county&quot;,&quot;area&quot;))</code></pre>
 <li>How do the average <strong>visual</strong> count of frogs in your two samples compare? What type of variability is evident from this comparison?</li>
 <li>Suppose that the average <strong>visual</strong> counts of frogs on all lakes in northern Wisconsin (the population) is 225. Was the average visual counts from both of your samples equal to this population value? Why or why not?</li>
 </ol>
-<hr />
 </div>
 
 
@@ -58,6 +64,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

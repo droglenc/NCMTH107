@@ -22,6 +22,13 @@ library(NCStats)
 source("../../rhelpers/knitr_setup.R")
 ```
 
+&nbsp;
+
+1. [Wisconsin Lakes](#wisconsin_lakes)
+1. [Frog Survey](#frog-survey)
+
+&nbsp;
+
 ----
 
 ## Wisconsin Lakes
@@ -42,6 +49,8 @@ Use this code and some hand (or calculator) calculations to answer the questions
 1. Extract another sample of n=50 lakes and compute the proportion of lakes that are from Bayfield County? Compare your two proportions. This is an example of what type of variability?
 1. Of the 605 named lakes in the three counties, `r formatC(xtabs(~county,data=filterD(ABDLakes,named))[2],format="f",digits=0)` are from Bayfield County. Was the proportion of named lakes from Bayfield County in either of your samples equal to the proportion of all named lakes that were from Bayfield County?  Were you surprised?  Why or why not?
 
+&nbsp;
+
 ----
 
 ## Frog Survey
@@ -57,5 +66,3 @@ Biologists at the Sigurd Olson Environmental Institute (SOEI) were interested in
 1. Compute the average **visual** count of frogs in all lakes in your second sample. Show your work!
 1. How do the average **visual** count of frogs in your two samples compare? What type of variability is evident from this comparison?
 1. Suppose that the average **visual** counts of frogs on all lakes in northern Wisconsin (the population) is 225. Was the average visual counts from both of your samples equal to this population value? Why or why not?
-
-----
