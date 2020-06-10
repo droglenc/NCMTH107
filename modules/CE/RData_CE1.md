@@ -27,6 +27,4 @@ Record three variables (at least one quantitative and one categorical) about at 
 
 ## Additional Practice
 
-[Here are more exercises for practice if time permits.](GettingDataIntoR_CE2)
-
-----
+[Here are more exercises for practice if time permits.](RData_CE2)
