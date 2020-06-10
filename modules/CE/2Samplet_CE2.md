@@ -16,6 +16,9 @@ css: "/css/modules.css"
     1. [P-Value Calculations and Decisions](#p-value-calculations-and-decisions)
     1. [Confidence Interval Calculations](#confidence-interval-calculations)
 
+&nbsp;
+
+----
 
 <div class="alert alert-success">For all "hypothesis testing" questions, make sure to provide explicit answers with your work shown for all <a href="../11-steps">11 steps of a hypothesis test</a>.
 </div>

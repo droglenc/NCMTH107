@@ -42,6 +42,6 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 ## Archived Materials
 
-* [![Vimeo](../img/dhovid.png) 1-Sample t-Test in R](https://vimeo.com/user45324800/1samplettest){:target="_blank"} [5 mins]
+* [![Vimeo](../img/dhovid.png) 2-Sample t-Test in R](https://vimeo.com/user45324800/1samplettest){:target="_blank"} [5 mins]
 
 ----

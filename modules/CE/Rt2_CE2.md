@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Additional Exercises
-subtitle: 1-Sample t-test in R
+subtitle: 2-Sample t-test in R
 css: "/css/modules.css"
 ---
 
@@ -30,6 +30,8 @@ A study examined the effectiveness of foil-lined milk cartons to reduce "leakage
 ## Low Grades in Math
 <img src="zimgs/F-grade.jpg" alt="An F" class="img-right">
 The University of North Carolina math department is noted for "giving out" low grades. To examine this, the GPA from a random sample of 22 math classes and 29 "other" university classes (from the last year) are in [UNCGrades.csv](https://raw.githubusercontent.com/droglenc/NCData/master/UNCgrades.csv). Determine, at the 10% level, if grades are significantly lower in math than in other classes.
+
+&nbsp;
 
 ----
 
