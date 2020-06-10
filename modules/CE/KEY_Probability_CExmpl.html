@@ -38,6 +38,7 @@ This is evident because it is about the oak trees (i.e., the individuals) and is
 </ul>
 </div>
 </ul>
+<p> </p>
 <div class="alert alert-success">
 In all of the following questions, I urge you to follow these steps when answering probability questions:
 <ol type="a">
@@ -56,6 +57,7 @@ Answer to the question; use <code>distrib()</code> if the probability can be com
 </ol>
 <p>Keep this in mind as you consider the answers below.</p>
 </div>
+<p> </p>
 <ol>
 <li>
 The probability that a sample of 50 oak trees will produce a mean greater than 900 acorns is 0.211.
@@ -76,7 +78,9 @@ Used code below for this forward (given value of “x”) right-of (“more than
 <pre class="r"><code>&gt; distrib(900,mean=875,sd=220/sqrt(50),lower.tail=FALSE)</code></pre>
 <img src="KEY_Probability_CExmpl_files/figure-html/unnamed-chunk-3-1.png" width="336" />
 </ol>
+</ol>
 <p><br></p>
+<ol start="2">
 <li>
 The probability that a sample of 35 oak trees will produce a mean between 850 than 900 acorns is 0.499.
 </li>
@@ -98,7 +102,9 @@ Used code below for this forward (given value of “x”) between question (I su
 <pre class="r"><code>&gt; ab-a</code></pre>
 <pre><code>[1] 0.4985957</code></pre>
 </ol>
+</ol>
 <p><br></p>
+<ol start="3">
 <li>
 The probability that an oak tree will produce more than 1000 acorns cannot be answered because the population distribution is not normal.
 </li>
@@ -116,7 +122,9 @@ Cannot answer this question because the population distribution is not normal.
 NA
 </li>
 </ol>
+</ol>
 <p><br></p>
+<ol start="4">
 <li>
 The probability that a sample of 20 oak trees will produce a mean with fewer than 1000 acorns cannot be answered because the sampling distribution is not normal.
 </li>
@@ -134,7 +142,9 @@ Cannot answer this question because the sampling distribution is not normal acco
 NA
 </li>
 </ol>
+</ol>
 <p><br></p>
+<ol start="5">
 <li>
 There is a 15% probability that a sample of 35 oak trees will have a mean number of acorns produced greater than 836.5.
 </li>
@@ -152,6 +162,7 @@ Can be answered because sampling distribution IS normal.
 Used code below for this reverse (given percent) “greater than” question.
 </li>
 <pre class="r"><code>&gt; distrib(0.15,mean=875,sd=220/sqrt(35),type=&quot;q&quot;)</code></pre>
+<img src="KEY_Probability_CExmpl_files/figure-html/unnamed-chunk-5-1.png" width="336" />
 </ol>
 </ol>
 </div>

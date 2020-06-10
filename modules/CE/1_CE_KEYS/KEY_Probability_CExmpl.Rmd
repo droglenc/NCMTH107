@@ -45,6 +45,7 @@ source("../../../rhelpers/knitr_setup.R")
 </div>
 </ul>
 
+&nbsp;
 
 <div class="alert alert-success">
 In all of the following questions, I urge you to follow these steps when answering probability questions:
@@ -57,6 +58,8 @@ In all of the following questions, I urge you to follow these steps when answeri
 Keep this in mind as you consider the answers below.
 </div>
 
+&nbsp;
+
 <ol>
 <li>The probability that a sample of 50 oak trees will produce a mean greater than 900 acorns is `r formatC(distrib(900,mean=875,sd=220/sqrt(50),lower.tail=FALSE,plot=FALSE),format="f",digits=3)`.</li>
 <ol type="a">
@@ -68,9 +71,11 @@ Keep this in mind as you consider the answers below.
 distrib(900,mean=875,sd=220/sqrt(50),lower.tail=FALSE)
 ```
 </ol>
+</ol>
 
 <br>
 
+<ol start="2">
 <li>The probability that a sample of 35 oak trees will produce a mean between 850 than 900 acorns is `r formatC(distrib(900,mean=875,sd=220/sqrt(35),plot=FALSE)-distrib(850,mean=875,sd=220/sqrt(35),plot=FALSE),format="f",digits=3)`.</li>
 <ol type="a">
 <li>Sampling distribution because "sample of 35" and "a mean of".</li>
@@ -83,9 +88,11 @@ a <- distrib(850,mean=875,sd=220/sqrt(35))
 ab-a
 ```
 </ol>
+</ol>
 
 <br>
 
+<ol start="3">
 <li>The probability that an oak tree will produce more than 1000 acorns cannot be answered because the population distribution is not normal.</li>
 <ol type="a">
 <li>Population distribution because about "an oak tree."</li>
@@ -93,8 +100,11 @@ ab-a
 <li>Cannot answer this question because the population distribution is not normal.</li>
 <li>NA</li>
 </ol>
+</ol>
+
 <br>
 
+<ol start="4">
 <li>The probability that a sample of 20 oak trees will produce a mean with fewer than 1000 acorns cannot be answered because the sampling distribution is not normal.</li>
 <ol type="a">
 <li>Sampling distribution because "sample of 20" and "a mean of".</li>
@@ -102,16 +112,18 @@ ab-a
 <li>Cannot answer this question because the sampling distribution is not normal according to the Central Limit Theorem.</li>
 <li>NA</li>
 </ol>
+</ol>
 
 <br>
 
+<ol start="5">
 <li>There is a 15% probability that a sample of 35 oak trees will have a mean number of acorns produced greater than `r formatC(distrib(0.15,mean=875,sd=220/sqrt(35),type="q"),format="f",digits=1)`.</li>
 <ol type="a">
 <li>Sampling distribution because "sample of 35" and "a mean of".</li>
 <li>N(875,$\frac{220}{\sqrt{35}}$) because n=35>30.</li>
 <li>Can be answered because sampling distribution IS normal.</li>
 <li>Used code below for this reverse (given percent) "greater than" question.</li>
-```{r fig.show="hide"}
+```{r}
 distrib(0.15,mean=875,sd=220/sqrt(35),type="q")
 ```
 </ol>
