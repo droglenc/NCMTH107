@@ -17,7 +17,7 @@ css: "/css/modules.css"
 
 ## Cars
 <img src="zimgs/cars93.jpg" alt="1993 Nissan Skyline" class="img-right">
-[Locke (1993)](http://www.amstat.org/publications/jse/v1n1/datasets.lock.html) recorded data on a random sample of cars from the 1993 model year. His data are in [93cars.csv](https://github.com/droglenc/NCData/raw/master/93cars.csv). Use this information to answer the following questions (by using R).
+[Locke (1993)](http://www.amstat.org/publications/jse/v1n1/datasets.lock.html) recorded data on a random sample of cars from the 1993 model year. His data are in 93cars.csv ([data](https://github.com/droglenc/NCData/raw/master/93cars.csv)/[meta](https://raw.githubusercontent.com/droglenc/NCData/master/93cars_meta.txt)). Use this information to answer the following questions (by using R).
 
 1. Download the data from the class webpage and load into R.
 1. How many variables are recorded in this data.frame?
@@ -52,5 +52,3 @@ Enter these data into a CSV file with columns labeled as `lstrf` and `shade`. Re
 1. List the data for all completely open or partially shaded plots (*use only one command in R*).
 1. List the data for all plots with more than 10 purple loosestrife plants.
 1. List the data for all plots with less than 5 purple loosestrife plants and that are completely shaded (*use only one command in R*).
-
-----

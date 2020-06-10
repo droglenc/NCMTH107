@@ -4,29 +4,13 @@ title: Exercises
 subtitle: R Univariate EDA
 author: Derek H. Ogle
 css: "/css/modules.css"
-output:
-  html_document:
-    self_contained: false
-    lib_dir: zlibs
 ---
-
-```{r echo=FALSE, eval=FALSE}
-# Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE")
-source("../../rhelpers/rhelpers.R")
-modHTML("RUnivEDA_CE1")
-```
-
-```{r echo=FALSE, results='hide', message=FALSE}
-library(NCStats)
-source("../../rhelpers/knitr_setup.R")
-```
 
 ----
 
 ## Brain Weight
 <img src="zimgs/brain.jpg" alt="Brain" class="img-right">
-Use R to answer the following questions for the data in [BrainHead.csv](https://raw.githubusercontent.com/droglenc/NCData/master/BrainHead.csv).
+Use R to answer the following questions for the data in BrainHead.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/BrainHead.csv)/[meta](https://raw.githubusercontent.com/droglenc/NCData/master/BrainHead_meta.txt)).
 
 1. Construct a histogram of `brain.weight`.
 1. Compute summary statistics for `brain.weight`.

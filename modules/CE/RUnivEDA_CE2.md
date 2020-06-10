@@ -4,23 +4,7 @@ title: Additional Exercises
 subtitle: R Univariate EDA
 author: Derek H. Ogle
 css: "/css/modules.css"
-output:
-  html_document:
-    self_contained: false
-    lib_dir: zlibs
 ---
-
-```{r echo=FALSE, eval=FALSE}
-# Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE")
-source("../../rhelpers/rhelpers.R")
-modHTML("RUnivEDA_CE2")
-```
-
-```{r echo=FALSE, results='hide', message=FALSE}
-library(NCStats)
-source("../../rhelpers/knitr_setup.R")
-```
 
 ----
 
@@ -76,7 +60,7 @@ The Dow Jones Travel Index tracks the cost of hotel and car-rental rates in 20 m
 
 ## Zoo Sizes
 <img src="zimgs/zoo.jpg" alt="Zoo" class="img-right">
-The data in [Zoo2.csv](https://raw.githubusercontent.com/droglenc/NCData/master/Zoo2.csv) contains the physical size (in acres) of a sample of zoos from around the United States. Perform a univariate EDA on the "size" variable.
+The data in Zoo2.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/Zoo2.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/Zoo2_meta.txt)) contains the physical size (in acres) of a sample of zoos from around the United States. Perform a univariate EDA on the "size" variable.
 
 &nbsp;
 
@@ -86,7 +70,7 @@ The data in [Zoo2.csv](https://raw.githubusercontent.com/droglenc/NCData/master/
 
 ## Math Class Grades
 <img src="zimgs/math_exam.jpg" alt="Math Grades" class="img-right">
-The University of North Carolina math department is noted for "giving out" low grades. To examine this, the GPA from a random sample of 22 math classes and 29 "other" university classes (from the last year) was collected and recorded in [UNCGrades.csv](https://raw.githubusercontent.com/droglenc/NCData/master/UNCgrades.csv). Use these data to answer the following questions.
+The University of North Carolina math department is noted for "giving out" low grades. To examine this, the GPA from a random sample of 22 math classes and 29 "other" university classes (from the last year) was collected and recorded in UNCGrades.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/UNCgrades.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/UNCgrades_meta.txt)). Use these data to answer the following questions.
 
 1. Separately, perform an appropriate EDA for each type of class. Refer to figures and tables as appropriate.
 1. What two MAJOR conclusions might you make about differences in GPA between the two class types based on your observations above. [*HINT: Focus on EDA characteristics that you described in your answer to the previous question.*]
@@ -122,7 +106,11 @@ E, B, B, C, C, B, B, B, E, B, C, C, C, B, B, C, B, B, B, B, B
 
 ## Zoo Animal Types
 <img src="zimgs/zoo2.jpg" alt="Zoo" class="img-right">
-The data in [Zoo1.csv](https://raw.githubusercontent.com/droglenc/NCData/master/Zoo1.csv) contains a list of animals found in several different zoos. In addition, each animal was classified into broad "type" categories ("mammal", "bird", and "amph/rep"). Perform a univariate EDA for the type of animals in the zoos.
+The data in Zoo1.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/Zoo1.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/Zoo1_meta.txt)) contains a list of animals found in several different zoos. In addition, each animal was classified into broad "type" categories ("mammal", "bird", and "amph/rep"). Perform a univariate EDA for the type of animals in the zoos.
+
+&nbsp;
+
+&nbsp;
 
 ----
 
@@ -158,9 +146,8 @@ O, O, E, E, U, O, E, O
 
 ## Popularity in Middle School
 <img src="zimgs/sports_kids_1.jpg" alt="Sports Kids" class="img-right">
-[Chase and Drummer (1992)](http://www.ncbi.nlm.nih.gov/pubmed/1439167) examined sports as a social status determinant for children. In their study, they surveyed 227 boys and 251 girls in grades 4, 5, and 6 from schools in Michigan to determine which criteria were most important in determining personal, female, and male popularity. In two parts of their study, students were asked what their personal goals were for school (options were "make good grades", "be popular", and "be good in sports"; `goals`) and to rank the importance that "being good in sports" is in defining popularity (1="most important"-4="least important"; `sports`). These data (and answers to several other questions) are in [PopularKids.csv](https://github.com/droglenc/NCData/raw/master/PopularKids.csv). Use these data to answer the following questions.
+[Chase and Drummer (1992)](http://www.ncbi.nlm.nih.gov/pubmed/1439167) examined sports as a social status determinant for children. In their study, they surveyed 227 boys and 251 girls in grades 4, 5, and 6 from schools in Michigan to determine which criteria were most important in determining personal, female, and male popularity. In two parts of their study, students were asked what their personal goals were for school (options were "make good grades", "be popular", and "be good in sports"; `goals`) and to rank the importance that "being good in sports" is in defining popularity (1="most important"-4="least important"; `sports`). These data (and answers to several other questions) are in PopularKids.csv ([data](https://github.com/droglenc/NCData/raw/master/PopularKids.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/PopularKids_meta.txt)). Use these data to answer the following questions.
 
 1. Perform a univariate EDA for `goals`.
 1. Perform a univariate EDA for `sports`.
 1. Perform a univariate EDA for `type` of school. Does this suggest anything about the way that students were sampled?
-
