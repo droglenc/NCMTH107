@@ -4,22 +4,7 @@ title: Exercises
 subtitle: Bivariate EDA in R
 author: Derek H. Ogle
 css: "/css/modules.css"
-output:
-  html_document:
-    self_contained: false
-    lib_dir: zlibs
 ---
-
-```{r echo=FALSE, eval=FALSE}
-# Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/")
-source("../../rhelpers/rhelpers.R")
-modHTML("RBivEDA_CE1")
-```
-
-```{r echo=FALSE, results='hide', message=FALSE}
-source("../../rhelpers/knitr_setup.R")
-```
 
 ----
 
@@ -57,7 +42,7 @@ An Associated Press article captured the attention of readers with the headline 
 
 ## Forest Composition
 <img src="zimgs/forestcomp.jpg" alt="Forest Composition" class="img-right">
-[Hely *et al.* (2000)](http://onlinelibrary.wiley.com/doi/10.2307/3236551/abstract) examined the effects of stand composition on fire hazard in mixed-wood Canadian boreal forests. Two variables recorded for each stand were stand type (`sttype`, where `d`=deciduous, `c`=coniferous, `mc`=mixed coniferous, and `md`=mixed deciduous) and time since the last fire (`tslf`), which was treated as a categorical variable with the categories corresponding to 100 year blocks of time (i.e., `0-100`, `100-200`, etc.). These data may be found in [Fire.csv](https://github.com/droglenc/NCData/raw/master/Fire.csv). Load these data into R and **refactor** `sttype` so that the categories are arranged from coniferous (`c`) to mixed coniferous (`mc`) to mixed deciduous (`md`) to deciduous (`d`; refer to [this FAQ](../../resources/FAQ/FAQs/reorder-levels.html)). Use that data to create appropriate tables to answer the following questions.
+[Hely *et al.* (2000)](http://onlinelibrary.wiley.com/doi/10.2307/3236551/abstract) examined the effects of stand composition on fire hazard in mixed-wood Canadian boreal forests. Two variables recorded for each stand were stand type (`sttype`, where `d`=deciduous, `c`=coniferous, `mc`=mixed coniferous, and `md`=mixed deciduous) and time since the last fire (`tslf`), which was treated as a categorical variable with the categories corresponding to 100 year blocks of time (i.e., `0-100`, `100-200`, etc.). These data may be found in Fire.csv ([data](https://github.com/droglenc/NCData/raw/master/Fire.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/Fire_meta.txt)). Load these data into R and **refactor** `sttype` so that the categories are arranged from coniferous (`c`) to mixed coniferous (`mc`) to mixed deciduous (`md`) to deciduous (`d`; refer to [this FAQ](../../resources/FAQ/FAQs/reorder-levels.html)). Use that data to create appropriate tables to answer the following questions.
 
 1. How many stands last had a fire between 200 and 300 years ago?
 1. Of deciduous tree stands, what percentage last had a fire within the last 100 years?
@@ -72,7 +57,7 @@ An Associated Press article captured the attention of readers with the headline 
 
 ## Red-Imported Fire Ants and Deer
 <img src="zimgs/RIFA.jpg" alt="RIFA" class="img-right">
-[Allen *et al.* (1997)](http://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1047&context=ncfwrustaff) investigated the impact of the density of Red-Imported Fire Ants (*Solenopsis invicta*) on the recruitment of Whitetailed Deer (*Odocoileus virginianus*) fawns (an index of does to fawns). A modified version of their data is recorded in [RIFA.csv](https://raw.githubusercontent.com/droglenc/NCData/master/RIFA.csv). Use this information to write a brief description of this bivariate relationship.
+[Allen *et al.* (1997)](http://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1047&context=ncfwrustaff) investigated the impact of the density of Red-Imported Fire Ants (*Solenopsis invicta*) on the recruitment of Whitetailed Deer (*Odocoileus virginianus*) fawns (an index of does to fawns). A modified version of their data is recorded in RIFA.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/RIFA.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/RIFA_meta.txt)). Use this information to write a brief description of this bivariate relationship.
 
 &nbsp;
 
