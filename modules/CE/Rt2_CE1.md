@@ -4,23 +4,7 @@ title: Exercises
 subtitle: 2-Sample t-test in R
 author: Derek H. Ogle
 css: "/css/modules.css"
-output:
-  html_document:
-    self_contained: false
-    lib_dir: zlibs
 ---
-
-```{r echo=FALSE, eval=FALSE}
-# Renders an appropriate HTML file for the webpage
-setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/")
-source("../../rhelpers/rhelpers.R")
-modHTML("Rt2_CE1")
-```
-
-```{r echo=FALSE, results='hide', message=FALSE}
-library(NCStats)
-source("../../rhelpers/knitr_setup.R")
-```
 
 ----
 
