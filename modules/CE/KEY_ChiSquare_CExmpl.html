@@ -1,0 +1,312 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Chi-Square Class Example"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="recycling-in-two-communities-i" class="section level2">
+<h2>Recycling in Two Communities I</h2>
+<ol>
+<li>
+α = 0.01.
+</li>
+<li>
+H<sub>0</sub>: “Distribution of residents into the methods of disposal is the same for both cities” and H<sub>A</sub>: “Distribution of residents into the methods of disposal is NOT the same for both cities”.
+</li>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+The hypotheses for a chi-square test will usually be “wordy” like this.
+</li>
+<li>
+The H<sub>0</sub> will always have the format of the “distribution of INDIVIDUALS into the LEVELS OF THE RESPONSE VARIABLE is the same for ALL POPULATIONS/GROUPS.” Thus, the H<sub>0</sub> above simply has the capitalized items replaced with their specific meanings in this example. That is, the individuals are residents, the levels of the response variable are the methods of disposal, and the populations are the two cities.
+</li>
+<li>
+The H<sub>A</sub> will be exactly like H<sub>0</sub> except that it will read “NOT the same.”
+</li>
+</ul>
+</div>
+<ol start="3">
+<li>
+A Chi-square test will be used because
+</li>
+<ol type="i">
+<li>
+two groups/populations are considered (Des Moines and Minneapolis) and
+</li>
+<li>
+a categorical variable (method for disposing of plastic containers) was recorded.
+</li>
+</ol>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+These are the two characteristics that separate a Chi-square test from other tests we will see this semester.
+</li>
+<li>
+Please include some sort of description that shows that the characteristics are met and that you are not just listing the characteristics – in other words, include the parts in parentheses.
+</li>
+</ul>
+</div>
+<ol start="4">
+<li>
+This study is observational because the researcher simply asked residents what they did. Who got the survey was random, but they were returned (or not) voluntarily so this is a voluntary response survey rather than a random survey.
+</li>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+Recally from the “Data Production” module that you should not be tricked into calling a survey random if the randomly selected respondents could freely choose to respond or not.
+</li>
+</ul>
+</div>
+<ol start="5">
+<li>
+The assumptions are met because the expected table has more than five individuals in all six cells
+</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th>City</th>
+<th align="center">Recycle</th>
+<th align="center">Reuse</th>
+<th align="center">Throw-away</th>
+<th align="center">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Des Moines</td>
+<td align="center">49.0</td>
+<td align="center">11.5</td>
+<td align="center">21.5</td>
+<td align="center">82</td>
+</tr>
+<tr class="even">
+<td>Minneapolis</td>
+<td align="center">58.0</td>
+<td align="center">13.5</td>
+<td align="center">25.5</td>
+<td align="center">97</td>
+</tr>
+<tr class="odd">
+<td>TOTAL</td>
+<td align="center">97</td>
+<td align="center">25</td>
+<td align="center">47</td>
+<td align="center">179</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<div class="alert alert-warning">
+<ul>
+<li>
+The expected table has the same format as the observed table.
+</li>
+<li>
+Each expcted value is found by multiplying the respective row and column totals and then dividing by n (or the “total total”). For example, the expected value for Des Moines and Recycle is <span class="math inline">\(\frac{82\times97}{179}\)</span>. Similarly, the expected value for Des Moines and Reuse is computed with <span class="math inline">\(\frac{82\times25}{179}\)</span> and the expected value for Minneapolis and Throw-away is <span class="math inline">\(\frac{97\times47}{179}\)</span>. The other three values are computed similarly.
+</li>
+<li>
+Expected values are expected counts of individuals, but we traditionally keep at least one decimal place so that our calculations below will be more precise.
+</li>
+</ul>
+</div>
+<ol start="6">
+<li>
+The statistic for a Chi-square test is the observed frequency table (which was given in the background in this case).
+</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th>City</th>
+<th align="center">Recycle</th>
+<th align="center">Reuse</th>
+<th align="center">Throw-away</th>
+<th align="center">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Des Moines</td>
+<td align="center">26</td>
+<td align="center">19</td>
+<td align="center">37</td>
+<td align="center">82</td>
+</tr>
+<tr class="even">
+<td>Minneapolis</td>
+<td align="center">81</td>
+<td align="center">6</td>
+<td align="center">10</td>
+<td align="center">97</td>
+</tr>
+<tr class="odd">
+<td>TOTAL</td>
+<td align="center">97</td>
+<td align="center">25</td>
+<td align="center">47</td>
+<td align="center">179</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<div class="alert alert-warning">
+<ul>
+<li>
+I usually add the marginal totals to my observed tables in preparation for making the expected tables.
+</li>
+</ul>
+</div>
+<ol start="7">
+<li>
+The χ<sup>2</sup> test statistic is 49.634, as computed from the observed and expected tables as shown below. This test statistic has 2 df.
+</li>
+</ol>
+<p><span class="math display">\[ \chi^{2} = \sum\frac{(obs-exp)^{2}}{exp} = \]</span> <span class="math display">\[ \frac{(26-49.0)^{2}}{49.0} + \frac{(19-11.5)^{2}}{11.5} + \frac{(37-21.5)^{2}}{21.5} + \]</span> <span class="math display">\[ \frac{(81-58.0)^{2}}{58.0} + \frac{(6-13.5)^{2}}{13.5} + \frac{(10-25.5)^{2}}{25.5} = \]</span> <span class="math display">\[ 10.808 + 4.974 + 11.114 + 9.137 + 4.205 + 9.396 = \]</span> <span class="math display">\[ 49.634 \]</span></p>
+<div class="alert alert-warning">
+<ul>
+<li>
+I urge you to write out each of the parts of the test statistic and the intermerdiate computation for each part. This will help you solve problems if something goes sideways.
+</li>
+<li>
+The df is the number of rows (2) minus 1 times the number of columns (3) minus 1.
+</li>
+</ul>
+</div>
+<ol start="8">
+<li>
+p-value&lt;0.00005 (more specifically 1.668e-11) as computed with <code>distrib(49.634,distrib="chisq",df=2,lower.tail=FALSE)</code>.
+</li>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+When computing the p-value on a chi-square distribution it will always be a “right-of” and, thus, will always include <code>lower.tail=FALSE</code>.
+</li>
+</ul>
+</div>
+<ol start="8">
+<li>
+Reject H<sub>0</sub> because the p-value &lt; α.
+</li>
+<li>
+It appears that there is a difference between cities in the distribution of residents into the disposal categories. A comparison of the observed and expected tables suggests that a higher percentage of residents in Minneapolis recycled than did residents in Des Moines.
+</li>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+I like to add on the second sentence above as the first sentence is not very satisfying.
+</li>
+<li>
+There is not usually a Step 11 for a Chi-square test. We will not ever do a Step 11 in this class.
+</li>
+</ul>
+</div>
+<p><br></p>
+<hr />
+</div>
+<div id="recycling-in-two-communities-ii" class="section level2">
+<h2>Recycling in Two Communities II</h2>
+<p>All of the calculations required for Steps 5, 6, 7, 8, and 11 may be computed in R if the raw data are available. The raw data for this example were linked to in the backgroud. They are loaded below. Note how the data are stacked as in the two-sample t-test example. Also note that the variable of interest here is <code>method2</code> (<code>method1</code> provided a more detailed method).</p>
+<pre class="r"><code>&gt; dfobj &lt;- read.csv(&quot;https://raw.githubusercontent.com/droglenc/NCData/master/PlasticRecycling.csv&quot;)
+&gt; str(dfobj)</code></pre>
+<pre><code>&#39;data.frame&#39;:   179 obs. of  3 variables:
+ $ city   : chr  &quot;Des Moines&quot; &quot;Des Moines&quot; &quot;Des Moines&quot; &quot;Des Moines&quot; ...
+ $ method : chr  &quot;curbside&quot; &quot;curbside&quot; &quot;curbside&quot; &quot;curbside&quot; ...
+ $ method2: chr  &quot;recycle&quot; &quot;recycle&quot; &quot;recycle&quot; &quot;recycle&quot; ...</code></pre>
+<pre class="r"><code>&gt; headtail(dfobj)</code></pre>
+<pre><code>           city   method method2
+1    Des Moines curbside recycle
+2    Des Moines curbside recycle
+3    Des Moines curbside recycle
+177 Minneapolis    reuse   reuse
+178 Minneapolis    reuse   reuse
+179 Minneapolis    reuse   reuse</code></pre>
+<p>The primary R function for this analysis is <code>chisq.test()</code>. However, it requires an observed frequency table as its first argument, which must be calculated first with <code>xtabs()</code> as you did in the Bivariate EDA - Categorical module (remember that the row variable comes first). The <code>chisq.test()</code> also requires <code>correct=FALSE</code> so that an unneeded correction factor is not applied.</p>
+<pre class="r"><code>&gt; ( obs &lt;- xtabs(~city+method2,data=dfobj) )</code></pre>
+<pre><code>             method2
+city          recycle reuse throw-away
+  Des Moines       26    19         37
+  Minneapolis      81     6         10</code></pre>
+<pre class="r"><code>&gt; ( chi1 &lt;- chisq.test(obs,correct=FALSE) )</code></pre>
+<pre><code>Pearson&#39;s Chi-squared test with obs 
+X-squared = 49.6332, df = 2, p-value = 1.668e-11</code></pre>
+<p>From this output one can see</p>
+<ul>
+<li>The observed table needed for Step 6.</li>
+<li>The chi-square test statistic (and df) for Step 7.</li>
+<li>The p-value for Step 8.</li>
+</ul>
+<p>The expected table for Step 5 can be shown by appending <code>$expected</code> to the object saved from <code>chisq.test()</code>.</p>
+<pre class="r"><code>&gt; chi1$expected</code></pre>
+<pre><code>             method2
+city           recycle    reuse throw-away
+  Des Moines  49.01676 11.45251   21.53073
+  Minneapolis 57.98324 13.54749   25.46927</code></pre>
+<p>And, while it is not needed, you can see the parts that went into the chi-square test statistic calculation with</p>
+<pre class="r"><code>&gt; chi1$residuals^2</code></pre>
+<pre><code>             method2
+city            recycle     reuse throw-away
+  Des Moines  10.807961  4.973977  11.114276
+  Minneapolis  9.136627  4.204806   9.395573</code></pre>
+<p>Note that you will complete all 11 steps when you have the raw data, but you should use <code>chisq.test()</code> as shown here to perform all of the calculations for you.</p>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
