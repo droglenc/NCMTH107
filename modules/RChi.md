@@ -40,7 +40,7 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 ## Practice
 
-* [Class Example](CE/RChi_CExmpl) ... [Annotated Key](CE/KEY_RChi_CExmpl)
+* [Class Example](CE/RChi_CExmpl) ... [ANNOTATED KEY](CE/KEY_RChi_CExmpl)
 * [Exercises](CE/RChi_CE1) ([*more as time permits*](CE/RChi_CE2)) ... [ANSWER KEY](CE/KEY_RChi_CE)
 
 ----

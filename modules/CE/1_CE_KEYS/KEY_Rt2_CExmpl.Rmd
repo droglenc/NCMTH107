@@ -1,0 +1,67 @@
+---
+title: "Answer Key"
+subtitle: "R 2-Sample t Class Example"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3.5
+    fig_width: 3.5
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_Rt2_CExmpl")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+```
+
+----
+
+## Cholesterol Drug Treatments II
+The full 11-steps for this example are in these [annotations for the 2-sample t-test class example](KEY_2Samplet_CExmpl). However, the calculations required for Steps 5, 6, 7, 8, and 11 may be computed in R if the raw data are available as they were here. Note, however, that the data only had the before and after the drug LDL levels for each patient and not the reduction in LDL. Thus, a reduction in LDL variable had to be computed at shown below. This will not be required for most situations.
+```{r}
+dfobj <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Cholesterol2.csv")
+dfobj$redux <- dfobj$before-dfobj$after
+str(dfobj)
+```
+
+Another important note is that the data must be "stacked" in order to perform the analyses in R. This means that the data for one group must be stacked below the data for the other group, which will require a variable to explain which group the values correspond to. Fortunately this conforms to our mantra that each row must contain data from only one individual. The first three and last three rows for these data illustrate the stacked format.
+```{r}
+headtail(dfobj)
+```
+
+The Levene's test result is computed with `levenesTest()` using a formula of the form `qvar~cvar`, where `qvar` is the quantitative response variable and `cvar` is the categorical variable that describes the groups. Of course, the `data=` argument is also needed. The p-value is shown under the `Pr(>F)` heading.
+```{r warning=FALSE}
+levenesTest(redux~tx,data=dfobj)
+```
+
+The histogram of the response variable for each group may be needed for Step 4 (as above) and is easily computed as below (which you have done before).
+```{r echo=-1, fig.width=6}
+ggplot(data=dfobj,mapping=aes(x=redux)) +
+  geom_histogram(boundary=0,binwidth=0.1,color="black",fill="darkgray") +
+  scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
+  labs(x="Reduction in LDL") +
+  theme_NCStats() +
+  facet_wrap(vars(tx))
+```
+
+Finally, most of the calculations for Steps 6, 7, 8, and 11 are computed with `t.test()` using the same formula and `data=` argument as for `levenesTest()`. If the variances are found to be equal then you MUST also include `var.equal=TRUE`. Finally, you should include the null hypothesized value in `mu=` (will always be zero for 2-sample t-test), the alternative hypothesis sign in `alt=`, and the confidence level in `conf.level=` as you have done with the 1-sample t-test.
+```{r}
+t.test(redux~tx,data=dfobj,mu=0,alt="two.sided",conf.level=0.95,var.equal=TRUE)
+```
+
+From this output one can see
+
+* The two sample means for Step 6 at the very bottom of the output.
+* The t test statistics for Step 7 after "t=", with the corresponding degrees-of-freedom after "df=". Note that when you use `t.test()` like this you do not need to worry about computing the pooled sample variance or the standard error.
+* The p-value is after "p-value=" (and, thus, you do not need to use `distrib()`).
+* The confidence region values are under "XX percent confidence interval". Note that you do not need to find t<sup>*</sup> nor perform the calculations as they are done here for you. You simply need to write the interpretation.
+
+Note that you will complete all 11 steps when you have the raw data, but you should use `t.test()` as shown here to perform all of the hard calculations for you.

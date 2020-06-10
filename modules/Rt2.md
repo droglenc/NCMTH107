@@ -36,6 +36,7 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 ## Practice
 
+* [Class Example](CE/Rt2_CExmpl) ... [ANNOTATED KEY](CE/KEY_Rt2_CExmpl) 
 * [Exercises](CE/Rt2_CE1) ([*more as time permits*](CE/Rt2_CE2)) ... [ANSWER KEY](CE/KEY_Rt2_CE)
 
 ----
