@@ -41,7 +41,7 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 ## Practice
 
-* [Class Example](CEx/ChiSquare_CExmpl) ... [Annotated Key](CE/KEY_ChiSquare_CEx)
+* [Class Example](CE/ChiSquare_CExmpl) ... [Annotated Key](CE/KEY_ChiSquare_CExmpl)
 * [Exercises](CE/ChiSquare_CE1) ([*more as time permits*](CE/ChiSquare_CE2)) ... [ANSWER KEY](CE/KEY_ChiSquare_CE)
 
 ----

@@ -42,7 +42,7 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 ## Practice
 
-* [Class Examples](CEx/1SampleZ_CExmpl)
+* [Class Examples](CE/1SampleZ_CExmpl) ... [ANNOTATED KEY](CE/KEY_1SampleZ_CExmpl)
 * [Exercises](CE/1SampleZ_CE1) ([*more as time permits*](CE/1SampleZ_CE2)) ... [ANSWER KEY](CE/KEY_1SampleZ_CE)
 
 ----
