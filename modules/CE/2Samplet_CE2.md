@@ -48,6 +48,8 @@ impacted  0.011 0.054 0.056 0.095 0.051 0.077
 reference 0.031 0.040 0.029 0.066 0.018 0.042 0.044
 </pre>
 
+----
+
 ## Popcorn Yield by Variety
 <img src="zimgs/popcorn.jpg" alt="" class="img-right">
 A student wanted to determine if the number of unpopped kernels differed between yellow and white varieties of a famous brand of popcorn. To test this, he put 100 kernels of either white or yellow popcorn into a standard air popper, popped the corn until no "pops" were heard, and then counted the number of unpopped kernels. He tested 30 randomly selected groups of 100 kernels for both white and yellow varieties. Use the results below to test, at the 10% level, the student's hypothesis.

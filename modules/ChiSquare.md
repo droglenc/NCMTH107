@@ -36,16 +36,13 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 * [![Vimeo](../img/dhovid.png) Chi-Square Distribution in R](https://vimeo.com/user45324800/chisqdistribution){:target="_blank"} [2 mins] [![Web](../img/web.png)](HO/ChiSquare_RHO1.html){:target="_blank"}  [![R](../img/Rlogo.png)](HO/ChiSquare_RHO1.R){:target="_blank"}
 * [![Vimeo](../img/dhovid.png) Where Do Expected Values Come From?](https://vimeo.com/user45324800/chisqtest-expvals){:target="_blank"} [5 mins] [![PowerPoint](../img/ppt.png)](PPT/ChiSquare_PPT2.pptx)
 * [![Vimeo](../img/dhovid.png) Chi-Square Test Example](https://vimeo.com/401077003){:target="_blank"} [15 mins] [![PowerPoint](../img/ppt.png)](PPT/ChiSquare_PPT2.pptx)
-* [![Vimeo](../img/dhovid.png) Chi-Square Test (with Raw Data) in R](https://vimeo.com/user45324800/chisqraw-ex1){:target="_blank"} [11 mins]
-* [![Vimeo](../img/dhovid.png) Chi-Square Test (with Summarized Data) in R](https://vimeo.com/user45324800/chisqsmrzd-ex1){:target="_blank"} [8 mins] [![Web](../img/web.png)](HO/ChiSquare_RHO2.html){:target="_blank"}  [![R](../img/Rlogo.png)](HO/ChiSquare_RHO2.R){:target="_blank"} [same handout]
 
 ----
 
 ## Practice
 
 * [Class Example](CEx/ChiSquare_CExmpl) ... [Annotated Key](CE/KEY_ChiSquare_CEx)
-* [Exercise I](CE/ChiSquare_CE1) / [Exercise II](CE/ChiSquare_CE2) ([*more as time permits*](CE/ChiSquare_CE3)) ... [ANSWER KEY](CE/KEY_ChiSquare_CE)
-* [Review Exercises](RE/ChiSquare_RevEx)
+* [Exercises](CE/ChiSquare_CE1) ([*more as time permits*](CE/ChiSquare_CE2)) ... [ANSWER KEY](CE/KEY_ChiSquare_CE)
 
 ----
 

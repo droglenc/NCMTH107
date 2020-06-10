@@ -21,8 +21,5 @@ Use the preparation readings and videos to prepare WRITTEN answers (to bring to 
 1. How is the expected frequencies table computed?
 1. What are the assumptions of a chi-square test?
 1. What characteristics define when a chi-square test will be used?
-1. What R function do you use to construct an observed table from raw data?
-1. What R function do you use to construct an observed table from data that has already been summarized (to frequencies)?
-1. What R function is used to perform a chi-square test?
 
 ----
