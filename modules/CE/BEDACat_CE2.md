@@ -5,6 +5,14 @@ subtitle: Bivariate EDA - Categorical
 css: "/css/modules.css"
 ---
 
+&nbsp;
+
+1. **Applications**
+    1. [Rainfall in West Africa](#rainfall-in-west-africa)
+    1. [Herring Gulls](#herring-gulls)
+
+&nbsp;
+
 ----
 
 ## Rainfall in West Africa

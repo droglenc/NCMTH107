@@ -44,12 +44,12 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 ## Practice
 
 * [Exercises](CE/BEDAQuant_CE1) ([*more as time permits*](CE/BEDAQuant_CE2)) ... [ANSWER KEY](CE/KEY_BEDAQuant_CE)
-* Review Exercises: [Definitions and Calculations](RE/BEDAQuant_RevEx_Defns)
 
 ----
 
 ## Archived Materials
 
+* Review Exercises: [Definitions and Calculations](RE/BEDAQuant_RevEx_Defns)
 * [Old Lecture Slides](PPT/BEDAQuant_PPT_old.pptx)
 
 ----

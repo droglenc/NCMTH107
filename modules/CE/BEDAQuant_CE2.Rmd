@@ -19,10 +19,24 @@ modHTML("BEDAQuant_CE2")
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 source("../../rhelpers/knitr_setup.R")
+library(dplyr)
 ```
+
+&nbsp;
+
+1. **General Understandings**
+    1. [Associations II](#associations-ii)
+1. **Applications**
+    1. [Plastic Waste and GDP](#plastic-waste-and-gdp)
+    1. [Rates of Drinking Alcohol](#rates-of-drinking-alcohol)
+    1. [Metals in Topsoil](#metals-in-topsoil)
+    1. [Highway and City MPG](#highway-and-city-mpg)
+
+&nbsp;
 
 ----
 
+# General Understandings
 ## Associations II
 For each situation below, identify (a) the response variable (if possible) and (b) whether you would expect a positive, negative, or no (neutral) association between the pair of variables.  Explain your reasoning for both answers.
 
@@ -35,6 +49,9 @@ For each situation below, identify (a) the response variable (if possible) and (
 
 ----
 
+&nbsp;
+
+#Applications
 ## Plastic Waste and GDP
 <img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/plastic_bales.jpeg" alt="Plastic Waste" class="img-right">
 Use the figure below to perform a bivariate EDA between the per capita plastic waste generation rate (kg of plastic waste per person per day) and gross domestic product (GDP) per capita (in 2011 international dollars) measured for 148 countries in 2010.[^plasticsdata]

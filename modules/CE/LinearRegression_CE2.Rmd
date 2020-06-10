@@ -25,6 +25,18 @@ library(tidyverse)
 source("../../rhelpers/knitr_setup.R")
 ```
 
+&nbsp;
+
+1. **Applications**
+    1. [Avocado Sales](#avocado-sales)
+    1. [Penguin Size](#penguin-size)
+    1. [Molting of Wood Thrush](#molting-of-wood-thrush)
+    1. [Age and Systolic Blood Pressure](#age-and-systolic-blood-pressure)
+    1. [TV Ratings](#tv-ratings)
+    1. [Deer Fawns](#deer-fawns)
+
+&nbsp;
+
 ----
 
 ## Avocado Sales
@@ -71,7 +83,7 @@ Use the results for **2015** to answer the questions below.
 Kirsten Gorman examined various aspects of three species of penguins (Adelie, Chinstrap, and Gentoo) on Palmer Island, Antarctica.[^PengData] In one part of her research she examined the relationship between flipper length (mm) and body mass (g) with the hope of being able to predice body mass from flipper length. The results of her analysis are shown below.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, fig.width=7, fig.height=3.1}
-d <- read.csv("https://raw.githubusercontent.com/allisonhorst/penguins/master/data/penguins_lter.csv") %>%
+d <- read.csv("https://raw.githubusercontent.com/allisonhorst/penguins/master/data-raw/penguins_raw.csv") %>%
   janitor::clean_names() %>%
   mutate(species_short=stringr::word(species,1))
 ggplot(data=d,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +

@@ -49,12 +49,12 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 * [Exercises I](CE/NormalDist_CE1) ... [ANSWER KEY](CE/KEY_NormalDist_CE1)
 * [Exercises II](CE/NormalDist_CE2) ([*more as time permits*](CE/NormalDist_CE3)) ... [ANSWER KEY](CE/KEY_NormalDist_CE2)
-* Review Exercises: [Simple Areas](RE/NormalDist_RevEx)
 
 ----
 
 ## Archived Materials
 
+* Review Exercises: [Simple Areas](RE/NormalDist_RevEx)
 * [Old Lecture Slides](PPT/NormalDist_PPT_old.pptx)
 
 ----

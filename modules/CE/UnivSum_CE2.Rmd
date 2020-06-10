@@ -18,11 +18,12 @@ modHTML("UnivSum_CE2")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE}
-library(NCStats)
 source("../../rhelpers/knitr_setup.R")
+library(NCStats)
+library(ggplot2)
 ```
 
-----
+&nbsp;
 
 1. **Calculate Summary Statistics**
     1. [Number of States Visited](#number-of-states-visited)
@@ -187,5 +188,3 @@ ggplot(data=tbl,mapping=aes(x=cats,y=perc)) +
 1. What (approximate) percentage of individuals used "estuarine emergent wetlands"?
 1. What (approximate) percentate of individuals were not in the two most common habitat types?
 1. What is the shape of this distribution?
-
-----
