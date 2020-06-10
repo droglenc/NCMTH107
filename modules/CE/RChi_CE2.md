@@ -45,6 +45,8 @@ On the eastern slopes of the Rocky Mountains in Colorado, Wyoming, and Montana, 
 <img src="zimgs/exercise1.jpg" alt="Exercising" class="img-right">
 USA Today presented two sets of data on why Americans don't exercise. One set was for 1000 randomly selected men. The other was for 1000 randomly selected women. The results of the surveys are recorded in [Exercise.csv](https://raw.githubusercontent.com/droglenc/NCData/master/Exercise.csv). Determine, at the 1% level, if the distribution of men and women differs among the six responses given.
 
+&nbsp;
+
 ----
 
 ## Types of Animals in Different Zoos

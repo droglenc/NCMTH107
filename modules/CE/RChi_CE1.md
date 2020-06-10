@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Exercises II
-subtitle: Chi-Square Test
+title: Exercises
+subtitle: R Chi-Square Test
 css: "/css/modules.css"
 ---
 
@@ -22,9 +22,15 @@ css: "/css/modules.css"
 <img src="zimgs/unemployment.jpg" alt="Unemployment" class="img-right">
 Canadian pollsters polled 642 supporters of Progressive Concervative (PC) party and 159 supporters of the Liberal party in Edmonton, Alberta and asked them to rank how strongly they agreed with the statement that "Unemployment is high because trade unions have priced their members out of a job." Ratings of agreement were on a seven point scale where 1 means "strongly disagree" and 7 means "strongly agree." The results of their poll are recorded in EdmontonPoll.csv ([data](https://github.com/droglenc/NCData/raw/master/EdmontonPoll.csv)/[meta](https://github.com/droglenc/NCData/raw/master/EdmontonPoll_meta.txt)). Use these data to determine, at the 1% level, if the respondent's level of agreement differed between which party the responded supported.[^1]
 
+&nbsp;
+
 ----
 
-## Footnotes
+## Additional Practice
+
+[Here are more exercises for practice if time permits.](RChi_CE2)
+
+----
 
 [^1]: This question was adapted [from here](http://uregina.ca/~gingrich/ch10.pdf).
 

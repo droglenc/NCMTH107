@@ -67,6 +67,8 @@ The American Nurses Credentialing Center (ANCC) has created guidelines for nursi
 <img src="zimgs/heart-attack-silent.jpg" alt="Heart Attack" class="img-right">
 [Fiebach *et al.* (1990)](https://www.ncbi.nlm.nih.gov/pubmed/2299781) examined the immediate survival of 790 males and 332 females who were hospitalized following a myocardial infarction (i.e., a "heart attack"). During hospitalization, 70 men and 47 women died. Is there a difference, at the 5% level, in mortality rate (proportion of patients that died) between men and women during hospitalization?
 
+&nbsp;
+
 ----
 
 ## School Uniforms

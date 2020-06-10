@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Exercises I
+title: Exercises
 subtitle: Chi-Square Test
 css: "/css/modules.css"
 ---
@@ -23,6 +23,13 @@ Atmospheric scientists have hypothesized that the strengths of hurricanes has in
 
 Use this information to determine, at the 10% level, if the distribution of hurricanes into the strength categories differs between the two time periods.[^1]
 
+&nbsp;
+
+----
+
+## Additional Practice
+
+[Here are more exercises for practice if time permits.](ChiSquare_CE2)
 
 ----
 
