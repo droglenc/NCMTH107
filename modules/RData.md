@@ -41,8 +41,8 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 ## Practice
 
-* [Class Example](CEx/GettingDataIntoR_CExmpl)
-* [Exercises](CE/GettingDataIntoR_CE1) [[*more as time permits*](CE/GettingDataIntoR_CE2)] ... [ANSWER KEY](CE/KEY_GettingDataIntoR_CE)
-* [Review Exercises](RE/GettingDataIntoR_RevEx.html)
+* [Class Example](CEx/RData_CExmpl)
+* [Exercises](CE/RData_CE1) [[*more as time permits*](CE/RData_CE2)] ... [ANSWER KEY](CE/KEY_RData_CE)
+* [Review Exercises](RE/RData_RevEx.html)
 
 ----
