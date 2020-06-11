@@ -83,7 +83,6 @@ decid <- filterD(firedf,sttype=="d")
 str(decid)
 decid$sttype
 ```
-
 </ol>
 
 <div class="alert alert-warning">
@@ -92,7 +91,7 @@ decid$sttype
 </ul>
 </div>
 
-<ol start="2>
+<ol start="2">
 <li>The structure of the data frame with litter depths less than 2 cm is shown below. In addition, just the `litdep` variable is shown to confirm that all the individuals have a litter depth less than 2 cm..</li>
 
 ```{r}
@@ -100,7 +99,6 @@ lt2 <- filterD(firedf,litdep<2)
 headtail(lt2)
 lt2$litdep
 ```
-
 </ol>
 
 <div class="alert alert-warning">
