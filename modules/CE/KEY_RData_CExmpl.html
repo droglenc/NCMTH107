@@ -11,10 +11,9 @@ css: "/css/modules.css"
 <div id="enter-own-data" class="section level2">
 <h2>Enter Own Data</h2>
 <p>I entered the following data into Excel and saved it as a CSV file.</p>
-<div class="figure">
-<img src="http://derekogle.com/NCMTH107/modules/CE/1_CE_KEYS/dho_data.JPG" alt="" />
-<p class="caption">dho_data</p>
-</div>
+<center>
+<img src="http://derekogle.com/NCMTH107/modules/CE/1_CE_KEYS/dho_data.JPG" title="fig:" alt="dho_data.csv" />
+</center>
 <p>In R, I started a script with <code>library(NCStats)</code>, saved it to the same folder as my CSV file, used the Session..Set Working Direction.. To Source File Location menu items to set the working directory, copied the <code>setwd()</code> to my script, and then used <code>read.csv()</code> to load the file. My script, including the code to show the entire data frame and the structure of the data frame is below.</p>
 <pre class="r"><code>&gt; library(NCStats)
 &gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/1_CE_KEYS&quot;)
