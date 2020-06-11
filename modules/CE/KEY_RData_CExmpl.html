@@ -1,0 +1,107 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Getting Data into R Class Example"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="enter-own-data" class="section level2">
+<h2>Enter Own Data</h2>
+<p>I entered the following data into Excel and saved it as a CSV file.</p>
+<div class="figure">
+<img src="dho_data.JPG" alt="" />
+<p class="caption">dho_data</p>
+</div>
+<p>In R, I started a script with <code>library(NCStats)</code>, saved it to the same folder as my CSV file, used the Session..Set Working Direction.. To Source File Location menu items to set the working directory, copied the <code>setwd()</code> to my script, and then used <code>read.csv()</code> to load the file. My script, including the code to show the entire data frame and the structure of the data frame is below.</p>
+<pre class="r"><code>&gt; library(NCStats)
+&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/1_CE_KEYS&quot;)
+&gt; dho_df &lt;- read.csv(&quot;dho_data.csv&quot;)
+&gt; dho_df      # entire data.frame</code></pre>
+<pre><code>    name age relation
+1 Bonnie  38   sister
+2   Lori  60   sister
+3  Patti  48   sister
+4  Carla  80   mother
+5  Wally  85   father</code></pre>
+<pre class="r"><code>&gt; str(dho_df)</code></pre>
+<pre><code>&#39;data.frame&#39;:   5 obs. of  3 variables:
+ $ name    : chr  &quot;Bonnie&quot; &quot;Lori&quot; &quot;Patti&quot; &quot;Carla&quot; ...
+ $ age     : int  38 60 48 80 85
+ $ relation: chr  &quot;sister&quot; &quot;sister&quot; &quot;sister&quot; &quot;mother&quot; ...</code></pre>
+<p> </p>
+<hr />
+</div>
+<div id="load-data-from-webpage" class="section level2">
+<h2>Load Data From Webpage</h2>
+<p>I downloaded <strong>fire.csv</strong> to my working directory. In R, I started a new script with <code>library(NCStats)</code>, saved it to the same folder as my CSV file, copied the <code>setwd()</code> from my first script, and then used <code>read.csv()</code> to load the file. My script, including the code to show the entire data frame and the structure of the data frame is below.</p>
+<pre class="r"><code>&gt; library(NCStats)
+&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/1_CE_KEYS&quot;)
+&gt; firedf &lt;- read.csv(&quot;fire.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; str(firedf)</code></pre>
+<pre><code>&#39;data.frame&#39;:   48 obs. of  6 variables:
+ $ sttype: chr  &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot; ...
+ $ tslf  : chr  &quot;0-100&quot; &quot;0-100&quot; &quot;0-100&quot; &quot;0-100&quot; ...
+ $ tdw   : num  27.7 22.6 26.2 43.6 27 41.2 46.6 27.6 89.2 39.6 ...
+ $ litdep: num  0.62 1.33 1.46 1.92 2.9 2.13 2.33 1.46 2.25 3.08 ...
+ $ fuel1h: num  0.06 0.07 0.08 0.05 0.06 0.15 0.02 0.04 0.04 0.3 ...
+ $ tltd  : int  2382 1978 1234 1478 1901 1111 748 1055 3422 1045 ...</code></pre>
+<pre class="r"><code>&gt; headtail(firedf)</code></pre>
+<pre><code>   sttype    tslf  tdw litdep fuel1h tltd
+1       d   0-100 27.7   0.62   0.06 2382
+2       d   0-100 22.6   1.33   0.07 1978
+3       d   0-100 26.2   1.46   0.08 1234
+46      c 200-300 52.2   2.08   0.12 1136
+47      c 200-300 48.0   2.38   0.55 1288
+48      c 200-300 44.7   2.13   0.45 1086</code></pre>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
