@@ -1,0 +1,60 @@
+---
+title: "Answer Key"
+subtitle: "R Linear Regression Class Example"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3.5
+    fig_width: 3.5
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_RRegression_CExmpl")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+```
+
+----
+
+## Climate Change Data
+The slope, intercept, and r<sup>2</sup> values, along with a scatterplot with the best-fit line, needed to perform a linear regression can all be computed with R if the raw data are available as they were here. These results can be used to answer the 12 questions I usually ask in linear regression as demonstrated in the [annotations for the linear regression class example](KEY_LinearRegression_CExmpl).
+
+The data are loaded below. Note the variables we will use here are `Temp` and `CO2`.
+
+```{r}
+dfobj <- read.csv("http://derekogle.com/NCMTH107/modules/CE/GSI_data.csv")
+str(dfobj)
+headtail(dfobj)
+```
+
+The best-fit line is found in r with `lm()` which takes a formula of the form `qvarResp~qvarExpl`, where `qvarResp` is the quantitative response variable and `qvarExpl` is the quantitative explanatory variable. Of course, the `data=` argument is also needed. The results should be saved into an object.
+
+```{r}
+( lm1 <- lm(Temp~CO2,data=dfobj) )
+```
+
+From this it is seen that the intercept is `r formatC(coef(lm1)[[1]],format="f",digits=2)` and the slope is `r formatC(coef(lm1)[[2]],format="f",digits=2)`.
+
+The r<sup>2</sup> value is extracted from the saved object with `rSquared()`.
+
+```{r}
+rSquared(lm1,digits=2)
+```
+
+The best-fit line can be added to a scatterplot with `geom_smooth()` including `method="lm"`. A "confidence band" is added to the plot by default, but it can be removed by including `se=FALSE`.
+
+```{r}
+ggplot(data=dfobj,mapping=aes(x=CO2,y=Temp)) +
+  geom_point(pch=21,color="black",fill="darkgray",size=2) +
+  labs(x="CO2 in Atmosphere (ppm)",y="Temperature Anomaly (1/100C)") +
+  geom_smooth(method="lm",se=FALSE,color="red") +
+  theme_NCStats()
+```

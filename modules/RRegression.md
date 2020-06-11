@@ -40,7 +40,7 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 ## Practice
 
-* [Class Example](CEx/RRegression_CExmpl)
+* [Class Example](CE/RRegression_CExmpl) ... [ANNOTATED KEY](CE/KEY_RRegression_CExmpl)
 * [Exercises](CE/RRegression_CE1) ([*more as time permits*](CE/RRegression_CE2)) ... [ANSWER KEY](CE/KEY_RRegression_CE)
 
 ----
