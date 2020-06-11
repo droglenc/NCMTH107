@@ -1,0 +1,203 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Filtering Data in R Class Example"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="load-data-from-webpage" class="section level2">
+<h2>Load Data From Webpage</h2>
+<p>My script to load and examine the <strong>Fire.csv</strong> files was copied from last module and is shown below.</p>
+<pre class="r"><code>&gt; library(NCStats)
+&gt; setwd(&quot;C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/1_CE_KEYS&quot;)
+&gt; firedf &lt;- read.csv(&quot;fire.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; str(firedf)</code></pre>
+<pre><code>&#39;data.frame&#39;:   48 obs. of  6 variables:
+ $ sttype: chr  &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot; ...
+ $ tslf  : chr  &quot;0-100&quot; &quot;0-100&quot; &quot;0-100&quot; &quot;0-100&quot; ...
+ $ tdw   : num  27.7 22.6 26.2 43.6 27 41.2 46.6 27.6 89.2 39.6 ...
+ $ litdep: num  0.62 1.33 1.46 1.92 2.9 2.13 2.33 1.46 2.25 3.08 ...
+ $ fuel1h: num  0.06 0.07 0.08 0.05 0.06 0.15 0.02 0.04 0.04 0.3 ...
+ $ tltd  : int  2382 1978 1234 1478 1901 1111 748 1055 3422 1045 ...</code></pre>
+<pre class="r"><code>&gt; headtail(firedf)</code></pre>
+<pre><code>   sttype    tslf  tdw litdep fuel1h tltd
+1       d   0-100 27.7   0.62   0.06 2382
+2       d   0-100 22.6   1.33   0.07 1978
+3       d   0-100 26.2   1.46   0.08 1234
+46      c 200-300 52.2   2.08   0.12 1136
+47      c 200-300 48.0   2.38   0.55 1288
+48      c 200-300 44.7   2.13   0.45 1086</code></pre>
+<p> </p>
+<hr />
+</div>
+<div id="examining-single-variables" class="section level2">
+<h2>Examining Single Variables</h2>
+<ol start="1">
+<li>
+The <code>litdep</code> variable in <code>firedf</code> is shown below.
+</li>
+</ol>
+<pre class="r"><code>&gt; firedf$litdep</code></pre>
+<pre><code> [1] 0.62 1.33 1.46 1.92 2.90 2.13 2.33 1.46 2.25 3.08 2.07 1.83 2.63 2.58 2.38 2.75 2.92
+[18] 2.46 1.96 1.63 2.13 2.71 3.08 2.42 1.75 2.75 2.00 1.25 2.38 2.08 3.13 2.38 3.00 2.29
+[35] 1.90 2.71 1.83 2.04 2.90 3.13 2.00 2.08 2.92 0.75 1.75 2.08 2.38 2.13</code></pre>
+<ol start="2">
+<li>
+The <code>sttype</code> ariable in <code>firedf</code> is shown below.
+</li>
+</ol>
+<pre class="r"><code>&gt; firedf$sttype</code></pre>
+<pre><code> [1] &quot;d&quot;  &quot;d&quot;  &quot;d&quot;  &quot;d&quot;  &quot;d&quot;  &quot;d&quot;  &quot;d&quot;  &quot;d&quot;  &quot;d&quot;  &quot;d&quot;  &quot;d&quot;  &quot;d&quot;  &quot;d&quot;  &quot;d&quot;  &quot;d&quot;  &quot;d&quot;  &quot;d&quot; 
+[18] &quot;d&quot;  &quot;d&quot;  &quot;d&quot;  &quot;d&quot;  &quot;d&quot;  &quot;d&quot;  &quot;d&quot;  &quot;md&quot; &quot;md&quot; &quot;md&quot; &quot;md&quot; &quot;md&quot; &quot;md&quot; &quot;md&quot; &quot;md&quot; &quot;md&quot; &quot;md&quot;
+[35] &quot;md&quot; &quot;md&quot; &quot;md&quot; &quot;mc&quot; &quot;mc&quot; &quot;mc&quot; &quot;mc&quot; &quot;c&quot;  &quot;c&quot;  &quot;c&quot;  &quot;c&quot;  &quot;c&quot;  &quot;c&quot;  &quot;c&quot; </code></pre>
+<div class="alert alert-warning">
+<ul>
+<li>
+To examine a single variable in a data.frame you must type the name of the data frame (e.g., <code>firedf</code>) and then the name of the variable (e.g., <code>litdep</code> or <code>sttype</code>) with a <code>$</code> separating the two. This is the only time that you will use a <code>$</code> in R.
+</li>
+<li>
+Each of the variables above is a one-dimensional vector that is wrapped to fit the width of the screen. The numbers in brackets on the left side of each line mark the position in the vector of the first item on that line. The numbers in brackets should not be mistaken for data.
+</li>
+</ul>
+</div>
+<p> </p>
+<hr />
+</div>
+<div id="filtering-data-frames" class="section level2">
+<h2>Filtering Data Frames</h2>
+<ol start="1">
+<li>
+The structure of the data frame with just deciduous stand types is shown below. In addition, just the <code>sttype</code> variable is shown to confirm that all the individuals are deciduous.
+</li>
+</ol>
+<pre class="r"><code>&gt; decid &lt;- filterD(firedf,sttype==&quot;d&quot;)
+&gt; str(decid)</code></pre>
+<pre><code>&#39;data.frame&#39;:   24 obs. of  6 variables:
+ $ sttype: chr  &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot; ...
+ $ tslf  : chr  &quot;0-100&quot; &quot;0-100&quot; &quot;0-100&quot; &quot;0-100&quot; ...
+ $ tdw   : num  27.7 22.6 26.2 43.6 27 41.2 46.6 27.6 89.2 39.6 ...
+ $ litdep: num  0.62 1.33 1.46 1.92 2.9 2.13 2.33 1.46 2.25 3.08 ...
+ $ fuel1h: num  0.06 0.07 0.08 0.05 0.06 0.15 0.02 0.04 0.04 0.3 ...
+ $ tltd  : int  2382 1978 1234 1478 1901 1111 748 1055 3422 1045 ...</code></pre>
+<pre class="r"><code>&gt; decid$sttype</code></pre>
+<pre><code> [1] &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot;
+[22] &quot;d&quot; &quot;d&quot; &quot;d&quot;</code></pre>
+<ol start="2>
+<li>The structure of the data frame with litter depths less than 2 cm is shown below. In addition, just the `litdep` variable is shown to confirm that all the individuals have a litter depth less than 2 cm..</li>
+</ol>
+
+
+```r
+> lt2 <- filterD(firedf,litdep<2)
+> headtail(lt2)
+```
+
+```
+   sttype    tslf  tdw litdep fuel1h tltd
+1       d   0-100 27.7   0.62   0.06 2382
+2       d   0-100 22.6   1.33   0.07 1978
+3       d   0-100 26.2   1.46   0.08 1234
+12     md 100-200 95.6   1.83   0.24 1057
+13      c 200-300 34.9   0.75   0.16  961
+14      c 200-300 26.8   1.75   0.67  437
+```
+
+```r
+> lt2$litdep
+```
+
+```
+ [1] 0.62 1.33 1.46 1.92 1.46 1.83 1.96 1.63 1.75 1.25 1.90 1.83 0.75 1.75
+```
+
+<ol start="3">
+<li>The structure of the data frame with coniferous and mixed coniferous stand types is shown below. In addition, just the `sttype` variable is shown to confirm that all the individuals are coniferous and mixed coniferous.</li>
+</ol>
+<pre class="r"><code>&gt; conif &lt;- filterD(firedf,sttype %in% c(&quot;c&quot;,&quot;mc&quot;))
+&gt; str(conif)</code></pre>
+<pre><code>&#39;data.frame&#39;:   11 obs. of  6 variables:
+ $ sttype: chr  &quot;mc&quot; &quot;mc&quot; &quot;mc&quot; &quot;mc&quot; ...
+ $ tslf  : chr  &quot;200-300&quot; &quot;100-200&quot; &quot;200-300&quot; &quot;100-200&quot; ...
+ $ tdw   : num  103.4 69.8 47.2 35.6 42 ...
+ $ litdep: num  2.04 2.9 3.13 2 2.08 2.92 0.75 1.75 2.08 2.38 ...
+ $ fuel1h: num  0.05 0.31 0.37 0.03 0.22 0.56 0.16 0.67 0.12 0.55 ...
+ $ tltd  : int  775 1065 820 1650 578 999 961 437 1136 1288 ...</code></pre>
+<pre class="r"><code>&gt; conif$sttype</code></pre>
+<pre><code> [1] &quot;mc&quot; &quot;mc&quot; &quot;mc&quot; &quot;mc&quot; &quot;c&quot;  &quot;c&quot;  &quot;c&quot;  &quot;c&quot;  &quot;c&quot;  &quot;c&quot;  &quot;c&quot; </code></pre>
+<ol start="4">
+<li>
+The data frame with coniferous stand types and litter depths grater than 2 cm is shown below.
+</li>
+</ol>
+<pre class="r"><code>&gt; con_gt2 &lt;- filterD(firedf,sttype==&quot;c&quot;,litdep&gt;2)
+&gt; con_gt2</code></pre>
+<pre><code>  sttype    tslf  tdw litdep fuel1h tltd
+1      c 200-300 42.0   2.08   0.22  578
+2      c 200-300 46.9   2.92   0.56  999
+3      c 200-300 52.2   2.08   0.12 1136
+4      c 200-300 48.0   2.38   0.55 1288
+5      c 200-300 44.7   2.13   0.45 1086</code></pre>
+<ol start="5">
+<li>
+The data frame with litter depths between 1 and 1.5 cm is shown below.
+</li>
+</ol>
+<pre class="r"><code>&gt; LDbw1n15 &lt;- filterD(firedf,litdep&gt;1,litdep&lt;1.5)
+&gt; LDbw1n15</code></pre>
+<pre><code>  sttype  tslf  tdw litdep fuel1h tltd
+1      d 0-100 22.6   1.33   0.07 1978
+2      d 0-100 26.2   1.46   0.08 1234
+3      d 0-100 27.6   1.46   0.04 1055
+4     md 0-100 35.4   1.25   0.09 1072</code></pre>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
