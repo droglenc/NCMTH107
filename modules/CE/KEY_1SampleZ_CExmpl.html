@@ -59,7 +59,7 @@ The σ will be given in the background information NOT in the table of results f
 </div>
 <ol start="4">
 <li>
-This study is observational as the research did not create groups or impose a treatment on any individuals. It is not clear or obvious whether the individuals were randomly selected or not.
+This study is observational as the researcher did not create groups or impose a treatment on any individuals. It is not clear or obvious whether the individuals were randomly selected or not.
 </li>
 </ol>
 <div class="alert alert-warning">
@@ -68,7 +68,7 @@ This study is observational as the research did not create groups or impose a tr
 The very vast majority of 1-sample tests will be observational, as experiments usually compare among treatments which requires two or more groups.
 </li>
 <li>
-Do not say that the collection was random if it is not obvously so. Ultimately, this is a problem because the p-value requires randomization. However, we will continue with the analysis in this class, but we will be aware of the potential problems that this poses.
+Do not say that the collection was random if it is not obviously so. Ultimately, this is a problem because the p-value requires randomization. However, we will continue with the analysis in this class, but we will be aware of the potential problems that this poses.
 </li>
 </ul>
 </div>
@@ -95,7 +95,7 @@ x̄ = $130.26.
 Z = <span class="math inline">\(\frac{130.26 = 120}{\frac{15}{\sqrt{48}}}\)</span> = <span class="math inline">\(\frac{10.26}{2.1650635}\)</span> = 4.739.
 </li>
 <li>
-p-value=&lt;0.00005 as computed with <code>distrib(130.26,mean=125,sd=15/sqrt(48),lower.tail=FALSE)</code> or <code>distrib(z,lower.tail=FALSE)</code>.
+p-value=0.000001 as computed with <code>distrib(130.26,mean=120,sd=15/sqrt(48),lower.tail=FALSE)</code> or <code>distrib(4.739,lower.tail=FALSE)</code>.
 </li>
 <li>
 Reject H<sub>0</sub> because the p-value &lt; α.
@@ -128,25 +128,22 @@ I performed the following steps or calculations in preparation for the next step
 <li>
 Lower confidence bound because H<sub>A</sub> was “greater than.”
 <li>
-Z<sup>*</sup>=±-1.282 as computed with <code>distrib(0.90,type="q",lower.tail=FALSE)</code>.
+Z<sup>*</sup>=-1.282 as computed with <code>distrib(0.90,type="q",lower.tail=FALSE)</code>.
 <li>
 130.26 -1.282*2.165 (where 2.165 is the SE computed for Step 7).
 </ul>
 </div>
 <ol start="11">
 <li>
-I am 90% confident that the mean sales transaction amount for all sales after the traininig is greater than $127.49. Thus, the mean transacgtion amount appears to have increased by at least $7.49.
+I am 90% confident that the mean sales transaction amount for all sales after the training is greater than $127.49. Thus, the mean transacgtion amount appears to have increased by at least $7.49.
 </ol>
 <div class="alert alert-warning">
 <ul>
 <li>
-This step requires the most care in the 2-sample t-test because the confidence region is for the DIFFERENCE in means. This confidence region is NOT about either mean. So please take note of the wording above.
+This confidence region is a lower bound, so the conclusion is that the mean is greater than the calculated amount.
 </li>
 <li>
-Note that if confidence region contains zero then that means you will not have rejected H<sub>0</sub> as this suggests that it is possible that the DIFFERENCE in means is zero, whih suggests no difference. This will lead to awkward statements like that above where you say that one group be more or it could be less than the other group.
-</li>
-<li>
-Make sure you are careful about how the DIFFERENCE was calculated. In this case it was befizal-lipanthyl (alphabetically). Thus, negative values mean that befizal was smaller/lower (or, equivalently, lipanthyl was larger/greater) and positive values mean that befizal was larger/greater (or equivalently, lipanthyl was smaller/lower).
+The second sentence is a nice addition as it more directly answers the researcher’s research hypothesis.
 </li>
 </ul>
 </div>

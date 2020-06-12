@@ -62,13 +62,13 @@ lcb <- xbar+zstar*se
 </div>
 
 <ol start="4">
-  <li>This study is observational as the research did not create groups or impose a treatment on any individuals. It is not clear or obvious whether the individuals were randomly selected or not.</li>
+  <li>This study is observational as the researcher did not create groups or impose a treatment on any individuals. It is not clear or obvious whether the individuals were randomly selected or not.</li>
 </ol>
 
 <div class="alert alert-warning">
 <ul>
   <li>The very vast majority of 1-sample tests will be observational, as experiments usually compare among treatments which requires two or more groups.</li>
-  <li>Do not say that the collection was random if it is not obvously so. Ultimately, this is a problem because the p-value requires randomization. However, we will continue with the analysis in this class, but we will be aware of the potential problems that this poses.</li>
+  <li>Do not say that the collection was random if it is not obviously so. Ultimately, this is a problem because the p-value requires randomization. However, we will continue with the analysis in this class, but we will be aware of the potential problems that this poses.</li>
 </ul>
 </div>
 
@@ -86,7 +86,7 @@ lcb <- xbar+zstar*se
 <ol start="6">
   <li>x&#772; = $`r xbar`.</li>
   <li>Z = $\frac{`r xbar` = `r mu0`}{\frac{`r sigma`}{\sqrt{`r n`}}}$ = $\frac{`r xbar-mu0`}{`r se`}$ = `r z`.</li>
-  <li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)` as computed with `distrib(130.26,mean=125,sd=15/sqrt(48),lower.tail=FALSE)` or `distrib(z,lower.tail=FALSE)`.</li>
+  <li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE,digits=6)` as computed with `distrib(130.26,mean=120,sd=15/sqrt(48),lower.tail=FALSE)` or `distrib(4.739,lower.tail=FALSE)`.</li>
 <li>Reject H<sub>0</sub> because the p-value &lt; &alpha;.</li>
 <li>It appears that the mean sales transaction is greater than $120. Thus, it appears that the training did result in an increase in the mean sales transaction amount.</li>
 </ol>
@@ -106,19 +106,18 @@ lcb <- xbar+zstar*se
   <ul>
     <li>90% confidence (because &alpha;=0.1)</li>
     <li>Lower confidence bound because H<sub>A</sub> was "greater than."
-    <li>Z<sup>*</sup>=&pm;`r formatC(zstar,format="f",digits=3)` as computed with `distrib(0.90,type="q",lower.tail=FALSE)`.
+    <li>Z<sup>*</sup>=`r formatC(zstar,format="f",digits=3)` as computed with `distrib(0.90,type="q",lower.tail=FALSE)`.
     <li>`r xbar` `r formatC(zstar,format="f",digits=3)`*`r formatC(se,format="f",digits=3)` (where `r formatC(se,format="f",digits=3)` is the SE computed for Step 7).
   </ul>
 </div>
 
 <ol start="11">
-<li>I am 90% confident that the mean sales transaction amount for all sales after the traininig is greater than $`r formatC(lcb,format="f",digits=2)`. Thus, the mean transacgtion amount appears to have increased by at least $`r formatC(lcb-mu0,format="f",digits=2)`.
+<li>I am 90% confident that the mean sales transaction amount for all sales after the training is greater than $`r formatC(lcb,format="f",digits=2)`. Thus, the mean transacgtion amount appears to have increased by at least $`r formatC(lcb-mu0,format="f",digits=2)`.
 </ol>
 
 <div class="alert alert-warning">
 <ul>
-  <li>This step requires the most care in the 2-sample t-test because the confidence region is for the DIFFERENCE in means. This confidence region is NOT about either mean. So please take note of the wording above.</li>
-  <li>Note that if confidence region contains zero then that means you will not have rejected H<sub>0</sub> as this suggests that it is possible that the DIFFERENCE in means is zero, whih suggests no difference. This will lead to awkward statements like that above where you say that one group be more or it could be less than the other group.</li>
-  <li>Make sure you are careful about how the DIFFERENCE was calculated. In this case it was befizal-lipanthyl (alphabetically). Thus, negative values mean that befizal was smaller/lower (or, equivalently, lipanthyl was larger/greater) and positive values mean that befizal was larger/greater (or equivalently, lipanthyl was smaller/lower).</li>
+  <li>This confidence region is a lower bound, so the conclusion is that the mean is greater than the calculated amount.</li>
+  <li>The second sentence is a nice addition as it more directly answers the researcher's research hypothesis.</li>
 </ul>
 </div>
