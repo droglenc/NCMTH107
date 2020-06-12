@@ -44,7 +44,7 @@ df <- n1+n2-2
 
 <div class="alert alert-warning">
 <ul>
-  <li>The hypotheses can also be written as -- H<sub>A</sub>: &mu;<sub>bf</sub> &ne; &mu;<sub>lp</sub> and H<sub>0</sub>: &mu;<sub>bf</sub> = &mu;<sub>lp</sub> -- because if two values are thought to be equal then the difference between those values would be equal to 0 and if they are thought to differ than the difference between the two would be diffrent from zero.</li>
+  <li>The hypotheses can also be written as -- H<sub>A</sub>: &mu;<sub>bf</sub> &ne; &mu;<sub>lp</sub> and H<sub>0</sub>: &mu;<sub>bf</sub> = &mu;<sub>lp</sub> -- because if two values are thought to be equal then the difference between those values would be equal to 0 and if they are thought to differ than the difference between the two would be different from zero.</li>
   <li>I like the subscripts to be meaningful; hence, I used bf and lp here rather than 1 and 2, for example.</li>
   <li>It is best to order the parameters alphabetically; thus, I had the bf group before the lp group. This is not a huge deal mathematically but it will be important when using R to perform a two-sample t-test.</li>
   <li>Remember to define the parameter and, here, also the subscripts on the parameters.</li>
@@ -64,7 +64,7 @@ df <- n1+n2-2
 <ul>
   <li>These are the three characteristics that separate a 2-sample t-test from other tests we will see this semester.</li>
   <li>Please include some sort of description that shows that the characteristics are met and that you are not just listing the characteristics -- in other words, include the parts in parentheses.</li>
-  <li>The independence characteristic is the most difficult to write in my opinion. Basically what you have to describe is that there is no direct connection between individuals in one group and indviduals in the other group. A lack of independence in this example could be that the same people were in both drug groups (think of a before-after study) or that siblings were split into the two groups (so one sibling was always "connected" genetically to their sibling in the other group).</li>
+  <li>The independence characteristic is the most difficult to write in my opinion. Basically what you have to describe is that there is no direct connection between individuals in one group and individuals in the other group. A lack of independence in this example could be that the same people were in both drug groups (think of a before-after study) or that siblings were split into the two groups (so one sibling was always "connected" genetically to their sibling in the other group).</li>
   <li>If the two groups have different sample sizes (as is the case here) then you automatically know that there is independence because for individuals to be connected there would have to be the same number per group.</li>
 </ul>
 </div>
@@ -76,7 +76,7 @@ df <- n1+n2-2
 <div class="alert alert-warning">
 <ul>
   <li>You will start seeing more "experiments" in the 2-sample tests.</li>
-  <li>With experiments (as compared to observational studies) you need to address two levels of randomization. First, were the individuals randomly selected from a larger popuation. If they were then you CAN make inferences to the larger population; however, if they were not then you cannot. Second, were the individuals randomly allocated to treatments. If they were then you can make cause-and-effect conclusions; however, if not they you cannot. So, in this example the research may draw cause-and-effect conclusions (because of random allocation) but those conclusions may not generalize to the larger population of men (because there was no random selection).</li>
+  <li>With experiments (as compared to observational studies) you need to address two levels of randomization. First, were the individuals randomly selected from a larger population. If they were then you CAN make inferences to the larger population; however, if they were not then you cannot. Second, were the individuals randomly allocated to treatments. If they were then you can make cause-and-effect conclusions; however, if not they you cannot. So, in this example the research may draw cause-and-effect conclusions (because of random allocation) but those conclusions may not generalize to the larger population of men (because there was no random selection).</li>
 </ul>
 </div>
 
@@ -86,7 +86,7 @@ df <- n1+n2-2
   
 <div class="alert alert-warning">
 <ul>
-  <li>If the combined sample size is less than 30 then you need to assess the skewness of the histograms. As with the 1-sample t-test, this assumption no longer refers to the population distributions.</li>
+  <li>If the combined sample size is less than 40 then you need to assess the skewness of the histograms (as done here). As with the 1-sample t-test, this assumption no longer refers to the population distributions.</li>
   <li>The "equal variances" assumption is assessed with a Levene's Test. The hypotheses for the Levene's test are H<sub>0</sub>: &sigma;<sup>2</sup><sub>bf</sub> = &sigma;<sup>2</sup><sub>lp</sub> (i.e., variances are equal) and H<sub>A</sub>: &sigma;<sup>2</sup><sub>bf</sub> &ne; &sigma;<sup>2</sup><sub>lp</sub> (i.e., variances are unequal). Thus, if the p-value from the Levene's test is greater than &alpha; the variances are considered equal, the assumption is met, and you can continue with the 2-sample t-test.</li>
   <li>In "hand-calculation" questions like this one, you will always be given the Levene's test p-value (as was done here). You will compute the p-value using R when you have the raw data available (this will be discussed later).</li>
 </ul>
@@ -160,7 +160,7 @@ df <- n1+n2-2
 <div class="alert alert-warning">
 <ul>
   <li>This step requires the most care in the 2-sample t-test because the confidence region is for the DIFFERENCE in means. This confidence region is NOT about either mean. So please take note of the wording above.</li>
-  <li>Note that if confidence region contains zero then that means you will not have rejected H<sub>0</sub> as this suggests that it is possible that the DIFFERENCE in means is zero, whih suggests no difference. This will lead to awkward statements like that above where you say that one group be more or it could be less than the other group.</li>
+  <li>Note that if confidence region contains zero then that means you will not have rejected H<sub>0</sub> as this suggests that it is possible that the DIFFERENCE in means is zero, which suggests no difference. This will lead to awkward statements like that above where you say that one group be more or it could be less than the other group.</li>
   <li>Make sure you are careful about how the DIFFERENCE was calculated. In this case it was befizal-lipanthyl (alphabetically). Thus, negative values mean that befizal was smaller/lower (or, equivalently, lipanthyl was larger/greater) and positive values mean that befizal was larger/greater (or equivalently, lipanthyl was smaller/lower).</li>
 </ul>
 </div>

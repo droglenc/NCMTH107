@@ -1,0 +1,201 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "1-Sample Z Class Example"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="cholesterol-drug-treatments-i" class="section level2">
+<h2>Cholesterol Drug Treatments I</h2>
+<ol start="1">
+<li>
+α = 0.10.
+</li>
+<li>
+H<sub>A</sub>: μ &gt; 120 and H<sub>0</sub>: μ = 120, where μ is the mean sales transaction for this company following the training.
+</li>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+The H<sub>A</sub> is “greater than” because they are trying to see if the mean sales transaction amount increased.
+</li>
+<li>
+Remember to define the parameter.
+</li>
+</ul>
+</div>
+<ol start="3">
+<li>
+A 1-sample Z-test will be used because
+</li>
+<ol type="i">
+<li>
+one group/population is considered (this company after the training),
+</li>
+<li>
+a quantitative variable (sales transaction) was recorded, and
+</li>
+<li>
+σ is known (=15).
+</li>
+</ol>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+These are the three characteristics that separate a 1-sample Z-test from other tests we will see this semester.
+</li>
+<li>
+Please include some sort of description that shows that the characteristics are met and that you are not just listing the characteristics – in other words, include the parts in parentheses.
+</li>
+<li>
+The σ will be given in the background information NOT in the table of results from the sample. The standard deviation in the table of results from the sample is s, not σ. If you know σ (as here) then you should use it as it is “better” than s.
+</li>
+</ul>
+</div>
+<ol start="4">
+<li>
+This study is observational as the research did not create groups or impose a treatment on any individuals. It is not clear or obvious whether the individuals were randomly selected or not.
+</li>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+The very vast majority of 1-sample tests will be observational, as experiments usually compare among treatments which requires two or more groups.
+</li>
+<li>
+Do not say that the collection was random if it is not obvously so. Ultimately, this is a problem because the p-value requires randomization. However, we will continue with the analysis in this class, but we will be aware of the potential problems that this poses.
+</li>
+</ul>
+</div>
+<ol start="5">
+<li>
+The assumptions are met because (i) σ is known (=15) and (ii) n = 48 ≥ 30.
+</li>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+If the had been less than 30 then you would need to know the shape (strongly skewed, normal, etc.) of the population distribution.
+</li>
+<li>
+Make sure to address whether σ is known or not, even though it feels redundant with Step 3.
+</li>
+</ul>
+</div>
+<ol start="6">
+<li>
+x̄ = $130.26.
+</li>
+<li>
+Z = <span class="math inline">\(\frac{130.26 = 120}{\frac{15}{\sqrt{48}}}\)</span> = <span class="math inline">\(\frac{10.26}{2.1650635}\)</span> = 4.739.
+</li>
+<li>
+p-value=&lt;0.00005 as computed with <code>distrib(130.26,mean=125,sd=15/sqrt(48),lower.tail=FALSE)</code> or <code>distrib(z,lower.tail=FALSE)</code>.
+</li>
+<li>
+Reject H<sub>0</sub> because the p-value &lt; α.
+</li>
+<li>
+It appears that the mean sales transaction is greater than $120. Thus, it appears that the training did result in an increase in the mean sales transaction amount.
+</li>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+Note how the conclusion is about the MEAN sales transaction amount and not the sales transaction amount. The test is about the summary (i.e., the MEAN) not about individuals.
+</li>
+<li>
+Also note the use of “appears” in the summary. This language acknowledges the fact that an error (Type I or Type II) could have been made. No conclusion from a statistical hypothesis test will ever be 100% definitive.
+</li>
+<li>
+For the sake of learning, if we had not rejected the H<sub>0</sub> then we would have concluded that the “mean transaction amount does not appear to be greater than $120”. Note that we would not have said that the mean transaction amount was $120, because it is possible that it was less than $120.
+</ul>
+</div>
+<p><br></p>
+<div class="alert alert-info">
+<p>
+I performed the following steps or calculations in preparation for the next step.
+</p>
+<ul>
+<li>
+90% confidence (because α=0.1)
+</li>
+<li>
+Lower confidence bound because H<sub>A</sub> was “greater than.”
+<li>
+Z<sup>*</sup>=±-1.282 as computed with <code>distrib(0.90,type="q",lower.tail=FALSE)</code>.
+<li>
+130.26 -1.282*2.165 (where 2.165 is the SE computed for Step 7).
+</ul>
+</div>
+<ol start="11">
+<li>
+I am 90% confident that the mean sales transaction amount for all sales after the traininig is greater than $127.49. Thus, the mean transacgtion amount appears to have increased by at least $7.49.
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+This step requires the most care in the 2-sample t-test because the confidence region is for the DIFFERENCE in means. This confidence region is NOT about either mean. So please take note of the wording above.
+</li>
+<li>
+Note that if confidence region contains zero then that means you will not have rejected H<sub>0</sub> as this suggests that it is possible that the DIFFERENCE in means is zero, whih suggests no difference. This will lead to awkward statements like that above where you say that one group be more or it could be less than the other group.
+</li>
+<li>
+Make sure you are careful about how the DIFFERENCE was calculated. In this case it was befizal-lipanthyl (alphabetically). Thus, negative values mean that befizal was smaller/lower (or, equivalently, lipanthyl was larger/greater) and positive values mean that befizal was larger/greater (or equivalently, lipanthyl was smaller/lower).
+</li>
+</ul>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
