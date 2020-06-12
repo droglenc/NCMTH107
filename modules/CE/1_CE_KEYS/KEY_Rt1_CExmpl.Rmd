@@ -1,0 +1,153 @@
+---
+title: "Answer Key"
+subtitle: "R 1-Sample t Class Example"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3.5
+    fig_width: 3.5
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_Rt1_CExmpl")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+```
+
+----
+
+## Recurrence of Cancer Tumors
+The tumor recurrence data are loaded and initially examined below. This is a very simple data frame with one variable, `months`, that contains the number of months until the tumor recurred.
+
+```{r}
+dfobj <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Tumors.csv")
+str(dfobj)
+```
+```{r echo=FALSE, results="hide"}
+t1 <- t.test(dfobj$months,mu=27,alt="greater",conf.level=0.9)
+```
+
+The 11-steps are shown below along with the R code where appropriate.
+
+&nbsp;
+
+<ol start="1">
+<li>&alpha; = 0.10.</li>
+<li>H<sub>A</sub>: &mu; > 27 and H<sub>0</sub>: &mu; = 27, where &mu; is the mean months until the tumors recurred.</li>
+</ol>
+
+<div class="alert alert-warning">
+<ul>
+  <li>Remember to define the parameter.</li>
+</ul>
+</div>
+
+<ol start="3">
+  <li>A 1-sample t-test will be used because</li>
+  <ol type="i">
+    <li>one group/population is considered (this group of patients ... not comparing two groups),</li>
+    <li>a quantitative variable (time to recurrence) was recorded, and</li>
+    <li>&sigma; is UNknown (not given in the background).</li>
+  </ol>
+</ol>
+
+<div class="alert alert-warning">
+<ul>
+  <li>These are the three characteristics that separate a 1-sample -test from other tests we will see this semester.</li>
+  <li>Please include some sort of description that shows that the characteristics are met and that you are not just listing the characteristics -- in other words, include the parts in parentheses.</li>
+  <li>If &sigma; is known it will be given in the background information. The standard deviation that will be computed from the data is s.</li>
+</ul>
+</div>
+
+<ol start="4">
+  <li>This study is observational as the researcher did not create groups or impose a treatment on any individuals. It is not clear or obvious whether the individuals were randomly selected or not.</li>
+</ol>
+
+<div class="alert alert-warning">
+<ul>
+  <li>This appears to be part of an experiment as the patients were given a placebo. However, there are not groups created by the researchers being compared here so it is not an experiment.</li>
+  <li>Do not say that the collection was random if it is not obviously so. Ultimately, this is a problem because the p-value requires randomization. However, we will continue with the analysis in this class, but we will be aware of the potential problems that this poses.</li>
+</ul>
+</div>
+
+<ol start="5">
+  <li>The assumptions are met because (i) &sigma; is UNknown and  (ii) n = `r nrow(dfobj)` &ge; 40.</li>
+</ol>  
+  
+<div class="alert alert-warning">
+<ul>
+  <li>The value of n is seen in the `str()` for the data frame shown above the 11 steps.
+  <li>If the n had been less than 40 then you would need to assess the shape of the histogram.</li>
+  <li>Make sure to address whether &sigma; is known or not, even though it feels redundant with Step 3.</li>
+</ul>
+</div>
+
+<div class="alert alert-info">
+<p>Calculations for the next steps are computed with `t.test()` as demonstrated below.</p>
+
+```{r}
+t.test(dfobj$months,mu=27,alt="greater",conf.level=0.9)
+```
+</div>
+
+<ol start="6">
+  <li>x&#772; = $`r formatC(t1$estimate,format="f",digits=1)`.</li>
+</ol>
+
+<div class="alert alert-warning">
+  <ul>
+  <li>This is from under the "mean of x" output from `t.test()`.</li>
+  </ul>
+</div>
+
+<ol start="7">
+  <li>t = $`r formatC(t1$statistic,format="f",digits=3)` with $`r t1$parameter` df.</li>
+</ol>
+
+<div class="alert alert-warning">
+  <ul>
+  <li>This is from the "t=" output from `t.test()`.</li>
+  </ul>
+</div>
+
+<ol start="8">
+  <li>p-value=`r kPvalue(t1$p.value,include.p=FALSE,latex=FALSE,digits=3)`.</li>
+</ol>
+
+<div class="alert alert-warning">
+  <ul>
+  <li>This is from the "p-value=" output from `t.test()`.</li>
+  </ul>
+</div>
+
+<ol start="9">
+<li>Reject H<sub>0</sub> because the p-value &lt; &alpha;.</li>
+<li>It appears that the mean time for the tumors to reoccur is greater than 27 months.</li>
+</ol>
+
+<div class="alert alert-warning">
+  <ul>
+  <li>Note how the conclusion is about the MEAN time to reoccur and not the time to reoccur. The test is about the summary (i.e., the MEAN) not about individuals.</li>
+  <li>Also note the use of "appears" in the summary. This language acknowledges the fact that an error (Type I or Type II) could have been made. No conclusion from a statistical hypothesis test will ever be 100% definitive.</li>
+  </ul>
+</div>
+
+<ol start="11">
+<li>I am 90% confident that the mean time for the tumors to reoccur is greater than $`r formatC(t1$conf.int[1],format="f",digits=1)`.
+</ol>
+
+<div class="alert alert-warning">
+<ul>
+  <li>This confidence region is a lower bound, so the conclusion is that the mean is greater than the calculated amount.</li>
+</ul>
+</div>
+
+Note that you will complete all 11 steps when you have the raw data (as we have done here), but you should use `t.test()` as shown here to perform all of the calculations for you.

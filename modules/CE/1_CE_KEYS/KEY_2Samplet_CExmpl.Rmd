@@ -146,10 +146,10 @@ df <- n1+n2-2
 <div class="alert alert-info">
 <p>I performed the following steps or calculations in preparation for the next step.</p>
   <ul>
-    <li>95% confidence (because &alpha;=0.05)</li>
-    <li>Confidence interval because H<sub>A</sub> was "not equals."
-    <li>t<sup>*</sup>=&pm;`r formatC(-tstar,format="f",digits=3)` as computed with `distrib(0.025,distrib="t",df=23,type="q")`.
-    <li>`r formatC(stat,format="f",digits=3)`&pm;`r formatC(-tstar,format="f",digits=3)`*`r formatC(se,format="f",digits=3)` (where `r formatC(stat,format="f",digits=3)` is from Step 6 and `r formatC(se,format="f",digits=3)` is the SE computed for Step 7).
+    <li>95% confidence (because &alpha;=0.05).</li>
+    <li>Confidence interval because H<sub>A</sub> was "not equals."</li>
+    <li>t<sup>*</sup>=&pm;`r formatC(-tstar,format="f",digits=3)` as computed with `distrib(0.025,distrib="t",df=23,type="q")`.</li>
+    <li>`r formatC(stat,format="f",digits=3)`&pm;`r formatC(-tstar,format="f",digits=3)`*`r formatC(se,format="f",digits=3)` (where `r formatC(stat,format="f",digits=3)` is from Step 6 and `r formatC(se,format="f",digits=3)` is the SE computed for Step 7).</li>
   </ul>
 </div>
 
