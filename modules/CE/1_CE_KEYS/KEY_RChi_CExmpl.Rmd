@@ -59,3 +59,46 @@ chi1$residuals^2
 ```
 
 Note that you will complete all 11 steps when you have the raw data, but you should use `chisq.test()` as shown here to perform all of the calculations for you.
+
+&nbsp;
+
+----
+
+## Green Parakeet Crosses II
+The full 11-steps for this example are in these [annotations for the goodness-of-fit test class example](KEY_GOFTest_CExmpl). However, the calculations required for Steps 5, 6, 7, 8, and 11 may be computed in R as described below.
+
+The expected values in each cell must first be entered into a vector. These expected values can be the actual expected counts, expected percentages, or values that are in the proper ratio for the expected values. In this example, it was expected that vor every 9 green parakeets there would be three each of blue and yellow parakeets and 1 white parakeet. These ratios are entered into the `exp` vector below.
+
+```{r}
+exp <- c(9,3,3,1)
+```
+
+The observed values for the sample should also be entered into a vector. For results that are easier to read, the values in this vector can be named according to the groups in the data, as illustrated below. This is also the observed table for Step 6.
+
+```{r}
+obs <- c(green=95,blue=27,yellow=22,white=6)
+```
+
+The goodness-of-fit test is then "run" with `chisq.test()` using the vector of observed values as the first argument and the expected values in `p=`. In addition, use `rescale=TRUE` so that the expected percentages or ratios will be properly converted to expected values and `correct=FALSE` to not use a minor correction factor.
+
+```{r}
+( gof1 <- chisq.test(obs,p=exp,rescale=TRUE,correct=FALSE) )
+```
+
+From this output one can see
+
+* The chi-square test statistic (=`r formatC(gof1$statistic,format="f",digits=1)`) and df (=`r gof1$parameter`) for Step 7.
+* The p-value (=`r formatC(gof1$p.value,format="f",digits=3)`) for Step 8.
+
+The expected table for Step 5 can be shown by appending `$expected` to the object saved from `chisq.test()`.
+
+```{r}
+gof1$expected
+```
+
+And, while it is not needed, you can see the parts that went into the chi-square test statistic calculation with
+```{r}
+gof1$residuals^2
+```
+
+Note that you will complete all 11 steps when you have the raw data, but you should use `chisq.test()` as shown here to perform all of the calculations for you.
