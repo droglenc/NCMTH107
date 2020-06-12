@@ -15,6 +15,230 @@ knitr::opts_chunk$set(echo=TRUE,fig.align='center',comment="#R>  ")
 
 
 
+\vspace{12pt}
+\section{Chi-Square test in R (Raw Data)}
+\vspace{-3pt}
+The data for a Chi-Square Test may be computed from raw data on individuals (this section) or entered from summarized data (see \sectref{sect:chiRSmrzd}). Raw data must be in stacked format where one column in the data.frame represents the response variable and another column represents the groups (see Sections \ref{sect:REnterData} and \ref{sect:2tData}). Raw data must be summarized into a two-way frequency table with \R{xtabs()} as described in \modref{chap:BivEDACat}. The two-way table must contain frequencies, not proportions or percentages (don't use \R{percTable()}), without marginal totals (don't use \R{addMargins()}).
+
+The Chi-Square Test is performed with \R{chisq.test()}, which takes an observed frequency table either entered through \R{matrix()} or summarized with \R{xtabs()} as the first argument. The only other argument needed is \R{correct=FALSE} so that the continuity correction is not used.\footnote{The continuity correction is not used here simply so that the results using R will match hand-calculations. The continuity correction should usually be used.} The results of \R{chisq.test()} should be assigned to an object. The Chi-Square test statistic and p-value are extracted by simply printing the saved object. The expected frequency table is returned by appending \R{\$expected} to the saved object.
+
+Rejecting the null hypothesis in a Chi-Square Test indicates that there is some difference in the distribution of individuals into the levels of the response variable among some of the groups. However, rejecting the null hypothesis does not indicate which groups are different. In addition, as mentioned previously, confidence intervals are generally not performed with a Chi-Square Test. A post-hoc method for helping determine which groups differ is obtained by observing the Pearson residuals.
+
+A Pearson residual is computed for each cell in the table as,
+
+\[ \frac{Observed-Expected}{\sqrt{Expected}} \]
+
+which is the appropriately signed square root of the parts in the $\chi^2$ test statistic calculation. Therefore, cells that have Pearson residuals far from zero contributed substantially to the large $\chi^2$ test statistic that resulted in a small p-value and the ultimate rejection of $H_{0}$. Patterns in where the large Pearson residuals are found may allow one to qualitatively determine which groups differ and, thus, which levels of the response differ the most. This process will be illustrated more fully in the examples and review exercises. The Pearson residuals are obtained from the saved \R{chisq.test()} object by appending \R{\$residuals}.
+
+\subsection{Example - Father Present at Birth}
+Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for the following situation:
+\vspace{-8pt}
+\begin{quote}
+\textsl{Daniel Weiss (in ``100\% American'') reported the results of a survey of 300 first-time fathers from four different hospitals (labeled as A, B, C, and D). Each father was asked if he was present (or not) in the delivery room when his child was born. The results of the survey are in \href{https://raw.githubusercontent.com/droglenc/NCData/master/FatherPresent.csv}{FatherPresent.csv}. Use these data to determine if there is a difference, at the 5\% level, in the proportion of fathers present in the delivery room among the four hospitals.}
+\end{quote}
+
+<<echo=FALSE>>=
+fp <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/FatherPresent.csv")
+@
+<<ChiFP, echo=FALSE, results='hide', fig.show='hide'>>=
+( fp.obs <- xtabs(~hospital+father,data=fp) )
+( fp.chi <- chisq.test(fp.obs,correct=FALSE) )
+fp.chi$expected
+percTable(fp.obs,margin=1,digits=1)
+@
+
+\vspace{-6pt}
+\begin{Enumerate}
+  \item $\alpha$=0.05.
+  \item $H_{0}$:``distribution of fathers presence (or not) during the birth of their child is the same for all four hospitals'' vs. $H_{A}:$ ``the distribution of fathers presence during the birth of their child is NOT the same for all four hospitals.''
+  \item A Chi-Square Test is required because (i) a categorical variable (present or absent) was recorded and (ii) four groups are being compared (the hospitals).
+  \item The data appear to be part of an observational study with no clear indication of randomization (likely a voluntary response survey).
+  \item There are at least five individuals in each cell of the expected table \tabrefp{tab:ChiFPexp}.
+  \item The statistic is the observed frequency table \tabrefp{tab:ChiFPobs}.
+  \item $\chi^{2}$=\Sexpr{formatC(fp.chi$statistic,format="f",digits=3)} with \Sexpr{fp.chi$parameter} df \tabrefp{tab:ChiFPchi}.
+  \item p-value=\Sexpr{kPvalue(fp.chi$p.value,include.p=FALSE)} \tabrefp{tab:ChiFPchi}.
+  \item $H_{0}$ is not rejected because the p-value is $>\alpha$.
+  \item The distribution of father's presence (or not) at their child's birth does not seem to differ significantly among hospitals where that birth occurred. For comparative purposes, the row-percentage table is in \tabref{tab:ChiFProw}.
+\end{Enumerate}
+
+\begin{minipage}{\textwidth}
+\textbf{R Appendix:}
+\vspace{-4pt}
+<<eval=FALSE, results='hide', fig.show='hide', prompt=FALSE>>=
+setwd("c:/data/")
+fp <- read.csv("FatherPresent.csv")
+<<ChiFP>>
+@
+\end{minipage}
+
+\begin{table}[h]
+  \caption{Expected frequency table for father's presence (or absence) during child birth among four hospitals.}
+  \label{tab:ChiFPexp}
+  \vspace{-12pt}
+<<echo=FALSE, background='white'>>=
+fp.chi$expected
+@
+\end{table}
+
+\begin{table}[h]
+  \caption{Observed frequency table for father's presence (or absence) during child birth among four hospitals.}
+  \label{tab:ChiFPobs}
+  \vspace{-12pt}
+<<echo=FALSE, background='white'>>=
+fp.obs
+@
+\end{table}
+
+\begin{table}[h]
+  \caption{Results from the Chi-Square Test for differences in father's presence during child birth among four hospitals.}
+  \label{tab:ChiFPchi}
+  \vspace{-12pt}
+<<echo=FALSE, background='white'>>=
+kHtest(fp.chi)
+@
+\end{table}
+
+\begin{table}[h]
+  \caption{Percentage of father's presence (or absence) during child birth among four hospitals.}
+  \label{tab:ChiFProw}
+  \vspace{-12pt}
+<<echo=FALSE, background='white'>>=
+percTable(fp.obs,margin=1,digits=1)
+@
+\end{table}
+
+
+\vspace{6pt}
+\section{Chi-Square test in R (Summarized Data)} \label{sect:chiRSmrzd}
+\vspace{-3pt}
+Two-way frequency datat that has already been summarized (outside of R) must be entered into a two-dimensional matrix. The frequencies must first be entered into a vector with the first row of values followed by the second row and so on. This vector is then the first argument to \R{matrix()}, which will also include the number of rows in the frequency table in \R{nrow=} and \R{byrow=TRUE} (which causes the values in the vector to be entered into the matrix in a row-wise manner). The process of entering summarized data into a matrix is better explained by example.
+
+Suppose that you are given this observed frequency table.
+
+\begin{center}
+  \begin{tabular}{c|c|c|c|c|c|c|c|}
+    \multicolumn{1}{c}{} & \multicolumn{6}{c}{Species} & \multicolumn{1}{c}{} \\
+    \cline{2-7}
+    Location & A & B & C & D & E & F & \multicolumn{1}{c}{} \\
+    \hline
+    \multicolumn{1}{|c|}{DI} & 34 & 22 & 14 & 13 & 12 & 5 & \textbf{100} \\
+    \hline
+    \multicolumn{1}{|c|}{BP} & 62 & 12 & 8 & 7 & 6 & 5 & \textbf{100} \\
+    \hline
+    & \textbf{96} & \textbf{34} & \textbf{22} & \textbf{20} & \textbf{18} & \textbf{10} & \textbf{200} \\
+    \cline{2-8}
+  \end{tabular}
+\end{center}
+
+The observed frequencies, ignoring the marginal sums, are first entered into a vector called \R{freq} below, which is then transformed into a two-row matrix called \R{obstbl}.
+<<>>=
+( freq <- c(34,22,14,13,12,5,62,12,8,7,6,5) )
+( obstbl <- matrix(freq,nrow=2,byrow=TRUE) )
+@
+
+The matrix is more informative if the rows and columns are named with \R{rownames()} and \R{colnames()} as shown below.
+<<>>=
+rownames(obstbl) <- c("DI","BP")
+colnames(obstbl) <- c("A","B","C","D","E","F")
+obstbl
+@
+
+Once this observed table is constructed, the chi-square tests is performed exactly as described in the previous sections (i.e., starting with \R{chisq.test()}).
+
+\subsection{Example - Apostle Islands Plants}
+Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for the following situation:
+\vspace{-4pt}
+\begin{quote}
+\textsl{In her Senior Capstone project a Northland College student recorded the dominant (i.e., most abundant) plant species in 100 randomly selected plots on both Devil's Island and the Bayfield Peninsula (i.e., the mainland). There were a total of six ``species'' (one group was called ``other'') recorded (labeled as A, B, C, D, E, and F). The results are shown in the table below. Determine, at the 5\% level, if the frequency of dominant species differs between the two locations.}
+\end{quote}
+
+\begin{center}
+  \begin{tabular}{c|c|c|c|c|c|c|c|}
+    \multicolumn{1}{c}{} & \multicolumn{6}{c}{Species} & \multicolumn{1}{c}{} \\
+    \cline{2-7}
+    Location & A & B & C & D & E & F & \multicolumn{1}{c}{} \\
+    \hline
+    \multicolumn{1}{|c|}{DI} & 34 & 22 & 14 & 13 & 12 & 5 & \textbf{100} \\
+    \hline
+    \multicolumn{1}{|c|}{BP} & 62 & 12 & 8 & 7 & 6 & 5 & \textbf{100} \\
+    \hline
+    & \textbf{96} & \textbf{34} & \textbf{22} & \textbf{20} & \textbf{18} & \textbf{10} & \textbf{200} \\
+    \cline{2-8}
+  \end{tabular}
+\end{center}
+
+<<ChiAI, echo=FALSE, results='hide', fig.show='hide', warning=FALSE>>=
+freq <- c(34,22,14,13,12,5,62,12,8,7,6,5)
+ai.obs <- matrix(freq,nrow=2,byrow=TRUE)
+rownames(ai.obs) <- c("DI","BP")
+colnames(ai.obs) <- c("A","B","C","D","E","F")
+( ai.chi <- chisq.test(ai.obs) )
+ai.chi$expected
+ai.chi$residuals
+percTable(ai.obs,margin=1,digits=1)
+ai.obs1 <- ai.obs[,-1]
+( ai.chi1 <- chisq.test(ai.obs1) )
+@
+
+  \begin{Enumerate}
+    \item $\alpha$=0.05.
+    \item $H_{0}$: ``the distribution of dominant plants species is the same between Devil's Island and the Bayfield Peninsula'' vs. $H_{A}$: ``the distribution of dominant plants species is NOT the same between Devil's Island and the Bayfield Peninsula.''
+    \item A Chi-Square Test is required because (i) a categorical variable with six levels (plant species) was recorded and (ii) two grouops are being compared (Devil's Island and Bayfield Peninsula).
+    \item The data appear to be part of an observational study where the plots were randomly selected.
+    \item There are more than five individuals in each cell of the expected table \tabrefp{tab:ChiAIexp}.
+    \item The statistic is the observed frequency table given in the background.
+    \item $\chi^{2}$=\Sexpr{formatC(ai.chi$statistic,format="f",digits=2)} with \Sexpr{ai.chi$parameter} df \tabrefp{tab:ChiAIchi}.
+    \item p-value=\Sexpr{kPvalue(ai.chi$p.value,include.p=FALSE)} \tabrefp{tab:ChiAIchi}.
+    \item $H_{0}$ is rejected because the p-value is $<\alpha$.
+    \item There does appear to be a significant difference in the distribution of the dominant plants between the two sites. A look at the Pearson residuals \tabrefp{tab:ChiAIres} and the row-percentage table \tabrefp{tab:ChiAIrow} both suggest that the biggest difference between the two locations is due to ``plant A.''\footnote{When ``Plant A'' is removed from the observed table, the Chi-Square Test performed on the remaining plant species showed no difference in the distribution of the remaining plants between the two locations (\Sexpr{kPvalue(ai.chi1$p.value)}). Thus, most of the difference in plant distributions between Devil's Island and the Bayfield Peninsula appears to be due primarily to ``plant A'' with more of ``plant A'' found on the Bayfield Peninsula than on Devil's Island.}
+  \end{Enumerate}
+
+\begin{minipage}{\textwidth}
+\textbf{R Appendix:}
+<<eval=FALSE, results='hide', fig.show='hide', prompt=FALSE>>=
+<<ChiAI>>
+@
+\end{minipage}
+
+\begin{table}[h]
+  \caption{Expected frequency table for dominant plant species on Devil's Island and the Bayfield Peninsula.}
+  \label{tab:ChiAIexp}
+  \vspace{-12pt}
+<<echo=FALSE, background='white'>>=
+ai.chi$expected
+@
+\end{table}
+
+\begin{table}[h]
+  \caption{Results from the Chi-Square Test for differences in the distribution of dominant plant species between Devil's Island and the Bayfield Peninsula.}
+  \label{tab:ChiAIchi}
+  \vspace{-12pt}
+<<echo=FALSE, background='white'>>=
+kHtest(ai.chi)
+@
+\end{table}
+
+\begin{table}[h]
+  \caption{Pearson residuals from the Chi-Square Test for differences in the distribution of dominant plant species between Devil's Island and Bayfield Peninsula.}
+  \label{tab:ChiAIres}
+  \vspace{-12pt}
+<<echo=FALSE, background='white'>>=
+ai.chi$residuals
+@
+\end{table}
+
+\begin{table}[h]
+  \caption{Percentage of dominant plant species within each location (Devil's Island and Bayfield Peninsula).}
+  \label{tab:ChiAIrow}
+  \vspace{-12pt}
+<<echo=FALSE, background='white'>>=
+percTable(ai.obs,margin=1,digits=1)
+@
+\end{table}
+
+
+
+
 
 
 # Corrections {.appendix}
