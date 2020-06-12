@@ -23,7 +23,7 @@ source("../../../rhelpers/knitr_setup.R")
 
 ----
 
-## Cholesterol Drug Treatments I
+## Sales Transactions
 ```{r GerminationCalc, echo=FALSE, results='hide', fig.show='hide'}
 xbar <- 130.26; sigma <- 15; n <- 48; se <- sigma/sqrt(n)
 mu0 <- 120; z <- round((xbar-mu0)/se,3)
