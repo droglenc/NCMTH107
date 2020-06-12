@@ -109,7 +109,7 @@ mean of x
 </div>
 <ol start="6">
 <li>
-x̄ = $31.7.
+x̄ = 31.7.
 </li>
 </ol>
 <div class="alert alert-warning">
@@ -121,7 +121,7 @@ This is from under the “mean of x” output from <code>t.test()</code>.
 </div>
 <ol start="7">
 <li>
-t = $1.850 with $41 df.
+t = 1.850 with 41 df.
 </li>
 </ol>
 <div class="alert alert-warning">
@@ -163,10 +163,13 @@ Also note the use of “appears” in the summary. This language acknowledges th
 </div>
 <ol start="11">
 <li>
-I am 90% confident that the mean time for the tumors to reoccur is greater than $28.4.
+I am 90% confident that the mean time for the tumors to reoccur is greater than 28.4.
 </ol>
 <div class="alert alert-warning">
 <ul>
+<li>
+This comes from under the “90 percent confidence interval” output from <code>t.test()</code>. Those results generally show an “interval” but if the first value is replaced with a “-Inf” then the result is an upper bound and if the second value is replaced with a “Inf” (as here) then the result is a lower bound.
+</li>
 <li>
 This confidence region is a lower bound, so the conclusion is that the mean is greater than the calculated amount.
 </li>

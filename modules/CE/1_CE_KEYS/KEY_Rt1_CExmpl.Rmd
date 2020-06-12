@@ -99,7 +99,7 @@ t.test(dfobj$months,mu=27,alt="greater",conf.level=0.9)
 </div>
 
 <ol start="6">
-  <li>x&#772; = $`r formatC(t1$estimate,format="f",digits=1)`.</li>
+  <li>x&#772; = `r formatC(t1$estimate,format="f",digits=1)`.</li>
 </ol>
 
 <div class="alert alert-warning">
@@ -109,7 +109,7 @@ t.test(dfobj$months,mu=27,alt="greater",conf.level=0.9)
 </div>
 
 <ol start="7">
-  <li>t = $`r formatC(t1$statistic,format="f",digits=3)` with $`r t1$parameter` df.</li>
+  <li>t = `r formatC(t1$statistic,format="f",digits=3)` with `r t1$parameter` df.</li>
 </ol>
 
 <div class="alert alert-warning">
@@ -141,11 +141,12 @@ t.test(dfobj$months,mu=27,alt="greater",conf.level=0.9)
 </div>
 
 <ol start="11">
-<li>I am 90% confident that the mean time for the tumors to reoccur is greater than $`r formatC(t1$conf.int[1],format="f",digits=1)`.
+<li>I am 90% confident that the mean time for the tumors to reoccur is greater than `r formatC(t1$conf.int[1],format="f",digits=1)`.
 </ol>
 
 <div class="alert alert-warning">
 <ul>
+  <li>This comes from under the "90 percent confidence interval" output from `t.test()`. Those results generally show an "interval" but if the first value is replaced with a "-Inf" then the result is an upper bound and if the second value is replaced with a "Inf" (as here) then the result is a lower bound.</li>
   <li>This confidence region is a lower bound, so the conclusion is that the mean is greater than the calculated amount.</li>
 </ul>
 </div>
