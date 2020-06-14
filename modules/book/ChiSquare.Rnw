@@ -7,7 +7,7 @@ set_parent('IntroStats.Rnw')
 \vspace{-12pt}
 \minitoc
 
-\lettrine{S}{ituations where a categorical} response variable is recorded would be summarized with a frequency or percentage table (see Modules \ref{chap:UnivEDACat} and \ref{chap:BivEDACat}). The appropriate test statistic in these situations is a chi-square rather than a t. The Chi-Square Test test statistic follows a chi-square distribution, which is introduced below. The rest of this module is dedicated to the general Chi-Square Test where the distribution of a categorical response variable is compared between two or more groups (or populations). The related goodness-of-fit test for a categorical response recorded for only one group (or population) is introduced in \modref{chap:GOF}.
+\lettrine{S}{ituations where a categorical} response variable is recorded would be summarized with a frequency or percentage table (see Modules \ref{chap:UnivSum} and \ref{chap:BivEDACat}). The appropriate test statistic in these situations is a chi-square rather than a t. The Chi-Square Test test statistic follows a chi-square distribution, which is introduced below. The rest of this module is dedicated to the general Chi-Square Test where the distribution of a categorical response variable is compared between two or more groups (or populations). The related goodness-of-fit test for a categorical response recorded for only one group (or population) is introduced in \modref{chap:GOF}.
 
 \vspace{-12pt}
 \section{Chi-Square Distribution}\label{sect:ChiDist}
@@ -16,7 +16,7 @@ A chi-square ($\chi^2$) distribution is generally right-skewed \figrefp{fig:chiD
 
 \[ \chi^{2} = \Sum_{cells}\frac{(Observed-Expected)^{2}}{Expected} \]
 
-where ``Observed'' and ``Expected'' represent the observed and expected counts in the cells of frequency tables (see \modref{chap:UnivEDACat} and \modref{chap:BivEDACat}). Thus, the $\chi^2$ distribution arises from comparing frequencies in two tables.\footnote{Subsequent sections demonstrate how this test statistic is used to compare observed frequencies (i.e., from a sample) to expected frequencies (i.e., from a null hypothesis).}
+where ``Observed'' and ``Expected'' represent the observed and expected counts in the cells of frequency tables (see \modref{chap:UnivSum} and \modref{chap:BivEDACat}). Thus, the $\chi^2$ distribution arises from comparing frequencies in two tables.\footnote{Subsequent sections demonstrate how this test statistic is used to compare observed frequencies (i.e., from a sample) to expected frequencies (i.e., from a null hypothesis).}
 
 <<chiDist, echo=FALSE, fig.cap='$\\chi^2$ distributions with varying degrees-of-freedom.'>>=
 d <- NULL

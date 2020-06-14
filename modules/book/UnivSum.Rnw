@@ -11,7 +11,7 @@ set_parent('IntroStats.Rnw')
 \lettrine{S}{ummarizing large quantities of data with} few graphical or numerical summaries makes it is easier to identify meaning from data (discussed in \modref{chap:WhyStatsImportant}). Numeric and graphical summaries specific to a single variable are described in this module. Interpretations from these numeric and graphical summaries are described in the next module.
 
 \section{Quantitative Variable} \label{sec:UnivQuantVar}
-Two data sets will be considered in this section about summarizing quantitative variables. The first data set consists of the number of open pit mines in countries with open pit mines \tabrefp{tab:MineData}.\footnote{These data were collected from \href{https://en.wikipedia.org/wiki/List_of_open-pit_mines}{this page}. See \sectref{sect:REnterData} for how to enter these data into R.} The second data set is Richter scale recordings for 15 major earthquakes \tabrefp{tab:EQData}.
+Two data sets will be considered in this section about summarizing quantitative variables. The first data set consists of the number of open pit mines in countries with open pit mines \tabrefp{tab:MineData}.\footnote{These data were collected from \href{https://en.wikipedia.org/wiki/List_of_open-pit_mines}{this page}.} The second data set is Richter scale recordings for 15 major earthquakes \tabrefp{tab:EQData}.
 
 <<MineData, results='asis', echo=FALSE>>=
 mc <- c(2,11,4,1,15,12,1,1,3,2,2,1,1,1,1,2,4,1,4,2,4,2,1,4,11,1)

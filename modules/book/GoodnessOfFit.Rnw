@@ -22,7 +22,7 @@ The hypotheses are simpler, but you must be more careful, when there are only tw
 One may also have expected, from the wording of the research hypothesis about the sex of bear cubs, that the alternative hypothesis would have been $H_{A}$: ``the proportion of bear cubs that are female is LESS THAN 0.40.''  Recall from \sectref{sect:ChiDist}, however, that the chi-square test statistic always represents a two-tailed situation. Thus, the $H_{A}$ here reflects that constraint. The researcher will ultimately be able to determine if the proportion is less than 0.40 if the p-value from the Goodness-of-Fit Test indicates a difference and the observed proportion of female bear cubs is less than 0.40.
 
 \subsection{The Tables}
-For a Goodness-of-Fit Test, the data are summarized in an observed frequency table as in \modref{chap:UnivEDACat}. Additionally, a table of expected frequencies must be constructed from the theoretical distribution in the null hypothesis and the total number of observed individuals ($n$). Specifically, the expected frequencies are found by multiplying the expected proportions from the theoretical distribution in the null hypothesis by $n$. For example, consider this situation:
+For a Goodness-of-Fit Test, the data are summarized in an observed frequency table as in \modref{chap:UnivSum}. Additionally, a table of expected frequencies must be constructed from the theoretical distribution in the null hypothesis and the total number of observed individuals ($n$). Specifically, the expected frequencies are found by multiplying the expected proportions from the theoretical distribution in the null hypothesis by $n$. For example, consider this situation:
 
 \vspace{-6pt}
 \begin{quote}
@@ -56,7 +56,7 @@ Consider the following situation where construction of expected frequencies is b
 
 \vspace{-7pt}
 \begin{quote}
-\textsl{Mendel's law of independent assortment predicts that the genotypes (i.e., how they look) of the offspring from mating the offspring of a dihybrid cross of homozygous dominant and homozygous recessive parents should follow a 9:3:3:1 ratio. In an experiment to test this, Mendel crossed a pea plant that produces round, yellow seeds (i.e., all dominant alleles, YYWW) with a pea plant that produces green, wrinkled seeds (i.e., all recessive alleles, yyww) such that only round, yellow heterozygous offspring (i.e., YyWw) were produced. Pairs of these offspring were then bred. Mendel's theory says that $\frac{9}{16}$ of these offspring should be round, yellow; $\frac{3}{16}$ should be round, green; $\frac{3}{16}$ should be wrinkled, yellow; and $\frac{1}{16}$ should be wrinkled, green. Of 566 seeds studied in this experiment, Mendel found that 315 were round, yellow; 108 were round, green; 101 were wrinkled, yellow; and 32 were wrinkled, green. Use these results to determine, at the 5\% level, if Mendel's law of independent assortment is supported by these results.}
+\textsl{Mendel's law of independent assortment predicts that the phenotypes (i.e., how they look) of the offspring from mating the offspring of a dihybrid cross of homozygous dominant and homozygous recessive parents should follow a 9:3:3:1 ratio. In an experiment to test this, Mendel crossed a pea plant that produces round, yellow seeds (i.e., all dominant alleles, YYWW) with a pea plant that produces green, wrinkled seeds (i.e., all recessive alleles, yyww) such that only round, yellow heterozygous offspring (i.e., YyWw) were produced. Pairs of these offspring were then bred. Mendel's theory says that $\frac{9}{16}$ of these offspring should be round, yellow; $\frac{3}{16}$ should be round, green; $\frac{3}{16}$ should be wrinkled, yellow; and $\frac{1}{16}$ should be wrinkled, green. Of 566 seeds studied in this experiment, Mendel found that 315 were round, yellow; 108 were round, green; 101 were wrinkled, yellow; and 32 were wrinkled, green. Use these results to determine, at the 5\% level, if Mendel's law of independent assortment is supported by these results.}
 \end{quote}
 \vspace{-7pt}
 
@@ -65,7 +65,7 @@ The statistical hypotheses are as follows,
   H_{0}&: \text{``the proportion of RY, RG, WY, and WG individuals will be $\frac{9}{16}$, $\frac{3}{16}$, $\frac{3}{16}$, and $\frac{1}{16}$, respectively''} \\
   H_{A}&: \text{``the proportion of RY, RG, WY, and WG individuals will NOT be $\frac{9}{16}$, $\frac{3}{16}$, $\frac{3}{16}$, and $\frac{1}{16}$, respectively''}
 \end{split} \]
-where RY=``round, yellow'', RG=``round, green'', WY=``wrinkled, yellow'', and WG=``wrinkled, green.'' If these proportions are applied to the $n=566$ observed offspring, then the following frequencies for each genotype would be expected:
+where RY=``round, yellow'', RG=``round, green'', WY=``wrinkled, yellow'', and WG=``wrinkled, green.'' If these proportions are applied to the $n=566$ observed offspring, then the following frequencies for each phenotype would be expected:
 \vspace{-6pt}
 \begin{Itemize}
   \item $\frac{9}{16}\cdot566 = 318.375$ would be expected to be round, yellow.
@@ -121,7 +121,7 @@ The Goodness-of-Fit Test is characterized by a single categorical response varia
 \end{minipage}}
 \end{table}
 
-It is cumbersome to produce a confidence interval in a Goodness-of-Fit Test because there generally is not a single parameter (i.e., there are as many parameters as levels in the response variable). Confidence intervals can be calculated for the proportion in each level as shown below. However, confidence intervals will only be ``hand''-calculated when there are two levels. When using R (as discussed in a subsequent section), confidence intervals will be computed for all levels, no matter the number of levels.
+It is cumbersome to produce a confidence interval in a Goodness-of-Fit Test because there generally is not a single parameter (i.e., there are as many parameters as levels in the response variable). Confidence intervals can be calculated for the proportions in each level as shown below. However, confidence intervals will only be ``hand''-calculated when there are two levels. When using R (as discussed in a later module), confidence intervals will be computed for all levels, no matter the number of levels.
 
 Let $p$ be the population proportion in a particular level and $\hat{p}$ be the sample proportion in the same interval. The $\hat{p}$ is computed by dividing the frequency of individuals in this level by the total number of individuals in the sample (i.e., $n$). The $\hat{p}$ is a statistic that is subject to sampling variable with that sampling variability measured by $SE_{\hat{p}}=\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$ for ``large'' values of $n$. For ``large'' values of $n$ the $\hat{p}$ will follow a normal distribution such that a confidence interval for $p$ is computed using the general confidence interval formula found in \sectref{sec:CIConstruct} and repeated below:
 
@@ -166,7 +166,7 @@ Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis t
     \vspace{12pt}
     \item $\chi^{2}$=$\frac{(61.6-54)^{2}}{55} + \frac{(18.4-26)^{2}}{25}$=$0.938 + 3.139$ = $4.077$ with $2-1=1$ df.
     \item p-value=\Sexpr{kPvalue(pchisq(4.077,df=1,lower.tail=FALSE),include.p=FALSE)}.
-    \item $H_{0}$ is rejected because the p-value $<\alpha=0.10$).
+    \item $H_{0}$ is rejected because the p-value $<\alpha$=0.10.
     \item The proportion of Ashland residents that oppose replacing the \$1 bill with the \$1 coin does appear to be different from the proportion (0.77) reported for the general population.
     \item I am 90\% confident that the proportion of all Ashland residents opposed to the \$1 coin is between 0.596 and 0.767. [$\frac{54}{80}$$\pm1.645*\sqrt{\frac{0.68125*0.31875}{80}}$=$0.68125\pm1.645*0.0521$=$0.68125\pm0.0857$=$(0.5956,0.7670)$.]
 \end{Enumerate}
@@ -178,240 +178,3 @@ Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis t
 ( distrib(0.95,type="q") )
 @
 \end{minipage}
-
-
-\vspace{18pt}
-\section{Goodness-of-Fit Test in R}
-\vspace{3pt}
-\subsection{Data Format}
-A Goodness-of-Fit Test is conducted in R with \R{chisq.test()}, which requires an observed table as the first argument. This observed table is entered from summarized data using \R{c()} or raw data is summarized to a frequency table with \R{xtabs()} as in \modref{chap:UnivEDACat}.
-
-For example, suppose that the frequency of shrike observations in the ``mid-successional'', ``open'', ``scattered trees'', ``woods'', and ``wetland'' habitats is known to be 43, 1456, 112, 44 and 6, respectively. These summarized values are entered directly into a named vector below.
-<<>>=
-( obs <- c(MidSucc=43,Open=1456,ScatTree=112,Woods=6,Wetland=44) )
-@
-
-<<echo=FALSE>>=
-shrike.raw <- data.frame(hab.use=factor(rep(names(obs),c(43,1456,112,44,6))))
-@
-However, instead of having summarized frequencies, suppose that the individual habitat observations were stored in a variable called \R{hab.use} in the \R{df} data.frame. These raw data must be summarized into a frequency table.
-<<>>=
-( obs <- xtabs(~hab.use,data=shrike.raw) )
-@
-
-\subsection{Goodness-of-Fit Test}
-The Goodness-of-Fit Test is computed with \R{chisq.test()} with a observed frequencies as the first argument and the following arguments:
-\vspace{-6pt}
-\begin{Itemize}
-  \item \R{p=}: a vector of expected proportions for the levels of the theoretical distribution.
-  \item \R{rescale.p=TRUE}: rescales the values in \R{p=} to sum to 1. Rescaling is useful if the proportions in \R{p=} were rounded or are expected frequencies.
-  \item \R{correct=FALSE}: indicates to not use a ``continuity correction.''\footnote{Some statisticians argue that small chi-square tables with small sample sizes should be corrected for the fact that the chi-square distribution is a continuous distribution. This correction is applied by simply subtracting 0.5 from each observed-expected calculation. We will not use the continuity correction in this course so that R calculations will match hand calculations.}
-\end{Itemize}
-
-The results from \R{chisq.test()} should be assigned to an object so that useful information can be extracted. The chi-square test statistics and p-value are extracted by typing the name of the saved object, the expected values are extracted by appending \R{\$expected} to the object, and a visual of the p-value is obtained by submitting the object to \R{plot()}. In addition, confidence intervals for the proportions of individuals in each level are constructed by submitting the saved object to \R{gofCI()}.
-
-\subsection{Example - Loggerhead Shrikes}
-Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for the following situation:
-\vspace{-4pt}
-\begin{quote}
-\textsl{\href{http://www.jstor.org/stable/4162345}{Bohall-Wood (1987)} constructed 24 random 16-km transects along roads in counties near Gainesville, FL. Two observers censused each transect once every 2 weeks from 18 October 1981 to 30 October 1982, by driving 32 km/h and scanning both sides of the road for perched and flying shrikes (\textbf{Lanius ludovicianus}). The habitat, whether the bird was on the roadside or actually in the habitat, and the perch type were recorded for each shrike observed. Habitats were grouped into five categories. The number of shrikes observed in each habitat was 1456 in open areas, 43 in midsuccessional, 112 in scattered trees, 44 in woods, and 6 in wetlands. Separate analyses were used to construct the proportion of habitat available in each of the five habitat types. These results were as follows: 0.358 open, 0.047 midsuccessional, 0.060 scattered trees, 0.531 woods, and 0.004 wetlands. Use these data to determine, at the 5\% level, if shrikes are using the habitat in proportion to its availability.}
-\end{quote}
-
-<<GOFshrikes, echo=FALSE, results='hide', fig.show='hide', warning=FALSE>>=
-( obs <- c(Open=1456,MidSucc=43,ScatTree=112,Woods=6,Wetland=44) )
-( p.exp <- c(Open=0.358,MidSucc=0.047,ScatTree=0.060,Woods=0.531,Wetland=0.004) )
-( shrike.chi <- chisq.test(obs,p=p.exp,rescale.p=TRUE) )
-data.frame(obs=shrike.chi$observed,exp=shrike.chi$expected)
-gofCI(shrike.chi,digits=3)
-@
-
-\begin{Enumerate}
-  \item $\alpha$=0.05.
-  \item $H_{0}$:``distribution of habitat use by shrikes is the same as the proportions of available habitat'' vs. $H_{A}$:``distribution of habitat use by shrikes is NOT the same as the proportions of available habitat.''
-  \item A Goodness-of-Fit Test is required because (i) a categorical variable was recorded (habitat use), (ii) a single group (or population) was considered (shrikes in this area), and (iii) the observed distribution is compared to a theoretical distribution.
-  \item The data appear to be part of an observational study where the individuals were not randomly selected but the transects upon which they were observed were.
-  \item There are more than five individuals expected in each habitat level \tabrefp{tab:GOFshrikesRes}.
-  \item The statistic is the observed frequency table in \tabref{tab:GOFshrikesRes}.
-  \item $\chi^2$=\Sexpr{formatC(shrike.chi$statistic,format="f",digits=1)} with \Sexpr{round(shrike.chi$parameter,0)} df \tabrefp{tab:GOFshrikesChi}.
-  \item p-value\Sexpr{kPvalue(shrike.chi$p.value,include.p=FALSE)} \tabrefp{tab:GOFshrikesChi}.
-  \item $H_{0}$ is rejected because the p-value$<\alpha$.
-  \item The shrikes do not appear to use habitats in the same proportions as the availability of the habitat.
-  \item The 95\% confidence intervals for the proportion of use in each habitat level are in \tabref{tab:GOFshrikesCIs}. From these results it appears that the shrikes use the ``open'' habitat much more often and the ``woods'' habitat mush less often than would be expected if they used all habitats in proportion to their availability.
-\end{Enumerate}
-
-\begin{minipage}{\textwidth}
-\textbf{R Appendix:}
-<<eval=FALSE, results='hide', fig.show='hide', prompt=FALSE>>=
-<<GOFshrikes>>
-@
-\end{minipage}
-
-\begin{table}[h]
-  \caption{Observed and expected frequencies for the Goodness-of-Fit Test for shrike habitat use.}
-  \label{tab:GOFshrikesRes}
-  \vspace{-12pt}
-<<echo=FALSE, background='white'>>=
-data.frame(obs=shrike.chi$observed,exp=shrike.chi$expected)
-@
-\end{table}
-
-\begin{table}[h]
-  \caption{Results from the Goodness-of-Fit Test for shrike habitat use.}
-  \label{tab:GOFshrikesChi}
-  \vspace{-12pt}
-<<echo=FALSE, background='white'>>=
-kHtest(shrike.chi)
-@
-\end{table}
-
-\begin{table}[h]
-  \caption{Observed proportions, 95\% condidence intervals for the proprtions, and expected proportions for shrike habitat use.}
-  \label{tab:GOFshrikesCIs}
-  \vspace{-12pt}
-<<echo=FALSE, background='white'>>=
-gofCI(shrike.chi,digits=3)
-@
-\end{table}
-
-\vspace{18pt}
-\subsection{Example - Modes of Fishing}
-The 11-steps \sectrefp{sec:11Steps} for a hypothesis test for this example is below:
-\vspace{-4pt}
-\begin{quote}
-\textsl{\href{http://www.mitpressjournals.org/doi/abs/10.1162/003465399767923827}{Herriges and King (1999)} examined modes of fishing for a large number of recreational saltwater users in southern California. One of the questions asked in their Southern California Sportfishing Survey was what ``mode'' they used for fishing -- ``from the beach'', ``from a fishing pier'', ``on a private boat'', or ``on a chartered boat.''  The results to this question, along with other data not used here, are found in \href{https://raw.githubusercontent.com/droglenc/NCData/master/FishingModes.csv}{FishingModes.csv}. One hypothesis of interest states that two-thirds of the users will fish from a boat, split evenly between private and charter boats, while the other one-third will fish from land, also split even between those fishing on the beach and those from a pier. Use the data in the \var{mode} variable of the data file to determine if this hypothesis is supported at the 10\% level.}
-\end{quote}
-
-<<echo=FALSE>>=
-sf <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/FishingModes.csv")
-@
-<<GOFfish, echo=FALSE, results='hide', fig.show='hide', warning=FALSE>>=
-obs <- xtabs(~mode,data=sf)
-p.exp <- c(beach=1/6,boat=1/3,charter=1/3,pier=1/6)
-( sf.chi <- chisq.test(obs,p=p.exp,rescale.p=TRUE) )
-data.frame(obs=sf.chi$observed,exp=sf.chi$expected)
-gofCI(sf.chi,digits=3)
-@
-
-\begin{Enumerate}
-  \item $\alpha$=0.10.
-  \item $H_{0}$:``The distribution will follow the proportions of $\frac{1}{3}$, $\frac{1}{3}$, $\frac{1}{6}$, and $\frac{1}{6}$ for private boat, charter boat, beach, and pier modes of fishing, respectively'' vs. $H_{A}$:``The distribution will NOT follow the proportions of $\frac{1}{3}$, $\frac{1}{3}$, $\frac{1}{6}$, and $\frac{1}{6}$ for private boat, charter boat, beach, and pier modes of fishing, respectively.''  [\textit{Thought process -- the two-thirds for ``boat'' fishing is split to one-third each for private and charter boats; the one-third, or two-sixths, for ``land'' fishing is split to one-sixth each for beach and pier fishing.}]
-  \item A Goodness-of-Fit Test is required because (i) a categorical variable was recorded (mode), (ii) a single group (or population) was considered (Southern California Sportfishers), and (iii) the obseved distribution is compared to a theoretical distribution.
-  \item The data appear to be part of an observational study where the individuals were not obviously (probably were not) randomly selected.
-  \item There are more than five individuals expected in each mode \tabrefp{tab:GOFfishRes}.
-  \item The statistic is the observed frequency table in \tabref{tab:GOFfishRes}.
-  \item $\chi^2$=\Sexpr{formatC(sf.chi$statistic,format="f",digits=3)} with \Sexpr{round(sf.chi$parameter,0)} df \tabrefp{tab:GOFfishChi}.
-  \item p-value\Sexpr{kPvalue(sf.chi$p.value,include.p=FALSE)} \tabrefp{tab:GOFfishChi}.
-  \item $H_{0}$ is rejected because the p-value$<\alpha$.
-  \item The modes of fishing do not appear to match the distribution outlined in the null hypothesis.
-  \item The 95\% confidence intervals for the proportion of use of each mode is in \tabref{tab:GOFfishCIs}. From these results it is apparent that the users use the beach slightly less than expected and use charter boats slightly more than expected. The use of the pier and private boats are not different from expected.
-\end{Enumerate}
-
-\vspace{-6pt}
-\begin{minipage}{\textwidth}
-\textbf{R Appendix:}
-\vspace{-6pt}
-<<eval=FALSE, results='hide', fig.show='hide', prompt=FALSE>>=
-setwd("c:/data/")
-sf <- read.csv("FishingModes.csv")
-<<GOFfish>>
-@
-\end{minipage}
-
-\begin{table}[h]
-  \caption{Observed and expected frequencies for the Goodness-of-Fit Test for modes of fishing.}
-  \label{tab:GOFfishRes}
-  \vspace{-12pt}
-<<echo=FALSE, background='white'>>=
-data.frame(obs=sf.chi$observed,exp=sf.chi$expected)
-@
-\end{table}
-
-\vspace{-6pt}
-\begin{table}[h]
-  \caption{Results from the Goodness-of-Fit Test for modes of fishing.}
-  \label{tab:GOFfishChi}
-  \vspace{-12pt}
-<<echo=FALSE, background='white'>>=
-kHtest(sf.chi)
-@
-\end{table}
-
-\vspace{-6pt}
-\begin{table}[h]
-  \caption{Observed proportions, 95\% condidence intervals for the proprtions, and expected proportions for modes of fishing.}
-  \label{tab:GOFfishCIs}
-  \vspace{-12pt}
-<<echo=FALSE, background='white'>>=
-gofCI(sf.chi,digits=3)
-@
-\end{table}
-
-
-\subsection{Example - Mendelian Genetics II}
-\vspace{-4pt}
-Below are the 11-steps \sectrefp{sec:11Steps} for completing a full hypothesis test for the following situation:
-\vspace{-6pt}
-\begin{quote}
-\textsl{Geneticists hypothesized that three of every four progeny from a cross between two parent fruitflies known to possess both a dominant and recessive allele would have red eyes. In a controlled experiment, 82 of 151 randomly selected progeny had red eyes. Test at the 1\% level if the percentage of red-eyed progeny in the population of progeny is different than what was hypothesized.}
-\end{quote}
-\vspace{-10pt}
-
-<<GOFgen, echo=FALSE, results='hide', fig.show='hide', warning=FALSE>>=
-obs <- c(red=82,nonred=151-82)
-p.exp <- c(red=0.75,nonred=0.25)
-( m.chi <- chisq.test(obs,p=p.exp,rescale.p=TRUE) )
-data.frame(obs=m.chi$observed,exp=m.chi$expected)
-gofCI(m.chi,digits=3)
-@
-
-\begin{Enumerate}
-  \item $\alpha$=0.01.
-  \item $H_{0}$:``The proportion of progeny with red eyes is 0.75'' vs. $H_{A}$:``The proportion of progeny with red eyes is NOT 0.75.''
-  \item A Goodness-of-Fit Test is required because (i) a categorical variable was recorded (red eye color or not), (ii) a single group (or population) was considered in the experiment, and (iii) the observed distribution is compared to a theoretical distribution.
-  \item The data appear to be experimental in that a specific cross was made and the environment in which they were raised was controlled. Progeny were randomly selected.
-  \item There are more than five individuals expected in each eye level \tabrefp{tab:GOFgenRes}.
-  \item The appropriate statistic is the observed frequency table in \tabref{tab:GOFgenRes}.
-  \item $\chi^2$=\Sexpr{formatC(m.chi$statistic,format="f",digits=2)} with \Sexpr{round(m.chi$parameter,0)} df \tabrefp{tab:GOFgenChi}
-  \item p-value\Sexpr{kPvalue(m.chi$p.value,include.p=FALSE)} \tabrefp{tab:GOFgenChi}.
-  \item $H_{0}$ is rejected because the p-value $<\alpha$.
-  \item The proportion of red-eyed progeny appears to be different than 0.75. Thus, the Mendelian theory is not supported by these results.
-  \item From the 95\% confidence intervals in \tabref{tab:GOFgenCIs} it appears that the proportion of progeny with red eyes was between \Sexpr{formatC(gofCI(m.chi)["red","p.LCI"],format="f",digits=3)} and \Sexpr{formatC(gofCI(m.chi)["red","p.UCI"],format="f",digits=3)}, which indicates that there were many fewer red-eyed progeny than would be expected from the Mendelian theory.
-\end{Enumerate}
-
-\vspace{-6pt}
-\begin{minipage}{\textwidth}
-\textbf{R Appendix:}
-\vspace{-4pt}
-<<eval=FALSE, results='hide', fig.show='hide', prompt=FALSE>>=
-<<GOFgen>>
-@
-\end{minipage}
-
-\begin{table}[h]
-  \caption{Observed and expected frequencies for the Goodness-of-Fit Test for the genetic cross experiment.}
-  \label{tab:GOFgenRes}
-  \vspace{-14pt}
-<<echo=FALSE, background='white'>>=
-data.frame(obs=m.chi$observed,exp=m.chi$expected)
-@
-\end{table}
-
-\vspace{-6pt}
-\begin{table}[h]
-  \caption{Results from the Goodness-of-Fit Test for the genetic cross experiment.}
-  \label{tab:GOFgenChi}
-  \vspace{-14pt}
-<<echo=FALSE, background='white'>>=
-kHtest(m.chi)
-@
-\end{table}
-
-\vspace{-6pt}
-\begin{table}[h]
-  \caption{Observed proportions, 95\% condidence intervals for the proprtions, and expected proportions for eye colors in the genetic cross experiment.}
-  \label{tab:GOFgenCIs}
-  \vspace{-14pt}
-<<echo=FALSE, background='white'>>=
-gofCI(m.chi,digits=3)
-@
-\end{table}
