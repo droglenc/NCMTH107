@@ -32,7 +32,7 @@ It is important to understand the distribution of individuals for a single varia
 
 Use the materials below to answer the questions on [this preparation guide](Prep/UnivEDA).
 
-* [![PDF](../img/pdf.png) Reading](../book/UnivEDA.pdf)
+* [![PDF](../img/pdf.png) Reading](book/Univivariate EDA.pdf)
 * [![Vimeo](../img/dhovid.png) Interpreting a Univariate EDA (Quantitative)](https://vimeo.com/user45324800/ueda-quantsum){:target="_blank"} [11 mins] ... [corresponding slides](PPT/UEDAQuant_PPT.pptx)
 * [![Vimeo](../img/dhovid.png) Interpreting a Univariate EDA (Categorical)](https://vimeo.com/user45324800/ueda-catsum){:target="_blank"} [2 mins] ... [corresponding slides](PPT/UEDACat_PPT.pptx)
 

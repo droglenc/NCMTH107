@@ -37,7 +37,7 @@ It is important to understand the distribution of individuals for a single varia
 
 Use the materials below to answer the questions on [this preparation guide](Prep/UnivSum).
 
-* [![PDF](../img/pdf.png) Reading](../book/Summary One Quant Var.pdf)
+* [![PDF](../img/pdf.png) Reading](book/Univariate Summaries.pdf)
 * [![YouTube](../img/youtube.png) Calculate Median and IQR](https://www.youtube.com/watch?v=F3WcEAW-M80){:target="_blank"} [15 mins]
     * Additional for calculating the median: [A](https://www.youtube.com/watch?v=0SYsi38XucI){:target="_blank"} [2 mins], [B](https://www.youtube.com/watch?v=hTYTaOaQUcw){:target="_blank"} [5 mins], **OR** [C](https://www.youtube.com/watch?v=9a8M_KfclBE){:target="_blank"} [3 mins]
     * [Additional for calculating the IQR](https://www.youtube.com/watch?v=R6VDj7pEG30){:target="_blank"} [3 mins] 

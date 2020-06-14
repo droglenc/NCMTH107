@@ -32,7 +32,7 @@ The simplest hypothesis test occurs when one is making a claim that the populati
 
 Use the materials below to answer the questions on [this preparation guide](Prep/1SampleZ).
 
-* [![PDF](../img/pdf.png) Reading](../book/1-Sample Z-Test.pdf)
+* [![PDF](../img/pdf.png) Reading](book/1-Sample Z-Test.pdf)
 * [![Vimeo](../img/dhovid.png) 11 Steps for Any Hypothesis Test](https://vimeo.com/user45324800/hotest-11steps){:target="_blank"} [5 mins] [![PowerPoint](../img/ppt.png)](PPT/1SampleZ_PPT1.pptx)
 * [![Vimeo](../img/dhovid.png) 1-Sample Z-Test Example](https://vimeo.com/user45324800/ztest-ex1){:target="_blank"} [12 mins] [![PowerPoint](../img/ppt.png)](PPT/1SampleZ_PPT2.pptx)
 * [![Web](../img/web.png) Difference between Z and Z*](Explanations/Diff_Z_and_Zstar)

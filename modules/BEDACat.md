@@ -33,7 +33,7 @@ It is important to understand the relationship between two variables.  With cate
 
 Use the materials below to answer the questions on [this preparation guide](Prep/BEDACat).
 
-* [![PDF](../img/pdf.png) Reading](../book/Bivariate EDA - Categorical.pdf)
+* [![PDF](../img/pdf.png) Reading](book/Bivariate EDA - Categorical.pdf)
 * [![YouTube Link](../img/youtube.png) Percentage Tables](https://www.youtube.com/watch?v=k8xFH6fCIWs){:target="_blank"} [6 mins]
 
 ----

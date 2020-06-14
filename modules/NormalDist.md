@@ -36,7 +36,7 @@ Many natural phenomena can be closely approximated by simple statistical distrib
 
 Use the materials below to answer the questions on [this preparation guide](Prep/NormalDist).
 
-* [![PDF](../img/pdf.png) Reading](../book/Normal Distribution.pdf)
+* [![PDF](../img/pdf.png) Reading](book/Normal Distribution.pdf)
 * [![Vimeo](../img/dhovid.png) Characteristics of Normal Distributions](https://vimeo.com/user45324800/normcharacteristics){:target="_blank"} [7 mins] ... [corresponding slides](PPT/NormalDist_PPT.pptx)
 * ![YouTube Link](../img/youtube.png) 68-95-99.7 Rule: [A](https://www.youtube.com/watch?v=PJPXFOK8F8E){:target="_blank"} [9 mins] **OR** [B](https://www.youtube.com/watch?v=cgxPcdPbujI){:target="_blank"} [8 mins]
 * [![Vimeo](../img/dhovid.png) Types of Calculations (Forward & Reverse)](https://vimeo.com/user45324800/normcalctypes){:target="_blank"} [4 mins] ... [corresponding slides](PPT/NormalDist_PPT2.pptx)

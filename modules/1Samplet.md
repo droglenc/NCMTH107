@@ -32,7 +32,7 @@ css: /css/modules.css
 
 Use the materials below to answer the questions on [this preparation guide](Prep/1Samplet).
 
-* [![PDF](../img/pdf.png) Reading](../book/1-Sample t-Test.pdf)
+* [![PDF](../img/pdf.png) Reading](book/1-Sample t-Test.pdf)
 * [![Vimeo](../img/dhovid.png) t Distribution](https://vimeo.com/user45324800/tdist){:target="_blank"} [4 mins] [![PowerPoint](../img/ppt.png)](PPT/1Samplet_PPT1.pptx)
 * [![Vimeo](../img/dhovid.png) t Distributions in R](https://vimeo.com/user45324800/tdistribution){:target="_blank"} [8 mins] ... [corresponding script](HO/1Samplet_RHO.html){:target="_blank"}
 * [![Vimeo](../img/dhovid.png) 1-Sample t-Test Example](https://vimeo.com/user45324800/t1test-ex1){:target="_blank"} [12 mins] [![PowerPoint](../img/ppt.png)](PPT/1Samplet_PPT2.pptx)

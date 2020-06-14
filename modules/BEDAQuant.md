@@ -34,7 +34,7 @@ It is important to understand the relationship between two variables.  With quan
 
 Use the materials below to answer the questions on [this preparation guide](Prep/BEDAQuant).
 
-* [![PDF](../img/pdf.png) Reading](../book/Bivariate EDA - Quantitative.pdf)
+* [![PDF](../img/pdf.png) Reading](book/Bivariate EDA - Quantitative.pdf)
 * [![YouTube Link](../img/youtube.png) Construct a Scatterplot](https://www.youtube.com/watch?v=yXmz922K9Ks){:target="_blank"} [7 mins]
 * [![YouTube Link](../img/youtube.png) What is the Correlation?](https://www.youtube.com/watch?v=PtYVrF_WT3A){:target="_blank"} [8 mins; *start at 0:32*]
 * [![Vimeo](../img/dhovid.png) Interpeting a Bivariate EDA (Quantitative)](https://vimeo.com/user45324800/beda-quantsum){:target="_blank"} [10 mins] ... [corresponding slides](PPT/BEDAQuant_PPT.pptx)

@@ -35,7 +35,7 @@ Why is Statistics a required course for many majors at Northland College?  Why d
 
 Use the materials below to answer the questions on [this preparation guide](Prep/WhyStats). [*Problems with videos? [See this FAQ](../resources/FAQ/FAQs/videos){:target="_blank"}.*]
 
-* [![PDF](../img/pdf.png) Reading](../book/Why Statistics is Important.pdf)
+* [![PDF](../img/pdf.png) Reading](book/Why Statistics is Important.pdf)
 * [![YouTube Link](../img/youtube.png) Why Statistics?](https://www.youtube.com/watch?v=yxXsPc0bphQ){:target="_blank"} [4 mins]
 * [![YouTube Link](../img/youtube.png) The Importance of Statistics](https://www.youtube.com/watch?v=gOzlQ_EyJ0o){:target="_blank"} [3 mins]
 * [![YouTube Link](../img/youtube.png) Why You Need to Study Statistics](https://www.youtube.com/watch?v=wV0Ks7aS7YI){:target="_blank"} [3 mins]
