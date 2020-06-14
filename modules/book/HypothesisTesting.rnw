@@ -223,3 +223,89 @@ In summary, hypotheses are statistically examined with the following procedure.
 Statisticians say ``do not reject H$_{0}$'' rather than ``accept H$_{0}$ as true'' when the p-value $>\alpha$ for two reasons. First, there are several other possible values, besides the specific value in the null hypothesis, that would lead to ``do not reject'' conclusions. For example, if a null hypothesized value of 105 was not rejected, then values of 104.99, 104.98, etc. would also likely not be rejected.\footnote{In fact, for example, the values in a 95\% confidence interval -- see \modref{chap:ConfidenceRegions} -- represent all possible hypothesized values that would not be rejected with a two-tailed $H_{A}$ using $\alpha=0.05$.}  So, we don't say that we ``accept'' a particular hypothesized value when we know many other values would also be ``accepted.''
 
 Second, the null hypothesis is almost always not true. Consider the null hypothesis of the Square Lake example (i.e., ``that the mean length is 105 mm''). The mean length of fish in Square Lake is undoubtedly not exactly equal to 105. It may be 104.9, 105.01, or some other more disparate value. The point is that the specific value of the hypothesis is likely never true, especially for a continuous variable. The problem is that it takes large amounts of data to be able to distinguish means that are very close to the true population mean (i.e., it is difficult to distinguish between 104.9 and 105 when sampling variability is present). Very often we will not take a sample size large enough to distinguish these subtle differences. Thus, we will say that we ``do not reject H$_{0}$'' because there simply was not enough data to reject it.
+
+\section{Errors}
+The goal of hypothesis testing is to make a decision about $H_{0}$. Unfortunately, because of sampling variability, there is always a risk of making an incorrect decision. Two types of incorrect decisions can be made \tabrefp{tab:DMerrs}. A Type I error occurs when a true $H_{0}$ is falsely rejected. In other words, even if $H_{0}$ is true, there is a chance that a rare sample will occur and $H_{0}$ will be deemed incorrect. The probability of making a Type I error is set when $\alpha$ is chosen. A Type II error occurs when a false $H_{0}$ is not rejected. The probability of a Type II error is denoted by $\beta$.
+
+\begin{table}[htbp]
+  \caption{Types of decisions that can be made from a hypothesis test.}
+  \label{tab:DMerrs}
+  \centering
+  \begin{tabular}{cc|c|c|}
+    \multicolumn{1}{c}{\widen{-2}{7}{}} & \multicolumn{1}{c}{} & \multicolumn{2}{c}{Decision from Data} \\
+    \cline{3-4}
+    \multicolumn{1}{c}{\widen{-2}{7}{}} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{Reject} & \multicolumn{1}{c|}{Not Reject} \\
+    \cline{2-4}
+    \multicolumn{1}{c|}{\widen{-2}{7}{Truth About}} & \multicolumn{1}{c|}{$H_{0}$} & \multicolumn{1}{c|}{Type I} & \multicolumn{1}{c|}{Correct} \\
+    \cline{2-4}
+    \multicolumn{1}{c|}{\widen{-2}{7}{Population}} & \multicolumn{1}{c|}{$H_{A}$} & \multicolumn{1}{c|}{Correct} & \multicolumn{1}{c|}{Type II} \\
+    \cline{2-4}
+  \end{tabular}
+\end{table}
+
+The decision in the Square Lake example of \modref{chap:HypothesisTests} produced a Type II error because $H_{0}:\mu=105$ was not rejected even though we know that $\mu=98.06$ \tabrefp{tab:SquareLakePopn}. Unfortunately, in real life, it will never be known exactly when a Type I or a Type II error has been made because the true $\mu$ is not known. However, it is known that a Type I error will be made $100\alpha$\% of the time. The probability of a type II error ($\beta$), though, is never known because this probability depends on the true but unknown $\mu$. Decisions can be made, however, that affect the magnitude of $\beta$.
+
+Even though $\beta$ can not usually be calculated, a researcher can make decisions that will reduce $\beta$ \figrefp{fig:SLBetaRelations}. For example, a researcher can decrease $\beta$ by increasing $\alpha$ or $n$. Increasing $n$ is more beneficial because it does not result in an increase in Type I errors as would occur with increasing $\alpha$.
+
+In addition, $\beta$ increases as the difference between the hypothesized mean ($\mu_{0}$) and the actual mean ($\mu_{A}$) decreases \figrefp{fig:SLBetaRelations}. This means that you will make more Type II errors when the hypothesized and actual mean are close together. In addition, $\beta$ increases with a increasing amount of natural variability (i.e., $\sigma$; \figref{fig:SLBetaRelations}). In other words, more Type II errors are made when there is more variability among individuals. A researcher cannot control the difference between $\mu_{0}$ and $\mu_{A}$ or the value of $\sigma$. However, it is important to know that if a situation with a ``large'' amount of variability is encountered or the difference to be detected is small, the researcher will need to increase $n$ to reduce $\beta$. For example, if $n$ could be doubled in the Square Lake example to 100, then $\beta$ (for $H_{0}:\mu=105$) would decrease to approximately 0.18 \figrefp{fig:SLBetaRelations}.
+
+<<SLBetaRelations, echo=FALSE, fig.width=6.5, fig.height=6.5, out.width='.7\\linewidth', fig.cap="The relationship between one-tailed (lower) $\\beta$ and $\\alpha$, $n$, actual mean ($\\mu_{A}$), and $\\sigma$. In all situations where the variable does not vary, $\\mu_{0}=105$, $\\mu_{A}=98.06$, $\\sigma=31.49$, $n=50$, and $\\alpha=0.05$. ">>=
+beta <- function(mu0,mua,sigma,n,alpha,uptail=FALSE){
+  SE <- sigma/sqrt(n)
+  if (uptail) pnorm(qnorm(1-alpha,mu0,SE),mua,SE)
+  else 1-pnorm(qnorm(alpha,mu0,SE),mua,SE)
+}
+
+# Set the Square Lake values
+mu0 <- 105
+muA <- 98.06
+sigma <- 31.49
+n <- 50
+alpha <- 0.05
+# Cycle through alphas
+alphas <- seq(0.002,0.1,by=0.002)
+balpha <- beta(mu0,muA,sigma,n,alphas,FALSE)
+plota <- ggplot(data.frame(alphas,balpha),mapping=aes(x=alphas,y=balpha)) +
+  geom_line(size=1) +
+  coord_cartesian(ylim=c(0,1)) +
+  labs(x=expression(alpha),y=expression(beta)) +
+  theme_NCStats() +
+  annotate(geom="text",x=Inf,y=Inf,hjust=1.1,vjust=1.1,
+           label="beta DEcreases with\n INcreasing alpha", color="darkblue")
+# Cycle through sample sizes
+ns <- seq(2,250)
+bn <- beta(mu0,muA,sigma,ns,alpha,FALSE)
+plotn <- ggplot(data.frame(ns,bn),mapping=aes(x=ns,y=bn)) +
+  geom_line(size=1) +
+  coord_cartesian(ylim=c(0,1)) +
+  labs(x="n",y=expression(beta)) +
+  theme_NCStats() +
+  annotate(geom="text",x=Inf,y=Inf,hjust=1.1,vjust=1.1,
+           label="beta DEcreases with\n INcreasing n",
+           color="darkblue")
+# Cycle through sigmas
+sigmas <- seq(1,60,by=0.5)
+bsigma <- beta(mu0,muA,sigmas,n,alpha,FALSE)
+plots <- ggplot(data.frame(sigmas,bsigma),mapping=aes(x=sigmas,y=bsigma)) +
+  geom_line(size=1) +
+  coord_cartesian(ylim=c(0,1)) +
+  labs(x=expression(sigma),y=expression(beta)) +
+  theme_NCStats() +
+  annotate(geom="text",x=-Inf,y=Inf,hjust=-0.1,vjust=1.1,
+           label="beta INcreases with\n INcreasing sigma",
+           color="darkblue")
+# Cycle through muas
+muas <- seq(85,105,by=1)
+bmua <- beta(mu0,muas,sigma,n,alpha,FALSE)
+plotm <- ggplot(data.frame(muas,bmua),mapping=aes(x=muas,y=bmua)) +
+  geom_line(size=1) +
+  coord_cartesian(ylim=c(0,1)) +
+  labs(x=expression(mu[A]),y=expression(beta)) +
+  theme_NCStats() +
+  annotate(geom="text",x=-Inf,y=Inf,hjust=-0.1,vjust=1.1,
+           label="beta INcreases with\n INcreasing difference\n from truth (=105)",
+           color="darkblue")
+plota + plotn + plots + plotm
+@
+
+A concept that is very closely related to decision-making errors is the idea of statistical power, or just \textbf{power} for short. Power is the probability of correctly rejecting a false $H_{0}$. In other words, it is the probability of detecting a difference from the hypothesized value if a difference really exists. Power is used to demonstrate how sensitive a hypothesis test is for identifying a difference. High power related to a $H_{0}$ that is not rejected implies that the $H_{0}$ really should not have been rejected. Conversely, low power related to a $H_{0}$ that was not rejected implies that the test was very unlikely to detect a difference, so not rejecting $H_{0}$ is not surprising nor particularly conclusive. Power is equal to $1-\beta$.

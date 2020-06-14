@@ -18,7 +18,6 @@ Decisions about statistical hypotheses are subject to being incorrect because of
 <p>After completing this module, you should be able to ...</p>
 
 <ol>
-  <li>Describe possible errors in statistical decision making.</li>
   <li>Compute statistical power.</li>
 </ol>
       </div>

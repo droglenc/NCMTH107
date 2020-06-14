@@ -21,6 +21,7 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
   <li>Describe the relationship between the scientific method and statistical hypothesis testing.</li>
   <li>Properly construct statistical hypotheses.</li>
   <li>Describe the concept underlying significance testing.</li>
+  <li>Describe possible errors in statistical decision making.</li>
 </ol>
       </div>
     </div>
@@ -33,14 +34,15 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
 
 Use the materials below to answer the questions on [this preparation guide](Prep/HypTesting).
 
-* [![PDF](../img/pdf.png) Reading](book/Hypothesis Tests.pdf)
+* [![PDF](../img/pdf.png) Reading](book/Hypothesis Testing.pdf)
 * [![Vimeo](../img/dhovid.png) Forming Statistical Hypothesis](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins] [![PowerPoint](../img/ppt.png)](PPT/HypTesting_PPT-hypotheses.pptx)
 * [![Web](../img/web.png) Calculating p-values](Explanations/Calc_pvalue_Z)
-
+* ![YouTube Link](../img/youtube.png) Statistical Error Types: [A](https://www.youtube.com/watch?v=7mE-K_w1v90){:target="_blank"} [8 mins] **AND** 
 
 ----
 
 ## [In-Class Lecture](PPT/HypTesting_PPT-Lecture.pptx)
+## [In-Class Lecture](PPT/HypTestingErrs_PPT-Lecture.pptx)
 
 ----
 
