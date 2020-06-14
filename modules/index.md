@@ -28,7 +28,7 @@ title: Learning Modules
       <li><a href="ConfRegions.html">Confidence Regions</a></li>
     </ol>
   <li><b>Inference Methods</b></li>
-    <ol type="1" start="15">
+    <ol type="1" start="14">
       <li><a href="1SampleZ.html">1-Sample Z-Test</a></li>
       <li><a href="1Samplet.html">1-Sample t-Test</a></li>
       <li><a href="2Samplet.html">2-Sample t-Test</a></li>
@@ -36,14 +36,13 @@ title: Learning Modules
       <li><a href="GOFTest.html">Goodness-of-Fit Test</a></li>
     </ol>
   <li><b>Using R</b></li>
-    <ol type="1" start="20">
+    <ol type="1" start="19">
       <li><a href="RData.html">Getting Data Into R</a></li>
       <li><a href="RFilter.html">Filtering Data in R</a></li>
       <li><a href="RUnivEDA.html">Univariate EDA in R</a></li>
       <li><a href="RBivEDA.html">Bivariate EDA in R</a></li>
       <li><a href="RRegression.html">Linear Regression in R</a></li>
-      <li><a href="Rt1.html">1-Sample t in R</a></li>
-      <li><a href="Rt2.html">2-Sample t in R</a></li>
+      <li><a href="Rttests.html">t-Tests in R</a></li>
       <li><a href="RChi.html">Chi-square in R</a></li>
     </ol>
 </ul>

@@ -19,28 +19,28 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-  <title>26 - 2-Sample t-Test in R</title>
+  <title>24 - t-Tests in R</title>
   
-  <meta property="description" itemprop="description" content="Methods for computing results for a 2-sample t-test." />
+  <meta property="description" itemprop="description" content="Methods for computing 1- and 2-sample t-tests." />
   
   
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="26 - 2-Sample t-Test in R" />
+  <meta property="og:title" content="24 - t-Tests in R" />
   <meta property="og:type" content="article" />
-  <meta property="og:description" content="Methods for computing results for a 2-sample t-test." />
+  <meta property="og:description" content="Methods for computing 1- and 2-sample t-tests." />
   <meta property="og:locale" content="en_US" />
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary" />
-  <meta property="twitter:title" content="26 - 2-Sample t-Test in R" />
-  <meta property="twitter:description" content="Methods for computing results for a 2-sample t-test." />
+  <meta property="twitter:title" content="24 - t-Tests in R" />
+  <meta property="twitter:description" content="Methods for computing 1- and 2-sample t-tests." />
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["26 - 2-Sample t-Test in R"]},{"type":"character","attributes":{},"value":["Methods for computing results for a 2-sample t-test.\n"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["24 - t-Tests in R"]},{"type":"character","attributes":{},"value":["Methods for computing 1- and 2-sample t-tests.\n"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1928,7 +1928,7 @@ distill-header .nav a {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"26 - 2-Sample t-Test in R","description":"Methods for computing results for a 2-sample t-test.","authors":[]}
+{"title":"24 - t-Tests in R","description":"Methods for computing 1- and 2-sample t-tests.","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1938,8 +1938,8 @@ distill-header .nav a {
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>26 - 2-Sample t-Test in R</h1>
-<p><p>Methods for computing results for a 2-sample t-test.</p></p>
+<h1>24 - t-Tests in R</h1>
+<p><p>Methods for computing 1- and 2-sample t-tests.</p></p>
 </div>
 
 
@@ -1947,15 +1947,111 @@ distill-header .nav a {
 <h3 class="d-toc-header">Table of Contents</h3>
 <nav class="d-toc" id="TOC">
 <ul>
+<li><a href="#sample-t-test">1-Sample t-Test</a><ul>
+<li><a href="#sample-t-test-in-r">1-Sample t-Test in R</a></li>
+<li><a href="#example---crab-body-temperature">Example - Crab Body Temperature</a></li>
+</ul></li>
+<li><a href="#sample-t-test-1">2-Sample t-Test</a><ul>
 <li><a href="#data-format">Data Format</a></li>
 <li><a href="#levenes-test">Levene’s Test</a></li>
 <li><a href="#histograms">Histograms</a></li>
-<li><a href="#sample-t-test">2-Sample t-Test</a></li>
+<li><a href="#sample-t-test-2">2-Sample t-Test</a></li>
 <li><a href="#example---bod-in-aquaculture-water">Example - BOD in Aquaculture Water</a></li>
+</ul></li>
 <li><a href="#corrections">Corrections</a></li>
 </ul>
 </nav>
 <hr class="d-toc-separator" />
+<h1 id="sample-t-test">1-Sample t-Test</h1>
+<p>In the <a href="../tTest1.html">1-Sample t-test module</a> you learned about the theory underlying a 1-sample t-test and how to perform the calculations required to complete the <a href="../11-steps">11-steps</a> of a hypothesis test. In this module, you will learn how to perform the required calculations from raw data using R. You will also be asked to complete the full 11-steps for a 1-sample t-test.</p>
+<p>Methods in this module require the <code>NCStats</code> package (as always) and the <code>ggplot2</code> package (for making graphs).</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+library(NCStats)
+library(ggplot2)</code></pre>
+</div>
+<h2 id="sample-t-test-in-r">1-Sample t-Test in R</h2>
+<p>If raw data exist, the calculations for a 1-Sample t-test can be efficiently computed with <code>t.test()</code>. <code>t.test()</code> requires the vector of quantitative data as the first argument, the null hypothesized value for μ in <code>mu=</code>, the type of alternative hypothesis in <code>alt=</code> (can be <code>alt=&quot;two.sided&quot;</code> (the default), <code>alt=&quot;less&quot;</code>, or <code>alt=&quot;greater&quot;</code>), and the level of confidence as a proportion in <code>conf.level=</code> (defaults to 0.95). If the sample size is less than 40 then you may also need to construct a histogram as described in the <a href="RUnivEDA.html">Univariate EDA in R module</a> to assess the shape of the distribution.</p>
+<p> </p>
+<h2 id="example---crab-body-temperature">Example - Crab Body Temperature</h2>
+<p>Below are the <a href="../11-steps">11-steps</a> for completing a full hypothesis test for the following situation:</p>
+<blockquote>
+<p>A marine biologist wants to determine if the body temperature of crabs exposed to ambient air temperature is different than the ambient air temperature. The biologist exposed a sample of 25 crabs to an air temperature of 24.3<sup>o</sup>C for several minutes and then measured the body temperature of each crab (shown below). Test the biologist’s question at the 5% level.</p>
+</blockquote>
+<pre><code>
+22.9,22.9,23.3,23.5,23.9,23.9,24.0,24.3,24.5,24.6,24.6,24.8,24.8,
+25.1,25.4,25.4,25.5,25.5,25.8,26.1,26.2,26.3,27.0,27.3,28.1</code></pre>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<ol type="1">
+<li>α = 0.05.</li>
+<li>H<sub>0</sub>:μ = 24.3<sup>o</sup>C vs. H<sub>A</sub>:μ ≠ 24.3<sup>o</sup>C, where μ is the mean body temperature of ALL crabs.</li>
+<li>A 1-Sample t-Test is required because (1) a quantitative variable (temperature) was measured, (ii) individuals from one group (or population) were considered (an ill-defined population of crabs), and (iii) σ is <strong>UN</strong>known.</li>
+<li>The data appear to be part of an experimental study (the temperature was controlled) with no suggestion of random selection of individuals.</li>
+<li><ol type="i">
+<li>n = 25 ≥ 15 and the sample distribution of crab temperatures appears to be only slightly right-skewed (Figure <a href="#fig:CrabTempHist">1</a>) and ii. σ is <strong>UN</strong>known.</li>
+</ol></li>
+<li>x̄ = 25.0<sup>o</sup>C (Table <a href="#tab:1tcrabs">1</a>).</li>
+<li>t = 2.713 with 24 df (Table <a href="#tab:1tcrabs">1</a>).</li>
+<li>p-value = 0.0121 (Table <a href="#tab:1tcrabs">1</a>).</li>
+<li>Reject H<sub>0</sub> because the p-value α.</li>
+<li>It appears that the average body temperature of ALL crabs is greater than the ambient temperature of 24.3<sup>o</sup>C.</li>
+<li>I am 95% confident that the mean body temperature of ALL crabs is between 24.5<sup>o</sup>C and 25.6<sup>o</sup>C (Table <a href="#tab:1tcrabs">1</a>).</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:CrabTempHist"></span>
+<img src="data:image/png;base64,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" alt="Histogram of the body temperatures of crabs exposed to an ambient temperature of $24.3^{o}$C." width="336" />
+<p class="caption">
+Figure 1: Histogram of the body temperatures of crabs exposed to an ambient temperature of <span class="math inline">\(24.3^{o}\)</span>C.
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<caption><span id="tab:1tcrabs">Table 1: </span>Results from 1-Sample t-Test for body temperature of crabs.</caption>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">t = 2.7128, df = 24, p-value = 0.01215</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">95 percent confidence interval:</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">24.47413 25.58187</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">sample estimates:</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">mean of x</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">25.028</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<strong>R Appendix:</strong>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+setwd(&quot;c:/data&quot;)
+df &lt;- read.csv(&quot;CrabTemps.csv&quot;)
+ggplot(data=df,mapping=aes(x=ct)) +
+  geom_histogram(boundary=0,binwidth=1,color=&quot;black&quot;,fill=&quot;darkgray&quot;) +
+  labs(y=&quot;Frequency of Crabs&quot;,x=&quot;Body Temperature (C)&quot;) +
+  scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
+  theme_NCStats()
+( ct.t &lt;- t.test(df$ct,mu=24.3,conf.level=0.95) )</code></pre>
+</div>
+<p> </p>
+<h1 id="sample-t-test-1">2-Sample t-Test</h1>
 <p>In the <a href="../tTest2.html">2-Sample t-test module</a> you learned about the theory underlying a 2-sample t-test and how to perform the calculations required to complete the <a href="../11-steps">11-steps</a> of a hypothesis test. In this module, you will learn how to perform the required calculations from raw data using R. You will also be asked to complete the full 11-steps for a 2-sample t-test.</p>
 <p>Methods in this module require the <code>NCStats</code> package (as always) and the <code>ggplot2</code> package (for making graphs).</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1963,7 +2059,7 @@ distill-header .nav a {
 library(NCStats)
 library(ggplot2)</code></pre>
 </div>
-<h1 id="data-format">Data Format</h1>
+<h2 id="data-format">Data Format</h2>
 <p>The data used in this reading are the biological oxygen demand (BOD) measurements from either the inlet or outlet to an aquaculture facility. These data are in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/BOD.csv">BOD.csv</a> and loaded into R below.</p>
 <div class="layout-chunk" data-layout="l-body">
 
@@ -1996,14 +2092,14 @@ headtail(aqua)</code></pre>
 #R&gt;   20 8.001 outlet</code></pre>
 </div>
 <p> </p>
-<h1 id="levenes-test">Levene’s Test</h1>
-<p>Before conducting a 2-Sample t-Test, the assumption of equal population variances must be tested with Levene’s test. The Levene’s test is computed with <code>levenesTest()</code>, where the first argument is a formula of the form <code>qvar~cvar</code>, where <code>qvar</code> represents the quantitative response variable and <code>cvar</code> represents the group factor variable.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The data.frame containing <code>qvar</code> and <code>cvar</code> is given in <code>data=</code>. The results of the following code are shown in Table <a href="#tab:LevBOD">1</a> and interpreted in the example analysis below.</p>
+<h2 id="levenes-test">Levene’s Test</h2>
+<p>Before conducting a 2-Sample t-Test, the assumption of equal population variances must be tested with Levene’s test. The Levene’s test is computed with <code>levenesTest()</code>, where the first argument is a formula of the form <code>qvar~cvar</code>, where <code>qvar</code> represents the quantitative response variable and <code>cvar</code> represents the group factor variable.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The data.frame containing <code>qvar</code> and <code>cvar</code> is given in <code>data=</code>. The results of the following code are shown in Table <a href="#tab:LevBOD">2</a> and interpreted in the example analysis below.</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 levenesTest(BOD~src,data=aqua)</code></pre>
 </div>
-<h1 id="histograms">Histograms</h1>
-<p>If the combined sample size for the two groups is less than 40 than histograms for both groups must be made to address the assumptions of normality before continuing with a 2-sample t-test. Separating histograms by groups was discussed in the <a href="RUnivEDA.html#summary-statistics-1">Univariate EDA in R module</a>. The results of the following code are shown in Figure <a href="#fig:aquaHist2">1</a> and interpreted in the example analysis below.</p>
+<h2 id="histograms">Histograms</h2>
+<p>If the combined sample size for the two groups is less than 40 than histograms for both groups must be made to address the assumptions of normality before continuing with a 2-sample t-test. Separating histograms by groups was discussed in the <a href="RUnivEDA.html#summary-statistics-1">Univariate EDA in R module</a>. The results of the following code are shown in Figure <a href="#fig:aquaHist2">2</a> and interpreted in the example analysis below.</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 ggplot(data=aqua,aes(x=BOD)) +
@@ -2014,7 +2110,7 @@ ggplot(data=aqua,aes(x=BOD)) +
   facet_wrap(~src)</code></pre>
 </div>
 <p> </p>
-<h1 id="sample-t-test">2-Sample t-Test</h1>
+<h2 id="sample-t-test-2">2-Sample t-Test</h2>
 <p>A 2-Sample t-Test is computed with <code>t.test()</code>, where the first argument is the same formula as in <code>levenesTest()</code> (and, thus, same <code>data=</code>). Additionally, the following arguments may need to be specified.</p>
 <ul>
 <li><code>mu=</code>: The specific value in H<sub>0</sub>. For a 2-Sample t-Test this is usually 0, which is the default.</li>
@@ -2023,13 +2119,13 @@ ggplot(data=aqua,aes(x=BOD)) +
 <li><code>var.equal=</code>: A logical value that indicates whether the two population variances should be considered equal or not. If <code>TRUE</code>, then the pooled sample variance is calculated and used in the standard error. The default <code>FALSE</code>, to assume UNequal variances.</li>
 </ul>
 <p>R computes the difference among groups as the alphabetically “first” level minus the alphabetically “second” level. For example, if the two levels are <code>inlet</code> and <code>outlet</code>, then R will compute x̄<sub>inlet</sub>-x̄<sub>outlet</sub>. You should consider this when you are constructing your hypotheses. However, you can change the order of the levels by using <code>levels=</code> in <code>factor()</code> (as described in the <a href="RUnivEDA.html#data-manipulation">Univariae EDA in R module</a>.</p>
-<p>The results of the following code are shown in Table <a href="#tab:2tBOD">2</a> and interpreted in the example analysis below.</p>
+<p>The results of the following code are shown in Table <a href="#tab:2tBOD">3</a> and interpreted in the example analysis below.</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 t.test(BOD~src,data=aqua,var.equal=TRUE,alt=&quot;less&quot;,conf.level=0.90)</code></pre>
 </div>
 <p> </p>
-<h1 id="example---bod-in-aquaculture-water">Example - BOD in Aquaculture Water</h1>
+<h2 id="example---bod-in-aquaculture-water">Example - BOD in Aquaculture Water</h2>
 <p>Below are the 11-steps <a href="../11-steps">11-steps</a> for completing a full hypothesis test for the following situation (which follows from above):</p>
 <blockquote>
 <p>An aquaculture farm takes water from a stream and returns it to the stream after it has circulated through the fish tanks. The owner has taken steps to reduce the level of organic matter in the water released back into the stream. However, he is still concerned that water returned to the stream may contain heightened levels of organic matter. To determine if this is true, he took samples of water at the intake and, at other times, downstream from the outlet and recorded the biological oxygen demand (BOD) as a measure of the organics in the effluent (a higher BOD at the outlet would imply heightened levels of organics are being released to the stream). The owner’s data are recorded in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/BOD.csv">BOD.csv</a>. Test for any evidence (i.e., at the 10% level) to support the owner’s concern.</p>
@@ -2043,18 +2139,18 @@ t.test(BOD~src,data=aqua,var.equal=TRUE,alt=&quot;less&quot;,conf.level=0.90)</c
 <li>A 2-Sample t-Test is required because (i) a quantitative variable (BOD level) was measured, (ii) two groups are being compared (outlet and inlet), and (ii) the individuals in the groups were <strong>IN</strong>dependent (note that it said that the outlet samples came from different times then the inlet samples).</li>
 <li>The data appear to be part of an observational study with no obvious randomization.</li>
 <li><ol type="i">
-<li>n = 20&gt;15 and the histograms (Figure <a href="#fig:aquaHist2">1</a>) are inconclusive about the shape because of the small sample size in each group (it appears that the <code>inlet</code> data is not strongly skewed, whereas the <code>outlet</code> data is skewed, which may invalidate the results of this hypothesis test; however, I continued to make a complete example), ii. individuals in the two groups are independent as discussed above, and iii. the variances appear to be equal because the Levene’s test p-value (=0.5913) is greater than α.</li>
+<li>n = 20&gt;15 and the histograms (Figure <a href="#fig:aquaHist2">2</a>) are inconclusive about the shape because of the small sample size in each group (it appears that the <code>inlet</code> data is not strongly skewed, whereas the <code>outlet</code> data is skewed, which may invalidate the results of this hypothesis test; however, I continued to make a complete example), ii. individuals in the two groups are independent as discussed above, and iii. the variances appear to be equal because the Levene’s test p-value (=0.5913) is greater than α.</li>
 </ol></li>
-<li>x̄<sub>inlet</sub>-x̄<sub>outlet</sub> = 6.65 - 8.69 = -2.03 (Table <a href="#tab:2tBOD">2</a>).</li>
-<li>t = -8.994 with 18 df (Table <a href="#tab:2tBOD">2</a>).</li>
-<li>p-value 0.00000002 (Table <a href="#tab:2tBOD">2</a>).</li>
+<li>x̄<sub>inlet</sub>-x̄<sub>outlet</sub> = 6.65 - 8.69 = -2.03 (Table <a href="#tab:2tBOD">3</a>).</li>
+<li>t = -8.994 with 18 df (Table <a href="#tab:2tBOD">3</a>).</li>
+<li>p-value 0.00000002 (Table <a href="#tab:2tBOD">3</a>).</li>
 <li>H<sub>0</sub> is rejected because the p-value α.</li>
 <li>The average BOD is greater at the outlet than at the inlet to the aquaculture facility. Thus, the aquaculture facility appears to add to the biological oxygen demand of the water and the farmer’s concern is warranted.</li>
-<li>I am 90% confident that the mean BOD measurement at the outlet is AT LEAST -1.73 GREATER than the mean BOD measurement at the inlet (Table <a href="#tab:2tBOD">2</a>).</li>
+<li>I am 90% confident that the mean BOD measurement at the outlet is AT LEAST -1.73 GREATER than the mean BOD measurement at the inlet (Table <a href="#tab:2tBOD">3</a>).</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
 <table>
-<caption><span id="tab:LevBOD">Table 1: </span>Results from the Levene’s Test for differences in BOD between the inlet and outlet of an aquaculture facility.</caption>
+<caption><span id="tab:LevBOD">Table 2: </span>Results from the Levene’s Test for differences in BOD between the inlet and outlet of an aquaculture facility.</caption>
 <thead>
 <tr class="header">
 <th></th>
@@ -2081,7 +2177,7 @@ t.test(BOD~src,data=aqua,var.equal=TRUE,alt=&quot;less&quot;,conf.level=0.90)</c
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <table>
-<caption><span id="tab:2tBOD">Table 2: </span>Results from the 2-Sample t-Test for differences in BOD between the inlet and outlet of an aquaculture facility.</caption>
+<caption><span id="tab:2tBOD">Table 3: </span>Results from the 2-Sample t-Test for differences in BOD between the inlet and outlet of an aquaculture facility.</caption>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">t = -8.994, df = 18, p-value = 2.224e-08</td>
@@ -2111,7 +2207,7 @@ t.test(BOD~src,data=aqua,var.equal=TRUE,alt=&quot;less&quot;,conf.level=0.90)</c
 <div class="figure" style="text-align: center"><span id="fig:aquaHist2"></span>
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABUAAAAKgCAMAAABtOycFAAABWVBMVEUAAAAAADoAAGYAOjoAOmYAOpAAZmYAZrYZGT8ZGWIZPz8ZP2IZP4EZYp8aGhozMzM6AAA6OgA6Ojo6OmY6ZmY6ZpA6ZrY6kJA6kLY6kNs/GRk/Pxk/YoE/Yp8/gb1iGRliPxliYhligZ9in59in71in9lmAABmADpmOgBmOjpmOmZmZgBmZjpmZmZmZpBmkLZmkNtmtttmtv+BPxmBPz+Bn72BvdmQOgCQZgCQZjqQZmaQZpCQkGaQkJCQkLaQtraQttuQ29uQ2/+fYhmfYj+fgWKfvdmf2dm2ZgC2Zjq2kDq2kGa2tpC2tra2ttu225C227a229u22/+2//+9gT+9n2K9n4G9vYG92dnT09PZn2LZvYHZvZ/Z2Z/Z2b3Z2dnbkDrbkGbbtmbbtpDbtrbbttvb27bb29vb2//b/7bb/9vb////tmb/25D/27b/29v//7b//9v///8rxwlCAAAACXBIWXMAAB2HAAAdhwGP5fFlAAAgAElEQVR4nO3d62Mb2XmY8cGKqpym1UJSJJdum7g3VmotyWIvirZ1V9mkCbWyNhU3aR3HtmBxu9pUIEXg///QuZwBBu9ggLmc95wzB8/vg5ciOTgAeebxDObCZAkA6CXx/QQAYKwIKAD0REABoCcCCgA9EVAA6ImAAkBPBBQAeiKgANATAQWAnggoAPREQAGgJwIKAD0RUADoiYACQE8OAvo5oIjpBoc8BPQdoKUeUN/PCBEjoIgLAYVDBBRxIaBwiIAiLgQUDhFQxIWAwiECirgQUDhEQBEXAgqHCCjiQkDhEAFFXAgoHCKgiAsBhUMEFHEhoHCIgCIuBBQOEVDEhYDCIQKKuBBQOERAERcCCocIKOJCQOEQAUVcCCgcIqAB+e2f/Oi/tvncu3e/+Uv9ZzNSBHSYfGox69oioAFpG9Df/cXtf+fi+YwSAR3CTC1mXVsENHDbo8pUbkRAhzBTi1nXFgENHFO5IwI6BAHtiIAGjqncEQEdgoB2READUkzbX9/+g7/6239++/Yf/pf15969+93/TD/1j//1r9IP//x25p96fKIhI6D7VSZTPt2y/+Z9LKcWs64tAhqQVUD/VT5Zq9sCv/1p8ak//Cum8m4EdK/fVCbTzoAy6/YioAEpA3r79r/81bvf/Ek+s4vP/e4/3f7Rv3337v/89PY/+RU7UzsR0H2yyZTu3fztT/LJtBHQdxu78My6/QhoQFYBzf9//te3s3+Vnyt2qTZmObYhoPuUk+nvf5JNox0BZdbtR0ADsjlt//4nq4CmmwJm3+lvsg+YyjsQ0H3+vJxM+QfNAWXWtUBAA7I+iFT8q5jR6efWc/fX2d4UU3kHArpH2sU/Lj76m2wyNQeUWdcCAQ3IroCupF9kKu9AQPeodjGdTDsDyqzbh4AGhIBaQED3IKA2EdCAtNiFf7f+CrYioHs07MIXh5S278LnmHXbENCANAZ0Peffrb+CrQjoPvIgUvWYvDiIxKzbh4AGpDGg6bZC8blio4GpvAMB3WczmcX/5ifKy9OYmHX7EdCANAc0/Tg79/l3f1HO8j/e8TCHjYDus3kifTqZ/uAv85lVmVrMurYIaECaA7q6+i6fw+kawEV1TQjoXqtLOfMbJP+6+Me/yaebmVrMurYIaEB2BLS4rcOP/kVxT/Df/ufb+dYD6gjoftWbibx7979/mt25ptx5z6cWs64tAoq4EFA4REARFwIKhwgo4kJA4RABRVwIKBwioIgLAYVDBBRxIaBwiIAiLgQUDhFQxIWAwiECirgQUDhEQBEXAgqHCCjiQkDhEAFFXAgoHCKgiAsBhUNeAgooYrrBIQKKuDDd4JCHgOoPgYNVD6iXp4HDQEARFwIKhwgo4kJA4RABRVwIKBwioIgLAYVDBBRxIaBwiIAiLgQUDhFQxIWAwiECirgQUDhEQBEXAgqHCCjiQkDhEAFFXAgoHCKgiAsBhUMEFHEhoHCIgCIuBBQO6QV08Twp3Pwox7Q1BFBDQOGQXkCvTwgo3COgcEgvoJfTWjnLMW0NAdQQUDikF9B5cqtpTFtDADUEFA7pBXSWHDeNaWsIoIaAwiG9gJ5Nvmoa09YQQA0BhUNqAb0++ex/PUqSydP6G6HMaOghoHBILaCXU3MQ/ujb9Vjb/xBoEJKBfD9/GAQUDqkFdJ5ufb5cLt9P16cxEVDoI6BwSC2gs+SzfNMz3RI9lWNaGsKqJPm7AQhoMAgoHNK/lPOsdjpTkDOagEaCgMIh/YDOapciBTmjCWgkCCgcIqAGAY0EAYVDBNQgoJEgoHBIK6CL5+ZCpNUHlTHtDGEXAY0EAYVD6kfh50ntiqQgZzQBjQQBhUOaJ9IfnS8Xv5/W7ykS5IwmoJEgoHBI8W5M5lKkW7VrOYOc0QQ0EgQUDikeRLp6kSb0xrMtY1obwiICGgkCCof4m0gGAY0EAYVDBNQgoJEgoHCIgBoENBIEFA4RUIOARoKAwiECahDQSBBQOERADQIaCQIKhwioQUAjQUDhEAE1CGgkCCgcIqAGAY0EAYVDBNQgoJEgoHCIgBoENBIEFA4RUIOARoKAwiECahDQSBBQOERADQIaCQIKhwioQUAjQUDhEAE1CGgkCCgcIqAGAY0EAYVDBNQgoJEgoHCIgBoENBIEFA4RUIOARoKAwiECahDQSBBQOERADQIaCQIKhwioQUAjQUDhEAE1CGgkCCgcIqAGAY0EAYVDBNQgoJEgoHCIgBoENBIEFA4RUIOARoKAwiECahDQSBBQOERADQIaCQIKhwioQUAjQUDhEAE1CGgkCCgcIqAGAY0EAYVDBNQgoJEgoHCIgBoENBIEFA4RUIOARoKAwiECahDQSBBQOERADQIaCQIKhwioQUAjQUDhEAE1CGgkCCgcIqAGAY0EAYVDBNQgoJEgoHCIgBoENBIEFA4RUIOARoKAwiECahDQSBBQOERADQIaCQIKhwioQUAjQUDhEAE1CGgkCCgcIqAGAY0EAYVDBNQgoJEgoHCIgBoENBIEFA4RUIOARoKAwiECahDQSBBQOERADQIaCQIKhwioQUAjQUDhEAE1CGgkCCgcIqAGAY0EAYVDBNQgoJEgoHCIgBoENBIEFA4RUIOARoKAwiECahDQSBBQOERADQIaCQIKhwioQUAjQUDhEAE1CGgkCCgcIqAGAY0EAYVDBNQgoJEgoHCIgBoENBIEFA4RUIOARoKAwiECahDQSBBQOERADQIaCQIKhwioQUAjQUDhEAE1CGgkCCgcIqAGAY0EAYVDBNQgoJEgoHCIgBoENBIEFA5pB3SW3KqPaXcIOwhoJAgoHFIO6OWUgMIpAgqHdAO6eJ4QUDhFQOGQbkBnCQGFWwQUDqkG9Prks/9IQOEUAYVD3QP6fpok989bPfhZcnpGQOEUAYVDHQJ68fCzb4u98iSZfNXisedpPAko3CKgcKh9QNNypgG9nOYBzT7c5/okzWw1oJ+Xej9bRQQ0EgRUUzKM76dvX+uAZuVMq5lnNDu4frz3oc+y7yGgcIuAaiKgQuuApuW8+bE8L2m+7eC6MM++n114OEZANQ1aTWJcS9oGNC1n9r5nth16mu2d792HXzzP3ycloHCLgGoioELbgJpkzorjRy0Caq7hJKBwi4BqIqBCx4CeFYeP9gf0clp8AwGFWwRUEwEVugW0vDQz3ZPP3uDcYVZ551h+a5AzmoBGgoBqIqBCh/dAk9PyLdBsQ3TPQSQCCj8IqCYCKnQ5Cn/09k/zPfjF10nR0RbYhYdbBFQTARVaBzTdh88dFx/tPYvJIKBwi4BqIqBC+yuRimuQ0t3xLKAPdr8DukZA4RYB1URAhQ7Xwi8uHj95m/73+t/ff9v68Qko3CKgmgiowN9EMghoJAioJgIqEFCDgEaCgGoioEK3gH568+abj8vFDwPHHLa4DgIaCQKqiYAKXQL6/k6Sn8Z0fXJ0PmjMIQtrIaCRIKCaCKjQIaCv8tOY8oC2u6Fy45gDllVDQCNBQDURUKHTDZWTo19MzQWde67k3D1m/0X1ENBIEFBNBFTodEPlZ9mfifu2vK6z/5j9F9VDQCNBQDURUKF1QIvL34uAtrqh8o4x+y+qh4BGgoBqIqBCxxsqm4DuvxvTzjF7L6mIgEaCgGoioELH+4GagLa4ofKuMXsvqYiARoKAaiKgAgE1CGgkCKgmAiqwC28Q0EgQUE0EVOhyEOl4FdAZB5HinxojRUA1EVChdUDn5hz6LKDz9jdU3jpm/0X1ENBIEFBNBFRoHdDs3M/Jyyyg+Q3pOZE++qkxUgRUEwEV2l+JVN6SPselnPFPjZEioJoIqNDlhsrPV/3kZiIHMDVGioBqIqBCp9vZXb3I7sc06XBD+u1jDltcBwGNBAHVREAFbqhsENBIEFBNBFRofR7od9mtlFe+e/2U80AjnxojRUA1EVCh45VIW//VeczeSyoioJEgoJoIqEBADQIaCQKqiYAKLQL6+8epn02TyR89Lj1MCGj0U2OkCKgmAiq0CGh2K+U6LuWMfWqMFAHVRECFNrvwZ1v6edR/AzTMGU1AI0FANRFQoU1AF2/evPllugv/5ZuVD4PGHLKwFgIaCQKqiYAK/Q4iDRzT0uNYRUAjQUA1EVCh53mgw8a09DhWEdBIEFBNBFTgSiSDgEaCgGoioAIBNQhoJAioJgIq7A9o8e7nxs3sMpwHGvvUGCkCqomACgTUIKCRIKCaCKjQIqCP7t77NvvfTfcIaORTY6QIqCYCKvAeqEFAI0FANRFQgYAaBDQSBFQTARUIqEFAI0FANRFQoXNAv//i8dPzgWMOW1wHAY0EAdVEQIV2AV28mhZH3a8e5ofg7w+6KCnIGU1AI0FANRFQoVVA51Nz2tLqZKYhN2MKc0YT0EgQUE0EVGgT0PyGoHlAz9J0vvzwejrodqBhzmgCGgkCqomACi0Cmv09+OIPwaclzTua/nfy1YAx+y+qh4BGgoBqIqBCi4DOV5cdzZLkOP/grPyg35j9F9VDQCNBQDURUKFFQFe1TDdFzYZn2tSb/FnjyKfGSBFQTQRU2B/QdTbXN1Uu9+V7jtl7SUUENBIEVBMBFdreTCSTZvOW/FyvMXsvqYiARoKAaiKgQpeArt4CJaCHMDVGioBqIqBCl4CerY69swt/AFNjpAioJgIqdHgPtLLZyUGkA5gaI0VANRFQod1R+NPsv+u3QLNPDTiTPsgZTUAjQUA1EVCh3Xmg+eZmGdLi0qTTAWP2X1QPAY0EAdVEQIUWAc0ugD96++HV6nz6q5NBe/BhzmgCGgkCqomACm2uhZ+XfwfpNP3H4uJF+tGQKznDnNEENBIEVBMBFVrfjSmN5s+zj/MbMk1OB405ZGEtBDQSBFQTARVa3g/04vHjpz/kH2YBvXc+bMxBSyshoJEgoJoIqND5jvSL//Zm0N2Ul4HOaAIaCQKqiYAK/E0kg4BGgoBqIqACATUIaCQIqCYCKhBQg4BGgoBqIqACATUIaCQIqCYCKhBQg4BGgoBqIqACATUIaCQIqCYCKhBQg4BGgoBqIqACATUIaCQIqCYCKrT5s8bWx7T9gDYQ0EgQUE0EVGh1Q+UBd5/fOqbVR7OEgEaCgGoioELbP+kx7K8giTEtPY5VBDQSBFQTARUIqEFAI0FANRFQoVVAk1MCenhTY6QIqCYCKrT7m0jJjTvZ/9ytuMdf5Yx8aowUAdVEQIV2fxNpC/6scexTY6QIqCYCKrQ5D/TiDgE9wKkxUgRUEwEV2p5Iz3ugBzc1RoqAaiKgAgE1CGgkCKgmAiq0Dejii8dPhv4pj9WYlh7HKgIaCQKqiYAKXAtvENBIEFBNBFToFtBPb1Lf/NDuoRevpkly7+2WMVs+N6cIaCQIqCYCKnQJ6PvyaPzkWYtHvjopvvm4PmanZ+gIAY0EAdVEQIUOAX1VOYnpwd73QxfPk6Pz5eLr7DImOWbnZ+kAAY0EAdVEQIX2AZ1lm57337z55Yt0zzy5te+B58nkq+y/Z/VvDXJGE9BIEFBNBFRoHdDL6Wq7c5FuixZ13KEM5yy5KbdWg5zRBDQSBFQTARVaB/SsutV51mIT1CCgcIqAaiKgQuvzQJ9XNzrTzdFaFhuXYxceDhFQTQRU6HclUuvrkq6qt7P/vNT9aeojoJEgoJoGBnQQ3699K9WAZvdxurn+PgIKfQRUEwEVVHfh5zfuJslR7XBTkDOagEaCgGoaGND4VjHtg0iLs/oB+yBnNAGNBAHVRECF1gHNdsfLC5DeJ1tOj2+w5ShSkDOagEaCgGoioEL7E+mzv+xx9OWHDx9++bDNifQr9fOYgpzRBDQSBFQTARXaBzTdlFxreRJThoDCJQKqiYAKHa6FX6wuhp+0uhTe3EWkfi1nkDOagEaCgGoioEK329l998Xjx4+ffNPmgWfmRKfLae1+TEHOaAIaCQKqiYAKajdUvj7J7sa0fL/lhKcgZzQBjQQB1URABb070md3H8kc1c64D3JGE9BIEFBNBFRQ/JMen7I70t94Vn+7NMgZTUAjQUA1EVCBv4lkENBIEFBNBFQgoAYBjQQB1URABQJqENBIEFBNBFQgoAYBjQQB1URABQJqENBIEFBNBFQgoAYBjQQB1URABQJqENBIEFBNBFRofUPlVtdvthzT3kPZQ0AjQUA1EVChw5/0uPfW1piWHscqAhoJAqqJgAodApq6b6WhQc5oAhoJAqqJgAqt3wO9eFjcye7++fAxBz+CAgIaCQKqiYAKXe4H+vpO0dCnPwwcc9jiOghoJAioJgIqdDsKXzb0xtP2d6TfMuaAZdUQ0EgQUE0EVOh8GtOn18Vt6o5e9m5okDOagEaCgGoioEKf80BNQyd9N0ODnNEENBIEVBMBFXoE9OLF6m8jyb/43nLMXkspI6CRIKCaCKjQNaAXj8wO/Pcvehc0yBlNQCNBQDURUKFTQM22p9l3z/7Ocfs/D18ds89C2ghoJAioJgIqtA/o92bPfX0i6OXU/OXNrmP2WEYdAY0EAdVEQIVuVyKlu+6bnyOgQf92DxEB1URAhS4BlYfd08/V/mRxqzF7LKOOgEaCgGoioEL7gG65hvNDzzH7LaaLgEaCgGoioAL3AzUIaCQIqCYCKhBQg4BGgoBqIqBCp4Au/m/2luf1f/gfQ66ED3RGE9BIEFBNBFToENCrR8VB9+uTZPLzQWMOWVgLAY0EAdVEQIX2AZ1Pk1VAk+R4yJgDllVDQCNBQDURUKF1QC/Tfk4e5Pvun171vgy+GLP/onoIaCQIqCYCKrQO6FlSOenzrOdFnGbM/ovqIaCRIKCaCKjQ+q9yPq9udKabo71OoTdj9l5SEQGNBAHVRECFDlciVS7b7HsRpxmz95KKCGgkCKgmAioQUIOARoKAaiKgQodd+OR09a95wi78GH67h4iAaiKgQuuDSLPKkffsiPyA85iCnNEENBIEVBMBFVoHND/78/7LDx8+fJfdGHTABmiYM5qARoKAaiKgQvsT6S+nydqQ00DDnNEENBIEVBMBFbpcyrn6Y3LJ/UEXwwc5owloJAioJgIqdLuZyHdfPH78+En/vwhvxhy2uA4CGgkCqomACtzOziCgkSCgmgioQEANAhoJAqqJgAoE1CCgkSCgmgio0CWg+TugpSecSB/+b/cQEVBNBFToeRpTwqWcY/jtHiICqomACp3uB0pAR/bbPUQEVBMBFbpcypnc+/LDyg8Dxuy/qB4CGgkCqomACl1uJjLgHsqbY1p6HKsIaCQIqCYCKnS4nd2gyzc3xrT0OFYR0EgQUE0EVOh3P9CBY1p6HKsIaCQIqCYCKnTYhSego/vtHiICqomACl0OIp3aGtPS41hFQCNBQDURUKHL/UBtbYIGOaMJaCQIqCYCKnQ6kX7y9IOVMW08iG0ENBIEVBMBFTocROJE+tH9dg8RAdVEQAUCahDQSBBQTQRUaB3QR3c33SOg4f92DxEB1URABW5nZxDQSBBQTQRUIKAGAY0EAdVEQAUCahDQSBBQTQRU6BbQT2/efPNxuRhwJ6Z8zGGL6yCgkSCgmgio0CWg7+8UR9+vT47OB405ZGEtBDQSBFQTARU6BPRVefrS0DszBTmjCWgkCKgmAiq0D2h2R+WjX0zTgGb3Br054G/DBzmjCWgkCKgmAip0+pMez9KNz+wE+qygpwPG7L+oHgIaCQKqiYAKrQN6lt+Rvgjocj7o9vRBzmgCGgkCqomACh3uB5q972kCmm6ODtiHD3JGE9BIEFBNBFToeEd6E9Bh97YLckYT0EgQUE0EVCCgBgGNBAHVREAFduENAhoJAqqJgApdDiIdrwI64yDSKH67h4iAaiKgQuuAzs059FlA0485jWkMv91DREA1EVChdUCzcz8nL7OALr5OOJF+HL/dQ0RANRFQof2VSBv3pOdSzlH8dg8RAdVEQIUO18Jn26AGNxMZx2/3EBFQTQRU6HQ7u6sX2f2YJvffDhxz2OI6CGgkCKgmAipwQ2WDgEaCgGoioAIBNQhoJAioJgIqKAb06sU0SW48qx+uD3JGE9BIEFBNBFRofSXSF483Pdl3HtPMHHCqn/AU5IwmoJEgoJoIqNDhWvhN+66FnyfJgx+Wi99P69csBTmjCWgkCKgmAiqoBfTMhHNWP2c0yBlNQCNBQDURUKH1e6CfPpR++SKZPPuw5y9zpsE93fygMmb3p6mPgEaCgGoioEKvg0iX0+RZ2wEIKJwioJoIqNDvKPyW/fImaWxP5ZgtF3WKgEaCgGoioEK/gF5uOTTUYLZ+t/TzUvN3J8O0fE7bRx7wy/07f88bAgHV5DOgQa5j/QLa/o70aWqP12MRUKe/3INEQDURUKH3Fmi7gF4/7HYeqL+N/KEB9fW8IRBQTT4DOmBhvXWs73ug7W4Iav4QiByzeQECioEIqCYCKvQI6OJDdkflNu+Bptuf2w42EVCLzxsCAdVEQIW+J9K3OQp/dbL92wioxecNgYBqIqBCz4BOWpwHmr1Rer51zOZlCCgGIqCaCKjQOqCP7q7de7rnOqRM2s+j7QeaCKjF5w2BgGoioILa7ezSTdam40wE1OLzhkBANRFQQS2gs+YTnQioxecNgYBqIqCCVkCr75kei68RUIvPGwIB1URABa2AXk4JqJPnDYGAaiKgQus70n/3Zptv2pxOXxuz+UsEFAMRUE0EVOh9Q+VCyyvixZjNXyKgGIiAaiKgAgG1MTIBDQcB1URAhQ678K+nSfJHX75589/T/95nF14M7et5QyCgmgio0P4g0nyaPDC5nCXJgyFjNn+JgGIgAqqJgAqtA7pxD+WzpHab+S5jNn+JgGIgAqqJgAqtA3pWvTFIWtNWt7NrGLP5SwQUAxFQTQRU6HAQqXLAqP0d6beO2fwlAoqBCKgmAioQUBsjE9BwEFBNBFRofRT+efVtz3nLO9I3jNn8JQKKgQioJgIqtH4PdFY56fPqpH59Zpcxm79EQDEQAdVEQIUuR+GTycvso8X76aANUAJq83lDIKCaCKjQ4TzQ4tqju8UVSOdDxmz+EgHFQARUEwEVOtyN6WJ9g6Wb54PGbP4SAcVABFQTARU63c7u4mdZQ2/cPx84ZvOXCCgGIqCaCKigdkf6XWM2f4mAYiACqomACgTUxsgENBwEVBMBFboF9FN+/6VFi7/JuXPM5i8RUAxEQDURUKFLQN/fKe4Aen1ydD5ozOYvEVAMREA1EVChQ0BflbdQvj6p3likx5jNXyKgGIiAaiKgQvuAztJ6Hv1imgY0u6yTE+nF0L6eNwQCqomACp2uRHqWbnxm13NuXhjffczmLxFQDERANRFQocP9QLMbKhcBza5KutXwfW3GbP4SAcVABFQTARU63I0pe9/TBJQbKteG9vW8IRBQTQRU6Hg/UBNQ7gdaG9rX84ZAQDURUIGA2hiZgIaDgGoioAK78DZGJqDhIKCaCKjQ5SDS8SqgMw4iyaF9PW8IBFQTARVaB3RuzqHPAprdGvR0wJjNXyKgGIiAaiKgQuuAZud+Tl5mAV18nXAifW1oX88bAgHVRECF9lciXZ8ka1zKKYf29bwhEFBNBFTocC18tg1qcDOR2tC+njcEAqqJgAqdbmd39SK7H9Pk/tuBYzZ/iYBiIAKqiYAK3FDZxsgENBwEVBMBFVoH9NXRS2tjNn+JgGIgAqqJgAodT6S3M2bzlwgoBiKgmgio0PFSTjtjNn+JgGIgAqqJgAodtkAJ6K6hfT1vCARUEwEVWr8HOuzqzc0xm79EQDEQAdVEQIX2R+HfT5OjLz9YGbP5SwQUAxFQTQRUaL0L/8XjnyVV3M5uc2hfzxsCAdVEQIUOB5ESArpjaF/PGwIB1URAhdYBfXR30z0CujG0r+cNgYBqIqACVyLZGJmAhoOAaiKgAgG1MTIBDQcB1URABQJqY2QCGg4CqomACgTUxsgENBwEVBMBFfYH1OZFnGbM5i8RUAxEQDURUKFTQD99+MHKmM1fIqAYiIBqIqBCl4Da2hYloBafNwQCqomACgTUxsgENBwEVBMBFQiojZEJaDgIqCYCKhBQGyMT0HAQUE0EVCCgNkYmoOEgoJoIqEBAbYxMQMNBQDURUIGA2hiZgIaDgGoioAIBtTEyAQ0HAdVEQAUCamNkAhoOAqqJgAoE1MbIBDQcBFQTARVaBXTy5ZvML6flR6lvPvYfs/lLBBQDEVBNBFRoFdBt+JMem0P7et4QCKgmAioQUBsjE9BwEFBNBFTYH9DFd2+2YRd+c2hfzxsCAdVEQAVuqGxjZAIaDgKqiYAKBNTGyAQ0HARUEwEVCKiNkQloOAioJgIqEFAbIxPQcBBQTQRUIKA2Riag4SCgmgioQEBtjExAw0FANRFQgYDaGJmAhoOAaiKgAgG1MTIBDQcB1URABQJqY2QCGg4CqomACgTUxsgENBwEVBMBFQiojZEJaDgIqCYCKhBQGyMT0HAQUE0EVFAO6Dw53jJm8/cTUAxEQDURUEE3oNcnBFT5eUMgoJoIqKAa0OuHCQFVft4QCKgmAipoBvRymhBQ7ecNgYBqIqCCXkAXr5Lk6CEBVX7eEAioJgIq6AX0cjr5+eI5AVV+3hAIqCYCKigG9Mn5koCqP28IBFQTARV0j8JvBvTzUvMCA3/Egwz7/Qxa2ObP/NARUE3jDeggzT8QAkpA40JANRFQwWVAV2M2LzDe38+ghW3+zA8dAdXECioQUBsLE9BwEFBNrKACAbWxMAENBwHVxAoqEFAbCxPQcBBQTaygAgG1sTABDQcB1cQKKhBQGwsT0HAQUE2soAIBtbEwAQ0HAdXECioQUBsLE9BwEFBNrKACAbWxMAENBwHVxAoqEFAbCxPQcBBQTaygQlx/E8nXwgQ0HARUEyuoQEBtLExAw0FANbGCCgTUxsIENBwEVBMrqEBAbSxMQMNBQDWxggoE1MbCBDQcBFQTK6hAQG0sTEDDQUA1sYIKBAAUpxMAABAhSURBVNTGwgQ0HARUEyuoQEBtLExAw0FANbGCCgTUxsIENBwEVBMrqEBAbSxMQMNBQDWxggoE1MbCBDQcBFQTK6hAQG0sTEDDQUA1sYIKBNTGwgQ0HARUEyuoQEBtLExAw0FANbGCCgTUxsIENBwEVBMrqEBAbSxMQMNBQDWxggoE1MbCBDQcBFQTK6hAQG0sTEDDQUA1sYIKBNTGwgQ0HARUEyuoQEBtLExAw0FANbGCCgTUxsIENBwEVBMrqEBAbSxMQMNBQDWxggoE1MbCBDQcBFQTK6hAQG0sTEDDQUA1sYIKBNTGwgQ0HARUEyuoQEBtLExAw0FANbGCCgTUxsIENBwEVBMrqEBAbSxMQMNBQDWxggoE1MbCBDQcBFQTK6hAQG0sTEDDQUA1sYIKBNTGwgQ0HARUEyuoQEBtLExAw0FANbGCCgTUxsIENBwEVBMrqEBAbSxMQMNBQDWxggoE1MbCBDQcBFQTK6hAQG0sTEDDQUA1sYIKBNTGwgQ0HARUEyuoQEBtLExAw0FANbGCCgTUxsIENBwEVBMrqEBAbSxMQMNBQDWxggoE1MbCBDQcBFQTK6hAQG0sTEDDQUA1sYIKBNTGwgQ0HARUEyuoQEBtLExAw0FANbGCCgTUxsIENBwEVBMrqEBAbSxMQMNBQDWxggoE1MbCBDQcBFQTK6hAQG0sTEDDQUA1sYIKBNTGwgQ0HARUEyuoQEBtLExAw0FANbGCCgTUxsIENBwEVBMrqEBAbSxMQMNBQDWxggoE1MbCBDQcBFQTK6hAQG0sTEDDQUA1sYIKBNTGwgQ0HARUEyuoQEBtLExAw0FANbGCCgTUxsIENBwEVBMrqEBAbSxMQMNBQDWxggoE1MbCBDQcBFQTK6hAQG0sTEDDQUA1sYIKBNTGwgQ0HARUEyuoQEBtLExAw0FANbGCCgTUxsIENBwEVBMrqEBAbSxMQMNBQDWxggoE1MbCBDQcBFQTK6hAQG0sTEDDQUA1sYIKBNTGwgQ0HARUEyuoQEBtLExAw0FANbGCCgTUxsIENBwEVBMrqEBAbSxMQMNBQDWxggoE1MbCBDQcBFQTK6hAQG0sTEDDQUA1sYIKBNTGwgQ0HARUEyuoQEBtLExAw0FANbGCCgTUxsIENBwEVBMrqEBAbSxMQMNBQDWxggqaAX1/J0luPNsyZvMi/H4wEAHVxAoqKAb0LMndqo/ZvAy/HwxEQDWxggp6AZ0lk2fLxddJclwbs3khfj8YiIBqYgUV1AJ6fVKUc5Z89q0cs3kpfj8YiIBqYgUV1AI6N+FMQ3oqx2xeit8PBiKgmlhBBbWAzso3P89q+/AEVC5s6WeOJQHVxQoqqAX0bB1QeRiJgMqFLf3MsSSgulhBBa2ALp6XG56z5ObHcixAX22KA3oIKOJCQOGQu4Bqq70Wd/wNzYv25SBfPi96HwI6rqF50b4c5MvnRe9DQMc1NC/al4N8+bzofewdhT8uP6hfzKljLD/iSEY+zBe9dpAvnxe9j4PzQLWM5UccyciH+aLXDvLl86L3cXAlkpax/IgjGfkwX/TaQb58XvQ+Dq6F1zKWH3EkIx/mi147yJfPi97H4t2Ykoa7MQFAnKwFdNF4P1AAiJODO9IDQJy4sQUA9ERAAaAnAgoAPRFQAOiJgAJAT6MN6MWjJJk8cHTfkrXF82TF1V1T1oO/zk90cP6is6FfTZPk3kvXw87XpxX7PcnDz3TzOts8TjdPs63PdBtpQMuzTp1d9rQa2OOUvn7oa1VaXk6LoR+4Hba8vm2Z3WPB42nGvqab14D6m26eZluv6TbSgKav7599XF5MfcSkMEsmXzke8iyZpP+X+N7DxV7pzMqGTn/eTofOVuHVXRInHi908z7dPMw2f9PN02zrN93GGdBL87Ode5hXm8/AofI+LQ5vN1Aq19/Lqcuh8w2R4qfs4VYLm0/E73TzMNs8Tjc/s63ndBtnQMu7Nq/v4+zamfuNkfKGV5dTD9u+q5sVnroac/EqSY4emt+vh5t9VXifbh5mm8fp5mO29Z5uowyov26W5on7FdnfjK7+vQFnb0KmL/Pnq4E93G52zft08zHb/E03L7Ot93QbZUD9bIdUpD9p95sE/vapfPzBluXlk/P1wJWNEveHkXxPNy+zzd908zLbek+3UQY0+z/FqxfTZPLgBz9PwMsmQfHO9vK9+/fD0om1mlBOV+VyRvtZp0q+p5uf2eZtunmbbb2m2ygDmu5d/HVxpoOnN/V9vCe1zCdz9prdnww5W78ndIAB9T3dPM02b9PN12w7pIAmydHL/EQHHwdls+N1px6GvXphTo/z8e7BJPt5P3R8VmAoAfU63TzNNn/TzddsO6iAlm9we3l738/JNOm8Ojpf+jkbcV5sgd38+kAD6nO6+ZltPqebp9l2UAFd/RFlD3s36zdpnJr5XI2zzZHJ04+O+xVMQD1ON0+zzet08zPbDieg650aH+uTp6Oy69+qjyPRSy9DVw6Lenztfqebp3MAQphurkfuM91GGdD1nPIS0LmXfSq/W2HyOTgez+t5oH6nm5/ZFsJ0c37+7cGcB1o90cHD/zv6mVE+NwnKV+z6pOrVa/Z6JZLf6eapXx6nm6/Z1mu6jTKgq4uS/Ryg9LRPUzm7w/VWmPl5Oz+jezWj/V4L73W6+dqD9jfdfM22XtNtnAFNX6m5X4ufY0heruzLDosWZ3f4uInf0Xl2UzePV/Ul/u7G5HO6ebuO1N908zXbek23cQZ0da/CIz+nE526H3W5vk2ih9O5zdCuT6pez+iF1/uBepxu/q4j9TfdPM22XtNtpAFdLvI7Rj/18e6Qvyn9KbtRt58XnZ9Vff/c8ajVzS+vd6T3N908Xojvb7r5mW29pttYAwoA3hFQAOiJgAJATwQUAHoioADQEwEFgJ4IKAD0REABoCcCCgA9EVAA6ImAAkBPBBQAeiKgANATAQWAnggoAPREQAGgJwIKAD0RUADoiYACQE8EFAB6IqAA0BMBBYCeCCgA9ERAAaAnAgoAPRFQAOiJgAJATwQUAHoioADQEwEFgJ4IKAD0REBRNUtW7j79ofjc4nny2bdbvrfp872/seH7Ll7cSZ/Ojfsv24w1VOUH4GLE65Pk5kf1UaCGgKKq0o8kmTzLP+c3oO+n8vmo2vgBJEdfKQ9HQEeOgKJqsx/JafY5nwFdvNp4PvqxET+AyanucAR05AgoqmYmmmm6Lh7uCVbrgLa15QHPsog9+JB+9On11EVB0x/AsXk237/IBtfdBiWgI0dAUbUOaL5y78yHg4Bm24MPysDkW6PHNgfcYlYd4nKqnWwCOnIEFFXVgGabf6eN3+kioGleNoo5U98i3Azocp7s/hEMRkBHjoCiSgQ0z9W6a4uLR2lR7r0sVvmmz6eu8n+fmzxUvvH9nbSB98/L7/v0+m62m3zvpXjA9bPZyEv6DcmtPGvF9+X/TjcTy2+am/ptDp+Pe1c+8cXrzaeyHrKa7LN8wPpD5A+dv5qj7LkvsvcXbqyOcW15WXK4qxfZexMfCejIEVBUiV34fOVede3qYXlw+ny54/PrIzE/FgG9fLh5aGZ9xGZzICPr4+myqkin6aj5Z/qvcrPUFF8MX+yKiyf+1+WnNgeQAV21WjxE9rP5f8+LzxyvfgC3Gl+WHM58y81/IKDjRkBRtXkQqQhT2bVsh9rI/930+XzHt5qQ+jcWDzyrfN/xsh7QNFriPQLztmz6hew/2eOdVppnii+HX8dv/cTXxHsCIqDl+8DyIbKh/rR8hD9bPd5pw8uSw62+5R8R0HEjoKiqrvzlBmXZtXR3dvL0Y7G7emvH57OuZYu+Lw+bV7/xWbHBWn7fg+xk/e8fJmJXvzCvHcIpt0nP8q8U/7tc7cMXe/C14fNPvMx2wtdPPHsmH7cdlhIBNQPWHiL//4Kjt+mLOSl/UhfT5pclhqs9RYwVAUXVRkA3T6Q3m33L1UdNn58llT3nShhXR/XNB/PVPq/Z1NwS0Fvi+Z2tC3Q6L7fnzsxis+3DrztsBs6KZgaaySG2B7T2ENkTWFV7/ZEZrvayxHC1p4ixIqCo2gioKYHpWqU1RcaaPn9WfaevEtB59U3C0+qoaY62BbRWt1VAs8e6MS1bNy8eLl08G602/Nl6N31ePvGykpUjUKtltgS09hDm3YNl9WQv8yq2vazN4Srv2s4I6LgRUFSt01acR155a7JyUlPagVuNn690xORpXdrTZd2n776YJh23QM37iuutwlvFaMfL+vDVA92rJ14GrF1A6w+xHmXbR7WXtTlc/SeEsSKgqNqI3KzatUoG1htS2z5fqc3maUxntZM4FxePyoMzDQGVdVnVOtv5XT3cmQm02bneHL5yjMtEt1tA02+tP8TOgNZfVi2g4ieEsSKgqNoIqNlPXYVyVbditW/4fKVJewJaObS9NaCNR+GXG28smn14swdfG746SueAFgPWH2JXQLe8rM3h6j8hjBUBRdVGQM0bgFpboMV23Y17T778h+3vgTadB2qe6Dp1+T58sQdf37yr7yV3CGixEVx/iB0B3fay2AKNFQFFVXNAq+91Fm9ONny+9Xugs9WJUg0HkZquRCqWmEw39+GLPfit74GK7dgOAS2uRKo/xI6AbntZvAcaKwKKKrkLXzldqe1R+Mp2Y9NR+PxATKUr8+278PnGXPUw0mz1vmc2UmXgy2l2Nnt53c/m8PXt2PYBNWdK1R+iOaBbX9bmcPWfEMaKgKKq+SBSj/NAy5Mla99Yhtb8MzsZfWtAG+/GlO9Zr08lypb88Yn5Wm347GWcrx7vuENAL8258fWHaBPQyssSw9WeIsaKgKKqEtArcRrTxhVH8gKj6ufL62wuGq5EykJo9v2zb8uXqxa5Kr8f6FN5P9D16e3l98+SG9P16Zibw2efyC4EWn56tRqnRUCr9wOtPcSOXfhtL0sMlz/Ft5WniLEioKiabRxu3n3N+4Br4fNIVb+tKaDLrXekX781UDlDvXpPps0Fqp8w/4+wK6DyacnHNIeqmgK67WXJ4Vbf82MOIo0bAUXVZj+OypvGfWbnbkyrbyyyV8Zx8nTjaNWmi3KZ9d9EWr0XsLqYs9rSLXdjmq9OLCrPwm8Z0PIF1R5i12lMW15WbTjzl564G9PYEVBUVfpx4/7b4nPrrpX3/dz9+eXqhpzFVTvVb8zuoJl+wXxbvtiNdPd/47C+9L38q5zrm3RWP6qcI7U5fDZufoPOG+bvjLYM6N0nbytf2HyInSfS119WfbirF1PuBxoBAgo964Jp2xoid8PjUBFQ2LY+MfRs86RKRbP1SD6Gx6EioLAtO9ie7W5/epVs3SVXcFG56NPD8DhYBBS2Va8Fd7EFON8cyfXwOGQEFNa9nzoN2KU4m9Lx8DhkBBT2fXp9p3LEWtv1w8rlSu6HxyEjoADQEwEFgJ4IKAD0REABoCcCCgA9EVAA6ImAAkBPBBQAeiKgANATAQWAnggoAPREQAGgJwIKAD0RUADoiYACQE//H2pIFMA6XvKxAAAAAElFTkSuQmCC" alt="Histogram of the BOD measurements at the outlet and inlet of the aquaculture facility." width="672" />
 <p class="caption">
-Figure 1: Histogram of the BOD measurements at the outlet and inlet of the aquaculture facility.
+Figure 2: Histogram of the BOD measurements at the outlet and inlet of the aquaculture facility.
 </p>
 </div>
 </div>
@@ -2144,6 +2240,15 @@ t.test(BOD~src,data=aqua,var.equal=TRUE,alt=&quot;less&quot;,conf.level=0.90)</c
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->

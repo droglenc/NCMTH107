@@ -1,8 +1,7 @@
 ---
 layout: page
 title: Exercises
-subtitle: 2-Sample t-test in R
-author: Derek H. Ogle
+subtitle: t-tests in R
 css: "/css/modules.css"
 ---
 
@@ -10,6 +9,13 @@ css: "/css/modules.css"
 
 <div class="alert alert-success">For all "hypothesis testing" questions, make sure to provide explicit answers with your work shown for all <a href="../11-steps">11 steps of a hypothesis test</a>.
 </div>
+
+----
+
+## Acid Rain in Shenandoah National Park
+<img src="zimgs/rose-river-falls.jpg" alt="Shenandoah National Park" class="img-right">
+
+The pH scales falls between 0 and 14 with values <7 considered acidic and values >7 considered basic. Rain water is naturally acidic, usually around 5.6 on the pH scale. Thus, the EPA defines rainwater with a pH less than 5.6 as being "acid rain." A series of rain collection samples were taken at the Big Meadows Station in the Shenandoah National Park, VA with the results stored in pHlevels.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/pHlevels.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/pHlevels_meta.txt)). Use these data to determine, at the 1% level, if there is evidence for "acid rain" at this site.[^1]
 
 ----
 
@@ -28,10 +34,12 @@ Bosnia       15.1  6.4  5.0 11.4 6.5  6.5  3.0  7.0  3.5
 
 ## Additional Practice
 
-[Here are more exercises for practice if time permits.](Rt2_CE2)
+[Here are more exercises for practice if time permits.](Rttests_CE2)
 
 &nbsp;
 
 ----
+
+[^1]: This exercise was modified [from here](http://www.cvgs.k12.va.us/DIGSTATS/main/inferant/a_acidrain.htm).
 
 [^2]: This questions was adapted from [Emden (2008) Statistics for Terrified Biologists](http://www.wiley.com/WileyCDA/WileyTitle/productCd-1405149566.html)

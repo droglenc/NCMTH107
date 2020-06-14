@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Preparation Guide
-subtitle: R - 2-Sample t-Test
+subtitle: R - t-Tests
 css: "/css/modules.css"
 ---
 

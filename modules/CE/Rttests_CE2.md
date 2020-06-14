@@ -7,7 +7,8 @@ css: "/css/modules.css"
 
 &nbsp;
 
-1. **Application Questions**
+1. **1-Sample t-Test Applications**
+    1. [Thickness of the Ozone Layer](#thickness-of-the-ozone-layer)
     1. [Fecal Coliform Counts II](#fecal-coliform-counts-ii)
     1. [Elk Density in Banff](#elk-density-in-banff)
     1. [Raptors at Hawk Ridge](#raptors-at-hawk-ridge)
@@ -17,12 +18,26 @@ css: "/css/modules.css"
     1. [Boat Traffic](#boat-traffic)
     1. [Golden Triangle in Beads?](#golden-triangle-in-beads)
 
+1. **2-Sample t-Test Applications**
+    1. [Dioxins in Milk Cartons](#dioxins-in-milk-cartons)
+    1. [Low Grades in Math](#low-grades-in-math)
+    1. [Hours Worked by Medical Interns](#hours-worked-by-medical-interns)
+    1. [Corn Crop Yield](#corn-crop-yield)
+    1. [Death Anxiety and Organ Donation](#death-anxiety-and-organ-donation)
+
 &nbsp;
 
 ----
 
 <div class="alert alert-success">For all "hypothesis testing" questions, make sure to provide explicit answers with your work shown for all <a href="../11-steps">11 steps of a hypothesis test</a>.
 </div>
+
+----
+
+# 1-Sample t-Test Applications
+## Thickness of the Ozone Layer
+<img src="zimgs/ozone-hole.jpg" alt="Ozone Hole" class="img-right">
+The typical thickness of the ozone layer over the Earth's surface is 300 [Dobson units](http://ozonewatch.gsfc.nasa.gov/facts/dobson_SH.html).  Researchers at the Laboratorium für Atmospharensphysic in Switzerland recorded the thickness of the ozone layer over [Arosa, Switzerland](https://en.wikipedia.org/wiki/Arosa) from 1926 to the present.  The data in OzoneSWI.csv ([file](https://github.com/droglenc/NCData/raw/master/OzoneSWI.csv), [meta](https://github.com/droglenc/NCData/blob/master/OzoneSWI_meta.txt)) contains the measurements from a random sample of 45 years between 1926 and the mid 1990s.  Use these data to determine, at the 1% level, if the thickness of the ozone layer over Arosa is different than that which is typical for the Earth's surface.[^3]
 
 ----
 
@@ -83,3 +98,44 @@ One of the dominant uses of Madison area lakes is for boating. To develop a long
 ## Golden Triangle in Beads?
 <img src="zimgs/golden-triangle.jpg" alt="Golden Triangle" class="img-right">
 The [golden rectangle](http://en.wikipedia.org/wiki/Golden_rectangle) is a rectangle with a length-to-width ratio of 1:1.618, or equivalently, a width-to-length ratio of 0.618:1. The golden rectangle is evident in several works by ancient Greeks and Egyptians. Anthropologists measured the width-to-length ratios of beaded rectangles used by the Shoshoni Indians of America to decorate their leather goods. Use their data in Shoshoni.csv ([data](https://github.com/droglenc/NCData/raw/master/Shoshoni.csv), [meta](https://github.com/droglenc/NCData/blob/master/Shoshoni_meta.txt)) to determine, at the 5% level, if the golden rectangle is evident in the beadwork of the Shoshonis.
+
+&nbsp;
+
+----
+
+# 2-Sample t-Test Applications
+## Dioxins in Milk Cartons
+<img src="zimgs/milk-carton.jpg" alt="Milk Carton" class="img-right">
+A study examined the effectiveness of foil-lined milk cartons to reduce "leakage" of dioxins from the carton to the milk (dioxins were found in milk cartons due to the bleaching process). The dioxin content (parts per thousand, ppt) in milk from 50 unlined and 50 lined cartons of milk are recorded in MilkCartons.csv ([data](https://github.com/droglenc/NCData/raw/master/MilkCartons.csv), [meta](https://github.com/droglenc/NCData/blob/master/MilkCartons_meta.txt)). Determine, at the 1% level, if lining the cartons with foil significantly reduced the amount of dioxin in the milk.
+
+----
+
+## Low Grades in Math
+<img src="zimgs/F-grade.jpg" alt="An F" class="img-right">
+The University of North Carolina math department is noted for "giving out" low grades. To examine this, the GPA from a random sample of 22 math classes and 29 "other" university classes (from the last year) are in UNCGrades.csv ([data](https://github.com/droglenc/NCData/raw/master/UNCGrades.csv), [meta](https://github.com/droglenc/NCData/blob/master/UNCGrades_meta.txt)). Determine, at the 10% level, if grades are significantly lower in math than in other classes.
+
+&nbsp;
+
+----
+
+## Hours Worked by Medical Interns
+<img src="zimgs/interns.jpg" alt="Interns" class="img-right">
+A health commissioner needs to determine if the number of hours worked per week by medical interns differs between two cities. To examine this, the commissioner found the mean number of hours worked by interns in the first city for a random sample of 13 weeks and the same for a random sample of 16 weeks from the second city. Her data are in MedInternHrs.csv ([data](https://github.com/droglenc/NCData/raw/master/MedInternHrs.csv), [meta](https://github.com/droglenc/NCData/blob/master/MedInternHrs_meta.txt)). Determine if the hours worked by the interns differs, at the 10% level, between the two cities.
+
+----
+
+## Corn Crop Yield
+<img src="zimgs/corn-crop-yield.jpg" alt="Corn Crop Yield" class="img-right">
+Agronomists are interested in determining conditions that increase crop yield. In one experiment, 80 one-acre plots of corn were randomly divided into two groups of 40 plots. An insecticide was used on each plot in one group and sterilized male individuals of an insect pest were released on each of the other plots. The resulting yields are recorded in CropYield.csv ([data](https://github.com/droglenc/NCData/raw/master/CropYield.csv), [meta](https://github.com/droglenc/NCData/blob/master/CropYield_meta.txt)). Is there a difference, at the 10% level, in yield between the two treatments.
+
+----
+
+## Death Anxiety and Organ Donation
+<img src="zimgs/organ-donor.png" alt="Organ Donor" class="img-right">
+Templer's Death Anxiety Scale (DAS) is a measure of an individual's anxiety concerning death. [Robbins (1990)](http://www.tandfonline.com/doi/abs/10.1080/07481189008252363) recorded the DAS score for 25 organ donors and 69 non-organ donors in DeathAnxiety.csv ([data](https://github.com/droglenc/NCData/raw/master/DeathAnxiety.csv), [meta](https://github.com/droglenc/NCData/blob/master/DeathAnxiety_meta.txt)). Determine, at the 1% level, if there is a difference in anxiety levels concerning death between organ and non-organ donors.
+
+
+&nbsp;
+
+
+[^3]: This exercise was modified [from here](http://college.cengage.com/mathematics/brase/understandable_statistics/7e/students/datasets/svls/frames/svls11.html).

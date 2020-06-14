@@ -1,6 +1,6 @@
 ---
 layout: page
-title: R - 2-Sample t-test
+title: R - t-test
 css: /css/modules.css
 ---
 
@@ -16,6 +16,7 @@ css: /css/modules.css
 <p>After completing this module, you should be able to ...</p>
 
 <ol>
+  <li>Compute results for a 1-sample t-test</li>
   <li>Compute results for a 2-sample t-test</li>
 </ol>
       </div>
@@ -27,22 +28,24 @@ css: /css/modules.css
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](Prep/Rt2EDA).
+Use the materials below to answer the questions on [this preparation guide](Prep/Rt1EDA).
 
-* [Reading](bookR/Rt2.html)
+* [Reading](bookR/Rttests.html)
+* [![Vimeo](../img/dhovid.png) 1-Sample t-Test in R](https://vimeo.com/user45324800/1samplettest){:target="_blank"} [5 mins] ... [corresponding script](HO/1Samplet_RHO.html){:target="_blank"}
 * [![Vimeo](../img/dhovid.png) 2-Sample t-Test in R](https://vimeo.com/user45324800/2samplettest){:target="_blank"} [8 mins] ... [corresponding script](HO/2Samplet_RHO.html){:target="_blank"}
 
 ----
 
 ## Practice
 
-* [Class Example](CE/Rt2_CExmpl) ... [ANNOTATED KEY](CE/KEY_Rt2_CExmpl) 
-* [Exercises](CE/Rt2_CE1) ([*more as time permits*](CE/Rt2_CE2)) ... [ANSWER KEY](CE/KEY_Rt2_CE)
+* [Class Example](CE/Rttests_CExmpl) ... [ANNOTATED KEY](CE/KEY_Rttests_CExmpl)
+* [Exercises](CE/Rttests_CE1) ([*more as time permits*](CE/Rttests_CE2)) ... [ANSWER KEY](CE/KEY_Rttests_CE)
 
 ----
 
 ## Archived Materials
 
+* [![Vimeo](../img/dhovid.png) 1-Sample t-Test in R](https://vimeo.com/user45324800/1samplettest){:target="_blank"} [5 mins]
 * [![Vimeo](../img/dhovid.png) 2-Sample t-Test in R](https://vimeo.com/user45324800/1samplettest){:target="_blank"} [5 mins]
 
 ----
