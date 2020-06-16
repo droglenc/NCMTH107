@@ -12,9 +12,7 @@ output:
 knitr::opts_chunk$set(echo=TRUE,fig.align='center',comment="#R>  ",fig.width=3.5,fig.height=3.5)
 ```
 
-# 1-Sample t-Test
-
-In the [1-Sample t-test module](../tTest1.html) you learned about the theory underlying a 1-sample t-test and how to perform the calculations required to complete the [11-steps](../11-steps) of a hypothesis test. In this module, you will learn how to perform the required calculations from raw data using R. You will also be asked to complete the full 11-steps for a 1-sample t-test.
+In the [1-Sample t-test](../1Samplet.html) and [2-Sample t-test](../2Samplet.html) modules you learned the theory and how to perform the calculations required to complete the [11-steps](../11-steps) of a hypothesis test for 1- and 2-sample t-tests. In this module, you will learn how to perform the required calculations from raw data using R.
 
 Methods in this module require the `NCStats` package (as always) and the `ggplot2` package (for making graphs).
 
@@ -22,6 +20,12 @@ Methods in this module require the `NCStats` package (as always) and the `ggplot
 library(NCStats)
 library(ggplot2)
 ```
+
+&nbsp;
+
+
+# 1-Sample t-Test
+
 
 ## 1-Sample t-Test in R
 If raw data exist, the calculations for a 1-Sample t-test can be efficiently computed with `t.test()`. `t.test()` requires the vector of quantitative data as the first argument, the null hypothesized value for &mu; in `mu=`, the type of alternative hypothesis in `alt=` (can be `alt="two.sided"` (the default), `alt="less"`, or `alt="greater"`), and the level of confidence as a proportion in `conf.level=` (defaults to 0.95). If the sample size is less than 40 then you may also need to construct a histogram as described in the [Univariate EDA in R module](RUnivEDA.html) to assess the shape of the distribution.

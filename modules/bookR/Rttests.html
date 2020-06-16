@@ -1962,14 +1962,15 @@ distill-header .nav a {
 </ul>
 </nav>
 <hr class="d-toc-separator" />
-<h1 id="sample-t-test">1-Sample t-Test</h1>
-<p>In the <a href="../tTest1.html">1-Sample t-test module</a> you learned about the theory underlying a 1-sample t-test and how to perform the calculations required to complete the <a href="../11-steps">11-steps</a> of a hypothesis test. In this module, you will learn how to perform the required calculations from raw data using R. You will also be asked to complete the full 11-steps for a 1-sample t-test.</p>
+<p>In the <a href="../1Samplet.html">1-Sample t-test</a> and <a href="../2Samplet.html">2-Sample t-test</a> modules you learned the theory and how to perform the calculations required to complete the <a href="../11-steps">11-steps</a> of a hypothesis test for 1- and 2-sample t-tests. In this module, you will learn how to perform the required calculations from raw data using R.</p>
 <p>Methods in this module require the <code>NCStats</code> package (as always) and the <code>ggplot2</code> package (for making graphs).</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 library(NCStats)
 library(ggplot2)</code></pre>
 </div>
+<p> </p>
+<h1 id="sample-t-test">1-Sample t-Test</h1>
 <h2 id="sample-t-test-in-r">1-Sample t-Test in R</h2>
 <p>If raw data exist, the calculations for a 1-Sample t-test can be efficiently computed with <code>t.test()</code>. <code>t.test()</code> requires the vector of quantitative data as the first argument, the null hypothesized value for μ in <code>mu=</code>, the type of alternative hypothesis in <code>alt=</code> (can be <code>alt=&quot;two.sided&quot;</code> (the default), <code>alt=&quot;less&quot;</code>, or <code>alt=&quot;greater&quot;</code>), and the level of confidence as a proportion in <code>conf.level=</code> (defaults to 0.95). If the sample size is less than 40 then you may also need to construct a histogram as described in the <a href="RUnivEDA.html">Univariate EDA in R module</a> to assess the shape of the distribution.</p>
 <p> </p>
