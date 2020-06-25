@@ -23,16 +23,16 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 
 ```{r echo=FALSE}
 library(dplyr)
+options(knitr.kable.NA = '')
 
 d <- readxl::read_excel("Dates_F20A.xlsx") %>%
-  filter(SHOW) %>%
-  mutate(Date=as.Date(Date),
-         Date=paste(substr(DOW,1,1),format(Date,"%b-%d")),
-         Topic=ifelse(is.na(url),Topic,
-                      paste0('<a href=\"../modules/',url,'\">',Topic,'</a>'))) %>%
-  select(Date,Topic) %>%
-  add_row(Date=NA,Topic=NA_character_,
-          .after=grep("F",d$Date)[1])
+  dplyr::filter(SHOW) %>%
+  dplyr::mutate(Date=as.Date(Date),
+                Date=paste(substr(DOW,1,1),format(Date,"%b-%d")),
+                Topic=ifelse(is.na(url),Topic,
+                       paste0('<a href=\"../modules/',url,'\">',Topic,'</a>'))) %>%
+  dplyr::select(Date,Topic) %>%
+  dplyr::add_row(Date=NA,Topic=NA_character_,.after=grep("F",d$Date)[1])
 
 knitr::kable(d,format="html",escape=FALSE) %>%
   kableExtra::kable_styling(bootstrap_options=c("condensed","hover","responsive"),
