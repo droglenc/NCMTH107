@@ -1,0 +1,40 @@
+---
+layout: page
+title: Dates Current
+author: "Derek H. Ogle"
+css: "/css/syllabus.css"
+output:
+  html_document:
+    self_contained: false
+    lib_dir: zlibs
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/")
+source("../rhelpers/rhelpers.R")
+modHTML("Dates-Current")
+```
+
+<div class="alert alert-info">
+For each class period ("Date"), the module to prepare for is shown under "Topic." Some of the more distant dates are subject to change.
+</div>
+
+
+```{r echo=FALSE}
+library(dplyr)
+
+d <- readxl::read_excel("Dates_F20A.xlsx") %>%
+  filter(SHOW) %>%
+  mutate(Date=as.Date(Date),
+         Date=paste(substr(DOW,1,1),format(Date,"%b-%d")),
+         Topic=ifelse(is.na(url),Topic,
+                      paste0('<a href=\"../modules/',url,'\">',Topic,'</a>'))) %>%
+  select(Date,Topic)
+
+knitr::kable(d,format="html",escape=FALSE) %>%
+  kableExtra::kable_styling(bootstrap_options=c("condensed","hover","responsive"),
+                            full_width=FALSE,position="center",
+                            fixed_thead=TRUE)
+```
+
