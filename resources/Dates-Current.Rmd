@@ -28,7 +28,7 @@ options(knitr.kable.NA = '')
 d <- readxl::read_excel("Dates_F20A.xlsx") %>%
   dplyr::mutate(Date=as.Date(Date)) %>%
   dplyr::filter(Date>=lubridate::today()) %>%
-  dplyr::mutate(Date=paste(substr(DOW,1,1),format(Date,"%b-%d")),
+  dplyr::mutate(Date=paste0(DOW,", ",format(Date,"%b-%d")),
                 Topic=ifelse(is.na(url),Topic,
                        paste0('<a href=\"../modules/',url,'\">',Topic,'</a>'))) %>%
   dplyr::select(Date,Topic)
