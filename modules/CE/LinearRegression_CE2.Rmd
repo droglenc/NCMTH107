@@ -83,9 +83,7 @@ Use the results for **2015** to answer the questions below.
 Kirsten Gorman examined various aspects of three species of penguins (Adelie, Chinstrap, and Gentoo) on Palmer Island, Antarctica.[^PengData] In one part of her research she examined the relationship between flipper length (mm) and body mass (g) with the hope of being able to predice body mass from flipper length. The results of her analysis are shown below.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, fig.width=7, fig.height=3.1}
-d <- read.csv("https://raw.githubusercontent.com/allisonhorst/penguins/master/data-raw/penguins_raw.csv") %>%
-  janitor::clean_names() %>%
-  mutate(species_short=stringr::word(species,1))
+d <- read.csv("https://raw.githubusercontent.com/allisonhorst/penguins/master/data-raw/penguins.csv")
 ggplot(data=d,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +
   geom_point(pch=21,color="black",fill="lightgrey",size=2) +
   geom_smooth(method="lm",se=FALSE,color="black",size=1) +
@@ -95,10 +93,10 @@ ggplot(data=d,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +
   labs(x="Flipper Length (mm)",y="Body Mass (g)") +
   theme_NCStats() +
   theme(aspect.ratio=1) +
-  facet_wrap(~species_short,nrow=1)
+  facet_wrap(~species,nrow=1)
 ```
 
-Use the results for **CHINSTRAP** penguins to answer the questions below.
+Use the results for **GENTOO** penguins to answer the questions below.
 
 1. In terms of the variables of this problem, what is the equation of the best-fit line?
 1. In terms of the variables of this problem, INTERPRET the value of the slope?

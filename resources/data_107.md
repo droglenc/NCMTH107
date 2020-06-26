@@ -46,6 +46,7 @@ title: Data for MTH107
 * NormTemp -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/NormTemp.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/NormTemp_meta.txt)
 * OtterMort -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/OtterMort.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/OtterMort_meta.txt)
 * Panther -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/Panther.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/Panther_meta.txt)
+* Penguins -- [data](https://raw.githubusercontent.com/allisonhorst/penguins/master/data-raw/penguins.csv), [metadata](https://allisonhorst.github.io/palmerpenguins/articles/palmerpenguins.html#the-palmerpenguins-package-1)
 * PerchGL -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/PerchGL.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/PerchGL_meta.txt)
 * pHlevels -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/pHlevels.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/pHlevels_meta.txt)
 * PlasticRecycling -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/PlasticRecycling.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/PlasticRecycling_meta.txt)
