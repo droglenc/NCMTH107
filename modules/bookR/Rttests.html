@@ -398,6 +398,16 @@
   }
   
   
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+  
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+  
+  
   /* Improve display for browsers without grid (IE/Edge <= 15) */
   
   .downlevel {
@@ -1972,7 +1982,7 @@ library(ggplot2)</code></pre>
 <p> </p>
 <h1 id="sample-t-test">1-Sample t-Test</h1>
 <h2 id="sample-t-test-in-r">1-Sample t-Test in R</h2>
-<p>If raw data exist, the calculations for a 1-Sample t-test can be efficiently computed with <code>t.test()</code>. <code>t.test()</code> requires the vector of quantitative data as the first argument, the null hypothesized value for μ in <code>mu=</code>, the type of alternative hypothesis in <code>alt=</code> (can be <code>alt=&quot;two.sided&quot;</code> (the default), <code>alt=&quot;less&quot;</code>, or <code>alt=&quot;greater&quot;</code>), and the level of confidence as a proportion in <code>conf.level=</code> (defaults to 0.95). If the sample size is less than 40 then you may also need to construct a histogram as described in the <a href="RUnivEDA.html">Univariate EDA in R module</a> to assess the shape of the distribution.</p>
+<p>If raw data exist, the calculations for a 1-Sample t-test can be efficiently computed with <code>t.test()</code>. <code>t.test()</code> requires a formula of the form <code>~qvar</code>, where <code>qvar</code> is the quantitative variable, as the first argument; the corresponding data frame in <code>data=</code>; the null hypothesized value for μ in <code>mu=</code>; the type of alternative hypothesis in <code>alt=</code> (can be <code>alt=&quot;two.sided&quot;</code> (the default), <code>alt=&quot;less&quot;</code>, or <code>alt=&quot;greater&quot;</code>); and the level of confidence as a proportion in <code>conf.level=</code> (defaults to 0.95). If the sample size is less than 40 then you may also need to construct a histogram as described in the <a href="RUnivEDA.html">Univariate EDA in R module</a> to assess the shape of the distribution.</p>
 <p> </p>
 <h2 id="example---crab-body-temperature">Example - Crab Body Temperature</h2>
 <p>Below are the <a href="../11-steps">11-steps</a> for completing a full hypothesis test for the following situation:</p>
@@ -2049,7 +2059,7 @@ ggplot(data=df,mapping=aes(x=ct)) +
   labs(y=&quot;Frequency of Crabs&quot;,x=&quot;Body Temperature (C)&quot;) +
   scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
   theme_NCStats()
-( ct.t &lt;- t.test(df$ct,mu=24.3,conf.level=0.95) )</code></pre>
+( ct.t &lt;- t.test(~ct,data=df,mu=24.3,conf.level=0.95) )</code></pre>
 </div>
 <p> </p>
 <h1 id="sample-t-test-1">2-Sample t-Test</h1>
@@ -2154,7 +2164,7 @@ t.test(BOD~src,data=aqua,var.equal=TRUE,alt=&quot;less&quot;,conf.level=0.90)</c
 <caption><span id="tab:LevBOD">Table 2: </span>Results from the Levene’s Test for differences in BOD between the inlet and outlet of an aquaculture facility.</caption>
 <thead>
 <tr class="header">
-<th></th>
+<th style="text-align: left;"></th>
 <th style="text-align: right;">Df</th>
 <th style="text-align: right;">F value</th>
 <th style="text-align: right;">Pr(&gt;F)</th>
@@ -2162,13 +2172,13 @@ t.test(BOD~src,data=aqua,var.equal=TRUE,alt=&quot;less&quot;,conf.level=0.90)</c
 </thead>
 <tbody>
 <tr class="odd">
-<td>group</td>
+<td style="text-align: left;">group</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">0.2988958</td>
 <td style="text-align: right;">0.5912891</td>
 </tr>
 <tr class="even">
-<td></td>
+<td style="text-align: left;"></td>
 <td style="text-align: right;">18</td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>

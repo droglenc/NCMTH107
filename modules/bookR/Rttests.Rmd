@@ -28,7 +28,7 @@ library(ggplot2)
 
 
 ## 1-Sample t-Test in R
-If raw data exist, the calculations for a 1-Sample t-test can be efficiently computed with `t.test()`. `t.test()` requires the vector of quantitative data as the first argument, the null hypothesized value for &mu; in `mu=`, the type of alternative hypothesis in `alt=` (can be `alt="two.sided"` (the default), `alt="less"`, or `alt="greater"`), and the level of confidence as a proportion in `conf.level=` (defaults to 0.95). If the sample size is less than 40 then you may also need to construct a histogram as described in the [Univariate EDA in R module](RUnivEDA.html) to assess the shape of the distribution.
+If raw data exist, the calculations for a 1-Sample t-test can be efficiently computed with `t.test()`. `t.test()` requires a formula of the form `~qvar`, where `qvar` is the quantitative variable, as the first argument; the corresponding data frame in `data=`; the null hypothesized value for &mu; in `mu=`; the type of alternative hypothesis in `alt=` (can be `alt="two.sided"` (the default), `alt="less"`, or `alt="greater"`); and the level of confidence as a proportion in `conf.level=` (defaults to 0.95). If the sample size is less than 40 then you may also need to construct a histogram as described in the [Univariate EDA in R module](RUnivEDA.html) to assess the shape of the distribution.
 
 &nbsp;
 
@@ -48,7 +48,7 @@ df <- data.frame(ct=c(22.9,22.9,23.3,23.5,23.9,23.9,24.0,24.3,24.5,
                       25.8,26.1,26.2,26.3,27.0,27.3,28.1))
 ```
 ```{r 1tcrabs, echo=FALSE,results='hide',fig.show='hide'}
-( ct.t <- t.test(df$ct,mu=24.3,conf.level=0.95) )
+( ct.t <- t.test(~ct,data=df,mu=24.3,conf.level=0.95) )
 ```
 1. &alpha; = 0.05.
 1. H<sub>0</sub>:&mu; = 24.3<sup>o</sup>C vs. H<sub>A</sub>:&mu; &ne; 24.3<sup>o</sup>C, where &mu; is the mean body temperature of ALL crabs.
@@ -153,12 +153,11 @@ A 2-Sample t-Test is computed with `t.test()`, where the first argument is the s
 
 R computes the difference among groups as the alphabetically "first" level minus the alphabetically "second" level. For example, if the two levels are `inlet` and `outlet`, then R will compute x&#772;<sub>inlet</sub>-x&#772;<sub>outlet</sub>. You should consider this when you are constructing your hypotheses. However, you can change the order of the levels by using `levels=` in `factor()` (as described in the [Univariae EDA in R module](RUnivEDA.html#data-manipulation).
 
- The results of the following code are shown in Table \@ref(tab:2tBOD) and interpreted in the example analysis below.
+The results of the following code are shown in Table \@ref(tab:2tBOD) and interpreted in the example analysis below.
  
 ```{r aqua.t, results="hide"}
 t.test(BOD~src,data=aqua,var.equal=TRUE,alt="less",conf.level=0.90)
 ```
-
 
 &nbsp;
 
