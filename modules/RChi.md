@@ -32,9 +32,8 @@ css: /css/modules.css
 Use the materials below to answer the questions on [this preparation guide](Prep/RChi).
 
 * [Reading](bookR/RChi.html)
-* [![Vimeo](../img/dhovid.png) Chi-Square Test (with Raw Data) in R](https://vimeo.com/user45324800/chisqraw-ex1){:target="_blank"} [11 mins]
-* [![Vimeo](../img/dhovid.png) Chi-Square Test (with Summarized Data) in R](https://vimeo.com/user45324800/chisqsmrzd-ex1){:target="_blank"} [8 mins] [![Web](../img/web.png)](HO/ChiSquare_RHO2.html){:target="_blank"}  [![R](../img/Rlogo.png)](HO/ChiSquare_RHO2.R){:target="_blank"} [same handout]
-* [![Vimeo](../img/dhovid.png) Goodness-of-Fit Tests in R](https://vimeo.com/user45324800/rgoftest){:target="_blank"} [6 mins] ... [corresponding script](HO/GOFTest_RHO.html){:target="_blank"} 
+* [![Vimeo](../img/dhovid.png) Chi-Square Test (with Raw Data) in R](){:target="_blank"} [11 mins] ... [corresponding resource](HO/Penguins.html#RChiChi){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) Goodness-of-Fit Tests in R](){:target="_blank"} [6 mins] ... [corresponding resource](HO/Penguins.html#RChiGOF){:target="_blank"} 
 
 ----
 
@@ -49,6 +48,7 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 * [Old Lecture Slides](PPT/ChiSquare_PPT_old.pptx)
 * [![Vimeo](../img/dhovid.png) Chi-Square Test (with Raw Data) in R](https://vimeo.com/user45324800/chisqraw-ex1){:target="_blank"} [11 mins]
-* [![Vimeo](../img/dhovid.png) Chi-Square Test (with Summarized Data) in R](https://vimeo.com/user45324800/chisqsmrzd-ex1){:target="_blank"} [8 mins] [![Web](../img/web.png)](HO/ChiSquare_RHO2.html){:target="_blank"}  [![R](../img/Rlogo.png)](HO/ChiSquare_RHO2.R){:target="_blank"} [same handout]
+* [![Vimeo](../img/dhovid.png) Chi-Square Test (with Summarized Data) in R](https://vimeo.com/user45324800/chisqsmrzd-ex1){:target="_blank"} [8 mins]
+* [![Vimeo](../img/dhovid.png) Goodness-of-Fit Tests in R](https://vimeo.com/user45324800/rgoftest){:target="_blank"} [6 mins] 
 
 ----

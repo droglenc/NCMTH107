@@ -31,8 +31,8 @@ css: /css/modules.css
 Use the materials below to answer the questions on [this preparation guide](Prep/Rt1EDA).
 
 * [Reading](bookR/Rttests.html)
-* [![Vimeo](../img/dhovid.png) 1-Sample t-Test in R](https://vimeo.com/user45324800/1samplettest){:target="_blank"} [5 mins] ... [corresponding script](HO/1Samplet_RHO.html){:target="_blank"}
-* [![Vimeo](../img/dhovid.png) 2-Sample t-Test in R](https://vimeo.com/user45324800/2samplettest){:target="_blank"} [8 mins] ... [corresponding script](HO/2Samplet_RHO.html){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) 1-Sample t-Test in R](){:target="_blank"} [5 mins] ... [corresponding resource](HO/Penguins.html#Rttests1){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) 2-Sample t-Test in R](){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#Rttests2){:target="_blank"}
 
 ----
 

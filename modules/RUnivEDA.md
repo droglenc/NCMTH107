@@ -36,8 +36,9 @@ css: /css/modules.css
 Use the materials below to answer the questions on [this preparation guide](Prep/RUnivEDA).
 
 * [Reading](bookR/RUnivEDA.html)
-* [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative) in R](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins] ... [corresponding script](HO/UEDAQuant1_RHO.html){:target="_blank"}
-* [![Vimeo](../img/dhovid.png) Univariate EDA (Categorical) in R](https://vimeo.com/user45324800/ncstats-uedac){:target="_blank"} [4 mins] ... [corresponding script](HO/UEDACat_RHO.html){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative) in R](){:target="_blank"} [4 mins] ... [corresponding resource](HO/Penguins.html#RUnivEDAQ){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) Univariate EDA (Categorical) in R](){:target="_blank"} [4 mins] ... [corresponding resource](HO/Penguins.html#RUnivEDAC){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative by Group) in R](){:target="_blank"} [4 mins] ... [corresponding resource](HO/Penguins.html#RUnivEDAQC){:target="_blank"}
 
 ----
 
@@ -51,5 +52,6 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 ## Archived Materials
 
 * [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative) in R](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins]
+* [![Vimeo](../img/dhovid.png) Univariate EDA (Categorical) in R](https://vimeo.com/user45324800/ncstats-uedac){:target="_blank"} [4 mins]
 
 ----

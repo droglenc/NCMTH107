@@ -33,8 +33,8 @@ css: /css/modules.css
 Use the materials below to answer the questions on [this preparation guide](Prep/RBivEDA).
 
 * [Reading](bookR/RBivEDA.html)
-* [![Vimeo](../img/dhovid.png) Bivariate EDA (Quantitative) in R](https://vimeo.com/user45324800/biveda-quant){:target="_blank"} [8 mins] ... [corresponding script](HO/BEDAQuant_RHO.html){:target="_blank"}
-* [![Vimeo](../img/dhovid.png) Bivariate EDA (Categorical) in R](https://vimeo.com/user45324800/biveda-cat){:target="_blank"} [8 mins] ... [corresponding script](HO/BEDACat_RHO.html){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) Bivariate EDA (Quantitative) in R](){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#RBivEDAQ){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) Bivariate EDA (Categorical) in R](){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#RBivEDAC){:target="_blank"}
 
 ----
 
@@ -47,5 +47,6 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 ## Archive
 
 * [![Vimeo](../img/dhovid.png) Bivariate EDA (Quantitative) in R](https://vimeo.com/user45324800/biveda-quant){:target="_blank"} [8 mins]
+* [![Vimeo](../img/dhovid.png) Bivariate EDA (Categorical) in R](https://vimeo.com/user45324800/biveda-cat){:target="_blank"} [8 mins]
 
 ----

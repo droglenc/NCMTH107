@@ -1,0 +1,4516 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>R for MTH107</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Derek Ogle, June 2020" />
+    <link href="zlibs/remark-css-0.0.1/hygge.css" rel="stylesheet" />
+    <link href="zlibs/remark-css-0.0.1/ninjutsu.css" rel="stylesheet" />
+    <link rel="stylesheet" href="zlibs\xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+class: inverse, middle
+
+# R for MTH107
+
+- [Getting Data into R](#RData)
+- [Filtering Data in R](#RFilter)
+- [Univariate EDA in R](#RUnivEDA)
+  - [Quantitative](#RUnivEDAQ)
+  - [Categorical](#RUnivEDAC)
+  - [Quantitative by Group](#RUnivEDAQC)
+- [Bivariate EDA in R](#RBivEDA)
+  - [Quantitative](#RBivEDAQ)
+  - [Categorical](#RBivEDAC)
+- [Linear Regression in R](#RRegression)
+- [t-Tests in R](#Rttests)
+  - [1-sample t-Test in R](#Rttests1)
+  - [2-sample t-Test in R](#Rttests2)
+- [Chi-square in R](#RChi)
+  - [Chi-square Test in R](#RChiChi)
+  - [Goodness-of-Fit Test in R](#RChiGOF)
+
+---
+
+class: inverse, center, middle
+
+name: RData
+
+## First Things First!!
+
+### Load Important Packages
+
+---
+
+
+
+count: false
+ 
+# Load Important Packages
+.left-panel-packages-auto[
+
+```r
+#!# Loading important packages ... must do every time
+*library(NCStats)
+```
+]
+ 
+.right-panel-packages-auto[
+
+]
+
+---
+count: false
+ 
+# Load Important Packages
+.left-panel-packages-auto[
+
+```r
+#!# Loading important packages ... must do every time
+library(NCStats)  
+*library(ggplot2)
+```
+]
+ 
+.right-panel-packages-auto[
+
+]
+
+&lt;style&gt;
+.left-panel-packages-auto {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-packages-auto {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-packages-auto {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+---
+
+class: inverse, center, middle
+
+---
+
+class: inverse, center, middle
+
+# Loading Data into R
+
+---
+
+## Introducing the Data
+
+- Size (bill, flipper, weight) of three species of Penguins from three islands in Antarctica.
+
+--
+- Collected by [Dr. Kristen Gorman](https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php) and the [Palmer Station, Antarctica LTER](https://pal.lternet.edu/).
+
+&lt;img src="https://www.uaf.edu/cfos/images/people/faculty_prof/gorman-kristen-4x5.jpg" width="33%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Introducing the Data
+
+- Size (bill, flipper, weight) of three species of Penguins from three islands in Antarctica.
+
+--
+- Collated by [Allison Horst](https://www.allisonhorst.com/).
+
+&lt;img src="https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png" width="67%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Loading Data into R
+
+1. Download or save data (CSV file) to your computer.
+
+--
+1. Start an R script with code for important packages.
+
+--
+1. Save script in same folder as data.
+
+--
+1. Use `Session`, `Set working directory`, `To source file location` to set the working directory (where the data file is located).
+
+--
+1. Copy resultant `setwd()` from console and paste into script.
+
+--
+1. Use `read.csv()` with filename in quotes to load data into R.
+  - Should be assigned to a short object name (what data is called in R).
+
+--
+1. Examine data object.
+  - Use `str()` to see the structure.
+  - Use `peek()` to see a subset of rows/individuals.
+
+---
+
+
+
+
+count: false
+ 
+## Loading Data into R
+.left-panel-loaddata-user[
+
+```r
+#!# Set to your OWN working directory ... this is Derek's computer.
+*setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/HO")
+```
+]
+ 
+.right-panel-loaddata-user[
+
+]
+
+---
+count: false
+ 
+## Loading Data into R
+.left-panel-loaddata-user[
+
+```r
+#!# Set to your OWN working directory ... this is Derek's computer.
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/HO")  
+*d &lt;- read.csv("penguins.csv")
+```
+]
+ 
+.right-panel-loaddata-user[
+
+]
+
+---
+count: false
+ 
+## Loading Data into R
+.left-panel-loaddata-user[
+
+```r
+#!# Set to your OWN working directory ... this is Derek's computer.
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/HO")  
+d &lt;- read.csv("penguins.csv")  
+*str(d)
+```
+]
+ 
+.right-panel-loaddata-user[
+
+```
+'data.frame':	344 obs. of  7 variables:
+ $ species          : chr  "Adelie" "Adelie" "Adelie" "Adelie" ...
+ $ island           : chr  "Torgersen" "Torgersen" "Torgersen" "Torgersen" ...
+ $ bill_length_mm   : num  39.1 39.5 40.3 NA 36.7 39.3 38.9 39.2 34.1 42 ...
+ $ bill_depth_mm    : num  18.7 17.4 18 NA 19.3 20.6 17.8 19.6 18.1 20.2 ...
+ $ flipper_length_mm: int  181 186 195 NA 193 190 181 195 193 190 ...
+ $ body_mass_g      : int  3750 3800 3250 NA 3450 3650 3625 4675 3475 4250 ...
+ $ sex              : chr  "male" "female" "female" NA ...
+```
+]
+
+---
+count: false
+ 
+## Loading Data into R
+.left-panel-loaddata-user[
+
+```r
+#!# Set to your OWN working directory ... this is Derek's computer.
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/HO")  
+d &lt;- read.csv("penguins.csv")  
+str(d)  
+*peek(d)
+```
+]
+ 
+.right-panel-loaddata-user[
+
+```
+'data.frame':	344 obs. of  7 variables:
+ $ species          : chr  "Adelie" "Adelie" "Adelie" "Adelie" ...
+ $ island           : chr  "Torgersen" "Torgersen" "Torgersen" "Torgersen" ...
+ $ bill_length_mm   : num  39.1 39.5 40.3 NA 36.7 39.3 38.9 39.2 34.1 42 ...
+ $ bill_depth_mm    : num  18.7 17.4 18 NA 19.3 20.6 17.8 19.6 18.1 20.2 ...
+ $ flipper_length_mm: int  181 186 195 NA 193 190 181 195 193 190 ...
+ $ body_mass_g      : int  3750 3800 3250 NA 3450 3650 3625 4675 3475 4250 ...
+ $ sex              : chr  "male" "female" "female" NA ...
+```
+
+```
+      species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1      Adelie Torgersen           39.1          18.7               181        3750   male
+18     Adelie Torgersen           42.5          20.7               197        4500   male
+36     Adelie     Dream           39.2          21.1               196        4150   male
+54     Adelie    Biscoe           42.0          19.5               200        4050   male
+72     Adelie Torgersen           39.7          18.4               190        3900   male
+91     Adelie     Dream           35.7          18.0               202        3550 female
+109    Adelie    Biscoe           38.1          17.0               181        3175 female
+127    Adelie Torgersen           38.8          17.6               191        3275 female
+145    Adelie     Dream           37.3          16.8               192        3000 female
+163    Gentoo    Biscoe           40.9          13.7               214        4650 female
+181    Gentoo    Biscoe           48.2          14.3               210        4600 female
+199    Gentoo    Biscoe           45.5          13.9               210        4200 female
+217    Gentoo    Biscoe           45.8          14.2               219        4700 female
+235    Gentoo    Biscoe           47.4          14.6               212        4725 female
+253    Gentoo    Biscoe           48.5          15.0               219        4850 female
+272    Gentoo    Biscoe             NA            NA                NA          NA   &lt;NA&gt;
+290 Chinstrap     Dream           52.0          18.1               201        4050   male
+308 Chinstrap     Dream           54.2          20.8               201        4300   male
+326 Chinstrap     Dream           49.8          17.3               198        3675 female
+344 Chinstrap     Dream           50.2          18.7               198        3775 female
+```
+]
+
+&lt;style&gt;
+.left-panel-loaddata-user {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-loaddata-user {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-loaddata-user {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+---
+
+class: inverse, center, middle
+
+
+---
+
+class: inverse, center, middle
+
+name: RFilter
+
+# Filtering Data
+
+---
+
+## Filtering Data
+
+- Create a subset of a larger data.frame based on a condition or conditions.
+
+--
+- Use `filterD()`
+  - First argument is larger data.frame.
+  - Following arguments are conditions.
+
+---
+
+## Filtering Data
+
+
+Table: Comparison operators used in `filterD()` and their results.
+
+|Comparison Operator          |Rows Returned from Original Data Frame                   |
+|:----------------------------|:--------------------------------------------------------|
+|`var==value`                 |Rows where `var` **IS equal** to `value`                 |
+|`var!=value`                 |Rows where `var` **is NOT equal** to `value`             |
+|`var %in% c(value1,value2)`  |Rows where `var` **IS IN** vector of `value`s            |
+|`var&gt;value`                  |Rows where `var` is **greater than** `value`             |
+|`var&gt;=value`                 |Rows where `var` is **greater than or equal to** `value` |
+|`var&lt;value`                  |Rows where `var` is **less than** `value`                |
+|`var&lt;=value`                 |Rows where `var` is **less than or equal to** `value`    |
+|condition1,condition2        |Rows where **BOTH** conditions are true                  |
+|condition1 &amp;#124; condition2 |Rows where **ONE or BOTH** conditions are true           |
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-filter1-auto[
+
+```r
+*head(d)
+```
+]
+ 
+.right-panel-filter1-auto[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-filter1-auto[
+
+```r
+head(d)  
+*unique(d$species)
+```
+]
+ 
+.right-panel-filter1-auto[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+```
+[1] "Adelie"    "Gentoo"    "Chinstrap"
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-filter1-auto[
+
+```r
+head(d)  
+unique(d$species)  
+
+## Isolate just Chinstrap Penguins
+*d_chin &lt;- filterD(d,species=="Chinstrap")
+```
+]
+ 
+.right-panel-filter1-auto[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+```
+[1] "Adelie"    "Gentoo"    "Chinstrap"
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-filter1-auto[
+
+```r
+head(d)  
+unique(d$species)  
+
+## Isolate just Chinstrap Penguins
+d_chin &lt;- filterD(d,species=="Chinstrap")  
+*peek(d_chin)
+```
+]
+ 
+.right-panel-filter1-auto[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+```
+[1] "Adelie"    "Gentoo"    "Chinstrap"
+```
+
+```
+     species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Chinstrap  Dream           46.5          17.9               192        3500 female
+4  Chinstrap  Dream           45.4          18.7               188        3525 female
+7  Chinstrap  Dream           46.1          18.2               178        3250 female
+11 Chinstrap  Dream           46.6          17.8               193        3800 female
+14 Chinstrap  Dream           52.0          18.1               201        4050   male
+18 Chinstrap  Dream           58.0          17.8               181        3700 female
+21 Chinstrap  Dream           42.4          17.3               181        3600 female
+25 Chinstrap  Dream           46.7          17.9               195        3300 female
+29 Chinstrap  Dream           46.4          17.8               191        3700 female
+32 Chinstrap  Dream           54.2          20.8               201        4300   male
+36 Chinstrap  Dream           47.5          16.8               199        3900 female
+39 Chinstrap  Dream           46.9          16.6               192        2700 female
+43 Chinstrap  Dream           50.9          19.1               196        3550   male
+47 Chinstrap  Dream           50.1          17.9               190        3400 female
+50 Chinstrap  Dream           49.8          17.3               198        3675 female
+54 Chinstrap  Dream           50.7          19.7               203        4050   male
+57 Chinstrap  Dream           45.2          16.6               191        3250 female
+61 Chinstrap  Dream           51.9          19.5               206        3950   male
+64 Chinstrap  Dream           55.8          19.8               207        4000   male
+68 Chinstrap  Dream           50.2          18.7               198        3775 female
+```
+]
+
+&lt;style&gt;
+.left-panel-filter1-auto {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-filter1-auto {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-filter1-auto {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-filter2-user[
+
+```r
+*head(d)
+*unique(d$species)
+
+## Isolate just Chinstrap and Gentoo Penguins
+```
+]
+ 
+.right-panel-filter2-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+```
+[1] "Adelie"    "Gentoo"    "Chinstrap"
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-filter2-user[
+
+```r
+head(d)  
+unique(d$species)  
+
+## Isolate just Chinstrap and Gentoo Penguins
+
+*d_chingen &lt;- filterD(d,species %in% c("Chinstrap","Gentoo"))
+```
+]
+ 
+.right-panel-filter2-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+```
+[1] "Adelie"    "Gentoo"    "Chinstrap"
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-filter2-user[
+
+```r
+head(d)  
+unique(d$species)  
+
+## Isolate just Chinstrap and Gentoo Penguins
+
+d_chingen &lt;- filterD(d,species %in% c("Chinstrap","Gentoo"))  
+*peek(d_chingen)
+```
+]
+ 
+.right-panel-filter2-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+```
+[1] "Adelie"    "Gentoo"    "Chinstrap"
+```
+
+```
+      species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1      Gentoo Biscoe           46.1          13.2               211        4500 female
+10     Gentoo Biscoe           46.8          15.4               215        5150   male
+20     Gentoo Biscoe           48.7          15.1               222        5350   male
+30     Gentoo Biscoe           50.0          15.3               220        5550   male
+40     Gentoo Biscoe           48.7          15.7               208        5350   male
+51     Gentoo Biscoe           46.6          14.2               210        4850 female
+61     Gentoo Biscoe           45.3          13.8               208        4200 female
+71     Gentoo Biscoe           47.7          15.0               216        4750 female
+81     Gentoo Biscoe           49.1          14.5               212        4625 female
+91     Gentoo Biscoe           47.5          15.0               218        4950 female
+101    Gentoo Biscoe           48.5          15.0               219        4850 female
+111    Gentoo Biscoe           50.5          15.2               216        5000 female
+121    Gentoo Biscoe           46.8          14.3               215        4850 female
+131 Chinstrap  Dream           46.1          18.2               178        3250 female
+141 Chinstrap  Dream           50.3          20.0               197        3300   male
+152 Chinstrap  Dream           49.5          19.0               200        3800   male
+162 Chinstrap  Dream           52.0          20.7               210        4800   male
+172 Chinstrap  Dream           49.0          19.6               212        4300   male
+182 Chinstrap  Dream           49.3          19.9               203        4050   male
+192 Chinstrap  Dream           50.2          18.7               198        3775 female
+```
+]
+
+&lt;style&gt;
+.left-panel-filter2-user {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-filter2-user {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-filter2-user {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-filter3-user[
+
+```r
+*head(d)
+
+## Isolate just male Chinstrap Penguins
+```
+]
+ 
+.right-panel-filter3-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-filter3-user[
+
+```r
+head(d)  
+
+## Isolate just male Chinstrap Penguins
+
+*d_chinmale &lt;- filterD(d,species=="Chinstrap",sex=="male")
+```
+]
+ 
+.right-panel-filter3-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-filter3-user[
+
+```r
+head(d)  
+
+## Isolate just male Chinstrap Penguins
+
+d_chinmale &lt;- filterD(d,species=="Chinstrap",sex=="male")  
+*peek(d_chinmale)
+```
+]
+ 
+.right-panel-filter3-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+```
+     species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g  sex
+1  Chinstrap  Dream           50.0          19.5               196        3900 male
+2  Chinstrap  Dream           51.3          19.2               193        3650 male
+4  Chinstrap  Dream           51.3          18.2               197        3750 male
+5  Chinstrap  Dream           51.3          19.9               198        3700 male
+7  Chinstrap  Dream           52.0          18.1               201        4050 male
+9  Chinstrap  Dream           50.3          20.0               197        3300 male
+11 Chinstrap  Dream           48.5          17.5               191        3400 male
+13 Chinstrap  Dream           52.0          19.0               197        4150 male
+14 Chinstrap  Dream           49.5          19.0               200        3800 male
+16 Chinstrap  Dream           54.2          20.8               201        4300 male
+18 Chinstrap  Dream           49.7          18.6               195        3600 male
+20 Chinstrap  Dream           53.5          19.9               205        4500 male
+21 Chinstrap  Dream           49.0          19.5               210        3950 male
+23 Chinstrap  Dream           50.8          18.5               201        4450 male
+25 Chinstrap  Dream           51.5          18.7               187        3250 male
+27 Chinstrap  Dream           50.7          19.7               203        4050 male
+29 Chinstrap  Dream           49.3          19.9               203        4050 male
+30 Chinstrap  Dream           50.2          18.8               202        3800 male
+32 Chinstrap  Dream           55.8          19.8               207        4000 male
+34 Chinstrap  Dream           50.8          19.0               210        4100 male
+```
+]
+
+&lt;style&gt;
+.left-panel-filter3-user {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-filter3-user {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-filter3-user {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-filterHvy-user[
+
+```r
+*head(d)
+
+## Isolate just Penguins with body mass more than 5900 g ... ~13 lbs
+```
+]
+ 
+.right-panel-filterHvy-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-filterHvy-user[
+
+```r
+head(d)  
+
+## Isolate just Penguins with body mass more than 5900 g ... ~13 lbs
+
+*d_heavy &lt;- filterD(d,body_mass_g&gt;5900)
+```
+]
+ 
+.right-panel-filterHvy-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-filterHvy-user[
+
+```r
+head(d)  
+
+## Isolate just Penguins with body mass more than 5900 g ... ~13 lbs
+
+d_heavy &lt;- filterD(d,body_mass_g&gt;5900)  
+*peek(d_heavy)
+```
+]
+ 
+.right-panel-filterHvy-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+```
+  species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g  sex
+1  Gentoo Biscoe           49.2          15.2               221        6300 male
+2  Gentoo Biscoe           59.6          17.0               230        6050 male
+3  Gentoo Biscoe           51.1          16.3               220        6000 male
+4  Gentoo Biscoe           45.2          16.4               223        5950 male
+5  Gentoo Biscoe           49.8          15.9               229        5950 male
+6  Gentoo Biscoe           48.8          16.2               222        6000 male
+```
+]
+
+&lt;style&gt;
+.left-panel-filterHvy-user {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-filterHvy-user {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-filterHvy-user {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-filterBM-user[
+
+```r
+*head(d)
+
+## Examine just the body mass variable
+```
+]
+ 
+.right-panel-filterBM-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-filterBM-user[
+
+```r
+head(d)  
+
+## Examine just the body mass variable
+
+*d$body_mass_g
+```
+]
+ 
+.right-panel-filterBM-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+```
+  [1] 3750 3800 3250   NA 3450 3650 3625 4675 3475 4250 3300 3700 3200 3800 4400 3700 3450 4500 3325 4200 3400 3600 3800
+ [24] 3950 3800 3800 3550 3200 3150 3950 3250 3900 3300 3900 3325 4150 3950 3550 3300 4650 3150 3900 3100 4400 3000 4600
+ [47] 3425 2975 3450 4150 3500 4300 3450 4050 2900 3700 3550 3800 2850 3750 3150 4400 3600 4050 2850 3950 3350 4100 3050
+ [70] 4450 3600 3900 3550 4150 3700 4250 3700 3900 3550 4000 3200 4700 3800 4200 3350 3550 3800 3500 3950 3600 3550 4300
+ [93] 3400 4450 3300 4300 3700 4350 2900 4100 3725 4725 3075 4250 2925 3550 3750 3900 3175 4775 3825 4600 3200 4275 3900
+[116] 4075 2900 3775 3350 3325 3150 3500 3450 3875 3050 4000 3275 4300 3050 4000 3325 3500 3500 4475 3425 3900 3175 3975
+[139] 3400 4250 3400 3475 3050 3725 3000 3650 4250 3475 3450 3750 3700 4000 4500 5700 4450 5700 5400 4550 4800 5200 4400
+[162] 5150 4650 5550 4650 5850 4200 5850 4150 6300 4800 5350 5700 5000 4400 5050 5000 5100 4100 5650 4600 5550 5250 4700
+[185] 5050 6050 5150 5400 4950 5250 4350 5350 3950 5700 4300 4750 5550 4900 4200 5400 5100 5300 4850 5300 4400 5000 4900
+[208] 5050 4300 5000 4450 5550 4200 5300 4400 5650 4700 5700 4650 5800 4700 5550 4750 5000 5100 5200 4700 5800 4600 6000
+[231] 4750 5950 4625 5450 4725 5350 4750 5600 4600 5300 4875 5550 4950 5400 4750 5650 4850 5200 4925 4875 4625 5250 4850
+[254] 5600 4975 5500 4725 5500 4700 5500 4575 5500 5000 5950 4650 5500 4375 5850 4875 6000 4925   NA 4850 5750 5200 5400
+[277] 3500 3900 3650 3525 3725 3950 3250 3750 4150 3700 3800 3775 3700 4050 3575 4050 3300 3700 3450 4400 3600 3400 2900
+[300] 3800 3300 4150 3400 3800 3700 4550 3200 4300 3350 4100 3600 3900 3850 4800 2700 4500 3950 3650 3550 3500 3675 4450
+[323] 3400 4300 3250 3675 3325 3950 3600 4050 3350 3450 3250 4050 3800 3525 3950 3650 3650 4000 3400 3775 4100 3775
+```
+]
+
+&lt;style&gt;
+.left-panel-filterBM-user {
+  color: #777;
+  width: 34.3137254901961%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-filterBM-user {
+  width: 63.7254901960784%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-filterBM-user {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+---
+
+class: inverse, center, middle
+
+---
+
+class: inverse, center, middle
+
+name: RUnivEDA
+
+# Univariate EDA in R
+
+---
+
+name: RUnivEDAQ
+
+## Univariate EDA - Quantitative
+### Summary Statistics
+
+- Computed with `Summarize()`
+  - Uses formula of the form `~qvar` as first argument.
+  - Must include data.frame name in `data=` argument.
+  - Optionally set number of decimals with `digits=`.
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-UnivEDAQsum-user[
+
+```r
+*head(d_chin)
+
+## Distribution of flipper lengths for Chinstrap Penguins
+```
+]
+ 
+.right-panel-UnivEDAQsum-user[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDAQsum-user[
+
+```r
+head(d_chin)  
+
+## Distribution of flipper lengths for Chinstrap Penguins
+
+*Summarize(~flipper_length_mm,data=d_chin,digits=1)
+```
+]
+ 
+.right-panel-UnivEDAQsum-user[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+```
+     n   mean     sd    min     Q1 median     Q3    max 
+  68.0  195.8    7.1  178.0  191.0  196.0  201.0  212.0 
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDAQsum-user[
+
+```r
+head(d_chin)  
+
+## Distribution of flipper lengths for Chinstrap Penguins
+
+Summarize(~flipper_length_mm,data=d_chin,digits=1)  
+
+## Distribution of bill lengths for Chinstrap Penguins
+```
+]
+ 
+.right-panel-UnivEDAQsum-user[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+```
+     n   mean     sd    min     Q1 median     Q3    max 
+  68.0  195.8    7.1  178.0  191.0  196.0  201.0  212.0 
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDAQsum-user[
+
+```r
+head(d_chin)  
+
+## Distribution of flipper lengths for Chinstrap Penguins
+
+Summarize(~flipper_length_mm,data=d_chin,digits=1)  
+
+## Distribution of bill lengths for Chinstrap Penguins
+
+*Summarize(~bill_length_mm,data=d_chin,digits=2)
+```
+]
+ 
+.right-panel-UnivEDAQsum-user[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+```
+     n   mean     sd    min     Q1 median     Q3    max 
+  68.0  195.8    7.1  178.0  191.0  196.0  201.0  212.0 
+```
+
+```
+     n   mean     sd    min     Q1 median     Q3    max 
+ 68.00  48.83   3.34  40.90  46.35  49.55  51.08  58.00 
+```
+]
+
+&lt;style&gt;
+.left-panel-UnivEDAQsum-user {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-UnivEDAQsum-user {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-UnivEDAQsum-user {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+## Univariate EDA - Quantitative
+### Histogram
+
+- First, use `ggplot()` to declare data.
+  - Must include data.frame name in `data=` argument.
+  - Set `x=` to variable names in `mapping=aes()`.
+
+--
+- Second, add on `geom_histogram()` with
+  - `binwidth=` to set bin width.
+  - `boundary=0` for start of bins.
+  - `color=` and `fill=` to set bar outline and fill colors.
+
+--
+- Clean up with ...
+  - `labs()` to label axes
+  - `scale_y_continuous(expand=expansion(mult=c(0,0.05)))` to "sit" bars on x-axis, and
+  - `theme_NCStats()` to make look nice.
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-UnivEDAQhist-non_seq[
+
+```r
+head(d_chin)  
+
+## Distribution of flipper lengths for Chinstrap Penguins
+```
+]
+ 
+.right-panel-UnivEDAQhist-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDAQhist-non_seq[
+
+```r
+head(d_chin)  
+
+## Distribution of flipper lengths for Chinstrap Penguins
+
+*ggplot(data=d_chin,mapping=aes(x=flipper_length_mm))
+```
+]
+ 
+.right-panel-UnivEDAQhist-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+&lt;img src="Penguins_files/figure-html/UnivEDAQhist_non_seq_2_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDAQhist-non_seq[
+
+```r
+head(d_chin)  
+
+## Distribution of flipper lengths for Chinstrap Penguins
+
+ggplot(data=d_chin,mapping=aes(x=flipper_length_mm)) +  
+* geom_histogram(
+* )
+```
+]
+ 
+.right-panel-UnivEDAQhist-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+&lt;img src="Penguins_files/figure-html/UnivEDAQhist_non_seq_3_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDAQhist-non_seq[
+
+```r
+head(d_chin)  
+
+## Distribution of flipper lengths for Chinstrap Penguins
+
+ggplot(data=d_chin,mapping=aes(x=flipper_length_mm)) +  
+  geom_histogram(  
+*   binwidth=5,boundary=0,
+  )   
+```
+]
+ 
+.right-panel-UnivEDAQhist-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+&lt;img src="Penguins_files/figure-html/UnivEDAQhist_non_seq_4_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDAQhist-non_seq[
+
+```r
+head(d_chin)  
+
+## Distribution of flipper lengths for Chinstrap Penguins
+
+ggplot(data=d_chin,mapping=aes(x=flipper_length_mm)) +  
+  geom_histogram(  
+    binwidth=5,boundary=0,  
+*   color="black",fill="lightgray"
+  )   
+```
+]
+ 
+.right-panel-UnivEDAQhist-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+&lt;img src="Penguins_files/figure-html/UnivEDAQhist_non_seq_5_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDAQhist-non_seq[
+
+```r
+head(d_chin)  
+
+## Distribution of flipper lengths for Chinstrap Penguins
+
+ggplot(data=d_chin,mapping=aes(x=flipper_length_mm)) +  
+  geom_histogram(  
+    binwidth=5,boundary=0,  
+    color="black",fill="lightgray"  
+  ) +  
+* labs(x="Flipper Length (mm)",y="Frequency of Penguins")
+```
+]
+ 
+.right-panel-UnivEDAQhist-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+&lt;img src="Penguins_files/figure-html/UnivEDAQhist_non_seq_6_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDAQhist-non_seq[
+
+```r
+head(d_chin)  
+
+## Distribution of flipper lengths for Chinstrap Penguins
+
+ggplot(data=d_chin,mapping=aes(x=flipper_length_mm)) +  
+  geom_histogram(  
+    binwidth=5,boundary=0,  
+    color="black",fill="lightgray"  
+  ) +  
+  labs(x="Flipper Length (mm)",y="Frequency of Penguins") +  
+* scale_y_continuous(expand=expansion(mult=c(0,0.05)))
+```
+]
+ 
+.right-panel-UnivEDAQhist-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+&lt;img src="Penguins_files/figure-html/UnivEDAQhist_non_seq_7_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDAQhist-non_seq[
+
+```r
+head(d_chin)  
+
+## Distribution of flipper lengths for Chinstrap Penguins
+
+ggplot(data=d_chin,mapping=aes(x=flipper_length_mm)) +  
+  geom_histogram(  
+    binwidth=5,boundary=0,  
+    color="black",fill="lightgray"  
+  ) +  
+  labs(x="Flipper Length (mm)",y="Frequency of Penguins") +  
+  scale_y_continuous(expand=expansion(mult=c(0,0.05))) +  
+* theme_NCStats()
+```
+]
+ 
+.right-panel-UnivEDAQhist-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+&lt;img src="Penguins_files/figure-html/UnivEDAQhist_non_seq_8_output-1.png" width="100%" /&gt;
+]
+
+&lt;style&gt;
+.left-panel-UnivEDAQhist-non_seq {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-UnivEDAQhist-non_seq {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-UnivEDAQhist-non_seq {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+name: RUnivEDAC
+
+## Univariate EDA - Categorical
+### Frequency Tables
+
+- Computed with `xtabs()`
+  - Uses formula of the form `~cvar` as first argument.
+  - Must include data.frame name in `data=` argument.
+  - Assign (save) result to object.
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-UnivEDACsum-user[
+
+```r
+*head(d)
+
+## Species composition
+```
+]
+ 
+.right-panel-UnivEDACsum-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDACsum-user[
+
+```r
+head(d)  
+
+## Species composition
+
+*( freq &lt;- xtabs(~species,data=d) )
+```
+]
+ 
+.right-panel-UnivEDACsum-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+```
+species
+   Adelie Chinstrap    Gentoo 
+      152        68       124 
+```
+]
+
+&lt;style&gt;
+.left-panel-UnivEDACsum-user {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-UnivEDACsum-user {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-UnivEDACsum-user {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+## Univariate EDA - Categorical
+### Percentage Tables
+
+- Computed with `percTable()`
+  - Uses saved `xtabs()` object as first argument.
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-UnivEDACsump-user[
+
+```r
+*freq
+```
+]
+ 
+.right-panel-UnivEDACsump-user[
+
+```
+species
+   Adelie Chinstrap    Gentoo 
+      152        68       124 
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDACsump-user[
+
+```r
+freq  
+*percTable(freq)
+```
+]
+ 
+.right-panel-UnivEDACsump-user[
+
+```
+species
+   Adelie Chinstrap    Gentoo 
+      152        68       124 
+```
+
+```
+species
+   Adelie Chinstrap    Gentoo 
+     44.2      19.8      36.0 
+```
+]
+
+&lt;style&gt;
+.left-panel-UnivEDACsump-user {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-UnivEDACsump-user {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-UnivEDACsump-user {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+## Univariate EDA - Categorical
+### Bar Chart
+
+- First, use `ggplot()` to declare data.
+  - Must include data.frame name in `data=` argument.
+  - Set `x=` to variable names in `mapping=aes()`.
+
+--
+- Second, add on `geom_bar()` with
+  - `color=` and `fill=` to set bar outline and fill colors.
+
+--
+- Clean up with ...
+  - `labs()` to label axes
+  - `scale_y_continuous(expand=expansion(mult=c(0,0.05)))` to "sit" bars on x-axis, and
+  - `theme_NCStats()` to make look nice.
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-UnivEDACbar-non_seq[
+
+```r
+head(d)  
+
+
+## Species composition
+```
+]
+ 
+.right-panel-UnivEDACbar-non_seq[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDACbar-non_seq[
+
+```r
+head(d)  
+
+
+## Species composition
+*ggplot(data=d,mapping=aes(x=species))
+```
+]
+ 
+.right-panel-UnivEDACbar-non_seq[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+&lt;img src="Penguins_files/figure-html/UnivEDACbar_non_seq_2_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDACbar-non_seq[
+
+```r
+head(d)  
+
+
+## Species composition
+ggplot(data=d,mapping=aes(x=species)) +  
+* geom_bar(
+* )
+```
+]
+ 
+.right-panel-UnivEDACbar-non_seq[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+&lt;img src="Penguins_files/figure-html/UnivEDACbar_non_seq_3_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDACbar-non_seq[
+
+```r
+head(d)  
+
+
+## Species composition
+ggplot(data=d,mapping=aes(x=species)) +  
+  geom_bar(  
+*   color="black",fill="lightgray"
+  )   
+```
+]
+ 
+.right-panel-UnivEDACbar-non_seq[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+&lt;img src="Penguins_files/figure-html/UnivEDACbar_non_seq_4_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDACbar-non_seq[
+
+```r
+head(d)  
+
+
+## Species composition
+ggplot(data=d,mapping=aes(x=species)) +  
+  geom_bar(  
+    color="black",fill="lightgray"  
+  ) +  
+* labs(x="Species",y="Frequency of Penguins")
+```
+]
+ 
+.right-panel-UnivEDACbar-non_seq[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+&lt;img src="Penguins_files/figure-html/UnivEDACbar_non_seq_5_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDACbar-non_seq[
+
+```r
+head(d)  
+
+
+## Species composition
+ggplot(data=d,mapping=aes(x=species)) +  
+  geom_bar(  
+    color="black",fill="lightgray"  
+  ) +  
+  labs(x="Species",y="Frequency of Penguins") +  
+* scale_y_continuous(expand=expansion(mult=c(0,0.05)))
+```
+]
+ 
+.right-panel-UnivEDACbar-non_seq[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+&lt;img src="Penguins_files/figure-html/UnivEDACbar_non_seq_6_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDACbar-non_seq[
+
+```r
+head(d)  
+
+
+## Species composition
+ggplot(data=d,mapping=aes(x=species)) +  
+  geom_bar(  
+    color="black",fill="lightgray"  
+  ) +  
+  labs(x="Species",y="Frequency of Penguins") +  
+  scale_y_continuous(expand=expansion(mult=c(0,0.05))) +  
+* theme_NCStats()
+```
+]
+ 
+.right-panel-UnivEDACbar-non_seq[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+&lt;img src="Penguins_files/figure-html/UnivEDACbar_non_seq_7_output-1.png" width="100%" /&gt;
+]
+
+&lt;style&gt;
+.left-panel-UnivEDACbar-non_seq {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-UnivEDACbar-non_seq {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-UnivEDACbar-non_seq {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+name: RUnivEDAQC
+
+## Univariate EDA - Quant by Groups
+### Summary Statistics
+
+- Computed with `Summarize()`
+  - Uses formula of the form `qvar~cvar` as first argument.
+  - Must include data.frame name in `data=` argument.
+  - Optionally set number of decimals with `digits=`.
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-UnivEDAQsum2-user[
+
+```r
+*head(d)
+
+## Distribution of flipper lengths by species
+```
+]
+ 
+.right-panel-UnivEDAQsum2-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDAQsum2-user[
+
+```r
+head(d)  
+
+## Distribution of flipper lengths by species
+
+*Summarize(flipper_length_mm~species,data=d,digits=1)
+```
+]
+ 
+.right-panel-UnivEDAQsum2-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+```
+    species   n nvalid  mean  sd min  Q1 median  Q3 max
+1    Adelie 152    151 190.0 6.5 172 186    190 195 210
+2 Chinstrap  68     68 195.8 7.1 178 191    196 201 212
+3    Gentoo 124    123 217.2 6.5 203 212    216 221 231
+```
+]
+
+&lt;style&gt;
+.left-panel-UnivEDAQsum2-user {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-UnivEDAQsum2-user {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-UnivEDAQsum2-user {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+## Univariate EDA - Quant by Groups
+### Histogram
+
+- First, make histogram exactly as before.
+
+--
+- Separate by groups by adding on `facet_wrap()`
+  - Must include grouping variable name in `vars()` as first argument.
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-UnivEDAQhist2-user[
+
+```r
+*head(d)
+
+## Distribution of flipper lengths by species
+```
+]
+ 
+.right-panel-UnivEDAQhist2-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDAQhist2-user[
+
+```r
+head(d)  
+
+## Distribution of flipper lengths by species
+
+*ggplot(data=d,mapping=aes(x=flipper_length_mm)) +
+* geom_histogram(binwidth=5,boundary=0,
+*                color="black",fill="lightgray") +
+* labs(x="Flipper Length (mm)",
+*      y="Frequency of Penguins") +
+* scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
+* theme_NCStats()
+```
+]
+ 
+.right-panel-UnivEDAQhist2-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+&lt;img src="Penguins_files/figure-html/UnivEDAQhist2_user_2_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDAQhist2-user[
+
+```r
+head(d)  
+
+## Distribution of flipper lengths by species
+
+ggplot(data=d,mapping=aes(x=flipper_length_mm)) +  
+  geom_histogram(binwidth=5,boundary=0,  
+                 color="black",fill="lightgray") +  
+  labs(x="Flipper Length (mm)",  
+       y="Frequency of Penguins") +  
+  scale_y_continuous(expand=expansion(mult=c(0,0.05))) +  
+  theme_NCStats() +  
+* facet_wrap(vars(species))
+```
+]
+ 
+.right-panel-UnivEDAQhist2-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+&lt;img src="Penguins_files/figure-html/UnivEDAQhist2_user_3_output-1.png" width="100%" /&gt;
+]
+
+&lt;style&gt;
+.left-panel-UnivEDAQhist2-user {
+  color: #777;
+  width: 39.2156862745098%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-UnivEDAQhist2-user {
+  width: 58.8235294117647%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-UnivEDAQhist2-user {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+## Univariate EDA - Quant by Groups
+### Boxplots
+
+- First, use `ggplot()` to declare data.
+  - Must include data.frame name in `data=` argument.
+  - Set `x=` (group) and `y=` (quantitative) to variable names in `mapping=aes()`.
+
+--
+- Second, add on `geom_boxplot()` with
+  - `color=` and `fill=` to set point outline and fill colors.
+
+--
+- Clean up with ...
+  - `labs()` to label axes
+  - `theme_NCStats()` to make look nice.
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-UnivEDAQBoxplot-non_seq[
+
+```r
+head(d)  
+
+## Distribution of flipper lengths by species
+```
+]
+ 
+.right-panel-UnivEDAQBoxplot-non_seq[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDAQBoxplot-non_seq[
+
+```r
+head(d)  
+
+## Distribution of flipper lengths by species
+*ggplot(data=d,mapping=aes(x=species,y=flipper_length_mm))
+```
+]
+ 
+.right-panel-UnivEDAQBoxplot-non_seq[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+&lt;img src="Penguins_files/figure-html/UnivEDAQBoxplot_non_seq_2_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDAQBoxplot-non_seq[
+
+```r
+head(d)  
+
+## Distribution of flipper lengths by species
+ggplot(data=d,mapping=aes(x=species,y=flipper_length_mm)) +  
+* geom_boxplot(color="black",fill="lightgray")
+```
+]
+ 
+.right-panel-UnivEDAQBoxplot-non_seq[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+&lt;img src="Penguins_files/figure-html/UnivEDAQBoxplot_non_seq_3_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDAQBoxplot-non_seq[
+
+```r
+head(d)  
+
+## Distribution of flipper lengths by species
+ggplot(data=d,mapping=aes(x=species,y=flipper_length_mm)) +  
+  geom_boxplot(color="black",fill="lightgray") +  
+* labs(x="Species",y="Flipper Length (mm)")
+```
+]
+ 
+.right-panel-UnivEDAQBoxplot-non_seq[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+&lt;img src="Penguins_files/figure-html/UnivEDAQBoxplot_non_seq_4_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-UnivEDAQBoxplot-non_seq[
+
+```r
+head(d)  
+
+## Distribution of flipper lengths by species
+ggplot(data=d,mapping=aes(x=species,y=flipper_length_mm)) +  
+  geom_boxplot(color="black",fill="lightgray") +  
+  labs(x="Species",y="Flipper Length (mm)") +  
+* theme_NCStats()
+```
+]
+ 
+.right-panel-UnivEDAQBoxplot-non_seq[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+&lt;img src="Penguins_files/figure-html/UnivEDAQBoxplot_non_seq_5_output-1.png" width="100%" /&gt;
+]
+
+&lt;style&gt;
+.left-panel-UnivEDAQBoxplot-non_seq {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-UnivEDAQBoxplot-non_seq {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-UnivEDAQBoxplot-non_seq {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+---
+
+class: inverse, center, middle
+
+---
+
+class: inverse, center, middle
+
+name: RBivEDA
+
+# Bivariate EDA in R
+
+---
+
+name: RBivEDAQ
+
+## Bivariate EDA - Quantitative
+### Correlation Coefficient
+
+- Computed with `corr()`
+  - Uses formula of the form `~qvar1+qvar2` as first argument.
+  - Must include data.frame name in `data=` argument.
+  - include `use="pairwise.complete.obs"` to remove any missing values.
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-BivEDAQsum-user[
+
+```r
+*head(d_chin)
+
+## Relationship between body mass &amp; flipper length for Chinstrap Penguins
+```
+]
+ 
+.right-panel-BivEDAQsum-user[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-BivEDAQsum-user[
+
+```r
+head(d_chin)  
+
+## Relationship between body mass &amp; flipper length for Chinstrap Penguins
+
+*corr(~body_mass_g+flipper_length_mm,data=d_chin,
+*    use="pairwise.complete.obs")
+```
+]
+ 
+.right-panel-BivEDAQsum-user[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+```
+[1] 0.6415594
+```
+]
+
+&lt;style&gt;
+.left-panel-BivEDAQsum-user {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-BivEDAQsum-user {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-BivEDAQsum-user {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+## Bivariate EDA - Quantitative
+### Scatterplot
+
+- First, use `ggplot()` to declare data.
+  - Must include data.frame name in `data=` argument.
+  - Set `x=` and `y=` to variable names in `mapping=aes()`.
+
+--
+- Second, add on `geom_point()` with
+  - `pch=21` to make circle with border and fill color options.
+  - `color=` and `fill=` to set point outline and fill colors.
+
+--
+- Clean up with ...
+  - `labs()` to label axes
+  - `scale_y_continuous(expand=expansion(mult=c(0,0.05)))` to "sit" bars on x-axis, and
+  - `theme_NCStats()` to make look nice.
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-BivEDAQPlot-non_seq[
+
+```r
+head(d_chin)  
+
+## Relationship between body mass and flipper length for Chinstrap Penguins
+```
+]
+ 
+.right-panel-BivEDAQPlot-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-BivEDAQPlot-non_seq[
+
+```r
+head(d_chin)  
+
+## Relationship between body mass and flipper length for Chinstrap Penguins
+
+*ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g))
+```
+]
+ 
+.right-panel-BivEDAQPlot-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+&lt;img src="Penguins_files/figure-html/BivEDAQPlot_non_seq_2_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-BivEDAQPlot-non_seq[
+
+```r
+head(d_chin)  
+
+## Relationship between body mass and flipper length for Chinstrap Penguins
+
+ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
+* geom_point(
+* )
+```
+]
+ 
+.right-panel-BivEDAQPlot-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+&lt;img src="Penguins_files/figure-html/BivEDAQPlot_non_seq_3_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-BivEDAQPlot-non_seq[
+
+```r
+head(d_chin)  
+
+## Relationship between body mass and flipper length for Chinstrap Penguins
+
+ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
+  geom_point(  
+*   pch=21,
+  )   
+```
+]
+ 
+.right-panel-BivEDAQPlot-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+&lt;img src="Penguins_files/figure-html/BivEDAQPlot_non_seq_4_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-BivEDAQPlot-non_seq[
+
+```r
+head(d_chin)  
+
+## Relationship between body mass and flipper length for Chinstrap Penguins
+
+ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
+  geom_point(  
+    pch=21,  
+*   color="black",fill="lightgray"
+  )   
+```
+]
+ 
+.right-panel-BivEDAQPlot-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+&lt;img src="Penguins_files/figure-html/BivEDAQPlot_non_seq_5_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-BivEDAQPlot-non_seq[
+
+```r
+head(d_chin)  
+
+## Relationship between body mass and flipper length for Chinstrap Penguins
+
+ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
+  geom_point(  
+    pch=21,  
+    color="black",fill="lightgray"  
+  ) +  
+* labs(x="Flipper Length (mm)",y="Body Mass (g)")
+```
+]
+ 
+.right-panel-BivEDAQPlot-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+&lt;img src="Penguins_files/figure-html/BivEDAQPlot_non_seq_6_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-BivEDAQPlot-non_seq[
+
+```r
+head(d_chin)  
+
+## Relationship between body mass and flipper length for Chinstrap Penguins
+
+ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
+  geom_point(  
+    pch=21,  
+    color="black",fill="lightgray"  
+  ) +  
+  labs(x="Flipper Length (mm)",y="Body Mass (g)") +  
+* theme_NCStats()
+```
+]
+ 
+.right-panel-BivEDAQPlot-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+&lt;img src="Penguins_files/figure-html/BivEDAQPlot_non_seq_7_output-1.png" width="100%" /&gt;
+]
+
+&lt;style&gt;
+.left-panel-BivEDAQPlot-non_seq {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-BivEDAQPlot-non_seq {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-BivEDAQPlot-non_seq {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+name: RBivEDAC
+
+## Bivariate EDA - Categorical
+### Frequency Tables
+
+- Computed with `xtabs()`
+  - Uses formula of the form `~cvarRow+cvarCol` as first argument.
+  - Must include data.frame name in `data=` argument.
+  - Assign (save) result to object.
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-BivEDACsum-user[
+
+```r
+*head(d)
+
+## Species composition by island
+```
+]
+ 
+.right-panel-BivEDACsum-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-BivEDACsum-user[
+
+```r
+head(d)  
+
+## Species composition by island
+
+*( freq2 &lt;- xtabs(~species+island,data=d) )
+```
+]
+ 
+.right-panel-BivEDACsum-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+```
+           island
+species     Biscoe Dream Torgersen
+  Adelie        44    56        52
+  Chinstrap      0    68         0
+  Gentoo       124     0         0
+```
+]
+
+&lt;style&gt;
+.left-panel-BivEDACsum-user {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-BivEDACsum-user {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-BivEDACsum-user {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+## Bivariate EDA - Categorical
+### Percentage Tables
+
+- Computed with `percTable()`
+  - Uses saved `xtabs()` object as first argument.
+  - Use `margin=1` to make row percentages.
+  - Use `margin=2` to make column percentages.
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-BivEDACsump-user[
+
+```r
+## Frequency table
+*freq2
+```
+]
+ 
+.right-panel-BivEDACsump-user[
+
+```
+           island
+species     Biscoe Dream Torgersen
+  Adelie        44    56        52
+  Chinstrap      0    68         0
+  Gentoo       124     0         0
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-BivEDACsump-user[
+
+```r
+## Frequency table
+freq2  
+
+## Total percentages table
+*percTable(freq2)
+```
+]
+ 
+.right-panel-BivEDACsump-user[
+
+```
+           island
+species     Biscoe Dream Torgersen
+  Adelie        44    56        52
+  Chinstrap      0    68         0
+  Gentoo       124     0         0
+```
+
+```
+           island
+species     Biscoe Dream Torgersen   Sum
+  Adelie      12.8  16.3      15.1  44.2
+  Chinstrap    0.0  19.8       0.0  19.8
+  Gentoo      36.0   0.0       0.0  36.0
+  Sum         48.8  36.1      15.1 100.0
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-BivEDACsump-user[
+
+```r
+## Frequency table
+freq2  
+
+## Total percentages table
+percTable(freq2)  
+
+## Row percentages table
+*percTable(freq2,margin=1)
+```
+]
+ 
+.right-panel-BivEDACsump-user[
+
+```
+           island
+species     Biscoe Dream Torgersen
+  Adelie        44    56        52
+  Chinstrap      0    68         0
+  Gentoo       124     0         0
+```
+
+```
+           island
+species     Biscoe Dream Torgersen   Sum
+  Adelie      12.8  16.3      15.1  44.2
+  Chinstrap    0.0  19.8       0.0  19.8
+  Gentoo      36.0   0.0       0.0  36.0
+  Sum         48.8  36.1      15.1 100.0
+```
+
+```
+           island
+species     Biscoe Dream Torgersen   Sum
+  Adelie      28.9  36.8      34.2  99.9
+  Chinstrap    0.0 100.0       0.0 100.0
+  Gentoo     100.0   0.0       0.0 100.0
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-BivEDACsump-user[
+
+```r
+## Frequency table
+freq2  
+
+## Total percentages table
+percTable(freq2)  
+
+## Row percentages table
+percTable(freq2,margin=1)  
+
+## Column percentages table
+*percTable(freq2,margin=2)
+```
+]
+ 
+.right-panel-BivEDACsump-user[
+
+```
+           island
+species     Biscoe Dream Torgersen
+  Adelie        44    56        52
+  Chinstrap      0    68         0
+  Gentoo       124     0         0
+```
+
+```
+           island
+species     Biscoe Dream Torgersen   Sum
+  Adelie      12.8  16.3      15.1  44.2
+  Chinstrap    0.0  19.8       0.0  19.8
+  Gentoo      36.0   0.0       0.0  36.0
+  Sum         48.8  36.1      15.1 100.0
+```
+
+```
+           island
+species     Biscoe Dream Torgersen   Sum
+  Adelie      28.9  36.8      34.2  99.9
+  Chinstrap    0.0 100.0       0.0 100.0
+  Gentoo     100.0   0.0       0.0 100.0
+```
+
+```
+           island
+species     Biscoe Dream Torgersen
+  Adelie      26.2  45.2     100.0
+  Chinstrap    0.0  54.8       0.0
+  Gentoo      73.8   0.0       0.0
+  Sum        100.0 100.0     100.0
+```
+]
+
+&lt;style&gt;
+.left-panel-BivEDACsump-user {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-BivEDACsump-user {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-BivEDACsump-user {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+---
+
+class: inverse, center, middle
+
+---
+
+class: inverse, center, middle
+
+name: RRegression
+
+# Linear Regression in R
+
+---
+
+## Fitting Linear Regression
+
+- Computed with `lm()`
+  - Uses formula of the form `qvarResp+qvarExplan` as first argument.
+  - Must include data.frame name in `data=` argument.
+  - Assign (save) result to object.
+
+--
+- Use `rSquared()` to compute r&lt;sup&gt;2&lt;/sup&gt; value.
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-RegressionSum-user[
+
+```r
+*head(d_chin)
+
+## Can body mass be predicted from flipper length for Chinstraps
+```
+]
+ 
+.right-panel-RegressionSum-user[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-RegressionSum-user[
+
+```r
+head(d_chin)  
+
+## Can body mass be predicted from flipper length for Chinstraps
+
+*( slr &lt;- lm(body_mass_g~flipper_length_mm,data=d_chin) )
+```
+]
+ 
+.right-panel-RegressionSum-user[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+```
+Coefficients:
+      (Intercept)  flipper_length_mm  
+         -3037.20              34.57  
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-RegressionSum-user[
+
+```r
+head(d_chin)  
+
+## Can body mass be predicted from flipper length for Chinstraps
+
+( slr &lt;- lm(body_mass_g~flipper_length_mm,data=d_chin) )  
+*rSquared(slr)
+```
+]
+ 
+.right-panel-RegressionSum-user[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+```
+Coefficients:
+      (Intercept)  flipper_length_mm  
+         -3037.20              34.57  
+```
+
+```
+[1] 0.4115985
+```
+]
+
+&lt;style&gt;
+.left-panel-RegressionSum-user {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-RegressionSum-user {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-RegressionSum-user {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+## Showing Best-Fit Line
+
+- First make a scatterplot as usual
+
+--
+- Second add line with `geom_smooth(method="lm",se=FALSE)`
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-RegressionPlot-non_seq[
+
+```r
+head(d_chin)  
+
+## Can body mass be predicted from flipper length for Chinstraps
+
+ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
+  geom_point(pch=21,color="black",fill="lightgray") +  
+  labs(x="Flipper Length (mm)",y="Body Mass (g)") +  
+  theme_NCStats()   
+```
+]
+ 
+.right-panel-RegressionPlot-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+&lt;img src="Penguins_files/figure-html/RegressionPlot_non_seq_1_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-RegressionPlot-non_seq[
+
+```r
+head(d_chin)  
+
+## Can body mass be predicted from flipper length for Chinstraps
+
+ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
+  geom_point(pch=21,color="black",fill="lightgray") +  
+  labs(x="Flipper Length (mm)",y="Body Mass (g)") +  
+  theme_NCStats() +  
+* geom_smooth(
+* )
+```
+]
+ 
+.right-panel-RegressionPlot-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+&lt;img src="Penguins_files/figure-html/RegressionPlot_non_seq_2_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-RegressionPlot-non_seq[
+
+```r
+head(d_chin)  
+
+## Can body mass be predicted from flipper length for Chinstraps
+
+ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
+  geom_point(pch=21,color="black",fill="lightgray") +  
+  labs(x="Flipper Length (mm)",y="Body Mass (g)") +  
+  theme_NCStats() +  
+  geom_smooth(  
+*   method="lm",
+  )  
+```
+]
+ 
+.right-panel-RegressionPlot-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+&lt;img src="Penguins_files/figure-html/RegressionPlot_non_seq_3_output-1.png" width="100%" /&gt;
+]
+
+---
+count: false
+ 
+
+.left-panel-RegressionPlot-non_seq[
+
+```r
+head(d_chin)  
+
+## Can body mass be predicted from flipper length for Chinstraps
+
+ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
+  geom_point(pch=21,color="black",fill="lightgray") +  
+  labs(x="Flipper Length (mm)",y="Body Mass (g)") +  
+  theme_NCStats() +  
+  geom_smooth(  
+    method="lm",  
+*   se=FALSE
+  )  
+```
+]
+ 
+.right-panel-RegressionPlot-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+&lt;img src="Penguins_files/figure-html/RegressionPlot_non_seq_4_output-1.png" width="100%" /&gt;
+]
+
+&lt;style&gt;
+.left-panel-RegressionPlot-non_seq {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-RegressionPlot-non_seq {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-RegressionPlot-non_seq {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+---
+
+class: inverse, center, middle
+
+---
+
+class: inverse, center, middle
+
+name: Rttests
+
+# t-Tests in R
+
+---
+
+name: Rttests1
+
+## 1-Sample t-Test
+
+- Computed with `t.test()`
+  - Use formula of form `~qvar` as first argument.
+  - Must include data.frame name in `data=` argument.
+
+--
+  - Assign value in H&lt;sub&gt;0&lt;/sub&gt; to `mu=`.
+  - Choose H&lt;sub&gt;A&lt;/sub&gt; direction in `alt=` with `"two.sided"` for "not equals", `"less"` for "less than", or `"greater"` for "greater than".
+  - Set confidence level (1-&amp;alpha;) in `conf.level=`
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-ttest1-non_seq[
+
+```r
+head(d_chin)  
+
+## Is mean flipper length of Chinstrap Penguins
+##  greater than 190 mm.  Use alpha=0.01
+```
+]
+ 
+.right-panel-ttest1-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-ttest1-non_seq[
+
+```r
+head(d_chin)  
+
+## Is mean flipper length of Chinstrap Penguins
+##  greater than 190 mm.  Use alpha=0.01
+
+*t.test(~flipper_length_mm,data=d_chin
+*      )
+```
+]
+ 
+.right-panel-ttest1-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+```
+One Sample t-test with flipper_length_mm 
+t = 226.4198, df = 67, p-value &lt; 2.2e-16
+alternative hypothesis: true mean is not equal to 0 
+95 percent confidence interval:
+ 194.0972 197.5498 
+sample estimates:
+mean of x 
+ 195.8235 
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-ttest1-non_seq[
+
+```r
+head(d_chin)  
+
+## Is mean flipper length of Chinstrap Penguins
+##  greater than 190 mm.  Use alpha=0.01
+
+t.test(~flipper_length_mm,data=d_chin  
+*      ,mu=190
+       )  
+```
+]
+ 
+.right-panel-ttest1-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+```
+One Sample t-test with flipper_length_mm 
+t = 6.7334, df = 67, p-value = 4.531e-09
+alternative hypothesis: true mean is not equal to 190 
+95 percent confidence interval:
+ 194.0972 197.5498 
+sample estimates:
+mean of x 
+ 195.8235 
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-ttest1-non_seq[
+
+```r
+head(d_chin)  
+
+## Is mean flipper length of Chinstrap Penguins
+##  greater than 190 mm.  Use alpha=0.01
+
+t.test(~flipper_length_mm,data=d_chin  
+       ,mu=190  
+*      ,alt="greater"
+       )  
+```
+]
+ 
+.right-panel-ttest1-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+```
+One Sample t-test with flipper_length_mm 
+t = 6.7334, df = 67, p-value = 2.265e-09
+alternative hypothesis: true mean is greater than 190 
+95 percent confidence interval:
+ 194.381     Inf 
+sample estimates:
+mean of x 
+ 195.8235 
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-ttest1-non_seq[
+
+```r
+head(d_chin)  
+
+## Is mean flipper length of Chinstrap Penguins
+##  greater than 190 mm.  Use alpha=0.01
+
+t.test(~flipper_length_mm,data=d_chin  
+       ,mu=190  
+       ,alt="greater"  
+*      ,conf.level=0.99
+       )  
+```
+]
+ 
+.right-panel-ttest1-non_seq[
+
+```
+    species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1 Chinstrap  Dream           46.5          17.9               192        3500 female
+2 Chinstrap  Dream           50.0          19.5               196        3900   male
+3 Chinstrap  Dream           51.3          19.2               193        3650   male
+4 Chinstrap  Dream           45.4          18.7               188        3525 female
+5 Chinstrap  Dream           52.7          19.8               197        3725   male
+6 Chinstrap  Dream           45.2          17.8               198        3950 female
+```
+
+```
+One Sample t-test with flipper_length_mm 
+t = 6.7334, df = 67, p-value = 2.265e-09
+alternative hypothesis: true mean is greater than 190 
+99 percent confidence interval:
+ 193.7623      Inf 
+sample estimates:
+mean of x 
+ 195.8235 
+```
+]
+
+&lt;style&gt;
+.left-panel-ttest1-non_seq {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-ttest1-non_seq {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-ttest1-non_seq {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+name: Rttests2
+
+## Levene's Test
+
+- Computed with `levenesTtest()`
+  - Use form of form `qvar~cvar` as first argument.
+  - Must include data.frame name in `data=` argument.
+
+--
+  - Set `var.equal=TRUE` if Levene's Test indicates that variances are equal.
+  
+--
+  - Assign value in H&lt;sub&gt;0&lt;/sub&gt; to `mu=` (usually 0).
+  - Choose H&lt;sub&gt;A&lt;/sub&gt; direction in `alt=` with `"two.sided"` for "not equals", `"less"` for "less than", or `"greater"` for "greater than".
+  - Set confidence level (1-&amp;alpha;) in `conf.level=`
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-LevenesTest-user[
+
+```r
+*head(d_chingen)
+
+## Is mean flipper length smaller for Chinstrap
+##   than Gentoo Penguins. Use alpha=0.10.
+```
+]
+ 
+.right-panel-LevenesTest-user[
+
+```
+  species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Gentoo Biscoe           46.1          13.2               211        4500 female
+2  Gentoo Biscoe           50.0          16.3               230        5700   male
+3  Gentoo Biscoe           48.7          14.1               210        4450 female
+4  Gentoo Biscoe           50.0          15.2               218        5700   male
+5  Gentoo Biscoe           47.6          14.5               215        5400   male
+6  Gentoo Biscoe           46.5          13.5               210        4550 female
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-LevenesTest-user[
+
+```r
+head(d_chingen)  
+
+## Is mean flipper length smaller for Chinstrap
+##   than Gentoo Penguins. Use alpha=0.10.
+
+*levenesTest(flipper_length_mm~species,data=d_chingen)
+```
+]
+ 
+.right-panel-LevenesTest-user[
+
+```
+  species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Gentoo Biscoe           46.1          13.2               211        4500 female
+2  Gentoo Biscoe           50.0          16.3               230        5700   male
+3  Gentoo Biscoe           48.7          14.1               210        4450 female
+4  Gentoo Biscoe           50.0          15.2               218        5700   male
+5  Gentoo Biscoe           47.6          14.5               215        5400   male
+6  Gentoo Biscoe           46.5          13.5               210        4550 female
+```
+
+```
+Levene's Test for Homogeneity of Variance (center = median)
+       Df F value Pr(&gt;F)
+group   1  0.2187 0.6406
+      189               
+```
+]
+
+&lt;style&gt;
+.left-panel-LevenesTest-user {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-LevenesTest-user {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-LevenesTest-user {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+## 2-Sample t-Test
+
+- Computed with `t.test()`
+  - Use form of form `qvar~cvar` as first argument.
+  - Must include data.frame name in `data=` argument.
+
+--
+  - Set `var.equal=TRUE` if Levene's Test indicates that variances are equal.
+  
+--
+  - Assign value in H&lt;sub&gt;0&lt;/sub&gt; to `mu=` (usually 0).
+  - Choose H&lt;sub&gt;A&lt;/sub&gt; direction in `alt=` with `"two.sided"` for "not equals", `"less"` for "less than", or `"greater"` for "greater than".
+  - Set confidence level (1-&amp;alpha;) in `conf.level=`
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-ttest2-non_seq[
+
+```r
+head(d_chingen)  
+
+## Is mean flipper length smaller for Chinstrap
+##   than Gentoo Penguins. Use alpha=0.10.
+```
+]
+ 
+.right-panel-ttest2-non_seq[
+
+```
+  species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Gentoo Biscoe           46.1          13.2               211        4500 female
+2  Gentoo Biscoe           50.0          16.3               230        5700   male
+3  Gentoo Biscoe           48.7          14.1               210        4450 female
+4  Gentoo Biscoe           50.0          15.2               218        5700   male
+5  Gentoo Biscoe           47.6          14.5               215        5400   male
+6  Gentoo Biscoe           46.5          13.5               210        4550 female
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-ttest2-non_seq[
+
+```r
+head(d_chingen)  
+
+## Is mean flipper length smaller for Chinstrap
+##   than Gentoo Penguins. Use alpha=0.10.
+
+*t.test(flipper_length_mm~species,data=d_chingen
+*      )
+```
+]
+ 
+.right-panel-ttest2-non_seq[
+
+```
+  species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Gentoo Biscoe           46.1          13.2               211        4500 female
+2  Gentoo Biscoe           50.0          16.3               230        5700   male
+3  Gentoo Biscoe           48.7          14.1               210        4450 female
+4  Gentoo Biscoe           50.0          15.2               218        5700   male
+5  Gentoo Biscoe           47.6          14.5               215        5400   male
+6  Gentoo Biscoe           46.5          13.5               210        4550 female
+```
+
+```
+Welch Two Sample t-test with flipper_length_mm by species 
+t = -20.4633, df = 127.608, p-value &lt; 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0 
+95 percent confidence interval:
+ -23.42923 -19.29770 
+sample estimates:
+mean in group Chinstrap    mean in group Gentoo 
+               195.8235                217.1870 
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-ttest2-non_seq[
+
+```r
+head(d_chingen)  
+
+## Is mean flipper length smaller for Chinstrap
+##   than Gentoo Penguins. Use alpha=0.10.
+
+t.test(flipper_length_mm~species,data=d_chingen  
+*      ,var.equal=TRUE
+       )  
+```
+]
+ 
+.right-panel-ttest2-non_seq[
+
+```
+  species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Gentoo Biscoe           46.1          13.2               211        4500 female
+2  Gentoo Biscoe           50.0          16.3               230        5700   male
+3  Gentoo Biscoe           48.7          14.1               210        4450 female
+4  Gentoo Biscoe           50.0          15.2               218        5700   male
+5  Gentoo Biscoe           47.6          14.5               215        5400   male
+6  Gentoo Biscoe           46.5          13.5               210        4550 female
+```
+
+```
+ Two Sample t-test with flipper_length_mm by species 
+t = -21.0329, df = 189, p-value &lt; 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0 
+95 percent confidence interval:
+ -23.36706 -19.35987 
+sample estimates:
+mean in group Chinstrap    mean in group Gentoo 
+               195.8235                217.1870 
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-ttest2-non_seq[
+
+```r
+head(d_chingen)  
+
+## Is mean flipper length smaller for Chinstrap
+##   than Gentoo Penguins. Use alpha=0.10.
+
+t.test(flipper_length_mm~species,data=d_chingen  
+       ,var.equal=TRUE  
+*      ,mu=0
+       )  
+```
+]
+ 
+.right-panel-ttest2-non_seq[
+
+```
+  species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Gentoo Biscoe           46.1          13.2               211        4500 female
+2  Gentoo Biscoe           50.0          16.3               230        5700   male
+3  Gentoo Biscoe           48.7          14.1               210        4450 female
+4  Gentoo Biscoe           50.0          15.2               218        5700   male
+5  Gentoo Biscoe           47.6          14.5               215        5400   male
+6  Gentoo Biscoe           46.5          13.5               210        4550 female
+```
+
+```
+ Two Sample t-test with flipper_length_mm by species 
+t = -21.0329, df = 189, p-value &lt; 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0 
+95 percent confidence interval:
+ -23.36706 -19.35987 
+sample estimates:
+mean in group Chinstrap    mean in group Gentoo 
+               195.8235                217.1870 
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-ttest2-non_seq[
+
+```r
+head(d_chingen)  
+
+## Is mean flipper length smaller for Chinstrap
+##   than Gentoo Penguins. Use alpha=0.10.
+
+t.test(flipper_length_mm~species,data=d_chingen  
+       ,var.equal=TRUE  
+       ,mu=0  
+*      ,alt="less"
+       )  
+```
+]
+ 
+.right-panel-ttest2-non_seq[
+
+```
+  species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Gentoo Biscoe           46.1          13.2               211        4500 female
+2  Gentoo Biscoe           50.0          16.3               230        5700   male
+3  Gentoo Biscoe           48.7          14.1               210        4450 female
+4  Gentoo Biscoe           50.0          15.2               218        5700   male
+5  Gentoo Biscoe           47.6          14.5               215        5400   male
+6  Gentoo Biscoe           46.5          13.5               210        4550 female
+```
+
+```
+ Two Sample t-test with flipper_length_mm by species 
+t = -21.0329, df = 189, p-value &lt; 2.2e-16
+alternative hypothesis: true difference in means is less than 0 
+95 percent confidence interval:
+      -Inf -19.68453 
+sample estimates:
+mean in group Chinstrap    mean in group Gentoo 
+               195.8235                217.1870 
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-ttest2-non_seq[
+
+```r
+head(d_chingen)  
+
+## Is mean flipper length smaller for Chinstrap
+##   than Gentoo Penguins. Use alpha=0.10.
+
+t.test(flipper_length_mm~species,data=d_chingen  
+       ,var.equal=TRUE  
+       ,mu=0  
+       ,alt="less"  
+*      ,conf.level=0.90
+       )  
+```
+]
+ 
+.right-panel-ttest2-non_seq[
+
+```
+  species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Gentoo Biscoe           46.1          13.2               211        4500 female
+2  Gentoo Biscoe           50.0          16.3               230        5700   male
+3  Gentoo Biscoe           48.7          14.1               210        4450 female
+4  Gentoo Biscoe           50.0          15.2               218        5700   male
+5  Gentoo Biscoe           47.6          14.5               215        5400   male
+6  Gentoo Biscoe           46.5          13.5               210        4550 female
+```
+
+```
+ Two Sample t-test with flipper_length_mm by species 
+t = -21.0329, df = 189, p-value &lt; 2.2e-16
+alternative hypothesis: true difference in means is less than 0 
+90 percent confidence interval:
+      -Inf -20.05721 
+sample estimates:
+mean in group Chinstrap    mean in group Gentoo 
+               195.8235                217.1870 
+```
+]
+
+&lt;style&gt;
+.left-panel-ttest2-non_seq {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-ttest2-non_seq {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-ttest2-non_seq {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+
+---
+
+class: inverse, center, middle
+
+---
+
+class: inverse, center, middle
+
+name: RChi
+
+# Chi-square Tests in R
+
+---
+
+name: RChiChi
+
+## Chi-square Test
+
+- First, use `xtabs()` to make a two-way observed frequency table.
+  - Grouping variable should be in rows.
+  - Response variable should be in columns.
+
+--
+- Second, compute chi-square results with `chisq.test()`
+  - Table from `xtabs()` is first argument.
+  - Use `correct=FALSE` to "turn-off" continuity correction.
+  - Assign (save) result to an object.
+
+--
+  - Obtain expected table by appending `$expected` to object name.
+
+--
+  - Construct a row-percentages table to examine differences.
+
+---
+
+
+
+count: false
+ 
+
+.left-panel-chi-user[
+
+```r
+*head(d)
+
+## Does sex ratio differ among species of Penguins.
+##  Use alpha=0.01
+```
+]
+ 
+.right-panel-chi-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-chi-user[
+
+```r
+head(d)  
+
+## Does sex ratio differ among species of Penguins.
+##  Use alpha=0.01
+
+
+*( peng_sex &lt;- xtabs(~species+sex,data=d) )
+```
+]
+ 
+.right-panel-chi-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+```
+           sex
+species     female male
+  Adelie        73   73
+  Chinstrap     34   34
+  Gentoo        58   61
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-chi-user[
+
+```r
+head(d)  
+
+## Does sex ratio differ among species of Penguins.
+##  Use alpha=0.01
+
+
+( peng_sex &lt;- xtabs(~species+sex,data=d) )  
+
+
+*( chi_ps &lt;- chisq.test(peng_sex,correct=FALSE) )
+```
+]
+ 
+.right-panel-chi-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+```
+           sex
+species     female male
+  Adelie        73   73
+  Chinstrap     34   34
+  Gentoo        58   61
+```
+
+```
+Pearson's Chi-squared test with peng_sex 
+X-squared = 0.0486, df = 2, p-value = 0.976
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-chi-user[
+
+```r
+head(d)  
+
+## Does sex ratio differ among species of Penguins.
+##  Use alpha=0.01
+
+
+( peng_sex &lt;- xtabs(~species+sex,data=d) )  
+
+
+( chi_ps &lt;- chisq.test(peng_sex,correct=FALSE) )  
+
+
+*chi_ps$expected
+```
+]
+ 
+.right-panel-chi-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+```
+           sex
+species     female male
+  Adelie        73   73
+  Chinstrap     34   34
+  Gentoo        58   61
+```
+
+```
+Pearson's Chi-squared test with peng_sex 
+X-squared = 0.0486, df = 2, p-value = 0.976
+```
+
+```
+           sex
+species       female     male
+  Adelie    72.34234 73.65766
+  Chinstrap 33.69369 34.30631
+  Gentoo    58.96396 60.03604
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-chi-user[
+
+```r
+head(d)  
+
+## Does sex ratio differ among species of Penguins.
+##  Use alpha=0.01
+
+
+( peng_sex &lt;- xtabs(~species+sex,data=d) )  
+
+
+( chi_ps &lt;- chisq.test(peng_sex,correct=FALSE) )  
+
+
+chi_ps$expected  
+
+
+*percTable(peng_sex,margin=1)
+```
+]
+ 
+.right-panel-chi-user[
+
+```
+  species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Adelie Torgersen           39.1          18.7               181        3750   male
+2  Adelie Torgersen           39.5          17.4               186        3800 female
+3  Adelie Torgersen           40.3          18.0               195        3250 female
+4  Adelie Torgersen             NA            NA                NA          NA   &lt;NA&gt;
+5  Adelie Torgersen           36.7          19.3               193        3450 female
+6  Adelie Torgersen           39.3          20.6               190        3650   male
+```
+
+```
+           sex
+species     female male
+  Adelie        73   73
+  Chinstrap     34   34
+  Gentoo        58   61
+```
+
+```
+Pearson's Chi-squared test with peng_sex 
+X-squared = 0.0486, df = 2, p-value = 0.976
+```
+
+```
+           sex
+species       female     male
+  Adelie    72.34234 73.65766
+  Chinstrap 33.69369 34.30631
+  Gentoo    58.96396 60.03604
+```
+
+```
+           sex
+species     female  male   Sum
+  Adelie      50.0  50.0 100.0
+  Chinstrap   50.0  50.0 100.0
+  Gentoo      48.7  51.3 100.0
+```
+]
+
+&lt;style&gt;
+.left-panel-chi-user {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-chi-user {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-chi-user {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+name: RChiGOF
+
+## Goodness-of-Fit Test
+
+- Make an expected table with `c()`.
+
+--
+- Use `xtabs()` to make an observed frequency table.
+
+--
+- Compute GOF results with `chisq.test()`
+  - Observed table from `xtabs()` is first argument.
+  - Expected table from `c()` in `p=` argument.
+  - Use `rescale.p=TRUE` to assure proper expected values.
+  - Use `correct=FALSE` to "turn-off" continuity correction.
+  - Assign (save) result to an object.
+
+--
+  - Obtain expected table by appending `$expected` to object name.
+
+---
+
+
+class: inverse, center, middle
+
+---
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:10",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -30,7 +30,7 @@ css: /css/modules.css
 Use the materials below to answer the questions on [this preparation guide](Prep/RFilter). [*Problems with videos? [See this FAQ](../resources/FAQ/FAQs/videos){:target="_blank"}.*]
 
 * [Reading](bookR/RFilter.html)
-* [![Vimeo](../img/dhovid.png) Subset data.frame with filterD](https://vimeo.com/user45324800/filterd){:target="_blank"} [6 mins] ... [corresponding script](HO/RFilter_RHO.html){:target="_blank"}
+* [![Vimeo](../img/dhovid.png) Subset data.frame with filterD](){:target="_blank"} [6 mins] ... [corresponding resource](HO/Penguins.html#RFilter){:target="_blank"}
 
 ----
 
@@ -43,6 +43,6 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 ## Archived Materials
 
-* none
+* [![Vimeo](../img/dhovid.png) Subset data.frame with filterD](https://vimeo.com/user45324800/filterd){:target="_blank"} [6 mins]
 
 ----

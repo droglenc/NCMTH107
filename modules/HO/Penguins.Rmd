@@ -1,0 +1,897 @@
+---
+title: "R for MTH107"
+author: "`r paste('Derek Ogle,',format(Sys.time(),'%B %Y'),sep=' ')`"
+output:
+  xaringan::moon_reader:
+    seal: false
+    lib_dir: zlibs
+    css: ["zlibs/xaringan-themer.css", "hygge", "ninjutsu"]
+    nature:
+      ratio: 16:10
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r purler, eval=FALSE, echo=FALSE}
+## Use Knit button to make actual slides.
+## Makes (Ctrl-S & Ctrl-Alt-C) a script ... will need to edit.
+fnm <- "Penguins"
+FSA::purl2(file.path(here::here(),"modules/HO",paste0(fnm,".Rmd")),
+           moreItems=c("source","setwd","fnm","opts_chunk","flipbookr","cache","head",
+                       "include_graphics","options","splitPerc","leftAssign"))
+```
+
+```{r setup, include = FALSE}
+source("zzzflipbook_settings.R")
+```
+
+class: inverse, middle
+
+# R for MTH107
+
+- [Getting Data into R](#RData)
+- [Filtering Data in R](#RFilter)
+- [Univariate EDA in R](#RUnivEDA)
+  - [Quantitative](#RUnivEDAQ)
+  - [Categorical](#RUnivEDAC)
+  - [Quantitative by Group](#RUnivEDAQC)
+- [Bivariate EDA in R](#RBivEDA)
+  - [Quantitative](#RBivEDAQ)
+  - [Categorical](#RBivEDAC)
+- [Linear Regression in R](#RRegression)
+- [t-Tests in R](#Rttests)
+  - [1-sample t-Test in R](#Rttests1)
+  - [2-sample t-Test in R](#Rttests2)
+- [Chi-square in R](#RChi)
+  - [Chi-square Test in R](#RChiChi)
+  - [Goodness-of-Fit Test in R](#RChiGOF)
+
+---
+
+class: inverse, center, middle
+
+name: RData
+
+## First Things First!!
+
+### Load Important Packages
+
+---
+
+```{r packages, include=FALSE, message=TRUE, warning=TRUE}
+#!# Loading important packages ... must do every time
+library(NCStats)
+library(ggplot2)
+```
+
+`r chunk_reveal("packages",break_type="auto",widths=widths,title="# Load Important Packages")`
+
+
+---
+
+class: inverse, center, middle
+
+---
+
+class: inverse, center, middle
+
+# Loading Data into R
+
+---
+
+## Introducing the Data
+
+- Size (bill, flipper, weight) of three species of Penguins from three islands in Antarctica.
+
+--
+- Collected by [Dr. Kristen Gorman](https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php) and the [Palmer Station, Antarctica LTER](https://pal.lternet.edu/).
+
+```{r echo=FALSE, out.width="33%", fig.align="center"}
+knitr::include_graphics("https://www.uaf.edu/cfos/images/people/faculty_prof/gorman-kristen-4x5.jpg")
+```
+
+---
+
+## Introducing the Data
+
+- Size (bill, flipper, weight) of three species of Penguins from three islands in Antarctica.
+
+--
+- Collated by [Allison Horst](https://www.allisonhorst.com/).
+
+```{r echo=FALSE, out.width="67%", fig.align="center"}
+knitr::include_graphics("https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png")
+```
+
+---
+
+## Loading Data into R
+
+1. Download or save data (CSV file) to your computer.
+
+--
+1. Start an R script with code for important packages.
+
+--
+1. Save script in same folder as data.
+
+--
+1. Use `Session`, `Set working directory`, `To source file location` to set the working directory (where the data file is located).
+
+--
+1. Copy resultant `setwd()` from console and paste into script.
+
+--
+1. Use `read.csv()` with filename in quotes to load data into R.
+  - Should be assigned to a short object name (what data is called in R).
+
+--
+1. Examine data object.
+  - Use `str()` to see the structure.
+  - Use `peek()` to see a subset of rows/individuals.
+
+---
+
+```{r echo=FALSE, include=FALSE}
+#!# Load and Prep Data
+```
+```{r loaddata, include=FALSE}
+#!# Set to your OWN working directory ... this is Derek's computer.
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/HO") #BREAK
+d <- read.csv("penguins.csv") #BREAK
+str(d) #BREAK
+peek(d) #BREAK
+```
+
+`r chunk_reveal("loaddata",break_type="user",widths=widths,title="## Loading Data into R")`
+
+
+---
+
+class: inverse, center, middle
+
+
+---
+
+class: inverse, center, middle
+
+name: RFilter
+
+# Filtering Data
+
+---
+
+## Filtering Data
+
+- Create a subset of a larger data.frame based on a condition or conditions.
+
+--
+- Use `filterD()`
+  - First argument is larger data.frame.
+  - Following arguments are conditions.
+
+---
+
+## Filtering Data
+
+```{r echo=FALSE}
+tmp <- data.frame(
+  c('`var==value`','`var!=value`','`var %in% c(value1,value2)`',
+    '`var>value`','`var>=value`','`var<value`','`var<=value`',
+    'condition1,condition2','condition1 | condition2'),
+  c('Rows where `var` **IS equal** to `value`',
+    'Rows where `var` **is NOT equal** to `value`',
+    'Rows where `var` **IS IN** vector of `value`s',
+    'Rows where `var` is **greater than** `value`',
+    'Rows where `var` is **greater than or equal to** `value`',
+    'Rows where `var` is **less than** `value`',
+    'Rows where `var` is **less than or equal to** `value`',
+    'Rows where **BOTH** conditions are true',
+    'Rows where **ONE or BOTH** conditions are true')
+)
+names(tmp) <- c("Comparison Operator",
+                "Rows Returned from Original Data Frame")
+knitr::kable(tmp,label="filterComps",caption="Comparison operators used in `filterD()` and their results.")
+```
+
+---
+
+```{r filter1, include=FALSE}
+head(d)
+unique(d$species)
+
+## Isolate just Chinstrap Penguins
+d_chin <- filterD(d,species=="Chinstrap")
+peek(d_chin)
+```
+
+`r chunk_reveal("filter1",break_type="auto",widths=widths)`
+
+---
+
+```{r filter2, include=FALSE}
+head(d)
+unique(d$species)
+
+## Isolate just Chinstrap and Gentoo Penguins
+#BREAK
+d_chingen <- filterD(d,species %in% c("Chinstrap","Gentoo")) #BREAK
+peek(d_chingen) #BREAK
+```
+
+`r chunk_reveal("filter2",break_type="user",widths=widths)`
+
+---
+
+```{r filter3, include=FALSE}
+head(d)
+
+## Isolate just male Chinstrap Penguins
+#BREAK
+d_chinmale <- filterD(d,species=="Chinstrap",sex=="male") #BREAK
+peek(d_chinmale) #BREAK
+```
+
+`r chunk_reveal("filter3",break_type="user",widths=widths)`
+
+---
+
+```{r filterHvy, include=FALSE}
+head(d)
+
+## Isolate just Penguins with body mass more than 5900 g ... ~13 lbs
+#BREAK
+d_heavy <- filterD(d,body_mass_g>5900) #BREAK
+peek(d_heavy) #BREAK
+```
+
+`r chunk_reveal("filterHvy",break_type="user",widths=widths)`
+
+---
+
+```{r filterBM, include=FALSE}
+head(d)
+
+## Examine just the body mass variable
+#BREAK
+d$body_mass_g
+```
+
+`r chunk_reveal("filterBM",break_type="user",widths=c(35,65,0))`
+
+
+---
+
+class: inverse, center, middle
+
+---
+
+class: inverse, center, middle
+
+name: RUnivEDA
+
+# Univariate EDA in R
+
+---
+
+name: RUnivEDAQ
+
+## Univariate EDA - Quantitative
+### Summary Statistics
+
+- Computed with `Summarize()`
+  - Uses formula of the form `~qvar` as first argument.
+  - Must include data.frame name in `data=` argument.
+  - Optionally set number of decimals with `digits=`.
+
+---
+
+```{r UnivEDAQsum, include=FALSE}
+head(d_chin)
+
+## Distribution of flipper lengths for Chinstrap Penguins
+#BREAK
+Summarize(~flipper_length_mm,data=d_chin,digits=1) #BREAK
+
+## Distribution of bill lengths for Chinstrap Penguins
+#BREAK
+Summarize(~bill_length_mm,data=d_chin,digits=2) #BREAK
+```
+
+`r chunk_reveal("UnivEDAQsum",break_type="user",widths=widths)`
+
+---
+
+## Univariate EDA - Quantitative
+### Histogram
+
+- First, use `ggplot()` to declare data.
+  - Must include data.frame name in `data=` argument.
+  - Set `x=` to variable names in `mapping=aes()`.
+
+--
+- Second, add on `geom_histogram()` with
+  - `binwidth=` to set bin width.
+  - `boundary=0` for start of bins.
+  - `color=` and `fill=` to set bar outline and fill colors.
+
+--
+- Clean up with ...
+  - `labs()` to label axes
+  - `scale_y_continuous(expand=expansion(mult=c(0,0.05)))` to "sit" bars on x-axis, and
+  - `theme_NCStats()` to make look nice.
+
+---
+
+```{r UnivEDAQhist, include=FALSE}
+head(d_chin)
+
+## Distribution of flipper lengths for Chinstrap Penguins
+#BREAK1
+ggplot(data=d_chin,mapping=aes(x=flipper_length_mm)) +#BREAK2
+  geom_histogram(#BREAK3
+    binwidth=5,boundary=0, #BREAK4
+    color="black",fill="lightgray" #BREAK5
+  ) +#BREAK3
+  labs(x="Flipper Length (mm)",y="Frequency of Penguins") + #BREAK6
+  scale_y_continuous(expand=expansion(mult=c(0,0.05))) + #BREAK7
+  theme_NCStats()#BREAK8
+```
+
+`r chunk_reveal("UnivEDAQhist",break_type="non_seq",widths=widths)`
+
+---
+
+name: RUnivEDAC
+
+## Univariate EDA - Categorical
+### Frequency Tables
+
+- Computed with `xtabs()`
+  - Uses formula of the form `~cvar` as first argument.
+  - Must include data.frame name in `data=` argument.
+  - Assign (save) result to object.
+
+---
+
+```{r UnivEDACsum, include=FALSE}
+head(d)
+
+## Species composition
+#BREAK
+( freq <- xtabs(~species,data=d) )
+```
+
+`r chunk_reveal("UnivEDACsum",break_type="user",widths=widths)`
+
+---
+
+## Univariate EDA - Categorical
+### Percentage Tables
+
+- Computed with `percTable()`
+  - Uses saved `xtabs()` object as first argument.
+
+---
+
+```{r UnivEDACsump, include=FALSE}
+freq #BREAK
+percTable(freq)
+```
+
+`r chunk_reveal("UnivEDACsump",break_type="user",widths=widths)`
+
+---
+
+## Univariate EDA - Categorical
+### Bar Chart
+
+- First, use `ggplot()` to declare data.
+  - Must include data.frame name in `data=` argument.
+  - Set `x=` to variable names in `mapping=aes()`.
+
+--
+- Second, add on `geom_bar()` with
+  - `color=` and `fill=` to set bar outline and fill colors.
+
+--
+- Clean up with ...
+  - `labs()` to label axes
+  - `scale_y_continuous(expand=expansion(mult=c(0,0.05)))` to "sit" bars on x-axis, and
+  - `theme_NCStats()` to make look nice.
+
+---
+
+```{r UnivEDACbar, include=FALSE}
+head(d)
+
+#BREAK1
+## Species composition
+ggplot(data=d,mapping=aes(x=species)) + #BREAK2
+  geom_bar( #BREAK3
+    color="black",fill="lightgray" #BREAK4
+  ) + #BREAK3
+  labs(x="Species",y="Frequency of Penguins") + #BREAK5
+  scale_y_continuous(expand=expansion(mult=c(0,0.05))) + #BREAK6
+  theme_NCStats() #BREAK7
+```
+
+`r chunk_reveal("UnivEDACbar",break_type="non_seq",widths=widths)`
+
+---
+
+name: RUnivEDAQC
+
+## Univariate EDA - Quant by Groups
+### Summary Statistics
+
+- Computed with `Summarize()`
+  - Uses formula of the form `qvar~cvar` as first argument.
+  - Must include data.frame name in `data=` argument.
+  - Optionally set number of decimals with `digits=`.
+
+---
+
+```{r UnivEDAQsum2, include=FALSE}
+head(d)
+
+## Distribution of flipper lengths by species
+#BREAK
+Summarize(flipper_length_mm~species,data=d,digits=1)
+```
+
+`r chunk_reveal("UnivEDAQsum2",break_type="user",widths=widths)`
+
+---
+
+## Univariate EDA - Quant by Groups
+### Histogram
+
+- First, make histogram exactly as before.
+
+--
+- Separate by groups by adding on `facet_wrap()`
+  - Must include grouping variable name in `vars()` as first argument.
+
+---
+
+```{r UnivEDAQhist2, include=FALSE}
+head(d)
+
+## Distribution of flipper lengths by species
+#BREAK
+ggplot(data=d,mapping=aes(x=flipper_length_mm)) +
+  geom_histogram(binwidth=5,boundary=0,
+                 color="black",fill="lightgray") +
+  labs(x="Flipper Length (mm)",
+       y="Frequency of Penguins") +
+  scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
+  theme_NCStats() + #BREAK
+  facet_wrap(vars(species))
+```
+
+`r chunk_reveal("UnivEDAQhist2",break_type="user",widths=c(40,60,0))`
+
+---
+
+## Univariate EDA - Quant by Groups
+### Boxplots
+
+- First, use `ggplot()` to declare data.
+  - Must include data.frame name in `data=` argument.
+  - Set `x=` (group) and `y=` (quantitative) to variable names in `mapping=aes()`.
+
+--
+- Second, add on `geom_boxplot()` with
+  - `color=` and `fill=` to set point outline and fill colors.
+
+--
+- Clean up with ...
+  - `labs()` to label axes
+  - `theme_NCStats()` to make look nice.
+
+---
+
+```{r UnivEDAQBoxplot, include=FALSE}
+head(d)
+
+## Distribution of flipper lengths by species
+ggplot(data=d,mapping=aes(x=species,y=flipper_length_mm)) + #BREAK2
+  geom_boxplot(color="black",fill="lightgray") + #BREAK3
+  labs(x="Species",y="Flipper Length (mm)") + #BREAK4
+  theme_NCStats() #BREAK5
+```
+
+`r chunk_reveal("UnivEDAQBoxplot",break_type="non_seq",widths=widths)`
+
+
+---
+
+class: inverse, center, middle
+
+---
+
+class: inverse, center, middle
+
+name: RBivEDA
+
+# Bivariate EDA in R
+
+---
+
+name: RBivEDAQ
+
+## Bivariate EDA - Quantitative
+### Correlation Coefficient
+
+- Computed with `corr()`
+  - Uses formula of the form `~qvar1+qvar2` as first argument.
+  - Must include data.frame name in `data=` argument.
+  - include `use="pairwise.complete.obs"` to remove any missing values.
+
+---
+
+```{r BivEDAQsum, include=FALSE}
+head(d_chin)
+
+## Relationship between body mass & flipper length for Chinstrap Penguins
+#BREAK
+corr(~body_mass_g+flipper_length_mm,data=d_chin,
+     use="pairwise.complete.obs")
+```
+
+`r chunk_reveal("BivEDAQsum",break_type="user",widths=widths)`
+
+---
+
+## Bivariate EDA - Quantitative
+### Scatterplot
+
+- First, use `ggplot()` to declare data.
+  - Must include data.frame name in `data=` argument.
+  - Set `x=` and `y=` to variable names in `mapping=aes()`.
+
+--
+- Second, add on `geom_point()` with
+  - `pch=21` to make circle with border and fill color options.
+  - `color=` and `fill=` to set point outline and fill colors.
+
+--
+- Clean up with ...
+  - `labs()` to label axes
+  - `scale_y_continuous(expand=expansion(mult=c(0,0.05)))` to "sit" bars on x-axis, and
+  - `theme_NCStats()` to make look nice.
+
+---
+
+```{r BivEDAQPlot, include=FALSE}
+head(d_chin)
+
+## Relationship between body mass and flipper length for Chinstrap Penguins
+#BREAK1
+ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) + #BREAK2
+  geom_point( #BREAK3
+    pch=21, #BREAK4
+    color="black",fill="lightgray" #BREAK5
+  ) + #BREAK3
+  labs(x="Flipper Length (mm)",y="Body Mass (g)") + #BREAK6
+  theme_NCStats() #BREAK7
+```
+
+`r chunk_reveal("BivEDAQPlot",break_type="non_seq",widths=widths)`
+
+---
+
+name: RBivEDAC
+
+## Bivariate EDA - Categorical
+### Frequency Tables
+
+- Computed with `xtabs()`
+  - Uses formula of the form `~cvarRow+cvarCol` as first argument.
+  - Must include data.frame name in `data=` argument.
+  - Assign (save) result to object.
+
+---
+
+```{r BivEDACsum, include=FALSE}
+head(d)
+
+## Species composition by island
+#BREAK
+( freq2 <- xtabs(~species+island,data=d) )
+```
+
+`r chunk_reveal("BivEDACsum",break_type="user",widths=widths)`
+
+---
+
+## Bivariate EDA - Categorical
+### Percentage Tables
+
+- Computed with `percTable()`
+  - Uses saved `xtabs()` object as first argument.
+  - Use `margin=1` to make row percentages.
+  - Use `margin=2` to make column percentages.
+
+---
+
+```{r BivEDACsump, include=FALSE}
+## Frequency table
+freq2 #BREAK
+
+## Total percentages table
+percTable(freq2) #BREAK
+
+## Row percentages table
+percTable(freq2,margin=1) #BREAK
+
+## Column percentages table
+percTable(freq2,margin=2)
+```
+
+`r chunk_reveal("BivEDACsump",break_type="user",widths=widths)`
+
+
+---
+
+class: inverse, center, middle
+
+---
+
+class: inverse, center, middle
+
+name: RRegression
+
+# Linear Regression in R
+
+---
+
+## Fitting Linear Regression
+
+- Computed with `lm()`
+  - Uses formula of the form `qvarResp+qvarExplan` as first argument.
+  - Must include data.frame name in `data=` argument.
+  - Assign (save) result to object.
+
+--
+- Use `rSquared()` to compute r<sup>2</sup> value.
+
+---
+
+```{r RegressionSum, include=FALSE}
+head(d_chin)
+
+## Can body mass be predicted from flipper length for Chinstraps
+#BREAK
+( slr <- lm(body_mass_g~flipper_length_mm,data=d_chin) ) #BREAK
+rSquared(slr)
+```
+
+`r chunk_reveal("RegressionSum",break_type="user",widths=widths)`
+
+---
+
+## Showing Best-Fit Line
+
+- First make a scatterplot as usual
+
+--
+- Second add line with `geom_smooth(method="lm",se=FALSE)`
+
+---
+
+```{r RegressionPlot, include=FALSE}
+head(d_chin)
+
+## Can body mass be predicted from flipper length for Chinstraps
+#BREAK1
+ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +
+  geom_point(pch=21,color="black",fill="lightgray") +
+  labs(x="Flipper Length (mm)",y="Body Mass (g)") +
+  theme_NCStats() +
+  geom_smooth(#BREAK2
+    method="lm", #BREAK3
+    se=FALSE #BREAK4
+  )#BREAK2
+```
+
+`r chunk_reveal("RegressionPlot",break_type="non_seq",widths=widths)`
+
+
+---
+
+class: inverse, center, middle
+
+---
+
+class: inverse, center, middle
+
+name: Rttests
+
+# t-Tests in R
+
+---
+
+name: Rttests1
+
+## 1-Sample t-Test
+
+- Computed with `t.test()`
+  - Use formula of form `~qvar` as first argument.
+  - Must include data.frame name in `data=` argument.
+
+--
+  - Assign value in H<sub>0</sub> to `mu=`.
+  - Choose H<sub>A</sub> direction in `alt=` with `"two.sided"` for "not equals", `"less"` for "less than", or `"greater"` for "greater than".
+  - Set confidence level (1-&alpha;) in `conf.level=`
+
+---
+
+```{r ttest1, include=FALSE}
+head(d_chin)
+
+## Is mean flipper length of Chinstrap Penguins
+##  greater than 190 mm.  Use alpha=0.01
+#BREAK1
+t.test(~flipper_length_mm,data=d_chin #BREAK2
+       ,mu=190 #BREAK3
+       ,alt="greater" #BREAK4
+       ,conf.level=0.99 #BREAK5
+       ) #BREAK2
+```
+
+`r chunk_reveal("ttest1",break_type="non_seq",widths=widths)`
+
+---
+
+name: Rttests2
+
+## Levene's Test
+
+- Computed with `levenesTtest()`
+  - Use form of form `qvar~cvar` as first argument.
+  - Must include data.frame name in `data=` argument.
+
+--
+  - Set `var.equal=TRUE` if Levene's Test indicates that variances are equal.
+  
+--
+  - Assign value in H<sub>0</sub> to `mu=` (usually 0).
+  - Choose H<sub>A</sub> direction in `alt=` with `"two.sided"` for "not equals", `"less"` for "less than", or `"greater"` for "greater than".
+  - Set confidence level (1-&alpha;) in `conf.level=`
+
+---
+
+```{r LevenesTest, include=FALSE}
+head(d_chingen)
+
+## Is mean flipper length smaller for Chinstrap
+##   than Gentoo Penguins. Use alpha=0.10.
+#BREAK
+levenesTest(flipper_length_mm~species,data=d_chingen)
+```
+
+`r chunk_reveal("LevenesTest",break_type="user",widths=widths)`
+
+---
+
+## 2-Sample t-Test
+
+- Computed with `t.test()`
+  - Use form of form `qvar~cvar` as first argument.
+  - Must include data.frame name in `data=` argument.
+
+--
+  - Set `var.equal=TRUE` if Levene's Test indicates that variances are equal.
+  
+--
+  - Assign value in H<sub>0</sub> to `mu=` (usually 0).
+  - Choose H<sub>A</sub> direction in `alt=` with `"two.sided"` for "not equals", `"less"` for "less than", or `"greater"` for "greater than".
+  - Set confidence level (1-&alpha;) in `conf.level=`
+
+---
+
+```{r ttest2, include=FALSE}
+head(d_chingen)
+
+## Is mean flipper length smaller for Chinstrap
+##   than Gentoo Penguins. Use alpha=0.10.
+#BREAK1
+t.test(flipper_length_mm~species,data=d_chingen #BREAK2
+       ,var.equal=TRUE #BREAK3
+       ,mu=0 #BREAK4
+       ,alt="less" #BREAK5
+       ,conf.level=0.90 #BREAK6
+       ) #BREAK2
+```
+
+`r chunk_reveal("ttest2",break_type="non_seq",widths=widths)`
+
+
+---
+
+class: inverse, center, middle
+
+---
+
+class: inverse, center, middle
+
+name: RChi
+
+# Chi-square Tests in R
+
+---
+
+name: RChiChi
+
+## Chi-square Test
+
+- First, use `xtabs()` to make a two-way observed frequency table.
+  - Grouping variable should be in rows.
+  - Response variable should be in columns.
+
+--
+- Second, compute chi-square results with `chisq.test()`
+  - Table from `xtabs()` is first argument.
+  - Use `correct=FALSE` to "turn-off" continuity correction.
+  - Assign (save) result to an object.
+
+--
+  - Obtain expected table by appending `$expected` to object name.
+
+--
+  - Construct a row-percentages table to examine differences.
+
+---
+
+```{r chi, include=FALSE}
+head(d)
+
+## Does sex ratio differ among species of Penguins.
+##  Use alpha=0.01
+
+#BREAK
+( peng_sex <- xtabs(~species+sex,data=d) )
+
+#BREAK
+( chi_ps <- chisq.test(peng_sex,correct=FALSE) )
+
+#BREAK
+chi_ps$expected
+
+#BREAK
+percTable(peng_sex,margin=1)
+```
+
+`r chunk_reveal("chi",break_type="user",widths=widths)`
+
+---
+
+name: RChiGOF
+
+## Goodness-of-Fit Test
+
+- Make an expected table with `c()`.
+
+--
+- Use `xtabs()` to make an observed frequency table.
+
+--
+- Compute GOF results with `chisq.test()`
+  - Observed table from `xtabs()` is first argument.
+  - Expected table from `c()` in `p=` argument.
+  - Use `rescale.p=TRUE` to assure proper expected values.
+  - Use `correct=FALSE` to "turn-off" continuity correction.
+  - Assign (save) result to an object.
+
+--
+  - Obtain expected table by appending `$expected` to object name.
+
+---
+
+
+class: inverse, center, middle
+
+---
