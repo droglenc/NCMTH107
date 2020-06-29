@@ -80,7 +80,7 @@ bears <- read.csv("data/Bears.csv")
 
 &nbsp;
 
-It is important that each row of the data frame correspond to one individual. This is critically important when data are recorded for two different groups (e.g., for a two-sample t-test; see [Module 2X]()). For example, the following data are methyl mercury levels recorded in mussels from two locations labeled as "impacted" and "reference."
+It is important that each row of the data frame correspond to one individual. This is critically important when data are recorded for two different groups (e.g., for a two-sample t-test; see [Module 24](Rttests)). For example, the following data are methyl mercury levels recorded in mussels from two locations labeled as "impacted" and "reference."
 
 ```
   impacted   0.011  0.054  0.056  0.095  0.051  0.077
@@ -93,12 +93,12 @@ To follow the "one individual per row" rule, these data are entered in **stacked
 Data should generally be entered in **stacked** format.
 </aside>
 
-```{r echo=FALSE, out.width='30%'}
+```{r echo=FALSE, out.width='25%'}
 knitr::include_graphics("zimg/StackedData.jpg")
 ```
 
 ### Alternative Forms of Getting Data
-Some of the data files that you will use are provided on the [Data for MTH107](http://derekogle.com/NCMTH107/resources/data_107) resource page of the class webpage. In these cases, the data should be downloaded from the webpage and saved in the same directory or folder as your analysis script. The downloaded file is then read into R in the same manner as described previously (i.e., set the working directory with `setwd()` and use `read.csv()`).
+Some of the data files that you will use are provided on the [Data for MTH107](http://derekogle.com/NCMTH107/resources/data_107) resource page of the class webpage or linked to from a webpage. In these cases, the data should be downloaded from the webpage and saved in the same directory or folder as your analysis script. The downloaded file is then read into R in the same manner as described previously (i.e., set the working directory with `setwd()` and use `read.csv()`). Note that files provided by me will already be in stacked format.
 
 A few data files used in these notes are supplied with R or the `NCStats` package. These files are loaded with `data()`. For example, the `iris` data file is loaded into R with
 
@@ -116,13 +116,16 @@ R may be disorienting at first because you generally cannot "see" your data in t
 bears
 ```
 
-Typing the name is adequate for small data.frames, but not useful for large data.frames. The entire data.frame is opened in a separate window by double-clicking on the name of the data.frame in the "Environment" tab of RStudio (in upper-right pane). Alternatively, the first and last three rows of a data frame are viewed by including the data frame object in `headtail()`.
+Typing the name is adequate for small data.frames, but not useful for large data.frames. The entire data.frame is opened in a separate window by double-clicking on the name of the data.frame in the "Environment" tab of RStudio (in upper-right pane). Alternatively, you can view a subset of 20 rows of a data frame with `peek()`, the first six rows with `head()`, the last six rows with `tail()`, or the first and last three rows with `headtail()`.
 
 <aside>
-Use `headtail()` from `NCStats` to see the first and last three rows of a data frame.
+Use `peek()` or `headtail()` from `NCStats` to view a few rows of a data frame.
 </aside>
 
 ```{r}
+peek(bears)
+head(bears)
+tail(bears)
 headtail(bears)
 ```
 
@@ -142,14 +145,20 @@ In this example, it is seen that `r kCounts(ncol(bears))` variables were recorde
 unique(bears$loc)
 ```
 
-A character variable may be converted to a factor variable with `factor()`. The levels of the `r names(bears)[3]` factor variable may be seen with `levels()`. Note that the levels are ordered alphabetically by default. Methods to change the order will be shown in subsequent modules.
+A character variable may be converted to a factor variable with `factor()`. In this course, the main reason for doing this would be to control the levels of an ordinal variable because R treats levels alphabetically by default. For example suppose that we wanted to order the levels of the `r names(bears)[3]` variable from west to east (so, Douglas, Bayfield, and Ashland). For this purpose the variable is converted to a factor below with `factor()` and the order of the levels is controled with `levels=`.
 
 <aside>
-Use `levels()` to see the names of the groups in a factor variable.
+Make sure the levels are spelled EXACTLY as they appear in the data.
 </aside>
 
 ```{r}
-bears$loc <- factor(bears$loc)
+bears$loc <- factor(bears$loc,levels=c("Douglas","Bayfield","Ashland"))
+levels(bears$loc)
+```
+
+The levels of a factor variable and their order may be seen with `levels()`.
+
+```{r}
 levels(bears$loc)
 ```
 
