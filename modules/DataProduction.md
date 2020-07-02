@@ -35,23 +35,33 @@ Statistical analyses rely on data and that data must be properly produced (or co
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](Prep/DataProduction). [*Problems with videos? [See this FAQ](../resources/FAQ/FAQs/videos){:target="_blank"}.*]
+Use the resources below to answer [these questions](Prep/DataProduction). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* [![PDF](../img/pdf.png) Reading](book/Data Production.pdf)
-* ![YouTube](../img/youtube.png) Types of Studies: [A](https://www.youtube.com/watch?v=qksFkFh2ezo){:target="_blank"} [*from 7:36 to 15:58*] **OR** [B](https://www.youtube.com/watch?v=KDPBD3SPTPY){:target="_blank"} [8 mins]
-* [![YouTube](../img/youtube.png) Types of Conclusions](https://www.youtube.com/watch?v=5zkg1w5zoQ0){:target="_blank"} [*start at 26:37*]
-* [![Vimeo](../img/dhovid.png) Types of Observational Studies](https://vimeo.com/user45324800/observationaltypes){:target="_blank"} [3 mins] ... [corresponding slides](PPT/DataProduction_PPT.pptx)
-* [![YouTube](../img/youtube.png) Sample Design](https://www.youtube.com/watch?v=5zkg1w5zoQ0){:target="_blank"} [*from 0:20 to 9:40*]
-* ![YouTube](../img/youtube.png) Experimental Design:  [A](https://www.youtube.com/watch?v=v-xnPVCi9wM){:target="_blank"} [*from 1:21 to 8:47*] **OR** [B](https://www.youtube.com/watch?v=5zkg1w5zoQ0){:target="_blank"} [*from 12:34 to 18:46*]
-* [![Vimeo](../img/dhovid.png) Definitions in Experimental Design](https://vimeo.com/user45324800/experimentdefns){:target="_blank"} [4 mins] ... [corresponding slides](PPT/DataProduction_PPT.pptx)
-* [![Vimeo](../img/dhovid.png) Randomization in R](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins] [![Web](../img/web.png)](HO/DataProduction_RHO.html){:target="_blank"}  [![R](../img/Rlogo.png)](HO/DataProduction_RHO.R){:target="_blank"}
-* ![YouTube](../img/youtube.png) Response/Explanatory Variables - [A](https://www.youtube.com/watch?v=bokeTCH2aJY){:target="_blank"} [*from 1:00 to 2:28*] **AND**  [B](https://www.youtube.com/watch?v=bokeTCH2aJY){:target="_blank"} [*stop at 6:18*]
+* **Primary Resources**
+  * [![PDF](../img/pdf.png) Reading](book/Data Production.pdf)
+  * [![YouTube](../img/youtube.png) Types of Studies](https://www.youtube.com/watch?v=qksFkFh2ezo){:target="_blank"} [8 mins *from 7:36 to 15:58*]
+  * [![YouTube](../img/youtube.png) Types of Conclusions](https://www.youtube.com/watch?v=5zkg1w5zoQ0){:target="_blank"} [3 mins *start at 26:37*]
+  * [![Vimeo](../img/dhovid.png) Types of Observational Studies](https://vimeo.com/user45324800/observationaltypes){:target="_blank"} [3 mins] ... [corresponding slides](PPT/DataProduction_PPT.pptx)
+  * [![YouTube](../img/youtube.png) Sample Design](https://www.youtube.com/watch?v=5zkg1w5zoQ0){:target="_blank"} [9 mins *from 0:20 to 9:40*]
+  * [![YouTube](../img/youtube.png) Experimental Design](https://www.youtube.com/watch?v=v-xnPVCi9wM){:target="_blank"} [7 mins *from 1:21 to 8:47*]
+  * [![Vimeo](../img/dhovid.png) Definitions in Experimental Design](https://vimeo.com/user45324800/experimentdefns){:target="_blank"} [4 mins] ... [corresponding slides](PPT/DataProduction_PPT.pptx)
+  * [![YouTube](../img/youtube.png) Response/Explanatory Variables I](https://www.youtube.com/watch?v=bokeTCH2aJY){:target="_blank"} [1 min *from 1:00 to 2:28*]
+  * [![YouTube](../img/youtube.png) Response/Explanatory Variables II](https://www.youtube.com/watch?v=bokeTCH2aJY){:target="_blank"} [6 mins *stop at 6:18*]
+  * [![Vimeo](../img/dhovid.png) Randomization in R](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins] ... [corresponding resource](HO/DataProduction_RHO.R){:target="_blank"}
+* **Alternative Resources**
+  * [![YouTube](../img/youtube.png) Types of Studies:](https://www.youtube.com/watch?v=KDPBD3SPTPY){:target="_blank"} [8 mins]
+  * [![YouTube](../img/youtube.png) Experimental Design](https://www.youtube.com/watch?v=5zkg1w5zoQ0){:target="_blank"} [*from 12:34 to 18:46*]
+
 
 ----
 
 ## Practice
 
-* [Exercises](CE/DataProduction_CE1) ([*more as time permits*](CE/DataProduction_CE2)) ... [ANSWER KEY](CE/KEY_DataProduction_CE)
+* [Assignment](CE/DataProduction_CE1) ... [ANSWER KEY](CE/KEY_DataProduction_CE)
+* [Additional Exercises](CE/DataProduction_CE2)
+
+<!---
+&nbsp;
 
 ----
 
@@ -59,4 +69,4 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 * [Old Lecture Slides](PPT/DataProduction_PPT_old.pptx)
 
-----
+--->

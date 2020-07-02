@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Exercises
+title: Assignment
 subtitle: Data Production
 css: "/css/modules.css"
 ---
@@ -72,11 +72,3 @@ Use this information to answer the questions below.
 1. What kind of variable is the response variable?
 1. Physically, what is a replicate (not a number)?
 1. Diagram the experimental setup, including placing the unique number of each replicate in the respective treatments. [*The table can be similar to the one just above section 3.1.5 in the reading. Show your R work for how you placed these individuals in the R appendix.*]
-
-&nbsp;
-
-----
-
-## Additional Practice
-
-[Here are more exercises for practice if time permits.](DataProduction_CE2)
