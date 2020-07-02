@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Exercises
+title: Assignment
 subtitle: Foundational Definitions
 css: "/css/modules.css"
 ---
@@ -46,11 +46,3 @@ As part of their Biology Capstone research, a Northland College student wanted t
 ## Types of Variables II
 
 Describe a variable that is of interest to you for each of the four variable types (i.e., make up your own variable for each variable type).
-
-&nbsp;
-
-----
-
-## Additional Practice
-
-[Here are more exercises for practice if time permits.](FoundationalDefns_CE2)
