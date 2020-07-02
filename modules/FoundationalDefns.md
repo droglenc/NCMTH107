@@ -34,7 +34,8 @@ As with most areas of study, Statistics requires an understanding of key foundat
 
 ## Preparation for Class
 
-* **Primary Resources**
+Use the resources below to answer [these questions](Prep/FoundationalDefns). [[*Problems with videos?](../resources/FAQ/FAQs/videos){:target="_blank"}.*]
+
 * **Primary Resources**
   * [![PDF](../img/pdf.png) Reading](book/Foundational Definitions.pdf)
   * [![Vimeo](../img/dhovid.png) IVPPSS](https://vimeo.com/user45324800/ncstats-ivppss){:target="_blank"} [7 mins] ... [corresponding slides](PPT/FoundationalDefns_PPT1.pptx)
