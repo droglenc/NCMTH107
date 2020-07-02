@@ -5,7 +5,7 @@ subtitle: Foundational Definitions
 css: "/css/modules.css"
 ---
 
-----
+<br>
 
 ## Types of Variables I
 <img src="zimgs/data-recording.jpg" alt="Recording Data" class="img-right">
@@ -23,7 +23,7 @@ Identify the specific type of variable (there are four types) for each variable 
 1. A sociologist asked respondents from which medium they receive most of their information about wolves: "TV", "Newspaper", "Outdoor Magazines", "Public Policy Meetings", "Friends or Family", or "Other".
 1. The [Koppen scheme of classifying "climates"](https://en.wikipedia.org/wiki/K%C3%B6ppen_climate_classification) contains five principal groups: "Tropical rainy", "dry", "temperate", "Continental", and "Polar".
 
-----
+<br>
 
 ## Sustainability Survey
 <img src="zimgs/ncmellc.jpg" alt="NC MELLC" class="img-right">
@@ -32,7 +32,7 @@ The Sustainability Coordinator surveyed 147 randomly selected Northland students
 1. Identify the individual, variable, population, parameter, sample, and statistic.
 1. What type of variable is the variable? [*Be specific*]
 
-----
+<br>
 
 ## Crayfish and Bass
 <img src="zimgs/smallmouth-eats-crayfish.jpg" alt="Smallmouth Eats a Crayfish" class="img-right">
@@ -41,7 +41,7 @@ As part of their Biology Capstone research, a Northland College student wanted t
 1. Identify the individual, variable, population, parameter, sample, and statistic.
 1. What type of variable is the variable? [*Be specific*]
 
-----
+<br>
 
 ## Types of Variables II
 
