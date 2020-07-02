@@ -33,22 +33,25 @@ Why is Statistics a required course for many majors at Northland College?  Why d
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](Prep/WhyStats). [*Problems with videos? [See this FAQ](../resources/FAQ/FAQs/videos){:target="_blank"}.*]
+Use the resources below to answer [these questions](Prep/WhyStats). [[*Problems with videos?](../resources/FAQ/FAQs/videos){:target="_blank"}.*]
 
-* [![PDF](../img/pdf.png) Reading](book/Why Statistics is Important.pdf)
-* [![YouTube Link](../img/youtube.png) Why Statistics?](https://www.youtube.com/watch?v=yxXsPc0bphQ){:target="_blank"} [4 mins]
-* [![YouTube Link](../img/youtube.png) The Importance of Statistics](https://www.youtube.com/watch?v=gOzlQ_EyJ0o){:target="_blank"} [3 mins]
-* [![YouTube Link](../img/youtube.png) Why You Need to Study Statistics](https://www.youtube.com/watch?v=wV0Ks7aS7YI){:target="_blank"} [3 mins]
-* [![YouTube Link](../img/youtube.png) What is Statistics?](https://www.youtube.com/watch?v=5YsiVJFSwGo){:target="_blank"} [12 mins; *start at 0:35*]
-* [![YouTube Link](../img/youtube.png) What is Important About Statistics in Psychology?](https://www.youtube.com/watch?v=yl_yuxHFIXc){:target="_blank"} [*between 0:18 and 5:33*]
+* **Primary Resources**
+  * [![PDF](../img/pdf.png) Reading](book/Why Statistics is Important.pdf)
+  * [![YouTube Link](../img/youtube.png) Why Statistics?](https://www.youtube.com/watch?v=yxXsPc0bphQ){:target="_blank"} [4 mins]
+  * [![YouTube Link](../img/youtube.png) The Importance of Statistics](https://www.youtube.com/watch?v=gOzlQ_EyJ0o){:target="_blank"} [3 mins]
+  * [![YouTube Link](../img/youtube.png) Why You Need to Study Statistics](https://www.youtube.com/watch?v=wV0Ks7aS7YI){:target="_blank"} [3 mins]
+  * [![YouTube Link](../img/youtube.png) What is Statistics?](https://www.youtube.com/watch?v=5YsiVJFSwGo){:target="_blank"} [12 mins; *start at 0:35*]
+  * [![YouTube Link](../img/youtube.png) What is Important About Statistics in Psychology?](https://www.youtube.com/watch?v=yl_yuxHFIXc){:target="_blank"} [*between 0:18 and 5:33*]
 
 ----
 
 ## Practice
 
 * [Class Example](CE/WhyStats_CExmpl1)
-* [Exercises](CE/WhyStats_CE1) ([*more as time permits*](CE/WhyStats_CE2)) ... [ANSWER KEY](CE/KEY_WhyStats_CE)
+* [Assignment](CE/WhyStats_CE1) ... [ANSWER KEY](CE/KEY_WhyStats_CE)
+* [Additional Exercises](CE/WhyStats_CE2)
 
+<!---
 &nbsp;
 
 ----
@@ -56,3 +59,4 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 ## Archived Materials
 
 * [Class Lecture Slides](PPT/WhyStats_PPT.pptx)
+--->
