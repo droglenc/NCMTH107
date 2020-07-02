@@ -34,14 +34,13 @@ As with most areas of study, Statistics requires an understanding of key foundat
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](Prep/FoundationalDefns). [*Problems with videos? [See this FAQ](../resources/FAQ/FAQs/videos){:target="_blank"}.*]
-
+* **Primary Resources**
 * **Primary Resources**
   * [![PDF](../img/pdf.png) Reading](book/Foundational Definitions.pdf)
   * [![Vimeo](../img/dhovid.png) IVPPSS](https://vimeo.com/user45324800/ncstats-ivppss){:target="_blank"} [7 mins] ... [corresponding slides](PPT/FoundationalDefns_PPT1.pptx)
   * [![Vimeo](../img/dhovid.png) Variable Types](https://vimeo.com/user45324800/ncstats-vartypes){:target="_blank"} [5 mins] ... [corresponding slides](PPT/FoundationalDefns_PPT2.pptx)
 * **Alternative Resources**
-  * [Definitions](https://youtu.be/MXaJ7sa7q-8?t=67){:target="_blank"} [4 mins; start at 1:07]
+  * [![YouTube Link](../img/youtube.png) Definitions](https://youtu.be/MXaJ7sa7q-8?t=67){:target="_blank"} [4 mins; start at 1:07]
   
 ----
 
@@ -49,12 +48,14 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 * [Assignment](CE/FoundationalDefns_CE1) ... [ANSWER KEY](CE/KEY_FoundationalDefns_CE)
 * [Additional Exercises](CE/FoundationalDefns_CE2)
+* [Even More Exercises](CE/FoundationalDefns_CE3)
 
+<!---
 &nbsp;
 
 ----
 
 ## Archived Materials
 
-* [Review Exercises](RE/FoundationalDefns_RevEx)
 * [Old Lecture Slides](PPT/FoundationalDefns_PPT_old.pptx)
+--->
