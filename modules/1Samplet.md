@@ -30,19 +30,23 @@ css: /css/modules.css
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](Prep/1Samplet).
+Use the resources below to answer [these questions](Prep/1Samplet). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* [![PDF](../img/pdf.png) Reading](book/1-Sample t-Test.pdf)
-* [![Vimeo](../img/dhovid.png) t Distribution](https://vimeo.com/user45324800/tdist){:target="_blank"} [4 mins] [![PowerPoint](../img/ppt.png)](PPT/1Samplet_PPT1.pptx)
-* [![Vimeo](../img/dhovid.png) t Distributions in R](https://vimeo.com/user45324800/tdistribution){:target="_blank"} [8 mins] ... [corresponding script](HO/1Samplet_RHO.html){:target="_blank"}
-* [![Vimeo](../img/dhovid.png) 1-Sample t-Test Example](https://vimeo.com/user45324800/t1test-ex1){:target="_blank"} [12 mins] [![PowerPoint](../img/ppt.png)](PPT/1Samplet_PPT2.pptx)
-
+* **Primary Resources** (5 pages, 24 mins)
+  * [![PDF](../img/pdf.png) Reading](book/1-Sample t-Test.pdf)
+  * [![Vimeo](../img/dhovid.png) t Distribution](https://vimeo.com/user45324800/tdist){:target="_blank"} [4 mins] [corresonding slides](PPT/1Samplet_PPT1.pptx)
+  * [![Vimeo](../img/dhovid.png) t Distributions in R](https://vimeo.com/user45324800/tdistribution){:target="_blank"} [8 mins] ... [corresponding script](HO/1Samplet_RHO.html){:target="_blank"}
+  * [![Vimeo](../img/dhovid.png) 1-Sample t-Test Example](https://vimeo.com/user45324800/t1test-ex1){:target="_blank"} [12 mins] [corresonding slides](PPT/1Samplet_PPT2.pptx)
 
 ----
 
 ## Practice
 
-* [Exercises](CE/1Samplet_CE1) ([*more as time permits*](CE/1Samplet_CE2)) ... [ANSWER KEY](CE/KEY_1Samplet_CE)
+* [Assignment](CE/1Samplet_CE1) ... [ANSWER KEY](CE/KEY_1Samplet_CE)
+* [Additional Exercises](CE/1Samplet_CE2))
+
+<!---
+&nbsp;
 
 ----
 
@@ -50,4 +54,4 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 * [Old Lecture Slides](PPT/1Samplet_PPT_old.pptx)
 
-----
+--->

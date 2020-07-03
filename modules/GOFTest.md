@@ -29,17 +29,22 @@ css: /css/modules.css
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](Prep/GOFTest).
+Use the resources below to answer [these questions](Prep/GOFTest). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* [![PDF](../img/pdf.png) Reading](book/Goodness-of-Fit.pdf)
-* [![Vimeo](../img/dhovid.png) Goodness-of-Fit Test Example](https://vimeo.com/user45324800/goftest-ex1){:target="_blank"} [8 mins] ... [corresonding slides](PPT/GOFTest_PPT.pptx)
+* **Primary Resources** (6 pages, 8 mins)
+  * [![PDF](../img/pdf.png) Reading](book/Goodness-of-Fit.pdf)
+  * [![Vimeo](../img/dhovid.png) Goodness-of-Fit Test Example](https://vimeo.com/user45324800/goftest-ex1){:target="_blank"} [8 mins] ... [corresonding slides](PPT/GOFTest_PPT.pptx)
 
 ----
 
 ## Practice
 
 * [Class Example](CE/GOFTest_CExmpl) ... [ANNOTATED KEY](CE/KEY_GOFTest_CExmpl)
-* [Exercises](CE/GOFTest_CE1) ([*more as time permits*](CE/GOFTest_CE2)) ... [ANSWER KEY](CE/KEY_GOFTest_CE)
+* [Assignment](CE/GOFTest_CE1) ... [ANSWER KEY](CE/KEY_GOFTest_CE)
+* [Additional Exercises](CE/GOFTest_CE2))
+
+<!---
+&nbsp;
 
 ----
 
@@ -47,4 +52,4 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 * [Old Lecture Slides](PPT/GOFTest_PPT_old.pptx)
 
-----
+--->

@@ -1,22 +1,20 @@
 ---
 layout: page
-title: Exercises
+title: Assignment
 subtitle: Goodness-of-Fit Test
 css: "/css/modules.css"
 ---
 
-----
-
 <div class="alert alert-success">For all "hypothesis testing" questions, make sure to provide explicit answers with your work shown for all <a href="../11-steps">11 steps of a hypothesis test</a>.
 </div>
 
-----
+<br>
 
 ## Preference for Bottled Water?
 <img src="zimgs/bottled-water-waste.jpg" alt="Bottled water waste" class="img-right">
 Students in an Introduction to Environmental Studies course conducted a study to determine preferences (or not) for types of drinking water. In one part of their study, a sample of students was given four types of drinking water in clear unmarked cups. The water was either from the local water source (tap water) or bottled water from Aquafina, Fiji, or Sam's Choice. Each subject tried each sample of water, without knowing which type they were trying, and then recorded their "preference ranking." They found that 51, 18, 17, and 21 subjects rated tap water, Aquafina, Fiji, and Sam's Choice options, respectively, as their least-preferred choice. Use these results to determine, at the 1% level, if there is any differences in the least-preferred choice of drinking water.[^1]
 
-----
+<br>
 
 ## Habitat Use by Wild Turkeys
 <img src="zimgs/merriam-turkey.jpg" alt="Merriam's Turkey" class="img-right">
@@ -33,7 +31,7 @@ Fall Use              14         7       195         2
 
 Use these results to determine, at the 5% level, if the turkey's exhibited a habitat preference in the **Spring**.
 
-----
+<br>
 
 ## Random Jury Pool?
 <img src="zimgs/jury-box.jpg" alt="Jury Box" class="img-right">
@@ -46,14 +44,6 @@ District      6.1%    15.0%    13.5%    21.7%    15.3%    18.2%    10.2%
 </pre>
 
 Use these results to determine, at the 10% level, if the age distribution in the jury pool accurately represents the age distriction of the district as a whole.  Also comment on whether the attorney's specific concern was warranted.
-
-&nbsp;
-
-----
-
-## Additional Practice
-
-[Here are more exercises for practice if time permits.](GOFTest_CE2)
 
 &nbsp;
 

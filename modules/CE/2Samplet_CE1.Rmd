@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Exercises
+title: Assignment
 subtitle: 2-Sample t-test
 author: Derek H. Ogle
 css: "/css/modules.css"
@@ -22,12 +22,10 @@ library(NCStats)
 source("../../rhelpers/knitr_setup.R")
 ```
 
-----
-
 <div class="alert alert-success">For all "hypothesis testing" questions, make sure to provide explicit answers with your work shown for all <a href="../11-steps">11 steps of a hypothesis test</a>.
 </div>
 
-----
+<br>
 
 ## Compost Type and Germination Rates
 <img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/tagetes.jpg" alt="Tagetes" class="img-right">
@@ -44,14 +42,6 @@ hist(germination~compost,data=tmp,xlab="Number Germinated",same.breaks=FALSE)
 ```
 
 Use this information to determine, at the 10% level, if the number of seeds that germinated was lower in the home-made compost.[^1] [*NOTE: you are testing if the germination rate was lower in the home-made compost because that would suggest that it performs worse -- fewer germinated plants -- than the other compost and would increase costs to the greenhouse.*]
-
-&nbsp;
-
-----
-
-## Additional Practice
-
-[Here are more exercises for practice if time permits.](2Samplet_CE2)
 
 &nbsp;
 

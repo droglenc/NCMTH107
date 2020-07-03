@@ -1,16 +1,14 @@
 ---
 layout: page
-title: Exercises
+title: Assignment
 subtitle: Chi-Square Test
 css: "/css/modules.css"
 ---
 
-----
-
 <div class="alert alert-success">For all "hypothesis testing" questions, make sure to provide explicit answers with your work shown for all <a href="../11-steps">11 steps of a hypothesis test</a>.
 </div>
 
-----
+<br>
 
 ## Hurricane Strengths
 <img src="zimgs/hurricane.jpg" alt="Hurricane" class="img-right">
@@ -24,12 +22,6 @@ Atmospheric scientists have hypothesized that the strengths of hurricanes has in
 Use this information to determine, at the 10% level, if the distribution of hurricanes into the strength categories differs between the two time periods.[^1]
 
 &nbsp;
-
-----
-
-## Additional Practice
-
-[Here are more exercises for practice if time permits.](ChiSquare_CE2)
 
 ----
 

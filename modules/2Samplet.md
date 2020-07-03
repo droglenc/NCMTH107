@@ -30,17 +30,22 @@ css: /css/modules.css
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](Prep/2Samplet).
+Use the resources below to answer [these questions](Prep/2Samplet). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* [![PDF](../img/pdf.png) Reading](book/2-Sample t-Test.pdf)
-* [![Vimeo](../img/dhovid.png) 2-Sample t-Test Example](https://vimeo.com/user45324800/t2test-ex1){:target="_blank"} [22 mins] ... [corresponding slides](PPT/2Samplet_PPT.pptx)
+* **Primary Resources** (5 pages, 22 mins)
+  * [![PDF](../img/pdf.png) Reading](book/2-Sample t-Test.pdf)
+  * [![Vimeo](../img/dhovid.png) 2-Sample t-Test Example](https://vimeo.com/user45324800/t2test-ex1){:target="_blank"} [22 mins] ... [corresponding slides](PPT/2Samplet_PPT.pptx)
 
 ----
 
 ## Practice
 
 * [Class Example](CE/2Samplet_CExmpl) ... [ANNOTATED KEY](CE/KEY_2Samplet_CExmpl) 
-* [Exercise I](CE/2Samplet_CE1) ([*more as time permits*](CE/2Samplet_CE2)) ... [ANSWER KEY](CE/KEY_2Samplet_CE)
+* [Assignment](CE/2Samplet_CE1) ... [ANSWER KEY](CE/KEY_2Samplet_CE)
+* [Additional Exercises](CE/2Samplet_CE2)
+
+<!---
+&nbsp;
 
 ----
 
@@ -48,4 +53,4 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 * [Old Lecture Slides](PPT/2Samplet_PPT_old.pptx)
 
-----
+--->

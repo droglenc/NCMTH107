@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Exercises
+title: Assignment
 subtitle: 1-Sample t-test
 author: Derek H. Ogle
 css: "/css/modules.css"
@@ -29,29 +29,27 @@ figs <- captioner(prefix="Table")
 figs(name="fecal","Histogram for the fecal coliform counts in water samples from a nearby lake following a rainstorm.")
 ```
 
-----
-
-## P-Value Calculations and Decisions I
+## P-Value Calculations and Decisions
 
 For each situation below, (i) compute the t test statistic, (ii) compute the p-value (include a drawing to support your calculation), and (iii) make a decision about H<sub>0</sub>.
 
 1. &alpha;=0.05, H<sub>A</sub>: &mu;&ne;14, n=25, s=6.1, x&#772;=11.2.
 1. &alpha;=0.10, H<sub>A</sub>: &mu;>75, n=50, s=11.7, x&#772;=79.5.
 
-----
+<br>
 
-## Confidence Interval Calculations I
+## Confidence Interval Calculations
 
 Compute and interpret confidence regions for the two situations above. You should use the same "steps" as you did in the [confidence regions module](ConfRegions_CE2).
 
-----
-
-&nbsp;
+<br>
 
 <div class="alert alert-success">For this and all other "hypothesis testing" questions, make sure to provide explicit answers with your work shown for all <a href="../11-steps">11 steps of a hypothesis test</a>.
 </div>
 
-## Fecal Coliform Counts I
+<br>
+
+## Fecal Coliform Counts
 <img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/warning_sign.jpg" alt="Checking out" class="img-right">
 [Fecal coliform](https://en.wikipedia.org/wiki/Fecal_coliform) is a bacterium that originates in the intestines of warm-blooded animals and, thus, may be found in their feces. Organic matter containing fecal coliform may be washed into lakes and streams in runoff following large rain events. In lakes and streams, the fecal coliform may lead to the growth of pathogens that are dangerous to the health of humans, or reduce oxygen available to fish and other aquatic life. Thus, fecal coliform levels are routinely monitored in many waterbodies in the United States.
 
@@ -77,10 +75,3 @@ ggplot(data=df,mapping=aes(x=CFU)) +
 
 Test, at the 5% level, if these results differ from the mean of 178 CFU/100ml predicted by a computer model.
 
-&nbsp;
-
-----
-
-## Additional Practice
-
-[Here are more exercises for practice if time permits.](1Samplet_CE2)
