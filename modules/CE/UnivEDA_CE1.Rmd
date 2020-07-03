@@ -21,6 +21,8 @@ modHTML("UnivEDA_CE1")
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
+library(ggplot2)
+library(dplyr)
 library(captioner)
 source("../../rhelpers/knitr_setup.R")
 tbls <- captioner(prefix="Table")

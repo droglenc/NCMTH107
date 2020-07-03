@@ -32,18 +32,23 @@ It is important to understand the relationship between two variables.  With quan
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](Prep/BEDAQuant).
+Use the resources below to answer [these questions](Prep/BEDAQuant). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* [![PDF](../img/pdf.png) Reading](book/Bivariate EDA - Quantitative.pdf)
-* [![YouTube Link](../img/youtube.png) Construct a Scatterplot](https://www.youtube.com/watch?v=yXmz922K9Ks){:target="_blank"} [7 mins]
-* [![YouTube Link](../img/youtube.png) What is the Correlation?](https://www.youtube.com/watch?v=PtYVrF_WT3A){:target="_blank"} [8 mins; *start at 0:32*]
-* [![Vimeo](../img/dhovid.png) Interpeting a Bivariate EDA (Quantitative)](https://vimeo.com/user45324800/beda-quantsum){:target="_blank"} [10 mins] ... [corresponding slides](PPT/BEDAQuant_PPT.pptx)
+* **Primary Resources** (10 pages, 25 mins)
+  * [![PDF](../img/pdf.png) Reading](book/Bivariate EDA - Quantitative.pdf)
+  * [![YouTube Link](../img/youtube.png) Construct a Scatterplot](https://www.youtube.com/watch?v=yXmz922K9Ks){:target="_blank"} [7 mins]
+  * [![YouTube Link](../img/youtube.png) What is the Correlation?](https://www.youtube.com/watch?v=PtYVrF_WT3A){:target="_blank"} [8 mins; *start at 0:32*]
+  * [![Vimeo](../img/dhovid.png) Interpeting a Bivariate EDA (Quantitative)](https://vimeo.com/user45324800/beda-quantsum){:target="_blank"} [10 mins] ... [corresponding slides](PPT/BEDAQuant_PPT.pptx)
 
 ----
 
 ## Practice
 
-* [Exercises](CE/BEDAQuant_CE1) ([*more as time permits*](CE/BEDAQuant_CE2)) ... [ANSWER KEY](CE/KEY_BEDAQuant_CE)
+* [Assignment](CE/BEDAQuant_CE1) ... [ANSWER KEY](CE/KEY_BEDAQuant_CE)
+* [Additional Exercises](CE/BEDAQuant_CE2)
+
+<!---
+&nbsp;
 
 ----
 
@@ -52,4 +57,4 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 * Review Exercises: [Definitions and Calculations](RE/BEDAQuant_RevEx_Defns)
 * [Old Lecture Slides](PPT/BEDAQuant_PPT_old.pptx)
 
-----
+--->

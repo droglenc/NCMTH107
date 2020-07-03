@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Exercises
+title: Assignment
 subtitle: Linear Regression
 author: Derek H. Ogle
 css: "/css/modules.css"
@@ -24,8 +24,6 @@ library(NCStats)
 source("../../rhelpers/knitr_setup.R")
 ```
 
-----
-
 ## Equation of the Line I
 
 For each situation below, identify the (a) response variable, (b) explanatory variable, (c) slope, and (d) intercept; interpret the (e) slope and (f) intercept; and write a question that would be (g) a valid prediction (and answer this questions) and (h) be an extrapolation.
@@ -33,7 +31,7 @@ For each situation below, identify the (a) response variable, (b) explanatory va
 1. A student recorded the height of suds (mm) in a dishwasher for ten different amounts of soap (g). The resulting best-fit line was Y=-20.2+12.4*X for 24<Y<80 and 3.5<X<8.0.
 1. A farmer wants to predict the costs required to produce an amount (in tons) of daily livestock food mix. He recorded costs and amounts for a 20 day period. The resulting best-fit line was Y=190*X+12075 for 19000<Y<21000 and 36.5<X<42.
 
-----
+<br>
 
 ## Beach Sand
 <img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/beaches.jpg" alt="Beach Sand" class="img-right">
@@ -65,7 +63,7 @@ Use these results to answer the questions below.
 1. How much would you expect the median sand diameter to change if the beach angle increased by 4<sup>o</sup>?
 1. What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?
 
-----
+<br>
 
 ## Everest Temperatures
 <img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/MtEverest.jpg" alt="Mt. Everest" class="img-right">
@@ -97,11 +95,3 @@ Use these results to answer the questions below using **only the monsoon results
 1. What is the predicted mean air temperature if the altitude lapse rate is 1000<sup>o</sup>C/km?
 1. What proportion of the variability in mean air temperature is explained by knowing the altitude lapse rate?
 1. What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?
-
-&nbsp;
-
-----
-
-## Additional Practice
-
-[Here are more exercises for practice if time permits.](LinearRegression_CE2)

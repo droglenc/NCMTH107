@@ -31,16 +31,21 @@ It is important to understand the relationship between two variables.  With cate
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](Prep/BEDACat).
+Use the resources below to answer [these questions](Prep/BEDACat). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* [![PDF](../img/pdf.png) Reading](book/Bivariate EDA - Categorical.pdf)
-* [![YouTube Link](../img/youtube.png) Percentage Tables](https://www.youtube.com/watch?v=k8xFH6fCIWs){:target="_blank"} [6 mins]
+* **Primary Resources** (5 pages, 6 mins)
+  * [![PDF](../img/pdf.png) Reading](book/Bivariate EDA - Categorical.pdf)
+  * [![YouTube Link](../img/youtube.png) Percentage Tables](https://www.youtube.com/watch?v=k8xFH6fCIWs){:target="_blank"} [6 mins]
 
 ----
 
 ## Practice
 
-* [Exercises](CE/BEDACat_CE1) ([*more as time permits*](CE/BEDACat_CE2)) ... [ANSWER KEY](CE/KEY_BEDACat_CE)
+* [Assignment](CE/BEDACat_CE1) ... [ANSWER KEY](CE/KEY_BEDACat_CE)
+* [Additional Exercises](CE/BEDACat_CE2))
+
+<!---
+&nbsp;
 
 ----
 
@@ -48,4 +53,4 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 * [Old Lecture Slides](PPT/BEDACat_PPT_old.pptx)
 
-----
+--->

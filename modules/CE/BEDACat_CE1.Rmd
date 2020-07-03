@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Exercises
+title: Assignment
 subtitle: Bivariate EDA - Categorical
 author: Derek H. Ogle
 css: "/css/modules.css"
@@ -21,8 +21,6 @@ modHTML("BEDACat_CE1")
 source("../../rhelpers/knitr_setup.R")
 ```
 
-----
-
 ## Hand Calculations
 
 Use the data for the two variables (`VAR1` and `VAR2`) below to construct (by hand without R) a (i) two-way frequency table, (ii) a row-percentage table, (iii) a column-percentage table, and (iv) a total-percentage table. [*Hint: use `VAR1` as the columns.*]
@@ -33,8 +31,6 @@ VAR2  x x y x x y x y y y x x y y y x x x y y x y x y x y x y
 </pre>
 
 <br>
-
-----
 
 ## Fire Blight Disease
 <img src="zimgs/fire-blight.jpg" alt="Fire Blight Disease" class="img-right">
@@ -68,7 +64,7 @@ xtabs(~treat+outcome,data=d)
 1. What percentage of all trees died within the first year after the disease was noticed?
 1. Make an overall conclusion about how the different treatments affected survival of the trees. [*Note: You should construct and refer to a specific type of percentage table.*]
 
-----
+<br>
 
 ## Religion and Genetic Counseling
 <img src="zimgs/genetic_counseling.jpg" alt="Genetic Counseling" class="img-right">
@@ -88,11 +84,3 @@ xtabs(~treat+outcome,data=d)
 1. What percentage of those physicians not supporting genetic counseling were Catholic?
 1. What percentage of all physicians supported genetic counseling?
 1. Make an overall conclusion about how support (or not) for genetic counseling differs (or not) among physicians with different religious beliefs. [*Note: You should construct and refer to a specific type of percentage table.*]
-
-&nbsp;
-
-----
-
-## Additional Practice
-
-[Here are more exercises for practice if time permits.](BEDACat_CE2)
