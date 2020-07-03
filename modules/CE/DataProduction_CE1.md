@@ -16,7 +16,7 @@ Identify whether each situation below is an observational or experimental study.
 1. [Helle *et al.* (2002)](http://www.sciencemag.org/content/296/5570/1085.full?ijkey=4842612ad61bcf9386845ff5a129be9ae15c158f&keytype2=tf_ipsecsha) reported on a study of women in Finland that indicated that having sons shortened the lifespan of mothers by about 34 weeks per son, but that daughters helped to lengthen the mothers’ lives. The data came from church records from the period 1640 to 1870.
 1. Some gardeners prefer to use nonchemical methods to control insect pests in their gardens. Researchers have designed two kinds of traps and want to know which design will be more effective. They randomly chose 10 locations in a large garden and placed one of each kind of trap at each location. After a week, they counted the number of bugs in each trap.
 
-----
+<br>
 
 ## Types of Observational Studies I
 Identify whether each situation below is a voluntary response, convenience, or random sample. Explain your reasoning.
@@ -25,7 +25,7 @@ Identify whether each situation below is a voluntary response, convenience, or r
 1. A researcher is interested in the makes of cars found in Ashland.  She collects a sample of car registrations for Ashland owners from a statewide database such that each registration had the same chance of being selected.
 1. A wildlife manager needs to determine the sex ratio of deer in northern Wisconsin.  Towards this end, he records the sex of road-kill deer from along Hwy 2.
 
-----
+<br>
 
 ## Identify Response and Explanatory Variables I
 
@@ -36,7 +36,7 @@ Identify the response variable in each of the following situations. Explain your
 1. Amount of fertilizer and growth of tomatoe plants.
 1. Sales of shoes and sales of hats.
 
-----
+<br>
 
 ## Blood Pressure Study
 <img src="zimgs/bloodpressure2.jpg" alt="Blood Pressure" class="img-right">
@@ -52,7 +52,7 @@ A student is designing an experiment to determine the simultaneous effects of ca
 1. How many replicates are there?
 1. Diagram the experimental setup, including placing the unique number of each replicate in the respective treatments. [*The table can be similar to the one just above section 3.1.5 in the reading. Show your R work for how you placed these individuals in the R appendix.*]
 
-----
+<br>
 
 ## Salt, Sand, and Ice
 <img src="zimgs/deicer.jpg" alt="De-icer Truck" class="img-right">

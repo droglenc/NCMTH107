@@ -14,8 +14,6 @@ Identify and describe three "realities" that, if they did not exist, would elimi
 
 <br><br><br>
 
-----
-
 ## Variability
 <img src="zimgs/variability.jpg" alt="Variability" class="img-right">
 
