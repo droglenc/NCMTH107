@@ -31,17 +31,22 @@ One of the most common things in statistics is to describe the linear relationsh
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](Prep/RRegression).
+Use the resources below to answer [these questions](Prep/RRegression). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* [Reading](bookR/RRegression.html)
-* [![Vimeo](../img/dhovid.png) Linear Regression in R](){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#RRegression){:target="_blank"}
+* **Primary Resources** (~3 pages, 8 mins)
+  * [Reading](bookR/RRegression.html)
+  * [![Vimeo](../img/dhovid.png) Linear Regression in R](){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#RRegression){:target="_blank"}
 
 ----
 
 ## Practice
 
 * [Class Example](CE/RRegression_CExmpl) ... [ANNOTATED KEY](CE/KEY_RRegression_CExmpl)
-* [Exercises](CE/RRegression_CE1) ([*more as time permits*](CE/RRegression_CE2)) ... [ANSWER KEY](CE/KEY_RRegression_CE)
+* [Assignment](CE/RRegression_CE1) ... [ANSWER KEY](CE/KEY_RRegression_CE)
+* [Additional Exercises](CE/RRegression_CE2)
+
+<!---
+&nbsp;
 
 ----
 
@@ -49,4 +54,4 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 * [![Vimeo](../img/dhovid.png) Linear Regression in R](https://vimeo.com/user45324800/regression1){:target="_blank"} [8 mins]
 
-----
+--->

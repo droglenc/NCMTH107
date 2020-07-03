@@ -1,23 +1,21 @@
 ---
 layout: page
-title: Exercises
+title: Assignment
 subtitle: t-tests in R
 css: "/css/modules.css"
 ---
 
-----
-
 <div class="alert alert-success">For all "hypothesis testing" questions, make sure to provide explicit answers with your work shown for all <a href="../11-steps">11 steps of a hypothesis test</a>.
 </div>
 
-----
+<br>
 
 ## Acid Rain in Shenandoah National Park
 <img src="zimgs/rose-river-falls.jpg" alt="Shenandoah National Park" class="img-right">
 
 The pH scales falls between 0 and 14 with values <7 considered acidic and values >7 considered basic. Rain water is naturally acidic, usually around 5.6 on the pH scale. Thus, the EPA defines rainwater with a pH less than 5.6 as being "acid rain." A series of rain collection samples were taken at the Big Meadows Station in the Shenandoah National Park, VA with the results stored in pHlevels.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/pHlevels.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/pHlevels_meta.txt)). Use these data to determine, at the 1% level, if there is evidence for "acid rain" at this site.[^1]
 
-----
+<br>
 
 ## Delivering Military Supplies
 <img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/navy-shipping.jpg" alt="Navy Shipping" class="img-right">
@@ -27,14 +25,6 @@ Following the [Persian Gulf War](https://en.wikipedia.org/wiki/Gulf_War), the Pe
 Persian Gulf 28.0 20.0 26.5 10.6 9.1 35.2 29.1 41.2 27.5
 Bosnia       15.1  6.4  5.0 11.4 6.5  6.5  3.0  7.0  3.5
 </pre>
-
-&nbsp;
-
-----
-
-## Additional Practice
-
-[Here are more exercises for practice if time permits.](Rttests_CE2)
 
 &nbsp;
 

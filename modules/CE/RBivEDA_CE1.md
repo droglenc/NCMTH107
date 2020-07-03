@@ -1,12 +1,10 @@
 ---
 layout: page
-title: Exercises
+title: Assignment
 subtitle: Bivariate EDA in R
 author: Derek H. Ogle
 css: "/css/modules.css"
 ---
-
-----
 
 ## Urban Runoff
 <img src="zimgs/no-dumping-drains-to-ocean.jpg" alt="No Dumping" class="img-right">
@@ -23,7 +21,7 @@ Load these data into R and answer the questions below.
 1. What is the explanatory variable?
 1. Describe the relationship between IBI and the percent of impervious area (i.e., perform a bivariate EDA).
 
-----
+<br>
 
 ## Lights and Nearsightedness
 <img src="zimgs/nightlight.jpg" alt="Nightlight" class="img-right">
@@ -38,7 +36,7 @@ An Associated Press article captured the attention of readers with the headline 
 1. What percentage of children developed nearsightedness?
 1. Make an overall conclusion about how the different light conditions affected the development of nearsightedness in the children.
 
-----
+<br>
 
 ## Forest Composition
 <img src="zimgs/forestcomp.jpg" alt="Forest Composition" class="img-right">
@@ -53,16 +51,8 @@ An Associated Press article captured the attention of readers with the headline 
 1. What percentage of mixed deciduous trees last had a fire within the last 100 years?
 1. Comment on the distribution of times since last fire among the four levels of stand type.
 
-----
+<br>
 
 ## Red-Imported Fire Ants and Deer
 <img src="zimgs/RIFA.jpg" alt="RIFA" class="img-right">
 [Allen *et al.* (1997)](http://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1047&context=ncfwrustaff) investigated the impact of the density of Red-Imported Fire Ants (*Solenopsis invicta*) on the recruitment of Whitetailed Deer (*Odocoileus virginianus*) fawns (an index of does to fawns). A modified version of their data is recorded in RIFA.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/RIFA.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/RIFA_meta.txt)). Use this information to write a brief description of this bivariate relationship.
-
-&nbsp;
-
-----
-
-## Additional Practice
-
-[Here are more exercises for practice if time permits.](RBivEDA_CE2)

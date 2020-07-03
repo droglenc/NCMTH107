@@ -1,12 +1,10 @@
 ---
 layout: page
-title: Exercises
+title: Assignment
 subtitle: Linear Regression in R
 author: Derek H. Ogle
 css: "/css/modules.css"
 ---
-
-----
 
 ## Urban Runoff
 <img src="zimgs/runoff.jpg" alt="Grand Haven plume" class="img-right">
@@ -30,9 +28,7 @@ Load these data into R to answer the questions below.  [*Note that these are the
 1. What proportion of the variability in IBI is explained by knowing the percentage of impervious surface?
 1. What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?
 
-&nbsp;
-
-----
+<br>
 
 ## Sign Legibility and Age
 <img src="zimgs/blurredsign.jpg" alt="Blurred Sign" class="img-right">
@@ -50,11 +46,3 @@ In a study of the legibility and visibility of highway signs, a Pennsylvania res
 1. What proportion of the variability in maximum distance to see the sign is explained by knowing the age of the driver?
 1. How much will the predicted maximum distance to see the sign change if the driver's age increased by ten years?
 1. What aspect of this regression analysis concerns you? [*Hint: consider the regression assumptions*]?
-
-&nbsp;
-
-----
-
-## Additional Practice
-
-[Here are more exercises for practice if time permits.](RRegression_CE2)

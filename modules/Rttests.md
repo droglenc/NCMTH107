@@ -28,18 +28,23 @@ css: /css/modules.css
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](Prep/Rt1EDA).
+Use the resources below to answer [these questions](Prep/Rttests). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* [Reading](bookR/Rttests.html)
-* [![Vimeo](../img/dhovid.png) 1-Sample t-Test in R](){:target="_blank"} [5 mins] ... [corresponding resource](HO/Penguins.html#Rttests1){:target="_blank"}
-* [![Vimeo](../img/dhovid.png) 2-Sample t-Test in R](){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#Rttests2){:target="_blank"}
+* **Primary Resources** (~5 pages, 12 mins)
+  * [Reading](bookR/Rttests.html)
+  * [![Vimeo](../img/dhovid.png) 1-Sample t-Test in R](){:target="_blank"} [5 mins] ... [corresponding resource](HO/Penguins.html#Rttests1){:target="_blank"}
+  * [![Vimeo](../img/dhovid.png) 2-Sample t-Test in R](){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#Rttests2){:target="_blank"}
 
 ----
 
 ## Practice
 
 * [Class Example](CE/Rttests_CExmpl) ... [ANNOTATED KEY](CE/KEY_Rttests_CExmpl)
-* [Exercises](CE/Rttests_CE1) ([*more as time permits*](CE/Rttests_CE2)) ... [ANSWER KEY](CE/KEY_Rttests_CE)
+* [Assignment](CE/Rttests_CE1) ... [ANSWER KEY](CE/KEY_Rttests_CE)
+* [Additional Exercises](CE/Rttests_CE2)
+
+<!---
+&nbsp;
 
 ----
 
@@ -48,4 +53,4 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 * [![Vimeo](../img/dhovid.png) 1-Sample t-Test in R](https://vimeo.com/user45324800/1samplettest){:target="_blank"} [5 mins]
 * [![Vimeo](../img/dhovid.png) 2-Sample t-Test in R](https://vimeo.com/user45324800/1samplettest){:target="_blank"} [5 mins]
 
-----
+--->

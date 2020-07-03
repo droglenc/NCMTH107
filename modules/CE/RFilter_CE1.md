@@ -1,11 +1,9 @@
 ---
 layout: page
-title: Exercises
+title: Assignment
 subtitle: Filtering Data In R
 css: "/css/modules.css"
 ---
-
-----
 
 ## Coarse Woody Debris
 <img src="zimgs/cwd1-bony-lake.jpg" alt="CWD Bony Lake" class="img-right">
@@ -30,11 +28,3 @@ Use this information to answer the following questions. Use R to answer all ques
     * Only where the CWD diameter was greater than 20 cm.
     * Only where the CWD diameter was greater than 20 cm and from low-exposure sites.
     * Only where the CWD diameter was between 20 and 30 cm.
-
-&nbsp;
-
-----
-
-## Additional Practice
-
-[Here are more exercises for practice if time permits.](RFilter_CE2)

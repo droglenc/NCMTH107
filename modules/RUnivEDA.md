@@ -33,19 +33,23 @@ css: /css/modules.css
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](Prep/RUnivEDA).
+Use the resources below to answer [these questions](Prep/RUnivEDA). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* [Reading](bookR/RUnivEDA.html)
-* [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative) in R](){:target="_blank"} [4 mins] ... [corresponding resource](HO/Penguins.html#RUnivEDAQ){:target="_blank"}
-* [![Vimeo](../img/dhovid.png) Univariate EDA (Categorical) in R](){:target="_blank"} [4 mins] ... [corresponding resource](HO/Penguins.html#RUnivEDAC){:target="_blank"}
-* [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative by Group) in R](){:target="_blank"} [4 mins] ... [corresponding resource](HO/Penguins.html#RUnivEDAQC){:target="_blank"}
+* **Primary Resources** (~6 pages, 12 mins)
+  * [Reading](bookR/RUnivEDA.html)
+  * [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative) in R](){:target="_blank"} [4 mins] ... [corresponding resource](HO/Penguins.html#RUnivEDAQ){:target="_blank"}
+  * [![Vimeo](../img/dhovid.png) Univariate EDA (Categorical) in R](){:target="_blank"} [4 mins] ... [corresponding resource](HO/Penguins.html#RUnivEDAC){:target="_blank"}
+  * [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative by Group) in R](){:target="_blank"} [4 mins] ... [corresponding resource](HO/Penguins.html#RUnivEDAQC){:target="_blank"}
 
 ----
 
 ## Practice
 
-* [Exercises](CE/RUnivEDA_CE1) ([*more as time permits*](CE/RUnivEDA_CE2)) ... [ANSWER KEY](CE/KEY_RUnivEDA_CE)
-* [Review Exercises](RE/RUnivEDA_RevEx)
+* [Assignment](CE/RUnivEDA_CE1) ... [ANSWER KEY](CE/KEY_RUnivEDA_CE)
+* [Additional Exercises](CE/RUnivEDA_CE2)
+
+<!---
+&nbsp;
 
 ----
 
@@ -54,4 +58,4 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 * [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative) in R](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins]
 * [![Vimeo](../img/dhovid.png) Univariate EDA (Categorical) in R](https://vimeo.com/user45324800/ncstats-uedac){:target="_blank"} [4 mins]
 
-----
+--->

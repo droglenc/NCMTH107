@@ -30,17 +30,22 @@ css: /css/modules.css
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](Prep/RBivEDA).
+Use the resources below to answer [these questions](Prep/RBivEDA). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* [Reading](bookR/RBivEDA.html)
-* [![Vimeo](../img/dhovid.png) Bivariate EDA (Quantitative) in R](){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#RBivEDAQ){:target="_blank"}
-* [![Vimeo](../img/dhovid.png) Bivariate EDA (Categorical) in R](){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#RBivEDAC){:target="_blank"}
+* **Primary Resources** (~4 pages, 16 mins)
+  * [Reading](bookR/RBivEDA.html)
+  * [![Vimeo](../img/dhovid.png) Bivariate EDA (Quantitative) in R](){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#RBivEDAQ){:target="_blank"}
+  * [![Vimeo](../img/dhovid.png) Bivariate EDA (Categorical) in R](){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#RBivEDAC){:target="_blank"}
 
 ----
 
 ## Practice
 
-* [Exercises](CE/RBivEDA_CE1) ([*more as time permits*](CE/RBivEDA_CE2)) ... [ANSWER KEY](CE/KEY_RBivEDA_CE)
+* [Assignment](CE/RBivEDA_CE1) ... [ANSWER KEY](CE/KEY_RBivEDA_CE)
+* [Additional Exercises](CE/RBivEDA_CE2)
+
+<!---
+&nbsp;
 
 ----
 
@@ -49,4 +54,4 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 * [![Vimeo](../img/dhovid.png) Bivariate EDA (Quantitative) in R](https://vimeo.com/user45324800/biveda-quant){:target="_blank"} [8 mins]
 * [![Vimeo](../img/dhovid.png) Bivariate EDA (Categorical) in R](https://vimeo.com/user45324800/biveda-cat){:target="_blank"} [8 mins]
 
-----
+--->

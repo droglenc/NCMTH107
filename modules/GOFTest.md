@@ -41,7 +41,7 @@ Use the resources below to answer [these questions](Prep/GOFTest). [[*Problems w
 
 * [Class Example](CE/GOFTest_CExmpl) ... [ANNOTATED KEY](CE/KEY_GOFTest_CExmpl)
 * [Assignment](CE/GOFTest_CE1) ... [ANSWER KEY](CE/KEY_GOFTest_CE)
-* [Additional Exercises](CE/GOFTest_CE2))
+* [Additional Exercises](CE/GOFTest_CE2)
 
 <!---
 &nbsp;

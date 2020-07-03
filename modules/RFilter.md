@@ -27,17 +27,22 @@ css: /css/modules.css
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](Prep/RFilter). [*Problems with videos? [See this FAQ](../resources/FAQ/FAQs/videos){:target="_blank"}.*]
+Use the resources below to answer [these questions](Prep/RFilter). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* [Reading](bookR/RFilter.html)
-* [![Vimeo](../img/dhovid.png) Subset data.frame with filterD](){:target="_blank"} [6 mins] ... [corresponding resource](HO/Penguins.html#RFilter){:target="_blank"}
+* **Primary Resources** (~3 pages, 6 mins)
+  * [Reading](bookR/RFilter.html)
+  * [![Vimeo](../img/dhovid.png) Subset data.frame with filterD](){:target="_blank"} [6 mins] ... [corresponding resource](HO/Penguins.html#RFilter){:target="_blank"}
 
 ----
 
 ## Practice
 
 * [Class Example](CE/RFilter_CExmpl) ... [ANNOTATED KEY](CE/KEY_RFilter_CExmpl)
-* [Exercises](CE/RFilter_CE1) ([*more as time permits*]([Exercises](CE/RFilter_CE2))) ... [ANSWER KEY](CE/KEY_RFilter_CE)
+* [Assignment](CE/RFilter_CE1) ... [ANSWER KEY](CE/KEY_RFilter_CE)
+* [Additional Exercises](CE/RFilter_CE2)
+
+<!---
+&nbsp;
 
 ----
 
@@ -45,4 +50,4 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 * [![Vimeo](../img/dhovid.png) Subset data.frame with filterD](https://vimeo.com/user45324800/filterd){:target="_blank"} [6 mins]
 
-----
+--->
