@@ -35,23 +35,32 @@ It is important to understand the distribution of individuals for a single varia
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](Prep/UnivSum).
+Use the resources below to answer [these questions](Prep/UnivSum). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* [![PDF](../img/pdf.png) Reading](book/Univariate Summaries.pdf)
-* [![YouTube](../img/youtube.png) Calculate Median and IQR](https://www.youtube.com/watch?v=F3WcEAW-M80){:target="_blank"} [15 mins]
-    * Additional for calculating the median: [A](https://www.youtube.com/watch?v=0SYsi38XucI){:target="_blank"} [2 mins], [B](https://www.youtube.com/watch?v=hTYTaOaQUcw){:target="_blank"} [5 mins], **OR** [C](https://www.youtube.com/watch?v=9a8M_KfclBE){:target="_blank"} [3 mins]
-    * [Additional for calculating the IQR](https://www.youtube.com/watch?v=R6VDj7pEG30){:target="_blank"} [3 mins] 
-* ![YouTube](../img/youtube.png) Calculate Standard Deviation: [A](https://www.youtube.com/watch?v=qqOyy_NjflU){:target="_blank"} [5 mins] **OR** [B](https://www.youtube.com/watch?v=atS4wX8I9H0){:target="_blank"} [13 mins]
-* [![YouTube Link](../img/youtube.png) Construct a Histogram](https://www.youtube.com/watch?v=sC7gjg9g3JU){:target="_blank"} [13 mins]
-* [![YouTube](../img/youtube.png) Frequency Table](https://www.youtube.com/watch?v=LVnzV1ZXdiY){:target="_blank"} [2 mins]
-* [![YouTube](../img/youtube.png) Barplot](https://www.youtube.com/watch?v=PM39_HA1qSc){:target="_blank"} [3 mins]
-* [![Vimeo](../img/dhovid.png) Quick Rant about Pie and 3-D Charts](https://vimeo.com/user45324800/ueda-badplotrant){:target="_blank"} [3 mins] ...  [corresponding slides](PPT/UEDACat_PPT2.pptx)
+* **Primary Resources** (10 pages, 41 mins)
+  * [![PDF](../img/pdf.png) Reading](book/Univariate Summaries.pdf)
+  * [![YouTube](../img/youtube.png) Calculate Median and IQR](https://www.youtube.com/watch?v=F3WcEAW-M80){:target="_blank"} [15 mins]
+  * [![YouTube](../img/youtube.png) Calculate Standard Deviation](https://www.youtube.com/watch?v=qqOyy_NjflU){:target="_blank"} [5 mins]
+  * [![YouTube](../img/youtube.png) Construct a Histogram](https://www.youtube.com/watch?v=sC7gjg9g3JU){:target="_blank"} [13 mins]
+  * [![YouTube](../img/youtube.png) Frequency Table](https://www.youtube.com/watch?v=LVnzV1ZXdiY){:target="_blank"} [2 mins]
+  * [![YouTube](../img/youtube.png) Barplot](https://www.youtube.com/watch?v=PM39_HA1qSc){:target="_blank"} [3 mins]
+  * [![Vimeo](../img/dhovid.png) Quick Rant about Pie and 3-D Charts](https://vimeo.com/user45324800/ueda-badplotrant){:target="_blank"} [3 mins] ...  [corresponding slides](PPT/UEDACat_PPT2.pptx)
+* **Alternative Resources**
+  * [Calculate the median:](https://www.youtube.com/watch?v=0SYsi38XucI){:target="_blank"} [2 mins]
+  * [Calculate the median:](https://www.youtube.com/watch?v=hTYTaOaQUcw){:target="_blank"} [5 mins]
+  * [Calculate the median:](https://www.youtube.com/watch?v=9a8M_KfclBE){:target="_blank"} [3 mins]
+  * [Calculate the IQR](https://www.youtube.com/watch?v=R6VDj7pEG30){:target="_blank"} [3 mins]
+  * [![YouTube](../img/youtube.png) Calculate Standard Deviation](https://www.youtube.com/watch?v=atS4wX8I9H0){:target="_blank"} [13 mins]
 
 ----
 
 ## Practice
 
-* [Exercises](CE/UnivSum_CE1) ([*more as time permits*](CE/UnivSum_CE2)) ... [ANSWER KEY](CE/KEY_UnivSum_CE)
+* [Assignment](CE/UnivSum_CE1) ... [ANSWER KEY](CE/KEY_UnivSum_CE)
+* [Additional Exercises*](CE/UnivSum_CE2))
+
+<!---
+&nbsp;
 
 ----
 
@@ -60,4 +69,4 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 * [Old Lecture Slides - Quantitative](PPT/UEDAQuant_PPT_old.pptx)
 * [Old Lecture Slides - Categorical](PPT/UEDACat_PPT_old.pptx)
 
-----
+--->

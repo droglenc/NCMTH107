@@ -30,18 +30,22 @@ It is important to understand the distribution of individuals for a single varia
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](Prep/UnivEDA).
+Use the resources below to answer [these questions](Prep/UnivEDA). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* [![PDF](../img/pdf.png) Reading](book/Univariate EDA.pdf)
-* [![Vimeo](../img/dhovid.png) Interpreting a Univariate EDA (Quantitative)](https://vimeo.com/user45324800/ueda-quantsum){:target="_blank"} [11 mins] ... [corresponding slides](PPT/UEDAQuant_PPT.pptx)
-* [![Vimeo](../img/dhovid.png) Interpreting a Univariate EDA (Categorical)](https://vimeo.com/user45324800/ueda-catsum){:target="_blank"} [2 mins] ... [corresponding slides](PPT/UEDACat_PPT.pptx)
+* **Primary Resources** (XX pages, 13 mins)
+  * [![PDF](../img/pdf.png) Reading](book/Univariate EDA.pdf)
+  * [![Vimeo](../img/dhovid.png) Interpreting a Univariate EDA (Quantitative)](https://vimeo.com/user45324800/ueda-quantsum){:target="_blank"} [11 mins] ... [corresponding slides](PPT/UEDAQuant_PPT.pptx)
+  * [![Vimeo](../img/dhovid.png) Interpreting a Univariate EDA (Categorical)](https://vimeo.com/user45324800/ueda-catsum){:target="_blank"} [2 mins] ... [corresponding slides](PPT/UEDACat_PPT.pptx)
 
 ----
 
 ## Practice
 
-* [Exercises](CE/UnivEDA_CE1) ([*more as time permits*](CE/UnivEDA_CE2)) ... [ANSWER KEY](CE/KEY_UnivEDA_CE)
-* [Review Exercises](RE/UnivEDA_RevEx)
+* [Assignment](CE/UnivEDA_CE1) ... [ANSWER KEY](CE/KEY_UnivEDA_CE)
+* [Additional Exercises](CE/UnivEDA_CE2)
+
+<!---
+&nbsp;
 
 ----
 
@@ -49,4 +53,4 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 * [Old Lecture Slides](PPT/UEDAQuant_PPT_old.pptx)
 
-----
+--->

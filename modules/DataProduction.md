@@ -37,7 +37,7 @@ Statistical analyses rely on data and that data must be properly produced (or co
 
 Use the resources below to answer [these questions](Prep/DataProduction). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources**
+* **Primary Resources** (9 pages, 40 mins)
   * [![PDF](../img/pdf.png) Reading](book/Data Production.pdf)
   * [![YouTube](../img/youtube.png) Types of Studies](https://www.youtube.com/watch?v=qksFkFh2ezo){:target="_blank"} [8 mins *from 7:36 to 15:58*]
   * [![YouTube](../img/youtube.png) Types of Conclusions](https://www.youtube.com/watch?v=5zkg1w5zoQ0){:target="_blank"} [3 mins *start at 26:37*]

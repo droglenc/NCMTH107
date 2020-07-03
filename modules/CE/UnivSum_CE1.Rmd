@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Exercises
+title: Assignment
 subtitle: Univariate Summaries
 author: Derek H. Ogle
 css: "/css/modules.css"
@@ -21,8 +21,6 @@ modHTML("UnivSum_CE1")
 library(NCStats)
 source("../../rhelpers/knitr_setup.R")
 ```
-
-----
 
 ## Calculate Summary Statistics I
 
@@ -47,7 +45,7 @@ Data Set 3
 1. Hand calculate the IQR of Data Set 3.
 1. Hand calculate the range of Data Set 3.
 
-----
+<br>
 
 ## Histograms
 
@@ -82,7 +80,7 @@ Use this histogram to answer these questions.
 1. How many states had a mean commute time between 18 and 24 minutes?
 1. What was the range of mean commute times for the bin with exactly five states?
 
-----
+<br>
 
 ## Frequency and Percentages Tables
 <img src="zimgs/sheltie-herding.jpg" alt="Sheltie Herding" class="img-right">
@@ -93,7 +91,7 @@ The breeds that won the "Herding Group" at the Westminster Kennel Club champions
 1. Hand draw (roughly) a bar chart of your results.
 1. Write a brief conclusion from these results. [*This is performing a univariate EDA for these categorical data.*]
 
-----
+<br>
 
 ## Bar Chart I
 <img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/weddingring.jpg" alt="Wedding Ring" class="img-right">
@@ -119,14 +117,6 @@ ggplot(data=tbl,mapping=aes(x=cats,y=freq)) +
 1. Construct a frequency table from this bar chart.
 1. Construct a percentage table from your frequency table.
 1. Write a brief conclusion from these results.
-
-&nbsp;
-
-----
-
-## Additional Practice
-
-[Here are more exercises for practice if time permits.](UnivSum_CE2)
 
 &nbsp;
 

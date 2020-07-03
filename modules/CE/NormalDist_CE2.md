@@ -1,11 +1,9 @@
 ---
 layout: page
-title: Exercises II
+title: Assignment II
 subtitle: Normal Distributions
 css: "/css/modules.css"
 ---
-
-----
 
 ## SAT Scores
 <img src="zimgs/sat-scores.jpg" alt="SAT Scores" class="img-right">
@@ -18,7 +16,7 @@ SAT scores are approximately normal with a mean of 550 and standard deviation of
 1. What percentage of students can get accepted by School A BUT NOT by School B?
 1. What score should School C use so that only 25% of students can get accepted?
 
-----
+<br>
 
 ## Urban Deer Relocations
 <img src="zimgs/urban-deer.jpg" alt="Urban Deer" class="img-right">
@@ -32,7 +30,7 @@ Relocation methods for controlling the overpopulation of Whitetail Deer (*Odocoi
 1. What proportion of deer have a home range size less than 0.4 km<sup>2</sup>?
 1. Between what two sizes of home ranges do the most common 48% of deer inhabit?
 
-----
+<br>
 
 ## iPhone Battery Lifespan 
 <img src="zimgs/iphone.jpg" alt="iPhone" class="img-right">
@@ -44,11 +42,3 @@ Apple suggests that the battery lifespan (i.e., how many charge-cycles a battery
 1. What percentage of iPhone batteries would be rated as better than "unacceptably poor," but not "exceptional"?
 1. Suppose that the research company wants to change the definition of "exceptional" to include only the top 10% of batteries. What number of charge-cycles would define this new "exceptional"?
 1. Similarly, suppose that the research company wants to change the definition of "unacceptably poor" to the include the worst 25% of batteries. What number of charge-cycles would define this new "unacceptably poor"?
-
-&nbsp;
-
-----
-
-## Additional Practice
-
-[Here are more exercises for practice if time permits.](NormalDist_CE3)

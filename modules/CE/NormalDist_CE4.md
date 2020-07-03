@@ -1,12 +1,10 @@
 ---
 layout: page
-title: Review Exercise
+title: Additional Exercises
 subtitle: Normal Distributions
 author: Derek H. Ogle
 css: "/css/modules.css"
 ---
-
-----
 
 ## 68-95-99.7 (Empirical) Rule
 
@@ -114,5 +112,3 @@ You can click on each question to see an answer. Click on it again to close the 
 </div>
 
 </div>
-
-----

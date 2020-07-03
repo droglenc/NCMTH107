@@ -1,13 +1,11 @@
 ---
 layout: page
-title: Exercises I
+title: Assignment I
 subtitle: Normal Distributions
 css: "/css/modules.css"
 ---
 
-----
-
-## Normal Distribution Characteristics I
+## Normal Distribution Characteristics
 
 1. Use `snorm()` from `NCStats` to answer the following questions.  [*Hint: Click the gear icon, uncheck 'Show PDF & CDF', and then use the slider bars to answer the two questions below.*]
     1. Describe what happens to the normal distribution if &mu; is increased?
@@ -17,9 +15,9 @@ css: "/css/modules.css"
     1. X~N(75,10)
     1. Y~N(5500,600)
 
-----
+<br>
 
-## Hand Calculations I
+## Hand Calculations
 
 Answer each question below, **without using R**, assuming that X~N(75,10). Show your work with a careful drawing for each question.
 
@@ -31,7 +29,7 @@ Answer each question below, **without using R**, assuming that X~N(75,10). Show 
 1. What is the most common 95% of X values?
 1. What is the largest 2.5% of X values?
 
-----
+<br>
 
 ## Carpenter Ants
 <img src="zimgs/carpenterant.jpg" alt="Carpenter Ant" class="img-right">

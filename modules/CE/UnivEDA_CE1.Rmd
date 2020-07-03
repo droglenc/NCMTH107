@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Exercises
+title: Assignment
 subtitle: Univariate EDA
 author: Derek H. Ogle
 css: "/css/modules.css"
@@ -34,8 +34,6 @@ figs(name="fires","Bar chart of frequency of forest fires in Montesinho Natural 
 figs(name="plastic","Bar chart of the percentage of worldwide plastic waste by fate in 1995 and 2015.")
 ```
 
-----
-
 ## Shape and Outliers I
 
 For each histogram below, describe the shape and presence of outliers.
@@ -55,7 +53,7 @@ hist(~c(rbeta(n,8,4),0),xlab=xlbl,main="#7",xaxt="n",yaxt="n")
 hist(~c(rbeta(n/2,7,2),rbeta(n/2,2,7)),xlab=xlbl,main="#8",xaxt="n",yaxt="n")
 ```
 
-----
+<br>
 
 ## Commute Times
 <img src="zimgs/commuting.jpg" alt="Commuting" class="img-right">
@@ -82,7 +80,7 @@ ggplot(data=df,mapping=aes(x=time)) +
 Summarize(~time,data=df,digits=2)
 ```
 
-----
+<br>
 
 ## Dungeness Crabs
 <img src="zimgs/Dungeness.jpg" alt="Dungeness Crab" class="img-right">
@@ -106,7 +104,7 @@ ggplot(data=df,mapping=aes(x=postsz)) +
 Summarize(~postsz,data=df,digits=1)
 ```
 
-----
+<br>
 
 ## Forest Fires
 <img src="zimgs/wildfire.jpg" alt="Wildfire" class="img-right">
@@ -125,8 +123,7 @@ ggplot(data=ff,mapping=aes(x=month)) +
 
 `r figs("fires")`
 
-----
-
+<br>
 
 ## Fate of Plastics
 <img src="zimgs/plastic_bales.jpeg" alt="Plastic Bales" class="img-right">
@@ -144,11 +141,3 @@ ggplot(data=pl,mapping=aes(x=Entity,y=Estimated.historic.plastic.fate....)) +
 ```
 
 `r figs("plastic")`
-
-&nbsp;
-
-----
-
-## Additional Practice
-
-[Here are more exercises for practice if time permits.](UnivEDA_CE2)
