@@ -30,18 +30,22 @@ Probability is the "language" used by statisticians to describe the proportion o
 ----
 
 ## Preparation for Class
+Use the resources below to answer [these questions](Prep/Probability). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-Use the materials below to answer the questions on [this preparation guide](Prep/Probability).
-
-* [![PDF](../img/pdf.png) Reading](book/Probability Introduction.pdf)
-* [![Vimeo](../img/dhovid.png) Types of Questions](https://vimeo.com/user45324800/smplngd-questions){:target="_blank"} [6 mins] ... [corresponding slides](PPT/SamplingDist_PPT3.pptx)
+* **Primary Resources** (4 pages,  mins)
+  * [![PDF](../img/pdf.png) Reading](book/Probability Introduction.pdf)
+  * [![Vimeo](../img/dhovid.png) Types of Questions](https://vimeo.com/user45324800/smplngd-questions){:target="_blank"} [6 mins] ... [corresponding slides](PPT/SamplingDist_PPT3.pptx)
 
 ----
 
 ## Practice
 
 * [Class Example](CE/Probability_CExmpl) ... [ANNOTATED KEY](CE/KEY_Probability_CExmpl) 
-* [Exercises](CE/Probability_CE1) ([*more as time permits*](CE/Probability_CE2)) ... [ANSWER KEY](CE/KEY_Probability_CE)
+* [Assignment](CE/Probability_CE1) ... [ANSWER KEY](CE/KEY_Probability_CE)
+* [Additional Exercises](CE/Probability_CE2)
+
+<!---
+&nbsp;
 
 ----
 
@@ -49,4 +53,4 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 * [Old Lecture Slides](PPT/Probability_PPT_old.pptx)
 
-----
+--->

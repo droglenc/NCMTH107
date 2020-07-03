@@ -1,11 +1,9 @@
 ---
 layout: page
-title: Review Exercises I
+title: Additional Exercises
 subtitle: Confidence Regions
 css: "/css/modules.css"
 ---
-
-----
 
 ## Confidence Regions Concepts
 
@@ -178,6 +176,3 @@ You can click on each question to see an answer. Click on it again to close the 
 </div>
 
 </div>
-
-----
-

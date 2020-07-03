@@ -30,24 +30,29 @@ A major goal of inferential statistics is to estimate the value of a parameter f
 ----
 
 ## Preparation for Class
+Use the resources below to answer [these questions](Prep/ConfRegions). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-Use the materials below to answer the questions on [this preparation guide](Prep/ConfRegions).
-
-* [![PDF](../img/pdf.png) Reading](book/Confidence Regions.pdf)
-* [![YouTube Link](../img/youtube.png) Introduction to Confidence Intervals](https://www.youtube.com/watch?v=27iSnzss2wM){:target="_blank"} [7 mins]
-* [![YouTube Link](../img/youtube.png) Interpreting Confidence Intervals](https://www.youtube.com/watch?v=JYP6gc--sGQ){:target="_blank"} [6 mins]
-* [![Web](../img/web.png) Construct a Confidence Region](Explanations/Calc_CI_Z)
-    * Alternatively [![YouTube Link](../img/youtube.png) Construct a Confidence Interval](https://www.youtube.com/watch?v=KG921rfbTDw){:target="_blank"} [10 mins] [**Skip from 7:49 to 8:28.**]
-* [![YouTube Link](../img/youtube.png) Confidence Interval Overview](https://www.youtube.com/watch?v=FUaXoKdCre4){:target="_blank"} [6 mins]
-* [![Web](../img/web.png) Calculate n Explanation](Explanations/Calc_n)
-    * alternatively [![YouTube Link](../img/youtube.png) Calculate n](https://www.youtube.com/watch?v=4-5pFrqJz9w){:target="_blank"} [2 mins]
+* **Primary Resources** (12 pages, 19 mins)
+  * [![PDF](../img/pdf.png) Reading](book/Confidence Regions.pdf)
+  * [![YouTube](../img/youtube.png) Introduction to Confidence Intervals](https://www.youtube.com/watch?v=27iSnzss2wM){:target="_blank"} [7 mins]
+  * [![YouTube](../img/youtube.png) Interpreting Confidence Intervals](https://www.youtube.com/watch?v=JYP6gc--sGQ){:target="_blank"} [6 mins]
+  * [![Web](../img/web.png) Construct a Confidence Region](Explanations/Calc_CI_Z)
+  * [![YouTube](../img/youtube.png) Confidence Interval Overview](https://www.youtube.com/watch?v=FUaXoKdCre4){:target="_blank"} [6 mins]
+  * [![Web](../img/web.png) Calculate n Explanation](Explanations/Calc_n)
+* **Alternative Resources**
+    * [![YouTube Link](../img/youtube.png) Construct a Confidence Interval](https://www.youtube.com/watch?v=KG921rfbTDw){:target="_blank"} [10 mins] [**Skip from 7:49 to 8:28.**]
+    * [![YouTube Link](../img/youtube.png) Calculate n](https://www.youtube.com/watch?v=4-5pFrqJz9w){:target="_blank"} [2 mins]
 
 ----
 
 ## Practice
 
-* [Exercises I](CE/ConfRegions_CE1) / [Exercises II](CE/ConfRegions_CE2) ([*more as time permits*](CE/ConfRegions_CE3)) ... [ANSWER KEY](CE/KEY_ConfRegions_CE)
-* [Review Exercises](RE/ConfRegions_RevEx)
+* [Assignment](CE/ConfRegions_CE1) [two pages] ... [ANSWER KEY](CE/KEY_ConfRegions_CE)
+* [Additional Exercises](CE/ConfRegions_CE3)
+* [Even More Exercises](CE/ConfRegions_CE4)
+
+<!---
+&nbsp;
 
 ----
 
@@ -55,4 +60,4 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 
 * [Old Lecture Slides](PPT/ConfRegions_PPT_old.pptx)
 
-----
+--->

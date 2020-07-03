@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Exercises II
+title: Assignment II
 subtitle: Confidence Regions
 author: Derek H. Ogle
 css: "/css/modules.css"
@@ -40,7 +40,7 @@ I urge you to follow these steps when answering all confidence region questions:
 A reminder to use these steps will <strong>NOT</strong> be provided on future quizzes, but you should get in the habit of following them. See <a href="../Explanations/Calc_CI_Z.html">here</a> for a demonstration of the steps.
 </div>
 
-&nbsp;
+<br>
 
 ## Confidence Region Calculations
 
@@ -51,7 +51,7 @@ For each situation below, calculate and interpret the confidence region.
 1. &alpha;=0.01, H<sub>A</sub>: &mu;>880, n=80, &sigma;=90, x&#772;=918.
 1. &alpha;=0.10, H<sub>A</sub>: &mu;<15000, n=50, &sigma;=8000, x&#772;=13700.
 
-----
+<br>
 
 ## Body Temperature
 <img src="zimgs/body-temperature-1.jpg" alt="Body Temperature" class="img-right">
@@ -64,7 +64,7 @@ d <- read.csv("https://github.com/droglenc/NCData/raw/master/NormTemp.csv")
 Summarize(~bodytemp,data=d,digits=2)
 ```
 
-----
+<br>
 
 ## Beetle Size
 <img src="zimgs/beetle.jpg" alt="Beetle" class="img-right">
@@ -77,7 +77,7 @@ d <- read.csv("https://github.com/droglenc/NCData/raw/master/Beetles.csv")
 Summarize(thorax~species,data=d,digits=2)
 ```
 
-----
+<br>
 
 &nbsp;
 
@@ -92,14 +92,6 @@ Suppose that you are starting a business and it is important for your business p
 1. How many households must you randomly select to be 95% sure that the sample mean is within 1 minute of the population mean.
 1. How many households must you randomly select to be 90% sure that the sample mean is within 1 minute of the population mean.
 1. How many households must you randomly select to be 95% sure that the sample mean is within 0.5 minutes of the population mean.
-
-&nbsp;
-
-----
-
-## Additional Practice
-
-[Here are more exercises for practice if time permits.](ConfRegions_CE3)
 
 &nbsp;
 

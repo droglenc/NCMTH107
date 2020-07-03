@@ -39,18 +39,23 @@ Sampling distributions show the distribution of a statistic from all possible sa
 
 ## Preparation for Class
 
-Use the materials below to answer the questions on [this preparation guide](Prep/SamplingDist).
+Use the resources below to answer [these questions](Prep/SamplingDist). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* [![PDF](../img/pdf.png) Reading](book/Sampling Distributions.pdf)
-* [![Vimeo](../img/dhovid.png) Introduction to Sampling Distributions I](https://vimeo.com/user45324800/smplngd-intro){:target="_blank"} [9 mins] [![PowerPoint](../img/ppt.png)](PPT/SamplingDist_PPT.pptx)
-* [![YouTube Link](../img/youtube.png) Introduction to Sampling Distributions II](https://www.youtube.com/watch?v=Zbw-YvELsaM){:target="_blank"} [8 mins]
-* [![Vimeo](../img/dhovid.png) Central Limit Theorem](https://vimeo.com/user45324800/smplngd-clt){:target="_blank"} [4 mins] [![PowerPoint](../img/ppt.png)](PPT/SamplingDist_PPT2.pptx)
+* **Primary Resources** (10 pages, 21 mins)
+  * [![PDF](../img/pdf.png) Reading](book/Sampling Distributions.pdf)
+  * [![Vimeo](../img/dhovid.png) Introduction to Sampling Distributions I](https://vimeo.com/user45324800/smplngd-intro){:target="_blank"} [9 mins] ... [corresponding slides](PPT/SamplingDist_PPT.pptx)
+  * [![YouTube Link](../img/youtube.png) Introduction to Sampling Distributions II](https://www.youtube.com/watch?v=Zbw-YvELsaM){:target="_blank"} [8 mins]
+  * [![Vimeo](../img/dhovid.png) Central Limit Theorem](https://vimeo.com/user45324800/smplngd-clt){:target="_blank"} [4 mins] [![PowerPoint](../img/ppt.png)](PPT/SamplingDist_PPT2.pptx)
 
 ----
 
 ## Practice
 
-* [Exercises I](CE/SamplingDist_CE1) / [Exercises II](CE/SamplingDist_CE2) / [Exercises III](CE/SamplingDist_CE3) ... [ANSWER KEY](CE/KEY_SamplingDist_CE)
+* [Assignment](CE/SamplingDist_CE1) [has three parts] ... [ANSWER KEY](CE/KEY_SamplingDist_CE)
+* [Additional Exercises](CE/SamplingDist_CE4)
+
+<!---
+&nbsp;
 
 ----
 
@@ -59,4 +64,4 @@ Use the materials below to answer the questions on [this preparation guide](Prep
 * [Review Exercises](RE/SamplingDist_RevEx)
 * [Old Lecture Slides](PPT/SamplingDist_PPT_old.pptx)
 
-----
+--->

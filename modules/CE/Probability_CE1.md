@@ -1,11 +1,9 @@
 ---
 layout: page
-title: Exercises
+title: Assignment
 subtitle: Probability
 css: "/css/modules.css"
 ---
-
-----
 
 ## Food Choice by Chipmunks
 <img src="zimgs/urn.png" alt="Urn" class="img-right">
@@ -31,7 +29,7 @@ In all of the following questions, I urge you to follow these steps when answeri
 A reminder to use these steps will <strong>NOT</strong> be provided on future quizzes, but you should get in the habit of following them.
 </div>
 
-&nbsp;
+<br>
 
 ## Pollutants in Auto Exhaust
 <img src="zimgs/exhaust.jpg" alt="Exhaust" class="img-right">
@@ -43,7 +41,7 @@ Suppose that the level of nitrogen oxides (NOX) in the exhaust of a particular c
 1. What is the probability that a random sample of 50 cars will have a mean NOX less than 0.85 g/mi?
 1. What is the mean NOX such that only 1% of samples of 50 cars have a larger mean?
 
-----
+<br>
 
 ## People in Car
 <img src="zimgs/carpooling.jpg" alt="car pooling" class="img-right">
@@ -55,7 +53,7 @@ A study of rush-hour traffic in San Francisco counted the number of people in a 
 1. What is the probability that a random sample of 5 cars will have a mean number of passengers of greater than 2.0?
 1. Suppose that 700 cars pass through this intersection in one hour. What is the probability that these 700 cars will carry more than 1075 people?
 
-----
+<br>
 
 ## Banking
 <img src="zimgs/associated-bank.jpg" alt="Associated Bank" class="img-right">
@@ -65,11 +63,3 @@ Associated Bank is reviewing its service charges and interest paying policies on
 1. What is the probability that a personal checking account customer has a balance of $200 or lower?
 1. What is the probability that a sample of 5 personal checking account customers has a mean balance of $600 or lower?
 1. What is the probability that a sample of 10 personal checking account customers has a mean balance between $500 and $700?
-
-&nbsp;
-
-----
-
-## Additional Practice
-
-[Here are more exercises for practice if time permits.](Probability_CE2)

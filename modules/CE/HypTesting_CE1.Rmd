@@ -27,8 +27,6 @@ tbls(name="bodytemp","Summary statistics for the body temperature of a sample of
 tbls(name="beetles","Summary statistics for the thorax length for two species of beetles.")
 ```
 
-----
-
 ## Identifying Hypotheses
 
 For each research hypothesis or statement below, construct the null and alternative hypotheses (use their respective symbols) and explicitly define the parameter in the hypotheses.
@@ -54,7 +52,7 @@ I urge you to follow these steps when answering all p-value-related questions:
 A reminder to use these steps will <strong>NOT</strong> be provided on future quizzes, but you should get in the habit of following them. See <a href="../Explanations/Calc_pvalue_Z.html">here</a> for a demonstration of the steps.
 </div>
 
-&nbsp;
+<br>
 
 ## P-Value Calculations and Decisions I
 Compute the p-value (see the steps suggested above) For each situation below.
@@ -63,7 +61,7 @@ Compute the p-value (see the steps suggested above) For each situation below.
 1. H<sub>A</sub>: &mu;>75, &sigma;=12, n=50, x&#772;=79.5, &alpha;=0.10.
 1. H<sub>A</sub>: &mu;<15000, &sigma;=8000, n=50, x&#772;=13700, &alpha;=0.10.
 
-----
+<br>
 
 ## Body Temperature
 <img src="zimgs/body-temperature-1.jpg" alt="Body Temperature" class="img-right">
@@ -82,7 +80,7 @@ Summarize(~bodytemp,data=d,digits=2)
 1. make a decision about the hypotheses using &alpha;=0.05, and 
 1. summarize your findings in terms of body temperatures.
 
-----
+<br>
 
 ## Beetle Size
 <img src="zimgs/beetle.jpg" alt="Beetle" class="img-right">
@@ -100,7 +98,7 @@ Summarize(thorax~species,data=d,digits=2)
 1. make a decision about the hypotheses using &alpha;=0.05, and 
 1. summarize your findings in terms of the beetle's thorax size.
 
-----
+<br>
 
 ## Identifying Type I and II Errors
 
@@ -108,14 +106,6 @@ In each situation below, describe what a Type I and a Type II error is and make 
 
 1. The United States Department of Agriculture's (USDA) limit for salmonella contamination for chicken parts is 15.4% ([source](http://www.foodsafetynews.com/2015/01/fsis-releases-new-salmonella-campylobacter-performance-standards-for-poultry/)). Suppose that a meat inspector reports that the chicken produced by a particular company exceeds the USDA limit. A hypothesis test will be performed to determine whether the meat inspector's claim appears to be true or not.
 1. The process of manufacturing a certain drug is quite complex. Small departures from the standard procedure can result in a drug that does not meet specifications and is dangerous to the user. Before being released for use, a sample of a batch of the drug is tested to determine if the mean amount of a particular chemical in the drug exceeds specifications. A hypothesis test will be performed to determine if the safe level was exceeded.
-
-&nbsp;
-
-----
-
-## Additional Practice
-
-[Here are more exercises for practice if time permits.](HypTesting_CE2)
 
 &nbsp;
 
