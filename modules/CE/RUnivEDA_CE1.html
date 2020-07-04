@@ -1,0 +1,88 @@
+---
+layout: page
+title: Assignment
+subtitle: R Univariate EDA
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="brain-weight" class="section level2">
+<h2>Brain Weight</h2>
+<p><img src="zimgs/brain.jpg" alt="Brain" class="img-right"> Use R to answer the following questions for the data in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/BrainHead.csv">BrainHead.csv</a>.</p>
+<ol>
+<li>Construct a histogram of <code>brain.weight</code>.</li>
+<li>Compute summary statistics for <code>brain.weight</code>.</li>
+<li>Construct histograms of <code>brain.weight</code> for each age group.</li>
+<li>Compute summary statistics of <code>brain.weight</code> for each age group.</li>
+</ol>
+<p><br></p>
+</div>
+<div id="coarse-woody-debris" class="section level2">
+<h2>Coarse Woody Debris</h2>
+<p><img src="zimgs/cwd2.jpg" alt="CWD" class="img-right"> Coarse woody debris (CWD) in lakes is important for aquatic systems as it provides refuge for young fish and invertebrates as well as providing areas for periphyton to grow. Coarse woody debris was studied in the north basin of Allequash Lake in northern Wisconsin. Among other things, the researchers recorded the diameter (cm) of CWD found in the lake littoral zone and a qualitative measure of the degree to which the location where the CWD was found was exposed to winds (low or medium). The data (sampled from information on the <a href="https://lter.limnology.wisc.edu/datacatalog/search">North Temperate Lakes Long Term Ecological Research website</a>) they observed are shown below.</p>
+<pre>
+diameter  21  15  18  23  18  17  19  17  15  22  16  20  16  17  18  15  16  24  24  23
+exposure med med med low med low med med med med med med low med med med med low med med
+
+diameter  18  17  19  17  17  15  17  18  19  31  25  15  17  34  16  18  19  15  16  15
+exposure med med med med med med med med low med med med med low low med med med low med
+
+diameter  20  23  34  20  17  20  15  34  18  24
+exposure med med low med med med med med med med
+</pre>
+<p>Enter the data into Excel, save as a CSV, and load the data into R. Use this information to answer the following questions.</p>
+<ol>
+<li>Perform a univariate EDA for <code>exposure</code>.</li>
+<li>Perform a univariate EDA for <code>diameter</code>.</li>
+</ol>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
