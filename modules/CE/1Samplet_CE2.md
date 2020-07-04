@@ -8,10 +8,9 @@ css: "/css/modules.css"
 &nbsp;
 
 1. **Applications**
+    1. [Sea Level Rise Rate](#sea-level-rise-rate)
     1. [Achievement Test Scores](#achievement-test-scores)
     1. [Salaries of College Graduates](#salaries-of-college-graduates)
-    1. [Increased Civility in Nation-States?](#increased-civility-in-nation-states)
-    1. [Sea Level Rise Rate](#sea-level-rise-rate)
 1. **General t Distribution Questions**
     1. [P-Value Calculations and Decisions II](#p-value-calculations-and-decisions-ii)
     1. [Confidence Interval Calculations II](#confidence-interval-calculations-ii)
@@ -24,12 +23,6 @@ css: "/css/modules.css"
 
 <div class="alert alert-success">For all "hypothesis testing" questions, make sure to provide explicit answers with your work shown for all <a href="../11-steps">11 steps of a hypothesis test</a>.
 </div>
-
-## Increased Civility in Nation-States?
-<img src="zimgs/scales-of-justice.jpg" alt="Scales of Justice" class="img-right">
-Common wisdom has it that the world is becoming more civilized.  This would suggest that nation-states are killing fewer of their citizens (including capital punishment, deaths in civil and international wars, and all state-sponsored violence) than was once the case.  An analysis of history textbooks suggests that, in a typical year in the nineteenth century, the mean number of citizens killed by the typical nation-state was 4,104.  To examine if the world is becoming more civilized, the number of deaths from state-sponsored violence was recorded from records in the archives of [Amnesty International](http://www.amnestyusa.org/), [The International Court of Justice](http://www.icj-cij.org/homepage/), the [United Nations](http://www.un.org/en/index.html), and [The World Bank](http://www.worldbank.org/) for a random sample of 75 countries.  The mean and standard deviation for number of killings in these 75 countries was 3,292.8 and 4,814.5, respectively.  Use these results to determine, at the 5% level, if the "world is becoming more civilized."[^2]
-
-----
 
 ## Sea Level Rise Rate
 <img src="zimgs/sea-level-rise.jpg" alt="Sea Level Rise" class="img-right">
@@ -72,7 +65,3 @@ For each situation below, (i) compute the t test statistic, (ii) compute the p-v
 ## Confidence Interval Calculations II
 
 Compute and interpret confidence regions for the two situations above. You should use the same "steps" as you did in the [confidence regions module](ConfRegions_CE2).
-
-----
-
-[^2]: This exercise was modified [from here](http://www.shortell.org/book/chap12.html).

@@ -43,7 +43,7 @@ Use the resources below to answer [these questions](Prep/1Samplet). [[*Problems 
 ## Practice
 
 * [Assignment](CE/1Samplet_CE1) ... [ANSWER KEY](CE/KEY_1Samplet_CE)
-* [Additional Exercises](CE/1Samplet_CE2))
+* [Additional Exercises](CE/1Samplet_CE2)
 
 <!---
 &nbsp;
