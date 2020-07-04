@@ -16,7 +16,6 @@ css: "/css/modules.css"
     1. [Arthritis Pain Relievers](#arthritis-pain-relievers)
     1. [Turtle Excluder Devices](#turtle-excluder-devices)
     1. [Dolphin Behavior](#dolphin-behavior)
-    1. [Response to Hello](#response-to-hello)
 
 &nbsp;
 
@@ -88,12 +87,6 @@ Five hundred patients participated in a comparison of the effectiveness of three
 ## Turtle Excluder Devices
 <img src="zimgs/turtle_escape_from_ted.jpg" alt="Escaping Turtle" class="img-right">
 Shrimp trawlers are required to have turtle exclusion device (TED), that allows most Loggerhead Sea Turtles (*Caretta caretta*) to escape the net, thus reducing turtle mortality due to by-catch. In the Gulf of Mexico, the TEDs were originally required to be 32"x10" but a new law now requires to TEDs to be 71"x26" with the thought that turtle mortality would be further reduced by the larger opening. This thought was examined by recording the number of trawl tows that had at least one turtle mortality. In 75 tows with the original smaller opening there were 16 tows with at least one turtle mortality. In contrast, in 88 tows with the the newer larger opening there were 8 tows with at least one turtle mortality. Test at the 10% level if there is a significant difference in the proportion of trawl tows with at least one turtle mortality between trawls with the different sized openings.
-
-----
-
-## Response to Hello
-<img src="zimgs/saying-hello.jpg" alt="Saying Hello" class="img-right">
-Eight American undergraduate women were part of a study to determine if whether or not a response is received depends on the size of group addressed (Jones and Foshay 1984). Each student was instructed to say "Hello" to strangers or groups of strangers that they encountered around campus, on the streets in town, in stores, etc. They were told to not make direct eye contact with anyone in the group but to look in the general direction of the group focusing on the shoulders or hair of individuals or the general middle of a group. The students recorded a variety of information for each encounter including how many individuals were in the group and whether at least one person responded to the greeting. The study included 119 people greeted individually, 94 groups of two or three, and 27 groups of four, five or six. They found that 92 of the individuals, 65 of the groups of two or three, and 13 of the groups of four, five, or six responded to the greeting. Determine, at the 5% level, if there is a significant difference in the frequency of responses among the three different sizes of groups (i.e., individuals; two or three; or four, five, or six).
 
 ----
 
