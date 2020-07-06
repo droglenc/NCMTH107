@@ -8,7 +8,7 @@ css: "/css/modules.css"
 ----
 
 <div class="alert alert-warning">
-Use the preparation readings and videos to prepare WRITTEN answers (to bring to class) for the following questions. Please contact <a href="mailto:dogle@northland.edu">Dr. Ogle</a> if you have questions.
+Use the preparation readings and videos to prepare written answers for the following questions. Please contact <a href="mailto:dogle@northland.edu">Dr. Ogle</a> if you have questions.
 </div>
 
 1. What function in R is used to create a data.frame that contains only some (i.e., a subset) individuals from a larger data.frame?

@@ -8,7 +8,7 @@ css: "/css/modules.css"
 ----
 
 <div class="alert alert-warning">
-Use the preparation readings and videos to prepare WRITTEN answers (to bring to class) for the following questions. Please contact <a href="mailto:dogle@northland.edu">Dr. Ogle</a> if you have questions.
+Use the preparation readings and videos to prepare written answers for the following questions. Please contact <a href="mailto:dogle@northland.edu">Dr. Ogle</a> if you have questions.
 </div>
 
 1. When is a t-distribution (or a 1-sample t-test) used as compared to when a Z-distribution (or a 1-sample Z-test) used?
