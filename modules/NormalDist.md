@@ -36,12 +36,10 @@ Many natural phenomena can be closely approximated by simple statistical distrib
 
 Use the resources below to answer [these questions](Prep/NormalDist). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources I** (4 pages, 16 mins)
-  * [![PDF](../img/pdf.png) Reading (up to Section 6.3)](book/Normal Distribution.pdf)
+* **Primary Resources I** (10 pages, 32 mins)
+  * [![PDF](../img/pdf.png) Reading](book/Normal Distribution.pdf)
   * [![Vimeo](../img/dhovid.png) Characteristics of Normal Distributions](https://vimeo.com/user45324800/normcharacteristics){:target="_blank"} [7 mins] ... [corresponding slides](PPT/NormalDist_PPT.pptx)
   * [![YouTube Link](../img/youtube.png) 68-95-99.7 Rule](https://www.youtube.com/watch?v=PJPXFOK8F8E){:target="_blank"} [9 mins]
-* **Primary Resources II** (6 pages, 16 mins)
-  * [![PDF](../img/pdf.png) Reading (Section 6.3 and after)](book/Normal Distribution.pdf)
   * [![Vimeo](../img/dhovid.png) Types of Calculations (Forward & Reverse)](https://vimeo.com/user45324800/normcalctypes){:target="_blank"} [4 mins] ... [corresponding slides](PPT/NormalDist_PPT2.pptx)
   * [![Vimeo](../img/dhovid.png) Forward Calculations in R](https://vimeo.com/user45324800/normdist-forward){:target="_blank"} [6 mins]  ... [corresponding handout](HO/NormalDist_RHO.html){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Reverse Calculations in R](https://vimeo.com/user45324800/normdist-reverse){:target="_blank"} [6 mins] ... same handout as above
