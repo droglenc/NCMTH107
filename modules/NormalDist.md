@@ -41,8 +41,8 @@ Use the resources below to answer [these questions](Prep/NormalDist). [[*Problem
   * [![Vimeo](../img/dhovid.png) Characteristics of Normal Distributions](https://vimeo.com/user45324800/normcharacteristics){:target="_blank"} [7 mins] ... [corresponding slides](PPT/NormalDist_PPT.pptx)
   * [![YouTube Link](../img/youtube.png) 68-95-99.7 Rule](https://www.youtube.com/watch?v=PJPXFOK8F8E){:target="_blank"} [9 mins]
   * [![Vimeo](../img/dhovid.png) Types of Calculations (Forward & Reverse)](https://vimeo.com/user45324800/normcalctypes){:target="_blank"} [4 mins] ... [corresponding slides](PPT/NormalDist_PPT2.pptx)
-  * [![Vimeo](../img/dhovid.png) Forward Calculations in R](https://vimeo.com/user45324800/normdist-forward){:target="_blank"} [6 mins]  ... [corresponding handout](HO/NormalDist_RHO.html){:target="_blank"}
-  * [![Vimeo](../img/dhovid.png) Reverse Calculations in R](https://vimeo.com/user45324800/normdist-reverse){:target="_blank"} [6 mins] ... same handout as above
+  * [![Vimeo](../img/dhovid.png) Forward Calculations in R](https://vimeo.com/user45324800/normdist-forward){:target="_blank"} [6 mins]
+  * [![Vimeo](../img/dhovid.png) Reverse Calculations in R](https://vimeo.com/user45324800/normdist-reverse){:target="_blank"} [6 mins]
 * **Alternative Resources**
   * [![YouTube Link](../img/youtube.png) 68-95-99.7 Rule](https://www.youtube.com/watch?v=cgxPcdPbujI){:target="_blank"} [8 mins]
 
