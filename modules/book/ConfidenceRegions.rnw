@@ -104,6 +104,61 @@ Because of these subtleties, confidence regions are often misinterpreted. Common
 \warn{Care and specificity must be used when interpreting and describing confidence intervals.}
 
 
+\section[Inference Type Relationship]{Hypothesis Tests and Confidence Region Relationship}
+An alternative conceptualization of confidence intervals can show how confidence regions and hypothesis tests are related. This conceptualization rests on considering the sample means that would be ``reasonable to see'' from populations with various values of $\mu$. A graphic is contructed below using the Square Lake population as an example and assuming that $\sigma$ is known (=31.49), $n=50$, and 95\% CIs are used.
+
+First, compute the most common 95\% of sample means assuming that $\mu=70$; i.e., $70 \pm 1.960\frac{31.49}{\sqrt{50}}$ or $(61.27,78.73)$. This range is plotted as a vertical rectangle centered on $\mu=70$ (left-most rectangle) in \figref{fig:CIAlt1}-Left. Next, compute and plot the same range for a slightly larger $\mu$ (e.g., with $\mu=71$, plot $(62.27,78.73)$). Then repeat these steps for sequentially larger values of $\mu$ until a plot similar to \figref{fig:CIAlt1}-Left is constructed.
+
+Consider very carefully what \figref{fig:CIAlt1}-Left represents. The vertical rectangles represent the ranges of the most common 95\% of sample means (values read from the y-axis) that will be produced for a particular population mean (value read from the x-axis). In essence, each vertical line represents the sample means that are likely to be observed from a population with a given population mean (x-axis).
+
+Now suppose that $\bar{x}$=100.04 \tabrefp{tab:SquareLakeSample1}. Draw a horizontal line across \figref{fig:CIAlt1} at this value and then draw vertical lines down from where the horizontal line first enters and last leaves the band of possible sample means (\figref{fig:CIAlt1}-Right). The x-axis values that these vertical lines intercept are an approximate 95\% CI for $\mu$. The approximation is only as close as the intervals used to construct the rectangles (i.e., 1.0 mm were used here).
+
+<<CIAlt1, echo=FALSE, fig.cap="Range (95\\%) of sample means that would be produced by particular population means in the Square Lake fish length example (\\textbf{Left}) and the ranges intercepted by $\\bar{x}=100.04$ mm (\\textbf{Right}).">>=
+sigma <- 31.49; n <- 50; SE <- sigma/sqrt(n)
+z <- qnorm(0.975); me <- z*SE
+int <- 1; mu <- seq(70,130,int)
+res <- matrix(0,nrow=length(mu),ncol=2)
+for (i in 1:length(mu)) {
+  res[i,1] <- mu[i]-me
+  res[i,2] <- mu[i]+me
+}
+
+wid <- int/3
+plot(0,0,xlim=c(min(mu)-int,max(mu)+int),ylim=range(res),
+     xlab="Population Mean",ylab="Sample Mean")
+axis(1,at=c(110,130))
+for (i in 1:length(mu)) {
+  px <- c(rep(mu[i]-wid,2),rep(mu[i]+wid,2),mu[i])
+  py <- c(res[i,1],res[i,2],res[i,2],res[i,1],res[i,1])
+  polygon(px,py,col="gray")
+}
+
+xbar <- 100
+plot(0,0,xlim=c(min(mu)-int,max(mu)+int),ylim=range(res),
+     xlab="Population Mean",ylab="Sample Mean")
+axis(1,at=c(110,130))
+for (i in 1:length(mu)) {
+  px <- c(rep(mu[i]-wid,2),rep(mu[i]+wid,2),mu[i])
+  py <- c(res[i,1],res[i,2],res[i,2],res[i,1],res[i,1])
+  if ((xbar>res[i,1]) & (xbar<res[i,2])) {
+    polygon(px,py,col="green2")
+  } else {
+    polygon(px,py,col=col2rgbt("red",0.5))
+  }
+  abline(h=xbar,lwd=1,col="green2")
+}
+
+arrows(mu[23],res[23,2],mu[23],65,length=0.1,angle=20,col="green2")
+text(mu[23],67,round(mu[23],1),pos=1)
+arrows(mu[39],res[39,2],mu[39],65,length=0.1,angle=20,col="green2")
+text(mu[39],67,round(mu[39],1),pos=1)
+@
+
+In the next section a more efficient and specific formula will be shown for constructing a confidence region (and you will see that the result from this visualization -- (92,108) -- compares favorably to the results in the next section -- (91.27,108.73). However, the graphical representation shown here illustrates that a confidence interval (or region, more generally) consists of population means that are likely to produce the observed sample mean. Thus, a confidence region represents possible null hypothesized population means that WOULD NOT BE rejected during hypothesis testing.
+
+\warn{A confidence region represents null hypothesized values that would NOT be rejected.}
+
+
 \section{Constructing Confidence Regions} \label{sec:CIConstruct}
 Not all confidence regions are designed to contain the parameter 95\% ``of the time,'' are intervals, or are computed to contain $\mu$. Confidence regions can be constructed for any level of confidence, as intervals or bounds, and for nearly all \textbf{parameters}.
 
@@ -266,61 +321,6 @@ Finally, suppose that the second example hypothesis test in \modref{chap:Hypothe
   \item $45-1.282\frac{7}{\sqrt{40}}$, $45-1.42$, or $43.58$
   \item One is 90\% confident that the mean life for ALL batteries with the additive is more than 43.58 months. By confident, it is meant that 95\% of all 95\% confidence regions will contain $\mu$.
 \end{Enumerate}
-
-
-\section[Inference Type Relationship]{Hypothesis Tests and Confidence Region Relationship}
-An alternative conceptualization of confidence intervals can show how confidence regions and hypothesis tests are related. This conceptualization rests on considering the sample means that would be ``reasonable to see'' from populations with various values of $\mu$. A graphic is contructed below using the Square Lake population as an example and assuming that $\sigma$ is known (=31.49), $n=50$, and 95\% CIs are used.
-
-First, compute the most common 95\% of sample means assuming that $\mu=70$; i.e., $70 \pm 1.960\frac{31.49}{\sqrt{50}}$ or $(61.27,78.73)$. This range is plotted as a vertical rectangle centered on $\mu=70$ (left-most rectangle) in \figref{fig:CIAlt1}-Left. Next, compute and plot the same range for a slightly larger $\mu$ (e.g., with $\mu=71$, plot $(62.27,78.73)$). Then repeat these steps for sequentially larger values of $\mu$ until a plot similar to \figref{fig:CIAlt1}-Left is constructed.
-
-Consider very carefully what \figref{fig:CIAlt1}-Left represents. The vertical rectangles represent the ranges of the most common 95\% of sample means (values read from the y-axis) that will be produced for a particular population mean (value read from the x-axis). In essence, each vertical line represents the sample means that are likely to be observed from a population with a given population mean (x-axis).
-
-Now suppose that $\bar{x}$=100.04 \tabrefp{tab:SquareLakeSample1}. Draw a horizontal line across \figref{fig:CIAlt1} at this value and then draw vertical lines down from where the horizontal line first enters and last leaves the band of possible sample means (\figref{fig:CIAlt1}-Right). The x-axis values that these vertical lines intercept are an approximate 95\% CI for $\mu$. The approximation is only as close as the intervals used to construct the rectangles (i.e., 1.0 mm were used here). However, the results from this graphical approach (i.e., $(92,108)$) compare favorably to the previous results from using the CI formula (i.e., $(91.27,108.73)$).
-
-<<CIAlt1, echo=FALSE, fig.cap="Range (95\\%) of sample means that would be produced by particular population means in the Square Lake fish length example (\\textbf{Left}) and the ranges intercepted by $\\bar{x}=100.04$ mm (\\textbf{Right}).">>=
-sigma <- 31.49; n <- 50; SE <- sigma/sqrt(n)
-z <- qnorm(0.975); me <- z*SE
-int <- 1; mu <- seq(70,130,int)
-res <- matrix(0,nrow=length(mu),ncol=2)
-for (i in 1:length(mu)) {
-  res[i,1] <- mu[i]-me
-  res[i,2] <- mu[i]+me
-}
-
-wid <- int/3
-plot(0,0,xlim=c(min(mu)-int,max(mu)+int),ylim=range(res),
-     xlab="Population Mean",ylab="Sample Mean")
-axis(1,at=c(110,130))
-for (i in 1:length(mu)) {
-  px <- c(rep(mu[i]-wid,2),rep(mu[i]+wid,2),mu[i])
-  py <- c(res[i,1],res[i,2],res[i,2],res[i,1],res[i,1])
-  polygon(px,py,col="gray")
-}
-
-xbar <- 100
-plot(0,0,xlim=c(min(mu)-int,max(mu)+int),ylim=range(res),
-     xlab="Population Mean",ylab="Sample Mean")
-axis(1,at=c(110,130))
-for (i in 1:length(mu)) {
-  px <- c(rep(mu[i]-wid,2),rep(mu[i]+wid,2),mu[i])
-  py <- c(res[i,1],res[i,2],res[i,2],res[i,1],res[i,1])
-  if ((xbar>res[i,1]) & (xbar<res[i,2])) {
-    polygon(px,py,col="green2")
-  } else {
-    polygon(px,py,col=col2rgbt("red",0.5))
-  }
-  abline(h=xbar,lwd=1,col="green2")
-}
-
-arrows(mu[23],res[23,2],mu[23],65,length=0.1,angle=20,col="green2")
-text(mu[23],67,round(mu[23],1),pos=1)
-arrows(mu[39],res[39,2],mu[39],65,length=0.1,angle=20,col="green2")
-text(mu[39],67,round(mu[39],1),pos=1)
-@
-
-Surely, the CI formula (\sectref{sec:CIConstruct}) is a more efficient and precise way to construct confidence intervals. However, this conceptualization illustrates that a confidence interval (or region, more generally) consists of population means that are likely to produce the observed sample mean. Thus, a confidence region represents possible null hypothesized population means that WOULD NOT BE rejected during hypothesis testing.
-
-\warn{A confidence region represents null hypothesized values that would NOT be rejected.}
 
 
 \section{Precision and Sample Size}
