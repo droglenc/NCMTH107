@@ -32,10 +32,12 @@ A major goal of inferential statistics is to estimate the value of a parameter f
 ## Preparation for Class
 Use the resources below to answer [these questions](Prep/ConfRegions). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (12 pages, 19 mins)
-  * [![PDF](../img/pdf.png) Reading](book/Confidence Regions.pdf)
+* **Primary Resources I** (5 pages, 13 mins)
+  * [![PDF](../img/pdf.png) Reading (Sections 13.1 & 13.2)](book/Confidence Regions.pdf)
   * [![YouTube](../img/youtube.png) Introduction to Confidence Intervals](https://www.youtube.com/watch?v=27iSnzss2wM){:target="_blank"} [7 mins]
   * [![YouTube](../img/youtube.png) Interpreting Confidence Intervals](https://www.youtube.com/watch?v=JYP6gc--sGQ){:target="_blank"} [6 mins]
+* **Primary Resources II** (7 pages, 6 mins)
+  * [![PDF](../img/pdf.png) Reading (Sections 13.3 & 13.4)](book/Confidence Regions.pdf)
   * [![Web](../img/web.png) Construct a Confidence Region](Explanations/Calc_CI_Z)
   * [![YouTube](../img/youtube.png) Confidence Interval Overview](https://www.youtube.com/watch?v=FUaXoKdCre4){:target="_blank"} [6 mins]
   * [![Web](../img/web.png) Calculate n Explanation](Explanations/Calc_n)
