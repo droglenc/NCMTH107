@@ -32,12 +32,14 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
 
 Use the resources below to answer [these questions](Prep/HypTesting). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (12 pages, 17 mins)
-  * [![PDF](../img/pdf.png) Reading](book/Hypothesis Tests.pdf)
+* **Primary Resources I** (10 pages, 6 mins)
+  * [![PDF](../img/pdf.png) Reading (Sections 12.1-12.4)](book/Hypothesis Tests.pdf)
   * [![Vimeo](../img/dhovid.png) Forming Statistical Hypothesis](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins] ... [corresponding slides](PPT/HypTesting_PPT-hypotheses.pptx)
   * [![Web](../img/web.png) Calculating p-values](Explanations/Calc_pvalue_Z)
-  * ![YouTube](../img/youtube.png) Statistical Error Types I](https://www.youtube.com/watch?v=7mE-K_w1v90){:target="_blank"} [8 mins]
-  * ![YouTube](../img/youtube.png) Statistical Error Types II](https://www.youtube.com/watch?v=OWn3Ko1WYTA){:target="_blank"} [3 mins; *between 1:29 and 4:07*]
+* **Primary Resources II** (2 pages, 11 mins)
+  * [![PDF](../img/pdf.png) Reading (Section 12.5)](book/Hypothesis Tests.pdf)
+  * [![YouTube](../img/youtube.png) Statistical Error Types I](https://www.youtube.com/watch?v=7mE-K_w1v90){:target="_blank"} [8 mins]
+  * [![YouTube](../img/youtube.png) Statistical Error Types II](https://www.youtube.com/watch?v=OWn3Ko1WYTA){:target="_blank"} [3 mins; *between 1:29 and 4:07*]
 
 ----
 
