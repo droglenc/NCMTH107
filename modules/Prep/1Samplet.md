@@ -20,6 +20,3 @@ Use the preparation readings and videos to prepare written answers for the follo
 1. What is the formula to compute a confidence region in a 1-Sample t-Test?
 1. What are the assumptions of a 1-Sample t-Test?
 1. What characteristics define when a 1-Sample t-Test will be used?
-1. What R function is used to perform a 1-Sample t-Test with raw data?
-
-----

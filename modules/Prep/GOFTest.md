@@ -20,8 +20,3 @@ Use the preparation readings and videos to prepare written answers for the follo
 1. What are the assumptions of a goodness-of-fit test?
 1. What characteristics define when a goodness-of-fit test will be used?
 1. What formula is used to construct a confidence interval for the population proportion in one level?
-1. What R function do you use to construct an observed table from raw data?
-1. What R function do you use to construct an observed table from data that has already been summarized (to frequencies)?
-1. What R function is used to perform a goodness-of-fit test?
-
-----

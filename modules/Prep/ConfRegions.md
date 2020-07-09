@@ -16,6 +16,7 @@ Use the preparation readings and videos to prepare written answers for the follo
 1. How many 95% confidence regions contain the parameter of interest? 90%? 99%?
 1. How often will you make an incorrect conclusion about the value of the parameter if you use a 95% confidence region? 90%? 99%?
 1. What decisions can a statistician make that will result in a narrower confidence interval? Which decision is "better"?
+1. What decision can a statistician make that will result in a confidence interval that is more likely to contain the parameter of interest?
 1. If the value in the null hypothesis is contained within a confidence region, will that null hypothesis be rejected or not rejected?
 
 ### Second Day

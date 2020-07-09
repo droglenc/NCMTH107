@@ -21,5 +21,3 @@ Use the preparation readings and videos to prepare written answers for the follo
 1. How is the expected frequencies table computed?
 1. What are the assumptions of a chi-square test?
 1. What characteristics define when a chi-square test will be used?
-
-----

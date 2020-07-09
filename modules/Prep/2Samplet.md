@@ -22,8 +22,3 @@ Use the preparation readings and videos to prepare written answers for the follo
 1. What test is used to determine if the population variances are equal?
 1. What conclusion is made if the p-value is greater than &alpha; in a Levene's Test.
 1. What characteristics define when a 2-Sample t-Test will be used?
-1. What format must the data be in to perform a 2-Sample t-Test in R?
-1. What R function is used to perform a 2-Sample t-Test with raw data?
-1. What R function is used to perform the test for equal variances?
-
-----
