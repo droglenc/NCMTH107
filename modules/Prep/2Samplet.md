@@ -17,8 +17,9 @@ Use the preparation readings and videos to prepare written answers for the follo
 1. What is the statistic in a 2-Sample t-Test?
 1. What is the test statistic in a 2-Sample t-Test? [*What is the symbol and the equation for this test statistic?*]
 1. What is the formula to compute a confidence region in a 2-Sample t-Test?
-1. What is parameter thought to be contained in the confidence region computed with a 2-Sample t-Test?
+1. What parameter is thought to be contained in the confidence region computed with a 2-Sample t-Test?
 1. What are the assumptions of a 2-Sample t-Test?
 1. What test is used to determine if the population variances are equal?
 1. What conclusion is made if the p-value is greater than &alpha; in a Levene's Test.
 1. What characteristics define when a 2-Sample t-Test will be used?
+1. Which R function is used to compute a p-value from the test statistic in a 2-sample t-test? Which arguments **must** be included?

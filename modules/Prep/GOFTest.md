@@ -20,3 +20,4 @@ Use the preparation readings and videos to prepare written answers for the follo
 1. What are the assumptions of a goodness-of-fit test?
 1. What characteristics define when a goodness-of-fit test will be used?
 1. What formula is used to construct a confidence interval for the population proportion in one level?
+1. Which R function is used to compute a p-value from the test statistic in a Goodness-of-Fit test? Which arguments **must** be included?
