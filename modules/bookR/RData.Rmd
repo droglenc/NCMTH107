@@ -50,7 +50,7 @@ knitr::include_graphics("zimg/Data_File_1.jpg")
 
 Variable names must NOT contain spaces. For example, don't use "total length" or "length (cm)". If you feel the need to have longer variable names, then separate the parts with a period (e.g., "length.cm") or an underscore (e.g., "length_cm"). Furthermore, numerical measurements should NOT include units (e.g., don't use "7 cm"). Finally, for categorical data, make sure that all categories are consistent (e.g., do not have a column that contains both "bayfield" and "Bayfield").
 
-The spreadsheet is saved as a CSV file by selecting the **File..Save As** menu item, which will produce the dialog box below. In this dialog box, change "Save as type" to "CSV (Comma delimited) (*.csv)",[^There are several choices for CSV files here; do NOT choose the one with "UTF-8" in the name.], provide a file name (do not put any periods in the name), select a location to save the file (don't forget this location!!), and press "Save". Two "warning" dialog boxes may then appear -- select "OK" for the first and "YES" for the second. You can now close the spreadsheet file.^[You may be asked to save changes -- you should say "No".]
+The spreadsheet is saved as a CSV file by selecting the **File..Save As** menu item, which will produce the dialog box below. In this dialog box, change "Save as type" to "CSV (Comma delimited) (*.csv)",^[There are several choices for CSV files here; do NOT choose the one with "UTF-8" in the name.], provide a file name (do not put any periods in the name), select a location to save the file (don't forget this location!!), and press "Save". Two "warning" dialog boxes may then appear -- select "OK" for the first and "YES" for the second. You can now close the spreadsheet file.^[You may be asked to save changes -- you should say "No".]
 
 ```{r echo=FALSE, out.width='60%'}
 knitr::include_graphics("zimg/Data_File_2.jpg")
@@ -76,7 +76,7 @@ knitr::include_graphics("zimg/Data_File_3.jpg")
 bears <- read.csv("data/Bears.csv")
 ```
 
-* One should check the data in this object as descried in the [Viewing a Data Frame] section below.
+* One should check the data in this object as described in the [Viewing a Data Frame] section below.
 
 &nbsp;
 
@@ -145,7 +145,7 @@ In this example, it is seen that `r kCounts(ncol(bears))` variables were recorde
 unique(bears$loc)
 ```
 
-A character variable may be converted to a factor variable with `factor()`. In this course, the main reason for doing this would be to control the levels of an ordinal variable because R treats levels alphabetically by default. For example suppose that we wanted to order the levels of the `r names(bears)[3]` variable from west to east (so, Douglas, Bayfield, and Ashland). For this purpose the variable is converted to a factor below with `factor()` and the order of the levels is controled with `levels=`.
+A character variable may be converted to a factor variable with `factor()`. In this course, the main reason for doing this would be to control the levels of an ordinal variable because R treats levels alphabetically by default. For example suppose that we wanted to order the levels of the `r names(bears)[3]` variable from west to east (so, Douglas, Bayfield, and Ashland). For this purpose the variable is converted to a factor below with `factor()` and the order of the levels is controlled with `levels=`.
 
 <aside>
 Make sure the levels are spelled EXACTLY as they appear in the data.
