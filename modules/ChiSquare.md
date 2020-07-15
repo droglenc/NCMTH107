@@ -36,7 +36,7 @@ Use the resources below to answer [these questions](Prep/ChiSquare). [[*Problems
   * [![Vimeo](../img/dhovid.png) Chi-Square Distribution](https://vimeo.com/user45324800/chisqdist){:target="_blank"} [4 mins] ... [corresponding slides](PPT/ChiSquare_PPT1.pptx)
   * [![Vimeo](../img/dhovid.png) Chi-Square Distribution in R](https://vimeo.com/user45324800/chisqdistribution){:target="_blank"} [2 mins] ... [corresonding script](HO/ChiSquare_RHO1.html){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Where Do Expected Values Come From?](https://vimeo.com/user45324800/chisqtest-expvals){:target="_blank"} [5 mins] ... [corresponding slides](PPT/ChiSquare_PPT2.pptx)
-  * [![Vimeo](../img/dhovid.png) Chi-Square Test Example](https://vimeo.com/401077003){:target="_blank"} [15 mins] ... [corresponding slides](PPT/ChiSquare_PPT2.pptx)
+  * [![Vimeo](../img/dhovid.png) Chi-Square Test Example](https://vimeo.com/438596427){:target="_blank"} [15 mins] ... [corresponding slides](PPT/ChiSquare_PPT2.pptx)
 
 ----
 
