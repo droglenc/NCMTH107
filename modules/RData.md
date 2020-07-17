@@ -32,11 +32,11 @@ R is fast becoming the primary software for performing statistical analyses in m
 
 Use the resources below to answer [these questions](Prep/RData). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (~4 pages, 13 mins)
+* **Primary Resources** (~4 pages, 20 mins)
   * [Reading](bookR/RData.html)
-  * [![Vimeo](../img/dhovid.png) Retrieve Data from Webpage](https://vimeo.com/user45324800/ncstats-getdatawebpage){:target="_blank"} [3 mins]
+  * [![Vimeo](../img/dhovid.png) Retrieve Data from Webpage](https://vimeo.com/438639446){:target="_blank"} [5 mins]
   * ![Vimeo](../img/dhovid.png) Enter Your Own Data ... [With Excel](https://vimeo.com/user45324800/ncstats-preparedataexcel){:target="_blank"} [4 mins] **OR** [Without Excel](https://vimeo.com/user45324800/ncstats-preparedatatextfile){:target="_blank"} [4 mins]
-  * [![Vimeo](../img/dhovid.png) Load CSV File into RStudio](){:target="_blank"} [6 mins] ... [corresponding resource](HO/Penguins.html#RData){:target="_blank"}
+  * [![Vimeo](../img/dhovid.png) Load CSV File into RStudio](https://vimeo.com/439307575){:target="_blank"} [11 mins] ... [corresponding resource](HO/Penguins.html#RData){:target="_blank"}
 
 ----
 
