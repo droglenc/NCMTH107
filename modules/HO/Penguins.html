@@ -162,7 +162,7 @@ count: false
 ```r
 #!# Set to your OWN working directory ... this is Derek's computer.
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/HO")  
-*d &lt;- read.csv("penguins.csv")
+*peng &lt;- read.csv("penguins.csv")
 ```
 ]
  
@@ -179,8 +179,8 @@ count: false
 ```r
 #!# Set to your OWN working directory ... this is Derek's computer.
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/HO")  
-d &lt;- read.csv("penguins.csv")  
-*str(d)
+peng &lt;- read.csv("penguins.csv")  
+*str(peng)
 ```
 ]
  
@@ -207,9 +207,9 @@ count: false
 ```r
 #!# Set to your OWN working directory ... this is Derek's computer.
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/HO")  
-d &lt;- read.csv("penguins.csv")  
-str(d)  
-*peek(d)
+peng &lt;- read.csv("penguins.csv")  
+str(peng)  
+*peek(peng)
 ```
 ]
  
@@ -334,7 +334,7 @@ count: false
 .left-panel-filter1-auto[
 
 ```r
-*headtail(d)
+*headtail(peng)
 ```
 ]
  
@@ -358,40 +358,8 @@ count: false
 .left-panel-filter1-auto[
 
 ```r
-headtail(d)  
-*unique(d$species)
-```
-]
- 
-.right-panel-filter1-auto[
-
-```
-      species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
-1      Adelie Torgersen           39.1          18.7               181        3750   male
-2      Adelie Torgersen           39.5          17.4               186        3800 female
-3      Adelie Torgersen           40.3          18.0               195        3250 female
-342 Chinstrap     Dream           49.6          18.2               193        3775   male
-343 Chinstrap     Dream           50.8          19.0               210        4100   male
-344 Chinstrap     Dream           50.2          18.7               198        3775 female
-```
-
-```
-[1] "Adelie"    "Gentoo"    "Chinstrap"
-```
-]
-
----
-count: false
- 
-## Filtering Data
-.left-panel-filter1-auto[
-
-```r
-headtail(d)  
-unique(d$species)  
-
-## Isolate just Chinstrap Penguins
-*d_chin &lt;- filterD(d,species=="Chinstrap")
+headtail(peng)  
+*unique(peng$species)
 ```
 ]
  
@@ -419,12 +387,44 @@ count: false
 .left-panel-filter1-auto[
 
 ```r
-headtail(d)  
-unique(d$species)  
+headtail(peng)  
+unique(peng$species)  
 
 ## Isolate just Chinstrap Penguins
-d_chin &lt;- filterD(d,species=="Chinstrap")  
-*peek(d_chin)
+*peng_chin &lt;- filterD(peng,species=="Chinstrap")
+```
+]
+ 
+.right-panel-filter1-auto[
+
+```
+      species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1      Adelie Torgersen           39.1          18.7               181        3750   male
+2      Adelie Torgersen           39.5          17.4               186        3800 female
+3      Adelie Torgersen           40.3          18.0               195        3250 female
+342 Chinstrap     Dream           49.6          18.2               193        3775   male
+343 Chinstrap     Dream           50.8          19.0               210        4100   male
+344 Chinstrap     Dream           50.2          18.7               198        3775 female
+```
+
+```
+[1] "Adelie"    "Gentoo"    "Chinstrap"
+```
+]
+
+---
+count: false
+ 
+## Filtering Data
+.left-panel-filter1-auto[
+
+```r
+headtail(peng)  
+unique(peng$species)  
+
+## Isolate just Chinstrap Penguins
+peng_chin &lt;- filterD(peng,species=="Chinstrap")  
+*peek(peng_chin)
 ```
 ]
  
@@ -503,8 +503,8 @@ count: false
 .left-panel-filter2-user[
 
 ```r
-*headtail(d)
-*unique(d$species)
+*headtail(peng)
+*unique(peng$species)
 
 ## Isolate just Chinstrap and Gentoo Penguins
 ```
@@ -534,12 +534,12 @@ count: false
 .left-panel-filter2-user[
 
 ```r
-headtail(d)  
-unique(d$species)  
+headtail(peng)  
+unique(peng$species)  
 
 ## Isolate just Chinstrap and Gentoo Penguins
 
-*d_chingen &lt;- filterD(d,species %in% c("Chinstrap","Gentoo"))
+*peng_chingen &lt;- filterD(peng,species %in% c("Chinstrap","Gentoo"))
 ```
 ]
  
@@ -567,13 +567,13 @@ count: false
 .left-panel-filter2-user[
 
 ```r
-headtail(d)  
-unique(d$species)  
+headtail(peng)  
+unique(peng$species)  
 
 ## Isolate just Chinstrap and Gentoo Penguins
 
-d_chingen &lt;- filterD(d,species %in% c("Chinstrap","Gentoo"))  
-*peek(d_chingen)
+peng_chingen &lt;- filterD(peng,species %in% c("Chinstrap","Gentoo"))  
+*peek(peng_chingen)
 ```
 ]
  
@@ -652,7 +652,7 @@ count: false
 .left-panel-filter3-user[
 
 ```r
-*headtail(d)
+*headtail(peng)
 
 ## Isolate just male Chinstrap Penguins
 ```
@@ -678,11 +678,11 @@ count: false
 .left-panel-filter3-user[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Isolate just male Chinstrap Penguins
 
-*d_chinmale &lt;- filterD(d,species=="Chinstrap",sex=="male")
+*peng_chinmale &lt;- filterD(peng,species=="Chinstrap",sex=="male")
 ```
 ]
  
@@ -706,12 +706,12 @@ count: false
 .left-panel-filter3-user[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Isolate just male Chinstrap Penguins
 
-d_chinmale &lt;- filterD(d,species=="Chinstrap",sex=="male")  
-*peek(d_chinmale)
+peng_chinmale &lt;- filterD(peng,species=="Chinstrap",sex=="male")  
+*peek(peng_chinmale)
 ```
 ]
  
@@ -786,7 +786,7 @@ count: false
 .left-panel-filterHvy-user[
 
 ```r
-*headtail(d)
+*headtail(peng)
 
 ## Isolate just Penguins with body mass more than 5900 g ... ~13 lbs
 ```
@@ -812,11 +812,11 @@ count: false
 .left-panel-filterHvy-user[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Isolate just Penguins with body mass more than 5900 g ... ~13 lbs
 
-*d_heavy &lt;- filterD(d,body_mass_g&gt;5900)
+*peng_heavy &lt;- filterD(peng,body_mass_g&gt;5900)
 ```
 ]
  
@@ -840,12 +840,12 @@ count: false
 .left-panel-filterHvy-user[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Isolate just Penguins with body mass more than 5900 g ... ~13 lbs
 
-d_heavy &lt;- filterD(d,body_mass_g&gt;5900)  
-*peek(d_heavy)
+peng_heavy &lt;- filterD(peng,body_mass_g&gt;5900)  
+*peek(peng_heavy)
 ```
 ]
  
@@ -906,7 +906,7 @@ count: false
 .left-panel-filterWt2-user[
 
 ```r
-*headtail(d)
+*headtail(peng)
 
 ## Isolate Penguins with body masses b/w 4500 and 5000 g
 ```
@@ -932,11 +932,11 @@ count: false
 .left-panel-filterWt2-user[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Isolate Penguins with body masses b/w 4500 and 5000 g
 
-*d_wt &lt;- filterD(d,body_mass_g&gt;4500,body_mass_g&lt;5000)
+*peng_wt &lt;- filterD(peng,body_mass_g&gt;4500,body_mass_g&lt;5000)
 ```
 ]
  
@@ -960,12 +960,12 @@ count: false
 .left-panel-filterWt2-user[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Isolate Penguins with body masses b/w 4500 and 5000 g
 
-d_wt &lt;- filterD(d,body_mass_g&gt;4500,body_mass_g&lt;5000)  
-*peek(d_wt)
+peng_wt &lt;- filterD(peng,body_mass_g&gt;4500,body_mass_g&lt;5000)  
+*peek(peng_wt)
 ```
 ]
  
@@ -1040,7 +1040,7 @@ count: false
 .left-panel-filterBM-user[
 
 ```r
-*headtail(d)
+*headtail(peng)
 
 ## Examine just the body mass variable
 ```
@@ -1066,11 +1066,11 @@ count: false
 .left-panel-filterBM-user[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Examine just the body mass variable
 
-*d$body_mass_g
+*peng$body_mass_g
 ```
 ]
  
@@ -1168,7 +1168,7 @@ count: false
 .left-panel-UnivEDAQsum-user[
 
 ```r
-*headtail(d_chin)
+*headtail(peng_chin)
 
 ## Distribution of flipper lengths for Chinstrap Penguins
 ```
@@ -1194,11 +1194,11 @@ count: false
 .left-panel-UnivEDAQsum-user[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Distribution of flipper lengths for Chinstrap Penguins
 
-*Summarize(~flipper_length_mm,data=d_chin,digits=1)
+*Summarize(~flipper_length_mm,data=peng_chin,digits=1)
 ```
 ]
  
@@ -1227,11 +1227,11 @@ count: false
 .left-panel-UnivEDAQsum-user[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Distribution of flipper lengths for Chinstrap Penguins
 
-Summarize(~flipper_length_mm,data=d_chin,digits=1)  
+Summarize(~flipper_length_mm,data=peng_chin,digits=1)  
 
 ## Distribution of bill lengths for Chinstrap Penguins
 ```
@@ -1262,15 +1262,15 @@ count: false
 .left-panel-UnivEDAQsum-user[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Distribution of flipper lengths for Chinstrap Penguins
 
-Summarize(~flipper_length_mm,data=d_chin,digits=1)  
+Summarize(~flipper_length_mm,data=peng_chin,digits=1)  
 
 ## Distribution of bill lengths for Chinstrap Penguins
 
-*Summarize(~bill_length_mm,data=d_chin,digits=2)
+*Summarize(~bill_length_mm,data=peng_chin,digits=2)
 ```
 ]
  
@@ -1362,7 +1362,7 @@ count: false
 .left-panel-UnivEDAQhist-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Distribution of flipper lengths for Chinstrap Penguins
 ```
@@ -1388,11 +1388,11 @@ count: false
 .left-panel-UnivEDAQhist-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Distribution of flipper lengths for Chinstrap Penguins
 
-*ggplot(data=d_chin,mapping=aes(x=flipper_length_mm))
+*ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm))
 ```
 ]
  
@@ -1418,11 +1418,11 @@ count: false
 .left-panel-UnivEDAQhist-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Distribution of flipper lengths for Chinstrap Penguins
 
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm)) +  
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm)) +  
 * geom_histogram(
 * )
 ```
@@ -1450,11 +1450,11 @@ count: false
 .left-panel-UnivEDAQhist-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Distribution of flipper lengths for Chinstrap Penguins
 
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm)) +  
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm)) +  
   geom_histogram(  
 *   binwidth=5,boundary=0,
   )   
@@ -1483,11 +1483,11 @@ count: false
 .left-panel-UnivEDAQhist-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Distribution of flipper lengths for Chinstrap Penguins
 
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm)) +  
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm)) +  
   geom_histogram(  
     binwidth=5,boundary=0,  
 *   color="black",fill="lightgray"
@@ -1517,11 +1517,11 @@ count: false
 .left-panel-UnivEDAQhist-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Distribution of flipper lengths for Chinstrap Penguins
 
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm)) +  
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm)) +  
   geom_histogram(  
     binwidth=5,boundary=0,  
     color="black",fill="lightgray"  
@@ -1552,11 +1552,11 @@ count: false
 .left-panel-UnivEDAQhist-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Distribution of flipper lengths for Chinstrap Penguins
 
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm)) +  
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm)) +  
   geom_histogram(  
     binwidth=5,boundary=0,  
     color="black",fill="lightgray"  
@@ -1588,11 +1588,11 @@ count: false
 .left-panel-UnivEDAQhist-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Distribution of flipper lengths for Chinstrap Penguins
 
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm)) +  
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm)) +  
   geom_histogram(  
     binwidth=5,boundary=0,  
     color="black",fill="lightgray"  
@@ -1652,10 +1652,10 @@ count: false
 .left-panel-UnivEDAQhist2A-rotate[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Distribution of bill lengths for Chinstrap Penguins
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm)) +  
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm)) +  
   geom_histogram(binwidth=5,boundary=0,color="black",fill="lightgray") +  
   labs(x="Flipper Length (mm)",y="Frequency of Penguins") +  
   scale_y_continuous(expand=expansion(mult=c(0,0.05))) +  
@@ -1685,10 +1685,10 @@ count: false
 .left-panel-UnivEDAQhist2A-rotate[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Distribution of bill lengths for Chinstrap Penguins
-*ggplot(data=d_chin,mapping=aes(x=bill_length_mm)) +
+*ggplot(data=peng_chin,mapping=aes(x=bill_length_mm)) +
   geom_histogram(binwidth=5,boundary=0,color="black",fill="lightgray") +  
   labs(x="Flipper Length (mm)",y="Frequency of Penguins") +  
   scale_y_continuous(expand=expansion(mult=c(0,0.05))) +  
@@ -1745,10 +1745,10 @@ count: false
 .left-panel-UnivEDAQhist2B-rotate[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Distribution of bill lengths for Chinstrap Penguins
-ggplot(data=d_chin,mapping=aes(x=bill_length_mm)) +  
+ggplot(data=peng_chin,mapping=aes(x=bill_length_mm)) +  
   geom_histogram(binwidth=5,boundary=0,color="black",fill="lightgray") +  
   labs(x="Flipper Length (mm)",y="Frequency of Penguins") +  
   scale_y_continuous(expand=expansion(mult=c(0,0.05))) +  
@@ -1778,10 +1778,10 @@ count: false
 .left-panel-UnivEDAQhist2B-rotate[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Distribution of bill lengths for Chinstrap Penguins
-ggplot(data=d_chin,mapping=aes(x=bill_length_mm)) +  
+ggplot(data=peng_chin,mapping=aes(x=bill_length_mm)) +  
   geom_histogram(binwidth=5,boundary=0,color="black",fill="lightgray") +  
 * labs(x="Bill Length (mm)",y="Frequency of Penguins") +
   scale_y_continuous(expand=expansion(mult=c(0,0.05))) +  
@@ -1838,10 +1838,10 @@ count: false
 .left-panel-UnivEDAQhist2C-rotate[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Distribution of bill lengths for Chinstrap Penguins
-ggplot(data=d_chin,mapping=aes(x=bill_length_mm)) +  
+ggplot(data=peng_chin,mapping=aes(x=bill_length_mm)) +  
   geom_histogram(binwidth=5,boundary=0,color="black",fill="lightgray") +  
   labs(x="Bill Length (mm)",y="Frequency of Penguins") +  
   scale_y_continuous(expand=expansion(mult=c(0,0.05))) +  
@@ -1871,10 +1871,10 @@ count: false
 .left-panel-UnivEDAQhist2C-rotate[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Distribution of bill lengths for Chinstrap Penguins
-ggplot(data=d_chin,mapping=aes(x=bill_length_mm)) +  
+ggplot(data=peng_chin,mapping=aes(x=bill_length_mm)) +  
 * geom_histogram(binwidth=2,boundary=0,color="black",fill="lightgray") +
   labs(x="Bill Length (mm)",y="Frequency of Penguins") +  
   scale_y_continuous(expand=expansion(mult=c(0,0.05))) +  
@@ -1947,7 +1947,7 @@ count: false
 .left-panel-UnivEDACsum-user[
 
 ```r
-*headtail(d)
+*headtail(peng)
 
 ## Species composition
 ```
@@ -1973,11 +1973,11 @@ count: false
 .left-panel-UnivEDACsum-user[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Species composition
 
-*( freqSpec &lt;- xtabs(~species,data=d) )
+*( freqSpec &lt;- xtabs(~species,data=peng) )
 
 ## Samplings by island
 ```
@@ -2009,15 +2009,15 @@ count: false
 .left-panel-UnivEDACsum-user[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Species composition
 
-( freqSpec &lt;- xtabs(~species,data=d) )  
+( freqSpec &lt;- xtabs(~species,data=peng) )  
 
 ## Samplings by island
 
-*( freqIsland &lt;- xtabs(~island,data=d) )
+*( freqIsland &lt;- xtabs(~island,data=peng) )
 
 ## Sex distribution
 ```
@@ -2055,19 +2055,19 @@ count: false
 .left-panel-UnivEDACsum-user[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Species composition
 
-( freqSpec &lt;- xtabs(~species,data=d) )  
+( freqSpec &lt;- xtabs(~species,data=peng) )  
 
 ## Samplings by island
 
-( freqIsland &lt;- xtabs(~island,data=d) )  
+( freqIsland &lt;- xtabs(~island,data=peng) )  
 
 ## Sex distribution
 
-*( freqSex &lt;- xtabs(~sex,data=d) )
+*( freqSex &lt;- xtabs(~sex,data=peng) )
 ```
 ]
  
@@ -2314,7 +2314,7 @@ count: false
 .left-panel-UnivEDACbar-non_seq[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 
 ## Species composition
@@ -2341,11 +2341,11 @@ count: false
 .left-panel-UnivEDACbar-non_seq[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 
 ## Species composition
-*ggplot(data=d,mapping=aes(x=species))
+*ggplot(data=peng,mapping=aes(x=species))
 ```
 ]
  
@@ -2371,11 +2371,11 @@ count: false
 .left-panel-UnivEDACbar-non_seq[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 
 ## Species composition
-ggplot(data=d,mapping=aes(x=species)) +  
+ggplot(data=peng,mapping=aes(x=species)) +  
 * geom_bar(
 * )
 ```
@@ -2403,11 +2403,11 @@ count: false
 .left-panel-UnivEDACbar-non_seq[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 
 ## Species composition
-ggplot(data=d,mapping=aes(x=species)) +  
+ggplot(data=peng,mapping=aes(x=species)) +  
   geom_bar(  
 *   color="black",fill="lightgray"
   )   
@@ -2436,11 +2436,11 @@ count: false
 .left-panel-UnivEDACbar-non_seq[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 
 ## Species composition
-ggplot(data=d,mapping=aes(x=species)) +  
+ggplot(data=peng,mapping=aes(x=species)) +  
   geom_bar(  
     color="black",fill="lightgray"  
   ) +  
@@ -2470,11 +2470,11 @@ count: false
 .left-panel-UnivEDACbar-non_seq[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 
 ## Species composition
-ggplot(data=d,mapping=aes(x=species)) +  
+ggplot(data=peng,mapping=aes(x=species)) +  
   geom_bar(  
     color="black",fill="lightgray"  
   ) +  
@@ -2505,11 +2505,11 @@ count: false
 .left-panel-UnivEDACbar-non_seq[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 
 ## Species composition
-ggplot(data=d,mapping=aes(x=species)) +  
+ggplot(data=peng,mapping=aes(x=species)) +  
   geom_bar(  
     color="black",fill="lightgray"  
   ) +  
@@ -2568,10 +2568,10 @@ count: false
 .left-panel-UnivEDACbar2A-rotate[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Sampling by Island
-ggplot(data=d,mapping=aes(x=species)) +  
+ggplot(data=peng,mapping=aes(x=species)) +  
   geom_bar(color="black",fill="lightgray") +  
   labs(x="Species",y="Frequency of Penguins") +  
   scale_y_continuous(expand=expansion(mult=c(0,0.05))) +  
@@ -2601,10 +2601,10 @@ count: false
 .left-panel-UnivEDACbar2A-rotate[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Sampling by Island
-*ggplot(data=d,mapping=aes(x=island)) +
+*ggplot(data=peng,mapping=aes(x=island)) +
   geom_bar(color="black",fill="lightgray") +  
   labs(x="Species",y="Frequency of Penguins") +  
   scale_y_continuous(expand=expansion(mult=c(0,0.05))) +  
@@ -2661,10 +2661,10 @@ count: false
 .left-panel-UnivEDACbar2B-rotate[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Sampling by Island
-ggplot(data=d,mapping=aes(x=island)) +  
+ggplot(data=peng,mapping=aes(x=island)) +  
   geom_bar(color="black",fill="lightgray") +  
   labs(x="Species",y="Frequency of Penguins") +  
   scale_y_continuous(expand=expansion(mult=c(0,0.05))) +  
@@ -2694,10 +2694,10 @@ count: false
 .left-panel-UnivEDACbar2B-rotate[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Sampling by Island
-ggplot(data=d,mapping=aes(x=island)) +  
+ggplot(data=peng,mapping=aes(x=island)) +  
   geom_bar(color="black",fill="lightgray") +  
 * labs(x="Island",y="Frequency of Penguins") +
   scale_y_continuous(expand=expansion(mult=c(0,0.05))) +  
@@ -2768,7 +2768,7 @@ count: false
 .left-panel-UnivEDAQsum2-user[
 
 ```r
-*headtail(d)
+*headtail(peng)
 
 ## Distribution of flipper lengths by species
 ```
@@ -2794,11 +2794,11 @@ count: false
 .left-panel-UnivEDAQsum2-user[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Distribution of flipper lengths by species
 
-*Summarize(flipper_length_mm~species,data=d,digits=1)
+*Summarize(flipper_length_mm~species,data=peng,digits=1)
 ```
 ]
  
@@ -2867,7 +2867,7 @@ count: false
 .left-panel-UnivEDAQhist2-user[
 
 ```r
-*headtail(d)
+*headtail(peng)
 
 ## Distribution of flipper lengths by species
 ```
@@ -2893,11 +2893,11 @@ count: false
 .left-panel-UnivEDAQhist2-user[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Distribution of flipper lengths by species
 
-*ggplot(data=d,mapping=aes(x=flipper_length_mm)) +
+*ggplot(data=peng,mapping=aes(x=flipper_length_mm)) +
 * geom_histogram(binwidth=5,boundary=0,
 *                color="black",fill="lightgray") +
 * labs(x="Flipper Length (mm)",
@@ -2929,11 +2929,11 @@ count: false
 .left-panel-UnivEDAQhist2-user[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Distribution of flipper lengths by species
 
-ggplot(data=d,mapping=aes(x=flipper_length_mm)) +  
+ggplot(data=peng,mapping=aes(x=flipper_length_mm)) +  
   geom_histogram(binwidth=5,boundary=0,  
                  color="black",fill="lightgray") +  
   labs(x="Flipper Length (mm)",  
@@ -3011,7 +3011,7 @@ count: false
 .left-panel-UnivEDAQBoxplot-non_seq[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Distribution of flipper lengths by species
 ```
@@ -3037,10 +3037,10 @@ count: false
 .left-panel-UnivEDAQBoxplot-non_seq[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Distribution of flipper lengths by species
-*ggplot(data=d,mapping=aes(x=species,y=flipper_length_mm))
+*ggplot(data=peng,mapping=aes(x=species,y=flipper_length_mm))
 ```
 ]
  
@@ -3066,10 +3066,10 @@ count: false
 .left-panel-UnivEDAQBoxplot-non_seq[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Distribution of flipper lengths by species
-ggplot(data=d,mapping=aes(x=species,y=flipper_length_mm)) +  
+ggplot(data=peng,mapping=aes(x=species,y=flipper_length_mm)) +  
 * geom_boxplot(color="black",fill="lightgray")
 ```
 ]
@@ -3096,10 +3096,10 @@ count: false
 .left-panel-UnivEDAQBoxplot-non_seq[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Distribution of flipper lengths by species
-ggplot(data=d,mapping=aes(x=species,y=flipper_length_mm)) +  
+ggplot(data=peng,mapping=aes(x=species,y=flipper_length_mm)) +  
   geom_boxplot(color="black",fill="lightgray") +  
 * labs(x="Species",y="Flipper Length (mm)")
 ```
@@ -3127,10 +3127,10 @@ count: false
 .left-panel-UnivEDAQBoxplot-non_seq[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Distribution of flipper lengths by species
-ggplot(data=d,mapping=aes(x=species,y=flipper_length_mm)) +  
+ggplot(data=peng,mapping=aes(x=species,y=flipper_length_mm)) +  
   geom_boxplot(color="black",fill="lightgray") +  
   labs(x="Species",y="Flipper Length (mm)") +  
 * theme_NCStats()
@@ -3186,10 +3186,10 @@ count: false
 .left-panel-UnivEDAQBoxplot2A-rotate[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Distribution of bill lengths by species
-ggplot(data=d,mapping=aes(x=species,y=flipper_length_mm)) +  
+ggplot(data=peng,mapping=aes(x=species,y=flipper_length_mm)) +  
   geom_boxplot(color="black",fill="lightgray") +  
   labs(x="Species",y="Flipper Length (mm)") +  
   theme_NCStats()  
@@ -3218,10 +3218,10 @@ count: false
 .left-panel-UnivEDAQBoxplot2A-rotate[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Distribution of bill lengths by species
-*ggplot(data=d,mapping=aes(x=species,y=bill_length_mm)) +
+*ggplot(data=peng,mapping=aes(x=species,y=bill_length_mm)) +
   geom_boxplot(color="black",fill="lightgray") +  
   labs(x="Species",y="Flipper Length (mm)") +  
   theme_NCStats()  
@@ -3277,10 +3277,10 @@ count: false
 .left-panel-UnivEDAQBoxplot2B-rotate[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Distribution of bill lengths by species
-ggplot(data=d,mapping=aes(x=species,y=bill_length_mm)) +  
+ggplot(data=peng,mapping=aes(x=species,y=bill_length_mm)) +  
   geom_boxplot(color="black",fill="lightgray") +  
   labs(x="Species",y="Flipper Length (mm)") +  
   theme_NCStats()  
@@ -3309,10 +3309,10 @@ count: false
 .left-panel-UnivEDAQBoxplot2B-rotate[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Distribution of bill lengths by species
-ggplot(data=d,mapping=aes(x=species,y=bill_length_mm)) +  
+ggplot(data=peng,mapping=aes(x=species,y=bill_length_mm)) +  
   geom_boxplot(color="black",fill="lightgray") +  
 * labs(x="Species",y="Bill Length (mm)") +
   theme_NCStats()  
@@ -3397,7 +3397,7 @@ count: false
 .left-panel-BivEDAQsum-user[
 
 ```r
-*headtail(d_chin)
+*headtail(peng_chin)
 
 ## Relationship between body mass &amp; flipper length for Chinstrap Penguins
 ```
@@ -3423,11 +3423,11 @@ count: false
 .left-panel-BivEDAQsum-user[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Relationship between body mass &amp; flipper length for Chinstrap Penguins
 
-*corr(~body_mass_g+flipper_length_mm,data=d_chin,
+*corr(~body_mass_g+flipper_length_mm,data=peng_chin,
 *    use="pairwise.complete.obs")
 ```
 ]
@@ -3504,7 +3504,7 @@ count: false
 .left-panel-BivEDAQPlot-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Relationship between body mass and flipper length for Chinstrap Penguins
 ```
@@ -3530,11 +3530,11 @@ count: false
 .left-panel-BivEDAQPlot-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Relationship between body mass and flipper length for Chinstrap Penguins
 
-*ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g))
+*ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g))
 ```
 ]
  
@@ -3560,11 +3560,11 @@ count: false
 .left-panel-BivEDAQPlot-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Relationship between body mass and flipper length for Chinstrap Penguins
 
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
 * geom_point(
 * )
 ```
@@ -3592,11 +3592,11 @@ count: false
 .left-panel-BivEDAQPlot-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Relationship between body mass and flipper length for Chinstrap Penguins
 
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
   geom_point(  
 *   pch=21,
   )   
@@ -3625,11 +3625,11 @@ count: false
 .left-panel-BivEDAQPlot-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Relationship between body mass and flipper length for Chinstrap Penguins
 
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
   geom_point(  
     pch=21,  
 *   color="black",fill="lightgray"
@@ -3659,11 +3659,11 @@ count: false
 .left-panel-BivEDAQPlot-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Relationship between body mass and flipper length for Chinstrap Penguins
 
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
   geom_point(  
     pch=21,  
     color="black",fill="lightgray"  
@@ -3694,11 +3694,11 @@ count: false
 .left-panel-BivEDAQPlot-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Relationship between body mass and flipper length for Chinstrap Penguins
 
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
   geom_point(  
     pch=21,  
     color="black",fill="lightgray"  
@@ -3757,10 +3757,10 @@ count: false
 .left-panel-BivEDAQPlot2A-rotate[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Relationship between bill depth and flipper length
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
   geom_point(pch=21,color="black",fill="lightgray") +  
   labs(x="Flipper Length (mm)",y="Body Mass (g)") +  
   theme_NCStats()  
@@ -3789,10 +3789,10 @@ count: false
 .left-panel-BivEDAQPlot2A-rotate[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Relationship between bill depth and flipper length
-*ggplot(data=d,mapping=aes(x=flipper_length_mm,y=bill_depth_mm)) +
+*ggplot(data=peng,mapping=aes(x=flipper_length_mm,y=bill_depth_mm)) +
   geom_point(pch=21,color="black",fill="lightgray") +  
   labs(x="Flipper Length (mm)",y="Body Mass (g)") +  
   theme_NCStats()  
@@ -3848,10 +3848,10 @@ count: false
 .left-panel-BivEDAQPlot2B-rotate[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Relationship between bill depth and flipper length
-ggplot(data=d,mapping=aes(x=flipper_length_mm,y=bill_depth_mm)) +  
+ggplot(data=peng,mapping=aes(x=flipper_length_mm,y=bill_depth_mm)) +  
   geom_point(pch=21,color="black",fill="lightgray") +  
   labs(x="Flipper Length (mm)",y="Body Mass (g)") +  
   theme_NCStats()  
@@ -3880,10 +3880,10 @@ count: false
 .left-panel-BivEDAQPlot2B-rotate[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Relationship between bill depth and flipper length
-ggplot(data=d,mapping=aes(x=flipper_length_mm,y=bill_depth_mm)) +  
+ggplot(data=peng,mapping=aes(x=flipper_length_mm,y=bill_depth_mm)) +  
   geom_point(pch=21,color="black",fill="lightgray") +  
 * labs(x="Flipper Length (mm)",y="Bill Depth (mm)") +
   theme_NCStats()  
@@ -3953,7 +3953,7 @@ count: false
 .left-panel-BivEDACsum-user[
 
 ```r
-*headtail(d)
+*headtail(peng)
 
 ## Species composition by island
 ```
@@ -3979,11 +3979,11 @@ count: false
 .left-panel-BivEDACsum-user[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Species composition by island
 
-*( freqIS &lt;- xtabs(~island+species,data=d) )
+*( freqIS &lt;- xtabs(~island+species,data=peng) )
 ```
 ]
  
@@ -4015,16 +4015,16 @@ count: false
 .left-panel-BivEDACsum-user[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Species composition by island
 
-( freqIS &lt;- xtabs(~island+species,data=d) )  
+( freqIS &lt;- xtabs(~island+species,data=peng) )  
 
 
 ## Sex distribution by species
 
-*( freqSS &lt;- xtabs(~species+sex,data=d) )
+*( freqSS &lt;- xtabs(~species+sex,data=peng) )
 ```
 ]
  
@@ -4322,7 +4322,7 @@ count: false
 .left-panel-RegressionSum-user[
 
 ```r
-*headtail(d_chin)
+*headtail(peng_chin)
 
 ## Can body mass be predicted from flipper length for Chinstraps
 ```
@@ -4348,11 +4348,11 @@ count: false
 .left-panel-RegressionSum-user[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Can body mass be predicted from flipper length for Chinstraps
 
-*( slr &lt;- lm(body_mass_g~flipper_length_mm,data=d_chin) )
+*( slr &lt;- lm(body_mass_g~flipper_length_mm,data=peng_chin) )
 ```
 ]
  
@@ -4382,11 +4382,11 @@ count: false
 .left-panel-RegressionSum-user[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Can body mass be predicted from flipper length for Chinstraps
 
-( slr &lt;- lm(body_mass_g~flipper_length_mm,data=d_chin) )  
+( slr &lt;- lm(body_mass_g~flipper_length_mm,data=peng_chin) )  
 *rSquared(slr)
 ```
 ]
@@ -4457,11 +4457,11 @@ count: false
 .left-panel-RegressionPlot-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Can body mass be predicted from flipper length for Chinstraps
 
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
   geom_point(pch=21,color="black",fill="lightgray") +  
   labs(x="Flipper Length (mm)",y="Body Mass (g)") +  
   theme_NCStats()   
@@ -4490,11 +4490,11 @@ count: false
 .left-panel-RegressionPlot-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Can body mass be predicted from flipper length for Chinstraps
 
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
   geom_point(pch=21,color="black",fill="lightgray") +  
   labs(x="Flipper Length (mm)",y="Body Mass (g)") +  
   theme_NCStats() +  
@@ -4525,11 +4525,11 @@ count: false
 .left-panel-RegressionPlot-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Can body mass be predicted from flipper length for Chinstraps
 
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
   geom_point(pch=21,color="black",fill="lightgray") +  
   labs(x="Flipper Length (mm)",y="Body Mass (g)") +  
   theme_NCStats() +  
@@ -4561,11 +4561,11 @@ count: false
 .left-panel-RegressionPlot-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Can body mass be predicted from flipper length for Chinstraps
 
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +  
   geom_point(pch=21,color="black",fill="lightgray") +  
   labs(x="Flipper Length (mm)",y="Body Mass (g)") +  
   theme_NCStats() +  
@@ -4661,7 +4661,7 @@ count: false
 .left-panel-ttest1-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Is mean flipper length of Chinstrap Penguins
 ##  greater than 190 mm.  Use alpha=0.01
@@ -4688,12 +4688,12 @@ count: false
 .left-panel-ttest1-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Is mean flipper length of Chinstrap Penguins
 ##  greater than 190 mm.  Use alpha=0.01
 
-*t.test(~flipper_length_mm,data=d_chin
+*t.test(~flipper_length_mm,data=peng_chin
 *      )
 ```
 ]
@@ -4729,12 +4729,12 @@ count: false
 .left-panel-ttest1-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Is mean flipper length of Chinstrap Penguins
 ##  greater than 190 mm.  Use alpha=0.01
 
-t.test(~flipper_length_mm,data=d_chin  
+t.test(~flipper_length_mm,data=peng_chin  
 *      ,mu=190
        )  
 ```
@@ -4771,12 +4771,12 @@ count: false
 .left-panel-ttest1-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Is mean flipper length of Chinstrap Penguins
 ##  greater than 190 mm.  Use alpha=0.01
 
-t.test(~flipper_length_mm,data=d_chin  
+t.test(~flipper_length_mm,data=peng_chin  
        ,mu=190  
 *      ,alt="greater"
        )  
@@ -4814,12 +4814,12 @@ count: false
 .left-panel-ttest1-non_seq[
 
 ```r
-headtail(d_chin)  
+headtail(peng_chin)  
 
 ## Is mean flipper length of Chinstrap Penguins
 ##  greater than 190 mm.  Use alpha=0.01
 
-t.test(~flipper_length_mm,data=d_chin  
+t.test(~flipper_length_mm,data=peng_chin  
        ,mu=190  
        ,alt="greater"  
 *      ,conf.level=0.99
@@ -4899,7 +4899,7 @@ count: false
 .left-panel-LevenesTest-user[
 
 ```r
-*headtail(d_chingen)
+*headtail(peng_chingen)
 
 ## Is mean flipper length smaller for Chinstrap
 ##   than Gentoo Penguins. Use alpha=0.10.
@@ -4926,12 +4926,12 @@ count: false
 .left-panel-LevenesTest-user[
 
 ```r
-headtail(d_chingen)  
+headtail(peng_chingen)  
 
 ## Is mean flipper length smaller for Chinstrap
 ##   than Gentoo Penguins. Use alpha=0.10.
 
-*levenesTest(flipper_length_mm~species,data=d_chingen)
+*levenesTest(flipper_length_mm~species,data=peng_chingen)
 ```
 ]
  
@@ -5011,7 +5011,7 @@ count: false
 .left-panel-ttest2-non_seq[
 
 ```r
-headtail(d_chingen)  
+headtail(peng_chingen)  
 
 ## Is mean flipper length smaller for Chinstrap
 ##   than Gentoo Penguins. Use alpha=0.10.
@@ -5038,12 +5038,12 @@ count: false
 .left-panel-ttest2-non_seq[
 
 ```r
-headtail(d_chingen)  
+headtail(peng_chingen)  
 
 ## Is mean flipper length smaller for Chinstrap
 ##   than Gentoo Penguins. Use alpha=0.10.
 
-*t.test(flipper_length_mm~species,data=d_chingen
+*t.test(flipper_length_mm~species,data=peng_chingen
 *      )
 ```
 ]
@@ -5079,12 +5079,12 @@ count: false
 .left-panel-ttest2-non_seq[
 
 ```r
-headtail(d_chingen)  
+headtail(peng_chingen)  
 
 ## Is mean flipper length smaller for Chinstrap
 ##   than Gentoo Penguins. Use alpha=0.10.
 
-t.test(flipper_length_mm~species,data=d_chingen  
+t.test(flipper_length_mm~species,data=peng_chingen  
 *      ,var.equal=TRUE
        )  
 ```
@@ -5121,12 +5121,12 @@ count: false
 .left-panel-ttest2-non_seq[
 
 ```r
-headtail(d_chingen)  
+headtail(peng_chingen)  
 
 ## Is mean flipper length smaller for Chinstrap
 ##   than Gentoo Penguins. Use alpha=0.10.
 
-t.test(flipper_length_mm~species,data=d_chingen  
+t.test(flipper_length_mm~species,data=peng_chingen  
        ,var.equal=TRUE  
 *      ,mu=0
        )  
@@ -5164,12 +5164,12 @@ count: false
 .left-panel-ttest2-non_seq[
 
 ```r
-headtail(d_chingen)  
+headtail(peng_chingen)  
 
 ## Is mean flipper length smaller for Chinstrap
 ##   than Gentoo Penguins. Use alpha=0.10.
 
-t.test(flipper_length_mm~species,data=d_chingen  
+t.test(flipper_length_mm~species,data=peng_chingen  
        ,var.equal=TRUE  
        ,mu=0  
 *      ,alt="less"
@@ -5208,12 +5208,12 @@ count: false
 .left-panel-ttest2-non_seq[
 
 ```r
-headtail(d_chingen)  
+headtail(peng_chingen)  
 
 ## Is mean flipper length smaller for Chinstrap
 ##   than Gentoo Penguins. Use alpha=0.10.
 
-t.test(flipper_length_mm~species,data=d_chingen  
+t.test(flipper_length_mm~species,data=peng_chingen  
        ,var.equal=TRUE  
        ,mu=0  
        ,alt="less"  
@@ -5319,7 +5319,7 @@ count: false
 .left-panel-chi-user[
 
 ```r
-*headtail(d)
+*headtail(peng)
 
 ## Does sex ratio differ among species of Penguins.
 ##  Use alpha=0.01
@@ -5346,13 +5346,13 @@ count: false
 .left-panel-chi-user[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Does sex ratio differ among species of Penguins.
 ##  Use alpha=0.01
 
 
-*( peng_sex &lt;- xtabs(~species+sex,data=d) )
+*( peng_sex &lt;- xtabs(~species+sex,data=peng) )
 ```
 ]
  
@@ -5384,13 +5384,13 @@ count: false
 .left-panel-chi-user[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Does sex ratio differ among species of Penguins.
 ##  Use alpha=0.01
 
 
-( peng_sex &lt;- xtabs(~species+sex,data=d) )  
+( peng_sex &lt;- xtabs(~species+sex,data=peng) )  
 
 
 *( chi_ps &lt;- chisq.test(peng_sex,correct=FALSE) )
@@ -5430,13 +5430,13 @@ count: false
 .left-panel-chi-user[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Does sex ratio differ among species of Penguins.
 ##  Use alpha=0.01
 
 
-( peng_sex &lt;- xtabs(~species+sex,data=d) )  
+( peng_sex &lt;- xtabs(~species+sex,data=peng) )  
 
 
 ( chi_ps &lt;- chisq.test(peng_sex,correct=FALSE) )  
@@ -5487,13 +5487,13 @@ count: false
 .left-panel-chi-user[
 
 ```r
-headtail(d)  
+headtail(peng)  
 
 ## Does sex ratio differ among species of Penguins.
 ##  Use alpha=0.01
 
 
-( peng_sex &lt;- xtabs(~species+sex,data=d) )  
+( peng_sex &lt;- xtabs(~species+sex,data=peng) )  
 
 
 ( chi_ps &lt;- chisq.test(peng_sex,correct=FALSE) )  

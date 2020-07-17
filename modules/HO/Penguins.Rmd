@@ -156,9 +156,9 @@ knitr::include_graphics("https://pbs.twimg.com/profile_images/104170365998419148
 ```{r loaddata, include=FALSE}
 #!# Set to your OWN working directory ... this is Derek's computer.
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/HO") #BREAK
-d <- read.csv("penguins.csv") #BREAK
-str(d) #BREAK
-peek(d) #BREAK
+peng <- read.csv("penguins.csv") #BREAK
+str(peng) #BREAK
+peek(peng) #BREAK
 ```
 
 `r chunk_reveal("loaddata",break_type="user",widths=widths,title="## Loading Data into R")`
@@ -220,12 +220,12 @@ knitr::kable(tmp,label="filterComps",caption="Comparison operators used in `filt
 ---
 
 ```{r filter1, include=FALSE}
-headtail(d)
-unique(d$species)
+headtail(peng)
+unique(peng$species)
 
 ## Isolate just Chinstrap Penguins
-d_chin <- filterD(d,species=="Chinstrap")
-peek(d_chin)
+peng_chin <- filterD(peng,species=="Chinstrap")
+peek(peng_chin)
 ```
 
 `r chunk_reveal("filter1",break_type="auto",widths=widths,title="## Filtering Data")`
@@ -233,13 +233,13 @@ peek(d_chin)
 ---
 
 ```{r filter2, include=FALSE}
-headtail(d)
-unique(d$species)
+headtail(peng)
+unique(peng$species)
 
 ## Isolate just Chinstrap and Gentoo Penguins
 #BREAK
-d_chingen <- filterD(d,species %in% c("Chinstrap","Gentoo")) #BREAK
-peek(d_chingen) #BREAK
+peng_chingen <- filterD(peng,species %in% c("Chinstrap","Gentoo")) #BREAK
+peek(peng_chingen) #BREAK
 ```
 
 `r chunk_reveal("filter2",break_type="user",widths=widths,title="## Filtering Data")`
@@ -247,12 +247,12 @@ peek(d_chingen) #BREAK
 ---
 
 ```{r filter3, include=FALSE}
-headtail(d)
+headtail(peng)
 
 ## Isolate just male Chinstrap Penguins
 #BREAK
-d_chinmale <- filterD(d,species=="Chinstrap",sex=="male") #BREAK
-peek(d_chinmale) #BREAK
+peng_chinmale <- filterD(peng,species=="Chinstrap",sex=="male") #BREAK
+peek(peng_chinmale) #BREAK
 ```
 
 `r chunk_reveal("filter3",break_type="user",widths=widths,title="## Filtering Data")`
@@ -260,12 +260,12 @@ peek(d_chinmale) #BREAK
 ---
 
 ```{r filterHvy, include=FALSE}
-headtail(d)
+headtail(peng)
 
 ## Isolate just Penguins with body mass more than 5900 g ... ~13 lbs
 #BREAK
-d_heavy <- filterD(d,body_mass_g>5900) #BREAK
-peek(d_heavy) #BREAK
+peng_heavy <- filterD(peng,body_mass_g>5900) #BREAK
+peek(peng_heavy) #BREAK
 ```
 
 `r chunk_reveal("filterHvy",break_type="user",widths=widths,title="## Filtering Data")`
@@ -273,12 +273,12 @@ peek(d_heavy) #BREAK
 ---
 
 ```{r filterWt2, include=FALSE}
-headtail(d)
+headtail(peng)
 
 ## Isolate Penguins with body masses b/w 4500 and 5000 g
 #BREAK
-d_wt <- filterD(d,body_mass_g>4500,body_mass_g<5000) #BREAK
-peek(d_wt) #BREAK
+peng_wt <- filterD(peng,body_mass_g>4500,body_mass_g<5000) #BREAK
+peek(peng_wt) #BREAK
 ```
 
 `r chunk_reveal("filterWt2",break_type="user",widths=widths,title="## Filtering Data")`
@@ -286,11 +286,11 @@ peek(d_wt) #BREAK
 ---
 
 ```{r filterBM, include=FALSE}
-headtail(d)
+headtail(peng)
 
 ## Examine just the body mass variable
 #BREAK
-d$body_mass_g
+peng$body_mass_g
 ```
 
 `r chunk_reveal("filterBM",break_type="user",widths=c(35,65,0),title="## Filtering Data")`
@@ -327,15 +327,15 @@ name: RUnivEDAQ
 ---
 
 ```{r UnivEDAQsum, include=FALSE}
-headtail(d_chin)
+headtail(peng_chin)
 
 ## Distribution of flipper lengths for Chinstrap Penguins
 #BREAK
-Summarize(~flipper_length_mm,data=d_chin,digits=1) #BREAK
+Summarize(~flipper_length_mm,data=peng_chin,digits=1) #BREAK
 
 ## Distribution of bill lengths for Chinstrap Penguins
 #BREAK
-Summarize(~bill_length_mm,data=d_chin,digits=2) #BREAK
+Summarize(~bill_length_mm,data=peng_chin,digits=2) #BREAK
 ```
 
 `r chunk_reveal("UnivEDAQsum",break_type="user",widths=widths,title="## Univariate EDA - Quantitative")`
@@ -374,11 +374,11 @@ Summarize(~bill_length_mm,data=d_chin,digits=2) #BREAK
 ---
 
 ```{r UnivEDAQhist, include=FALSE}
-headtail(d_chin)
+headtail(peng_chin)
 
 ## Distribution of flipper lengths for Chinstrap Penguins
 #BREAK1
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm)) +#BREAK2
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm)) +#BREAK2
   geom_histogram(#BREAK3
     binwidth=5,boundary=0, #BREAK4
     color="black",fill="lightgray" #BREAK5
@@ -393,11 +393,11 @@ ggplot(data=d_chin,mapping=aes(x=flipper_length_mm)) +#BREAK2
 ---
 
 ```{r UnivEDAQhist2A, echo=FALSE, eval=FALSE}
-headtail(d_chin)
+headtail(peng_chin)
 
 ## Distribution of bill lengths for Chinstrap Penguins
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm)) + #ROTATE
-ggplot(data=d_chin,mapping=aes(x=bill_length_mm)) + #ROTATE
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm)) + #ROTATE
+ggplot(data=peng_chin,mapping=aes(x=bill_length_mm)) + #ROTATE
   geom_histogram(binwidth=5,boundary=0,color="black",fill="lightgray") +
   labs(x="Flipper Length (mm)",y="Frequency of Penguins") +
   scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
@@ -409,10 +409,10 @@ ggplot(data=d_chin,mapping=aes(x=bill_length_mm)) + #ROTATE
 ---
 
 ```{r UnivEDAQhist2B, echo=FALSE, eval=FALSE}
-headtail(d_chin)
+headtail(peng_chin)
 
 ## Distribution of bill lengths for Chinstrap Penguins
-ggplot(data=d_chin,mapping=aes(x=bill_length_mm)) +
+ggplot(data=peng_chin,mapping=aes(x=bill_length_mm)) +
   geom_histogram(binwidth=5,boundary=0,color="black",fill="lightgray") +
   labs(x="Flipper Length (mm)",y="Frequency of Penguins") + #ROTATE
   labs(x="Bill Length (mm)",y="Frequency of Penguins") + #ROTATE
@@ -425,10 +425,10 @@ ggplot(data=d_chin,mapping=aes(x=bill_length_mm)) +
 ---
 
 ```{r UnivEDAQhist2C, echo=FALSE, eval=FALSE}
-headtail(d_chin)
+headtail(peng_chin)
 
 ## Distribution of bill lengths for Chinstrap Penguins
-ggplot(data=d_chin,mapping=aes(x=bill_length_mm)) +
+ggplot(data=peng_chin,mapping=aes(x=bill_length_mm)) +
   geom_histogram(binwidth=5,boundary=0,color="black",fill="lightgray") + #ROTATE
   geom_histogram(binwidth=2,boundary=0,color="black",fill="lightgray") + #ROTATE
   labs(x="Bill Length (mm)",y="Frequency of Penguins") +
@@ -457,19 +457,19 @@ name: RUnivEDAC
 ---
 
 ```{r UnivEDACsum, include=FALSE}
-headtail(d)
+headtail(peng)
 
 ## Species composition
 #BREAK
-( freqSpec <- xtabs(~species,data=d) )
+( freqSpec <- xtabs(~species,data=peng) )
 
 ## Samplings by island
 #BREAK
-( freqIsland <- xtabs(~island,data=d) )
+( freqIsland <- xtabs(~island,data=peng) )
 
 ## Sex distribution
 #BREAK
-( freqSex <- xtabs(~sex,data=d) )
+( freqSex <- xtabs(~sex,data=peng) )
 
 ```
 
@@ -517,11 +517,11 @@ percTable(freqIsland)
 ---
 
 ```{r UnivEDACbar, include=FALSE}
-headtail(d)
+headtail(peng)
 
 #BREAK1
 ## Species composition
-ggplot(data=d,mapping=aes(x=species)) + #BREAK2
+ggplot(data=peng,mapping=aes(x=species)) + #BREAK2
   geom_bar( #BREAK3
     color="black",fill="lightgray" #BREAK4
   ) + #BREAK3
@@ -535,11 +535,11 @@ ggplot(data=d,mapping=aes(x=species)) + #BREAK2
 ---
 
 ```{r UnivEDACbar2A, eval=FALSE, echo=FALSE}
-headtail(d)
+headtail(peng)
 
 ## Sampling by Island
-ggplot(data=d,mapping=aes(x=species)) + #ROTATE
-ggplot(data=d,mapping=aes(x=island)) + #ROTATE
+ggplot(data=peng,mapping=aes(x=species)) + #ROTATE
+ggplot(data=peng,mapping=aes(x=island)) + #ROTATE
   geom_bar(color="black",fill="lightgray") +
   labs(x="Species",y="Frequency of Penguins") +
   scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
@@ -551,10 +551,10 @@ ggplot(data=d,mapping=aes(x=island)) + #ROTATE
 ---
 
 ```{r UnivEDACbar2B, eval=FALSE, echo=FALSE}
-headtail(d)
+headtail(peng)
 
 ## Sampling by Island
-ggplot(data=d,mapping=aes(x=island)) +
+ggplot(data=peng,mapping=aes(x=island)) +
   geom_bar(color="black",fill="lightgray") +
   labs(x="Species",y="Frequency of Penguins") + #ROTATE
   labs(x="Island",y="Frequency of Penguins") + #ROTATE
@@ -581,11 +581,11 @@ name: RUnivEDAQC
 ---
 
 ```{r UnivEDAQsum2, include=FALSE}
-headtail(d)
+headtail(peng)
 
 ## Distribution of flipper lengths by species
 #BREAK
-Summarize(flipper_length_mm~species,data=d,digits=1)
+Summarize(flipper_length_mm~species,data=peng,digits=1)
 ```
 
 `r chunk_reveal("UnivEDAQsum2",break_type="user",widths=widths)`
@@ -604,11 +604,11 @@ Summarize(flipper_length_mm~species,data=d,digits=1)
 ---
 
 ```{r UnivEDAQhist2, include=FALSE}
-headtail(d)
+headtail(peng)
 
 ## Distribution of flipper lengths by species
 #BREAK
-ggplot(data=d,mapping=aes(x=flipper_length_mm)) +
+ggplot(data=peng,mapping=aes(x=flipper_length_mm)) +
   geom_histogram(binwidth=5,boundary=0,
                  color="black",fill="lightgray") +
   labs(x="Flipper Length (mm)",
@@ -641,10 +641,10 @@ ggplot(data=d,mapping=aes(x=flipper_length_mm)) +
 ---
 
 ```{r UnivEDAQBoxplot, include=FALSE}
-headtail(d)
+headtail(peng)
 
 ## Distribution of flipper lengths by species
-ggplot(data=d,mapping=aes(x=species,y=flipper_length_mm)) + #BREAK2
+ggplot(data=peng,mapping=aes(x=species,y=flipper_length_mm)) + #BREAK2
   geom_boxplot(color="black",fill="lightgray") + #BREAK3
   labs(x="Species",y="Flipper Length (mm)") + #BREAK4
   theme_NCStats() #BREAK5
@@ -655,11 +655,11 @@ ggplot(data=d,mapping=aes(x=species,y=flipper_length_mm)) + #BREAK2
 ---
 
 ```{r UnivEDAQBoxplot2A, eval=FALSE, echo=FALSE}
-headtail(d)
+headtail(peng)
 
 ## Distribution of bill lengths by species
-ggplot(data=d,mapping=aes(x=species,y=flipper_length_mm)) + #ROTATE
-ggplot(data=d,mapping=aes(x=species,y=bill_length_mm)) + #ROTATE
+ggplot(data=peng,mapping=aes(x=species,y=flipper_length_mm)) + #ROTATE
+ggplot(data=peng,mapping=aes(x=species,y=bill_length_mm)) + #ROTATE
   geom_boxplot(color="black",fill="lightgray") +
   labs(x="Species",y="Flipper Length (mm)") +
   theme_NCStats()
@@ -670,10 +670,10 @@ ggplot(data=d,mapping=aes(x=species,y=bill_length_mm)) + #ROTATE
 ---
 
 ```{r UnivEDAQBoxplot2B, eval=FALSE, echo=FALSE}
-headtail(d)
+headtail(peng)
 
 ## Distribution of bill lengths by species
-ggplot(data=d,mapping=aes(x=species,y=bill_length_mm)) +
+ggplot(data=peng,mapping=aes(x=species,y=bill_length_mm)) +
   geom_boxplot(color="black",fill="lightgray") +
   labs(x="Species",y="Flipper Length (mm)") + #ROTATE
   labs(x="Species",y="Bill Length (mm)") + #ROTATE
@@ -714,11 +714,11 @@ name: RBivEDAQ
 ---
 
 ```{r BivEDAQsum, include=FALSE}
-headtail(d_chin)
+headtail(peng_chin)
 
 ## Relationship between body mass & flipper length for Chinstrap Penguins
 #BREAK
-corr(~body_mass_g+flipper_length_mm,data=d_chin,
+corr(~body_mass_g+flipper_length_mm,data=peng_chin,
      use="pairwise.complete.obs")
 ```
 
@@ -748,11 +748,11 @@ corr(~body_mass_g+flipper_length_mm,data=d_chin,
 ---
 
 ```{r BivEDAQPlot, include=FALSE}
-headtail(d_chin)
+headtail(peng_chin)
 
 ## Relationship between body mass and flipper length for Chinstrap Penguins
 #BREAK1
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) + #BREAK2
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) + #BREAK2
   geom_point( #BREAK3
     pch=21, #BREAK4
     color="black",fill="lightgray" #BREAK5
@@ -766,11 +766,11 @@ ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) + #BREAK2
 ---
 
 ```{r BivEDAQPlot2A, eval=FALSE, echo=FALSE}
-headtail(d)
+headtail(peng)
 
 ## Relationship between bill depth and flipper length
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) + #ROTATE
-ggplot(data=d,mapping=aes(x=flipper_length_mm,y=bill_depth_mm)) + #ROTATE
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) + #ROTATE
+ggplot(data=peng,mapping=aes(x=flipper_length_mm,y=bill_depth_mm)) + #ROTATE
   geom_point(pch=21,color="black",fill="lightgray") +
   labs(x="Flipper Length (mm)",y="Body Mass (g)") +
   theme_NCStats()
@@ -781,10 +781,10 @@ ggplot(data=d,mapping=aes(x=flipper_length_mm,y=bill_depth_mm)) + #ROTATE
 ---
 
 ```{r BivEDAQPlot2B, eval=FALSE, echo=FALSE}
-headtail(d)
+headtail(peng)
 
 ## Relationship between bill depth and flipper length
-ggplot(data=d,mapping=aes(x=flipper_length_mm,y=bill_depth_mm)) +
+ggplot(data=peng,mapping=aes(x=flipper_length_mm,y=bill_depth_mm)) +
   geom_point(pch=21,color="black",fill="lightgray") +
   labs(x="Flipper Length (mm)",y="Body Mass (g)") + #ROTATE
   labs(x="Flipper Length (mm)",y="Bill Depth (mm)") + #ROTATE
@@ -810,16 +810,16 @@ name: RBivEDAC
 ---
 
 ```{r BivEDACsum, include=FALSE}
-headtail(d)
+headtail(peng)
 
 ## Species composition by island
 #BREAK
-( freqIS <- xtabs(~island+species,data=d) )
+( freqIS <- xtabs(~island+species,data=peng) )
 
 #BREAK
 ## Sex distribution by species
 
-( freqSS <- xtabs(~species+sex,data=d) )
+( freqSS <- xtabs(~species+sex,data=peng) )
 ```
 
 `r chunk_reveal("BivEDACsum",break_type="user",widths=widths)`
@@ -887,11 +887,11 @@ name: RRegression
 ---
 
 ```{r RegressionSum, include=FALSE}
-headtail(d_chin)
+headtail(peng_chin)
 
 ## Can body mass be predicted from flipper length for Chinstraps
 #BREAK
-( slr <- lm(body_mass_g~flipper_length_mm,data=d_chin) ) #BREAK
+( slr <- lm(body_mass_g~flipper_length_mm,data=peng_chin) ) #BREAK
 rSquared(slr)
 ```
 
@@ -909,11 +909,11 @@ rSquared(slr)
 ---
 
 ```{r RegressionPlot, include=FALSE}
-headtail(d_chin)
+headtail(peng_chin)
 
 ## Can body mass be predicted from flipper length for Chinstraps
 #BREAK1
-ggplot(data=d_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +
+ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +
   geom_point(pch=21,color="black",fill="lightgray") +
   labs(x="Flipper Length (mm)",y="Body Mass (g)") +
   theme_NCStats() +
@@ -964,12 +964,12 @@ name: Rttests1
 ---
 
 ```{r ttest1, include=FALSE}
-headtail(d_chin)
+headtail(peng_chin)
 
 ## Is mean flipper length of Chinstrap Penguins
 ##  greater than 190 mm.  Use alpha=0.01
 #BREAK1
-t.test(~flipper_length_mm,data=d_chin #BREAK2
+t.test(~flipper_length_mm,data=peng_chin #BREAK2
        ,mu=190 #BREAK3
        ,alt="greater" #BREAK4
        ,conf.level=0.99 #BREAK5
@@ -995,12 +995,12 @@ name: Rttests2
 ---
 
 ```{r LevenesTest, include=FALSE}
-headtail(d_chingen)
+headtail(peng_chingen)
 
 ## Is mean flipper length smaller for Chinstrap
 ##   than Gentoo Penguins. Use alpha=0.10.
 #BREAK
-levenesTest(flipper_length_mm~species,data=d_chingen)
+levenesTest(flipper_length_mm~species,data=peng_chingen)
 ```
 
 `r chunk_reveal("LevenesTest",break_type="user",widths=widths,title="## Levene's Test")`
@@ -1030,12 +1030,12 @@ levenesTest(flipper_length_mm~species,data=d_chingen)
 ---
 
 ```{r ttest2, include=FALSE}
-headtail(d_chingen)
+headtail(peng_chingen)
 
 ## Is mean flipper length smaller for Chinstrap
 ##   than Gentoo Penguins. Use alpha=0.10.
 #BREAK1
-t.test(flipper_length_mm~species,data=d_chingen #BREAK2
+t.test(flipper_length_mm~species,data=peng_chingen #BREAK2
        ,var.equal=TRUE #BREAK3
        ,mu=0 #BREAK4
        ,alt="less" #BREAK5
@@ -1087,13 +1087,13 @@ name: RChiChi
 ---
 
 ```{r chi, include=FALSE}
-headtail(d)
+headtail(peng)
 
 ## Does sex ratio differ among species of Penguins.
 ##  Use alpha=0.01
 
 #BREAK
-( peng_sex <- xtabs(~species+sex,data=d) )
+( peng_sex <- xtabs(~species+sex,data=peng) )
 
 #BREAK
 ( chi_ps <- chisq.test(peng_sex,correct=FALSE) )
