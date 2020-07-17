@@ -7,7 +7,7 @@ output:
     lib_dir: zlibs
     css: ["zlibs/xaringan-themer.css", "hygge", "ninjutsu"]
     nature:
-      ratio: 16:10
+      ratio: 16:9
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
@@ -62,7 +62,7 @@ name: RData
 - Many calculations in this course require functions in the `NCStats` package.
 
 --
-- Nearly all plots in this course require functions in the `ggplots` package.
+- Nearly all plots in this course require functions in the `ggplot2` package.
 
 &nbsp;
 
@@ -105,8 +105,8 @@ knitr::include_graphics("https://www.uaf.edu/cfos/images/people/faculty_prof/gor
 - Size (bill, flipper, weight) of three Penguin species from three islands in Antarctica.
 - Collated by [Allison Horst](https://www.allisonhorst.com/).
 
-```{r echo=FALSE, out.width="33%", fig.align="center"}
-knitr::include_graphics("https://www.bren.ucsb.edu/news/images/for_sacramento_article.jpg")
+```{r echo=FALSE, out.width="67%", fig.align="center"}
+knitr::include_graphics("https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png")
 ```
 
 ---
@@ -116,8 +116,8 @@ knitr::include_graphics("https://www.bren.ucsb.edu/news/images/for_sacramento_ar
 - Size (bill, flipper, weight) of three Penguin species from three islands in Antarctica.
 - Data in [Penguins.csv](https://raw.githubusercontent.com/allisonhorst/penguins/master/data-raw/penguins.csv) on the class' [data webpage](http://derekogle.com/NCMTH107/resources/data_107).
 
-```{r echo=FALSE, out.width="67%", fig.align="center"}
-knitr::include_graphics("https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png")
+```{r echo=FALSE, out.width="40%", fig.align="center"}
+knitr::include_graphics("https://pbs.twimg.com/profile_images/1041703659984191489/qWBxildv.jpg")
 ```
 
 ---
@@ -125,6 +125,7 @@ knitr::include_graphics("https://allisonhorst.github.io/palmerpenguins/reference
 ## Loading Data into R
 
 1. Download or save data (CSV file) to folder on your computer.
+  - Shown in a separate video for both data you must enter and for a data file that is provided to you.
 
 --
 1. Start an R script with code for `NCStats` and `ggplot2` packages.
@@ -146,11 +147,6 @@ knitr::include_graphics("https://allisonhorst.github.io/palmerpenguins/reference
 1. Examine data object.
   - Use `str()` to see the structure.
   - Use `peek()` to see a subset of rows/individuals.
-
-&nbsp;
-
---
-* These steps are shown in a separate video for both data you must enter and for a data file that is provided to you.
 
 ---
 
