@@ -29,9 +29,9 @@ css: /css/modules.css
 
 Use the resources below to answer [these questions](Prep/RFilter). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (~3 pages, 6 mins)
+* **Primary Resources** (~3 pages, 11 mins)
   * [Reading](bookR/RFilter.html)
-  * [![Vimeo](../img/dhovid.png) Subset data.frame with filterD](){:target="_blank"} [6 mins] ... [corresponding resource](HO/Penguins.html#RFilter){:target="_blank"}
+  * [![Vimeo](../img/dhovid.png) Subset data.frame with filterD](https://vimeo.com/439447290){:target="_blank"} [11 mins] ... [corresponding resource](HO/Penguins.html#RFilter){:target="_blank"}
 
 ----
 
