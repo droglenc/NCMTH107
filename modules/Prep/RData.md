@@ -17,6 +17,7 @@ Use the preparation readings and videos to prepare written answers for the follo
 1. What should be entered into the first row when entering data into Excel to create a CSV file?
 1. Give two examples of variable names that are not allowed in R?
 1. What does `read.csv()` do?
+1. What does `peek()` do?
 1. What does `headtail()` do?
 1. What does `str()` do?
 1. What does `unique()` do?
