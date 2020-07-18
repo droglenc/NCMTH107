@@ -179,6 +179,29 @@ name: RFilter
 
 ---
 
+## Isolate Single Variable
+
+- Examine one variable in a data frame.
+
+&nbsp;
+
+--
+- use `dataframename$variablename`
+
+---
+
+```{r filterBM, include=FALSE}
+headtail(peng)
+
+## Examine just the body mass variable
+#BREAK
+peng$body_mass_g
+```
+
+`r chunk_reveal("filterBM",break_type="user",widths=c(35,65,0),title="## Isolate Variable")`
+
+---
+
 ## Filtering Data
 
 - Create a subset of a larger data.frame based on a condition or conditions.
@@ -282,18 +305,6 @@ peek(peng_wt) #BREAK
 ```
 
 `r chunk_reveal("filterWt2",break_type="user",widths=widths,title="## Filtering Data")`
-
----
-
-```{r filterBM, include=FALSE}
-headtail(peng)
-
-## Examine just the body mass variable
-#BREAK
-peng$body_mass_g
-```
-
-`r chunk_reveal("filterBM",break_type="user",widths=c(35,65,0),title="## Filtering Data")`
 
 
 ---
