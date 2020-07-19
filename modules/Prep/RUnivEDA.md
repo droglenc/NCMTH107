@@ -16,12 +16,12 @@ Use the preparation readings and videos to prepare written answers for the follo
 1. What does `percTable()` do?
 1. What package must be installed to make a bar chart, histogram, and a boxplot?
 1. What is accomplished with `ggplot()`?
+1. What type of variable must `x=` be in `ggplot()` to make a histogram?
+1. What type of variable must `x=` be in `ggplot()` to make a bar chart?
 1. What do you add to `ggplot()` to make a histogram?
 1. What argument is used to control the width of the bars in a histogram?
 1. What do you add to `ggplot()` to make a bar chart?
 1. What does `theme_NCStats()` do?
 1. What does `facet_wrap()` do?
-1. What type of variable must `x=` be in `ggplot()` to make a histograme?
-1. What type of variable must `x=` be in `ggplot()` to make a bar chart?
 
 ----
