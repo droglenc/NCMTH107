@@ -35,10 +35,10 @@ css: /css/modules.css
 
 Use the resources below to answer [these questions](Prep/RUnivEDA). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (~6 pages, 12 mins)
+* **Primary Resources** (~6 pages, 26 mins)
   * [Reading](bookR/RUnivEDA.html)
-  * [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative) in R](){:target="_blank"} [4 mins] ... [corresponding resource](HO/Penguins.html#RUnivEDAQ){:target="_blank"}
-  * [![Vimeo](../img/dhovid.png) Univariate EDA (Categorical) in R](){:target="_blank"} [4 mins] ... [corresponding resource](HO/Penguins.html#RUnivEDAC){:target="_blank"}
+  * [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative) in R](https://vimeo.com/439763033){:target="_blank"} [13 mins] ... [corresponding resource](HO/Penguins.html#RUnivEDAQ){:target="_blank"}
+  * [![Vimeo](../img/dhovid.png) Univariate EDA (Categorical) in R](https://vimeo.com/439831864){:target="_blank"} [9 mins] ... [corresponding resource](HO/Penguins.html#RUnivEDAC){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative by Group) in R](){:target="_blank"} [4 mins] ... [corresponding resource](HO/Penguins.html#RUnivEDAQC){:target="_blank"}
 
 ----
