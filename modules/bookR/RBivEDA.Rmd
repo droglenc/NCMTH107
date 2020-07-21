@@ -25,7 +25,7 @@ library(ggplot2)
 &nbsp;
 
 # Data Sets
-The quantitative summaries and graphics will use the `weight` (lbs) and highway miles per gallon (`HMPG`) for 93 cars from the 1993 model year. Ultimately the relationship between highway MPG and the weight of a car is described. These data are in [93cars.csv](https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv) and are loaded into R below with the methods described in the [Getting Data into R module](RData.html#alternative-forms-of-getting-data).^[The `which=` argument in `headtail()` is used to show only a few variables of `cars93`, just to save space.]
+The quantitative summaries and graphics will use the `weight` (lbs) and highway miles per gallon (`HMPG`) for 93 cars from the 1993 model year. Ultimately the relationship between highway MPG and the weight of a car is described. These data are in 93cars.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/93cars_meta.txt)) and are loaded into R below with the methods described in the [Getting Data into R module](RData.html#alternative-forms-of-getting-data).^[The `which=` argument in `headtail()` is used to show only a few variables of `cars93`, just to save space.]
 
 ```{r eval=FALSE}
 setwd("c:/data")
@@ -37,12 +37,14 @@ cars93 <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/93c
 headtail(cars93,which=c("MFG","Model","Type","Weight","HMPG"))
 ```
 
+&nbsp;
+
 Methods for categorical data will be demonstrated with two questions from from the General Sociological Survey (GSS).
 
 * What is your highest degree earned? [choices -- "less than high school diploma", "high school diploma", "junior college", "bachelors", or "graduate"; labeled as `degree`]
 * How willing would you be to accept cuts in your standard of living in order to protect the environment? [choices -- "very willing", "fairly willing", "neither willing nor unwilling", "not very willing", or "not at all willing"; labeled as `grnsol`]
 
-These data, stored in [GSSWill2Pay.csv](https://raw.githubusercontent.com/droglenc/NCData/master/GSSWill2Pay.csv), are loaded into R and examined below.
+These data, stored in GSSWill2Pay.csv  ([data](https://raw.githubusercontent.com/droglenc/NCData/master/GSSWill2Pay.csv),[meta](https://raw.githubusercontent.com/droglenc/NCData/master/GSSWill2Pay_meta.txt)), are loaded into R and examined below.
 
 ```{r eval=FALSE}
 gss <- read.csv("GSSWill2Pay.csv")
@@ -53,10 +55,10 @@ gss <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/GSSWil
 str(gss)
 ```
 
-As is typical, the categorical variables are recorded as characters and should be converted to factor variables in R. Further note that `degree` and `grnsol` are both **ordinal** categorical variables so we should be careful to explicitly set the order of the levels. To assist with this, use `unique()` to see the exact spelling of each of the levels.
+As is typical, the categorical variables are recorded as character type. Both `degree` and `grnsol` are **ordinal** categorical variables and, thus, should be converted to factor variables types so that the order of the levels can be controlled. To assist with this, use `unique()` to see the exact spelling of each of the levels.
 
 <aside>
-Categorical variables should be converted to factor variables in R.
+Ordinal variables should be converted to factor variables in R.
 
 Levels should be controlled for ordinal variables.
 </aside>
@@ -166,7 +168,7 @@ addMargins(tbl1)
 ```
 
 ## Percentage Tables
-Percentage tables are constructed in R by submitting the saved `xtabs()` object to `percTable()`.^[`percTable()` is from `NCStats`.] The number of decimals to display is controlled with `digits=`. A total- or table-percentage table is constructed by default.
+Percentage tables are constructed in R by submitting the saved `xtabs()` object to `percTable()`.^[`percTable()` is from `NCStats`.] A total- or table-percentage table is constructed by default.
 
 ```{r}
 percTable(tbl1)

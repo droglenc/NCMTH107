@@ -398,6 +398,16 @@
   }
   
   
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+  
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+  
+  
   /* Improve display for browsers without grid (IE/Edge <= 15) */
   
   .downlevel {
@@ -1969,7 +1979,7 @@ library(ggplot2)</code></pre>
 </div>
 <p> </p>
 <h1 id="data-sets">Data Sets</h1>
-<p>The quantitative summaries and graphics will use the <code>weight</code> (lbs) and highway miles per gallon (<code>HMPG</code>) for 93 cars from the 1993 model year. Ultimately the relationship between highway MPG and the weight of a car is described. These data are in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv">93cars.csv</a> and are loaded into R below with the methods described in the <a href="RData.html#alternative-forms-of-getting-data">Getting Data into R module</a>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>The quantitative summaries and graphics will use the <code>weight</code> (lbs) and highway miles per gallon (<code>HMPG</code>) for 93 cars from the 1993 model year. Ultimately the relationship between highway MPG and the weight of a car is described. These data are in 93cars.csv (<a href="https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv">data</a>, <a href="https://raw.githubusercontent.com/droglenc/NCData/master/93cars_meta.txt">meta</a>) and are loaded into R below with the methods described in the <a href="RData.html#alternative-forms-of-getting-data">Getting Data into R module</a>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 setwd(&quot;c:/data&quot;)
@@ -1986,12 +1996,13 @@ headtail(cars93,which=c(&quot;MFG&quot;,&quot;Model&quot;,&quot;Type&quot;,&quot
 #R&gt;   92      Volvo     240 Compact   2985   28
 #R&gt;   93      Volvo     850 Midsize   3245   28</code></pre>
 </div>
+<p> </p>
 <p>Methods for categorical data will be demonstrated with two questions from from the General Sociological Survey (GSS).</p>
 <ul>
 <li>What is your highest degree earned? [choices – “less than high school diploma”, “high school diploma”, “junior college”, “bachelors”, or “graduate”; labeled as <code>degree</code>]</li>
 <li>How willing would you be to accept cuts in your standard of living in order to protect the environment? [choices – “very willing”, “fairly willing”, “neither willing nor unwilling”, “not very willing”, or “not at all willing”; labeled as <code>grnsol</code>]</li>
 </ul>
-<p>These data, stored in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/GSSWill2Pay.csv">GSSWill2Pay.csv</a>, are loaded into R and examined below.</p>
+<p>These data, stored in GSSWill2Pay.csv (<a href="https://raw.githubusercontent.com/droglenc/NCData/master/GSSWill2Pay.csv">data</a>,<a href="https://raw.githubusercontent.com/droglenc/NCData/master/GSSWill2Pay_meta.txt">meta</a>), are loaded into R and examined below.</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 gss &lt;- read.csv(&quot;GSSWill2Pay.csv&quot;)
@@ -2003,9 +2014,9 @@ str(gss)</code></pre>
 #R&gt;    $ degree: chr  &quot;ltHS&quot; &quot;ltHS&quot; &quot;ltHS&quot; &quot;ltHS&quot; ...
 #R&gt;    $ grnsol: chr  &quot;vwill&quot; &quot;vwill&quot; &quot;vwill&quot; &quot;vwill&quot; ...</code></pre>
 </div>
-<p>As is typical, the categorical variables are recorded as characters and should be converted to factor variables in R. Further note that <code>degree</code> and <code>grnsol</code> are both <strong>ordinal</strong> categorical variables so we should be careful to explicitly set the order of the levels. To assist with this, use <code>unique()</code> to see the exact spelling of each of the levels.</p>
+<p>As is typical, the categorical variables are recorded as character type. Both <code>degree</code> and <code>grnsol</code> are <strong>ordinal</strong> categorical variables and, thus, should be converted to factor variables types so that the order of the levels can be controlled. To assist with this, use <code>unique()</code> to see the exact spelling of each of the levels.</p>
 <aside>
-<p>Categorical variables should be converted to factor variables in R.</p>
+<p>Ordinal variables should be converted to factor variables in R.</p>
 Levels should be controlled for ordinal variables.
 </aside>
 <div class="layout-chunk" data-layout="l-body">
@@ -2136,7 +2147,7 @@ addMargins(tbl1)</code></pre>
 #R&gt;     Sum    208 1051     970 1013  713 3955</code></pre>
 </div>
 <h2 id="percentage-tables">Percentage Tables</h2>
-<p>Percentage tables are constructed in R by submitting the saved <code>xtabs()</code> object to <code>percTable()</code>.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> The number of decimals to display is controlled with <code>digits=</code>. A total- or table-percentage table is constructed by default.</p>
+<p>Percentage tables are constructed in R by submitting the saved <code>xtabs()</code> object to <code>percTable()</code>.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> A total- or table-percentage table is constructed by default.</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 percTable(tbl1)</code></pre>
