@@ -720,7 +720,7 @@ name: RBivEDAQ
   - Must include data.frame name in `data=` argument.
 
 --
-  - include `use="pairwise.complete.obs"` to remove any missing values.
+  - Include `use="pairwise.complete.obs"` to remove any missing values.
 
 ---
 
@@ -731,6 +731,12 @@ headtail(peng_chin)
 #BREAK
 corr(~body_mass_g+flipper_length_mm,data=peng_chin,
      use="pairwise.complete.obs")
+
+#BREAK
+## Relationship between body mass, flipper length, and bill sizes
+#BREAK
+corr(~body_mass_g+flipper_length_mm+bill_length_mm+bill_depth_mm,
+     data=peng_chin,use="pairwise.complete.obs",digits=3)
 ```
 
 `r chunk_reveal("BivEDAQsum",break_type="user",widths=widths,title="## Bivariate EDA - Quantitative")`
@@ -818,6 +824,11 @@ name: RBivEDAC
   - Must include data.frame name in `data=` argument.
   - Assign (save) result to object.
 
+&nbsp;
+
+--
+- Put saved `xtabs()` object in `addmargins()` to show totals.
+
 ---
 
 ```{r BivEDACsum, include=FALSE}
@@ -828,9 +839,13 @@ headtail(peng)
 ( freqIS <- xtabs(~island+species,data=peng) )
 
 #BREAK
+addmargins(freqIS)
+
+#BREAK
 ## Sex distribution by species
 
-( freqSS <- xtabs(~species+sex,data=peng) )
+freqSS <- xtabs(~species+sex,data=peng)
+addmargins(freqSS)
 ```
 
 `r chunk_reveal("BivEDACsum",break_type="user",widths=widths)`
@@ -854,7 +869,7 @@ headtail(peng)
 
 ```{r BivEDACsump, include=FALSE}
 ## Frequency table
-freqIS #BREAK
+addmargins(freqIS) #BREAK
 
 ## Total percentages table
 percTable(freqIS) #BREAK

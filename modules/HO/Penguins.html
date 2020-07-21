@@ -3396,7 +3396,7 @@ name: RBivEDAQ
   - Must include data.frame name in `data=` argument.
 
 --
-  - include `use="pairwise.complete.obs"` to remove any missing values.
+  - Include `use="pairwise.complete.obs"` to remove any missing values.
 
 ---
 
@@ -3457,6 +3457,89 @@ headtail(peng_chin)
 
 ```
 [1] 0.6415594
+```
+]
+
+---
+count: false
+ 
+## Bivariate EDA - Quantitative
+.left-panel-BivEDAQsum-user[
+
+```r
+headtail(peng_chin)  
+
+## Relationship between body mass &amp; flipper length for Chinstrap Penguins
+
+corr(~body_mass_g+flipper_length_mm,data=peng_chin,  
+     use="pairwise.complete.obs")  
+
+
+## Relationship between body mass, flipper length, and bill sizes
+```
+]
+ 
+.right-panel-BivEDAQsum-user[
+
+```
+     species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Chinstrap  Dream           46.5          17.9               192        3500 female
+2  Chinstrap  Dream           50.0          19.5               196        3900   male
+3  Chinstrap  Dream           51.3          19.2               193        3650   male
+66 Chinstrap  Dream           49.6          18.2               193        3775   male
+67 Chinstrap  Dream           50.8          19.0               210        4100   male
+68 Chinstrap  Dream           50.2          18.7               198        3775 female
+```
+
+```
+[1] 0.6415594
+```
+]
+
+---
+count: false
+ 
+## Bivariate EDA - Quantitative
+.left-panel-BivEDAQsum-user[
+
+```r
+headtail(peng_chin)  
+
+## Relationship between body mass &amp; flipper length for Chinstrap Penguins
+
+corr(~body_mass_g+flipper_length_mm,data=peng_chin,  
+     use="pairwise.complete.obs")  
+
+
+## Relationship between body mass, flipper length, and bill sizes
+
+*corr(~body_mass_g+flipper_length_mm+bill_length_mm+bill_depth_mm,
+*    data=peng_chin,use="pairwise.complete.obs",digits=3)
+```
+]
+ 
+.right-panel-BivEDAQsum-user[
+
+```
+     species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1  Chinstrap  Dream           46.5          17.9               192        3500 female
+2  Chinstrap  Dream           50.0          19.5               196        3900   male
+3  Chinstrap  Dream           51.3          19.2               193        3650   male
+66 Chinstrap  Dream           49.6          18.2               193        3775   male
+67 Chinstrap  Dream           50.8          19.0               210        4100   male
+68 Chinstrap  Dream           50.2          18.7               198        3775 female
+```
+
+```
+[1] 0.6415594
+```
+
+```
+                  body_mass_g flipper_length_mm bill_length_mm bill_depth_mm
+body_mass_g             1.000             0.642          0.514         0.604
+flipper_length_mm       0.642             1.000          0.472         0.580
+bill_length_mm          0.514             0.472          1.000         0.654
+bill_depth_mm           0.604             0.580          0.654         1.000
 ```
 ]
 
@@ -3954,6 +4037,11 @@ name: RBivEDAC
   - Must include data.frame name in `data=` argument.
   - Assign (save) result to object.
 
+&amp;nbsp;
+
+--
+- Put saved `xtabs()` object in `addmargins()` to show totals.
+
 ---
 
 
@@ -4033,9 +4121,7 @@ headtail(peng)
 ( freqIS &lt;- xtabs(~island+species,data=peng) )  
 
 
-## Sex distribution by species
-
-*( freqSS &lt;- xtabs(~species+sex,data=peng) )
+*addmargins(freqIS)
 ```
 ]
  
@@ -4060,11 +4146,75 @@ island      Adelie Chinstrap Gentoo
 ```
 
 ```
+           species
+island      Adelie Chinstrap Gentoo Sum
+  Biscoe        44         0    124 168
+  Dream         56        68      0 124
+  Torgersen     52         0      0  52
+  Sum          152        68    124 344
+```
+]
+
+---
+count: false
+ 
+
+.left-panel-BivEDACsum-user[
+
+```r
+headtail(peng)  
+
+## Species composition by island
+
+( freqIS &lt;- xtabs(~island+species,data=peng) )  
+
+
+addmargins(freqIS)  
+
+
+## Sex distribution by species
+
+*freqSS &lt;- xtabs(~species+sex,data=peng)
+*addmargins(freqSS)
+```
+]
+ 
+.right-panel-BivEDACsum-user[
+
+```
+      species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1      Adelie Torgersen           39.1          18.7               181        3750   male
+2      Adelie Torgersen           39.5          17.4               186        3800 female
+3      Adelie Torgersen           40.3          18.0               195        3250 female
+342 Chinstrap     Dream           49.6          18.2               193        3775   male
+343 Chinstrap     Dream           50.8          19.0               210        4100   male
+344 Chinstrap     Dream           50.2          18.7               198        3775 female
+```
+
+```
+           species
+island      Adelie Chinstrap Gentoo
+  Biscoe        44         0    124
+  Dream         56        68      0
+  Torgersen     52         0      0
+```
+
+```
+           species
+island      Adelie Chinstrap Gentoo Sum
+  Biscoe        44         0    124 168
+  Dream         56        68      0 124
+  Torgersen     52         0      0  52
+  Sum          152        68    124 344
+```
+
+```
            sex
-species     female male
-  Adelie        73   73
-  Chinstrap     34   34
-  Gentoo        58   61
+species     female male Sum
+  Adelie        73   73 146
+  Chinstrap     34   34  68
+  Gentoo        58   61 119
+  Sum          165  168 333
 ```
 ]
 
@@ -4118,7 +4268,7 @@ count: false
 
 ```r
 ## Frequency table
-*freqIS
+*addmargins(freqIS)
 ```
 ]
  
@@ -4126,10 +4276,11 @@ count: false
 
 ```
            species
-island      Adelie Chinstrap Gentoo
-  Biscoe        44         0    124
-  Dream         56        68      0
-  Torgersen     52         0      0
+island      Adelie Chinstrap Gentoo Sum
+  Biscoe        44         0    124 168
+  Dream         56        68      0 124
+  Torgersen     52         0      0  52
+  Sum          152        68    124 344
 ```
 ]
 
@@ -4141,7 +4292,7 @@ count: false
 
 ```r
 ## Frequency table
-freqIS  
+addmargins(freqIS)  
 
 ## Total percentages table
 *percTable(freqIS)
@@ -4152,10 +4303,11 @@ freqIS
 
 ```
            species
-island      Adelie Chinstrap Gentoo
-  Biscoe        44         0    124
-  Dream         56        68      0
-  Torgersen     52         0      0
+island      Adelie Chinstrap Gentoo Sum
+  Biscoe        44         0    124 168
+  Dream         56        68      0 124
+  Torgersen     52         0      0  52
+  Sum          152        68    124 344
 ```
 
 ```
@@ -4176,7 +4328,7 @@ count: false
 
 ```r
 ## Frequency table
-freqIS  
+addmargins(freqIS)  
 
 ## Total percentages table
 percTable(freqIS)  
@@ -4190,10 +4342,11 @@ percTable(freqIS)
 
 ```
            species
-island      Adelie Chinstrap Gentoo
-  Biscoe        44         0    124
-  Dream         56        68      0
-  Torgersen     52         0      0
+island      Adelie Chinstrap Gentoo Sum
+  Biscoe        44         0    124 168
+  Dream         56        68      0 124
+  Torgersen     52         0      0  52
+  Sum          152        68    124 344
 ```
 
 ```
@@ -4222,7 +4375,7 @@ count: false
 
 ```r
 ## Frequency table
-freqIS  
+addmargins(freqIS)  
 
 ## Total percentages table
 percTable(freqIS)  
@@ -4239,10 +4392,11 @@ percTable(freqIS,margin=1)
 
 ```
            species
-island      Adelie Chinstrap Gentoo
-  Biscoe        44         0    124
-  Dream         56        68      0
-  Torgersen     52         0      0
+island      Adelie Chinstrap Gentoo Sum
+  Biscoe        44         0    124 168
+  Dream         56        68      0 124
+  Torgersen     52         0      0  52
+  Sum          152        68    124 344
 ```
 
 ```

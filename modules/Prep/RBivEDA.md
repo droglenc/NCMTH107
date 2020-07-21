@@ -16,10 +16,10 @@ Use the preparation readings and videos to prepare written answers for the follo
 1. What does `shape=` in `geom_point()` do?
 1. What does `corr()` do?
 1. What must be included as the first argument to `corr()`?
-1. You must compute a variable to what data type to properly compute a frequency table for a categorical variable?
+1. You must convert the variable to what R data type to properly compute a frequency table for an ordinal categorical variable?
+1. What does `factor()` do?
+1. What does using `levels=` in `factor` do?
 1. What does `xtabs()` do?
 1. What does `percTable()` do?
 1. What is the first argument to `percTable()`?
-1. What does `margin=` in `percTable()` do?
-
-----
+1. What does using `margin=` in `percTable()` do?

@@ -32,10 +32,10 @@ css: /css/modules.css
 
 Use the resources below to answer [these questions](Prep/RBivEDA). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (~4 pages, 16 mins)
+* **Primary Resources** (~4 pages, 13 mins)
   * [Reading](bookR/RBivEDA.html)
-  * [![Vimeo](../img/dhovid.png) Bivariate EDA (Quantitative) in R](){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#RBivEDAQ){:target="_blank"}
-  * [![Vimeo](../img/dhovid.png) Bivariate EDA (Categorical) in R](){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#RBivEDAC){:target="_blank"}
+  * [![Vimeo](../img/dhovid.png) Bivariate EDA (Quantitative) in R](https://vimeo.com/440439608){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#RBivEDAQ){:target="_blank"}
+  * [![Vimeo](../img/dhovid.png) Bivariate EDA (Categorical) in R](https://vimeo.com/440474564){:target="_blank"} [5 mins] ... [corresponding resource](HO/Penguins.html#RBivEDAC){:target="_blank"}
 
 ----
 
