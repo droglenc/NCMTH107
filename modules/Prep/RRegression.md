@@ -12,7 +12,7 @@ Use the preparation readings and videos to prepare written answers for the follo
 </div>
 
 1. What function is used to add a linear regression line to a scatterplot? What arguments does it require?
-1. What function is used to actually fit a linear regression to data? What arguments does it require?
-1. What does `rSquared()` do?
-1. What does `predict()` do?
-----
+1. What function is used to actually fit a linear regression to data? What arguments does it require
+1. Where is the y-intercept found in the results from `lm()`? The slope?
+1. What does `rSquared()` do? What arguments does it require?
+1. What does `predict()` do? What arguments does it require?

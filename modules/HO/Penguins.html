@@ -4468,11 +4468,13 @@ name: RRegression
 ## Fitting Linear Regression
 
 - Computed with `lm()`
-  - Uses formula of the form `qvarResp+qvarExplan` as first argument.
+  - Uses formula of the form `qvarResp~qvarExplan` as first argument.
 
 --
   - Must include data.frame name in `data=` argument.
   - Assign (save) result to object.
+
+&amp;nbsp;
 
 --
 - Use `rSquared()` to compute r&lt;sup&gt;2&lt;/sup&gt; value.
@@ -4771,6 +4773,95 @@ ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +
   font-size: 80%
 }
 .middle-panel-RegressionPlot-non_seq {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
+
+## Make a Prediction
+
+- Use `predict()`
+  - Saved `lm()` object is the first argument
+
+--
+  - Second argument is a data frame created with `data.frame()`, including the **EXACT** name of the explanatory variable set equal to the value for which to make the prediction
+
+---
+
+
+
+count: false
+ 
+## Make a Prediction
+.left-panel-RegressionPredict-user[
+
+```r
+*slr
+
+## Predict body weight if flipper length is 195 mm
+```
+]
+ 
+.right-panel-RegressionPredict-user[
+
+```
+Coefficients:
+      (Intercept)  flipper_length_mm  
+         -3037.20              34.57  
+```
+]
+
+---
+count: false
+ 
+## Make a Prediction
+.left-panel-RegressionPredict-user[
+
+```r
+slr  
+
+## Predict body weight if flipper length is 195 mm
+
+
+*predict(slr,data.frame(flipper_length_mm=195))
+```
+]
+ 
+.right-panel-RegressionPredict-user[
+
+```
+Coefficients:
+      (Intercept)  flipper_length_mm  
+         -3037.20              34.57  
+```
+
+```
+       1 
+3704.616 
+```
+]
+
+&lt;style&gt;
+.left-panel-RegressionPredict-user {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-RegressionPredict-user {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-RegressionPredict-user {
   width: 0%;
   float: left;
   padding-left: 1%;

@@ -398,6 +398,16 @@
   }
   
   
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+  
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+  
+  
   /* Improve display for browsers without grid (IE/Edge <= 15) */
   
   .downlevel {
@@ -1956,7 +1966,7 @@ distill-header .nav a {
 </ul>
 </nav>
 <hr class="d-toc-separator" />
-<p>In the <a href="../LinearRegression.html">Linear Regression module</a> you learned about the theory underlying linear regression and answered application questions related to the results of a linear regression. In this module, you will learn how to perform a linear regression, visualize the results, and make predictions from a linear regression. You also be asked to answer the same series of questions you answered in the <a href="../LinearRegression.html">Linear Regression module</a>.</p>
+<p>In the <a href="../LinearRegression.html">Linear Regression module</a> you learned about the theory underlying linear regression and answered application questions related to the results of a linear regression. In this module, you will learn how to perform a linear regression, visualize the results, and make predictions from a linear regression. You will also be asked to answer the same series of questions you answered in the <a href="../LinearRegression.html">Linear Regression module</a>.</p>
 <p>Methods in this module require the <code>NCStats</code> package (as always) and the <code>ggplot2</code> package (for making graphs).</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
@@ -1965,7 +1975,7 @@ library(ggplot2)</code></pre>
 </div>
 <p> </p>
 <h1 id="data-sets">Data Sets</h1>
-<p>The descriptions below will use the same <code>weight</code> (lbs) and highway miles per gallon (<code>HMPG</code>) data for 93 cars from the 1993 model year that were used in the second example in the <a href="../LinearRegression.html">Linear Regression module</a>. These data are in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv">93cars.csv</a> and are loaded into R below with the methods described in the <a href="RData.html#alternative-forms-of-getting-data">Getting Data into R module</a>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>The descriptions below will use the same <code>weight</code> (lbs) and highway miles per gallon (<code>HMPG</code>) data for 93 cars from the 1993 model year that were used in the second example in the <a href="../LinearRegression.html">Linear Regression module</a>. These data are in 93cars.csv (<a href="https://raw.githubusercontent.com/droglenc/NCData/master/93cars.csv">data</a>, <a href="https://raw.githubusercontent.com/droglenc/NCData/master/93cars_meta.txt">meta</a>) and are loaded into R below with the methods described in the <a href="RData.html#alternative-forms-of-getting-data">Getting Data into R module</a>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 setwd(&quot;c:/data&quot;)
@@ -1999,7 +2009,7 @@ ggplot(data=cars93,mapping=aes(x=Weight,y=HMPG)) +
 </div>
 <p> </p>
 <h1 id="fitting-the-regression-model-in-r">Fitting the Regression Model in R</h1>
-<p>The linear regression model is fit to two quantitative variables with <code>lm()</code>. The first argument is a formula of the form <code>response~explanatory</code>, where <code>response</code> contains the response variable and <code>explanatory</code> contains the explanatory variable. The corresponding data frame is given in <code>data=</code>. The results of <code>lm()</code> may be assigned to an object so that specific results can be extracted.</p>
+<p>The linear regression model is fit to two quantitative variables with <code>lm()</code>. The first argument is a formula of the form <code>response~explanatory</code>, where <code>response</code> contains the quantitative response variable and <code>explanatory</code> contains the quantitative explanatory variable. The corresponding data frame is given in <code>data=</code>. The results of <code>lm()</code> may be assigned to an object so that specific results can be extracted.</p>
 <aside>
 The slope is under the name of the explanatory variable and the intercept is under “(Intercept)” in the <code>lm()</code> results.
 </aside>

@@ -901,11 +901,13 @@ name: RRegression
 ## Fitting Linear Regression
 
 - Computed with `lm()`
-  - Uses formula of the form `qvarResp+qvarExplan` as first argument.
+  - Uses formula of the form `qvarResp~qvarExplan` as first argument.
 
 --
   - Must include data.frame name in `data=` argument.
   - Assign (save) result to object.
+
+&nbsp;
 
 --
 - Use `rSquared()` to compute r<sup>2</sup> value.
@@ -950,6 +952,29 @@ ggplot(data=peng_chin,mapping=aes(x=flipper_length_mm,y=body_mass_g)) +
 ```
 
 `r chunk_reveal("RegressionPlot",break_type="non_seq",widths=widths,title="## Showing Best-Fit Line")`
+
+---
+
+## Make a Prediction
+
+- Use `predict()`
+  - Saved `lm()` object is the first argument
+
+--
+  - Second argument is a data frame created with `data.frame()`, including the **EXACT** name of the explanatory variable set equal to the value for which to make the prediction
+
+---
+
+```{r RegressionPredict, include=FALSE}
+slr
+
+## Predict body weight if flipper length is 195 mm
+#BREAK
+
+predict(slr,data.frame(flipper_length_mm=195))
+```
+
+`r chunk_reveal("RegressionPredict",break_type="user",widths=widths,title="## Make a Prediction")`
 
 
 ---
