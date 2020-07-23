@@ -1998,9 +1998,10 @@ library(ggplot2)</code></pre>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
+<p> </p>
 <ol type="1">
 <li>α = 0.05.</li>
-<li>H<sub>0</sub>:μ = 24.3<sup>o</sup>C vs. H<sub>A</sub>:μ ≠ 24.3<sup>o</sup>C, where μ is the mean body temperature of ALL crabs.</li>
+<li>H<sub>0</sub>: μ = 24.3<sup>o</sup>C vs. H<sub>A</sub>: μ ≠ 24.3<sup>o</sup>C, where μ is the mean body temperature of ALL crabs.</li>
 <li>A 1-Sample t-Test is required because (1) a quantitative variable (temperature) was measured, (ii) individuals from one group (or population) were considered (an ill-defined population of crabs), and (iii) σ is <strong>UN</strong>known.</li>
 <li>The data appear to be part of an experimental study (the temperature was controlled) with no suggestion of random selection of individuals.</li>
 <li><ol type="i">
@@ -2009,7 +2010,7 @@ library(ggplot2)</code></pre>
 <li>x̄ = 25.0<sup>o</sup>C (Table <a href="#tab:1tcrabs">1</a>).</li>
 <li>t = 2.713 with 24 df (Table <a href="#tab:1tcrabs">1</a>).</li>
 <li>p-value = 0.0121 (Table <a href="#tab:1tcrabs">1</a>).</li>
-<li>Reject H<sub>0</sub> because the p-value α.</li>
+<li>Reject H<sub>0</sub> because the p-value &lt; α.</li>
 <li>It appears that the average body temperature of ALL crabs is greater than the ambient temperature of 24.3<sup>o</sup>C.</li>
 <li>I am 95% confident that the mean body temperature of ALL crabs is between 24.5<sup>o</sup>C and 25.6<sup>o</sup>C (Table <a href="#tab:1tcrabs">1</a>).</li>
 </ol>
@@ -2071,7 +2072,7 @@ library(NCStats)
 library(ggplot2)</code></pre>
 </div>
 <h2 id="data-format">Data Format</h2>
-<p>The data used in this reading are the biological oxygen demand (BOD) measurements from either the inlet or outlet to an aquaculture facility. These data are in <a href="https://raw.githubusercontent.com/droglenc/NCData/master/BOD.csv">BOD.csv</a> and loaded into R below.</p>
+<p>The data used in this reading are the biological oxygen demand (BOD) measurements from either the inlet or outlet to an aquaculture facility. These data are in BOD.csv (<a href="https://raw.githubusercontent.com/droglenc/NCData/master/BOD.csv">data</a>, <a href="https://raw.githubusercontent.com/droglenc/NCData/master/BOD_meta.txt">meta</a>) and loaded into R below.</p>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
@@ -2080,14 +2081,6 @@ library(ggplot2)</code></pre>
 setwd(&quot;c:/stats&quot;)
 aqua &lt;- read.csv(&quot;BOD.csv&quot;)
 str(aqua)</code></pre>
-</div>
-<p>The <code>src</code> variable must be converted to a factor variable for properly computing the 2-sample t-test results below.</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-aqua$src &lt;- factor(aqua$src)
-levels(aqua$src)</code></pre>
-<pre><code>
-#R&gt;   [1] &quot;inlet&quot;  &quot;outlet&quot;</code></pre>
 </div>
 <p>Data must be in stacked format (as described in the <a href="RData.html#entering-data">Getting Data into R module</a>) for a 2-Sample t-Test. Stacked data has measurements in one column and group labels for the measurement in another column. Thus, each row corresponds to a measurement and the group for one individual. The BOD data are stacked because each row corresponds to one individual (a water sample) with one column of (BOD) measurements and another column for which group the individual belongs.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2118,7 +2111,7 @@ ggplot(data=aqua,aes(x=BOD)) +
   scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
   labs(x=&quot;Biological Oxygen Demand&quot;,y=&quot;Frequency of Sites&quot;) +
   theme_NCStats() +
-  facet_wrap(~src)</code></pre>
+  facet_wrap(vars(src))</code></pre>
 </div>
 <p> </p>
 <h2 id="sample-t-test-2">2-Sample t-Test</h2>
@@ -2129,7 +2122,7 @@ ggplot(data=aqua,aes(x=BOD)) +
 <li><code>conf.level=</code>: The level of confidence (default is <code>0.95</code>) used for the confidence region of μ<sub>1</sub>-μ<sub>2</sub>.</li>
 <li><code>var.equal=</code>: A logical value that indicates whether the two population variances should be considered equal or not. If <code>TRUE</code>, then the pooled sample variance is calculated and used in the standard error. The default <code>FALSE</code>, to assume UNequal variances.</li>
 </ul>
-<p>R computes the difference among groups as the alphabetically “first” level minus the alphabetically “second” level. For example, if the two levels are <code>inlet</code> and <code>outlet</code>, then R will compute x̄<sub>inlet</sub>-x̄<sub>outlet</sub>. You should consider this when you are constructing your hypotheses. However, you can change the order of the levels by using <code>levels=</code> in <code>factor()</code> (as described in the <a href="RUnivEDA.html#data-manipulation">Univariae EDA in R module</a>.</p>
+<p>R computes the difference among groups as the alphabetically “first” level minus the alphabetically “second” level. For example, if the two levels are <code>inlet</code> and <code>outlet</code>, then R will compute x̄<sub>inlet</sub>-x̄<sub>outlet</sub>. You should consider this when you are constructing your hypotheses. However, you can change the order of the levels by using <code>levels=</code> in <code>factor()</code> (as described in the <a href="RUnivEDA.html#data-manipulation">Univariae EDA in R module</a>).</p>
 <p>The results of the following code are shown in Table <a href="#tab:2tBOD">3</a> and interpreted in the example analysis below.</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
@@ -2155,10 +2148,11 @@ t.test(BOD~src,data=aqua,var.equal=TRUE,alt=&quot;less&quot;,conf.level=0.90)</c
 <li>x̄<sub>inlet</sub>-x̄<sub>outlet</sub> = 6.65 - 8.69 = -2.03 (Table <a href="#tab:2tBOD">3</a>).</li>
 <li>t = -8.994 with 18 df (Table <a href="#tab:2tBOD">3</a>).</li>
 <li>p-value 0.00000002 (Table <a href="#tab:2tBOD">3</a>).</li>
-<li>H<sub>0</sub> is rejected because the p-value α.</li>
+<li>H<sub>0</sub> is rejected because the p-value &lt; α.</li>
 <li>The average BOD is greater at the outlet than at the inlet to the aquaculture facility. Thus, the aquaculture facility appears to add to the biological oxygen demand of the water and the farmer’s concern is warranted.</li>
-<li>I am 90% confident that the mean BOD measurement at the outlet is AT LEAST -1.73 GREATER than the mean BOD measurement at the inlet (Table <a href="#tab:2tBOD">3</a>).</li>
+<li>I am 90% confident that the mean BOD measurement at the outlet is AT LEAST 1.73 GREATER than the mean BOD measurement at the inlet (Table <a href="#tab:2tBOD">3</a>).</li>
 </ol>
+<p> </p>
 <div class="layout-chunk" data-layout="l-body">
 <table>
 <caption><span id="tab:LevBOD">Table 2: </span>Results from the Levene’s Test for differences in BOD between the inlet and outlet of an aquaculture facility.</caption>
@@ -2232,7 +2226,7 @@ ggplot(data=aqua,aes(x=BOD)) +
   scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
   labs(x=&quot;Biological Oxygen Demand&quot;,y=&quot;Frequency of Sites&quot;) +
   theme_NCStats() +
-  facet_wrap(~src)
+  facet_wrap(vars(src))
 levenesTest(BOD~src,data=aqua)
 t.test(BOD~src,data=aqua,var.equal=TRUE,alt=&quot;less&quot;,conf.level=0.90)</code></pre>
 </div>
