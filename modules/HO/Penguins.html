@@ -5249,7 +5249,7 @@ group   1  0.2187 0.6406
   - Set `var.equal=TRUE` if Levene's Test indicates that variances are equal.
   
 --
-  - Assign value in H&lt;sub&gt;0&lt;/sub&gt; to `mu=` (usually 0).
+  - Assign value in H&lt;sub&gt;0&lt;/sub&gt; to `mu=` (usually 0, which is the **default**).
 
 --
   - Choose H&lt;sub&gt;A&lt;/sub&gt; direction in `alt=` with `"two.sided"` for "not equals", `"less"` for "less than", or `"greater"` for "greater than".
@@ -5384,50 +5384,6 @@ headtail(peng_chingen)
 
 t.test(flipper_length_mm~species,data=peng_chingen  
        ,var.equal=TRUE  
-*      ,mu=0
-       )  
-```
-]
- 
-.right-panel-ttest2-non_seq[
-
-```
-      species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
-1      Gentoo Biscoe           46.1          13.2               211        4500 female
-2      Gentoo Biscoe           50.0          16.3               230        5700   male
-3      Gentoo Biscoe           48.7          14.1               210        4450 female
-190 Chinstrap  Dream           49.6          18.2               193        3775   male
-191 Chinstrap  Dream           50.8          19.0               210        4100   male
-192 Chinstrap  Dream           50.2          18.7               198        3775 female
-```
-
-```
- Two Sample t-test with flipper_length_mm by species 
-t = -21.0329, df = 189, p-value &lt; 2.2e-16
-alternative hypothesis: true difference in means is not equal to 0 
-95 percent confidence interval:
- -23.36706 -19.35987 
-sample estimates:
-mean in group Chinstrap    mean in group Gentoo 
-               195.8235                217.1870 
-```
-]
-
----
-count: false
- 
-## 2-Sample t-Test
-.left-panel-ttest2-non_seq[
-
-```r
-headtail(peng_chingen)  
-
-## Is mean flipper length smaller for Chinstrap
-##   than Gentoo Penguins. Use alpha=0.10.
-
-t.test(flipper_length_mm~species,data=peng_chingen  
-       ,var.equal=TRUE  
-       ,mu=0  
 *      ,alt="less"
        )  
 ```
@@ -5471,7 +5427,6 @@ headtail(peng_chingen)
 
 t.test(flipper_length_mm~species,data=peng_chingen  
        ,var.equal=TRUE  
-       ,mu=0  
        ,alt="less"  
 *      ,conf.level=0.90
        )  

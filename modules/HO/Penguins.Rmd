@@ -1070,7 +1070,7 @@ levenesTest(flipper_length_mm~species,data=peng_chingen)
   - Set `var.equal=TRUE` if Levene's Test indicates that variances are equal.
   
 --
-  - Assign value in H<sub>0</sub> to `mu=` (usually 0).
+  - Assign value in H<sub>0</sub> to `mu=` (usually 0, which is the **default**).
 
 --
   - Choose H<sub>A</sub> direction in `alt=` with `"two.sided"` for "not equals", `"less"` for "less than", or `"greater"` for "greater than".
@@ -1088,9 +1088,8 @@ headtail(peng_chingen)
 #BREAK1
 t.test(flipper_length_mm~species,data=peng_chingen #BREAK2
        ,var.equal=TRUE #BREAK3
-       ,mu=0 #BREAK4
-       ,alt="less" #BREAK5
-       ,conf.level=0.90 #BREAK6
+       ,alt="less" #BREAK4
+       ,conf.level=0.90 #BREAK5
        ) #BREAK2
 ```
 
