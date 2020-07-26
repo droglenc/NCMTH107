@@ -398,6 +398,16 @@
   }
   
   
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+  
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+  
+  
   /* Improve display for browsers without grid (IE/Edge <= 15) */
   
   .downlevel {
@@ -2011,7 +2021,7 @@ The observed table must contain frequencies, not proportions or percentages (don
 #R&gt;          C     18      57
 #R&gt;          D     19      56</code></pre>
 </div>
-<p><strong>IF</strong> the raw data do NOT exist, but a summary table is provided, then those summary statistics must be entered into an object using <code>matrix()</code>. matrix. The summarized frequencies must first be entered into a vector with the first <strong>COLUMN</strong> of values followed by the second COLUMN and so on. This vector is then the first argument to <code>matrix()</code>, which will also include the number of columns in the frequency table in <code>ncol=</code>. For example, the same observed table from above would be constructed as follows.</p>
+<p><strong>IF</strong> the raw data do NOT exist, but a summary table is provided, then those summary statistics must be entered into an object using <code>matrix()</code>. The summarized frequencies must first be entered into a vector with the first <strong>COLUMN</strong> of values followed by the second COLUMN and so on. This vector is then the first argument to <code>matrix()</code>, which will also include the number of columns in the frequency table in <code>ncol=</code>. For example, the same observed table from above would be constructed as follows.</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 fp.obs &lt;- matrix(c(9,15,18,19,66,60,57,56),ncol=2)</code></pre>
@@ -2126,7 +2136,7 @@ fp.chi$residuals</code></pre>
 <li>There are more than five individuals in each cell of the expected table (Table <a href="#tab:ChiAIexp">1</a>).</li>
 <li>The statistic is the observed frequency table given in the background.</li>
 <li>χ<sup>2</sup>=16.54 with 5 df (Table <a href="#tab:ChiAIchi">2</a>).</li>
-<li>p-value=`r kPvalue(ai.chi$p.value,include.p=FALSE) (Table <a href="#tab:ChiAIchi">2</a>).</li>
+<li>p-value=0.0055 (Table <a href="#tab:ChiAIchi">2</a>).</li>
 <li>H<sub>0</sub> is rejected because the p-value is &lt; α.</li>
 <li>There does appear to be a significant difference in the distribution of the dominant plants between the two sites. A look at the Pearson residuals (Table <a href="#tab:ChiAIres">3</a>) and the row-percentage table (Table <a href="#tab:ChiAIrow">4</a>) both suggest that the biggest difference between the two locations is due to “plant A.”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
 </ol>
@@ -2135,7 +2145,7 @@ fp.chi$residuals</code></pre>
 <caption><span id="tab:ChiAIexp">Table 1: </span>Expected frequency table for dominant plant species on Devil’s Island and the Bayfield Peninsula.</caption>
 <thead>
 <tr class="header">
-<th></th>
+<th style="text-align: left;"></th>
 <th style="text-align: right;">A</th>
 <th style="text-align: right;">B</th>
 <th style="text-align: right;">C</th>
@@ -2146,7 +2156,7 @@ fp.chi$residuals</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td>DI</td>
+<td style="text-align: left;">DI</td>
 <td style="text-align: right;">48</td>
 <td style="text-align: right;">17</td>
 <td style="text-align: right;">11</td>
@@ -2155,7 +2165,7 @@ fp.chi$residuals</code></pre>
 <td style="text-align: right;">5</td>
 </tr>
 <tr class="even">
-<td>BP</td>
+<td style="text-align: left;">BP</td>
 <td style="text-align: right;">48</td>
 <td style="text-align: right;">17</td>
 <td style="text-align: right;">11</td>
@@ -2184,7 +2194,7 @@ fp.chi$residuals</code></pre>
 <caption><span id="tab:ChiAIres">Table 3: </span>Pearson residuals from the Chi-Square Test for differences in the distribution of dominant plant species between Devil’s Island and Bayfield Peninsula.</caption>
 <thead>
 <tr class="header">
-<th></th>
+<th style="text-align: left;"></th>
 <th style="text-align: right;">A</th>
 <th style="text-align: right;">B</th>
 <th style="text-align: right;">C</th>
@@ -2195,7 +2205,7 @@ fp.chi$residuals</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td>DI</td>
+<td style="text-align: left;">DI</td>
 <td style="text-align: right;">-2.020726</td>
 <td style="text-align: right;">1.212678</td>
 <td style="text-align: right;">0.904534</td>
@@ -2204,7 +2214,7 @@ fp.chi$residuals</code></pre>
 <td style="text-align: right;">0</td>
 </tr>
 <tr class="even">
-<td>BP</td>
+<td style="text-align: left;">BP</td>
 <td style="text-align: right;">2.020726</td>
 <td style="text-align: right;">-1.212678</td>
 <td style="text-align: right;">-0.904534</td>
@@ -2220,7 +2230,7 @@ fp.chi$residuals</code></pre>
 <caption><span id="tab:ChiAIrow">Table 4: </span>Percentage of dominant plant species within each location (Devil’s Island and Bayfield Peninsula)</caption>
 <thead>
 <tr class="header">
-<th></th>
+<th style="text-align: left;"></th>
 <th style="text-align: right;">A</th>
 <th style="text-align: right;">B</th>
 <th style="text-align: right;">C</th>
@@ -2232,7 +2242,7 @@ fp.chi$residuals</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td>DI</td>
+<td style="text-align: left;">DI</td>
 <td style="text-align: right;">34</td>
 <td style="text-align: right;">22</td>
 <td style="text-align: right;">14</td>
@@ -2242,7 +2252,7 @@ fp.chi$residuals</code></pre>
 <td style="text-align: right;">100</td>
 </tr>
 <tr class="even">
-<td>BP</td>
+<td style="text-align: left;">BP</td>
 <td style="text-align: right;">62</td>
 <td style="text-align: right;">12</td>
 <td style="text-align: right;">8</td>
@@ -2271,7 +2281,10 @@ ai.obs1 &lt;- ai.obs[,-1]
 <p> </p>
 <h1 id="goodness-of-fit-test-in-r">Goodness-of-Fit Test in R</h1>
 <h2 id="data-format">Data Format</h2>
-<p>Consider the following example for this section. &gt; <a href="http://www.mitpressjournals.org/doi/abs/10.1162/003465399767923827">Herriges and King (1999)</a> examined modes of fishing for a large number of recreational saltwater users in southern California. One of the questions asked in their Southern California Sportfishing Survey was what “mode” they used for fishing – “from the beach”, “from a fishing pier”, “on a private boat”, or “on a chartered boat.” The results to this question, along with other data not used here, are found in FishingModes.csv (<a href="https://raw.githubusercontent.com/droglenc/NCData/master/FishingModes.csv">data</a>, <a href="https://raw.githubusercontent.com/droglenc/NCData/master/FishingModes_meta.txt">meta</a>). One hypothesis of interest states that two-thirds of the users will fish from a boat, split evenly between private and charter boats, while the other one-third will fish from land, also split even between those fishing on the beach and those from a pier. Use the data in the <code>mode</code> variable of the data file to determine if this hypothesis is supported at the 10% level.</p>
+<p>Consider the following example for this section.</p>
+<blockquote>
+<p><a href="http://www.mitpressjournals.org/doi/abs/10.1162/003465399767923827">Herriges and King (1999)</a> examined modes of fishing for a large number of recreational saltwater users in southern California. One of the questions asked in their Southern California Sportfishing Survey was what “mode” they used for fishing – “from the beach”, “from a fishing pier”, “on a private boat”, or “on a chartered boat.” The results to this question, along with other data not used here, are found in FishingModes.csv (<a href="https://raw.githubusercontent.com/droglenc/NCData/master/FishingModes.csv">data</a>, <a href="https://raw.githubusercontent.com/droglenc/NCData/master/FishingModes_meta.txt">meta</a>). One hypothesis of interest states that two-thirds of the users will fish from a boat, split evenly between private and charter boats, while the other one-third will fish from land, also split evenly between those fishing on the beach and those from a pier. Use the data in the <code>mode</code> variable of the data file to determine if this hypothesis is supported at the 10% level.</p>
+</blockquote>
 <p>The data are loaded and examined below (the <code>headtail()</code> only shows a few variables).</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
@@ -2311,7 +2324,7 @@ headtail(sf,which=c(&quot;mode&quot;,&quot;price&quot;,&quot;catch&quot;))</code
 #R&gt;     beach    boat charter    pier 
 #R&gt;       134     418     452     178</code></pre>
 </div>
-<p><strong>IF</strong> the raw data do NOT exist, but a summary table is provided, then those summary statistics must be entered into an object using <code>c()</code>. Each item can be named in c() as shown below, which wiill make the results easier to interpret. For example, the same observed table from above would be constructed as follows.</p>
+<p><strong>IF</strong> the raw data do NOT exist, but a summary table is provided, then those summary statistics must be entered into an object using <code>c()</code>. Each item can be named in c() as shown below, which will make the results easier to interpret. For example, the same observed table from above would be constructed as follows.</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 ( sf.obs &lt;- c(beach=134,boat=418,charter=452,pier=178) )</code></pre>
@@ -2320,7 +2333,7 @@ headtail(sf,which=c(&quot;mode&quot;,&quot;price&quot;,&quot;catch&quot;))</code
 #R&gt;       134     418     452     178</code></pre>
 </div>
 <h2 id="expected-table">Expected Table</h2>
-<p>The R function to perform a Goodness-of-Fit test described in the next section requires a vector of expected proportions in each groups defined by the theoritical distribution in the hypotheses. This vector does not actually have to be proportionts, per se, but it must be values that are directly proportional to the expected proportions. Thus, the vector can contain the proportions, percentages, actual expected values, or any other set of values that are related to the expected proportions by a constant.</p>
+<p>The R function to perform a Goodness-of-Fit test described in the next section requires a vector of expected proportions in each group defined by the theoretical distribution in the hypotheses. This vector does not actually have to be proportions, per se, but it must be values that are directly proportional to the expected proportions. Thus, the vector can contain the proportions, percentages, actual expected values, or any other set of values that are related to the expected proportions by a constant.</p>
 <p>In this example, the theoretical distribution suggests that “two-thirds of the users will fish from a boat, split evenly between private and charter boats, while the other one-third will fish from land, also split even between those fishing on the beach and those from a pier”. With this, the expected proportions are <span class="math inline">\(\frac{1}{3}\)</span> for a private boat, <span class="math inline">\(\frac{1}{3}\)</span> for a charter boat, <span class="math inline">\(\frac{1}{6}\)</span> for beach, and <span class="math inline">\(\frac{1}{6}\)</span> for a pier. These expected proportions could be entered into a vector in any of the following ways, as each way differs only by a constant value.</p>
 <aside>
 Enter the expected proportions in the same order as the observed frequencies.
@@ -2334,12 +2347,15 @@ exp.p &lt;- c(beach=197,boat=394,charter=394,pier=197)          #expected values
 </div>
 <h2 id="goodness-of-fit-test-in-r-1">Goodness-of-Fit Test in R</h2>
 <p>The Goodness-of-Fit Test is computed with <code>chisq.test()</code> with the observed frequency table as the first argument and the following arguments:</p>
+<aside>
+Always use <code>rescale.p=TRUE</code> and <code>correct=FALSE</code>.
+</aside>
 <ul>
 <li><code>p=</code>: a vector of expected proportions for the levels of the theoretical distribution.</li>
 <li><code>rescale.p=TRUE</code>: rescales the values in <code>p=</code> to sum to 1. Rescaling is useful if the proportions in <code>p=</code> were rounded or are expected frequencies.</li>
 <li><code>correct=FALSE</code>: indicates to not use a “continuity correction.”</li>
 </ul>
-<p>The results from  should be assigned to an object so that useful information can be extracted.</p>
+<p>The results from <code>chisq.test()</code> should be assigned to an object so that useful information can be extracted.</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 ( sf.gof &lt;- chisq.test(sf.obs,p=exp.p,rescale.p=TRUE,correct=FALSE) )</code></pre>
@@ -2347,8 +2363,15 @@ exp.p &lt;- c(beach=197,boat=394,charter=394,pier=197)          #expected values
 #R&gt;   Chi-squared test for given probabilities with sf.obs 
 #R&gt;   X-squared = 31.9797, df = 3, p-value = 5.285e-07</code></pre>
 </div>
-<p>From the results above the observed table for Step 6 was shown further above, the χ<sup>2</sup> test statistic for Step 7 is 31.980, and the p-value for Step 8 is 0.00000053 (with 3 df).</p>
-<p>Rejecting H<sub>0</sub> in a Goodness-of-Fit test simply indicates that the observed distribution differs from the theoretical distribution, but it is not clearly exactly where the difference occurs. The following code can be used to neatly put the observed values, expected values, and Pearson residuals next to each other, which may be helpful for explaining any differences that were observed.</p>
+<p>From the results above the χ<sup>2</sup> test statistic for Step 7 is 31.980, and the p-value for Step 8 is 0.00000053 (with 3 df). The observed table for Step 6 was shown further above. The expected table for Step 5 is extracted from the <code>chisq.test()</code> object as follows.</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+sf.gof$expected</code></pre>
+<pre><code>
+#R&gt;     beach    boat charter    pier 
+#R&gt;       197     394     394     197</code></pre>
+</div>
+<p>Rejecting H<sub>0</sub> in a Goodness-of-Fit test simply indicates that the observed distribution differs from the theoretical distribution, but it is not clear exactly where the difference occurs. The following code can be used to neatly put the observed values, expected values, and Pearson residuals next to each other, which may be helpful for explaining any differences that were observed.</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 cbind(obs=sf.gof$observed,exp=sf.gof$expected,resids=sf.gof$residuals)</code></pre>
@@ -2399,7 +2422,7 @@ gofCI(sf.gof,digits=3)</code></pre>
 <caption><span id="tab:GOFshrikesRes">Table 5: </span>Observed and expected frequencies and Pearson residuals for the Goodness-of-Fit Test for shrike habitat use.</caption>
 <thead>
 <tr class="header">
-<th></th>
+<th style="text-align: left;"></th>
 <th style="text-align: right;">obs</th>
 <th style="text-align: right;">exp</th>
 <th style="text-align: right;">resids</th>
@@ -2407,31 +2430,31 @@ gofCI(sf.gof,digits=3)</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Open</td>
+<td style="text-align: left;">Open</td>
 <td style="text-align: right;">1456</td>
 <td style="text-align: right;">594.638</td>
 <td style="text-align: right;">35.323146</td>
 </tr>
 <tr class="even">
-<td>MidSucc</td>
+<td style="text-align: left;">MidSucc</td>
 <td style="text-align: right;">43</td>
 <td style="text-align: right;">78.067</td>
 <td style="text-align: right;">-3.968852</td>
 </tr>
 <tr class="odd">
-<td>ScatTree</td>
+<td style="text-align: left;">ScatTree</td>
 <td style="text-align: right;">112</td>
 <td style="text-align: right;">99.660</td>
 <td style="text-align: right;">1.236103</td>
 </tr>
 <tr class="even">
-<td>Woods</td>
+<td style="text-align: left;">Woods</td>
 <td style="text-align: right;">6</td>
 <td style="text-align: right;">881.991</td>
 <td style="text-align: right;">-29.496302</td>
 </tr>
 <tr class="odd">
-<td>Wetland</td>
+<td style="text-align: left;">Wetland</td>
 <td style="text-align: right;">44</td>
 <td style="text-align: right;">6.644</td>
 <td style="text-align: right;">14.492575</td>
@@ -2457,7 +2480,7 @@ gofCI(sf.gof,digits=3)</code></pre>
 <caption><span id="tab:GOFshrikesCIs">Table 7: </span>Observed proportions, 95% condidence intervals for the proprtions, and expected proportions for shrike habitat use.</caption>
 <thead>
 <tr class="header">
-<th></th>
+<th style="text-align: left;"></th>
 <th style="text-align: right;">p.obs</th>
 <th style="text-align: right;">p.LCI</th>
 <th style="text-align: right;">p.UCI</th>
@@ -2466,35 +2489,35 @@ gofCI(sf.gof,digits=3)</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Open</td>
+<td style="text-align: left;">Open</td>
 <td style="text-align: right;">0.877</td>
 <td style="text-align: right;">0.860</td>
 <td style="text-align: right;">0.892</td>
 <td style="text-align: right;">0.358</td>
 </tr>
 <tr class="even">
-<td>MidSucc</td>
+<td style="text-align: left;">MidSucc</td>
 <td style="text-align: right;">0.026</td>
 <td style="text-align: right;">0.019</td>
 <td style="text-align: right;">0.035</td>
 <td style="text-align: right;">0.047</td>
 </tr>
 <tr class="odd">
-<td>ScatTree</td>
+<td style="text-align: left;">ScatTree</td>
 <td style="text-align: right;">0.067</td>
 <td style="text-align: right;">0.056</td>
 <td style="text-align: right;">0.081</td>
 <td style="text-align: right;">0.060</td>
 </tr>
 <tr class="even">
-<td>Woods</td>
+<td style="text-align: left;">Woods</td>
 <td style="text-align: right;">0.004</td>
 <td style="text-align: right;">0.002</td>
 <td style="text-align: right;">0.008</td>
 <td style="text-align: right;">0.531</td>
 </tr>
 <tr class="odd">
-<td>Wetland</td>
+<td style="text-align: left;">Wetland</td>
 <td style="text-align: right;">0.026</td>
 <td style="text-align: right;">0.020</td>
 <td style="text-align: right;">0.035</td>

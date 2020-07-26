@@ -1114,13 +1114,21 @@ name: RChiChi
 
 ## Chi-square Test
 
-- Must use `xtabs()` to make a two-way observed frequency table.
+- Must have a two-way observed frequency table
   - Grouping variable should be in rows.
   - Response variable should be in columns.
 
 --
-- Compute chi-square results with `chisq.test()`
-  - Table from `xtabs()` is first argument.
+  - **Raw data** ... use `xtabs()` (*described in reading and here*).
+
+--
+  - **Summarized data** ... use `matrix()` (*described in reading*).
+
+&nbsp;
+
+--
+- Compute chi-square results with `chisq.test()`.
+  - Object with observed frequency table as first argument.
 
 --
   - Use `correct=FALSE` to "turn-off" continuity correction.
@@ -1163,17 +1171,22 @@ name: RChiGOF
 
 ## Goodness-of-Fit Test
 
-- Make an expected table with `c()`.
+- Make an expected table with `c()` with names.
+  - Any values that are proportional to the expected proportions.
 
 --
-- Use `xtabs()` to make an observed frequency table.
+- Create an observed frequency table.
+  - **Raw Data** ... use `xtabs()` (*demonstrated here and in reading*).
+  - **Summmarized Data ** ... use `c()` with names (*demonstrated in reading*).
+
+&nbsp;
 
 --
 - Compute GOF results with `chisq.test()`
-  - Observed table from `xtabs()` is first argument.
+  - Observed table is first argument.
 
 --
-  - Expected table from `c()` in `p=` argument.
+  - Expected table object in `p=` argument.
 
 --
   - Use `rescale.p=TRUE` to assure proper expected values.
@@ -1187,7 +1200,35 @@ name: RChiGOF
 --
   - Obtain expected table by appending `$expected` to object name.
 
+--
+  - Use `gofCI()` to see how expected and observed proportions compare.
+
 ---
 
+```{r gof, include=FALSE}
+headtail(peng)
+
+## Do samples from islands follow a 3:2:1 ratio
+## for Biscoe, Dream, and Torgerson. Use alpha=0.01.
+
+#BREAK
+( exp <- c("Biscoe"=3,"Dream"=2,"Torgerson"=1) )
+
+#BREAK
+( peng_isle <- xtabs(~island,data=peng) )
+
+#BREAK
+( gof_pi <- chisq.test(peng_isle,p=exp,rescale.p=TRUE,correct=FALSE) )
+
+#BREAK
+gof_pi$expected
+
+#BREAK
+gofCI(gof_pi,digits=3)
+```
+
+`r chunk_reveal("gof",break_type="user",widths=widths,title="## Goodness-of-Fit Test")`
+
+---
 
 class: inverse, center, middle

@@ -47,7 +47,7 @@ The observed table must contain frequencies, not proportions or percentages (don
 ( fp.obs <- xtabs(~hospital+father,data=fp) )
 ```
 
-**IF** the raw data do NOT exist, but a summary table is provided, then those summary statistics must be entered into an object using `matrix()`. matrix. The summarized frequencies must first be entered into a vector with the first **COLUMN** of values followed by the second COLUMN and so on. This vector is then the first argument to `matrix()`, which will also include the number of columns in the frequency table in `ncol=`. For example, the same observed table from above would be constructed as follows.
+**IF** the raw data do NOT exist, but a summary table is provided, then those summary statistics must be entered into an object using `matrix()`. The summarized frequencies must first be entered into a vector with the first **COLUMN** of values followed by the second COLUMN and so on. This vector is then the first argument to `matrix()`, which will also include the number of columns in the frequency table in `ncol=`. For example, the same observed table from above would be constructed as follows.
 
 ```{r}
 fp.obs <- matrix(c(9,15,18,19,66,60,57,56),ncol=2)
@@ -119,7 +119,7 @@ ai.obs1 <- ai.obs[,-1]
 1. There are more than five individuals in each cell of the expected table (Table \@ref(tab:ChiAIexp)).
 1. The statistic is the observed frequency table given in the background.
 1. &chi;<sup>2</sup>=`r formatC(ai.chi$statistic,format="f",digits=2)` with `r ai.chi$parameter` df (Table \@ref(tab:ChiAIchi)).
-1. p-value=`r kPvalue(ai.chi$p.value,include.p=FALSE) (Table \@ref(tab:ChiAIchi)).
+1. p-value=`r kPvalue(ai.chi$p.value,include.p=FALSE,latex=FALSE)` (Table \@ref(tab:ChiAIchi)).
 1. H<sub>0</sub> is rejected because the p-value is < &alpha;.
 1. There does appear to be a significant difference in the distribution of the dominant plants between the two sites. A look at the Pearson residuals (Table \@ref(tab:ChiAIres)) and the row-percentage table (Table \@ref(tab:ChiAIrow)) both suggest that the biggest difference between the two locations is due to "plant A."[^plantA]
 
@@ -149,7 +149,8 @@ knitr::kable(percTable(ai.obs,margin=1,digits=1),label="ChiAIrow",caption="Perce
 # Goodness-of-Fit Test in R
 ## Data Format
 Consider the following example for this section.
-> [Herriges and King (1999)](http://www.mitpressjournals.org/doi/abs/10.1162/003465399767923827) examined modes of fishing for a large number of recreational saltwater users in southern California. One of the questions asked in their Southern California Sportfishing Survey was what "mode" they used for fishing -- "from the beach", "from a fishing pier", "on a private boat", or "on a chartered boat." The results to this question, along with other data not used here, are found in FishingModes.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/FishingModes.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/FishingModes_meta.txt)). One hypothesis of interest states that two-thirds of the users will fish from a boat, split evenly between private and charter boats, while the other one-third will fish from land, also split even between those fishing on the beach and those from a pier. Use the data in the `mode` variable of the data file to determine if this hypothesis is supported at the 10% level.
+
+> [Herriges and King (1999)](http://www.mitpressjournals.org/doi/abs/10.1162/003465399767923827) examined modes of fishing for a large number of recreational saltwater users in southern California. One of the questions asked in their Southern California Sportfishing Survey was what "mode" they used for fishing -- "from the beach", "from a fishing pier", "on a private boat", or "on a chartered boat." The results to this question, along with other data not used here, are found in FishingModes.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/FishingModes.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/FishingModes_meta.txt)). One hypothesis of interest states that two-thirds of the users will fish from a boat, split evenly between private and charter boats, while the other one-third will fish from land, also split evenly between those fishing on the beach and those from a pier. Use the data in the `mode` variable of the data file to determine if this hypothesis is supported at the 10% level.
 
 The data are loaded and examined below (the `headtail()` only shows a few variables).
 
@@ -165,14 +166,14 @@ As with the Chi-Square Test, the Goodness-of-Fit test can be made from either ra
 ( sf.obs <- xtabs(~mode,data=sf) )
 ```
 
-**IF** the raw data do NOT exist, but a summary table is provided, then those summary statistics must be entered into an object using `c()`. Each item can be named in c() as shown below, which wiill make the results easier to interpret. For example, the same observed table from above would be constructed as follows.
+**IF** the raw data do NOT exist, but a summary table is provided, then those summary statistics must be entered into an object using `c()`. Each item can be named in c() as shown below, which will make the results easier to interpret. For example, the same observed table from above would be constructed as follows.
 
 ```{r}
 ( sf.obs <- c(beach=134,boat=418,charter=452,pier=178) )
 ```
 
 ## Expected Table
-The R function to perform a Goodness-of-Fit test described in the next section requires a vector of expected proportions in each groups defined by the theoritical distribution in the hypotheses. This vector does not actually have to be proportionts, per se, but it must be values that are directly proportional to the expected proportions. Thus, the vector can contain the proportions, percentages, actual expected values, or any other set of values that are related to the expected proportions by a constant.
+The R function to perform a Goodness-of-Fit test described in the next section requires a vector of expected proportions in each group defined by the theoretical distribution in the hypotheses. This vector does not actually have to be proportions, per se, but it must be values that are directly proportional to the expected proportions. Thus, the vector can contain the proportions, percentages, actual expected values, or any other set of values that are related to the expected proportions by a constant.
 
 In this example, the theoretical distribution suggests that "two-thirds of the users will fish from a boat, split evenly between private and charter boats, while the other one-third will fish from land, also split even between those fishing on the beach and those from a pier". With this, the expected proportions are $\frac{1}{3}$ for a private boat, $\frac{1}{3}$ for a charter boat, $\frac{1}{6}$ for beach, and $\frac{1}{6}$ for a pier. These expected proportions could be entered into a vector in any of the following ways, as each way differs only by a constant value.
 
@@ -190,19 +191,27 @@ exp.p <- c(beach=197,boat=394,charter=394,pier=197)          #expected values
 ## Goodness-of-Fit Test in R
 The Goodness-of-Fit Test is computed with `chisq.test()` with the observed frequency table as the first argument and the following arguments:
 
+<aside>
+Always use `rescale.p=TRUE` and `correct=FALSE`.
+</aside>
+
 * `p=`: a vector of expected proportions for the levels of the theoretical distribution.
 * `rescale.p=TRUE`: rescales the values in `p=` to sum to 1. Rescaling is useful if the proportions in `p=` were rounded or are expected frequencies.
 * `correct=FALSE`: indicates to not use a "continuity correction."
 
-The results from \R{chisq.test()} should be assigned to an object so that useful information can be extracted.
+The results from `chisq.test()` should be assigned to an object so that useful information can be extracted.
 
 ```{r}
 ( sf.gof <- chisq.test(sf.obs,p=exp.p,rescale.p=TRUE,correct=FALSE) )
 ```
 
-From the results above the observed table for Step 6 was shown further above, the &chi;<sup>2</sup> test statistic for Step 7 is `r formatC(sf.gof$statistic,format="f",digits=3)`, and the p-value for Step 8 is `r formatC(sf.gof$p.value,format="f",digits=8)` (with `r sf.gof$parameter` df).
+From the results above the &chi;<sup>2</sup> test statistic for Step 7 is `r formatC(sf.gof$statistic,format="f",digits=3)`, and the p-value for Step 8 is `r formatC(sf.gof$p.value,format="f",digits=8)` (with `r sf.gof$parameter` df). The observed table for Step 6 was shown further above. The expected table for Step 5 is extracted from the `chisq.test()` object as follows.
 
-Rejecting H<sub>0</sub> in a Goodness-of-Fit test simply indicates that the observed distribution differs from the theoretical distribution, but it is not clearly exactly where the difference occurs. The following code can be used to neatly put the observed values, expected values, and Pearson residuals next to each other, which may be helpful for explaining any differences that were observed.
+```{r}
+sf.gof$expected
+```
+
+Rejecting H<sub>0</sub> in a Goodness-of-Fit test simply indicates that the observed distribution differs from the theoretical distribution, but it is not clear exactly where the difference occurs. The following code can be used to neatly put the observed values, expected values, and Pearson residuals next to each other, which may be helpful for explaining any differences that were observed.
 
 ```{r}
 cbind(obs=sf.gof$observed,exp=sf.gof$expected,resids=sf.gof$residuals)

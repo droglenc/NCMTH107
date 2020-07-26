@@ -23,3 +23,5 @@ Use the preparation readings and videos to prepare written answers for the follo
 1. What does `percTable()` do?
 1. What is the first argument to `percTable()`?
 1. What does using `margin=` in `percTable()` do?
+
+**You are also responsible for the preparation questions for the [Bivariate EDA - Quantitative](BEDAQuant) and [Bivariate EDA - Categorical](BEDACat) modules.**

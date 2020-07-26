@@ -16,3 +16,6 @@ Use the preparation readings and videos to prepare written answers for the follo
 1. Where is the y-intercept found in the results from `lm()`? The slope?
 1. What does `rSquared()` do? What arguments does it require?
 1. What does `predict()` do? What arguments does it require?
+
+**You are also responsible for the preparation questions for the [Regression](LinearRegression) module.**
+

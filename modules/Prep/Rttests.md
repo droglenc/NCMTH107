@@ -19,3 +19,4 @@ Use the preparation readings and videos to prepare written answers for the follo
 1. What is the purpose of the `alt=` argument to `t.test()`? What "values" can it take and what do those "values" mean?
 1. What is the purpose of the `conf.level=` argument to `t.test()`?
 
+**You are also responsible for the preparation questions for the [1-Sample t-Test](1Samplet) and [2-Sample t-Test](2Samplet) modules.**

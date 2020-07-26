@@ -5500,13 +5500,21 @@ name: RChiChi
 
 ## Chi-square Test
 
-- Must use `xtabs()` to make a two-way observed frequency table.
+- Must have a two-way observed frequency table
   - Grouping variable should be in rows.
   - Response variable should be in columns.
 
 --
-- Compute chi-square results with `chisq.test()`
-  - Table from `xtabs()` is first argument.
+  - **Raw data** ... use `xtabs()` (*described in reading and here*).
+
+--
+  - **Summarized data** ... use `matrix()` (*described in reading*).
+
+&amp;nbsp;
+
+--
+- Compute chi-square results with `chisq.test()`.
+  - Object with observed frequency table as first argument.
 
 --
   - Use `correct=FALSE` to "turn-off" continuity correction.
@@ -5789,17 +5797,22 @@ name: RChiGOF
 
 ## Goodness-of-Fit Test
 
-- Make an expected table with `c()`.
+- Make an expected table with `c()` with names.
+  - Any values that are proportional to the expected proportions.
 
 --
-- Use `xtabs()` to make an observed frequency table.
+- Create an observed frequency table.
+  - **Raw Data** ... use `xtabs()` (*demonstrated here and in reading*).
+  - **Summmarized Data ** ... use `c()` with names (*demonstrated in reading*).
+
+&amp;nbsp;
 
 --
 - Compute GOF results with `chisq.test()`
-  - Observed table from `xtabs()` is first argument.
+  - Observed table is first argument.
 
 --
-  - Expected table from `c()` in `p=` argument.
+  - Expected table object in `p=` argument.
 
 --
   - Use `rescale.p=TRUE` to assure proper expected values.
@@ -5813,8 +5826,325 @@ name: RChiGOF
 --
   - Obtain expected table by appending `$expected` to object name.
 
+--
+  - Use `gofCI()` to see how expected and observed proportions compare.
+
 ---
 
+
+
+count: false
+ 
+## Goodness-of-Fit Test
+.left-panel-gof-user[
+
+```r
+*headtail(peng)
+
+## Do samples from islands follow a 3:2:1 ratio
+## for Biscoe, Dream, and Torgerson. Use alpha=0.01.
+```
+]
+ 
+.right-panel-gof-user[
+
+```
+      species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1      Adelie Torgersen           39.1          18.7               181        3750   male
+2      Adelie Torgersen           39.5          17.4               186        3800 female
+3      Adelie Torgersen           40.3          18.0               195        3250 female
+342 Chinstrap     Dream           49.6          18.2               193        3775   male
+343 Chinstrap     Dream           50.8          19.0               210        4100   male
+344 Chinstrap     Dream           50.2          18.7               198        3775 female
+```
+]
+
+---
+count: false
+ 
+## Goodness-of-Fit Test
+.left-panel-gof-user[
+
+```r
+headtail(peng)  
+
+## Do samples from islands follow a 3:2:1 ratio
+## for Biscoe, Dream, and Torgerson. Use alpha=0.01.
+
+
+*( exp &lt;- c("Biscoe"=3,"Dream"=2,"Torgerson"=1) )
+```
+]
+ 
+.right-panel-gof-user[
+
+```
+      species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1      Adelie Torgersen           39.1          18.7               181        3750   male
+2      Adelie Torgersen           39.5          17.4               186        3800 female
+3      Adelie Torgersen           40.3          18.0               195        3250 female
+342 Chinstrap     Dream           49.6          18.2               193        3775   male
+343 Chinstrap     Dream           50.8          19.0               210        4100   male
+344 Chinstrap     Dream           50.2          18.7               198        3775 female
+```
+
+```
+   Biscoe     Dream Torgerson 
+        3         2         1 
+```
+]
+
+---
+count: false
+ 
+## Goodness-of-Fit Test
+.left-panel-gof-user[
+
+```r
+headtail(peng)  
+
+## Do samples from islands follow a 3:2:1 ratio
+## for Biscoe, Dream, and Torgerson. Use alpha=0.01.
+
+
+( exp &lt;- c("Biscoe"=3,"Dream"=2,"Torgerson"=1) )  
+
+
+*( peng_isle &lt;- xtabs(~island,data=peng) )
+```
+]
+ 
+.right-panel-gof-user[
+
+```
+      species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1      Adelie Torgersen           39.1          18.7               181        3750   male
+2      Adelie Torgersen           39.5          17.4               186        3800 female
+3      Adelie Torgersen           40.3          18.0               195        3250 female
+342 Chinstrap     Dream           49.6          18.2               193        3775   male
+343 Chinstrap     Dream           50.8          19.0               210        4100   male
+344 Chinstrap     Dream           50.2          18.7               198        3775 female
+```
+
+```
+   Biscoe     Dream Torgerson 
+        3         2         1 
+```
+
+```
+island
+   Biscoe     Dream Torgersen 
+      168       124        52 
+```
+]
+
+---
+count: false
+ 
+## Goodness-of-Fit Test
+.left-panel-gof-user[
+
+```r
+headtail(peng)  
+
+## Do samples from islands follow a 3:2:1 ratio
+## for Biscoe, Dream, and Torgerson. Use alpha=0.01.
+
+
+( exp &lt;- c("Biscoe"=3,"Dream"=2,"Torgerson"=1) )  
+
+
+( peng_isle &lt;- xtabs(~island,data=peng) )  
+
+
+*( gof_pi &lt;- chisq.test(peng_isle,p=exp,rescale.p=TRUE,correct=FALSE) )
+```
+]
+ 
+.right-panel-gof-user[
+
+```
+      species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1      Adelie Torgersen           39.1          18.7               181        3750   male
+2      Adelie Torgersen           39.5          17.4               186        3800 female
+3      Adelie Torgersen           40.3          18.0               195        3250 female
+342 Chinstrap     Dream           49.6          18.2               193        3775   male
+343 Chinstrap     Dream           50.8          19.0               210        4100   male
+344 Chinstrap     Dream           50.2          18.7               198        3775 female
+```
+
+```
+   Biscoe     Dream Torgerson 
+        3         2         1 
+```
+
+```
+island
+   Biscoe     Dream Torgersen 
+      168       124        52 
+```
+
+```
+Chi-squared test for given probabilities with peng_isle 
+X-squared = 1.3488, df = 2, p-value = 0.5095
+```
+]
+
+---
+count: false
+ 
+## Goodness-of-Fit Test
+.left-panel-gof-user[
+
+```r
+headtail(peng)  
+
+## Do samples from islands follow a 3:2:1 ratio
+## for Biscoe, Dream, and Torgerson. Use alpha=0.01.
+
+
+( exp &lt;- c("Biscoe"=3,"Dream"=2,"Torgerson"=1) )  
+
+
+( peng_isle &lt;- xtabs(~island,data=peng) )  
+
+
+( gof_pi &lt;- chisq.test(peng_isle,p=exp,rescale.p=TRUE,correct=FALSE) )  
+
+
+*gof_pi$expected
+```
+]
+ 
+.right-panel-gof-user[
+
+```
+      species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1      Adelie Torgersen           39.1          18.7               181        3750   male
+2      Adelie Torgersen           39.5          17.4               186        3800 female
+3      Adelie Torgersen           40.3          18.0               195        3250 female
+342 Chinstrap     Dream           49.6          18.2               193        3775   male
+343 Chinstrap     Dream           50.8          19.0               210        4100   male
+344 Chinstrap     Dream           50.2          18.7               198        3775 female
+```
+
+```
+   Biscoe     Dream Torgerson 
+        3         2         1 
+```
+
+```
+island
+   Biscoe     Dream Torgersen 
+      168       124        52 
+```
+
+```
+Chi-squared test for given probabilities with peng_isle 
+X-squared = 1.3488, df = 2, p-value = 0.5095
+```
+
+```
+   Biscoe     Dream Torgersen 
+172.00000 114.66667  57.33333 
+```
+]
+
+---
+count: false
+ 
+## Goodness-of-Fit Test
+.left-panel-gof-user[
+
+```r
+headtail(peng)  
+
+## Do samples from islands follow a 3:2:1 ratio
+## for Biscoe, Dream, and Torgerson. Use alpha=0.01.
+
+
+( exp &lt;- c("Biscoe"=3,"Dream"=2,"Torgerson"=1) )  
+
+
+( peng_isle &lt;- xtabs(~island,data=peng) )  
+
+
+( gof_pi &lt;- chisq.test(peng_isle,p=exp,rescale.p=TRUE,correct=FALSE) )  
+
+
+gof_pi$expected  
+
+
+*gofCI(gof_pi,digits=3)
+```
+]
+ 
+.right-panel-gof-user[
+
+```
+      species    island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    sex
+1      Adelie Torgersen           39.1          18.7               181        3750   male
+2      Adelie Torgersen           39.5          17.4               186        3800 female
+3      Adelie Torgersen           40.3          18.0               195        3250 female
+342 Chinstrap     Dream           49.6          18.2               193        3775   male
+343 Chinstrap     Dream           50.8          19.0               210        4100   male
+344 Chinstrap     Dream           50.2          18.7               198        3775 female
+```
+
+```
+   Biscoe     Dream Torgerson 
+        3         2         1 
+```
+
+```
+island
+   Biscoe     Dream Torgersen 
+      168       124        52 
+```
+
+```
+Chi-squared test for given probabilities with peng_isle 
+X-squared = 1.3488, df = 2, p-value = 0.5095
+```
+
+```
+   Biscoe     Dream Torgersen 
+172.00000 114.66667  57.33333 
+```
+
+```
+          p.obs p.LCI p.UCI p.exp
+Biscoe    0.488 0.436 0.541 0.500
+Dream     0.360 0.312 0.412 0.333
+Torgersen 0.151 0.117 0.193 0.167
+```
+]
+
+&lt;style&gt;
+.left-panel-gof-user {
+  color: #777;
+  width: 49.0196078431373%;
+  height: 92%;
+  float: left;
+  font-size: 80%
+}
+.right-panel-gof-user {
+  width: 49.0196078431373%;
+  float: right;
+  padding-left: 1%;
+  font-size: 80%
+}
+.middle-panel-gof-user {
+  width: 0%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+
+
+---
 
 class: inverse, center, middle
     </textarea>

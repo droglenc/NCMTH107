@@ -25,4 +25,4 @@ Use the preparation readings and videos to prepare written answers for the follo
 1. What does `theme_NCStats()` do?
 1. What does `facet_wrap()` do?
 
-----
+**You are also responsible for the preparation questions for the [Univariate Summary Statistics](UnivSum) and [Univariate EDA](UnivEDA) modules.**
