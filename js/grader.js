@@ -12,8 +12,7 @@ function roundDec(x, dcml)  {
 //**  Sets weights for assessment components                          **
 //**********************************************************************
 function get_wghts() {
-  PREP_WT = 0.25; HW_WT = 0.50; PART_WT = 0; Q1_WT = 0;
-  Q2_WT = 0; Q3_WT = 0;	Q4_WT = 0;	FNL_WT = 0.25;
+  PREP_WT = 0.25; HW_WT = 0.50; FNL_WT = 0.25;
 }
 
 //**********************************************************************
@@ -46,31 +45,6 @@ function calc_grade(form) {
 	if (temp!=="") {
 		if (temp > 1) {temp=temp/100};
 		pts += HW_WT*temp;	outof += HW_WT;
-	}
-	temp = form.PART_SC.value;
-	if (temp!=="") {
-		if (temp > 1) {temp=temp/100};
-		pts += PART_WT*temp;	outof += PART_WT;
-	}
-	temp = form.Q1_SC.value;
-	if (temp!=="") {
-		if (temp > 1) {temp=temp/100};
-		pts += Q1_WT*temp;	outof += Q1_WT;
-	}
-	temp = form.Q2_SC.value;
-	if (temp!=="") {
-		if (temp > 1) {temp=temp/100};
-		pts += Q2_WT*temp;	outof += Q2_WT;
-	}
-	temp = form.Q3_SC.value;
-	if (temp!=="") {
-		if (temp > 1) {temp=temp/100};
-		pts += Q3_WT*temp;	outof += Q3_WT;
-	}
-	temp = form.Q4_SC.value;
-	if (temp!=="") {
-		if (temp > 1) {temp=temp/100};
-		pts += Q4_WT*temp;	outof += Q4_WT;
 	}
 	temp = form.FNL_SC.value;
 	if (temp!=="") {

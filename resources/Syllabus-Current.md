@@ -15,7 +15,7 @@ css: /css/syllabus.css
 </ul>
 
 <figure>
-  <img src="../img/phd012010s.gif" alt="News Media Polls">
+  <img src="../img/phd012010s.gif" alt="Decoration">
   <figcaption><span style="font-size:50%;">From <a href="http://phdcomics.com/comics/archive.php?comicid=1271" target="_blank">phdcomics.com</a></span></figcaption>
 </figure>
 
@@ -40,7 +40,7 @@ What you learn in this <strong>Statistical Concepts and Analysis</strong> course
 ----
 
 ## Learning Outcomes
-<img class="img-right" src="../img/outcomes.jpg" alt="Outcomes">
+<img class="img-right" src="../img/outcomes.jpg" alt="Decoration">
 In this course, you will have the opportunity to:
 
 1. Describe why statistics is central to scientific inquiry (& your field of interest); 
@@ -77,26 +77,25 @@ TBD
 <!---
 <img class="img-right" src="../img/Markia_W20.jpg">
 Markia Smith will also be available to help you succeed in this course. Markia is a Math and Education major who took this class last year and will be tutoring for the first time this year. Markia is available on Thursdays from 6-8pm in CSE227 (the computer lab next to my office).
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
 --->
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
 
 ### Accommodations
 I want to create an inclusive and accessible learning environment for those of you that have a condition (e.g., attention, learning, vision, hearing, mental, physical, or other health-related concern) that may require special accommodations. *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course. If you have a condition that requires accommodations but *you have not yet established services* through OAR, then you should contact Jennifer Newago as soon as possible (Ponzio 230, x1387, or <a href="mailto:accomodations@northland.edu">accomodations@northland.edu</a>). It is the policy and practice of Northland College to create inclusive and accessible learning environments consistent with federal and state law. <a href="https://my.northland.edu/life/be-healthy/accommodations/">More information is available here.</a>
 
 
 ### Academic Alerts
-<img class="img-right" src="../img/alert.jpg">
 If I observe you "struggling" with the course early in the semester then I may file an "Academic Alert" about you. If this happens, you will receive an e-mail from me that will suggest steps you can take to improve your performance in the course. Our Academic Success Coordinator, Megan McPeak, will receive the alert and will likely also reach out to you. **Academic Alerts are not punitive**, they are simply an attempt to help you get back on track in this course as soon as possible.
 
 ----
 
 ## Course Workflow
-
+<img class="img-right" src="../img/StudyOnline.jpg" alt="Decoration">
 The course is schedule to meet every weekday this term from 8-1130am. However, because of physical distancing guidelines, half of you will meet in the classrom from 815-945am and the other half will meet from 10-1130am. I will alternate weekly which groups will meet during which period.
 
 This course is taught in a "flipped format", which loosely means that you will be responsible for obtaining factual content prior to coming to class and will then use class time with me to apply and expand upon what you learned prior to class. I have taught this class in this format for five years, largely because I believe the science that indicates that deeper learning is achieved with this model. However, this format also allows for teaching face-to-face, on-line, or a hybrid of both as necessary.
@@ -170,7 +169,7 @@ I will submit a "midterm grade" for you approximately half-way through the semes
 ## Expectations
 
 ### Ownership of Learning
-<img class="img-right" src="../img/student-reflection-and-ownership_orig.png" alt="Ownership of Learning">
+<img class="img-right" src="../img/student-reflection-and-ownership_orig.png" alt="Decoration">
 This course is designed in a way that you will have to actively, rather than passively, engage in the course content. In this way, it may differ from some of your other courses. In particular, in this course you will need to:
 
 * Interact with the course material on a near daily basis (i.e., you will not be able to ignore the class for several days).
@@ -182,14 +181,14 @@ This course is designed in a way that you will have to actively, rather than pas
 * Maintain focus for an extended period of time (1.5 h for each class, 2 h for quizzes).
 
 ### Work Outside of Class
-<img class="img-right" src="../img/studying.jpg" alt="Studying Hours">
+<img class="img-right" src="../img/studying.jpg" alt="Decoration">
 As a general rule-of-thumb[^2], you are expected to spend 2-3 hours of time outside of class for each hour in class. This course meets for 4.5 hours per week and, thus, you should dedicate between 9 and 13.5 hours of time outside of class preparing for class, completing review and class exercises, and studying for quizzes. **The work required for this course can be completed within this expected amount of time, if that time is without distraction**. If monitoring your phone/device is distracting you from getting your work done then you may consider the aid of apps (e.g., [Forest](https://www.forestapp.cc/)) designed to reduce distractions from devices.[^DistractionAids]  
 
 If you feel that you are spending too much time on some exercises or preparations because you are "stuck," then start your work earlier so that you can stop (and do other things) and make plans to see [me](#instructor--derek-ogle) or the [tutors](#tutors) for help.
 
 
 ### Classroom Conduct and Academic Integrity
-<img class="img-right" src="../img/cell-cheat.jpg" alt="Conduct and Integrity">
+<img class="img-right" src="../img/cell-cheat.jpg" alt="Decoration">
 My intent is to create a classroom environment where solid learning of statistics can occur. One part of this environment is a well-organized course structure built upon relevant learning resources and interesting realistic exercises. Another part is my availability to assist you in learning from these resources and exercises. A third part is your conduct within the classroom. My expectations of you are that you will fully engage in the course (see above) and be respectful of all others in the class. At a minimum, I expect you to adhere to the following behaviors:
 
 * Please arrive to class on time. If you arrive late, then take the first available seat as quietly as possible. If you need to leave early, then please sit near the exit.
