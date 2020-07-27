@@ -45,12 +45,12 @@ In this course, you will have the opportunity to:
 
 1. Describe why statistics is central to scientific inquiry (& your field of interest); 
 1. Define basic statistical words and symbols; 
-1. Design simple experiments and sampling strategies; 
-1. Perform appropriate exploratory data analyses (univariate and bivariate); 
-1. Identify the purposes of and conduct and interpret the results of a linear regression; 
-1. Construct and interpret confidence intervals for one and two-sample mean and proportion problems;
-1. Identify the appropriate hypothesis test to perform in one- and two-sample quantitative and categorical data situations; 
-1. Construct and interpret the results from a hypothesis test for one- and two-sample quantitative and categorical data situations; and 
+1. Design simple **experiments** and **sampling** strategies; 
+1. Perform appropriate **exploratory data analyses** (univariate and bivariate); 
+1. Identify the purposes of and conduct and interpret the results of a **linear regression**; 
+1. Construct and interpret confidence intervals for **one and two-sample mean and proportion** problems;
+1. Identify the appropriate hypothesis test to perform in **one- and two-sample quantitative and categorical** data situations; 
+1. Construct and interpret the results from a hypothesis test for **one- and two-sample quantitative and categorical** data situations; and 
 1. Communicate statistical results and ideas in a succinct and informative manner. 
 
 This course fulfills that Quantitative Reasoning requirement in the [General Education Program](https://my.northland.edu/faculty/fac-academic-programs/){:target="_blank"} because you will:
@@ -63,22 +63,21 @@ This course fulfills that Quantitative Reasoning requirement in the [General Edu
 ----
 
 ## Assistance
-<img class="img-right" src="../img/help.jpg">
-Sources for out-of-class assistance and opportunities for in-class accommodations are described further below. Please use these throughout the semester as appropriate.[^help]
 
-* *Questions don’t expose the lack of knowledge of the asker, but rather expose opportunities for clarification for the original communicator* - [Julia Steward Lowndes](https://blogs.scientificamerican.com/observations/open-software-means-kinder-science/)
-* *Never apologize for asking for what you need, if you don't ask - the answer will always be no.* - Rachel Wolchin
-* *Asking for other's guidance helps you see what you may not be able to see. It's always important to check your ego and ask for help.* - Ken Blanchard
-* *The only mistake you can make is not asking for help.* - Sandeep Jauhar
-
+> Don't be afraid to ask questions. Don't be afraid to ask for help when you need it. I do that every day. Asking for help isn't a sign of weakness, its a sign of strength. It shows you have the courage to admit when you don't know something, and to learn something new. -- President Barack Obama
 
 ### Instructor -- Derek Ogle
 <img class="img-right" src="../img/DerekOgle1.jpg">
-I am committed to your doing well in this course and see it as my responsibility to help you both in and out of the designated class period. I will be available in CSE228 whenever my door is open, but also specifically for office hours from 1-3p on Monday, Wednesday, and Friday. You can also anonymously ask me and other students questions on the [Piazza Class Discussion Site](https://piazza.com/northland/spring2020/mth107/home){:target="_blank"}, which I will monitor regularly. Finally, you may send me [anonymous feedback, suggestions, or questions](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}. Please see or contact me if you have questions regarding this course.
+I am committed to your doing well in this course and see it as my responsibility to help you both in and out of the designated class period. I will be available in CSE228 whenever my door is open, but also specifically for office hours from 1-3p on Monday, Wednesday, and Friday. You can also anonymously ask me and other students questions on the [Piazza Class Discussion Site](https://piazza.com/northland/fall2020/mth107/home){:target="_blank"}, which I will monitor regularly ([here are directions of how to post a question](https://support.piazza.com/support/solutions/articles/48000574396-students-post-a-question)). Finally, you may send me [anonymous feedback, suggestions, or questions](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}. Please see or contact me if you have questions regarding this course.
 
 ### Tutors
+
+TBD
+
+<!---
 <img class="img-right" src="../img/Markia_W20.jpg">
 Markia Smith will also be available to help you succeed in this course. Markia is a Math and Education major who took this class last year and will be tutoring for the first time this year. Markia is available on Thursdays from 6-8pm in CSE227 (the computer lab next to my office).
+--->
 
 &nbsp;
 
@@ -92,7 +91,21 @@ I want to create an inclusive and accessible learning environment for those of y
 
 ### Academic Alerts
 <img class="img-right" src="../img/alert.jpg">
-As you adjust to college, you may benefit from working with a professional on your organization, motivation, and stress level. If I observe you struggling with th course early in the semester then I may file an "Academic Alert" about you. If this happens, you will receive an e-mail from me that explains steps you can take to improve your performance in the course. Our Academic Success Coordinator, Gina Kirsten, will receive the alert and will likely also reach out to you to set up a time to further discuss ways to improve in the course. **Academic Alerts are not punitive**, they are simply an attempt to help you get back on track in this course as soon as possible.
+If I observe you "struggling" with the course early in the semester then I may file an "Academic Alert" about you. If this happens, you will receive an e-mail from me that will suggest steps you can take to improve your performance in the course. Our Academic Success Coordinator, Megan McPeak, will receive the alert and will likely also reach out to you. **Academic Alerts are not punitive**, they are simply an attempt to help you get back on track in this course as soon as possible.
+
+----
+
+## Course Workflow
+
+The course is schedule to meet every weekday this term from 8-1130am. However, because of physical distancing guidelines, half of you will meet in the classrom from 815-945am and the other half will meet from 10-1130am. I will alternate weekly which groups will meet during which period.
+
+This course is taught in a "flipped format", which loosely means that you will be responsible for obtaining factual content prior to coming to class and will then use class time with me to apply and expand upon what you learned prior to class. I have taught this class in this format for five years, largely because I believe the science that indicates that deeper learning is achieved with this model. However, this format also allows for teaching face-to-face, on-line, or a hybrid of both as necessary.
+
+The course is composed of 25 modules of material which roughly corresponds to one module per day. Each module will follow this general format of instruction.
+
+1. Prior to the class period dedicated to that module you will use written and video materials to answer a series of preparation questions about the module. These questions are listed below the "Preparation for Class" heading on each module webpage (see ["Foundational Definitions"](../modules/FoundationalDefns){:target="_blank"} as an example).
+1. Betweeen 1pm on the day before and 8am on the day of the class period dedicated to that module complete the on-line "preparation quiz" related to the preparation questions. You may refer back to the readings and videos when answering these questions and you may ask relevant questions on the [Piazza webpage](https://piazza.com/configure-classes/fall2020/mth107){:target="_blank"}. The quiz, named by module and the "-- Prep Check" suffix, will be available on the [class Gradescope page](https://www.gradescope.com/courses/144614){:target="_blank"}. Graded quizzes will be returned to your Northland e-mail.
+1. You will attend the class period where you will work on an assignment related to the module. The assignment is listed under the "Practice" section on the module webpage (see ["Foundational Definitions"](../modules/FoundationalDefns){:target="_blank"} as an example). The assignment can be typed or (neatly) hand-written and will be turned in to Gradescope by 8am the following day (the assignment will have the module name and "-- assignment" suffix. Gradescope requires a PDF of your assignment so you will need to create a PDF from your typed document or from pictures of your written work. In addition, you have to indicate which page in this document your answers on. [This resource](https://gradescope-static-assets.s3-us-west-2.amazonaws.com/help/submitting_hw_guide.pdf){:target="_blank"} demonstrates how to do upload your PDF to Gradescrope, including directions for "scanning" your work with types of phones. Graded assignments will be returned to your Northland e-mail and detailed answer keys will be placed on the module webpage.
 
 ----
 
@@ -100,110 +113,40 @@ As you adjust to college, you may benefit from working with a professional on yo
 <img class="img-right" src="../img/grading.jpg">
 An overall grade will be computed from the items described below and in the <a href="#overall-grade">Overall Grade section</a> further below.
 
-### Preparation Checks
-You should prepare for each class period with the module reading and videos indicated on the [Dates page](Dates-Current){:target="_blank"} and announced at the end of the previous class period. A preparation guide is provided for each module to help you identify key concepts in the reading and videos ([here's an example](../modules/FoundationalDefns_Prep.html){:target="_blank"}). You should prepare your own **hand-written**[^1] notes for each item on the preparation guide. A "preparation check," for which you can use your notes, but no other resources, will be administered during the first 7 minutes of every class period. **Preparation checks not completed in the first 7 minutes of class cannot be made up. Preparation checks taken from outside of the classroom will not be accepted.**
+### Preparation Check Quizzes
 
-### Homework
-<img class="img-right" src="../img/homework.png">
-Each day you will be required to turn in work on exercises started (and possibly finished) in the previous class period. You may work with other students on exercises, but substantial copying of others' work does not lead to learning and will not be accepted. **Late exercises will not be accepted after I have posted the answer key.**
+Preparation check quizzes and due dates were described in the ["Course Workflow" section](#course-workflow). Quizzes not completed by the due date time will not be accepted. Your lowest three quizzes, however, will be dropped when computing your grade.
 
-Exercises you turn in will be graded with the following rubric.
+### Assignments
 
-<div class="container-fluid">
-  <table class="table table-bordered">
-  <thead>
-    <tr class="info"><th>4 points</th><th>3-1 points</th><th>0 points</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>All parts of the exercise were completed in full. All steps of the work (e.g., intermediate calculations, R code) were provided. Work was neat and orderly.</td><td>Some parts of the exercise were either not attempted or were incomplete. All steps not shown. Work was not as neat and orderly as it should have been.</td><td>Very little of the exercise was completed, many steps not shown, substantial amounts of the work was copied from someone else, or work was very messy and unorganized.</td></tr>
-  </tbody>
-  </table>
-</div>
+Assignments and due dates were described in the ["Course Workflow" section](#course-workflow). Assignments not completed by the due date time will not be accepted. Your lowest three quizzes, however, will be dropped when computing your grade.
 
-### Engagement
-This course is taught in an active learning format that will require your full engagement to maximize learning. To encourage your active participation in learning, I will assess your engagement at the end of each class period with the following rubric.
-
-<div class="container-fluid">
-  <table class="table table-bordered">
-  <thead>
-    <tr class="info"><th>4 points</th><th>3-1 points</th><th>0 points</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Fully (see below) engaged in the day's activities. Properly focused at all times.</td><td>Engaged in many, but not all, of the day's activities. Focus waned or was inconsistent. Left early or arrived late by between 1-15 mins.</td><td>Very little active engagement in the day's activities. Lacked focus. Left early or arrived late by more than 15 mins.</td></tr>
-  </tbody>
-  </table>
-</div>
-
-The following behaviors are indicative of a fully engaged student:
-
-- Attended the entire class period (including being on time).
-- Came to class having fully completed the required preparation materials (see above).
-- Diligently worked on the exercises.
-- Asked pertinent questions.
-- Collaboratively worked with others on course material.
-- Took notes during short lectures.
-- Paid attention during short lectures.
-- Followed the [class conduct guidelines](#classroom-conduct-and-academic-integrity).
-
-### Quizzes
-Four mid-term quizzes will allow you to demonstrate what you have learned about the most recent material. With this number of quizzes, the material on each quiz will be focused on fewer modules and, thus, more manageable to prepare for. Additionally, a final exam will give you an opportunity to show that you have a synthetic understanding of all material from throughout the course. The final exam will be focused on larger concepts, applications, and interpretations (rather than specific details) from throughout the semester. I will provide you with an explicit study guide approximately one week before each quiz and the final exam.
-
-Dates for quizzes and the final exam are shown on the [Dates page](Dates-Current.html){:target="_blank"}. Make-up quizzes will be provided only if you have a fixed commitment of sufficient importance that was set before the beginning of the semester, or a verifiable medical condition. Please see me immediately if you miss a quiz without my prior approval, but note that you may not be allowed to make up that quiz. **The final exam will NOT be given early.**
-
-Note that your highest quiz score will count for more and your lowest quiz score will count for less in the calculation of your final grade (see [grade weights](#overall-grade) below).
-
-#### Quiz Corrections and Reflections
-For each quiz, you may complete an OPTIONAL two-part correction/reflection to earn bonus points to add to your earned grade. For the **first** part, complete a correction for each question that you missed, along with *a specific resource that supports your answer* (e.g., a specific page in the reading, a specific video, a specific exercise). You will not receive credit for simply correcting your answer, for providing another incorrect answer, or not providing the resource. You must address every question you missed to receive full credit for this portion.
-
-**Second**, write at least 300 words (one double-spaced page) of *thoughtful* reflections to the following items about the quiz
-
-* what you did well on the quiz (and why),
-* what you did poorly on the quiz (and why),
-* what you did to prepare for the quiz (be specific ... did you read your notes, read the module readings, watch videos, redo class exercises, do review exercises, etc.)
-* what you did to prepare for the quiz that was helpful,
-* what did you do to prepare for the quiz that was not helpful,
-* what you will change (if anything) in your preparation strategy for the next quiz,
-* was the quiz as you expected (why or why not), and
-* any other comments or suggestions about the quiz.
-
-Your corrections and reflection *must be typed* (though you can leave space to show your work "by hand" for calculations), easy to read (e.g., neatly organize your corrections by question number), and *must include the original quiz*.
-    
-A perfect exam correction and reflection will add the lesser of 12% or the amount it would take for your exam score to be 95%, with two-thirds of the overall grade from the correction (first) portion. Corrections and reflections will be due as announced in class and shown on the [dates](Dates-Current){:target="_blank"} page. **Late corrections and reflections will not be accepted**.
+### Final Exam
+A final exam will give you an opportunity to show that you have a synthetic understanding of all material from throughout the course. The final exam will be focused on larger concepts, applications, and interpretations (rather than specific details) from throughout the semester. I will provide you with an explicit study guide approximately one week before the final exam.
 
 ### Overall Grade
-An overall score will be computed from the items and associated weights listed in the table below (and described above). To compute your current grade, enter your percentage scores in the boxes for completed assessments. Enter your highest quiz score as the first quiz and your lowest quiz score as the last quiz. To project your future grade, also include percentages for future assessments.
+An overall score will be computed from the items and associated weights listed in the table below (and described above). To compute your current grade, enter your percentage scores in the boxes for completed assessments. Grades on individual preparation check quizzes and assignments can be found on the [class Gradescope page](https://www.gradescope.com/courses/144614){:target="_blank"}. To project your future grade, also include percentages for future assessments.
 
 <!-- if the assessment weights change then you must change the values in get_wghts() in the grader.js file -->
 
 <form name="GRADECALC">
 <table class="grader" width="90%">
-<tr><th width="14%"></th>
-<th width="12%"><a href="#preparation-checks">Prep<br>Check</a></th>
-<th width="12%"><a href="#homework">Home-<br>work</a></th>
-<th width="12%"><a href="#engagement">Engage-<br>ment</a></th>
-<th width="10%"><a href="#quizzes">Quiz<br>1</a></th>
-<th width="10%"><a href="#quizzes">Quiz<br>2</a></th>
-<th width="10%"><a href="#quizzes">Quiz<br>3</a></th>
-<th width="10%"><a href="#quizzes">Quiz<br>4</a></th>
-<th width="10%"><a href="#quizzes">Final</a></th>
+<tr><th width="15%"></th>
+<th width="28%"><a href="#preparation-check-quizzes">Prep Check<br>Quizzes</a></th>
+<th width="28%"><a href="#assignments">Assignments</a></th>
+<th width="29%"><a href="#quizzes">Final Exam</a></th>
 </tr>
 
-<tr><th>Weight</th>
-<th>8%</th><th>8%</th><th>8%</th><th>15%</th><th>13%</th><th>13%</th><th>10%</th><th>25%</th></tr>
+<tr><th>Weight</th><th>25%</th><th>50%</th><th>25%</th></tr>
 
 <tr><th>Percent</th>
 <td><input type="text" name="PREP_SC" size="3" tabindex="1" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="PART_SC" size="3" tabindex="2" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="HW_SC" size="3" tabindex="3" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="Q1_SC" size="3" tabindex="4" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="Q2_SC" size="3" tabindex="5" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="Q3_SC" size="3" tabindex="6" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="Q4_SC" size="3" tabindex="7" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="FNL_SC" size="3" tabindex="8" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="HW_SC" size="3" tabindex="2" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="FNL_SC" size="3" tabindex="3" onchange="calc_grade(this.form)"></td>
 </tr>
 
-<tr><th colspan="5">Overall Percentage: <input type="text" name="SCORE" size="4"></th>
-<th colspan="4">Projected Grade: <input type="text" name="GRADE" size="2"></th></tr>
+<tr><th colspan="2">Overall: <input type="text" name="SCORE" size="4"></th>
+<th colspan="2">Grade: <input type="text" name="GRADE" size="2"></th></tr>
 </table>
 </form>
 
@@ -216,13 +159,11 @@ Your letter grade will be assigned from your overall percentage (rounded to a wh
   <tr><td>D+ 67-69</td><td>D  60-66</td><td>F   0-59</td></tr>
 </table>
 
-If you meet with me in my office **before the end of the second week of classes** AND **at least two other times in my office (i.e., outside of class) with legitimate questions** then your lowest four preparation check, homework, **AND** engagement grades will be excluded when computing your overall percentage.
-
 #### Note About Incomplete Grades
 An incomplete grade will be given ONLY in extreme circumstances that are beyond your control, such as a major illness, and will ONLY be given if you have successfully completed the entire course except for the final exam. This is in accordance with [Northland College policy](https://my.northland.edu/student-policies/academic-policies/#grades){:target="_blank"} (scroll down to "Incomplete Grades").
 
 #### Note About Midterm Grades
-I will submit a "midterm grade" for you approximately half-way through the semester. This grade will include only about 1/3rd of the items that will be included in your overall final grade. Also note that I will assign the "worst possible" letter grade for your midterm grade. I will do this for two reasons because I believe that it is better to know the worst rather than the best-case scenario at that point of the semester and the material at the end of the semester is a little more difficult than the material at the beginning of the semester. Of course, see me if you have questions about your midterm grade.
+I will submit a "midterm grade" for you approximately half-way through the semester. This grade will by my best guess at your lowest possible final grade. I assign this "worst-case" midterm grade because I believe that it is better to know the worst rather than the best-case scenario at that point of the semester and the material at the end of the semester is a little more difficult than the material at the beginning of the semester. Of course, see me if you have questions about your midterm grade.
 
 ----
 
@@ -268,11 +209,7 @@ Finally, note that the [College's Academic Integrity Statement & Policy](https:/
 
 ### Footnotes
 
-[^help]: Quotes from [BurnishedChaos.com](https://burnishedchaos.com/quotes-about-asking-for-help/){:target="_blank"}.
-
 [^email]: While I am pretty open-minded and not much of a stickler when it comes to e-mail etiquette, some professors are. And it is always better to send an appropriate rather than an inappropriate e-mail. [Here](https://www.scribendi.com/advice/how_to_email_a_professor.en.html) and [here](https://www.insidehighered.com/views/2015/04/16/advice-students-so-they-dont-sound-silly-emails-essay) are some good suggestions for e-mailing professors.
-
-[^1]: I believe the research (e.g., [here](http://www.medicaldaily.com/why-using-pen-and-paper-not-laptops-boosts-memory-writing-notes-helps-recall-concepts-ability-268770){:target="_blank"}, [here](http://www.pbs.org/wgbh/nova/next/body/taking-notes-by-hand-could-improve-memory-wt/){:target="_blank"}, and [here](http://www.lifehack.org/articles/featured/writing-and-remembering-why-we-remember-what-we-write.html){:target="_blank"}) that suggests that you are more likely to remember concepts if you hand-write those concepts down, rather than copy-and-pasting or typing the text.
 
 [^2]: General advice for how much time should be spent outside of class for each hour inside of class can be found, among many, [here](https://www.collegeparentcentral.com/2010/02/is-your-college-student-investing-enough-time-studying/){:target="_blank"}, [here](http://classroom.synonym.com/ratio-studying-class-time-college-1075.html){:target="_blank"}, [here](https://www.usu.edu/asc/studysmart/pdf/estimating_study_hours.pdf){:target="_blank"}, and [here](http://collegelife.about.com/od/academiclife/f/How-Much-Time-Should-I-Spend-Studying-In-College.htm){:target="_blank"}.
 

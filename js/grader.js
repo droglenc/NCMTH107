@@ -12,8 +12,8 @@ function roundDec(x, dcml)  {
 //**  Sets weights for assessment components                          **
 //**********************************************************************
 function get_wghts() {
-  PREP_WT = 0.08; HW_WT = 0.08; PART_WT = 0.08; Q1_WT = 0.15;
-  Q2_WT = 0.13; Q3_WT = 0.13;	Q4_WT = 0.10;	FNL_WT = 0.25;
+  PREP_WT = 0.25; HW_WT = 0.50; PART_WT = 0; Q1_WT = 0;
+  Q2_WT = 0; Q3_WT = 0;	Q4_WT = 0;	FNL_WT = 0.25;
 }
 
 //**********************************************************************
