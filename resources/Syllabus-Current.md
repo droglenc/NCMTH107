@@ -102,39 +102,27 @@ This course is taught in a "flipped format", which loosely means that you will b
 
 The course is composed of [25 modules](../modules/index) of material which roughly corresponds to one module per day. Below describes a general format of instruction that you should follow for each module.
 
-1. **Prepare Module Material** -- Each module has questions that will guide your preparation for that module's material. These questions are below the "Preparation for Class" heading on each module webpage (see ["Foundational Definitions"](../modules/FoundationalDefns){:target="_blank"} as an example). Prior to the class period dedicated to a module (see the [Dates page](Dates-Current.html)) you will use written and video materials to answer the preparation questions. Additionally you may ask relevant questions about the material on the [Piazza discussion site](https://piazza.com/configure-classes/fall2020/mth107){:target="_blank"}.
+1. **Prepare Module Material** -- Each module has questions that will guide your preparation for that module's material. These questions are below the "Preparation for Class" heading on each module webpage (see ["Foundational Definitions"](../modules/FoundationalDefns){:target="_blank"} as an example). Prior to the class period dedicated to a module (see the [Dates page](Dates-Current.html)) you will use written and video materials to answer the preparation questions. Additionally you may ask relevant questions about the material on the [Piazza discussion site](https://piazza.com/northland/fall2020/mth107){:target="_blank"}.
 1. **Complete Module Preparation Quiz** -- Each module will have a "module preparation quiz" that will be available on the [class Gradescope page](https://www.gradescope.com/courses/144614){:target="_blank"} (these quizzes will be named after the module and will include the "-- Prep Check" suffix). Betweeen 1pm on the day before and 8am on the day of the class period dedicated to a module, you should complete and submit the corresponding "module preparation quiz." While taking this quiz you may refer to your notes, the readings, or the videos. Graded quizzes will be returned to your Northland e-mail.
 1. **Class Time** -- Class time will generally consist of short reviews of the module material, simulations related to core concepts, and work on application exercises. You are expected to attend class according to college policy as this will be a time to get direct help from me. During many class periods you will start and likely finish most of a required assignment.
-1. **Complete an Applied Assignment** -- Each module has an assignment where you will demonstrate that you can apply the module's concepts. The assignment is listed under the "Practice" section on the module webpage (see ["Foundational Definitions"](../modules/FoundationalDefns){:target="_blank"} as an example). Assignments can be typed or (neatly) hand-written and will ultimately need to be turned into a PDF document for online submission to [Gradescope](https://www.gradescope.com/courses/144614){:target="_blank"}. [The first two pages of these directions](https://gradescope-static-assets.s3-us-west-2.amazonaws.com/help/submitting_hw_guide.pdf){:target="_blank"} show how to use your device to scan hand-written work to a PDF. [The last page of those directions](https://gradescope-static-assets.s3-us-west-2.amazonaws.com/help/submitting_hw_guide.pdf){:target="_blank"} shows to upload your PDF to Gradescope and identify the page on which the answers appear (this is required). The assignment on Gradescope will have the module name and "-- assignment" suffix. Graded assignments will be returned to your Northland e-mail and detailed answer keys will be placed on the module webpage.
+1. **Complete an Applied Assignment** -- Each module has an assignment where you will demonstrate that you can apply the module's concepts. The assignment is listed under the "Practice" section on the module webpage (see ["Foundational Definitions"](../modules/FoundationalDefns){:target="_blank"} as an example). Assignments can be typed or (neatly) hand-written and will ultimately need to be turned into a PDF document for online submission to [Gradescope](https://www.gradescope.com/courses/144614){:target="_blank"}. [The first two pages of these directions](https://gradescope-static-assets.s3-us-west-2.amazonaws.com/help/submitting_hw_guide.pdf){:target="_blank"} show how to use your device to scan hand-written work to a PDF. [The last page of those directions](https://gradescope-static-assets.s3-us-west-2.amazonaws.com/help/submitting_hw_guide.pdf){:target="_blank"} shows how to upload your PDF to Gradescope and identify the page on which each answer appears (this is required). The assignment on Gradescope will have the module name and "-- assignment" suffix and are due by 8am on the day after the class period dedicated to the module. Graded assignments will be returned to your Northland e-mail and detailed answer keys will be placed on the module webpage.
 
 ----
 
 ## Grading
 <img class="img-right" src="../img/grading.jpg">
-An overall grade will be computed from the items described below and in the <a href="#overall-grade">Overall Grade section</a> further below.
+An overall grade will be computed from the module preparation quizzes and assignments described  in the ["Course Workflow" section](#course-workflow) and a final exam. Module preparation quizzes and assignments not submitted by the due date time will not be accepted. However, your lowest three quiz and assignment grades will be dropped when computing your overall grade. The final exam is an opportunity for you to show a synthetic understanding of all material from throughout the course. The final exam will be focused on larger concepts, applications, and interpretations (rather than specific details) from throughout the semester. I will provide you with an explicit study guide approximately one week before the final exam.
 
-### Preparation Check Quizzes
-
-Preparation check quizzes and due dates were described in the ["Course Workflow" section](#course-workflow). Quizzes not completed by the due date time will not be accepted. Your lowest three quizzes, however, will be dropped when computing your grade.
-
-### Assignments
-
-Assignments and due dates were described in the ["Course Workflow" section](#course-workflow). Assignments not completed by the due date time will not be accepted. Your lowest three quizzes, however, will be dropped when computing your grade.
-
-### Final Exam
-A final exam will give you an opportunity to show that you have a synthetic understanding of all material from throughout the course. The final exam will be focused on larger concepts, applications, and interpretations (rather than specific details) from throughout the semester. I will provide you with an explicit study guide approximately one week before the final exam.
-
-### Overall Grade
-An overall score will be computed from the items and associated weights listed in the table below (and described above). To compute your current grade, enter your percentage scores in the boxes for completed assessments. Grades on individual preparation check quizzes and assignments can be found on the [class Gradescope page](https://www.gradescope.com/courses/144614){:target="_blank"}. To project your future grade, also include percentages for future assessments.
+An overall score will be computed from the items and associated weights listed in the table below. To compute your current grade, enter your percentage scores in the boxes for completed assessments. Grades on individual module preparation quizzes and assignments can be found on the [class Gradescope page](https://www.gradescope.com/courses/144614){:target="_blank"}. To project your future grade, also include percentages for future assessments.
 
 <!-- if the assessment weights change then you must change the values in get_wghts() in the grader.js file -->
 
 <form name="GRADECALC">
 <table class="grader" width="90%">
 <tr><th width="15%"></th>
-<th width="28%"><a href="#preparation-check-quizzes">Prep Check<br>Quizzes</a></th>
-<th width="28%"><a href="#assignments">Assignments</a></th>
-<th width="29%"><a href="#quizzes">Final Exam</a></th>
+<th width="28%">Prep Check<br>Quizzes</th>
+<th width="28%">Assignments</th>
+<th width="29%">Final Exam</th>
 </tr>
 
 <tr><th>Weight</th><th>25%</th><th>50%</th><th>25%</th></tr>
