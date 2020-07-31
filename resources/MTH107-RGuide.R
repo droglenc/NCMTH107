@@ -71,8 +71,9 @@ ggplot(data=dfcar,mapping=aes(x=HMPG)) +
   theme_NCStats() +
   facet_wrap(vars(Domestic))
 
+windows(4,4)
 ## Bivariate EDA - Quantitative
-corr(~HMPG+Weight,data=dfcar)
+corr(~HMPG+Weight,data=dfcar,digits=3)
 ggplot(data=dfcar,mapping=aes(x=Weight,y=HMPG)) +
   geom_point(pch=21,color="black",fill="lightgray",size=2) +
   labs(x="Weight (lbs)",y="Highway MPG") +
@@ -104,15 +105,27 @@ levenesTest(HMPG~Manual,data=dfobj)
 t.test(HMPG~Manual,data=dfobj,alt="less",conf.level=0.99,var.equal=TRUE)
 
 ## Goodness-of-Fit test
-exp <- c(1,1,1,1,1,1)/6
 ( freq1 <- xtabs(~Type,data=dfcar) )
+( exp <- c(Compact=1,Large=1,Midsize=1,
+             Small=1,Sporty=1,Van=1) )
+
 ( gof <- chisq.test(freq1,p=exp,rescale.p=TRUE,correct=FALSE) )
 gof$expected
 gof$residuals
 gofCI(gof,digits=3)
+
+( freq1 <- c(Compact=16,Large=11,Midsize=22,
+             Small=21,Sporty=14,Van=9) )
+
 
 ## Chi-Square test
 ( freq2 <- xtabs(~Domestic+Manual,data=dfcar) )
 ( chi <- chisq.test(freq2,correct=FALSE) )
 chi$expected
 chi$residuals
+
+freqs <- c(6,26,39,22)
+freq2 <- matrix(freqs,nrow=2)
+rownames(freq2) <- c("No","Yes")
+colnames(freq2) <- c("No","Yes")
+freq2
