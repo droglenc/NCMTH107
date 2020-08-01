@@ -5,7 +5,7 @@ title: Resources
 
 ## Administrative
 <!---1. [Daily Preparation Check](https://forms.gle/PNu4B9iPcwF73otn9){:target="_blank"}--->
-1. [Piazza Class Discussion Site](https://piazza.com/northland/spring2020/mth107/home){:target="_blank"}
+1. [Piazza Class Discussion Site](https://piazza.com/northland/fall2020/mth107/home){:target="_blank"}
 1. [Gradescope Quiz and Assignments Page](https://www.gradescope.com/courses/144614){:target="_blank"}
 1. [Anonymous Message to Dr. Ogle](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}
 1. [Data Files](data_107)
