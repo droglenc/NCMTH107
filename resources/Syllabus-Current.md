@@ -128,9 +128,12 @@ An overall score will be computed from the items and associated weights listed i
 <th width="29%">Final Exam</th>
 </tr>
 
-<tr><th>Weight</th><th>15% <img src="../img/bar5.JPG" width="12" height="30"></th><th>60% <img src="../img/bar5.JPG" width="12" height="120"></th><th>25% <img src="../img/bar5.JPG" width="12" height="50"></th></tr>
+<tr><th>Weight</th>
+<th>15% <img src="../img/bar5.JPG" width="9" height="23"></th>
+<th>60% <img src="../img/bar5.JPG" width="9" height="90"></th>
+<th>25% <img src="../img/bar5.JPG" width="9" height="38"></th></tr>
 
-<tr><th>Percent</th>
+<tr style="vertical-align:bottom"><th>Percent</th>
 <td><input type="text" name="PREP_SC" size="3" tabindex="1" onchange="calc_grade(this.form)"></td>
 <td><input type="text" name="HW_SC" size="3" tabindex="2" onchange="calc_grade(this.form)"></td>
 <td><input type="text" name="FNL_SC" size="3" tabindex="3" onchange="calc_grade(this.form)"></td>
