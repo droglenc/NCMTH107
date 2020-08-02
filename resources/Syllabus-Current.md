@@ -128,7 +128,7 @@ An overall score will be computed from the items and associated weights listed i
 <th width="29%">Final Exam</th>
 </tr>
 
-<tr><th>Weight</th><th>15%<img src="../img/bar5.JPG" width="100%" height="300%"></th><th>60%</th><th>25%</th></tr>
+<tr><th>Weight</th><th>15%<img src="../img/bar5.JPG" width="6" height="15"></th><th>60%</th><th>25%</th></tr>
 
 <tr><th>Percent</th>
 <td><input type="text" name="PREP_SC" size="3" tabindex="1" onchange="calc_grade(this.form)"></td>
