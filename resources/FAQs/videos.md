@@ -2,7 +2,7 @@
 layout: page
 author: Derek H. Ogle
 title: MTH107 FAQ
-subtitle: Watching class preparation videos?
+subtitle: How do I watch the class preparation videos?
 ---
 
 ----

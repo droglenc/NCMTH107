@@ -11,7 +11,7 @@ title: Resources
 1. [Data Files](data_107)
 
 ## Learning Assistance
-1. [FAQ](FAQ/)
+1. [FAQ](FAQ)
 1. Glossary -- [Symbols](symbols), [Key Words](definitions)
 1. [R Function Guide](MTH107-RGuide.pdf){:target="_blank"}
 1. [R Method Explanation Videos](RVideos)

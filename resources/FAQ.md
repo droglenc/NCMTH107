@@ -3,14 +3,28 @@ layout: page
 title: MTH107 FAQ
 ---
 
+<div class="alert alert-success">
 The following are links to answers for frequently asked questions by Northland College students in the Statistical Concepts and Analysis course. Other questions may be answered in the module readings or [e-mailing Derek Ogle](mailto:dogle@northland.edu).
+</div>
 
-Related to: [R/RStudo](#rrstudio-related) / [Other](#other) / [Old](#old)
+Related to: [Course Administration](#course-administration) / [R/RStudo](#r-and-rstudio-related) / [Old](#old)
 
 ----
 
-## R/RStudio Related
+## Course Administration
+* [What's up with "module preparation quizzes"?]()
+* [How do I "turn-in" my "module assignments"?]()
+* [How do I ask questions on the Piazza discussion site?]()
+* [How do I watch the class preparation videos?](FAQs/videos)
+* [Can I get the "full" MS Office products for my own computer?](FAQs/getMSOffice)
+* [Is it possible to print to college printers from my own computer?](FAQs/printOwnComputer)
+* [How can I print class materials?](FAQs/PrintResources)
 
+&nbsp;
+
+----
+
+## R and RStudio Related
 ### Installing R and RStudio
 * [How do I install R?](FAQs/installR.html)
 * [How do I install RStudio?](FAQs/installRStudio.html)
@@ -53,18 +67,8 @@ Related to: [R/RStudo](#rrstudio-related) / [Other](#other) / [Old](#old)
 
 ----
 
-## Other
-* [Watching class preparation videos](FAQs/videos)
-* [Can I get the "full" MS Office products for my own computer?](FAQs/getMSOffice)
-* [Is it possible to print to college printers from my own computer?](FAQs/printOwnComputer)
-* [How can I print class materials?](FAQs/PrintResources)
-
-----
-
 ## Old
 * [How should my homework assignments be formatted?](../hwformat)
 * [How do I make Word single space my document?](FAQs/Word_SingleSpace)
 * [How do I easily make my tabular results from R line-up in MSWord?](FAQs/Word_RLineup)
 * [How do I make Greek symbols in MSWord?](FAQs/Word_GreekLetters)
-
-----
