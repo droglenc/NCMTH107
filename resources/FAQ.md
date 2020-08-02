@@ -4,7 +4,7 @@ title: MTH107 FAQ
 ---
 
 <div class="alert alert-success">
-The following are links to answers for frequently asked questions by Northland College students in the Statistical Concepts and Analysis course. Other questions may be answered in the module readings or [e-mailing Derek Ogle](mailto:dogle@northland.edu).
+The following are links to answers for frequently asked questions by Northland College students in the Statistical Concepts and Analysis course. Other questions may be answered in the module readings or <a href="mailto:dogle@northland.edu">e-mailing Derek Ogle]</a>.
 </div>
 
 Related to: [Course Administration](#course-administration) / [R/RStudo](#r-and-rstudio-related) / [Old](#old)
@@ -12,7 +12,7 @@ Related to: [Course Administration](#course-administration) / [R/RStudo](#r-and-
 ----
 
 ## Course Administration
-* [What's up with "module preparation quizzes"?]()
+* [What's up with "module preparation quizzes"?](FAQs/mod-prep-quiz)
 * [How do I "turn-in" my "module assignments"?]()
 * [How do I ask questions on the Piazza discussion site?]()
 * [How do I watch the class preparation videos?](FAQs/videos)
@@ -65,10 +65,12 @@ Related to: [Course Administration](#course-administration) / [R/RStudo](#r-and-
 * [What does the warning from `chisq.test()` mean?](FAQs/chisq-warning.html)
 * [How can I compile a more succinct report of my R script?](FAQs/compileScript)
 
+&nbsp;
+
 ----
 
 ## Old
-* [How should my homework assignments be formatted?](../hwformat)
 * [How do I make Word single space my document?](FAQs/Word_SingleSpace)
 * [How do I easily make my tabular results from R line-up in MSWord?](FAQs/Word_RLineup)
 * [How do I make Greek symbols in MSWord?](FAQs/Word_GreekLetters)
+* [How should my homework assignments be formatted?](hwformat)
