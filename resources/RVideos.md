@@ -14,7 +14,7 @@ The following is a list of videos that demonstrate how to perform various tasks 
         1. [Enter own data (in Excel)](https://vimeo.com/dogle/ncstats-preparedataexcel){:target="_blank"}
         1. [Enter own data (not in Excel)](https://vimeo.com/dogle/ncstats-preparedatatextfile){:target="_blank"}
     1. [Load data into RStudio](https://vimeo.com/439307575){:target="_blank"}
-    1. [Subsetting a data.frame]https://vimeo.com/439447290){:target="_blank"}
+    1. [Subsetting a data.frame](https://vimeo.com/439447290){:target="_blank"}
 * **Univariate EDA**
     1. [Categorical](https://vimeo.com/439831864){:target="_blank"} -- frequency tables, bar charts
     1. [Quantitative](https://vimeo.com/439763033){:target="_blank"} -- summary statistics and histograms
