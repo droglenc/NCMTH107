@@ -129,9 +129,9 @@ An overall score will be computed from the items and associated weights listed i
 </tr>
 
 <tr style="vertical-align:bottom"><th>Weight</th>
-<th>15%<br><img src="../img/bar5.JPG" width="9" height="23"></th>
-<th>60%<br><img src="../img/bar5.JPG" width="9" height="90"></th>
-<th>25%<br><img src="../img/bar5.JPG" width="9" height="38"></th></tr>
+<th>15%<br><img src="../img/bar5.JPG" width="15" height="23"></th>
+<th>60%<br><img src="../img/bar5.JPG" width="15" height="90"></th>
+<th>25%<br><img src="../img/bar5.JPG" width="15" height="38"></th></tr>
 
 <tr><th>Percent</th>
 <td><input type="text" name="PREP_SC" size="3" tabindex="1" onchange="calc_grade(this.form)"></td>
