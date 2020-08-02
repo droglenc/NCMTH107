@@ -27,6 +27,7 @@ Please review the course syllabus and webpage to find answers for the following 
 1. What percent of your overall grade are the "module preparation quizzes" worth?
 1. What percent of your overall grade are the "module assignments" worth?
 1. Approximately how many hours are you expected to work outside of class time on this course?
+1. Where can you find answers to Frequently Asked Questions?
 1. What is the password for accessing videos that Dr. Ogle produced and has made available on the website?
 1. Where can you find a glossary of symbols used in this course?
-1. Where can you find a gloassary of terms (i.e., key words) used in this course?
+1. Where can you find a glossary of terms (i.e., key words) used in this course?

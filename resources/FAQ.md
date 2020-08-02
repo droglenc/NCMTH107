@@ -13,7 +13,7 @@ Related to: [Course Administration](#course-administration) / [R/RStudo](#r-and-
 
 ## Course Administration
 * [What's up with "module preparation quizzes"?](FAQs/mod-prep-quiz)
-* [How do I "turn-in" my "module assignments"?]()
+* [How do I "turn-in" my "module assignments"?](FAQs/turnin-assignment)
 * [How do I ask questions on the Piazza discussion site?]()
 * [How do I watch the class preparation videos?](FAQs/videos)
 * [Can I get the "full" MS Office products for my own computer?](FAQs/getMSOffice)
