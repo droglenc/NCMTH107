@@ -121,14 +121,14 @@ An overall score will be computed from the items and associated weights listed i
 <!-- if the assessment weights change then you must change the values in get_wghts() in the grader.js file -->
 
 <form name="GRADECALC">
-<table class="grader" width="90%">
+<table class="grader" width="70%">
 <tr><th width="15%"></th>
 <th width="28%">Prep Check<br>Quizzes</th>
 <th width="28%">Assignments</th>
 <th width="29%">Final Exam</th>
 </tr>
 
-<tr><th>Weight</th><th>15%<img src="../img/bar5.JPG" width="6" height="15"></th><th>60%</th><th>25%</th></tr>
+<tr><th>Weight</th><th>15% <img src="../img/bar5.JPG" width="12" height="30"></th><th>60% <img src="../img/bar5.JPG" width="12" height="120"></th><th>25% <img src="../img/bar5.JPG" width="12" height="50"></th></tr>
 
 <tr><th>Percent</th>
 <td><input type="text" name="PREP_SC" size="3" tabindex="1" onchange="calc_grade(this.form)"></td>
