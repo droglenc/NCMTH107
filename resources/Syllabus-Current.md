@@ -69,7 +69,7 @@ This course fulfills that Quantitative Reasoning requirement in the [General Edu
 
 ### Instructor -- Derek Ogle
 <img class="img-right" src="../img/DerekOgle1.jpg">
-I am committed to your doing well in this course and see it as my responsibility to help you both in and out of the designated class period. I will be available **TBD**. You can also ask me and other students (anonymously to them) questions on the [Piazza Class Discussion Site](https://piazza.com/northland/fall2020/mth107/home){:target="_blank"}, which I will monitor regularly ([here are directions of how to post a question](https://support.piazza.com/support/solutions/articles/48000574396-students-post-a-question)). Finally, you may send me [anonymous feedback, suggestions, or questions](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}. Please see or contact me if you have questions regarding this course.
+I am committed to your doing well in this course and see it as my responsibility to help you both in and out of the designated class period. I will be available **TBD**. You can also ask me and other students (anonymously to them) questions on the [Piazza Class Discussion Site](https://piazza.com/northland/fall2020/mth107/home){:target="_blank"}, which I will monitor regularly ([here are directions of how to post a question](https://support.piazza.com/support/solutions/articles/48000574396-students-post-a-question)). Finally, you may send me [anonymous feedback, suggestions, or questions](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}. Please see or contact me if you have questions regarding this course. Note that I will answer to "Derek", "Doctor Ogle", "Professor Ogle", or "Doctor Professor Ogle, Sir" ... whichever you prefer. :grinning:
 
 ### Tutors
 
