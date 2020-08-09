@@ -1,11 +1,9 @@
 ---
 layout: page
-title: Scavenger Hunter
-subtitle: Pre-Course Syllabus and Webpage
+title: Scavenger Hunt
+subtitle: Getting Organized
 css: "/css/modules.css"
 ---
-
-----
 
 <div class="alert alert-warning">
 Please review the course syllabus and webpage to find answers for the following questions. Please contact <a href="mailto:dogle@northland.edu">Dr. Ogle</a> if you have questions.
