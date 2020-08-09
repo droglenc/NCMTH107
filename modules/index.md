@@ -4,7 +4,7 @@ title: Learning Modules
 ---
 
 <ul style="list-style-type: none;">
-  <li><b><a href="Setup.html">Pre-Course Setup</a></b></li>
+  <li><b><a href="GetOrganized.html">Getting Organized</a></b></li>
   <li><b>Foundations</b></li>
     <ol type="1" start="1">
       <li><a href="WhyStats.html">Why Statistics is Important</a></li>
