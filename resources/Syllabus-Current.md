@@ -114,7 +114,7 @@ The course is composed of [25 modules](../modules/index) of material which rough
 
 ## Grading
 <img class="img-right" src="../img/grading.jpg">
-An overall grade will be computed from the module preparation quizzes and assignments described  in the ["Course Workflow" section](#course-workflow) and a final exam. Module preparation quizzes and assignments not submitted by the due date time will not be accepted. However, your lowest three quiz and assignment grades will be dropped when computing your overall grade. The final exam is an opportunity for you to show a synthetic understanding of all material from throughout the course. The final exam will be focused on larger concepts, applications, and interpretations (rather than specific details) from throughout the semester. I will provide you with an explicit study guide approximately one week before the final exam.
+An overall grade will be computed from the module preparation quizzes and assignments described  in the ["Course Workflow" section](#course-workflow) and a final exam. Module preparation quizzes and assignments not submitted by the due date time will not be accepted. However, your lowest four quiz AND assignment grades will be dropped when computing your overall grade. The final exam is an opportunity for you to show a synthetic understanding of all material from throughout the course. The final exam will focus on larger concepts, applications, and interpretations (rather than specific details) from throughout the semester. I will provide you with an explicit study guide approximately one week before the final exam.
 
 An overall score will be computed from the items and associated weights listed in the table below. Grades on individual module preparation quizzes and assignments can be found on the [class Gradescope page](https://www.gradescope.com/courses/144614){:target="_blank"}. I will update your percentage grades for the Preparation Check Quizzes and Module Assignments on [mycourses.northland.edu](https://mycourses.northland.edu/ICS/Academics/MTH/MTH__107/2020_10-MTH__107-01/) at the end of each week, which will then show your grade as of that time. You can also compute your overall grade at any time by entering your percentage scores in the boxes below for completed assessments. To project your future grade, also include percentages for future assessments.
 
@@ -199,6 +199,18 @@ My intent is to create a classroom environment where learning can occur. One par
 * Please do not use disrespectful language when addressing others.
 
 Finally, note that the [College's Academic Integrity Statement & Policy](https://my.northland.edu/student-policies/academic-policies/#academic-integrity){:target="_blank"} will be followed in this course. Please make sure that you are familiar with its content.
+
+<br>
+
+### {border: 3px solid red} COVID-19 Statement
+<img class="img-right" src="../img/covid19.jpg" alt="Decoration">
+As you are aware, the circumstances surrounding covid-19 are ever-changing. Thus, it is possible that the college may make decisions that will affect how this course is administered. In addition, you may miss some class periods out of an abundance of caution if you are ill. **Communication will be key to stay abreast of the current situation and how it relates to our class.**
+
+If face-to-face classes are cancelled or you miss class for some reason, it should be fairly easy to continue or keep up wiht class material because of the "flipped" nature of the course as noted above. In other words, I have designed the course to "work" whether we are face-to-face, remote, or somewhere in between. If you should have to miss class for any reason, please e-mail me promptly to explain to me your situation. I will work with you to help you stay up with class material as best as possible.
+
+While we are meeting face-to-face, I will ask you to come to the period designated for your group (descirbed above), socially (i.e., physically) distance from your classmates, wear a mask, and otherwise follow the safety principles implemented by the college (e.g., rules for how to enter buildings and classrooms, wiping down desks, etc.). This will soon become second nature for all of us. Thank you for your attention to these details.
+
+As with everything else in this syllabus, please let me know if you have any questions.
 
 ----
 
