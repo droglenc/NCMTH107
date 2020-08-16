@@ -202,7 +202,7 @@ Finally, note that the [College's Academic Integrity Statement & Policy](https:/
 
 <br>
 
-### {border: 3px solid red} COVID-19 Statement
+###{border: 3px solid red} COVID-19 Statement
 <img class="img-right" src="../img/covid19.jpg" alt="Decoration">
 As you are aware, the circumstances surrounding covid-19 are ever-changing. Thus, it is possible that the college may make decisions that will affect how this course is administered. In addition, you may miss some class periods out of an abundance of caution if you are ill. **Communication will be key to stay abreast of the current situation and how it relates to our class.**
 
