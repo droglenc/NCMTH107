@@ -201,11 +201,11 @@ My intent is to create a classroom environment where learning can occur. One par
 
 Finally, note that the [College's Academic Integrity Statement & Policy](https://my.northland.edu/student-policies/academic-policies/#academic-integrity){:target="_blank"} will be followed in this course. Please make sure that you are familiar with its content.
 
-<br>
+---
 
-### COVID-19 Statement
+## COVID-19 Statement
 <img class="img-right" src="../img/covid19.jpg" alt="Decoration">
-As you are aware, the circumstances surrounding COVID-19 are ever-changing. Thus, it is possible that the college may make decisions that will affect how this course is administered. In addition, you may miss some class periods out of an abundance of caution if you are ill. I have designed the course to "work" whether we are face-to-face, remote, or somewhere in between. If you should have to miss class for any reason, please e-mail me promptly to explain to me your situation. I will work with you to help you stay up with class material as best as possible. If face-to-face classes are cancelled then I will commuhicate with you promptly about how we will continue with class. **Communication will be key to stay abreast of the current situation and how it relates to our class ... so please keep me informed of your circumstances and regularly monitor your Northland e-mail.**
+As you are aware, the circumstances surrounding COVID-19 are ever-changing. Thus, it is possible that the college may make decisions that will affect how this course is administered. In addition, you may miss some class periods out of an abundance of caution if you are ill. I have designed the course to "work" whether we are face-to-face, remote, or somewhere in between. If you should have to miss class for any reason, please e-mail me promptly to explain to me your situation. I will work with you to help you stay up with class material as best as possible. If face-to-face classes are canceled then I will communicate with you promptly about how we will continue with class. **Communication will be key to stay abreast of the current situation and how it relates to our class ... so please keep me informed of your circumstances and regularly monitor your Northland e-mail.**
 
 <img class="img-right" src="../img/mask.jpg" alt="Decoration">
 It is my hope that we can maintain a face-to-face classroom for the entire session. You can help with this by doing the following things related to our class.
@@ -216,6 +216,7 @@ It is my hope that we can maintain a face-to-face classroom for the entire sessi
 - Please enter the back (south) door and exit the front (north) to the classroom (the doors will be marked).
 - Maintain proper [physical/social distance](https://www.northland.edu/about/reopening-plan/#social-distancing){:target="_blank"} (six feet) from other students while in the classroom. In our computer classroom, please only sit at a desk that has both a chair and a computer.
 - Wipe down your desk, keyboard, and mouse with the provided wipes. **You are also welcome to bring and use your own computer.**
+- In general, but especially if you are using the college's computers, please refrain from touching your face (mouth and eyes) with your hands.
 
 ----
 
