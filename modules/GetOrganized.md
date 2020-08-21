@@ -19,6 +19,8 @@ Complete the following items to be prepared for the first day of class (*the las
 
 ## In-Class Activities
 
+The following items will be completed in class.
+
 * Discuss syllabus and class webpage
 * Orient to Piazza discussion site
 * Take first preparation quiz on Gradescrope (all answers from Webpage Scavenger Hunt)
