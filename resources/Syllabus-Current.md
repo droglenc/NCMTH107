@@ -192,8 +192,7 @@ My intent is to create a classroom environment where learning can occur. One par
 * Please attend the entire class period. Leaving class early defeats the purpose of the class period, does not take advantage of resources (i.e., the professor) that can significantly help your learning, and does not build statistical stamina. Please take care of your personal needs (e.g., using the restroom) before class so that you can stay focused for the entire class period.
 * Please turn your computer on immediately so that you can promptly begin the daily preparation check.
 * Please limit computer use to class work.
-* Please **do not use your own computer** during class unless you clear it with me at the beginning of the semester.
-* Please turn off and store out-of-sight cell phones and other electronic devices.
+* Please turn off and store out-of-sight cell phones and other electronic devices (except for your computer).
 * Please **do not listen to music** (or otherwise wear ear buds) during class.
 * Please do not have side discussions while I or others are speaking to the entire class.
 *	Please do not sleep in class -- this is rude and distracting to others.
