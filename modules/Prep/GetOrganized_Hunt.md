@@ -22,7 +22,6 @@ Please review the course syllabus and webpage to find answers for the following 
 1. How often will you be required to turn in a "module assignment"?
 1. When must your completed "module assignment" be submitted to the professor?
 1. What is the name of the software ("app") where you will submit your "module assignments"?
-1. What percent of your overall grade are the "module preparation quizzes" worth?
 1. What percent of your overall grade are the "module assignments" worth?
 1. Approximately how many hours are you expected to work outside of class time on this course?
 1. Can you bring your own computer to class? Do you have to have your own computer for class?

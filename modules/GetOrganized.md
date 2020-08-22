@@ -23,5 +23,5 @@ The following items will be completed in class.
 
 * Discuss syllabus and class webpage
 * Orient to Piazza discussion site
-* Take first preparation quiz on Gradescrope (all answers from Webpage Scavenger Hunt)
-* Submit [first module assignment](CE/GetOrganized)
+* Take first preparation quiz on Gradescope (all answers from Webpage Scavenger Hunt)
+* Submit [first module assignment](CE/GetOrganized_CE1)
