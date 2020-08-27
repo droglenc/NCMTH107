@@ -35,8 +35,8 @@ If you did not set-up the Teams app and are running Teams through the web interf
 
 * Select "Calls" from left-side menu.
 * Select "Speed Dial" near top left (likely already selected).
-* Find my "contact card" in your list of speed dial contacts. [Example below is for my friend Dr. Kevin Schanning ... don't contact him! &#x1F600;]
+* Find my "contact card" in your list of speed dial contacts. [Example below is for my friend Dr. Kevin Schanning ... don't contact him! &#x1F601;]
 
-![Compile Script Button](Figs/TeamsIcon.JPG)
+![Compile Script Button](Figs/TeamsContactCard.JPG)
 
 * Press the icon that looks like a little video camera to video-call me. Note that my availability will be shown in the "status" portion of my contact card.
