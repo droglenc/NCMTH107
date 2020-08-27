@@ -75,7 +75,8 @@ I will answer to "Derek", "Doctor Ogle", "Professor Ogle", or "Doctor Professor 
 I am committed to your doing well in this course and see it as my responsibility to help you both in and out of the designated class period. There are several good ways to get help from me.
 
 - Attend class.
-- See me during office hours ... TBD.
+- "See" me during virtual "drop-in" office hours on Monday through Thursday from 330-5pm. During this time I will open up a meeting on [our my.northland.edu page](https://mycourses.northland.edu/ICS/Academics/MTH/MTH__107/2020_10-MTH__107-01/Resources.jnz){:target="_blank"} ... click on "Online Meetings" on the left and select the "Office Hours" item listed for the particular day. I will also open up virtual "drop-in" office hours during some evenings, for which I will send you a message saying that I am available.
+- "See" me in a private 1-on-1 meeting. To do this contact me via e-mail with some times that you can meet. I will then e-mail you back with an invitation for a meeeting on [our my.northland.edu page](https://mycourses.northland.edu/ICS/Academics/MTH/MTH__107/2020_10-MTH__107-01/Resources.jnz){:target="_blank"}. We can also use MS Teams for this if you would rather ([directions here](FAQs/MicrosoftTeams){:target="_blank"}).
 - Ask me and other students (anonymously to them) questions on the [Piazza Class Discussion Site](https://piazza.com/northland/fall2020/mth107/home){:target="_blank"}, which I will monitor regularly ([here are directions of how to post a question](https://support.piazza.com/support/solutions/articles/48000574396-students-post-a-question)).
 - Finally, you may send me [anonymous feedback, suggestions, or questions](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}.
 
@@ -227,6 +228,7 @@ It is my hope that we can maintain a face-to-face classroom for the entire sessi
 - Maintain proper [physical/social distance](https://www.northland.edu/about/reopening-plan/#social-distancing){:target="_blank"} (six feet) from other students while in the classroom. In our computer classroom, please only sit at a desk that has both a chair and a computer.
 - Wipe down your desk, keyboard, and mouse with the provided wipes. **You are also welcome to bring and use your own computer.**
 - In general, but especially if you are using the college's computers, please refrain from touching your face (mouth and eyes) with your hands.
+- Communicate issues to me (see [ways to communicate to me above](#instructor--derek-ogle)) so that I am aware and can try to address the issues.
 
 ----
 
