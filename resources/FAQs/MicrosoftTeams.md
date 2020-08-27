@@ -10,7 +10,9 @@ subtitle: How Can I Call Derek with Microsoft Teams?
 * Open up your webmail from [my.northland.edu](https://my.northland.edu/){:target="_blank"} (link at the very bottom of the page or [use this](https://my.northland.edu/web-mail/){:target="_blank"}). Select "Go" after "Student email >".
 * In the ensuing page select the "Teams" icon.
 
+<p align="center">
 ![Compile Script Button](Figs/TeamsIcon.JPG)
+</p>
 
 * You will be asked to install the app. If you are using your own computer you may want to do this for simplicity. Note that you may need to set the security options on your computer to allow the app to access your computer's camera.
 * With the app or the web-based verson you will need to answer some simple configuration questions.
@@ -37,6 +39,8 @@ If you did not set-up the Teams app and are running Teams through the web interf
 * Select "Speed Dial" near top left (likely already selected).
 * Find my "contact card" in your list of speed dial contacts. [Example below is for my friend Dr. Kevin Schanning ... don't contact him! &#x1F601;]
 
+<p align="center">
 ![Compile Script Button](Figs/TeamsContactCard.JPG)
+</p>
 
 * Press the icon that looks like a little video camera to video-call me. Note that my availability will be shown in the "status" portion of my contact card.
