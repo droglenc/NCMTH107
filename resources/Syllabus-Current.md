@@ -216,19 +216,20 @@ Finally, note that the [College's Academic Integrity Statement & Policy](https:/
 <img class="img-right" src="../img/covid19.jpg" alt="Decoration">
 As you are aware, the circumstances surrounding COVID-19 are ever-changing. Thus, it is possible that the college may make decisions that will affect how this course is administered. In addition, you may miss some class periods out of an abundance of caution if you are ill. I have designed the course to "work" whether we are face-to-face, remote, or somewhere in between. If you should have to miss class for any reason, please e-mail me promptly to explain to me your situation. I will work with you to help you stay up with class material as best as possible. If face-to-face classes are canceled then I will communicate with you promptly about how we will continue with class. **Communication will be key to stay abreast of the current situation and how it relates to our class ... so please keep me informed of your circumstances and regularly monitor your Northland e-mail.**
 
-I will follow the college's official policy with respect to COVID-related absences.[^CovidAbsence]
-
 <img class="img-right" src="../img/mask.jpg" alt="Decoration">
 It is my hope that we can maintain a face-to-face classroom for the entire session. You can help with this by doing the following things related to our class.
 
 - Monitor your temperature and check for symptoms of COVID-19 as described under "DAILY SELF CHECKS" on [this page](https://www.northland.edu/about/reopening-plan/#beahviors-that-reduce-spread){:target="_blank"}. If your temperature is elevated or you have symptoms please don't come to class, notify the [Office of Health Services](https://www.northland.edu/dir/jennifer-newago/){:target="_blank"}, and notify me.
 - Thoroughly [wash your hands](https://www.northland.edu/about/reopening-plan/#hand-hygiene){:target="_blank"} prior to entering the classroom.
 - Please [properly wear your mask](https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus/proper-mask-wearing-coronavirus-prevention-infographic){:target="_blank"} at all times when entering the building and the classroom. This is in compliance with [Northland's face covering policy](https://my.northland.edu/student-policies/student-rights/#covid-face){:target="_blank"}. &#x1F637;
-- Please enter the back (south) door and exit the front (north) to the classroom (the doors will be marked).
+- Please enter the back (south) door and exit the front (north) door to the classroom (the doors will be marked).
 - Maintain proper [physical/social distance](https://www.northland.edu/about/reopening-plan/#social-distancing){:target="_blank"} (six feet) from other students while in the classroom. In our computer classroom, please only sit at a desk that has both a chair and a computer.
 - Wipe down your desk, keyboard, and mouse with the provided wipes. **You are also welcome to bring and use your own computer.**
 - In general, but especially if you are using the college's computers, please refrain from touching your face (mouth and eyes) with your hands.
 - Communicate issues to me (see [ways to communicate to me above](#instructor--derek-ogle)) so that I am aware and can try to address the issues.
+
+
+I will follow the college's official policy with respect to COVID-related absences.[^CovidAbsence] If you miss your designated class period then you may remotely attend the 10-1130 class period via [the appropriately dated "online meeting" on our mycourses.northland.edu page](https://mycourses.northland.edu/ICS/Academics/MTH/MTH__107/2020_10-MTH__107-01/Online_Meetings.jnz"){:target="_blank"}. Most class periods will begin with a brief introductory "lecture" that summarizes (with your help) the material that you prepared for the day's module. Then, as noted above, the rest of the class periods will be for working on the module assignment and asking me for help. A recording of the session will also be made and can be accessed from the same mycourses.northland.edu page.
 
 ----
 
