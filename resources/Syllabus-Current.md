@@ -84,18 +84,25 @@ Please see or contact me if you have questions regarding this course.
 
 ### Tutors
 
-TBD
-
-<!---
 <img class="img-right" src="../img/Markia_W20.jpg">
-Markia Smith will also be available to help you succeed in this course. Markia is a Math and Education major who took this class last year and will be tutoring for the first time this year. Markia is available on Thursdays from 6-8pm in CSE227 (the computer lab next to my office).
+Markia Smith will also be available to help you succeed in this course. Markia is a Math and Education major who took this class two years ago and will be tutoring stats for her second year.
 
 &nbsp;
 
 &nbsp;
 
 &nbsp;
---->
+
+<img class="img-right" src="../img/Markia_W20.jpg">
+Danielle Hewitt will also be available to help you succeed in this course. Danielle is a Pschology and Business major who took this class last year and will be tutoring stats for the first time this year. Danielle is also one of your co-presidents for NCSA.
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+DIRECTIONS FOR ACCESSING TUTORING WILL BE HERE EVENTUALLY
 
 ### Accommodations
 I want to create an inclusive and accessible learning environment for those of you that have a condition (e.g., attention, learning, vision, hearing, mental, physical, or other health-related concern) that may require special accommodations. *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course. If you have a condition that requires accommodations but *you have not yet established services* through OAR, then you should contact Jennifer Newago as soon as possible (Ponzio 230, x1387, or <a href="mailto:accommodations@northland.edu">accommodations@northland.edu</a>). It is the policy and practice of Northland College to create inclusive and accessible learning environments consistent with federal and state law. <a href="https://my.northland.edu/life/be-healthy/accommodations/">More information is available here.</a>
