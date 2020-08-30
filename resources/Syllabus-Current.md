@@ -95,7 +95,7 @@ Markia Smith will also be available to help you succeed in this course. Markia i
 
 &nbsp;
 
-<img class="img-right" src="../img/Markia_W20.jpg">
+<img class="img-right" src="../img/Hewitt_F20.jpg">
 Danielle Hewitt will also be available to help you succeed in this course. Danielle is a Pschology and Business major who took this class last year and will be tutoring stats for the first time this year. Danielle is also one of your co-presidents for NCSA.
 
 &nbsp;
