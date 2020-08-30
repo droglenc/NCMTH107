@@ -102,8 +102,6 @@ Danielle Hewitt will also be available to help you succeed in this course. Danie
 
 &nbsp;
 
-&nbsp;
-
 DIRECTIONS FOR ACCESSING TUTORING WILL BE HERE EVENTUALLY
 
 ### Accommodations
