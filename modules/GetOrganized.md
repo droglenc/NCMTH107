@@ -9,11 +9,11 @@ css: /css/modules.css
 
 Complete the following items to be prepared for the first day of class (*the last two items will not be needed until the second day of class*).
 
-* [Complete Webpage Scavenger Hunt](Prep/GetOrganized_Hunt)
-* [Initiate Piazza Discussion Site](Prep/GetOrganized_Piazza)
-* [Initiate Gradescope Grading Site](Prep/GetOrganized_Gradescope)
-* [Install R, RStudio, NCStats](../resources/index.html#software-installation-links)
-* [Setup and Brief Introduction to R/RStudio](bookR/RStart.html)
+* [Complete Webpage Scavenger Hunt](Prep/GetOrganized_Hunt){:target="_blank"}
+* [Initiate Piazza Discussion Site](Prep/GetOrganized_Piazza){:target="_blank"}
+* [Initiate Gradescope Grading Site](Prep/GetOrganized_Gradescope){:target="_blank"}
+* [Install R, RStudio, NCStats](../resources/index.html#software-installation-links){:target="_blank"}
+* [Setup and Brief Introduction to R/RStudio](bookR/RStart.html){:target="_blank"}
 
 ----
 
@@ -22,6 +22,6 @@ Complete the following items to be prepared for the first day of class (*the las
 The following items will be completed in class.
 
 * Discuss syllabus and class webpage
-* Orient to Piazza discussion site
-* Take first preparation quiz on Gradescope (all answers from Webpage Scavenger Hunt)
+* Orient to [Piazza discussion site](https://piazza.com/northland/fall2020/mth107){:target="_blank"}
+* Take first [preparation quiz on Gradescope}(https://www.gradescope.com/courses/144614/){:target="_blank"} (all answers from Webpage Scavenger Hunt)
 * Submit [first module assignment](CE/GetOrganized_CE1)
