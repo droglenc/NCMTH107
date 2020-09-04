@@ -46,9 +46,9 @@ Use the resources below to answer [these questions](Prep/UnivSum). [[*Problems w
   * [![YouTube](../img/youtube.png) Barplot](https://www.youtube.com/watch?v=PM39_HA1qSc){:target="_blank"} [3 mins]
   * [![Vimeo](../img/dhovid.png) Quick Rant about Pie and 3-D Charts](https://vimeo.com/user45324800/ueda-badplotrant){:target="_blank"} [3 mins] ...  [corresponding slides](PPT/UEDACat_PPT2.pptx)
 * **Alternative Resources**
-  * [Calculate the median:](https://www.youtube.com/watch?v=0SYsi38XucI){:target="_blank"} [2 mins]
-  * [Calculate the median:](https://www.youtube.com/watch?v=hTYTaOaQUcw){:target="_blank"} [5 mins]
-  * [Calculate the median:](https://www.youtube.com/watch?v=9a8M_KfclBE){:target="_blank"} [3 mins]
+  * [Calculate the median](https://www.youtube.com/watch?v=0SYsi38XucI){:target="_blank"} [2 mins]
+  * [Calculate the median](https://www.youtube.com/watch?v=hTYTaOaQUcw){:target="_blank"} [5 mins]
+  * [Calculate the median](https://www.youtube.com/watch?v=9a8M_KfclBE){:target="_blank"} [3 mins]
   * [Calculate the IQR](https://www.youtube.com/watch?v=R6VDj7pEG30){:target="_blank"} [3 mins]
   * [![YouTube](../img/youtube.png) Calculate Standard Deviation](https://www.youtube.com/watch?v=atS4wX8I9H0){:target="_blank"} [13 mins]
 
@@ -57,7 +57,7 @@ Use the resources below to answer [these questions](Prep/UnivSum). [[*Problems w
 ## Practice
 
 * [Assignment](CE/UnivSum_CE1) ... [ANSWER KEY](CE/KEY_UnivSum_CE)
-* [Additional Exercises*](CE/UnivSum_CE2))
+* [Additional Exercises](CE/UnivSum_CE2)
 
 <!---
 &nbsp;
