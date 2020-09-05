@@ -7,9 +7,9 @@ css: "/css/modules.css"
 
 ## Normal Distribution Characteristics
 
-1. Use `snorm()` from `NCStats` to answer the following questions.  [*Hint: Click the gear icon, uncheck 'Show PDF & CDF', and then use the slider bars to answer the two questions below.*]
-    1. Describe what happens to the normal distribution if &mu; is increased?
-    1. Describe what happens to the normal distribution if &sigma; is increased?
+1. Use `snorm()` from `NCStats` to answer the following questions.  [*Hint: Click the gear icon and then use the slider bars to answer the two questions below.*]
+    1. What happens to the normal distribution if &mu; is increased?
+    1. What happens to the normal distribution if &sigma; is increased?
 
 1. For each situation below, (i) identify &mu;, (ii) identify &sigma;, and (iii) draw the normal distribution with an approximately accurate scale on the x-axis.
     1. X~N(75,10)
@@ -41,7 +41,7 @@ Suppose that the distribution of number of [Carpenter Ants (*Camponotus* spp.)](
 1. What is &mu;?
 1. What is &sigma;?
 
-Additionally, for each question below (a) identify the type of question (e.g., "forward-left", "reverse-between") and then (b) answer the question (*show the R code that you used*).
+Additionally, for each question below (a) identify the type of question (e.g., "forward-left", "reverse-between") and then (b) answer the question (*include the R code that you used*).
 
 6. What percentage of nests have more than 1900 ants?
 1. What is the number of ants such that 15% of nests have more ants?
