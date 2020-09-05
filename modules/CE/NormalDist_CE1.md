@@ -43,6 +43,7 @@ Suppose that the distribution of number of [Carpenter Ants (*Camponotus* spp.)](
 
 Additionally, for each question below (a) identify the type of question (e.g., "forward-left", "reverse-between") and then (b) answer the question (*include the R code that you used*).
 
+{:start="6"}
 6. What percentage of nests have more than 1900 ants?
 1. What is the number of ants such that 15% of nests have more ants?
 1. What is the number of ants such that 33% of nests have fewer ants?
