@@ -1,0 +1,133 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "R Chi-Square Class Example"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="recycling-in-two-communities-ii" class="section level2">
+<h2>Recycling in Two Communities II</h2>
+<p>The full 11-steps for this example are in these <a href="KEY_ChiSquare_CExmpl">annotations for the chi-square test class example</a>. However, the calculations required for Steps 5, 6, 7, 8, and 11 may be computed in R if the raw data are available as they were here.</p>
+<p>The data are loaded below. Make note of how the data are stacked as in the two-sample t-test example. Also note that the variable of interest here is <code>method2</code> (<code>method1</code> provided a more detailed method).</p>
+<pre class="r"><code>&gt; dfobj &lt;- read.csv(&quot;https://raw.githubusercontent.com/droglenc/NCData/master/PlasticRecycling.csv&quot;)
+&gt; str(dfobj)</code></pre>
+<pre><code>&#39;data.frame&#39;:   179 obs. of  3 variables:
+ $ city   : chr  &quot;Des Moines&quot; &quot;Des Moines&quot; &quot;Des Moines&quot; &quot;Des Moines&quot; ...
+ $ method : chr  &quot;curbside&quot; &quot;curbside&quot; &quot;curbside&quot; &quot;curbside&quot; ...
+ $ method2: chr  &quot;recycle&quot; &quot;recycle&quot; &quot;recycle&quot; &quot;recycle&quot; ...</code></pre>
+<pre class="r"><code>&gt; headtail(dfobj)</code></pre>
+<pre><code>           city   method method2
+1    Des Moines curbside recycle
+2    Des Moines curbside recycle
+3    Des Moines curbside recycle
+177 Minneapolis    reuse   reuse
+178 Minneapolis    reuse   reuse
+179 Minneapolis    reuse   reuse</code></pre>
+<p>The primary R function for this analysis is <code>chisq.test()</code>. However, it requires an observed frequency table as its first argument, which must be calculated first with <code>xtabs()</code> as you did in the Bivariate EDA - Categorical module (remember that the row variable comes first). The <code>chisq.test()</code> also requires <code>correct=FALSE</code> so that an unneeded correction factor is not applied.</p>
+<pre class="r"><code>&gt; ( obs &lt;- xtabs(~city+method2,data=dfobj) )</code></pre>
+<pre><code>             method2
+city          recycle reuse throw-away
+  Des Moines       26    19         37
+  Minneapolis      81     6         10</code></pre>
+<pre class="r"><code>&gt; ( chi1 &lt;- chisq.test(obs,correct=FALSE) )</code></pre>
+<pre><code>Pearson&#39;s Chi-squared test with obs 
+X-squared = 49.6332, df = 2, p-value = 1.668e-11</code></pre>
+<p>From this output one can see</p>
+<ul>
+<li>The observed table needed for Step 6.</li>
+<li>The chi-square test statistic (=49.6) and df (=2) for Step 7.</li>
+<li>The p-value (=0.00000000002) for Step 8.</li>
+</ul>
+<p>The expected table for Step 5 can be shown by appending <code>$expected</code> to the object saved from <code>chisq.test()</code>.</p>
+<pre class="r"><code>&gt; chi1$expected</code></pre>
+<pre><code>             method2
+city           recycle    reuse throw-away
+  Des Moines  49.01676 11.45251   21.53073
+  Minneapolis 57.98324 13.54749   25.46927</code></pre>
+<p>And, while it is not needed, you can see the parts that went into the chi-square test statistic calculation with</p>
+<pre class="r"><code>&gt; chi1$residuals^2</code></pre>
+<pre><code>             method2
+city            recycle     reuse throw-away
+  Des Moines  10.807961  4.973977  11.114276
+  Minneapolis  9.136627  4.204806   9.395573</code></pre>
+<p>Note that you will complete all 11 steps when you have the raw data, but you should use <code>chisq.test()</code> as shown here to perform all of the calculations for you.</p>
+<p> </p>
+<hr />
+</div>
+<div id="green-parakeet-crosses-ii" class="section level2">
+<h2>Green Parakeet Crosses II</h2>
+<p>The full 11-steps for this example are in these <a href="KEY_GOFTest_CExmpl">annotations for the goodness-of-fit test class example</a>. However, the calculations required for Steps 5, 6, 7, 8, and 11 may be computed in R as described below.</p>
+<p>The expected values in each cell must first be entered into a vector. These expected values can be the actual expected counts, expected percentages, or values that are in the proper ratio for the expected values. In this example, it was expected that vor every 9 green parakeets there would be three each of blue and yellow parakeets and 1 white parakeet. These ratios are entered into the <code>exp</code> vector below.</p>
+<pre class="r"><code>&gt; exp &lt;- c(9,3,3,1)</code></pre>
+<p>The observed values for the sample should also be entered into a vector. For results that are easier to read, the values in this vector can be named according to the groups in the data, as illustrated below. This is also the observed table for Step 6.</p>
+<pre class="r"><code>&gt; obs &lt;- c(green=95,blue=27,yellow=22,white=6)</code></pre>
+<p>The goodness-of-fit test is then “run” with <code>chisq.test()</code> using the vector of observed values as the first argument and the expected values in <code>p=</code>. In addition, use <code>rescale=TRUE</code> so that the expected percentages or ratios will be properly converted to expected values and <code>correct=FALSE</code> to not use a minor correction factor.</p>
+<pre class="r"><code>&gt; ( gof1 &lt;- chisq.test(obs,p=exp,rescale=TRUE,correct=FALSE) )</code></pre>
+<pre><code>Chi-squared test for given probabilities with obs 
+X-squared = 3.9319, df = 3, p-value = 0.2689</code></pre>
+<p>From this output one can see</p>
+<ul>
+<li>The chi-square test statistic (=3.9) and df (=3) for Step 7.</li>
+<li>The p-value (=0.269) for Step 8.</li>
+</ul>
+<p>The expected table for Step 5 can be shown by appending <code>$expected</code> to the object saved from <code>chisq.test()</code>.</p>
+<pre class="r"><code>&gt; gof1$expected</code></pre>
+<pre><code> green   blue yellow  white 
+84.375 28.125 28.125  9.375 </code></pre>
+<p>And, while it is not needed, you can see the parts that went into the chi-square test statistic calculation with</p>
+<pre class="r"><code>&gt; gof1$residuals^2</code></pre>
+<pre><code>   green     blue   yellow    white 
+1.337963 0.045000 1.333889 1.215000 </code></pre>
+<p>Note that you will complete all 11 steps when you have the raw data, but you should use <code>chisq.test()</code> as shown here to perform all of the calculations for you.</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
