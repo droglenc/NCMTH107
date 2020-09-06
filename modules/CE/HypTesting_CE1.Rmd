@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Exercises
+title: Assignment
 subtitle: Hypothesis Testing
 author: Derek H. Ogle
 css: "/css/modules.css"
@@ -55,7 +55,7 @@ A reminder to use these steps will <strong>NOT</strong> be provided on future qu
 <br>
 
 ## P-Value Calculations and Decisions I
-Compute the p-value (see the steps suggested above) For each situation below.
+Compute the p-value (see the steps suggested above) and make a decision about H<sub>0</sub> for each situation below.
 
 1. H<sub>A</sub>: &mu;&#8800;14, &sigma;=6, n=25, x&#772;=11.2, &alpha;=0.05.
 1. H<sub>A</sub>: &mu;>75, &sigma;=12, n=50, x&#772;=79.5, &alpha;=0.10.
@@ -75,7 +75,6 @@ Summarize(~bodytemp,data=d,digits=2)
 ```
 
 1. construct statistical hypotheses, 
-1. compute the sample mean (use `Summarize()`), 
 1. compute the p-value assuming that &sigma;=0.41 (use `distrib()`), 
 1. make a decision about the hypotheses using &alpha;=0.05, and 
 1. summarize your findings in terms of body temperatures.
