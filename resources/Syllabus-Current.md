@@ -85,7 +85,7 @@ Please see or contact me if you have questions regarding this course.
 ### Tutors
 
 <img class="img-right" src="../img/Markia_W20.jpg">
-Markia Smith will also be available to help you succeed in this course. Markia is a Math and Education major who took this class two years ago and will be tutoring stats for her second year. Markia's tutoring hours are TBD. **You must register to meet with Markia at least one hour in advance of these times** ([see here for how to register and join the tutoring session](How to make an appointment with a tutor.pdf)).
+Markia Smith will also be available to help you succeed in this course. Markia is a Math and Education major who took this class two years ago and will be tutoring stats for her second year. Markia's tutoring hours are Monday and Wednesday from 4 to 6pm. **You must register to meet with Markia at least one hour in advance of these times** ([see here for how to register and join the tutoring session](How to make an appointment with a tutor.pdf)).
 
 &nbsp;
 
@@ -94,13 +94,8 @@ Markia Smith will also be available to help you succeed in this course. Markia i
 &nbsp;
 
 <img class="img-right" src="../img/Hewitt_F20.jpg">
-Danielle Hewitt will also be available to help you succeed in this course. Danielle is a Pschology and Business major who took this class last year and will be tutoring stats for the first time this year. Danielle is also one of your co-presidents for NCSA. Danielle's tutoring hours are TBD. **You must register to meet with Markia at least one hour in advance of these times** ([see here for how to register and join the tutoring session](How to make an appointment with a tutor.pdf))
+Danielle Hewitt will also be available to help you succeed in this course. Danielle is a Pschology and Business major who took this class last year and will be tutoring stats for the first time this year. Danielle is also one of your co-presidents for NCSA. Danielle's tutoring hours are Tuesday and Thursday from 6-8 pm. **You must register to meet with Markia at least one hour in advance of these times** ([see here for how to register and join the tutoring session](How to make an appointment with a tutor.pdf))
 
-&nbsp;
-
-
-
-DIRECTIONS FOR ACCESSING TUTORING WILL BE HERE EVENTUALLY
 
 ### Accommodations
 I want to create an inclusive and accessible learning environment for those of you that have a condition (e.g., attention, learning, vision, hearing, mental, physical, or other health-related concern) that may require special accommodations. *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course. If you have a condition that requires accommodations but *you have not yet established services* through OAR, then you should contact Jennifer Newago as soon as possible (Ponzio 230, x1387, or <a href="mailto:accommodations@northland.edu">accommodations@northland.edu</a>). It is the policy and practice of Northland College to create inclusive and accessible learning environments consistent with federal and state law. <a href="https://my.northland.edu/life/be-healthy/accommodations/">More information is available here.</a>
