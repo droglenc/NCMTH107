@@ -5,6 +5,21 @@ subtitle: Normal Distributions
 css: "/css/modules.css"
 ---
 
+## Carpenter Ants II
+<img src="zimgs/carpenterant.jpg" alt="Carpenter Ant" class="img-right">
+Suppose that the distribution of number of [Carpenter Ants (*Camponotus* spp.)](https://en.wikipedia.org/wiki/Carpenter_ant) in a nest is known to be N(1400,300). In [the previous assignment](NormalDist_CE1) you identified the type of question (e.g., "forward-left", "reverse-between") for each question below. In this assignment you should answer each the question (*provide a numeric answer and include the R code that you used*).
+
+{:start="6"}
+6. What percentage of nests have more than 1900 ants?
+1. What is the number of ants such that 15% of nests have more ants?
+1. What is the number of ants such that 33% of nests have fewer ants?
+1. What percentage of nests have between 700 and 1900 ants?
+1. What percentage of nests have fewer than 300 ants?
+1. What is the number of ants such that 5% of nests have more ants?
+1. The most common 80% of nests have between what two numbers of ants?
+
+<br>
+
 ## SAT Scores
 <img src="zimgs/sat-scores.jpg" alt="SAT Scores" class="img-right">
 

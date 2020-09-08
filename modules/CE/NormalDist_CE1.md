@@ -31,7 +31,7 @@ Answer each question below, **without using R**, assuming that X~N(75,10). Show 
 
 <br>
 
-## Carpenter Ants
+## Carpenter Ants I
 <img src="zimgs/carpenterant.jpg" alt="Carpenter Ant" class="img-right">
 Suppose that the distribution of number of [Carpenter Ants (*Camponotus* spp.)](https://en.wikipedia.org/wiki/Carpenter_ant) in a nest is known to be N(1400,300).  From this, answer the following questions.
 
@@ -41,7 +41,7 @@ Suppose that the distribution of number of [Carpenter Ants (*Camponotus* spp.)](
 1. What is &mu;?
 1. What is &sigma;?
 
-Additionally, for each question below (a) identify the type of question (e.g., "forward-left", "reverse-between") and then (b) answer the question (*include the R code that you used*).
+Additionally, identify the type of question (e.g., "forward-left", "reverse-between") for each question below (you will answer the question in [the next assignment](NormalDist_CE1)).
 
 {:start="6"}
 6. What percentage of nests have more than 1900 ants?
