@@ -41,7 +41,7 @@ Suppose that the distribution of number of [Carpenter Ants (*Camponotus* spp.)](
 1. What is &mu;?
 1. What is &sigma;?
 
-Additionally, identify the type of question (e.g., "forward-left", "reverse-between") for each question below (you will answer the question in [the next assignment](NormalDist_CE1)).
+Additionally, identify the type of question (e.g., "forward-left", "reverse-between") for each question below (you will answer the question in [the next assignment](NormalDist_CE2)).
 
 {:start="6"}
 6. What percentage of nests have more than 1900 ants?
