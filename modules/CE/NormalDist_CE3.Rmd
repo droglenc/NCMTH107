@@ -19,6 +19,7 @@ modHTML("NormalDist_CE3")
 
 ```{r echo=FALSE, results='hide', message=FALSE}
 source("../../rhelpers/knitr_setup.R")
+library(ggplot2)
 ```
 
 &nbsp;
@@ -29,6 +30,7 @@ source("../../rhelpers/knitr_setup.R")
     1. [Normal Distribution Characteristics IV](#normal-distribution-characteristics-iv)
     1. [Hand Calculations II](#hand-calculations-ii)
 1. **Appplied Questions**
+    1. [iPhone Battery Lifespan](#iphone-battery-lifespan)
     1. [Pollen Counts](#pollen-counts)
     1. [Driving Speed](#driving-speed)
     1. [Turkey Spur Length](#turkey-spur-length)
@@ -106,6 +108,19 @@ Answer each question below, **without using R**, assuming that Z~N(0,1). Show yo
 &nbsp;
 
 # Application Questions
+## iPhone Battery Lifespan 
+<img src="zimgs/iphone.jpg" alt="iPhone" class="img-right">
+
+Apple suggests that the battery lifespan (i.e., how many charge-cycles a battery will last -- note that every time a phone is plugged in it is considered a "charge-cycle," no matter how long it is plugged in) has a mean of 400 charge-cycles with a standard deviaion of 20 charge-cycles. A research group that tested battery lifespans, rates an individual battery as "exceptional" if it lasts for more than 450 charge-cycles and "unacceptably poor" if it lasts for less than 375 charge-cycles. Answer the questions below assuming that the distribution of charge-cycles is normally distributed (*show the R code that you used*).
+
+1. What type of variable is "number of charge-cycles"?
+1. What proportion of iPhone batteries would be rated as "exceptional"?
+1. What percentage of iPhone batteries would be rated as better than "unacceptably poor," but not "exceptional"?
+1. Suppose that the research company wants to change the definition of "exceptional" to include only the top 10% of batteries. What number of charge-cycles would define this new "exceptional"?
+1. Similarly, suppose that the research company wants to change the definition of "unacceptably poor" to the include the worst 25% of batteries. What number of charge-cycles would define this new "unacceptably poor"?
+
+---
+
 ## Pollen Counts
 <img src="zimgs/pollen.jpg" alt="Pollen" class="img-right">
 Suppose that it is known that the distribution of the total weed pollen count (spores per cubic meter of air) for LaCrosse, WI on a day in early September is approximately normal with a mean of 40 and a standard deviation of 8.  [*FYI, pollen count information is available from [this site](http://www.aaaai.org/nab/index.cfm?p=allergenreport&stationid=28).*]
