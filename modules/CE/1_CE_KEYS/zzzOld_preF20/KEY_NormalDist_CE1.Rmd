@@ -28,8 +28,9 @@ source("../../../rhelpers/knitr_setup.R")
     1. The whole distributions shifts to the right.
     1. The distribution becomes wider (more dispersed).
 1. Below
-    1. $\mu$=75, $\sigma$=10, hand-drawn distribution.
-    1. $\mu$=5500, $\sigma$=600, hand-drawn distribution.
+    1. $\mu$=75, $\sigma$=10
+    1. $\mu$=5500, $\sigma$=600
+    1. $\mu$=0, $\sigma$=1
 
 ----
 
@@ -64,10 +65,26 @@ For X~N(75,10)
 1. $\sigma$=300
 
 #### Bottom questions
-1. forward, right-of.
-1. reverse, right-of.
-1. reverse, left-of.
-1. forward, between.
-1. forward, left-of.
-1. reverse, right-of.
-1. reverse, between.
+1. (a) forward, right-of; (b) `r formatC(distrib(1900,mean=1400,sd=300,lower.tail=FALSE)*100,format="f",digits=2)`%.
+1. (a) reverse, right-of; (b) `r formatC(distrib(0.15,mean=1400,sd=300,type="q",lower.tail=FALSE),format="f",digits=0)` ants.
+1. (a) reverse, left-of; (b) `r formatC(distrib(0.33,mean=1400,sd=300,type="q"),format="f",digits=0)` ants.
+1. (a) forward, between; (b) `r formatC((distrib(1900,mean=1400,sd=300)-distrib(700,mean=1400,sd=300))*100,format="f",digits=2)`%.
+1. (a) forward, left-of; (b) `r formatC(distrib(300,mean=1400,sd=300)*100,format="f",digits=3)`%.
+1. (a) reverse, right-of; (b) `r formatC(distrib(0.05,mean=1400,sd=300,type="q",lower.tail=FALSE),format="f",digits=0)` ants.
+1. (a) reverse, between; (b) Between `r formatC(distrib(0.10,mean=1400,sd=300,type="q"),format="f",digits=0)` and  `r formatC(distrib(0.10,mean=1400,sd=300,type="q",lower.tail=FALSE),format="f",digits=0)` ants.
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+distrib(1900,mean=1400,sd=300,lower.tail=FALSE)*100
+distrib(0.15,mean=1400,sd=300,type="q",lower.tail=FALSE)
+distrib(0.33,mean=1400,sd=300,type="q")
+ab <- distrib(1900,mean=1400,sd=300)
+a <- distrib(700,mean=1400,sd=300)
+(ab-a)*100
+distrib(300,mean=1400,sd=300)*100
+distrib(0.05,mean=1400,sd=300,type="q",lower.tail=FALSE)
+distrib(0.10,mean=1400,sd=300,type="q")
+distrib(0.10,mean=1400,sd=300,type="q",lower.tail=FALSE)
+```
+
+----

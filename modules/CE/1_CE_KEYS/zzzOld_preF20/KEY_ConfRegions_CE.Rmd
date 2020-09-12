@@ -1,0 +1,332 @@
+---
+title: "Answer Key"
+subtitle: "Confidence Regions CE"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3.5
+    fig_width: 3.5
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_ConfRegions_CE")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+library(captioner)
+figs <- captioner(prefix="Figure")
+figs(name="Z1","Normal distribution representing the Z* the first confidence region example.")
+figs(name="Z2","Normal distribution representing the Z* the second confidence region example.")
+figs(name="Z3","Normal distribution representing the Z* the third confidence region example.")
+figs(name="Z4","Normal distribution representing the Z* the fourth confidence region example.")
+figs(name="Z5","Normal distribution representing the Z* the fifth confidence region example.")
+figs(name="Z6","Normal distribution representing the Z* the sixth confidence region example.")
+figs(name="Z7","Normal distribution representing the Z* the seventh confidence region example.")
+
+```
+
+----
+
+## Confidence Region Calculations
+
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>The level of confidence comes from 1-&alpha;</li>
+<li>The type of confidence region comes from the H<sub>A</sub>: a "less than" H<sub>A</sub> is an upper bound, a "greater than" H<sub>A</sub> is a lower bound, and a "not equals" H<sub>A</sub> is an interval.</li>
+<li>The Z<sup>*</sup> uses the level of confidence in `distrib()` for the bounds but the "tail area" must be used for the intervals. Look closely at the R Appendices, especially for the interval questions.</li>
+</ul>
+</div>
+
+
+<ol>
+<li>See below.</li>
+<ol type="a">
+<li>C=0.90</li>
+<li>Lower bound</li>
+<li>Z<sup>*</sup>=`r formatC(distrib(0.9,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z1",display="cite")`).</li>
+```{r Z1, echo=FALSE}
+zstar <- distrib(0.9,type="q",lower.tail=FALSE)
+```
+
+`r figs("Z1")`
+
+<li>`r formatC(79.5+zstar*12/sqrt(50),format="f",digits=1)`.</li>
+<li>I am 90% confident that the true population mean is greater than `r formatC(79.5+zstar*12/sqrt(50),format="f",digits=1)`.</li>
+</ol>
+</ol>
+<br>
+
+<ol start=2>
+<li>See below.</li>
+<ol type="a">
+<li>C=0.95</li>
+<li>Interval</li>
+<li>Z<sup>*</sup>= &plusmn; `r formatC(distrib(0.025,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z2",display="cite")`).</li>
+```{r Z2, echo=FALSE}
+zstar <- distrib(0.025,type="q",lower.tail=FALSE)
+```
+
+`r figs("Z2")`
+
+<li>`r formatC(11.2-zstar*6/sqrt(25),format="f",digits=1)`-`r formatC(11.2+zstar*6/sqrt(25),format="f",digits=1)`.</li>
+<li>I am 95% confident that the true population mean is between `r formatC(11.2-zstar*6/sqrt(25),format="f",digits=1)` and `r formatC(11.2+zstar*6/sqrt(25),format="f",digits=1)`.</li>
+</ol>
+</ol>
+<br>
+
+<ol start=3>
+<li>See below.</li>
+<ol type="a">
+<li>C=0.99</li>
+<li>Lower bound</li>
+<li>Z<sup>*</sup>=`r formatC(distrib(0.99,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z3",display="cite")`).</li>
+```{r Z3, echo=FALSE}
+zstar <- distrib(0.99,type="q",lower.tail=FALSE)
+```
+
+`r figs("Z3")`
+
+<li>`r formatC(918+zstar*90/sqrt(80),format="f",digits=1)`.</li>
+<li>I am 99% confident that the true population mean is greater than `r formatC(918+zstar*90/sqrt(80),format="f",digits=1)`.</li>
+</ol>
+</ol>
+<br>
+
+<ol start=4>
+<li>See below.</li>
+<ol type="a">
+<li>C=0.90</li>
+<li>Upper bound</li>
+<li>Z<sup>*</sup>=`r formatC(distrib(0.9,type="q"),format="f",digits=3)` (`r figs("Z4",display="cite")`).</li>
+```{r Z4, echo=FALSE}
+zstar <- distrib(0.9,type="q")
+```
+
+`r figs("Z4")`
+
+<li>`r formatC(13700+zstar*8000/sqrt(50),format="f",digits=1)`.</li>
+<li>I am 90% confident that the true population mean is less than `r formatC(13700+zstar*8000/sqrt(50),format="f",digits=1)`.</li>
+</ol>
+</ol>
+
+R Appendix
+```{r eval=FALSE,prompt=FALSE}
+<<Z1>>
+<<Z2>>
+<<Z3>>
+<<Z4>>
+```
+
+----
+
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>In the second part of each question below you MUST not say &mu; -- rather you should say what &mu; represents (e.g., "true population mean body temperature" in the first question).</li>
+</ul>
+</div>
+
+## Body Temperatures
+<ol>
+```{r echo=FALSE, fig.show='hide'}
+d <- read.csv("https://github.com/droglenc/NCData/raw/master/NormTemp.csv")
+cis <- mean(d$bodytemp)+c(-1,1)*distrib(0.025,type="q",lower.tail=FALSE)*0.41/sqrt(nrow(d))
+```
+<li>`r formatC(cis[1],format="f",digits=1)`-`r formatC(cis[2],format="f",digits=1)`.</li>
+<li>I am 95% confident that the true population mean body temperature is between `r formatC(cis[1],format="f",digits=1)` and `r formatC(cis[2],format="f",digits=1)`<sup>o</sup>C.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+d <- read.csv("normtemp.csv")
+Summarize(d$bodytemp,digits=3)
+( zstar <- distrib(0.025,type="q",lower.tail=FALSE) )
+```
+
+----
+
+## Beetle Usage
+```{r echo=FALSE, fig.show='hide'}
+d <- read.csv("https://github.com/droglenc/NCData/raw/master/Beetles.csv")
+d <- filterD(d,species=="Halticus.oleracea")
+ci <- mean(d$thorax)+distrib(0.95,type="q",lower.tail=FALSE)*14/sqrt(nrow(d))
+```
+
+1. `r formatC(ci,format="f",digits=1)`
+1. I am 95% confident that the true population mean thorax length is greater than `r formatC(ci,format="f",digits=1)` mm (i.e., a lower bound).
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+library(NCStats)
+distrib(0.95,type="q",lower.tail=FALSE)
+```
+
+----
+
+## Internet Usage
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>These questions are "sample size" and not "confidence region" calculations.</li>
+<li>Note that all sample size calculations should be rounded <strong>UP</strong> to a whole number. For example, in the third question below, note how 742.2 was rounded up to 743.</li>
+</ul>
+</div>
+
+<ol>
+```{r ncalc1, echo=FALSE, results='hide', fig.show='hide'}
+sigma <- 6.95
+me <- 1
+(zstar <- distrib(0.025,type="q",lower.tail=FALSE))
+(zstar*sigma/me)^2
+```
+<li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` household to achieve the desired level of confidence and margin-of-error.</li>
+
+```{r ncalc2, echo=FALSE, results='hide', fig.show='hide'}
+(zstar <- distrib(0.05,type="q",lower.tail=FALSE))
+(zstar*sigma/me)^2
+```
+<li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` household to achieve the desired level of confidence and margin-of-error.</li>
+
+```{r ncalc3, echo=FALSE, results='hide', fig.show='hide'}
+me <- 0.5
+(zstar <- distrib(0.025,type="q",lower.tail=FALSE))
+(zstar*sigma/me)^2
+```
+
+<li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` household to achieve the desired level of confidence and margin-of-error.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE,prompt=FALSE}
+<<ncalc1>>
+<<ncalc2>>
+<<ncalc3>>
+```
+
+----
+
+## Confidence Region Calculations II
+
+<ol>
+<li>See below.</li>
+<ol type="a">
+<li>C=0.99</li>
+<li>Interval</li>
+<li>Z<sup>*</sup>= &plusmn; `r formatC(distrib(0.005,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z5",display="cite")`).</li>
+```{r Z5, echo=FALSE}
+zstar <- distrib(0.005,type="q",lower.tail=FALSE)
+```
+
+`r figs("Z5")`
+
+<li>`r formatC(824-zstar*60/sqrt(25),format="f",digits=1)`-`r formatC(824+zstar*60/sqrt(25),format="f",digits=1)`.</li>
+<li>I am 99% confident that the true population mean is between `r formatC(824-zstar*60/sqrt(25),format="f",digits=1)` and `r formatC(824+zstar*60/sqrt(25),format="f",digits=1)`.</li>
+</ol>
+
+<li>See below.</li>
+<ol type="a">
+<li>C=0.95</li>
+<li>Upper bound</li>
+<li>Z<sup>*</sup>=`r formatC(distrib(0.95,type="q"),format="f",digits=3)` (`r figs("Z6",display="cite")`).</li>
+```{r Z6, echo=FALSE}
+zstar <- distrib(0.95,type="q")
+```
+
+`r figs("Z6")`
+
+<li>`r formatC(73+zstar*20/sqrt(30),format="f",digits=1)`.</li>
+<li>I am 95% confident that the true population mean is less than `r formatC(73+zstar*20/sqrt(30),format="f",digits=1)`.</li>
+</ol>
+
+<li>See below.</li>
+<ol type="a">
+<li>C=0.95</li>
+<li>Interval</li>
+<li>Z<sup>*</sup>= &plusmn; `r formatC(distrib(0.025,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z7",display="cite")`).</li>
+```{r Z7, echo=FALSE}
+zstar <- distrib(0.025,type="q",lower.tail=FALSE)
+```
+
+`r figs("Z7")`
+
+<li>`r formatC(1370-zstar*800/sqrt(40),format="f",digits=1)`-`r formatC(1370+zstar*800/sqrt(40),format="f",digits=1)`.</li>
+<li>I am 95% confident that the true population mean is between `r formatC(1370-zstar*800/sqrt(40),format="f",digits=1)` and `r formatC(1370+zstar*800/sqrt(40),format="f",digits=1)`.</li>
+</ol>
+</ol>
+
+R Appendix
+```{r eval=FALSE,prompt=FALSE}
+<<Z5>>
+<<Z6>>
+<<Z7>>
+```
+
+----
+
+## Radius of Jupiter
+<ol>
+```{r echo=FALSE,fig.show='hide'}
+cis <- 71492+c(-1,1)*distrib(0.005,type="q",lower.tail=FALSE)*28/sqrt(40)
+```
+<li>`r formatC(cis[1],format="f",digits=1)`-`r formatC(cis[2],format="f",digits=1)`.</li>
+<li>I am 99% confident that the true population mean equatorial radius of Jupiter is between `r formatC(cis[1],format="f",digits=0)` and `r formatC(cis[2],format="f",digits=0)` km.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE,prompt=FALSE}
+distrib(0.005,type="q",lower.tail=FALSE)
+```
+
+----
+
+## Blood Pressure in Children
+
+<ol>
+```{r ncalc4, echo=FALSE, results='hide', fig.show='hide'}
+sigma <- 20; me <- 5
+(zstar <- distrib(0.005,type="q",lower.tail=FALSE))
+(zstar*sigma/me)^2
+```
+
+<li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` children to achieve the desired level of confidence and margin-of-error with the "worse-case" standard deviation of 20.</li>
+
+```{r ncalc5, echo=FALSE, results='hide', fig.show='hide'}
+sigma <- 15
+(zstar <- distrib(0.005,type="q",lower.tail=FALSE))
+(zstar*sigma/me)^2
+```
+<li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` children to achieve the desired level of confidence and margin-of-error with the "best-case" standard deviation of 15.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE,prompt=FALSE}
+<<ncalc4>>
+<<ncalc5>>
+```
+
+----
+
+## Calf Growth
+```{r calcn6, echo=FALSE, results='hide', fig.show="hide"}
+me <- 50
+sigma <- 200
+zstar <- distrib(0.995,type="q")
+( n <- (zstar*sigma/me)^2 )
+```
+
+The required sample size to estimate the growth of the calves within `r me` g per day with 99% confidence assuming that &sigma;=`r sigma` is `r formatC(ceiling(n),format="f",digits=0)`.
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+<<calcn6>>
+```
+
+----

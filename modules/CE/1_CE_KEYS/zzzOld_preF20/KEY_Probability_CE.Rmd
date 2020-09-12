@@ -1,0 +1,275 @@
+---
+title: "Answer Key"
+subtitle: "Probability CE"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_Probability_CE")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE,warning=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+```
+
+----
+
+<div class="alert alert-warning">
+<strong>Note:</strong> 
+<ul>
+<li>Probabilities are ALWAYS written as decimal value between 0 and 1. Do not convert to a percentage or leave as a fraction.</li>
+<li>Probabilities are not "odds" so don't say, for example in the first question below, that "the odds of a chipmunk eating an acorn is 0.47." Odds are the probability an event divided by the probability of not that event.</li>
+</ul>
+</div>
+
+
+## Food Choice by Chipmunks
+
+1. The probability that a chipmunk eats an acorn is 0.47 ($=\frac{8}{17}$).
+1. The probability that a chipmunk eats a kernel of corns is 0.53. ($=\frac{9}{17}$)
+1. The probability that a chipmunk eats a kernel of corn assuming that it has already eaten six kernels of corn and no acorns is 0.27 ($=\frac{3}{11}$).
+
+----
+
+<div class="alert alert-warning">
+<strong>In the questions below note that you must:</strong> 
+<ul>
+<li>Explicitly state which distribution (population or sampling) is to be used to answer the question and why that distribution is used (question is about an individual or a statistic from a sample).</li>
+<li>Explicitly state whether the distribution is normal or not and how you know whether it is or is not normal. For population distributions you will be told in the background if it is normal or not. For sampling distributions you will have to determine if one of the three criteria of the Central Limit Theorem has been met.</li>
+<li>Explicitly state whether you can answer the question or not. Simply, the question can be answered if the required distribution is normal (as determined as described above). If the distribution is not normal then you should say that you "cannot answer the question" because the PARTICULAR distribution is not normal. You should explicitly state which distribution it is that is not normal. See the answers below for examples.</li>
+</ul>
+</div>
+
+## Pollutants in Auto Exhaust
+
+1. About an individual ...
+    1. Population (because about an individual).
+    1. Right-skewed (not normal).
+    1. Can NOT be answered (because population distribution is not normal).
+    1. Can't answer.
+1. About a mean from n=15 ...
+    1. Sampling (because about a statistic from a sample).
+    1. x&#772;~N(0.9,$\frac{0.15}{\sqrt{15}}$=`r formatC(0.15/sqrt(15),format="f",digits=4)`) because n is greater than 15 and the population distribution is not **strongly** skewed.
+    1. Can be answered (because sampling distribution is normal).
+    1. `r formatC(distrib(1,mean=0.9,sd=0.15/sqrt(15),lower.tail=FALSE),format="f",digits=4)`.
+1. About a mean from n=50 ...
+    1. Sampling (because about a statistic from a sample).
+    1. x&#772;~N(0.9,$\frac{0.15}{\sqrt{50}}$=`r formatC(0.15/sqrt(50),format="f",digits=4)`) because n&ge;30.
+    1. Can be answered (because sampling distribution is normal).
+    1. `r formatC(distrib(0.92,mean=0.9,sd=0.15/sqrt(50),lower.tail=FALSE),format="f",digits=4)`.
+1. About a mean from n=50 ...
+    1. Sampling (because about a statistic from a sample).
+    1. x&#772;~N(0.9,$\frac{0.15}{\sqrt{50}}$=`r formatC(0.15/sqrt(50),format="f",digits=4)`) because n&ge;30.
+    1. Can be answered (because sampling distribution is normal).
+    1. `r formatC(distrib(0.85,mean=0.9,sd=0.15/sqrt(50)),format="f",digits=4)`.
+1. About a mean from n=50 ...
+    1. Sampling (because about a statistic from a sample).
+    1. x&#772;~N(0.9,$\frac{0.15}{\sqrt{50}}$=`r formatC(0.15/sqrt(50),format="f",digits=4)`) because n&ge;30.
+    1. Can be answered (because sampling distribution is normal).
+    1. `r formatC(distrib(0.01,mean=0.9,sd=0.15/sqrt(50),lower.tail=FALSE,type="q"),format="f",digits=3)` g/mi.
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+distrib(1,mean=0.9,sd=0.15/sqrt(15),lower.tail=FALSE)
+distrib(0.92,mean=0.9,sd=0.15/sqrt(50),lower.tail=FALSE)
+distrib(0.85,mean=0.9,sd=0.15/sqrt(50))
+distrib(0.01,mean=0.9,sd=0.15/sqrt(50),lower.tail=FALSE,type="q")
+```
+
+----
+
+## People in Car
+
+1. No.  Left side will be truncated at 0 (i.e., more than 2 SD away from mean becomes negative, which is not possible).  Discrete data with lots of ones and twos with few higher than that.
+1. About a mean from n=40 ...
+    1. Sampling (because about a statistic from a sample).
+    1. x&#772;~N(1.5,$\frac{0.75}{\sqrt{40}}$=`r formatC(0.75/sqrt(40),format="f",digits=4)`) because n&ge;30.
+    1. Can be answered (because sampling distribution is normal).
+    1. `r formatC(distrib(1.2,mean=1.5,sd=0.75/sqrt(40)),format="f",digits=4)`.
+1. About a mean from n=50 ...
+    1. Sampling (because about a statistic from a sample).
+    1. x&#772;~N(1.5,$\frac{0.75}{\sqrt{50}}$=`r formatC(0.75/sqrt(50),format="f",digits=4)`) because n&ge;30.
+    1. Can be answered (because sampling distribution is normal).
+    1. `r formatC(distrib(2,mean=1.5,sd=0.75/sqrt(50),lower.tail=FALSE),format="f",digits=7)`.
+1. About a mean from n=5 ...
+    1. Sampling (because about a statistic from a sample).
+    1. Not normal because n<15 and the population distribution is not normal.
+    1. Can NOT be answered (because sampling distribution is not normal).
+    1. Can't answer.
+1. About a mean from n=700 (through a total) ...
+    1. Sampling (because about a statistic from a sample).
+    1. x&#772;~N(1.5,$\frac{0.75}{\sqrt{700}}$=`r formatC(0.75/sqrt(700),format="f",digits=4)`) because n&ge;30.
+    1. Can be answered (because sampling distribution is normal).
+    1. `r formatC(distrib(1075/700,mean=1.5,sd=0.75/sqrt(700),lower.tail=FALSE),format="f",digits=4)`.
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+distrib(1.2,mean=1.5,sd=0.75/sqrt(40))
+distrib(2,mean=1.5,sd=0.75/sqrt(50),lower.tail=FALSE)
+distrib(1075/700,mean=1.5,sd=0.75/sqrt(700),lower.tail=FALSE)
+```
+
+----
+
+## Banking
+
+1. About an individual ...
+    1. Population (because about an individual).
+    1. x~N(550,150) as given in the background.
+    1. Can be answered (because population distribution is normal).
+    1. `r formatC(distrib(800,mean=550,sd=150,lower.tail=FALSE),format="f",digits=4)`
+1. About an individual ...
+    1. Population (because about an individual).
+    1. x~N(550,150) as given in the background.
+    1. Can be answered (because population distribution is normal).
+    1. `r formatC(distrib(200,mean=550,sd=150),format="f",digits=4)`
+1. About a mean from n=5 ...
+    1. Sampling (because about a statistic from a sample).
+    1. x&#772;~N(550,$\frac{150}{\sqrt{5}}$=`r formatC(150/sqrt(5),format="f",digits=4)`) because the population distribution is normal.
+    1. Can be answered (because sampling distribution is normal).
+    1. `r formatC(distrib(600,mean=550,sd=150/sqrt(5)),format="f",digits=4)`.
+1. About a mean from n=10 ...
+    1. Sampling (because about a statistic from a sample).
+    1. x&#772;~N(550,$\frac{150}{\sqrt{10}}$=`r formatC(150/sqrt(10),format="f",digits=4)`) because the population distribution is normal.
+    1. Can be answered (because sampling distribution is normal).
+    1. `r formatC(distrib(700,mean=550,sd=150/sqrt(10))-distrib(500,mean=550,sd=150/sqrt(10)),format="f",digits=4)`.
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+distrib(800,mean=550,sd=150,lower.tail=FALSE)
+distrib(200,mean=550,sd=150)
+distrib(600,mean=550,sd=150/sqrt(5))
+ab <- distrib(700,mean=550,sd=150/sqrt(10))
+a <- distrib(500,mean=550,sd=150/sqrt(10))
+```
+
+----
+
+## Melatonin and Sleep
+
+1. About a mean from n=4 ...
+    1. Sampling (because about a statistic from a sample).
+    1. x&#772;~N(15,$\frac{5}{\sqrt{4}}$=`r formatC(5/sqrt(4),format="f",digits=3)`) because the population distribution was known to be normal.
+    1. Can be answered (because sampling distribution is normal).
+    1. `r formatC(distrib(12,mean=15,sd=5/sqrt(4),lower.tail=FALSE),format="f",digits=4)`.
+1. About an individual ...
+    1. Population (because about an individual).
+    1. x~N(15,5) because the population distribution was known to be normal.
+    1. Can be answered (because population distribution is normal).
+    1. `r formatC(distrib(12,mean=15,sd=5,lower.tail=FALSE),format="f",digits=4)`.
+1. About a mean from n=25 ...
+    1. Sampling (because about a statistic from a sample).
+    1. x&#772;~N(15,$\frac{5}{\sqrt{25}}$=`r formatC(5/sqrt(25),format="f",digits=3)`) because the population distribution was known to be normal.
+    1. Can be answered (because sampling distribution is normal).
+    1. `r formatC(distrib(15.5,mean=15,sd=5/sqrt(25),lower.tail=FALSE),format="f",digits=4)`.
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+distrib(12,mean=15,sd=5/sqrt(4),lower.tail=FALSE)
+distrib(12,mean=15,sd=5,lower.tail=FALSE)
+distrib(15.5,mean=15,sd=5/sqrt(25),lower.tail=FALSE)
+```
+
+----
+
+## Reproductive Habits of Roe Deer
+
+1. This question cannot be answered because the population distribution is not known to be normal (background says that it is right-skewed).
+1. This question cannot be answered because the sampling distribution is not known to be normal because the sample size is not greater than 30, nor greater than 15, nor is the population normally distributed.
+1. The probability that a sample of 35 roe deer will have an average of more than 2 fawns is `r formatC(distrib(2,mean=2.2,sd=0.46/sqrt(35),lower.tail=FALSE,plot=FALSE),format="f",digits=2)`.
+1. The probability that a sample of 35 roe deer will have an average of between 2 and 2.3 fawns is `r formatC(distrib(2.3,mean=2.2,sd=0.46/sqrt(35),plot=FALSE)-distrib(2,mean=2.2,sd=0.46/sqrt(35),plot=FALSE),format="f",digits=2)`.
+1. The most common 90% of sample means in samples of n=35 are between `r formatC(distrib(0.05,mean=2.2,sd=0.46/sqrt(35),type="q",plot=FALSE),format="f",digits=2)` and `r formatC(distrib(0.05,mean=2.2,sd=0.46/sqrt(35),type="q",lower.tail=FALSE,plot=FALSE),format="f",digits=2)`.
+1. The lowest 20% of sample means in samples of n=35 are below `r formatC(distrib(0.20,mean=2.2,sd=0.46/sqrt(35),type="q",plot=FALSE),format="f",digits=2)`.
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+library(NCStats)
+( distrib(2,mean=2.2,sd=0.46/sqrt(35),lower.tail=FALSE) )
+ab <- distrib(2.3,mean=2.2,sd=0.46/sqrt(35))
+a <- distrib(2,mean=2.2,sd=0.46/sqrt(35))
+ab-a
+( distrib(0.05,mean=2.2,sd=0.46/sqrt(35),type="q") )
+( distrib(0.05,mean=2.2,sd=0.46/sqrt(35),type="q",lower.tail=FALSE) )
+( distrib(0.20,mean=2.2,sd=0.46/sqrt(35),type="q") )
+```
+
+----
+
+## Acorn Length
+
+1. About an individual ...
+    1. Population (because about an individual).
+    1. Slightly right-skewed (not normal) as given in the background.
+    1. Can NOT be answered (because population distribution is not normal).
+    1. Can't answer.
+1. About a mean from n=20 ...
+    1. Sampling (because about a statistic from a sample).
+    1. x&#772;~N(21,$\frac{6}{\sqrt{20}}$=`r formatC(6/sqrt(20),format="f",digits=4)`) because n&ge;15 and the population distribution is only slightly skewed.
+    1. Can be answered (because sampling distribution is normal).
+    1. `r formatC(distrib(25,mean=21,sd=6/sqrt(20),lower.tail=FALSE),format="f",digits=4)`.
+1. About a mean from n=50 ...
+    1. Sampling (because about a statistic from a sample).
+    1. x&#772;~N(21,$\frac{6}{\sqrt{50}}$=`r formatC(6/sqrt(50),format="f",digits=4)`) because n&ge;30.
+    1. Can be answered (because sampling distribution is normal).
+    1. `r formatC(distrib(25,mean=21,sd=6/sqrt(50))-distrib(20,mean=21,sd=6/sqrt(50)),format="f",digits=4)`.
+1. About a mean from n=6 ...
+    1. Sampling (because about a statistic from a sample).
+    1. Not normal because n<15 and the population distribution is not normal.
+    1. Can NOT be answered (because sampling distribution is not normal).
+    1. Can't answer.
+1. About an individual ...
+    1. Population (because about an individual).
+    1. Slightly right-skewed (not normal) as given in the background.
+    1. Can NOT be answered (because population distribution is not normal).
+    1. Can't answer.
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+distrib(25,mean=21,sd=6/sqrt(20),lower.tail=FALSE)
+ab <- distrib(25,mean=21,sd=6/sqrt(50))
+a <- distrib(20,mean=21,sd=6/sqrt(50))
+ab-a
+```
+
+----
+
+## Plowing Snow
+
+1. About a mean from n=5 ...
+    1. Sampling (because about a statistic from a sample).
+    1. Not normal because n<15 and the population distribution is not normal.
+    1. Can NOT be answered (because sampling distribution is not normal).
+    1. Can't answer.
+1. About an individual ...
+    1. Population (because about an individual).
+    1. Right-skewed (not normal) as given in the background.
+    1. Can NOT be answered (because population distribution is not normal).
+    1. Can't answer.
+1. About a mean from n=40 ...
+    1. Sampling (because about a statistic from a sample).
+    1. x&#772;~N(45,$\frac{28}{\sqrt{40}}$=`r formatC(28/sqrt(40),format="f",digits=4)`) because n&ge;30.
+    1. Can be answered.
+    1. `r formatC(distrib(50,mean=45,sd=28/sqrt(40))-distrib(40,mean=45,sd=28/sqrt(40)),format="f",digits=4)`.
+1. About a mean from n=40 ...
+    1. Sampling (because about a statistic from a sample).
+    1. x&#772;~N(45,$\frac{28}{\sqrt{40}}$=`r formatC(28/sqrt(40),format="f",digits=4)`) because n&ge;30.
+    1. Can be answered (because sampling distribution is normal).
+    1. `r formatC(distrib(0.25,mean=45,sd=28/sqrt(40),type="q"),format="f",digits=1)` secs.
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+ab <- distrib(50,mean=45,sd=28/sqrt(40))
+a <- distrib(40,mean=45,sd=28/sqrt(40))
+distrib(0.25,mean=45,sd=28/sqrt(40),type="q")
+```
+
+----
+

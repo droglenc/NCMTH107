@@ -1,0 +1,211 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "1-Sample Z CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3.5
+    fig_width: 3.5
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE, warning=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_1SampleZ_CE")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+library(captioner)
+tbls <- captioner(prefix="Table")
+tbls(name="ElkDensity","Results from the one-sample z-test for testing that the mean density of elk in ALL plots in Banff is greater than 8 per km$^{2}$.")
+tbls(name="HawksRidge","Results from the one-sample z-test for testing that the mean number of hawks observed at Hawk Ridge, MN is greater than 50000 per year.")
+```
+
+----
+
+<div class="alert alert-warning">
+<strong>Note:</strong> When performing the 11 steps, make sure to ...
+<ul>
+<li>Define the parameter &mu; in Step 2.</li>
+<li>Provide some evidence for the characteristics of the test in Step 3 (note the items in parentheses).</li>
+<li>The decision is about H<sub>0</sub> in Step 9. However, in Step 10 you will likely be describing what you decided about H<sub>A</sub>. For example, in the first example below, Step 10 is saying that H<sub>A</sub> is not supported. However, the opposite is true in the second example. This happens because the researcher's hypothesis (what they are tyring to see if there is evidence for) is almost always in H<sub>A</sub>. Therefore, answering the researcher's question requires you to say whether H<sub>A</sub> was supported or not.</li>
+<li>In situations where the p-value is VERY small (as in the credit card example below), I will often show the p-value as "<0.00005" (i.e., I round p-values to four decimals so if it is not 0.0001 then it must be less than 0.00005) rather than showing the scientific notation or the many decimal places.</li>
+<li>You values may differ slightly from mine as I calculated everything in R that holds many decimal places on intermediate values. Note that you do not need to use R as a calculator as I did for the hand calculations, but you do need it for `distrib()`.</li>
+</ul>
+</div>
+
+
+## Diet and Weight Gain
+```{r DietCalc, echo=FALSE, results='hide', fig.show='hide'}
+xbar <- 6.7; sigma <- 7.1; n <- 35
+se <- sigma/sqrt(n)
+( Z <- (xbar-5)/se )
+( pv <- distrib(xbar,mean=5,sd=sigma/sqrt(n),lower.tail=FALSE) )
+( pv <- distrib(Z,lower.tail=FALSE) )  # same as above (but uses test stat)
+( Zstar <- distrib(0.95,lower.tail=FALSE,type="q") )
+( lcb <- xbar+Zstar*se )
+```
+
+<ol>
+<li>&alpha;=0.05.</li>
+<li>H<sub>A</sub>: &mu;>5 and H<sub>0</sub>: &mu;=5, where &mu; is the mean weight gain for all women that followed the diet.</li>
+<li>1-sample Z-test because (i) one group or population (women that followed this diet) was sampled, (ii) a quantitative variable (weight gain) was recorded, and (iii) &sigma; is assumed to be known (=7.1).</li>
+<li>An observational study as the women chose to be on the diet. There is clear randomization in this study.</li>
+<li>The assumptions are met because (i) &sigma; is known (=7.1) and (ii) n=35&ge;30.</li>
+<li>x&#772;=`r xbar` pounds gained.</li>
+<li>Z=$\frac{6.7-5}{\frac{7.1}{\sqrt{35}}}$=`r formatC(Z,format="f",digits=3)`.</li>
+<li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
+<li>Do not reject H<sub>0</sub> because the p-value>&alpha;.</li>
+<li>There is not enough evidence to conclude that the mean weight gain for ALL women on this diet is greater than 5 pounds.</li>
+<li>I am 95% confident that the mean weight gain for ALL women is greater than $6.7-1.645\frac{7.1}{\sqrt{35}}$=`r formatC(lcb,format="f",digits=2)`, which further indicates that the mean weight gain is not greater than 5 pounds.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+<<DietCalc>>
+```
+
+----
+
+## Cactus Growth
+
+```{r CactusCalc, echo=FALSE, results='hide', fig.show='hide'}
+xbar <- 3.26; sigma <- 1.40; n <- 10
+se <- sigma/sqrt(n)
+( Z <- (xbar-4)/se )
+( pv <- distrib(xbar,mean=4,sd=sigma/sqrt(n)) )
+( pv <- distrib(Z) )  # same as above (but uses test stat)
+( Zstar <- distrib(0.95,type="q") )
+( ucb <- xbar+Zstar*se )
+```
+
+<ol>
+<li>&alpha;=0.05.</li>
+<li>H<sub>0</sub>: &mu; = 4, H<sub>A</sub>: &mu; < 4 where &mu; is the mean growth of all cacti.</li>
+<li>A one-sample Z-test is required because (i) a quantitative variable (growth) was measured, (ii) individuals from only one group/population were sampled (only one set of conditions considered), and (iii) &sigma; is known (given in the background).</li>
+<li>The data are part of an experiment in which cacti were randomly selected.</li>
+<li>&sigma; is known. In addition, because the population distribution is normal (stated in the background), we do not have to worry about the size of the sample.</li>
+<li>x&macr; = 3.26.</li>
+<li>Z = $\frac{3.26-4}{\frac{1.40}{\sqrt{10}}}$ = $\frac{-0.74}{0.44}$ = `r formatC(Z,format="f",digits=3)`.</li>
+<li>The p-value is `r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
+<li>H<sub>0</sub> is rejected because the p-value<&alpha;.</li>
+<li>The mean growth rate of all cacti under the experimental conditions does appear to be less than 4 cm.</li>
+<li>One is 95% confident that the mean growth of all cacti under the experimental conditions is less than $3.26+1.645\frac{1.40}{\sqrt{10}}$=`r formatC(ucb,format="f",digits=3)` cm, which further indicates that mean growth is less than 4 cm.</li>
+</ol>
+
+### R Appendix
+```{r eval=FALSE}
+<<CactusCalc>>
+```
+
+----
+
+## Elk Density in Banff
+
+```{r echo=FALSE}
+elk <- c(5.20,7.79,6.46,8.60,8.97,8.65,9.60,9.09,12.42,
+         10.70,11.59,10.68,10.61,9.04,10.89)
+```
+```{r ElkCalc, echo=FALSE, results='hide'}
+( elk.z <- z.test(elk,mu=8,sd=2,alt="greater",conf.level=0.90) )
+```
+
+<ol>
+  <li>&alpha;=0.10</li>
+  <li>H<sub>0</sub>: &mu;=8, H<sub>A</sub>: &mu;>8, where &mu; is the mean Elk density in Banff.</li>
+  <li>A 1-sample Z-test is required because a quantitative variable (Elk density) was measured on individuals from one group or population (plots in Banff National Park) and &sigma; is known (given in background).</li>
+  <li>An observational sample that is not obiously random was selected.</li>
+  <li>The assumptions are met because n=15&ge;15 and the population is approximately normal (given in background) and &sigma; is known.</li>
+  <li>The statistic is x&#772;=`r formatC(elk.z$estimate,format="f",digits=2)` Elk per km<sup>2</sup> (`r tbls("ElkDensity",display="cite")`).</li>
+
+`r tbls("ElkDensity")`
+```{r echo=FALSE}
+kHtest(elk.z)
+```
+
+  <li>The test statistic is Z=`r formatC(elk.z$statistic,format="f",digits=3)` (`r tbls("ElkDensity",display="cite")`).</li>
+  <li>The p-value is `r kPvalue(elk.z$p.value,latex=FALSE,include.p=FALSE)` (`r tbls("ElkDensity",display="cite")`).</li>
+  <li>The H<sub>0</sub> is rejected because the p-value<&alpha;.</li>
+  <li>The annual density of elk appears to be greater than 8 per km<sup>2</sup>.</li>
+  <li>One is 90% confident that the mean annual density of elk is more than `r formatC(elk.z$conf.int[1],format="f",digits=2)` per km<sup>2</sup> (`r tbls("ElkDensity",display="cite")`), which further indicates that the mean density of Elk is greater than 8 per km<sup>2</sup>.</li>
+</ol>
+
+R Appendix
+```{r eval=FALSE, prompt=FALSE}
+setwd('C:/aaaWork/Books/IntroStats/HW/')
+elk <- read.csv("Elk.csv")
+<<ElkCalc>>
+```
+
+----
+
+## Credit Card Limits
+```{r CCCalc, echo=FALSE, results='hide', fig.show='hide'}
+xbar <- 636.86; sigma <- 5; n <- 44
+se <- sigma/sqrt(n)
+( Z <- (xbar-630)/se )
+( pv <- distrib(xbar,mean=530,sd=sigma/sqrt(n),lower.tail=FALSE) )
+( pv <- distrib(Z,lower.tail=FALSE) )  # same as above (but uses test stat)
+( Zstar <- distrib(0.90,lower.tail=FALSE,type="q") )
+( lcb <- xbar+Zstar*se )
+```
+
+<ol>
+  <li>&alpha;=0.10.</li>
+  <li>H<sub>A</sub>: &mu;>630 and H<sub>0</sub>: &mu;=630, where &mu; is the mean credit card limit for all companies.</li>
+  <li>A one-sample Z-test is required because a quantitative variable (credit score) was measured on individuals from one group or population (all credit card companies) and &sigma; is known (given in background).</li>
+  <li>An observational sample, with no evidence of randomness, was selected.</li>
+  <li>The assumptions are met because n=44&ge;30 and &sigma; is known.</li>
+  <li>The statistic is x&#772;=636.86.</li>
+  <li>The test statistic is Z=$\frac{636.86-630}{\frac{5}{\sqrt{44}}}$=`r formatC(Z,format="f",digits=3)`.</li>
+  <li>The p-value is `r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
+  <li>The H<sub>0</sub> is rejected because the p-value<&alpha;.</li>
+  <li>It appears that the credit threshold is greater than 630. Thus, it appears that the credit card companies have increased the threshold for issuing a credit card.</li>
+  <li>One is 90% confident that the mean cutoff score for ALL companies is greater than $636.86-1.645{\frac{5}{\sqrt{44}}}$=`r formatC(lcb,format="f",digits=2)`, which is further evidence that the threshold has been raised from 630.</li>
+</ol>
+
+R Appendix
+```{r eval=FALSE, prompt=FALSE}
+<<CCCalc>>
+```
+
+----
+
+## Raptors at Hawk's Ridge
+
+```{r HawksRidgeCode, echo=FALSE, results='hide'}
+hr <- read.csv("https://github.com/droglenc/NCData/raw/master/HawksRidge.csv")
+( hr.z <- z.test(hr$Total,mu=50000,sd=37000,alt="greater",conf.level=0.99) )
+```
+
+<ol>
+<li>&alpha;=0.01</li>
+<li>H<sub>0</sub>: &mu;=50000, H<sub>A</sub>: &mu;>50000, where &mu; is the mean number of raptors seen in ALL years at Hawk's Ridge.</li>
+<li>A one-sample Z-test is required because (i) a quantitative variable (number of raptors) was measured, (ii)the individuals are from one group or population (all years at Hawk's Ridge), and (iii) &sigma; is known (=37000). Thus, the population mean is being compared to a specific value in the null hypothesis.</li>
+<li>An observational sample of years that was not random was taken.</li>
+<li>The assumptions are met because n=32&ge;30 and &sigma; is known.</li>
+<li>x&#772;=`r formatC(hr.z$estimate,format="f",digits=0)` (`r tbls("HawksRidge",display="cite")`).</li>
+
+`r tbls("HawksRidge")`
+
+```{r echo=FALSE}
+kHtest(hr.z)
+```
+<li>The test statistic is Z=`r formatC(hr.z$statistic,format="f",digits=3)` (`r tbls("HawksRidge",display="cite")`).</li>
+<li>The p-value is `r kPvalue(hr.z$p.value,include.p=FALSE,latex=FALSE)` (`r tbls("HawksRidge",display="cite")`).</li>
+<li>The H<sub>0</sub> is rejected because the p-value<&alpha; (`r tbls("HawksRidge",display="cite")`).</li>
+<li>The mean number of raptors seen per year in ALL years appears to be greater than 50000.</li>
+<li>I am 99% confident that the mean number of raptors seen per year in ALL years is more than `r formatC(hr.z$conf.int[1],format="f",digits=0)` (`r tbls("HawksRidge",display="cite")`), which is further evidence that the mean number of raptors is greater than 50000.</li>
+</ol>
+
+R Appendix
+```{r eval=FALSE, prompt=FALSE}
+<<HawksRidgeCode>>
+```
+
+----

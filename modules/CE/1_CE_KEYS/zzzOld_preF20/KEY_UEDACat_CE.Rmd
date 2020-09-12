@@ -1,0 +1,274 @@
+---
+title: "Answer Key"
+subtitle: "Univariate EDA - Categorical CE"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_UEDACat_CE")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+library(captioner)
+tbls <- captioner(prefix="Table")
+tbls(name="CWDPerc",'Percentage of coarse woody debris sites by level of exposure (low or medium).')
+tbls(name="DispPerc","Percentages table for perceived choice of agency that disposes of chemical waste.  Abbreviations are: d=Department of Transportation, e=Environmental Protection Agency, n=National Institutes of Health, o=Occupational Safety and Health Administration, and u=unanswered.")
+tbls(name="KidsPerc1",'Percentage of grade school children by their stated goal.')
+tbls(name="KidsPerc2",'Percentage of grade school children by their rank of the impiortance of being good in sports (1=most important).')
+tbls(name="KidsPerc3",'Percentage of grade school children by location of their school.')
+tbls(name="WaterPerc","Percentage table for how much time students at Rice University leave the water on before entering the shower. Note that A=0-5 mins, B=6-10 mins, C=11-15 mins, and D=more than 15 mins.")
+
+figs <- captioner(prefix="Figure")
+figs(name="DispBar","Bar chart of percentages by perceived choice of agency that disposes of chemical waste. Abbreviations are in Table 2.")
+figs(name="KidsBar1",'Bar chart of percentage of grade school children by their stated goal.')
+figs(name="KidsBar2",'Bar chart of percentage of grade school children by their rank of the importance of being good in sports (1=most important).')
+figs(name="KidsBar3",'Bar chart of percentage of grade school children by location of their school.')
+```
+
+----
+
+## Hand Calculations
+
+*Should be performed by hand to match results below*
+
+<ol>
+<li>Frequency Table</li>
+```{r echo=FALSE}
+d <- read.csv("breeds.csv")
+( tbl <- xtabs(~group,data=d) )
+```
+
+<li>Percentage Table</li>
+```{r}
+percTable(tbl,digits=1)
+```
+
+<li>Bar Chart</li>
+```{r echo=FALSE, fig.width=6, fig.height=3, par1=TRUE}
+barplot(tbl,xlab="Breed of Dog",ylab="Frequency of Wins")
+```
+
+<li>Shepherds were the most common herding group winners in the Westminster Kennel Club championships winning `r formatC(tbl[["Shepherd"]]/sum(tbl)*100,format="f",digits=1)`% of the time over the last 36 years</li>
+</ol>
+
+----
+
+## Bar Chart I
+
+<ol>
+<li>A Northland College student.</li>
+<li>Categorical, nominal.</li>
+<li>Frequency table is below.</li>
+```{r echo=FALSE}
+( d <- c(Love=45,Money=1,Pregnancy=0,Other=4) )
+```
+<li>Percentage table is below.</li>
+```{r echo=FALSE}
+round(d/sum(d)*100,1)
+```
+<li>"Love" was by far (90.0%) the most common response by Northland students for "Why should people get married?"</li>
+</ol>
+ 
+----
+
+
+<div class="alert alert-warning">
+<strong>Note:</strong> 
+<ul>
+<li> Note that when "performing an EDA" for categorical data you need to write a summary of what you see in the frequency table, percentage table, or bar chart (see next note). Just making the tables or bar chart, without summarizing in words, is not an adequate EDA.
+<li>In the EDA questions below, you only need to comment about the most dominant characteristics evident in the table or bar chart. There is nothing specific to describe here as there will be with quantitative data. Furthermore, don't just repeat all of the values in the table or graph; you should be summarizing and interpreting. Keep this in mind when reviewing the answers below.</li>
+<li>There is probably no good reason to produce both a table and bar chart when the data are as simple as those shown below. I showed both in some instances below just to assure that you could see both.</li>
+</ul>
+</div>
+
+## Coarse Woody Debris
+
+1. The vast majority (82%) of the sites had medium exposure (`r tbls("CWDPerc",display="cite")`).
+```{r echo=FALSE}
+d <- read.csv("cwd.csv")
+```
+```{r CWDTable, echo=FALSE}
+tbl <- xtabs(~exposure,data=d)
+```
+
+`r tbls("CWDPerc")`
+
+```{r CWDPTable, echo=FALSE, background="white"}
+percTable(tbl,digits=1,addMargins=FALSE)
+```
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+d <- read.csv("cwd.csv")
+<<CWDTable>>
+<<CWDPTable>>
+```
+
+----
+
+## Bar Chart II
+
+1. A Brown Pelican in the Northern Gulf of Mexico.
+1. The habitat used is categorical, nominal.
+1. 62%
+1. 26%
+1. 12% (100-62-26)
+1. Cannot address shape of bar charts.
+
+----
+
+## Chemical Waste Disposal
+```{r echo=FALSE}
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/1_CE_Keys/")
+d <- read.csv("4_51.csv")
+```
+```{r DispTables, echo=FALSE, results='hide'}
+( a.tbl <- xtabs(~agency,data=d) )
+( p.tbl <- percTable(a.tbl) )
+```
+
+Most respondents thought that the Environmental Protection Agency was the agency that disposed of chemical wastes followed by the Occupational Safety and Health Administration (`r tbls("DispPerc",display='cite')`; `r figs("DispBar",display='cite')`).  Relatively few people thought the Department of Transportation or National Institutes of Health disposed of chemical wastes.
+
+`r tbls("DispPerc")`
+
+```{r echo=FALSE}
+p.tbl
+```
+
+```{r DispBarPlot, echo=FALSE}
+barplot(p.tbl,xlab="Agency Abbreviation",ylab="Percentage",ylim=c(0,50))
+```
+
+`r figs("DispBar")`
+
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+d <- read.csv("4_51.csv")
+<<DispTables>>
+<<DispBarPlot>>
+```
+
+----
+
+## Popularity in Middle School
+
+<ol>
+<li>The goal for most kids was getting good grades, followed by being popular, and then being good in sports (`r tbls("KidsPerc1",display="cite")`; `r figs("KidsBar1",display="cite")`).</li>
+```{r echo=FALSE}
+d <- read.csv("https://github.com/droglenc/NCData/raw/master/PopularKids.csv")
+```
+```{r KidsTbl1, echo=FALSE}
+tbl1 <- xtabs(~goals,data=d)
+```
+
+`r tbls("KidsPerc1")`
+
+```{r KidsPTbl1, echo=FALSE}
+( ptbl1 <- percTable(tbl1,digits=1,addMargins=FALSE) )
+```
+
+```{r KidsBar1, echo=FALSE, fig.width=4, fig.height=3, par1=TRUE}
+barplot(ptbl1,xlab="Student's Goal",ylab="Percentage")
+```
+
+`r figs("KidsBar1")`
+
+<li>Students feel that "being good in sports" is an important contributor to popularity as approximately 2/3rds of studens ranked this as either "most important" or "somewhat important" to being popular (`r tbls("KidsPerc2",display="cite")`; `r figs("KidsBar2",display="cite")`).</li>
+```{r KidsTbl2, echo=FALSE}
+tbl2 <- xtabs(~sports,data=d)
+```
+
+`r tbls("KidsPerc2")`
+
+```{r KidsPTbl2, echo=FALSE}
+( ptbl2 <- percTable(tbl2,digits=1,addMargins=FALSE) )
+```
+
+```{r KidsBar2, echo=FALSE, fig.width=4, fig.height=3, par1=TRUE}
+barplot(ptbl2,xlab="Rank of Sports in Popularity",ylab="Percentage")
+```
+
+`r figs("KidsBar2")`
+
+<li>Students were nearly evenly distributed among rural, suburban, and urban schools.  Students were likely sampled nearly equally from each type of school (`r tbls("KidsPerc3",display="cite")`; `r figs("KidsBar3",display="cite")`).</li>
+```{r KidsTbl3, echo=FALSE}
+tbl3 <- xtabs(~type,data=d)
+```
+
+`r tbls("KidsPerc3")`
+
+```{r KidsPTbl3, echo=FALSE}
+( ptbl3 <- percTable(tbl3,digits=1,addMargins=FALSE) )
+```
+
+```{r KidsBar3, echo=FALSE, fig.width=4, fig.height=3, par1=TRUE}
+barplot(ptbl3,xlab="School Type",ylab="Percentage")
+```
+
+`r figs("KidsBar3")`
+
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+d <- read.csv("PopularKids.csv")
+<<KidsTbl1>>
+<<KidsPTbl1>>
+<<KidsBar1>>
+<<KidsTbl2>>
+<<KidsPTbl2>>
+<<KidsBar2>>
+<<KidsTbl3>>
+<<KidsPTbl3>>
+<<KidsBar3>>
+```
+
+----
+
+## Water Usage
+```{r echo=FALSE, results='hide'}
+water <- factor(c("D","C","B","B","C","C","B","B","C","C","C",
+                  "B","D","B","C","C","B","C","D","D","B","C",
+                  "C","A","B","C","C","A","C","C","D","A","C",
+                  "C","B","B","B","B","B","C","D","B","D","B",
+                  "C","B","C","C","D","C","B","B","D","C","B",
+                  "C","B","B","C","C","B","C","B","C","B","B",
+                  "C","D","B","C","D","C","B","C","D","C","C",
+                  "B","C","B","D","B","B","D","B","C","B","B",
+                  "C","B","C","D","D","C","D","B","B","C","B",
+                  "C","A","A","B","C","B","C","D","D","C","B",
+                  "D","C","C","C","C","A","C","D","B","C","B",
+                  "B","D","C","B","B","A","B","C","B"))
+df <- data.frame(water)
+```
+```{r WaterTables, echo=FALSE, results='hide'}
+freq <- xtabs(~water,data=df)
+perc <- percTable(freq,digits=1)
+```
+
+Most students left the water on for between 6 and 15 minutes, with students approximately evenly split between 6-10 and 11-15 minutes (`r tbls("WaterPerc",display="cite")`). Few students left the water on for less than 5 minutes before entering the shower.
+
+`r tbls("WaterPerc")`
+
+```{r echo=FALSE}
+perc
+```
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+setwd('C:/aaaWork/Books/IntroStats/HW/')
+df <- read.csv("WaterUsage.csv")
+<<WaterTables>>
+```
+
+----

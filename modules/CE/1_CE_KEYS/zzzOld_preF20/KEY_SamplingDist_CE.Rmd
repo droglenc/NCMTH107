@@ -1,0 +1,170 @@
+---
+title: "Answer Key"
+subtitle: "Sampling Distributions CE"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3.5
+    fig_width: 3.5
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_SamplingDist_CE")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+library(captioner)
+tbls <- captioner("Table")
+figs <- captioner("Figure")
+tbls("Samples2","All possible samples of n=2 from the numbers 2 through 9. Each column represents the two values in a possible sample.")
+tbls("Means2","All possible means from samples of n=2 from the numbers 2 through 9.")
+figs("Means2","Histogram of all means from samples of n=2 from the numbers 2 through 9.")
+```
+
+----
+
+## Constructing a Sampling Distribution
+
+```{r SDistCalc, echo=FALSE, results='hide'}
+d <- c(12,14,16,18,20)
+mu <- mean(d)
+sigma <- sd(d)
+
+d2 <- combn(d,2)
+d2mns <- combn(d,2,FUN=mean)
+d2m <- mean(d2mns)
+d2se <- sd(d2mns)
+
+d3 <- combn(d,3)
+d3mns <- combn(d,3,FUN=mean)
+d3m <- mean(d3mns)
+d3se <- sd(d3mns)
+
+d4 <- combn(d,4)
+d4mns <- combn(d,4,FUN=mean)
+d4m <- mean(d4mns)
+d4se <- sd(d4mns)
+```
+```{r echo=FALSE}
+## Theoretical SEs need to be corrected for sampling from finite populations
+ns <- 2:4
+N <- length(d)
+fpc <- sqrt((N-ns)/(N-1))
+ses <- (sigma/sqrt(ns))*fpc
+```
+
+<ol>
+  <li> $\mu$=`r formatC(mu,format="f",digits=0)`, $\sigma$=`r formatC(sigma,format="f",digits=3)`.</li>
+  <li> All samples of n=2 are shown in columns below.</li>
+```{r echo=FALSE}
+d2
+```
+  <li> Means from all samples of n=2 are shown below.</li>
+```{r echo=FALSE}
+d2mns
+```
+  <li> The mean of all sample means from n=2 is `r formatC(d2m,format="f",digits=0)`.</li>
+  <li> The standard deviation of all sample means from n=2 is `r formatC(d2se,format="f",digits=3)`. This is really a standard error.</li>
+  <li> The above for n=3 are below.</li>
+```{r echo=FALSE}
+d3
+round(d3mns,3)
+round(d3m,3)
+round(d3se,3)
+```
+  <li> The above for n=4 are below.</li>
+```{r echo=FALSE}
+d4
+d4mns
+round(d4m,3)
+round(d4se,3)
+```
+
+  <li>Same.</li>
+  <li>Did not change (were not affected by n).</li>
+  <li>All smaller.</li>
+  <li>Decreased with increasing n.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+<<SDistCalc>>
+```
+
+----
+
+## Checking the CLT
+
+**NOT AVAILABLE**
+
+----
+
+## Precision and Accuracy
+
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>Accuracy is determined by whether the mean of the means (values) equals the true mean (i.e., the parameter) or not. Thus, to determine accuracy you must compute the mean of the provided values and determine whether that equals the true mean given in the background (60 in the examples below).</li>
+<li>Precision (as defined here) is related to how close the values are to each other NOT how many decimals are recorded. Thus, the values 45,46,47,48 are more precise than the values 1.01,9.19,55.65,87.49.</li>
+</ul>
+</div>
+
+
+1. The numbers 59, 60, 60, 61 represent values that are accurate and precise (i.e., values are close together and centered on (average out to be) 60).
+1. The numbers 45, 55, 65, 70 represent values that are accurate but imprecise (i.e., values are far apart and centered on 60).
+1. The numbers 69, 70, 71, 72 represent values that are inaccurate but precise (i.e., values are close together and NOT centered on 60).
+1. The numbers 75, 85, 95, 105 represent values that are inaccurate and imprecise (i.e., values are far apart and NOT centered on 60).
+
+----
+
+## Constructing a Sampling Distribution II
+```{r Calc, echo=FALSE, results="hide"}
+( smpls2 <- combn(2:9,2) )
+( mns2 <- as.numeric(combn(2:9,2,mean)) )
+```
+
+<ol>
+  <li>Results for the samples are in `r tbls("Samples2",display="cite")`.</li>
+
+`r tbls("Samples2")`
+
+```{r echo=FALSE,background="white"}
+smpls2
+```
+
+  <li>Results for the means are in `r tbls("Means2",display="cite")`.</li>
+
+`r tbls("Means2")`
+
+```{r echo=FALSE,background="white"}
+mns2
+```
+
+  <li>The histogram of means is shown in `r figs("Means2",display="cite")`. The distribution is perfectly symmetric.</li>
+  
+```{r xbarHist, echo=FALSE}
+hist(~mns2,w=0.5,xlab="Sample Means",ylab="Frequency of Samples")
+```
+
+`r figs("Means2")`
+
+  <li>Both the mean of the 28 sample means and the mean of the original set of numbers (the population) are 5.5. This observation is a demonstration of the definition of an unbiased statistic.</li>
+  <li>The standard deviation of the 28 sample means is `r formatC(sd(mns2),format="f",digits=2)`. This standard deviation is called a standard error. The standard error would be smaller if samples of n=3 had been taken rather than n=2.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+library(NCStats)
+<<Calc>>
+mean(mns2)
+mean(2:9)
+sd(mns2)
+<<xbarHist>>
+```

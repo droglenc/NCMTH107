@@ -1,0 +1,151 @@
+---
+title: "Answer Key"
+subtitle: "Filtering Data in R Class Example"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_RFilter_CExmpl")
+```
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+```
+
+----
+
+## Load Data From Webpage
+My script to load and examine the **Fire.csv** files was copied from last module and is shown below.
+
+```{r echo=FALSE}
+firedf <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Fire.csv")
+```
+```{r eval=FALSE}
+library(NCStats)
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/1_CE_KEYS")
+firedf <- read.csv("fire.csv")
+```
+```{r}
+str(firedf)
+headtail(firedf)
+```
+
+&nbsp;
+
+----
+
+## Examining Single Variables
+
+<ol start="1">
+<li>The `litdep` variable in `firedf` is shown below.</li>
+
+```{r}
+firedf$litdep
+```
+
+</ol>
+
+
+<ol start="2">
+<li>The `sttype` ariable in `firedf` is shown below.</li>
+
+```{r}
+firedf$sttype
+```
+
+</ol>
+
+<div class="alert alert-warning">
+<ul>
+  <li>To examine a single variable in a data.frame you must type the name of the data frame (e.g., `firedf`) and then the name of the variable (e.g., `litdep` or `sttype`) with a `$` separating the two. This is the only time that you will use a `$` in R.</li>
+  <li>Each of the variables above is a one-dimensional vector that is wrapped to fit the width of the screen. The numbers in brackets on the left side of each line mark the position in the vector of the first item on that line. The numbers in brackets should not be mistaken for data.</li>
+</ul>
+</div>
+
+&nbsp;
+
+----
+
+## Filtering Data Frames
+
+<ol start="1">
+<li>The structure of the data frame with just deciduous stand types is shown below. In addition, just the `sttype` variable is shown to confirm that all the individuals are deciduous.</li>
+
+```{r}
+decid <- filterD(firedf,sttype=="d")
+str(decid)
+decid$sttype
+```
+</ol>
+
+<div class="alert alert-warning">
+<ul>
+  <li>Remember to use two equals signs (`==`) when the condition statement is testing for equality.</li>
+</ul>
+</div>
+
+<ol start="2">
+<li>The structure of the data frame with litter depths less than 2 cm is shown below. In addition, just the `litdep` variable is shown to confirm that all the individuals have a litter depth less than 2 cm..</li>
+
+```{r}
+lt2 <- filterD(firedf,litdep<2)
+headtail(lt2)
+lt2$litdep
+```
+</ol>
+
+<div class="alert alert-warning">
+<ul>
+  <li>The `%in%` operator is used to find all rows within a set. The items in the set must be contained within `c()`.</li>
+</ul>
+</div>
+
+<ol start="3">
+<li>The structure of the data frame with coniferous and mixed coniferous stand types is shown below. In addition, just the `sttype` variable is shown to confirm that all the individuals are coniferous and mixed coniferous.</li>
+
+```{r}
+conif <- filterD(firedf,sttype %in% c("c","mc"))
+str(conif)
+conif$sttype
+```
+
+</ol>
+
+<ol start="4">
+<li>The data frame with coniferous stand types and litter depths greater than 2 cm is shown below.</li>
+
+```{r}
+con_gt2 <- filterD(firedf,sttype=="c",litdep>2)
+con_gt2
+```
+
+</ol>
+
+<div class="alert alert-warning">
+<ul>
+  <li>Two condition statements within `filterD()` are connected with an "and." Thus, the two conditions above are read as "stand type is coniferous AND litter depth is greater than 2 cm."</li>
+</ul>
+</div>
+
+<ol start="5">
+<li>The data frame with litter depths between 1 and 1.5 cm is shown below.</li>
+
+```{r}
+LDbw1n15 <- filterD(firedf,litdep>1,litdep<1.5)
+LDbw1n15
+```
+
+</ol>
+
+<div class="alert alert-warning">
+<ul>
+  <li>To create a condition that is a "between" you need to ask for greater than the smaller value AND less than the larger value.</li>
+</ul>
+</div>

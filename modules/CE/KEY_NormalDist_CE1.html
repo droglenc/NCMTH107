@@ -1,0 +1,127 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Normal Distributions CE 1"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="normal-distribution-characteristics-i" class="section level2">
+<h2>Normal Distribution Characteristics I</h2>
+<ol>
+<li>Using <code>snorm()</code>
+<ol>
+<li>The whole distributions shifts to the right.</li>
+<li>The distribution becomes wider (more dispersed).</li>
+</ol></li>
+<li>Below
+<ol>
+<li><span class="math inline">\(\mu\)</span>=75, <span class="math inline">\(\sigma\)</span>=10, hand-drawn distribution.</li>
+<li><span class="math inline">\(\mu\)</span>=5500, <span class="math inline">\(\sigma\)</span>=600, hand-drawn distribution.</li>
+</ol></li>
+</ol>
+<hr />
+</div>
+<div id="hand-calculations-i" class="section level2">
+<h2>Hand Calculations I</h2>
+<p>For X~N(75,10)</p>
+<ol>
+<li>97.5%</li>
+<li>0.15%</li>
+<li>68%</li>
+<li>81.5%</li>
+<li>Less than 55.</li>
+<li>Between X=55 and 95.</li>
+<li>Greater than X=95.</li>
+</ol>
+<hr />
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+If it is a reverse question (given a percentage/proportion and asked to find a value of the variable) then you must include <code>type=“q”</code> in <code>distrib()</code>.
+</li>
+<li>
+If it is a “right-of” question then you must include <code>lower.tail=FALSE</code> in <code>distrib()</code>.
+</li>
+<li>
+All “between” questions require a three-step process with <code>distrib()</code> to answer. If it is a forward question then <code>distrib()</code> is used to find the areas to the left of the two given values and then those two areas are subtracted. If it is a reverse question then the area between must be converted to a left-of area and a right-of area which are then separately put into <code>distrib()</code> to compute two values (which are the final answer).
+</li>
+</ul>
+</div>
+</div>
+<div id="carpenter-ants" class="section level2">
+<h2>Carpenter Ants</h2>
+<div id="top-questions" class="section level4">
+<h4>Top questions</h4>
+<ol>
+<li>A nest</li>
+<li>Number of Carpenter Ants in a nest</li>
+<li>Discrete quantitative</li>
+<li><span class="math inline">\(\mu\)</span>=1400</li>
+<li><span class="math inline">\(\sigma\)</span>=300</li>
+</ol>
+</div>
+<div id="bottom-questions" class="section level4">
+<h4>Bottom questions</h4>
+<ol>
+<li>forward, right-of.</li>
+<li>reverse, right-of.</li>
+<li>reverse, left-of.</li>
+<li>forward, between.</li>
+<li>forward, left-of.</li>
+<li>reverse, right-of.</li>
+<li>reverse, between.</li>
+</ol>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,305 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Normal Distributions CE 2"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+If it is a reverse question (given a percentage/proportion and asked to find a value of the variable) then you must include <code>type=“q”</code> in <code>distrib()</code>.
+</li>
+<li>
+If it is a “right-of” question then you must include <code>lower.tail=FALSE</code> in <code>distrib()</code>.
+</li>
+<li>
+All “between” questions require a three-step process with <code>distrib()</code> to answer. If it is a forward question then <code>distrib()</code> is used to find the areas to the left of the two given values and then those two areas are subtracted. If it is a reverse question then the area between must be converted to a left-of area and a right-of area which are then separately put into <code>distrib()</code> to compute two values (which are the final answer).
+</li>
+<li>
+I strongly urge you to continue to identify whether the question is a “forward” or “reverse” question (which will identify whether you need to use <code>type=“q”</code> in <code>distrib()</code> or not) and a “left-of”, “right-of”, or “between” question (which will identify whether you need to use <code>lower.tail=FALSE</code> in <code>distrib()</code> or not and whether the answer is a three-step process to calculate).
+</li>
+</ul>
+</div>
+<div id="carpenter-ants" class="section level2">
+<h2>Carpenter Ants</h2>
+<ol>
+<li>4.78%.</li>
+<li>1711 ants.</li>
+<li>1268 ants.</li>
+<li>94.24%.</li>
+<li>0.012%.</li>
+<li>1893 ants.</li>
+<li>Between 1016 and 1784 ants.</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(1900,mean=1400,sd=300,lower.tail=FALSE)*100
+distrib(0.15,mean=1400,sd=300,type=&quot;q&quot;,lower.tail=FALSE)
+distrib(0.33,mean=1400,sd=300,type=&quot;q&quot;)
+ab &lt;- distrib(1900,mean=1400,sd=300)
+a &lt;- distrib(700,mean=1400,sd=300)
+(ab-a)*100
+distrib(300,mean=1400,sd=300)*100
+distrib(0.05,mean=1400,sd=300,type=&quot;q&quot;,lower.tail=FALSE)
+distrib(0.10,mean=1400,sd=300,type=&quot;q&quot;)
+distrib(0.10,mean=1400,sd=300,type=&quot;q&quot;,lower.tail=FALSE)</code></pre>
+<hr />
+</div>
+<div id="sat-scores" class="section level2">
+<h2>SAT Scores</h2>
+<ol>
+<li>SAT score is a continuous quantitative variable (this may be discrete, so I counted discrete as correct).</li>
+<li>The proportion of students not accepted by School A is 0.221.</li>
+<li>The percentage of students accepted by School B is 6.2%.</li>
+<li>The percentage of students accepted by School A but not School B is 71.7%.</li>
+<li>School C should set the acceptance criterion at 594.</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(500,mean=550,sd=65)
+distrib(650,mean=550,sd=65,lower.tail=FALSE)
+ab &lt;- distrib(650,mean=550,sd=65)
+a &lt;- distrib(500,mean=550,sd=65)
+ab-a
+distrib(0.25,mean=550,sd=65,type=&quot;q&quot;,lower.tail=FALSE)</code></pre>
+<hr />
+</div>
+<div id="urban-deer-relocations" class="section level2">
+<h2>Urban Deer Relocations</h2>
+<ol>
+<li>The proportion of deer with home ranges between 0.2 and 0.4 km<sup>2</sup> is 0.707.</li>
+<li>The proportion of deer with a home range greater than 0.32 km<sup>2</sup> is 0.417.</li>
+<li>The home range such that 17% of the deer have a larger home range is 0.39 km<sup>2</sup>.</li>
+<li>The home range such that 32% of the deer have a smaller home range is 0.26 km<sup>2</sup>.</li>
+<li>The proportion of deer with a home range less than 0.4 km<sup>2</sup> is 0.854.</li>
+<li>The most common 48% of home ranges are between 0.24 and 0.36 km<sup>2</sup>.</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>ab &lt;- distrib(0.4,mean=0.3,sd=0.095)
+a &lt;- distrib(0.2,mean=0.3,sd=0.095)
+ab-a
+distrib(0.32,mean=0.3,sd=0.095,lower.tail=FALSE)
+distrib(0.17,mean=0.3,sd=0.095,type=&quot;q&quot;,lower.tail=FALSE)
+distrib(0.32,mean=0.3,sd=0.095,type=&quot;q&quot;)
+distrib(0.4,mean=0.3,sd=0.095)
+distrib(0.26,mean=0.3,sd=0.095,type=&quot;q&quot;)
+distrib(0.26,mean=0.3,sd=0.095,type=&quot;q&quot;,lower.tail=FALSE)</code></pre>
+<p><br> <br> <br> <br> <br> <br></p>
+<hr />
+</div>
+<div id="iphone-battery-lifespan" class="section level2">
+<h2>iPhone Battery Lifespan</h2>
+<ol>
+<li>Number of charge-cycles is a discrete quantitative variable.</li>
+<li>The proportion of betteries that would be rated as “exceptional” is 0.006.</li>
+<li>The percentage of batteries that would be rated as better than “acceptably poor” but not “exceptional” is 88.8%.</li>
+<li>The new definition of “exceptional” (i.e., the top 10% of batteries) would be 426 charge-cycles.</li>
+<li>The new definition of “unacceptably poor” (i.e., the bottom 25% of batteries) would be 387 charge-cycles.</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(450,mean=400,sd=20)
+ab &lt;- distrib(450,mean=400,sd=20)
+a &lt;- distrib(375,mean=400,sd=20)
+ab-a
+distrib(0.10,mean=400,sd=20,type=&quot;q&quot;,lower.tail=FALSE)
+distrib(0.25,mean=400,sd=20,type=&quot;q&quot;)</code></pre>
+<hr />
+</div>
+<div id="normal-distribution-characteristics-ii" class="section level2">
+<h2>Normal Distribution Characteristics II</h2>
+<ol>
+<li>Below
+<ol>
+<li><span class="math inline">\(\mu\)</span>=0, <span class="math inline">\(\sigma\)</span>=1</li>
+<li><span class="math inline">\(\mu\)</span>=90, <span class="math inline">\(\sigma\)</span>=8</li>
+</ol></li>
+</ol>
+<hr />
+</div>
+<div id="hand-calculations-ii" class="section level2">
+<h2>Hand Calculations II</h2>
+<p>For Z~N(0,1)</p>
+<ol>
+<li>Z=1</li>
+<li>2.5%</li>
+<li>99.85%</li>
+<li>Between Z=-3 and 3.</li>
+</ol>
+<hr />
+</div>
+<div id="pollen-counts" class="section level2">
+<h2>Pollen Counts</h2>
+<div id="top-questions" class="section level4">
+<h4>Top questions</h4>
+<ol>
+<li>A day in LaCrosse, WI n early September</li>
+<li>Pollen count (spores per cubic meter)</li>
+<li>Discrete quantitative</li>
+<li><span class="math inline">\(\mu\)</span>=40</li>
+<li><span class="math inline">\(\sigma\)</span>=8</li>
+</ol>
+</div>
+<div id="bottom-questions" class="section level4">
+<h4>Bottom questions</h4>
+<ol>
+<li><ol style="list-style-type: lower-alpha">
+<li>reverse, right-of; (b) 50.3 spores per cubic meter.</li>
+</ol></li>
+<li><ol style="list-style-type: lower-alpha">
+<li>forward, left-of; (b) 0.894.</li>
+</ol></li>
+<li><ol style="list-style-type: lower-alpha">
+<li>forward, between; (b) 0.811.</li>
+</ol></li>
+<li><ol style="list-style-type: lower-alpha">
+<li>reverse, left-of; (b) 35.8 spores per cubic meter.</li>
+</ol></li>
+<li><ol style="list-style-type: lower-alpha">
+<li>reverse, between; (b) Between 31.7 and 48.3 spores per cubic meter.</li>
+</ol></li>
+<li><ol style="list-style-type: lower-alpha">
+<li>forward, right-of; (b) 0.734.</li>
+</ol></li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(0.1,mean=40,sd=8,type=&quot;q&quot;,lower.tail=FALSE)
+distrib(50,mean=40,sd=8)
+ab &lt;- distrib(55,mean=40,sd=8)
+a &lt;- distrib(32,mean=40,sd=8)
+ab-a
+distrib(0.3,mean=40,sd=8,type=&quot;q&quot;)
+distrib(0.15,mean=40,sd=8,type=&quot;q&quot;)
+distrib(0.15,mean=40,sd=8,type=&quot;q&quot;,lower.tail=FALSE)
+distrib(35,mean=40,sd=8,lower.tail=FALSE)</code></pre>
+<hr />
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+The IQR question below (#4) is the same as asking “what is the most common 50% of times to pass between the two points?”.
+</li>
+<li>
+For question #6 below, the median is equal to the mean for a normal distribution (or any distribution that is perfectly symmetric).
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="driving-speed" class="section level2">
+<h2>Driving Speed</h2>
+<div id="top-questions-1" class="section level4">
+<h4>Top questions</h4>
+<ol>
+<li>A car traveling between the two points</li>
+<li>Time to travel between the two points</li>
+<li>Continuous quantitative</li>
+<li><span class="math inline">\(\mu\)</span>=2.5</li>
+<li><span class="math inline">\(\sigma\)</span>=0.75</li>
+</ol>
+</div>
+<div id="bottom-questions-1" class="section level4">
+<h4>Bottom questions</h4>
+<ol>
+<li><ol style="list-style-type: lower-alpha">
+<li>reverse, right-of; (b) 3.28 s</li>
+</ol></li>
+<li><ol style="list-style-type: lower-alpha">
+<li>forward, left-of; (b) 0.023.</li>
+</ol></li>
+<li><ol style="list-style-type: lower-alpha">
+<li>forward, between; (b) 0.905.</li>
+</ol></li>
+<li><ol style="list-style-type: lower-alpha">
+<li>reverse, between; (b) The IQR is from a Q1 of 1.99 s to a Q3 of 3.01 s.</li>
+</ol></li>
+<li><ol style="list-style-type: lower-alpha">
+<li>forward, right-of; (b) 0.000000000987.</li>
+</ol></li>
+<li><ol style="list-style-type: lower-alpha">
+<li>reverse, left-of or right-of; (b) 2.5 s.</li>
+</ol></li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(0.15,mean=2.5,sd=0.75,type=&quot;q&quot;,lower.tail=FALSE)
+distrib(1,mean=2.5,sd=0.75)
+ab &lt;- distrib(4.5,mean=2.5,sd=0.75)
+a &lt;- distrib(1.5,mean=2.5,sd=0.75)
+ab-a
+distrib(0.25,mean=2.5,sd=0.75,type=&quot;q&quot;)
+distrib(0.25,mean=2.5,sd=0.75,type=&quot;q&quot;,lower.tail=FALSE)
+distrib(7,mean=2.5,sd=0.75,lower.tail=FALSE)</code></pre>
+<hr />
+</div>
+</div>
+<div id="turkey-spur-length" class="section level2">
+<h2>Turkey Spur Length</h2>
+<ol>
+<li>The spur length such that 30% of the turkeys have a longer spur length is 23 mm.</li>
+<li>The proportion of turkeys with spur lengths between 15 and 25 mm is 0.811.</li>
+<li>The proportion of turkeys with spur lengths greater than 30 mm is 0.007.</li>
+<li>The spur length such that 10% of turkeys have a smaller spur length is 16 mm.</li>
+<li>The proportion of urkeys with a spur length less than 18 mm is 0.217.</li>
+<li>The most common 80% of spur lengths are between 16 and 26 mm.</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(0.3,mean=20.9,sd=3.7,type=&quot;q&quot;,lower.tail=FALSE)
+ab &lt;- distrib(25,mean=20.9,sd=3.7)
+a &lt;- distrib(15,mean=20.9,sd=3.7)
+ab-a
+distrib(30,mean=20.9,sd=3.7,lower.tail=FALSE)
+distrib(0.1,mean=20.9,sd=3.7,type=&quot;q&quot;)
+distrib(18,mean=20.9,sd=3.7)
+distrib(0.1,mean=20.9,sd=3.7,type=&quot;q&quot;)
+distrib(0.1,mean=20.9,sd=3.7,type=&quot;q&quot;,lower.tail=FALSE)</code></pre>
+<hr />
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
