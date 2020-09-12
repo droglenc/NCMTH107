@@ -32,11 +32,11 @@ source("../../../rhelpers/knitr_setup.R")
 
 ## Carpenter Ants
 
-1. `r formatC(distrib(1900,mean=1400,sd=300,lower.tail=FALSE)*100,format="f",digits=2)`%.
+1. `r formatC(distrib(1900,mean=1400,sd=300,lower.tail=FALSE)*100,format="f",digits=1)`%.
 1. `r formatC(distrib(0.15,mean=1400,sd=300,type="q",lower.tail=FALSE),format="f",digits=0)` ants.
 1. `r formatC(distrib(0.33,mean=1400,sd=300,type="q"),format="f",digits=0)` ants.
-1. `r formatC((distrib(1900,mean=1400,sd=300)-distrib(700,mean=1400,sd=300))*100,format="f",digits=2)`%.
-1. `r formatC(distrib(300,mean=1400,sd=300)*100,format="f",digits=3)`%.
+1. `r formatC((distrib(1900,mean=1400,sd=300)-distrib(700,mean=1400,sd=300))*100,format="f",digits=1)`%.
+1. `r formatC(distrib(300,mean=1400,sd=300)*100,format="f",digits=2)`%.
 1. `r formatC(distrib(0.05,mean=1400,sd=300,type="q",lower.tail=FALSE),format="f",digits=0)` ants.
 1. Between `r formatC(distrib(0.10,mean=1400,sd=300,type="q"),format="f",digits=0)` and  `r formatC(distrib(0.10,mean=1400,sd=300,type="q",lower.tail=FALSE),format="f",digits=0)` ants.
 
