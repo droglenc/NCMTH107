@@ -1,0 +1,121 @@
+---
+title: "Answer Key"
+subtitle: "Summaries for One Quantitative Variable CE"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_UnivSum_CE")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+library(captioner)
+tbls <- captioner(prefix="Table")
+figs <- captioner(prefix="Figure")
+tbls(name="Brain1","Summary statistics for brain weight (g).")
+tbls(name="Brain2","Summary statistics for brain weight (g) separated by age group.")
+figs(name="Brain1","Histogram of brain weight (g).")
+figs(name="Brain2","Histograms of brain weight (g) separated by age group.")
+tbls(name="gpa1","Summary statistics for gpa in all classes.")
+tbls(name="gpa2","Summary statistics for gpa separated by class type.")
+figs(name="gpa1","Histogram of gpa in all classes.")
+figs(name="gpa2","Histograms of gpa separated by class type.")
+```
+
+----
+
+## Calculate Summary Statistics
+
+<div class="alert alert-warning">
+<strong>Note:</strong> 
+<ul>
+<li>Make sure to show your work when calculating the standard deviation. The method shown below is one way to show your work that produces consistent results. On assessments, not showing your work will result in a zero for the question.</li>
+<li>Don't forget to arrange the values from smallest to largest when computing the median. Count the original and your arranged data to make sure you have the same number of values in both.</li>
+<li>The median will be one of the observed values if n is odd, but it will be the average of two observed values if n is even.</li>
+<li>If n is odd such that the median is one of the observed values, then that value is NOT included in either "half" of the data when computing the IQR. In other words, the "lower half" of the data will end right before the median and the "upper half" of the data will end right after the median. See Data Set 2 below.</li>
+</ul>
+</div>
+
+<ol>
+<li>Shown below</li>
+```{r}
+sdCalc(c(18,28,25,21,16,24))
+```
+<li>Shown above</li>
+<li>Shown below</li>
+```{r}
+iqrCalc(c(4,54,16,85,52,29,24,71,61,60,2))
+```
+<li>Shown above</li>
+<li>Shown below</li>
+```{r}
+iqrCalc(c(93,81,34,5,54,84,54,13,1,35,79,63,97,71))
+```
+
+<li>Shown above</li>
+<li>Range is 1 to 97.</li>
+</ol>
+
+----
+
+## Histograms I
+
+1. An individual is a state.
+1. The variable is the mean commute time for indivuals 16-years and older in states of the U.S.
+1. Mean Commute time (mins) is a quantitative, continuous variable.
+1. 51
+1. 2
+1. 25
+1. 26-28
+
+----
+
+## Frequency and Percentages Tables
+
+*Should be performed by hand to match results below*
+
+<ol>
+<li>Frequency Table</li>
+```{r echo=FALSE}
+d <- read.csv("breeds.csv")
+( tbl <- xtabs(~group,data=d) )
+```
+
+<li>Percentage Table</li>
+```{r}
+percTable(tbl,digits=1)
+```
+
+<li>Bar Chart</li>
+```{r echo=FALSE, fig.width=6, fig.height=3, par1=TRUE}
+barplot(tbl,xlab="Breed of Dog",ylab="Frequency of Wins")
+```
+
+<li>Shepherds were the most common herding group winners in the Westminster Kennel Club championships winning `r formatC(tbl[["Shepherd"]]/sum(tbl)*100,format="f",digits=1)`% of the time over the last 36 years</li>
+</ol>
+
+----
+
+## Bar Chart I
+
+<ol>
+<li>A Northland College student.</li>
+<li>Categorical, nominal.</li>
+<li>Frequency table is below.</li>
+```{r echo=FALSE}
+( d <- c(Love=45,Money=1,Pregnancy=0,Other=4) )
+```
+<li>Percentage table is below.</li>
+```{r echo=FALSE}
+round(d/sum(d)*100,1)
+```
+</ol>

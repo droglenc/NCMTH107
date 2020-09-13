@@ -1,0 +1,75 @@
+---
+title: "Answer Key"
+subtitle: "Bivariate EDA Quantitative CE"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3.5
+    fig_width: 3.5
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_BEDAQuant_CE")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+library(captioner)
+figs <- captioner(prefix="Figure")
+figs(name="IBI1","Scatterplot of IBI scores versus the percentage of impervious surface for 14 areas in Washington")
+figs(name="FishCrPlot","Scatterplot of total dissolved solids versus discharge in Fish Creek.")
+figs(name="GestPlot","Scatterplot of longevity versus gestation period for a sample of 40 animals.")
+figs(name="Cafe1","Scatterplot of number of coffees sold versus maximum daily temperature for the college cafe.")
+figs(name="Cafe2","Scatterplot of number of coffees sold versus number of sodas sold for the college cafe.")
+figs(name="Cafe3","Scatterplot of number of coffees sold versus number of days since opening for the college cafe.")
+```
+
+----
+
+## Scatterplots
+
+1. Location of the Christmas bird count.
+1. Both are quantitative, continuous.
+1. 55 degrees north.
+1. Approximately 11%.
+1. 39 degrees north, 71%.
+1. 6 surveys.
+1. 4 surveys (not including 40 and 45).
+1. Negative.
+
+----
+
+## Associations I
+
+1. (a) Gas mileage as I would expect gas mileage to depend on the weight of the car. (b) Negative as I would expect heavier cars to require more gas (and, thus, gas mileage would decrease).
+1. (a) Proportion that became ill as I would expect that to depend on the proportion that were vaccinated. (b) Negative as I would expect the number that became ill to decrease with an increasing proportion vaccinated.
+1. (a) Salary as I would expect it to depend on years of education. (b) Positive as I would expect expected salary to increase the more education an individual achieved.
+1. (a) Exam score (only because it is possible to consider that exam score depends on mother's age, but vice versa is not possible to consider). (b) Neutral as I would not expect exam score to depend on one's mother's age.
+1. (a) Proportion of households that have an air conditioner. (b) Positive as I would expect the proportion of households that have an air conditioner to increase as the mean summer temperature increases.
+
+----
+
+<div class="alert alert-warning">
+<strong>Note (for all of the EDA questions below):</strong> 
+<ul>
+<li>That all four items (Form, Association/Direction, Outliers, and Strength) are addressed for each question. Many students may omit outliers if no outliers exist; however, you should explicitly say "no outliers were present" (or similar) as shown below.</li>
+<li>The form should only be considered non-linear if there is a CLEAR curve to the data. If you are wondering very hard about whether it is nonlinear or not, then it is probably linear.</li>
+<li>Strength must be assessed even if the form is non-linear. However, if the form is non-linear then your assessment of strength will be subjective. If the form is linear then you must use the correlation coefficient (r) and the table in the reading to identify if the strength is "strong", "moderate", "weak", or "no strength."</li>
+<li>Include a sentence in each description that describes how you assessed strength and why you did it that way. See answers below for examples.
+</ul>
+</div>
+
+## Animal Fat and Breast Cancer
+
+The relationship between age-adjusted death rate and animal fat intake is positive, linear, absent of outliers, and very strong (r=0.949; Figure on exercise). It was valid to assess strength with the correlation coefficient because of the linear form and lack of outliers.
+
+----
+
+## Religiosity
+The relationship between the percent that stated that religion was important or very important and life expectancy at birth is non-linear, negative, moderately strong, with no obvious outliers present. Strength was assessed from visual examination of the scatterplor rather than using the correlation coefficient because of the non-linear form.
