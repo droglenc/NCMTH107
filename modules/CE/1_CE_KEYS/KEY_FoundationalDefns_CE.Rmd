@@ -1,0 +1,88 @@
+---
+title: "Answer Key"
+subtitle: "Foundational Definitions CE"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_FoundationalDefns_CE")
+```
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+```
+
+----
+
+<div class="alert alert-warning">
+<strong>Note:</strong> 
+<ul>
+<li>In the next two sections, the variable type must be one of continuous, discrete, nominal, or ordinal (saying quantitative or categorical is not specific enough).</li>
+</ul>
+</div>
+
+## Types of Variables I
+
+1. Miles driven per week is quantitative, continuous because another value CAN be found between any two miles driven values (e.g., a student can drive between 10 and 10.1 miles per week, between 10 and 10.01 miles per week, and so on).
+1. Type of vehicle is categorical, nominal because the types represent groups but there is no order among the groups.
+1. Signs of disease is categorical, nominal because "yes" and "no" are groups and a categorical variables with two levels is nominal by definition.
+1. Number of fleas is quantitative, discrete because another value can NOT be found between all pairs of numbers of fleas (e.g., there cannot be between 10 and 11 fleas).
+1. Relative health of a rabbit is categorical, ordinal because the health was organized by groups (e.g., excellent) and those groupings were ordered.
+1. Species of rabbit is categorical, nominal because species is a type of group, but there is no order among those groups.
+1. Number of correct answers is quantitative, discrete because a value can NOT be found between all pairs of correct answers (e.g., there cannot be between 19 and 20 correct answers).
+1. Concentration of lead is quantitative, continuous because a value CAN be found between any pair of lead concentrations.
+1. Risk potential is categorical, ordinal because a grouping was created (e.g., "high risk") and those groupings have an order.
+1. Information medium is categorical, nominal because they are types, but those types do not have an ordering.
+1. The Koppen scheme is definitely categorical and I think it is nominal because I don't see an ordering in the given categories (i.e., they don't appear to range from wet to dry, cold to hot, north to south).
+
+----
+
+<br>
+
+<div class="alert alert-warning">
+<strong>Note:</strong> 
+<ul>
+<li>The specificity in the description for the individual (usually specific about "when" and "where").</li>
+<li>The use of "ALL" when describing the population and parameter.</li>
+<li>The list of a specific number of individuals when describing the sample and statistic.</li>
+<li>The use of a specific type of summary (almost always the mean/average or percentage/proportion) when describing the parameter and statistic. Further note that the same summary word is used for both the parameter and statistic.</li>
+<li>A summary word usually does not appear in the description of the variable.</li>
+<li>The variable type must be one of continuous, discrete, nominal, or ordinal (saying quantitative or categorical is not specific enough).</li>
+</ul>
+</div>
+
+## Sustainability Survey
+
+* I - A Northland College Student in Fall, 2013
+* V - Number of miles driven per week
+* Po - **ALL** Northland College Students in Fall, 2013
+* Pa - *Average* number of miles driven per week by **ALL** Northland College Students in Fall, 2013
+* Sa - 147 sampled Northland College students
+* St - *Average* number of miles driven per week by 147 sampled Northland College Students in Fall, 2013 
+* Variable Type - Miles driven per week is quantitative, continuous because another value can be found been any two miles driven.
+
+----
+
+## Crayfish and Bass
+
+* I - a Rusty Crayfish in the lake with Smallmouth Bass in 2015
+* V - carapace length of Rusty Crayfish
+* Po -**ALL** Rusty Crayfish in the lake with Smallmouth Bass in 2015
+* Pa - *mean* carapace length of **ALL** Rusty Crayfish in the lake with Smallmouth Bass in 2015
+* Sa - 235 Rusty Crayfish in the lake with Smallmouth Bass in 2015 that were actually examined
+* St - *mean* carapace length of 235 Rusty Crayfish in the lake with Smallmouth Bass in 2015
+* Variable Type - Carapace length is a continuous quantitative variable because a carapace length can be found between any two carapace lengths.
+
+----
+
+## Types of Variables II
+
+1. Answers will vary by student. See instructor if you have questions about your example.
+ 
