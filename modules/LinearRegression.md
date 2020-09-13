@@ -54,13 +54,15 @@ Use the resources below to answer [these questions](Prep/LinearRegression). [[*P
 * [Assignment](CE/LinearRegression_CE1) ... [ANSWER KEY](CE/KEY_LinearRegression_CE)
 * [Additional Exercises](CE/LinearRegression_CE2)
 
-<!---
 &nbsp;
 
 ----
 
 ## Archived Materials
 
+* [In-Class "Review Lecture"](https://vimeo.com/457494748) [55 mins] ... [*projection is the class example above*]
+
+<!---
 * [Old Lecture Slides](PPT/LinearRegression_PPT_old.pptx)
 
 --->
