@@ -66,7 +66,8 @@ source("../../../rhelpers/knitr_setup.R")
 <div class="alert alert-warning">
 <strong>Note:</strong>
 <ul>
-<li>Here and in the next question, make sure to list all of the factors, list levels seperately for each of the factors, and list the number of replicates as the number of individuals PER treatment (not all of the individuals in the experiment). For the R work you don't need to use the code with the square brackets, just split the random numbers up into as many groups as you have treatments.</li>
+<li>Here and in the next question, make sure to list all of the factors, list levels seperately for each of the factors, and list the number of replicates as the number of individuals PER treatment (not all of the individuals in the experiment).</li>
+<li>For the R work you don't need to use the code with the square brackets, just split the random numbers up into as many groups as you have treatments.</li>
 </ul>
 </div>
 
@@ -127,64 +128,3 @@ alloc2[31:36]  # sixth treatment
 ```{r eval=FALSE, prompt=FALSE}
 <<SSTalloc>>
 ```
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-----
-
-## Study Types II
-1. Experiment ... the men were given a treatment (training program) with before/after results recorded
-1. Observational ... no treatment was imparted (the brain cancer factor was naturally induced).
-1. Observational ... no treatment was imparted (alcohol use was a choice of the women).
-1. Observational ... no treatment was imparted (work at night was a "choice" of the women)
-1. Observational ... no treatment was imposed on the subjects in the study and the subjects chose to participate in the study or not.
-
-----
-
-## Types of Observational Studies II
-1. Voluntary response because even though car owners were randomly called they were given the opportunity to opt-out of the sample.
-1. Voluntary response because the responses were not collected randomly; rather, the customer voluntarily chose to leave a response or not.
-
-----
-
-## Identify Response and Explanatory Variables II
-1. The response variable is sales of umbrellas because umbrella sales are effected by the amount of rainfall. And the amount of rainfall does not depend on umbrella sales.
-1. The response variable is weight as the child does not get older as it weights more (but it could weigh more as it got older).
-
-----
-
-## Softball Bats and Balls
-
-<div class="alert alert-warning">
-<strong>Note:</strong>
-<ul>
-<li>The randomization in this example is fairly non-typical and is completely dependent on the way the researchers set up this experiment. In other words, focus on the previous examples for a more general method of randomizing individuals for the treatments.</li>
-</ul>
-</div>
-
-1. This is an experiment because the researcher is imparting treatments (ball types and bats were chosen specifically).
-1. The response variable is the distance that the ball was hit.
-1. Distance is a quantitative, continuous variable because a distance can always be found between any two distances.
-1. The two factors are brand of ball and type of bat.
-1. There are two levels of ball brand and three levels of bat type.
-1. There are six treatments (unique combinations of two balls and three bats).
-1. There are four replicates (balls of each brand by each type of bat).
-1. A "replicate" (or "individual") in this experiment is a "hit."
-1. I would first randomly order the bats and then randomly order the two brands for each bat.
-```{r}
-sample(3)  # random order of bats
-sample(8)  # first order of balls ... 1-4 is first brand, 5-8 second
-sample(8)  # second order of balls
-sample(8)  # third order of balls
-```
-
-----
-
