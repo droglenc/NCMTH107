@@ -86,13 +86,13 @@ Here and in the next question, make sure to list all of the factors, list levels
 <tbody>
 <tr class="odd">
 <td>No Exercise</td>
-<td>20, 6, 4, 16, 21, 27, 19, 2</td>
-<td>29, 25, 32, 26, 15, 10, 31, 13</td>
+<td>18, 10, 24, 1, 8, 15, 5, 12</td>
+<td>32, 25, 14, 26, 2, 30, 28, 17</td>
 </tr>
 <tr class="even">
 <td>Exercise</td>
-<td>1, 24, 3, 12, 11, 28, 7, 30</td>
-<td>5, 22, 9, 18, 23, 8, 14, 17</td>
+<td>9, 22, 31, 16, 6, 7, 11, 27</td>
+<td>23, 29, 21, 4, 3, 13, 19, 20</td>
 </tr>
 </tbody>
 </table>
@@ -130,15 +130,15 @@ alloc[25:32]  # fourth treatment</code></pre>
 <tbody>
 <tr class="odd">
 <td>10% salt</td>
-<td>20, 6, 4, 16, 21, 27</td>
-<td>19, 2, 29, 25, 32, 26</td>
-<td>15, 10, 31, 13, 1, 24</td>
+<td>35, 31, 30, 9, 32, 1</td>
+<td>18, 11, 16, 23, 22, 2</td>
+<td>25, 17, 4, 20, 29, 8</td>
 </tr>
 <tr class="even">
 <td>15% salt</td>
-<td>3, 12, 11, 28, 7, 30</td>
-<td>5, 22, 9, 18, 23, 8</td>
-<td>14, 17, NA, NA, NA, NA</td>
+<td>21, 28, 33, 13, 36, 26</td>
+<td>19, 10, 24, 15, 6, 34</td>
+<td>7, 14, 27, 5, 12, 3</td>
 </tr>
 </tbody>
 </table>
@@ -204,13 +204,13 @@ The randomization in this example is fairly non-typical and is completely depend
 <li>I would first randomly order the bats and then randomly order the two brands for each bat.</li>
 </ol>
 <pre class="r"><code>&gt; sample(3)  # random order of bats</code></pre>
-<pre><code>[1] 1 3 2</code></pre>
+<pre><code>[1] 2 1 3</code></pre>
 <pre class="r"><code>&gt; sample(8)  # first order of balls ... 1-4 is first brand, 5-8 second</code></pre>
-<pre><code>[1] 7 4 5 8 3 6 1 2</code></pre>
+<pre><code>[1] 5 2 6 7 8 4 3 1</code></pre>
 <pre class="r"><code>&gt; sample(8)  # second order of balls</code></pre>
-<pre><code>[1] 1 4 2 8 7 3 5 6</code></pre>
+<pre><code>[1] 2 6 8 5 3 1 4 7</code></pre>
 <pre class="r"><code>&gt; sample(8)  # third order of balls</code></pre>
-<pre><code>[1] 2 3 5 6 7 1 4 8</code></pre>
+<pre><code>[1] 5 2 1 4 8 6 3 7</code></pre>
 <hr />
 </div>
 
