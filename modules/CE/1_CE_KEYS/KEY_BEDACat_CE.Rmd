@@ -1,0 +1,155 @@
+---
+title: "Answer Key"
+subtitle: "Bivariate EDA Categorical CE"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_BEDACat_CE")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+library(captioner)
+tbls <- captioner(prefix="Table")
+tbls(name="BlightRow","Percentages of outcomes within each tree treatment type.")
+tbls(name="BlightCol","Percentages of tree treatment type within each outcome.")
+tbls(name="BlightTot","Percentages of each tree treament type and outcome.")
+
+tbls(name="ReligionRow",'Row percentages table for level of support of genetic counseling by religion.')
+```
+
+----
+
+## Hand Calculations
+
+<ol>
+<li>Two-way frequency table is below.</li>
+```{r echo=FALSE}
+d <- data.frame(VAR1 <- c("C","C","A","C","A","B","C","A","A","B",
+                          "A","B","B","A","C","C","A","C","A","B",
+                          "B","A","A","C","A","C","B","B"),
+                VAR2 <- c("x","x","y","x","x","y","x","y","y","y",
+                          "x","x","y","y","y","x","x","x","y","y",
+                          "x","y","x","y","x","y","x","y"))
+```
+```{r eval=FALSE, echo=FALSE}
+d <- read.csv("BivEDA_CE1.csv")
+```
+```{r echo=FALSE}
+( tbl <- xtabs(~VAR2+VAR1,data=d))
+```
+
+<li>Row Percentages Table</li>
+```{r echo=FALSE}
+percTable(tbl,margin=1,digits=1)
+```
+
+<li>Column Percentages Table</li>
+```{r echo=FALSE}
+percTable(tbl,margin=2,digits=1)
+```
+
+<li>Total Percentages Table</li>
+```{r echo=FALSE}
+percTable(tbl,digits=1)
+```
+</ol>
+
+----
+
+<div class="alert alert-warning">
+<strong>Note:</strong> 
+<ul>
+<li>In the remaining questions, the "trick" to making the computation is to determine if the question is restricted to only a portion of the data. If the question is restricted to one of the levels that corresponds to a row then compute a row percentage (i.e., divide the raw frequency by the total of its row). If the question is restricted to one of the levels that corresponds to a column then compute a column percentage (i.e., divide the raw frequency by the total of its column). If the question does not restrict to a level in either a row or column, then compute a table or total percentage (i.e., divide the raw frequency by the total number of individuals in the table.</li>
+<li>Generally speaking, percentages should be rounded to one decimal place (as illustrated below).</li>
+</ul>
+</div>
+
+## Fire Blight Disease
+```{r echo=FALSE}
+d <- data.frame(treat=c("A","A","A","A","A","B","B","B","C","C","A","A",
+                        "B","B","B","C","C","C","C","B","B","C","C","C"),
+                out=factor(c(1,1,1,1,1,1,1,1,1,1,2,2,
+                             2,2,2,2,2,2,2,3,3,3,3,3)))
+d <- dplyr::mutate(d,
+                   treat=FSA::mapvalues(treat,from=c("A","B","C"),
+                                        to=c("No Action (control)",
+                                             "Removed Branches",
+                                             "Sprayed and Removed")),
+                   out=FSA::mapvalues(out,from=c("1","2","3"),
+                                      to=c("Within 1 Year",
+                                           "2-4 Years Later",
+                                           "4+ Years Later")))
+```
+```{r BlightTables, echo=FALSE, results='hide'}
+( tbl <- xtabs(~treat+out,data=d) )
+( tbl2 <- addMargins(tbl) )
+( row.tbl <- percTable(tbl,margin=1) )
+( col.tbl <- percTable(tbl,margin=2) )
+( perc.tbl <- percTable(tbl) )
+```
+
+<ol>
+  <li>The response variable is the outcome (i.e., time of death of the tree). Note that the row percentage table is in `r tbls("BlightRow",display="cite")`, the  column percentage table is in `r tbls("BlightCol",display="cite")`, and the table percentage table is shown in `r tbls("BlightTot",display="cite")`.</li>
+  
+`r tbls("BlightRow")`
+
+```{r echo=FALSE, background="white"}
+row.tbl
+```
+
+`r tbls("BlightCol")`
+
+```{r echo=FALSE, background="white"}
+col.tbl
+```
+
+`r tbls("BlightTot")`
+
+```{r echo=FALSE, background="white"}
+perc.tbl
+```
+
+  <li>The percentage of all trees in the control treatment that were dead within the first year is $\frac{`r tbl2["No Action (control)","Within 1 Year"]`}{`r tbl2["No Action (control)","Sum"]`}\times 100$ = `r formatC(row.tbl["No Action (control)","Within 1 Year"],format="f",digits=1)`% (`r tbls("BlightRow",display="cite")`).</li>
+  <li>The percentage of ALL trees that were in the control treatment AND were dead within the first year is $\frac{`r tbl2["No Action (control)","Within 1 Year"]`}{`r tbl2["Sum","Sum"]`}\times 100$ = `r formatC(perc.tbl["No Action (control)","Within 1 Year"],format="f",digits=1)`% (`r tbls("BlightTot",display="cite")`).</li>
+  <li>The percentage of the trees in the control treatment that died after four years is $\frac{`r tbl2["No Action (control)","4+ Years Later"]`}{`r tbl2["No Action (control)","Sum"]`}\times 100$ = `r formatC(row.tbl["No Action (control)","4+ Years Later"],format="f",digits=1)`% (`r tbls("BlightRow",display="cite")`).</li>
+  <li>The percentage of the trees that died after 2-4 years that were in the control treatment is $\frac{`r tbl2["No Action (control)","2-4 Years Later"]`}{`r tbl2["Sum","2-4 Years Later"]`}\times 100$ = `r formatC(col.tbl["No Action (control)","2-4 Years Later"],format="f",digits=1)`% (`r tbls("BlightCol",display="cite")`).</li>
+  <li>The percentage of all trees that were dead within the first year is $\frac{`r tbl2["Sum","Within 1 Year"]`}{`r tbl2["Sum","Sum"]`}\times 100$ = `r formatC(perc.tbl["Sum","Within 1 Year"],format="f",digits=1)`% (`r tbls("BlightTot",display="cite")`).</li>
+  <li>Trees died much earlier when no action was taken (`r tbls("BlightRow",display="cite")`). Spraying and removing branches was slightly more effective (i.e., trees lived longer) than just removing branches.
+</ol>
+
+----
+
+## Religion and Genetic Counseling
+
+```{r echo=FALSE, results="hide"}
+raw <- matrix(c(21,36,10,26,142,52),nrow=3)
+rownames(raw) <- c("Jewish","Protestant","Catholic")
+colnames(raw) <- c("Support","Don’t Support")
+( raw2 <- addMargins(raw) )
+( rowrel <- percTable(raw,margin=1) )
+```
+
+<ol>
+  <li>The percentage of Jewish physicians that support genetic counseling was $\frac{`r raw2["Jewish","Support"]`}{`r raw2["Jewish","Sum"]`}\times100$= `r formatC(raw2["Jewish","Support"]/raw2["Jewish","Sum"]*100,format="f",digits=1)`%.</li>
+  <li>The percentage of Catholic physicians that don’t support genetic counseling was  $\frac{`r raw2["Catholic","Don’t Support"]`}{`r raw2["Catholic","Sum"]`}\times100$= `r formatC(raw2["Catholic","Don’t Support"]/raw2["Catholic","Sum"]*100,format="f",digits=1)`%.</li>
+  <li>The percentage of all physicians surveyed that were Protestant was  $\frac{`r raw2["Protestant","Sum"]`}{`r raw2["Sum","Sum"]`}\times100$= `r formatC(raw2["Protestant","Sum"]/raw2["Sum","Sum"]*100,format="f",digits=1)`%.</li>
+  <li>The percentage of those physicians not supporting genetic counseling that were Catholic was  $\frac{`r raw2["Catholic","Don’t Support"]`}{`r raw2["Sum","Don’t Support"]`}\times100$= `r formatC(raw2["Catholic","Don’t Support"]/raw2["Sum","Don’t Support"]*100,format="f",digits=1)`%.</li>
+  <li>The percentage of all physicians that supported genetic counseling was  $\frac{`r raw2["Sum","Support"]`}{`r raw2["Sum","Sum"]`}\times100$= `r formatC(raw2["Sum","Support"]/raw2["Sum","Sum"]*100,format="f",digits=1)`%.</li>
+  <li>Respondents that identified as Jewish were more than twice as likely to support genetic counseling than those that identified as Protestant or Catholic (`r tbls("ReligionRow",display="cite")`). Those that identified as Catholic were slightly less supportive than those that identified as Protestant.</li>
+</ol>
+
+`r tbls("ReligionRow")`
+
+```{r echo=FALSE, background="white"}
+rowrel
+```
