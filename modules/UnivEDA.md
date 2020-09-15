@@ -44,13 +44,15 @@ Use the resources below to answer [these questions](Prep/UnivEDA). [[*Problems w
 * [Assignment](CE/UnivEDA_CE1) ... [ANSWER KEY](CE/KEY_UnivEDA_CE)
 * [Additional Exercises](CE/UnivEDA_CE2)
 
-<!---
 &nbsp;
 
 ----
 
 ## Archived Materials
 
+* [In-Class "Review Lecture"]() [XX mins]
+
+<!---
 * [Old Lecture Slides](PPT/UEDAQuant_PPT_old.pptx)
 
 --->

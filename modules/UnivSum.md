@@ -59,13 +59,15 @@ Use the resources below to answer [these questions](Prep/UnivSum). [[*Problems w
 * [Assignment](CE/UnivSum_CE1) ... [ANSWER KEY](CE/KEY_UnivSum_CE)
 * [Additional Exercises](CE/UnivSum_CE2)
 
-<!---
 &nbsp;
 
 ----
 
 ## Archived Materials
 
+* [In-Class "Review Lecture"]() [XX mins]
+
+<!---
 * [Old Lecture Slides - Quantitative](PPT/UEDAQuant_PPT_old.pptx)
 * [Old Lecture Slides - Categorical](PPT/UEDACat_PPT_old.pptx)
 

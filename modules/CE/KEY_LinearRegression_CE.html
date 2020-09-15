@@ -1,0 +1,143 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Linear Regression CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="equation-of-the-line-i" class="section level2">
+<h2>Equation of the Line I</h2>
+<ol>
+<li><strong>Dishwasher Example</strong>
+<ol>
+<li>response - Height of suds (mm)</li>
+<li>explanatory - Amount of soap (g)</li>
+<li>slope is 12.4</li>
+<li>intercept is -20.2</li>
+<li>For each additional gram of soap, the height of suds increases by 12.4 mm, on average.</li>
+<li>For 0 grams of soap, the height of suds is -20.2 mm, on average. [<em>This is an extrapolation.</em>]</li>
+<li>Ask to predict height of suds for an amount of soap between 3.5 and 8.0 grams. Example … “What is the predicted height of suds for 5 g of soap?” Answer … -20.2+12.4*5=41.8 mm.</li>
+<li>Ask to predict height of suds for an amount of soap not between 3.5 and 8.0 grams. Example … “What is the predicted height of suds for 10 g of soap?”</li>
+</ol></li>
+<li><strong>Livestock Food Example</strong>
+<ol>
+<li>response - Costs</li>
+<li>explanatory - Livestock food mix in tons</li>
+<li>Slope is 190.</li>
+<li>Intercept is 12075</li>
+<li>For each additional ton of the food mix, the cost increases by $190, on average.</li>
+<li>For 0 tons of the food mix, the costs are $12075, on average. [<em>This may be considered as “start-up” costs.</em>]</li>
+<li>Ask to predict costs for food mix amounts between 36.5 and 42 tons. Example … “What is the cost to make 40 tons of the mix?” Answer … 190*40+12075 = $19675.</li>
+<li>Ask to predict costs for food mix amounts not between 36.5 and 42 tons. Example … “What is the cost to make 70 tons of the mix?”</li>
+</ol></li>
+</ol>
+<hr />
+<div class="alert alert-warning">
+<strong>Note:</strong> In the applied questions below …
+<ul>
+<li>
+The words “response”, “explanatory”, “y”, and “x” are not used at all. These words should be replaced with the actual variable names used in the problem.
+</li>
+<li>
+The x-axis (explanatory) variable is <strong>increased</strong> by 1 unit when describing the slope. If the slope is positive then the y-axis (response) variable increases by the slope amount for each 1 unit increase of the explanatory variable. If the slope is negative then the y-axis (response) variable decreases by the slope amount (with the negative sign removed) for each 1 unit increase of the explanatory variable.
+</li>
+<li>
+Interpret the y-intercept value even if it does not make sense, which will happen often as the y-intercept is often an extreme extrapolation.
+</li>
+<li>
+When computing the residual, make sure to do the observed y-axis (response) value minus the predicted y-axis (response) value. About half the time this will result in a negative value. That is okay, it just means that the observed value was less than the predicted value (i.e., the observed point was below the best-fit line).
+</li>
+<li>
+The words “proportion of variability explained” <strong>always</strong> imply using r<sup>2</sup> as the answer.
+</li>
+<li>
+The correlation coefficient is always the value of r. If you compute r by taking the square root of r<sup>2</sup> then remember to put a negative sign on it if the slope (i.e., direction or association) is negative (your calculator will always return a positive value).
+</li>
+<li>
+When assessing whether anything “concerns” you about the regression then you should address whether the form looks linear and if there is homoscedasticty. Non-linear forms will look obviously curved, heteroscedastic forms will look like a funnel (usually from narrow on the left to wider on the right). If you do not see a curve or a funnel, then explicitly say that you do not have any concerns about the lack of linearity or homoscedasticity.
+</li>
+</ul>
+</div>
+</div>
+<div id="beach-sand" class="section level2">
+<h2>Beach Sand</h2>
+<ol>
+<li>The equation of the best-fit line is SAND = 0.16+0.053*ANGLE</li>
+<li>For each 1 degree increase in beach angle, the median sand diameter increases by 0.053 mm, on average.</li>
+<li>If there is 0 beach angle, then the median sand diameter is 0.16 mm, on average.</li>
+<li>This prediction should not be computed, because 15 degrees of beach angle is outside of the domain of the data used to define the relationship (i.e., this is an extrapolation).</li>
+<li>The predicted median sand diameter for a beach angle of 4 degrees is 0.372 mm.</li>
+<li>The residual for an observed median sand diameter of 0.2 mm and beach angle of 5 degrees is -0.225 mm.</li>
+<li>The correlation coefficient between median sand diameter and beach angle is -0.954.</li>
+<li>The proportion of variability in median sand diameter that is explained by knowing the angle of the beach is 0.910.</li>
+<li>I would expect the median sand diameter to increase by four slopes or 0.212 mm, on average, if the beach angle increased by 4 degrees.</li>
+<li>The relationship between median sand diameter and beach angle appears to be nonlinear.</li>
+</ol>
+<hr />
+</div>
+<div id="everest-temperatures" class="section level2">
+<h2>Everest Temperatures</h2>
+<ol>
+<li>The equation of the best-fit line is AIRTEMP = 29.79+-0.0059*ALTLAPSERATE</li>
+<li>If the altitude lapse rate is 0, then the mean air temperature is 29.79<sup>o</sup>C, on average.</li>
+<li>For each 1 degree increase in altitude lapse rate, the mean air temperature decreases by 0.0059<sup>o</sup>C, on average.</li>
+<li>The predicted mean air temperature for an altitude lapse rate of 4000 <sup>o</sup>C/km is 6.19<sup>o</sup>C.</li>
+<li>The residual for an observed mean air temperature of 0<sup>o</sup>C and altitude lapse rate of 3500<sup>o</sup>C/km is -9.14<sup>o</sup>C.</li>
+<li>The correlation coefficient between mean air temperature and altitude lapse rate is 0.961.</li>
+<li>I would expect the mean air temperature to decrease by 1000 slopes or 5.900 mm, on average, if the altitude lapse rate increased by 1000<sup>o</sup>C/km.</li>
+<li>This prediction should not be computed, because 1000<sup>o</sup>C/km of altitude lapse rate is outside of the domain of the data used to define the relationship (i.e., this is an extrapolation).</li>
+<li>The proportion of variability in mean air temperature that is explained by knowing the altitude lapse rate is 0.923.</li>
+<li>I have no concerns as the relationship between mean air temperature and altitude lapse rate appears to be linear (no evident curve) and homoscedastic (no evident funnel).</li>
+</ol>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

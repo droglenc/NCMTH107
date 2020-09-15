@@ -55,13 +55,16 @@ Use the resources below to answer [these questions](Prep/NormalDist). [[*Problem
 * [Additional Exercises I](CE/NormalDist_CE4)
 * [Additional Exercises II](CE/NormalDist_CE3)
 
-<!---
 &nbsp;
 
 ----
 
 ## Archived Materials
 
+* [In-Class "Review Lecture" Day 1](https://vimeo.com/457531672) [42 mins]
+* In-Class "Review Lecture" Day 2 [XX mins]
+
+<!---
 * Review Exercises: [Simple Areas](RE/NormalDist_RevEx)
 * [Old Lecture Slides](PPT/NormalDist_PPT_old.pptx)
 

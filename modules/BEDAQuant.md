@@ -47,13 +47,15 @@ Use the resources below to answer [these questions](Prep/BEDAQuant). [[*Problems
 * [Assignment](CE/BEDAQuant_CE1) ... [ANSWER KEY](CE/KEY_BEDAQuant_CE)
 * [Additional Exercises](CE/BEDAQuant_CE2)
 
-<!---
 &nbsp;
 
 ----
 
 ## Archived Materials
 
+* [In-Class "Review Lecture"]() [XX mins]
+
+<!---
 * Review Exercises: [Definitions and Calculations](RE/BEDAQuant_RevEx_Defns)
 * [Old Lecture Slides](PPT/BEDAQuant_PPT_old.pptx)
 

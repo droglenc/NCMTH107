@@ -51,12 +51,14 @@ Use the resources below to answer [these questions](Prep/WhyStats){:target="_bla
 * [Assignment](CE/WhyStats_CE1) ... [ANSWER KEY](CE/KEY_WhyStats_CE)
 * [Additional Exercises](CE/WhyStats_CE2)
 
-<!---
 &nbsp;
 
 ----
 
 ## Archived Materials
 
+* [In-Class "Review Lecture"]() [XX mins]
+
+<!---
 * [Class Lecture Slides](PPT/WhyStats_PPT.pptx)
 --->

@@ -61,13 +61,15 @@ Use the resources below to answer [these questions](Prep/DataProduction). [[*Pro
 * [Assignment](CE/DataProduction_CE1) ... [ANSWER KEY](CE/KEY_DataProduction_CE)
 * [Additional Exercises](CE/DataProduction_CE2)
 
-<!---
 &nbsp;
 
 ----
 
 ## Archived Materials
 
+* [In-Class "Review Lecture"]() [XX mins]
+
+<!---
 * [Old Lecture Slides](PPT/DataProduction_PPT_old.pptx)
 
 --->

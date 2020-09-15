@@ -51,12 +51,14 @@ Use the resources below to answer [these questions](Prep/FoundationalDefns). [[*
 * [Additional Exercises](CE/FoundationalDefns_CE2)
 * [Even More Exercises](CE/FoundationalDefns_CE3)
 
-<!---
 &nbsp;
 
 ----
 
 ## Archived Materials
 
+* [In-Class "Review Lecture"]() [XX mins]
+
+<!---
 * [Old Lecture Slides](PPT/FoundationalDefns_PPT_old.pptx)
 --->
