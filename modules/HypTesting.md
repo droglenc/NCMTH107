@@ -52,7 +52,8 @@ Use the resources below to answer [these questions](Prep/HypTesting). [[*Problem
 
 ## Practice
 
-* [Assignment](CE/HypTesting_CE1) ... [ANSWER KEY](CE/KEY_HypTesting_CE)
+* [Assignment I](CE/HypTesting_CE1) ... [ANSWER KEY](CE/KEY_HypTesting_CE1)
+* [Assignment II](CE/HypTesting_CE2) ... [ANSWER KEY](CE/KEY_HypTesting_CE2)
 * [Additional Exercises](CE/HypTesting_CE2)
 
 <!---
