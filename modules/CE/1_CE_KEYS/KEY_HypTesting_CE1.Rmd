@@ -1,0 +1,92 @@
+---
+title: "Answer Key"
+subtitle: "Hypothesis Testing CE I"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3.5
+    fig_width: 3.5
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_HypTesting_CE1")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+library(captioner)
+figs <- captioner(prefix="Figure")
+figs(name="P1","Normal distribution representing the p-value calculation for the first example.")
+figs(name="P2","Normal distribution representing the p-value calculation for the second example.")
+figs(name="P3","Normal distribution representing the p-value calculation for the third example.")
+```
+
+----
+
+## Identifying Hypotheses
+
+<div class="alert alert-warning">
+<strong>When identifying the hypotheses note:</strong> 
+<ul>
+  <li>Each statistical hypothesis must contain a parameter -- either &mu; or p. That parameter must be defined (note the "where ..." constructions below).</li>
+  <li>Each statistical hypothesis must contain a specific value that the parameter is compared to.</li>
+  <li>The null hypothesis (i.e., H<sub>0</sub>) must contain the equals sign. No other mathematical sign is allowed.</li>
+  <li>The alternative hypothesis (i.e., H<sub>A</sub> must contain either the less than (<), greater than (>), or not equals (&ne;) sign. No other mathematical sign is allowed.</li>
+</ul>
+</div>
+
+<ol>
+<li>H<sub>A</sub> &mu; < 90 vs. H<sub>0</sub> &mu; = 90, where &mu; is the mean number of murders for all burroughs in 2010.</li>
+<li>H<sub>A</sub> &mu; > 15 vs. H<sub>0</sub> &mu; = 15, where &mu; is the mean length of all oil changes at the Toyota dealership.</li>
+<li>H<sub>A</sub> &mu; &ne; 22500 vs. H<sub>0</sub> &mu; = 22500, where &mu; is the mean cost of all bariatric surgeries.</li>
+<li>H<sub>A</sub> p > 0.61 vs. H<sub>0</sub> p = 0.61, where p is the proportion of all Washburn High School students that are involved in at least one extracurricular activity.</li>
+</ol>
+
+----
+
+## P-Value Calculations and Decisions I
+
+<div class="alert alert-warning">
+<strong>Note:</strong> 
+<ul>
+<li>When writing the definition of the p-value in the context of the problem you are replacing "the observed statistic" with the value of x&#772;; "more extreme" with "less", "greater", or "different" depending on the sign in H<sub>A</sub>; and the "null hypothesis is true" with the value of &mu; in "the probability of the observed statistic or a value more extreme assuming the null hypothesis is true."</li>
+</ul>
+</div>
+
+<ol>
+<li>The p-value is "the probability of observing a sample mean of 11.2 or 'different' if the population mean is 14." Reject H<sub>0</sub> because p-value=`r formatC(2*distrib(11.2,mean=14,sd=6/sqrt(25)),format="f",digits=4)`<&alpha; (`r figs("P1",display="cite")`).</li>
+```{r p1, echo=FALSE, results='hide'}
+2*distrib(11.2,mean=14,sd=6/sqrt(25))
+```
+
+`r figs("P1")`
+
+<li>The p-value is "the probability of observing a sample mean of 79.5 or greater if the population mean is 75." Reject H<sub>0</sub> because p-value=`r formatC(distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE),format="f",digits=4)`<&alpha; (`r figs("P2",display="cite")`).</li>
+```{r p2, echo=FALSE}
+distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE)
+```
+
+`r figs("P2")`
+
+<li>The p-value is "the probability of observing a sample mean of 13700 or less if the population mean is 15000." Do not reject H<sub>0</sub> because p-value=`r formatC(distrib(13700,mean=15000,sd=8000/sqrt(50)),format="f",digits=4)`>&alpha; (`r figs("P3",display="cite")`).</li>
+
+```{r p3, echo=FALSE}
+distrib(13700,mean=15000,sd=8000/sqrt(50))
+```
+
+`r figs("P3")`
+
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+<<p1>>
+<<p2>>
+<<p3>>
+```

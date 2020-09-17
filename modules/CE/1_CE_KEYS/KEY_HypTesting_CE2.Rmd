@@ -1,0 +1,82 @@
+---
+title: "Answer Key"
+subtitle: "Hypothesis Testing CE II"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3.5
+    fig_width: 3.5
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_HypTesting_CE2")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+library(captioner)
+figs <- captioner(prefix="Figure")
+```
+
+----
+
+## Body Temperature
+
+<div class="alert alert-warning">
+<strong>In the following two applied questions note:</strong> 
+<ul>
+<li>The hypotheses must be defined as noted in the first class exercise above.</li>
+<li>The x&#772; is computed with `Summarize()` with the data file loaded into R.</li>
+<li>The summary statement (question 5 in each) is your answer to the research hypothesis/question based on your p-value results. Generally, this is a restatement about whether you believe (i.e., rejected H<sub>0</sub>) or don't believe (i.e., did not reject H<sub>0</sub>) the H<sub>A</sub> because the H<sub>A</sub> is generally formed from the research hypothesis. This statement should be in the context of the problem and should be made clear that it is about the parameter (see "mean" in each statement below) in the population (see "all" in each statement below). </li>
+<li>Your p-value may be slightly (though not dramatically) different if you rounded your x&#772; and SE differently than I did.</li>
+</ul>
+</div>
+
+<ol>
+<li>H<sub>A</sub> &mu; &ne; 37 vs. H<sub>0</sub> &mu; = 37</li>
+```{r echo=FALSE}
+d <- read.csv("https://github.com/droglenc/NCData/raw/master/NormTemp.csv")
+```
+
+<li>x&#772;=`r formatC(mean(d$bodytemp),format="f",digits=3)`</li>
+<li>p-value=`r formatC(2*distrib(round(mean(d$bodytemp),3),mean=37,sd=0.41/sqrt(nrow(d))),format="f",digits=9)`</li>
+<li>Reject H<sub>0</sub> because p-value < alpha;.</li>
+<li>Average body temperature is somewhat less (but significantly) less than 37<sup>o</sup>C for all individuals in this population.</li>
+</ol>
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+d <- read.csv("NormTemp.csv")
+Summarize(~bodytemp,data=d,digits=3)
+2*distrib(36.808,mean=37,sd=0.41/sqrt(130))
+```
+
+----
+
+## Beetle Size
+```{r echo=FALSE}
+d <- read.csv("https://github.com/droglenc/NCData/raw/master/Beetles.csv")
+d <- filterD(d,species=="Halticus.oleracea")
+```
+
+1. H<sub>A</sub> &mu; > 190 vs. H<sub>0</sub> &mu; = 190, where &mu; is the mean thorax length (&mu;m) for all *Halticus oleracea* beetles in this population.
+1. x&#772;=`r formatC(mean(d$thorax),format="f",digits=3)` &mu;m.
+1. p-value=`r formatC(distrib(round(mean(d$thorax),3),mean=190,sd=14/sqrt(nrow(d)),lower.tail=FALSE),format="f",digits=3)`.
+1. Do not reject H<sub>0</sub> because the p-value > &alpha;.
+1. The average thorax length for all *Halticus oleracea* beetles in this population does not appear to be greater than 190 &mu;m.
+
+R Appendix.
+```{r eval=FALSE, prompt=FALSE}
+setwd("c:/stats")
+d <- read.csv("Beetles.csv")
+d <- filterD(d,species=="Halticus.oleracea")
+Summarize(~thorax,data=d,digits=3)
+distrib(194.167,mean=190,sd=14/sqrt(18),lower.tail=FALSE)
+```
+
