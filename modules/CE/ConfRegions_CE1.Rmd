@@ -55,11 +55,29 @@ The table below can be used to record your results from `ciSim()` for different 
 1. How did the margin-of-error change with increasing level of confidence.
 1. What two things can you, as a statistician, do to make a confidence interval narrower (i.e., reduce the margin-of-error)? Are there any negative consequences to either of decision?
 
+<br>
 
-<div class="text-center">
-<ul class="pagination pagination-lg">
-  <li><a href="../ConfRegions.html">^</a></li>
-  <li class="active"><a href="#">1</a></li>
-  <li><a href="ConfRegions_CE2.html">2</a></li>
-</ul>
+---
+
+## Confidence Region Calculations
+
+<div class="alert alert-success">
+I urge you to follow these steps when answering all confidence region questions:
+<ol type="a">
+  <li>Identify the level of confidence (i.e., 100(1-&alpha;)%).</li>
+  <li>Identify whether a lower confidence bound (greater than H<sub>A</sub>), upper confidence bound (less than H<sub>A</sub>), or confidence interval (not equals H<sub>A</sub>) should be constructed.</li>
+  <li>Find Z<sup>*</sup> (I suggest including a drawing to illustrate your calculation).</li>
+  <li>Calculate the confidence region values (i.e., x&#772;+Z<sup>*</sup>SE).</li>
+  <li>Specifically interpret the confidence region with a complete sentence.</li>
+</ol>
+A reminder to use these steps will <strong>NOT</strong> be provided on future quizzes, but you should get in the habit of following them. See <a href="../Explanations/Calc_CI_Z.html">here</a> for a demonstration of the steps.
 </div>
+
+<br>
+
+For each situation below, calculate and interpret the confidence region.
+
+1. &alpha;=0.10, H<sub>A</sub>: &mu;>75, n=50, &sigma;=12, x&#772;=79.5.
+1. &alpha;=0.05, H<sub>A</sub>: &mu;&#8800;14, n=25, &sigma;=6, x&#772;=11.2.
+1. &alpha;=0.01, H<sub>A</sub>: &mu;>880, n=80, &sigma;=90, x&#772;=918.
+1. &alpha;=0.10, H<sub>A</sub>: &mu;<15000, n=50, &sigma;=8000, x&#772;=13700.
