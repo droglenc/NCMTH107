@@ -1,6 +1,6 @@
 ---
 title: "Answer Key"
-subtitle: "Confidence Regions CE"
+subtitle: "Confidence Regions CE 2"
 author: Derek H. Ogle
 layout: page
 css: "/css/modules.css"
@@ -14,7 +14,7 @@ output:
 ```{r echo=FALSE, eval=FALSE}
 ## Renders an appropriate HTML file and moves to CE directory
 source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
-modHTML_CEKeys("KEY_ConfRegions_CE")
+modHTML_CEKeys("KEY_ConfRegions_CE 2")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
@@ -211,122 +211,3 @@ R Appendix.
 <<ncalc3>>
 ```
 
-----
-
-## Confidence Region Calculations II
-
-<ol>
-<li>See below.</li>
-<ol type="a">
-<li>C=0.99</li>
-<li>Interval</li>
-<li>Z<sup>*</sup>= &plusmn; `r formatC(distrib(0.005,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z5",display="cite")`).</li>
-```{r Z5, echo=FALSE}
-zstar <- distrib(0.005,type="q",lower.tail=FALSE)
-```
-
-`r figs("Z5")`
-
-<li>`r formatC(824-zstar*60/sqrt(25),format="f",digits=1)`-`r formatC(824+zstar*60/sqrt(25),format="f",digits=1)`.</li>
-<li>I am 99% confident that the true population mean is between `r formatC(824-zstar*60/sqrt(25),format="f",digits=1)` and `r formatC(824+zstar*60/sqrt(25),format="f",digits=1)`.</li>
-</ol>
-
-<li>See below.</li>
-<ol type="a">
-<li>C=0.95</li>
-<li>Upper bound</li>
-<li>Z<sup>*</sup>=`r formatC(distrib(0.95,type="q"),format="f",digits=3)` (`r figs("Z6",display="cite")`).</li>
-```{r Z6, echo=FALSE}
-zstar <- distrib(0.95,type="q")
-```
-
-`r figs("Z6")`
-
-<li>`r formatC(73+zstar*20/sqrt(30),format="f",digits=1)`.</li>
-<li>I am 95% confident that the true population mean is less than `r formatC(73+zstar*20/sqrt(30),format="f",digits=1)`.</li>
-</ol>
-
-<li>See below.</li>
-<ol type="a">
-<li>C=0.95</li>
-<li>Interval</li>
-<li>Z<sup>*</sup>= &plusmn; `r formatC(distrib(0.025,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z7",display="cite")`).</li>
-```{r Z7, echo=FALSE}
-zstar <- distrib(0.025,type="q",lower.tail=FALSE)
-```
-
-`r figs("Z7")`
-
-<li>`r formatC(1370-zstar*800/sqrt(40),format="f",digits=1)`-`r formatC(1370+zstar*800/sqrt(40),format="f",digits=1)`.</li>
-<li>I am 95% confident that the true population mean is between `r formatC(1370-zstar*800/sqrt(40),format="f",digits=1)` and `r formatC(1370+zstar*800/sqrt(40),format="f",digits=1)`.</li>
-</ol>
-</ol>
-
-R Appendix
-```{r eval=FALSE,prompt=FALSE}
-<<Z5>>
-<<Z6>>
-<<Z7>>
-```
-
-----
-
-## Radius of Jupiter
-<ol>
-```{r echo=FALSE,fig.show='hide'}
-cis <- 71492+c(-1,1)*distrib(0.005,type="q",lower.tail=FALSE)*28/sqrt(40)
-```
-<li>`r formatC(cis[1],format="f",digits=1)`-`r formatC(cis[2],format="f",digits=1)`.</li>
-<li>I am 99% confident that the true population mean equatorial radius of Jupiter is between `r formatC(cis[1],format="f",digits=0)` and `r formatC(cis[2],format="f",digits=0)` km.</li>
-</ol>
-
-R Appendix.
-```{r eval=FALSE,prompt=FALSE}
-distrib(0.005,type="q",lower.tail=FALSE)
-```
-
-----
-
-## Blood Pressure in Children
-
-<ol>
-```{r ncalc4, echo=FALSE, results='hide', fig.show='hide'}
-sigma <- 20; me <- 5
-(zstar <- distrib(0.005,type="q",lower.tail=FALSE))
-(zstar*sigma/me)^2
-```
-
-<li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` children to achieve the desired level of confidence and margin-of-error with the "worse-case" standard deviation of 20.</li>
-
-```{r ncalc5, echo=FALSE, results='hide', fig.show='hide'}
-sigma <- 15
-(zstar <- distrib(0.005,type="q",lower.tail=FALSE))
-(zstar*sigma/me)^2
-```
-<li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` children to achieve the desired level of confidence and margin-of-error with the "best-case" standard deviation of 15.</li>
-</ol>
-
-R Appendix.
-```{r eval=FALSE,prompt=FALSE}
-<<ncalc4>>
-<<ncalc5>>
-```
-
-----
-
-## Calf Growth
-```{r calcn6, echo=FALSE, results='hide', fig.show="hide"}
-me <- 50
-sigma <- 200
-zstar <- distrib(0.995,type="q")
-( n <- (zstar*sigma/me)^2 )
-```
-
-The required sample size to estimate the growth of the calves within `r me` g per day with 99% confidence assuming that &sigma;=`r sigma` is `r formatC(ceiling(n),format="f",digits=0)`.
-
-R Appendix.
-```{r eval=FALSE, prompt=FALSE}
-<<calcn6>>
-```
-
-----
