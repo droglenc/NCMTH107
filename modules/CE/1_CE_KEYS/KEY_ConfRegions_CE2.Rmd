@@ -14,7 +14,7 @@ output:
 ```{r echo=FALSE, eval=FALSE}
 ## Renders an appropriate HTML file and moves to CE directory
 source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
-modHTML_CEKeys("KEY_ConfRegions_CE 2")
+modHTML_CEKeys("KEY_ConfRegions_CE2")
 ```
 
 ```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
@@ -140,14 +140,12 @@ R Appendix
 d <- read.csv("https://github.com/droglenc/NCData/raw/master/NormTemp.csv")
 cis <- mean(d$bodytemp)+c(-1,1)*distrib(0.025,type="q",lower.tail=FALSE)*0.41/sqrt(nrow(d))
 ```
-<li>`r formatC(cis[1],format="f",digits=2)`-`r formatC(cis[2],format="f",digits=2)`.</li>
+<li>`r formatC(mean(d$bodytemp),format="f",digits=1)`$\pm$`r formatC(distrib(0.975,type="q",lower.tail=FALSE),format="f",digits=3)`$\frac{0.41}{\sqrt{130}}$ = `r formatC(cis[1],format="f",digits=2)`-`r formatC(cis[2],format="f",digits=2)`.</li>
 <li>I am 95% confident that the true population mean body temperature is between `r formatC(cis[1],format="f",digits=2)` and `r formatC(cis[2],format="f",digits=2)`<sup>o</sup>C.</li>
 </ol>
 
 R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
-d <- read.csv("normtemp.csv")
-Summarize(d$bodytemp,digits=3)
 ( zstar <- distrib(0.025,type="q",lower.tail=FALSE) )
 ```
 
@@ -160,13 +158,12 @@ d <- filterD(d,species=="Halticus.oleracea")
 ci <- mean(d$thorax)+distrib(0.95,type="q",lower.tail=FALSE)*14/sqrt(nrow(d))
 ```
 
-1. `r formatC(ci,format="f",digits=1)`
+1. `r formatC(mean(d$thorax),format="f",digits=2)``r formatC(distrib(0.95,type="q",lower.tail=FALSE),format="f",digits=3)`$\frac{14}{\sqrt{18}}$ = `r formatC(ci,format="f",digits=1)`
 1. I am 95% confident that the true population mean thorax length is greater than `r formatC(ci,format="f",digits=1)` mm (i.e., a lower bound).
 
 R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
-library(NCStats)
-distrib(0.95,type="q",lower.tail=FALSE)
+( zstar <- distrib(0.95,type="q",lower.tail=FALSE) )
 ```
 
 ----
@@ -210,4 +207,3 @@ R Appendix.
 <<ncalc2>>
 <<ncalc3>>
 ```
-
