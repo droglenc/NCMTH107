@@ -51,7 +51,7 @@ Constructing a confidence region is a five-step process as described below.
 Suppose that I hypothesized that the mean time to take a quiz is less than 100 minutes and that, in a sample of 30 students, the mean time to take the quiz was 95.2 minutes. Further, suppose that &sigma;=20 and &alpha;=0.10.
 
 1. C=100(1-0.10)=90%
-1. An upper confidence bound because H<sub>A</sub> is a "greater than."
+1. An upper confidence bound because H<sub>A</sub> is a "less than."
 1. Z<sup>*</sup>=`r formatC(distrib(0.9,type="q"),format="f",digits=3)` as shown below.
 1. The confidence region value is thus 95.2+`r formatC(distrib(0.9,type="q"),format="f",digits=3)`$\frac{20}{\sqrt{30}}$ = 95.2+`r formatC(distrib(0.9,type="q")*20/sqrt(30),format="f",digits=1)`=`r formatC(95.2+distrib(0.9,type="q")*20/sqrt(30),format="f",digits=1)`.
 1. I am 90% confident that the mean time for all students to take the quiz is less than `r formatC(95.2+distrib(0.9,type="q")*20/sqrt(30),format="f",digits=1)` minutes.
@@ -66,7 +66,7 @@ distrib(0.9,type="q")
 Suppose that I hypothesized that the mean time to walk between the Science Center and the Ponzio Center is more than 7 minutes and that, in a sample of 50 students, the mean time to make this walk was 8.3 minutes. Further, suppose that &sigma;=1.3 and &alpha;=0.05.
 
 1. C=100(1-0.05)=95%
-1. A lower confidence bound because H<sub>A</sub> is a "less than."
+1. A lower confidence bound because H<sub>A</sub> is a "greater than."
 1. Z<sup>*</sup>=`r formatC(distrib(0.9,type="q",lower.tail=FALSE),format="f",digits=3)` as shown below.
 1. The confidence region value is thus 8.3-`r formatC(distrib(0.95,type="q"),format="f",digits=3)`$\frac{1.3}{\sqrt{50}}$ = 8.3-`r formatC(distrib(0.95,type="q")*1.3/sqrt(50),format="f",digits=2)`=`r formatC(8.3-distrib(0.95,type="q")*1.3/sqrt(50),format="f",digits=2)`.
 1. I am 90% confident that the mean time for all students to walk between the Science Center and the Ponzio Center is more than `r formatC(8.3-distrib(0.95,type="q")*1.3/sqrt(50),format="f",digits=2)` minutes.
@@ -90,6 +90,3 @@ Suppose that I hypothesized that the mean time students spend preparing for the 
 ```{r}
 distrib(0.005,type="q")
 ```
-
-----
-
