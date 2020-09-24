@@ -22,27 +22,13 @@ modHTML("1Samplet_CE1")
 ```{r echo=FALSE, results='hide', message=FALSE}
 source("../../rhelpers/knitr_setup.R")
 library(NCStats)
+library(ggplot2)
 library(captioner)
 tbls <- captioner(prefix="Table")
 tbls(name="fecal","Summary statistics for the fecal coliform counts in water samples from a nearby lake following a rainstorm.")
 figs <- captioner(prefix="Table")
 figs(name="fecal","Histogram for the fecal coliform counts in water samples from a nearby lake following a rainstorm.")
 ```
-
-## P-Value Calculations and Decisions
-
-For each situation below, (i) compute the t test statistic, (ii) compute the p-value (include a drawing to support your calculation), and (iii) make a decision about H<sub>0</sub>.
-
-1. &alpha;=0.05, H<sub>A</sub>: &mu;&ne;14, n=25, s=6.1, x&#772;=11.2.
-1. &alpha;=0.10, H<sub>A</sub>: &mu;>75, n=50, s=11.7, x&#772;=79.5.
-
-<br>
-
-## Confidence Interval Calculations
-
-Compute and interpret confidence regions for the two situations above. You should use the same "steps" as you did in the [confidence regions module](ConfRegions_CE2).
-
-<br>
 
 <div class="alert alert-success">For the next two questions, and all other "hypothesis testing" questions, make sure to provide explicit answers with your work shown for all <a href="../11-steps">11 steps of a hypothesis test</a>.
 </div>

@@ -53,15 +53,17 @@ Table 1. Summary statistics for starting salary (in thousands of dollars) for re
 &nbsp;
 
 # General t Distribution Questions
-## P-Value Calculations and Decisions II
+## P-Value Calculations and Decisions
 
 For each situation below, (i) compute the t test statistic, (ii) compute the p-value (include a drawing to support your calculation), and (iii) make a decision about H<sub>0</sub>.
 
+1. &alpha;=0.05, H<sub>A</sub>: &mu;&ne;14, n=25, s=6.1, x&#772;=11.2.
+1. &alpha;=0.10, H<sub>A</sub>: &mu;>75, n=50, s=11.7, x&#772;=79.5.
 1. &alpha;=0.01, H<sub>A</sub>: &mu;<880, n=80, s=92, x&#772;=858.
 1. &alpha;=0.05, H<sub>A</sub>: &mu;&ne;1500, n=40, s=790, x&#772;=1730.
 
 ----
 
-## Confidence Interval Calculations II
+## Confidence Interval Calculations
 
 Compute and interpret confidence regions for the two situations above. You should use the same "steps" as you did in the [confidence regions module](ConfRegions_CE2).
