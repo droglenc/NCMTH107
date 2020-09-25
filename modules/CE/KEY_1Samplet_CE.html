@@ -1,0 +1,182 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "1-Sample t CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+Make sure to describe your evidence in Step 3 for why you are performing a 1-sample t-test. It is not adequate to simply say “because there is a quantitative response variable, only one group is being tested, and sigma is unknown.” At least say what the response variable is and what the one groups is.
+</li>
+<li>
+Also make sure to describe your evidence in Step 5 for why the assumptions are met. It is not adequate to simply say “n≥40” or “n≥15 and the sample distribution is not strongly skewed.” You should state the actual n and direct the reader to how you know the distribution is not strongly skewed (i.e., likely a histogram).
+</li>
+<li>
+In hand calculations, note that the test statistic (t in Step 7) is NOT the critical value (i.e., t<sup><em></sup>) needed for the confidence region (in Step 11). The t you calculate in Step 7 has nothing to do with the t<sup></em></sup> you will find in Step 11.
+</li>
+<li>
+When computing the t in Step 7, the numerator is always x̄ minus the specific value in H<sub>0</sub> from Step 2.
+</li>
+<li>
+The p-value in this example is shaded to the left of the t from Step 7 and the result from <code>distrib()</code> is multiplied by 2 because the H<sub>A</sub> is a not equals. If the t had been positive you would have shaded to the right and then muliplied by 2. When the H<sub>A</sub> is a not equals you always shaded into the tail nearest t and multiply the <code>distrib()</code> result by 2.
+</li>
+<li>
+In Steps 10 and 11 don’t say μ. Rather replace it with μ means. See how those steps below say “mean CFU for ALL 100 ml of water” rather than just μ.
+</li>
+<li>
+Also in Step 10 you can be more specific then saying that the mean CFL differs from 178. Because the x̄ is less than what was hypothesized you can say that the mean CFL differs from 178 by being less than 178. So, even though you strictly only tested for a difference in this not equal situation, you can be more specific with your statement in Step 10.
+</li>
+<li>
+You values may differ slightly from mine as I calculate everything in R that holds many decimal places on intermediate values.
+</li>
+</ul>
+</div>
+<div id="fecal-coliform-counts" class="section level2">
+<h2>Fecal Coliform Counts</h2>
+<ol>
+<li>
+α=0.05.
+</li>
+<li>
+H<sub>A</sub>: μ≠178 and H<sub>0</sub>: μ=178, where μ is the mean number of CFU per 100 ml in ALL samples from this lake on this date.
+</li>
+<li>
+1-sample t-test because (i) one group or population (this lake) was sampled, (ii) a quantitative variable (number of CFU per 100 ml) was recorded, and (iii) σ is not known.
+</li>
+<li>
+An observational study without clear randomization of 25 water samples.
+</li>
+<li>
+The assumptions are met because (i) σ is not known and (ii) n=25≥15 and the histogram (given in question) is not strongly skewed.
+</li>
+<li>
+x̄=168.19 CFU per 100 ml.
+</li>
+<li>
+t=<span class="math inline">\(\frac{168.19-178}{\frac{22.20}{\sqrt{25}}}\)</span>=-2.209 with 24 df.
+</li>
+<li>
+p-value=0.0369.
+</li>
+<li>
+Reject H<sub>0</sub> because the p-value&lt;α.
+</li>
+<li>
+It appears that the mean CFU per ALL 100 ml of water sampled from this lake on this date is less than what the computer model predicted.
+</li>
+<li>
+One can be 95% confident that the mean CFU per ALL 100 ml of water sampled from this lake on this date is between 168.19-2.064<span class="math inline">\(\frac{22.20}{\sqrt{25}}\)</span>=159 and 168.19+2.064<span class="math inline">\(\frac{22.20}{\sqrt{25}}\)</span>=177, which further indicates that the mean CFU per ALL 100 ml of water is less than 178.
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>xbar &lt;- 168.19; s &lt;- 22.20; n &lt;- 25
+se &lt;- s/sqrt(n)
+( t &lt;- (xbar-178)/se )
+( df &lt;- n-1 )
+( pv &lt;- 2*distrib(t,distrib=&quot;t&quot;,df=df) )
+( tstar &lt;- distrib(0.975,type=&quot;q&quot;,distrib=&quot;t&quot;,df=df) )
+( tstar &lt;- c(-1,1)*tstar )
+( ci &lt;- xbar+tstar*se )</code></pre>
+<p><br></p>
+<hr />
+</div>
+<div id="increased-civility-in-nation-states" class="section level2">
+<h2>Increased Civility in Nation-States?</h2>
+<ol>
+<li>
+α=0.05.
+</li>
+<li>
+H<sub>A</sub>: μ&lt;4104 and H<sub>0</sub>: μ=4104, where μ is the mean number of citizens killed by ALL nation-states.
+</li>
+<li>
+1-sample t-test because (i) one group or population (all nation-states) was sampled, (ii) a quantitative variable (number of killings) was recorded, and (iii) σ is not known.
+</li>
+<li>
+An observational study with clear randomization of 75 countries.
+</li>
+<li>
+The assumptions are met because (i) σ is not known and (ii) n=75≥40.
+</li>
+<li>
+x̄=3292.8 killings.
+</li>
+<li>
+t=<span class="math inline">\(\frac{3292.8-4104}{\frac{4814.5}{\sqrt{75}}}\)</span>=-1.459 with 74 df.
+</li>
+<li>
+p-value=0.0744.
+</li>
+<li>
+Do not reject H<sub>0</sub> because the p-value&gt;α.
+</li>
+<li>
+It appears that the mean number of killings for recent times is NOT significanlty lower than it was as determined from 19th century history books.
+</li>
+<li>
+One is 95% confident that the number of killings in recent years for ALL nation-states is less than <span class="math inline">\(3292.8+1.666\frac{4814.5}{\sqrt{75}}\)</span>=4219, which further indicates that the mean number of killings is not less than 4104.
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>xbar &lt;- 3292.8; s &lt;- 4814.5; n &lt;- 75
+( se &lt;- s/sqrt(n) )
+( t &lt;- (xbar-4104)/se )
+( df &lt;- n-1 )
+( pv &lt;- distrib(t,distrib=&quot;t&quot;,df=df) )
+( tstar &lt;- distrib(0.95,type=&quot;q&quot;,distrib=&quot;t&quot;,df=df) )
+( ucb &lt;- xbar+tstar*se )</code></pre>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
