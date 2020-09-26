@@ -35,10 +35,13 @@ figs(name="ldl","Histogram for the reduction in LDL for subjects that received B
 <img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/cholesterol_blood_test.jpg" alt="Cholesterol test" class="img-right">
 [Low density lipoprotein (LDL)](https://en.wikipedia.org/wiki/Low-density_lipoprotein) is often called "bad cholesterol" because they can cause lipids to be deposited in artery walls, thus causing arteries to become blocked.  Levels of LDL may be lowered with lifestyle changes and pharmaceuticals.  Researchers conducted an experiment where 25 men with high cholesterol were randomly assigned one of two drugs (Befizal and Lipanthyl) designed to lower LDL levels.  The results from this test are shown below.
 
-```{r echo=FALSE, fig.width=7}
+
+```{r echo=FALSE}
 d <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Cholesterol2.csv")
 d$redux <- d$before-d$after
 Summarize(redux~tx,data=d,digits=3)
+```
+```{r echo=FALSE, fig.width=7}
 ggplot(data=d,mapping=aes(x=redux)) +
   geom_histogram(binwidth=0.1,boundary=0,color="black",fill="lightgray") +
   labs(x="Reduction in LDL",y="Frequency of Subjects") +
