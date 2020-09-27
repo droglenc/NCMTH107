@@ -45,7 +45,7 @@ A univariate EDA for penguin body mass is
 # Including R Code and Results
 My preference is to include a subsection of R code and results **AFTER** you have answered the questions. You can create a subsection for this code by starting a line with "#### R Code and Results".
 
-All R code is entered into a "code chunk." Code chunks begin with three backticks followed by curly brackets around "r" (i.e., &grave;&grave;&grave;{r}) and end with three backticks (i.e., &grave; &grave; &grave;). Between the beginning and ending of the code chunk can be any viable R code. For example,
+All R code is entered into a "code chunk." Code chunks begin with three backticks followed by curly brackets around "r" (see line 33 below) and end with three backticks (see line 36 below). Between the beginning and ending of the code chunk can be any viable R code. For example,
 
 ![Notebook Code Chunk](Figs/Notebook_Code1.JPG)
 
@@ -62,10 +62,32 @@ Code chunks can have a variety of settings. The most important settings can be c
 <br>
 
 # Previewing Document
+The results of code chunks can be run as described above. However, an HTML version of the entire document can be viewed within RStudio. This is particularly useful as you are building your complete document. Compiling a completed document to a PDF is described in the next section.
 
+Before previewing, I select the "gear" icon in the script window toolbar and change "Preview in Window" to "Preview in Viewer Pane."
+
+![Notebook Preview Setting](Figs/Notebook_PreviewSetting.JPG)
+
+I then select the small arrow on the icon to the left of the gear icon that will either say "Preview" or "Knit" and select "Preview HTML".
+
+![Notebook Previewer](Figs/Notebook_Previewer.JPG)
+
+RStudio will then run your script and, if there are no errors, show a preview of the document in the lower-right pane (which will expand to be just the right pane).
+
+![Notebook Preview](Figs/Notebook_Preview.JPG)
+
+<br>
 
 # Compiling to a PDF
+Once you are comfortable that your R code runs without error and that you have answered all questions for the assignment, then you should compile your Notebook to a PDF to hand in. To compile the Notebook to a PDF, select the small arrow on the icon that either says "Preview" or "Knit" and select "Knit to PDF". If you get an error related to the name of your Notebook file, then simply select the "Knit to PDF" a second time. If the document does not produce a PDF then there may be an error in your R code.
 
+<br>
 
 # Tips and Tricks
-Ass
+## Data Files
+Many of the assignments will require you to load a data file for analysis. The data file to be loaded SHOULD be **saved in the same directory as your Notebook file.**
+
+## Vertical Spacing
+If you would like to add some vertical spacing between parts of your notebook (e.g., between sections, between code and paragraphs, etc.) then add a "br" between less than and greater than signs (see below) with a blank line both above and below it where you want the vertical spacing. For example,
+
+![Use of br](Figs/Notebook_UseOfBR.JPG)
