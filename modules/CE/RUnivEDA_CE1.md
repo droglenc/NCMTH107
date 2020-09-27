@@ -40,9 +40,13 @@ Construct a separate univariate EDA of `head.size` for each `age.group` in [Brai
 
 <br>
 
+<br>
+
+<br>
+
 ## Water Usage
 <img src="zimgs/shower_water.jpg" alt="Shower Water" class="img-right">
-Students in a senior level environmental studies class at Rice University conducted a voluntary response survey regarding water usage by their peers. They received returned surveys from a total 130 students. One question on their survey was, "On average, for how many minutes do you let the water run each time you take a shower? 0-5, 6-10, 11-15, or over 15 minutes?" The individual responses for this survey are shown below with letters corresponding to the category choices offered (e.g., "A"=0-5, "B"=6-10, and so on). Enter these data into R and  write a brief conclusion about these data.
+Students in a senior level environmental studies class at Rice University conducted a voluntary response survey regarding water usage by their peers. They received returned surveys from a total 130 students. One question on their survey was, "On average, for how many minutes do you let the water run each time you take a shower? 0-5, 6-10, 11-15, or over 15 minutes?" The individual responses for this survey are shown below with letters corresponding to the category choices offered (e.g., "A"=0-5, "B"=6-10, and so on). Enter these data into R and construct an appropriate univariate EDA. (**Please double-check your data entry.**)
 
 <pre>
 D, C, B, B, C, C, B, B, C, C, C, B, D, B, C, C, B, C, D, B,
