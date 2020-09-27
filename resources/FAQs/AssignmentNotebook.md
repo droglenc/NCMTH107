@@ -2,7 +2,7 @@
 layout: page
 author: Derek H. Ogle
 title: MTH107 FAQ
-subtitle: Make an assignment notebook
+subtitle: Make an Assignment Notebook
 ---
 
 ----
@@ -16,9 +16,9 @@ For class assignments, start by downloading (right-click on) [this template](R A
 
 <br>
 
-# Incluing Text in the Notebook
+# Including Text in the Notebook
 ## Creating Sections
-Most assignments will have several questions, each of which is identified with a section heading. Your answers to the assignments should be shown under section headings with the same name as on the assignment. Section headings can be created in the notebook by preceding the secion heading name with a hashtag. For example, the line below would create a section heading called "Arctic Penguins".
+Most assignments will have several questions, each of which is identified with a section heading. Your answers to the assignments should be shown under section headings with the same name as on the assignment. Section headings can be created in the notebook by preceding the section heading name with a washrag. For example, the line below would create a section heading called "Arctic Penguins".
 
 ```
 # Arctic Penguins
