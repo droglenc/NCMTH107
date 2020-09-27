@@ -81,6 +81,8 @@ RStudio will then run your script and, if there are no errors, show a preview of
 # Compiling to a PDF
 Once you are comfortable that your R code runs without error and that you have answered all questions for the assignment, then you should compile your Notebook to a PDF to hand in. To compile the Notebook to a PDF, select the small arrow on the icon that either says "Preview" or "Knit" and select "Knit to PDF". If you get an error related to the name of your Notebook file, then simply select the "Knit to PDF" a second time. If the document does not produce a PDF then there may be an error in your R code.
 
+![Notebook Knit to PDF](Figs/Notebook_KnitPDF.JPG)
+
 <br>
 
 # Tips and Tricks
