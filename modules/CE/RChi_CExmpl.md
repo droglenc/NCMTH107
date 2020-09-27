@@ -19,5 +19,5 @@ The results from the study described in the [chi-square test class example](ChiS
 ----
 
 ## Green Parakeet Crosses II
-<img src="http://derekogle.com/NCMTH107/modules/CEx/zimgs/parakeets.jpg" alt="Parakeets" class="img-right">
+<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/parakeets.jpg" alt="Parakeets" class="img-right">
 The results from the study described in the [goodness-of-fit test class example](GOFTest_CExmpl) can be confirmed with R using `chisq.test()`. Please confirm those calculations in R. 
