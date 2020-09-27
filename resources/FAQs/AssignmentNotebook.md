@@ -18,17 +18,17 @@ For class assignments, start by downloading (right-click on) [this template](R A
 
 # Incluing Text in the Notebook
 ## Creating Sections
-Most assignments will have several questions, each of which is identified with a section heading. Your answers to the assignments should be shown under section headings with the same name as on the assignment. Section headings can be created in the RStudio document by preceding the secion heading name with two hashtags. For example, the line below would create a section heading called "Arctic Penguins".
+Most assignments will have several questions, each of which is identified with a section heading. Your answers to the assignments should be shown under section headings with the same name as on the assignment. Section headings can be created in the notebook by preceding the secion heading name with a hashtag. For example, the line below would create a section heading called "Arctic Penguins".
 
 ```
-## Arctic Penguins
+# Arctic Penguins
 ```
 
 ## Writing Text for Your Answers
 Sentences can be included by simply typing the text at the beginning of any line. A new paragraph is created by pressing return twice so that there is a blank line between paragraphs.
 
 ## Numbered Lists for Your Answers
-A numbered item list is created by starting a line with "1." followed by what you want after the number (e.g., your answer). If there is no blank lines between consecutive "1." items then RStudio will automatically update the numbering when the document is compiled. For example, typing this will produce the result further below ...
+A numbered item list is created by starting a line with "1." followed by what you want after the number (e.g., your answer). If there is no blank lines between consecutive "1." items then RStudio will automatically iterate the numbering when the document is compiled. For example, typing this will produce the result further below ...
 
 ![Notebook Numbered List](Figs/Notebook_NumberedList.JPG)
 
@@ -45,7 +45,7 @@ A univariate EDA for penguin body mass is
 # Including R Code and Results
 My preference is to include a subsection of R code and results **AFTER** you have answered the questions. You can create a subsection for this code by starting a line with "#### R Code and Results".
 
-All R code needs to be entered into a "code chunk." Code chunks begin with three backticks followed by curly brackets around "r" (i.e., "```{r}") and end with three backticks (i.e., "```"). Between the beginning and ending of the code chunk can be any viable R code. For example,
+All R code is entered into a "code chunk." Code chunks begin with three backticks followed by curly brackets around "r" (i.e., "\```{r}") and end with three backticks (i.e., "\```"). Between the beginning and ending of the code chunk can be any viable R code. For example,
 
 ![Notebook Code Chunk](Figs/Notebook_Code1.JPG)
 
@@ -68,3 +68,4 @@ Code chunks can have a variety of settings. The most important settings can be c
 
 
 # Tips and Tricks
+Ass
