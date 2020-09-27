@@ -5,7 +5,8 @@ subtitle: t-tests in R
 css: "/css/modules.css"
 ---
 
-<div class="alert alert-success">For all "hypothesis testing" questions, make sure to provide explicit answers with your work shown for all <a href="../11-steps">11 steps of a hypothesis test</a>.
+<div class="alert alert-success">For all "hypothesis testing" questions, make sure to provide explicit answers with your work shown for all <a href="../11-steps">11 steps of a hypothesis test</a>. Also show your R work (both your input and your output) for each question below. You may find
+<a href="http://derekogle.com/NCMTH107/resources/FAQs/AssignmentNotebook" target="_blank">this FAQ</a> useful.
 </div>
 
 <br>
