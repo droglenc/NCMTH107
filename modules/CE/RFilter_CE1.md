@@ -20,11 +20,11 @@ diameter  20  23  34  20  17  20  15  34  18  24
 exposure med med low med med med med med med med
 </pre>
 
-Use this information to answer the following questions. Use R to answer all questions even though most questions can be answered by observing these simple data from the table above.
+Use this information to answer the following questions. Enter these data into a CSV file, load into R, and use R functions to answer all questions below (use R even though most questions can be answered by observing these simple data from the table above). For each question below indicate the number of individuals in the resultant data.frame. **Make sure to show the structure of the resultant data.frame in your R Code an Results section**.
 
-1. Enter the data into Excel, save as a CSV file, and load into R.
-1. Isolate the following subsets of data (*show the structure or a view of the resultant data.frame to verify your results*).
-    * Only low-exposure sites.
-    * Only where the CWD diameter was greater than 20 cm.
-    * Only where the CWD diameter was greater than 20 cm and from low-exposure sites.
-    * Only where the CWD diameter was between 20 and 30 cm.
+1. Create a data.frame that contains only low-exposure sites.
+1. Use a different (from above) method to create a data.frame that contains only low-exposure sites.
+1. Create a data.frame that contains only sites where the CWD diameter was greater than 20 cm.
+1. Create a data.frame that contains only sites that were low-exposure and the CWD diameter was greater than 20 cm.
+1. Create a data.frame that contains only sites where the CWD diameter was between 20 and 30 cm.
+1. Create a data.frame that contains only sites that were low

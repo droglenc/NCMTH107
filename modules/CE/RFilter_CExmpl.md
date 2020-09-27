@@ -9,7 +9,7 @@ css: "/css/modules.css"
 ----
 
 ## Load Data From Webpage
-Open your script from the [Getting Data into R class example](RData_CExmpl) where you loaded the **Fire.csv** into an R data frame called `firedf` (and examined its structure).
+Open your script from the [Getting Data into R class example](RData_CExmpl) where you loaded the **Fire.csv** into an R data frame called `firedf` (and examine its structure).
 
 &nbsp;
 
@@ -26,7 +26,7 @@ Open your script from the [Getting Data into R class example](RData_CExmpl) wher
 
 ## Filtering Data Frames
 
-1. Isolate just the `deciduous` stand types.
+1. Isolate just the deciduous stand types.
 1. Isolate the stands with a litter depth less than 2 cm.
 1. Isolate the stand types that are either coniferous or mixed-coniferous.
 1. Isolate stands that were coniferous (not including mixed-coniferous) and had a litter depth greater than 2 cm.
