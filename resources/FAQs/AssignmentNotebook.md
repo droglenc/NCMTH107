@@ -45,7 +45,7 @@ A univariate EDA for penguin body mass is
 # Including R Code and Results
 My preference is to include a subsection of R code and results **AFTER** you have answered the questions. You can create a subsection for this code by starting a line with "#### R Code and Results".
 
-All R code is entered into a "code chunk." Code chunks begin with three backticks followed by curly brackets around "r" (i.e., "\```{r}") and end with three backticks (i.e., "\```"). Between the beginning and ending of the code chunk can be any viable R code. For example,
+All R code is entered into a "code chunk." Code chunks begin with three backticks followed by curly brackets around "r" (i.e., "&grave;&grave;&grave;{r}") and end with three backticks (i.e., "&grave;&grave;&grave;"). Between the beginning and ending of the code chunk can be any viable R code. For example,
 
 ![Notebook Code Chunk](Figs/Notebook_Code1.JPG)
 
