@@ -27,4 +27,3 @@ Use this information to answer the following questions. Enter these data into a 
 1. Create a data.frame that contains only sites where the CWD diameter was greater than 20 cm.
 1. Create a data.frame that contains only sites that were low-exposure and the CWD diameter was greater than 20 cm.
 1. Create a data.frame that contains only sites where the CWD diameter was between 20 and 30 cm.
-1. Create a data.frame that contains only sites that were low
