@@ -107,7 +107,7 @@ colnames(obs) <- c("Responded","Did Not Respond")
 
 <ol>
 <li>&alpha; = 0.10.</li>
-<li>The H<sub>0</sub>: "The proportion of groups that responded to the 'Hello' is the same for all three group sizes" versus H<sub>0</sub>: "The proportion of groups that responded to the 'Hello' is NOT the same for all three group sizes."</li>
+<li>The H<sub>0</sub>: "The distribution of groups into whether they responded or not to the 'Hello' is the same for all three group sizes" versus H<sub>0</sub>: "The distribution of groups into whether they responded or not to the 'Hello' is NOT the same for all three group sizes."</li>
 <li>A chi-square test is required because (i)a categorical variable with two levels (response or not) was measured on (ii) three groups/populations (group sizes).</li>
 <li>The data appear to be part of an observational study where the ``groups" were not randomly selected.</li>
 <li>The test statistic below should follow a &chi;<sup>2</sup> distribution because the expected number in each cell is greater than five (`r tbls("HelloExp",display="cite")`).</li>
