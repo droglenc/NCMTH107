@@ -8,6 +8,7 @@ css: "/css/modules.css"
 &nbsp;
 
 1. **Applications**
+    1. [Random Jury Pool](#random-jury-pool)
     1. [Shrike Habitat Use](#shrike-habitat-use)
     1. [Media Treatment of President Clinton](#media-treatment-of-president-clinton)
     1. [Cola Taste Test](#cola-taste-test)
@@ -31,6 +32,18 @@ css: "/css/modules.css"
 &nbsp;
 
 # Chi-square Test Application Questions
+## Random Jury Pool?
+<img src="zimgs/jury-box.jpg" alt="Jury Box" class="img-right">
+A defense attorney claimed that a jury pool is not representative of the larger population in the court's district. In particular, she was concerned that the jury pool contained fewer "young people" than would be expected based on district demographics. To test her claim, she created seven age categories, counted the number of individuals from the jury pool in each age category, and found the percentage of the district in each age category from the most recent census data. Her findings are below.
+
+<pre>
+Ages         18-19    20-24    25-29    30-39    40-49    50-64      65+
+Jury Pool       23       96      134      293      297      380      113
+District      6.1%    15.0%    13.5%    21.7%    15.3%    18.2%    10.2%
+</pre>
+
+Use these results to determine, at the 10% level, if the age distribution in the jury pool accurately represents the age distriction of the district as a whole. Also comment on whether the attorney's specific concern was warranted.
+
 ## Shrike Habitat Use
 <img src="zimgs/shrike.jpg" alt="Northern Shrike" class="img-right">
 In the same study used in the example of this module, [Bohall and Wood (1987)](http://www.jstor.org/stable/4162345?seq=1#page_scan_tab_contents) more closely examined the habitat use of the shrikes observed in the open habitat by looking at four "sub-habitats" within these areas. Of the 1456 shrike observations in this habitat, 149 were in "settled" areas, 944 were in improved pastures, 192 were in overgrown pastures, and 171 were in crop fields. In addition, 20.5% of this habitat was considered to be "settled", 58.6% was improved pasture, 10.3% was overgrown pasture, and 10.6% was crop fields.   Use these results to determine, at the 5% level, if shrikes found in open areas use the sub-habitats in proportion to their availability.

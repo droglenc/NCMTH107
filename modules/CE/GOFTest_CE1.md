@@ -31,20 +31,6 @@ Fall Use              14         7       195         2
 
 Use these results to determine, at the 5% level, if the turkey's exhibited a habitat preference in the **Spring**.
 
-<br>
-
-## Random Jury Pool?
-<img src="zimgs/jury-box.jpg" alt="Jury Box" class="img-right">
-A defense attorney claimed that a jury pool is not representative of the larger population in the court's district. In particular, she was concerned that the jury pool contained fewer "young people" than would be expected based on district demographics. To test her claim, she created seven age categories, counted the number of individuals from the jury pool in each age category, and found the percentage of the district in each age category from the most recent census data. Her findings are below.
-
-<pre>
-Ages         18-19    20-24    25-29    30-39    40-49    50-64      65+
-Jury Pool       23       96      134      293      297      380      113
-District      6.1%    15.0%    13.5%    21.7%    15.3%    18.2%    10.2%
-</pre>
-
-Use these results to determine, at the 10% level, if the age distribution in the jury pool accurately represents the age distriction of the district as a whole. Also comment on whether the attorney's specific concern was warranted.
-
 &nbsp;
 
 ----
