@@ -48,7 +48,7 @@ gofCI(w.chi,digits=3,conf.level=0.99)
 <li>H<sub>A</sub>: "There is a preference among the water choices (i.e., the distribution of students will NOT follow a theoretical distribution of equal proportions among the water choices)" and H<sub>0</sub>: "There is no preference among the water choices (i.e., the distribution of students will follow a theoretical distribution of equal proportions among the water choices)".</li>
 <li>Goodness-of-fit test because (i) one group or population (students) were sampled and (ii) the response variable (water choice) is categorial.</li>
 <li>This is quasi-experimental as the students were given a choice of only certain waters. The students were not obviously randomly selected (and were likely part of a voluntary response survey).</li>
-<li>All cells in the expected frequency table (`r tbls("WaterExpTable",display="cite")`) were greater than 5; the assumptions for a goodness-of-fit test have been met.</li>
+<li>All cells in the expected frequency table (`r tbls("WaterExpTable",display="cite")`) were greater than 5; the assumptions for a goodness-of-fit test have been met. [Note that these expected values equal 107/4 to represent no preference in choice of water.]</li>
 
 `r tbls("WaterExpTable")`
 
@@ -67,7 +67,7 @@ w.chi$observed
 <li>&chi;<sup>2</sup>=$\frac{(51-26.75)^{2}}{26.75}$ + $\frac{(18-26.75)^{2}}{26.75}$ +$\frac{(17-26.75)^{2}}{26.75}$ +$\frac{(21-26.75)^{2}}{26.75}$=`r formatC(w.chi$statistic,format="f",digits=4)` with `r w.chi$parameter` df.</li>
 <li>p-value`r kPvalue(w.chi$p.value,include.p=FALSE,latex=FALSE)` (more specifically `r formatC(w.chi$p.value,digits=4)`).</li>
 <li>Reject H<sub>0</sub> because the p-value&lt;&alpha;.</li>
-<li>It appears that there is a preference for water type by the students. Further examination suggests that the students preferred the tap water.</li>
+<li>It appears that there is a preference for water type by the students. Further examination suggests that the students least-preferred the tap water.</li>
 <li>Not required for a goodness-of-fit test</li>
 </ol>
 
@@ -94,7 +94,7 @@ gofCI(t.chi,digits=3)
 <li>H<sub>A</sub>: "There is a preference by the turkeys for habitat (i.e., the distribution of turkeys will NOT follow the (theoretical) distribution of available habitats)" and H<sub>0</sub>: "There is NOT a preference by the turkeys for habitat (i.e., the distribution of turkeys will follow the (theoretical) distribution of available habitats)".</li>
 <li>Goodness-of-fit test because (i) one group or population (South Dakota turkeys) were sampled and (ii) the response variable (habitat use) is categorical.</li>
 <li>This is observational as habitat use by the turkeys was simply recorded. The turkey observations were not randomly selected (the researchers likely chose days to sample).</li>
-<li>All cells in the expected frequency table (`r tbls("TurkeyExpTable",display="cite")`) were greater than 5; the assumptions for a goodness-of-fit test have been met.</li>
+<li>All cells in the expected frequency table (`r tbls("TurkeyExpTable",display="cite")`) were greater than 5; the assumptions for a goodness-of-fit test have been met. [Note that these expected values are equal to 878 total observations times the proportions of available habitat to represent no preference in choosing habitat types by the turkeys.]</li>
 
 `r tbls("TurkeyExpTable")`
 
