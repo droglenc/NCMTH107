@@ -1,0 +1,50 @@
+---
+title: "Answer Key"
+subtitle: "R Getting Data Class Example"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3.5
+    fig_width: 3.5
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_RData_CExmpl")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+library(ggplot2)
+source("../../../rhelpers/knitr_setup.R")
+```
+
+----
+
+## Enter Own Data
+I created a CSV file with information about members of my family, saved it in the same folder as my Notebook file, loaded the data file into the `famex` object in the Notebook (with `read.csv()`), and showed the complete file in the code below.
+
+```{r eval=FALSE}
+famex <- read.csv("Family_Example.csv")
+```
+```{r echo=-1}
+famex <- read.csv("http://derekogle.com/NCMTH107/modules/CE/1_CE_KEYS/Family_Example.csv")
+famex
+```
+
+<br>
+
+## Load Data from Webpage
+I downloaded the `fire.csv` file into the same folders as my Notebook file, loaded the data into the `firedf` object in the Notebook (with `read.csv()`), and showed the stucture of the file with `str()` (because showing the whole file was too big). From the structure one can see that there are 48 individuals (R calls them observations which it abbreviates with "obs."), 6 variables, and the variables are named `sttype`, `tslf`, `tdw`, `litdep`, `fuel1h`, and `tltd`. 
+
+```{r eval=FALSE}
+firedf <- read.csv("Fire.csv")
+```
+```{r echo=-1}
+firedf <- read.csv("http://derekogle.com/NCMTH107/modules/CE/1_CE_KEYS/Fire.csv")
+str(firedf)
+```
