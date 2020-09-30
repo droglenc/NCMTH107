@@ -18,7 +18,7 @@ For class assignments, start by downloading (right-click on) [this template](R A
 
 # Including Text in the Notebook
 ## Creating Sections
-Most assignments will have several questions, each of which is identified with a section heading. Your answers to the assignments should be shown under section headings with the same name as on the assignment. Section headings can be created in the notebook by preceding the section heading name with a washrag. For example, the line below would create a section heading called "Arctic Penguins".
+Most assignments will have several questions, each of which is identified with a section heading. Your answers to the assignments should be shown under section headings with the same name as on the assignment. Section headings can be created in the notebook by preceding the section heading name with a hashtag. For example, the line below would create a section heading called "Arctic Penguins".
 
 ```
 # Arctic Penguins
@@ -28,7 +28,7 @@ Most assignments will have several questions, each of which is identified with a
 Sentences can be included by simply typing the text at the beginning of any line. A new paragraph is created by pressing return twice so that there is a blank line between paragraphs.
 
 ## Numbered Lists for Your Answers
-A numbered item list is created by starting a line with "1." followed by what you want after the number (e.g., your answer). If there is no blank lines between consecutive "1." items then RStudio will automatically iterate the numbering when the document is compiled. For example, typing this will produce the result further below ...
+A numbered item list is created by starting a line with "1." followed by what you want after the number (e.g., your answer). If there are no blank lines between consecutive "1." items then RStudio will automatically iterate the numbering when the document is compiled. For example, typing this will produce the result further below ...
 
 ![Notebook Numbered List](Figs/Notebook_NumberedList.JPG)
 
@@ -55,14 +55,14 @@ In RStudio, each code chunk will have three "icons" in the upper-right portion o
 
 If the code in this chunk depends on code in previous chunks being run then press the middle icon (gray down arrow pointing to a green horizontal line) to run all code in chunks above the current chunk. If the code in previous chunks had already been run then this is unnecessary.
 
-Code chunks can have a variety of settings. The most important settings can be controlled through the left-most "gear" icon. My most common change here is to change the figure width to be smaller (to 4 inches wide) and, if I want the plot to be square, to change the figure height to the same value. I may also "turn off" the warnings and messages, but I never do this immediately as I would like to see those first before deciding that I should "hide" them. Below shows the gear box for changing the figure width and how the code chunk and result is changed.
+Code chunks can have a variety of settings. The most important settings can be controlled through the left-most "gear" icon. My most common change here is to change the figure width to be smaller (to 4 inches wide) and, if you want the plot to be square, to change the figure height to the same value. I may also "turn off" the warnings and messages, but I never do this immediately as I would like to see those first before deciding that I should "hide" them. Below shows the gear box for changing the figure width and how the code chunk and result is changed.
 
 ![Notebook Code Chunk Run](Figs/Notebook_Code2Run.JPG)
 
 <br>
 
 # Previewing Document
-The results of code chunks can be run as described above. However, an HTML version of the entire document can be viewed within RStudio. This is particularly useful as you are building your complete document. Compiling a completed document to a PDF is described in the next section.
+The results of code chunks can be run as described above. However, an HTML version of the entire document can be viewed within RStudio. This is particularly useful as you are building your complete document. Compiling a completed document to MSWord (and then ultimately a PDF) is described in the next section.
 
 Before previewing, I select the "gear" icon in the script window toolbar and change "Preview in Window" to "Preview in Viewer Pane."
 
@@ -72,16 +72,18 @@ I then select the small arrow on the icon to the left of the gear icon that will
 
 ![Notebook Previewer](Figs/Notebook_Previewer.JPG)
 
-RStudio will then run your script and, if there are no errors, show a preview of the document in the lower-right pane (which will expand to be just the right pane).
+RStudio will then run your script and, if there are no errors, show a preview of the document in the lower-right pane (which may expand to be just the right pane).
 
 ![Notebook Preview](Figs/Notebook_Preview.JPG)
 
 <br>
 
-# Compiling to a PDF
-Once you are comfortable that your R code runs without error and that you have answered all questions for the assignment, then you should compile your Notebook to a PDF to hand in. To compile the Notebook to a PDF, select the small arrow on the icon that either says "Preview" or "Knit" and select "Knit to PDF". If you get an error related to the name of your Notebook file, then simply select the "Knit to PDF" a second time. If the document does not produce a PDF then there may be an error in your R code.
+# Compiling to MSWord
+Once you are comfortable that your R code runs without error and that you have answered all questions for the assignment, then you should compile your Notebook to a MSWord documet. In MSWord you can then save the document to a PDF for handing in via GradeScope.
 
-![Notebook Knit to PDF](Figs/Notebook_KnitPDF.JPG)
+To compile the Notebook to MSWord, select the small arrow on the icon that either says "Preview" or "Knit" and select "Knit to Word". If you get an error related to the name of your Notebook file, then simply select "Knit to Word" a second time. If the document does not produce an MSWord document (this make take several seconds) then there may be an error in your R code.
+
+![Notebook Knit to Word](Figs/Notebook_KnitWord.JPG)
 
 <br>
 
