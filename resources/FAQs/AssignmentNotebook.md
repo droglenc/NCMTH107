@@ -10,42 +10,7 @@ subtitle: Make an Assignment Notebook
 # Getting Started
 Notebooks in RStudio are an efficient way to enter R code, show results of R code, write answers to assignment questions, and compile all of that to a PDF that can be handed in.
 
-For class assignments, start by copying the following lines exactly to RStudio.
-
-<pre>
----
-title: "EDIT TO PUT MODULE NAME HERE"
-author: "EDIT TO PUT YOUR NAME HERE"
-date: "`r format(Sys.time(), '%A, %d-%b-%y')`"
-output:
-  pdf_document: default
-  html_notebook: default
-editor_options:
-  chunk_output_type: inline
----
-
-----
-
-
-```{r echo=FALSE, message=FALSE, warning=FALSE, results="hide"}
-## Generally you will not edit this chunk at all.
-knitr::opts_chunk$set(fig.width=4, fig.height=4, prompt=TRUE, comment="")
-library(NCStats)
-library(ggplot2)
-```
-
-# EDIT THIS WITH SECTION HEADING TEXT
-EDIT THIS WITH TEXT
-
-<br>
-
-### R Code and Results
-```{r}
-# You will put R code in chunks like this -- CTRL/CMD-ALT-I to add a chunk
-```
-<pre>
-
-downloading (right-click on) [this template](R Assignment Template.Rmd) and opening it in RStudio. Then immediately save the template file with a different name (e.g., "Assignment1" ... make sure that the name does not have a "dot" in it). Then edit the Title in line 2 to something that represents the assignment (e.g., "Linear Regression in R") and the Author in line 3 to your name. Do not change anything else in the first 20 lines.
+For class assignments, start by copying the following lines exactly to RStudio.downloading (right-click on) [this template](https://raw.githubusercontent.com/droglenc/NCMTH107/gh-pages/resources/FAQs/R%20Assignment%20Template.Rmd) and opening it in RStudio. Then immediately save the template file with a different name (e.g., "Assignment1" ... make sure that the name does not have a "dot" in it). Then edit the Title in line 2 to something that represents the assignment (e.g., "Linear Regression in R") and the Author in line 3 to your name. Do not change anything else in the first 20 lines.
 
 ![Notebook Top](Figs/Notebook_TopLines.JPG)
 
