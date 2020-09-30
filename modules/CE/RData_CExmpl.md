@@ -6,7 +6,14 @@ author: "Derek H. Ogle"
 css: "/css/modules.css"
 ---
 
-----
+
+<div class="alert alert-info">
+Show your R work (both your input and your output) for each question below. You may find
+<a href="http://derekogle.com/NCMTH107/resources/FAQs/AssignmentNotebook" target="_blank">this FAQ</a> useful.
+</div>
+
+<br>
+
 
 ## Enter Own Data
 
