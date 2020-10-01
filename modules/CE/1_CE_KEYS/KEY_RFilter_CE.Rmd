@@ -1,0 +1,83 @@
+---
+title: "Answer Key"
+subtitle: "Filtering Data In R"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_RFilter_CE")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+```
+
+----
+
+As part of the assignment template, the following two lines were run before the code run in the sections below.
+```{r results="hide",message=FALSE,warning=FALSE}
+library(NCStats)
+library(ggplot2)
+```
+
+<div class="alert alert-warning">
+<strong>Note:</strong> 
+<ul>
+<li>When you filter a data.frame, you should name it (to the left of `<-`) something different than the original name. Thay way you can always return to your original data.frame if needed (as needed here).</li>
+<li>Use `str()` to observe the structure of the data.frame which will, among other things, show the number of individuals (labeled as `obs`).</li>
+</ul>
+</div>
+
+----
+
+# Coarse Woody Debris
+```{r echo=FALSE}
+cwdobj <- read.csv("https://raw.githubusercontent.com/droglenc/NCMTH107/gh-pages/modules/CE/1_CE_KEYS/cwd.csv")
+```
+```{r lowexp, echo=FALSE, results="hide"}
+lowexp <- filterD(cwdobj,exposure=="low")
+str(lowexp)
+```
+```{r lowexp2, echo=FALSE, results="hide"}
+lowexp2 <- filterD(cwdobj,exposure!="med")
+str(lowexp2)
+```
+```{r gt20, echo=FALSE, results="hide"}
+gt20 <- filterD(cwdobj,diameter>20)
+str(gt20)
+```
+```{r lowexpgt20, echo=FALSE, results="hide"}
+lowexpgt20 <- filterD(cwdobj,exposure=="low",diameter>20)
+str(lowexpgt20)
+```
+```{r btw2030, echo=FALSE, results="hide"}
+btw2030 <- filterD(cwdobj,diameter>20,diameter<30)
+str(btw2030)
+```
+
+1. There are `r kCounts(nrow(lowexp))` rows of only low exposure sites (see `lowexp` object below).
+1. There are still `r kCounts(nrow(lowexp2))` rows of only low exposure sites (see `lowexp2` object below).
+1. There are `r kCounts(nrow(gt20))` rows of sites with diameters greater than 20 cm (see `gt20` object below).
+1. There are `r kCounts(nrow(lowexpgt20))` rows of low exposure sites with diameters greater than 20 cm (see `lowexpgt20` object below).
+1. There are `r kCounts(nrow(btw2030))` rows of sites with diameters between 20 and 30 cm (see `btw2030` object below).
+
+#### R Code and Results
+```{r eval=FALSE}
+cwdobj <- read.csv("cwd.csv")
+```
+```{r}
+str(cwdobj)
+<<lowexp>>
+<<lowexp2>>
+<<gt20>>
+<<lowexpgt20>>
+<<btw2030>>
+```
