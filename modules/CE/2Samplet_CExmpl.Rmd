@@ -41,6 +41,9 @@ d <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/Choleste
 d$redux <- d$before-d$after
 Summarize(redux~tx,data=d,digits=3)
 ```
+```{r}
+levenesTest(redux~tx,data=d)
+```
 ```{r echo=FALSE, fig.width=7}
 ggplot(data=d,mapping=aes(x=redux)) +
   geom_histogram(binwidth=0.1,boundary=0,color="black",fill="lightgray") +
