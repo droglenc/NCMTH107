@@ -36,7 +36,7 @@ Load the data into R (note that you entered these data in a [previous assignment
 
 ## Brain Weight
 <img src="zimgs/brain.jpg" alt="Brain" class="img-right">
-Construct a separate univariate EDA of `head.size` for each `age.group` in [BrainHead.csv](https://raw.githubusercontent.com/droglenc/NCData/master/BrainHead.csv).
+Construct a separate univariate EDA of `head.size` for each `age.group` in BrainHead.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/BrainHead.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/BrainHead_meta.txt)). [*Note: You will have two univariate EDAs for `head.size` ... one for the "first" and one for the "second" group.*]
 
 <br>
 
