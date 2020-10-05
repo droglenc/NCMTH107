@@ -32,7 +32,7 @@ It is important to understand the relationship between two variables.  With quan
 
 ## Preparation for Class
 
-Use the resources below to answer [these questions](Prep/BEDAQuant). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
+Use the resources below to answer [these questions](Prep/BEDAQuant). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (10 pages, 25 mins)
   * [![PDF](../img/pdf.png) Reading](book/Bivariate EDA - Quantitative.pdf)

@@ -30,7 +30,7 @@ R is fast becoming the primary software for performing statistical analyses in m
 
 ## Preparation for Class
 
-Use the resources below to answer [these questions](Prep/RData). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
+Use the resources below to answer [these questions](Prep/RData). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (~4 pages, 20 mins)
   * [Reading](bookR/RData.html)

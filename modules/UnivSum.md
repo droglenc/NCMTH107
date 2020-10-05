@@ -35,7 +35,7 @@ It is important to understand the distribution of individuals for a single varia
 
 ## Preparation for Class
 
-Use the resources below to answer [these questions](Prep/UnivSum). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
+Use the resources below to answer [these questions](Prep/UnivSum). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (10 pages, 41 mins)
   * [![PDF](../img/pdf.png) Reading](book/Univariate Summaries.pdf)

@@ -35,7 +35,7 @@ One of the most common things in statistics is to describe the linear relationsh
 
 ## Preparation for Class
 
-Use the resources below to answer [these questions](Prep/LinearRegression). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
+Use the resources below to answer [these questions](Prep/LinearRegression). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (13 pages, 39 mins)
   * [![PDF](../img/pdf.png) Reading](book/Linear Regression.pdf)

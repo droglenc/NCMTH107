@@ -27,7 +27,7 @@ css: /css/modules.css
 
 ## Preparation for Class
 
-Use the resources below to answer [these questions](Prep/RFilter). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
+Use the resources below to answer [these questions](Prep/RFilter). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (~3 pages, 11 mins)
   * [Reading](bookR/RFilter.html)

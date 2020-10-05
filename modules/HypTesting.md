@@ -30,7 +30,7 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
 
 ----
 
-Use the resources below to answer [these questions](Prep/HypTesting). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
+Use the resources below to answer [these questions](Prep/HypTesting). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources I** (10 pages, 6 mins)
   * [![PDF](../img/pdf.png) Reading (Sections 12.1-12.4)](book/Hypothesis Tests.pdf)

@@ -30,7 +30,7 @@ css: /css/modules.css
 
 ## Preparation for Class
 
-Use the resources below to answer [these questions](Prep/RBivEDA). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
+Use the resources below to answer [these questions](Prep/RBivEDA). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (~4 pages, 13 mins)
   * [Reading](bookR/RBivEDA.html)

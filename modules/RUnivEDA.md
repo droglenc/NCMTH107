@@ -33,7 +33,7 @@ css: /css/modules.css
 
 ## Preparation for Class
 
-Use the resources below to answer [these questions](Prep/RUnivEDA). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
+Use the resources below to answer [these questions](Prep/RUnivEDA). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (~6 pages, 30 mins)
   * [Reading](bookR/RUnivEDA.html)

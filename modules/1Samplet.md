@@ -30,7 +30,7 @@ css: /css/modules.css
 
 ## Preparation for Class
 
-Use the resources below to answer [these questions](Prep/1Samplet). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
+Use the resources below to answer [these questions](Prep/1Samplet). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (5 pages, 24 mins)
   * [![PDF](../img/pdf.png) Reading](book/1-Sample t-Test.pdf)

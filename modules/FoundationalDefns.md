@@ -34,7 +34,7 @@ As with most areas of study, Statistics requires an understanding of key foundat
 
 ## Preparation for Class
 
-Use the resources below to answer [these questions](Prep/FoundationalDefns). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
+Use the resources below to answer [these questions](Prep/FoundationalDefns). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (8 pages, 12 mins)
   * [![PDF](../img/pdf.png) Reading](book/Foundational Definitions.pdf)

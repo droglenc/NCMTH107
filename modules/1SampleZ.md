@@ -30,7 +30,7 @@ The simplest hypothesis test occurs when one is making a claim that the populati
 
 ## Preparation for Class
 
-Use the resources below to answer [these questions](Prep/1SampleZ). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
+Use the resources below to answer [these questions](Prep/1SampleZ). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (5 pages, 17 mins)
   * [![PDF](../img/pdf.png) Reading](book/1-Sample Z-Test.pdf)

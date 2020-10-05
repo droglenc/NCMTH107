@@ -29,7 +29,7 @@ css: /css/modules.css
 
 ## Preparation for Class
 
-Use the resources below to answer [these questions](Prep/ChiSquare). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
+Use the resources below to answer [these questions](Prep/ChiSquare). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (6 pages, 26 mins)
   * [![PDF](../img/pdf.png) Reading](book/Chi-Square Test.pdf)

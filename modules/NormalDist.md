@@ -34,7 +34,7 @@ Many natural phenomena can be closely approximated by simple statistical distrib
 
 ## Preparation for Class
 
-Use the resources below to answer [these questions](Prep/NormalDist). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
+Use the resources below to answer [these questions](Prep/NormalDist). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources I** (10 pages, 32 mins)
   * [![PDF](../img/pdf.png) Reading](book/Normal Distribution.pdf)

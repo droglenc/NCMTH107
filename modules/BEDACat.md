@@ -31,7 +31,7 @@ It is important to understand the relationship between two variables.  With cate
 
 ## Preparation for Class
 
-Use the resources below to answer [these questions](Prep/BEDACat). [[*Problems with videos?*](../resources/FAQ/FAQs/videos){:target="_blank"}]
+Use the resources below to answer [these questions](Prep/BEDACat). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (5 pages, 6 mins)
   * [![PDF](../img/pdf.png) Reading](book/Bivariate EDA - Categorical.pdf)
