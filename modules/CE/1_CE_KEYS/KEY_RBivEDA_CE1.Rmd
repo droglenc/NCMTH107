@@ -1,0 +1,133 @@
+---
+title: "Answer Key"
+subtitle: "R Bivariate EDA Assignment"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_RBivEDA_CE1")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+library(ggplot2)
+source("../../../rhelpers/knitr_setup.R")
+```
+
+<br>
+
+# Urban Runoff
+
+1. The response variable is IBI.
+1. The explanatory variable is percent impervious surface.
+1. The relationship between IBI and the percent of impervious surface is **negative, nonlinear**, and **moderately strong** with **no obvious outliers.** I did not report the value of the correlation coefficient because of the nonlinear form.
+
+#### R Code and Results
+```{r echo=FALSE}
+d <- data.frame(imp=c(60,43,43,34,27,25,21,18,11,8,8,8,7,7,5,4,2),
+                IBI=c(9,11,13,23,31,31,21,23,27,37,39,29,31,43,33,35,37))
+```
+```{r eval=FALSE}
+d <- read.csv("IBI.csv")
+```
+```{r}
+ggplot(data=d,mapping=aes(x=imp,y=IBI)) +
+  geom_point(pch=21,color="black",fill="lightgray") +
+  labs(x="Percent Impervious Land",y="Benthic Index of Biotic Integrity") +
+  theme_NCStats()
+```
+
+<br>
+
+----
+
+## Lights and Nearsightedness
+```{r echo=FALSE}
+d <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/nightlight.csv")
+```
+```{r LightTables, echo=FALSE, results='hide'}
+tbl <- xtabs(~Light+Nearsightedness,data=d)
+addmargins(tbl)
+( row.tbl <- percTable(tbl,margin=1) )
+( col.tbl <- percTable(tbl,margin=2) )
+( perc.tbl <- percTable(tbl) )
+```
+
+1. A total of **`r tbl["no light","Yes"]`** children slept in "no light" conditions and developed nearsightedness (see frequency table).
+1. The percentage of children that slept in "no light" conditions that then developed nearsightedness is **`r formatC(row.tbl["no light","Yes"],format="f",digits=1)`%** (see row percent table).
+1. The percentage of all children that slept with a "lamp" and developed nearsightedness is **`r formatC(perc.tbl["lamp","Yes"],format="f",digits=1)`%** (see total percent table).
+1. The percentage of children that slept with a "night light" that did not develop nearsightedness is **`r formatC(row.tbl["night light","No"],format="f",digits=1)`%** (see row percent table).
+1. The percentage of children that developed nearsightedness that slept with a "lamp" is **`r formatC(col.tbl["lamp","Yes"],format="f",digits=1)`%** (see column percent table).
+1. The percentage of children that developed nearsightedness is **`r formatC(perc.tbl["Sum","Yes"],format="f",digits=1)`%** (see total percent table).
+1. It appears that the percentage of children that developed nearsightedness is greater when the child slept with some sort of light (either a lamp or a night light), with a somewhat greater prevalence of nearsightedness with the lamp (see row percent table).
+
+#### R Code and Results
+```{r eval=FALSE}
+d <- read.csv("Nearsight.csv")
+```
+```{r}
+<<LightTables>>
+```
+
+<br>
+
+----
+
+## Forest Composition
+```{r echo=FALSE}
+d <- read.csv("https://github.com/droglenc/NCData/raw/master/Fire.csv")
+d$sttype <- factor(d$sttype,levels=c("c","mc","md","d"))
+```
+```{r ForestTables, echo=FALSE, results='hide'}
+tbl <- xtabs(~sttype+tslf,data=d)
+addmargins(tbl)
+( row.tbl <- percTable(tbl,margin=1) )
+( col.tbl <- percTable(tbl,margin=2) )
+( perc.tbl <- percTable(tbl) )
+```
+
+1. A total of **`r sum(tbl[,"200-300"])`** stands last had a fire between 200 and 300 years ago.
+1. The percentage of deciduous tree stands that had a fire within the last 100 years is **`r formatC(row.tbl["d","0-100"],format="f",digits=1)`%** (see row percent table).
+1. The percentage of mixed-coniferous tree stands that had a fire between 200 and 300 years ago is **`r formatC(row.tbl["mc","200-300"],format="f",digits=1)`%** (see row percent table).
+1. The percentage of all stands that were coniferous and had a fire within the last 100 years is **`r formatC(perc.tbl["c","200-300"],format="f",digits=1)`%** (see total percent table).
+1. The percentage of stands that last had a fire 200 to 300 years ago that were coniferous is **`r formatC(col.tbl["c","200-300"],format="f",digits=1)`%** (see column percent table).
+1. The percentage of all stands that were deciduous and had a fire between 100 and 200 years ago is **`r formatC(perc.tbl["d","100-200"],format="f",digits=1)`%** (see total percent table).
+1. The percentage of mixed-deciduous tree stands that had a fire within the last 100 years is **`r formatC(row.tbl["md","0-100"],format="f",digits=1)`%** (see row percent table).
+1. The recency of the last fire decreases as the "amount" of coniferous trees decreases (i.e., from coniferous to mixed-coniferous to mixed-deciduous to deciduous). In other words, stands with more deciduous trees last had a fire more recently.
+
+#### R Code and Results
+```{r eval=FALSE}
+d <- read.csv("Fire.csv")
+```
+```{r}
+<<ForestTables>>
+```
+
+<br>
+
+----
+
+# Red-Imported Fire Ants and Deer
+The relationship between the abundance of red-imported fire ants and fawn recruitment is **linear, negative, moderately strong** (r=0.700), and **without any obvious outliers**. I assessed the strength of the relationship with the correlation coefficient (r) because the form is linear and there are no outliers.
+
+#### R Code and Results
+```{r echo=FALSE}
+d <- read.csv("https://raw.githubusercontent.com/droglenc/NCData/master/RIFA.csv")
+```
+```{r eval=FALSE}
+d <- read.csv("RIFA.csv")
+```
+```{r}
+ggplot(data=d,mapping=aes(x=rifa,y=fawnrec)) +
+  geom_point(pch=21,color="black",fill="lightgray") +
+  labs(x="Red-Importaed Fire Ant Abundance",y="Fawn Recruitment Index") +
+  theme_NCStats()
+corr(~rifa+fawnrec,data=d,digits=4)
+```
