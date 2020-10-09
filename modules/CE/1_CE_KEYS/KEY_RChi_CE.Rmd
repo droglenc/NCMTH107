@@ -1,0 +1,82 @@
+---
+title: "Answer Key"
+subtitle: "R Chi-Square Assignment"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_RChi_CE")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+library(NCStats)
+library(ggplot2)
+source("../../../rhelpers/knitr_setup.R")
+```
+
+<br>
+
+# Popularity in Middle School
+
+```{r PopCalc, echo=FALSE, results='hide', fig.show='hide', warning=FALSE}
+d <- read.csv("https://github.com/droglenc/NCData/raw/master/PopularKids.csv")
+( obs <- xtabs(~grade+goals,data=d) )
+( chi1 <- chisq.test(obs,correct=FALSE) )
+chi1$expected
+percTable(obs,margin=1,digits=1)
+```
+
+1. &alpha;=0.05.
+1. H<sub>A</sub>: "The distribution of students into the goals categories differs among grades" and H<sub>0</sub>: "The distribution of students into the goals categories DOES NOT differ among grades".
+1. Chi-square test because (i) the response variable (goals category) is categorical and (ii) two or more groups or populations (grades) were sampled.
+1. This is an observational study because the students were not allocated to grades. The students were not obviously randomly selected (and were likely part of a voluntary response survey).
+1. All cells in the expected frequency table (see `chi1$expected` results below) were greater than 5; the assumptions for a chi-square test have been met.
+1. The observed frequency table is shown in the `obs` results below.
+1. &chi;<sup>2</sup>=`r formatC(chi1$statistic,format="f",digits=4)` with `r chi1$parameter` df.
+1. p-value=`r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)`.
+1. Do not reject H<sub>0</sub> because the p-value&gt;&alpha;.
+1. It appears that the distributions of goals by students does not differ by grade. Analysis of the row percentage table (results of `percTable()` below) suggests that grades are the primary goal for students in each grade.
+1. Not necessary with a chi-square test.</li>
+
+
+#### R Code and Results
+```{r}
+<<PopCalc>>
+```
+
+<br>
+
+----
+
+# Bear Habitat Use
+
+```{r BearCalc, echo=FALSE, results='hide', fig.show='hide', warning=FALSE}
+obs <- c("LowConif"=47,"Aspen"=12,"Open"=10,"UpHard"=21,"MixUp"=10)
+pexp <- c("LowConif"=34,"Aspen"=17,"Open"=12,"UpHard"=25,"MixUp"=12)
+( gof <- chisq.test(obs,p=pexp,rescale=TRUE,correct=FALSE) )
+gof$expected
+```
+
+1. &alpha; =0.10.
+1. H<sub>0</sub>:"The distribution of bear observations into the habitats is in the same proportions as available habitat" versus H<sub>A</sub>:"The distribution of bear observations into the habitats is NOT in the same proportions as available habitat"
+1. A goodness-of-fit test is required because a single categorical variable (habitat use) from a single group or population (this bear) was measured and the proportions are being compared to a theoretical distribution in the null hypothesis.
+1. This is an observational study with randomly selected times for observation.
+1. The expected number of observations in each habitat is in proportion to the GIS analysis of habitat availability. Thus, the expected number in each habitat is shown in the `gof$expected` results below. Note that these percentages did not need to be adjusted to the number of observations because 100 observations were made. The test statistic computed below should reasonably follow a chi-square distribution because all of the expected values are greater than five.
+1. The table of observed frequencies is shown in the `obs` results below.
+1. The &chi;<sup>2</sup> test statistic is `r formatC(gof$statistic,format="f",digits=4)` with `r gof$parameter` df.
+1. p-value=`r kPvalue(gof$p.value,include.p=FALSE,latex=FALSE)`.
+1. The H<sub>0</sub> is not rejected because the p-value>&alpha;.
+1. The bear appears to use the habitats in proportion to the availability of the habitat.
+1. Not completed with a goodness-of-fit test.
+
+#### R Code and Results
+```{r warning=FALSE}
+<<BearCalc>>
+```
