@@ -64,7 +64,7 @@ df <- n1+n2-2
 <li>x&#772;<sub>b</sub>-x&#772;<sub>h</sub> = `r xbar1`-`r xbar2` = `r stat`. The pooled sample variance is,
       \[s_{p}^{2}=\frac{(18-1)4.33^{2}+(10-1)3.21^{2}}{18+10-2} = 15.826 \]
        The standard error of the statistic is,
-       \[ SE_{\bar{x}_{did}-\bar{x}_{didnot}}=\sqrt{15.826\left(\frac{1}{18}+\frac{1}{105} \right)} = 1.569  \]</li>
+       \[ SE_{\bar{x}_{did}-\bar{x}_{didnot}}=\sqrt{15.826\left(\frac{1}{18}+\frac{1}{10} \right)} = 1.569  \]</li>
 <li>t = $\frac{13.77}{1.569}$=`r formatC(t,format="f",digits=3)` with `r df` df.</li>
 <li>p-value`r kPvalue(pv,include.p=FALSE,latex=FALSE)` (more specifically `r formatC(pv,digits=4)`).</li>
 <li>Reject H<sub>0</sub> because the p-value &lt; &alpha;.</li>
