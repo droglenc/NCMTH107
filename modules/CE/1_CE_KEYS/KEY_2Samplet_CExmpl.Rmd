@@ -131,7 +131,7 @@ df <- n1+n2-2
 <ol start="7">
   <li>With the intermediate calculations from above t = $\frac{(\bar{x}_{bf} - \bar{x}_{lp})-0}{SE_{\bar{x}_{bf}-\bar{x}_{lp}}}$ = $\frac{-0.078 - 0}{0.053}$ = `r formatC(t,format="f",digits=3)` with n<sub>bf</sub>+n<sub>lp</sub>-2 = 13+12-2 = `r df` df.</li>
   <li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)` as computed with `2*distrib(-1.485,distrib="t",df=23)`.</li>
-<li>Reject H<sub>0</sub> because the p-value &lt; &alpha;.</li>
+<li>Do not reject H<sub>0</sub> because the p-value &gt; &alpha;.</li>
 <li>It appears that the mean reduction in LDL does NOT differ between subjects given Befizal and those given Lipanthyl. Thus, neither drug should be preferred with respect to reducing the LDL in patients.</li>
 </ol>
 
