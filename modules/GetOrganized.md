@@ -24,5 +24,5 @@ The following items will be completed in class.
 * Discuss syllabus and class webpage (go over answers to scavenger hunt)
 * Orient to [class page on my.northland.edu](https://mycourses.northland.edu/ICS/Academics/MTH/MTH__107/2020_10-MTH__107-01/Resources.jnz){:target="_blank"}
 * Orient to Piazza discussion site (link on [the class homepage](../../){:target="_blank"})
-* Take "Getting Organized -- Prep Check" on Gradescope ( (link on [the class homepage](../../){:target="_blank"})) [*Note: all answers from Webpage Scavenger Hunt*]
+* Take "Getting Organized -- Prep Check" on Gradescope (link on [the class homepage](../../){:target="_blank"}) [*Note: all answers from Webpage Scavenger Hunt*]
 * Submit [first module assignment](CE/GetOrganized_CE1) on GradeScope
