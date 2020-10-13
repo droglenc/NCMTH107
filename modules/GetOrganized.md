@@ -22,7 +22,7 @@ Complete the following items to be prepared for the first day of class (*the las
 The following items will be completed in class.
 
 * Discuss syllabus and class webpage (go over answers to scavenger hunt)
-* Orient to class page on my.northland.edu ([see quick link on class homepage](../../){:target="_blank"})
-* Orient to Piazza discussion site (see quick link on [the class homepage](../../){:target="_blank"})
-* Take "Getting Organized -- Prep Check" on Gradescope (see quick link on [the class homepage](../../){:target="_blank"}) [*Note: all answers from Webpage Scavenger Hunt*]
+* Orient to class page on my.northland.edu (see [quick link on class homepage](../){:target="_blank"})
+* Orient to Piazza discussion site (see [quick link on class homepage](../){:target="_blank"})
+* Take "Getting Organized -- Prep Check" on Gradescope (see [quick link on class homepage](../){:target="_blank"}) [*Note: all answers from Webpage Scavenger Hunt*]
 * Submit [first module assignment](CE/GetOrganized_CE1) on GradeScope
