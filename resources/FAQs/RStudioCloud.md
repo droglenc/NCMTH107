@@ -22,7 +22,7 @@ After this you should successfully have an RStudio Cloud account.
 
 Once you have created your account, follow [this link to the "MTH107" project](https://rstudio.cloud/project/1767444){:target="_blank"}, which should open a project that looks like that below. Currently this project is in my "workspace." Click on the red "Save a Permanent Copy" item in the top bar to save the project to your workspace.
 
-<img src="figs/RStudioCloud_SavePermanentCopy.JPG" alt="RStudio Cloud Project" style="display: block; margin-left: auto; margin-right: auto; width: 95%;">
+<img src="Figs/RStudioCloud_SavePermanentCopy.JPG" alt="RStudio Cloud Project" style="display: block; margin-left: auto; margin-right: auto; width: 95%;">
 
 Any changes that you make to the project (uploading files, creating scripts) will be saved in this project in your workspace. *If you do not save a permanent copy then any work that you do in the project will be lost when you come back to it.*
 
