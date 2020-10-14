@@ -10,7 +10,7 @@ Analyses with R and RStudio can be run on through a web browser on "the cloud", 
 ## Creating an RStudio Cloud Account
 You must create a free RStudio Cloud account to use this service. Go to the [RStudio Cloud website](https://rstudio.cloud/) and select "Get Started." In the ensuing dialog box enter your e-mail adddress, a password, and your first and last names. Press "Sign up."
 
-<img src="Figs/RStudioCloud_SignUp.jpg" alt="RStudio Cloud Sign-up" width="80%">
+<img src="Figs/RStudioCloud_SignUp.JPG" alt="RStudio Cloud Sign-up" width="80%">
 
 In a subsequent screen you will be asked to provide a name for the account with prompts to use your first and last name. Just press "Create Account" here.
 
@@ -22,7 +22,7 @@ After this you should successfully have an RStudio Cloud account.
 
 Once you have created your account, follow [this link to the "MTH107" project](https://rstudio.cloud/project/1767444){:target="_blank"}, which should open a project that looks like that below. Currently this project is in my "workspace." Click on the red "Save a Permanent Copy" item in the top bar to save the project to your workspace.
 
-<img src="Figs/RStudioCloud_SavePermanentCopy.JPG" alt="RStudio Cloud Project" style="display: block; margin-left: auto; margin-right: auto; width: 95%;">
+<img src="Figs/RStudioCloud_SavePermanentCopy.jpg" alt="RStudio Cloud Project" style="display: block; margin-left: auto; margin-right: auto; width: 95%;">
 
 Any changes that you make to the project (uploading files, creating scripts) will be saved in this project in your workspace. *If you do not save a permanent copy then any work that you do in the project will be lost when you come back to it.*
 
