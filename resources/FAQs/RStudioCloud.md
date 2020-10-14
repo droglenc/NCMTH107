@@ -10,7 +10,7 @@ Analyses with R and RStudio can be run on through a web browser on "the cloud", 
 ## Creating an RStudio Cloud Account
 You must create a free RStudio Cloud account to use this service. Go to the [RStudio Cloud website](https://rstudio.cloud/) and select "Get Started." In the ensuing dialog box enter your e-mail adddress, a password, and your first and last names. Press "Sign up."
 
-<img src="Figs/RStudioCloud_SignUp.JPG" alt="RStudio Cloud Sign-up" width="80%">
+<img src="Figs/RStudioCloud_SignUp.jpg" alt="RStudio Cloud Sign-up" width="80%">
 
 In a subsequent screen you will be asked to provide a name for the account with prompts to use your first and last name. Just press "Create Account" here.
 
