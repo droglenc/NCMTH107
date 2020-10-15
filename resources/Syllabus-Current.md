@@ -84,7 +84,7 @@ Please see or contact me if you have questions regarding this course.
 ### Tutors
 
 <img class="img-right" src="../img/Markia_W20.jpg">
-Markia Smith will also be available to help you succeed in this course. Markia is a Math and Education major who took this class two years ago and will be tutoring stats for her second year. Markia's tutoring hours are XXX and XXX from XXX to XXXpm. **You must register to meet with Markia at least one hour in advance of these times** ([see here for how to register and join the tutoring session](How to make an appointment with a tutor.pdf)).
+Markia Smith will also be available to help you succeed in this course. Markia is a Math and Education major who took this class two years ago and will be tutoring stats for her second year. Markia's tutoring hours are Tuesday and Thursday from 4 to 6pm. **You must register to meet with Markia at least one hour in advance of these times** ([see here for how to register and join the tutoring session](How to make an appointment with a tutor.pdf)).
 
 &nbsp;
 
