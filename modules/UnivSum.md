@@ -43,7 +43,7 @@ Use the resources below to answer [these questions](Prep/UnivSum). [[*Problems w
   * [![YouTube](../img/youtube.png) Calculate Standard Deviation](https://www.youtube.com/watch?v=qqOyy_NjflU){:target="_blank"} [5 mins]
   * [![YouTube](../img/youtube.png) Construct a Histogram](https://www.youtube.com/watch?v=sC7gjg9g3JU){:target="_blank"} [13 mins]
   * [![YouTube](../img/youtube.png) Frequency Table](https://www.youtube.com/watch?v=LVnzV1ZXdiY){:target="_blank"} [2 mins]
-  * [![YouTube](../img/youtube.png) Barplot](https://www.youtube.com/watch?v=PM39_HA1qSc){:target="_blank"} [3 mins]
+  * [![YouTube](../img/youtube.png) Construct a Barplot](https://www.youtube.com/watch?v=FYFYrjMLG7E){:target="_blank"} [3 mins]
   * [![Vimeo](../img/dhovid.png) Quick Rant about Pie and 3-D Charts](https://vimeo.com/user45324800/ueda-badplotrant){:target="_blank"} [3 mins] ...  [corresponding slides](PPT/UEDACat_PPT2.pptx)
 * **Alternative Resources**
   * [Calculate the median](https://www.youtube.com/watch?v=0SYsi38XucI){:target="_blank"} [2 mins]
@@ -61,13 +61,14 @@ Use the resources below to answer [these questions](Prep/UnivSum). [[*Problems w
 
 &nbsp;
 
+<!---
+
 ----
 
 ## Archived Materials
 
 * [In-Class "Review Lecture"]() [XX mins]
 
-<!---
 * [Old Lecture Slides - Quantitative](PPT/UEDAQuant_PPT_old.pptx)
 * [Old Lecture Slides - Categorical](PPT/UEDACat_PPT_old.pptx)
 
