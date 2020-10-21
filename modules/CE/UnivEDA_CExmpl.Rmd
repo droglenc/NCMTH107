@@ -1,0 +1,134 @@
+---
+layout: page
+title: Class Example
+subtitle: Univariate EDA
+author: Derek H. Ogle
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: false
+    lib_dir: zlibs
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/")
+source("../../rhelpers/rhelpers.R")
+modHTML("UnivEDA_CExmpl")
+```
+
+
+```{r echo=FALSE, results="hide"}
+library(NCStats)
+library(ggplot2)
+
+d <- readxl::read_excel("truck_data.xlsx",sheet="GAS") %>%
+  mutate(
+    date=as.Date(date),
+    # miles driven on a tank of gas
+    miles_driven=miles-lag(miles),
+    # miles per gallon
+    mpg=miles_driven/gallons,
+    # calculated per gallon cost (a check for cost and total variables
+    # as calc_cost and cost should be very close)
+    calc_cost=total/gallons,
+    # handle dates
+    year=lubridate::year(date),
+    month=lubridate::month(date,label=TRUE),
+    # compute a season (warm and cold)
+    season=ifelse(month %in% c("Nov","Dec","Jan","Feb","Mar","Apr"),
+                  "Nov-Apr","May-Oct"),
+    season=factor(season,levels=c("Nov-Apr","May-Oct")),
+    # find town where gas was bought
+    town=stringr::word(location,1),
+    town2=case_when(
+      town=="IR" ~ "Iron River",
+      town=="Ashland" ~ "Ashland",
+      town=="Washburn" ~ "Washburn",
+      town=="Superior" ~ "Superior",
+      TRUE ~ "Other"),
+    town2=factor(town2,levels=c("Ashland","Iron River","Washburn",
+                                "Superior","Other")),
+    # find station where gas was bought
+    station=stringr::word(location,2),
+    station2=case_when(
+      station=="Holiday" ~ "Holiday",
+      station=="Cenex" ~ "Cenex",
+      TRUE ~ "Other"),
+    station2=factor(station2,levels=c("Holiday","Cenex","Other")),
+    pulledc=cut(pulled,breaks=c(0,1,40,80,120,Inf),
+                labels=c("0","1-39","40-79","80-119","120+"),right=FALSE),
+    premium=factor(premium)) %>%
+  # select and order variables
+  select(date,year,month,season,location,town2,station2,
+         miles,miles_driven,gallons,mpg,cost,calc_cost,total,discount,premium,
+         pulled,pulledc,four_wd,car_wash,receipt,other_notes) %>%
+  # remove first two records (truck was bought, tank might not have been full)
+  slice(-(1:2)) %>%
+  # should be arranged, but just to make sure
+  arrange(date)
+```
+
+## Personal Gas Purchases I
+<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/CO2.jpg" alt="CO2 Emissions" class="img-right">
+
+I have recorded data for every tank of gas that I have put into the truck that I bought in 2018. In the figure and table below I summarize the miles-per-gallon for each tank of gas. Use these results to perform a univariate EDA.
+
+```{r echo=FALSE, results="hide", fig.height=3.5, fig.width=3.5, fig.show="hold",message=FALSE}
+ggplot(data=filter(d,pulled==0),mapping=aes(x=mpg)) +
+  geom_histogram(boundary=0,binwidth=0.5,closed="left",
+                 fill="gray60",color="black",alpha=0.75) +
+  scale_x_continuous(name="Miles per Gallon",
+                     expand=expansion(mult=0.02),breaks=seq(15,25,1)) +
+  scale_y_continuous(name="Frequency of Fill-Ups",
+                     expand=expansion(mult=c(0,0.05))) +
+  theme_NCStats()
+```
+
+```{r echo=FALSE}
+Summarize(~mpg,data=d,digits=2)
+```
+
+&nbsp;
+
+----
+
+## Personal Gas Purchases II
+
+The graph and table below show the price per gallon each time I filled the tank. Use the results to perform a univariate EDA.
+
+```{r echo=FALSE, results="hide", fig.height=3.5, fig.width=3.5, fig.show="hold",message=FALSE}
+ggplot(data=d,mapping=aes(x=cost)) +
+  geom_histogram(boundary=0,binwidth=.1,closed="left",
+                 fill="gray60",color="black",alpha=0.75) +
+  scale_x_continuous(name="Price per Gallon",expand=expansion(mult=0.02),
+                     limits=c(2,3.75),breaks=seq(2,4,.25)) +
+  scale_y_continuous(name="Frequency of Fill-Ups",
+                     expand=expansion(mult=c(0,0.05))) +
+  theme_NCStats()
+```
+
+```{r echo=FALSE}
+Summarize(~cost,data=d,digits=3)
+```
+
+&nbsp;
+
+----
+
+## Personal Gas Purchases II
+
+Finally, the graph below shows the frequency and the table below shows the percentage of towns in which I bought each tank of gas. Use these results to perform a univariate EDA.
+
+```{r echo=FALSE, results="hide", fig.height=3.5, fig.width=4.5, fig.show="hold",message=FALSE}
+ggplot(data=d,mapping=aes(x=town2)) +
+  geom_bar(fill="wheat3",color="black",alpha=0.8) +
+  scale_x_discrete(name="Town Where Gas was Bought") +
+  scale_y_continuous(name="Frequency of Fill-Ups",
+                     expand=expansion(mult=c(0,0.05))) +
+  theme_NCStats()
+```
+
+```{r echo=FALSE}
+percTable(freq)
+```

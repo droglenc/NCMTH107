@@ -41,11 +41,13 @@ Use the resources below to answer [these questions](Prep/UnivEDA). [[*Problems w
 
 ## Practice
 
+* [Class Example](CE/UnivEDA_CExmpl) ... [ANNOTATED KEY](CE/KEY_UnivEDA_CExmpl)
 * [Assignment](CE/UnivEDA_CE1) ... [ANSWER KEY](CE/KEY_UnivEDA_CE)
 * [Additional Exercises](CE/UnivEDA_CE2)
 
 &nbsp;
 
+<!---
 ----
 
 ## Archived Materials

@@ -1,0 +1,85 @@
+---
+layout: page
+title: Class Example
+subtitle: Univariate EDA
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<div id="personal-gas-purchases-i" class="section level2">
+<h2>Personal Gas Purchases I</h2>
+<p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/CO2.jpg" alt="CO2 Emissions" class="img-right"></p>
+<p>I have recorded data for every tank of gas that I have put into the truck that I bought in 2018. In the figure and table below I summarize the miles-per-gallon for each tank of gas. Use these results to perform a univariate EDA.</p>
+<p><img src="UnivEDA_CExmpl_files/figure-html/unnamed-chunk-3-1.png" width="336" /></p>
+<pre><code>##      n   mean     sd    min     Q1 median     Q3    max 
+## 130.00  19.35   2.09  12.69  18.33  19.73  20.76  23.68</code></pre>
+<p> </p>
+<hr />
+</div>
+<div id="personal-gas-purchases-ii" class="section level2">
+<h2>Personal Gas Purchases II</h2>
+<p>The graph and table below show the price per gallon each time I filled the tank. Use the results to perform a univariate EDA.</p>
+<pre><code>## Warning: Removed 2 rows containing missing values (geom_bar).</code></pre>
+<p><img src="UnivEDA_CExmpl_files/figure-html/unnamed-chunk-5-1.png" width="336" /></p>
+<pre><code>##       n    mean      sd     min      Q1  median      Q3     max 
+## 130.000   2.569   0.263   2.109   2.349   2.539   2.799   3.609</code></pre>
+<p> </p>
+<hr />
+</div>
+<div id="personal-gas-purchases-ii-1" class="section level2">
+<h2>Personal Gas Purchases II</h2>
+<p>Finally, the graph below shows the frequency and the table below shows the percentage of towns in which I bought each tank of gas. Use these results to perform a univariate EDA.</p>
+<p><img src="UnivEDA_CExmpl_files/figure-html/unnamed-chunk-7-1.png" width="432" /></p>
+<pre><code>## town2
+##    Ashland Iron River   Washburn   Superior      Other 
+##       66.9       20.0        6.2        1.5        5.4</code></pre>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
