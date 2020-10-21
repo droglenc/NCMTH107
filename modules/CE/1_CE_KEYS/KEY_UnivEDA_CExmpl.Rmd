@@ -79,8 +79,6 @@ res3 <- percTable(xtabs(~town2,data=d))
 ## Personal Gas Purchases I
 The distribution of miles per gallon is slightly left-skewed with no obvious outliers. The center as measured by the mean is `r res1[["mean"]]` and the dispersion as measured by the standard deviation is `r res1[["sd"]]`. I measured center and dispersion with the mean and standard deviation because the distribution was not *strongly* skewed and no outliers were present.
 
-&nbsp;
-
 <div class="alert alert-warning">
 <p>These results are for a *quantitative* variable (miles per gallon); thus, you must describe shape, outliers, center, and dispersion of the distribution. In addition, you must explain why you chose to use either the mean and standard deviation or the median and IQR as your measures of center and dispersion (see last sentence).</p>
 </div>
@@ -88,9 +86,7 @@ The distribution of miles per gallon is slightly left-skewed with no obvious out
 &nbsp;
 
 ## Personal Gas Purchases II
-The distribution of price per gallon is approximately symmetric (perhaps slightly right-skewed) with an obvious outlier at  `r res2[["max"]]`. The center as measured by the median is `r res2[["median"]]` and the dispersion as measured by the IQR is from a Q1 of `r res2[["Q1"]]` to a Q3 of `r res2[["Q3"]]`. I measured center and dispersion with the median and IQR because an outlier was present.
-
-&nbsp;
+The distribution of price per gallon is approximately symmetric (perhaps slightly right-skewed) with an obvious outlier at \$`r res2[["max"]]`. The center as measured by the median is \$`r res2[["median"]]` and the dispersion as measured by the IQR is from a Q1 of \$`r res2[["Q1"]]` to a Q3 of \$`r res2[["Q3"]]`. I measured center and dispersion with the median and IQR because an outlier was present.
 
 <div class="alert alert-warning">
 <p>These results are for a *quantitative* variable (price per gallon); thus, you must describe shape, outliers, center, and dispersion of the distribution. In addition, you must explain why you chose to use either the mean and standard deviation or the median and IQR as your measures of center and dispersion (see last sentence).</p>
@@ -100,8 +96,6 @@ The distribution of price per gallon is approximately symmetric (perhaps slightl
 
 ## Personal Gas Purchases II
 It is clear that most (`r res3[["Ashland"]]`%) gas purchases were made in Ashland. Many other puchases (`r res3[["Iron River"]]`%) were made in Iron River. Gas purchases were not prevalent in any other town.
-
-&nbsp;
 
 <div class="alert alert-warning">
 <p>These results are for a *categorical* variable (town where gas was purchased); thus, you do not describe anything specific, rather you generally make a conclusion from the table or bar chart. In this example, there was a category with a clearly higher frequency and a category with a clear second highest frequency, so I made sure to point those two categories out.</p>
