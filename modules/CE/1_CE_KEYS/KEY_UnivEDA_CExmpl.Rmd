@@ -1,0 +1,108 @@
+---
+title: "Annotated Key"
+subtitle: "Univariate EDA Class Example"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3.5
+    fig_width: 3.5
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_UnivEDA_CExmpl")
+```
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+```
+
+```{r echo=FALSE, results="hide"}
+library(NCStats)
+library(ggplot2)
+
+d <- readxl::read_excel("../truck_data.xlsx",sheet="GAS") %>%
+  mutate(
+    date=as.Date(date),
+    # miles driven on a tank of gas
+    miles_driven=miles-lag(miles),
+    # miles per gallon
+    mpg=miles_driven/gallons,
+    # calculated per gallon cost (a check for cost and total variables
+    # as calc_cost and cost should be very close)
+    calc_cost=total/gallons,
+    # handle dates
+    year=lubridate::year(date),
+    month=lubridate::month(date,label=TRUE),
+    # compute a season (warm and cold)
+    season=ifelse(month %in% c("Nov","Dec","Jan","Feb","Mar","Apr"),
+                  "Nov-Apr","May-Oct"),
+    season=factor(season,levels=c("Nov-Apr","May-Oct")),
+    # find town where gas was bought
+    town=stringr::word(location,1),
+    town2=case_when(
+      town=="IR" ~ "Iron River",
+      town=="Ashland" ~ "Ashland",
+      town=="Washburn" ~ "Washburn",
+      town=="Superior" ~ "Superior",
+      TRUE ~ "Other"),
+    town2=factor(town2,levels=c("Ashland","Iron River","Washburn",
+                                "Superior","Other")),
+    # find station where gas was bought
+    station=stringr::word(location,2),
+    station2=case_when(
+      station=="Holiday" ~ "Holiday",
+      station=="Cenex" ~ "Cenex",
+      TRUE ~ "Other"),
+    station2=factor(station2,levels=c("Holiday","Cenex","Other")),
+    pulledc=cut(pulled,breaks=c(0,1,40,80,120,Inf),
+                labels=c("0","1-39","40-79","80-119","120+"),right=FALSE),
+    premium=factor(premium)) %>%
+  # select and order variables
+  select(date,year,month,season,location,town2,station2,
+         miles,miles_driven,gallons,mpg,cost,calc_cost,total,discount,premium,
+         pulled,pulledc,four_wd,car_wash,receipt,other_notes) %>%
+  # remove first two records (truck was bought, tank might not have been full)
+  slice(-(1:2)) %>%
+  # should be arranged, but just to make sure
+  arrange(date)
+
+res1 <- Summarize(~mpg,data=d,digits=2)
+res2 <- Summarize(~cost,data=d,digits=3)
+res3 <- percTable(xtabs(~town2,data=d))
+```
+
+## Personal Gas Purchases I
+The distribution of miles per gallon is slightly left-skewed with no obvious outliers. The center as measured by the mean is `r res1[["mean"]]` and the dispersion as measured by the standard deviation is `r res1[["sd"]]`. I measured center and dispersion with the mean and standard deviation because the distribution was not *strongly* skewed and no outliers were present.
+
+&nbsp;
+
+<div class="alert alert-warning">
+<p>These results are for a *quantitative* variable (miles per gallon); thus, you must describe shape, outliers, center, and dispersion of the distribution. In addition, you must explain why you chose to use either the mean and standard deviation or the median and IQR as your measures of center and dispersion (see last sentence).</p>
+</div>
+
+&nbsp;
+
+## Personal Gas Purchases II
+The distribution of price per gallon is approximately symmetric (perhaps slightly right-skewed) with an obvious outlier at  `r res2[["max"]]`. The center as measured by the median is `r res2[["median"]]` and the dispersion as measured by the IQR is from a Q1 of `r res2[["Q1"]]` to a Q3 of `r res2[["Q3"]]`. I measured center and dispersion with the median and IQR because an outlier was present.
+
+&nbsp;
+
+<div class="alert alert-warning">
+<p>These results are for a *quantitative* variable (price per gallon); thus, you must describe shape, outliers, center, and dispersion of the distribution. In addition, you must explain why you chose to use either the mean and standard deviation or the median and IQR as your measures of center and dispersion (see last sentence).</p>
+</div>
+
+&nbsp;
+
+## Personal Gas Purchases II
+It is clear that most (`r res3[["Ashland"]]`%) gas purchases were made in Ashland. Many other puchases (`r res3[["Iron River"]]`%) were made in Iron River. Gas purchases were not prevalent in any other town.
+
+&nbsp;
+
+<div class="alert alert-warning">
+<p>These results are for a *categorical* variable (town where gas was purchased); thus, you do not describe anything specific, rather you generally make a conclusion from the table or bar chart. In this example, there was a category with a clearly higher frequency and a category with a clear second highest frequency, so I made sure to point those two categories out.</p>
+</div>

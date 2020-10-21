@@ -85,7 +85,7 @@ ggplot(data=filter(d,pulled==0),mapping=aes(x=mpg)) +
   theme_NCStats()
 ```
 
-```{r echo=FALSE}
+```{r echo=FALSE,comment=""}
 Summarize(~mpg,data=d,digits=2)
 ```
 
@@ -97,7 +97,7 @@ Summarize(~mpg,data=d,digits=2)
 
 The graph and table below show the price per gallon each time I filled the tank. Use the results to perform a univariate EDA.
 
-```{r echo=FALSE, results="hide", fig.height=3.5, fig.width=3.5, fig.show="hold",message=FALSE}
+```{r echo=FALSE, results="hide", fig.height=3.5, fig.width=3.5, fig.show="hold",message=FALSE,warning=FALSE}
 ggplot(data=d,mapping=aes(x=cost)) +
   geom_histogram(boundary=0,binwidth=.1,closed="left",
                  fill="gray60",color="black",alpha=0.75) +
@@ -108,7 +108,7 @@ ggplot(data=d,mapping=aes(x=cost)) +
   theme_NCStats()
 ```
 
-```{r echo=FALSE}
+```{r echo=FALSE,comment=""}
 Summarize(~cost,data=d,digits=3)
 ```
 
@@ -129,6 +129,6 @@ ggplot(data=d,mapping=aes(x=town2)) +
   theme_NCStats()
 ```
 
-```{r echo=FALSE}
-percTable(freq)
+```{r echo=FALSE,comment=""}
+percTable(xtabs(~town2,data=d))
 ```
