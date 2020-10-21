@@ -1,0 +1,206 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Data Production CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="study-types-i" class="section level2">
+<h2>Study Types I</h2>
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+The key distinction is to determine if a treatment was imparted by the researcher or not. If it was, then it is an experiment.
+</li>
+</ul>
+</div>
+<ol>
+<li><strong>Experiment</strong> … the people were given a treatment (placebo or fish oil).</li>
+<li><strong>Observational</strong> … the women were “followed” over time, no treatment was imparted (the B12 deficiency or not was naturally induced).</li>
+<li><strong>Experimental</strong> … a treatment (animations or not) was imparted.</li>
+<li><strong>Observational</strong> … no treatment was imparted (observation of church records)</li>
+<li><strong>Experiment</strong> … a treatment (type of trap) was imparted.</li>
+</ol>
+<hr />
+</div>
+<div id="types-of-observational-studies-i" class="section level2">
+<h2>Types of Observational Studies I</h2>
+<ol>
+<li><strong>Convenience sample</strong> … the individuals (a car) were not randomly selected nor did the individuals voluntarily choose to be part of the study. This data collection was simply convenient for the researcher.</li>
+<li><strong>Simple random sample</strong> (i.e., probability-based sample) … individuals (a registration) were randomly selected and could not opt-out of the study.</li>
+<li><strong>Convenience sample</strong> … individuals (a deer) were not randomly selected nor did the individuals voluntarily choose to be part of the study. This data collection was simply convenient for the researcher.</li>
+</ol>
+<hr />
+</div>
+<div id="identify-response-and-explanatory-variables-i" class="section level2">
+<h2>Identify Response and Explanatory Variables I</h2>
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+The response variable is potentially responding to, depending on, or affected by the explanatory variable.
+</li>
+</ul>
+</div>
+<ol>
+<li>The response variable is <strong>“success rate”</strong> because the distance of the putt affects the success rate (i.e., longer putts likely result in a lower success rate). And success rate (on putts) does not affect the length of a putt.</li>
+<li>The response variable is <strong>“response time”</strong> (or dexterity) because the amount of time awake affects the response time (i.e., the longer one is awake, to a point, they will likely show more dexterity). And dexterity (on the test) does not affect how long the subject was awake.</li>
+<li>The response variable is <strong>growth</strong> because growth is affected by the amount of fertilizer.</li>
+<li>It is not obvious which is the response variable. Thus, the response variable <strong>depends</strong> on the researcher’s question (i.e., if they were trying to predict shoe sales from hat sales, then shoe sales would be the response variable).</li>
+</ol>
+<hr />
+</div>
+<div id="blood-pressure-study" class="section level2">
+<h2>Blood Pressure Study</h2>
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+Here and in the next question, make sure to list all of the factors, list levels seperately for each of the factors, and list the number of replicates as the number of individuals PER treatment (not all of the individuals in the experiment).
+</li>
+<li>
+For the R work you don’t need to use the code with the square brackets, just split the random numbers up into as many groups as you have treatments.
+</li>
+</ul>
+</div>
+<ol>
+<li>Experimental … treatments (see below) were imposed.</li>
+<li>The response variable is <strong>blood pressure</strong>.</li>
+<li>Blood pressure is a quantitative, <strong>continuous</strong> variable because a blood pressure value can be found between any two blood pressure values.</li>
+<li>There are two factor variables – <strong>calcium</strong> and <strong>exercise</strong>.</li>
+<li>There are <strong>two</strong> levels of calcium (pill or not) and <strong>two</strong> levels of exercise (do or don’t).</li>
+<li>There are <strong>four</strong> treatments (see diagram below, but is from 2 levels times 2 levels).</li>
+<li>A “replicate” (i.e., an “individual”) is <strong>a male subject</strong>.</li>
+<li>There are <strong>8 replicates</strong> (male subjects) per treatment (see diagram below, but note that this 32 male subjects total divided by 4 treatments).</li>
+<li>A diagram of this experiment (rows are levels of one factor, columns are levels of other factor, each cell represents a treatment, and the numbers in each cell represent the randomly selected males allocated to that treatment).</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>No Pill</th>
+<th>CA Pill</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>No Exercise</td>
+<td>32, 20, 7, 29, 15, 17, 1, 28</td>
+<td>24, 26, 27, 13, 2, 12, 23, 3</td>
+</tr>
+<tr class="even">
+<td>Exercise</td>
+<td>18, 30, 31, 19, 11, 10, 6, 14</td>
+<td>21, 16, 5, 8, 22, 25, 9, 4</td>
+</tr>
+</tbody>
+</table>
+<div id="r-appendix" class="section level4">
+<h4>R Appendix</h4>
+<pre class="r"><code>alloc &lt;- sample(32)
+alloc[1:8]    # first treatment
+alloc[9:16]   # second treatment
+alloc[17:24]  # third treatment
+alloc[25:32]  # fourth treatment</code></pre>
+<hr />
+</div>
+</div>
+<div id="salt-sand-and-ice" class="section level2">
+<h2>Salt, Sand, and Ice</h2>
+<ol>
+<li>This was an experiment because the researchers controlled the levels of some variables at specific values (salt percentage and temperature) and attempted to control others at constant values.</li>
+<li>The two factors are <strong>salt percentage</strong> and <strong>temperature</strong>.</li>
+<li>There were <strong>two</strong> levels of salt percentage and <strong>three</strong> levels of temperature.</li>
+<li>There were <strong>six</strong> (2*3) treatments in this experiment</li>
+<li>The response variable was the <strong>melting rate of ice</strong>.</li>
+<li>Melting rate is a <strong>continuous</strong> quantitative variable.</li>
+<li>A replicate or individual in this experiment is <strong>a chamber with a small piece of highway in it</strong>.</li>
+<li>A diagram of this experiment (rows are levels of one factor, columns are levels of other factor, each cell represents a treatment, and the numbers in each cell represent the randomly selected males allocated to that treatment).</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>5F</th>
+<th>15F</th>
+<th>25F</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10% salt</td>
+<td>18, 6, 26, 15, 36, 12</td>
+<td>31, 35, 32, 16, 21, 4</td>
+<td>30, 23, 20, 34, 2, 7</td>
+</tr>
+<tr class="even">
+<td>15% salt</td>
+<td>29, 14, 28, 1, 11, 9</td>
+<td>22, 5, 8, 10, 25, 13</td>
+<td>24, 3, 33, 19, 17, 27</td>
+</tr>
+</tbody>
+</table>
+<div id="r-appendix-1" class="section level4">
+<h4>R Appendix</h4>
+<pre class="r"><code>alloc2 &lt;- sample(36)
+alloc2[1:6]    # first treatment
+alloc2[7:12]   # second treatment
+alloc2[13:18]  # third treatment
+alloc2[19:24]  # fourth treatment
+alloc2[25:30]  # fifth treatment
+alloc2[31:36]  # sixth treatment</code></pre>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

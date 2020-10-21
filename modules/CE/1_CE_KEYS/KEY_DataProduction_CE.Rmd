@@ -31,18 +31,18 @@ source("../../../rhelpers/knitr_setup.R")
 </ul>
 </div>
 
-1. Experiment ... the people were given a treatment (placebo or fish oil).
-1. Observational ... the women were "followed" over time, no treatment was imparted (the B12 deficiency or not was naturally induced).
-1. Experimental ... a treatment (animations or not) was imparted.
-1. Observational ... no treatment was imparted (observation of church records)
-1. Experiment ... a treatment (type of trap) was imparted.
+1. **Experiment** ... the people were given a treatment (placebo or fish oil).
+1. **Observational** ... the women were "followed" over time, no treatment was imparted (the B12 deficiency or not was naturally induced).
+1. **Experimental** ... a treatment (animations or not) was imparted.
+1. **Observational** ... no treatment was imparted (observation of church records)
+1. **Experiment** ... a treatment (type of trap) was imparted.
 
 ----
 
 ## Types of Observational Studies I
-1. Convenience sample ... the individuals (a car) were not randomly selected nor did the individuals voluntarily choose to be part of the study. This data collection was simply convenient for the researcher.
-1. Simple random sample (i.e., probability-based sample) ... individuals (a registration) were randomly selected and could not opt-out of the study.
-1. Convenience sample ... individuals (a deer) were not randomly selected nor did the individuals voluntarily choose to be part of the study. This data collection was simply convenient for the researcher.
+1. **Convenience sample** ... the individuals (a car) were not randomly selected nor did the individuals voluntarily choose to be part of the study. This data collection was simply convenient for the researcher.
+1. **Simple random sample** (i.e., probability-based sample) ... individuals (a registration) were randomly selected and could not opt-out of the study.
+1. **Convenience sample** ... individuals (a deer) were not randomly selected nor did the individuals voluntarily choose to be part of the study. This data collection was simply convenient for the researcher.
 
 ----
 
@@ -54,10 +54,10 @@ source("../../../rhelpers/knitr_setup.R")
 </ul>
 </div>
 
-1. The response variable is "success rate" because the distance of the putt affects the success rate (i.e., longer putts likely result in a lower success rate). And success rate (on putts) does not affect the length of a putt.
-1. The response variable is "response time" because the amount of time awake affects the response time (i.e., the longer one is awake, to a point, they will likely show more dexterity). And dexterity (on the test) does not affect how long the subject was awake.
-1. The response variable is growth because growth is affected by the amount of fertilizer.
-1. It is not obvious which is the response variable. Thus, the response variable would depend on the researcher's question (i.e., if they were trying to predict shoe sales from hat sales, then shoe sales would be the response variable).
+1. The response variable is **"success rate"** because the distance of the putt affects the success rate (i.e., longer putts likely result in a lower success rate). And success rate (on putts) does not affect the length of a putt.
+1. The response variable is **"response time"** (or dexterity) because the amount of time awake affects the response time (i.e., the longer one is awake, to a point, they will likely show more dexterity). And dexterity (on the test) does not affect how long the subject was awake.
+1. The response variable is **growth** because growth is affected by the amount of fertilizer.
+1. It is not obvious which is the response variable. Thus, the response variable **depends** on the researcher's question (i.e., if they were trying to predict shoe sales from hat sales, then shoe sales would be the response variable).
 
 ----
 
@@ -72,13 +72,13 @@ source("../../../rhelpers/knitr_setup.R")
 </div>
 
 1. Experimental ... treatments (see below) were imposed.
-1. The response variable is blood pressure.
-1. Blood pressure is a quantitative, continuous variable because a blood pressure value can be found between any two blood pressure values.
-1. There are two factor variables -- calcium and exercise.
-1. There are two levels of calcium (pill or not) and two levels of exercise (do or don't).
-1. There are four treatments (see diagram below, but is from 2 levels times 2 levels).
-1. A "replicate" (i.e., an "individual") is a male subject.
-1. There are 8 replicates (male subjects) per treatment (see diagram below, but note that this 32 male subjects total divided by 4 treatments).
+1. The response variable is **blood pressure**.
+1. Blood pressure is a quantitative, **continuous** variable because a blood pressure value can be found between any two blood pressure values.
+1. There are two factor variables -- **calcium** and **exercise**.
+1. There are **two** levels of calcium (pill or not) and **two** levels of exercise (do or don't).
+1. There are **four** treatments (see diagram below, but is from 2 levels times 2 levels).
+1. A "replicate" (i.e., an "individual") is **a male subject**.
+1. There are **8 replicates** (male subjects) per treatment (see diagram below, but note that this 32 male subjects total divided by 4 treatments).
 1. A diagram of this experiment (rows are levels of one factor, columns are levels of other factor, each cell represents a treatment, and the numbers in each cell represent the randomly selected males allocated to that treatment).
 ```{r CAalloc, echo=FALSE, results="hide"}
 alloc <- sample(32)
@@ -102,12 +102,12 @@ alloc[25:32]  # fourth treatment
 
 ## Salt, Sand, and Ice
 1. This was an experiment because the researchers controlled the levels of some variables at specific values (salt percentage and temperature) and attempted to control others at constant values.
-1. The two factors are salt percentage and temperature.
-1. There were two levels of salt percentage and three levels of temperature.
-1. There were six (2*3) treatments in this experiment
-1. The response variable was the melting rate of ice.
-1. Melting rate is a continuous quantitative variable.
-1. A replicate or individual in this experiment is a chamber with a small piece of highway in it.
+1. The two factors are **salt percentage** and **temperature**.
+1. There were **two** levels of salt percentage and **three** levels of temperature.
+1. There were **six** (2*3) treatments in this experiment
+1. The response variable was the **melting rate of ice**.
+1. Melting rate is a **continuous** quantitative variable.
+1. A replicate or individual in this experiment is **a chamber with a small piece of highway in it**.
 1. A diagram of this experiment (rows are levels of one factor, columns are levels of other factor, each cell represents a treatment, and the numbers in each cell represent the randomly selected males allocated to that treatment).
 ```{r SSTalloc, echo=FALSE, results="hide"}
 alloc2 <- sample(36)
