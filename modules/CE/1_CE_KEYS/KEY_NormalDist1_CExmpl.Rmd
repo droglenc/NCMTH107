@@ -28,8 +28,8 @@ library(ggplot2)
 library(ggplot2)
 library(NCStats)
 
-mn <- 70
-sd <- 6
+mn <- 450
+sd <- 50
 brks <- mn+seq(-3,3,by=1)*sd
 
 b <- ggplot(data.frame(x=c(-Inf,Inf)),mapping=aes(x=x)) +
@@ -51,15 +51,41 @@ b <- ggplot(data.frame(x=c(-Inf,Inf)),mapping=aes(x=x)) +
 ```{r echo=FALSE}
 b + labs(x="Height (in)") +
   stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn-2*sd,mn+2*sd),
-                geom="area",fill="gray20",color="black",size=1.1) +
+                geom="area",fill="red",color="black",size=1.1) +
   ggpmisc::geom_text_npc(aes(npcx=0.5,npcy=0.05,label="95%"),
                          size=11,color="white")
 ```
-
 </div>
 
 &nbsp;
 
-{:start="2"}
-1. The percentage of wood ducks that weight more than 550 g is 2.5%.
 
+{:start="2"}
+
+2. The percentage of wood ducks that weight more than 550 g is 2.5%.
+
+<div class="alert alert-warning">
+<p> We see that 550 is exactly 2&sigma; above &mu;. Thus, there is 95% between 350 (2&sigma; below &mu;) and 550, 5% outside of that range, and 2.5% in each tail outside of that range. Thus, 2.5% are greater than 550.</p>
+
+```{r echo=FALSE}
+b + labs(x="Height (in)") +
+  stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn-2*sd,mn+2*sd),
+                geom="area",fill="gray20",color="gray50",size=1.1) +
+  ggpmisc::geom_text_npc(aes(npcx=0.5,npcy=0.05,label="95%"),
+                         size=11,color="white") +
+  stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(-Inf,mn-2*sd),
+                geom="area",fill="red",alpha=0.5,color="gray50",size=1.1) +
+  ggpmisc::geom_text_npc(aes(npcx=0.5,npcy=0.05,label="95%"),
+                         size=11,color="white") +
+  stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn+2*sd,+Inf),
+                geom="area",fill="red",color="gray50",size=1.1) +
+  ggpmisc::geom_text_npc(aes(npcx=0.5,npcy=0.05,label="95%"),
+                         size=11,color="white")
+ 
+```
+</div>
+
+&nbsp;
+
+{:start="3"}
+1. 
