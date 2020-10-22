@@ -50,6 +50,7 @@ Use the resources below to answer [these questions](Prep/NormalDist). [[*Problem
 
 ## Practice
 
+* [Class Example I](CE/NormalDist1_CExmpl) ... [ANNOTATED KEY](CE/KEY_NormalDist1_CExmpl)
 * [Assignment I](CE/NormalDist_CE1) ... [ANSWER KEY](CE/KEY_NormalDist_CE1)
 * [Assignment II](CE/NormalDist_CE2) ... [ANSWER KEY](CE/KEY_NormalDist_CE2)
 * [Additional Exercises I](CE/NormalDist_CE4)
