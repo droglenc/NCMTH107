@@ -36,6 +36,7 @@ What you learn in this <strong>Statistical Concepts and Analysis</strong> course
 * [Course Workflow](#course-workflow)
 * [Grading](#grading) -- [Incompletes](#incomplete-grades) and [Midterms](#midterm-grades)
 * [Expectations](#expectations) -- [Ownership of Learning](#ownership-of-learning), [Work Outside of Class](#work-outside-of-class), [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
+* [Title IX Statement](#title-ix-statement)
 * [COVID-19 Statement](#covid-19-statement)
 
 
@@ -210,6 +211,14 @@ My intent is to create a classroom environment where learning can occur. One par
 * Please do not use disrespectful language when addressing others.
 
 Finally, note that the [College's Academic Integrity Statement & Policy](https://my.northland.edu/student-policies/academic-policies/#academic-integrity){:target="_blank"} will be followed in this course. Please make sure that you are familiar with its content.
+
+---
+
+## Title IX Statement
+In accordance with Title IX and other local, state, and federal laws, Northland College is committed to providing an environment free of all forms of discrimination, including sex and gender-based discrimination. This includes, but is not limited to sexual violence, sexual harassment, dating violence, and stalking. If you or someone you know has been affected or is currently being affected by these types of behaviors that are limiting one’s ability to participate in this course or any other Northland College sponsored program or activity, please know that there are options, and resources are available. You can also make a report by contacting the [Title IX Coordinator](mailto:titleix@northland.edu).
+
+I am not a confidential resource. As a College employee I am considered a mandatory reporter and am required to report incidents of sexual- and gender-based discrimination and sexual misconduct to the Title IX Coordinator, as we want to ensure that you are connected with the campus support resources offered by the College and the surrounding community. To learn more, please visit the [Northland College Title IX website](https://my.northland.edu/life/titleix/){:target="_blank"}.
+
 
 ---
 
