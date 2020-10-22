@@ -37,38 +37,40 @@ b <- ggplot(data.frame(x=c(-Inf,Inf)),mapping=aes(x=x)) +
                 geom="line",color="black",size=1.1) +
   scale_y_continuous(expand=expansion(mult=c(0,0.04))) +
   scale_x_continuous(breaks=brks,expand=expansion(mult=c(0,0))) +
+  labs(x="Weight (g)") +
   theme_NCStats() +
   theme(axis.title.y=element_blank(),axis.title.x=element_text(size=16),
         axis.text.x=element_text(size=12),axis.text.y=element_blank())
 ```
 
 ## Wood Duck Weights
-1. The percentage of wood ducks that weight between 350 and 550 g is 95%.
+<ul>
+  <li>The percentage of wood ducks that weight between 350 and 550 g is 95%.</li>
+</ul>
 
 <div class="alert alert-warning">
 <p>This follows directly from the middle part of the 68-95-99.7% Rule because 350 is exactly 2&sigma; below &mu; and 550 is exactly 2&sigma; above &mu;.</p>
 
 ```{r echo=FALSE}
-b + labs(x="Height (in)") +
+b +
   stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn-2*sd,mn+2*sd),
                 geom="area",fill="red",color="black",size=1.1) +
   ggpmisc::geom_text_npc(aes(npcx=0.5,npcy=0.05,label="95%"),
-                         size=11,color="white")
+                         size=9,color="white")
 ```
 </div>
 
 &nbsp;
 
-
-{:start="2"}
-
-2. The percentage of wood ducks that weight more than 550 g is 2.5%.
+<ul start="2">
+  <li>The percentage of wood ducks that weight more than 550 g is 2.5%.</li>
+</ul>
 
 <div class="alert alert-warning">
 <p> We see that 550 is exactly 2&sigma; above &mu;. Thus, there is 95% between 350 (2&sigma; below &mu;) and 550, 5% outside of that range, and 2.5% in each tail outside of that range. Thus, 2.5% are greater than 550.</p>
 
 ```{r echo=FALSE}
-b + labs(x="Height (in)") +
+b + 
   stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn-2*sd,mn+2*sd),
                 geom="area",fill="gray20",color="gray50",size=1.1) +
   ggpmisc::geom_text_npc(aes(npcx=0.5,npcy=0.05,label="95%"),
@@ -76,7 +78,7 @@ b + labs(x="Height (in)") +
   stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(-Inf,mn-2*sd),
                 geom="area",fill="red",alpha=0.5,color="gray50",size=1.1) +
   ggpmisc::geom_text_npc(aes(npcx=0.5,npcy=0.05,label="95%"),
-                         size=11,color="white") +
+                         size=9,color="white") +
   stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn+2*sd,+Inf),
                 geom="area",fill="red",color="gray50",size=1.1) +
   ggpmisc::geom_text_npc(aes(npcx=0.5,npcy=0.05,label="95%"),
@@ -87,5 +89,6 @@ b + labs(x="Height (in)") +
 
 &nbsp;
 
-{:start="3"}
-1. 
+<ul start="3">
+  <li>XXX</li>
+</ul>
