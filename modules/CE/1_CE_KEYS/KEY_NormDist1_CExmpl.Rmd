@@ -1,0 +1,75 @@
+---
+title: "Annotated Key"
+subtitle: "Normal Distributions Class Example"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3.5
+    fig_width: 3.5
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_NormDist1_CExmpl")
+```
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+```
+
+```{r echo=FALSE, results="hide"}
+library(NCStats)
+library(ggplot2)
+
+library(ggplot2)
+library(NCStats)
+
+mn <- 70
+sd <- 6
+brks <- mn+seq(-3,3,by=1)*sd
+
+b <- ggplot(data.frame(x=c(-Inf,Inf)),mapping=aes(x=x)) +
+  stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn-4*sd,mn+4*sd),
+                geom="line",color="black",size=1.1) +
+  scale_y_continuous(expand=expansion(mult=c(0,0.04))) +
+  scale_x_continuous(breaks=brks,expand=expansion(mult=c(0,0))) +
+  theme_NCStats() +
+  theme(axis.title.y=element_blank(),axis.title.x=element_text(size=16),
+        axis.text.x=element_text(size=12),axis.text.y=element_blank())
+
+b + labs(x="Height (in)") +
+  stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn-1*sd,mn+1*sd),
+                geom="area",fill="gray20",color="black",size=1.1) +
+  ggpmisc::geom_text_npc(aes(npcx=0.5,npcy=0.05,label="68%"),
+                         size=11,color="white")
+  
+```
+
+## Personal Gas Purchases I
+The distribution of miles per gallon is slightly left-skewed with no obvious outliers. The center as measured by the mean is `r res1[["mean"]]` and the dispersion as measured by the standard deviation is `r res1[["sd"]]`. I measured center and dispersion with the mean and standard deviation because the distribution was not *strongly* skewed and no outliers were present.
+
+<div class="alert alert-warning">
+<p>These results are for a *quantitative* variable (miles per gallon); thus, you must describe shape, outliers, center, and dispersion of the distribution. In addition, you must explain why you chose to use either the mean and standard deviation or the median and IQR as your measures of center and dispersion (see last sentence).</p>
+</div>
+
+&nbsp;
+
+## Personal Gas Purchases II
+The distribution of price per gallon is approximately symmetric (perhaps slightly right-skewed) with an obvious outlier at \$`r res2[["max"]]`. The center as measured by the median is \$`r res2[["median"]]` and the dispersion as measured by the IQR is from a Q1 of \$`r res2[["Q1"]]` to a Q3 of \$`r res2[["Q3"]]`. I measured center and dispersion with the median and IQR because an outlier was present.
+
+<div class="alert alert-warning">
+<p>These results are for a *quantitative* variable (price per gallon); thus, you must describe shape, outliers, center, and dispersion of the distribution. In addition, you must explain why you chose to use either the mean and standard deviation or the median and IQR as your measures of center and dispersion (see last sentence).</p>
+</div>
+
+&nbsp;
+
+## Personal Gas Purchases II
+It is clear that most (`r res3[["Ashland"]]`%) gas purchases were made in Ashland. Many other puchases (`r formatC(res3[["Iron River"]],format="f",digits=1)`%) were made in Iron River. Gas purchases were not prevalent in any other town.
+
+<div class="alert alert-warning">
+<p>These results are for a *categorical* variable (town where gas was purchased); thus, you do not describe anything specific, rather you generally make a conclusion from the table or bar chart. In this example, there was a category with a clearly higher frequency and a category with a clear second highest frequency, so I made sure to point those two categories out.</p>
+</div>
