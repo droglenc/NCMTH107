@@ -18,6 +18,8 @@ Suppose that it is known that the weights of adult wood ducks is normally distri
 1. What percentage of wood ducks weigh less than 500 g?
 1. What percentage of wood ducks weigh between 300 and 500 g?
 
+&nbsp;
+
 {:start="6"}
 1. What is the wood duck weights for the most common 68% of wood ducks?
 1. What is the wood duck weight for the lightest (smallest) 16% of wood ducks?
