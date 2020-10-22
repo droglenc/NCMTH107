@@ -95,7 +95,7 @@ The distribution of price per gallon is approximately symmetric (perhaps slightl
 &nbsp;
 
 ## Personal Gas Purchases II
-It is clear that most (`r res3[["Ashland"]]`%) gas purchases were made in Ashland. Many other puchases (`r res3[["Iron River"]]`%) were made in Iron River. Gas purchases were not prevalent in any other town.
+It is clear that most (`r res3[["Ashland"]]`%) gas purchases were made in Ashland. Many other puchases (`r formatC(res3[["Iron River"]],format="f",digits=1)`%) were made in Iron River. Gas purchases were not prevalent in any other town.
 
 <div class="alert alert-warning">
 <p>These results are for a *categorical* variable (town where gas was purchased); thus, you do not describe anything specific, rather you generally make a conclusion from the table or bar chart. In this example, there was a category with a clearly higher frequency and a category with a clear second highest frequency, so I made sure to point those two categories out.</p>
