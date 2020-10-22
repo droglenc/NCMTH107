@@ -1,0 +1,204 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Univariate Summaries CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="calculate-summary-statistics" class="section level2">
+<h2>Calculate Summary Statistics</h2>
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+Make sure to show your work when calculating the standard deviation. The method shown below is one way to show your work that produces consistent results. On assessments, not showing your work will result in a zero for the question.
+</li>
+<li>
+Don’t forget to arrange the values from smallest to largest when computing the median. Count the original and your arranged data to make sure you have the same number of values in both.
+</li>
+<li>
+The median will be one of the observed values if n is odd, but it will be the average of two observed values if n is even.
+</li>
+<li>
+If n is odd such that the median is one of the observed values, then that value is NOT included in either “half” of the data when computing the IQR. In other words, the “lower half” of the data will end right before the median and the “upper half” of the data will end right after the median. See Data Set 2 below.
+</li>
+</ul>
+</div>
+<ol>
+<li>
+Shown below
+</li>
+<pre class="r"><code>&gt; sdCalc(c(18,28,25,21,16,24))</code></pre>
+<pre><code>Demonstration of parts of a std. dev. calculation.
+
+      x diffs diffs.sq
+1    18    -4       16
+2    28     6       36
+3    25     3        9
+4    21    -1        1
+5    16    -6       36
+6    24     2        4
+sum 132     0      102
+
+Mean = x-bar = 132 / 6 = 22 
+
+Variance = s^2 = 102 / 5 = 20.4 
+
+Std. Dev = s = sqrt(20.4) = 4.516636</code></pre>
+<li>
+Shown above
+</li>
+<li>
+Shown below
+</li>
+<pre class="r"><code>&gt; iqrCalc(c(4,54,16,85,52,29,24,71,61,60,2))</code></pre>
+<pre><code>Median (=52) is the value in position 6.
+  2 4 16 24 29 [52] 54 60 61 71 85
+
+Q1 (=16) is the value in position 3 of the lower half.
+  2 4 [16] 24 29
+
+Q3 (=61) is the value in position 3 of the upper half.
+  54 60 [61] 71 85
+
+**Note that the median (=52) is NOT in both halves.</code></pre>
+<li>
+Shown above
+</li>
+<li>
+Shown below
+</li>
+<pre class="r"><code>&gt; iqrCalc(c(93,81,34,5,54,84,54,13,1,35,79,63,97,71))</code></pre>
+<pre><code>Median (=58.5) is the average of values in positions 7 and 8.
+  1 5 13 34 35 54 [54 63] 71 79 81 84 93 97
+
+Q1 (=34) is the value in position 4 of the lower half.
+  1 5 13 [34] 35 54 54
+
+Q3 (=81) is the value in position 4 of the upper half.
+  63 71 79 [81] 84 93 97</code></pre>
+<li>
+Shown above
+</li>
+<li>
+Range is 1 to 97.
+</li>
+</ol>
+<hr />
+</div>
+<div id="histograms-i" class="section level2">
+<h2>Histograms I</h2>
+<ol>
+<li>An individual is a state.</li>
+<li>The variable is the mean commute time for indivuals 16-years and older in states of the U.S.</li>
+<li>Mean Commute time (mins) is a quantitative, continuous variable.</li>
+<li>51</li>
+<li>2</li>
+<li>25</li>
+<li>26-28</li>
+</ol>
+<hr />
+</div>
+<div id="frequency-and-percentages-tables" class="section level2">
+<h2>Frequency and Percentages Tables</h2>
+<p><em>Should be performed by hand to match results below</em></p>
+<ol>
+<li>
+Frequency Table
+</li>
+<pre><code>group
+    Belgian Tervuren Bouvier Des Flandres               Collie                Corgi 
+                   1                    4                    4                    5 
+Old English Sheepdog                 Puli             Shepherd    Shetland Sheepdog 
+                   5                    3                   11                    5 </code></pre>
+<li>
+Percentage Table
+</li>
+<pre class="r"><code>&gt; percTable(tbl,digits=1)</code></pre>
+<pre><code>group
+    Belgian Tervuren Bouvier Des Flandres               Collie                Corgi 
+                 2.6                 10.5                 10.5                 13.2 
+Old English Sheepdog                 Puli             Shepherd    Shetland Sheepdog 
+                13.2                  7.9                 28.9                 13.2 </code></pre>
+<li>
+Bar Chart
+</li>
+<p><img src="KEY_UnivSum_CE_files/figure-html/unnamed-chunk-8-1.png" width="576" /></p>
+<li>
+Shepherds were the most common herding group winners in the Westminster Kennel Club championships winning 28.9% of the time over the last 36 years
+</li>
+</ol>
+<hr />
+</div>
+<div id="bar-chart-i" class="section level2">
+<h2>Bar Chart I</h2>
+<ol>
+<li>
+A Northland College student.
+</li>
+<li>
+Categorical, nominal.
+</li>
+<li>
+Frequency table is below.
+</li>
+<pre><code>     Love     Money Pregnancy     Other 
+       45         1         0         4 </code></pre>
+<li>
+Percentage table is below.
+</li>
+<pre><code>     Love     Money Pregnancy     Other 
+       90         2         0         8 </code></pre>
+</ol>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
