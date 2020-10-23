@@ -103,11 +103,11 @@ b +
                          size=7,color="white") +
   stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn-4*sd,mn-1*sd),
                 geom="area",fill="red",color="black",size=1.1) +
-  ggpmisc::geom_text_npc(aes(npcx=0.15,npcy=0.2,label="16%"),
+  ggpmisc::geom_text_npc(aes(npcx=0.1,npcy=0.2,label="16%"),
                          size=7,color="black",hjust=0) +
   stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn+1*sd,mn+4*sd),
                 geom="area",fill="red",alpha=0.3,color="black",size=1.1) +
-  ggpmisc::geom_text_npc(aes(npcx=0.85,npcy=0.2,label="16%"),
+  ggpmisc::geom_text_npc(aes(npcx=0.9,npcy=0.2,label="16%"),
                          size=7,color="black",hjust=1)
 ```
 </div>
@@ -124,26 +124,62 @@ b +
 &nbsp;
 
 <ol start="5">
-  <li>The percentage of wood ducks that weigh between 300 and 500 g is 83.85%</li>
+  <li>The percentage of wood ducks that weigh between 350 and 500 g is 81.5%</li>
 </ol>
 
-
+<div class="alert alert-warning">
+<p>From the previous question we know that 84% of wood ducks weigh less than 500 g. However, this 84% contains wood ducks that weigh less than 350 g, which we do not want considered in this question. From question 2, we know that 2.5% of wood ducks weigh less than 350 g. Thus, 84-2.5=81.5% of wood ducks weigh less than 500 g, but not less than 350 g (or weigh between 350 and 500 g).</p>
+</div>
 &nbsp;
 
 <ol start="6">
   <li>The most common 68% of wood ducks weigh between 400 and 500 g.</li>
 </ol>
 
+<div class="alert alert-warning">
+<p>Most common means starting in the middle of the normal distribution and radiating to the tails. This question ends on the first part of the 68-95-99.7% Rule and, thus, 68% of the wood ducks are between 1&sigma; below &mu; (=400) and 1&sigma; above &mu; (=500).</p>
+<div>
 
 &nbsp;
 
 <ol start="7">
-  <li>The lightest (smallest) 16% of wood ducks weight less than 400 g.</li>
+  <li>The lightest (smallest) 16% of wood ducks weigh less than 400 g.</li>
 </ol>
 
+<div class="alert alert-warning">
+<p>This percentage should sound familiar from the previous questions. With that experience you know that 16% is in the tails outside of the 68% range. This questions asks for the lightest wood ducks so it would be to left (or lower) tail of the normal distribution. Thus, the lightest 16% of wood ducks are less than 1&sigma; below &mu; (=400).</p>
+
+```{r echo=FALSE}
+b + 
+  stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn-1*sd,mn+1*sd),
+                geom="area",fill="gray40",color="black",size=1.1) +
+  ggpmisc::geom_text_npc(aes(npcx=0.5,npcy=0.05,label="68%"),
+                         size=7,color="white") +
+  stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn-4*sd,mn-1*sd),
+                geom="area",fill="red",color="black",size=1.1) +
+  ggpmisc::geom_text_npc(aes(npcx=0.1,npcy=0.2,label="16%"),
+                         size=7,color="black",hjust=0)
+```
+</div>
 
 &nbsp;
 
 <ol start="8">
   <li>The heaviest 2.5% of wood ducks weigh more than 550 g.</li>
 </ol>
+
+<div class="alert alert-warning">
+<p>Again, this percentage should sound familiar from the previous questions. With that experience you know that 2.5% is in the tails outside of the 95% range. This questions asks for the heaviest wood ducks so it would be to right (or upper) tail of the normal distribution. Thus, the heaviest 2.5% of wood ducks are more than 2&sigma; above &mu; (=550).</p>
+
+```{r echo=FALSE}
+b + 
+  stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn-2*sd,mn+2*sd),
+                geom="area",fill="gray40",color="black",size=1.1) +
+  ggpmisc::geom_text_npc(aes(npcx=0.5,npcy=0.05,label="95%"),
+                         size=7,color="white") +
+  stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn+2*sd,mn+4*sd),
+                geom="area",fill="red",color="black",size=1.1) +
+  ggpmisc::geom_text_npc(aes(npcx=0.97,npcy=0.1,label="2.5%"),
+                         size=7,color="black",hjust=1)
+```
+</div>
