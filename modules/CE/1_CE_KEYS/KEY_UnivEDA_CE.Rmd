@@ -18,24 +18,6 @@ modHTML_CEKeys("KEY_UnivEDA_CE")
 ```{r echo=FALSE, results='hide', message=FALSE}
 library(NCStats)
 source("../../../rhelpers/knitr_setup.R")
-library(captioner)
-tbls <- captioner(prefix="Table")
-tbls(name="CWD1","Summary statistics for the diameter (cm) of coarse woody debris in Allequash Lake, WI.")
-tbls(name="CWD2","Summary statistics for the diameter (cm) of coarse woody debris in Allequash Lake, WI separated by exposure category.")
-tbls(name="BODStats","Descriptive statistics for BOD measurements for the private and state labs.")
-tbls(name="GPAStats","Descriptive statistics for class gpa of math and other courses at the University of North Carolina")
-tbls(name="Cafe1","Summary statistics of the number of coffees sold in the college cafe.")
-tbls(name="Cafe2","Summary statistics of the number of coffees sold in the college cafe separated by day of the week.")
-tbls(name="Cafe3","Summary statistics of the number of sodas sold in the college cafe.")
-tbls(name="Cafe4","Summary statistics of the number of sodas sold in the college cafe separated by day of the week.")
-
-figs <- captioner(prefix="Figure")
-figs(name="CWD1","Histogram of the diameter (cm) of coarse woody debris in Allequash Lake, WI.")
-figs(name="CWD2","Histogram of the diameter (cm) of coarse woody debris in Allequash Lake, WI separated by exposure category.")
-figs(name="BODhist","Histograms for BOD measurements for the private (left) and state (right) labs.")
-figs(name="GPAhist","Histograms of class gpa for math (left) and other (right) courses at the University of North Carolina.")
-figs(name="Cafe1","Histogram of the number of coffees sold in the college cafe.")
-figs(name="Cafe3","Histogram of the number of sodas sold in the college cafe.")
 ```
 
 ----
@@ -49,21 +31,21 @@ figs(name="Cafe3","Histogram of the number of sodas sold in the college cafe.")
 
 ## Shape and Outliers I
 
-1. (Strongly) Right skewed, possible outlier at maximum.
-1. Left skewed, no outliers.
-1. Right skewed, outlier at maximum.
+1. Strongly right skewed, possible outlier at maximum.
+1. Moderately left skewed, no outliers.
+1. Strongly right skewed, outlier at maximum.
 1. Approximately symmetric, no outliers.
 1. Approximately symmetric, no outliers.
-1. (Srongly) Left skewed, no outliers.
-1. Left skewed, outlier at minimum.
-1. Bimodal (symmetric), no outliers.
+1. Strongly left skewed, no outliers.
+1. Moderately left skewed, outlier at minimum.
+1. Bimodal symmetric, no outliers.
 
 ----
 
 <br>
 
 <div class="alert alert-warning">
-<strong>Note (for all of the EDA questions below):</strong> 
+<strong>Note (for the QUANTITATIVE EDA questions below):</strong> 
 <ul>
 <li>That all four items (Shape, Outliers, Center, and Dispersion) are addressed for each question. Many students may omit outliers if no outliers exist; however, you should explicitly say "no outliers were present" (or similar) as shown below.</li>
 <li>Center is always described by the mean or the median, never both and never neither one. Which one you choose depends on whether outliers are present (use median), the distriution is more than slightly skewed (use median), or the distribution is no more than slighly skewed and no outliers are present (use mean).</li>
@@ -73,17 +55,28 @@ figs(name="Cafe3","Histogram of the number of sodas sold in the college cafe.")
 </div>
 
 ## Commute Time
-The distribution of commute times is approximately symmetric with no outliers (Figure 1). The center as measured by the mean is 23.75 mins and the disperision as measured by the standard deviation is 3.54 mins (Table 1). The mean and standard deviation were used because the distribution was symmetric and no outliers were present.
+The distribution of commute times is **approximately symmetric** with **no outliers** (Figure 1). The center as measured by the **mean is 23.75** mins and the disperision as measured by the **standard deviation is 3.54** mins (Table 1). The mean and standard deviation were used because the distribution was symmetric and no outliers were present.
 
 ----
 
 ## Dungeness Crabs
-The distribution of post-molt carapace lengths for Dungeness Crabas is strongly left-skewed with two outliers between 38.8 and 60 mm (Figure 2). The center as measured by the median is 147.4 mm and the dispersion as measured by the IQR is from a Q1 of 138.0 to a Q3 of 153.4 mm (Table 2). The median and IQR were used because the distribution was strongly skewed and outliers were present.
+The distribution of post-molt carapace lengths for Dungeness Crabs is **strongly left-skewed** with **two outliers between 38.8 and 60 mm** (Figure 2). The center as measured by the **median is 147.4 mm** and the dispersion as measured by the **IQR is from a Q1 of 138.0 to a Q3 of 153.4 mm** (Table 2). The median and IQR were used because the distribution was strongly skewed and outliers were present.
 
 ----
 
+<br>
+
+<div class="alert alert-warning">
+<strong>Note (for the CATEGORICAL EDA questions below):</strong> 
+<ul>
+<li>You DO NOT describe shape, outliers, center, or dispersion for categorical data.</li>
+<li>You do make a conclusive statement about the main "take-away" messages found in the bar chart of frequency/percentage tables.</li>
+<li>You do NOT simply repeat the values present in the tables or bar chart (you can use values to support your conclusion, but you should not simply repeat each value in the results).</li>
+</ul>
+</div>
+
 ## Forest Fires
-Fires occurred most often in late summer or early fall (August and September) with a smaller peak in late winter or early spring (March).
+Fires occurred most often in late summer or early fall (August and September) with a smaller peak in late winter or early spring (March). Fires are infrequent in most other months.
 
 ----
 
