@@ -44,9 +44,9 @@ b <- ggplot(data.frame(x=c(-Inf,Inf)),mapping=aes(x=x)) +
 ```
 
 ## Wood Duck Weights
-<ul>
+<ol>
   <li>The percentage of wood ducks that weight between 350 and 550 g is 95%.</li>
-</ul>
+</ol>
 
 <div class="alert alert-warning">
 <p>This follows directly from the middle part of the 68-95-99.7% Rule because 350 is exactly 2&sigma; below &mu; and 550 is exactly 2&sigma; above &mu;.</p>
@@ -56,15 +56,15 @@ b +
   stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn-2*sd,mn+2*sd),
                 geom="area",fill="red",color="black",size=1.1) +
   ggpmisc::geom_text_npc(aes(npcx=0.5,npcy=0.05,label="95%"),
-                         size=9,color="white")
+                         size=7,color="white")
 ```
 </div>
 
 &nbsp;
 
-<ul start="2">
+<ol start="2">
   <li>The percentage of wood ducks that weight more than 550 g is 2.5%.</li>
-</ul>
+</ol>
 
 <div class="alert alert-warning">
 <p> We see that 550 is exactly 2&sigma; above &mu;. Thus, there is 95% between 350 (2&sigma; below &mu;) and 550, 5% outside of that range, and 2.5% in each tail outside of that range. Thus, 2.5% are greater than 550.</p>
@@ -72,22 +72,78 @@ b +
 ```{r echo=FALSE}
 b + 
   stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn-2*sd,mn+2*sd),
-                geom="area",fill="gray20",color="black",size=1.1) +
+                geom="area",fill="gray40",color="black",size=1.1) +
   ggpmisc::geom_text_npc(aes(npcx=0.5,npcy=0.05,label="95%"),
-                         size=9,color="white") +
+                         size=7,color="white") +
   stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn-4*sd,mn-2*sd),
-                geom="area",fill="red",alpha=0.5,color="black",size=1.1) +
-  ggpmisc::geom_text_npc(aes(npcx=0.1,npcy=0.05,label="2.5%"),
-                         size=9,color="black") +
+                geom="area",fill="red",alpha=0.3,color="black",size=1.1) +
+  ggpmisc::geom_text_npc(aes(npcx=0.03,npcy=0.1,label="2.5%"),
+                         size=7,color="black",hjust=0) +
   stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn+2*sd,mn+4*sd),
                 geom="area",fill="red",color="black",size=1.1) +
-  ggpmisc::geom_text_npc(aes(npcx=0.9,npcy=0.05,label="2.5%"),
-                         size=9,color="black")
+  ggpmisc::geom_text_npc(aes(npcx=0.97,npcy=0.1,label="2.5%"),
+                         size=7,color="black",hjust=1)
 ```
 </div>
 
 &nbsp;
 
-<ul start="3">
-  <li>XXX</li>
-</ul>
+<ol start="3">
+  <li>The percentage of wood ducks that weigh less than 400 g is 16%</li>
+</ol>
+
+<div class="alert alert-warning">
+<p> We see that 400 is exactly 1&sigma; below &mu;. Thus, there is 68% between 400 and 500 (1&sigma; above &mu;), 32% outside of that range, and 16% in each tail outside of that range. Thus, 16% are less than 400.</p>
+
+```{r echo=FALSE}
+b + 
+  stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn-1*sd,mn+1*sd),
+                geom="area",fill="gray40",color="black",size=1.1) +
+  ggpmisc::geom_text_npc(aes(npcx=0.5,npcy=0.05,label="68%"),
+                         size=7,color="white") +
+  stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn-4*sd,mn-1*sd),
+                geom="area",fill="red",color="black",size=1.1) +
+  ggpmisc::geom_text_npc(aes(npcx=0.15,npcy=0.2,label="16%"),
+                         size=7,color="black",hjust=0) +
+  stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn+1*sd,mn+4*sd),
+                geom="area",fill="red",alpha=0.3,color="black",size=1.1) +
+  ggpmisc::geom_text_npc(aes(npcx=0.85,npcy=0.2,label="16%"),
+                         size=7,color="black",hjust=1)
+```
+</div>
+
+&nbsp;
+
+<ol start="4">
+  <li>The percentage of wood ducks that weigh less than 500 g is 84%</li>
+</ol>
+
+<div class="alert alert-warning">
+<p>Referring to the plot in the previous question, we see that 500 is exactly 1&sigma; above &mu;, there is 68% between 400 and 500, and 16% in each tail outside of that range. Thus, the percentage less than 500 g is the 68% between 400 and 500 g plus the 16% that is less than 400 g; for a total of 84%.</p>
+</div>
+&nbsp;
+
+<ol start="5">
+  <li>The percentage of wood ducks that weigh between 300 and 500 g is 83.85%</li>
+</ol>
+
+
+&nbsp;
+
+<ol start="6">
+  <li>The most common 68% of wood ducks weigh between 400 and 500 g.</li>
+</ol>
+
+
+&nbsp;
+
+<ol start="7">
+  <li>The lightest (smallest) 16% of wood ducks weight less than 400 g.</li>
+</ol>
+
+
+&nbsp;
+
+<ol start="8">
+  <li>The heaviest 2.5% of wood ducks weigh more than 550 g.</li>
+</ol>
