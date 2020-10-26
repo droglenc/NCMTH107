@@ -53,12 +53,8 @@ Use the resources below to answer [these questions](Prep/NormalDist). [[*Problem
 * [Class Example I](CE/NormalDist1_CExmpl) ... [ANNOTATED KEY](CE/KEY_NormalDist1_CExmpl)
 * [Assignment I](CE/NormalDist_CE1) ... [ANSWER KEY](CE/KEY_NormalDist_CE1)
 
-<br>
-
 * [Class Example II](CE/NormalDist2_CExmpl) ... [ANNOTATED KEY](CE/KEY_NormalDist2_CExmpl)
 * [Assignment II](CE/NormalDist_CE2) ... [ANSWER KEY](CE/KEY_NormalDist_CE2)
-
-<br>
 
 * [Additional Exercises I](CE/NormalDist_CE4)
 * [Additional Exercises II](CE/NormalDist_CE3)

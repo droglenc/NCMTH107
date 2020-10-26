@@ -1,0 +1,67 @@
+---
+title: "Answer Key"
+subtitle: "Normal Distribution Class Example"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3.5
+    fig_width: 3.5
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_NormalDist2_CExmpl")
+```
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+```
+
+----
+
+## Wood Duck Weights
+
+<ol start="1">
+<li>The percentage of wood ducks that weigh more than 575 g is `r formatC(distrib(575,mean=450,sd=50,lower.tail=FALSE)*100,format="f",digits=1)`%.</li>
+```{r}
+distrib(575,mean=450,sd=50,lower.tail=FALSE)
+```
+</ol>
+
+
+<ol start="2">
+<li>The percentage of wood ducks that weigh less than 420 g is `r formatC(distrib(420,mean=450,sd=50)*100,format="f",digits=1)`%.</li>
+```{r}
+distrib(420,mean=450,sd=50)
+```
+</ol>
+
+
+<ol start="3">
+<li>The percentage of wood ducks that weigh betwen 360 and 480 g is `r formatC(distrib(480,mean=450,sd=50)*100-distrib(360,mean=450,sd=50)*100,format="f",digits=1)`%.</li>
+```{r fig.show='hold'}
+( ab <- distrib(480,mean=450,sd=50) )
+( a <- distrib(360,mean=450,sd=50) )
+ab-a
+```
+</ol>
+
+
+<ol start="4">
+<li>The lightest 10% of wood ducks weigh less than `r formatC(distrib(0.10,mean=450,sd=50,type="q"),format="f",digits=0)` g.</li>
+```{r}
+distrib(0.10,mean=450,sd=50,type="q")
+```
+</ol>
+
+
+<ol start="5">
+<li>The heaviest 25% of wood ducks weigh more than `r distrib(0.25,mean=450,sd=50,type="q",lower.tail=FALSE)` g</li>
+```{r}
+distrib(0.25,mean=450,sd=50,type="q",lower.tail=FALSE)
+```
+</ol>
