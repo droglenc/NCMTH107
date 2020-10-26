@@ -60,7 +60,7 @@ distrib(0.10,mean=450,sd=50,type="q")
 
 
 <ol start="5">
-<li>The heaviest 25% of wood ducks weigh more than `r distrib(0.25,mean=450,sd=50,type="q",lower.tail=FALSE)` g</li>
+<li>The heaviest 25% of wood ducks weigh more than `r formatC(distrib(0.25,mean=450,sd=50,type="q",lower.tail=FALSE),format="f",digits=0)` g</li>
 ```{r}
 distrib(0.25,mean=450,sd=50,type="q",lower.tail=FALSE)
 ```
