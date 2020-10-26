@@ -31,6 +31,43 @@ source("../../../rhelpers/knitr_setup.R")
     1. $\mu$=75, $\sigma$=10, hand-drawn distribution.
     1. $\mu$=5500, $\sigma$=600, hand-drawn distribution.
 
+```{r echo=FALSE, results="hide", fig.width=7}
+library(NCStats)
+library(ggplot2)
+library(patchwork)
+
+mn <- 70
+sd <- 10
+brks <- mn+seq(-3,3,by=1)*sd
+
+bX <- ggplot(data.frame(x=c(-Inf,Inf)),mapping=aes(x=x)) +
+  stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn-4*sd,mn+4*sd),
+                geom="line",color="black",size=1.1) +
+  scale_y_continuous(expand=expansion(mult=c(0,0.04))) +
+  scale_x_continuous(breaks=brks,expand=expansion(mult=c(0,0))) +
+  labs(x="X") +
+  theme_NCStats() +
+  theme(axis.title.y=element_blank(),axis.title.x=element_text(size=16),
+        axis.text.x=element_text(size=12),axis.text.y=element_blank())
+
+mn <- 5500
+sd <- 600
+brks <- mn+seq(-3,3,by=1)*sd
+
+bY <- ggplot(data.frame(x=c(-Inf,Inf)),mapping=aes(x=x)) +
+  stat_function(fun=dnorm,args=list(mean=mn,sd=sd),xlim=c(mn-4*sd,mn+4*sd),
+                geom="line",color="black",size=1.1) +
+  scale_y_continuous(expand=expansion(mult=c(0,0.04))) +
+  scale_x_continuous(breaks=brks,expand=expansion(mult=c(0,0))) +
+  labs(x="Y") +
+  theme_NCStats() +
+  theme(axis.title.y=element_blank(),axis.title.x=element_text(size=16),
+        axis.text.x=element_text(size=12,angle=45,vjust=0.9,hjust=0.9),
+        axis.text.y=element_blank())
+
+bX + bY
+```
+
 ----
 
 ## Hand Calculations I
@@ -49,9 +86,8 @@ For X~N(75,10)
 <div class="alert alert-warning">
 <strong>Note:</strong>
 <ul>
-<li>If it is a reverse question (given a percentage/proportion and asked to find a value of the variable) then you must include <code>type="q"</code> in <code>distrib()</code>.</li>
-<li>If it is a "right-of" question then you must include <code>lower.tail=FALSE</code> in <code>distrib()</code>.</li>
-<li>All "between" questions require a three-step process with <code>distrib()</code> to answer. If it is a forward question then <code>distrib()</code> is used to find the areas to the left of the two given values and then those two areas are subtracted. If it is a reverse question then the area between must be converted to a left-of area and a right-of area which are then separately put into <code>distrib()</code> to compute two values (which are the final answer).</li>
+<li>Always stop to ask if it makes sense to record the variable on the individual. There is an urge to call the individual an "ant", but does it make sense to record the "number of ants" on an ant?</li>
+<li>Another hint for identifying the individual is to look at the "forward" questions. The forward questions will always ask you to computer the percentage of individuals.</li>
 </ul>
 </div>
 
