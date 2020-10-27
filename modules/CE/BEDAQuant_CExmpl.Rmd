@@ -24,14 +24,14 @@ library(ggplot2)
 ----
 
 ## Air Quality
-<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/CO2.jpg" alt="CO2 Emissions" class="img-right">
-Researches examined air quality daily in New York from May to September 1973. The recorded the average daily temperature (<sup>o</sup>F) and ozone concentration (ppb) for each day. Use the results in the scatterplot below to perform a bivariate EDA.
+<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/smog.jpg" alt="Smog" class="img-right">
+Researches examined air quality daily in New York from May to September 1973. The recorded the maximum daily temperature (<sup>o</sup>F) and ozone concentration (ppb) for each day. Use the results in the scatterplot below to perform a bivariate EDA.
 
 ```{r echo=FALSE, results="hide", fig.height=3.5, fig.width=3.5, fig.show="hold",message=FALSE,warning=FALSE}
 r <- corr(Ozone~Temp,data=airquality,use="pairwise.complete.obs")
 ggplot(data=airquality,mapping=aes(x=Temp,y=Ozone)) +
   geom_point(pch=21,color="black",fill="darkgray",size=2) +
-  labs(y="Ozone Concentration (ppb)",y="Daily High Temperature (F)") +
+  labs(y="Ozone Concentration (ppb)",x="Daily High Temperature (F)") +
   geom_label(x=60,y=160,label=paste0("r=",formatC(r,format="f",digits=3))) +
   theme_NCStats() +
   theme(aspect.ratio=1)
