@@ -44,6 +44,7 @@ Use the resources below to answer [these questions](Prep/BEDAQuant). [[*Problems
 
 ## Practice
 
+* [Class Example](CE/BEDAQuant_CExmpl) ... [ANNOTATED KEY](CE/KEY_BEDAQuant_CExmpl)
 * [Assignment](CE/BEDAQuant_CE1) ... [ANSWER KEY](CE/KEY_BEDAQuant_CE)
 * [Additional Exercises](CE/BEDAQuant_CE2)
 

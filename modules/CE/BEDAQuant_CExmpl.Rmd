@@ -1,0 +1,58 @@
+---
+layout: page
+title: Class Example
+subtitle: Bivariate EDA -- Quantitative
+author: Derek H. Ogle
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: false
+    lib_dir: zlibs
+---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/")
+source("../../rhelpers/rhelpers.R")
+modHTML("BEDAQuant_CExmpl")
+```
+```{r echo=FALSE, message=FALSE, results="hide", warning=FALSE}
+library(NCStats)
+library(ggplot2)
+```
+
+----
+
+## Air Quality
+<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/CO2.jpg" alt="CO2 Emissions" class="img-right">
+Researches examined air quality daily in New York from May to September 1973. The recorded the average daily temperature (<sup>o</sup>F) and ozone concentration (ppb) for each day. Use the results in the scatterplot below to perform a bivariate EDA.
+
+```{r echo=FALSE, results="hide", fig.height=3.5, fig.width=3.5, fig.show="hold",message=FALSE}
+r <- corr(Ozone~Temp,data=airquality,use="pairwise.complete.obs")
+ggplot(data=airquality,mapping=aes(x=Temp,y=Ozone)) +
+  geom_point(pch=21,color="black",fill="darkgray",size=2) +
+  labs(y="Ozone Concentration (ppb)",y="Daily High Temperature (F)") +
+  geom_label(x=60,y=160,label=paste0("r=",formatC(r,format="f",digits=3))) +
+  theme_NCStats() +
+  theme(aspect.ratio=1)
+```
+
+<br>
+
+----
+
+## Climate Change Data
+<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/CO2.jpg" alt="CO2 Emissions" class="img-right">
+Climate researchers examined the relationship between global temperature anomaly and the concentration of CO<sub>2</sub> in the atmosphere. Temperature anomaly data was recorded as the Global Land-Ocean Temperature Index from the Goddard Institute of Space Studies (GISTEMP). It is reported in units of 1/100 of a degree centigrade increase above the 1950-1980 mean. The CO<sub>2</sub> data are from The Earth System Research Laboratory of the National Oceanic and Atmospheric Administration (NOAA). Specifically, these data are a record of annual mean atmospheric CO<sub>2</sub> concentration at Mauna Loa Observatory, Hawaii, and constitute the longest continuous record of atmospheric CO<sub>2</sub> concentration. This remote location at high altitude in Hawaii was chosen because it is relatively unaffected by any local emissions and so is representative of the global concentration of a well-mixed gas like CO<sub>2</sub>. These observations were started by C. David Keeling of the Scripps Institution of Oceanography in March of 1958 and are often referred to as the Keeling Curve. Data are reported as a dry mole fraction defined as the number of molecules of carbon dioxide divided by the number of molecules of dry air multiplied by one million (ppm).
+
+Our goal in the next module will be to determine if the variability in the temperature anomaly records can be reasonably explained by the CO<sub>2</sub> values in the same year. However, in this module, use the results below to perform a bivariate EDA for these data.
+
+```{r echo=FALSE, results="hide", fig.height=3.5, fig.width=3.5, fig.show="hold",message=FALSE}
+df <- read.csv("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/GSI_data.csv")
+ggplot(data=df,mapping=aes(x=CO2,y=Temp)) +
+  geom_point(pch=21,color="black",fill="darkgray",size=2) +
+  geom_label(x=343,y=60,label=paste0("r=",formatC(r,format="f",digits=3))) +
+  labs(x="CO2 in Atmosphere (ppm)",y="Temperature Anomaly (1/100C)") +
+  theme_NCStats() +
+  theme(aspect.ratio=1)
+```

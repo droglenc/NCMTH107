@@ -1,0 +1,72 @@
+---
+layout: page
+title: Class Example
+subtitle: Bivariate EDA -- Quantitative
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="air-quality" class="section level2">
+<h2>Air Quality</h2>
+<p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/CO2.jpg" alt="CO2 Emissions" class="img-right"> Researches examined air quality daily in New York from May to September 1973. The recorded the average daily temperature (<sup>o</sup>F) and ozone concentration (ppb) for each day. Use the results in the scatterplot below to perform a bivariate EDA.</p>
+<pre><code>## Warning: Removed 37 rows containing missing values (geom_point).</code></pre>
+<p><img src="BEDAQuant_CExmpl_files/figure-html/unnamed-chunk-3-1.png" width="336" /></p>
+<p><br></p>
+<hr />
+</div>
+<div id="climate-change-data" class="section level2">
+<h2>Climate Change Data</h2>
+<p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/CO2.jpg" alt="CO2 Emissions" class="img-right"> Climate researchers examined the relationship between global temperature anomaly and the concentration of CO<sub>2</sub> in the atmosphere. Temperature anomaly data was recorded as the Global Land-Ocean Temperature Index from the Goddard Institute of Space Studies (GISTEMP). It is reported in units of 1/100 of a degree centigrade increase above the 1950-1980 mean. The CO<sub>2</sub> data are from The Earth System Research Laboratory of the National Oceanic and Atmospheric Administration (NOAA). Specifically, these data are a record of annual mean atmospheric CO<sub>2</sub> concentration at Mauna Loa Observatory, Hawaii, and constitute the longest continuous record of atmospheric CO<sub>2</sub> concentration. This remote location at high altitude in Hawaii was chosen because it is relatively unaffected by any local emissions and so is representative of the global concentration of a well-mixed gas like CO<sub>2</sub>. These observations were started by C. David Keeling of the Scripps Institution of Oceanography in March of 1958 and are often referred to as the Keeling Curve. Data are reported as a dry mole fraction defined as the number of molecules of carbon dioxide divided by the number of molecules of dry air multiplied by one million (ppm).</p>
+<p>Our goal in the next module will be to determine if the variability in the temperature anomaly records can be reasonably explained by the CO<sub>2</sub> values in the same year. However, in this module, use the results below to perform a bivariate EDA for these data.</p>
+<p><img src="BEDAQuant_CExmpl_files/figure-html/unnamed-chunk-4-1.png" width="336" /></p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
