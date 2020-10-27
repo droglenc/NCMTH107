@@ -27,7 +27,7 @@ library(ggplot2)
 <img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/CO2.jpg" alt="CO2 Emissions" class="img-right">
 Researches examined air quality daily in New York from May to September 1973. The recorded the average daily temperature (<sup>o</sup>F) and ozone concentration (ppb) for each day. Use the results in the scatterplot below to perform a bivariate EDA.
 
-```{r echo=FALSE, results="hide", fig.height=3.5, fig.width=3.5, fig.show="hold",message=FALSE}
+```{r echo=FALSE, results="hide", fig.height=3.5, fig.width=3.5, fig.show="hold",message=FALSE,warning=FALSE}
 r <- corr(Ozone~Temp,data=airquality,use="pairwise.complete.obs")
 ggplot(data=airquality,mapping=aes(x=Temp,y=Ozone)) +
   geom_point(pch=21,color="black",fill="darkgray",size=2) +
@@ -49,6 +49,7 @@ Our goal in the next module will be to determine if the variability in the tempe
 
 ```{r echo=FALSE, results="hide", fig.height=3.5, fig.width=3.5, fig.show="hold",message=FALSE}
 df <- read.csv("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/GSI_data.csv")
+r <- corr(Temp~CO2,data=df,use="pairwise.complete.obs")
 ggplot(data=df,mapping=aes(x=CO2,y=Temp)) +
   geom_point(pch=21,color="black",fill="darkgray",size=2) +
   geom_label(x=343,y=60,label=paste0("r=",formatC(r,format="f",digits=3))) +

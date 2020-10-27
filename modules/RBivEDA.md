@@ -1,6 +1,6 @@
 ---
 layout: page
-title: R - Univariate EDA
+title: R - Bivariate EDA
 css: /css/modules.css
 ---
 
