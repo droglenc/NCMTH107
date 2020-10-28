@@ -27,6 +27,8 @@ source("../../../rhelpers/knitr_setup.R")
 <li>If it is a "right-of" question then you must include <code>lower.tail=FALSE</code> in <code>distrib()</code>.</li>
 <li>All "between" questions require a three-step process with <code>distrib()</code> to answer. If it is a forward question then <code>distrib()</code> is used to find the areas to the left of the two given values and then those two areas are subtracted. If it is a reverse question then the area between must be converted to a left-of area and a right-of area which are then separately put into <code>distrib()</code> to compute two values (which are the final answer).</li>
 <li>I strongly urge you to continue to identify whether the question is a "forward" or "reverse" question (which will identify whether you need to use <code>type="q"</code> in <code>distrib()</code> or not) and a "left-of", "right-of", or "between" question (which will identify whether you need to use <code>lower.tail=FALSE</code> in <code>distrib()</code> or not and whether the answer is a three-step process to calculate).</li>
+<li>Proportions are decimals; they are the value before you multiply by 100 to make a percentage.</li>
+<li>Percentages should be rounded to one decimal. Values of "x" should be rounded to what makes sense for the problem (e.g., no decimals for discrete variables).</li>
 </ul>
 </div>
 
