@@ -1,0 +1,77 @@
+---
+title: "Annotated Key"
+subtitle: "Bivariate EDA Categorical Class Example"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3.5
+    fig_width: 3.5
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_BEDACat_CExmpl")
+```
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+```
+
+## Executive Loyalty
+
+|              | Remain  | Not Remain | **TOTAL** |
+|:------------:|:-------:|:----------:|:---------:|
+|  < 1 year    |   11    |    23      |  **34**   |
+|  1-5 years   |   28    |    15      |  **43**   |
+|  6-10 years  |    6    |    12      |  **18**   |
+|  > 10 years  |   74    |    31      |  **105**  |
+|  **TOTAL**   | **119** |  **81**    |  **200**  |
+
+<br
+
+<ol start="1">
+<li>The percent of executives with 1-5 years of service who would remain in their current position is `r formatC(28/43*100,format="f",digits=1)`% (=$\frac{28}{43}$).</li>
+<li>What percent of executives with more than 10 years of service would not remain in their current position `r formatC(31/105*100,format="f",digits=1)`% (=$\frac{31}{105}$)..</li>
+</ol>
+
+<div class="alert alert-warning">
+<ul>
+  <li>Both of these questions are focused on a group of executives based on their years of service. Thus, both of these percentages will be computed from looking at a single ROW in the table..</li>
+</ul>
+</div>
+
+<ol start="3">
+<li>What percent of executives who would remain in their current position had less than 1 year of service `r formatC(23/81*100,format="f",digits=1)`% (=$\frac{23}{81}$)..</li>
+</ol>
+
+<div class="alert alert-warning">
+<ul>
+  <li>This question is focused on only those executives that would remain in their current position. Thus, this percentage is computed from looking at only the "remain" COLUMN.</li>
+</ul>
+</div>
+
+<ol start="4">
+<li>What percent of all executives had 6-10 years of service and would not remain in their current position `r formatC(12/200*100,format="f",digits=1)`% (=$\frac{12}{200}$).</li>
+<li>What percent of all executives would remain in their current position `r formatC(119/200*100,format="f",digits=1)`% (=$\frac{119}{200}$).</li>
+</ol>
+
+<div class="alert alert-warning">
+<ul>
+  <li>Both of these questions are about ALL executives. THus, these percetages are computed out of ALL 200 executives.</li>
+</ul>
+</div>
+
+<ol start="6">
+<li>Interestingly executives with 1-5 years of service (`r formatC(28/43*100,format="f",digits=1)`) or more than 10 years of service (`r formatC(74/105*100,format="f",digits=1)`) were about twice as likely to remain in their current position than those with less than 1 year (`r formatC(11/34*100,format="f",digits=1)`) or 6-10 years of service (`r formatC(6/18*100,format="f",digits=1)`).</li>
+</ol>
+
+<div class="alert alert-warning">
+<ul>
+  <li>This question is asking you to compare the percent that would remain (or not) in their position across the different levels of service. Thus, you want to compare rows to each other and, thus, you will want to compute ROW percentages to aid that comparison.</li>
+  <li>If you put the response variable into columns and the explanatory or grouping variable into rows then you will always computer a ROW percentage for this type of question.</li>
+</ul>
+</div>
