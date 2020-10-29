@@ -20,12 +20,6 @@ modHTML_CEKeys("KEY_LinearRegression_CE")
 ```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
 library(NCStats)
 source("../../../rhelpers/knitr_setup.R")
-library(captioner)
-figs <- captioner(prefix="Figure")
-figs(name="IBI1","Fitted-line plot for the relatinoship between IBI scores and the percentage of imperious surface for 14 locations in Washington.")
-figs(name="VisionFitPlot","Fitted line plot for the relationship between maximum distance to see a sign and the age of a driver.")
-figs(name="FishingFitPlot","Fitted line plot for the relationship between fishing pressure and number of counted cars on Wyoming resrvoirs.")
-figs(name="Cafe1","Fitted-line plot for the relatinoship between number of coffees sold and the maximum daily temperature for the college cafe.")
 ```
 
 ----
@@ -33,14 +27,16 @@ figs(name="Cafe1","Fitted-line plot for the relatinoship between number of coffe
 ## Equation of the Line I
 
 1. **Dishwasher Example**
-    1. response - Height of suds (mm)
-    1. explanatory - Amount of soap (g)
-    1. slope is 12.4
-    1. intercept is -20.2
+    1. response - **Height of suds (mm)**
+    1. explanatory - **Amount of soap (g)**
+    1. slope is **12.4**
+    1. intercept is **-20.2**
     1. For each additional gram of soap, the height of suds increases by 12.4 mm, on average.
     1. For 0 grams of soap, the height of suds is -20.2 mm, on average.  [*This is an extrapolation.*]
-    1. Ask to predict height of suds for an amount of soap between 3.5 and 8.0 grams.  Example ... "What is the predicted height of suds for 5 g of soap?"  Answer ... -20.2+12.4*5=41.8 mm.
-    1. Ask to predict height of suds for an amount of soap not between 3.5 and 8.0 grams.  Example ... "What is the predicted height of suds for 10 g of soap?"
+    1. Asked to predict height of suds for an amount of soap between 3.5 and 8.0 grams.  Example ... "What is the predicted height of suds for 5 g of soap?"  Answer ... -20.2+12.4&times;5=41.8 mm.
+    1. Asked to predict height of suds for an amount of soap not between 3.5 and 8.0 grams.  Example ... "What is the predicted height of suds for 10 g of soap?"
+
+<!----
 1. **Livestock Food Example**
     1. response - Costs
     1. explanatory - Livestock food mix in tons
@@ -50,6 +46,7 @@ figs(name="Cafe1","Fitted-line plot for the relatinoship between number of coffe
     1. For 0 tons of the food mix, the costs are $12075, on average. [*This may be considered as "start-up" costs.*]
     1. Ask to predict costs for food mix amounts between 36.5 and 42 tons.  Example ... "What is the cost to make 40 tons of the mix?"  Answer ... 190*40+12075 = $19675.
     1. Ask to predict costs for food mix amounts not between 36.5 and 42 tons.  Example ... "What is the cost to make 70 tons of the mix?"
+---->
 
 ----
 
@@ -74,16 +71,16 @@ b <- 0.16
 rsq <- 0.91
 ```
 
-1. The equation of the best-fit line is SAND = `r b`+`r m`*ANGLE
+1. The equation of the best-fit line is **SAND = `r b`+`r m`&times;ANGLE**
 1. For each 1 degree increase in beach angle, the median sand diameter increases by `r m` mm, on average.
 1. If there is 0 beach angle, then the median sand diameter is `r b` mm, on average.
-1. This prediction should not be computed, because 15 degrees of beach angle is outside of the domain of the data used to define the relationship (i.e., this is an extrapolation).
-1. The predicted median sand diameter for a beach angle of 4 degrees is `r formatC(b+m*4,format="f",digits=3)` mm.
-1. The residual for an observed median sand diameter of 0.2 mm and beach angle of 5 degrees is `r formatC(0.2-(b+m*5),format="f",digits=3)` mm.
-1. The correlation coefficient between median sand diameter and beach angle is `r formatC(-1*sqrt(rsq),format="f",digits=3)`.
-1. The proportion of variability in median sand diameter that is explained by knowing the angle of the beach is `r formatC(rsq,format="f",digits=3)`.
-1. I would expect the median sand diameter to increase by four slopes or `r formatC(4*m,format="f",digits=3)` mm, on average, if the beach angle increased by 4 degrees.
-1. The relationship between median sand diameter and beach angle appears to be nonlinear.
+1. This prediction should not be computed, because 15 degrees of beach angle is outside of the domain of the data used to define the relationship (i.e., this is an **extrapolation**).
+1. The predicted median sand diameter for a beach angle of 4 degrees is **`r formatC(b+m*4,format="f",digits=3)` mm**.
+1. The residual for an observed median sand diameter of 0.2 mm and beach angle of 5 degrees is **`r formatC(0.2-(b+m*5),format="f",digits=3)` mm**.
+1. The correlation coefficient between median sand diameter and beach angle is **`r formatC(-1*sqrt(rsq),format="f",digits=3)`**.
+1. The proportion of variability in median sand diameter that is explained by knowing the angle of the beach is **`r formatC(rsq,format="f",digits=3)`**.
+1. I would expect the median sand diameter to increase by four slopes or **`r formatC(4*m,format="f",digits=3)` mm**, on average, if the beach angle increased by 4 degrees.
+1. The relationship between median sand diameter and beach angle appears to be nonlinear (i.e., curved). I am not concerned about homoscedastiticty as no funnel-shape is apparent.
 
 ----
 
@@ -95,13 +92,13 @@ b <- 29.79
 rsq <- 0.923
 ```
 
-1. The equation of the best-fit line is AIRTEMP = `r b`+`r m`*ALTLAPSERATE
+1. The equation of the best-fit line is **AIRTEMP = `r b`+`r m`&times;ALTLAPSERATE**
 1. If the altitude lapse rate is 0, then the mean air temperature is `r b`<sup>o</sup>C, on average.
 1. For each 1 degree increase in altitude lapse rate, the mean air temperature decreases by `r -1*m`<sup>o</sup>C, on average.
-1. The predicted mean air temperature for an altitude lapse rate of 4000 <sup>o</sup>C/km is `r formatC(b+m*4000,format="f",digits=2)`<sup>o</sup>C.
-1. The residual for an observed mean air temperature of 0<sup>o</sup>C and altitude lapse rate of 3500<sup>o</sup>C/km is `r formatC(0-(b+m*3500),format="f",digits=2)`<sup>o</sup>C.
-1. The correlation coefficient between mean air temperature and altitude lapse rate is `r formatC(sqrt(rsq),format="f",digits=3)`.
-1. I would expect the mean air temperature to decrease by 1000 slopes or `r formatC(-1000*m,format="f",digits=3)` mm, on average, if the altitude lapse rate increased by 1000<sup>o</sup>C/km.
-1. This prediction should not be computed, because 1000<sup>o</sup>C/km of altitude lapse rate is outside of the domain of the data used to define the relationship (i.e., this is an extrapolation).
-1. The proportion of variability in mean air temperature that is explained by knowing the altitude lapse rate is `r formatC(rsq,format="f",digits=3)`.
-1. I have no concerns as the relationship between mean air temperature and altitude lapse rate appears to be linear (no evident curve) and homoscedastic (no evident funnel).
+1. The predicted mean air temperature for an altitude lapse rate of 4000 <sup>o</sup>C/km is **`r formatC(b+m*4000,format="f",digits=2)`<sup>o</sup>C**.
+1. The residual for an observed mean air temperature of 0<sup>o</sup>C and altitude lapse rate of 3500<sup>o</sup>C/km is **`r formatC(0-(b+m*3500),format="f",digits=2)`<sup>o</sup>C**.
+1. The correlation coefficient between mean air temperature and altitude lapse rate is **`r formatC(sqrt(rsq),format="f",digits=3)`**.
+1. I would expect the mean air temperature to decrease by 1000 slopes or **`r formatC(-1000*m,format="f",digits=3)`** mm, on average, if the altitude lapse rate increased by 1000<sup>o</sup>C/km.
+1. This prediction should not be computed, because 1000<sup>o</sup>C/km of altitude lapse rate is outside of the domain of the data used to define the relationship (i.e., this is an **extrapolation**).
+1. The proportion of variability in mean air temperature that is explained by knowing the altitude lapse rate is **`r formatC(rsq,format="f",digits=3)`**.
+1. I have **no concerns** as the relationship between mean air temperature and altitude lapse rate appears to be linear (no evident curve) and homoscedastic (no evident funnel).
