@@ -31,21 +31,23 @@ source("../../../rhelpers/knitr_setup.R")
 |  > 10 years  |   74    |    31      |  **105**  |
 |  **TOTAL**   | **119** |  **81**    |  **200**  |
 
-<br
+<br>
 
 <ol start="1">
 <li>The percent of executives with 1-5 years of service who would remain in their current position is `r formatC(28/43*100,format="f",digits=1)`% (=$\frac{28}{43}$).</li>
-<li>What percent of executives with more than 10 years of service would not remain in their current position `r formatC(31/105*100,format="f",digits=1)`% (=$\frac{31}{105}$)..</li>
+<li>What percent of executives with more than 10 years of service would not remain in their current position `r formatC(31/105*100,format="f",digits=1)`% (=$\frac{31}{105}$).</li>
 </ol>
 
 <div class="alert alert-warning">
 <ul>
-  <li>Both of these questions are focused on a group of executives based on their years of service. Thus, both of these percentages will be computed from looking at a single ROW in the table..</li>
+  <li>Both of these questions are focused on a group of executives based on their years of service. Thus, both of these percentages will be computed from looking at a single ROW in the table.</li>
 </ul>
 </div>
 
+<br>
+
 <ol start="3">
-<li>What percent of executives who would remain in their current position had less than 1 year of service `r formatC(23/81*100,format="f",digits=1)`% (=$\frac{23}{81}$)..</li>
+<li>What percent of executives who would remain in their current position had less than 1 year of service `r formatC(23/81*100,format="f",digits=1)`% (=$\frac{23}{81}$).</li>
 </ol>
 
 <div class="alert alert-warning">
@@ -53,6 +55,8 @@ source("../../../rhelpers/knitr_setup.R")
   <li>This question is focused on only those executives that would remain in their current position. Thus, this percentage is computed from looking at only the "remain" COLUMN.</li>
 </ul>
 </div>
+
+<br>
 
 <ol start="4">
 <li>What percent of all executives had 6-10 years of service and would not remain in their current position `r formatC(12/200*100,format="f",digits=1)`% (=$\frac{12}{200}$).</li>
@@ -65,8 +69,10 @@ source("../../../rhelpers/knitr_setup.R")
 </ul>
 </div>
 
+<br>
+
 <ol start="6">
-<li>Interestingly executives with 1-5 years of service (`r formatC(28/43*100,format="f",digits=1)`) or more than 10 years of service (`r formatC(74/105*100,format="f",digits=1)`) were about twice as likely to remain in their current position than those with less than 1 year (`r formatC(11/34*100,format="f",digits=1)`) or 6-10 years of service (`r formatC(6/18*100,format="f",digits=1)`).</li>
+<li>Interestingly executives with 1-5 years of service (`r formatC(28/43*100,format="f",digits=1)`%) or more than 10 years of service (`r formatC(74/105*100,format="f",digits=1)`%) were about twice as likely to remain in their current position than those with less than 1 year (`r formatC(11/34*100,format="f",digits=1)`%) or 6-10 years of service (`r formatC(6/18*100,format="f",digits=1)`%).</li>
 </ol>
 
 <div class="alert alert-warning">

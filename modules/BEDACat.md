@@ -41,7 +41,7 @@ Use the resources below to answer [these questions](Prep/BEDACat). [[*Problems w
 
 ## Practice
 
-* [Class Example](CE/BEDACat_CExmpl) ... [ANSWER KEY](CE/KEY_BEDACat_CExmpl)
+* [Class Example](CE/BEDACat_CExmpl) ... [ANNOTATED KEY](CE/KEY_BEDACat_CExmpl)
 * [Assignment](CE/BEDACat_CE1) ... [ANSWER KEY](CE/KEY_BEDACat_CE)
 * [Additional Exercises](CE/BEDACat_CE2)
 
