@@ -30,26 +30,26 @@ In this exercise, you will construct actual sampling distributions for different
 
 * Compute the center and dispersion (to three decimals) of this population. Write results in table further below.
 
-```{r results='hide'}
+```{r results='hide', prompt=FALSE}
 popn <- c(12,14,16,18,20)      # creates population
 Summarize(popn,digits=3)       # population summaries
 ```
 
 * Identify all possible samples of n=2 from this population. [*Look at these to make sure that they make sense to you.*]
 
-```{r results='hide'}
+```{r results='hide', prompt=FALSE}
 ( nums2 <- combn(popn,2) )     # all combos of n=2 from popn (look at verticals)
 ```
 
 * Compute the mean for each sample. [*Look at these to make sure that they make sense to you.*]
 
-```{r results='hide'}
+```{r results='hide', prompt=FALSE}
 ( mns2 <- combn(popn,2,mean) ) # mean of all combos of n=2
 ```
 
 * Compute the mean and standard deviation of all 10 sample means. Write the results in the table further below.
 
-```{r results='hide'}
+```{r results='hide', prompt=FALSE}
 Summarize(mns2,digits=3)       # summarized mean/sd of means
 ```
 

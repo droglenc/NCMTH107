@@ -14,20 +14,20 @@ css: "/css/modules.css"
 <ul>
 <li>Compute the center and dispersion (to three decimals) of this population. Write results in table further below.</li>
 </ul>
-<pre class="r"><code>&gt; popn &lt;- c(12,14,16,18,20)      # creates population
-&gt; Summarize(popn,digits=3)       # population summaries</code></pre>
+<pre class="r"><code>popn &lt;- c(12,14,16,18,20)      # creates population
+Summarize(popn,digits=3)       # population summaries</code></pre>
 <ul>
 <li>Identify all possible samples of n=2 from this population. [<em>Look at these to make sure that they make sense to you.</em>]</li>
 </ul>
-<pre class="r"><code>&gt; ( nums2 &lt;- combn(popn,2) )     # all combos of n=2 from popn (look at verticals)</code></pre>
+<pre class="r"><code>( nums2 &lt;- combn(popn,2) )     # all combos of n=2 from popn (look at verticals)</code></pre>
 <ul>
 <li>Compute the mean for each sample. [<em>Look at these to make sure that they make sense to you.</em>]</li>
 </ul>
-<pre class="r"><code>&gt; ( mns2 &lt;- combn(popn,2,mean) ) # mean of all combos of n=2</code></pre>
+<pre class="r"><code>( mns2 &lt;- combn(popn,2,mean) ) # mean of all combos of n=2</code></pre>
 <ul>
 <li>Compute the mean and standard deviation of all 10 sample means. Write the results in the table further below.</li>
 </ul>
-<pre class="r"><code>&gt; Summarize(mns2,digits=3)       # summarized mean/sd of means</code></pre>
+<pre class="r"><code>Summarize(mns2,digits=3)       # summarized mean/sd of means</code></pre>
 <ul>
 <li>Repeat the previous four calculations for samples of n=3. [<em>Copy-and-paste your code for n=2 but change the names to</em> <code>num2</code> <em>and</em> <code>mns2</code><em>.</em>]</li>
 <li>Repeat the previous calculations for samples of n=4. [<em>Copy-and-paste and use</em> <code>num3</code> <em>and</em> <code>mns3</code><em>.</em>]</li>
