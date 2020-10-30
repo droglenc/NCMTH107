@@ -153,4 +153,4 @@ Suppose that it is known that a population has &mu;=10. Use this to answer the q
 1. How would you judge the accuracy and precision of four samples with means of 9,10,11, and 10?
 1. How would you judge the accuracy and precision of four samples with means of 1,7,8, and 19?
     
-[See answer here](RE_SamplingDist.html#accuracy-and-precision)
+[See answer here](zRevExAns/SamplingDist.html#accuracy-and-precision)
