@@ -99,6 +99,7 @@ d <- dplyr::mutate(d,
 ```
 
 <ol>
+<!----
   <li>The response variable is the outcome (i.e., time of death of the tree). Note that the row percentage table is in `r tbls("BlightRow",display="cite")`, the  column percentage table is in `r tbls("BlightCol",display="cite")`, and the table percentage table is shown in `r tbls("BlightTot",display="cite")`.</li>
   
 `r tbls("BlightRow")`
@@ -118,14 +119,21 @@ col.tbl
 ```{r echo=FALSE, background="white"}
 perc.tbl
 ```
+---->
 
-  <li>The percentage of all trees in the control treatment that were dead within the first year is $\frac{`r tbl2["No Action (control)","Within 1 Year"]`}{`r tbl2["No Action (control)","Sum"]`}\times 100$ = `r formatC(row.tbl["No Action (control)","Within 1 Year"],format="f",digits=1)`% (`r tbls("BlightRow",display="cite")`).</li>
-  <li>The percentage of ALL trees that were in the control treatment AND were dead within the first year is $\frac{`r tbl2["No Action (control)","Within 1 Year"]`}{`r tbl2["Sum","Sum"]`}\times 100$ = `r formatC(perc.tbl["No Action (control)","Within 1 Year"],format="f",digits=1)`% (`r tbls("BlightTot",display="cite")`).</li>
-  <li>The percentage of the trees in the control treatment that died after four years is $\frac{`r tbl2["No Action (control)","4+ Years Later"]`}{`r tbl2["No Action (control)","Sum"]`}\times 100$ = `r formatC(row.tbl["No Action (control)","4+ Years Later"],format="f",digits=1)`% (`r tbls("BlightRow",display="cite")`).</li>
-  <li>The percentage of the trees that died after 2-4 years that were in the control treatment is $\frac{`r tbl2["No Action (control)","2-4 Years Later"]`}{`r tbl2["Sum","2-4 Years Later"]`}\times 100$ = `r formatC(col.tbl["No Action (control)","2-4 Years Later"],format="f",digits=1)`% (`r tbls("BlightCol",display="cite")`).</li>
-  <li>The percentage of all trees that were dead within the first year is $\frac{`r tbl2["Sum","Within 1 Year"]`}{`r tbl2["Sum","Sum"]`}\times 100$ = `r formatC(perc.tbl["Sum","Within 1 Year"],format="f",digits=1)`% (`r tbls("BlightTot",display="cite")`).</li>
+  <li>The percentage of all trees in the control treatment that were dead within the first year is $\frac{`r tbl2["No Action (control)","Within 1 Year"]`}{`r tbl2["No Action (control)","Sum"]`}\times 100$ = <strong>`r formatC(row.tbl["No Action (control)","Within 1 Year"],format="f",digits=1)`%</strong>.</li>
+  <li>The percentage of ALL trees that were in the control treatment AND were dead within the first year is $\frac{`r tbl2["No Action (control)","Within 1 Year"]`}{`r tbl2["Sum","Sum"]`}\times 100$ = <strong>`r formatC(perc.tbl["No Action (control)","Within 1 Year"],format="f",digits=1)`%</strong>.</li>
+  <li>The percentage of the trees in the control treatment that died after four years is $\frac{`r tbl2["No Action (control)","4+ Years Later"]`}{`r tbl2["No Action (control)","Sum"]`}\times 100$ = <strong>`r formatC(row.tbl["No Action (control)","4+ Years Later"],format="f",digits=1)`%</strong>.</li>
+  <li>The percentage of the trees that died after 2-4 years that were in the control treatment is $\frac{`r tbl2["No Action (control)","2-4 Years Later"]`}{`r tbl2["Sum","2-4 Years Later"]`}\times 100$ = <strong>`r formatC(col.tbl["No Action (control)","2-4 Years Later"],format="f",digits=1)`%</strong>.</li>
+  <li>The percentage of all trees that were dead within the first year is $\frac{`r tbl2["Sum","Within 1 Year"]`}{`r tbl2["Sum","Sum"]`}\times 100$ = <strong>`r formatC(perc.tbl["Sum","Within 1 Year"],format="f",digits=1)`%</strong>.</li>
   <li>Trees died much earlier when no action was taken (`r tbls("BlightRow",display="cite")`). Spraying and removing branches was slightly more effective (i.e., trees lived longer) than just removing branches.
 </ol>
+
+`r tbls("BlightRow")`
+
+```{r echo=FALSE, background="white"}
+row.tbl
+```
 
 ----
 
@@ -140,11 +148,11 @@ colnames(raw) <- c("Support","Don’t Support")
 ```
 
 <ol>
-  <li>The percentage of Jewish physicians that support genetic counseling was $\frac{`r raw2["Jewish","Support"]`}{`r raw2["Jewish","Sum"]`}\times100$= `r formatC(raw2["Jewish","Support"]/raw2["Jewish","Sum"]*100,format="f",digits=1)`%.</li>
-  <li>The percentage of Catholic physicians that don’t support genetic counseling was  $\frac{`r raw2["Catholic","Don’t Support"]`}{`r raw2["Catholic","Sum"]`}\times100$= `r formatC(raw2["Catholic","Don’t Support"]/raw2["Catholic","Sum"]*100,format="f",digits=1)`%.</li>
-  <li>The percentage of all physicians surveyed that were Protestant was  $\frac{`r raw2["Protestant","Sum"]`}{`r raw2["Sum","Sum"]`}\times100$= `r formatC(raw2["Protestant","Sum"]/raw2["Sum","Sum"]*100,format="f",digits=1)`%.</li>
-  <li>The percentage of those physicians not supporting genetic counseling that were Catholic was  $\frac{`r raw2["Catholic","Don’t Support"]`}{`r raw2["Sum","Don’t Support"]`}\times100$= `r formatC(raw2["Catholic","Don’t Support"]/raw2["Sum","Don’t Support"]*100,format="f",digits=1)`%.</li>
-  <li>The percentage of all physicians that supported genetic counseling was  $\frac{`r raw2["Sum","Support"]`}{`r raw2["Sum","Sum"]`}\times100$= `r formatC(raw2["Sum","Support"]/raw2["Sum","Sum"]*100,format="f",digits=1)`%.</li>
+  <li>The percentage of Jewish physicians that support genetic counseling was $\frac{`r raw2["Jewish","Support"]`}{`r raw2["Jewish","Sum"]`}\times100$= <strong>`r formatC(raw2["Jewish","Support"]/raw2["Jewish","Sum"]*100,format="f",digits=1)`%</strong>.</li>
+  <li>The percentage of Catholic physicians that don’t support genetic counseling was  $\frac{`r raw2["Catholic","Don’t Support"]`}{`r raw2["Catholic","Sum"]`}\times100$= <strong>`r formatC(raw2["Catholic","Don’t Support"]/raw2["Catholic","Sum"]*100,format="f",digits=1)`%</strong>.</li>
+  <li>The percentage of all physicians surveyed that were Protestant was  $\frac{`r raw2["Protestant","Sum"]`}{`r raw2["Sum","Sum"]`}\times100$= <strong>`r formatC(raw2["Protestant","Sum"]/raw2["Sum","Sum"]*100,format="f",digits=1)`%</strong>.</li>
+  <li>The percentage of those physicians not supporting genetic counseling that were Catholic was  $\frac{`r raw2["Catholic","Don’t Support"]`}{`r raw2["Sum","Don’t Support"]`}\times100$= <strong>`r formatC(raw2["Catholic","Don’t Support"]/raw2["Sum","Don’t Support"]*100,format="f",digits=1)`%</strong>.</li>
+  <li>The percentage of all physicians that supported genetic counseling was  $\frac{`r raw2["Sum","Support"]`}{`r raw2["Sum","Sum"]`}\times100$= <strong>`r formatC(raw2["Sum","Support"]/raw2["Sum","Sum"]*100,format="f",digits=1)`%</strong>.</li>
   <li>Respondents that identified as Jewish were more than twice as likely to support genetic counseling than those that identified as Protestant or Catholic (`r tbls("ReligionRow",display="cite")`). Those that identified as Catholic were slightly less supportive than those that identified as Protestant.</li>
 </ol>
 
