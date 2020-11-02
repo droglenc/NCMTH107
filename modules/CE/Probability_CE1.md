@@ -47,7 +47,7 @@ Suppose that the level of nitrogen oxides (NOX) in the exhaust of a particular c
 <img src="zimgs/carpooling.jpg" alt="car pooling" class="img-right">
 A study of rush-hour traffic in San Francisco counted the number of people in a car entering a freeway at a suburban interchange. Suppose that this count has a mean of 1.5 people with a standard deviation of 0.75.
 
-1. Information about the population distibution was not given in the background to this question. So, would you expect this count to follow a normal distribution? What are two pieces of evidence to support your answer?
+1. Information about the shape of the population distibution was not given in the background to this question. So, would you expect this count to follow a normal distribution? What is one piece of evidence to support your answer?
 1. What is the probability that a random sample of 40 cars will have a mean number of passengers of less than 1.2?
 1. What is the probability that a random sample of 50 cars will have a mean number of passengers of greater than 2.0?
 1. What is the probability that a random sample of 5 cars will have a mean number of passengers of greater than 2.0?
