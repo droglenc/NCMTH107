@@ -1,0 +1,217 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Probability CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+Probabilities are ALWAYS written as decimal value between 0 and 1. Do not convert to a percentage or leave as a fraction.
+</li>
+<li>
+Probabilities are not “odds” so don’t say, for example in the first question below, that “the odds of a chipmunk eating an acorn is 0.47.” Odds are the probability an event divided by the probability of not that event.
+</li>
+</ul>
+</div>
+<div id="food-choice-by-chipmunks" class="section level2">
+<h2>Food Choice by Chipmunks</h2>
+<ol>
+<li>The probability that a chipmunk eats an acorn is 0.471 (<span class="math inline">\(=\frac{8}{17}\)</span>).</li>
+<li>The probability that a chipmunk eats a kernel of corns is 0.529. (<span class="math inline">\(=\frac{9}{17}\)</span>)</li>
+<li>The probability that a chipmunk eats a kernel of corn assuming that it has already eaten six kernels of corn and no acorns is 0.273 (<span class="math inline">\(=\frac{3}{11}\)</span>).</li>
+</ol>
+<hr />
+<div class="alert alert-warning">
+<strong>In the questions below note that you must:</strong>
+<ul>
+<li>
+Explicitly state which distribution (population or sampling) is to be used to answer the question and why that distribution is used (question is about an individual or a statistic from a sample).
+</li>
+<li>
+Explicitly state whether the distribution is normal or not and how you know whether it is or is not normal. For population distributions you will be told in the background if it is normal or not. For sampling distributions you will have to determine if one of the three criteria of the Central Limit Theorem has been met.
+</li>
+<li>
+Explicitly state whether you can answer the question or not. Simply, the question can be answered if the required distribution is normal (as determined as described above). If the distribution is not normal then you should say that you “cannot answer the question” because the PARTICULAR distribution is not normal. You should explicitly state which distribution it is that is not normal. See the answers below for examples.
+</li>
+</ul>
+</div>
+</div>
+<div id="pollutants-in-auto-exhaust" class="section level2">
+<h2>Pollutants in Auto Exhaust</h2>
+<ol>
+<li>About an individual …
+<ol>
+<li>Population (because about an individual).</li>
+<li>Right-skewed (not normal).</li>
+<li>Can NOT be answered (because population distribution is not normal).</li>
+<li>Can’t answer.</li>
+</ol></li>
+<li>About a mean from n=15 …
+<ol>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>Not normal because the population distribution is <strong>strongly</strong> skewed (I assume the worse in situations ilke this).</li>
+<li>Can NOT be answered (because sampling distribution is normal).</li>
+<li>Can’t answer.</li>
+</ol></li>
+<li>About a mean from n=50 …
+<ol>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(0.9,<span class="math inline">\(\frac{0.15}{\sqrt{50}}\)</span>=0.0212) because n≥30.</li>
+<li>Can be answered (because sampling distribution is normal).</li>
+<li>0.1729.</li>
+</ol></li>
+<li>About a mean from n=50 …
+<ol>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(0.9,<span class="math inline">\(\frac{0.15}{\sqrt{50}}\)</span>=0.0212) because n≥30.</li>
+<li>Can be answered (because sampling distribution is normal).</li>
+<li>0.0092.</li>
+</ol></li>
+<li>About a mean from n=50 …
+<ol>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(0.9,<span class="math inline">\(\frac{0.15}{\sqrt{50}}\)</span>=0.0212) because n≥30.</li>
+<li>Can be answered (because sampling distribution is normal).</li>
+<li>0.949 g/mi.</li>
+</ol></li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(1,mean=0.9,sd=0.15/sqrt(15),lower.tail=FALSE)
+distrib(0.92,mean=0.9,sd=0.15/sqrt(50),lower.tail=FALSE)
+distrib(0.85,mean=0.9,sd=0.15/sqrt(50))
+distrib(0.01,mean=0.9,sd=0.15/sqrt(50),lower.tail=FALSE,type=&quot;q&quot;)</code></pre>
+<hr />
+</div>
+<div id="people-in-car" class="section level2">
+<h2>People in Car</h2>
+<ol>
+<li>No. Left side will be truncated at 0 (i.e., more than 2 SD away from mean becomes negative, which is not possible). Discrete data with lots of ones and twos with few higher than that.</li>
+<li>About a mean from n=40 …
+<ol>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(1.5,<span class="math inline">\(\frac{0.75}{\sqrt{40}}\)</span>=0.1186) because n≥30.</li>
+<li>Can be answered (because sampling distribution is normal).</li>
+<li>0.0057.</li>
+</ol></li>
+<li>About a mean from n=50 …
+<ol>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(1.5,<span class="math inline">\(\frac{0.75}{\sqrt{50}}\)</span>=0.1061) because n≥30.</li>
+<li>Can be answered (because sampling distribution is normal).</li>
+<li>0.0000012.</li>
+</ol></li>
+<li>About a mean from n=5 …
+<ol>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>Not normal because n&lt;15 and the population distribution is not normal.</li>
+<li>Can NOT be answered (because sampling distribution is not normal).</li>
+<li>Can’t answer.</li>
+</ol></li>
+<li>About a mean from n=700 (through a total) …
+<ol>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(1.5,<span class="math inline">\(\frac{0.75}{\sqrt{700}}\)</span>=0.0283) because n≥30.</li>
+<li>Can be answered (because sampling distribution is normal).</li>
+<li>0.1039.</li>
+</ol></li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(1.2,mean=1.5,sd=0.75/sqrt(40))
+distrib(2,mean=1.5,sd=0.75/sqrt(50),lower.tail=FALSE)
+distrib(1075/700,mean=1.5,sd=0.75/sqrt(700),lower.tail=FALSE)</code></pre>
+<hr />
+</div>
+<div id="banking" class="section level2">
+<h2>Banking</h2>
+<ol>
+<li>About an individual …
+<ol>
+<li>Population (because about an individual).</li>
+<li>x~N(550,150) as given in the background.</li>
+<li>Can be answered (because population distribution is normal).</li>
+<li>0.0478</li>
+</ol></li>
+<li>About an individual …
+<ol>
+<li>Population (because about an individual).</li>
+<li>x~N(550,150) as given in the background.</li>
+<li>Can be answered (because population distribution is normal).</li>
+<li>0.0098</li>
+</ol></li>
+<li>About a mean from n=5 …
+<ol>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(550,<span class="math inline">\(\frac{150}{\sqrt{5}}\)</span>=67.0820) because the population distribution is normal.</li>
+<li>Can be answered (because sampling distribution is normal).</li>
+<li>0.7720.</li>
+</ol></li>
+<li>About a mean from n=10 …
+<ol>
+<li>Sampling (because about a statistic from a sample).</li>
+<li>x̄~N(550,<span class="math inline">\(\frac{150}{\sqrt{10}}\)</span>=47.4342) because the population distribution is normal.</li>
+<li>Can be answered (because sampling distribution is normal).</li>
+<li>0.8533.</li>
+</ol></li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(800,mean=550,sd=150,lower.tail=FALSE)
+distrib(200,mean=550,sd=150)
+distrib(600,mean=550,sd=150/sqrt(5))
+ab &lt;- distrib(700,mean=550,sd=150/sqrt(10))
+a &lt;- distrib(500,mean=550,sd=150/sqrt(10))
+ab-a</code></pre>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

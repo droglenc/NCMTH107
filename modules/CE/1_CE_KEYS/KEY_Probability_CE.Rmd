@@ -57,9 +57,9 @@ source("../../../rhelpers/knitr_setup.R")
     1. Can't answer.
 1. About a mean from n=15 ...
     1. Sampling (because about a statistic from a sample).
-    1. x&#772;~N(0.9,$\frac{0.15}{\sqrt{15}}$=`r formatC(0.15/sqrt(15),format="f",digits=4)`) because n is greater than 15 and the population distribution is not **strongly** skewed.
-    1. Can be answered (because sampling distribution is normal).
-    1. `r formatC(distrib(1,mean=0.9,sd=0.15/sqrt(15),lower.tail=FALSE),format="f",digits=4)`.
+    1. Not normal because the population distribution is **strongly** skewed (I assume the worse in situations ilke this).
+    1. Can NOT be answered (because sampling distribution is normal).
+    1. Can't answer.
 1. About a mean from n=50 ...
     1. Sampling (because about a statistic from a sample).
     1. x&#772;~N(0.9,$\frac{0.15}{\sqrt{50}}$=`r formatC(0.15/sqrt(50),format="f",digits=4)`) because n&ge;30.
