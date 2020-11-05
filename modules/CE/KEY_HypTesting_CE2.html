@@ -1,0 +1,107 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Hypothesis Testing CE II"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="body-temperature" class="section level2">
+<h2>Body Temperature</h2>
+<div class="alert alert-warning">
+<strong>In the following two applied questions note:</strong>
+<ul>
+<li>
+The hypotheses must be defined as noted in the first class exercise above.
+</li>
+<li>
+The summary statement (question 5 in each) is your answer to the research hypothesis/question based on your p-value results. Generally, this is a restatement about whether you believe (i.e., rejected H<sub>0</sub>) or don’t believe (i.e., did not reject H<sub>0</sub>) the H<sub>A</sub> because the H<sub>A</sub> is generally formed from the research hypothesis. This statement should be in the context of the problem and should be made clear that it is about the parameter (see “mean” in each statement below) in the population (see “all” in each statement below).
+</li>
+<li>
+Your p-value may be slightly (though not dramatically) different if you rounded your x̄ and SE differently than I did.
+</li>
+</ul>
+</div>
+<ol>
+<li>
+H<sub>A</sub> μ ≠ 37 vs. H<sub>0</sub> μ = 37
+</li>
+<li>
+x̄=36.8077
+</li>
+<li>
+p-value=0.00000013
+</li>
+<li>
+Reject H<sub>0</sub> because p-value &lt; alpha;.
+</li>
+<li>
+Average body temperature is less than 37<sup>o</sup>C for all individuals in this population.
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>2*distrib(36.808,mean=37,sd=0.41/sqrt(130))</code></pre>
+<hr />
+</div>
+<div id="beetle-size" class="section level2">
+<h2>Beetle Size</h2>
+<ol>
+<li>H<sub>A</sub> μ &gt; 190 vs. H<sub>0</sub> μ = 190, where μ is the mean thorax length (μm) for all <em>Halticus oleracea</em> beetles in this population.</li>
+<li>x̄=194.17 μm.</li>
+<li>p-value=0.103.</li>
+<li>Do not reject H<sub>0</sub> because the p-value &gt; α.</li>
+<li>The average thorax length for all <em>Halticus oleracea</em> beetles in this population does not appear to be greater than 190 μm.</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(194.17,mean=190,sd=14/sqrt(18),lower.tail=FALSE)</code></pre>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
