@@ -31,7 +31,7 @@ figs <- captioner(prefix="Figure")
 <div class="alert alert-warning">
 <strong>In the following two applied questions note:</strong> 
 <ul>
-<li>The hypotheses must be defined as noted in the first class exercise above.</li>
+<li>The hypotheses must be defined as noted in the first assignment for this module.</li>
 <li>The summary statement (question 5 in each) is your answer to the research hypothesis/question based on your p-value results. Generally, this is a restatement about whether you believe (i.e., rejected H<sub>0</sub>) or don't believe (i.e., did not reject H<sub>0</sub>) the H<sub>A</sub> because the H<sub>A</sub> is generally formed from the research hypothesis. This statement should be in the context of the problem and should be made clear that it is about the parameter (see "mean" in each statement below) in the population (see "all" in each statement below). </li>
 <li>Your p-value may be slightly (though not dramatically) different if you rounded your x&#772; and SE differently than I did.</li>
 </ul>
@@ -43,7 +43,7 @@ figs <- captioner(prefix="Figure")
 d <- read.csv("https://github.com/droglenc/NCData/raw/master/NormTemp.csv")
 ```
 
-<li>x&#772;=`r formatC(mean(d$bodytemp),format="f",digits=)`</li>
+<li>x&#772;=`r formatC(mean(d$bodytemp),format="f",digits=2)`</li>
 <li>p-value=`r formatC(2*distrib(round(mean(d$bodytemp),2),mean=37,sd=0.41/sqrt(nrow(d))),format="f",digits=8)`</li>
 <li>Reject H<sub>0</sub> because p-value < alpha;.</li>
 <li>Average body temperature is less than 37<sup>o</sup>C for all individuals in this population.</li>
@@ -51,7 +51,7 @@ d <- read.csv("https://github.com/droglenc/NCData/raw/master/NormTemp.csv")
 
 R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
-2*distrib(36.808,mean=37,sd=0.41/sqrt(130))
+2*distrib(36.81,mean=37,sd=0.41/sqrt(130))
 ```
 
 ----
