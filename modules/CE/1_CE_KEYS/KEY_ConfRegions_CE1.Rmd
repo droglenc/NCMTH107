@@ -17,14 +17,100 @@ source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
 modHTML_CEKeys("KEY_ConfRegions_CE1")
 ```
 
+
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+library(captioner)
+figs <- captioner(prefix="Figure")
+figs(name="Z1","Normal distribution representing the Z* the first confidence region example.")
+figs(name="Z2","Normal distribution representing the Z* the second confidence region example.")
+figs(name="Z3","Normal distribution representing the Z* the third confidence region example.")
+figs(name="Z4","Normal distribution representing the Z* the fourth confidence region example.")
+```
+
 ## The Concept of Confidence Intervals
 
 1. The percentage of CIs that contained &mu; was not affected by (i.e., did not change) increasing n.
 1. The percentage of CIs that contained &mu; increased with an increasing level of confidence.
 1. The margin-of-error decreased with increasing n (i.e., the confidence interval became narrower).
 1. The margin-of-error increased with increasing level of confidence (i.e., the confidence interval became wider).
-1. As a statistican you can make the CI narrower by increasing your sample size (n) or decreasing the level of confidence (C). Decreasing the level of confidence, however, will result in more errors in your conclusions (i.e., &mu; will be contained within the confidence interval less often).
+1. As a statistician you can make the CI narrower by increasing your sample size (n) or decreasing the level of confidence (C). Decreasing the level of confidence, however, will result in more errors in your conclusions (i.e., &mu; will be contained within the confidence interval less often).
+
+<br>
 
 ## Confidence Region Calculations
 
-These questions were included on the second confidence regions assignment.
+<ol>
+<li>See below.</li>
+<ol type="a">
+<li>C=0.90</li>
+<li>Lower bound</li>
+<li>Z<sup>*</sup>=`r formatC(distrib(0.9,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z1",display="cite")`).</li>
+```{r Z1, echo=FALSE}
+zstar <- distrib(0.9,type="q",lower.tail=FALSE)
+```
+
+`r figs("Z1")`
+
+<li>`r formatC(79.5+zstar*12/sqrt(50),format="f",digits=1)` (this is 79.5-`r formatC(-1*zstar,format="f",digits=3)`$\frac{12}{\sqrt{50}}$).</li>
+<li>I am 90% confident that the true population mean is greater than `r formatC(79.5+zstar*12/sqrt(50),format="f",digits=1)`.</li>
+</ol>
+</ol>
+<br>
+
+<ol start=2>
+<li>See below.</li>
+<ol type="a">
+<li>C=0.95</li>
+<li>Interval</li>
+<li>Z<sup>*</sup>= &plusmn; `r formatC(distrib(0.025,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z2",display="cite")`).</li>
+```{r Z2, echo=FALSE}
+zstar <- distrib(0.025,type="q",lower.tail=FALSE)
+```
+
+`r figs("Z2")`
+</ol>
+</ol>
+<br>
+
+<ol start=3>
+<li>See below.</li>
+<ol type="a">
+<li>C=0.99</li>
+<li>Lower bound</li>
+<li>Z<sup>*</sup>=`r formatC(distrib(0.99,type="q",lower.tail=FALSE),format="f",digits=3)` (`r figs("Z3",display="cite")`).</li>
+```{r Z3, echo=FALSE}
+zstar <- distrib(0.99,type="q",lower.tail=FALSE)
+```
+
+`r figs("Z3")`
+</ol>
+</ol>
+<br>
+
+<ol start=4>
+<li>See below.</li>
+<ol type="a">
+<li>C=0.90</li>
+<li>Upper bound</li>
+<li>Z<sup>*</sup>=`r formatC(distrib(0.9,type="q"),format="f",digits=3)` (`r figs("Z4",display="cite")`).</li>
+```{r Z4, echo=FALSE}
+zstar <- distrib(0.9,type="q")
+```
+
+`r figs("Z4")`
+</ol>
+</ol>
+
+R Appendix
+```{r eval=FALSE,prompt=FALSE}
+<<Z1>>
+<<Z2>>
+<<Z3>>
+<<Z4>>
+```
+
+<br>
+
+The remaining parts (d and e) to these questions were included on the second confidence regions assignment.
