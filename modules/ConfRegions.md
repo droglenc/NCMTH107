@@ -49,8 +49,8 @@ Use the resources below to answer [these questions](Prep/ConfRegions). [[*Proble
 
 ## Practice
 
-* [Assignment I](CE/ConfRegions_CE1) ... [ANSWER KEY](CE/KEY_ConfRegions_CE1)
-* [Assignment II](CE/ConfRegions_CE2) ... [ANSWER KEY](CE/KEY_ConfRegions_CE2)
+* [Assignment I](CE/ConfRegions_CE1) ... [ANSWER KEY](CE/KEY_ConfRegions_CE1.html)
+* [Assignment II](CE/ConfRegions_CE2) ... [ANSWER KEY](CE/KEY_ConfRegions_CE2.html)
 * [Additional Exercises](CE/ConfRegions_CE3)
 * [Even More Exercises](CE/ConfRegions_CE4)
 
