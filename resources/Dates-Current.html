@@ -26,46 +26,6 @@ Topic
 <tbody>
 <tr>
 <td style="text-align:left;">
-Mon, Nov-02
-</td>
-<td style="text-align:left;">
-<a href="../modules/Probability">Probability</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Tue, Nov-03
-</td>
-<td style="text-align:left;">
-<a href="../modules/HypTesting">Hypothesis Testing</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Wed, Nov-04
-</td>
-<td style="text-align:left;">
-<a href="../modules/HypTesting">Hypothesis Testing</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Thu, Nov-05
-</td>
-<td style="text-align:left;">
-<a href="../modules/ConfRegions">Confidence Regions</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Fri, Nov-06
-</td>
-<td style="text-align:left;">
-<a href="../modules/ConfRegions">Confidence Regions</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 Mon, Nov-09
 </td>
 <td style="text-align:left;">
@@ -298,6 +258,46 @@ Fri, Oct-30
 <a href="../modules/SamplingDist">Sampling Distributions</a>
 </td>
 </tr>
+<tr>
+<td style="text-align:left;">
+Mon, Nov-02
+</td>
+<td style="text-align:left;">
+<a href="../modules/Probability">Probability</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Tue, Nov-03
+</td>
+<td style="text-align:left;">
+<a href="../modules/HypTesting">Hypothesis Testing</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Wed, Nov-04
+</td>
+<td style="text-align:left;">
+<a href="../modules/HypTesting">Hypothesis Testing</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Thu, Nov-05
+</td>
+<td style="text-align:left;">
+<a href="../modules/ConfRegions">Confidence Regions</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Fri, Nov-06
+</td>
+<td style="text-align:left;">
+<a href="../modules/ConfRegions">Confidence Regions</a>
+</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -311,7 +311,7 @@ Fri, Oct-30
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
