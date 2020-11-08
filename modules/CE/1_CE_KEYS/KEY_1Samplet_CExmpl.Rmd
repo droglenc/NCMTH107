@@ -1,0 +1,124 @@
+---
+title: "Answer Key"
+subtitle: "1-Sample t Class Example"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3.5
+    fig_width: 3.5
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_1Samplet_CExmpl")
+```
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+```
+
+----
+
+## Outdoor Activities
+```{r Calc, echo=FALSE, results='hide', fig.show='hide'}
+xbar <- 6.3; sigma <- 3.2; n <- 45; se <- sigma/sqrt(n)
+mu0 <- 7; t <- round((xbar-mu0)/se,3)
+pv <- distrib(z,distrib="t",df=n-1)
+tstar <- distrib(0.95,distrib="t",df=n-1,type="q")
+ucb <- xbar+tstar*se
+```
+
+<ol start="1">
+<li>&alpha; = 0.05.</li>
+<li>H<sub>A</sub>: &mu; < `r mu0` and H<sub>0</sub>: &mu; = `r mu0`, where &mu; is the mean amount of time Northland students spend in organized outdoor activities.</li>
+</ol>
+
+<div class="alert alert-warning">
+<ul>
+  <li>The H<sub>A</sub> is "less than" because the adminstrators will make changes if the students have a mean of less than 7 hours of organized outdoor activities.</li>
+  <li>Remember to completely define the parameter.</li>
+</ul>
+</div>
+
+<ol start="3">
+  <li>A 1-sample t-test will be used because</li>
+  <ol type="i">
+    <li>one group/population is considered (Northland students),</li>
+    <li>a quantitative variable (hour spent on outdoor activities) was recorded, and</li>
+    <li>&sigma; is unknown (not asked to assume any value for &sigma;).</li>
+  </ol>
+</ol>
+
+<div class="alert alert-warning">
+<ul>
+  <li>These are the three characteristics that separate a 1-sample t-test from other tests we will see this semester.</li>
+  <li>Please include some sort of description that shows that the characteristics are met and that you are not just listing the characteristics -- in other words, include the parts in parentheses.</li>
+  <li>The &sigma; will be given in the background information NOT in the table or sentence of results from the sample. The standard deviation in the table or sentence of results is from the sample is, thus, s, not &sigma;.</li>
+</ul>
+</div>
+
+<ol start="4">
+  <li>This study is observational as the administrators did not create groups or impose a treatment on any individuals. It is explicitly stated that a random sample was taken.</li>
+</ol>
+
+<div class="alert alert-warning">
+<ul>
+  <li>The very vast majority of 1-sample tests will be observational, as experiments usually compare among treatments which requires two or more groups.</li>
+  <li>Do not say that the collection was random if it is not obviously so. Randomization was, however, explicitly stated in this example.</li>
+</ul>
+</div>
+
+<ol start="5">
+  <li>The assumptions are met because (i) &sigma; is unknown and (ii) n = 45 &ge; 40.</li>
+</ol>  
+  
+<div class="alert alert-warning">
+<ul>
+  <li>In a 1-sample t-test, the n must be greater than 40 (it is greater than 30 for the 1-sample Z-test).</li>
+  <li>If there had been less than 40 then you would need to assess the shape (strongly skewed, normal, etc.) of the histogram of sample results.</li>
+  <li>Make sure to address whether &sigma; is known or not, even though it feels redundant with Step 3.</li>
+</ul>
+</div>
+
+<ol start="6">
+  <li>x&#772; = `r xbar` hours.</li>
+  <li>t = $\frac{`r xbar` = `r mu0`}{\frac{`r sigma`}{\sqrt{`r n`}}}$ = $\frac{`r xbar-mu0`}{`r se`}$ = `r t`.</li>
+  <li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE,digits=4)` as computed with `distrib(-1.467,distrib="t",df=45-1)`.</li>
+<li>Do not reject H<sub>0</sub> because the p-value &gt; &alpha;.</li>
+<li>It appears that the mean amount of time that Northland students spent on organized outdoor activities is not less than 7 hours. Thus, these results suggest that the administrators do not need to provide more opportunities for organized outdoor activities for Northland students.</li>
+</ol>
+
+<div class="alert alert-warning">
+  <ul>
+  <li>Note how the conclusion is about the MEAN hours spent on organized outdoor activities and not the hours spent on organized outdoor activities. The test is about the summary (i.e., the MEAN) not about individuals.</li>
+  <li>Also note the use of "appears" in the summary. This language acknowledges the fact that an error (Type I or Type II) could have been made. No conclusion from a statistical hypothesis test will ever be 100% definitive.</li>
+  <li>For the sake of learning, if we had rejected the H<sub>0</sub> then we would have concluded that the "mean time spent on organized outdoor activities was less than 7 hours".
+  </ul>
+</div>
+
+<br>
+
+<div class="alert alert-info">
+<p>I performed the following steps or calculations in preparation for the next step.</p>
+  <ul>
+    <li>95% confidence (because &alpha;=0.05)</li>
+    <li>Upper confidence bound because H<sub>A</sub> was "less than."
+    <li>t<sup>*</sup>=`r formatC(tstar,format="f",digits=3)` as computed with `distrib(0.90,type="q",distrib="t",df=45-1)`.
+    <li>`r xbar` `r formatC(tstar,format="f",digits=3)`*`r formatC(se,format="f",digits=3)` (where `r formatC(se,format="f",digits=3)` is the SE computed for Step 7).
+  </ul>
+</div>
+
+<ol start="11">
+<li>I am 95% confident that the mean time spent on organized outdoor activities by all Northland students is less than `r formatC(ucb,format="f",digits=2)`. This result further indicates that the mean time spent could be 7 hours or, actually, somewhat greater than 7 hours.
+</ol>
+
+<div class="alert alert-warning">
+<ul>
+  <li>This confidence region is an upper bound, so the conclusion is that the mean is less than the calculated amount (i.e., that is the most it could be).</li>
+  <li>The second sentence acknowledges how this confidence region supports the conclusion made from the hypothesis test.</li>
+</ul>
+</div>
