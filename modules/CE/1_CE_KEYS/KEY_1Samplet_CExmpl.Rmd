@@ -108,12 +108,12 @@ ucb <- xbar+tstar*se
     <li>95% confidence (because &alpha;=0.05)</li>
     <li>Upper confidence bound because H<sub>A</sub> was "less than."
     <li>t<sup>*</sup>=`r formatC(tstar,format="f",digits=3)` as computed with `distrib(0.90,type="q",distrib="t",df=45-1)`.
-    <li>`r xbar` `r formatC(tstar,format="f",digits=3)`*`r formatC(se,format="f",digits=3)` (where `r formatC(se,format="f",digits=3)` is the SE computed for Step 7).
+    <li>`r xbar`+`r formatC(tstar,format="f",digits=3)`*`r formatC(se,format="f",digits=3)` (where `r formatC(se,format="f",digits=3)` is the SE computed for Step 7).
   </ul>
 </div>
 
 <ol start="11">
-<li>I am 95% confident that the mean time spent on organized outdoor activities by all Northland students is less than `r formatC(ucb,format="f",digits=2)`. This result further indicates that the mean time spent could be 7 hours or, actually, somewhat greater than 7 hours.
+<li>I am 95% confident that the mean time spent on organized outdoor activities by all Northland students is less than `r formatC(ucb,format="f",digits=2)` hours. This result further indicates that the mean time spent could be 7 hours or, actually, somewhat greater than 7 hours.
 </ol>
 
 <div class="alert alert-warning">
