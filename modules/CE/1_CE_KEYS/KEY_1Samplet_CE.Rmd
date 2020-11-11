@@ -20,13 +20,6 @@ modHTML_CEKeys("KEY_1Samplet_CE")
 ```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
 library(NCStats)
 source("../../../rhelpers/knitr_setup.R")
-library(captioner)
-tbls <- captioner(prefix="Table")
-figs <- captioner(prefix="Figure")
-tbls(name="pH","Results from the one-sample t-test for testing that the pH is less than 5.6.")
-tbls(name="Ozone","Results from the one-sample t-test for testing that the mean thickness of the ozone layer is different than 300 Dobson units.")
-tbls(name="FC","Results from the one-sample t-test for testing that the mean CFU per 100 ml of lake water is greater than 150 CFU per 100 ml.")
-figs(name="FChist","Histogram of the CFU per 100 ml in samples of lake water.")
 ```
 
 ----
@@ -38,10 +31,10 @@ figs(name="FChist","Histogram of the CFU per 100 ml in samples of lake water.")
 <li>Also make sure to describe your evidence in Step 5 for why the assumptions are met. It is not adequate to simply say "n&ge;40" or "n&ge;15 and the sample distribution is not strongly skewed." You should state the actual n and direct the reader to how you know the distribution is not strongly skewed (i.e., likely a histogram).</li>
 <li>In hand calculations, note that the test statistic (t in Step 7) is NOT the critical value (i.e., t<sup>*</sup>) needed for the confidence region (in Step 11). The t you calculate in Step 7 has nothing to do with the t<sup>*</sup> you will find in Step 11.</li>
 <li>When computing the t in Step 7, the numerator is always x&#772; minus the specific value in H<sub>0</sub> from Step 2.</li>
-<li>The p-value in this example is shaded to the left of the t from Step 7 and the result from `distrib()` is multiplied by 2 because the H<sub>A</sub> is a not equals. If the t had been positive you would have shaded to the right and then muliplied by 2. When the H<sub>A</sub> is a not equals you always shaded into the tail nearest t and multiply the `distrib()` result by 2.</li>
+<li>The p-value in this example is shaded to the left of the t from Step 7 and the result from `distrib()` is multiplied by 2 because the H<sub>A</sub> is a not equals. If the t had been positive you would have shaded to the right and then multiplied by 2. When the H<sub>A</sub> is a not equals you always shaded into the tail nearest t and multiply the `distrib()` result by 2.</li>
 <li>In Steps 10 and 11 don't say &mu;. Rather replace it with &mu; means. See how those steps below say "mean CFU for ALL 100 ml of water" rather than just &mu;.</li>
 <li>Also in Step 10 you can be more specific then saying that the mean CFL differs from 178. Because the x&#772; is less than what was hypothesized you can say that the mean CFL differs from 178 by being less than 178. So, even though you strictly only tested for a difference in this not equal situation, you can be more specific with your statement in Step 10.</li>
-<li>You values may differ slightly from mine as I calculate everything in R that holds many decimal places on intermediate values.</li>
+<li>Your values may differ slightly from mine as I calculate everything in R that holds many decimal places on intermediate values.</li>
 </ul>
 </div>
 
@@ -102,8 +95,8 @@ xbar <- 3292.8; s <- 4814.5; n <- 75
 <li>t=$\frac{3292.8-4104}{\frac{4814.5}{\sqrt{75}}}$=`r formatC(t,format="f",digits=3)` with `r df` df.</li>
 <li>p-value=`r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
 <li>Do not reject H<sub>0</sub> because the p-value>&alpha;.</li>
-<li>It appears that the mean number of killings for recent times is NOT significanlty lower than it was as determined from 19th century history books.</li>
-<li>One is 95% confident that the number of killings in recent years for ALL nation-states is less than $3292.8+1.666\frac{4814.5}{\sqrt{75}}$=`r formatC(ucb,format="f",digits=0)`, which further indicates that the mean number of killings is not less than 4104.</li>
+<li>It appears that the mean number of killings for recent times is NOT significantly lower than it was as determined from 19th century history books.</li>
+<li>One is 95% confident that the mean number of killings in recent years for ALL nation-states is less than $3292.8+1.666\frac{4814.5}{\sqrt{75}}$=`r formatC(ucb,format="f",digits=0)`, which further indicates that the mean number of killings is not less than 4104.</li>
 </ol>
 
 R Appendix.
