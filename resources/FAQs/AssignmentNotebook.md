@@ -10,7 +10,9 @@ subtitle: Make an Assignment Notebook
 # Getting Started
 Notebooks in RStudio are an efficient way to enter R code, show results of R code, write answers to assignment questions, and compile all of that to a PDF that can be handed in.
 
-For class assignments, start by copying the following lines exactly to RStudio.downloading (right-click on) [this template](https://raw.githubusercontent.com/droglenc/NCMTH107/gh-pages/resources/FAQs/R%20Assignment%20Template.Rmd) and opening it in RStudio. Then immediately save the template file with a different name (e.g., "Assignment1" ... make sure that the name does not have a "dot" in it). Then edit the Title in line 2 to something that represents the assignment (e.g., "Linear Regression in R") and the Author in line 3 to your name. Do not change anything else in the first 20 lines.
+For class assignments, start by downloading (right-click on) [this template](https://raw.githubusercontent.com/droglenc/NCMTH107/gh-pages/resources/FAQs/R%20Assignment%20Template.Rmd) to a folder where you plant to store all of your class-related work. Then open the template in RStudio and change the Author in line 3 to your name. Save the template with this change. Every time you start an assignment you should open this template file and follow the directions below.
+
+Open your template file in RStudio and immediately save it (File .. Save As) with a different name (e.g., "Assignment1" ... make sure that the name does not have a "dot" in it). Then edit the Title in line 2 to something that represents the assignment (e.g., "Linear Regression in R"). Do not change anything else in the first 21 lines.
 
 ![Notebook Top](Figs/Notebook_TopLines.JPG)
 
@@ -18,7 +20,13 @@ For class assignments, start by copying the following lines exactly to RStudio.d
 
 # Including Text in the Notebook
 ## Creating Sections
-Most assignments will have several questions, each of which is identified with a section heading. Your answers to the assignments should be shown under section headings with the same name as on the assignment. Section headings can be created in the notebook by preceding the section heading name with a hashtag. For example, the line below would create a section heading called "Arctic Penguins".
+Most assignments will have several questions, each of which is identified with a section heading. Your answers to the assignments should be shown under section headings with the same name as on the assignment. Section headings are created by preceding the section heading name with a hashtag. The template has several section headings started that look like this
+
+```
+# EDIT THIS WITH FIRST SECTION HEADING TEXT
+```
+
+You should change this text to create the section heading that you want; e.g., 
 
 ```
 # Arctic Penguins
@@ -28,7 +36,7 @@ Most assignments will have several questions, each of which is identified with a
 Sentences can be included by simply typing the text at the beginning of any line. A new paragraph is created by pressing return twice so that there is a blank line between paragraphs.
 
 ## Numbered Lists for Your Answers
-A numbered item list is created by starting a line with "1." followed by what you want after the number (e.g., your answer). If there are no blank lines between consecutive "1." items then RStudio will automatically iterate the numbering when the document is compiled. For example, typing this will produce the result further below ...
+A numbered item list is created by starting a line with "1." followed by what you want after the number (e.g., your answer). If there are no blank lines between consecutive "1." items then RStudio will automatically iterate the number when the document is compiled. For example, typing this will produce the result further below ...
 
 ![Notebook Numbered List](Figs/Notebook_NumberedList.JPG)
 
@@ -55,13 +63,33 @@ In RStudio, each code chunk will have three "icons" in the upper-right portion o
 
 If the code in this chunk depends on code in previous chunks being run then press the middle icon (gray down arrow pointing to a green horizontal line) to run all code in chunks above the current chunk. If the code in previous chunks had already been run then this is unnecessary.
 
+<br>
+
+# Compiling to MSWord
+Once you are comfortable that your R code runs without error and that you have answered all questions for the assignment, then you should compile your Notebook to a MSWord document. In MSWord you can then save the document to a PDF for handing in via GradeScope.
+
+To compile the Notebook to MSWord, select the small arrow on the icon that either says "Preview" or "Knit" and select "Knit to Word". If you get an error related to the name of your Notebook file, then simply select "Knit to Word" a second time. If the document does not produce an MSWord document (this make take several seconds) then there may be an error in your R code.
+
+![Notebook Knit to Word](Figs/Notebook_KnitWord.JPG)
+
+<br>
+<br>
+
+# Tips and Tricks
+## Data Files
+Many of the assignments will require you to load a data file for analysis. The data file to be loaded SHOULD be **saved in the same directory as your Notebook file.**
+
+## Vertical Spacing
+If you would like to add some vertical spacing between parts of your notebook (e.g., between sections, between code and paragraphs, etc.) then add a "br" between less than and greater than signs (see below) with a blank line both above and below it where you want the vertical spacing. For example,
+
+![Use of br](Figs/Notebook_UseOfBR.JPG)
+
+## Code Chunk Custom Settings
 Code chunks can have a variety of settings. The most important settings can be controlled through the left-most "gear" icon. My most common change here is to change the figure width to be smaller (to 4 inches wide) and, if you want the plot to be square, to change the figure height to the same value. I may also "turn off" the warnings and messages, but I never do this immediately as I would like to see those first before deciding that I should "hide" them. Below shows the gear box for changing the figure width and how the code chunk and result is changed.
 
 ![Notebook Code Chunk Run](Figs/Notebook_Code2Run.JPG)
 
-<br>
-
-# Previewing Document
+## Document Preview
 The results of code chunks can be run as described above. However, an HTML version of the entire document can be viewed within RStudio. This is particularly useful as you are building your complete document. Compiling a completed document to MSWord (and then ultimately a PDF) is described in the next section.
 
 Before previewing, I select the "gear" icon in the script window toolbar and change "Preview in Window" to "Preview in Viewer Pane."
@@ -75,23 +103,3 @@ I then select the small arrow on the icon to the left of the gear icon that will
 RStudio will then run your script and, if there are no errors, show a preview of the document in the lower-right pane (which may expand to be just the right pane).
 
 ![Notebook Preview](Figs/Notebook_Preview.JPG)
-
-<br>
-
-# Compiling to MSWord
-Once you are comfortable that your R code runs without error and that you have answered all questions for the assignment, then you should compile your Notebook to a MSWord documet. In MSWord you can then save the document to a PDF for handing in via GradeScope.
-
-To compile the Notebook to MSWord, select the small arrow on the icon that either says "Preview" or "Knit" and select "Knit to Word". If you get an error related to the name of your Notebook file, then simply select "Knit to Word" a second time. If the document does not produce an MSWord document (this make take several seconds) then there may be an error in your R code.
-
-![Notebook Knit to Word](Figs/Notebook_KnitWord.JPG)
-
-<br>
-
-# Tips and Tricks
-## Data Files
-Many of the assignments will require you to load a data file for analysis. The data file to be loaded SHOULD be **saved in the same directory as your Notebook file.**
-
-## Vertical Spacing
-If you would like to add some vertical spacing between parts of your notebook (e.g., between sections, between code and paragraphs, etc.) then add a "br" between less than and greater than signs (see below) with a blank line both above and below it where you want the vertical spacing. For example,
-
-![Use of br](Figs/Notebook_UseOfBR.JPG)
