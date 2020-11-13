@@ -15,7 +15,7 @@ Show your R work (both your input and your output) for each question below. You 
 <br>
 
 ## Load Data From Webpage
-Open your script from the [Getting Data into R class example](RData_CExmpl) where you loaded the **Fire.csv** into an R data frame called `firedf` (and examine its structure).
+Load **Fire.csv** into an R data frame called `firedf` (and examine its structure). [*Note: You did this in the [Getting Data into R class example](RData_CExmpl) ... just copy your code from that script.*]
 
 &nbsp;
 
