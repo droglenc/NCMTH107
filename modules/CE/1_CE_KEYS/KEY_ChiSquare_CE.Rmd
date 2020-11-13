@@ -72,7 +72,7 @@ round(hurr.chi$expected,1)
 `r tbls("hurr2")`
 
 ```{r echo=FALSE,background="white"}
-hurr.chi$observed
+addmargins(hurr.chi$observed)
 ```
 
   <li>The &chi;<sup>2</sup> test statistic is  $\frac{(51-51.4)^{2}}{51.4}$ + $\frac{(26-25.4)^{2}}{25.4}$ +$\frac{(8-8.1)^{2}}{8.1}$ +$\frac{(44-43.6)^{2}}{43.6}$ +$\frac{(21-21.6)^{2}}{21.6}$ +$\frac{(7-6.9)^{2}}{6.9}$ = 0.0036+0.0121+0.0018+0.0043+0.0142+0.0021 = `r formatC(hurr.chi$statistic,format="f",digits=4)` with `r formatC(hurr.chi$parameter,format="f",digits=0)` df.</li>
@@ -106,7 +106,7 @@ colnames(obs) <- c("Responded","Did Not Respond")
 ```
 
 <ol>
-<li>&alpha; = 0.10.</li>
+<li>&alpha; = 0.05.</li>
 <li>The H<sub>0</sub>: "The distribution of groups into whether they responded or not to the 'Hello' is the same for all three group sizes" versus H<sub>0</sub>: "The distribution of groups into whether they responded or not to the 'Hello' is NOT the same for all three group sizes."</li>
 <li>A chi-square test is required because (i)a categorical variable with two levels (response or not) was measured on (ii) three groups/populations (group sizes).</li>
 <li>The data appear to be part of an observational study where the ``groups" were not randomly selected.</li>
@@ -115,7 +115,7 @@ colnames(obs) <- c("Responded","Did Not Respond")
 `r tbls("HelloExp")`
 
 ```{r HelloExp, echo=FALSE, background='white', comment=""}
-chi1$expected
+round(chi1$expected,1)
 ```
 
 <li>The observed frequency table is in `r tbls("HelloObs",display="cite")`.</li>
@@ -123,11 +123,11 @@ chi1$expected
 `r tbls("HelloObs")`
 
 ```{r HelloObs, echo=FALSE, background='white', comment=""}
-chi1$observed
+addmargins(chi1$observed)
 ```
 
-<li>The &chi;<sup>2</sup> test statistic is $\frac{(92-84.29167)^{2}}{84.29167}$ + $\frac{(27-34.70833)^{2}}{34.70833}$ +$\frac{(65-66.58333)^{2}}{66.58333}$ +$\frac{(29-27.41667)^{2}}{27.41667}$ +$\frac{(13-19.125)^{2}}{19.125}$ +$\frac{(14-7.875)^{2}}{7.875}$ = 0.705+ 0.038+ 1.962+ 1.712+ 0.091+ 4.764= 9.271 with (3-1)(2-1)=2 df.</li>
-<li>The p-value is `r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)`.</li>
+<li>The &chi;<sup>2</sup> test statistic is $\frac{(92-84.3)^{2}}{84.3}$ + $\frac{(27-34.7)^{2}}{34.7}$ +$\frac{(65-66.6)^{2}}{66.6}$ +$\frac{(29-27.4)^{2}}{27.4}$ +$\frac{(13-19.1)^{2}}{19.1}$ +$\frac{(14-7.9)^{2}}{7.9}$ = 0.703+ 1.709+ 0.038+ 0.093+ 1.948+ 4.710= 9.201 with (3-1)(2-1)=2 df.</li>
+<li>The p-value is `r kPvalue(distrib(9.201,distrib="chisq",df=2,lower.tail=FALSE),include.p=FALSE,latex=FALSE)`.</li>
 <li>The H<sub>0</sub> is rejected because the p-value < &alpha;.</li>
 <li>There is a difference in the responsiveness among the three sizes of groups. It appears that the groups with 4,5,6 individuals responded less frequently than the individuals and groups of 2 and 3 (`r tbls("HelloPerc",display="cite")`).</li>
 
@@ -143,4 +143,4 @@ percTable(chi1$observed,margin=1)
 R Appendix.
 ```{r eval=FALSE,prompt=FALSE}
 library(NCStats)
-distrib(9.271,distrib="chisq",df=2,lower.tail=FALSE)
+distrib(9.201,distrib="chisq",df=2,lower.tail=FALSE)
