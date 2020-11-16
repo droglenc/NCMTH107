@@ -9,13 +9,13 @@ output:
     self_contained: false
 ---
 
-```{r echo=FALSE, eval=FALSE}
+```{r echo=FALSE, eval=FALSE, warning=FALSE}
 ## Renders an appropriate HTML file and moves to CE directory
 source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
 modHTML_CEKeys("KEY_GOFTest_CE")
 ```
 
-```{r echo=FALSE, results='hide', message=FALSE}
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
 library(NCStats)
 source("../../../rhelpers/knitr_setup.R")
 library(captioner)
@@ -99,7 +99,7 @@ gofCI(t.chi,digits=3)
 `r tbls("TurkeyExpTable")`
 
 ```{r echo=FALSE}
-t.chi$expected
+round(t.chi$expected,1)
 ```
 
 <li>The observed frequency table is shown in `r tbls("TurkeyObsTable",display="cite")`.</li>
@@ -110,7 +110,7 @@ t.chi$expected
 t.chi$observed
 ```
 
-<li>&chi;<sup>2</sup>=$\frac{(61-45.291213)^{2}}{45.291213}$ + $\frac{(9-89.178047)^{2}}{89.178047}$ +$\frac{(807-734.753374)^{2}}{734.753374}$ +$\frac{(1-8.777367)^{2}}{8.777367}$=`r formatC(t.chi$statistic,format="f",digits=4)` with `r t.chi$parameter` df (`r tbls("TurkeyResults",display="cite")`).</li>
+<li>&chi;<sup>2</sup>=$\frac{(61-45.3)^{2}}{45.3}$ + $\frac{(9-89.2)^{2}}{89.2}$ +$\frac{(807-734.8)^{2}}{734.8}$ +$\frac{(1-8.8)^{2}}{8.8}$=`r formatC(t.chi$statistic,format="f",digits=3)` with `r t.chi$parameter` df (`r tbls("TurkeyResults",display="cite")`).</li>
 <li>p-value`r kPvalue(t.chi$p.value,include.p=FALSE,latex=FALSE)` (somewhat more specifically `r formatC(t.chi$p.value,digits=3)`).</li>
 <li>Reject H<sub>0</sub> because the p-value&lt;&alpha;.</li>
 <li>It appears that the turkeys show a habitat preference in the spring. Further analysis suggests that the turkeys showed a strong avoidance of meadows, a moderate avoidance of Oak/Spruce habitats, and a moderate preference for aspen and pine habitats.</li>
@@ -120,8 +120,14 @@ t.chi$observed
 R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
 library(NCStats)
-distrib(91.5299,distrib="chisq",df=3,lower.tail=FALSE)
+distrib(91.530,distrib="chisq",df=3,lower.tail=FALSE)
 ```
+
+<br>
+
+<br>
+
+<br>
 
 ----
 
