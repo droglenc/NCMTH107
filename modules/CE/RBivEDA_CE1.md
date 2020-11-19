@@ -45,6 +45,7 @@ An Associated Press article captured the attention of readers with the headline 
 
 <br>
 
+<!----
 ## Forest Composition
 <img src="zimgs/forestcomp.jpg" alt="Forest Composition" class="img-right">
 [Hely *et al.* (2000)](http://onlinelibrary.wiley.com/doi/10.2307/3236551/abstract) examined the effects of stand composition on fire hazard in mixed-wood Canadian boreal forests. Two variables recorded for each stand were stand type (`sttype`, where `d`=deciduous, `c`=coniferous, `mc`=mixed coniferous, and `md`=mixed deciduous) and time since the last fire (`tslf`), which was treated as a categorical variable with the categories corresponding to 100 year blocks of time (i.e., `0-100`, `100-200`, etc.). These data may be found in Fire.csv ([data](https://github.com/droglenc/NCData/raw/master/Fire.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/Fire_meta.txt)). Load these data into R and **refactor** `sttype` so that the categories are arranged from coniferous (`c`) to mixed coniferous (`mc`) to mixed deciduous (`md`) to deciduous (`d`; refer to [this FAQ](../../resources/FAQs/reorder-levels.html)). Use these data to answer the questins below **from results (frequency or percentage tables) in R (i.e., do not use your calculator or R as a calculator)**.
@@ -59,6 +60,7 @@ An Associated Press article captured the attention of readers with the headline 
 1. Comment on the distribution of times since last fire among the four levels of stand type.
 
 <br>
+--->
 
 ## Red-Imported Fire Ants and Deer
 <img src="zimgs/RIFA.jpg" alt="RIFA" class="img-right">
