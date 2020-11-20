@@ -27,10 +27,10 @@ Load these data into R to answer the questions below.  [*Note that these are the
 1. In terms of the variables of this problem, what is the equation of the best-fit line?
 1. In terms of the variables of this problem, INTERPRET the value of the slope?
 1. In terms of the variables of this problem, INTERPRET the value of the y-intercept?
-1. What is the predicted IBI for an impervious surface percentage of 80%?
-1. What is the predicted IBI for an impervious surface percentage of 20%?
-1. What is the residual if the impervious surface percentage is 30% and the IBI is 20?
-1. How much will the IBI change if the percentage of impervious surface is decreased by 30%?
+1. What is the predicted IBI for an impervious surface percentage of 30%?
+1. What is the predicted IBI for an impervious surface percentage of 70%?
+1. What is the residual if the impervious surface percentage is 10% and the IBI is 30?
+1. How much will the IBI change if the percentage of impervious surface is decreased by 25%?
 1. What is the correlation coefficient between IBI and the percentage of impervious surface?
 1. What proportion of the variability in IBI is explained by knowing the percentage of impervious surface?
 1. What aspect of this regression analysis concerns you (i.e., consider the regression assumptions)?
@@ -46,7 +46,7 @@ In a study of the legibility and visibility of highway signs, a Pennsylvania res
 1. In terms of the variables of this problem, what is the equation of the best-fit line?
 1. In terms of the variables of this problem, interpret the value of the slope.
 1. In terms of the variables of this problem, interpret the value of the intercept.
-1. What is the predicted maximum distance to see the sign for a 40-year-old driver?
+1. What is the predicted maximum distance to see the sign for a 30-year-old driver?
 1. What is the predicted maximum distance to see the sign for a 90-year-old driver
 1. What is the residual if the age of the driver is 50 and the maximum distance is 410 ft?
 1. What is the correlation coefficient between age and maximum distance to see the sign?
