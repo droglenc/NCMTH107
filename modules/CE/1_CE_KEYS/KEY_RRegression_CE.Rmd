@@ -37,16 +37,16 @@ rSquared(lm1)
 cfs <- coef(lm1)
 ```
 
-1. The equation of the best-fit line is IBI=`r formatC(cfs[1],format="f",digits=4)`-`r formatC(-cfs[2],format="f",digits=4)`*imp.
-1. If the percent of impervious surface increases by 1%, then the IBI score decreases by `r formatC(-cfs[2],format="f",digits=2)`, on average.
-1. If the percent of impervious surface is 0, then the IBI score is `r formatC(cfs[1],format="f",digits=1)`, on average.
-1. The IBI score is predicted to be `r formatC(predict(lm1,data.frame(imp=30)),format="f",digits=1)` when the percent of impervious surface is 30%.
-1. This question is an extrapolation and should not be answered (see plot below).
-1. The residual for an observed IBI score of 30 and a percent of impervious surface of 10% is 30-`r formatC(predict(lm1,data.frame(imp=10)),format="f",digits=1)`=`r formatC(20-predict(lm1,data.frame(imp=10)),format="f",digits=1)`.
-1. The IBI will change by -25 slopes or `r formatC(-25*cfs[2],format="f",digits=4)` if the percentage of impervious surface is decreased by 20%. In other words the IBI will increase by `r formatC(-25*cfs[2],format="f",digits=4)` units.
-1. The correlation coefficient between IBI score and percent of impervious surface is `r formatC(-sqrt(rSquared(lm1)),format="f",digits=2)`.
-1. The proportion of variability in IBI scores that is explained by knowing the percent of impervious surface is `r formatC(rSquared(lm1),format="f",digits=2)`.
-1. There appears to be homoscedasticity, but there is slight evidence of a curve suggesting that the relationship is nonlinear (see plot below).
+1. The equation of the best-fit line is **IBI=`r formatC(cfs[1],format="f",digits=4)`-`r formatC(-cfs[2],format="f",digits=4)`$\times$imp**.
+1. If the percent of impervious surface increases by 1%, then the IBI score decreases by **`r formatC(-cfs[2],format="f",digits=2)`**, on average.
+1. If the percent of impervious surface is 0, then the IBI score is **`r formatC(cfs[1],format="f",digits=1)`**, on average.
+1. The IBI score is predicted to be **`r formatC(predict(lm1,data.frame(imp=30)),format="f",digits=1)`** when the percent of impervious surface is 30%.
+1. This question is an **extrapolation** and should not be answered (see plot below).
+1. The residual for an observed IBI score of 30 and a percent of impervious surface of 10% is 30-`r formatC(predict(lm1,data.frame(imp=10)),format="f",digits=1)`=**`r formatC(30-predict(lm1,data.frame(imp=10)),format="f",digits=1)`**.
+1. The IBI will change by -25 slopes or **`r formatC(-25*cfs[2],format="f",digits=1)`** if the percentage of impervious surface is decreased by 20%. In other words the IBI will increase by `r formatC(-25*cfs[2],format="f",digits=1)` units.
+1. The correlation coefficient between IBI score and percent of impervious surface is **`r formatC(-sqrt(rSquared(lm1)),format="f",digits=3)`**.
+1. The proportion of variability in IBI scores that is explained by knowing the percent of impervious surface is **`r formatC(rSquared(lm1),format="f",digits=3)`**.
+1. There appears to be homoscedasticity, but there is slight evidence of a curve suggesting that the relationship is **nonlinear** (see plot below).
 
 #### R Code and Results
 ```{r eval=FALSE}
@@ -74,18 +74,18 @@ d <- read.csv("https://github.com/droglenc/NCData/raw/master/vision.csv")
 rSquared(lm1)
 ```
 
-1. The response variable is maximum distance to see the sign. [*Note that distance to see the sign depends on age and distance to see the sign is what is predicted or explained in the ensuing questions.*]
-1. The explanatory variable is age.
-1. The best-fit line is distance=`r formatC(coef(lm1)[2],format="f",digits=2)`*age+`r formatC(coef(lm1)[1],format="f",digits=1)`.
-1. The slope indicates that for every increase of one year in age the maximum distance to see the sign will decrease by `r formatC(-1*coef(lm1)[2],format="f",digits=2)` ft, on average.
-1. The intercept indicates that if the age of the driver was zero, then the maximum distance to see the sign would be `r formatC(coef(lm1)[1],format="f",digits=1)` ft, on average.
-1. The predicted maximum distance to see the sign for a 30-year-old driver is `r formatC(predict(lm1,data.frame(age=30)),format="f",digits=1)` ft.
-1. This prediction should not be made as an age of 90 is outside the observed results for this variable (see plot below) and is, thus, an extrapolation.
-1. The residual for an individual that is 50-years-old and had a maximum distance to see the sign of 410 ft is 410-`r formatC(predict(lm1,data.frame(age=50)),format="f",digits=1)`=`r formatC(410-predict(lm1,data.frame(age=50)),format="f",digits=1)` ft. Thus, this individual would have a shorter maximum distance to see the sign than an average 50-year-old.
-1. The correlation coefficient between age of the driver and maximum distance to see the sign is `r formatC(corr(~age+distance,data=d),format="f",digits=2)`.
-1. The proportion of variability in maximum distance to see the sign that is explained by knowing the age of the driver is `r formatC(rSquared(lm1),format="f",digits=2)`.
-1. If the age of the driver increased by ten years then the predicted maximum distance to see the sign would decrease by ten slopes or `r formatC(-10*coef(lm1)[2],format="f",digits=2)` ft.
-1. I don't have any strong concerns, though the data look very slightly nonlinear and very slightly heteroscedastic (see plot below).
+1. The response variable is **maximum distance** to see the sign. [*Note that distance to see the sign depends on age and distance to see the sign is what is predicted or explained in the ensuing questions.*]
+1. The explanatory variable is **age**.
+1. The best-fit line is **distance=`r formatC(coef(lm1)[2],format="f",digits=2)`$\times$age+`r formatC(coef(lm1)[1],format="f",digits=1)`**.
+1. The slope indicates that for every increase of one year in age the maximum distance to see the sign will decrease by **`r formatC(-1*coef(lm1)[2],format="f",digits=2)` ft**, on average.
+1. The intercept indicates that if the age of the driver was zero, then the maximum distance to see the sign would be **`r formatC(coef(lm1)[1],format="f",digits=1)` ft**, on average.
+1. The predicted maximum distance to see the sign for a 30-year-old driver is **`r formatC(predict(lm1,data.frame(age=30)),format="f",digits=1)` ft**.
+1. This prediction should not be made as an age of 90 is outside the observed results for this variable (see plot below) and is, thus, an **extrapolation**.
+1. The residual for an individual that is 50-years-old and had a maximum distance to see the sign of 410 ft is 410-`r formatC(predict(lm1,data.frame(age=50)),format="f",digits=1)`=**`r formatC(410-predict(lm1,data.frame(age=50)),format="f",digits=1)` ft**. Thus, this individual would have a shorter maximum distance to see the sign than an average 50-year-old.
+1. The correlation coefficient between age of the driver and maximum distance to see the sign is **`r formatC(corr(~age+distance,data=d),format="f",digits=2)`**.
+1. The proportion of variability in maximum distance to see the sign that is explained by knowing the age of the driver is **`r formatC(rSquared(lm1),format="f",digits=2)`**.
+1. If the age of the driver increased by ten years then the predicted maximum distance to see the sign would decrease by ten slopes or **`r formatC(-10*coef(lm1)[2],format="f",digits=2)` ft**.
+1. I **don't have any strong concerns**, though the data look very slightly nonlinear and very slightly heteroscedastic (see plot below).
 
 
 #### R Code and Results
