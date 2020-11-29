@@ -61,15 +61,13 @@ Use the resources below to answer [these questions](Prep/UnivSum). [[*Problems w
 
 &nbsp;
 
-<!---
-
 ----
 
 ## Archived Materials
 
-* [In-Class "Review Lecture"]() [XX mins]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
 
+<!----
 * [Old Lecture Slides - Quantitative](PPT/UEDAQuant_PPT_old.pptx)
 * [Old Lecture Slides - Categorical](PPT/UEDACat_PPT_old.pptx)
-
 --->

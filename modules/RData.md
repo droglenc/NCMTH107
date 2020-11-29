@@ -46,13 +46,14 @@ Use the resources below to answer [these questions](Prep/RData). [[*Problems wit
 * [Assignment](CE/RData_CE1) ... [ANSWER KEY](CE/KEY_RData_CE)
 * [Additional Exercises](CE/RData_CE2)
 
-<!---
 &nbsp;
 
 ----
 
 ## Archived Materials
 
-* [![Vimeo](../img/dhovid.png) Load CSV File into RStudio](https://vimeo.com/user45324800/ncstats-loadcsvrstudio){:target="_blank"} [6 mins]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
 
+<!----
+* [![Vimeo](../img/dhovid.png) Load CSV File into RStudio](https://vimeo.com/user45324800/ncstats-loadcsvrstudio){:target="_blank"} [6 mins]
 --->

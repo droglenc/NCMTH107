@@ -54,14 +54,15 @@ Use the resources below to answer [these questions](Prep/SamplingDist). [[*Probl
 * [Assignment](CE/SamplingDist_CE1) [has three parts] ... [ANSWER KEY](CE/KEY_SamplingDist_CE)
 * [Additional Exercises](CE/SamplingDist_CE4)
 
-<!---
 &nbsp;
 
 ----
 
 ## Archived Materials
 
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
+
+<!----
 * [Review Exercises](RE/SamplingDist_RevEx)
 * [Old Lecture Slides](PPT/SamplingDist_PPT_old.pptx)
-
 --->

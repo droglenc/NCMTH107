@@ -26,3 +26,11 @@ The following items will be completed in class.
 * Orient to Piazza discussion site (see [quick link on class homepage](../){:target="_blank"})
 * Take "Getting Organized -- Prep Check" on Gradescope (see [quick link on class homepage](../){:target="_blank"}) [*Note: all answers from Webpage Scavenger Hunt*]
 * Submit [first module assignment](CE/GetOrganized_CE1) on GradeScope
+
+&nbsp;
+
+----
+
+## Archived Materials
+
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins]

@@ -48,14 +48,15 @@ Use the resources below to answer [these questions](Prep/RUnivEDA). [[*Problems 
 * [Assignment](CE/RUnivEDA_CE1) ... [ANSWER KEY](CE/KEY_RUnivEDA_CE)
 * [Additional Exercises](CE/RUnivEDA_CE2)
 
-<!---
 &nbsp;
 
 ----
 
 ## Archived Materials
 
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
+
+<!----
 * [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative) in R](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins]
 * [![Vimeo](../img/dhovid.png) Univariate EDA (Categorical) in R](https://vimeo.com/user45324800/ncstats-uedac){:target="_blank"} [4 mins]
-
 --->

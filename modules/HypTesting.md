@@ -56,13 +56,15 @@ Use the resources below to answer [these questions](Prep/HypTesting). [[*Problem
 * [Assignment II](CE/HypTesting_CE2) ... [ANSWER KEY](CE/KEY_HypTesting_CE2)
 * [Additional Exercises](CE/HypTesting_CE2)
 
-<!---
 &nbsp;
 
 ----
 
 ## Archived Materials
 
-* [Old Lecture Slides](PPT/HypTesting_PPT_old.pptx)
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 1]() [XX mins] ... [*projection is the class lecture 1 above*]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 2]() [XX mins] ... [*projection is the class lecture 2 above*]
 
+<!----
+* [Old Lecture Slides](PPT/HypTesting_PPT_old.pptx)
 --->

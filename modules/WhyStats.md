@@ -57,8 +57,8 @@ Use the resources below to answer [these questions](Prep/WhyStats){:target="_bla
 
 ## Archived Materials
 
-* [In-Class "Review Lecture"]() [XX mins]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
 
-<!---
+<!----
 * [Class Lecture Slides](PPT/WhyStats_PPT.pptx)
 --->

@@ -44,16 +44,17 @@ Use the resources below to answer [these questions](Prep/RChi). [[*Problems with
 * [Assignment](CE/RChi_CE1) ... [ANSWER KEY](CE/KEY_RChi_CE)
 * [Additional Exercises](CE/RChi_CE2))
 
-<!---
 &nbsp;
 
 ----
 
 ## Archived Materials
 
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
+
+<!----
 * [Old Lecture Slides](PPT/ChiSquare_PPT_old.pptx)
 * [![Vimeo](../img/dhovid.png) Chi-Square Test (with Raw Data) in R](https://vimeo.com/user45324800/chisqraw-ex1){:target="_blank"} [11 mins]
 * [![Vimeo](../img/dhovid.png) Chi-Square Test (with Summarized Data) in R](https://vimeo.com/user45324800/chisqsmrzd-ex1){:target="_blank"} [8 mins]
 * [![Vimeo](../img/dhovid.png) Goodness-of-Fit Tests in R](https://vimeo.com/user45324800/rgoftest){:target="_blank"} [6 mins] 
-
 --->

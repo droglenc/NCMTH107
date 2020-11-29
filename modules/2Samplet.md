@@ -44,13 +44,14 @@ Use the resources below to answer [these questions](Prep/2Samplet). [[*Problems 
 * [Assignment](CE/2Samplet_CE1) ... [ANSWER KEY](CE/KEY_2Samplet_CE)
 * [Additional Exercises](CE/2Samplet_CE2)
 
-<!---
 &nbsp;
 
 ----
 
 ## Archived Materials
 
-* [Old Lecture Slides](PPT/2Samplet_PPT_old.pptx)
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
 
+<!----
+* [Old Lecture Slides](PPT/2Samplet_PPT_old.pptx)
 --->

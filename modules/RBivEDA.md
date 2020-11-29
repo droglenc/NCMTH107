@@ -44,14 +44,15 @@ Use the resources below to answer [these questions](Prep/RBivEDA). [[*Problems w
 * [Assignment](CE/RBivEDA_CE1) ... [ANSWER KEY](CE/KEY_RBivEDA_CE)
 * [Additional Exercises](CE/RBivEDA_CE2)
 
-<!---
 &nbsp;
 
 ----
 
-## Archive
+## Archived Materials
 
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
+
+<!----
 * [![Vimeo](../img/dhovid.png) Bivariate EDA (Quantitative) in R](https://vimeo.com/user45324800/biveda-quant){:target="_blank"} [8 mins]
 * [![Vimeo](../img/dhovid.png) Bivariate EDA (Categorical) in R](https://vimeo.com/user45324800/biveda-cat){:target="_blank"} [8 mins]
-
 --->

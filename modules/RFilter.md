@@ -41,13 +41,14 @@ Use the resources below to answer [these questions](Prep/RFilter). [[*Problems w
 * [Assignment](CE/RFilter_CE1) ... [ANSWER KEY](CE/KEY_RFilter_CE)
 * [Additional Exercises](CE/RFilter_CE2)
 
-<!---
 &nbsp;
 
 ----
 
 ## Archived Materials
 
-* [![Vimeo](../img/dhovid.png) Subset data.frame with filterD](https://vimeo.com/user45324800/filterd){:target="_blank"} [6 mins]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
 
+<!----
+* [![Vimeo](../img/dhovid.png) Subset data.frame with filterD](https://vimeo.com/user45324800/filterd){:target="_blank"} [6 mins]
 --->

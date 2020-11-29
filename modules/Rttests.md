@@ -43,14 +43,15 @@ Use the resources below to answer [these questions](Prep/Rttests). [[*Problems w
 * [Assignment](CE/Rttests_CE1) ... [ANSWER KEY](CE/KEY_Rttests_CE)
 * [Additional Exercises](CE/Rttests_CE2)
 
-<!---
 &nbsp;
 
 ----
 
 ## Archived Materials
 
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
+
+<!----
 * [![Vimeo](../img/dhovid.png) 1-Sample t-Test in R](https://vimeo.com/user45324800/1samplettest){:target="_blank"} [5 mins]
 * [![Vimeo](../img/dhovid.png) 2-Sample t-Test in R](https://vimeo.com/user45324800/1samplettest){:target="_blank"} [5 mins]
-
 --->

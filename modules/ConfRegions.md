@@ -54,13 +54,15 @@ Use the resources below to answer [these questions](Prep/ConfRegions). [[*Proble
 * [Additional Exercises](CE/ConfRegions_CE3)
 * [Even More Exercises](CE/ConfRegions_CE4)
 
-<!---
 &nbsp;
 
 ----
 
 ## Archived Materials
 
-* [Old Lecture Slides](PPT/ConfRegions_PPT_old.pptx)
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 1]() [XX mins]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 2]() [XX mins]
 
+<!----
+* [Old Lecture Slides](PPT/ConfRegions_PPT_old.pptx)
 --->

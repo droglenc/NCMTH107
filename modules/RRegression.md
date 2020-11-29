@@ -45,13 +45,14 @@ Use the resources below to answer [these questions](Prep/RRegression). [[*Proble
 * [Assignment](CE/RRegression_CE1) ... [ANSWER KEY](CE/KEY_RRegression_CE)
 * [Additional Exercises](CE/RRegression_CE2)
 
-<!---
 &nbsp;
 
 ----
 
 ## Archived Materials
 
-* [![Vimeo](../img/dhovid.png) Linear Regression in R](https://vimeo.com/user45324800/regression1){:target="_blank"} [8 mins]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
 
+<!----
+* [![Vimeo](../img/dhovid.png) Linear Regression in R](https://vimeo.com/user45324800/regression1){:target="_blank"} [8 mins]
 --->

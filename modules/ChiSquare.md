@@ -46,13 +46,14 @@ Use the resources below to answer [these questions](Prep/ChiSquare). [[*Problems
 * [Assignment](CE/ChiSquare_CE1) ... [ANSWER KEY](CE/KEY_ChiSquare_CE)
 * [Additional Exercises](CE/ChiSquare_CE2)
 
-<!---
 &nbsp;
 
 ----
 
 ## Archived Materials
 
-* [Old Lecture Slides](PPT/ChiSquare_PPT_old.pptx)
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
 
+<!----
+* [Old Lecture Slides](PPT/ChiSquare_PPT_old.pptx)
 --->
