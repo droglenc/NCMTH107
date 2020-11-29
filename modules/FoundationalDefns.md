@@ -57,7 +57,7 @@ Use the resources below to answer [these questions](Prep/FoundationalDefns). [[*
 
 ## Archived Materials
 
-* [In-Class "Review Lecture"]() [XX mins]
+* [Fall 2020B In-Class "Review Lecture"](https://youtu.be/_VTmDXWfrW4) [29 mins]
 
 <!---
 * [Old Lecture Slides](PPT/FoundationalDefns_PPT_old.pptx)
