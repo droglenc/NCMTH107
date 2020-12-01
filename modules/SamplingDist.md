@@ -60,7 +60,7 @@ Use the resources below to answer [these questions](Prep/SamplingDist). [[*Probl
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/uJBvABzm4IA) [86 mins] ... [*projection is the class example above*]
 
 <!----
 * [Review Exercises](RE/SamplingDist_RevEx)

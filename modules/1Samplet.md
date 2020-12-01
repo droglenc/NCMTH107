@@ -52,7 +52,7 @@ Use the resources below to answer [these questions](Prep/1Samplet). [[*Problems 
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/f1NMb9xmeRE) [53 mins] ... [*projection is the class example above*]
 
 <!----
 * [Old Lecture Slides](PPT/1Samplet_PPT_old.pptx)

@@ -65,8 +65,8 @@ Use the resources below to answer [these questions](Prep/NormalDist). [[*Problem
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 1]() [XX mins] ... [*projection is the class example I above*]
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 2]() [XX mins] ... [*projection is the class example II above*]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 1](https://youtu.be/eDNnRqMEZyM) [37 mins] ... [*projection is the class example I above*]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 2](https://youtu.be/7hqEEZjaya8) [29 mins] ... [*projection is the class example II above*]
 
 <!---
 * Review Exercises: [Simple Areas](RE/NormalDist_RevEx)

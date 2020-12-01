@@ -52,7 +52,8 @@ Use the resources below to answer [these questions](Prep/1SampleZ). [[*Problems 
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/G6LxDP1KOjk) [46 mins] ... [*projection is the class example above*]
+* [![YouTube](../img/youtube.png) Fall 2020A In-Class "Review Lecture"](https://youtu.be/1CY0oVDvFmk) [60 mins] ... [*projection is the class example above*]
 
 <!----
 * [Old Lecture Slides](PPT/1SampleZ_PPT_old.pptx)

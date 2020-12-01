@@ -52,7 +52,7 @@ Use the resources below to answer [these questions](Prep/ChiSquare). [[*Problems
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/klb-lhGIlCQ) [60 mins] ... [*projection is the class example above*]
 
 <!----
 * [Old Lecture Slides](PPT/ChiSquare_PPT_old.pptx)

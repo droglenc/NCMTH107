@@ -50,7 +50,7 @@ Use the resources below to answer [these questions](Prep/RChi). [[*Problems with
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/MtEZRxZkKJ4) [18 mins] ... [*projection is the class example above*]
 
 <!----
 * [Old Lecture Slides](PPT/ChiSquare_PPT_old.pptx)

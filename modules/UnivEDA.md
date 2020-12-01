@@ -51,7 +51,7 @@ Use the resources below to answer [these questions](Prep/UnivEDA). [[*Problems w
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/noW3XtUvkSs) [39 mins] ... [*projection is the class example above*]
 
 <!---
 * [Old Lecture Slides](PPT/UEDAQuant_PPT_old.pptx)

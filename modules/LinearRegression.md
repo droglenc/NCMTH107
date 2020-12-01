@@ -60,7 +60,7 @@ Use the resources below to answer [these questions](Prep/LinearRegression). [[*P
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/8TYH2f9iZZY) [55 mins] ... [*projection is the class example above*]
 
 <!----
 * [Old Lecture Slides](PPT/LinearRegression_PPT_old.pptx)

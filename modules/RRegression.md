@@ -51,7 +51,7 @@ Use the resources below to answer [these questions](Prep/RRegression). [[*Proble
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/rVxl-hw1kOo) [32 mins] ... [*projection is the class example above*]
 
 <!----
 * [![Vimeo](../img/dhovid.png) Linear Regression in R](https://vimeo.com/user45324800/regression1){:target="_blank"} [8 mins]

@@ -50,7 +50,7 @@ Use the resources below to answer [these questions](Prep/RBivEDA). [[*Problems w
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/B3K9dEoBuuY) [47 mins] ... [*projection is the class example above*]
 
 <!----
 * [![Vimeo](../img/dhovid.png) Bivariate EDA (Quantitative) in R](https://vimeo.com/user45324800/biveda-quant){:target="_blank"} [8 mins]

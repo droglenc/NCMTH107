@@ -54,7 +54,7 @@ Use the resources below to answer [these questions](Prep/RUnivEDA). [[*Problems 
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/umAy3o1N2IM) [37 mins] ... [*projection is the class example above*]
 
 <!----
 * [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative) in R](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins]

@@ -52,7 +52,7 @@ Use the resources below to answer [these questions](Prep/RData). [[*Problems wit
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/jAbjmXb-MS8) [73 mins] ... [*projection is the class example above*]
 
 <!----
 * [![Vimeo](../img/dhovid.png) Load CSV File into RStudio](https://vimeo.com/user45324800/ncstats-loadcsvrstudio){:target="_blank"} [6 mins]

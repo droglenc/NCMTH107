@@ -49,7 +49,7 @@ Use the resources below to answer [these questions](Prep/Rttests). [[*Problems w
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/8Ju28Nisn3k) [44 mins] ... [*projection is the class example above*]
 
 <!----
 * [![Vimeo](../img/dhovid.png) 1-Sample t-Test in R](https://vimeo.com/user45324800/1samplettest){:target="_blank"} [5 mins]

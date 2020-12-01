@@ -54,7 +54,7 @@ Use the resources below to answer [these questions](Prep/BEDAQuant). [[*Problems
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/oryDVcM5gbs) [26 mins] ... [*projection is the class example above*]
 
 <!----
 * Review Exercises: [Definitions and Calculations](RE/BEDAQuant_RevEx_Defns)

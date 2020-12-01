@@ -60,7 +60,7 @@ Use the resources below to answer [these questions](Prep/ConfRegions). [[*Proble
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 1]() [XX mins]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 1](https://youtu.be/7lguAsr1ebY) [91 mins]
 * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 2]() [XX mins]
 
 <!----

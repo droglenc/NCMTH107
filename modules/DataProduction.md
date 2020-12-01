@@ -67,7 +67,7 @@ Use the resources below to answer [these questions](Prep/DataProduction). [[*Pro
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/ZTS_lYGR6Z0) [42 mins]
 
 <!----
 * [Old Lecture Slides](PPT/DataProduction_PPT_old.pptx)

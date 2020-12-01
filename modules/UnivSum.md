@@ -65,7 +65,7 @@ Use the resources below to answer [these questions](Prep/UnivSum). [[*Problems w
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/ujKhomKdwGg) [33 mins] ... [*projection is the class example above*]
 
 <!----
 * [Old Lecture Slides - Quantitative](PPT/UEDAQuant_PPT_old.pptx)

@@ -49,7 +49,7 @@ Use the resources below to answer [these questions](Prep/GOFTest). [[*Problems w
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"]() [XX mins] ... [*projection is the class example above*]
+* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/sS3hhJU4FNA) [49 mins] ... [*projection is the class example above*]
 
 <!----
 * [Old Lecture Slides](PPT/GOFTest_PPT_old.pptx)
