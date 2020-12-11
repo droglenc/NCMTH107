@@ -8,38 +8,44 @@ subtitle: How can I reorder the levels of my categorical variable?
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/FAQs")
-source("../../../rhelpers/rhelpers.R")
+source("../../rhelpers/rhelpers.R")
 fnm <- "reorder-levels"
 modHTML(fnm)
 ```
 
 ```{r echo=FALSE, results='hide', message='FALSE'}
-source("../../../rhelpers/knitr_setup.R")
+source("../../rhelpers/knitr_setup.R")
 ```
 
 ----
 
-By default, R will alphabetically order the levels of a factor (i.e., categorical) variable.  There may be times when you want an order other than alphabtical.  Reordering the levels may be accomplished by using the `levels=` argument with the `factor()` function.  The first argument to `factor()` is the name of the variable for which you wish to reorder the levels.  The `levels=` argument can then be set equal to a vector of level names that are spelled **exactly** as they appear in the original variable, but are placed in the order you wish.
+By default, R will order character vectors in the order that the words appear or alphabetically order the levels of a factor variable.For example, suppose that you used the code below to create a data.frame of information about three species of iris.
 
-For example, suppose that you used the code below to create a data.frame of information about three species of iris.
 ```{r}
 df <- read.csv("data/Iris.csv")
 str(df)
 ```
 
-From this, it is seen that the `species` variable has three levels, but it is not clear what the three levels are.  The complete list of levels may be seen by including the variable name in `levels()` as shown below.
+In this case suppose that we want to consider the species in a specific order. First, we need to see what names are present in the `species` variable.
+
+```{r}
+unique(df$species)
+```
+
+Second, we need to change the data type of `species` from character to a factor. This is done with `factor()`. However, at the same time we can set the order of the groups by setting the `levels=` argument to a vector of level names that are spelled **exactly** as they appear in the original variable, but are placed in the order you wish. For example, suppose that you would like `versicolor` to be listed fist, followed by `setosa` and then `viriginica`.
+
+```{r}
+df$species <- factor(df$species,levels=c("versicolor","setosa","virginica"))
+```
+
+You can then use `levels()` to see the ordering of the new factor variable.
+
 ```{r}
 levels(df$species)
 ```
 
-Now suppose that, for some reason, you would like the levels of `species` to be reordered such that `versicolor` is listed fist, followed by `setosa` and then `viriginica`.  The code below creates a new variable called `species2` in which the species will follow this new odering
-```{r}
-df$species2 <- factor(df$species,levels=c("versicolor","setosa","virginica"))
-levels(df$species2)
-```
-
-The new order is seen more clearly in the following two frequency tables.
+The new order is also seen in the following two frequency tables.
 ```{r}
 xtabs(~species,data=df)
-xtabs(~species2,data=df)
 ```
+
