@@ -27,7 +27,7 @@ source("../../../rhelpers/knitr_setup.R")
 ```{r Calc, echo=FALSE, results='hide', fig.show='hide'}
 xbar <- 6.3; sigma <- 3.2; n <- 45; se <- sigma/sqrt(n)
 mu0 <- 7; t <- round((xbar-mu0)/se,3)
-pv <- distrib(z,distrib="t",df=n-1)
+pv <- distrib(t,distrib="t",df=n-1)
 tstar <- distrib(0.95,distrib="t",df=n-1,type="q")
 ucb <- xbar+tstar*se
 ```

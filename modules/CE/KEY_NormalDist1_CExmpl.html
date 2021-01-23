@@ -1,0 +1,152 @@
+---
+layout: page
+title: "Annotated Key"
+subtitle: "Normal Distributions Class Example"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<div id="wood-duck-weights" class="section level2">
+<h2>Wood Duck Weights</h2>
+<ol>
+<li>
+The percentage of wood ducks that weight between 350 and 550 g is 95%.
+</li>
+</ol>
+<div class="alert alert-warning">
+<p>
+This follows directly from the middle part of the 68-95-99.7% Rule because 350 g is exactly 2σ below μ and 550 g is exactly 2σ above μ.
+</p>
+<p><img src="KEY_NormalDist1_CExmpl_files/figure-html/unnamed-chunk-4-1.png" width="336" /></p>
+</div>
+<p> </p>
+<ol start="2">
+<li>
+The percentage of wood ducks that weight more than 550 g is 2.5%.
+</li>
+</ol>
+<div class="alert alert-warning">
+<p>
+We see that 550 g is exactly 2σ above μ. Thus, there is 95% between 350 g (2σ below μ) and 550 g, 5% outside of that range, and 2.5% in each tail outside of that range. Thus, 2.5% are greater than 550 g.
+</p>
+<p><img src="KEY_NormalDist1_CExmpl_files/figure-html/unnamed-chunk-5-1.png" width="336" /></p>
+</div>
+<p> </p>
+<ol start="3">
+<li>
+The percentage of wood ducks that weigh less than 400 g is 16%
+</li>
+</ol>
+<div class="alert alert-warning">
+<p>
+We see that 400 g is exactly 1σ below μ. Thus, there is 68% between 400 g and 500 g (1σ above μ), 32% outside of that range, and 16% in each tail outside of that range. Thus, 16% are less than 400 g.
+</p>
+<p><img src="KEY_NormalDist1_CExmpl_files/figure-html/unnamed-chunk-6-1.png" width="336" /></p>
+</div>
+<p> </p>
+<ol start="4">
+<li>
+The percentage of wood ducks that weigh less than 500 g is 84%
+</li>
+</ol>
+<div class="alert alert-warning">
+<p>
+Referring to the plot in the previous question, we see that 500 g is exactly 1σ above μ, there is 68% between 400 g and 500 g, and 16% in each tail outside of that range. Thus, the percentage less than 500 g is the 68% between 400 and 500 g plus the 16% that is less than 400 g; for a total of 84%.
+</p>
+</div>
+<p> </p>
+<ol start="5">
+<li>
+The percentage of wood ducks that weigh between 350 and 500 g is 81.5%
+</li>
+</ol>
+<div class="alert alert-warning">
+<p>
+From the previous question we know that 84% of wood ducks weigh less than 500 g. However, this 84% contains wood ducks that weigh less than 350 g, which we do not want considered in this question. From question 2, we know that 2.5% of wood ducks weigh less than 350 g. Thus, 84-2.5=81.5% of wood ducks weigh less than 500 g, but not less than 350 g (or weigh between 350 and 500 g).
+</p>
+</div>
+<p> </p>
+<ol start="6">
+<li>
+The most common 68% of wood ducks weigh between 400 and 500 g.
+</li>
+</ol>
+<div class="alert alert-warning">
+<p>
+Most common means starting in the middle of the normal distribution and radiating to the tails. This question ends on the first part of the 68-95-99.7% Rule and, thus, 68% of the wood ducks are between 1σ below μ (=400) and 1σ above μ (=500).
+</p>
+</div>
+<p> </p>
+<ol start="7">
+<li>
+The lightest (smallest) 16% of wood ducks weigh less than 400 g.
+</li>
+</ol>
+<div class="alert alert-warning">
+<p>
+This percentage should sound familiar from the previous questions. With that experience you know that 16% is in the tails outside of the 68% range. This questions asks for the lightest wood ducks so it would be to left (or lower) tail of the normal distribution. Thus, the lightest 16% of wood ducks are less than 1σ below μ (=400).
+</p>
+<p><img src="KEY_NormalDist1_CExmpl_files/figure-html/unnamed-chunk-7-1.png" width="336" /></p>
+</div>
+<p> </p>
+<ol start="8">
+<li>
+The heaviest 2.5% of wood ducks weigh more than 550 g.
+</li>
+</ol>
+<div class="alert alert-warning">
+<p>
+Again, this percentage should sound familiar from the previous questions. With that experience you know that 2.5% is in the tails outside of the 95% range. This questions asks for the heaviest wood ducks so it would be to right (or upper) tail of the normal distribution. Thus, the heaviest 2.5% of wood ducks are more than 2σ above μ (=550).
+</p>
+<p><img src="KEY_NormalDist1_CExmpl_files/figure-html/unnamed-chunk-8-1.png" width="336" /></p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

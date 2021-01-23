@@ -1,0 +1,164 @@
+---
+layout: page
+title: "Annotated Key"
+subtitle: "Bivariate EDA Categorical Class Example"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<div id="executive-loyalty" class="section level2">
+<h2>Executive Loyalty</h2>
+<p><br></p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center">Remain</th>
+<th align="center">Not Remain</th>
+<th align="center"><strong>TOTAL</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">&lt; 1 year</td>
+<td align="center">11</td>
+<td align="center">23</td>
+<td align="center"><strong>34</strong></td>
+</tr>
+<tr class="even">
+<td align="center">1-5 years</td>
+<td align="center">28</td>
+<td align="center">15</td>
+<td align="center"><strong>43</strong></td>
+</tr>
+<tr class="odd">
+<td align="center">6-10 years</td>
+<td align="center">6</td>
+<td align="center">12</td>
+<td align="center"><strong>18</strong></td>
+</tr>
+<tr class="even">
+<td align="center">&gt; 10 years</td>
+<td align="center">74</td>
+<td align="center">31</td>
+<td align="center"><strong>105</strong></td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>TOTAL</strong></td>
+<td align="center"><strong>119</strong></td>
+<td align="center"><strong>81</strong></td>
+<td align="center"><strong>200</strong></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<ol start="1">
+<li>
+The percent of executives with 1-5 years of service who would remain in their current position is 65.1% (=<span class="math inline">\(\frac{28}{43}\)</span>).
+</li>
+<li>
+What percent of executives with more than 10 years of service would not remain in their current position 29.5% (=<span class="math inline">\(\frac{31}{105}\)</span>).
+</li>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+Both of these questions are focused on a group of executives based on their years of service. Thus, both of these percentages will be computed from looking at a single ROW in the table.
+</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="3">
+<li>
+What percent of executives who would remain in their current position had less than 1 year of service 28.4% (=<span class="math inline">\(\frac{23}{81}\)</span>).
+</li>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+This question is focused on only those executives that would remain in their current position. Thus, this percentage is computed from looking at only the “remain” COLUMN.
+</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="4">
+<li>
+What percent of all executives had 6-10 years of service and would not remain in their current position 6.0% (=<span class="math inline">\(\frac{12}{200}\)</span>).
+</li>
+<li>
+What percent of all executives would remain in their current position 59.5% (=<span class="math inline">\(\frac{119}{200}\)</span>).
+</li>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+Both of these questions are about ALL executives. THus, these percetages are computed out of ALL 200 executives.
+</li>
+</ul>
+</div>
+<p><br></p>
+<ol start="6">
+<li>
+Interestingly executives with 1-5 years of service (65.1%) or more than 10 years of service (70.5%) were about twice as likely to remain in their current position than those with less than 1 year (32.4%) or 6-10 years of service (33.3%).
+</li>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+This question is asking you to compare the percent that would remain (or not) in their position across the different levels of service. Thus, you want to compare rows to each other and, thus, you will want to compute ROW percentages to aid that comparison.
+</li>
+<li>
+If you put the response variable into columns and the explanatory or grouping variable into rows then you will always computer a ROW percentage for this type of question.
+</li>
+</ul>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

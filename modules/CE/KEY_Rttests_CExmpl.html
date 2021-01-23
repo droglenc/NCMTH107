@@ -1,0 +1,281 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "R t-Tests Class Example"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="sample-t-test" class="section level1">
+<h1>1-Sample t-Test</h1>
+<div id="recurrence-of-cancer-tumors" class="section level2">
+<h2>Recurrence of Cancer Tumors</h2>
+<p>The tumor recurrence data are loaded and initially examined below. This is a very simple data frame with one variable, <code>months</code>, that contains the number of months until the tumor recurred.</p>
+<pre class="r"><code>&gt; dfobj &lt;- read.csv(&quot;https://raw.githubusercontent.com/droglenc/NCData/master/Tumors.csv&quot;)
+&gt; str(dfobj)</code></pre>
+<pre><code>&#39;data.frame&#39;:   42 obs. of  1 variable:
+ $ months: int  19 18 17 1 21 22 54 46 25 49 ...</code></pre>
+<p>The 11-steps are shown below along with the R code where appropriate.</p>
+<p> </p>
+<ol start="1">
+<li>
+α = 0.10.
+</li>
+<li>
+H<sub>A</sub>: μ &gt; 27 and H<sub>0</sub>: μ = 27, where μ is the mean months until the tumors recurred.
+</li>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+Remember to define the parameter.
+</li>
+</ul>
+</div>
+<ol start="3">
+<li>
+A 1-sample t-test will be used because
+</li>
+<ol type="i">
+<li>
+one group/population is considered (this group of patients … not comparing two groups),
+</li>
+<li>
+a quantitative variable (time to recurrence) was recorded, and
+</li>
+<li>
+σ is UNknown (not given in the background).
+</li>
+</ol>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+These are the three characteristics that separate a 1-sample -test from other tests we will see this semester.
+</li>
+<li>
+Please include some sort of description that shows that the characteristics are met and that you are not just listing the characteristics – in other words, include the parts in parentheses.
+</li>
+<li>
+If σ is known it will be given in the background information. The standard deviation that will be computed from the data is s.
+</li>
+</ul>
+</div>
+<ol start="4">
+<li>
+This study is observational as the researcher did not create groups or impose a treatment on any individuals. It is not clear or obvious whether the individuals were randomly selected or not.
+</li>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+This appears to be part of an experiment as the patients were given a placebo. However, there are not groups created by the researchers being compared here so it is not an experiment.
+</li>
+<li>
+Do not say that the collection was random if it is not obviously so. Ultimately, this is a problem because the p-value requires randomization. However, we will continue with the analysis in this class, but we will be aware of the potential problems that this poses.
+</li>
+</ul>
+</div>
+<ol start="5">
+<li>
+The assumptions are met because (i) σ is UNknown and (ii) n = 42 ≥ 40.
+</li>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+The value of n is seen in the <code>str()</code> for the data frame shown above the 11 steps.
+<li>
+If the n had been less than 40 then you would need to assess the shape of the histogram.
+</li>
+<li>
+Make sure to address whether σ is known or not, even though it feels redundant with Step 3.
+</li>
+</ul>
+</div>
+<div class="alert alert-info">
+<p>
+Calculations for the next steps are computed with <code>t.test()</code> as demonstrated below.
+</p>
+<pre class="r"><code>&gt; t.test(dfobj$months,mu=27,alt=&quot;greater&quot;,conf.level=0.9)</code></pre>
+<pre><code>One Sample t-test with dfobj$months 
+t = 1.8502, df = 41, p-value = 0.03575
+alternative hypothesis: true mean is greater than 27 
+90 percent confidence interval:
+ 28.38127      Inf 
+sample estimates:
+mean of x 
+ 31.66667 </code></pre>
+</div>
+<ol start="6">
+<li>
+x̄ = 31.7.
+</li>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+This is from under the “mean of x” output from <code>t.test()</code>.
+</li>
+</ul>
+</div>
+<ol start="7">
+<li>
+t = 1.850 with 41 df.
+</li>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+This is from the “t=” output from <code>t.test()</code>.
+</li>
+</ul>
+</div>
+<ol start="8">
+<li>
+p-value=0.036.
+</li>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+This is from the “p-value=” output from <code>t.test()</code>.
+</li>
+</ul>
+</div>
+<ol start="9">
+<li>
+Reject H<sub>0</sub> because the p-value &lt; α.
+</li>
+<li>
+It appears that the mean time for the tumors to reoccur is greater than 27 months.
+</li>
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+Note how the conclusion is about the MEAN time to reoccur and not the time to reoccur. The test is about the summary (i.e., the MEAN) not about individuals.
+</li>
+<li>
+Also note the use of “appears” in the summary. This language acknowledges the fact that an error (Type I or Type II) could have been made. No conclusion from a statistical hypothesis test will ever be 100% definitive.
+</li>
+</ul>
+</div>
+<ol start="11">
+<li>
+I am 90% confident that the mean time for the tumors to reoccur is greater than 28.4.
+</ol>
+<div class="alert alert-warning">
+<ul>
+<li>
+This comes from under the “90 percent confidence interval” output from <code>t.test()</code>. Those results generally show an “interval” but if the first value is replaced with a “-Inf” then the result is an upper bound and if the second value is replaced with a “Inf” (as here) then the result is a lower bound.
+</li>
+<li>
+This confidence region is a lower bound, so the conclusion is that the mean is greater than the calculated amount.
+</li>
+</ul>
+</div>
+<p>Note that you will complete all 11 steps when you have the raw data (as we have done here), but you should use <code>t.test()</code> as shown here to perform all of the calculations for you.</p>
+<p> </p>
+<hr />
+</div>
+</div>
+<div id="sample-t-test-1" class="section level1">
+<h1>2-Sample t-Test</h1>
+<div id="cholesterol-drug-treatments-ii" class="section level2">
+<h2>Cholesterol Drug Treatments II</h2>
+<p>The full 11-steps for this example are in these <a href="KEY_2Samplet_CExmpl">annotations for the 2-sample t-test class example</a>. However, the calculations required for Steps 5, 6, 7, 8, and 11 may be computed in R if the raw data are available as they were here. Note, however, that the data only had the before and after the drug LDL levels for each patient and not the reduction in LDL. Thus, a reduction in LDL variable had to be computed at shown below. This will not be required for most situations.</p>
+<pre class="r"><code>&gt; dfobj &lt;- read.csv(&quot;https://raw.githubusercontent.com/droglenc/NCData/master/Cholesterol2.csv&quot;)
+&gt; dfobj$redux &lt;- dfobj$before-dfobj$after
+&gt; str(dfobj)</code></pre>
+<pre><code>&#39;data.frame&#39;:   25 obs. of  4 variables:
+ $ before: num  2.98 2.7 2.6 2.94 2.55 2.92 2.94 2.94 2.5 3.41 ...
+ $ after : num  2.63 2.43 2.34 2.41 2.28 2.44 2.45 2.44 2.26 2.96 ...
+ $ tx    : chr  &quot;Lipanthyl&quot; &quot;Lipanthyl&quot; &quot;Lipanthyl&quot; &quot;Lipanthyl&quot; ...
+ $ redux : num  0.35 0.27 0.26 0.53 0.27 ...</code></pre>
+<p>Another important note is that the data must be “stacked” in order to perform the analyses in R. This means that the data for one group must be stacked below the data for the other group, which will require a variable to explain which group the values correspond to. Fortunately this conforms to our mantra that each row must contain data from only one individual. The first three and last three rows for these data illustrate the stacked format.</p>
+<pre class="r"><code>&gt; headtail(dfobj)</code></pre>
+<pre><code>   before after        tx redux
+1    2.98  2.63 Lipanthyl  0.35
+2    2.70  2.43 Lipanthyl  0.27
+3    2.60  2.34 Lipanthyl  0.26
+23   2.62  2.43   Befizal  0.19
+24   2.99  2.64   Befizal  0.35
+25   2.63  2.45   Befizal  0.18</code></pre>
+<p>The Levene’s test result is computed with <code>levenesTest()</code> using a formula of the form <code>qvar~cvar</code>, where <code>qvar</code> is the quantitative response variable and <code>cvar</code> is the categorical variable that describes the groups. Of course, the <code>data=</code> argument is also needed. The p-value is shown under the <code>Pr(&gt;F)</code> heading.</p>
+<pre class="r"><code>&gt; levenesTest(redux~tx,data=dfobj)</code></pre>
+<pre><code>Levene&#39;s Test for Homogeneity of Variance (center = median)
+      Df F value Pr(&gt;F)
+group  1  0.0463 0.8315
+      23               </code></pre>
+<p>The histogram of the response variable for each group may be needed for Step 4 (as above) and is easily computed as below (which you have done before). <img src="KEY_Rttests_CExmpl_files/figure-html/unnamed-chunk-9-1.png" width="576" /></p>
+<p>Finally, most of the calculations for Steps 6, 7, 8, and 11 are computed with <code>t.test()</code> using the same formula and <code>data=</code> argument as for <code>levenesTest()</code>. If the variances are found to be equal then you MUST also include <code>var.equal=TRUE</code>. Finally, you should include the null hypothesized value in <code>mu=</code> (will always be zero for 2-sample t-test), the alternative hypothesis sign in <code>alt=</code>, and the confidence level in <code>conf.level=</code> as you have done with the 1-sample t-test.</p>
+<pre class="r"><code>&gt; t.test(redux~tx,data=dfobj,mu=0,alt=&quot;two.sided&quot;,conf.level=0.95,var.equal=TRUE)</code></pre>
+<pre><code> Two Sample t-test with redux by tx 
+t = -1.4885, df = 23, p-value = 0.1502
+alternative hypothesis: true difference in means is not equal to 0 
+95 percent confidence interval:
+ -0.18673806  0.03045601 
+sample estimates:
+  mean in group Befizal mean in group Lipanthyl 
+              0.2776923               0.3558333 </code></pre>
+<p>From this output one can see</p>
+<ul>
+<li>The two sample means for Step 6 at the very bottom of the output.</li>
+<li>The t test statistics for Step 7 after “t=”, with the corresponding degrees-of-freedom after “df=”. Note that when you use <code>t.test()</code> like this you do not need to worry about computing the pooled sample variance or the standard error.</li>
+<li>The p-value is after “p-value=” (and, thus, you do not need to use <code>distrib()</code>).</li>
+<li>The confidence region values are under “XX percent confidence interval”. Note that you do not need to find t<sup>*</sup> nor perform the calculations as they are done here for you. You simply need to write the interpretation.</li>
+</ul>
+<p>Note that you will complete all 11 steps when you have the raw data, but you should use <code>t.test()</code> as shown here to perform all of the hard calculations for you.</p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

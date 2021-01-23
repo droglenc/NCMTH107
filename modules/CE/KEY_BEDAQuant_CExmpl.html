@@ -1,0 +1,66 @@
+---
+layout: page
+title: "Annotated Key"
+subtitle: "Univariate EDA Class Example"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<div id="air-quality" class="section level2">
+<h2>Air Quality</h2>
+<p>The relationship between ozone concentration and maximum daily temperature in New York City in the summer of 1973 is nonlinear, positive, without strong outliers (the point at approximately 80 degrees and 155 ppb ozone may be considered an outlier), and moderately strong. I did not use the correlation coefficient (r) to assess strength because of the nonlinear relationship.</p>
+<p> </p>
+</div>
+<div id="climate-change-data" class="section level2">
+<h2>Climate Change Data</h2>
+<p>The relationship between temperature anomaly and CO<sub>2</sub> in the atmosphere is linear, positive, without outliers, and strong (|r|&gt;0.80). I used the correlation coefficient to assess strength because the relationship was linear and absent of outliers.</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
