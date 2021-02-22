@@ -5,10 +5,13 @@ library(FSA)
 section.lvls <- c("F12.1","F12.2","W13.1","F13.1","F13.2","W14.1",
                   "F14.1","F14.2","W16.2","F16.1","F16.2","W17.2",
                   "F17.1","F17.2","W18.1","F18.1","F18.2","W19.1","W19.2",
-                  "F19.1","F19.2")
-question.lvls1 <- c("pWhy","pVars","pUEDAQ","pUEDAC","pBEDAQ","pReg","pT2","pChi")
-question.lvls2 <- c("Why Stats is Important?","Variable Types","Uni EDA Quantitative",
-                    "Uni EDA Categorical","Bi EDA Quantitative","Regression",
+                  "F19.1","F19.2","W20.1","W20.2","F20.1","F20.2")
+question.lvls1 <- c("pWhy","pVars","pUEDAQ","pUEDAC","pBEDAQ","pBEDAC",
+                    "pReg","pT1","pT2","pChi")
+question.lvls2 <- c("Why Stats is Important?","Variable Types",
+                    "Uni EDA Quantitative","Uni EDA Categorical",
+                    "Bi EDA Quantitative","Bi EDA Categorical",
+                    "Regression","1-Sample t-Test",
                     "2-Sample t-Test","Chi-square Test")
 
 dfw <- readxl::read_excel(file.path("zzzOther","assessment",
@@ -30,17 +33,18 @@ dfl <- tidyr::pivot_longer(dfw,starts_with("p"),
          question2=mapvalues(question,from=question.lvls1,to=question.lvls2))
 head(dfl)
 
-cutoffs <- data.frame(question=factor(question.lvls,levels=question.lvls),
-                      Q1= c(0.7,0.7,0.6,0.6,0.6,0.5 ,0.5 ,0.5 ),
-                      MDN=c(0.9,0.9,0.8,0.8,0.8,0.75,0.75,0.75)) %>%
+cutoffs <- data.frame(question=factor(question.lvls1,
+                                      levels=question.lvls1),
+                      Q1= c(0.7,0.7,0.6,0.6,0.6,0.6,0.5 ,0.5,0.5 ,0.5 ),
+                      MDN=c(0.9,0.9,0.8,0.8,0.8,0.8,0.75,0.75,0.75,0.75)) %>%
   mutate(question2=mapvalues(question,from=question.lvls1,to=question.lvls2))
 
 dflsum <- dfl %>%
   group_by(section,question) %>%
   summarize(n=n(),
-            Q1=quantile(score,probs=0.25),
-            MDN=quantile(score,probs=0.50),
-            Q3=quantile(score,probs=0.75)) %>%
+            Q1=quantile(score,probs=0.25,na.rm=TRUE),
+            MDN=quantile(score,probs=0.50,na.rm=TRUE),
+            Q3=quantile(score,probs=0.75,na.rm=TRUE)) %>%
   ungroup() %>%
   left_join(.,cutoffs,by=c("question"),suffix=c("",".cut")) %>%
   mutate(Q1.met=ifelse(Q1>=Q1.cut,TRUE,FALSE),
@@ -51,25 +55,29 @@ dflsum <- dfl %>%
            !Q1.met & MDN.met ~ "Just Median",
            TRUE ~ "Neither"
          ),
-         MET=factor(MET,levels=c("Both","Just Q1","Just Median","Neither"))) %>%
+         MET=factor(MET,levels=c("Both","Just Q1",
+                                 "Just Median","Neither"))) %>%
   select(section,question,question2,n,Q1,MDN,Q3,Q1.met,MDN.met,MET)
 
-dfl <- left_join(dfl,dflsum,by=c("section","question"),suffix=c("",".y")) %>%
+dfl <- left_join(dfl,dflsum,by=c("section","question"),
+                 suffix=c("",".y")) %>%
   select(section,question,question2,score,MET)
 
-p <- ggplot() +
-  geom_boxplot(data=dfl,aes(x=reorder(section,desc(section)),
-                            y=score,fill=MET),
+ggplot() +
+  geom_boxplot(data=dfl,aes(y=reorder(section,desc(section)),
+                            x=score,fill=MET),
                outlier.size=0.5,outlier.alpha=0.5) +
   scale_fill_manual(values=c("green","yellow","orange","red")) +
   scale_alpha_manual(values=0.5) +
-  geom_hline(aes(yintercept=Q1),data=cutoffs,size=1,alpha=0.25) +
-  geom_hline(aes(yintercept=MDN),data=cutoffs,size=1,alpha=0.25) +
-  coord_flip() +
-  facet_wrap(vars(question2),ncol=4) +
-  labs(x="Class (Semester.Section)",y="Proportion of Possible Points") +
+  geom_vline(data=cutoffs,aes(xintercept=Q1),size=1,alpha=0.25) +
+  geom_vline(data=cutoffs,aes(xintercept=MDN),size=1,alpha=0.25) +
+  facet_wrap(vars(question2),ncol=5) +
+  scale_x_continuous(name="Proportion of Possible Points") +
   theme_bw() +
   theme(legend.position="bottom",
         panel.grid.major=element_blank(),
-        panel.grid.minor=element_blank())
-p
+        panel.grid.minor=element_blank(),
+        axis.title.y=element_blank())
+
+
+filter(dflsum,section %in% c("W20.1","W20.2"))
