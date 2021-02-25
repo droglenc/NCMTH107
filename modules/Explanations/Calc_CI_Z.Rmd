@@ -67,7 +67,7 @@ Suppose that I hypothesized that the mean time to walk between the Science Cente
 
 1. C=100(1-0.05)=95%
 1. A lower confidence bound because H<sub>A</sub> is a "greater than."
-1. Z<sup>*</sup>=`r formatC(distrib(0.9,type="q",lower.tail=FALSE),format="f",digits=3)` as shown below.
+1. Z<sup>*</sup>=`r formatC(distrib(0.95,type="q",lower.tail=FALSE),format="f",digits=3)` as shown below.
 1. The confidence region value is thus 8.3-`r formatC(distrib(0.95,type="q"),format="f",digits=3)`$\frac{1.3}{\sqrt{50}}$ = 8.3-`r formatC(distrib(0.95,type="q")*1.3/sqrt(50),format="f",digits=2)`=`r formatC(8.3-distrib(0.95,type="q")*1.3/sqrt(50),format="f",digits=2)`.
 1. I am 90% confident that the mean time for all students to walk between the Science Center and the Ponzio Center is more than `r formatC(8.3-distrib(0.95,type="q")*1.3/sqrt(50),format="f",digits=2)` minutes.
 

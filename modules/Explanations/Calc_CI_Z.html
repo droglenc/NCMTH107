@@ -57,7 +57,7 @@ css: "/css/modules.css"
 <ol>
 <li>C=100(1-0.05)=95%</li>
 <li>A lower confidence bound because H<sub>A</sub> is a “greater than.”</li>
-<li>Z<sup>*</sup>=-1.282 as shown below.</li>
+<li>Z<sup>*</sup>=-1.645 as shown below.</li>
 <li>The confidence region value is thus 8.3-1.645<span class="math inline">\(\frac{1.3}{\sqrt{50}}\)</span> = 8.3-0.30=8.00.</li>
 <li>I am 90% confident that the mean time for all students to walk between the Science Center and the Ponzio Center is more than 8.00 minutes.</li>
 </ol>
@@ -88,7 +88,7 @@ css: "/css/modules.css"
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
