@@ -19,8 +19,8 @@ modHTML("Dates-Current")
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 library(dplyr)
 options(knitr.kable.NA = '')
-## Read data, make data with day and topic with link
-d <- readxl::read_excel("Dates_F20B.xlsx") %>%
+## Read dates, make date with day and topic with link
+d <- readxl::read_excel("Dates_W21B.xlsx") %>%
   dplyr::mutate(Date=as.Date(Date)) %>%
   dplyr::mutate(Date2=paste0(DOW,", ",format(Date,"%b-%d")),
                 Topic=ifelse(is.na(url),Topic,
@@ -31,6 +31,19 @@ blank_rows <- grep("F",d$Date2)
 if (blank_rows[length(blank_rows)]==nrow(d)) blank_rows <- blank_rows[-length(blank_rows)]
 for (i in rev(blank_rows))
   d <- dplyr::add_row(d,Date=NA,Date2=NA,Topic=NA_character_,.after=i)
+
+## Read groups with students
+dgrps <- readxl::read_excel("../Year_Specific/W21B/MTH107_Grades_W21B.xlsx",sheet="Info") %>%
+  select(Group,Name=`Last Name`)
+
+grps <- unique(dgrps$Group)
+
+grp1 <- filter(dgrps,Group==grps[1])
+grp2 <- filter(dgrps,Group==grps[2])
+
+grps <- FSA::capFirst(grps)
+grp1 <- paste(grp1$Name,collapse=", ")
+grp2 <- paste(grp2$Name,collapse=", ")
 ```
 
 <div class="alert alert-info">
@@ -38,14 +51,18 @@ For each class period ("Date"), the module to prepare for is shown under "Topic.
 </div>
 
 <div class="alert alert-warning">
-**Group Blackwell** will meet "in-person" from 830-1015 on weeks 3, 5, and 7 and from 1030-1130 on weeks 2, 4, and 6. **Group Nightingale** will meet "in-person" from 830-1015 on weeks 2, 4, and 6 and from 1030-1130 on weeks 3, 5, and 7. There will be modifications to this general schedule that will be announced in class. <a href="Groups_Current.html">Group assignments are here.</a>
-</div>
+
+- **Group `r grps[1]`** meets in-person from **825-950 in CSE236**.
+    - `r grp1`
+- **Group `r grps[2]`** meets "in-person" from **1005-1130 in the Alvord Theater**.
+    - `r grp2`
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 ## Get only future dates
 dfuture <- d %>%
   dplyr::filter(Date>=lubridate::today()) %>%
-  select(-Date)
+  select(-Date) %>%
+  rename(Date=Date2)
 
 ## Make the kable
 knitr::kable(dfuture,format="html",escape=FALSE) %>%
@@ -64,7 +81,8 @@ knitr::kable(dfuture,format="html",escape=FALSE) %>%
 ## Get only future dates
 dpast <- d %>%
   dplyr::filter(Date<lubridate::today()) %>%
-  select(-Date)
+  select(-Date) %>%
+  rename(Date=Date2)
 ## Make the kable
 knitr::kable(dpast,format="html",escape=FALSE) %>%
   kableExtra::kable_styling(bootstrap_options=c("condensed","hover","responsive"),
