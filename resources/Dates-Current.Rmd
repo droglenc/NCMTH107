@@ -26,11 +26,6 @@ d <- readxl::read_excel("Dates_W21B.xlsx") %>%
                 Topic=ifelse(is.na(url),Topic,
                        paste0('<a href=\"../modules/',url,'\">',Topic,'</a>'))) %>%
   dplyr::select(Date,Date2,Topic)
-## Put a blank row after each Friday
-blank_rows <- grep("F",d$Date2)
-if (blank_rows[length(blank_rows)]==nrow(d)) blank_rows <- blank_rows[-length(blank_rows)]
-for (i in rev(blank_rows))
-  d <- dplyr::add_row(d,Date=NA,Date2=NA,Topic=NA_character_,.after=i)
 
 ## Read groups with students
 dgrps <- readxl::read_excel("../Year_Specific/W21B/MTH107_Grades_W21B.xlsx",sheet="Info") %>%
@@ -59,6 +54,12 @@ dfuture <- d %>%
   dplyr::filter(Date>=lubridate::today()) %>%
   select(-Date) %>%
   rename(Date=Date2)
+## Put a blank row after each Friday
+blank_rows <- grep("F",dfuture$Date)
+if (blank_rows[length(blank_rows)]==nrow(dfuture)) blank_rows <- blank_rows[-length(blank_rows)]
+for (i in rev(blank_rows))
+  dfuture <- dplyr::add_row(dfuture,Date=NA,
+                            Topic=NA_character_,.after=i)
 
 ## Make the kable
 knitr::kable(dfuture,format="html",escape=FALSE) %>%
@@ -79,6 +80,7 @@ dpast <- d %>%
   dplyr::filter(Date<lubridate::today()) %>%
   select(-Date) %>%
   rename(Date=Date2)
+
 ## Make the kable
 knitr::kable(dpast,format="html",escape=FALSE) %>%
   kableExtra::kable_styling(bootstrap_options=c("condensed","hover","responsive"),
