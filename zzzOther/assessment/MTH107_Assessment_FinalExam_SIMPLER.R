@@ -80,4 +80,4 @@ ggplot() +
         axis.title.y=element_blank())
 
 
-filter(dflsum,section %in% c("W20.1","W20.2"))
+filter(dflsum,section %in% c("F18.1","F18.2"))
