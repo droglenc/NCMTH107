@@ -46,16 +46,12 @@ grp1 <- paste(grp1$Name,collapse=", ")
 grp2 <- paste(grp2$Name,collapse=", ")
 ```
 
-<div class="alert alert-info">
-For each class period ("Date"), the module to prepare for is shown under "Topic." Some of the more distant dates are subject to change.
-</div>
-
 <div class="alert alert-warning">
-
 - **Group `r grps[1]`** meets in-person from **825-950 in CSE236**.
     - `r grp1`
 - **Group `r grps[2]`** meets "in-person" from **1005-1130 in the Alvord Theater**.
     - `r grp2`
+</div>
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 ## Get only future dates
@@ -89,4 +85,3 @@ knitr::kable(dpast,format="html",escape=FALSE) %>%
                             full_width=FALSE,position="center",
                             fixed_thead=TRUE)
 ```
-
