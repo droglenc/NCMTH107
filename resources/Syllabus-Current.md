@@ -117,7 +117,7 @@ The course is composed of daily modules (see link in upper-right) of material. T
     <tr class="info"><th>5 points</th><th>4-1 points</th><th>0 points</th></tr>
   </thead>
   <tbody>
-    <tr><td>All questions were answered thoughtfully and fully.</td><td>Various numbers of questions were not answered, were answered incorrectly, or without care or depth of thought.</td><td>Very few answers were provided or were correct; substantial portions were copied from someone else; answers were not turned in; or answers were not hand-written.</td></tr>
+    <tr><td>All questions were answered thoughtfully and fully. Document was hand-written.</td><td>Various numbers of questions were not answered, were answered incorrectly, or without care or depth of thought.</td><td>Very few answers were provided or were correct; substantial portions were copied from someone else; answers were not turned in; or answers were not hand-written.</td></tr>
   </tbody>
   </table>
 </div>
@@ -130,7 +130,7 @@ The course is composed of daily modules (see link in upper-right) of material. T
 
 ## Grading
 <img class="img-right" src="../img/grading.jpg">
-An overall grade will be computed from the module preparation quizzes and assignments described in the ["Course Workflow" section](#course-workflow) and a capstone assignment. Module preparation quizzes and assignments not submitted by the due date time will not be accepted (*but please contact me to let me know the circumstances for not being able to complete the work on time*). However, **you can request (via e-mail to) a 24-h extension for up to three assignments.**
+An overall grade will be computed from the module preparation quizzes and assignments described in the ["Course Workflow" section](#course-workflow) and a capstone assignment. Module preparation quizzes and assignments not submitted by the due date time will not be accepted (*but please contact me to let me know the circumstances for not being able to complete the work on time*). However, **you can request (via e-mail to) a 24-h extension for up to three Preparation Guides and three Module Assignments.**
 
 The capstone assignment is an opportunity for you to show a synthetic understanding of all material from throughout the course. The assignment will focus on larger concepts, applications, and interpretations (rather than specific details) from throughout the semester. I will provide you with an explicit study guide approximately one week before the assignment is due.
 
@@ -256,3 +256,7 @@ I will follow the college's official policy with respect to COVID-related absenc
 [^DistractionAids]: Also see the following resources for other apps that may help you eliminate distractions from your devices ... [here](https://georgehalachev.com/2019/01/15/7-apps-that-will-help-you-beat-procrastination/){:target="_blank"}, [here](https://www.careercontessa.com/advice/best-apps-chronic-procrastinator/){:target="_blank"}, [here](https://highschoolhints.com/6-apps-that-will-stop-your-procrastinating/){:target="_blank"}, or [here](https://remotebliss.com/procrastination-apps/){:target="_blank"}.
 
 [^CovidAbsence]: If a student feels ill, has an elevated temperature, or a positive symptom check relevant to COVID-19, they should not attend in-person classes or activities, but remain at home (their room if they live on campus).  They will not be penalized for their absence(s), as long as they notify their instructors of an illness prior to the beginning of the class session or activity.  The student should notify the office of Health Services about their positive temperature or COVID-19 symptom check.<br><br>If the Office of Health Services obtains a positive COVID-19 test from a student or determines that as a result of a known contact a student should be quarantined, the Office will notify instructors of a student’s absence from class for an undetermined duration.  Students who miss in-person classes or activities because they have been quarantined, in isolation, or because they are ill, either as a consequence of COVID-19 or otherwise, will not be penalized for their absences.<br><br>When a student is able, they are expected to keep up with class material that is available to them online, complete and submit assignments and to participate in virtual course activities, when such virtual activities are available.  Otherwise, the instructor will work with the student to arrange for appropriate extensions for required assignments.
+
+[^ReadMath]: Other tips for reading math books --  [Brown](https://brownmath.com/stfa/read.htm){:target="_blank"}, [North Carolina](https://learningcenter.unc.edu/tips-and-tools/readingmathtexts/){:target="_blank"}, and [Cuesta](https://www.cuesta.edu/student/resources/ssc/study_guides/mathematics/214_math_text.html){:target="_blank"}.
+
+[^WriteNotType]: [See this for some evidence](https://www.npr.org/2016/04/17/474525392/attention-students-put-your-laptops-away){:target="_blank"}.
