@@ -99,7 +99,7 @@ If I observe you "struggling" with the course early in the semester then I may f
 
 ## Course Workflow
 <img class="img-right" src="../img/StudyOnline.jpg" alt="Decoration">
-The course is scheduled to meet every weekday from 800-1200n. However, because of physical distancing guidelines, half of you will meet with me in CSE236 from 815-945 and the other half of you will meet with me in the Alvord Theater from 1000-1130. If you are going to miss class for some reason you may join the 815-945 group via video (see [quick link on the class homepage](../)). Which group you are in is shown on the [Dates page](Dates-Current.html).
+The course is scheduled to meet every weekday from 800-1200n. However, because of physical distancing guidelines, half of you will meet with me in CSE236 from 825-950 and the other half of you will meet with me in the Alvord Theater from 1005-1130. If you are going to miss class for some reason you may join the 825-950 group via video (see [quick link on the class homepage](../)). Which group you are in is shown on the [Dates page](Dates-Current.html).
 
 This course is taught in a "flipped format", which loosely means that you will be responsible for obtaining factual content prior to coming to class and will then use class time with me to apply and expand upon what you learned prior to class. I have taught this class in this format for five years, largely because I believe the science that indicates that deeper learning is achieved with this model. However, this format also allows for teaching face-to-face, on-line, or a hybrid of both as necessary.
 
