@@ -75,22 +75,15 @@ I will answer to "Derek", "Doctor Ogle", "Professor Ogle", or "Doctor Professor 
 
 I am committed to your doing well in this course and see it as my responsibility to help you both in and out of the designated class period. There are several good ways to get help from me.
 
-- Attend class.
-- I will not hold "drop-in" office hours at dedicated times. However, if you send me an e-mail I will create a "virtual" meeting where we can talk either by phone or video and, if necessary, I can show you my screen or you can show me yours. As a general rule I will be available in the late afternoons and early evenings, so as to minimize conflict with your afternoon classes. These "virtual" meetings will be conducted through MSTeams (I will send you a link with an invitation to join, but you can also see [these directions](FAQs/MicrosoftTeams){:target="_blank"}).
-- Ask me and other students (anonymously to them) questions on the Piazza Class Discussion Site ([see link on class homepage](../){:target="_blank"}), which I will monitor regularly ([here are directions for how to post a question](https://support.piazza.com/support/solutions/articles/48000574396-students-post-a-question){:target="_blank"}).
+- Attend class. Most of class time will be allocated to you working on modular assignments. I will be available during these times to answer your questions.
+- Ask questions on the course MS Teams site. There are separate channels for questions regarding module preparation readings, module assignments, and general questions (see [quick links on course homepage](../)). Simply start a new conversation with your question and I will answer it ASAP. Other students may also answer your question.
+- I will hold virtual help hours on Teams Monday through Thursday from 830-930 **pm**. You can simply join the meeting that I open in the Help Hours channel (see [quick links on course homepage](../)) at that time.
+- I will also generally be available at my computer during afternoons on class days. I will try to respond to queries ASAP during these times.
 - Finally, you may send me [anonymous feedback, suggestions, or questions](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}.
 
 Please see or contact me if you have questions regarding this course. 
 
 ### Tutors
-
-<img class="img-right" src="../img/Markia_W20.jpg">
-Markia Smith will also be available to help you succeed in this course. Markia is a Math and Education major who took this class two years ago and will be tutoring stats for her second year. Markia's tutoring hours are Tuesday and Thursday from 4 to 6pm. **You must register to meet with Markia at least one hour in advance of these times** ([see here for how to register and join the tutoring session](How to make an appointment with a tutor.pdf)).
-
-&nbsp;
-
-&nbsp;
-
 <img class="img-right" src="../img/Hewitt_F20.jpg">
 Danielle Hewitt will also be available to help you succeed in this course. Danielle is a Pschology and Business major who took this class last year and will be tutoring stats for the first time this year. Danielle is also one of your co-presidents for NCSA. Danielle's tutoring hours are Monday and Wednesday from 6 to 8 pm. **You must register to meet with Danielle at least one hour in advance of these times** ([see here for how to register and join the tutoring session](How to make an appointment with a tutor.pdf))
 
@@ -106,30 +99,42 @@ If I observe you "struggling" with the course early in the semester then I may f
 
 ## Course Workflow
 <img class="img-right" src="../img/StudyOnline.jpg" alt="Decoration">
-The course is scheduled to meet every weekday from 830-1130am. However, because of physical distancing guidelines, half of you will meet with me in the classroom at 830 and the other half of you will join the class on-line through my.northland (see [quick link on the class homepage](../)). After an introductory review "lecture" that will be between 15 and 60 minutes, the "in-person" students will stay and work on the assignment with me until 1015am. The other group of students will then come to class to work on the assignment with me from 1030 to 1130am. I will expect that you are working on the assignment when not in class during the 830-1130am window and at other times as needed.
+The course is scheduled to meet every weekday from 800-1200n. However, because of physical distancing guidelines, half of you will meet with me in CSE236 from 815-945 and the other half of you will meet with me in the Alvord Theater from 1000-1130. If you are going to miss class for some reason you may join the 815-945 group via video (see [quick link on the class homepage](../)). Which group you are in is shown on the [Dates page](Dates-Current.html).
 
 This course is taught in a "flipped format", which loosely means that you will be responsible for obtaining factual content prior to coming to class and will then use class time with me to apply and expand upon what you learned prior to class. I have taught this class in this format for five years, largely because I believe the science that indicates that deeper learning is achieved with this model. However, this format also allows for teaching face-to-face, on-line, or a hybrid of both as necessary.
-
-The course is composed of [25 modules](../modules/index) of material which roughly corresponds to one module per day. Below describes a general format of instruction that you should follow for each module.
-
-1. **Prepare Module Material** -- Each module has questions that will guide your preparation for that module's material. These questions are below the "Preparation for Class" heading on each module webpage (see ["Foundational Definitions"](../modules/FoundationalDefns){:target="_blank"} as an example). Prior to the class period dedicated to a module (see the [Dates page](Dates-Current.html)) you will use written and video materials to answer the preparation questions. Additionally you may ask relevant questions about the material on the Piazza discussion site ([quick link on class homepage](../){:target="_blank"}).
-1. **Complete Module Preparation Quiz** -- Each module has a "module preparation quiz" that will be available on the class Gradescope page ([quick link on class homepage](../){:target="_blank"}). These quizzes will be named after the module and will include the "-- Prep Check" suffix. Between 1pm on the day before and 8am on the day of the class period dedicated to a module, you should complete and submit the corresponding "module preparation quiz." While taking this quiz you may refer to your notes, the readings, or the videos. You will receive a short e-mail from me when your graded quiz is available on GradeScope.
-1. **Class Time** -- The initial part of "in-person" class for one group and "virtual" for teh second group will consist of a short review of the module material. The "in-person" portions of the class following that will consist of work on application exercises. You are expected to attend the first portion of each period either "in-person" or "virtually" and the second portion "in-person" as this will be a time to get direct help from me. You are expected to work on course material during the portion of the 830-1130 period when you are not "attending" class. You will start and likely finish most of the required assignments during this time.
-1. **Complete an Applied Assignment** -- Each module has an assignment where you will apply the module's concepts. The assignment is listed under the "Practice" section on the module webpage (see ["Foundational Definitions"](../modules/FoundationalDefns){:target="_blank"} as an example). Assignments can be typed or (neatly) hand-written and will ultimately need to be turned into a PDF document for online submission to Gradescope ([quick link on class homepage](../){:target="_blank"}). [The first two pages of these directions](https://gradescope-static-assets.s3-us-west-2.amazonaws.com/help/submitting_hw_guide.pdf){:target="_blank"} show how to use your device to scan hand-written work to a PDF. [The last page of those directions](https://gradescope-static-assets.s3-us-west-2.amazonaws.com/help/submitting_hw_guide.pdf){:target="_blank"} shows how to upload your PDF to Gradescope and identify the page on which each answer appears (this is required). The assignment on Gradescope will have the module name and "-- assignment" suffix and are due by 8am on the day after the class period dedicated to the module. You will receive a short e-mail from me when your graded assignment is available on GradeScope. You are expected to review your grade and comments ([how-to video here](https://youtu.be/TOHCkI12mh0){:target="_blank"}) to better learn the material and to improve on future assignments. Detailed answer keys will also be available on the module webpage.
-
-<br>
 
 <center>
 <img src="../img/ClassStructure.JPG" width="70%" height="70%">
 </center>
 
+The course is composed of daily modules (see link in upper-right) of material. The following is a general workflow that will be followed for each module.
+
+1. **Prepare Module Material** -- A detailed reading, pertinent videos, and "introductory" videos from a previous semester are provided for each module. **You will need to engage thoroughly with these materials**. By this, I mean that you need to be focused (i.e., not distracted) while reading and you need to think hard about concepts that don't make sense to you after your first read. **A cursory reading likely will not be adequate.** Here are [some quick tips for how to read a math textbook](https://www.macalester.edu/max/math-econ-119/howtoread/){:target="_blank"}.[^ReadMath]<br><br>A "Preparation Guide" is provided for each module's prepartory material. You should prepare (neatly) **hand-written**,[^WriteNotType] answers to the guide questions. Please ask questions you have about the preparatory materials on the "Questions - Preparation Guide" Teams channel or during help hours ([quick links on class homepage](../){:target="_blank"}). Your "Preparation Guide" answers will be turned in via GradeScope ([quick link on class homepage](../){:target="_blank"}) **by 800 am on the day that the module is covered in class** (see [Dates page](Dates-Current.html)). The "assignment" on Gradescope will have the module name and "-- prep" suffix. I will grade your answers according to the following rubric.
+
+<div class="container-fluid">
+  <table class="table table-bordered">
+  <thead>
+    <tr class="info"><th>5 points</th><th>4-1 points</th><th>0 points</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>All questions were answered thoughtfully and fully.</td><td>Various numbers of questions were not answered, were answered incorrectly, or without care or depth of thought.</td><td>Very few answers were provided or were correct; substantial portions were copied from someone else; answers were not turned in; or answers were not hand-written.</td></tr>
+  </tbody>
+  </table>
+</div>
+
+{:start="2"}
+1. **Class Time** -- The initial part of class time will consist of a very short introduction to the module assignment and a quick discussion of any questions that you had from the preparation materials. Following this you will work on the module's application assignment. I expect you to attend class to get direct help from me and learn from other students' questions. If you are diligent and focused, you will likely finish most of the module assignment during this time.
+1. **Complete an Applied Assignment** -- Module assignments should be prepared as described in the "Getting Organized" module for handing in on GradeScope ([quick link on class homepage](../){:target="_blank"}). The assignment on Gradescope will have the module name and "-- assignment" suffix and is **due by 8am on the day after the class period dedicated to the module**.<br><br>I will grade 50-100% of each module assignment "for content" (i.e., whether the work is done correctly or not). Questions that I did not grade "for content" will be graded "for completeness" (i.e., whether the work was done completely or not). You will receive a short e-mail from me when your graded assignment is available on GradeScope. You are expected to review your grade and comments ([how-to video here](https://youtu.be/TOHCkI12mh0){:target="_blank"}) to better learn the material and to improve on future assignments. Detailed answer keys will be made available on the module webpage.
+
 ----
 
 ## Grading
 <img class="img-right" src="../img/grading.jpg">
-An overall grade will be computed from the module preparation quizzes and assignments described in the ["Course Workflow" section](#course-workflow) and a final exam. Module preparation quizzes and assignments not submitted by the due date time will not be accepted. However, your lowest four quiz AND assignment grades will be dropped when computing your overall grade. The final exam is an opportunity for you to show a synthetic understanding of all material from throughout the course. The final exam will focus on larger concepts, applications, and interpretations (rather than specific details) from throughout the semester. I will provide you with an explicit study guide approximately one week before the final exam.
+An overall grade will be computed from the module preparation quizzes and assignments described in the ["Course Workflow" section](#course-workflow) and a capstone assignment. Module preparation quizzes and assignments not submitted by the due date time will not be accepted (*but please contact me to let me know the circumstances for not being able to complete the work on time*). However, **you can request (via e-mail to) a 24-h extension for up to three assignments.**
 
-An overall score will be computed from the items and associated weights listed in the table below. Grades on individual module preparation quizzes and assignments can be found on the class Gradescope page ([quick link on class homepage](../){:target="_blank"}). I will update your percentage grades for the Preparation Check Quizzes and Module Assignments on mycourses.northland.edu ([quick link on class homepage](../)) at the end of each week, which will then show your grade as of that time. You can also compute your overall grade at any time by entering your percentage scores in the boxes below for completed assessments. To project your future grade, also include percentages for future assessments.
+The capstone assignment is an opportunity for you to show a synthetic understanding of all material from throughout the course. The assignment will focus on larger concepts, applications, and interpretations (rather than specific details) from throughout the semester. I will provide you with an explicit study guide approximately one week before the assignment is due.
+
+An overall score will be computed from the items and associated weights listed in the table below. Grades on individual module preparation guides and assignments can be found on the class Gradescope page ([quick link on class homepage](../){:target="_blank"}). I will update your percentage grades for the Preparation Guides and Module Assignments on mycourses.northland.edu ([quick link on class homepage](../)) at the end of each week, which will then show your grade as of that time. You can also compute your overall grade at any time by entering your percentage scores in the boxes below for completed assessments. To project your future grade, also include percentages for future assessments.
 
 <!-- if the assessment weights change then you must change the values in get_wghts() in the grader.js file -->
 
@@ -138,7 +143,7 @@ An overall score will be computed from the items and associated weights listed i
 <tr><th width="15%"></th>
 <th width="28%">Prep Check<br>Quizzes</th>
 <th width="28%">Assignments</th>
-<th width="29%">Final Exam</th>
+<th width="29%">Capstone</th>
 </tr>
 
 <tr style="vertical-align:bottom"><th>Weight</th>
@@ -193,7 +198,7 @@ This course is designed in a way that you will have to actively, rather than pas
 <img class="img-right" src="../img/studying.jpg" alt="Decoration">
 As a general rule-of-thumb[^studytime], you are expected to spend 2-3 hours of time outside of class for each hour in class. For this course, you will meet for 7.5 hours per week and, thus, you should dedicate between 15 and 22.5 hours of time outside of class time preparing for class, completing assignments, reviewing your work, and asking questions or for help. **The work required for this course can be completed within this expected amount of time, if that time is without distraction**. If monitoring your phone/device is distracting you from getting your work done then you may consider the aid of apps (e.g., [Forest](https://www.forestapp.cc/)) designed to reduce distractions from devices.[^DistractionAids]  
 
-If you feel that you are spending too much time on some assignments or preparations because you are "stuck," then start your work earlier so that you can stop (and do other things) and make plans to seek help (see [assistance section above](#assistance)).
+If you feel that you are spending too much time on some assignments or preparations, then start your work earlier so that you can stop (and do other things) and make plans to [seek help](#assistance)).
 
 
 ### Classroom Conduct and Academic Integrity
@@ -238,7 +243,7 @@ It is my hope that we can maintain a face-to-face classroom for the entire sessi
 - In general, but especially if you are using the college's computers, please refrain from touching your face (mouth and eyes) with your hands.
 - Communicate issues to me (see [ways to communicate to me above](#instructor--derek-ogle)) so that I am aware and can try to address the issues.
 
-I will follow the college's official policy with respect to COVID-related absences.[^CovidAbsence] If you miss your designated class period then you may remotely attend the 830-930 class period via the appropriately dated "online meeting" on our mycourses.northland.edu page ([see quick link on class homepage]("../"){:target="_blank"}). A recording of the session will also be made and can be accessed from the same mycourses.northland.edu page.
+I will follow the college's official policy with respect to COVID-related absences.[^CovidAbsence]
 
 ----
 
