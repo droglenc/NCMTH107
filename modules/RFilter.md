@@ -23,32 +23,25 @@ css: /css/modules.css
   </div>
 </div>
 
-----
-
 ## Preparation for Class
 
 Use the resources below to answer [these questions](Prep/RFilter). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (~3 pages, 11 mins)
+* **Primary Resources** (~3 pages, 64 mins)
   * [Reading](bookR/RFilter.html)
   * [![Vimeo](../img/dhovid.png) Subset data.frame with filterD](https://vimeo.com/439447290){:target="_blank"} [11 mins] ... [corresponding resource](HO/Penguins.html#RFilter){:target="_blank"}
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/cWKqQchaKR4) [53 mins] ... [*projection is the class example above*]
+    * Projection is [this example](CE/RFilter_CExmpl) [![Decoration](../img/key.png)](CE/KEY_RFilter_CExmpl)
 
 ----
 
 ## Practice
 
-* [Class Example](CE/RFilter_CExmpl) ... [ANNOTATED KEY](CE/KEY_RFilter_CExmpl)
-* [Assignment](CE/RFilter_CE1) ... [ANSWER KEY](CE/KEY_RFilter_CE)
-* [Additional Exercises](CE/RFilter_CE2)
-
-&nbsp;
+* [Assignment](CE/RFilter_CE1) [![Decoration](../img/key.png)](CE/KEY_RFilter_CE)
 
 ----
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/cWKqQchaKR4) [53 mins] ... [*projection is the class example above*]
-
-<!----
-* [![Vimeo](../img/dhovid.png) Subset data.frame with filterD](https://vimeo.com/user45324800/filterd){:target="_blank"} [6 mins]
---->
+* Exercises
+  * [Additional](CE/RFilter_CE2)

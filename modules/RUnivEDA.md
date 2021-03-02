@@ -29,34 +29,26 @@ css: /css/modules.css
   </div>
 </div>
 
-----
-
 ## Preparation for Class
 
 Use the resources below to answer [these questions](Prep/RUnivEDA). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (~6 pages, 30 mins)
+* **Primary Resources** (~6 pages, 67 mins)
   * [Reading](bookR/RUnivEDA.html)
   * [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative) in R](https://vimeo.com/439763033){:target="_blank"} [13 mins] ... [corresponding resource](HO/Penguins.html#RUnivEDAQ){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Univariate EDA (Categorical) in R](https://vimeo.com/439831864){:target="_blank"} [9 mins] ... [corresponding resource](HO/Penguins.html#RUnivEDAC){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative by Group) in R](https://vimeo.com/440130844){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#RUnivEDAQC){:target="_blank"}
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/umAy3o1N2IM) [37 mins]
 
 ----
 
 ## Practice
 
-* [Assignment](CE/RUnivEDA_CE1) ... [ANSWER KEY](CE/KEY_RUnivEDA_CE)
-* [Additional Exercises](CE/RUnivEDA_CE2)
-
-&nbsp;
+* [Assignment](CE/RUnivEDA_CE1) [![Decoration](../img/key.png)](CE/KEY_RUnivEDA_CE)
 
 ----
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/umAy3o1N2IM) [37 mins] ... [*projection is the class example above*]
-
-<!----
-* [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative) in R](https://vimeo.com/user45324800/ncstats-uedaq){:target="_blank"} [4 mins]
-* [![Vimeo](../img/dhovid.png) Univariate EDA (Categorical) in R](https://vimeo.com/user45324800/ncstats-uedac){:target="_blank"} [4 mins]
---->
+* Exercises
+  * [Additional](CE/RUnivEDA_CE2)

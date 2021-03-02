@@ -25,36 +25,26 @@ css: /css/modules.css
   </div>
 </div>
 
-----
-
 ## Preparation for Class
 
 Use the resources below to answer [these questions](Prep/RChi). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (~5 pages, 14 mins)
+* **Primary Resources** (~5 pages, 32 mins)
   * [Reading](bookR/RChi.html)
   * [![Vimeo](../img/dhovid.png) Chi-Square Test (with Raw Data) in R](https://vimeo.com/441798211){:target="_blank"} [6 mins] ... [corresponding resource](HO/Penguins.html#RChiChi){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Goodness-of-Fit Tests in R](https://vimeo.com/441822222){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#RChiGOF){:target="_blank"} 
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/MtEZRxZkKJ4) [18 mins]
+    * Projection is [this example](CE/RChi_CExmpl) [![Decoration](../img/key.png)](CE/KEY_RChi_CExmpl)
 
 ----
 
 ## Practice
 
-* [Class Example](CE/RChi_CExmpl) ... [ANNOTATED KEY](CE/KEY_RChi_CExmpl)
-* [Assignment](CE/RChi_CE1) ... [ANSWER KEY](CE/KEY_RChi_CE)
-* [Additional Exercises](CE/RChi_CE2))
-
-&nbsp;
+* [Assignment](CE/RChi_CE1) [![Decoration](../img/key.png)](CE/KEY_RChi_CE)
 
 ----
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/MtEZRxZkKJ4) [18 mins] ... [*projection is the class example above*]
-
-<!----
-* [Old Lecture Slides](PPT/ChiSquare_PPT_old.pptx)
-* [![Vimeo](../img/dhovid.png) Chi-Square Test (with Raw Data) in R](https://vimeo.com/user45324800/chisqraw-ex1){:target="_blank"} [11 mins]
-* [![Vimeo](../img/dhovid.png) Chi-Square Test (with Summarized Data) in R](https://vimeo.com/user45324800/chisqsmrzd-ex1){:target="_blank"} [8 mins]
-* [![Vimeo](../img/dhovid.png) Goodness-of-Fit Tests in R](https://vimeo.com/user45324800/rgoftest){:target="_blank"} [6 mins] 
---->
+* Exercises
+  * [Additional](CE/RChi_CE2))

@@ -37,6 +37,7 @@ Use the resources below to answer [these questions](Prep/1Samplet). [[*Problems 
   * [![Vimeo](../img/dhovid.png) 1-Sample t-Test Example](https://vimeo.com/user45324800/t1test-ex1){:target="_blank"} [12 mins] ... [corresonding slides](PPT/1Samplet_PPT2.pptx)
   * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/f1NMb9xmeRE) [53 mins]
     * Projection is [this example](CE/1Samplet_CExmpl) [![Decoration](../img/key.png)](CE/KEY_1Samplet_CExmpl)
+
 ----
 
 ## Practice

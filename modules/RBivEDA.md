@@ -26,33 +26,25 @@ css: /css/modules.css
   </div>
 </div>
 
-----
-
 ## Preparation for Class
 
 Use the resources below to answer [these questions](Prep/RBivEDA). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (~4 pages, 13 mins)
+* **Primary Resources** (~4 pages, 60 mins)
   * [Reading](bookR/RBivEDA.html)
   * [![Vimeo](../img/dhovid.png) Bivariate EDA (Quantitative) in R](https://vimeo.com/440439608){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#RBivEDAQ){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Bivariate EDA (Categorical) in R](https://vimeo.com/440474564){:target="_blank"} [5 mins] ... [corresponding resource](HO/Penguins.html#RBivEDAC){:target="_blank"}
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/B3K9dEoBuuY) [47 mins]
 
 ----
 
 ## Practice
 
-* [Assignment](CE/RBivEDA_CE1) ... [ANSWER KEY](CE/KEY_RBivEDA_CE)
-* [Additional Exercises](CE/RBivEDA_CE2)
-
-&nbsp;
+* [Assignment](CE/RBivEDA_CE1) [![Decoration](../img/key.png)](CE/KEY_RBivEDA_CE)
 
 ----
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/B3K9dEoBuuY) [47 mins] ... [*projection is the class example above*]
-
-<!----
-* [![Vimeo](../img/dhovid.png) Bivariate EDA (Quantitative) in R](https://vimeo.com/user45324800/biveda-quant){:target="_blank"} [8 mins]
-* [![Vimeo](../img/dhovid.png) Bivariate EDA (Categorical) in R](https://vimeo.com/user45324800/biveda-cat){:target="_blank"} [8 mins]
---->
+* Exercises
+  * [Additional](CE/RBivEDA_CE2)

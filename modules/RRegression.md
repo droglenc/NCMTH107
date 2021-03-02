@@ -27,32 +27,25 @@ One of the most common things in statistics is to describe the linear relationsh
   </div>
 </div>
 
-----
-
 ## Preparation for Class
 
 Use the resources below to answer [these questions](Prep/RRegression). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (~3 pages, 7 mins)
+* **Primary Resources** (~3 pages, 39 mins)
   * [Reading](bookR/RRegression.html)
   * [![Vimeo](../img/dhovid.png) Linear Regression in R](https://vimeo.com/440703068){:target="_blank"} [7 mins] ... [corresponding resource](HO/Penguins.html#RRegression){:target="_blank"}
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/rVxl-hw1kOo) [32 mins]
+    * Projection is [this example](CE/RRegression_CExmpl) [![Decoration](../img/key.png)](CE/KEY_RRegression_CExmpl)
 
 ----
 
 ## Practice
 
-* [Class Example](CE/RRegression_CExmpl) ... [ANNOTATED KEY](CE/KEY_RRegression_CExmpl)
-* [Assignment](CE/RRegression_CE1) ... [ANSWER KEY](CE/KEY_RRegression_CE)
-* [Additional Exercises](CE/RRegression_CE2)
-
-&nbsp;
+* [Assignment](CE/RRegression_CE1) [![Decoration](../img/key.png)](CE/KEY_RRegression_CE)
 
 ----
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/rVxl-hw1kOo) [32 mins] ... [*projection is the class example above*]
-
-<!----
-* [![Vimeo](../img/dhovid.png) Linear Regression in R](https://vimeo.com/user45324800/regression1){:target="_blank"} [8 mins]
---->
+* Exercises
+  * [Additional](CE/RRegression_CE2)

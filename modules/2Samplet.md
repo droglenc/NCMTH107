@@ -35,6 +35,7 @@ Use the resources below to answer [these questions](Prep/2Samplet). [[*Problems 
   * [![Vimeo](../img/dhovid.png) 2-Sample t-Test Example](https://vimeo.com/user45324800/t2test-ex1){:target="_blank"} [22 mins] ... [corresponding slides](PPT/2Samplet_PPT.pptx)
   * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/j5HZWeh8dfE) [80 mins]
     * Projection is [this example](CE/2Samplet_CExmpl) [![Decoration](../img/key.png)](CE/KEY_2Samplet_CExmpl)
+
 ----
 
 ## Practice

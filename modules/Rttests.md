@@ -24,34 +24,26 @@ css: /css/modules.css
   </div>
 </div>
 
-----
-
 ## Preparation for Class
 
 Use the resources below to answer [these questions](Prep/Rttests). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (~5 pages, 15 mins)
+* **Primary Resources** (~5 pages, 59 mins)
   * [Reading](bookR/Rttests.html)
   * [![Vimeo](../img/dhovid.png) 1-Sample t-Test in R](https://vimeo.com/441053915){:target="_blank"} [7 mins] ... [corresponding resource](HO/Penguins.html#Rttests1){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) 2-Sample t-Test in R](https://vimeo.com/441364656){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#Rttests2){:target="_blank"}
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/8Ju28Nisn3k) [44 mins]
+    * Projection is [this example](CE/Rttests_CExmpl) [![Decoration](../img/key.png)](CE/KEY_Rttests_CExmpl)
 
 ----
 
 ## Practice
 
-* [Class Example](CE/Rttests_CExmpl) ... [ANNOTATED KEY](CE/KEY_Rttests_CExmpl)
-* [Assignment](CE/Rttests_CE1) ... [ANSWER KEY](CE/KEY_Rttests_CE)
-* [Additional Exercises](CE/Rttests_CE2)
-
-&nbsp;
+* [Assignment](CE/Rttests_CE1) [![Decoration](../img/key.png)](CE/KEY_Rttests_CE)
 
 ----
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/8Ju28Nisn3k) [44 mins] ... [*projection is the class example above*]
-
-<!----
-* [![Vimeo](../img/dhovid.png) 1-Sample t-Test in R](https://vimeo.com/user45324800/1samplettest){:target="_blank"} [5 mins]
-* [![Vimeo](../img/dhovid.png) 2-Sample t-Test in R](https://vimeo.com/user45324800/1samplettest){:target="_blank"} [5 mins]
---->
+* Exercises
+  * [Additional](CE/Rttests_CE2)
