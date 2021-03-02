@@ -47,11 +47,7 @@ Use the resources below to answer [these questions](Prep/DataProduction). [[*Pro
   * [![YouTube](../img/youtube.png) Response/Explanatory Variables II](https://www.youtube.com/watch?v=DAH8DyLXdjM){:target="_blank"} [2 mins *from 0:32 to 2:34*]
   * [![Vimeo](../img/dhovid.png) Randomization in R](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins] ... [corresponding resource](HO/DataProduction_RHO.R){:target="_blank"}
 * **Secondary Resources**
-  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/ZTS_lYGR6Z0) [42 mins]
-* **Alternative Resources**
-  * [![YouTube](../img/youtube.png) Types of Studies:](https://www.youtube.com/watch?v=KDPBD3SPTPY){:target="_blank"} [8 mins]
-  * [![YouTube](../img/youtube.png) Experimental Design](https://www.youtube.com/watch?v=5zkg1w5zoQ0){:target="_blank"} [*from 12:34 to 18:46*]
-  * [![YouTube](../img/youtube.png) Response/Explanatory Variables III](https://www.youtube.com/watch?v=bokeTCH2aJY){:target="_blank"} [6 mins *stop at 6:18*]
+  * [![YouTube](../img/dhovid.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/ZTS_lYGR6Z0) [42 mins]
 
 ----
 
@@ -63,4 +59,9 @@ Use the resources below to answer [these questions](Prep/DataProduction). [[*Pro
 
 ## Archive
 
-* [Additional Exercises](CE/DataProduction_CE2)
+* Preparation Resources
+  * [![YouTube](../img/youtube.png) Types of Studies:](https://www.youtube.com/watch?v=KDPBD3SPTPY){:target="_blank"} [8 mins]
+  * [![YouTube](../img/youtube.png) Experimental Design](https://www.youtube.com/watch?v=5zkg1w5zoQ0){:target="_blank"} [*from 12:34 to 18:46*]
+  * [![YouTube](../img/youtube.png) Response/Explanatory Variables III](https://www.youtube.com/watch?v=bokeTCH2aJY){:target="_blank"} [6 mins *stop at 6:18*]
+* Exercises
+  * [Additional](CE/DataProduction_CE2)
