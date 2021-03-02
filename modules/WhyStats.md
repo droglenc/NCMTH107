@@ -47,7 +47,7 @@ Use the resources below to answer [these questions](Prep/WhyStats){:target="_bla
 ## Practice
 
 * [Class Example](CE/WhyStats_CExmpl1)
-* [Assignment](CE/WhyStats_CE1) ... [[![Decoration](../img/key.png)](CE/KEY_WhyStats_CE)
+* [Assignment](CE/WhyStats_CE1) ... [![Decoration](../img/key.png)](CE/KEY_WhyStats_CE)
 
 ----
 
