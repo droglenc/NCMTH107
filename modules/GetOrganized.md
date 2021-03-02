@@ -10,7 +10,7 @@ css: /css/modules.css
 Complete the following items to be prepared for the first day of class (*the last two items will not be needed until the second day of class*).
 
 * [Complete Webpage Scavenger Hunt](Prep/GetOrganized_Hunt){:target="_blank"}
-* [Initiate MSTeams Discussion Site](Prep/GetOrganized_Teams){:target="_blank"}
+* [Initiate MSTeams Discussion Site](Prep/GetOrganized_MSTeams){:target="_blank"}
 * [Initiate Gradescope Grading Site](Prep/GetOrganized_Gradescope){:target="_blank"}
 * [Install R, RStudio, NCStats](../bookR/RStart.html#installing-r-and-rstudio){:target="_blank"}
 * [Setup and Brief Introduction to R/RStudio](bookR/RStart.html){:target="_blank"}
