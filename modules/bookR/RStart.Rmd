@@ -30,19 +30,40 @@ Detailed methods for downloading, installing, and configuring R, RStudio, and `N
 
 &nbsp;
 
-# Installing R and RStudio
+# Installing R, RStudio, NCStats
+R and RStudio can be installed to your personal computer, but does not work well if you have a ChromeBook or if your machine is old (especially Macs). If you don't have your own machine or you have a ChromeBook or old machine then please follow the ["RStudio-in-the-Cloud" directions](#rstudio-in-the-cloud) further below. Otherwise follow the Windows or Mac directions below.
+
+
+
 ## Windows
 To install R on a Windows machine, downloaded the installer from [this site](https://cloud.r-project.org/bin/windows/base/) by selecting the “Download R X.X.X for Windows” link at the top. Locate the installer on your computer and run it. Using all of the default choices will perform an acceptable install for this class.
 
 To install RStudio on a Windows machine, download the installer from [this link](https://rstudio.com/products/rstudio/download/#download) by selecting the “DOWNLOAD RSTUDIO FOR WINDOWS” button. Locate the installer on your computer and run it. Using all of the default choices will perform an acceptable install for this class.
 
+Install `NCStats` as [described here](#ncstats).
+
 ## Mac
-To install R on a Mac, downloaded the installer from [this site](https://cloud.r-project.org/bin/macosx/) by selecting one of the “R-X.X.X.pkg” links appropriate for your operating system under the “Latest Release” section. Locate the “.pkg” file on your computer and install it per usual. Using all of the default choices will perform an acceptable install for this class.1
+To install R on a Mac, downloaded the installer from [this site](https://cloud.r-project.org/bin/macosx/) by selecting one of the “R-X.X.X.pkg” links appropriate for your operating system under the “Latest Release” section. Locate the “.pkg” file on your computer and install it per usual. Using all of the default choices will perform an acceptable install for this class.
 
 To install RStudio on aMac, download the installer from [this link](https://rstudio.com/products/rstudio/download/#download) by selecting the “DOWNLOAD RSTUDIO FOR MACOS” button (you can also select the MacOS option under the “All Installers” section). Locate the “.dmg” file on your computer and install it per usual. Using all of the default choices will perform an acceptable install for this class.
 
+Install `NCStats` as [described here](#ncstats).
+
+## NCStats
+The latest `NCStats` may be installed by running these lines in R/RStudio:
+
+```
+if (!require('manipulate')) utils::install.packages('manipulate')
+if (!require('remotes')) install.packages('remotes'); require('remotes')
+remotes::install_github('droglenc/NCStats',type='binary')
+```
+
+This installation may fail if other packages do not install properly (primarily the `Rcpp` and `curl` packages). These failures may be ameliorated by manually installing packages responsible for the errors (see [these directions](http://derekogle.com/IFAR/supplements/installations/InstallPackagesRStudio.html)).
+
+E-mail me if you continue to experience difficulties installing `NCStats`.
+
 ## RStudio-in-the-Cloud
-Analyses with R and RStudio can be run through a web browser on “the cloud”, thus eliminating the need to install these softwares and the associated packages on your computer. Follow the directions below if you would like to try using R/RStudio in the cloud.
+Analyses with R and RStudio can be run through a web browser on “the cloud”, thus eliminating the need to install these softwares and the associated packages on your computer. Follow the directions below if you would like to try using R/RStudio in the cloud. **Only follow these directions if you don't plan to use R/RStudio on your own computer and did not install R/Studio/NCStats as described in the three sections above.**
 
 You must create a free RStudio Cloud account to use this service. Go to [the RStudio Cloud website](https://rstudio.cloud/) and select “Get Started.” In the ensuing dialog box enter your e-mail adddress, a password, and your first and last names. Press “Sign up.” In a subsequent screen you will be asked to provide a name for the account with prompts to use your first and last name. Just press “Create Account” here.
 
@@ -51,7 +72,6 @@ Once you have created your account, follow [this link to the “MTH107” projec
 ```{r echo=FALSE, layout="l-body-outset"}
 knitr::include_graphics("zimg/RCloud.jpg")
 ```
-
 
 &nbsp;
 
