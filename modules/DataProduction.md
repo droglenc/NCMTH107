@@ -36,7 +36,7 @@ Statistical analyses rely on data and that data must be properly produced (or co
 Use the resources below to answer [these questions](Prep/DataProduction). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (9 pages, 52 mins)
-  * [![PDF](../img/pdf.png) Reading](book/Data Production.pdf)
+  * [Reading](http://derekogle.com/Book107/Data_Production.html){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Types of Observational Studies](https://vimeo.com/user45324800/observationaltypes){:target="_blank"} [3 mins] ... [corresponding slides](PPT/DataProduction_PPT.pptx)
   * [![Vimeo](../img/dhovid.png) Definitions in Experimental Design](https://vimeo.com/user45324800/experimentdefns){:target="_blank"} [4 mins] ... [corresponding slides](PPT/DataProduction_PPT.pptx)
   * [![Vimeo](../img/dhovid.png) Randomization in R](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins] ... [corresponding resource](HO/DataProduction_RHO.R){:target="_blank"}

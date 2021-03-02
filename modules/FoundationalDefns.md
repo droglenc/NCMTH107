@@ -35,7 +35,7 @@ As with most areas of study, Statistics requires an understanding of key foundat
 Use the resources below to answer [these questions](Prep/FoundationalDefns). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (8 pages, 41 mins)
-  * [![PDF](../img/pdf.png) Reading](book/Foundational Definitions.pdf)
+  * [Reading](http://derekogle.com/Book107/FoundationalDefns.html){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) IVPPSS](https://vimeo.com/user45324800/ncstats-ivppss){:target="_blank"} [7 mins] ... [corresponding slides](PPT/FoundationalDefns_PPT1.pptx)
   * [![Vimeo](../img/dhovid.png) Variable Types](https://vimeo.com/user45324800/ncstats-vartypes){:target="_blank"} [5 mins] ... [corresponding slides](PPT/FoundationalDefns_PPT2.pptx)
   * [![YouTube](../img/dhovid.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/_VTmDXWfrW4) [29 mins]
