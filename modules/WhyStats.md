@@ -42,15 +42,20 @@ Use the resources below to answer [these questions](Prep/WhyStats){:target="_bla
   * [![YouTube Link](../img/youtube.png) What is Statistics?](https://www.youtube.com/watch?v=5YsiVJFSwGo){:target="_blank"} [12 mins; *start at 0:35*]
   * [![YouTube Link](../img/youtube.png) What is Important About Statistics in Psychology?](https://www.youtube.com/watch?v=yl_yuxHFIXc){:target="_blank"} [5 mins; *between 0:18 and 5:33*]
 
+&nbsp;
+
+----
 
 ## Practice
 
 * [Class Example](CE/WhyStats_CExmpl1)
 * [Assignment](CE/WhyStats_CE1) ... [ANSWER KEY](CE/KEY_WhyStats_CE)
 
+&nbsp;
+
 ----
 
-## Archived Materials
+## Archive
 
 * [Additional Exercises](CE/WhyStats_CE2)
 * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/vzj-EfLdrro) [43 mins] ... [*projection is the class example above*]
