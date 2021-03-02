@@ -31,8 +31,6 @@ Statistical analyses rely on data and that data must be properly produced (or co
   </div>
 </div>
 
-----
-
 ## Preparation for Class
 
 Use the resources below to answer [these questions](Prep/DataProduction). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
@@ -48,27 +46,21 @@ Use the resources below to answer [these questions](Prep/DataProduction). [[*Pro
   * [![YouTube](../img/youtube.png) Response/Explanatory Variables I](https://www.youtube.com/watch?v=bokeTCH2aJY){:target="_blank"} [1 min *from 1:00 to 2:28*]
   * [![YouTube](../img/youtube.png) Response/Explanatory Variables II](https://www.youtube.com/watch?v=DAH8DyLXdjM){:target="_blank"} [2 mins *from 0:32 to 2:34*]
   * [![Vimeo](../img/dhovid.png) Randomization in R](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins] ... [corresponding resource](HO/DataProduction_RHO.R){:target="_blank"}
+* **Secondary Resources**
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/ZTS_lYGR6Z0) [42 mins]
 * **Alternative Resources**
   * [![YouTube](../img/youtube.png) Types of Studies:](https://www.youtube.com/watch?v=KDPBD3SPTPY){:target="_blank"} [8 mins]
   * [![YouTube](../img/youtube.png) Experimental Design](https://www.youtube.com/watch?v=5zkg1w5zoQ0){:target="_blank"} [*from 12:34 to 18:46*]
   * [![YouTube](../img/youtube.png) Response/Explanatory Variables III](https://www.youtube.com/watch?v=bokeTCH2aJY){:target="_blank"} [6 mins *stop at 6:18*]
-
 
 ----
 
 ## Practice
 
 * [Assignment](CE/DataProduction_CE1) ... [ANSWER KEY](CE/KEY_DataProduction_CE)
-* [Additional Exercises](CE/DataProduction_CE2)
-
-&nbsp;
 
 ----
 
-## Archived Materials
+## Archive
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/ZTS_lYGR6Z0) [42 mins]
-
-<!----
-* [Old Lecture Slides](PPT/DataProduction_PPT_old.pptx)
---->
+* [Additional Exercises](CE/DataProduction_CE2)
