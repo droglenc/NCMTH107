@@ -39,7 +39,7 @@ Use the resources below to answer [these questions](Prep/FoundationalDefns). [[*
   * [![Vimeo](../img/dhovid.png) IVPPSS](https://vimeo.com/user45324800/ncstats-ivppss){:target="_blank"} [7 mins] ... [corresponding slides](PPT/FoundationalDefns_PPT1.pptx)
   * [![Vimeo](../img/dhovid.png) Variable Types](https://vimeo.com/user45324800/ncstats-vartypes){:target="_blank"} [5 mins] ... [corresponding slides](PPT/FoundationalDefns_PPT2.pptx)
 * **Secondary Resources** 
-  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/_VTmDXWfrW4) [29 mins]
+  * [![YouTube](../img/dhovid.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/_VTmDXWfrW4) [29 mins]
 
 ----
 
