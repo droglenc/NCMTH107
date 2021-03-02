@@ -57,10 +57,10 @@ Use the resources below to answer [these questions](Prep/UnivSum). [[*Problems w
 ## Archive
 
 * Preparation Resources
-  * [Calculate the median](https://www.youtube.com/watch?v=0SYsi38XucI){:target="_blank"} [2 mins]
-  * [Calculate the median](https://www.youtube.com/watch?v=hTYTaOaQUcw){:target="_blank"} [5 mins]
-  * [Calculate the median](https://www.youtube.com/watch?v=9a8M_KfclBE){:target="_blank"} [3 mins]
-  * [Calculate the IQR](https://www.youtube.com/watch?v=R6VDj7pEG30){:target="_blank"} [3 mins]
+  * [![YouTube](../img/youtube.png) Calculate the median](https://www.youtube.com/watch?v=0SYsi38XucI){:target="_blank"} [2 mins]
+  * [![YouTube](../img/youtube.png) Calculate the median](https://www.youtube.com/watch?v=hTYTaOaQUcw){:target="_blank"} [5 mins]
+  * [![YouTube](../img/youtube.png) Calculate the median](https://www.youtube.com/watch?v=9a8M_KfclBE){:target="_blank"} [3 mins]
+  * [![YouTube](../img/youtube.png) Calculate the IQR](https://www.youtube.com/watch?v=0TulXwT_3ck){:target="_blank"} [3 mins]
   * [![YouTube](../img/youtube.png) Calculate Standard Deviation](https://www.youtube.com/watch?v=atS4wX8I9H0){:target="_blank"} [13 mins]
 * Exercises
   * [Additional](CE/UnivSum_CE2)
