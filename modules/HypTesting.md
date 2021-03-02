@@ -28,43 +28,30 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
   </div>
 </div>
 
-----
-
 Use the resources below to answer [these questions](Prep/HypTesting). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources I** (10 pages, 6 mins)
   * [![PDF](../img/pdf.png) Reading (Sections 12.1-12.4)](book/Hypothesis Tests.pdf)
   * [![Vimeo](../img/dhovid.png) Forming Statistical Hypothesis](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins] ... [corresponding slides](PPT/HypTesting_PPT-hypotheses.pptx)
   * [![Web](../img/web.png) Calculating p-values](Explanations/Calc_pvalue_Z)
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 1](https://youtu.be/0FQ-u95mhDQ) [47 mins] ... [corresponding slides](PPT/HypTesting_PPT-Lecture.pptx)
 * **Primary Resources II** (2 pages, 11 mins)
   * [![PDF](../img/pdf.png) Reading (Section 12.5)](book/Hypothesis Tests.pdf)
   * [![YouTube](../img/youtube.png) Statistical Error Types I](https://www.youtube.com/watch?v=7mE-K_w1v90){:target="_blank"} [8 mins]
   * [![YouTube](../img/youtube.png) Statistical Error Types II](https://www.youtube.com/watch?v=OWn3Ko1WYTA){:target="_blank"} [3 mins; *between 1:29 and 4:07*]
-
-----
-
-## In-Class Lecture
-
-* [Hypothesis Tests Intro](PPT/HypTesting_PPT-Lecture.pptx)
-* [Hypothesis Testing Errors](PPT/HypTestingErrs_PPT-Lecture.pptx)
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 2](https://youtu.be/RKhHc40jnxE) [31 mins] ... [corresponding slides](PPT/HypTestingErrs_PPT-Lecture.pptx)
 
 ----
 
 ## Practice
 
-* [Assignment I](CE/HypTesting_CE1) ... [ANSWER KEY](CE/KEY_HypTesting_CE1)
-* [Assignment II](CE/HypTesting_CE2) ... [ANSWER KEY](CE/KEY_HypTesting_CE2)
-* [Additional Exercises](CE/HypTesting_CE2)
-
-&nbsp;
+* [Assignment I](CE/HypTesting_CE1) [![Decoration](../img/key.png)](CE/KEY_HypTesting_CE1)
+* [Assignment II](CE/HypTesting_CE2) [![Decoration](../img/key.png)](CE/KEY_HypTesting_CE2)
 
 ----
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 1](https://youtu.be/0FQ-u95mhDQ) [47 mins] ... [*projection is the class lecture 1 above*]
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 2](https://youtu.be/RKhHc40jnxE) [31 mins] ... [*projection is the class lecture 2 above*]
-
-<!----
-* [Old Lecture Slides](PPT/HypTesting_PPT_old.pptx)
---->
+* Preparation Resources
+* Exercises
+  * [Additional](CE/HypTesting_CE2)

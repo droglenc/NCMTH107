@@ -27,31 +27,24 @@ Probability is the "language" used by statisticians to describe the proportion o
   </div>
 </div>
 
-----
-
 ## Preparation for Class
 Use the resources below to answer [these questions](Prep/Probability). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (4 pages, 6 mins)
   * [![PDF](../img/pdf.png) Reading](book/Probability Introduction.pdf)
   * [![Vimeo](../img/dhovid.png) Types of Questions](https://vimeo.com/user45324800/smplngd-questions){:target="_blank"} [6 mins] ... [corresponding slides](PPT/SamplingDist_PPT3.pptx)
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/lGuTfzOW78w) [33 mins] ... [*projection is the class example above*]
+    * Projection is [this example](CE/Probability_CExmpl) [![Decoration](../img/key.png)](CE/KEY_Probability_CExmpl)
 
 ----
 
 ## Practice
 
-* [Class Example](CE/Probability_CExmpl) ... [ANNOTATED KEY](CE/KEY_Probability_CExmpl) 
-* [Assignment](CE/Probability_CE1) ... [ANSWER KEY](CE/KEY_Probability_CE)
-* [Additional Exercises](CE/Probability_CE2)
-
-&nbsp;
+* [Assignment](CE/Probability_CE1) [![Decoration](../img/key.png)](CE/KEY_Probability_CE)
 
 ----
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/lGuTfzOW78w) [33 mins] ... [*projection is the class example above*]
-
-<!----
-* [Old Lecture Slides](PPT/Probability_PPT_old.pptx)
---->
+* Exercises
+  * [Additional](CE/Probability_CE2)

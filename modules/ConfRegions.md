@@ -27,42 +27,36 @@ A major goal of inferential statistics is to estimate the value of a parameter f
   </div>
 </div>
 
-----
-
 ## Preparation for Class
 Use the resources below to answer [these questions](Prep/ConfRegions). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources I** (5 pages, 13 mins)
   * [![PDF](../img/pdf.png) Reading (Sections 13.1 & 13.2)](book/Confidence Regions.pdf)
-  * [![YouTube](../img/youtube.png) Introduction to Confidence Intervals](https://www.youtube.com/watch?v=27iSnzss2wM){:target="_blank"} [7 mins]
-  * [![YouTube](../img/youtube.png) Interpreting Confidence Intervals](https://www.youtube.com/watch?v=JYP6gc--sGQ){:target="_blank"} [6 mins]
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 1](https://youtu.be/7lguAsr1ebY) [91 mins]
+
 * **Primary Resources II** (7 pages, 6 mins)
   * [![PDF](../img/pdf.png) Reading (Sections 13.3 & 13.4)](book/Confidence Regions.pdf)
   * [![Web](../img/web.png) Construct a Confidence Region](Explanations/Calc_CI_Z)
-  * [![YouTube](../img/youtube.png) Confidence Interval Overview](https://www.youtube.com/watch?v=FUaXoKdCre4){:target="_blank"} [6 mins]
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 2]() [XX mins]
   * [![Web](../img/web.png) Calculate n Explanation](Explanations/Calc_n)
-* **Alternative Resources**
-    * [![YouTube Link](../img/youtube.png) Construct a Confidence Interval](https://www.youtube.com/watch?v=KG921rfbTDw){:target="_blank"} [10 mins] [**Skip from 7:49 to 8:28.**]
-    * [![YouTube Link](../img/youtube.png) Calculate n](https://www.youtube.com/watch?v=4-5pFrqJz9w){:target="_blank"} [2 mins]
 
 ----
 
 ## Practice
 
-* [Assignment I](CE/ConfRegions_CE1) ... [ANSWER KEY](CE/KEY_ConfRegions_CE1.html)
-* [Assignment II](CE/ConfRegions_CE2) ... [ANSWER KEY](CE/KEY_ConfRegions_CE2.html)
-* [Additional Exercises](CE/ConfRegions_CE3)
-* [Even More Exercises](CE/ConfRegions_CE4)
-
-&nbsp;
+* [Assignment I](CE/ConfRegions_CE1) [![Decoration](../img/key.png)](CE/KEY_ConfRegions_CE1.html)
+* [Assignment II](CE/ConfRegions_CE2) [![Decoration](../img/key.png)](CE/KEY_ConfRegions_CE2.html)
 
 ----
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 1](https://youtu.be/7lguAsr1ebY) [91 mins]
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 2]() [XX mins]
-
-<!----
-* [Old Lecture Slides](PPT/ConfRegions_PPT_old.pptx)
---->
+* Preparation Resources
+  * [![YouTube](../img/youtube.png) Introduction to Confidence Intervals](https://www.youtube.com/watch?v=27iSnzss2wM){:target="_blank"} [7 mins]
+  * [![YouTube Link](../img/youtube.png) Construct a Confidence Interval](https://www.youtube.com/watch?v=KG921rfbTDw){:target="_blank"} [10 mins] [**Skip from 7:49 to 8:28.**]
+  * [![YouTube](../img/youtube.png) Interpreting Confidence Intervals](https://www.youtube.com/watch?v=JYP6gc--sGQ){:target="_blank"} [6 mins]
+  * [![YouTube](../img/youtube.png) Confidence Interval Overview](https://www.youtube.com/watch?v=FUaXoKdCre4){:target="_blank"} [6 mins]
+  * [![YouTube Link](../img/youtube.png) Calculate n](https://www.youtube.com/watch?v=4-5pFrqJz9w){:target="_blank"} [2 mins]
+* Exercises
+  * [Additional](CE/ConfRegions_CE3)
+  * [Even More](CE/ConfRegions_CE4)
