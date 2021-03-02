@@ -32,21 +32,20 @@ It is important to understand the relationship between two variables.  With quan
 
 Use the resources below to answer [these questions](Prep/BEDAQuant). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (10 pages, 25 mins)
+* **Primary Resources** (10 pages, 36 mins)
   * [![PDF](../img/pdf.png) Reading](book/Bivariate EDA - Quantitative.pdf)
+  * [![Vimeo](../img/dhovid.png) Interpeting a Bivariate EDA (Quantitative)](https://vimeo.com/user45324800/beda-quantsum){:target="_blank"} [10 mins] ... [corresponding slides](PPT/BEDAQuant_PPT.pptx)
+  * [![YouTube](../img/dhovid.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/oryDVcM5gbs) [26 mins]
+    * Projection is [this example](CE/BEDAQuant_CExmpl) [![Decoration](../img/key.png)](CE/KEY_BEDAQuant_CExmpl)
+* **Secondary Resources**
   * [![YouTube Link](../img/youtube.png) Construct a Scatterplot](https://www.youtube.com/watch?v=yXmz922K9Ks){:target="_blank"} [7 mins]
   * [![YouTube Link](../img/youtube.png) What is the Correlation?](https://www.youtube.com/watch?v=PtYVrF_WT3A){:target="_blank"} [8 mins; *start at 0:32*]
-  * [![Vimeo](../img/dhovid.png) Interpeting a Bivariate EDA (Quantitative)](https://vimeo.com/user45324800/beda-quantsum){:target="_blank"} [10 mins] ... [corresponding slides](PPT/BEDAQuant_PPT.pptx)
-* **Secondary Resources**
-  * [![YouTube](../img/dhovid.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/oryDVcM5gbs) [26 mins]
-    * Projection is [this example](CE/BEDAQuant_CExmpl)
-    * [Here is an Annotated Key](CE/KEY_BEDAQuant_CExmpl)
 
 ----
 
 ## Practice
 
-* [Assignment](CE/BEDAQuant_CE1) ... [ANSWER KEY](CE/KEY_BEDAQuant_CE)
+* [Assignment](CE/BEDAQuant_CE1) [![Decoration](../img/key.png)](CE/KEY_BEDAQuant_CE)
 
 ----
 

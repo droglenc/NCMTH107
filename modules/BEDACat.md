@@ -31,19 +31,17 @@ It is important to understand the relationship between two variables.  With cate
 
 Use the resources below to answer [these questions](Prep/BEDACat). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (5 pages, 6 mins)
+* **Primary Resources** (5 pages, 25 mins)
   * [![PDF](../img/pdf.png) Reading](book/Bivariate EDA - Categorical.pdf)
-  * [![YouTube Link](../img/youtube.png) Percentage Tables](https://www.youtube.com/watch?v=k8xFH6fCIWs){:target="_blank"} [6 mins]
-* **Secondary Resources**
   * [![YouTube](../img/dhovid.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/puPcQS9UYOg) [25 mins]
-    * Projection is [this example](CE/BEDACat_CExmpl)
-    * [Here is an Annotated Key](CE/KEY_BEDACat_CE)
-
+    * Projection is [this example](CE/BEDACat_CExmpl) [![Decoration](../img/key.png)](CE/KEY_BEDACat_CE)
+* **Secondary Resources**
+  * [![YouTube Link](../img/youtube.png) Percentage Tables](https://www.youtube.com/watch?v=k8xFH6fCIWs){:target="_blank"} [6 mins]
 ----
 
 ## Practice
 
-* [Assignment](CE/BEDACat_CE1) ... [ANSWER KEY]
+* [Assignment](CE/BEDACat_CE1) [![Decoration](../img/key.png)](CE/KEY_BEDACat_CE)
 
 ----
 

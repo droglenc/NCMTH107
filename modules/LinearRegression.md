@@ -35,24 +35,23 @@ One of the most common things in statistics is to describe the linear relationsh
 
 Use the resources below to answer [these questions](Prep/LinearRegression). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (13 pages, 39 mins)
+* **Primary Resources** (13 pages, 73 mins)
   * [![PDF](../img/pdf.png) Reading](book/Linear Regression.pdf)
+  * [![Vimeo](../img/dhovid.png) R-Squared](https://vimeo.com/user45324800/slr-rsquared){:target="_blank"} [5 mins] ... [corresponding slides](PPT/LinearRegression_PPT2.pptx)
+  * [![Vimeo](../img/dhovid.png) Regression Questions](https://vimeo.com/user45324800/slr-questions){:target="_blank"} [10 mins] ... [corresponding slides](PPT/LinearRegression_PPT3.pptx)
+  * [![Vimeo](../img/dhovid.png) Assumptions](https://vimeo.com/user45324800/slr-assumptions){:target="_blank"} [3 mins] ... [corresponding slides](PPT/LinearRegression_PPT.pptx)
+  * [![YouTube](../img/dhovid.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/8TYH2f9iZZY) [55 mins]
+    * Projection is [this example](CE/LinearRegression_CExmpl) [![Decoration](../img/key.png)](CE/KEY_LinearRegression_CExmpl)
+* **Secondary Resources**
   * [![YouTube Link](../img/youtube.png) Response and Explanatory Variables I](https://www.youtube.com/watch?v=bokeTCH2aJY){:target="_blank"} [1 min; *between 1:00 and 2:28*]
   * [![YouTube Link](../img/youtube.png) Response and Explanatory Variables II](https://www.youtube.com/watch?v=bokeTCH2aJY?rel=0&start=378){:target="_blank"} [6 mins; *stop at 6:18*]
   * [![YouTube Link](../img/youtube.png) Introduction to Regression](https://www.youtube.com/watch?v=k_OB1tWX9PM){:target="_blank"} [14 mins]
-  * [![Vimeo](../img/dhovid.png) R-Squared](https://vimeo.com/user45324800/slr-rsquared){:target="_blank"} [5 mins]  [![PowerPoint](../img/ppt.png)](PPT/LinearRegression_PPT2.pptx)
-  * [![Vimeo](../img/dhovid.png) Regression Questions](https://vimeo.com/user45324800/slr-questions){:target="_blank"} [10 mins]  [![PowerPoint](../img/ppt.png)](PPT/LinearRegression_PPT3.pptx)
-  * [![Vimeo](../img/dhovid.png) Assumptions](https://vimeo.com/user45324800/slr-assumptions){:target="_blank"} [3 mins]  [![PowerPoint](../img/ppt.png)](PPT/LinearRegression_PPT.pptx)
-* **Secondary Resources**
-  * [![YouTube](../img/dhovid.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/8TYH2f9iZZY) [55 mins]
-    * Projection is [this example](CE/LinearRegression_CExmpl)
-    * [Here is an Annotated Key](CE/KEY_LinearRegression_CExmpl)
 
 ----
 
 ## Practice
 
-* [Assignment](CE/LinearRegression_CE1) ... [ANSWER KEY](CE/KEY_LinearRegression_CE)
+* [Assignment](CE/LinearRegression_CE1) [![Decoration](../img/key.png)](CE/KEY_LinearRegression_CE)
 
 ----
 
