@@ -36,7 +36,7 @@ In Teams, follow these steps to join the MTH207 team.
 ![MSTeams Join](zimgs/MSTeams_JoinCode.JPG)
 
 {:start="4"}
-1. Press the "Join team" button in that tile (it will appear when the code is entered). You should then be part of the Team and it should look similar to the screen below.
+1. Press the "Join team" button in that tile (it will appear when the code is entered). You should then be part of the Team and it should look similar to the screen below (the name may be slightly different; e.g., different date).
 
 ![MSTeams Landing](zimgs/MSTeams_LandingPage.JPG)
 
@@ -60,7 +60,7 @@ You can also contribute to previous conversation by replying to previous message
 
 I have Teams organized so that I will get notified when you post a question. Thus, I hope that this will be an efficient way to ask me questions outside of class and a way so that other students can learn from the answers.
 
-For "official" help hours, I will open up a meeting at the appointed time (see the syllabus). When you go to the "Office Hours" channel you will see a banner that will give you an option to "Join" the ongoing meeting.
+For "official" help hours, I will open up a meeting at the appointed time (see the syllabus). When you go to the "Help Hours" channel you will see a banner that will give you an option to "Join" the ongoing meeting (the meeting name may be different).
 
 ![MSTeams Join Meeting](zimgs/MSTeams_JoinMeeting.JPG)
 
