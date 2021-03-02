@@ -30,8 +30,6 @@ As with most areas of study, Statistics requires an understanding of key foundat
   </div>
 </div>
 
-----
-
 ## Preparation for Class
 
 Use the resources below to answer [these questions](Prep/FoundationalDefns). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
@@ -42,23 +40,20 @@ Use the resources below to answer [these questions](Prep/FoundationalDefns). [[*
   * [![Vimeo](../img/dhovid.png) Variable Types](https://vimeo.com/user45324800/ncstats-vartypes){:target="_blank"} [5 mins] ... [corresponding slides](PPT/FoundationalDefns_PPT2.pptx)
 * **Alternative Resources**
   * [![YouTube Link](../img/youtube.png) Definitions](https://youtu.be/MXaJ7sa7q-8?t=67){:target="_blank"} [4 mins; start at 1:07]
-  
+
+* **Secondary Resources** 
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/_VTmDXWfrW4) [29 mins]
+
 ----
 
 ## Practice
 
 * [Assignment](CE/FoundationalDefns_CE1) ... [ANSWER KEY](CE/KEY_FoundationalDefns_CE)
-* [Additional Exercises](CE/FoundationalDefns_CE2)
-* [Even More Exercises](CE/FoundationalDefns_CE3)
-
-&nbsp;
 
 ----
 
-## Archived Materials
+## Archive
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/_VTmDXWfrW4) [29 mins]
-
-<!---
+* [Additional Exercises](CE/FoundationalDefns_CE2)
+* [Even More Exercises](CE/FoundationalDefns_CE3)
 * [Old Lecture Slides](PPT/FoundationalDefns_PPT_old.pptx)
---->
