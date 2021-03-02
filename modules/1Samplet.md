@@ -26,34 +26,26 @@ css: /css/modules.css
   </div>
 </div>
 
-----
-
 ## Preparation for Class
 
 Use the resources below to answer [these questions](Prep/1Samplet). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (5 pages, 24 mins)
+* **Primary Resources** (5 pages, 77 mins)
   * [![PDF](../img/pdf.png) Reading](book/1-Sample t-Test.pdf)
   * [![Vimeo](../img/dhovid.png) t Distribution](https://vimeo.com/user45324800/tdist){:target="_blank"} [4 mins] [corresonding slides](PPT/1Samplet_PPT1.pptx)
   * [![Vimeo](../img/dhovid.png) t Distributions in R](https://vimeo.com/user45324800/tdistribution){:target="_blank"} [8 mins] ... [corresponding script](HO/1Samplet_RHO.html){:target="_blank"}
-  * [![Vimeo](../img/dhovid.png) 1-Sample t-Test Example](https://vimeo.com/user45324800/t1test-ex1){:target="_blank"} [12 mins] [corresonding slides](PPT/1Samplet_PPT2.pptx)
-
+  * [![Vimeo](../img/dhovid.png) 1-Sample t-Test Example](https://vimeo.com/user45324800/t1test-ex1){:target="_blank"} [12 mins] ... [corresonding slides](PPT/1Samplet_PPT2.pptx)
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/f1NMb9xmeRE) [53 mins]
+    * Projection is [this example](CE/1Samplet_CExmpl) [![Decoration](../img/key.png)](CE/KEY_1Samplet_CExmpl)
 ----
 
 ## Practice
 
-* [Class Example](CE/1Samplet_CExmpl) ... [ANNOTATED KEY](CE/KEY_1Samplet_CExmpl)
-* [Assignment](CE/1Samplet_CE1) ... [ANSWER KEY](CE/KEY_1Samplet_CE)
-* [Additional Exercises](CE/1Samplet_CE2)
-
-&nbsp;
+* [Assignment](CE/1Samplet_CE1) [![Decoration](../img/key.png)](CE/KEY_1Samplet_CE)
 
 ----
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/f1NMb9xmeRE) [53 mins] ... [*projection is the class example above*]
-
-<!----
-* [Old Lecture Slides](PPT/1Samplet_PPT_old.pptx)
---->
+* Exercises
+  * [Additional](CE/1Samplet_CE2)

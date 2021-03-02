@@ -30,11 +30,11 @@ A major goal of inferential statistics is to estimate the value of a parameter f
 ## Preparation for Class
 Use the resources below to answer [these questions](Prep/ConfRegions). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources I** (5 pages, 13 mins)
+* **Primary Resources I** (5 pages, 91 mins)
   * [![PDF](../img/pdf.png) Reading (Sections 13.1 & 13.2)](book/Confidence Regions.pdf)
   * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 1](https://youtu.be/7lguAsr1ebY) [91 mins]
 
-* **Primary Resources II** (7 pages, 6 mins)
+* **Primary Resources II** (7 pages, XX mins)
   * [![PDF](../img/pdf.png) Reading (Sections 13.3 & 13.4)](book/Confidence Regions.pdf)
   * [![Web](../img/web.png) Construct a Confidence Region](Explanations/Calc_CI_Z)
   * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 2]() [XX mins]

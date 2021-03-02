@@ -25,35 +25,29 @@ css: /css/modules.css
   </div>
 </div>
 
-----
-
 ## Preparation for Class
 
 Use the resources below to answer [these questions](Prep/ChiSquare). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (6 pages, 26 mins)
+* **Primary Resources** (6 pages, 86 mins)
   * [![PDF](../img/pdf.png) Reading](book/Chi-Square Test.pdf)
   * [![Vimeo](../img/dhovid.png) Chi-Square Distribution](https://vimeo.com/user45324800/chisqdist){:target="_blank"} [4 mins] ... [corresponding slides](PPT/ChiSquare_PPT1.pptx)
   * [![Vimeo](../img/dhovid.png) Chi-Square Distribution in R](https://vimeo.com/user45324800/chisqdistribution){:target="_blank"} [2 mins] ... [corresonding script](HO/ChiSquare_RHO1.html){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Where Do Expected Values Come From?](https://vimeo.com/user45324800/chisqtest-expvals){:target="_blank"} [5 mins] ... [corresponding slides](PPT/ChiSquare_PPT2.pptx)
   * [![Vimeo](../img/dhovid.png) Chi-Square Test Example](https://vimeo.com/438596427){:target="_blank"} [15 mins] ... [corresponding slides](PPT/ChiSquare_PPT2.pptx)
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/klb-lhGIlCQ) [60 mins]
+    * Projection is [this example](CE/ChiSquare_CExmpl) [![Decoration](../img/key.png)](CE/KEY_ChiSquare_CExmpl)
 
 ----
 
 ## Practice
 
-* [Class Example](CE/ChiSquare_CExmpl) ... [ANNOTATED KEY](CE/KEY_ChiSquare_CExmpl)
-* [Assignment](CE/ChiSquare_CE1) ... [ANSWER KEY](CE/KEY_ChiSquare_CE)
-* [Additional Exercises](CE/ChiSquare_CE2)
-
-&nbsp;
+* [Assignment](CE/ChiSquare_CE1) [![Decoration](../img/key.png)](CE/KEY_ChiSquare_CE)
 
 ----
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/klb-lhGIlCQ) [60 mins] ... [*projection is the class example above*]
+* Exercises
+  * [Additional](CE/ChiSquare_CE2)
 
-<!----
-* [Old Lecture Slides](PPT/ChiSquare_PPT_old.pptx)
---->

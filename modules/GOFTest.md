@@ -25,32 +25,26 @@ css: /css/modules.css
   </div>
 </div>
 
-----
-
 ## Preparation for Class
 
 Use the resources below to answer [these questions](Prep/GOFTest). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (6 pages, 8 mins)
+* **Primary Resources** (6 pages, 57 mins)
   * [![PDF](../img/pdf.png) Reading](book/Goodness-of-Fit.pdf)
   * [![Vimeo](../img/dhovid.png) Goodness-of-Fit Test Example](https://vimeo.com/user45324800/goftest-ex1){:target="_blank"} [8 mins] ... [corresonding slides](PPT/GOFTest_PPT.pptx)
-
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/sS3hhJU4FNA) [49 mins]
+    * Projection is [this example](CE/GOFTest_CExmpl) [![Decoration](../img/key.png)](CE/KEY_GOFTest_CExmpl)
+    
 ----
 
 ## Practice
 
-* [Class Example](CE/GOFTest_CExmpl) ... [ANNOTATED KEY](CE/KEY_GOFTest_CExmpl)
-* [Assignment](CE/GOFTest_CE1) ... [ANSWER KEY](CE/KEY_GOFTest_CE)
-* [Additional Exercises](CE/GOFTest_CE2)
-
-&nbsp;
+* [Assignment](CE/GOFTest_CE1) [![Decoration](../img/key.png)](CE/KEY_GOFTest_CE)
 
 ----
 
-## Archived Materials
+## Archive
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/sS3hhJU4FNA) [49 mins] ... [*projection is the class example above*]
+* Exercises
+  * [Additional](CE/GOFTest_CE2)
 
-<!----
-* [Old Lecture Slides](PPT/GOFTest_PPT_old.pptx)
---->

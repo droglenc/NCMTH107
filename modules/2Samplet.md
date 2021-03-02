@@ -26,32 +26,24 @@ css: /css/modules.css
   </div>
 </div>
 
-----
-
 ## Preparation for Class
 
 Use the resources below to answer [these questions](Prep/2Samplet). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (5 pages, 22 mins)
+* **Primary Resources** (5 pages, 102 mins)
   * [![PDF](../img/pdf.png) Reading](book/2-Sample t-Test.pdf)
   * [![Vimeo](../img/dhovid.png) 2-Sample t-Test Example](https://vimeo.com/user45324800/t2test-ex1){:target="_blank"} [22 mins] ... [corresponding slides](PPT/2Samplet_PPT.pptx)
-
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/j5HZWeh8dfE) [80 mins]
+    * Projection is [this example](CE/2Samplet_CExmpl) [![Decoration](../img/key.png)](CE/KEY_2Samplet_CExmpl)
 ----
 
 ## Practice
 
-* [Class Example](CE/2Samplet_CExmpl) ... [ANNOTATED KEY](CE/KEY_2Samplet_CExmpl) 
-* [Assignment](CE/2Samplet_CE1) ... [ANSWER KEY](CE/KEY_2Samplet_CE)
-* [Additional Exercises](CE/2Samplet_CE2)
-
-&nbsp;
+* [Assignment](CE/2Samplet_CE1) [![Decoration](../img/key.png)](CE/KEY_2Samplet_CE)
 
 ----
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/j5HZWeh8dfE) [80 mins] ... [*projection is the class example above*]
-
-<!----
-* [Old Lecture Slides](PPT/2Samplet_PPT_old.pptx)
---->
+* Exercises
+  * [Additional](CE/2Samplet_CE2)

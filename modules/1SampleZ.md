@@ -26,37 +26,31 @@ The simplest hypothesis test occurs when one is making a claim that the populati
   </div>
 </div>
 
-----
-
 ## Preparation for Class
 
 Use the resources below to answer [these questions](Prep/1SampleZ). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (5 pages, 17 mins)
+* **Primary Resources** (5 pages, 63 mins)
   * [![PDF](../img/pdf.png) Reading](book/1-Sample Z-Test.pdf)
   * [![Vimeo](../img/dhovid.png) 11 Steps for Any Hypothesis Test](https://vimeo.com/user45324800/hotest-11steps){:target="_blank"} [5 mins] ... [corresponding slides](PPT/1SampleZ_PPT1.pptx)
   * [![Vimeo](../img/dhovid.png) 1-Sample Z-Test Example](https://vimeo.com/user45324800/ztest-ex1){:target="_blank"} [12 mins] ... [corresponding slides](PPT/1SampleZ_PPT2.pptx)
   * [![Web](../img/web.png) Difference between Z and Z*](Explanations/Diff_Z_and_Zstar)
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/G6LxDP1KOjk) [46 mins]
+    * Projection is [this example](CE/1SampleZ_CExmpl) [![Decoration](../img/key.png)](CE/KEY_1SampleZ_CExmpl)
 
 ----
 
 ## Practice
 
-* [Class Example](CE/1SampleZ_CExmpl) ... [ANNOTATED KEY](CE/KEY_1SampleZ_CExmpl)
-* [Assignment](CE/1SampleZ_CE1) ... [ANSWER KEY](CE/KEY_1SampleZ_CE)
-* [Additional Exercises](CE/1SampleZ_CE2)
-
-&nbsp;
+* [Assignment](CE/1SampleZ_CE1) [![Decoration](../img/key.png)](CE/KEY_1SampleZ_CE)
 
 ----
 
 ## Archived Materials
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/G6LxDP1KOjk) [46 mins] ... [*projection is the class example above*]
-* [![YouTube](../img/youtube.png) Fall 2020A In-Class "Review Lecture"](https://youtu.be/1CY0oVDvFmk) [60 mins] ... [*projection is the class example above*]
+* Preparation Resources
+  * [![YouTube](../img/youtube.png) Fall 2020A In-Class "Review Lecture"](https://youtu.be/1CY0oVDvFmk) [60 mins]
+    * Projection is [this example](CE/1SampleZ_CExmpl) [![Decoration](../img/key.png)](CE/KEY_1SampleZ_CExmpl)
+* Exercises
+  * [Additional](CE/1SampleZ_CE2)
 
-<!----
-* [Old Lecture Slides](PPT/1SampleZ_PPT_old.pptx)
-* [![Vimeo](../img/dhovid.png) 1-Sample Z-test in R](https://vimeo.com/user45324800/ztest){:target="_blank"} [6 mins] [![Web](../img/web.png)](HO/1SampleZ_RHO.html){:target="_blank"}  [![R](../img/Rlogo.png)](HO/1SampleZ_RHO.R){:target="_blank"}
-
---->
