@@ -35,25 +35,25 @@ Statistical analyses rely on data and that data must be properly produced (or co
 
 Use the resources below to answer [these questions](Prep/DataProduction). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (9 pages, 40 mins)
+* **Primary Resources** (9 pages, 49 mins)
   * [![PDF](../img/pdf.png) Reading](book/Data Production.pdf)
+  * [![Vimeo](../img/dhovid.png) Types of Observational Studies](https://vimeo.com/user45324800/observationaltypes){:target="_blank"} [3 mins] ... [corresponding slides](PPT/DataProduction_PPT.pptx)
+  * [![Vimeo](../img/dhovid.png) Definitions in Experimental Design](https://vimeo.com/user45324800/experimentdefns){:target="_blank"} [4 mins] ... [corresponding slides](PPT/DataProduction_PPT.pptx)
+  * [![YouTube](../img/dhovid.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/ZTS_lYGR6Z0) [42 mins]
+* **Secondary Resources**
   * [![YouTube](../img/youtube.png) Types of Studies](https://www.youtube.com/watch?v=qksFkFh2ezo){:target="_blank"} [8 mins *from 7:36 to 15:58*]
   * [![YouTube](../img/youtube.png) Types of Conclusions](https://www.youtube.com/watch?v=5zkg1w5zoQ0){:target="_blank"} [3 mins *start at 26:37*]
-  * [![Vimeo](../img/dhovid.png) Types of Observational Studies](https://vimeo.com/user45324800/observationaltypes){:target="_blank"} [3 mins] ... [corresponding slides](PPT/DataProduction_PPT.pptx)
   * [![YouTube](../img/youtube.png) Sample Design](https://www.youtube.com/watch?v=5zkg1w5zoQ0){:target="_blank"} [9 mins *from 0:20 to 9:40*]
   * [![YouTube](../img/youtube.png) Experimental Design](https://www.youtube.com/watch?v=v-xnPVCi9wM){:target="_blank"} [7 mins *from 1:21 to 8:47*]
-  * [![Vimeo](../img/dhovid.png) Definitions in Experimental Design](https://vimeo.com/user45324800/experimentdefns){:target="_blank"} [4 mins] ... [corresponding slides](PPT/DataProduction_PPT.pptx)
   * [![YouTube](../img/youtube.png) Response/Explanatory Variables I](https://www.youtube.com/watch?v=bokeTCH2aJY){:target="_blank"} [1 min *from 1:00 to 2:28*]
   * [![YouTube](../img/youtube.png) Response/Explanatory Variables II](https://www.youtube.com/watch?v=DAH8DyLXdjM){:target="_blank"} [2 mins *from 0:32 to 2:34*]
   * [![Vimeo](../img/dhovid.png) Randomization in R](https://vimeo.com/user45324800/random-numbers){:target="_blank"} [3 mins] ... [corresponding resource](HO/DataProduction_RHO.R){:target="_blank"}
-* **Secondary Resources**
-  * [![YouTube](../img/dhovid.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/ZTS_lYGR6Z0) [42 mins]
 
 ----
 
 ## Practice
 
-* [Assignment](CE/DataProduction_CE1) ... [ANSWER KEY](CE/KEY_DataProduction_CE)
+* [Assignment](CE/DataProduction_CE1) [![Decoration](../img/key.png)](CE/KEY_DataProduction_CE)
 
 ----
 
