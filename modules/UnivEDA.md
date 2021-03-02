@@ -26,8 +26,6 @@ It is important to understand the distribution of individuals for a single varia
   </div>
 </div>
 
-----
-
 ## Preparation for Class
 
 Use the resources below to answer [these questions](Prep/UnivEDA). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
@@ -36,23 +34,20 @@ Use the resources below to answer [these questions](Prep/UnivEDA). [[*Problems w
   * [![PDF](../img/pdf.png) Reading](book/Univariate EDA.pdf)
   * [![Vimeo](../img/dhovid.png) Interpreting a Univariate EDA (Quantitative)](https://vimeo.com/user45324800/ueda-quantsum){:target="_blank"} [11 mins] ... [corresponding slides](PPT/UEDAQuant_PPT.pptx)
   * [![Vimeo](../img/dhovid.png) Interpreting a Univariate EDA (Categorical)](https://vimeo.com/user45324800/ueda-catsum){:target="_blank"} [2 mins] ... [corresponding slides](PPT/UEDACat_PPT.pptx)
+* **Secondary Resources**
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/noW3XtUvkSs) [39 mins]
+    * Projection is [this example](CE/UnivEDA_CExmpl)
+    * [Here is an Annotated Key](CE/KEY_UnivEDA_CExmpl)
 
 ----
 
 ## Practice
 
-* [Class Example](CE/UnivEDA_CExmpl) ... [ANNOTATED KEY](CE/KEY_UnivEDA_CExmpl)
 * [Assignment](CE/UnivEDA_CE1) ... [ANSWER KEY](CE/KEY_UnivEDA_CE)
-* [Additional Exercises](CE/UnivEDA_CE2)
-
-&nbsp;
 
 ----
 
-## Archived Materials
+## Archive
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/noW3XtUvkSs) [39 mins] ... [*projection is the class example above*]
-
-<!---
-* [Old Lecture Slides](PPT/UEDAQuant_PPT_old.pptx)
---->
+* Exercises
+  * [Additional](CE/UnivEDA_CE2)

@@ -27,8 +27,6 @@ It is important to understand the relationship between two variables.  With cate
   </div>
 </div>
 
-----
-
 ## Preparation for Class
 
 Use the resources below to answer [these questions](Prep/BEDACat). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
@@ -36,23 +34,20 @@ Use the resources below to answer [these questions](Prep/BEDACat). [[*Problems w
 * **Primary Resources** (5 pages, 6 mins)
   * [![PDF](../img/pdf.png) Reading](book/Bivariate EDA - Categorical.pdf)
   * [![YouTube Link](../img/youtube.png) Percentage Tables](https://www.youtube.com/watch?v=k8xFH6fCIWs){:target="_blank"} [6 mins]
+* **Secondary Resources**
+  * [![YouTube](../img/dhovid.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/puPcQS9UYOg) [25 mins]
+    * Projection is [this example](CE/BEDACat_CExmpl)
+    * [Here is an Annotated Key](CE/KEY_BEDACat_CE)
 
 ----
 
 ## Practice
 
-* [Class Example](CE/BEDACat_CExmpl) ... [ANNOTATED KEY](CE/KEY_BEDACat_CExmpl)
-* [Assignment](CE/BEDACat_CE1) ... [ANSWER KEY](CE/KEY_BEDACat_CE)
-* [Additional Exercises](CE/BEDACat_CE2)
-
-&nbsp;
+* [Assignment](CE/BEDACat_CE1) ... [ANSWER KEY]
 
 ----
 
-## Archived Materials
+## Archive
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/puPcQS9UYOg) [25 mins] ... [*projection is the class example above*]
-
-<!----
-* [Old Lecture Slides](PPT/BEDACat_PPT_old.pptx)
---->
+* Exercises
+  * [Additional](CE/BEDACat_CE2)

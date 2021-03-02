@@ -30,8 +30,6 @@ Many natural phenomena can be closely approximated by simple statistical distrib
   </div>
 </div>
 
-----
-
 ## Preparation for Class
 
 Use the resources below to answer [these questions](Prep/NormalDist). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
@@ -43,33 +41,27 @@ Use the resources below to answer [these questions](Prep/NormalDist). [[*Problem
   * [![Vimeo](../img/dhovid.png) Types of Calculations (Forward & Reverse)](https://vimeo.com/user45324800/normcalctypes){:target="_blank"} [4 mins] ... [corresponding slides](PPT/NormalDist_PPT2.pptx)
   * [![Vimeo](../img/dhovid.png) Forward Calculations in R](https://vimeo.com/user45324800/normdist-forward){:target="_blank"} [6 mins]
   * [![Vimeo](../img/dhovid.png) Reverse Calculations in R](https://vimeo.com/user45324800/normdist-reverse){:target="_blank"} [6 mins]
-* **Alternative Resources**
-  * [![YouTube Link](../img/youtube.png) 68-95-99.7 Rule](https://www.youtube.com/watch?v=cgxPcdPbujI){:target="_blank"} [8 mins]
+* **Secondary Resources**
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 1](https://youtu.be/eDNnRqMEZyM) [37 mins]
+    * Projection is [this example](CE/NormalDist1_CExmpl)
+    * [Here is an Annotated Key](CE/KEY_NormalDist1_CExmpl)
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 2](https://youtu.be/7hqEEZjaya8) [29 mins]
+    * Projection is [this example](CE/NormalDist2_CExmpl)
+    * [Here is an Annotated Key](CE/KEY_NormalDist2_CExmpl)
+
 
 ----
 
 ## Practice
 
-* [Class Example I](CE/NormalDist1_CExmpl) ... [ANNOTATED KEY](CE/KEY_NormalDist1_CExmpl)
 * [Assignment I](CE/NormalDist_CE1) ... [ANSWER KEY](CE/KEY_NormalDist_CE1)
-
-* [Class Example II](CE/NormalDist2_CExmpl) ... [ANNOTATED KEY](CE/KEY_NormalDist2_CExmpl)
 * [Assignment II](CE/NormalDist_CE2) ... [ANSWER KEY](CE/KEY_NormalDist_CE2)
-
-* [Additional Exercises I](CE/NormalDist_CE4)
-* [Additional Exercises II](CE/NormalDist_CE3)
-
-&nbsp;
 
 ----
 
-## Archived Materials
+## Archive
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 1](https://youtu.be/eDNnRqMEZyM) [37 mins] ... [*projection is the class example I above*]
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 2](https://youtu.be/7hqEEZjaya8) [29 mins] ... [*projection is the class example II above*]
-
-<!---
-* Review Exercises: [Simple Areas](RE/NormalDist_RevEx)
-* [Old Lecture Slides](PPT/NormalDist_PPT_old.pptx)
-
---->
+* Preparation Resources
+  * [![YouTube Link](../img/youtube.png) 68-95-99.7 Rule](https://www.youtube.com/watch?v=cgxPcdPbujI){:target="_blank"} [8 mins]* * Exercises
+  * [Additional I](CE/NormalDist_CE4)
+  * [Additional II](CE/NormalDist_CE3)

@@ -28,8 +28,6 @@ It is important to understand the relationship between two variables.  With quan
   </div>
 </div>
 
-----
-
 ## Preparation for Class
 
 Use the resources below to answer [these questions](Prep/BEDAQuant). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
@@ -39,24 +37,20 @@ Use the resources below to answer [these questions](Prep/BEDAQuant). [[*Problems
   * [![YouTube Link](../img/youtube.png) Construct a Scatterplot](https://www.youtube.com/watch?v=yXmz922K9Ks){:target="_blank"} [7 mins]
   * [![YouTube Link](../img/youtube.png) What is the Correlation?](https://www.youtube.com/watch?v=PtYVrF_WT3A){:target="_blank"} [8 mins; *start at 0:32*]
   * [![Vimeo](../img/dhovid.png) Interpeting a Bivariate EDA (Quantitative)](https://vimeo.com/user45324800/beda-quantsum){:target="_blank"} [10 mins] ... [corresponding slides](PPT/BEDAQuant_PPT.pptx)
+* **Secondary Resources**
+  * [![YouTube](../img/dhovid.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/oryDVcM5gbs) [26 mins]
+    * Projection is [this example](CE/BEDAQuant_CExmpl)
+    * [Here is an Annotated Key](CE/KEY_BEDAQuant_CExmpl)
 
 ----
 
 ## Practice
 
-* [Class Example](CE/BEDAQuant_CExmpl) ... [ANNOTATED KEY](CE/KEY_BEDAQuant_CExmpl)
 * [Assignment](CE/BEDAQuant_CE1) ... [ANSWER KEY](CE/KEY_BEDAQuant_CE)
-* [Additional Exercises](CE/BEDAQuant_CE2)
-
-&nbsp;
 
 ----
 
-## Archived Materials
+## Archive
 
-* [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/oryDVcM5gbs) [26 mins] ... [*projection is the class example above*]
-
-<!----
-* Review Exercises: [Definitions and Calculations](RE/BEDAQuant_RevEx_Defns)
-* [Old Lecture Slides](PPT/BEDAQuant_PPT_old.pptx)
---->
+* Exercises
+  * [Additional](CE/BEDAQuant_CE2)
