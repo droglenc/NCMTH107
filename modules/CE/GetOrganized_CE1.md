@@ -11,14 +11,14 @@ css: "/css/modules.css"
 
 <br>
 
-## Goals
-What are your goals for this introductory statistics course? You should list at least three and they should be written with complete sentences.
-
-<br>
-
 ## Calculation
 Calculate the average of the five numbers below. Show all of your work.
 
 ```
 13  18  22  7  8
 ```
+
+<br>
+
+## Goals
+What are your goals for this introductory statistics course? You should list at least three and they should be written with complete sentences.
