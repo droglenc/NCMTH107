@@ -35,22 +35,22 @@ It is important to understand the distribution of individuals for a single varia
 
 Use the resources below to answer [these questions](Prep/UnivSum). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (10 pages, 41 mins)
+* **Primary Resources** (10 pages, 33 mins)
   * [![PDF](../img/pdf.png) Reading](book/Univariate Summaries.pdf)
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/ujKhomKdwGg) [33 mins]
+* **Secondary Resources**
   * [![YouTube](../img/youtube.png) Calculate Median and IQR](https://www.youtube.com/watch?v=F3WcEAW-M80){:target="_blank"} [15 mins]
   * [![YouTube](../img/youtube.png) Calculate Standard Deviation](https://www.youtube.com/watch?v=qqOyy_NjflU){:target="_blank"} [5 mins]
   * [![YouTube](../img/youtube.png) Construct a Histogram](https://www.youtube.com/watch?v=sC7gjg9g3JU){:target="_blank"} [13 mins]
   * [![YouTube](../img/youtube.png) Frequency Table](https://www.youtube.com/watch?v=LVnzV1ZXdiY){:target="_blank"} [2 mins]
   * [![YouTube](../img/youtube.png) Construct a Barplot](https://www.youtube.com/watch?v=FYFYrjMLG7E){:target="_blank"} [3 mins]
   * [![Vimeo](../img/dhovid.png) Quick Rant about Pie and 3-D Charts](https://vimeo.com/user45324800/ueda-badplotrant){:target="_blank"} [3 mins] ...  [corresponding slides](PPT/UEDACat_PPT2.pptx)
-* **Secondary Resources**
-  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/ujKhomKdwGg) [33 mins]
 
 ----
 
 ## Practice
 
-* [Assignment](CE/UnivSum_CE1) ... [ANSWER KEY](CE/KEY_UnivSum_CE)
+* [Assignment](CE/UnivSum_CE1) [![Decoration](../img/key.png)](CE/KEY_UnivSum_CE)
 
 ----
 
