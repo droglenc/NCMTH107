@@ -37,6 +37,7 @@ Use the resources below to answer [these questions](Prep/RData). [[*Problems wit
   * [![Vimeo](../img/dhovid.png) Load CSV File into RStudio](https://vimeo.com/439307575){:target="_blank"} [11 mins] ... [corresponding resource](HO/Penguins.html#RData){:target="_blank"}
   * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/jAbjmXb-MS8) [73 mins]
     * Projection is [this example](CE/RData_CExmpl) [![Decoration](../img/key.png)](CE/KEY_RData_CExmpl)
+
 ----
 
 ## Practice

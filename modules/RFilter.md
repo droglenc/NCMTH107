@@ -30,7 +30,7 @@ Use the resources below to answer [these questions](Prep/RFilter). [[*Problems w
 * **Primary Resources** (~3 pages, 64 mins)
   * [Reading](bookR/RFilter.html)
   * [![Vimeo](../img/dhovid.png) Subset data.frame with filterD](https://vimeo.com/439447290){:target="_blank"} [11 mins] ... [corresponding resource](HO/Penguins.html#RFilter){:target="_blank"}
-  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/cWKqQchaKR4) [53 mins] ... [*projection is the class example above*]
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/cWKqQchaKR4) [53 mins]
     * Projection is [this example](CE/RFilter_CExmpl) [![Decoration](../img/key.png)](CE/KEY_RFilter_CExmpl)
 
 ----
