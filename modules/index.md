@@ -15,7 +15,8 @@ title: Learning Modules
     <ol type="1" start="4">
       <li><a href="UnivSum.html">Univariate Summaries</a></li>
       <li><a href="UnivEDA.html">Univariate EDA</a></li>
-      <li><a href="NormalDist.html">Normal Distributions</a></li>
+      <li><a href="NormalDist1.html">Normal Distributions - Introduction</a></li>
+      <li><a href="NormalDist2.html">Normal Distributions - Calculations</a></li>
       <li><a href="BEDAQuant.html">Bivariate EDA - Quantitative</a></li>
       <li><a href="LinearRegression.html">Linear Regression</a></li>
       <li><a href="BEDACat.html">Bivariate EDA - Categorical</a></li>
