@@ -36,7 +36,7 @@ It is important to understand the distribution of individuals for a single varia
 Use the resources below to answer [these questions](Prep/UnivSum). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (10 pages, 33 mins)
-  * [![PDF](../img/pdf.png) Reading](book/Univariate Summaries.pdf)
+  * [Reading](http://derekogle.com/Book107/UnivSum.html)
   * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/ujKhomKdwGg) [33 mins]
 * **Secondary Resources**
   * [![YouTube](../img/youtube.png) Calculate Median and IQR](https://www.youtube.com/watch?v=F3WcEAW-M80){:target="_blank"} [15 mins]

@@ -1,10 +1,88 @@
 ---
 layout: page
 title: Additional Exercises
-subtitle: Normal Distributions
+subtitle: Normal Distributions Introduction
 author: Derek H. Ogle
 css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: false
+    lib_dir: zlibs
 ---
+
+```{r echo=FALSE, eval=FALSE}
+# Renders an appropriate HTML file for the webpage
+setwd("C:/aaaWork/Web/GitHub/NCMTH107/modules/CE/")
+source("../../rhelpers/rhelpers.R")
+modHTML("NormalDist1_CE2")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE}
+source("../../rhelpers/knitr_setup.R")
+library(ggplot2)
+```
+
+&nbsp;
+
+1. **General Understanding**
+    1. [Normal Distribution Characteristics II](#normal-distribution-characteristics-ii)
+    1. [Normal Distribution Characteristics III](#normal-distribution-characteristics-iiI)
+    1. [Normal Distribution Characteristics IV](#normal-distribution-characteristics-iv)
+    1. [68-95-99.7 (Empirical) Rule](#68-95-997-empirical-rule)
+    1. [Hand Calculations II](#hand-calculations-ii)
+
+----
+
+# General Understanding
+## Normal Distribution Characteristics II
+For each situation below, (i) identify &mu;, (ii) identify &sigma;, and (iii) draw the normal distribution with an approximately accurate scale on the x-axis.
+1. Z~N(0,1)
+1. Y~N(90,8)
+
+
+----
+
+## Normal Distribution Characteristics III
+
+Identify the mean and standard deviation for each population on the graph below (HINT: "eyeball" integers).
+
+```{r NormDistGuess1, echo=FALSE, fig.width=3.5, fig.height=3.5}
+x <- seq(-5,7,length.out=500)
+B <- dnorm(x,-1,1)
+A <- dnorm(x,1,2)
+df <- data.frame(x=rep(x,2),y=c(A,B),grp=rep(c("A","B"),each=500))
+ggplot(data=df,mapping=aes(x=x,y=y,color=grp,fill=grp)) +
+  geom_line(size=1.5) +
+  scale_y_continuous(expand=expansion(mult=c(0,0.01))) +
+  scale_x_continuous(expand=expansion(mult=0),breaks=seq(-5,7.5,1)) +
+  annotate(geom="text",x=c(-1.7,2),y=c(0.38,0.2),label=c("A","B"),size=5) +
+  theme_bw() +
+  theme(legend.position="none",
+        axis.title.y=element_blank(),axis.text.y=element_blank())
+```
+
+----
+
+## Normal Distribution Characteristics IV
+
+Identify the mean and standard deviation for each population on the graph below (HINT: "eyeball" integers).
+
+```{r NormDistGuess2, echo=FALSE, fig.width=3.5, fig.height=3.5}
+x <- seq(-20,60,length.out=500)
+A <- dnorm(x,20,10)
+B <- dnorm(x,30,5)
+df <- data.frame(x=rep(x,2),y=c(A,B),grp=rep(c("A","B"),each=500))
+ggplot(data=df,mapping=aes(x=x,y=y,color=grp,fill=grp)) +
+  geom_line(size=1.5) +
+  scale_y_continuous(expand=expansion(mult=c(0,0.01))) +
+  scale_x_continuous(expand=expansion(mult=0),breaks=seq(-20,60,10)) +
+  annotate(geom="text",x=c(12,35),y=c(0.035,0.075),label=c("B","A"),size=5) +
+  theme_bw() +
+  theme(legend.position="none",
+        axis.title.y=element_blank(),axis.text.y=element_blank())
+```
+
+----
 
 ## 68-95-99.7 (Empirical) Rule
 
@@ -112,3 +190,13 @@ You can click on each question to see an answer. Click on it again to close the 
 </div>
 
 </div>
+
+----
+
+## Hand Calculations II
+Answer each question below, **without using R**, assuming that Z~N(0,1). Show your work with a careful drawing for each question.
+
+1. What is the value of Z such that 16% of Z values are greater?
+1. What percent of Z values are greater than 2?
+1. What percent of Z values are less than 3?
+1. What is the most common 99.7% of Z values?

@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Assignment II
-subtitle: Normal Distributions
+title: Assignment
+subtitle: Normal Distributions Calculations
 css: "/css/modules.css"
 ---
 
 ## Carpenter Ants II
 <img src="zimgs/carpenterant.jpg" alt="Carpenter Ant" class="img-right">
-Suppose that the distribution of number of [Carpenter Ants (*Camponotus* spp.)](https://en.wikipedia.org/wiki/Carpenter_ant) in a nest is known to be N(1400,300). In [the previous assignment](NormalDist_CE1) you identified the type of question (e.g., "forward-left", "reverse-between") for each question below. In this assignment you should answer each the question (*provide a numeric answer and include the R code that you used*).
+Suppose that the distribution of number of [Carpenter Ants (*Camponotus* spp.)](https://en.wikipedia.org/wiki/Carpenter_ant) in a nest is known to be N(1400,300). In [the previous assignment](NormalDist1_CE1) you identified the type of question (e.g., "forward-left", "reverse-between") for each question below. In this assignment you should answer each the question (*provide a numeric answer and include the R code that you used*).
 
 {:start="6"}
 6. What percentage of nests have more than 1900 ants?
@@ -22,7 +22,6 @@ Suppose that the distribution of number of [Carpenter Ants (*Camponotus* spp.)](
 
 ## SAT Scores
 <img src="zimgs/sat-scores.jpg" alt="SAT Scores" class="img-right">
-
 SAT scores are approximately normal with a mean of 550 and standard deviation of 65. School A accepts students with a score of 500 or better. School B accepts students with a score of 650 or better. Use this information to answer the questions below (*show the R code that you used*).
 
 1. What type of variable is SAT score?

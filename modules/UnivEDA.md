@@ -31,7 +31,7 @@ It is important to understand the distribution of individuals for a single varia
 Use the resources below to answer [these questions](Prep/UnivEDA). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (11 pages, 52 mins)
-  * [![PDF](../img/pdf.png) Reading](book/Univariate EDA.pdf)
+  * [Reading](http://derekogle.com/Book107/UnivEDA.html)
   * [![Vimeo](../img/dhovid.png) Interpreting a Univariate EDA (Quantitative)](https://vimeo.com/user45324800/ueda-quantsum){:target="_blank"} [11 mins] ... [corresponding slides](PPT/UEDAQuant_PPT.pptx)
   * [![Vimeo](../img/dhovid.png) Interpreting a Univariate EDA (Categorical)](https://vimeo.com/user45324800/ueda-catsum){:target="_blank"} [2 mins] ... [corresponding slides](PPT/UEDACat_PPT.pptx)
   * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/noW3XtUvkSs) [39 mins]
