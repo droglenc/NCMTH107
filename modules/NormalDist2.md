@@ -32,7 +32,7 @@ This module describes how to make calculations with a normal distribution. These
 Use the resources below to answer [these questions](Prep/NormalDist2). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (6 pages, 41 mins)
-  * [Reading](http://derekogle.com/Book107/NormalDist2.html)
+  * [Reading](http://derekogle.com/Book107/NormalDist2.html){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Forward Calculations in R](https://vimeo.com/user45324800/normdist-forward){:target="_blank"} [6 mins]
   * [![Vimeo](../img/dhovid.png) Reverse Calculations in R](https://vimeo.com/user45324800/normdist-reverse){:target="_blank"} [6 mins]
   * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/7hqEEZjaya8) [29 mins]
@@ -49,5 +49,7 @@ Use the resources below to answer [these questions](Prep/NormalDist2). [[*Proble
 ## Archive
 
 * Preparation Resources
-  * [![YouTube Link](../img/youtube.png) 68-95-99.7 Rule](https://www.youtube.com/watch?v=cgxPcdPbujI){:target="_blank"} [8 mins] * Exercises
+  * [![YouTube Link](../img/youtube.png) 68-95-99.7 Rule](https://www.youtube.com/watch?v=cgxPcdPbujI){:target="_blank"} [8 mins]
+  
+* Exercises
   * [Additional](CE/NormalDist2_CE2)

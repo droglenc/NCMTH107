@@ -33,7 +33,7 @@ It is important to understand the relationship between two variables.  With quan
 Use the resources below to answer [these questions](Prep/BEDAQuant). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (10 pages, 36 mins)
-  * [![PDF](../img/pdf.png) Reading](book/Bivariate EDA - Quantitative.pdf)
+  * [Reading](http://derekogle.com/Book107/BEDAQuant.html){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Interpeting a Bivariate EDA (Quantitative)](https://vimeo.com/user45324800/beda-quantsum){:target="_blank"} [10 mins] ... [corresponding slides](PPT/BEDAQuant_PPT.pptx)
   * [![YouTube](../img/dhovid.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/oryDVcM5gbs) [26 mins]
     * Projection is [this example](CE/BEDAQuant_CExmpl) [![Decoration](../img/key.png)](CE/KEY_BEDAQuant_CExmpl)
