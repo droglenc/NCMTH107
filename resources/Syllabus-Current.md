@@ -85,7 +85,7 @@ Please see or contact me if you have questions regarding this course.
 
 ### Tutors
 <img class="img-right" src="../img/Hewitt_F20.jpg">
-Danielle Hewitt will also be available to help you succeed in this course. Danielle is a Pschology and Business major who took this class last year and will be tutoring stats for the first time this year. Danielle is also one of your co-presidents for NCSA. Danielle's tutoring hours are Monday and Wednesday from 6 to 8 pm. **You must register to meet with Danielle at least one hour in advance of these times** ([see here for how to register and join the tutoring session](How to make an appointment with a tutor.pdf))
+Danielle Hewitt will also be available to help you succeed in this course. Danielle is a Pschology and Business major who took this class last year and will be tutoring this class for the second time this session. Danielle is also one of your co-presidents for NCSA. Danielle's tutoring hours are Monday 7-8 pm, Tuesday 4-5 pm, Wednesday 7-8pm, and Thurday 4-5 pm. **You must register to meet with Danielle at least one hour in advance of these times** ([see here for how to register and join the tutoring session](https://my.northland.edu/academics/acadmic-support/#tutorial-services){:target="_blank"}).
 
 
 ### Accommodations
