@@ -34,9 +34,10 @@ Use the resources below to answer [these questions](Prep/BEDACat). [[*Problems w
 * **Primary Resources** (5 pages, 25 mins)
   * [Reading](http://derekogle.com/Book107/BEDACat.html){:target="_blank"}
   * [![YouTube](../img/dhovid.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/puPcQS9UYOg) [25 mins]
-    * Projection is [this example](CE/BEDACat_CExmpl) [![Decoration](../img/key.png)](CE/KEY_BEDACat_CE)
+    * Projection is [this example](CE/BEDACat_CExmpl) [![Decoration](../img/key.png)](CE/KEY_BEDACat_CExmpl)
 * **Secondary Resources**
   * [![YouTube Link](../img/youtube.png) Percentage Tables](https://www.youtube.com/watch?v=k8xFH6fCIWs){:target="_blank"} [6 mins]
+
 ----
 
 ## Practice
