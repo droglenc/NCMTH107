@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Preparation Guide
-subtitle: Hypothesis Testing
+subtitle: Hypothesis Testing - Introduction
 css: "/css/modules.css"
 ---
 
@@ -11,7 +11,6 @@ css: "/css/modules.css"
 Use the preparation readings and videos to prepare written answers for the following questions. Please contact <a href="mailto:dogle@northland.edu">Dr. Ogle</a> if you have questions.
 </div>
 
-### First Day
 1. Describe each step of the scientific method.
 1. Define research and statistical hypotheses. [*Primarily, make sure you can describe how they differ.*]
 1. Which statistical hypothesis always represents the "no difference" situation?
@@ -23,11 +22,4 @@ Use the preparation readings and videos to prepare written answers for the follo
 1. What is &alpha;?
 1. What are the most typical values of &alpha;?
 1. How are the p-value and &alpha; used to make a decision about the null hypothesis? What decisions can be made and why?
-1. What does a test statistic measure?
-
-### Second Day
 1. Why do statisticians "not reject" rather than "accept" the null hypothesis.
-1. Define the two types of errors that can be made in hypothesis testing.
-1. Define statistical power?
-1. What decisions can you make (as a statistician) to increase power? Which decision is "better"?
-1. What decisions can you make (as a statistician) to decrease &beta;? Which decision is "better"?

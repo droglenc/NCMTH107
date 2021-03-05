@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Assignment I
-subtitle: Hypothesis Testing
+title: Assignment
+subtitle: Hypothesis Testing - Introduction
 css: "/css/modules.css"
 ---
 
