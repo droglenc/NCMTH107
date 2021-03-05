@@ -25,11 +25,13 @@ title: Learning Modules
     <ol type="1" start="11">
       <li><a href="SamplingDist.html">Sampling Distributions</a></li>
       <li><a href="Probability.html">Probability Introduction</a></li>
-      <li><a href="HypTesting.html">Hypothesis Testing</a></li>
-      <li><a href="ConfRegions.html">Confidence Regions</a></li>
+      <li><a href="HypTesting1.html">Hypothesis Testing - Introduction</a></li
+      <li><a href="HypTesting2.html">Hypothesis Testing - Errors</a></li>
+      <li><a href="ConfRegions1.html">Confidence Regions - Introduction</a></li>
+      <li><a href="ConfRegions2.html">Confidence Regions - Calculations</a></li>
     </ol>
   <li><b>Inference Methods</b></li>
-    <ol type="1" start="15">
+    <ol type="1" start="17">
       <li><a href="1SampleZ.html">1-Sample Z-Test</a></li>
       <li><a href="1Samplet.html">1-Sample t-Test</a></li>
       <li><a href="2Samplet.html">2-Sample t-Test</a></li>
@@ -37,7 +39,7 @@ title: Learning Modules
       <li><a href="GOFTest.html">Goodness-of-Fit Test</a></li>
     </ol>
   <li><b>Using R</b></li>
-    <ol type="1" start="20">
+    <ol type="1" start="22">
       <li><a href="RData.html">Getting Data Into R</a></li>
       <li><a href="RFilter.html">Filtering Data in R</a></li>
       <li><a href="RUnivEDA.html">Univariate EDA in R</a></li>
