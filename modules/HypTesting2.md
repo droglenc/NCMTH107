@@ -27,7 +27,7 @@ Conclusions from hypothesis testing may be an error because of sampling variabil
   </div>
 </div>
 
-Use the resources below to answer [these questions](Prep/HypTesting). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
+Use the resources below to answer [these questions](Prep/HypTesting2). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (4 pages, 42 mins)
   * [Reading](http://derekogle.com/Book107/HypTesting2.html){:target="_blank"}
@@ -47,3 +47,4 @@ Use the resources below to answer [these questions](Prep/HypTesting). [[*Problem
 
 * Preparation Resources
 * Exercises
+  * [Additional](CE/HypTesting2_CE2)
