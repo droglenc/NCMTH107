@@ -22,14 +22,14 @@ title: Learning Modules
       <li><a href="BEDACat.html">Bivariate EDA - Categorical</a></li>
     </ol>
   <li><b>Inference Theory</b></li>
-    <ol type="1" start="10">
+    <ol type="1" start="11">
       <li><a href="SamplingDist.html">Sampling Distributions</a></li>
       <li><a href="Probability.html">Probability Introduction</a></li>
       <li><a href="HypTesting.html">Hypothesis Testing</a></li>
       <li><a href="ConfRegions.html">Confidence Regions</a></li>
     </ol>
   <li><b>Inference Methods</b></li>
-    <ol type="1" start="14">
+    <ol type="1" start="15">
       <li><a href="1SampleZ.html">1-Sample Z-Test</a></li>
       <li><a href="1Samplet.html">1-Sample t-Test</a></li>
       <li><a href="2Samplet.html">2-Sample t-Test</a></li>
@@ -37,7 +37,7 @@ title: Learning Modules
       <li><a href="GOFTest.html">Goodness-of-Fit Test</a></li>
     </ol>
   <li><b>Using R</b></li>
-    <ol type="1" start="19">
+    <ol type="1" start="20">
       <li><a href="RData.html">Getting Data Into R</a></li>
       <li><a href="RFilter.html">Filtering Data in R</a></li>
       <li><a href="RUnivEDA.html">Univariate EDA in R</a></li>
