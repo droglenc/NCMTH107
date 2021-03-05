@@ -1,9 +1,19 @@
 ---
 layout: page
 title: Additional Exercises
-subtitle: Confidence Regions
+subtitle: Confidence Regions - Introduction
 css: "/css/modules.css"
 ---
+
+## Confidence Region Calculations II
+
+For each situation below, construct and interpret the confidence region.
+
+1. &alpha;=0.01, H<sub>A</sub>: &mu;&#8800;800, n=25, &sigma;=60, x&#772;=824.
+1. &alpha;=0.05, H<sub>A</sub>: &mu;<80, n=30, &sigma;=20, x&#772;=73.
+1. &alpha;=0.05, H<sub>A</sub>: &mu;&#8800;1500, n=40, &sigma;=800, x&#772;=1370.
+
+&nbsp;
 
 ## Confidence Regions Concepts
 

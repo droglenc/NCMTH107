@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Confidence Regions
+title: Confidence Regions -- Extension
 css: /css/modules.css
 ---
 
@@ -13,14 +13,13 @@ css: /css/modules.css
     </div>
     <div id="ILOs" class="panel-collapse collapse">
       <div class="panel-body">
-A major goal of inferential statistics is to estimate the value of a parameter from the information in a sample.  However, the parameter estimate is imperfect due to sampling variability.  Thus, the best we can do from the information in one sample is provide a range in which the parameter is likely to be.  This range is called a confidence region and is the subject of this module.
+The concept of confidence regions can be used to estimate an appropriate sample size. In addition, confidence regions are closely related to hypothesis tests.
 
 <p>After completing this module, you should be able to ...</p>
 
 <ol>
-  <li>Describe the concept underlying confidence regions.</li>
-  <li>Construct confidence regions for parameters.</li>
   <li>Use the confidence interval formula to estimate desired sample sizes.</li>
+  <li>Explain how a confidence interval and a hypothesis test are related.</li>
 </ol>
       </div>
     </div>
@@ -28,35 +27,24 @@ A major goal of inferential statistics is to estimate the value of a parameter f
 </div>
 
 ## Preparation for Class
-Use the resources below to answer [these questions](Prep/ConfRegions). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
+Use the resources below to answer [these questions](Prep/ConfRegions2). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources I** (5 pages, 91 mins)
-  * [![PDF](../img/pdf.png) Reading (Sections 13.1 & 13.2)](book/Confidence Regions.pdf)
-  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 1](https://youtu.be/7lguAsr1ebY) [91 mins]
-
-* **Primary Resources II** (7 pages, XX mins)
-  * [![PDF](../img/pdf.png) Reading (Sections 13.3 & 13.4)](book/Confidence Regions.pdf)
-  * [![Web](../img/web.png) Construct a Confidence Region](Explanations/Calc_CI_Z)
-  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 2]() [XX mins]
+* **Primary Resources** (7 pages, XX mins)
+  * [Reading](http://derekogle.com/Book107/ConfRegions2.html){:target="_blank"}
   * [![Web](../img/web.png) Calculate n Explanation](Explanations/Calc_n)
+  * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 2]() [XX mins]
 
 ----
 
 ## Practice
 
-* [Assignment I](CE/ConfRegions_CE1) [![Decoration](../img/key.png)](CE/KEY_ConfRegions_CE1.html)
-* [Assignment II](CE/ConfRegions_CE2) [![Decoration](../img/key.png)](CE/KEY_ConfRegions_CE2.html)
+* [Assignment](CE/ConfRegions2_CE1) [![Decoration](../img/key.png)](CE/KEY_ConfRegions2_CE1.html)
 
 ----
 
 ## Archived Materials
 
 * Preparation Resources
-  * [![YouTube](../img/youtube.png) Introduction to Confidence Intervals](https://www.youtube.com/watch?v=27iSnzss2wM){:target="_blank"} [7 mins]
-  * [![YouTube Link](../img/youtube.png) Construct a Confidence Interval](https://www.youtube.com/watch?v=KG921rfbTDw){:target="_blank"} [10 mins] [**Skip from 7:49 to 8:28.**]
-  * [![YouTube](../img/youtube.png) Interpreting Confidence Intervals](https://www.youtube.com/watch?v=JYP6gc--sGQ){:target="_blank"} [6 mins]
-  * [![YouTube](../img/youtube.png) Confidence Interval Overview](https://www.youtube.com/watch?v=FUaXoKdCre4){:target="_blank"} [6 mins]
   * [![YouTube Link](../img/youtube.png) Calculate n](https://www.youtube.com/watch?v=4-5pFrqJz9w){:target="_blank"} [2 mins]
 * Exercises
-  * [Additional](CE/ConfRegions_CE3)
-  * [Even More](CE/ConfRegions_CE4)
+  * [Additional](CE/ConfRegions2_CE2)
