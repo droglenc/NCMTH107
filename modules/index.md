@@ -25,7 +25,7 @@ title: Learning Modules
     <ol type="1" start="11">
       <li><a href="SamplingDist.html">Sampling Distributions</a></li>
       <li><a href="Probability.html">Probability Introduction</a></li>
-      <li><a href="HypTesting1.html">Hypothesis Testing - Introduction</a></li
+      <li><a href="HypTesting1.html">Hypothesis Testing - Introduction</a></li>
       <li><a href="HypTesting2.html">Hypothesis Testing - Errors</a></li>
       <li><a href="ConfRegions1.html">Confidence Regions - Introduction</a></li>
       <li><a href="ConfRegions2.html">Confidence Regions - Calculations</a></li>
