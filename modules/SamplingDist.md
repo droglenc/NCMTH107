@@ -40,7 +40,7 @@ Sampling distributions show the distribution of a statistic from all possible sa
 Use the resources below to answer [these questions](Prep/SamplingDist). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (10 pages, 99 mins)
-  * [![PDF](../img/pdf.png) Reading](book/Sampling Distributions.pdf)
+  * [Reading](http://derekogle.com/Book107/SamplingDist.html){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Introduction to Sampling Distributions I](https://vimeo.com/user45324800/smplngd-intro){:target="_blank"} [9 mins] ... [corresponding slides](PPT/SamplingDist_PPT.pptx)
   * [![Vimeo](../img/dhovid.png) Central Limit Theorem](https://vimeo.com/user45324800/smplngd-clt){:target="_blank"} [4 mins] [![PowerPoint](../img/ppt.png)](PPT/SamplingDist_PPT2.pptx)
   * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/uJBvABzm4IA) [86 mins]
