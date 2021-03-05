@@ -32,7 +32,7 @@ It is important to understand the relationship between two variables.  With cate
 Use the resources below to answer [these questions](Prep/BEDACat). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (5 pages, 25 mins)
-  * [![PDF](../img/pdf.png) Reading](book/Bivariate EDA - Categorical.pdf)
+  * [Reading](http://derekogle.com/Book107/BEDACat.html){:target="_blank"}
   * [![YouTube](../img/dhovid.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/puPcQS9UYOg) [25 mins]
     * Projection is [this example](CE/BEDACat_CExmpl) [![Decoration](../img/key.png)](CE/KEY_BEDACat_CE)
 * **Secondary Resources**
