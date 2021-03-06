@@ -30,8 +30,8 @@ css: /css/modules.css
 
 Use the resources below to answer [these questions](Prep/2Samplet). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (5 pages, 102 mins)
-  * [![PDF](../img/pdf.png) Reading](book/2-Sample t-Test.pdf)
+* **Primary Resources** (6 pages, 102 mins)
+  * [Reading](http://derekogle.com/Book107/t2test.html){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) 2-Sample t-Test Example](https://vimeo.com/user45324800/t2test-ex1){:target="_blank"} [22 mins] ... [corresponding slides](PPT/2Samplet_PPT.pptx)
   * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/j5HZWeh8dfE) [80 mins]
     * Projection is [this example](CE/2Samplet_CExmpl) [![Decoration](../img/key.png)](CE/KEY_2Samplet_CExmpl)

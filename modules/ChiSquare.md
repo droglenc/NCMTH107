@@ -30,7 +30,7 @@ css: /css/modules.css
 Use the resources below to answer [these questions](Prep/ChiSquare). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (6 pages, 86 mins)
-  * [![PDF](../img/pdf.png) Reading](book/Chi-Square Test.pdf)
+  * [Reading](http://derekogle.com/Book107/ChiSquare.html){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Chi-Square Distribution](https://vimeo.com/user45324800/chisqdist){:target="_blank"} [4 mins] ... [corresponding slides](PPT/ChiSquare_PPT1.pptx)
   * [![Vimeo](../img/dhovid.png) Chi-Square Distribution in R](https://vimeo.com/user45324800/chisqdistribution){:target="_blank"} [2 mins] ... [corresonding script](HO/ChiSquare_RHO1.html){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Where Do Expected Values Come From?](https://vimeo.com/user45324800/chisqtest-expvals){:target="_blank"} [5 mins] ... [corresponding slides](PPT/ChiSquare_PPT2.pptx)
