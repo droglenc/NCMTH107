@@ -30,7 +30,7 @@ css: /css/modules.css
 Use the resources below to answer [these questions](Prep/GOFTest). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (6 pages, 57 mins)
-  * [![PDF](../img/pdf.png) Reading](book/Goodness-of-Fit.pdf)
+  * [Reading](http://derekogle.com/Book107/GOFTest.html){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Goodness-of-Fit Test Example](https://vimeo.com/user45324800/goftest-ex1){:target="_blank"} [8 mins] ... [corresonding slides](PPT/GOFTest_PPT.pptx)
   * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/sS3hhJU4FNA) [49 mins]
     * Projection is [this example](CE/GOFTest_CExmpl) [![Decoration](../img/key.png)](CE/KEY_GOFTest_CExmpl)
