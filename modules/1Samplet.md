@@ -30,8 +30,8 @@ css: /css/modules.css
 
 Use the resources below to answer [these questions](Prep/1Samplet). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (5 pages, 77 mins)
-  * [![PDF](../img/pdf.png) Reading](book/1-Sample t-Test.pdf)
+* **Primary Resources** (6 pages, 77 mins)
+  * [Reading](http://derekogle.com/Book107/t1test.html){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) t Distribution](https://vimeo.com/user45324800/tdist){:target="_blank"} [4 mins] [corresonding slides](PPT/1Samplet_PPT1.pptx)
   * [![Vimeo](../img/dhovid.png) t Distributions in R](https://vimeo.com/user45324800/tdistribution){:target="_blank"} [8 mins] ... [corresponding script](HO/1Samplet_RHO.html){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) 1-Sample t-Test Example](https://vimeo.com/user45324800/t1test-ex1){:target="_blank"} [12 mins] ... [corresonding slides](PPT/1Samplet_PPT2.pptx)
