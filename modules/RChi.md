@@ -30,7 +30,7 @@ css: /css/modules.css
 Use the resources below to answer [these questions](Prep/RChi). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (~5 pages, 32 mins)
-  * [Reading](bookR/RChi.html)
+  * [Reading](http://derekogle.com/Book107/RChi.html){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Chi-Square Test (with Raw Data) in R](https://vimeo.com/441798211){:target="_blank"} [6 mins] ... [corresponding resource](HO/Penguins.html#RChiChi){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Goodness-of-Fit Tests in R](https://vimeo.com/441822222){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#RChiGOF){:target="_blank"} 
   * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/MtEZRxZkKJ4) [18 mins]

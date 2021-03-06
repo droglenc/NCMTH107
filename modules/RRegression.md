@@ -32,7 +32,7 @@ One of the most common things in statistics is to describe the linear relationsh
 Use the resources below to answer [these questions](Prep/RRegression). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (~3 pages, 39 mins)
-  * [Reading](bookR/RRegression.html)
+  * [Reading](http://derekogle.com/Book107/RRegression.html){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Linear Regression in R](https://vimeo.com/440703068){:target="_blank"} [7 mins] ... [corresponding resource](HO/Penguins.html#RRegression){:target="_blank"}
   * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/rVxl-hw1kOo) [32 mins]
     * Projection is [this example](CE/RRegression_CExmpl) [![Decoration](../img/key.png)](CE/KEY_RRegression_CExmpl)

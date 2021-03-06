@@ -34,7 +34,7 @@ css: /css/modules.css
 Use the resources below to answer [these questions](Prep/RUnivEDA). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (~6 pages, 67 mins)
-  * [Reading](bookR/RUnivEDA.html)
+  * [Reading](http://derekogle.com/Book107/RUnivEDA.html){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative) in R](https://vimeo.com/439763033){:target="_blank"} [13 mins] ... [corresponding resource](HO/Penguins.html#RUnivEDAQ){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Univariate EDA (Categorical) in R](https://vimeo.com/439831864){:target="_blank"} [9 mins] ... [corresponding resource](HO/Penguins.html#RUnivEDAC){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Univariate EDA (Quantitative by Group) in R](https://vimeo.com/440130844){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#RUnivEDAQC){:target="_blank"}

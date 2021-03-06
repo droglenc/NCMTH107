@@ -29,7 +29,7 @@ css: /css/modules.css
 Use the resources below to answer [these questions](Prep/Rttests). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
 * **Primary Resources** (~5 pages, 59 mins)
-  * [Reading](bookR/Rttests.html)
+  * [Reading](http://derekogle.com/Book107/Rttests.html){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) 1-Sample t-Test in R](https://vimeo.com/441053915){:target="_blank"} [7 mins] ... [corresponding resource](HO/Penguins.html#Rttests1){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) 2-Sample t-Test in R](https://vimeo.com/441364656){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#Rttests2){:target="_blank"}
   * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/8Ju28Nisn3k) [44 mins]
