@@ -16,6 +16,7 @@ Use the preparation materials to prepare hand-written answers for the following 
 1. What word is always used in the descriptions of the population and parameter?
 1. What major goal of statistics (from the ["Why Statistics is Important"](../WhyStats) module) explains how a parameter is related to a population and how a statistic is related to a sample? [In other words, what explains what a parameter does to a population and what a statistic does to a sample?]
 1. What "reality" (from the ["Why Statistics is Important"](../WhyStats) module) explains what a sample is relative to a population.
+1. Define sampling variability.
 1. What are the two **major** categories of variable types and How are they distinguished from each other?
 1. What are the two types of quantitative variables and how are they distinguished from each other?
 1. What are the two types of categorical variables and how are they distinguished from each other?
