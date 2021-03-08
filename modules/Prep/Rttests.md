@@ -10,8 +10,8 @@ Use the preparation materials to prepare hand-written answers for the following 
 </div>
 
 1. What R function is used to perform a 1-Sample t-Test with raw data? What is the form of the first argument to this function?
-1. What format must the data be in to perform a 2-Sample t-Test in R? What is the form of the first argument to this function?
-1. What R function is used to perform a 2-Sample t-Test with raw data?
+1. What format must the data be in to perform a 2-Sample t-Test in R?
+1. What R function is used to perform a 2-Sample t-Test with raw data? What is the form of the first argument to this function?
 1. What R function is used to perform the test for equal variances? What is the form of the first argument to this function?
 1. What is the purpose of the `mu=` argument to `t.test()`?
 1. What is the purpose of the `alt=` argument to `t.test()`? What "values" can it take and what do those "values" mean?
