@@ -188,7 +188,7 @@ This course is designed in a way that you will have to actively, rather than pas
 * Interact with the course material **daily**.
 * Multi-task material from multiple modules (i.e., you may be finishing the assignment for one module while preparing for the next module).
 * Prepare for some course content on your own prior to class.
-* Use class and the Piazza discussion site to ask questions and seek help.
+* Use class and MSTeams to ask questions and seek help.
 * Assess your own performance by reviewing your graded work an comparing your answers on assignments to the answer key (which will also contain hints related to common mistakes).
 * Assess if you need more practice and complete additional exercises provided for most modules.
 * Ask for help from me (the professor) both during and outside of class. See [Assistance](#assistance) section above.
