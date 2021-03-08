@@ -141,9 +141,9 @@ An overall score will be computed from the items and associated weights listed i
 <form name="GRADECALC">
 <table class="grader" width="70%">
 <tr><th width="15%"></th>
-<th width="28%">Prep Check<br>Quizzes</th>
-<th width="28%">Assignments</th>
-<th width="29%">Capstone</th>
+<th width="28%">Preparation<br>Materials</th>
+<th width="28%">Module<br>Assignments</th>
+<th width="29%">Capstone<br>Assignment</th>
 </tr>
 
 <tr style="vertical-align:bottom"><th>Weight</th>
