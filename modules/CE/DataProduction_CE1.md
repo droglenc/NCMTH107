@@ -50,7 +50,7 @@ A student is designing an experiment to determine the simultaneous effects of ca
 1. How many treatments are there?
 1. Physically, what is a replicate (not a number)?
 1. How many replicates are there?
-1. Diagram the experimental setup, including placing the unique number of each replicate in the respective treatments. [*The table can be similar to the one just above section 3.1.5 in the reading. Show your R work for how you placed these individuals in the R appendix.*]
+1. Diagram the experimental setup, including placing the unique number of each replicate in the respective treatments. [*The table can be similar to Table 3.1. Show your R work for how you placed these individuals in the R appendix.*]
 
 <br>
 
@@ -71,4 +71,4 @@ Use this information to answer the questions below.
 1. What is the response variable?
 1. What kind of variable is the response variable?
 1. Physically, what is a replicate (not a number)?
-1. Diagram the experimental setup, including placing the unique number of each replicate in the respective treatments. [*The table can be similar to the one just above section 3.1.5 in the reading. Show your R work for how you placed these individuals in the R appendix.*]
+1. Diagram the experimental setup, including placing the unique number of each replicate in the respective treatments. [*The table can be similar to Table 1. Show your R work for how you placed these individuals in the R appendix.*]
