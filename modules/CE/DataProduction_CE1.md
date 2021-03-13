@@ -34,7 +34,7 @@ Identify the response variable in each of the following situations. Explain your
 1. The distance of a putt and the golfer's success rate at making the putt.
 1. Response time to a particular dexterity test and the amount of time awake.
 1. Amount of fertilizer and growth of tomatoe plants.
-1. Sales of shoes and sales of hats.
+1. Number of shoes sold by a company and number of hats sold by that same company.
 
 <br>
 
