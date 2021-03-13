@@ -21,4 +21,6 @@ Use the preparation materials to prepare hand-written answers for the following 
 1. On a N(10,3), what percent of individuals are between 4 and 16?
 1. On a N(10,3), what percent of individuals are greater than 16?
 1. What is the difference between a "forward" and a "reverse" normal distribution question? [*Hint: what is given and what is asked for in each type of question.*]
+1. What type of question is "What percent of individuals are greater than 16?"?
+1. What type of question is "What is the value such that 20% of individuals are larger?"?
 1. What questions do you have from this reading that you would like me to address? [*Please be as specific as possible. Don't just say "everything" or "I don't understand anything." Of course, you can ask questions about the reading before class on MS Teams (see link above).*]
