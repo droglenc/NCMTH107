@@ -35,8 +35,7 @@ Use the resources below to answer [these questions](Prep/UnivEDA). [[*Problems w
   * [![Vimeo](../img/dhovid.png) Interpreting a Univariate EDA (Quantitative)](https://vimeo.com/user45324800/ueda-quantsum){:target="_blank"} [11 mins] ... [corresponding slides](PPT/UEDAQuant_PPT.pptx)
   * [![Vimeo](../img/dhovid.png) Interpreting a Univariate EDA (Categorical)](https://vimeo.com/user45324800/ueda-catsum){:target="_blank"} [2 mins] ... [corresponding slides](PPT/UEDACat_PPT.pptx)
   * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/noW3XtUvkSs) [39 mins]
-    * Projection is [this example](CE/UnivEDA_CExmpl)
-    * [Here is an Annotated Key](CE/KEY_UnivEDA_CExmpl)
+    * Projection is [this example](CE/UnivEDA_CExmpl) [![Decoration](../img/key.png)](CE/KEY_UnivEDA_CExmpl)
 
 ----
 
