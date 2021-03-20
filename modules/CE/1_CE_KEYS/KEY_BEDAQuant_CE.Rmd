@@ -20,14 +20,6 @@ modHTML_CEKeys("KEY_BEDAQuant_CE")
 ```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
 library(NCStats)
 source("../../../rhelpers/knitr_setup.R")
-library(captioner)
-figs <- captioner(prefix="Figure")
-figs(name="IBI1","Scatterplot of IBI scores versus the percentage of impervious surface for 14 areas in Washington")
-figs(name="FishCrPlot","Scatterplot of total dissolved solids versus discharge in Fish Creek.")
-figs(name="GestPlot","Scatterplot of longevity versus gestation period for a sample of 40 animals.")
-figs(name="Cafe1","Scatterplot of number of coffees sold versus maximum daily temperature for the college cafe.")
-figs(name="Cafe2","Scatterplot of number of coffees sold versus number of sodas sold for the college cafe.")
-figs(name="Cafe3","Scatterplot of number of coffees sold versus number of days since opening for the college cafe.")
 ```
 
 ----
