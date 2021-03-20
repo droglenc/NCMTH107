@@ -11,12 +11,12 @@ css: "/css/modules.css"
 <div id="accuracy-and-precision" class="section level2">
 <h2>Accuracy and Precision</h2>
 <p><img src="zimgs/archery_target.jpg" alt="Archery Target" class="img-right"></p>
-<p>Answer the questions below assuming that a population is known to have a mean of 60. [<em><a href="../RE/SamplingDist_RevEx.html#accuracy-and-precision">This review exercise</a> may be helpful.</em>]</p>
+<p>Answer the questions below assuming that a population is known to have a mean of 60. [<em>The last section in the reading may be useful here.</em>]</p>
 <ol>
-<li>Construct a hypothetical series of four numbers (that could represent sample means) that would be considered both precise and accurate.</li>
-<li>Construct a hypothetical series of four numbers that would be considered imprecise but accurate.</li>
-<li>Construct a hypothetical series of four numbers that would be considered precise but inaccurate.</li>
-<li>Construct a hypothetical series of four numbers that would be considered imprecise and inaccurate.</li>
+<li>Construct a hypothetical set of four sample means that would be considered both precise and accurate.</li>
+<li>Construct a hypothetical set of four sample means that would be considered imprecise but accurate.</li>
+<li>Construct a hypothetical set of four sample means that would be considered precise but inaccurate.</li>
+<li>Construct a hypothetical set of four sample means that would be considered imprecise and inaccurate.</li>
 </ol>
 <hr />
 <div class="text-center">
@@ -45,7 +45,7 @@ css: "/css/modules.css"
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -63,7 +63,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

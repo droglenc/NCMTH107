@@ -29,8 +29,8 @@ Summarize(popn,digits=3)       # population summaries</code></pre>
 </ul>
 <pre class="r"><code>Summarize(mns2,digits=3)       # summarized mean/sd of means</code></pre>
 <ul>
-<li>Repeat the previous four calculations for samples of n=3. [<em>Copy-and-paste your code for n=2 but change the names to</em> <code>num2</code> <em>and</em> <code>mns2</code><em>.</em>]</li>
-<li>Repeat the previous calculations for samples of n=4. [<em>Copy-and-paste and use</em> <code>num3</code> <em>and</em> <code>mns3</code><em>.</em>]</li>
+<li>Repeat the previous four calculations for samples of n=3. [<em>Copy-and-paste your code for n=2 but change the names to</em> <code>num3</code> <em>and</em> <code>mns3</code><em>.</em>]</li>
+<li>Repeat the previous calculations for samples of n=4. [<em>Copy-and-paste and use</em> <code>num4</code> <em>and</em> <code>mns4</code><em>.</em>]</li>
 </ul>
 <table class="table table-bordered table-condensed" style="width:65%">
 <thead>
@@ -49,7 +49,7 @@ St. Dev.
 <tbody>
 <tr>
 <td>
-POPN
+POPULATION
 </td>
 <td>
  
@@ -94,7 +94,7 @@ n=4
 </tbody>
 </table>
 <ol>
-<li>What symbols should be placed on the mean and standard deviation of the population shown in the fist row of your table.</li>
+<li>What symbols should be placed on the mean and standard deviation of the population shown in the first row of your table.</li>
 <li>How did the means of the sample means change with increasing n?</li>
 <li>How did the three means of sample means (i.e., from n=2, 3, and 4) compare to the population mean?</li>
 <li>What should the standard deviation of the sample means calculated above be called?</li>
@@ -128,7 +128,7 @@ n=4
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -146,7 +146,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

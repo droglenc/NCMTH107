@@ -56,6 +56,6 @@ Use the resources below to answer [these questions](Prep/SamplingDist). [[*Probl
 ## Archived Materials
 
 * Preparation Resources
-  * [![YouTube](../img/dhovid.png) Introduction to Sampling Distributions II](https://www.youtube.com/watch?v=Zbw-YvELsaM){:target="_blank"} [8 mins]
+  * [![YouTube](../img/youtube.png) Introduction to Sampling Distributions II](https://www.youtube.com/watch?v=Zbw-YvELsaM){:target="_blank"} [8 mins]
 * Exercises
   * [Additional](CE/SamplingDist_CE4)
