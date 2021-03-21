@@ -24,7 +24,7 @@ In all of the following questions, I urge you to follow these steps when answeri
   <li>Identify the distribution that would be used to answer the question (population or sampling).</li>
   <li>Identify characteristics of the required distribution; i.e., whether normal or not and, if normal, the center and dispersion (SD or SE).</li>
   <li>Identify whether the question can be answered or not (can be if normal, cannot be if not normal).</li>
-  <li>Answer to the question; use <code>distrib()</code> if the probability can be computed (i.e., normal distribution) or explain why the probability cannot be computed (note specifically which distribution is not normal).</li>
+  <li>Answer the question; use <code>distrib()</code> if the probability can be computed (i.e., normal distribution) or explain why the probability cannot be computed (note specifically which distribution is not normal).</li>
 </ol>
 A reminder to use these steps will <strong>NOT</strong> be provided on future quizzes, but you should get in the habit of following them.
 </div>
@@ -47,7 +47,7 @@ Suppose that the level of nitrogen oxides (NOX) in the exhaust of a particular c
 <img src="zimgs/carpooling.jpg" alt="car pooling" class="img-right">
 A study of rush-hour traffic in San Francisco counted the number of people in a car entering a freeway at a suburban interchange. Suppose that this count has a mean of 1.5 people with a standard deviation of 0.75.
 
-1. Information about the shape of the population distibution was not given in the background to this question. So, would you expect this count to follow a normal distribution? What is one piece of evidence to support your answer?
+1. Information about the shape of the population distribution was not given in the background to this question. What would you expect this distribution to look like? Why? [*Hint: Imagine cars driving into campus and how many people are in each of those cars.*]
 1. What is the probability that a random sample of 40 cars will have a mean number of passengers of less than 1.2?
 1. What is the probability that a random sample of 50 cars will have a mean number of passengers of greater than 2.0?
 1. What is the probability that a random sample of 5 cars will have a mean number of passengers of greater than 2.0?
