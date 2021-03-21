@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Preparation Guide
-subtitle: Confidence  - Introduction
+subtitle: Confidence Regions - Introduction
 css: "/css/modules.css"
 ---
 
