@@ -29,7 +29,7 @@ Conclusions from hypothesis testing may be an error because of sampling variabil
 
 Use the resources below to answer [these questions](Prep/HypTesting2). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (4 pages, 42 mins)
+* **Primary Resources** (6 pages, 42 mins)
   * [Reading](http://derekogle.com/Book107/HypTesting2.html){:target="_blank"}
   * [![YouTube](../img/youtube.png) Statistical Error Types I](https://www.youtube.com/watch?v=7mE-K_w1v90){:target="_blank"} [8 mins]
   * [![YouTube](../img/youtube.png) Statistical Error Types II](https://www.youtube.com/watch?v=OWn3Ko1WYTA){:target="_blank"} [3 mins; *between 1:29 and 4:07*]
