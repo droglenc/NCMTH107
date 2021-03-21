@@ -29,10 +29,9 @@ A researcher may form an *a priori* hypothesis about a parameter and then use in
 
 Use the resources below to answer [these questions](Prep/HypTesting1). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (7 pages, 53 mins)
+* **Primary Resources** (10 pages, 53 mins)
   * [Reading](http://derekogle.com/Book107/HypTesting1.html){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Forming Statistical Hypothesis](https://vimeo.com/user45324800/hotest-hypotheses){:target="_blank"} [6 mins] ... [corresponding slides](PPT/HypTesting_PPT-hypotheses.pptx)
-  * [![Web](../img/web.png) Calculating p-values](Explanations/Calc_pvalue_Z)
   * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture" Day 1](https://youtu.be/0FQ-u95mhDQ) [47 mins] ... [corresponding slides](PPT/HypTesting_PPT-Lecture.pptx)
 
 ----

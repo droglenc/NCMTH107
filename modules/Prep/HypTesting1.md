@@ -20,5 +20,6 @@ Use the preparation materials to prepare hand-written answers for the following 
 1. What is &alpha;?
 1. What are the most typical values of &alpha;?
 1. How are the p-value and &alpha; used to make a decision about the null hypothesis? What decisions can be made and why?
+1. What are the specifics for the five steps that I suggest for calculating a p-value?
 1. Why do statisticians "not reject" rather than "accept" the null hypothesis.
 1. What questions do you have from this reading that you would like me to address? [*Please be as specific as possible. Don't just say "everything" or "I don't understand anything." Of course, you can ask questions about the reading before class on MS Teams (see link above).*]

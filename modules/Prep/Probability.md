@@ -15,9 +15,13 @@ Use the preparation materials to prepare hand-written answers for the following 
     1. a randomly selected individual is a Democrat?
     1. a randomly selected individual is an Independent?
     1. a randomly selected individual is a Democrat, given that all of the independents have left the room?
-1. Which distribution do you use to compute probabilities about individuals? about statistics from samples?
+1. Which distribution do you use to compute probabilities ...
+    1. about individuals?
+    1. about statistics from samples?
 1. How do you determine if a population distribution is normal?
 1. How do you determine if a sampling distribution is normal?
-1. What measure of dispersion is used with a population distribution? with a sampling distribution?
+1. What measure of dispersion is used with ...
+    1. a population distribution? 
+    1. a sampling distribution?
 1. What must be true to compute a probability (in this course)?
 1. What questions do you have from this reading that you would like me to address? [*Please be as specific as possible. Don't just say "everything" or "I don't understand anything." Of course, you can ask questions about the reading before class on MS Teams (see link above).*]

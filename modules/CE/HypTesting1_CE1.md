@@ -27,7 +27,7 @@ I urge you to follow these steps when answering all p-value-related questions:
   <li>Compute the p-value.</li>
   <li>Make a decision about H<sub>0</sub>. If the question has a context then the conclusion should be stated within that context.</li>
 </ol>
-A reminder to use these steps will <strong>NOT</strong> be provided on future quizzes, but you should get in the habit of following them. See <a href="../Explanations/Calc_pvalue_Z.html">here</a> for a demonstration of the steps.
+Applying these steps is demonstrated in the module reading.
 </div>
 
 <br>
