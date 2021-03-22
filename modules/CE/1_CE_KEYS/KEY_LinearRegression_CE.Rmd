@@ -30,7 +30,6 @@ source("../../../rhelpers/knitr_setup.R")
     1. response - **Height of suds (mm)**
     1. explanatory - **Amount of soap (g)**
     1. slope is **12.4**
-    1. intercept is **-20.2**
     1. For each additional gram of soap, the height of suds increases by 12.4 mm, on average.
     1. For 0 grams of soap, the height of suds is -20.2 mm, on average.  [*This is an extrapolation.*]
     1. Asked to predict height of suds for an amount of soap between 3.5 and 8.0 grams.  Example ... "What is the predicted height of suds for 5 g of soap?"  Answer ... -20.2+12.4&times;5=41.8 mm.
@@ -88,7 +87,7 @@ rsq <- 0.91
 ## Everest Temperatures
 ```{r echo=FALSE}
 m <- -0.0059
-b <- 29.79
+b <- 29.8
 rsq <- 0.923
 ```
 
