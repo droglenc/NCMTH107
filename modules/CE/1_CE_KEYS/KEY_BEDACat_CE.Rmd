@@ -121,6 +121,7 @@ perc.tbl
 ```
 ---->
 
+  <li>The response variable is the outcome (i.e., time of death of the tree).</li>
   <li>The percentage of all trees in the control treatment that were dead within the first year is $\frac{`r tbl2["No Action (control)","Within 1 Year"]`}{`r tbl2["No Action (control)","Sum"]`}\times 100$ = <strong>`r formatC(row.tbl["No Action (control)","Within 1 Year"],format="f",digits=1)`%</strong>.</li>
   <li>The percentage of ALL trees that were in the control treatment AND were dead within the first year is $\frac{`r tbl2["No Action (control)","Within 1 Year"]`}{`r tbl2["Sum","Sum"]`}\times 100$ = <strong>`r formatC(perc.tbl["No Action (control)","Within 1 Year"],format="f",digits=1)`%</strong>.</li>
   <li>The percentage of the trees in the control treatment that died after four years is $\frac{`r tbl2["No Action (control)","4+ Years Later"]`}{`r tbl2["No Action (control)","Sum"]`}\times 100$ = <strong>`r formatC(row.tbl["No Action (control)","4+ Years Later"],format="f",digits=1)`%</strong>.</li>
