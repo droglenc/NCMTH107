@@ -1,0 +1,125 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Hypothesis Testing - Introduction CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="identifying-hypotheses" class="section level2">
+<h2>Identifying Hypotheses</h2>
+<div class="alert alert-warning">
+<strong>When identifying the hypotheses note:</strong>
+<ul>
+<li>
+Each statistical hypothesis must contain a parameter – either μ or p. That parameter must be defined (note the “where …” constructions below).
+</li>
+<li>
+Each statistical hypothesis must contain a specific value that the parameter is compared to.
+</li>
+<li>
+The null hypothesis (i.e., H<sub>0</sub>) must contain the equals sign. No other mathematical sign is allowed.
+</li>
+<li>
+The alternative hypothesis (i.e., H<sub>A</sub> must contain either the less than (&lt;), greater than (&gt;), or not equals (≠) sign. No other mathematical sign is allowed.
+</li>
+</ul>
+</div>
+<ol>
+<li>
+H<sub>A</sub> μ &lt; 90 vs. H<sub>0</sub> μ = 90, where μ is the mean number of murders for all burroughs in 2010.
+</li>
+<li>
+H<sub>A</sub> μ &gt; 15 vs. H<sub>0</sub> μ = 15, where μ is the mean length of all oil changes at the Toyota dealership.
+</li>
+<li>
+H<sub>A</sub> μ ≠ 22500 vs. H<sub>0</sub> μ = 22500, where μ is the mean cost of all bariatric surgeries.
+</li>
+<li>
+H<sub>A</sub> p &gt; 0.61 vs. H<sub>0</sub> p = 0.61, where p is the proportion of all Washburn High School students that are involved in at least one extracurricular activity.
+</li>
+</ol>
+<hr />
+</div>
+<div id="p-value-calculations-and-decisions-i" class="section level2">
+<h2>P-Value Calculations and Decisions I</h2>
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+When writing the definition of the p-value in the context of the problem you are replacing “the observed statistic” with the value of x̄; “more extreme” with “less”, “greater”, or “different” depending on the sign in H<sub>A</sub>; and the “null hypothesis is true” with the value of μ in “the probability of the observed statistic or a value more extreme assuming the null hypothesis is true.”
+</li>
+</ul>
+</div>
+<ol>
+<li>
+The p-value is “the probability of observing a sample mean of 79.5 or greater if the population mean is 75.” Reject H<sub>0</sub> because p-value=0.0040&lt;α (Figure 1).
+</li>
+<p><img src="KEY_HypTesting1_CE1_files/figure-html/pgreater-1.png" width="336" /></p>
+<p>Figure 1: Normal distribution representing the p-value calculation for the first example.</p>
+<li>
+The p-value is “the probability of observing a sample mean of 13700 or less if the population mean is 15000.” Do not reject H<sub>0</sub> because p-value=0.1253&gt;α (Figure 2).
+</li>
+<p><img src="KEY_HypTesting1_CE1_files/figure-html/pless-1.png" width="336" /></p>
+<p>Figure 2: Normal distribution representing the p-value calculation for the second example.</p>
+<li>
+The p-value is “the probability of observing a sample mean of 11.2 or ‘different’ if the population mean is 14.” Reject H<sub>0</sub> because p-value=0.0196&lt;α (Figure 3).
+</li>
+<p><img src="KEY_HypTesting1_CE1_files/figure-html/pnot-1.png" width="336" /></p>
+<p>Figure 3: Normal distribution representing the p-value calculation for the third example.</p>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>distrib(79.5,mean=75,sd=12/sqrt(50),lower.tail=FALSE)
+distrib(13700,mean=15000,sd=8000/sqrt(50))
+2*distrib(11.2,mean=14,sd=6/sqrt(25))</code></pre>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
