@@ -38,20 +38,20 @@ figs <- captioner(prefix="Figure")
 </div>
 
 <ol>
-<li>H<sub>A</sub> &mu; &ne; 37 vs. H<sub>0</sub> &mu; = 37</li>
+<li>H<sub>A</sub> &mu; &ne; 37 vs. H<sub>0</sub> &mu; = 37 where &mu; is mean normal body temperature for ALL people in the population.</li>
 ```{r echo=FALSE}
 d <- read.csv("https://github.com/droglenc/NCData/raw/master/NormTemp.csv")
 ```
 
-<li>x&#772;=`r formatC(mean(d$bodytemp),format="f",digits=2)`</li>
-<li>p-value=`r formatC(2*distrib(round(mean(d$bodytemp),2),mean=37,sd=0.41/sqrt(nrow(d))),format="f",digits=8)`</li>
+<li>The p-value is the probability that x&#772;=`r formatC(mean(d$bodytemp),format="f",digits=2)` or "not equals" assuming that &mu;=37.
+<li>p-value=`r formatC(2*distrib(round(mean(d$bodytemp),2),mean=37,sd=0.45/sqrt(nrow(d))),format="f",digits=8)`</li>
 <li>Reject H<sub>0</sub> because p-value < alpha;.</li>
 <li>Average body temperature is less than 37<sup>o</sup>C for all individuals in this population.</li>
 </ol>
 
 R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
-2*distrib(36.81,mean=37,sd=0.41/sqrt(130))
+2*distrib(36.81,mean=37,sd=0.45/sqrt(130))
 ```
 
 ----
@@ -63,12 +63,12 @@ d <- filterD(d,species=="Halticus.oleracea")
 ```
 
 1. H<sub>A</sub> &mu; > 190 vs. H<sub>0</sub> &mu; = 190, where &mu; is the mean thorax length (&mu;m) for all *Halticus oleracea* beetles in this population.
-1. x&#772;=`r formatC(mean(d$thorax),format="f",digits=2)` &mu;m.
-1. p-value=`r formatC(distrib(round(mean(d$thorax),2),mean=190,sd=14/sqrt(nrow(d)),lower.tail=FALSE),format="f",digits=3)`.
+1. p=value is the probability that x&#772;=`r formatC(mean(d$thorax),format="f",digits=2)` &mu;m or greater assuming that &mu;=190
+1. p-value=`r formatC(distrib(round(mean(d$thorax),2),mean=190,sd=15/sqrt(nrow(d)),lower.tail=FALSE),format="f",digits=3)`.
 1. Do not reject H<sub>0</sub> because the p-value > &alpha;.
 1. The average thorax length for all *Halticus oleracea* beetles in this population does not appear to be greater than 190 &mu;m.
 
 R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
-distrib(194.17,mean=190,sd=14/sqrt(18),lower.tail=FALSE)
+distrib(194.17,mean=190,sd=15/sqrt(18),lower.tail=FALSE)
 ```
