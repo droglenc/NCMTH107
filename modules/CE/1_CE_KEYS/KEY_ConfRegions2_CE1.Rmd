@@ -86,7 +86,7 @@ R Appendix.
 
 <ol>
 ```{r ncalc1, echo=FALSE, results='hide', fig.show='hide'}
-sigma <- 6.95
+sigma <- 7.55
 me <- 1
 (zstar <- distrib(0.025,type="q",lower.tail=FALSE))
 (round(zstar,3)*sigma/me)^2
