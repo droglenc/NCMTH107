@@ -41,6 +41,15 @@ figs(name="Z4","Normal distribution representing the Z* the fourth confidence re
 
 ## Confidence Region Calculations
 
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>The level of confidence comes from 1-&alpha;</li>
+<li>The type of confidence region comes from the H<sub>A</sub>: a "less than" H<sub>A</sub> is an upper bound, a "greater than" H<sub>A</sub> is a lower bound, and a "not equals" H<sub>A</sub> is an interval.</li>
+<li>The Z<sup>*</sup> uses the level of confidence in `distrib()` for the bounds but the "tail area" must be used for the intervals. Look closely at the R Appendices, especially for the interval questions.</li>
+</ul>
+</div>
+
 <ol>
 <li>See below.</li>
 <ol type="a">
@@ -53,8 +62,8 @@ zstar <- distrib(0.9,type="q",lower.tail=FALSE)
 
 `r figs("Z1")`
 
-<li>`r formatC(79.5+zstar*12/sqrt(50),format="f",digits=1)` (this is 79.5-`r formatC(-1*zstar,format="f",digits=3)`$\frac{12}{\sqrt{50}}$).</li>
-<li>I am 90% confident that the true population mean is greater than `r formatC(79.5+zstar*12/sqrt(50),format="f",digits=1)`.</li>
+<li>`r formatC(79.5+round(zstar,3)*12/sqrt(50),format="f",digits=1)` (this is 79.5-`r formatC(-1*zstar,format="f",digits=3)`$\frac{12}{\sqrt{50}}$).</li>
+<li>I am 90% confident that the true population mean is greater than `r formatC(79.5+round(zstar,3)*12/sqrt(50),format="f",digits=1)`.</li>
 </ol>
 </ol>
 <br>
@@ -70,6 +79,9 @@ zstar <- distrib(0.025,type="q",lower.tail=FALSE)
 ```
 
 `r figs("Z2")`
+
+<li>`r formatC(11.2-round(zstar,3)*6/sqrt(25),format="f",digits=1)`-`r formatC(11.2+round(zstar,3)*6/sqrt(25),format="f",digits=1)`.</li>
+<li>I am 95% confident that the true population mean is between `r formatC(11.2-round(zstar,3)*6/sqrt(25),format="f",digits=1)` and `r formatC(11.2+round(zstar,3)*6/sqrt(25),format="f",digits=1)`.</li>
 </ol>
 </ol>
 <br>
@@ -85,6 +97,9 @@ zstar <- distrib(0.99,type="q",lower.tail=FALSE)
 ```
 
 `r figs("Z3")`
+
+<li>`r formatC(918+round(zstar,3)*90/sqrt(80),format="f",digits=1)`.</li>
+<li>I am 99% confident that the true population mean is greater than `r formatC(918+round(zstar,3)*90/sqrt(80),format="f",digits=1)`.</li>
 </ol>
 </ol>
 <br>
@@ -100,6 +115,9 @@ zstar <- distrib(0.9,type="q")
 ```
 
 `r figs("Z4")`
+
+<li>`r formatC(13700+round(zstar,3)*8000/sqrt(50),format="f",digits=1)`.</li>
+<li>I am 90% confident that the true population mean is less than `r formatC(13700+round(zstar,3)*8000/sqrt(50),format="f",digits=1)`.</li>
 </ol>
 </ol>
 
@@ -110,7 +128,3 @@ R Appendix
 <<Z3>>
 <<Z4>>
 ```
-
-<br>
-
-The remaining parts (d and e) to these questions were included on the second confidence regions assignment.
