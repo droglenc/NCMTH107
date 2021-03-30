@@ -44,7 +44,7 @@ css: "/css/modules.css"
 </div>
 <div id="religiosity" class="section level2">
 <h2>Religiosity</h2>
-<p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/religiosity.jpg" alt="Religiosity" class="img-right"> Researchers have long examined relationships between “religiosity” (a general term that attempts to measure “how religious” a group of people is) and various factors. In one such study, researchers compared the percent of respondents within a state that stated that religion was either “important” or “very important” to them and the life expectancy at birth by state.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> Their results are shown below. Use these results to complete a thorough bivariate EDA.</p>
+<p>Researchers have long examined relationships between “religiosity” (a general term that attempts to measure “how religious” a group of people is) and various factors. In one such study, researchers compared the percent of respondents within a state that stated that religion was either “important” or “very important” to them and the life expectancy at birth by state.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> Their results are shown below. Use these results to complete a thorough bivariate EDA.</p>
 <p><img src="BEDAQuant_CE1_files/figure-html/unnamed-chunk-5-1.png" width="336" /></p>
 <p> </p>
 </div>
@@ -64,7 +64,7 @@ css: "/css/modules.css"
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -82,7 +82,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
