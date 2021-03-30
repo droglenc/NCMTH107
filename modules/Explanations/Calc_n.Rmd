@@ -40,7 +40,7 @@ For example, suppose that a researcher wanted to determine the sample size requi
 distrib(0.05,type="q")
 ```
 
-Therefore, the required sample size is $\big(\frac{1.645*500}{10}\big)^2$=`r formatC(1.645*500/10,format="f",digits=2)`. It is, of course, not possible to take a fraction of a sample size but note that sample size calculations are **ALWAYS** rounded up. Thus, in this example, one would take a sample size of `r ceiling(1.645*500/10)` to meet the prescribed requirements.
+Therefore, the required sample size is $\big(\frac{1.645*500}{10}\big)^2$=`r formatC((1.645*500/10)^2,format="f",digits=2)`. It is, of course, not possible to take a fraction of a sample size but note that sample size calculations are **ALWAYS** rounded up. Thus, in this example, one would take a sample size of `r ceiling((1.645*500/10)^2)` to meet the prescribed requirements.
 
 <div class="alert alert-warning">
 <strong>Note:</strong> 
