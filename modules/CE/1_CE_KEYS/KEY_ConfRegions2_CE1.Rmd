@@ -45,9 +45,9 @@ figs(name="Z7","Normal distribution representing the Z* the seventh confidence r
 <ol>
 ```{r echo=FALSE, fig.show='hide'}
 d <- read.csv("https://github.com/droglenc/NCData/raw/master/NormTemp.csv")
-cis <- mean(d$bodytemp)+c(-1,1)*distrib(0.025,type="q",lower.tail=FALSE)*0.41/sqrt(nrow(d))
+cis <- mean(d$bodytemp)+c(-1,1)*round(distrib(0.025,type="q",lower.tail=FALSE),3)*0.45/sqrt(nrow(d))
 ```
-<li>`r formatC(mean(d$bodytemp),format="f",digits=1)`$\pm$`r formatC(distrib(0.975,type="q",lower.tail=FALSE),format="f",digits=3)`$\frac{0.41}{\sqrt{130}}$ = `r formatC(cis[1],format="f",digits=2)`-`r formatC(cis[2],format="f",digits=2)`.</li>
+<li>`r formatC(mean(d$bodytemp),format="f",digits=1)`$\pm$`r formatC(distrib(0.975,type="q",lower.tail=FALSE),format="f",digits=3)`$\frac{0.45}{\sqrt{130}}$ = `r formatC(cis[1],format="f",digits=2)`-`r formatC(cis[2],format="f",digits=2)`.</li>
 <li>I am 95% confident that the true population mean body temperature is between `r formatC(cis[1],format="f",digits=2)` and `r formatC(cis[2],format="f",digits=2)`<sup>o</sup>C.</li>
 </ol>
 
@@ -62,10 +62,10 @@ R Appendix.
 ```{r echo=FALSE, fig.show='hide'}
 d <- read.csv("https://github.com/droglenc/NCData/raw/master/Beetles.csv")
 d <- filterD(d,species=="Halticus.oleracea")
-ci <- mean(d$thorax)+distrib(0.95,type="q",lower.tail=FALSE)*14/sqrt(nrow(d))
+ci <- mean(d$thorax)+round(distrib(0.95,type="q",lower.tail=FALSE),3)*15/sqrt(nrow(d))
 ```
 
-1. `r formatC(mean(d$thorax),format="f",digits=2)``r formatC(distrib(0.95,type="q",lower.tail=FALSE),format="f",digits=3)`$\frac{14}{\sqrt{18}}$ = `r formatC(ci,format="f",digits=1)`
+1. `r formatC(mean(d$thorax),format="f",digits=2)``r formatC(distrib(0.95,type="q",lower.tail=FALSE),format="f",digits=3)`$\frac{15}{\sqrt{18}}$ = `r formatC(ci,format="f",digits=1)`
 1. I am 95% confident that the true population mean thorax length is greater than `r formatC(ci,format="f",digits=1)` mm (i.e., a lower bound).
 
 R Appendix.
@@ -89,20 +89,20 @@ R Appendix.
 sigma <- 6.95
 me <- 1
 (zstar <- distrib(0.025,type="q",lower.tail=FALSE))
-(zstar*sigma/me)^2
+(round(zstar,3)*sigma/me)^2
 ```
 <li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` household to achieve the desired level of confidence and margin-of-error.</li>
 
 ```{r ncalc2, echo=FALSE, results='hide', fig.show='hide'}
 (zstar <- distrib(0.05,type="q",lower.tail=FALSE))
-(zstar*sigma/me)^2
+(round(zstar,3)*sigma/me)^2
 ```
 <li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` household to achieve the desired level of confidence and margin-of-error.</li>
 
 ```{r ncalc3, echo=FALSE, results='hide', fig.show='hide'}
 me <- 0.5
 (zstar <- distrib(0.025,type="q",lower.tail=FALSE))
-(zstar*sigma/me)^2
+(round(zstar,3)*sigma/me)^2
 ```
 
 <li>One should take a sample size of `r formatC(ceiling((zstar*sigma/me)^2),format="f",digits=0)` household to achieve the desired level of confidence and margin-of-error.</li>
