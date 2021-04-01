@@ -34,7 +34,6 @@ figs(name="fecal","Histogram for the fecal coliform counts in water samples from
 </div>
 
 ## Fecal Coliform Counts
-<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/warning_sign.jpg" alt="Checking out" class="img-right">
 [Fecal coliform](https://en.wikipedia.org/wiki/Fecal_coliform) is a bacterium that originates in the intestines of warm-blooded animals and, thus, may be found in their feces. Organic matter containing fecal coliform may be washed into lakes and streams in runoff following large rain events. In lakes and streams, the fecal coliform may lead to the growth of pathogens that are dangerous to the health of humans, or reduce oxygen available to fish and other aquatic life. Thus, fecal coliform levels are routinely monitored in many waterbodies in the United States.
 
 Students recorded fecal coliform counts (number of colony forming units (CFU) per 100 ml) in water samples from a nearby lake following a rainstorm that resulted in considerable runoff. The results from their samples are in `r tbls("fecal",display="cite")` and `r figs("fecal",display="cite")`. Test, at the 5% level, if these results suggest a difference from the mean of 178 CFU/100ml predicted by a computer model.
@@ -60,7 +59,6 @@ ggplot(data=df,mapping=aes(x=CFU)) +
 <br>
 
 ## Increased Civility in Nation-States?[^ICNS]
-<img src="zimgs/scales-of-justice.jpg" alt="Scales of Justice" class="img-right">
 Common wisdom has it that the world is becoming more civilized.  This would suggest that nation-states are killing fewer of their citizens (including capital punishment, deaths in civil and international wars, and all state-sponsored violence) than was once the case.  An analysis of history textbooks suggests that, in a typical year in the nineteenth century, the mean number of citizens killed by the typical nation-state was 4,104.  To examine if the world is becoming more civilized, the number of deaths from state-sponsored violence was recorded from records in the archives of [Amnesty International](http://www.amnestyusa.org/), [The International Court of Justice](http://www.icj-cij.org/homepage/), the [United Nations](http://www.un.org/en/index.html), and [The World Bank](http://www.worldbank.org/) for a random sample of 75 countries.  The mean and standard deviation for number of killings in these 75 countries was 3,292.8 and 4,814.5, respectively.  Use these results to determine, at the 5% level, if the "world is becoming more civilized." [*Hint: think about what "more civilized" means with respect to the number of killings.*]
 
 [^ICNS]: This exercise was modified [from here](http://www.shortell.org/book/chap12.html).

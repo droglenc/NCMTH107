@@ -12,7 +12,7 @@ css: "/css/modules.css"
 </div>
 <div id="fecal-coliform-counts" class="section level2">
 <h2>Fecal Coliform Counts</h2>
-<p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/warning_sign.jpg" alt="Checking out" class="img-right"> <a href="https://en.wikipedia.org/wiki/Fecal_coliform">Fecal coliform</a> is a bacterium that originates in the intestines of warm-blooded animals and, thus, may be found in their feces. Organic matter containing fecal coliform may be washed into lakes and streams in runoff following large rain events. In lakes and streams, the fecal coliform may lead to the growth of pathogens that are dangerous to the health of humans, or reduce oxygen available to fish and other aquatic life. Thus, fecal coliform levels are routinely monitored in many waterbodies in the United States.</p>
+<p><a href="https://en.wikipedia.org/wiki/Fecal_coliform">Fecal coliform</a> is a bacterium that originates in the intestines of warm-blooded animals and, thus, may be found in their feces. Organic matter containing fecal coliform may be washed into lakes and streams in runoff following large rain events. In lakes and streams, the fecal coliform may lead to the growth of pathogens that are dangerous to the health of humans, or reduce oxygen available to fish and other aquatic life. Thus, fecal coliform levels are routinely monitored in many waterbodies in the United States.</p>
 <p>Students recorded fecal coliform counts (number of colony forming units (CFU) per 100 ml) in water samples from a nearby lake following a rainstorm that resulted in considerable runoff. The results from their samples are in Table 1 and Table 1. Test, at the 5% level, if these results suggest a difference from the mean of 178 CFU/100ml predicted by a computer model.</p>
 <p>Table 1: Summary statistics for the fecal coliform counts in water samples from a nearby lake following a rainstorm.</p>
 <pre><code>     n   mean     sd    min     Q1 median     Q3    max 
@@ -23,7 +23,7 @@ css: "/css/modules.css"
 </div>
 <div id="increased-civility-in-nation-statesicns" class="section level2">
 <h2>Increased Civility in Nation-States?<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></h2>
-<p><img src="zimgs/scales-of-justice.jpg" alt="Scales of Justice" class="img-right"> Common wisdom has it that the world is becoming more civilized. This would suggest that nation-states are killing fewer of their citizens (including capital punishment, deaths in civil and international wars, and all state-sponsored violence) than was once the case. An analysis of history textbooks suggests that, in a typical year in the nineteenth century, the mean number of citizens killed by the typical nation-state was 4,104. To examine if the world is becoming more civilized, the number of deaths from state-sponsored violence was recorded from records in the archives of <a href="http://www.amnestyusa.org/">Amnesty International</a>, <a href="http://www.icj-cij.org/homepage/">The International Court of Justice</a>, the <a href="http://www.un.org/en/index.html">United Nations</a>, and <a href="http://www.worldbank.org/">The World Bank</a> for a random sample of 75 countries. The mean and standard deviation for number of killings in these 75 countries was 3,292.8 and 4,814.5, respectively. Use these results to determine, at the 5% level, if the “world is becoming more civilized.” [<em>Hint: think about what “more civilized” means with respect to the number of killings.</em>]</p>
+<p>Common wisdom has it that the world is becoming more civilized. This would suggest that nation-states are killing fewer of their citizens (including capital punishment, deaths in civil and international wars, and all state-sponsored violence) than was once the case. An analysis of history textbooks suggests that, in a typical year in the nineteenth century, the mean number of citizens killed by the typical nation-state was 4,104. To examine if the world is becoming more civilized, the number of deaths from state-sponsored violence was recorded from records in the archives of <a href="http://www.amnestyusa.org/">Amnesty International</a>, <a href="http://www.icj-cij.org/homepage/">The International Court of Justice</a>, the <a href="http://www.un.org/en/index.html">United Nations</a>, and <a href="http://www.worldbank.org/">The World Bank</a> for a random sample of 75 countries. The mean and standard deviation for number of killings in these 75 countries was 3,292.8 and 4,814.5, respectively. Use these results to determine, at the 5% level, if the “world is becoming more civilized.” [<em>Hint: think about what “more civilized” means with respect to the number of killings.</em>]</p>
 </div>
 <div class="footnotes">
 <hr />
@@ -41,7 +41,7 @@ css: "/css/modules.css"
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -59,7 +59,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

@@ -9,5 +9,4 @@ css: "/css/modules.css"
 ----
 
 ## Green Parakeet Crosses I
-<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/parakeets.jpg" alt="Parakeets" class="img-right">
 Green Parakeets are heterozygous for both co-dominant alleles B and C (i.e., BbCc). If two green parakeets are crossed then it is possible to get a green (all dominant alleles; BBCC), blue (two dominant B and two recessive C alleles; BBcc), yellow (two recessive B and two dominant C alleles; bbCC), or white (all reccessive alleles; bbcc). According to Mendel if the alleles assort independently during this cross then one would expect a ratio of 9 green to 3 blue to 3 yellow to 1 white offspring. In a random sample of 150 offspring from such crosses it was found that 95 were green, 27 were blue, 22 were yellow, and 6 were white. Use these data to test at the 10% level that the alleles assort independently when crossing two green parakeets. Make sure to provide explicit answers with your work shown for all [11 steps of a hypothesis test](../11-steps.html).

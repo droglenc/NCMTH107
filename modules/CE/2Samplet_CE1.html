@@ -13,7 +13,7 @@ css: "/css/modules.css"
 <p><br></p>
 <div id="compost-type-and-germination-rates" class="section level2">
 <h2>Compost Type and Germination Rates</h2>
-<p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/tagetes.jpg" alt="Tagetes" class="img-right"> The owner of a greenhouse developed a methodology to produce sterilized compost for growing plants that was cheaper than the compost she could buy while also allowing her to reduce waste production. However, these benefits could be offset by losses related to poor plant germination and growth. Thus, the owner attempted to answer the queston about germination success by planting 50 seeds of <a href="https://en.wikipedia.org/wiki/Tagetes">marigolds (<em>Tagetes</em> spp.)</a> into individual containers that were filled with either the home-made sterilized compost or store-bought compost. The containers were randomly filled with one type of compost and were randomly placed into a large greenhouse where all environmental conditions were controlled. After five days, the number of (the 50) seeds in each container that had germinated was recorded. The results are shown below.</p>
+<p>The owner of a greenhouse developed a methodology to produce sterilized compost for growing plants that was cheaper than the compost she could buy while also allowing her to reduce waste production. However, these benefits could be offset by losses related to poor plant germination and growth. Thus, the owner attempted to answer the queston about germination success by planting 50 seeds of <a href="https://en.wikipedia.org/wiki/Tagetes">marigolds (<em>Tagetes</em> spp.)</a> into individual containers that were filled with either the home-made sterilized compost or store-bought compost. The containers were randomly filled with one type of compost and were randomly placed into a large greenhouse where all environmental conditions were controlled. After five days, the number of (the 50) seeds in each container that had germinated was recorded. The results are shown below.</p>
 <pre><code>   compost  n  mean   sd min    Q1 median    Q3 max
 1   bought 18 42.67 4.33  36 39.00   42.5 45.50  50
 2 homemade 10 28.90 3.21  24 27.25   28.0 31.75  33</code></pre>
@@ -41,7 +41,7 @@ group  1  1.4387 0.2412
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -59,7 +59,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
