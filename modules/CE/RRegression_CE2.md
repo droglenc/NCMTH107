@@ -24,7 +24,6 @@ css: "/css/modules.css"
 ----
 
 ## Estimating Fishing Pressure
-<img src="zimgs/boat-launch.jpg" alt="Fishing Pressure" class="img-right">
 Wyoming Fish and Game researchers would like to be able to predict monthly fishing pressure (total number of angler-hours) with an index count of the number of vehicles in lake access parking lots because the latter is much cheaper to measure than the former. Towards this end they examined the relationship between pressure and index count on weekdays of Alcova Reservoir. Use the data in AlcovaRes.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/AlcovaRes.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/AlcovaRes_meta.txt)), **properly filtered to include only the data from the weekdays**, to construct results that can be used to answer the questions below.
 
 1. What is the response variable?
@@ -43,7 +42,6 @@ Wyoming Fish and Game researchers would like to be able to predict monthly fishi
 ----
 
 ## Fat Intake and Breast Cancer
-<img src="zimgs/fat_intake.jpg" alt="Fat Intake" class="img-right">
 [Carroll (1975)](http://cancerres.aacrjournals.org/content/canres/35/11_Part_2/3374.full.pdf) examined the relationship between per capita consumption of animal fat (g/day; `AnimFatI`) and age-adjusted death rate from breast cancer (`AgeAdjDe`) for 39 countries. Her goal was to determine if variability in the breast cancer death rate could be explained by the amount of fat consumed. The data for their study are found in CancerFat.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/CancerFat.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/CancerFat_meta.txt)). Load these data into R and produce results that can be used to answer the questions below.
 
 1. Which variable is the response variable?
@@ -60,7 +58,6 @@ Wyoming Fish and Game researchers would like to be able to predict monthly fishi
 ----
 
 ## Willow Flycatcher Migration
-<img src="zimgs/willow_flycatcher.jpg" alt="Willow Flycatcher" class="img-right">
 [Yong and Finch (1997)](https://www.fs.fed.us/rmrs/publications/migration-willow-flycatcher-along-middle-rio-grande) hypothesized that larger Willow Flycatchers (*Empidonax traillii*) migrated up the Middle Rio Grande River earlier than small willow flycatchers. To test this hypothesis they captured flycatchers on several days during their migration and measured the wing length (mm; an index of overall body size) of each bird. They recorded the date that the bird was captured as a Julian date (days since Jan. 1).  The results of their study are found in Flycatcher.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/Flycatcher.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/Flycatcher_meta.txt)). Load these data into R and produce results that can be used to answer the questions below.
 
 1. What is the explanatory variable?
@@ -78,7 +75,6 @@ Wyoming Fish and Game researchers would like to be able to predict monthly fishi
 ----
 
 ## Red-Imported Fire Ants and Deer Fawns
-<img src="zimgs/RIFA.jpg" alt="RIFA" class="img-right">
 [Allen *et al.* (1997)](http://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1047&amp;context=ncfwrustaff) investigated the impact of the density of red-imported fire ants (*Solenopsis invicta*; RIFA) on the recruitment of white-tailed deer (*Odocoileus virginianus*) fawns (an index of does to fawns). A modified version of their results are found in RIFA.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/RIFA.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/RIFA_meta.txt)). Load these data into R and produce results that can be used to answer the questions below.
 
 1. What is the response variable?
@@ -95,7 +91,6 @@ Wyoming Fish and Game researchers would like to be able to predict monthly fishi
 ----
 
 ## Math Assessments
-<img src="zimgs/math_exam.jpg" alt="Math Exam" class="img-right">
 All incoming freshmen are required to take a math assessment test to determine which math classes they should take. Sometimes pre-registering students will register before taking the assessment. To make the best possible course choices for these students, the adviser would like to predict their assessment score (`ASSESS`) based on their math ACT scores (`ACT`). The ACT score and assessment score from 72 freshmen from 2003 are stored in NCAssess.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/NCAssess.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/NCAssess_meta.txt)). Load these data into R and produce results that can be used to answer the questions below.
 
 1. What is the explanatory variable?
@@ -110,7 +105,6 @@ All incoming freshmen are required to take a math assessment test to determine w
 ----
 
 ## Archiving DNA Tissue
-<img src="zimgs/DNA.jpg" alt="DNA" class="img-right">
 [Suit and Bauer (1990)](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/ajcp/94/1/10.1093/ajcp/94.1.49/2/ajcpath94-0049.pdf?Expires=1497290123&amp;Signature=d6mTV1kk347TuG~YpH5RH8BhoBxFngQ7HzeoXVSXAMRXS4g8EWV7-IpnWVEDbhSZC1e4pi8tvl2CVtyAcW4fIkf7vWqeN7PdKOeuZaiW9xL6Qn-Vv4ne1aQHfv~~duVdSiNKU6GXRQJJMBp4FAmFyk9mYfZcdj855McVJBcrIOwcVCrrKOqHKwE~5~uEzZTIXmdBNWhuthrFV~kHo~Lu9xvWxngmtw1x8UsCJwGJHQc5NAbK9bZf5~qaGRUliBETjGTyV7CiD2kQ6Ig7FcnCqJmt7YU7MgpTczi9wFd~uez0ko-0Vx1Bdlrf620aIbXOFaZDne2iRfr55bEByROGYQ__&amp;Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q) examined DNA indices obtained from fresh and frozen tissue samples with the goal of determining if fresh values could be predicted from frozen values. The data for their study are found in DNA.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/DNA.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/DNA_meta.txt)). Load these data into R and produce results that can be used to answer the questions below. Note that one outlier should be excluded from the analysis.
 
 1. What did the researchers consider as the response variable?
@@ -125,7 +119,6 @@ All incoming freshmen are required to take a math assessment test to determine w
 ----
 
 ## Fawn Recruitment and Precipitation
-<img src="zimgs/fawn.jpg" alt="Fawns" class="img-right">
 Wildlife ecologist in Texas wanted to determine if the amount of precipitation could explain some of the variability observed in the number of fawns born to each doe [(Ginnett and Young 2000)](http://www.jstor.org/stable/3802741?seq=1#page_scan_tab_contents). Because Texas has many different climatic regions, the state was broken down into eight precipitation zones, and the mean precipitation for each zone over a period of five years was calculated. Furthermore, the researchers measured the mean number of fawns born per 100 does for each of these five years. The data for their study are found in Deer1.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/Deer1.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/Deer1_meta.txt)). Load these data into R and produce results that can be used to answer the questions below.
 
 1. Express the equation of the best-fit line in terms of the variables of the problem.
@@ -139,7 +132,6 @@ Wildlife ecologist in Texas wanted to determine if the amount of precipitation c
 ----
 
 ## Cricket Chirps and Temperature
-<img src="zimgs/cricket.jpg" alt="Cricket" class="img-right">
 It has been said that temperature can be estimated from the number of cricket chirps heard. To determine if this relationship existed, an entomologist recorded the number of chirps in a 15-second interval by crickets held at different temperatures. The data for their study are found in Chirps.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/Chirps.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/Chirps_meta.txt)). Load these data into R and produce results that can be used to answer the questions below.
 
 1. What is the response variable?
@@ -155,7 +147,6 @@ It has been said that temperature can be estimated from the number of cricket ch
 ----
 
 ## Cafe Sales
-<img src="zimgs/cafe.jpg" alt="Cafe" class="img-right">
 [DePaolo and Robinson (2011)](http://www.amstat.org/publications/jse/v19n1/depaolo.pdf) reported on data collected from a cafe run by business students at Indiana State University. The cafe was begun because a commercial vendor had closed a similar business. The group of business students opened a replacement business and carefully monitored sales and costs over a ten-week period during the spring semester of 2010. The students recorded extensive data in CafeData.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/CafeData.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/CafeData_meta.txt)). Load these data into R and answer the questions below related to determining how coffee sales are impacted by maximum daily temperature. [*Note that these are the same data that you may have entered in a [this](UEDAQuant2_CE2.html#cafe-sales) or [this](BEDAQuant_CE2.html#cafe-sales) previous class exercise.*]
 
 1. In terms of the variables of this problem, what is the equation of the best-fit line?

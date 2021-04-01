@@ -31,8 +31,7 @@ Load **Fire.csv** into an R data frame called `firedf` (and examine its structur
 ----
 
 ## Filtering Data Frames
-
- For each question below indicate the number of individuals in the resultant data.frame. **Make sure to show the structure of the resultant data.frame in your R Code and Results section**.
+For each question below indicate the number of individuals in the resultant data.frame. **Make sure to show the structure of the resultant data.frame in your R Code and Results section**.
 
 1. Isolate just the deciduous stand types.
 1. Isolate the stands with a litter depth less than 2 cm.

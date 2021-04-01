@@ -27,7 +27,6 @@ css: "/css/modules.css"
 
 # Quantitative
 ## Greenhouse Effect Opinion
-<img src="zimgs/greenhouse_effect.jpg" alt="" class="img-right">
 In the General Social Survey (GSS), two questions were asked -- "How often do you make a special effort to sort glass or cans or plastic or papers and so on for recycling?" and "In general, do you think that a rise in the world's temperature caused by the greenhouse effect, is extremely likely, very likely, somewhat likely, not very likely, or not at all likely?". Both of these variables are recorded in the GSSEnviroQues.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/GSSEnviroQues.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/GSSEnviroQues_meta.txt)) file. Use these data to answer the questions below.
 
 1. What percentage of all respondents recycle often and feel that it is very likely that the greenhouse effect has caused the rise in world's temperature?
@@ -39,7 +38,6 @@ In the General Social Survey (GSS), two questions were asked -- "How often do yo
 ----
 
 ## North Fish Creek Discharge
-<img src="zimgs/fish-creek.jpg" alt="Fish Creek" class="img-right">
 The instantaneous discharge (cubic feet per second) and total suspended sediments (in milligrams per liter) were recorded on 28 dates for North Fish Creek near Ashland, WI.  These data are found in FishCrNWaterQuality.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/FishCrNWaterQuality.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/FishCrNWaterQuality_meta.txt)). Describe the relationship between instantaneous discharge and total suspended sediments from these data. [*Think carefully about which variable should be on the y-axis.*]
 
 &nbsp;
@@ -47,13 +45,11 @@ The instantaneous discharge (cubic feet per second) and total suspended sediment
 ----
 
 ## Animal Longevity and Gestation
-<img src="zimgs/gestation.jpg" alt="Elephant Gestation" class="img-right">
 The average gestation period (i.e., length of pregnancy) of an animal is closely related to its longevity (i.e., length of its lifespan). Scientists are interested in being able to predict the average longevity (difficult to measure) from average gestation period (relatively easy to measure) for a given animal. Towards this end, data on the average gestation period and longevity (in captivity) of 40 different species of animals was recorded in animals.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/animals.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/animals_meta.txt)). Describe the relationship between average longevity and average gestation period from these data. [*Think carefully about which variable should be on the y-axis.*]
 
 ----
 
 ## Wolves and Whitetail Deer
-<img src="zimgs/wolf.jpg" alt="Wolf" class="img-right">
 [Mladenoff *et al.* (1997)](https://www.researchgate.net/profile/David_Mladenoff/publication/247843996_Causes_and_Implications_of_Species_Restoration_in_Altered_Ecosystems/links/5410594a0cf2f2b29a40f2ce.pdf) estimated the territory size (km<sup>2</sup>) of Wolf (*Canis lupus*) packs and the density of Whitetail Deer (number/km<sup>2</sup>; *Odocoileus virginianus*) in the same areas in northern Wisconsin. Their data is recorded in Wolves2.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/Wolves2.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/Wolves2_meta.txt)). Load these data into R and generate results to write a brief description of this bivariate relationship.
 
 &nbsp;
@@ -61,7 +57,6 @@ The average gestation period (i.e., length of pregnancy) of an animal is closely
 ----
 
 ## Crickets and Temperature
-<img src="zimgs/cricket.jpg" alt="Cricket" class="img-right">
 It has been said that you can roughly estimate the temperature from the number of cricket chirps heard. To determine if this relationship existed, an entomologist recorded the number of chirps in a 15-second interval by crickets held at different temperatures. The researcher's data is recorded in Chirps.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/Chirps.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/Chirps_meta.txt)). Load these data into R and generate results to write a brief description of this bivariate relationship.
 
 &nbsp;
@@ -69,7 +64,6 @@ It has been said that you can roughly estimate the temperature from the number o
 ----
 
 ## Cafe Sales
-<img src="zimgs/cafe.jpg" alt="Cafe" class="img-right">
 [DePaolo and Robinson (2011)](http://www.amstat.org/publications/jse/v19n1/depaolo.pdf) reported on data collected from a cafe run by business students at Indiana State University. The cafe was begun because a commercial vendor had closed a similar business. The group of business students opened a replacement business and carefully monitored sales and costs over a ten-week period during the spring semester of 2010. The students recorded extensive data in CafeData.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/CafeData.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/CafeData_meta.txt)). Load these data into R and answer the questions below.
 
 1. Perform a bivariate EDA for the number of coffees sold and maximum temperature. [*Carefully consider which one should be on the y-axis.*]
@@ -79,7 +73,6 @@ It has been said that you can roughly estimate the temperature from the number o
 ----
 
 ## Yellow Perch Length-Weight
-<img src="zimgs/yellow-perch.jpg" alt="Yellow Perch" class="img-right">
 The Park Management team of Kejimkujik National Park, Nova Scotia examined the relationship between the length and weight of Yellow Perch (*Perca flavescens*) captured form Grafton Lake in the park in 2000 following the removal of a dam (Brylinsky 2001). Their data is stored in PerchGL.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/PerchGL.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/PerchGL_meta.txt)). Load these data into R and describe the bivariate relationship between length and weight for fish captured **only in 2000** (i.e., use `filterD()` or `facet_wrap()`).
 
 ----
@@ -88,7 +81,6 @@ The Park Management team of Kejimkujik National Park, Nova Scotia examined the r
 
 # Categorical
 ## Animal Types in Zoos
-<img src="zimgs/zoo.jpg" alt="Elephants" class="img-right">
 The data in Zoo1.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/Zoo1.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/Zoo1_meta.txt)) contains a list of animals found in several different zoos. In addition, each animal was classified into broad "types" ("mammal", "bird", and "amph/rep"). The researchers that collected these data wanted to examine if the distribution of broad animal types differed among zoos. Use these data to answer the questions below.
 
 1. What is the response variable in this analysis?
@@ -101,7 +93,6 @@ The data in Zoo1.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/m
 ----
 
 ## Elephant Seals
-<img src="zimgs/ElephantSeals.jpg" alt="Elephant Seal" class="img-right">
 Marine biologists studied the foraging ecology of Northern Elephant Seals off the California coast (LeBoeuf *et al.* 2000). Part of their analysis required that they record, for each observed seal, the month that it was observed and the sex of the seal. Their results from 47 seals are listed below. Use the data to answer the questions further below.
 
 ```
@@ -130,7 +121,6 @@ Sex    F   F   F   F   F   F   F   F   F   F   F   F   F   F   F
 ----
 
 ## Popularity in Middle School
-<img src="zimgs/sports_kids_2.jpg" alt="Sports Kids" class="img-right">
 [Chase and Drummer (1992)](http://www.ncbi.nlm.nih.gov/pubmed/1439167) examined sports as a social status determinant for children.  In their study, they surveyed 227 boys and 251 girls in grades 4, 5, and 6 from schools in Michigan to determine which criteria were most important in determining personal, female, and male popularity.  In one part of their study, students were asked what their personal goals were for school (options were "make good grades", "be popular", and "be good in sports"; `goals`).  These data (and answers to several other questions) are in PopularKids.csv ([data](https://github.com/droglenc/NCData/raw/master/PopularKids.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/PopularKids_meta.txt)).  Use these data to answer the following questions.
 
 1. How many students in the sample were from fourth grade?

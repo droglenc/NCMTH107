@@ -14,7 +14,6 @@ Show your R work (both your input and your output) for each question below. You 
 <br>
 
 ## Urban Runoff
-<img src="zimgs/runoff.jpg" alt="Grand Haven plume" class="img-right">
 Urbanization poses a major threat to stream and watershed ecosystems.  One aspect of urbanization is the conversion of natural areas to land with impervious surfaces, thus increasing runoff of rain and, likely, pollutants.  A University of Washington researcher recorded the percent of impervious land and the benthic index of biotic integrity (IBI) for 14 areas in the state of Washington.  The IBI has been described as a measure of "the capability of supporting and maintaining a balanced, integrated, adaptive community of organisms having a species composition and functional organization comparable to that of natural habitat in the region."  In this example, the researchers were attempting to identify how the percentage of impervious surfaces in the area effects the IBI.  The data for this study are below (note that much more information can be obtained at the [QELP site](http://www.seattlecentral.edu/qelp/sets/077/077.html#About)).
 
 <pre>
@@ -38,7 +37,6 @@ Load these data into R to answer the questions below.  [*Note that these are the
 <br>
 
 ## Sign Legibility and Age
-<img src="zimgs/blurredsign.jpg" alt="Blurred Sign" class="img-right">
 In a study of the legibility and visibility of highway signs, a Pennsylvania research firm determined the maximum distance at which each of 30 drivers could read a newly designed sign. The participants in the study were from 18 to 82 years old. The government agency that funded the research hoped to improve highway safety for older drivers and wanted to examine the relationship between age and sign legibility distance. Use the data in vision.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/vision.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/vision_meta.txt)) to construct results that can be used to answer the questions below. [*Example from [Utts and Heckard, Mind on Statistics](http://www.cengage.com/c/mind-on-statistics-5e-utts)*].
 
 1. What is the response variable? [*Hint: Read the rest of the questions before answering this question.*]
