@@ -51,12 +51,12 @@ df <- n1+n2-2
 ( stat <- xbar1-xbar2 )
 ( t <- stat/se )
 ( pv <- distrib(t,distrib="t",df=df,lower.tail=FALSE) )
-( tstar <- distrib(0.9,type="q",distrib="t",df=df,lower.tail=FALSE) )
+( tstar <- distrib(0.99,type="q",distrib="t",df=df,lower.tail=FALSE) )
 ( lcb <- stat+tstar*se )
 ```
 
 <ol>
-<li>&alpha; = 0.10.</li>
+<li>&alpha; = 0.01.</li>
 <li>H<sub>A</sub>: &mu;<sub>b</sub>-&mu;<sub>h</sub> &gt; 0 and H<sub>0</sub>: &mu;<sub>b</sub>-&mu;<sub>h</sub> = 0, where &mu; is the mean number of germinated plants, b is the bought compost, and h is the homemade compost.</li>
 <li>2-sample t-test because (i) two groups/populations are considered (bought and homemade compost), (ii) a quantitative variable (number germinated) was recorded, and (iii) individuals in the groups are independent (there is no known connection between all pairs of containers with bought and homemade compost).</li>
 <li>An experimental study was conducted without obvious random selection of the containers with soil, but with random allocation (placement of containers in the greenhouse).</li>
@@ -69,7 +69,7 @@ df <- n1+n2-2
 <li>p-value`r kPvalue(pv,include.p=FALSE,latex=FALSE)` (more specifically `r formatC(pv,digits=4)`).</li>
 <li>Reject H<sub>0</sub> because the p-value &lt; &alpha;.</li>
 <li>It appears that the the mean number of plants that germinate is significantly lower for the homemade than the bought compost. Thus, the homemade compost "performs" worse than the store bought compost and may lead to increased costs for the greenhouse.</li>
-<li>I am 90% confident that the mean number of plants that germinated with the bought compost is at least 13.77`r formatC(tstar,format="f",digits=3)`*1.569=`r formatC(lcb,format="f",digits=2)` plants greater than the mean number of plants that germinated with the homemade compost. This further supports that the mean number of plants that germinated is greater in the store bought compost.</li>
+<li>I am 99% confident that the mean number of plants that germinated with the bought compost is at least 13.77`r formatC(tstar,format="f",digits=3)`*1.569=`r formatC(lcb,format="f",digits=2)` plants greater than the mean number of plants that germinated with the homemade compost. This further supports that the mean number of plants that germinated is greater in the store bought compost.</li>
 </ol>
 
 R Appendix.
