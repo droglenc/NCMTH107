@@ -12,8 +12,6 @@ Related to: [Course Administration](#course-administration) / [R/RStudo](#r-and-
 ----
 
 ## Course Administration
-* [What's up with "module preparation quizzes"?](FAQs/mod-prep-quiz)
-* [How do I "turn-in" my "module assignments"?](FAQs/turnin-assignment)
 * [How do I watch the class preparation videos?](FAQs/videos)
 * [Can I get the "full" MS Office products for my own computer?](FAQs/getMSOffice)
 * [Is it possible to print to college printers from my own computer?](FAQs/printOwnComputer)
@@ -62,14 +60,18 @@ Related to: [Course Administration](#course-administration) / [R/RStudo](#r-and-
 * [Why does the df for my two-sample t-test contain decimals?](FAQs/t2test-df-decimals.html)
 * [Why does R say the alternative hypothesis is true, even though the p-value>alpha?](FAQs/alt-hyp-misinterp.html)
 * [What does the warning from `chisq.test()` mean?](FAQs/chisq-warning.html)
-* [How can I compile a more succinct report of my R script?](FAQs/compileScript)
 
 &nbsp;
 
 ----
 
+<!----
 ## Old
+* [What's up with "module preparation quizzes"?](FAQs/mod-prep-quiz)
+* [How do I "turn-in" my "module assignments"?](FAQs/turnin-assignment)
+* [How can I compile a more succinct report of my R script?](FAQs/compileScript)
 * [How do I make Word single space my document?](FAQs/Word_SingleSpace)
 * [How do I easily make my tabular results from R line-up in MSWord?](FAQs/Word_RLineup)
 * [How do I make Greek symbols in MSWord?](FAQs/Word_GreekLetters)
 * [How should my homework assignments be formatted?](hwformat)
+---->
