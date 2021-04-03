@@ -6,8 +6,7 @@ css: "/css/modules.css"
 ---
 
 <div class="alert alert-info">
-Show your R work (both your input and your output) for each question below. You may find
-<a href="http://derekogle.com/NCMTH107/resources/FAQs/AssignmentNotebook" target="_blank">this FAQ</a> useful.
+Show your R work (both your input and your output) for each question below. You may find <a href="http://derekogle.com/Book107/RData.html#r-notebooks" target="_blank">Section 22.1</a> in the reading useful.
 </div>
 
 <br>
