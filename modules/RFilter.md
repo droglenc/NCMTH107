@@ -27,7 +27,7 @@ css: /css/modules.css
 
 Use the resources below to answer [these questions](Prep/RFilter). [[*Problems with videos?*](../resources/FAQs/videos){:target="_blank"}]
 
-* **Primary Resources** (~3 pages, 64 mins)
+* **Primary Resources** (~4 pages, 64 mins)
   * [Reading](http://derekogle.com/Book107/RFilter.html){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Subset data.frame with filterD](https://vimeo.com/439447290){:target="_blank"} [11 mins] ... [corresponding resource](HO/Penguins.html#RFilter){:target="_blank"}
   * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/cWKqQchaKR4) [53 mins]
