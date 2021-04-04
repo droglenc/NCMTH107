@@ -50,6 +50,7 @@ title: Data for MTH107
 * Penguins -- [data](https://raw.githubusercontent.com/allisonhorst/penguins/master/data-raw/penguins.csv), [metadata](https://allisonhorst.github.io/palmerpenguins/articles/palmerpenguins.html#the-palmerpenguins-package-1)
 * PerchGL -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/PerchGL.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/PerchGL_meta.txt)
 * pHlevels -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/pHlevels.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/pHlevels_meta.txt)
+* PiceaTrees -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/PiceaTrees.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/PiceaTrees_meta.txt)
 * PlasticRecycling -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/PlasticRecycling.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/PlasticRecycling_meta.txt)
 * PopularKids -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/PopularKids.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/PopularKids_meta.txt)
 * PopulusTrees -- [data](https://raw.githubusercontent.com/droglenc/NCData/master/PopulusTrees.csv), [metadata](https://raw.githubusercontent.com/droglenc/NCData/master/PopulusTrees_meta.txt)
