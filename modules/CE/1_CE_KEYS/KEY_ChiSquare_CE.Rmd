@@ -52,6 +52,11 @@ obs <- matrix(c(51,26,8,44,21,7),nrow=2,byrow=TRUE)
 rownames(obs) <- c("1901-1950","1951-2000")
 colnames(obs) <- c("Cat 1&2","Cat 3","Cat 4&5")
 ( hurr.chi <- chisq.test(obs,correct=FALSE) )
+
+## Recalculate using rounding on expected values and residuals
+exp <- round(hurr.chi$expected,1)
+resids <- round(((obs-exp)^2)/exp,3)
+sum(resids)
 ```
 
 <ol>
