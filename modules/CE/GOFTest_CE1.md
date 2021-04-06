@@ -16,18 +16,18 @@ Students in an Introduction to Environmental Studies course conducted a study to
 <br>
 
 ## Habitat Use by Wild Turkeys
-[Rumble and Anderson (1992)](http://www.fs.fed.us/rm/pubs_other/rmrs_1992_rumble_m002.pdf) examined habitat use by [Merriam's Wild Turkey (*Meleagris gallopavo merriami*)](http://wildturkeyzone.com/wildturkey/merriams.htm) in South Dakota. In one part of their study they identified the major vegetative type (called Habitat below) in 4-32 hectare sampling units. They then computed the proportions of total area available to turkeys by major vegetation type (first row below). Turkeys' were trapped and fit with radio transmitters. Each bird was then located three times per week with the location of the bird being recorded. The frequency of locations by each major vegatation type was computed for each of four seasons. The area available and the seasonal frequency of turkey locations in each habitat are shown below.
+[Rumble and Anderson (1992)](http://www.fs.fed.us/rm/pubs_other/rmrs_1992_rumble_m002.pdf) examined habitat use by [Merriam's Wild Turkey (*Meleagris gallopavo merriami*)](http://wildturkeyzone.com/wildturkey/merriams.htm) in South Dakota. In one part of their study they identified the major vegetative type (called Habitat below) in 4-32 hectare sampling units. They then computed the proportions of total area available to turkeys by major vegetation type (first row below). Turkeys' were trapped and fit with radio transmitters. Each bird was then located three times per week with the location of the bird being recorded. The frequency of locations by each major vegetation type was computed for each of four seasons. The area available and the seasonal frequency of turkey locations in each habitat are shown below.
 
 <pre>
 Habitat             Aspen    Meadow     Pine    Oak/Spruce
-Area Avaialable    0.0516    0.1016    0.8371    0.0100
+Area Available    0.0516    0.1016    0.8371    0.0100
 Winter Use             4        11       186         4         
 Spring Use            61         9       807         1
 Summer Use            17         5       100         4
-Fall Use              14         7       195         2
+Fall Use              32        16       449         5
 </pre>
 
-Use these results to determine, at the 5% level, if the turkey's exhibited a habitat preference in the **Spring**.
+Use these results to determine, at the 5% level, if the turkey's exhibited a habitat preference in the **FALL**.
 
 &nbsp;
 

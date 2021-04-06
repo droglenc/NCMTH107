@@ -82,8 +82,9 @@ distrib(29.6355,distrib="chisq",df=3,lower.tail=FALSE)
 ## Habitat Use by Wild Turkeys
 
 ```{r TurkeyCalc, echo=FALSE, results='hide', fig.show='hide', warning=FALSE}
-t.obs <- c(Aspen=61,Meadow=9,Pine=807,OakSpruce=1)
 t.exp <- c(Aspen=0.0516,Meadow=0.1016,Pine=0.8371,OakSpruce=0.0100)
+#t.obs <- c(Aspen=61,Meadow=9,Pine=807,OakSpruce=1)  # Summer
+t.obs <- c(Aspen=32,Meadow=16,Pine=449,OakSpruce=5) # Fall
 t.chi <- chisq.test(t.obs,p=t.exp,rescale.p=TRUE,correct=FALSE)
 t.chi
 gofCI(t.chi,digits=3)
