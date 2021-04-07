@@ -23,4 +23,7 @@ Create an R data.frame (by first creating a CSV file) that contains the first na
 ----
 
 ## Load Data From Webpage
-Load **fire.csv** ([data](https://raw.githubusercontent.com/droglenc/NCData/master/Fire.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/Fire_meta.txt)) into an R data frame called `firedf`. Show the structure of the data frame and the first three and last three rows of the data frame.
+Load **fire.csv** ([data](https://raw.githubusercontent.com/droglenc/NCData/master/Fire.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/Fire_meta.txt)) into an R data frame called `firedf`. Show the structure of the data frame and the first three and last three rows of the data frame. Answere the following questions.
+
+1. How many variables are in the data frame?
+1. How many individuals are in the data frame?
