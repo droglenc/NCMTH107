@@ -44,6 +44,7 @@ Use the resources below to answer [these questions](Prep/RUnivEDA). [[*Problems 
 
 ## Practice
 
+* [Class Example](CE/RUnivEDA_CExmpl) [![Decoration](../img/key.png)](CE/KEY_RUnivEDA_CExmpl)
 * [Assignment](CE/RUnivEDA_CE1) [![Decoration](../img/key.png)](CE/KEY_RUnivEDA_CE)
 
 ----

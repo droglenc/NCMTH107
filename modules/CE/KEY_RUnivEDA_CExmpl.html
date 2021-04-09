@@ -1,0 +1,133 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "R Univariate EDA Class Example"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="example-1" class="section level1">
+<h1>Example 1</h1>
+<p>Litter depth is very slightly left-skewed with no obvious outliers (see histogram below). The center as measured by the mean is 2.222 cm and the dispersion as measured by the standard deviation is 0.591 cm (see summary statistics below). I chose to use the mean and standard deviation as measures of center and dispersion because the shape was not strongly skewed and there were no outliers.</p>
+<div class="alert alert-warning">
+<ol>
+<li>
+These results are for a <em>quantitative</em> variable (litter depth); thus, you must describe shape, outliers, center, and dispersion of the distribution. In addition, you must explain why you chose to use either the mean and standard deviation or the median and IQR as your measures of center and dispersion (see last sentence).
+</li>
+<li>
+For the histogram, make sure you choose a binwidth= that results in roughly 8-10 bars.
+</li>
+<li>
+Make sure to completely label the x- and y-axes.
+</li>
+</ol>
+</div>
+<div id="r-code-and-results" class="section level4">
+<h4>R Code and Results</h4>
+<pre class="r"><code>&gt; firedf &lt;- read.csv(&quot;http://derekogle.com/NCMTH107/modules/CE/1_CE_KEYS/Fire.csv&quot;)
+&gt; str(firedf)</code></pre>
+<pre><code>&#39;data.frame&#39;:   48 obs. of  6 variables:
+ $ sttype: chr  &quot;d&quot; &quot;d&quot; &quot;d&quot; &quot;d&quot; ...
+ $ tslf  : chr  &quot;0-100&quot; &quot;0-100&quot; &quot;0-100&quot; &quot;0-100&quot; ...
+ $ tdw   : num  27.7 22.6 26.2 43.6 27 41.2 46.6 27.6 89.2 39.6 ...
+ $ litdep: num  0.62 1.33 1.46 1.92 2.9 2.13 2.33 1.46 2.25 3.08 ...
+ $ fuel1h: num  0.06 0.07 0.08 0.05 0.06 0.15 0.02 0.04 0.04 0.3 ...
+ $ tltd  : int  2382 1978 1234 1478 1901 1111 748 1055 3422 1045 ...</code></pre>
+<pre class="r"><code>&gt; ggplot(data=firedf,mapping=aes(x=litdep)) +
+    geom_histogram(binwidth=0.25,boundary=0,color=&quot;black&quot;,fill=&quot;lightgray&quot;) +
+    scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
+    labs(x=&quot;Litter Depth (cm)&quot;,y=&quot;Frequency of Stands&quot;) +
+    theme_NCStats()</code></pre>
+<p><img src="KEY_RUnivEDA_CExmpl_files/figure-html/unnamed-chunk-3-1.png" width="336" /></p>
+<pre class="r"><code>&gt; Summarize(~litdep,data=firedf,digits=3)</code></pre>
+<pre><code>     n   mean     sd    min     Q1 median     Q3    max 
+48.000  2.222  0.591  0.620  1.915  2.190  2.710  3.130 </code></pre>
+<p><br></p>
+</div>
+</div>
+<div id="example-2" class="section level1">
+<h1>Example 2</h1>
+<p>Most of the stands tend to be deciduous (50.0%) or mixed deciduous (27.1%; see bar chart and percentage table below).</p>
+<div class="alert alert-warning">
+<ol>
+<li>
+These results are for a <em>categorical</em> variable (stand type); thus, you must describe the most outstanding result or results in the tables or bar chart.
+</li>
+<li>
+This variable was ordinal so I made sure to appropriately order the levels as R will default to an alphabetical order.
+</li>
+<li>
+Make sure to completely label the x- and y-axes.
+</li>
+</ol>
+</div>
+<div id="r-code-and-results-1" class="section level4">
+<h4>R Code and Results</h4>
+<pre class="r"><code>&gt; firedf$sttype &lt;- factor(firedf$sttype,levels=c(&quot;c&quot;,&quot;mc&quot;,&quot;md&quot;,&quot;d&quot;))
+&gt; 
+&gt; ( tbl &lt;- xtabs(~sttype,data=firedf) )</code></pre>
+<pre><code>sttype
+ c mc md  d 
+ 7  4 13 24 </code></pre>
+<pre class="r"><code>&gt; percTable(tbl)</code></pre>
+<pre><code>sttype
+   c   mc   md    d 
+14.6  8.3 27.1 50.0 </code></pre>
+<pre class="r"><code>&gt; ggplot(data=firedf,mapping=aes(x=sttype)) +
+    geom_bar(color=&quot;black&quot;,fill=&quot;lightgray&quot;) +
+    scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
+    labs(x=&quot;Stand Type&quot;,y=&quot;Frequency of Stands&quot;) +
+    theme_NCStats()</code></pre>
+<p><img src="KEY_RUnivEDA_CExmpl_files/figure-html/unnamed-chunk-4-1.png" width="336" /></p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

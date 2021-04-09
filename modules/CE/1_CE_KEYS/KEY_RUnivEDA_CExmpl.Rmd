@@ -1,0 +1,78 @@
+---
+title: "Answer Key"
+subtitle: "R Univariate EDA Class Example"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    fig_height: 3.5
+    fig_width: 3.5
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_RUnivEDA_CExmpl")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+library(NCStats)
+library(ggplot2)
+source("../../../rhelpers/knitr_setup.R")
+```
+
+----
+
+# Example 1
+Litter depth is very slightly left-skewed with no obvious outliers (see histogram below). The center as measured by the mean is 2.222 cm and the dispersion as measured by the standard deviation is 0.591 cm (see summary statistics below). I chose to use the mean and standard deviation as measures of center and dispersion because the shape was not strongly skewed and there were no outliers.
+
+<div class="alert alert-warning">
+<ol>
+<li>These results are for a *quantitative* variable (litter depth); thus, you must describe shape, outliers, center, and dispersion of the distribution. In addition, you must explain why you chose to use either the mean and standard deviation or the median and IQR as your measures of center and dispersion (see last sentence).</li>
+<li>For the histogram, make sure you choose a binwidth= that results in roughly 8-10 bars.</li>
+<li>Make sure to completely label the x- and y-axes.</li>
+</ol>
+</div>
+
+#### R Code and Results
+```{r}
+firedf <- read.csv("http://derekogle.com/NCMTH107/modules/CE/1_CE_KEYS/Fire.csv")
+str(firedf)
+
+ggplot(data=firedf,mapping=aes(x=litdep)) +
+  geom_histogram(binwidth=0.25,boundary=0,color="black",fill="lightgray") +
+  scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
+  labs(x="Litter Depth (cm)",y="Frequency of Stands") +
+  theme_NCStats()
+
+Summarize(~litdep,data=firedf,digits=3)
+```
+
+<br>
+
+# Example 2
+Most of the stands tend to be deciduous (50.0%) or mixed deciduous (27.1%; see bar chart and percentage table below).
+
+<div class="alert alert-warning">
+<ol>
+<li>These results are for a *categorical* variable (stand type); thus, you must describe the most outstanding result or results in the tables or bar chart.</li>
+<li>This variable was ordinal so I made sure to appropriately order the levels as R will default to an alphabetical order.</li>
+<li>Make sure to completely label the x- and y-axes.</li>
+</ol>
+</div>
+
+#### R Code and Results
+```{r}
+firedf$sttype <- factor(firedf$sttype,levels=c("c","mc","md","d"))
+
+( tbl <- xtabs(~sttype,data=firedf) )
+percTable(tbl)
+
+ggplot(data=firedf,mapping=aes(x=sttype)) +
+  geom_bar(color="black",fill="lightgray") +
+  scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
+  labs(x="Stand Type",y="Frequency of Stands") +
+  theme_NCStats()
+```
