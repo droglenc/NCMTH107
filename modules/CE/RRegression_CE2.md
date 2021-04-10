@@ -12,7 +12,6 @@ css: "/css/modules.css"
     1. [Estimating Fishing Pressure](#estimating-fishing-pressure)
     1. [Fat Intake and Breast Cancer](#fat-intake-and-breast-cancer)
     1. [Willow Flycatcher Migration](#willow-flycatcher-migration)
-    1. [Red-Imported Fire Ants and Deer Fawns](#red-imported-fire-ants-and-deer-fawns)
     1. [Math Assessments](#math-assessments)
     1. [Archiving DNA Tissue](#archiving-dna-tissue)
     1. [Fawn Recruitment and Precipitation](#fawn-recruitment-and-precipitation)
@@ -71,22 +70,6 @@ Wyoming Fish and Game researchers would like to be able to predict monthly fishi
 1. What proportion of the variability in wing length is explained by knowing the date?
 1. What is the correlation coefficient between wing length and date?
 1. Comment on the assumptions of the linear regression.
-
-----
-
-## Red-Imported Fire Ants and Deer Fawns
-[Allen *et al.* (1997)](http://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1047&amp;context=ncfwrustaff) investigated the impact of the density of red-imported fire ants (*Solenopsis invicta*; RIFA) on the recruitment of white-tailed deer (*Odocoileus virginianus*) fawns (an index of does to fawns). A modified version of their results are found in RIFA.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/RIFA.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/RIFA_meta.txt)). Load these data into R and produce results that can be used to answer the questions below.
-
-1. What is the response variable?
-1. What is the explanatory variable?
-1. In terms of the variables of this problem, what is the equation of the best-fit line?
-1. In terms of the variables of this problem, interpret the value of the slope.
-1. If the RIFA index increases by 500, how much different do you expect fawn recruitment to be?
-1. What is the predicted fawn recruitment when the RIFA index is 1700?
-1. What is the residual when the RIFA index is 2700 and fawn recruitment is 0.3?
-1. What is the correlation coefficient between RIFA and fawn recruitment?
-1. What proportion of the variability in fawn recruitment is explained by knowing the RIFA index?
-1. Comment on the assumptions in this regression.
 
 ----
 

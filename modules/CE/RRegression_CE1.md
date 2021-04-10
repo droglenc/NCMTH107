@@ -35,6 +35,7 @@ Load these data into R to answer the questions below.  [*Note that these are the
 
 <br>
 
+<!---
 ## Sign Legibility and Age
 In a study of the legibility and visibility of highway signs, a Pennsylvania research firm determined the maximum distance at which each of 30 drivers could read a newly designed sign. The participants in the study were from 18 to 82 years old. The government agency that funded the research hoped to improve highway safety for older drivers and wanted to examine the relationship between age and sign legibility distance. Use the data in vision.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/vision.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/vision_meta.txt)) to construct results that can be used to answer the questions below. [*Example from [Utts and Heckard, Mind on Statistics](http://www.cengage.com/c/mind-on-statistics-5e-utts)*].
 
@@ -50,3 +51,20 @@ In a study of the legibility and visibility of highway signs, a Pennsylvania res
 1. What proportion of the variability in maximum distance to see the sign is explained by knowing the age of the driver?
 1. How much will the predicted maximum distance to see the sign change if the driver's age increased by ten years?
 1. What aspect of this regression analysis concerns you? [*Hint: consider the regression assumptions*]?
+--->
+
+## Red-Imported Fire Ants and Deer Fawns
+[Allen *et al.* (1997)](http://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1047&amp;context=ncfwrustaff) investigated the impact of the density of red-imported fire ants (*Solenopsis invicta*; RIFA) on the recruitment of white-tailed deer (*Odocoileus virginianus*) fawns (an index of does to fawns). A modified version of their results are found in RIFA.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/RIFA.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/RIFA_meta.txt)). Load these data into R and produce results that can be used to answer the questions below.
+
+1. What is the response variable? [*Hint: Read the rest of the questions before answering this question.*]
+1. What is the explanatory variable?
+1. In terms of the variables of this problem, what is the equation of the best-fit line?
+1. In terms of the variables of this problem, interpret the value of the slope.
+1. In terms of the variables of this problem, interpret the value of the intercept.
+1. If the RIFA index increases by 500, how much different do you expect fawn recruitment to be?
+1. What is the predicted fawn recruitment when the RIFA index is 500?
+1. What is the predicted fawn recruitment when the RIFA index is 1700?
+1. What is the residual when the RIFA index is 2200 and fawn recruitment is 0.3?
+1. What is the correlation coefficient between RIFA and fawn recruitment?
+1. What proportion of the variability in fawn recruitment is explained by knowing the RIFA index?
+1. Comment on the assumptions in this regression.
