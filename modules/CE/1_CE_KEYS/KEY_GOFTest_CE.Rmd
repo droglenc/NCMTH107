@@ -24,8 +24,8 @@ tbls <- captioner(prefix="Table")
 tbls(name="WaterExpTable","Expected frequency of students (assuming that Ho is true) by water type choice.")
 tbls(name="WaterObsTable","Observed frequency of students by water type choice.")
 
-tbls(name="TurkeyExpTable","Expected frequency of turkeys (assuming that Ho is true) by habitat in the spring.")
-tbls(name="TurkeyObsTable","Observed frequency of turkeys by habitat in the spring.")
+tbls(name="TurkeyExpTable","Expected frequency of turkeys (assuming that Ho is true) by habitat in the fall.")
+tbls(name="TurkeyObsTable","Observed frequency of turkeys by habitat in the fall.")
 
 tbls(name="JuryExpTable","Expected frequency of jurors (assuming that Ho is true) by age category.")
 tbls(name="JuryObsTable","Observed frequency of jurors by age category.")
@@ -111,10 +111,19 @@ round(t.chi$expected,1)
 t.chi$observed
 ```
 
+<!---- this was for spring
 <li>&chi;<sup>2</sup>=$\frac{(61-45.3)^{2}}{45.3}$ + $\frac{(9-89.2)^{2}}{89.2}$ +$\frac{(807-734.8)^{2}}{734.8}$ +$\frac{(1-8.8)^{2}}{8.8}$=`r formatC(t.chi$statistic,format="f",digits=3)` with `r t.chi$parameter` df (`r tbls("TurkeyResults",display="cite")`).</li>
+---->
+
+<li>&chi;<sup>2</sup>=$\frac{(32-25.9)^{2}}{25.9}$ + $\frac{(16-51.0)^{2}}{51.0}$ +$\frac{(449-420.1)^{2}}{420.1}$ +$\frac{(5-5.0)^{2}}{5.0}$=`r formatC(t.chi$statistic,format="f",digits=3)` with `r t.chi$parameter` df (`r tbls("TurkeyResults",display="cite")`).</li>
 <li>p-value`r kPvalue(t.chi$p.value,include.p=FALSE,latex=FALSE)` (somewhat more specifically `r formatC(t.chi$p.value,digits=3)`).</li>
 <li>Reject H<sub>0</sub> because the p-value&lt;&alpha;.</li>
-<li>It appears that the turkeys show a habitat preference in the spring. Further analysis suggests that the turkeys showed a strong avoidance of meadows, a moderate avoidance of Oak/Spruce habitats, and a moderate preference for aspen and pine habitats.</li>
+
+<!---- this was for spring
+<li>It appears that the turkeys show a habitat preference in spring. Further analysis suggests that the turkeys showed a strong avoidance of meadows, a moderate avoidance of Oak/Spruce habitats, and a moderate preference for aspen and pine habitats.</li>
+---->
+
+<li>It appears that the turkeys show a habitat preference in fall. Further analysis suggests that the turkeys showed a strong avoidance of meadows and a moderate preference for aspen and pine habitats.</li>
 <li>Not required for a goodness-of-fit test.</li>
 </ol>
 
