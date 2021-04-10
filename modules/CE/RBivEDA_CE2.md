@@ -12,7 +12,6 @@ css: "/css/modules.css"
     1. [Greenhouse Effect Opinion](#greenhouse-effect-opinion)
     1. [North Fish Creek Discharge](#north-fish-creek-discharge)
     1. [Animal Longevity and Gestation](#animal-longevity-and-gestation)
-    1. [Wolves and Whitetail Deer](#wolves-and-whitetail-deer)
     1. [Crickets and Temperature](#crickets-and-temperature)
     1. [Cafe Sales](#cafe-sales)
     1. [Yellow Perch Length-Weight](#yellow-perch-length-weight)
@@ -46,13 +45,6 @@ The instantaneous discharge (cubic feet per second) and total suspended sediment
 
 ## Animal Longevity and Gestation
 The average gestation period (i.e., length of pregnancy) of an animal is closely related to its longevity (i.e., length of its lifespan). Scientists are interested in being able to predict the average longevity (difficult to measure) from average gestation period (relatively easy to measure) for a given animal. Towards this end, data on the average gestation period and longevity (in captivity) of 40 different species of animals was recorded in animals.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/animals.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/animals_meta.txt)). Describe the relationship between average longevity and average gestation period from these data. [*Think carefully about which variable should be on the y-axis.*]
-
-----
-
-## Wolves and Whitetail Deer
-[Mladenoff *et al.* (1997)](https://www.researchgate.net/profile/David_Mladenoff/publication/247843996_Causes_and_Implications_of_Species_Restoration_in_Altered_Ecosystems/links/5410594a0cf2f2b29a40f2ce.pdf) estimated the territory size (km<sup>2</sup>) of Wolf (*Canis lupus*) packs and the density of Whitetail Deer (number/km<sup>2</sup>; *Odocoileus virginianus*) in the same areas in northern Wisconsin. Their data is recorded in Wolves2.csv ([data](https://raw.githubusercontent.com/droglenc/NCData/master/Wolves2.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/Wolves2_meta.txt)). Load these data into R and generate results to write a brief description of this bivariate relationship.
-
-&nbsp;
 
 ----
 
