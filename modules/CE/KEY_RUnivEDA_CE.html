@@ -1,0 +1,155 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Univariate EDA in R Assignment"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<p><br></p>
+<div id="coarse-woody-debris" class="section level1">
+<h1>Coarse Woody Debris</h1>
+<ol>
+<li>The vast majority of sites (82%) were exposed to medium levels of wind (as compared to low levels of wind).</li>
+<li>The diameter of coarse woody debris in the north basin of Allequash Lake is strongly right-skewed with four potential outliers above 30 cm, a median (center) of 18 cm, and an IQR from Q1 of 16.2 to a Q3 of 20.8 cm. The median and IQR were used because of the strongly skew and potential outliers.</li>
+</ol>
+<div id="r-code-and-results" class="section level4">
+<h4>R Code and Results</h4>
+<pre class="r"><code>&gt; cwdobj &lt;- read.csv(&quot;cwd.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; str(cwdobj)</code></pre>
+<pre><code>&#39;data.frame&#39;:   50 obs. of  2 variables:
+ $ diameter: int  21 15 18 23 18 17 19 17 15 22 ...
+ $ exposure: chr  &quot;med&quot; &quot;med&quot; &quot;med&quot; &quot;low&quot; ...</code></pre>
+<pre class="r"><code>&gt; ( freq1 &lt;- xtabs(~exposure,data=cwdobj) )</code></pre>
+<pre><code>exposure
+low med 
+  9  41 </code></pre>
+<pre class="r"><code>&gt; percTable(freq1)</code></pre>
+<pre><code>exposure
+low med 
+ 18  82 </code></pre>
+<pre class="r"><code>&gt; ggplot(data=cwdobj,mapping=aes(x=exposure)) +
+    geom_bar(color=&quot;black&quot;,fill=&quot;lightgray&quot;) +
+    labs(x=&quot;Wind Expsure Category&quot;,y=&quot;Frequency of Sites&quot;) +
+    scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
+    theme_NCStats()</code></pre>
+<p><img src="KEY_RUnivEDA_CE_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<pre class="r"><code>&gt; Summarize(~diameter,data=cwdobj,digits=1)</code></pre>
+<pre><code>     n   mean     sd    min     Q1 median     Q3    max 
+  50.0   19.5    4.9   15.0   16.2   18.0   20.8   34.0 </code></pre>
+<pre class="r"><code>&gt; ggplot(data=cwdobj,mapping=aes(x=diameter)) +
+    geom_histogram(binwidth=1,boundary=0,color=&quot;black&quot;,fill=&quot;lightgray&quot;) +
+    labs(x=&quot;CWD Diameter (cm)&quot;,y=&quot;Frequency of Sites&quot;) +
+    scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
+    theme_NCStats()</code></pre>
+<p><img src="KEY_RUnivEDA_CE_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><br></p>
+<hr />
+</div>
+</div>
+<div id="brain-weights" class="section level1">
+<h1>Brain Weights</h1>
+<ol>
+<li>The distribution of head sizes for the 20-46 age-group is very slightly right-skewed with no obvious outliers, a mean of 3675, and a standard deviation of 364.4. The mean and standard deviation were used because the shape was not strongly skewed and there were not obvious outliers.</li>
+</ol>
+<!----
+1. The distribution of head sizes for the 46+ age-group is very slightly right-skewed with no obvious outliers, a mean of 3598, and a standard deviation of  364. The mean and standard deviation were used because the shape was not strongly skewed and there were not obvious outliers.
+---->
+<div id="r-code-and-results-1" class="section level4">
+<h4>R Code and Results</h4>
+<pre class="r"><code>&gt; bh &lt;- read.csv(&quot;Brainhead.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; str(bh)</code></pre>
+<pre><code>&#39;data.frame&#39;:   237 obs. of  4 variables:
+ $ head.size   : int  4512 3738 4261 3777 4177 3585 3785 3559 3613 3982 ...
+ $ brain.weight: int  1530 1297 1335 1282 1590 1300 1400 1255 1355 1375 ...
+ $ gender      : chr  &quot;male&quot; &quot;male&quot; &quot;male&quot; &quot;male&quot; ...
+ $ age.group   : chr  &quot;20-46&quot; &quot;20-46&quot; &quot;20-46&quot; &quot;20-46&quot; ...</code></pre>
+<pre class="r"><code>&gt; Summarize(head.size~age.group,data=bh,digits=1)</code></pre>
+<pre><code>  age.group   n   mean    sd  min   Q1 median     Q3  max
+1     20-46 110 3675.3 364.4 2857 3440 3641.5 3897.0 4747
+2       46+ 127 3598.2 363.6 2720 3361 3582.0 3850.5 4488</code></pre>
+<pre class="r"><code>&gt; ggplot(data=bh,mapping=aes(x=head.size)) +
+    geom_histogram(binwidth=100,boundary=0,color=&quot;black&quot;,fill=&quot;lightgray&quot;) +
+    labs(x=&quot;Head Size (cm^3)&quot;,y=&quot;Frequency of Subjects&quot;) +
+    scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
+    theme_NCStats() +
+    facet_wrap(vars(age.group))</code></pre>
+<p><img src="KEY_RUnivEDA_CE_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><br></p>
+<hr />
+</div>
+</div>
+<div id="water-usage" class="section level1">
+<h1>Water Usage</h1>
+<p>Most students either let the water run for 6-10 (37.7%) or 11-15 minutes (40.0%).</p>
+<div id="r-code-and-results-2" class="section level4">
+<h4>R Code and Results</h4>
+<pre class="r"><code>&gt; wtr &lt;- read.csv(&quot;shower.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; str(wtr)</code></pre>
+<pre><code>&#39;data.frame&#39;:   130 obs. of  1 variable:
+ $ water.use: chr  &quot;D&quot; &quot;C&quot; &quot;B&quot; &quot;B&quot; ...</code></pre>
+<pre class="r"><code>&gt; ( freq1 &lt;- xtabs(~water.use,data=wtr) )</code></pre>
+<pre><code>water.use
+ A  B  C  D 
+ 7 49 52 22 </code></pre>
+<pre class="r"><code>&gt; percTable(freq1)</code></pre>
+<pre><code>water.use
+   A    B    C    D 
+ 5.4 37.7 40.0 16.9 </code></pre>
+<pre class="r"><code>&gt; ggplot(data=wtr,mapping=aes(x=water.use)) +
+    geom_bar(color=&quot;black&quot;,fill=&quot;lightgray&quot;) +
+    labs(x=&quot;Water Usage Category&quot;,y=&quot;Frequency of Students&quot;) +
+    scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
+    theme_NCStats()</code></pre>
+<p><img src="KEY_RUnivEDA_CE_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
