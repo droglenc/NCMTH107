@@ -1,0 +1,248 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "R Bivariate EDA Assignment"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<p><br></p>
+<div id="urban-runoff" class="section level1">
+<h1>Urban Runoff</h1>
+<ol>
+<li>The response variable is IBI.</li>
+<li>The explanatory variable is percent impervious surface.</li>
+<li>The relationship between IBI and the percent of impervious surface is <strong>negative, nonlinear</strong>, and <strong>moderately strong</strong> with <strong>no obvious outliers.</strong> I did not report the value of the correlation coefficient because of the nonlinear form.</li>
+</ol>
+<div id="r-code-and-results" class="section level4">
+<h4>R Code and Results</h4>
+<pre class="r"><code>&gt; d &lt;- read.csv(&quot;IBI.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; ggplot(data=d,mapping=aes(x=imp,y=IBI)) +
+    geom_point(pch=21,color=&quot;black&quot;,fill=&quot;lightgray&quot;) +
+    labs(x=&quot;Percent Impervious Land&quot;,y=&quot;Benthic Index of Biotic Integrity&quot;) +
+    theme_NCStats()</code></pre>
+<p><img src="KEY_RBivEDA_CE_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><br></p>
+<hr />
+</div>
+<div id="lights-and-nearsightedness" class="section level2">
+<h2>Lights and Nearsightedness</h2>
+<ol>
+<li>The percentage of children that slept with a “night light” that did not develop nearsightedness is <strong>65.9%</strong> (see row percent table).</li>
+<li>The percentage of all children that slept with a “lamp” and developed nearsightedness is <strong>8.6%</strong> (see total percent table).</li>
+<li>The percentage of children that slept in “no light” conditions that then developed nearsightedness is <strong>9.9%</strong> (see row percent table).</li>
+<li>A total of <strong>17</strong> children slept in “no light” conditions and developed nearsightedness (see frequency table).</li>
+<li>The percentage of children that developed nearsightedness is <strong>28.6%</strong> (see total percent table).</li>
+<li>The percentage of children that developed nearsightedness that slept with a “lamp” is <strong>29.9%</strong> (see column percent table).</li>
+<li>It appears that the percentage of children that developed nearsightedness is greater when the child slept with some sort of light (either a lamp or a night light), with a somewhat greater prevalence of nearsightedness with the lamp (see row percent table).</li>
+</ol>
+<div id="r-code-and-results-1" class="section level4">
+<h4>R Code and Results</h4>
+<pre class="r"><code>&gt; d &lt;- read.csv(&quot;Nearsight.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; tbl &lt;- xtabs(~Light+Nearsightedness,data=d)
+&gt; addmargins(tbl)</code></pre>
+<pre><code>             Nearsightedness
+Light          No Yes Sum
+  lamp         34  41  75
+  night light 153  79 232
+  no light    155  17 172
+  Sum         342 137 479</code></pre>
+<pre class="r"><code>&gt; ( row.tbl &lt;- percTable(tbl,margin=1) )</code></pre>
+<pre><code>             Nearsightedness
+Light            No   Yes   Sum
+  lamp         45.3  54.7 100.0
+  night light  65.9  34.1 100.0
+  no light     90.1   9.9 100.0</code></pre>
+<pre class="r"><code>&gt; ( col.tbl &lt;- percTable(tbl,margin=2) )</code></pre>
+<pre><code>             Nearsightedness
+Light            No   Yes
+  lamp          9.9  29.9
+  night light  44.7  57.7
+  no light     45.3  12.4
+  Sum          99.9 100.0</code></pre>
+<pre class="r"><code>&gt; ( perc.tbl &lt;- percTable(tbl) )</code></pre>
+<pre><code>             Nearsightedness
+Light            No   Yes   Sum
+  lamp          7.1   8.6  15.7
+  night light  31.9  16.5  48.4
+  no light     32.4   3.5  35.9
+  Sum          71.4  28.6 100.0</code></pre>
+<p><br></p>
+<hr />
+<!----
+## Forest Composition
+
+
+
+1. A total of **15** stands last had a fire between 200 and 300 years ago.
+1. The percentage of deciduous tree stands that had a fire within the last 100 years is **37.5%** (see row percent table).
+1. The percentage of mixed-coniferous tree stands that had a fire between 200 and 300 years ago is **50.0%** (see row percent table).
+1. The percentage of all stands that were coniferous and had a fire within the last 100 years is **14.6%** (see total percent table).
+1. The percentage of stands that last had a fire 200 to 300 years ago that were coniferous is **46.7%** (see column percent table).
+1. The percentage of all stands that were deciduous and had a fire between 100 and 200 years ago is **31.2%** (see total percent table).
+1. The percentage of mixed-deciduous tree stands that had a fire within the last 100 years is **15.4%** (see row percent table).
+1. The recency of the last fire decreases as the "amount" of coniferous trees decreases (i.e., from coniferous to mixed-coniferous to mixed-deciduous to deciduous). In other words, stands with more deciduous trees last had a fire more recently.
+
+#### R Code and Results
+
+```r
+> d <- read.csv("Fire.csv")
+```
+
+```r
+> tbl <- xtabs(~sttype+tslf,data=d)
+> addmargins(tbl)
+```
+
+```
+      tslf
+sttype 0-100 100-200 200-300 Sum
+   c       0       0       7   7
+   mc      0       2       2   4
+   md      2       5       6  13
+   d       9      15       0  24
+   Sum    11      22      15  48
+```
+
+```r
+> ( row.tbl <- percTable(tbl,margin=1) )
+```
+
+```
+      tslf
+sttype 0-100 100-200 200-300   Sum
+    c    0.0     0.0   100.0 100.0
+    mc   0.0    50.0    50.0 100.0
+    md  15.4    38.5    46.2 100.1
+    d   37.5    62.5     0.0 100.0
+```
+
+```r
+> ( col.tbl <- percTable(tbl,margin=2) )
+```
+
+```
+      tslf
+sttype 0-100 100-200 200-300
+   c     0.0     0.0    46.7
+   mc    0.0     9.1    13.3
+   md   18.2    22.7    40.0
+   d    81.8    68.2     0.0
+   Sum 100.0   100.0   100.0
+```
+
+```r
+> ( perc.tbl <- percTable(tbl) )
+```
+
+```
+      tslf
+sttype 0-100 100-200 200-300   Sum
+   c     0.0     0.0    14.6  14.6
+   mc    0.0     4.2     4.2   8.4
+   md    4.2    10.4    12.5  27.1
+   d    18.8    31.2     0.0  50.0
+   Sum  23.0    45.8    31.3 100.1
+```
+
+<br>
+---->
+<!----
+
+----
+
+# Red-Imported Fire Ants and Deer
+The relationship between the abundance of red-imported fire ants and fawn recruitment is **linear, negative, moderately strong** (r=-0.700), and **without any obvious outliers**. I assessed the strength of the relationship with the correlation coefficient (r) because the form is linear and there are no outliers.
+
+#### R Code and Results
+
+
+```r
+> d <- read.csv("RIFA.csv")
+```
+
+```r
+> ggplot(data=d,mapping=aes(x=rifa,y=fawnrec)) +
+    geom_point(pch=21,color="black",fill="lightgray") +
+    labs(x="Red-Imported Fire Ant Abundance",y="Fawn Recruitment Index") +
+    theme_NCStats()
+```
+
+<img src="KEY_RBivEDA_CE_files/figure-html/unnamed-chunk-14-1.png" width="672" />
+
+```r
+> corr(~rifa+fawnrec,data=d,digits=4)
+```
+
+```
+[1] -0.6995
+```
+--->
+<hr />
+</div>
+</div>
+</div>
+<div id="wolves-and-whitetail-deer" class="section level1">
+<h1>Wolves and Whitetail Deer</h1>
+<p>The relationship between the territory size of wolf pakces and the abundance of deer is <strong>linear, negative, moderately strong</strong> (r=-0.787), and <strong>without any obvious outliers</strong>. I assessed the strength of the relationship with the correlation coefficient (r) because the form is linear and there are no outliers.</p>
+<div id="r-code-and-results-2" class="section level4">
+<h4>R Code and Results</h4>
+<pre class="r"><code>&gt; d &lt;- read.csv(&quot;Wolves2.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; ggplot(data=d,mapping=aes(x=deer,y=terr)) +
+    geom_point(pch=21,color=&quot;black&quot;,fill=&quot;lightgray&quot;) +
+    labs(x=&quot;Abundance of Deer (#/km^2)&quot;,y=&quot;Wolf Territory Size (km^2&quot;) +
+    theme_NCStats()</code></pre>
+<p><img src="KEY_RBivEDA_CE_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<pre class="r"><code>&gt; corr(~deer+terr,data=d,digits=3)</code></pre>
+<pre><code>[1] -0.787</code></pre>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
