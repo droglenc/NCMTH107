@@ -47,4 +47,4 @@ Use the resources below to answer [these questions](Prep/RChi). [[*Problems with
 ## Archived Materials
 
 * Exercises
-  * [Additional](CE/RChi_CE2))
+  * [Additional](CE/RChi_CE2)

@@ -1,0 +1,183 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "R Linear Regression Assignment"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<p><br></p>
+<div id="urban-runoff" class="section level1">
+<h1>Urban Runoff</h1>
+<ol>
+<li>The equation of the best-fit line is <strong>IBI=37.8242-0.5136<span class="math inline">\(\times\)</span>imp</strong>.</li>
+<li>If the percent of impervious surface increases by 1%, then the IBI score decreases by <strong>0.51</strong>, on average.</li>
+<li>If the percent of impervious surface is 0, then the IBI score is <strong>37.8</strong>, on average.</li>
+<li>The IBI score is predicted to be <strong>22.4</strong> when the percent of impervious surface is 30%.</li>
+<li>This question is an <strong>extrapolation</strong> and should not be answered (see plot below).</li>
+<li>The residual for an observed IBI score of 30 and a percent of impervious surface of 10% is 30-32.7=<strong>-2.7</strong>.</li>
+<li>The IBI will change by -25 slopes or <strong>12.8</strong> if the percentage of impervious surface is decreased by 20%. In other words the IBI will increase by 12.8 units.</li>
+<li>The correlation coefficient between IBI score and percent of impervious surface is <strong>-0.874</strong>.</li>
+<li>The proportion of variability in IBI scores that is explained by knowing the percent of impervious surface is <strong>0.763</strong>.</li>
+<li>There appears to be homoscedasticity, but there is slight evidence of a curve suggesting that the relationship is <strong>nonlinear</strong> (see plot below).</li>
+</ol>
+<div id="r-code-and-results" class="section level4">
+<h4>R Code and Results</h4>
+<pre class="r"><code>&gt; d &lt;- read.csv(&quot;IBI.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; ( lm1 &lt;- lm(IBI~imp,data=d) )</code></pre>
+<pre><code>Coefficients:
+(Intercept)          imp  
+    37.8242      -0.5136  </code></pre>
+<pre class="r"><code>&gt; rSquared(lm1)</code></pre>
+<pre><code>[1] 0.7632712</code></pre>
+<pre class="r"><code>&gt; ggplot(data=d,mapping=aes(x=imp,y=IBI)) +
+    geom_point(pch=21,color=&quot;black&quot;,fill=&quot;lightgray&quot;) +
+    labs(x=&quot;Percent Impervious Land&quot;,y=&quot;Benthic Index of Biotic Integrity&quot;) +
+    geom_smooth(method=&quot;lm&quot;,se=FALSE) +
+    theme_NCStats()</code></pre>
+<pre><code>`geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="KEY_RRegression_CE_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><br></p>
+<hr />
+<!---
+# Sign Legibility and Age
+
+
+
+1. The response variable is **maximum distance** to see the sign. [*Note that distance to see the sign depends on age and distance to see the sign is what is predicted or explained in the ensuing questions.*]
+1. The explanatory variable is **age**.
+1. The best-fit line is **distance=-3.01$\times$age+576.7**.
+1. The slope indicates that for every increase of one year in age the maximum distance to see the sign will decrease by **3.01 ft**, on average.
+1. The intercept indicates that if the age of the driver was zero, then the maximum distance to see the sign would be **576.7 ft**, on average.
+1. The predicted maximum distance to see the sign for a 30-year-old driver is **486.5 ft**.
+1. This prediction should not be made as an age of 90 is outside the observed results for this variable (see plot below) and is, thus, an **extrapolation**.
+1. The residual for an individual that is 50-years-old and had a maximum distance to see the sign of 410 ft is 410-426.3=**-16.3 ft**. Thus, this individual would have a shorter maximum distance to see the sign than an average 50-year-old.
+1. The correlation coefficient between age of the driver and maximum distance to see the sign is **-0.80**.
+1. The proportion of variability in maximum distance to see the sign that is explained by knowing the age of the driver is **0.64**.
+1. If the age of the driver increased by ten years then the predicted maximum distance to see the sign would decrease by ten slopes or **30.07 ft**.
+1. I **don't have any strong concerns**, though the data look very slightly nonlinear and very slightly heteroscedastic (see plot below).
+
+
+#### R Code and Results
+
+```r
+> d <- read.csv("vision.csv")
+```
+
+```r
+> ( lm1 <- lm(distance~age,data=d) )
+```
+
+```
+Coefficients:
+(Intercept)          age  
+    576.682       -3.007  
+```
+
+```r
+> rSquared(lm1)
+```
+
+```
+[1] 0.641993
+```
+
+```r
+> ggplot(data=d,mapping=aes(x=age,y=distance)) +
+    geom_point(pch=21,color="black",fill="lightgray") +
+    labs(x="Age of the Driver",y="Maimum Distance to See Sign") +
+    geom_smooth(method="lm",se=FALSE) +
+    theme_NCStats()
+```
+
+```
+`geom_smooth()` using formula 'y ~ x'
+```
+
+<img src="KEY_RRegression_CE_files/figure-html/unnamed-chunk-9-1.png" width="672" />
+--->
+</div>
+</div>
+<div id="red-imported-fire-ants-and-deer-fawns" class="section level1">
+<h1>Red-Imported Fire Ants and Deer Fawns</h1>
+<ol>
+<li>The response variable is the index of <strong>fawn recruitment</strong>. [<em>Note that the index of fawn recruitment could depend on the RIFA index and the RIFA index is what is predicted or explained in the ensuing questions.</em>]</li>
+<li>The explanatory variable is <strong>RIFA index</strong>.</li>
+<li>The best-fit line is <strong>fawnrec=-0.00<span class="math inline">\(\times\)</span>RIFA+0.9</strong>.</li>
+<li>The slope indicates that for every increase of one for the RIFA index the index of fawn recruitment will decrease by <strong>0.00</strong>, on average.</li>
+<li>The intercept indicates that if the RIFA index was zero, then the index of fawn recruitment would be <strong>0.9 ft</strong>, on average.</li>
+<li>If the RIFA index increased by 500 then the predicted index of fawn recruitment would decrease by 500 slopes or <strong>0.10</strong>.</li>
+<li>This prediction should not be made as a RIFA index of 500 is outside the observed results for this variable (see plot below) and is, thus, an <strong>extrapolation</strong>.</li>
+<li>The predicted index of fawn recruitment if the RIFA index is 1700 is <strong>0.50</strong>.</li>
+<li>The residual for an individual with a RIFA index of 2200 and a fawn recruitment index of 0.3 is 0.3-0.39=<strong>-0.09</strong>. Thus, this individual would have a lower fawn recruitment than the average for locations with a RIFA index of 2200.</li>
+<li>The correlation coefficient between RIFA and fawn recruitment indices is <strong>-0.700</strong>.</li>
+<li>The proportion of variability in the index of fawn recruitment that is explained by knowing the RIFA index is <strong>0.49</strong>.</li>
+<li>I <strong>don’t have any strong concerns</strong> as the data appear linear (i.e., there is no obvious curve) and homoscedastic (i.e., there is no funnel or cone shape evident).</li>
+</ol>
+<div id="r-code-and-results-1" class="section level4">
+<h4>R Code and Results</h4>
+<pre class="r"><code>&gt; d &lt;- read.csv(&quot;RIFA.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; ( lm1 &lt;- lm(fawnrec~rifa,data=d) )</code></pre>
+<pre><code>Coefficients:
+(Intercept)         rifa  
+  0.8536285   -0.0002093  </code></pre>
+<pre class="r"><code>&gt; rSquared(lm1)</code></pre>
+<pre><code>[1] 0.4893269</code></pre>
+<pre class="r"><code>&gt; ggplot(data=d,mapping=aes(x=rifa,y=fawnrec)) +
+    geom_point(pch=21,color=&quot;black&quot;,fill=&quot;lightgray&quot;) +
+    labs(x=&quot;RIFA Index&quot;,y=&quot;Fawn Recruitment Index&quot;) +
+    geom_smooth(method=&quot;lm&quot;,se=FALSE) +
+    theme_NCStats()</code></pre>
+<pre><code>`geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="KEY_RRegression_CE_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
