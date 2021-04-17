@@ -34,8 +34,8 @@ ph <- read.csv("https://github.com/droglenc/NCData/raw/master/pHlevels.csv")
 1. &alpha;=0.01.
 1. H<sub>A</sub>:&mu;<5.6 and H<sub>0</sub>:&mu;=5.6, where &mu; is the mean pH for all rainwater collections at the Big Meadows Station in the Shenandoah National Park, VA.
 1. A one-sample t-test is required because quantitative variable (pH) was measured on individuals from one group or population (all rainwater collections at Big Meadows Station), &sigma; is UNknown, and the population mean is being compared to a specific value in the hull hypothesis.
-1. An observational study without obvious randomization was used.
-1. The assumptions are met because &sigma; is unknown and m=`r formatC(ph.t$parameter+1,format="f",digits=0)`&ge;40. Thus, the sampling distribution of the test statistic should follow a t-distribution.
+1. An observational study (naturally occurring rainwater was collected; the researcher's did not create any treatment) without obvious randomization was used.
+1. The assumptions are met because &sigma; is unknown and n=`r formatC(ph.t$parameter+1,format="f",digits=0)`&ge;40. Thus, the sampling distribution of the test statistic should follow a t-distribution.
 1. The statistic is x&#772;=`r formatC(ph.t$estimate,format="f",digits=3)`.
 1. The test statistic is t=`r formatC(ph.t$statistic,format="f",digits=3)` with `r formatC(ph.t$parameter,format="f",digits=0)` df.
 1. The p-value is `r kPvalue(ph.t$p.value,include.p=FALSE,latex=FALSE)`.
@@ -61,15 +61,14 @@ del <- data.frame(war=rep(c("Gulf","Bosnia"),each=9),
                   time=c(28.0,20.0,26.5,10.6,9.1,35.2,29.1,41.2,27.5,
                          15.1,6.4,5.0,11.4,6.5,6.5,3.0,7.0,3.5))
 ```
-
-```{r DeliveriesCode, echo=FALSE, results='hide'}
+```{r DeliveriesCode, echo=FALSE, results='hide',warning=FALSE}
 (del.lev <- levenesTest(time~war,data=del) )
 ( del.t <- t.test(time~war,data=del,var.equal=TRUE,alt="less") ) # mu=0 is a default
 ```
 
 1. &alpha; = 0.05
-1. H<sub>A</sub>: &mu;<sub>b</sub>-&mu;<sub>g</sub> &lt; 0 and H<sub>0</sub>: &mu;<sub>b</sub>-&mu;<sub>g</sub> = 0, where &mu; is the mean time to deliver ALL shipments, b is for Bosnia, and g is for Persian Gulf War.
-1. 2-sample t-test because (i) two groups/populations are considered (Bosnia and Persian Gulf), (ii) a quantitative variable (delivery time) was recorded, and (iii) the individuals in the groups are independent (there is no known connection between all deliveries to the two wars).
+1. H<sub>A</sub>: &mu;<sub>b</sub>-&mu;<sub>g</sub> &lt; 0 and H<sub>0</sub>: &mu;<sub>b</sub>-&mu;<sub>g</sub> = 0, where &mu; is the mean time to deliver ALL shipments, b is for Bosnia, and g is for Persian Gulf War. [*Note that with this subtraction that the H<sub>A</sub> represents the mean delivery time being less for Bosnia (the new system) than Persian Gulf.*]
+1. 2-sample t-test because (i) two groups/populations are considered (Bosnia and Persian Gulf), (ii) a quantitative variable (delivery time) was recorded, and (iii) the individuals in the groups are independent (the deliveries in the two wars cannot be connected because the wars are separated in time and space and at the time of the Persian Gulf war it was not possible to know there would be a Bosnian war).
 1. An observational study without clear randomization of the two samples.
 1. The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>g</sub> = 9+9 = 18 &gt; 15 and the two sample distributions (see histograms below) are not obviously strongly skewed (also told to assume that the distributions are not strongly skewed), and (iii) the variances appear to be equal (Levene's p-value = `r  kPvalue(del.lev$"Pr(>F)"[1],include.p=FALSE,latex=FALSE)` &gt; &alpha;).
 1. x&#772;<sub>b</sub>-x&#772;<sub>g</sub> = `r formatC(del.t$estimate[1],format="f",digits=2)`-`r formatC(del.t$estimate[2],format="f",digits=2)` = `r formatC(del.t$estimate[1]-del.t$estimate[2],format="f",digits=2)`.
@@ -77,7 +76,7 @@ del <- data.frame(war=rep(c("Gulf","Bosnia"),each=9),
 1. The p-value = `r kPvalue(del.t$p.value,include.p=FALSE,latex=FALSE)`.
 1. The H<sub>0</sub> is rejected because the p-value &lt; &alpha;.
 1. The mean delivery time was significantly lower in Bosnia than in the Persian Gulf War. Thus, the new "just-in-time" mentality for deliveries appears to have resulted in quicker delivery times.
-1. I am 95% confident that the mean delivery time for Bosnia was more than `r formatC(-1*del.t$conf.int[2],format="f",digits=1)` days faster than for the Persian Gulf War. This further supports that the mean delivery time was faster with the new system.
+1. I am 95% confident that the mean delivery time for Bosnia was at least `r formatC(-1*del.t$conf.int[2],format="f",digits=1)` days faster than for the Persian Gulf War. This further supports that the mean delivery time was faster with the new system.
 
 
 #### R Code and Results

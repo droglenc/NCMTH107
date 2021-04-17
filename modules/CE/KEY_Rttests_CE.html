@@ -14,8 +14,8 @@ css: "/css/modules.css"
 <li>α=0.01.</li>
 <li>H<sub>A</sub>:μ&lt;5.6 and H<sub>0</sub>:μ=5.6, where μ is the mean pH for all rainwater collections at the Big Meadows Station in the Shenandoah National Park, VA.</li>
 <li>A one-sample t-test is required because quantitative variable (pH) was measured on individuals from one group or population (all rainwater collections at Big Meadows Station), σ is UNknown, and the population mean is being compared to a specific value in the hull hypothesis.</li>
-<li>An observational study without obvious randomization was used.</li>
-<li>The assumptions are met because σ is unknown and m=90≥40. Thus, the sampling distribution of the test statistic should follow a t-distribution.</li>
+<li>An observational study (naturally occurring rainwater was collected; the researcher’s did not create any treatment) without obvious randomization was used.</li>
+<li>The assumptions are met because σ is unknown and n=90≥40. Thus, the sampling distribution of the test statistic should follow a t-distribution.</li>
 <li>The statistic is x̄=4.578.</li>
 <li>The test statistic is t=-33.530 with 89 df.</li>
 <li>The p-value is &lt;0.00005.</li>
@@ -41,11 +41,10 @@ mean of x
 </div>
 <div id="delivering-military-supplies" class="section level1">
 <h1>Delivering Military Supplies</h1>
-<pre><code>Warning in leveneTest.default(y = y, group = group, ...): group coerced to factor.</code></pre>
 <ol>
 <li>α = 0.05</li>
-<li>H<sub>A</sub>: μ<sub>b</sub>-μ<sub>g</sub> &lt; 0 and H<sub>0</sub>: μ<sub>b</sub>-μ<sub>g</sub> = 0, where μ is the mean time to deliver ALL shipments, b is for Bosnia, and g is for Persian Gulf War.</li>
-<li>2-sample t-test because (i) two groups/populations are considered (Bosnia and Persian Gulf), (ii) a quantitative variable (delivery time) was recorded, and (iii) the individuals in the groups are independent (there is no known connection between all deliveries to the two wars).</li>
+<li>H<sub>A</sub>: μ<sub>b</sub>-μ<sub>g</sub> &lt; 0 and H<sub>0</sub>: μ<sub>b</sub>-μ<sub>g</sub> = 0, where μ is the mean time to deliver ALL shipments, b is for Bosnia, and g is for Persian Gulf War. [<em>Note that with this subtraction that the H<sub>A</sub> represents the mean delivery time being less for Bosnia (the new system) than Persian Gulf.</em>]</li>
+<li>2-sample t-test because (i) two groups/populations are considered (Bosnia and Persian Gulf), (ii) a quantitative variable (delivery time) was recorded, and (iii) the individuals in the groups are independent (the deliveries in the two wars cannot be connected because the wars are separated in time and space and at the time of the Persian Gulf war it was not possible to know there would be a Bosnian war).</li>
 <li>An observational study without clear randomization of the two samples.</li>
 <li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>g</sub> = 9+9 = 18 &gt; 15 and the two sample distributions (see histograms below) are not obviously strongly skewed (also told to assume that the distributions are not strongly skewed), and (iii) the variances appear to be equal (Levene’s p-value = 0.0736 &gt; α).</li>
 <li>x̄<sub>b</sub>-x̄<sub>g</sub> = 7.16-25.24 = -18.09.</li>
@@ -53,7 +52,7 @@ mean of x
 <li>The p-value = 0.0001.</li>
 <li>The H<sub>0</sub> is rejected because the p-value &lt; α.</li>
 <li>The mean delivery time was significantly lower in Bosnia than in the Persian Gulf War. Thus, the new “just-in-time” mentality for deliveries appears to have resulted in quicker delivery times.</li>
-<li>I am 95% confident that the mean delivery time for Bosnia was more than 11.6 days faster than for the Persian Gulf War. This further supports that the mean delivery time was faster with the new system.</li>
+<li>I am 95% confident that the mean delivery time for Bosnia was at least 11.6 days faster than for the Persian Gulf War. This further supports that the mean delivery time was faster with the new system.</li>
 </ol>
 <div id="r-code-and-results-1" class="section level4">
 <h4>R Code and Results</h4>
