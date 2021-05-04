@@ -54,18 +54,22 @@ dfuture <- d %>%
   dplyr::filter(Date>=lubridate::today()) %>%
   select(-Date) %>%
   rename(Date=Date2)
-## Put a blank row after each Friday
-blank_rows <- grep("F",dfuture$Date)
-if (blank_rows[length(blank_rows)]==nrow(dfuture)) blank_rows <- blank_rows[-length(blank_rows)]
-for (i in rev(blank_rows))
-  dfuture <- dplyr::add_row(dfuture,Date=NA,
-                            Topic=NA_character_,.after=i)
 
-## Make the kable
-knitr::kable(dfuture,format="html",escape=FALSE) %>%
-  kableExtra::kable_styling(bootstrap_options=c("condensed","hover","responsive"),
-                            full_width=FALSE,position="center",
-                            fixed_thead=TRUE)
+## Only continue if there are future dates
+if (nrow(dfuture)>0) {
+  ## Put a blank row after each Friday
+  blank_rows <- grep("F",dfuture$Date)
+  if (blank_rows[length(blank_rows)]==nrow(dfuture))
+    blank_rows <- blank_rows[-length(blank_rows)]
+  for (i in rev(blank_rows))
+    dfuture <- dplyr::add_row(dfuture,Date=NA,Topic=NA_character_,.after=i)
+
+  ## Make the kable
+  knitr::kable(dfuture,format="html",escape=FALSE) %>%
+    kableExtra::kable_styling(bootstrap_options=c("condensed","hover","responsive"),
+                              full_width=FALSE,position="center",
+                              fixed_thead=TRUE)
+}
 ```
 
 <br>
@@ -75,15 +79,18 @@ knitr::kable(dfuture,format="html",escape=FALSE) %>%
 # Past Dates
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
-## Get only future dates
+## Get only past dates
 dpast <- d %>%
   dplyr::filter(Date<lubridate::today()) %>%
   select(-Date) %>%
   rename(Date=Date2)
 
-## Make the kable
-knitr::kable(dpast,format="html",escape=FALSE) %>%
-  kableExtra::kable_styling(bootstrap_options=c("condensed","hover","responsive"),
-                            full_width=FALSE,position="center",
-                            fixed_thead=TRUE)
+## Only continue if there are future dates
+if (nrow(dpast)>0) {
+  ## Make the kable
+  knitr::kable(dpast,format="html",escape=FALSE) %>%
+    kableExtra::kable_styling(bootstrap_options=c("condensed","hover","responsive"),
+                              full_width=FALSE,position="center",
+                              fixed_thead=TRUE)
+}
 ```
