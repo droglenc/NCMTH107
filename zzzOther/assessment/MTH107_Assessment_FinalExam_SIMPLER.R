@@ -5,7 +5,7 @@ library(FSA)
 section.lvls <- c("F12.1","F12.2","W13.1","F13.1","F13.2","W14.1",
                   "F14.1","F14.2","W16.2","F16.1","F16.2","W17.2",
                   "F17.1","F17.2","W18.1","F18.1","F18.2","W19.1","W19.2",
-                  "F19.1","F19.2","W20.1","W20.2","F20.1","F20.2")
+                  "F19.1","F19.2","W20.1","W20.2","F20.1","F20.2","W21.1")
 question.lvls1 <- c("pWhy","pVars","pUEDAQ","pUEDAC","pBEDAQ","pBEDAC",
                     "pReg","pT1","pT2","pChi")
 question.lvls2 <- c("Why Stats is Important?","Variable Types",
@@ -15,7 +15,7 @@ question.lvls2 <- c("Why Stats is Important?","Variable Types",
                     "2-Sample t-Test","Chi-square Test")
 
 dfw <- readxl::read_excel(file.path("zzzOther","assessment",
-                                   "MTH107_Assessment_FinalExam.xlsx")) %>%
+                                    "MTH107_Assessment_FinalExam.xlsx")) %>%
   ## remove students that did not take the exam
   filter(!is.na(Vars)) %>%
   ## create combined semester.section labels
@@ -25,7 +25,7 @@ dfw <- readxl::read_excel(file.path("zzzOther","assessment",
   ## Reduce to main variables
   select(section,starts_with("p",ignore.case=FALSE)) %>%
   as.data.frame()
-head(dfw)
+peek(dfw)
 
 dfl <- tidyr::pivot_longer(dfw,starts_with("p"),
                            names_to="question",values_to="score") %>%
@@ -63,8 +63,10 @@ dfl <- left_join(dfl,dflsum,by=c("section","question"),
                  suffix=c("",".y")) %>%
   select(section,question,question2,score,MET)
 
+tmp <- filter(dfl,section %in% c("F20.1","F20.2","W21.1"))
+
 ggplot() +
-  geom_boxplot(data=dfl,aes(y=reorder(section,desc(section)),
+  geom_boxplot(data=tmp,aes(y=reorder(section,desc(section)),
                             x=score,fill=MET),
                outlier.size=0.5,outlier.alpha=0.5) +
   scale_fill_manual(values=c("green","yellow","orange","red")) +
@@ -79,5 +81,4 @@ ggplot() +
         panel.grid.minor=element_blank(),
         axis.title.y=element_blank())
 
-
-filter(dflsum,section %in% c("F18.1","F18.2"))
+View(dflsum)
