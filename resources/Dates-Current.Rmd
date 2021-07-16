@@ -17,10 +17,11 @@ modHTML("Dates-Current")
 ```
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
+fn <- "Dates_F21.xlsx"
 library(dplyr)
 options(knitr.kable.NA = '')
 ## Read dates, make date with day and topic with link
-d <- readxl::read_excel("Dates_W21B.xlsx") %>%
+d <- readxl::read_excel(fn) %>%
   dplyr::mutate(Date=as.Date(Date)) %>%
   dplyr::mutate(Date2=paste0(DOW,", ",format(Date,"%b-%d")),
                 Topic=ifelse(is.na(url),Topic,
