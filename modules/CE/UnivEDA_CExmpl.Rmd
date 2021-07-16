@@ -70,8 +70,6 @@ d <- readxl::read_excel("truck_data.xlsx",sheet="GAS") %>%
 ```
 
 ## Personal Gas Purchases I
-<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/gastank1.jpg" alt="Gas Tank Filling" class="img-right">
-
 I have recorded data for every tank of gas that I have put into the truck that I bought in 2018. In the figure and table below I summarize the miles-per-gallon for each tank of gas. Use these results to perform a univariate EDA.
 
 ```{r echo=FALSE, results="hide", fig.height=3.5, fig.width=4.5, fig.show="hold",message=FALSE}
@@ -94,8 +92,6 @@ Summarize(~mpg,data=d,digits=2)
 ----
 
 ## Personal Gas Purchases II
-<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/gastank2.jpg" alt="Gas Tank Filling" class="img-right">
-
 The graph and table below show the price per gallon each time I filled the tank. Use the results to perform a univariate EDA.
 
 ```{r echo=FALSE, results="hide", fig.height=3.5, fig.width=4.5, fig.show="hold",message=FALSE,warning=FALSE}
@@ -117,9 +113,7 @@ Summarize(~cost,data=d,digits=3)
 
 ----
 
-## Personal Gas Purchases II
-<img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/gasstation.jpg" alt="Gas Station" class="img-right">
-
+## Personal Gas Purchases III
 Finally, the graph below shows the frequency and the table below shows the percentage of towns in which I bought each tank of gas. Use these results to perform a univariate EDA.
 
 ```{r echo=FALSE, results="hide", fig.height=3.5, fig.width=4.5, fig.show="hold",message=FALSE}

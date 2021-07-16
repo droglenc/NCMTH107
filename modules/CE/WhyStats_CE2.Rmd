@@ -32,8 +32,6 @@ source("../../rhelpers/knitr_setup.R")
 ----
 
 ## Wisconsin Lakes
-<img src="zimgs/wisconsin-lakes.jpg" alt="Wisconsin Lakes" class="img-right">
-
 There are `r formatC(nrow(ABDLakes),format="f",digits=0)` lakes in Ashland, Bayfield, and Douglas counties of Wisconsin. However, only `r formatC(nrow(filterD(ABDLakes,named)),format="f",digits=0)` of these are named. A random sample of named lakes from this population is extracted with the following R code:
 
 ```{r eval=FALSE, prompt=FALSE}
@@ -54,7 +52,6 @@ Use this code and some hand (or calculator) calculations to answer the questions
 ----
 
 ## Frog Survey
-<img src="zimgs/frog-croaking.jpg" alt="Frog Croaking" class="img-right">
 Biologists at the Sigurd Olson Environmental Institute (SOEI) were interested in estimating the total number of frogs on all (*many thousands*) lakes in northern Wisconsin (defined as north of Highway 8) in 2010. Towards this end, they used two methods to estimate the number of frogs on each of several randomly selected lakes in northern Wisconsin. The two methods they used were to count the number of frogs seen as they walked the shoreline of the lake (called a *visual* count) and to count the number of individual mating calls heard (called a *call* count). Here, we will only use **visual** count data.
 
 1. What is one of the individuals sampled in this scenario? [*Hint: Think about what the variable is and make sure that it makes sense to record that variable about your individual. You may want to look at the [Foundational Definitions](http://derekogle.com/NCMTH107/modules/FoundationalDefns) module for a definition of "individual".*]

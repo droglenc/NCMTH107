@@ -9,7 +9,6 @@ css: "/css/modules.css"
 ----
 
 ## Wood Duck Weights
-<img src="zimgs/woodduck.jpg" alt="Wood Duck" class="img-right">
 Suppose that it is known that the weights of adult wood ducks is normally distributed with a mean of 450 g and a standard deviation of 50 g. Use this information to answer the following questions.
 
 1. What percentage of wood ducks weigh between 350 and 550 g?

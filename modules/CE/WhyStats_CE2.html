@@ -16,7 +16,6 @@ css: "/css/modules.css"
 <hr />
 <div id="wisconsin-lakes" class="section level2">
 <h2>Wisconsin Lakes</h2>
-<p><img src="zimgs/wisconsin-lakes.jpg" alt="Wisconsin Lakes" class="img-right"></p>
 <p>There are 1499 lakes in Ashland, Bayfield, and Douglas counties of Wisconsin. However, only 605 of these are named. A random sample of named lakes from this population is extracted with the following R code:</p>
 <pre class="r"><code>library(NCStats)
 named &lt;- filterD(ABDLakes,named)
@@ -33,7 +32,7 @@ srsdf(named,n=50,vars=c(&quot;county&quot;,&quot;area&quot;))</code></pre>
 </div>
 <div id="frog-survey" class="section level2">
 <h2>Frog Survey</h2>
-<p><img src="zimgs/frog-croaking.jpg" alt="Frog Croaking" class="img-right"> Biologists at the Sigurd Olson Environmental Institute (SOEI) were interested in estimating the total number of frogs on all (<em>many thousands</em>) lakes in northern Wisconsin (defined as north of Highway 8) in 2010. Towards this end, they used two methods to estimate the number of frogs on each of several randomly selected lakes in northern Wisconsin. The two methods they used were to count the number of frogs seen as they walked the shoreline of the lake (called a <em>visual</em> count) and to count the number of individual mating calls heard (called a <em>call</em> count). Here, we will only use <strong>visual</strong> count data.</p>
+<p>Biologists at the Sigurd Olson Environmental Institute (SOEI) were interested in estimating the total number of frogs on all (<em>many thousands</em>) lakes in northern Wisconsin (defined as north of Highway 8) in 2010. Towards this end, they used two methods to estimate the number of frogs on each of several randomly selected lakes in northern Wisconsin. The two methods they used were to count the number of frogs seen as they walked the shoreline of the lake (called a <em>visual</em> count) and to count the number of individual mating calls heard (called a <em>call</em> count). Here, we will only use <strong>visual</strong> count data.</p>
 <ol>
 <li>What is one of the individuals sampled in this scenario? [<em>Hint: Think about what the variable is and make sure that it makes sense to record that variable about your individual. You may want to look at the <a href="http://derekogle.com/NCMTH107/modules/FoundationalDefns">Foundational Definitions</a> module for a definition of “individual”.</em>]</li>
 <li>Do you think it is reasonable to count the number of frogs on every lake in northern Wisconsin at the same time (say, in the same week)? Why or why not?</li>
@@ -56,7 +55,7 @@ srsdf(named,n=50,vars=c(&quot;county&quot;,&quot;area&quot;))</code></pre>
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -74,7 +73,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

@@ -44,25 +44,25 @@ css: "/css/modules.css"
 <h1>Applications</h1>
 <div id="plastic-waste-and-gdp" class="section level2">
 <h2>Plastic Waste and GDP</h2>
-<p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/plastic_bales.jpeg" alt="Plastic Waste" class="img-right"> Use the figure below to perform a bivariate EDA between the per capita plastic waste generation rate (kg of plastic waste per person per day) and gross domestic product (GDP) per capita (in 2011 international dollars) measured for 148 countries in 2010.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>Use the figure below to perform a bivariate EDA between the per capita plastic waste generation rate (kg of plastic waste per person per day) and gross domestic product (GDP) per capita (in 2011 international dollars) measured for 148 countries in 2010.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 <p><img src="BEDAQuant_CE2_files/figure-html/unnamed-chunk-3-1.png" width="336" /></p>
 <hr />
 </div>
 <div id="rates-of-drinking-alcohol" class="section level2">
 <h2>Rates of Drinking Alcohol</h2>
-<p><img src="http://derekogle.com/NCMTH107/modules/CE/zimgs/alcohol.jpg" alt="Alcohol Drinks" class="img-right"> Use the figure below to perform a bivariate EDA between the percents of men and women who drank alcohol in the last year as recorded for 148 countries in 2010.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+<p>Use the figure below to perform a bivariate EDA between the percents of men and women who drank alcohol in the last year as recorded for 148 countries in 2010.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
 <p><img src="BEDAQuant_CE2_files/figure-html/unnamed-chunk-4-1.png" width="336" /></p>
 <hr />
 </div>
 <div id="metals-in-topsoil" class="section level2">
 <h2>Metals in Topsoil</h2>
-<p><img src="zimgs/topsoil.jpg" alt="Topsoil" class="img-right"> The concentration of cadmium and copper in the topsoil of 115 15mX15m plots along the river Meuse in the village Stein in New Zealand was recorded by van Rijn and Rikken. Use the scatterplot below to describe the bivariate relationship between these two variables.</p>
+<p>The concentration of cadmium and copper in the topsoil of 115 15mX15m plots along the river Meuse in the village Stein in New Zealand was recorded by van Rijn and Rikken. Use the scatterplot below to describe the bivariate relationship between these two variables.</p>
 <p><img src="BEDAQuant_CE2_files/figure-html/ScatSoil-1.png" width="336" /></p>
 <hr />
 </div>
 <div id="highway-and-city-mpg" class="section level2">
 <h2>Highway and City MPG</h2>
-<p><img src="zimgs/getting_gas.jpg" alt="Getting Gas" class="img-right"> Researchers at Chevrolet attempted to determine the relationship between gas mileage (MPG) of Luminas in the city (CITY) and on the highway (HIGHWAY). Their results are shown below. Use this information to write a brief description of this bivariate relationship.</p>
+<p>Researchers at Chevrolet attempted to determine the relationship between gas mileage (MPG) of Luminas in the city (CITY) and on the highway (HIGHWAY). Their results are shown below. Use this information to write a brief description of this bivariate relationship.</p>
 <p><img src="BEDAQuant_CE2_files/figure-html/ScatLumina-1.png" width="336" /></p>
 <p> </p>
 </div>
@@ -84,7 +84,7 @@ css: "/css/modules.css"
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -102,7 +102,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

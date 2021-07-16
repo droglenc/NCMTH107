@@ -6,8 +6,6 @@ css: "/css/modules.css"
 ---
 
 ## Food Choice by Chipmunks
-<img src="zimgs/urn.png" alt="Urn" class="img-right">
-
 An "arena" contains 8 acorns and 9 kernels of corn. Assume that a chipmunk placed in the arena chooses items to eat at random. Use this information to answer the questions below.
 
 1. What is the probability that the chipmunk eats an acorn?
@@ -32,7 +30,6 @@ A reminder to use these steps will <strong>NOT</strong> be provided on future qu
 <br>
 
 ## Pollutants in Auto Exhaust
-<img src="zimgs/exhaust.jpg" alt="Exhaust" class="img-right">
 Suppose that the level of nitrogen oxides (NOX) in the exhaust of a particular car model is right-skewed with a mean of 0.9 grams per mile (g/mi) and a standard deviation of 0.15 g/mi.
 
 1. What is the probability that a car will have a NOX greater than 1 g/mi?
@@ -44,7 +41,6 @@ Suppose that the level of nitrogen oxides (NOX) in the exhaust of a particular c
 <br>
 
 ## People in Car
-<img src="zimgs/carpooling.jpg" alt="car pooling" class="img-right">
 A study of rush-hour traffic in San Francisco counted the number of people in a car entering a freeway at a suburban interchange. Suppose that this count has a mean of 1.5 people with a standard deviation of 0.75.
 
 1. Information about the shape of the population distribution was not given in the background to this question. What would you expect this distribution to look like? Why? [*Hint: Imagine cars driving into campus and how many people are in each of those cars.*]
@@ -56,7 +52,6 @@ A study of rush-hour traffic in San Francisco counted the number of people in a 
 <br>
 
 ## Banking
-<img src="zimgs/associated-bank.jpg" alt="Associated Bank" class="img-right">
 Associated Bank is reviewing its service charges and interest paying policies on checking accounts. Assume that the bank has found that the daily balance on personal checking accounts is normally distributed with an average of $550 and a standard deviation of $150.
 
 1. What is the probability that a personal checking account customer has a daily balance in excess of $800?

@@ -32,7 +32,6 @@ Answer each question below, **without using R**, assuming that X~N(75,10). Show 
 <br>
 
 ## Carpenter Ants I
-<img src="zimgs/carpenterant.jpg" alt="Carpenter Ant" class="img-right">
 Suppose that the distribution of number of [Carpenter Ants (*Camponotus* spp.)](https://en.wikipedia.org/wiki/Carpenter_ant) in a nest is known to be N(1400,300).  From this, answer the following questions.
 
 1. What is an individual?

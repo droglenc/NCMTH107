@@ -33,8 +33,6 @@ VAR2  x x y x x y x y y y x x y y y x x x y y x y x y x y x y
 <br>
 
 ## Fire Blight Disease
-<img src="zimgs/fire-blight.jpg" alt="Fire Blight Disease" class="img-right">
-
 Researchers conducted an experiment on 24 trees subject to a fire blight disease.  Each tree was treated with one of several treatments (no action (control), removal of the affected branches, sprayed foliage with an antibiotic and removal of the affected branches). Each tree was then recorded according to one of three outcomes (tree died in the same year, tree died 2-4 years after, or tree died more than 4 years after the disease was noticed). The frequency table below show the treatment and outcome results for each of the 24 trees. Use these results to answer the questions below.
 
 ```{r BlightTables, echo=FALSE}
@@ -43,16 +41,16 @@ d <- data.frame(treat=c("A","A","A","A","A","B","B","B","C","C","A","A",
                         "B","B","B","C","C","C","C","B","B","C","C","C"),
                 outcome=factor(c(1,1,1,1,1,1,1,1,1,1,2,2,
                              2,2,2,2,2,2,2,3,3,3,3,3))) %>%
-  mutate(treat=FSA::mapvalues(treat,
+  mutate(treat=plyr::mapvalues(treat,
                                      from=c("A","B","C"),
                                      to=c("No Action (Control)",
                                           "Removed Branches",
                                           "Sprayed and Removed")),
-                outcome=FSA::mapvalues(outcome,
-                                       from=1:3,
-                                       to=c(" Within 1 Year",
-                                            "   2-4 Years Later",
-                                            "   4+ Years Later")))
+                outcome=plyr::mapvalues(outcome,
+                                        from=1:3,
+                                        to=c(" Within 1 Year",
+                                             "   2-4 Years Later",
+                                             "   4+ Years Later")))
 xtabs(~treat+outcome,data=d)
 ```
 
@@ -67,7 +65,6 @@ xtabs(~treat+outcome,data=d)
 <br>
 
 ## Religion and Genetic Counseling
-<img src="zimgs/genetic_counseling.jpg" alt="Genetic Counseling" class="img-right">
 [Weitz (1979)](https://asu.pure.elsevier.com/en/publications/barriers-to-acceptance-of-genetic-counseling-among-primary-care-p) conducted a survey of general and family practitioners, pediatricians, and obstetrician-gynecologists in the cities of Phoenix and Tucson, Arizona. In one part of the study, each physician was classified according to religion and whether they supported genetic counseling for parents or not. A summary of their responses for Jewish, Protestant, and Catholic physicians is shown in the table below. Use these results to answer the questions below.
 
 |            | Support | Don't Support |

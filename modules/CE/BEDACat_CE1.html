@@ -18,7 +18,6 @@ VAR2  x x y x x y x y y y x x y y y x x x y y x y x y x y x y
 </div>
 <div id="fire-blight-disease" class="section level2">
 <h2>Fire Blight Disease</h2>
-<p><img src="zimgs/fire-blight.jpg" alt="Fire Blight Disease" class="img-right"></p>
 <p>Researchers conducted an experiment on 24 trees subject to a fire blight disease. Each tree was treated with one of several treatments (no action (control), removal of the affected branches, sprayed foliage with an antibiotic and removal of the affected branches). Each tree was then recorded according to one of three outcomes (tree died in the same year, tree died 2-4 years after, or tree died more than 4 years after the disease was noticed). The frequency table below show the treatment and outcome results for each of the 24 trees. Use these results to answer the questions below.</p>
 <pre><code>                     outcome
 treat                  Within 1 Year    2-4 Years Later    4+ Years Later
@@ -38,7 +37,7 @@ treat                  Within 1 Year    2-4 Years Later    4+ Years Later
 </div>
 <div id="religion-and-genetic-counseling" class="section level2">
 <h2>Religion and Genetic Counseling</h2>
-<p><img src="zimgs/genetic_counseling.jpg" alt="Genetic Counseling" class="img-right"> <a href="https://asu.pure.elsevier.com/en/publications/barriers-to-acceptance-of-genetic-counseling-among-primary-care-p">Weitz (1979)</a> conducted a survey of general and family practitioners, pediatricians, and obstetrician-gynecologists in the cities of Phoenix and Tucson, Arizona. In one part of the study, each physician was classified according to religion and whether they supported genetic counseling for parents or not. A summary of their responses for Jewish, Protestant, and Catholic physicians is shown in the table below. Use these results to answer the questions below.</p>
+<p><a href="https://asu.pure.elsevier.com/en/publications/barriers-to-acceptance-of-genetic-counseling-among-primary-care-p">Weitz (1979)</a> conducted a survey of general and family practitioners, pediatricians, and obstetrician-gynecologists in the cities of Phoenix and Tucson, Arizona. In one part of the study, each physician was classified according to religion and whether they supported genetic counseling for parents or not. A summary of their responses for Jewish, Protestant, and Catholic physicians is shown in the table below. Use these results to answer the questions below.</p>
 <table>
 <thead>
 <tr class="header">
@@ -85,7 +84,7 @@ treat                  Within 1 Year    2-4 Years Later    4+ Years Later
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -103,7 +102,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

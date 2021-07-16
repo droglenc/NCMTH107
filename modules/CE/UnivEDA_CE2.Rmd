@@ -45,7 +45,6 @@ figs(name="BankFig","Histogram for the time (hrs) to complete a transactin for a
 
 # Quantitative
 ## Time Spent Playing Video Games 
-<img src="zimgs/videogame.jpg" alt="Video Game" class="img-right">
 For a class project, a student asked 91 students how much time they had spent playing video games in the last two days. Use the results in `r figs("VideoFig",display="cite")` and `r tbls("VideoSum",display="cite")` to construct a univariate EDA for these data.
 
 ```{r VideoFig, echo=FALSE, fig.height=3.5, fig.width=3.5}
@@ -69,7 +68,6 @@ Summarize(~time,data=vg,digits=2)
 ----
 
 ## Bank Transaction Times
-<img src="zimgs/bank.jpg" alt="Bank Transaction" class="img-right">
 Cunningham and Heathcote (1989) recorded the total transaction time (in hours) for a large number of transactions at a branch office of a large Australian bank. Describe the distribution of these data from `r figs("BankFig",display="cite")` and `r tbls("BankSum",display="cite")`.
 
 ```{r BankFig, echo=FALSE, fig.height=3.5, fig.width=3.5}
@@ -97,7 +95,6 @@ Summarize(~time,data=Transact,digits=2)
 
 # Categorical
 ## Drinking Water Source
-<img src="zimgs/drinking_water.jpg" alt="" class="img-right">
 The Environmental Protection Agency (EPA) commissioned the Gallup Organization to conduct a nationwide telephone survey of 1000 households during August and September of 2002 regarding consumer knowledge and satisfaction with drinking water quality. Of the 1000 respondents surveyed, 751 knew that their drinking water came from a public or commercial water supplier. Of these 751 respondents, the following percentages knew precisely where that water was derived:
 
 | Source     | Groundwater | Lake/ Reservoir | River | Multiple Sources | Don't Know | Refused to answer |

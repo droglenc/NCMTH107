@@ -9,7 +9,6 @@ css: "/css/modules.css"
 ----
 
 ## Executive Loyalty
-<img src="zimgs/CEO.jpg" alt="CEO" class="img-right">
 A sample of executives were surveyed about their loyalty to their current company. One question was "If you were given an offer by another company equal to or slightly better than your current position, would you remain with your current company or take the other position?" Their responses relative to their length of service in their current position are in the table below.
 
 |              | Remain  | Not Remain | **TOTAL** |

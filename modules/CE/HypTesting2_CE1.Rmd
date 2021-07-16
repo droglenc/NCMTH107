@@ -28,7 +28,6 @@ tbls(name="beetles","Summary statistics for the thorax length for two species of
 ```
 
 ## Body Temperature
-<img src="zimgs/body-temperature-1.jpg" alt="Body Temperature" class="img-right">
 [Machowiak *et al.* (1992)](http://www.ncbi.nlm.nih.gov/pubmed/1302471)[^1] provided a critical examination of whether normal body temperature was 37<sup>o</sup>C. They recorded the orally-determined body temperatures of 65 male and 65 female subjects. Use their results in `r tbls("bodytemp",display="cite")` to answer the questions further below.
 
 `r tbls("bodytemp")`
@@ -47,7 +46,6 @@ Summarize(~bodytemp,data=d,digits=2)
 <br>
 
 ## Beetle Size
-<img src="zimgs/beetle.jpg" alt="Beetle" class="img-right">
 Researchers examined the size of two different species of beetles. They hypothesized that the thorax length of the *Halticus oleracea* species would be greater than 190 &mu;m. Use their results for the *Halticus oleracea* species in `r tbls("beetles",display="cite")` to answer the questions further below.
 
 `r tbls("beetles")`

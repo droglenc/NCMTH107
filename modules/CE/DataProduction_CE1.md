@@ -39,7 +39,6 @@ Identify the response variable in each of the following situations. Explain your
 <br>
 
 ## Blood Pressure Study
-<img src="zimgs/bloodpressure2.jpg" alt="Blood Pressure" class="img-right">
 A student is designing an experiment to determine the simultaneous effects of calcium in the diet and regular exercise on blood pressure.  Some subjects will be given a calcium supplement pill and some will be given a placebo pill.  In addition, some subjects will be required to perform aerobic exercises once a day, whereas others will not.  The researcher has 32 male subjects available that are as similar as possible (similar ages, weights, initial blood pressures, etc.).
 
 1. Explain why this is an observational or experimental study.
@@ -55,8 +54,6 @@ A student is designing an experiment to determine the simultaneous effects of ca
 <br>
 
 ## Salt, Sand, and Ice
-<img src="zimgs/deicer.jpg" alt="De-icer Truck" class="img-right">
-
 A salt and sand mixture is often placed on highways in the winter to aid ice removal. The melting rate of the ice is a function of the percent of salt in the mixture and the ambient air temperature. The melting rate probably levels off after a certain percent of salt and that percent probably differs by temperature. The Department of Transportation (DOT) could save some money if they knew the effect of these two things
 on the melting rate.
 

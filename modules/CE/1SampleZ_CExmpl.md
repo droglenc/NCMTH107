@@ -9,7 +9,6 @@ css: "/css/modules.css"
 ----
 
 ## Sales Transactions
-<img src="zimgs/checkout2.jpg" alt="Checking out" class="img-right">
 Past sales data for a company indicates that the average sale was $120 per transaction with a standard deviation of $15. The company provided enhanced training for the new sales force and recorded the amount for 48 transactions. The results are shown below.
 
 <pre><code>

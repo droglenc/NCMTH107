@@ -25,8 +25,6 @@ css: "/css/modules.css"
 
 # Application Questions
 ## iPhone Battery Lifespan 
-<img src="zimgs/iphone.jpg" alt="iPhone" class="img-right">
-
 Apple suggests that the battery lifespan (i.e., how many charge-cycles a battery will last -- note that every time a phone is plugged in it is considered a "charge-cycle," no matter how long it is plugged in) has a mean of 400 charge-cycles with a standard deviaion of 20 charge-cycles. A research group that tested battery lifespans, rates an individual battery as "exceptional" if it lasts for more than 450 charge-cycles and "unacceptably poor" if it lasts for less than 375 charge-cycles. Answer the questions below assuming that the distribution of charge-cycles is normally distributed (*show the R code that you used*).
 
 1. What type of variable is "number of charge-cycles"?
@@ -38,7 +36,6 @@ Apple suggests that the battery lifespan (i.e., how many charge-cycles a battery
 ---
 
 ## Pollen Counts
-<img src="zimgs/pollen.jpg" alt="Pollen" class="img-right">
 Suppose that it is known that the distribution of the total weed pollen count (spores per cubic meter of air) for LaCrosse, WI on a day in early September is approximately normal with a mean of 40 and a standard deviation of 8.  [*FYI, pollen count information is available from [this site](http://www.aaaai.org/nab/index.cfm?p=allergenreport&stationid=28).*]
 
 From this, answer the following questions.
@@ -61,7 +58,6 @@ Additionally, for each questions below (a) identify the type of question (e.g., 
 ----
 
 ## Driving Speed
-<img src="zimgs/speedlimit.jpg" alt="Speed Limit" class="img-right">
 A police officer in Kansas has recorded the amount of time it takes cars to travel between two points.  In a large sample of cars he found the mean time to be 2.5 s with a standard deviation of 0.75 s.  Treat these results as if they represent a population and are normally distributed.
 
 From this, answer the following questions.
@@ -84,7 +80,6 @@ Additionally, for each questions below (a) identify the type of question (e.g., 
 ----
 
 ## Turkey Spur Length
-<img src="zimgs/spurs.jpg" alt="Turkey Spurs" class="img-right">
 Male wild Turkeys (*Meleagris gallopavo*) have metatarsal spurs (i.e., bone growths on their feet) that may be used as defensive weapons, but they may also be more attractive for acquiring mates. Spurs grow throughout the turkey's life and can be a good indicator of the age of a turkey. [In one study from Arkansas](http://onlinelibrary.wiley.com/doi/10.1046/j.1365-2656.1998.6760845.x/pdf), the mean spur length in a sample of male turkeys that were more than two years old was 20.9 mm with a standard deviation of 3.7 mm. Assume that these values are true for the population of turkeys and that the distribution of spur lengths is normal. Use this information to answer the questions below.
 
 1. How big is the spur length such that 30% of turkeys have a larger spur?
@@ -97,7 +92,6 @@ Male wild Turkeys (*Meleagris gallopavo*) have metatarsal spurs (i.e., bone grow
 ----
 
 ## Age of College Graduates
-<img src="zimgs/graduation.jpg" alt="Graduation" class="img-right">
 The age at which "traditional" students graduate from college is N(22.1, 1.1). Use this information to answer the questions below.
 
 1. What percentage of the students graduate by the age of 21?
@@ -108,7 +102,6 @@ The age at which "traditional" students graduate from college is N(22.1, 1.1). U
 ----
 
 ## Black Bear Size
-<img src="zimgs/black-bear.jpg" alt="Black Bear" class="img-right">
 We know, from years of study of Black Bears, that the population distributions for head length is N(13.7,1.9), neck girth is N(20.9,4.8), and body length is N(60.0,10). All other variables measured on Black Bears cannot be described by a normal distribution. Use this information to answer the questions below.
 
 1. What is the percentage of bears between 45" and 65" in body length?
@@ -119,7 +112,6 @@ We know, from years of study of Black Bears, that the population distributions f
 ----
 
 ## Shrew Brain Weights
-<img src="zimgs/shrew.jpg" alt="Shrew" class="img-right">
 The brain weights of short-tailed shrews (*Blarina brevicauda*) is normally distributed with a mean of 0.14 grams and a standard deviation of 0.04 grams. Use this information to answer the questions below.
 
 1. What percentage of shrews have a brain weight less than 0.09 grams?
@@ -129,7 +121,6 @@ The brain weights of short-tailed shrews (*Blarina brevicauda*) is normally dist
 ----
 
 ## Bus Arrival Times
-<img src="zimgs/BARTbus.jpg" alt="BART bus" class="img-right">
 The distribution of arrival times for the BART bus at Northland is normally distributed with a mean of 0 and standard deviation of 3, where negative values indicate early arrivals (i.e., before the scheduled time) and positive values indicate late arrivals. Use this information to answer the questions below.
 
 1. What percentage of the arrivals are more than 5 minutes late?
@@ -142,7 +133,6 @@ The distribution of arrival times for the BART bus at Northland is normally dist
 ----
 
 ## Roe Deer Fawns
-<img src="zimgs/roe-deer-fawn2.jpg" alt="Roe Deer Fawn" class="img-right">
 Researchers on Storfosna Is., Norway wanted to examine reproductive habits of roe deer *Capreolus capreolus* in the northern extremities (Andersen and Linnell 2000). The researchers observed how many fawns were born to each of 149 female, sexually mature roe deer between the years 1991 and 1994. The mean number of fawns from each deer was 2.235 with a standard deviation of 0.460. Use this information to answer the questions below.
 
 1. What percentage of does have less than 2 fawns.
@@ -155,7 +145,6 @@ Researchers on Storfosna Is., Norway wanted to examine reproductive habits of ro
 ----
 
 ## Commercial Crayfishing
-<img src="zimgs/crayfish_catch.jpg" alt="Crayfish Catch" class="img-right">
 I recently investigated the efficacy of becoming a commercial crayfisherman (crayfish = crawfish = crawdad) on the lake I live on. With carefully constructed samples I concluded that the size of crayfish was N(93,8). The market for crayfish resides in Sweden. Swedes prefer (hence, will only buy) crayfish that are between 90 and 110 mm long (<90 are too small to deal with and >110 taste bad). Use this information to answer the questions below.
 
 1. How many acceptably-sized crayfish could I send to market, if I could catch approximately 50,000 crayfish? [HINT: compute the proportion of preferably-sized crayfish first.]

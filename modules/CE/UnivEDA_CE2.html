@@ -25,7 +25,7 @@ css: "/css/modules.css"
 <h1>Quantitative</h1>
 <div id="time-spent-playing-video-games" class="section level2">
 <h2>Time Spent Playing Video Games</h2>
-<p><img src="zimgs/videogame.jpg" alt="Video Game" class="img-right"> For a class project, a student asked 91 students how much time they had spent playing video games in the last two days. Use the results in Figure 1 and Table 1 to construct a univariate EDA for these data.</p>
+<p>For a class project, a student asked 91 students how much time they had spent playing video games in the last two days. Use the results in Figure 1 and Table 1 to construct a univariate EDA for these data.</p>
 <p><img src="UnivEDA_CE2_files/figure-html/VideoFig-1.png" width="336" /></p>
 <p>Figure 1: Histogram for the time playing video games (mins) by sampled students.</p>
 <p>Table 1: Summary statistics for the time playing video games (mins) by sampled students.</p>
@@ -35,7 +35,7 @@ css: "/css/modules.css"
 </div>
 <div id="bank-transaction-times" class="section level2">
 <h2>Bank Transaction Times</h2>
-<p><img src="zimgs/bank.jpg" alt="Bank Transaction" class="img-right"> Cunningham and Heathcote (1989) recorded the total transaction time (in hours) for a large number of transactions at a branch office of a large Australian bank. Describe the distribution of these data from Figure 2 and Table 2.</p>
+<p>Cunningham and Heathcote (1989) recorded the total transaction time (in hours) for a large number of transactions at a branch office of a large Australian bank. Describe the distribution of these data from Figure 2 and Table 2.</p>
 <p><img src="UnivEDA_CE2_files/figure-html/BankFig-1.png" width="336" /></p>
 <p>Figure 2: Histogram for the time (hrs) to complete a transactin for an Australian bank.</p>
 <p>Table 2: Summary statistics for the time (hrs) to complete a transactin for an Australian bank.</p>
@@ -49,7 +49,7 @@ css: "/css/modules.css"
 <h1>Categorical</h1>
 <div id="drinking-water-source" class="section level2">
 <h2>Drinking Water Source</h2>
-<p><img src="zimgs/drinking_water.jpg" alt="" class="img-right"> The Environmental Protection Agency (EPA) commissioned the Gallup Organization to conduct a nationwide telephone survey of 1000 households during August and September of 2002 regarding consumer knowledge and satisfaction with drinking water quality. Of the 1000 respondents surveyed, 751 knew that their drinking water came from a public or commercial water supplier. Of these 751 respondents, the following percentages knew precisely where that water was derived:</p>
+<p>The Environmental Protection Agency (EPA) commissioned the Gallup Organization to conduct a nationwide telephone survey of 1000 households during August and September of 2002 regarding consumer knowledge and satisfaction with drinking water quality. Of the 1000 respondents surveyed, 751 knew that their drinking water came from a public or commercial water supplier. Of these 751 respondents, the following percentages knew precisely where that water was derived:</p>
 <table style="width:100%;">
 <colgroup>
 <col width="12%" />
@@ -100,7 +100,7 @@ css: "/css/modules.css"
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -118,7 +118,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

@@ -118,7 +118,6 @@ Agronomists are interested in determining conditions that increase crop yield. I
 ----
 
 ## Death Anxiety and Organ Donation
-<img src="zimgs/organ-donor.png" alt="Organ Donor" class="img-right">
 Templer's Death Anxiety Scale (DAS) is a measure of an individual's anxiety concerning death. [Robbins (1990)](http://www.tandfonline.com/doi/abs/10.1080/07481189008252363) recorded the DAS score for 25 organ donors and 69 non-organ donors in DeathAnxiety.csv ([data](https://github.com/droglenc/NCData/raw/master/DeathAnxiety.csv), [meta](https://github.com/droglenc/NCData/blob/master/DeathAnxiety_meta.txt)). Determine, at the 1% level, if there is a difference in anxiety levels concerning death between organ and non-organ donors.
 
 

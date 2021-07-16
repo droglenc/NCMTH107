@@ -44,7 +44,6 @@ A reminder to use these steps will <strong>NOT</strong> be provided on future qu
 &nbsp;
 
 ## Melatonin and Sleep
-<img src="zimgs/melatonin.png" alt="melatonin" class="img-right">
 MIT researchers examined the effect of [melatonin](http://www.webmd.com/sleep-disorders/tc/melatonin-overview) on sleep. Suppose that we know that men given a placebo fell asleep according to a N(15,5) distribution.
 
 1. What is the probability, with 4 randomly selected men, of observing a mean of more than 12 mins?
@@ -54,7 +53,6 @@ MIT researchers examined the effect of [melatonin](http://www.webmd.com/sleep-di
 ----
 
 ## Reproductive Habits of Roe Deer
-<img src="zimgs/roe-deer-fawn.jpg" alt="Roe Deer Fawn" class="img-right">
 Researchers on Storfosna Island, Norway examined the reproductive habits of Roe Deer (*Capreolus pygargus*) in the northern extremities of the island ([Andersen and Linnell 2000](https://www.researchgate.net/publication/229194908_Irruptive_Potential_in_Roe_Deer_Density-Dependent_Effects_on_Body_Mass_and_Fertility)). The researchers found that the distribution of number of fawns born to a female between 1991 and 1994 was extremely right-skewed with a mean of 2.2 and a standard deviation of 0.46 fawns. Answer the questions below assuming that these values represent the entire population of Roe Deer. [*Note: if you decide that a question cannot be answered, then describe your reasoning very specifically.*]
 
 1. What is the probability that a Roe Deer has more than 2 fawns?
@@ -67,7 +65,6 @@ Researchers on Storfosna Island, Norway examined the reproductive habits of Roe 
 ----
 
 ## Acorn Length
-<img src="zimgs/acorns2.jpg" alt="Acorns" class="img-right">
 Suppose that it is known that the distribution of lengths of acorns is slightly right-skewed with a mean of 21 mm and a standard deviation of 6 mm.
 
 1. What is the probability that an acorn will have a length greater than 25 mm?
@@ -79,7 +76,6 @@ Suppose that it is known that the distribution of lengths of acorns is slightly 
 ----
 
 ## Plowing Snow
-<img src="zimgs/snowplow.jpg" alt="Snow plowing" class="img-right">
 Suppose that it is known that the distribution of times spent plowing a single city block on snow days is right-skewed with a mean of 45 seconds and a standard deviation of 28 seconds.
 
 1. What is the probability that in a sample of 5 blocks that the mean is greater than 60 seconds?
@@ -90,7 +86,6 @@ Suppose that it is known that the distribution of times spent plowing a single c
 ----
 
 ## Raccoons Consuming Corn
-<img src="zimgs/raccoon_corn.jpg" alt="Raccoon with Corn" class="img-right">
 The WI Department of Natural Resources is examining the amount of domestic corn consumed by raccoons per week. Assume that the amount eaten is slightly right-skewed, with a mean of 8 kg, and a standard deviation of 2 kg.
 
 1. What is the probability that a raccoon consumes more than 13 kg per week?
@@ -100,7 +95,6 @@ The WI Department of Natural Resources is examining the amount of domestic corn 
 ----
 
 ## NFL Running Backs
-<img src="zimgs/a_peterson.jpg" alt="Adrian Peterson" class="img-right">
 Suppose that it is known that the number of yards gained per game for the primary running  back on a National Football League team is slightly left-skewed with a mean of 82 yards and a standard deviation of 26 yards.
 
 1. What is the probability that a running back will gain more than 100 yards in a single game?
@@ -113,7 +107,6 @@ Suppose that it is known that the number of yards gained per game for the primar
 ----
 
 ## Stock Returns 
-<img src="zimgs/stock_return.jpg" alt="Stock Return" class="img-right">
 Suppose that the average annual rate of return for a wide array of available stocks is approximately normally distributed with a mean of 4.2 with a standard deviation of 4.9.
 
 1. What is the probability that five randomly selected stocks produce a positive average rate of return?
@@ -125,7 +118,6 @@ Suppose that the average annual rate of return for a wide array of available sto
 ----
 
 ## HMF in Honey
-<img src="zimgs/honey.jpg" alt="Honey Jar" class="img-right">
 Renner (1970) examined the content of hydroxymethylfurfurol (HMF) in honey. HMF is an organic compound derived from cellulose without the use of fermentation and is a potential "carbon-neutral" source for fuels. This study found that the distribution of HMF in honey was extremely strongly right-skewed with a mean of 9.5 g/kg and a standard deviation of 13.5 g/kg.
 
 1. What is the probability that one kg of honey have more than 20 g of HMF?
@@ -136,7 +128,6 @@ Renner (1970) examined the content of hydroxymethylfurfurol (HMF) in honey. HMF 
 ----
 
 ## Size of Farms in England 
-<img src="zimgs/english_farm.jpg" alt="English Farm" class="img-right">
 [Allanson (1992)](http://onlinelibrary.wiley.com/doi/10.1111/j.1477-9552.1992.tb00210.x/full) examined the size of farms in England in 1939 and 1989. He found the distribution of farm sizes in 1989 to be very right-skewed with a mean of 65.13 ha and a standard deviation of 108.71 ha.
 
 1. What are the 10% most common sizes of farms in England?
@@ -147,7 +138,6 @@ Renner (1970) examined the content of hydroxymethylfurfurol (HMF) in honey. HMF 
 ----
 
 ## Painted Turtle Hatchling Size
-<img src="zimgs/painted_turtle_hatching.jpg" alt="Hatching Painted Turtle" class="img-right">
 [Janzen and Morjan (2002)](https://www.researchgate.net/profile/Julian_Faivovich/publication/250071214_The_Identity_of_Hyla_ehrhardti_Muller_1924_Anura_Hylidae/links/00b7d5215272745f66000000.pdf) examined the size of male and female painted turtles (*Chrysemys picta*) at hatching. They found in a sample of 77 turtles that size at hatching was very slightly right-skewed with a mean of 4.46 g with a standard deviation of 0.13 g. Assume that the results of this sample extend to the population to answer the questions below.
 
 1. What is the probability that a turtle will hatch in more than 7 days?
@@ -159,7 +149,6 @@ Renner (1970) examined the content of hydroxymethylfurfurol (HMF) in honey. HMF 
 ----
 
 ## Moose Hunting 
-<img src="zimgs/Moose_hunting.jpg" alt="Moose" class="img-right">
 Assume that it is known that the distribution of time spent hunting (hours) by an individual Minnesota moose (*Alces alces*) hunter is approximately symmetric in shape with a mean of 40 hours and a standard deviation of 15 hours. Use this information to answer the questions below.
 
 1. Describe what an individual is in this problem.
@@ -170,7 +159,6 @@ Assume that it is known that the distribution of time spent hunting (hours) by a
 ----
 
 ## Lengths of Pine Needles
-<img src="zimgs/pine-needles.jpg" alt="Pine Needles" class="img-right">
 Suppose that the length of all needles on a particularly large pine tree is known to be normally distributed with a mean of 75 mm and a standard deviation of 8 mm. Use this to answer the questions below.
 
 1. What is the probability that a randomly selected needle is between 70 and 80 mm long?
@@ -183,7 +171,6 @@ Suppose that the length of all needles on a particularly large pine tree is know
 
 # General (Non-Normal Distribution) Questions
 ## Coin Purse
-<img src="zimgs/coin_purse.jpg" alt="Coin Purse" class="img-right">
 A coin purse contains 17 nickels and 15 dimes. Use this to answer the questions below.
 
 1. What is the probability of randomly selecting a nickel from this purse?
@@ -193,7 +180,6 @@ A coin purse contains 17 nickels and 15 dimes. Use this to answer the questions 
 ----
 
 ## Greenhouse Plants
-<img src="zimgs/greenhouse.jpg" alt="Greenhouse" class="img-right">
 A very small green house contains 10 tomato, 12 pea, and 8 cauliflower plants. Use this to answer the questions below. 
 
 1. What is the probability of randomly selecting a tomato plant from this greenhouse?

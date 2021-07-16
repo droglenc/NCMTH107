@@ -25,20 +25,16 @@ css: "/css/modules.css"
 </div>
 
 ## Sea Level Rise Rate
-<img src="zimgs/sea-level-rise.jpg" alt="Sea Level Rise" class="img-right">
-
 A group of ecologists (work of Sahagian *et al.*) examined the effects of human activities (including aquifer mining, surface water diversion and volume changes of inland lakes, desertification, wetland drainage, soil erosion in agriculture, deforestation, and dam building) on a number of water quantity measurements, including sea level rise rate, in 23 "ecosystems" in the late 20th century. The mean (standard deviation) total sea level rise rate among the 23 sampled ecosystems was 0.059 (0.135) mm/yr. Use these results, and the assumption that the sample distribution is not skewed, to determine, at the 1% significance level, if the mean sea-level increased significantly over the period of Sahagian's work. [*Hint: When identifying the hypotheses, think about what type of values the measured "sea level rise rate" would be if the sea level was indeed rising. Take special note that a "rise rate" was recorded.*]
 
 ----
 
 ## Achievement Test Scores
-<img src="zimgs/achievement_test.jpg" alt="Achievement Test" class="img-right">
 A general achievement test is standardized so that students should average 80 with a standard deviation of 5 (this is for the entire population not the population of students at the school described below). The superintendent at a school in a large district would like to show that her students averaged better than the 80 points. To test this, she had the test given to 32 randomly selected students from her school. The summary statistics for those 32 students are: mean=83.2, median=82.5, standard deviation=5.5, and IQR=7. Perform the appropriate hypothesis test for this superintendent at the 0.05 level.
 
 ----
 
 ## Salaries of College Graduates
-<img src="zimgs/NC_Commencement.jpg" alt="Commencement" class="img-right">
 The Northwestern University Placement center conducts random surveys on starting salaries of college graduates and publishes the results every year. The Dean of the College of Liberal Arts suggested to prospective students that graduates from the College would earn more than $32000 as a starting salary on average. The results in Table 1 are from a part of the Placement Center's results for graduates of the College of Liberal Arts for the year just prior to the Dean's statements [*Note that the measurements are in 1000s of dollars.*]. Use these results at the 10% level to determine the correctness of the Dean's statement.
 
 Table 1. Summary statistics for starting salary (in thousands of dollars) for recent graduates of the College of Liberal Arts.

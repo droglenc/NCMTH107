@@ -21,7 +21,6 @@ css: "/css/modules.css"
 
 # Computing P-Values (with context)
 ## BOD in Effluent
-<img src="zimgs/BOD_test_bottles.jpg" alt="BOD Test Bottles" class="img-right">
 The managers of a wastewater treatment plant monitored the amount of biological oxygen demand (BOD; lbs/day) in the effluent of the plant each month from January 1991 to October 2000. The managers would need to take corrective actions if the average BOD over this time period was significantly greater than 2200 lbs/day at a 10% rejection level. Previous studies indicated that the standard deviation was 1200 lbs/day. Summary statistics from their sample of days is given below. Use this information to answer the questions below.
 
 ```
@@ -37,7 +36,6 @@ The managers of a wastewater treatment plant monitored the amount of biological 
 ----
 
 ## Medical School Admissions
-<img src="zimgs/medschool_lecture.jpg" alt="Medical School Lecture" class="img-right">
 Admissions representatives at the University of Minnesota medical school were concerned that the average grade point average of applicants in non-science courses had dropped below 3.7. A sample of 40 of the most recent applicants indicated that the mean was 3.60. Information from the Association of American Medical Colleges suggested that the overall standard deviation was 0.35. Use this information, and an &alpha;=0.05, to answer the questions below.
 
 1. construct statistical hypotheses, 
