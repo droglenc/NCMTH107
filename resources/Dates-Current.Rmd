@@ -27,27 +27,7 @@ d <- readxl::read_excel(fn) %>%
                 Topic=ifelse(is.na(url),Topic,
                        paste0('<a href=\"../modules/',url,'\">',Topic,'</a>'))) %>%
   dplyr::select(Date,Date2,Topic)
-
-## Read groups with students
-dgrps <- readxl::read_excel("../Year_Specific/W21B/MTH107_Grades_W21B.xlsx",sheet="Info") %>%
-  select(Group,Name=`Last Name`)
-
-grps <- unique(dgrps$Group)
-
-grp1 <- filter(dgrps,Group==grps[1])
-grp2 <- filter(dgrps,Group==grps[2])
-
-grps <- FSA::capFirst(grps)
-grp1 <- paste(grp1$Name,collapse=", ")
-grp2 <- paste(grp2$Name,collapse=", ")
 ```
-
-<div class="alert alert-warning">
-- **Group `r grps[1]`** meets in-person from **825-950 in CSE236**.
-    - `r grp1`
-- **Group `r grps[2]`** meets "in-person" from **1005-1130 in the Alvord Theater**.
-    - `r grp2`
-</div>
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 ## Get only future dates
