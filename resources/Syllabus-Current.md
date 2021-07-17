@@ -149,10 +149,10 @@ An overall grade will be computed from the module preparation quizzes and assign
 </tr>
 
 <tr style="vertical-align:bottom"><th>Weight</th>
-<th>10%<br><img src="../img/bar5.JPG" width="15" height="15"></th>
-<th>10%<br><img src="../img/bar5.JPG" width="15" height="15"></th>
-<th>40%<br><img src="../img/bar5.JPG" width="15" height="60"></th>
-<th>40%<br><img src="../img/bar5.JPG" width="15" height="60"></th></tr>
+<th>10%<br><img src="../img/bar5.JPG" width="15" height="10"></th>
+<th>15%<br><img src="../img/bar5.JPG" width="15" height="15"></th>
+<th>35%<br><img src="../img/bar5.JPG" width="15" height="35"></th>
+<th>40%<br><img src="../img/bar5.JPG" width="15" height="40"></th></tr>
 
 <tr><th>Percent</th>
 <td><input type="text" name="ATT_SC" size="3" tabindex="1" onchange="calc_grade(this.form)"></td>

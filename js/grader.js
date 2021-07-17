@@ -13,8 +13,8 @@ function roundDec(x, dcml)  {
 //**********************************************************************
 function get_wghts() {
   ATT_WT = 0.10;
-  PREP_WT = 0.10;
-  HW_WT = 0.40;
+  PREP_WT = 0.15;
+  HW_WT = 0.35;
   FNL_WT = 0.40;
 }
 
