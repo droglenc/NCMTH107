@@ -65,17 +65,15 @@ This course fulfills that Quantitative Reasoning requirement in the [General Edu
 ----
 
 ## Assistance
-While it is slightly out of context, [Michael Franti](https://michaelfranti.com/){:target="_blank"} wrote in ["Breaking Down the Door"](https://www.youtube.com/watch?v=OSmeDvVNYAw){:target="_blank"}.
+<!--While it is slightly out of context, [Michael Franti](https://michaelfranti.com/){:target="_blank"} wrote in ["Breaking Down the Door"](https://www.youtube.com/watch?v=OSmeDvVNYAw){:target="_blank"}.
 
 > I learned to ride a bicycle by fallin' down a lot
 > I learned to swim in the river by tryin' not to drown
 > I learned to get back up by fallin' down
 
-The point is that learning requires trying, failing, trying again, etc. The part that is missing in these lyrics is that you often have someone helping you through this learning process. That someone is me and the tutors for this class. Please reach out to us ASAP if you have questions or need help.
+The point is that learning requires trying, failing, trying again, etc. The part that is missing in these lyrics is that you often have someone helping you through this learning process. That someone is me and the tutors for this class. Please reach out to us ASAP if you have questions or need help.-->
 
-<!--
 > Don't be afraid to ask questions. Don't be afraid to ask for help when you need it. I do that every day. Asking for help isn't a sign of weakness, its a sign of strength. It shows you have the courage to admit when you don't know something, and to learn something new. -- President Barack Obama
--->
 
 
 ### Instructor -- Derek Ogle
@@ -166,6 +164,13 @@ An overall grade will be computed from the module preparation quizzes and assign
 </table>
 </form>
 
+My philosophies for the grading percentages are as follow:
+
+- *Attendance*: Attending class is important as this is a time to get your questions answered and hear explanations of important concepts and class announcements. The percentage is fairly low however so that missing a class is not too onerous a penalty.
+- *Preparation Checks*: Success in this course is predicated on your preparing for material prior to class and then applying what you learned, or asking questions, during class. This percentage and the grading process described previously acknowledges your effort for this work.
+- *Module Assignments*: Statistics is best learned with practice. In this class practice is your work on the module assignments. The percentage for this assessment is intermediate to "give you credit" for this work and to motivate you do do well on the assignments, but to not incur a deep penalty if your work is not perfectly correct as these are the first chances you will have to apply your developing skills and knowledge.
+- *Capstone Assignment*: This assignment will focus on larger concepts, applications, and interpretations (rather than specific details) from throughout the semester. I will provide you with an explicit study guide approximately one week before the assignment is due. It is worth a higher percentage as this will assess your overall development of skills and concepts from the course.
+
 Your letter grade will be assigned from your overall percentage (rounded to a whole number) and the table below.
 
 <table class="tg">
@@ -175,12 +180,7 @@ Your letter grade will be assigned from your overall percentage (rounded to a wh
   <tr><td>D+ 67-69</td><td>D  60-66</td><td>F   0-59</td></tr>
 </table>
 
-My philosophies for the grading percentages are as follow:
-
-- *Attendance*: Attending class is important as this is a time to get your questions answered, hear explanations of important concepts, and hear class announcements. However, the percentage is fairly low so that missing a class is not too onerous a penalty.
-- *Preparation Checks*: Success in this course is predicated on your preparing for material prior to class and the applying what you learned, or asking questions, during class. This percentage is set to "give you credit" for doing that work.
-- *Module Assignments*: Statistics is best learned with practice and in this class practice is your work on the module assignments. However, you may also make mistakes on these assignments as these are the first chance you will have to applied your developing skills and knowledge. Thus, the percentage for this assessment is intermediate to "give you credit" for this work and to motivate you do do well on the assignments, but to not incur a deep penalty if your work is not perfectly correct.
-- *Capstone Assignment*: This assignment will focus on larger concepts, applications, and interpretations (rather than specific details) from throughout the semester. I will provide you with an explicit study guide approximately one week before the assignment is due. It is worth a higher percentage as this will assess your overall development of skills and concepts from the course.
+&nbsp;
 
 #### Attendance
 Attendance will be graded on a 0-1 basis. If you attend the entire class period then you will earn full credit. However, if you do not attend class, if you come substantially late, or leave substantially early then you will receive no credit. If you finish the module assignment during class then please begin to prepare for next module. If you finish that preparation then show me what you have done and you can discretely leave class early.
@@ -227,6 +227,8 @@ You may **WORK TOGETHER** on module preparations and assignments but you must **
 
 If I suspect that you are copying or working "too closely" with another student I will bring this to your attention immediately and discuss this policy with you directly and help develop a strategy to avoid any future problems. In the unlikely that I suspect further violations of this policy then I will assign zeroes for each assignment (and for each person) for which the policy was violated.
 
+You can **NOT** work together on the **Capstone Assignment.** Failure to meet this policy will result in a zero for the capstone assignment.
+
 Please let me know if you have any questions or concerns about this policy.
 
 <!--
@@ -258,13 +260,14 @@ As you are aware, the circumstances surrounding COVID-19 are ever-changing. Thus
 
 It is my hope that we can maintain a face-to-face classroom for the entire session. You can help with this by doing the following things related to our class.
 
+- Get vaccinated.
 - Monitor your temperature and check for symptoms of COVID-19 as described under "DAILY SELF CHECKS" on [this page](https://www.northland.edu/about/reopening-plan/#beahviors-that-reduce-spread){:target="_blank"}. If your temperature is elevated or you have symptoms please don't come to class, notify the [Office of Health Services](https://www.northland.edu/dir/jennifer-newago/){:target="_blank"}, and notify me.
 - Thoroughly [wash your hands](https://www.northland.edu/about/reopening-plan/#hand-hygiene){:target="_blank"} prior to entering the classroom.
 - Please [properly wear your mask](https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus/proper-mask-wearing-coronavirus-prevention-infographic){:target="_blank"} at all times when entering the building and the classroom. This is in compliance with [Northland's face covering policy](https://my.northland.edu/student-policies/student-rights/#covid-face){:target="_blank"}. &#x1F637;
-- Please enter the back (south) door and exit the front (north) door to the classroom (the doors will be marked).
-- Maintain proper [physical/social distance](https://www.northland.edu/about/reopening-plan/#social-distancing){:target="_blank"} (six feet) from other students while in the classroom. In our computer classroom, please only sit at a desk that has both a chair and a computer.
+<!-- - Please enter the back (south) door and exit the front (north) door to the classroom (the doors will be marked). -->
+- Maintain proper [physical/social distance](https://www.northland.edu/about/reopening-plan/#social-distancing){:target="_blank"} (three feet) from other students while in the classroom.<!-- In our computer classroom, please only sit at a desk that has both a chair and a computer.
 - Wipe down your desk, keyboard, and mouse with the provided wipes. **You are also welcome to bring and use your own computer.**
-- In general, but especially if you are using the college's computers, please refrain from touching your face (mouth and eyes) with your hands.
+- In general, but especially if you are using the college's computers, please refrain from touching your face (mouth and eyes) with your hands.-->
 - Communicate issues to me (see [ways to communicate to me above](#instructor--derek-ogle)) so that I am aware and can try to address the issues.
 
 I will follow the college's official policy with respect to COVID-related absences.[^CovidAbsence]
