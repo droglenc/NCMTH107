@@ -9,6 +9,7 @@ css: "/css/modules.css"
 Please review the course <a href="http://derekogle.com/NCMTH107/resources/Syllabus-Current" target="_blank">syllabus</a> and webpage (in general) to find answers for the following questions. Please contact <a href="mailto:dogle@northland.edu">Dr. Ogle</a> if you have questions.
 </div>
 
+1. What did you ask or tell me on MSTeams for [your "initial message"](GetOrganized_MSTeams#assignment)?
 1. What "names" will I respond to?
 1. What is the name of the software ("app") where I prefer that you ask questions so that other students, in addition to me, may answer your questions?
 1. What is an "academic alert"?
