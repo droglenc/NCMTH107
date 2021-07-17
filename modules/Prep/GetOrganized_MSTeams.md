@@ -9,12 +9,12 @@ css: "/css/modules.css"
 Note that there is a short assignment at the very bottom of this page.
 </div>
 
-Microsoft Teams is a group communication and collaboration platform that you will primarily use to ask me questions. One of the main features that I like about MS Teams is that it allows you to show me your computer so that I can more quickly help you shoot R-related problems. You are likely familiar with Teams from other classes at Northland. However, below is a quick guide to getting started.
+Microsoft Teams is a group communication and collaboration platform that you will primarily use to ask me questions. One of the main features that I like about Teams is that it allows you to show me your computer so that I can more quickly help you troubleshoot R-related problems. You are likely familiar with Teams from other classes at Northland. However, below is a quick guide to getting started.
 
 ## Getting the App
-You can get the MS Teams app through your Northland account. There are multiple ways to do this but the easiest is install the app [from this page](https://teams.microsoft.com/uswe-01/downloads){:target="_blank"} (*select the "Download Teams" button and follow the directions*).
+You can get the Teams app through your Northland account. There are multiple ways to do this but the easiest is install the app [from this page](https://teams.microsoft.com/uswe-01/downloads){:target="_blank"} (*select the "Download Teams" button and follow the directions*).
 
-In previous classes you may have accessed Teams through your web browser. I have found that Teams works more fluidly as an app rather than through the browser. Thus, I encourage you to install and run Teams through the app if you are using your own computer. If you choose to run Teams through the browser than you will need to use Chrome (*especially if you are using a Mac*) or Edge (rather than Firefox, Safari, IE, etc) to be able to project video (i.e., show me your screen).
+In previous classes you may have accessed Teams through your web browser. I have found that Teams works more fluidly as an app rather than through the browser. Thus, I encourage you to install and run Teams through the app if you are using your own computer. If you choose to run Teams through the browser than you will need to use Chrome (*especially if you are using a Mac*) or Edge (rather than Firefox, Safari, IE, etc) to be able to show me your screen.
 
 <div class="alert alert-success">
 If possible, use the Teams app rather than Teams through the web browser. If you must use a browser than use Chrome or Edge.
@@ -23,7 +23,7 @@ If possible, use the Teams app rather than Teams through the web browser. If you
 &nbsp;
 
 ## Joining the Team
-In Teams, follow these steps to join the MTH207 team.
+In Teams, follow these steps to join the MTH107 team.
 
 1. Select "Teams" on the left side of the app. If you are already in a team, then you may need to select the link that says "< All Teams" to return to your list of teams.
 1. Now select the "Join or Create Team" button.
@@ -31,7 +31,7 @@ In Teams, follow these steps to join the MTH207 team.
 ![MSTeams Join](zimgs/MSTeams_JoinButton.JPG)
 
 {:start="3"}
-1. In the "Join a team with a code" tile (the second tile) enter the code "x0bfy6o" (without quotes) into the box that says "Enter code".
+1. In the "Join a team with a code" tile (the second tile) enter the code "4na8k3k" (without quotes) into the box that says "Enter code".
 
 ![MSTeams Join](zimgs/MSTeams_JoinCode.JPG)
 
@@ -87,7 +87,7 @@ The video below has a few more hints on how to use Teams for class.
 &nbsp;
 
 ## Receiving Notifications of Questions
-By default, you will not received notifications of questions from other students and my answers in the channels described above. To get these you must specifically tell Team to notify you as described in the following steps.
+By default, you will not receive notifications of questions from other students and my answers in the channels described above. To get these you must specifically tell Team to notify you as described in the following steps.
 
 * Select a channel from which you want to be notified.
 * Select the three "dots" on the far right side of that channel
@@ -102,4 +102,4 @@ My preference is that you do this for at least the "General", "Questions - Class
 &nbsp;
 
 ## Assignment
-To demonstrate to me that you have joined the course Team please go to the "Initial Message" channel and start a new conversation where you either ask me a questions (about anything ... class-related, me, Northland, life) or tell me something about you (anything ... where you are from, your favorite fish, your favorite meal).
+To demonstrate to me that you have joined the course Team please go to the "Initial Message" channel and start a new conversation where you either ask me a question (about anything ... class, me, Northland, life) or tell me something about you (anything ... e.g., where you are from, your favorite fish, your favorite meal).

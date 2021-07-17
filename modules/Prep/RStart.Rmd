@@ -32,21 +32,29 @@ Detailed methods for downloading, installing, and configuring R, RStudio, and `N
 R and RStudio can be installed to your personal computer, but does not work well if you have a ChromeBook or if your machine is old (especially Macs). If you don't have your own machine or you have a ChromeBook or old machine then please follow the ["RStudio-in-the-Cloud" directions](#rstudio-in-the-cloud) further below. Otherwise follow the Windows or Mac directions below.
 
 ## Windows
-To install R on a Windows machine, downloaded the installer from [this site](https://cloud.r-project.org/bin/windows/base/) by selecting the “Download R X.X.X for Windows” link at the top. Locate the installer on your computer and run it. Using all of the default choices will perform an acceptable install for this class.
+To install R on a Windows machine, download the installer from [this site](https://cloud.r-project.org/bin/windows/base/) by selecting the “Download R X.X.X for Windows” link at the top. Locate the installer on your computer and run it. Using all of the default choices will perform an acceptable install for this class.
+
+<aside>
+The X's will be replaced with version numbers; e.g., 4.1.2.
+</aside>
 
 To install RStudio on a Windows machine, download the installer from [this link](https://rstudio.com/products/rstudio/download/#download) by selecting the “DOWNLOAD RSTUDIO FOR WINDOWS” button. Locate the installer on your computer and run it. Using all of the default choices will perform an acceptable install for this class.
 
 Install `NCStats` as [described here](#ncstats).
 
 ## Mac
-To install R on a Mac, downloaded the installer from [this site](https://cloud.r-project.org/bin/macosx/) by selecting one of the “R-X.X.X.pkg” links appropriate for your operating system under the “Latest Release” section. Locate the “.pkg” file on your computer and install it per usual. Using all of the default choices will perform an acceptable install for this class.
+To install R on a Mac, download the installer from [this site](https://cloud.r-project.org/bin/macosx/) by selecting one of the “R-X.X.X.pkg” links appropriate for your operating system under the “Latest Release” section. Locate the “.pkg” file on your computer and install it per usual. Using all of the default choices will perform an acceptable install for this class.
 
-To install RStudio on aMac, download the installer from [this link](https://rstudio.com/products/rstudio/download/#download) by selecting the “DOWNLOAD RSTUDIO FOR MACOS” button (you can also select the MacOS option under the “All Installers” section). Locate the “.dmg” file on your computer and install it per usual. Using all of the default choices will perform an acceptable install for this class.
+<aside>
+The X's will be replaced with version numbers; e.g., 4.1.2.
+</aside>
+
+To install RStudio on a Mac, download the installer from [this link](https://rstudio.com/products/rstudio/download/#download) by selecting the “DOWNLOAD RSTUDIO FOR MACOS” button (you can also select the MacOS option under the “All Installers” section). Locate the “.dmg” file on your computer and install it per usual. Using all of the default choices will perform an acceptable install for this class.
 
 Install `NCStats` as [described here](#ncstats).
 
 ## NCStats
-The latest `NCStats` may be installed by running these lines in R/RStudio:
+The latest `NCStats` may be installed by running these lines in R/RStudio (i.e., copy these three lines from below, paste them into the CONSOLE in RStudio, press Enter/Return, and wait several minutes until you get a ">" prompt at the bottom of the R Console):
 
 ```
 if (!require('manipulate')) utils::install.packages('manipulate')
@@ -54,14 +62,28 @@ if (!require('remotes')) install.packages('remotes'); require('remotes')
 remotes::install_github('droglenc/NCStats',type='binary')
 ```
 
-This installation may fail if other packages do not install properly (primarily the `Rcpp` and `curl` packages). These failures may be ameliorated by manually installing packages responsible for the errors (see [these directions](http://derekogle.com/IFAR/supplements/installations/InstallPackagesRStudio.html)).
+You can test whether the `NCStats` package installed correctly by running the line below (again, copy the line, paste it into the CONSOLE in RStudio, and press Enter/Return).
 
-E-mail me if you continue to experience difficulties installing `NCStats`.
+```
+library(NCStats)
+```
+
+If the installation is successful you should get about 20 lines of results in the console. As long as none of those lines says "Error" then the install should be correct. You can further test the install by running the first line below to see if you get the results on the two lines below that.
+
+```
+Summarize(1:3)
+     n   mean     sd    min     Q1 median     Q3    max 
+   3.0    2.0    1.0    1.0    1.5    2.0    2.5    3.0
+```
+
+If your installation failed then please contact me ASAP for help.
 
 ## RStudio-in-the-Cloud
-Analyses with R and RStudio can be run through a web browser on “the cloud”, thus eliminating the need to install these softwares and the associated packages on your computer. Follow the directions below if you would like to try using R/RStudio in the cloud. **Only follow these directions if you don't plan to use R/RStudio on your own computer and did not install R/Studio/NCStats as described in the three sections above.**
+Analyses with R and RStudio can be run through a web browser on “the cloud”, thus eliminating the need to install these softwares and the associated packages on your computer. Follow the directions below if you would like to use R/RStudio in the cloud. **Only follow these directions if you don't plan to use R/RStudio on your own computer and did not install R/Studio/NCStats as described in the three sections above.**
 
-You must create a free RStudio Cloud account to use this service. Go to [the RStudio Cloud website](https://rstudio.cloud/) and select “Get Started.” In the ensuing dialog box enter your e-mail adddress, a password, and your first and last names. Press “Sign up.” In a subsequent screen you will be asked to provide a name for the account with prompts to use your first and last name. Just press “Create Account” here.
+You must create an RStudio Cloud account to use this service. Go to [the RStudio Cloud website](https://rstudio.cloud/) and select “Get Started.” In the ensuing dialog box enter your e-mail adddress, a password, and your first and last names. Press “Sign up.” In a subsequent screen you will be asked to provide a name for the account with prompts to use your first and last name. Just press “Create Account” here.
+
+Note that the free version of RStudio Cloud is limited to a few hours of work per month. In past semesters this has been adequate for our work up to the modules under the "Using R" subsection (see [modules list](../)). Once we start the "Using R" portion of the modules you will likely need to upgrade to the "Cloud Plus" account which is currently $5/month for 50 hours of project time. Thus, the free account should be adequate for about the first 2/3rds or so of the semester, so don't sign up for the "Plus" account until later in term. 
 
 Once you have created your account, follow [this link to the “MTH107” project](https://rstudio.cloud/project/2239963), which should open a project that looks close to that below. Currently this project is in my “workspace.” Click on the red “Save a Permanent Copy” item in the top bar to save the project to your workspace (see below). When you return in the future this project will appear in the left-hand menu, open it to begin your work.
 
