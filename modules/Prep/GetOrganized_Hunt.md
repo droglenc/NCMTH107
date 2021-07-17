@@ -23,6 +23,7 @@ Please review the course <a href="http://derekogle.com/NCMTH107/resources/Syllab
 1. When must your completed "module assignment" be submitted to the professor?
 1. What is the name of the software ("app") where you will submit your "module assignments"?
 1. What percent of your overall grade are the "module assignments" worth?
+1. Two items will be due nearly every Sunday. What are those two items?
 1. Approximately how many hours are you expected to work outside of class time on this course?
 1. Where can you find answers to Frequently Asked Questions?
 1. What is the password for accessing videos that Dr. Ogle produced and has made available on the website?
