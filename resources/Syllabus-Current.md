@@ -135,7 +135,6 @@ The course is composed of daily modules (see link in upper-right) of material. T
 ----
 
 ## Grading
-<img class="img-right" src="../img/grading.jpg">
 An overall grade will be computed from the module preparation quizzes and assignments described in the ["Course Workflow" section](#course-workflow), a capstone assignment, and your attendance to class. Module preparation quizzes and assignments not submitted by the due date time will not be accepted (*but please contact me to let me know the circumstances for not being able to complete the work on time*). However, **you can request (via e-mail to) a 24-h extension for up to two Preparation Guides and two Module Assignments.**
 
 The capstone assignment is an opportunity for you to show a synthetic understanding of all material from throughout the course. The assignment will focus on larger concepts, applications, and interpretations (rather than specific details) from throughout the semester. I will provide you with an explicit study guide approximately one week before the assignment is due.
@@ -193,7 +192,6 @@ I will submit a "midterm grade" for you approximately half-way through the semes
 ## Expectations
 
 ### Ownership of Learning
-<img class="img-right" src="../img/student-reflection-and-ownership_orig.png" alt="Decoration">
 This course is designed in a way that you will have to actively, rather than passively, engage in the course content. In this way, it may differ from some of your other courses. In particular, in this course you will need to:
 
 * Interact with the course material **daily**.
@@ -206,14 +204,12 @@ This course is designed in a way that you will have to actively, rather than pas
 * Maintain focus for an extended period of time (1.5 h for each class).
 
 ### Work Outside of Class
-<img class="img-right" src="../img/studying.jpg" alt="Decoration">
 As a general rule-of-thumb[^studytime], you are expected to spend 2-3 hours of time outside of class for each hour in class. For this course, you will meet for 7.5 hours per week and, thus, you should dedicate between 15 and 22.5 hours of time outside of class time preparing for class, completing assignments, reviewing your work, and asking questions or for help. **The work required for this course can be completed within this expected amount of time, if that time is without distraction**. If monitoring your phone/device is distracting you from getting your work done then you may consider the aid of apps (e.g., [Forest](https://www.forestapp.cc/)) designed to reduce distractions from devices.[^DistractionAids]  
 
 If you feel that you are spending too much time on some assignments or preparations, then start your work earlier so that you can stop (and do other things) and make plans to [seek help](#assistance)).
 
 
 ### Classroom Conduct and Academic Integrity
-<img class="img-right" src="../img/cell-cheat.jpg" alt="Decoration">
 My intent is to create a classroom environment where learning can occur. One part of this environment is a well-organized course structure built upon relevant learning resources and interesting realistic exercises. Another part is my availability to assist you in learning from these resources and exercises. A third part is your conduct within the classroom. My expectations of you are that you will fully engage in the course (see above) and be respectful of all others in the class. At a minimum, I expect you to adhere to the following behaviors:
 
 * Please arrive to class on time. If you arrive late, then take the first available seat as quietly as possible. If you need to leave early, then please sit near the exit.
@@ -239,10 +235,8 @@ I am not a confidential resource. As a College employee I am considered a mandat
 ---
 
 ## COVID-19 Statement
-<img class="img-right" src="../img/covid19.jpg" alt="Decoration">
 As you are aware, the circumstances surrounding COVID-19 are ever-changing. Thus, it is possible that the college may make decisions that will affect how this course is administered. In addition, you may miss some class periods out of an abundance of caution if you are ill. I have designed the course to "work" whether we are face-to-face, remote, or somewhere in between. If you should have to miss class for any reason, please e-mail me promptly to explain to me your situation. I will work with you to help you stay up with class material as best as possible. If face-to-face classes are canceled then I will communicate with you promptly about how we will continue with class. **Communication will be key to stay abreast of the current situation and how it relates to our class ... so please keep me informed of your circumstances and regularly monitor your Northland e-mail.**
 
-<img class="img-right" src="../img/mask.jpg" alt="Decoration">
 It is my hope that we can maintain a face-to-face classroom for the entire session. You can help with this by doing the following things related to our class.
 
 - Monitor your temperature and check for symptoms of COVID-19 as described under "DAILY SELF CHECKS" on [this page](https://www.northland.edu/about/reopening-plan/#beahviors-that-reduce-spread){:target="_blank"}. If your temperature is elevated or you have symptoms please don't come to class, notify the [Office of Health Services](https://www.northland.edu/dir/jennifer-newago/){:target="_blank"}, and notify me.
