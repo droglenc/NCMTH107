@@ -12,7 +12,7 @@ function roundDec(x, dcml)  {
 //**  Sets weights for assessment components                          **
 //**********************************************************************
 function get_wghts() {
-  ATT_WT = 0.10
+  ATT_WT = 0.10;
   PREP_WT = 0.10;
   HW_WT = 0.40;
   FNL_WT = 0.40;
