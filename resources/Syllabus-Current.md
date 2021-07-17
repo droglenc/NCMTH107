@@ -35,7 +35,7 @@ What you learn in this <strong>Statistical Concepts and Analysis</strong> course
 * [Assistance](#assistance) -- [Instructor](#instructor--derek-ogle), [Tutors](#tutors), [Accommodations](#accommodations), and [Academic Alerts](#academic-alerts)
 * [Course Workflow](#course-workflow)
 * [Grading](#grading) -- [Incompletes](#incomplete-grades) and [Midterms](#midterm-grades)
-* [Expectations](#expectations) -- [Ownership of Learning](#ownership-of-learning), [Work Outside of Class](#work-outside-of-class), [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity)
+* [Expectations](#expectations) -- [Classroom Conduct and Academic Integrity](#classroom-conduct-and-academic-integrity), [Work Outside of Class](#work-outside-of-class), [Working Together](#working-together)
 * [Title IX Statement](#title-ix-statement)
 * [COVID-19 Statement](#covid-19-statement)
 
@@ -135,13 +135,7 @@ The course is composed of daily modules (see link in upper-right) of material. T
 ----
 
 ## Grading
-An overall grade will be computed from the module preparation quizzes and assignments described in the ["Course Workflow" section](#course-workflow), a capstone assignment, and your attendance to class. Module preparation quizzes and assignments not submitted by the due date time will not be accepted (*but please contact me to let me know the circumstances for not being able to complete the work on time*). However, **you can request (via e-mail to) a 24-h extension for up to two Preparation Guides and two Module Assignments.**
-
-The capstone assignment is an opportunity for you to show a synthetic understanding of all material from throughout the course. The assignment will focus on larger concepts, applications, and interpretations (rather than specific details) from throughout the semester. I will provide you with an explicit study guide approximately one week before the assignment is due.
-
-Attendance will be graded on a 0-1 basis. If you attend the entire class period then you will earn full credit. However, if you do not attend class, if you come substantially late, or leave substantially early then you will receive no credit. For some modules some student will be done before the class period ends. In these cases, I ask that you prepare for the next day's module. If you finish that then show me what you have done and you can discretely leave class early.
-
-An overall score will be computed from the items and associated weights listed in the table below. Grades on individual module preparation guides and assignments can be found on the class Gradescope page ([quick link on class homepage](../){:target="_blank"}). I will update your percentage grades for the Preparation Guides, Module Assignments, and Attendance on mycourses.northland.edu ([quick link on class homepage](../)) at the end of each week, which will then show your grade as of that time. You can also compute your overall grade at any time by entering your percentage scores in the boxes below for completed assessments. To project your future grade, also include percentages for future assessments.
+An overall grade will be computed from the module preparation quizzes and assignments described in the ["Course Workflow" section](#course-workflow), a capstone assignment, and your attendance to class according to the percentages below.
 
 <!-- if the assessment weights change then you must change the values in get_wghts() in the grader.js file -->
 
@@ -181,6 +175,24 @@ Your letter grade will be assigned from your overall percentage (rounded to a wh
   <tr><td>D+ 67-69</td><td>D  60-66</td><td>F   0-59</td></tr>
 </table>
 
+My philosophies for the grading percentages are as follow:
+
+- *Attendance*: Attending class is important as this is a time to get your questions answered, hear explanations of important concepts, and hear class announcements. However, the percentage is fairly low so that missing a class is not too onerous a penalty.
+- *Preparation Checks*: Success in this course is predicated on your preparing for material prior to class and the applying what you learned, or asking questions, during class. This percentage is set to "give you credit" for doing that work.
+- *Module Assignments*: Statistics is best learned with practice and in this class practice is your work on the module assignments. However, you may also make mistakes on these assignments as these are the first chance you will have to applied your developing skills and knowledge. Thus, the percentage for this assessment is intermediate to "give you credit" for this work and to motivate you do do well on the assignments, but to not incur a deep penalty if your work is not perfectly correct.
+- *Capstone Assignment*: This assignment will focus on larger concepts, applications, and interpretations (rather than specific details) from throughout the semester. I will provide you with an explicit study guide approximately one week before the assignment is due. It is worth a higher percentage as this will assess your overall development of skills and concepts from the course.
+
+#### Attendance
+Attendance will be graded on a 0-1 basis. If you attend the entire class period then you will earn full credit. However, if you do not attend class, if you come substantially late, or leave substantially early then you will receive no credit. If you finish the module assignment during class then please begin to prepare for next module. If you finish that preparation then show me what you have done and you can discretely leave class early.
+
+Absences for school sponsored events (e.g., special sessions of other courses, athletics) will be excused. Other planned absences (e.g., family events, doctor's appointments) *cleared with me in advanced* will be excused. Excused absences will **not** negatively impact your attendance grade.
+
+#### Late Work
+Module preparation quizzes and assignments not submitted by the due date time will not be accepted (*but please contact me to let me know the circumstances for not being able to complete the work on time*). However, **you can request (via e-mail to) a 24-h extension for up to two Preparation Guides and two Module Assignments.**
+
+#### Monitoring Your Grade
+Grades on individual module preparation guides and assignments can be found on the class Gradescope page ([quick link on class homepage](../){:target="_blank"}). I will update your percentage grades for the Preparation Guides, Module Assignments, and Attendance on mycourses.northland.edu ([quick link on class homepage](../)) at the end of each week, which will then show your grade as of that time. You can also compute your overall grade at any time by entering your percentage scores in the table above for completed assessments. To project your future grade, also include percentages for future assessments.
+
 #### Incomplete Grades
 An incomplete grade will be given ONLY in extreme circumstances that are beyond your control, such as a major illness, and will ONLY be given if you have successfully completed the entire course except for the final exam. This is in accordance with [Northland College policy](https://my.northland.edu/student-policies/academic-policies/#grades){:target="_blank"} (scroll down to "Incomplete Grades").
 
@@ -190,25 +202,6 @@ I will submit a "midterm grade" for you approximately half-way through the semes
 ----
 
 ## Expectations
-
-### Ownership of Learning
-This course is designed in a way that you will have to actively, rather than passively, engage in the course content. In this way, it may differ from some of your other courses. In particular, in this course you will need to:
-
-* Interact with the course material **daily**.
-* Multi-task material from multiple modules (i.e., you may be finishing the assignment for one module while preparing for the next module).
-* Prepare for some course content on your own prior to class.
-* Use class and MSTeams to ask questions and seek help.
-* Assess your own performance by reviewing your graded work an comparing your answers on assignments to the answer key (which will also contain hints related to common mistakes).
-* Assess if you need more practice and complete additional exercises provided for most modules.
-* Ask for help from me (the professor) both during and outside of class. See [Assistance](#assistance) section above.
-* Maintain focus for an extended period of time (1.5 h for each class).
-
-### Work Outside of Class
-As a general rule-of-thumb[^studytime], you are expected to spend 2-3 hours of time outside of class for each hour in class. For this course, you will meet for 7.5 hours per week and, thus, you should dedicate between 15 and 22.5 hours of time outside of class time preparing for class, completing assignments, reviewing your work, and asking questions or for help. **The work required for this course can be completed within this expected amount of time, if that time is without distraction**. If monitoring your phone/device is distracting you from getting your work done then you may consider the aid of apps (e.g., [Forest](https://www.forestapp.cc/)) designed to reduce distractions from devices.[^DistractionAids]  
-
-If you feel that you are spending too much time on some assignments or preparations, then start your work earlier so that you can stop (and do other things) and make plans to [seek help](#assistance)).
-
-
 ### Classroom Conduct and Academic Integrity
 My intent is to create a classroom environment where learning can occur. One part of this environment is a well-organized course structure built upon relevant learning resources and interesting realistic exercises. Another part is my availability to assist you in learning from these resources and exercises. A third part is your conduct within the classroom. My expectations of you are that you will fully engage in the course (see above) and be respectful of all others in the class. At a minimum, I expect you to adhere to the following behaviors:
 
@@ -223,6 +216,32 @@ My intent is to create a classroom environment where learning can occur. One par
 * Please do not use disrespectful language when addressing others.
 
 Finally, note that the [College's Academic Integrity Statement & Policy](https://my.northland.edu/student-policies/academic-policies/#academic-integrity){:target="_blank"} will be followed in this course. Please make sure that you are familiar with its content.
+
+### Work Outside of Class
+As a general rule-of-thumb[^studytime], you are expected to spend 2-3 hours of time outside of class for each hour in class. For this course, you will meet for 7.5 hours per week and, thus, you should dedicate between 15 and 22.5 hours of time outside of class time preparing for class, completing assignments, reviewing your work, and asking questions or for help. **The work required for this course can be completed within this expected amount of time, if that time is without distraction**. If monitoring your phone/device is distracting you from getting your work done then you may consider the aid of apps (e.g., [Forest](https://www.forestapp.cc/)) designed to reduce distractions from devices.[^DistractionAids]  
+
+If you feel that you are spending too much time on some assignments or preparations, then start your work earlier so that you can stop (and do other things) and make plans to [seek help](#assistance)).
+
+### Working Together
+You may **WORK TOGETHER** on module preparations and assignments but you must **INDEPENDENTLY PRODUCE** what you turn in. In other words, you may discuss assignments together and even make plans for how to answer the questions or perform the calculations together, but the calculations must be your own and your written answers must be in your own words. It is also fine to compare *independently produced* answers as long as you discuss how to correct incorrect answers rather than just copying another person's answer. Also, note that one need not copy verbatim someone else's work to violate this policy; i.e., a slight change to someone else's answer is not acceptable.
+
+If I suspect that you are copying or working "too closely" with another student I will bring this to your attention immediately and discuss this policy with you directly and help develop a strategy to avoid any future problems. In the unlikely that I suspect further violations of this policy then I will assign zeroes for each assignment (and for each person) for which the policy was violated.
+
+Please let me know if you have any questions or concerns about this policy.
+
+<!--
+### Ownership of Learning
+This course is designed in a way that you will have to actively, rather than passively, engage in the course content. In this way, it may differ from some of your other courses. In particular, in this course you will need to:
+
+* Interact with the course material **daily**.
+* Multi-task material from multiple modules (i.e., you may be finishing the assignment for one module while preparing for the next module).
+* Prepare for some course content on your own prior to class.
+* Use class and MSTeams to ask questions and seek help.
+* Assess your own performance by reviewing your graded work an comparing your answers on assignments to the answer key (which will also contain hints related to common mistakes).
+* Assess if you need more practice and complete additional exercises provided for most modules.
+* Ask for help from me (the professor) both during and outside of class. See [Assistance](#assistance) section above.
+* Maintain focus for an extended period of time (1.5 h for each class).
+-->
 
 ---
 
