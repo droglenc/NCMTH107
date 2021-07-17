@@ -42,7 +42,7 @@ function calc_grade(form) {
 	temp = form.ATT_SC.value;
 	if (temp!=="") {
 		if (temp > 1) {temp=temp/100};
-		pts += Att_WT*temp;	outof += ATT_WT;
+		pts += ATT_WT*temp;	outof += ATT_WT;
 	}
 	temp = form.PREP_SC.value;
 	if (temp!=="") {
