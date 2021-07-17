@@ -43,7 +43,6 @@ What you learn in this <strong>Statistical Concepts and Analysis</strong> course
 ----
 
 ## Learning Outcomes
-<img class="img-right" src="../img/outcomes.jpg" alt="Decoration">
 In this course, you will have the opportunity to:
 
 1. Describe why statistics is central to scientific inquiry (& your field of interest); 
@@ -66,8 +65,18 @@ This course fulfills that Quantitative Reasoning requirement in the [General Edu
 ----
 
 ## Assistance
+While it is slightly out of context, [Michael Franti](https://michaelfranti.com/){:target="_blank"} wrote in ["Breaking Down the Door"](https://www.youtube.com/watch?v=OSmeDvVNYAw){:target="_blank"}.
 
+> I learned to ride a bicycle by fallin' down a lot
+> I learned to swim in the river by tryin' not to drown
+> I learned to get back up by fallin' down
+
+The point is that learning requires trying, failing, trying again, etc. The part that is missing in these lyrics is that you often have someone helping you through this learning process. That someone is me and the tutors for this class. Please reach out to us ASAP if you have questions or need help.
+
+<!--
 > Don't be afraid to ask questions. Don't be afraid to ask for help when you need it. I do that every day. Asking for help isn't a sign of weakness, its a sign of strength. It shows you have the courage to admit when you don't know something, and to learn something new. -- President Barack Obama
+-->
+
 
 ### Instructor -- Derek Ogle
 <img class="img-right" src="../img/DerekOgle1.jpg">
@@ -75,33 +84,30 @@ I will answer to "Derek", "Doctor Ogle", "Professor Ogle", or "Doctor Professor 
 
 I am committed to your doing well in this course and see it as my responsibility to help you both in and out of the designated class period. There are several good ways to get help from me.
 
-- Attend class. Most of class time will be allocated to you working on modular assignments. I will be available during these times to answer your questions.
-- Ask questions on the course MS Teams site. There are separate channels for questions regarding module preparation readings, module assignments, and general questions (see [quick links on course homepage](../)). Simply start a new conversation with your question and I will answer it ASAP. Other students may also answer your question.
-- I will hold virtual help hours on Teams Monday through Thursday from 830-930 **pm**. You can simply join the meeting that I open in the Help Hours channel (see [quick links on course homepage](../)) at that time.
-- I will also generally be available at my computer during afternoons on class days. I will try to respond to queries ASAP during these times.
+- Attend class. Most of class time will be allocated to you working on module assignments. I will be available during these times to answer your questions.
+- Ask questions on MS Teams. Simply start a new conversation (see [quick links on course homepage](../)) with your question and I will answer it ASAP. Other students may also answer your question.
+- I will hold virtual help hours on Teams Monday through Thursday from 830-930 **PM**. You can simply join the meeting that I open in the Help Hours channel (see [quick links on course homepage](../)) at that time.
+- I will also generally be available at my computer during afternoons on most days. I will try to respond to queries ASAP during these times.
 - Finally, you may send me [anonymous feedback, suggestions, or questions](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}.
 
 Please see or contact me if you have questions regarding this course. 
 
 ### Tutors
-<img class="img-right" src="../img/Hewitt_F20.jpg">
-Danielle Hewitt will also be available to help you succeed in this course. Danielle is a Pschology and Business major who took this class last year and will be tutoring this class for the second time this session. Danielle is also one of your co-presidents for NCSA. Danielle's tutoring hours are Monday 7-8 pm, Tuesday 4-5 pm, Wednesday 7-8pm, and Thurday 4-5 pm. **You must register to meet with Danielle at least one hour in advance of these times** ([see here for how to register and join the tutoring session](https://my.northland.edu/academics/acadmic-support/#tutorial-services){:target="_blank"}).
+<img class="img-right" src="../img/XXX_F21.jpg">
+XXXX. **You must register to meet with Danielle at least one hour in advance of these times** ([see here for how to register and join the tutoring session](https://my.northland.edu/academics/acadmic-support/#tutorial-services){:target="_blank"}).
 
 
 ### Accommodations
-I want to create an inclusive and accessible learning environment for those of you that have a condition (e.g., attention, learning, vision, hearing, mental, physical, or other health-related concern) that may require special accommodations. *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course. If you have a condition that requires accommodations but *you have not yet established services* through OAR, then you should contact Jennifer Newago as soon as possible (Ponzio 230, x1387, or <a href="mailto:accommodations@northland.edu">accommodations@northland.edu</a>). It is the policy and practice of Northland College to create inclusive and accessible learning environments consistent with federal and state law. <a href="https://my.northland.edu/life/be-healthy/accommodations/">More information is available here.</a>
+I want to create an inclusive and accessible learning environment for those of you that have a condition (e.g., attention, learning, vision, hearing, mental, physical, or other health-related concern) that may require special accommodations. *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course. If you have a condition that requires accommodations but *you have not yet established services* through OAR, then you should contact the Accommodations Specialist as soon as possible (x1387, or <a href="mailto:accommodations@northland.edu">accommodations@northland.edu</a>). It is the policy and practice of Northland College to create inclusive and accessible learning environments consistent with federal and state law. <a href="https://my.northland.edu/life/be-healthy/accommodations/">More information is available here.</a>
 
 
 ### Academic Alerts
-If I observe you "struggling" with the course early in the semester then I may file an "Academic Alert" about you. If this happens, you will receive an e-mail from me that will suggest steps you can take to improve your performance in the course. Our Academic Success Coordinator, Megan McPeak, will receive the alert and will likely also reach out to you. **Academic Alerts are not punitive**, they are simply an attempt to help you get back on track in this course as soon as possible.
+If I observe you "struggling" with the course early in the semester then I may issue an "Academic Alert" about you. If this happens, you will receive an e-mail from me that will suggest steps you can take to improve your performance in the course. Our Academic Success Coordinator will also receive the alert and will likely also reach out to you. **Academic Alerts are not punitive**, they are simply an attempt to help you get back on track in this course as soon as possible.
 
 ----
 
 ## Course Workflow
-<img class="img-right" src="../img/StudyOnline.jpg" alt="Decoration">
-The course is scheduled to meet every weekday from 800-1200n. However, because of physical distancing guidelines, half of you will meet with me in CSE236 from 825-950 and the other half of you will meet with me in the Alvord Theater from 1005-1130. If you are going to miss class for some reason you may join the 825-950 group via video (see [quick link on the class homepage](../)). Which group you are in is shown on the [Dates page](Dates-Current.html).
-
-This course is taught in a "flipped format", which loosely means that you will be responsible for obtaining factual content prior to coming to class and will then use class time with me to apply and expand upon what you learned prior to class. I have taught this class in this format for five years, largely because I believe the science that indicates that deeper learning is achieved with this model. However, this format also allows for teaching face-to-face, on-line, or a hybrid of both as necessary.
+This course is taught in a "flipped format", which loosely means that you will be responsible for obtaining factual content prior to coming to class and will then use class time with me to apply and expand upon what you learned prior to class. I have taught this class in this format for seven years, largely because I believe the science that indicates that deeper learning is achieved with this model. However, this format also allows for providing more direct assistance as needed.
 
 <center>
 <img src="../img/ClassStructure.JPG" width="70%" height="70%">
@@ -117,47 +123,52 @@ The course is composed of daily modules (see link in upper-right) of material. T
     <tr class="info"><th>5 points</th><th>4-1 points</th><th>0 points</th></tr>
   </thead>
   <tbody>
-    <tr><td>All questions were answered thoughtfully and fully. Document was hand-written.</td><td>Various numbers of questions were not answered, were answered incorrectly, or without care or depth of thought.</td><td>Very few answers were provided or were correct; substantial portions were copied from someone else; answers were not turned in; or answers were not hand-written.</td></tr>
+    <tr><td>All questions were answered thoughtfully and fully. Document was hand-written. Answers not nearly identical to someone else's answers.</td><td>Various numbers of questions were not answered, were answered incorrectly, or without care or depth of thought. Answers not nearly identical to someone else's answers.</td><td>Very few answers were provided or were correct; answers were nearly identical to someone else's answers; answers were not turned in; or answers were not hand-written.</td></tr>
   </tbody>
   </table>
 </div>
 
 {:start="2"}
 1. **Class Time** -- The initial part of class time will consist of a very short introduction to the module assignment and a quick discussion of any questions that you had from the preparation materials. Following this you will work on the module's application assignment. I expect you to attend class to get direct help from me and learn from other students' questions. If you are diligent and focused, you will likely finish most of the module assignment during this time.
-1. **Complete an Applied Assignment** -- Module assignments should be prepared as described in the "Getting Organized" module for handing in on GradeScope ([quick link on class homepage](../){:target="_blank"}). The assignment on Gradescope will have the module name and "-- assignment" suffix and is **due by 8am on the day after the class period dedicated to the module**.<br><br>I will grade 50-100% of each module assignment "for content" (i.e., whether the work is done correctly or not). Questions that I did not grade "for content" will be graded "for completeness" (i.e., whether the work was done completely or not). You will receive a short e-mail from me when your graded assignment is available on GradeScope. You are expected to review your grade and comments ([how-to video here](https://youtu.be/TOHCkI12mh0){:target="_blank"}) to better learn the material and to improve on future assignments. Detailed answer keys will be made available on the module webpage.
+1. **Complete an Applied Assignment** -- Module assignments should be prepared as described in the ["Getting Organized" module for handing in on GradeScope](https://derekogle.com/NCMTH107/modules/Prep/GetOrganized_Gradescope){:target="_blank"} ([quick link on class homepage](../){:target="_blank"}). The assignment on Gradescope will have the module name and "-- assignment" suffix and is **due by NOON on the day after the class period dedicated to the module**.<br><br>I will grade 50-100% of each module assignment "for content" (i.e., whether the work is done correctly or not). Questions that I did not grade "for content" will be graded "for completeness" (i.e., whether the work was done completely or not). You will receive a short e-mail from me when your graded assignment is available on GradeScope. You are expected to review your grade and comments ([how-to video here](https://youtu.be/TOHCkI12mh0){:target="_blank"}) to better learn the material and to improve on future assignments. Detailed answer keys will be made available on the module webpage.
 
 ----
 
 ## Grading
 <img class="img-right" src="../img/grading.jpg">
-An overall grade will be computed from the module preparation quizzes and assignments described in the ["Course Workflow" section](#course-workflow) and a capstone assignment. Module preparation quizzes and assignments not submitted by the due date time will not be accepted (*but please contact me to let me know the circumstances for not being able to complete the work on time*). However, **you can request (via e-mail to) a 24-h extension for up to three Preparation Guides and three Module Assignments.**
+An overall grade will be computed from the module preparation quizzes and assignments described in the ["Course Workflow" section](#course-workflow), a capstone assignment, and your attendance to class. Module preparation quizzes and assignments not submitted by the due date time will not be accepted (*but please contact me to let me know the circumstances for not being able to complete the work on time*). However, **you can request (via e-mail to) a 24-h extension for up to two Preparation Guides and two Module Assignments.**
 
 The capstone assignment is an opportunity for you to show a synthetic understanding of all material from throughout the course. The assignment will focus on larger concepts, applications, and interpretations (rather than specific details) from throughout the semester. I will provide you with an explicit study guide approximately one week before the assignment is due.
 
-An overall score will be computed from the items and associated weights listed in the table below. Grades on individual module preparation guides and assignments can be found on the class Gradescope page ([quick link on class homepage](../){:target="_blank"}). I will update your percentage grades for the Preparation Guides and Module Assignments on mycourses.northland.edu ([quick link on class homepage](../)) at the end of each week, which will then show your grade as of that time. You can also compute your overall grade at any time by entering your percentage scores in the boxes below for completed assessments. To project your future grade, also include percentages for future assessments.
+Attendance will be graded on a 0-1 basis. If you attend the entire class period then you will earn full credit. However, if you do not attend class, if you come substantially late, or leave substantially early then you will receive no credit. For some modules some student will be done before the class period ends. In these cases, I ask that you prepare for the next day's module. If you finish that then show me what you have done and you can discretely leave class early.
+
+An overall score will be computed from the items and associated weights listed in the table below. Grades on individual module preparation guides and assignments can be found on the class Gradescope page ([quick link on class homepage](../){:target="_blank"}). I will update your percentage grades for the Preparation Guides, Module Assignments, and Attendance on mycourses.northland.edu ([quick link on class homepage](../)) at the end of each week, which will then show your grade as of that time. You can also compute your overall grade at any time by entering your percentage scores in the boxes below for completed assessments. To project your future grade, also include percentages for future assessments.
 
 <!-- if the assessment weights change then you must change the values in get_wghts() in the grader.js file -->
 
 <form name="GRADECALC">
 <table class="grader" width="70%">
 <tr><th width="15%"></th>
-<th width="28%">Preparation<br>Materials</th>
-<th width="28%">Module<br>Assignments</th>
-<th width="29%">Capstone<br>Assignment</th>
+<th width="25%"><br>Attendance</th>
+<th width="25%">Preparation<br>Materials</th>
+<th width="25%">Module<br>Assignments</th>
+<th width="25%">Capstone<br>Assignment</th>
 </tr>
 
 <tr style="vertical-align:bottom"><th>Weight</th>
-<th>15%<br><img src="../img/bar5.JPG" width="15" height="23"></th>
-<th>60%<br><img src="../img/bar5.JPG" width="15" height="90"></th>
-<th>25%<br><img src="../img/bar5.JPG" width="15" height="38"></th></tr>
+<th>10%<br><img src="../img/bar5.JPG" width="15" height="15"></th>
+<th>10%<br><img src="../img/bar5.JPG" width="15" height="15"></th>
+<th>40%<br><img src="../img/bar5.JPG" width="15" height="60"></th>
+<th>40%<br><img src="../img/bar5.JPG" width="15" height="60"></th></tr>
 
 <tr><th>Percent</th>
-<td><input type="text" name="PREP_SC" size="3" tabindex="1" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="HW_SC" size="3" tabindex="2" onchange="calc_grade(this.form)"></td>
-<td><input type="text" name="FNL_SC" size="3" tabindex="3" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="ATT_SC" size="3" tabindex="1" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="PREP_SC" size="3" tabindex="2" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="HW_SC" size="3" tabindex="3" onchange="calc_grade(this.form)"></td>
+<td><input type="text" name="FNL_SC" size="3" tabindex="4" onchange="calc_grade(this.form)"></td>
 </tr>
 
-<tr><th colspan="2">Overall: <input type="text" name="SCORE" size="4"></th>
+<tr><th colspan="3">Overall: <input type="text" name="SCORE" size="4"></th>
 <th colspan="2">Grade: <input type="text" name="GRADE" size="2"></th></tr>
 </table>
 </form>

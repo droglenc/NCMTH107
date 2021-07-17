@@ -12,9 +12,10 @@ function roundDec(x, dcml)  {
 //**  Sets weights for assessment components                          **
 //**********************************************************************
 function get_wghts() {
-  PREP_WT = 0.15;
-  HW_WT = 0.60;
-  FNL_WT = 0.25;
+  ATT_WT = 0.10
+  PREP_WT = 0.10;
+  HW_WT = 0.40;
+  FNL_WT = 0.40;
 }
 
 //**********************************************************************
@@ -38,6 +39,11 @@ function find_grade(form, pts, outof) {
 function calc_grade(form) {
 	get_wghts();
 	pts = 0; outof=0;
+	temp = form.ATT_SC.value;
+	if (temp!=="") {
+		if (temp > 1) {temp=temp/100};
+		pts += Att_WT*temp;	outof += ATT_WT;
+	}
 	temp = form.PREP_SC.value;
 	if (temp!=="") {
 		if (temp > 1) {temp=temp/100};
