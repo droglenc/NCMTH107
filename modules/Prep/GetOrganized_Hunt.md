@@ -6,11 +6,10 @@ css: "/css/modules.css"
 ---
 
 <div class="alert alert-warning">
-Please review the course syllabus and webpage to find answers for the following questions. Please contact <a href="mailto:dogle@northland.edu">Dr. Ogle</a> if you have questions.
+Please review the course <a href="http://derekogle.com/NCMTH107/resources/Syllabus-Current" target="_blank">syllabus</a> and webpage (in general) to find answers for the following questions. Please contact <a href="mailto:dogle@northland.edu">Dr. Ogle</a> if you have questions.
 </div>
 
 1. What "names" will I respond to?
-1. At what times of day will you attend class?
 1. What is the name of the software ("app") where I prefer that you ask questions so that other students, in addition to me, may answer your questions?
 1. What is an "academic alert"?
 1. How many "modules" are there for this class?
