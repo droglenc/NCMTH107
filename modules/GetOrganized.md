@@ -9,9 +9,9 @@ css: /css/modules.css
 
 Complete the following items to be prepared for the first day of class.
 
-* [Complete Webpage Scavenger Hunt](Prep/GetOrganized_Hunt){:target="_blank"}
 * [Initiate MSTeams Discussion Site](Prep/GetOrganized_MSTeams){:target="_blank"}
 * [Initiate Gradescope Grading Site](Prep/GetOrganized_Gradescope){:target="_blank"}
+* [Complete Webpage Scavenger Hunt](Prep/GetOrganized_Hunt){:target="_blank"}
 
 The next items will not be needed until the second day of class but I suggest trying to prepare these for the first day of class so that if you have questions or problems then you will have sufficient time to contact me for help.
 
