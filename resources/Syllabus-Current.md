@@ -225,7 +225,7 @@ If you feel that you are spending too much time on some assignments or preparati
 ### Working Together
 You may **WORK TOGETHER** on module preparations and assignments but you must **INDEPENDENTLY PRODUCE** what you turn in. In other words, you may discuss assignments together and even make plans for how to answer the questions or perform the calculations together, but the calculations must be your own and your written answers must be in your own words. It is also fine to compare *independently produced* answers as long as you discuss how to correct incorrect answers rather than just copying another person's answer. Also, note that one need not copy verbatim someone else's work to violate this policy; i.e., a slight change to someone else's answer is not acceptable.
 
-If I suspect that you are copying or working "too closely" with another student I will bring this to your attention immediately and discuss this policy with you directly and help develop a strategy to avoid any future problems. In the unlikely that I suspect further violations of this policy then I will assign zeroes for each assignment (and for each person) for which the policy was violated.
+If I suspect that you are copying or working "too closely" with another student I will bring this to your attention immediately and discuss this policy with you directly and help develop a strategy to avoid any future problems. In the unlikely event that I suspect further violations of this policy then I will assign zeroes for each assignment (and for each person) for which the policy was violated.
 
 You can **NOT** work together on the **Capstone Assignment.** Failure to meet this policy will result in a zero for the capstone assignment.
 
@@ -265,7 +265,8 @@ It is my hope that we can maintain a face-to-face classroom for the entire sessi
 - Thoroughly [wash your hands](https://www.northland.edu/about/reopening-plan/#hand-hygiene){:target="_blank"} prior to entering the classroom.
 - Please [properly wear your mask](https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus/proper-mask-wearing-coronavirus-prevention-infographic){:target="_blank"} at all times when entering the building and the classroom. This is in compliance with [Northland's face covering policy](https://my.northland.edu/student-policies/student-rights/#covid-face){:target="_blank"}. &#x1F637;
 <!-- - Please enter the back (south) door and exit the front (north) door to the classroom (the doors will be marked). -->
-- Maintain proper [physical/social distance](https://www.northland.edu/about/reopening-plan/#social-distancing){:target="_blank"} (three feet) from other students while in the classroom.<!-- In our computer classroom, please only sit at a desk that has both a chair and a computer.
+- Maintain proper [physical/social distance](https://www.northland.edu/about/reopening-plan/#social-distancing){:target="_blank"} (three feet) from other students while in the classroom.
+<!-- In our computer classroom, please only sit at a desk that has both a chair and a computer.
 - Wipe down your desk, keyboard, and mouse with the provided wipes. **You are also welcome to bring and use your own computer.**
 - In general, but especially if you are using the college's computers, please refrain from touching your face (mouth and eyes) with your hands.-->
 - Communicate issues to me (see [ways to communicate to me above](#instructor--derek-ogle)) so that I am aware and can try to address the issues.
