@@ -36,7 +36,7 @@ In Teams, follow these steps to join the MTH107 team.
 ![MSTeams Join](zimgs/MSTeams_JoinCode.JPG)
 
 {:start="4"}
-1. Press the "Join team" button in that tile (it will appear when the code is entered). You should then be part of the Team and it should look similar to the screen below (the name may be slightly different; e.g., different date).
+1. Press the "Join team" button in that tile (it will appear when the code is entered). You should then be part of the team and it should look similar to the screen below (the name may be slightly different; e.g., different date).
 
 ![MSTeams Landing](zimgs/MSTeams_LandingPage.JPG)
 
@@ -87,7 +87,7 @@ The video below has a few more hints on how to use Teams for class.
 &nbsp;
 
 ## Receiving Notifications of Questions
-By default, you will not receive notifications of questions from other students and my answers in the channels described above. To get these you must specifically tell Team to notify you as described in the following steps.
+By default, you will not receive notifications of questions from other students and my answers in the channels described above. To get these you must specifically tell Teams to notify you as described in the following steps.
 
 * Select a channel from which you want to be notified.
 * Select the three "dots" on the far right side of that channel
@@ -102,4 +102,4 @@ My preference is that you do this for at least the "General", "Questions - Class
 &nbsp;
 
 ## Assignment
-To demonstrate to me that you have joined the course Team please go to the "Initial Message" channel and start a new conversation where you either ask me a question (about anything ... class, me, Northland, life) or tell me something about you (anything ... e.g., where you are from, your favorite fish, your favorite meal).
+To demonstrate to me that you have joined the course team please go to the "Initial Message" channel and start a new conversation where you either ask me a question (about anything ... class, me, Northland, life) or tell me something about you (anything ... e.g., where you are from, your favorite fish, your favorite meal).
