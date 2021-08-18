@@ -14,11 +14,6 @@ css: /css/syllabus.css
   <li>How do I not get fooled by other people's numbers?</li>
 </ul>
 
-<figure>
-  <img src="../img/phd012010s.gif" alt="Decoration">
-  <figcaption><span style="font-size:50%;">From <a href="http://phdcomics.com/comics/archive.php?comicid=1271" target="_blank">phdcomics.com</a></span></figcaption>
-</figure>
-
 <br>
 
 What you learn in this <strong>Statistical Concepts and Analysis</strong> course will help you answer these questions.
@@ -91,12 +86,10 @@ I am committed to your doing well in this course and see it as my responsibility
 Please see or contact me if you have questions regarding this course. 
 
 ### Tutors
-<img class="img-right" src="../img/XXX_F21.jpg">
-XXXX. **You must register to meet with Danielle at least one hour in advance of these times** ([see here for how to register and join the tutoring session](https://my.northland.edu/academics/acadmic-support/#tutorial-services){:target="_blank"}).
-
+Northland College offers free tutoring to aid you in your academic success. Seek a tutor early in the semester so that you can establish a regular meeting schedule, develop your skills, and receive the cumulative and beneficial effects that result from ongoing sessions. [See here for how to register on Handshake for a tutoring session](https://my.northland.edu/academics/acadmic-support/#tutorial-services){:target="_blank"}. If you have questions about tutoring, need help registering for tutoring, or would like one-on-one tutoring please contact [Megan McPeak](mailto:mmcpeak@northland.edu).
 
 ### Accommodations
-I want to create an inclusive and accessible learning environment for those of you that have a condition (e.g., attention, learning, vision, hearing, mental, physical, or other health-related concern) that may require special accommodations. *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course. If you have a condition that requires accommodations but *you have not yet established services* through OAR, then you should contact the Accommodations Specialist as soon as possible (x1387, or <a href="mailto:accommodations@northland.edu">accommodations@northland.edu</a>). It is the policy and practice of Northland College to create inclusive and accessible learning environments consistent with federal and state law. <a href="https://my.northland.edu/life/be-healthy/accommodations/">More information is available here.</a>
+I want to create an inclusive and accessible learning environment for those of you that have a condition (e.g., attention, learning, vision, hearing, mental, physical, or other health-related concern) that may require special accommodations. *If you have already established accommodations* with the Office of Accessibility Resources (OAR), please communicate your approved accommodations to me as soon as possible so that we can discuss your needs in this course. If you have a condition that requires accommodations but *you have not yet established services* through OAR, then you should contact the Accommodations Specialist as soon as possible (<a href="mailto:accommodations@northland.edu">accommodations@northland.edu</a>). It is the policy and practice of Northland College to create inclusive and accessible learning environments consistent with federal and state law. <a href="https://my.northland.edu/campus-life/student-welfare/accommodations/">More information is available here.</a>
 
 
 ### Academic Alerts
@@ -250,7 +243,7 @@ This course is designed in a way that you will have to actively, rather than pas
 ## Title IX Statement
 In accordance with Title IX and other local, state, and federal laws, Northland College is committed to providing an environment free of all forms of discrimination, including sex and gender-based discrimination. This includes, but is not limited to sexual violence, sexual harassment, dating violence, and stalking. If you or someone you know has been affected or is currently being affected by these types of behaviors that are limiting one’s ability to participate in this course or any other Northland College sponsored program or activity, please know that there are options, and resources are available. You can also make a report by contacting the [Title IX Coordinator](mailto:titleix@northland.edu).
 
-I am not a confidential resource. As a College employee I am considered a mandatory reporter and am required to report incidents of sexual- and gender-based discrimination and sexual misconduct to the Title IX Coordinator, as we want to ensure that you are connected with the campus support resources offered by the College and the surrounding community. To learn more, please visit the [Northland College Title IX website](https://my.northland.edu/life/titleix/){:target="_blank"}.
+I am not a confidential resource. As a College employee I am considered a mandatory reporter and am required to report incidents of sexual- and gender-based discrimination and sexual misconduct to the Title IX Coordinator, as we want to ensure that you are connected with the campus support resources offered by the College. To learn more, please visit the [Northland College Title IX website](https://my.northland.edu/life/titleix/){:target="_blank"}.
 
 
 ---
