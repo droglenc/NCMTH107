@@ -257,12 +257,13 @@ It is my hope that we can maintain a face-to-face classroom for the entire sessi
 - Monitor your temperature and check for symptoms of COVID-19 as described under "DAILY SELF CHECKS" on [this page](https://www.northland.edu/about/reopening-plan/#beahviors-that-reduce-spread){:target="_blank"}. If your temperature is elevated or you have symptoms please don't come to class, notify the [Office of Health Services](https://www.northland.edu/dir/jennifer-newago/){:target="_blank"}, and notify me. **Being cautious about your health and the health of others will be considered an "excused" absence and will not count against your attendance grade** (as long as you communicate with me).
 - Thoroughly [wash your hands](https://www.northland.edu/about/reopening-plan/#hand-hygiene){:target="_blank"} prior to entering the classroom.
 - Please [properly wear your mask](https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus/proper-mask-wearing-coronavirus-prevention-infographic){:target="_blank"} at all times when entering the building and the classroom. This is in compliance with [Northland's face covering policy](https://www.northland.edu/about/covid-plan/#beahviors-that-reduce-spread){:target="_blank"}. &#x1F637;
-<!-- - Please enter the back (south) door and exit the front (north) door to the classroom (the doors will be marked). -->
 - Maintain proper [physical/social distance](https://www.northland.edu/about/reopening-plan/#physical-distancing){:target="_blank"} (three feet) from other students while in the classroom.
-<!--- In our computer classroom, please only sit at a desk that has both a chair and a computer.
-- Wipe down your desk, keyboard, and mouse with the provided wipes. **You are also welcome to bring and use your own computer.**
-- In general, but especially if you are using the college's computers, please refrain from touching your face (mouth and eyes) with your hands.--->
 - Communicate issues to me (see [ways to communicate to me above](#instructor--derek-ogle)) so that I am aware and can try to address the issues.
+
+<!-- - Please enter the back (south) door and exit the front (north) door to the classroom (the doors will be marked).
+- In our computer classroom, please only sit at a desk that has both a chair and a computer.
+- Wipe down your desk, keyboard, and mouse with the provided wipes. **You are also welcome to bring and use your own computer.**
+- In general, but especially if you are using the college's computers, please refrain from touching your face (mouth and eyes) with your hands. -->
 
 ----
 
