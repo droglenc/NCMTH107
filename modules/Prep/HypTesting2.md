@@ -6,7 +6,7 @@ css: "/css/modules.css"
 ---
 
 <div class="alert alert-warning">
-Use the preparation materials to prepare hand-written answers for the following questions. Please contact <a href="https://teams.microsoft.com/l/channel/19%3ad26a8cc37740458aaf93fe10815c9eb1%40thread.tacv2/Questions%2520-%2520Preparation%2520Guide?groupId=1c605bf3-86b9-4b57-8b0c-1753c67bf54a&tenantId=b70d8bab-80b6-4766-b5da-fcfdabdf71c7" target="_blank">Dr. Ogle</a> if you have questions.
+Use the preparation materials to prepare hand-written answers for the following questions. Please ask any questions on the "Questions -- Preparation Guide" on the course Team (see link on <a href="../../">the homepage</a>.)
 </div>
 
 1. How are the p-value and &alpha; used to make a decision about the null hypothesis? What decisions can be made and why?
