@@ -4,45 +4,59 @@ title: MTH107 FAQ
 subtitle: How do I install NCStats?
 author: Derek H. Ogle
 ---
+Attaching package: &#39;NCStats&#39;</code></pre>
+<pre><code>The following objects are masked from &#39;package:FSA&#39;:
 
+    filterD, residPlot</code></pre>
+<pre><code>The following object is masked from &#39;package:stats&#39;:
 
-<hr />
-<p>The <code>NCStats</code> package is a set of functions that I have written to make aspects of using R for statistics classes at Northland easier. Descriptions for installing <code>NCStats</code> are below. <code>NCStats</code> is likely loaded on all Northland College computers, though it may not be the most recent version at all times.</p>
-<div id="installing" class="section level2">
-<h2>Installing</h2>
-<p>As long as your computer is connected to the internet you can install <code>NCStats</code> directly from the RForge.net repository by running the following command in R.</p>
-<pre class="r"><code>&gt; source(&quot;http://www.rforge.net/NCStats/InstallNCStats.R&quot;)</code></pre>
-</div>
-<div id="checking-the-installation" class="section level2">
-<h2>Checking the Installation</h2>
-<p>After installing the <code>NCStats</code>, it is loaded for use with …</p>
-<pre class="r"><code>&gt; library(NCStats)</code></pre>
-<p>If this command produces an error where R says that it cannot find another package, then see <a href="install-other-packages.html">this FAQ</a>.</p>
-<p>The following command should open the help file and also indicates that the download and installation were successful.</p>
-<pre class="r"><code>&gt; ?NCStats</code></pre>
-</div>
+    t.test</code></pre>
+<p>If the installation is successful you should get about 20 lines of results in the console. As long as none of those lines says “Error” then the install should be correct. You can further test the install by running the first line below to see if you get the results on the two lines below that.</p>
+<pre class="r"><code>&gt; Summarize(1:3)</code></pre>
+<pre><code>     n   mean     sd    min     Q1 median     Q3    max 
+   3.0    2.0    1.0    1.0    1.5    2.0    2.5    3.0 </code></pre>
+<p>If your installation failed then please contact me for help.</p>
 
 
 
 
-</div>
 
 <script>
 
 // add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
 $(document).ready(function () {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  bootstrapStylePandocTables();
 });
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>

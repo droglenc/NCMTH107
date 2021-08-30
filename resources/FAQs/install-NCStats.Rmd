@@ -8,37 +8,39 @@ subtitle: How do I install NCStats?
 ```{r echo=FALSE, eval=FALSE}
 # Renders an appropriate HTML file for the webpage
 setwd("C:/aaaWork/Web/GitHub/NCMTH107/resources/FAQs")
-source("../../../rhelpers/rhelpers.R")
+source("../../rhelpers/rhelpers.R")
 fnm <- "install-NCStats"
 modHTML(fnm)
 ```
 
 ```{r echo=FALSE, results='hide', message='FALSE'}
-source("../../../rhelpers/knitr_setup.R")
+source("../../rhelpers/knitr_setup.R")
 ```
 
 ----
 
-The `NCStats` package is a set of functions that I have written to make aspects of using R for statistics classes at Northland easier.  Descriptions for installing `NCStats` are below.  `NCStats` is likely loaded on all Northland College computers, though it may not be the most recent version at all times.
+The `NCStats` package is a set of functions that I have written to make aspects of using R for statistics classes at Northland easier. Descriptions for installing `NCStats` are below. `NCStats` is likely loaded on all Northland College computers, though it may not be the most recent version at all times.
 
 ## Installing
-
-As long as your computer is connected to the internet you can install `NCStats` directly from the RForge.net repository by running the following command in R.
+As long as your computer is connected to the internet you can install `NCStats` directly from GitHub by running the following command in R.
 
 ```{r eval=FALSE}
-source("http://www.rforge.net/NCStats/InstallNCStats.R")
+if (!require('manipulate')) utils::install.packages('manipulate')
+if (!require('remotes')) install.packages('remotes'); require('remotes')
+remotes::install_github('droglenc/NCStats',type='binary')
 ```
 
 ## Checking the Installation
+You can test whether the `NCStats` package installed correctly by running the line below (again, copy the line, paste it into the CONSOLE in RStudio, and press Enter/Return).
 
-After installing the `NCStats`, it is loaded for use with ...
 ```{r}
 library(NCStats)
 ```
 
-If this command produces an error where R says that it cannot find another package, then see [this FAQ](install-other-packages.html).
+If the installation is successful you should get about 20 lines of results in the console. As long as none of those lines says “Error” then the install should be correct. You can further test the install by running the first line below to see if you get the results on the two lines below that.
 
-The following command should open the help file and also indicates that the download and installation were successful.
-```{r eval=FALSE}
-?NCStats
+```{r}
+Summarize(1:3)
 ```
+
+If your installation failed then please contact me for help.
