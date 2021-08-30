@@ -28,9 +28,3 @@ The following items will be completed in class.
 * Discuss syllabus and class webpage (go over answers to scavenger hunt)
     * Turn in "Getting Organized -- Prep" on Gradescope (see [quick link on class homepage](../){:target="_blank"})
 * Submit [first module assignment](CE/GetOrganized_CE1) on GradeScope
-
-&nbsp;
-
-----
-
-## Archived Materials
