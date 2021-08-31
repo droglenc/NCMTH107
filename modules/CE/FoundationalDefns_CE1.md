@@ -33,7 +33,6 @@ The Sustainability Coordinator surveyed 147 randomly selected Northland students
 <br>
 
 ## Crayfish and Bass
-class="img-right">
 As part of their Biology Capstone research, a Northland College student wanted to determine the mean carapace length of Rusty Crayfish (*Orconectes rusticus*) in a lake with Smallmouth Bass (*Micropterus dolomieu*). In 2015, the student gathered (as randomly as possible) and measured the carapace length of 235 Rusty Crayfish from the lake with Smallmouth Bass.
 
 1. Identify the individual, variable, population, parameter, sample, and statistic.
