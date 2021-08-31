@@ -13,17 +13,16 @@ css: "/css/modules.css"
 <p>Suppose that you have been hired to work for a company that makes “cheesheads” and that your first task is to market cheesheads to residents of Ashland and Bayfield counties (WI). Further suppose that to effectively market cheeseheads you need to know the mean age and percentage of males for everybody in Ashland and Bayfield counties.</p>
 <ul>
 <li>Is it possible to know the mean age and percentage of males <strong>for everybody</strong> in Ashland and Bayfield counties? Explain why or why not?</li>
-<li>If you said that it was “no possible,” is it reasonable to know these two values? Explain why or why not?</li>
-<li>If you said that it was “not possible” and it also was “not reasonable,” then what do you suggest should be done to get some sort of understanding of these two values? How would you go about doing that?</li>
+<li>If you said that it was “not possible,” then is it reasonable, given financial and physical constraints, to know these two values? Explain why or why not?</li>
+<li>If you said that it was “not possible” and it also was “not reasonable,” then what should be done to get some sort of understanding of these two values? How would you go about doing that?</li>
 </ul>
-<p> </p>
 <div class="alert alert-danger">
 <p>Please don’t go on until we have discussed these questions as a class.</p>
 </div>
 <p> </p>
 <hr />
 <div class="alert alert-warning">
-<p><strong>Note:</strong> The following code is used to produce a “live” example for class. The meaning of this code will be explained later. For now, we simply want the results that are produced. Type the code exactly as shown in each grey box and attempt to answer the follow-up questions.</p>
+<p><strong>Note:</strong> The following code is used to produce a “live” example for class. The meaning of this code will be explained later. For now, we simply want the results that are produced. Type (better yet, copy-and-paste) the code exactly as shown in each grey box and attempt to answer the follow-up questions.</p>
 </div>
 <p> </p>
 </div>
@@ -34,9 +33,8 @@ css: "/css/modules.css"
 <ul>
 <li>Are the individuals (i.e., each row) in your sample identical? Why or why not?</li>
 <li>Write a brief conclusion about the ages of individuals in your sample.</li>
-<li>Was your conclusion(s) “easy” or “hard” to write? Why? What could you do to make writing your conclusions easier?</li>
+<li>Was your conclusion “easy” or “hard” to write? Why? What could you do to make writing your conclusions easier?</li>
 </ul>
-<p> </p>
 <div class="alert alert-danger">
 <p>Please don’t go on until we have discussed these questions as a class.</p>
 </div>
@@ -49,21 +47,19 @@ css: "/css/modules.css"
 <li>Write a brief conclusion about the ages of individuals in your sample.</li>
 <li>Was it easier to write your conclusions here than previously? Why or why not?</li>
 </ul>
-<p> </p>
 <div class="alert alert-danger">
 <p>Please don’t go on until we have discussed these questions as a class.</p>
 </div>
 <p> </p>
 </div>
-<div id="obtain-a-second-random-sample" class="section level2">
-<h2>Obtain a Second Random Sample</h2>
+<div id="obtain-and-summarize-a-second-random-sample" class="section level2">
+<h2>Obtain and Summarize a Second Random Sample</h2>
 <pre class="r"><code>( samB &lt;- srsdf(ABCens90,n=100) )
 Summarize(~age,data=samB,digits=1)</code></pre>
 <ul>
 <li>Were the mean ages from the two samples identical?</li>
 <li>Are your results (about whether the mean ages were identical between samples) typical or expected? Why or why not?</li>
 </ul>
-<p> </p>
 <div class="alert alert-danger">
 <p>Please don’t go on until we have discussed these questions as a class.</p>
 </div>
@@ -76,7 +72,6 @@ Summarize(~age,data=samB,digits=1)</code></pre>
 <li>Did your sample mean ages exactly equal this true value for the entire population?</li>
 <li>Are your results (about whether the summaries from your samples matched the summary from the population) typical or expected? Why or why not?</li>
 </ul>
-<p> </p>
 <div class="alert alert-danger">
 <p>Please don’t go on until we have discussed these questions as a class.</p>
 </div>

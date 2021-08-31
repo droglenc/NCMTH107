@@ -30,20 +30,17 @@ source("../../rhelpers/knitr_setup.R")
 Suppose that you have been hired to work for a company that makes "cheesheads" and that your first task is to market cheesheads to residents of Ashland and Bayfield counties (WI). Further suppose that to effectively market cheeseheads you need to know the mean age and percentage of males for everybody in Ashland and Bayfield counties.
 
 * Is it possible to know the mean age and percentage of males **for everybody** in Ashland and Bayfield counties? Explain why or why not?
-* If you said that it was "no possible," is it reasonable to know these two values? Explain why or why not?
-* If you said that it was "not possible" and it also was "not reasonable," then what do you suggest should be done to get some sort of understanding of these two values? How would you go about doing that?
-
-\ 
+* If you said that it was "not possible," then is it reasonable, given financial and physical constraints, to know these two values? Explain why or why not?
+* If you said that it was "not possible" and it also was "not reasonable," then what should be done to get some sort of understanding of these two values? How would you go about doing that?
 
 <div class="alert alert-danger">Please don't go on until we have discussed these questions as a class.
 </div>
 
 \ 
 
-
 ---- 
 
-<div class="alert alert-warning"><strong>Note:</strong> The following code is used to produce a "live" example for class. The meaning of this code will be explained later. For now, we simply want the results that are produced. Type the code exactly as shown in each grey box and attempt to answer the follow-up questions.
+<div class="alert alert-warning"><strong>Note:</strong> The following code is used to produce a "live" example for class. The meaning of this code will be explained later. For now, we simply want the results that are produced. Type (better yet, copy-and-paste) the code exactly as shown in each grey box and attempt to answer the follow-up questions.
 </div>
 
 \ 
@@ -56,9 +53,7 @@ library(NCStats)
 
 * Are the individuals (i.e., each row) in your sample identical? Why or why not?
 * Write a brief conclusion about the ages of individuals in your sample.
-* Was your conclusion(s) "easy" or "hard" to write? Why? What could you do to make writing your conclusions easier?
-
-\ 
+* Was your conclusion "easy" or "hard" to write? Why? What could you do to make writing your conclusions easier?
 
 <div class="alert alert-danger">Please don't go on until we have discussed these questions as a class.
 </div>
@@ -74,14 +69,12 @@ percTable(xtabs(~sex,data=samA),digits=1)
 * Write a brief conclusion about the ages of individuals in your sample.
 * Was it easier to write your conclusions here than previously? Why or why not?
 
-\ 
-
 <div class="alert alert-danger">Please don't go on until we have discussed these questions as a class.
 </div>
 
 \ 
 
-## Obtain a Second Random Sample
+## Obtain and Summarize a Second Random Sample
 ```{r echo=-3, results='hide', prompt=FALSE}
 ( samB <- srsdf(ABCens90,n=100) )
 Summarize(~age,data=samB,digits=1)
@@ -90,8 +83,6 @@ percTable(xtabs(~sex,data=samB),digits=1)
 
 * Were the mean ages from the two samples identical?
 * Are your results (about whether the mean ages were identical between samples) typical or expected? Why or why not?
-
-\ 
 
 <div class="alert alert-danger">Please don't go on until we have discussed these questions as a class.
 </div>
@@ -106,8 +97,6 @@ percTable(xtabs(~sex,data=ABCens90),digits=1)
 
 * Did your sample mean ages exactly equal this true value for the entire population?
 * Are your results (about whether the summaries from your samples matched the summary from the population) typical or expected?  Why or why not?
-
-\ 
 
 <div class="alert alert-danger">Please don't go on until we have discussed these questions as a class.
 </div>
