@@ -49,7 +49,7 @@ The following are definitions for general statistical words. See further below f
 <dt>Right-Skewed</dt><dd>The right-tail of a distribution is longer or more drawn out than the left-tail.</dd>
 <dt>Sample</dt><dd>A subset of the population examined by a researcher.</dd>
 <dt>Sampling Distribution</dt><dd>The distribution of the values of a particular statistic computed from all possible samples of the same size from the same population.</dd>
-<dt>Sampling Variability</dt><dd>The fact that the results (i.e., statistics) from different samples are different.</dd>
+<dt>Sampling Variability</dt><dd>The fact that the results (i.e., statistics) from different samples (of the same population) are different.</dd>
 <dt>Simple Random</dt><dd>A probability-based sample where each individual of the population has the same chance of being selected for the sample. Usually abbreviated as SRS.</dd>
 <dt>Slope</dt><dd>The change in value of the response variable for a unit change in value of the explanatory variable.</dd>
 <dt>Standard Deviation</dt><dd>"Essentially" the average deviation or difference of individuals from the mean.</dd>
