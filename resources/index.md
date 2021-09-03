@@ -14,9 +14,11 @@ title: Resources
 <!---1. [Possible short answer questions for quizzes](ShortAnswerQuestions)--->
 
 ## Administrative
-<!---1. [Daily Preparation Check](https://forms.gle/PNu4B9iPcwF73otn9){:target="_blank"}--->
 1. MSTeams Team ([see quick link on class homepage](../))
 1. Gradescope ([see quick link on class homepage](../))
+    * [Scanning to PDF and Uploading Instructions](https://gradescope-static-assets.s3-us-west-2.amazonaws.com/help/submitting_hw_guide.pdf){:target="_blank"}
+    * [GradeScope FAQ](https://gradescope-static-assets.s3-us-west-2.amazonaws.com/help/submitting_hw_guide.pdf){:target="_blank"}
+    * [CombinePDF](https://combinepdf.com/){:target="_blank"} ... *an on-line tool that can be used to combined separate PDFs into one PDF (may be useful for uploading to GradeScope)*
 1. mycourses.northland.edu (class videos, grades) ([see quick link on class homepage](../))
 1. [Anonymous Message to Dr. Ogle](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}
 1. Northland Resources
