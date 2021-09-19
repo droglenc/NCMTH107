@@ -37,7 +37,7 @@ ggplot(data=tmp,mapping=aes(x=latitude,y=perc.female)) +
   labs(x="Latitude (N)",y="Percent Female") +
   theme_NCStats() +
   theme(panel.grid.major=element_line(linetype="dashed",color="gray80"),
-        panel.grid.minor=element_line(linetype="dotted",color="gray85"))
+        panel.grid.minor=element_line(linetype="dotted",color="gray80"))
 ```
 
 Use this scatterplot to answer these questions.
