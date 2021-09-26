@@ -22,9 +22,16 @@ In all of the following questions, I urge you to follow these steps when answeri
   <li>Identify the distribution that would be used to answer the question (population or sampling).</li>
   <li>Identify characteristics of the required distribution; i.e., whether normal or not and, if normal, the center and dispersion (SD or SE).</li>
   <li>Identify whether the question can be answered or not (can be if normal, cannot be if not normal).</li>
-  <li>Answer the question; use <code>distrib()</code> if the probability can be computed (i.e., normal distribution) or explain why the probability cannot be computed (note specifically which distribution is not normal).</li>
+  <li>Answer the question.</li>
 </ol>
-A reminder to use these steps will <strong>NOT</strong> be provided on future quizzes, but you should get in the habit of following them.
+</div>
+
+<div class="alert alert-danger">
+In all of the following questions, ...
+<ol type="a">
+  <li>if the question can be answered then show a quick drawing that illustrates your calculation and the <code>distrib()</code> used to compute the answer.</li>
+  <li>If the probability cannot be computed then explain why not (and be specific about which distribution is not normal).</li>
+</ol>
 </div>
 
 <br>
