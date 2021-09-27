@@ -81,14 +81,14 @@ d <- data.frame(treat=c("A","A","A","A","A","B","B","B","C","C","A","A",
                 out=factor(c(1,1,1,1,1,1,1,1,1,1,2,2,
                              2,2,2,2,2,2,2,3,3,3,3,3)))
 d <- dplyr::mutate(d,
-                   treat=FSA::mapvalues(treat,from=c("A","B","C"),
-                                        to=c("No Action (control)",
-                                             "Removed Branches",
-                                             "Sprayed and Removed")),
-                   out=FSA::mapvalues(out,from=c("1","2","3"),
-                                      to=c("Within 1 Year",
-                                           "2-4 Years Later",
-                                           "4+ Years Later")))
+                   treat=plyr::mapvalues(treat,from=c("A","B","C"),
+                                         to=c("No Action (control)",
+                                              "Removed Branches",
+                                              "Sprayed and Removed")),
+                   out=plyr::mapvalues(out,from=c("1","2","3"),
+                                       to=c("Within 1 Year",
+                                            "2-4 Years Later",
+                                            "4+ Years Later")))
 ```
 ```{r BlightTables, echo=FALSE, results='hide'}
 ( tbl <- xtabs(~treat+out,data=d) )
