@@ -54,7 +54,7 @@ source("../../../rhelpers/knitr_setup.R")
     1. Sampling (because about a statistic from a sample).
     1. x&#772;~N(0.9,$\frac{0.15}{\sqrt{50}}$=`r formatC(0.15/sqrt(50),format="f",digits=4)`) because n&ge;30.
     1. Can be answered (because sampling distribution is normal).
-    1. `r formatC(distrib(1,mean=0.9,sd=0.15/sqrt(50),lower.tail=FALSE),format="f",digits=4)`.
+    1. `r formatC(distrib(0.92,mean=0.9,sd=0.15/sqrt(50),lower.tail=FALSE),format="f",digits=4)`.
 1. About an individual ...
     1. Population (because about an individual).
     1. Right-skewed (not normal).
@@ -69,7 +69,7 @@ source("../../../rhelpers/knitr_setup.R")
     1. Sampling (because about a statistic from a sample).
     1. x&#772;~N(0.9,$\frac{0.15}{\sqrt{50}}$=`r formatC(0.15/sqrt(50),format="f",digits=4)`) because n&ge;15 and the population distribution is not strongly skewed (assume not strongly skewed unless it says strongly skewed).
     1. Can be answered (because sampling distribution is normal).
-    1. `r formatC(distrib(0.92,mean=0.9,sd=0.15/sqrt(15),lower.tail=FALSE),format="f",digits=4)`.
+    1. `r formatC(distrib(1,mean=0.9,sd=0.15/sqrt(15),lower.tail=FALSE),format="f",digits=4)`.
 1. About a mean from n=50 ...
     1. Sampling (because about a statistic from a sample).
     1. x&#772;~N(0.9,$\frac{0.15}{\sqrt{50}}$=`r formatC(0.15/sqrt(50),format="f",digits=4)`) because n&ge;30.
@@ -78,9 +78,9 @@ source("../../../rhelpers/knitr_setup.R")
 
 R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
-distrib(1,mean=0.9,sd=0.15/sqrt(15),lower.tail=FALSE)
 distrib(0.92,mean=0.9,sd=0.15/sqrt(50),lower.tail=FALSE)
 distrib(0.85,mean=0.9,sd=0.15/sqrt(50))
+distrib(1,mean=0.9,sd=0.15/sqrt(15),lower.tail=FALSE)
 distrib(0.01,mean=0.9,sd=0.15/sqrt(50),lower.tail=FALSE,type="q")
 ```
 
@@ -144,9 +144,9 @@ distrib(1075/700,mean=1.5,sd=0.75/sqrt(700),lower.tail=FALSE)
 
 R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
-distrib(800,mean=550,sd=150,lower.tail=FALSE)
 distrib(200,mean=550,sd=150)
 distrib(600,mean=550,sd=150/sqrt(5))
+distrib(800,mean=550,sd=150,lower.tail=FALSE)
 ab <- distrib(700,mean=550,sd=150/sqrt(10))
 a <- distrib(500,mean=550,sd=150/sqrt(10))
 ab-a
