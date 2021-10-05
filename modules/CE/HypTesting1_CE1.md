@@ -26,8 +26,8 @@ Please show these steps (demonstrated in the module reading) when answering all 
 <ol type="a">
   <li>Identify H<sub>0</sub> and H<sub>A</sub>. If the question has a context then the parameter should be stated within that context.</li>
   <li>Define the p-value specific to the situation.</li>
-  <li>Draw the null distribution.</li>
-  <li>Compute the p-value.</li>
+  <li>Draw the null distribution (with the p-value shaded).</li>
+  <li>Compute the p-value. [*Show your `distrib()` code.*]</li>
   <li>Make a decision about H<sub>0</sub>. If the question has a context then the conclusion should be stated within that context.</li>
 </ol>
 </div>
