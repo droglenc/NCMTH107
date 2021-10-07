@@ -7,6 +7,7 @@ css: "/css/modules.css"
 ---
 
 
+<pre><code>## Warning: package &#39;knitr&#39; was built under R version 4.1.1</code></pre>
 <div id="the-concept-of-confidence-intervals" class="section level2">
 <h2>The Concept of Confidence Intervals</h2>
 <p>The concept of confidence in a confidence interval (CI) is subtle because it depends on thinking about taking all possible samples from a known population distribution, computing the CI for each sample, and then determining if the CI captures the parameter or not. This thought process is complicated by the fact that the parameter is unknown, and taking all possible samples is impossible. The <code>ciSim()</code> function (with no arguments) can simulate this process and provide a graphical result of the CIs relative to the parameter from many (but not all possible) samples.</p>
@@ -138,7 +139,7 @@ m.e.
 <div id="confidence-region-calculations" class="section level2">
 <h2>Confidence Region Calculations</h2>
 <div class="alert alert-success">
-I urge you to follow these steps when answering all confidence region questions:
+follow these steps when answering all confidence region questions:
 <ol type="a">
 <li>
 Identify the level of confidence (i.e., 100(1-α)%).
@@ -147,7 +148,7 @@ Identify the level of confidence (i.e., 100(1-α)%).
 Identify whether a lower confidence bound (greater than H<sub>A</sub>), upper confidence bound (less than H<sub>A</sub>), or confidence interval (not equals H<sub>A</sub>) should be constructed.
 </li>
 <li>
-Find Z<sup>*</sup> (I suggest including a drawing to illustrate your calculation).
+Find Z<sup>*</sup> (Include a drawing to illustrate your calculation and your <code>distrib()</code> code).
 </li>
 <li>
 Calculate the confidence region values (i.e., x̄+Z<sup>*</sup>SE).
