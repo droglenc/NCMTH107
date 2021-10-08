@@ -15,7 +15,7 @@ Use the preparation materials to prepare hand-written answers for the following 
 1. What are the five steps in computing a proper confidence region?
 1. How is the level of confidence (C) determined from &alpha;?
 1. How is the alternative hypothesis used to decide whether to construct a confidence interval, lower confidence bound, or upper confidence bound?
-1. What R code do you use to find Z~\*~ for constructing a confidence region?
-1. What will the sign of Z~\*~ be for a lower confidence bound, upper confidence bound, and confidence interval?
+1. What R code do you use to find Z~*~ for constructing a confidence region?
+1. What will the sign of Z~*~ be for a lower confidence bound, upper confidence bound, and confidence interval?
 1. How do you interpret the value(s) that result from construction a lower confidence bound, upper confidence bound, and confidence interval?
 1. What questions do you have from this reading that you would like me to address? [*Please be as specific as possible. Don't just say "everything" or "I don't understand anything." Of course, you can ask questions about the reading before class on MS Teams (see link above).*]
