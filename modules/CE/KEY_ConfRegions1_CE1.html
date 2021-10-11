@@ -1,0 +1,189 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Confidence Regions - Introduction CE"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<div id="the-concept-of-confidence-intervals" class="section level2">
+<h2>The Concept of Confidence Intervals</h2>
+<ol>
+<li>The percentage of CIs that contained μ was not affected by (i.e., did not change) increasing n.</li>
+<li>The percentage of CIs that contained μ increased with an increasing level of confidence.</li>
+<li>The margin-of-error decreased with increasing n (i.e., the confidence interval became narrower).</li>
+<li>The margin-of-error increased with increasing level of confidence (i.e., the confidence interval became wider).</li>
+<li>As a statistician you can make the CI narrower by increasing your sample size (n) or decreasing the level of confidence (C). Decreasing the level of confidence, however, will result in more errors in your conclusions (i.e., μ will be contained within the confidence interval less often).</li>
+</ol>
+<p><br></p>
+</div>
+<div id="confidence-region-calculations" class="section level2">
+<h2>Confidence Region Calculations</h2>
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+The level of confidence comes from 1-α
+</li>
+<li>
+The type of confidence region comes from the H<sub>A</sub>: a “less than” H<sub>A</sub> is an upper bound, a “greater than” H<sub>A</sub> is a lower bound, and a “not equals” H<sub>A</sub> is an interval.
+</li>
+<li>
+The Z<sup>*</sup> uses the level of confidence in <code>distrib()</code> for the bounds but the “tail area” must be used for the intervals. Look closely at the R Appendices, especially for the interval questions.
+</li>
+</ul>
+</div>
+<ol>
+<li>
+See below.
+</li>
+<ol type="a">
+<li>
+C=0.90
+</li>
+<li>
+Lower bound
+</li>
+<li>
+Z<sup>*</sup>=-1.282 (Figure 1).
+</li>
+<p><img src="KEY_ConfRegions1_CE1_files/figure-html/Z1-1.png" width="336" /></p>
+<p>Figure 1: Normal distribution representing the Z* the first confidence region example.</p>
+<li>
+77.3 (this is 79.5-1.282<span class="math inline">\(\frac{12}{\sqrt{50}}\)</span>).
+</li>
+<li>
+I am 90% confident that the true population mean is greater than 77.3.
+</li>
+</ol>
+</ol>
+<p><br></p>
+<ol start="2">
+<li>
+See below.
+</li>
+<ol type="a">
+<li>
+C=0.95
+</li>
+<li>
+Interval
+</li>
+<li>
+Z<sup>*</sup>= ± 1.960 (Figure 2).
+</li>
+<p><img src="KEY_ConfRegions1_CE1_files/figure-html/Z2-1.png" width="336" /></p>
+<p>Figure 2: Normal distribution representing the Z* the second confidence region example.</p>
+<li>
+8.8-13.6.
+</li>
+<li>
+I am 95% confident that the true population mean is between 8.8 and 13.6.
+</li>
+</ol>
+</ol>
+<p><br></p>
+<ol start="3">
+<li>
+See below.
+</li>
+<ol type="a">
+<li>
+C=0.99
+</li>
+<li>
+Lower bound
+</li>
+<li>
+Z<sup>*</sup>=-2.326 (Figure 3).
+</li>
+<p><img src="KEY_ConfRegions1_CE1_files/figure-html/Z3-1.png" width="336" /></p>
+<p>Figure 3: Normal distribution representing the Z* the third confidence region example.</p>
+<li>
+894.6.
+</li>
+<li>
+I am 99% confident that the true population mean is greater than 894.6.
+</li>
+</ol>
+</ol>
+<p><br></p>
+<ol start="4">
+<li>
+See below.
+</li>
+<ol type="a">
+<li>
+C=0.90
+</li>
+<li>
+Upper bound
+</li>
+<li>
+Z<sup>*</sup>=1.282 (Figure 4).
+</li>
+<p><img src="KEY_ConfRegions1_CE1_files/figure-html/Z4-1.png" width="336" /></p>
+<p>Figure 4: Normal distribution representing the Z* the fourth confidence region example.</p>
+<li>
+15150.4.
+</li>
+<li>
+I am 90% confident that the true population mean is less than 15150.4.
+</li>
+</ol>
+</ol>
+<p>R Appendix</p>
+<pre class="r"><code>zstar &lt;- distrib(0.9,type=&quot;q&quot;,lower.tail=FALSE)
+zstar &lt;- distrib(0.025,type=&quot;q&quot;,lower.tail=FALSE)
+zstar &lt;- distrib(0.99,type=&quot;q&quot;,lower.tail=FALSE)
+zstar &lt;- distrib(0.9,type=&quot;q&quot;)</code></pre>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
