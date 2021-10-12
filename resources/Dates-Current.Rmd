@@ -66,7 +66,7 @@ dpast <- d %>%
   select(-Date) %>%
   rename(Date=Date2)
 
-## Only continue if there are future dates
+## Only continue if there are past dates
 if (nrow(dpast)>0) {
   ## Make the kable
   knitr::kable(dpast,format="html",escape=FALSE) %>%
