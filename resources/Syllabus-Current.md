@@ -126,7 +126,7 @@ The course is composed of daily modules (see link in upper-right) of material. T
 ----
 
 ## Grading
-An overall grade will be computed from the module preparation quizzes and assignments described in the ["Course Workflow" section](#course-workflow), a capstone assignment, and your attendance to class according to the percentages below.
+An overall grade will be computed from the module preparation guide answers and assignments described in the ["Course Workflow" section](#course-workflow), a capstone assignment, and your attendance to class according to the percentages below.
 
 <!-- if the assessment weights change then you must change the values in get_wghts() in the grader.js file -->
 
@@ -181,7 +181,7 @@ Attendance will be graded on a 0-1 basis. If you attend the entire class period 
 Absences for school sponsored events (e.g., special sessions of other courses, athletics) will be excused. Other planned absences (e.g., family events, doctor's appointments) *cleared with me in advanced* will be excused. Please see the [COVID-19 section](#covid-19-statement) below with respect to missing class due to illness. Excused absences will **not** negatively impact your attendance grade.
 
 #### Late Work
-Module preparation quizzes and assignments not submitted by the due date time will not be accepted (*but please contact me to let me know your circumstances for not being able to complete the work on time*). However, **you can request (via e-mail to me) a 24-h extension for up to two Preparation Guides and two Module Assignments.**
+Module preparation guide answers and assignments not submitted by the due date time will not be accepted (*but please contact me to let me know your circumstances for not being able to complete the work on time*). However, **you can request (via e-mail to me) a 24-h extension for up to two Preparation Guides and two Module Assignments.**
 
 #### Monitoring Your Grade
 Grades on individual module preparation guides and assignments can be found on the class Gradescope page ([quick link on class homepage](../){:target="_blank"}). I will update your percentage grades for the Preparation Guides, Module Assignments, and Attendance on mycourses.northland.edu ([quick link on class homepage](../)) at the end of each week, which will then show your grade as of that time. You can also compute your overall grade at any time by entering your percentage scores in the table above for completed assessments. To project your future grade, also include percentages for future assessments.
