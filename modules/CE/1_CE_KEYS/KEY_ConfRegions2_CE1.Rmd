@@ -20,16 +20,6 @@ modHTML_CEKeys("KEY_ConfRegions2_CE1")
 ```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
 library(NCStats)
 source("../../../rhelpers/knitr_setup.R")
-library(captioner)
-figs <- captioner(prefix="Figure")
-figs(name="Z1","Normal distribution representing the Z* the first confidence region example.")
-figs(name="Z2","Normal distribution representing the Z* the second confidence region example.")
-figs(name="Z3","Normal distribution representing the Z* the third confidence region example.")
-figs(name="Z4","Normal distribution representing the Z* the fourth confidence region example.")
-figs(name="Z5","Normal distribution representing the Z* the fifth confidence region example.")
-figs(name="Z6","Normal distribution representing the Z* the sixth confidence region example.")
-figs(name="Z7","Normal distribution representing the Z* the seventh confidence region example.")
-
 ```
 
 ----
@@ -37,7 +27,7 @@ figs(name="Z7","Normal distribution representing the Z* the seventh confidence r
 <div class="alert alert-warning">
 <strong>Note:</strong>
 <ul>
-<li>In the second part of each question below you MUST not say &mu; -- rather you should say what &mu; represents (e.g., "true population mean body temperature" in the first question).</li>
+<li>In part (e) of each question below you MUST not say &mu; -- rather you should say what &mu; represents (e.g., "true population mean body temperature" in the first question).</li>
 </ul>
 </div>
 
@@ -47,9 +37,11 @@ figs(name="Z7","Normal distribution representing the Z* the seventh confidence r
 d <- read.csv("https://github.com/droglenc/NCData/raw/master/NormTemp.csv")
 cis <- mean(d$bodytemp)+c(-1,1)*round(distrib(0.025,type="q",lower.tail=FALSE),3)*0.45/sqrt(nrow(d))
 ```
-<li>`r formatC(mean(d$bodytemp),format="f",digits=1)`$\pm$`r formatC(distrib(0.975,type="q",lower.tail=FALSE),format="f",digits=3)`$\frac{0.45}{\sqrt{130}}$ = `r formatC(cis[1],format="f",digits=2)`-`r formatC(cis[2],format="f",digits=2)`.</li>
-<li>I am 95% confident that the true population mean body temperature is between `r formatC(cis[1],format="f",digits=2)` and `r formatC(cis[2],format="f",digits=2)`<sup>o</sup>C.</li>
-</ol>
+1. C=0.95
+1. Confidence Interval
+1. Z<sup>*</sup>=$\pm$`r formatC(distrib(0.975,type="q",lower.tail=FALSE),format="f",digits=3)`.
+1. `r formatC(mean(d$bodytemp),format="f",digits=1)`$\pm$`r formatC(distrib(0.975,type="q",lower.tail=FALSE),format="f",digits=3)`$\frac{0.45}{\sqrt{130}}$ = `r formatC(cis[1],format="f",digits=2)`-`r formatC(cis[2],format="f",digits=2)`.
+1. I am 95% confident that the true population mean body temperature is between `r formatC(cis[1],format="f",digits=2)` and `r formatC(cis[2],format="f",digits=2)`<sup>o</sup>C.
 
 R Appendix.
 ```{r eval=FALSE, prompt=FALSE}
@@ -65,6 +57,9 @@ d <- filterD(d,species=="Halticus.oleracea")
 ci <- mean(d$thorax)+round(distrib(0.95,type="q",lower.tail=FALSE),3)*15/sqrt(nrow(d))
 ```
 
+1. C=0.95
+1. Lower Confidence Bound
+1. Z<sup>*</sup>=`r formatC(distrib(0.95,type="q",lower.tail=FALSE),format="f",digits=3)`
 1. `r formatC(mean(d$thorax),format="f",digits=2)``r formatC(distrib(0.95,type="q",lower.tail=FALSE),format="f",digits=3)`$\frac{15}{\sqrt{18}}$ = `r formatC(ci,format="f",digits=1)`
 1. I am 95% confident that the true population mean thorax length is greater than `r formatC(ci,format="f",digits=1)` mm (i.e., a lower bound).
 
@@ -80,7 +75,7 @@ R Appendix.
 <strong>Note:</strong>
 <ul>
 <li>These questions are "sample size" and not "confidence region" calculations.</li>
-<li>Note that all sample size calculations should be rounded <strong>UP</strong> to a whole number. For example, in the third question below, note how 742.2 was rounded up to 743.</li>
+<li>Note that all sample size calculations should be rounded <strong>UP</strong> to a whole number. For example, in the second question below, note how 154.25 was rounded up to 155.</li>
 </ul>
 </div>
 
