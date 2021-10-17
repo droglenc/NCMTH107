@@ -102,11 +102,11 @@ df <- n1+n2-2
   \[s_{p}^{2}=\frac{(116-1)3.410^{2}+(125-1)3.102^{2}}{116+125-2} = 10.58749 \]
   The standard error of the statistic is,
   \[ SE_{\bar{x}_{did}-\bar{x}_{didnot}}=\sqrt{10.58749\left(\frac{1}{116}+\frac{1}{125} \right)} = 0.4194894  \]
-<li>The t test statistic is $\frac{1.054-0}{0.4194894}$=`r formatC(t,format="f",digits=3)` 2.513 with 116+125-2=239 df.</li>
+<li>The t test statistic is $\frac{1.054-0}{0.4194894}$=`r formatC(t,format="f",digits=3)` with 116+125-2=239 df.</li>
 <li>The p-value is `r kPvalue(pv,include.p=FALSE,latex=FALSE)`.</li>
 <li>The H<sub>0</sub> is rejected because the p-value < &alpha;.</li>
 <li>The average commitment to animals was significantly greater for those people that did evacuate their pets as compared to those people that did not evacuate their pets.</li>
-<li>One is 99% confident that the mean level of commitment for those that evacuated their pets is at least 1.054`r formatC(tstar,format="f",digits=3)`*0.419=`r formatC(lcb,format="f",digits=3)` greater than those that did not evacuate their pets. This which further supports that average commitment to animals was significantly greater for those people that did evacuate their pets as compared to those people that did not evacuate their pets.</li>
+<li>One is 99% confident that the mean level of commitment for those that evacuated their pets is at least 1.054`r formatC(tstar,format="f",digits=3)`*0.419=`r formatC(lcb,format="f",digits=3)` greater than those that did not evacuate their pets. This further supports that average commitment to animals was significantly greater for those people that did evacuate their pets as compared to those people that did not evacuate their pets.</li>
 </ol>
 
 R Appendix.
