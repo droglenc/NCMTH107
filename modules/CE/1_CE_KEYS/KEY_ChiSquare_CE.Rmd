@@ -30,6 +30,10 @@ tbls(name="hurr4","Row percentage table for the observations of hurricane streng
 tbls("HelloExp","Expected frequencies of people that responded to 'Hello' and group size.")
 tbls("HelloObs","Observed frequencies of people that responded to 'Hello' and group size.")
 tbls("HelloPerc","The percentage of people that responded to 'Hello' by group size.")
+
+tbls("TEDSExp","Expected frequencies of trawl tows with at least one turtle mortality by two sizes of openings.")
+tbls("TEDSObs","Observed frequencies of trawl tows with at least one turtle mortality by two sizes of openings.")
+tbls("TEDSPerc","The percentage of trawl tows with at least one turtle mortality by two sizes of openings.")
 ```
 
 ----
@@ -149,3 +153,54 @@ R Appendix.
 ```{r eval=FALSE,prompt=FALSE}
 library(NCStats)
 distrib(9.201,distrib="chisq",df=2,lower.tail=FALSE)
+```
+
+----
+
+## Turtle Excluder Devices
+```{r TEDSChi, echo=FALSE, results='hide'}
+obs <- matrix(c(16,75-16,8,88-8),nrow=2,byrow=TRUE)
+rownames(obs) <- c("original","new")
+colnames(obs) <- c("mortality","no mortality")
+( chi1 <- chisq.test(obs,correct=FALSE) )
+```
+
+<li>&alpha; = 0.10.</li>
+<li>The H<sub>0</sub>: "The distribution of tows with zero or at least one turtle mortality is the same between the two sizes of openings" versus H<sub>A</sub>: "The distribution of tows with zero or at least one turtle mortality is NOT the same between the two sizes of openings."</li>
+<li>A chi-square test is required because (i)a categorical variable with two levels (at least one turtle mortality or not) was measured on (ii) two groups/populations (different sized TED openings).</li>
+<li>An observation study (it seems that the tows were just made and observed, not explicitly controlled by an experimenter) that is not obviously a random sample was used.</li>
+<li>The test statistic below should follow a &chi;<sup>2</sup> distribution because the expected number in each cell is greater than five (`r tabs("TEDSExp",display="cite")`).</li>
+
+`r tabs("TEDSExp")`
+
+```{r TEDSExp, echo=FALSE, background='white', comment=""}
+chi1$expected
+```
+
+<li>The table of observed frequencies is in `r tabs("TEDSObs",display="cite")`.</li>
+
+`r tabs("TEDSObs")`
+
+```{r TEDSObs, echo=FALSE, background='white', comment=""}
+chi1$observed
+```
+
+<li>The &chi;<sup>2</sup> test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.</li>
+<li>The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)`.</li>
+<li>The H<sub>0</sub> is rejected because the p-value < &alpha;.</li>
+<li>There appears to be a difference in the distribution of tows with zero and at least one turtle mortality between the two opening sizes. In fact, it appears that significantly fewer tows with the new, larger opening had at least one turtle mortality (`r tabs("TEDSPerc",display="cite")`).</li>
+
+`r tabs("TEDSPerc")`
+
+```{r TEDSPerc, echo=FALSE, background='white', comment=""}
+percTable(chi1$observed,margin=1)
+```
+
+<li> Not needed for a chi-square test.</li>
+
+### R Appendix
+```{r eval=FALSE}
+<<TEDSChi>>
+<<TEDSExp>>
+<<TEDSPerc>>
+```
