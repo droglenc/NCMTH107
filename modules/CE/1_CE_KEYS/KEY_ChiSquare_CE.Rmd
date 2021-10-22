@@ -169,17 +169,17 @@ colnames(obs) <- c("mortality","no mortality")
 <li>The H<sub>0</sub>: "The distribution of tows with zero or at least one turtle mortality is the same between the two sizes of openings" versus H<sub>A</sub>: "The distribution of tows with zero or at least one turtle mortality is NOT the same between the two sizes of openings."</li>
 <li>A chi-square test is required because (i)a categorical variable with two levels (at least one turtle mortality or not) was measured on (ii) two groups/populations (different sized TED openings).</li>
 <li>An observation study (it seems that the tows were just made and observed, not explicitly controlled by an experimenter) that is not obviously a random sample was used.</li>
-<li>The test statistic below should follow a &chi;<sup>2</sup> distribution because the expected number in each cell is greater than five (`r tabs("TEDSExp",display="cite")`).</li>
+<li>The test statistic below should follow a &chi;<sup>2</sup> distribution because the expected number in each cell is greater than five (`r tbls("TEDSExp",display="cite")`).</li>
 
-`r tabs("TEDSExp")`
+`r tbls("TEDSExp")`
 
 ```{r TEDSExp, echo=FALSE, background='white', comment=""}
 chi1$expected
 ```
 
-<li>The table of observed frequencies is in `r tabs("TEDSObs",display="cite")`.</li>
+<li>The table of observed frequencies is in `r tbls("TEDSObs",display="cite")`.</li>
 
-`r tabs("TEDSObs")`
+`r tbls("TEDSObs")`
 
 ```{r TEDSObs, echo=FALSE, background='white', comment=""}
 chi1$observed
@@ -188,9 +188,9 @@ chi1$observed
 <li>The &chi;<sup>2</sup> test statistic is `r formatC(chi1$statistic,format="f",digits=3)` with `r chi1$parameter` df.</li>
 <li>The p-value for this test statistic is `r kPvalue(chi1$p.value,include.p=FALSE,latex=FALSE)`.</li>
 <li>The H<sub>0</sub> is rejected because the p-value < &alpha;.</li>
-<li>There appears to be a difference in the distribution of tows with zero and at least one turtle mortality between the two opening sizes. In fact, it appears that significantly fewer tows with the new, larger opening had at least one turtle mortality (`r tabs("TEDSPerc",display="cite")`).</li>
+<li>There appears to be a difference in the distribution of tows with zero and at least one turtle mortality between the two opening sizes. In fact, it appears that significantly fewer tows with the new, larger opening had at least one turtle mortality (`r tbls("TEDSPerc",display="cite")`).</li>
 
-`r tabs("TEDSPerc")`
+`r tbls("TEDSPerc")`
 
 ```{r TEDSPerc, echo=FALSE, background='white', comment=""}
 percTable(chi1$observed,margin=1)
