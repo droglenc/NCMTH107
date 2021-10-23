@@ -8,7 +8,7 @@ css: "/css/modules.css"
 
 
 <div class="alert alert-info">
-Show your R work (both your input and your output) for each question below. You may find <a href="http://derekogle.com/Book107/RData.html#r-notebooks" target="_blank">Section 22.1</a> in the reading useful.
+Show your R work (both your input and your output) for each question below. You may find <a href="http://derekogle.com/Book107/RStart.html#r-notebooks" target="_blank">Section 22.1</a> in the reading useful.
 </div>
 
 <br>
