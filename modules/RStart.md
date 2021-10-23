@@ -31,6 +31,7 @@ Use the resources below to answer [these questions](Prep/RStart). [[*Problems wi
 
 * **Primary Resources** (~6 pages, 0 mins)
   * [Reading](http://derekogle.com/Book107/RStart.html){:target="_blank"}
+  * [RStudio Template Link](https://raw.githubusercontent.com/droglenc/NCMTH107/gh-pages/resources/FAQs/R%20Assignment%20Template.Rmd)
 
 ----
 
