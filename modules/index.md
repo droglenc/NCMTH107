@@ -40,6 +40,7 @@ title: Learning Modules
     </ol>
   <li><b>Using R</b></li>
     <ol type="1" start="22">
+      <li><a href="RStart.html">Getting Organized in RStudio</a></li>
       <li><a href="RData.html">Getting Data Into R</a></li>
       <li><a href="RFilter.html">Filtering Data in R</a></li>
       <li><a href="RUnivEDA.html">Univariate EDA in R</a></li>
