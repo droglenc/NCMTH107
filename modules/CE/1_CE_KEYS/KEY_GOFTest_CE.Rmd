@@ -174,7 +174,7 @@ j.chi$expected
 j.chi$observed
 ```
 
-<li>&chi;<sup>2</sup>=$\frac{(23-81.496)^{2}}{81.496}$ + $\frac{(96-200.400)^{2}}{200.400}$ +$\frac{(134-180.360)^{2}}{180.360}$ +$\frac{(293-289.912)^{2}}{289.912}$+$\frac{(297-204.408)^{2}}{204.408}$+$\frac{(380-243.152)^{2}}{243.152}$+$\frac{(113-136.272)^{2}}{136.272}$=`r formatC(j.chi$statistic,format="f",digits=4)` with `r j.chi$parameter` df (`r tbls("JuryResults",display="cite")`).</li>
+<li>&chi;<sup>2</sup>=$\frac{(23-81.496)^{2}}{81.496}$ + $\frac{(96-200.400)^{2}}{200.400}$ +$\frac{(134-180.360)^{2}}{180.360}$ +$\frac{(293-289.912)^{2}}{289.912}$+$\frac{(297-204.408)^{2}}{204.408}$+$\frac{(380-243.152)^{2}}{243.152}$+$\frac{(113-136.272)^{2}}{136.272}$=`r formatC(j.chi$statistic,format="f",digits=4)` with `r j.chi$parameter` df.</li>
 <li>p-value`r kPvalue(j.chi$p.value,include.p=FALSE,latex=FALSE)` (somewhat more specifically `r formatC(j.chi$p.value,digits=3)`).</li>
 <li>Reject H<sub>0</sub> because the p-value&lt;&alpha;.</li>
 <li>It appears that the age distribution of the jury does not match the age distribution of the district as a whole. Further examination suggests that the jury has a higher percentage of older jurors (ages "40-49" and "50-64") and a lower percentage of younger jurors (ages "18-19", "20-24", and "25-29") than expected as based on the age distribution in the district as a whole.</li>
