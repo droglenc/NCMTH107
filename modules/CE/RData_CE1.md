@@ -23,9 +23,7 @@ Download the BrainHead.csv ([file](https://raw.githubusercontent.com/droglenc/NC
 ## Own Data
 Record three variables (**at least one quantitative and one categorical**) about at least five individuals of interest to you (e.g., people you know, pets, animals, cities, countries, music, sports, etc.). Enter these data into a CSV file, load the data into a data.frame in R, and show the entire data.frame (i.e., all variables and all individuals). [**Hint: Your answer can simply refer me to your "R Code and Results" subsection.**]
 
-&nbsp;
-
-----
+<br>
 
 ## Stacked Data
 The following data are test scores for students in two sections of class.
