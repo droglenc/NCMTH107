@@ -15,15 +15,15 @@ Show your R work (both your input and your output) for each question below. You 
 <br>
 
 
-## Enter Own Data
-Create an R data.frame (by first creating a CSV file) that contains the first name, age (you can guess), and relationship to you (e.g., "Father", "Friend", "Partner") for four or five members of your family or close friends. In R, show the entire data frame and the structure of the data frame.
+## Own Data
+Create an R data frame (by first creating a CSV file) that contains the first name, age (you can guess), and relationship to you (e.g., "Father", "Friend", "Partner") for four or five members of your family or close friends. In R, show the entire data frame and the structure of the data frame. [**Hint: Your answer can simply refer me to your "R Code and Results" subsection.**]
 
 &nbsp;
 
 ----
 
-## Load Data From Webpage
-Load **fire.csv** ([data](https://raw.githubusercontent.com/droglenc/NCData/master/Fire.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/Fire_meta.txt)) into an R data frame called `firedf`. Show the structure of the data frame and the first three and last three rows of the data frame. Answere the following questions.
+## Data From Webpage
+Load **fire.csv** ([data](https://raw.githubusercontent.com/droglenc/NCData/master/Fire.csv), [meta](https://raw.githubusercontent.com/droglenc/NCData/master/Fire_meta.txt)) into an R data frame called `firedf`. Show the structure of the data frame and the first three and last three rows of the data frame. Answer the following questions.
 
 1. How many variables are in the data frame?
 1. How many individuals are in the data frame?
