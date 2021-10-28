@@ -15,8 +15,8 @@ Complete the following items to be prepared for the first day of class.
 
 The next items will not be needed until the second day of class but I suggest trying to prepare these for the first day of class so that if you have questions or problems then you will have sufficient time to contact me for help.
 
-* [Install R, RStudio, NCStats](Prep/RStart.html#installing-r-rstudio-ncstats){:target="_blank"}
-    * [Setup and Brief Introduction to R/RStudio](Prep/RStart.html#what-is-r-and-rstudio){:target="_blank"}
+* [Install R, RStudio, NCStats](Prep/RGetStart.html#installing-r-rstudio-ncstats){:target="_blank"}
+    * [Setup and Brief Introduction to R/RStudio](Prep/RGetStart.html#what-is-r-and-rstudio){:target="_blank"}
 
 ----
 
