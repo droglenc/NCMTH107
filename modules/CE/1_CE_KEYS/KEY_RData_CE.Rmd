@@ -80,3 +80,34 @@ famex <- read.csv("http://derekogle.com/NCMTH107/modules/CE/1_CE_KEYS/Family_Exa
 famex
 ```
 
+
+<br>
+
+----
+
+## Stacked Data
+
+<div class="alert alert-warning">
+<strong>Note:</strong> 
+<ul>
+<li>In stacked data one variable denotes to which group an individual belongs and the other variable is the variable recorded on each individual.</li>
+</ul>
+</div>
+
+The data.frame is shown below.
+
+#### R Code and Results
+
+```{r echo=FALSE}
+test <- data.frame(
+  section=c(rep("Early",7),rep("Late",5)),
+  score=c(68,78,64,55,82,63,59,87,92,73,83,91)
+)
+```
+```{r eval=FALSE}
+test <- read.csv("Test_Example.csv")
+```
+```{r}
+test
+```
+
