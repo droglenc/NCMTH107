@@ -13,7 +13,7 @@ Show your R work (both your input and your output) for each question below. You 
 <br>
 
 ## Coarse Woody Debris
-Coarse woody debris (CWD) in lakes is important for aquatic systems as it provides refuge for young fish and invertebrates as well as providing areas for periphyton to grow. Coarse woody debris was studied in the north basin of Allequash Lake in northern Wisconsin. Among other things, the researchers recorded the diameter (cm) of CWD found in the lake littoral zone and a qualitative measure of the degree to which the location where the CWD was found was exposed to winds (low or medium). The data were entered in a [previous assignment](RFilterData_CE1). Use this information to answer the following questions.
+Coarse woody debris (CWD) in lakes is important for aquatic systems as it provides refuge for young fish and invertebrates as well as providing areas for periphyton to grow. Coarse woody debris was studied in the north basin of Allequash Lake in northern Wisconsin. Among other things, the researchers recorded the diameter (cm) of CWD found in the lake littoral zone and a qualitative measure of the degree to which the location where the CWD was found was exposed to winds (low or medium). The data were entered in a [previous assignment](RFilter_CE1). Use this information to answer the following questions.
 
 1. Perform a univariate EDA for `exposure` (*create both a summary table and a graphic*).
 1. Perform a univariate EDA for `diameter`.
