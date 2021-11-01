@@ -9,13 +9,13 @@ output:
     self_contained: false
 ---
 
-```{r echo=FALSE, eval=FALSE}
+```{r echo=FALSE, eval=FALSE, message=FALSE, warning=FALSE}
 ## Renders an appropriate HTML file and moves to CE directory
 source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
 modHTML_CEKeys("KEY_RFilter_CE")
 ```
 
-```{r echo=FALSE, results='hide', message=FALSE}
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
 library(NCStats)
 source("../../../rhelpers/knitr_setup.R")
 ```
