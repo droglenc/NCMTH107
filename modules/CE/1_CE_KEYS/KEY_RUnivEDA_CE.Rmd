@@ -99,7 +99,7 @@ ages20_46 <- filterD(bh,age.group=="20-46")
 str(ages20_46)
 ```
 ```{r}
-Summarize(head.size~age.group,data=ages20_46,digits=1)
+Summarize(~head.size,data=ages20_46,digits=1)
 ggplot(data=ages20_46,mapping=aes(x=head.size)) +
   geom_histogram(binwidth=100,boundary=0,color="black",fill="lightgray") +
   labs(x="Head Size (cm^3)",y="Frequency of Subjects") +
