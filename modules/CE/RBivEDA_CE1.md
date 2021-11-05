@@ -37,7 +37,7 @@ An Associated Press article captured the attention of readers with the headline 
 1. How many children in the sample slept in "no light" conditions and developed nearsightedness?
 1. What percentage of children developed nearsightedness?
 1. What percentage of children that developed nearsightedness had slept with a "lamp"?
-1. Make an overall conclusion about how the different light conditions affected the development of nearsightedness in the children.
+1. Make an overall conclusion about how the different light conditions are related (or not) to the development of nearsightedness in the children.
 
 <br>
 
