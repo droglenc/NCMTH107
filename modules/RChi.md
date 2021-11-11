@@ -34,7 +34,7 @@ Use the resources below to answer [these questions](Prep/RChi). [[*Problems with
   * [![Vimeo](../img/dhovid.png) Chi-Square Test (with Raw Data) in R](https://vimeo.com/441798211){:target="_blank"} [6 mins] ... [corresponding resource](HO/Penguins.html#RChiChi){:target="_blank"}
   * [![Vimeo](../img/dhovid.png) Goodness-of-Fit Tests in R](https://vimeo.com/441822222){:target="_blank"} [8 mins] ... [corresponding resource](HO/Penguins.html#RChiGOF){:target="_blank"} 
   * [![YouTube](../img/youtube.png) Fall 2020B In-Class "Review Lecture"](https://youtu.be/MtEZRxZkKJ4) [18 mins]
-    * Projection is [this example](CE/RChi_CExmpl) [![Decoration](../img/key.png)](CE/KEY_RChi_CExmpl)
+    * Projection is [this example](CE/RChi_CExmpl)
 
 ----
 
