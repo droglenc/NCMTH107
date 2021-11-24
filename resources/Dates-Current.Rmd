@@ -21,7 +21,7 @@ sn <- "F21"
 library(dplyr)
 options(knitr.kable.NA = '')
 ## Read dates, make date with day and topic with link
-d <- readxl::read_excel("Dates.xlsx",sheet=sn) %>%
+d <- readxl::read_excel("Dates_107.xlsx",sheet=sn) %>%
   dplyr::mutate(Date=as.Date(Date)) %>%
   dplyr::mutate(Date2=paste0(DOW,", ",format(Date,"%b-%d")),
                 Topic=ifelse(is.na(url),Topic,
