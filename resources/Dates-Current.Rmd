@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Dates Current
+title: Modules
 author: "Derek H. Ogle"
 css: "/css/syllabus.css"
 output:
@@ -17,7 +17,7 @@ modHTML("Dates-Current")
 ```
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
-sn <- "F21"
+sn <- "W22"
 library(dplyr)
 options(knitr.kable.NA = '')
 ## Read dates, make date with day and topic with link
@@ -57,7 +57,7 @@ if (nrow(dfuture)>0) {
 
 <br>
 
-# Past Dates
+# Completed
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 ## Get only past dates
