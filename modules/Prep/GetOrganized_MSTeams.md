@@ -31,7 +31,7 @@ In Teams, follow these steps to join the MTH107 team.
 ![MSTeams Join](zimgs/MSTeams_JoinButton.JPG)
 
 {:start="3"}
-1. In the "Join a team with a code" tile (the second tile) enter the code "4na8k3k" (without quotes) into the box that says "Enter code".
+1. In the "Join a team with a code" tile (the second tile) enter the code "pimojtc" (without quotes) into the box that says "Enter code".
 
 ![MSTeams Join](zimgs/MSTeams_JoinCode.JPG)
 
@@ -48,7 +48,6 @@ The MTH107 Team currently has four main channels as seen in the screenshot above
 * **General**: For asking general questions (due dates, how to install R, etc.).
 * **Questions -- Preparation Guide**: For asking questions about the module preparations.
 * **Questions -- Module Assignments**: For asking questions about the module assignments.
-* **Help Hours**: For attending "official" help hours (see syllabus) with Derek.
 
 In each channel you can start a new conversation (i.e., question) by pressing the "New Conversation" button.
 
@@ -60,6 +59,7 @@ You can also contribute to previous conversation by replying to previous message
 
 I have Teams organized so that I will get notified when you post a question. Thus, I hope that this will be an efficient way to ask me questions outside of class and a way so that other students can learn from the answers.
 
+<!----
 For "official" help hours, I will open up a meeting at the appointed time (see the syllabus). When you go to the "Help Hours" channel you will see a banner that will give you an option to "Join" the ongoing meeting (the meeting name may be different).
 
 ![MSTeams Join Meeting](zimgs/MSTeams_JoinMeeting.JPG)
@@ -67,6 +67,7 @@ For "official" help hours, I will open up a meeting at the appointed time (see t
 In an ensuing dialog box you will be asked to identify your audio and video sources. For many systems these will be appropriately selected by default. Once you have selected the settings for your system you can press the "Join now" button.
 
 ![MSTeams Join Settings](zimgs/MSTeams_JoinSettings.JPG)
+---->
 
 If you would like to "meet" with me outside of official office hours then send me a message and if I am available I will set up a meeting that you can join as shown above.
 
