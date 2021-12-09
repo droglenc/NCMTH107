@@ -5,7 +5,8 @@ library(FSA)
 section.lvls <- c("F12.1","F12.2","W13.1","F13.1","F13.2","W14.1",
                   "F14.1","F14.2","W16.2","F16.1","F16.2","W17.2",
                   "F17.1","F17.2","W18.1","F18.1","F18.2","W19.1","W19.2",
-                  "F19.1","F19.2","W20.1","W20.2","F20.1","F20.2","W21.1")
+                  "F19.1","F19.2","W20.1","W20.2","F20.1","F20.2","W21.1",
+                  "F21.1","F21.2")
 question.lvls1 <- c("pWhy","pVars","pUEDAQ","pUEDAC","pBEDAQ","pBEDAC",
                     "pReg","pT1","pT2","pChi")
 question.lvls2 <- c("Why Stats is Important?","Variable Types",
@@ -30,14 +31,14 @@ peek(dfw)
 dfl <- tidyr::pivot_longer(dfw,starts_with("p"),
                            names_to="question",values_to="score") %>%
   mutate(question=factor(question,levels=question.lvls1),
-         question2=mapvalues(question,from=question.lvls1,to=question.lvls2))
+         question2=plyr::mapvalues(question,from=question.lvls1,to=question.lvls2))
 head(dfl)
 
 cutoffs <- data.frame(question=factor(question.lvls1,
                                       levels=question.lvls1),
                       Q1= c(0.7,0.7,0.6,0.6,0.6,0.6,0.5 ,0.5,0.5 ,0.5 ),
                       MDN=c(0.9,0.9,0.8,0.8,0.8,0.8,0.75,0.75,0.75,0.75)) %>%
-  mutate(question2=mapvalues(question,from=question.lvls1,to=question.lvls2))
+  mutate(question2=plyr::mapvalues(question,from=question.lvls1,to=question.lvls2))
 
 dflsum <- dfl %>%
   group_by(section,question) %>%
@@ -63,7 +64,7 @@ dfl <- left_join(dfl,dflsum,by=c("section","question"),
                  suffix=c("",".y")) %>%
   select(section,question,question2,score,MET)
 
-tmp <- filter(dfl,section %in% c("F20.1","F20.2","W21.1"))
+tmp <- filter(dfl,section %in% c("F20.1","F20.2","W21.1","F21.1","F21.2"))
 
 ggplot() +
   geom_boxplot(data=tmp,aes(y=reorder(section,desc(section)),
@@ -82,3 +83,4 @@ ggplot() +
         axis.title.y=element_blank())
 
 View(dflsum)
+tail(dflsum,n=15)
