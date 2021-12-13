@@ -18,10 +18,9 @@ title: Resources
 1. MSTeams Team ([see quick link on class homepage](../))
 1. Gradescope ([see quick link on class homepage](../))
     * [Scanning to PDF and Uploading Instructions](https://gradescope-static-assets.s3-us-west-2.amazonaws.com/help/submitting_hw_guide.pdf){:target="_blank"}
-    * [GradeScope FAQ](https://gradescope-static-assets.s3-us-west-2.amazonaws.com/help/submitting_hw_guide.pdf){:target="_blank"}
+    * [GradeScope FAQ](https://help.gradescope.com/category/cyk4ij2dwi-student-workflow){:target="_blank"}
     * [CombinePDF](https://combinepdf.com/){:target="_blank"} ... *an on-line tool that can be used to combined separate PDFs into one PDF (may be useful for uploading to GradeScope)*
-1. mycourses.northland.edu (class videos, grades) ([see quick link on class homepage](../))
-1. [Anonymous Message to Dr. Ogle](https://www.surveymonkey.com/r/KC87PJW){:target="_blank"}
+1. mycourses.northland.edu (grades) ([see quick link on class homepage](../))
 1. Northland Resources
     * [Accomodations](https://my.northland.edu/campus-life/student-welfare/accommodations/){:target="_blank"}
     * [Counseling](https://my.northland.edu/campus-life/student-welfare/counseling/){:target="_blank"}
