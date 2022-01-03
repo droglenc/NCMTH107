@@ -69,7 +69,7 @@ I am committed to your doing well in this course and see it as my responsibility
 
 - Attend class. Most of class time will be allocated to you working on module assignments. I will be available during these times to answer your questions.
 - Ask questions on MS Teams. Simply start a new conversation (see [quick links on course homepage](../)) with your question and I will answer it ASAP. Other students may also answer your question.
-- I will hold in-person help hours on Monday, Wednesday, and Friday from 10-1050am and Tuesday and Thursday from 2-3pm. I can also setup a virtual meeting through Teams at others times upon request.
+- I will hold in-person help hours on Monday, Wednesday, and Friday from 1-2pm and Tuesday and Thursday from 2-3pm. I can also setup a virtual meeting through Teams at others times upon request.
 - I will also try to respond to email queries ASAP.
 
 Please see or contact me if you have questions regarding this course. 
@@ -136,7 +136,7 @@ An overall grade will be computed from the module preparation guide answers and 
 ### Engagement
 *Philosophy*: Attending class is important as this is a time to get your questions answered and hear explanations of important concepts and class announcements. However, engagement also includes paying attention and working through the entire class period as described below. The percentage is fairly low however so that missing a class is not too onerous a penalty.
 
-Engagement will be graded on a 0-1 basis. If you attend, work diligently, and are focused the entire class period then you will earn full credit. However, if you do not attend class, you come substantially late, leave substantially early, or are otherwise unfocused during the class period (i.e., doing other than Biometry work) then you will receive no or only partial credit. If you finish the module assignment during class then please begin to prepare the next module. If you finish that preparation then show me what you have done and you can discretely leave class early.
+Engagement will be graded on a 0-1 basis. If you attend, work diligently, and are focused the entire class period then you will earn full credit. However, if you do not attend class, you come substantially late, leave substantially early, or are otherwise unfocused during the class period (i.e., doing other than Statistics work) then you will receive no or only partial credit. If you finish the module assignment during class then please begin to prepare the next module. If you finish that preparation then show me what you have done and you can discretely leave class early.
 
 Absences for school sponsored events (e.g., special sessions of other courses, athletics) will be excused. Other planned absences (e.g., family events, doctor's appointments) *cleared with me in advanced* will be excused. Please see the [COVID-19 section](#covid-19-statement) below with respect to missing class due to illness. Excused absences will **not** negatively impact your attendance grade.
 
@@ -180,17 +180,6 @@ An incomplete grade will be given ONLY in extreme circumstances that are beyond 
 
 #### Midterm Grades
 I will submit a "midterm grade" for you approximately half-way through the semester. This grade will by my best guess at your lowest possible final grade. I assign this "worst-case" midterm grade because I believe that it is better to know the worst rather than the best-case scenario at that point of the semester and the material at the end of the semester is a little more difficult than the material at the beginning of the semester. Of course, see me if you have questions about your midterm grade.
-
-#### Working Together
-You may **WORK TOGETHER** on module preparations and assignments but you must **INDEPENDENTLY PRODUCE** what you turn in. In other words, you may discuss assignments together and even make plans for how to answer the questions or perform the calculations together, but the calculations must be your own and your written answers must be in your own words. It is also fine to compare *independently produced* answers as long as you discuss how to correct incorrect answers rather than just copying another person's answer. Also, note that one need not copy verbatim someone else's work to violate this policy; i.e., a slight change to someone else's answer is not acceptable.
-
-Copying the work of a student from a previous semester is also a violation of this policy.
-
-If I suspect that you are violating this policy then I will follow the [College's Academic Integrity Statement & Policy](https://my.northland.edu/student-policies/academic-policies/#academic-integrity){:target="_blank"}. Note that the penalty for non-compliance can range from a zero on the assignment to failure of the course.
-
-You can **NOT** work together on the **Capstone Assignment.** Failure to meet this policy will result in a zero for the capstone assignment.
-
-Please let me know if you have any questions or concerns about this policy.
 
 ----
 
