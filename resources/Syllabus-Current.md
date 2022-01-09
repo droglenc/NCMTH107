@@ -55,6 +55,25 @@ This course fulfills that Quantitative Reasoning requirement in the [General Edu
 * Use statistical or mathematical models in solving problems; and
 * Think critically about the validity of conclusions that are based on statistical or mathematical models.
 
+In addition this course is a required course in several majors. For example, this course meets the following outcomes for the MTH major
+
+* Conceptual understanding of fundamental mathematical reasoning and methods of quantitative analysis,
+* Understanding of mathematical methods for problem-solving,
+* Communication skills using mathematics,
+* Awareness of the breadth of mathematics,
+* Ability and desire to apply mathematics outside the classroom,
+* Proficiency in mathematical terminology and accurate formulation of mathematical ideas. and
+* Use appropriate technology to model, analyze and solve mathematical problems;
+
+the following outcomes for the BUS major
+
+* Utilize quantitative and qualitative techniques and evaluations to forecast changes that will affect a business in the future;
+
+and the following outcomes for the PSY major
+
+* Use scientific reasoning to interpret psychological phenomena, and
+* Engage in innovative and integrative thinking and problem solving 
+
 ----
 
 ## Assistance
