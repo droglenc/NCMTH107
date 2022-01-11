@@ -55,7 +55,7 @@ This course fulfills that Quantitative Reasoning requirement in the [General Edu
 * Use statistical or mathematical models in solving problems; and
 * Think critically about the validity of conclusions that are based on statistical or mathematical models.
 
-In addition this course is a required course in several majors. For example, this course meets the following outcomes for the MTH major
+In addition this course is a required course in several majors and, thus, is designed to meet, in part, specific outcomes in those programs. For example, this course meets, in part, the following outcomes for the MTH major
 
 * Conceptual understanding of fundamental mathematical reasoning and methods of quantitative analysis,
 * Understanding of mathematical methods for problem-solving,
@@ -64,6 +64,15 @@ In addition this course is a required course in several majors. For example, thi
 * Ability and desire to apply mathematics outside the classroom,
 * Proficiency in mathematical terminology and accurate formulation of mathematical ideas. and
 * Use appropriate technology to model, analyze and solve mathematical problems;
+
+the following outcome for the NRS major
+
+* Demonstrate understanding of descriptive statistics,
+* Demonstrate understanding of inferential statistics,
+* Demonstrate foundational quantitative skills necessary to manage natural resources,
+* Manage data and information appropriately,
+* Demonstrate the ability to interpret graphs and tabular data, and
+* Generate appropriate graphs and tables.
 
 the following outcomes for the BUS major
 
