@@ -72,16 +72,20 @@ the following outcome for the NRS major
 * Demonstrate foundational quantitative skills necessary to manage natural resources,
 * Manage data and information appropriately,
 * Demonstrate the ability to interpret graphs and tabular data, and
-* Generate appropriate graphs and tables.
+* Generate appropriate graphs and tables;
 
 the following outcomes for the BUS major
 
 * Utilize quantitative and qualitative techniques and evaluations to forecast changes that will affect a business in the future;
 
-and the following outcomes for the PSY major
+the following outcomes for the PSY major
 
 * Use scientific reasoning to interpret psychological phenomena, and
-* Engage in innovative and integrative thinking and problem solving 
+* Engage in innovative and integrative thinking and problem solving;
+
+and the following outcome for the SOC major
+
+* demonstrate understanding of the role of evidence and qualitative and quantitative methods.
 
 ----
 
