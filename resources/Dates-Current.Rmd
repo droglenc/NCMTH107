@@ -43,7 +43,7 @@ dfuture <- d %>%
 ## Only continue if there are future dates
 if (nrow(dfuture)>0) {
   ## Put a blank row after each Friday
-  blank_rows <- grep("F",dfuture$Date)
+  blank_rows <- grep("Fri",dfuture$Date)
   if (blank_rows[length(blank_rows)]==nrow(dfuture))
     blank_rows <- blank_rows[-length(blank_rows)]
   for (i in rev(blank_rows))
