@@ -1,0 +1,189 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "2-Sample t Assignment"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+The means in the hypotheses should be ordered alphabetically (to best match what R does by default).
+</li>
+<li>
+Note all H<sub>A</sub> are “not equals” for a 2-sample t-test (and these exercises were examples of that). In this exercise the goal was to determine if the homemade compost had less germinated flowers. As the label for homemade was alphabetically second the H<sub>A</sub> is a “greater than” (i.e., bought-homemade would be positive numbers if homemade was smaller).
+</li>
+<li>
+Make sure to define your parameters in Step 2.
+</li>
+<li>
+Make sure to describe your evidence in Step 3 for why you are performing a 2-sample t-test. It is not adequate to simply say “because there is a quantitative response variable, two groups are being tested, and the groups are independent.” At least say what the response variable is and what the two groups are and provide some discussion for why you think the groups are independent.
+</li>
+<li>
+Also make sure to describe your evidence in Step 5 for why the assumptions are met. It is not adequate to simply say “n<sub>1</sub>+n<sub>2</sub>≥40” or “n<sub>1</sub>+n<sub>2</sub>≥15 and the sample distributions are not strongly skewed.” You should state the actual n<sub>1</sub>+n<sub>2</sub> value and direct the reader to how you know the distributions are not strongly skewed (i.e., likely to histograms).
+</li>
+<li>
+In hand calculations, note that the test statistic (t in Step 7) is NOT the critical value (i.e., t<sup>*</sup>) needed for the confidence region (in Step 11).
+</li>
+<li>
+If your p-value is greater that about 0.7, especially if it is very close to 1, then it very likely is NOT correct. The most common reason for this is that you shaded the wrong way (e.g., you included <code>lower.tail=FALSE</code> when you should not have, or vice versa). The only exception to this general rule is for Levene’s Test, which often has fairly large p-values.
+</li>
+<li>
+Note the use of “mean” in both Steps 10 and 11. The test is for mean number of plants that germinated, not number of plants that germinated.
+</li>
+<li>
+You values may differ slightly from mine as I calculate everything in R which holds many decimal places on intermediate values.
+</li>
+</ul>
+</div>
+<hr />
+<div id="compost-type-and-germination-rates" class="section level2">
+<h2>Compost Type and Germination Rates</h2>
+<ol>
+<li>
+α = 0.01.
+</li>
+<li>
+H<sub>A</sub>: μ<sub>b</sub>-μ<sub>h</sub> &gt; 0 and H<sub>0</sub>: μ<sub>b</sub>-μ<sub>h</sub> = 0, where μ is the mean number of germinated plants, b is the bought compost, and h is the homemade compost.
+</li>
+<li>
+2-sample t-test because (i) two groups/populations are considered (bought and homemade compost), (ii) a quantitative variable (number germinated) was recorded, and (iii) individuals in the groups are independent (there is no known connection between all pairs of containers with bought and homemade compost).
+</li>
+<li>
+An experimental study was conducted without obvious random selection of the containers with soil, but with random allocation (placement of containers in the greenhouse).
+</li>
+<li>
+The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>h</sub> = 18+10 = 28 &gt; 15 and the two sample distributions (shown on the handout) are not obviously strongly skewed, and (iii) the variances appear to be equal (Levene’s p-value = 0.2414 &gt; α).
+</li>
+<li>
+x̄<sub>b</sub>-x̄<sub>h</sub> = 42.67-28.9 = 13.77. The pooled sample variance is, <span class="math display">\[s_{p}^{2}=\frac{(18-1)4.33^{2}+(10-1)3.21^{2}}{18+10-2} = 15.826 \]</span> The standard error of the statistic is, <span class="math display">\[ SE_{\bar{x}_{did}-\bar{x}_{didnot}}=\sqrt{15.826\left(\frac{1}{18}+\frac{1}{10} \right)} = 1.569  \]</span>
+</li>
+<li>
+t = <span class="math inline">\(\frac{13.77}{1.569}\)</span>=8.776 with 26 df.
+</li>
+<li>
+p-value&lt;0.00005 (more specifically 1.492e-09).
+</li>
+<li>
+Reject H<sub>0</sub> because the p-value &lt; α.
+</li>
+<li>
+It appears that the the mean number of plants that germinate is significantly lower for the homemade than the bought compost. Thus, the homemade compost “performs” worse than the store bought compost and may lead to increased costs for the greenhouse.
+</li>
+<li>
+I am 99% confident that the mean number of plants that germinated with the bought compost is at least 13.77-2.479*1.569=9.88 plants greater than the mean number of plants that germinated with the homemade compost. This further supports that the mean number of plants that germinated is greater in the store bought compost.
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>xbar1 &lt;- 42.67; s1 &lt;- 4.33; n1 &lt;- 18
+xbar2 &lt;- 28.90; s2 &lt;- 3.21; n2 &lt;- 10
+df &lt;- n1+n2-2
+( sp2 &lt;- ((n1-1)*(s1^2)+(n2-1)*(s2^2))/df )
+( se &lt;- sqrt(sp2*(1/n1+1/n2)) )
+( stat &lt;- xbar1-xbar2 )
+( t &lt;- stat/se )
+( pv &lt;- distrib(t,distrib=&quot;t&quot;,df=df,lower.tail=FALSE) )
+( tstar &lt;- distrib(0.99,type=&quot;q&quot;,distrib=&quot;t&quot;,df=df,lower.tail=FALSE) )
+( lcb &lt;- stat+tstar*se )</code></pre>
+<hr />
+</div>
+<div id="commitment-to-animals" class="section level1">
+<h1>Commitment to Animals</h1>
+<ol>
+<li>
+α=0.01.
+</li>
+<li>
+H<sub>0</sub>:μ<sub>did</sub>=μ<sub>didnot</sub> (or μ<sub>did</sub>-μ<sub>didnot</sub>=0) and H<sub>A</sub> is μ<sub>did</sub>&gt;μ<sub>didnot</sub> (or μ<sub>did</sub>-μ<sub>didnot</sub>&gt;0), where μ is the mean commitment level, “did” corresponds to the “did evacuate” group, and “didnot” corresponds to the “did not evacuate” group.
+</li>
+<li>
+A two-sample t-test is required because a quantitative response variable (commitment level score) was measured on two groups (“did evacuate” and “did not evacuate”) that were independent (no connection between individuals that did and those that did not evacuate their pets).
+</li>
+<li>
+The data appear to be part of a voluntary response observational study without clear randomization.
+</li>
+<li>
+The assumptions are met because the two groups appear to be independent (as stated above), the sample size (n<sub>did</sub>+n<sub>didnot</sub>=241) is ≥40 and the variances between groups appears to be equal (Levene’s test p-value of 0.678 is greater than α=0.01). Therefore, the test statistic computed below should reasonably follow a t-distribution with n<sub>did</sub>+n<sub>didnot</sub>-2=239 df.
+</li>
+<li>
+The statistic is x̄<sub>did</sub>-x̄<sub>didnot</sub> = 7.694-6.640 = 1.054. The pooled sample variance is, <span class="math display">\[s_{p}^{2}=\frac{(116-1)3.410^{2}+(125-1)3.102^{2}}{116+125-2} = 10.58749 \]</span> The standard error of the statistic is, <span class="math display">\[ SE_{\bar{x}_{did}-\bar{x}_{didnot}}=\sqrt{10.58749\left(\frac{1}{116}+\frac{1}{125} \right)} = 0.4194894  \]</span>
+<li>
+The t test statistic is <span class="math inline">\(\frac{1.054-0}{0.4194894}\)</span>=2.513 with 116+125-2=239 df.
+</li>
+<li>
+The p-value is 0.0063.
+</li>
+<li>
+The H<sub>0</sub> is rejected because the p-value &lt; α.
+</li>
+<li>
+The average commitment to animals was significantly greater for those people that did evacuate their pets as compared to those people that did not evacuate their pets.
+</li>
+<li>
+One is 99% confident that the mean level of commitment for those that evacuated their pets is at least 1.054-2.342*0.419=0.072 greater than those that did not evacuate their pets. This further supports that average commitment to animals was significantly greater for those people that did evacuate their pets as compared to those people that did not evacuate their pets.
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>xbar1 &lt;- 7.694; s1 &lt;- 3.410; n1 &lt;- 116
+xbar2 &lt;- 6.640; s2 &lt;- 3.102; n2 &lt;- 125
+df &lt;- n1+n2-2
+( sp2 &lt;- ((n1-1)*(s1^2)+(n2-1)*(s2^2))/df )
+( se &lt;- sqrt(sp2*(1/n1+1/n2)) )
+( stat &lt;- xbar1-xbar2 )
+( t &lt;- stat/se )
+( pv &lt;- distrib(t,distrib=&quot;t&quot;,df=df,lower.tail=FALSE) )
+( tstar &lt;- distrib(0.99,type=&quot;q&quot;,distrib=&quot;t&quot;,df=df,lower.tail=FALSE) )
+( lcb &lt;- stat+tstar*se )</code></pre>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
