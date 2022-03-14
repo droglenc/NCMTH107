@@ -26,7 +26,7 @@ Suppose you have the following data:
 
 ## P-value
 
-1. Compute the p-value assuming you computed t=-5.678, df=13, and H<sub>a</sub> is a "greater than". Show your R code and a graphic.
+1. Compute the p-value assuming you computed t=5.678, df=13, and H<sub>a</sub> is a "greater than". Show your R code and a graphic.
 1. Make a decision about &mu; if &alpha;=0.01.
 
 <br>
