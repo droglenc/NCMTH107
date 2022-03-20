@@ -112,10 +112,10 @@ t.chi$observed
 ```
 
 <!---- this was for spring
-<li>&chi;<sup>2</sup>=$\frac{(61-45.3)^{2}}{45.3}$ + $\frac{(9-89.2)^{2}}{89.2}$ +$\frac{(807-734.8)^{2}}{734.8}$ +$\frac{(1-8.8)^{2}}{8.8}$=`r formatC(t.chi$statistic,format="f",digits=3)` with `r t.chi$parameter` df (`r tbls("TurkeyResults",display="cite")`).</li>
+<li>&chi;<sup>2</sup>=$\frac{(61-45.3)^{2}}{45.3}$ + $\frac{(9-89.2)^{2}}{89.2}$ +$\frac{(807-734.8)^{2}}{734.8}$ +$\frac{(1-8.8)^{2}}{8.8}$=`r formatC(t.chi$statistic,format="f",digits=3)` with `r t.chi$parameter` df.</li>
 ---->
 
-<li>&chi;<sup>2</sup>=$\frac{(32-25.9)^{2}}{25.9}$ + $\frac{(16-51.0)^{2}}{51.0}$ +$\frac{(449-420.1)^{2}}{420.1}$ +$\frac{(5-5.0)^{2}}{5.0}$=`r formatC(t.chi$statistic,format="f",digits=3)` with `r t.chi$parameter` df (`r tbls("TurkeyResults",display="cite")`).</li>
+<li>&chi;<sup>2</sup>=$\frac{(32-25.9)^{2}}{25.9}$ + $\frac{(16-51.0)^{2}}{51.0}$ +$\frac{(449-420.1)^{2}}{420.1}$ +$\frac{(5-5.0)^{2}}{5.0}$=`r formatC(t.chi$statistic,format="f",digits=3)` with `r t.chi$parameter` df.</li>
 <li>p-value`r kPvalue(t.chi$p.value,include.p=FALSE,latex=FALSE)` (somewhat more specifically `r formatC(t.chi$p.value,digits=3)`).</li>
 <li>Reject H<sub>0</sub> because the p-value&lt;&alpha;.</li>
 

@@ -1,0 +1,210 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Goodness-of-Fit Assignment"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<div id="preference-for-bottled-water" class="section level2">
+<h2>Preference for Bottled Water?</h2>
+<ol>
+<li>
+α=0.01.
+</li>
+<li>
+H<sub>A</sub>: “There is a preference among the water choices (i.e., the distribution of students will NOT follow a theoretical distribution of equal proportions among the water choices)” and H<sub>0</sub>: “There is no preference among the water choices (i.e., the distribution of students will follow a theoretical distribution of equal proportions among the water choices)”.
+</li>
+<li>
+Goodness-of-fit test because (i) one group or population (students) were sampled and (ii) the response variable (water choice) is categorial.
+</li>
+<li>
+This is quasi-experimental as the students were given a choice of only certain waters. The students were not obviously randomly selected (and were likely part of a voluntary response survey).
+</li>
+<li>
+All cells in the expected frequency table (Table 1) were greater than 5; the assumptions for a goodness-of-fit test have been met. [Note that these expected values equal 107/4 to represent no preference in choice of water.]
+</li>
+<p>Table 1: Expected frequency of students (assuming that Ho is true) by water type choice.</p>
+<pre><code>     tap Aquafina     Fiji     Sams 
+   26.75    26.75    26.75    26.75 </code></pre>
+<li>
+The observed frequency table is shown in Table 2.
+</li>
+<p>Table 2: Observed frequency of students by water type choice.</p>
+<pre><code>     tap Aquafina     Fiji     Sams 
+      51       18       17       21 </code></pre>
+<li>
+χ<sup>2</sup>=<span class="math inline">\(\frac{(51-26.75)^{2}}{26.75}\)</span> + <span class="math inline">\(\frac{(18-26.75)^{2}}{26.75}\)</span> +<span class="math inline">\(\frac{(17-26.75)^{2}}{26.75}\)</span> +<span class="math inline">\(\frac{(21-26.75)^{2}}{26.75}\)</span>=29.6355 with 3 df.
+</li>
+<li>
+p-value&lt;0.00005 (more specifically 1.646e-06).
+</li>
+<li>
+Reject H<sub>0</sub> because the p-value&lt;α.
+</li>
+<li>
+It appears that there is a preference for water type by the students. Further examination suggests that the students least-preferred the tap water.
+</li>
+<li>
+Not required for a goodness-of-fit test
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>library(NCStats)
+distrib(29.6355,distrib=&quot;chisq&quot;,df=3,lower.tail=FALSE)</code></pre>
+<hr />
+</div>
+<div id="habitat-use-by-wild-turkeys" class="section level2">
+<h2>Habitat Use by Wild Turkeys</h2>
+<ol>
+<li>
+α=0.05.
+</li>
+<li>
+H<sub>A</sub>: “There is a preference by the turkeys for habitat (i.e., the distribution of turkeys will NOT follow the (theoretical) distribution of available habitats)” and H<sub>0</sub>: “There is NOT a preference by the turkeys for habitat (i.e., the distribution of turkeys will follow the (theoretical) distribution of available habitats)”.
+</li>
+<li>
+Goodness-of-fit test because (i) one group or population (South Dakota turkeys) were sampled and (ii) the response variable (habitat use) is categorical.
+</li>
+<li>
+This is observational as habitat use by the turkeys was simply recorded. The turkey observations were not randomly selected (the researchers likely chose days to sample).
+</li>
+<li>
+All cells in the expected frequency table (Table 3) were greater than 5; the assumptions for a goodness-of-fit test have been met. [Note that these expected values are equal to 878 total observations times the proportions of available habitat to represent no preference in choosing habitat types by the turkeys.]
+</li>
+<p>Table 3: Expected frequency of turkeys (assuming that Ho is true) by habitat in the fall.</p>
+<pre><code>    Aspen    Meadow      Pine OakSpruce 
+     25.9      51.0     420.1       5.0 </code></pre>
+<li>
+The observed frequency table is shown in Table 4.
+</li>
+<p>Table 4: Observed frequency of turkeys by habitat in the fall.</p>
+<pre><code>    Aspen    Meadow      Pine OakSpruce 
+       32        16       449         5 </code></pre>
+<!---- this was for spring
+<li>&chi;<sup>2</sup>=$\frac{(61-45.3)^{2}}{45.3}$ + $\frac{(9-89.2)^{2}}{89.2}$ +$\frac{(807-734.8)^{2}}{734.8}$ +$\frac{(1-8.8)^{2}}{8.8}$=27.436 with 3 df.</li>
+---->
+<li>
+χ<sup>2</sup>=<span class="math inline">\(\frac{(32-25.9)^{2}}{25.9}\)</span> + <span class="math inline">\(\frac{(16-51.0)^{2}}{51.0}\)</span> +<span class="math inline">\(\frac{(449-420.1)^{2}}{420.1}\)</span> +<span class="math inline">\(\frac{(5-5.0)^{2}}{5.0}\)</span>=27.436 with 3 df.
+</li>
+<li>
+p-value&lt;0.00005 (somewhat more specifically 4.77e-06).
+</li>
+<li>
+Reject H<sub>0</sub> because the p-value&lt;α.
+</li>
+<!---- this was for spring
+<li>It appears that the turkeys show a habitat preference in spring. Further analysis suggests that the turkeys showed a strong avoidance of meadows, a moderate avoidance of Oak/Spruce habitats, and a moderate preference for aspen and pine habitats.</li>
+---->
+<li>
+It appears that the turkeys show a habitat preference in fall. Further analysis suggests that the turkeys showed a strong avoidance of meadows and a moderate preference for aspen and pine habitats.
+</li>
+<li>
+Not required for a goodness-of-fit test.
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>library(NCStats)
+distrib(91.530,distrib=&quot;chisq&quot;,df=3,lower.tail=FALSE)</code></pre>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<hr />
+</div>
+<div id="random-jury-pool" class="section level2">
+<h2>Random Jury Pool</h2>
+<ol>
+<li>
+α=0.10.
+</li>
+<li>
+H<sub>A</sub>: “The age distribution of the actual jury is not the same as the age distribution in the district as a whole” and H<sub>0</sub>: “The age distribution of the actual jury is the same as the age distribution in the district as a whole”.
+</li>
+<li>
+Goodness-of-fit test because (i) one group or population (the jury in this district) were sampled and (ii) the response variable (age category) is categorial.
+</li>
+<li>
+This is observational as the jurors were not allocated to ages. In theory the jury was randomly selected from the district, but that is what is being tested.
+</li>
+<li>
+All cells in the expected frequency table (Table 5) were greater than 5; the assumptions for a goodness-of-fit test have been met.
+</li>
+<p>Table 5: Expected frequency of jurors (assuming that Ho is true) by age category.</p>
+<pre><code>  18-19   20-24   25-29   30-39   40-49   50-64     65+ 
+ 81.496 200.400 180.360 289.912 204.408 243.152 136.272 </code></pre>
+<li>
+The observed frequency table is shown in Table 6.
+</li>
+<p>Table 6: Observed frequency of jurors by age category.</p>
+<pre><code>18-19 20-24 25-29 30-39 40-49 50-64   65+ 
+   23    96   134   293   297   380   113 </code></pre>
+<li>
+χ<sup>2</sup>=<span class="math inline">\(\frac{(23-81.496)^{2}}{81.496}\)</span> + <span class="math inline">\(\frac{(96-200.400)^{2}}{200.400}\)</span> +<span class="math inline">\(\frac{(134-180.360)^{2}}{180.360}\)</span> +<span class="math inline">\(\frac{(293-289.912)^{2}}{289.912}\)</span>+<span class="math inline">\(\frac{(297-204.408)^{2}}{204.408}\)</span>+<span class="math inline">\(\frac{(380-243.152)^{2}}{243.152}\)</span>+<span class="math inline">\(\frac{(113-136.272)^{2}}{136.272}\)</span>=231.2600 with 6 df.
+</li>
+<li>
+p-value&lt;0.00005 (somewhat more specifically 4.12e-47).
+</li>
+<li>
+Reject H<sub>0</sub> because the p-value&lt;α.
+</li>
+<li>
+It appears that the age distribution of the jury does not match the age distribution of the district as a whole. Further examination suggests that the jury has a higher percentage of older jurors (ages “40-49” and “50-64”) and a lower percentage of younger jurors (ages “18-19”, “20-24”, and “25-29”) than expected as based on the age distribution in the district as a whole.
+</li>
+<li>
+Not required for a goodness-of-fit test.
+</li>
+</ol>
+<p>R Appendix.</p>
+<pre class="r"><code>library(NCStats)
+distrib(231.2600,distrib=&quot;chisq&quot;,df=6,lower.tail=FALSE)</code></pre>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
