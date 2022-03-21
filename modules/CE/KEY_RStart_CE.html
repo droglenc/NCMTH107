@@ -1,0 +1,105 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "Getting Organized in RStudio"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<hr />
+<p>As part of the assignment template, the following two lines were run before the code run in the sections below.</p>
+<pre class="r"><code>&gt; library(NCStats)
+&gt; library(ggplot2)</code></pre>
+<div class="alert alert-warning">
+<strong>Note:</strong>
+<ul>
+<li>
+Be careful with your “coding” – you need a space after your hashtags, you need a blank line before you start a numbered list, and you should not alter the first 20 or so lines of the template.
+</li>
+</ul>
+</div>
+<hr />
+<div id="mean-and-sd" class="section level1">
+<h1>Mean and SD</h1>
+<ol>
+<li>The mean is 10.</li>
+<li>The standard deviation is 4.10.</li>
+</ol>
+<div id="r-code-and-results" class="section level4">
+<h4>R Code and Results</h4>
+<pre class="r"><code>&gt; nums &lt;- c(7,9,4,12,15,13)
+&gt; mean(nums)</code></pre>
+<pre><code>[1] 10</code></pre>
+<pre class="r"><code>&gt; sd(nums)</code></pre>
+<pre><code>[1] 4.09878</code></pre>
+<p><br></p>
+<hr />
+</div>
+<div id="p-value" class="section level2">
+<h2>p-Value</h2>
+<ol>
+<li>The p=value is 0.000038</li>
+<li>This p-value is clearly less than α, so the H<sub>0</sub> should be rejected.</li>
+</ol>
+<div id="r-code-and-results-1" class="section level4">
+<h4>R Code and Results</h4>
+<pre class="r"><code>&gt; distrib(5.678,distrib=&quot;t&quot;,df=13,lower.tail=FALSE)</code></pre>
+<p><img src="KEY_RStart_CE_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><br></p>
+<hr />
+</div>
+</div>
+<div id="types-of-variability" class="section level2">
+<h2>Types of Variability</h2>
+<p>Natural variability describes the fact that individuals in a population are not identical. Sampling variability describes the fact that results (e.g., mean) differ among multiple samples from the same population. The key difference is that natural variability is about individuals varying, whereas sampling variability is about statistics varying.</p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

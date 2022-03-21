@@ -1,0 +1,77 @@
+---
+title: "Answer Key"
+subtitle: "Getting Organized in RStudio"
+author: Derek H. Ogle
+layout: page
+css: "/css/modules.css"
+output:
+  html_document:
+    self_contained: false
+---
+
+```{r echo=FALSE, eval=FALSE, message=FALSE}
+## Renders an appropriate HTML file and moves to CE directory
+source("modules/CE/1_CE_Keys/zzz_modHTML_CEKeys.R")
+modHTML_CEKeys("KEY_RStart_CE")
+```
+
+```{r echo=FALSE, results='hide', message=FALSE, message=FALSE}
+library(NCStats)
+source("../../../rhelpers/knitr_setup.R")
+```
+
+----
+
+As part of the assignment template, the following two lines were run before the code run in the sections below.
+```{r results="hide",message=FALSE,warning=FALSE}
+library(NCStats)
+library(ggplot2)
+```
+
+<div class="alert alert-warning">
+<strong>Note:</strong> 
+<ul>
+<li>Be careful with your "coding" -- you need a space after your hashtags, you need a blank line before you start a numbered list, and you should not alter the first 20 or so lines of the template.</li>
+</ul>
+</div>
+
+----
+
+# Mean and SD
+```{r nums, echo=FALSE}
+nums <- c(7,9,4,12,15,13)
+```
+
+1. The mean is `r mean(nums)`.
+1. The standard deviation is `r formatC(sd(nums),format="f",digits=2)`.
+
+#### R Code and Results
+```{r}
+<<nums>>
+mean(nums)
+sd(nums)
+```
+
+<br>
+
+----
+
+## p-Value
+
+1. The p=value is `r formatC(distrib(5.678,distrib="t",df=13,lower.tail=FALSE,plot=FALSE),format="f",digits=6)`
+1. This p-value is clearly less than &alpha;, so the H~0~ should be rejected.
+
+#### R Code and Results
+
+```{r}
+distrib(5.678,distrib="t",df=13,lower.tail=FALSE)
+```
+
+
+<br>
+
+----
+
+## Types of Variability
+
+Natural variability describes the fact that individuals in a population are not identical. Sampling variability describes the fact that results (e.g., mean) differ among multiple samples from the same population. The key difference is that natural variability is about individuals varying, whereas sampling variability is about statistics varying.
