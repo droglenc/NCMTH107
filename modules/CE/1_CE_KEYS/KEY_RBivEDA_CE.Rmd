@@ -139,7 +139,7 @@ corr(~rifa+fawnrec,data=d,digits=4)
 ----
 
 # Wolves and Whitetail Deer
-The relationship between the territory size of wolf pakces and the abundance of deer is **linear, negative, moderately strong** (r=-0.787), and **without any obvious outliers**. I assessed the strength of the relationship with the correlation coefficient (r) because the form is linear and there are no outliers.
+The relationship between the territory size of wolf pakces and the abundance of deer is **linear, negative, moderately strong** (r=-0.787), and **without any obvious outliers**. I assessed the strength of the relationship with the correlation coefficient (r) because the form is linear and there are no outliers. [*Note that I can see an argument for calling this nonlinear; if so, make sure you don't use r to assess strength.*]
 
 #### R Code and Results
 ```{r echo=FALSE}
@@ -151,7 +151,7 @@ d <- read.csv("Wolves2.csv")
 ```{r}
 ggplot(data=d,mapping=aes(x=deer,y=terr)) +
   geom_point(pch=21,color="black",fill="lightgray") +
-  labs(x="Abundance of Deer (#/km^2)",y="Wolf Territory Size (km^2") +
+  labs(x="Abundance of Deer (#/km^2)",y="Wolf Territory Size (km^2)") +
   theme_NCStats()
 corr(~deer+terr,data=d,digits=3)
 ```
