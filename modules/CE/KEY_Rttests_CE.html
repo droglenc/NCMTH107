@@ -1,0 +1,130 @@
+---
+layout: page
+title: "Answer Key"
+subtitle: "R t-test Assignment"
+author: Derek H. Ogle
+css: "/css/modules.css"
+---
+
+
+<p><br></p>
+<div id="acid-rain-in-shenandoah-national-park" class="section level1">
+<h1>Acid Rain in Shenandoah National Park</h1>
+<ol>
+<li>α=0.01.</li>
+<li>H<sub>A</sub>:μ&lt;5.6 and H<sub>0</sub>:μ=5.6, where μ is the mean pH for all rainwater collections at the Big Meadows Station in the Shenandoah National Park, VA.</li>
+<li>A one-sample t-test is required because quantitative variable (pH) was measured on individuals from one group or population (all rainwater collections at Big Meadows Station), σ is UNknown, and the population mean is being compared to a specific value in the hull hypothesis.</li>
+<li>An observational study (naturally occurring rainwater was collected; the researcher’s did not create any treatment) without obvious randomization was used.</li>
+<li>The assumptions are met because σ is unknown and n=90≥40. Thus, the sampling distribution of the test statistic should follow a t-distribution.</li>
+<li>The statistic is x̄=4.578.</li>
+<li>The test statistic is t=-33.530 with 89 df.</li>
+<li>The p-value is &lt;0.00005.</li>
+<li>The H<sub>0</sub> is rejected because the p-value&lt;α.</li>
+<li>The mean pH appears to be significantly lower than 5.6 and, thus, indicates acid rain at this site.</li>
+<li>One is 99% confident that the mean pH level is less than 4.65, which further indicates acid rain at this site.</li>
+</ol>
+<div id="r-code-and-results" class="section level4">
+<h4>R Code and Results</h4>
+<pre class="r"><code>&gt; d &lt;- read.csv(&quot;pHlevels.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; ( ph.t &lt;- t.test(ph$pH,mu=5.6,alt=&quot;less&quot;,conf.level=0.99) )</code></pre>
+<pre><code>One Sample t-test with ph$pH 
+t = -33.5303, df = 89, p-value &lt; 2.2e-16
+alternative hypothesis: true mean is less than 5.6 
+99 percent confidence interval:
+     -Inf 4.650103 
+sample estimates:
+mean of x 
+ 4.577889 </code></pre>
+<p><br></p>
+<hr />
+</div>
+</div>
+<div id="delivering-military-supplies" class="section level1">
+<h1>Delivering Military Supplies</h1>
+<ol>
+<li>α = 0.05</li>
+<li>H<sub>A</sub>: μ<sub>b</sub>-μ<sub>g</sub> &lt; 0 and H<sub>0</sub>: μ<sub>b</sub>-μ<sub>g</sub> = 0, where μ is the mean time to deliver ALL shipments, b is for Bosnia, and g is for Persian Gulf War. [<em>Note that with this subtraction that the H<sub>A</sub> represents the mean delivery time being less for Bosnia (the new system) than Persian Gulf.</em>]</li>
+<li>2-sample t-test because (i) two groups/populations are considered (Bosnia and Persian Gulf), (ii) a quantitative variable (delivery time) was recorded, and (iii) the individuals in the groups are independent (the deliveries in the two wars cannot be connected because the wars are separated in time and space and at the time of the Persian Gulf war it was not possible to know there would be a Bosnian war).</li>
+<li>An observational study without clear randomization of the two samples.</li>
+<li>The assumptions are met because (i) the samples are independent (as described above), (ii) n<sub>b</sub>+n<sub>g</sub> = 9+9 = 18 &gt; 15 and the two sample distributions (see histograms below) are not obviously strongly skewed (also told to assume that the distributions are not strongly skewed), and (iii) the variances appear to be equal (Levene’s p-value = 0.0736 &gt; α).</li>
+<li>x̄<sub>b</sub>-x̄<sub>g</sub> = 7.16-25.24 = -18.09.</li>
+<li>The test statistic is t = -4.846 with 16 df.</li>
+<li>The p-value = 0.0001.</li>
+<li>The H<sub>0</sub> is rejected because the p-value &lt; α.</li>
+<li>The mean delivery time was significantly lower in Bosnia than in the Persian Gulf War. Thus, the new “just-in-time” mentality for deliveries appears to have resulted in quicker delivery times.</li>
+<li>I am 95% confident that the mean delivery time for Bosnia was at least 11.6 days faster than for the Persian Gulf War. This further supports that the mean delivery time was faster with the new system.</li>
+</ol>
+<div id="r-code-and-results-1" class="section level4">
+<h4>R Code and Results</h4>
+<pre class="r"><code>&gt; del &lt;- read.csv(&quot;deliveries.csv&quot;)</code></pre>
+<pre class="r"><code>&gt; ggplot(data=del,mapping=aes(x=time)) +
+    geom_histogram(binwidth=5,boundary=0,color=&quot;black&quot;,fill=&quot;lightgray&quot;) +
+    labs(x=&quot;Time for Delivery&quot;,y=&quot;Frequency of Deliveries&quot;) +
+    scale_y_continuous(expand=expansion(mult=c(0,0.05))) +
+    theme_NCStats() +
+    facet_wrap(vars(war))</code></pre>
+<p><img src="KEY_Rttests_CE_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<pre class="r"><code>&gt; (del.lev &lt;- levenesTest(time~war,data=del) )</code></pre>
+<pre><code>Levene&#39;s Test for Homogeneity of Variance (center = median)
+      Df F value Pr(&gt;F)
+group  1  3.6657 0.0736
+      16               </code></pre>
+<pre class="r"><code>&gt; ( del.t &lt;- t.test(time~war,data=del,var.equal=TRUE,alt=&quot;less&quot;) ) # mu=0 is a default</code></pre>
+<pre><code> Two Sample t-test with time by war 
+t = -4.8458, df = 16, p-value = 8.942e-05
+alternative hypothesis: true difference in means between group Bosnia and group Gulf is less than 0 
+95 percent confidence interval:
+      -Inf -11.57169 
+sample estimates:
+mean in group Bosnia   mean in group Gulf 
+            7.155556            25.244444 </code></pre>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
